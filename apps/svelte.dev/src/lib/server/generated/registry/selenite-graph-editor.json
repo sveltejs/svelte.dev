@@ -4,19 +4,12 @@
 	"repo_url": "https://github.com/Selenite-GEOS/graph-editor",
 	"authors": ["moonlyss"],
 	"homepage": "https://selenite-geos.github.io/docs/developper/components/#graph-editor",
-	"downloads": 224,
-	"dependents": 0,
+	"downloads": 63,
 	"updated": "2024-11-15T17:08:55.955Z",
 	"tags": ["ui", "tooling"],
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.20",
+	"svelte_range": "5.2.0",
+	"kit_range": "^2.8.1"
 }

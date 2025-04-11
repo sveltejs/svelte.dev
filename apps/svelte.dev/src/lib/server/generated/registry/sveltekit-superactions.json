@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/kumpmati/sveltekit-superactions",
 	"authors": ["kumpmati"],
 	"homepage": "https://github.com/kumpmati/sveltekit-superactions#readme",
-	"downloads": 1,
-	"dependents": 0,
+	"downloads": 33,
 	"updated": "2024-10-20T20:08:12.370Z",
 	"tags": ["server"],
 	"runes": false,
 	"github_stars": 23,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.8.0",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.0.0"
 }

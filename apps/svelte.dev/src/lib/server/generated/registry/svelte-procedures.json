@@ -3,19 +3,11 @@
 	"description": "Create step-by-step procedures in Svelte applications.",
 	"repo_url": "",
 	"authors": ["esinx"],
-	"downloads": 7,
-	"dependents": 0,
+	"downloads": 4,
 	"updated": "2020-07-15T19:11:39.811Z",
 	"tags": ["miscellaneous"],
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
 	"runes": false,
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.9.1",
+	"svelte_range": "^3.0.0"
 }

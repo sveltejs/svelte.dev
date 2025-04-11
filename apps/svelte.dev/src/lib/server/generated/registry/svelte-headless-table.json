@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/bryanmylee/svelte-headless-table",
 	"authors": ["bryanmylee"],
 	"homepage": "https://svelte-headless-table.bryanmylee.com",
-	"downloads": 18300,
-	"dependents": 8,
+	"downloads": 13816,
 	"updated": "2024-10-28T12:34:41.590Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 492,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.18.3",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^2.0.0"
 }

@@ -3,19 +3,12 @@
 	"description": "Format numbers in Svelte input or text elements.",
 	"repo_url": "",
 	"authors": ["pitis"],
-	"downloads": 34,
-	"dependents": 0,
+	"downloads": 17,
 	"updated": "2024-11-17T02:26:36.650Z",
 	"tags": ["ui"],
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.3",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.0.0"
 }

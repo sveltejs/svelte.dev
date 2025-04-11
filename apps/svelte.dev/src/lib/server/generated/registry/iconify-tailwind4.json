@@ -4,21 +4,11 @@
 	"repo_url": "https://github.com/iconify/iconify-tailwind",
 	"authors": ["cyberalien"],
 	"homepage": "https://iconify.design/",
-	"downloads": 3254,
-	"dependents": 2,
+	"downloads": 3593,
 	"updated": "2025-02-28T13:34:23.013Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 4,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./lib/plugin.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.6"
 }

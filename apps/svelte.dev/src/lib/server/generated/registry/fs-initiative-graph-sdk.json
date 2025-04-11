@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/sdekna/graph-sdk",
 	"authors": ["fs-initiative"],
 	"homepage": "https://github.com/sdekna/graph-sdk#readme",
-	"downloads": 3,
-	"dependents": 0,
+	"downloads": 15,
 	"updated": "2024-07-14T04:36:09.681Z",
 	"tags": ["server"],
 	"runes": false,
 	"github_stars": 0,
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	},
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	}
+	"typescript": "none",
+	"version": "0.3.5",
+	"svelte_range": "^5.0.0-next.171"
 }

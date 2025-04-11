@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/jill64/svelte-inline-modal",
 	"authors": ["jill64"],
 	"homepage": "https://github.com/jill64/svelte-inline-modal#readme",
-	"downloads": 5771,
-	"dependents": 1,
+	"downloads": 4954,
 	"updated": "2024-12-30T19:04:58.251Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 4,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.0.1",
+	"svelte_range": "^5.0.0",
+	"kit_range": "2.15.1"
 }

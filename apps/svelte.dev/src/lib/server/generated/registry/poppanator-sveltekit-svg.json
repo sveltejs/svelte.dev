@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/poppa/sveltekit-svg",
 	"authors": ["poppanator_"],
 	"homepage": "https://github.com/poppa/sveltekit-svg#readme",
-	"downloads": 12263,
-	"dependents": 2,
+	"downloads": 10911,
 	"updated": "2025-03-20T05:58:54.586Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 253,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "5.0.1",
+	"svelte_range": ">=5.x"
 }

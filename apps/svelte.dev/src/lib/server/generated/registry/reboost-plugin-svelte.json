@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/sarsamurmu/reboost",
 	"authors": ["sarsamurmu"],
 	"homepage": "https://github.com/sarsamurmu/reboost/tree/primary/packages/plugin-svelte",
-	"downloads": 148,
-	"dependents": 0,
+	"downloads": 8,
 	"updated": "2021-09-25T13:20:52.336Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 61,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.21.0",
+	"svelte_range": "^3.43.0"
 }

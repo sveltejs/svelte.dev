@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/jorisBarkema/svelte-burger-menu",
 	"authors": ["jorisbarkema"],
 	"homepage": "https://github.com/jorisBarkema/svelte-burger-menu#readme",
-	"downloads": 13,
-	"dependents": 0,
+	"downloads": 25,
 	"updated": "2022-10-06T18:55:18.734Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 3,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.0.5",
+	"svelte_range": "^3.0.0"
 }

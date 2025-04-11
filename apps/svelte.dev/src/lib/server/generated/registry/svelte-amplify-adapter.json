@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/mpadrutt/svelte-amplify-adapter",
 	"authors": ["mpadrutt"],
 	"homepage": "https://github.com/mpadrutt/svelte-amplify-adapter#readme",
-	"downloads": 33,
-	"dependents": 0,
+	"downloads": 4,
 	"updated": "2024-01-14T22:02:04.993Z",
 	"tags": ["adapter", "server"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 3,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.7",
+	"kit_range": ">=2"
 }

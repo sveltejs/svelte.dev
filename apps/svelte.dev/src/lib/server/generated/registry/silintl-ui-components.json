@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/silinternational/ui-components",
 	"authors": ["fillup", "wcjr11", "matt-h", "schparky", "hobbitronics"],
 	"homepage": "https://github.com/silinternational/ui-components#readme",
-	"downloads": 129,
-	"dependents": 0,
-	"updated": "2024-12-11T05:17:05.186Z",
+	"downloads": 165,
+	"updated": "2025-04-05T02:11:41.987Z",
 	"tags": ["design-system"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 4,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "11.8.0",
+	"svelte_range": "^4.0.0"
 }

@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/fleon/parcel-transformer-svelte",
 	"authors": ["fleon"],
 	"homepage": "https://github.com/fleon/parcel-transformer-svelte#readme",
-	"downloads": 11,
-	"dependents": 0,
+	"downloads": 0,
 	"updated": "2021-06-20T14:05:36.848Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.1.2",
+	"svelte_range": "^3.24.0"
 }

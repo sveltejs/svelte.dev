@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/gyurielf/svelte-tel-input",
 	"authors": ["gyurielf"],
 	"homepage": "https://github.com/gyurielf/svelte-tel-input#readme",
-	"downloads": 8141,
-	"dependents": 2,
+	"downloads": 7625,
 	"updated": "2025-02-18T13:23:56.457Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 109,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "3.6.0",
+	"svelte_range": "^3.58.0 || ^4.0.0 || ^5.0.0",
+	"kit_range": "^2.5.17"
 }

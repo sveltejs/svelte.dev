@@ -24,21 +24,12 @@
 		"mukaschultze"
 	],
 	"homepage": "https://github.com/NativeScript/nativescript-app-templates",
-	"downloads": 73,
-	"dependents": 0,
+	"downloads": 49,
 	"updated": "2025-03-23T03:15:36.742Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 222,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "8.9.1",
+	"svelte_range": "~4.2.2"
 }

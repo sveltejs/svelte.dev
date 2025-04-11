@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/shinokada/svelte-materialdesign-icons",
 	"authors": ["shinichiokada"],
 	"homepage": "https://svelte-materialdesign-icons.vercel.app",
-	"downloads": 146,
-	"dependents": 0,
+	"downloads": 155,
 	"updated": "2023-08-03T15:47:43.784Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 2,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.7.4",
+	"svelte_range": "^3.54.0 || ^4.0.0",
+	"kit_range": "^1.22.3"
 }

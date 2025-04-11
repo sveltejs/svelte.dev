@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/sveltejs/language-tools",
 	"authors": ["orta", "svelte-language-tools-deploy", "dummdidumm"],
 	"homepage": "https://github.com/sveltejs/language-tools/tree/master/packages/typescript-plugin",
-	"downloads": 12598,
-	"dependents": 4,
+	"downloads": 12272,
 	"updated": "2025-03-06T14:09:32.286Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1297,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/src/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.3.46",
+	"svelte_range": "^4.2.19"
 }

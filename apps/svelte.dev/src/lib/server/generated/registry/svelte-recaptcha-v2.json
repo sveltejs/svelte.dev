@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/basaran/svelte-recaptcha-v2",
 	"authors": ["anakha"],
 	"homepage": "https://github.com/basaran/svelte-recaptcha-v2#readme",
-	"downloads": 359,
-	"dependents": 1,
+	"downloads": 606,
 	"updated": "2021-10-21T01:52:04.074Z",
 	"tags": ["integration"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 43,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.2",
+	"svelte_range": "^3.44.0"
 }

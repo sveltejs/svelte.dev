@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/philter87/publish-svelte",
 	"authors": ["philter87"],
 	"homepage": "https://github.com/philter87/publish-svelte#readme",
-	"downloads": 9,
-	"dependents": 1,
+	"downloads": 4,
 	"updated": "2021-05-25T18:50:22.614Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 15,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.8.0",
+	"svelte_range": "^3.12.1"
 }

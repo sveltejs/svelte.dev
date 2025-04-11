@@ -24,20 +24,12 @@
 		"npm-urql"
 	],
 	"homepage": "https://formidable.com/open-source/urql/docs/",
-	"downloads": 7903,
-	"dependents": 8,
+	"downloads": 7510,
 	"updated": "2025-03-03T21:13:56.638Z",
 	"tags": ["server"],
 	"runes": false,
 	"github_stars": 8769,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/urql-svelte.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "4.2.3",
+	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0"
 }

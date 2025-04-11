@@ -5,20 +5,11 @@
 	"authors": ["siariee"],
 	"homepage": "https://github.com/siarie/svelte-lucide-icons#readme",
 	"downloads": 36,
-	"dependents": 0,
 	"updated": "2022-05-09T07:53:12.521Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 4,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.6.0",
+	"svelte_range": "^3.43.1"
 }

@@ -4,19 +4,11 @@
 	"repo_url": "",
 	"authors": ["soleil-ab", "kling90"],
 	"homepage": "https://docs.soleil.se/build/app",
-	"downloads": 50,
-	"dependents": 0,
-	"updated": "2025-03-26T11:46:26.319Z",
+	"downloads": 42,
+	"updated": "2025-04-09T10:39:08.578Z",
 	"tags": ["tooling"],
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "2.2.1",
+	"svelte_range": "^5.6.2"
 }

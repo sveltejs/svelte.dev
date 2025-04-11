@@ -4,20 +4,11 @@
 	"repo_url": "https://gitlab.com/bucketh/icons",
 	"authors": ["ray-bucket"],
 	"homepage": "https://gitlab.com/bucketh/icons#readme",
-	"downloads": 2,
-	"dependents": 0,
+	"downloads": 5,
 	"updated": "2024-09-02T16:37:55.143Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.2.1",
+	"svelte_range": "^3.54.0"
 }

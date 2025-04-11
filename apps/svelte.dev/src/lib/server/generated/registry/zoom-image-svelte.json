@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/willnguyen1312/zoom-image",
 	"authors": ["namnguyen131292"],
 	"homepage": "https://willnguyen1312.github.io/zoom-image",
-	"downloads": 2229,
-	"dependents": 0,
+	"downloads": 1933,
 	"updated": "2025-03-01T22:36:04.188Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 322,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.3.1",
+	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0"
 }

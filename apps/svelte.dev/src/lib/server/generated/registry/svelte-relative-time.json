@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/captaincodeman/svelte-relative-time",
 	"authors": ["captaincodeman"],
 	"homepage": "https://captaincodeman.github.io/svelte-relative-time/",
-	"downloads": 294,
-	"dependents": 0,
+	"downloads": 532,
 	"updated": "2024-07-08T18:09:27.031Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 42,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.6",
+	"svelte_range": "^3.54.0 || ^4.0.0 || ^5.0.0",
+	"kit_range": "^2.5.18"
 }

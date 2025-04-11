@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/kubetail-org/edge-csrf",
 	"authors": ["amorey"],
 	"homepage": "https://github.com/kubetail-org/edge-csrf#readme",
-	"downloads": 1,
-	"dependents": 0,
+	"downloads": 6,
 	"updated": "2024-11-21T11:28:53.893Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 167,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.5.3-cloudflare-rc1",
+	"kit_range": "^2.5.6"
 }

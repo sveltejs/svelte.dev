@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/lolcabanon/sveltekit-adapter-wordpress-admin",
 	"authors": ["lolcabanon"],
 	"homepage": "https://github.com/lolcabanon/sveltekit-adapter-wordpress-admin#readme",
-	"downloads": 5,
-	"dependents": 0,
+	"downloads": 4,
 	"updated": "2024-09-24T15:30:17.827Z",
 	"tags": ["adapter"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 2,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.3",
+	"kit_range": "^2.4.0"
 }

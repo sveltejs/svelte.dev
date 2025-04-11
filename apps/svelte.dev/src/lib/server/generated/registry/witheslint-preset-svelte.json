@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/witheslint/witheslint",
 	"authors": ["usings"],
 	"homepage": "https://github.com/witheslint/witheslint",
-	"downloads": 63,
-	"dependents": 1,
+	"downloads": 28,
 	"updated": "2025-03-21T13:52:05.199Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 5,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.14.0",
+	"svelte_range": "^3.37.0 || ^4.0.0 || ^5.0.0"
 }

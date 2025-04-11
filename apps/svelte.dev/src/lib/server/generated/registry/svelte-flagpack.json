@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/Yummygum/svelte-flagpack",
 	"authors": ["yummygum"],
 	"homepage": "https://github.com/Yummygum/svelte-flagpack#readme",
-	"downloads": 233,
-	"dependents": 0,
+	"downloads": 243,
 	"updated": "2021-09-15T14:50:40.058Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 10,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.0",
+	"svelte_range": "^3.32.1"
 }

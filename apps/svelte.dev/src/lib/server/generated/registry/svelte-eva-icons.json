@@ -3,22 +3,13 @@
 	"description": "Use Eva icons in Svelte projects.",
 	"repo_url": "https://github.com/dylanblokhuis/svelte-eva-icons",
 	"authors": ["dylanblokhuis"],
-	"downloads": 9,
-	"dependents": 0,
+	"downloads": 8,
 	"updated": "2019-11-19T18:52:10.182Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 13,
 	"homepage": null,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "2.0.0",
+	"svelte_range": "latest"
 }

@@ -3,19 +3,12 @@
 	"description": "Simplify data fetching with declarative queries in Svelte 5.",
 	"repo_url": "",
 	"authors": ["sra448"],
-	"downloads": 88,
-	"dependents": 0,
+	"downloads": 3,
 	"updated": "2025-03-24T08:40:32.938Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.3",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.16.0"
 }

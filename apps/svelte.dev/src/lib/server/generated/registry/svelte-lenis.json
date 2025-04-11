@@ -4,19 +4,12 @@
 	"repo_url": "",
 	"authors": ["iugsm"],
 	"homepage": "https://github.com/richhost/svelte-lenis",
-	"downloads": 7,
-	"dependents": 0,
+	"downloads": 12,
 	"updated": "2024-12-19T14:55:43.901Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.5",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.12.2"
 }

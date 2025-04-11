@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/Splidejs/svelte-splide",
 	"authors": ["splidejs"],
 	"homepage": "https://github.com/Splidejs/svelte-splide#readme",
-	"downloads": 6237,
-	"dependents": 6,
+	"downloads": 6063,
 	"updated": "2022-09-30T03:37:44.743Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 87,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.2.9",
+	"svelte_range": "^3.50.0",
+	"kit_range": "next"
 }

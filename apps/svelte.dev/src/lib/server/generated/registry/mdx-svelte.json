@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/babakfp/mdx-svelte",
 	"authors": ["babakfp"],
 	"homepage": "https://babakfp.ir/docs/mdx-svelte",
-	"downloads": 23,
-	"dependents": 0,
+	"downloads": 16,
 	"updated": "2025-03-01T19:11:49.897Z",
 	"tags": ["content"],
 	"runes": false,
 	"github_stars": 5,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "5.0.0",
+	"svelte_range": "5",
+	"kit_range": "2"
 }

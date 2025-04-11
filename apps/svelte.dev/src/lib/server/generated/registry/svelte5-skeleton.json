@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/sonniydsgn/svelte5-skeleton",
 	"authors": ["sonniydsgn"],
 	"homepage": "https://github.com/sonniydsgn/svelte5-skeleton#readme",
-	"downloads": 0,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2024-08-20T09:04:44.490Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.4.1",
+	"svelte_range": "^5.0.0"
 }

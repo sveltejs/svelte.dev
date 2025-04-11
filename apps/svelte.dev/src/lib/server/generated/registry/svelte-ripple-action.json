@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/posandu/svelte-ripple-action",
 	"authors": ["tronic247"],
 	"homepage": "https://github.com/posandu/svelte-ripple-action#readme",
-	"downloads": 576,
-	"dependents": 0,
+	"downloads": 484,
 	"updated": "2024-11-15T13:18:50.975Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 61,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.0.0",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.5.27"
 }

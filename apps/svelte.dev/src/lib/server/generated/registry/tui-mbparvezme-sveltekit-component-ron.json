@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/mbparvezme/theui-sveltekit",
 	"authors": ["mbparvez"],
 	"homepage": "https://www.theui.dev/r/skcl",
-	"downloads": 5,
-	"dependents": 0,
+	"downloads": 8,
 	"updated": "2023-12-17T14:22:59.494Z",
 	"tags": ["design-system", "ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 4,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.1",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^1.25.2"
 }

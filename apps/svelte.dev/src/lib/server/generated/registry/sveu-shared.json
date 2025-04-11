@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/svelte-u/shared",
 	"authors": ["mohamed-kaizen"],
 	"homepage": "https://github.com/svelte-u/shared#readme",
-	"downloads": 94,
-	"dependents": 3,
+	"downloads": 118,
 	"updated": "2023-07-03T11:54:34.297Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 5,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.1",
+	"svelte_range": "^4.0.1"
 }

@@ -5,20 +5,11 @@
 	"authors": ["iguacel"],
 	"homepage": "https://github.com/metonym/svelte-typeahead",
 	"downloads": 0,
-	"dependents": 0,
 	"updated": "2023-05-01T07:15:34.339Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 226,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "4.4.1",
+	"svelte_range": "^3.52.0"
 }

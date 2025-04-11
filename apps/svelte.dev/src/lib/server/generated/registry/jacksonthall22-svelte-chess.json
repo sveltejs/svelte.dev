@@ -4,20 +4,12 @@
 	"repo_url": "",
 	"authors": ["jacksonthall22"],
 	"homepage": "https://github.com/gtim/svelte-chess#readme",
-	"downloads": 8,
-	"dependents": 0,
+	"downloads": 3,
 	"updated": "2024-06-10T16:30:20.418Z",
 	"tags": ["ui", "miscellaneous"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.0",
+	"svelte_range": "^4.2.12",
+	"kit_range": "^2.5.5"
 }

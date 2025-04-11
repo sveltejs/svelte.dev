@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/igrep/svelte-store-tree",
 	"authors": ["igrep"],
 	"homepage": "https://github.com/igrep/svelte-store-tree#readme",
-	"downloads": 0,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2023-10-12T08:51:56.120Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 11,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./src/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.5.2",
+	"svelte_range": "^4.0.5"
 }

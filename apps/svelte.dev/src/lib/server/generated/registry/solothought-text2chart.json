@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/solothought/text2chart",
 	"authors": ["amitgupta"],
 	"homepage": "https://github.com/solothought/text2chart#readme",
-	"downloads": 131,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2025-03-17T10:35:46.842Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 6,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.4",
+	"svelte_range": "^4.0.0 || ^5.0.0",
+	"kit_range": "^2.0.0"
 }

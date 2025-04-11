@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/svelstack/state",
 	"authors": ["martk"],
 	"homepage": "https://github.com/svelstack/state",
-	"downloads": 51,
-	"dependents": 1,
-	"updated": "2025-03-26T16:39:49.737Z",
+	"downloads": 71,
+	"updated": "2025-04-07T13:40:55.159Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.3.0",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.7.3"
 }

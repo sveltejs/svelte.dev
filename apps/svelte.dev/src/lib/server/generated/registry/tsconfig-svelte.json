@@ -4,21 +4,11 @@
 	"repo_url": "https://github.com/tsconfig/bases",
 	"authors": ["orta", "typescript-deploys"],
 	"homepage": "https://github.com/tsconfig/bases#readme",
-	"downloads": 188254,
-	"dependents": 64,
+	"downloads": 180354,
 	"updated": "2024-03-27T04:13:14.815Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 6852,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "5.0.4"
 }

@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/joburgard/svelte-dragondrop",
 	"authors": ["joburgard"],
 	"homepage": "https://github.com/joburgard/svelte-dragondrop#readme",
-	"downloads": 6,
-	"dependents": 0,
+	"downloads": 4,
 	"updated": "2021-03-28T15:02:55.330Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.0",
+	"svelte_range": "^3.35.0"
 }

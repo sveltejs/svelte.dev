@@ -4,19 +4,12 @@
 	"repo_url": "https://git.sr.ht/~henriquehbr/svelte-typewriter",
 	"authors": ["henriquehbr"],
 	"homepage": "https://sr.ht/~henriquehbr/svelte-typewriter",
-	"downloads": 3239,
-	"dependents": 0,
+	"downloads": 2073,
 	"updated": "2024-01-08T00:22:12.791Z",
 	"tags": ["ui"],
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "3.2.3",
+	"svelte_range": ">=3.47.x",
+	"kit_range": "^1.26.0"
 }

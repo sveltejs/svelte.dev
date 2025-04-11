@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/bewinxed/wallet-adapter-svelte-ui",
 	"authors": ["bewinxed"],
 	"homepage": "https://github.com/bewinxed/wallet-adapter-svelte-ui#readme",
-	"downloads": 1,
-	"dependents": 0,
+	"downloads": 3,
 	"updated": "2024-08-27T19:09:03.201Z",
 	"tags": ["ui", "integration"],
 	"runes": false,
 	"github_stars": 8,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	},
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "0.2.1",
+	"svelte_range": "^5.0.0-next.1",
+	"kit_range": "^2.5.24"
 }

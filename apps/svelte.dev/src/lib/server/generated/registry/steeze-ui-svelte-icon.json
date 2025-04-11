@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/steeze-ui/icons",
 	"authors": ["justinvoitel"],
 	"homepage": "https://github.com/steeze-ui/icons#readme",
-	"downloads": 10913,
-	"dependents": 18,
+	"downloads": 10817,
 	"updated": "2024-11-20T12:40:32.253Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 189,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.6.2",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.8.1"
 }

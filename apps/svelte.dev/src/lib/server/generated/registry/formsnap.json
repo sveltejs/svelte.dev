@@ -3,19 +3,12 @@
 	"description": "Wraps sveltekit-superforms with accessible form components.",
 	"repo_url": "",
 	"authors": ["huntabyte"],
-	"downloads": 39338,
-	"dependents": 19,
-	"updated": "2024-12-13T17:45:07.463Z",
+	"downloads": 35366,
+	"updated": "2025-04-09T02:30:42.332Z",
 	"tags": ["ui", "miscellaneous"],
 	"runes": false,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	},
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "2.0.1",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.5.28"
 }

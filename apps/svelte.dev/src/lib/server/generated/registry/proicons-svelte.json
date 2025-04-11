@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/ProCode-Software/proicons",
 	"authors": ["procode-software"],
 	"homepage": "https://github.com/ProCode-Software/proicons/tree/main/packages/proicons-svelte",
-	"downloads": 4,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2025-02-12T22:36:20.339Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 7,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/proicons-svelte.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "4.12.1",
+	"svelte_range": "^5.16.2"
 }

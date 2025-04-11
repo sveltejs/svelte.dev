@@ -4,20 +4,11 @@
 	"repo_url": "https://github.com/tailwindlabs/tailwindcss",
 	"authors": ["malfaitrobin", "adamwathan", "reinink"],
 	"homepage": "https://tailwindcss.com",
-	"downloads": 19200543,
-	"dependents": 7010,
+	"downloads": 22956118,
 	"updated": "2025-04-04T18:11:56.153Z",
 	"tags": ["ui"],
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
 	"runes": false,
 	"github_stars": 86986,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "4.1.3"
 }

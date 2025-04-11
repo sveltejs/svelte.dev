@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/inokawa/virtua",
 	"authors": ["inokawa"],
 	"homepage": "https://github.com/inokawa/virtua#readme",
-	"downloads": 78431,
-	"dependents": 24,
+	"downloads": 85923,
 	"updated": "2025-03-08T01:58:08.375Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 2668,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: lib/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.40.3",
+	"svelte_range": ">=5.0"
 }

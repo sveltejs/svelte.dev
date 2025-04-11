@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/arschmitz/svelte-masked-input",
 	"authors": ["arschmitz"],
 	"homepage": "https://github.com/arschmitz/svelte-masked-input#readme",
-	"downloads": 0,
-	"dependents": 0,
+	"downloads": 14,
 	"updated": "2023-10-04T15:56:11.936Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.2.4",
+	"svelte_range": "^3.31.2"
 }

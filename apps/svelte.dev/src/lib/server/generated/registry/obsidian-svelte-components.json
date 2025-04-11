@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/acgabbert/obsidian-svelte-components",
 	"authors": ["acgabbert"],
 	"homepage": "https://github.com/acgabbert/obsidian-svelte-components#readme",
-	"downloads": 155,
-	"dependents": 0,
+	"downloads": 13,
 	"updated": "2025-03-07T22:33:49.809Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "0.10.1",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^2.0.0"
 }

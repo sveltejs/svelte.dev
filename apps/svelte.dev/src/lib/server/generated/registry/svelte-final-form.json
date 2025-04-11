@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/jetrockets/svelte-final-form",
 	"authors": ["solilin"],
 	"homepage": "https://github.com/jetrockets/svelte-final-form#readme",
-	"downloads": 138,
-	"dependents": 2,
+	"downloads": 167,
 	"updated": "2020-12-22T16:33:08.780Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 43,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.2.3",
+	"svelte_range": "^3.29.7"
 }

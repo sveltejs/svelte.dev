@@ -3,19 +3,12 @@
 	"description": "Capture images and videos with easy-to-use Svelte camera.",
 	"repo_url": "",
 	"authors": ["couldparker.com"],
-	"downloads": 21,
-	"dependents": 1,
+	"downloads": 17,
 	"updated": "2024-11-26T17:44:28.796Z",
 	"tags": ["media"],
 	"runes": false,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	},
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "2.0.1",
+	"svelte_range": "^5.2.0",
+	"kit_range": "^2.8.4"
 }

@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/rjt-rockx/svelte-rc-knob",
 	"authors": ["rjt_rockx"],
 	"homepage": "https://github.com/rjt-rockx/svelte-rc-knob#readme",
-	"downloads": 17,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2025-03-12T10:05:23.223Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.4",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.0.0"
 }

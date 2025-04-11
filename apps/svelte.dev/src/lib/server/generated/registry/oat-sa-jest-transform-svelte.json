@@ -37,20 +37,12 @@
 		"peetya"
 	],
 	"homepage": "https://github.com/oat-sa/jest-transform-svelte#readme",
-	"downloads": 370,
-	"dependents": 0,
+	"downloads": 308,
 	"updated": "2023-05-11T11:10:13.420Z",
 	"tags": ["tooling"],
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
 	"runes": false,
 	"github_stars": 1,
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.1.1",
+	"svelte_range": ">= 3"
 }

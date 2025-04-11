@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/girish1729/blackgallery",
 	"authors": ["girish1729"],
 	"homepage": "https://github.com/girish1729/blackgallery#readme",
-	"downloads": 4,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2023-10-21T11:35:13.567Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 0,
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	},
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	}
+	"typescript": "none",
+	"version": "1.0.3",
+	"svelte_range": "*",
+	"kit_range": "*"
 }

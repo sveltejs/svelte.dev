@@ -4,21 +4,11 @@
 	"repo_url": "https://github.com/sveltejs/cli",
 	"authors": ["rich_harris", "svelte-admin"],
 	"homepage": "https://svelte.dev",
-	"downloads": 15207,
-	"dependents": 6,
-	"updated": "2025-03-24T17:48:37.718Z",
+	"downloads": 15436,
+	"updated": "2025-04-03T15:21:57.920Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 339,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "0.8.0"
 }

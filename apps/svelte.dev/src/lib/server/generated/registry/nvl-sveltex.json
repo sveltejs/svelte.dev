@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/nvlang/sveltex",
 	"authors": ["nvl"],
 	"homepage": "https://sveltex.dev",
-	"downloads": 17,
-	"dependents": 0,
+	"downloads": 9,
 	"updated": "2024-07-18T17:43:51.892Z",
 	"tags": ["content", "tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 7,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/mod.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.4.1",
+	"svelte_range": "^4.2.18"
 }

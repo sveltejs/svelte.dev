@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/johndeighan/starbucks",
 	"authors": ["jdeighan"],
 	"homepage": "https://github.com/johndeighan/starbucks#readme",
-	"downloads": 146,
-	"dependents": 1,
+	"downloads": 34,
 	"updated": "2022-08-17T09:36:08.291Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "10.0.4",
+	"svelte_range": "^3.49.0"
 }

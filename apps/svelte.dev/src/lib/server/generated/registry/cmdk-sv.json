@@ -3,19 +3,12 @@
 	"description": "Provides a command menu and accessible combobox for Svelte.",
 	"repo_url": "",
 	"authors": ["huntabyte"],
-	"downloads": 38616,
-	"dependents": 17,
+	"downloads": 27820,
 	"updated": "2025-03-14T15:56:46.882Z",
 	"tags": ["ui"],
 	"runes": false,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	},
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "0.0.19",
+	"svelte_range": "^4.0.0 || ^5.0.0-next.1",
+	"kit_range": "^2.5.18"
 }

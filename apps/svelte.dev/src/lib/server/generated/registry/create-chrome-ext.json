@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/guocaoyi/create-chrome-ext",
 	"authors": ["gcy"],
 	"homepage": "https://github.com/guocaoyi",
-	"downloads": 93,
-	"dependents": 0,
+	"downloads": 64,
 	"updated": "2025-03-13T13:57:12.747Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1874,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.9.4",
+	"svelte_range": "^4.2.1"
 }

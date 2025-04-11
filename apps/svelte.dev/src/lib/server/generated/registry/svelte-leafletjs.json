@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/ngyewch/svelte-leafletjs",
 	"authors": ["ngyewch"],
 	"homepage": "https://ngyewch.github.io/svelte-leafletjs/",
-	"downloads": 743,
-	"dependents": 1,
+	"downloads": 783,
 	"updated": "2024-11-20T03:27:11.865Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 112,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.0.0",
+	"svelte_range": "^5.0.0"
 }

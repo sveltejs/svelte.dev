@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/BearToCode/carta",
 	"authors": ["astrobear"],
 	"homepage": "https://github.com/BearToCode/carta#readme",
-	"downloads": 1608,
-	"dependents": 0,
-	"updated": "2025-03-03T21:36:52.262Z",
+	"downloads": 1594,
+	"updated": "2025-04-01T06:41:30.201Z",
 	"tags": ["content", "ui"],
 	"runes": false,
 	"github_stars": 564,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	},
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "4.9.0",
+	"svelte_range": "^5.0.0",
+	"kit_range": "catalog:"
 }

@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/KamyarLajani/svelte-yup",
 	"authors": ["kamyar_lajani"],
 	"homepage": "https://github.com/KamyarLajani/svelte-yup#readme",
-	"downloads": 123,
-	"dependents": 1,
+	"downloads": 95,
 	"updated": "2020-12-06T00:50:33.446Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 34,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.5",
+	"svelte_range": "^3.0.0"
 }

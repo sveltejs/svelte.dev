@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/bhaskarGyan/sveltekit-device-detector",
 	"authors": ["bhaskargyan"],
 	"homepage": "https://github.com/bhaskarGyan/sveltekit-device-detector#readme",
-	"downloads": 551,
-	"dependents": 0,
+	"downloads": 739,
 	"updated": "2025-01-16T14:23:42.892Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 25,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.0.1",
+	"svelte_range": "^3.54.0 || ^4.0.0 || ^5.0.0",
+	"kit_range": "^1.5.0"
 }

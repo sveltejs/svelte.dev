@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/DPr00f/svelte-gravatar",
 	"authors": ["pr00f"],
 	"homepage": "https://github.com/DPr00f/svelte-gravatar#readme",
-	"downloads": 30,
-	"dependents": 0,
+	"downloads": 134,
 	"updated": "2020-03-14T16:05:22.083Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 4,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.3",
+	"svelte_range": "*"
 }

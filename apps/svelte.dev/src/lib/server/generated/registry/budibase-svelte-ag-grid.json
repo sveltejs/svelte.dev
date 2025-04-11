@@ -3,20 +3,11 @@
 	"description": "Create wrapper around ag-grid for Svelte.",
 	"repo_url": "",
 	"authors": ["mike_chuckles", "shogunpurple"],
-	"downloads": 20,
-	"dependents": 0,
+	"downloads": 245,
 	"updated": "2021-02-23T11:30:16.517Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.4",
+	"svelte_range": "^3.0.0"
 }

@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/GCBenlloch/svelte-cleavejs",
 	"authors": ["gcbenlloch"],
 	"homepage": "https://github.com/GCBenlloch/svelte-cleavejs#readme",
-	"downloads": 124,
-	"dependents": 0,
+	"downloads": 188,
 	"updated": "2021-11-14T16:48:40.357Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 6,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.3",
+	"svelte_range": "^3.0.0"
 }

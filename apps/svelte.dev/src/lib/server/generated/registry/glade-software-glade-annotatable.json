@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/glade-software/glade-element",
 	"authors": ["mattjohnston"],
 	"homepage": "https://github.com/glade-software/glade-element#readme",
-	"downloads": 27,
-	"dependents": 0,
+	"downloads": 24,
 	"updated": "2024-01-06T13:13:39.869Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "5.0.0",
+	"svelte_range": "^3.59.0"
 }

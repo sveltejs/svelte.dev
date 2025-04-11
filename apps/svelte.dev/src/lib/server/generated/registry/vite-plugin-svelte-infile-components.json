@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/jangxyz/svelte-infile-components",
 	"authors": ["jangxyz"],
 	"homepage": "https://github.com/jangxyz/svelte-infile-components",
-	"downloads": 0,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2025-01-10T12:06:19.071Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.2",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.0.0"
 }

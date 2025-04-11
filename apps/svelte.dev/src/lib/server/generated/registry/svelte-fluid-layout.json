@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/collardeau/svelte-fluid-layout",
 	"authors": ["collardeau"],
 	"homepage": "https://github.com/collardeau/svelte-fluid-layout#readme",
-	"downloads": 8,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2019-10-12T15:09:45.581Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 8,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.2.0",
+	"svelte_range": "^3.0.0"
 }

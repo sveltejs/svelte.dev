@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/chris-creditdesign/creditdesign-svelte-components",
 	"authors": ["chris-creditdesign"],
 	"homepage": "https://serene-albattani-31205c.netlify.app/",
-	"downloads": 31,
-	"dependents": 0,
+	"downloads": 6,
 	"updated": "2022-06-14T20:40:35.608Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 3,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.0.6",
+	"svelte_range": "^3.44.0",
+	"kit_range": "next"
 }

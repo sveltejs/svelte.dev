@@ -4,20 +4,11 @@
 	"repo_url": "https://github.com/Betarena/ad-engine",
 	"authors": ["migbash", "jon_snow"],
 	"homepage": "https://github.com/Betarena/ad-engine#readme",
-	"downloads": 75,
-	"dependents": 0,
+	"downloads": 25,
 	"updated": "2024-12-15T19:51:26.243Z",
 	"tags": ["integration"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "0.0.70",
+	"svelte_range": "4.2.12"
 }

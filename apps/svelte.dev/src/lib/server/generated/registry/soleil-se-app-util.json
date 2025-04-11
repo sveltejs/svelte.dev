@@ -4,19 +4,11 @@
 	"repo_url": "",
 	"authors": ["soleil-ab", "kling90"],
 	"homepage": "https://docs.soleil.se/packages/app-util",
-	"downloads": 98,
-	"dependents": 0,
+	"downloads": 40,
 	"updated": "2025-03-27T13:21:33.177Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./common/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "5.9.1",
+	"svelte_range": "^5.22.6"
 }

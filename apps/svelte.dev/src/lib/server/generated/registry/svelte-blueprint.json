@@ -3,20 +3,11 @@
 	"description": "Generate documentation for Svelte components.",
 	"repo_url": "svelte-blueprint",
 	"authors": ["evesan"],
-	"downloads": 1,
-	"dependents": 0,
+	"downloads": 4,
 	"updated": "2024-09-10T18:37:19.640Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "2.0.4",
+	"svelte_range": "^3.31.2"
 }

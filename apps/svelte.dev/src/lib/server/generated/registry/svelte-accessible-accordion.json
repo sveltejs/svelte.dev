@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/metonym/svelte-accessible-accordion",
 	"authors": ["metonym"],
 	"homepage": "https://github.com/metonym/svelte-accessible-accordion",
-	"downloads": 41,
-	"dependents": 1,
+	"downloads": 37,
 	"updated": "2021-11-02T15:09:57.828Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 34,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.1.0",
+	"svelte_range": "^3.44.0"
 }

@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/anasmohammed361/sveltekit-aws-lambda",
 	"authors": ["anasmohammed361"],
 	"homepage": "https://github.com/anasmohammed361/sveltekit-aws-lambda#readme",
-	"downloads": 22,
-	"dependents": 0,
+	"downloads": 34,
 	"updated": "2023-08-25T01:07:21.085Z",
 	"tags": ["adapter"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "1.2.3",
+	"kit_range": "^1.5.0"
 }

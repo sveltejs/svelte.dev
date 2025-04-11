@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/dai-shi/svelte3-redux",
 	"authors": ["daishi"],
 	"homepage": "https://github.com/dai-shi/svelte3-redux#readme",
-	"downloads": 11,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2020-07-02T08:24:15.662Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 30,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/src/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.4.0",
+	"svelte_range": ">=3.0.0"
 }

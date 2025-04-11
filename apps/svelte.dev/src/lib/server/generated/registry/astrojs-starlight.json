@@ -4,21 +4,11 @@
 	"repo_url": "https://github.com/withastro/starlight",
 	"authors": ["natemoo-re", "fredkschott", "matthewp"],
 	"homepage": "https://starlight.astro.build",
-	"downloads": 56391,
-	"dependents": 27,
-	"updated": "2025-03-26T14:05:01.234Z",
+	"downloads": 63305,
+	"updated": "2025-04-07T16:03:01.292Z",
 	"tags": ["content"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 6239,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "0.33.0"
 }

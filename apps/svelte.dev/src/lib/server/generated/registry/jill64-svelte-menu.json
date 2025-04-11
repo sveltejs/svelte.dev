@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/jill64/svelte-menu",
 	"authors": ["jill64"],
 	"homepage": "https://github.com/jill64/svelte-menu#readme",
-	"downloads": 14507,
-	"dependents": 3,
+	"downloads": 10527,
 	"updated": "2025-03-13T02:30:03.254Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.0.1",
+	"svelte_range": "^5.0.0",
+	"kit_range": "2.19.0"
 }

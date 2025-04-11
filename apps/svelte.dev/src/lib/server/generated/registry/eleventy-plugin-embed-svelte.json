@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/shalomscott/eleventy-plugin-embed-svelte",
 	"authors": ["shalomscott"],
 	"homepage": "https://github.com/shalomscott/eleventy-plugin-embed-svelte#readme",
-	"downloads": 58,
-	"dependents": 0,
+	"downloads": 7,
 	"updated": "2021-05-18T17:40:16.186Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 40,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/.eleventy.d.ts"
-	},
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "1.1.0",
+	"svelte_range": ">=3.38.0"
 }

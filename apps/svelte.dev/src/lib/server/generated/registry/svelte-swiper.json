@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/beomy/svelte-swiper",
 	"authors": ["beomy"],
 	"homepage": "https://github.com/beomy/svelte-swiper#readme",
-	"downloads": 270,
-	"dependents": 1,
+	"downloads": 260,
 	"updated": "2020-08-14T07:33:44.956Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 24,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: types"
-	}
+	"typescript": "first-party",
+	"version": "1.0.1",
+	"svelte_range": "^3.0.0"
 }

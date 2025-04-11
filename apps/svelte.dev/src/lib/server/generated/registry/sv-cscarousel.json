@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/sidfishus/sv-cscarousel",
 	"authors": ["sidfishus"],
 	"homepage": "https://github.com/sidfishus/sv-cscarousel#readme",
-	"downloads": 236,
-	"dependents": 0,
+	"downloads": 11,
 	"updated": "2025-03-27T13:40:40.519Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "1.0.8",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.16.0"
 }

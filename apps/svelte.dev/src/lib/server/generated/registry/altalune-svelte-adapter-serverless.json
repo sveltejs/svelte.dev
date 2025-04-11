@@ -5,20 +5,12 @@
 	"authors": ["nurfakhrian"],
 	"homepage": "https://github.com/hrz8/svelte-adapter-serverless#readme",
 	"downloads": 4,
-	"dependents": 0,
 	"updated": "2024-02-03T07:53:33.493Z",
 	"tags": ["adapter"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.5",
+	"svelte_range": "^4.2.9",
+	"kit_range": "^2.5.0"
 }

@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/captaincodeman/svelte-api-keys",
 	"authors": ["captaincodeman"],
 	"homepage": "https://captaincodeman.github.io/svelte-api-keys/",
-	"downloads": 12,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2024-04-29T20:32:00.462Z",
 	"tags": ["server", "auth"],
 	"runes": false,
 	"github_stars": 38,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.4",
+	"svelte_range": "5.0.0-next.85",
+	"kit_range": "^2.5.7"
 }

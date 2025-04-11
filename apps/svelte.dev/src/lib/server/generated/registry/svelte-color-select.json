@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/captaincodeman/svelte-color-select",
 	"authors": ["captaincodeman"],
 	"homepage": "https://captaincodeman.github.io/svelte-color-select/",
-	"downloads": 24,
-	"dependents": 0,
+	"downloads": 14,
 	"updated": "2024-11-27T00:12:45.841Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 33,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.14",
+	"svelte_range": "^3.54.0 || ^4.0.0 || ^5.0.0",
+	"kit_range": "^2.8.5"
 }

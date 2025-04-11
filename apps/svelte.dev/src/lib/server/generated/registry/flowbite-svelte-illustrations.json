@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/shinokada/flowbite-svelte-illustrations",
 	"authors": ["shinichiokada"],
 	"homepage": "https://flowbite-svelte-illustrations.codewithshin.com/",
-	"downloads": 189,
-	"dependents": 0,
+	"downloads": 14,
 	"updated": "2025-04-01T06:23:03.821Z",
 	"tags": ["ui"],
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
 	"runes": false,
 	"github_stars": 1,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.4",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.20.2"
 }

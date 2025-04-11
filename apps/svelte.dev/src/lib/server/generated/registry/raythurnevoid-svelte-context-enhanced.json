@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/raythurnevoid/svelte-co-components",
 	"authors": ["raythurnevoid"],
 	"homepage": "https://github.com/raythurnevoid/svelte-co-components#readme",
-	"downloads": 80,
-	"dependents": 2,
+	"downloads": 93,
 	"updated": "2023-06-06T12:50:23.627Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.0.1",
+	"svelte_range": "^3.56.0",
+	"kit_range": "^1.20.1"
 }

@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/saravanabalagi/svelte-mapbox-gl",
 	"authors": ["saravanabalagi"],
 	"homepage": "https://github.com/saravanabalagi/svelte-mapbox-gl#readme",
-	"downloads": 25,
-	"dependents": 0,
+	"downloads": 17,
 	"updated": "2021-07-26T02:07:53.494Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 13,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.2.2",
+	"svelte_range": "^3.20.1"
 }

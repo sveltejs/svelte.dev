@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/bryanmylee/svelte-previous",
 	"authors": ["bryanmylee"],
 	"homepage": "https://github.com/bryanmylee/svelte-previous#readme",
-	"downloads": 430,
-	"dependents": 0,
+	"downloads": 277,
 	"updated": "2023-08-10T17:56:01.692Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 84,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.1.4",
+	"svelte_range": "^3.49.0 || ^4"
 }

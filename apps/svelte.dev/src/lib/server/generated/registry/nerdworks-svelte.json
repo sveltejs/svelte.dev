@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/inertiajs/inertia",
 	"authors": ["nobbo"],
 	"homepage": "https://inertiajs.com/",
-	"downloads": 1,
-	"dependents": 0,
+	"downloads": 0,
 	"updated": "2024-06-24T11:26:04.392Z",
 	"tags": ["integration"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 7016,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.2.0",
+	"svelte_range": "^3.20.0 || ^4.0.0",
+	"kit_range": "^2.5.5"
 }

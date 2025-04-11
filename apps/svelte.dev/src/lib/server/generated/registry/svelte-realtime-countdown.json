@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/haysquareA/svelte-real-time-countdown",
 	"authors": ["haysquare"],
 	"homepage": "https://github.com/haysquareA/svelte-real-time-countdown#readme",
-	"downloads": 1,
-	"dependents": 0,
+	"downloads": 0,
 	"updated": "2024-03-23T15:07:14.040Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.5",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^2.0.0"
 }

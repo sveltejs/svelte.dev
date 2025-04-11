@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/SaschaLucius/svelte-umami",
 	"authors": ["sascha-lucius"],
 	"homepage": "https://github.com/SaschaLucius/svelte-umami#readme",
-	"downloads": 190,
-	"dependents": 0,
+	"downloads": 188,
 	"updated": "2025-02-07T14:04:02.622Z",
 	"tags": ["seo"],
 	"runes": false,
 	"github_stars": 22,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.4",
+	"svelte_range": "^4.0.0 || ^5.0.0",
+	"kit_range": "2.17.1"
 }

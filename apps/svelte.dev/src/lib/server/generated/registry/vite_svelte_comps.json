@@ -3,20 +3,11 @@
 	"description": "Build Svelte components with Vite and Web Components.",
 	"repo_url": "",
 	"authors": ["miyoko0505"],
-	"downloads": 5,
-	"dependents": 2,
+	"downloads": 1,
 	"updated": "2023-03-17T08:23:36.296Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.0.3",
+	"svelte_range": "^3.55.1"
 }

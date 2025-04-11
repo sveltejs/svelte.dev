@@ -3,20 +3,12 @@
 	"description": "Provide simple user library for SvelteKit.",
 	"repo_url": "",
 	"authors": ["hotsixman"],
-	"downloads": 3,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2024-04-28T06:59:58.509Z",
 	"tags": ["auth"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.4.0",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^2.0.0"
 }

@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/threlte/threlte",
 	"authors": ["grischaerbe"],
 	"homepage": "https://github.com/threlte/threlte.git#readme",
-	"downloads": 401,
-	"dependents": 1,
+	"downloads": 92,
 	"updated": "2025-01-20T22:28:42.925Z",
 	"tags": ["media"],
 	"runes": false,
 	"github_stars": 2842,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "3.0.0",
+	"svelte_range": "^5.14.4"
 }

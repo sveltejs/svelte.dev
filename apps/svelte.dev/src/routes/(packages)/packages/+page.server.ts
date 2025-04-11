@@ -22,7 +22,6 @@ export async function load({ url }) {
 			},
 			{} as Record<string, boolean>
 		);
-	const hide_outdated = (url.searchParams.get('hide_outdated') ?? 'true') === 'true';
 	const sort_by_param = url.searchParams.get('sort_by') as SortCriterion;
 
 	const sort_by = search_criteria.includes(sort_by_param) ? sort_by_param : 'popularity';
@@ -55,13 +54,12 @@ export async function load({ url }) {
 		});
 	}
 
-	init(registry);
+	await init(registry);
 
-	let current_results = search(query, {
+	let current_results = await search(query, {
 		sort_by,
 		filters: {
-			svelte_versions,
-			hide_outdated
+			svelte_versions
 		}
 	});
 

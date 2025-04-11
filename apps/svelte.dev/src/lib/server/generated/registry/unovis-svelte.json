@@ -12,21 +12,12 @@
 		"rebeccabol"
 	],
 	"homepage": "https://unovis.dev",
-	"downloads": 8592,
-	"dependents": 1,
+	"downloads": 3033,
 	"updated": "2025-02-19T18:26:10.533Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 2430,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.5.1",
+	"svelte_range": "^3.48.0 || ^4.0.0 "
 }

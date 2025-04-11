@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/Rezi/svelte-gestures",
 	"authors": ["rezi99"],
 	"homepage": "https://github.com/Rezi/svelte-gestures#readme",
-	"downloads": 11436,
-	"dependents": 8,
+	"downloads": 9493,
 	"updated": "2025-01-16T12:29:42.019Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 148,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "5.1.3",
+	"svelte_range": "^5.0.0-next.193"
 }

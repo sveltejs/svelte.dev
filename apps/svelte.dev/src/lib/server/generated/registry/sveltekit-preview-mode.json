@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/darbymanning/sveltekit-preview-mode",
 	"authors": ["darbymanning"],
 	"homepage": "https://github.com/darbymanning/sveltekit-preview-mode#readme",
-	"downloads": 81,
-	"dependents": 0,
+	"downloads": 24,
 	"updated": "2024-12-12T15:36:20.703Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 21,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.0",
+	"svelte_range": ">=5.0.0",
+	"kit_range": ">=2.0.0"
 }

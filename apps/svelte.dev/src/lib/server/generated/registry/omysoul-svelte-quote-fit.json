@@ -3,20 +3,11 @@
 	"description": "Format text to fit within a container in Svelte.",
 	"repo_url": "",
 	"authors": ["omysoul"],
-	"downloads": 23,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2021-09-04T19:26:32.502Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.2.8",
+	"svelte_range": "^3.23.2"
 }

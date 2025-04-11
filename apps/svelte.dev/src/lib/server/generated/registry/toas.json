@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/itamaesanorg/toas",
 	"authors": ["itamaesanorg"],
 	"homepage": "https://itamaesan.org",
-	"downloads": 6,
-	"dependents": 0,
+	"downloads": 9,
 	"updated": "2023-12-17T18:23:58.934Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.10",
+	"svelte_range": "^4.2.7",
+	"kit_range": "^2.0.0"
 }

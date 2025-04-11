@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/saqqdy/eslint-sets",
 	"authors": ["saqqdy"],
 	"homepage": "https://github.com/saqqdy/eslint-sets/tree/master/packages/svelte#readme",
-	"downloads": 1,
-	"dependents": 1,
+	"downloads": 36,
 	"updated": "2024-11-20T06:22:11.506Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 7,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	},
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "5.14.0",
+	"svelte_range": ">=3.37.0"
 }

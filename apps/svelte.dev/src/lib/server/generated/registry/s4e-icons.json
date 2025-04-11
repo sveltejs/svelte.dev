@@ -3,21 +3,13 @@
 	"description": "Provide SVG icon components for Svelte applications.",
 	"repo_url": "https://github.com/eswat2/s4e-icons",
 	"authors": ["eswat2"],
-	"downloads": 8,
-	"dependents": 0,
+	"downloads": 124,
 	"updated": "2024-10-21T14:36:08.959Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 1,
 	"homepage": "https://www.npmjs.com/package/s4e-icons",
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.0.505",
+	"svelte_range": "5.0.4"
 }

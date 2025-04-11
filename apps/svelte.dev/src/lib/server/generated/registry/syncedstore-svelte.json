@@ -3,19 +3,11 @@
 	"description": "Provide Svelte helpers for SyncedStore.",
 	"repo_url": "",
 	"authors": ["yousefed"],
-	"downloads": 384,
-	"dependents": 2,
+	"downloads": 239,
 	"updated": "2023-10-15T11:48:21.416Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.6.0",
+	"svelte_range": "*"
 }

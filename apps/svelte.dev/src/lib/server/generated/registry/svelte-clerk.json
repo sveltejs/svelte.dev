@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/wobsoriano/svelte-clerk",
 	"authors": ["wobsoriano"],
 	"homepage": "https://github.com/wobsoriano/svelte-clerk#readme",
-	"downloads": 795,
-	"dependents": 0,
-	"updated": "2025-03-27T06:13:03.090Z",
+	"downloads": 1057,
+	"updated": "2025-04-09T16:19:17.489Z",
 	"tags": ["auth"],
 	"runes": false,
 	"github_stars": 106,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.11.0",
+	"svelte_range": "^5.11.0",
+	"kit_range": "^2.20.0"
 }

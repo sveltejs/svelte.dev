@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/paoloricciuti/sveltekit-search-params",
 	"authors": ["pablopang"],
 	"homepage": "https://sveltekit-search-params.netlify.app",
-	"downloads": 6765,
-	"dependents": 0,
+	"downloads": 5530,
 	"updated": "2024-07-28T17:17:48.621Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 588,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "3.0.0",
+	"svelte_range": "^3.55.0 || ^4.0.0 || ^5.0.0",
+	"kit_range": "^1.0.0 || ^2.0.0"
 }

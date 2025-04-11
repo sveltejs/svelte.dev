@@ -3,20 +3,11 @@
 	"description": "Load Svelte components using ESM, with custom options.",
 	"repo_url": "",
 	"authors": ["jakobrosenberg"],
-	"downloads": 15,
-	"dependents": 0,
+	"downloads": 5,
 	"updated": "2022-02-11T12:52:08.182Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.0.3",
+	"svelte_range": "^3.44.2"
 }

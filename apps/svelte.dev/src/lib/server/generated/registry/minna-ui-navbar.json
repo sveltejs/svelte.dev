@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/WeAreGenki/minna-ui",
 	"authors": ["maxmilton"],
 	"homepage": "https://wearegenki.github.io/minna-ui",
-	"downloads": 84,
-	"dependents": 1,
+	"downloads": 32,
 	"updated": "2020-03-24T19:40:16.110Z",
 	"tags": ["design-system"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 87,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.36.0",
+	"svelte_range": "^3.0.0"
 }

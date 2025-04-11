@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/vincentlaucsb/svelte-contextmenu",
 	"authors": ["vincela9"],
 	"homepage": "https://github.com/vincentlaucsb/svelte-contextmenu#readme",
-	"downloads": 93,
-	"dependents": 0,
+	"downloads": 181,
 	"updated": "2023-01-09T07:46:17.532Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 12,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.2",
+	"svelte_range": "^3.5.0",
+	"kit_range": "^1.0.0-next.348"
 }

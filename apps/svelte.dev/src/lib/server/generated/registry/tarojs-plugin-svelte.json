@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/SyMind/tarojs-plugin-svelte",
 	"authors": ["symind"],
 	"homepage": "https://github.com/SyMind/tarojs-plugin-svelte#readme",
-	"downloads": 3,
-	"dependents": 0,
+	"downloads": 6,
 	"updated": "2023-06-25T22:11:51.333Z",
 	"tags": ["integration"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 63,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "2.0.3",
+	"svelte_range": "4.0.0"
 }

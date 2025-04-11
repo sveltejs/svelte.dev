@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/JLarky/lift-html",
 	"authors": ["jlarky"],
 	"homepage": "https://github.com/JLarky/lift-html/tree/main#readme",
-	"downloads": 0,
-	"dependents": 0,
+	"downloads": 8,
 	"updated": "2025-01-09T09:33:44.219Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 29,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.0.5",
+	"svelte_range": ">=5"
 }

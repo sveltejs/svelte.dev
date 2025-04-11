@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/mzaghetto/svelte-json-tree",
 	"authors": ["mzaghetto"],
 	"homepage": "https://github.com/mzaghetto/svelte-json-tree#readme",
-	"downloads": 41,
-	"dependents": 0,
+	"downloads": 5,
 	"updated": "2021-06-03T15:05:43.619Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "2.0.3",
+	"svelte_range": "3.38.2"
 }

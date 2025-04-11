@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/ktsn/svelte-jest",
 	"authors": ["ktsn"],
 	"homepage": "https://github.com/ktsn/svelte-jest#readme",
-	"downloads": 204,
-	"dependents": 0,
+	"downloads": 387,
 	"updated": "2019-10-09T06:24:43.419Z",
 	"tags": ["tooling", "testing"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 36,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.3.1",
+	"svelte_range": "^3.0.0"
 }

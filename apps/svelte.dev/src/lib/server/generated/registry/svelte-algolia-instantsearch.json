@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/aymeric-giraudet/svelte-algolia-instantsearch",
 	"authors": ["aymeric.giraudet"],
 	"homepage": "https://github.com/aymeric-giraudet/svelte-algolia-instantsearch#readme",
-	"downloads": 422,
-	"dependents": 0,
+	"downloads": 336,
 	"updated": "2024-01-13T17:50:29.450Z",
 	"tags": ["integration"],
 	"runes": false,
 	"github_stars": 53,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.12.1",
+	"svelte_range": ">= 3 < 5",
+	"kit_range": ">= 1 < 3"
 }

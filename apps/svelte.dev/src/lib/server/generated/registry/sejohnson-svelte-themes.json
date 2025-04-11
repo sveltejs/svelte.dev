@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/elliott-with-the-longest-name-on-github/svelte-themes",
 	"authors": ["tcc-sejohnson"],
 	"homepage": "https://github.com/elliott-with-the-longest-name-on-github/svelte-themes#readme",
-	"downloads": 115,
-	"dependents": 0,
+	"downloads": 120,
 	"updated": "2025-02-27T18:35:40.228Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 6,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.6",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.16.0"
 }

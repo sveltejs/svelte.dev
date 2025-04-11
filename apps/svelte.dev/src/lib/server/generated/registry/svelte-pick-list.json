@@ -3,20 +3,11 @@
 	"description": "Reorder items between different lists in Svelte applications.",
 	"repo_url": "",
 	"authors": ["alstar01"],
-	"downloads": 9,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2021-05-13T16:24:36.601Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.2.0",
+	"svelte_range": "^3.38.2"
 }

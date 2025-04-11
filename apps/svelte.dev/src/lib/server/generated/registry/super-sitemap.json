@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/jasongitmail/super-sitemap",
 	"authors": ["jasongitmail"],
 	"homepage": "https://github.com/jasongitmail/super-sitemap#readme",
-	"downloads": 4426,
-	"dependents": 0,
+	"downloads": 4867,
 	"updated": "2024-11-08T17:40:39.130Z",
 	"tags": ["seo"],
 	"runes": false,
 	"github_stars": 184,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.3",
+	"svelte_range": ">=4.0.0 <6.0.0",
+	"kit_range": "^1.27.2"
 }

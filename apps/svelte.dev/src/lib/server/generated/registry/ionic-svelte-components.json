@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/ionic-svelte/components",
 	"authors": ["tommertom"],
 	"homepage": "https://ionic-svelte.firebaseapp.com",
-	"downloads": 60,
-	"dependents": 0,
+	"downloads": 4,
 	"updated": "2025-03-30T17:03:43.059Z",
 	"tags": ["ui", "design-system"],
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
 	"runes": false,
 	"github_stars": 0,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.5.86",
+	"svelte_range": "^4.0.5"
 }

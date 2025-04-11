@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/nerd-coder/svelte-zod-form",
 	"authors": ["toanzzz"],
 	"homepage": "https://github.com/nerd-coder/svelte-zod-form#readme",
-	"downloads": 37,
-	"dependents": 0,
+	"downloads": 12,
 	"updated": "2024-10-20T17:48:47.815Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 10,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/lib/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.6.1",
+	"svelte_range": "^4.0.0 || ^5.0.0",
+	"kit_range": "^2.7.2"
 }

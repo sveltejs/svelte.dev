@@ -3,20 +3,11 @@
 	"description": "Create UI library inspired by material design for Svelte.",
 	"repo_url": "https://github.com/UnwrittenFun/svelte-matter",
 	"authors": ["unwrittenfun"],
-	"downloads": 2,
-	"dependents": 0,
+	"downloads": 0,
 	"updated": "2019-05-25T17:46:52.923Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.1.0",
+	"svelte_range": "^3.4.2"
 }

@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/oMaN-Rod/svelte-persisted-state",
 	"authors": ["i_am_o"],
 	"homepage": "https://github.com/oMaN-Rod/svelte-persisted-state#readme",
-	"downloads": 195,
-	"dependents": 0,
+	"downloads": 243,
 	"updated": "2025-02-01T12:00:33.070Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 32,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.svelte.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.0",
+	"svelte_range": "^5.0.0-next.1",
+	"kit_range": "^2.15.1"
 }

@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/cuire/svelte-grid-extended",
 	"authors": ["cuire"],
 	"homepage": "https://github.com/cuire/svelte-grid-extended#readme",
-	"downloads": 730,
-	"dependents": 0,
+	"downloads": 810,
 	"updated": "2024-06-01T06:55:58.810Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 102,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.2.1",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^2.0.0"
 }

@@ -4,20 +4,11 @@
 	"repo_url": "",
 	"authors": ["fengkx"],
 	"homepage": "https://github.com/fengkx/svelte-aplayer",
-	"downloads": 23,
-	"dependents": 0,
+	"downloads": 3,
 	"updated": "2023-02-19T03:09:35.503Z",
 	"tags": ["media"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.1.2",
+	"svelte_range": "^3.35.0"
 }

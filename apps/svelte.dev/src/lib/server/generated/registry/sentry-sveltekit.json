@@ -15,21 +15,13 @@
 		"zeeg"
 	],
 	"homepage": "https://github.com/getsentry/sentry-javascript/tree/master/packages/sveltekit",
-	"downloads": 51244,
-	"dependents": 3,
-	"updated": "2025-03-27T18:39:58.595Z",
+	"downloads": 47829,
+	"updated": "2025-04-08T14:19:24.031Z",
 	"tags": ["integration", "server"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 8184,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: build/types/index.types.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "9.12.0",
+	"svelte_range": "^4.2.8",
+	"kit_range": "2.x"
 }

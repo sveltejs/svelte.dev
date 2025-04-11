@@ -4,20 +4,11 @@
 	"repo_url": "",
 	"authors": ["ktarmyshov"],
 	"homepage": "https://github.com/geoffrich/svelte-adapter-azure-swa#readme",
-	"downloads": 294,
-	"dependents": 0,
-	"updated": "2025-03-25T04:11:00.106Z",
+	"downloads": 81,
+	"updated": "2025-04-04T22:03:00.541Z",
 	"tags": ["adapter"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.21.12",
+	"kit_range": "^2.0.0"
 }

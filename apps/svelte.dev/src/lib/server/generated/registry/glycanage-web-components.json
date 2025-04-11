@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/GlycanAge/ga-components",
 	"authors": ["flauc1"],
 	"homepage": "https://github.com/GlycanAge/ga-components#readme",
-	"downloads": 42,
-	"dependents": 0,
+	"downloads": 123,
 	"updated": "2025-02-19T11:11:41.193Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.135.0",
+	"svelte_range": "4.1.1"
 }

@@ -4,19 +4,12 @@
 	"repo_url": "https://github.com/runic-ui/runic-ui",
 	"authors": ["buhodev"],
 	"homepage": "https://github.com/runic-ui/runic-ui#readme",
-	"downloads": 2,
-	"dependents": 0,
+	"downloads": 0,
 	"updated": "2024-09-02T05:42:16.992Z",
 	"tags": ["ui"],
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.1",
+	"svelte_range": "^5.0.0-next.1",
+	"kit_range": "^2.0.0"
 }

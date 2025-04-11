@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/flo-bit/ui-kit",
 	"authors": ["flo-bit128"],
 	"homepage": "https://flo-bit.dev/ui-kit",
-	"downloads": 62,
-	"dependents": 0,
+	"downloads": 0,
 	"updated": "2025-03-16T18:11:31.485Z",
 	"tags": ["ui", "design-system"],
 	"runes": false,
 	"github_stars": 25,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.5",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.16.0"
 }

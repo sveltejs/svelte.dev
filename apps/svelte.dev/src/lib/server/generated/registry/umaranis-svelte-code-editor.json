@@ -3,19 +3,12 @@
 	"description": "Integrate code editor with syntax highlighting in Svelte.",
 	"repo_url": "",
 	"authors": ["umaranis"],
-	"downloads": 460,
-	"dependents": 0,
-	"updated": "2025-03-26T06:31:17.802Z",
+	"downloads": 63,
+	"updated": "2025-04-04T08:39:08.110Z",
 	"tags": ["tooling"],
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "0.0.12",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.20.0"
 }

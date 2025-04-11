@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/TheComputerM/svelte-docster",
 	"authors": ["thecomputerm"],
 	"homepage": "https://github.com/TheComputerM/svelte-docster#readme",
-	"downloads": 18,
-	"dependents": 1,
+	"downloads": 2,
 	"updated": "2021-06-07T19:05:45.916Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 9,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "2.0.1",
+	"svelte_range": "^3.38.2"
 }

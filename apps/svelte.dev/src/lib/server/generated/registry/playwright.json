@@ -4,21 +4,11 @@
 	"repo_url": "https://github.com/microsoft/playwright",
 	"authors": ["pavelfeldman", "yurys", "dgozman-ms", "playwright-bot"],
 	"homepage": "https://playwright.dev",
-	"downloads": 13400645,
-	"dependents": 1038,
+	"downloads": 13391849,
 	"updated": "2025-03-17T17:02:50.323Z",
 	"tags": ["testing"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 71422,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.51.1"
 }

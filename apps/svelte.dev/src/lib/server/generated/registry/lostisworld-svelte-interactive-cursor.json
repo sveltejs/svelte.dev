@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/LoStis-World/svelte-interactive-cursor",
 	"authors": ["lostisworld"],
 	"homepage": "https://github.com/LoStis-World/svelte-interactive-cursor#readme",
-	"downloads": 33,
-	"dependents": 0,
+	"downloads": 78,
 	"updated": "2025-01-11T14:52:12.488Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 11,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/interactive-cursor/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.3.2",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.15.1"
 }

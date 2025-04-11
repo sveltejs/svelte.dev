@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/SauravKanchan/svelte-chartjs",
 	"authors": ["sauravnk30"],
 	"homepage": "https://saurav.tech/mdbsvelte/?path=/story/charts--examples",
-	"downloads": 46856,
-	"dependents": 15,
+	"downloads": 45196,
 	"updated": "2024-02-06T14:40:40.928Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 319,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "3.1.5",
+	"svelte_range": "^4.0.0"
 }

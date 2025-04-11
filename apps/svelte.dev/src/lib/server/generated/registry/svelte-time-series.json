@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/arlac77/svelte-time-series",
 	"authors": ["arlac77"],
 	"homepage": "https://github.com/arlac77/svelte-time-series#readme",
-	"downloads": 98,
-	"dependents": 0,
+	"downloads": 42,
 	"updated": "2025-03-26T18:26:26.886Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 5,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "2.0.36",
+	"svelte_range": "^5.25.0"
 }

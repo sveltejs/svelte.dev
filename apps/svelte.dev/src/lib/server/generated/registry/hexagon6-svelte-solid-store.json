@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/hexagon6/svelte-solid-store",
 	"authors": ["hexagon6"],
 	"homepage": "https://github.com/hexagon6/svelte-solid-store#readme",
-	"downloads": 14,
-	"dependents": 0,
+	"downloads": 58,
 	"updated": "2024-05-21T09:52:43.589Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 1,
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	},
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	}
+	"typescript": "none",
+	"version": "0.4.3",
+	"svelte_range": "^4.2.12 || ^5.0.0"
 }

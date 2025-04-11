@@ -4,18 +4,11 @@
 	"authors": ["tagnumelite"],
 	"homepage": "https://github.com/TagnumElite/tagnumelite-svelte-chartjs",
 	"downloads": 1,
-	"dependents": 0,
 	"updated": "2024-12-31T23:29:08.021Z",
 	"tags": ["ui"],
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.1",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.9.0"
 }

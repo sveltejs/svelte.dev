@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/anurag-dhamala/sveltease",
 	"authors": ["anurag-dhamala"],
 	"homepage": "https://github.com/anurag-dhamala/sveltease#readme",
-	"downloads": 10,
-	"dependents": 0,
+	"downloads": 6,
 	"updated": "2023-11-30T21:17:49.624Z",
 	"tags": ["integration"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 11,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.8",
+	"svelte_range": "^4.2.7"
 }

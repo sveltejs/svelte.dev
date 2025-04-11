@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/pockettojs/pocketto-svelte",
 	"authors": ["pockettojs"],
 	"homepage": "https://github.com/pockettojs/pocketto-svelte#readme",
-	"downloads": 4,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2024-10-26T13:23:52.673Z",
 	"tags": ["integration"],
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/src/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.3",
+	"svelte_range": ">=3.0.0"
 }

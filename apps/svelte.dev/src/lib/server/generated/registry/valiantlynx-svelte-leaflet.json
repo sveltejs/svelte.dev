@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/valiantlynx/svelte-leaflet",
 	"authors": ["valiantlynx"],
 	"homepage": "https://svelte-leaflet.vercel.app",
-	"downloads": 16,
-	"dependents": 0,
+	"downloads": 45,
 	"updated": "2023-12-28T23:56:01.908Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 6,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.14",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^1.20.4"
 }

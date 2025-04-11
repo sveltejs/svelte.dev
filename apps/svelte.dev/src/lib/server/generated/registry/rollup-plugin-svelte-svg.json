@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/codefeathers/rollup-plugin-svelte-svg",
 	"authors": ["mkrhere"],
 	"homepage": "https://github.com/codefeathers/rollup-plugin-svelte-svg#readme",
-	"downloads": 1637,
-	"dependents": 2,
+	"downloads": 1013,
 	"updated": "2021-12-18T00:54:06.023Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 76,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "@types",
-		"types_info": "Types available through @types/rollup-plugin-svelte-svg"
-	}
+	"typescript": "none",
+	"version": "1.0.0-beta.6",
+	"svelte_range": "*"
 }

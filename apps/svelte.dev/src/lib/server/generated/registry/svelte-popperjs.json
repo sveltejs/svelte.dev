@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/bryanmylee/svelte-popperjs",
 	"authors": ["bryanmylee"],
 	"homepage": "https://github.com/bryanmylee/svelte-popperjs#readme",
-	"downloads": 7722,
-	"dependents": 12,
+	"downloads": 7842,
 	"updated": "2022-08-30T04:12:00.943Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 113,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.3.2",
+	"svelte_range": ">=3"
 }

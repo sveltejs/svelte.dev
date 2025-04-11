@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/joaquimnetocel/svelte-sortable-items",
 	"authors": ["joaquim.neto.cel"],
 	"homepage": "https://github.com/joaquimnetocel/svelte-sortable-items#readme",
-	"downloads": 61,
-	"dependents": 0,
+	"downloads": 158,
 	"updated": "2024-08-26T20:44:52.886Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 14,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.1",
+	"svelte_range": "^5.0.0-next.1",
+	"kit_range": "^2.0.0"
 }

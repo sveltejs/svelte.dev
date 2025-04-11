@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/dkaoster/scrolly-video",
 	"authors": ["dkao"],
 	"homepage": "https://github.com/dkaoster/scrolly-video#readme",
-	"downloads": 646,
-	"dependents": 1,
+	"downloads": 577,
 	"updated": "2025-03-07T04:16:43.669Z",
 	"tags": ["media"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1042,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/ScrollyVideo.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.24",
+	"svelte_range": "^4.2.19"
 }

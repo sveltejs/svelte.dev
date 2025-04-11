@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/LeoDog896/svelte-persistent",
 	"authors": ["leodog896"],
 	"homepage": "https://leodog896.github.io/svelte-persistent",
-	"downloads": 6,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2023-09-04T14:53:40.247Z",
 	"tags": ["miscellaneous"],
 	"runes": true,
 	"github_stars": 2,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.3",
+	"svelte_range": ">=4.0.0",
+	"kit_range": "^1.24.1"
 }

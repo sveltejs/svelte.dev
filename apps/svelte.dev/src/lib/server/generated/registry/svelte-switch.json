@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/thecodejack/svelte-switch",
 	"authors": ["thecodejack"],
 	"homepage": "https://github.com/thecodejack/svelte-switch#readme",
-	"downloads": 292,
-	"dependents": 1,
+	"downloads": 252,
 	"updated": "2021-09-26T06:25:26.046Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 28,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.0.5",
+	"svelte_range": "3.31.2"
 }

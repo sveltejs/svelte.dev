@@ -4,20 +4,11 @@
 	"repo_url": "https://github.com/techbiz100/-techbiz-svelte-preprocess-cssmodules",
 	"authors": ["techbiz"],
 	"homepage": "https://github.com/techbiz100/-techbiz-svelte-preprocess-cssmodules",
-	"downloads": 71,
-	"dependents": 0,
+	"downloads": 9,
 	"updated": "2024-06-17T09:51:45.935Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/esm/types/index.d.mjs"
-	}
+	"typescript": "first-party",
+	"version": "1.0.21",
+	"svelte_range": "^3.20.0"
 }

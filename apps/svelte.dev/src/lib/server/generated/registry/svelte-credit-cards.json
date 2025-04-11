@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/CharlyJazz/svelte-credit-card",
 	"authors": ["charlyjazz"],
 	"homepage": "https://github.com/CharlyJazz/svelte-credit-card#readme",
-	"downloads": 15,
-	"dependents": 0,
+	"downloads": 48,
 	"updated": "2024-11-04T01:58:25.078Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 67,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "2.0.6",
+	"svelte_range": "^4.1.1"
 }

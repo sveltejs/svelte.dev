@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/denisstasyev/svelte-tooltip-action",
 	"authors": ["denisstasyev"],
 	"homepage": "https://github.com/denisstasyev/svelte-tooltip-action#readme",
-	"downloads": 35,
-	"dependents": 0,
+	"downloads": 17,
 	"updated": "2021-06-21T06:25:15.439Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 8,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.4",
+	"svelte_range": "latest"
 }

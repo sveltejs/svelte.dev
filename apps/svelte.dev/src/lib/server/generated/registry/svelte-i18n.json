@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/kaisermann/svelte-i18n",
 	"authors": ["kaisermann"],
 	"homepage": "https://github.com/kaisermann/svelte-i18n#readme",
-	"downloads": 52158,
-	"dependents": 57,
+	"downloads": 73080,
 	"updated": "2024-10-21T08:19:33.762Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 1319,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/runtime.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "4.0.1",
+	"svelte_range": "^3 || ^4 || ^5"
 }

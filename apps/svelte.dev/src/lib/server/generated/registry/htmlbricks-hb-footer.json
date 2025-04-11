@@ -3,20 +3,10 @@
 	"description": "Create footer web component for Svelte.",
 	"repo_url": "",
 	"authors": ["dariocaruso"],
-	"downloads": 475,
-	"dependents": 4,
-	"updated": "2025-03-24T18:07:22.144Z",
+	"downloads": 432,
+	"updated": "2025-04-08T22:27:33.513Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.50.0-alpha.27"
 }

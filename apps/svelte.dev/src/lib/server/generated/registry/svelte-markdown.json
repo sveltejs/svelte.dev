@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/pablo-abc/svelte-markdown",
 	"authors": ["pberganza"],
 	"homepage": "https://github.com/pablo-abc/svelte-markdown",
-	"downloads": 22659,
-	"dependents": 56,
+	"downloads": 24467,
 	"updated": "2023-12-25T15:34:13.274Z",
 	"tags": ["content"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 372,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.4.1",
+	"svelte_range": "^4.0.0"
 }

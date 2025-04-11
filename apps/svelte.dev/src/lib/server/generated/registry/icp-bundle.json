@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/lucademenego99/icp-bundle",
 	"authors": ["lucademenego99"],
 	"homepage": "https://github.com/lucademenego99/icp-bundle#readme",
-	"downloads": 113,
-	"dependents": 0,
+	"downloads": 59,
 	"updated": "2023-07-12T14:50:26.220Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 12,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.2.7",
+	"svelte_range": "^3.44.0"
 }

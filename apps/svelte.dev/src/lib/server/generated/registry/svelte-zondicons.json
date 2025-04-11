@@ -3,22 +3,13 @@
 	"description": "Use Zondicons SVG icons in Svelte components.",
 	"repo_url": "https://github.com/moollaza/svelte-zondicons",
 	"authors": ["moollaza"],
-	"downloads": 7,
-	"dependents": 0,
+	"downloads": 0,
 	"updated": "2019-12-24T02:21:34.421Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 4,
 	"homepage": "https://www.zondicons.com/",
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.1",
+	"svelte_range": "latest"
 }

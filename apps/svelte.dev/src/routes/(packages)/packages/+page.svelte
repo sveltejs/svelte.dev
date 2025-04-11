@@ -12,7 +12,6 @@
 	const qps = reactive_query_params({
 		query: QueryParamSerde.string(),
 		svelte_versions: QueryParamSerde.array(),
-		hide_outdated: QueryParamSerde.boolean(true),
 		sort_by: QueryParamSerde.string<SortCriterion>('popularity')
 	});
 
@@ -61,7 +60,6 @@
 	$effect(() => {
 		qps.query;
 		qps.svelte_versions;
-		qps.hide_outdated;
 		qps.sort_by;
 
 		if (!ready) return;
@@ -79,7 +77,6 @@
 			payload: {
 				query: qps.query,
 				svelte_versions: $state.snapshot(qps.svelte_versions),
-				hide_outdated: qps.hide_outdated,
 				sort_by: qps.sort_by
 			}
 		});
@@ -184,9 +181,7 @@
 
 				{#if qps.query}
 					<div class="sub">
-						<span
-							>Showing {packages.packages?.length ?? 0 + packages.sv_add?.length ?? 0} results</span
-						>
+						<span>Showing {packages?.length ?? 0} results</span>
 
 						<span style="flex: 1 1 auto"></span>
 
@@ -217,10 +212,10 @@
 							</select>
 						</label>
 
-						<label>
+						<!-- <label>
 							Hide outdated:
 							<input type="checkbox" bind:checked={qps.hide_outdated} />
-						</label>
+						</label> -->
 					</div>
 				{/if}
 			</form>
@@ -281,19 +276,18 @@
 		</section>
 
 		<div class="posts" style="display: {!qps.query ? 'none' : null}">
-			{#if packages.sv_add.length > 0}
+			<!-- {#if packages.sv_add.length > 0}
 				<h2>sv add</h2>
 				<section>
 					{#each packages.sv_add as pkg}
 						<PackageCard {pkg} />
 					{/each}
 				</section>
-			{/if}
+			{/if} -->
 
-			{#if packages.packages.length > 0}
-				<h2>Packages</h2>
+			{#if packages.length > 0}
 				<section>
-					{#each packages.packages as pkg}
+					{#each packages as pkg}
 						<PackageCard {pkg} />
 					{/each}
 				</section>

@@ -4,20 +4,11 @@
 	"repo_url": "",
 	"authors": ["kitenite"],
 	"homepage": "https://onlook.dev",
-	"downloads": 14,
-	"dependents": 0,
+	"downloads": 7,
 	"updated": "2024-06-03T14:25:51.544Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "2.0.3",
+	"svelte_range": "^4.2.8"
 }

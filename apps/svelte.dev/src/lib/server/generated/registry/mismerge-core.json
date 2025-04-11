@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/BearToCode/mismerge",
 	"authors": ["astrobear"],
 	"homepage": "https://github.com/BearToCode/mismerge#readme",
-	"downloads": 72,
-	"dependents": 1,
+	"downloads": 54,
 	"updated": "2024-08-19T16:10:47.273Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 55,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.2.1",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^2.5.0"
 }

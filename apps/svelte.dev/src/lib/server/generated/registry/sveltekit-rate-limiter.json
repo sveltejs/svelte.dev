@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/ciscoheat/sveltekit-rate-limiter",
 	"authors": ["ciscoheat"],
 	"homepage": "https://github.com/ciscoheat/sveltekit-rate-limiter#readme",
-	"downloads": 3021,
-	"dependents": 0,
+	"downloads": 2419,
 	"updated": "2024-09-19T14:55:23.003Z",
 	"tags": ["server"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 255,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.6.1",
+	"svelte_range": "^4.2.12",
+	"kit_range": "1.x || 2.x"
 }

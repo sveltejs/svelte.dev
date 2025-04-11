@@ -3,20 +3,11 @@
 	"description": "Reusable UI components for Budibase projects.",
 	"repo_url": "",
 	"authors": ["lisipeng"],
-	"downloads": 0,
-	"dependents": 3,
+	"downloads": 8,
 	"updated": "2022-08-09T02:11:33.435Z",
 	"tags": ["design-system"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.1.34",
+	"svelte_range": "^3.38.2"
 }

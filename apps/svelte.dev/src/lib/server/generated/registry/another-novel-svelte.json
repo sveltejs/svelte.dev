@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/DennisOluoch/novel-svelte",
 	"authors": ["dennisoluoch"],
 	"homepage": "https://github.com/DennisOluoch/novel-svelte#readme",
-	"downloads": 7,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2024-10-06T19:09:46.082Z",
 	"tags": ["content"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.2.0",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^1.20.4"
 }

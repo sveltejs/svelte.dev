@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/cafebazaar/async-actions",
 	"authors": ["_mahdude", "amir_mousavi", "nainemom"],
 	"homepage": "https://github.com/cafebazaar/async-actions#readme",
-	"downloads": 1,
-	"dependents": 0,
+	"downloads": 14,
 	"updated": "2021-01-01T12:03:11.456Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 20,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.4.4",
+	"svelte_range": "^3.24.0"
 }

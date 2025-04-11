@@ -19,20 +19,13 @@
 		"jamwt"
 	],
 	"homepage": "https://convex.dev",
-	"downloads": 66,
-	"dependents": 0,
+	"downloads": 35,
 	"updated": "2025-01-20T21:45:20.095Z",
 	"tags": ["integration"],
 	"runes": false,
 	"github_stars": 28,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	},
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "0.0.11",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.0.0"
 }

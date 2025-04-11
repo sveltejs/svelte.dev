@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/wxt-dev/wxt",
 	"authors": ["_aklinker1"],
 	"homepage": "https://github.com/wxt-dev/wxt/blob/main/packages/module-svelte/README.md",
-	"downloads": 225,
-	"dependents": 0,
+	"downloads": 245,
 	"updated": "2025-01-28T21:17:42.473Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 6463,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.0.3",
+	"svelte_range": ">=5"
 }

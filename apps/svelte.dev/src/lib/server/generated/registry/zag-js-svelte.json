@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/chakra-ui/zag",
 	"authors": ["segunadebayo"],
 	"homepage": "https://github.com/chakra-ui/zag#readme",
-	"downloads": 7190,
-	"dependents": 5,
-	"updated": "2025-03-28T01:58:15.428Z",
+	"downloads": 8430,
+	"updated": "2025-04-09T14:34:56.564Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 4342,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "1.9.0",
+	"svelte_range": "^5.0.0-next.1"
 }

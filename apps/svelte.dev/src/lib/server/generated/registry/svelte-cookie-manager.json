@@ -5,19 +5,12 @@
 	"authors": ["dasporal"],
 	"homepage": "https://github.com/dasporal/svelte-cookie-manager#readme",
 	"downloads": 4,
-	"dependents": 0,
 	"updated": "2025-02-06T10:36:42.105Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.9.4",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.16.0"
 }

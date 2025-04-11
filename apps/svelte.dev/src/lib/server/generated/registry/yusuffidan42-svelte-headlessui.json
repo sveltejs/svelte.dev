@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/YusufFidan/svelte-headlessui",
 	"authors": ["yusuffidan.42"],
 	"homepage": "https://fidan.de",
-	"downloads": 3,
-	"dependents": 0,
+	"downloads": 0,
 	"updated": "2024-07-16T17:40:37.204Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "2.0.2",
+	"svelte_range": "^4.2.18",
+	"kit_range": "^1.30.4"
 }

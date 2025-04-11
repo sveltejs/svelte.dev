@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/svelte-plugins/svelte-viewable",
 	"authors": ["dysfunc"],
 	"homepage": "https://github.com/svelte-plugins/svelte-viewable",
-	"downloads": 12,
-	"dependents": 0,
+	"downloads": 15,
 	"updated": "2024-02-12T18:57:19.225Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 38,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.0.0",
+	"svelte_range": "^4.2.8"
 }

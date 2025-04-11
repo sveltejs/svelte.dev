@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/zerodevx/svelte-toast",
 	"authors": ["zerodevx"],
 	"homepage": "https://zerodevx.github.io/svelte-toast/",
-	"downloads": 19425,
-	"dependents": 18,
+	"downloads": 19056,
 	"updated": "2024-09-21T07:08:28.020Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 866,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.9.6",
+	"svelte_range": "^3.57.0 || ^4.0.0 || ^5.0.0",
+	"kit_range": "^2.5.28"
 }

@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/beyonk-adventures/svelte-simple-icons",
 	"authors": ["antony"],
 	"homepage": "https://github.com/beyonk-adventures/svelte-simple-icons#readme",
-	"downloads": 143,
-	"dependents": 0,
+	"downloads": 46,
 	"updated": "2019-10-30T09:39:51.719Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 13,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.3",
+	"svelte_range": "latest"
 }

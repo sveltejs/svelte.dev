@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/cmjoseph07/svelty-email",
 	"authors": ["cmjoseph07"],
 	"homepage": "https://github.com/cmjoseph07/svelty-email#readme",
-	"downloads": 294,
-	"dependents": 1,
+	"downloads": 244,
 	"updated": "2024-08-10T02:37:10.914Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 39,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.11",
+	"svelte_range": "^3.55.1",
+	"kit_range": "^1.5.0 || ^2.0.0"
 }

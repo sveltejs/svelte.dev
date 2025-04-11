@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/iamrhm/svelte-datepicker",
 	"authors": ["mittirbabu"],
 	"homepage": "https://github.com/iamrhm/svelte-datepicker#readme",
-	"downloads": 1,
-	"dependents": 0,
+	"downloads": 0,
 	"updated": "2023-09-12T09:39:30.525Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.0.1",
+	"svelte_range": "^4.0.5"
 }

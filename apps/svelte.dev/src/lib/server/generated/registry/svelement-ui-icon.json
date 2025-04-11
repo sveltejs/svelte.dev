@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/koory1st/svelement-ui",
 	"authors": ["koory1st"],
 	"homepage": "https://koory1st.github.io/svelement-ui/",
-	"downloads": 34,
-	"dependents": 0,
+	"downloads": 6,
 	"updated": "2024-02-15T11:12:41.776Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "0.19.29",
+	"svelte_range": "^4.0.0"
 }

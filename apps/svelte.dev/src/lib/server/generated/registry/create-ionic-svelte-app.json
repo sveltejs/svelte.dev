@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/Tommertom/svelte-ionic-npm",
 	"authors": ["tommertom"],
 	"homepage": "https://ionic-svelte.firebaseapp.com",
-	"downloads": 40,
-	"dependents": 0,
+	"downloads": 10,
 	"updated": "2024-08-04T12:00:09.160Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 19,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.0.38",
+	"svelte_range": "^4.2.7"
 }

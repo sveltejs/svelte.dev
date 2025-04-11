@@ -4,19 +4,11 @@
 	"repo_url": "",
 	"authors": ["binsarjr"],
 	"downloads": 2,
-	"dependents": 0,
 	"updated": "2023-11-13T20:03:51.447Z",
 	"tags": ["seo"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.1",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^1.20.4"
 }

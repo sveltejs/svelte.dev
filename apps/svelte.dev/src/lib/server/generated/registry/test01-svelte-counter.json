@@ -3,19 +3,11 @@
 	"description": "Create a simple counter component in Svelte.",
 	"repo_url": "",
 	"authors": ["akifb37"],
-	"downloads": 3,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2024-11-21T15:56:47.015Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "2.1.0",
+	"svelte_range": "^5.0.0"
 }

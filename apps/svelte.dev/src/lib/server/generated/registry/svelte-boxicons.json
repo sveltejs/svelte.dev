@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/shinokada/svelte-boxicons",
 	"authors": ["shinichiokada"],
 	"homepage": "https://svelte-boxicons.codewithshin.com",
-	"downloads": 8,
-	"dependents": 0,
+	"downloads": 15,
 	"updated": "2024-03-01T16:38:42.211Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 3,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.4",
+	"svelte_range": "^3.55.1 || ^4.0.0 || ^5.0.0",
+	"kit_range": "^2.5.2"
 }

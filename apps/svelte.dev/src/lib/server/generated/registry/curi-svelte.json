@@ -3,22 +3,13 @@
 	"description": "Integrate Curi routing with Svelte applications.",
 	"repo_url": "https://github.com/pshrmn/curi",
 	"authors": ["pshrmn"],
-	"downloads": 179,
-	"dependents": 0,
+	"downloads": 9,
 	"updated": "2020-06-27T21:47:14.336Z",
 	"tags": ["router"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 269,
 	"homepage": "https://curi.js.org",
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "2.0.0-beta.6",
+	"svelte_range": "^3.23.2"
 }

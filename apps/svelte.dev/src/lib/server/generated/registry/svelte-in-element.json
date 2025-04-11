@@ -4,20 +4,11 @@
 	"repo_url": "",
 	"authors": ["ravenstine"],
 	"homepage": "https://github.com/ravenstine/svelte-in-element",
-	"downloads": 7,
-	"dependents": 0,
+	"downloads": 8,
 	"updated": "2022-07-29T22:26:18.693Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.1.4",
+	"svelte_range": "^3.49.0"
 }

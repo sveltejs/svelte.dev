@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/macfja/svelte-undoable",
 	"authors": ["macfja"],
 	"homepage": "https://github.com/macfja/svelte-undoable#readme",
-	"downloads": 40,
-	"dependents": 0,
+	"downloads": 76,
 	"updated": "2021-02-20T18:47:39.164Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 45,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.1.0",
+	"svelte_range": "^3.32.3"
 }

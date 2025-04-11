@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/supabase/auth-helpers",
 	"authors": [],
 	"homepage": "https://github.com/supabase/auth-helpers/tree/main/packages/sveltekit#readme",
-	"downloads": 0,
-	"dependents": 0,
+	"downloads": 3371,
 	"updated": "2024-04-09T10:33:33.451Z",
 	"tags": ["auth"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 898,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.13.0",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^1.30.3 || ^2.0.0"
 }

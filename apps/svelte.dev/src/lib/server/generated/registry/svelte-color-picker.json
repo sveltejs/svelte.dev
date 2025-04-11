@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/qintarp/svelte-color-picker",
 	"authors": ["qintarp"],
 	"homepage": "https://qintarp.github.io/svelte-color-picker",
-	"downloads": 249,
-	"dependents": 2,
+	"downloads": 410,
 	"updated": "2019-10-12T13:34:22.928Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 105,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.7",
+	"svelte_range": "^3.0.0"
 }

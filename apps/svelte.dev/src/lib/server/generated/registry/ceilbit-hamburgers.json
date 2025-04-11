@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/CeilBit/ceilbit-hamburgers",
 	"authors": ["tzaimun"],
 	"homepage": "https://github.com/CeilBit/ceilbit-hamburgers#readme",
-	"downloads": 13,
-	"dependents": 0,
+	"downloads": 7,
 	"updated": "2023-06-08T13:59:43.179Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "4.0.5",
+	"svelte_range": "^3.46.4",
+	"kit_range": "^1.0.1"
 }

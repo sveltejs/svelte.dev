@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/mastermakrela/svelte-kit-bun",
 	"authors": ["mastermakrela"],
 	"homepage": "https://github.com/mastermakrela/svelte-kit-bun#readme",
-	"downloads": 22,
-	"dependents": 0,
+	"downloads": 6,
 	"updated": "2025-02-02T22:26:13.248Z",
 	"tags": ["adapter"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.3.0",
+	"kit_range": "^2.16.1"
 }

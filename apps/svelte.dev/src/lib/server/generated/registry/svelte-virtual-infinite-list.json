@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/koheing/svelte-virtual-infinite-list",
 	"authors": ["koheing"],
 	"homepage": "https://github.com/koheing/svelte-virtual-infinite-list#readme",
-	"downloads": 18,
-	"dependents": 0,
+	"downloads": 25,
 	"updated": "2023-01-09T10:15:14.604Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 7,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.7.12",
+	"svelte_range": "^3.49.0"
 }

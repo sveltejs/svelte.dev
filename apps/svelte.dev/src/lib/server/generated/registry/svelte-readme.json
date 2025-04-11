@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/metonym/svelte-readme",
 	"authors": ["metonym"],
 	"homepage": "https://github.com/metonym/svelte-readme",
-	"downloads": 98,
-	"dependents": 0,
+	"downloads": 1090,
 	"updated": "2022-02-26T02:31:22.417Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 2,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "3.6.3",
+	"svelte_range": "^3.31.2"
 }

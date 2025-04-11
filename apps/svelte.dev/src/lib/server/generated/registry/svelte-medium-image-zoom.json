@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/moonlitgrace/svelte-medium-image-zoom",
 	"authors": ["moonlitgrace"],
 	"homepage": "https://github.com/moonlitgrace/svelte-medium-image-zoom",
-	"downloads": 129,
-	"dependents": 0,
+	"downloads": 18,
 	"updated": "2025-02-11T08:43:06.458Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 10,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.2.4",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.0.0"
 }

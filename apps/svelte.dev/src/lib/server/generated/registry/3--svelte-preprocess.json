@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/i18n-fork/svelte-preprocess",
 	"authors": ["i18n-now"],
 	"homepage": "https://github.com/i18n-fork/svelte-preprocess#readme",
-	"downloads": 13,
-	"dependents": 0,
+	"downloads": 7,
 	"updated": "2024-10-21T06:10:48.516Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 0,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	},
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "5.0.22",
+	"svelte_range": "^5.0.3"
 }

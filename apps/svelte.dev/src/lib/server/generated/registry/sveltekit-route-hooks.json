@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/dslatkin/sveltekit-route-hooks",
 	"authors": ["dslatkin"],
 	"homepage": "https://github.com/dslatkin/sveltekit-route-hooks#readme",
-	"downloads": 15,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2023-12-01T22:35:53.961Z",
 	"tags": ["router"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.5",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^1.27.6"
 }

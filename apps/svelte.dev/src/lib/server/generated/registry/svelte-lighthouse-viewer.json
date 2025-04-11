@@ -3,19 +3,11 @@
 	"description": "View Lighthouse reports within Svelte applications.",
 	"authors": ["dvelasquez"],
 	"homepage": "https://dvelasquez.github.io/lighthouse-viewer/packages/svelte-lighthouse-viewer/demo/index.html",
-	"downloads": 581,
-	"dependents": 0,
-	"updated": "2025-03-24T06:51:40.541Z",
+	"downloads": 198,
+	"updated": "2025-04-07T03:15:06.589Z",
 	"tags": ["tooling"],
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/main.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.2.59",
+	"svelte_range": "^3.23.2 || ^4.0.0 || ^5.0.0"
 }

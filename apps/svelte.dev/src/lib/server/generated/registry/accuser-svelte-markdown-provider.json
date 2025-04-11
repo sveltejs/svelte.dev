@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/accuser/svelte-markdown-provider",
 	"authors": ["accuser"],
 	"homepage": "https://github.com/accuser/svelte-markdown-provider",
-	"downloads": 32,
-	"dependents": 2,
+	"downloads": 2,
 	"updated": "2024-10-06T07:16:41.227Z",
 	"tags": ["content"],
 	"runes": false,
 	"github_stars": 0,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	},
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "0.2.0-next.12",
+	"svelte_range": "^5.0.0-next.1",
+	"kit_range": "^2.6.2"
 }

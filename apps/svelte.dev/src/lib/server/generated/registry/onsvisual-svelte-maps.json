@@ -11,20 +11,12 @@
 		"shiny-penny"
 	],
 	"homepage": "http://onsvisual.github.io/svelte-maps",
-	"downloads": 223,
-	"dependents": 0,
+	"downloads": 97,
 	"updated": "2025-02-18T15:39:09.069Z",
 	"tags": ["media"],
 	"runes": false,
 	"github_stars": 29,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.2.26",
+	"svelte_range": "3 - 5"
 }

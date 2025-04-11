@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/restspace/svelte-schema-form",
 	"authors": ["detachhead"],
 	"homepage": "https://github.com/restspace/svelte-schema-form#readme",
-	"downloads": 49,
-	"dependents": 0,
+	"downloads": 4,
 	"updated": "2023-02-17T01:09:58.472Z",
 	"tags": ["ui"],
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
 	"runes": false,
 	"github_stars": 72,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.5",
+	"svelte_range": "^3.54.0",
+	"kit_range": "^1.0.0"
 }

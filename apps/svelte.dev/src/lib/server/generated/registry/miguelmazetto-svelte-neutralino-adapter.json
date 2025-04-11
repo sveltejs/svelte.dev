@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/miguelmazetto/svelte-neutralino-adapter",
 	"authors": ["miguelmazetto"],
 	"homepage": "https://github.com/miguelmazetto/svelte-neutralino-adapter#readme",
-	"downloads": 9,
-	"dependents": 0,
+	"downloads": 5,
 	"updated": "2024-01-15T14:11:41.960Z",
 	"tags": ["adapter"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 3,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.7",
+	"kit_range": "^1.0.0-next.208"
 }

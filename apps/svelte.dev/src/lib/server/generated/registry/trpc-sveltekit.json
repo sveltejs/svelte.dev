@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/icflorescu/trpc-sveltekit",
 	"authors": ["icflorescu"],
 	"homepage": "https://icflorescu.github.io/trpc-sveltekit/",
-	"downloads": 5056,
-	"dependents": 4,
+	"downloads": 3916,
 	"updated": "2025-03-06T12:52:54.703Z",
 	"tags": ["server"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 816,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "3.6.3",
+	"kit_range": "^1.27.0"
 }

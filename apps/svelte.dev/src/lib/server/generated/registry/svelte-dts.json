@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/andrelmlins/svelte-dts",
 	"authors": ["andrelmlins"],
 	"homepage": "https://github.com/andrelmlins/svelte-dts",
-	"downloads": 2020,
-	"dependents": 1,
+	"downloads": 2470,
 	"updated": "2022-04-06T01:37:55.222Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 28,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.3.7",
+	"svelte_range": "^3.32.3"
 }

@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/devunt/svelte-stores",
 	"authors": ["devunt"],
 	"homepage": "https://github.com/devunt/svelte-stores#readme",
-	"downloads": 8,
-	"dependents": 0,
+	"downloads": 0,
 	"updated": "2023-04-17T17:02:03.568Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 44,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.1",
+	"svelte_range": "^3.0.0",
+	"kit_range": "^1.0.0"
 }

@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/colbymchenry/svelte-widgets",
 	"authors": ["colbymchenry"],
 	"homepage": "https://github.com/colbymchenry/svelte-widgets",
-	"downloads": 15,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2023-05-16T04:26:11.118Z",
 	"tags": ["integration"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.0.5",
+	"svelte_range": "^3.54.0",
+	"kit_range": "^1.16.3"
 }

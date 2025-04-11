@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/subhendupsingh/sveltekit-notion-blog",
 	"authors": ["subhendupsingh"],
 	"homepage": "https://sveltekit-notion-blog.netlify.app/",
-	"downloads": 7,
-	"dependents": 0,
-	"updated": "2025-03-01T14:08:35.920Z",
+	"downloads": 14,
+	"updated": "2025-03-29T12:00:36.001Z",
 	"tags": ["content"],
 	"runes": false,
 	"github_stars": 40,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.2.5",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.5.27"
 }

@@ -3,20 +3,12 @@
 	"description": "Enable Svelte components to run in Turing machine-like behavior.",
 	"repo_url": "",
 	"authors": ["krist7599555"],
-	"downloads": 0,
-	"dependents": 0,
+	"downloads": 18,
 	"updated": "2023-07-19T06:13:52.017Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.2.4",
+	"svelte_range": "^4.0.5",
+	"kit_range": "^1.22.3"
 }

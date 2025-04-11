@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/PuruVJ/neodrag",
 	"authors": ["puruvj"],
 	"homepage": "https://neodrag.dev/docs/svelte",
-	"downloads": 3677,
-	"dependents": 23,
+	"downloads": 4040,
 	"updated": "2025-03-09T16:22:22.420Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 1819,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.3.2",
+	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0"
 }

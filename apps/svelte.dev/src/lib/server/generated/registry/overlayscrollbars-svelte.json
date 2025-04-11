@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/KingSora/OverlayScrollbars",
 	"authors": ["kingsora"],
 	"homepage": "https://kingsora.github.io/OverlayScrollbars",
-	"downloads": 1253,
-	"dependents": 1,
+	"downloads": 999,
 	"updated": "2025-02-19T13:28:21.987Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 4060,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: overlayscrollbars-svelte.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.5.5",
+	"svelte_range": "^5.0.0"
 }

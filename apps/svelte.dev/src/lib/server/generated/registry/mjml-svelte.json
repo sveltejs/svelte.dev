@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/Luiz-Monad/mjml-svelte",
 	"authors": ["luiz_monad"],
 	"homepage": "https://github.com/Luiz-Monad/mjml-svelte#readme",
-	"downloads": 85,
-	"dependents": 0,
-	"updated": "2025-03-27T17:51:15.469Z",
+	"downloads": 234,
+	"updated": "2025-04-06T03:00:20.786Z",
 	"tags": ["server"],
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.4.1",
+	"svelte_range": "^5.22.6",
+	"kit_range": "^2.19.0"
 }

@@ -3,20 +3,11 @@
 	"description": "Generate TypeScript type definitions for Svelte components.",
 	"repo_url": "",
 	"authors": ["micha-lmxt"],
-	"downloads": 20,
-	"dependents": 0,
+	"downloads": 5,
 	"updated": "2021-01-19T10:40:35.468Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.2.0",
+	"svelte_range": "^3.31.0"
 }

@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/willnguyen1312/headlessplayback",
 	"authors": ["namnguyen131292"],
 	"homepage": "https://github.com/sponsors/willnguyen1312",
-	"downloads": 52,
-	"dependents": 0,
+	"downloads": 8,
 	"updated": "2023-11-21T12:58:09.222Z",
 	"tags": ["media"],
 	"runes": false,
 	"github_stars": 5,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	},
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "0.1.8",
+	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0"
 }

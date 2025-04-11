@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/gornostay25/svelte-adapter-bun",
 	"authors": ["gornostay25"],
 	"homepage": "https://github.com/gornostay25/svelte-adapter-bun#readme",
-	"downloads": 5022,
-	"dependents": 1,
+	"downloads": 4515,
 	"updated": "2024-02-20T12:20:33.288Z",
 	"tags": ["adapter"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 562,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.5.2",
+	"kit_range": "^1.30.4"
 }

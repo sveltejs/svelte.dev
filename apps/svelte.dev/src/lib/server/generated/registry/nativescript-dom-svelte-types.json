@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/nativescript-dom/types",
 	"authors": ["ammarahm-ed"],
 	"homepage": "https://github.com/nativescript-dom/types/tree/main/svelte",
-	"downloads": 6,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2023-05-28T16:22:06.140Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 29,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.6",
+	"svelte_range": "*"
 }

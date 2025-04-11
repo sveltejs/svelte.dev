@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/Hotel-Chat-AI/svelte-chatbox",
 	"authors": ["hotelchatai"],
 	"homepage": "https://github.com/Hotel-Chat-AI/svelte-chatbox#readme",
-	"downloads": 399,
-	"dependents": 0,
+	"downloads": 4,
 	"updated": "2025-03-26T01:45:43.879Z",
 	"tags": ["integration"],
 	"runes": false,
 	"github_stars": 0,
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	},
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	}
+	"typescript": "none",
+	"version": "1.0.5",
+	"svelte_range": "^5.25.3"
 }

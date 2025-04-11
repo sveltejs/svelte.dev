@@ -4,20 +4,11 @@
 	"repo_url": "https://github.com/netulip/rollup-plugin-md",
 	"authors": ["tedmeftah"],
 	"homepage": "https://github.com/netulip/rollup-plugin-md#readme",
-	"downloads": 10,
-	"dependents": 0,
+	"downloads": 0,
 	"updated": "2021-04-21T14:51:44.528Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.1",
+	"svelte_range": "^3.37.0"
 }

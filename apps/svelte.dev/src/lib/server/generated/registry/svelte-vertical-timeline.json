@@ -3,21 +3,14 @@
 	"description": "Create vertical timeline components for Svelte.",
 	"repo_url": "https://github.com/K-Sato1995/svelte-vertical-timeline",
 	"authors": ["sato0130"],
-	"downloads": 377,
-	"dependents": 0,
+	"downloads": 311,
 	"updated": "2024-11-16T03:28:55.958Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 117,
 	"homepage": "https://svelte-vertical-timeline.vercel.app/",
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.0.0",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.8.1"
 }

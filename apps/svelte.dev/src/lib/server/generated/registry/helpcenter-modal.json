@@ -3,20 +3,11 @@
 	"description": "Create modal component for Svelte applications.",
 	"repo_url": "",
 	"authors": ["liuzhengzheng"],
-	"downloads": 5,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2023-02-19T08:19:29.248Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.5",
+	"svelte_range": "^3.0.0"
 }

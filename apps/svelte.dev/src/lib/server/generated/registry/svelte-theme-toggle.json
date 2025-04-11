@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/meetmistry0/svelte-theme-toggle",
 	"authors": ["meet-mistry"],
 	"homepage": "https://github.com/meetmistry0/svelte-theme-toggle#readme",
-	"downloads": 31,
-	"dependents": 0,
+	"downloads": 111,
 	"updated": "2022-07-18T11:39:52.845Z",
 	"tags": ["ui", "miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.1.3",
+	"svelte_range": "^3.0.0"
 }

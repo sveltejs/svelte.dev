@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/metonym/svelte-keydown",
 	"authors": ["metonym"],
 	"homepage": "https://github.com/metonym/svelte-keydown",
-	"downloads": 477,
-	"dependents": 0,
+	"downloads": 510,
 	"updated": "2024-03-15T02:20:40.717Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 44,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./src/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.7.0",
+	"svelte_range": "^4.2.12"
 }

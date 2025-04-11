@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/Anyass3/stores-x",
 	"authors": ["anyass"],
 	"homepage": "https://github.com/Anyass3/stores-x#readme",
-	"downloads": 9,
-	"dependents": 0,
+	"downloads": 13,
 	"updated": "2021-08-08T15:15:20.204Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 6,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.0.872",
+	"svelte_range": "^3.0.0"
 }

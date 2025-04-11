@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/flekschas/higlass-svelte",
 	"authors": ["flekschas"],
 	"homepage": "https://github.com/flekschas/higlass-svelte#readme",
-	"downloads": 18,
-	"dependents": 0,
+	"downloads": 6,
 	"updated": "2020-07-18T01:13:00.471Z",
 	"tags": ["integration"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.1.3",
+	"svelte_range": "^3.24.0"
 }

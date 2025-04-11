@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/ottomated/trpc-svelte-query",
 	"authors": ["ottomated"],
 	"homepage": "https://github.com/ottomated/trpc-svelte-query#readme",
-	"downloads": 513,
-	"dependents": 0,
-	"updated": "2025-03-26T22:16:14.634Z",
+	"downloads": 548,
+	"updated": "2025-03-28T16:40:00.825Z",
 	"tags": ["server"],
 	"runes": false,
 	"github_stars": 70,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "3.0.1",
+	"svelte_range": ">=5 <6",
+	"kit_range": ">=2.20.0 <3"
 }

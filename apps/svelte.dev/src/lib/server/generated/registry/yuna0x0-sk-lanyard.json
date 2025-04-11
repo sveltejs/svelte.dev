@@ -5,20 +5,11 @@
 	"authors": ["yuna0x0"],
 	"homepage": "https://github.com/yuna0x0/sk-lanyard#readme",
 	"downloads": 1,
-	"dependents": 0,
 	"updated": "2024-10-31T11:53:57.392Z",
 	"tags": ["integration"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.3.0",
+	"svelte_range": "^4.2.19"
 }

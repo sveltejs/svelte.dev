@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/jodit/jodit-svelte",
 	"authors": ["xdan"],
 	"homepage": "https://github.com/jodit/jodit-svelte",
-	"downloads": 3,
-	"dependents": 0,
+	"downloads": 0,
 	"updated": "2023-02-22T19:38:11.460Z",
 	"tags": ["ui", "content"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.3",
+	"svelte_range": "^3.55.1"
 }

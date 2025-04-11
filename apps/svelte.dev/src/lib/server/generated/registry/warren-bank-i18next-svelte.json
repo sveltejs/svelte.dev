@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/warren-bank/js-i18next-svelte",
 	"authors": ["warren-r-bank"],
 	"homepage": "https://github.com/warren-bank/js-i18next-svelte#readme",
-	"downloads": 3,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2024-05-19T08:58:25.987Z",
 	"tags": ["integration"],
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.2.0",
+	"svelte_range": "*"
 }

@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/carbon-design-system/carbon-charts",
 	"authors": ["carbon-bot", "theiliad"],
 	"homepage": "https://github.com/carbon-design-system/carbon-charts#readme",
-	"downloads": 1924,
-	"dependents": 2,
+	"downloads": 2536,
 	"updated": "2025-02-18T17:07:04.219Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 941,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	},
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "1.22.18",
+	"svelte_range": "^3.31.0 || ^4.0.0 || ^5.20.0",
+	"kit_range": "^2.17.2"
 }

@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/micantoine/svelte-preprocess-cssmodules",
 	"authors": ["micantoine"],
 	"homepage": "https://github.com/micantoine/svelte-preprocess-cssmodules",
-	"downloads": 1295,
-	"dependents": 5,
+	"downloads": 1074,
 	"updated": "2025-02-07T09:07:36.175Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 72,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "3.0.1",
+	"svelte_range": "^5.15.0"
 }

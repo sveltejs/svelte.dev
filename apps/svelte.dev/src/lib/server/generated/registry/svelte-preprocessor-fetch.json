@@ -4,21 +4,11 @@
 	"repo_url": "https://github.com/kevmodrome/svelte-preprocessor-fetch",
 	"authors": ["kevmodrome"],
 	"homepage": "https://github.com/kevmodrome/svelte-preprocessor-fetch#readme",
-	"downloads": 12,
-	"dependents": 0,
+	"downloads": 3,
 	"updated": "2020-03-10T15:01:23.759Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 51,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.7"
 }

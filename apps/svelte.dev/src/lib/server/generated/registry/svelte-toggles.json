@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/Team-GOATS/teamgoats-npm-package",
 	"authors": ["soad", "wenlijia", "becfletch", "wdbetsy", "thatskat", "sweg"],
 	"homepage": "https://sveltetoggles.onrender.com",
-	"downloads": 21,
-	"dependents": 0,
+	"downloads": 8,
 	"updated": "2024-02-23T02:59:04.722Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 8,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "2.1.7",
+	"svelte_range": "^4.2.0"
 }

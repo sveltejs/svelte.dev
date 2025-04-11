@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/bluwy/whyframe",
 	"authors": ["bluwy"],
 	"homepage": "https://whyframe.dev",
-	"downloads": 1241,
-	"dependents": 0,
+	"downloads": 1420,
 	"updated": "2025-03-18T03:48:37.354Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 565,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.8",
+	"svelte_range": "^4.2.19"
 }

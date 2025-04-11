@@ -4,19 +4,11 @@
 	"repo_url": "",
 	"authors": ["lagden"],
 	"homepage": "https://gitlab.textecnologia.io/nimble/svelte-splash-lgpd#readme",
-	"downloads": 13,
-	"dependents": 0,
+	"downloads": 4,
 	"updated": "2023-07-05T19:59:58.276Z",
 	"tags": ["ui"],
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.6.0",
+	"svelte_range": ">= 4 < 5"
 }

@@ -3,19 +3,12 @@
 	"description": "Create UI with MISIS UI components for Svelte.",
 	"repo_url": "",
 	"authors": ["dmdin", "julia_grishina", "evilya2505", "polinaryabukhina"],
-	"downloads": 364,
-	"dependents": 0,
-	"updated": "2025-03-24T16:33:11.881Z",
+	"downloads": 143,
+	"updated": "2025-04-09T15:23:53.490Z",
 	"tags": ["ui"],
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.0-beta.64",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.5.27"
 }

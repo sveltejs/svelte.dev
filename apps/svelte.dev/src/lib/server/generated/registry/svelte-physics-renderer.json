@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/pnm122/svelte-physics-renderer",
 	"authors": ["pnm122"],
 	"homepage": "https://github.com/pnm122/svelte-physics-renderer#readme",
-	"downloads": 1,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2024-09-22T01:02:47.834Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "0.1.7",
+	"svelte_range": "^5.0.0-next.1",
+	"kit_range": "^2.0.0"
 }

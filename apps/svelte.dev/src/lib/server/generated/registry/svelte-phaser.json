@@ -3,22 +3,13 @@
 	"description": "Integrate Phaser 3 game framework with Svelte.",
 	"repo_url": "https://github.com/mattjennings/svelte-phaser",
 	"authors": ["mattjennings"],
-	"downloads": 34,
-	"dependents": 0,
+	"downloads": 6,
 	"updated": "2021-02-15T18:55:44.261Z",
 	"tags": ["media"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 79,
 	"homepage": null,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/ts/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.0-beta.2",
+	"svelte_range": "^3.32.2"
 }

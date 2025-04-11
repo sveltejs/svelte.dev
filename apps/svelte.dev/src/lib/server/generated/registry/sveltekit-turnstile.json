@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/pevey/sveltekit-turnstile",
 	"authors": ["pevey"],
 	"homepage": "https://pevey.com/sveltekit-turnstile",
-	"downloads": 132,
-	"dependents": 0,
-	"updated": "2025-01-22T03:43:54.115Z",
+	"downloads": 215,
+	"updated": "2025-04-03T19:46:21.364Z",
 	"tags": ["auth"],
 	"runes": false,
 	"github_stars": 11,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.0.2",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.0.0"
 }

@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/geometryzen/esm-bundle-svelte",
 	"authors": ["geometryzen"],
 	"homepage": "https://github.com/geometryzen/esm-bundle-svelte#readme",
-	"downloads": 16,
-	"dependents": 0,
+	"downloads": 9,
 	"updated": "2024-05-27T13:38:08.586Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 0,
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	},
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	}
+	"typescript": "none",
+	"version": "5.0.0-next.142",
+	"svelte_range": "5.0.0-next.142"
 }

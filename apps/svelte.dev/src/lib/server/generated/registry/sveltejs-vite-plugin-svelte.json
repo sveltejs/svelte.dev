@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/sveltejs/vite-plugin-svelte",
 	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
 	"homepage": "https://github.com/sveltejs/vite-plugin-svelte#readme",
-	"downloads": 645757,
-	"dependents": 141,
+	"downloads": 688739,
 	"updated": "2024-12-18T10:03:00.518Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 906,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "5.0.3",
+	"svelte_range": "^5.0.0"
 }

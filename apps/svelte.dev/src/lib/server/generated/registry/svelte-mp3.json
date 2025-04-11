@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/khandakar227/svelte-mp3",
 	"authors": ["khandakar-shakib"],
 	"homepage": "https://github.com/khandakar227/svelte-mp3#readme",
-	"downloads": 30,
-	"dependents": 0,
+	"downloads": 23,
 	"updated": "2023-05-29T06:11:03.379Z",
 	"tags": ["media"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 26,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.3.0",
+	"svelte_range": "^3.54.0",
+	"kit_range": "^1.5.0"
 }

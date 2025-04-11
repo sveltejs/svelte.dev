@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/tropix126/svelte-aria-dialog",
 	"authors": ["tropix126"],
 	"homepage": "https://github.com/tropix126/svelte-aria-dialog",
-	"downloads": 83,
-	"dependents": 0,
+	"downloads": 63,
 	"updated": "2021-12-16T21:03:16.468Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 14,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.0",
+	"svelte_range": "^3.42.6",
+	"kit_range": "next"
 }

@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/revolist/revogrid",
 	"authors": ["kumakint"],
 	"homepage": "https://rv-grid.com",
-	"downloads": 10899,
-	"dependents": 14,
-	"updated": "2025-03-27T14:46:38.589Z",
+	"downloads": 10528,
+	"updated": "2025-04-09T10:23:26.674Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 2893,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "4.15.2",
+	"svelte_range": "^5.16.1"
 }

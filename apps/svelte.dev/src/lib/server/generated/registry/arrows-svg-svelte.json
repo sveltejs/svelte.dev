@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/r59q/arrows-svg-svelte",
 	"authors": ["r59q"],
 	"homepage": "https://github.com/r59q/arrows-svg-svelte#readme",
-	"downloads": 12,
-	"dependents": 0,
+	"downloads": 16,
 	"updated": "2024-04-14T19:32:34.645Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.1",
+	"svelte_range": "^4.2.12"
 }

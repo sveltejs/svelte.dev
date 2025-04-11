@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/ptkdev-boilerplate/svelte-kit-ssr-boilerplate",
 	"authors": ["ptkdevio"],
 	"homepage": "https://github.com/ptkdev-boilerplate/svelte-kit-ssr-boilerplate",
-	"downloads": 25,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2021-05-16T11:31:54.460Z",
 	"tags": ["server", "tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 37,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.20210516",
+	"svelte_range": "^3.38.2",
+	"kit_range": "next"
 }

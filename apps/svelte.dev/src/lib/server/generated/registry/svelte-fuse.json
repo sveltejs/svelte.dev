@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/g1eny0ung/svelte-fuse",
 	"authors": ["g1eny0ung"],
 	"homepage": "https://github.com/g1eny0ung/svelte-fuse#readme",
-	"downloads": 14,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2023-08-06T06:45:41.019Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 2,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.1",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^1.20.4"
 }

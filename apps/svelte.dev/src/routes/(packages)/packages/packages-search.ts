@@ -1,31 +1,25 @@
-import { PACKAGES_META } from '$lib/packages-meta';
 import type { Package, PackageGroup } from '$lib/server/content';
-import { Index } from 'flexsearch';
+import { create, insert, search as orama_search, type SearchParams } from '@orama/orama';
 
 /** If the search is already initialized */
 export let is_inited = false;
 
-let index: Index;
+export const REGISTRY_PAGE_LIMIT = 50;
 
 const packages_map = new Map<string, Package>();
 
-const name_to_index_map = new Map<string, number>();
-let next_id = 0;
-
-// Sorting direction
-
 // Scoring factors
-const EXACT_NAME_MATCH_BOOST = 10;
-const TAG_MATCH_BOOST = 5;
-const NAME_MATCH_BOOST = 3;
-const DEPENDENTS_BOOST = 1.5; // Highest weight for packages others depend on
-const GITHUB_STARS_BOOST = 5.5; // Medium weight for GitHub stars (between dependents and downloads)
-const DOWNLOADS_BOOST = 1.2; // Lower weight for NPM downloads
-const RECENT_UPDATE_BOOST = 0.2;
+const DEPENDENTS_BOOST = 1;
+const GITHUB_STARS_BOOST = 10;
+const DOWNLOADS_BOOST = 4;
+const RECENT_UPDATE_BOOST = 1;
 const SVELTE_5_BOOST = 15;
+const EXACT_NAME_MATCH_BOOST = 100;
 
-const OUTDATED_PENALTY = -6; // Substantial penalty for outdated packages
-const DEPRECATED_PENALTY = -12; // Severe penalty for deprecated packages
+const OUTDATED_PENALTY = -100;
+const DEPRECATED_PENALTY = -120;
+
+const EXACT_QUERY_REPLACEMENT_REGEX = /[-[\]{}()*+?.,\\^$|#\s]/g;
 
 /**
  * Simple utility to strip HTML tags from text
@@ -34,75 +28,166 @@ function strip_html(html: string): string {
 	return html.replace(/<\/?[^>]+(>|$)/g, '');
 }
 
-interface SearchEntry {
-	package: Package;
-	score: number;
+/**
+ * Calculate a popularity score for a package
+ */
+function calculate_popularity_score(pkg: Package): number {
+	const stars = pkg.github_stars || 0;
+	const downloads = pkg.downloads || 0;
+	const now = new Date();
+
+	// Base score using logarithmic scales
+	let score =
+		Math.log10(stars + 1) * GITHUB_STARS_BOOST + Math.log10(downloads + 1) * DOWNLOADS_BOOST;
+
+	// If svelte 5, give boost
+	if (pkg.svelte?.[5]) {
+		score += SVELTE_5_BOOST;
+	}
+
+	// Apply penalties for outdated or deprecated packages
+	if (pkg.outdated) {
+		score += OUTDATED_PENALTY;
+	}
+
+	if (pkg.deprecated) {
+		score += DEPRECATED_PENALTY;
+	}
+
+	// Boost recently updated packages
+	if (pkg.updated) {
+		const update_date = new Date(pkg.updated);
+		const days_since_update = (now.getTime() - update_date.getTime()) / (1000 * 60 * 60 * 24);
+		if (days_since_update < 30) {
+			score += ((30 - days_since_update) * RECENT_UPDATE_BOOST) / 30;
+		}
+	}
+
+	return score;
 }
 
 /**
- * Initialize the search index
+ * Sort criteria options for package search results
  */
-export function init(packages: Package[]) {
+export type SortCriterion = 'popularity' | 'downloads' | 'github_stars' | 'updated' | 'name';
+
+export const search_criteria: SortCriterion[] = [
+	'popularity',
+	'downloads',
+	'github_stars',
+	'updated',
+	'name'
+];
+
+// Tracks the current sort criterion and weights
+let current_sort: SortCriterion = 'popularity';
+let current_weights: Record<string, number> | undefined;
+let use_search_score = false;
+
+/**
+ * Create an Orama search index with appropriate schema and custom sorting
+ */
+function create_index() {
+	return create({
+		schema: {
+			id: 'string',
+			name: 'string',
+			name_parts: 'string[]',
+			description: 'string',
+			tags: 'string[]',
+			authors: 'string[]',
+			dependents: 'number',
+			downloads: 'number',
+			github_stars: 'number',
+			updated: 'string',
+			updated_timestamp: 'number',
+			deprecated: 'boolean',
+			outdated: 'boolean',
+			svelte_v3: 'boolean',
+			svelte_v4: 'boolean',
+			svelte_v5: 'boolean',
+			runes: 'boolean',
+			official: 'boolean',
+			popularity_score: 'number',
+			all_text: 'string'
+		},
+		components: {
+			tokenizer: {
+				stemming: false
+			}
+		}
+		// plugins: [pluginPT15()]
+		// Custom sort function that considers search score and custom criteria
+	});
+}
+
+let search_db: ReturnType<typeof create_index>;
+
+/**
+ * Initialize the search index using Orama
+ */
+export async function init(packages: Package[]) {
 	if (is_inited) return;
 
-	index = new Index({
-		tokenize: 'forward',
-		optimize: true,
-		preset: 'score'
-	});
+	// Create a new Orama database with custom sorting
+	search_db = await create_index();
 
 	for (const pkg of packages) {
-		// Create a numeric ID for the package (better for flexsearch performance)
-		const id = next_id++;
-		name_to_index_map.set(pkg.name, id);
-
 		// Store the original package
 		packages_map.set(pkg.name, pkg);
 
-		// Add to search index with processed content
-		// Format: index.add(id, text)
-		const searchable_text = [
+		// Extract parts from package name for better indexing
+		const name_parts = pkg.name.split(/[/@\-_.]+/).filter(Boolean);
+
+		// Prepare the description
+		const description = strip_html(pkg.description || '');
+
+		// Prepare all searchable text in one field
+		const all_text = [
 			pkg.name,
-			pkg.name.replace(/[^a-zA-Z0-9]/g, ' '),
-			strip_html(pkg.description || ''),
+			...name_parts,
+			description,
 			(pkg.tags || []).join(' '),
-			pkg.authors ? pkg.authors.map((v) => `author:${v}`).join(' ') : '' // Add authors with prefix for targeted searching
+			(pkg.authors || []).join(' ')
 		].join(' ');
 
-		index.add(id, searchable_text);
+		// Pre-calculate popularity score
+		const popularity_score = calculate_popularity_score(pkg);
+
+		// Convert updated date to timestamp for sorting
+		const updated_timestamp = pkg.updated ? new Date(pkg.updated).getTime() : 0;
+
+		// Insert the package into Orama
+		await insert(search_db, {
+			id: pkg.name,
+			name: pkg.name,
+			name_parts,
+			description,
+			tags: pkg.tags || [],
+			authors: pkg.authors || [],
+			downloads: pkg.downloads || 0,
+			github_stars: pkg.github_stars || 0,
+			updated: pkg.updated || '',
+			updated_timestamp,
+			deprecated: !!pkg.deprecated,
+			outdated: !!pkg.outdated,
+			svelte_v3: !!pkg.svelte?.[3],
+			svelte_v4: !!pkg.svelte?.[4],
+			svelte_v5: !!pkg.svelte?.[5],
+			runes: !!pkg.runes,
+			official: !!pkg.official,
+			popularity_score,
+			all_text
+		});
 	}
 
 	is_inited = true;
 }
 
 /**
- * Sort criteria options for package search results
- */
-export type SortCriterion =
-	| 'popularity'
-	| 'downloads'
-	| 'dependents'
-	| 'github_stars'
-	| 'updated'
-	| 'name';
-
-export const search_criteria: SortCriterion[] = [
-	'popularity',
-	'downloads',
-	'dependents',
-	'github_stars',
-	'updated',
-	'name'
-];
-
-/**
  * Search for packages matching the query and/or tags, returning a flat list sorted by the specified criterion
- *
- * @param query Search query string, can be null
- * @param options Additional search options
- * @returns Flat array of packages sorted by the selected criterion
  */
-export function search(
+export async function search(
 	query: string | null,
 	options: {
 		tags?: string[];
@@ -115,18 +200,20 @@ export function search(
 			};
 			hide_outdated?: boolean;
 		};
+		weights?: Record<string, number>;
 	} = {}
-): {
-	packages: Package[];
-	sv_add: Package[];
-} {
+): Promise<Package[]> {
 	if (!is_inited) {
 		throw new Error('Search index not initialized. Call init() first.');
 	}
 
-	const { tags = [], sort_by = 'popularity', filters = {} } = options;
+	const { tags = [], sort_by = 'popularity', filters = {}, weights } = options;
 
 	const { svelte_versions = { 3: true, 4: true, 5: true }, hide_outdated = false } = filters;
+
+	// Update the current sort criterion and weights for the custom sort function
+	current_sort = sort_by;
+	current_weights = weights;
 
 	// Normalize query to empty string if null or undefined
 	const normalized_query = query === null || query === undefined ? '' : query;
@@ -138,332 +225,148 @@ export function search(
 		svelte_versions['4'] !== undefined ||
 		svelte_versions['5'] !== undefined;
 
-	// Function to check if a package matches the version filters
-	const matches_svelte_version = (pkg: Package): boolean => {
-		if (!has_version_filter) return true;
+	// Set flag to use search score in sorting
+	use_search_score = has_query;
 
-		return !!(
-			(svelte_versions['3'] && pkg.svelte?.['3']) ||
-			(svelte_versions['4'] && pkg.svelte?.['4']) ||
-			(svelte_versions['5'] && pkg.svelte?.['5'])
-		);
-	};
+	// Build the where clause for Orama based on filters
+	const where: any = {};
 
-	// Get all packages that match the criteria
-	let result_packages: Package[] = [];
-
-	// Case 1: No query, no tags - return all packages sorted by selected criterion
-	if (!has_query && !has_tags) {
-		// result_packages = Array.from(packages_map.values()).sort((a, b) =>
-		// 	sort_packages(a, b, sort_by)
-		// );
-		result_packages = [];
+	if (has_tags) {
+		where.tags = { in: tags };
 	}
-	// Case 2: Empty query, filter by tags only
-	else if (!has_query && has_tags) {
-		result_packages = Array.from(packages_map.values())
-			.filter((pkg) => tags.some((tag) => pkg.tags && pkg.tags.includes(tag)))
-			.sort((a, b) => sort_packages(a, b, sort_by));
+
+	if (hide_outdated) {
+		where.outdated = { eq: false };
 	}
-	// Case 3 & 4: Has query (and possibly tags)
-	else if (has_query) {
-		// Search the index
-		const result_ids = index.search(normalized_query, {
-			suggest: true,
-			limit: 100
-		});
 
-		if (result_ids && result_ids.length > 0) {
-			if (sort_by === 'popularity') {
-				// For popularity sorting, use our complex scoring system
-				// Create regex patterns for scoring
-				const escaped_query = normalized_query.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
-				const exact_match = new RegExp(`^${escaped_query}$`, 'i');
-				const name_match = new RegExp(`${escaped_query}`, 'i');
-				const tag_match = new RegExp(`\\b${escaped_query}\\b`, 'i');
+	if (has_version_filter) {
+		// We need at least one version to match
+		const version_conditions = [];
 
-				const now = new Date();
-				const entries: SearchEntry[] = [];
+		if (svelte_versions['3']) {
+			version_conditions.push({ svelte_v3: { eq: true } });
+		}
 
-				// Process and score each result
-				for (const id of result_ids) {
-					const package_name = Array.from(name_to_index_map.entries()).find(
-						([_, value]) => value === id
-					)?.[0];
+		if (svelte_versions['4']) {
+			version_conditions.push({ svelte_v4: { eq: true } });
+		}
 
-					if (!package_name) continue;
+		if (svelte_versions['5']) {
+			version_conditions.push({ svelte_v5: { eq: true } });
+		}
 
-					const pkg = packages_map.get(package_name);
-					if (!pkg) continue;
+		if (version_conditions.length > 0) {
+			where.or = version_conditions;
+		}
+	}
 
-					// If we have tag filters, only include packages that match ANY of the tags
-					if (has_tags && !tags.some((tag) => pkg.tags && pkg.tags.includes(tag))) {
-						continue;
-					}
+	// Prepare search configuration
+	const search_config: SearchParams<ReturnType<typeof create_index>> = {
+		limit: 100,
+		mode: 'fulltext',
+		sortBy: (a, b) => {
+			const id_a = a[0];
+			const id_b = b[0];
+			const score_a = a[1];
+			const score_b = b[1];
+			const doc_a = a[2];
+			const doc_b = b[2];
 
-					// Apply Svelte version filter
-					if (!matches_svelte_version(pkg) && !PACKAGES_META.SV_ADD.packages.includes(pkg.name)) {
-						continue;
-					}
+			// Apply weights if available
+			if (current_weights) {
+				const a_weight = current_weights[id_a] || 1;
+				const b_weight = current_weights[id_b] || 1;
 
-					// Apply outdated filter if not showing outdated packages
-					if (hide_outdated && pkg.outdated) {
-						continue;
-					}
-
-					// Base score - all matched results start with the same score
-					// and then we'll apply our custom scoring
-					let score = 10;
-
-					// Boost exact name matches
-					if (exact_match.test(pkg.name)) {
-						score += EXACT_NAME_MATCH_BOOST;
-					} else if (name_match.test(pkg.name)) {
-						score += NAME_MATCH_BOOST;
-					}
-
-					// Boost tag matches
-					if (pkg.tags && pkg.tags.some((tag) => tag_match.test(tag))) {
-						score += TAG_MATCH_BOOST;
-					}
-
-					if (pkg.authors?.length) {
-						for (const author of pkg.authors) {
-							if (exact_match.test(author)) {
-								// Boost author matches
-								score += EXACT_NAME_MATCH_BOOST; // Same high boost as exact package name
-							} else if (name_match.test(author)) {
-								score += NAME_MATCH_BOOST;
-							}
-						}
-					}
-
-					// Apply a balanced scoring system with log scales
-					const dependents = pkg.dependents || 0;
-					const stars = pkg.github_stars || 0;
-					const downloads = pkg.downloads || 0;
-
-					// Use logarithmic scales to prevent small numbers from dominating
-					// Each metric gets its own weighted contribution
-					score += Math.log10(dependents + 1) * 10 * DEPENDENTS_BOOST;
-					score += Math.log10(stars + 1) * 5 * GITHUB_STARS_BOOST;
-					score += Math.log10(downloads + 1) * DOWNLOADS_BOOST;
-
-					// If svelte 5, give boost
-					if (pkg.svelte?.['5']) {
-						score *= SVELTE_5_BOOST;
-					}
-
-					// Apply penalties for outdated or deprecated packages
-					if (pkg.outdated) {
-						score += OUTDATED_PENALTY;
-					}
-
-					if (pkg.deprecated) {
-						score += DEPRECATED_PENALTY;
-					}
-
-					// Boost recently updated packages
-					if (pkg.updated) {
-						const update_date = new Date(pkg.updated);
-						const days_since_update =
-							(now.getTime() - update_date.getTime()) / (1000 * 60 * 60 * 24);
-						// More recent updates get higher boost
-						if (days_since_update < 30) {
-							// Last month
-							score += ((30 - days_since_update) * RECENT_UPDATE_BOOST) / 30;
-						}
-					}
-
-					entries.push({ package: pkg, score });
+				// Check for significant weight difference first
+				const weight_diff = a_weight - b_weight;
+				if (Math.abs(weight_diff) > 0.1) {
+					// Higher weights should come first
+					return weight_diff > 0 ? -1 : 1;
 				}
+			}
 
-				// Sort by score
-				result_packages = entries.sort((a, b) => b.score - a.score).map((entry) => entry.package);
-			} else {
-				// For other sort criteria, directly extract and sort the packages
-				const matched_packages: Package[] = [];
+			// If this is a search query with text term, incorporate the search score
+			// if (use_search_score) {
+			// 	// For significant score differences, prioritize search relevance
+			// 	const score_diff = score_b - score_a;
+			// 	if (Math.abs(score_diff) > 0.3) {
+			// 		return score_diff;
+			// 	}
+			// }
 
-				for (const id of result_ids) {
-					const package_name = Array.from(name_to_index_map.entries()).find(
-						([_, value]) => value === id
-					)?.[0];
+			// For similar search scores or no search query, use the selected criterion
+			switch (current_sort) {
+				case 'popularity':
+					let popularity_score_a = doc_a.popularity_score as number;
+					let popularity_score_b = doc_b.popularity_score as number;
 
-					if (!package_name) continue;
+					// For popularity, blend search score with popularity score when applicable
+					if (use_search_score) {
+						const name_a = doc_a.name as string;
+						const name_b = doc_b.name as string;
 
-					const pkg = packages_map.get(package_name);
-					if (!pkg) continue;
+						// Create regex patterns for scoring
+						const escaped_query = query!.replace(EXACT_QUERY_REPLACEMENT_REGEX, '\\$&');
+						const exact_match = new RegExp(`^${escaped_query}$`, 'i');
 
-					// If we have tag filters, only include packages that match ANY of the tags
-					if (has_tags && !tags.some((tag) => pkg.tags && pkg.tags.includes(tag))) {
-						continue;
+						// Apply exact match boost
+						if (exact_match.test(name_a)) {
+							popularity_score_a += EXACT_NAME_MATCH_BOOST;
+						}
+
+						if (exact_match.test(name_b)) {
+							popularity_score_b += EXACT_NAME_MATCH_BOOST;
+						}
+
+						// Blend search relevance with popularity (70% popularity, 30% search score)
+						return (
+							popularity_score_b * 0.5 + score_b * 0.5 - (score_a * 0.5 + popularity_score_a * 0.5)
+						);
 					}
-
-					// Apply Svelte version filter
-					if (!matches_svelte_version(pkg)) {
-						continue;
-					}
-
-					// Apply outdated filter if not showing outdated packages
-					if (hide_outdated && pkg.outdated) {
-						continue;
-					}
-
-					matched_packages.push(pkg);
-				}
-
-				// Sort directly by the selected criterion
-				result_packages = matched_packages.sort((a, b) => sort_packages(a, b, sort_by));
+					return score_b - score_a;
+				case 'downloads':
+					return (doc_b.downloads as number) - (doc_a.downloads as number);
+				case 'github_stars':
+					return (doc_b.github_stars as number) - (doc_a.github_stars as number);
+				case 'updated':
+					return (doc_b.updated_timestamp as number) - (doc_a.updated_timestamp as number);
+				case 'name':
+					return (doc_a.name as string).localeCompare(doc_b.name as string);
+				default:
+					return (doc_b.popularity_score as number) - (doc_a.popularity_score as number);
 			}
 		}
-	}
-
-	// Apply filters to results when not using search (cases 1 & 2)
-	if (!has_query) {
-		// Apply Svelte version filter
-		if (has_version_filter) {
-			result_packages = result_packages.filter(matches_svelte_version);
-		}
-
-		// Apply outdated filter if not showing outdated packages
-		if (hide_outdated) {
-			result_packages = result_packages.filter((pkg) => !pkg.outdated);
-		}
-
-		// Apply sorting after filtering
-		result_packages = result_packages.sort((a, b) => sort_packages(a, b, sort_by));
-	}
-
-	// return result_packages;
-	const final: ReturnType<typeof search> = {
-		packages: [],
-		sv_add: []
 	};
 
-	for (const pkg of result_packages) {
-		if (PACKAGES_META.SV_ADD.packages.includes(pkg.name)) {
-			console.log('1');
-			final.sv_add.push(pkg);
-		} else {
-			final.packages.push(pkg);
-		}
+	// Add filters if applicable
+	if (Object.keys(where).length > 0) {
+		search_config.where = where;
 	}
 
-	return final;
-}
-
-/**
- * Helper function to sort packages by the specified criterion with optional weights
- * Higher weights will prioritize packages to appear earlier in the sorted list
- *
- * @param a First package to compare
- * @param b Second package to compare
- * @param criterion The sorting criterion to use
- * @param weights Optional record of package name to weight multiplier
- * @returns Comparison result (-1, 0, or 1)
- */
-export function sort_packages(
-	a: Package,
-	b: Package,
-	criterion: SortCriterion,
-	weights?: Record<string, number>
-): number {
-	// Apply weights if provided
-	const a_weight = weights?.[a.name] || 1;
-	const b_weight = weights?.[b.name] || 1;
-
-	// Check for significant weight difference first
-	// This ensures packages with higher weights are prioritized
-	const weight_diff = a_weight - b_weight;
-	if (Math.abs(weight_diff) > 0.1) {
-		// Higher weights should come first
-		return weight_diff > 0 ? -1 : 1;
+	// Add search term and properties if we have a query
+	if (has_query) {
+		search_config.term = normalized_query;
+		search_config.properties = ['name', 'name_parts', 'description', 'tags', 'authors', 'all_text'];
+		search_config.boost = {
+			name: 2.0,
+			name_parts: 1.5,
+			tags: 1.2
+		};
+	} else {
+		// If no query, just do an empty search
+		search_config.term = '';
+		search_config.properties = ['name'];
 	}
 
-	// If weights are similar, use standard sorting criteria
-	switch (criterion) {
-		case 'popularity':
-			// Create a balanced scoring system using logarithmic scales to prevent small numbers from dominating
-			const a_dependents = a.dependents || 0;
-			const b_dependents = b.dependents || 0;
-			const a_stars = a.github_stars || 0;
-			const b_stars = b.github_stars || 0;
-			const a_downloads = a.downloads || 0;
-			const b_downloads = b.downloads || 0;
+	// Search using Orama - the sortBy function will handle sorting
+	const results = await orama_search(search_db, search_config);
 
-			// Use log scale with appropriate weights to maintain priority but prevent small values from dominating
-			let a_score =
-				Math.log10(a_dependents + 1) * 3 +
-				Math.log10(a_stars + 1) * 2 +
-				Math.log10(a_downloads + 1) * 1;
-
-			let b_score =
-				Math.log10(b_dependents + 1) * 3 +
-				Math.log10(b_stars + 1) * 2 +
-				Math.log10(b_downloads + 1) * 1;
-
-			// Apply penalties for outdated or deprecated packages
-			if (a.outdated) a_score += OUTDATED_PENALTY;
-			if (a.deprecated) a_score += DEPRECATED_PENALTY;
-			if (b.outdated) b_score += OUTDATED_PENALTY;
-			if (b.deprecated) b_score += DEPRECATED_PENALTY;
-
-			return b_score - a_score;
-
-		case 'downloads':
-			return (b.downloads || 0) - (a.downloads || 0);
-
-		case 'dependents':
-			return (b.dependents || 0) - (a.dependents || 0);
-
-		case 'github_stars':
-			return (b.github_stars || 0) - (a.github_stars || 0);
-
-		case 'updated':
-			// For date-based sorting
-			const a_date = a.updated ? new Date(a.updated).getTime() : 0;
-			const b_date = b.updated ? new Date(b.updated).getTime() : 0;
-			return b_date - a_date;
-
-		case 'name':
-			// For name sorting
-			return a.name.localeCompare(b.name);
-
-		default:
-			// Default to balanced popularity scoring if an invalid criterion is provided
-			const a_def = a.dependents || 0;
-			const b_def = b.dependents || 0;
-			const a_def_stars = a.github_stars || 0;
-			const b_def_stars = b.github_stars || 0;
-			const a_def_downloads = a.downloads || 0;
-			const b_def_downloads = b.downloads || 0;
-
-			// Use log scale with appropriate weights
-			let a_def_score =
-				Math.log10(a_def + 1) * 1 +
-				Math.log10(a_def_stars + 1) * 3 +
-				Math.log10(a_def_downloads + 1) * 2;
-
-			let b_def_score =
-				Math.log10(b_def + 1) * 1 +
-				Math.log10(b_def_stars + 1) * 3 +
-				Math.log10(b_def_downloads + 1) * 2;
-
-			// Apply penalties for outdated or deprecated packages
-			if (a.outdated) a_def_score += OUTDATED_PENALTY;
-			if (a.deprecated) a_def_score += DEPRECATED_PENALTY;
-			if (b.outdated) b_def_score += OUTDATED_PENALTY;
-			if (b.deprecated) b_def_score += DEPRECATED_PENALTY;
-
-			return b_def_score - a_def_score;
-	}
+	// Map results back to original packages
+	return results.hits.map((hit) => packages_map.get(hit.document.id)).filter(Boolean) as Package[];
 }
 
 /**
  * Groups packages by tags for better organization of results
- *
- * @param packages List of packages to group
- * @returns Grouped packages
  */
 export function group_by_tags(packages: Package[]): PackageGroup[] {
 	const grouped: Record<string, { tag: string; packages: Package[] }> = {};
@@ -485,14 +388,7 @@ export function group_by_tags(packages: Package[]): PackageGroup[] {
 	return Object.values(grouped).sort((a, b) => {
 		// Calculate balanced popularity scores with logarithmic scaling
 		const get_popularity = (pkg: Package) => {
-			const dependents = pkg.dependents || 0;
-			const stars = pkg.github_stars || 0;
-			const downloads = pkg.downloads || 1;
-
-			// Use balanced logarithmic formula with proper weighting
-			return (
-				Math.log10(dependents + 1) * 1 + Math.log10(stars + 1) * 3 + Math.log10(downloads + 1) * 1
-			);
+			return calculate_popularity_score(pkg);
 		};
 
 		const max_popularity_a = Math.max(...a.packages.map(get_popularity));
@@ -519,14 +415,20 @@ export function get_all_packages(): Package[] {
 /**
  * Get all available tags with package counts
  */
-export function get_all_tags(): { tag: string; count: number }[] {
+export async function get_all_tags(): Promise<{ tag: string; count: number }[]> {
 	const tag_counts: Record<string, number> = {};
 
-	for (const pkg of packages_map.values()) {
-		if (pkg.tags && pkg.tags.length) {
-			for (const tag of pkg.tags) {
-				tag_counts[tag] = (tag_counts[tag] || 0) + 1;
-			}
+	// Get all unique tags from the database
+	const results = await orama_search(search_db, {
+		term: '',
+		properties: ['tags'],
+		limit: 10000
+	});
+
+	for (const hit of results.hits) {
+		const tags = hit.document.tags || [];
+		for (const tag of tags) {
+			tag_counts[tag] = (tag_counts[tag] || 0) + 1;
 		}
 	}
 
@@ -536,32 +438,62 @@ export function get_all_tags(): { tag: string; count: number }[] {
 }
 
 /**
- * Get packages by author
+ * Helper function to sort packages by the specified criterion with optional weights
+ * Higher weights will prioritize packages to appear earlier in the sorted list
+ *
+ * @param a First package to compare
+ * @param b Second package to compare
+ * @param criterion The sorting criterion to use
+ * @param weights Optional record of package name to weight multiplier
+ * @returns Comparison result (-1, 0, or 1)
  */
-export function get_packages_by_author(author: string): Package[] {
-	return Array.from(packages_map.values())
-		.filter((pkg) => pkg.authors?.includes(author))
-		.sort((a, b) => {
-			// Sort with balanced logarithmic scoring
-			const a_dependents = a.dependents || 0;
-			const b_dependents = b.dependents || 0;
-			const a_stars = a.github_stars || 0;
-			const b_stars = b.github_stars || 0;
-			const a_downloads = a.downloads || 1;
-			const b_downloads = b.downloads || 1;
+export function sort_packages(
+	a: Package,
+	b: Package,
+	criterion: SortCriterion,
+	weights?: Record<string, number>
+): number {
+	// Apply weights if provided
+	if (weights) {
+		const a_weight = weights[a.name] || 1;
+		const b_weight = weights[b.name] || 1;
 
-			// Calculate balanced scores using logarithmic scale
-			const a_score =
-				Math.log10(a_dependents + 1) * 3 +
-				Math.log10(a_stars + 1) * 2 +
-				Math.log10(a_downloads + 1) * 1;
+		// Check for significant weight difference first
+		const weight_diff = a_weight - b_weight;
+		if (Math.abs(weight_diff) > 0.1) {
+			// Higher weights should come first
+			return weight_diff > 0 ? -1 : 1;
+		}
+	}
 
-			const b_score =
-				Math.log10(b_dependents + 1) * 3 +
-				Math.log10(b_stars + 1) * 2 +
-				Math.log10(b_downloads + 1) * 1;
+	// If weights are similar or not provided, use standard sorting criteria
+	switch (criterion) {
+		case 'popularity':
+			// Use our popularity score calculation function
+			const a_score = calculate_popularity_score(a);
+			const b_score = calculate_popularity_score(b);
+			return b_score - a_score;
 
-			const comparison = b_score - a_score;
-			return comparison;
-		});
+		case 'downloads':
+			return (b.downloads || 0) - (a.downloads || 0);
+
+		case 'github_stars':
+			return (b.github_stars || 0) - (a.github_stars || 0);
+
+		case 'updated':
+			// Sort by most recently updated
+			const a_date = a.updated ? new Date(a.updated).getTime() : 0;
+			const b_date = b.updated ? new Date(b.updated).getTime() : 0;
+			return b_date - a_date;
+
+		case 'name':
+			// Sort alphabetically by name
+			return a.name.localeCompare(b.name);
+
+		default:
+			// Default to popularity score for unknown criteria
+			const a_def_score = calculate_popularity_score(a);
+			const b_def_score = calculate_popularity_score(b);
+			return b_def_score - a_def_score;
+	}
 }

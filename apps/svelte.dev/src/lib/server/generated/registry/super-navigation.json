@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/0xdjole/super-navigation",
 	"authors": ["0xdjole"],
 	"homepage": "https://github.com/0xdjole/super-navigation#readme",
-	"downloads": 75,
-	"dependents": 1,
+	"downloads": 13,
 	"updated": "2024-10-30T03:44:16.975Z",
 	"tags": ["router"],
 	"runes": false,
 	"github_stars": 34,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.72",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.0.0"
 }

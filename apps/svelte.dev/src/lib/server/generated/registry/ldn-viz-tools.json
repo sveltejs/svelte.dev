@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/Greater-London-Authority/ldn-viz-tools",
 	"authors": ["mikeldn", "chris_knight_ldn"],
 	"homepage": "https://github.com/Greater-London-Authority/ldn-viz-tools#readme",
-	"downloads": 4,
-	"dependents": 0,
+	"downloads": 3,
 	"updated": "2023-02-24T16:46:35.102Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.4",
+	"svelte_range": "^3.54.0",
+	"kit_range": "^1.5.0"
 }

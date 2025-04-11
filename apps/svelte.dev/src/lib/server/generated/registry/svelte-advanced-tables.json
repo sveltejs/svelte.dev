@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/homescriptone/svelte-datatables",
 	"authors": ["homescriptone"],
 	"homepage": "https://github.com/homescriptone/svelte-datatables",
-	"downloads": 11,
-	"dependents": 0,
+	"downloads": 7,
 	"updated": "2021-09-12T07:15:06.234Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 17,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.1.1",
+	"svelte_range": "^3.0.0"
 }

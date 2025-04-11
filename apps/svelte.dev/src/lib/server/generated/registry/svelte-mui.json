@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/vikignt/svelte-mui",
 	"authors": ["vikignt"],
 	"homepage": "https://github.com/vikignt/svelte-mui#readme",
-	"downloads": 451,
-	"dependents": 4,
+	"downloads": 373,
 	"updated": "2024-09-17T21:03:31.840Z",
 	"tags": ["ui", "design-system"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 317,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.5.12",
+	"svelte_range": "^3.53.0 || ^4.0.0"
 }

@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/joaquimnetocel/pagination-svelte",
 	"authors": ["joaquim.neto.cel"],
 	"homepage": "https://github.com/joaquimnetocel/pagination-svelte#readme",
-	"downloads": 153,
-	"dependents": 0,
+	"downloads": 178,
 	"updated": "2024-08-26T20:41:50.941Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 2,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.6",
+	"svelte_range": "^5.0.0-next.1",
+	"kit_range": "^2.0.0"
 }

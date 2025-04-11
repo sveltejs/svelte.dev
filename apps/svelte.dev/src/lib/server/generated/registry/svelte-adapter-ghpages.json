@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/ota-meshi/svelte-adapter-ghpages",
 	"authors": ["ota-meshi"],
 	"homepage": "https://github.com/ota-meshi/vite-plugin-svelte-md#readme",
-	"downloads": 3687,
-	"dependents": 0,
+	"downloads": 27313,
 	"updated": "2023-12-15T02:42:03.756Z",
 	"tags": ["adapter"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./lib/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.2.2",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^1.0.0 || ^2.0.0"
 }

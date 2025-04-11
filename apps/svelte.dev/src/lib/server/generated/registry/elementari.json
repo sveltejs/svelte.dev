@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/janosh/elementari",
 	"authors": ["janosh"],
 	"homepage": "https://janosh.github.io/elementari",
-	"downloads": 164,
-	"dependents": 0,
-	"updated": "2025-03-26T00:47:39.788Z",
+	"downloads": 262,
+	"updated": "2025-04-05T16:14:41.783Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 145,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	},
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "0.3.3",
+	"svelte_range": "5.25.7",
+	"kit_range": "^2.20.4"
 }

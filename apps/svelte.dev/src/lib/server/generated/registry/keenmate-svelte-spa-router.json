@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/keenmate/svelte-spa-router",
 	"authors": ["benjaminhorne", "themaikxx", "ondrejvalenta"],
 	"homepage": "https://github.com/KeenMate/svelte-spa-router#readme",
-	"downloads": 26,
-	"dependents": 0,
+	"downloads": 25,
 	"updated": "2024-10-07T14:05:55.519Z",
 	"tags": ["router"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: Router.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.8",
+	"svelte_range": "^4.2.8"
 }

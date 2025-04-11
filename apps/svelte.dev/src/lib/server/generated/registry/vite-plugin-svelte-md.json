@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/ota-meshi/vite-plugin-svelte-md",
 	"authors": ["ota-meshi"],
 	"homepage": "https://github.com/ota-meshi/vite-plugin-svelte-md#readme",
-	"downloads": 3921,
-	"dependents": 1,
+	"downloads": 27468,
 	"updated": "2022-12-11T08:40:25.432Z",
 	"tags": ["content", "tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 12,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./lib/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.7",
+	"svelte_range": "^3.44.2"
 }

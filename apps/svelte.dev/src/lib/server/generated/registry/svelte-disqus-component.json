@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/ariefsn/svelte-disqus-component",
 	"authors": ["ariefsn"],
 	"homepage": "https://github.com/ariefsn/svelte-disqus-component#readme",
-	"downloads": 23,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2024-08-28T04:52:15.674Z",
 	"tags": ["content"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.0",
+	"svelte_range": "^4.2.19"
 }

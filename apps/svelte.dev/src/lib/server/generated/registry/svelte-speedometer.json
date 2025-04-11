@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/palerdot/svelte-speedometer",
 	"authors": ["palerdot"],
 	"homepage": "https://github.com/palerdot/svelte-speedometer#readme",
-	"downloads": 1067,
-	"dependents": 1,
+	"downloads": 580,
 	"updated": "2024-12-18T03:50:01.999Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 17,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "3.1.0",
+	"svelte_range": "^5.14.0"
 }

@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/sveltevietnam/sveltevietnam.dev",
 	"authors": ["vnphanquang"],
 	"homepage": "https://www.sveltevietnam.dev",
-	"downloads": 28,
-	"dependents": 0,
+	"downloads": 7,
 	"updated": "2024-06-03T11:50:26.858Z",
 	"tags": ["design-system"],
 	"runes": false,
 	"github_stars": 35,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.0-next.30",
+	"svelte_range": "^5.0.0-next.1",
+	"kit_range": "^2.5.5"
 }

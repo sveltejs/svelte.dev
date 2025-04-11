@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/jack-weilage/svelte-mapbox",
 	"authors": ["jack-weilage"],
 	"homepage": "https://github.com/jack-weilage/svelte-mapbox#readme",
-	"downloads": 24,
-	"dependents": 0,
+	"downloads": 8,
 	"updated": "2024-02-09T18:13:00.635Z",
 	"tags": ["media"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 9,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.6.0",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^2.5.0"
 }

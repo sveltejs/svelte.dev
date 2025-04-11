@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/selemondev/svelte-marquee",
 	"authors": ["selemondev"],
 	"homepage": "https://github.com/selemondev/svelte-marquee#readme",
-	"downloads": 341,
-	"dependents": 0,
+	"downloads": 311,
 	"updated": "2025-03-04T18:51:20.897Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 91,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.3",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.0.0"
 }

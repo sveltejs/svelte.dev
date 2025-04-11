@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/AliBasicCoder/super-svelte-router",
 	"authors": ["ali_ahmed"],
 	"homepage": "https://github.com/AliBasicCoder/super-svelte-router#readme",
-	"downloads": 6,
-	"dependents": 0,
+	"downloads": 7,
 	"updated": "2022-06-24T16:38:34.987Z",
 	"tags": ["router"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 2,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: src/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.6.1",
+	"svelte_range": "^3.32.3"
 }

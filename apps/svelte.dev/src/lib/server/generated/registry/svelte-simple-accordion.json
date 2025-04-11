@@ -4,20 +4,11 @@
 	"repo_url": "git@gitlab.com/public-e-soa-com/svelte-simple-accordion",
 	"authors": ["jack-y"],
 	"homepage": "https://gitlab.com/public-e-soa-com/svelte-simple-accordion#readme",
-	"downloads": 13,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2021-10-26T14:09:42.861Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.1.0",
+	"svelte_range": "^3.38.3"
 }

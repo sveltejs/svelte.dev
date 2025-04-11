@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/firefish5000/svelte-as-markup-preprocessor",
 	"authors": ["firefish5000", "bluwy"],
 	"homepage": "https://github.com/firefish5000/svelte-as-markup-preprocessor#readme",
-	"downloads": 171,
-	"dependents": 2,
+	"downloads": 153,
 	"updated": "2022-02-25T05:42:55.936Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 5,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./out/cjs/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.3.0",
+	"svelte_range": "^3.29"
 }

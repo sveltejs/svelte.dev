@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/shinokada/svelte-lib-helpers",
 	"authors": ["shinichiokada"],
 	"homepage": "https://github.com/shinokada/svelte-lib-helpers#readme",
-	"downloads": 343,
-	"dependents": 0,
-	"updated": "2024-10-08T05:41:33.641Z",
+	"downloads": 224,
+	"updated": "2025-03-29T17:10:06.167Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 11,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "0.4.18",
+	"svelte_range": "5.25.3"
 }

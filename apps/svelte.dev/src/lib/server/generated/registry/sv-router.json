@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/colinlienard/sv-router",
 	"authors": ["colinlienard"],
 	"homepage": "https://github.com/colinlienard/sv-router",
-	"downloads": 120,
-	"dependents": 0,
-	"updated": "2025-03-19T13:12:25.929Z",
+	"downloads": 109,
+	"updated": "2025-04-03T16:27:26.632Z",
 	"tags": ["router"],
 	"runes": false,
 	"github_stars": 32,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "0.3.0",
+	"svelte_range": "^5"
 }

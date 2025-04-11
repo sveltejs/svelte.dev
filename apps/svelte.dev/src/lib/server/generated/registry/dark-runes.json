@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/flakolefluk/dark-runes",
 	"authors": ["flakolefluk"],
 	"homepage": "https://github.com/flakolefluk/dark-runes#readme",
-	"downloads": 13,
-	"dependents": 0,
+	"downloads": 5,
 	"updated": "2024-01-08T15:25:57.797Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 39,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: src/types.d.ts"
-	},
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "0.1.6",
+	"svelte_range": "^5.0.0-next.29"
 }

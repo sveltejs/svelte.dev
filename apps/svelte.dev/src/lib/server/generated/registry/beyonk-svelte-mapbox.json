@@ -3,19 +3,12 @@
 	"description": "Integrate Mapbox maps and geocoding into Svelte applications.",
 	"repo_url": "",
 	"authors": ["antony", "adampond", "alex.dilley", "jedwoodcock", "leandro.silva", "tomlewis0"],
-	"downloads": 1382,
-	"dependents": 7,
+	"downloads": 1347,
 	"updated": "2024-11-11T13:27:03.614Z",
 	"tags": ["ui"],
 	"runes": false,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./components.d.ts"
-	},
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "11.0.0",
+	"svelte_range": ">=4.0.0",
+	"kit_range": "^2.8.0"
 }

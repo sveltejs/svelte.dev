@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/daks-dev/astro",
 	"authors": ["daks.dev"],
 	"homepage": "https://daks.dev/",
-	"downloads": 14,
-	"dependents": 0,
+	"downloads": 10,
 	"updated": "2023-11-11T21:26:22.555Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.11",
+	"svelte_range": "^4.2.3"
 }

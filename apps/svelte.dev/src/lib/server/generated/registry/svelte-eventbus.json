@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/AlexxNB/svelte-eventbus",
 	"authors": ["alexxnb"],
 	"homepage": "https://github.com/AlexxNB/svelte-eventbus#readme",
-	"downloads": 11,
-	"dependents": 0,
+	"downloads": 3,
 	"updated": "2022-02-18T12:24:22.806Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 38,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.2.0",
+	"svelte_range": "3.x"
 }

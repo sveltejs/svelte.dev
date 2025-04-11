@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/jcreek/Tech-Radar-Editor",
 	"authors": ["jcreek"],
 	"homepage": "https://github.com/jcreek/Tech-Radar-Editor#readme",
-	"downloads": 10,
-	"dependents": 0,
-	"updated": "2024-09-27T20:36:10.012Z",
+	"downloads": 2,
+	"updated": "2025-03-28T16:39:40.942Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/main.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.1.0",
+	"svelte_range": "^4.2.18"
 }

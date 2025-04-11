@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/serverless-toolkit/cli",
 	"authors": ["mikebild"],
 	"homepage": "https://github.com/serverless-toolkit/cli#readme",
-	"downloads": 273,
-	"dependents": 1,
+	"downloads": 64,
 	"updated": "2022-11-03T15:42:16.337Z",
 	"tags": ["tooling", "server", "adapter"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "3.0.83",
+	"svelte_range": "3.52.0"
 }

@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/patricknelson/svelte-retag",
 	"authors": ["patricknelson"],
 	"homepage": "https://github.com/patricknelson/svelte-retag#readme",
-	"downloads": 132,
-	"dependents": 0,
+	"downloads": 138,
 	"updated": "2024-06-25T01:40:34.502Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 42,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.7.0",
+	"svelte_range": "^3.19.0 || ^4.0.0",
+	"kit_range": "^1.30.4"
 }

@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/dvcol/svelte-utils",
 	"authors": ["dvcol"],
 	"homepage": "https://github.com/dvcol/svelte-utils",
-	"downloads": 95,
-	"dependents": 2,
+	"downloads": 98,
 	"updated": "2025-03-09T17:40:40.374Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 1,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	},
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "1.17.1",
+	"svelte_range": ">=5",
+	"kit_range": "^2.17.1"
 }

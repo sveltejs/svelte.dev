@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/BrianMitchL/svelte-compare-image",
 	"authors": ["brianmitchl"],
 	"homepage": "https://projects.brianm.me/svelte-compare-image/",
-	"downloads": 51,
-	"dependents": 0,
+	"downloads": 45,
 	"updated": "2024-04-18T05:36:53.378Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 5,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "3.0.0",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^2.5.6"
 }

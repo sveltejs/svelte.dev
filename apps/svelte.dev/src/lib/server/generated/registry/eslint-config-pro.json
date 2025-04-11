@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/NikolayMakhonin/eslint-config-pro",
 	"authors": ["nikolay_makhonin"],
 	"homepage": "https://github.com/NikolayMakhonin/eslint-config-pro",
-	"downloads": 54,
-	"dependents": 0,
+	"downloads": 16,
 	"updated": "2023-11-14T02:45:50.080Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "3.0.19",
+	"svelte_range": "3.48.0"
 }

@@ -3,20 +3,11 @@
 	"description": "Build SvelteKit apps for Fleek Functions deployment.",
 	"repo_url": "",
 	"authors": ["gabriel.fleek", "helderxyz", "arslan.b3a", "fleek.xyz", "kkudriaiev", "mb-fleek"],
-	"downloads": 0,
-	"dependents": 0,
+	"downloads": 11,
 	"updated": "2024-12-12T16:50:37.748Z",
 	"tags": ["adapter"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.2",
+	"kit_range": "^2.0.0"
 }

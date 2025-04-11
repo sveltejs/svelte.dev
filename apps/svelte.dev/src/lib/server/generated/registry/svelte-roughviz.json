@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/GrayFrost/svelte-roughviz",
 	"authors": ["garyfrost"],
 	"homepage": "https://github.com/GrayFrost/svelte-roughviz#readme",
-	"downloads": 61,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2025-03-24T02:04:46.492Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.0.1",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.16.0"
 }

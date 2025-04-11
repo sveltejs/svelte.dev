@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/bugra9/cpp.js",
 	"authors": ["bugra9"],
 	"homepage": "https://github.com/bugra9/cpp.js/tree/main/packages/cppjs-sample-web-svelte-vite#readme",
-	"downloads": 13,
-	"dependents": 1,
+	"downloads": 15,
 	"updated": "2025-01-19T13:37:33.028Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 25,
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	},
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	}
+	"typescript": "none",
+	"version": "1.0.1",
+	"svelte_range": "^5.15.0"
 }

@@ -4,19 +4,12 @@
 	"repo_url": "",
 	"authors": ["iugsm"],
 	"homepage": "https://github.com/richhost/svelte-compare-slider",
-	"downloads": 8,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2024-12-19T09:28:16.015Z",
 	"tags": ["ui"],
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.2.0",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.12.1"
 }

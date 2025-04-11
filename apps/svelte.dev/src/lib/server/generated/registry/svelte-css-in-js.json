@@ -3,19 +3,11 @@
 	"description": "Enable CSS-in-JS handling from Svelte components.",
 	"repo_url": "",
 	"authors": ["hmmhmmhm"],
-	"downloads": 12,
-	"dependents": 1,
+	"downloads": 4,
 	"updated": "2020-01-02T03:04:35.844Z",
 	"tags": ["tooling"],
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.3",
+	"svelte_range": "*"
 }

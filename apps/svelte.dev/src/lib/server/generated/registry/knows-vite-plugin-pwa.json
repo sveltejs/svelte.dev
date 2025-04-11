@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/antfu/vite-plugin-pwa",
 	"authors": ["jiaxinjiang"],
 	"homepage": "https://github.com/antfu/vite-plugin-pwa",
-	"downloads": 3,
-	"dependents": 0,
+	"downloads": 4,
 	"updated": "2022-10-25T04:46:11.921Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 3476,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.12.4",
+	"svelte_range": "^3.48.0"
 }

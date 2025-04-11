@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/atuttle/svelte-jawns",
 	"authors": ["atuttle"],
 	"homepage": "https://github.com/atuttle/svelte-jawns#readme",
-	"downloads": 66,
-	"dependents": 0,
+	"downloads": 6,
 	"updated": "2023-03-26T21:22:54.149Z",
 	"tags": ["design-system"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.23",
+	"svelte_range": "^3.0.0",
+	"kit_range": "^1.5.0"
 }

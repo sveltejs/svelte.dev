@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/bryanmylee/svelte-keyed",
 	"authors": ["bryanmylee"],
 	"homepage": "https://github.com/bryanmylee/svelte-keyed#readme",
-	"downloads": 18194,
-	"dependents": 5,
+	"downloads": 13683,
 	"updated": "2024-01-02T20:45:43.914Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 71,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.0.0",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^2.0.0"
 }

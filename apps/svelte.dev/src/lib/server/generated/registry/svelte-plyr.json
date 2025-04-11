@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/benwoodward/svelte-plyr",
 	"authors": ["benwoodward"],
 	"homepage": "https://github.com/benwoodward/svelte-plyr#readme",
-	"downloads": 38,
-	"dependents": 0,
+	"downloads": 110,
 	"updated": "2020-01-24T21:43:21.714Z",
 	"tags": ["media"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 21,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.1.3",
+	"svelte_range": "3.16.7"
 }

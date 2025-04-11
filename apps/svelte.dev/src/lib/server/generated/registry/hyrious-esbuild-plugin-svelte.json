@@ -5,19 +5,11 @@
 	"authors": ["hyrious"],
 	"homepage": "https://github.com/hyrious/esbuild-plugin-svelte#readme",
 	"downloads": 7,
-	"dependents": 0,
 	"updated": "2025-01-09T09:38:29.178Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 6,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.3.3",
+	"svelte_range": ">=5"
 }

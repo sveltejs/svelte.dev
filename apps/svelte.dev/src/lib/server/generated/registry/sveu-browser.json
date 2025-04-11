@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/svelte-u/browser",
 	"authors": ["mohamed-kaizen"],
 	"homepage": "https://github.com/svelte-u/browser#readme",
-	"downloads": 89,
-	"dependents": 1,
+	"downloads": 114,
 	"updated": "2023-09-18T11:22:29.271Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 15,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.1",
+	"svelte_range": "^4.0.4"
 }

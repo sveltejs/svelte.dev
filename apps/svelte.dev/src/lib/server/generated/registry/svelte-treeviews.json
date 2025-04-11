@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/orefalo/svelte-treeviewss",
 	"authors": ["orefalo"],
 	"homepage": "https://orefalo.github.io/svelte-treeviews/",
-	"downloads": 7,
-	"dependents": 0,
+	"downloads": 4,
 	"updated": "2022-04-09T06:58:08.001Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.0",
+	"svelte_range": "^3.47.0",
+	"kit_range": "next"
 }

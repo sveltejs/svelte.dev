@@ -3,22 +3,13 @@
 	"description": "Lazyload images or other content in Svelte apps.",
 	"repo_url": "https://github.com/matyunya/svelte-waypoint",
 	"authors": ["matyunya"],
-	"downloads": 619,
-	"dependents": 6,
+	"downloads": 958,
 	"updated": "2019-12-28T02:55:49.875Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 83,
 	"homepage": null,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.1.4",
+	"svelte_range": "3.16.7"
 }

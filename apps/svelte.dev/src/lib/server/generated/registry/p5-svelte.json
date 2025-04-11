@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/tonyketcham/p5-svelte",
 	"authors": ["tonyketcham"],
 	"homepage": "https://p5-svelte.netlify.app/",
-	"downloads": 153,
-	"dependents": 2,
+	"downloads": 159,
 	"updated": "2022-04-03T01:45:26.342Z",
 	"tags": ["media"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 179,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "3.1.2",
+	"svelte_range": "^3.46.4",
+	"kit_range": "1.0.0-next.304"
 }

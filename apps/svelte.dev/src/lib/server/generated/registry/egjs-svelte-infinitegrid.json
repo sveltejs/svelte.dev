@@ -15,21 +15,12 @@
 		"woodneck"
 	],
 	"homepage": "https://github.com/naver/egjs-infinitegrid",
-	"downloads": 118,
-	"dependents": 1,
+	"downloads": 61,
 	"updated": "2024-07-02T11:40:50.068Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 2279,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: src/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "4.12.0",
+	"svelte_range": "^3.0.0"
 }

@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/sveltejs/svelte-subdivide",
 	"authors": ["dominik_g", "rich_harris", "svelte-admin", "conduitry"],
 	"homepage": "https://github.com/sveltejs/svelte-subdivide#readme",
-	"downloads": 32,
-	"dependents": 0,
+	"downloads": 11,
 	"updated": "2018-06-14T19:50:18.577Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 130,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "2.2.0",
+	"svelte_range": "^2.7.1"
 }

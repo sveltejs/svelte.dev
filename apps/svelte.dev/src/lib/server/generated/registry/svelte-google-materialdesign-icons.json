@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/shinokada/svelte-google-materialdesign-icons",
 	"authors": ["shinichiokada"],
 	"homepage": "https://svelte-google-materialdesign-icons.codewithshin.com",
-	"downloads": 533,
-	"dependents": 0,
+	"downloads": 321,
 	"updated": "2024-08-14T15:13:42.293Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 13,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.5",
+	"svelte_range": "^4.0.0 || ^5.0.0",
+	"kit_range": "^2.5.22"
 }

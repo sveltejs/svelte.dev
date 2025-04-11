@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/bennymi/ato-ui",
 	"authors": ["bennymi"],
 	"homepage": "https://ato-ui.vercel.app/",
-	"downloads": 12,
-	"dependents": 0,
+	"downloads": 4,
 	"updated": "2023-11-25T19:05:39.718Z",
 	"tags": ["ui", "design-system"],
 	"runes": false,
 	"github_stars": 79,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	},
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "0.4.0",
+	"svelte_range": ">=4",
+	"kit_range": "^1.27.6"
 }

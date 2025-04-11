@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/bartholomej/svelte-scrollto-element",
 	"authors": ["bartholomej"],
 	"homepage": "https://github.com/bartholomej/svelte-scrollto-element#readme",
-	"downloads": 108,
-	"dependents": 1,
+	"downloads": 82,
 	"updated": "2025-01-05T18:09:19.188Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 18,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "3.1.0",
+	"svelte_range": "^4.0.0 || ^5.0.0"
 }

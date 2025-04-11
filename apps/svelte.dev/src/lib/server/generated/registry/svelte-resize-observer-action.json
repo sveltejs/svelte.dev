@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/captaincodeman/svelte-resize-observer-action",
 	"authors": ["captaincodeman"],
 	"homepage": "https://captaincodeman.github.io/svelte-resize-observer-action/",
-	"downloads": 706,
-	"dependents": 3,
+	"downloads": 412,
 	"updated": "2024-04-29T20:09:13.892Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 13,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.4",
+	"svelte_range": "^4.2.15",
+	"kit_range": "^2.5.7"
 }

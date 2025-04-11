@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/b3b00/svelte-nested-accordion",
 	"authors": ["bolduh"],
 	"homepage": "https://github.com/b3b00/svelte-nested-accordion",
-	"downloads": 0,
-	"dependents": 0,
+	"downloads": 3,
 	"updated": "2024-10-17T12:19:00.156Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.2.1",
+	"svelte_range": "^4.2.10"
 }

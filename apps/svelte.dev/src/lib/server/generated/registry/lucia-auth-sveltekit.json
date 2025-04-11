@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/pilcrowOnPaper/lucia",
 	"authors": ["pilcrowonpaper"],
 	"homepage": "https://github.com/pilcrowOnPaper/lucia#readme",
-	"downloads": 77,
-	"dependents": 0,
+	"downloads": 54,
 	"updated": "2023-03-19T12:24:16.861Z",
 	"tags": ["auth"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 10064,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.6.11",
+	"svelte_range": "3.x"
 }

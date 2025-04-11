@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/Not-Jayden/svelte-event",
 	"authors": ["notjayden"],
 	"homepage": "https://github.com/Not-Jayden/svelte-event#readme",
-	"downloads": 2,
-	"dependents": 0,
+	"downloads": 5,
 	"updated": "2023-12-09T17:22:43.401Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 7,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.13",
+	"svelte_range": "5.0.0-next.1"
 }

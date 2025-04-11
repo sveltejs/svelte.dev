@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/gardenjs/gardenjs",
 	"authors": ["robindanzinger", "martinfarkas"],
 	"homepage": "https://gardenjs.org/",
-	"downloads": 4,
-	"dependents": 0,
-	"updated": "2025-01-10T14:28:09.501Z",
+	"downloads": 11,
+	"updated": "2025-03-28T13:35:56.685Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 8,
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	},
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	}
+	"typescript": "none",
+	"version": "1.4.1",
+	"svelte_range": "5.17.3"
 }

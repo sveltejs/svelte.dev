@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/retejs/svelte-plugin",
 	"authors": ["ni55an"],
 	"homepage": "https://retejs.org",
-	"downloads": 26,
-	"dependents": 1,
+	"downloads": 27,
 	"updated": "2024-12-28T16:15:46.501Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 5,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: _types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.1.0",
+	"svelte_range": ">= 3.54.0 < 6"
 }

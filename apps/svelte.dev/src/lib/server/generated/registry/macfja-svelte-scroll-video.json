@@ -5,20 +5,11 @@
 	"authors": ["macfja"],
 	"homepage": "https://github.com/macfja/svelte-scroll-video#readme",
 	"downloads": 4,
-	"dependents": 0,
 	"updated": "2022-10-17T16:23:31.904Z",
 	"tags": ["media"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 4,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.0",
+	"svelte_range": "^3.0.0"
 }

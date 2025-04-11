@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/isaacHagoel/svelte-dnd-action",
 	"authors": ["isaac_hagoel"],
 	"homepage": "https://github.com/isaacHagoel/svelte-dnd-action#readme",
-	"downloads": 35032,
-	"dependents": 33,
+	"downloads": 34529,
 	"updated": "2025-03-10T12:09:09.509Z",
 	"tags": ["ui", "miscellaneous"],
 	"runes": false,
 	"github_stars": 1928,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.9.60",
+	"svelte_range": ">=3.23.0 || ^5.0.0-next.0"
 }

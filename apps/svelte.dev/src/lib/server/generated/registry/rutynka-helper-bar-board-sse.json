@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/rutynka/helper-bar-board-sse",
 	"authors": ["all-the-fish"],
 	"homepage": "https://github.com/rutynka/helper-bar-board-sse",
-	"downloads": 6,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2023-02-08T01:45:42.506Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: /src/types.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.5",
+	"svelte_range": "^3.55.1"
 }

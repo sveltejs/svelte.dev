@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/denisstasyev/svelte-skeleton",
 	"authors": ["denisstasyev"],
 	"homepage": "https://github.com/denisstasyev/svelte-skeleton#readme",
-	"downloads": 5083,
-	"dependents": 1,
+	"downloads": 876,
 	"updated": "2022-03-02T16:45:51.095Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 46,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.3.1",
+	"svelte_range": "latest"
 }

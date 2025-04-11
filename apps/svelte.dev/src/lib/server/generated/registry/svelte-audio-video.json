@@ -3,20 +3,11 @@
 	"description": "Create audio and video components with track management.",
 	"repo_url": "https://github.com/relm-us/svelte-audio-video",
 	"authors": ["canadaduane"],
-	"downloads": 7,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2020-10-23T00:46:11.833Z",
 	"tags": ["media"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/ts/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.2.0",
+	"svelte_range": "^3.24.0"
 }

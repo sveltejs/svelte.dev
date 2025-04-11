@@ -3,20 +3,12 @@
 	"description": "Creates auto-width, auto-grow input components for Svelte.",
 	"repo_url": "",
 	"authors": ["georgeous"],
-	"downloads": 212,
-	"dependents": 0,
+	"downloads": 266,
 	"updated": "2024-06-12T22:06:36.123Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.10",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^2.0.0"
 }

@@ -4,21 +4,11 @@
 	"repo_url": "https://github.com/vitest-dev/vitest",
 	"authors": ["antfu", "patak", "oreanno", "vitestbot"],
 	"homepage": "https://github.com/vitest-dev/vitest#readme",
-	"downloads": 10389095,
-	"dependents": 1036,
+	"downloads": 10352111,
 	"updated": "2025-03-31T10:19:23.023Z",
 	"tags": ["testing", "tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 14112,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "3.1.1"
 }

@@ -5,19 +5,11 @@
 	"authors": ["macfja"],
 	"homepage": "https://github.com/macfja/sveltekit-session#readme",
 	"downloads": 9,
-	"dependents": 1,
 	"updated": "2022-12-23T22:22:29.275Z",
 	"tags": ["server"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./"
-	}
+	"typescript": "first-party",
+	"version": "1.1.0",
+	"svelte_range": "^3.44.0",
+	"kit_range": "^1.0.0-next.492"
 }

@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/born05/sveltekit-proxy",
 	"authors": ["arjeng", "codename-niels", "rens-born05", "roelvanhintum"],
 	"homepage": "https://github.com/born05/sveltekit-proxy#readme",
-	"downloads": 18,
-	"dependents": 0,
+	"downloads": 8,
 	"updated": "2024-08-14T07:59:44.033Z",
 	"tags": ["server"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 9,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.1.3",
+	"kit_range": ">= 1.0.0 < 3.0.0"
 }

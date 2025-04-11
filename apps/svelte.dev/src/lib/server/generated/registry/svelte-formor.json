@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/Vanilla-IceCream/svelte-formor",
 	"authors": ["shyam-chen"],
 	"homepage": "https://github.com/Vanilla-IceCream/svelte-formor#readme",
-	"downloads": 5,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2024-06-26T08:47:28.990Z",
 	"tags": ["tooling", "miscellaneous"],
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
 	"runes": true,
 	"github_stars": 1,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in exports field"
-	}
+	"typescript": "first-party",
+	"version": "0.2.0",
+	"svelte_range": "5.0.0-next.166"
 }

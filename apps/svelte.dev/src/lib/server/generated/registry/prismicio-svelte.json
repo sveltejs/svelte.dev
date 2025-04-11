@@ -30,20 +30,13 @@
 		"greenwalker90"
 	],
 	"homepage": "https://github.com/prismicio/prismic-svelte#readme",
-	"downloads": 758,
-	"dependents": 3,
+	"downloads": 458,
 	"updated": "2025-03-19T20:06:48.540Z",
 	"tags": ["content"],
 	"runes": false,
 	"github_stars": 24,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.5.0",
+	"svelte_range": ">=4 || ^5.0.0-next.1",
+	"kit_range": ">=1"
 }

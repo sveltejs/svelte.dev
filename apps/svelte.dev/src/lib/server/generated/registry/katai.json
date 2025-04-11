@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/srav001/katai",
 	"authors": ["sravan-suresh"],
 	"homepage": "https://github.com/srav001/katai#readme",
-	"downloads": 16,
-	"dependents": 0,
+	"downloads": 8,
 	"updated": "2024-03-10T13:59:39.441Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 17,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: /dist/stores/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.5",
+	"svelte_range": ">=5.0.0",
+	"kit_range": "^2.5.0"
 }

@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/shinokada/svelte-weather",
 	"authors": ["shinichiokada"],
 	"homepage": "https://svelte-weather-icons.codewithshin.com/",
-	"downloads": 7,
-	"dependents": 0,
+	"downloads": 16,
 	"updated": "2024-03-01T17:21:10.001Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.2",
+	"svelte_range": "^3.54.0 || ^4.0.0 || ^5.0.0",
+	"kit_range": "^2.5.2"
 }

@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/daylilyfield/svrollbar",
 	"authors": ["daylilyfield"],
 	"homepage": "https://github.com/daylilyfield/svrollbar#readme",
-	"downloads": 1485,
-	"dependents": 4,
+	"downloads": 1528,
 	"updated": "2022-04-17T14:54:20.139Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 85,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.12.0",
+	"svelte_range": "^3.46.4"
 }

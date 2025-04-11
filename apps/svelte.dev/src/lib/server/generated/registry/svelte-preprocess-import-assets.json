@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/bluwy/svelte-preprocess-import-assets",
 	"authors": ["bluwy"],
 	"homepage": "https://github.com/bluwy/svelte-preprocess-import-assets#readme",
-	"downloads": 3005,
-	"dependents": 0,
+	"downloads": 2527,
 	"updated": "2023-11-11T12:42:27.153Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 97,
-	"svelte": {
-		"3": true,
-		"4": true,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.1.0",
+	"svelte_range": "^3.37.0 || ^4.0.0 || ^5.0.0-next.1"
 }

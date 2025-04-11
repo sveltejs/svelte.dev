@@ -3,22 +3,14 @@
 	"description": "Provides CLI tools for Svelte project setup and management.",
 	"repo_url": "https://github.com/des-des/imtala",
 	"authors": ["des-des"],
-	"downloads": 0,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2022-06-04T16:44:32.755Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 3,
 	"homepage": "https://imtala.com",
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.3.1",
+	"svelte_range": "^3.44.0",
+	"kit_range": "^1.0.0-next.288"
 }

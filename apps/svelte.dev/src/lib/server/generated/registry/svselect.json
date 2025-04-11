@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/Battledash-2/svselect",
 	"authors": ["battledash2"],
 	"homepage": "https://github.com/Battledash-2/svselect#readme",
-	"downloads": 1,
-	"dependents": 0,
+	"downloads": 5,
 	"updated": "2022-12-03T15:24:47.447Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.0-fixes",
+	"svelte_range": "^3.52.0"
 }

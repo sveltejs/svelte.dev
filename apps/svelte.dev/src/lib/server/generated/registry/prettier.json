@@ -16,20 +16,11 @@
 		"prettier-bot"
 	],
 	"homepage": "https://prettier.io",
-	"downloads": 52249275,
-	"dependents": 19525,
+	"downloads": 52785029,
 	"updated": "2025-03-03T01:18:57.493Z",
 	"tags": ["tooling"],
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
 	"runes": false,
 	"github_stars": 50223,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "3.5.3"
 }

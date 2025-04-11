@@ -4,21 +4,11 @@
 	"repo_url": "https://github.com/metonym/svelte-highlight",
 	"authors": ["metonym"],
 	"homepage": "https://github.com/metonym/svelte-highlight",
-	"downloads": 19595,
-	"dependents": 24,
-	"updated": "2024-12-28T02:44:14.035Z",
+	"downloads": 16982,
+	"updated": "2025-04-01T20:03:56.445Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 286,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "7.8.3"
 }

@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/NewellLeannon/estiusto",
 	"authors": ["jaclynwaters"],
 	"homepage": "https://github.com/NewellLeannon/estiusto#readme",
-	"downloads": 5,
-	"dependents": 0,
+	"downloads": 0,
 	"updated": "2024-04-01T23:46:55.285Z",
 	"tags": ["integration"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/svelte-web3.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.2.0",
+	"svelte_range": "^3.0.0"
 }

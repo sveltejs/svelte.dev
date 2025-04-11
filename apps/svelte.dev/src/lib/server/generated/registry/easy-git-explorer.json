@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/danisss9/easy-git-explorer",
 	"authors": ["danisss9"],
 	"homepage": "https://github.com/danisss9/easy-git-explorer#readme",
-	"downloads": 3,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2024-06-25T23:59:37.496Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.2.1",
+	"svelte_range": "^4.2.8"
 }

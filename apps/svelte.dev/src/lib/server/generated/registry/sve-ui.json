@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/rodriabregu/sve-ui",
 	"authors": ["rodriabregu"],
 	"homepage": "https://sveui.org/",
-	"downloads": 0,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2023-04-17T08:52:53.546Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 3,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.1.2",
+	"svelte_range": "^3.54.0",
+	"kit_range": "^1.5.0"
 }

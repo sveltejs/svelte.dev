@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/mzohaibqc/svelte-toasts",
 	"authors": ["mzohaibqc"],
 	"homepage": "https://mzohaibqc.github.io/svelte-toasts",
-	"downloads": 2746,
-	"dependents": 2,
+	"downloads": 3298,
 	"updated": "2021-03-16T12:21:46.651Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 45,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.1.2",
+	"svelte_range": "^3.35.0"
 }

@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/vnphanquang/svelte-put",
 	"authors": ["vnphanquang"],
 	"homepage": "https://svelte-put.vnphanquang.com/docs/qr",
-	"downloads": 4853,
-	"dependents": 1,
+	"downloads": 3672,
 	"updated": "2024-11-29T03:48:15.759Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 917,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.1.0",
+	"svelte_range": "^5.1.0"
 }

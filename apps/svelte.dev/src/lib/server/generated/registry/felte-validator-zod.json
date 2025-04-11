@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/pablo-abc/felte",
 	"authors": ["pberganza"],
 	"homepage": "https://github.com/pablo-abc/felte/tree/main/packages/validator-zod",
-	"downloads": 6621,
-	"dependents": 6,
+	"downloads": 6253,
 	"updated": "2024-10-29T22:05:33.472Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 1046,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.18",
+	"svelte_range": "^3.46.4"
 }

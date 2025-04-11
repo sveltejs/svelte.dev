@@ -76,7 +76,7 @@ const config: UserConfig = {
 	},
 	resolve: {
 		alias: {
-			// flexsearch: './node_modules/flexsearch/dist/module/index.js'
+			flexsearch: './node_modules/flexsearch/dist/module/index.js'
 		}
 	},
 	server: {

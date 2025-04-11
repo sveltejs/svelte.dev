@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/arlac77/svelte-guard-history-router",
 	"authors": ["arlac77"],
 	"homepage": "https://github.com/arlac77/svelte-guard-history-router#readme",
-	"downloads": 581,
-	"dependents": 7,
+	"downloads": 399,
 	"updated": "2024-06-06T21:38:42.626Z",
 	"tags": ["router"],
 	"runes": false,
 	"github_stars": 13,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "6.1.2",
+	"svelte_range": "^5.0.0-next.0"
 }

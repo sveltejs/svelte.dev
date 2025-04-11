@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/vishalbalaji/trpc-svelte-query-adapter",
 	"authors": ["vishalbalaji"],
 	"homepage": "https://github.com/vishalbalaji/trpc-svelte-query-adapter#readme",
-	"downloads": 380,
-	"dependents": 0,
+	"downloads": 290,
 	"updated": "2025-03-24T10:40:20.413Z",
 	"tags": ["server"],
 	"runes": false,
 	"github_stars": 80,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./src/index.ts"
-	}
+	"typescript": "first-party",
+	"version": "2.3.16",
+	"svelte_range": "^5"
 }

@@ -4,19 +4,12 @@
 	"repo_url": "",
 	"authors": ["1bye"],
 	"homepage": "https://github.com/1bye/threlte-postprocessing",
-	"downloads": 9,
-	"dependents": 0,
+	"downloads": 99,
 	"updated": "2025-03-03T10:26:51.067Z",
 	"tags": ["ui"],
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.9",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.16.0"
 }

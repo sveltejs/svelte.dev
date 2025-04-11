@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/HoudiniGraphql/houdini",
 	"authors": ["aaivazis"],
 	"homepage": "https://github.com/HoudiniGraphql/houdini",
-	"downloads": 7260,
-	"dependents": 2,
+	"downloads": 4659,
 	"updated": "2025-03-27T05:47:19.545Z",
 	"tags": ["integration"],
 	"runes": false,
 	"github_stars": 944,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./build/plugin/index.d.ts"
-	},
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "2.1.12",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.9.0"
 }

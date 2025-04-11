@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/vnphanquang/svelte-put",
 	"authors": ["vnphanquang"],
 	"homepage": "https://github.com/vnphanquang/svelte-put/tree/main/packages/preprocess-external-link",
-	"downloads": 4,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2024-06-22T10:16:33.614Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 917,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: types/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.0-next.3",
+	"svelte_range": "^5.0.0-next.160"
 }

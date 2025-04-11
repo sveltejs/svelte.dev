@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/xKesvaL/image-svelte",
 	"authors": ["kesval"],
 	"homepage": "https://github.com/xKesvaL/image-svelte",
-	"downloads": 0,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2023-08-27T19:46:55.608Z",
 	"tags": ["media"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.2.1",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^1.20.4"
 }

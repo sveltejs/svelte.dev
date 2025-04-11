@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/malipetek/svelte-calendar",
 	"authors": ["malipetek-personal"],
 	"homepage": "https://github.com/malipetek/svelte-calendar#readme",
-	"downloads": 0,
-	"dependents": 0,
+	"downloads": 2,
 	"updated": "2020-07-19T20:28:38.551Z",
 	"tags": ["ui"],
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
 	"runes": false,
 	"github_stars": 5,
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.1",
+	"svelte_range": "^3.6.1"
 }

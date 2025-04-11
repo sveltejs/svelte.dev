@@ -3,19 +3,11 @@
 	"description": "Implement simple, lightweight color picker for Svelte.",
 	"repo_url": "",
 	"authors": ["couldparker.com"],
-	"downloads": 0,
-	"dependents": 0,
+	"downloads": 11,
 	"updated": "2024-08-16T11:35:38.063Z",
 	"tags": ["ui"],
 	"runes": false,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	},
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	}
+	"typescript": "first-party",
+	"version": "2.0.6",
+	"svelte_range": "^5.0.0-next.1"
 }

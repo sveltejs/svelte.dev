@@ -4,20 +4,13 @@
 	"repo_url": "https://github.com/koodeau/svesh",
 	"authors": ["koodeau"],
 	"homepage": "https://github.com/koodeau/svesh#readme",
-	"downloads": 0,
-	"dependents": 0,
+	"downloads": 1,
 	"updated": "2022-07-31T22:18:49.100Z",
 	"tags": ["ui"],
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
 	"runes": false,
 	"github_stars": 2,
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.5",
+	"svelte_range": "^3.44.0",
+	"kit_range": "next"
 }

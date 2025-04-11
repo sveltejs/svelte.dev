@@ -3,20 +3,11 @@
 	"description": "Copy text to clipboard using Svelte component.",
 	"repo_url": "",
 	"authors": ["henriquecaraujo"],
-	"downloads": 244,
-	"dependents": 5,
+	"downloads": 653,
 	"updated": "2020-05-25T23:57:15.498Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "0.2.5",
+	"svelte_range": "^3.21.0"
 }

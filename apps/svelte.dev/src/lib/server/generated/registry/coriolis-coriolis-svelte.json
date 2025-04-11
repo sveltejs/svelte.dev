@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/coriolisjs/coriolis-svelte",
 	"authors": ["nicolas.deveaud"],
 	"homepage": "https://github.com/coriolisjs/coriolis-svelte#readme",
-	"downloads": 14,
-	"dependents": 1,
+	"downloads": 4,
 	"updated": "2020-07-11T23:21:52.370Z",
 	"tags": ["miscellaneous"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": false,
-		"types_source": "none",
-		"types_info": "No TypeScript type definitions found"
-	}
+	"typescript": "none",
+	"version": "1.0.0-alpha2",
+	"svelte_range": "3.x"
 }

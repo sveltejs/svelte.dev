@@ -4,20 +4,12 @@
 	"repo_url": "https://github.com/Matb85/components-pack",
 	"authors": ["matb85"],
 	"homepage": "https://github.com/Matb85/components-pack#readme",
-	"downloads": 77,
-	"dependents": 0,
+	"downloads": 26,
 	"updated": "2025-03-01T16:13:58.492Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 10,
-	"svelte": {
-		"3": false,
-		"4": false,
-		"5": true
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "5.0.2",
+	"svelte_range": "^5.20.5"
 }

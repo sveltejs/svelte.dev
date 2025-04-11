@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/komietty/sveltmline",
 	"authors": ["komietty"],
 	"homepage": "https://github.com/komietty/sveltmline#readme",
-	"downloads": 9,
-	"dependents": 0,
+	"downloads": 4,
 	"updated": "2021-03-02T15:43:00.389Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 2,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: src/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "0.0.5",
+	"svelte_range": "^3.24.0"
 }

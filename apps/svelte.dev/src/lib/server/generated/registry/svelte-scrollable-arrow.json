@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/thingsneverchange/svelte-scrollable-arrow",
 	"authors": ["themecloset"],
 	"homepage": "https://github.com/thingsneverchange/svelte-scrollable-arrow#readme",
-	"downloads": 152,
-	"dependents": 0,
+	"downloads": 23,
 	"updated": "2024-04-02T09:05:27.947Z",
 	"tags": ["ui"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 10,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: ./dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.3.4",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^2.0.0"
 }

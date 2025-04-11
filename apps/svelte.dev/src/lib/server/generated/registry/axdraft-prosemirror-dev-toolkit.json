@@ -4,21 +4,12 @@
 	"repo_url": "https://github.com/axdraft/prosemirror-dev-toolkit",
 	"authors": ["axdraft"],
 	"homepage": "https://github.com/axdraft/prosemirror-dev-toolkit",
-	"downloads": 10,
-	"dependents": 0,
+	"downloads": 9,
 	"updated": "2022-09-14T16:03:22.140Z",
 	"tags": ["tooling"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 0,
-	"svelte": {
-		"3": true,
-		"4": false,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: dist/index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.6",
+	"svelte_range": "^3.49.0"
 }

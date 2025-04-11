@@ -4,21 +4,13 @@
 	"repo_url": "https://github.com/lukehagar/sveltekit-adapters",
 	"authors": ["lukehagar"],
 	"homepage": "https://github.com/lukehagar/sveltekit-adapters#readme",
-	"downloads": 14,
-	"dependents": 0,
+	"downloads": 6,
 	"updated": "2024-03-11T16:16:15.313Z",
 	"tags": ["adapter"],
-	"svelte5": false,
 	"runes": false,
 	"github_stars": 10,
-	"svelte": {
-		"3": false,
-		"4": true,
-		"5": false
-	},
-	"typescript": {
-		"has_types": true,
-		"types_source": "first-party",
-		"types_info": "First-party types defined in package.json: index.d.ts"
-	}
+	"typescript": "first-party",
+	"version": "1.0.5",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^2.4.0"
 }
