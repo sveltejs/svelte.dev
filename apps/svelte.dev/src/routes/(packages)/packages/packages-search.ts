@@ -1,31 +1,88 @@
 import type { Package, PackageGroup } from '$lib/server/content';
-import { create, insert, search as orama_search, type SearchParams } from '@orama/orama';
-import { stopwords as english_stopwords } from '@orama/stopwords/english';
 
 /** If the search is already initialized */
 export let is_inited = false;
 
 export const REGISTRY_PAGE_LIMIT = 50;
 
+// Store packages for quick access
 const packages_map = new Map<string, Package>();
 
 // Scoring factors
+const EXACT_NAME_MATCH_BOOST = 100;
+const NAME_INCLUDES_BOOST = 50;
+const NAME_WORD_MATCH_BOOST = 30;
+const TAG_MATCH_BOOST = 25;
+const DESCRIPTION_EXACT_MATCH_BOOST = 20;
+const DESCRIPTION_INCLUDES_BOOST = 10;
+const AUTHOR_MATCH_BOOST = 15;
 const GITHUB_STARS_BOOST = 10;
 const DOWNLOADS_BOOST = 4;
 const RECENT_UPDATE_BOOST = 1;
 const SVELTE_5_BOOST = 15;
-const EXACT_NAME_MATCH_BOOST = 100;
 
 const OUTDATED_PENALTY = -100;
 const DEPRECATED_PENALTY = -120;
 
-const EXACT_QUERY_REPLACEMENT_REGEX = /[-[\]{}()*+?.,\\^$|#\s]/g;
+/**
+ * Sort criteria options for package search results
+ */
+export type SortCriterion = 'popularity' | 'downloads' | 'github_stars' | 'updated' | 'name';
+
+export const search_criteria: SortCriterion[] = [
+	'popularity',
+	'downloads',
+	'github_stars',
+	'updated',
+	'name'
+];
+
+// Pre-computed data structures for fast lookup
+let tokenized_packages: {
+	name_tokens: Map<string, Set<string>>;
+	tag_tokens: Map<string, Set<string>>;
+	description_tokens: Map<string, Set<string>>;
+	author_tokens: Map<string, Set<string>>;
+} = {
+	name_tokens: new Map(),
+	tag_tokens: new Map(),
+	description_tokens: new Map(),
+	author_tokens: new Map()
+};
+
+// Pre-computed popularity scores
+const popularity_scores = new Map<string, number>();
+
+// Pre-sorted package lists for common sort criteria
+const sorted_packages = {
+	popularity: [] as Package[],
+	downloads: [] as Package[],
+	github_stars: [] as Package[],
+	updated: [] as Package[],
+	name: [] as Package[]
+};
 
 /**
  * Simple utility to strip HTML tags from text
  */
-function strip_html(html: string): string {
+function strip_html(html: string | undefined): string {
+	if (!html) return '';
 	return html.replace(/<\/?[^>]+(>|$)/g, '');
+}
+
+/**
+ * Tokenize a string into lowercase words
+ */
+function tokenize(text: string): Set<string> {
+	if (!text) return new Set();
+
+	// Split by non-alphanumeric characters and convert to lowercase
+	const tokens = text
+		.toLowerCase()
+		.split(/[^a-z0-9]+/i)
+		.filter((token) => token.length > 1); // Only keep tokens with at least 2 characters
+
+	return new Set(tokens);
 }
 
 /**
@@ -67,135 +124,147 @@ function calculate_popularity_score(pkg: Package): number {
 }
 
 /**
- * Sort criteria options for package search results
+ * Pre-compute indexes and sorted lists for faster search
  */
-export type SortCriterion = 'popularity' | 'downloads' | 'github_stars' | 'updated' | 'name';
+function pre_compute_indexes(packages: Package[]) {
+	// Clear existing data
+	tokenized_packages.name_tokens.clear();
+	tokenized_packages.tag_tokens.clear();
+	tokenized_packages.description_tokens.clear();
+	tokenized_packages.author_tokens.clear();
+	popularity_scores.clear();
 
-export const search_criteria: SortCriterion[] = [
-	'popularity',
-	'downloads',
-	'github_stars',
-	'updated',
-	'name'
-];
+	// Process each package
+	for (const pkg of packages) {
+		const pkg_name = pkg.name;
 
-// Tracks the current sort criterion and weights
-let current_sort: SortCriterion = 'popularity';
-let current_weights: Record<string, number> | undefined;
-let use_search_score = false;
+		// Tokenize all searchable fields
+		tokenized_packages.name_tokens.set(pkg_name, tokenize(pkg_name));
 
-/**
- * Create an Orama search index with appropriate schema and custom sorting
- */
-function create_index() {
-	return create({
-		schema: {
-			id: 'string',
-			name: 'string',
-			name_parts: 'string[]',
-			description: 'string',
-			tags: 'string[]',
-			authors: 'string[]',
-			dependents: 'number',
-			downloads: 'number',
-			github_stars: 'number',
-			updated: 'string',
-			updated_timestamp: 'number',
-			deprecated: 'boolean',
-			outdated: 'boolean',
-			svelte_v3: 'boolean',
-			svelte_v4: 'boolean',
-			svelte_v5: 'boolean',
-			runes: 'boolean',
-			official: 'boolean',
-			popularity_score: 'number',
-			all_text: 'string'
-		},
-		components: {
-			tokenizer: {
-				stemming: false,
-				stopWords: english_stopwords,
-				tokenize(raw, language, prop, withCache) {
-					return raw.split(/[\s\-]+/);
-				}
-			}
+		if (pkg.tags && pkg.tags.length) {
+			tokenized_packages.tag_tokens.set(
+				pkg_name,
+				new Set(pkg.tags.flatMap((tag) => [...tokenize(tag)]))
+			);
 		}
 
-		// plugins: [pluginPT15()]
-		// Custom sort function that considers search score and custom criteria
-	});
-}
+		if (pkg.description) {
+			tokenized_packages.description_tokens.set(pkg_name, tokenize(strip_html(pkg.description)));
+		}
 
-let search_db: ReturnType<typeof create_index>;
-
-/**
- * Initialize the search index using Orama
- */
-export async function init(packages: Package[]) {
-	if (is_inited) return;
-
-	// Create a new Orama database with custom sorting
-	search_db = create_index();
-
-	for (const pkg of packages) {
-		// Store the original package
-		packages_map.set(pkg.name, pkg);
-
-		// Extract parts from package name for better indexing
-		const name_parts = pkg.name.split(/[/@\-_.]+/).filter(Boolean);
-
-		// Prepare the description
-		const description = strip_html(pkg.description || '');
-
-		// Prepare all searchable text in one field
-		const all_text = [
-			pkg.name,
-			...name_parts,
-			description,
-			(pkg.tags || []).join(' '),
-			(pkg.authors || []).join(' ')
-		].join(' ');
+		if (pkg.authors && pkg.authors.length) {
+			tokenized_packages.author_tokens.set(
+				pkg_name,
+				new Set(pkg.authors.flatMap((author) => [...tokenize(author)]))
+			);
+		}
 
 		// Pre-calculate popularity score
-		const popularity_score = calculate_popularity_score(pkg);
-
-		// Convert updated date to timestamp for sorting
-		const updated_timestamp = pkg.updated ? new Date(pkg.updated).getTime() : 0;
-
-		// Insert the package into Orama
-		await insert(search_db, {
-			id: pkg.name,
-			name: pkg.name,
-			name_parts,
-			description,
-			tags: pkg.tags || [],
-			authors: pkg.authors || [],
-			downloads: pkg.downloads || 0,
-			github_stars: pkg.github_stars || 0,
-			updated: pkg.updated || '',
-			updated_timestamp,
-			deprecated: !!pkg.deprecated,
-			outdated: !!pkg.outdated,
-			svelte_v3: !!pkg.svelte?.[3],
-			svelte_v4: !!pkg.svelte?.[4],
-			svelte_v5: !!pkg.svelte?.[5],
-			runes: !!pkg.runes,
-			official: !!pkg.official,
-			popularity_score,
-			all_text
-		});
+		popularity_scores.set(pkg_name, calculate_popularity_score(pkg));
 	}
+
+	// Pre-sort packages by each criterion for quick retrieval
+	for (const criterion of search_criteria) {
+		sorted_packages[criterion] = [...packages].sort((a, b) => sort_packages(a, b, criterion));
+	}
+}
+
+/**
+ * Initialize the search index
+ */
+export function init(packages: Package[]) {
+	if (is_inited) return;
+
+	packages_map.clear();
+
+	// Store all packages
+	for (const pkg of packages) {
+		packages_map.set(pkg.name, pkg);
+	}
+
+	// Pre-compute indexes for faster search
+	pre_compute_indexes(packages);
 
 	is_inited = true;
 }
 
 /**
- * Search for packages matching the query and/or tags, returning a flat list sorted by the specified criterion
+ * Fast exact word match check
  */
-export async function search(
+function has_exact_word_match(tokens: Set<string> | undefined, query_token: string): boolean {
+	if (!tokens) return false;
+	return tokens.has(query_token);
+}
+
+/**
+ * Fast partial match check
+ */
+function has_partial_match(tokens: Set<string> | undefined, query_token: string): boolean {
+	if (!tokens) return false;
+	for (const token of tokens) {
+		if (token.includes(query_token) || query_token.includes(token)) {
+			return true;
+		}
+	}
+	return false;
+}
+
+/**
+ * Calculate search score for a package based on query (optimized)
+ */
+function calculate_search_score(pkg_name: string, query_tokens: string[]): number {
+	if (!query_tokens.length) return 0;
+
+	let score = 0;
+	const pkg_name_lower = pkg_name.toLowerCase();
+
+	// Get pre-tokenized fields
+	const name_tokens = tokenized_packages.name_tokens.get(pkg_name);
+	const tag_tokens = tokenized_packages.tag_tokens.get(pkg_name);
+	const description_tokens = tokenized_packages.description_tokens.get(pkg_name);
+	const author_tokens = tokenized_packages.author_tokens.get(pkg_name);
+
+	// Score each token separately
+	for (const token of query_tokens) {
+		// Skip very short tokens
+		if (token.length < 2) continue;
+
+		// Name matching (highest priority)
+		if (pkg_name_lower === token) {
+			score += EXACT_NAME_MATCH_BOOST;
+		} else if (has_exact_word_match(name_tokens, token)) {
+			score += NAME_WORD_MATCH_BOOST;
+		} else if (pkg_name_lower.includes(token)) {
+			score += NAME_INCLUDES_BOOST;
+		}
+
+		// Tag matching
+		if (has_exact_word_match(tag_tokens, token)) {
+			score += TAG_MATCH_BOOST;
+		}
+
+		// Description matching
+		if (has_exact_word_match(description_tokens, token)) {
+			score += DESCRIPTION_EXACT_MATCH_BOOST;
+		} else if (has_partial_match(description_tokens, token)) {
+			score += DESCRIPTION_INCLUDES_BOOST;
+		}
+
+		// Author matching
+		if (has_partial_match(author_tokens, token)) {
+			score += AUTHOR_MATCH_BOOST;
+		}
+	}
+
+	return score;
+}
+
+/**
+ * Search for packages matching the query, returning a list sorted by the specified criterion
+ */
+export function search(
 	query: string | null,
 	options: {
-		tags?: string[];
 		sort_by?: SortCriterion;
 		filters?: {
 			svelte_versions?: {
@@ -203,171 +272,147 @@ export async function search(
 				4?: boolean;
 				5?: boolean;
 			};
-			hide_outdated?: boolean;
 		};
 		weights?: Record<string, number>;
 	} = {}
-): Promise<Package[]> {
+): Package[] {
 	if (!is_inited) {
 		throw new Error('Search index not initialized. Call init() first.');
 	}
 
-	const { tags = [], sort_by = 'popularity', filters = {}, weights } = options;
+	const { sort_by = 'popularity', filters = {}, weights } = options;
 
-	const { svelte_versions = { 3: true, 4: true, 5: true }, hide_outdated = false } = filters;
+	const { svelte_versions = { 3: true, 4: true, 5: true } } = filters;
 
-	// Update the current sort criterion and weights for the custom sort function
-	current_sort = sort_by;
-	current_weights = weights;
-
-	// Normalize query to empty string if null or undefined
-	const normalized_query = query === null || query === undefined ? '' : query;
-
-	const has_query = normalized_query.trim().length > 0;
-	const has_tags = tags.length > 0;
+	// Fast path: if no query and no filters, return pre-sorted list
 	const has_version_filter =
-		svelte_versions['3'] !== undefined ||
-		svelte_versions['4'] !== undefined ||
-		svelte_versions['5'] !== undefined;
+		svelte_versions[3] !== undefined ||
+		svelte_versions[4] !== undefined ||
+		svelte_versions[5] !== undefined;
 
-	// Set flag to use search score in sorting
-	use_search_score = has_query;
-
-	// Build the where clause for Orama based on filters
-	const where: any = {};
-
-	if (has_tags) {
-		where.tags = { in: tags };
+	if (!query && !has_version_filter && (!weights || Object.keys(weights).length === 0)) {
+		return sorted_packages[sort_by];
 	}
 
-	if (hide_outdated) {
-		where.outdated = { eq: false };
-	}
+	// Normalize query to lowercase tokens
+	const normalized_query = query === null || query === undefined ? '' : query.trim().toLowerCase();
+	const has_query = normalized_query.length > 0;
 
-	if (has_version_filter) {
-		// We need at least one version to match
-		const version_conditions = [];
+	// Split query into tokens once
+	const query_tokens = has_query ? normalized_query.split(/\s+/).filter((t) => t.length > 0) : [];
 
-		if (svelte_versions['3']) {
-			version_conditions.push({ svelte_v3: { eq: true } });
-		}
+	// Function to check if a package matches the version filters
+	const matches_svelte_version = (pkg: Package): boolean => {
+		// If no version filter is applied, include all packages
+		if (!has_version_filter) return true;
 
-		if (svelte_versions['4']) {
-			version_conditions.push({ svelte_v4: { eq: true } });
-		}
+		// If the package doesn't have svelte_range, include it regardless of version filter
+		if (!pkg.svelte_range) return true;
 
-		if (svelte_versions['5']) {
-			version_conditions.push({ svelte_v5: { eq: true } });
-		}
-
-		if (version_conditions.length > 0) {
-			where.or = version_conditions;
-		}
-	}
-
-	// Prepare search configuration
-	const search_config: SearchParams<ReturnType<typeof create_index>> = {
-		limit: 100,
-		mode: 'fulltext',
-		sortBy: (a, b) => {
-			const id_a = a[0];
-			const id_b = b[0];
-			const score_a = a[1];
-			const score_b = b[1];
-			const doc_a = a[2];
-			const doc_b = b[2];
-
-			// Apply weights if available
-			if (current_weights) {
-				const a_weight = current_weights[id_a] || 1;
-				const b_weight = current_weights[id_b] || 1;
-
-				// Check for significant weight difference first
-				const weight_diff = a_weight - b_weight;
-				if (Math.abs(weight_diff) > 0.1) {
-					// Higher weights should come first
-					return weight_diff > 0 ? -1 : 1;
-				}
-			}
-
-			// If this is a search query with text term, incorporate the search score
-			// if (use_search_score) {
-			// 	// For significant score differences, prioritize search relevance
-			// 	const score_diff = score_b - score_a;
-			// 	if (Math.abs(score_diff) > 0.3) {
-			// 		return score_diff;
-			// 	}
-			// }
-
-			// For similar search scores or no search query, use the selected criterion
-			switch (current_sort) {
-				case 'popularity':
-					let popularity_score_a = doc_a.popularity_score as number;
-					let popularity_score_b = doc_b.popularity_score as number;
-
-					// For popularity, blend search score with popularity score when applicable
-					if (use_search_score) {
-						const name_a = doc_a.name as string;
-						const name_b = doc_b.name as string;
-
-						// Create regex patterns for scoring
-						const escaped_query = query!.replace(EXACT_QUERY_REPLACEMENT_REGEX, '\\$&');
-						const exact_match = new RegExp(`^${escaped_query}$`, 'i');
-
-						// Apply exact match boost
-						if (exact_match.test(name_a)) {
-							popularity_score_a += EXACT_NAME_MATCH_BOOST;
-						}
-
-						if (exact_match.test(name_b)) {
-							popularity_score_b += EXACT_NAME_MATCH_BOOST;
-						}
-
-						// Blend search relevance with popularity (70% popularity, 30% search score)
-						return (
-							popularity_score_b * 0.5 + score_b * 0.5 - (score_a * 0.5 + popularity_score_a * 0.5)
-						);
-					}
-					return score_b - score_a;
-				case 'downloads':
-					return (doc_b.downloads as number) - (doc_a.downloads as number);
-				case 'github_stars':
-					return (doc_b.github_stars as number) - (doc_a.github_stars as number);
-				case 'updated':
-					return (doc_b.updated_timestamp as number) - (doc_a.updated_timestamp as number);
-				case 'name':
-					return (doc_a.name as string).localeCompare(doc_b.name as string);
-				default:
-					return (doc_b.popularity_score as number) - (doc_a.popularity_score as number);
-			}
-		}
+		// Otherwise, apply the version filter
+		return !!(
+			(svelte_versions[3] && pkg.svelte?.[3]) ||
+			(svelte_versions[4] && pkg.svelte?.[4]) ||
+			(svelte_versions[5] && pkg.svelte?.[5])
+		);
 	};
 
-	// Add filters if applicable
-	if (Object.keys(where).length > 0) {
-		search_config.where = where;
-	}
+	// Start with pre-sorted packages for the selected criterion
+	// This provides a performance boost when the filter doesn't exclude many packages
+	const base_packages = has_query
+		? Array.from(packages_map.values()) // For query searches, we'll sort by score anyway
+		: sorted_packages[sort_by];
 
-	// Add search term and properties if we have a query
+	// Apply version filters
+	let filtered_packages = base_packages.filter((pkg) => matches_svelte_version(pkg));
+
+	// If we have a query, score packages and filter by relevance
 	if (has_query) {
-		search_config.term = normalized_query;
-		search_config.properties = ['name', 'name_parts', 'description', 'tags', 'authors', 'all_text'];
-		search_config.boost = {
-			name: 2.0,
-			name_parts: 1.5,
-			tags: 1.2
-		};
-	} else {
-		// If no query, just do an empty search
-		search_config.term = '';
-		search_config.properties = ['name'];
+		// For short queries, use more efficient approach
+		const scored_packages = filtered_packages
+			.map((pkg) => {
+				const search_score = calculate_search_score(pkg.name, query_tokens);
+
+				// If there's no match, return null to filter it out
+				if (search_score <= 0) return null;
+
+				const popularity_score = popularity_scores.get(pkg.name) || 0;
+
+				// Blend search relevance with popularity
+				const combined_score = search_score * 0.7 + popularity_score * 0.3;
+
+				// Apply custom weights if provided
+				const weight = weights?.[pkg.name] || 1;
+
+				return {
+					package: pkg,
+					score: combined_score * weight
+				};
+			})
+			.filter(Boolean) // Filter out null results
+			.sort((a, b) => b!.score - a!.score);
+
+		return scored_packages.map((item) => item!.package);
 	}
 
-	// Search using Orama - the sortBy function will handle sorting
-	const results = await orama_search(search_db, search_config);
+	// If no query, just sort by the selected criterion
+	return filtered_packages.sort((a, b) => sort_packages(a, b, sort_by, weights));
+}
 
-	// Map results back to original packages
-	return results.hits.map((hit) => packages_map.get(hit.document.id)).filter(Boolean) as Package[];
+/**
+ * Sort packages by the specified criterion
+ */
+export function sort_packages(
+	a: Package,
+	b: Package,
+	criterion: SortCriterion,
+	weights?: Record<string, number>
+): number {
+	// Apply weights if provided
+	if (weights) {
+		const a_weight = weights[a.name] || 1;
+		const b_weight = weights[b.name] || 1;
+
+		// Check for significant weight difference first
+		const weight_diff = a_weight - b_weight;
+		if (Math.abs(weight_diff) > 0.1) {
+			// Higher weights should come first
+			return weight_diff > 0 ? -1 : 1;
+		}
+	}
+
+	switch (criterion) {
+		case 'popularity': {
+			// Use pre-computed popularity scores when available
+			const a_score = popularity_scores.get(a.name) ?? calculate_popularity_score(a);
+			const b_score = popularity_scores.get(b.name) ?? calculate_popularity_score(b);
+			return b_score - a_score;
+		}
+
+		case 'downloads':
+			return (b.downloads || 0) - (a.downloads || 0);
+
+		case 'github_stars':
+			return (b.github_stars || 0) - (a.github_stars || 0);
+
+		case 'updated': {
+			// Sort by most recently updated
+			const a_date = a.updated ? new Date(a.updated).getTime() : 0;
+			const b_date = b.updated ? new Date(b.updated).getTime() : 0;
+			return b_date - a_date;
+		}
+
+		case 'name':
+			// Sort alphabetically by name
+			return a.name.localeCompare(b.name);
+
+		default: {
+			// Default to popularity score for unknown criteria
+			const a_score = popularity_scores.get(a.name) ?? calculate_popularity_score(a);
+			const b_score = popularity_scores.get(b.name) ?? calculate_popularity_score(b);
+			return b_score - a_score;
+		}
+	}
 }
 
 /**
@@ -391,13 +436,13 @@ export function group_by_tags(packages: Package[]): PackageGroup[] {
 
 	// Convert to final format and sort groups by highest package popularity
 	return Object.values(grouped).sort((a, b) => {
-		// Calculate balanced popularity scores with logarithmic scaling
-		const get_popularity = (pkg: Package) => {
-			return calculate_popularity_score(pkg);
-		};
-
-		const max_popularity_a = Math.max(...a.packages.map(get_popularity));
-		const max_popularity_b = Math.max(...b.packages.map(get_popularity));
+		// Use pre-computed popularity scores for performance
+		const max_popularity_a = Math.max(
+			...a.packages.map((pkg) => popularity_scores.get(pkg.name) || 0)
+		);
+		const max_popularity_b = Math.max(
+			...b.packages.map((pkg) => popularity_scores.get(pkg.name) || 0)
+		);
 
 		return max_popularity_b - max_popularity_a;
 	});
@@ -420,20 +465,14 @@ export function get_all_packages(): Package[] {
 /**
  * Get all available tags with package counts
  */
-export async function get_all_tags(): Promise<{ tag: string; count: number }[]> {
+export function get_all_tags(): { tag: string; count: number }[] {
 	const tag_counts: Record<string, number> = {};
 
-	// Get all unique tags from the database
-	const results = await orama_search(search_db, {
-		term: '',
-		properties: ['tags'],
-		limit: 10000
-	});
-
-	for (const hit of results.hits) {
-		const tags = hit.document.tags || [];
-		for (const tag of tags) {
-			tag_counts[tag] = (tag_counts[tag] || 0) + 1;
+	for (const pkg of packages_map.values()) {
+		if (pkg.tags && pkg.tags.length) {
+			for (const tag of pkg.tags) {
+				tag_counts[tag] = (tag_counts[tag] || 0) + 1;
+			}
 		}
 	}
 
@@ -443,62 +482,13 @@ export async function get_all_tags(): Promise<{ tag: string; count: number }[]> 
 }
 
 /**
- * Helper function to sort packages by the specified criterion with optional weights
- * Higher weights will prioritize packages to appear earlier in the sorted list
- *
- * @param a First package to compare
- * @param b Second package to compare
- * @param criterion The sorting criterion to use
- * @param weights Optional record of package name to weight multiplier
- * @returns Comparison result (-1, 0, or 1)
+ * Get packages by a specific author
  */
-export function sort_packages(
-	a: Package,
-	b: Package,
-	criterion: SortCriterion,
-	weights?: Record<string, number>
-): number {
-	// Apply weights if provided
-	if (weights) {
-		const a_weight = weights[a.name] || 1;
-		const b_weight = weights[b.name] || 1;
+export function get_packages_by_author(author: string): Package[] {
+	// Use a Set to efficiently check for author membership
+	const author_lower = author.toLowerCase();
 
-		// Check for significant weight difference first
-		const weight_diff = a_weight - b_weight;
-		if (Math.abs(weight_diff) > 0.1) {
-			// Higher weights should come first
-			return weight_diff > 0 ? -1 : 1;
-		}
-	}
-
-	// If weights are similar or not provided, use standard sorting criteria
-	switch (criterion) {
-		case 'popularity':
-			// Use our popularity score calculation function
-			const a_score = calculate_popularity_score(a);
-			const b_score = calculate_popularity_score(b);
-			return b_score - a_score;
-
-		case 'downloads':
-			return (b.downloads || 0) - (a.downloads || 0);
-
-		case 'github_stars':
-			return (b.github_stars || 0) - (a.github_stars || 0);
-
-		case 'updated':
-			// Sort by most recently updated
-			const a_date = a.updated ? new Date(a.updated).getTime() : 0;
-			const b_date = b.updated ? new Date(b.updated).getTime() : 0;
-			return b_date - a_date;
-
-		case 'name':
-			// Sort alphabetically by name
-			return a.name.localeCompare(b.name);
-
-		default:
-			// Default to popularity score for unknown criteria
-			const a_def_score = calculate_popularity_score(a);
-			const b_def_score = calculate_popularity_score(b);
-			return b_def_score - a_def_score;
-	}
+	return Array.from(packages_map.values())
+		.filter((pkg) => pkg.authors?.some((a) => a.toLowerCase().includes(author_lower)))
+		.sort((a, b) => sort_packages(a, b, 'popularity'));
 }
