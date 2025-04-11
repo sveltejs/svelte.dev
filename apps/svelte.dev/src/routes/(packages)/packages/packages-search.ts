@@ -10,7 +10,6 @@ export const REGISTRY_PAGE_LIMIT = 50;
 const packages_map = new Map<string, Package>();
 
 // Scoring factors
-const DEPENDENTS_BOOST = 1;
 const GITHUB_STARS_BOOST = 10;
 const DOWNLOADS_BOOST = 4;
 const RECENT_UPDATE_BOOST = 1;
@@ -121,6 +120,7 @@ function create_index() {
 				}
 			}
 		}
+
 		// plugins: [pluginPT15()]
 		// Custom sort function that considers search score and custom criteria
 	});
@@ -135,7 +135,7 @@ export async function init(packages: Package[]) {
 	if (is_inited) return;
 
 	// Create a new Orama database with custom sorting
-	search_db = await create_index();
+	search_db = create_index();
 
 	for (const pkg of packages) {
 		// Store the original package
