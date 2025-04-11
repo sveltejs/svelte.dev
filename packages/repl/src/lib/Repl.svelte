@@ -3,15 +3,15 @@
 	import { ScreenToggle } from '@sveltejs/site-kit/components';
 	import { BROWSER } from 'esm-env';
 	import { writable } from 'svelte/store';
-	import Bundler from './Bundler.js';
+	import Bundler from './Bundler.svelte.js';
 	import ComponentSelector from './Input/ComponentSelector.svelte';
 	import Output from './Output/Output.svelte';
 	import { set_repl_context } from './context.js';
-	import { Workspace, Editor, type File } from 'editor';
-	import type { Bundle, ReplContext } from './types.js';
+	import { Workspace, type File } from './Workspace.svelte.js';
+	import Editor from './Editor/Editor.svelte';
+	import type { ReplContext } from './types.js';
 
 	interface Props {
-		packagesUrl?: string;
 		svelteVersion?: string;
 		embedded?: boolean | 'output-only';
 		orientation?: 'columns' | 'rows';
@@ -22,12 +22,12 @@
 		injectedJS?: string;
 		injectedCSS?: string;
 		previewTheme?: 'light' | 'dark';
+		onversion?: (version: string) => void;
 		onchange?: () => void;
 		download?: () => void;
 	}
 
 	let {
-		packagesUrl = 'https://unpkg.com',
 		svelteVersion = 'latest',
 		embedded = false,
 		orientation = 'columns',
@@ -38,6 +38,7 @@
 		injectedJS = '',
 		injectedCSS = '',
 		previewTheme = 'light',
+		onversion,
 		onchange = () => {},
 		download
 	}: Props = $props();
@@ -66,7 +67,7 @@
 	// TODO get rid
 	export function toJSON() {
 		return {
-			imports: $bundle?.imports ?? [],
+			imports: bundler!.result?.imports ?? [],
 			files: workspace.files,
 			tailwind: workspace.tailwind
 		};
@@ -82,24 +83,12 @@
 		workspace.mark_saved();
 	}
 
-	const bundle: ReplContext['bundle'] = writable(null);
 	const toggleable: ReplContext['toggleable'] = writable(false);
 
-	set_repl_context({
-		bundle,
-		toggleable,
-		workspace,
-		svelteVersion
-	});
-
-	let current_token: Symbol;
-
 	async function rebundle() {
-		const token = (current_token = Symbol());
-		const result = await bundler!.bundle(workspace.files as File[], {
+		bundler!.bundle(workspace.files as File[], {
 			tailwind: workspace.tailwind
 		});
-		if (token === current_token) $bundle = result as Bundle;
 	}
 
 	async function migrate() {
@@ -122,8 +111,8 @@
 
 	const bundler = BROWSER
 		? new Bundler({
-				packages_url: packagesUrl,
 				svelte_version: svelteVersion,
+				onversion,
 				onstatus: (message) => {
 					if (message) {
 						// show bundler status, but only after time has elapsed, to
@@ -145,6 +134,13 @@
 				}
 			})
 		: null;
+
+	set_repl_context({
+		bundler,
+		toggleable,
+		workspace,
+		svelteVersion
+	});
 
 	function before_unload(event: BeforeUnloadEvent) {
 		if (Object.keys(workspace.modified).length > 0) {

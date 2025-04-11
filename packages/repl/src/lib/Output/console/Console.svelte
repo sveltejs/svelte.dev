@@ -1,23 +1,6 @@
-<script module lang="ts">
-	export type Log = {
-		command: 'info' | 'warn' | 'error' | 'table' | 'group' | 'clear' | 'unclonable';
-		action?: 'console';
-		args?: any[];
-		collapsed?: boolean;
-		expanded?: boolean;
-		count?: number;
-		logs?: Log[];
-		stack?: Array<{
-			label?: string;
-			location?: string;
-		}>;
-		data?: any;
-		columns?: string[];
-	};
-</script>
-
 <script lang="ts">
 	import ConsoleLine from './ConsoleLine.svelte';
+	import type { Log } from './Log.svelte';
 
 	export let logs: Log[];
 </script>

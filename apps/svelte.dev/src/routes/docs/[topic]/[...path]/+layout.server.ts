@@ -1,10 +1,9 @@
-import { docs } from '$lib/server/content';
+import { create_summary, docs } from '$lib/server/content';
 import { redirect } from '@sveltejs/kit';
 import { error } from '@sveltejs/kit';
 
 export async function load({ params }) {
-	const topic = params.path.split('/')[0];
-	const document = docs.topics[`docs/${topic}`];
+	const document = docs.topics[`docs/${params.topic}`];
 
 	if (!document) {
 		// in many cases, https://svelte.dev/docs/foo is now https://svelte.dev/docs/svelte/foo
@@ -15,11 +14,7 @@ export async function load({ params }) {
 		error(404, 'Not found');
 	}
 
-	if (params.path === topic) {
-		redirect(307, `/${document.children[0].children[0].slug}`);
-	}
-
 	return {
-		sections: document.children
+		sections: document.children.map(create_summary)
 	};
 }

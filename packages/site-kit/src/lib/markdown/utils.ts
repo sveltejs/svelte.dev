@@ -1,4 +1,4 @@
-import { Marked, Renderer, type TokenizerObject, type MarkedExtension } from 'marked';
+import { Marked, type Renderer, type TokenizerObject, type MarkedExtension } from 'marked';
 import json5 from 'json5';
 
 export const SHIKI_LANGUAGE_MAP = {

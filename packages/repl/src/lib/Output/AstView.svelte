@@ -3,7 +3,7 @@
 	import Message from '../Message.svelte';
 	import AstNode from './AstNode.svelte';
 	import type { CompileResult } from 'svelte/compiler';
-	import type { Workspace } from 'editor';
+	import type { Workspace } from '../Workspace.svelte';
 
 	type Ast = CompileResult['ast'];
 

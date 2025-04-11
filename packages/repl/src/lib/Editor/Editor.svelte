@@ -2,7 +2,7 @@
 	import { BROWSER } from 'esm-env';
 	import { setDiagnostics } from '@codemirror/lint';
 	import { EditorView } from '@codemirror/view';
-	import { Workspace, type File } from './Workspace.svelte.js';
+	import { Workspace, type File } from '../Workspace.svelte';
 	import './codemirror.css';
 
 	interface Props {

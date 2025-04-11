@@ -5,8 +5,9 @@
 	import CompilerOptions from './CompilerOptions.svelte';
 	import PaneWithPanel from './PaneWithPanel.svelte';
 	import Viewer from './Viewer.svelte';
-	import { Editor, Workspace, type File } from 'editor';
-	import { tick, untrack } from 'svelte';
+	import { Workspace, type File } from '../Workspace.svelte';
+	import Editor from '../Editor/Editor.svelte';
+	import { untrack } from 'svelte';
 	import { decode, type SourceMapSegment } from '@jridgewell/sourcemap-codec';
 
 	interface Props {
@@ -277,10 +278,6 @@
 		&[aria-current='true'] {
 			border-bottom: 1px solid var(--sk-fg-accent);
 		}
-	}
-
-	div[slot] {
-		height: 100%;
 	}
 
 	.tab-content {

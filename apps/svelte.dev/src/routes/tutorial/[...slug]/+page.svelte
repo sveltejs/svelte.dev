@@ -2,7 +2,7 @@
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
 	import { SplitPane } from '@rich_harris/svelte-split-pane';
 	import * as adapter from './adapter.svelte';
-	import { Editor, Workspace } from 'editor';
+	import { Workspace, type Item } from '@sveltejs/repl/workspace';
 	import ContextMenu from './filetree/ContextMenu.svelte';
 	import Filetree from './filetree/Filetree.svelte';
 	import ImageViewer from './ImageViewer.svelte';
@@ -14,7 +14,7 @@
 	import OutputRollup from './OutputRollup.svelte';
 	import { page } from '$app/state';
 	import Controls from './Controls.svelte';
-	import type { Item } from 'editor';
+	import Editor from '@sveltejs/repl/editor';
 	import type { Snapshot } from './$types.js';
 
 	interface Props {
@@ -170,6 +170,7 @@
 	let a = $derived(create_files(data.exercise.a));
 	let b = $derived(create_files({ ...data.exercise.a, ...data.exercise.b }));
 
+	// svelte-ignore state_referenced_locally
 	const workspace = new Workspace(Object.values(a), {
 		initial: data.exercise.focus,
 		onupdate(file) {
@@ -180,6 +181,7 @@
 		}
 	});
 
+	// svelte-ignore state_referenced_locally
 	solution.set(b);
 
 	// for the things we can't do with media queries

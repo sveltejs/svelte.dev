@@ -6,26 +6,13 @@
 	import { mapbox_setup } from '../../../../../config.js';
 	import { page } from '$app/state';
 	import { decode_and_decompress_text } from '../gzip.js';
-	import type { File } from 'editor';
+	import type { File } from '@sveltejs/repl/workspace';
 
 	let { data } = $props();
 
 	let repl = $state() as ReturnType<typeof Repl>;
 
 	let version = page.url.searchParams.get('version') || 'latest';
-	let is_pr_or_commit_version = version.startsWith('pr-') || version.startsWith('commit-');
-
-	if (version !== 'local' && !is_pr_or_commit_version) {
-		$effect(() => {
-			fetch(`https://unpkg.com/svelte@${version}/package.json`)
-				.then((r) => r.json())
-				.then((pkg) => {
-					if (pkg.version !== data.version) {
-						replaceState(`/playground/${data.gist.id}/embed?version=${pkg.version}`, {});
-					}
-				});
-		});
-	}
 
 	// TODO make this munging unnecessary
 	function munge(data: any): File {
@@ -85,6 +72,14 @@
 			injectedJS={mapbox_setup}
 			previewTheme={theme.current}
 			embedded={page.url.searchParams.has('output-only') ? 'output-only' : true}
+			onversion={(v) => {
+				if (version === v) return;
+
+				const url = new URL(location.href);
+				url.searchParams.set('version', v);
+
+				replaceState(url, {});
+			}}
 		/>
 	{/if}
 </div>
