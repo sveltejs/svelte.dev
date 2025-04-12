@@ -29,6 +29,7 @@ function render<
 				options?: {
 					props?: Omit<Props, '$$slots' | '$$events'>;
 					context?: Map<any, any>;
+					idPrefix?: string;
 				}
 			]
 		: [
@@ -38,6 +39,7 @@ function render<
 				options: {
 					props: Omit<Props, '$$slots' | '$$events'>;
 					context?: Map<any, any>;
+					idPrefix?: string;
 				}
 			]
 ): RenderOutput;

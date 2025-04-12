@@ -19,8 +19,8 @@ import {
 	hasContext,
 	hydrate,
 	mount,
+	onAnimationFrame,
 	onDestroy,
-	onFrame,
 	onMount,
 	setContext,
 	tick,
@@ -278,12 +278,13 @@ function createRawSnippet<Params extends unknown[]>(
 
 ## flushSync
 
-Synchronously flushes any pending state changes and those that result from it.
+Synchronously flush any pending updates.
+Returns void if no callback is provided, otherwise returns the result of calling the callback.
 
 <div class="ts-block">
 
 ```dts
-function flushSync(fn?: (() => void) | undefined): void;
+function flushSync<T = void>(fn?: (() => T) | undefined): T;
 ```
 
 </div>
@@ -399,6 +400,27 @@ function mount<
 
 
 
+## onAnimationFrame
+
+The `onAnimationFrame` function schedules a callback to run on `requestAnimationFrame`. It must be called inside an effect (e.g. during component initialisation).
+
+`onAnimationFrame` does not run inside [server-side components](/docs/svelte/svelte-server#render).
+
+<div class="ts-block">
+
+```dts
+function onAnimationFrame<T>(
+	fn: () =>
+		| NotFunction<T>
+		| Promise<NotFunction<T>>
+		| (() => any)
+): void;
+```
+
+</div>
+
+
+
 ## onDestroy
 
 Schedules a callback to run immediately before the component is unmounted.
@@ -416,36 +438,16 @@ function onDestroy(fn: () => any): void;
 
 
 
-## onFrame
-
-The `onFrame` function schedules a callback to run on `requestAnimationFrame`. It must be called inside an effect (e.g. during component initialisation).
-
-`onFrame` does not run inside [server-side components](/docs/svelte/svelte-server#render).
-
-<div class="ts-block">
-
-```dts
-function onFrame<T>(
-	fn: () =>
-		| NotFunction<T>
-		| Promise<NotFunction<T>>
-		| (() => any)
-): void;
-```
-
-</div>
-
-
-
 ## onMount
 
-The `onMount` function schedules a callback to run as soon as the component has been mounted to the DOM.
-It must be called during the component's initialisation (but doesn't need to live *inside* the component;
-it can be called from an external module).
+`onMount`, like [`$effect`](/docs/svelte/$effect), schedules a function to run as soon as the component has been mounted to the DOM.
+Unlike `$effect`, the provided function only runs once.
 
-If a function is returned _synchronously_ from `onMount`, it will be called when the component is unmounted.
+It must be called during the component's initialisation (but doesn't need to live _inside_ the component;
+it can be called from an external module). If a function is returned _synchronously_ from `onMount`,
+it will be called when the component is unmounted.
 
-`onMount` does not run inside [server-side components](/docs/svelte/svelte-server#render).
+`onMount` functions do not run during [server-side rendering](/docs/svelte/svelte-server#render).
 
 <div class="ts-block">
 
@@ -498,10 +500,32 @@ function tick(): Promise<void>;
 
 Unmounts a component that was previously mounted using `mount` or `hydrate`.
 
+Since 5.13.0, if `options.outro` is `true`, [transitions](/docs/svelte/transition) will play before the component is removed from the DOM.
+
+Returns a `Promise` that resolves after transitions have completed if `options.outro` is true, or immediately otherwise (prior to 5.13.0, returns `void`).
+
+```js
+// @errors: 7031
+import { mount, unmount } from 'svelte';
+import App from './App.svelte';
+
+const app = mount(App, { target: document.body });
+
+// later...
+unmount(app, { outro: true });
+```
+
 <div class="ts-block">
 
 ```dts
-function unmount(component: Record<string, any>): void;
+function unmount(
+	component: Record<string, any>,
+	options?:
+		| {
+				outro?: boolean;
+		  }
+		| undefined
+): Promise<void>;
 ```
 
 </div>
@@ -707,6 +731,15 @@ sync?: boolean;
 <div class="ts-block-property">
 
 ```dts
+idPrefix?: string;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
 $$inline?: boolean;
 ```
 
@@ -899,7 +932,7 @@ let { banner }: { banner: Snippet<[{ text: string }]> } = $props();
 ```
 You can only call a snippet through the `{@render ...}` tag.
 
-/docs/svelte/snippet
+See the [snippet documentation](/docs/svelte/snippet) for more info.
 
 <div class="ts-block">
 
