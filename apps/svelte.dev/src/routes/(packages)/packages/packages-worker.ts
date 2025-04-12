@@ -17,20 +17,20 @@ addEventListener('message', async (event) => {
 
 		if (!query) return;
 
-		const current_results = await search(query, {
-			sort_by,
-			filters: {
-				svelte_versions: (svelte_versions as string[]).reduce(
-					(acc, val) => {
-						acc[val] = true;
-						return acc;
-					},
-					{} as Record<string, boolean>
-				)
-			}
-		});
-
-		console.log(current_results);
+		const current_results = query
+			? await search(query, {
+					sort_by,
+					filters: {
+						svelte_versions: (svelte_versions as string[]).reduce(
+							(acc, val) => {
+								acc[val] = true;
+								return acc;
+							},
+							{} as Record<string, boolean>
+						)
+					}
+				})
+			: [];
 
 		postMessage({
 			type: 'results',

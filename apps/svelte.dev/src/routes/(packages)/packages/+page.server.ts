@@ -56,12 +56,14 @@ export async function load({ url }) {
 
 	await init(registry);
 
-	let current_results = await search(query, {
-		sort_by,
-		filters: {
-			svelte_versions
-		}
-	});
+	let current_results = query
+		? await search(query, {
+				sort_by,
+				filters: {
+					svelte_versions
+				}
+			})
+		: [];
 
 	return {
 		packages: current_results,

@@ -193,7 +193,7 @@ export async function init(packages: Package[]) {
  * Search for packages matching the query and/or tags, returning a flat list sorted by the specified criterion
  */
 export async function search(
-	query: string | null,
+	query: string,
 	options: {
 		tags?: string[];
 		sort_by?: SortCriterion;
@@ -203,7 +203,6 @@ export async function search(
 				4?: boolean;
 				5?: boolean;
 			};
-			hide_outdated?: boolean;
 		};
 		weights?: Record<string, number>;
 	} = {}
@@ -214,14 +213,14 @@ export async function search(
 
 	const { tags = [], sort_by = 'popularity', filters = {}, weights } = options;
 
-	const { svelte_versions = { 3: true, 4: true, 5: true }, hide_outdated = false } = filters;
+	const { svelte_versions = { 3: true, 4: true, 5: true } } = filters;
 
 	// Update the current sort criterion and weights for the custom sort function
 	current_sort = sort_by;
 	current_weights = weights;
 
 	// Normalize query to empty string if null or undefined
-	const normalized_query = query === null || query === undefined ? '' : query;
+	const normalized_query = query;
 
 	const has_query = normalized_query.trim().length > 0;
 	const has_tags = tags.length > 0;
@@ -238,10 +237,6 @@ export async function search(
 
 	if (has_tags) {
 		where.tags = { in: tags };
-	}
-
-	if (hide_outdated) {
-		where.outdated = { eq: false };
 	}
 
 	if (has_version_filter) {
