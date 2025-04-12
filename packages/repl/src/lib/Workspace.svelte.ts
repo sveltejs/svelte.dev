@@ -425,13 +425,9 @@ export class Workspace {
 			throw new Error('Workspace must have at least one file');
 		}
 
-		if (selected) {
-			const file = files.find((file) => is_file(file) && file.name === selected);
-
-			if (!file) {
-				throw new Error(`Invalid selection ${selected}`);
-			}
-			this.#select(file as File);
+		const matching_file = selected && files.find((file) => is_file(file) && file.name === selected);
+		if (matching_file) {
+			this.#select(matching_file as File);
 		} else {
 			this.#select(first);
 		}
