@@ -10,6 +10,7 @@ import svelte_society_list from '../../src/lib/society-npm.json' with { type: 'j
 import { sort_packages } from '../../src/routes/(packages)/packages/packages-search.js';
 import {
 	check_typescript_types,
+	check_whether_runes_supported,
 	fetch_downloads_for_package,
 	HEADERS,
 	PackageCache,
@@ -856,7 +857,22 @@ for (let i = 0; i < 1; i++) {
 
 // await update_overrides();
 
-update_cache_from_npm();
+// update_cache_from_npm();
+
+async function update_whether_runes() {
+	for await (const [pkg_name, data] of PackageCache.entries()) {
+		if (data.last_rune_check_version === data.version) continue;
+
+		const check = await check_whether_runes_supported(pkg_name, data.version);
+
+		data.last_rune_check_version = data.version;
+		data.runes = check;
+
+		PackageCache.set(pkg_name, data);
+	}
+}
+
+update_whether_runes();
 
 svelte_society_list;
 // await process_packages_by_names_through_llm({

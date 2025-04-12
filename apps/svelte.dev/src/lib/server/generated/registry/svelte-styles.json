@@ -10,5 +10,6 @@
 	"runes": false,
 	"typescript": "none",
 	"version": "0.0.2",
-	"svelte_range": "^3.29.4"
+	"svelte_range": "^3.29.4",
+	"last_rune_check_version": "0.0.2"
 }

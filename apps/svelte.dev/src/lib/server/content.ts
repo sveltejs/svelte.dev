@@ -189,6 +189,8 @@ export interface Package {
 	svelte_range?: string;
 	/** @deprecated DO NOT USE ON FRONTEND */
 	kit_range?: string;
+	/** @deprecated DO NOT USE ON FRONTEND */
+	last_rune_check_version?: string;
 
 	runes: boolean;
 

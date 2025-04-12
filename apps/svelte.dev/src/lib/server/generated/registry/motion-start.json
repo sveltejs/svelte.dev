@@ -5,9 +5,10 @@
 	"downloads": 57,
 	"updated": "2025-03-29T22:36:18.861Z",
 	"tags": ["ui"],
-	"runes": false,
+	"runes": true,
 	"typescript": "first-party",
 	"version": "0.1.5",
 	"svelte_range": "^5.5.3",
-	"kit_range": "2.7.1"
+	"kit_range": "2.7.1",
+	"last_rune_check_version": "0.1.5"
 }

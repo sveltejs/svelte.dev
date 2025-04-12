@@ -9,5 +9,6 @@
 	"runes": false,
 	"typescript": "none",
 	"version": "0.0.4",
-	"kit_range": "^1.0.0-next.147"
+	"kit_range": "^1.0.0-next.147",
+	"last_rune_check_version": "0.0.4"
 }

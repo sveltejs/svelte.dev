@@ -11,5 +11,6 @@
 	"github_stars": 16523,
 	"typescript": "first-party",
 	"version": "0.487.0",
-	"svelte_range": "^3 || ^4 || ^5.0.0-next.42"
+	"svelte_range": "^3 || ^4 || ^5.0.0-next.42",
+	"last_rune_check_version": "0.487.0"
 }

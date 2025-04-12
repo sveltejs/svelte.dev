@@ -7,10 +7,11 @@
 	"downloads": 15,
 	"updated": "2025-03-04T16:05:27.731Z",
 	"tags": ["integration"],
-	"runes": false,
+	"runes": true,
 	"github_stars": 1,
 	"typescript": "first-party",
 	"version": "5.0.2",
 	"svelte_range": "^5.0.0",
-	"kit_range": "^2.18.0"
+	"kit_range": "^2.18.0",
+	"last_rune_check_version": "5.0.2"
 }

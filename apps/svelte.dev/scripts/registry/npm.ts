@@ -1,8 +1,11 @@
 import * as fsp from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { format as prettier_format, resolveConfig, type Options } from 'prettier';
+import { extract } from 'tar-stream';
 import type { Package } from '../../src/lib/server/content.js';
-import { check, format as prettier_format, resolveConfig, type Options } from 'prettier';
+import { pipeline } from 'node:stream';
+import { createGunzip, gunzip } from 'node:zlib';
 
 /**
  * Simple queue implementation for limiting concurrent requests
@@ -650,6 +653,156 @@ export async function* process_packages(
 			console.error(`Error processing package ${pkg_name}:`, error);
 		}
 	}
+}
+
+// Pattern for rune declarations with proper context
+const rune_patterns = [
+	// $state declaration
+	/\b(?:let|const)\s+\w+\s*=\s*\$state\s*\(/,
+	// $derived declaration
+	/\b(?:let|const)\s+\w+\s*=\s*\$derived\s*\(/,
+	/\b(?:let|const)\s+\w+\s*=\s*\$derived\.by\s*\(/,
+	// $effect call
+	/\$effect\s*\(/,
+	/\$effect\.pre\s*\(/,
+	/\$effect\.root\s*\(/,
+	/\$effect\.tracking\s*\(/,
+	// $props call
+	/\b(?:let|const)\s+(?:{\s*[^}]*}|\w+)\s*=\s*\$props\s*\(/,
+	// $bindable call
+	/\$bindable\s*\(/,
+	// $host call
+	/\$host\s*\(/,
+	// $inspect call
+	/\$inspect\s*\(/,
+	/\$inspect\.trace\s*\(/,
+	// Classes with runes
+	/class\s+\w+\s*{[^}]*\$state\s*\(/
+];
+
+/**
+ * Determines whether a given piece of Svelte code uses runes.
+ *
+ * @param text The Svelte code to analyze
+ * @returns boolean indicating whether runes are detected
+ */
+function detect_runes(text: string): boolean {
+	// Remove comments to avoid false positives
+	const without_comments = text
+		// Remove HTML comments
+		.replace(/<!--[\s\S]*?-->/g, '')
+		// Remove single-line comments
+		.replace(/\/\/.*$/gm, '')
+		// Remove multi-line comments
+		.replace(/\/\*[\s\S]*?\*\//g, '');
+
+	// Skip analysis for empty text
+	if (!without_comments.trim()) {
+		return false;
+	}
+
+	// Make sure we don't match runes inside string literals
+	const code_without_strings = without_comments
+		.replace(/'[^']*'/g, "''")
+		.replace(/"[^"]*"/g, '""')
+		.replace(/`[^`]*`/g, '``');
+
+	// Check for rune patterns in code (not in strings)
+	for (const pattern of rune_patterns) {
+		if (pattern.test(code_without_strings)) {
+			return true;
+		}
+	}
+
+	// Check for snippet syntax (a strong indicator of runes mode)
+	if (/{#snippet\s+\w+\s*\(.*?\)}/.test(code_without_strings)) {
+		return true;
+	}
+
+	// Check for render tags
+	if (/{@render\s+\w+\s*\(.*?\)}/.test(code_without_strings)) {
+		return true;
+	}
+
+	// Check for event attribute syntax (onclick instead of on:click)
+	// This is trickier as it could be regular HTML, so look for patterns like:
+	const event_attr_pattern = /<\w+[^>]*\s+on\w+\s*=\s*{[^}>]+}/;
+	if (event_attr_pattern.test(code_without_strings)) {
+		return true;
+	}
+
+	return false;
+}
+
+export async function check_whether_runes_supported(name: string, version: string) {
+	// Construct npm registry URL (handling scoped packages)
+	const registry_url = `https://registry.npmjs.org/${name}/-/${name.split('/').pop()}-${version}.tgz`;
+
+	return new Promise<boolean>((resolve, reject) => {
+		// Create a tar extract instance
+		const extracted = extract();
+
+		// Process files in the tarball
+		extracted.on('entry', async (header, stream, next) => {
+			// Look for specific files indicating runes support
+			if (
+				header.name.endsWith('.svelte') ||
+				header.name.endsWith('.svelte.js') ||
+				header.name.endsWith('.svelte.ts')
+			) {
+				try {
+					let content = '';
+
+					// Use an async iterator to read the stream content
+					for await (const chunk of stream) {
+						content += chunk.toString();
+					}
+
+					if (detect_runes(content)) {
+						resolve(true);
+						return;
+					}
+
+					// Continue to next file
+					next();
+				} catch (err) {
+					reject(err);
+				}
+			} else {
+				// Not a file we're interested in, skip content
+				stream.resume();
+				next();
+			}
+		});
+
+		extracted.on('finish', () => {
+			console.log('Extraction complete without finding runes support');
+			resolve(false);
+		});
+
+		extracted.on('error', (err) => {
+			reject(err);
+		});
+
+		// Fetch the tarball
+		superfetch(registry_url)
+			.then((response) => {
+				if (!response.ok) {
+					reject(new Error(`Failed to fetch tarball: ${response.statusText}`));
+					return;
+				}
+
+				// Set up the streaming pipeline:
+				// fetch response stream -> gunzip -> tar-stream
+				pipeline(response.body!, createGunzip(), extracted, (err) => {
+					if (err) {
+						console.error('Pipeline failed:', err);
+						reject(err);
+					}
+				});
+			})
+			.catch(reject);
+	});
 }
 
 /** Options for searching npm packages */

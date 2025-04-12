@@ -6,9 +6,10 @@
 	"downloads": 1,
 	"updated": "2023-11-23T15:28:51.780Z",
 	"tags": ["router"],
-	"runes": false,
+	"runes": true,
 	"typescript": "first-party",
 	"version": "0.2.3",
 	"svelte_range": "^4.0.0||^5.0.0-next.7",
-	"kit_range": "^1.27.4"
+	"kit_range": "^1.27.4",
+	"last_rune_check_version": "0.2.3"
 }

@@ -7,9 +7,10 @@
 	"downloads": 430,
 	"updated": "2025-04-01T18:23:15.324Z",
 	"tags": ["miscellaneous", "auth"],
-	"runes": false,
+	"runes": true,
 	"github_stars": 105,
 	"typescript": "none",
 	"version": "3.0.36",
-	"svelte_range": "^5.25.0"
+	"svelte_range": "^5.25.0",
+	"last_rune_check_version": "3.0.36"
 }

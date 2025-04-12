@@ -12,5 +12,6 @@
 	"typescript": "none",
 	"version": "1.0.3",
 	"svelte_range": "*",
-	"kit_range": "*"
+	"kit_range": "*",
+	"last_rune_check_version": "1.0.3"
 }

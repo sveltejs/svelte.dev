@@ -10,5 +10,6 @@
 	"runes": false,
 	"typescript": "none",
 	"version": "1.0.4",
-	"kit_range": "^1.0.1"
+	"kit_range": "^1.0.1",
+	"last_rune_check_version": "1.0.4"
 }

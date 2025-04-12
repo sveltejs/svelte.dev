@@ -7,9 +7,10 @@
 	"downloads": 10,
 	"updated": "2021-01-25T00:50:59.755Z",
 	"tags": ["design-system", "ui"],
-	"runes": false,
+	"runes": true,
 	"github_stars": 327,
 	"typescript": "none",
 	"version": "3.0.2",
-	"svelte_range": "^3.31.2"
+	"svelte_range": "^3.31.2",
+	"last_rune_check_version": "3.0.2"
 }

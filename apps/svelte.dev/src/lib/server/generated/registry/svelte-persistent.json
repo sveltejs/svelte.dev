@@ -7,10 +7,11 @@
 	"downloads": 2,
 	"updated": "2023-09-04T14:53:40.247Z",
 	"tags": ["miscellaneous"],
-	"runes": true,
+	"runes": false,
 	"github_stars": 2,
 	"typescript": "first-party",
 	"version": "1.0.3",
 	"svelte_range": ">=4.0.0",
-	"kit_range": "^1.24.1"
+	"kit_range": "^1.24.1",
+	"last_rune_check_version": "1.0.3"
 }

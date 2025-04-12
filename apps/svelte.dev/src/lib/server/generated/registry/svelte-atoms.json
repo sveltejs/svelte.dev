@@ -9,5 +9,6 @@
 	"tags": ["ui", "design-system"],
 	"runes": false,
 	"typescript": "none",
-	"version": "0.0.27"
+	"version": "0.0.27",
+	"last_rune_check_version": "0.0.27"
 }

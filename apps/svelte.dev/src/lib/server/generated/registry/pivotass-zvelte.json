@@ -7,9 +7,10 @@
 	"downloads": 149,
 	"updated": "2025-04-10T14:46:50.850Z",
 	"tags": ["tooling"],
-	"runes": false,
+	"runes": true,
 	"github_stars": 0,
 	"typescript": "first-party",
 	"version": "0.4.185",
-	"svelte_range": "https://registry.npmjs.org/svelte/-/svelte-5.19.5.tgz"
+	"svelte_range": "https://registry.npmjs.org/svelte/-/svelte-5.19.5.tgz",
+	"last_rune_check_version": "0.4.185"
 }

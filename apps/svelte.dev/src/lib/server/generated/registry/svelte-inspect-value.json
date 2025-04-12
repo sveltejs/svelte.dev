@@ -7,10 +7,11 @@
 	"downloads": 393,
 	"updated": "2025-04-07T11:18:18.630Z",
 	"tags": ["tooling"],
-	"runes": false,
+	"runes": true,
 	"github_stars": 77,
 	"typescript": "first-party",
 	"version": "0.6.2",
 	"svelte_range": "^5.19.0",
-	"kit_range": "^2.9.1"
+	"kit_range": "^2.9.1",
+	"last_rune_check_version": "0.6.2"
 }

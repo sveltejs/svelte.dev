@@ -8,5 +8,6 @@
 	"tags": ["tooling"],
 	"runes": false,
 	"typescript": "none",
-	"version": "0.5.4"
+	"version": "0.5.4",
+	"last_rune_check_version": "0.5.4"
 }

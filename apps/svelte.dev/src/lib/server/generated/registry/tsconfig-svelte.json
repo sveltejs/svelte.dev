@@ -10,5 +10,6 @@
 	"runes": false,
 	"github_stars": 6852,
 	"typescript": "none",
-	"version": "5.0.4"
+	"version": "5.0.4",
+	"last_rune_check_version": "5.0.4"
 }

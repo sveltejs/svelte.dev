@@ -7,9 +7,10 @@
 	"downloads": 61,
 	"updated": "2024-11-18T01:00:25.875Z",
 	"tags": ["router"],
-	"runes": false,
+	"runes": true,
 	"github_stars": 9,
 	"typescript": "first-party",
 	"version": "2.2.0",
-	"svelte_range": "*"
+	"svelte_range": "*",
+	"last_rune_check_version": "2.2.0"
 }

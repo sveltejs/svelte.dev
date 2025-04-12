@@ -7,10 +7,11 @@
 	"downloads": 8,
 	"updated": "2024-10-01T08:41:43.731Z",
 	"tags": ["design-system"],
-	"runes": false,
+	"runes": true,
 	"github_stars": 6,
 	"typescript": "none",
 	"version": "0.41.0",
 	"svelte_range": "^5.0.0-next.1",
-	"kit_range": "^2.6.1"
+	"kit_range": "^2.6.1",
+	"last_rune_check_version": "0.41.0"
 }

@@ -8,5 +8,6 @@
 	"tags": ["auth"],
 	"runes": false,
 	"typescript": "none",
-	"version": "0.50.0-alpha.27"
+	"version": "0.50.0-alpha.27",
+	"last_rune_check_version": "0.50.0-alpha.27"
 }

@@ -22,5 +22,6 @@
 	"runes": false,
 	"github_stars": 50223,
 	"typescript": "first-party",
-	"version": "3.5.3"
+	"version": "3.5.3",
+	"last_rune_check_version": "3.5.3"
 }

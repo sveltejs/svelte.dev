@@ -11,5 +11,6 @@
 	"homepage": "https://www.npmjs.com/package/s4e-ikons",
 	"typescript": "none",
 	"version": "0.0.483",
-	"svelte_range": "5.0.4"
+	"svelte_range": "5.0.4",
+	"last_rune_check_version": "0.0.483"
 }

@@ -6,8 +6,9 @@
 	"downloads": 4,
 	"updated": "2025-03-11T19:59:08.053Z",
 	"tags": ["integration"],
-	"runes": false,
+	"runes": true,
 	"typescript": "first-party",
 	"version": "0.0.5",
-	"svelte_range": "^5.22.1"
+	"svelte_range": "^5.22.1",
+	"last_rune_check_version": "0.0.5"
 }

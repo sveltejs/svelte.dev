@@ -20,9 +20,10 @@
 	"downloads": 88817,
 	"updated": "2025-04-02T17:03:39.796Z",
 	"tags": ["tooling"],
-	"runes": false,
+	"runes": true,
 	"github_stars": 86315,
 	"typescript": "first-party",
 	"version": "8.6.12",
-	"svelte_range": "^4.0.0 || ^5.0.0"
+	"svelte_range": "^4.0.0 || ^5.0.0",
+	"last_rune_check_version": "8.6.12"
 }

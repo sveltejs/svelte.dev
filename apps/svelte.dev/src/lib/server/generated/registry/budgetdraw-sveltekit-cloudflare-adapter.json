@@ -8,5 +8,6 @@
 	"tags": ["adapter"],
 	"runes": false,
 	"typescript": "none",
-	"version": "0.3.0"
+	"version": "0.3.0",
+	"last_rune_check_version": "0.3.0"
 }

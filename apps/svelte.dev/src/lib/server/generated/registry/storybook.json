@@ -19,5 +19,6 @@
 	"runes": false,
 	"github_stars": 86315,
 	"typescript": "first-party",
-	"version": "8.6.12"
+	"version": "8.6.12",
+	"last_rune_check_version": "8.6.12"
 }

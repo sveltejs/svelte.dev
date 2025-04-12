@@ -7,8 +7,9 @@
 	"downloads": 1137,
 	"updated": "2024-09-18T16:14:44.738Z",
 	"tags": ["ui", "design-system"],
-	"runes": false,
+	"runes": true,
 	"github_stars": 3660,
 	"typescript": "first-party",
-	"version": "4.0.1"
+	"version": "4.0.1",
+	"last_rune_check_version": "4.0.1"
 }

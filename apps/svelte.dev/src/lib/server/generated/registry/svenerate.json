@@ -11,5 +11,6 @@
 	"homepage": "https://www.npmjs.com/package/rollup-config-sven",
 	"typescript": "first-party",
 	"version": "0.1.6",
-	"svelte_range": "^3.29.0"
+	"svelte_range": "^3.29.0",
+	"last_rune_check_version": "0.1.6"
 }

@@ -7,10 +7,11 @@
 	"downloads": 31858,
 	"updated": "2025-03-28T02:03:16.649Z",
 	"tags": ["ui", "miscellaneous"],
-	"runes": false,
+	"runes": true,
 	"github_stars": 160,
 	"typescript": "first-party",
 	"version": "1.6.2",
 	"svelte_range": "^5.25.3",
-	"kit_range": "^2.20.2"
+	"kit_range": "^2.20.2",
+	"last_rune_check_version": "1.6.2"
 }

@@ -6,8 +6,9 @@
 	"downloads": 4,
 	"updated": "2025-03-19T22:59:00.582Z",
 	"tags": ["ui"],
-	"runes": false,
+	"runes": true,
 	"typescript": "none",
 	"version": "0.0.1",
-	"svelte_range": "^5.23.2"
+	"svelte_range": "^5.23.2",
+	"last_rune_check_version": "0.0.1"
 }

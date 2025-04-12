@@ -7,9 +7,10 @@
 	"downloads": 32,
 	"updated": "2024-12-30T14:06:34.729Z",
 	"tags": ["ui"],
-	"runes": false,
+	"runes": true,
 	"github_stars": 1,
 	"typescript": "first-party",
 	"version": "0.3.0",
-	"svelte_range": "^5.0.0"
+	"svelte_range": "^5.0.0",
+	"last_rune_check_version": "0.3.0"
 }

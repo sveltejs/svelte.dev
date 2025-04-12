@@ -7,8 +7,9 @@
 	"downloads": 2105,
 	"updated": "2025-03-04T13:42:28.994Z",
 	"tags": ["ui"],
-	"runes": false,
+	"runes": true,
 	"github_stars": 105,
 	"typescript": "none",
-	"version": "2.1.1"
+	"version": "2.1.1",
+	"last_rune_check_version": "2.1.1"
 }

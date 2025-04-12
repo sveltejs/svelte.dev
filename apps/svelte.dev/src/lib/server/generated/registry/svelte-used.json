@@ -10,5 +10,6 @@
 	"typescript": "first-party",
 	"version": "0.0.7",
 	"svelte_range": "^4.0.0",
-	"kit_range": "^1.27.4"
+	"kit_range": "^1.27.4",
+	"last_rune_check_version": "0.0.7"
 }

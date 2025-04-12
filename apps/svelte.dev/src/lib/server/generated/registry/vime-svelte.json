@@ -11,5 +11,6 @@
 	"homepage": "https://vimejs.com",
 	"typescript": "first-party",
 	"version": "5.4.1",
-	"svelte_range": "^3.0.0 || ^4.0.0"
+	"svelte_range": "^3.0.0 || ^4.0.0",
+	"last_rune_check_version": "5.4.1"
 }

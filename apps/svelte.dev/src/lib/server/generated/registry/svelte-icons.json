@@ -8,5 +8,6 @@
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": "none",
-	"version": "2.1.0"
+	"version": "2.1.0",
+	"last_rune_check_version": "2.1.0"
 }

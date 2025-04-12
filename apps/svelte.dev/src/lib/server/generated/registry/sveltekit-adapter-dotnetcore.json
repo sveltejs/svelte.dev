@@ -11,5 +11,6 @@
 	"github_stars": 18,
 	"typescript": "none",
 	"version": "0.1.7",
-	"kit_range": "^1.0.0-next.335"
+	"kit_range": "^1.0.0-next.335",
+	"last_rune_check_version": "0.1.7"
 }

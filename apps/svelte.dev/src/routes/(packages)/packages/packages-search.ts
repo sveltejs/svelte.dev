@@ -20,6 +20,7 @@ const GITHUB_STARS_BOOST = 10;
 const DOWNLOADS_BOOST = 4;
 const RECENT_UPDATE_BOOST = 1;
 const SVELTE_5_BOOST = 15;
+const RUNES_BOOST = 20;
 const EXACT_NAME_MATCH_BOOST = 100;
 
 const OUTDATED_PENALTY = -100;
@@ -49,6 +50,10 @@ function calculate_popularity_score(pkg: Package): number {
 	// If svelte 5, give boost
 	if (pkg.svelte?.[5]) {
 		score += SVELTE_5_BOOST;
+	}
+
+	if (pkg.runes) {
+		score += RUNES_BOOST;
 	}
 
 	// Apply penalties for outdated or deprecated packages
@@ -182,12 +187,12 @@ export async function init(packages: Package[]) {
 			github_stars: pkg.github_stars || 0,
 			updated: pkg.updated || '',
 			updated_timestamp,
+			runes: !!pkg.runes,
 			deprecated: !!pkg.deprecated,
 			outdated: !!pkg.outdated,
 			svelte_v3: !!pkg.svelte?.[3],
 			svelte_v4: !!pkg.svelte?.[4],
 			svelte_v5: !!pkg.svelte?.[5],
-			runes: !!pkg.runes,
 			official: !!pkg.official,
 			popularity_score,
 			all_text
