@@ -7,7 +7,7 @@
 	"downloads": 4,
 	"updated": "2025-01-28T13:49:35.237Z",
 	"tags": ["ui"],
-	"runes": false,
+	"runes": true,
 	"typescript": "first-party",
 	"version": "2.1.5-fix.3",
 	"svelte_range": "^5.0.0",

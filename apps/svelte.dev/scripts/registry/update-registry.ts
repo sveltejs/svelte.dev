@@ -811,6 +811,20 @@ async function update_typescript_data() {
 	}
 }
 
+async function update_whether_runes() {
+	for await (const [pkg_name, data] of PackageCache.entries()) {
+		if (data.last_rune_check_version === data.version) continue;
+		// if (data.runes) continue;
+
+		const check = await check_whether_runes_supported(pkg_name, data.version);
+
+		data.last_rune_check_version = data.version;
+		data.runes = check;
+
+		PackageCache.set(pkg_name, data);
+	}
+}
+
 // /** @deprecated */
 // async function TEMPORARY_update_typescript_for_unmarked_to_accomodate_for_wrong_function() {
 // 	for await (const [pkg_name, data] of PackageCache.entries()) {
@@ -858,19 +872,6 @@ for (let i = 0; i < 1; i++) {
 // await update_overrides();
 
 // update_cache_from_npm();
-
-async function update_whether_runes() {
-	for await (const [pkg_name, data] of PackageCache.entries()) {
-		if (data.last_rune_check_version === data.version) continue;
-
-		const check = await check_whether_runes_supported(pkg_name, data.version);
-
-		data.last_rune_check_version = data.version;
-		data.runes = check;
-
-		PackageCache.set(pkg_name, data);
-	}
-}
 
 update_whether_runes();
 

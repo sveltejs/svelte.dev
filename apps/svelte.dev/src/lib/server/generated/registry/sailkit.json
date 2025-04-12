@@ -7,7 +7,7 @@
 	"downloads": 163,
 	"updated": "2025-02-23T08:45:40.628Z",
 	"tags": ["integration"],
-	"runes": false,
+	"runes": true,
 	"github_stars": 62,
 	"typescript": "first-party",
 	"version": "0.2.2",

@@ -455,34 +455,6 @@ export async function fetch_details_for_package(pkg_name: string): Promise<any> 
 	return matched_package;
 }
 
-// /**
-//  * Gets the number of packages that depend on a given package and weekly downloads
-//  * by using npm search API to find the exact package
-//  */
-// export async function fetch_package_stats(
-// 	pkg_name: string
-// ): Promise<{ dependents: number; downloads: number; authors: string[] }> {
-// 	try {
-// 		// Find the exact package name match
-// 		const matched_package = await fetch_details_for_package(pkg_name);
-
-// 		if (!matched_package) {
-// 			console.log(`No exact match found for package ${pkg_name} in search results`);
-// 			return { dependents: 0, downloads: 0, authors: [] };
-// 		}
-
-// 		// Extract dependents and downloads
-// 		return {
-// 			dependents: matched_package.dependents || 0,
-// 			downloads: matched_package.downloads?.weekly || 0,
-// 			authors: matched_package.package.maintainers?.map((v: any) => v.username)
-// 		};
-// 	} catch (error) {
-// 		console.error(`Error fetching stats for ${pkg_name}:`, error);
-// 		return { dependents: 0, downloads: 0, authors: [] };
-// 	}
-// }
-
 /**
  * Analyzes package details to determine if it's a valid Svelte package and extracts metadata
  */
@@ -667,8 +639,8 @@ const rune_patterns = [
 	/\$effect\.pre\s*\(/,
 	/\$effect\.root\s*\(/,
 	/\$effect\.tracking\s*\(/,
-	// $props call
-	/\b(?:let|const)\s+(?:{\s*[^}]*}|\w+)\s*=\s*\$props\s*\(/,
+	// $props call with support for type annotations
+	/\b(?:let|const)\s+(?:{\s*[^}]*}|\w+)(?:\s*:\s*[^=;]+)?\s*=\s*\$props\s*\(/,
 	// $bindable call
 	/\$bindable\s*\(/,
 	// $host call
@@ -677,7 +649,9 @@ const rune_patterns = [
 	/\$inspect\s*\(/,
 	/\$inspect\.trace\s*\(/,
 	// Classes with runes
-	/class\s+\w+\s*{[^}]*\$state\s*\(/
+	/class\s+\w+\s*{[^}]*\$state\s*\(/,
+	// TypeScript-specific destructuring with $props
+	/let\s+{\s*[^}]*}\s*:\s*[^=]+\s*=\s*\$props\(\)/
 ];
 
 /**

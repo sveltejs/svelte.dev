@@ -6,7 +6,7 @@
 	"downloads": 0,
 	"updated": "2024-11-15T22:51:18.713Z",
 	"tags": ["design-system"],
-	"runes": false,
+	"runes": true,
 	"typescript": "first-party",
 	"version": "0.0.1",
 	"svelte_range": "^5.0.0",

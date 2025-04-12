@@ -7,7 +7,7 @@
 	"downloads": 1,
 	"updated": "2024-12-08T17:20:46.911Z",
 	"tags": ["ui"],
-	"runes": false,
+	"runes": true,
 	"github_stars": 0,
 	"typescript": "first-party",
 	"version": "1.0.0",

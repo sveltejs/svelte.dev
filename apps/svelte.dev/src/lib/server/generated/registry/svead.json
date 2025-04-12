@@ -7,7 +7,7 @@
 	"downloads": 976,
 	"updated": "2024-10-21T08:33:56.452Z",
 	"tags": ["seo"],
-	"runes": false,
+	"runes": true,
 	"github_stars": 75,
 	"typescript": "first-party",
 	"version": "0.0.13",
