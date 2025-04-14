@@ -495,13 +495,17 @@
 			}
 
 			&::after {
-				background: url($lib/icons/chevron.svg) 50% 50% no-repeat;
-				background-size: 2rem;
-				rotate: 0deg;
-				transition: rotate 0.2s;
+				background: #666;
+				mask: url(icons/chevron) 50% 50% no-repeat;
+				mask-size: 2rem;
+				rotate: -90deg;
 				transition: rotate 0.2s;
 				top: 0.2rem;
 				right: 0.8rem;
+			}
+
+			:root.dark &::after {
+				background: #d4d4d4;
 			}
 
 			&:has(summary:active)::after {
@@ -536,7 +540,7 @@
 
 			&[open] {
 				&::after {
-					rotate: 180deg;
+					rotate: 90deg;
 				}
 
 				& > summary {
