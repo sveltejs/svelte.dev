@@ -231,6 +231,10 @@
 		}
 	});
 
+	export const reset = () => {
+		if (ready) apply_bundle(bundle);
+	};
+
 	$effect(() => {
 		if (injectedCSS && proxy && ready) {
 			proxy.eval(
