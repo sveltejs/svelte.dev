@@ -135,21 +135,18 @@
 			top: 0;
 			left: 0;
 			height: 100%;
-			background: url(../icons/document-light.svg) no-repeat 50% 50%;
-			background-size: 2rem;
+			background: #000000e0;
+			mask: url(icons/document) no-repeat 50% 50%;
+			mask-size: 2rem;
 		}
 
 		&.fragment::before {
-			background-image: url(../icons/hash-light.svg);
+			mask-image: url(icons/hash);
 		}
 
 		:root.dark & {
 			&::before {
-				background-image: url(../icons/document-dark.svg);
-			}
-
-			&.fragment::before {
-				background-image: url(../icons/hash-dark.svg);
+				background: #ccc;
 			}
 		}
 
