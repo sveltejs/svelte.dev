@@ -57,21 +57,29 @@
 	.cm-gutterElement {
 		position: relative;
 
-		&:where(:has([title='Fold line']), :has([title='Unfold line']))::after {
-			content: '';
-			position: absolute;
-			width: 100%;
-			right: 0;
-			top: 0;
-			height: 2.4rem;
-			background: url($lib/icons/chevron.svg) no-repeat 50% 50%;
-			background-size: contain;
-			transition: transform 0.2s;
-			cursor: pointer;
+		&:where(:has([title='Fold line']), :has([title='Unfold line'])) {
+			&::after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				right: 0;
+				top: 0;
+				height: 2.4rem;
+				background: #666;
+				mask: url(icons/chevron) no-repeat 50% 50%;
+				mask-size: contain;
+				transition: transform 0.2s;
+				cursor: pointer;
+				rotate: 180deg;
+			}
+
+			:root.dark &::after {
+				background: #d4d4d4;
+			}
 		}
 
 		&:has([title='Unfold line'])::after {
-			transform: rotate(-90deg);
+			transform: rotate(90deg);
 		}
 
 		span {
