@@ -67,6 +67,7 @@
 }
 
 button.icon,
+summary.icon,
 button:has(> span.icon) {
 	position: relative;
 	width: 3.2rem;
