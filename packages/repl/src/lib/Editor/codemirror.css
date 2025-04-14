@@ -185,11 +185,21 @@
 				top: 0.5rem;
 				right: 0.5rem;
 				color: transparent;
-				background: url(./close-light.svg) 50% 50% no-repeat;
-				background-size: 1.8rem;
 
-				:root.dark & {
-					background-image: url(./close-dark.svg);
+				&::after {
+					content: '';
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					left: 0;
+					top: 0;
+					background: #666;
+					mask: url(icons/close) 50% 50% no-repeat;
+					mask-size: 1.8rem;
+				}
+
+				:root.dark &::after {
+					background: #d4d4d4;
 				}
 			}
 
