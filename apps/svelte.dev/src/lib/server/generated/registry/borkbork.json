@@ -7,7 +7,7 @@
 	"updated": "2020-08-22T00:23:45.234Z",
 	"tags": ["tooling"],
 	"runes": false,
-	"typescript": "none",
+	"typescript": true,
 	"version": "0.0.0",
 	"svelte_range": "^3.20.1",
 	"last_rune_check_version": "0.0.0"

@@ -9,7 +9,7 @@
 	"runes": false,
 	"github_stars": 10,
 	"homepage": "https://www.npmjs.com/package/svelte-loading-skeleton",
-	"typescript": "none",
+	"typescript": false,
 	"version": "1.0.1",
 	"svelte_range": "3.5.1",
 	"last_rune_check_version": "1.0.1"

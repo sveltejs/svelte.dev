@@ -9,7 +9,7 @@
 	"tags": ["media", "ui"],
 	"runes": false,
 	"github_stars": 55,
-	"typescript": "first-party",
+	"typescript": true,
 	"version": "0.33.0",
 	"last_rune_check_version": "0.33.0"
 }

@@ -7,7 +7,7 @@
 	"updated": "2024-06-02T01:31:01.276Z",
 	"tags": ["router"],
 	"runes": false,
-	"typescript": "first-party",
+	"typescript": true,
 	"version": "0.0.2",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.0.0",

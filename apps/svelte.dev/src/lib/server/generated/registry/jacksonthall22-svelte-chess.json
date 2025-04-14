@@ -8,7 +8,7 @@
 	"updated": "2024-06-10T16:30:20.418Z",
 	"tags": ["ui", "miscellaneous"],
 	"runes": false,
-	"typescript": "first-party",
+	"typescript": true,
 	"version": "0.1.0",
 	"svelte_range": "^4.2.12",
 	"kit_range": "^2.5.5",

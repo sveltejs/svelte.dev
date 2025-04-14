@@ -8,7 +8,7 @@
 	"updated": "2022-11-18T16:13:20.258Z",
 	"tags": ["auth", "server"],
 	"runes": false,
-	"typescript": "first-party",
+	"typescript": true,
 	"version": "0.0.3",
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",

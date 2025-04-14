@@ -7,7 +7,7 @@
 	"updated": "2024-08-23T09:31:43.629Z",
 	"tags": ["integration"],
 	"runes": true,
-	"typescript": "first-party",
+	"typescript": true,
 	"version": "0.12.6",
 	"svelte_range": ">= 3 < 5",
 	"kit_range": ">= 1 < 3",

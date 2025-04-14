@@ -18,7 +18,7 @@
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 86315,
-	"typescript": "first-party",
+	"typescript": true,
 	"version": "8.6.12",
 	"last_rune_check_version": "8.6.12"
 }

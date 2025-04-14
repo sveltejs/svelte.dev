@@ -7,7 +7,7 @@
 	"updated": "2022-09-06T17:52:12.554Z",
 	"tags": ["integration"],
 	"runes": false,
-	"typescript": "none",
+	"typescript": true,
 	"version": "0.0.2",
 	"svelte_range": "^3.50.0",
 	"kit_range": "next",

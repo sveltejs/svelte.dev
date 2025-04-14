@@ -22,7 +22,7 @@
 	"tags": ["tooling"],
 	"runes": true,
 	"github_stars": 86315,
-	"typescript": "first-party",
+	"typescript": true,
 	"version": "8.6.12",
 	"svelte_range": "^4.0.0 || ^5.0.0",
 	"last_rune_check_version": "8.6.12"

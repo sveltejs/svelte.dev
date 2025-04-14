@@ -9,7 +9,7 @@
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 339,
-	"typescript": "none",
+	"typescript": false,
 	"version": "1.10.1",
 	"svelte_range": "^4.2.19",
 	"last_rune_check_version": "1.10.1"

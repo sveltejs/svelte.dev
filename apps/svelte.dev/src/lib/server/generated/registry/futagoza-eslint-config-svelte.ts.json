@@ -9,7 +9,7 @@
 	"runes": false,
 	"github_stars": 2,
 	"homepage": "",
-	"typescript": "none",
+	"typescript": false,
 	"version": "16.1.0",
 	"svelte_range": "*",
 	"last_rune_check_version": "16.1.0"

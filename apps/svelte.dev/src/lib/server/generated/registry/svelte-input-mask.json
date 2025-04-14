@@ -7,7 +7,7 @@
 	"updated": "2020-12-08T00:04:28.690Z",
 	"tags": ["ui"],
 	"runes": false,
-	"typescript": "none",
+	"typescript": false,
 	"version": "1.1.0",
 	"svelte_range": ">=3.20.0",
 	"last_rune_check_version": "1.1.0"

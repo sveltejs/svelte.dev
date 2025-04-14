@@ -9,7 +9,7 @@
 	"tags": ["integration"],
 	"runes": false,
 	"github_stars": 40,
-	"typescript": "first-party",
+	"typescript": true,
 	"version": "2.0.0",
 	"svelte_range": "^4.2.17",
 	"kit_range": "^1.30.4",

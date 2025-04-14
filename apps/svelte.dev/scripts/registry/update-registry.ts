@@ -9,8 +9,7 @@ import type { Package } from '../../src/lib/server/content.js';
 import svelte_society_list from '../../src/lib/society-npm.json' with { type: 'json' };
 import { sort_packages } from '../../src/routes/(packages)/packages/packages-search.js';
 import {
-	check_typescript_types,
-	check_whether_runes_supported,
+	composite_runes_types_check,
 	fetch_downloads_for_package,
 	HEADERS,
 	PackageCache,
@@ -734,8 +733,13 @@ async function update_cache_from_npm(update_stats = true) {
 		// @ts-expect-error
 		delete data.dependents;
 
-		const typescript_data = await check_typescript_types(latest_package_json);
-		data.typescript = typescript_data;
+		const { runes, types } = await composite_runes_types_check(
+			pkg_name,
+			latest_package_json.version
+		);
+		data.typescript = types;
+		data.runes = runes;
+		data.last_rune_check_version = latest_package_json.version;
 
 		data.version = latest_package_json.version;
 		data.updated = package_detail.time?.[latest];
@@ -750,9 +754,14 @@ async function update_cache_from_npm(update_stats = true) {
 			latest_package_json.devDependencies?.['@sveltejs/kit'];
 
 		if (update_stats) {
-			const downloads = await fetch_downloads_for_package(pkg_name);
+			const [downloads, github_data] = await Promise.all([
+				fetch_downloads_for_package(pkg_name),
+				fetch_github_data(pkg_name)
+			]);
 
 			data.downloads = downloads;
+
+			if (github_data) data.github_stars = github_data.stars;
 		}
 
 		PackageCache.set(pkg_name, data);
@@ -794,36 +803,32 @@ async function delete_legacy_svelte5_field() {
 	}
 }
 
-async function update_typescript_data() {
+async function update_composite_ts_runes_data() {
 	for await (const [pkg_name, data] of PackageCache.entries()) {
-		const package_detail = await superfetch(`${REGISTRY_BASE_URL}${pkg_name}`).then((r) =>
-			r.json()
-		);
+		const checks = await composite_runes_types_check(pkg_name, data.version);
 
-		const latest = package_detail['dist-tags']?.latest;
-		if (!latest) continue;
-
-		const latest_package_json = package_detail.versions[latest];
-
-		const typescript_data = await check_typescript_types(latest_package_json);
-		data.typescript = typescript_data;
-		PackageCache.set(pkg_name, data);
-	}
-}
-
-async function update_whether_runes() {
-	for await (const [pkg_name, data] of PackageCache.entries()) {
-		if (data.last_rune_check_version === data.version) continue;
-		// if (data.runes) continue;
-
-		const check = await check_whether_runes_supported(pkg_name, data.version);
+		data.typescript = checks.types;
+		data.runes = checks.runes;
 
 		data.last_rune_check_version = data.version;
-		data.runes = check;
 
 		PackageCache.set(pkg_name, data);
 	}
 }
+
+// async function update_whether_runes() {
+// 	for await (const [pkg_name, data] of PackageCache.entries()) {
+// 		if (data.last_rune_check_version === data.version) continue;
+// 		// if (data.runes) continue;
+
+// 		const check = await composite_runes_types_check(pkg_name, data.version);
+
+// 		data.last_rune_check_version = data.version;
+// 		data.runes = check;
+
+// 		PackageCache.set(pkg_name, data);
+// 	}
+// }
 
 // /** @deprecated */
 // async function TEMPORARY_update_typescript_for_unmarked_to_accomodate_for_wrong_function() {
@@ -873,7 +878,9 @@ for (let i = 0; i < 1; i++) {
 
 // update_cache_from_npm();
 
-update_whether_runes();
+update_composite_ts_runes_data();
+
+// console.log(await composite_runes_types_check('uifox', '0.0.5'));
 
 svelte_society_list;
 // await process_packages_by_names_through_llm({

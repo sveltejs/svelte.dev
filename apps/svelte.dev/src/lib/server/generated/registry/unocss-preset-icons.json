@@ -9,7 +9,7 @@
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 17483,
-	"typescript": "first-party",
+	"typescript": true,
 	"version": "66.1.0-beta.10",
 	"last_rune_check_version": "66.1.0-beta.10"
 }

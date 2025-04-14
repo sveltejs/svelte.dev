@@ -35,7 +35,7 @@
 	"tags": ["content"],
 	"runes": false,
 	"github_stars": 24,
-	"typescript": "first-party",
+	"typescript": true,
 	"version": "1.5.0",
 	"svelte_range": ">=4 || ^5.0.0-next.1",
 	"kit_range": ">=1",

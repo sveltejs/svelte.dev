@@ -9,7 +9,7 @@
 	"tags": ["adapter"],
 	"runes": false,
 	"github_stars": 7,
-	"typescript": "first-party",
+	"typescript": true,
 	"version": "1.0.4",
 	"svelte_range": "^4.0.5",
 	"kit_range": ">=1.5.0 <3.0.0",

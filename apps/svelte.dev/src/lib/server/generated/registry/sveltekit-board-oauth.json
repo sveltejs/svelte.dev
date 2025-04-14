@@ -7,7 +7,7 @@
 	"updated": "2024-11-24T15:48:24.567Z",
 	"tags": ["auth"],
 	"runes": false,
-	"typescript": "first-party",
+	"typescript": true,
 	"version": "0.7.3",
 	"svelte_range": "*",
 	"kit_range": "^2.0.0",

@@ -20,7 +20,7 @@
 	"tags": ["integration", "server"],
 	"runes": false,
 	"github_stars": 8184,
-	"typescript": "first-party",
+	"typescript": true,
 	"version": "9.12.0",
 	"svelte_range": "^4.2.8",
 	"kit_range": "2.x",

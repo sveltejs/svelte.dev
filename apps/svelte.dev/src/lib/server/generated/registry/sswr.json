@@ -9,7 +9,7 @@
 	"runes": false,
 	"github_stars": 255,
 	"homepage": "",
-	"typescript": "first-party",
+	"typescript": true,
 	"version": "2.2.0",
 	"svelte_range": "^4.0.0 || ^5.0.0",
 	"last_rune_check_version": "2.2.0"

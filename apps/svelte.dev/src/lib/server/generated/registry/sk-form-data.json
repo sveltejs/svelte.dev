@@ -7,7 +7,7 @@
 	"updated": "2024-07-03T04:11:00.448Z",
 	"tags": ["server"],
 	"runes": false,
-	"typescript": "first-party",
+	"typescript": true,
 	"version": "2.0.2",
 	"kit_range": "^2.5.18",
 	"last_rune_check_version": "2.0.2"

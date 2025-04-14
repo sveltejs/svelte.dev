@@ -7,7 +7,7 @@
 	"updated": "2023-12-20T22:21:22.030Z",
 	"tags": ["design-system"],
 	"runes": false,
-	"typescript": "first-party",
+	"typescript": true,
 	"version": "2.57.0",
 	"svelte_range": "^4.2.7",
 	"kit_range": "^2.0.2",

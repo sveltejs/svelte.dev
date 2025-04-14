@@ -7,7 +7,7 @@
 	"updated": "2020-04-16T19:10:28.055Z",
 	"tags": ["tooling"],
 	"runes": false,
-	"typescript": "none",
+	"typescript": false,
 	"version": "0.5.4",
 	"last_rune_check_version": "0.5.4"
 }

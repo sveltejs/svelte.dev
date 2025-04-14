@@ -199,7 +199,7 @@ export interface Package {
 
 	official?: boolean;
 
-	typescript: 'first-party' | '@types' | 'none';
+	typescript: boolean;
 }
 
 /**

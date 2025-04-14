@@ -7,7 +7,7 @@
 	"updated": "2021-06-17T16:00:46.189Z",
 	"tags": ["tooling"],
 	"runes": false,
-	"typescript": "first-party",
+	"typescript": true,
 	"version": "0.0.3",
 	"last_rune_check_version": "0.0.3"
 }

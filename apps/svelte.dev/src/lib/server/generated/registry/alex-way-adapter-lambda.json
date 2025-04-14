@@ -8,7 +8,7 @@
 	"updated": "2023-02-03T11:46:44.308Z",
 	"tags": ["adapter"],
 	"runes": false,
-	"typescript": "none",
+	"typescript": false,
 	"version": "1.0.4",
 	"kit_range": "^1.0.1",
 	"last_rune_check_version": "1.0.4"

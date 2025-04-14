@@ -9,7 +9,7 @@
 	"tags": ["testing", "tooling"],
 	"runes": false,
 	"github_stars": 14112,
-	"typescript": "first-party",
+	"typescript": true,
 	"version": "3.1.1",
 	"last_rune_check_version": "3.1.1"
 }

@@ -7,7 +7,7 @@
 	"updated": "2021-03-12T12:36:13.095Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
-	"typescript": "none",
+	"typescript": false,
 	"version": "1.5.2",
 	"svelte_range": "^3.32.3",
 	"last_rune_check_version": "1.5.2"

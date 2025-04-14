@@ -9,7 +9,7 @@
 	"tags": ["adapter"],
 	"runes": false,
 	"github_stars": 13,
-	"typescript": "first-party",
+	"typescript": true,
 	"version": "3.0.1",
 	"last_rune_check_version": "3.0.1"
 }

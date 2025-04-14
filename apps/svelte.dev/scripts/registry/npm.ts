@@ -319,120 +319,6 @@ export async function fetch_downloads_for_package(pkg: string): Promise<number> 
 }
 
 /**
- * Determines if a package ships with TypeScript types and checks for separate @types
- * package if first-party types aren't included
- *
- * @param package_json - The parsed package.json object
- * @returns An object with information about type availability
- */
-export async function check_typescript_types(
-	package_json: any
-): Promise<'first-party' | '@types' | 'none'> {
-	// Check for types or typings field in package.json (traditional approach)
-	if (package_json.types || package_json.typings) {
-		return 'first-party';
-	}
-
-	// Check export maps for TypeScript typings
-	if (package_json.exports) {
-		// Function to recursively check if an export condition contains types
-		const check_export_for_types = (export_obj: any): boolean => {
-			if (!export_obj || typeof export_obj !== 'object') {
-				return false;
-			}
-
-			// Check if this is a conditional export with types
-			if (export_obj.types || export_obj.typings) {
-				return true;
-			}
-
-			// Modern pattern uses "import" condition
-			if (export_obj.import?.types) {
-				return true;
-			}
-
-			// TypeScript support could also be in these fields
-			if (export_obj.default?.types || export_obj.require?.types) {
-				return true;
-			}
-
-			// Recursive check for nested conditions
-			return Object.values(export_obj).some(
-				(value) => typeof value === 'object' && check_export_for_types(value)
-			);
-		};
-
-		// Iterate through all export paths
-		const has_types_in_exports = Object.values(package_json.exports).some((export_def) => {
-			if (typeof export_def === 'string') {
-				// Simple export string - check if it's a .d.ts file
-				return export_def.endsWith('.d.ts');
-			}
-			return check_export_for_types(export_def);
-		});
-
-		if (has_types_in_exports) {
-			return 'first-party';
-		}
-	}
-
-	// Check if the files field includes TypeScript declaration files
-	if (Array.isArray(package_json.files)) {
-		const has_type_files = package_json.files.some((pattern: string) => {
-			return (
-				pattern.includes('*.d.ts') ||
-				pattern.includes('**/*.d.ts') ||
-				pattern.endsWith('.d.ts') ||
-				pattern.includes('/types/') ||
-				pattern.includes('/typings/') ||
-				pattern === 'types' ||
-				pattern === 'typings' ||
-				pattern === 'dist/types' ||
-				pattern === 'dist/typings'
-			);
-		});
-
-		if (has_type_files) {
-			return 'first-party';
-		}
-	}
-
-	// Check if there's a @types package available
-	const package_name = package_json.name;
-	if (package_name) {
-		try {
-			// For scoped packages, transform @scope/package to @types/scope__package
-			let types_package_name;
-			if (package_name.startsWith('@')) {
-				// Convert @scope/package to scope__package
-				types_package_name = package_name.slice(1).replace('/', '__');
-			} else {
-				// For regular packages, just use the package name
-				types_package_name = package_name;
-			}
-
-			const types_package = `@types/${types_package_name}`;
-
-			console.log('FETCHING DEFINITELYTYPED TYPES FOR', types_package);
-
-			// Try to fetch metadata for the @types package
-			const response = await superfetch(
-				`https://registry.npmjs.org/${encodeURIComponent(types_package)}`
-			);
-
-			if (response.ok) {
-				('@types');
-			}
-		} catch (error) {
-			// Ignore fetch errors and fall through to the "no types" case
-		}
-	}
-
-	// No types found
-	return 'none';
-}
-
-/**
  * Gets details for a package from the npm registry
  */
 export async function fetch_details_for_package(pkg_name: string): Promise<any> {
@@ -479,8 +365,7 @@ export async function process_package_details(
 				deprecated: false,
 				last_updated: '',
 				tags: [],
-				// @ts-expect-error
-				typescript: {},
+				typescript: false,
 				runes: false,
 				repo_url: '',
 				downloads: downloads || 0,
@@ -522,8 +407,6 @@ export async function process_package_details(
 
 		interim_pkg.meta.svelte_range = svelte_version;
 		interim_pkg.meta.kit_range = kit_version;
-
-		interim_pkg.meta.typescript = await check_typescript_types(interim_pkg.package_json);
 
 		// Get repository URL
 		if (latest_package_json.repository) {
@@ -708,49 +591,50 @@ function detect_runes(text: string): boolean {
 	return false;
 }
 
-export async function check_whether_runes_supported(name: string, version: string) {
+export async function stream_package_tarball(
+	name: string,
+	version: string,
+	cb: (params: { filename: string; content: string; skip: () => void; stop: () => void }) => void
+) {
 	// Construct npm registry URL (handling scoped packages)
 	const registry_url = `https://registry.npmjs.org/${name}/-/${name.split('/').pop()}-${version}.tgz`;
 
-	return new Promise<boolean>((resolve, reject) => {
+	return new Promise((resolve, reject) => {
 		// Create a tar extract instance
 		const extracted = extract();
 
 		// Process files in the tarball
 		extracted.on('entry', async (header, stream, next) => {
-			// Look for specific files indicating runes support
-			if (
-				header.name.endsWith('.svelte') ||
-				header.name.endsWith('.svelte.js') ||
-				header.name.endsWith('.svelte.ts')
-			) {
-				try {
-					let content = '';
+			try {
+				let content = '';
 
-					// Use an async iterator to read the stream content
-					for await (const chunk of stream) {
-						content += chunk.toString();
-					}
+				// Use an async iterator to read the stream content
+				for await (const chunk of stream) {
+					content += chunk.toString();
+				}
 
-					if (detect_runes(content)) {
-						resolve(true);
+				cb({
+					filename: header.name,
+					content,
+					skip: () => {
+						stream.resume();
+						next();
+					},
+					stop: () => {
+						stream.resume();
+						resolve(null);
 						return;
 					}
+				});
 
-					// Continue to next file
-					next();
-				} catch (err) {
-					reject(err);
-				}
-			} else {
-				// Not a file we're interested in, skip content
-				stream.resume();
+				// Continue to next file
 				next();
+			} catch (err) {
+				reject(err);
 			}
 		});
 
 		extracted.on('finish', () => {
-			console.log('Extraction complete without finding runes support');
 			resolve(false);
 		});
 
@@ -777,6 +661,42 @@ export async function check_whether_runes_supported(name: string, version: strin
 			})
 			.catch(reject);
 	});
+}
+
+export async function composite_runes_types_check(name: string, version: string) {
+	let has_runes = false;
+	let has_types = false;
+
+	await stream_package_tarball(name, version, ({ content, filename, stop }) => {
+		if (has_runes && has_types) stop();
+
+		// Check for TypeScript files or declaration files
+		if (
+			filename.endsWith('.d.ts') ||
+			filename.endsWith('.ts') ||
+			filename.endsWith('.cts') ||
+			filename.endsWith('.mts') ||
+			filename.endsWith('.d.mts') ||
+			filename.endsWith('.d.cts')
+		) {
+			has_types = true;
+		}
+
+		if (
+			!has_runes &&
+			(filename.endsWith('.svelte.ts') ||
+				filename.endsWith('.svelte.js') ||
+				filename.endsWith('.svelte'))
+		) {
+			// Do the rune check now
+			has_runes = detect_runes(content);
+		}
+	});
+
+	return {
+		runes: has_runes,
+		types: has_types
+	};
 }
 
 /** Options for searching npm packages */
@@ -815,7 +735,7 @@ export type StructuredInterimPackage = {
 		dependents?: number;
 		github_stars?: number;
 		svelte_range?: string;
-		typescript: Awaited<ReturnType<typeof check_typescript_types>>;
+		typescript: boolean;
 		kit_range?: string;
 		runes: boolean;
 		repo_url: string;

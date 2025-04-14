@@ -9,7 +9,7 @@
 	"tags": ["design-system", "ui"],
 	"runes": false,
 	"github_stars": 0,
-	"typescript": "first-party",
+	"typescript": false,
 	"version": "1.0.0-alpha.1",
 	"svelte_range": "^5.1.3",
 	"last_rune_check_version": "1.0.0-alpha.1"

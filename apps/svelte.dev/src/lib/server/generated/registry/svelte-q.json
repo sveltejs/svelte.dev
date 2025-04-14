@@ -7,7 +7,7 @@
 	"updated": "2022-07-15T14:35:00.953Z",
 	"tags": ["server"],
 	"runes": false,
-	"typescript": "first-party",
+	"typescript": true,
 	"version": "0.4.2",
 	"svelte_range": "^3.48.0",
 	"last_rune_check_version": "0.4.2"

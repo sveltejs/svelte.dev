@@ -9,7 +9,7 @@
 	"tags": ["server"],
 	"runes": false,
 	"github_stars": 80,
-	"typescript": "first-party",
+	"typescript": true,
 	"version": "2.3.16",
 	"svelte_range": "^5",
 	"last_rune_check_version": "2.3.16"

@@ -7,7 +7,7 @@
 	"updated": "2024-08-16T11:35:38.063Z",
 	"tags": ["ui"],
 	"runes": true,
-	"typescript": "first-party",
+	"typescript": true,
 	"version": "2.0.6",
 	"svelte_range": "^5.0.0-next.1",
 	"last_rune_check_version": "2.0.6"

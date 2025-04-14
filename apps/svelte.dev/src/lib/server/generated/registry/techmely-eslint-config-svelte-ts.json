@@ -9,7 +9,7 @@
 	"runes": false,
 	"github_stars": 0,
 	"homepage": "https://www.ebugkia.com",
-	"typescript": "none",
+	"typescript": false,
 	"version": "1.0.1",
 	"svelte_range": "^3.44.3",
 	"last_rune_check_version": "1.0.1"

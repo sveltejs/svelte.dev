@@ -7,7 +7,7 @@
 	"updated": "2025-04-09T16:24:26.974Z",
 	"tags": ["integration"],
 	"runes": false,
-	"typescript": "none",
+	"typescript": false,
 	"version": "0.0.362",
 	"svelte_range": "^3.42.4",
 	"last_rune_check_version": "0.0.362"

@@ -9,7 +9,7 @@
 	"tags": ["router"],
 	"runes": false,
 	"github_stars": 0,
-	"typescript": "none",
+	"typescript": true,
 	"version": "0.29.8",
 	"svelte_range": "^3.44.2",
 	"last_rune_check_version": "0.29.8"

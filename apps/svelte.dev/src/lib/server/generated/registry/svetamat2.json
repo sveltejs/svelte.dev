@@ -9,7 +9,7 @@
 	"runes": false,
 	"github_stars": 1,
 	"homepage": "https://tianhai82.github.io/svetamat2/",
-	"typescript": "none",
+	"typescript": false,
 	"version": "0.5.3",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "0.5.3"

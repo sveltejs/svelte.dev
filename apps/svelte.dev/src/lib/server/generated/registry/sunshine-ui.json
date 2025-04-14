@@ -9,7 +9,7 @@
 	"runes": false,
 	"github_stars": 0,
 	"homepage": "sunshine-ui.ivanchenhz.vercel.app",
-	"typescript": "none",
+	"typescript": false,
 	"version": "0.0.8",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "0.0.8"

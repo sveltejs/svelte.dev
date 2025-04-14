@@ -8,7 +8,7 @@
 	"updated": "2020-02-18T18:25:21.038Z",
 	"tags": ["ui"],
 	"runes": false,
-	"typescript": "none",
+	"typescript": false,
 	"version": "0.0.37",
 	"last_rune_check_version": "0.0.37"
 }

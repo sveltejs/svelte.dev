@@ -9,7 +9,7 @@
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 10306,
-	"typescript": "first-party",
+	"typescript": true,
 	"version": "0.45.0",
 	"svelte_range": "^3.54.0 || ^4.0.0",
 	"kit_range": "^1.5.0",

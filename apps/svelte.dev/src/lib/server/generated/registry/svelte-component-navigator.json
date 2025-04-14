@@ -8,7 +8,7 @@
 	"updated": "2021-09-11T03:13:28.331Z",
 	"tags": ["router"],
 	"runes": false,
-	"typescript": "none",
+	"typescript": true,
 	"version": "1.1.1",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "1.1.1"

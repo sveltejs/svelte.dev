@@ -6,7 +6,7 @@
 	"updated": "2022-02-21T22:26:28.006Z",
 	"tags": ["integration"],
 	"runes": false,
-	"typescript": "first-party",
+	"typescript": true,
 	"version": "0.5.0",
 	"svelte_range": "^3",
 	"last_rune_check_version": "0.5.0"

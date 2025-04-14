@@ -9,7 +9,7 @@
 	"tags": ["seo"],
 	"runes": false,
 	"github_stars": 2,
-	"typescript": "none",
+	"typescript": false,
 	"version": "0.1.0",
 	"svelte_range": "^3.20.1",
 	"last_rune_check_version": "0.1.0"

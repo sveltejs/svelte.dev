@@ -9,7 +9,7 @@
 	"runes": false,
 	"github_stars": 1,
 	"homepage": "https://www.npmjs.com/package/s4e-ikons",
-	"typescript": "none",
+	"typescript": false,
 	"version": "0.0.483",
 	"svelte_range": "5.0.4",
 	"last_rune_check_version": "0.0.483"
