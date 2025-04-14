@@ -3,7 +3,7 @@
 	"description": "Provides Svelte wrapper for Sequential Workflow Designer component.",
 	"repo_url": "",
 	"authors": ["b4rtaz"],
-	"downloads": 213,
+	"downloads": 260,
 	"updated": "2025-03-20T17:36:55.045Z",
 	"tags": ["ui", "tooling"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "0.28.0",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.4",
-	"last_rune_check_version": "0.28.0"
+	"last_rune_check_version": "0.28.0",
+	"github_stars": 0
 }

@@ -3,7 +3,7 @@
 	"description": "Render Markdown content within Svelte components.",
 	"repo_url": "",
 	"authors": ["allyjlevine", "hobbes7878", "mf475", "pkd2512", "swhart22", "su.dev"],
-	"downloads": 29,
+	"downloads": 30,
 	"updated": "2025-04-02T09:34:03.010Z",
 	"tags": ["content"],
 	"runes": true,
@@ -11,5 +11,6 @@
 	"version": "0.0.3",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
-	"last_rune_check_version": "0.0.3"
+	"last_rune_check_version": "0.0.3",
+	"github_stars": 0
 }

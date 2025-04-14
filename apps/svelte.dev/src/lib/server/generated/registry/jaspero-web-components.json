@@ -4,13 +4,13 @@
 	"repo_url": "https://github.com/Jaspero/web-components",
 	"authors": ["flauc1", "antoniostipic"],
 	"homepage": "https://github.com/Jaspero/web-components#readme",
-	"downloads": 257,
-	"updated": "2025-04-02T19:10:51.376Z",
+	"downloads": 224,
+	"updated": "2025-04-14T09:44:27.087Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 1,
 	"typescript": true,
-	"version": "1.192.9",
+	"version": "1.193.0",
 	"svelte_range": "4.2.19",
-	"last_rune_check_version": "1.192.9"
+	"last_rune_check_version": "1.193.0"
 }

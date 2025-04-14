@@ -4,13 +4,13 @@
 	"repo_url": "https://github.com/revolist/svelte-datagrid",
 	"authors": ["kumakint"],
 	"homepage": "https://github.com/revolist/revogrid#readme",
-	"downloads": 476,
-	"updated": "2025-04-09T10:25:33.840Z",
+	"downloads": 704,
+	"updated": "2025-04-10T15:18:13.201Z",
 	"tags": ["ui"],
 	"runes": false,
-	"github_stars": 119,
+	"github_stars": 120,
 	"typescript": true,
-	"version": "4.15.2",
+	"version": "4.15.3",
 	"svelte_range": "^5.2.7",
-	"last_rune_check_version": "4.15.2"
+	"last_rune_check_version": "4.15.3"
 }

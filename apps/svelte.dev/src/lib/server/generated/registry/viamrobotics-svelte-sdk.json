@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/viamrobotics/viam-svelte-sdk",
 	"authors": ["cheukt", "mcous", "stevebriskin", "viambot", "micheal.parks", "mpviam", "njooma"],
 	"homepage": "https://github.com/viamrobotics/viam-svelte-sdk#readme",
-	"downloads": 9,
+	"downloads": 30,
 	"updated": "2025-03-24T18:25:50.465Z",
 	"tags": ["integration"],
 	"runes": true,

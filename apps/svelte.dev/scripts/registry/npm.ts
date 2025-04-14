@@ -496,7 +496,7 @@ export async function* process_packages(
 				pkg_name,
 				package_json,
 				options.check_svelte_dep_criteria,
-				package_json.package.maintainers?.map((v: any) => v.username) ?? [],
+				package_json.maintainers?.map((v: any) => v.username) ?? [],
 				downloads
 			);
 

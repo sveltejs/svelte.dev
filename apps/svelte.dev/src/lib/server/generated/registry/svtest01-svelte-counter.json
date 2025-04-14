@@ -2,12 +2,13 @@
 	"name": "svtest01-svelte-counter",
 	"description": "Provides customizable text editor component for Svelte.",
 	"authors": ["akifb37"],
-	"downloads": 2,
+	"downloads": 4,
 	"updated": "2024-12-27T00:26:05.703Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "6.0.0",
 	"svelte_range": "^5.0.0",
-	"last_rune_check_version": "6.0.0"
+	"last_rune_check_version": "6.0.0",
+	"github_stars": 0
 }

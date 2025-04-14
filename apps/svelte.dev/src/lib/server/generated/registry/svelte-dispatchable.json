@@ -3,7 +3,7 @@
 	"description": "Implement dispatchable reactive store, alternative to Svelte stores.",
 	"repo_url": "https://github.com/ravid7000/svelte-dispatchable",
 	"authors": ["ravid7000"],
-	"downloads": 4,
+	"downloads": 7,
 	"updated": "2022-01-22T21:57:11.071Z",
 	"tags": ["miscellaneous"],
 	"runes": false,

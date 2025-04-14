@@ -4,12 +4,13 @@
 	"repo_url": "",
 	"authors": ["emmyarty"],
 	"homepage": "https://dxsvelte.com/",
-	"downloads": 9,
+	"downloads": 13,
 	"updated": "2023-10-29T00:13:10.144Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.2.0-alpha.21",
 	"svelte_range": "^4.2.2",
-	"last_rune_check_version": "0.2.0-alpha.21"
+	"last_rune_check_version": "0.2.0-alpha.21",
+	"github_stars": 0
 }

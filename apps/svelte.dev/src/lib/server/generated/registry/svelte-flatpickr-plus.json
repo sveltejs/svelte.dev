@@ -4,14 +4,14 @@
 	"repo_url": "https://github.com/kodaicoder/svelte-flatpickr-plus",
 	"authors": ["nutchyleo123"],
 	"homepage": "https://github.com/kodaicoder/svelte-flatpickr-plus",
-	"downloads": 175,
-	"updated": "2025-02-17T07:12:15.189Z",
+	"downloads": 252,
+	"updated": "2025-04-11T07:29:12.211Z",
 	"tags": ["ui"],
 	"runes": true,
 	"github_stars": 10,
 	"typescript": true,
-	"version": "2.0.6",
+	"version": "2.0.8",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.8.5",
-	"last_rune_check_version": "2.0.6"
+	"last_rune_check_version": "2.0.8"
 }

@@ -3,12 +3,13 @@
 	"description": "Animate SVG paths to a given percentage in Svelte.",
 	"repo_url": "",
 	"authors": ["studentofjs"],
-	"downloads": 33,
+	"downloads": 21,
 	"updated": "2020-02-04T05:13:37.738Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "4.0.0",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "4.0.0"
+	"last_rune_check_version": "4.0.0",
+	"github_stars": 0
 }

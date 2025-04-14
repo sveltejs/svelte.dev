@@ -3,7 +3,7 @@
 	"description": "Enable Svelte components to run in Turing machine-like behavior.",
 	"repo_url": "",
 	"authors": ["krist7599555"],
-	"downloads": 18,
+	"downloads": 19,
 	"updated": "2023-07-19T06:13:52.017Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "2.2.4",
 	"svelte_range": "^4.0.5",
 	"kit_range": "^1.22.3",
-	"last_rune_check_version": "2.2.4"
+	"last_rune_check_version": "2.2.4",
+	"github_stars": 0
 }

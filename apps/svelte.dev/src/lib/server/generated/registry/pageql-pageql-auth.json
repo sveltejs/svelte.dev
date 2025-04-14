@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/pageql/pageql-auth",
 	"authors": ["conprogramming"],
 	"homepage": "https://github.com/pageql/pageql-auth#readme",
-	"downloads": 0,
+	"downloads": 5,
 	"updated": "2020-08-06T05:26:33.669Z",
 	"tags": ["auth"],
 	"runes": false,

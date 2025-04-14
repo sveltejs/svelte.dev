@@ -3,12 +3,13 @@
 	"description": "Implement listbox component for Svelte.",
 	"repo_url": "",
 	"authors": ["danipo"],
-	"downloads": 5,
+	"downloads": 6,
 	"updated": "2020-06-04T13:53:44.303Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.0.2",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.0.2"
+	"last_rune_check_version": "0.0.2",
+	"github_stars": 0
 }

@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/mikededo/eslint-plugin-svelte-tailwindcss",
 	"authors": ["mikededo"],
 	"homepage": "https://github.com/mikededo/eslint-plugin-svelte-tailwindcss",
-	"downloads": 14,
+	"downloads": 16,
 	"updated": "2024-11-19T17:09:31.103Z",
 	"tags": ["tooling"],
 	"runes": false,

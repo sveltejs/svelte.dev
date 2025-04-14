@@ -3,12 +3,13 @@
 	"description": "Generate PDF documents easily within Svelte applications.",
 	"repo_url": "",
 	"authors": ["manuel3108"],
-	"downloads": 4,
+	"downloads": 9,
 	"updated": "2021-07-04T12:13:28.006Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.1.7",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.1.7"
+	"last_rune_check_version": "0.1.7",
+	"github_stars": 0
 }

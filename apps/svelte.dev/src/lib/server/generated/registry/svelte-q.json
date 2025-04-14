@@ -3,12 +3,13 @@
 	"description": "Fetch and cache data, built for Svelte applications.",
 	"repo_url": "",
 	"authors": ["maxam2017"],
-	"downloads": 1,
+	"downloads": 8,
 	"updated": "2022-07-15T14:35:00.953Z",
 	"tags": ["server"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.4.2",
 	"svelte_range": "^3.48.0",
-	"last_rune_check_version": "0.4.2"
+	"last_rune_check_version": "0.4.2",
+	"github_stars": 0
 }

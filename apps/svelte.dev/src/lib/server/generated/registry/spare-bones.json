@@ -1,0 +1,16 @@
+{
+	"name": "spare-bones",
+	"description": "Provide additional Svelte components for Skeleton UI kit.",
+	"typescript": true,
+	"repo_url": "",
+	"authors": ["oatmealproblem"],
+	"downloads": 11,
+	"updated": "2025-04-03T03:52:46.117Z",
+	"tags": ["ui", "design-system"],
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.16.0",
+	"runes": true,
+	"last_rune_check_version": "0.2.0",
+	"version": "0.2.0",
+	"github_stars": 0
+}

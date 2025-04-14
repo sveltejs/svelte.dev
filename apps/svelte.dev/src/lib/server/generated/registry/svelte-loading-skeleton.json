@@ -3,7 +3,7 @@
 	"description": "Create customizable loading skeletons for Svelte applications.",
 	"repo_url": "https://github.com/dylanblokhuis/svelte-loading-skeleton",
 	"authors": ["dylanblokhuis"],
-	"downloads": 340,
+	"downloads": 307,
 	"updated": "2019-10-29T17:41:25.410Z",
 	"tags": ["ui"],
 	"runes": false,

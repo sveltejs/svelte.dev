@@ -3,12 +3,13 @@
 	"description": "Provides animated container web components for Svelte.",
 	"repo_url": "",
 	"authors": ["dariocaruso"],
-	"downloads": 57,
+	"downloads": 65,
 	"updated": "2025-03-24T18:07:11.582Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.20.18",
 	"svelte_range": "^3.46.2",
-	"last_rune_check_version": "0.20.18"
+	"last_rune_check_version": "0.20.18",
+	"github_stars": 0
 }

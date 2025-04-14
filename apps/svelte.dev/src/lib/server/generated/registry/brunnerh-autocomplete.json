@@ -4,12 +4,13 @@
 	"repo_url": "",
 	"authors": ["brunnerh"],
 	"homepage": "https://github.com/brunnerh/autocomplete",
-	"downloads": 0,
+	"downloads": 4,
 	"updated": "2020-03-10T20:24:40.005Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.1.2",
 	"svelte_range": "^3.19.2",
-	"last_rune_check_version": "0.1.2"
+	"last_rune_check_version": "0.1.2",
+	"github_stars": 0
 }

@@ -3,7 +3,7 @@
 	"description": "Create portals for Svelte components.",
 	"repo_url": "https://gitlab.com/david-plugge/svuick",
 	"authors": ["davidplugge"],
-	"downloads": 1,
+	"downloads": 5,
 	"updated": "2022-02-03T11:38:58.010Z",
 	"tags": ["miscellaneous"],
 	"runes": false,

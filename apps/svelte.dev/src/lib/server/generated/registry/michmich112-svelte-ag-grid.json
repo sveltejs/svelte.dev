@@ -3,12 +3,13 @@
 	"description": "Integrate ag-Grid data grids into Svelte applications.",
 	"repo_url": "",
 	"authors": ["michmich112"],
-	"downloads": 6,
+	"downloads": 10,
 	"updated": "2021-10-03T19:58:28.762Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "1.1.1",
 	"svelte_range": "^3.31.0",
-	"last_rune_check_version": "1.1.1"
+	"last_rune_check_version": "1.1.1",
+	"github_stars": 0
 }

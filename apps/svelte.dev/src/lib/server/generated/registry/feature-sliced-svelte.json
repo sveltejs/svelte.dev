@@ -3,7 +3,7 @@
 	"description": "Maintain Svelte projects using Feature Sliced Design.",
 	"repo_url": "",
 	"authors": ["mishamyrt"],
-	"downloads": 3,
+	"downloads": 7,
 	"updated": "2023-11-14T16:55:03.217Z",
 	"tags": ["tooling"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "1.4.0",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.4",
-	"last_rune_check_version": "1.4.0"
+	"last_rune_check_version": "1.4.0",
+	"github_stars": 0
 }

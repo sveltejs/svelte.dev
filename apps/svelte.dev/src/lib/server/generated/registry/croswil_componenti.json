@@ -3,7 +3,7 @@
 	"description": "Provides Croswil UI components for Svelte applications.",
 	"repo_url": "",
 	"authors": ["croswil"],
-	"downloads": 12,
+	"downloads": 16,
 	"updated": "2025-03-20T16:13:31.299Z",
 	"tags": ["ui"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "1.0.19",
 	"svelte_range": "^4.2.15",
 	"kit_range": "^2.5.7",
-	"last_rune_check_version": "1.0.19"
+	"last_rune_check_version": "1.0.19",
+	"github_stars": 0
 }

@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/mdd95/sveltekit-adapter-node",
 	"authors": ["mdd95"],
 	"homepage": "https://kit.svelte.dev",
-	"downloads": 0,
+	"downloads": 5,
 	"updated": "2024-10-06T11:47:51.483Z",
 	"tags": ["adapter"],
 	"runes": false,

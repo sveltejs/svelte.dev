@@ -3,11 +3,12 @@
 	"description": "Manage CSS variables dynamically within Svelte components.",
 	"repo_url": "",
 	"authors": ["kaisermann"],
-	"downloads": 1694,
+	"downloads": 1612,
 	"updated": "2021-06-17T16:00:46.189Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.0.3",
-	"last_rune_check_version": "0.0.3"
+	"last_rune_check_version": "0.0.3",
+	"github_stars": 0
 }

@@ -3,7 +3,7 @@
 	"description": "Preprocess Svelte styles, creating global CSS rules.",
 	"repo_url": "https://github.com/aheissenberger/svelte-preprocess-css-global",
 	"authors": ["aheissenberger"],
-	"downloads": 0,
+	"downloads": 4,
 	"updated": "2019-05-12T20:39:25.326Z",
 	"tags": ["tooling"],
 	"runes": false,

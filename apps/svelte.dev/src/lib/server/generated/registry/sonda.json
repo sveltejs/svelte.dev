@@ -4,11 +4,11 @@
 	"repo_url": "https://github.com/filipsobol/sonda",
 	"authors": ["filipsobol"],
 	"homepage": "https://sonda.dev",
-	"downloads": 15819,
+	"downloads": 15445,
 	"updated": "2024-12-31T08:29:09.012Z",
 	"tags": ["tooling"],
 	"runes": false,
-	"github_stars": 429,
+	"github_stars": 430,
 	"typescript": true,
 	"version": "0.7.1",
 	"last_rune_check_version": "0.7.1"

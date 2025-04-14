@@ -4,13 +4,13 @@
 	"repo_url": "https://github.com/uenoB/minissg",
 	"authors": ["uenob"],
 	"homepage": "https://github.com/uenoB/minissg/tree/main/packages/render-svelte#readme",
-	"downloads": 2,
-	"updated": "2025-01-03T22:39:19.254Z",
+	"downloads": 5,
+	"updated": "2025-04-14T00:48:14.621Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 3,
 	"typescript": true,
-	"version": "4.0.0",
+	"version": "4.0.1",
 	"svelte_range": "^5",
-	"last_rune_check_version": "4.0.0"
+	"last_rune_check_version": "4.0.1"
 }

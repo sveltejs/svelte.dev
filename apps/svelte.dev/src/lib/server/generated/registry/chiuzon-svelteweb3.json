@@ -3,7 +3,7 @@
 	"description": "Build dApps with SvelteKit, web3, and web3connector.",
 	"repo_url": "https://github.com/chiuzon/svelteWeb3",
 	"authors": ["chiuzon"],
-	"downloads": 6,
+	"downloads": 10,
 	"updated": "2021-12-30T12:36:21.482Z",
 	"tags": ["integration"],
 	"runes": false,

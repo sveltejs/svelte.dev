@@ -3,11 +3,12 @@
 	"description": "Create video components for Svelte apps.",
 	"repo_url": "",
 	"authors": ["dariocaruso"],
-	"downloads": 421,
+	"downloads": 844,
 	"updated": "2025-04-08T22:27:33.309Z",
 	"tags": ["media"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.50.0-alpha.27",
-	"last_rune_check_version": "0.50.0-alpha.27"
+	"last_rune_check_version": "0.50.0-alpha.27",
+	"github_stars": 0
 }

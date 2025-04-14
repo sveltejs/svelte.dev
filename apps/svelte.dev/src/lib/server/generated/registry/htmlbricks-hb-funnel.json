@@ -3,11 +3,12 @@
 	"description": "Provides Svelte funnel web components.",
 	"repo_url": "",
 	"authors": ["dariocaruso"],
-	"downloads": 835,
+	"downloads": 838,
 	"updated": "2025-04-08T22:27:31.327Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.50.0-alpha.27",
-	"last_rune_check_version": "0.50.0-alpha.27"
+	"last_rune_check_version": "0.50.0-alpha.27",
+	"github_stars": 0
 }

@@ -1,0 +1,16 @@
+{
+	"name": "@konsumation/frontend-svelte",
+	"description": "Svelte web frontend for konsum.",
+	"typescript": true,
+	"repo_url": "https://github.com/konsumation/konsum-frontend-svelte",
+	"authors": ["k0nsti", "arlac77"],
+	"homepage": "https://github.com/konsumation/konsum-frontend-svelte#readme",
+	"downloads": 90,
+	"updated": "2023-01-18T19:11:42.398Z",
+	"tags": ["ui"],
+	"svelte_range": "^3.55.1",
+	"runes": false,
+	"last_rune_check_version": "1.35.1",
+	"version": "1.35.1",
+	"github_stars": 3
+}

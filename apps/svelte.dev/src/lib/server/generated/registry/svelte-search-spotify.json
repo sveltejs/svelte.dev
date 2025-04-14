@@ -3,12 +3,13 @@
 	"description": "Integrate Spotify search functionality into Svelte applications.",
 	"repo_url": "",
 	"authors": ["jimkang"],
-	"downloads": 2,
+	"downloads": 5,
 	"updated": "2020-10-27T22:12:41.620Z",
 	"tags": ["integration"],
 	"runes": false,
 	"typescript": false,
 	"version": "1.0.5",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "1.0.5"
+	"last_rune_check_version": "1.0.5",
+	"github_stars": 0
 }

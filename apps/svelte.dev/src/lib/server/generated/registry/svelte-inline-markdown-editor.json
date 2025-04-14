@@ -3,12 +3,13 @@
 	"description": "Provide inline markdown editor with live preview.",
 	"repo_url": "",
 	"authors": ["cbroms"],
-	"downloads": 1,
+	"downloads": 6,
 	"updated": "2020-12-21T22:21:40.000Z",
 	"tags": ["content", "ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.1.0",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.1.0"
+	"last_rune_check_version": "0.1.0",
+	"github_stars": 0
 }

@@ -17,11 +17,11 @@
 		"storybook-bot"
 	],
 	"homepage": "https://github.com/storybookjs/storybook/tree/next/code/frameworks/sveltekit",
-	"downloads": 62712,
+	"downloads": 63397,
 	"updated": "2025-04-02T17:02:52.740Z",
 	"tags": ["tooling"],
 	"runes": false,
-	"github_stars": 86315,
+	"github_stars": 86367,
 	"typescript": true,
 	"version": "8.6.12",
 	"svelte_range": "^4.0.0 || ^5.0.0",

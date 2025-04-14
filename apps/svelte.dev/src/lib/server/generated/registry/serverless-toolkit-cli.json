@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/serverless-toolkit/cli",
 	"authors": ["mikebild"],
 	"homepage": "https://github.com/serverless-toolkit/cli#readme",
-	"downloads": 64,
+	"downloads": 67,
 	"updated": "2022-11-03T15:42:16.337Z",
 	"tags": ["tooling", "server", "adapter"],
 	"runes": false,

@@ -4,7 +4,7 @@
 	"repo_url": "",
 	"authors": ["gtim"],
 	"homepage": "https://github.com/gtim/svelte-chessground#readme",
-	"downloads": 28,
+	"downloads": 29,
 	"updated": "2023-12-15T20:29:11.487Z",
 	"tags": ["ui"],
 	"runes": false,
@@ -12,5 +12,6 @@
 	"version": "2.0.3",
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.15.1",
-	"last_rune_check_version": "2.0.3"
+	"last_rune_check_version": "2.0.3",
+	"github_stars": 0
 }

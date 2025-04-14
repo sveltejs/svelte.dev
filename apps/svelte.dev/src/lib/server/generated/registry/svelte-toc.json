@@ -4,14 +4,14 @@
 	"repo_url": "https://github.com/janosh/svelte-toc",
 	"authors": ["janosh"],
 	"homepage": "https://janosh.github.io/svelte-toc",
-	"downloads": 220,
-	"updated": "2024-06-12T17:18:18.813Z",
+	"downloads": 519,
+	"updated": "2025-04-13T18:58:54.957Z",
 	"tags": ["ui"],
-	"runes": false,
+	"runes": true,
 	"github_stars": 114,
 	"typescript": true,
-	"version": "0.5.9",
-	"svelte_range": "^4.2.18",
-	"kit_range": "^2.5.10",
-	"last_rune_check_version": "0.5.9"
+	"version": "0.6.0",
+	"svelte_range": "^5.26.2",
+	"kit_range": "^2.20.5",
+	"last_rune_check_version": "0.6.0"
 }

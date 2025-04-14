@@ -3,12 +3,13 @@
 	"description": "Implement drag-and-drop tree component for Svelte 3.",
 	"repo_url": "",
 	"authors": ["imkreislaufen"],
-	"downloads": 1,
+	"downloads": 3,
 	"updated": "2020-06-11T09:58:27.928Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.0.1-pre",
 	"svelte_range": "^3.20.1",
-	"last_rune_check_version": "0.0.1-pre"
+	"last_rune_check_version": "0.0.1-pre",
+	"github_stars": 0
 }

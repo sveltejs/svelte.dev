@@ -4,12 +4,13 @@
 	"repo_url": "",
 	"authors": ["lagden"],
 	"homepage": "https://github.com/lagden/svelte-tooltip-webcomponent#readme",
-	"downloads": 0,
+	"downloads": 7,
 	"updated": "2023-01-23T23:00:27.923Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.3.0",
 	"svelte_range": "3.55.1",
-	"last_rune_check_version": "0.3.0"
+	"last_rune_check_version": "0.3.0",
+	"github_stars": 0
 }

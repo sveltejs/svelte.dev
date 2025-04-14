@@ -3,12 +3,13 @@
 	"description": "Add Mac-style chrome to Svelte components for screenshots.",
 	"repo_url": "",
 	"authors": ["joshnuss"],
-	"downloads": 31,
+	"downloads": 47,
 	"updated": "2021-04-22T07:41:13.697Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.2.7",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.2.7"
+	"last_rune_check_version": "0.2.7",
+	"github_stars": 0
 }

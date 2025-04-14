@@ -4,12 +4,13 @@
 	"repo_url": "",
 	"authors": ["maciekgrzybek", "jhubbardsf"],
 	"homepage": "https://github.com/maciekgrzybek/svelte-inview",
-	"downloads": 8843,
+	"downloads": 8812,
 	"updated": "2024-10-01T19:10:39.170Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"typescript": true,
 	"version": "4.0.4",
 	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0 || ^5.0.0-next",
-	"last_rune_check_version": "4.0.4"
+	"last_rune_check_version": "4.0.4",
+	"github_stars": 0
 }

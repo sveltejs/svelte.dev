@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/jycouet/kitql",
 	"authors": ["jycouet"],
 	"homepage": "https://www.kitql.dev/",
-	"downloads": 10,
+	"downloads": 14,
 	"updated": "2025-03-18T17:02:07.703Z",
 	"tags": ["tooling"],
 	"runes": true,

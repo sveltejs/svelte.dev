@@ -3,12 +3,13 @@
 	"description": "Create tables for Svelte 5.",
 	"repo_url": "",
 	"authors": ["milkyskies"],
-	"downloads": 4,
+	"downloads": 7,
 	"updated": "2024-08-15T12:46:49.551Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.3.4",
 	"svelte_range": "^5.0.0-next.115",
-	"last_rune_check_version": "0.3.4"
+	"last_rune_check_version": "0.3.4",
+	"github_stars": 0
 }

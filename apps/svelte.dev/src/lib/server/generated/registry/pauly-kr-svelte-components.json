@@ -3,7 +3,7 @@
 	"description": "Provide Svelte components, including a DataTable.",
 	"repo_url": "",
 	"authors": ["paul-krisada", "cosmo-parker"],
-	"downloads": 0,
+	"downloads": 4,
 	"updated": "2022-07-24T12:02:18.229Z",
 	"tags": ["ui"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "0.0.5",
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
-	"last_rune_check_version": "0.0.5"
+	"last_rune_check_version": "0.0.5",
+	"github_stars": 0
 }

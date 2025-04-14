@@ -3,12 +3,13 @@
 	"description": "Integrate Tawk.to chat widget into Svelte applications.",
 	"repo_url": "",
 	"authors": ["hellpirat"],
-	"downloads": 1,
+	"downloads": 7,
 	"updated": "2020-04-26T04:17:01.562Z",
 	"tags": ["integration"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.0.3",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.0.3"
+	"last_rune_check_version": "0.0.3",
+	"github_stars": 0
 }

@@ -3,7 +3,7 @@
 	"description": "SvelteKit adapter for IIS web servers.",
 	"repo_url": "https://github.com/abaga129/sveltekit-adapter-iis",
 	"authors": ["abaga129"],
-	"downloads": 33,
+	"downloads": 47,
 	"updated": "2024-11-06T20:19:37.060Z",
 	"tags": ["adapter"],
 	"runes": false,

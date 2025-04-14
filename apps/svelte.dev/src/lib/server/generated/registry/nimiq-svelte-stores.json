@@ -4,12 +4,13 @@
 	"repo_url": "",
 	"authors": ["sisou"],
 	"homepage": "https://github.com/sisou/nimiq-svelte-stores",
-	"downloads": 3,
+	"downloads": 8,
 	"updated": "2020-02-26T09:12:05.474Z",
 	"tags": ["integration"],
 	"runes": false,
 	"typescript": true,
 	"version": "1.4.0",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "1.4.0"
+	"last_rune_check_version": "1.4.0",
+	"github_stars": 0
 }

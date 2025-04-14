@@ -3,11 +3,12 @@
 	"description": "Svelte-Bootstrap Number Input WebComponent.",
 	"repo_url": "",
 	"authors": ["dariocaruso"],
-	"downloads": 758,
+	"downloads": 796,
 	"updated": "2025-04-08T22:27:28.159Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.50.0-alpha.27",
-	"last_rune_check_version": "0.50.0-alpha.27"
+	"last_rune_check_version": "0.50.0-alpha.27",
+	"github_stars": 0
 }

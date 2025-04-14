@@ -3,12 +3,13 @@
 	"description": "Create select components for Svelte.",
 	"repo_url": "",
 	"authors": ["baiwusanyu"],
-	"downloads": 15,
+	"downloads": 54,
 	"updated": "2025-01-24T03:49:17.234Z",
 	"tags": ["ui"],
 	"runes": true,
 	"typescript": true,
 	"version": "0.2.8",
 	"svelte_range": "^4.2.12",
-	"last_rune_check_version": "0.2.8"
+	"last_rune_check_version": "0.2.8",
+	"github_stars": 0
 }

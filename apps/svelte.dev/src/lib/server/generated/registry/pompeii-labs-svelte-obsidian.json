@@ -3,12 +3,13 @@
 	"description": "Integrate Svelte providers for Magma chat.",
 	"repo_url": "",
 	"authors": ["mattyhogan", "coachjackferg"],
-	"downloads": 4,
+	"downloads": 6,
 	"updated": "2025-03-11T19:59:08.053Z",
 	"tags": ["integration"],
 	"runes": true,
 	"typescript": true,
 	"version": "0.0.5",
 	"svelte_range": "^5.22.1",
-	"last_rune_check_version": "0.0.5"
+	"last_rune_check_version": "0.0.5",
+	"github_stars": 0
 }

@@ -3,7 +3,7 @@
 	"description": "Display current index of array in Svelte.",
 	"repo_url": "{component-repo}",
 	"authors": ["nickmanning214"],
-	"downloads": 3,
+	"downloads": 5,
 	"updated": "2020-04-03T22:49:15.057Z",
 	"tags": ["ui"],
 	"runes": false,

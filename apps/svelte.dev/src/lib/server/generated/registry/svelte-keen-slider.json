@@ -3,12 +3,13 @@
 	"description": "Create Svelte wrapper for Keen-slider.",
 	"repo_url": "",
 	"authors": ["slimboyfat"],
-	"downloads": 7,
+	"downloads": 23,
 	"updated": "2020-08-24T20:04:38.047Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.0.9",
 	"svelte_range": "^3.24.1",
-	"last_rune_check_version": "0.0.9"
+	"last_rune_check_version": "0.0.9",
+	"github_stars": 0
 }

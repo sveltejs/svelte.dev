@@ -3,12 +3,13 @@
 	"description": "Create quote components for Svelte.",
 	"repo_url": "",
 	"authors": ["alexgipi"],
-	"downloads": 5,
+	"downloads": 7,
 	"updated": "2025-02-17T12:07:03.750Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "1.0.9",
 	"svelte_range": "^5.19.9",
-	"last_rune_check_version": "1.0.9"
+	"last_rune_check_version": "1.0.9",
+	"github_stars": 0
 }

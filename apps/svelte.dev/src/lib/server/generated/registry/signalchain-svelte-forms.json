@@ -3,12 +3,13 @@
 	"description": "Provide a Svelte forms library.",
 	"repo_url": "",
 	"authors": ["signalchain"],
-	"downloads": 2,
+	"downloads": 11,
 	"updated": "2022-03-12T12:43:48.404Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.2.5",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.2.5"
+	"last_rune_check_version": "0.2.5",
+	"github_stars": 0
 }

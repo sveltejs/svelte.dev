@@ -3,12 +3,13 @@
 	"description": "Create modal component for Svelte applications.",
 	"repo_url": "",
 	"authors": ["liuzhengzheng"],
-	"downloads": 2,
+	"downloads": 4,
 	"updated": "2023-02-19T08:19:29.248Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "1.0.5",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "1.0.5"
+	"last_rune_check_version": "1.0.5",
+	"github_stars": 0
 }

@@ -4,12 +4,13 @@
 	"repo_url": "",
 	"authors": ["i18n-now"],
 	"homepage": "https://github.com/i18n-fork/prettier-plugin-svelte/tree/tmp",
-	"downloads": 1,
+	"downloads": 16,
 	"updated": "2025-02-05T07:26:58.910Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"typescript": true,
 	"version": "3.2.8",
 	"svelte_range": "^5.0.0-next.243",
-	"last_rune_check_version": "3.2.8"
+	"last_rune_check_version": "3.2.8",
+	"github_stars": 0
 }

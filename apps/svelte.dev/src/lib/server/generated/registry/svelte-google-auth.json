@@ -3,7 +3,7 @@
 	"description": "Implement Google authentication in SvelteKit applications.",
 	"repo_url": "",
 	"authors": ["halfdanj"],
-	"downloads": 84,
+	"downloads": 65,
 	"updated": "2023-01-17T21:18:10.634Z",
 	"tags": ["auth"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "0.7.2",
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
-	"last_rune_check_version": "0.7.2"
+	"last_rune_check_version": "0.7.2",
+	"github_stars": 0
 }

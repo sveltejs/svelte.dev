@@ -3,12 +3,13 @@
 	"description": "Format text to fit within a container in Svelte.",
 	"repo_url": "",
 	"authors": ["omysoul"],
-	"downloads": 2,
+	"downloads": 5,
 	"updated": "2021-09-04T19:26:32.502Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.2.8",
 	"svelte_range": "^3.23.2",
-	"last_rune_check_version": "0.2.8"
+	"last_rune_check_version": "0.2.8",
+	"github_stars": 0
 }

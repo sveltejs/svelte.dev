@@ -4,13 +4,13 @@
 	"repo_url": "https://github.com/threlte/threlte",
 	"authors": ["grischaerbe"],
 	"homepage": "https://github.com/threlte/threlte.git#readme",
-	"downloads": 92,
-	"updated": "2025-01-20T22:28:42.925Z",
+	"downloads": 191,
+	"updated": "2025-04-12T23:44:13.235Z",
 	"tags": ["media"],
 	"runes": false,
-	"github_stars": 2842,
+	"github_stars": 2849,
 	"typescript": true,
-	"version": "3.0.0",
-	"svelte_range": "^5.14.4",
-	"last_rune_check_version": "3.0.0"
+	"version": "3.0.1",
+	"svelte_range": "^5.26.2",
+	"last_rune_check_version": "3.0.1"
 }

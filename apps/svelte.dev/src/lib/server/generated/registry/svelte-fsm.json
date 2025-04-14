@@ -4,11 +4,11 @@
 	"repo_url": "https://github.com/kenkunz/svelte-fsm",
 	"authors": ["kenkunz"],
 	"homepage": "https://github.com/kenkunz/svelte-fsm#README",
-	"downloads": 458,
+	"downloads": 427,
 	"updated": "2022-09-08T21:43:40.495Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
-	"github_stars": 279,
+	"github_stars": 280,
 	"typescript": true,
 	"version": "1.2.0",
 	"last_rune_check_version": "1.2.0"

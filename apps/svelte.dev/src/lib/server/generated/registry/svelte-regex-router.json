@@ -3,12 +3,13 @@
 	"description": "Provide lightweight router for Svelte using regex.",
 	"repo_url": "",
 	"authors": ["corman"],
-	"downloads": 0,
+	"downloads": 5,
 	"updated": "2021-04-29T04:29:47.550Z",
 	"tags": ["router"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.0.3",
 	"svelte_range": ">=3",
-	"last_rune_check_version": "0.0.3"
+	"last_rune_check_version": "0.0.3",
+	"github_stars": 0
 }

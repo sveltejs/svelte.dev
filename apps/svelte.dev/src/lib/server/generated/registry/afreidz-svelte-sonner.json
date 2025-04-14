@@ -3,7 +3,7 @@
 	"description": "Create opinionated toast notifications in Svelte apps.",
 	"repo_url": "",
 	"authors": ["afreidz"],
-	"downloads": 1,
+	"downloads": 6,
 	"updated": "2024-10-23T16:16:33.051Z",
 	"tags": ["ui"],
 	"runes": true,
@@ -11,5 +11,6 @@
 	"version": "0.3.31",
 	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0-next.1",
 	"kit_range": "^2.5.27",
-	"last_rune_check_version": "0.3.31"
+	"last_rune_check_version": "0.3.31",
+	"github_stars": 0
 }

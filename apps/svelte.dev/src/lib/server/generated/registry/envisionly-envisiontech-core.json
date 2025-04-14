@@ -4,13 +4,14 @@
 	"repo_url": "",
 	"authors": ["paulgeoghegan"],
 	"homepage": "https://envisionly.tech",
-	"downloads": 98,
-	"updated": "2025-04-03T13:00:03.436Z",
+	"downloads": 166,
+	"updated": "2025-04-11T14:45:18.929Z",
 	"tags": ["design-system"],
 	"runes": true,
 	"typescript": true,
-	"version": "0.7.0",
+	"version": "0.8.1",
 	"svelte_range": "^5.0.0",
-	"kit_range": "^2.20.3",
-	"last_rune_check_version": "0.7.0"
+	"kit_range": "^2.20.4",
+	"last_rune_check_version": "0.8.1",
+	"github_stars": 0
 }

@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/harryhdt/svelte-simple-query",
 	"authors": ["harryhdt"],
 	"homepage": "https://svelte-simple-query.harryhdt.dev",
-	"downloads": 2,
+	"downloads": 8,
 	"updated": "2025-03-16T07:58:40.326Z",
 	"tags": ["server", "tooling"],
 	"runes": true,

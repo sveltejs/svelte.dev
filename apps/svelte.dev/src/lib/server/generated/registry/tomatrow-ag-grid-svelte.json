@@ -3,7 +3,7 @@
 	"description": "Create ag-grid component for Svelte apps.",
 	"repo_url": "",
 	"authors": ["tomatrow"],
-	"downloads": 110,
+	"downloads": 148,
 	"updated": "2025-04-07T00:38:15.219Z",
 	"tags": ["ui"],
 	"runes": true,
@@ -11,5 +11,6 @@
 	"version": "0.0.3",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
-	"last_rune_check_version": "0.0.3"
+	"last_rune_check_version": "0.0.3",
+	"github_stars": 0
 }

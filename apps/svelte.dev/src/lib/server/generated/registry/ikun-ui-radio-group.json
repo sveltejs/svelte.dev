@@ -3,12 +3,13 @@
 	"description": "Create radio group components for Svelte applications.",
 	"repo_url": "",
 	"authors": ["baiwusanyu"],
-	"downloads": 13,
+	"downloads": 35,
 	"updated": "2025-01-24T03:49:14.020Z",
 	"tags": ["design-system"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.2.8",
 	"svelte_range": "^4.2.12",
-	"last_rune_check_version": "0.2.8"
+	"last_rune_check_version": "0.2.8",
+	"github_stars": 0
 }

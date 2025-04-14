@@ -4,7 +4,7 @@
 	"repo_url": "",
 	"authors": ["gtmnayan"],
 	"homepage": "https://github.com/gtm-nayan/svelte-yafal",
-	"downloads": 2,
+	"downloads": 4,
 	"updated": "2022-09-29T13:44:29.576Z",
 	"tags": ["ui"],
 	"runes": false,
@@ -12,5 +12,6 @@
 	"version": "0.1.2",
 	"svelte_range": "3.46.4",
 	"kit_range": "1.0.0-next.303",
-	"last_rune_check_version": "0.1.2"
+	"last_rune_check_version": "0.1.2",
+	"github_stars": 0
 }

@@ -4,11 +4,11 @@
 	"repo_url": "https://github.com/svar-widgets/grid",
 	"authors": ["marta-ko"],
 	"homepage": "https://svar.dev/svelte/datagrid/",
-	"downloads": 3293,
+	"downloads": 3073,
 	"updated": "2025-03-24T11:25:22.367Z",
 	"tags": ["design-system"],
 	"runes": true,
-	"github_stars": 82,
+	"github_stars": 85,
 	"typescript": false,
 	"version": "2.1.3",
 	"last_rune_check_version": "2.1.3"

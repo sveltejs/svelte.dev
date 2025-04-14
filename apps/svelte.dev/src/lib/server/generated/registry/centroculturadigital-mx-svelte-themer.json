@@ -3,12 +3,13 @@
 	"description": "Style Svelte apps with CSS variables, persisted.",
 	"repo_url": "",
 	"authors": ["furenku", "josecaos"],
-	"downloads": 1,
+	"downloads": 8,
 	"updated": "2020-05-13T21:50:40.141Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.0.37",
 	"svelte_range": "^3.22.2",
-	"last_rune_check_version": "0.0.37"
+	"last_rune_check_version": "0.0.37",
+	"github_stars": 0
 }

@@ -4,12 +4,13 @@
 	"repo_url": "",
 	"authors": ["soleil-ab", "kling90"],
 	"homepage": "https://docs.soleil.se/packages/config-mediaflow-svelte",
-	"downloads": 1,
+	"downloads": 8,
 	"updated": "2025-03-11T14:16:10.086Z",
 	"tags": ["integration"],
 	"runes": false,
 	"typescript": false,
 	"version": "1.2.4",
 	"svelte_range": "^4.0.0 || ^5.0.0-next || ^5.0.0",
-	"last_rune_check_version": "1.2.4"
+	"last_rune_check_version": "1.2.4",
+	"github_stars": 0
 }

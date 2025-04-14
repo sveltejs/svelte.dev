@@ -3,11 +3,12 @@
 	"description": "Create sidenav link web component for Svelte.",
 	"repo_url": "",
 	"authors": ["dariocaruso"],
-	"downloads": 414,
+	"downloads": 807,
 	"updated": "2025-04-08T22:27:19.840Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.50.0-alpha.27",
-	"last_rune_check_version": "0.50.0-alpha.27"
+	"last_rune_check_version": "0.50.0-alpha.27",
+	"github_stars": 0
 }

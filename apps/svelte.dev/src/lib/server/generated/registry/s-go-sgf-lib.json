@@ -3,7 +3,7 @@
 	"description": "Provide tools for reading and writing SGF files.",
 	"repo_url": "",
 	"authors": ["nanotron"],
-	"downloads": 0,
+	"downloads": 4,
 	"updated": "2023-09-11T21:44:20.814Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "0.0.3",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.4",
-	"last_rune_check_version": "0.0.3"
+	"last_rune_check_version": "0.0.3",
+	"github_stars": 0
 }

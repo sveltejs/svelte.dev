@@ -4,13 +4,13 @@
 	"repo_url": "https://github.com/nvlang/sveltex",
 	"authors": ["nvl"],
 	"homepage": "https://sveltex.dev",
-	"downloads": 9,
-	"updated": "2024-07-18T17:43:51.892Z",
+	"downloads": 11,
+	"updated": "2025-04-14T04:26:18.795Z",
 	"tags": ["content", "tooling"],
 	"runes": false,
 	"github_stars": 7,
 	"typescript": true,
-	"version": "0.4.1",
-	"svelte_range": "^4.2.18",
-	"last_rune_check_version": "0.4.1"
+	"version": "0.4.2",
+	"svelte_range": "^5.26.2",
+	"last_rune_check_version": "0.4.2"
 }

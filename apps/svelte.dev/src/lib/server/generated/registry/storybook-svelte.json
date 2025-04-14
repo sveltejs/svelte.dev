@@ -17,11 +17,11 @@
 		"storybook-bot"
 	],
 	"homepage": "https://github.com/storybookjs/storybook/tree/next/code/renderers/svelte",
-	"downloads": 88817,
+	"downloads": 89961,
 	"updated": "2025-04-02T17:03:39.796Z",
 	"tags": ["tooling"],
 	"runes": true,
-	"github_stars": 86315,
+	"github_stars": 86367,
 	"typescript": true,
 	"version": "8.6.12",
 	"svelte_range": "^4.0.0 || ^5.0.0",

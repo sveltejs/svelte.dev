@@ -1,0 +1,17 @@
+{
+	"name": "@dodonest/dodo-ui",
+	"description": "Develop UI framework for Svelte applications.",
+	"typescript": true,
+	"repo_url": "https://github.com/dodonest/dodo-ui",
+	"authors": ["siddacool"],
+	"homepage": "https://dodonest.github.io/dodo-ui",
+	"downloads": 8,
+	"updated": "2025-04-03T13:48:37.564Z",
+	"tags": ["design-system"],
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.16.0",
+	"runes": true,
+	"last_rune_check_version": "0.1.0",
+	"version": "0.1.0",
+	"github_stars": 0
+}

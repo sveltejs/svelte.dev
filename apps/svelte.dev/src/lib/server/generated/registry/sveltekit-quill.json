@@ -4,7 +4,7 @@
 	"repo_url": "",
 	"authors": ["natumanyaguy"],
 	"homepage": "https://github.com/NatumanyaGuy/sveltekit-quill.git",
-	"downloads": 4,
+	"downloads": 6,
 	"updated": "2023-08-01T13:01:10.449Z",
 	"tags": ["content", "ui"],
 	"runes": false,
@@ -12,5 +12,6 @@
 	"version": "1.0.0",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.4",
-	"last_rune_check_version": "1.0.0"
+	"last_rune_check_version": "1.0.0",
+	"github_stars": 0
 }

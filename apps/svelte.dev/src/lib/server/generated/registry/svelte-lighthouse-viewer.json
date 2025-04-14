@@ -3,12 +3,13 @@
 	"description": "View Lighthouse reports within Svelte applications.",
 	"authors": ["dvelasquez"],
 	"homepage": "https://dvelasquez.github.io/lighthouse-viewer/packages/svelte-lighthouse-viewer/demo/index.html",
-	"downloads": 198,
-	"updated": "2025-04-07T03:15:06.589Z",
+	"downloads": 271,
+	"updated": "2025-04-14T06:54:36.524Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"typescript": true,
-	"version": "0.2.59",
+	"version": "0.2.62",
 	"svelte_range": "^3.23.2 || ^4.0.0 || ^5.0.0",
-	"last_rune_check_version": "0.2.59"
+	"last_rune_check_version": "0.2.62",
+	"github_stars": 0
 }

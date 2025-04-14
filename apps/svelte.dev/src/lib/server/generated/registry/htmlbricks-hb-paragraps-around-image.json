@@ -3,11 +3,12 @@
 	"description": "Provides paragraphs around image web components for Svelte.",
 	"repo_url": "",
 	"authors": ["dariocaruso"],
-	"downloads": 356,
+	"downloads": 720,
 	"updated": "2025-04-08T22:27:22.682Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.50.0-alpha.27",
-	"last_rune_check_version": "0.50.0-alpha.27"
+	"last_rune_check_version": "0.50.0-alpha.27",
+	"github_stars": 0
 }

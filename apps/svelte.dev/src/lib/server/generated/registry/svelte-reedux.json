@@ -3,7 +3,7 @@
 	"description": "Connect Redux to Svelte applications using hooks.",
 	"repo_url": "https://github.com/icarus-sullivan/svelte-redux",
 	"authors": ["icarus-sullivan"],
-	"downloads": 6,
+	"downloads": 12,
 	"updated": "2021-03-01T05:55:15.562Z",
 	"tags": ["miscellaneous"],
 	"runes": false,

@@ -3,7 +3,7 @@
 	"description": "Copy text and images to clipboard using Svelte actions.",
 	"repo_url": "",
 	"authors": ["binsarjr"],
-	"downloads": 93,
+	"downloads": 160,
 	"updated": "2023-11-13T20:03:51.203Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "0.1.4",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.4",
-	"last_rune_check_version": "0.1.4"
+	"last_rune_check_version": "0.1.4",
+	"github_stars": 0
 }

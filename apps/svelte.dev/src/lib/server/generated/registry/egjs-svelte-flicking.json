@@ -15,11 +15,11 @@
 		"braixen"
 	],
 	"homepage": "https://naver.github.io/egjs-flicking/",
-	"downloads": 23,
+	"downloads": 42,
 	"updated": "2024-12-06T10:11:02.542Z",
 	"tags": ["ui"],
 	"runes": false,
-	"github_stars": 2835,
+	"github_stars": 2836,
 	"typescript": true,
 	"version": "4.12.0",
 	"svelte_range": "^3.39.0",

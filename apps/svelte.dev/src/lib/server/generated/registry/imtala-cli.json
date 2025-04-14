@@ -3,7 +3,7 @@
 	"description": "Provides CLI tools for Svelte project setup and management.",
 	"repo_url": "https://github.com/des-des/imtala",
 	"authors": ["des-des"],
-	"downloads": 2,
+	"downloads": 19,
 	"updated": "2022-06-04T16:44:32.755Z",
 	"tags": ["tooling"],
 	"runes": false,

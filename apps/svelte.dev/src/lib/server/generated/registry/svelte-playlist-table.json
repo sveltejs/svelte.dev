@@ -3,12 +3,13 @@
 	"description": "Render lists of track objects as playlist in Svelte apps.",
 	"repo_url": "",
 	"authors": ["jimkang"],
-	"downloads": 0,
+	"downloads": 6,
 	"updated": "2020-10-28T02:45:44.490Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "1.0.0",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "1.0.0"
+	"last_rune_check_version": "1.0.0",
+	"github_stars": 0
 }

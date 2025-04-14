@@ -3,12 +3,13 @@
 	"description": "Create advanced datatables for Svelte applications.",
 	"repo_url": "",
 	"authors": ["henry.feng"],
-	"downloads": 2,
+	"downloads": 13,
 	"updated": "2022-08-12T02:37:39.464Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.2.2",
 	"svelte_range": "^3.23.2",
-	"last_rune_check_version": "0.2.2"
+	"last_rune_check_version": "0.2.2",
+	"github_stars": 0
 }

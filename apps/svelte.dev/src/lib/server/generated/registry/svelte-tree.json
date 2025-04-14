@@ -3,12 +3,13 @@
 	"description": "Create tree-like outline views in Svelte applications.",
 	"repo_url": "",
 	"authors": ["esinx"],
-	"downloads": 5,
+	"downloads": 9,
 	"updated": "2020-06-01T11:58:28.755Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.7.0",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.7.0"
+	"last_rune_check_version": "0.7.0",
+	"github_stars": 0
 }

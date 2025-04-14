@@ -3,7 +3,7 @@
 	"description": "Generate documentation for Svelte components.",
 	"repo_url": "svelte-blueprint",
 	"authors": ["evesan"],
-	"downloads": 4,
+	"downloads": 9,
 	"updated": "2024-09-10T18:37:19.640Z",
 	"tags": ["tooling"],
 	"runes": false,

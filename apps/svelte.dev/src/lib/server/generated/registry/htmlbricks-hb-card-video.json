@@ -3,11 +3,12 @@
 	"description": "Create Svelte Boostrap Video Card WebComponent.",
 	"repo_url": "",
 	"authors": ["dariocaruso"],
-	"downloads": 428,
+	"downloads": 829,
 	"updated": "2025-04-08T22:27:37.068Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.50.0-alpha.27",
-	"last_rune_check_version": "0.50.0-alpha.27"
+	"last_rune_check_version": "0.50.0-alpha.27",
+	"github_stars": 0
 }

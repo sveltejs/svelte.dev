@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/sveltejs/svelte-repl",
 	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
 	"homepage": "https://github.com/sveltejs/svelte-repl#readme",
-	"downloads": 114,
+	"downloads": 167,
 	"updated": "2021-12-02T20:58:48.819Z",
 	"tags": ["tooling"],
 	"runes": false,

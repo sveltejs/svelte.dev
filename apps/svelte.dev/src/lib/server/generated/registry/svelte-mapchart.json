@@ -3,7 +3,7 @@
 	"description": "Generate SVG map charts using Svelte and d3-geo.",
 	"repo_url": "svelte-mapchart",
 	"authors": ["zimrick"],
-	"downloads": 4,
+	"downloads": 11,
 	"updated": "2019-11-30T21:25:38.808Z",
 	"tags": ["ui"],
 	"runes": false,

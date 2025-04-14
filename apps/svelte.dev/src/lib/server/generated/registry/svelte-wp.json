@@ -4,12 +4,13 @@
 	"repo_url": "",
 	"authors": ["ddon"],
 	"homepage": "https://github.com/ddon/SvelteWP",
-	"downloads": 1,
+	"downloads": 3,
 	"updated": "2019-10-02T17:58:30.732Z",
 	"tags": ["integration"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.0.2",
 	"svelte_range": "^3.9.2",
-	"last_rune_check_version": "0.0.2"
+	"last_rune_check_version": "0.0.2",
+	"github_stars": 0
 }

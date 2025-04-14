@@ -3,12 +3,13 @@
 	"description": "Set up and preprocess Svelte projects with CLI.",
 	"repo_url": "",
 	"authors": ["firefish5000"],
-	"downloads": 6,
+	"downloads": 8,
 	"updated": "2020-10-25T16:14:14.610Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.0.24",
 	"svelte_range": "^3.29.4",
-	"last_rune_check_version": "0.0.24"
+	"last_rune_check_version": "0.0.24",
+	"github_stars": 0
 }

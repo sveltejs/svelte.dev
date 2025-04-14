@@ -3,12 +3,13 @@
 	"description": "Implement stack navigation for Svelte applications.",
 	"repo_url": "",
 	"authors": ["externdefs"],
-	"downloads": 2,
+	"downloads": 6,
 	"updated": "2025-03-28T09:57:46.010Z",
 	"tags": ["router"],
 	"runes": true,
 	"typescript": true,
 	"version": "0.1.0",
 	"svelte_range": "^5.25.3",
-	"last_rune_check_version": "0.1.0"
+	"last_rune_check_version": "0.1.0",
+	"github_stars": 0
 }

@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/starbasehq/sveltekit-openid-connect",
 	"authors": ["chrisogden"],
 	"homepage": "https://github.com/starbasehq/sveltekit-openid-connect#readme",
-	"downloads": 8,
+	"downloads": 18,
 	"updated": "2024-04-10T20:25:43.055Z",
 	"tags": ["auth"],
 	"runes": false,

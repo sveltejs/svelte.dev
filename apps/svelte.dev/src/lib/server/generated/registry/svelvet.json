@@ -15,11 +15,11 @@
 		"aaronwnyc"
 	],
 	"homepage": "https://github.com/open-source-labs/Svelvet",
-	"downloads": 1409,
+	"downloads": 1449,
 	"updated": "2025-02-18T20:13:27.930Z",
 	"tags": ["ui", "miscellaneous"],
 	"runes": false,
-	"github_stars": 2681,
+	"github_stars": 2683,
 	"typescript": true,
 	"version": "11.0.5",
 	"svelte_range": ">=3.59.2 || ^4.0.0",

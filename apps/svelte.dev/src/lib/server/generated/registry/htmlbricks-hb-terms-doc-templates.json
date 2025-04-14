@@ -3,11 +3,12 @@
 	"description": "Creates terms web component for Svelte applications.",
 	"repo_url": "",
 	"authors": ["dariocaruso"],
-	"downloads": 398,
+	"downloads": 780,
 	"updated": "2025-04-08T22:27:17.036Z",
 	"tags": ["content"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.50.0-alpha.27",
-	"last_rune_check_version": "0.50.0-alpha.27"
+	"last_rune_check_version": "0.50.0-alpha.27",
+	"github_stars": 0
 }

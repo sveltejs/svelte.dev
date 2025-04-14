@@ -3,12 +3,13 @@
 	"description": "Switch Svelte themes, light or dark, with a simple component.",
 	"repo_url": "",
 	"authors": ["dev-warner"],
-	"downloads": 4,
+	"downloads": 7,
 	"updated": "2020-04-20T15:09:05.770Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.0.11",
 	"svelte_range": "^3.20.1",
-	"last_rune_check_version": "0.0.11"
+	"last_rune_check_version": "0.0.11",
+	"github_stars": 0
 }

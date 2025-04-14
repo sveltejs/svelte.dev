@@ -3,7 +3,7 @@
 	"description": "Create tab components for Svelte and SvelteKit.",
 	"repo_url": "https://gitlab.com/david-plugge/svuick",
 	"authors": ["davidplugge"],
-	"downloads": 3,
+	"downloads": 6,
 	"updated": "2022-02-03T11:39:07.510Z",
 	"tags": ["ui"],
 	"runes": false,

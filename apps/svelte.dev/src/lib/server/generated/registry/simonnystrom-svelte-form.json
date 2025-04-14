@@ -3,12 +3,13 @@
 	"description": "Create extensible Svelte form components.",
 	"repo_url": "",
 	"authors": ["simonnystrom"],
-	"downloads": 7,
+	"downloads": 11,
 	"updated": "2020-10-12T20:09:38.677Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.0.21",
 	"svelte_range": "^3.29.0",
-	"last_rune_check_version": "0.0.21"
+	"last_rune_check_version": "0.0.21",
+	"github_stars": 0
 }

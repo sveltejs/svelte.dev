@@ -3,7 +3,7 @@
 	"description": "Render math equations using MathML and Temml in Svelte components.",
 	"repo_url": "",
 	"authors": ["kelvinsjk"],
-	"downloads": 3,
+	"downloads": 11,
 	"updated": "2024-08-27T03:31:11.663Z",
 	"tags": ["ui"],
 	"runes": true,
@@ -11,5 +11,6 @@
 	"version": "0.0.1",
 	"svelte_range": "^5.0.0-next.239",
 	"kit_range": "^2.0.0",
-	"last_rune_check_version": "0.0.1"
+	"last_rune_check_version": "0.0.1",
+	"github_stars": 0
 }

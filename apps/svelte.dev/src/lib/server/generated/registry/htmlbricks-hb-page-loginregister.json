@@ -3,12 +3,13 @@
 	"description": "Create Svelte web components for Bootstrap login/register pages.",
 	"repo_url": "",
 	"authors": ["dariocaruso"],
-	"downloads": 66,
+	"downloads": 295,
 	"updated": "2022-06-30T18:25:50.510Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.15.7",
 	"svelte_range": "^3.46.2",
-	"last_rune_check_version": "0.15.7"
+	"last_rune_check_version": "0.15.7",
+	"github_stars": 0
 }

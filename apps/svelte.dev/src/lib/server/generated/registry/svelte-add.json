@@ -4,11 +4,11 @@
 	"repo_url": "https://github.com/svelte-add/svelte-add",
 	"authors": [],
 	"homepage": "https://github.com/svelte-add/svelte-add/tree/main#readme",
-	"downloads": 467,
+	"downloads": 626,
 	"updated": "2024-08-10T13:10:11.509Z",
 	"tags": ["tooling"],
 	"runes": false,
-	"github_stars": 1519,
+	"github_stars": 1520,
 	"typescript": false,
 	"version": "2.7.3",
 	"last_rune_check_version": "2.7.3"

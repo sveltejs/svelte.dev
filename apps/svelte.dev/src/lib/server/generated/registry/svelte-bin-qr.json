@@ -3,7 +3,7 @@
 	"description": "Renders QR codes as child, img, or canvas elements in Svelte.",
 	"repo_url": "",
 	"authors": ["binsarjr"],
-	"downloads": 0,
+	"downloads": 6,
 	"updated": "2023-11-11T04:22:56.755Z",
 	"tags": ["ui"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "0.0.2",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.4",
-	"last_rune_check_version": "0.0.2"
+	"last_rune_check_version": "0.0.2",
+	"github_stars": 0
 }

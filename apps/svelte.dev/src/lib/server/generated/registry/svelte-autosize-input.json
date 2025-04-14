@@ -3,7 +3,7 @@
 	"description": "Creates auto-width, auto-grow input components for Svelte.",
 	"repo_url": "",
 	"authors": ["georgeous"],
-	"downloads": 266,
+	"downloads": 198,
 	"updated": "2024-06-12T22:06:36.123Z",
 	"tags": ["ui"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "0.0.10",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.0.0",
-	"last_rune_check_version": "0.0.10"
+	"last_rune_check_version": "0.0.10",
+	"github_stars": 0
 }

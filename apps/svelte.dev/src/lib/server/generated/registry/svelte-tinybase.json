@@ -1,0 +1,16 @@
+{
+	"name": "svelte-tinybase",
+	"description": "Integrate Tinybase database with Svelte 5.",
+	"typescript": true,
+	"repo_url": "",
+	"authors": ["polvallverdu"],
+	"downloads": 16,
+	"updated": "2025-04-05T13:53:31.534Z",
+	"tags": ["miscellaneous"],
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.16.0",
+	"runes": true,
+	"last_rune_check_version": "0.0.1",
+	"version": "0.0.1",
+	"github_stars": 0
+}

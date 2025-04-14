@@ -3,7 +3,7 @@
 	"description": "Integrate lightweight and configurable icons into Svelte apps.",
 	"repo_url": "",
 	"authors": ["ikari132"],
-	"downloads": 2,
+	"downloads": 10,
 	"updated": "2024-02-29T21:24:06.555Z",
 	"tags": ["ui"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "0.3.0",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.0.0",
-	"last_rune_check_version": "0.3.0"
+	"last_rune_check_version": "0.3.0",
+	"github_stars": 0
 }

@@ -3,7 +3,7 @@
 	"description": "Inject active class into route-matched links.",
 	"repo_url": "https://github.com/kwhitley/svelte-navlink-action",
 	"authors": ["krwhitley"],
-	"downloads": 3,
+	"downloads": 9,
 	"updated": "2022-12-29T18:43:30.214Z",
 	"tags": ["router"],
 	"runes": false,

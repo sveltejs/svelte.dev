@@ -3,7 +3,7 @@
 	"description": "Display relative time with timezone information.",
 	"repo_url": "",
 	"authors": ["itsmingjie"],
-	"downloads": 4,
+	"downloads": 8,
 	"updated": "2025-03-31T16:06:10.690Z",
 	"tags": ["ui"],
 	"runes": true,
@@ -11,5 +11,6 @@
 	"version": "0.0.1",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.20.2",
-	"last_rune_check_version": "0.0.1"
+	"last_rune_check_version": "0.0.1",
+	"github_stars": 0
 }

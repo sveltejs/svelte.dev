@@ -4,7 +4,7 @@
 	"repo_url": "git@gitlab.com/tcsorrel/svelte-search-table",
 	"authors": ["tcsorrel"],
 	"homepage": "https://gitlab.com/tcsorrel/svelte-search-table#readme",
-	"downloads": 7,
+	"downloads": 11,
 	"updated": "2023-04-16T21:06:09.340Z",
 	"tags": ["ui", "miscellaneous"],
 	"runes": false,

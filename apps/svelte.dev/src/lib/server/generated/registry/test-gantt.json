@@ -3,7 +3,7 @@
 	"description": "Create interactive Gantt charts with drag-and-drop functionality.",
 	"repo_url": "https://github.com/nguyengiabaob/b-gantt",
 	"authors": ["nguyengiabaob"],
-	"downloads": 26,
+	"downloads": 24,
 	"updated": "2024-03-27T03:55:58.017Z",
 	"tags": ["ui"],
 	"runes": false,

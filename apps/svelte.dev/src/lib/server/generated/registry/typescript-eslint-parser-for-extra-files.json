@@ -4,13 +4,13 @@
 	"repo_url": "https://github.com/ota-meshi/typescript-eslint-parser-for-extra-files",
 	"authors": ["ota-meshi"],
 	"homepage": "https://github.com/ota-meshi/typescript-eslint-parser-for-extra-files#readme",
-	"downloads": 5023,
-	"updated": "2024-06-09T11:58:52.874Z",
+	"downloads": 5294,
+	"updated": "2025-04-12T01:31:44.458Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 47,
 	"typescript": true,
-	"version": "0.7.0",
+	"version": "0.8.0",
 	"svelte_range": "^4.0.0",
-	"last_rune_check_version": "0.7.0"
+	"last_rune_check_version": "0.8.0"
 }

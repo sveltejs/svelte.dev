@@ -3,11 +3,12 @@
 	"description": "Create auth social login button web component.",
 	"repo_url": "",
 	"authors": ["dariocaruso"],
-	"downloads": 756,
+	"downloads": 805,
 	"updated": "2025-04-08T22:27:38.731Z",
 	"tags": ["auth"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.50.0-alpha.27",
-	"last_rune_check_version": "0.50.0-alpha.27"
+	"last_rune_check_version": "0.50.0-alpha.27",
+	"github_stars": 0
 }

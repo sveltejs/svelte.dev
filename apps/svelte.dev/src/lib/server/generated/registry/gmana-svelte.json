@@ -3,7 +3,7 @@
 	"description": "Create Svelte libraries with create-svelte.",
 	"repo_url": "",
 	"authors": ["sunsreng"],
-	"downloads": 4,
+	"downloads": 12,
 	"updated": "2024-06-22T08:58:14.131Z",
 	"tags": ["tooling"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "0.0.9",
 	"svelte_range": "^5.0.0-next.1",
 	"kit_range": "^2.5.17",
-	"last_rune_check_version": "0.0.9"
+	"last_rune_check_version": "0.0.9",
+	"github_stars": 0
 }

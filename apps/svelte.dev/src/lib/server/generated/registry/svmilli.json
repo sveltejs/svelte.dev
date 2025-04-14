@@ -3,12 +3,13 @@
 	"description": "UI framework for Svelte using the milligram CSS.",
 	"repo_url": "",
 	"authors": ["bebenzer"],
-	"downloads": 1,
+	"downloads": 5,
 	"updated": "2020-05-17T15:27:34.840Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.0.15",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.0.15"
+	"last_rune_check_version": "0.0.15",
+	"github_stars": 0
 }

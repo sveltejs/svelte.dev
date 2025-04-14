@@ -3,12 +3,13 @@
 	"description": "Generate TypeScript definition files from Svelte components.",
 	"repo_url": "",
 	"authors": ["kchang44"],
-	"downloads": 1,
+	"downloads": 6,
 	"updated": "2018-01-01T22:05:24.438Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"typescript": false,
 	"version": "1.0.7",
 	"svelte_range": "^1.41.2",
-	"last_rune_check_version": "1.0.7"
+	"last_rune_check_version": "1.0.7",
+	"github_stars": 0
 }

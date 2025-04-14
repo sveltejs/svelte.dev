@@ -3,12 +3,13 @@
 	"description": "Render PDF pages responsively in Svelte components.",
 	"repo_url": "",
 	"authors": ["omysoul"],
-	"downloads": 1,
+	"downloads": 6,
 	"updated": "2020-10-11T13:46:06.356Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.0.3",
 	"svelte_range": "^3.23.2",
-	"last_rune_check_version": "0.0.3"
+	"last_rune_check_version": "0.0.3",
+	"github_stars": 0
 }

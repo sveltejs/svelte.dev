@@ -3,7 +3,7 @@
 	"description": "Build data grids with sorting, filtering, and export options.",
 	"repo_url": "",
 	"authors": ["joirg_dev98"],
-	"downloads": 8,
+	"downloads": 10,
 	"updated": "2025-03-20T16:35:37.207Z",
 	"tags": ["ui", "miscellaneous"],
 	"runes": true,
@@ -11,5 +11,6 @@
 	"version": "0.0.3",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
-	"last_rune_check_version": "0.0.3"
+	"last_rune_check_version": "0.0.3",
+	"github_stars": 0
 }

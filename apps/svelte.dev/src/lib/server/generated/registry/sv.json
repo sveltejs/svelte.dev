@@ -4,12 +4,12 @@
 	"repo_url": "https://github.com/sveltejs/cli",
 	"authors": ["rich_harris", "svelte-admin"],
 	"homepage": "https://svelte.dev",
-	"downloads": 15436,
-	"updated": "2025-04-03T15:21:57.920Z",
+	"downloads": 14968,
+	"updated": "2025-04-13T14:34:17.910Z",
 	"tags": ["tooling"],
 	"runes": false,
-	"github_stars": 339,
+	"github_stars": 341,
 	"typescript": true,
-	"version": "0.8.0",
-	"last_rune_check_version": "0.8.0"
+	"version": "0.8.1",
+	"last_rune_check_version": "0.8.1"
 }

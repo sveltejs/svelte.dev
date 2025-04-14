@@ -3,7 +3,7 @@
 	"description": "Simplifies authentication in Svelte apps with UI components.",
 	"repo_url": "",
 	"authors": ["chrisjayden"],
-	"downloads": 6,
+	"downloads": 12,
 	"updated": "2023-05-25T16:04:34.132Z",
 	"tags": ["auth", "ui"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "0.2.0",
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.5.0",
-	"last_rune_check_version": "0.2.0"
+	"last_rune_check_version": "0.2.0",
+	"github_stars": 0
 }

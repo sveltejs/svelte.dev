@@ -4,7 +4,7 @@
 	"repo_url": "",
 	"authors": ["iugsm"],
 	"homepage": "https://github.com/richhost/svelte-compare-slider",
-	"downloads": 1,
+	"downloads": 5,
 	"updated": "2024-12-19T09:28:16.015Z",
 	"tags": ["ui"],
 	"runes": true,
@@ -12,5 +12,6 @@
 	"version": "0.2.0",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.12.1",
-	"last_rune_check_version": "0.2.0"
+	"last_rune_check_version": "0.2.0",
+	"github_stars": 0
 }

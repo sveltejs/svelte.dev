@@ -4,13 +4,14 @@
 	"repo_url": "",
 	"authors": ["nanotron"],
 	"homepage": "https://github.com/avidys/s-blog",
-	"downloads": 62,
-	"updated": "2025-03-31T21:24:09.970Z",
+	"downloads": 227,
+	"updated": "2025-04-13T01:12:14.729Z",
 	"tags": ["content"],
 	"runes": false,
 	"typescript": true,
-	"version": "1.8.0",
+	"version": "1.11.1",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.18.0",
-	"last_rune_check_version": "1.8.0"
+	"last_rune_check_version": "1.11.1",
+	"github_stars": 0
 }

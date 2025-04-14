@@ -3,7 +3,7 @@
 	"description": "Provides an opinionated portal component for Svelte applications.",
 	"repo_url": "",
 	"authors": ["hunghg255"],
-	"downloads": 0,
+	"downloads": 4,
 	"updated": "2023-10-20T02:10:43.359Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "1.0.1",
 	"svelte_range": ">=3 <5",
 	"kit_range": "^1.26.0",
-	"last_rune_check_version": "1.0.1"
+	"last_rune_check_version": "1.0.1",
+	"github_stars": 0
 }

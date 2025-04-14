@@ -3,12 +3,13 @@
 	"description": "Parse Markdown into Svelte components, designed for Skeleton.js.",
 	"repo_url": "",
 	"authors": ["safwansamsudeen"],
-	"downloads": 1,
+	"downloads": 8,
 	"updated": "2023-06-27T10:04:22.972Z",
 	"tags": ["content"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.1.4",
 	"svelte_range": "^4.0.0",
-	"last_rune_check_version": "0.1.4"
+	"last_rune_check_version": "0.1.4",
+	"github_stars": 0
 }

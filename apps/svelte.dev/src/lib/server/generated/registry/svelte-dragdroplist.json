@@ -4,12 +4,13 @@
 	"repo_url": "",
 	"authors": ["jwlarocque"],
 	"homepage": "https://github.com/jwlarocque/svelte-dragdroplist",
-	"downloads": 43,
+	"downloads": 36,
 	"updated": "2020-08-19T21:00:08.121Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "1.1.1",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "1.1.1"
+	"last_rune_check_version": "1.1.1",
+	"github_stars": 0
 }

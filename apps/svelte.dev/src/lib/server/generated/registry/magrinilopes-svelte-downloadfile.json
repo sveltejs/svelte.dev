@@ -4,12 +4,13 @@
 	"repo_url": "",
 	"authors": ["magrinilopes"],
 	"homepage": "https://github.com/magrinilopes/svelte-downloadfile#readme",
-	"downloads": 16,
+	"downloads": 18,
 	"updated": "2021-05-03T19:15:26.922Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.1.2",
 	"svelte_range": "3.35.0",
-	"last_rune_check_version": "0.1.2"
+	"last_rune_check_version": "0.1.2",
+	"github_stars": 0
 }

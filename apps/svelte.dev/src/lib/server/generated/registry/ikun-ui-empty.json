@@ -1,0 +1,15 @@
+{
+	"name": "@ikun-ui/empty",
+	"description": "Create empty state component for Svelte.",
+	"typescript": true,
+	"repo_url": "",
+	"authors": ["baiwusanyu"],
+	"downloads": 27,
+	"updated": "2025-01-24T03:48:52.936Z",
+	"tags": ["ui"],
+	"svelte_range": "^4.2.12",
+	"runes": false,
+	"last_rune_check_version": "0.2.8",
+	"version": "0.2.8",
+	"github_stars": 0
+}

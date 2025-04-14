@@ -3,7 +3,7 @@
 	"description": "Build reactive UI components using Svelte 5 runes.",
 	"repo_url": "",
 	"authors": ["yrrrrrf"],
-	"downloads": 45,
+	"downloads": 72,
 	"updated": "2025-04-07T04:51:40.634Z",
 	"tags": ["ui"],
 	"runes": true,
@@ -11,5 +11,6 @@
 	"version": "0.0.6",
 	"svelte_range": "5.25.7",
 	"kit_range": "2.20.4",
-	"last_rune_check_version": "0.0.6"
+	"last_rune_check_version": "0.0.6",
+	"github_stars": 0
 }

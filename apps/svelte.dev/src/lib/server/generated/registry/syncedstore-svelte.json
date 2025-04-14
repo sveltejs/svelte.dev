@@ -3,12 +3,13 @@
 	"description": "Provide Svelte helpers for SyncedStore.",
 	"repo_url": "",
 	"authors": ["yousefed"],
-	"downloads": 239,
+	"downloads": 298,
 	"updated": "2023-10-15T11:48:21.416Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.6.0",
 	"svelte_range": "*",
-	"last_rune_check_version": "0.6.0"
+	"last_rune_check_version": "0.6.0",
+	"github_stars": 0
 }

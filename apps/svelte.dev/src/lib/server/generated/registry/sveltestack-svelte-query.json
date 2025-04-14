@@ -4,12 +4,13 @@
 	"repo_url": "",
 	"authors": ["amen-souissi"],
 	"homepage": "https://github.com/SvelteStack/svelte-query",
-	"downloads": 2951,
+	"downloads": 2874,
 	"updated": "2022-01-22T21:30:04.205Z",
 	"tags": ["server"],
 	"runes": false,
 	"typescript": true,
 	"version": "1.6.0",
 	"svelte_range": "^3.29.0",
-	"last_rune_check_version": "1.6.0"
+	"last_rune_check_version": "1.6.0",
+	"github_stars": 0
 }

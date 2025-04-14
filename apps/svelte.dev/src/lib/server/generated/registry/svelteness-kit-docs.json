@@ -3,7 +3,7 @@
 	"description": "Integrate documentation for SvelteKit.",
 	"repo_url": "https://github.com/svelteness/kit-docs",
 	"authors": ["mihar-22"],
-	"downloads": 70,
+	"downloads": 118,
 	"updated": "2023-09-16T01:27:25.411Z",
 	"tags": ["tooling", "content"],
 	"runes": false,

@@ -3,12 +3,13 @@
 	"description": "Create note card component for Svelte.",
 	"repo_url": "",
 	"authors": ["trevyn"],
-	"downloads": 1,
+	"downloads": 6,
 	"updated": "2021-01-17T14:10:37.911Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"typescript": false,
 	"version": "1.0.2",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "1.0.2"
+	"last_rune_check_version": "1.0.2",
+	"github_stars": 0
 }

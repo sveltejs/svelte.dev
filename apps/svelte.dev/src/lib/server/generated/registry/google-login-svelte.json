@@ -3,7 +3,7 @@
 	"description": "Implement Google sign-in functionality in Svelte apps.",
 	"repo_url": "",
 	"authors": ["jorge-pereira"],
-	"downloads": 60,
+	"downloads": 95,
 	"updated": "2022-01-08T01:36:00.174Z",
 	"tags": ["auth"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "0.0.1",
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
-	"last_rune_check_version": "0.0.1"
+	"last_rune_check_version": "0.0.1",
+	"github_stars": 0
 }

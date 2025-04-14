@@ -3,12 +3,13 @@
 	"description": "Detect idleness in Svelte applications.",
 	"repo_url": "",
 	"authors": ["mathiaswp"],
-	"downloads": 512,
+	"downloads": 564,
 	"updated": "2024-10-02T16:15:22.727Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"typescript": true,
 	"version": "3.0.1",
 	"svelte_range": "^4.2.19",
-	"last_rune_check_version": "3.0.1"
+	"last_rune_check_version": "3.0.1",
+	"github_stars": 0
 }

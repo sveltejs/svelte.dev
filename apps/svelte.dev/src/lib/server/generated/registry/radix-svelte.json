@@ -3,7 +3,7 @@
 	"description": "Build accessible UI components with Svelte and Radix UI.",
 	"repo_url": "",
 	"authors": ["tglide_personal"],
-	"downloads": 560,
+	"downloads": 585,
 	"updated": "2023-07-23T19:43:39.851Z",
 	"tags": ["ui"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "0.9.0",
 	"svelte_range": "^4.1.1",
 	"kit_range": "^1.22.3",
-	"last_rune_check_version": "0.9.0"
+	"last_rune_check_version": "0.9.0",
+	"github_stars": 0
 }

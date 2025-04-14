@@ -3,12 +3,13 @@
 	"description": "Add emoji picker component to Svelte apps.",
 	"repo_url": "",
 	"authors": ["ehne"],
-	"downloads": 153,
+	"downloads": 128,
 	"updated": "2019-08-20T05:32:15.567Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "1.1.2",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "1.1.2"
+	"last_rune_check_version": "1.1.2",
+	"github_stars": 0
 }

@@ -3,12 +3,13 @@
 	"description": "Create pie charts using G2Plot for Svelte applications.",
 	"repo_url": "",
 	"authors": ["gonwe"],
-	"downloads": 1,
+	"downloads": 5,
 	"updated": "2023-02-14T08:43:32.172Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.0.3",
 	"svelte_range": "^3.55.1",
-	"last_rune_check_version": "0.0.3"
+	"last_rune_check_version": "0.0.3",
+	"github_stars": 0
 }

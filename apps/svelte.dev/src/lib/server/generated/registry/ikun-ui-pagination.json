@@ -1,0 +1,15 @@
+{
+	"name": "@ikun-ui/pagination",
+	"description": "Create pagination component for Svelte.",
+	"typescript": true,
+	"repo_url": "",
+	"authors": ["baiwusanyu"],
+	"downloads": 21,
+	"updated": "2025-01-24T03:49:09.170Z",
+	"tags": ["ui"],
+	"svelte_range": "^4.2.12",
+	"runes": false,
+	"last_rune_check_version": "0.2.8",
+	"version": "0.2.8",
+	"github_stars": 0
+}

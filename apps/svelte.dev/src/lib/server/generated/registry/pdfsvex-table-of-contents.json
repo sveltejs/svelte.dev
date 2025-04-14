@@ -3,12 +3,13 @@
 	"description": "Generate table of contents for PDF documents in Svelte.",
 	"repo_url": "",
 	"authors": ["manuel3108"],
-	"downloads": 3,
+	"downloads": 8,
 	"updated": "2021-07-04T12:13:41.431Z",
 	"tags": ["content"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.1.5",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.1.5"
+	"last_rune_check_version": "0.1.5",
+	"github_stars": 0
 }

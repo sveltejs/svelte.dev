@@ -3,12 +3,13 @@
 	"description": "Manage forms with validation in Svelte applications.",
 	"repo_url": "",
 	"authors": ["srmullen"],
-	"downloads": 1,
+	"downloads": 12,
 	"updated": "2021-02-17T22:19:13.385Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.0.8",
 	"svelte_range": "^3.31.2",
-	"last_rune_check_version": "0.0.8"
+	"last_rune_check_version": "0.0.8",
+	"github_stars": 0
 }

@@ -3,12 +3,13 @@
 	"description": "Custom select component with filtering and keyboard support.",
 	"repo_url": "",
 	"authors": ["codemyst"],
-	"downloads": 1,
+	"downloads": 5,
 	"updated": "2021-05-28T14:41:55.951Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "1.2.0",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "1.2.0"
+	"last_rune_check_version": "1.2.0",
+	"github_stars": 0
 }

@@ -3,7 +3,7 @@
 	"description": "Provide tools for headless WordPress with Svelte.",
 	"repo_url": "https://github.com/RevNelson/svelte-wp-headless",
 	"authors": ["revnelson"],
-	"downloads": 3,
+	"downloads": 12,
 	"updated": "2022-06-01T10:07:18.251Z",
 	"tags": ["integration", "server"],
 	"runes": false,

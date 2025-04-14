@@ -17,15 +17,15 @@
 		"xrutayisire",
 		"bapmrl"
 	],
-	"downloads": 968,
-	"updated": "2025-03-31T15:09:46.386Z",
+	"downloads": 2861,
+	"updated": "2025-04-11T15:35:37.427Z",
 	"tags": ["adapter", "tooling"],
 	"runes": false,
-	"github_stars": 294,
+	"github_stars": 293,
 	"homepage": "https://prismic.io/docs",
 	"typescript": true,
-	"version": "0.3.73",
+	"version": "0.3.74",
 	"svelte_range": "^3.54.0 || ^4.0.0-next.0 || ^5.0.0-next.1",
 	"kit_range": "^1 || ^2",
-	"last_rune_check_version": "0.3.73"
+	"last_rune_check_version": "0.3.74"
 }

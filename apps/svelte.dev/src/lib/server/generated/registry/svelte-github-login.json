@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/andrelmlins/svelte-github-login",
 	"authors": ["andrelmlins"],
 	"homepage": "https://svelte-github-login.netlify.com/",
-	"downloads": 4,
+	"downloads": 10,
 	"updated": "2022-04-30T15:10:51.732Z",
 	"tags": ["auth"],
 	"runes": false,

@@ -3,7 +3,7 @@
 	"description": "Create toast notifications in SvelteKit applications.",
 	"repo_url": "https://gitlab.com/david-plugge/svuick",
 	"authors": ["davidplugge"],
-	"downloads": 2,
+	"downloads": 6,
 	"updated": "2022-02-03T11:39:11.966Z",
 	"tags": ["ui", "miscellaneous"],
 	"runes": false,

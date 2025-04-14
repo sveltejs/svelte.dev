@@ -4,13 +4,13 @@
 	"repo_url": "https://github.com/unnoq/orpc",
 	"authors": ["unnoq"],
 	"homepage": "https://orpc.unnoq.com",
-	"downloads": 799,
-	"updated": "2025-04-09T13:47:16.846Z",
+	"downloads": 2183,
+	"updated": "2025-04-12T13:39:09.903Z",
 	"tags": ["server"],
 	"runes": false,
-	"github_stars": 975,
+	"github_stars": 1023,
 	"typescript": true,
-	"version": "0.53.0",
+	"version": "0.54.0",
 	"svelte_range": ">=4.2.0",
-	"last_rune_check_version": "0.53.0"
+	"last_rune_check_version": "0.54.0"
 }

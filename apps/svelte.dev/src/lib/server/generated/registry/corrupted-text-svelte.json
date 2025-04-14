@@ -4,7 +4,7 @@
 	"repo_url": "",
 	"authors": ["ultracakebakery"],
 	"homepage": "https://github.com/UltraCakeBakery/corrupted-text-svelte",
-	"downloads": 0,
+	"downloads": 6,
 	"updated": "2023-11-03T22:35:23.164Z",
 	"tags": ["ui"],
 	"runes": false,
@@ -12,5 +12,6 @@
 	"version": "1.1.0",
 	"svelte_range": "^3.59.2",
 	"kit_range": "^1.27.0",
-	"last_rune_check_version": "1.1.0"
+	"last_rune_check_version": "1.1.0",
+	"github_stars": 0
 }

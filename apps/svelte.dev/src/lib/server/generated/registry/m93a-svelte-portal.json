@@ -3,7 +3,7 @@
 	"description": "Creates portals for rendering content outside Svelte components.",
 	"repo_url": "https://github.com/m93a/svelte-portal",
 	"authors": ["c.sha"],
-	"downloads": 6,
+	"downloads": 10,
 	"updated": "2022-05-18T13:41:13.891Z",
 	"tags": ["ui"],
 	"runes": false,

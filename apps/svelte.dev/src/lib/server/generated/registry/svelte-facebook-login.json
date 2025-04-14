@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/andrelmlins/svelte-facebook-login",
 	"authors": ["andrelmlins"],
 	"homepage": "https://svelte-facebook-login.netlify.com/",
-	"downloads": 6,
+	"downloads": 8,
 	"updated": "2021-02-24T12:05:55.071Z",
 	"tags": ["auth"],
 	"runes": false,

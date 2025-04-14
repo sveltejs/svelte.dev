@@ -3,12 +3,13 @@
 	"description": "Build HireHive UI with Svelte components.",
 	"repo_url": "",
 	"authors": ["hirehive-team"],
-	"downloads": 68,
+	"downloads": 98,
 	"updated": "2023-10-03T14:57:04.161Z",
 	"tags": ["design-system"],
 	"runes": false,
 	"typescript": true,
 	"version": "1.12.1",
 	"svelte_range": "^3.48.0",
-	"last_rune_check_version": "1.12.1"
+	"last_rune_check_version": "1.12.1",
+	"github_stars": 0
 }

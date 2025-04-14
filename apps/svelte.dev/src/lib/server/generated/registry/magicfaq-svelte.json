@@ -1,0 +1,15 @@
+{
+	"name": "@magicfaq/svelte",
+	"description": "Embed Magic FAQ widget into Svelte websites.",
+	"typescript": true,
+	"repo_url": "",
+	"authors": ["sudeep72", "abdul1810"],
+	"downloads": 13,
+	"updated": "2025-04-01T13:43:35.940Z",
+	"tags": ["integration"],
+	"svelte_range": "^5.25.5",
+	"runes": true,
+	"last_rune_check_version": "1.0.2",
+	"version": "1.0.2",
+	"github_stars": 0
+}

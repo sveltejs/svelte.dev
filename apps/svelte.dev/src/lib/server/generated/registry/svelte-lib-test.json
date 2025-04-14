@@ -3,12 +3,13 @@
 	"description": "Base for building shareable Svelte components.",
 	"repo_url": "",
 	"authors": ["1ilsang"],
-	"downloads": 1,
+	"downloads": 4,
 	"updated": "2021-06-13T15:15:20.431Z",
 	"tags": ["tooling", "miscellaneous"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.1.0",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.1.0"
+	"last_rune_check_version": "0.1.0",
+	"github_stars": 0
 }

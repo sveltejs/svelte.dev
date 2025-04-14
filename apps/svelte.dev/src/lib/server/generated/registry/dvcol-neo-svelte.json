@@ -4,14 +4,14 @@
 	"repo_url": "https://github.com/dvcol/neo-svelte",
 	"authors": ["dvcol"],
 	"homepage": "https://github.com/dvcol/neo-svelte",
-	"downloads": 15,
-	"updated": "2025-03-06T13:36:18.882Z",
+	"downloads": 83,
+	"updated": "2025-04-11T12:57:52.604Z",
 	"tags": ["ui", "design-system"],
 	"runes": true,
-	"github_stars": 14,
+	"github_stars": 15,
 	"typescript": true,
-	"version": "0.1.11",
+	"version": "0.1.12",
 	"svelte_range": ">=5",
 	"kit_range": "^2.17.1",
-	"last_rune_check_version": "0.1.11"
+	"last_rune_check_version": "0.1.12"
 }

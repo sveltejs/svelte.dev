@@ -4,14 +4,14 @@
 	"repo_url": "https://github.com/mudiageo/svelte-guardian",
 	"authors": ["mudiageo"],
 	"homepage": "https://github.com/mudiageo/svelte-guardian#readme",
-	"downloads": 9,
-	"updated": "2025-02-20T16:03:13.410Z",
+	"downloads": 62,
+	"updated": "2025-04-10T17:57:29.928Z",
 	"tags": ["auth"],
 	"runes": false,
 	"github_stars": 1,
 	"typescript": true,
-	"version": "0.2.0-alpha-1",
+	"version": "0.2.0-alpha-2",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
-	"last_rune_check_version": "0.2.0-alpha-1"
+	"last_rune_check_version": "0.2.0-alpha-2"
 }

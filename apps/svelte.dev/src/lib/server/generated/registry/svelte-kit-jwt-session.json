@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/astralyazilim/svelte_kit_jwt_session",
 	"authors": ["pisinsi"],
 	"homepage": "https://github.com/astralyazilim/svelte_kit_jwt_session#readme",
-	"downloads": 13,
+	"downloads": 18,
 	"updated": "2022-11-19T23:30:12.979Z",
 	"tags": ["auth", "server"],
 	"runes": false,

@@ -4,13 +4,13 @@
 	"repo_url": "https://github.com/withastro/astro",
 	"authors": ["natemoo-re", "fredkschott", "matthewp"],
 	"homepage": "https://docs.astro.build/en/guides/integrations-guide/svelte/",
-	"downloads": 30473,
-	"updated": "2025-03-31T15:47:43.438Z",
+	"downloads": 29235,
+	"updated": "2025-04-14T08:43:48.078Z",
 	"tags": ["integration"],
 	"runes": true,
-	"github_stars": 50321,
+	"github_stars": 50476,
 	"typescript": true,
-	"version": "7.0.9",
+	"version": "7.0.10",
 	"svelte_range": "^5.1.16",
-	"last_rune_check_version": "7.0.9"
+	"last_rune_check_version": "7.0.10"
 }

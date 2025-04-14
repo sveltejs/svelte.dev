@@ -3,12 +3,13 @@
 	"description": "Visualize attention matrices between token lists in Svelte.",
 	"repo_url": "",
 	"authors": ["bhoov"],
-	"downloads": 1,
+	"downloads": 9,
 	"updated": "2020-09-03T20:28:27.037Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.0.3",
 	"svelte_range": "^3.5.1",
-	"last_rune_check_version": "0.0.3"
+	"last_rune_check_version": "0.0.3",
+	"github_stars": 0
 }

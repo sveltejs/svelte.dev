@@ -3,12 +3,13 @@
 	"description": "Create page banner component for Svelte.",
 	"repo_url": "",
 	"authors": ["dariocaruso"],
-	"downloads": 24,
+	"downloads": 32,
 	"updated": "2022-01-02T19:14:36.809Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.2.4",
 	"svelte_range": "^3.44.3",
-	"last_rune_check_version": "0.2.4"
+	"last_rune_check_version": "0.2.4",
+	"github_stars": 0
 }

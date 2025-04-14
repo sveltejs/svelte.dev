@@ -3,12 +3,13 @@
 	"description": "Svelte form validation library with type safety and custom validators.",
 	"repo_url": "",
 	"authors": ["hardwayder"],
-	"downloads": 264,
+	"downloads": 144,
 	"updated": "2024-04-15T16:53:49.639Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"typescript": true,
 	"version": "3.0.6",
 	"svelte_range": "^4.0.5",
-	"last_rune_check_version": "3.0.6"
+	"last_rune_check_version": "3.0.6",
+	"github_stars": 0
 }

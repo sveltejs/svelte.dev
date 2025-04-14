@@ -3,12 +3,13 @@
 	"description": "Insert web component to archived sites on Archive.of.sb.",
 	"repo_url": "",
 	"authors": ["laosb"],
-	"downloads": 25,
+	"downloads": 30,
 	"updated": "2022-02-11T15:11:10.765Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "1.0.2",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "1.0.2"
+	"last_rune_check_version": "1.0.2",
+	"github_stars": 0
 }

@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/lagossapp/lagoss",
 	"authors": ["anbraten"],
 	"homepage": "https://github.com/lagossapp/lagoss/tree/main/packages/integrations/sveltekit",
-	"downloads": 2,
+	"downloads": 4,
 	"updated": "2024-03-01T09:00:01.292Z",
 	"tags": ["adapter"],
 	"runes": false,

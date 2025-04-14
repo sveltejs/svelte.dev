@@ -3,12 +3,13 @@
 	"description": "Provide font selection component for Svelte applications.",
 	"repo_url": "",
 	"authors": ["owaissimplero"],
-	"downloads": 35,
+	"downloads": 25,
 	"updated": "2024-10-03T08:51:46.788Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.1.12",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.1.12"
+	"last_rune_check_version": "0.1.12",
+	"github_stars": 0
 }

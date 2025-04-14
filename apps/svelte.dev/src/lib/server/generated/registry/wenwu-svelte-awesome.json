@@ -3,12 +3,13 @@
 	"description": "Use FontAwesome icons in Svelte applications.",
 	"repo_url": "",
 	"authors": ["wenwu"],
-	"downloads": 0,
+	"downloads": 5,
 	"updated": "2020-03-12T09:53:53.964Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "1.0.3",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "1.0.3"
+	"last_rune_check_version": "1.0.3",
+	"github_stars": 0
 }

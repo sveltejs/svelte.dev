@@ -3,7 +3,7 @@
 	"description": "Translate Svelte apps using Lingui for internationalization.",
 	"repo_url": "https://github.com/hyperlab/svelte-lingui",
 	"authors": ["mrlundis"],
-	"downloads": 2,
+	"downloads": 5,
 	"updated": "2019-11-04T16:39:26.182Z",
 	"tags": ["integration", "content"],
 	"runes": false,

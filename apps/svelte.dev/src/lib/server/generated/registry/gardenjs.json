@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/gardenjs/gardenjs",
 	"authors": ["robindanzinger", "martinfarkas"],
 	"homepage": "https://gardenjs.org/",
-	"downloads": 11,
+	"downloads": 24,
 	"updated": "2025-03-28T13:35:56.685Z",
 	"tags": ["tooling"],
 	"runes": true,

@@ -4,12 +4,13 @@
 	"repo_url": "",
 	"authors": ["micha-lmxt"],
 	"homepage": "https://github.com/micha-lmxt/svelte-textfit",
-	"downloads": 1040,
+	"downloads": 1055,
 	"updated": "2022-09-27T07:21:22.421Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "1.1.4",
 	"svelte_range": "^3.32.3",
-	"last_rune_check_version": "1.1.4"
+	"last_rune_check_version": "1.1.4",
+	"github_stars": 0
 }

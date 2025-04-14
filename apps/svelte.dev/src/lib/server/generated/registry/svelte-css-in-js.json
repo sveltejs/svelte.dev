@@ -3,12 +3,13 @@
 	"description": "Enable CSS-in-JS handling from Svelte components.",
 	"repo_url": "",
 	"authors": ["hmmhmmhm"],
-	"downloads": 4,
+	"downloads": 20,
 	"updated": "2020-01-02T03:04:35.844Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"typescript": true,
 	"version": "1.0.3",
 	"svelte_range": "*",
-	"last_rune_check_version": "1.0.3"
+	"last_rune_check_version": "1.0.3",
+	"github_stars": 0
 }

@@ -3,12 +3,13 @@
 	"description": "Create a painter app using Svelte.",
 	"repo_url": "",
 	"authors": ["miruoon"],
-	"downloads": 5,
+	"downloads": 11,
 	"updated": "2021-07-04T04:44:24.695Z",
 	"tags": ["ui", "miscellaneous"],
 	"runes": false,
 	"typescript": true,
 	"version": "1.0.2",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "1.0.2"
+	"last_rune_check_version": "1.0.2",
+	"github_stars": 0
 }

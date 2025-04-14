@@ -3,7 +3,7 @@
 	"description": "Use Eva icons in Svelte projects.",
 	"repo_url": "https://github.com/dylanblokhuis/svelte-eva-icons",
 	"authors": ["dylanblokhuis"],
-	"downloads": 8,
+	"downloads": 6,
 	"updated": "2019-11-19T18:52:10.182Z",
 	"tags": ["ui"],
 	"runes": false,

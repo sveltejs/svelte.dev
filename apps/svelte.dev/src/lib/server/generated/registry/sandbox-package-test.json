@@ -3,7 +3,7 @@
 	"description": "Everything needed to build a Svelte library.",
 	"repo_url": "",
 	"authors": ["nycolaide"],
-	"downloads": 143,
+	"downloads": 85,
 	"updated": "2025-03-26T13:47:57.598Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "0.0.30",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.20.2",
-	"last_rune_check_version": "0.0.30"
+	"last_rune_check_version": "0.0.30",
+	"github_stars": 0
 }

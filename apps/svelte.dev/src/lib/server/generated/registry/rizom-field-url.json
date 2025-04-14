@@ -1,0 +1,17 @@
+{
+	"name": "@rizom/field-url",
+	"description": "Display document URLs within Rizom CMS.",
+	"typescript": true,
+	"repo_url": "",
+	"authors": ["bienoubien"],
+	"homepage": "https://github.com/bienoubien-studio/rizom-field-url",
+	"downloads": 28,
+	"updated": "2025-04-04T17:52:21.167Z",
+	"tags": ["content"],
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.16.0",
+	"runes": true,
+	"last_rune_check_version": "0.0.3",
+	"version": "0.0.3",
+	"github_stars": 0
+}

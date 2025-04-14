@@ -3,12 +3,13 @@
 	"description": "Generate static blogs using Svelte and Markdown.",
 	"repo_url": "",
 	"authors": ["chris"],
-	"downloads": 46,
+	"downloads": 51,
 	"updated": "2025-02-27T20:55:19.722Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.2.5",
 	"svelte_range": "^3.55.1",
-	"last_rune_check_version": "0.2.5"
+	"last_rune_check_version": "0.2.5",
+	"github_stars": 0
 }

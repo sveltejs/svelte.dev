@@ -3,12 +3,13 @@
 	"description": "Offer Svelte UI components kit from argil data agency.",
 	"repo_url": "",
 	"authors": ["delwwwinc"],
-	"downloads": 10,
+	"downloads": 15,
 	"updated": "2024-09-26T12:22:38.610Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.0.8",
 	"svelte_range": "^4.0.0",
-	"last_rune_check_version": "0.0.8"
+	"last_rune_check_version": "0.0.8",
+	"github_stars": 0
 }

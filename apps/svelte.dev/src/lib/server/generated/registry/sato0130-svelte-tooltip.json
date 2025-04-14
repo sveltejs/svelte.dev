@@ -3,7 +3,7 @@
 	"description": "Create lightweight, action-based tooltips for Svelte elements.",
 	"repo_url": "https://github.com/K-Sato1995/svelte-tooltip",
 	"authors": ["sato0130"],
-	"downloads": 5,
+	"downloads": 9,
 	"updated": "2022-06-24T07:15:53.633Z",
 	"tags": ["ui"],
 	"runes": false,

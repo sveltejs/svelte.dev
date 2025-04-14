@@ -3,7 +3,7 @@
 	"description": "Create multi-series SVG progress bars in Svelte.",
 	"repo_url": "https://gitee.com/ruofeng945/joctec-ui",
 	"authors": ["ruofeng945"],
-	"downloads": 0,
+	"downloads": 4,
 	"updated": "2019-08-13T01:21:14.668Z",
 	"tags": ["ui"],
 	"runes": false,

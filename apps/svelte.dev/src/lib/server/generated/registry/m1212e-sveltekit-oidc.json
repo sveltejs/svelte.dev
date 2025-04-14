@@ -1,0 +1,16 @@
+{
+	"name": "@m1212e/sveltekit-oidc",
+	"description": "Implement OIDC with Sveltekit easily.",
+	"typescript": true,
+	"repo_url": "",
+	"authors": ["m1212e"],
+	"downloads": 1065,
+	"updated": "2025-04-13T21:53:37.960Z",
+	"tags": ["auth", "integration"],
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.16.0",
+	"runes": false,
+	"last_rune_check_version": "0.0.27",
+	"version": "0.0.27",
+	"github_stars": 0
+}

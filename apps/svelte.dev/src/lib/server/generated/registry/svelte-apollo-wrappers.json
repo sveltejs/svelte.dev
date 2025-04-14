@@ -4,12 +4,13 @@
 	"repo_url": "",
 	"authors": ["mashiachy"],
 	"homepage": "https://github.com/mashiachy/svelte-apollo-wrappers",
-	"downloads": 2,
+	"downloads": 4,
 	"updated": "2022-12-05T21:34:20.894Z",
 	"tags": ["integration"],
 	"runes": false,
 	"typescript": true,
 	"version": "1.0.1",
 	"svelte_range": "^3.53.1",
-	"last_rune_check_version": "1.0.1"
+	"last_rune_check_version": "1.0.1",
+	"github_stars": 0
 }

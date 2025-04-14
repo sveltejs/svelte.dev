@@ -4,12 +4,13 @@
 	"repo_url": "",
 	"authors": ["leafnote"],
 	"homepage": "https://leafio.github.io/soon-i18n/",
-	"downloads": 3,
+	"downloads": 7,
 	"updated": "2025-03-15T18:18:32.876Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"typescript": true,
 	"version": "1.3.0",
 	"svelte_range": "*",
-	"last_rune_check_version": "1.3.0"
+	"last_rune_check_version": "1.3.0",
+	"github_stars": 0
 }

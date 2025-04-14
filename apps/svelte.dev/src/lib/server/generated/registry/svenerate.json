@@ -3,7 +3,7 @@
 	"description": "Generate static sites using Svelte components.",
 	"repo_url": "https://github.com/wulfmann/sven",
 	"authors": ["wulfmann"],
-	"downloads": 6,
+	"downloads": 7,
 	"updated": "2020-10-20T13:48:48.021Z",
 	"tags": ["tooling"],
 	"runes": false,

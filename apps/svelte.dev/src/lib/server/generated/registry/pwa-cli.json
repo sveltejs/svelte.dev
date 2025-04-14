@@ -3,11 +3,12 @@
 	"description": "CLI application for Progressive Web Apps.",
 	"repo_url": "",
 	"authors": ["lukeed", "ragingwind"],
-	"downloads": 13,
+	"downloads": 18,
 	"updated": "2020-04-16T19:10:28.055Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.5.4",
-	"last_rune_check_version": "0.5.4"
+	"last_rune_check_version": "0.5.4",
+	"github_stars": 0
 }

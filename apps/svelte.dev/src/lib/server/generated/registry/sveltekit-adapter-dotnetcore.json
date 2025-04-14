@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/samlam/sveltekit-adapter-dotnetcore",
 	"authors": ["samlam"],
 	"homepage": "https://github.com/samlam/sveltekit-adapter-dotnetcore#readme",
-	"downloads": 0,
+	"downloads": 5,
 	"updated": "2023-06-01T00:22:28.234Z",
 	"tags": ["adapter"],
 	"runes": false,

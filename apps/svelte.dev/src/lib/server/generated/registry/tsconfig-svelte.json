@@ -4,11 +4,11 @@
 	"repo_url": "https://github.com/tsconfig/bases",
 	"authors": ["orta", "typescript-deploys"],
 	"homepage": "https://github.com/tsconfig/bases#readme",
-	"downloads": 180354,
+	"downloads": 186245,
 	"updated": "2024-03-27T04:13:14.815Z",
 	"tags": ["tooling"],
 	"runes": false,
-	"github_stars": 6852,
+	"github_stars": 6870,
 	"typescript": false,
 	"version": "5.0.4",
 	"last_rune_check_version": "5.0.4"

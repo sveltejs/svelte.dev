@@ -3,12 +3,13 @@
 	"description": "Template for building shareable Svelte component libraries.",
 	"repo_url": "",
 	"authors": ["jcald"],
-	"downloads": 0,
+	"downloads": 4,
 	"updated": "2021-09-29T17:43:12.620Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.2.0-beta.0",
 	"svelte_range": "^3.20.1",
-	"last_rune_check_version": "0.2.0-beta.0"
+	"last_rune_check_version": "0.2.0-beta.0",
+	"github_stars": 0
 }

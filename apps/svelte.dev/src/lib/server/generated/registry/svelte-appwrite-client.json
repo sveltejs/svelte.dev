@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/lewis-wow/svelte-appwrite",
 	"authors": ["ujik"],
 	"homepage": "https://github.com/lewis-wow/svelte-appwrite#readme",
-	"downloads": 10,
+	"downloads": 6,
 	"updated": "2023-01-02T14:14:30.861Z",
 	"tags": ["server", "integration"],
 	"runes": false,

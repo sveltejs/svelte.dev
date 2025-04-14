@@ -4,13 +4,13 @@
 	"repo_url": "https://github.com/schoero/eslint-plugin-readable-tailwind",
 	"authors": ["schoero"],
 	"homepage": "https://github.com/schoero/eslint-plugin-readable-tailwind#readme",
-	"downloads": 8022,
-	"updated": "2025-03-08T20:27:37.922Z",
+	"downloads": 9519,
+	"updated": "2025-04-11T19:32:54.065Z",
 	"tags": ["tooling"],
 	"runes": false,
-	"github_stars": 167,
+	"github_stars": 169,
 	"typescript": true,
-	"version": "2.0.0",
-	"svelte_range": "^5.22.6",
-	"last_rune_check_version": "2.0.0"
+	"version": "2.0.1",
+	"svelte_range": "^5.25.12",
+	"last_rune_check_version": "2.0.1"
 }

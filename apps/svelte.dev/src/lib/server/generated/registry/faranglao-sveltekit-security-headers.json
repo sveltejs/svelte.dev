@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/kevinobee/sveltekit-security-headers",
 	"authors": ["faranglao"],
 	"homepage": "https://sveltekit-security-headers.vercel.app/",
-	"downloads": 160,
+	"downloads": 176,
 	"updated": "2024-02-26T12:08:11.041Z",
 	"tags": ["server"],
 	"runes": false,

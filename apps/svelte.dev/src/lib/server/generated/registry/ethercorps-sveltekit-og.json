@@ -3,7 +3,7 @@
 	"description": "Generate Open Graph images from SvelteKit components.",
 	"repo_url": "",
 	"authors": ["ethercorps.io"],
-	"downloads": 4676,
+	"downloads": 4619,
 	"updated": "2024-01-15T03:25:31.700Z",
 	"tags": ["seo"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "3.0.0",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.30.3",
-	"last_rune_check_version": "3.0.0"
+	"last_rune_check_version": "3.0.0",
+	"github_stars": 0
 }

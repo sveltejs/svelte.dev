@@ -3,12 +3,13 @@
 	"description": "Build UI with Svelte and Tailwind CSS using Material Design.",
 	"repo_url": "",
 	"authors": ["matyunya"],
-	"downloads": 369,
+	"downloads": 1631,
 	"updated": "2021-09-06T04:05:31.316Z",
 	"tags": ["design-system", "ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "1.1.8",
 	"svelte_range": "^3.31.2",
-	"last_rune_check_version": "1.1.8"
+	"last_rune_check_version": "1.1.8",
+	"github_stars": 0
 }

@@ -4,7 +4,7 @@
 	"repo_url": "",
 	"authors": ["zakrok09", "harry258"],
 	"homepage": "https://delft-hyperloop.github.io/serpenta",
-	"downloads": 3,
+	"downloads": 8,
 	"updated": "2025-02-04T13:41:33.113Z",
 	"tags": ["design-system", "ui"],
 	"runes": false,
@@ -12,5 +12,6 @@
 	"version": "0.4.2",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.0.0",
-	"last_rune_check_version": "0.4.2"
+	"last_rune_check_version": "0.4.2",
+	"github_stars": 0
 }

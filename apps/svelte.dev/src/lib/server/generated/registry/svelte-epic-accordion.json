@@ -3,12 +3,13 @@
 	"description": "Build accordion components inspired by VS Code for Svelte.",
 	"repo_url": "",
 	"authors": ["patryk0493"],
-	"downloads": 0,
+	"downloads": 5,
 	"updated": "2023-10-07T17:21:13.497Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.0.6",
 	"svelte_range": "^4.2.1",
-	"last_rune_check_version": "0.0.6"
+	"last_rune_check_version": "0.0.6",
+	"github_stars": 0
 }

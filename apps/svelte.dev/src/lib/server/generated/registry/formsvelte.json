@@ -3,7 +3,7 @@
 	"description": "Create forms with validation in Svelte applications.",
 	"repo_url": "",
 	"authors": ["zposten", "olivare"],
-	"downloads": 1,
+	"downloads": 6,
 	"updated": "2022-07-29T19:27:13.513Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "0.0.2",
 	"svelte_range": "^3.46.0",
 	"kit_range": "next",
-	"last_rune_check_version": "0.0.2"
+	"last_rune_check_version": "0.0.2",
+	"github_stars": 0
 }

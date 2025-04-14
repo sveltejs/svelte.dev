@@ -3,12 +3,13 @@
 	"description": "Render optimized images in SvelteKit applications.",
 	"repo_url": "",
 	"authors": ["asangawee"],
-	"downloads": 9,
+	"downloads": 12,
 	"updated": "2024-09-25T11:19:08.528Z",
 	"tags": ["media"],
 	"runes": false,
 	"typescript": true,
 	"version": "2.0.7",
 	"svelte_range": "3 - 5",
-	"last_rune_check_version": "2.0.7"
+	"last_rune_check_version": "2.0.7",
+	"github_stars": 0
 }

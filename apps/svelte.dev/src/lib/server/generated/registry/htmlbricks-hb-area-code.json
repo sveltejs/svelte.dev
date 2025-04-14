@@ -3,11 +3,12 @@
 	"description": "Provides Svelte area code web components.",
 	"repo_url": "",
 	"authors": ["dariocaruso"],
-	"downloads": 813,
+	"downloads": 873,
 	"updated": "2025-04-08T22:27:39.538Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.50.0-alpha.27",
-	"last_rune_check_version": "0.50.0-alpha.27"
+	"last_rune_check_version": "0.50.0-alpha.27",
+	"github_stars": 0
 }

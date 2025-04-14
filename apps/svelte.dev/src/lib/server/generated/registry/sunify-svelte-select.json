@@ -3,12 +3,13 @@
 	"description": "Create simple select elements with custom button appearance.",
 	"repo_url": "",
 	"authors": ["sunify"],
-	"downloads": 1,
+	"downloads": 5,
 	"updated": "2019-08-28T07:25:05.501Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "1.0.0",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "1.0.0"
+	"last_rune_check_version": "1.0.0",
+	"github_stars": 0
 }

@@ -4,7 +4,7 @@
 	"repo_url": "",
 	"authors": ["lagden"],
 	"homepage": "https://github.com/lagden/svelte-notification#readme",
-	"downloads": 169,
+	"downloads": 177,
 	"updated": "2023-12-18T16:05:08.298Z",
 	"tags": ["ui"],
 	"runes": false,
@@ -12,5 +12,6 @@
 	"version": "1.3.0",
 	"svelte_range": ">=3.50",
 	"kit_range": "2.0.2",
-	"last_rune_check_version": "1.3.0"
+	"last_rune_check_version": "1.3.0",
+	"github_stars": 0
 }

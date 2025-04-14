@@ -3,12 +3,13 @@
 	"description": "Provides convenience functions for using NDK with Svelte.",
 	"repo_url": "",
 	"authors": ["jinglescode", "pablof7z"],
-	"downloads": 79,
+	"downloads": 96,
 	"updated": "2025-03-06T14:57:54.028Z",
 	"tags": ["integration"],
 	"runes": true,
 	"typescript": true,
 	"version": "2.4.5",
 	"svelte_range": "*",
-	"last_rune_check_version": "2.4.5"
+	"last_rune_check_version": "2.4.5",
+	"github_stars": 0
 }

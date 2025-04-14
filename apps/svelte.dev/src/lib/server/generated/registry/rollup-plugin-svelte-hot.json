@@ -4,12 +4,13 @@
 	"repo_url": "",
 	"authors": ["rixo"],
 	"homepage": "https://github.com/rixo/rollup-plugin-svelte",
-	"downloads": 363,
+	"downloads": 385,
 	"updated": "2021-05-13T15:25:18.197Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"typescript": true,
 	"version": "1.0.0-8",
 	"svelte_range": ">=3.5.0",
-	"last_rune_check_version": "1.0.0-8"
+	"last_rune_check_version": "1.0.0-8",
+	"github_stars": 0
 }

@@ -3,12 +3,13 @@
 	"description": "Create lightweight, fast tab components for Svelte applications.",
 	"repo_url": "",
 	"authors": ["talsingh"],
-	"downloads": 5,
+	"downloads": 6,
 	"updated": "2022-02-24T04:02:35.101Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "1.0.11",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "1.0.11"
+	"last_rune_check_version": "1.0.11",
+	"github_stars": 0
 }

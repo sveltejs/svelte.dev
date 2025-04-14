@@ -4,13 +4,13 @@
 	"repo_url": "https://github.com/arlac77/svelte-common",
 	"authors": ["arlac77"],
 	"homepage": "https://github.com/arlac77/svelte-common#readme",
-	"downloads": 437,
-	"updated": "2025-03-21T20:24:41.264Z",
+	"downloads": 986,
+	"updated": "2025-04-12T15:23:28.055Z",
 	"tags": ["miscellaneous"],
 	"runes": true,
 	"github_stars": 8,
 	"typescript": true,
-	"version": "6.18.7",
-	"svelte_range": "^5.25.0",
-	"last_rune_check_version": "6.18.7"
+	"version": "6.18.8",
+	"svelte_range": "^5.26.1",
+	"last_rune_check_version": "6.18.8"
 }

@@ -3,12 +3,13 @@
 	"description": "Provide utility functions for Svelte development.",
 	"repo_url": "",
 	"authors": ["jdeighan"],
-	"downloads": 7,
+	"downloads": 41,
 	"updated": "2024-04-22T12:57:03.221Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"typescript": false,
 	"version": "3.0.0",
 	"svelte_range": "^5.0.0-next.111",
-	"last_rune_check_version": "3.0.0"
+	"last_rune_check_version": "3.0.0",
+	"github_stars": 0
 }

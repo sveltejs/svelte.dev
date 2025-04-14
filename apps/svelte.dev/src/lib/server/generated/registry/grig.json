@@ -4,12 +4,13 @@
 	"repo_url": "",
 	"authors": ["leafnote"],
 	"homepage": "https://github.com/leafio/grig",
-	"downloads": 5,
+	"downloads": 8,
 	"updated": "2024-09-02T12:28:39.673Z",
 	"tags": ["integration"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.2.3",
 	"svelte_range": "*",
-	"last_rune_check_version": "0.2.3"
+	"last_rune_check_version": "0.2.3",
+	"github_stars": 0
 }

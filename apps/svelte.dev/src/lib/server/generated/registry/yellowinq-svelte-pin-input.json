@@ -3,7 +3,7 @@
 	"description": "Create PIN input component for Svelte.",
 	"repo_url": "",
 	"authors": ["hig4342"],
-	"downloads": 2,
+	"downloads": 5,
 	"updated": "2021-12-08T13:25:01.734Z",
 	"tags": ["ui"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "0.0.5",
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
-	"last_rune_check_version": "0.0.5"
+	"last_rune_check_version": "0.0.5",
+	"github_stars": 0
 }

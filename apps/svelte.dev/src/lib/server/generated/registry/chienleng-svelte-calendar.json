@@ -3,7 +3,7 @@
 	"description": "Create calendar view components for Svelte applications.",
 	"repo_url": "",
 	"authors": ["chienleng"],
-	"downloads": 6,
+	"downloads": 7,
 	"updated": "2022-10-18T00:52:01.927Z",
 	"tags": ["ui"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "0.0.9",
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
-	"last_rune_check_version": "0.0.9"
+	"last_rune_check_version": "0.0.9",
+	"github_stars": 0
 }

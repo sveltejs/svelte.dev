@@ -3,12 +3,13 @@
 	"description": "Provides a set of UI components for Svelte applications.",
 	"repo_url": "",
 	"authors": ["philadelphia"],
-	"downloads": 22,
+	"downloads": 15,
 	"updated": "2024-07-15T15:46:15.227Z",
 	"tags": ["ui", "design-system"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.11.2",
 	"svelte_range": "^3.46.0 || ^4.0.0",
-	"last_rune_check_version": "0.11.2"
+	"last_rune_check_version": "0.11.2",
+	"github_stars": 0
 }

@@ -4,12 +4,13 @@
 	"repo_url": "",
 	"authors": ["rodgco"],
 	"homepage": "https://github.com/paulixta-oss/svelte-checklist",
-	"downloads": 6,
+	"downloads": 11,
 	"updated": "2021-05-17T15:11:11.888Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.9.1",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.9.1"
+	"last_rune_check_version": "0.9.1",
+	"github_stars": 0
 }

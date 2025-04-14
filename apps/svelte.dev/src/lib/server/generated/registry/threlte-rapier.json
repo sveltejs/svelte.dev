@@ -4,14 +4,14 @@
 	"repo_url": "https://github.com/threlte/threlte",
 	"authors": ["grischaerbe"],
 	"homepage": "https://threlte.xyz",
-	"downloads": 362,
-	"updated": "2025-03-12T23:25:03.609Z",
+	"downloads": 461,
+	"updated": "2025-04-12T23:44:16.714Z",
 	"tags": ["miscellaneous"],
 	"runes": true,
-	"github_stars": 2842,
+	"github_stars": 2849,
 	"typescript": true,
-	"version": "3.1.0",
+	"version": "3.1.1",
 	"svelte_range": ">=5",
 	"kit_range": "^2.7.7",
-	"last_rune_check_version": "3.1.0"
+	"last_rune_check_version": "3.1.1"
 }

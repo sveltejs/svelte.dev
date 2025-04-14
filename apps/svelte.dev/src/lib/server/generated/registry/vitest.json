@@ -4,11 +4,11 @@
 	"repo_url": "https://github.com/vitest-dev/vitest",
 	"authors": ["antfu", "patak", "oreanno", "vitestbot"],
 	"homepage": "https://github.com/vitest-dev/vitest#readme",
-	"downloads": 10352111,
+	"downloads": 10222892,
 	"updated": "2025-03-31T10:19:23.023Z",
 	"tags": ["testing", "tooling"],
 	"runes": false,
-	"github_stars": 14112,
+	"github_stars": 14143,
 	"typescript": true,
 	"version": "3.1.1",
 	"last_rune_check_version": "3.1.1"

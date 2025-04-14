@@ -3,7 +3,7 @@
 	"description": "Build component library for Svelte with Tailwind CSS.",
 	"repo_url": "https://github.com/ivanchenhz/sunshine-ui",
 	"authors": ["ivanchenhz"],
-	"downloads": 5,
+	"downloads": 19,
 	"updated": "2021-02-22T08:03:17.302Z",
 	"tags": ["design-system"],
 	"runes": false,

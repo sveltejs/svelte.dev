@@ -4,7 +4,7 @@
 	"repo_url": "",
 	"authors": ["sysdev-nl"],
 	"homepage": "https://sysdev.nl",
-	"downloads": 0,
+	"downloads": 4,
 	"updated": "2024-07-02T13:02:56.979Z",
 	"tags": ["design-system"],
 	"runes": true,
@@ -12,5 +12,6 @@
 	"version": "1.0.0-alpha.40",
 	"svelte_range": "^5.0.0-next.1",
 	"kit_range": "^2.5.17",
-	"last_rune_check_version": "1.0.0-alpha.40"
+	"last_rune_check_version": "1.0.0-alpha.40",
+	"github_stars": 0
 }

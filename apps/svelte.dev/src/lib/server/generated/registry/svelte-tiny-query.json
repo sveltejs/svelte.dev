@@ -3,7 +3,7 @@
 	"description": "Simplify data fetching with declarative queries in Svelte 5.",
 	"repo_url": "",
 	"authors": ["sra448"],
-	"downloads": 3,
+	"downloads": 9,
 	"updated": "2025-03-24T08:40:32.938Z",
 	"tags": ["miscellaneous"],
 	"runes": true,
@@ -11,5 +11,6 @@
 	"version": "0.0.3",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
-	"last_rune_check_version": "0.0.3"
+	"last_rune_check_version": "0.0.3",
+	"github_stars": 0
 }

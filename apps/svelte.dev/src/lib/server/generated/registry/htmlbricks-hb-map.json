@@ -3,11 +3,12 @@
 	"description": "Provides Svelte map web components.",
 	"repo_url": "",
 	"authors": ["dariocaruso"],
-	"downloads": 400,
+	"downloads": 776,
 	"updated": "2025-04-08T22:27:27.417Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.50.0-alpha.27",
-	"last_rune_check_version": "0.50.0-alpha.27"
+	"last_rune_check_version": "0.50.0-alpha.27",
+	"github_stars": 0
 }

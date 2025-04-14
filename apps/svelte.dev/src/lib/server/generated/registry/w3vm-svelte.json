@@ -3,7 +3,7 @@
 	"description": "Provides Svelte readables for W3Vm.",
 	"repo_url": "https://github.com/w3vm",
 	"authors": ["glitch-txs"],
-	"downloads": 3,
+	"downloads": 6,
 	"updated": "2023-12-11T05:57:35.723Z",
 	"tags": ["miscellaneous"],
 	"runes": false,

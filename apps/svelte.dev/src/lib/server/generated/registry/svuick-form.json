@@ -3,7 +3,7 @@
 	"description": "Provide form validation for Svelte and SvelteKit.",
 	"repo_url": "https://gitlab.com/david-plugge/svuick",
 	"authors": ["davidplugge"],
-	"downloads": 0,
+	"downloads": 4,
 	"updated": "2022-02-03T11:38:26.082Z",
 	"tags": ["miscellaneous"],
 	"runes": false,

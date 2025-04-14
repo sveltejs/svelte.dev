@@ -12,11 +12,11 @@
 		"rebeccabol"
 	],
 	"homepage": "https://unovis.dev",
-	"downloads": 3033,
+	"downloads": 3058,
 	"updated": "2025-02-19T18:26:10.533Z",
 	"tags": ["ui"],
 	"runes": false,
-	"github_stars": 2430,
+	"github_stars": 2432,
 	"typescript": true,
 	"version": "1.5.1",
 	"svelte_range": "^3.48.0 || ^4.0.0 ",

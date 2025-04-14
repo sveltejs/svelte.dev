@@ -3,12 +3,13 @@
 	"description": "Copy text to clipboard using Svelte component.",
 	"repo_url": "",
 	"authors": ["henriquecaraujo"],
-	"downloads": 653,
+	"downloads": 1021,
 	"updated": "2020-05-25T23:57:15.498Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.2.5",
 	"svelte_range": "^3.21.0",
-	"last_rune_check_version": "0.2.5"
+	"last_rune_check_version": "0.2.5",
+	"github_stars": 0
 }

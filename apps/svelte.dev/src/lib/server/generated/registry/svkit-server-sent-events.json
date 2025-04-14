@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/Ionmi/sveltekit-server-sent-events",
 	"authors": ["ionmi"],
 	"homepage": "https://github.com/Ionmi/sveltekit-server-sent-events.git",
-	"downloads": 0,
+	"downloads": 5,
 	"updated": "2025-02-07T11:35:05.537Z",
 	"tags": ["server"],
 	"runes": true,

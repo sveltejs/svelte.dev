@@ -3,7 +3,7 @@
 	"description": "Provide simple user library for SvelteKit.",
 	"repo_url": "",
 	"authors": ["hotsixman"],
-	"downloads": 1,
+	"downloads": 3,
 	"updated": "2024-04-28T06:59:58.509Z",
 	"tags": ["auth"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "0.4.0",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.0.0",
-	"last_rune_check_version": "0.4.0"
+	"last_rune_check_version": "0.4.0",
+	"github_stars": 0
 }

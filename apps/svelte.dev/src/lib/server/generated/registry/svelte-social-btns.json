@@ -4,7 +4,7 @@
 	"repo_url": "",
 	"authors": ["natumanyaguy"],
 	"homepage": "https://github.com/NatumanyaGuy/svelte-social-btns",
-	"downloads": 2,
+	"downloads": 5,
 	"updated": "2023-07-26T11:24:09.866Z",
 	"tags": ["ui"],
 	"runes": false,
@@ -12,5 +12,6 @@
 	"version": "0.0.5",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.4",
-	"last_rune_check_version": "0.0.5"
+	"last_rune_check_version": "0.0.5",
+	"github_stars": 0
 }

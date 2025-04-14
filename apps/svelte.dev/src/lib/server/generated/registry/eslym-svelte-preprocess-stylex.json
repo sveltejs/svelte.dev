@@ -3,7 +3,7 @@
 	"description": "Preprocesses Svelte code to make StyleX more readable.",
 	"repo_url": "https://github.com/eslym/svelte-preprocess-stylex",
 	"authors": ["0nepeop1e"],
-	"downloads": 6,
+	"downloads": 17,
 	"updated": "2025-03-08T13:50:29.157Z",
 	"tags": ["tooling"],
 	"runes": false,

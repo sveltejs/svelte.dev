@@ -3,12 +3,13 @@
 	"description": "Print designer for Svelte apps.",
 	"repo_url": "",
 	"authors": ["cc-better"],
-	"downloads": 120,
+	"downloads": 169,
 	"updated": "2025-04-07T08:05:34.516Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.1.22",
 	"svelte_range": "^3.55.0",
-	"last_rune_check_version": "0.1.22"
+	"last_rune_check_version": "0.1.22",
+	"github_stars": 0
 }

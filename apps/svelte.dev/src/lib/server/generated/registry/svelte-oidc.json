@@ -3,12 +3,13 @@
 	"description": "Manage OpenID-Connect authentication in Svelte apps.",
 	"repo_url": "",
 	"authors": ["easterthebunny"],
-	"downloads": 9,
+	"downloads": 15,
 	"updated": "2021-01-11T22:00:15.546Z",
 	"tags": ["auth"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.0.3",
 	"svelte_range": "^3.31.2",
-	"last_rune_check_version": "0.0.3"
+	"last_rune_check_version": "0.0.3",
+	"github_stars": 0
 }

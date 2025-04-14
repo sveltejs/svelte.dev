@@ -3,13 +3,14 @@
 	"description": "Efficient Svelte icon library using SVG sprites.",
 	"repo_url": "",
 	"authors": ["ottomated"],
-	"downloads": 108,
-	"updated": "2025-04-02T07:13:19.769Z",
+	"downloads": 170,
+	"updated": "2025-04-14T07:13:58.184Z",
 	"tags": ["ui"],
 	"runes": true,
 	"typescript": true,
-	"version": "0.3.41",
+	"version": "0.3.42",
 	"svelte_range": "^5.0.0-next.1",
 	"kit_range": "^2.0.0",
-	"last_rune_check_version": "0.3.41"
+	"last_rune_check_version": "0.3.42",
+	"github_stars": 0
 }

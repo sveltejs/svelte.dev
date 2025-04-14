@@ -3,12 +3,13 @@
 	"description": "Secure SvelteKit apps using HTTP response security headers.",
 	"repo_url": "",
 	"authors": ["islamzaoui"],
-	"downloads": 2,
+	"downloads": 11,
 	"updated": "2024-09-29T16:27:19.507Z",
 	"tags": ["server"],
 	"runes": false,
 	"typescript": true,
 	"version": "1.1.0",
 	"kit_range": "^2.0.0",
-	"last_rune_check_version": "1.1.0"
+	"last_rune_check_version": "1.1.0",
+	"github_stars": 0
 }

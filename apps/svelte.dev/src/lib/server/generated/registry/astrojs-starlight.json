@@ -4,12 +4,12 @@
 	"repo_url": "https://github.com/withastro/starlight",
 	"authors": ["natemoo-re", "fredkschott", "matthewp"],
 	"homepage": "https://starlight.astro.build",
-	"downloads": 63305,
-	"updated": "2025-04-07T16:03:01.292Z",
+	"downloads": 70920,
+	"updated": "2025-04-14T11:41:06.202Z",
 	"tags": ["content"],
 	"runes": false,
-	"github_stars": 6239,
+	"github_stars": 6269,
 	"typescript": true,
-	"version": "0.33.0",
-	"last_rune_check_version": "0.33.0"
+	"version": "0.33.2",
+	"last_rune_check_version": "0.33.2"
 }

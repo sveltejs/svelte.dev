@@ -4,12 +4,13 @@
 	"repo_url": "",
 	"authors": ["schnubor", "alexdonets", "theosamaperspective"],
 	"homepage": "https://github.com/Perspective-Software/svelte-react-player",
-	"downloads": 90,
+	"downloads": 140,
 	"updated": "2024-10-09T09:17:14.703Z",
 	"tags": ["media"],
 	"runes": false,
 	"typescript": false,
 	"version": "1.4.3",
 	"svelte_range": "^3.32.3",
-	"last_rune_check_version": "1.4.3"
+	"last_rune_check_version": "1.4.3",
+	"github_stars": 0
 }

@@ -552,22 +552,22 @@ export async function fetch_github_data(
 	// Ensure URL is sanitized and in the correct format
 	const sanitized_url = sanitize_github_url(repo_url);
 
-	// Extract owner and repo name from the GitHub URL
-	// Example: https://github.com/owner/repo
-	const url_parts = new URL(sanitized_url);
-	const path_parts = url_parts.pathname.split('/').filter(Boolean);
-
-	if (path_parts.length < 2) {
-		console.error(`Invalid GitHub repository URL: ${repo_url}`);
-		return null;
-	}
-
-	const [owner, repo] = path_parts;
-
-	// GitHub API URL to fetch repository data
-	let api_url = `https://api.github.com/repos/${owner}/${repo}`;
-
 	try {
+		// Extract owner and repo name from the GitHub URL
+		// Example: https://github.com/owner/repo
+		const url_parts = new URL(sanitized_url);
+		const path_parts = url_parts.pathname.split('/').filter(Boolean);
+
+		if (path_parts.length < 2) {
+			console.error(`Invalid GitHub repository URL: ${repo_url}`);
+			return null;
+		}
+
+		const [owner, repo] = path_parts;
+
+		// GitHub API URL to fetch repository data
+		let api_url = `https://api.github.com/repos/${owner}/${repo}`;
+
 		console.log(`Fetching stars for ${owner}/${repo}`);
 		const response = await superfetch(api_url, {
 			headers: {
@@ -594,7 +594,7 @@ export async function fetch_github_data(
 			homepage: data.homepage
 		};
 	} catch (error) {
-		console.error(`Error fetching stars for ${repo_url}:`, error);
+		console.error(`Error fetching stars for ${repo_url}:`, error, { sanitized_url });
 		return null;
 	}
 }
@@ -715,7 +715,7 @@ async function update_overrides() {
  * Updates package cache with latest npm data
  * Uses existing request_queue from superfetch for concurrency control
  */
-async function update_cache_from_npm(update_stats = true) {
+async function update_cache(update_stats = true) {
 	for await (const [pkg_name, data] of PackageCache.entries()) {
 		const package_detail = await superfetch(`${REGISTRY_BASE_URL}${pkg_name}`).then((r) =>
 			r.json()
@@ -756,7 +756,9 @@ async function update_cache_from_npm(update_stats = true) {
 		if (update_stats) {
 			const [downloads, github_data] = await Promise.all([
 				fetch_downloads_for_package(pkg_name),
-				fetch_github_data(pkg_name)
+				data.repo_url
+					? fetch_github_data(data.repo_url)
+					: Promise.resolve({ stars: 0, homepage: '' })
 			]);
 
 			data.downloads = downloads;
@@ -805,6 +807,8 @@ async function delete_legacy_svelte5_field() {
 
 async function update_composite_ts_runes_data() {
 	for await (const [pkg_name, data] of PackageCache.entries()) {
+		if (data.last_rune_check_version === data.version) continue;
+
 		const checks = await composite_runes_types_check(pkg_name, data.version);
 
 		data.typescript = checks.types;
@@ -876,9 +880,9 @@ for (let i = 0; i < 1; i++) {
 
 // await update_overrides();
 
-// update_cache_from_npm();
+update_cache();
 
-update_composite_ts_runes_data();
+// update_composite_ts_runes_data();
 
 // console.log(await composite_runes_types_check('uifox', '0.0.5'));
 

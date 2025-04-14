@@ -1,0 +1,17 @@
+{
+	"name": "root-firebase-svelte",
+	"description": "Integrate Firebase with SvelteKit applications.",
+	"typescript": true,
+	"repo_url": "",
+	"authors": ["guto.aps"],
+	"homepage": "http://root-firebase-svelte.rizdesign.com.br",
+	"downloads": 9,
+	"updated": "2025-01-26T16:38:56.276Z",
+	"tags": ["integration"],
+	"svelte_range": "^4.0.0",
+	"kit_range": "^1.20.4",
+	"runes": false,
+	"last_rune_check_version": "0.0.26",
+	"version": "0.0.26",
+	"github_stars": 0
+}

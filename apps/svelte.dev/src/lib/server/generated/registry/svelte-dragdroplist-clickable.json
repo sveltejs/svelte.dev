@@ -4,12 +4,13 @@
 	"repo_url": "",
 	"authors": ["rohitmeshramd", "rohitmeshramcodeb"],
 	"homepage": "https://github.com/rohitmeshramD/svelte-dragdroplist",
-	"downloads": 0,
+	"downloads": 4,
 	"updated": "2022-11-18T13:06:32.460Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "2.0.1",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "2.0.1"
+	"last_rune_check_version": "2.0.1",
+	"github_stars": 0
 }

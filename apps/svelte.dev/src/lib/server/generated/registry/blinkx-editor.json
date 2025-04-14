@@ -4,13 +4,13 @@
 	"repo_url": "https://github.com/Blinkx-IO/editor",
 	"authors": ["richetechguy"],
 	"homepage": "https://github.com/Blinkx-IO/editor#readme",
-	"downloads": 14,
-	"updated": "2025-03-04T20:35:10.766Z",
+	"downloads": 77,
+	"updated": "2025-04-11T19:54:03.363Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 1,
 	"typescript": true,
-	"version": "0.0.63",
+	"version": "0.0.64",
 	"svelte_range": "^5.19.6",
-	"last_rune_check_version": "0.0.63"
+	"last_rune_check_version": "0.0.64"
 }

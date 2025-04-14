@@ -3,7 +3,7 @@
 	"description": "Integrates MobX state management with Svelte components.",
 	"repo_url": "https://github.com/episage/svelte-mobx-observer",
 	"authors": ["episage"],
-	"downloads": 5,
+	"downloads": 8,
 	"updated": "2020-07-30T13:19:27.755Z",
 	"tags": ["miscellaneous"],
 	"runes": false,

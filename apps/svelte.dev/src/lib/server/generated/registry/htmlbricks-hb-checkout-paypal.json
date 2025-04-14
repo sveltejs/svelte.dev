@@ -3,12 +3,13 @@
 	"description": "Create PayPal checkout component for Svelte.",
 	"repo_url": "",
 	"authors": ["dariocaruso"],
-	"downloads": 16,
+	"downloads": 6,
 	"updated": "2022-01-22T09:40:48.457Z",
 	"tags": ["integration"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.4.19",
 	"svelte_range": "^3.44.3",
-	"last_rune_check_version": "0.4.19"
+	"last_rune_check_version": "0.4.19",
+	"github_stars": 0
 }

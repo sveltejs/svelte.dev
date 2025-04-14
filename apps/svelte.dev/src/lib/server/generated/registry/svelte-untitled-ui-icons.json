@@ -3,12 +3,13 @@
 	"description": "Provide Untitled UI icon components for Svelte projects.",
 	"repo_url": "",
 	"authors": ["calasanmarko"],
-	"downloads": 3,
+	"downloads": 7,
 	"updated": "2024-07-15T16:40:39.786Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "1.0.4",
 	"svelte_range": "^4.0.0",
-	"last_rune_check_version": "1.0.4"
+	"last_rune_check_version": "1.0.4",
+	"github_stars": 0
 }

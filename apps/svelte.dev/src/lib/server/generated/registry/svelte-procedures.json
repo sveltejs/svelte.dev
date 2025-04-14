@@ -3,12 +3,13 @@
 	"description": "Create step-by-step procedures in Svelte applications.",
 	"repo_url": "",
 	"authors": ["esinx"],
-	"downloads": 4,
+	"downloads": 14,
 	"updated": "2020-07-15T19:11:39.811Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.9.1",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.9.1"
+	"last_rune_check_version": "0.9.1",
+	"github_stars": 0
 }

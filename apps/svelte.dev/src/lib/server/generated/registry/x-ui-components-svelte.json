@@ -3,12 +3,13 @@
 	"description": "Provides suite of customizable UI components for Svelte.",
 	"repo_url": "",
 	"authors": ["valentinamackovic"],
-	"downloads": 2,
+	"downloads": 4,
 	"updated": "2024-08-25T19:10:08.431Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.0.6",
 	"svelte_range": "^4.2.18",
-	"last_rune_check_version": "0.0.6"
+	"last_rune_check_version": "0.0.6",
+	"github_stars": 0
 }

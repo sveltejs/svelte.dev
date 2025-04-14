@@ -3,12 +3,13 @@
 	"description": "Create login and register components for Svelte apps.",
 	"repo_url": "",
 	"authors": ["dariocaruso"],
-	"downloads": 23,
+	"downloads": 25,
 	"updated": "2022-01-02T19:14:36.273Z",
 	"tags": ["auth"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.2.4",
 	"svelte_range": "^3.44.3",
-	"last_rune_check_version": "0.2.4"
+	"last_rune_check_version": "0.2.4",
+	"github_stars": 0
 }

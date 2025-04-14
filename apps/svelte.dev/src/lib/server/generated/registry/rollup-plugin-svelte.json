@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/sveltejs/rollup-plugin-svelte",
 	"authors": ["lukeed", "rich_harris", "lukastaegert", "shellscape", "conduitry", "dummdidumm"],
 	"homepage": "https://github.com/sveltejs/rollup-plugin-svelte#readme",
-	"downloads": 91135,
+	"downloads": 89930,
 	"updated": "2024-06-06T09:02:39.239Z",
 	"tags": ["tooling"],
 	"runes": false,

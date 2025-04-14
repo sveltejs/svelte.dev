@@ -4,12 +4,13 @@
 	"repo_url": "",
 	"authors": ["ksmarty"],
 	"homepage": "https://git.kyleschwartz.ca/kyle/snowpack-sott",
-	"downloads": 1,
+	"downloads": 5,
 	"updated": "2021-01-03T17:15:23.095Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"typescript": true,
 	"version": "1.0.3",
 	"svelte_range": "^3.24.0",
-	"last_rune_check_version": "1.0.3"
+	"last_rune_check_version": "1.0.3",
+	"github_stars": 0
 }

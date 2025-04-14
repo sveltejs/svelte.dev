@@ -3,12 +3,13 @@
 	"description": "Provides theming capabilities for Svelte apps, supporting light/dark themes.",
 	"repo_url": "",
 	"authors": ["dooboolab"],
-	"downloads": 10,
+	"downloads": 12,
 	"updated": "2021-11-12T07:51:45.122Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"typescript": true,
 	"version": "1.4.3",
 	"svelte_range": "^3.44.0",
-	"last_rune_check_version": "1.4.3"
+	"last_rune_check_version": "1.4.3",
+	"github_stars": 0
 }

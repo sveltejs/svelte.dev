@@ -3,11 +3,12 @@
 	"description": "Create Svelte Invoice WebComponent.",
 	"repo_url": "",
 	"authors": ["dariocaruso"],
-	"downloads": 383,
+	"downloads": 757,
 	"updated": "2025-04-08T22:27:22.879Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.50.0-alpha.27",
-	"last_rune_check_version": "0.50.0-alpha.27"
+	"last_rune_check_version": "0.50.0-alpha.27",
+	"github_stars": 0
 }

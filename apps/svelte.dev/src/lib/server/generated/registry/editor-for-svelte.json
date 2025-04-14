@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/CoderN-P/SvelteEditor",
 	"authors": ["codern"],
 	"homepage": "https://svelte-editor.neelp.tech",
-	"downloads": 6,
+	"downloads": 12,
 	"updated": "2024-06-20T17:12:00.234Z",
 	"tags": ["ui", "tooling"],
 	"runes": false,

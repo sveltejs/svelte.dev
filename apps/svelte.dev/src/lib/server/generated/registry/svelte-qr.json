@@ -3,7 +3,7 @@
 	"description": "Generate QR codes in Svelte applications.",
 	"repo_url": "https://github.com/jnordberg/svelte-qr",
 	"authors": ["jnordberg"],
-	"downloads": 13,
+	"downloads": 24,
 	"updated": "2020-07-26T12:05:07.714Z",
 	"tags": ["ui"],
 	"runes": false,

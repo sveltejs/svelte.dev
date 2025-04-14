@@ -3,7 +3,7 @@
 	"description": "Offer utilities for Svelte-Chat applications.",
 	"repo_url": "",
 	"authors": ["kotekpsotek"],
-	"downloads": 1,
+	"downloads": 5,
 	"updated": "2023-11-06T20:54:03.607Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "0.0.2",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.4",
-	"last_rune_check_version": "0.0.2"
+	"last_rune_check_version": "0.0.2",
+	"github_stars": 0
 }

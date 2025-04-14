@@ -3,12 +3,13 @@
 	"description": "Load Svelte components using ESM, with custom options.",
 	"repo_url": "",
 	"authors": ["jakobrosenberg"],
-	"downloads": 5,
+	"downloads": 72,
 	"updated": "2022-02-11T12:52:08.182Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.0.3",
 	"svelte_range": "^3.44.2",
-	"last_rune_check_version": "0.0.3"
+	"last_rune_check_version": "0.0.3",
+	"github_stars": 0
 }

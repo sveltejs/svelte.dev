@@ -3,7 +3,7 @@
 	"description": "Svelte 5 library for interacting with Telegram API.",
 	"repo_url": "https://github.com/naylour/NaylourTelegram",
 	"authors": ["shahtheshah"],
-	"downloads": 4,
+	"downloads": 10,
 	"updated": "2025-01-04T22:40:10.009Z",
 	"tags": ["integration"],
 	"runes": true,

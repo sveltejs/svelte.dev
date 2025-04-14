@@ -3,7 +3,7 @@
 	"description": "Formats and displays copyright notices in Svelte.",
 	"repo_url": "",
 	"authors": ["himynameisdave"],
-	"downloads": 41,
+	"downloads": 25,
 	"updated": "2023-08-31T18:49:12.288Z",
 	"tags": ["ui"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "2.1.0",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.24.0",
-	"last_rune_check_version": "2.1.0"
+	"last_rune_check_version": "2.1.0",
+	"github_stars": 0
 }

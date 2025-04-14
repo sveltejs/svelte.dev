@@ -3,7 +3,7 @@
 	"description": "Provides Svelte component for Schedule-X calendar.",
 	"repo_url": "",
 	"authors": ["tomosterlund"],
-	"downloads": 284,
+	"downloads": 279,
 	"updated": "2025-03-25T06:04:26.620Z",
 	"tags": ["ui"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "2.3.0",
 	"svelte_range": "^4 || ^5",
 	"kit_range": "^2.0.0",
-	"last_rune_check_version": "2.3.0"
+	"last_rune_check_version": "2.3.0",
+	"github_stars": 0
 }

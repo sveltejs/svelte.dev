@@ -3,7 +3,7 @@
 	"description": "Provide useful Svelte stores for local/session storage and query params.",
 	"repo_url": "",
 	"authors": ["binsarjr"],
-	"downloads": 0,
+	"downloads": 5,
 	"updated": "2023-11-15T18:07:29.400Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "0.3.2",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.4",
-	"last_rune_check_version": "0.3.2"
+	"last_rune_check_version": "0.3.2",
+	"github_stars": 0
 }

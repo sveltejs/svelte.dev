@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/Selenite-GEOS/graph-editor",
 	"authors": ["moonlyss"],
 	"homepage": "https://selenite-geos.github.io/docs/developper/components/#graph-editor",
-	"downloads": 63,
+	"downloads": 69,
 	"updated": "2024-11-15T17:08:55.955Z",
 	"tags": ["ui", "tooling"],
 	"runes": true,

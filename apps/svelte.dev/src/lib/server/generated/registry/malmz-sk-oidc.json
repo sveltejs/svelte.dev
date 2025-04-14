@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/Malmz/sk-oidc",
 	"authors": ["malmz"],
 	"homepage": "https://github.com/Malmz/sk-oidc",
-	"downloads": 1,
+	"downloads": 6,
 	"updated": "2023-06-13T01:24:44.666Z",
 	"tags": ["auth", "integration"],
 	"runes": false,

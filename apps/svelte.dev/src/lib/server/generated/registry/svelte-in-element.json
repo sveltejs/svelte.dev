@@ -4,12 +4,13 @@
 	"repo_url": "",
 	"authors": ["ravenstine"],
 	"homepage": "https://github.com/ravenstine/svelte-in-element",
-	"downloads": 8,
+	"downloads": 9,
 	"updated": "2022-07-29T22:26:18.693Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.1.4",
 	"svelte_range": "^3.49.0",
-	"last_rune_check_version": "0.1.4"
+	"last_rune_check_version": "0.1.4",
+	"github_stars": 0
 }

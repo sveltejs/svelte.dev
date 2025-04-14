@@ -3,7 +3,7 @@
 	"description": "Access Google Material Symbols in Svelte apps.",
 	"repo_url": "",
 	"authors": ["willster277"],
-	"downloads": 0,
+	"downloads": 4,
 	"updated": "2023-05-26T16:04:09.690Z",
 	"tags": ["ui"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "0.2.0",
 	"svelte_range": "^3.59.1",
 	"kit_range": "^1.18.0",
-	"last_rune_check_version": "0.2.0"
+	"last_rune_check_version": "0.2.0",
+	"github_stars": 0
 }

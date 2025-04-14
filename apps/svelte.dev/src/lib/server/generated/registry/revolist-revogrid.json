@@ -4,13 +4,13 @@
 	"repo_url": "https://github.com/revolist/revogrid",
 	"authors": ["kumakint"],
 	"homepage": "https://rv-grid.com",
-	"downloads": 10528,
-	"updated": "2025-04-09T10:23:26.674Z",
+	"downloads": 11372,
+	"updated": "2025-04-10T15:16:19.736Z",
 	"tags": ["ui"],
 	"runes": false,
-	"github_stars": 2893,
+	"github_stars": 2894,
 	"typescript": true,
-	"version": "4.15.2",
+	"version": "4.15.3",
 	"svelte_range": "^5.16.1",
-	"last_rune_check_version": "4.15.2"
+	"last_rune_check_version": "4.15.3"
 }

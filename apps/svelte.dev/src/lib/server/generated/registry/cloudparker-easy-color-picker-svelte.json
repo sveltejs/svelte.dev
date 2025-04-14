@@ -3,12 +3,13 @@
 	"description": "Implement simple, lightweight color picker for Svelte.",
 	"repo_url": "",
 	"authors": ["couldparker.com"],
-	"downloads": 11,
+	"downloads": 5,
 	"updated": "2024-08-16T11:35:38.063Z",
 	"tags": ["ui"],
 	"runes": true,
 	"typescript": true,
 	"version": "2.0.6",
 	"svelte_range": "^5.0.0-next.1",
-	"last_rune_check_version": "2.0.6"
+	"last_rune_check_version": "2.0.6",
+	"github_stars": 0
 }

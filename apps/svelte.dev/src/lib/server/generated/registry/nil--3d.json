@@ -3,12 +3,13 @@
 	"description": "Integrate Babylon.js 3D graphics with Svelte.",
 	"repo_url": "",
 	"authors": ["nil-"],
-	"downloads": 13,
+	"downloads": 41,
 	"updated": "2023-07-05T13:03:01.722Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.3.0",
 	"svelte_range": "^4.0.3",
-	"last_rune_check_version": "0.3.0"
+	"last_rune_check_version": "0.3.0",
+	"github_stars": 0
 }

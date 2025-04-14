@@ -3,7 +3,7 @@
 	"description": "UI library inspired by IBM Carbon Design System for Svelte.",
 	"repo_url": "",
 	"authors": ["harryhdt"],
-	"downloads": 1,
+	"downloads": 3,
 	"updated": "2024-01-04T06:04:54.170Z",
 	"tags": ["ui", "design-system"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "0.0.3",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.0.0",
-	"last_rune_check_version": "0.0.3"
+	"last_rune_check_version": "0.0.3",
+	"github_stars": 0
 }

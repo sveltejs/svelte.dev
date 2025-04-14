@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/thomasmol/create-sveltekit-starterpack",
 	"authors": ["thomasmol"],
 	"homepage": "https://github.com/thomasmol/sveltekit-starterpack#readme",
-	"downloads": 4,
+	"downloads": 6,
 	"updated": "2023-04-23T10:46:51.628Z",
 	"tags": ["tooling"],
 	"runes": false,

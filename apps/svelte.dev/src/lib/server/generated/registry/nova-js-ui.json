@@ -3,7 +3,7 @@
 	"description": "Provides UI components for Svelte and Astro projects.",
 	"repo_url": "",
 	"authors": ["martinramos98"],
-	"downloads": 0,
+	"downloads": 4,
 	"updated": "2024-10-21T19:28:31.788Z",
 	"tags": ["design-system"],
 	"runes": true,
@@ -11,5 +11,6 @@
 	"version": "0.1.3",
 	"svelte_range": "^4.2.14",
 	"kit_range": "^2.6.1",
-	"last_rune_check_version": "0.1.3"
+	"last_rune_check_version": "0.1.3",
+	"github_stars": 0
 }

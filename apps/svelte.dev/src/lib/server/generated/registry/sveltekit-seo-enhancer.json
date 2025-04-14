@@ -3,7 +3,7 @@
 	"description": "Enhance SEO capabilities in SvelteKit applications.",
 	"repo_url": "",
 	"authors": ["ayushjhunjhunwala"],
-	"downloads": 2,
+	"downloads": 6,
 	"updated": "2024-06-23T09:41:48.184Z",
 	"tags": ["seo"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "1.0.2",
 	"svelte_range": "^4.2.7",
 	"kit_range": "^2.0.0",
-	"last_rune_check_version": "1.0.2"
+	"last_rune_check_version": "1.0.2",
+	"github_stars": 0
 }

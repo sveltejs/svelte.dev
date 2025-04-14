@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/oslabs-beta/Svault",
 	"authors": ["mbuen21", "tristbt"],
 	"homepage": "https://svault.dev",
-	"downloads": 2,
+	"downloads": 5,
 	"updated": "2023-07-23T00:08:53.291Z",
 	"tags": ["auth"],
 	"runes": false,

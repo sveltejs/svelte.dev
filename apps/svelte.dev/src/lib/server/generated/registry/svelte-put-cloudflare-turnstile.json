@@ -4,13 +4,13 @@
 	"repo_url": "https://github.com/vnphanquang/svelte-put",
 	"authors": ["vnphanquang"],
 	"homepage": "https://svelte-put.vnphanquang.com/docs/cloudflare-turnstile",
-	"downloads": 373,
-	"updated": "2025-03-02T01:29:40.018Z",
+	"downloads": 468,
+	"updated": "2025-04-14T14:08:59.370Z",
 	"tags": ["integration"],
 	"runes": false,
-	"github_stars": 917,
+	"github_stars": 918,
 	"typescript": true,
-	"version": "1.1.2",
+	"version": "1.2.0",
 	"svelte_range": "^5.1.0",
-	"last_rune_check_version": "1.1.2"
+	"last_rune_check_version": "1.2.0"
 }

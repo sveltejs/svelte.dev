@@ -3,7 +3,7 @@
 	"description": "Add date and time pickers to Svelte projects.",
 	"repo_url": "",
 	"authors": ["spettit"],
-	"downloads": 1,
+	"downloads": 4,
 	"updated": "2022-05-03T17:18:29.211Z",
 	"tags": ["ui"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "0.0.10",
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
-	"last_rune_check_version": "0.0.10"
+	"last_rune_check_version": "0.0.10",
+	"github_stars": 0
 }

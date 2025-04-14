@@ -3,7 +3,7 @@
 	"description": "Create GDPR cookie consent banner for Svelte/Kit applications.",
 	"repo_url": "",
 	"authors": ["antony", "adampond", "alex.dilley", "jedwoodcock", "leandro.silva", "tomlewis0"],
-	"downloads": 1037,
+	"downloads": 944,
 	"updated": "2025-04-02T13:42:03.523Z",
 	"tags": ["ui"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "14.0.1",
 	"svelte_range": "^5.25.3",
 	"kit_range": "^2.20.2",
-	"last_rune_check_version": "14.0.1"
+	"last_rune_check_version": "14.0.1",
+	"github_stars": 0
 }

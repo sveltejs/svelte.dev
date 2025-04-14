@@ -3,7 +3,7 @@
 	"description": "Minimal router for Svelte with 404 custom support.",
 	"repo_url": "https://github.com/Kaporos/svelte-grouter",
 	"authors": ["kaporos"],
-	"downloads": 1,
+	"downloads": 9,
 	"updated": "2021-12-24T15:33:26.815Z",
 	"tags": ["router"],
 	"runes": false,

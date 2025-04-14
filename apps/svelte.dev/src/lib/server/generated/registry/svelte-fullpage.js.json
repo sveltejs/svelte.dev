@@ -3,12 +3,13 @@
 	"description": "Create full-screen scrolling websites using Svelte and fullPage.js.",
 	"repo_url": "",
 	"authors": ["nergel"],
-	"downloads": 3,
+	"downloads": 5,
 	"updated": "2020-01-24T15:19:56.343Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "1.0.5",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "1.0.5"
+	"last_rune_check_version": "1.0.5",
+	"github_stars": 0
 }

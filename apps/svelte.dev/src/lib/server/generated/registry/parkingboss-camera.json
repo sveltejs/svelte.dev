@@ -3,12 +3,13 @@
 	"description": "Create camera element for video, barcode detection in Svelte.",
 	"repo_url": "",
 	"authors": ["nlemesurier", "jpfohl", "crisfole"],
-	"downloads": 0,
+	"downloads": 8,
 	"updated": "2020-04-20T15:01:12.181Z",
 	"tags": ["media"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.2.0",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.2.0"
+	"last_rune_check_version": "0.2.0",
+	"github_stars": 0
 }

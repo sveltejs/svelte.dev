@@ -3,12 +3,13 @@
 	"description": "Provides system UI components for Svelte.",
 	"repo_url": "",
 	"authors": ["studiobear-co", "bearcanrun"],
-	"downloads": 6,
+	"downloads": 10,
 	"updated": "2020-09-12T00:02:20.091Z",
 	"tags": ["design-system"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.4.4",
 	"svelte_range": "^3.20.1",
-	"last_rune_check_version": "0.4.4"
+	"last_rune_check_version": "0.4.4",
+	"github_stars": 0
 }

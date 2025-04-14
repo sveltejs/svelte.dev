@@ -3,12 +3,13 @@
 	"description": "Display message notifications in Svelte applications.",
 	"repo_url": "",
 	"authors": ["baiwusanyu"],
-	"downloads": 18,
+	"downloads": 50,
 	"updated": "2025-01-24T03:49:05.072Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.2.8",
 	"svelte_range": "^4.2.12",
-	"last_rune_check_version": "0.2.8"
+	"last_rune_check_version": "0.2.8",
+	"github_stars": 0
 }

@@ -4,11 +4,11 @@
 	"repo_url": "https://github.com/skeletonlabs/skeleton",
 	"authors": ["skeletonadmin", "endigo9740", "teknikal", "cokakoala"],
 	"homepage": "https://github.com/skeletonlabs/skeleton#readme",
-	"downloads": 24337,
+	"downloads": 26004,
 	"updated": "2025-04-03T19:25:14.810Z",
 	"tags": ["design-system", "ui"],
 	"runes": false,
-	"github_stars": 5436,
+	"github_stars": 5453,
 	"typescript": false,
 	"version": "3.1.2",
 	"last_rune_check_version": "3.1.2"

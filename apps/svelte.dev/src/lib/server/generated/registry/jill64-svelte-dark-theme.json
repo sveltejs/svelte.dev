@@ -4,14 +4,14 @@
 	"repo_url": "https://github.com/jill64/svelte-dark-theme",
 	"authors": ["jill64"],
 	"homepage": "https://github.com/jill64/svelte-dark-theme#readme",
-	"downloads": 10909,
-	"updated": "2025-03-15T03:10:26.142Z",
+	"downloads": 9748,
+	"updated": "2025-04-11T16:31:24.784Z",
 	"tags": ["miscellaneous"],
 	"runes": true,
 	"github_stars": 3,
 	"typescript": true,
-	"version": "5.1.4",
+	"version": "5.1.5",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
-	"last_rune_check_version": "5.1.4"
+	"last_rune_check_version": "5.1.5"
 }

@@ -3,7 +3,7 @@
 	"description": "Provides sortable, virtual table component for Svelte.",
 	"repo_url": "https://github.com/BernhardWebstudio/SvelteVirtualTable",
 	"authors": ["bernhard_webstudio"],
-	"downloads": 134,
+	"downloads": 37,
 	"updated": "2025-04-06T14:59:24.099Z",
 	"tags": ["ui"],
 	"runes": true,

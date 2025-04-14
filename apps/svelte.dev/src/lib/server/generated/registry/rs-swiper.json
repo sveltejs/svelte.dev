@@ -1,0 +1,15 @@
+{
+	"name": "rs-swiper",
+	"description": "Create touch-enabled swipeable carousels for Svelte apps.",
+	"typescript": true,
+	"repo_url": "https://github.com/SeoJaeWan/rs-swiper",
+	"authors": ["seojaewan"],
+	"homepage": "https://github.com/SeoJaeWan/rs-swiper",
+	"downloads": 26,
+	"updated": "2021-03-10T01:23:54.952Z",
+	"tags": ["ui"],
+	"svelte_range": "^3.31.2",
+	"runes": false,
+	"last_rune_check_version": "0.1.0",
+	"version": "0.1.0"
+}

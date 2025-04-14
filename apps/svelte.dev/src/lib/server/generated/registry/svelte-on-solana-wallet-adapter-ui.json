@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/svelte-on-solana/wallet-adapter",
 	"authors": ["silvestrevivo", "c_ogoo"],
 	"homepage": "https://github.com/svelte-on-solana/wallet-adapter#readme",
-	"downloads": 32,
+	"downloads": 40,
 	"updated": "2022-12-10T10:58:17.836Z",
 	"tags": ["integration"],
 	"runes": false,

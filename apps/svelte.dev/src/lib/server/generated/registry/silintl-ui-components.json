@@ -4,13 +4,13 @@
 	"repo_url": "https://github.com/silinternational/ui-components",
 	"authors": ["fillup", "wcjr11", "matt-h", "schparky", "hobbitronics"],
 	"homepage": "https://github.com/silinternational/ui-components#readme",
-	"downloads": 165,
-	"updated": "2025-04-05T02:11:41.987Z",
+	"downloads": 175,
+	"updated": "2025-04-11T05:10:52.133Z",
 	"tags": ["design-system"],
 	"runes": false,
 	"github_stars": 4,
 	"typescript": true,
-	"version": "11.8.0",
+	"version": "11.8.1",
 	"svelte_range": "^4.0.0",
-	"last_rune_check_version": "11.8.0"
+	"last_rune_check_version": "11.8.1"
 }

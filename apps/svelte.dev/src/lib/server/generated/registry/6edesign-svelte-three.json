@@ -3,12 +3,13 @@
 	"description": "Create Mograph experiments with Three.js.",
 	"repo_url": "",
 	"authors": ["6edesign"],
-	"downloads": 5,
+	"downloads": 18,
 	"updated": "2021-01-20T04:40:39.253Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "1.1.3",
 	"svelte_range": "^3.31.2",
-	"last_rune_check_version": "1.1.3"
+	"last_rune_check_version": "1.1.3",
+	"github_stars": 0
 }

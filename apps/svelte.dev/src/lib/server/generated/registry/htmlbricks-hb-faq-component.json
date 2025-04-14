@@ -3,11 +3,12 @@
 	"description": "Create FAQ components for Svelte apps.",
 	"repo_url": "",
 	"authors": ["dariocaruso"],
-	"downloads": 379,
+	"downloads": 754,
 	"updated": "2025-04-08T22:27:33.335Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.50.0-alpha.27",
-	"last_rune_check_version": "0.50.0-alpha.27"
+	"last_rune_check_version": "0.50.0-alpha.27",
+	"github_stars": 0
 }

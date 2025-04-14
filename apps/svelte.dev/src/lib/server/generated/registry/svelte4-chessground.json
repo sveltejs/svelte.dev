@@ -4,7 +4,7 @@
 	"repo_url": "",
 	"authors": ["liamkrenn"],
 	"homepage": "https://github.com/LiamKrenn/svelte4-chessground",
-	"downloads": 8,
+	"downloads": 6,
 	"updated": "2025-02-02T14:37:13.750Z",
 	"tags": ["ui"],
 	"runes": false,
@@ -12,5 +12,6 @@
 	"version": "3.0.1",
 	"svelte_range": "4.2.19",
 	"kit_range": "^1.30.4",
-	"last_rune_check_version": "3.0.1"
+	"last_rune_check_version": "3.0.1",
+	"github_stars": 0
 }

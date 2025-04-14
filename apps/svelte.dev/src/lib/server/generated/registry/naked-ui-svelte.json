@@ -3,12 +3,13 @@
 	"description": "Build UI components for Svelte applications.",
 	"repo_url": "",
 	"authors": ["allozaur"],
-	"downloads": 7,
+	"downloads": 17,
 	"updated": "2021-07-28T22:47:44.920Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.0.49",
 	"svelte_range": "^3.40.0",
-	"last_rune_check_version": "0.0.49"
+	"last_rune_check_version": "0.0.49",
+	"github_stars": 0
 }

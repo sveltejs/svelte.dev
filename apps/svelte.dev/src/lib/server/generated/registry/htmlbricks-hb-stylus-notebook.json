@@ -3,11 +3,12 @@
 	"description": "Create a Svelte-Bootstrap stylus-notebook web component.",
 	"repo_url": "",
 	"authors": ["dariocaruso"],
-	"downloads": 326,
+	"downloads": 695,
 	"updated": "2025-04-08T22:27:16.975Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.50.0-alpha.27",
-	"last_rune_check_version": "0.50.0-alpha.27"
+	"last_rune_check_version": "0.50.0-alpha.27",
+	"github_stars": 0
 }

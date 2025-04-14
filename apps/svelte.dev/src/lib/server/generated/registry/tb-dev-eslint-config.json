@@ -4,13 +4,12 @@
 	"repo_url": "https://github.com/ferreira-tb/eslint-config",
 	"authors": ["ferreira-tb"],
 	"homepage": "https://github.com/ferreira-tb/eslint-config",
-	"downloads": 40,
-	"updated": "2025-03-27T21:11:37.359Z",
+	"downloads": 92,
+	"updated": "2025-04-13T14:30:10.225Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 1,
 	"typescript": true,
-	"version": "6.7.2",
-	"svelte_range": "^5.25.3",
-	"last_rune_check_version": "6.7.2"
+	"version": "7.0.0",
+	"last_rune_check_version": "7.0.0"
 }

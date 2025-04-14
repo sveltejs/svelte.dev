@@ -4,12 +4,13 @@
 	"repo_url": "",
 	"authors": ["geoffcox"],
 	"homepage": "https://github.com/GeoffCox/svelte-splitter/blob/main/package/README.md",
-	"downloads": 42,
+	"downloads": 47,
 	"updated": "2021-04-29T16:31:18.128Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "1.0.1",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "1.0.1"
+	"last_rune_check_version": "1.0.1",
+	"github_stars": 0
 }

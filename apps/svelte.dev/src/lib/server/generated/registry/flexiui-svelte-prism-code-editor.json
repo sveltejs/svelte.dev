@@ -3,12 +3,13 @@
 	"description": "Integrate Prism code editor with syntax highlighting in Svelte.",
 	"repo_url": "",
 	"authors": ["alexgipi"],
-	"downloads": 6,
+	"downloads": 13,
 	"updated": "2025-03-13T02:15:32.644Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.0.13",
 	"svelte_range": "^5.19.9",
-	"last_rune_check_version": "0.0.13"
+	"last_rune_check_version": "0.0.13",
+	"github_stars": 0
 }

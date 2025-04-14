@@ -4,12 +4,13 @@
 	"repo_url": "",
 	"authors": ["ariannargesi"],
 	"homepage": "https://github.com/ariannargesi/svelte-touch-hold",
-	"downloads": 0,
+	"downloads": 5,
 	"updated": "2022-11-26T08:15:30.125Z",
 	"tags": ["miscellaneous"],
 	"runes": true,
 	"typescript": true,
 	"version": "1.0.0",
 	"svelte_range": "^3.52.0",
-	"last_rune_check_version": "1.0.0"
+	"last_rune_check_version": "1.0.0",
+	"github_stars": 0
 }

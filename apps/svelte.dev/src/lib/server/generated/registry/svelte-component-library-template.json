@@ -3,12 +3,13 @@
 	"description": "Generates Svelte component library templates.",
 	"repo_url": "",
 	"authors": ["tant2012", "mingsterism"],
-	"downloads": 1,
+	"downloads": 5,
 	"updated": "2022-07-25T05:09:32.639Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.0.3",
 	"svelte_range": "^3.43.0",
-	"last_rune_check_version": "0.0.3"
+	"last_rune_check_version": "0.0.3",
+	"github_stars": 0
 }

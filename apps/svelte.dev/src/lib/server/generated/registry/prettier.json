@@ -16,11 +16,11 @@
 		"prettier-bot"
 	],
 	"homepage": "https://prettier.io",
-	"downloads": 52785029,
+	"downloads": 49716466,
 	"updated": "2025-03-03T01:18:57.493Z",
 	"tags": ["tooling"],
 	"runes": false,
-	"github_stars": 50223,
+	"github_stars": 50258,
 	"typescript": true,
 	"version": "3.5.3",
 	"last_rune_check_version": "3.5.3"

@@ -11,11 +11,11 @@
 		"shirakaba"
 	],
 	"homepage": "https://github.com/nodegui/svelte-nodegui",
-	"downloads": 6,
+	"downloads": 22,
 	"updated": "2021-05-04T20:35:22.026Z",
 	"tags": ["tooling"],
 	"runes": false,
-	"github_stars": 2846,
+	"github_stars": 2847,
 	"typescript": true,
 	"version": "0.1.2",
 	"svelte_range": "^3.24.1",

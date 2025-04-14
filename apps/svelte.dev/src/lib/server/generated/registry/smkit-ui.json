@@ -3,13 +3,14 @@
 	"description": "Create UI components for Svelte apps.",
 	"repo_url": "",
 	"authors": ["disimasar", "gnykka", "dmdin", "ghostmodd"],
-	"downloads": 135,
-	"updated": "2025-04-09T10:21:25.731Z",
+	"downloads": 207,
+	"updated": "2025-04-14T08:56:56.248Z",
 	"tags": ["design-system"],
 	"runes": false,
 	"typescript": true,
-	"version": "0.0.1-beta.221",
+	"version": "0.0.1-beta.222",
 	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
 	"kit_range": "^1.0.0 || ^2.0.0",
-	"last_rune_check_version": "0.0.1-beta.221"
+	"last_rune_check_version": "0.0.1-beta.222",
+	"github_stars": 0
 }

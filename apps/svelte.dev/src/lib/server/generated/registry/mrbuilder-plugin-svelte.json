@@ -3,12 +3,13 @@
 	"description": "Provide Svelte file handling for MrBuilder.",
 	"repo_url": "",
 	"authors": ["speajus", "nanandn", "brycereynolds"],
-	"downloads": 3,
+	"downloads": 9,
 	"updated": "2021-10-25T22:41:48.846Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"typescript": false,
 	"version": "4.4.7-alpha.9",
 	"svelte_range": "^3.22.3",
-	"last_rune_check_version": "4.4.7-alpha.9"
+	"last_rune_check_version": "4.4.7-alpha.9",
+	"github_stars": 0
 }

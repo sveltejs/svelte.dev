@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/svelterialjs/integrations",
 	"authors": ["thecomputerm"],
 	"homepage": "https://github.com/svelterialjs/integrations/tree/main/packages/preprocessor#readme",
-	"downloads": 3,
+	"downloads": 9,
 	"updated": "2021-10-04T12:47:19.342Z",
 	"tags": ["tooling"],
 	"runes": false,

@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/born05/sveltekit-proxy",
 	"authors": ["arjeng", "codename-niels", "rens-born05", "roelvanhintum"],
 	"homepage": "https://github.com/born05/sveltekit-proxy#readme",
-	"downloads": 8,
+	"downloads": 10,
 	"updated": "2024-08-14T07:59:44.033Z",
 	"tags": ["server"],
 	"runes": false,

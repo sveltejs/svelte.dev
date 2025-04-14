@@ -3,12 +3,13 @@
 	"description": "Build shareable Svelte component libraries with testing and Storybook.",
 	"repo_url": "",
 	"authors": ["guilhermesnts"],
-	"downloads": 1,
+	"downloads": 5,
 	"updated": "2022-06-27T00:01:28.234Z",
 	"tags": ["design-system", "tooling"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.2.2",
 	"svelte_range": "^3.20.1",
-	"last_rune_check_version": "0.2.2"
+	"last_rune_check_version": "0.2.2",
+	"github_stars": 0
 }

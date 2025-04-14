@@ -3,12 +3,13 @@
 	"description": "Render articles from CMS within Svelte applications.",
 	"repo_url": "",
 	"authors": ["virgus66", "horacekeung", "josh_clement", "saelora"],
-	"downloads": 10,
+	"downloads": 52,
 	"updated": "2023-07-14T16:19:13.448Z",
 	"tags": ["content"],
 	"runes": false,
 	"typescript": false,
 	"version": "2.10.9",
 	"svelte_range": "^3.20.1",
-	"last_rune_check_version": "2.10.9"
+	"last_rune_check_version": "2.10.9",
+	"github_stars": 0
 }

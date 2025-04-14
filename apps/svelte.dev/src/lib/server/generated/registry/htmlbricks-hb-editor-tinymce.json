@@ -3,12 +3,13 @@
 	"description": "Integrate TinyMCE rich text editor into Svelte components.",
 	"repo_url": "",
 	"authors": ["dariocaruso"],
-	"downloads": 103,
+	"downloads": 180,
 	"updated": "2025-03-24T18:07:13.970Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.20.18",
 	"svelte_range": "^3.46.2",
-	"last_rune_check_version": "0.20.18"
+	"last_rune_check_version": "0.20.18",
+	"github_stars": 0
 }

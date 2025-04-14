@@ -4,14 +4,14 @@
 	"repo_url": "https://github.com/jill64/svelte-suite",
 	"authors": ["jill64"],
 	"homepage": "https://github.com/jill64/svelte-suite#readme",
-	"downloads": 5138,
-	"updated": "2025-03-15T06:58:33.867Z",
+	"downloads": 4594,
+	"updated": "2025-04-11T19:40:25.774Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 1,
 	"typescript": true,
-	"version": "2.2.7",
+	"version": "2.2.8",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
-	"last_rune_check_version": "2.2.7"
+	"last_rune_check_version": "2.2.8"
 }

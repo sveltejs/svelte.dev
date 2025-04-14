@@ -3,11 +3,12 @@
 	"description": "Build dialog form components for Svelte apps.",
 	"repo_url": "",
 	"authors": ["dariocaruso"],
-	"downloads": 760,
+	"downloads": 799,
 	"updated": "2025-04-08T22:27:34.010Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.50.0-alpha.27",
-	"last_rune_check_version": "0.50.0-alpha.27"
+	"last_rune_check_version": "0.50.0-alpha.27",
+	"github_stars": 0
 }

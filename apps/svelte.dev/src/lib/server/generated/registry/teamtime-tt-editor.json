@@ -3,7 +3,7 @@
 	"description": "Create WYSIWYG editor for Svelte with ProseMirror and Tailwind.",
 	"repo_url": "https://bitbucket.org/amigoalt/tt-editor/src/tailwind_implemented/",
 	"authors": ["amigoalt"],
-	"downloads": 2,
+	"downloads": 5,
 	"updated": "2020-09-20T18:25:16.997Z",
 	"tags": ["content"],
 	"runes": false,

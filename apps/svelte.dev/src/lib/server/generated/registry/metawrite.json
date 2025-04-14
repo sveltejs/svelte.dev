@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/koodeau/metawrite",
 	"authors": ["koodeau"],
 	"homepage": "https://increas.io/metawrite",
-	"downloads": 63,
+	"downloads": 72,
 	"updated": "2022-06-12T19:33:50.028Z",
 	"tags": ["integration", "auth", "database"],
 	"runes": false,

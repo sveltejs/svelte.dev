@@ -3,12 +3,13 @@
 	"description": "Add swipe gestures to Svelte components.",
 	"repo_url": "",
 	"authors": ["daaku"],
-	"downloads": 0,
+	"downloads": 5,
 	"updated": "2020-09-21T13:19:18.333Z",
 	"tags": ["ui", "miscellaneous"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.1.0",
 	"svelte_range": "^3.25.1",
-	"last_rune_check_version": "0.1.0"
+	"last_rune_check_version": "0.1.0",
+	"github_stars": 0
 }

@@ -3,7 +3,7 @@
 	"description": "Build Svelte Material widgets styled with TailwindCSS.",
 	"repo_url": "https://github.com/tianhai82/svetamat2",
 	"authors": ["tianhai82"],
-	"downloads": 1,
+	"downloads": 4,
 	"updated": "2021-06-24T01:21:23.821Z",
 	"tags": ["ui"],
 	"runes": false,

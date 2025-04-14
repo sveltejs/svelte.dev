@@ -3,12 +3,13 @@
 	"description": "CLI tool for component library cmexd, built with esbuild and Svelte.",
 	"repo_url": "",
 	"authors": ["chen.mo"],
-	"downloads": 2,
+	"downloads": 12,
 	"updated": "2022-04-19T16:06:15.113Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"typescript": true,
 	"version": "2.0.0-beta.3",
 	"svelte_range": "3.*",
-	"last_rune_check_version": "2.0.0-beta.3"
+	"last_rune_check_version": "2.0.0-beta.3",
+	"github_stars": 0
 }

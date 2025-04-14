@@ -4,13 +4,13 @@
 	"repo_url": "https://github.com/sveltejs/language-tools",
 	"authors": ["orta", "svelte-language-tools-deploy", "dummdidumm"],
 	"homepage": "https://github.com/sveltejs/language-tools#readme",
-	"downloads": 7792,
-	"updated": "2025-03-06T14:09:49.594Z",
+	"downloads": 9024,
+	"updated": "2025-04-13T06:33:59.909Z",
 	"tags": ["tooling"],
 	"runes": false,
-	"github_stars": 1297,
+	"github_stars": 1298,
 	"typescript": true,
-	"version": "0.17.11",
+	"version": "0.17.12",
 	"svelte_range": "^4.2.19",
-	"last_rune_check_version": "0.17.11"
+	"last_rune_check_version": "0.17.12"
 }

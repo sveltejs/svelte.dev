@@ -1,0 +1,16 @@
+{
+	"name": "@vulppi/bun-svelte-loader",
+	"description": "Load and compile Svelte components in Bun projects.",
+	"typescript": true,
+	"repo_url": "https://github.com/vulppi-dev/libs",
+	"authors": ["morbden"],
+	"homepage": "https://github.com/vulppi-dev/libs#readme",
+	"downloads": 17,
+	"updated": "2025-04-03T17:53:47.607Z",
+	"tags": ["tooling"],
+	"svelte_range": "^5.25.6",
+	"runes": false,
+	"last_rune_check_version": "0.0.2",
+	"version": "0.0.2",
+	"github_stars": 0
+}

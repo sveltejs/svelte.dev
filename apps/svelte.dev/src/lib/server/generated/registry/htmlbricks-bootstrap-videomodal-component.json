@@ -3,12 +3,13 @@
 	"description": "Create Svelte-Bootstrap Video Modal WebComponent.",
 	"repo_url": "",
 	"authors": ["dariocaruso"],
-	"downloads": 12,
+	"downloads": 21,
 	"updated": "2022-01-02T19:14:28.792Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.2.4",
 	"svelte_range": "^3.44.3",
-	"last_rune_check_version": "0.2.4"
+	"last_rune_check_version": "0.2.4",
+	"github_stars": 0
 }

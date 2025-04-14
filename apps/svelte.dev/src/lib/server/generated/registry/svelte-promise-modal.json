@@ -3,12 +3,13 @@
 	"description": "Create modals returning promises for Svelte applications.",
 	"repo_url": "",
 	"authors": ["esinx"],
-	"downloads": 2,
+	"downloads": 5,
 	"updated": "2020-06-01T09:48:19.187Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.7.0-2",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.7.0-2"
+	"last_rune_check_version": "0.7.0-2",
+	"github_stars": 0
 }

@@ -4,12 +4,13 @@
 	"repo_url": "",
 	"authors": ["ktarmyshov"],
 	"homepage": "https://github.com/geoffrich/svelte-adapter-azure-swa#readme",
-	"downloads": 81,
+	"downloads": 69,
 	"updated": "2025-04-04T22:03:00.541Z",
 	"tags": ["adapter"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.21.12",
 	"kit_range": "^2.0.0",
-	"last_rune_check_version": "0.21.12"
+	"last_rune_check_version": "0.21.12",
+	"github_stars": 0
 }

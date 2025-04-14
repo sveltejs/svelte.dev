@@ -4,12 +4,13 @@
 	"repo_url": "",
 	"authors": ["7korobi"],
 	"homepage": "https://github.com/7korobi/svelte-giji/tree/master/src/lib/map-reduce",
-	"downloads": 7,
+	"downloads": 22,
 	"updated": "2022-02-13T15:32:43.570Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.1.8",
 	"svelte_range": "^3.46.4",
-	"last_rune_check_version": "0.1.8"
+	"last_rune_check_version": "0.1.8",
+	"github_stars": 0
 }

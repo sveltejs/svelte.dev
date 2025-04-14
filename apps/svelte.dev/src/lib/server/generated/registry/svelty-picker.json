@@ -3,7 +3,7 @@
 	"description": "Create date and time pickers in Svelte applications.",
 	"repo_url": "",
 	"authors": ["mskocik"],
-	"downloads": 4086,
+	"downloads": 4687,
 	"updated": "2025-02-25T09:59:33.057Z",
 	"tags": ["ui"],
 	"runes": true,
@@ -11,5 +11,6 @@
 	"version": "6.1.5",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.17.2",
-	"last_rune_check_version": "6.1.5"
+	"last_rune_check_version": "6.1.5",
+	"github_stars": 0
 }

@@ -3,12 +3,13 @@
 	"description": "Create and manage chats easily.",
 	"repo_url": "",
 	"authors": ["ceifa"],
-	"downloads": 9,
+	"downloads": 16,
 	"updated": "2023-03-18T13:25:04.673Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.0.32",
 	"svelte_range": "3.57.0",
-	"last_rune_check_version": "0.0.32"
+	"last_rune_check_version": "0.0.32",
+	"github_stars": 0
 }

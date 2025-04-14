@@ -3,7 +3,7 @@
 	"description": "Balance text lines for improved readability in Svelte.",
 	"repo_url": "",
 	"authors": ["pablopang"],
-	"downloads": 258,
+	"downloads": 392,
 	"updated": "2023-01-10T20:41:41.587Z",
 	"tags": ["ui"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "1.0.4",
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.0.0",
-	"last_rune_check_version": "1.0.4"
+	"last_rune_check_version": "1.0.4",
+	"github_stars": 0
 }

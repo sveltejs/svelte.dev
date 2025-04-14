@@ -3,7 +3,7 @@
 	"description": "Create tree hierarchies in SvelteKit applications.",
 	"authors": ["aknakos"],
 	"homepage": "https://github.com/aknakos/sveltekit-tree-hierarchy#readme",
-	"downloads": 3,
+	"downloads": 10,
 	"updated": "2022-09-08T21:29:21.112Z",
 	"tags": ["ui"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "0.0.9",
 	"svelte_range": "^3.50.0",
 	"kit_range": "next",
-	"last_rune_check_version": "0.0.9"
+	"last_rune_check_version": "0.0.9",
+	"github_stars": 0
 }

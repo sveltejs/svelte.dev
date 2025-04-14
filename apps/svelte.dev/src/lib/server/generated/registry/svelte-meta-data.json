@@ -3,12 +3,13 @@
 	"description": "Manage SEO metadata for Svelte applications.",
 	"repo_url": "",
 	"authors": ["stordahl_"],
-	"downloads": 3,
+	"downloads": 8,
 	"updated": "2021-01-09T04:38:42.967Z",
 	"tags": ["seo"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.0.2",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.0.2"
+	"last_rune_check_version": "0.0.2",
+	"github_stars": 0
 }

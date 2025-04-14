@@ -3,7 +3,7 @@
 	"description": "Offers a UI component library for Svelte.",
 	"repo_url": "https://github.com/Leomotors/sv-components",
 	"authors": ["leomotors"],
-	"downloads": 4,
+	"downloads": 7,
 	"updated": "2022-06-04T09:06:53.060Z",
 	"tags": ["ui"],
 	"runes": false,

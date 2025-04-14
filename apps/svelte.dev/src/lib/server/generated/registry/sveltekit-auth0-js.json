@@ -3,7 +3,7 @@
 	"description": "Implement Auth0 authentication in SvelteKit applications.",
 	"repo_url": "",
 	"authors": ["leelaing"],
-	"downloads": 2,
+	"downloads": 9,
 	"updated": "2022-06-06T17:38:04.582Z",
 	"tags": ["auth", "integration"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "0.0.17",
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
-	"last_rune_check_version": "0.0.17"
+	"last_rune_check_version": "0.0.17",
+	"github_stars": 0
 }

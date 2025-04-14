@@ -4,7 +4,7 @@
 	"repo_url": "https://gitlab.com/danboscaro/govuk-svelte",
 	"authors": ["danboscaro"],
 	"homepage": "https://govuk-svelte-demo.vercel.app/",
-	"downloads": 9,
+	"downloads": 15,
 	"updated": "2023-08-25T12:08:20.903Z",
 	"tags": ["ui", "design-system"],
 	"runes": false,

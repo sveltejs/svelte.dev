@@ -3,11 +3,12 @@
 	"description": "Svelte Paypal Payment WebComponent.",
 	"repo_url": "",
 	"authors": ["dariocaruso"],
-	"downloads": 347,
+	"downloads": 808,
 	"updated": "2025-04-08T22:27:22.388Z",
 	"tags": ["integration"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.50.0-alpha.27",
-	"last_rune_check_version": "0.50.0-alpha.27"
+	"last_rune_check_version": "0.50.0-alpha.27",
+	"github_stars": 0
 }

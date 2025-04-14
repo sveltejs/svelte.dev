@@ -3,7 +3,7 @@
 	"description": "Core UI components for Svelte applications.",
 	"repo_url": "",
 	"authors": ["t-next"],
-	"downloads": 31,
+	"downloads": 46,
 	"updated": "2023-12-20T22:21:22.030Z",
 	"tags": ["design-system"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "2.57.0",
 	"svelte_range": "^4.2.7",
 	"kit_range": "^2.0.2",
-	"last_rune_check_version": "2.57.0"
+	"last_rune_check_version": "2.57.0",
+	"github_stars": 0
 }

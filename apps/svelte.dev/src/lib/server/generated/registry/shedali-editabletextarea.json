@@ -3,7 +3,7 @@
 	"description": "Create editable text areas within Svelte applications.",
 	"repo_url": "https://github.com/shedali/editabletextarea",
 	"authors": ["franzi"],
-	"downloads": 1,
+	"downloads": 9,
 	"updated": "2020-04-26T10:55:26.432Z",
 	"tags": ["ui"],
 	"runes": false,

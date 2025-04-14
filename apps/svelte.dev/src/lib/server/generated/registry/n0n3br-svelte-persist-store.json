@@ -3,12 +3,13 @@
 	"description": "Persist Svelte stores in localStorage or sessionStorage.",
 	"repo_url": "",
 	"authors": ["n0n3br"],
-	"downloads": 1,
+	"downloads": 7,
 	"updated": "2020-04-19T18:42:13.676Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
 	"typescript": false,
 	"version": "1.0.2",
 	"svelte_range": "^3.20.1",
-	"last_rune_check_version": "1.0.2"
+	"last_rune_check_version": "1.0.2",
+	"github_stars": 0
 }

@@ -3,12 +3,13 @@
 	"description": "Create accessible chart components for Svelte applications.",
 	"repo_url": "",
 	"authors": ["ninosaurier"],
-	"downloads": 2,
+	"downloads": 8,
 	"updated": "2022-09-07T12:00:20.754Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "1.0.9",
 	"svelte_range": "^3.49.0",
-	"last_rune_check_version": "1.0.9"
+	"last_rune_check_version": "1.0.9",
+	"github_stars": 0
 }

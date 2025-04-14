@@ -3,12 +3,13 @@
 	"description": "Add dynamic page numbers to PDF documents in Svelte.",
 	"repo_url": "",
 	"authors": ["manuel3108"],
-	"downloads": 4,
+	"downloads": 10,
 	"updated": "2021-07-04T12:13:32.847Z",
 	"tags": ["content"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.0.15",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.0.15"
+	"last_rune_check_version": "0.0.15",
+	"github_stars": 0
 }

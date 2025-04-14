@@ -3,7 +3,7 @@
 	"description": "Provide Svelte components for the Prisme Design System.",
 	"repo_url": "https://github.com/halcyonnouveau/prisme",
 	"authors": ["beanpup.py"],
-	"downloads": 2,
+	"downloads": 14,
 	"updated": "2020-02-18T22:42:18.518Z",
 	"tags": ["design-system"],
 	"runes": false,

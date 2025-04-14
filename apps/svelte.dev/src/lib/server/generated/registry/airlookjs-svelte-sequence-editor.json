@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/airlookjs/airlookjs",
 	"authors": ["olekristensen", "smukkejohan"],
 	"homepage": "https://github.com/airlookjs/airlookjs/packages/svelte-sequence-editor#readme",
-	"downloads": 6,
+	"downloads": 16,
 	"updated": "2024-09-02T19:35:39.529Z",
 	"tags": ["ui"],
 	"runes": false,

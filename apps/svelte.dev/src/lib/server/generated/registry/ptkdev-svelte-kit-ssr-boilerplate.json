@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/ptkdev-boilerplate/svelte-kit-ssr-boilerplate",
 	"authors": ["ptkdevio"],
 	"homepage": "https://github.com/ptkdev-boilerplate/svelte-kit-ssr-boilerplate",
-	"downloads": 1,
+	"downloads": 5,
 	"updated": "2021-05-16T11:31:54.460Z",
 	"tags": ["server", "tooling"],
 	"runes": false,

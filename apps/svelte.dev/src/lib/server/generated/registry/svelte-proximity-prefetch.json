@@ -1,0 +1,17 @@
+{
+	"name": "svelte-proximity-prefetch",
+	"description": "Prefetch pages when user's mouse approaches links.",
+	"typescript": true,
+	"repo_url": "https://github.com/itsmingjie/svelte-proximity-prefetch",
+	"authors": ["itsmingjie"],
+	"homepage": "https://github.com/itsmingjie/svelte-proximity-prefetch#readme",
+	"downloads": 33,
+	"updated": "2025-04-06T21:43:37.437Z",
+	"tags": ["router"],
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.0.0",
+	"runes": true,
+	"last_rune_check_version": "0.0.1",
+	"version": "0.0.1",
+	"github_stars": 2
+}

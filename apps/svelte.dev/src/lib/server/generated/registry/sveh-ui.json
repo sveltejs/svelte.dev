@@ -3,7 +3,7 @@
 	"description": "Build UI components with Tailwind CSS for Svelte projects.",
 	"repo_url": "",
 	"authors": ["harryhdt"],
-	"downloads": 10,
+	"downloads": 91,
 	"updated": "2024-01-14T14:11:02.185Z",
 	"tags": ["ui", "design-system"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "0.3.12",
 	"svelte_range": "^3.54.0 || ^4.0.0",
 	"kit_range": "^1.23.0",
-	"last_rune_check_version": "0.3.12"
+	"last_rune_check_version": "0.3.12",
+	"github_stars": 0
 }

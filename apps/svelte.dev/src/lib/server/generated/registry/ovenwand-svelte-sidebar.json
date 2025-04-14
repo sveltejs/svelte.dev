@@ -3,12 +3,13 @@
 	"description": "Implement sidebar component for Svelte applications.",
 	"repo_url": "",
 	"authors": ["sheijne"],
-	"downloads": 1,
+	"downloads": 4,
 	"updated": "2021-03-20T17:28:20.305Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.0.5",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.0.5"
+	"last_rune_check_version": "0.0.5",
+	"github_stars": 0
 }

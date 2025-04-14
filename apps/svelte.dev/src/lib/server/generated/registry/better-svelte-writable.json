@@ -4,7 +4,7 @@
 	"repo_url": "",
 	"authors": ["tnthung"],
 	"homepage": "https://github.com/tnthung/better-svelte-writable",
-	"downloads": 10,
+	"downloads": 16,
 	"updated": "2023-12-01T00:51:18.489Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
@@ -12,5 +12,6 @@
 	"version": "0.4.2",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.4",
-	"last_rune_check_version": "0.4.2"
+	"last_rune_check_version": "0.4.2",
+	"github_stars": 0
 }

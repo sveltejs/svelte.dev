@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/svelteuse/router",
 	"authors": ["alexanderniebuhr"],
 	"homepage": "https://github.com/svelteuse/router#readme",
-	"downloads": 9,
+	"downloads": 15,
 	"updated": "2022-03-02T08:53:48.879Z",
 	"tags": ["router"],
 	"runes": false,

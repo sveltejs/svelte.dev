@@ -3,12 +3,13 @@
 	"description": "Create table components for Svelte applications.",
 	"repo_url": "",
 	"authors": ["georgefaulkner1"],
-	"downloads": 3,
+	"downloads": 8,
 	"updated": "2025-03-19T22:52:06.630Z",
 	"tags": ["ui"],
 	"runes": true,
 	"typescript": false,
 	"version": "0.0.1",
 	"svelte_range": "^5.23.2",
-	"last_rune_check_version": "0.0.1"
+	"last_rune_check_version": "0.0.1",
+	"github_stars": 0
 }

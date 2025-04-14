@@ -3,12 +3,13 @@
 	"description": "Integrate Google Pay web components into Svelte apps.",
 	"repo_url": "",
 	"authors": ["dariocaruso"],
-	"downloads": 1,
+	"downloads": 5,
 	"updated": "2022-01-25T20:35:18.318Z",
 	"tags": ["integration"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.4.26",
 	"svelte_range": "^3.44.3",
-	"last_rune_check_version": "0.4.26"
+	"last_rune_check_version": "0.4.26",
+	"github_stars": 0
 }

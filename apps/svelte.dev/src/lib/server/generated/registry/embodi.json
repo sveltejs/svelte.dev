@@ -4,13 +4,13 @@
 	"repo_url": "https://github.com/embodijs/generator",
 	"authors": ["cordlesswool"],
 	"homepage": "https://github.com/embodijs/generator/tree/main#readme",
-	"downloads": 502,
-	"updated": "2025-04-06T15:54:15.254Z",
+	"downloads": 477,
+	"updated": "2025-04-14T12:44:57.843Z",
 	"tags": ["tooling"],
 	"runes": true,
 	"github_stars": 2,
 	"typescript": true,
-	"version": "0.10.0",
+	"version": "0.11.0",
 	"svelte_range": "^5.23.0",
-	"last_rune_check_version": "0.10.0"
+	"last_rune_check_version": "0.11.0"
 }

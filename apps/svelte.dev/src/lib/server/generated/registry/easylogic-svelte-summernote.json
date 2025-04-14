@@ -3,12 +3,13 @@
 	"description": "Integrate Summernote editor into Svelte applications.",
 	"repo_url": "",
 	"authors": ["easylogic"],
-	"downloads": 1,
+	"downloads": 5,
 	"updated": "2020-03-22T15:16:23.015Z",
 	"tags": ["content"],
 	"runes": true,
 	"typescript": false,
 	"version": "0.0.3",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.0.3"
+	"last_rune_check_version": "0.0.3",
+	"github_stars": 0
 }

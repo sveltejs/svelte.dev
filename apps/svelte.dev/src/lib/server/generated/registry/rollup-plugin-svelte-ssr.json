@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/akaSybe/rollup-plugin-svelte-ssr",
 	"authors": ["akasybe"],
 	"homepage": "https://github.com/akaSybe/rollup-plugin-svelte-ssr#readme",
-	"downloads": 5,
+	"downloads": 7,
 	"updated": "2020-06-12T06:54:08.965Z",
 	"tags": ["server", "tooling"],
 	"runes": false,

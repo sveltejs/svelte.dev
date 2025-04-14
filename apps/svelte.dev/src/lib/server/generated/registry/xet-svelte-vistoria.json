@@ -4,12 +4,13 @@
 	"repo_url": "",
 	"authors": ["lagden"],
 	"homepage": "https://gitlab.textecnologia.io/nimble/svelte-vistoria#readme",
-	"downloads": 0,
+	"downloads": 5,
 	"updated": "2023-07-05T20:21:41.460Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "1.0.1",
 	"svelte_range": ">= 4 < 5",
-	"last_rune_check_version": "1.0.1"
+	"last_rune_check_version": "1.0.1",
+	"github_stars": 0
 }

@@ -3,12 +3,13 @@
 	"description": "Provides Adobe Spectrum workflow icons as Svelte components.",
 	"repo_url": "",
 	"authors": ["runningzs"],
-	"downloads": 10,
+	"downloads": 6,
 	"updated": "2020-08-25T14:44:20.917Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.1.7",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.1.7"
+	"last_rune_check_version": "0.1.7",
+	"github_stars": 0
 }

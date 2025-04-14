@@ -3,7 +3,7 @@
 	"description": "Manage extension storage with Svelte stores.",
 	"repo_url": "https://gitgud.io/albaike/extension-storage-store",
 	"authors": ["albaike"],
-	"downloads": 1,
+	"downloads": 6,
 	"updated": "2022-12-26T02:42:29.596Z",
 	"tags": ["miscellaneous"],
 	"runes": false,

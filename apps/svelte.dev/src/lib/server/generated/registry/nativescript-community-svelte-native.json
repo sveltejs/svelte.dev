@@ -25,11 +25,11 @@
 		"dgmachado"
 	],
 	"homepage": "https://github.com/nativescript-community/svelte-native",
-	"downloads": 16,
+	"downloads": 12,
 	"updated": "2025-02-19T08:06:02.625Z",
 	"tags": ["integration"],
 	"runes": false,
-	"github_stars": 30,
+	"github_stars": 32,
 	"typescript": true,
 	"version": "1.0.29",
 	"svelte_range": "^4.2.8",

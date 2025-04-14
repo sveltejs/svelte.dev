@@ -3,7 +3,7 @@
 	"description": "Build Svelte components including buttons, dropdowns, and dialogs.",
 	"repo_url": "",
 	"authors": ["kwangure"],
-	"downloads": 103,
+	"downloads": 21,
 	"updated": "2023-06-25T16:25:12.694Z",
 	"tags": ["ui", "design-system"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "0.61.2",
 	"svelte_range": "^3.48.0",
 	"kit_range": "^1.15.9",
-	"last_rune_check_version": "0.61.2"
+	"last_rune_check_version": "0.61.2",
+	"github_stars": 0
 }

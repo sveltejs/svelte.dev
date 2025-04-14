@@ -4,7 +4,7 @@
 	"repo_url": "",
 	"authors": ["j_igarashi"],
 	"homepage": "https://github.com/@watergis/svelte-splitter/README.md",
-	"downloads": 54,
+	"downloads": 45,
 	"updated": "2024-08-25T12:14:06.722Z",
 	"tags": ["ui"],
 	"runes": false,
@@ -12,5 +12,6 @@
 	"version": "2.0.0",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.0.0",
-	"last_rune_check_version": "2.0.0"
+	"last_rune_check_version": "2.0.0",
+	"github_stars": 0
 }

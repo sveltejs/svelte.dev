@@ -4,14 +4,14 @@
 	"repo_url": "https://github.com/jill64/npm-demo-layout",
 	"authors": ["jill64"],
 	"homepage": "https://github.com/jill64/npm-demo-layout#readme",
-	"downloads": 4987,
-	"updated": "2025-04-01T22:06:58.015Z",
+	"downloads": 4232,
+	"updated": "2025-04-13T21:16:05.512Z",
 	"tags": ["ui"],
 	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
-	"version": "2.0.20",
+	"version": "2.0.21",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
-	"last_rune_check_version": "2.0.20"
+	"last_rune_check_version": "2.0.21"
 }

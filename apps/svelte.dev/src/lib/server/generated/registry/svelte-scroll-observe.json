@@ -4,7 +4,7 @@
 	"repo_url": "",
 	"authors": ["7korobi"],
 	"homepage": "https://github.com/7korobi/svelte-scroll-observe/blob/main/src/lib/",
-	"downloads": 3,
+	"downloads": 6,
 	"updated": "2022-11-05T17:12:12.738Z",
 	"tags": ["miscellaneous"],
 	"runes": false,
@@ -12,5 +12,6 @@
 	"version": "0.2.3",
 	"svelte_range": "^3.52.0",
 	"kit_range": "1.0.0-next.535",
-	"last_rune_check_version": "0.2.3"
+	"last_rune_check_version": "0.2.3",
+	"github_stars": 0
 }

@@ -3,12 +3,13 @@
 	"description": "Svelte component template with testing and live reload.",
 	"repo_url": "",
 	"authors": ["marocdevelop"],
-	"downloads": 1,
+	"downloads": 5,
 	"updated": "2019-11-02T19:39:02.212Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.0.4",
 	"svelte_range": "^3.8.0",
-	"last_rune_check_version": "0.0.4"
+	"last_rune_check_version": "0.0.4",
+	"github_stars": 0
 }

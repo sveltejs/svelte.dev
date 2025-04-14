@@ -4,13 +4,13 @@
 	"repo_url": "https://github.com/jimmy-zhening-luo/linted",
 	"authors": ["jimmy-zhening-luo"],
 	"homepage": "https://github.com/jimmy-zhening-luo/linted#readme",
-	"downloads": 481,
-	"updated": "2025-04-08T21:15:32.162Z",
+	"downloads": 641,
+	"updated": "2025-04-14T08:35:32.011Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 1,
 	"typescript": true,
-	"version": "28.24.2",
-	"svelte_range": "^5.25.9",
-	"last_rune_check_version": "28.24.2"
+	"version": "28.24.5",
+	"svelte_range": "^5.26.2",
+	"last_rune_check_version": "28.24.5"
 }

@@ -3,12 +3,13 @@
 	"description": "Create sortable, filterable, and pagable tables in Svelte.",
 	"repo_url": "",
 	"authors": ["btrauma8"],
-	"downloads": 1,
+	"downloads": 6,
 	"updated": "2019-09-28T07:57:57.162Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.2.1",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.2.1"
+	"last_rune_check_version": "0.2.1",
+	"github_stars": 0
 }

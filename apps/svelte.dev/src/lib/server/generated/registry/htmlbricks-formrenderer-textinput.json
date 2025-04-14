@@ -3,12 +3,13 @@
 	"description": "Create Svelte web components for Bootstrap text input.",
 	"repo_url": "",
 	"authors": ["dariocaruso"],
-	"downloads": 13,
+	"downloads": 23,
 	"updated": "2022-01-02T19:14:33.298Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.2.4",
 	"svelte_range": "^3.44.3",
-	"last_rune_check_version": "0.2.4"
+	"last_rune_check_version": "0.2.4",
+	"github_stars": 0
 }

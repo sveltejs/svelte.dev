@@ -4,12 +4,13 @@
 	"repo_url": "",
 	"authors": ["lagden"],
 	"homepage": "https://gitlab.textecnologia.io/nimble/svelte-splash-lgpd#readme",
-	"downloads": 4,
+	"downloads": 7,
 	"updated": "2023-07-05T19:59:58.276Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "1.6.0",
 	"svelte_range": ">= 4 < 5",
-	"last_rune_check_version": "1.6.0"
+	"last_rune_check_version": "1.6.0",
+	"github_stars": 0
 }

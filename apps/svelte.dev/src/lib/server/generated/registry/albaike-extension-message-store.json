@@ -3,7 +3,7 @@
 	"description": "Provide Svelte store for web extension messaging.",
 	"repo_url": "https://gitgud.io/albaike/extension-message-store",
 	"authors": ["albaike"],
-	"downloads": 0,
+	"downloads": 5,
 	"updated": "2022-12-27T07:48:52.213Z",
 	"tags": ["miscellaneous"],
 	"runes": false,

@@ -3,7 +3,7 @@
 	"description": "Minimal static site generator for Svelte.",
 	"repo_url": "https://github.com/wulfmann/sven",
 	"authors": ["wulfmann"],
-	"downloads": 9,
+	"downloads": 10,
 	"updated": "2020-10-23T18:05:22.233Z",
 	"tags": ["tooling"],
 	"runes": false,

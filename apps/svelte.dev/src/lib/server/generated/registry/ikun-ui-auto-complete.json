@@ -3,12 +3,13 @@
 	"description": "Create autocomplete components for Svelte.",
 	"repo_url": "",
 	"authors": ["baiwusanyu"],
-	"downloads": 10,
+	"downloads": 21,
 	"updated": "2025-01-24T03:48:31.962Z",
 	"tags": ["ui"],
 	"runes": true,
 	"typescript": true,
 	"version": "0.2.8",
 	"svelte_range": "^4.2.12",
-	"last_rune_check_version": "0.2.8"
+	"last_rune_check_version": "0.2.8",
+	"github_stars": 0
 }

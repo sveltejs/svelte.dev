@@ -3,7 +3,7 @@
 	"description": "Create simple native dialog components for Svelte apps.",
 	"repo_url": "",
 	"authors": ["gratrockstar"],
-	"downloads": 0,
+	"downloads": 6,
 	"updated": "2023-12-29T23:48:26.382Z",
 	"tags": ["ui"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "1.0.0",
 	"svelte_range": "^4.2.7",
 	"kit_range": "^2.0.0",
-	"last_rune_check_version": "1.0.0"
+	"last_rune_check_version": "1.0.0",
+	"github_stars": 0
 }

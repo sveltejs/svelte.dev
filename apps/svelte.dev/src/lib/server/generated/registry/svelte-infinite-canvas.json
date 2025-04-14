@@ -3,12 +3,13 @@
 	"description": "Create pannable, zoomable interface for Svelte.",
 	"repo_url": "",
 	"authors": ["cbroms"],
-	"downloads": 4,
+	"downloads": 5,
 	"updated": "2021-04-03T00:28:14.062Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.1.6",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.1.6"
+	"last_rune_check_version": "0.1.6",
+	"github_stars": 0
 }

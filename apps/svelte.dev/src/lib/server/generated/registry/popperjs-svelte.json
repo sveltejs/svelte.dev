@@ -3,12 +3,13 @@
 	"description": "Integrate Popper.js for positioning UI elements in Svelte.",
 	"repo_url": "",
 	"authors": ["atomiks", "fezvrasta"],
-	"downloads": 165,
+	"downloads": 208,
 	"updated": "2020-04-19T15:43:49.306Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.1.1",
 	"svelte_range": "^3.18.1",
-	"last_rune_check_version": "0.1.1"
+	"last_rune_check_version": "0.1.1",
+	"github_stars": 0
 }

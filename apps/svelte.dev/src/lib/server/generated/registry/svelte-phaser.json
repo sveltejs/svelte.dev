@@ -3,7 +3,7 @@
 	"description": "Integrate Phaser 3 game framework with Svelte.",
 	"repo_url": "https://github.com/mattjennings/svelte-phaser",
 	"authors": ["mattjennings"],
-	"downloads": 6,
+	"downloads": 13,
 	"updated": "2021-02-15T18:55:44.261Z",
 	"tags": ["media"],
 	"runes": false,

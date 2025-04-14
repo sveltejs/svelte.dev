@@ -3,12 +3,13 @@
 	"description": "Converts Svelte templates to React components, useful for migration.",
 	"repo_url": "",
 	"authors": ["mizchi"],
-	"downloads": 0,
+	"downloads": 3,
 	"updated": "2023-06-28T09:32:23.560Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.0.5",
 	"svelte_range": "4.*",
-	"last_rune_check_version": "0.0.5"
+	"last_rune_check_version": "0.0.5",
+	"github_stars": 0
 }

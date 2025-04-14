@@ -3,12 +3,13 @@
 	"description": "Create SERP card components with tests.",
 	"repo_url": "",
 	"authors": ["migger", "kammif", "fmckey", "barakuda"],
-	"downloads": 11,
+	"downloads": 14,
 	"updated": "2022-05-06T15:32:15.588Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "1.0.47",
 	"svelte_range": "^3.20.1",
-	"last_rune_check_version": "1.0.47"
+	"last_rune_check_version": "1.0.47",
+	"github_stars": 0
 }

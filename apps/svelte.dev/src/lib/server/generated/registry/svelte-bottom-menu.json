@@ -3,12 +3,13 @@
 	"description": "Create bottom menu components for Svelte applications.",
 	"repo_url": "",
 	"authors": ["kuanyu0729"],
-	"downloads": 7,
+	"downloads": 8,
 	"updated": "2022-04-26T04:11:13.284Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "1.0.5",
 	"svelte_range": "^3.5.0",
-	"last_rune_check_version": "1.0.5"
+	"last_rune_check_version": "1.0.5",
+	"github_stars": 0
 }

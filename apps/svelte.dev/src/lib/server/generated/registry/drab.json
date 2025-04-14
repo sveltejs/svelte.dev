@@ -4,12 +4,12 @@
 	"repo_url": "https://github.com/rossrobino/drab",
 	"authors": ["rossrobino"],
 	"homepage": "https://drab.robino.dev",
-	"downloads": 58,
-	"updated": "2025-02-11T18:32:07.597Z",
+	"downloads": 210,
+	"updated": "2025-04-13T19:50:13.410Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 281,
 	"typescript": true,
-	"version": "6.1.0",
-	"last_rune_check_version": "6.1.0"
+	"version": "6.1.3",
+	"last_rune_check_version": "6.1.3"
 }

@@ -3,12 +3,13 @@
 	"description": "Apply input masks for credit cards, phone numbers, and dates.",
 	"repo_url": "",
 	"authors": ["xnimorz"],
-	"downloads": 10,
+	"downloads": 14,
 	"updated": "2019-10-13T14:53:13.130Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.0.1",
 	"svelte_range": "3.x",
-	"last_rune_check_version": "0.0.1"
+	"last_rune_check_version": "0.0.1",
+	"github_stars": 0
 }

@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/pynnl/svelte-hash-router",
 	"authors": ["pynnl"],
 	"homepage": "https://github.com/pynnl/svelte-hash-router#readme",
-	"downloads": 8,
+	"downloads": 16,
 	"updated": "2019-06-16T16:31:41.755Z",
 	"tags": ["router"],
 	"runes": false,

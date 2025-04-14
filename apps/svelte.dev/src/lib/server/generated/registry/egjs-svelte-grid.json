@@ -15,11 +15,11 @@
 		"woodneck"
 	],
 	"homepage": "https://github.com/naver/egjs-grid",
-	"downloads": 225,
+	"downloads": 231,
 	"updated": "2024-07-02T06:09:20.424Z",
 	"tags": ["ui"],
 	"runes": false,
-	"github_stars": 291,
+	"github_stars": 293,
 	"typescript": true,
 	"version": "1.16.0",
 	"svelte_range": "^3.0.0",

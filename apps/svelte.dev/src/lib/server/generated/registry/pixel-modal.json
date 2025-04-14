@@ -3,7 +3,7 @@
 	"description": "Create simple, lightweight modal widgets for SvelteKit.",
 	"repo_url": "",
 	"authors": ["pixel_1917"],
-	"downloads": 1,
+	"downloads": 5,
 	"updated": "2023-10-24T03:55:51.618Z",
 	"tags": ["ui"],
 	"runes": false,
@@ -11,5 +11,6 @@
 	"version": "0.2.2",
 	"svelte_range": ">= 3.54.0",
 	"kit_range": "^1.20.4",
-	"last_rune_check_version": "0.2.2"
+	"last_rune_check_version": "0.2.2",
+	"github_stars": 0
 }

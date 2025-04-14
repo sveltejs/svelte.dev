@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/sveltejs/svelte-cli",
 	"authors": ["rich_harris"],
 	"homepage": "https://github.com/sveltejs/svelte-cli#readme",
-	"downloads": 265,
+	"downloads": 199,
 	"updated": "2018-04-21T17:01:51.671Z",
 	"tags": ["tooling"],
 	"runes": false,

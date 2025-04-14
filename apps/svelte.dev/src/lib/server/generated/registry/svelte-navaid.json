@@ -3,12 +3,13 @@
 	"description": "Implement navaid-based routing in Svelte applications.",
 	"repo_url": "",
 	"authors": ["jacwright"],
-	"downloads": 10,
+	"downloads": 17,
 	"updated": "2019-08-26T15:30:57.833Z",
 	"tags": ["router"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.1.1",
 	"svelte_range": "^3.9.1",
-	"last_rune_check_version": "0.1.1"
+	"last_rune_check_version": "0.1.1",
+	"github_stars": 0
 }

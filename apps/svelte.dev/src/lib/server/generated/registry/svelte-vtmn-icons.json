@@ -3,12 +3,13 @@
 	"description": "Use Vitamin SVG icons as Svelte components.",
 	"repo_url": "",
 	"authors": ["xavhan"],
-	"downloads": 0,
+	"downloads": 4,
 	"updated": "2021-06-16T15:42:57.270Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "1.0.0",
 	"svelte_range": "^3.38.2",
-	"last_rune_check_version": "1.0.0"
+	"last_rune_check_version": "1.0.0",
+	"github_stars": 0
 }

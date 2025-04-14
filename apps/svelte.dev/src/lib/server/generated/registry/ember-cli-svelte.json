@@ -3,12 +3,13 @@
 	"description": "Integrates Svelte components into Ember.js applications.",
 	"repo_url": "",
 	"authors": ["ravenstine"],
-	"downloads": 0,
+	"downloads": 4,
 	"updated": "2022-07-20T13:37:22.432Z",
 	"tags": ["integration"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.2.0",
 	"svelte_range": "^3.48.0",
-	"last_rune_check_version": "0.2.0"
+	"last_rune_check_version": "0.2.0",
+	"github_stars": 0
 }

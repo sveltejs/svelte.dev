@@ -3,12 +3,13 @@
 	"description": "Generate Chrome extension boilerplate with Svelte and Vite.",
 	"repo_url": "",
 	"authors": ["crxapp"],
-	"downloads": 2,
+	"downloads": 5,
 	"updated": "2022-07-04T03:39:34.872Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.0.0",
 	"svelte_range": "^3.44.0",
-	"last_rune_check_version": "0.0.0"
+	"last_rune_check_version": "0.0.0",
+	"github_stars": 0
 }

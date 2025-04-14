@@ -3,12 +3,13 @@
 	"description": "Create HTML REPL using Svelte.",
 	"repo_url": "",
 	"authors": ["nph"],
-	"downloads": 0,
+	"downloads": 8,
 	"updated": "2021-03-15T12:13:37.229Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"typescript": false,
 	"version": "1.0.2",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "1.0.2"
+	"last_rune_check_version": "1.0.2",
+	"github_stars": 0
 }

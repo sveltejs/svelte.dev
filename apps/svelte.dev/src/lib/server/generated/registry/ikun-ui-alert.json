@@ -3,12 +3,13 @@
 	"description": "Display alert messages in Svelte applications.",
 	"repo_url": "",
 	"authors": ["baiwusanyu"],
-	"downloads": 15,
+	"downloads": 42,
 	"updated": "2025-01-24T03:48:32.110Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.2.8",
 	"svelte_range": "^4.2.12",
-	"last_rune_check_version": "0.2.8"
+	"last_rune_check_version": "0.2.8",
+	"github_stars": 0
 }

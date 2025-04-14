@@ -2,12 +2,13 @@
 	"name": "svelte-buttered-toast",
 	"description": "Create buttery smooth, customizable Svelte toast notifications.",
 	"authors": ["kbrgl"],
-	"downloads": 1,
+	"downloads": 6,
 	"updated": "2022-06-06T13:42:04.102Z",
 	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.2.0",
 	"svelte_range": "^3.44.0",
-	"last_rune_check_version": "0.2.0"
+	"last_rune_check_version": "0.2.0",
+	"github_stars": 0
 }

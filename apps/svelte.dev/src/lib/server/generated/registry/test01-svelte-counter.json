@@ -3,12 +3,13 @@
 	"description": "Create a simple counter component in Svelte.",
 	"repo_url": "",
 	"authors": ["akifb37"],
-	"downloads": 1,
+	"downloads": 5,
 	"updated": "2024-11-21T15:56:47.015Z",
 	"tags": ["miscellaneous"],
 	"runes": true,
 	"typescript": false,
 	"version": "2.1.0",
 	"svelte_range": "^5.0.0",
-	"last_rune_check_version": "2.1.0"
+	"last_rune_check_version": "2.1.0",
+	"github_stars": 0
 }

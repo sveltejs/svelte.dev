@@ -3,7 +3,7 @@
 	"description": "Render virtual lists in Svelte apps.",
 	"repo_url": "https://github.devops.utc.com/40000519/virtual-list",
 	"authors": ["angelglnd"],
-	"downloads": 206,
+	"downloads": 246,
 	"updated": "2021-06-22T03:01:17.986Z",
 	"tags": ["ui"],
 	"runes": false,
