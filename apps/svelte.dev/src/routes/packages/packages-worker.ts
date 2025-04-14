@@ -4,7 +4,7 @@ addEventListener('message', async (event) => {
 	const { type, payload } = event.data;
 
 	if (type === 'init') {
-		const data = await fetch(`${payload.origin}/packages.json`).then((r) => r.json());
+		const data = await fetch(`${payload.origin}/packages/data.json`).then((r) => r.json());
 		await init(data);
 
 		postMessage({ type: 'ready' });
