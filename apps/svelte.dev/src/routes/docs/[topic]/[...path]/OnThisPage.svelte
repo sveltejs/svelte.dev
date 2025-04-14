@@ -133,13 +133,18 @@
 				}
 
 				&::after {
-					background: url($lib/icons/chevron.svg) 50% 50% no-repeat;
-					background-size: 2rem;
+					background: #666;
+					mask: url(icons/chevron) 50% 50% no-repeat;
+					mask-size: 2rem;
 					top: 0.4rem;
 					right: 0.2rem;
-					rotate: 0deg;
+					rotate: -90deg;
 					transition: rotate 0.2s;
 					transition: rotate 0.2s;
+				}
+
+				:root.dark &::after {
+					background: #d4d4d4;
 				}
 
 				&:active::after {
@@ -161,7 +166,7 @@
 
 			label:has(:checked) {
 				&::after {
-					rotate: 180deg;
+					rotate: 90deg;
 				}
 
 				/* TODO remove :global once https://github.com/sveltejs/svelte/issues/13779 is fixed */
