@@ -2,6 +2,9 @@
 	"name": "icons",
 	"private": true,
 	"exports": {
-		"./*": "./icons/*.svg"
+		"./*": {
+			"types": "./types.d.ts",
+			"default": "./icons/*.svg"
+		}
 	}
 }
