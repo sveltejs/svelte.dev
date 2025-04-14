@@ -199,6 +199,8 @@ importers:
         specifier: ^7.0.4
         version: 7.0.4(rollup@4.21.2)
 
+  packages/icons: {}
+
   packages/repl:
     dependencies:
       '@codemirror/autocomplete':
@@ -394,6 +396,9 @@ importers:
       esm-env:
         specifier: ^1.0.0
         version: 1.2.1
+      icons:
+        specifier: workspace:*
+        version: link:../icons
       json5:
         specifier: ^2.2.3
         version: 2.2.3

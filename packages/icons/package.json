@@ -1,0 +1,7 @@
+{
+	"name": "icons",
+	"private": true,
+	"exports": {
+		"./*": "./icons/*.svg"
+	}
+}

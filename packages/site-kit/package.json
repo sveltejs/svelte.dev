@@ -41,6 +41,7 @@
 		"@shikijs/langs": "^3.2.1",
 		"@shikijs/twoslash": "^3.2.1",
 		"esm-env": "^1.0.0",
+		"icons": "workspace:*",
 		"json5": "^2.2.3",
 		"shiki": "^3.2.1"
 	},
