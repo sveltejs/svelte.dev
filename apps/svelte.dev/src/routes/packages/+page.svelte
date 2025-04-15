@@ -537,12 +537,12 @@
 			flex-direction: row;
 		}
 
-		.page {
+		/* .page {
 			--on-this-page-display: block;
 			padding: var(--sk-page-padding-top) calc(4 * var(--sk-page-padding-side));
 			margin: 0 auto;
 			box-sizing: content-box;
 			width: 100%;
-		}
+		} */
 	}
 </style>

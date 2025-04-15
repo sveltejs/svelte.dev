@@ -195,34 +195,6 @@
 				overflow: hidden;
 				transition: all 0.3s ease;
 			}
-			.runes:hover::before,
-			.runes:hover::after {
-				content: '';
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				pointer-events: none;
-			}
-			.runes::before {
-				background-image: radial-gradient(circle at 15% 20%, #7ab5e8 1px, transparent 1px),
-					radial-gradient(circle at 85% 30%, #7ab5e8 1px, transparent 1px),
-					radial-gradient(circle at 25% 75%, #7ab5e8 1px, transparent 1px),
-					radial-gradient(circle at 70% 80%, #7ab5e8 1px, transparent 1px),
-					radial-gradient(circle at 45% 10%, #7ab5e8 1px, transparent 1px),
-					radial-gradient(circle at 90% 60%, #7ab5e8 1px, transparent 1px);
-				opacity: 0.35;
-			}
-			.runes::after {
-				background-image: radial-gradient(circle at 60% 15%, #a3d0ff 1.2px, transparent 1.2px),
-					radial-gradient(circle at 30% 65%, #a3d0ff 1.2px, transparent 1.2px),
-					radial-gradient(circle at 80% 40%, #a3d0ff 1.5px, transparent 1.5px);
-				opacity: 0.4;
-			}
-			.runes:hover::after {
-				animation: twinkle 4s infinite alternate;
-			}
 		}
 
 		.stats {
@@ -249,16 +221,6 @@
 			text-overflow: ellipsis;
 			max-height: 2lh;
 			/* max-width: calc(100% - var(--sidebar-width)); */
-		}
-	}
-
-	@keyframes twinkle {
-		0%,
-		100% {
-			opacity: 0.3;
-		}
-		50% {
-			opacity: 0.7;
 		}
 	}
 </style>
