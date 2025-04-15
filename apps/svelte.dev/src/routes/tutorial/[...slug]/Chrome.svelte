@@ -52,10 +52,10 @@
 
 	<button
 		disabled={loading || !toggle_terminal}
-		class="terminal icon raised"
+		class="terminal raised"
 		onclick={() => toggle_terminal?.()}
-		aria-label="toggle terminal"
-	></button>
+		aria-label="toggle terminal"><span class="icon"></span></button
+	>
 </div>
 
 <style>
@@ -88,14 +88,17 @@
 
 	.icon,
 	.icon::after {
-		position: relative;
 		width: 3.2rem;
 		aspect-ratio: 1;
 		background-size: 1.8rem;
 	}
 
 	.terminal {
-		background-image: url($lib/icons/terminal.svg);
+		.icon {
+			background: currentColor;
+			mask: url(icons/terminal) 50% 50% no-repeat;
+			mask-size: 1.8rem;
+		}
 	}
 
 	.reload::after {
