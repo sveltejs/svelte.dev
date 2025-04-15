@@ -14,9 +14,9 @@
 		<h3 class={[(pkg.outdated || pkg.deprecated) && 'faded']}>
 			{pkg.name}
 		</h3>
-		<span class={['status']}>
+		<span class="status">
 			{#if pkg.typescript}
-				<span class="no-pill" style="translate: 0 2px;">
+				<span style="translate: 0 2px;">
 					{#if pkg.typescript}
 						<svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24"
 							><!-- Icon from Simple Icons by Simple Icons Collaborators - https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md --><path
@@ -28,19 +28,19 @@
 				</span>
 			{/if}
 
-			<span style="flex: 1 1 auto" class="no-pill"></span>
+			<span style="flex: 1 1 auto"></span>
 
 			{#if pkg.runes}
-				<span class={[pkg.runes && 'runes']}>runes</span>
+				<span class="pill runes">runes</span>
 			{/if}
 			{#if pkg.outdated}
-				<span>outdated</span>
+				<span class="pill">outdated</span>
 			{/if}
 			{#if pkg.deprecated}
-				<span>deprecated</span>
+				<span class="pill">deprecated</span>
 			{/if}
 			{#if pkg.official}
-				<span class={[pkg.official && 'official']}>official</span>
+				<span class="pill official">official</span>
 			{/if}
 		</span>
 	</span>
@@ -152,7 +152,7 @@
 
 			margin-left: 0.5rem;
 
-			> *:not(.no-pill) {
+			> .pill {
 				font: var(--sk-font-ui-small);
 				border-radius: 9999px;
 				padding: 0.2rem 1rem;
