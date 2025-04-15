@@ -272,12 +272,15 @@
 
 		&.login {
 			width: auto;
-			background-image: url($lib/icons/user-light.svg);
-			background-position: 0.4rem 50%;
-			padding: 0 0.4rem 0 2.8rem;
+			padding: 0 0.4rem;
 
-			:root.dark & {
-				background-image: url($lib/icons/user-dark.svg);
+			&::before {
+				content: '';
+				width: 1.8rem;
+				height: 1.8rem;
+				margin: 0 0.5rem 0 0;
+				background: currentColor;
+				mask: url(icons/user) no-repeat 50% 50%;
 			}
 		}
 	}
