@@ -377,37 +377,26 @@ Top navigation bar for the application. It provides a slot for the left side, th
 			display: contents;
 
 			[data-icon] {
-				background: no-repeat 50% 50%;
-				background-size: calc(100% - 1rem) auto;
+				background: var(--sk-fg-3);
 				padding: 0 0.5rem;
 				height: 100%;
+				mask: no-repeat 50% 50%;
+				mask-size: calc(100% - 1rem) auto;
 			}
 
 			[data-icon='discord'] {
 				width: 3.4rem;
-				background-image: url($lib/icons/discord-light.svg);
-
-				:global(.dark) & {
-					background-image: url($lib/icons/discord-dark.svg);
-				}
+				mask-image: url(icons/discord);
 			}
 
 			[data-icon='bluesky'] {
 				width: 3rem;
-				background-image: url($lib/icons/bluesky-light.svg);
-
-				:global(.dark) & {
-					background-image: url($lib/icons/bluesky-dark.svg);
-				}
+				mask-image: url(icons/bluesky);
 			}
 
 			[data-icon='github'] {
 				width: 3rem;
-				background-image: url($lib/icons/github-light.svg);
-
-				:global(.dark) & {
-					background-image: url($lib/icons/github-dark.svg);
-				}
+				mask-image: url(icons/github);
 			}
 		}
 

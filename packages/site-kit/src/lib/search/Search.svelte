@@ -71,7 +71,7 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 		height: 3.4rem;
 		border-radius: 5.6rem;
 		background:
-			no-repeat 0.6em 55% / 1.2em 1.2em url(../icons/search.svg),
+			no-repeat 0.6em 55% / 1.2em 1.2em url(icons/search),
 			var(--sk-bg-4);
 	}
 

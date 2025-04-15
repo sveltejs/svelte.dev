@@ -45,6 +45,7 @@
 		"do-not-zip": "^1.0.0",
 		"flexsearch": "^0.7.43",
 		"flru": "^1.0.2",
+		"icons": "workspace:*",
 		"port-authority": "^2.0.1",
 		"tar-stream": "^3.1.7",
 		"topojson-client": "^3.1.0",
