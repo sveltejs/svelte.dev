@@ -220,7 +220,6 @@
 			overflow: hidden;
 			text-overflow: ellipsis;
 			max-height: 2lh;
-			/* max-width: calc(100% - var(--sidebar-width)); */
 		}
 	}
 </style>

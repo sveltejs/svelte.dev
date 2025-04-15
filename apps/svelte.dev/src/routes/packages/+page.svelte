@@ -138,98 +138,123 @@
 	<title>Packages • Svelte</title>
 
 	<meta name="twitter:title" content="Packages • Svelte" />
-	<meta name="twitter:description" content="Articles about Svelte and UI development" />
-	<meta name="Description" content="Articles about Svelte and UI development" />
+	<meta name="twitter:description" content="Packages for your Svelte and SvelteKit apps" />
+	<meta name="Description" content="Packages for your Svelte and SvelteKit apps" />
 </svelte:head>
 
 <h1 class="visually-hidden">Packages</h1>
 
-<div class="container">
-	<div class="page content">
-		<div class="controls">
-			<form onsubmit={(e) => e.preventDefault()}>
-				<label class="input-group">
-					<Icon name="search" />
-					<input
-						name="query"
-						use:forcefocus
-						onkeydown={(e) => {
-							if (e.key === 'Enter') {
-								e.stopPropagation();
-								e.preventDefault();
-							}
-						}}
-						enterkeyhint="search"
-						bind:value={qps.query}
-						placeholder="Search {formatted_package_number} packages"
-						aria-describedby="search-description"
-						aria-label="Search"
-						spellcheck="false"
-					/>
-
-					<button
-						class="raised icon"
-						aria-label="Clear"
-						onclick={(e) => {
+<div class="page content">
+	<div class="controls">
+		<form onsubmit={(e) => e.preventDefault()}>
+			<label class="input-group">
+				<Icon name="search" />
+				<input
+					name="query"
+					use:forcefocus
+					onkeydown={(e) => {
+						if (e.key === 'Enter') {
 							e.stopPropagation();
-							qps.query = '';
-						}}
-					>
-						<Icon name="close" />
-					</button>
-				</label>
+							e.preventDefault();
+						}
+					}}
+					enterkeyhint="search"
+					bind:value={qps.query}
+					placeholder="Search {formatted_package_number} packages"
+					aria-describedby="search-description"
+					aria-label="Search"
+					spellcheck="false"
+				/>
 
-				{#if qps.query}
-					<div class="sub">
-						<span>Showing {packages?.length ?? 0} results</span>
+				<button
+					class="raised icon"
+					aria-label="Clear"
+					onclick={(e) => {
+						e.stopPropagation();
+						qps.query = '';
+					}}
+				>
+					<Icon name="close" />
+				</button>
+			</label>
 
-						<span style="flex: 1 1 auto"></span>
+			{#if qps.query}
+				<div class="sub">
+					<span>Showing {packages?.length ?? 0} results</span>
 
-						<div>
-							Svelte versions:
-							<label>
-								<input type="checkbox" bind:group={qps.svelte_versions} value="3" />
-								3
-							</label>
+					<span style="flex: 1 1 auto"></span>
 
-							<label>
-								<input type="checkbox" bind:group={qps.svelte_versions} value="4" />
-								4
-							</label>
-
-							<label>
-								<input type="checkbox" bind:group={qps.svelte_versions} value="5" />
-								5
-							</label>
-						</div>
-
+					<div>
+						Svelte versions:
 						<label>
-							Sort By:
-							<select bind:value={qps.sort_by}>
-								{#each search_criteria as criterion}
-									<option value={criterion}>{criterion}</option>
-								{/each}
-							</select>
+							<input type="checkbox" bind:group={qps.svelte_versions} value="3" />
+							3
 						</label>
 
-						<!-- <label>
+						<label>
+							<input type="checkbox" bind:group={qps.svelte_versions} value="4" />
+							4
+						</label>
+
+						<label>
+							<input type="checkbox" bind:group={qps.svelte_versions} value="5" />
+							5
+						</label>
+					</div>
+
+					<label>
+						Sort By:
+						<select bind:value={qps.sort_by}>
+							{#each search_criteria as criterion}
+								<option value={criterion}>{criterion}</option>
+							{/each}
+						</select>
+					</label>
+
+					<!-- <label>
 							Hide outdated:
 							<input type="checkbox" bind:checked={qps.hide_outdated} />
 						</label> -->
-					</div>
-				{/if}
-			</form>
-		</div>
+				</div>
+			{/if}
+		</form>
+	</div>
 
-		<section class="homepage" style="display: {qps.query ? 'none' : null}">
-			<br /><br />
-			{#each data.homepage ?? [] as { packages, title }, idx}
-				<section>
-					<h2>{title}</h2>
-					<div class="homepage-wrapper-wrapper">
+	<section class="homepage" style="display: {qps.query ? 'none' : null}">
+		<br /><br />
+		{#each data.homepage ?? [] as { packages, title }, idx}
+			<section>
+				<h2>{title}</h2>
+				<div class="homepage-wrapper-wrapper">
+					<button
+						class={['start raised icon', scroll_states[idx].start && 'visible']}
+						onclick={on_previous}
+					>
+						<svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24"
+							><!-- Icon from Lucide by Lucide Contributors - https://github.com/lucide-icons/lucide/blob/main/LICENSE --><path
+								fill="none"
+								stroke="currentColor"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="m15 18l-6-6l6-6"
+							/></svg
+						>
+					</button>
+
+					<div class={['homepage-posts-wrapper', scroll_states[idx].start && 'start']}>
+						<div
+							class={['homepage-posts', scroll_states[idx].end && 'end']}
+							use:handle_scroll={idx}
+						>
+							{#each packages as pkg}
+								<PackageCard {pkg} />
+							{/each}
+						</div>
+
 						<button
-							class={['start raised icon', scroll_states[idx].start && 'visible']}
-							onclick={on_previous}
+							class={['end raised icon', scroll_states[idx].end && 'visible']}
+							onclick={on_next}
 						>
 							<svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24"
 								><!-- Icon from Lucide by Lucide Contributors - https://github.com/lucide-icons/lucide/blob/main/LICENSE --><path
@@ -238,45 +263,19 @@
 									stroke-linecap="round"
 									stroke-linejoin="round"
 									stroke-width="2"
-									d="m15 18l-6-6l6-6"
+									d="m9 18l6-6l-6-6"
 								/></svg
 							>
 						</button>
-
-						<div class={['homepage-posts-wrapper', scroll_states[idx].start && 'start']}>
-							<div
-								class={['homepage-posts', scroll_states[idx].end && 'end']}
-								use:handle_scroll={idx}
-							>
-								{#each packages as pkg}
-									<PackageCard {pkg} />
-								{/each}
-							</div>
-
-							<button
-								class={['end raised icon', scroll_states[idx].end && 'visible']}
-								onclick={on_next}
-							>
-								<svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24"
-									><!-- Icon from Lucide by Lucide Contributors - https://github.com/lucide-icons/lucide/blob/main/LICENSE --><path
-										fill="none"
-										stroke="currentColor"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="m9 18l6-6l-6-6"
-									/></svg
-								>
-							</button>
-						</div>
 					</div>
-				</section>
-				<br /><br /><br /><br />
-			{/each}
-		</section>
+				</div>
+			</section>
+			<br /><br /><br /><br />
+		{/each}
+	</section>
 
-		<div class="posts" style="display: {!qps.query ? 'none' : null}">
-			<!-- {#if packages.sv_add.length > 0}
+	<div class="posts" style="display: {!qps.query ? 'none' : null}">
+		<!-- {#if packages.sv_add.length > 0}
 				<h2>sv add</h2>
 				<section>
 					{#each packages.sv_add as pkg}
@@ -285,14 +284,13 @@
 				</section>
 			{/if} -->
 
-			{#if packages.length > 0}
-				<section>
-					{#each packages as pkg}
-						<PackageCard {pkg} />
-					{/each}
-				</section>
-			{/if}
-		</div>
+		{#if packages.length > 0}
+			<section>
+				{#each packages as pkg}
+					<PackageCard {pkg} />
+				{/each}
+			</section>
+		{/if}
 	</div>
 </div>
 
@@ -401,22 +399,13 @@
 		}
 	}
 
-	.container {
-		box-sizing: content-box;
-		margin: 0 auto;
-		text-wrap: balance;
-
-		--sidebar-menu-width: 28rem;
-		--sidebar-width: var(--sidebar-menu-width);
-
-		display: flex;
-		flex-direction: column;
-	}
-
 	.page {
 		padding: var(--sk-page-padding-top) var(--sk-page-padding-side) var(--sk-page-padding-bottom);
 
 		min-width: 0 !important;
+		max-width: 140rem;
+		margin: 0 auto;
+		text-wrap: balance;
 	}
 
 	.page :global(:where(h2, h3) code) {
@@ -508,41 +497,5 @@
 			margin-block-start: 2rem;
 			margin-block-end: 4rem;
 		}
-	}
-
-	@media (min-width: 832px) {
-		.content {
-			padding-left: calc(var(--sk-page-padding-side));
-		}
-	}
-
-	@media (min-width: 832px) {
-		.page {
-			padding-left: calc(var(--sk-page-padding-side));
-		}
-	}
-
-	@media (min-width: 1200px) {
-		.container {
-			--sidebar-width: max(
-				26rem,
-				calc(
-					0.4 *
-						(
-							100vw - var(--sk-page-content-width) - var(--sk-page-padding-side) -
-								var(--sk-page-padding-side)
-						)
-				)
-			);
-			flex-direction: row;
-		}
-
-		/* .page {
-			--on-this-page-display: block;
-			padding: var(--sk-page-padding-top) calc(4 * var(--sk-page-padding-side));
-			margin: 0 auto;
-			box-sizing: content-box;
-			width: 100%;
-		} */
 	}
 </style>
