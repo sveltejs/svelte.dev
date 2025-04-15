@@ -14,18 +14,18 @@
 		<h3 class={[(pkg.outdated || pkg.deprecated) && 'faded']}>
 			{pkg.name}
 
-			{#if pkg.typescript}
+			<!-- {#if pkg.typescript}
 				<span data-icon="typescript"></span>
-			{/if}
+			{/if} -->
 		</h3>
 
 		<span class="status">
-			{#if pkg.runes}
+			<!-- {#if pkg.runes}
 				<span class="pill runes">runes</span>
-			{/if}
-			{#if pkg.outdated}
+			{/if} -->
+			<!-- {#if pkg.outdated}
 				<span class="pill">outdated</span>
-			{/if}
+			{/if} -->
 			{#if pkg.deprecated}
 				<span class="pill">deprecated</span>
 			{/if}
