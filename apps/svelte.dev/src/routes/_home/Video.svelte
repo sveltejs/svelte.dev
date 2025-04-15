@@ -1,10 +1,10 @@
 <script lang="ts">
-	import volume_off from './volume-off.svg';
-	import volume_high from './volume-high.svg';
-	import cc_on from './cc-on.svg';
-	import cc_off from './cc-off.svg';
-	import play from './play.svg';
-	import pause from './pause.svg';
+	import volume_off from 'icons/volume-off';
+	import volume_high from 'icons/volume-high';
+	import cc_on from 'icons/cc-on';
+	import cc_off from 'icons/cc-off';
+	import play from 'icons/play';
+	import pause from 'icons/pause';
 	import vtt from './subtitles.vtt';
 	import { onMount } from 'svelte';
 
