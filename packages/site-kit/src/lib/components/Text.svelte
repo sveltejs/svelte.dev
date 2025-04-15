@@ -417,10 +417,14 @@
 			&.note,
 			&:has(details.legacy) {
 				&::before {
-					content: none;
+					content: '';
+					display: block;
+					width: 2em;
+					height: 2em;
+					top: 0.05em;
+					background: var(--sk-fg-accent);
+					mask: url(icons/lightbulb) no-repeat 0.5rem 0 / 2.6rem;
 				}
-
-				background: url($lib/icons/lightbulb.svg) no-repeat 0.5rem 0 / 2.6rem;
 			}
 
 			&:first-child {
