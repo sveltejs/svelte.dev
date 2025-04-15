@@ -93,12 +93,10 @@
 		background-size: 1.8rem;
 	}
 
-	.terminal {
-		.icon {
-			background: currentColor;
-			mask: url(icons/terminal) 50% 50% no-repeat;
-			mask-size: 1.8rem;
-		}
+	.terminal .icon {
+		background: currentColor;
+		mask: url(icons/terminal) 50% 50% no-repeat;
+		mask-size: 1.8rem;
 	}
 
 	.reload::after {
