@@ -131,13 +131,9 @@
 					height: 1rem;
 					top: 0.1rem;
 					margin-right: 0.5rem;
-					background: #676778;
+					background: currentColor;
 					mask: url(icons/file) 50% 50% no-repeat;
 					mask-size: 100%;
-				}
-
-				:root.dark &::before {
-					background: #d4d4d4;
 				}
 			}
 

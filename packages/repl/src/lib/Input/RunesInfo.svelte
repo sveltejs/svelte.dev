@@ -76,13 +76,9 @@
 		width: 1.8rem;
 		height: 1.8rem;
 		z-index: 9999;
-		background: #ccc;
+		background: var(--sk-fg-4);
 		mask: url(icons/runes-off) no-repeat 50% 50%;
 		mask-size: contain;
-
-		:root.dark &:not(.active) {
-			background: #777;
-		}
 
 		&.active {
 			background: var(--sk-fg-accent);

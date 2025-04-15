@@ -229,15 +229,10 @@
 						height: 100%;
 						left: 0;
 						top: 0;
-						background: #000000e0;
+						background: currentColor;
 						mask: no-repeat 50% 50% / 1.6rem 1.6rem;
 						transition: opacity 0.2s;
 						transition-delay: 0.6s;
-					}
-
-					:root.dark &::before,
-					:root.dark &::after {
-						background: #ccc;
 					}
 
 					&::before {
@@ -335,7 +330,7 @@
 		a.permalink {
 			position: absolute !important;
 			display: block;
-			background: #000000e0;
+			background: var(--sk-fg-1);
 			mask: url(icons/hash) 50% 50% no-repeat;
 			mask-size: 2.4rem 2.4rem;
 			width: 2.6rem;
@@ -345,10 +340,6 @@
 			@media (max-width: 767px) {
 				right: 0;
 				scale: 0.8;
-			}
-
-			:root.dark & {
-				background: #ccc;
 			}
 
 			@media (min-width: 768px) {

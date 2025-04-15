@@ -136,19 +136,13 @@
 			top: 0;
 			left: 0;
 			height: 100%;
-			background: #000000e0;
+			background: currentColor;
 			mask: url(icons/document) no-repeat 50% 50%;
 			mask-size: 2rem;
 		}
 
 		&.fragment::before {
 			mask-image: url(icons/hash);
-		}
-
-		:root.dark & {
-			&::before {
-				background: #ccc;
-			}
 		}
 
 		&:hover {

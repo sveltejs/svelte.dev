@@ -305,13 +305,9 @@
 		aspect-ratio: 1;
 
 		.icon {
-			background: #000000e0;
+			background: currentColor;
 			mask: url(icons/file-new) 50% 50% no-repeat;
-			mask-size: 1em;
-
-			:root.dark & {
-				background: #ccc;
-			}
+			mask-size: 1.2em;
 		}
 	}
 
