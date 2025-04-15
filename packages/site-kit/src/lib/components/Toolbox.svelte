@@ -38,11 +38,7 @@
 		width: 1.8rem;
 		height: 1.8rem;
 		z-index: 9999;
-		background: #666;
+		background: currentColor;
 		mask: url(icons/wrench) no-repeat 50% 50% / contain;
-
-		:root.dark & {
-			background: #d4d4d4;
-		}
 	}
 </style>

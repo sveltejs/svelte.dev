@@ -65,16 +65,12 @@
 				right: 0;
 				top: 0;
 				height: 2.4rem;
-				background: #666;
+				background: currentColor;
 				mask: url(icons/chevron) no-repeat 50% 50%;
 				mask-size: contain;
 				transition: transform 0.2s;
 				cursor: pointer;
 				rotate: 180deg;
-			}
-
-			:root.dark &::after {
-				background: #d4d4d4;
 			}
 		}
 
@@ -192,7 +188,6 @@
 				aspect-ratio: 1;
 				top: 0.5rem;
 				right: 0.5rem;
-				color: transparent;
 
 				&::after {
 					content: '';
@@ -201,13 +196,9 @@
 					height: 100%;
 					left: 0;
 					top: 0;
-					background: #666;
+					background: currentColor;
 					mask: url(icons/close) 50% 50% no-repeat;
 					mask-size: 1.8rem;
-				}
-
-				:root.dark &::after {
-					background: #d4d4d4;
 				}
 			}
 

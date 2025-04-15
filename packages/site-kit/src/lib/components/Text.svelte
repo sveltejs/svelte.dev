@@ -499,17 +499,13 @@
 			}
 
 			&::after {
-				background: #666;
+				background: currentColor;
 				mask: url(icons/chevron) 50% 50% no-repeat;
 				mask-size: 2rem;
 				rotate: -90deg;
 				transition: rotate 0.2s;
 				top: 0.2rem;
 				right: 0.8rem;
-			}
-
-			:root.dark &::after {
-				background: #d4d4d4;
 			}
 
 			&:has(summary:active)::after {

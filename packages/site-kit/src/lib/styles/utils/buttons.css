@@ -86,11 +86,7 @@ button > span.icon {
 	mask-repeat: no-repeat;
 	mask-position: 50% 50%;
 	mask-size: 2.3rem 2.3rem;
-	background: #666;
-
-	.dark & {
-		background: #f4f4f4;
-	}
+	background: var(--sk-fg-3);
 }
 
 button:where(.tooltip, .tooltip-left)[aria-label]:where(:hover, :focus) {

@@ -106,14 +106,10 @@
 		position: absolute;
 		left: 0;
 		top: 0;
-		background: #666;
+		background: currentColor;
 		mask: url(icons/refresh) no-repeat 50% 50%;
 		mask-size: 1.8rem;
 		transition: 0.2s ease-out;
-	}
-
-	:root.dark .reload::after {
-		background: #d4d4d4;
 	}
 
 	.reload:active::after {

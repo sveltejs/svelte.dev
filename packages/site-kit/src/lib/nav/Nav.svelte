@@ -377,16 +377,11 @@ Top navigation bar for the application. It provides a slot for the left side, th
 			display: contents;
 
 			[data-icon] {
-				background: #666 no-repeat 50% 50%;
-				background-size: calc(100% - 1rem) auto;
+				background: var(--sk-fg-3);
 				padding: 0 0.5rem;
 				height: 100%;
 				mask: no-repeat 50% 50%;
 				mask-size: calc(100% - 1rem) auto;
-
-				:root.dark & {
-					background-color: #f4f4f4;
-				}
 			}
 
 			[data-icon='discord'] {

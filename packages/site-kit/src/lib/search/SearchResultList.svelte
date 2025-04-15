@@ -98,15 +98,11 @@
 				top: calc(50% - 1rem);
 				width: 2rem;
 				height: 2rem;
-				background: #666;
+				background: currentColor;
 				mask: url(icons/chevron);
 				mask-size: contain;
 				rotate: -90deg;
 				transition: rotate 0.2s;
-			}
-
-			:root.dark &::after {
-				background: #d4d4d4;
 			}
 
 			[open] &::after {

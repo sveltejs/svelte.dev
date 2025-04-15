@@ -133,7 +133,7 @@
 				}
 
 				&::after {
-					background: #666;
+					background: currentColor;
 					mask: url(icons/chevron) 50% 50% no-repeat;
 					mask-size: 2rem;
 					top: 0.4rem;
@@ -141,10 +141,6 @@
 					rotate: -90deg;
 					transition: rotate 0.2s;
 					transition: rotate 0.2s;
-				}
-
-				:root.dark &::after {
-					background: #d4d4d4;
 				}
 
 				&:active::after {
