@@ -221,7 +221,6 @@
 	</div>
 
 	<section class="homepage" style="display: {qps.query ? 'none' : null}">
-		<br /><br />
 		{#each data.homepage ?? [] as { packages, title }, idx}
 			<section>
 				<h2>{title}</h2>
@@ -418,6 +417,7 @@
 		flex-direction: column;
 		gap: 1rem;
 		font: var(--sk-font-ui-medium);
+		margin: 0 0 4rem 0;
 
 		form {
 			display: contents;
