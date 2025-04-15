@@ -99,7 +99,7 @@
 				position: relative;
 				display: flex;
 				align-items: center;
-				background: url($lib/icons/contents.svg) 0 50% no-repeat;
+				background: url(icons/contents) 0 50% no-repeat;
 				background-size: 2rem 2rem;
 				padding: 0.2rem 0 0 3rem;
 				height: 3rem;
