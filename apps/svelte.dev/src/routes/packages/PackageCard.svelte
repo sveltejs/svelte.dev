@@ -15,7 +15,8 @@
 		<h3>
 			{#if pkg.official}
 				<!-- TODO use svelte logo -->
-				<span class="pill official">official</span>
+				<span data-icon="svelte"></span>
+				<!-- <span class="pill official">official</span> -->
 			{/if}
 
 			<span>{pkg.name}</span>
@@ -175,6 +176,12 @@
 			&[data-icon='external-link'] {
 				mask-image: url(icons/external-link);
 				mask-size: 1.7rem;
+			}
+
+			&[data-icon='svelte'] {
+				background: #ff3e00;
+				mask-image: url(icons/svelte-cutout);
+				top: 0.2rem;
 			}
 		}
 

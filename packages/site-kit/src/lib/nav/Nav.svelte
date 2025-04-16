@@ -288,8 +288,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		--padding-right: 1rem;
 		width: 3.4rem;
 		height: 100%;
-		background: url(../branding/svelte-logo.svg) no-repeat 0 50% / calc(100% - var(--padding-right))
-			auto;
+		background: url(icons/svelte) no-repeat 0 50% / calc(100% - var(--padding-right)) auto;
 		padding: 0 var(--padding-right) 0 calc(var(--sk-page-padding-side) + 0rem);
 	}
 
