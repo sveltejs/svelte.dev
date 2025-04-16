@@ -2,7 +2,7 @@ const formatter = new Intl.RelativeTimeFormat(undefined, {
 	numeric: 'auto'
 });
 
-const DIVISIONS = {
+const DIVISIONS: Partial<Record<Intl.RelativeTimeFormatUnit, number>> = {
 	seconds: 60,
 	minutes: 60,
 	hours: 24,
@@ -15,16 +15,16 @@ const DIVISIONS = {
 /**
  * @param {Date} date
  */
-export const ago = (date, short = false) => {
+export const ago = (date: Date, short = false) => {
 	let duration = (date.getTime() - new Date().getTime()) / 1000;
 
 	for (const [name, amount] of Object.entries(DIVISIONS)) {
 		if (Math.abs(duration) < amount) {
-			const format = /** @type {keyof(DIVISIONS)} */ (name);
 			return short
-				? `${Math.round(-duration)}${name[0]}`
-				: formatter.format(Math.round(duration), format);
+				? `${Math.round(-duration)}${name === 'months' ? 'mo' : name[0]} ago`
+				: formatter.format(Math.round(duration), name as Intl.RelativeTimeFormatUnit);
 		}
+
 		duration /= amount;
 	}
 };

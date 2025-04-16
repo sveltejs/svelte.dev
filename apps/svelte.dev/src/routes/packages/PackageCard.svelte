@@ -23,8 +23,8 @@
 		</h3>
 
 		<span class="updated">
-			<strong>{pkg.version}</strong>
-			{ago(new Date(pkg.updated), true)} ago
+			{pkg.version}
+			<strong title={pkg.updated}>{ago(new Date(pkg.updated), true)}</strong>
 		</span>
 	</header>
 
@@ -91,6 +91,8 @@
 		gap: 2rem;
 
 		.updated {
+			display: flex;
+			gap: 0.8rem;
 			font: var(--sk-font-ui-small);
 			color: var(--sk-fg-3);
 
