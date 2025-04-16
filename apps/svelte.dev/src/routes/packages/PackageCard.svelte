@@ -141,6 +141,11 @@
 			mask: no-repeat 50% 50%;
 			mask-size: contain;
 
+			&:focus {
+				/* TODO use a focus ring instead (right now the mask breaks it) */
+				background: var(--sk-fg-accent);
+			}
+
 			&[data-icon='star'] {
 				mask-image: url(icons/star);
 			}
