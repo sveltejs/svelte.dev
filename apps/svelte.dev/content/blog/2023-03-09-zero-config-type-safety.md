@@ -2,7 +2,7 @@
 title: Zero-effort type safety
 description: More convenience and correctness, less boilerplate
 author: Simon Holthausen
-authorURL: https://twitter.com/dummdidumm_
+authorURL: https://bsky.app/profile/dummdidumm.bsky.social
 ---
 
 By sprinkling type annotations into your SvelteKit apps, you can get full type safety across the network — the `data` in your page has a type that's inferred from the return values of the `load` functions that generated that data, without you having to explicitly declare anything. It's one of those things that you come to wonder how you ever lived without.

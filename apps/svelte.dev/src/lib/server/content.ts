@@ -1,5 +1,5 @@
 import { read } from '$app/server';
-import type { Document } from '@sveltejs/site-kit';
+import type { Document, DocumentSummary } from '@sveltejs/site-kit';
 import { create_index } from '@sveltejs/site-kit/server/content';
 
 const documents = import.meta.glob<string>('../../../content/**/*.md', {
@@ -8,11 +8,14 @@ const documents = import.meta.glob<string>('../../../content/**/*.md', {
 	import: 'default'
 });
 
-const assets = import.meta.glob<string>('../../../content/**/+assets/**', {
-	eager: true,
-	query: '?url',
-	import: 'default'
-});
+const assets = import.meta.glob<string>(
+	['../../../content/**/+assets/**', '../../../content/**/+assets/**/.env'],
+	{
+		eager: true,
+		query: '?url',
+		import: 'default'
+	}
+);
 
 // https://github.com/vitejs/vite/issues/17453
 export const index = await create_index(documents, assets, '../../../content', read);
@@ -60,16 +63,16 @@ export const blog_posts = index.blog.children
 		return a.date < b.date ? 1 : -1;
 	});
 
+export function remove_section(slug: string) {
+	return slug.replace(/\/[^/]+(\/[^/]+)$/g, '$1');
+}
+
 /**
  * Create docs index, which is basically the same structure as the original index
  * but with adjusted slugs (the section part is omitted for cleaner URLs), separated
  * topics/pages and next/prev adjusted so that they don't point to different topics.
  */
 function create_docs() {
-	function remove_section(slug: string) {
-		return slug.replace(/\/[^/]+(\/[^/]+)$/g, '$1');
-	}
-
 	let docs: {
 		/** The top level entries/packages: svelte/kit/etc. Key is the topic */
 		topics: Record<string, Document>;
@@ -118,6 +121,14 @@ function create_docs() {
 	}
 
 	return docs;
+}
+
+export function create_summary(document: Document): DocumentSummary {
+	return {
+		slug: document.slug,
+		metadata: document.metadata,
+		children: document.children.map(create_summary)
+	};
 }
 
 export const docs = create_docs();

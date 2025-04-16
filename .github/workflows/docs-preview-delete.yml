@@ -1,11 +1,19 @@
 name: Docs preview delete
 
 on:
-  repository_dispatch:
-    types: [docs-preview-delete]
+  workflow_dispatch:
+    inputs:
+      repo:
+        description: 'Repository name (not fully-qualified, eg. `svelte` or `kit`)'
+        required: true
+        type: string
+      pr:
+        description: 'PR number'
+        required: true
+        type: string
 
 env:
-  BRANCH: preview-${{ github.event.client_payload.package }}-${{ github.event.client_payload.pr }}
+  BRANCH: preview-${{ inputs.repo }}-${{ inputs.pr }}
 
 jobs:
   Sync:

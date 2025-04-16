@@ -20,9 +20,10 @@ const plugin: Plugin = {
 			});
 
 			const requires: string[] = [];
+			const exports: string[] = [];
 
 			walk(ast as Node, null, {
-				CallExpression: (node) => {
+				CallExpression: (node, context) => {
 					if (node.callee.type === 'Identifier' && node.callee.name === 'require') {
 						if (node.arguments.length !== 1) return;
 						const arg = node.arguments[0];
@@ -30,6 +31,20 @@ const plugin: Plugin = {
 
 						requires.push(arg.value);
 					}
+
+					context.next();
+				},
+				AssignmentExpression: (node, context) => {
+					if (node.operator !== '=') return;
+					if (node.left.type !== 'MemberExpression') return;
+					if (node.left.object.type !== 'Identifier' || node.left.object.name !== 'exports') return;
+					if (node.left.computed || node.left.property.type !== 'Identifier') return;
+
+					exports.push(
+						`export const ${node.left.property.name} = module.exports.${node.left.property.name};`
+					);
+
+					context.next();
 				}
 			});
 
@@ -44,7 +59,8 @@ const plugin: Plugin = {
 				require,
 				`const exports = {}; const module = { exports };`,
 				code,
-				`export default module.exports;`
+				`export default module.exports;`,
+				exports.join('\n')
 			].join('\n\n');
 
 			return {

@@ -24,7 +24,7 @@ Then, add them to the `<li>` element, using the `todo.id` property as a key to m
 ```svelte
 /// file: TodoList.svelte
 <li
-	class:done={todo.done}
+	class={{ done: todo.done }}
 	+++in:receive={{ key: todo.id }}+++
 	+++out:send={{ key: todo.id }}+++
 >

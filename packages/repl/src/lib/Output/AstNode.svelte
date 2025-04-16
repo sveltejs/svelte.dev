@@ -10,78 +10,59 @@
 		key?: string;
 		value: Ast;
 		path_nodes?: Ast[];
-		autoscroll?: boolean;
+		active?: boolean;
 		depth?: number;
+		onhover: (node: { type: string; start: number; end: number } | null) => void;
 	}
 
-	let { key = '', value, path_nodes = [], autoscroll = true, depth = 0 }: Props = $props();
+	let { key = '', value, path_nodes = [], active = true, onhover, depth = 0 }: Props = $props();
 
-	const { toggleable } = get_repl_context();
+	const { workspace } = get_repl_context();
 
 	let root = depth === 0;
 	let open = $state(root);
 
-	let list_item_el = $state() as HTMLLIElement;
+	let li: HTMLLIElement;
 
 	let is_leaf = $derived(path_nodes[path_nodes.length - 1] === value);
+	let is_marked = $derived(!root && path_nodes.includes(value));
+
 	let is_array = $derived(Array.isArray(value));
 	let is_primitive = $derived(value === null || typeof value !== 'object');
-	let is_markable = $derived(
-		!is_primitive &&
-			'start' in value &&
-			'end' in value &&
-			typeof value.start === 'number' &&
-			typeof value.end === 'number'
-	);
 	let key_text = $derived(key ? `${key}:` : '');
 
 	$effect(() => {
-		open = path_nodes.includes(value);
-	});
+		if (active && typeof value === 'object' && value !== null) {
+			workspace.onselect((from, to) => {
+				// legacy fragments have `children`
+				const nodes =
+					value.type === 'Fragment' ? value.nodes ?? value.children : is_array ? value : [value];
 
-	$effect(() => {
-		if (autoscroll && is_leaf && !$toggleable) {
-			// wait for all nodes to render before scroll
-			tick().then(() => {
-				if (list_item_el) {
-					list_item_el.scrollIntoView();
+				const start = nodes[0]?.start;
+				const end = nodes[nodes.length - 1]?.end;
+
+				if (typeof start !== 'number' || typeof end !== 'number') {
+					return;
+				}
+
+				// if node contains the current selection, open
+				if (start <= from && end >= to) {
+					open = true;
+
+					if (is_leaf) {
+						tick().then(() => {
+							li.scrollIntoView({
+								block: 'center'
+							});
+						});
+					}
 				}
 			});
 		}
 	});
-
-	function handle_mark_text(e: MouseEvent | FocusEvent) {
-		if (is_markable) {
-			e.stopPropagation();
-
-			if (
-				'start' in value &&
-				'end' in value &&
-				typeof value.start === 'number' &&
-				typeof value.end === 'number'
-			) {
-				// TODO
-				// $module_editor?.markText({ from: value.start ?? 0, to: value.end ?? 0 });
-			}
-		}
-	}
-
-	function handle_unmark_text(e: MouseEvent) {
-		if (is_markable) {
-			e.stopPropagation();
-			// TODO
-			// $module_editor?.unmarkText();
-		}
-	}
 </script>
 
-<li
-	bind:this={list_item_el}
-	class:marked={!root && is_leaf}
-	onmouseover={handle_mark_text}
-	onfocus={handle_mark_text}
-	onmouseleave={handle_unmark_text}
->
+<li bind:this={li} data-marked={is_marked} data-leaf={is_leaf}>
 	{#if is_primitive || (is_array && value.length === 0)}
 		<span class="value">
 			{#if key_text}
@@ -97,7 +78,22 @@
 			{/if}
 		</span>
 	{:else}
-		<details bind:open>
+		<!-- svelte-ignore a11y_mouse_events_have_key_events (seems like a false positive) -->
+		<details
+			bind:open
+			onfocusin={(e) => (e.stopPropagation(), onhover(value))}
+			onfocusout={() => onhover(null)}
+			onmouseover={(e) => (e.stopPropagation(), onhover(value))}
+			onmouseleave={() => onhover(null)}
+			ontoggle={(e) => {
+				// toggle events can fire even when the AST output tab is hidden
+				if (!active) return;
+
+				if (e.currentTarget.open && value && typeof value.start === 'number') {
+					workspace.highlight_range(value, true);
+				}
+			}}
+		>
 			<summary>
 				{#if key}
 					<span class="key">{key}</span>:
@@ -116,13 +112,22 @@
 				{/if}
 			</summary>
 
-			<ul>
+			<!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_noninteractive_element_interactions -->
+			<ul
+				onclick={(e) => {
+					if (value && typeof value.start === 'number') {
+						workspace.highlight_range(value, true);
+						e.stopPropagation();
+					}
+				}}
+			>
 				{#each Object.entries(value) as [k, v]}
 					<AstNode
 						key={is_array ? undefined : k}
 						value={v}
 						{path_nodes}
-						{autoscroll}
+						{active}
+						{onhover}
 						depth={depth + 1}
 					/>
 				{/each}
@@ -144,8 +149,9 @@
 		list-style-type: none;
 	}
 
-	.marked {
-		background-color: var(--sk-highlight-color);
+	[data-marked='true']:not(:has(> [open])),
+	[data-leaf='true'] {
+		background-color: var(--sk-bg-highlight);
 	}
 
 	summary {

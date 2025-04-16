@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { afterNavigate } from '$app/navigation';
 	import type { Snippet } from 'svelte';
-	import { prefers_ts } from '../stores/prefers_ts';
+	import { code_preference } from '../state/code_preference';
 	import { fix_position } from '../actions/utils';
 
 	let { children }: { children: Snippet } = $props();
@@ -14,14 +14,14 @@
 		const inputs = container.querySelectorAll('.ts-toggle') as NodeListOf<HTMLInputElement>;
 
 		for (const input of inputs) {
-			input.checked = $prefers_ts;
+			input.checked = code_preference.current === 'typescript';
 		}
 	}
 
 	function toggle(e: Event) {
 		if ((e.target as HTMLElement).classList.contains('ts-toggle')) {
 			const input = e.target as HTMLInputElement;
-			$prefers_ts = input.checked;
+			code_preference.current = input.checked ? 'typescript' : 'javascript';
 			fix_position(input, update);
 		}
 	}
@@ -229,30 +229,19 @@
 						height: 100%;
 						left: 0;
 						top: 0;
-						background: no-repeat 50% 50% / 1.6rem 1.6rem;
+						background: currentColor;
+						mask: no-repeat 50% 50% / 1.6rem 1.6rem;
 						transition: opacity 0.2s;
 						transition-delay: 0.6s;
 					}
 
 					&::before {
-						background-image: url(../icons/copy-to-clipboard-light.svg);
+						mask-image: url(icons/copy-to-clipboard);
 					}
 
 					&::after {
-						background-image: url(../icons/check-light.svg);
+						mask-image: url(icons/check);
 						opacity: 0;
-
-						html.dark & {
-							background-image: url(../icons/check-dark.svg);
-						}
-					}
-
-					html.dark &::before {
-						background-image: url(../icons/copy-to-clipboard-dark.svg);
-					}
-
-					html.dark &::after {
-						background-image: url(../icons/check-dark.svg);
 					}
 
 					&:active::before {
@@ -341,8 +330,9 @@
 		a.permalink {
 			position: absolute !important;
 			display: block;
-			background: url(../icons/hash-light.svg) 50% 50% no-repeat;
-			background-size: 2.4rem 2.4rem;
+			background: var(--sk-fg-1);
+			mask: url(icons/hash) 50% 50% no-repeat;
+			mask-size: 2.4rem 2.4rem;
 			width: 2.6rem;
 			height: 2.2rem;
 			top: calc(50% - 1rem);
@@ -350,10 +340,6 @@
 			@media (max-width: 767px) {
 				right: 0;
 				scale: 0.8;
-			}
-
-			:root.dark & {
-				background-image: url(../icons/hash-dark.svg);
 			}
 
 			@media (min-width: 768px) {
@@ -422,10 +408,14 @@
 			&.note,
 			&:has(details.legacy) {
 				&::before {
-					content: none;
+					content: '';
+					display: block;
+					width: 2em;
+					height: 2em;
+					top: 0.05em;
+					background: var(--sk-fg-accent);
+					mask: url(icons/lightbulb) no-repeat 0.5rem 0 / 2.6rem;
 				}
-
-				background: url($lib/icons/lightbulb.svg) no-repeat 0.5rem 0 / 2.6rem;
 			}
 
 			&:first-child {
@@ -500,10 +490,10 @@
 			}
 
 			&::after {
-				background: url($lib/icons/chevron.svg) 50% 50% no-repeat;
-				background-size: 2rem;
-				rotate: 0deg;
-				transition: rotate 0.2s;
+				background: currentColor;
+				mask: url(icons/chevron) 50% 50% no-repeat;
+				mask-size: 2rem;
+				rotate: -90deg;
 				transition: rotate 0.2s;
 				top: 0.2rem;
 				right: 0.8rem;
@@ -523,6 +513,10 @@
 				font: var(--sk-font-body-small);
 				user-select: none;
 
+				&::-webkit-details-marker {
+					display: none;
+				}
+
 				.legacy &::after {
 					position: absolute;
 					display: flex;
@@ -537,7 +531,7 @@
 
 			&[open] {
 				&::after {
-					rotate: 180deg;
+					rotate: 90deg;
 				}
 
 				& > summary {

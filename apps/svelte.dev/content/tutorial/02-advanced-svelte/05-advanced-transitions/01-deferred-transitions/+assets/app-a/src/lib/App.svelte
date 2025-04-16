@@ -2,13 +2,15 @@
 	import TodoList from './TodoList.svelte';
 
 	const todos = $state([
-		{ done: false, description: 'write some docs' },
-		{ done: false, description: 'start writing blog post' },
-		{ done: true, description: 'buy some milk' },
-		{ done: false, description: 'mow the lawn' },
-		{ done: false, description: 'feed the turtle' },
-		{ done: false, description: 'fix some bugs' }
+		{ id: 1, done: false, description: 'write some docs' },
+		{ id: 2, done: false, description: 'start writing blog post' },
+		{ id: 3, done: true, description: 'buy some milk' },
+		{ id: 4, done: false, description: 'mow the lawn' },
+		{ id: 5, done: false, description: 'feed the turtle' },
+		{ id: 6, done: false, description: 'fix some bugs' }
 	]);
+
+	let uid = todos.length + 1;
 
 	function remove(todo) {
 		const index = todos.indexOf(todo);
@@ -23,6 +25,7 @@
 			if (e.key !== 'Enter') return;
 
 			todos.push({
+				id: uid++,
 				done: false,
 				description: e.currentTarget.value
 			});

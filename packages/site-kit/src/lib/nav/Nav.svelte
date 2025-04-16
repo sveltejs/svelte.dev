@@ -3,7 +3,8 @@ Top navigation bar for the application. It provides a slot for the left side, th
 -->
 
 <script lang="ts">
-	import { overlay_open, searching, on_this_page_open } from '../stores';
+	import { overlay_open, on_this_page_open } from '../stores';
+	import { search } from '../state/search.svelte';
 	import Icon from '../components/Icon.svelte';
 	import { page } from '$app/stores';
 	import ThemeToggle from '../components/ThemeToggle.svelte';
@@ -67,7 +68,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 <nav
 	class:visible
-	style:z-index={$overlay_open && ($searching || $on_this_page_open) ? 80 : null}
+	style:z-index={$overlay_open && (search.active || $on_this_page_open) ? 80 : null}
 	aria-label="Primary"
 >
 	<a class="home-link" href="/" title={home_title} aria-label="Svelte"></a>
@@ -98,9 +99,10 @@ Top navigation bar for the application. It provides a slot for the left side, th
 									<a
 										class="secondary"
 										href={section.path}
-										aria-current={$page.url.pathname === section.path || $page.url.pathname.startsWith(section.path!)
-									? 'page'
-									: undefined}
+										aria-current={$page.url.pathname === section.path ||
+										$page.url.pathname.startsWith(section.path!)
+											? 'page'
+											: undefined}
 									>
 										{section.title}
 									</a>
@@ -144,7 +146,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 			aria-label="Search"
 			class="raised icon search"
 			onclick={() => {
-				$searching = true;
+				search.active = true;
 			}}
 		>
 			<Icon name="search" size={18} />
@@ -375,37 +377,26 @@ Top navigation bar for the application. It provides a slot for the left side, th
 			display: contents;
 
 			[data-icon] {
-				background: no-repeat 50% 50%;
-				background-size: calc(100% - 1rem) auto;
+				background: var(--sk-fg-3);
 				padding: 0 0.5rem;
 				height: 100%;
+				mask: no-repeat 50% 50%;
+				mask-size: calc(100% - 1rem) auto;
 			}
 
 			[data-icon='discord'] {
 				width: 3.4rem;
-				background-image: url($lib/icons/discord-light.svg);
-
-				:global(.dark) & {
-					background-image: url($lib/icons/discord-dark.svg);
-				}
+				mask-image: url(icons/discord);
 			}
 
 			[data-icon='bluesky'] {
 				width: 3rem;
-				background-image: url($lib/icons/bluesky-light.svg);
-
-				:global(.dark) & {
-					background-image: url($lib/icons/bluesky-dark.svg);
-				}
+				mask-image: url(icons/bluesky);
 			}
 
 			[data-icon='github'] {
 				width: 3rem;
-				background-image: url($lib/icons/github-light.svg);
-
-				:global(.dark) & {
-					background-image: url($lib/icons/github-dark.svg);
-				}
+				mask-image: url(icons/github);
 			}
 		}
 

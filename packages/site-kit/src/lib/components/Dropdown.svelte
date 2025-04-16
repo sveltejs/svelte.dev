@@ -35,6 +35,7 @@
 		filter: var(--sk-shadow);
 		border-radius: var(--sk-border-radius);
 		z-index: 999;
+		transform: var(--safari-fix);
 		-webkit-transform: var(--safari-fix);
 		will-change: opacity;
 

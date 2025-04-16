@@ -1,7 +1,6 @@
 {
 	"name": "@sveltejs/repl",
 	"version": "0.6.0",
-	"sideEffects": false,
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
@@ -25,17 +24,29 @@
 	"homepage": "https://github.com/sveltejs/svelte.dev/tree/main/packages/repl/#readme",
 	"exports": {
 		".": {
+			"types": "./src/lib/public.d.ts",
 			"svelte": "./src/lib/index.ts",
 			"default": "./src/lib/index.ts"
 		},
 		"./bundler": {
-			"default": "./src/lib/Bundler.ts"
+			"types": "./src/lib/Bundler.svelte.ts",
+			"default": "./src/lib/Bundler.svelte.ts"
+		},
+		"./editor": {
+			"types": "./src/lib/Editor/Editor.svelte",
+			"svelte": "./src/lib/Editor/Editor.svelte"
 		},
 		"./viewer": {
+			"types": "./src/lib/Output/Viewer.svelte",
 			"svelte": "./src/lib/Output/Viewer.svelte"
 		},
+		"./workspace": {
+			"types": "./src/lib/Workspace.svelte.ts",
+			"svelte": "./src/lib/Workspace.svelte.ts"
+		},
 		"./console": {
-			"svelte": "./src/lib/Output/console/Console.svelte"
+			"types": "./src/lib/Output/console/index.ts",
+			"svelte": "./src/lib/Output/console/index.ts"
 		}
 	},
 	"files": [
@@ -49,14 +60,14 @@
 	"devDependencies": {
 		"@lezer/common": "^1.2.1",
 		"@sveltejs/adapter-auto": "^3.0.0",
-		"@sveltejs/kit": "^2.8.0",
+		"@sveltejs/kit": "^2.20.0",
 		"@sveltejs/package": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "4.0.0",
 		"@types/estree": "^1.0.5",
 		"prettier": "^3.3.2",
-		"prettier-plugin-svelte": "^3.2.4",
-		"publint": "^0.1.9",
-		"svelte-check": "^4.0.0",
+		"prettier-plugin-svelte": "^3.3.2",
+		"publint": "^0.2.12",
+		"svelte-check": "^4.1.1",
 		"typescript": "^5.5.4",
 		"vite": "^5.4.3"
 	},
@@ -65,28 +76,34 @@
 		"@codemirror/autocomplete": "^6.16.0",
 		"@codemirror/commands": "^6.5.0",
 		"@codemirror/lang-css": "^6.2.1",
+		"@codemirror/lang-html": "^6.4.6",
 		"@codemirror/lang-javascript": "^6.2.2",
 		"@codemirror/lang-json": "^6.0.1",
 		"@codemirror/lang-markdown": "^6.2.5",
 		"@codemirror/language": "^6.10.1",
 		"@codemirror/lint": "^6.7.0",
-		"@codemirror/state": "^6.4.1",
-		"@codemirror/view": "^6.26.3",
+		"@codemirror/state": "^6.5.0",
+		"@codemirror/view": "^6.35.3",
 		"@jridgewell/sourcemap-codec": "^1.4.15",
+		"@lezer/highlight": "^1.2.1",
 		"@replit/codemirror-lang-svelte": "^6.0.0",
 		"@replit/codemirror-vim": "^6.0.14",
-		"@rich_harris/svelte-split-pane": "^1.1.3",
+		"@rich_harris/svelte-split-pane": "^2.0.0",
 		"@rollup/browser": "^4.17.2",
 		"@sveltejs/site-kit": "workspace:*",
-		"@sveltejs/svelte-json-tree": "^2.2.0",
+		"@sveltejs/svelte-json-tree": "^2.2.1",
 		"acorn": "^8.11.3",
-		"editor": "workspace:*",
+		"codemirror": "^6.0.1",
 		"esm-env": "^1.0.0",
 		"esrap": "^1.2.2",
+		"icons": "workspace:*",
+		"locate-character": "^3.0.0",
 		"marked": "^14.1.2",
 		"resolve.exports": "^2.0.2",
-		"svelte": "5.1.11",
+		"svelte": "5.23.0",
+		"tailwindcss": "^4.0.15",
 		"tarparser": "^0.0.4",
+		"ts-blank-space": "^0.6.1",
 		"zimmerframe": "^1.1.2"
 	}
 }

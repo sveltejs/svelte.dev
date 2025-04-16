@@ -66,41 +66,41 @@
 			class="clip"
 			style:--height-difference="{menu_height - universal_menu_inner_height}px"
 			ontransitionstart={(e) => {
-					const target = e.target as HTMLElement;
+				const target = e.target as HTMLElement;
 
-					if (!target?.classList.contains('viewport')) return;
-					if (e.propertyName !== 'transform') return;
+				if (!target?.classList.contains('viewport')) return;
+				if (e.propertyName !== 'transform') return;
 
-					// we need to apply a clip-path during the transition so that the contents
-					// are constrained to the menu background, but only while the transition
-					// is running, otherwise it prevents the contents from being scrolled
-					const a = 'calc(var(--height-difference) + 1px)';
-					const b = '1px';
+				// we need to apply a clip-path during the transition so that the contents
+				// are constrained to the menu background, but only while the transition
+				// is running, otherwise it prevents the contents from being scrolled
+				const a = 'calc(var(--height-difference) + 1px)';
+				const b = '1px';
 
-					const start = show_context_menu ? a : b;
-					const end = show_context_menu ? b : a;
+				const start = show_context_menu ? a : b;
+				const end = show_context_menu ? b : a;
 
-					const container = e.currentTarget;
+				const container = e.currentTarget;
 
-					container.style.clipPath = `polygon(0% ${start}, 100% ${start}, 100% 100%, 0% 100%)`;
+				container.style.clipPath = `polygon(0% ${start}, 100% ${start}, 100% 100%, 0% 100%)`;
 
-					setTimeout(() => {
-						container.style.clipPath = `polygon(0% ${end}, 100% ${end}, 100% 100%, 0% 100%)`;
-					}, 0);
-				}}
+				setTimeout(() => {
+					container.style.clipPath = `polygon(0% ${end}, 100% ${end}, 100% 100%, 0% 100%)`;
+				}, 0);
+			}}
 			ontransitionend={(e) => {
-					const target = e.target as HTMLElement;
+				const target = e.target as HTMLElement;
 
-					if (!target?.classList.contains('viewport')) return;
-					if (e.propertyName !== 'transform') return;
+				if (!target?.classList.contains('viewport')) return;
+				if (e.propertyName !== 'transform') return;
 
-					e.currentTarget.style.clipPath = '';
+				e.currentTarget.style.clipPath = '';
 
-					// whenever we transition from one menu to the other, we need to move focus to the first item in the new menu
-					if (!show_context_menu) {
-						universal_menu?.querySelector('a')?.focus();
-					}
-				}}
+				// whenever we transition from one menu to the other, we need to move focus to the first item in the new menu
+				if (!show_context_menu) {
+					universal_menu?.querySelector('a')?.focus();
+				}
+			}}
 		>
 			<div
 				class="viewport"
