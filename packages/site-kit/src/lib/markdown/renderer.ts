@@ -857,9 +857,15 @@ async function syntax_highlight({
 		html = replace_blank_lines(highlighted);
 	}
 
-	// munge shiki output: put whitespace outside `<span>` elements, so that
-	// highlight delimiters fall outside tokens
-	html = html.replace(/(<span[^>]+?>)(\s+)/g, '$2$1').replace(/(\s+)(<\/span>)/g, '$2$1');
+	// munge shiki output
+	html = html
+		// put whitespace outside `<span>` elements, so that
+		// highlight delimiters fall outside tokens
+		.replace(/(<span[^>]+?>)(\s+)/g, '$2$1')
+		.replace(/(\s+)(<\/span>)/g, '$2$1')
+
+		// remove tabindex
+		.replace(' tabindex="0"', '');
 
 	html = html
 		.replace(/ {13}([^ ][^]+?) {13}/g, (_, content) => {

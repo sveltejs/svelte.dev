@@ -96,6 +96,7 @@
 		"codemirror": "^6.0.1",
 		"esm-env": "^1.0.0",
 		"esrap": "^1.2.2",
+		"icons": "workspace:*",
 		"locate-character": "^3.0.0",
 		"marked": "^14.1.2",
 		"resolve.exports": "^2.0.2",

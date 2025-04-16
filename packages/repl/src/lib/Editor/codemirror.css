@@ -57,21 +57,25 @@
 	.cm-gutterElement {
 		position: relative;
 
-		&:where(:has([title='Fold line']), :has([title='Unfold line']))::after {
-			content: '';
-			position: absolute;
-			width: 100%;
-			right: 0;
-			top: 0;
-			height: 2.4rem;
-			background: url($lib/icons/chevron.svg) no-repeat 50% 50%;
-			background-size: contain;
-			transition: transform 0.2s;
-			cursor: pointer;
+		&:where(:has([title='Fold line']), :has([title='Unfold line'])) {
+			&::after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				right: 0;
+				top: 0;
+				height: 2.4rem;
+				background: currentColor;
+				mask: url(icons/chevron) no-repeat 50% 50%;
+				mask-size: contain;
+				transition: transform 0.2s;
+				cursor: pointer;
+				rotate: 180deg;
+			}
 		}
 
 		&:has([title='Unfold line'])::after {
-			transform: rotate(-90deg);
+			transform: rotate(90deg);
 		}
 
 		span {
@@ -184,12 +188,17 @@
 				aspect-ratio: 1;
 				top: 0.5rem;
 				right: 0.5rem;
-				color: transparent;
-				background: url(./close-light.svg) 50% 50% no-repeat;
-				background-size: 1.8rem;
 
-				:root.dark & {
-					background-image: url(./close-dark.svg);
+				&::after {
+					content: '';
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					left: 0;
+					top: 0;
+					background: currentColor;
+					mask: url(icons/close) 50% 50% no-repeat;
+					mask-size: 1.8rem;
 				}
 			}
 

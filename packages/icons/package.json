@@ -1,0 +1,10 @@
+{
+	"name": "icons",
+	"private": true,
+	"exports": {
+		"./*": {
+			"types": "./types.d.ts",
+			"default": "./icons/*.svg"
+		}
+	}
+}

@@ -29,19 +29,21 @@
 
 <button
 	onclick={toggle}
-	class="raised icon"
+	class="raised"
 	type="button"
 	aria-pressed={theme.current === 'dark'}
 	aria-label="Toggle dark mode"
-></button>
+>
+	<span class="icon"></span>
+</button>
 
 <style>
-	button {
-		background-image: url($lib/icons/theme-dark.svg);
-		background-size: 2rem;
+	.icon {
+		mask-image: url(icons/theme-dark);
+		mask-size: 2rem;
 
-		:global(.dark) & {
-			background-image: url($lib/icons/theme-light.svg);
+		:root.dark & {
+			mask-image: url(icons/theme-light);
 		}
 	}
 </style>

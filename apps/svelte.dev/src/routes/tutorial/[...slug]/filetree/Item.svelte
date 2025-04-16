@@ -176,22 +176,22 @@
 	.icon {
 		height: 100%;
 		width: 1.5rem;
-	}
 
-	.icon.rename {
-		background-image: url($lib/icons/rename.svg);
-	}
+		&.rename {
+			background-image: url(icons/rename);
+		}
 
-	.icon.delete {
-		background-image: url($lib/icons/delete.svg);
-	}
+		&.delete {
+			background-image: url(icons/delete);
+		}
 
-	.icon.file-new {
-		background-image: url($lib/icons/file-new.svg);
-	}
+		&.file-new {
+			background-image: url(icons/file-new);
+		}
 
-	.icon.folder-new {
-		background-image: url($lib/icons/folder-new.svg);
+		&.folder-new {
+			background-image: url(icons/folder-new);
+		}
 	}
 
 	[aria-current='true'] {
