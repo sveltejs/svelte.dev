@@ -29,12 +29,6 @@ importers:
       '@openrouter/ai-sdk-provider':
         specifier: ^0.4.3
         version: 0.4.3(zod@3.23.8)
-      '@orama/orama':
-        specifier: ^3.1.4
-        version: 3.1.4
-      '@orama/stopwords':
-        specifier: ^3.1.4
-        version: 3.1.4
       '@rich_harris/svelte-split-pane':
         specifier: ^2.0.0
         version: 2.0.0(svelte@5.25.6)
@@ -1340,14 +1334,6 @@ packages:
   '@opentelemetry/api@1.9.0':
     resolution: {integrity: sha512-3giAOQvZiH5F9bMlMiv8+GSPMeqg0dbaeo58/0SlA9sxSqZhnUtxzX9/2FzyhS9sWQf5S0GJE0AKBrFqjpeYcg==}
     engines: {node: '>=8.0.0'}
-
-  '@orama/orama@3.1.4':
-    resolution: {integrity: sha512-7tTuIdkzgRscJ7sGHVsoK9GtXSpwbfrj3WYnuSu/SepXHhshYiQaOeXc/aeLh4MfgIre6tEs/caIop8wrhMi3g==}
-    engines: {node: '>= 16.0.0'}
-
-  '@orama/stopwords@3.1.4':
-    resolution: {integrity: sha512-73PGFUJYUZwWkSgkcz6BMc/uvxnY3EXup9wcsByAg74sg5hl7zACiSNJy5d5JPqPHcGMTRJPWYTqoaWSad1zlQ==}
-    engines: {node: '>= 16.0.0'}
 
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -4512,10 +4498,6 @@ snapshots:
       zod: 3.23.8
 
   '@opentelemetry/api@1.9.0': {}
-
-  '@orama/orama@3.1.4': {}
-
-  '@orama/stopwords@3.1.4': {}
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
