@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Package } from '$lib/server/content';
+	import { ago } from '$lib/time';
 	import { format_number } from './utils';
 
 	type Props = {
@@ -10,30 +11,21 @@
 </script>
 
 <article data-pubdate={pkg.updated}>
-	<span class="header">
-		<h3 class={[(pkg.outdated || pkg.deprecated) && 'faded']}>
-			{pkg.name}
-
-			<!-- {#if pkg.typescript}
-				<span data-icon="typescript"></span>
-			{/if} -->
-		</h3>
-
-		<span class="status">
-			<!-- {#if pkg.runes}
-				<span class="pill runes">runes</span>
-			{/if} -->
-			<!-- {#if pkg.outdated}
-				<span class="pill">outdated</span>
-			{/if} -->
-			{#if pkg.deprecated}
-				<span class="pill">deprecated</span>
-			{/if}
+	<header>
+		<h3>
 			{#if pkg.official}
+				<!-- TODO use svelte logo -->
 				<span class="pill official">official</span>
 			{/if}
+
+			<span>{pkg.name}</span>
+		</h3>
+
+		<span class="updated">
+			<strong>{pkg.version}</strong>
+			{ago(new Date(pkg.updated!), true)} ago
 		</span>
-	</span>
+	</header>
 
 	<p class="description">{pkg.description}</p>
 
@@ -90,16 +82,30 @@
 </article>
 
 <style>
-	.header {
+	header {
 		display: flex;
 		align-items: center;
 		margin-bottom: 1rem;
 		justify-content: space-between;
+		gap: 2rem;
+
+		.updated {
+			font: var(--sk-font-ui-small);
+			color: var(--sk-fg-3);
+
+			strong {
+				color: var(--sk-fg-1);
+			}
+		}
 	}
 
 	h3 {
 		display: inline-block;
 		font: var(--sk-font-ui-medium);
+
+		small {
+			color: var(--sk-fg-3);
+		}
 
 		&.faded {
 			color: var(--sk-fg-3);
@@ -172,27 +178,19 @@
 			}
 		}
 
-		.status {
-			display: flex;
-			align-items: center;
-			gap: 0.5rem;
+		.pill {
+			font: var(--sk-font-ui-small);
+			border-radius: 9999px;
+			padding: 0.2rem 1rem;
+			width: fit-content;
+			border: 1px solid var(--sk-border);
 
-			margin-left: 0.5rem;
-
-			> .pill {
-				font: var(--sk-font-ui-small);
-				border-radius: 9999px;
-				padding: 0.2rem 1rem;
-				width: fit-content;
-				border: 1px solid var(--sk-border);
-			}
-
-			.official {
+			&.official {
 				border-color: var(--sk-fg-accent);
 				color: var(--sk-fg-accent);
 				background-color: color-mix(in hsl, var(--sk-fg-accent), transparent 95%);
 			}
-			.runes {
+			&.runes {
 				border-color: #4a8cca;
 				color: #4a8cca;
 				background: linear-gradient(135deg, rgba(74, 140, 202, 0.15), rgba(100, 178, 255, 0.2));
@@ -200,6 +198,14 @@
 				overflow: hidden;
 				transition: all 0.3s ease;
 			}
+		}
+
+		.status {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+
+			margin-left: 0.5rem;
 		}
 
 		.stats {

@@ -170,7 +170,7 @@ export interface Package {
 	downloads?: number;
 
 	/** Last update timestamp */
-	updated?: string;
+	updated: string;
 
 	/** Number of GitHub stars */
 	github_stars?: number;
