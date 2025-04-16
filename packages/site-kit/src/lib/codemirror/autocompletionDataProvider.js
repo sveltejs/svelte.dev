@@ -576,18 +576,26 @@ const is_bindable = (node, context) => {
 /**
  * @type {import("./types").Test}
  */
-const is_props_id = (node) => {
-	if (node.parent?.name !== 'VariableDeclaration') return false;
-	if (node.parent?.parent?.name !== 'VariableDeclarator') return false;
-	if (node.parent?.parent?.parent?.name !== 'Program') return false;
-	if (node.parent?.firstChild?.name !== 'Identifier') return false;
+const is_props_id_call = (node, context, selected) => {
+	if (!is_state_call(node, context, selected)) return false;
+	if (node.parent?.parent?.name !== 'Script') return false;
 	return true;
-};
+}
+
+/**
+ * @type {import("./types").Test}
+ */
+const is_props_id = (node, context, selected) => {
+	if (!is_state(node, context, selected)) return false;
+	if (node.parent?.parent?.name !== 'Script') return false;
+	return true;
+}
 
 export const runes = [
 	{ snippet: '$state(${})', test: is_state },
 	{ snippet: '$state', test: is_state_call },
 	{ snippet: '$props()', test: is_props },
+	{ snippet: '$props.id', test: is_props_id_call },
 	{ snippet: '$props.id()', test: is_props_id },
 	{ snippet: '$derived(${});', test: is_state },
 	{ snippet: '$derived', test: is_state_call },
