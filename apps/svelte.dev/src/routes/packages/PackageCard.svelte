@@ -23,7 +23,7 @@
 
 		<span class="updated">
 			<strong>{pkg.version}</strong>
-			{ago(new Date(pkg.updated!), true)} ago
+			{ago(new Date(pkg.updated), true)} ago
 		</span>
 	</header>
 

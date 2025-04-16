@@ -49,20 +49,9 @@
 	</header>
 
 	<div class="wrapper">
-		<div
-			class="viewport"
-			onscroll={(e) => {
-				// prevent focus-based scroll; handle this programmatically instead
-				e.currentTarget.scrollTo(0, 0);
-			}}
-			onfocusin={(e) => {
-				const item = e.currentTarget.querySelector('.item:focus-within') as HTMLElement;
-				const left =
-					item.offsetLeft - parseFloat(getComputedStyle(e.currentTarget).scrollPaddingLeft);
-
-				scroller.scrollTo({ left, behavior });
-			}}
-		>
+		<!-- we duplicate the DOM for the sake of the gradient effect -
+		     without this, the scrollbar extends beyond the content area -->
+		<div inert class="viewport">
 			<div bind:this={content} class="content">
 				{#each packages as pkg}
 					<div class="item">
@@ -74,7 +63,7 @@
 
 		<div
 			bind:this={scroller}
-			class="viewport-proxy"
+			class="viewport"
 			onscroll={(e) => {
 				const left = e.currentTarget.scrollLeft;
 				content.style.translate = `-${left}px`;
@@ -82,9 +71,11 @@
 				update();
 			}}
 		>
-			<div class="content-proxy">
+			<div class="content">
 				{#each packages as pkg}
-					<div class="item-proxy"></div>
+					<div class="item">
+						<PackageCard {pkg} />
+					</div>
 				{/each}
 			</div>
 		</div>
@@ -137,32 +128,38 @@
 		position: relative;
 	}
 
-	.viewport,
-	.viewport-proxy {
-		scroll-snap-type: x mandatory;
-	}
-
 	.viewport {
-		position: relative;
-		margin: 0 calc(-1 * var(--bleed));
-		padding: 1em var(--bleed);
-		scroll-padding: 0 var(--bleed);
-		overflow: hidden;
-		mask-image: linear-gradient(
-			to right,
-			transparent 0%,
-			white var(--bleed),
-			white calc(100% - var(--bleed)),
-			transparent 100%
-		);
+		scroll-snap-type: x mandatory;
+
+		&[inert] {
+			position: relative;
+			margin: 0 calc(-1 * var(--bleed));
+			padding: 1rem var(--bleed);
+			scroll-padding: 0 var(--bleed);
+			overflow: hidden;
+			mask-image: linear-gradient(
+				to right,
+				rgb(0 0 0 / 0) 0%,
+				rgb(0 0 0 / 0.5) var(--bleed),
+				rgb(0 0 0 / 1) var(--bleed),
+				rgb(0 0 0 / 1) calc(100% - var(--bleed)),
+				rgb(0 0 0 / 0.5) calc(100% - var(--bleed)),
+				rgb(0 0 0 / 0) 100%
+			);
+		}
+
+		&:not([inert]) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow-x: auto;
+			padding: 1rem 0;
+		}
 	}
 
-	.viewport-proxy {
-		overflow-x: auto;
-	}
-
-	.content,
-	.content-proxy {
+	.content {
 		display: grid;
 		grid-auto-columns: 34rem;
 		grid-auto-flow: column;
@@ -172,23 +169,6 @@
 
 	.item {
 		height: 16rem;
-	}
-
-	.item,
-	.item-proxy {
 		scroll-snap-align: start;
-	}
-
-	.viewport-proxy {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-
-		* {
-			pointer-events: none;
-			opacity: 0;
-		}
 	}
 </style>
