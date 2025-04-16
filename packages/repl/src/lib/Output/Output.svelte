@@ -198,8 +198,8 @@
 				onclick={() => {
 					view = 'result';
 					resultTab.reset();
-				}}
-			></button>
+				}}><span class="icon"></span></button
+			>
 			<button aria-current={view === 'js'} onclick={() => (view = 'js')}>JS output</button>
 			<button aria-current={view === 'css'} onclick={() => (view = 'css')}>CSS output</button>
 			<button aria-current={view === 'ast'} onclick={() => (view = 'ast')}>AST output</button>
@@ -292,14 +292,14 @@
 		}
 
 		&.reset-result {
-			width: 2em;
+			height: 100%;
 			vertical-align: bottom;
-			background: url(./reset-light.svg) 50% 50% no-repeat;
-			background-size: 1em;
-			margin-left: -1ch;
+			margin-left: -1em;
 			cursor: pointer;
-			:root.dark & {
-				background-image: url(./reset-dark.svg);
+
+			.icon {
+				background: currentColor;
+				mask: url(icons/refresh) 50% / 1.2em no-repeat;
 			}
 		}
 	}
