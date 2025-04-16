@@ -573,7 +573,7 @@ const is_bindable = (node, context) => {
 	);
 };
 
-/** 
+/**
  * @type {import("./types").Test}
  */
 const is_props_id = (node) => {
@@ -582,7 +582,7 @@ const is_props_id = (node) => {
 	if (node.parent?.parent?.parent?.name !== 'Program') return false;
 	if (node.parent?.firstChild?.name !== 'Identifier') return false;
 	return true;
-}
+};
 
 export const runes = [
 	{ snippet: '$state(${})', test: is_state },
