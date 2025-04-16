@@ -6,6 +6,7 @@
 	import PackageCard from './PackageCard.svelte';
 	import { search_criteria, type SortCriterion } from './packages-search';
 	import Category from './Category.svelte';
+	import { fly } from 'svelte/transition';
 
 	const { data } = $props();
 
@@ -153,40 +154,26 @@
 							{/each}
 						</select>
 					</label>
-
-					<!-- <label>
-							Hide outdated:
-							<input type="checkbox" bind:checked={qps.hide_outdated} />
-						</label> -->
 				</div>
 			{/if}
 		</form>
 	</div>
 
-	{#if !qps.query}
-		{#each data.homepage as { title, packages }}
-			<Category {title} {packages} />
-		{/each}
-	{/if}
-
-	<div class="posts" style="display: {!qps.query ? 'none' : null}">
-		<!-- {#if packages.sv_add.length > 0}
-				<h2>sv add</h2>
-				<section>
-					{#each packages.sv_add as pkg}
-						<PackageCard {pkg} />
-					{/each}
-				</section>
-			{/if} -->
-
-		{#if packages.length > 0}
+	{#if qps.query}
+		<div in:fly={{ y: 20 }} class="posts">
 			<section>
 				{#each packages as pkg}
 					<PackageCard {pkg} />
 				{/each}
 			</section>
-		{/if}
-	</div>
+		</div>
+	{:else}
+		<div in:fly={{ y: 20 }}>
+			{#each data.homepage as { title, packages }}
+				<Category {title} {packages} />
+			{/each}
+		</div>
+	{/if}
 </div>
 
 <style>
