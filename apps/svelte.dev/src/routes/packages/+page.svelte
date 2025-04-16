@@ -14,7 +14,7 @@
 		svelte_versions: QueryParamSerde.array()
 	});
 
-	const filtered = $derived(search(data.packages, qps.query));
+	const filtered = $derived(search(data.packages, qps.query, qps.svelte_versions));
 
 	const formatter = new Intl.NumberFormat();
 </script>

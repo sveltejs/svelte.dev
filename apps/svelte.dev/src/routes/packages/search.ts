@@ -14,7 +14,7 @@ export function sort_downloads(a: Package, b: Package) {
 	return (b.downloads ?? 0) - (a.downloads ?? 0);
 }
 
-export function search(packages: Package[], query: string) {
+export function search(packages: Package[], query: string, versions: string[]) {
 	const pattern = escape(query);
 
 	const exact = new RegExp(`\\b${pattern}\\b`, 'i');
@@ -29,6 +29,10 @@ export function search(packages: Package[], query: string) {
 	const partial_unofficial: Package[] = [];
 
 	for (const pkg of packages) {
+		if (versions.length > 0 && !versions.some((v) => pkg.svelte[v as '3' | '4' | '5'])) {
+			continue;
+		}
+
 		if (exact.test(pkg.name) || exact.test(pkg.description!)) {
 			if (PACKAGES_META.SV_ADD.packages.includes(pkg.name)) {
 				// TODO put this metadata on the package object, not PACKAGES_META
