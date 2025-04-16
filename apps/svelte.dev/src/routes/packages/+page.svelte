@@ -2,80 +2,21 @@
 	import { forcefocus } from '@sveltejs/site-kit/actions';
 	import { Icon } from '@sveltejs/site-kit/components';
 	import { QueryParamSerde, reactive_query_params } from '@sveltejs/site-kit/reactivity';
-	import { onMount, tick } from 'svelte';
 	import PackageCard from './PackageCard.svelte';
-	import { search_criteria, type SortCriterion } from './packages-search';
 	import Category from './Category.svelte';
 	import { fly } from 'svelte/transition';
+	import { search } from './search';
 
 	const { data } = $props();
 
 	const qps = reactive_query_params({
 		query: QueryParamSerde.string(),
-		svelte_versions: QueryParamSerde.array(),
-		sort_by: QueryParamSerde.string<SortCriterion>('popularity')
+		svelte_versions: QueryParamSerde.array()
 	});
 
-	let packages = $derived(data.packages);
+	const filtered = $derived(search(data.packages, qps.query));
 
 	const formatter = new Intl.NumberFormat();
-	const formatted_package_number = $derived(formatter.format(data.packages_count));
-
-	let ready = $state(false);
-	let uid = 1;
-
-	let worker_first_run = true;
-
-	let worker: Worker;
-	onMount(() => {
-		worker = new Worker(new URL('./packages-worker.ts', import.meta.url), { type: 'module' });
-
-		worker.addEventListener('message', (event) => {
-			const { type, payload } = event.data;
-
-			if (type === 'ready') {
-				ready = true;
-			}
-
-			if (type === 'results') {
-				packages = payload.results;
-			}
-		});
-
-		worker.postMessage({
-			type: 'init',
-			payload: {
-				origin: location.origin
-			}
-		});
-
-		return () => worker.terminate();
-	});
-
-	$effect(() => {
-		qps.query;
-		qps.svelte_versions;
-		qps.sort_by;
-
-		if (!ready) return;
-
-		if (worker_first_run) {
-			worker_first_run = false;
-			return;
-		}
-
-		const id = uid++;
-
-		worker.postMessage({
-			type: 'get',
-			id,
-			payload: {
-				query: qps.query,
-				svelte_versions: $state.snapshot(qps.svelte_versions),
-				sort_by: qps.sort_by
-			}
-		});
-	});
 </script>
 
 <svelte:head>
@@ -104,7 +45,7 @@
 					}}
 					enterkeyhint="search"
 					bind:value={qps.query}
-					placeholder="Search {formatted_package_number} packages"
+					placeholder="Search {formatter.format(data.packages.length)} packages"
 					aria-describedby="search-description"
 					aria-label="Search"
 					spellcheck="false"
@@ -124,7 +65,7 @@
 
 			{#if qps.query}
 				<div class="sub">
-					<span>Showing {packages?.length ?? 0} results</span>
+					<span>Showing {formatter.format(filtered.length)} results</span>
 
 					<span style="flex: 1 1 auto"></span>
 
@@ -145,15 +86,6 @@
 							5
 						</label>
 					</div>
-
-					<label>
-						Sort By:
-						<select bind:value={qps.sort_by}>
-							{#each search_criteria as criterion}
-								<option value={criterion}>{criterion}</option>
-							{/each}
-						</select>
-					</label>
 				</div>
 			{/if}
 		</form>
@@ -162,7 +94,7 @@
 	{#if qps.query}
 		<div in:fly={{ y: 20 }} class="posts">
 			<section>
-				{#each packages as pkg}
+				{#each filtered as pkg}
 					<PackageCard {pkg} />
 				{/each}
 			</section>
