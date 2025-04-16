@@ -577,6 +577,7 @@ const is_bindable = (node, context) => {
  * @type {import("./types").Test}
  */
 const is_props_id_call = (node, context, selected) => {
+	if (selected.type !== 'svelte') return false;
 	if (!is_state_call(node, context, selected)) return false;
 	if (node.parent?.parent?.name !== 'Script') return false;
 	return true;
@@ -586,6 +587,7 @@ const is_props_id_call = (node, context, selected) => {
  * @type {import("./types").Test}
  */
 const is_props_id = (node, context, selected) => {
+	if (selected.type !== 'svelte') return false;
 	if (!is_state(node, context, selected)) return false;
 	if (node.parent?.parent?.name !== 'Script') return false;
 	return true;
