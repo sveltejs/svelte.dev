@@ -123,6 +123,10 @@
 			&[aria-label='Next']::after {
 				rotate: 180deg;
 			}
+
+			&:disabled {
+				background: none;
+			}
 		}
 	}
 
