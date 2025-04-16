@@ -24,7 +24,7 @@
 	}
 
 	function go(d: number) {
-		const [a, b] = scroller.querySelectorAll('.item-proxy') as NodeListOf<HTMLElement>;
+		const [a, b] = scroller.querySelectorAll('.item') as NodeListOf<HTMLElement>;
 		const left = scroller.scrollLeft + d * (b.offsetLeft - a.offsetLeft);
 
 		scroller.scrollTo({ left, behavior });
