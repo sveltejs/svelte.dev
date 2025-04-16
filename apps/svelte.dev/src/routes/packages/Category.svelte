@@ -144,12 +144,13 @@
 			padding: 1rem var(--bleed);
 			scroll-padding: 0 var(--bleed);
 			overflow: hidden;
+			filter: blur(0.5px);
 			mask-image: linear-gradient(
 				to right,
 				rgb(0 0 0 / 0) 0%,
 				rgb(0 0 0 / 0.5) var(--bleed),
-				rgb(0 0 0 / 1) var(--bleed),
-				rgb(0 0 0 / 1) calc(100% - var(--bleed)),
+				rgb(0 0 0 / 0) var(--bleed),
+				rgb(0 0 0 / 0) calc(100% - var(--bleed)),
 				rgb(0 0 0 / 0.5) calc(100% - var(--bleed)),
 				rgb(0 0 0 / 0) 100%
 			);
