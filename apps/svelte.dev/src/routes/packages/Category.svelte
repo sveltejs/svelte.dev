@@ -135,6 +135,7 @@
 	}
 
 	.viewport {
+		overscroll-behavior: contain;
 		scroll-snap-type: x mandatory;
 
 		&[inert] {
