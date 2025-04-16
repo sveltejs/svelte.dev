@@ -39,13 +39,15 @@
 	<header>
 		<h2>{title}</h2>
 
-		<div class="controls">
-			<button disabled={at_start} aria-label="Previous" class="raised icon" onclick={() => go(-1)}
-			></button>
+		{#if !at_start || !at_end}
+			<div class="controls">
+				<button disabled={at_start} aria-label="Previous" class="raised icon" onclick={() => go(-1)}
+				></button>
 
-			<button disabled={at_end} aria-label="Next" class="raised icon" onclick={() => go(1)}
-			></button>
-		</div>
+				<button disabled={at_end} aria-label="Next" class="raised icon" onclick={() => go(1)}
+				></button>
+			</div>
+		{/if}
 	</header>
 
 	<div class="wrapper">
