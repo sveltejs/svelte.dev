@@ -209,10 +209,8 @@ async function get_bundle(
 				}
 
 				if (current) {
-					const path = new URL(importee, importer).href.replace(
-						`${NPM}/${current.meta.name}@${current.meta.version}/`,
-						''
-					);
+					const { name, version } = current.meta;
+					const path = new URL(importee, importer).href.replace(`${NPM}/${name}@${version}/`, '');
 
 					return normalize_path(current, path);
 				}
