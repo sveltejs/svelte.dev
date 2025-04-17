@@ -22,8 +22,6 @@ import {
 
 The current version, as set in package.json.
 
-/docs/svelte-compiler#svelte-version
-
 <div class="ts-block">
 
 ```dts
@@ -1037,6 +1035,8 @@ css: null | {
 	code: string;
 	/** A source map */
 	map: SourceMap;
+	/** Whether or not the CSS includes global rules */
+	hasGlobal: boolean;
 };
 ```
 
