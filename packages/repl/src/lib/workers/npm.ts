@@ -2,7 +2,7 @@ import * as resolve from 'resolve.exports';
 import { parseTar, type FileDescription } from 'tarparser';
 import { NPM } from './constants';
 
-interface Package {
+export interface Package {
 	meta: any; // package.json contents
 	contents: Record<string, FileDescription>;
 }
@@ -124,6 +124,21 @@ export function resolve_subpath(pkg: Package, subpath: string): string {
 	// match legacy Rollup logic — pkg.svelte takes priority over pkg.exports
 	if (typeof pkg.meta.svelte === 'string' && subpath === '.') {
 		return `./${pkg.meta.svelte.replace('./', '')}`;
+	}
+
+	if (subpath[0] === '#') {
+		try {
+			const resolved = resolve.imports(pkg.meta, subpath, {
+				browser: true,
+				conditions: ['svelte', 'module', 'browser', 'development']
+			});
+
+			return resolved?.[0] as string;
+		} catch {
+			throw new Error(
+				`No matched import path was found for "${subpath}" in "${pkg.meta.name}/package.json"`
+			);
+		}
 	}
 
 	// modern

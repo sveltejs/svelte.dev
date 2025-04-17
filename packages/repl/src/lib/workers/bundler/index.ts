@@ -27,7 +27,8 @@ import {
 	parse_npm_url,
 	resolve_local,
 	resolve_subpath,
-	resolve_version
+	resolve_version,
+	type Package
 } from '../npm';
 import type { BundleResult } from '$lib/public';
 
@@ -180,6 +181,14 @@ async function get_bundle(
 			// importing from a URL
 			if (/^[a-z]+:/.test(importee)) return importee;
 
+			/** The npm package we're importing from, if any */
+			let current: null | Package;
+
+			if (importer.startsWith(NPM)) {
+				const { name, version } = parse_npm_url(importer);
+				current = await fetch_package(name, name === 'svelte' ? svelte_version : version);
+			}
+
 			// importing a relative file
 			if (importee[0] === '.') {
 				if (importer.startsWith(VIRTUAL)) {
@@ -199,16 +208,22 @@ async function get_bundle(
 					);
 				}
 
-				if (importer.startsWith(NPM)) {
-					const { name, version } = parse_npm_url(importer);
+				if (current) {
+					const path = new URL(importee, importer).href.replace(
+						`${NPM}/${current.meta.name}@${current.meta.version}/`,
+						''
+					);
 
-					const pkg = await fetch_package(name, name === 'svelte' ? svelte_version : version);
-					const path = new URL(importee, importer).href.replace(`${NPM}/${name}@${version}/`, '');
-
-					return normalize_path(pkg, path);
+					return normalize_path(current, path);
 				}
 
 				return new URL(importee, importer).href;
+			}
+
+			// importing a file from the same package via pkg.imports
+			if (importee[0] === '#' && current) {
+				const subpath = resolve_subpath(current, importee);
+				return normalize_path(current, subpath.slice(2));
 			}
 
 			// importing an external package -> `npm://$/<name>@<version>/<path>`
@@ -223,11 +238,9 @@ async function get_bundle(
 
 			let default_version = 'latest';
 
-			if (importer.startsWith(NPM)) {
+			if (current) {
 				// use the version specified in importer's package.json, not `latest`
-				const { name, version } = parse_npm_url(importer);
-
-				const { meta } = await fetch_package(name, name === 'svelte' ? svelte_version : version);
+				const { meta } = current;
 
 				if (meta.name === pkg_name) {
 					default_version = meta.version;
