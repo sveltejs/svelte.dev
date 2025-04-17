@@ -1035,6 +1035,8 @@ css: null | {
 	code: string;
 	/** A source map */
 	map: SourceMap;
+	/** Whether or not the CSS includes global rules */
+	hasGlobal: boolean;
 };
 ```
 
