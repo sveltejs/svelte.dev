@@ -98,7 +98,6 @@ const FEATURED: { title: string; packages: string[]; weights?: Record<string, nu
 			'@ai-sdk/svelte',
 			'svelte-moveable',
 			'@tanstack/svelte-virtual',
-			'maska',
 			'virtua',
 			'@event-calendar/core',
 			'svelte-chartjs'
@@ -262,7 +261,7 @@ const FEATURED: { title: string; packages: string[]; weights?: Record<string, nu
 	// },
 	{
 		title: 'Forms',
-		packages: ['sveltekit-superforms', 'felte', 'formsnap']
+		packages: ['sveltekit-superforms', '@tanstack/svelte-form', 'formsnap', 'felte']
 	}
 ];
 
