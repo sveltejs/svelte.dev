@@ -6,17 +6,28 @@
 
 	let headings: NodeListOf<HTMLHeadingElement>;
 	let current = $state('');
+	let locked = $state(false);
 
 	afterNavigate(() => {
-		current = location.hash.slice(1);
 		headings = content.querySelectorAll('h2');
-		update(); // Ensure active link is set correctly on navigation
+		for (const heading of headings) {
+			const anchor = heading.querySelector('a');
+			if (anchor) anchor.onclick = onclick;
+		}
+		onclick();
 	});
 
-	// Update function to activate the correct section link
-	function update() {
+	function onclick() {
+		current = location.hash.slice(1);
+		// avoid onscroll handler from inaccurately updating
+		locked = true;
+		setTimeout(() => (locked = false), 100);
+	}
+
+	function onscroll() {
+		if (locked) return;
+
 		const threshold = (innerHeight * 1) / 3;
-		let found = false;
 
 		for (let i = 0; i < headings.length; i++) {
 			const heading = headings[i];
@@ -28,19 +39,18 @@
 				(!next || next.getBoundingClientRect().top > threshold)
 			) {
 				current = heading.id;
-				found = true;
 				break;
 			}
 		}
 
 		// Handle case when scrolled to the top of the page
-		if (!found && scrollY === 0) {
+		if (scrollY === 0) {
 			current = '';
 		}
 	}
 </script>
 
-<svelte:window onscroll={update} onhashchange={() => (current = location.hash.slice(1))} />
+<svelte:window {onscroll} onhashchange={onclick} />
 
 <aside class="on-this-page">
 	<label>
@@ -51,14 +61,15 @@
 	<nav>
 		<ul>
 			<li>
-				<a href="/{document.slug}" class:active={current === ''}>
+				<a href="/{document.slug}" class:active={current === ''} {onclick}>
 					{document.metadata.title}
 				</a>
 			</li>
 
 			{#each document.sections as section}
 				<li>
-					<a href="#{section.slug}" class:active={current === section.slug}>{@html section.title}</a
+					<a href="#{section.slug}" class:active={current === section.slug} {onclick}
+						>{@html section.title}</a
 					>
 				</li>
 			{/each}
