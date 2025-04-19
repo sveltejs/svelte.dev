@@ -13,14 +13,14 @@
 
 <section>
 	<button onclick={deselect} class="raised"> &nbsp; Back &nbsp;</button>
-	<h1>
+	<h2>
 		{pkg.name}
 
 		<span class="updated">
 			{pkg.version}
 			<strong title={pkg.updated}>{ago(new Date(pkg.updated), true)}</strong>
 		</span>
-	</h1>
+	</h2>
 
 	<p>{pkg.description}</p>
 
@@ -71,10 +71,9 @@
 
 	<code>pnpm add {pkg.name}</code>
 
-	<br /><br /><br />
-
 	{#if pkg.dependencies.length}
-		<h2>Dependencies</h2>
+		<br /><br /><br />
+		<h3>Dependencies</h3>
 		<ul>
 			{#each pkg.dependencies as { name, semver }}
 				<li><span>{name}</span>@<span>{semver}</span></li>
@@ -84,7 +83,7 @@
 
 	<br /><br />
 
-	<h2>Size</h2>
+	<h3>Size</h3>
 	<p>{format_bytes(pkg.unpacked_size)}</p>
 </section>
 
@@ -102,7 +101,7 @@
 		font: var(--sk-font-ui-medium);
 	}
 
-	h1 {
+	h2 {
 		display: flex;
 		gap: 2rem;
 		align-items: center;
