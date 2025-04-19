@@ -15,7 +15,6 @@
 		const new_url = new URL(page.url);
 
 		new_url.pathname = new_url.pathname.replace(/(packages\/)(.+)$/, '$1') + pkg.name;
-
 		return new_url.pathname + new_url.search;
 	});
 </script>

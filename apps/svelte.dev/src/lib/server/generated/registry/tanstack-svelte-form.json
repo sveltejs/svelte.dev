@@ -1,0 +1,13 @@
+{
+	"name": "@tanstack/svelte-form",
+	"description": "Create type-safe forms with validation for Svelte applications.",
+	"typescript": false,
+	"repo_url": "https://github.com/TanStack/form",
+	"authors": [null, null],
+	"homepage": "https://tanstack.com/form",
+	"downloads": 67,
+	"updated": "2025-04-19T08:26:56.695Z",
+	"tags": ["ui"],
+	"svelte_range": "^5.0.0",
+	"runes": false
+}

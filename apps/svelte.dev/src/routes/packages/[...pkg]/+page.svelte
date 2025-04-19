@@ -24,13 +24,13 @@
 
 	function select(pkg: string) {
 		page.url.pathname = page.url.pathname + '/' + pkg;
-		replaceState(page.url, { selected: pkg });
+		replaceState(page.url, {});
 		selected = data.packages.find((p) => p.name === pkg);
 	}
 
 	function deselect() {
 		page.url.pathname = page.url.pathname.split(selected!.name)[0].replace(/\/$/, '');
-		replaceState(page.url, { selected: undefined });
+		replaceState(page.url, {});
 		selected = undefined;
 	}
 </script>
