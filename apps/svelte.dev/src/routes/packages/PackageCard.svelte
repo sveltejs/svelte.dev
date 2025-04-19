@@ -14,7 +14,8 @@
 	const new_path = $derived.by(() => {
 		const new_url = new URL(page.url);
 
-		new_url.pathname = new_url.pathname.replace(/(packages\/)(.+)$/, '$1') + pkg.name;
+		new_url.pathname =
+			new_url.pathname.replace(/(packages\/)(.+)$/, '$1').replace(/\/$/, '') + '/' + pkg.name;
 		return new_url.pathname + new_url.search;
 	});
 </script>
@@ -23,7 +24,12 @@
 	href={new_path}
 	class="card"
 	data-pubdate={pkg.updated}
-	onclick={() => select(pkg.name)}
+	onclick={(e) => {
+		if (!e.metaKey && !e.ctrlKey) {
+			e.preventDefault();
+			select(pkg.name);
+		}
+	}}
 	aria-label="Check out details about {pkg.name}"
 >
 	<header>
