@@ -11,80 +11,93 @@
 	const { pkg, deselect }: Props = $props();
 </script>
 
-<button onclick={deselect} class="raised"> &nbsp; Back &nbsp;</button>
-<h1>
-	{pkg.name}
+<section>
+	<button onclick={deselect} class="raised"> &nbsp; Back &nbsp;</button>
+	<h1>
+		{pkg.name}
 
-	<span class="updated">
-		{pkg.version}
-		<strong title={pkg.updated}>{ago(new Date(pkg.updated), true)}</strong>
-	</span>
-</h1>
-
-<p>{pkg.description}</p>
-
-<p class="stats">
-	{#if pkg.downloads}
-		<span title="{pkg.downloads} downloads">
-			<span data-icon="download"></span>
-			{format_number(+pkg.downloads)}
+		<span class="updated">
+			{pkg.version}
+			<strong title={pkg.updated}>{ago(new Date(pkg.updated), true)}</strong>
 		</span>
-	{/if}
+	</h1>
 
-	{#if pkg.github_stars}
-		<span title="{pkg.github_stars} Github Stars">
-			<span data-icon="star"></span>
-			{format_number(pkg.github_stars)}
-		</span>
-	{/if}
+	<p>{pkg.description}</p>
 
-	{#if pkg.typescript}
-		<span data-icon="typescript"></span>
-	{/if}
-
-	{#if pkg.official}
-		<span data-icon="svelte"></span>
-	{/if}
-
-	<span style="display: flex; gap: 0.75rem">
-		<a
-			href="https://npmjs.org/package/{pkg.name}"
-			target="_blank"
-			rel="noreferrer"
-			aria-label="View on npm">npm</a
-		>
-
-		{#if pkg.repo_url}
-			<a href={pkg.repo_url} target="_blank" rel="noreferrer" aria-label="View on GitHub">github</a>
+	<p class="stats">
+		{#if pkg.downloads}
+			<span title="{pkg.downloads} downloads">
+				<span data-icon="download"></span>
+				{format_number(+pkg.downloads)}
+			</span>
 		{/if}
 
-		{#if pkg.homepage}
-			<a href={pkg.homepage} target="_blank" rel="noreferrer" aria-label="View project homepage"
-				>homepage</a
+		{#if pkg.github_stars}
+			<span title="{pkg.github_stars} Github Stars">
+				<span data-icon="star"></span>
+				{format_number(pkg.github_stars)}
+			</span>
+		{/if}
+
+		{#if pkg.typescript}
+			<span data-icon="typescript"></span>
+		{/if}
+
+		{#if pkg.official}
+			<span data-icon="svelte"></span>
+		{/if}
+
+		<span style="display: flex; gap: 0.75rem">
+			<a
+				href="https://npmjs.org/package/{pkg.name}"
+				target="_blank"
+				rel="noreferrer"
+				aria-label="View on npm">npm</a
 			>
-		{/if}
-	</span>
-</p>
 
-<code>pnpm add {pkg.name}</code>
+			{#if pkg.repo_url}
+				<a href={pkg.repo_url} target="_blank" rel="noreferrer" aria-label="View on GitHub"
+					>github</a
+				>
+			{/if}
 
-<br /><br /><br />
+			{#if pkg.homepage}
+				<a href={pkg.homepage} target="_blank" rel="noreferrer" aria-label="View project homepage"
+					>homepage</a
+				>
+			{/if}
+		</span>
+	</p>
 
-{#if pkg.dependencies.length}
-	<h2>Dependencies</h2>
-	<ul>
-		{#each pkg.dependencies as { name, semver }}
-			<li><span>{name}</span>@<span>{semver}</span></li>
-		{/each}
-	</ul>
-{/if}
+	<code>pnpm add {pkg.name}</code>
 
-<br /><br />
+	<br /><br /><br />
 
-<h2>Size</h2>
-<p>{format_bytes(pkg.unpacked_size)}</p>
+	{#if pkg.dependencies.length}
+		<h2>Dependencies</h2>
+		<ul>
+			{#each pkg.dependencies as { name, semver }}
+				<li><span>{name}</span>@<span>{semver}</span></li>
+			{/each}
+		</ul>
+	{/if}
+
+	<br /><br />
+
+	<h2>Size</h2>
+	<p>{format_bytes(pkg.unpacked_size)}</p>
+</section>
 
 <style>
+	section {
+		padding: 2rem;
+		border-radius: var(--sk-border-radius);
+		background: var(--sk-bg-2);
+		border: 1px solid var(--sk-border);
+
+		height: 100%;
+	}
+
 	*:not(h1, h2) {
 		font: var(--sk-font-ui-medium);
 	}

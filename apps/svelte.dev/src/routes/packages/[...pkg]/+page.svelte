@@ -24,14 +24,13 @@
 
 	function select(pkg: string) {
 		page.url.pathname = page.url.pathname + '/' + pkg;
-		replaceState(page.url, {});
+		replaceState(page.url, { selected: pkg });
 		selected = data.packages.find((p) => p.name === pkg);
 	}
 
 	function deselect() {
 		page.url.pathname = page.url.pathname.split(selected!.name)[0].replace(/\/$/, '');
-		replaceState(page.url, {});
-
+		replaceState(page.url, { selected: undefined });
 		selected = undefined;
 	}
 </script>
@@ -46,10 +45,8 @@
 
 <h1 class="visually-hidden">Packages</h1>
 
-<div class="page content">
-	{#if selected}
-		<PackageDetails pkg={selected} {deselect} />
-	{:else}
+<div class={['page content', !!selected && 'split']}>
+	<div class="listing" style="min-width: 0;">
 		<div class="controls">
 			<form onsubmit={(e) => e.preventDefault()}>
 				<label class="input-group">
@@ -126,10 +123,23 @@
 				{/each}
 			</div>
 		{/if}
-	{/if}
+	</div>
+
+	<div>
+		{#if selected}
+			<PackageDetails pkg={selected} {deselect} />
+		{/if}
+	</div>
+	<!-- {/if} -->
 </div>
 
 <style>
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
 	.page {
 		padding: var(--sk-page-padding-top) var(--sk-page-padding-side) var(--sk-page-padding-bottom);
 
@@ -137,6 +147,27 @@
 		max-width: 140rem;
 		margin: 0 auto;
 		text-wrap: balance;
+
+		.listing {
+			padding-inline: 0.75rem;
+		}
+
+		&.split {
+			display: grid;
+			grid-template-columns: 5fr 4fr;
+			gap: 2rem;
+
+			padding-bottom: 0;
+
+			max-width: unset;
+
+			.listing {
+				/* max-width: unset; */
+				min-height: 0;
+				height: 90dvh;
+				overflow-y: auto;
+			}
+		}
 	}
 
 	.page :global(:where(h2, h3) code) {

@@ -13,8 +13,8 @@
 
 	const new_path = $derived.by(() => {
 		const new_url = new URL(page.url);
-		new_url.pathname = new_url.pathname.split(pkg.name)[0].replace(/\/$/, '');
-		new_url.pathname += '/' + pkg.name;
+
+		new_url.pathname = new_url.pathname.replace(/(packages\/)(.+)$/, '$1') + pkg.name;
 
 		return new_url.pathname + new_url.search;
 	});
