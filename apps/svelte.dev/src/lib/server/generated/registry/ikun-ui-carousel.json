@@ -11,5 +11,32 @@
 	"version": "0.2.8",
 	"svelte_range": "^4.2.12",
 	"last_rune_check_version": "0.2.8",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "baiwusanyu-utils",
+			"semver": "^1.0.18"
+		},
+		{
+			"name": "clsx",
+			"semver": "^2.1.0"
+		},
+		{
+			"name": "svelte",
+			"semver": "^4.2.12"
+		},
+		{
+			"name": "@ikun-ui/icon",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/utils",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/indicators",
+			"semver": "0.2.8"
+		}
+	],
+	"unpacked_size": 15096
 }

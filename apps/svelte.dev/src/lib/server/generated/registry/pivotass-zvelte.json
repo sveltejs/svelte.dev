@@ -5,12 +5,47 @@
 	"authors": ["pivotass"],
 	"homepage": "https://github.com/PivotStick/zvelte#readme",
 	"downloads": 303,
-	"updated": "2025-04-10T14:46:50.850Z",
+	"updated": "2025-04-18T14:20:21.999Z",
 	"tags": ["tooling"],
 	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
-	"version": "0.4.185",
+	"version": "0.4.187",
 	"svelte_range": "https://registry.npmjs.org/svelte/-/svelte-5.19.5.tgz",
-	"last_rune_check_version": "0.4.185"
+	"last_rune_check_version": "0.4.187",
+	"dependencies": [
+		{
+			"name": "css-tree",
+			"semver": "^2.3.1"
+		},
+		{
+			"name": "esrap",
+			"semver": "^1.2.2"
+		},
+		{
+			"name": "estree-walker",
+			"semver": "^3.0.3"
+		},
+		{
+			"name": "magic-string",
+			"semver": "^0.30.10"
+		},
+		{
+			"name": "sass",
+			"semver": "^1.77.0"
+		},
+		{
+			"name": "sprintf-js",
+			"semver": "^1.1.3"
+		},
+		{
+			"name": "svelte",
+			"semver": "https://registry.npmjs.org/svelte/-/svelte-5.19.5.tgz"
+		},
+		{
+			"name": "zimmerframe",
+			"semver": "^1.1.2"
+		}
+	],
+	"unpacked_size": 1185982
 }

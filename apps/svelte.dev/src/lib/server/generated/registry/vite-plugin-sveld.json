@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "2.0.0",
 	"svelte_range": ">=4.0.0",
-	"last_rune_check_version": "2.0.0"
+	"last_rune_check_version": "2.0.0",
+	"dependencies": [
+		{
+			"name": "query-string",
+			"semver": "^9.1.1"
+		},
+		{
+			"name": "svelte-preprocess",
+			"semver": "^6.0.3"
+		}
+	],
+	"unpacked_size": 11670
 }

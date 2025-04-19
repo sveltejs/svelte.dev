@@ -11,5 +11,16 @@
 	"github_stars": 138,
 	"typescript": false,
 	"version": "2.7.3",
-	"last_rune_check_version": "2.7.3"
+	"last_rune_check_version": "2.7.3",
+	"dependencies": [
+		{
+			"name": "front-matter",
+			"semver": "^3.2.1"
+		},
+		{
+			"name": "marked",
+			"semver": "^1.0.0"
+		}
+	],
+	"unpacked_size": 16115
 }

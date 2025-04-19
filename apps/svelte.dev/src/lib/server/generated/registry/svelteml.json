@@ -12,5 +12,60 @@
 	"typescript": false,
 	"version": "0.0.5",
 	"svelte_range": "^3.23.0",
-	"last_rune_check_version": "0.0.5"
+	"last_rune_check_version": "0.0.5",
+	"dependencies": [
+		{
+			"name": "@tensorflow-models/body-pix",
+			"semver": "^2.0.5"
+		},
+		{
+			"name": "@tensorflow-models/coco-ssd",
+			"semver": "^2.0.3"
+		},
+		{
+			"name": "@tensorflow-models/facemesh",
+			"semver": "0.0.1"
+		},
+		{
+			"name": "@tensorflow-models/handpose",
+			"semver": "0.0.3"
+		},
+		{
+			"name": "@tensorflow-models/knn-classifier",
+			"semver": "^1.2.2"
+		},
+		{
+			"name": "@tensorflow-models/mobilenet",
+			"semver": "^2.0.4"
+		},
+		{
+			"name": "@tensorflow-models/posenet",
+			"semver": "^2.2.1"
+		},
+		{
+			"name": "@tensorflow-models/toxicity",
+			"semver": "^1.2.2"
+		},
+		{
+			"name": "@tensorflow-models/universal-sentence-encoder",
+			"semver": "1.2.2"
+		},
+		{
+			"name": "@tensorflow-models/qna",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "@tensorflow/tfjs-automl",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "@tensorflow/tfjs-converter",
+			"semver": "^1.7.4"
+		},
+		{
+			"name": "@tensorflow/tfjs-core",
+			"semver": "^1.7.3"
+		}
+	],
+	"unpacked_size": 1837994
 }

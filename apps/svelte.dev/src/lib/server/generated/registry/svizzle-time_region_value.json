@@ -12,5 +12,88 @@
 	"typescript": false,
 	"version": "0.9.7",
 	"svelte_range": "^3.59.2",
-	"last_rune_check_version": "0.9.7"
+	"last_rune_check_version": "0.9.7",
+	"dependencies": [
+		{
+			"name": "@svizzle/atlas",
+			"semver": "^0.9.2"
+		},
+		{
+			"name": "@svizzle/barchart",
+			"semver": "^0.12.1"
+		},
+		{
+			"name": "@svizzle/choropleth",
+			"semver": "^0.9.5"
+		},
+		{
+			"name": "@svizzle/dom",
+			"semver": "^0.7.3"
+		},
+		{
+			"name": "@svizzle/geo",
+			"semver": "^0.9.3"
+		},
+		{
+			"name": "@svizzle/legend",
+			"semver": "^0.4.8"
+		},
+		{
+			"name": "@svizzle/ui",
+			"semver": "^0.13.0"
+		},
+		{
+			"name": "@svizzle/utils",
+			"semver": "^0.21.0"
+		},
+		{
+			"name": "@turf/bbox-clip",
+			"semver": "^6.5.0"
+		},
+		{
+			"name": "d3-array",
+			"semver": "^3.2.4"
+		},
+		{
+			"name": "d3-dsv",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "d3-format",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "d3-geo",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "d3-quadtree",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "d3-scale",
+			"semver": "^4.0.2"
+		},
+		{
+			"name": "d3-scale-chromatic",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "d3-shape",
+			"semver": "^3.2.0"
+		},
+		{
+			"name": "lamb",
+			"semver": "^0.61.1"
+		},
+		{
+			"name": "topojson-simplify",
+			"semver": "^3.0.3"
+		},
+		{
+			"name": "yootils",
+			"semver": "^0.3.1"
+		}
+	],
+	"unpacked_size": 129040
 }

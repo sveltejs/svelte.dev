@@ -12,5 +12,20 @@
 	"typescript": true,
 	"version": "0.0.1",
 	"kit_range": "^1.0.0-next.158",
-	"last_rune_check_version": "0.0.1"
+	"last_rune_check_version": "0.0.1",
+	"dependencies": [
+		{
+			"name": "@iarna/toml",
+			"semver": "^2.2.5"
+		},
+		{
+			"name": "cookie",
+			"semver": "^0.4.1"
+		},
+		{
+			"name": "esbuild",
+			"semver": "^0.12.23"
+		}
+	],
+	"unpacked_size": 20308
 }

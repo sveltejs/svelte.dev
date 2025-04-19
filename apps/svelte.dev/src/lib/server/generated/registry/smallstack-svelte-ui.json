@@ -13,5 +13,56 @@
 	"version": "0.5.4",
 	"svelte_range": "^5.20.0",
 	"kit_range": "^2.15.1",
-	"last_rune_check_version": "0.5.4"
+	"last_rune_check_version": "0.5.4",
+	"dependencies": [
+		{
+			"name": "@floating-ui/dom",
+			"semver": "^1.6.12"
+		},
+		{
+			"name": "@smallstack/utils",
+			"semver": "^3.0.10"
+		},
+		{
+			"name": "@sveltejs/kit",
+			"semver": "^2.15.1"
+		},
+		{
+			"name": "@tailwindcss/vite",
+			"semver": "^4.0.1"
+		},
+		{
+			"name": "date-fns",
+			"semver": "^4.1.0"
+		},
+		{
+			"name": "i18next",
+			"semver": "^24.2.0"
+		},
+		{
+			"name": "i18next-browser-languagedetector",
+			"semver": "^8.0.0"
+		},
+		{
+			"name": "jsdom",
+			"semver": "^26.0.0"
+		},
+		{
+			"name": "perfect-freehand",
+			"semver": "^1.2.2"
+		},
+		{
+			"name": "pulltorefreshjs",
+			"semver": "^0.1.22"
+		},
+		{
+			"name": "svelte",
+			"semver": "^5.20.0"
+		},
+		{
+			"name": "svelte-i18next",
+			"semver": "^2.2.2"
+		}
+	],
+	"unpacked_size": 146034
 }

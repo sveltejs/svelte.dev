@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "0.0.1-alpha.1",
 	"svelte_range": "^3.20.1",
-	"last_rune_check_version": "0.0.1-alpha.1"
+	"last_rune_check_version": "0.0.1-alpha.1",
+	"dependencies": [
+		{
+			"name": "fast-glob",
+			"semver": "^3.2.2"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.20.1"
+		}
+	],
+	"unpacked_size": 12009
 }

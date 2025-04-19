@@ -12,5 +12,20 @@
 	"typescript": true,
 	"version": "2.0.1",
 	"svelte_range": "^5.0.0",
-	"last_rune_check_version": "2.0.1"
+	"last_rune_check_version": "2.0.1",
+	"dependencies": [
+		{
+			"name": "estree-walker",
+			"semver": "^3.0.3"
+		},
+		{
+			"name": "katex",
+			"semver": "^0.16.11"
+		},
+		{
+			"name": "magic-string",
+			"semver": "^0.30.12"
+		}
+	],
+	"unpacked_size": 1103253
 }

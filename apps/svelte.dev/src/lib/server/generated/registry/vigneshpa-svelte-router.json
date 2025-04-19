@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "1.1.1",
 	"svelte_range": "^3.42.3",
-	"last_rune_check_version": "1.1.1"
+	"last_rune_check_version": "1.1.1",
+	"dependencies": [
+		{
+			"name": "navaid",
+			"semver": "^1.2.0"
+		}
+	],
+	"unpacked_size": 5145
 }

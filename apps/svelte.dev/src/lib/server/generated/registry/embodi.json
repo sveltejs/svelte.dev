@@ -5,12 +5,75 @@
 	"authors": ["cordlesswool"],
 	"homepage": "https://github.com/embodijs/generator/tree/main#readme",
 	"downloads": 477,
-	"updated": "2025-04-14T12:44:57.843Z",
+	"updated": "2025-04-18T15:37:26.220Z",
 	"tags": ["tooling"],
 	"runes": true,
 	"github_stars": 2,
 	"typescript": true,
-	"version": "0.11.0",
+	"version": "0.11.9",
 	"svelte_range": "^5.23.0",
-	"last_rune_check_version": "0.11.0"
+	"last_rune_check_version": "0.11.9",
+	"dependencies": [
+		{
+			"name": "@loom-io/converter",
+			"semver": "0.12.11"
+		},
+		{
+			"name": "@loom-io/core",
+			"semver": "^0.12.11"
+		},
+		{
+			"name": "@loom-io/front-matter-converter",
+			"semver": "^0.12.11"
+		},
+		{
+			"name": "@loom-io/json-converter",
+			"semver": "0.12.11"
+		},
+		{
+			"name": "@loom-io/node-filesystem-adapter",
+			"semver": "^0.12.11"
+		},
+		{
+			"name": "@loom-io/yaml-converter",
+			"semver": "0.12.11"
+		},
+		{
+			"name": "@modyfi/vite-plugin-yaml",
+			"semver": "^1.1.1"
+		},
+		{
+			"name": "@sveltejs/vite-plugin-svelte",
+			"semver": "^5.0.3"
+		},
+		{
+			"name": "front-matter",
+			"semver": "^4.0.2"
+		},
+		{
+			"name": "markdown-it",
+			"semver": "^14.1.0"
+		},
+		{
+			"name": "minimist",
+			"semver": "^1.2.8"
+		},
+		{
+			"name": "pipe-and-combine",
+			"semver": "^0.7.11"
+		},
+		{
+			"name": "sharp",
+			"semver": "^0.34.1"
+		},
+		{
+			"name": "valibot",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "vitest",
+			"semver": "^3.1.1"
+		}
+	],
+	"unpacked_size": 110699
 }

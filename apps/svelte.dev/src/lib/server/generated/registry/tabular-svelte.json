@@ -12,5 +12,28 @@
 	"typescript": false,
 	"version": "0.1.13",
 	"svelte_range": "^3.30.0",
-	"last_rune_check_version": "0.1.13"
+	"last_rune_check_version": "0.1.13",
+	"dependencies": [
+		{
+			"name": "@fortawesome/fontawesome-svg-core",
+			"semver": "^1.2.27"
+		},
+		{
+			"name": "@fortawesome/free-brands-svg-icons",
+			"semver": "^5.12.0"
+		},
+		{
+			"name": "@fortawesome/free-regular-svg-icons",
+			"semver": "^5.12.0"
+		},
+		{
+			"name": "@fortawesome/free-solid-svg-icons",
+			"semver": "^5.12.0"
+		},
+		{
+			"name": "fontawesome-svelte",
+			"semver": "^2.0.0"
+		}
+	],
+	"unpacked_size": 115152
 }

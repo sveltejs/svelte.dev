@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "1.0.1",
 	"svelte_range": "^5.15.0",
-	"last_rune_check_version": "1.0.1"
+	"last_rune_check_version": "1.0.1",
+	"dependencies": [
+		{
+			"name": "@cpp.js/sample-lib-prebuilt-matrix",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "@cpp.js/plugin-vite",
+			"semver": "^1.0.2"
+		}
+	],
+	"unpacked_size": 11455
 }

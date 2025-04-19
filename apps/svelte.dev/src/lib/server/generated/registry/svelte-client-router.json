@@ -12,5 +12,12 @@
 	"typescript": false,
 	"version": "2.1.1",
 	"svelte_range": "^4.2.12",
-	"last_rune_check_version": "2.1.1"
+	"last_rune_check_version": "2.1.1",
+	"dependencies": [
+		{
+			"name": "spa-storage",
+			"semver": "^2.0.2"
+		}
+	],
+	"unpacked_size": 100076
 }

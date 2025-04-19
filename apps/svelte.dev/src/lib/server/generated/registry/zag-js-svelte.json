@@ -5,12 +5,27 @@
 	"authors": ["segunadebayo"],
 	"homepage": "https://github.com/chakra-ui/zag#readme",
 	"downloads": 10829,
-	"updated": "2025-04-10T23:08:47.376Z",
+	"updated": "2025-04-15T20:53:37.315Z",
 	"tags": ["miscellaneous"],
 	"runes": true,
 	"github_stars": 4353,
 	"typescript": true,
-	"version": "1.9.3",
+	"version": "1.10.0",
 	"svelte_range": "^5.0.0-next.1",
-	"last_rune_check_version": "1.9.3"
+	"last_rune_check_version": "1.10.0",
+	"dependencies": [
+		{
+			"name": "@zag-js/core",
+			"semver": "1.10.0"
+		},
+		{
+			"name": "@zag-js/types",
+			"semver": "1.10.0"
+		},
+		{
+			"name": "@zag-js/utils",
+			"semver": "1.10.0"
+		}
+	],
+	"unpacked_size": 17881
 }

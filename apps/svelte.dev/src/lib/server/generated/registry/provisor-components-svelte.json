@@ -11,5 +11,12 @@
 	"typescript": true,
 	"version": "1.0.0",
 	"svelte_range": "^3.51.0",
-	"last_rune_check_version": "1.0.0"
+	"last_rune_check_version": "1.0.0",
+	"dependencies": [
+		{
+			"name": "flatpickr",
+			"semver": "4.6.9"
+		}
+	],
+	"unpacked_size": 6993621
 }

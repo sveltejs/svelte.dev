@@ -12,5 +12,40 @@
 	"typescript": true,
 	"version": "1.1.0",
 	"svelte_range": "*",
-	"last_rune_check_version": "1.1.0"
+	"last_rune_check_version": "1.1.0",
+	"dependencies": [
+		{
+			"name": "@typescript-eslint/utils",
+			"semver": "~8.29.0"
+		},
+		{
+			"name": "eslint-plugin-jest-dom",
+			"semver": "~5.5.0"
+		},
+		{
+			"name": "eslint-plugin-svelte",
+			"semver": "~3.5.1"
+		},
+		{
+			"name": "eslint-plugin-tailwindcss",
+			"semver": "~3.18.0"
+		},
+		{
+			"name": "eslint-plugin-testing-library",
+			"semver": "~7.1.1"
+		},
+		{
+			"name": "globals",
+			"semver": "^16.0.0"
+		},
+		{
+			"name": "typescript-eslint",
+			"semver": "~8.29.0"
+		},
+		{
+			"name": "@viamrobotics/eslint-config",
+			"semver": "^1.1.0"
+		}
+	],
+	"unpacked_size": 17237
 }

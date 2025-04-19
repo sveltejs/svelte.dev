@@ -13,5 +13,20 @@
 	"version": "2.0.2",
 	"svelte_range": "^3.44.0",
 	"kit_range": "^1.0.0-next.492",
-	"last_rune_check_version": "2.0.2"
+	"last_rune_check_version": "2.0.2",
+	"dependencies": [
+		{
+			"name": "@macfja/sveltekit-session",
+			"semver": "^1.0.5"
+		},
+		{
+			"name": "@sveltejs/kit",
+			"semver": "^1.0.0-next.492"
+		},
+		{
+			"name": "xml-js",
+			"semver": "^1.6.11"
+		}
+	],
+	"unpacked_size": 14831
 }

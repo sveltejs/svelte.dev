@@ -11,5 +11,32 @@
 	"typescript": true,
 	"version": "0.1.2",
 	"svelte_range": "3.50.1",
-	"last_rune_check_version": "0.1.2"
+	"last_rune_check_version": "0.1.2",
+	"dependencies": [
+		{
+			"name": "@iconify/json",
+			"semver": "^2.1.104"
+		},
+		{
+			"name": "astro",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "esbuild",
+			"semver": "^0.15.7"
+		},
+		{
+			"name": "rollup",
+			"semver": "^2.79.0"
+		},
+		{
+			"name": "vite",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "webpack",
+			"semver": "^5.0.0"
+		}
+	],
+	"unpacked_size": 11000076
 }

@@ -5,13 +5,40 @@
 	"authors": ["jill64"],
 	"homepage": "https://github.com/jill64/svelte-dark-theme#readme",
 	"downloads": 9748,
-	"updated": "2025-04-11T16:31:24.784Z",
+	"updated": "2025-04-14T23:23:18.134Z",
 	"tags": ["miscellaneous"],
 	"runes": true,
 	"github_stars": 3,
 	"typescript": true,
-	"version": "5.1.5",
+	"version": "5.1.6",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
-	"last_rune_check_version": "5.1.5"
+	"last_rune_check_version": "5.1.6",
+	"dependencies": [
+		{
+			"name": "@jill64/svelte-device-theme",
+			"semver": "2.0.2"
+		},
+		{
+			"name": "@jill64/svelte-html",
+			"semver": "2.0.0"
+		},
+		{
+			"name": "@jill64/svelte-storage",
+			"semver": "2.0.0"
+		},
+		{
+			"name": "svelte-baked-cookie",
+			"semver": "2.0.3"
+		},
+		{
+			"name": "svelte-feather-icons",
+			"semver": "4.2.0"
+		},
+		{
+			"name": "typescanner",
+			"semver": "0.5.3"
+		}
+	],
+	"unpacked_size": 15619
 }

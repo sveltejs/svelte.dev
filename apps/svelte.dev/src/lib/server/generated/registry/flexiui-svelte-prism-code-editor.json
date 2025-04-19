@@ -11,5 +11,12 @@
 	"version": "0.0.13",
 	"svelte_range": "^5.19.9",
 	"last_rune_check_version": "0.0.13",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "prism-code-editor",
+			"semver": "^3.4.0"
+		}
+	],
+	"unpacked_size": 10648
 }

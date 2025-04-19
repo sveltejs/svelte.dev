@@ -13,5 +13,12 @@
 	"version": "0.13.0",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.30.3 || ^2.0.0",
-	"last_rune_check_version": "0.13.0"
+	"last_rune_check_version": "0.13.0",
+	"dependencies": [
+		{
+			"name": "@supabase/auth-helpers-shared",
+			"semver": "0.7.0"
+		}
+	],
+	"unpacked_size": 31968
 }

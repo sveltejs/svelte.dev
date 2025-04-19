@@ -13,5 +13,12 @@
 	"version": "2.0.0-alpha.1",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.0.0",
-	"last_rune_check_version": "2.0.0-alpha.1"
+	"last_rune_check_version": "2.0.0-alpha.1",
+	"dependencies": [
+		{
+			"name": "@nuintun/qrcode",
+			"semver": "^4.1.4"
+		}
+	],
+	"unpacked_size": 14284
 }

@@ -11,5 +11,52 @@
 	"version": "0.2.0",
 	"svelte_range": "^3.48.0",
 	"last_rune_check_version": "0.2.0",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@babel/core",
+			"semver": "^7.18.6"
+		},
+		{
+			"name": "@babel/template",
+			"semver": "^7.18.6"
+		},
+		{
+			"name": "@babel/types",
+			"semver": "^7.18.7"
+		},
+		{
+			"name": "@ember/render-modifiers",
+			"semver": "^2.0.4"
+		},
+		{
+			"name": "broccoli-plugin",
+			"semver": "^4.0.7"
+		},
+		{
+			"name": "ember-auto-import",
+			"semver": "^2.4.1"
+		},
+		{
+			"name": "ember-cli-babel",
+			"semver": "^7.26.11"
+		},
+		{
+			"name": "ember-cli-htmlbars",
+			"semver": "^6.0.1"
+		},
+		{
+			"name": "ember-cli-version-checker",
+			"semver": "^5.1.2"
+		},
+		{
+			"name": "ember-element-helper",
+			"semver": "^0.6.1"
+		},
+		{
+			"name": "ember-render-helpers",
+			"semver": "^0.2.0"
+		}
+	],
+	"unpacked_size": 32345
 }

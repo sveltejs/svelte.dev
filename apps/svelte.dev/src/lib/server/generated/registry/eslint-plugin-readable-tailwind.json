@@ -5,12 +5,35 @@
 	"authors": ["schoero"],
 	"homepage": "https://github.com/schoero/eslint-plugin-readable-tailwind#readme",
 	"downloads": 9519,
-	"updated": "2025-04-11T19:32:54.065Z",
+	"updated": "2025-04-15T06:00:41.484Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 169,
 	"typescript": true,
-	"version": "2.0.1",
-	"svelte_range": "^5.25.12",
-	"last_rune_check_version": "2.0.1"
+	"version": "2.1.0",
+	"svelte_range": "^5.26.2",
+	"last_rune_check_version": "2.1.0",
+	"dependencies": [
+		{
+			"name": "enhanced-resolve",
+			"semver": "^5.18.1"
+		},
+		{
+			"name": "jiti",
+			"semver": "^2.4.2"
+		},
+		{
+			"name": "postcss",
+			"semver": "^8.5.3"
+		},
+		{
+			"name": "postcss-import",
+			"semver": "^16.1.0"
+		},
+		{
+			"name": "synckit",
+			"semver": "0.9.2"
+		}
+	],
+	"unpacked_size": 716369
 }

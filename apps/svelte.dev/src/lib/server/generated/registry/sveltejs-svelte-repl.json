@@ -12,5 +12,32 @@
 	"typescript": false,
 	"version": "0.4.1",
 	"svelte_range": "^3.14.1",
-	"last_rune_check_version": "0.4.1"
+	"last_rune_check_version": "0.4.1",
+	"dependencies": [
+		{
+			"name": "codemirror",
+			"semver": "^5.49.2"
+		},
+		{
+			"name": "estree-walker",
+			"semver": "^0.9.0"
+		},
+		{
+			"name": "marked",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "sourcemap-codec",
+			"semver": "^1.4.6"
+		},
+		{
+			"name": "svelte-json-tree",
+			"semver": "0.0.5"
+		},
+		{
+			"name": "yootils",
+			"semver": "0.0.16"
+		}
+	],
+	"unpacked_size": 557246
 }

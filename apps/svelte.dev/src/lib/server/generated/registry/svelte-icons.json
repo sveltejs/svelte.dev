@@ -10,5 +10,7 @@
 	"typescript": false,
 	"version": "2.1.0",
 	"last_rune_check_version": "2.1.0",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [],
+	"unpacked_size": 10155084
 }

@@ -12,5 +12,52 @@
 	"typescript": false,
 	"version": "0.2.4",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.2.4"
+	"last_rune_check_version": "0.2.4",
+	"dependencies": [
+		{
+			"name": "prosemirror-commands",
+			"semver": "^1.1.2"
+		},
+		{
+			"name": "prosemirror-dropcursor",
+			"semver": "^1.3.2"
+		},
+		{
+			"name": "prosemirror-gapcursor",
+			"semver": "^1.1.2"
+		},
+		{
+			"name": "prosemirror-history",
+			"semver": "^1.1.3"
+		},
+		{
+			"name": "prosemirror-inputrules",
+			"semver": "^1.1.2"
+		},
+		{
+			"name": "prosemirror-keymap",
+			"semver": "^1.1.3"
+		},
+		{
+			"name": "prosemirror-model",
+			"semver": "^1.8.2"
+		},
+		{
+			"name": "prosemirror-schema-basic",
+			"semver": "^1.1.2"
+		},
+		{
+			"name": "prosemirror-schema-list",
+			"semver": "^1.1.2"
+		},
+		{
+			"name": "prosemirror-state",
+			"semver": "^1.3.2"
+		},
+		{
+			"name": "prosemirror-view",
+			"semver": "^1.13.7"
+		}
+	],
+	"unpacked_size": 31065
 }

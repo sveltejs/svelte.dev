@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "1.0.1",
 	"svelte_range": "3.x",
-	"last_rune_check_version": "1.0.1"
+	"last_rune_check_version": "1.0.1",
+	"dependencies": [
+		{
+			"name": "mousetrap",
+			"semver": "^1.6.5"
+		}
+	],
+	"unpacked_size": 5295
 }

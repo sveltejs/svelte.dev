@@ -12,5 +12,20 @@
 	"version": "1.2.22",
 	"svelte_range": "^3.0.0",
 	"kit_range": "^1.0.0",
-	"last_rune_check_version": "1.2.22"
+	"last_rune_check_version": "1.2.22",
+	"dependencies": [
+		{
+			"name": "@fortawesome/free-solid-svg-icons",
+			"semver": "^6.4.2"
+		},
+		{
+			"name": "daisyui",
+			"semver": "^3.6.1"
+		},
+		{
+			"name": "tailwind-scrollbar",
+			"semver": "^3.0.5"
+		}
+	],
+	"unpacked_size": 9950
 }

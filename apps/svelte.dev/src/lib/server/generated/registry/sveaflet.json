@@ -13,5 +13,32 @@
 	"version": "0.1.4",
 	"svelte_range": "^4.0.0 || ^5.0.0-next.0",
 	"kit_range": "^2.5.27",
-	"last_rune_check_version": "0.1.4"
+	"last_rune_check_version": "0.1.4",
+	"dependencies": [
+		{
+			"name": "@docsearch/css",
+			"semver": "^3.6.1"
+		},
+		{
+			"name": "@docsearch/js",
+			"semver": "^3.6.1"
+		},
+		{
+			"name": "geojson",
+			"semver": "^0.5.0"
+		},
+		{
+			"name": "mdsvexamples",
+			"semver": "^0.5.0"
+		},
+		{
+			"name": "nprogress",
+			"semver": "^0.2.0"
+		},
+		{
+			"name": "svelte-meta-tags",
+			"semver": "^4.1.0"
+		}
+	],
+	"unpacked_size": 90073
 }

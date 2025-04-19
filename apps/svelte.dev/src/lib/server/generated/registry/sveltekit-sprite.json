@@ -5,13 +5,20 @@
 	"authors": ["misharodshtein"],
 	"homepage": "https://github.com/rodshtein/sveltekit-sprite",
 	"downloads": 16,
-	"updated": "2023-01-11T13:25:29.205Z",
+	"updated": "2025-04-15T13:01:13.356Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 11,
 	"typescript": true,
-	"version": "0.1.2",
+	"version": "0.3.0",
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.0.0",
-	"last_rune_check_version": "0.1.2"
+	"last_rune_check_version": "0.3.0",
+	"dependencies": [
+		{
+			"name": "svgo",
+			"semver": "^2.3.0"
+		}
+	],
+	"unpacked_size": 129964
 }

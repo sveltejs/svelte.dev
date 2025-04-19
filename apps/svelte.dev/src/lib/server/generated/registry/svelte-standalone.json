@@ -12,5 +12,60 @@
 	"typescript": true,
 	"version": "2.1.1",
 	"svelte_range": "^5.20.1",
-	"last_rune_check_version": "2.1.1"
+	"last_rune_check_version": "2.1.1",
+	"dependencies": [
+		{
+			"name": "@fullhuman/postcss-purgecss",
+			"semver": "^7.0.2"
+		},
+		{
+			"name": "@inquirer/prompts",
+			"semver": "^7.2.1"
+		},
+		{
+			"name": "@rollup/plugin-node-resolve",
+			"semver": "^15.2.3"
+		},
+		{
+			"name": "@rollup/plugin-strip",
+			"semver": "^3.0.4"
+		},
+		{
+			"name": "@rollup/plugin-terser",
+			"semver": "^0.4.4"
+		},
+		{
+			"name": "@tailwindcss/vite",
+			"semver": "^4.0.6"
+		},
+		{
+			"name": "commander",
+			"semver": "^12.1.0"
+		},
+		{
+			"name": "cssnano",
+			"semver": "^7.0.6"
+		},
+		{
+			"name": "find-up",
+			"semver": "^7.0.0"
+		},
+		{
+			"name": "glob",
+			"semver": "^11.0.1"
+		},
+		{
+			"name": "node-plop",
+			"semver": "^0.32.0"
+		},
+		{
+			"name": "rollup-plugin-visualizer",
+			"semver": "^5.12.0"
+		},
+		{
+			"name": "vite-plugin-lib-inject-css",
+			"semver": "^2.1.1"
+		}
+	],
+	"unpacked_size": 46933
 }

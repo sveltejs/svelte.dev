@@ -10,5 +10,16 @@
 	"version": "0.2.0",
 	"svelte_range": "^3.44.0",
 	"last_rune_check_version": "0.2.0",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "svelte",
+			"semver": "^3.44.0"
+		},
+		{
+			"name": "svelte-writable-derived",
+			"semver": "^2.1.3"
+		}
+	],
+	"unpacked_size": 105294
 }

@@ -12,5 +12,12 @@
 	"runes": true,
 	"last_rune_check_version": "0.0.1",
 	"version": "0.0.1",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "tailwind-merge",
+			"semver": "^3.0.2"
+		}
+	],
+	"unpacked_size": 64453
 }

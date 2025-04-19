@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "1.1.0",
 	"svelte_range": "^4.0.0",
-	"last_rune_check_version": "1.1.0"
+	"last_rune_check_version": "1.1.0",
+	"dependencies": [
+		{
+			"name": "@closure-next/core",
+			"semver": "^1.0.14"
+		},
+		{
+			"name": "svelte",
+			"semver": "^4.0.0"
+		}
+	],
+	"unpacked_size": 84782
 }

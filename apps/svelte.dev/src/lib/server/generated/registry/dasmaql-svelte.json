@@ -12,5 +12,12 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.2.4",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "dasmaql",
+			"semver": "^0.2.19"
+		}
+	],
+	"unpacked_size": 18279
 }

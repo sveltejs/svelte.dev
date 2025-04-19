@@ -13,5 +13,20 @@
 	"version": "2.0.4",
 	"svelte_range": "^4.2.8",
 	"kit_range": "^1.27.7",
-	"last_rune_check_version": "2.0.4"
+	"last_rune_check_version": "2.0.4",
+	"dependencies": [
+		{
+			"name": "lazysizes",
+			"semver": "^5.3.2"
+		},
+		{
+			"name": "mime",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "svelte",
+			"semver": "^4.2.8"
+		}
+	],
+	"unpacked_size": 13185
 }

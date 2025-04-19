@@ -12,5 +12,12 @@
 	"version": "1.0.3",
 	"svelte_range": "^3.24.0",
 	"last_rune_check_version": "1.0.3",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "svelte",
+			"semver": "^3.24.0"
+		}
+	],
+	"unpacked_size": 29819
 }

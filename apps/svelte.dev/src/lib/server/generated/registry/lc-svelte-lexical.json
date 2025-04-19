@@ -12,5 +12,96 @@
 	"typescript": true,
 	"version": "0.3.7",
 	"svelte_range": "^3.59.1",
-	"last_rune_check_version": "0.3.7"
+	"last_rune_check_version": "0.3.7",
+	"dependencies": [
+		{
+			"name": "@lexical/clipboard",
+			"semver": "0.11.2"
+		},
+		{
+			"name": "@lexical/code",
+			"semver": "0.11.2"
+		},
+		{
+			"name": "@lexical/file",
+			"semver": "0.11.2"
+		},
+		{
+			"name": "@lexical/hashtag",
+			"semver": "0.11.2"
+		},
+		{
+			"name": "@lexical/history",
+			"semver": "0.11.2"
+		},
+		{
+			"name": "@lexical/link",
+			"semver": "0.11.2"
+		},
+		{
+			"name": "@lexical/list",
+			"semver": "0.11.2"
+		},
+		{
+			"name": "@lexical/mark",
+			"semver": "0.11.2"
+		},
+		{
+			"name": "@lexical/overflow",
+			"semver": "0.11.2"
+		},
+		{
+			"name": "@lexical/plain-text",
+			"semver": "0.11.2"
+		},
+		{
+			"name": "@lexical/rich-text",
+			"semver": "0.11.2"
+		},
+		{
+			"name": "@lexical/selection",
+			"semver": "0.11.2"
+		},
+		{
+			"name": "@lexical/table",
+			"semver": "0.11.2"
+		},
+		{
+			"name": "@lexical/text",
+			"semver": "0.11.2"
+		},
+		{
+			"name": "@lexical/utils",
+			"semver": "0.11.2"
+		},
+		{
+			"name": "@lexical/yjs",
+			"semver": "0.11.2"
+		},
+		{
+			"name": "lexical",
+			"semver": "0.11.2"
+		},
+		{
+			"name": "lodash-es",
+			"semver": "^4.17.21"
+		},
+		{
+			"name": "prettier",
+			"semver": "^2.8.8"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.59.1"
+		},
+		{
+			"name": "y-websocket",
+			"semver": "1.5.0"
+		},
+		{
+			"name": "yjs",
+			"semver": "13.6.2"
+		}
+	],
+	"unpacked_size": 3255185
 }

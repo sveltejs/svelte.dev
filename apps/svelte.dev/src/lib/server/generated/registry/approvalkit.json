@@ -11,5 +11,36 @@
 	"typescript": false,
 	"version": "0.1.1",
 	"svelte_range": "^3.0.0 || ^4.0.0",
-	"last_rune_check_version": "0.1.1"
+	"last_rune_check_version": "0.1.1",
+	"dependencies": [
+		{
+			"name": "eventsource-parser",
+			"semver": "1.0.0"
+		},
+		{
+			"name": "nanoid",
+			"semver": "3.3.6"
+		},
+		{
+			"name": "solid-swr-store",
+			"semver": "0.10.7"
+		},
+		{
+			"name": "sswr",
+			"semver": "2.0.0"
+		},
+		{
+			"name": "swr",
+			"semver": "2.2.0"
+		},
+		{
+			"name": "swr-store",
+			"semver": "0.10.6"
+		},
+		{
+			"name": "swrv",
+			"semver": "1.0.4"
+		}
+	],
+	"unpacked_size": 6596
 }

@@ -13,5 +13,16 @@
 	"version": "0.1.3",
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.5.0",
-	"last_rune_check_version": "0.1.3"
+	"last_rune_check_version": "0.1.3",
+	"dependencies": [
+		{
+			"name": "@tanstack/svelte-query",
+			"semver": "^4.29.11"
+		},
+		{
+			"name": "rx-nostr",
+			"semver": "^0.8.3"
+		}
+	],
+	"unpacked_size": 59193
 }

@@ -12,5 +12,52 @@
 	"typescript": true,
 	"version": "3.1.0",
 	"svelte_range": "^5.14.0",
-	"last_rune_check_version": "3.1.0"
+	"last_rune_check_version": "3.1.0",
+	"dependencies": [
+		{
+			"name": "d3-array",
+			"semver": "^3.2.4"
+		},
+		{
+			"name": "d3-color",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "d3-ease",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "d3-format",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "d3-interpolate",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "d3-scale",
+			"semver": "^4.0.2"
+		},
+		{
+			"name": "d3-selection",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "d3-shape",
+			"semver": "^3.2.0"
+		},
+		{
+			"name": "d3-transition",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "lodash-es",
+			"semver": "^4.17.21"
+		},
+		{
+			"name": "memoize-one",
+			"semver": "^6.0.0"
+		}
+	],
+	"unpacked_size": 99779
 }

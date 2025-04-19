@@ -23,5 +23,7 @@
 	"github_stars": 50258,
 	"typescript": true,
 	"version": "3.5.3",
-	"last_rune_check_version": "3.5.3"
+	"last_rune_check_version": "3.5.3",
+	"dependencies": [],
+	"unpacked_size": 7876465
 }

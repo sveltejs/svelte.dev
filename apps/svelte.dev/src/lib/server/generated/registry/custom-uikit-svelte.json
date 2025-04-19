@@ -12,5 +12,20 @@
 	"typescript": true,
 	"version": "2.6.1",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "2.6.1"
+	"last_rune_check_version": "2.6.1",
+	"dependencies": [
+		{
+			"name": "caniuse-lite",
+			"semver": "^1.0.30001285"
+		},
+		{
+			"name": "debounce",
+			"semver": "^1.2.0"
+		},
+		{
+			"name": "leven",
+			"semver": "^3.1.0"
+		}
+	],
+	"unpacked_size": 1642584
 }

@@ -12,5 +12,196 @@
 	"typescript": true,
 	"version": "1.2.5",
 	"svelte_range": "^3.49.0",
-	"last_rune_check_version": "1.2.5"
+	"last_rune_check_version": "1.2.5",
+	"dependencies": [
+		{
+			"name": "@beyond-js/specifier-parser",
+			"semver": "^0.0.3"
+		},
+		{
+			"name": "@beyond-js/fs",
+			"semver": "^0.0.1"
+		},
+		{
+			"name": "@beyond-js/bee",
+			"semver": "^0.0.6"
+		},
+		{
+			"name": "@babel/core",
+			"semver": "^7.18.6"
+		},
+		{
+			"name": "@babel/generator",
+			"semver": "^7.18.7"
+		},
+		{
+			"name": "@babel/parser",
+			"semver": "^7.18.6"
+		},
+		{
+			"name": "@babel/plugin-proposal-class-properties",
+			"semver": "^7.18.6"
+		},
+		{
+			"name": "@babel/plugin-proposal-private-methods",
+			"semver": "^7.18.6"
+		},
+		{
+			"name": "@babel/plugin-syntax-class-properties",
+			"semver": "^7.12.1"
+		},
+		{
+			"name": "@babel/plugin-transform-modules-amd",
+			"semver": "^7.18.6"
+		},
+		{
+			"name": "@babel/plugin-transform-modules-commonjs",
+			"semver": "^7.18.6"
+		},
+		{
+			"name": "@babel/plugin-transform-react-jsx",
+			"semver": "^7.18.6"
+		},
+		{
+			"name": "@babel/preset-env",
+			"semver": "7.20.2"
+		},
+		{
+			"name": "@babel/preset-typescript",
+			"semver": "^7.18.6"
+		},
+		{
+			"name": "@babel/traverse",
+			"semver": "^7.18.6"
+		},
+		{
+			"name": "@mdx-js/mdx",
+			"semver": "^2.1.5"
+		},
+		{
+			"name": "@types/mdx",
+			"semver": "^2.0.3"
+		},
+		{
+			"name": "@types/node",
+			"semver": "^18.11.11"
+		},
+		{
+			"name": "ajv",
+			"semver": "^6.12.2"
+		},
+		{
+			"name": "ansi-to-html",
+			"semver": "^0.6.14"
+		},
+		{
+			"name": "archiver",
+			"semver": "^3.1.1"
+		},
+		{
+			"name": "async",
+			"semver": "^2.6.4"
+		},
+		{
+			"name": "cheerio",
+			"semver": "^1.0.0-rc.12"
+		},
+		{
+			"name": "chokidar",
+			"semver": "^3.3.1"
+		},
+		{
+			"name": "clean-css",
+			"semver": "^5.3.0"
+		},
+		{
+			"name": "colors",
+			"semver": "1.4.0"
+		},
+		{
+			"name": "concat-with-sourcemaps",
+			"semver": "^1.1.0"
+		},
+		{
+			"name": "convert-source-map",
+			"semver": "^1.7.0"
+		},
+		{
+			"name": "formidable",
+			"semver": "^3.2.5"
+		},
+		{
+			"name": "html-minifier",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "json-format",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "node-fetch",
+			"semver": "^2.6.7"
+		},
+		{
+			"name": "path",
+			"semver": "^0.12.7"
+		},
+		{
+			"name": "prettier",
+			"semver": "2.6.2"
+		},
+		{
+			"name": "resolve-package-path",
+			"semver": "^4.0.3"
+		},
+		{
+			"name": "sass",
+			"semver": "^1.53.0"
+		},
+		{
+			"name": "socket.io",
+			"semver": "^4.5.1"
+		},
+		{
+			"name": "source-map",
+			"semver": "^0.7.4"
+		},
+		{
+			"name": "sqlite3",
+			"semver": "^5.0.8"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.49.0"
+		},
+		{
+			"name": "typescript",
+			"semver": "4.7.4"
+		},
+		{
+			"name": "uglify-js",
+			"semver": "^3.16.2"
+		},
+		{
+			"name": "uimport",
+			"semver": "^1.2.8"
+		},
+		{
+			"name": "vue",
+			"semver": "^3.2.37"
+		},
+		{
+			"name": "yargs",
+			"semver": "^17.5.1"
+		},
+		{
+			"name": "inquirer",
+			"semver": "^8.2.5"
+		},
+		{
+			"name": "global-modules",
+			"semver": "^2.0.0"
+		}
+	],
+	"unpacked_size": 1652515
 }

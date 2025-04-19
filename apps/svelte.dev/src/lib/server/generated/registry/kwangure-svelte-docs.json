@@ -12,5 +12,24 @@
 	"typescript": false,
 	"version": "0.5.2",
 	"svelte_range": "^3.46.0",
-	"last_rune_check_version": "0.5.2"
+	"last_rune_check_version": "0.5.2",
+	"dependencies": [
+		{
+			"name": "@rollup/pluginutils",
+			"semver": "^5.0.2"
+		},
+		{
+			"name": "comment-parser",
+			"semver": "^1.1.5"
+		},
+		{
+			"name": "css-tree",
+			"semver": "^2.2.1"
+		},
+		{
+			"name": "mdn-data",
+			"semver": "^2.0.28"
+		}
+	],
+	"unpacked_size": 17894
 }

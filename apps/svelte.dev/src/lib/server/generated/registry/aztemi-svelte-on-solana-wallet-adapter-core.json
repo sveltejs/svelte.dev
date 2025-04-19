@@ -12,5 +12,20 @@
 	"typescript": true,
 	"version": "1.1.5",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "1.1.5"
+	"last_rune_check_version": "1.1.5",
+	"dependencies": [
+		{
+			"name": "@solana/wallet-adapter-base",
+			"semver": "^0.9.23"
+		},
+		{
+			"name": "@solana/web3.js",
+			"semver": "^1.78.5"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.0.0"
+		}
+	],
+	"unpacked_size": 79585
 }

@@ -13,5 +13,24 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.18.0",
 	"last_rune_check_version": "1.11.1",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@types/node",
+			"semver": "^22.13.10"
+		},
+		{
+			"name": "dotenv",
+			"semver": "^16.4.7"
+		},
+		{
+			"name": "gray-matter",
+			"semver": "^4.0.3"
+		},
+		{
+			"name": "marked",
+			"semver": "^15.0.7"
+		}
+	],
+	"unpacked_size": 77284
 }

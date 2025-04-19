@@ -5,12 +5,14 @@
 	"authors": ["humandialog"],
 	"homepage": "https://github.com/HumanDialog/auth.svelte#readme",
 	"downloads": 37,
-	"updated": "2025-03-18T09:14:57.585Z",
+	"updated": "2025-04-17T13:41:17.438Z",
 	"tags": ["auth"],
 	"runes": false,
 	"github_stars": 0,
 	"typescript": true,
-	"version": "1.8.5",
+	"version": "1.8.7",
 	"svelte_range": "^3.24.0",
-	"last_rune_check_version": "1.8.5"
+	"last_rune_check_version": "1.8.7",
+	"dependencies": [],
+	"unpacked_size": 810653
 }

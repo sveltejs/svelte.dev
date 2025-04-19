@@ -11,5 +11,12 @@
 	"typescript": false,
 	"version": "0.0.2",
 	"svelte_range": "^3.47.0",
-	"last_rune_check_version": "0.0.2"
+	"last_rune_check_version": "0.0.2",
+	"dependencies": [
+		{
+			"name": "socket.io-client",
+			"semver": "^4.4.1"
+		}
+	],
+	"unpacked_size": 4691
 }

@@ -13,5 +13,20 @@
 	"version": "1.0.0",
 	"svelte_range": "^5.0.0-next.22",
 	"kit_range": "^1.27.4",
-	"last_rune_check_version": "1.0.0"
+	"last_rune_check_version": "1.0.0",
+	"dependencies": [
+		{
+			"name": "dayjs",
+			"semver": "^1.11.10"
+		},
+		{
+			"name": "debug",
+			"semver": "^4.3.4"
+		},
+		{
+			"name": "nanoid",
+			"semver": "^5.0.4"
+		}
+	],
+	"unpacked_size": 28183
 }

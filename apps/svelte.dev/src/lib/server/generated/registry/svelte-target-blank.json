@@ -11,5 +11,20 @@
 	"typescript": true,
 	"version": "1.0.0",
 	"svelte_range": "^4.2.15",
-	"last_rune_check_version": "1.0.0"
+	"last_rune_check_version": "1.0.0",
+	"dependencies": [
+		{
+			"name": "estree-walker",
+			"semver": "^3.0.3"
+		},
+		{
+			"name": "magic-string",
+			"semver": "^0.30.10"
+		},
+		{
+			"name": "picomatch",
+			"semver": "^4.0.2"
+		}
+	],
+	"unpacked_size": 7477
 }

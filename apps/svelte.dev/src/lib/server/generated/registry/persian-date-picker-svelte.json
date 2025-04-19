@@ -13,5 +13,12 @@
 	"version": "0.1.0",
 	"svelte_range": "^3.24.0 || ^4.0.0",
 	"kit_range": "^2.5.10",
-	"last_rune_check_version": "0.1.0"
+	"last_rune_check_version": "0.1.0",
+	"dependencies": [
+		{
+			"name": "date-fns-jalali",
+			"semver": "^3.6.0-0"
+		}
+	],
+	"unpacked_size": 68243
 }

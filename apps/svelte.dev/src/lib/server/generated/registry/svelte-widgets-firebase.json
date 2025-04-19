@@ -12,5 +12,28 @@
 	"version": "0.0.5",
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.16.3",
-	"last_rune_check_version": "0.0.5"
+	"last_rune_check_version": "0.0.5",
+	"dependencies": [
+		{
+			"name": "@sveltejs/kit",
+			"semver": "^1.16.3"
+		},
+		{
+			"name": "axios",
+			"semver": "^1.4.0"
+		},
+		{
+			"name": "dotenv",
+			"semver": "^16.0.3"
+		},
+		{
+			"name": "firebase-admin",
+			"semver": "^11.8.0"
+		},
+		{
+			"name": "lodash",
+			"semver": "^4.17.21"
+		}
+	],
+	"unpacked_size": 59299
 }

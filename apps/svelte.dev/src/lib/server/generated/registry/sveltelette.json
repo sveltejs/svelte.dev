@@ -11,5 +11,28 @@
 	"version": "0.0.3",
 	"svelte_range": "^3.54.0",
 	"last_rune_check_version": "0.0.3",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "chokidar",
+			"semver": "^3.5.3"
+		},
+		{
+			"name": "minimist",
+			"semver": "^1.2.7"
+		},
+		{
+			"name": "@sveltejs/vite-plugin-svelte",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.54.0"
+		},
+		{
+			"name": "vite",
+			"semver": "^4.0.0"
+		}
+	],
+	"unpacked_size": 7955
 }

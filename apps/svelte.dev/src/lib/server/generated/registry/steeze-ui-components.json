@@ -13,5 +13,24 @@
 	"version": "1.2.0",
 	"svelte_range": ">= ^3.46.3",
 	"kit_range": "next",
-	"last_rune_check_version": "1.2.0"
+	"last_rune_check_version": "1.2.0",
+	"dependencies": [
+		{
+			"name": "@floating-ui/dom",
+			"semver": "^1.0.2"
+		},
+		{
+			"name": "@steeze-ui/heroicons",
+			"semver": "^2.1.0"
+		},
+		{
+			"name": "@steeze-ui/svelte-icon",
+			"semver": "^1.3.2"
+		},
+		{
+			"name": "focus-svelte",
+			"semver": "^0.3.4"
+		}
+	],
+	"unpacked_size": 142524
 }

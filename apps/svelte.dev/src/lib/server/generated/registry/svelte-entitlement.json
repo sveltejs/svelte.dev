@@ -5,12 +5,19 @@
 	"authors": ["arlac77"],
 	"homepage": "https://github.com/arlac77/svelte-entitlement#readme",
 	"downloads": 430,
-	"updated": "2025-03-24T13:04:43.145Z",
+	"updated": "2025-04-15T12:56:12.986Z",
 	"tags": ["miscellaneous"],
 	"runes": true,
 	"github_stars": 1,
 	"typescript": false,
-	"version": "2.0.36",
-	"svelte_range": "^5.25.3",
-	"last_rune_check_version": "2.0.36"
+	"version": "2.0.37",
+	"svelte_range": "^5.27.0",
+	"last_rune_check_version": "2.0.37",
+	"dependencies": [
+		{
+			"name": "svelte-dnd-action",
+			"semver": "^0.9.59"
+		}
+	],
+	"unpacked_size": 8100
 }

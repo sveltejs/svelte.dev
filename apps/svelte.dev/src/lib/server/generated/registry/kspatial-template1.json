@@ -12,5 +12,20 @@
 	"typescript": false,
 	"version": "1.0.10",
 	"svelte_range": "^3.44.3",
-	"last_rune_check_version": "1.0.10"
+	"last_rune_check_version": "1.0.10",
+	"dependencies": [
+		{
+			"name": "bootstrap",
+			"semver": "^5.3.1"
+		},
+		{
+			"name": "ol",
+			"semver": "^7.4.0"
+		},
+		{
+			"name": "sveltestrap",
+			"semver": "^5.11.1"
+		}
+	],
+	"unpacked_size": 3595798
 }

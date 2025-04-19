@@ -13,5 +13,24 @@
 	"svelte_range": "^5.0.0-next.1",
 	"kit_range": "^2.6.0",
 	"last_rune_check_version": "0.2.2",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "daisyui",
+			"semver": "^4.12.10"
+		},
+		{
+			"name": "postcss",
+			"semver": "^8.4.47"
+		},
+		{
+			"name": "postcss-js",
+			"semver": "^4.0.1"
+		},
+		{
+			"name": "postcss-selector-parser",
+			"semver": "^6.1.2"
+		}
+	],
+	"unpacked_size": 26653
 }

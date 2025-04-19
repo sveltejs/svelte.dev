@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "5.7.0",
 	"kit_range": "^2.4.0",
-	"last_rune_check_version": "5.7.0"
+	"last_rune_check_version": "5.7.0",
+	"dependencies": [
+		{
+			"name": "@vercel/nft",
+			"semver": "^0.29.2"
+		},
+		{
+			"name": "esbuild",
+			"semver": "^0.24.0"
+		}
+	],
+	"unpacked_size": 36505
 }

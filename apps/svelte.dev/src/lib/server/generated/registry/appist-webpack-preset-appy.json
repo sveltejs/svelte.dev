@@ -12,5 +12,180 @@
 	"typescript": false,
 	"version": "0.1.8",
 	"svelte_range": "^3.24.0",
-	"last_rune_check_version": "0.1.8"
+	"last_rune_check_version": "0.1.8",
+	"dependencies": [
+		{
+			"name": "@babel/core",
+			"semver": "^7.10.4"
+		},
+		{
+			"name": "@babel/plugin-syntax-dynamic-import",
+			"semver": "^7.8.3"
+		},
+		{
+			"name": "@babel/preset-env",
+			"semver": "^7.10.4"
+		},
+		{
+			"name": "@babel/preset-typescript",
+			"semver": "^7.10.4"
+		},
+		{
+			"name": "@intervolga/optimize-cssnano-plugin",
+			"semver": "^1.0.6"
+		},
+		{
+			"name": "@testing-library/jest-dom",
+			"semver": "^5.11.0"
+		},
+		{
+			"name": "@testing-library/svelte",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "babel-jest",
+			"semver": "^26.1.0"
+		},
+		{
+			"name": "babel-loader",
+			"semver": "^8.1.0"
+		},
+		{
+			"name": "case-sensitive-paths-webpack-plugin",
+			"semver": "^2.3.0"
+		},
+		{
+			"name": "chromedriver",
+			"semver": "^83.0.1"
+		},
+		{
+			"name": "clean-webpack-plugin",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "codeceptjs",
+			"semver": "^2.6.6"
+		},
+		{
+			"name": "copy-webpack-plugin",
+			"semver": "^6.0.3"
+		},
+		{
+			"name": "css-loader",
+			"semver": "^3.6.0"
+		},
+		{
+			"name": "favicons-webpack-plugin",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "file-loader",
+			"semver": "^6.0.0"
+		},
+		{
+			"name": "friendly-errors-webpack-plugin",
+			"semver": "^1.7.0"
+		},
+		{
+			"name": "geckodriver",
+			"semver": "^1.19.1"
+		},
+		{
+			"name": "html-webpack-plugin",
+			"semver": "^4.3.0"
+		},
+		{
+			"name": "jest",
+			"semver": "^26.1.0"
+		},
+		{
+			"name": "jest-transform-stub",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "mini-css-extract-plugin",
+			"semver": "^0.9.0"
+		},
+		{
+			"name": "playwright",
+			"semver": "^1.2.0"
+		},
+		{
+			"name": "postcss-loader",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "preload-webpack-plugin",
+			"semver": "^3.0.0-beta.4"
+		},
+		{
+			"name": "prettier",
+			"semver": "^2.0.5"
+		},
+		{
+			"name": "prettier-plugin-svelte",
+			"semver": "^1.1.0"
+		},
+		{
+			"name": "style-loader",
+			"semver": "^1.2.1"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.24.0"
+		},
+		{
+			"name": "svelte-jester",
+			"semver": "^1.0.6"
+		},
+		{
+			"name": "svelte-loader",
+			"semver": "^2.13.6"
+		},
+		{
+			"name": "svelte-preprocess",
+			"semver": "^4.0.7"
+		},
+		{
+			"name": "terser-webpack-plugin",
+			"semver": "^3.0.6"
+		},
+		{
+			"name": "ts-jest",
+			"semver": "^26.1.2"
+		},
+		{
+			"name": "ts-loader",
+			"semver": "^8.0.0"
+		},
+		{
+			"name": "typescript",
+			"semver": "^3.9.6"
+		},
+		{
+			"name": "url-loader",
+			"semver": "^4.1.0"
+		},
+		{
+			"name": "webpack",
+			"semver": "^4.43.0"
+		},
+		{
+			"name": "webpack-bundle-analyzer",
+			"semver": "^3.8.0"
+		},
+		{
+			"name": "webpack-dev-server",
+			"semver": "^3.11.0"
+		},
+		{
+			"name": "webpack-manifest-plugin",
+			"semver": "^2.2.0"
+		},
+		{
+			"name": "workbox-webpack-plugin",
+			"semver": "^5.1.3"
+		}
+	],
+	"unpacked_size": 15892
 }

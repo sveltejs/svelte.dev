@@ -12,5 +12,20 @@
 	"typescript": true,
 	"version": "9.2.226",
 	"svelte_range": "^4.2.19",
-	"last_rune_check_version": "9.2.226"
+	"last_rune_check_version": "9.2.226",
+	"dependencies": [
+		{
+			"name": "@ctx-core/dom",
+			"semver": "^15.3.102"
+		},
+		{
+			"name": "ctx-core",
+			"semver": "^7.2.32"
+		},
+		{
+			"name": "svelte",
+			"semver": "^4.2.19"
+		}
+	],
+	"unpacked_size": 12256
 }

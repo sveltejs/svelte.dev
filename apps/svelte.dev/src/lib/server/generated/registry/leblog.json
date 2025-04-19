@@ -13,5 +13,36 @@
 	"version": "0.9.2",
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.0.0",
-	"last_rune_check_version": "0.9.2"
+	"last_rune_check_version": "0.9.2",
+	"dependencies": [
+		{
+			"name": "@sveltejs/adapter-node",
+			"semver": "^1.2.4"
+		},
+		{
+			"name": "changelog-parser",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "feed",
+			"semver": "^4.2.2"
+		},
+		{
+			"name": "gray-matter",
+			"semver": "^4.0.3"
+		},
+		{
+			"name": "micromark",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "micromark-extension-gfm",
+			"semver": "^2.0.1"
+		},
+		{
+			"name": "micromark-extension-gfm-footnote",
+			"semver": "^1.1.2"
+		}
+	],
+	"unpacked_size": 3628641
 }

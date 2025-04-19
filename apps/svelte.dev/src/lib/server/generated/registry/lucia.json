@@ -11,5 +11,16 @@
 	"github_stars": 10074,
 	"typescript": true,
 	"version": "3.2.2",
-	"last_rune_check_version": "3.2.2"
+	"last_rune_check_version": "3.2.2",
+	"dependencies": [
+		{
+			"name": "@oslojs/crypto",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "@oslojs/encoding",
+			"semver": "^1.1.0"
+		}
+	],
+	"unpacked_size": 45991
 }

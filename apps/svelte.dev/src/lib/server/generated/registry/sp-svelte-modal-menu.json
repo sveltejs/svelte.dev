@@ -11,5 +11,40 @@
 	"typescript": false,
 	"version": "0.2.0",
 	"svelte_range": "^3.24.1",
-	"last_rune_check_version": "0.2.0"
+	"last_rune_check_version": "0.2.0",
+	"dependencies": [
+		{
+			"name": "@babel/runtime",
+			"semver": "^7.11.2"
+		},
+		{
+			"name": "@babel/runtime-corejs3",
+			"semver": "^7.11.2"
+		},
+		{
+			"name": "@types/es6-promise",
+			"semver": "^3.3.0"
+		},
+		{
+			"name": "@types/webpack-env",
+			"semver": "^1.15.2"
+		},
+		{
+			"name": "core-js",
+			"semver": "^3.6.5"
+		},
+		{
+			"name": "office-ui-fabric-js",
+			"semver": "^1.5.0"
+		},
+		{
+			"name": "robot3",
+			"semver": "^0.2.18"
+		},
+		{
+			"name": "svelte-robot-factory",
+			"semver": "^1.0.2"
+		}
+	],
+	"unpacked_size": 609735
 }

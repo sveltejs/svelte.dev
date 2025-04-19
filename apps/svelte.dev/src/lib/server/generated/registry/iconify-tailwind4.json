@@ -11,5 +11,16 @@
 	"github_stars": 4,
 	"typescript": true,
 	"version": "1.0.6",
-	"last_rune_check_version": "1.0.6"
+	"last_rune_check_version": "1.0.6",
+	"dependencies": [
+		{
+			"name": "@iconify/types",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "@iconify/utils",
+			"semver": "^2.2.1"
+		}
+	],
+	"unpacked_size": 18212
 }

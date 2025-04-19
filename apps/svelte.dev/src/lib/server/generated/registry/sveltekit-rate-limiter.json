@@ -13,5 +13,12 @@
 	"version": "0.6.1",
 	"svelte_range": "^4.2.12",
 	"kit_range": "1.x || 2.x",
-	"last_rune_check_version": "0.6.1"
+	"last_rune_check_version": "0.6.1",
+	"dependencies": [
+		{
+			"name": "@isaacs/ttlcache",
+			"semver": "^1.4.1"
+		}
+	],
+	"unpacked_size": 32335
 }

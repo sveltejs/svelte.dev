@@ -5,12 +5,14 @@
 	"authors": ["arlac77"],
 	"homepage": "https://github.com/arlac77/svelte-command#readme",
 	"downloads": 432,
-	"updated": "2025-03-24T13:01:59.582Z",
+	"updated": "2025-04-15T12:56:23.492Z",
 	"tags": ["tooling"],
 	"runes": true,
 	"github_stars": 2,
 	"typescript": false,
-	"version": "3.0.26",
-	"svelte_range": "^5.25.0",
-	"last_rune_check_version": "3.0.26"
+	"version": "3.0.27",
+	"svelte_range": "^5.27.0",
+	"last_rune_check_version": "3.0.27",
+	"dependencies": [],
+	"unpacked_size": 16784
 }

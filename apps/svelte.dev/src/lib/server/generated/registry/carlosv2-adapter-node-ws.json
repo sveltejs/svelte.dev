@@ -12,5 +12,28 @@
 	"typescript": true,
 	"version": "0.1.4",
 	"kit_range": "^1.7.2",
-	"last_rune_check_version": "0.1.4"
+	"last_rune_check_version": "0.1.4",
+	"dependencies": [
+		{
+			"name": "@rollup/plugin-commonjs",
+			"semver": "^24.0.0"
+		},
+		{
+			"name": "@rollup/plugin-json",
+			"semver": "^6.0.0"
+		},
+		{
+			"name": "@rollup/plugin-node-resolve",
+			"semver": "^15.0.1"
+		},
+		{
+			"name": "rollup",
+			"semver": "^3.7.0"
+		},
+		{
+			"name": "ws",
+			"semver": "^8.12.1"
+		}
+	],
+	"unpacked_size": 827468
 }

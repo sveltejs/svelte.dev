@@ -5,11 +5,13 @@
 	"repo_url": "",
 	"authors": ["main2017"],
 	"downloads": 337,
-	"updated": "2025-04-11T06:32:51.785Z",
+	"updated": "2025-04-18T10:09:59.055Z",
 	"tags": ["tooling"],
 	"svelte_range": ">=3.0.0",
 	"runes": false,
-	"last_rune_check_version": "0.1.2",
-	"version": "0.1.2",
-	"github_stars": 0
+	"last_rune_check_version": "0.1.8",
+	"version": "0.1.8",
+	"github_stars": 0,
+	"dependencies": [],
+	"unpacked_size": 130845
 }

@@ -11,5 +11,20 @@
 	"version": "0.0.3",
 	"svelte_range": "^3.44.2",
 	"last_rune_check_version": "0.0.3",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "create-esm-loader",
+			"semver": "^0.1.1"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.44.2"
+		},
+		{
+			"name": "svelte-preprocess",
+			"semver": "^4.9.8"
+		}
+	],
+	"unpacked_size": 9879
 }

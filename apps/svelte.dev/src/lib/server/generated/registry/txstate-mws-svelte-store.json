@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "1.0.8",
 	"svelte_range": "^3.45.0",
-	"last_rune_check_version": "1.0.8"
+	"last_rune_check_version": "1.0.8",
+	"dependencies": [
+		{
+			"name": "txstate-utils",
+			"semver": "^1.6.12"
+		}
+	],
+	"unpacked_size": 29389
 }

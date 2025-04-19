@@ -12,5 +12,12 @@
 	"typescript": false,
 	"version": "1.0.5",
 	"svelte_range": "^1.60.0",
-	"last_rune_check_version": "1.0.5"
+	"last_rune_check_version": "1.0.5",
+	"dependencies": [
+		{
+			"name": "ladda",
+			"semver": "^2.0.1"
+		}
+	],
+	"unpacked_size": 19663
 }

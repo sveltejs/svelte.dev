@@ -11,5 +11,12 @@
 	"github_stars": 44,
 	"typescript": false,
 	"version": "0.0.1",
-	"last_rune_check_version": "0.0.1"
+	"last_rune_check_version": "0.0.1",
+	"dependencies": [
+		{
+			"name": "fs-extra",
+			"semver": "^10.0.0"
+		}
+	],
+	"unpacked_size": 15672
 }

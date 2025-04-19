@@ -12,5 +12,20 @@
 	"version": "1.0.0-8",
 	"svelte_range": ">=3.5.0",
 	"last_rune_check_version": "1.0.0-8",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@rollup/pluginutils",
+			"semver": "^4.1.0"
+		},
+		{
+			"name": "require-relative",
+			"semver": "^0.8.7"
+		},
+		{
+			"name": "svelte-hmr",
+			"semver": "^0.14.3"
+		}
+	],
+	"unpacked_size": 24044
 }

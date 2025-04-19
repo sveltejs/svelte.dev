@@ -12,5 +12,32 @@
 	"typescript": false,
 	"version": "3.0.0",
 	"svelte_range": "^3.28.0",
-	"last_rune_check_version": "3.0.0"
+	"last_rune_check_version": "3.0.0",
+	"dependencies": [
+		{
+			"name": "@rollup/plugin-commonjs",
+			"semver": "^16.0.0"
+		},
+		{
+			"name": "@rollup/plugin-node-resolve",
+			"semver": "^10.0.0"
+		},
+		{
+			"name": "chroma-js",
+			"semver": "^2.1.0"
+		},
+		{
+			"name": "rollup",
+			"semver": "^2.33.1"
+		},
+		{
+			"name": "rollup-plugin-svelte",
+			"semver": "^6.1.0"
+		},
+		{
+			"name": "svelte-awesome",
+			"semver": "^2.3.0"
+		}
+	],
+	"unpacked_size": 401626
 }

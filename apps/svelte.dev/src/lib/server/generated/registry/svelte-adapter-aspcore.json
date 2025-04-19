@@ -12,5 +12,12 @@
 	"version": "0.4.0",
 	"kit_range": "^1.0.0",
 	"last_rune_check_version": "0.4.0",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "esbuild",
+			"semver": "^0.16.10"
+		}
+	],
+	"unpacked_size": 9038
 }

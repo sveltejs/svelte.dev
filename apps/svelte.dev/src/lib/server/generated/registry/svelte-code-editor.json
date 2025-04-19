@@ -12,5 +12,16 @@
 	"typescript": false,
 	"version": "1.0.1",
 	"svelte_range": "^3.29.4",
-	"last_rune_check_version": "1.0.1"
+	"last_rune_check_version": "1.0.1",
+	"dependencies": [
+		{
+			"name": "codejar",
+			"semver": "^3.2.2"
+		},
+		{
+			"name": "prismjs",
+			"semver": "^1.22.0"
+		}
+	],
+	"unpacked_size": 12748
 }

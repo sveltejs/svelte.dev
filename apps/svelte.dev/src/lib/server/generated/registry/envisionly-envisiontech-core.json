@@ -13,5 +13,36 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.20.4",
 	"last_rune_check_version": "0.8.1",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@commitlint/cli",
+			"semver": "^19.8.0"
+		},
+		{
+			"name": "@commitlint/config-conventional",
+			"semver": "^19.8.0"
+		},
+		{
+			"name": "@fortawesome/fontawesome-free",
+			"semver": "^6.7.2"
+		},
+		{
+			"name": "@release-it/conventional-changelog",
+			"semver": "^10.0.0"
+		},
+		{
+			"name": "@tailwindcss/cli",
+			"semver": "^4.1.3"
+		},
+		{
+			"name": "husky",
+			"semver": "^9.1.7"
+		},
+		{
+			"name": "lint-staged",
+			"semver": "^15.5.0"
+		}
+	],
+	"unpacked_size": 79040
 }

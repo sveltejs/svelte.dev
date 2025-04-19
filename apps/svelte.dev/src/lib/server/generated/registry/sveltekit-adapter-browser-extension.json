@@ -10,5 +10,20 @@
 	"typescript": true,
 	"version": "0.4.0",
 	"last_rune_check_version": "0.4.0",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@hapi/hoek",
+			"semver": "^9.2.1"
+		},
+		{
+			"name": "cheerio",
+			"semver": "^1.0.0-rc.10"
+		},
+		{
+			"name": "sjcl",
+			"semver": "^1.0.8"
+		}
+	],
+	"unpacked_size": 56716
 }

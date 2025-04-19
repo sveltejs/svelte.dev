@@ -13,5 +13,1276 @@
 	"version": "10.0.2",
 	"svelte_range": ">=3.59.2 || ^4.0.0",
 	"kit_range": "^1.15.9",
-	"last_rune_check_version": "10.0.2"
+	"last_rune_check_version": "10.0.2",
+	"dependencies": [
+		{
+			"name": "abab",
+			"semver": "^2.0.6"
+		},
+		{
+			"name": "acorn",
+			"semver": "^8.11.3"
+		},
+		{
+			"name": "acorn-jsx",
+			"semver": "^5.3.2"
+		},
+		{
+			"name": "acorn-walk",
+			"semver": "^8.3.2"
+		},
+		{
+			"name": "agent-base",
+			"semver": "^6.0.2"
+		},
+		{
+			"name": "ajv",
+			"semver": "^6.12.6"
+		},
+		{
+			"name": "ansi-regex",
+			"semver": "^5.0.1"
+		},
+		{
+			"name": "ansi-styles",
+			"semver": "^4.3.0"
+		},
+		{
+			"name": "anymatch",
+			"semver": "^3.1.3"
+		},
+		{
+			"name": "argparse",
+			"semver": "^2.0.1"
+		},
+		{
+			"name": "aria-query",
+			"semver": "^5.3.0"
+		},
+		{
+			"name": "array-buffer-byte-length",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "array-union",
+			"semver": "^2.1.0"
+		},
+		{
+			"name": "assertion-error",
+			"semver": "^1.1.0"
+		},
+		{
+			"name": "asynckit",
+			"semver": "^0.4.0"
+		},
+		{
+			"name": "available-typed-arrays",
+			"semver": "^1.0.7"
+		},
+		{
+			"name": "axe-core",
+			"semver": "^4.8.4"
+		},
+		{
+			"name": "axe-html-reporter",
+			"semver": "^2.2.3"
+		},
+		{
+			"name": "axobject-query",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "balanced-match",
+			"semver": "^1.0.2"
+		},
+		{
+			"name": "binary-extensions",
+			"semver": "^2.2.0"
+		},
+		{
+			"name": "blueimp-md5",
+			"semver": "^2.19.0"
+		},
+		{
+			"name": "brace-expansion",
+			"semver": "^1.1.11"
+		},
+		{
+			"name": "braces",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "buffer-crc32",
+			"semver": "^0.2.13"
+		},
+		{
+			"name": "cac",
+			"semver": "^6.7.14"
+		},
+		{
+			"name": "call-bind",
+			"semver": "^1.0.7"
+		},
+		{
+			"name": "callsites",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "chai",
+			"semver": "^4.4.1"
+		},
+		{
+			"name": "chalk",
+			"semver": "^4.1.2"
+		},
+		{
+			"name": "check-error",
+			"semver": "^1.0.3"
+		},
+		{
+			"name": "chokidar",
+			"semver": "^3.6.0"
+		},
+		{
+			"name": "code-red",
+			"semver": "^1.0.4"
+		},
+		{
+			"name": "color-convert",
+			"semver": "^2.0.1"
+		},
+		{
+			"name": "color-name",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "combined-stream",
+			"semver": "^1.0.8"
+		},
+		{
+			"name": "concat-map",
+			"semver": "^0.0.1"
+		},
+		{
+			"name": "concordance",
+			"semver": "^5.0.4"
+		},
+		{
+			"name": "cookie",
+			"semver": "^0.5.0"
+		},
+		{
+			"name": "cross-spawn",
+			"semver": "^7.0.3"
+		},
+		{
+			"name": "css-tree",
+			"semver": "^2.3.1"
+		},
+		{
+			"name": "cssesc",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "cssstyle",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "data-urls",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "date-format",
+			"semver": "^4.0.3"
+		},
+		{
+			"name": "date-time",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "debug",
+			"semver": "^4.3.4"
+		},
+		{
+			"name": "decimal.js",
+			"semver": "^10.4.3"
+		},
+		{
+			"name": "dedent-js",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "deep-eql",
+			"semver": "^4.1.3"
+		},
+		{
+			"name": "deep-equal",
+			"semver": "^2.2.3"
+		},
+		{
+			"name": "deep-is",
+			"semver": "^0.1.4"
+		},
+		{
+			"name": "deepmerge",
+			"semver": "^4.3.1"
+		},
+		{
+			"name": "define-data-property",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "define-properties",
+			"semver": "^1.2.1"
+		},
+		{
+			"name": "delayed-stream",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "dequal",
+			"semver": "^2.0.3"
+		},
+		{
+			"name": "detect-indent",
+			"semver": "^6.1.0"
+		},
+		{
+			"name": "devalue",
+			"semver": "^4.3.2"
+		},
+		{
+			"name": "dir-glob",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "doctrine",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "dom-accessibility-api",
+			"semver": "^0.5.16"
+		},
+		{
+			"name": "domexception",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "entities",
+			"semver": "^4.5.0"
+		},
+		{
+			"name": "es-define-property",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "es-errors",
+			"semver": "^1.3.0"
+		},
+		{
+			"name": "es-get-iterator",
+			"semver": "^1.1.3"
+		},
+		{
+			"name": "es6-promise",
+			"semver": "^3.3.1"
+		},
+		{
+			"name": "esbuild",
+			"semver": "^0.18.20"
+		},
+		{
+			"name": "escape-string-regexp",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "eslint-compat-utils",
+			"semver": "^0.1.2"
+		},
+		{
+			"name": "eslint-scope",
+			"semver": "^7.2.2"
+		},
+		{
+			"name": "eslint-visitor-keys",
+			"semver": "^3.4.3"
+		},
+		{
+			"name": "esm-env",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "espree",
+			"semver": "^9.6.1"
+		},
+		{
+			"name": "esquery",
+			"semver": "^1.5.0"
+		},
+		{
+			"name": "esrecurse",
+			"semver": "^4.3.0"
+		},
+		{
+			"name": "estraverse",
+			"semver": "^5.3.0"
+		},
+		{
+			"name": "estree-walker",
+			"semver": "^3.0.3"
+		},
+		{
+			"name": "esutils",
+			"semver": "^2.0.3"
+		},
+		{
+			"name": "fast-deep-equal",
+			"semver": "^3.1.3"
+		},
+		{
+			"name": "fast-diff",
+			"semver": "^1.3.0"
+		},
+		{
+			"name": "fast-glob",
+			"semver": "^3.3.2"
+		},
+		{
+			"name": "fast-json-stable-stringify",
+			"semver": "^2.1.0"
+		},
+		{
+			"name": "fast-levenshtein",
+			"semver": "^2.0.6"
+		},
+		{
+			"name": "fastq",
+			"semver": "^1.17.1"
+		},
+		{
+			"name": "file-entry-cache",
+			"semver": "^6.0.1"
+		},
+		{
+			"name": "fill-range",
+			"semver": "^7.0.1"
+		},
+		{
+			"name": "find-up",
+			"semver": "^5.0.0"
+		},
+		{
+			"name": "flat-cache",
+			"semver": "^3.2.0"
+		},
+		{
+			"name": "flatted",
+			"semver": "^3.3.1"
+		},
+		{
+			"name": "for-each",
+			"semver": "^0.3.3"
+		},
+		{
+			"name": "form-data",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "fs.realpath",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "fsevents",
+			"semver": "^2.3.3"
+		},
+		{
+			"name": "function-bind",
+			"semver": "^1.1.2"
+		},
+		{
+			"name": "functions-have-names",
+			"semver": "^1.2.3"
+		},
+		{
+			"name": "get-func-name",
+			"semver": "^2.0.2"
+		},
+		{
+			"name": "get-intrinsic",
+			"semver": "^1.2.4"
+		},
+		{
+			"name": "glob",
+			"semver": "^8.1.0"
+		},
+		{
+			"name": "glob-parent",
+			"semver": "^6.0.2"
+		},
+		{
+			"name": "globals",
+			"semver": "^13.24.0"
+		},
+		{
+			"name": "globalyzer",
+			"semver": "^0.1.0"
+		},
+		{
+			"name": "globby",
+			"semver": "^11.1.0"
+		},
+		{
+			"name": "globrex",
+			"semver": "^0.1.2"
+		},
+		{
+			"name": "gopd",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "graceful-fs",
+			"semver": "^4.2.11"
+		},
+		{
+			"name": "graphemer",
+			"semver": "^1.4.0"
+		},
+		{
+			"name": "has-bigints",
+			"semver": "^1.0.2"
+		},
+		{
+			"name": "has-flag",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "has-property-descriptors",
+			"semver": "^1.0.2"
+		},
+		{
+			"name": "has-proto",
+			"semver": "^1.0.3"
+		},
+		{
+			"name": "has-symbols",
+			"semver": "^1.0.3"
+		},
+		{
+			"name": "has-tostringtag",
+			"semver": "^1.0.2"
+		},
+		{
+			"name": "hasown",
+			"semver": "^2.0.1"
+		},
+		{
+			"name": "html-encoding-sniffer",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "http-proxy-agent",
+			"semver": "^5.0.0"
+		},
+		{
+			"name": "https-proxy-agent",
+			"semver": "^5.0.1"
+		},
+		{
+			"name": "iconv-lite",
+			"semver": "^0.6.3"
+		},
+		{
+			"name": "ignore",
+			"semver": "^5.3.1"
+		},
+		{
+			"name": "ignore-walk",
+			"semver": "^5.0.1"
+		},
+		{
+			"name": "import-fresh",
+			"semver": "^3.3.0"
+		},
+		{
+			"name": "import-meta-resolve",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "imurmurhash",
+			"semver": "^0.1.4"
+		},
+		{
+			"name": "inflight",
+			"semver": "^1.0.6"
+		},
+		{
+			"name": "inherits",
+			"semver": "^2.0.4"
+		},
+		{
+			"name": "internal-slot",
+			"semver": "^1.0.7"
+		},
+		{
+			"name": "is-arguments",
+			"semver": "^1.1.1"
+		},
+		{
+			"name": "is-array-buffer",
+			"semver": "^3.0.4"
+		},
+		{
+			"name": "is-bigint",
+			"semver": "^1.0.4"
+		},
+		{
+			"name": "is-binary-path",
+			"semver": "^2.1.0"
+		},
+		{
+			"name": "is-boolean-object",
+			"semver": "^1.1.2"
+		},
+		{
+			"name": "is-callable",
+			"semver": "^1.2.7"
+		},
+		{
+			"name": "is-date-object",
+			"semver": "^1.0.5"
+		},
+		{
+			"name": "is-extglob",
+			"semver": "^2.1.1"
+		},
+		{
+			"name": "is-glob",
+			"semver": "^4.0.3"
+		},
+		{
+			"name": "is-map",
+			"semver": "^2.0.2"
+		},
+		{
+			"name": "is-number",
+			"semver": "^7.0.0"
+		},
+		{
+			"name": "is-number-object",
+			"semver": "^1.0.7"
+		},
+		{
+			"name": "is-path-inside",
+			"semver": "^3.0.3"
+		},
+		{
+			"name": "is-potential-custom-element-name",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "is-reference",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "is-regex",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "is-set",
+			"semver": "^2.0.2"
+		},
+		{
+			"name": "is-shared-array-buffer",
+			"semver": "^1.0.3"
+		},
+		{
+			"name": "is-string",
+			"semver": "^1.0.7"
+		},
+		{
+			"name": "is-symbol",
+			"semver": "^1.0.4"
+		},
+		{
+			"name": "is-weakmap",
+			"semver": "^2.0.1"
+		},
+		{
+			"name": "is-weakset",
+			"semver": "^2.0.2"
+		},
+		{
+			"name": "isarray",
+			"semver": "^2.0.5"
+		},
+		{
+			"name": "isexe",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "js-string-escape",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "js-tokens",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "js-yaml",
+			"semver": "^4.1.0"
+		},
+		{
+			"name": "json-buffer",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "json-schema-traverse",
+			"semver": "^0.4.1"
+		},
+		{
+			"name": "json-stable-stringify-without-jsonify",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "jsonc-parser",
+			"semver": "^3.2.1"
+		},
+		{
+			"name": "junit-report-builder",
+			"semver": "^3.2.1"
+		},
+		{
+			"name": "keyv",
+			"semver": "^4.5.4"
+		},
+		{
+			"name": "kleur",
+			"semver": "^4.1.5"
+		},
+		{
+			"name": "known-css-properties",
+			"semver": "^0.29.0"
+		},
+		{
+			"name": "levn",
+			"semver": "^0.4.1"
+		},
+		{
+			"name": "lilconfig",
+			"semver": "^2.1.0"
+		},
+		{
+			"name": "local-pkg",
+			"semver": "^0.4.3"
+		},
+		{
+			"name": "locate-character",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "locate-path",
+			"semver": "^6.0.0"
+		},
+		{
+			"name": "lodash",
+			"semver": "^4.17.21"
+		},
+		{
+			"name": "lodash.merge",
+			"semver": "^4.6.2"
+		},
+		{
+			"name": "loupe",
+			"semver": "^2.3.7"
+		},
+		{
+			"name": "lower-case",
+			"semver": "^2.0.2"
+		},
+		{
+			"name": "lru-cache",
+			"semver": "^6.0.0"
+		},
+		{
+			"name": "lz-string",
+			"semver": "^1.5.0"
+		},
+		{
+			"name": "magic-string",
+			"semver": "^0.30.8"
+		},
+		{
+			"name": "make-dir",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "md5-hex",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "mdn-data",
+			"semver": "^2.0.30"
+		},
+		{
+			"name": "merge2",
+			"semver": "^1.4.1"
+		},
+		{
+			"name": "micromatch",
+			"semver": "^4.0.5"
+		},
+		{
+			"name": "mime-db",
+			"semver": "^1.52.0"
+		},
+		{
+			"name": "mime-types",
+			"semver": "^2.1.35"
+		},
+		{
+			"name": "min-indent",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "minimatch",
+			"semver": "^3.1.2"
+		},
+		{
+			"name": "minimist",
+			"semver": "^1.2.8"
+		},
+		{
+			"name": "mkdirp",
+			"semver": "^0.5.6"
+		},
+		{
+			"name": "mlly",
+			"semver": "^1.6.1"
+		},
+		{
+			"name": "mri",
+			"semver": "^1.2.0"
+		},
+		{
+			"name": "mrmime",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "ms",
+			"semver": "^2.1.2"
+		},
+		{
+			"name": "mustache",
+			"semver": "^4.2.0"
+		},
+		{
+			"name": "nanoid",
+			"semver": "^3.3.7"
+		},
+		{
+			"name": "natural-compare",
+			"semver": "^1.4.0"
+		},
+		{
+			"name": "natural-compare-lite",
+			"semver": "^1.4.0"
+		},
+		{
+			"name": "no-case",
+			"semver": "^3.0.4"
+		},
+		{
+			"name": "normalize-path",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "npm-bundled",
+			"semver": "^2.0.1"
+		},
+		{
+			"name": "npm-normalize-package-bin",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "npm-packlist",
+			"semver": "^5.1.3"
+		},
+		{
+			"name": "nwsapi",
+			"semver": "^2.2.7"
+		},
+		{
+			"name": "object-inspect",
+			"semver": "^1.13.1"
+		},
+		{
+			"name": "object-is",
+			"semver": "^1.1.6"
+		},
+		{
+			"name": "object-keys",
+			"semver": "^1.1.1"
+		},
+		{
+			"name": "object.assign",
+			"semver": "^4.1.5"
+		},
+		{
+			"name": "once",
+			"semver": "^1.4.0"
+		},
+		{
+			"name": "optionator",
+			"semver": "^0.9.3"
+		},
+		{
+			"name": "p-limit",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "p-locate",
+			"semver": "^5.0.0"
+		},
+		{
+			"name": "parent-module",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "parse5",
+			"semver": "^7.1.2"
+		},
+		{
+			"name": "pascal-case",
+			"semver": "^3.1.2"
+		},
+		{
+			"name": "path-exists",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "path-is-absolute",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "path-key",
+			"semver": "^3.1.1"
+		},
+		{
+			"name": "path-type",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "pathe",
+			"semver": "^1.1.2"
+		},
+		{
+			"name": "pathval",
+			"semver": "^1.1.1"
+		},
+		{
+			"name": "periscopic",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "picocolors",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "picomatch",
+			"semver": "^2.3.1"
+		},
+		{
+			"name": "pkg-types",
+			"semver": "^1.0.3"
+		},
+		{
+			"name": "playwright",
+			"semver": "^1.42.1"
+		},
+		{
+			"name": "playwright-core",
+			"semver": "^1.42.1"
+		},
+		{
+			"name": "possible-typed-array-names",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "postcss",
+			"semver": "^8.4.35"
+		},
+		{
+			"name": "postcss-load-config",
+			"semver": "^3.1.4"
+		},
+		{
+			"name": "postcss-safe-parser",
+			"semver": "^6.0.0"
+		},
+		{
+			"name": "postcss-scss",
+			"semver": "^4.0.9"
+		},
+		{
+			"name": "postcss-selector-parser",
+			"semver": "^6.0.15"
+		},
+		{
+			"name": "prelude-ls",
+			"semver": "^1.2.1"
+		},
+		{
+			"name": "pretty-format",
+			"semver": "^27.5.1"
+		},
+		{
+			"name": "psl",
+			"semver": "^1.9.0"
+		},
+		{
+			"name": "punycode",
+			"semver": "^2.3.1"
+		},
+		{
+			"name": "querystringify",
+			"semver": "^2.2.0"
+		},
+		{
+			"name": "queue-microtask",
+			"semver": "^1.2.3"
+		},
+		{
+			"name": "react-is",
+			"semver": "^17.0.2"
+		},
+		{
+			"name": "readdirp",
+			"semver": "^3.6.0"
+		},
+		{
+			"name": "regenerator-runtime",
+			"semver": "^0.14.1"
+		},
+		{
+			"name": "regexp.prototype.flags",
+			"semver": "^1.5.2"
+		},
+		{
+			"name": "requires-port",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "resolve-from",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "reusify",
+			"semver": "^1.0.4"
+		},
+		{
+			"name": "rimraf",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "rollup",
+			"semver": "^3.29.4"
+		},
+		{
+			"name": "rrweb-cssom",
+			"semver": "^0.6.0"
+		},
+		{
+			"name": "run-parallel",
+			"semver": "^1.2.0"
+		},
+		{
+			"name": "sade",
+			"semver": "^1.8.1"
+		},
+		{
+			"name": "safer-buffer",
+			"semver": "^2.1.2"
+		},
+		{
+			"name": "sander",
+			"semver": "^0.5.1"
+		},
+		{
+			"name": "saxes",
+			"semver": "^6.0.0"
+		},
+		{
+			"name": "semver",
+			"semver": "^7.6.0"
+		},
+		{
+			"name": "set-cookie-parser",
+			"semver": "^2.6.0"
+		},
+		{
+			"name": "set-function-length",
+			"semver": "^1.2.1"
+		},
+		{
+			"name": "set-function-name",
+			"semver": "^2.0.2"
+		},
+		{
+			"name": "shebang-command",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "shebang-regex",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "side-channel",
+			"semver": "^1.0.6"
+		},
+		{
+			"name": "siginfo",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "sirv",
+			"semver": "^2.0.4"
+		},
+		{
+			"name": "slash",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "sorcery",
+			"semver": "^0.11.0"
+		},
+		{
+			"name": "source-map-js",
+			"semver": "^1.0.2"
+		},
+		{
+			"name": "stackback",
+			"semver": "^0.0.2"
+		},
+		{
+			"name": "std-env",
+			"semver": "^3.7.0"
+		},
+		{
+			"name": "stop-iteration-iterator",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "strip-ansi",
+			"semver": "^6.0.1"
+		},
+		{
+			"name": "strip-indent",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "strip-json-comments",
+			"semver": "^3.1.1"
+		},
+		{
+			"name": "strip-literal",
+			"semver": "^1.3.0"
+		},
+		{
+			"name": "supports-color",
+			"semver": "^7.2.0"
+		},
+		{
+			"name": "svelte",
+			"semver": "^4.2.12"
+		},
+		{
+			"name": "svelte-eslint-parser",
+			"semver": "^0.33.1"
+		},
+		{
+			"name": "svelte-hmr",
+			"semver": "^0.15.3"
+		},
+		{
+			"name": "svelte-preprocess",
+			"semver": "^5.1.3"
+		},
+		{
+			"name": "svelte2tsx",
+			"semver": "^0.7.3"
+		},
+		{
+			"name": "symbol-tree",
+			"semver": "^3.2.4"
+		},
+		{
+			"name": "text-table",
+			"semver": "^0.2.0"
+		},
+		{
+			"name": "time-zone",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "tiny-glob",
+			"semver": "^0.2.9"
+		},
+		{
+			"name": "tinybench",
+			"semver": "^2.6.0"
+		},
+		{
+			"name": "tinypool",
+			"semver": "^0.5.0"
+		},
+		{
+			"name": "tinyspy",
+			"semver": "^2.2.1"
+		},
+		{
+			"name": "to-regex-range",
+			"semver": "^5.0.1"
+		},
+		{
+			"name": "totalist",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "tough-cookie",
+			"semver": "^4.1.3"
+		},
+		{
+			"name": "tr46",
+			"semver": "^4.1.1"
+		},
+		{
+			"name": "tsutils",
+			"semver": "^3.21.0"
+		},
+		{
+			"name": "type-check",
+			"semver": "^0.4.0"
+		},
+		{
+			"name": "type-detect",
+			"semver": "^4.0.8"
+		},
+		{
+			"name": "type-fest",
+			"semver": "^0.20.2"
+		},
+		{
+			"name": "ufo",
+			"semver": "^1.4.0"
+		},
+		{
+			"name": "undici",
+			"semver": "^5.28.3"
+		},
+		{
+			"name": "undici-types",
+			"semver": "^5.26.5"
+		},
+		{
+			"name": "universalify",
+			"semver": "^0.2.0"
+		},
+		{
+			"name": "uri-js",
+			"semver": "^4.4.1"
+		},
+		{
+			"name": "url-parse",
+			"semver": "^1.5.10"
+		},
+		{
+			"name": "util-deprecate",
+			"semver": "^1.0.2"
+		},
+		{
+			"name": "vite-node",
+			"semver": "^0.31.4"
+		},
+		{
+			"name": "vitefu",
+			"semver": "^0.2.5"
+		},
+		{
+			"name": "w3c-xmlserializer",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "webidl-conversions",
+			"semver": "^7.0.0"
+		},
+		{
+			"name": "well-known-symbols",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "whatwg-encoding",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "whatwg-mimetype",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "whatwg-url",
+			"semver": "^12.0.1"
+		},
+		{
+			"name": "which",
+			"semver": "^2.0.2"
+		},
+		{
+			"name": "which-boxed-primitive",
+			"semver": "^1.0.2"
+		},
+		{
+			"name": "which-collection",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "which-typed-array",
+			"semver": "^1.1.14"
+		},
+		{
+			"name": "why-is-node-running",
+			"semver": "^2.2.2"
+		},
+		{
+			"name": "wrappy",
+			"semver": "^1.0.2"
+		},
+		{
+			"name": "ws",
+			"semver": "^8.16.0"
+		},
+		{
+			"name": "xml-name-validator",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "xmlbuilder",
+			"semver": "^15.1.1"
+		},
+		{
+			"name": "xmlchars",
+			"semver": "^2.2.0"
+		},
+		{
+			"name": "yallist",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "yaml",
+			"semver": "^1.10.2"
+		},
+		{
+			"name": "yocto-queue",
+			"semver": "^1.0.0"
+		}
+	],
+	"unpacked_size": 390697
 }

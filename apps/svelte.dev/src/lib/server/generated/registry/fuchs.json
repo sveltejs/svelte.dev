@@ -13,5 +13,128 @@
 	"version": "0.0.28",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
-	"last_rune_check_version": "0.0.28"
+	"last_rune_check_version": "0.0.28",
+	"dependencies": [
+		{
+			"name": "@atproto/api",
+			"semver": "^0.14.7"
+		},
+		{
+			"name": "@clack/prompts",
+			"semver": "^0.10.0"
+		},
+		{
+			"name": "@number-flow/svelte",
+			"semver": "^0.3.3"
+		},
+		{
+			"name": "@sveltejs/adapter-static",
+			"semver": "^3.0.8"
+		},
+		{
+			"name": "@texel/color",
+			"semver": "^1.1.9"
+		},
+		{
+			"name": "@thisux/sveltednd",
+			"semver": "^0.0.20"
+		},
+		{
+			"name": "@threlte/core",
+			"semver": "^8.0.1"
+		},
+		{
+			"name": "@threlte/extras",
+			"semver": "^9.0.1"
+		},
+		{
+			"name": "@types/three",
+			"semver": "^0.173.0"
+		},
+		{
+			"name": "@use-gesture/vanilla",
+			"semver": "^10.3.1"
+		},
+		{
+			"name": "@zerodevx/svelte-img",
+			"semver": "^2.1.2"
+		},
+		{
+			"name": "adm-zip",
+			"semver": "^0.5.16"
+		},
+		{
+			"name": "bits-ui",
+			"semver": "^1.3.4"
+		},
+		{
+			"name": "cheerio",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "commander",
+			"semver": "^13.1.0"
+		},
+		{
+			"name": "hls.js",
+			"semver": "^1.5.20"
+		},
+		{
+			"name": "layerchart",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "node-fetch",
+			"semver": "^3.3.2"
+		},
+		{
+			"name": "paneforge",
+			"semver": "^0.0.6"
+		},
+		{
+			"name": "pdfjs-dist",
+			"semver": "^5.0.375"
+		},
+		{
+			"name": "picocolors",
+			"semver": "^1.1.1"
+		},
+		{
+			"name": "plyr",
+			"semver": "^3.7.8"
+		},
+		{
+			"name": "simplex-noise",
+			"semver": "^4.0.3"
+		},
+		{
+			"name": "svelte-sonner",
+			"semver": "^0.3.28"
+		},
+		{
+			"name": "tailwind-variants",
+			"semver": "^0.3.1"
+		},
+		{
+			"name": "tailwindcss-animate",
+			"semver": "^1.0.7"
+		},
+		{
+			"name": "tar",
+			"semver": "^7.4.3"
+		},
+		{
+			"name": "three",
+			"semver": "^0.173.0"
+		},
+		{
+			"name": "vite-plugin-glsl",
+			"semver": "^1.3.1"
+		},
+		{
+			"name": "wavesurfer.js",
+			"semver": "^7.9.1"
+		}
+	],
+	"unpacked_size": 618891
 }

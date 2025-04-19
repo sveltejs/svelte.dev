@@ -5,12 +5,19 @@
 	"authors": ["arlac77"],
 	"homepage": "https://github.com/arlac77/svelte-time-series#readme",
 	"downloads": 27,
-	"updated": "2025-03-26T18:26:26.886Z",
+	"updated": "2025-04-16T20:57:18.350Z",
 	"tags": ["ui"],
 	"runes": true,
 	"github_stars": 5,
 	"typescript": false,
-	"version": "2.0.36",
-	"svelte_range": "^5.25.0",
-	"last_rune_check_version": "2.0.36"
+	"version": "2.0.38",
+	"svelte_range": "^5.27.0",
+	"last_rune_check_version": "2.0.38",
+	"dependencies": [
+		{
+			"name": "d3-scale",
+			"semver": "^4.0.0"
+		}
+	],
+	"unpacked_size": 10305
 }

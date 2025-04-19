@@ -12,5 +12,40 @@
 	"typescript": false,
 	"version": "1.6.4",
 	"svelte_range": "^4.2.16",
-	"last_rune_check_version": "1.6.4"
+	"last_rune_check_version": "1.6.4",
+	"dependencies": [
+		{
+			"name": "@antfu/eslint-config",
+			"semver": "^2.18.0"
+		},
+		{
+			"name": "@eslint/eslintrc",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "eslint-config-prettier",
+			"semver": "^9.1.0"
+		},
+		{
+			"name": "eslint-plugin-format",
+			"semver": "^0.1.1"
+		},
+		{
+			"name": "eslint-plugin-svelte",
+			"semver": "2.36.0-next.13"
+		},
+		{
+			"name": "eslint-plugin-tailwindcss",
+			"semver": "^3.15.1"
+		},
+		{
+			"name": "prettier-plugin-svelte",
+			"semver": "^3.2.3"
+		},
+		{
+			"name": "svelte-eslint-parser",
+			"semver": "^0.35.0"
+		}
+	],
+	"unpacked_size": 15552
 }

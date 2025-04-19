@@ -11,5 +11,16 @@
 	"typescript": false,
 	"version": "0.0.9",
 	"svelte_range": "^3.38.2",
-	"last_rune_check_version": "0.0.9"
+	"last_rune_check_version": "0.0.9",
+	"dependencies": [
+		{
+			"name": "resolve",
+			"semver": "^1.20.0"
+		},
+		{
+			"name": "sass",
+			"semver": "^1.42.1"
+		}
+	],
+	"unpacked_size": 119600
 }

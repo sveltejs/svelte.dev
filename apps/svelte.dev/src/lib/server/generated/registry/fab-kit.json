@@ -11,5 +11,12 @@
 	"typescript": false,
 	"version": "1.0.19",
 	"svelte_range": "^3.31.0",
-	"last_rune_check_version": "1.0.19"
+	"last_rune_check_version": "1.0.19",
+	"dependencies": [
+		{
+			"name": "svelte-css-vars",
+			"semver": "0.0.1"
+		}
+	],
+	"unpacked_size": 951990
 }

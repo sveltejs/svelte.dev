@@ -13,5 +13,32 @@
 	"version": "0.3.12",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
-	"last_rune_check_version": "0.3.12"
+	"last_rune_check_version": "0.3.12",
+	"dependencies": [
+		{
+			"name": "@atlaskit/pragmatic-drag-and-drop",
+			"semver": "^1.5.0"
+		},
+		{
+			"name": "@atlaskit/pragmatic-drag-and-drop-flourish",
+			"semver": "^1.2.0"
+		},
+		{
+			"name": "@atlaskit/pragmatic-drag-and-drop-hitbox",
+			"semver": "^1.0.3"
+		},
+		{
+			"name": "lucide-svelte",
+			"semver": "^0.474.0"
+		},
+		{
+			"name": "tailwindcss",
+			"semver": "^4.0.3"
+		},
+		{
+			"name": "tiny-invariant",
+			"semver": "^1.3.3"
+		}
+	],
+	"unpacked_size": 38746
 }

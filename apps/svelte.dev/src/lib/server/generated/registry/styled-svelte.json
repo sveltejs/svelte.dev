@@ -12,5 +12,20 @@
 	"typescript": true,
 	"version": "1.2.0",
 	"svelte_range": "^3.53.1",
-	"last_rune_check_version": "1.2.0"
+	"last_rune_check_version": "1.2.0",
+	"dependencies": [
+		{
+			"name": "@emotion/css",
+			"semver": "^11.10.5"
+		},
+		{
+			"name": "color",
+			"semver": "^4.2.3"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.53.1"
+		}
+	],
+	"unpacked_size": 172112
 }

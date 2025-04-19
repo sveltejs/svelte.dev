@@ -12,5 +12,32 @@
 	"typescript": false,
 	"version": "0.4.8",
 	"svelte_range": "^3.59.2",
-	"last_rune_check_version": "0.4.8"
+	"last_rune_check_version": "0.4.8",
+	"dependencies": [
+		{
+			"name": "@svizzle/dom",
+			"semver": "^0.7.3"
+		},
+		{
+			"name": "@svizzle/geometry",
+			"semver": "^0.6.1"
+		},
+		{
+			"name": "@svizzle/histogram",
+			"semver": "^0.6.8"
+		},
+		{
+			"name": "@svizzle/utils",
+			"semver": "^0.21.0"
+		},
+		{
+			"name": "lamb",
+			"semver": "^0.61.1"
+		},
+		{
+			"name": "yootils",
+			"semver": "^0.3.1"
+		}
+	],
+	"unpacked_size": 18134
 }

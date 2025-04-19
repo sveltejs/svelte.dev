@@ -13,5 +13,28 @@
 	"version": "1.1.5",
 	"svelte_range": "^3.46.2",
 	"kit_range": "next",
-	"last_rune_check_version": "1.1.5"
+	"last_rune_check_version": "1.1.5",
+	"dependencies": [
+		{
+			"name": "@solana-mobile/wallet-adapter-mobile",
+			"semver": "^2.1.2"
+		},
+		{
+			"name": "@solana/wallet-standard-util",
+			"semver": "^1.1.1"
+		},
+		{
+			"name": "@solana/wallet-standard-wallet-adapter-base",
+			"semver": "^1.1.2"
+		},
+		{
+			"name": "@wallet-standard/app",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "eventemitter3",
+			"semver": "^4.0.7"
+		}
+	],
+	"unpacked_size": 55657
 }

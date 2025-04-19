@@ -12,5 +12,40 @@
 	"typescript": true,
 	"version": "1.15.12",
 	"svelte_range": "^5.0.0-next.205",
-	"last_rune_check_version": "1.15.12"
+	"last_rune_check_version": "1.15.12",
+	"dependencies": [
+		{
+			"name": "@kronos-integration/svelte-components",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "mf-styling",
+			"semver": "^3.1.7"
+		},
+		{
+			"name": "svelte-command",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "svelte-common",
+			"semver": "^6.11.2"
+		},
+		{
+			"name": "svelte-entitlement",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "svelte-guard-history-router",
+			"semver": "^6.1.2"
+		},
+		{
+			"name": "svelte-session-manager",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "svelte-websocket-store",
+			"semver": "^1.1.34"
+		}
+	],
+	"unpacked_size": 26493
 }

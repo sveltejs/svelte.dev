@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "0.7.0",
 	"svelte_range": "^5.0.0",
-	"last_rune_check_version": "0.7.0"
+	"last_rune_check_version": "0.7.0",
+	"dependencies": [
+		{
+			"name": "@tanstack/store",
+			"semver": "0.7.0"
+		}
+	],
+	"unpacked_size": 6713
 }

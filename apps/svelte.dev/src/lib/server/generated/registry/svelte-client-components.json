@@ -11,5 +11,16 @@
 	"version": "0.1.0",
 	"svelte_range": "^4",
 	"last_rune_check_version": "0.1.0",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "magic-string",
+			"semver": "^0.30.5"
+		},
+		{
+			"name": "zimmerframe",
+			"semver": "^1.1.0"
+		}
+	],
+	"unpacked_size": 8855
 }

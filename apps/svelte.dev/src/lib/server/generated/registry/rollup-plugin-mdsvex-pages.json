@@ -12,5 +12,20 @@
 	"typescript": false,
 	"version": "1.2.22",
 	"svelte_range": "3.x",
-	"last_rune_check_version": "1.2.22"
+	"last_rune_check_version": "1.2.22",
+	"dependencies": [
+		{
+			"name": "gray-matter",
+			"semver": "^4.0.2"
+		},
+		{
+			"name": "mdsvex",
+			"semver": "^0.9.7"
+		},
+		{
+			"name": "svelte",
+			"semver": "3.x"
+		}
+	],
+	"unpacked_size": 28500
 }

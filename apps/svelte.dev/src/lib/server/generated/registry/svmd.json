@@ -12,5 +12,96 @@
 	"typescript": false,
 	"version": "0.3.1",
 	"svelte_range": "^3.6.10",
-	"last_rune_check_version": "0.3.1"
+	"last_rune_check_version": "0.3.1",
+	"dependencies": [
+		{
+			"name": "@material/button",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "@material/card",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "@material/checkbox",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "@material/drawer",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "@material/fab",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "@material/form-field",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "@material/icon-button",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "@material/layout-grid",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "@material/list",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "@material/radio",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "@material/ripple",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "@material/slider",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "@material/snackbar",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "@material/switch",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "@material/tab",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "@material/tab-bar",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "@material/tab-indicator",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "@material/tab-scroller",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "@material/textfield",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "@material/theme",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "@material/top-app-bar",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "@material/typography",
+			"semver": "^3.1.0"
+		}
+	],
+	"unpacked_size": 701620
 }

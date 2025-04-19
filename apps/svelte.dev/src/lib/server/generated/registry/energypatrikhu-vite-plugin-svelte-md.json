@@ -12,5 +12,20 @@
 	"typescript": true,
 	"version": "0.1.10",
 	"svelte_range": "5.4.0",
-	"last_rune_check_version": "0.1.10"
+	"last_rune_check_version": "0.1.10",
+	"dependencies": [
+		{
+			"name": "@rollup/pluginutils",
+			"semver": "5.1.3"
+		},
+		{
+			"name": "gray-matter",
+			"semver": "4.0.3"
+		},
+		{
+			"name": "markdown-it",
+			"semver": "14.1.0"
+		}
+	],
+	"unpacked_size": 31954
 }

@@ -12,5 +12,16 @@
 	"version": "1.1.2",
 	"svelte_range": "3.x",
 	"last_rune_check_version": "1.1.2",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "path-to-regexp",
+			"semver": "^6.1.0"
+		},
+		{
+			"name": "query-string",
+			"semver": "^6.13.1"
+		}
+	],
+	"unpacked_size": 135594
 }

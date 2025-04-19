@@ -11,5 +11,20 @@
 	"github_stars": 430,
 	"typescript": true,
 	"version": "0.7.1",
-	"last_rune_check_version": "0.7.1"
+	"last_rune_check_version": "0.7.1",
+	"dependencies": [
+		{
+			"name": "@ampproject/remapping",
+			"semver": "^2.3.0"
+		},
+		{
+			"name": "@jridgewell/sourcemap-codec",
+			"semver": "^1.5.0"
+		},
+		{
+			"name": "open",
+			"semver": "^10.1.0"
+		}
+	],
+	"unpacked_size": 241459
 }

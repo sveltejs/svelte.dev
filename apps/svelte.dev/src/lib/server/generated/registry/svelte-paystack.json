@@ -12,5 +12,12 @@
 	"typescript": false,
 	"version": "0.2.2",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.2.2"
+	"last_rune_check_version": "0.2.2",
+	"dependencies": [
+		{
+			"name": "sirv-cli",
+			"semver": "^0.4.4"
+		}
+	],
+	"unpacked_size": 7017
 }

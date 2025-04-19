@@ -25,5 +25,44 @@
 	"typescript": true,
 	"version": "8.6.12",
 	"svelte_range": "^4.0.0 || ^5.0.0",
-	"last_rune_check_version": "8.6.12"
+	"last_rune_check_version": "8.6.12",
+	"dependencies": [
+		{
+			"name": "ts-dedent",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "type-fest",
+			"semver": "~2.19"
+		},
+		{
+			"name": "@storybook/csf",
+			"semver": "0.1.12"
+		},
+		{
+			"name": "sveltedoc-parser",
+			"semver": "^4.2.1"
+		},
+		{
+			"name": "@storybook/global",
+			"semver": "^5.0.0"
+		},
+		{
+			"name": "@storybook/theming",
+			"semver": "8.6.12"
+		},
+		{
+			"name": "@storybook/components",
+			"semver": "8.6.12"
+		},
+		{
+			"name": "@storybook/manager-api",
+			"semver": "8.6.12"
+		},
+		{
+			"name": "@storybook/preview-api",
+			"semver": "8.6.12"
+		}
+	],
+	"unpacked_size": 96313
 }

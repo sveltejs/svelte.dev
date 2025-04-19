@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "0.3.5",
 	"svelte_range": "^5.0.0-next.171",
-	"last_rune_check_version": "0.3.5"
+	"last_rune_check_version": "0.3.5",
+	"dependencies": [
+		{
+			"name": "graphql",
+			"semver": "^16.9.0"
+		},
+		{
+			"name": "@gqlts/runtime",
+			"semver": "^3.2.20-beta.228"
+		}
+	],
+	"unpacked_size": 679859
 }

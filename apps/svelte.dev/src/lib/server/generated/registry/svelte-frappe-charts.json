@@ -12,5 +12,16 @@
 	"typescript": false,
 	"version": "1.10.0",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "1.10.0"
+	"last_rune_check_version": "1.10.0",
+	"dependencies": [
+		{
+			"name": "frappe-charts",
+			"semver": "^1.6.2"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.53.1"
+		}
+	],
+	"unpacked_size": 865141
 }

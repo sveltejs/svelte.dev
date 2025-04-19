@@ -13,5 +13,28 @@
 	"svelte_range": "^3.52.0",
 	"kit_range": "1.0.0-next.535",
 	"last_rune_check_version": "0.2.2",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "date-fns",
+			"semver": "^2.29.3"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.52.0"
+		},
+		{
+			"name": "svelte-browser",
+			"semver": "^0.4.4"
+		},
+		{
+			"name": "svelte-petit-utils",
+			"semver": "^0.3.5"
+		},
+		{
+			"name": "tslib",
+			"semver": "^2.4.1"
+		}
+	],
+	"unpacked_size": 142702
 }

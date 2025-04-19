@@ -13,5 +13,44 @@
 	"version": "1.0.7",
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
-	"last_rune_check_version": "1.0.7"
+	"last_rune_check_version": "1.0.7",
+	"dependencies": [
+		{
+			"name": "@material/button",
+			"semver": "^11.0.0"
+		},
+		{
+			"name": "@material/card",
+			"semver": "^11.0.0"
+		},
+		{
+			"name": "@material/icon-button",
+			"semver": "^11.0.0"
+		},
+		{
+			"name": "@material/ripple",
+			"semver": "^11.0.0"
+		},
+		{
+			"name": "@material/theme",
+			"semver": "^11.0.0"
+		},
+		{
+			"name": "@material/typography",
+			"semver": "^11.0.0"
+		},
+		{
+			"name": "@mdi/js",
+			"semver": "^5.9.55"
+		},
+		{
+			"name": "material-components-web",
+			"semver": "^11.0.0"
+		},
+		{
+			"name": "uuid",
+			"semver": "^8.3.2"
+		}
+	],
+	"unpacked_size": 9386
 }

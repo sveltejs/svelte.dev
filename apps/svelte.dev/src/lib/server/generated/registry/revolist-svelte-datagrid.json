@@ -5,12 +5,19 @@
 	"authors": ["kumakint"],
 	"homepage": "https://github.com/revolist/revogrid#readme",
 	"downloads": 704,
-	"updated": "2025-04-10T15:18:13.201Z",
+	"updated": "2025-04-17T13:53:06.328Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 120,
 	"typescript": true,
-	"version": "4.15.3",
+	"version": "4.15.5",
 	"svelte_range": "^5.2.7",
-	"last_rune_check_version": "4.15.3"
+	"last_rune_check_version": "4.15.5",
+	"dependencies": [
+		{
+			"name": "@revolist/revogrid",
+			"semver": "4.15.5"
+		}
+	],
+	"unpacked_size": 74764
 }

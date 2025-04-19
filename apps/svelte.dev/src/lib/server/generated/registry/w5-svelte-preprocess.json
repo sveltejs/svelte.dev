@@ -12,5 +12,32 @@
 	"typescript": true,
 	"version": "5.0.23",
 	"svelte_range": "^3.23.0 || ^4.0.0-next.0 || ^4.0.0",
-	"last_rune_check_version": "5.0.23"
+	"last_rune_check_version": "5.0.23",
+	"dependencies": [
+		{
+			"name": "@types/pug",
+			"semver": "^2.0.6"
+		},
+		{
+			"name": "@w5/coffee_plus",
+			"semver": "^0.0.19"
+		},
+		{
+			"name": "magic-string",
+			"semver": "^0.30.2"
+		},
+		{
+			"name": "sorcery",
+			"semver": "^0.11.0"
+		},
+		{
+			"name": "strip-indent",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "detect-indent",
+			"semver": "^6.1.0"
+		}
+	],
+	"unpacked_size": 107122
 }

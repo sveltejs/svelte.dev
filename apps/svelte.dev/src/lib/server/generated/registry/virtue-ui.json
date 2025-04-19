@@ -13,5 +13,28 @@
 	"version": "1.0.4",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.5.0",
-	"last_rune_check_version": "1.0.4"
+	"last_rune_check_version": "1.0.4",
+	"dependencies": [
+		{
+			"name": "@melt-ui/svelte",
+			"semver": "^0.68.0"
+		},
+		{
+			"name": "clsx",
+			"semver": "^2.1.0"
+		},
+		{
+			"name": "nanoid",
+			"semver": "^5.0.5"
+		},
+		{
+			"name": "tailwind-merge",
+			"semver": "^2.2.1"
+		},
+		{
+			"name": "tailwind-variants",
+			"semver": "^0.1.20"
+		}
+	],
+	"unpacked_size": 425858
 }

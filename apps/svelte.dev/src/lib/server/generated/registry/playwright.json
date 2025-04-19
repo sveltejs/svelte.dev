@@ -5,11 +5,18 @@
 	"authors": ["pavelfeldman", "yurys", "dgozman-ms", "playwright-bot"],
 	"homepage": "https://playwright.dev",
 	"downloads": 13453465,
-	"updated": "2025-03-17T17:02:50.323Z",
+	"updated": "2025-04-17T17:09:26.925Z",
 	"tags": ["testing"],
 	"runes": false,
 	"github_stars": 71643,
 	"typescript": true,
-	"version": "1.51.1",
-	"last_rune_check_version": "1.51.1"
+	"version": "1.52.0",
+	"last_rune_check_version": "1.52.0",
+	"dependencies": [
+		{
+			"name": "playwright-core",
+			"semver": "1.52.0"
+		}
+	],
+	"unpacked_size": 3181378
 }

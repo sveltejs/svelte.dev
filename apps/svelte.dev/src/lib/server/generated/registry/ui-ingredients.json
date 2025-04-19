@@ -13,5 +13,216 @@
 	"version": "1.4.0",
 	"svelte_range": "^5.20.0",
 	"kit_range": "^2.20.5",
-	"last_rune_check_version": "1.4.0"
+	"last_rune_check_version": "1.4.0",
+	"dependencies": [
+		{
+			"name": "@zag-js/accordion",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/anatomy",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/angle-slider",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/auto-resize",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/avatar",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/carousel",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/checkbox",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/clipboard",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/collapsible",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/collection",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/color-picker",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/combobox",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/core",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/date-picker",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/dialog",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/dom-query",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/editable",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/file-upload",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/floating-panel",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/focus-trap",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/highlight-word",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/hover-card",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/i18n-utils",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/listbox",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/menu",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/number-input",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/pagination",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/pin-input",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/popover",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/presence",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/progress",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/qr-code",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/radio-group",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/rating-group",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/select",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/signature-pad",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/slider",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/splitter",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/steps",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/svelte",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/switch",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/tabs",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/tags-input",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/time-picker",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/timer",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/toast",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/toggle",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/toggle-group",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/tooltip",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/tour",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "@zag-js/tree-view",
+			"semver": "^1.9.3"
+		},
+		{
+			"name": "clsx",
+			"semver": "^2.1.1"
+		}
+	],
+	"unpacked_size": 833518
 }

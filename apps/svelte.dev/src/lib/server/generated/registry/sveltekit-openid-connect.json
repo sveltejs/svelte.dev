@@ -12,5 +12,52 @@
 	"typescript": false,
 	"version": "2.0.1",
 	"kit_range": ">=1.0.0",
-	"last_rune_check_version": "2.0.1"
+	"last_rune_check_version": "2.0.1",
+	"dependencies": [
+		{
+			"name": "base64url",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "clone",
+			"semver": "^2.1.2"
+		},
+		{
+			"name": "cookie",
+			"semver": "^0.6.0"
+		},
+		{
+			"name": "futoin-hkdf",
+			"semver": "^1.5.1"
+		},
+		{
+			"name": "http-errors",
+			"semver": "^1.8.1"
+		},
+		{
+			"name": "joi",
+			"semver": "^17.7.0"
+		},
+		{
+			"name": "jose",
+			"semver": "^2.0.6"
+		},
+		{
+			"name": "lodash",
+			"semver": "^4.17.21"
+		},
+		{
+			"name": "on-headers",
+			"semver": "^1.0.2"
+		},
+		{
+			"name": "openid-client",
+			"semver": "^4.9.1"
+		},
+		{
+			"name": "url-join",
+			"semver": "^4.0.1"
+		}
+	],
+	"unpacked_size": 316419
 }

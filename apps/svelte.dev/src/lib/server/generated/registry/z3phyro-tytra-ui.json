@@ -13,5 +13,24 @@
 	"version": "0.0.7",
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.5.0",
-	"last_rune_check_version": "0.0.7"
+	"last_rune_check_version": "0.0.7",
+	"dependencies": [
+		{
+			"name": "@picocss/pico",
+			"semver": "^1.5.7"
+		},
+		{
+			"name": "@sveltejs/adapter-node",
+			"semver": "^1.2.3"
+		},
+		{
+			"name": "@z3phyro/tytra-core",
+			"semver": "^0.1.20"
+		},
+		{
+			"name": "svelte-notifications",
+			"semver": "^0.9.98"
+		}
+	],
+	"unpacked_size": 1560283
 }

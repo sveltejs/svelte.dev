@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "2.0.0-beta.131",
 	"svelte_range": ">= 3.0.0",
-	"last_rune_check_version": "2.0.0-beta.131"
+	"last_rune_check_version": "2.0.0-beta.131",
+	"dependencies": [
+		{
+			"name": "techor",
+			"semver": "^1.2.5"
+		},
+		{
+			"name": "@master/css",
+			"semver": "^2.0.0-beta.131"
+		}
+	],
+	"unpacked_size": 4056
 }

@@ -11,5 +11,88 @@
 	"github_stars": 14143,
 	"typescript": true,
 	"version": "3.1.1",
-	"last_rune_check_version": "3.1.1"
+	"last_rune_check_version": "3.1.1",
+	"dependencies": [
+		{
+			"name": "chai",
+			"semver": "^5.2.0"
+		},
+		{
+			"name": "debug",
+			"semver": "^4.4.0"
+		},
+		{
+			"name": "expect-type",
+			"semver": "^1.2.0"
+		},
+		{
+			"name": "magic-string",
+			"semver": "^0.30.17"
+		},
+		{
+			"name": "pathe",
+			"semver": "^2.0.3"
+		},
+		{
+			"name": "std-env",
+			"semver": "^3.8.1"
+		},
+		{
+			"name": "tinybench",
+			"semver": "^2.9.0"
+		},
+		{
+			"name": "tinyexec",
+			"semver": "^0.3.2"
+		},
+		{
+			"name": "tinypool",
+			"semver": "^1.0.2"
+		},
+		{
+			"name": "tinyrainbow",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "vite",
+			"semver": "^5.0.0 || ^6.0.0"
+		},
+		{
+			"name": "why-is-node-running",
+			"semver": "^2.3.0"
+		},
+		{
+			"name": "@vitest/expect",
+			"semver": "3.1.1"
+		},
+		{
+			"name": "@vitest/pretty-format",
+			"semver": "^3.1.1"
+		},
+		{
+			"name": "@vitest/mocker",
+			"semver": "3.1.1"
+		},
+		{
+			"name": "@vitest/spy",
+			"semver": "3.1.1"
+		},
+		{
+			"name": "@vitest/utils",
+			"semver": "3.1.1"
+		},
+		{
+			"name": "@vitest/runner",
+			"semver": "3.1.1"
+		},
+		{
+			"name": "vite-node",
+			"semver": "3.1.1"
+		},
+		{
+			"name": "@vitest/snapshot",
+			"semver": "3.1.1"
+		}
+	],
+	"unpacked_size": 1549717
 }

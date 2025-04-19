@@ -12,5 +12,28 @@
 	"typescript": true,
 	"version": "2.1.4",
 	"svelte_range": "^3.55.0 || ^4.0.0",
-	"last_rune_check_version": "2.1.4"
+	"last_rune_check_version": "2.1.4",
+	"dependencies": [
+		{
+			"name": "hast-util-to-html",
+			"semver": "^9.0.1"
+		},
+		{
+			"name": "lodash.debounce",
+			"semver": "^4.0.8"
+		},
+		{
+			"name": "magic-string",
+			"semver": "^0.30.10"
+		},
+		{
+			"name": "svelte-parse-markup",
+			"semver": "^0.1.5"
+		},
+		{
+			"name": "svg-parser",
+			"semver": "^2.0.4"
+		}
+	],
+	"unpacked_size": 66505
 }

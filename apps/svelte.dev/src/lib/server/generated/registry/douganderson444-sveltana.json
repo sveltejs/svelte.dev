@@ -13,5 +13,24 @@
 	"version": "0.0.4",
 	"svelte_range": "^3.34.0",
 	"kit_range": "next",
-	"last_rune_check_version": "0.0.4"
+	"last_rune_check_version": "0.0.4",
+	"dependencies": [
+		{
+			"name": "@solana/spl-token",
+			"semver": "^0.1.4"
+		},
+		{
+			"name": "@solana/spl-token-registry",
+			"semver": "^0.2.114"
+		},
+		{
+			"name": "@solana/web3.js",
+			"semver": "^1.12.0"
+		},
+		{
+			"name": "buffer",
+			"semver": "^6.0.3"
+		}
+	],
+	"unpacked_size": 3091958
 }

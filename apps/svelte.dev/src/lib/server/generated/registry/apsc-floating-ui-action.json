@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "0.0.6",
 	"svelte_range": "^3.30.0",
-	"last_rune_check_version": "0.0.6"
+	"last_rune_check_version": "0.0.6",
+	"dependencies": [
+		{
+			"name": "@floating-ui/dom",
+			"semver": "^1.1.1"
+		}
+	],
+	"unpacked_size": 9940
 }

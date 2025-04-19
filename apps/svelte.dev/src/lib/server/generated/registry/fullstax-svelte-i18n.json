@@ -11,5 +11,36 @@
 	"typescript": true,
 	"version": "3.8.0",
 	"svelte_range": "^3 || ^4",
-	"last_rune_check_version": "3.8.0"
+	"last_rune_check_version": "3.8.0",
+	"dependencies": [
+		{
+			"name": "cli-color",
+			"semver": "^2.0.3"
+		},
+		{
+			"name": "deepmerge",
+			"semver": "^4.2.2"
+		},
+		{
+			"name": "esbuild",
+			"semver": "^0.19.2"
+		},
+		{
+			"name": "estree-walker",
+			"semver": "^2"
+		},
+		{
+			"name": "intl-messageformat",
+			"semver": "^9.13.0"
+		},
+		{
+			"name": "sade",
+			"semver": "^1.8.1"
+		},
+		{
+			"name": "tiny-glob",
+			"semver": "^0.2.9"
+		}
+	],
+	"unpacked_size": 58033
 }

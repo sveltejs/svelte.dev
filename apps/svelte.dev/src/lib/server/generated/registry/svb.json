@@ -12,5 +12,88 @@
 	"typescript": false,
 	"version": "0.4.0-beta.0",
 	"svelte_range": "^3.12.1",
-	"last_rune_check_version": "0.4.0-beta.0"
+	"last_rune_check_version": "0.4.0-beta.0",
+	"dependencies": [
+		{
+			"name": "chalk",
+			"semver": "^2.4.2"
+		},
+		{
+			"name": "chokidar",
+			"semver": "^3.1.1"
+		},
+		{
+			"name": "commander",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "console-clear",
+			"semver": "^1.1.1"
+		},
+		{
+			"name": "fs-extra",
+			"semver": "^8.1.0"
+		},
+		{
+			"name": "get-port",
+			"semver": "^5.0.0"
+		},
+		{
+			"name": "html-minifier",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "pupa",
+			"semver": "^2.0.1"
+		},
+		{
+			"name": "read-pkg-up",
+			"semver": "^6.0.0"
+		},
+		{
+			"name": "rollup",
+			"semver": "^1.21.4"
+		},
+		{
+			"name": "rollup-plugin-commonjs",
+			"semver": "^10.1.0"
+		},
+		{
+			"name": "rollup-plugin-json",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "rollup-plugin-livereload",
+			"semver": "^1.0.3"
+		},
+		{
+			"name": "rollup-plugin-node-resolve",
+			"semver": "^5.2.0"
+		},
+		{
+			"name": "rollup-plugin-serve",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "rollup-plugin-sourcemaps",
+			"semver": "^0.4.2"
+		},
+		{
+			"name": "rollup-plugin-svelte",
+			"semver": "^5.1.0"
+		},
+		{
+			"name": "rollup-plugin-terser",
+			"semver": "^5.1.2"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.12.1"
+		},
+		{
+			"name": "update-notifier",
+			"semver": "^3.0.1"
+		}
+	],
+	"unpacked_size": 28254
 }

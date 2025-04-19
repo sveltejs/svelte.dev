@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "1.1.10",
 	"svelte_range": "^3.46.4",
-	"last_rune_check_version": "1.1.10"
+	"last_rune_check_version": "1.1.10",
+	"dependencies": [
+		{
+			"name": "@felte/common",
+			"semver": "1.1.9"
+		}
+	],
+	"unpacked_size": 238656
 }

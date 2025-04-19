@@ -12,5 +12,48 @@
 	"typescript": true,
 	"version": "0.10.1",
 	"svelte_range": "^3.50.0",
-	"last_rune_check_version": "0.10.1"
+	"last_rune_check_version": "0.10.1",
+	"dependencies": [
+		{
+			"name": "@sveltejs/vite-plugin-svelte",
+			"semver": "^1.0.4"
+		},
+		{
+			"name": "fdir",
+			"semver": "^5.2.0"
+		},
+		{
+			"name": "marked",
+			"semver": "^4.1.0"
+		},
+		{
+			"name": "prettier",
+			"semver": "^2.7.1"
+		},
+		{
+			"name": "prettier-plugin-svelte",
+			"semver": "^2.7.0"
+		},
+		{
+			"name": "prism-svelte",
+			"semver": "^0.4.7"
+		},
+		{
+			"name": "prismjs",
+			"semver": "^1.29.0"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.50.0"
+		},
+		{
+			"name": "svelte-preprocess",
+			"semver": "^4.10.7"
+		},
+		{
+			"name": "typescript",
+			"semver": "^4.7.4"
+		}
+	],
+	"unpacked_size": 53486
 }

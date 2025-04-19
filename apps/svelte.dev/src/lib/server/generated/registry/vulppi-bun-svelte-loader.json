@@ -6,11 +6,22 @@
 	"authors": ["morbden"],
 	"homepage": "https://github.com/vulppi-dev/libs#readme",
 	"downloads": 17,
-	"updated": "2025-04-03T17:53:47.607Z",
+	"updated": "2025-04-16T00:03:32.197Z",
 	"tags": ["tooling"],
 	"svelte_range": "^5.25.6",
 	"runes": false,
-	"last_rune_check_version": "0.0.2",
-	"version": "0.0.2",
-	"github_stars": 0
+	"last_rune_check_version": "0.0.4",
+	"version": "0.0.4",
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "glob",
+			"semver": "^11.0.1"
+		},
+		{
+			"name": "xxhash-wasm",
+			"semver": "^1.1.0"
+		}
+	],
+	"unpacked_size": 46890
 }

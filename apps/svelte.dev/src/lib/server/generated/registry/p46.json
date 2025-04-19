@@ -13,5 +13,12 @@
 	"version": "1.0.0",
 	"svelte_range": "4.x",
 	"kit_range": "2.5.18",
-	"last_rune_check_version": "1.0.0"
+	"last_rune_check_version": "1.0.0",
+	"dependencies": [
+		{
+			"name": "p45",
+			"semver": "^1.1.0"
+		}
+	],
+	"unpacked_size": 33815
 }

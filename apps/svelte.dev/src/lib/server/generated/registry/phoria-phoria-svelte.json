@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "0.3.2",
 	"svelte_range": "^5.0.0",
-	"last_rune_check_version": "0.3.2"
+	"last_rune_check_version": "0.3.2",
+	"dependencies": [
+		{
+			"name": "@rollup/pluginutils",
+			"semver": "^5.1.4"
+		},
+		{
+			"name": "magic-string",
+			"semver": "^0.30.17"
+		}
+	],
+	"unpacked_size": 11219
 }

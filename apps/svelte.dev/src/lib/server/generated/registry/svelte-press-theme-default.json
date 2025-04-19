@@ -13,5 +13,40 @@
 	"version": "0.13.1",
 	"svelte_range": "^3.55.0",
 	"kit_range": "^1.0.1",
-	"last_rune_check_version": "0.13.1"
+	"last_rune_check_version": "0.13.1",
+	"dependencies": [
+		{
+			"name": "@docsearch/css",
+			"semver": "3"
+		},
+		{
+			"name": "@docsearch/js",
+			"semver": "3"
+		},
+		{
+			"name": "lru-cache",
+			"semver": "^7.14.1"
+		},
+		{
+			"name": "remark-admonitions",
+			"semver": "^1.2.1"
+		},
+		{
+			"name": "shiki",
+			"semver": "^0.12.1"
+		},
+		{
+			"name": "uid",
+			"semver": "^2.0.1"
+		},
+		{
+			"name": "unist-util-visit",
+			"semver": "^4.1.1"
+		},
+		{
+			"name": "unocss",
+			"semver": "^0.48.0"
+		}
+	],
+	"unpacked_size": 328806
 }

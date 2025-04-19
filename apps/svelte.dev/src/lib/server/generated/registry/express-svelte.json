@@ -12,5 +12,92 @@
 	"typescript": false,
 	"version": "1.0.8",
 	"svelte_range": "^3.38.2",
-	"last_rune_check_version": "1.0.8"
+	"last_rune_check_version": "1.0.8",
+	"dependencies": [
+		{
+			"name": "@babel/core",
+			"semver": "^7.12.3"
+		},
+		{
+			"name": "@babel/plugin-syntax-dynamic-import",
+			"semver": "^7.8.3"
+		},
+		{
+			"name": "@babel/plugin-transform-runtime",
+			"semver": "^7.12.1"
+		},
+		{
+			"name": "@babel/preset-env",
+			"semver": "^7.12.1"
+		},
+		{
+			"name": "@babel/runtime",
+			"semver": "^7.12.1"
+		},
+		{
+			"name": "@nuxt/devalue",
+			"semver": "^1.2.4"
+		},
+		{
+			"name": "@rollup/plugin-babel",
+			"semver": "^5.2.1"
+		},
+		{
+			"name": "@rollup/plugin-commonjs",
+			"semver": "^16.0.0"
+		},
+		{
+			"name": "@rollup/plugin-node-resolve",
+			"semver": "^10.0.0"
+		},
+		{
+			"name": "@rollup/plugin-replace",
+			"semver": "^2.3.4"
+		},
+		{
+			"name": "core-js",
+			"semver": "^3.6.5"
+		},
+		{
+			"name": "eval",
+			"semver": "^0.1.4"
+		},
+		{
+			"name": "fast-glob",
+			"semver": "^3.2.4"
+		},
+		{
+			"name": "fs-extra",
+			"semver": "^9.0.1"
+		},
+		{
+			"name": "lodash",
+			"semver": "^4.17.21"
+		},
+		{
+			"name": "rollup",
+			"semver": "^2.26.10"
+		},
+		{
+			"name": "rollup-plugin-css-only",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "rollup-plugin-svelte",
+			"semver": "^7.1.0"
+		},
+		{
+			"name": "rollup-plugin-svelte-svg",
+			"semver": "^0.2.3"
+		},
+		{
+			"name": "rollup-plugin-terser",
+			"semver": "^7.0.2"
+		},
+		{
+			"name": "source-map-support",
+			"semver": "^0.5.19"
+		}
+	],
+	"unpacked_size": 49542
 }

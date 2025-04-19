@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "0.4.0",
 	"svelte_range": "^5",
-	"last_rune_check_version": "0.4.0"
+	"last_rune_check_version": "0.4.0",
+	"dependencies": [
+		{
+			"name": "esm-env",
+			"semver": "^1.2.2"
+		}
+	],
+	"unpacked_size": 38404
 }

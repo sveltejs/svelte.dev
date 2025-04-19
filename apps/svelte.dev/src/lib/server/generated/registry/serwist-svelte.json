@@ -5,12 +5,19 @@
 	"authors": ["serwist"],
 	"homepage": "https://serwist.pages.dev",
 	"downloads": 61,
-	"updated": "2025-04-06T17:22:39.233Z",
+	"updated": "2025-04-18T21:06:37.935Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 930,
 	"typescript": true,
-	"version": "9.0.13",
+	"version": "9.0.14",
 	"kit_range": ">=2.0.0",
-	"last_rune_check_version": "9.0.13"
+	"last_rune_check_version": "9.0.14",
+	"dependencies": [
+		{
+			"name": "serwist",
+			"semver": "9.0.14"
+		}
+	],
+	"unpacked_size": 19478
 }

@@ -12,5 +12,32 @@
 	"typescript": false,
 	"version": "0.0.1-4",
 	"svelte_range": "^3.35.0",
-	"last_rune_check_version": "0.0.1-4"
+	"last_rune_check_version": "0.0.1-4",
+	"dependencies": [
+		{
+			"name": "@sveltejs/vite-plugin-svelte",
+			"semver": "^1.0.0-next.5"
+		},
+		{
+			"name": "esbuild",
+			"semver": "^0.9.5"
+		},
+		{
+			"name": "resolve",
+			"semver": "^1.20.0"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.35.0"
+		},
+		{
+			"name": "svench",
+			"semver": "^0.2.0-16"
+		},
+		{
+			"name": "vite",
+			"semver": "^2.1.2"
+		}
+	],
+	"unpacked_size": 1595
 }

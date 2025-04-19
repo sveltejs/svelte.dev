@@ -16,12 +16,23 @@
 	],
 	"homepage": "https://github.com/naver/egjs-conveyer",
 	"downloads": 34,
-	"updated": "2023-09-27T04:35:48.923Z",
+	"updated": "2025-04-18T07:56:12.322Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 116,
 	"typescript": true,
-	"version": "1.7.1",
+	"version": "1.8.0",
 	"svelte_range": "^3.31.0",
-	"last_rune_check_version": "1.7.1"
+	"last_rune_check_version": "1.8.0",
+	"dependencies": [
+		{
+			"name": "@cfcs/svelte",
+			"semver": "^0.1.0"
+		},
+		{
+			"name": "@egjs/conveyer",
+			"semver": "~1.8.0"
+		}
+	],
+	"unpacked_size": 46184
 }

@@ -11,5 +11,12 @@
 	"version": "0.1.6",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "0.1.6",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "panzoom",
+			"semver": "^9.4.1"
+		}
+	],
+	"unpacked_size": 224508
 }

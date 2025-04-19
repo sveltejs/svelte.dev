@@ -10,5 +10,16 @@
 	"runes": false,
 	"typescript": false,
 	"version": "0.0.37",
-	"last_rune_check_version": "0.0.37"
+	"last_rune_check_version": "0.0.37",
+	"dependencies": [
+		{
+			"name": "gl-matrix",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "yootils",
+			"semver": "0.0.16"
+		}
+	],
+	"unpacked_size": 448681
 }

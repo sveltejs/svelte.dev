@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "1.1.6",
 	"svelte_range": "^3.47.0",
-	"last_rune_check_version": "1.1.6"
+	"last_rune_check_version": "1.1.6",
+	"dependencies": [
+		{
+			"name": "prism-svelte",
+			"semver": "^0.4.7"
+		},
+		{
+			"name": "prismjs",
+			"semver": "^1.27.0"
+		}
+	],
+	"unpacked_size": 5889
 }

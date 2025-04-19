@@ -12,5 +12,56 @@
 	"typescript": true,
 	"version": "2.0.0-next",
 	"svelte_range": "^3.46.6",
-	"last_rune_check_version": "2.0.0-next"
+	"last_rune_check_version": "2.0.0-next",
+	"dependencies": [
+		{
+			"name": "sirv",
+			"semver": "^1.0.18"
+		},
+		{
+			"name": "polka",
+			"semver": "^1.0.0-next.22"
+		},
+		{
+			"name": "cookie",
+			"semver": "0.4.1"
+		},
+		{
+			"name": "dotenv",
+			"semver": "^10.0.0"
+		},
+		{
+			"name": "colorette",
+			"semver": "^2.0.16"
+		},
+		{
+			"name": "commander",
+			"semver": "^9.2.0"
+		},
+		{
+			"name": "pluralize",
+			"semver": "^8.0.0"
+		},
+		{
+			"name": "formidable",
+			"semver": "^2.0.1"
+		},
+		{
+			"name": "hash-equals",
+			"semver": "^0.0.5"
+		},
+		{
+			"name": "express-session",
+			"semver": "^1.17.2"
+		},
+		{
+			"name": "@kodepandai/flydrive",
+			"semver": "^2.0.1"
+		},
+		{
+			"name": "@kodepandai/node-input-validator",
+			"semver": "^1.0.0-beta"
+		}
+	],
+	"unpacked_size": 106249
 }

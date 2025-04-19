@@ -13,5 +13,12 @@
 	"runes": true,
 	"last_rune_check_version": "0.1.0",
 	"version": "0.1.0",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@iconify/svelte",
+			"semver": "^4.2.0"
+		}
+	],
+	"unpacked_size": 62169
 }

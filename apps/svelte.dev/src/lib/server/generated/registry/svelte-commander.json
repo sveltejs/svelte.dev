@@ -11,5 +11,16 @@
 	"version": "1.4.0",
 	"svelte_range": "^3.24.0",
 	"last_rune_check_version": "1.4.0",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "nearley",
+			"semver": "^2.20.1"
+		},
+		{
+			"name": "xstate",
+			"semver": "^4.16.2"
+		}
+	],
+	"unpacked_size": 1384237
 }

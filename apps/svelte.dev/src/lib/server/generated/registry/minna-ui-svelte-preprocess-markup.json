@@ -12,5 +12,16 @@
 	"typescript": false,
 	"version": "0.16.0",
 	"svelte_range": "^2.0.0",
-	"last_rune_check_version": "0.16.0"
+	"last_rune_check_version": "0.16.0",
+	"dependencies": [
+		{
+			"name": "deepmerge",
+			"semver": "^2.2.1"
+		},
+		{
+			"name": "html-minifier",
+			"semver": "3.5.20"
+		}
+	],
+	"unpacked_size": 23164
 }

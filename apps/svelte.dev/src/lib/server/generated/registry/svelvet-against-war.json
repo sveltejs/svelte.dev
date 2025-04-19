@@ -13,5 +13,7 @@
 	"version": "10.0.2-baw.5",
 	"svelte_range": ">=3.59.2 || ^4.0.0",
 	"kit_range": "^1.20.4",
-	"last_rune_check_version": "10.0.2-baw.5"
+	"last_rune_check_version": "10.0.2-baw.5",
+	"dependencies": [],
+	"unpacked_size": 380073
 }

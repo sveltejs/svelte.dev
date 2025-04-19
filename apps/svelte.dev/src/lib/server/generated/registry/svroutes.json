@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "0.1.36-unhotfix1",
 	"svelte_range": "^3.52.0",
-	"last_rune_check_version": "0.1.36-unhotfix1"
+	"last_rune_check_version": "0.1.36-unhotfix1",
+	"dependencies": [
+		{
+			"name": "svelte2tsx",
+			"semver": "^0.5.20"
+		}
+	],
+	"unpacked_size": 11381
 }

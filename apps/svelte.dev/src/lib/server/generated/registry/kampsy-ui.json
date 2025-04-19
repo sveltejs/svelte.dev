@@ -5,13 +5,15 @@
 	"authors": ["kampsy"],
 	"homepage": "https://ui.kampsy.xyz",
 	"downloads": 44,
-	"updated": "2025-04-06T12:03:57.841Z",
+	"updated": "2025-04-18T09:22:42.775Z",
 	"tags": ["design-system"],
 	"runes": true,
 	"github_stars": 179,
 	"typescript": true,
-	"version": "2.1.0",
+	"version": "2.1.1",
 	"svelte_range": "^5.0.0-next.1",
 	"kit_range": "^2.20.2",
-	"last_rune_check_version": "2.1.0"
+	"last_rune_check_version": "2.1.1",
+	"dependencies": [],
+	"unpacked_size": 334271
 }

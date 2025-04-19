@@ -12,5 +12,20 @@
 	"typescript": true,
 	"version": "1.1.0",
 	"svelte_range": "*",
-	"last_rune_check_version": "1.1.0"
+	"last_rune_check_version": "1.1.0",
+	"dependencies": [
+		{
+			"name": "prettier-plugin-svelte",
+			"semver": "~3.3.3"
+		},
+		{
+			"name": "prettier-plugin-tailwindcss",
+			"semver": "~0.6.11"
+		},
+		{
+			"name": "@viamrobotics/prettier-config",
+			"semver": "^1.0.1"
+		}
+	],
+	"unpacked_size": 14180
 }

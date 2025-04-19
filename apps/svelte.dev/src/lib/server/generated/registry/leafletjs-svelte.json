@@ -13,5 +13,24 @@
 	"version": "0.1.1",
 	"svelte_range": "^4.0.5",
 	"kit_range": "^1.25.2",
-	"last_rune_check_version": "0.1.1"
+	"last_rune_check_version": "0.1.1",
+	"dependencies": [
+		{
+			"name": "@types/leaflet",
+			"semver": "^1.9.6"
+		},
+		{
+			"name": "@types/leaflet-draw",
+			"semver": "^1.0.8"
+		},
+		{
+			"name": "leaflet",
+			"semver": "^1.9.4"
+		},
+		{
+			"name": "leaflet-draw",
+			"semver": "^1.0.4"
+		}
+	],
+	"unpacked_size": 49387
 }

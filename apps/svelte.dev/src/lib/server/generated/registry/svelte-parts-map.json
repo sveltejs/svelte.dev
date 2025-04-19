@@ -12,5 +12,12 @@
 	"typescript": false,
 	"version": "0.0.24",
 	"svelte_range": "^3.29.7",
-	"last_rune_check_version": "0.0.24"
+	"last_rune_check_version": "0.0.24",
+	"dependencies": [
+		{
+			"name": "leaflet",
+			"semver": "^1.7.1"
+		}
+	],
+	"unpacked_size": 6248
 }

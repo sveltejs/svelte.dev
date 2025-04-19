@@ -6,9 +6,10 @@
 	interface Props {
 		title: string;
 		packages: Package[];
+		select: (pkg: string) => void;
 	}
 
-	let { title, packages }: Props = $props();
+	let { title, packages, select }: Props = $props();
 
 	let content: HTMLElement;
 	let scroller: HTMLElement;
@@ -57,7 +58,7 @@
 			<div bind:this={content} class="content">
 				{#each packages as pkg}
 					<div class="item">
-						<PackageCard {pkg} />
+						<PackageCard {pkg} {select} />
 					</div>
 				{/each}
 			</div>
@@ -76,7 +77,7 @@
 			<div class="content">
 				{#each packages as pkg}
 					<div class="item">
-						<PackageCard {pkg} />
+						<PackageCard {pkg} {select} />
 					</div>
 				{/each}
 			</div>

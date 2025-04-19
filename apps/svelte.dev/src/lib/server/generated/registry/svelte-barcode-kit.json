@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "0.0.10",
 	"svelte_range": "^4.0.0",
-	"last_rune_check_version": "0.0.10"
+	"last_rune_check_version": "0.0.10",
+	"dependencies": [
+		{
+			"name": "@zxing/library",
+			"semver": "^0.20.0"
+		},
+		{
+			"name": "jsbarcode",
+			"semver": "^3.11.5"
+		}
+	],
+	"unpacked_size": 3105
 }

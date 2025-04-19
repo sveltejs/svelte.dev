@@ -11,5 +11,56 @@
 	"version": "1.1.8",
 	"svelte_range": "^3.31.2",
 	"last_rune_check_version": "1.1.8",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "autoprefixer",
+			"semver": "^9.8.6"
+		},
+		{
+			"name": "merge-deep",
+			"semver": "^3.0.3"
+		},
+		{
+			"name": "postcss",
+			"semver": "^8.2.6"
+		},
+		{
+			"name": "postcss-import",
+			"semver": "^14.0.0"
+		},
+		{
+			"name": "postcss-input-range",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "postcss-url",
+			"semver": "^10.1.1"
+		},
+		{
+			"name": "rollup-plugin-postcss",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.31.2"
+		},
+		{
+			"name": "svelte-typed-component",
+			"semver": "^1.1.1"
+		},
+		{
+			"name": "tailwind-css-variables",
+			"semver": "^2.0.3"
+		},
+		{
+			"name": "tailwindcss",
+			"semver": "^2.0.3"
+		},
+		{
+			"name": "tinycolor2",
+			"semver": "^1.4.2"
+		}
+	],
+	"unpacked_size": 964737
 }

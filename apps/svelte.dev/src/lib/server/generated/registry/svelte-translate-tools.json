@@ -12,5 +12,28 @@
 	"typescript": true,
 	"version": "0.1.7",
 	"svelte_range": "^3.43.1",
-	"last_rune_check_version": "0.1.7"
+	"last_rune_check_version": "0.1.7",
+	"dependencies": [
+		{
+			"name": "fs-extra",
+			"semver": "^10.0.0"
+		},
+		{
+			"name": "glob",
+			"semver": "^7.2.0"
+		},
+		{
+			"name": "intl-messageformat",
+			"semver": "^9.9.2"
+		},
+		{
+			"name": "lodash",
+			"semver": "^4.17.21"
+		},
+		{
+			"name": "xliff",
+			"semver": "^5.7.0"
+		}
+	],
+	"unpacked_size": 109040
 }

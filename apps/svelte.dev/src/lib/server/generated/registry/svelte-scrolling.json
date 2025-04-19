@@ -12,5 +12,7 @@
 	"typescript": true,
 	"version": "1.5.1",
 	"svelte_range": "^4 || ^5",
-	"last_rune_check_version": "1.5.1"
+	"last_rune_check_version": "1.5.1",
+	"dependencies": [],
+	"unpacked_size": 19434
 }

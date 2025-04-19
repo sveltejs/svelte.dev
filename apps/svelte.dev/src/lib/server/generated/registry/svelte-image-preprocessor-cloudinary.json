@@ -12,5 +12,24 @@
 	"typescript": false,
 	"version": "0.0.3",
 	"svelte_range": "3.48.0",
-	"last_rune_check_version": "0.0.3"
+	"last_rune_check_version": "0.0.3",
+	"dependencies": [
+		{
+			"name": "cloudinary",
+			"semver": "1.30.0"
+		},
+		{
+			"name": "dotenv",
+			"semver": "16.0.1"
+		},
+		{
+			"name": "svelte",
+			"semver": "3.48.0"
+		},
+		{
+			"name": "svelte-preprocess",
+			"semver": "4.10.7"
+		}
+	],
+	"unpacked_size": 11106
 }

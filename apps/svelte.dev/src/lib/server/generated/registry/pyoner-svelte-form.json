@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "1.0.2",
 	"svelte_range": "^3.17.1",
-	"last_rune_check_version": "1.0.2"
+	"last_rune_check_version": "1.0.2",
+	"dependencies": [
+		{
+			"name": "@pyoner/svelte-form-common",
+			"semver": "^0.1.2"
+		},
+		{
+			"name": "is-what",
+			"semver": "^3.7.1"
+		}
+	],
+	"unpacked_size": 519026
 }

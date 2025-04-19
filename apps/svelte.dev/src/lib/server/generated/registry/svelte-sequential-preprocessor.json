@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "2.0.2",
 	"svelte_range": "^4.2.19",
-	"last_rune_check_version": "2.0.2"
+	"last_rune_check_version": "2.0.2",
+	"dependencies": [
+		{
+			"name": "svelte",
+			"semver": "^4.2.19"
+		},
+		{
+			"name": "tslib",
+			"semver": "~2.7.0"
+		}
+	],
+	"unpacked_size": 7447
 }

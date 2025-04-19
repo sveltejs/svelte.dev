@@ -16,12 +16,27 @@
 	],
 	"homepage": "https://github.com/getsentry/sentry-javascript/tree/master/packages/svelte",
 	"downloads": 75828,
-	"updated": "2025-04-08T14:18:47.246Z",
+	"updated": "2025-04-16T13:35:42.394Z",
 	"tags": ["integration"],
 	"runes": false,
 	"github_stars": 8196,
 	"typescript": true,
-	"version": "9.12.0",
+	"version": "9.13.0",
 	"svelte_range": "3.x || 4.x || 5.x",
-	"last_rune_check_version": "9.12.0"
+	"last_rune_check_version": "9.13.0",
+	"dependencies": [
+		{
+			"name": "@sentry/browser",
+			"semver": "9.13.0"
+		},
+		{
+			"name": "@sentry/core",
+			"semver": "9.13.0"
+		},
+		{
+			"name": "magic-string",
+			"semver": "^0.30.0"
+		}
+	],
+	"unpacked_size": 72544
 }

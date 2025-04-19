@@ -13,5 +13,12 @@
 	"version": "0.0.19",
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.0.0-next.587",
-	"last_rune_check_version": "0.0.19"
+	"last_rune_check_version": "0.0.19",
+	"dependencies": [
+		{
+			"name": "date-fns",
+			"semver": "^2.30.0"
+		}
+	],
+	"unpacked_size": 38262
 }

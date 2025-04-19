@@ -12,5 +12,12 @@
 	"typescript": false,
 	"version": "0.1.15",
 	"svelte_range": "^3.23.2",
-	"last_rune_check_version": "0.1.15"
+	"last_rune_check_version": "0.1.15",
+	"dependencies": [
+		{
+			"name": "compare-image-slider",
+			"semver": "^0.1.15"
+		}
+	],
+	"unpacked_size": 294303
 }

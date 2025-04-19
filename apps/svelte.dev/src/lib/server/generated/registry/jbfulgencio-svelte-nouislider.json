@@ -12,5 +12,12 @@
 	"typescript": false,
 	"version": "1.0.0",
 	"svelte_range": "^3.24.0",
-	"last_rune_check_version": "1.0.0"
+	"last_rune_check_version": "1.0.0",
+	"dependencies": [
+		{
+			"name": "nouislider",
+			"semver": "^14.6.0"
+		}
+	],
+	"unpacked_size": 238496
 }

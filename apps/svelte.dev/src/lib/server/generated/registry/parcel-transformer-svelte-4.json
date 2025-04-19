@@ -12,5 +12,24 @@
 	"typescript": false,
 	"version": "1.2.5",
 	"svelte_range": "^3.0.0 || ^4.0.0",
-	"last_rune_check_version": "1.2.5"
+	"last_rune_check_version": "1.2.5",
+	"dependencies": [
+		{
+			"name": "@parcel/plugin",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "@parcel/source-map",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "@parcel/utils",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.44.0 || ^4.0.0"
+		}
+	],
+	"unpacked_size": 8982
 }

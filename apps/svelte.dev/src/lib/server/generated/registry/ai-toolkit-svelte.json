@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "1.1.22",
 	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
-	"last_rune_check_version": "1.1.22"
+	"last_rune_check_version": "1.1.22",
+	"dependencies": [
+		{
+			"name": "@ai-toolkit/provider-utils",
+			"semver": "2.1.11"
+		},
+		{
+			"name": "@ai-toolkit/ui-utils",
+			"semver": "1.1.17"
+		}
+	],
+	"unpacked_size": 114625
 }

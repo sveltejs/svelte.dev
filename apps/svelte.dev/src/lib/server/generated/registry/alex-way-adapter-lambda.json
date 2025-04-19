@@ -11,5 +11,20 @@
 	"typescript": false,
 	"version": "1.0.4",
 	"kit_range": "^1.0.1",
-	"last_rune_check_version": "1.0.4"
+	"last_rune_check_version": "1.0.4",
+	"dependencies": [
+		{
+			"name": "esbuild",
+			"semver": "0.15.16"
+		},
+		{
+			"name": "rimraf",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "set-cookie-parser",
+			"semver": "^2.5.1"
+		}
+	],
+	"unpacked_size": 13915
 }

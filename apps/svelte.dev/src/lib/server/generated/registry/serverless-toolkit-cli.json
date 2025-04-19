@@ -12,5 +12,112 @@
 	"typescript": true,
 	"version": "3.0.83",
 	"svelte_range": "3.52.0",
-	"last_rune_check_version": "3.0.83"
+	"last_rune_check_version": "3.0.83",
+	"dependencies": [
+		{
+			"name": "@serverless-toolkit/stacks",
+			"semver": "^3.0.83"
+		},
+		{
+			"name": "aws-cdk",
+			"semver": "2.50.0"
+		},
+		{
+			"name": "aws-cdk-lib",
+			"semver": "2.50.0"
+		},
+		{
+			"name": "aws-sdk",
+			"semver": "2.1246.0"
+		},
+		{
+			"name": "chokidar",
+			"semver": "3.5.3"
+		},
+		{
+			"name": "cli-spinner",
+			"semver": "0.2.10"
+		},
+		{
+			"name": "constructs",
+			"semver": "10.1.148"
+		},
+		{
+			"name": "degit",
+			"semver": "2.8.4"
+		},
+		{
+			"name": "dotenv",
+			"semver": "16.0.3"
+		},
+		{
+			"name": "enquirer",
+			"semver": "2.3.6"
+		},
+		{
+			"name": "esbuild",
+			"semver": "0.15.13"
+		},
+		{
+			"name": "esbuild-node-externals",
+			"semver": "1.5.0"
+		},
+		{
+			"name": "esbuild-sass-plugin",
+			"semver": "2.4.0"
+		},
+		{
+			"name": "esbuild-svelte",
+			"semver": "0.7.1"
+		},
+		{
+			"name": "mdsvex",
+			"semver": "0.10.6"
+		},
+		{
+			"name": "node-sass",
+			"semver": "7.0.3"
+		},
+		{
+			"name": "playwright",
+			"semver": "1.27.1"
+		},
+		{
+			"name": "prettier",
+			"semver": "2.7.1"
+		},
+		{
+			"name": "replace-in-files",
+			"semver": "3.0.0"
+		},
+		{
+			"name": "sass",
+			"semver": "1.55.0"
+		},
+		{
+			"name": "svelte",
+			"semver": "3.52.0"
+		},
+		{
+			"name": "svelte-preprocess",
+			"semver": "4.10.7"
+		},
+		{
+			"name": "typescript",
+			"semver": "4.8.4"
+		},
+		{
+			"name": "update-dotenv",
+			"semver": "1.1.1"
+		},
+		{
+			"name": "ws-reconnect",
+			"semver": "1.0.7"
+		},
+		{
+			"name": "yargs",
+			"semver": "17.6.1"
+		}
+	],
+	"unpacked_size": 57502
 }

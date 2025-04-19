@@ -5,11 +5,26 @@
 	"authors": ["antfu", "unocss-bot"],
 	"homepage": "https://unocss.dev",
 	"downloads": 198649,
-	"updated": "2025-04-12T01:31:24.434Z",
+	"updated": "2025-04-18T09:52:15.035Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 17512,
 	"typescript": true,
-	"version": "66.1.0-beta.11",
-	"last_rune_check_version": "66.1.0-beta.11"
+	"version": "66.1.0-beta.12",
+	"last_rune_check_version": "66.1.0-beta.12",
+	"dependencies": [
+		{
+			"name": "@iconify/utils",
+			"semver": "^2.3.0"
+		},
+		{
+			"name": "ofetch",
+			"semver": "^1.4.1"
+		},
+		{
+			"name": "@unocss/core",
+			"semver": "66.1.0-beta.12"
+		}
+	],
+	"unpacked_size": 26355
 }

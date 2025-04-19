@@ -12,5 +12,108 @@
 	"typescript": true,
 	"version": "0.29.19",
 	"svelte_range": "^3.35.0",
-	"last_rune_check_version": "0.29.19"
+	"last_rune_check_version": "0.29.19",
+	"dependencies": [
+		{
+			"name": "@tiptap/core",
+			"semver": "^2.0.0-beta.62"
+		},
+		{
+			"name": "@tiptap/extension-blockquote",
+			"semver": "^2.0.0-beta.12"
+		},
+		{
+			"name": "@tiptap/extension-bold",
+			"semver": "^2.0.0-beta.12"
+		},
+		{
+			"name": "@tiptap/extension-bullet-list",
+			"semver": "^2.0.0-beta.12"
+		},
+		{
+			"name": "@tiptap/extension-character-count",
+			"semver": "^2.0.0-beta.12"
+		},
+		{
+			"name": "@tiptap/extension-code",
+			"semver": "^2.0.0-beta.12"
+		},
+		{
+			"name": "@tiptap/extension-code-block",
+			"semver": "^2.0.0-beta.14"
+		},
+		{
+			"name": "@tiptap/extension-document",
+			"semver": "^2.0.0-beta.11"
+		},
+		{
+			"name": "@tiptap/extension-heading",
+			"semver": "^2.0.0-beta.12"
+		},
+		{
+			"name": "@tiptap/extension-history",
+			"semver": "^2.0.0-beta.11"
+		},
+		{
+			"name": "@tiptap/extension-image",
+			"semver": "^2.0.0-beta.13"
+		},
+		{
+			"name": "@tiptap/extension-italic",
+			"semver": "^2.0.0-beta.12"
+		},
+		{
+			"name": "@tiptap/extension-link",
+			"semver": "^2.0.0-beta.16"
+		},
+		{
+			"name": "@tiptap/extension-list-item",
+			"semver": "^2.0.0-beta.12"
+		},
+		{
+			"name": "@tiptap/extension-ordered-list",
+			"semver": "^2.0.0-beta.12"
+		},
+		{
+			"name": "@tiptap/extension-paragraph",
+			"semver": "^2.0.0-beta.13"
+		},
+		{
+			"name": "@tiptap/extension-text",
+			"semver": "^2.0.0-beta.11"
+		},
+		{
+			"name": "@tiptap/extension-typography",
+			"semver": "^2.0.0-beta.11"
+		},
+		{
+			"name": "diff",
+			"semver": "^5.0.0"
+		},
+		{
+			"name": "marked",
+			"semver": "^2.0.1"
+		},
+		{
+			"name": "parse-full-name-esm",
+			"semver": "^1.2.5"
+		},
+		{
+			"name": "svelte-intersection-observer",
+			"semver": "^0.7.0"
+		},
+		{
+			"name": "svelte-portal",
+			"semver": "^2.1.2"
+		},
+		{
+			"name": "validator",
+			"semver": "^13.6.0"
+		},
+		{
+			"name": "zxcvbn-esm",
+			"semver": "^4.4.7"
+		}
+	],
+	"unpacked_size": 1340298
 }

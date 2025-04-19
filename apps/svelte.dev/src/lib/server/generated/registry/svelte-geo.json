@@ -13,5 +13,20 @@
 	"version": "0.3.0",
 	"svelte_range": "^3.42.6",
 	"kit_range": "next",
-	"last_rune_check_version": "0.3.0"
+	"last_rune_check_version": "0.3.0",
+	"dependencies": [
+		{
+			"name": "d3-geo",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "d3-scale",
+			"semver": "^4.0.2"
+		},
+		{
+			"name": "d3-zoom",
+			"semver": "^3.0.0"
+		}
+	],
+	"unpacked_size": 15956
 }

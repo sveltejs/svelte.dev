@@ -12,5 +12,16 @@
 	"version": "1.1.22",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "1.1.22",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "color-calendar",
+			"semver": "^1.0.7"
+		},
+		{
+			"name": "corrected-color-calendar",
+			"semver": "^1.2.0"
+		}
+	],
+	"unpacked_size": 4865230
 }

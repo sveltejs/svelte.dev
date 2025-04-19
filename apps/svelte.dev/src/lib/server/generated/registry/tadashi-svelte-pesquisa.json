@@ -12,5 +12,24 @@
 	"typescript": false,
 	"version": "2.0.0",
 	"svelte_range": "3.55.0",
-	"last_rune_check_version": "2.0.0"
+	"last_rune_check_version": "2.0.0",
+	"dependencies": [
+		{
+			"name": "@tadashi/common",
+			"semver": "3.0.0"
+		},
+		{
+			"name": "@tadashi/flatten-object",
+			"semver": "3.1.0"
+		},
+		{
+			"name": "@tadashi/unflatten-object",
+			"semver": "2.0.2"
+		},
+		{
+			"name": "@xet/totp-wasm-web",
+			"semver": "1.0.0"
+		}
+	],
+	"unpacked_size": 349036
 }

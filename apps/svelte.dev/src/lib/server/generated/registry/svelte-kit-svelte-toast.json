@@ -13,5 +13,20 @@
 	"version": "0.9.7",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.5.27",
-	"last_rune_check_version": "0.9.7"
+	"last_rune_check_version": "0.9.7",
+	"dependencies": [
+		{
+			"name": "@vercel/analytics",
+			"semver": "^1.3.1"
+		},
+		{
+			"name": "clsx",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "tailwind-merge",
+			"semver": "^1.14.0"
+		}
+	],
+	"unpacked_size": 27497
 }

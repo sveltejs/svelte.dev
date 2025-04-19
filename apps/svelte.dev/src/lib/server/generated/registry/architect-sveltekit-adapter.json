@@ -11,5 +11,12 @@
 	"version": "0.0.4",
 	"kit_range": "^1.0.0-next.147",
 	"last_rune_check_version": "0.0.4",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@architect/functions",
+			"semver": "^3.14.2"
+		}
+	],
+	"unpacked_size": 251626
 }

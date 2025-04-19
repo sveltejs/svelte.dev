@@ -11,5 +11,60 @@
 	"version": "2.0.0-beta.3",
 	"svelte_range": "3.*",
 	"last_rune_check_version": "2.0.0-beta.3",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "boxen",
+			"semver": "^5.1.2"
+		},
+		{
+			"name": "chalk",
+			"semver": "^2.4.2"
+		},
+		{
+			"name": "commander",
+			"semver": "^6.2.1"
+		},
+		{
+			"name": "esbuild",
+			"semver": "^0.14.25"
+		},
+		{
+			"name": "esbuild-svelte",
+			"semver": "^0.6.3"
+		},
+		{
+			"name": "figlet",
+			"semver": "^1.5.2"
+		},
+		{
+			"name": "glob",
+			"semver": "^7.2.0"
+		},
+		{
+			"name": "got",
+			"semver": "11.8.3"
+		},
+		{
+			"name": "gradient-string",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "minimist",
+			"semver": "^1.2.5"
+		},
+		{
+			"name": "ora",
+			"semver": "5.4.1"
+		},
+		{
+			"name": "semver",
+			"semver": "^6.3.0"
+		},
+		{
+			"name": "shelljs",
+			"semver": "^0.8.5"
+		}
+	],
+	"unpacked_size": 9851
 }

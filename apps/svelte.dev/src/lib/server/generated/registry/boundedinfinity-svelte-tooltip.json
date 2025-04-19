@@ -13,5 +13,12 @@
 	"version": "0.0.1",
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
-	"last_rune_check_version": "0.0.1"
+	"last_rune_check_version": "0.0.1",
+	"dependencies": [
+		{
+			"name": "@boundedinfinity/svelte-ea",
+			"semver": "^0.0.8"
+		}
+	],
+	"unpacked_size": 6235
 }

@@ -12,5 +12,40 @@
 	"typescript": true,
 	"version": "2.0.7",
 	"kit_range": "2.x",
-	"last_rune_check_version": "2.0.7"
+	"last_rune_check_version": "2.0.7",
+	"dependencies": [
+		{
+			"name": "@sentry/node",
+			"semver": "8.53.0"
+		},
+		{
+			"name": "@sentry/svelte",
+			"semver": "8.53.0"
+		},
+		{
+			"name": "@sentry/opentelemetry",
+			"semver": "8.53.0"
+		},
+		{
+			"name": "@opentelemetry/api",
+			"semver": "1.9.0"
+		},
+		{
+			"name": "@opentelemetry/resources",
+			"semver": "1.30.1"
+		},
+		{
+			"name": "@opentelemetry/sdk-trace-base",
+			"semver": "1.30.1"
+		},
+		{
+			"name": "@opentelemetry/instrumentation",
+			"semver": "0.57.1"
+		},
+		{
+			"name": "wrangler",
+			"semver": "3.105.1"
+		}
+	],
+	"unpacked_size": 1473939
 }

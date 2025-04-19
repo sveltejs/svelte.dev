@@ -11,5 +11,16 @@
 	"version": "0.0.4",
 	"svelte_range": "^3.49.0",
 	"last_rune_check_version": "0.0.4",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "hls.js",
+			"semver": "^1.0.10"
+		},
+		{
+			"name": "throttle-debounce",
+			"semver": "^3.0.1"
+		}
+	],
+	"unpacked_size": 1798581
 }

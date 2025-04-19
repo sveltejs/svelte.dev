@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "0.6.0",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.6.0"
+	"last_rune_check_version": "0.6.0",
+	"dependencies": [
+		{
+			"name": "focus-options-polyfill",
+			"semver": "^1.6.0"
+		}
+	],
+	"unpacked_size": 150272
 }

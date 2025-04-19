@@ -13,5 +13,32 @@
 	"version": "2.1.1",
 	"svelte_range": "^5",
 	"kit_range": "^1.30.4",
-	"last_rune_check_version": "2.1.1"
+	"last_rune_check_version": "2.1.1",
+	"dependencies": [
+		{
+			"name": "@sveltejs/vite-plugin-svelte",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "html-to-text",
+			"semver": "^9.0.5"
+		},
+		{
+			"name": "resend",
+			"semver": "2.0.0"
+		},
+		{
+			"name": "svelte",
+			"semver": "^5"
+		},
+		{
+			"name": "svelte-persisted-store",
+			"semver": "^0.12.0"
+		},
+		{
+			"name": "tw-to-css",
+			"semver": "0.0.12"
+		}
+	],
+	"unpacked_size": 93549
 }

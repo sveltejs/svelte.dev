@@ -12,5 +12,28 @@
 	"typescript": true,
 	"version": "2.0.3",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "2.0.3"
+	"last_rune_check_version": "2.0.3",
+	"dependencies": [
+		{
+			"name": "@solana/wallet-adapter-base",
+			"semver": "^0.9.19"
+		},
+		{
+			"name": "@solana/web3.js",
+			"semver": "^1.70.0"
+		},
+		{
+			"name": "@types/node-fetch",
+			"semver": "^2.6.2"
+		},
+		{
+			"name": "eventemitter3",
+			"semver": "^4.0.7"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.0.0"
+		}
+	],
+	"unpacked_size": 48723
 }

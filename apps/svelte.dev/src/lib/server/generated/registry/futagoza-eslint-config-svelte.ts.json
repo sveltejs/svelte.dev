@@ -12,5 +12,16 @@
 	"typescript": false,
 	"version": "16.1.0",
 	"svelte_range": "*",
-	"last_rune_check_version": "16.1.0"
+	"last_rune_check_version": "16.1.0",
+	"dependencies": [
+		{
+			"name": "@futagoza/eslint-config-svelte",
+			"semver": "16.1.0"
+		},
+		{
+			"name": "@futagoza/eslint-config-typescript",
+			"semver": "16.1.0"
+		}
+	],
+	"unpacked_size": 4339
 }

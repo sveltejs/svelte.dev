@@ -13,5 +13,44 @@
 	"version": "0.1.4",
 	"svelte_range": "5.0.0-next.85",
 	"kit_range": "^2.5.7",
-	"last_rune_check_version": "0.1.4"
+	"last_rune_check_version": "0.1.4",
+	"dependencies": [
+		{
+			"name": "@robloche/chartjs-plugin-streaming",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "bad-words-next",
+			"semver": "^2.3.1"
+		},
+		{
+			"name": "base-x",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "chart.js",
+			"semver": "^4.4.2"
+		},
+		{
+			"name": "chartjs-adapter-date-fns",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "date-fns",
+			"semver": "^3.6.0"
+		},
+		{
+			"name": "firebase-admin",
+			"semver": "^12.1.0"
+		},
+		{
+			"name": "redis",
+			"semver": "^4.6.13"
+		},
+		{
+			"name": "svelte-web-storage",
+			"semver": "^0.0.8"
+		}
+	],
+	"unpacked_size": 37964
 }

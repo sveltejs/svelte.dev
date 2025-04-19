@@ -11,5 +11,80 @@
 	"version": "0.1.22",
 	"svelte_range": "^3.55.0",
 	"last_rune_check_version": "0.1.22",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@codemirror/autocomplete",
+			"semver": "^6.0.0"
+		},
+		{
+			"name": "@codemirror/commands",
+			"semver": "^6.0.0"
+		},
+		{
+			"name": "@codemirror/lang-css",
+			"semver": "^6.0.0"
+		},
+		{
+			"name": "@codemirror/lang-html",
+			"semver": "^6.1.1"
+		},
+		{
+			"name": "@codemirror/lang-javascript",
+			"semver": "^6.1.0"
+		},
+		{
+			"name": "@codemirror/lang-json",
+			"semver": "^6.0.0"
+		},
+		{
+			"name": "@codemirror/language",
+			"semver": "^6.0.0"
+		},
+		{
+			"name": "@codemirror/lint",
+			"semver": "^6.0.0"
+		},
+		{
+			"name": "@codemirror/search",
+			"semver": "^6.0.0"
+		},
+		{
+			"name": "@codemirror/state",
+			"semver": "^6.0.0"
+		},
+		{
+			"name": "@codemirror/view",
+			"semver": "^6.0.0"
+		},
+		{
+			"name": "@sv-print/hiprint",
+			"semver": "^0.2.9"
+		},
+		{
+			"name": "codemirror",
+			"semver": "^6.0.1"
+		},
+		{
+			"name": "crypto-js",
+			"semver": "^4.1.1"
+		},
+		{
+			"name": "eslint-linter-browserify",
+			"semver": "^8.37.0"
+		},
+		{
+			"name": "file-saver",
+			"semver": "^2.0.5"
+		},
+		{
+			"name": "interactjs",
+			"semver": "^1.10.17"
+		},
+		{
+			"name": "jsonlint-mod",
+			"semver": "^1.7.6"
+		}
+	],
+	"unpacked_size": 1075357
 }

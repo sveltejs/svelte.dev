@@ -11,5 +11,32 @@
 	"github_stars": 276,
 	"typescript": true,
 	"version": "0.12.3",
-	"last_rune_check_version": "0.12.3"
+	"last_rune_check_version": "0.12.3",
+	"dependencies": [
+		{
+			"name": "babel-plugin-precompile-intl",
+			"semver": "^0.5.2"
+		},
+		{
+			"name": "js-yaml",
+			"semver": "^4.1.0"
+		},
+		{
+			"name": "json5",
+			"semver": "^2.2.3"
+		},
+		{
+			"name": "path-starts-with",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "precompile-intl-runtime",
+			"semver": "^0.8.5"
+		},
+		{
+			"name": "strip-bom",
+			"semver": "^5.0.0"
+		}
+	],
+	"unpacked_size": 121874
 }

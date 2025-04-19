@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "0.8.0",
 	"svelte_range": "^4.0.0",
-	"last_rune_check_version": "0.8.0"
+	"last_rune_check_version": "0.8.0",
+	"dependencies": [
+		{
+			"name": "tinyglobby",
+			"semver": "^0.2.12"
+		}
+	],
+	"unpacked_size": 50691
 }

@@ -11,5 +11,12 @@
 	"version": "2.1.7",
 	"svelte_range": "^3.24.0",
 	"last_rune_check_version": "2.1.7",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@beyonk/async-script-loader",
+			"semver": "^1.0.3"
+		}
+	],
+	"unpacked_size": 63815
 }

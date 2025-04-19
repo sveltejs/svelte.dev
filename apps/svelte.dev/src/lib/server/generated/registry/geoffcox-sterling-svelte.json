@@ -5,13 +5,28 @@
 	"authors": ["geoffcox"],
 	"homepage": "https://github.com/GeoffCox/sterling-svelte/blob/main/README.md",
 	"downloads": 77,
-	"updated": "2025-04-06T17:08:17.877Z",
+	"updated": "2025-04-17T08:12:17.780Z",
 	"tags": ["design-system"],
 	"runes": true,
 	"typescript": true,
-	"version": "2.0.4",
+	"version": "2.0.6",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
-	"last_rune_check_version": "2.0.4",
-	"github_stars": 0
+	"last_rune_check_version": "2.0.6",
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@floating-ui/dom",
+			"semver": "^1.1.0"
+		},
+		{
+			"name": "keyborg",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "lodash-es",
+			"semver": "^4.17.21"
+		}
+	],
+	"unpacked_size": 161925
 }

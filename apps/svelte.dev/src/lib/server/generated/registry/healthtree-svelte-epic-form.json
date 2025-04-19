@@ -19,5 +19,12 @@
 	"typescript": false,
 	"version": "0.0.20",
 	"svelte_range": "^3.38.2",
-	"last_rune_check_version": "0.0.20"
+	"last_rune_check_version": "0.0.20",
+	"dependencies": [
+		{
+			"name": "lodash-es",
+			"semver": "^4.17.21"
+		}
+	],
+	"unpacked_size": 325034
 }

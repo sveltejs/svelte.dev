@@ -12,5 +12,20 @@
 	"typescript": true,
 	"version": "2.0.0",
 	"svelte_range": "^3.46.3",
-	"last_rune_check_version": "2.0.0"
+	"last_rune_check_version": "2.0.0",
+	"dependencies": [
+		{
+			"name": "bulma",
+			"semver": "^0.9.3"
+		},
+		{
+			"name": "bulma-extensions",
+			"semver": "^6.2.7"
+		},
+		{
+			"name": "svelte-spa-router",
+			"semver": "^3.2.0"
+		}
+	],
+	"unpacked_size": 1262428
 }

@@ -12,5 +12,92 @@
 	"typescript": true,
 	"version": "0.7.7",
 	"svelte_range": "^4.2.8",
-	"last_rune_check_version": "0.7.7"
+	"last_rune_check_version": "0.7.7",
+	"dependencies": [
+		{
+			"name": "@lexical/clipboard",
+			"semver": "0.11.1"
+		},
+		{
+			"name": "@lexical/code",
+			"semver": "0.11.1"
+		},
+		{
+			"name": "@lexical/file",
+			"semver": "0.11.1"
+		},
+		{
+			"name": "@lexical/hashtag",
+			"semver": "0.11.1"
+		},
+		{
+			"name": "@lexical/headless",
+			"semver": "0.11.1"
+		},
+		{
+			"name": "@lexical/history",
+			"semver": "0.11.1"
+		},
+		{
+			"name": "@lexical/html",
+			"semver": "0.11.1"
+		},
+		{
+			"name": "@lexical/link",
+			"semver": "0.11.1"
+		},
+		{
+			"name": "@lexical/list",
+			"semver": "0.11.1"
+		},
+		{
+			"name": "@lexical/mark",
+			"semver": "0.11.1"
+		},
+		{
+			"name": "@lexical/overflow",
+			"semver": "0.11.1"
+		},
+		{
+			"name": "@lexical/plain-text",
+			"semver": "0.11.1"
+		},
+		{
+			"name": "@lexical/rich-text",
+			"semver": "0.11.1"
+		},
+		{
+			"name": "@lexical/selection",
+			"semver": "0.11.1"
+		},
+		{
+			"name": "@lexical/table",
+			"semver": "0.11.1"
+		},
+		{
+			"name": "@lexical/text",
+			"semver": "0.11.1"
+		},
+		{
+			"name": "@lexical/utils",
+			"semver": "0.11.1"
+		},
+		{
+			"name": "lexical",
+			"semver": "0.11.1"
+		},
+		{
+			"name": "lodash-es",
+			"semver": "^4.17.21"
+		},
+		{
+			"name": "prettier",
+			"semver": "^2.8.8"
+		},
+		{
+			"name": "svelte",
+			"semver": "^4.2.8"
+		}
+	],
+	"unpacked_size": 25454728
 }

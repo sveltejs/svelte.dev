@@ -12,5 +12,24 @@
 	"typescript": false,
 	"version": "0.0.2",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.0.2"
+	"last_rune_check_version": "0.0.2",
+	"dependencies": [
+		{
+			"name": "d3-cloud",
+			"semver": "^1.2.5"
+		},
+		{
+			"name": "d3-scale",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "d3-scale-chromatic",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "d3-selection",
+			"semver": "^3.0.0"
+		}
+	],
+	"unpacked_size": 130942
 }

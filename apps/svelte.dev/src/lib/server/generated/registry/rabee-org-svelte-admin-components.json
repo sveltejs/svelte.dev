@@ -22,5 +22,80 @@
 	"version": "0.1.19",
 	"svelte_range": "^3.55.1",
 	"kit_range": "^1.5.0",
-	"last_rune_check_version": "0.1.19"
+	"last_rune_check_version": "0.1.19",
+	"dependencies": [
+		{
+			"name": "@jalik/deep-extend",
+			"semver": "^1.1.14"
+		},
+		{
+			"name": "@milkdown/core",
+			"semver": "7.1.1"
+		},
+		{
+			"name": "@milkdown/ctx",
+			"semver": "7.1.1"
+		},
+		{
+			"name": "@milkdown/plugin-clipboard",
+			"semver": "7.1.1"
+		},
+		{
+			"name": "@milkdown/plugin-cursor",
+			"semver": "7.1.1"
+		},
+		{
+			"name": "@milkdown/plugin-history",
+			"semver": "7.1.1"
+		},
+		{
+			"name": "@milkdown/plugin-indent",
+			"semver": "7.1.1"
+		},
+		{
+			"name": "@milkdown/plugin-listener",
+			"semver": "7.1.1"
+		},
+		{
+			"name": "@milkdown/plugin-tooltip",
+			"semver": "7.1.1"
+		},
+		{
+			"name": "@milkdown/preset-commonmark",
+			"semver": "7.1.1"
+		},
+		{
+			"name": "@milkdown/preset-gfm",
+			"semver": "7.1.1"
+		},
+		{
+			"name": "@milkdown/prose",
+			"semver": "7.1.1"
+		},
+		{
+			"name": "@milkdown/theme-nord",
+			"semver": "7.1.1"
+		},
+		{
+			"name": "@milkdown/transformer",
+			"semver": "7.1.1"
+		},
+		{
+			"name": "@rabee-org/svelte-head",
+			"semver": "^0.1.0"
+		},
+		{
+			"name": "@rabee-org/svelte-modal-manager",
+			"semver": "0.2.1"
+		},
+		{
+			"name": "dayjs",
+			"semver": "^1.11.0"
+		},
+		{
+			"name": "sortablejs",
+			"semver": "^1.15.0"
+		}
+	],
+	"unpacked_size": 122086
 }

@@ -11,5 +11,12 @@
 	"version": "0.20.18",
 	"svelte_range": "^3.46.2",
 	"last_rune_check_version": "0.20.18",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@tinymce/tinymce-webcomponent",
+			"semver": "^1.2.0"
+		}
+	],
+	"unpacked_size": 149028
 }

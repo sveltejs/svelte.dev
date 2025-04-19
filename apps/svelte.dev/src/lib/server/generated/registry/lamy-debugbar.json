@@ -13,5 +13,32 @@
 	"version": "0.3.1",
 	"svelte_range": "^4.2.7",
 	"kit_range": "^1.27.6",
-	"last_rune_check_version": "0.3.1"
+	"last_rune_check_version": "0.3.1",
+	"dependencies": [
+		{
+			"name": "shikiji",
+			"semver": "^0.7.4"
+		},
+		{
+			"name": "@twind/core",
+			"semver": "^1.1.3"
+		},
+		{
+			"name": "@melt-ui/svelte",
+			"semver": "^0.63.0"
+		},
+		{
+			"name": "@twind/with-sveltekit",
+			"semver": "^1.1.3"
+		},
+		{
+			"name": "@twind/preset-tailwind",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "@twind/preset-autoprefix",
+			"semver": "^1.0.7"
+		}
+	],
+	"unpacked_size": 249772
 }

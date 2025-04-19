@@ -12,5 +12,12 @@
 	"typescript": false,
 	"version": "0.4.11",
 	"svelte_range": "^3.44.3",
-	"last_rune_check_version": "0.4.11"
+	"last_rune_check_version": "0.4.11",
+	"dependencies": [
+		{
+			"name": "sass",
+			"semver": "^1.57.1"
+		}
+	],
+	"unpacked_size": 92235
 }

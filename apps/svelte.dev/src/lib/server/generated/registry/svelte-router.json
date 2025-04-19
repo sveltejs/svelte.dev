@@ -12,5 +12,16 @@
 	"typescript": false,
 	"version": "3.0.0-alpha.2",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "3.0.0-alpha.2"
+	"last_rune_check_version": "3.0.0-alpha.2",
+	"dependencies": [
+		{
+			"name": "history",
+			"semver": "^4.9.0"
+		},
+		{
+			"name": "path-to-regexp",
+			"semver": "^3.0.0"
+		}
+	],
+	"unpacked_size": 100499
 }

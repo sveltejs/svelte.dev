@@ -13,5 +13,12 @@
 	"svelte_range": "^5.15.0",
 	"kit_range": "^2.15.0",
 	"last_rune_check_version": "0.0.12",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@floating-ui/dom",
+			"semver": "^1.6.12"
+		}
+	],
+	"unpacked_size": 452989
 }

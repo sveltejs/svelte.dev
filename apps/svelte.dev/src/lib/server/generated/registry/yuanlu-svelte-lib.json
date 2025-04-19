@@ -12,5 +12,20 @@
 	"runes": true,
 	"last_rune_check_version": "0.0.5",
 	"version": "0.0.5",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@steeze-ui/simple-icons",
+			"semver": "^1.10.1"
+		},
+		{
+			"name": "@steeze-ui/svelte-icon",
+			"semver": "^1.6.2"
+		},
+		{
+			"name": "animejs",
+			"semver": "^4.0.0"
+		}
+	],
+	"unpacked_size": 359833
 }

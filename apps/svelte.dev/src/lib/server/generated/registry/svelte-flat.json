@@ -12,5 +12,11 @@
 	"typescript": false,
 	"version": "0.2.0-alpha.7",
 	"svelte_range": "^1.40.2",
-	"last_rune_check_version": "0.2.0-alpha.7"
+	"last_rune_check_version": "0.2.0-alpha.7",
+	"dependencies": [
+		{
+			"name": "feather-icons",
+			"semver": "^3.3.0"
+		}
+	]
 }

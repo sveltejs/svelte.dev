@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "3.2.3",
 	"svelte_range": "^3.0.0 || ^4.0.0",
-	"last_rune_check_version": "3.2.3"
+	"last_rune_check_version": "3.2.3",
+	"dependencies": [
+		{
+			"name": "@easyroute/core",
+			"semver": "2.0.2"
+		}
+	],
+	"unpacked_size": 11260
 }

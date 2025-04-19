@@ -12,5 +12,56 @@
 	"typescript": false,
 	"version": "0.1.9",
 	"svelte_range": "^3.5.1",
-	"last_rune_check_version": "0.1.9"
+	"last_rune_check_version": "0.1.9",
+	"dependencies": [
+		{
+			"name": "@sindresorhus/fnv1a",
+			"semver": "^1.2.0"
+		},
+		{
+			"name": "callbag-merge-map",
+			"semver": "^0.0.1"
+		},
+		{
+			"name": "callbag-observe",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "callbag-of",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "callbag-pipe",
+			"semver": "^1.2.0"
+		},
+		{
+			"name": "extract-files",
+			"semver": "^5.0.1"
+		},
+		{
+			"name": "shadow-callbag",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "tallbag-filter",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "tallbag-from-fetch",
+			"semver": "^1.0.3"
+		},
+		{
+			"name": "tallbag-map",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "tallbag-share",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "tallbag-take",
+			"semver": "^1.0.0"
+		}
+	],
+	"unpacked_size": 130445
 }

@@ -1,6 +1,7 @@
 import { PACKAGES_META } from '$lib/packages-meta';
 import { registry, type Package } from '$lib/server/content';
-import { sort_downloads } from './search';
+import type { Pack } from 'tar-stream';
+import { sort_downloads } from '../search';
 
 export const prerender = false;
 
@@ -27,8 +28,15 @@ for (const { packages, title } of PACKAGES_META.FEATURED) {
 	});
 }
 
-export async function load({ url }) {
+export async function load({ params }) {
+	let pkg: Package | undefined;
+	if (params.pkg) {
+		// Find the package in the list
+		pkg = registry.find((pkg) => pkg.name === params.pkg);
+	}
+
 	return {
+		selected: pkg,
 		packages: registry,
 		homepage: homepage_data
 	};

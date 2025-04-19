@@ -13,5 +13,16 @@
 	"version": "0.2.2",
 	"svelte_range": "^3.55.1",
 	"kit_range": "^1.5.5",
-	"last_rune_check_version": "0.2.2"
+	"last_rune_check_version": "0.2.2",
+	"dependencies": [
+		{
+			"name": "sortablejs",
+			"semver": "^1.15.0"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.55.1"
+		}
+	],
+	"unpacked_size": 132407
 }

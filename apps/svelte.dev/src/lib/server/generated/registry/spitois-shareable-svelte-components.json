@@ -10,5 +10,12 @@
 	"typescript": false,
 	"version": "0.0.8",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.0.8"
+	"last_rune_check_version": "0.0.8",
+	"dependencies": [
+		{
+			"name": "rollup-plugin-babel",
+			"semver": "^4.4.0"
+		}
+	],
+	"unpacked_size": 151377
 }

@@ -12,5 +12,20 @@
 	"typescript": true,
 	"version": "1.2.4",
 	"svelte_range": "^3.6.7",
-	"last_rune_check_version": "1.2.4"
+	"last_rune_check_version": "1.2.4",
+	"dependencies": [
+		{
+			"name": "@sindresorhus/is",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "query-string",
+			"semver": "^6.8.1"
+		},
+		{
+			"name": "route-parser",
+			"semver": "^0.0.5"
+		}
+	],
+	"unpacked_size": 1232151
 }

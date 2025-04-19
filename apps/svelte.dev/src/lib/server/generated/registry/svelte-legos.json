@@ -13,5 +13,20 @@
 	"version": "0.2.5",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.5",
-	"last_rune_check_version": "0.2.5"
+	"last_rune_check_version": "0.2.5",
+	"dependencies": [
+		{
+			"name": "canvas-confetti",
+			"semver": "^1.6.0"
+		},
+		{
+			"name": "prism-svelte",
+			"semver": "^0.5.0"
+		},
+		{
+			"name": "prismjs",
+			"semver": "^1.29.0"
+		}
+	],
+	"unpacked_size": 348794
 }

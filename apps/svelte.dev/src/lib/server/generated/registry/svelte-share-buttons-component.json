@@ -12,5 +12,20 @@
 	"typescript": false,
 	"version": "3.0.0",
 	"svelte_range": "^4.2.12",
-	"last_rune_check_version": "3.0.0"
+	"last_rune_check_version": "3.0.0",
+	"dependencies": [
+		{
+			"name": "css",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "from",
+			"semver": "^0.1.7"
+		},
+		{
+			"name": "import",
+			"semver": "^0.0.6"
+		}
+	],
+	"unpacked_size": 192010
 }

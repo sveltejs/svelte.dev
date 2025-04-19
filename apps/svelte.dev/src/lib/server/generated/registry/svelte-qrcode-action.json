@@ -13,5 +13,12 @@
 	"version": "1.0.2",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.4",
-	"last_rune_check_version": "1.0.2"
+	"last_rune_check_version": "1.0.2",
+	"dependencies": [
+		{
+			"name": "styled-qr-code",
+			"semver": "^1.0.0"
+		}
+	],
+	"unpacked_size": 3211
 }

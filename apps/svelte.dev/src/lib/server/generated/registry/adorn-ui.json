@@ -13,5 +13,20 @@
 	"version": "0.0.10",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.23.0",
-	"last_rune_check_version": "0.0.10"
+	"last_rune_check_version": "0.0.10",
+	"dependencies": [
+		{
+			"name": "@renzp/classes",
+			"semver": "^0.0.3"
+		},
+		{
+			"name": "@renzp/number-correct",
+			"semver": "^0.0.6"
+		},
+		{
+			"name": "@renzp/utils",
+			"semver": "^0.3.4"
+		}
+	],
+	"unpacked_size": 1285512
 }

@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "1.1.2",
 	"svelte_range": "^3.31.2",
-	"last_rune_check_version": "1.1.2"
+	"last_rune_check_version": "1.1.2",
+	"dependencies": [
+		{
+			"name": "katex",
+			"semver": "^0.13.0"
+		},
+		{
+			"name": "prismjs",
+			"semver": "^1.23.0"
+		}
+	],
+	"unpacked_size": 4596822
 }

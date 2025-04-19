@@ -11,5 +11,12 @@
 	"version": "1.4.3",
 	"svelte_range": "^3.44.0",
 	"last_rune_check_version": "1.4.3",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "css-vars-ponyfill",
+			"semver": "^2.4.7"
+		}
+	],
+	"unpacked_size": 100610
 }

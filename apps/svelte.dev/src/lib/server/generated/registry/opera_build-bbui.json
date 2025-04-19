@@ -11,5 +11,180 @@
 	"version": "0.9.126",
 	"svelte_range": "^3.38.2",
 	"last_rune_check_version": "0.9.126",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@adobe/spectrum-css-workflow-icons",
+			"semver": "^1.2.1"
+		},
+		{
+			"name": "@spectrum-css/actionbutton",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "@spectrum-css/actiongroup",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "@spectrum-css/avatar",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "@spectrum-css/button",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "@spectrum-css/buttongroup",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "@spectrum-css/checkbox",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "@spectrum-css/dialog",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "@spectrum-css/divider",
+			"semver": "^1.0.3"
+		},
+		{
+			"name": "@spectrum-css/dropzone",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "@spectrum-css/fieldgroup",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "@spectrum-css/fieldlabel",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "@spectrum-css/icon",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "@spectrum-css/illustratedmessage",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "@spectrum-css/inputgroup",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "@spectrum-css/label",
+			"semver": "^2.0.10"
+		},
+		{
+			"name": "@spectrum-css/link",
+			"semver": "^3.1.1"
+		},
+		{
+			"name": "@spectrum-css/menu",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "@spectrum-css/modal",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "@spectrum-css/pagination",
+			"semver": "^3.0.3"
+		},
+		{
+			"name": "@spectrum-css/picker",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "@spectrum-css/popover",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "@spectrum-css/progressbar",
+			"semver": "^1.0.2"
+		},
+		{
+			"name": "@spectrum-css/progresscircle",
+			"semver": "^1.0.2"
+		},
+		{
+			"name": "@spectrum-css/radio",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "@spectrum-css/search",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "@spectrum-css/sidenav",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "@spectrum-css/statuslight",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "@spectrum-css/stepper",
+			"semver": "^3.0.3"
+		},
+		{
+			"name": "@spectrum-css/switch",
+			"semver": "^1.0.2"
+		},
+		{
+			"name": "@spectrum-css/table",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "@spectrum-css/tabs",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "@spectrum-css/tags",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "@spectrum-css/textfield",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "@spectrum-css/toast",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "@spectrum-css/tooltip",
+			"semver": "^3.0.3"
+		},
+		{
+			"name": "@spectrum-css/treeview",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "@spectrum-css/typography",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "@spectrum-css/underlay",
+			"semver": "^2.0.9"
+		},
+		{
+			"name": "@spectrum-css/vars",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "dayjs",
+			"semver": "^1.10.4"
+		},
+		{
+			"name": "svelte-flatpickr",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "svelte-portal",
+			"semver": "^1.0.0"
+		}
+	],
+	"unpacked_size": 1410730
 }

@@ -13,5 +13,12 @@
 	"version": "1.0.1",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.5.5",
-	"last_rune_check_version": "1.0.1"
+	"last_rune_check_version": "1.0.1",
+	"dependencies": [
+		{
+			"name": "aplayer",
+			"semver": "^1.10.1"
+		}
+	],
+	"unpacked_size": 17817
 }

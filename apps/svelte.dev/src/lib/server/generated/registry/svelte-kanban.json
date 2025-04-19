@@ -13,5 +13,20 @@
 	"version": "0.0.960",
 	"svelte_range": "^3.46.4",
 	"kit_range": "^1.0.0-next.294",
-	"last_rune_check_version": "0.0.960"
+	"last_rune_check_version": "0.0.960",
+	"dependencies": [
+		{
+			"name": "sass",
+			"semver": "^1.55.0"
+		},
+		{
+			"name": "svelte2tsx",
+			"semver": "^0.4.14"
+		},
+		{
+			"name": "vite",
+			"semver": "^3.1.8"
+		}
+	],
+	"unpacked_size": 59452
 }

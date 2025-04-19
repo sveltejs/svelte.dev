@@ -12,5 +12,20 @@
 	"typescript": true,
 	"version": "1.0.1",
 	"svelte_range": "^3.49.0",
-	"last_rune_check_version": "1.0.1"
+	"last_rune_check_version": "1.0.1",
+	"dependencies": [
+		{
+			"name": "@js-temporal/polyfill",
+			"semver": "^0.4.2"
+		},
+		{
+			"name": "color",
+			"semver": "^4.2.3"
+		},
+		{
+			"name": "moment",
+			"semver": "^2.29.4"
+		}
+	],
+	"unpacked_size": 368240
 }

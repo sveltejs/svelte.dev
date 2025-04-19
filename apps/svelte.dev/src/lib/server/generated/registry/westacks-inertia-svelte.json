@@ -13,5 +13,16 @@
 	"version": "1.0.29",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.5.5",
-	"last_rune_check_version": "1.0.29"
+	"last_rune_check_version": "1.0.29",
+	"dependencies": [
+		{
+			"name": "@inertiajs/core",
+			"semver": "^1.0.15"
+		},
+		{
+			"name": "lodash",
+			"semver": "^4.17.21"
+		}
+	],
+	"unpacked_size": 25857
 }

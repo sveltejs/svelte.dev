@@ -5,13 +5,20 @@
 	"authors": ["alexpechkarev"],
 	"homepage": "https://places-autocomplete-demo.pages.dev",
 	"downloads": 77,
-	"updated": "2025-04-13T09:53:18.048Z",
+	"updated": "2025-04-19T09:58:56.752Z",
 	"tags": ["integration"],
 	"runes": true,
 	"github_stars": 6,
 	"typescript": true,
-	"version": "2.2.5",
+	"version": "2.2.6",
 	"svelte_range": "^5.1.4",
 	"kit_range": "^2.20.5",
-	"last_rune_check_version": "2.2.5"
+	"last_rune_check_version": "2.2.6",
+	"dependencies": [
+		{
+			"name": "@googlemaps/js-api-loader",
+			"semver": "^1.16.8"
+		}
+	],
+	"unpacked_size": 46863
 }

@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "0.8.0",
 	"svelte_range": "^5.16.0",
-	"last_rune_check_version": "0.8.0"
+	"last_rune_check_version": "0.8.0",
+	"dependencies": [
+		{
+			"name": "@agnos-ui/core-bootstrap",
+			"semver": "0.8.0"
+		},
+		{
+			"name": "@agnos-ui/svelte-headless",
+			"semver": "0.8.0"
+		}
+	],
+	"unpacked_size": 199939
 }

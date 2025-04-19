@@ -11,5 +11,16 @@
 	"version": "0.2.5",
 	"svelte_range": "^3.41.0",
 	"last_rune_check_version": "0.2.5",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "rxjs",
+			"semver": "^7"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.41.0"
+		}
+	],
+	"unpacked_size": 5562
 }

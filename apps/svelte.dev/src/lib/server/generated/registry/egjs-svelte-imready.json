@@ -23,5 +23,16 @@
 	"typescript": true,
 	"version": "1.2.0",
 	"svelte_range": "^3.31.0",
-	"last_rune_check_version": "1.2.0"
+	"last_rune_check_version": "1.2.0",
+	"dependencies": [
+		{
+			"name": "@cfcs/svelte",
+			"semver": "^0.0.24"
+		},
+		{
+			"name": "@egjs/imready",
+			"semver": "~1.4.0"
+		}
+	],
+	"unpacked_size": 58307
 }

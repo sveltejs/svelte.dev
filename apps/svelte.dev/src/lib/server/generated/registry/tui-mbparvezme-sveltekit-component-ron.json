@@ -13,5 +13,104 @@
 	"version": "0.0.1",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.25.2",
-	"last_rune_check_version": "0.0.1"
+	"last_rune_check_version": "0.0.1",
+	"dependencies": [
+		{
+			"name": "@sveltejs/kit",
+			"semver": "^1.25.2"
+		},
+		{
+			"name": "@tailwindcss/forms",
+			"semver": "^0.5.6"
+		},
+		{
+			"name": "@tailwindcss/typography",
+			"semver": "^0.5.10"
+		},
+		{
+			"name": "@tiptap/core",
+			"semver": "^2.1.6"
+		},
+		{
+			"name": "@tiptap/extension-code",
+			"semver": "^2.1.6"
+		},
+		{
+			"name": "@tiptap/extension-color",
+			"semver": "^2.1.6"
+		},
+		{
+			"name": "@tiptap/extension-highlight",
+			"semver": "^2.1.11"
+		},
+		{
+			"name": "@tiptap/extension-image",
+			"semver": "^2.1.6"
+		},
+		{
+			"name": "@tiptap/extension-link",
+			"semver": "^2.1.6"
+		},
+		{
+			"name": "@tiptap/extension-placeholder",
+			"semver": "^2.1.6"
+		},
+		{
+			"name": "@tiptap/extension-subscript",
+			"semver": "^2.1.11"
+		},
+		{
+			"name": "@tiptap/extension-superscript",
+			"semver": "^2.1.11"
+		},
+		{
+			"name": "@tiptap/extension-table",
+			"semver": "^2.1.6"
+		},
+		{
+			"name": "@tiptap/extension-table-cell",
+			"semver": "^2.1.6"
+		},
+		{
+			"name": "@tiptap/extension-table-header",
+			"semver": "^2.1.6"
+		},
+		{
+			"name": "@tiptap/extension-table-row",
+			"semver": "^2.1.6"
+		},
+		{
+			"name": "@tiptap/extension-text-align",
+			"semver": "^2.1.11"
+		},
+		{
+			"name": "@tiptap/extension-text-style",
+			"semver": "^2.1.6"
+		},
+		{
+			"name": "@tiptap/extension-typography",
+			"semver": "^2.1.6"
+		},
+		{
+			"name": "@tiptap/extension-underline",
+			"semver": "^2.1.6"
+		},
+		{
+			"name": "@tiptap/extension-youtube",
+			"semver": "^2.1.6"
+		},
+		{
+			"name": "@tiptap/pm",
+			"semver": "^2.1.6"
+		},
+		{
+			"name": "@tiptap/starter-kit",
+			"semver": "^2.1.6"
+		},
+		{
+			"name": "tailwind-merge",
+			"semver": "^1.14.0"
+		}
+	],
+	"unpacked_size": 229244
 }

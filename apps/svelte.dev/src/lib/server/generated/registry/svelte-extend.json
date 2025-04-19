@@ -12,5 +12,36 @@
 	"typescript": false,
 	"version": "6.0.0",
 	"svelte_range": "^4.2.1",
-	"last_rune_check_version": "6.0.0"
+	"last_rune_check_version": "6.0.0",
+	"dependencies": [
+		{
+			"name": "babylon",
+			"semver": "^6.18.0"
+		},
+		{
+			"name": "@babel/traverse",
+			"semver": "7.23.0"
+		},
+		{
+			"name": "@babel/types",
+			"semver": "7.23.0"
+		},
+		{
+			"name": "@babel/generator",
+			"semver": "7.23.0"
+		},
+		{
+			"name": "@homer0/jimple",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "@homer0/simple-logger",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "@rollup/pluginutils",
+			"semver": "^5.0.4"
+		}
+	],
+	"unpacked_size": 74166
 }

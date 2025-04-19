@@ -13,5 +13,28 @@
 	"version": "2.0.7",
 	"svelte_range": "^3.58.0",
 	"kit_range": "^1.0.0-next.310",
-	"last_rune_check_version": "2.0.7"
+	"last_rune_check_version": "2.0.7",
+	"dependencies": [
+		{
+			"name": "@bulatdashiev/svelte-slider",
+			"semver": "^1.0.3"
+		},
+		{
+			"name": "@sveltejs/adapter-auto",
+			"semver": "^3.1.1"
+		},
+		{
+			"name": "fluent-svelte",
+			"semver": "^1.6.0"
+		},
+		{
+			"name": "focus-trap",
+			"semver": "^6.7.3"
+		},
+		{
+			"name": "tabbable",
+			"semver": "^5.2.1"
+		}
+	],
+	"unpacked_size": 485702
 }

@@ -12,5 +12,28 @@
 	"typescript": false,
 	"version": "0.13.0",
 	"svelte_range": "^3.59.2",
-	"last_rune_check_version": "0.13.0"
+	"last_rune_check_version": "0.13.0",
+	"dependencies": [
+		{
+			"name": "@macfja/svelte-persistent-store",
+			"semver": "^2.4.1"
+		},
+		{
+			"name": "@svizzle/dom",
+			"semver": "^0.7.3"
+		},
+		{
+			"name": "@svizzle/utils",
+			"semver": "^0.21.0"
+		},
+		{
+			"name": "bowser",
+			"semver": "^2.11.0"
+		},
+		{
+			"name": "d3-color",
+			"semver": "^3.1.0"
+		}
+	],
+	"unpacked_size": 167159
 }

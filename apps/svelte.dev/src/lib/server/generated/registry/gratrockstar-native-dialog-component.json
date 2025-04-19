@@ -12,5 +12,256 @@
 	"svelte_range": "^4.2.7",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "1.0.0",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "code-red",
+			"semver": "^1.0.4"
+		},
+		{
+			"name": "chokidar",
+			"semver": "^3.5.3"
+		},
+		{
+			"name": "acorn",
+			"semver": "^8.11.3"
+		},
+		{
+			"name": "aria-query",
+			"semver": "^5.3.0"
+		},
+		{
+			"name": "axobject-query",
+			"semver": "^3.2.1"
+		},
+		{
+			"name": "anymatch",
+			"semver": "^3.1.3"
+		},
+		{
+			"name": "binary-extensions",
+			"semver": "^2.2.0"
+		},
+		{
+			"name": "braces",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "cookie",
+			"semver": "^0.6.0"
+		},
+		{
+			"name": "debug",
+			"semver": "^4.3.4"
+		},
+		{
+			"name": "esm-env",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "deepmerge",
+			"semver": "^4.3.1"
+		},
+		{
+			"name": "estree-walker",
+			"semver": "^3.0.3"
+		},
+		{
+			"name": "dedent-js",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "globrex",
+			"semver": "^0.1.2"
+		},
+		{
+			"name": "css-tree",
+			"semver": "^2.3.1"
+		},
+		{
+			"name": "globalyzer",
+			"semver": "^0.1.0"
+		},
+		{
+			"name": "dequal",
+			"semver": "^2.0.3"
+		},
+		{
+			"name": "fill-range",
+			"semver": "^7.0.1"
+		},
+		{
+			"name": "is-extglob",
+			"semver": "^2.1.1"
+		},
+		{
+			"name": "glob-parent",
+			"semver": "^5.1.2"
+		},
+		{
+			"name": "kleur",
+			"semver": "^4.1.5"
+		},
+		{
+			"name": "is-glob",
+			"semver": "^4.0.3"
+		},
+		{
+			"name": "devalue",
+			"semver": "^4.3.2"
+		},
+		{
+			"name": "is-reference",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "lru-cache",
+			"semver": "^6.0.0"
+		},
+		{
+			"name": "import-meta-resolve",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "is-number",
+			"semver": "^7.0.0"
+		},
+		{
+			"name": "lower-case",
+			"semver": "^2.0.2"
+		},
+		{
+			"name": "magic-string",
+			"semver": "^0.30.5"
+		},
+		{
+			"name": "is-binary-path",
+			"semver": "^2.1.0"
+		},
+		{
+			"name": "ms",
+			"semver": "^2.1.2"
+		},
+		{
+			"name": "locate-character",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "mrmime",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "normalize-path",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "pascal-case",
+			"semver": "^3.1.2"
+		},
+		{
+			"name": "no-case",
+			"semver": "^3.0.4"
+		},
+		{
+			"name": "picocolors",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "mri",
+			"semver": "^1.2.0"
+		},
+		{
+			"name": "picomatch",
+			"semver": "^2.3.1"
+		},
+		{
+			"name": "postcss",
+			"semver": "^8.4.32"
+		},
+		{
+			"name": "rollup",
+			"semver": "^4.9.1"
+		},
+		{
+			"name": "periscopic",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "mdn-data",
+			"semver": "^2.0.30"
+		},
+		{
+			"name": "readdirp",
+			"semver": "^3.6.0"
+		},
+		{
+			"name": "nanoid",
+			"semver": "^3.3.7"
+		},
+		{
+			"name": "set-cookie-parser",
+			"semver": "^2.6.0"
+		},
+		{
+			"name": "sade",
+			"semver": "^1.8.1"
+		},
+		{
+			"name": "sirv",
+			"semver": "^2.0.4"
+		},
+		{
+			"name": "to-regex-range",
+			"semver": "^5.0.1"
+		},
+		{
+			"name": "source-map-js",
+			"semver": "^1.0.2"
+		},
+		{
+			"name": "svelte2tsx",
+			"semver": "^0.6.27"
+		},
+		{
+			"name": "semver",
+			"semver": "^7.5.4"
+		},
+		{
+			"name": "yallist",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "svelte-hmr",
+			"semver": "^0.15.3"
+		},
+		{
+			"name": "vitefu",
+			"semver": "^0.2.5"
+		},
+		{
+			"name": "totalist",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "tslib",
+			"semver": "^2.6.2"
+		},
+		{
+			"name": "tiny-glob",
+			"semver": "^0.2.9"
+		},
+		{
+			"name": "esbuild",
+			"semver": "^0.19.10"
+		},
+		{
+			"name": "typescript",
+			"semver": "^5.3.3"
+		},
+		{
+			"name": "svelte",
+			"semver": "^4.2.7"
+		}
+	],
+	"unpacked_size": 9649
 }

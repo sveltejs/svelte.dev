@@ -11,5 +11,16 @@
 	"version": "0.4.19",
 	"svelte_range": "^3.44.3",
 	"last_rune_check_version": "0.4.19",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "dayjs",
+			"semver": "^1.10.7"
+		},
+		{
+			"name": "debounce",
+			"semver": "^1.2.1"
+		}
+	],
+	"unpacked_size": 156274
 }

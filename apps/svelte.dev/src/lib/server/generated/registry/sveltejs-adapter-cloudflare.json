@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "7.0.1",
 	"kit_range": "^2.0.0",
-	"last_rune_check_version": "7.0.1"
+	"last_rune_check_version": "7.0.1",
+	"dependencies": [
+		{
+			"name": "@cloudflare/workers-types",
+			"semver": "^4.20250312.0"
+		},
+		{
+			"name": "worktop",
+			"semver": "0.8.0-next.18"
+		}
+	],
+	"unpacked_size": 20292
 }

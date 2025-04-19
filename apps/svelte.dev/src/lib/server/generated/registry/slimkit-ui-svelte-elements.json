@@ -11,5 +11,12 @@
 	"version": "0.0.16",
 	"svelte_range": "^3.20.1",
 	"last_rune_check_version": "0.0.16",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@svgdotjs/svg.js",
+			"semver": "^3.1.1"
+		}
+	],
+	"unpacked_size": 4026093
 }

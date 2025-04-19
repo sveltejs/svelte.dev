@@ -4,12 +4,19 @@
 	"repo_url": "",
 	"authors": ["jinglescode", "pablof7z"],
 	"downloads": 96,
-	"updated": "2025-03-06T14:57:54.028Z",
+	"updated": "2025-04-18T23:41:16.473Z",
 	"tags": ["integration"],
 	"runes": true,
 	"typescript": true,
-	"version": "2.4.5",
+	"version": "2.4.6",
 	"svelte_range": "*",
-	"last_rune_check_version": "2.4.5",
-	"github_stars": 0
+	"last_rune_check_version": "2.4.6",
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@nostr-dev-kit/ndk",
+			"semver": "workspace:*"
+		}
+	],
+	"unpacked_size": 26674
 }

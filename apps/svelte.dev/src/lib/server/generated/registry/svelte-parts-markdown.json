@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "0.0.23",
 	"svelte_range": "^3.29.7",
-	"last_rune_check_version": "0.0.23"
+	"last_rune_check_version": "0.0.23",
+	"dependencies": [
+		{
+			"name": "dompurify",
+			"semver": "^2.3.6"
+		},
+		{
+			"name": "marked",
+			"semver": "^4.0.12"
+		}
+	],
+	"unpacked_size": 2358
 }

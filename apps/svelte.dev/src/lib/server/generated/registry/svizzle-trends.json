@@ -12,5 +12,40 @@
 	"typescript": false,
 	"version": "0.1.0",
 	"svelte_range": "^3.59.2",
-	"last_rune_check_version": "0.1.0"
+	"last_rune_check_version": "0.1.0",
+	"dependencies": [
+		{
+			"name": "@svizzle/dom",
+			"semver": "^0.7.3"
+		},
+		{
+			"name": "@svizzle/ui",
+			"semver": "^0.13.0"
+		},
+		{
+			"name": "@svizzle/utils",
+			"semver": "^0.21.0"
+		},
+		{
+			"name": "d3-array",
+			"semver": "^3.2.4"
+		},
+		{
+			"name": "d3-quadtree",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "d3-scale",
+			"semver": "^4.0.2"
+		},
+		{
+			"name": "d3-shape",
+			"semver": "^3.2.0"
+		},
+		{
+			"name": "lamb",
+			"semver": "^0.61.1"
+		}
+	],
+	"unpacked_size": 35287
 }

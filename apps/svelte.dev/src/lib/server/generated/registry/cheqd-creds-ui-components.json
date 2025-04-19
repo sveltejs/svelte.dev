@@ -12,5 +12,40 @@
 	"version": "2.5.3",
 	"svelte_range": "^4.2.0",
 	"kit_range": "^2.0.0",
-	"last_rune_check_version": "2.5.3"
+	"last_rune_check_version": "2.5.3",
+	"dependencies": [
+		{
+			"name": "@cheqd/creds-types",
+			"semver": "2.12.0"
+		},
+		{
+			"name": "@skeletonlabs/skeleton",
+			"semver": "^2.10.3"
+		},
+		{
+			"name": "@skeletonlabs/tw-plugin",
+			"semver": "^0.4.0"
+		},
+		{
+			"name": "@svelte-put/qr",
+			"semver": "^1.2.1"
+		},
+		{
+			"name": "clsx",
+			"semver": "^2.1.1"
+		},
+		{
+			"name": "cropperjs",
+			"semver": "^1.6.2"
+		},
+		{
+			"name": "json-format-highlight",
+			"semver": "^1.0.4"
+		},
+		{
+			"name": "tailwind-merge",
+			"semver": "^2.5.5"
+		}
+	],
+	"unpacked_size": 626153
 }

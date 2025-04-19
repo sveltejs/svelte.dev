@@ -11,5 +11,20 @@
 	"version": "0.0.362",
 	"svelte_range": "^3.42.4",
 	"last_rune_check_version": "0.0.362",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@plasmicapp/loader-react",
+			"semver": "1.0.382"
+		},
+		{
+			"name": "react",
+			"semver": "^18.2.0"
+		},
+		{
+			"name": "react-dom",
+			"semver": "^18.2.0"
+		}
+	],
+	"unpacked_size": 2439184
 }

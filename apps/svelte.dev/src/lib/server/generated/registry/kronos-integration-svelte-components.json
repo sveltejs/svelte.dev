@@ -12,5 +12,20 @@
 	"typescript": false,
 	"version": "3.0.1",
 	"svelte_range": "^5.0.0-next.0",
-	"last_rune_check_version": "3.0.1"
+	"last_rune_check_version": "3.0.1",
+	"dependencies": [
+		{
+			"name": "@kronos-integration/endpoint",
+			"semver": "^9.5.4"
+		},
+		{
+			"name": "@kronos-integration/service",
+			"semver": "^11.0.0"
+		},
+		{
+			"name": "svelte-guard-history-router",
+			"semver": "^6.1.0"
+		}
+	],
+	"unpacked_size": 24285
 }

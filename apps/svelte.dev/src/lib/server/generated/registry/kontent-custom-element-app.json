@@ -12,5 +12,148 @@
 	"typescript": true,
 	"version": "0.3.39",
 	"svelte_range": "^3.32.1",
-	"last_rune_check_version": "0.3.39"
+	"last_rune_check_version": "0.3.39",
+	"dependencies": [
+		{
+			"name": "@babel/core",
+			"semver": "^7.12.13"
+		},
+		{
+			"name": "@babel/plugin-syntax-dynamic-import",
+			"semver": "^7.0.0"
+		},
+		{
+			"name": "@babel/plugin-transform-runtime",
+			"semver": "^7.12.13"
+		},
+		{
+			"name": "@babel/preset-env",
+			"semver": "^7.12.13"
+		},
+		{
+			"name": "@babel/runtime",
+			"semver": "^7.12.13"
+		},
+		{
+			"name": "@rollup/plugin-babel",
+			"semver": "^5.2.3"
+		},
+		{
+			"name": "@rollup/plugin-commonjs",
+			"semver": "^16.0.0"
+		},
+		{
+			"name": "@rollup/plugin-json",
+			"semver": "^4.1.0"
+		},
+		{
+			"name": "@rollup/plugin-node-resolve",
+			"semver": "^11.1.1"
+		},
+		{
+			"name": "@rollup/plugin-replace",
+			"semver": "^2.2.0"
+		},
+		{
+			"name": "@rollup/plugin-typescript",
+			"semver": "^8.1.1"
+		},
+		{
+			"name": "@rollup/plugin-url",
+			"semver": "^6.0.0"
+		},
+		{
+			"name": "@tsconfig/svelte",
+			"semver": "^1.0.10"
+		},
+		{
+			"name": "@types/compression",
+			"semver": "^1.7.0"
+		},
+		{
+			"name": "@types/lodash",
+			"semver": "^4.14.168"
+		},
+		{
+			"name": "@types/node",
+			"semver": "^14.14.25"
+		},
+		{
+			"name": "@types/polka",
+			"semver": "^0.5.2"
+		},
+		{
+			"name": "@types/resize-observer-browser",
+			"semver": "^0.1.5"
+		},
+		{
+			"name": "chalk",
+			"semver": "^4.1.0"
+		},
+		{
+			"name": "compression",
+			"semver": "^1.7.1"
+		},
+		{
+			"name": "i18next",
+			"semver": "^19.8.7"
+		},
+		{
+			"name": "jsonfile",
+			"semver": "^6.1.0"
+		},
+		{
+			"name": "lodash",
+			"semver": "^4.17.20"
+		},
+		{
+			"name": "polka",
+			"semver": "next"
+		},
+		{
+			"name": "rollup",
+			"semver": "^2.38.4"
+		},
+		{
+			"name": "rollup-plugin-svelte",
+			"semver": "^7.1.0"
+		},
+		{
+			"name": "rollup-plugin-terser",
+			"semver": "^7.0.0"
+		},
+		{
+			"name": "rxjs",
+			"semver": "^6.6.6"
+		},
+		{
+			"name": "sapper",
+			"semver": "^0.29.1"
+		},
+		{
+			"name": "sirv",
+			"semver": "^1.0.11"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.32.1"
+		},
+		{
+			"name": "svelte-preprocess",
+			"semver": "^4.6.6"
+		},
+		{
+			"name": "tslib",
+			"semver": "^2.1.0"
+		},
+		{
+			"name": "typescript",
+			"semver": "^4.1.3"
+		},
+		{
+			"name": "vercel",
+			"semver": "^21.2.3"
+		}
+	],
+	"unpacked_size": 142063
 }

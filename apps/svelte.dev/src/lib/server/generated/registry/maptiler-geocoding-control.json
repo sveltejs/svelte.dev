@@ -12,5 +12,32 @@
 	"typescript": true,
 	"version": "2.1.6",
 	"svelte_range": "^4.2",
-	"last_rune_check_version": "2.1.6"
+	"last_rune_check_version": "2.1.6",
+	"dependencies": [
+		{
+			"name": "@turf/bbox",
+			"semver": "^7.2.0"
+		},
+		{
+			"name": "@turf/clone",
+			"semver": "^7.2.0"
+		},
+		{
+			"name": "@turf/union",
+			"semver": "^7.2.0"
+		},
+		{
+			"name": "@turf/flatten",
+			"semver": "^7.2.0"
+		},
+		{
+			"name": "@turf/difference",
+			"semver": "^7.2.0"
+		},
+		{
+			"name": "geo-coordinates-parser",
+			"semver": "^1.7.4"
+		}
+	],
+	"unpacked_size": 10100285
 }

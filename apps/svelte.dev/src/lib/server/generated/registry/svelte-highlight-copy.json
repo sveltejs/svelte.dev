@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "1.0.10",
 	"svelte_range": "^4.2.8",
-	"last_rune_check_version": "1.0.10"
+	"last_rune_check_version": "1.0.10",
+	"dependencies": [
+		{
+			"name": "highlight.js",
+			"semver": "11.9.0"
+		},
+		{
+			"name": "highlightjs-copy",
+			"semver": "^1.0.5"
+		}
+	],
+	"unpacked_size": 40979
 }

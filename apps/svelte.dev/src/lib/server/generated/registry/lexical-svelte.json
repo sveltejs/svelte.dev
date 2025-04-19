@@ -12,5 +12,44 @@
 	"version": "1.0.0-beta.4",
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
-	"last_rune_check_version": "1.0.0-beta.4"
+	"last_rune_check_version": "1.0.0-beta.4",
+	"dependencies": [
+		{
+			"name": "@lexical/dragon",
+			"semver": "^0.2.9"
+		},
+		{
+			"name": "@lexical/hashtag",
+			"semver": "^0.2.9"
+		},
+		{
+			"name": "@lexical/history",
+			"semver": "^0.2.9"
+		},
+		{
+			"name": "@lexical/link",
+			"semver": "^0.2.9"
+		},
+		{
+			"name": "@lexical/mark",
+			"semver": "^0.2.9"
+		},
+		{
+			"name": "@lexical/plain-text",
+			"semver": "^0.2.9"
+		},
+		{
+			"name": "@lexical/rich-text",
+			"semver": "^0.2.9"
+		},
+		{
+			"name": "@lexical/text",
+			"semver": "^0.2.9"
+		},
+		{
+			"name": "lexical",
+			"semver": "^0.2.9"
+		}
+	],
+	"unpacked_size": 54928
 }

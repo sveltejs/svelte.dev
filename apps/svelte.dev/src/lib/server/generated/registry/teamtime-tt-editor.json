@@ -10,5 +10,44 @@
 	"typescript": false,
 	"version": "0.0.3",
 	"svelte_range": "3.13.0",
-	"last_rune_check_version": "0.0.3"
+	"last_rune_check_version": "0.0.3",
+	"dependencies": [
+		{
+			"name": "prosemirror-commands",
+			"semver": "^1.0.8"
+		},
+		{
+			"name": "prosemirror-example-setup",
+			"semver": "^1.1.0"
+		},
+		{
+			"name": "prosemirror-keymap",
+			"semver": "^1.0.2"
+		},
+		{
+			"name": "prosemirror-model",
+			"semver": "^1.7.5"
+		},
+		{
+			"name": "prosemirror-schema-basic",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "prosemirror-state",
+			"semver": "^1.2.4"
+		},
+		{
+			"name": "prosemirror-tables",
+			"semver": "0.9.5"
+		},
+		{
+			"name": "prosemirror-utils",
+			"semver": "0.9.6"
+		},
+		{
+			"name": "prosemirror-view",
+			"semver": "^1.12.3"
+		}
+	],
+	"unpacked_size": 2842254
 }

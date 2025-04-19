@@ -13,5 +13,24 @@
 	"version": "1.1.0",
 	"svelte_range": "^3.42.3",
 	"kit_range": "^1.0.0-next.162",
-	"last_rune_check_version": "1.1.0"
+	"last_rune_check_version": "1.1.0",
+	"dependencies": [
+		{
+			"name": "cookie",
+			"semver": "^0.4.1"
+		},
+		{
+			"name": "js-base64",
+			"semver": "^3.6.1"
+		},
+		{
+			"name": "js-cookie",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "pkce",
+			"semver": "^1.0.0-beta2"
+		}
+	],
+	"unpacked_size": 238041
 }

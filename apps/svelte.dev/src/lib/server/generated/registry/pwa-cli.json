@@ -10,5 +10,60 @@
 	"typescript": false,
 	"version": "0.5.4",
 	"last_rune_check_version": "0.5.4",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@pwa/core",
+			"semver": "^0.5.4"
+		},
+		{
+			"name": "chrome-launcher",
+			"semver": "^0.13.1"
+		},
+		{
+			"name": "chrome-remote-interface",
+			"semver": "0.25.x"
+		},
+		{
+			"name": "kleur",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "mkdirp",
+			"semver": "^0.5.1"
+		},
+		{
+			"name": "prompts",
+			"semver": "^1.2.1"
+		},
+		{
+			"name": "rimraf",
+			"semver": "^2.6.2"
+		},
+		{
+			"name": "sade",
+			"semver": "^1.7.0"
+		},
+		{
+			"name": "sirv",
+			"semver": "^0.4.0"
+		},
+		{
+			"name": "templite",
+			"semver": "^1.1.0"
+		},
+		{
+			"name": "totalist",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "webpack-dev-server",
+			"semver": "^3.1.4"
+		},
+		{
+			"name": "webpack-format-messages",
+			"semver": "^2.0.1"
+		}
+	],
+	"unpacked_size": 466984
 }

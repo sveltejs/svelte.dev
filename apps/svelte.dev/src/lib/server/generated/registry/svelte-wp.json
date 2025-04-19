@@ -12,5 +12,28 @@
 	"version": "0.0.2",
 	"svelte_range": "^3.9.2",
 	"last_rune_check_version": "0.0.2",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "svelte",
+			"semver": "^3.9.2"
+		},
+		{
+			"name": "@svel/router",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "path-to-regexp",
+			"semver": "^1.7.0"
+		},
+		{
+			"name": "axios",
+			"semver": "^0.19.0"
+		},
+		{
+			"name": "qs",
+			"semver": "^6.8.0"
+		}
+	],
+	"unpacked_size": 46658
 }

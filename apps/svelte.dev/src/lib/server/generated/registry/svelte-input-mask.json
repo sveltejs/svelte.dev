@@ -11,5 +11,12 @@
 	"version": "1.1.0",
 	"svelte_range": ">=3.20.0",
 	"last_rune_check_version": "1.1.0",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "input-core",
+			"semver": "2.0.1"
+		}
+	],
+	"unpacked_size": 12793
 }

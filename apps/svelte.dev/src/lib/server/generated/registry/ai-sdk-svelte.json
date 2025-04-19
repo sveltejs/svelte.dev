@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "2.1.9",
 	"svelte_range": "^5.0.0",
-	"last_rune_check_version": "2.1.9"
+	"last_rune_check_version": "2.1.9",
+	"dependencies": [
+		{
+			"name": "@ai-sdk/ui-utils",
+			"semver": "1.2.8"
+		},
+		{
+			"name": "@ai-sdk/provider-utils",
+			"semver": "2.2.7"
+		}
+	],
+	"unpacked_size": 91200
 }

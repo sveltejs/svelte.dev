@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "0.3.3",
 	"svelte_range": ">=5",
-	"last_rune_check_version": "0.3.3"
+	"last_rune_check_version": "0.3.3",
+	"dependencies": [
+		{
+			"name": "@jridgewell/trace-mapping",
+			"semver": "^0.3.25"
+		},
+		{
+			"name": "launch-editor-middleware",
+			"semver": "^2.9.1"
+		}
+	],
+	"unpacked_size": 51681
 }

@@ -5,13 +5,32 @@
 	"authors": ["wobsoriano"],
 	"homepage": "https://github.com/wobsoriano/svelte-clerk#readme",
 	"downloads": 1002,
-	"updated": "2025-04-13T15:35:55.187Z",
+	"updated": "2025-04-19T01:24:03.114Z",
 	"tags": ["auth"],
 	"runes": true,
 	"github_stars": 108,
 	"typescript": true,
-	"version": "0.11.1",
+	"version": "0.11.3",
 	"svelte_range": "^5.11.0",
 	"kit_range": "^2.20.0",
-	"last_rune_check_version": "0.11.1"
+	"last_rune_check_version": "0.11.3",
+	"dependencies": [
+		{
+			"name": "@clerk/backend",
+			"semver": "^1.29.1"
+		},
+		{
+			"name": "@clerk/shared",
+			"semver": "^3.7.2"
+		},
+		{
+			"name": "@clerk/types",
+			"semver": "^4.54.2"
+		},
+		{
+			"name": "set-cookie-parser",
+			"semver": "^2.7.1"
+		}
+	],
+	"unpacked_size": 59271
 }

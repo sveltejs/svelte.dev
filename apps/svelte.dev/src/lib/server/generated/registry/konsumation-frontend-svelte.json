@@ -12,5 +12,72 @@
 	"runes": false,
 	"last_rune_check_version": "1.35.1",
 	"version": "1.35.1",
-	"github_stars": 3
+	"github_stars": 3,
+	"dependencies": [
+		{
+			"name": "@kronos-integration/svelte-components",
+			"semver": "^2.4.93"
+		},
+		{
+			"name": "imask",
+			"semver": "^6.4.2"
+		},
+		{
+			"name": "layercake",
+			"semver": "^7.0.0"
+		},
+		{
+			"name": "mf-styling",
+			"semver": "^1.7.33"
+		},
+		{
+			"name": "npm-dep-graph",
+			"semver": "^1.0.61"
+		},
+		{
+			"name": "streamsaver",
+			"semver": "^2.0.6"
+		},
+		{
+			"name": "svelte-command",
+			"semver": "^1.1.29"
+		},
+		{
+			"name": "svelte-common",
+			"semver": "^4.21.13"
+		},
+		{
+			"name": "svelte-entitlement",
+			"semver": "^1.2.41"
+		},
+		{
+			"name": "svelte-guard-history-router",
+			"semver": "^5.5.20"
+		},
+		{
+			"name": "svelte-log-view",
+			"semver": "^4.2.14"
+		},
+		{
+			"name": "svelte-session-manager",
+			"semver": "^2.0.11"
+		},
+		{
+			"name": "svelte-websocket-store",
+			"semver": "^1.1.33"
+		},
+		{
+			"name": "the-new-css-reset",
+			"semver": "^1.8.2"
+		},
+		{
+			"name": "mf-hosting-cloudflare",
+			"semver": "^1.0.5"
+		},
+		{
+			"name": "mf-hosting-frontend",
+			"semver": "^1.0.4"
+		}
+	],
+	"unpacked_size": 74134
 }

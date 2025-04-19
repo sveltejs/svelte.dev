@@ -13,5 +13,16 @@
 	"version": "0.1.2",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
-	"last_rune_check_version": "0.1.2"
+	"last_rune_check_version": "0.1.2",
+	"dependencies": [
+		{
+			"name": "acorn",
+			"semver": "^8.14.0"
+		},
+		{
+			"name": "acorn-loose",
+			"semver": "^8.4.0"
+		}
+	],
+	"unpacked_size": 193886
 }

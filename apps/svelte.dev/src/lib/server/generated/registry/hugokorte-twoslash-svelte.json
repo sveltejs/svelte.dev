@@ -12,5 +12,28 @@
 	"typescript": true,
 	"version": "0.0.5",
 	"svelte_range": "^5.8.1",
-	"last_rune_check_version": "0.0.5"
+	"last_rune_check_version": "0.0.5",
+	"dependencies": [
+		{
+			"name": "@jridgewell/sourcemap-codec",
+			"semver": "^1.5.0"
+		},
+		{
+			"name": "@volar/language-core",
+			"semver": "^2.4.10"
+		},
+		{
+			"name": "svelte2tsx",
+			"semver": "^0.7.30"
+		},
+		{
+			"name": "twoslash",
+			"semver": "^0.2.12"
+		},
+		{
+			"name": "twoslash-protocol",
+			"semver": "^0.2.12"
+		}
+	],
+	"unpacked_size": 21212
 }

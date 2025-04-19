@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "3.5.3",
 	"svelte_range": "^5.0.0",
-	"last_rune_check_version": "3.5.3"
+	"last_rune_check_version": "3.5.3",
+	"dependencies": [
+		{
+			"name": "@slidy/core",
+			"semver": "^3.8.0"
+		}
+	],
+	"unpacked_size": 117483
 }

@@ -12,5 +12,16 @@
 	"typescript": false,
 	"version": "0.0.2",
 	"svelte_range": "^3.55.1",
-	"last_rune_check_version": "0.0.2"
+	"last_rune_check_version": "0.0.2",
+	"dependencies": [
+		{
+			"name": "ansi-escapes",
+			"semver": "^6.0.0"
+		},
+		{
+			"name": "chalk",
+			"semver": "^5.2.0"
+		}
+	],
+	"unpacked_size": 5416
 }

@@ -23,5 +23,12 @@
 	"typescript": true,
 	"version": "1.16.0",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "1.16.0"
+	"last_rune_check_version": "1.16.0",
+	"dependencies": [
+		{
+			"name": "@egjs/grid",
+			"semver": "~1.16.0"
+		}
+	],
+	"unpacked_size": 70478
 }

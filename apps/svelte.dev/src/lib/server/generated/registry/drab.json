@@ -5,11 +5,13 @@
 	"authors": ["rossrobino"],
 	"homepage": "https://drab.robino.dev",
 	"downloads": 210,
-	"updated": "2025-04-13T19:50:13.410Z",
+	"updated": "2025-04-15T20:34:03.878Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 281,
 	"typescript": true,
-	"version": "6.1.3",
-	"last_rune_check_version": "6.1.3"
+	"version": "6.2.1",
+	"last_rune_check_version": "6.2.1",
+	"dependencies": [],
+	"unpacked_size": 77626
 }

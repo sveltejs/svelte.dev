@@ -13,5 +13,12 @@
 	"svelte_range": "^5.15.0",
 	"kit_range": "^2.14.0",
 	"last_rune_check_version": "0.2.0",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "chessground",
+			"semver": "^9.1.1"
+		}
+	],
+	"unpacked_size": 96580
 }

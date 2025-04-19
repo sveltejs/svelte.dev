@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "7.0.1",
 	"svelte_range": "^3.36.0",
-	"last_rune_check_version": "7.0.1"
+	"last_rune_check_version": "7.0.1",
+	"dependencies": [
+		{
+			"name": "url-params-parser",
+			"semver": "^1.0.3"
+		}
+	],
+	"unpacked_size": 331233
 }

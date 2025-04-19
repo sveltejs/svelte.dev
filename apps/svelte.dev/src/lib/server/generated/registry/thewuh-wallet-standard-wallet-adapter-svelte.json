@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "0.1.1",
 	"svelte_range": "^4.2.18",
-	"last_rune_check_version": "0.1.1"
+	"last_rune_check_version": "0.1.1",
+	"dependencies": [
+		{
+			"name": "@wallet-standard/app",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "@wallet-standard/base",
+			"semver": "^1.0.1"
+		}
+	],
+	"unpacked_size": 30389
 }

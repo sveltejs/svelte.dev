@@ -12,5 +12,20 @@
 	"typescript": false,
 	"version": "3.5.0",
 	"svelte_range": "^3.44",
-	"last_rune_check_version": "3.5.0"
+	"last_rune_check_version": "3.5.0",
+	"dependencies": [
+		{
+			"name": "@activewidgets/datagrid",
+			"semver": "3.5.0"
+		},
+		{
+			"name": "@activewidgets/frameworks",
+			"semver": "3.5.0"
+		},
+		{
+			"name": "@activewidgets/ui",
+			"semver": "*"
+		}
+	],
+	"unpacked_size": 16091
 }

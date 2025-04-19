@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "1.0.1",
 	"kit_range": "^2.5.18",
-	"last_rune_check_version": "1.0.1"
+	"last_rune_check_version": "1.0.1",
+	"dependencies": [
+		{
+			"name": "@sveltejs/kit",
+			"semver": "^2.5.18"
+		}
+	],
+	"unpacked_size": 9318
 }

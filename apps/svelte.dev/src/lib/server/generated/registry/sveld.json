@@ -12,5 +12,48 @@
 	"typescript": true,
 	"version": "0.22.1",
 	"svelte_range": "^4.2.19",
-	"last_rune_check_version": "0.22.1"
+	"last_rune_check_version": "0.22.1",
+	"dependencies": [
+		{
+			"name": "@rollup/plugin-node-resolve",
+			"semver": "^13.3.0"
+		},
+		{
+			"name": "acorn",
+			"semver": "^8.14.0"
+		},
+		{
+			"name": "comment-parser",
+			"semver": "^1.4.1"
+		},
+		{
+			"name": "prettier",
+			"semver": "^3.4.2"
+		},
+		{
+			"name": "rollup",
+			"semver": "^2.79.2"
+		},
+		{
+			"name": "rollup-plugin-svelte",
+			"semver": "^7.2.2"
+		},
+		{
+			"name": "svelte",
+			"semver": "^4.2.19"
+		},
+		{
+			"name": "svelte-preprocess",
+			"semver": "^6.0.3"
+		},
+		{
+			"name": "tinyglobby",
+			"semver": "^0.2.10"
+		},
+		{
+			"name": "typescript",
+			"semver": "^5.7.3"
+		}
+	],
+	"unpacked_size": 106884
 }

@@ -13,5 +13,16 @@
 	"version": "0.2.0",
 	"svelte_range": "^3.55.1",
 	"kit_range": "^1.6.0",
-	"last_rune_check_version": "0.2.0"
+	"last_rune_check_version": "0.2.0",
+	"dependencies": [
+		{
+			"name": "youtube-player",
+			"semver": "^5.6.0"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.55.1"
+		}
+	],
+	"unpacked_size": 6429
 }

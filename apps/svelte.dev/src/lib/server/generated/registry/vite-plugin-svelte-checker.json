@@ -12,5 +12,24 @@
 	"typescript": true,
 	"version": "0.1.2",
 	"svelte_range": "^5.2.2",
-	"last_rune_check_version": "0.1.2"
+	"last_rune_check_version": "0.1.2",
+	"dependencies": [
+		{
+			"name": "@shikijs/cli",
+			"semver": "^1.24.1"
+		},
+		{
+			"name": "chalk",
+			"semver": "^5.3.0"
+		},
+		{
+			"name": "strip-ansi",
+			"semver": "^7.1.0"
+		},
+		{
+			"name": "tsup",
+			"semver": "^8.3.5"
+		}
+	],
+	"unpacked_size": 13269
 }

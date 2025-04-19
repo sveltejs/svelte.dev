@@ -12,5 +12,12 @@
 	"typescript": false,
 	"version": "1.0.2",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "1.0.2"
+	"last_rune_check_version": "1.0.2",
+	"dependencies": [
+		{
+			"name": "svawc",
+			"semver": "^0.0.1"
+		}
+	],
+	"unpacked_size": 108474
 }

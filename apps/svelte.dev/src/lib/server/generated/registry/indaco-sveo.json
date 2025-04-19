@@ -13,5 +13,12 @@
 	"runes": true,
 	"last_rune_check_version": "1.0.0",
 	"version": "1.0.0",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "schema-dts",
+			"semver": "^1.1.5"
+		}
+	],
+	"unpacked_size": 49389
 }

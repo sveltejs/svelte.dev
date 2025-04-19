@@ -11,5 +11,16 @@
 	"version": "1.0.2",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "1.0.2",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "misbehave",
+			"semver": "^0.3.0"
+		},
+		{
+			"name": "prismjs",
+			"semver": "^1.23.0"
+		}
+	],
+	"unpacked_size": 223256
 }

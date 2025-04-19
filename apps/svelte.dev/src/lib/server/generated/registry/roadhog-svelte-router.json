@@ -12,5 +12,20 @@
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
 	"last_rune_check_version": "1.0.1",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "history",
+			"semver": "^5.3.0"
+		},
+		{
+			"name": "path-to-regexp",
+			"semver": "^6.2.0"
+		},
+		{
+			"name": "ufo",
+			"semver": "^0.8.3"
+		}
+	],
+	"unpacked_size": 7614
 }

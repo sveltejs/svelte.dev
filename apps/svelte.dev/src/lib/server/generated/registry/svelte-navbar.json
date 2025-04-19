@@ -13,5 +13,24 @@
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
 	"last_rune_check_version": "0.0.122",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@material/button",
+			"semver": "^14.0.0"
+		},
+		{
+			"name": "flubber2",
+			"semver": "^0.4.9"
+		},
+		{
+			"name": "sass",
+			"semver": "^1.55.0"
+		},
+		{
+			"name": "svelte-scrolling-plus",
+			"semver": "^1.2.3"
+		}
+	],
+	"unpacked_size": 14807
 }

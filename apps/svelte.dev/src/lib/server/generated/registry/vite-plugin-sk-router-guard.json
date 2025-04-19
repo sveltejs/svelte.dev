@@ -12,5 +12,24 @@
 	"typescript": true,
 	"version": "1.0.1",
 	"svelte_range": "^4.0.5",
-	"last_rune_check_version": "1.0.1"
+	"last_rune_check_version": "1.0.1",
+	"dependencies": [
+		{
+			"name": "baiwusanyu-utils",
+			"semver": "^1.0.15"
+		},
+		{
+			"name": "magic-string",
+			"semver": "^0.30.3"
+		},
+		{
+			"name": "magic-string-ast",
+			"semver": "^0.3.0"
+		},
+		{
+			"name": "svelte",
+			"semver": "^4.2.0"
+		}
+	],
+	"unpacked_size": 404896
 }

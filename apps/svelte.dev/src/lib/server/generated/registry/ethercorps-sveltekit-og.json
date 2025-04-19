@@ -12,5 +12,20 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.30.3",
 	"last_rune_check_version": "3.0.0",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "satori",
+			"semver": "^0.10.11"
+		},
+		{
+			"name": "@resvg/resvg-js",
+			"semver": "^2.6.0"
+		},
+		{
+			"name": "@ethercorps/svelte-h2j",
+			"semver": "^0.1.0"
+		}
+	],
+	"unpacked_size": 12367
 }

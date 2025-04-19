@@ -12,5 +12,60 @@
 	"typescript": true,
 	"version": "5.14.0",
 	"svelte_range": ">=3.37.0",
-	"last_rune_check_version": "5.14.0"
+	"last_rune_check_version": "5.14.0",
+	"dependencies": [
+		{
+			"name": "@eslint-sets/eslint-config-basic",
+			"semver": "5.14.0"
+		},
+		{
+			"name": "@eslint-sets/eslint-config-ts",
+			"semver": "5.14.0"
+		},
+		{
+			"name": "@typescript-eslint/eslint-plugin",
+			"semver": "^6.21.0"
+		},
+		{
+			"name": "@typescript-eslint/parser",
+			"semver": "^6.21.0"
+		},
+		{
+			"name": "eslint-config-prettier",
+			"semver": "^9.1.0"
+		},
+		{
+			"name": "eslint-plugin-jsdoc",
+			"semver": "^50.5.0"
+		},
+		{
+			"name": "eslint-plugin-prettier",
+			"semver": "^5.2.1"
+		},
+		{
+			"name": "eslint-plugin-svelte",
+			"semver": "^2.46.0"
+		},
+		{
+			"name": "eslint-plugin-tsdoc",
+			"semver": "^0.3.0"
+		},
+		{
+			"name": "eslint-plugin-vitest-globals",
+			"semver": "^1.5.0"
+		},
+		{
+			"name": "local-pkg",
+			"semver": "^0.5.1"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.59.2"
+		},
+		{
+			"name": "svelte-eslint-parser",
+			"semver": "^0.43.0"
+		}
+	],
+	"unpacked_size": 11889
 }

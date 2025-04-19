@@ -13,5 +13,12 @@
 	"version": "1.2.3",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.22.0",
-	"last_rune_check_version": "1.2.3"
+	"last_rune_check_version": "1.2.3",
+	"dependencies": [
+		{
+			"name": "@fontsource-variable/dosis",
+			"semver": "^5.0.4"
+		}
+	],
+	"unpacked_size": 17072
 }

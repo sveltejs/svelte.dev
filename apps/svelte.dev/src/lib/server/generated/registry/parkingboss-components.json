@@ -11,5 +11,24 @@
 	"version": "0.6.4",
 	"svelte_range": "^3.20.1",
 	"last_rune_check_version": "0.6.4",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@parkingboss/api",
+			"semver": "^0.19.0"
+		},
+		{
+			"name": "@parkingboss/utils",
+			"semver": "^0.17.2"
+		},
+		{
+			"name": "@parkingboss/barcam",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "@parkingboss/svelte-utils",
+			"semver": "^0"
+		}
+	],
+	"unpacked_size": 2508539
 }

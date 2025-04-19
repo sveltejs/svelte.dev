@@ -12,5 +12,24 @@
 	"typescript": true,
 	"version": "5.1.0",
 	"svelte_range": "^4.2.1",
-	"last_rune_check_version": "5.1.0"
+	"last_rune_check_version": "5.1.0",
+	"dependencies": [
+		{
+			"name": "@floratmin/svelte-fragment-divider",
+			"semver": "^4.5.0"
+		},
+		{
+			"name": "gettext-extractor",
+			"semver": "^3.8.0"
+		},
+		{
+			"name": "pofile",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "svelte",
+			"semver": "^4.2.1"
+		}
+	],
+	"unpacked_size": 126127
 }

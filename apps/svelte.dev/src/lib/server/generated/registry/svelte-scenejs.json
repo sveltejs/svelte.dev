@@ -13,5 +13,16 @@
 	"version": "1.0.0-beta.12",
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.0.0",
-	"last_rune_check_version": "1.0.0-beta.12"
+	"last_rune_check_version": "1.0.0-beta.12",
+	"dependencies": [
+		{
+			"name": "@cfcs/svelte",
+			"semver": "^0.1.0"
+		},
+		{
+			"name": "scenejs",
+			"semver": "~1.10.3"
+		}
+	],
+	"unpacked_size": 85326
 }

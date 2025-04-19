@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "0.7.36",
 	"svelte_range": "^3.55 || ^4.0.0-next.0 || ^4.0 || ^5.0.0-next.0",
-	"last_rune_check_version": "0.7.36"
+	"last_rune_check_version": "0.7.36",
+	"dependencies": [
+		{
+			"name": "dedent-js",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "pascal-case",
+			"semver": "^3.1.1"
+		}
+	],
+	"unpacked_size": 766555
 }

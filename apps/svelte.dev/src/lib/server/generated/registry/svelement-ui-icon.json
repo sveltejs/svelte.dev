@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "0.19.29",
 	"svelte_range": "^4.0.0",
-	"last_rune_check_version": "0.19.29"
+	"last_rune_check_version": "0.19.29",
+	"dependencies": [
+		{
+			"name": "@svelement-ui/util-array-2-class-string",
+			"semver": "*"
+		},
+		{
+			"name": "@svelement-ui/util-array-2-style-string",
+			"semver": "*"
+		}
+	],
+	"unpacked_size": 437106
 }

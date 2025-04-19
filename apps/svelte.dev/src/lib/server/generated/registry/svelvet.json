@@ -24,5 +24,16 @@
 	"version": "11.0.5",
 	"svelte_range": ">=3.59.2 || ^4.0.0",
 	"kit_range": "^1.20.4",
-	"last_rune_check_version": "11.0.5"
+	"last_rune_check_version": "11.0.5",
+	"dependencies": [
+		{
+			"name": "svelvet",
+			"semver": "^10.0.2"
+		},
+		{
+			"name": "uuid",
+			"semver": "^11.0.5"
+		}
+	],
+	"unpacked_size": 393509
 }

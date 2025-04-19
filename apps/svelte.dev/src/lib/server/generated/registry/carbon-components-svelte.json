@@ -5,11 +5,22 @@
 	"authors": ["metonym"],
 	"homepage": "https://svelte.carbondesignsystem.com/",
 	"downloads": 9338,
-	"updated": "2025-03-24T16:33:34.914Z",
+	"updated": "2025-04-18T17:47:48.776Z",
 	"tags": ["design-system"],
 	"runes": false,
 	"github_stars": 2777,
 	"typescript": true,
-	"version": "0.88.4",
-	"last_rune_check_version": "0.88.4"
+	"version": "0.89.0",
+	"last_rune_check_version": "0.89.0",
+	"dependencies": [
+		{
+			"name": "@ibm/telemetry-js",
+			"semver": "^1.5.0"
+		},
+		{
+			"name": "flatpickr",
+			"semver": "4.6.9"
+		}
+	],
+	"unpacked_size": 4533800
 }

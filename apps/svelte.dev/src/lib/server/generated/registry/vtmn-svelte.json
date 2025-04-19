@@ -12,5 +12,144 @@
 	"typescript": false,
 	"version": "4.6.4",
 	"svelte_range": "^3.34.0",
-	"last_rune_check_version": "4.6.4"
+	"last_rune_check_version": "4.6.4",
+	"dependencies": [
+		{
+			"name": "@vtmn/css",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "@vtmn/css-accordion",
+			"semver": "^1.1.7"
+		},
+		{
+			"name": "@vtmn/css-alert",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "@vtmn/css-badge",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "@vtmn/css-breadcrumb",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "@vtmn/css-button",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "@vtmn/css-card",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "@vtmn/css-checkbox",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "@vtmn/css-chip",
+			"semver": "^2.0.1"
+		},
+		{
+			"name": "@vtmn/css-design-tokens",
+			"semver": "^1.1.3"
+		},
+		{
+			"name": "@vtmn/css-divider",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "@vtmn/css-dropdown",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "@vtmn/css-link",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "@vtmn/css-list",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "@vtmn/css-loader",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "@vtmn/css-modal",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "@vtmn/css-navbar",
+			"semver": "^2.0.3"
+		},
+		{
+			"name": "@vtmn/css-popover",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "@vtmn/css-price",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "@vtmn/css-progressbar",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "@vtmn/css-quantity",
+			"semver": "^1.1.5"
+		},
+		{
+			"name": "@vtmn/css-radio-button",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "@vtmn/css-rating",
+			"semver": "^1.1.7"
+		},
+		{
+			"name": "@vtmn/css-search",
+			"semver": "^1.1.10"
+		},
+		{
+			"name": "@vtmn/css-select",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "@vtmn/css-skeleton",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "@vtmn/css-snackbar",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "@vtmn/css-tabs",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "@vtmn/css-tag",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "@vtmn/css-text-input",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "@vtmn/css-toast",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "@vtmn/css-toggle",
+			"semver": "^1.1.5"
+		},
+		{
+			"name": "@vtmn/css-tooltip",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "@vtmn/icons",
+			"semver": "^1.3.0"
+		}
+	],
+	"unpacked_size": 1559505
 }

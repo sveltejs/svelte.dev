@@ -12,5 +12,12 @@
 	"version": "2.0.0-np",
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.0.0",
-	"last_rune_check_version": "2.0.0-np"
+	"last_rune_check_version": "2.0.0-np",
+	"dependencies": [
+		{
+			"name": "joinclass",
+			"semver": "^1.0.0"
+		}
+	],
+	"unpacked_size": 28574
 }

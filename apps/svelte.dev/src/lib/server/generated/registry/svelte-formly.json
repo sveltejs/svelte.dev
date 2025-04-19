@@ -13,5 +13,24 @@
 	"version": "2.0.1",
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
-	"last_rune_check_version": "2.0.1"
+	"last_rune_check_version": "2.0.1",
+	"dependencies": [
+		{
+			"name": "@picocss/pico",
+			"semver": "^1.5.3"
+		},
+		{
+			"name": "bulma",
+			"semver": "^0.9.4"
+		},
+		{
+			"name": "open-props",
+			"semver": "^1.4.3"
+		},
+		{
+			"name": "svelte-formly-light",
+			"semver": "^0.0.7"
+		}
+	],
+	"unpacked_size": 46588
 }

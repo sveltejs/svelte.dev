@@ -11,5 +11,12 @@
 	"version": "1.1.2",
 	"svelte_range": "^3.37.0",
 	"last_rune_check_version": "1.1.2",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "hylid-bridge",
+			"semver": "^1.0.5"
+		}
+	],
+	"unpacked_size": 90342
 }

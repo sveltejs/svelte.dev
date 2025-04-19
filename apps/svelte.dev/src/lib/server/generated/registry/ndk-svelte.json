@@ -11,5 +11,20 @@
 	"version": "0.8.8",
 	"svelte_range": "^4.1.2",
 	"last_rune_check_version": "0.8.8",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@nostr-dev-kit/ndk",
+			"semver": "^0.8.10"
+		},
+		{
+			"name": "svelte",
+			"semver": "^4.1.2"
+		},
+		{
+			"name": "typescript",
+			"semver": "^5.1.6"
+		}
+	],
+	"unpacked_size": 15561
 }

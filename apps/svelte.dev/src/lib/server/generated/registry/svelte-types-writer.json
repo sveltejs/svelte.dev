@@ -11,5 +11,44 @@
 	"version": "1.2.0",
 	"svelte_range": "^3.31.0",
 	"last_rune_check_version": "1.2.0",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@types/fs-extra",
+			"semver": "^9.0.4"
+		},
+		{
+			"name": "@types/glob",
+			"semver": "^7.1.3"
+		},
+		{
+			"name": "@types/node",
+			"semver": "^14.14.10"
+		},
+		{
+			"name": "fs-extra",
+			"semver": "^9.0.1"
+		},
+		{
+			"name": "glob",
+			"semver": "^7.1.6"
+		},
+		{
+			"name": "magic-string",
+			"semver": "^0.25.7"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.31.0"
+		},
+		{
+			"name": "svelte2tsx",
+			"semver": "^0.1.151"
+		},
+		{
+			"name": "typescript",
+			"semver": "^3.9.7"
+		}
+	],
+	"unpacked_size": 45733
 }

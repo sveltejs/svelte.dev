@@ -10,5 +10,12 @@
 	"version": "1.0.1",
 	"svelte_range": "^3.5.4",
 	"last_rune_check_version": "1.0.1",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "cookie-universal",
+			"semver": "^2.0.14"
+		}
+	],
+	"unpacked_size": 128807
 }

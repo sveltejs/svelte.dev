@@ -12,5 +12,24 @@
 	"typescript": true,
 	"version": "0.38.2",
 	"svelte_range": "^3.49.0",
-	"last_rune_check_version": "0.38.2"
+	"last_rune_check_version": "0.38.2",
+	"dependencies": [
+		{
+			"name": "@observablehq/runtime",
+			"semver": "^4.8.2"
+		},
+		{
+			"name": "d3",
+			"semver": "^7.6.1"
+		},
+		{
+			"name": "d3-array",
+			"semver": "^2.4.0"
+		},
+		{
+			"name": "path-data-polyfill",
+			"semver": "^1.0.4"
+		}
+	],
+	"unpacked_size": 35843
 }

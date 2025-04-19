@@ -13,5 +13,12 @@
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
 	"last_rune_check_version": "0.0.7",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "svelte2tsx",
+			"semver": "^0.5.6"
+		}
+	],
+	"unpacked_size": 4870
 }

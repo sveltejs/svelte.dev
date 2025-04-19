@@ -12,5 +12,12 @@
 	"typescript": false,
 	"version": "1.1.1",
 	"svelte_range": "^3.19.1",
-	"last_rune_check_version": "1.1.1"
+	"last_rune_check_version": "1.1.1",
+	"dependencies": [
+		{
+			"name": "chroma-js",
+			"semver": "^2.1.0"
+		}
+	],
+	"unpacked_size": 889235
 }

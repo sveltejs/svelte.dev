@@ -5,12 +5,83 @@
 	"authors": ["jimmy-zhening-luo"],
 	"homepage": "https://github.com/jimmy-zhening-luo/linted#readme",
 	"downloads": 641,
-	"updated": "2025-04-14T08:35:32.011Z",
+	"updated": "2025-04-17T22:28:00.017Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 1,
 	"typescript": true,
-	"version": "28.24.5",
-	"svelte_range": "^5.26.2",
-	"last_rune_check_version": "28.24.5"
+	"version": "28.26.0",
+	"svelte_range": "^5.27.2",
+	"last_rune_check_version": "28.26.0",
+	"dependencies": [
+		{
+			"name": "svelte",
+			"semver": "^5.27.2"
+		},
+		{
+			"name": "@eslint/css",
+			"semver": "0.6.0"
+		},
+		{
+			"name": "@eslinted/core",
+			"semver": "18.5.3"
+		},
+		{
+			"name": "eslint-plugin-yml",
+			"semver": "1.17.0"
+		},
+		{
+			"name": "typescript-eslint",
+			"semver": "8.30.1"
+		},
+		{
+			"name": "@eslinted/defaults",
+			"semver": "10.10.0"
+		},
+		{
+			"name": "yaml-eslint-parser",
+			"semver": "1.3.0"
+		},
+		{
+			"name": "@html-eslint/parser",
+			"semver": "0.39.0"
+		},
+		{
+			"name": "eslint-plugin-jsonc",
+			"semver": "2.20.0"
+		},
+		{
+			"name": "eslint-plugin-mocha",
+			"semver": "10.5.0"
+		},
+		{
+			"name": "jsonc-eslint-parser",
+			"semver": "2.4.0"
+		},
+		{
+			"name": "eslint-plugin-svelte",
+			"semver": "3.5.1"
+		},
+		{
+			"name": "svelte-eslint-parser",
+			"semver": "1.1.2"
+		},
+		{
+			"name": "@stylistic/eslint-plugin",
+			"semver": "4.2.0"
+		},
+		{
+			"name": "eslint-plugin-chai-expect",
+			"semver": "3.1.0"
+		},
+		{
+			"name": "@html-eslint/eslint-plugin",
+			"semver": "0.39.0"
+		},
+		{
+			"name": "eslint-plugin-chai-friendly",
+			"semver": "1.0.1"
+		}
+	],
+	"unpacked_size": 34266
 }

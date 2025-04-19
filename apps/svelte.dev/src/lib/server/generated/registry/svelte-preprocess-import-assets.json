@@ -12,5 +12,20 @@
 	"typescript": true,
 	"version": "1.1.0",
 	"svelte_range": "^3.37.0 || ^4.0.0 || ^5.0.0-next.1",
-	"last_rune_check_version": "1.1.0"
+	"last_rune_check_version": "1.1.0",
+	"dependencies": [
+		{
+			"name": "estree-walker",
+			"semver": "^3.0.3"
+		},
+		{
+			"name": "magic-string",
+			"semver": "^0.30.5"
+		},
+		{
+			"name": "svelte-parse-markup",
+			"semver": "^0.1.2"
+		}
+	],
+	"unpacked_size": 15231
 }

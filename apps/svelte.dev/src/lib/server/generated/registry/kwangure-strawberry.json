@@ -12,5 +12,56 @@
 	"svelte_range": "^3.48.0",
 	"kit_range": "^1.15.9",
 	"last_rune_check_version": "0.61.2",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@floating-ui/dom",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "@lezer/cpp",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "@lezer/css",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "@lezer/highlight",
+			"semver": "^1.1.2"
+		},
+		{
+			"name": "@lezer/html",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "@lezer/javascript",
+			"semver": "^1.0.2"
+		},
+		{
+			"name": "@lezer/json",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "@lezer/python",
+			"semver": "^1.1.1"
+		},
+		{
+			"name": "@lezer/rust",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "@mdi/js",
+			"semver": "^7.1.96"
+		},
+		{
+			"name": "@replit/codemirror-lang-svelte",
+			"semver": "^6.0.0"
+		},
+		{
+			"name": "uid",
+			"semver": "^1.0.0"
+		}
+	],
+	"unpacked_size": 103960
 }

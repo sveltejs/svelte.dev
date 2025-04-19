@@ -13,5 +13,16 @@
 	"version": "0.8.2",
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.5.0",
-	"last_rune_check_version": "0.8.2"
+	"last_rune_check_version": "0.8.2",
+	"dependencies": [
+		{
+			"name": "@floating-ui/dom",
+			"semver": "^1.4.3"
+		},
+		{
+			"name": "focusable-selectors",
+			"semver": "^0.8.1"
+		}
+	],
+	"unpacked_size": 159223
 }

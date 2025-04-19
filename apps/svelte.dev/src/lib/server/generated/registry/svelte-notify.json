@@ -12,5 +12,20 @@
 	"typescript": false,
 	"version": "1.0.2",
 	"svelte_range": "^3.24.0",
-	"last_rune_check_version": "1.0.2"
+	"last_rune_check_version": "1.0.2",
+	"dependencies": [
+		{
+			"name": "npm-check-updates",
+			"semver": "^7.0.2"
+		},
+		{
+			"name": "shortid",
+			"semver": "^2.2.15"
+		},
+		{
+			"name": "sirv-cli",
+			"semver": "^1.0.3"
+		}
+	],
+	"unpacked_size": 39432
 }

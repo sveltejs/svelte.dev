@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "0.1.2",
 	"svelte_range": "^4.2.10",
-	"last_rune_check_version": "0.1.2"
+	"last_rune_check_version": "0.1.2",
+	"dependencies": [
+		{
+			"name": "@clack/prompts",
+			"semver": "^0.7.0"
+		},
+		{
+			"name": "kleur",
+			"semver": "^4.1.5"
+		}
+	],
+	"unpacked_size": 1081810
 }

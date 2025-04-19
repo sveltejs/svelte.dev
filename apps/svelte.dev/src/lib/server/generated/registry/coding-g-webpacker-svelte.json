@@ -12,5 +12,24 @@
 	"typescript": false,
 	"version": "0.2.3",
 	"svelte_range": ">= 3",
-	"last_rune_check_version": "0.2.3"
+	"last_rune_check_version": "0.2.3",
+	"dependencies": [
+		{
+			"name": "lodash.assign",
+			"semver": "^4.2.0"
+		},
+		{
+			"name": "lodash.intersection",
+			"semver": "^4.4.0"
+		},
+		{
+			"name": "lodash.keys",
+			"semver": "^4.2.0"
+		},
+		{
+			"name": "lodash.omit",
+			"semver": "^4.5.0"
+		}
+	],
+	"unpacked_size": 31580
 }

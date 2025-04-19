@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "0.1.2",
 	"svelte_range": "^3.46.2",
-	"last_rune_check_version": "0.1.2"
+	"last_rune_check_version": "0.1.2",
+	"dependencies": [
+		{
+			"name": "mp4box",
+			"semver": "^0.4.9"
+		},
+		{
+			"name": "ua-parser-js",
+			"semver": "^1.0.2"
+		}
+	],
+	"unpacked_size": 15682763
 }

@@ -12,5 +12,16 @@
 	"typescript": false,
 	"version": "1.0.0",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "1.0.0"
+	"last_rune_check_version": "1.0.0",
+	"dependencies": [
+		{
+			"name": "zingchart",
+			"semver": "latest"
+		},
+		{
+			"name": "zingchart-constants",
+			"semver": "github:zingchart/zingchart-constants#master"
+		}
+	],
+	"unpacked_size": 12936
 }

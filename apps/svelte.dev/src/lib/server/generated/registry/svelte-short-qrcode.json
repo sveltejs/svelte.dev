@@ -12,5 +12,44 @@
 	"version": "0.0.4",
 	"svelte_range": "^4.2.15",
 	"kit_range": "^2.5.7",
-	"last_rune_check_version": "0.0.4"
+	"last_rune_check_version": "0.0.4",
+	"dependencies": [
+		{
+			"name": "@akamfoad/qrcode",
+			"semver": "^0.3.2"
+		},
+		{
+			"name": "bad-words-next",
+			"semver": "^2.3.1"
+		},
+		{
+			"name": "firebase",
+			"semver": "^10.11.1"
+		},
+		{
+			"name": "firebase-admin",
+			"semver": "^12.1.0"
+		},
+		{
+			"name": "nanoid",
+			"semver": "^5.0.7"
+		},
+		{
+			"name": "nanoid-dictionary",
+			"semver": "^4.3.0"
+		},
+		{
+			"name": "redis",
+			"semver": "^4.6.13"
+		},
+		{
+			"name": "svelte-headlessui",
+			"semver": "^0.0.34"
+		},
+		{
+			"name": "svelte-transition",
+			"semver": "^0.0.11"
+		}
+	],
+	"unpacked_size": 17266
 }

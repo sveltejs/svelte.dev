@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "1.1.0",
 	"svelte_range": "^5.0.0",
-	"last_rune_check_version": "1.1.0"
+	"last_rune_check_version": "1.1.0",
+	"dependencies": [
+		{
+			"name": "blurhash",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "@responsive-image/core",
+			"semver": "^1.1.0"
+		}
+	],
+	"unpacked_size": 10867
 }

@@ -2,10 +2,13 @@
 	import { forcefocus } from '@sveltejs/site-kit/actions';
 	import { Icon } from '@sveltejs/site-kit/components';
 	import { QueryParamSerde, reactive_query_params } from '@sveltejs/site-kit/reactivity';
-	import PackageCard from './PackageCard.svelte';
-	import Category from './Category.svelte';
 	import { fly } from 'svelte/transition';
-	import { search } from './search';
+	import Category from '../Category.svelte';
+	import PackageCard from '../PackageCard.svelte';
+	import { search } from '../search';
+	import PackageDetails from '../PackageDetails.svelte';
+	import { page } from '$app/state';
+	import { replaceState } from '$app/navigation';
 
 	const { data } = $props();
 
@@ -15,8 +18,24 @@
 	});
 
 	const filtered = $derived(search(data.packages, qps.query, qps.svelte_versions));
+	let selected = $derived(data.selected);
 
 	const formatter = new Intl.NumberFormat();
+
+	function select(pkg: string) {
+		const new_url = new URL(page.url);
+		new_url.pathname = new_url.pathname + '/' + pkg;
+		replaceState(new_url, {});
+		selected = data.packages.find((p) => p.name === pkg);
+	}
+
+	function deselect() {
+		const new_url = new URL(page.url);
+		new_url.pathname = new_url.pathname.split(selected!.name)[0].replace(/\/$/, '');
+		replaceState(new_url, {});
+
+		selected = undefined;
+	}
 </script>
 
 <svelte:head>
@@ -30,81 +49,85 @@
 <h1 class="visually-hidden">Packages</h1>
 
 <div class="page content">
-	<div class="controls">
-		<form onsubmit={(e) => e.preventDefault()}>
-			<label class="input-group">
-				<Icon name="search" />
-				<input
-					name="query"
-					use:forcefocus
-					onkeydown={(e) => {
-						if (e.key === 'Enter') {
-							e.stopPropagation();
-							e.preventDefault();
-						}
-					}}
-					enterkeyhint="search"
-					bind:value={qps.query}
-					placeholder="Search {formatter.format(data.packages.length)} packages"
-					aria-describedby="search-description"
-					aria-label="Search"
-					spellcheck="false"
-				/>
-
-				<button
-					class="raised icon"
-					aria-label="Clear"
-					onclick={(e) => {
-						e.stopPropagation();
-						qps.query = '';
-					}}
-				>
-					<Icon name="close" />
-				</button>
-			</label>
-
-			{#if qps.query}
-				<div class="sub">
-					<span>Showing {formatter.format(filtered.length)} results</span>
-
-					<span style="flex: 1 1 auto"></span>
-
-					<div>
-						Svelte versions:
-						<label>
-							<input type="checkbox" bind:group={qps.svelte_versions} value="3" />
-							3
-						</label>
-
-						<label>
-							<input type="checkbox" bind:group={qps.svelte_versions} value="4" />
-							4
-						</label>
-
-						<label>
-							<input type="checkbox" bind:group={qps.svelte_versions} value="5" />
-							5
-						</label>
-					</div>
-				</div>
-			{/if}
-		</form>
-	</div>
-
-	{#if qps.query}
-		<div in:fly={{ y: 20 }} class="posts">
-			<section>
-				{#each filtered as pkg}
-					<PackageCard {pkg} />
-				{/each}
-			</section>
-		</div>
+	{#if selected}
+		<PackageDetails pkg={selected} {deselect} />
 	{:else}
-		<div in:fly={{ y: 20 }}>
-			{#each data.homepage as { title, packages }}
-				<Category {title} {packages} />
-			{/each}
+		<div class="controls">
+			<form onsubmit={(e) => e.preventDefault()}>
+				<label class="input-group">
+					<Icon name="search" />
+					<input
+						name="query"
+						use:forcefocus
+						onkeydown={(e) => {
+							if (e.key === 'Enter') {
+								e.stopPropagation();
+								e.preventDefault();
+							}
+						}}
+						enterkeyhint="search"
+						bind:value={qps.query}
+						placeholder="Search {formatter.format(data.packages.length)} packages"
+						aria-describedby="search-description"
+						aria-label="Search"
+						spellcheck="false"
+					/>
+
+					<button
+						class="raised icon"
+						aria-label="Clear"
+						onclick={(e) => {
+							e.stopPropagation();
+							qps.query = '';
+						}}
+					>
+						<Icon name="close" />
+					</button>
+				</label>
+
+				{#if qps.query}
+					<div class="sub">
+						<span>Showing {formatter.format(filtered.length)} results</span>
+
+						<span style="flex: 1 1 auto"></span>
+
+						<div>
+							Svelte versions:
+							<label>
+								<input type="checkbox" bind:group={qps.svelte_versions} value="3" />
+								3
+							</label>
+
+							<label>
+								<input type="checkbox" bind:group={qps.svelte_versions} value="4" />
+								4
+							</label>
+
+							<label>
+								<input type="checkbox" bind:group={qps.svelte_versions} value="5" />
+								5
+							</label>
+						</div>
+					</div>
+				{/if}
+			</form>
 		</div>
+
+		{#if qps.query}
+			<div in:fly={{ y: 20 }} class="posts">
+				<section>
+					{#each filtered as pkg}
+						<PackageCard {pkg} {select} />
+					{/each}
+				</section>
+			</div>
+		{:else}
+			<div in:fly={{ y: 20 }}>
+				{#each data.homepage as { title, packages }}
+					<Category {title} {packages} {select} />
+				{/each}
+			</div>
+		{/if}
 	{/if}
 </div>
 

@@ -12,5 +12,32 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.20.2",
 	"last_rune_check_version": "0.0.1",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@lucide/svelte",
+			"semver": "^0.485.0"
+		},
+		{
+			"name": "@tailwindcss/vite",
+			"semver": "^4.0.17"
+		},
+		{
+			"name": "bits-ui",
+			"semver": "^1.3.14"
+		},
+		{
+			"name": "clsx",
+			"semver": "^2.1.1"
+		},
+		{
+			"name": "tailwind-merge",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "tailwindcss",
+			"semver": "^4.0.17"
+		}
+	],
+	"unpacked_size": 15453
 }

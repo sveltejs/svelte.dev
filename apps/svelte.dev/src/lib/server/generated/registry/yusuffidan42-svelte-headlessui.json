@@ -12,5 +12,12 @@
 	"version": "2.0.2",
 	"svelte_range": "^4.2.18",
 	"kit_range": "^1.30.4",
-	"last_rune_check_version": "2.0.2"
+	"last_rune_check_version": "2.0.2",
+	"dependencies": [
+		{
+			"name": "@yusuffidan.42/svelte-heroicons",
+			"semver": "^0.0.1"
+		}
+	],
+	"unpacked_size": 1129235
 }

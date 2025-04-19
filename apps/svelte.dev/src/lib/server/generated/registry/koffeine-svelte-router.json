@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "4.0.0",
 	"svelte_range": "^5",
-	"last_rune_check_version": "4.0.0"
+	"last_rune_check_version": "4.0.0",
+	"dependencies": [
+		{
+			"name": "regexparam",
+			"semver": "^3"
+		}
+	],
+	"unpacked_size": 8233
 }

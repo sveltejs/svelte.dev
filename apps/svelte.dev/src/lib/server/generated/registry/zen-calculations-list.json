@@ -11,5 +11,12 @@
 	"typescript": false,
 	"version": "0.0.22",
 	"svelte_range": "3.24.0",
-	"last_rune_check_version": "0.0.22"
+	"last_rune_check_version": "0.0.22",
+	"dependencies": [
+		{
+			"name": "@woden/svelte-simplebar",
+			"semver": "1.0.0"
+		}
+	],
+	"unpacked_size": 295235
 }

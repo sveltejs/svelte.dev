@@ -12,5 +12,16 @@
 	"version": "0.4.8",
 	"svelte_range": "^3.55.1",
 	"kit_range": "^1.8.3",
-	"last_rune_check_version": "0.4.8"
+	"last_rune_check_version": "0.4.8",
+	"dependencies": [
+		{
+			"name": "@krestui/common-clickoutside",
+			"semver": "^0.3.2"
+		},
+		{
+			"name": "@krestui/common-portal",
+			"semver": "^0.3.6"
+		}
+	],
+	"unpacked_size": 11335
 }

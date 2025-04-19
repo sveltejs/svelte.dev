@@ -13,5 +13,12 @@
 	"version": "1.1.1",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.5.2",
-	"last_rune_check_version": "1.1.1"
+	"last_rune_check_version": "1.1.1",
+	"dependencies": [
+		{
+			"name": "theme-mode",
+			"semver": "^1.1.1"
+		}
+	],
+	"unpacked_size": 17045
 }

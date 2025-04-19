@@ -12,5 +12,32 @@
 	"typescript": true,
 	"version": "5.0.3",
 	"svelte_range": "^5.0.0",
-	"last_rune_check_version": "5.0.3"
+	"last_rune_check_version": "5.0.3",
+	"dependencies": [
+		{
+			"name": "debug",
+			"semver": "^4.4.0"
+		},
+		{
+			"name": "kleur",
+			"semver": "^4.1.5"
+		},
+		{
+			"name": "vitefu",
+			"semver": "^1.0.4"
+		},
+		{
+			"name": "deepmerge",
+			"semver": "^4.3.1"
+		},
+		{
+			"name": "magic-string",
+			"semver": "^0.30.15"
+		},
+		{
+			"name": "@sveltejs/vite-plugin-svelte-inspector",
+			"semver": "^4.0.1"
+		}
+	],
+	"unpacked_size": 126450
 }

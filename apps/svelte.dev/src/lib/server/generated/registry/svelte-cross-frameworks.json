@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "0.0.10",
 	"svelte_range": "^4.2.8",
-	"last_rune_check_version": "0.0.10"
+	"last_rune_check_version": "0.0.10",
+	"dependencies": [
+		{
+			"name": "react",
+			"semver": "^16.8.0 || ^17.0.0 || ^18.0.0"
+		},
+		{
+			"name": "vue",
+			"semver": "^3.0.0"
+		}
+	],
+	"unpacked_size": 16229
 }

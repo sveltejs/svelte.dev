@@ -12,5 +12,88 @@
 	"svelte_range": "^5.2.0",
 	"kit_range": "^2.8.1",
 	"last_rune_check_version": "1.0.2",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@cloudparker/easy-script-loader-svelte",
+			"semver": "^4.1.1"
+		},
+		{
+			"name": "@cloudparker/easy-camera-svelte",
+			"semver": "^2.0.1"
+		},
+		{
+			"name": "@playwright/test",
+			"semver": "^1.49.0"
+		},
+		{
+			"name": "@sveltejs/adapter-auto",
+			"semver": "^3.3.1"
+		},
+		{
+			"name": "@sveltejs/package",
+			"semver": "^2.3.7"
+		},
+		{
+			"name": "@sveltejs/vite-plugin-svelte",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "@sveltejs/kit",
+			"semver": "^2.8.1"
+		},
+		{
+			"name": "@typescript-eslint/eslint-plugin",
+			"semver": "^8.16.0"
+		},
+		{
+			"name": "@typescript-eslint/parser",
+			"semver": "^8.16.0"
+		},
+		{
+			"name": "eslint",
+			"semver": "^9.15.0"
+		},
+		{
+			"name": "eslint-config-prettier",
+			"semver": "^9.1.0"
+		},
+		{
+			"name": "prettier",
+			"semver": "^3.4.1"
+		},
+		{
+			"name": "prettier-plugin-svelte",
+			"semver": "^3.3.2"
+		},
+		{
+			"name": "publint",
+			"semver": "^0.2.12"
+		},
+		{
+			"name": "svelte",
+			"semver": "^5.2.8"
+		},
+		{
+			"name": "svelte-check",
+			"semver": "^4.1.0"
+		},
+		{
+			"name": "tslib",
+			"semver": "^2.8.1"
+		},
+		{
+			"name": "typescript",
+			"semver": "^5.7.2"
+		},
+		{
+			"name": "vite",
+			"semver": "^5.0.0"
+		},
+		{
+			"name": "vitest",
+			"semver": "^2.1.6"
+		}
+	],
+	"unpacked_size": 5753
 }

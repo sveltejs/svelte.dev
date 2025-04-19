@@ -12,5 +12,20 @@
 	"svelte_range": "^4.2.13",
 	"kit_range": "^2.5.5",
 	"last_rune_check_version": "1.0.0",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "clsx",
+			"semver": "^2.1.0"
+		},
+		{
+			"name": "svelte",
+			"semver": "^4.2.13"
+		},
+		{
+			"name": "tailwind-merge",
+			"semver": "^2.2.2"
+		}
+	],
+	"unpacked_size": 22162
 }

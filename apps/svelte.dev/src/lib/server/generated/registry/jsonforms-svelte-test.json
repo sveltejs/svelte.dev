@@ -12,5 +12,124 @@
 	"version": "1.0.12",
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.0.0",
-	"last_rune_check_version": "1.0.12"
+	"last_rune_check_version": "1.0.12",
+	"dependencies": [
+		{
+			"name": "@material/typography",
+			"semver": "^14.0.0"
+		},
+		{
+			"name": "@smui-extra/autocomplete",
+			"semver": "^7.0.0-beta.0"
+		},
+		{
+			"name": "@smui/checkbox",
+			"semver": "^7.0.0-beta.0"
+		},
+		{
+			"name": "@smui/form-field",
+			"semver": "^7.0.0-beta.0"
+		},
+		{
+			"name": "@smui/layout-grid",
+			"semver": "^7.0.0-beta.0"
+		},
+		{
+			"name": "@smui/paper",
+			"semver": "^7.0.0-beta.0"
+		},
+		{
+			"name": "@smui/radio",
+			"semver": "^7.0.0-beta.0"
+		},
+		{
+			"name": "@smui/select",
+			"semver": "^7.0.0-beta.0"
+		},
+		{
+			"name": "@smui/slider",
+			"semver": "^7.0.0-beta.0"
+		},
+		{
+			"name": "@smui/switch",
+			"semver": "^7.0.0-beta.0"
+		},
+		{
+			"name": "@smui/textfield",
+			"semver": "^7.0.0-beta.0"
+		},
+		{
+			"name": "@sveltejs/adapter-auto",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "@sveltejs/kit",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "@sveltejs/package",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "@typescript-eslint/eslint-plugin",
+			"semver": "^5.45.0"
+		},
+		{
+			"name": "@typescript-eslint/parser",
+			"semver": "^5.45.0"
+		},
+		{
+			"name": "@zerodevx/svelte-json-view",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "eslint",
+			"semver": "^8.28.0"
+		},
+		{
+			"name": "eslint-config-prettier",
+			"semver": "^8.5.0"
+		},
+		{
+			"name": "eslint-plugin-svelte3",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "jsonforms-svelte",
+			"semver": "^1.0.6"
+		},
+		{
+			"name": "jsonforms-svelte-test",
+			"semver": "^1.0.11"
+		},
+		{
+			"name": "prettier",
+			"semver": "^2.8.0"
+		},
+		{
+			"name": "prettier-plugin-svelte",
+			"semver": "^2.8.1"
+		},
+		{
+			"name": "smui-theme",
+			"semver": "^7.0.0-beta.0"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.54.0"
+		},
+		{
+			"name": "svelte-check",
+			"semver": "^2.9.2"
+		},
+		{
+			"name": "tslib",
+			"semver": "^2.4.1"
+		},
+		{
+			"name": "vite",
+			"semver": "^4.0.0"
+		}
+	],
+	"unpacked_size": 599281
 }

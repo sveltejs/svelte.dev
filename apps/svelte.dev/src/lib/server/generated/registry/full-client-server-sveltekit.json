@@ -13,5 +13,12 @@
 	"version": "1.0.3",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.22.6",
-	"last_rune_check_version": "1.0.3"
+	"last_rune_check_version": "1.0.3",
+	"dependencies": [
+		{
+			"name": "events",
+			"semver": "^3.3.0"
+		}
+	],
+	"unpacked_size": 93938
 }

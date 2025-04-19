@@ -13,5 +13,12 @@
 	"version": "4.0.1",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.4",
-	"last_rune_check_version": "4.0.1"
+	"last_rune_check_version": "4.0.1",
+	"dependencies": [
+		{
+			"name": "nanoid",
+			"semver": "^5.0.3"
+		}
+	],
+	"unpacked_size": 47268
 }

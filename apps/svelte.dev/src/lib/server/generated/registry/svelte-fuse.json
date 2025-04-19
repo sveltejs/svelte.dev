@@ -13,5 +13,12 @@
 	"version": "0.0.1",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.4",
-	"last_rune_check_version": "0.0.1"
+	"last_rune_check_version": "0.0.1",
+	"dependencies": [
+		{
+			"name": "fuse.js",
+			"semver": "^6.6.2"
+		}
+	],
+	"unpacked_size": 6041
 }

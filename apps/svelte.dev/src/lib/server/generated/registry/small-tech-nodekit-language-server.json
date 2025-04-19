@@ -12,5 +12,80 @@
 	"typescript": true,
 	"version": "0.14.0",
 	"svelte_range": "^3.46.1",
-	"last_rune_check_version": "0.14.0"
+	"last_rune_check_version": "0.14.0",
+	"dependencies": [
+		{
+			"name": "chokidar",
+			"semver": "^3.4.1"
+		},
+		{
+			"name": "estree-walker",
+			"semver": "^2.0.1"
+		},
+		{
+			"name": "fast-glob",
+			"semver": "^3.2.7"
+		},
+		{
+			"name": "lodash",
+			"semver": "^4.17.21"
+		},
+		{
+			"name": "prettier",
+			"semver": "2.5.1"
+		},
+		{
+			"name": "prettier-plugin-svelte",
+			"semver": "~2.6.0"
+		},
+		{
+			"name": "source-map",
+			"semver": "^0.7.3"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.46.1"
+		},
+		{
+			"name": "svelte-preprocess",
+			"semver": "~4.10.1"
+		},
+		{
+			"name": "svelte2tsx",
+			"semver": "~0.5.0"
+		},
+		{
+			"name": "typescript",
+			"semver": "*"
+		},
+		{
+			"name": "vscode-css-languageservice",
+			"semver": "~5.1.0"
+		},
+		{
+			"name": "vscode-emmet-helper",
+			"semver": "~2.6.0"
+		},
+		{
+			"name": "vscode-html-languageservice",
+			"semver": "~4.1.0"
+		},
+		{
+			"name": "vscode-languageserver",
+			"semver": "7.1.0-next.4"
+		},
+		{
+			"name": "vscode-languageserver-protocol",
+			"semver": "3.16.0"
+		},
+		{
+			"name": "vscode-languageserver-types",
+			"semver": "3.16.0"
+		},
+		{
+			"name": "vscode-uri",
+			"semver": "~3.0.0"
+		}
+	],
+	"unpacked_size": 1749877
 }

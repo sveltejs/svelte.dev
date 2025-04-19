@@ -12,5 +12,16 @@
 	"typescript": false,
 	"version": "0.1.1-alpha.2",
 	"svelte_range": "^3.6.9",
-	"last_rune_check_version": "0.1.1-alpha.2"
+	"last_rune_check_version": "0.1.1-alpha.2",
+	"dependencies": [
+		{
+			"name": "clsx",
+			"semver": "^1.0.4"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.6.9"
+		}
+	],
+	"unpacked_size": 32497
 }

@@ -11,5 +11,7 @@
 	"runes": false,
 	"last_rune_check_version": "0.1.0",
 	"version": "0.1.0",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [],
+	"unpacked_size": 35602
 }

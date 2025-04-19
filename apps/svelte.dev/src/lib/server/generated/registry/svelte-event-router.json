@@ -11,5 +11,12 @@
 	"typescript": false,
 	"version": "2.0.1",
 	"svelte_range": "^3.22.0",
-	"last_rune_check_version": "2.0.1"
+	"last_rune_check_version": "2.0.1",
+	"dependencies": [
+		{
+			"name": "fs-extra",
+			"semver": "^9.0.0"
+		}
+	],
+	"unpacked_size": 1164504
 }

@@ -10,5 +10,16 @@
 	"typescript": false,
 	"version": "1.1.2",
 	"svelte_range": "3.18.2",
-	"last_rune_check_version": "1.1.2"
+	"last_rune_check_version": "1.1.2",
+	"dependencies": [
+		{
+			"name": "paper-jsdom-canvas",
+			"semver": "0.12.4"
+		},
+		{
+			"name": "svelte-css-vars",
+			"semver": "0.0.1"
+		}
+	],
+	"unpacked_size": 3239509
 }

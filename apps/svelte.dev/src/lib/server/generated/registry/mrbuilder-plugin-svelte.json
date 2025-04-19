@@ -11,5 +11,16 @@
 	"version": "4.4.7-alpha.9",
 	"svelte_range": "^3.22.3",
 	"last_rune_check_version": "4.4.7-alpha.9",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "svelte",
+			"semver": "^3.22.3"
+		},
+		{
+			"name": "svelte-loader",
+			"semver": "^2.13.6"
+		}
+	],
+	"unpacked_size": 2504
 }

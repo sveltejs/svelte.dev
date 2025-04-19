@@ -12,5 +12,11 @@
 	"typescript": false,
 	"version": "1.0.0",
 	"svelte_range": "^1.11.2",
-	"last_rune_check_version": "1.0.0"
+	"last_rune_check_version": "1.0.0",
+	"dependencies": [
+		{
+			"name": "svelte",
+			"semver": "^1.11.2"
+		}
+	]
 }

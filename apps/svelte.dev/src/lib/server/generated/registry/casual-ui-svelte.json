@@ -11,5 +11,28 @@
 	"version": "0.11.2",
 	"svelte_range": "^3.46.0 || ^4.0.0",
 	"last_rune_check_version": "0.11.2",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@casual-ui/i18n",
+			"semver": "^0.1.7"
+		},
+		{
+			"name": "@casual-ui/styles",
+			"semver": ""
+		},
+		{
+			"name": "dayjs",
+			"semver": "^1.11.9"
+		},
+		{
+			"name": "@casual-ui/types",
+			"semver": "0.1.1"
+		},
+		{
+			"name": "@casual-ui/utils",
+			"semver": "0.0.3"
+		}
+	],
+	"unpacked_size": 663724
 }

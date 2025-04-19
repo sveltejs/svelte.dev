@@ -13,5 +13,16 @@
 	"svelte_range": "^3.55.0",
 	"kit_range": "1.0.0",
 	"last_rune_check_version": "0.2.0",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "svelte-petit-utils",
+			"semver": "^0.3.7"
+		},
+		{
+			"name": "tslib",
+			"semver": "^2.4.1"
+		}
+	],
+	"unpacked_size": 45657
 }

@@ -11,5 +11,12 @@
 	"version": "0.2.0",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "0.2.0",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "jsqr",
+			"semver": "^1.2.0"
+		}
+	],
+	"unpacked_size": 2325254
 }

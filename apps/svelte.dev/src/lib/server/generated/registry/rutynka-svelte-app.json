@@ -12,5 +12,24 @@
 	"typescript": false,
 	"version": "0.0.8",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.0.8"
+	"last_rune_check_version": "0.0.8",
+	"dependencies": [
+		{
+			"name": "@rutynka/helper-bar-board",
+			"semver": "^0.1.0"
+		},
+		{
+			"name": "@rutynka/helper-progress",
+			"semver": "^0.1.3"
+		},
+		{
+			"name": "eslint-plugin-svelte3",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "sirv-cli",
+			"semver": "^1.0.0"
+		}
+	],
+	"unpacked_size": 87867
 }

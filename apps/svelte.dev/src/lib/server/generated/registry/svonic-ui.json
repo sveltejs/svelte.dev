@@ -13,5 +13,16 @@
 	"version": "1.0.0-next.40",
 	"svelte_range": "4.2.2",
 	"kit_range": "1.27.3",
-	"last_rune_check_version": "1.0.0-next.40"
+	"last_rune_check_version": "1.0.0-next.40",
+	"dependencies": [
+		{
+			"name": "@mdi/js",
+			"semver": "7.3.67"
+		},
+		{
+			"name": "ionicons",
+			"semver": "7.2.1"
+		}
+	],
+	"unpacked_size": 30342
 }

@@ -11,5 +11,64 @@
 	"typescript": false,
 	"version": "1.0.3",
 	"svelte_range": "^3.49.0",
-	"last_rune_check_version": "1.0.3"
+	"last_rune_check_version": "1.0.3",
+	"dependencies": [
+		{
+			"name": "builtin-modules",
+			"semver": "^3.3.0"
+		},
+		{
+			"name": "deepmerge",
+			"semver": "^4.2.2"
+		},
+		{
+			"name": "estree-walker",
+			"semver": "^0.6.1"
+		},
+		{
+			"name": "fsevents",
+			"semver": "^2.3.2"
+		},
+		{
+			"name": "function-bind",
+			"semver": "^1.1.1"
+		},
+		{
+			"name": "has",
+			"semver": "^1.0.3"
+		},
+		{
+			"name": "is-core-module",
+			"semver": "^2.10.0"
+		},
+		{
+			"name": "is-module",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "path-parse",
+			"semver": "^1.0.7"
+		},
+		{
+			"name": "picomatch",
+			"semver": "^2.3.1"
+		},
+		{
+			"name": "require-relative",
+			"semver": "^0.8.7"
+		},
+		{
+			"name": "resolve",
+			"semver": "^1.22.1"
+		},
+		{
+			"name": "rollup-pluginutils",
+			"semver": "^2.8.2"
+		},
+		{
+			"name": "supports-preserve-symlinks-flag",
+			"semver": "^1.0.0"
+		}
+	],
+	"unpacked_size": 570224
 }

@@ -13,5 +13,12 @@
 	"version": "0.0.20",
 	"svelte_range": "^3.42.1",
 	"kit_range": "next",
-	"last_rune_check_version": "0.0.20"
+	"last_rune_check_version": "0.0.20",
+	"dependencies": [
+		{
+			"name": "yootils",
+			"semver": "0.3.1"
+		}
+	],
+	"unpacked_size": 31882
 }

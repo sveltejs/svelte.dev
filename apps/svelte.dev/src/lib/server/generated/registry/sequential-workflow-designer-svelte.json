@@ -4,13 +4,15 @@
 	"repo_url": "",
 	"authors": ["b4rtaz"],
 	"downloads": 260,
-	"updated": "2025-03-20T17:36:55.045Z",
+	"updated": "2025-04-19T08:36:12.724Z",
 	"tags": ["ui", "tooling"],
 	"runes": false,
 	"typescript": true,
-	"version": "0.28.0",
+	"version": "0.29.0",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.4",
-	"last_rune_check_version": "0.28.0",
-	"github_stars": 0
+	"last_rune_check_version": "0.29.0",
+	"github_stars": 0,
+	"dependencies": [],
+	"unpacked_size": 14648
 }

@@ -13,5 +13,20 @@
 	"version": "0.1.1",
 	"svelte_range": "^4.2.2",
 	"kit_range": "^1.27.4",
-	"last_rune_check_version": "0.1.1"
+	"last_rune_check_version": "0.1.1",
+	"dependencies": [
+		{
+			"name": "@sveltejs/kit",
+			"semver": "^1.27.4"
+		},
+		{
+			"name": "svelte",
+			"semver": "^4.2.2"
+		},
+		{
+			"name": "@monaco-auth/core",
+			"semver": "0.0.2"
+		}
+	],
+	"unpacked_size": 7315
 }

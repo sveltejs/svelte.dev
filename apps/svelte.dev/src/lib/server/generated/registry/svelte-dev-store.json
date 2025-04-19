@@ -12,5 +12,12 @@
 	"typescript": false,
 	"version": "1.0.2",
 	"svelte_range": ">= 1.43.0",
-	"last_rune_check_version": "1.0.2"
+	"last_rune_check_version": "1.0.2",
+	"dependencies": [
+		{
+			"name": "redux",
+			"semver": "^3.7.2"
+		}
+	],
+	"unpacked_size": 5667
 }

@@ -5,12 +5,19 @@
 	"authors": ["tannerlinsley", "nksaraf"],
 	"homepage": "https://tanstack.com/table",
 	"downloads": 8538,
-	"updated": "2025-02-11T21:00:39.245Z",
+	"updated": "2025-04-14T20:20:26.877Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 26225,
 	"typescript": true,
-	"version": "8.21.2",
+	"version": "8.21.3",
 	"svelte_range": "^4.0.0 || ^3.49.0",
-	"last_rune_check_version": "8.21.2"
+	"last_rune_check_version": "8.21.3",
+	"dependencies": [
+		{
+			"name": "@tanstack/table-core",
+			"semver": "8.21.3"
+		}
+	],
+	"unpacked_size": 818422
 }

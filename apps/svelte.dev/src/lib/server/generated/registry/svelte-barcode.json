@@ -12,5 +12,12 @@
 	"typescript": false,
 	"version": "2.0.0",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "2.0.0"
+	"last_rune_check_version": "2.0.0",
+	"dependencies": [
+		{
+			"name": "jsbarcode",
+			"semver": "^3.11.3"
+		}
+	],
+	"unpacked_size": 282934
 }

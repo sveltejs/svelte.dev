@@ -11,5 +11,12 @@
 	"typescript": true,
 	"version": "6.2.0",
 	"svelte_range": "^5.17.3",
-	"last_rune_check_version": "6.2.0"
+	"last_rune_check_version": "6.2.0",
+	"dependencies": [
+		{
+			"name": "@preact/signals",
+			"semver": "^2.0.0"
+		}
+	],
+	"unpacked_size": 270818
 }

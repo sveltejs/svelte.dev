@@ -12,5 +12,40 @@
 	"typescript": true,
 	"version": "1.2.308",
 	"svelte_range": "^4.2.19",
-	"last_rune_check_version": "1.2.308"
+	"last_rune_check_version": "1.2.308",
+	"dependencies": [
+		{
+			"name": "@ctx-core/auth0",
+			"semver": "^40.1.296"
+		},
+		{
+			"name": "@ctx-core/auth0-ui",
+			"semver": "^15.1.12"
+		},
+		{
+			"name": "@ctx-core/dialog-ui-svelte",
+			"semver": "^1.2.26"
+		},
+		{
+			"name": "@ctx-core/dom",
+			"semver": "^15.3.102"
+		},
+		{
+			"name": "@ctx-core/nanostores",
+			"semver": "^10.0.157"
+		},
+		{
+			"name": "auth0-js",
+			"semver": "^9.26.1"
+		},
+		{
+			"name": "ctx-core",
+			"semver": "^7.2.32"
+		},
+		{
+			"name": "svelte",
+			"semver": "^4.2.19"
+		}
+	],
+	"unpacked_size": 155916
 }

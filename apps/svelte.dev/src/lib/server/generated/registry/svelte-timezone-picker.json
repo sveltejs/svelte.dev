@@ -12,5 +12,12 @@
 	"typescript": false,
 	"version": "2.0.3",
 	"svelte_range": "^3.25.0",
-	"last_rune_check_version": "2.0.3"
+	"last_rune_check_version": "2.0.3",
+	"dependencies": [
+		{
+			"name": "compute-scroll-into-view",
+			"semver": "^1.0.16"
+		}
+	],
+	"unpacked_size": 692639
 }

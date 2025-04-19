@@ -5,11 +5,38 @@
 	"authors": ["huntabyte"],
 	"homepage": "https://github.com/huntabyte/shadcn-svelte#readme",
 	"downloads": 3888,
-	"updated": "2024-10-12T14:22:22.765Z",
+	"updated": "2025-04-16T19:06:29.043Z",
 	"tags": ["ui", "design-system"],
 	"runes": false,
 	"github_stars": 6410,
 	"typescript": false,
-	"version": "0.14.0",
-	"last_rune_check_version": "0.14.0"
+	"version": "0.14.1",
+	"last_rune_check_version": "0.14.1",
+	"dependencies": [
+		{
+			"name": "@clack/core",
+			"semver": "^0.3.4"
+		},
+		{
+			"name": "chalk",
+			"semver": "5.2.0"
+		},
+		{
+			"name": "commander",
+			"semver": "^10.0.1"
+		},
+		{
+			"name": "execa",
+			"semver": "^7.2.0"
+		},
+		{
+			"name": "is-unicode-supported",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "node-fetch-native",
+			"semver": "^1.6.4"
+		}
+	],
+	"unpacked_size": 71498
 }

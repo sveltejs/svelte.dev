@@ -12,5 +12,16 @@
 	"typescript": false,
 	"version": "0.5.20",
 	"svelte_range": "^3.6.1",
-	"last_rune_check_version": "0.5.20"
+	"last_rune_check_version": "0.5.20",
+	"dependencies": [
+		{
+			"name": "@sveltejs/gestures",
+			"semver": "0.0.1"
+		},
+		{
+			"name": "siema",
+			"semver": "^1.5.1"
+		}
+	],
+	"unpacked_size": 84023
 }

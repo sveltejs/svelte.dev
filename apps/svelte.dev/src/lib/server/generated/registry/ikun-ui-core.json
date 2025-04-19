@@ -13,5 +13,312 @@
 	"version": "0.2.8",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.5.5",
-	"last_rune_check_version": "0.2.8"
+	"last_rune_check_version": "0.2.8",
+	"dependencies": [
+		{
+			"name": "baiwusanyu-utils",
+			"semver": "^1.0.18"
+		},
+		{
+			"name": "clsx",
+			"semver": "^2.1.0"
+		},
+		{
+			"name": "dayjs",
+			"semver": "^1.11.10"
+		},
+		{
+			"name": "@ikun-ui/affix",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/alert",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/auto-complete",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/avatar",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/backtop",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/badge",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/breadcrumb",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/breadcrumb-item",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/button-group",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/calendar",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/card",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/checkbox",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/button",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/carousel",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/checkbox-group",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/collapse",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/client-only",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/collapse-wrapper",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/color-picker",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/contextmenu",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/descriptions",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/countdown",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/descriptions-item",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/divider",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/drawer",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/ellipsis",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/empty",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/dropdown",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/eye-dropper",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/flex",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/form",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/grid",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/image",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/image-view",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/infinite",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/icon",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/input",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/input-number",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/link",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/layout",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/mask",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/message",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/message-box",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/modal",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/notify",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/popconfirm",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/page-header",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/pagination",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/popover",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/preset",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/progress",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/radio-group",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/radio",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/rate",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/scrollbar",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/segmented",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/skeleton",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/select",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/spin",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/statistic",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/slider",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/steps",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/switch",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/tabs",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/tag",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/timeline",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/tour",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/tooltip",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/utils",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/virtual-list",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/watermark",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/indicators",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/menu",
+			"semver": "0.2.8"
+		}
+	],
+	"unpacked_size": 25224
 }

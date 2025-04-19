@@ -5,12 +5,63 @@
 	"authors": ["richetechguy"],
 	"homepage": "https://github.com/Blinkx-IO/editor#readme",
 	"downloads": 77,
-	"updated": "2025-04-11T19:54:03.363Z",
+	"updated": "2025-04-14T14:43:10.457Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 1,
 	"typescript": true,
-	"version": "0.0.64",
+	"version": "0.0.65",
 	"svelte_range": "^5.19.6",
-	"last_rune_check_version": "0.0.64"
+	"last_rune_check_version": "0.0.65",
+	"dependencies": [
+		{
+			"name": "dom-to-image-more",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "grapesjs",
+			"semver": "^0.22.5"
+		},
+		{
+			"name": "monaco-editor",
+			"semver": "^0.52.2"
+		},
+		{
+			"name": "grapesjs-custom-code",
+			"semver": "^1.0.2"
+		},
+		{
+			"name": "grapesjs-parser-postcss",
+			"semver": "^1.0.3"
+		},
+		{
+			"name": "grapesjs-style-bg",
+			"semver": "^2.0.2"
+		},
+		{
+			"name": "grapesjs-tooltip",
+			"semver": "^0.1.8"
+		},
+		{
+			"name": "grapesjs-touch",
+			"semver": "^0.1.1"
+		},
+		{
+			"name": "grapesjs-typed",
+			"semver": "^2.0.1"
+		},
+		{
+			"name": "lit",
+			"semver": "^3.2.1"
+		},
+		{
+			"name": "nprogress",
+			"semver": "^0.2.0"
+		},
+		{
+			"name": "papaparse",
+			"semver": "^5.5.2"
+		}
+	],
+	"unpacked_size": 41847352
 }

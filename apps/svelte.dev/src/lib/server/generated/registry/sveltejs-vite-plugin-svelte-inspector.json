@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "4.0.1",
 	"svelte_range": "^5.0.0",
-	"last_rune_check_version": "4.0.1"
+	"last_rune_check_version": "4.0.1",
+	"dependencies": [
+		{
+			"name": "debug",
+			"semver": "^4.3.7"
+		}
+	],
+	"unpacked_size": 25886
 }

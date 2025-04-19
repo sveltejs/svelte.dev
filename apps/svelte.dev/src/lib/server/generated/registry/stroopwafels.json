@@ -13,5 +13,12 @@
 	"version": "1.6.68",
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
-	"last_rune_check_version": "1.6.68"
+	"last_rune_check_version": "1.6.68",
+	"dependencies": [
+		{
+			"name": "prismjs",
+			"semver": "^1.29.0"
+		}
+	],
+	"unpacked_size": 66644
 }

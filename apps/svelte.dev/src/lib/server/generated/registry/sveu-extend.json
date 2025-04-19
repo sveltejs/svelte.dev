@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "1.0.0",
 	"svelte_range": "^4.0.3",
-	"last_rune_check_version": "1.0.0"
+	"last_rune_check_version": "1.0.0",
+	"dependencies": [
+		{
+			"name": "@sveu/shared",
+			"semver": "^1.0.1"
+		}
+	],
+	"unpacked_size": 20040
 }

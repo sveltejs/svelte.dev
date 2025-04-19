@@ -12,5 +12,12 @@
 	"typescript": false,
 	"version": "1.2.0",
 	"svelte_range": "latest",
-	"last_rune_check_version": "1.2.0"
+	"last_rune_check_version": "1.2.0",
+	"dependencies": [
+		{
+			"name": "imask",
+			"semver": "latest"
+		}
+	],
+	"unpacked_size": 260509
 }

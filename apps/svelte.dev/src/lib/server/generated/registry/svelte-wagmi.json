@@ -13,5 +13,20 @@
 	"version": "1.0.7",
 	"svelte_range": "^4.0.0 || ^5.0.0",
 	"kit_range": "^2.5.5",
-	"last_rune_check_version": "1.0.7"
+	"last_rune_check_version": "1.0.7",
+	"dependencies": [
+		{
+			"name": "@web3modal/core",
+			"semver": "^5.0.1"
+		},
+		{
+			"name": "@web3modal/ui",
+			"semver": "^5.0.1"
+		},
+		{
+			"name": "@web3modal/wagmi",
+			"semver": "^5.0.1"
+		}
+	],
+	"unpacked_size": 20838
 }

@@ -13,5 +13,40 @@
 	"version": "0.0.4",
 	"svelte_range": "^5.0.0-next.1",
 	"kit_range": "^2.6.1",
-	"last_rune_check_version": "0.0.4"
+	"last_rune_check_version": "0.0.4",
+	"dependencies": [
+		{
+			"name": "@accuser/mdast-util-type-guards",
+			"semver": "^1.2.0"
+		},
+		{
+			"name": "@accuser/svelte-markdown-provider",
+			"semver": "0.2.0-next.11"
+		},
+		{
+			"name": "@types/mdast",
+			"semver": "^4.0.4"
+		},
+		{
+			"name": "katex",
+			"semver": "^0.16.11"
+		},
+		{
+			"name": "mdast-util-from-markdown",
+			"semver": "^2.0.1"
+		},
+		{
+			"name": "mdast-util-math",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "mdast-util-to-string",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "micromark-extension-math",
+			"semver": "^3.1.0"
+		}
+	],
+	"unpacked_size": 7046
 }

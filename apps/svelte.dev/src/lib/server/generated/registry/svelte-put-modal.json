@@ -13,5 +13,20 @@
 	"version": "1.0.10",
 	"svelte_range": "^3.55.0 || ^4.0.0",
 	"kit_range": "2.5.5",
-	"last_rune_check_version": "1.0.10"
+	"last_rune_check_version": "1.0.10",
+	"dependencies": [
+		{
+			"name": "@svelte-put/clickoutside",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "@svelte-put/movable",
+			"semver": "^3.2.1"
+		},
+		{
+			"name": "@svelte-put/shortcut",
+			"semver": "^3.2.0"
+		}
+	],
+	"unpacked_size": 40191
 }

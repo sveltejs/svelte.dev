@@ -11,5 +11,36 @@
 	"github_stars": 89,
 	"typescript": true,
 	"version": "2.0.11",
-	"last_rune_check_version": "2.0.11"
+	"last_rune_check_version": "2.0.11",
+	"dependencies": [
+		{
+			"name": "commander",
+			"semver": "11.1.0"
+		},
+		{
+			"name": "consola",
+			"semver": "3.4.0"
+		},
+		{
+			"name": "json5",
+			"semver": "2.2.3"
+		},
+		{
+			"name": "unplugin",
+			"semver": "^2.1.2"
+		},
+		{
+			"name": "urlpattern-polyfill",
+			"semver": "^10.0.0"
+		},
+		{
+			"name": "@inlang/sdk",
+			"semver": "2.4.7"
+		},
+		{
+			"name": "@inlang/recommend-sherlock",
+			"semver": "0.2.1"
+		}
+	],
+	"unpacked_size": 424784
 }

@@ -13,5 +13,12 @@
 	"version": "4.2.0",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.17.3",
-	"last_rune_check_version": "4.2.0"
+	"last_rune_check_version": "4.2.0",
+	"dependencies": [
+		{
+			"name": "schema-dts",
+			"semver": "^1.1.5"
+		}
+	],
+	"unpacked_size": 23384
 }

@@ -11,5 +11,28 @@
 	"version": "0.2.8",
 	"svelte_range": "^4.2.12",
 	"last_rune_check_version": "0.2.8",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "baiwusanyu-utils",
+			"semver": "^1.0.18"
+		},
+		{
+			"name": "svelte",
+			"semver": "^4.2.12"
+		},
+		{
+			"name": "@floating-ui/dom",
+			"semver": "latest"
+		},
+		{
+			"name": "svelte-floating-ui",
+			"semver": "latest"
+		},
+		{
+			"name": "@ikun-ui/utils",
+			"semver": "0.2.8"
+		}
+	],
+	"unpacked_size": 13984
 }

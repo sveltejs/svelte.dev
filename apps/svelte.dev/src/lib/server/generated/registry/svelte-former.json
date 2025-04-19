@@ -12,5 +12,16 @@
 	"typescript": false,
 	"version": "1.1.13",
 	"svelte_range": "^4.2.15",
-	"last_rune_check_version": "1.1.13"
+	"last_rune_check_version": "1.1.13",
+	"dependencies": [
+		{
+			"name": "fastest-validator",
+			"semver": "^1.18.0"
+		},
+		{
+			"name": "shorthash",
+			"semver": "^0.0.2"
+		}
+	],
+	"unpacked_size": 104957
 }

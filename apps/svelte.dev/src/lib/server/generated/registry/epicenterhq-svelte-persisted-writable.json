@@ -12,5 +12,20 @@
 	"typescript": true,
 	"version": "1.0.5",
 	"svelte_range": "^4.2.12",
-	"last_rune_check_version": "1.0.5"
+	"last_rune_check_version": "1.0.5",
+	"dependencies": [
+		{
+			"name": "@changesets/cli",
+			"semver": "^2.27.1"
+		},
+		{
+			"name": "tsup",
+			"semver": "^8.0.2"
+		},
+		{
+			"name": "zod",
+			"semver": "^3.22.4"
+		}
+	],
+	"unpacked_size": 53551
 }

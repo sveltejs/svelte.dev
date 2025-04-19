@@ -13,5 +13,12 @@
 	"version": "1.0.5",
 	"svelte_range": "^3.44.1",
 	"kit_range": "next",
-	"last_rune_check_version": "1.0.5"
+	"last_rune_check_version": "1.0.5",
+	"dependencies": [
+		{
+			"name": "yup",
+			"semver": "^0.32.11"
+		}
+	],
+	"unpacked_size": 24365
 }

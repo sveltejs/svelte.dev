@@ -12,5 +12,108 @@
 	"typescript": true,
 	"version": "0.2.7",
 	"svelte_range": "^3.44.0",
-	"last_rune_check_version": "0.2.7"
+	"last_rune_check_version": "0.2.7",
+	"dependencies": [
+		{
+			"name": "@babel/standalone",
+			"semver": "^7.20.15"
+		},
+		{
+			"name": "@codemirror/autocomplete",
+			"semver": "^6.1.0"
+		},
+		{
+			"name": "@codemirror/commands",
+			"semver": "^6.1.0"
+		},
+		{
+			"name": "@codemirror/lang-cpp",
+			"semver": "^6.0.2"
+		},
+		{
+			"name": "@codemirror/lang-java",
+			"semver": "^6.0.1"
+		},
+		{
+			"name": "@codemirror/lang-javascript",
+			"semver": "^6.1.0"
+		},
+		{
+			"name": "@codemirror/lang-python",
+			"semver": "^6.1.0"
+		},
+		{
+			"name": "@codemirror/lang-sql",
+			"semver": "^6.1.0"
+		},
+		{
+			"name": "@codemirror/language",
+			"semver": "^6.1.0"
+		},
+		{
+			"name": "@codemirror/legacy-modes",
+			"semver": "^6.3.1"
+		},
+		{
+			"name": "@codemirror/lint",
+			"semver": "^6.1.0"
+		},
+		{
+			"name": "@codemirror/state",
+			"semver": "^6.1.0"
+		},
+		{
+			"name": "@codemirror/theme-one-dark",
+			"semver": "^6.1.0"
+		},
+		{
+			"name": "@codemirror/view",
+			"semver": "^6.1.0"
+		},
+		{
+			"name": "@freecodecamp/loop-protect",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "@rollup/plugin-typescript",
+			"semver": "^8.5.0"
+		},
+		{
+			"name": "@sosml/interpreter",
+			"semver": "^1.6.10"
+		},
+		{
+			"name": "@typescript/vfs",
+			"semver": "^1.3.5"
+		},
+		{
+			"name": "codemirror",
+			"semver": "^6.0.1"
+		},
+		{
+			"name": "java-parser",
+			"semver": "^2.0.3"
+		},
+		{
+			"name": "localforage",
+			"semver": "^1.10.0"
+		},
+		{
+			"name": "lodash",
+			"semver": "^4.17.21"
+		},
+		{
+			"name": "p5",
+			"semver": "^1.5.0"
+		},
+		{
+			"name": "split.js",
+			"semver": "^1.6.5"
+		},
+		{
+			"name": "sql.js",
+			"semver": "^1.6.2"
+		}
+	],
+	"unpacked_size": 196404574
 }

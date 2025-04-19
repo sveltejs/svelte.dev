@@ -5,12 +5,14 @@
 	"authors": ["vkurko"],
 	"homepage": "https://vkurko.github.io/calendar/",
 	"downloads": 5669,
-	"updated": "2025-04-01T19:04:09.263Z",
+	"updated": "2025-04-16T18:13:20.930Z",
 	"tags": ["ui"],
-	"runes": false,
+	"runes": true,
 	"github_stars": 1645,
 	"typescript": false,
-	"version": "3.12.0",
-	"svelte_range": "^4.2.19",
-	"last_rune_check_version": "3.12.0"
+	"version": "4.0.1",
+	"svelte_range": "^5.25.10",
+	"last_rune_check_version": "4.0.1",
+	"dependencies": [],
+	"unpacked_size": 553669
 }

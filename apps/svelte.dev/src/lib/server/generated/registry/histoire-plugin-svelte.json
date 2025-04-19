@@ -12,5 +12,36 @@
 	"typescript": true,
 	"version": "1.0.0-alpha.2",
 	"svelte_range": "^3.0.0 || ^4.0.0",
-	"last_rune_check_version": "1.0.0-alpha.2"
+	"last_rune_check_version": "1.0.0-alpha.2",
+	"dependencies": [
+		{
+			"name": "change-case",
+			"semver": "^5.4.4"
+		},
+		{
+			"name": "globby",
+			"semver": "^14.0.2"
+		},
+		{
+			"name": "launch-editor",
+			"semver": "^2.9.1"
+		},
+		{
+			"name": "pathe",
+			"semver": "^1.1.2"
+		},
+		{
+			"name": "@histoire/shared",
+			"semver": "^1.0.0-alpha.2"
+		},
+		{
+			"name": "@histoire/controls",
+			"semver": "^1.0.0-alpha.2"
+		},
+		{
+			"name": "@histoire/vendors",
+			"semver": "^1.0.0-alpha.2"
+		}
+	],
+	"unpacked_size": 66587
 }

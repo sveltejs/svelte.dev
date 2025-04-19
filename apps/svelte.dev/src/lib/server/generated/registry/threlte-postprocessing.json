@@ -13,5 +13,36 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "0.0.9",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@threlte/core",
+			"semver": "^8.0.1"
+		},
+		{
+			"name": "@threlte/extras",
+			"semver": "^9.0.1"
+		},
+		{
+			"name": "postprocessing",
+			"semver": "^6.36.7"
+		},
+		{
+			"name": "three",
+			"semver": "^0.173.0"
+		},
+		{
+			"name": "three-stdlib",
+			"semver": "^2.35.13"
+		},
+		{
+			"name": "vite-plugin-glsl",
+			"semver": "^1.3.1"
+		},
+		{
+			"name": "vite-plugin-string",
+			"semver": "^1.2.3"
+		}
+	],
+	"unpacked_size": 169360
 }

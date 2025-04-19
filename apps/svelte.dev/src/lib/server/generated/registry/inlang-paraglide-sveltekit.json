@@ -13,5 +13,40 @@
 	"version": "0.16.1",
 	"svelte_range": "^5.0.0 || ^5.0.0-next.1 || ^5.0.0-rc.1",
 	"kit_range": "^2.4.3",
-	"last_rune_check_version": "0.16.1"
+	"last_rune_check_version": "0.16.1",
+	"dependencies": [
+		{
+			"name": "dedent",
+			"semver": "1.5.1"
+		},
+		{
+			"name": "svelte",
+			"semver": "^5.0.0 || ^5.0.0-next.1 || ^5.0.0-rc.1"
+		},
+		{
+			"name": "devalue",
+			"semver": "^4.3.2"
+		},
+		{
+			"name": "commander",
+			"semver": "^12.0.0"
+		},
+		{
+			"name": "magic-string",
+			"semver": "^0.30.5"
+		},
+		{
+			"name": "@lix-js/client",
+			"semver": "2.2.1"
+		},
+		{
+			"name": "@inlang/paraglide-js",
+			"semver": "1.11.8"
+		},
+		{
+			"name": "@inlang/paraglide-vite",
+			"semver": "1.4.0"
+		}
+	],
+	"unpacked_size": 180818
 }

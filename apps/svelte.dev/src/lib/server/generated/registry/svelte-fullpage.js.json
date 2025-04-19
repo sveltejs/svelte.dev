@@ -11,5 +11,12 @@
 	"version": "1.0.5",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "1.0.5",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "fullpage.js",
+			"semver": "^3.0.8"
+		}
+	],
+	"unpacked_size": 62049
 }

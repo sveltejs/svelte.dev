@@ -13,5 +13,44 @@
 	"version": "0.0.101",
 	"svelte_range": "^3.58.0",
 	"kit_range": "^1.5.0",
-	"last_rune_check_version": "0.0.101"
+	"last_rune_check_version": "0.0.101",
+	"dependencies": [
+		{
+			"name": "@sveltejs/kit",
+			"semver": "^1.5.0"
+		},
+		{
+			"name": "acorn",
+			"semver": "^8.8.2"
+		},
+		{
+			"name": "axios",
+			"semver": "^1.3.4"
+		},
+		{
+			"name": "estree-walker",
+			"semver": "^3.0.3"
+		},
+		{
+			"name": "magic-string",
+			"semver": "^0.30.0"
+		},
+		{
+			"name": "replace-in-file",
+			"semver": "^6.3.5"
+		},
+		{
+			"name": "svelte-awesome-color-picker",
+			"semver": "^2.4.1"
+		},
+		{
+			"name": "svelte-french-toast",
+			"semver": "^1.0.4-beta.0"
+		},
+		{
+			"name": "uuid",
+			"semver": "^9.0.0"
+		}
+	],
+	"unpacked_size": 8852397
 }

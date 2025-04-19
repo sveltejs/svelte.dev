@@ -12,5 +12,16 @@
 	"runes": false,
 	"last_rune_check_version": "1.0.5",
 	"version": "1.0.5",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "chart.js",
+			"semver": "^4.4.8"
+		},
+		{
+			"name": "chartjs-plugin-datalabels",
+			"semver": "^2.2.0"
+		}
+	],
+	"unpacked_size": 546739
 }

@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "2.1.0",
 	"svelte_range": "^5.1.0",
-	"last_rune_check_version": "2.1.0"
+	"last_rune_check_version": "2.1.0",
+	"dependencies": [
+		{
+			"name": "headless-qr",
+			"semver": "^1.0.3"
+		}
+	],
+	"unpacked_size": 30732
 }

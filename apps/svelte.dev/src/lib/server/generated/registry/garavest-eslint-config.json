@@ -11,5 +11,56 @@
 	"typescript": true,
 	"version": "2.1.1",
 	"svelte_range": "^4.2.8",
-	"last_rune_check_version": "2.1.1"
+	"last_rune_check_version": "2.1.1",
+	"dependencies": [
+		{
+			"name": "@eslint/js",
+			"semver": "^8.55.0"
+		},
+		{
+			"name": "@stylistic/eslint-plugin",
+			"semver": "^1.5.0"
+		},
+		{
+			"name": "@typescript-eslint/eslint-plugin",
+			"semver": "^6.13.2"
+		},
+		{
+			"name": "@typescript-eslint/parser",
+			"semver": "^6.13.2"
+		},
+		{
+			"name": "eslint",
+			"semver": "^8.55.0"
+		},
+		{
+			"name": "eslint-config-prettier",
+			"semver": "^9.1.0"
+		},
+		{
+			"name": "eslint-import-resolver-typescript",
+			"semver": "^3.6.1"
+		},
+		{
+			"name": "eslint-plugin-import",
+			"semver": "^2.29.0"
+		},
+		{
+			"name": "eslint-plugin-prettier",
+			"semver": "^5.0.1"
+		},
+		{
+			"name": "eslint-plugin-svelte",
+			"semver": "^2.35.1"
+		},
+		{
+			"name": "globals",
+			"semver": "^13.23.0"
+		},
+		{
+			"name": "svelte-eslint-parser",
+			"semver": "^0.33.1"
+		}
+	],
+	"unpacked_size": 32543
 }

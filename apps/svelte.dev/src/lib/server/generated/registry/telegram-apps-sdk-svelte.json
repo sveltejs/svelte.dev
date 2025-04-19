@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "2.0.19",
 	"svelte_range": "^5.2.3",
-	"last_rune_check_version": "2.0.19"
+	"last_rune_check_version": "2.0.19",
+	"dependencies": [
+		{
+			"name": "@telegram-apps/sdk",
+			"semver": "^3.7.1"
+		}
+	],
+	"unpacked_size": 26333
 }

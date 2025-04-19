@@ -11,5 +11,12 @@
 	"typescript": true,
 	"version": "1.0.2",
 	"svelte_range": "^3.46.2",
-	"last_rune_check_version": "1.0.2"
+	"last_rune_check_version": "1.0.2",
+	"dependencies": [
+		{
+			"name": "frenchkiss",
+			"semver": "^0.2.3"
+		}
+	],
+	"unpacked_size": 10425
 }

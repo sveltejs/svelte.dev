@@ -11,5 +11,16 @@
 	"version": "0.2.4",
 	"svelte_range": "^3.44.3",
 	"last_rune_check_version": "0.2.4",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "date-holidays",
+			"semver": "^3.12.2"
+		},
+		{
+			"name": "dayjs",
+			"semver": "^1.10.7"
+		}
+	],
+	"unpacked_size": 2657297
 }

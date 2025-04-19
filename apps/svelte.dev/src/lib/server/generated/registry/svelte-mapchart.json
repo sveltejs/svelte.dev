@@ -10,5 +10,16 @@
 	"typescript": false,
 	"version": "0.0.2",
 	"svelte_range": "3.15.0",
-	"last_rune_check_version": "0.0.2"
+	"last_rune_check_version": "0.0.2",
+	"dependencies": [
+		{
+			"name": "d3-geo",
+			"semver": "1.11.9"
+		},
+		{
+			"name": "topojson-client",
+			"semver": "3.1.0"
+		}
+	],
+	"unpacked_size": 475818
 }

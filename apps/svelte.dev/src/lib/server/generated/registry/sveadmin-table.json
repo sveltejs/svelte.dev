@@ -12,5 +12,28 @@
 	"typescript": true,
 	"version": "0.1.9",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.1.9"
+	"last_rune_check_version": "0.1.9",
+	"dependencies": [
+		{
+			"name": "@sveadmin/common",
+			"semver": "^v0.1.9"
+		},
+		{
+			"name": "@sveadmin/element",
+			"semver": "^v0.1.9"
+		},
+		{
+			"name": "dateformat",
+			"semver": "^4.5.1"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "svelte-routing",
+			"semver": "^1.4.2"
+		}
+	],
+	"unpacked_size": 175353
 }

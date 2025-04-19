@@ -13,5 +13,12 @@
 	"version": "2.0.0-alpha.2",
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.0.0",
-	"last_rune_check_version": "2.0.0-alpha.2"
+	"last_rune_check_version": "2.0.0-alpha.2",
+	"dependencies": [
+		{
+			"name": "linkedom",
+			"semver": "^0.14.21"
+		}
+	],
+	"unpacked_size": 4594
 }

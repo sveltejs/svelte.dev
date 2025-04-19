@@ -25,5 +25,24 @@
 	"typescript": true,
 	"version": "8.6.12",
 	"svelte_range": "^4.0.0 || ^5.0.0",
-	"last_rune_check_version": "8.6.12"
+	"last_rune_check_version": "8.6.12",
+	"dependencies": [
+		{
+			"name": "@storybook/svelte",
+			"semver": "8.6.12"
+		},
+		{
+			"name": "@storybook/svelte-vite",
+			"semver": "8.6.12"
+		},
+		{
+			"name": "@storybook/builder-vite",
+			"semver": "8.6.12"
+		},
+		{
+			"name": "@storybook/addon-actions",
+			"semver": "8.6.12"
+		}
+	],
+	"unpacked_size": 47978
 }

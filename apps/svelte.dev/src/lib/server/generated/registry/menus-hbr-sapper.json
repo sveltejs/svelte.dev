@@ -12,5 +12,76 @@
 	"typescript": true,
 	"version": "0.29.8",
 	"svelte_range": "^3.44.2",
-	"last_rune_check_version": "0.29.8"
+	"last_rune_check_version": "0.29.8",
+	"dependencies": [
+		{
+			"name": "cheap-watch",
+			"semver": "^1.0.4"
+		},
+		{
+			"name": "html-minifier",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "http-link-header",
+			"semver": "^1.0.3"
+		},
+		{
+			"name": "import-meta-resolve",
+			"semver": "^1.1.1"
+		},
+		{
+			"name": "kleur",
+			"semver": "^4.1.4"
+		},
+		{
+			"name": "node-fetch",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "port-authority",
+			"semver": "^1.1.2"
+		},
+		{
+			"name": "pretty-bytes",
+			"semver": "^5.6.0"
+		},
+		{
+			"name": "rimraf",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "rollup-plugin-css-chunks",
+			"semver": "^2.0.3"
+		},
+		{
+			"name": "sade",
+			"semver": "1.7.4"
+		},
+		{
+			"name": "shimport",
+			"semver": "^2.0.5"
+		},
+		{
+			"name": "source-map",
+			"semver": "^0.7.3"
+		},
+		{
+			"name": "sourcemap-codec",
+			"semver": "^1.4.8"
+		},
+		{
+			"name": "string-hash",
+			"semver": "^1.1.3"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.44.2"
+		},
+		{
+			"name": "webpack-format-messages",
+			"semver": "3.0.1"
+		}
+	],
+	"unpacked_size": 745554
 }

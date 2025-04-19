@@ -13,5 +13,40 @@
 	"version": "0.24.0",
 	"svelte_range": "^5.19.9",
 	"kit_range": "2.17.1",
-	"last_rune_check_version": "0.24.0"
+	"last_rune_check_version": "0.24.0",
+	"dependencies": [
+		{
+			"name": "@types/bun",
+			"semver": "^1.2.2"
+		},
+		{
+			"name": "@vlcn.io/crsqlite",
+			"semver": "0.16.3"
+		},
+		{
+			"name": "@vlcn.io/crsqlite-wasm",
+			"semver": "0.16.0"
+		},
+		{
+			"name": "better-sqlite3",
+			"semver": "^11.8.1"
+		},
+		{
+			"name": "kysely",
+			"semver": "^0.27.5"
+		},
+		{
+			"name": "react",
+			"semver": "^19.0.0"
+		},
+		{
+			"name": "solid-js",
+			"semver": "^1.9.4"
+		},
+		{
+			"name": "svelte",
+			"semver": "^5.19.9"
+		}
+	],
+	"unpacked_size": 61760
 }

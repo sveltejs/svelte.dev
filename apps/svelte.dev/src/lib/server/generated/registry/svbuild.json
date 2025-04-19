@@ -12,5 +12,36 @@
 	"typescript": true,
 	"version": "2.1.0",
 	"svelte_range": "^3.46.4",
-	"last_rune_check_version": "2.1.0"
+	"last_rune_check_version": "2.1.0",
+	"dependencies": [
+		{
+			"name": "acorn",
+			"semver": "^8.7.1"
+		},
+		{
+			"name": "chalk",
+			"semver": "^5.0.1"
+		},
+		{
+			"name": "chokidar",
+			"semver": "^3.5.3"
+		},
+		{
+			"name": "commander",
+			"semver": "^9.4.0"
+		},
+		{
+			"name": "fs-extra",
+			"semver": "^10.1.0"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.46.4"
+		},
+		{
+			"name": "url-join",
+			"semver": "^5.0.0"
+		}
+	],
+	"unpacked_size": 25063
 }

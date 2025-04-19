@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "1.1.5",
 	"svelte_range": "^3.8.0",
-	"last_rune_check_version": "1.1.5"
+	"last_rune_check_version": "1.1.5",
+	"dependencies": [
+		{
+			"name": "fast-copy",
+			"semver": "^2.0.3"
+		},
+		{
+			"name": "ramda",
+			"semver": "^0.26.1"
+		}
+	],
+	"unpacked_size": 140749
 }

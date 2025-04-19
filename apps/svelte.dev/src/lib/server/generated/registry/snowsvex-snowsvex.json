@@ -12,5 +12,68 @@
 	"typescript": true,
 	"version": "0.2.4",
 	"svelte_range": "^3.35.0",
-	"last_rune_check_version": "0.2.4"
+	"last_rune_check_version": "0.2.4",
+	"dependencies": [
+		{
+			"name": "@snowsvex/snowsvex-plugin",
+			"semver": "file:../snowsvex-plugin"
+		},
+		{
+			"name": "chalk",
+			"semver": "^4.1.0"
+		},
+		{
+			"name": "clear",
+			"semver": "^0.1.0"
+		},
+		{
+			"name": "commander",
+			"semver": "^7.1.0"
+		},
+		{
+			"name": "cosmiconfig",
+			"semver": "^7.0.0"
+		},
+		{
+			"name": "estree-walker",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "figlet",
+			"semver": "^1.5.0"
+		},
+		{
+			"name": "js-yaml",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "locate-character",
+			"semver": "^2.0.5"
+		},
+		{
+			"name": "magic-string",
+			"semver": "^0.25.7"
+		},
+		{
+			"name": "mdsvex",
+			"semver": "^0.8.9"
+		},
+		{
+			"name": "snowpack",
+			"semver": "^3.0.13"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.35.0"
+		},
+		{
+			"name": "unified",
+			"semver": "^9.2.1"
+		},
+		{
+			"name": "uuid",
+			"semver": "^8.3.2"
+		}
+	],
+	"unpacked_size": 185161
 }

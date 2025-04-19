@@ -13,5 +13,24 @@
 	"version": "1.4.1",
 	"svelte_range": "^4.2.8",
 	"kit_range": "^2.0.4",
-	"last_rune_check_version": "1.4.1"
+	"last_rune_check_version": "1.4.1",
+	"dependencies": [
+		{
+			"name": "@sveltejs/adapter-node",
+			"semver": "^2.0.1"
+		},
+		{
+			"name": "detect-package-manager",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "dotenv",
+			"semver": "^16.3.1"
+		},
+		{
+			"name": "fs-extra",
+			"semver": "^11.2.0"
+		}
+	],
+	"unpacked_size": 141109
 }

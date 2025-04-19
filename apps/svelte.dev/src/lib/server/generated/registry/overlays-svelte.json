@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "0.4.3",
 	"svelte_range": "^3.57.0",
-	"last_rune_check_version": "0.4.3"
+	"last_rune_check_version": "0.4.3",
+	"dependencies": [
+		{
+			"name": "svelte",
+			"semver": "^3.57.0"
+		},
+		{
+			"name": "@overlays/core",
+			"semver": "^0.4.3"
+		}
+	],
+	"unpacked_size": 39465
 }

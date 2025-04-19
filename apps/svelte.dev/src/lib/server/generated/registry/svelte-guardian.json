@@ -5,13 +5,60 @@
 	"authors": ["mudiageo"],
 	"homepage": "https://github.com/mudiageo/svelte-guardian#readme",
 	"downloads": 62,
-	"updated": "2025-04-10T17:57:29.928Z",
+	"updated": "2025-04-16T12:17:02.515Z",
 	"tags": ["auth"],
 	"runes": false,
 	"github_stars": 1,
 	"typescript": true,
-	"version": "0.2.0-alpha-2",
+	"version": "0.2.0-alpha-5",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
-	"last_rune_check_version": "0.2.0-alpha-2"
+	"last_rune_check_version": "0.2.0-alpha-5",
+	"dependencies": [
+		{
+			"name": "@auth/core",
+			"semver": "^0.37.4"
+		},
+		{
+			"name": "@auth/prisma-adapter",
+			"semver": "^2.7.4"
+		},
+		{
+			"name": "@auth/sveltekit",
+			"semver": "^1.7.4"
+		},
+		{
+			"name": "@prisma/client",
+			"semver": "^5.22.0"
+		},
+		{
+			"name": "@upstash/redis",
+			"semver": "^1.34.3"
+		},
+		{
+			"name": "argon2",
+			"semver": "^0.41.1"
+		},
+		{
+			"name": "nodemailer",
+			"semver": "^6.10.0"
+		},
+		{
+			"name": "qrcode",
+			"semver": "^1.5.4"
+		},
+		{
+			"name": "redis",
+			"semver": "^4.7.0"
+		},
+		{
+			"name": "speakeasy",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "zod",
+			"semver": "^3.23.8"
+		}
+	],
+	"unpacked_size": 124219
 }

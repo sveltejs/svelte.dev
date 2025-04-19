@@ -13,5 +13,24 @@
 	"svelte_range": "4.2.19",
 	"kit_range": "^1.30.4",
 	"last_rune_check_version": "1.2.9",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "chess.js",
+			"semver": "1.0.0"
+		},
+		{
+			"name": "chessground",
+			"semver": "^9.1.1"
+		},
+		{
+			"name": "svelte",
+			"semver": "4.2.19"
+		},
+		{
+			"name": "svelte4-chessground",
+			"semver": "^3.0.1"
+		}
+	],
+	"unpacked_size": 47498
 }

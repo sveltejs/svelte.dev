@@ -11,5 +11,24 @@
 	"version": "0.1.0",
 	"svelte_range": "^5.25.3",
 	"last_rune_check_version": "0.1.0",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "esm-env",
+			"semver": "^1.2.2"
+		},
+		{
+			"name": "nanoid",
+			"semver": "^5.1.5"
+		},
+		{
+			"name": "runed",
+			"semver": "^0.25.0"
+		},
+		{
+			"name": "svelte-freeze",
+			"semver": "^0.1.5"
+		}
+	],
+	"unpacked_size": 32271
 }

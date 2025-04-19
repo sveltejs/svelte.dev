@@ -12,5 +12,12 @@
 	"typescript": false,
 	"version": "2.8.4",
 	"svelte_range": "^3.6.1",
-	"last_rune_check_version": "2.8.4"
+	"last_rune_check_version": "2.8.4",
+	"dependencies": [
+		{
+			"name": "@erickruano/siema",
+			"semver": "^1.5.4"
+		}
+	],
+	"unpacked_size": 85546
 }

@@ -12,5 +12,20 @@
 	"typescript": false,
 	"version": "0.0.4",
 	"svelte_range": "^4.2.19",
-	"last_rune_check_version": "0.0.4"
+	"last_rune_check_version": "0.0.4",
+	"dependencies": [
+		{
+			"name": "@cartamd/plugin-code",
+			"semver": "^4.0.6"
+		},
+		{
+			"name": "@cartamd/plugin-component",
+			"semver": "^1.0.2"
+		},
+		{
+			"name": "@cartamd/plugin-math",
+			"semver": "^4.2.1"
+		}
+	],
+	"unpacked_size": 20757780
 }

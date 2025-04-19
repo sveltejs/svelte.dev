@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "0.1.1",
 	"svelte_range": "3.5.1",
-	"last_rune_check_version": "0.1.1"
+	"last_rune_check_version": "0.1.1",
+	"dependencies": [
+		{
+			"name": "html-to-text",
+			"semver": "5.1.1"
+		},
+		{
+			"name": "juice",
+			"semver": "5.2.0"
+		}
+	],
+	"unpacked_size": 16790
 }

@@ -13,5 +13,100 @@
 	"version": "0.0.50",
 	"svelte_range": ">= 3",
 	"kit_range": "^1.0.0",
-	"last_rune_check_version": "0.0.50"
+	"last_rune_check_version": "0.0.50",
+	"dependencies": [
+		{
+			"name": "@isomorphic-git/lightning-fs",
+			"semver": "^4.4.1"
+		},
+		{
+			"name": "@sindresorhus/slugify",
+			"semver": "^2.1.0"
+		},
+		{
+			"name": "@sveltejs/kit",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "@sveltejs/package",
+			"semver": "^2"
+		},
+		{
+			"name": "browser-or-node",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "bytes",
+			"semver": "^3.1.2"
+		},
+		{
+			"name": "cp-file",
+			"semver": "^9.1.0"
+		},
+		{
+			"name": "deep-object-diff",
+			"semver": "^1.1.7"
+		},
+		{
+			"name": "fast-glob",
+			"semver": "^3.2.11"
+		},
+		{
+			"name": "firebase",
+			"semver": "^9"
+		},
+		{
+			"name": "firebase-admin",
+			"semver": "^11"
+		},
+		{
+			"name": "firebase-functions",
+			"semver": "^4"
+		},
+		{
+			"name": "fuse.js",
+			"semver": "^6.6.2"
+		},
+		{
+			"name": "isomorphic-git",
+			"semver": "^1.17.0"
+		},
+		{
+			"name": "js-yaml",
+			"semver": "^4.1.0"
+		},
+		{
+			"name": "kleur",
+			"semver": "^4.1.5"
+		},
+		{
+			"name": "lodash-es",
+			"semver": "^4.17.21"
+		},
+		{
+			"name": "markdown-it",
+			"semver": "^12.3.2"
+		},
+		{
+			"name": "prompts",
+			"semver": "^2.4.2"
+		},
+		{
+			"name": "sade",
+			"semver": "^1.8.1"
+		},
+		{
+			"name": "sanitize-html",
+			"semver": "^2.5.3"
+		},
+		{
+			"name": "svelte-tags-input",
+			"semver": "3.0.0"
+		},
+		{
+			"name": "validatorjs",
+			"semver": "^3.22.1"
+		}
+	],
+	"unpacked_size": 579812
 }

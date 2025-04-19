@@ -12,5 +12,12 @@
 	"typescript": false,
 	"version": "1.0.0",
 	"svelte_range": "^3.31.2",
-	"last_rune_check_version": "1.0.0"
+	"last_rune_check_version": "1.0.0",
+	"dependencies": [
+		{
+			"name": "easy-reactive",
+			"semver": "1.0.3"
+		}
+	],
+	"unpacked_size": 65633
 }

@@ -12,5 +12,24 @@
 	"typescript": true,
 	"version": "4.3.1",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "4.3.1"
+	"last_rune_check_version": "4.3.1",
+	"dependencies": [
+		{
+			"name": "@metamask/jazzicon",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "ethereum-blockies-base64",
+			"semver": "^1.0.2"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "svelte-proxied-store",
+			"semver": "^2.0.3"
+		}
+	],
+	"unpacked_size": 1526555
 }

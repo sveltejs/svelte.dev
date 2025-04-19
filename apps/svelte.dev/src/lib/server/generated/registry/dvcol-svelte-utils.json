@@ -13,5 +13,16 @@
 	"version": "1.17.1",
 	"svelte_range": ">=5",
 	"kit_range": "^2.17.1",
-	"last_rune_check_version": "1.17.1"
+	"last_rune_check_version": "1.17.1",
+	"dependencies": [
+		{
+			"name": "@dvcol/common-utils",
+			"semver": "^1.26.1"
+		},
+		{
+			"name": "svelte",
+			"semver": "^5.19.7"
+		}
+	],
+	"unpacked_size": 51160
 }

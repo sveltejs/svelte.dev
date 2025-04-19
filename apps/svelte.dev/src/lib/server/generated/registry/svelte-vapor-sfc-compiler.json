@@ -12,5 +12,52 @@
 	"typescript": true,
 	"version": "0.0.5",
 	"svelte_range": "4.2.18",
-	"last_rune_check_version": "0.0.5"
+	"last_rune_check_version": "0.0.5",
+	"dependencies": [
+		{
+			"name": "@babel/parser",
+			"semver": "^7.26.2"
+		},
+		{
+			"name": "@vue-vapor/compiler-dom",
+			"semver": "https://pkg.pr.new/vuejs/vue-vapor/@vue/compiler-dom@3f6ce96"
+		},
+		{
+			"name": "@vue-vapor/compiler-sfc",
+			"semver": "https://pkg.pr.new/vuejs/vue-vapor/@vue/compiler-sfc@3f6ce96"
+		},
+		{
+			"name": "@vue-vapor/shared",
+			"semver": "https://pkg.pr.new/vuejs/vue-vapor/@vue/shared@3f6ce96"
+		},
+		{
+			"name": "ast-kit",
+			"semver": "^1.3.0"
+		},
+		{
+			"name": "hash-sum",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "magic-string-ast",
+			"semver": "^0.6.2"
+		},
+		{
+			"name": "source-map-js",
+			"semver": "1.2.0"
+		},
+		{
+			"name": "svelte",
+			"semver": "4.2.18"
+		},
+		{
+			"name": "inclusion-vapor-shared",
+			"semver": "0.0.5"
+		},
+		{
+			"name": "svelte-vapor-template-compiler",
+			"semver": "0.0.5"
+		}
+	],
+	"unpacked_size": 53626
 }

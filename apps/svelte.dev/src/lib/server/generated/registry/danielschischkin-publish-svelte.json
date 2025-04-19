@@ -12,5 +12,68 @@
 	"typescript": false,
 	"version": "0.8.1",
 	"svelte_range": "^3.12.1",
-	"last_rune_check_version": "0.8.1"
+	"last_rune_check_version": "0.8.1",
+	"dependencies": [
+		{
+			"name": "@babel/core",
+			"semver": "^7.12.3"
+		},
+		{
+			"name": "@rollup/plugin-commonjs",
+			"semver": "^17.0.0"
+		},
+		{
+			"name": "@rollup/plugin-node-resolve",
+			"semver": "^11.0.0"
+		},
+		{
+			"name": "@rollup/plugin-typescript",
+			"semver": "^8.2.1"
+		},
+		{
+			"name": "@tsconfig/svelte",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "commander",
+			"semver": "^4.0.1"
+		},
+		{
+			"name": "postcss",
+			"semver": "^8.1.4"
+		},
+		{
+			"name": "prompts",
+			"semver": "^2.3.0"
+		},
+		{
+			"name": "rollup",
+			"semver": "^2.3.4"
+		},
+		{
+			"name": "rollup-plugin-svelte",
+			"semver": "^7.0.0"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.12.1"
+		},
+		{
+			"name": "svelte-check",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "svelte-preprocess",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "tslib",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "typescript",
+			"semver": "^4.0.0"
+		}
+	],
+	"unpacked_size": 55339
 }

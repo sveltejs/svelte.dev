@@ -6,12 +6,35 @@
 	"authors": ["bienoubien"],
 	"homepage": "https://github.com/bienoubien-studio/rizom-field-url",
 	"downloads": 28,
-	"updated": "2025-04-04T17:52:21.167Z",
+	"updated": "2025-04-15T10:22:15.137Z",
 	"tags": ["content"],
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
 	"runes": true,
-	"last_rune_check_version": "0.0.3",
-	"version": "0.0.3",
-	"github_stars": 0
+	"last_rune_check_version": "0.1.0",
+	"version": "0.1.0",
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@lucide/svelte",
+			"semver": "^0.487.0"
+		},
+		{
+			"name": "better-sqlite3",
+			"semver": "^11.9.1"
+		},
+		{
+			"name": "drizzle-orm",
+			"semver": "^0.41.0"
+		},
+		{
+			"name": "rizom",
+			"semver": "^0.3.15"
+		},
+		{
+			"name": "sharp",
+			"semver": "^0.34.0"
+		}
+	],
+	"unpacked_size": 3250
 }

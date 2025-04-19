@@ -12,5 +12,16 @@
 	"typescript": false,
 	"version": "1.135.0",
 	"svelte_range": "4.1.1",
-	"last_rune_check_version": "1.135.0"
+	"last_rune_check_version": "1.135.0",
+	"dependencies": [
+		{
+			"name": "echarts",
+			"semver": "5.4.3"
+		},
+		{
+			"name": "echarts-stat",
+			"semver": "^1.2.0"
+		}
+	],
+	"unpacked_size": 536288
 }

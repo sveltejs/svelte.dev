@@ -13,5 +13,12 @@
 	"version": "1.0.0",
 	"svelte_range": "^5.0.0-next.22",
 	"kit_range": "^1.27.4",
-	"last_rune_check_version": "1.0.0"
+	"last_rune_check_version": "1.0.0",
+	"dependencies": [
+		{
+			"name": "@svelte-dev/auth-oauth2",
+			"semver": "*"
+		}
+	],
+	"unpacked_size": 24183
 }

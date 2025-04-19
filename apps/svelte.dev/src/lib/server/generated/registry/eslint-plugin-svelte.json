@@ -12,5 +12,44 @@
 	"typescript": true,
 	"version": "3.5.1",
 	"svelte_range": "^3.37.0 || ^4.0.0 || ^5.0.0",
-	"last_rune_check_version": "3.5.1"
+	"last_rune_check_version": "3.5.1",
+	"dependencies": [
+		{
+			"name": "@eslint-community/eslint-utils",
+			"semver": "^4.4.1"
+		},
+		{
+			"name": "@jridgewell/sourcemap-codec",
+			"semver": "^1.5.0"
+		},
+		{
+			"name": "esutils",
+			"semver": "^2.0.3"
+		},
+		{
+			"name": "known-css-properties",
+			"semver": "^0.35.0"
+		},
+		{
+			"name": "postcss",
+			"semver": "^8.4.49"
+		},
+		{
+			"name": "postcss-load-config",
+			"semver": "^3.1.4"
+		},
+		{
+			"name": "postcss-safe-parser",
+			"semver": "^7.0.0"
+		},
+		{
+			"name": "semver",
+			"semver": "^7.6.3"
+		},
+		{
+			"name": "svelte-eslint-parser",
+			"semver": "^1.1.1"
+		}
+	],
+	"unpacked_size": 761285
 }

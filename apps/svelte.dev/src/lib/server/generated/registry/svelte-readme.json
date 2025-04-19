@@ -12,5 +12,64 @@
 	"typescript": true,
 	"version": "3.6.3",
 	"svelte_range": "^3.31.2",
-	"last_rune_check_version": "3.6.3"
+	"last_rune_check_version": "3.6.3",
+	"dependencies": [
+		{
+			"name": "@rollup/plugin-node-resolve",
+			"semver": "^11.1.0"
+		},
+		{
+			"name": "@rollup/plugin-virtual",
+			"semver": "^2.0.3"
+		},
+		{
+			"name": "fs-extra",
+			"semver": "^9.0.1"
+		},
+		{
+			"name": "html-minifier",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "is-relative-url",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "markdown-it",
+			"semver": "^12.3.0"
+		},
+		{
+			"name": "markdown-it-anchor",
+			"semver": "^6.0.1"
+		},
+		{
+			"name": "prettier",
+			"semver": "^2.5.1"
+		},
+		{
+			"name": "prettier-plugin-svelte",
+			"semver": "^2.5.1"
+		},
+		{
+			"name": "prism-svelte",
+			"semver": "^0.4.7"
+		},
+		{
+			"name": "prismjs",
+			"semver": "^1.23.0"
+		},
+		{
+			"name": "rollup",
+			"semver": "^2.62.0"
+		},
+		{
+			"name": "rollup-plugin-svelte",
+			"semver": "^7.0.0"
+		},
+		{
+			"name": "rollup-plugin-terser",
+			"semver": "^7.0.2"
+		}
+	],
+	"unpacked_size": 46617
 }

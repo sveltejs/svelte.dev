@@ -39,5 +39,16 @@
 	"version": "1.5.0",
 	"svelte_range": ">=4 || ^5.0.0-next.1",
 	"kit_range": ">=1",
-	"last_rune_check_version": "1.5.0"
+	"last_rune_check_version": "1.5.0",
+	"dependencies": [
+		{
+			"name": "esm-env",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "@prismicio/richtext",
+			"semver": "^2.1.5"
+		}
+	],
+	"unpacked_size": 84695
 }

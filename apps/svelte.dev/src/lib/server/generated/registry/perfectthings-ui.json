@@ -12,5 +12,20 @@
 	"typescript": false,
 	"version": "9.6.1",
 	"svelte_range": "^4.2.18",
-	"last_rune_check_version": "9.6.1"
+	"last_rune_check_version": "9.6.1",
+	"dependencies": [
+		{
+			"name": "vanilla-swipe",
+			"semver": "^2.4.1"
+		},
+		{
+			"name": "vanillajs-datepicker",
+			"semver": "^1.3.4"
+		},
+		{
+			"name": "zxcvbn",
+			"semver": "^4.4.2"
+		}
+	],
+	"unpacked_size": 1105413
 }

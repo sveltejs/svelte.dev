@@ -12,5 +12,20 @@
 	"typescript": false,
 	"version": "0.3.1",
 	"svelte_range": ">1.44.0",
-	"last_rune_check_version": "0.3.1"
+	"last_rune_check_version": "0.3.1",
+	"dependencies": [
+		{
+			"name": "loader-utils",
+			"semver": "^1.1.0"
+		},
+		{
+			"name": "svelte-dev-helper",
+			"semver": "^1.1.9"
+		},
+		{
+			"name": "svelte-hmr",
+			"semver": "^0.10.3"
+		}
+	],
+	"unpacked_size": 22948
 }

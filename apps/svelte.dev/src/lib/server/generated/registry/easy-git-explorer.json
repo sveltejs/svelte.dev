@@ -12,5 +12,32 @@
 	"typescript": false,
 	"version": "0.2.1",
 	"svelte_range": "^4.2.8",
-	"last_rune_check_version": "0.2.1"
+	"last_rune_check_version": "0.2.1",
+	"dependencies": [
+		{
+			"name": "@fastify/cors",
+			"semver": "^9.0.1"
+		},
+		{
+			"name": "@fastify/static",
+			"semver": "^7.0.4"
+		},
+		{
+			"name": "fastify",
+			"semver": "^4.25.2"
+		},
+		{
+			"name": "open",
+			"semver": "^10.0.3"
+		},
+		{
+			"name": "simple-git",
+			"semver": "^3.25.0"
+		},
+		{
+			"name": "svelte-material-ui",
+			"semver": "^7.0.0"
+		}
+	],
+	"unpacked_size": 1427497
 }

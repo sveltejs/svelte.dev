@@ -12,5 +12,20 @@
 	"typescript": false,
 	"version": "1.0.1",
 	"svelte_range": "^3.44.3",
-	"last_rune_check_version": "1.0.1"
+	"last_rune_check_version": "1.0.1",
+	"dependencies": [
+		{
+			"name": "@techmely/eslint-config-ts",
+			"semver": "1.0.1"
+		},
+		{
+			"name": "eslint-plugin-cypress",
+			"semver": "2.12.1"
+		},
+		{
+			"name": "eslint-plugin-svelte3",
+			"semver": "3.2.1"
+		}
+	],
+	"unpacked_size": 3490
 }

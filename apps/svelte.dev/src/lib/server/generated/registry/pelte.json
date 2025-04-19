@@ -12,5 +12,40 @@
 	"typescript": false,
 	"version": "0.5.0",
 	"svelte_range": "^3.12.1",
-	"last_rune_check_version": "0.5.0"
+	"last_rune_check_version": "0.5.0",
+	"dependencies": [
+		{
+			"name": "commander",
+			"semver": "^4.0.1"
+		},
+		{
+			"name": "prompts",
+			"semver": "^2.3.0"
+		},
+		{
+			"name": "publish-svelte",
+			"semver": "^0.2.0"
+		},
+		{
+			"name": "rollup",
+			"semver": "^1.25.1"
+		},
+		{
+			"name": "rollup-plugin-commonjs",
+			"semver": "^10.1.0"
+		},
+		{
+			"name": "rollup-plugin-node-resolve",
+			"semver": "^5.2.0"
+		},
+		{
+			"name": "rollup-plugin-svelte",
+			"semver": "^5.1.0"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.12.1"
+		}
+	],
+	"unpacked_size": 48455
 }

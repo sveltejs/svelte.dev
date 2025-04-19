@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "5.0.1",
 	"svelte_range": ">=5.x",
-	"last_rune_check_version": "5.0.1"
+	"last_rune_check_version": "5.0.1",
+	"dependencies": [
+		{
+			"name": "@rollup/pluginutils",
+			"semver": "5.1.4"
+		},
+		{
+			"name": "svgo",
+			"semver": "^3.2.0"
+		}
+	],
+	"unpacked_size": 20757
 }

@@ -12,5 +12,24 @@
 	"typescript": false,
 	"version": "0.2.10",
 	"svelte_range": "^3.44.0||^4",
-	"last_rune_check_version": "0.2.10"
+	"last_rune_check_version": "0.2.10",
+	"dependencies": [
+		{
+			"name": "@parcel/diagnostic",
+			"semver": "^2.3.2"
+		},
+		{
+			"name": "@parcel/plugin",
+			"semver": "^2.3.2"
+		},
+		{
+			"name": "@parcel/source-map",
+			"semver": "^2.0.2"
+		},
+		{
+			"name": "@parcel/utils",
+			"semver": "^2.3.2"
+		}
+	],
+	"unpacked_size": 12243
 }

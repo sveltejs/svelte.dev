@@ -13,5 +13,24 @@
 	"version": "0.1.2",
 	"svelte_range": "^4.0.5",
 	"kit_range": "^1.25.0",
-	"last_rune_check_version": "0.1.2"
+	"last_rune_check_version": "0.1.2",
+	"dependencies": [
+		{
+			"name": "@animelist/auth",
+			"semver": "0.1.2"
+		},
+		{
+			"name": "@animelist/client",
+			"semver": "0.1.2"
+		},
+		{
+			"name": "@animelist/core",
+			"semver": "0.1.0"
+		},
+		{
+			"name": "svelte",
+			"semver": "^4.0.5"
+		}
+	],
+	"unpacked_size": 22165
 }

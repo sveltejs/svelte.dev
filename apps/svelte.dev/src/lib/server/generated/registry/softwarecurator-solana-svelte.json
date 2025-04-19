@@ -13,5 +13,28 @@
 	"version": "0.1.0",
 	"svelte_range": "^4.0.0 || ^5.0.0-next.1",
 	"kit_range": "^2.0.0",
-	"last_rune_check_version": "0.1.0"
+	"last_rune_check_version": "0.1.0",
+	"dependencies": [
+		{
+			"name": "@aztemi/svelte-on-solana-wallet-adapter-core",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "@solana/wallet-adapter-base",
+			"semver": "^0.9.23"
+		},
+		{
+			"name": "@solana/wallet-standard-wallet-adapter-base",
+			"semver": "^1.1.2"
+		},
+		{
+			"name": "@solana/web3.js",
+			"semver": "^1.91.4"
+		},
+		{
+			"name": "@wallet-standard/app",
+			"semver": "^1.0.1"
+		}
+	],
+	"unpacked_size": 17916
 }

@@ -12,5 +12,20 @@
 	"typescript": false,
 	"version": "5.0.4",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "5.0.4"
+	"last_rune_check_version": "5.0.4",
+	"dependencies": [
+		{
+			"name": "css-typed-om",
+			"semver": "^0.4.0"
+		},
+		{
+			"name": "param-case",
+			"semver": "^3.0.4"
+		},
+		{
+			"name": "uppercamelcase",
+			"semver": "^3.0.0"
+		}
+	],
+	"unpacked_size": 249512
 }

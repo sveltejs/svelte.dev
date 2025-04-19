@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "3.0.0",
 	"svelte_range": "^4.2.17",
-	"last_rune_check_version": "3.0.0"
+	"last_rune_check_version": "3.0.0",
+	"dependencies": [
+		{
+			"name": "rollup-plugin-execute",
+			"semver": "^1.1.1"
+		}
+	],
+	"unpacked_size": 276660
 }

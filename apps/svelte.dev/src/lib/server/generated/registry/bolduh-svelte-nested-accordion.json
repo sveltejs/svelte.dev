@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "0.2.1",
 	"svelte_range": "^4.2.10",
-	"last_rune_check_version": "0.2.1"
+	"last_rune_check_version": "0.2.1",
+	"dependencies": [
+		{
+			"name": "@fortawesome/free-solid-svg-icons",
+			"semver": "^6.5.1"
+		},
+		{
+			"name": "sirv-cli",
+			"semver": "^2.0.0"
+		}
+	],
+	"unpacked_size": 38318
 }

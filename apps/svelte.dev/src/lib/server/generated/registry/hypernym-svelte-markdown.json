@@ -12,5 +12,60 @@
 	"typescript": true,
 	"version": "0.6.0",
 	"svelte_range": ">=5.0.0",
-	"last_rune_check_version": "0.6.0"
+	"last_rune_check_version": "0.6.0",
+	"dependencies": [
+		{
+			"name": "@types/hast",
+			"semver": "^3.0.4"
+		},
+		{
+			"name": "@types/mdast",
+			"semver": "^4.0.4"
+		},
+		{
+			"name": "esrap",
+			"semver": "^1.4.5"
+		},
+		{
+			"name": "hast-util-to-html",
+			"semver": "^9.0.5"
+		},
+		{
+			"name": "magic-string",
+			"semver": "^0.30.17"
+		},
+		{
+			"name": "mdast-util-to-markdown",
+			"semver": "^2.1.2"
+		},
+		{
+			"name": "rehype-stringify",
+			"semver": "^10.0.1"
+		},
+		{
+			"name": "remark-parse",
+			"semver": "^11.0.0"
+		},
+		{
+			"name": "remark-rehype",
+			"semver": "^11.1.1"
+		},
+		{
+			"name": "unified",
+			"semver": "^11.0.5"
+		},
+		{
+			"name": "unist-util-visit",
+			"semver": "^5.0.0"
+		},
+		{
+			"name": "vfile",
+			"semver": "^6.0.3"
+		},
+		{
+			"name": "yaml",
+			"semver": "^2.7.0"
+		}
+	],
+	"unpacked_size": 29347
 }

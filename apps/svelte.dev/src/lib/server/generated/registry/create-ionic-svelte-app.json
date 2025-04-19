@@ -12,5 +12,32 @@
 	"typescript": false,
 	"version": "0.0.38",
 	"svelte_range": "^4.2.7",
-	"last_rune_check_version": "0.0.38"
+	"last_rune_check_version": "0.0.38",
+	"dependencies": [
+		{
+			"name": "create-svelte",
+			"semver": "^6.3.5"
+		},
+		{
+			"name": "fs-extra",
+			"semver": "^10.1.0"
+		},
+		{
+			"name": "ip",
+			"semver": "^1.1.8"
+		},
+		{
+			"name": "kleur",
+			"semver": "^4.1.5"
+		},
+		{
+			"name": "mri",
+			"semver": "^1.2.0"
+		},
+		{
+			"name": "prompts",
+			"semver": "^2.4.2"
+		}
+	],
+	"unpacked_size": 41910
 }

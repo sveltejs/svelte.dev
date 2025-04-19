@@ -12,5 +12,119 @@
 	"typescript": false,
 	"version": "5.0.0",
 	"svelte_range": "~1.53.0",
-	"last_rune_check_version": "5.0.0"
+	"last_rune_check_version": "5.0.0",
+	"dependencies": [
+		{
+			"name": "svelte",
+			"semver": "~1.53.0"
+		},
+		{
+			"name": "neutrino-middleware-svelte-loader",
+			"semver": "~4.1.0"
+		},
+		{
+			"name": "@neutrinojs/chunk",
+			"semver": "~8.0.18"
+		},
+		{
+			"name": "@neutrinojs/clean",
+			"semver": "~8.0.18"
+		},
+		{
+			"name": "@neutrinojs/copy",
+			"semver": "~8.0.18"
+		},
+		{
+			"name": "@neutrinojs/minify",
+			"semver": "~8.0.18"
+		},
+		{
+			"name": "@neutrinojs/style-loader",
+			"semver": "~8.0.18"
+		},
+		{
+			"name": "@neutrinojs/font-loader",
+			"semver": "~8.0.18"
+		},
+		{
+			"name": "@neutrinojs/image-loader",
+			"semver": "~8.0.18"
+		},
+		{
+			"name": "@neutrinojs/env",
+			"semver": "~8.0.18"
+		},
+		{
+			"name": "@neutrinojs/hot",
+			"semver": "~8.0.18"
+		},
+		{
+			"name": "babel-polyfill",
+			"semver": "6.26.0"
+		},
+		{
+			"name": "core-js",
+			"semver": "^2.5.0"
+		},
+		{
+			"name": "deepmerge",
+			"semver": "~2.0.1"
+		},
+		{
+			"name": "arrify",
+			"semver": "~1.0.1"
+		},
+		{
+			"name": "opn",
+			"semver": "~5.2.0"
+		},
+		{
+			"name": "babel-loader",
+			"semver": "~7.1.2"
+		},
+		{
+			"name": "babel-preset-env",
+			"semver": "~1.6.1"
+		},
+		{
+			"name": "babel-plugin-syntax-dynamic-import",
+			"semver": "~6.18.0"
+		},
+		{
+			"name": "babel-plugin-transform-object-rest-spread",
+			"semver": "~6.26.0"
+		},
+		{
+			"name": "babel-plugin-transform-class-properties",
+			"semver": "~6.24.1"
+		},
+		{
+			"name": "html-webpack-plugin",
+			"semver": "~2.30.1"
+		},
+		{
+			"name": "script-ext-html-webpack-plugin",
+			"semver": "~1.8.8"
+		},
+		{
+			"name": "progress-bar-webpack-plugin",
+			"semver": "~1.10.0"
+		},
+		{
+			"name": "webpack",
+			"semver": "^3.10.0"
+		},
+		{
+			"name": "webpack-dev-server",
+			"semver": "2.11.1"
+		},
+		{
+			"name": "eslint-plugin-html",
+			"semver": "~4.0.1"
+		},
+		{
+			"name": "ip",
+			"semver": "~1.1.5"
+		}
+	]
 }

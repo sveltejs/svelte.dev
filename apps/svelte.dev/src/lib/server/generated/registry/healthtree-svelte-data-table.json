@@ -19,5 +19,16 @@
 	"version": "1.0.4",
 	"svelte_range": "3.20.1",
 	"last_rune_check_version": "1.0.4",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "fuse.js",
+			"semver": "5.2.2"
+		},
+		{
+			"name": "lodash-es",
+			"semver": "4.17.15"
+		}
+	],
+	"unpacked_size": 650325
 }

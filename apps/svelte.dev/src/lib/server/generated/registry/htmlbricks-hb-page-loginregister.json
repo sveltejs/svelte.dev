@@ -11,5 +11,16 @@
 	"version": "0.15.7",
 	"svelte_range": "^3.46.2",
 	"last_rune_check_version": "0.15.7",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@htmlbricks/hb-auth",
+			"semver": "^0.15.7"
+		},
+		{
+			"name": "@htmlbricks/hb-layout",
+			"semver": "^0.15.7"
+		}
+	],
+	"unpacked_size": 182433
 }

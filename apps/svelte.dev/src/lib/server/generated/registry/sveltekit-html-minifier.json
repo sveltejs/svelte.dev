@@ -13,5 +13,12 @@
 	"version": "1.0.4",
 	"svelte_range": "^4.0.5",
 	"kit_range": ">=1.5.0 <3.0.0",
-	"last_rune_check_version": "1.0.4"
+	"last_rune_check_version": "1.0.4",
+	"dependencies": [
+		{
+			"name": "html-minifier-terser",
+			"semver": "^7.2.0"
+		}
+	],
+	"unpacked_size": 6164
 }

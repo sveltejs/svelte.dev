@@ -12,5 +12,36 @@
 	"typescript": false,
 	"version": "29.0.4",
 	"svelte_range": ">1",
-	"last_rune_check_version": "29.0.4"
+	"last_rune_check_version": "29.0.4",
+	"dependencies": [
+		{
+			"name": "@modular-css/processor",
+			"semver": "^29.0.4"
+		},
+		{
+			"name": "@rollup/pluginutils",
+			"semver": "^5.0.2"
+		},
+		{
+			"name": "es-module-lexer",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "escape-string-regexp",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "is-url",
+			"semver": "^1.2.4"
+		},
+		{
+			"name": "parse-es6-imports",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "slash",
+			"semver": "^3.0.0"
+		}
+	],
+	"unpacked_size": 15229
 }

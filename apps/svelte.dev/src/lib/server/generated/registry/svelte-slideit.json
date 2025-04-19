@@ -12,5 +12,12 @@
 	"typescript": false,
 	"version": "0.6.0",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.6.0"
+	"last_rune_check_version": "0.6.0",
+	"dependencies": [
+		{
+			"name": "@glidejs/glide",
+			"semver": "^3.4.1"
+		}
+	],
+	"unpacked_size": 235066
 }

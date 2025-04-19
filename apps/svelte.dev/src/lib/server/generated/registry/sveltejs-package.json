@@ -5,12 +5,35 @@
 	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
 	"homepage": "https://svelte.dev",
 	"downloads": 65744,
-	"updated": "2025-02-03T10:02:40.009Z",
+	"updated": "2025-04-14T17:06:20.343Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 19201,
 	"typescript": true,
-	"version": "2.3.10",
+	"version": "2.3.11",
 	"svelte_range": "^3.44.0 || ^4.0.0 || ^5.0.0-next.1",
-	"last_rune_check_version": "2.3.10"
+	"last_rune_check_version": "2.3.11",
+	"dependencies": [
+		{
+			"name": "chokidar",
+			"semver": "^4.0.3"
+		},
+		{
+			"name": "kleur",
+			"semver": "^4.1.5"
+		},
+		{
+			"name": "sade",
+			"semver": "^1.8.1"
+		},
+		{
+			"name": "semver",
+			"semver": "^7.5.4"
+		},
+		{
+			"name": "svelte2tsx",
+			"semver": "~0.7.33"
+		}
+	],
+	"unpacked_size": 30366
 }

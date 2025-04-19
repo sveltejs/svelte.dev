@@ -13,5 +13,12 @@
 	"version": "1.5.5",
 	"svelte_range": "^5.1.9",
 	"kit_range": "^2.7.4",
-	"last_rune_check_version": "1.5.5"
+	"last_rune_check_version": "1.5.5",
+	"dependencies": [
+		{
+			"name": "svelte",
+			"semver": "^5.1.9"
+		}
+	],
+	"unpacked_size": 80543
 }

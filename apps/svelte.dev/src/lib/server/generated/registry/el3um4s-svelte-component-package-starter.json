@@ -13,5 +13,16 @@
 	"version": "0.0.18",
 	"svelte_range": "^3.44.3",
 	"kit_range": "^1.0.0-next.211",
-	"last_rune_check_version": "0.0.18"
+	"last_rune_check_version": "0.0.18",
+	"dependencies": [
+		{
+			"name": "chroma-js",
+			"semver": "^2.1.2"
+		},
+		{
+			"name": "svelte2tsx",
+			"semver": "^0.4.12"
+		}
+	],
+	"unpacked_size": 12378
 }

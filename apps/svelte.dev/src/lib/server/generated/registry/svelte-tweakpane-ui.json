@@ -13,5 +13,72 @@
 	"version": "1.5.6",
 	"svelte_range": "^4.0.0 || ^5.0.0",
 	"kit_range": "^2.20.0",
-	"last_rune_check_version": "1.5.6"
+	"last_rune_check_version": "1.5.6",
+	"dependencies": [
+		{
+			"name": "@kitschpatrol/tweakpane-plugin-camerakit",
+			"semver": "0.3.1-beta.3"
+		},
+		{
+			"name": "@kitschpatrol/tweakpane-plugin-essentials",
+			"semver": "0.2.2-beta.3"
+		},
+		{
+			"name": "@kitschpatrol/tweakpane-plugin-file-import",
+			"semver": "1.1.2-beta.2"
+		},
+		{
+			"name": "@kitschpatrol/tweakpane-plugin-image",
+			"semver": "2.0.1-beta.6"
+		},
+		{
+			"name": "@kitschpatrol/tweakpane-plugin-inputs",
+			"semver": "1.0.4-beta.4"
+		},
+		{
+			"name": "@kitschpatrol/tweakpane-plugin-profiler",
+			"semver": "0.4.2-beta.3"
+		},
+		{
+			"name": "@kitschpatrol/tweakpane-plugin-rotation",
+			"semver": "0.2.1-beta.2"
+		},
+		{
+			"name": "@kitschpatrol/tweakpane-plugin-textarea",
+			"semver": "2.0.1-beta.2"
+		},
+		{
+			"name": "@kitschpatrol/tweakpane-plugin-waveform",
+			"semver": "1.0.4-beta.3"
+		},
+		{
+			"name": "@tweakpane/core",
+			"semver": "2.0.5"
+		},
+		{
+			"name": "esm-env",
+			"semver": "^1.2.2"
+		},
+		{
+			"name": "fast-copy",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "fast-equals",
+			"semver": "^5.2.2"
+		},
+		{
+			"name": "nanoid",
+			"semver": "^5.1.4"
+		},
+		{
+			"name": "svelte-persisted-store",
+			"semver": "0.12.0"
+		},
+		{
+			"name": "tweakpane",
+			"semver": "4.0.5"
+		}
+	],
+	"unpacked_size": 428859
 }

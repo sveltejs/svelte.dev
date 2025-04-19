@@ -5,12 +5,14 @@
 	"authors": ["arlac77"],
 	"homepage": "https://github.com/arlac77/svelte-session-manager#readme",
 	"downloads": 465,
-	"updated": "2025-04-01T18:23:15.324Z",
+	"updated": "2025-04-16T20:58:25.452Z",
 	"tags": ["miscellaneous", "auth"],
 	"runes": true,
 	"github_stars": 105,
 	"typescript": false,
-	"version": "3.0.36",
-	"svelte_range": "^5.25.0",
-	"last_rune_check_version": "3.0.36"
+	"version": "3.0.37",
+	"svelte_range": "^5.27.0",
+	"last_rune_check_version": "3.0.37",
+	"dependencies": [],
+	"unpacked_size": 25188
 }

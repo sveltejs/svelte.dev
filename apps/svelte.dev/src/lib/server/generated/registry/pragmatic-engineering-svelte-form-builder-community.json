@@ -13,5 +13,40 @@
 	"version": "1.0.2",
 	"svelte_range": "^3.50.1",
 	"kit_range": "next",
-	"last_rune_check_version": "1.0.2"
+	"last_rune_check_version": "1.0.2",
+	"dependencies": [
+		{
+			"name": "@zerodevx/svelte-toast",
+			"semver": "^0.8.2"
+		},
+		{
+			"name": "balloon-css",
+			"semver": "^1.2.0"
+		},
+		{
+			"name": "lodash.merge",
+			"semver": "^4.6.2"
+		},
+		{
+			"name": "lodash.clonedeep",
+			"semver": "^4.5.0"
+		},
+		{
+			"name": "nanoid",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "pretty-checkbox",
+			"semver": "^3.0.3"
+		},
+		{
+			"name": "svelte-scrollto-element",
+			"semver": "^0.7.0"
+		},
+		{
+			"name": "svelecte",
+			"semver": "^3.9.5"
+		}
+	],
+	"unpacked_size": 409979
 }

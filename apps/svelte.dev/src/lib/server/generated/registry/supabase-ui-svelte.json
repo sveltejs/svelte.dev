@@ -11,5 +11,12 @@
 	"version": "0.1.1",
 	"svelte_range": "^3.32.3",
 	"last_rune_check_version": "0.1.1",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "svelte-feather-icons",
+			"semver": "^3.3.0"
+		}
+	],
+	"unpacked_size": 271261
 }

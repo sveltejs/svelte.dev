@@ -11,5 +11,16 @@
 	"github_stars": 13,
 	"typescript": true,
 	"version": "3.0.1",
-	"last_rune_check_version": "3.0.1"
+	"last_rune_check_version": "3.0.1",
+	"dependencies": [
+		{
+			"name": "@sveltejs/adapter-static",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "yaml",
+			"semver": "^2.4.1"
+		}
+	],
+	"unpacked_size": 11384
 }

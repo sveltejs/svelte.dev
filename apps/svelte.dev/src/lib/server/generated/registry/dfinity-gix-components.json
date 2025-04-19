@@ -26,5 +26,24 @@
 	"version": "6.0.0",
 	"svelte_range": "^5",
 	"kit_range": "^2.20.2",
-	"last_rune_check_version": "6.0.0"
+	"last_rune_check_version": "6.0.0",
+	"dependencies": [
+		{
+			"name": "marked",
+			"semver": "^9.1.0"
+		},
+		{
+			"name": "dompurify",
+			"semver": "^3.2.4"
+		},
+		{
+			"name": "qr-creator",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "html5-qrcode",
+			"semver": "^2.3.8"
+		}
+	],
+	"unpacked_size": 501223
 }

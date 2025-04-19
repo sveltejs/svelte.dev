@@ -10,5 +10,7 @@
 	"runes": false,
 	"typescript": false,
 	"version": "0.0.27",
-	"last_rune_check_version": "0.0.27"
+	"last_rune_check_version": "0.0.27",
+	"dependencies": [],
+	"unpacked_size": 118649
 }

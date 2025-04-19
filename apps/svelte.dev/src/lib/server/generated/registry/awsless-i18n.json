@@ -12,5 +12,40 @@
 	"typescript": true,
 	"version": "0.0.5",
 	"svelte_range": "^4.2.19",
-	"last_rune_check_version": "0.0.5"
+	"last_rune_check_version": "0.0.5",
+	"dependencies": [
+		{
+			"name": "zod",
+			"semver": "^3.21.4"
+		},
+		{
+			"name": "glob",
+			"semver": "^10.3.9"
+		},
+		{
+			"name": "openai",
+			"semver": "^4.57.0"
+		},
+		{
+			"name": "swc-walk",
+			"semver": "1.0.0-rc.2"
+		},
+		{
+			"name": "@swc/core",
+			"semver": "^1.3.70"
+		},
+		{
+			"name": "line-column",
+			"semver": "^1.0.2"
+		},
+		{
+			"name": "estree-walker",
+			"semver": "^3.0.3"
+		},
+		{
+			"name": "@types/line-column",
+			"semver": "^1.0.2"
+		}
+	],
+	"unpacked_size": 36127
 }

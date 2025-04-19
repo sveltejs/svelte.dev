@@ -11,5 +11,20 @@
 	"typescript": false,
 	"version": "1.1.9",
 	"svelte_range": "^4.2.0",
-	"last_rune_check_version": "1.1.9"
+	"last_rune_check_version": "1.1.9",
+	"dependencies": [
+		{
+			"name": "axios",
+			"semver": "^0.21.4"
+		},
+		{
+			"name": "lodash",
+			"semver": "^4.17.21"
+		},
+		{
+			"name": "svelte",
+			"semver": "^4.2.0"
+		}
+	],
+	"unpacked_size": 10777
 }

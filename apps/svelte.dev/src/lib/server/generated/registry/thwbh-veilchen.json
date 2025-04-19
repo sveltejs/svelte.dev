@@ -5,13 +5,15 @@
 	"authors": ["tohuwabohu"],
 	"homepage": "https://veilchen.tohuwabohu.io/",
 	"downloads": 546,
-	"updated": "2025-04-14T14:00:36.319Z",
+	"updated": "2025-04-17T22:31:05.034Z",
 	"tags": ["ui"],
 	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
-	"version": "0.0.13",
+	"version": "0.0.21",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
-	"last_rune_check_version": "0.0.13"
+	"last_rune_check_version": "0.0.21",
+	"dependencies": [],
+	"unpacked_size": 29217
 }

@@ -5,12 +5,23 @@
 	"authors": ["pavelfeldman", "yurys", "mxschmitt", "dgozman-ms", "playwright-bot"],
 	"homepage": "https://playwright.dev",
 	"downloads": 11252,
-	"updated": "2025-03-17T17:03:45.100Z",
+	"updated": "2025-04-17T17:10:18.611Z",
 	"tags": ["testing"],
 	"runes": false,
 	"github_stars": 71643,
 	"typescript": true,
-	"version": "1.51.1",
+	"version": "1.52.0",
 	"svelte_range": "^4.2.19",
-	"last_rune_check_version": "1.51.1"
+	"last_rune_check_version": "1.52.0",
+	"dependencies": [
+		{
+			"name": "@sveltejs/vite-plugin-svelte",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "@playwright/experimental-ct-core",
+			"semver": "1.52.0"
+		}
+	],
+	"unpacked_size": 23832
 }

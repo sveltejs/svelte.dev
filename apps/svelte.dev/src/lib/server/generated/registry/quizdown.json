@@ -12,5 +12,48 @@
 	"typescript": true,
 	"version": "0.6.0",
 	"svelte_range": "^3.43.2",
-	"last_rune_check_version": "0.6.0"
+	"last_rune_check_version": "0.6.0",
+	"dependencies": [
+		{
+			"name": "@fortawesome/fontawesome-svg-core",
+			"semver": "^1.2.35"
+		},
+		{
+			"name": "@fortawesome/free-solid-svg-icons",
+			"semver": "^5.15.3"
+		},
+		{
+			"name": "auto-bind",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "dompurify",
+			"semver": "^2.2.6"
+		},
+		{
+			"name": "highlight.js",
+			"semver": "^10.7.0"
+		},
+		{
+			"name": "katex",
+			"semver": "^0.13.11"
+		},
+		{
+			"name": "marked",
+			"semver": "^2.1.3"
+		},
+		{
+			"name": "strip-indent",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "svelte-i18n",
+			"semver": "^3.3.9"
+		},
+		{
+			"name": "yaml",
+			"semver": "2.0.0-5"
+		}
+	],
+	"unpacked_size": 678655
 }

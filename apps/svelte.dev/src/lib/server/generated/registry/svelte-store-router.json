@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "2.0.10",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "2.0.10"
+	"last_rune_check_version": "2.0.10",
+	"dependencies": [
+		{
+			"name": "rambda",
+			"semver": "^6.9.0"
+		},
+		{
+			"name": "regexparam",
+			"semver": "^2.0.0"
+		}
+	],
+	"unpacked_size": 18941
 }

@@ -12,5 +12,24 @@
 	"typescript": true,
 	"version": "0.1.1",
 	"svelte_range": "^4.2.18",
-	"last_rune_check_version": "0.1.1"
+	"last_rune_check_version": "0.1.1",
+	"dependencies": [
+		{
+			"name": "@solana/wallet-adapter-base",
+			"semver": "^0.9.23"
+		},
+		{
+			"name": "@solana/wallet-standard-wallet-adapter-base",
+			"semver": "^1.1.2"
+		},
+		{
+			"name": "eventemitter3",
+			"semver": "^5.0.1"
+		},
+		{
+			"name": "@thewuh/wallet-standard-wallet-adapter-svelte",
+			"semver": "0.1.1"
+		}
+	],
+	"unpacked_size": 84396
 }

@@ -12,5 +12,20 @@
 	"version": "0.1.0",
 	"svelte_range": "3.59.1",
 	"kit_range": "1.20.1",
-	"last_rune_check_version": "0.1.0"
+	"last_rune_check_version": "0.1.0",
+	"dependencies": [
+		{
+			"name": "kudu-ui-system",
+			"semver": "0.1.19"
+		},
+		{
+			"name": "kudu-utils",
+			"semver": "0.0.6"
+		},
+		{
+			"name": "svelte",
+			"semver": "3.59.1"
+		}
+	],
+	"unpacked_size": 74540
 }

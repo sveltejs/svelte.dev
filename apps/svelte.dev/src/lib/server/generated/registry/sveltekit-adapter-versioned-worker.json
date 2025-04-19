@@ -13,5 +13,48 @@
 	"version": "1.0.1",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.22.0",
-	"last_rune_check_version": "1.0.1"
+	"last_rune_check_version": "1.0.1",
+	"dependencies": [
+		{
+			"name": "@types/web-app-manifest",
+			"semver": "^1.0.4"
+		},
+		{
+			"name": "@rollup/plugin-alias",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "@rollup/plugin-node-resolve",
+			"semver": "^15.0.0"
+		},
+		{
+			"name": "@rollup/plugin-typescript",
+			"semver": "^11.1.0"
+		},
+		{
+			"name": "kleur",
+			"semver": "^4.1.0"
+		},
+		{
+			"name": "make-dir",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "mime-types",
+			"semver": "^2.1.0"
+		},
+		{
+			"name": "recursive-readdir",
+			"semver": "^2.2.0"
+		},
+		{
+			"name": "rollup",
+			"semver": "^3.19.0"
+		},
+		{
+			"name": "rollup-plugin-esbuild",
+			"semver": "^5.0.0"
+		}
+	],
+	"unpacked_size": 558172
 }

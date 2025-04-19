@@ -12,5 +12,12 @@
 	"typescript": false,
 	"version": "1.1.0",
 	"svelte_range": "3.49.0",
-	"last_rune_check_version": "1.1.0"
+	"last_rune_check_version": "1.1.0",
+	"dependencies": [
+		{
+			"name": "oidc-client",
+			"semver": "1.11.5"
+		}
+	],
+	"unpacked_size": 2074989
 }

@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "0.5.2",
 	"kit_range": "^1.30.4",
-	"last_rune_check_version": "0.5.2"
+	"last_rune_check_version": "0.5.2",
+	"dependencies": [
+		{
+			"name": "tiny-glob",
+			"semver": "^0.2.9"
+		}
+	],
+	"unpacked_size": 52808
 }

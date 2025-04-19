@@ -13,5 +13,32 @@
 	"version": "1.0.0-next.40",
 	"svelte_range": "4.2.2",
 	"kit_range": "1.27.3",
-	"last_rune_check_version": "1.0.0-next.40"
+	"last_rune_check_version": "1.0.0-next.40",
+	"dependencies": [
+		{
+			"name": "@felte/reporter-dom",
+			"semver": "1.1.9"
+		},
+		{
+			"name": "@felte/validator-zod",
+			"semver": "1.0.17"
+		},
+		{
+			"name": "@mdi/js",
+			"semver": "7.3.67"
+		},
+		{
+			"name": "felte",
+			"semver": "1.2.12"
+		},
+		{
+			"name": "ionicons",
+			"semver": "7.2.1"
+		},
+		{
+			"name": "zod",
+			"semver": "3.22.4"
+		}
+	],
+	"unpacked_size": 26072
 }

@@ -13,5 +13,108 @@
 	"version": "0.2.0",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.4",
-	"last_rune_check_version": "0.2.0"
+	"last_rune_check_version": "0.2.0",
+	"dependencies": [
+		{
+			"name": "@melt-ui/pp",
+			"semver": "^0.1.2"
+		},
+		{
+			"name": "@melt-ui/svelte",
+			"semver": "^0.42.0"
+		},
+		{
+			"name": "@tiptap/core",
+			"semver": "^2.1.7"
+		},
+		{
+			"name": "@tiptap/extension-bubble-menu",
+			"semver": "^2.1.7"
+		},
+		{
+			"name": "@tiptap/extension-color",
+			"semver": "^2.0.4"
+		},
+		{
+			"name": "@tiptap/extension-highlight",
+			"semver": "^2.0.4"
+		},
+		{
+			"name": "@tiptap/extension-horizontal-rule",
+			"semver": "^2.0.4"
+		},
+		{
+			"name": "@tiptap/extension-image",
+			"semver": "^2.0.4"
+		},
+		{
+			"name": "@tiptap/extension-link",
+			"semver": "^2.0.4"
+		},
+		{
+			"name": "@tiptap/extension-placeholder",
+			"semver": "2.0.3"
+		},
+		{
+			"name": "@tiptap/extension-task-item",
+			"semver": "^2.0.4"
+		},
+		{
+			"name": "@tiptap/extension-task-list",
+			"semver": "^2.0.4"
+		},
+		{
+			"name": "@tiptap/extension-text-style",
+			"semver": "^2.0.4"
+		},
+		{
+			"name": "@tiptap/extension-underline",
+			"semver": "^2.0.4"
+		},
+		{
+			"name": "@tiptap/pm",
+			"semver": "^2.1.7"
+		},
+		{
+			"name": "@tiptap/starter-kit",
+			"semver": "^2.1.7"
+		},
+		{
+			"name": "@tiptap/suggestion",
+			"semver": "^2.0.4"
+		},
+		{
+			"name": "cal-sans",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "clsx",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "lucide-svelte",
+			"semver": "0.275.0-beta.0"
+		},
+		{
+			"name": "svelte-moveable",
+			"semver": "^0.43.1"
+		},
+		{
+			"name": "svelte-sequential-preprocessor",
+			"semver": "^2.0.1"
+		},
+		{
+			"name": "tailwind-merge",
+			"semver": "^1.14.0"
+		},
+		{
+			"name": "tippy.js",
+			"semver": "^6.3.7"
+		},
+		{
+			"name": "tiptap-markdown",
+			"semver": "^0.8.2"
+		}
+	],
+	"unpacked_size": 119486
 }

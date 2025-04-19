@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "0.0.0-next.e8cc9ca",
 	"svelte_range": ">=4.2.0",
-	"last_rune_check_version": "0.0.0-next.e8cc9ca"
+	"last_rune_check_version": "0.0.0-next.e8cc9ca",
+	"dependencies": [
+		{
+			"name": "@rubenbupe/orpc-shared",
+			"semver": "0.0.0-next.e8cc9ca"
+		}
+	],
+	"unpacked_size": 27430
 }

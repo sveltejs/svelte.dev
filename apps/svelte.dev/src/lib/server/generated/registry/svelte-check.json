@@ -12,5 +12,28 @@
 	"typescript": true,
 	"version": "4.1.6",
 	"svelte_range": "^4.0.0 || ^5.0.0-next.0",
-	"last_rune_check_version": "4.1.6"
+	"last_rune_check_version": "4.1.6",
+	"dependencies": [
+		{
+			"name": "@jridgewell/trace-mapping",
+			"semver": "^0.3.25"
+		},
+		{
+			"name": "chokidar",
+			"semver": "^4.0.1"
+		},
+		{
+			"name": "fdir",
+			"semver": "^6.2.0"
+		},
+		{
+			"name": "picocolors",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "sade",
+			"semver": "^1.7.4"
+		}
+	],
+	"unpacked_size": 4887797
 }

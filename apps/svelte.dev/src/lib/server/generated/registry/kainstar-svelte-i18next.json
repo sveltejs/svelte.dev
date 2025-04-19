@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "1.0.1",
 	"svelte_range": "^4.2.12",
-	"last_rune_check_version": "1.0.1"
+	"last_rune_check_version": "1.0.1",
+	"dependencies": [
+		{
+			"name": "html-parse-stringify",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "i18next",
+			"semver": "^23.10.1"
+		}
+	],
+	"unpacked_size": 19762
 }

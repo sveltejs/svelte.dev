@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "0.2.5",
 	"svelte_range": "3.x",
-	"last_rune_check_version": "0.2.5"
+	"last_rune_check_version": "0.2.5",
+	"dependencies": [
+		{
+			"name": "aovi",
+			"semver": "^2.0.5"
+		}
+	],
+	"unpacked_size": 18455
 }

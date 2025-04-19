@@ -12,5 +12,16 @@
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
 	"last_rune_check_version": "0.0.5",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "imagesloaded",
+			"semver": "^5.0.0"
+		},
+		{
+			"name": "lodash.debounce",
+			"semver": "^4.0.8"
+		}
+	],
+	"unpacked_size": 16409
 }

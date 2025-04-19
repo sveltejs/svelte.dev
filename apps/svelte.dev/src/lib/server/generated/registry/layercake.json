@@ -13,5 +13,24 @@
 	"version": "8.4.3",
 	"svelte_range": "3 - 5 || >=5.0.0-next.120",
 	"kit_range": "^2.7.1",
-	"last_rune_check_version": "8.4.3"
+	"last_rune_check_version": "8.4.3",
+	"dependencies": [
+		{
+			"name": "d3-array",
+			"semver": "^3.2.4"
+		},
+		{
+			"name": "d3-color",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "d3-scale",
+			"semver": "^4.0.2"
+		},
+		{
+			"name": "d3-shape",
+			"semver": "^3.2.0"
+		}
+	],
+	"unpacked_size": 106402
 }

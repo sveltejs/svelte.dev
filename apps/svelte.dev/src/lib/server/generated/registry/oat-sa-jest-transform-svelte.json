@@ -45,5 +45,12 @@
 	"typescript": false,
 	"version": "0.1.1",
 	"svelte_range": ">= 3",
-	"last_rune_check_version": "0.1.1"
+	"last_rune_check_version": "0.1.1",
+	"dependencies": [
+		{
+			"name": "babel-plugin-dynamic-import-node",
+			"semver": "^2.3.3"
+		}
+	],
+	"unpacked_size": 9691
 }

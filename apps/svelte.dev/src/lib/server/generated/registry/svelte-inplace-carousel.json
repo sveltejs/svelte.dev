@@ -12,5 +12,16 @@
 	"version": "1.2.0",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.0.0",
-	"last_rune_check_version": "1.2.0"
+	"last_rune_check_version": "1.2.0",
+	"dependencies": [
+		{
+			"name": "clsx",
+			"semver": "^2.1.1"
+		},
+		{
+			"name": "tailwind-merge",
+			"semver": "^2.4.0"
+		}
+	],
+	"unpacked_size": 26178
 }

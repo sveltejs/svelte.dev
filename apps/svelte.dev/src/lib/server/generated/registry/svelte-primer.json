@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "0.1.0",
 	"svelte_range": "^3.28.0",
-	"last_rune_check_version": "0.1.0"
+	"last_rune_check_version": "0.1.0",
+	"dependencies": [
+		{
+			"name": "svelte-octicons",
+			"semver": "^9.6.3"
+		}
+	],
+	"unpacked_size": 581638
 }

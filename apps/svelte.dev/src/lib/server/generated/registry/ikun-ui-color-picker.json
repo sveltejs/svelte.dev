@@ -11,5 +11,64 @@
 	"version": "0.2.8",
 	"svelte_range": "^4.2.12",
 	"last_rune_check_version": "0.2.8",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "baiwusanyu-utils",
+			"semver": "^1.0.18"
+		},
+		{
+			"name": "clsx",
+			"semver": "^2.1.0"
+		},
+		{
+			"name": "esm-env",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "svelte",
+			"semver": "^4.2.12"
+		},
+		{
+			"name": "tinycolor2",
+			"semver": "^1.6.0"
+		},
+		{
+			"name": "@ikun-ui/checkbox",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/checkbox-group",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/dropdown",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/form",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/icon",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/input",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/input-number",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/utils",
+			"semver": "0.2.8"
+		},
+		{
+			"name": "@ikun-ui/popover",
+			"semver": "0.2.8"
+		}
+	],
+	"unpacked_size": 43875
 }

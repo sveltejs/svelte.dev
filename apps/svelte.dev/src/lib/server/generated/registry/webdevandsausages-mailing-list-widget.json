@@ -12,5 +12,32 @@
 	"typescript": false,
 	"version": "0.1.0",
 	"svelte_range": "3.9.1",
-	"last_rune_check_version": "0.1.0"
+	"last_rune_check_version": "0.1.0",
+	"dependencies": [
+		{
+			"name": "classcat",
+			"semver": "4.0.2"
+		},
+		{
+			"name": "daggy",
+			"semver": "1.4.0"
+		},
+		{
+			"name": "ky",
+			"semver": "0.13.0"
+		},
+		{
+			"name": "ramda",
+			"semver": "0.26.1"
+		},
+		{
+			"name": "simplebar",
+			"semver": "4.3.0-alpha.0"
+		},
+		{
+			"name": "smoothscroll-polyfill",
+			"semver": "0.4.4"
+		}
+	],
+	"unpacked_size": 117193
 }

@@ -12,5 +12,12 @@
 	"svelte_range": "^3.54.0 || ^4.0.0",
 	"kit_range": "^1.23.0",
 	"last_rune_check_version": "0.3.12",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "flatpickr",
+			"semver": "^4.6.13"
+		}
+	],
+	"unpacked_size": 100976
 }

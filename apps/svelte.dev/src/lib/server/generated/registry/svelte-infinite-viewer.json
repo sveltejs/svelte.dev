@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "0.27.1",
 	"svelte_range": "^3.16.4",
-	"last_rune_check_version": "0.27.1"
+	"last_rune_check_version": "0.27.1",
+	"dependencies": [
+		{
+			"name": "infinite-viewer",
+			"semver": "~0.29.1"
+		}
+	],
+	"unpacked_size": 413255
 }

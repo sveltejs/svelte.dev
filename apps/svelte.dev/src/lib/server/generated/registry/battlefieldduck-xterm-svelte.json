@@ -13,5 +13,52 @@
 	"version": "2.1.0",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.5.27",
-	"last_rune_check_version": "2.1.0"
+	"last_rune_check_version": "2.1.0",
+	"dependencies": [
+		{
+			"name": "@xterm/addon-attach",
+			"semver": "^0.11.0"
+		},
+		{
+			"name": "@xterm/addon-canvas",
+			"semver": "^0.7.0"
+		},
+		{
+			"name": "@xterm/addon-clipboard",
+			"semver": "^0.1.0"
+		},
+		{
+			"name": "@xterm/addon-fit",
+			"semver": "^0.10.0"
+		},
+		{
+			"name": "@xterm/addon-image",
+			"semver": "^0.8.0"
+		},
+		{
+			"name": "@xterm/addon-search",
+			"semver": "^0.15.0"
+		},
+		{
+			"name": "@xterm/addon-serialize",
+			"semver": "^0.13.0"
+		},
+		{
+			"name": "@xterm/addon-unicode11",
+			"semver": "^0.8.0"
+		},
+		{
+			"name": "@xterm/addon-web-links",
+			"semver": "^0.11.0"
+		},
+		{
+			"name": "@xterm/addon-webgl",
+			"semver": "^0.18.0"
+		},
+		{
+			"name": "@xterm/xterm",
+			"semver": "^5.5.0"
+		}
+	],
+	"unpacked_size": 22621
 }

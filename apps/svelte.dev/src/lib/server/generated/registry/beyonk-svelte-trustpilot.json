@@ -12,5 +12,12 @@
 	"typescript": false,
 	"version": "1.0.2",
 	"svelte_range": "^3.5.3",
-	"last_rune_check_version": "1.0.2"
+	"last_rune_check_version": "1.0.2",
+	"dependencies": [
+		{
+			"name": "@beyonk/async-script-loader",
+			"semver": "^1.0.3"
+		}
+	],
+	"unpacked_size": 18256
 }

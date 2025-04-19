@@ -12,5 +12,20 @@
 	"typescript": false,
 	"version": "3.3.7",
 	"svelte_range": "^3.4.4",
-	"last_rune_check_version": "3.3.7"
+	"last_rune_check_version": "3.3.7",
+	"dependencies": [
+		{
+			"name": "clsx",
+			"semver": "^1.0.4"
+		},
+		{
+			"name": "lodash.isobject",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "lodash.tonumber",
+			"semver": "^4.0.3"
+		}
+	],
+	"unpacked_size": 916841
 }

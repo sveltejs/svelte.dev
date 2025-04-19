@@ -13,5 +13,16 @@
 	"version": "0.14.0",
 	"svelte_range": "~3.59.0",
 	"kit_range": "~1.19.0",
-	"last_rune_check_version": "0.14.0"
+	"last_rune_check_version": "0.14.0",
+	"dependencies": [
+		{
+			"name": "carbon-icons-svelte",
+			"semver": "~11.4.0"
+		},
+		{
+			"name": "uid",
+			"semver": "~2.0.0"
+		}
+	],
+	"unpacked_size": 67051
 }

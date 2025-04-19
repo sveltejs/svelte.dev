@@ -13,5 +13,36 @@
 	"svelte_range": "^3.52.0",
 	"kit_range": "1.0.0-next.535",
 	"last_rune_check_version": "0.2.4",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "date-fns",
+			"semver": "^2.29.3"
+		},
+		{
+			"name": "dexie",
+			"semver": "^3.2.2"
+		},
+		{
+			"name": "ioredis",
+			"semver": "^5.2.4"
+		},
+		{
+			"name": "svelte-browser",
+			"semver": "^0.4.6"
+		},
+		{
+			"name": "svelte-petit-utils",
+			"semver": "^0.3.5"
+		},
+		{
+			"name": "svelte-tick-timer",
+			"semver": "^0.2.2"
+		},
+		{
+			"name": "tslib",
+			"semver": "^2.4.1"
+		}
+	],
+	"unpacked_size": 13374
 }

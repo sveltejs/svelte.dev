@@ -13,5 +13,28 @@
 	"version": "0.0.9",
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
-	"last_rune_check_version": "0.0.9"
+	"last_rune_check_version": "0.0.9",
+	"dependencies": [
+		{
+			"name": "@xstate/svelte",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "deep-equal",
+			"semver": "^2.0.5"
+		},
+		{
+			"name": "lodash.clonedeep",
+			"semver": "^4.5.0"
+		},
+		{
+			"name": "typescript",
+			"semver": "^4.7.3"
+		},
+		{
+			"name": "xstate",
+			"semver": "^4.32.1"
+		}
+	],
+	"unpacked_size": 55191
 }

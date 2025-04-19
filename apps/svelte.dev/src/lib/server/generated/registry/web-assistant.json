@@ -12,5 +12,16 @@
 	"typescript": false,
 	"version": "1.2.10",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "1.2.10"
+	"last_rune_check_version": "1.2.10",
+	"dependencies": [
+		{
+			"name": "html2canvas",
+			"semver": "^1.4.0"
+		},
+		{
+			"name": "lodash",
+			"semver": "^4.17.21"
+		}
+	],
+	"unpacked_size": 669769
 }

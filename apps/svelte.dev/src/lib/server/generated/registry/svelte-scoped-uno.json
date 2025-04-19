@@ -12,5 +12,32 @@
 	"typescript": true,
 	"version": "0.1.4",
 	"svelte_range": "^3.59.1",
-	"last_rune_check_version": "0.1.4"
+	"last_rune_check_version": "0.1.4",
+	"dependencies": [
+		{
+			"name": "@rollup/pluginutils",
+			"semver": "^5.0.2"
+		},
+		{
+			"name": "@unocss/config",
+			"semver": "^0.51.13"
+		},
+		{
+			"name": "@unocss/preset-icons",
+			"semver": "^0.51.13"
+		},
+		{
+			"name": "@unocss/reset",
+			"semver": "^0.51.13"
+		},
+		{
+			"name": "magic-string",
+			"semver": "^0.26.6"
+		},
+		{
+			"name": "unocss",
+			"semver": "^0.51.13"
+		}
+	],
+	"unpacked_size": 63158
 }

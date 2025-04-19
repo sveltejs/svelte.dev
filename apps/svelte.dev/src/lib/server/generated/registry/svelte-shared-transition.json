@@ -12,5 +12,12 @@
 	"typescript": false,
 	"version": "0.0.1",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.0.1"
+	"last_rune_check_version": "0.0.1",
+	"dependencies": [
+		{
+			"name": "shared-transition",
+			"semver": "^0.1.0"
+		}
+	],
+	"unpacked_size": 49236
 }

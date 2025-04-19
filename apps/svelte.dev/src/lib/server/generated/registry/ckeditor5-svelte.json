@@ -12,5 +12,12 @@
 	"typescript": false,
 	"version": "0.0.10",
 	"svelte_range": "^3.32.1",
-	"last_rune_check_version": "0.0.10"
+	"last_rune_check_version": "0.0.10",
+	"dependencies": [
+		{
+			"name": "just-debounce-it",
+			"semver": "^1.1.0"
+		}
+	],
+	"unpacked_size": 31731
 }

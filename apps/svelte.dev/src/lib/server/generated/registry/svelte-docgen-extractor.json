@@ -12,5 +12,20 @@
 	"typescript": true,
 	"version": "0.1.0",
 	"svelte_range": "^5.3.0",
-	"last_rune_check_version": "0.1.0"
+	"last_rune_check_version": "0.1.0",
+	"dependencies": [
+		{
+			"name": "svelte2tsx",
+			"semver": "^0.7.26"
+		},
+		{
+			"name": "zimmerframe",
+			"semver": "^1.1.2"
+		},
+		{
+			"name": "@types/estree",
+			"semver": "^1.0.6"
+		}
+	],
+	"unpacked_size": 29041
 }

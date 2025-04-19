@@ -13,5 +13,20 @@
 	"svelte_range": "^5.0.0-next.1",
 	"kit_range": "^2.5.17",
 	"last_rune_check_version": "1.0.0-alpha.40",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "big.js",
+			"semver": "^6.2.1"
+		},
+		{
+			"name": "@sveltejs/adapter-node",
+			"semver": "^5.2.0"
+		},
+		{
+			"name": "@tanstack/svelte-table",
+			"semver": "^9.0.0-alpha.5"
+		}
+	],
+	"unpacked_size": 246583
 }

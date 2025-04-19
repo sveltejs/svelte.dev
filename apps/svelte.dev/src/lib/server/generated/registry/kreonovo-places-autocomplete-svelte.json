@@ -13,5 +13,12 @@
 	"version": "2.0.20",
 	"svelte_range": "^5.1.4",
 	"kit_range": "^2.7.3",
-	"last_rune_check_version": "2.0.20"
+	"last_rune_check_version": "2.0.20",
+	"dependencies": [
+		{
+			"name": "@googlemaps/js-api-loader",
+			"semver": "^1.16.8"
+		}
+	],
+	"unpacked_size": 28940
 }

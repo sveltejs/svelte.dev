@@ -5,11 +5,13 @@
 	"authors": ["malfaitrobin", "adamwathan", "reinink"],
 	"homepage": "https://tailwindcss.com",
 	"downloads": 21170519,
-	"updated": "2025-04-04T18:11:56.153Z",
+	"updated": "2025-04-14T17:25:43.664Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 87128,
 	"typescript": true,
-	"version": "4.1.3",
-	"last_rune_check_version": "4.1.3"
+	"version": "4.1.4",
+	"last_rune_check_version": "4.1.4",
+	"dependencies": [],
+	"unpacked_size": 657224
 }

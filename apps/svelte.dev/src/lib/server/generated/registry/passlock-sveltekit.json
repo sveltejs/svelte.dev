@@ -13,5 +13,32 @@
 	"version": "0.9.31",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.6.2",
-	"last_rune_check_version": "0.9.31"
+	"last_rune_check_version": "0.9.31",
+	"dependencies": [
+		{
+			"name": "@effect/schema",
+			"semver": "0.74.1"
+		},
+		{
+			"name": "@oslojs/crypto",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "@oslojs/encoding",
+			"semver": "^1.1.0"
+		},
+		{
+			"name": "effect",
+			"semver": "3.8.4"
+		},
+		{
+			"name": "@passlock/client",
+			"semver": "0.9.30"
+		},
+		{
+			"name": "@passlock/shared",
+			"semver": "0.9.30"
+		}
+	],
+	"unpacked_size": 68424
 }

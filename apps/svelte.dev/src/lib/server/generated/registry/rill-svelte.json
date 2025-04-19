@@ -12,5 +12,11 @@
 	"runes": false,
 	"last_rune_check_version": "1.0.0",
 	"version": "1.0.0",
-	"github_stars": 3
+	"github_stars": 3,
+	"dependencies": [
+		{
+			"name": "statuses",
+			"semver": "^1.4.0"
+		}
+	]
 }

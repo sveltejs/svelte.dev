@@ -12,5 +12,24 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.4",
 	"last_rune_check_version": "0.0.5",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@svelte-chat/utils",
+			"semver": "^0.0.2"
+		},
+		{
+			"name": "express",
+			"semver": "^4.18.2"
+		},
+		{
+			"name": "mongoose",
+			"semver": "^8.0.0"
+		},
+		{
+			"name": "socket.io",
+			"semver": "^4.7.2"
+		}
+	],
+	"unpacked_size": 25376740
 }

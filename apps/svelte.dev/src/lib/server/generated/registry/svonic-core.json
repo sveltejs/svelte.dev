@@ -13,5 +13,20 @@
 	"version": "1.0.0-next.40",
 	"svelte_range": "4.2.2",
 	"kit_range": "1.27.3",
-	"last_rune_check_version": "1.0.0-next.40"
+	"last_rune_check_version": "1.0.0-next.40",
+	"dependencies": [
+		{
+			"name": "@ionic/core",
+			"semver": "7.5.3"
+		},
+		{
+			"name": "esm-env",
+			"semver": "1.0.0"
+		},
+		{
+			"name": "ionicons",
+			"semver": "7.2.1"
+		}
+	],
+	"unpacked_size": 252439
 }

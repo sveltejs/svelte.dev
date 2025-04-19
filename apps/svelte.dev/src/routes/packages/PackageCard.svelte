@@ -1,16 +1,28 @@
 <script lang="ts">
+	import { page } from '$app/state';
 	import type { Package } from '$lib/server/content';
 	import { ago } from '$lib/time';
 	import { format_number } from './utils';
 
 	type Props = {
 		pkg: Package;
+		select: (pkg: string) => void;
 	};
 
-	let { pkg }: Props = $props();
+	let { pkg, select }: Props = $props();
+
+	const new_url = new URL(page.url);
+	new_url.pathname = new_url.pathname.split(pkg.name)[0].replace(/\/$/, '');
+	new_url.pathname += '/' + pkg.name;
 </script>
 
-<article data-pubdate={pkg.updated}>
+<a
+	href={new_url.pathname + new_url.search}
+	class="card"
+	data-pubdate={pkg.updated}
+	onclick={() => select(pkg.name)}
+	aria-label="Check out details about {pkg.name}"
+>
 	<header>
 		<h3>
 			{#if pkg.official}
@@ -47,7 +59,7 @@
 
 		<span style="flex: 1 1 auto"></span>
 
-		<span style="display: flex; gap: 0.75rem">
+		<!-- <span style="display: flex; gap: 0.75rem">
 			<a
 				href="https://npmjs.org/package/{pkg.name}"
 				target="_blank"
@@ -78,9 +90,9 @@
 					onclick={(e) => e.stopPropagation()}
 				></a>
 			{/if}
-		</span>
+		</span> -->
 	</p>
-</article>
+</a>
 
 <style>
 	header {
@@ -115,7 +127,7 @@
 		}
 	}
 
-	article {
+	.card {
 		display: grid;
 		grid-template-rows: auto 1fr auto;
 		box-sizing: border-box;
@@ -123,6 +135,7 @@
 		height: 100%;
 		min-height: 0;
 
+		color: var(--sk-fg-1);
 		background-color: var(--sk-bg-2);
 
 		border: 1px solid var(--sk-bg-4);
@@ -133,12 +146,7 @@
 
 		&:hover {
 			filter: drop-shadow(0.2rem, 0.4rem, 1rem rgb(0 0 0 / 0.1));
-		}
-
-		a {
-			display: block;
 			text-decoration: none;
-			color: inherit;
 		}
 
 		[data-icon] {

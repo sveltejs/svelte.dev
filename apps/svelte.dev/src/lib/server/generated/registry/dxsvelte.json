@@ -12,5 +12,32 @@
 	"version": "0.2.0-alpha.21",
 	"svelte_range": "^4.2.2",
 	"last_rune_check_version": "0.2.0-alpha.21",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@sveltejs/vite-plugin-svelte",
+			"semver": "^2.4.6"
+		},
+		{
+			"name": "figlet",
+			"semver": "^1.6.0"
+		},
+		{
+			"name": "inquirer",
+			"semver": "^9.2.7"
+		},
+		{
+			"name": "js-base64",
+			"semver": "^3.7.5"
+		},
+		{
+			"name": "svelte",
+			"semver": "^4.2.2"
+		},
+		{
+			"name": "vite",
+			"semver": "^4.5.0"
+		}
+	],
+	"unpacked_size": 161507
 }

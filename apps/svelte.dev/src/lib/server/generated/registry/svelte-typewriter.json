@@ -12,5 +12,12 @@
 	"version": "3.2.3",
 	"svelte_range": ">=3.47.x",
 	"kit_range": "^1.26.0",
-	"last_rune_check_version": "3.2.3"
+	"last_rune_check_version": "3.2.3",
+	"dependencies": [
+		{
+			"name": "@formatjs/intl-segmenter",
+			"semver": "^11.5.3"
+		}
+	],
+	"unpacked_size": 47877
 }

@@ -12,5 +12,12 @@
 	"typescript": false,
 	"version": "0.0.14",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.0.14"
+	"last_rune_check_version": "0.0.14",
+	"dependencies": [
+		{
+			"name": "pdfjs-dist",
+			"semver": "^2.3.200"
+		}
+	],
+	"unpacked_size": 40688
 }

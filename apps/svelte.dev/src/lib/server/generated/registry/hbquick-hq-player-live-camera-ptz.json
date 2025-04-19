@@ -11,5 +11,20 @@
 	"version": "0.0.6",
 	"svelte_range": "^3.46.2",
 	"last_rune_check_version": "0.0.6",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@htmlbricks/hb-player-live-camera-ptz",
+			"semver": "^0.19.33"
+		},
+		{
+			"name": "ptz-client-api-requests",
+			"semver": "^0.0.19"
+		},
+		{
+			"name": "style-to-object",
+			"semver": "^0.3.0"
+		}
+	],
+	"unpacked_size": 173004
 }

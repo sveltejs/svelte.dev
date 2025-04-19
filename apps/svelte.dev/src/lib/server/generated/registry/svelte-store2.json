@@ -12,5 +12,12 @@
 	"typescript": false,
 	"version": "1.0.1",
 	"svelte_range": "^3.55.1",
-	"last_rune_check_version": "1.0.1"
+	"last_rune_check_version": "1.0.1",
+	"dependencies": [
+		{
+			"name": "svelte",
+			"semver": "^3.55.1"
+		}
+	],
+	"unpacked_size": 4311
 }

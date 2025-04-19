@@ -12,5 +12,140 @@
 	"typescript": true,
 	"version": "1.1.0-alpha.58",
 	"svelte_range": "^3.46.2",
-	"last_rune_check_version": "1.1.0-alpha.58"
+	"last_rune_check_version": "1.1.0-alpha.58",
+	"dependencies": [
+		{
+			"name": "@responsive-ui/accordion",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/action-sheet",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/bottom-bar",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/bottom-sheet",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/button",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/card",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/checkbox",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/column",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/date-picker",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/ellipsis",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/fab",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/header",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/icon",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/input",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/input-number",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/label",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/link",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/loader",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/poster",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/responsive",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/row",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/search",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/select",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/show-more",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/snackbar",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/stepper",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/switch",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/tab",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/table",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/tag",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/textarea",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/tooltip",
+			"semver": "*"
+		},
+		{
+			"name": "@responsive-ui/upload",
+			"semver": "*"
+		}
+	],
+	"unpacked_size": 1022236
 }

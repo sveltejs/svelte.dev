@@ -13,5 +13,92 @@
 	"version": "5.0.0",
 	"svelte_range": "5",
 	"kit_range": "2",
-	"last_rune_check_version": "5.0.0"
+	"last_rune_check_version": "5.0.0",
+	"dependencies": [
+		{
+			"name": "@shikijs/rehype",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "hast-util-from-html",
+			"semver": "2.0.3"
+		},
+		{
+			"name": "hast-util-select",
+			"semver": "6.0.4"
+		},
+		{
+			"name": "hast-util-to-html",
+			"semver": "9.0.5"
+		},
+		{
+			"name": "rehype-autolink-headings",
+			"semver": "7.1.0"
+		},
+		{
+			"name": "rehype-external-links",
+			"semver": "3.0.0"
+		},
+		{
+			"name": "rehype-slug",
+			"semver": "6.0.0"
+		},
+		{
+			"name": "rehype-stringify",
+			"semver": "10.0.1"
+		},
+		{
+			"name": "rehype-unwrap-images",
+			"semver": "1.0.0"
+		},
+		{
+			"name": "remark-directive",
+			"semver": "3.0.1"
+		},
+		{
+			"name": "remark-frontmatter",
+			"semver": "5.0.0"
+		},
+		{
+			"name": "remark-frontmatter-yaml",
+			"semver": "1.3.0"
+		},
+		{
+			"name": "remark-gfm",
+			"semver": "4.0.1"
+		},
+		{
+			"name": "remark-parse",
+			"semver": "11.0.0"
+		},
+		{
+			"name": "remark-rehype",
+			"semver": "11.1.1"
+		},
+		{
+			"name": "remark-toc",
+			"semver": "9.0.0"
+		},
+		{
+			"name": "stringify-entities",
+			"semver": "4.0.4"
+		},
+		{
+			"name": "unified",
+			"semver": "11.0.5"
+		},
+		{
+			"name": "unist-util-remove-position",
+			"semver": "5.0.0"
+		},
+		{
+			"name": "unist-util-visit",
+			"semver": "5.0.0"
+		},
+		{
+			"name": "zod",
+			"semver": "3.24.1"
+		}
+	],
+	"unpacked_size": 79706
 }

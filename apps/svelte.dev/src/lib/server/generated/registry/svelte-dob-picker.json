@@ -12,5 +12,60 @@
 	"typescript": false,
 	"version": "1.0.4",
 	"svelte_range": "^3.38.2",
-	"last_rune_check_version": "1.0.4"
+	"last_rune_check_version": "1.0.4",
+	"dependencies": [
+		{
+			"name": "function-bind",
+			"semver": "^1.1.1"
+		},
+		{
+			"name": "deepmerge",
+			"semver": "^4.2.2"
+		},
+		{
+			"name": "builtin-modules",
+			"semver": "^3.2.0"
+		},
+		{
+			"name": "estree-walker",
+			"semver": "^0.6.1"
+		},
+		{
+			"name": "has",
+			"semver": "^1.0.3"
+		},
+		{
+			"name": "is-module",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "is-core-module",
+			"semver": "^2.3.0"
+		},
+		{
+			"name": "path-parse",
+			"semver": "^1.0.6"
+		},
+		{
+			"name": "picomatch",
+			"semver": "^2.2.3"
+		},
+		{
+			"name": "require-relative",
+			"semver": "^0.8.7"
+		},
+		{
+			"name": "resolve",
+			"semver": "^1.20.0"
+		},
+		{
+			"name": "rollup-pluginutils",
+			"semver": "^2.8.2"
+		},
+		{
+			"name": "tslib",
+			"semver": "^2.2.0"
+		}
+	],
+	"unpacked_size": 8352
 }

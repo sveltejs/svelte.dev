@@ -12,5 +12,20 @@
 	"typescript": false,
 	"version": "0.0.4",
 	"svelte_range": "3.39.0",
-	"last_rune_check_version": "0.0.4"
+	"last_rune_check_version": "0.0.4",
+	"dependencies": [
+		{
+			"name": "choom-theme",
+			"semver": "0.1.0"
+		},
+		{
+			"name": "clsx",
+			"semver": "^1.1.1"
+		},
+		{
+			"name": "nanoid",
+			"semver": "^3.1.30"
+		}
+	],
+	"unpacked_size": 238129
 }

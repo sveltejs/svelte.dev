@@ -12,5 +12,32 @@
 	"typescript": false,
 	"version": "0.1.6",
 	"svelte_range": "^3.32.3",
-	"last_rune_check_version": "0.1.6"
+	"last_rune_check_version": "0.1.6",
+	"dependencies": [
+		{
+			"name": "chalk",
+			"semver": "^4.1.0"
+		},
+		{
+			"name": "chokidar",
+			"semver": "^3.5.1"
+		},
+		{
+			"name": "devalue",
+			"semver": "^2.0.1"
+		},
+		{
+			"name": "fs-extra",
+			"semver": "^9.1.0"
+		},
+		{
+			"name": "minidom",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "mri",
+			"semver": "^1.1.6"
+		}
+	],
+	"unpacked_size": 13999
 }

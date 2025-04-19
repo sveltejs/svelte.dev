@@ -11,5 +11,20 @@
 	"typescript": true,
 	"version": "0.0.0",
 	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
-	"last_rune_check_version": "0.0.0"
+	"last_rune_check_version": "0.0.0",
+	"dependencies": [
+		{
+			"name": "@nopends-sdk/provider-utils",
+			"semver": "0.0.0"
+		},
+		{
+			"name": "@nopends-sdk/ui-utils",
+			"semver": "0.0.0"
+		},
+		{
+			"name": "sswr",
+			"semver": "^2.1.0"
+		}
+	],
+	"unpacked_size": 122570
 }

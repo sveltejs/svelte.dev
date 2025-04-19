@@ -13,5 +13,16 @@
 	"version": "0.15.7",
 	"svelte_range": ">=3.55.0",
 	"kit_range": "1.16.3",
-	"last_rune_check_version": "0.15.7"
+	"last_rune_check_version": "0.15.7",
+	"dependencies": [
+		{
+			"name": "prism-svelte",
+			"semver": "0.5.0"
+		},
+		{
+			"name": "prismjs",
+			"semver": "1.28.0"
+		}
+	],
+	"unpacked_size": 22142
 }

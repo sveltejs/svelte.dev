@@ -13,5 +13,12 @@
 	"version": "0.14.4",
 	"svelte_range": "^4.2.0",
 	"kit_range": "^1.22.0",
-	"last_rune_check_version": "0.14.4"
+	"last_rune_check_version": "0.14.4",
+	"dependencies": [
+		{
+			"name": "iconify-icon",
+			"semver": "^1.0.8"
+		}
+	],
+	"unpacked_size": 327771
 }

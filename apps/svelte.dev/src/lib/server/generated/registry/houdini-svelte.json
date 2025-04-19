@@ -5,13 +5,44 @@
 	"authors": ["aaivazis"],
 	"homepage": "https://github.com/HoudiniGraphql/houdini",
 	"downloads": 4618,
-	"updated": "2025-04-12T04:51:20.892Z",
+	"updated": "2025-04-15T03:32:06.294Z",
 	"tags": ["integration"],
 	"runes": false,
 	"github_stars": 946,
 	"typescript": true,
-	"version": "2.1.13",
+	"version": "2.1.14",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.9.0",
-	"last_rune_check_version": "2.1.13"
+	"last_rune_check_version": "2.1.14",
+	"dependencies": [
+		{
+			"name": "@kitql/helpers",
+			"semver": "^0.8.2"
+		},
+		{
+			"name": "ast-types",
+			"semver": "^0.16.1"
+		},
+		{
+			"name": "estree-walker",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "graphql",
+			"semver": "^15.8.0"
+		},
+		{
+			"name": "recast",
+			"semver": "^0.23.1"
+		},
+		{
+			"name": "rollup",
+			"semver": "^4.28.1"
+		},
+		{
+			"name": "houdini",
+			"semver": "^1.5.5"
+		}
+	],
+	"unpacked_size": 45078373
 }

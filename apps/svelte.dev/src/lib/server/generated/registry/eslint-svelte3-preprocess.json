@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "0.0.5",
 	"svelte_range": ">1.44.0",
-	"last_rune_check_version": "0.0.5"
+	"last_rune_check_version": "0.0.5",
+	"dependencies": [
+		{
+			"name": "patch-package",
+			"semver": "^6.2.2"
+		}
+	],
+	"unpacked_size": 31010
 }

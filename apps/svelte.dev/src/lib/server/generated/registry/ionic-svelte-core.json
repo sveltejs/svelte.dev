@@ -12,5 +12,16 @@
 	"typescript": false,
 	"version": "0.6.1",
 	"svelte_range": "^4.0.5",
-	"last_rune_check_version": "0.6.1"
+	"last_rune_check_version": "0.6.1",
+	"dependencies": [
+		{
+			"name": "@ionic/core",
+			"semver": "^8.5.2"
+		},
+		{
+			"name": "swiper",
+			"semver": "^9.2.4"
+		}
+	],
+	"unpacked_size": 113821
 }

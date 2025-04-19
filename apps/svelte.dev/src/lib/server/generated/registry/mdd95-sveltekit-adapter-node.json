@@ -12,5 +12,32 @@
 	"typescript": true,
 	"version": "1.1.0",
 	"kit_range": "^2.6.0",
-	"last_rune_check_version": "1.1.0"
+	"last_rune_check_version": "1.1.0",
+	"dependencies": [
+		{
+			"name": "@rollup/plugin-commonjs",
+			"semver": "^28.0.0"
+		},
+		{
+			"name": "@rollup/plugin-json",
+			"semver": "^6.1.0"
+		},
+		{
+			"name": "@rollup/plugin-node-resolve",
+			"semver": "^15.3.0"
+		},
+		{
+			"name": "@rollup/plugin-typescript",
+			"semver": "^12.1.0"
+		},
+		{
+			"name": "rollup",
+			"semver": "^4.9.5"
+		},
+		{
+			"name": "tslib",
+			"semver": "^2.7.0"
+		}
+	],
+	"unpacked_size": 57916
 }

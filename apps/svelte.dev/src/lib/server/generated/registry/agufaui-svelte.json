@@ -12,5 +12,20 @@
 	"typescript": true,
 	"version": "0.8.0",
 	"svelte_range": "^3.55.1",
-	"last_rune_check_version": "0.8.0"
+	"last_rune_check_version": "0.8.0",
+	"dependencies": [
+		{
+			"name": "@agufaui/config",
+			"semver": "^0.8.0"
+		},
+		{
+			"name": "@agufaui/locale",
+			"semver": "^0.5.0"
+		},
+		{
+			"name": "@agufaui/theme",
+			"semver": "^0.8.0"
+		}
+	],
+	"unpacked_size": 189131
 }

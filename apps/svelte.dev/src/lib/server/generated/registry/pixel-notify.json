@@ -12,5 +12,12 @@
 	"svelte_range": ">= 3.54.0",
 	"kit_range": "^1.22.3",
 	"last_rune_check_version": "1.1.4",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "pixel-notify",
+			"semver": "^1.1.1"
+		}
+	],
+	"unpacked_size": 9267
 }

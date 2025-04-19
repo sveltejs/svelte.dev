@@ -13,5 +13,40 @@
 	"version": "1.1.2",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.1",
-	"last_rune_check_version": "1.1.2"
+	"last_rune_check_version": "1.1.2",
+	"dependencies": [
+		{
+			"name": "@animotion/motion",
+			"semver": "^2.0.1"
+		},
+		{
+			"name": "@fontsource/atkinson-hyperlegible",
+			"semver": "^5.1.1"
+		},
+		{
+			"name": "@fontsource/monaspace-neon",
+			"semver": "^5.1.0"
+		},
+		{
+			"name": "@tailwindcss/vite",
+			"semver": "4.0.0"
+		},
+		{
+			"name": "reveal.js",
+			"semver": "5.1.0"
+		},
+		{
+			"name": "shiki",
+			"semver": "^2.1.0"
+		},
+		{
+			"name": "shiki-magic-move",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "tailwindcss",
+			"semver": "4.0.0"
+		}
+	],
+	"unpacked_size": 33996
 }

@@ -10,5 +10,24 @@
 	"typescript": true,
 	"version": "0.3.0",
 	"last_rune_check_version": "0.3.0",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "esbuild",
+			"semver": "^0.12.2"
+		},
+		{
+			"name": "mime",
+			"semver": "^2.5.2"
+		},
+		{
+			"name": "node-fetch",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "yargs",
+			"semver": "^17.2.1"
+		}
+	],
+	"unpacked_size": 35309
 }

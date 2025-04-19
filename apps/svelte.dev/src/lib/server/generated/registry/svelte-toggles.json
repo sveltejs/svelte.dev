@@ -12,5 +12,12 @@
 	"typescript": false,
 	"version": "2.1.7",
 	"svelte_range": "^4.2.0",
-	"last_rune_check_version": "2.1.7"
+	"last_rune_check_version": "2.1.7",
+	"dependencies": [
+		{
+			"name": "animejs",
+			"semver": "^3.2.1"
+		}
+	],
+	"unpacked_size": 26796
 }

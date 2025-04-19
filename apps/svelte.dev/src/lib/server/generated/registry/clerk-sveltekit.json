@@ -13,5 +13,16 @@
 	"version": "0.4.2",
 	"svelte_range": "^4.0.0||^5.0.0",
 	"kit_range": "^1.25.1||^2.0.2",
-	"last_rune_check_version": "0.4.2"
+	"last_rune_check_version": "0.4.2",
+	"dependencies": [
+		{
+			"name": "@clerk/backend",
+			"semver": "^0.32.1"
+		},
+		{
+			"name": "@clerk/clerk-js",
+			"semver": "^4.61.0"
+		}
+	],
+	"unpacked_size": 36853
 }

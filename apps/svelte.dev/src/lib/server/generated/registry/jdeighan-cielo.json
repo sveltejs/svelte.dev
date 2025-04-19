@@ -11,5 +11,40 @@
 	"version": "9.0.1",
 	"svelte_range": "^3.46.4",
 	"last_rune_check_version": "9.0.1",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@jdeighan/coffee-utils",
+			"semver": "^5.0.1"
+		},
+		{
+			"name": "@jdeighan/env",
+			"semver": "^9.0.1"
+		},
+		{
+			"name": "@jdeighan/starbucks",
+			"semver": "^8.0.0"
+		},
+		{
+			"name": "@jdeighan/string-input",
+			"semver": "^9.0.1"
+		},
+		{
+			"name": "chokidar",
+			"semver": "^3.5.3"
+		},
+		{
+			"name": "cross-env",
+			"semver": "^7.0.3"
+		},
+		{
+			"name": "minimist",
+			"semver": "^1.2.5"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.46.4"
+		}
+	],
+	"unpacked_size": 62325
 }

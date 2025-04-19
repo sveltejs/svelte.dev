@@ -13,5 +13,24 @@
 	"svelte_range": "^3.44.0",
 	"kit_range": "^1.0.0-next.492",
 	"last_rune_check_version": "1.1.0",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "cookie",
+			"semver": "^0.5.0"
+		},
+		{
+			"name": "devalue",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "random-token",
+			"semver": "^0.0.8"
+		},
+		{
+			"name": "@sveltejs/kit",
+			"semver": "^1.0.0-next.492"
+		}
+	],
+	"unpacked_size": 67748
 }

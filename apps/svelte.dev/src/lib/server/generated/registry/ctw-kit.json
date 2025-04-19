@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "1.0.39",
 	"svelte_range": "^5.0.0",
-	"last_rune_check_version": "1.0.39"
+	"last_rune_check_version": "1.0.39",
+	"dependencies": [
+		{
+			"name": "svelte-french-toast",
+			"semver": "^1.2.0"
+		},
+		{
+			"name": "vanilla-tilt",
+			"semver": "^1.8.1"
+		}
+	],
+	"unpacked_size": 96463
 }

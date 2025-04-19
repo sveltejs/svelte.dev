@@ -27,5 +27,100 @@
 	"typescript": true,
 	"version": "2.14.1",
 	"svelte_range": "^4.2.19",
-	"last_rune_check_version": "2.14.1"
+	"last_rune_check_version": "2.14.1",
+	"dependencies": [
+		{
+			"name": "@astrojs/compiler",
+			"semver": "^2.10.1"
+		},
+		{
+			"name": "@babel/parser",
+			"semver": "^7.23.6"
+		},
+		{
+			"name": "@babel/types",
+			"semver": "^7.23.5"
+		},
+		{
+			"name": "@graphql-tools/code-file-loader",
+			"semver": "8.0.3"
+		},
+		{
+			"name": "cosmiconfig-toml-loader",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "dotenv",
+			"semver": "10.0.0"
+		},
+		{
+			"name": "fast-glob",
+			"semver": "^3.2.7"
+		},
+		{
+			"name": "glob",
+			"semver": "^7.2.0"
+		},
+		{
+			"name": "graphql-config",
+			"semver": "5.0.3"
+		},
+		{
+			"name": "graphql-language-service",
+			"semver": "^5.3.0"
+		},
+		{
+			"name": "lru-cache",
+			"semver": "^10.2.0"
+		},
+		{
+			"name": "mkdirp",
+			"semver": "^1.0.4"
+		},
+		{
+			"name": "node-abort-controller",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "nullthrows",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "source-map-js",
+			"semver": "1.0.2"
+		},
+		{
+			"name": "svelte",
+			"semver": "^4.2.19"
+		},
+		{
+			"name": "svelte2tsx",
+			"semver": "^0.7.0"
+		},
+		{
+			"name": "typescript",
+			"semver": "^5.3.3"
+		},
+		{
+			"name": "vscode-jsonrpc",
+			"semver": "^8.0.1"
+		},
+		{
+			"name": "vscode-languageserver",
+			"semver": "^8.0.1"
+		},
+		{
+			"name": "vscode-languageserver-types",
+			"semver": "^3.17.2"
+		},
+		{
+			"name": "vscode-uri",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "vue",
+			"semver": "^3.2.0"
+		}
+	],
+	"unpacked_size": 689013
 }

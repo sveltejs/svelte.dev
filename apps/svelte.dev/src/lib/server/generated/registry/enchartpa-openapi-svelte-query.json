@@ -12,5 +12,12 @@
 	"runes": false,
 	"last_rune_check_version": "0.1.3",
 	"version": "0.1.3",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "openapi-typescript-helpers",
+			"semver": "^0.0.15"
+		}
+	],
+	"unpacked_size": 35425
 }

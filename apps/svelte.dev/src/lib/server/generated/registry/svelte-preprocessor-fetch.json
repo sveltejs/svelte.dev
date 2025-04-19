@@ -11,5 +11,20 @@
 	"github_stars": 51,
 	"typescript": false,
 	"version": "1.0.7",
-	"last_rune_check_version": "1.0.7"
+	"last_rune_check_version": "1.0.7",
+	"dependencies": [
+		{
+			"name": "acorn",
+			"semver": "^7.1.1"
+		},
+		{
+			"name": "acorn-walk",
+			"semver": "^7.1.1"
+		},
+		{
+			"name": "node-fetch",
+			"semver": "^2.6.0"
+		}
+	],
+	"unpacked_size": 886651
 }

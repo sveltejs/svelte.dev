@@ -29,5 +29,12 @@
 	"typescript": true,
 	"version": "5.2.7",
 	"svelte_range": "^3 || ^4 || ^5 || ^5.0.0-next.0",
-	"last_rune_check_version": "5.2.7"
+	"last_rune_check_version": "5.2.7",
+	"dependencies": [
+		{
+			"name": "@testing-library/dom",
+			"semver": "^10.0.0"
+		}
+	],
+	"unpacked_size": 46748
 }

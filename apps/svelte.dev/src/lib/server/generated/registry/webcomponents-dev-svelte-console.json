@@ -11,5 +11,12 @@
 	"typescript": false,
 	"version": "0.1.2",
 	"svelte_range": "^3.14.1",
-	"last_rune_check_version": "0.1.2"
+	"last_rune_check_version": "0.1.2",
+	"dependencies": [
+		{
+			"name": "svelte-json-tree",
+			"semver": "0.0.7"
+		}
+	],
+	"unpacked_size": 104231
 }

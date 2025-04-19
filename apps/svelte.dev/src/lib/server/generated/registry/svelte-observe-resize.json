@@ -12,5 +12,12 @@
 	"typescript": false,
 	"version": "1.0.1",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "1.0.1"
+	"last_rune_check_version": "1.0.1",
+	"dependencies": [
+		{
+			"name": "resize-observer-polyfill",
+			"semver": "^1.5.1"
+		}
+	],
+	"unpacked_size": 9408
 }

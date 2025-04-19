@@ -13,5 +13,12 @@
 	"version": "0.2.0",
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
-	"last_rune_check_version": "0.2.0"
+	"last_rune_check_version": "0.2.0",
+	"dependencies": [
+		{
+			"name": "a11y-dialog",
+			"semver": "^7.3.0"
+		}
+	],
+	"unpacked_size": 11417
 }

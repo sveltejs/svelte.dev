@@ -5,12 +5,27 @@
 	"authors": ["arlac77"],
 	"homepage": "https://github.com/arlac77/svelte-common#readme",
 	"downloads": 986,
-	"updated": "2025-04-12T15:23:28.055Z",
+	"updated": "2025-04-15T14:20:22.101Z",
 	"tags": ["miscellaneous"],
 	"runes": true,
 	"github_stars": 8,
 	"typescript": true,
-	"version": "6.18.8",
-	"svelte_range": "^5.26.1",
-	"last_rune_check_version": "6.18.8"
+	"version": "6.19.0",
+	"svelte_range": "^5.27.0",
+	"last_rune_check_version": "6.19.0",
+	"dependencies": [
+		{
+			"name": "pacc",
+			"semver": "^3.4.0"
+		},
+		{
+			"name": "svelte-command",
+			"semver": "^3.0.26"
+		},
+		{
+			"name": "svelte-entitlement",
+			"semver": "^2.0.35"
+		}
+	],
+	"unpacked_size": 47828
 }

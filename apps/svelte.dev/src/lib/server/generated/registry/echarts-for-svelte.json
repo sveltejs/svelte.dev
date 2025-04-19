@@ -12,5 +12,12 @@
 	"typescript": false,
 	"version": "0.1.11",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.1.11"
+	"last_rune_check_version": "0.1.11",
+	"dependencies": [
+		{
+			"name": "size-sensor",
+			"semver": "^0.2.5"
+		}
+	],
+	"unpacked_size": 17179
 }

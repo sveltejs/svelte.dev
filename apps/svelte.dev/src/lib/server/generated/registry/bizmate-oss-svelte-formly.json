@@ -13,5 +13,20 @@
 	"version": "2.0.2",
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
-	"last_rune_check_version": "2.0.2"
+	"last_rune_check_version": "2.0.2",
+	"dependencies": [
+		{
+			"name": "bulma",
+			"semver": "^0.9.4"
+		},
+		{
+			"name": "open-props",
+			"semver": "^1.4.3"
+		},
+		{
+			"name": "@picocss/pico",
+			"semver": "^1.5.3"
+		}
+	],
+	"unpacked_size": 47766
 }

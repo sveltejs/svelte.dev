@@ -12,5 +12,64 @@
 	"typescript": false,
 	"version": "1.0.1",
 	"svelte_range": "^3.25.1",
-	"last_rune_check_version": "1.0.1"
+	"last_rune_check_version": "1.0.1",
+	"dependencies": [
+		{
+			"name": "@geut/sodium-javascript-plus",
+			"semver": "0.0.6"
+		},
+		{
+			"name": "dat-encoding",
+			"semver": "^5.0.1"
+		},
+		{
+			"name": "delay",
+			"semver": "^4.4.0"
+		},
+		{
+			"name": "hyperswarm",
+			"semver": "^2.15.0"
+		},
+		{
+			"name": "hyperswarm-web",
+			"semver": "^1.0.2"
+		},
+		{
+			"name": "kappa-core",
+			"semver": "^6.0.0"
+		},
+		{
+			"name": "kappa-view-list",
+			"semver": "github:DougAnderson444/kappa-view-list"
+		},
+		{
+			"name": "level-mem",
+			"semver": "^5.0.1"
+		},
+		{
+			"name": "multifeed",
+			"semver": "github:kappa-db/multifeed"
+		},
+		{
+			"name": "pify",
+			"semver": "^5.0.0"
+		},
+		{
+			"name": "pump",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "random-access-idb",
+			"semver": "github:random-access-storage/random-access-idb"
+		},
+		{
+			"name": "random-access-memory",
+			"semver": "^3.1.1"
+		},
+		{
+			"name": "tmp",
+			"semver": "^0.1.0"
+		}
+	],
+	"unpacked_size": 40055
 }

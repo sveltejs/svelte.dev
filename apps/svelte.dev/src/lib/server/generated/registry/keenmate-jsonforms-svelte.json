@@ -12,5 +12,20 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "0.0.3",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@jsonforms/core",
+			"semver": "^3.5.1"
+		},
+		{
+			"name": "ajv",
+			"semver": "^8.17.1"
+		},
+		{
+			"name": "lodash",
+			"semver": "^4.17.21"
+		}
+	],
+	"unpacked_size": 18172
 }

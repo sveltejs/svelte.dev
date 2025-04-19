@@ -13,5 +13,7 @@
 	"version": "2.0.1",
 	"svelte_range": "^3.50.1",
 	"kit_range": "1.0.0-next.405",
-	"last_rune_check_version": "2.0.1"
+	"last_rune_check_version": "2.0.1",
+	"dependencies": [],
+	"unpacked_size": 12341
 }

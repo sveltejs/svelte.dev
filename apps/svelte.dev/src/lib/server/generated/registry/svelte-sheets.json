@@ -12,5 +12,20 @@
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
 	"last_rune_check_version": "1.0.0",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "b64-to-blob",
+			"semver": "^1.2.19"
+		},
+		{
+			"name": "hotkeys-js",
+			"semver": "^3.8.1"
+		},
+		{
+			"name": "xlsx",
+			"semver": "^0.16.9"
+		}
+	],
+	"unpacked_size": 73121
 }

@@ -12,5 +12,28 @@
 	"typescript": true,
 	"version": "4.0.0",
 	"svelte_range": "^4.2.2",
-	"last_rune_check_version": "4.0.0"
+	"last_rune_check_version": "4.0.0",
+	"dependencies": [
+		{
+			"name": "md5-file",
+			"semver": "^5.0.0"
+		},
+		{
+			"name": "node-html-parser",
+			"semver": "^6.1.11"
+		},
+		{
+			"name": "p-queue",
+			"semver": "^7.4.1"
+		},
+		{
+			"name": "sharp",
+			"semver": "^0.32.6"
+		},
+		{
+			"name": "string-replace-async",
+			"semver": "^3.0.2"
+		}
+	],
+	"unpacked_size": 85688
 }

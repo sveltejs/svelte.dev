@@ -32,5 +32,16 @@
 	"typescript": true,
 	"version": "4.2.3",
 	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
-	"last_rune_check_version": "4.2.3"
+	"last_rune_check_version": "4.2.3",
+	"dependencies": [
+		{
+			"name": "@urql/core",
+			"semver": "^5.1.1"
+		},
+		{
+			"name": "wonka",
+			"semver": "^6.3.2"
+		}
+	],
+	"unpacked_size": 70503
 }

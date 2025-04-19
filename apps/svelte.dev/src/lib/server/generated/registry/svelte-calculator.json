@@ -12,5 +12,116 @@
 	"typescript": false,
 	"version": "1.0.9",
 	"svelte_range": "^3.37.0",
-	"last_rune_check_version": "1.0.9"
+	"last_rune_check_version": "1.0.9",
+	"dependencies": [
+		{
+			"name": "balanced-match",
+			"semver": "^1.0.2"
+		},
+		{
+			"name": "commondir",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "brace-expansion",
+			"semver": "^1.1.11"
+		},
+		{
+			"name": "builtin-modules",
+			"semver": "^3.2.0"
+		},
+		{
+			"name": "concat-map",
+			"semver": "^0.0.1"
+		},
+		{
+			"name": "function-bind",
+			"semver": "^1.1.1"
+		},
+		{
+			"name": "fs.realpath",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "estree-walker",
+			"semver": "^2.0.2"
+		},
+		{
+			"name": "fsevents",
+			"semver": "^2.3.2"
+		},
+		{
+			"name": "has",
+			"semver": "^1.0.3"
+		},
+		{
+			"name": "glob",
+			"semver": "^7.1.7"
+		},
+		{
+			"name": "inherits",
+			"semver": "^2.0.4"
+		},
+		{
+			"name": "inflight",
+			"semver": "^1.0.6"
+		},
+		{
+			"name": "is-core-module",
+			"semver": "^2.4.0"
+		},
+		{
+			"name": "is-module",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "minimatch",
+			"semver": "^3.0.4"
+		},
+		{
+			"name": "magic-string",
+			"semver": "^0.25.7"
+		},
+		{
+			"name": "is-reference",
+			"semver": "^1.2.1"
+		},
+		{
+			"name": "path-is-absolute",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "once",
+			"semver": "^1.4.0"
+		},
+		{
+			"name": "require-relative",
+			"semver": "^0.8.7"
+		},
+		{
+			"name": "path-parse",
+			"semver": "^1.0.7"
+		},
+		{
+			"name": "resolve",
+			"semver": "^1.20.0"
+		},
+		{
+			"name": "picomatch",
+			"semver": "^2.3.0"
+		},
+		{
+			"name": "rollup-pluginutils",
+			"semver": "^2.8.2"
+		},
+		{
+			"name": "sourcemap-codec",
+			"semver": "^1.4.8"
+		},
+		{
+			"name": "wrappy",
+			"semver": "^1.0.2"
+		}
+	],
+	"unpacked_size": 1052737
 }

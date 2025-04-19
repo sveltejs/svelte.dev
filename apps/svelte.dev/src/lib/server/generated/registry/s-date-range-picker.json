@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "0.3.0",
 	"svelte_range": "3.16.4",
-	"last_rune_check_version": "0.3.0"
+	"last_rune_check_version": "0.3.0",
+	"dependencies": [
+		{
+			"name": "date-fns",
+			"semver": "2.8.1"
+		}
+	],
+	"unpacked_size": 438625
 }

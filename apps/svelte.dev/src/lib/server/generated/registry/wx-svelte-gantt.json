@@ -11,5 +11,48 @@
 	"github_stars": 105,
 	"typescript": false,
 	"version": "2.1.1",
-	"last_rune_check_version": "2.1.1"
+	"last_rune_check_version": "2.1.1",
+	"dependencies": [
+		{
+			"name": "wx-gantt-data-provider",
+			"semver": "2.1.1"
+		},
+		{
+			"name": "wx-gantt-locales",
+			"semver": "2.1.1"
+		},
+		{
+			"name": "wx-gantt-store",
+			"semver": "2.1.1"
+		},
+		{
+			"name": "wx-lib-dom",
+			"semver": "0.8.0"
+		},
+		{
+			"name": "wx-lib-state",
+			"semver": "1.9.0"
+		},
+		{
+			"name": "wx-lib-svelte",
+			"semver": "0.5.1"
+		},
+		{
+			"name": "wx-svelte-core",
+			"semver": "2.1.0"
+		},
+		{
+			"name": "wx-svelte-menu",
+			"semver": "2.1.0"
+		},
+		{
+			"name": "wx-svelte-grid",
+			"semver": "2.1.0"
+		},
+		{
+			"name": "wx-svelte-toolbar",
+			"semver": "2.1.0"
+		}
+	],
+	"unpacked_size": 121964
 }

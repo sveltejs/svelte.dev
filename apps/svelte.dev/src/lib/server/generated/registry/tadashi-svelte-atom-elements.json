@@ -12,5 +12,16 @@
 	"typescript": false,
 	"version": "1.14.2",
 	"svelte_range": "3.49.0",
-	"last_rune_check_version": "1.14.2"
+	"last_rune_check_version": "1.14.2",
+	"dependencies": [
+		{
+			"name": "@sindresorhus/slugify",
+			"semver": "2.1.0"
+		},
+		{
+			"name": "@tadashi/common",
+			"semver": "1.7.0"
+		}
+	],
+	"unpacked_size": 502636
 }

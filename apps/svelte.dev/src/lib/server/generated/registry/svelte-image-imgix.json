@@ -12,5 +12,20 @@
 	"typescript": false,
 	"version": "1.0.10",
 	"svelte_range": "^3.31.0",
-	"last_rune_check_version": "1.0.10"
+	"last_rune_check_version": "1.0.10",
+	"dependencies": [
+		{
+			"name": "imgix-core-js",
+			"semver": "^2.3.2"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.31.0"
+		},
+		{
+			"name": "svelte-waypoint",
+			"semver": "^0.1.4"
+		}
+	],
+	"unpacked_size": 5109
 }

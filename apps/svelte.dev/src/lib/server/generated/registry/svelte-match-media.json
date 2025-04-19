@@ -11,5 +11,7 @@
 	"github_stars": 38,
 	"typescript": true,
 	"version": "1.2.1",
-	"last_rune_check_version": "1.2.1"
+	"last_rune_check_version": "1.2.1",
+	"dependencies": [],
+	"unpacked_size": 22125
 }

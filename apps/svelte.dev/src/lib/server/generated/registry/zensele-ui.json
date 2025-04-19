@@ -11,5 +11,12 @@
 	"typescript": false,
 	"version": "0.6.8",
 	"svelte_range": "3.24.1",
-	"last_rune_check_version": "0.6.8"
+	"last_rune_check_version": "0.6.8",
+	"dependencies": [
+		{
+			"name": "emotion",
+			"semver": "10.0.27"
+		}
+	],
+	"unpacked_size": 643153
 }

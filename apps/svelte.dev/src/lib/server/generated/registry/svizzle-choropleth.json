@@ -12,5 +12,28 @@
 	"typescript": false,
 	"version": "0.9.5",
 	"svelte_range": "^3.59.2",
-	"last_rune_check_version": "0.9.5"
+	"last_rune_check_version": "0.9.5",
+	"dependencies": [
+		{
+			"name": "@svizzle/dom",
+			"semver": "^0.7.3"
+		},
+		{
+			"name": "@svizzle/geo",
+			"semver": "^0.9.3"
+		},
+		{
+			"name": "@svizzle/utils",
+			"semver": "^0.21.0"
+		},
+		{
+			"name": "d3-geo",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "lamb",
+			"semver": "^0.61.1"
+		}
+	],
+	"unpacked_size": 18152
 }

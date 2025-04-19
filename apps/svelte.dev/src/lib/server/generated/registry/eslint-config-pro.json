@@ -12,5 +12,28 @@
 	"typescript": true,
 	"version": "3.0.19",
 	"svelte_range": "3.48.0",
-	"last_rune_check_version": "3.0.19"
+	"last_rune_check_version": "3.0.19",
+	"dependencies": [
+		{
+			"name": "@typescript-eslint/eslint-plugin",
+			"semver": "^5.30.6"
+		},
+		{
+			"name": "@typescript-eslint/parser",
+			"semver": "^5.30.6"
+		},
+		{
+			"name": "eslint-plugin-import",
+			"semver": "^2.26.0"
+		},
+		{
+			"name": "eslint-plugin-node",
+			"semver": "^11.1.0"
+		},
+		{
+			"name": "tslib",
+			"semver": "^2.4.0"
+		}
+	],
+	"unpacked_size": 54687
 }

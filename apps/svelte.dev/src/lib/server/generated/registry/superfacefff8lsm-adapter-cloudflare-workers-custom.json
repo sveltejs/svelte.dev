@@ -11,5 +11,20 @@
 	"typescript": true,
 	"version": "1.0.0",
 	"kit_range": "^2.0.0",
-	"last_rune_check_version": "1.0.0"
+	"last_rune_check_version": "1.0.0",
+	"dependencies": [
+		{
+			"name": "@cloudflare/workers-types",
+			"semver": "^4.20231121.0"
+		},
+		{
+			"name": "@iarna/toml",
+			"semver": "^2.2.5"
+		},
+		{
+			"name": "esbuild",
+			"semver": "^0.21.5"
+		}
+	],
+	"unpacked_size": 13066
 }

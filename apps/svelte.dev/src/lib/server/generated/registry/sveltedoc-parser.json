@@ -11,5 +11,20 @@
 	"github_stars": 92,
 	"typescript": true,
 	"version": "4.2.1",
-	"last_rune_check_version": "4.2.1"
+	"last_rune_check_version": "4.2.1",
+	"dependencies": [
+		{
+			"name": "espree",
+			"semver": "9.2.0"
+		},
+		{
+			"name": "eslint",
+			"semver": "8.4.1"
+		},
+		{
+			"name": "htmlparser2-svelte",
+			"semver": "4.1.0"
+		}
+	],
+	"unpacked_size": 162126
 }

@@ -12,5 +12,20 @@
 	"typescript": false,
 	"version": "1.0.0-alpha.6",
 	"svelte_range": "3.18.0",
-	"last_rune_check_version": "1.0.0-alpha.6"
+	"last_rune_check_version": "1.0.0-alpha.6",
+	"dependencies": [
+		{
+			"name": "jsencrypt",
+			"semver": "3.0.0-rc.1"
+		},
+		{
+			"name": "lodash.get",
+			"semver": "4.4.2"
+		},
+		{
+			"name": "node-jsencrypt",
+			"semver": "1.0.0"
+		}
+	],
+	"unpacked_size": 1343958
 }

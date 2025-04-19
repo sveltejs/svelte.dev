@@ -13,5 +13,12 @@
 	"version": "1.1.16",
 	"svelte_range": "^3.47.0",
 	"kit_range": "next",
-	"last_rune_check_version": "1.1.16"
+	"last_rune_check_version": "1.1.16",
+	"dependencies": [
+		{
+			"name": "@abraham/reflection",
+			"semver": "^0.10.0"
+		}
+	],
+	"unpacked_size": 34899
 }

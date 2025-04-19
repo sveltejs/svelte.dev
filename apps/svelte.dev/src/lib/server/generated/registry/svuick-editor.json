@@ -12,5 +12,16 @@
 	"version": "0.0.3",
 	"svelte_range": "^3.47.0",
 	"kit_range": "next",
-	"last_rune_check_version": "0.0.3"
+	"last_rune_check_version": "0.0.3",
+	"dependencies": [
+		{
+			"name": "@tiptap/core",
+			"semver": "^2.0.0-beta.182"
+		},
+		{
+			"name": "@tiptap/starter-kit",
+			"semver": "^2.0.0-beta.191"
+		}
+	],
+	"unpacked_size": 4645
 }

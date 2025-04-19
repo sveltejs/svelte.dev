@@ -11,5 +11,16 @@
 	"typescript": true,
 	"version": "0.0.1",
 	"svelte_range": "^3.37.0",
-	"last_rune_check_version": "0.0.1"
+	"last_rune_check_version": "0.0.1",
+	"dependencies": [
+		{
+			"name": "gray-matter",
+			"semver": "^4.0.2"
+		},
+		{
+			"name": "marked",
+			"semver": "^2.0.3"
+		}
+	],
+	"unpacked_size": 6316
 }

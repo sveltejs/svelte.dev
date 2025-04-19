@@ -12,5 +12,12 @@
 	"typescript": false,
 	"version": "0.0.2",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.0.2"
+	"last_rune_check_version": "0.0.2",
+	"dependencies": [
+		{
+			"name": "youtube-player",
+			"semver": "^5.5.2"
+		}
+	],
+	"unpacked_size": 32543
 }

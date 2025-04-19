@@ -11,5 +11,7 @@
 	"version": "0.0.6",
 	"svelte_range": "^4.2.18",
 	"last_rune_check_version": "0.0.6",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [],
+	"unpacked_size": 307491
 }

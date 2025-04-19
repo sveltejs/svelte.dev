@@ -12,5 +12,20 @@
 	"typescript": false,
 	"version": "2.0.6",
 	"svelte_range": "^4.1.1",
-	"last_rune_check_version": "2.0.6"
+	"last_rune_check_version": "2.0.6",
+	"dependencies": [
+		{
+			"name": "@semantic-release/git",
+			"semver": "^9.0.0"
+		},
+		{
+			"name": "@semantic-release/npm",
+			"semver": "^7.0.10"
+		},
+		{
+			"name": "payment",
+			"semver": "^2.4.0"
+		}
+	],
+	"unpacked_size": 344862
 }

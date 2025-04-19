@@ -13,5 +13,24 @@
 	"version": "2.0.8",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.8.5",
-	"last_rune_check_version": "2.0.8"
+	"last_rune_check_version": "2.0.8",
+	"dependencies": [
+		{
+			"name": "flatpickr_plus",
+			"semver": "^1.1.20"
+		},
+		{
+			"name": "postcss",
+			"semver": "^8.4.49"
+		},
+		{
+			"name": "postcss-import",
+			"semver": "^16.1.0"
+		},
+		{
+			"name": "svelte-preprocess",
+			"semver": "^6.0.3"
+		}
+	],
+	"unpacked_size": 43888
 }

@@ -13,5 +13,24 @@
 	"version": "0.4.0",
 	"svelte_range": ">=4",
 	"kit_range": "^1.27.6",
-	"last_rune_check_version": "0.4.0"
+	"last_rune_check_version": "0.4.0",
+	"dependencies": [
+		{
+			"name": "@melt-ui/svelte",
+			"semver": "^0.63.0"
+		},
+		{
+			"name": "@unocss/preset-wind",
+			"semver": "^0.57.7"
+		},
+		{
+			"name": "@unocss/transformer-directives",
+			"semver": "^0.57.7"
+		},
+		{
+			"name": "unocss",
+			"semver": "^0.57.7"
+		}
+	],
+	"unpacked_size": 184318
 }

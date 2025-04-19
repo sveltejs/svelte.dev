@@ -12,5 +12,36 @@
 	"typescript": true,
 	"version": "2.1.32",
 	"svelte_range": "^5.0.0-next.259",
-	"last_rune_check_version": "2.1.32"
+	"last_rune_check_version": "2.1.32",
+	"dependencies": [
+		{
+			"name": "WiredPanels",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "browser-stream-tar",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "mf-styling",
+			"semver": "^3.2.3"
+		},
+		{
+			"name": "svelte-common",
+			"semver": "^6.15.18"
+		},
+		{
+			"name": "svelte-guard-history-router",
+			"semver": "^6.1.2"
+		},
+		{
+			"name": "svelte-session-manager",
+			"semver": "^3.0.5"
+		},
+		{
+			"name": "vite-plugin-compression2",
+			"semver": "^1.3.0"
+		}
+	],
+	"unpacked_size": 34018
 }

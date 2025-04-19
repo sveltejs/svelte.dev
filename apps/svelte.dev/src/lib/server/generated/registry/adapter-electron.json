@@ -13,5 +13,20 @@
 	"version": "1.0.5",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.4.0",
-	"last_rune_check_version": "1.0.5"
+	"last_rune_check_version": "1.0.5",
+	"dependencies": [
+		{
+			"name": "polka",
+			"semver": "^0.5.2"
+		},
+		{
+			"name": "electron-is-dev",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "electron-log",
+			"semver": "^5.1.1"
+		}
+	],
+	"unpacked_size": 6281
 }

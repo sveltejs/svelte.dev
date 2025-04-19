@@ -12,5 +12,16 @@
 	"typescript": false,
 	"version": "2.1.2",
 	"svelte_range": "~3.20.0",
-	"last_rune_check_version": "2.1.2"
+	"last_rune_check_version": "2.1.2",
+	"dependencies": [
+		{
+			"name": "lodash-es",
+			"semver": "~4.17.15"
+		},
+		{
+			"name": "svelte-writable-derived",
+			"semver": "~2.0.1"
+		}
+	],
+	"unpacked_size": 327970
 }

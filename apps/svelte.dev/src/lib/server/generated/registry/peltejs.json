@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "0.0.3",
 	"svelte_range": "5.0.0-next.52",
-	"last_rune_check_version": "0.0.3"
+	"last_rune_check_version": "0.0.3",
+	"dependencies": [
+		{
+			"name": "@babel/parser",
+			"semver": "^7.23.9"
+		},
+		{
+			"name": "recast",
+			"semver": "^0.23.4"
+		}
+	],
+	"unpacked_size": 30478
 }

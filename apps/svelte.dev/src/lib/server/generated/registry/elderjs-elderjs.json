@@ -12,5 +12,84 @@
 	"typescript": true,
 	"version": "1.8.0-beta.14",
 	"svelte_range": "^3.48.0",
-	"last_rune_check_version": "1.8.0-beta.14"
+	"last_rune_check_version": "1.8.0-beta.14",
+	"dependencies": [
+		{
+			"name": "@elderjs/shortcodes",
+			"semver": "^2.0.2"
+		},
+		{
+			"name": "btoa",
+			"semver": "^1.2.1"
+		},
+		{
+			"name": "chokidar",
+			"semver": "^3.5.1"
+		},
+		{
+			"name": "clean-css",
+			"semver": "^5.1.1"
+		},
+		{
+			"name": "cli-progress",
+			"semver": "^3.9.0"
+		},
+		{
+			"name": "del",
+			"semver": "^6.0.0"
+		},
+		{
+			"name": "esbuild",
+			"semver": "^0.14.43"
+		},
+		{
+			"name": "fast-glob",
+			"semver": "^3.2.11"
+		},
+		{
+			"name": "fs-extra",
+			"semver": "^10.1.0"
+		},
+		{
+			"name": "hexoid",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "lodash.defaultsdeep",
+			"semver": "^4.6.1"
+		},
+		{
+			"name": "lodash.kebabcase",
+			"semver": "^4.1.1"
+		},
+		{
+			"name": "regexparam",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "route-sort",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "spark-md5",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.48.0"
+		},
+		{
+			"name": "unconfig",
+			"semver": "^0.3.5"
+		},
+		{
+			"name": "ws",
+			"semver": "^8.8.0"
+		},
+		{
+			"name": "yup",
+			"semver": "^0.29.3"
+		}
+	],
+	"unpacked_size": 363990
 }

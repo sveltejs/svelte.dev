@@ -12,5 +12,32 @@
 	"typescript": true,
 	"version": "0.0.5",
 	"svelte_range": "4.2.18",
-	"last_rune_check_version": "0.0.5"
+	"last_rune_check_version": "0.0.5",
+	"dependencies": [
+		{
+			"name": "@babel/parser",
+			"semver": "^7.26.2"
+		},
+		{
+			"name": "@vue-vapor/compiler-dom",
+			"semver": "https://pkg.pr.new/vuejs/vue-vapor/@vue/compiler-dom@3f6ce96"
+		},
+		{
+			"name": "@vue-vapor/compiler-vapor",
+			"semver": "https://pkg.pr.new/vuejs/vue-vapor/@vue/compiler-vapor@3f6ce96"
+		},
+		{
+			"name": "@vue-vapor/shared",
+			"semver": "https://pkg.pr.new/vuejs/vue-vapor/@vue/shared@3f6ce96"
+		},
+		{
+			"name": "astring",
+			"semver": "^1.8.6"
+		},
+		{
+			"name": "svelte",
+			"semver": "4.2.18"
+		}
+	],
+	"unpacked_size": 175571
 }

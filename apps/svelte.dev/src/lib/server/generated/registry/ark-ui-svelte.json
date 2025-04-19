@@ -5,13 +5,48 @@
 	"authors": ["segunadebayo", "schroetier"],
 	"homepage": "https://ark-ui.com",
 	"downloads": 4,
-	"updated": "2025-01-08T14:15:51.964Z",
+	"updated": "2025-04-15T12:37:46.409Z",
 	"tags": ["ui"],
 	"runes": true,
 	"github_stars": 4221,
 	"typescript": true,
-	"version": "0.3.0",
-	"svelte_range": ">=5.0.0",
-	"kit_range": "2.15.1",
-	"last_rune_check_version": "0.3.0"
+	"version": "0.4.0",
+	"svelte_range": ">=5.20.0",
+	"kit_range": "2.20.5",
+	"last_rune_check_version": "0.4.0",
+	"dependencies": [
+		{
+			"name": "@zag-js/anatomy",
+			"semver": "1.9.2"
+		},
+		{
+			"name": "@zag-js/avatar",
+			"semver": "1.9.2"
+		},
+		{
+			"name": "@zag-js/core",
+			"semver": "1.9.2"
+		},
+		{
+			"name": "@zag-js/toggle",
+			"semver": "1.9.2"
+		},
+		{
+			"name": "@zag-js/collection",
+			"semver": "1.9.2"
+		},
+		{
+			"name": "@zag-js/dom-query",
+			"semver": "1.9.2"
+		},
+		{
+			"name": "@zag-js/i18n-utils",
+			"semver": "1.9.2"
+		},
+		{
+			"name": "@zag-js/svelte",
+			"semver": "1.9.2"
+		}
+	],
+	"unpacked_size": 118570
 }

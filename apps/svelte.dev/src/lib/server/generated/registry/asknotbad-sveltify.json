@@ -12,5 +12,12 @@
 	"typescript": false,
 	"version": "0.0.6",
 	"svelte_range": "3.x",
-	"last_rune_check_version": "0.0.6"
+	"last_rune_check_version": "0.0.6",
+	"dependencies": [
+		{
+			"name": "highlight.js",
+			"semver": "^11.5.1"
+		}
+	],
+	"unpacked_size": 3256136
 }

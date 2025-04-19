@@ -200,6 +200,10 @@ export interface Package {
 	official?: boolean;
 
 	typescript: boolean;
+
+	dependencies: { name: string; semver: string }[];
+
+	unpacked_size: number;
 }
 
 /**
@@ -478,13 +482,10 @@ function create_registry() {
 
 	for (const frontmatter of Object.values(registry_docs)) {
 		const json = JSON.parse(frontmatter);
-		json.description = json.description;
-		json.outdated = +new Date() - +new Date(json.updated) > 2 * 365 * 24 * 60 * 60 * 1000;
-		json.official = json.official ?? PACKAGES_META.is_official(json.name);
-		json.ts_support = json.typescript?.types_source;
+		json.official = PACKAGES_META.is_official(json.name);
 		json.svelte = supports_svelte_versions(json.svelte_range);
 
-		output.push(json as unknown as Package);
+		output.push(json);
 	}
 
 	return output;

@@ -12,5 +12,28 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "0.0.3",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "es-toolkit",
+			"semver": "^1.34.1"
+		},
+		{
+			"name": "marked",
+			"semver": "^15.0.7"
+		},
+		{
+			"name": "marked-smartypants",
+			"semver": "^1.1.9"
+		},
+		{
+			"name": "parse5",
+			"semver": "^7.2.1"
+		},
+		{
+			"name": "spark-md5",
+			"semver": "^3.0.2"
+		}
+	],
+	"unpacked_size": 16443
 }

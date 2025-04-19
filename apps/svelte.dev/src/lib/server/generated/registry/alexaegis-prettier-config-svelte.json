@@ -12,5 +12,20 @@
 	"typescript": true,
 	"version": "0.5.4",
 	"svelte_range": "^4.1.0",
-	"last_rune_check_version": "0.5.4"
+	"last_rune_check_version": "0.5.4",
+	"dependencies": [
+		{
+			"name": "prettier",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "prettier-plugin-svelte",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "svelte",
+			"semver": "^4.1.0"
+		}
+	],
+	"unpacked_size": 6300
 }

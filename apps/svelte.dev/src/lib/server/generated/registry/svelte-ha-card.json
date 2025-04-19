@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "0.0.19",
 	"svelte_range": "^4.2.18",
-	"last_rune_check_version": "0.0.19"
+	"last_rune_check_version": "0.0.19",
+	"dependencies": [
+		{
+			"name": "custom-card-helpers",
+			"semver": "^1.9.0"
+		},
+		{
+			"name": "svelte",
+			"semver": "^4.2.18"
+		}
+	],
+	"unpacked_size": 51678
 }

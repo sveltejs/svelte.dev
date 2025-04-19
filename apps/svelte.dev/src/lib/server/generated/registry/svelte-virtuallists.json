@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "1.4.2",
 	"svelte_range": "^5.20.5",
-	"last_rune_check_version": "1.4.2"
+	"last_rune_check_version": "1.4.2",
+	"dependencies": [
+		{
+			"name": "@eslint/js",
+			"semver": "^9.21.0"
+		}
+	],
+	"unpacked_size": 29240
 }

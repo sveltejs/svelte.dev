@@ -12,5 +12,7 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.4",
 	"last_rune_check_version": "0.0.1",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [],
+	"unpacked_size": 39862
 }

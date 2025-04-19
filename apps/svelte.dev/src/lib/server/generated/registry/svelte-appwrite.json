@@ -11,5 +11,12 @@
 	"version": "0.2.3-beta",
 	"svelte_range": "^3.32.0",
 	"last_rune_check_version": "0.2.3-beta",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "appwrite",
+			"semver": "^2.0.0"
+		}
+	],
+	"unpacked_size": 58288
 }

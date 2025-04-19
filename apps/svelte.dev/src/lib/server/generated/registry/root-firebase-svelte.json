@@ -13,5 +13,12 @@
 	"runes": false,
 	"last_rune_check_version": "0.0.26",
 	"version": "0.0.26",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@sveltejs/package",
+			"semver": "^2.2.1"
+		}
+	],
+	"unpacked_size": 16702
 }

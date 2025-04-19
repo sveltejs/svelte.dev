@@ -12,5 +12,28 @@
 	"typescript": true,
 	"version": "0.4.4",
 	"svelte_range": "^5.0.0",
-	"last_rune_check_version": "0.4.4"
+	"last_rune_check_version": "0.4.4",
+	"dependencies": [
+		{
+			"name": "magic-string",
+			"semver": "^0.30.5"
+		},
+		{
+			"name": "sharp",
+			"semver": "^0.33.5"
+		},
+		{
+			"name": "svelte-parse-markup",
+			"semver": "^0.1.5"
+		},
+		{
+			"name": "vite-imagetools",
+			"semver": "^7.0.1"
+		},
+		{
+			"name": "zimmerframe",
+			"semver": "^1.1.2"
+		}
+	],
+	"unpacked_size": 20575
 }

@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "0.2.2",
 	"svelte_range": "^3.46.4",
-	"last_rune_check_version": "0.2.2"
+	"last_rune_check_version": "0.2.2",
+	"dependencies": [
+		{
+			"name": "watch",
+			"semver": "^1.0.2"
+		}
+	],
+	"unpacked_size": 320848
 }

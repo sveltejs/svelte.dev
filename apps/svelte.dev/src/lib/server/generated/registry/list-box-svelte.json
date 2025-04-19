@@ -12,5 +12,104 @@
 	"typescript": true,
 	"version": "1.1.4",
 	"svelte_range": "^4.2.3",
-	"last_rune_check_version": "1.1.4"
+	"last_rune_check_version": "1.1.4",
+	"dependencies": [
+		{
+			"name": "acorn",
+			"semver": "^8.11.2"
+		},
+		{
+			"name": "aria-query",
+			"semver": "^5.3.0"
+		},
+		{
+			"name": "axobject-query",
+			"semver": "^3.2.1"
+		},
+		{
+			"name": "code-red",
+			"semver": "^1.0.4"
+		},
+		{
+			"name": "css-tree",
+			"semver": "^2.3.1"
+		},
+		{
+			"name": "debug",
+			"semver": "^4.3.4"
+		},
+		{
+			"name": "deepmerge",
+			"semver": "^4.3.1"
+		},
+		{
+			"name": "dequal",
+			"semver": "^2.0.3"
+		},
+		{
+			"name": "esbuild",
+			"semver": "^0.19.8"
+		},
+		{
+			"name": "estree-walker",
+			"semver": "^3.0.3"
+		},
+		{
+			"name": "is-reference",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "kleur",
+			"semver": "^4.1.5"
+		},
+		{
+			"name": "locate-character",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "magic-string",
+			"semver": "^0.30.5"
+		},
+		{
+			"name": "mdn-data",
+			"semver": "^2.0.30"
+		},
+		{
+			"name": "ms",
+			"semver": "^2.1.2"
+		},
+		{
+			"name": "nanoid",
+			"semver": "^3.3.7"
+		},
+		{
+			"name": "periscopic",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "picocolors",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "postcss",
+			"semver": "^8.4.31"
+		},
+		{
+			"name": "rollup",
+			"semver": "^4.6.0"
+		},
+		{
+			"name": "source-map-js",
+			"semver": "^1.0.2"
+		},
+		{
+			"name": "svelte-hmr",
+			"semver": "^0.15.3"
+		},
+		{
+			"name": "vitefu",
+			"semver": "^0.2.5"
+		}
+	],
+	"unpacked_size": 18847
 }

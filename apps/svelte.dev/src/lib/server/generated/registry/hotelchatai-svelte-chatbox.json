@@ -12,5 +12,100 @@
 	"typescript": false,
 	"version": "1.0.5",
 	"svelte_range": "^5.25.3",
-	"last_rune_check_version": "1.0.5"
+	"last_rune_check_version": "1.0.5",
+	"dependencies": [
+		{
+			"name": "acorn",
+			"semver": "^8.14.1"
+		},
+		{
+			"name": "aria-query",
+			"semver": "^5.3.2"
+		},
+		{
+			"name": "axobject-query",
+			"semver": "^4.1.0"
+		},
+		{
+			"name": "builtin-modules",
+			"semver": "^3.3.0"
+		},
+		{
+			"name": "clsx",
+			"semver": "^2.1.1"
+		},
+		{
+			"name": "deepmerge",
+			"semver": "^4.3.1"
+		},
+		{
+			"name": "esm-env",
+			"semver": "^1.2.2"
+		},
+		{
+			"name": "esrap",
+			"semver": "^1.4.5"
+		},
+		{
+			"name": "estree-walker",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "function-bind",
+			"semver": "^1.1.2"
+		},
+		{
+			"name": "hasown",
+			"semver": "^2.0.2"
+		},
+		{
+			"name": "is-core-module",
+			"semver": "^2.16.1"
+		},
+		{
+			"name": "is-module",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "is-reference",
+			"semver": "^3.0.3"
+		},
+		{
+			"name": "locate-character",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "magic-string",
+			"semver": "^0.30.17"
+		},
+		{
+			"name": "path-parse",
+			"semver": "^1.0.7"
+		},
+		{
+			"name": "picomatch",
+			"semver": "^2.3.1"
+		},
+		{
+			"name": "resolve",
+			"semver": "^1.22.10"
+		},
+		{
+			"name": "resolve.exports",
+			"semver": "^2.0.3"
+		},
+		{
+			"name": "supports-preserve-symlinks-flag",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "undici-types",
+			"semver": "^6.20.0"
+		},
+		{
+			"name": "zimmerframe",
+			"semver": "^1.1.2"
+		}
+	],
+	"unpacked_size": 7551
 }

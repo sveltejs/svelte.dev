@@ -13,5 +13,16 @@
 	"version": "0.0.12",
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
-	"last_rune_check_version": "0.0.12"
+	"last_rune_check_version": "0.0.12",
+	"dependencies": [
+		{
+			"name": "@lukeed/uuid",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "@types/ace",
+			"semver": "^0.0.48"
+		}
+	],
+	"unpacked_size": 110432
 }

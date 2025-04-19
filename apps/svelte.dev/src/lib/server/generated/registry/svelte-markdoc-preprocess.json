@@ -12,5 +12,36 @@
 	"typescript": true,
 	"version": "3.0.0",
 	"svelte_range": "^5.25.5",
-	"last_rune_check_version": "3.0.0"
+	"last_rune_check_version": "3.0.0",
+	"dependencies": [
+		{
+			"name": "@markdoc/markdoc",
+			"semver": "^0.5.1"
+		},
+		{
+			"name": "estree-walker",
+			"semver": "^3.0.3"
+		},
+		{
+			"name": "html-escaper",
+			"semver": "^3.0.3"
+		},
+		{
+			"name": "js-yaml",
+			"semver": "^4.1.0"
+		},
+		{
+			"name": "lovely-logs",
+			"semver": "^2.6.0"
+		},
+		{
+			"name": "svelte",
+			"semver": "^5.25.5"
+		},
+		{
+			"name": "typescript",
+			"semver": "^5.8.2"
+		}
+	],
+	"unpacked_size": 69708
 }

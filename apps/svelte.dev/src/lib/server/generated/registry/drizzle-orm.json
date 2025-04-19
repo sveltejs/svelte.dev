@@ -5,11 +5,13 @@
 	"authors": ["dankochetov", "sheriman", "alexblokh", "kyrylo_usichenko"],
 	"homepage": "https://orm.drizzle.team",
 	"downloads": 1102559,
-	"updated": "2025-03-21T15:49:09.287Z",
+	"updated": "2025-04-15T13:47:46.356Z",
 	"tags": ["server"],
 	"runes": false,
 	"github_stars": 27467,
 	"typescript": true,
-	"version": "0.41.0",
-	"last_rune_check_version": "0.41.0"
+	"version": "0.42.0",
+	"last_rune_check_version": "0.42.0",
+	"dependencies": [],
+	"unpacked_size": 9952668
 }

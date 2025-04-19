@@ -12,5 +12,36 @@
 	"typescript": true,
 	"version": "2.2.10",
 	"svelte_range": "^5.0.0",
-	"last_rune_check_version": "2.2.10"
+	"last_rune_check_version": "2.2.10",
+	"dependencies": [
+		{
+			"name": "@types/eslint",
+			"semver": "9.6.1"
+		},
+		{
+			"name": "@eslint/js",
+			"semver": "9.22.0"
+		},
+		{
+			"name": "typescript-eslint",
+			"semver": "8.26.1"
+		},
+		{
+			"name": "eslint",
+			"semver": "9.22.0"
+		},
+		{
+			"name": "eslint-config-prettier",
+			"semver": "10.1.2"
+		},
+		{
+			"name": "eslint-plugin-svelte",
+			"semver": "3.4.1"
+		},
+		{
+			"name": "svelte-eslint-parser",
+			"semver": "1.0.1"
+		}
+	],
+	"unpacked_size": 7378
 }

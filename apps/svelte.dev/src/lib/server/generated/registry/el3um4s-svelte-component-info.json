@@ -13,5 +13,16 @@
 	"version": "0.0.12",
 	"svelte_range": "^3.44.3",
 	"kit_range": "next",
-	"last_rune_check_version": "0.0.12"
+	"last_rune_check_version": "0.0.12",
+	"dependencies": [
+		{
+			"name": "@el3um4s/match",
+			"semver": "^0.0.2"
+		},
+		{
+			"name": "svelte2tsx",
+			"semver": "^0.4.12"
+		}
+	],
+	"unpacked_size": 23179
 }

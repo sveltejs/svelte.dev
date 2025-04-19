@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "1.0.12",
 	"svelte_range": "^3.55.1",
-	"last_rune_check_version": "1.0.12"
+	"last_rune_check_version": "1.0.12",
+	"dependencies": [
+		{
+			"name": "kleur",
+			"semver": "^4.1.5"
+		},
+		{
+			"name": "prompts",
+			"semver": "^2.4.2"
+		}
+	],
+	"unpacked_size": 63287
 }

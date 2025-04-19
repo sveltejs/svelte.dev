@@ -27,5 +27,52 @@
 	"version": "0.3.74",
 	"svelte_range": "^3.54.0 || ^4.0.0-next.0 || ^5.0.0-next.1",
 	"kit_range": "^1 || ^2",
-	"last_rune_check_version": "0.3.74"
+	"last_rune_check_version": "0.3.74",
+	"dependencies": [
+		{
+			"name": "fp-ts",
+			"semver": "^2.13.1"
+		},
+		{
+			"name": "io-ts",
+			"semver": "^2.2.20"
+		},
+		{
+			"name": "monocle-ts",
+			"semver": "^2.3.13"
+		},
+		{
+			"name": "newtype-ts",
+			"semver": "^0.3.5"
+		},
+		{
+			"name": "common-tags",
+			"semver": "^1.8.2"
+		},
+		{
+			"name": "io-ts-types",
+			"semver": "^0.5.19"
+		},
+		{
+			"name": "pascal-case",
+			"semver": "^3.1.2"
+		},
+		{
+			"name": "@prismicio/simulator",
+			"semver": "^0.1.4"
+		},
+		{
+			"name": "prettier-plugin-svelte",
+			"semver": "^3.0.3"
+		},
+		{
+			"name": "@slicemachine/plugin-kit",
+			"semver": "0.4.73"
+		},
+		{
+			"name": "@prismicio/types-internal",
+			"semver": "3.8.0"
+		}
+	],
+	"unpacked_size": 5534274
 }

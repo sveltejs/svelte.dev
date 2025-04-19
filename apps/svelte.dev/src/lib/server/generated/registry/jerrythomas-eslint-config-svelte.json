@@ -12,5 +12,28 @@
 	"typescript": false,
 	"version": "1.0.3",
 	"svelte_range": "^3.59.1",
-	"last_rune_check_version": "1.0.3"
+	"last_rune_check_version": "1.0.3",
+	"dependencies": [
+		{
+			"name": "eslint",
+			"semver": "^8.40.0"
+		},
+		{
+			"name": "eslint-config-prettier",
+			"semver": "^8.8.0"
+		},
+		{
+			"name": "eslint-plugin-svelte3",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "prettier",
+			"semver": "^2.8.8"
+		},
+		{
+			"name": "prettier-plugin-svelte",
+			"semver": "^2.10.0"
+		}
+	],
+	"unpacked_size": 3540
 }

@@ -13,5 +13,12 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.4",
 	"last_rune_check_version": "0.4.2",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "zod",
+			"semver": "^3.21.4"
+		}
+	],
+	"unpacked_size": 26212
 }

@@ -13,5 +13,16 @@
 	"version": "3.1.2",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.4",
-	"last_rune_check_version": "3.1.2"
+	"last_rune_check_version": "3.1.2",
+	"dependencies": [
+		{
+			"name": "@medusajs/types",
+			"semver": "^1.10.3"
+		},
+		{
+			"name": "sveltekit-superfetch",
+			"semver": "^3.0.2"
+		}
+	],
+	"unpacked_size": 39179
 }

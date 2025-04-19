@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "0.0.6",
 	"svelte_range": "^5.0.0-next.262",
-	"last_rune_check_version": "0.0.6"
+	"last_rune_check_version": "0.0.6",
+	"dependencies": [
+		{
+			"name": "esm-env",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "svelte4-bc",
+			"semver": "file:"
+		}
+	],
+	"unpacked_size": 29507
 }

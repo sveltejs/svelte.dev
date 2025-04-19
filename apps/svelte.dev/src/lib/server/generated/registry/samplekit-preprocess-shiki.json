@@ -12,5 +12,24 @@
 	"typescript": true,
 	"version": "3.0.0",
 	"svelte_range": "^5.0.0",
-	"last_rune_check_version": "3.0.0"
+	"last_rune_check_version": "3.0.0",
+	"dependencies": [
+		{
+			"name": "@shikijs/core",
+			"semver": "^1.22.0"
+		},
+		{
+			"name": "estree-walker",
+			"semver": "^3.0.3"
+		},
+		{
+			"name": "magic-string",
+			"semver": "^0.30.12"
+		},
+		{
+			"name": "shiki",
+			"semver": "^1.22.0"
+		}
+	],
+	"unpacked_size": 229111
 }

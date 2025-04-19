@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "1.0.5",
 	"svelte_range": "^5.25.3",
-	"last_rune_check_version": "1.0.5"
+	"last_rune_check_version": "1.0.5",
+	"dependencies": [
+		{
+			"name": "katex",
+			"semver": "^0.16.21"
+		}
+	],
+	"unpacked_size": 1534293
 }

@@ -12,5 +12,24 @@
 	"typescript": true,
 	"version": "0.0.7",
 	"kit_range": "^1.0.0-next.208",
-	"last_rune_check_version": "0.0.7"
+	"last_rune_check_version": "0.0.7",
+	"dependencies": [
+		{
+			"name": "@neutralinojs/lib",
+			"semver": "^3.12.0"
+		},
+		{
+			"name": "@neutralinojs/neu",
+			"semver": "^9.7.0"
+		},
+		{
+			"name": "@sveltejs/adapter-static",
+			"semver": "^1.0.0-next.24"
+		},
+		{
+			"name": "chalk",
+			"semver": "^5.0.0"
+		}
+	],
+	"unpacked_size": 15016
 }

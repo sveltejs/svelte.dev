@@ -12,5 +12,44 @@
 	"typescript": false,
 	"version": "2.0.21",
 	"svelte_range": "^3.55.1",
-	"last_rune_check_version": "2.0.21"
+	"last_rune_check_version": "2.0.21",
+	"dependencies": [
+		{
+			"name": "bundle-require",
+			"semver": "^4.0.1"
+		},
+		{
+			"name": "esbuild",
+			"semver": "^0.16.17"
+		},
+		{
+			"name": "esbuild-svelte",
+			"semver": "^0.7.3"
+		},
+		{
+			"name": "fast-glob",
+			"semver": "^3.2.12"
+		},
+		{
+			"name": "fs-extra",
+			"semver": "^11.1.0"
+		},
+		{
+			"name": "livereload",
+			"semver": "^0.9.3"
+		},
+		{
+			"name": "sade",
+			"semver": "^1.8.1"
+		},
+		{
+			"name": "sirv",
+			"semver": "^2.0.2"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.55.1"
+		}
+	],
+	"unpacked_size": 1443964
 }

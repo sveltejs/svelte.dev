@@ -12,5 +12,24 @@
 	"typescript": true,
 	"version": "1.9.2",
 	"svelte_range": "^5.0.0",
-	"last_rune_check_version": "1.9.2"
+	"last_rune_check_version": "1.9.2",
+	"dependencies": [
+		{
+			"name": "es-toolkit",
+			"semver": "^1.31.0"
+		},
+		{
+			"name": "fast-equals",
+			"semver": "^5.2.2"
+		},
+		{
+			"name": "jsonpointer",
+			"semver": "^5.0.1"
+		},
+		{
+			"name": "json-schema-merge-allof",
+			"semver": "^0.8.1"
+		}
+	],
+	"unpacked_size": 408445
 }

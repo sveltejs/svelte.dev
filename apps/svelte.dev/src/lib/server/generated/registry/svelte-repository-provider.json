@@ -5,12 +5,27 @@
 	"authors": ["arlac77"],
 	"homepage": "https://github.com/arlac77/svelte-repository-provider#readme",
 	"downloads": 102,
-	"updated": "2025-03-24T12:58:21.971Z",
+	"updated": "2025-04-16T02:26:01.004Z",
 	"tags": ["miscellaneous"],
 	"runes": true,
 	"github_stars": 0,
 	"typescript": false,
-	"version": "2.0.29",
-	"svelte_range": "^5.25.0",
-	"last_rune_check_version": "2.0.29"
+	"version": "2.0.30",
+	"svelte_range": "^5.27.0",
+	"last_rune_check_version": "2.0.30",
+	"dependencies": [
+		{
+			"name": "content-entry",
+			"semver": "^12.0.0"
+		},
+		{
+			"name": "repository-provider",
+			"semver": "^35.2.27"
+		},
+		{
+			"name": "svelte-guard-history-router",
+			"semver": "^6.1.2"
+		}
+	],
+	"unpacked_size": 11415
 }

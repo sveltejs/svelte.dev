@@ -12,5 +12,68 @@
 	"typescript": true,
 	"version": "3.0.1",
 	"svelte_range": "^5.26.2",
-	"last_rune_check_version": "3.0.1"
+	"last_rune_check_version": "3.0.1",
+	"dependencies": [
+		{
+			"name": "@gltf-transform/core",
+			"semver": "^3.2.1"
+		},
+		{
+			"name": "@gltf-transform/extensions",
+			"semver": "^3.2.1"
+		},
+		{
+			"name": "@gltf-transform/functions",
+			"semver": "^3.2.1"
+		},
+		{
+			"name": "@node-loader/babel",
+			"semver": "^2.0.1"
+		},
+		{
+			"name": "draco3dgltf",
+			"semver": "^1.5.6"
+		},
+		{
+			"name": "jsdom",
+			"semver": "^20.0.3"
+		},
+		{
+			"name": "jsdom-global",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "meow",
+			"semver": "^11.0.0"
+		},
+		{
+			"name": "meshoptimizer",
+			"semver": "^0.18.1"
+		},
+		{
+			"name": "prettier",
+			"semver": "^3.2.5"
+		},
+		{
+			"name": "prettier-plugin-svelte",
+			"semver": "^3.2.2"
+		},
+		{
+			"name": "sharp",
+			"semver": "^0.32.0"
+		},
+		{
+			"name": "svelte",
+			"semver": "^5.26.2"
+		},
+		{
+			"name": "three",
+			"semver": "0.122.0"
+		},
+		{
+			"name": "three-stdlib",
+			"semver": "^2.21.8"
+		}
+	],
+	"unpacked_size": 167166
 }

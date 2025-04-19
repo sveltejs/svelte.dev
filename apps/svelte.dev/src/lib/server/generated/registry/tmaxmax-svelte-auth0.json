@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "1.1.0",
 	"svelte_range": "3.35.0",
-	"last_rune_check_version": "1.1.0"
+	"last_rune_check_version": "1.1.0",
+	"dependencies": [
+		{
+			"name": "@auth0/auth0-spa-js",
+			"semver": "2.0.7"
+		}
+	],
+	"unpacked_size": 436235
 }

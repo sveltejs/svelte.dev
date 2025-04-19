@@ -11,5 +11,32 @@
 	"version": "1.1.0",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "1.1.0",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "autoprefixer",
+			"semver": "^10.4.7"
+		},
+		{
+			"name": "gh-pages",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "postcss",
+			"semver": "^8.4.13"
+		},
+		{
+			"name": "sirv-cli",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "svelte-tree-display",
+			"semver": "^1.0.5"
+		},
+		{
+			"name": "tailwindcss",
+			"semver": "^3.0.24"
+		}
+	],
+	"unpacked_size": 9884944
 }

@@ -12,5 +12,20 @@
 	"typescript": true,
 	"version": "1.1.8",
 	"svelte_range": "^4.2.15",
-	"last_rune_check_version": "1.1.8"
+	"last_rune_check_version": "1.1.8",
+	"dependencies": [
+		{
+			"name": "html",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "prosemirror-model",
+			"semver": "^1.20.0"
+		},
+		{
+			"name": "svelte-tree-view",
+			"semver": "^1.4.2"
+		}
+	],
+	"unpacked_size": 2285716
 }

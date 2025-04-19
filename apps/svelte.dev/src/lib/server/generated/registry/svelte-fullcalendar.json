@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "3.0.0",
 	"svelte_range": "4.2.0",
-	"last_rune_check_version": "3.0.0"
+	"last_rune_check_version": "3.0.0",
+	"dependencies": [
+		{
+			"name": "@fullcalendar/interaction",
+			"semver": "^6.0.0"
+		}
+	],
+	"unpacked_size": 10702
 }

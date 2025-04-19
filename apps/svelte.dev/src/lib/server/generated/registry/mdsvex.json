@@ -12,5 +12,24 @@
 	"typescript": true,
 	"version": "0.12.3",
 	"svelte_range": "^3.56.0 || ^4.0.0 || ^5.0.0-next.120",
-	"last_rune_check_version": "0.12.3"
+	"last_rune_check_version": "0.12.3",
+	"dependencies": [
+		{
+			"name": "@types/unist",
+			"semver": "^2.0.3"
+		},
+		{
+			"name": "prism-svelte",
+			"semver": "^0.4.7"
+		},
+		{
+			"name": "prismjs",
+			"semver": "^1.17.1"
+		},
+		{
+			"name": "vfile-message",
+			"semver": "^2.0.4"
+		}
+	],
+	"unpacked_size": 1164292
 }

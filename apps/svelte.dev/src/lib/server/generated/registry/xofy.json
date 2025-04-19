@@ -10,5 +10,12 @@
 	"typescript": false,
 	"version": "0.0.0",
 	"svelte_range": "^3.0.0-beta.2",
-	"last_rune_check_version": "0.0.0"
+	"last_rune_check_version": "0.0.0",
+	"dependencies": [
+		{
+			"name": "serve",
+			"semver": "^11.3.0"
+		}
+	],
+	"unpacked_size": 2795
 }

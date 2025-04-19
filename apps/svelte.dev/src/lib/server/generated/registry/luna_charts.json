@@ -11,5 +11,36 @@
 	"version": "1.0.9",
 	"svelte_range": "^3.49.0",
 	"last_rune_check_version": "1.0.9",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@rollup/plugin-node-resolve",
+			"semver": "^13.3.0"
+		},
+		{
+			"name": "@rollup/plugin-typescript",
+			"semver": "^8.3.4"
+		},
+		{
+			"name": "@sinclair/typebox",
+			"semver": "^0.24.20"
+		},
+		{
+			"name": "@storybook/addon-a11y",
+			"semver": "^6.5.10"
+		},
+		{
+			"name": "chromatic",
+			"semver": "^6.7.4"
+		},
+		{
+			"name": "rollup-plugin-peer-deps-external",
+			"semver": "^2.2.4"
+		},
+		{
+			"name": "rollup-plugin-terser",
+			"semver": "^7.0.2"
+		}
+	],
+	"unpacked_size": 458473
 }

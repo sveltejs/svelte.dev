@@ -12,5 +12,68 @@
 	"typescript": true,
 	"version": "1.0.0-next.3",
 	"svelte_range": "^5.0.0-next.160",
-	"last_rune_check_version": "1.0.0-next.3"
+	"last_rune_check_version": "1.0.0-next.3",
+	"dependencies": [
+		{
+			"name": "@shikijs/rehype",
+			"semver": "^1.9.0"
+		},
+		{
+			"name": "@svelte-put/copy",
+			"semver": "^4.0.0-next.0"
+		},
+		{
+			"name": "hast-util-to-html",
+			"semver": "^9.0.1"
+		},
+		{
+			"name": "hast-util-to-string",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "hastscript",
+			"semver": "^9.0.0"
+		},
+		{
+			"name": "magic-string",
+			"semver": "^0.30.10"
+		},
+		{
+			"name": "rehype-stringify",
+			"semver": "^10.0.0"
+		},
+		{
+			"name": "remark-gfm",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "remark-parse",
+			"semver": "^11.0.0"
+		},
+		{
+			"name": "remark-rehype",
+			"semver": "^11.1.0"
+		},
+		{
+			"name": "shiki",
+			"semver": "^1.9.0"
+		},
+		{
+			"name": "svelte-parse-markup",
+			"semver": "^0.1.5"
+		},
+		{
+			"name": "unified",
+			"semver": "^11.0.5"
+		},
+		{
+			"name": "unist-util-visit",
+			"semver": "^5.0.0"
+		},
+		{
+			"name": "zimmerframe",
+			"semver": "^1.1.2"
+		}
+	],
+	"unpacked_size": 40070
 }

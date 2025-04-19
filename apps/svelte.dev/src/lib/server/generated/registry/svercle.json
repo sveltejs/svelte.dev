@@ -13,5 +13,24 @@
 	"version": "0.1.1",
 	"svelte_range": "^3.42.6",
 	"kit_range": "next",
-	"last_rune_check_version": "0.1.1"
+	"last_rune_check_version": "0.1.1",
+	"dependencies": [
+		{
+			"name": "@sveltejs/adapter-netlify",
+			"semver": "^1.0.0-next.35"
+		},
+		{
+			"name": "eslint-scope",
+			"semver": "^5.1.1"
+		},
+		{
+			"name": "eslint-utils",
+			"semver": "^2.1.0"
+		},
+		{
+			"name": "eslint-visitor-keys",
+			"semver": "^2.1.0"
+		}
+	],
+	"unpacked_size": 8747
 }

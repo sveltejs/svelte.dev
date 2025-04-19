@@ -13,5 +13,24 @@
 	"version": "0.8.1",
 	"svelte_range": "^4.0.2",
 	"kit_range": "1.21.0",
-	"last_rune_check_version": "0.8.1"
+	"last_rune_check_version": "0.8.1",
+	"dependencies": [
+		{
+			"name": "esm-env-robust",
+			"semver": "0.0.3"
+		},
+		{
+			"name": "@playwright/test",
+			"semver": "1.35.1"
+		},
+		{
+			"name": "badge-maker",
+			"semver": "3.3.1"
+		},
+		{
+			"name": "serve",
+			"semver": "14.2.0"
+		}
+	],
+	"unpacked_size": 25030
 }

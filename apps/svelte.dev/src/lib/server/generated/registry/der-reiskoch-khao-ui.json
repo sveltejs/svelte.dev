@@ -5,12 +5,14 @@
 	"authors": ["jens-reiskoch"],
 	"homepage": "https://khao-ui-tools.github.io/khao-ui",
 	"downloads": 522,
-	"updated": "2025-04-14T11:46:26.371Z",
+	"updated": "2025-04-17T05:23:27.628Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 1,
 	"typescript": false,
-	"version": "3.6.1",
+	"version": "4.0.8",
 	"svelte_range": "^4.2.18",
-	"last_rune_check_version": "3.6.1"
+	"last_rune_check_version": "4.0.8",
+	"dependencies": [],
+	"unpacked_size": 291072
 }

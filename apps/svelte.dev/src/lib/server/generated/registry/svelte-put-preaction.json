@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "0.0.0",
 	"svelte_range": "^5.1.0",
-	"last_rune_check_version": "0.0.0"
+	"last_rune_check_version": "0.0.0",
+	"dependencies": [
+		{
+			"name": "magic-string",
+			"semver": "^0.30.12"
+		},
+		{
+			"name": "zimmerframe",
+			"semver": "^1.1.2"
+		}
+	],
+	"unpacked_size": 13661
 }

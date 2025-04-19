@@ -13,5 +13,16 @@
 	"version": "0.1.1",
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.5.0",
-	"last_rune_check_version": "0.1.1"
+	"last_rune_check_version": "0.1.1",
+	"dependencies": [
+		{
+			"name": "d3",
+			"semver": "^7.8.4"
+		},
+		{
+			"name": "svelte-custom-roulette",
+			"semver": "^0.0.3"
+		}
+	],
+	"unpacked_size": 24589
 }

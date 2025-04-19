@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "0.1.4",
 	"svelte_range": "^3.59.1",
-	"last_rune_check_version": "0.1.4"
+	"last_rune_check_version": "0.1.4",
+	"dependencies": [
+		{
+			"name": "svelte-scoped-uno",
+			"semver": "^0.1.4"
+		}
+	],
+	"unpacked_size": 5339
 }

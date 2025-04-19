@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "0.0.5",
 	"svelte_range": ">=5",
-	"last_rune_check_version": "0.0.5"
+	"last_rune_check_version": "0.0.5",
+	"dependencies": [
+		{
+			"name": "svelte",
+			"semver": ">=5"
+		},
+		{
+			"name": "@lift-html/core",
+			"semver": "*"
+		}
+	],
+	"unpacked_size": 19072
 }

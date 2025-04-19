@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "0.1.2",
 	"svelte_range": "3.x",
-	"last_rune_check_version": "0.1.2"
+	"last_rune_check_version": "0.1.2",
+	"dependencies": [
+		{
+			"name": "interserver",
+			"semver": "^0.1.2"
+		}
+	],
+	"unpacked_size": 15183
 }

@@ -12,5 +12,816 @@
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
 	"last_rune_check_version": "0.0.5",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@iconify/svelte",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "@sveltejs/adapter-node",
+			"semver": "^1.0.0-next.100"
+		},
+		{
+			"name": "@sveltejs/package",
+			"semver": "^1.0.0-next.5"
+		},
+		{
+			"name": "abbrev",
+			"semver": "^1.1.1"
+		},
+		{
+			"name": "acorn",
+			"semver": "^8.8.1"
+		},
+		{
+			"name": "acorn-jsx",
+			"semver": "^5.3.2"
+		},
+		{
+			"name": "agent-base",
+			"semver": "^6.0.2"
+		},
+		{
+			"name": "ajv",
+			"semver": "^6.12.6"
+		},
+		{
+			"name": "ansi-regex",
+			"semver": "^5.0.1"
+		},
+		{
+			"name": "ansi-styles",
+			"semver": "^4.3.0"
+		},
+		{
+			"name": "anymatch",
+			"semver": "^3.1.2"
+		},
+		{
+			"name": "aproba",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "are-we-there-yet",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "argparse",
+			"semver": "^2.0.1"
+		},
+		{
+			"name": "array-union",
+			"semver": "^2.1.0"
+		},
+		{
+			"name": "async-sema",
+			"semver": "^3.1.1"
+		},
+		{
+			"name": "balanced-match",
+			"semver": "^1.0.2"
+		},
+		{
+			"name": "binary-extensions",
+			"semver": "^2.2.0"
+		},
+		{
+			"name": "bindings",
+			"semver": "^1.5.0"
+		},
+		{
+			"name": "brace-expansion",
+			"semver": "^1.1.11"
+		},
+		{
+			"name": "braces",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "buffer-crc32",
+			"semver": "^0.2.13"
+		},
+		{
+			"name": "busboy",
+			"semver": "^1.6.0"
+		},
+		{
+			"name": "callsites",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "chalk",
+			"semver": "^4.1.2"
+		},
+		{
+			"name": "chokidar",
+			"semver": "^3.5.3"
+		},
+		{
+			"name": "chownr",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "color-convert",
+			"semver": "^2.0.1"
+		},
+		{
+			"name": "color-name",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "color-support",
+			"semver": "^1.1.3"
+		},
+		{
+			"name": "concat-map",
+			"semver": "^0.0.1"
+		},
+		{
+			"name": "console-control-strings",
+			"semver": "^1.1.0"
+		},
+		{
+			"name": "cookie",
+			"semver": "^0.5.0"
+		},
+		{
+			"name": "cross-spawn",
+			"semver": "^7.0.3"
+		},
+		{
+			"name": "debug",
+			"semver": "^4.3.4"
+		},
+		{
+			"name": "deep-is",
+			"semver": "^0.1.4"
+		},
+		{
+			"name": "deepmerge",
+			"semver": "^4.2.2"
+		},
+		{
+			"name": "delegates",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "detect-indent",
+			"semver": "^6.1.0"
+		},
+		{
+			"name": "detect-libc",
+			"semver": "^2.0.1"
+		},
+		{
+			"name": "devalue",
+			"semver": "^4.2.0"
+		},
+		{
+			"name": "dir-glob",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "doctrine",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "emoji-regex",
+			"semver": "^8.0.0"
+		},
+		{
+			"name": "es6-promise",
+			"semver": "^3.3.1"
+		},
+		{
+			"name": "esbuild",
+			"semver": "^0.15.13"
+		},
+		{
+			"name": "esbuild-darwin-64",
+			"semver": "^0.15.13"
+		},
+		{
+			"name": "escape-string-regexp",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "eslint-scope",
+			"semver": "^5.1.1"
+		},
+		{
+			"name": "eslint-utils",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "eslint-visitor-keys",
+			"semver": "^3.3.0"
+		},
+		{
+			"name": "espree",
+			"semver": "^9.4.1"
+		},
+		{
+			"name": "esquery",
+			"semver": "^1.4.0"
+		},
+		{
+			"name": "esrecurse",
+			"semver": "^4.3.0"
+		},
+		{
+			"name": "estraverse",
+			"semver": "^4.3.0"
+		},
+		{
+			"name": "estree-walker",
+			"semver": "^2.0.2"
+		},
+		{
+			"name": "esutils",
+			"semver": "^2.0.3"
+		},
+		{
+			"name": "fast-deep-equal",
+			"semver": "^3.1.3"
+		},
+		{
+			"name": "fast-glob",
+			"semver": "^3.2.12"
+		},
+		{
+			"name": "fast-json-stable-stringify",
+			"semver": "^2.1.0"
+		},
+		{
+			"name": "fast-levenshtein",
+			"semver": "^2.0.6"
+		},
+		{
+			"name": "fastq",
+			"semver": "^1.13.0"
+		},
+		{
+			"name": "file-entry-cache",
+			"semver": "^6.0.1"
+		},
+		{
+			"name": "file-uri-to-path",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "fill-range",
+			"semver": "^7.0.1"
+		},
+		{
+			"name": "find-up",
+			"semver": "^5.0.0"
+		},
+		{
+			"name": "flat-cache",
+			"semver": "^3.0.4"
+		},
+		{
+			"name": "flatted",
+			"semver": "^3.2.7"
+		},
+		{
+			"name": "fs-minipass",
+			"semver": "^2.1.0"
+		},
+		{
+			"name": "fs.realpath",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "fsevents",
+			"semver": "^2.3.2"
+		},
+		{
+			"name": "function-bind",
+			"semver": "^1.1.1"
+		},
+		{
+			"name": "gauge",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "glob",
+			"semver": "^7.2.3"
+		},
+		{
+			"name": "glob-parent",
+			"semver": "^6.0.2"
+		},
+		{
+			"name": "globals",
+			"semver": "^13.17.0"
+		},
+		{
+			"name": "globalyzer",
+			"semver": "^0.1.0"
+		},
+		{
+			"name": "globby",
+			"semver": "^11.1.0"
+		},
+		{
+			"name": "globrex",
+			"semver": "^0.1.2"
+		},
+		{
+			"name": "graceful-fs",
+			"semver": "^4.2.10"
+		},
+		{
+			"name": "grapheme-splitter",
+			"semver": "^1.0.4"
+		},
+		{
+			"name": "has",
+			"semver": "^1.0.3"
+		},
+		{
+			"name": "has-flag",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "has-unicode",
+			"semver": "^2.0.1"
+		},
+		{
+			"name": "https-proxy-agent",
+			"semver": "^5.0.1"
+		},
+		{
+			"name": "ignore",
+			"semver": "^5.2.0"
+		},
+		{
+			"name": "import-fresh",
+			"semver": "^3.3.0"
+		},
+		{
+			"name": "imurmurhash",
+			"semver": "^0.1.4"
+		},
+		{
+			"name": "inflight",
+			"semver": "^1.0.6"
+		},
+		{
+			"name": "inherits",
+			"semver": "^2.0.4"
+		},
+		{
+			"name": "is-binary-path",
+			"semver": "^2.1.0"
+		},
+		{
+			"name": "is-core-module",
+			"semver": "^2.11.0"
+		},
+		{
+			"name": "is-extglob",
+			"semver": "^2.1.1"
+		},
+		{
+			"name": "is-fullwidth-code-point",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "is-glob",
+			"semver": "^4.0.3"
+		},
+		{
+			"name": "is-number",
+			"semver": "^7.0.0"
+		},
+		{
+			"name": "is-path-inside",
+			"semver": "^3.0.3"
+		},
+		{
+			"name": "isexe",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "js-sdsl",
+			"semver": "^4.1.5"
+		},
+		{
+			"name": "js-yaml",
+			"semver": "^4.1.0"
+		},
+		{
+			"name": "json-schema-traverse",
+			"semver": "^0.4.1"
+		},
+		{
+			"name": "json-stable-stringify-without-jsonify",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "kleur",
+			"semver": "^4.1.5"
+		},
+		{
+			"name": "levn",
+			"semver": "^0.4.1"
+		},
+		{
+			"name": "locate-path",
+			"semver": "^6.0.0"
+		},
+		{
+			"name": "lodash.merge",
+			"semver": "^4.6.2"
+		},
+		{
+			"name": "lru-cache",
+			"semver": "^6.0.0"
+		},
+		{
+			"name": "magic-string",
+			"semver": "^0.26.7"
+		},
+		{
+			"name": "make-dir",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "merge2",
+			"semver": "^1.4.1"
+		},
+		{
+			"name": "micromatch",
+			"semver": "^4.0.5"
+		},
+		{
+			"name": "mime",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "min-indent",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "minimatch",
+			"semver": "^3.1.2"
+		},
+		{
+			"name": "minimist",
+			"semver": "^1.2.7"
+		},
+		{
+			"name": "minipass",
+			"semver": "^3.3.4"
+		},
+		{
+			"name": "minizlib",
+			"semver": "^2.1.2"
+		},
+		{
+			"name": "mkdirp",
+			"semver": "^0.5.6"
+		},
+		{
+			"name": "mri",
+			"semver": "^1.2.0"
+		},
+		{
+			"name": "mrmime",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "ms",
+			"semver": "^2.1.2"
+		},
+		{
+			"name": "nanoid",
+			"semver": "^3.3.4"
+		},
+		{
+			"name": "natural-compare",
+			"semver": "^1.4.0"
+		},
+		{
+			"name": "natural-compare-lite",
+			"semver": "^1.4.0"
+		},
+		{
+			"name": "node-fetch",
+			"semver": "^2.6.7"
+		},
+		{
+			"name": "node-gyp-build",
+			"semver": "^4.5.0"
+		},
+		{
+			"name": "nopt",
+			"semver": "^5.0.0"
+		},
+		{
+			"name": "normalize-path",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "npmlog",
+			"semver": "^5.0.1"
+		},
+		{
+			"name": "object-assign",
+			"semver": "^4.1.1"
+		},
+		{
+			"name": "once",
+			"semver": "^1.4.0"
+		},
+		{
+			"name": "optionator",
+			"semver": "^0.9.1"
+		},
+		{
+			"name": "p-limit",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "p-locate",
+			"semver": "^5.0.0"
+		},
+		{
+			"name": "parent-module",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "path-exists",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "path-is-absolute",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "path-key",
+			"semver": "^3.1.1"
+		},
+		{
+			"name": "path-parse",
+			"semver": "^1.0.7"
+		},
+		{
+			"name": "path-type",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "picocolors",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "picomatch",
+			"semver": "^2.3.1"
+		},
+		{
+			"name": "playwright-core",
+			"semver": "^1.25.0"
+		},
+		{
+			"name": "postcss",
+			"semver": "^8.4.18"
+		},
+		{
+			"name": "prelude-ls",
+			"semver": "^1.2.1"
+		},
+		{
+			"name": "punycode",
+			"semver": "^2.1.1"
+		},
+		{
+			"name": "queue-microtask",
+			"semver": "^1.2.3"
+		},
+		{
+			"name": "readable-stream",
+			"semver": "^3.6.0"
+		},
+		{
+			"name": "readdirp",
+			"semver": "^3.6.0"
+		},
+		{
+			"name": "regexparam",
+			"semver": "^2.0.1"
+		},
+		{
+			"name": "regexpp",
+			"semver": "^3.2.0"
+		},
+		{
+			"name": "resolve",
+			"semver": "^1.22.1"
+		},
+		{
+			"name": "resolve-from",
+			"semver": "^5.0.0"
+		},
+		{
+			"name": "reusify",
+			"semver": "^1.0.4"
+		},
+		{
+			"name": "rimraf",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "rollup",
+			"semver": "^2.79.1"
+		},
+		{
+			"name": "rollup-pluginutils",
+			"semver": "^2.8.2"
+		},
+		{
+			"name": "run-parallel",
+			"semver": "^1.2.0"
+		},
+		{
+			"name": "sade",
+			"semver": "^1.8.1"
+		},
+		{
+			"name": "safe-buffer",
+			"semver": "^5.2.1"
+		},
+		{
+			"name": "sander",
+			"semver": "^0.5.1"
+		},
+		{
+			"name": "semver",
+			"semver": "^7.3.8"
+		},
+		{
+			"name": "set-blocking",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "set-cookie-parser",
+			"semver": "^2.5.1"
+		},
+		{
+			"name": "shebang-command",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "shebang-regex",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "signal-exit",
+			"semver": "^3.0.7"
+		},
+		{
+			"name": "sirv",
+			"semver": "^2.0.2"
+		},
+		{
+			"name": "slash",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "sorcery",
+			"semver": "^0.10.0"
+		},
+		{
+			"name": "source-map-js",
+			"semver": "^1.0.2"
+		},
+		{
+			"name": "sourcemap-codec",
+			"semver": "^1.4.8"
+		},
+		{
+			"name": "streamsearch",
+			"semver": "^1.1.0"
+		},
+		{
+			"name": "string_decoder",
+			"semver": "^1.3.0"
+		},
+		{
+			"name": "string-width",
+			"semver": "^4.2.3"
+		},
+		{
+			"name": "strip-ansi",
+			"semver": "^6.0.1"
+		},
+		{
+			"name": "strip-indent",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "strip-json-comments",
+			"semver": "^3.1.1"
+		},
+		{
+			"name": "supports-color",
+			"semver": "^7.2.0"
+		},
+		{
+			"name": "supports-preserve-symlinks-flag",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "svelte-hmr",
+			"semver": "^0.15.0"
+		},
+		{
+			"name": "tar",
+			"semver": "^6.1.12"
+		},
+		{
+			"name": "text-table",
+			"semver": "^0.2.0"
+		},
+		{
+			"name": "tiny-glob",
+			"semver": "^0.2.9"
+		},
+		{
+			"name": "to-regex-range",
+			"semver": "^5.0.1"
+		},
+		{
+			"name": "totalist",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "tr46",
+			"semver": "^0.0.3"
+		},
+		{
+			"name": "tsutils",
+			"semver": "^3.21.0"
+		},
+		{
+			"name": "type-check",
+			"semver": "^0.4.0"
+		},
+		{
+			"name": "type-fest",
+			"semver": "^0.20.2"
+		},
+		{
+			"name": "undici",
+			"semver": "^5.12.0"
+		},
+		{
+			"name": "uri-js",
+			"semver": "^4.4.1"
+		},
+		{
+			"name": "util-deprecate",
+			"semver": "^1.0.2"
+		},
+		{
+			"name": "webidl-conversions",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "whatwg-url",
+			"semver": "^5.0.0"
+		},
+		{
+			"name": "which",
+			"semver": "^2.0.2"
+		},
+		{
+			"name": "wide-align",
+			"semver": "^1.1.5"
+		},
+		{
+			"name": "word-wrap",
+			"semver": "^1.2.3"
+		},
+		{
+			"name": "worktop",
+			"semver": "^0.8.0-next.14"
+		},
+		{
+			"name": "wrappy",
+			"semver": "^1.0.2"
+		},
+		{
+			"name": "yallist",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "yocto-queue",
+			"semver": "^0.1.0"
+		}
+	],
+	"unpacked_size": 10162
 }

@@ -4,13 +4,48 @@
 	"repo_url": "",
 	"authors": ["dmdin", "julia_grishina", "evilya2505", "polinaryabukhina"],
 	"downloads": 580,
-	"updated": "2025-04-13T13:04:37.323Z",
+	"updated": "2025-04-15T08:43:29.883Z",
 	"tags": ["ui"],
 	"runes": true,
 	"typescript": true,
-	"version": "0.1.0-beta.74",
+	"version": "0.1.0-beta.76",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.5.27",
-	"last_rune_check_version": "0.1.0-beta.74",
-	"github_stars": 0
+	"last_rune_check_version": "0.1.0-beta.76",
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@iconify/svelte",
+			"semver": "^4.0.2"
+		},
+		{
+			"name": "@internationalized/date",
+			"semver": "^3.6.0"
+		},
+		{
+			"name": "@melt-ui/svelte",
+			"semver": "^0.86.2"
+		},
+		{
+			"name": "@tanstack/svelte-virtual",
+			"semver": "^3.10.9"
+		},
+		{
+			"name": "chroma-js",
+			"semver": "^2.4.2"
+		},
+		{
+			"name": "exceljs",
+			"semver": "^4.4.0"
+		},
+		{
+			"name": "tailwind-merge",
+			"semver": "^2.5.4"
+		},
+		{
+			"name": "tailwindcss-palette-generator",
+			"semver": "^0.6.5"
+		}
+	],
+	"unpacked_size": 144097
 }

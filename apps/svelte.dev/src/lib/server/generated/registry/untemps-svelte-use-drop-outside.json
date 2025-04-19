@@ -12,5 +12,20 @@
 	"typescript": false,
 	"version": "1.6.0",
 	"svelte_range": "3.49.0",
-	"last_rune_check_version": "1.6.0"
+	"last_rune_check_version": "1.6.0",
+	"dependencies": [
+		{
+			"name": "@untemps/dom-observer",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "@untemps/utils",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "svelte",
+			"semver": "3.49.0"
+		}
+	],
+	"unpacked_size": 224216
 }

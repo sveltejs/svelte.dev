@@ -13,5 +13,76 @@
 	"version": "0.0.29",
 	"svelte_range": "^3.48.0",
 	"kit_range": "1.0.0-next.350",
-	"last_rune_check_version": "0.0.29"
+	"last_rune_check_version": "0.0.29",
+	"dependencies": [
+		{
+			"name": "@jalik/deep-extend",
+			"semver": "^1.1.14"
+		},
+		{
+			"name": "@milkdown/core",
+			"semver": "7.1.1"
+		},
+		{
+			"name": "@milkdown/ctx",
+			"semver": "7.1.1"
+		},
+		{
+			"name": "@milkdown/plugin-clipboard",
+			"semver": "7.1.1"
+		},
+		{
+			"name": "@milkdown/plugin-cursor",
+			"semver": "7.1.1"
+		},
+		{
+			"name": "@milkdown/plugin-history",
+			"semver": "7.1.1"
+		},
+		{
+			"name": "@milkdown/plugin-indent",
+			"semver": "7.1.1"
+		},
+		{
+			"name": "@milkdown/plugin-listener",
+			"semver": "7.1.1"
+		},
+		{
+			"name": "@milkdown/plugin-tooltip",
+			"semver": "7.1.1"
+		},
+		{
+			"name": "@milkdown/preset-commonmark",
+			"semver": "7.1.1"
+		},
+		{
+			"name": "@milkdown/preset-gfm",
+			"semver": "7.1.1"
+		},
+		{
+			"name": "@milkdown/prose",
+			"semver": "7.1.1"
+		},
+		{
+			"name": "@milkdown/theme-nord",
+			"semver": "7.1.1"
+		},
+		{
+			"name": "@milkdown/transformer",
+			"semver": "7.1.1"
+		},
+		{
+			"name": "dayjs",
+			"semver": "^1.11.0"
+		},
+		{
+			"name": "sortablejs",
+			"semver": "^1.15.0"
+		},
+		{
+			"name": "svelte-modal-manager",
+			"semver": "^0.0.7"
+		}
+	],
+	"unpacked_size": 111187
 }

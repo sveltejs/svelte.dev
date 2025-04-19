@@ -13,5 +13,12 @@
 	"version": "0.3.2",
 	"svelte_range": "^3.52.0",
 	"kit_range": "1.0.0-next.524",
-	"last_rune_check_version": "0.3.2"
+	"last_rune_check_version": "0.3.2",
+	"dependencies": [
+		{
+			"name": "algoliasearch",
+			"semver": "^4.14.2"
+		}
+	],
+	"unpacked_size": 29569
 }

@@ -11,5 +11,16 @@
 	"version": "1.0.5",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "1.0.5",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "basic-browser-request",
+			"semver": "^10.0.0"
+		},
+		{
+			"name": "lodash.throttle",
+			"semver": "^4.1.1"
+		}
+	],
+	"unpacked_size": 35681
 }

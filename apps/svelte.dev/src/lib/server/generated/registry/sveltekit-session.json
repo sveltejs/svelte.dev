@@ -13,5 +13,20 @@
 	"version": "0.2.3",
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.5.0",
-	"last_rune_check_version": "0.2.3"
+	"last_rune_check_version": "0.2.3",
+	"dependencies": [
+		{
+			"name": "lodash",
+			"semver": "^4.17.21"
+		},
+		{
+			"name": "type-fest",
+			"semver": "^3.7.2"
+		},
+		{
+			"name": "uid-safe",
+			"semver": "^2.1.5"
+		}
+	],
+	"unpacked_size": 18514
 }

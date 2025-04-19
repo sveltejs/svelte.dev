@@ -12,5 +12,12 @@
 	"typescript": false,
 	"version": "1.0.3",
 	"svelte_range": "^3.12.1",
-	"last_rune_check_version": "1.0.3"
+	"last_rune_check_version": "1.0.3",
+	"dependencies": [
+		{
+			"name": "@semantic-release/git",
+			"semver": "^7.0.16"
+		}
+	],
+	"unpacked_size": 6984
 }

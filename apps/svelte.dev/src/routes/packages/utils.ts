@@ -48,3 +48,10 @@ export function format_number(num: number): string {
 	// If no threshold is met, return the number as is
 	return `${is_negative ? '-' : ''}${Math.round(abs_num)}`;
 }
+
+export function format_bytes(bytes: number): string {
+	if (bytes < 1024) return `${bytes} bytes`;
+	const exp = Math.floor(Math.log(bytes) / Math.log(1024));
+	const num = bytes / Math.pow(1024, exp);
+	return `${num.toFixed(2)} ${['B', 'KB', 'MB', 'GB', 'TB'][exp]}`;
+}

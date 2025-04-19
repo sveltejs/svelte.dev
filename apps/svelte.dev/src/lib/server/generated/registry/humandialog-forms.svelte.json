@@ -13,5 +13,84 @@
 	"version": "1.3.17",
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.0.0-next.587",
-	"last_rune_check_version": "1.3.17"
+	"last_rune_check_version": "1.3.17",
+	"dependencies": [
+		{
+			"name": "@humandialog/auth.svelte",
+			"semver": "^1.8.5"
+		},
+		{
+			"name": "@tiptap/core",
+			"semver": "^2.11.0"
+		},
+		{
+			"name": "@tiptap/extension-bullet-list",
+			"semver": "^2.11.5"
+		},
+		{
+			"name": "@tiptap/extension-code-block",
+			"semver": "^2.11.5"
+		},
+		{
+			"name": "@tiptap/extension-image",
+			"semver": "^2.11.0"
+		},
+		{
+			"name": "@tiptap/extension-link",
+			"semver": "^2.11.3"
+		},
+		{
+			"name": "@tiptap/extension-list-item",
+			"semver": "^2.11.5"
+		},
+		{
+			"name": "@tiptap/extension-table",
+			"semver": "^2.11.5"
+		},
+		{
+			"name": "@tiptap/extension-table-cell",
+			"semver": "^2.11.5"
+		},
+		{
+			"name": "@tiptap/extension-table-header",
+			"semver": "^2.11.5"
+		},
+		{
+			"name": "@tiptap/extension-table-row",
+			"semver": "^2.11.5"
+		},
+		{
+			"name": "@tiptap/extension-underline",
+			"semver": "^2.11.3"
+		},
+		{
+			"name": "@tiptap/pm",
+			"semver": "^2.11.0"
+		},
+		{
+			"name": "@tiptap/starter-kit",
+			"semver": "^2.11.0"
+		},
+		{
+			"name": "@tiptap/suggestion",
+			"semver": "^2.11.0"
+		},
+		{
+			"name": "flowbite-svelte",
+			"semver": "^0.44.4"
+		},
+		{
+			"name": "pdfjs-dist",
+			"semver": "^4.10.38"
+		},
+		{
+			"name": "svelte-icons",
+			"semver": "^2.1.0"
+		},
+		{
+			"name": "svelte-spa-router",
+			"semver": "^4.0.1"
+		}
+	],
+	"unpacked_size": 584792
 }

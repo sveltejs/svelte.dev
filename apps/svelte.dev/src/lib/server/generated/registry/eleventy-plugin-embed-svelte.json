@@ -12,5 +12,28 @@
 	"typescript": true,
 	"version": "1.1.0",
 	"svelte_range": ">=3.38.0",
-	"last_rune_check_version": "1.1.0"
+	"last_rune_check_version": "1.1.0",
+	"dependencies": [
+		{
+			"name": "@rollup/plugin-node-resolve",
+			"semver": "^13.0.0"
+		},
+		{
+			"name": "@rollup/plugin-virtual",
+			"semver": "^2.0.3"
+		},
+		{
+			"name": "cheerio",
+			"semver": "^1.0.0-rc.9"
+		},
+		{
+			"name": "rollup",
+			"semver": "2.48.0"
+		},
+		{
+			"name": "rollup-plugin-svelte",
+			"semver": "^7.1.0"
+		}
+	],
+	"unpacked_size": 9354
 }

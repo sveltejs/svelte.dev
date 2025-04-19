@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "0.0.18",
 	"svelte_range": "^3.58.0 || ^4.0.0",
-	"last_rune_check_version": "0.0.18"
+	"last_rune_check_version": "0.0.18",
+	"dependencies": [
+		{
+			"name": "csstype",
+			"semver": "^3.1.2"
+		},
+		{
+			"name": "nanostores",
+			"semver": "^0.9.3"
+		}
+	],
+	"unpacked_size": 28415
 }

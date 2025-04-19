@@ -12,5 +12,32 @@
 	"typescript": true,
 	"version": "0.0.3",
 	"svelte_range": "^3.38.3",
-	"last_rune_check_version": "0.0.3"
+	"last_rune_check_version": "0.0.3",
+	"dependencies": [
+		{
+			"name": "codemirror",
+			"semver": "^5.65.2"
+		},
+		{
+			"name": "csslint",
+			"semver": "^1.0.5"
+		},
+		{
+			"name": "htmlhint",
+			"semver": "^1.1.2"
+		},
+		{
+			"name": "javascript-interface-library",
+			"semver": "^0.1.14"
+		},
+		{
+			"name": "jshint",
+			"semver": "^2.13.4"
+		},
+		{
+			"name": "jsonlint",
+			"semver": "^1.6.3"
+		}
+	],
+	"unpacked_size": 6707760
 }

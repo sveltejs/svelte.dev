@@ -11,5 +11,12 @@
 	"runes": false,
 	"last_rune_check_version": "0.0.29",
 	"version": "0.0.29",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "pdfjs-dist",
+			"semver": "^3.7.107"
+		}
+	],
+	"unpacked_size": 19850664
 }

@@ -11,5 +11,32 @@
 	"version": "1.0.3",
 	"svelte_range": "*",
 	"last_rune_check_version": "1.0.3",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "autoprefixer",
+			"semver": "^9.7.3"
+		},
+		{
+			"name": "css-in-js-utils",
+			"semver": "^3.0.4"
+		},
+		{
+			"name": "deepmerge",
+			"semver": "^4.2.2"
+		},
+		{
+			"name": "flat",
+			"semver": "^5.0.0"
+		},
+		{
+			"name": "postcss",
+			"semver": "^7.0.24"
+		},
+		{
+			"name": "svelte",
+			"semver": "*"
+		}
+	],
+	"unpacked_size": 27552
 }

@@ -13,5 +13,12 @@
 	"version": "1.2.4",
 	"svelte_range": "^4.2.12",
 	"kit_range": "^2.5.4",
-	"last_rune_check_version": "1.2.4"
+	"last_rune_check_version": "1.2.4",
+	"dependencies": [
+		{
+			"name": "pointer-tracker",
+			"semver": "^2.5.3"
+		}
+	],
+	"unpacked_size": 24401
 }

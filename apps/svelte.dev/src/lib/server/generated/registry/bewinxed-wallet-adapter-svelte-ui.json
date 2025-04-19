@@ -13,5 +13,12 @@
 	"version": "0.2.1",
 	"svelte_range": "^5.0.0-next.1",
 	"kit_range": "^2.5.24",
-	"last_rune_check_version": "0.2.1"
+	"last_rune_check_version": "0.2.1",
+	"dependencies": [
+		{
+			"name": "@bewinxed/wallet-standard-wallet-adapter-svelte",
+			"semver": "^1.1.6"
+		}
+	],
+	"unpacked_size": 116220
 }

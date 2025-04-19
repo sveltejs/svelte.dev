@@ -5,13 +5,15 @@
 	"authors": ["cheukt", "mcous", "stevebriskin", "viambot", "micheal.parks", "mpviam", "njooma"],
 	"homepage": "https://github.com/viamrobotics/viam-svelte-sdk#readme",
 	"downloads": 30,
-	"updated": "2025-03-24T18:25:50.465Z",
+	"updated": "2025-04-18T20:56:04.920Z",
 	"tags": ["integration"],
 	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
-	"version": "0.1.2",
+	"version": "0.1.4",
 	"svelte_range": ">=5",
-	"kit_range": "^2.20.2",
-	"last_rune_check_version": "0.1.2"
+	"kit_range": "^2.20.5",
+	"last_rune_check_version": "0.1.4",
+	"dependencies": [],
+	"unpacked_size": 44872
 }

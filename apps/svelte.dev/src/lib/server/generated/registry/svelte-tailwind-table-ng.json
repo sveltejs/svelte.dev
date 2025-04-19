@@ -11,5 +11,16 @@
 	"typescript": false,
 	"version": "0.10.3",
 	"svelte_range": "^3.42.1",
-	"last_rune_check_version": "0.10.3"
+	"last_rune_check_version": "0.10.3",
+	"dependencies": [
+		{
+			"name": "design-system-svelte",
+			"semver": "0.0.15"
+		},
+		{
+			"name": "tailwindcss",
+			"semver": "3.1.8"
+		}
+	],
+	"unpacked_size": 812401
 }

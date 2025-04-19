@@ -12,5 +12,16 @@
 	"typescript": false,
 	"version": "1.0.9",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "1.0.9"
+	"last_rune_check_version": "1.0.9",
+	"dependencies": [
+		{
+			"name": "sirv-cli",
+			"semver": "^0.4.4"
+		},
+		{
+			"name": "svelte-swipeable",
+			"semver": "^1.0.3"
+		}
+	],
+	"unpacked_size": 113744
 }

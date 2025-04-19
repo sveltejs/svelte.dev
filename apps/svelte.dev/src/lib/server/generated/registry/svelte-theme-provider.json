@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "0.1.11",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.1.11"
+	"last_rune_check_version": "0.1.11",
+	"dependencies": [
+		{
+			"name": "css-vars-ponyfill",
+			"semver": "^2.4.7"
+		}
+	],
+	"unpacked_size": 13272
 }

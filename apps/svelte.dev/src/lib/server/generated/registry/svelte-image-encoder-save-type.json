@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "1.2.8",
 	"svelte_range": "^3.5.1",
-	"last_rune_check_version": "1.2.8"
+	"last_rune_check_version": "1.2.8",
+	"dependencies": [
+		{
+			"name": "detect-pointer-events",
+			"semver": "^1.0.1"
+		}
+	],
+	"unpacked_size": 74276
 }

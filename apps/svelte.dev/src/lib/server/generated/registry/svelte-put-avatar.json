@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "4.0.0",
 	"svelte_range": "^5.1.0",
-	"last_rune_check_version": "4.0.0"
+	"last_rune_check_version": "4.0.0",
+	"dependencies": [
+		{
+			"name": "md5",
+			"semver": "^2.3.0"
+		}
+	],
+	"unpacked_size": 19865
 }

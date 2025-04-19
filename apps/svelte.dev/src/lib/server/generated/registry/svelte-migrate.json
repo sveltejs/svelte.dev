@@ -12,5 +12,48 @@
 	"typescript": false,
 	"version": "1.10.1",
 	"svelte_range": "^4.2.19",
-	"last_rune_check_version": "1.10.1"
+	"last_rune_check_version": "1.10.1",
+	"dependencies": [
+		{
+			"name": "@clack/prompts",
+			"semver": "^0.9.0"
+		},
+		{
+			"name": "import-meta-resolve",
+			"semver": "^4.1.0"
+		},
+		{
+			"name": "magic-string",
+			"semver": "^0.30.15"
+		},
+		{
+			"name": "package-manager-detector",
+			"semver": "^0.2.7"
+		},
+		{
+			"name": "picocolors",
+			"semver": "^1.1.1"
+		},
+		{
+			"name": "semver",
+			"semver": "^7.6.3"
+		},
+		{
+			"name": "tiny-glob",
+			"semver": "^0.2.9"
+		},
+		{
+			"name": "ts-morph",
+			"semver": "^24.0.0"
+		},
+		{
+			"name": "typescript",
+			"semver": "^5.7.2"
+		},
+		{
+			"name": "zimmerframe",
+			"semver": "^1.1.2"
+		}
+	],
+	"unpacked_size": 116986
 }

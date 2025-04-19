@@ -12,5 +12,24 @@
 	"typescript": false,
 	"version": "1.2.0",
 	"kit_range": "^1.0.0 || ^2.0.0",
-	"last_rune_check_version": "1.2.0"
+	"last_rune_check_version": "1.2.0",
+	"dependencies": [
+		{
+			"name": "esbuild",
+			"semver": "^0.25.0"
+		},
+		{
+			"name": "polka",
+			"semver": "^1.0.0-next.22"
+		},
+		{
+			"name": "sirv",
+			"semver": "^2.0.2"
+		},
+		{
+			"name": "yaml",
+			"semver": "^2.2.1"
+		}
+	],
+	"unpacked_size": 27294
 }

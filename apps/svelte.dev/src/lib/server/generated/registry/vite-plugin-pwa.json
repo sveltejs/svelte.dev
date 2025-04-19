@@ -12,5 +12,28 @@
 	"typescript": true,
 	"version": "1.0.0",
 	"svelte_range": "^4.2.5",
-	"last_rune_check_version": "1.0.0"
+	"last_rune_check_version": "1.0.0",
+	"dependencies": [
+		{
+			"name": "debug",
+			"semver": "^4.3.6"
+		},
+		{
+			"name": "pretty-bytes",
+			"semver": "^6.1.1"
+		},
+		{
+			"name": "tinyglobby",
+			"semver": "^0.2.10"
+		},
+		{
+			"name": "workbox-build",
+			"semver": "^7.3.0"
+		},
+		{
+			"name": "workbox-window",
+			"semver": "^7.3.0"
+		}
+	],
+	"unpacked_size": 233529
 }

@@ -11,5 +11,16 @@
 	"github_stars": 1520,
 	"typescript": false,
 	"version": "2.7.3",
-	"last_rune_check_version": "2.7.3"
+	"last_rune_check_version": "2.7.3",
+	"dependencies": [
+		{
+			"name": "@svelte-add/core",
+			"semver": "2.10.4"
+		},
+		{
+			"name": "@svelte-add/config",
+			"semver": "1.5.2"
+		}
+	],
+	"unpacked_size": 338648
 }

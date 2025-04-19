@@ -12,5 +12,16 @@
 	"typescript": false,
 	"version": "3.0.2",
 	"svelte_range": "^3.29.0",
-	"last_rune_check_version": "3.0.2"
+	"last_rune_check_version": "3.0.2",
+	"dependencies": [
+		{
+			"name": "@dsengineer/css",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "@dsengineer/tokens",
+			"semver": "^3.0.0"
+		}
+	],
+	"unpacked_size": 114960
 }

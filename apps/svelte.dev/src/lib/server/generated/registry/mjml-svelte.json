@@ -13,5 +13,48 @@
 	"version": "1.4.1",
 	"svelte_range": "^5.22.6",
 	"kit_range": "^2.19.0",
-	"last_rune_check_version": "1.4.1"
+	"last_rune_check_version": "1.4.1",
+	"dependencies": [
+		{
+			"name": "@types/mjml-validator",
+			"semver": "^4.13.4"
+		},
+		{
+			"name": "dom-serializer",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "domhandler",
+			"semver": "^5.0.3"
+		},
+		{
+			"name": "html-minifier",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "htmlparser2",
+			"semver": "^10.0.0"
+		},
+		{
+			"name": "magic-string",
+			"semver": "^0.30.17"
+		},
+		{
+			"name": "mjml",
+			"semver": "^4.15.3"
+		},
+		{
+			"name": "mjml-core",
+			"semver": "^4.15.3"
+		},
+		{
+			"name": "mjml-table",
+			"semver": "^4.15.3"
+		},
+		{
+			"name": "mjml-validator",
+			"semver": "^4.15.3"
+		}
+	],
+	"unpacked_size": 305278
 }

@@ -20,5 +20,12 @@
 	"github_stars": 86367,
 	"typescript": true,
 	"version": "8.6.12",
-	"last_rune_check_version": "8.6.12"
+	"last_rune_check_version": "8.6.12",
+	"dependencies": [
+		{
+			"name": "@storybook/core",
+			"semver": "8.6.12"
+		}
+	],
+	"unpacked_size": 22968
 }

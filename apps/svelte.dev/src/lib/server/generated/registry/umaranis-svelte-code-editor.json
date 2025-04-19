@@ -12,5 +12,92 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.20.0",
 	"last_rune_check_version": "0.0.12",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@lezer/highlight",
+			"semver": "^1.2.1"
+		},
+		{
+			"name": "codemirror",
+			"semver": "^6.0.1"
+		},
+		{
+			"name": "@codemirror/lint",
+			"semver": "^6.8.2"
+		},
+		{
+			"name": "@codemirror/autocomplete",
+			"semver": "^6.9.0"
+		},
+		{
+			"name": "@codemirror/commands",
+			"semver": "^6.2.5"
+		},
+		{
+			"name": "@codemirror/lang-css",
+			"semver": "^6.2.1"
+		},
+		{
+			"name": "@codemirror/lang-html",
+			"semver": "^6.4.6"
+		},
+		{
+			"name": "@codemirror/lang-javascript",
+			"semver": "^6.2.1"
+		},
+		{
+			"name": "@codemirror/language",
+			"semver": "^6.10.3"
+		},
+		{
+			"name": "@codemirror/search",
+			"semver": "^6.5.6"
+		},
+		{
+			"name": "@codemirror/state",
+			"semver": "^6.5.0"
+		},
+		{
+			"name": "@codemirror/view",
+			"semver": "^6.35.3"
+		},
+		{
+			"name": "@fontsource/atkinson-hyperlegible",
+			"semver": "^5.1.0"
+		},
+		{
+			"name": "@fontsource/dm-serif-display",
+			"semver": "^5.1.0"
+		},
+		{
+			"name": "@fontsource/eb-garamond",
+			"semver": "^5.1.0"
+		},
+		{
+			"name": "@fontsource/fira-mono",
+			"semver": "^5.1.0"
+		},
+		{
+			"name": "@fontsource/fira-sans",
+			"semver": "^5.1.0"
+		},
+		{
+			"name": "@replit/codemirror-lang-svelte",
+			"semver": "^6.0.0"
+		},
+		{
+			"name": "@replit/codemirror-vim",
+			"semver": "^6.0.14"
+		},
+		{
+			"name": "esm-env",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "tarparser",
+			"semver": "^0.0.4"
+		}
+	],
+	"unpacked_size": 296154
 }

@@ -12,5 +12,40 @@
 	"typescript": true,
 	"version": "0.36.0",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.36.0"
+	"last_rune_check_version": "0.36.0",
+	"dependencies": [
+		{
+			"name": "@minna-ui/collapse",
+			"semver": "^0.36.0"
+		},
+		{
+			"name": "@minna-ui/css",
+			"semver": "^0.36.0"
+		},
+		{
+			"name": "@minna-ui/navbar",
+			"semver": "^0.36.0"
+		},
+		{
+			"name": "@minna-ui/postcss-config",
+			"semver": "^0.36.0"
+		},
+		{
+			"name": "@minna-ui/preprocess",
+			"semver": "^0.36.0"
+		},
+		{
+			"name": "@minna-ui/select",
+			"semver": "^0.36.0"
+		},
+		{
+			"name": "@minna-ui/switch",
+			"semver": "^0.36.0"
+		},
+		{
+			"name": "@minna-ui/tooltip",
+			"semver": "^0.36.0"
+		}
+	],
+	"unpacked_size": 13846
 }

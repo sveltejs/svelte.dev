@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "2.0.2",
 	"svelte_range": "^3.52.0",
-	"last_rune_check_version": "2.0.2"
+	"last_rune_check_version": "2.0.2",
+	"dependencies": [
+		{
+			"name": "svelte",
+			"semver": "^3.52.0"
+		},
+		{
+			"name": "yup",
+			"semver": "^0.32.11"
+		}
+	],
+	"unpacked_size": 41843
 }

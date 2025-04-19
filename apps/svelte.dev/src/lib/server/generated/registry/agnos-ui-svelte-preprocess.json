@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "0.8.0",
 	"svelte_range": "^5.16.0",
-	"last_rune_check_version": "0.8.0"
+	"last_rune_check_version": "0.8.0",
+	"dependencies": [
+		{
+			"name": "magic-string",
+			"semver": "^0.30.14"
+		}
+	],
+	"unpacked_size": 12760
 }

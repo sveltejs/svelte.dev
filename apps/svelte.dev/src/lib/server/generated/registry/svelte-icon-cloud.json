@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "1.0.0",
 	"svelte_range": "^4.0.0",
-	"last_rune_check_version": "1.0.0"
+	"last_rune_check_version": "1.0.0",
+	"dependencies": [
+		{
+			"name": "@csstools/convert-colors",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "simple-icons",
+			"semver": "^14.8.0"
+		}
+	],
+	"unpacked_size": 38357
 }

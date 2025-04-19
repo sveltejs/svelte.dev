@@ -5,11 +5,122 @@
 	"authors": ["natemoo-re", "fredkschott", "matthewp"],
 	"homepage": "https://starlight.astro.build",
 	"downloads": 70920,
-	"updated": "2025-04-14T11:41:06.202Z",
+	"updated": "2025-04-16T10:00:18.488Z",
 	"tags": ["content"],
 	"runes": false,
 	"github_stars": 6269,
 	"typescript": true,
-	"version": "0.33.2",
-	"last_rune_check_version": "0.33.2"
+	"version": "0.34.0",
+	"last_rune_check_version": "0.34.0",
+	"dependencies": [
+		{
+			"name": "@astrojs/markdown-remark",
+			"semver": "^6.3.1"
+		},
+		{
+			"name": "@astrojs/mdx",
+			"semver": "^4.2.3"
+		},
+		{
+			"name": "@astrojs/sitemap",
+			"semver": "^3.3.0"
+		},
+		{
+			"name": "@pagefind/default-ui",
+			"semver": "^1.3.0"
+		},
+		{
+			"name": "@types/hast",
+			"semver": "^3.0.4"
+		},
+		{
+			"name": "@types/js-yaml",
+			"semver": "^4.0.9"
+		},
+		{
+			"name": "@types/mdast",
+			"semver": "^4.0.4"
+		},
+		{
+			"name": "astro-expressive-code",
+			"semver": "^0.41.1"
+		},
+		{
+			"name": "bcp-47",
+			"semver": "^2.1.0"
+		},
+		{
+			"name": "hast-util-from-html",
+			"semver": "^2.0.1"
+		},
+		{
+			"name": "hast-util-select",
+			"semver": "^6.0.2"
+		},
+		{
+			"name": "hast-util-to-string",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "hastscript",
+			"semver": "^9.0.0"
+		},
+		{
+			"name": "i18next",
+			"semver": "^23.11.5"
+		},
+		{
+			"name": "js-yaml",
+			"semver": "^4.1.0"
+		},
+		{
+			"name": "klona",
+			"semver": "^2.0.6"
+		},
+		{
+			"name": "mdast-util-directive",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "mdast-util-to-markdown",
+			"semver": "^2.1.0"
+		},
+		{
+			"name": "mdast-util-to-string",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "pagefind",
+			"semver": "^1.3.0"
+		},
+		{
+			"name": "rehype",
+			"semver": "^13.0.1"
+		},
+		{
+			"name": "rehype-format",
+			"semver": "^5.0.0"
+		},
+		{
+			"name": "remark-directive",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "ultrahtml",
+			"semver": "^1.6.0"
+		},
+		{
+			"name": "unified",
+			"semver": "^11.0.5"
+		},
+		{
+			"name": "unist-util-visit",
+			"semver": "^5.0.0"
+		},
+		{
+			"name": "vfile",
+			"semver": "^6.0.2"
+		}
+	],
+	"unpacked_size": 1079921
 }

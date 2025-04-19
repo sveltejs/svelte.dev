@@ -12,5 +12,28 @@
 	"typescript": true,
 	"version": "2.0.2",
 	"svelte_range": "^3.53.1",
-	"last_rune_check_version": "2.0.2"
+	"last_rune_check_version": "2.0.2",
+	"dependencies": [
+		{
+			"name": "@babel/core",
+			"semver": "^7.20.5"
+		},
+		{
+			"name": "@babel/helper-plugin-utils",
+			"semver": "^7.20.2"
+		},
+		{
+			"name": "@formatjs/icu-messageformat-parser",
+			"semver": "^2.1.14"
+		},
+		{
+			"name": "flat",
+			"semver": "^5.0.2"
+		},
+		{
+			"name": "hyphen",
+			"semver": "^1.6.4"
+		}
+	],
+	"unpacked_size": 54548
 }

@@ -5,12 +5,143 @@
 	"authors": ["iedan."],
 	"homepage": "https://jsrepo.dev",
 	"downloads": 2233,
-	"updated": "2025-04-09T16:27:29.492Z",
+	"updated": "2025-04-17T12:10:05.214Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 374,
 	"typescript": true,
-	"version": "1.47.0",
+	"version": "1.47.1",
 	"svelte_range": "^5.25.9",
-	"last_rune_check_version": "1.47.0"
+	"last_rune_check_version": "1.47.1",
+	"dependencies": [
+		{
+			"name": "@anthropic-ai/sdk",
+			"semver": "^0.39.0"
+		},
+		{
+			"name": "@biomejs/js-api",
+			"semver": "^0.7.1"
+		},
+		{
+			"name": "@biomejs/wasm-nodejs",
+			"semver": "^1.9.4"
+		},
+		{
+			"name": "@clack/prompts",
+			"semver": "^0.10.1"
+		},
+		{
+			"name": "boxen",
+			"semver": "^8.0.1"
+		},
+		{
+			"name": "chalk",
+			"semver": "^5.4.1"
+		},
+		{
+			"name": "commander",
+			"semver": "^13.1.0"
+		},
+		{
+			"name": "conf",
+			"semver": "^13.1.0"
+		},
+		{
+			"name": "css-dependency",
+			"semver": "^0.0.3"
+		},
+		{
+			"name": "diff",
+			"semver": "^7.0.0"
+		},
+		{
+			"name": "escape-string-regexp",
+			"semver": "^5.0.0"
+		},
+		{
+			"name": "estree-walker",
+			"semver": "^3.0.3"
+		},
+		{
+			"name": "execa",
+			"semver": "^9.5.2"
+		},
+		{
+			"name": "get-tsconfig",
+			"semver": "^4.10.0"
+		},
+		{
+			"name": "ignore",
+			"semver": "^7.0.3"
+		},
+		{
+			"name": "is-unicode-supported",
+			"semver": "^2.1.0"
+		},
+		{
+			"name": "node-fetch",
+			"semver": "^3.3.2"
+		},
+		{
+			"name": "octokit",
+			"semver": "^4.1.2"
+		},
+		{
+			"name": "ollama",
+			"semver": "^0.5.14"
+		},
+		{
+			"name": "openai",
+			"semver": "^4.93.0"
+		},
+		{
+			"name": "oxc-parser",
+			"semver": "^0.64.0"
+		},
+		{
+			"name": "package-manager-detector",
+			"semver": "^1.1.0"
+		},
+		{
+			"name": "parse5",
+			"semver": "^7.2.1"
+		},
+		{
+			"name": "pathe",
+			"semver": "^2.0.3"
+		},
+		{
+			"name": "prettier",
+			"semver": "^3.5.3"
+		},
+		{
+			"name": "prettier-plugin-svelte",
+			"semver": "^3.3.3"
+		},
+		{
+			"name": "semver",
+			"semver": "^7.7.1"
+		},
+		{
+			"name": "sisteransi",
+			"semver": "^1.0.5"
+		},
+		{
+			"name": "svelte",
+			"semver": "^5.25.9"
+		},
+		{
+			"name": "valibot",
+			"semver": "1.0.0"
+		},
+		{
+			"name": "validate-npm-package-name",
+			"semver": "^6.0.0"
+		},
+		{
+			"name": "vue",
+			"semver": "^3.5.13"
+		}
+	],
+	"unpacked_size": 630260
 }

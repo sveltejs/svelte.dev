@@ -12,5 +12,28 @@
 	"svelte_range": "^3.25.0",
 	"kit_range": "1.15.2",
 	"last_rune_check_version": "1.1.0",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "chess.js",
+			"semver": "^1.0.0-beta.4"
+		},
+		{
+			"name": "chessboard-element",
+			"semver": "^1.2.0"
+		},
+		{
+			"name": "chessground",
+			"semver": "^8.3.7"
+		},
+		{
+			"name": "lodash",
+			"semver": "^4.17.21"
+		},
+		{
+			"name": "sirv-cli",
+			"semver": "^2.0.0"
+		}
+	],
+	"unpacked_size": 47951
 }

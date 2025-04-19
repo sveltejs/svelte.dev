@@ -13,5 +13,16 @@
 	"version": "0.0.9",
 	"svelte_range": "^3.20.1",
 	"kit_range": "^1.0.0-next.347",
-	"last_rune_check_version": "0.0.9"
+	"last_rune_check_version": "0.0.9",
+	"dependencies": [
+		{
+			"name": "@urql/svelte",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "graphql",
+			"semver": "^16.5.0"
+		}
+	],
+	"unpacked_size": 193926
 }

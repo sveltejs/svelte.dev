@@ -13,5 +13,20 @@
 	"svelte_range": "^4.2.12",
 	"kit_range": "^2.5.5",
 	"last_rune_check_version": "0.1.0",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@jacksonthall22/chess.ts",
+			"semver": "^0.1.12"
+		},
+		{
+			"name": "@jacksonthall22/svelte-chessground",
+			"semver": "^0.0.2"
+		},
+		{
+			"name": "@sveltejs/vite-plugin-svelte",
+			"semver": "^3.0.2"
+		}
+	],
+	"unpacked_size": 39900
 }

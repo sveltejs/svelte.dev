@@ -12,5 +12,20 @@
 	"typescript": true,
 	"version": "0.2.0",
 	"svelte_range": "^3.44.0",
-	"last_rune_check_version": "0.2.0"
+	"last_rune_check_version": "0.2.0",
+	"dependencies": [
+		{
+			"name": "markdown-it",
+			"semver": "^12.2.0"
+		},
+		{
+			"name": "prism-svelte",
+			"semver": "^0.4.7"
+		},
+		{
+			"name": "prismjs",
+			"semver": "^1.25.0"
+		}
+	],
+	"unpacked_size": 485813
 }

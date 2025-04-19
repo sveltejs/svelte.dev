@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "5.10.0",
 	"svelte_range": "^3.29.0",
-	"last_rune_check_version": "5.10.0"
+	"last_rune_check_version": "5.10.0",
+	"dependencies": [
+		{
+			"name": "@popperjs/core",
+			"semver": "^2.11.4"
+		}
+	],
+	"unpacked_size": 1473129
 }

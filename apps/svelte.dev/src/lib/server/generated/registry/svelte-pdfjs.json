@@ -13,5 +13,12 @@
 	"version": "0.9.0",
 	"svelte_range": "^4",
 	"kit_range": "^1.30.4",
-	"last_rune_check_version": "0.9.0"
+	"last_rune_check_version": "0.9.0",
+	"dependencies": [
+		{
+			"name": "esm-env",
+			"semver": "^1.0.0"
+		}
+	],
+	"unpacked_size": 18632
 }

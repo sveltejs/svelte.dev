@@ -12,5 +12,12 @@
 	"typescript": false,
 	"version": "8.2.0",
 	"svelte_range": "^4.2.18",
-	"last_rune_check_version": "8.2.0"
+	"last_rune_check_version": "8.2.0",
+	"dependencies": [
+		{
+			"name": "globals",
+			"semver": "^15.6.0"
+		}
+	],
+	"unpacked_size": 4581
 }

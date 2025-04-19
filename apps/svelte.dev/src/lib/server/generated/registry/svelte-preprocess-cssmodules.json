@@ -12,5 +12,24 @@
 	"typescript": true,
 	"version": "3.0.1",
 	"svelte_range": "^5.15.0",
-	"last_rune_check_version": "3.0.1"
+	"last_rune_check_version": "3.0.1",
+	"dependencies": [
+		{
+			"name": "acorn",
+			"semver": "^8.5.0"
+		},
+		{
+			"name": "big.js",
+			"semver": "^6.1.1"
+		},
+		{
+			"name": "estree-walker",
+			"semver": "^2.0.2"
+		},
+		{
+			"name": "magic-string",
+			"semver": "^0.25.7"
+		}
+	],
+	"unpacked_size": 117413
 }

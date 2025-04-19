@@ -5,12 +5,35 @@
 	"authors": ["bishwasbh", "sharktu"],
 	"homepage": "https://github.com/makolabsai/mako-ui-components#readme",
 	"downloads": 220,
-	"updated": "2025-04-11T05:49:02.040Z",
+	"updated": "2025-04-17T02:57:27.183Z",
 	"tags": ["ui"],
 	"runes": true,
 	"typescript": true,
-	"version": "0.0.1-dev.13",
+	"version": "0.0.1-dev.14",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
-	"last_rune_check_version": "0.0.1-dev.13"
+	"last_rune_check_version": "0.0.1-dev.14",
+	"dependencies": [
+		{
+			"name": "dayjs",
+			"semver": "^1.11.13"
+		},
+		{
+			"name": "echarts",
+			"semver": "^5.6.0"
+		},
+		{
+			"name": "svelte-sonner",
+			"semver": "^0.3.28"
+		},
+		{
+			"name": "tailwind-merge",
+			"semver": "^3.0.2"
+		},
+		{
+			"name": "tailwind-variants",
+			"semver": "^1.0.0"
+		}
+	],
+	"unpacked_size": 287883
 }

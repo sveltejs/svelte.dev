@@ -11,5 +11,12 @@
 	"github_stars": 1323,
 	"typescript": false,
 	"version": "0.0.18",
-	"last_rune_check_version": "0.0.18"
+	"last_rune_check_version": "0.0.18",
+	"dependencies": [
+		{
+			"name": "yootils",
+			"semver": "0.0.16"
+		}
+	],
+	"unpacked_size": 15519
 }

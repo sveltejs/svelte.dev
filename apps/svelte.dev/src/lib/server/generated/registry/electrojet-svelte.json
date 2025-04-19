@@ -12,5 +12,44 @@
 	"typescript": false,
 	"version": "0.0.15",
 	"svelte_range": "^3.12.1",
-	"last_rune_check_version": "0.0.15"
+	"last_rune_check_version": "0.0.15",
+	"dependencies": [
+		{
+			"name": "@electrojet/core",
+			"semver": "^0.1.6"
+		},
+		{
+			"name": "chalk",
+			"semver": "^2.4.1"
+		},
+		{
+			"name": "cosmiconfig",
+			"semver": "^5.0.7"
+		},
+		{
+			"name": "cross-spawn",
+			"semver": "^6.0.5"
+		},
+		{
+			"name": "enquirer",
+			"semver": "^2.3.0"
+		},
+		{
+			"name": "html-webpack-plugin",
+			"semver": "^3.2.0"
+		},
+		{
+			"name": "meow",
+			"semver": "^5.0.0"
+		},
+		{
+			"name": "ora",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "svelte-loader",
+			"semver": "^2.13.6"
+		}
+	],
+	"unpacked_size": 7371
 }

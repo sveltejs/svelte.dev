@@ -12,5 +12,60 @@
 	"typescript": true,
 	"version": "0.10.3",
 	"svelte_range": "^4.2.8",
-	"last_rune_check_version": "0.10.3"
+	"last_rune_check_version": "0.10.3",
+	"dependencies": [
+		{
+			"name": "@tsconfig/svelte",
+			"semver": "^5.0.2"
+		},
+		{
+			"name": "cheerio",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "devalue",
+			"semver": "^4.3.2"
+		},
+		{
+			"name": "effection",
+			"semver": "^3.0.3"
+		},
+		{
+			"name": "es-module-lexer",
+			"semver": "^1.5.4"
+		},
+		{
+			"name": "glob",
+			"semver": "^10.3.10"
+		},
+		{
+			"name": "kleur",
+			"semver": "^4.1.5"
+		},
+		{
+			"name": "magic-string",
+			"semver": "^0.30.5"
+		},
+		{
+			"name": "node-html-parser",
+			"semver": "^6.1.13"
+		},
+		{
+			"name": "picomatch",
+			"semver": "^4.0.2"
+		},
+		{
+			"name": "sade",
+			"semver": "^1.8.1"
+		},
+		{
+			"name": "ts-dedent",
+			"semver": "^2.2.0"
+		},
+		{
+			"name": "zod",
+			"semver": "^3.22.4"
+		}
+	],
+	"unpacked_size": 68902
 }

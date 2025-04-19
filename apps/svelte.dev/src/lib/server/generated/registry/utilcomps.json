@@ -13,5 +13,16 @@
 	"version": "2.0.4",
 	"svelte_range": "^3.34.0",
 	"kit_range": "next",
-	"last_rune_check_version": "2.0.4"
+	"last_rune_check_version": "2.0.4",
+	"dependencies": [
+		{
+			"name": "@martinse/svelte-heroicons",
+			"semver": "^0.1.4"
+		},
+		{
+			"name": "svelte2tsx",
+			"semver": "^0.4.5"
+		}
+	],
+	"unpacked_size": 68845
 }

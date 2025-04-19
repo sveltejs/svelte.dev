@@ -11,5 +11,20 @@
 	"version": "1.6.6",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "1.6.6",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@iconify/iconify",
+			"semver": "<=1.0.7"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "sveltestrap",
+			"semver": "github:bestguy/sveltestrap"
+		}
+	],
+	"unpacked_size": 5939
 }

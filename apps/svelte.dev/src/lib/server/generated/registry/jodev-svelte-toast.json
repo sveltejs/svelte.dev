@@ -13,5 +13,12 @@
 	"version": "1.0.0",
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
-	"last_rune_check_version": "1.0.0"
+	"last_rune_check_version": "1.0.0",
+	"dependencies": [
+		{
+			"name": "svelte-french-toast",
+			"semver": "^1.0.3"
+		}
+	],
+	"unpacked_size": 31929
 }

@@ -11,5 +11,40 @@
 	"version": "0.2.9",
 	"svelte_range": "^3.55.0",
 	"last_rune_check_version": "0.2.9",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@claviska/jquery-minicolors",
+			"semver": "^2.3.6"
+		},
+		{
+			"name": "canvg",
+			"semver": "^3.0.10"
+		},
+		{
+			"name": "html-to-image",
+			"semver": "^1.11.11"
+		},
+		{
+			"name": "jquery",
+			"semver": "^3.6.0"
+		},
+		{
+			"name": "jsbarcode",
+			"semver": "^3.11.5"
+		},
+		{
+			"name": "jspdf",
+			"semver": "^2.5.1"
+		},
+		{
+			"name": "nzh",
+			"semver": "1.0.8"
+		},
+		{
+			"name": "socket.io-client",
+			"semver": "^4.5.1"
+		}
+	],
+	"unpacked_size": 2081393
 }

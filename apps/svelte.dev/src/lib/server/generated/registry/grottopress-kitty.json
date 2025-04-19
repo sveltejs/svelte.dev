@@ -5,13 +5,15 @@
 	"authors": ["akadusei"],
 	"homepage": "https://github.com/GrottoPress/kitty#README",
 	"downloads": 24,
-	"updated": "2025-02-24T14:09:14.731Z",
+	"updated": "2025-04-17T10:14:48.057Z",
 	"tags": ["server", "auth"],
 	"runes": true,
 	"github_stars": 16,
 	"typescript": true,
-	"version": "0.13.0",
+	"version": "0.14.0",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
-	"last_rune_check_version": "0.13.0"
+	"last_rune_check_version": "0.14.0",
+	"dependencies": [],
+	"unpacked_size": 25752
 }

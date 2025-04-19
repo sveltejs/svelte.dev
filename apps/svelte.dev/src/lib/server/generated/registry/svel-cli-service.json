@@ -12,5 +12,240 @@
 	"typescript": true,
 	"version": "0.5.0",
 	"svelte_range": "^3.2.0",
-	"last_rune_check_version": "0.5.0"
+	"last_rune_check_version": "0.5.0",
+	"dependencies": [
+		{
+			"name": "@intervolga/optimize-cssnano-plugin",
+			"semver": "^1.0.5"
+		},
+		{
+			"name": "@soda/friendly-errors-webpack-plugin",
+			"semver": "^1.7.1"
+		},
+		{
+			"name": "@svel/cli-overlay",
+			"semver": "^0.5.0"
+		},
+		{
+			"name": "@svel/cli-shared-utils",
+			"semver": "^0.5.0"
+		},
+		{
+			"name": "@vue/component-compiler-utils",
+			"semver": "^2.6.0"
+		},
+		{
+			"name": "@vue/preload-webpack-plugin",
+			"semver": "^1.1.0"
+		},
+		{
+			"name": "@vue/web-component-wrapper",
+			"semver": "^1.2.0"
+		},
+		{
+			"name": "acorn",
+			"semver": "^6.1.1"
+		},
+		{
+			"name": "acorn-walk",
+			"semver": "^6.1.1"
+		},
+		{
+			"name": "address",
+			"semver": "^1.0.3"
+		},
+		{
+			"name": "autoprefixer",
+			"semver": "^9.5.1"
+		},
+		{
+			"name": "browserslist",
+			"semver": "^4.5.4"
+		},
+		{
+			"name": "cache-loader",
+			"semver": "^2.0.1"
+		},
+		{
+			"name": "case-sensitive-paths-webpack-plugin",
+			"semver": "^2.2.0"
+		},
+		{
+			"name": "chalk",
+			"semver": "^2.4.2"
+		},
+		{
+			"name": "cli-highlight",
+			"semver": "^2.1.0"
+		},
+		{
+			"name": "clipboardy",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "cliui",
+			"semver": "^5.0.0"
+		},
+		{
+			"name": "copy-webpack-plugin",
+			"semver": "^4.6.0"
+		},
+		{
+			"name": "css-loader",
+			"semver": "^1.0.1"
+		},
+		{
+			"name": "cssnano",
+			"semver": "^4.1.10"
+		},
+		{
+			"name": "current-script-polyfill",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "debug",
+			"semver": "^4.1.1"
+		},
+		{
+			"name": "dotenv",
+			"semver": "^7.0.0"
+		},
+		{
+			"name": "dotenv-expand",
+			"semver": "^5.1.0"
+		},
+		{
+			"name": "escape-string-regexp",
+			"semver": "^1.0.5"
+		},
+		{
+			"name": "file-loader",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "fs-extra",
+			"semver": "^7.0.1"
+		},
+		{
+			"name": "globby",
+			"semver": "^9.2.0"
+		},
+		{
+			"name": "hash-sum",
+			"semver": "^1.0.2"
+		},
+		{
+			"name": "html-webpack-plugin",
+			"semver": "^3.2.0"
+		},
+		{
+			"name": "launch-editor-middleware",
+			"semver": "^2.2.1"
+		},
+		{
+			"name": "lodash.defaultsdeep",
+			"semver": "^4.6.0"
+		},
+		{
+			"name": "lodash.mapvalues",
+			"semver": "^4.6.0"
+		},
+		{
+			"name": "lodash.transform",
+			"semver": "^4.6.0"
+		},
+		{
+			"name": "mini-css-extract-plugin",
+			"semver": "^0.6.0"
+		},
+		{
+			"name": "minimist",
+			"semver": "^1.2.0"
+		},
+		{
+			"name": "ora",
+			"semver": "^3.4.0"
+		},
+		{
+			"name": "portfinder",
+			"semver": "^1.0.20"
+		},
+		{
+			"name": "postcss-loader",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "read-pkg",
+			"semver": "^5.0.0"
+		},
+		{
+			"name": "semver",
+			"semver": "^6.0.0"
+		},
+		{
+			"name": "slash",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "source-map-url",
+			"semver": "^0.4.0"
+		},
+		{
+			"name": "ssri",
+			"semver": "^6.0.1"
+		},
+		{
+			"name": "string.prototype.padend",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.2.0"
+		},
+		{
+			"name": "svelte-loader",
+			"semver": "^2.13.3"
+		},
+		{
+			"name": "svelte-preprocess",
+			"semver": "^2.6.2"
+		},
+		{
+			"name": "terser-webpack-plugin",
+			"semver": "^1.2.3"
+		},
+		{
+			"name": "thread-loader",
+			"semver": "^2.1.2"
+		},
+		{
+			"name": "url-loader",
+			"semver": "^1.1.2"
+		},
+		{
+			"name": "webpack",
+			"semver": ">=4 < 4.29"
+		},
+		{
+			"name": "webpack-bundle-analyzer",
+			"semver": "^3.3.0"
+		},
+		{
+			"name": "webpack-chain",
+			"semver": "^4.11.0"
+		},
+		{
+			"name": "webpack-dev-server",
+			"semver": "^3.3.1"
+		},
+		{
+			"name": "webpack-merge",
+			"semver": "^4.2.1"
+		},
+		{
+			"name": "yorkie",
+			"semver": "^2.0.0"
+		}
+	],
+	"unpacked_size": 138224
 }

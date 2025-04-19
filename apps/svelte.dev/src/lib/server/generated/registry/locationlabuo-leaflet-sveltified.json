@@ -5,13 +5,40 @@
 	"authors": ["awenzel5"],
 	"homepage": "https://github.com/locationlabuo/leaflet-sveltified#readme",
 	"downloads": 43,
-	"updated": "2024-10-14T21:38:59.388Z",
+	"updated": "2025-04-17T21:01:50.157Z",
 	"tags": ["ui"],
 	"runes": true,
 	"github_stars": 1,
 	"typescript": true,
-	"version": "0.5.2",
+	"version": "0.5.6",
 	"svelte_range": "^5.0.0-next.1",
 	"kit_range": "*",
-	"last_rune_check_version": "0.5.2"
+	"last_rune_check_version": "0.5.6",
+	"dependencies": [
+		{
+			"name": "@types/leaflet.markercluster",
+			"semver": "^1.5.4"
+		},
+		{
+			"name": "esm-env",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "install",
+			"semver": "^0.13.0"
+		},
+		{
+			"name": "leaflet",
+			"semver": "^1.9.4"
+		},
+		{
+			"name": "leaflet.markercluster",
+			"semver": "^1.5.3"
+		},
+		{
+			"name": "npm",
+			"semver": "^10.9.0"
+		}
+	],
+	"unpacked_size": 60618
 }

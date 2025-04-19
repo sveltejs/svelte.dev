@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "11.8.1",
 	"svelte_range": "^4.0.0",
-	"last_rune_check_version": "11.8.1"
+	"last_rune_check_version": "11.8.1",
+	"dependencies": [
+		{
+			"name": "material-components-web",
+			"semver": "^14.0.0"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3 || ^4"
+		}
+	],
+	"unpacked_size": 262579
 }

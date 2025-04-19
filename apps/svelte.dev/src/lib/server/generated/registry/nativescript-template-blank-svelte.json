@@ -32,5 +32,20 @@
 	"typescript": true,
 	"version": "8.9.1",
 	"svelte_range": "~4.2.2",
-	"last_rune_check_version": "8.9.1"
+	"last_rune_check_version": "8.9.1",
+	"dependencies": [
+		{
+			"name": "@nativescript/core",
+			"semver": "~8.9.0"
+		},
+		{
+			"name": "@nativescript/theme",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "@nativescript-community/svelte-native",
+			"semver": "~1.0.29"
+		}
+	],
+	"unpacked_size": 622384
 }

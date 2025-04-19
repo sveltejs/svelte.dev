@@ -5,12 +5,14 @@
 	"authors": ["kumakint"],
 	"homepage": "https://rv-grid.com",
 	"downloads": 11372,
-	"updated": "2025-04-10T15:16:19.736Z",
+	"updated": "2025-04-17T13:51:06.326Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 2894,
 	"typescript": true,
-	"version": "4.15.3",
+	"version": "4.15.5",
 	"svelte_range": "^5.16.1",
-	"last_rune_check_version": "4.15.3"
+	"last_rune_check_version": "4.15.5",
+	"dependencies": [],
+	"unpacked_size": 13500582
 }

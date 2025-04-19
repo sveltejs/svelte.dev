@@ -12,5 +12,28 @@
 	"typescript": false,
 	"version": "10.0.4",
 	"svelte_range": "^3.49.0",
-	"last_rune_check_version": "10.0.4"
+	"last_rune_check_version": "10.0.4",
+	"dependencies": [
+		{
+			"name": "@jdeighan/coffee-utils",
+			"semver": "^10.0.8"
+		},
+		{
+			"name": "@jdeighan/mapper",
+			"semver": "^28.0.16"
+		},
+		{
+			"name": "coffeescript",
+			"semver": "^2.7.0"
+		},
+		{
+			"name": "cross-env",
+			"semver": "^7.0.3"
+		},
+		{
+			"name": "mustache",
+			"semver": "^4.2.0"
+		}
+	],
+	"unpacked_size": 100997
 }

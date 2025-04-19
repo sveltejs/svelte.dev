@@ -13,5 +13,12 @@
 	"version": "2.1.2",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
-	"last_rune_check_version": "2.1.2"
+	"last_rune_check_version": "2.1.2",
+	"dependencies": [
+		{
+			"name": "typed-qparam",
+			"semver": "2.1.15"
+		}
+	],
+	"unpacked_size": 8876
 }

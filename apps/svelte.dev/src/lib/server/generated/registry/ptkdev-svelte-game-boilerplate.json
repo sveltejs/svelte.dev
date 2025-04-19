@@ -12,5 +12,16 @@
 	"typescript": false,
 	"version": "1.0.20211105",
 	"svelte_range": "^3.44.1",
-	"last_rune_check_version": "1.0.20211105"
+	"last_rune_check_version": "1.0.20211105",
+	"dependencies": [
+		{
+			"name": "kaboom",
+			"semver": "^2000.1.0"
+		},
+		{
+			"name": "sirv-cli",
+			"semver": "^1.0.14"
+		}
+	],
+	"unpacked_size": 772359
 }

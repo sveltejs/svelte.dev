@@ -13,5 +13,44 @@
 	"version": "0.1.2",
 	"svelte_range": "^3.55.0",
 	"kit_range": "^1.0.0",
-	"last_rune_check_version": "0.1.2"
+	"last_rune_check_version": "0.1.2",
+	"dependencies": [
+		{
+			"name": "@googlemaps/js-api-loader",
+			"semver": "^1.14.3"
+		},
+		{
+			"name": "@iconify/svelte",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "@popperjs/core",
+			"semver": "^2.11.6"
+		},
+		{
+			"name": "change-case",
+			"semver": "^4.1.2"
+		},
+		{
+			"name": "inputmask",
+			"semver": "^5.0.7"
+		},
+		{
+			"name": "litepicker",
+			"semver": "^2.0.12"
+		},
+		{
+			"name": "moment",
+			"semver": "^2.29.4"
+		},
+		{
+			"name": "swiper",
+			"semver": "^8.4.5"
+		},
+		{
+			"name": "tom-select",
+			"semver": "^2.2.2"
+		}
+	],
+	"unpacked_size": 2506669
 }

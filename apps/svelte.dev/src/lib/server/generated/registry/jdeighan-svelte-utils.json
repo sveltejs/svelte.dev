@@ -11,5 +11,40 @@
 	"version": "3.0.0",
 	"svelte_range": "^5.0.0-next.111",
 	"last_rune_check_version": "3.0.0",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@jdeighan/base-utils",
+			"semver": "^17.0.2"
+		},
+		{
+			"name": "@jdeighan/browser",
+			"semver": "^1.0.3"
+		},
+		{
+			"name": "@prettier/sync",
+			"semver": "^0.5.2"
+		},
+		{
+			"name": "dotenv",
+			"semver": "^16.4.5"
+		},
+		{
+			"name": "favicons",
+			"semver": "^7.2.0"
+		},
+		{
+			"name": "magic-string",
+			"semver": "^0.30.10"
+		},
+		{
+			"name": "svelte",
+			"semver": "^5.0.0-next.111"
+		},
+		{
+			"name": "uuid",
+			"semver": "^9.0.1"
+		}
+	],
+	"unpacked_size": 86402
 }

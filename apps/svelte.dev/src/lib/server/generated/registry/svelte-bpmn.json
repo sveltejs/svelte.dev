@@ -24,5 +24,12 @@
 	"typescript": false,
 	"version": "0.1.0",
 	"svelte_range": "^3.41.0",
-	"last_rune_check_version": "0.1.0"
+	"last_rune_check_version": "0.1.0",
+	"dependencies": [
+		{
+			"name": "bpmn-js",
+			"semver": "^8.7.1"
+		}
+	],
+	"unpacked_size": 345699
 }

@@ -12,5 +12,24 @@
 	"version": "0.0.20",
 	"svelte_range": "^3.43.0",
 	"last_rune_check_version": "0.0.20",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "just-debounce-it",
+			"semver": "^1.5.0"
+		},
+		{
+			"name": "just-diff",
+			"semver": "^3.1.1"
+		},
+		{
+			"name": "klona",
+			"semver": "^2.0.4"
+		},
+		{
+			"name": "pointer-props",
+			"semver": "^1.0.1"
+		}
+	],
+	"unpacked_size": 169065
 }

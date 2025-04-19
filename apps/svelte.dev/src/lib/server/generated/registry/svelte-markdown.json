@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "0.4.1",
 	"svelte_range": "^4.0.0",
-	"last_rune_check_version": "0.4.1"
+	"last_rune_check_version": "0.4.1",
+	"dependencies": [
+		{
+			"name": "@types/marked",
+			"semver": "^5.0.1"
+		},
+		{
+			"name": "marked",
+			"semver": "^5.1.2"
+		}
+	],
+	"unpacked_size": 21311
 }

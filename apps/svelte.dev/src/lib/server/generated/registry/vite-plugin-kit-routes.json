@@ -12,5 +12,20 @@
 	"typescript": true,
 	"version": "0.8.4",
 	"kit_range": "^2.4.0",
-	"last_rune_check_version": "0.8.4"
+	"last_rune_check_version": "0.8.4",
+	"dependencies": [
+		{
+			"name": "@kitql/helpers",
+			"semver": "0.8.12"
+		},
+		{
+			"name": "@kitql/internals",
+			"semver": "0.10.4"
+		},
+		{
+			"name": "vite-plugin-watch-and-run",
+			"semver": "1.7.4"
+		}
+	],
+	"unpacked_size": 132673
 }

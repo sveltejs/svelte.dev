@@ -13,5 +13,92 @@
 	"version": "0.0.15",
 	"svelte_range": ">=5",
 	"kit_range": ">=1.0.0 <3.0.0",
-	"last_rune_check_version": "0.0.15"
+	"last_rune_check_version": "0.0.15",
+	"dependencies": [
+		{
+			"name": "clsx",
+			"semver": "2.1.1"
+		},
+		{
+			"name": "cron",
+			"semver": "4.1.0"
+		},
+		{
+			"name": "vite",
+			"semver": "6.2.2"
+		},
+		{
+			"name": "arctic",
+			"semver": "3.5.0"
+		},
+		{
+			"name": "@mdi/js",
+			"semver": "7.4.47"
+		},
+		{
+			"name": "daisyui",
+			"semver": "4.12.14"
+		},
+		{
+			"name": "esm-env",
+			"semver": "1.2.2"
+		},
+		{
+			"name": "bcryptjs",
+			"semver": "3.0.2"
+		},
+		{
+			"name": "nodemailer",
+			"semver": "6.10.0"
+		},
+		{
+			"name": "@oslojs/otp",
+			"semver": "1.1.0"
+		},
+		{
+			"name": "tailwindcss",
+			"semver": "3.4.4"
+		},
+		{
+			"name": "svelty-email",
+			"semver": "0.0.11"
+		},
+		{
+			"name": "@clack/prompts",
+			"semver": "0.10.0"
+		},
+		{
+			"name": "@oslojs/crypto",
+			"semver": "1.0.1"
+		},
+		{
+			"name": "tailwind-merge",
+			"semver": "2.6.0"
+		},
+		{
+			"name": "@melt-ui/svelte",
+			"semver": "0.86.3"
+		},
+		{
+			"name": "@kitql/internals",
+			"semver": "0.10.4"
+		},
+		{
+			"name": "@oslojs/encoding",
+			"semver": "1.1.0"
+		},
+		{
+			"name": "@types/nodemailer",
+			"semver": "6.4.14"
+		},
+		{
+			"name": "vite-plugin-stripper",
+			"semver": "0.9.0"
+		},
+		{
+			"name": "vite-plugin-kit-routes",
+			"semver": "0.8.4"
+		}
+	],
+	"unpacked_size": 645007
 }

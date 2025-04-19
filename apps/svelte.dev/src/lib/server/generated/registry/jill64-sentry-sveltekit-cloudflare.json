@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "2.0.6",
 	"kit_range": "1.x || 2.x",
-	"last_rune_check_version": "2.0.6"
+	"last_rune_check_version": "2.0.6",
+	"dependencies": [
+		{
+			"name": "@sentry/svelte",
+			"semver": "8.51.0"
+		},
+		{
+			"name": "toucan-js",
+			"semver": "4.1.0"
+		}
+	],
+	"unpacked_size": 1038595
 }

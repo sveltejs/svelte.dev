@@ -13,5 +13,12 @@
 	"version": "0.0.10",
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.5.0",
-	"last_rune_check_version": "0.0.10"
+	"last_rune_check_version": "0.0.10",
+	"dependencies": [
+		{
+			"name": "file-selector",
+			"semver": "^0.2.4"
+		}
+	],
+	"unpacked_size": 41686
 }

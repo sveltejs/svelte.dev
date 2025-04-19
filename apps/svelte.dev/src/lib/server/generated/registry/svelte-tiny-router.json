@@ -5,12 +5,14 @@
 	"authors": ["notnotsamuel"],
 	"homepage": "https://github.com/notnotsamuel/svelte-tiny-router#readme",
 	"downloads": 13,
-	"updated": "2025-03-12T10:15:02.991Z",
+	"updated": "2025-04-17T08:47:09.755Z",
 	"tags": ["router"],
 	"runes": true,
 	"github_stars": 13,
 	"typescript": false,
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"svelte_range": ">=5.0.0",
-	"last_rune_check_version": "1.0.3"
+	"last_rune_check_version": "1.0.4",
+	"dependencies": [],
+	"unpacked_size": 44227
 }

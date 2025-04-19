@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "1.2.1",
 	"svelte_range": "^3.42.6",
-	"last_rune_check_version": "1.2.1"
+	"last_rune_check_version": "1.2.1",
+	"dependencies": [
+		{
+			"name": "tippy.js",
+			"semver": "^6.3.1"
+		}
+	],
+	"unpacked_size": 99135
 }

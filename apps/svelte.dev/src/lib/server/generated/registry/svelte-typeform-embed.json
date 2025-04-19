@@ -12,5 +12,12 @@
 	"typescript": false,
 	"version": "0.4.1",
 	"svelte_range": "^3.26.0",
-	"last_rune_check_version": "0.4.1"
+	"last_rune_check_version": "0.4.1",
+	"dependencies": [
+		{
+			"name": "@typeform/embed",
+			"semver": "^0.25.1"
+		}
+	],
+	"unpacked_size": 217925
 }

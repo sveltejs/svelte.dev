@@ -12,5 +12,60 @@
 	"typescript": true,
 	"version": "0.0.5",
 	"svelte_range": "^5.20.2",
-	"last_rune_check_version": "0.0.5"
+	"last_rune_check_version": "0.0.5",
+	"dependencies": [
+		{
+			"name": "@shikijs/transformers",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "rehype-callouts",
+			"semver": "^2.0.1"
+		},
+		{
+			"name": "rehype-parse",
+			"semver": "^9.0.1"
+		},
+		{
+			"name": "rehype-preset-minify",
+			"semver": "^7.0.1"
+		},
+		{
+			"name": "rehype-sanitize",
+			"semver": "^6.0.0"
+		},
+		{
+			"name": "rehype-stringify",
+			"semver": "^10.0.1"
+		},
+		{
+			"name": "remark-frontmatter",
+			"semver": "^5.0.0"
+		},
+		{
+			"name": "remark-gfm",
+			"semver": "^4.0.1"
+		},
+		{
+			"name": "remark-parse",
+			"semver": "^11.0.0"
+		},
+		{
+			"name": "remark-rehype",
+			"semver": "^11.1.1"
+		},
+		{
+			"name": "shiki",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "unified",
+			"semver": "^11.0.5"
+		},
+		{
+			"name": "vfile-matter",
+			"semver": "^5.0.0"
+		}
+	],
+	"unpacked_size": 66443
 }

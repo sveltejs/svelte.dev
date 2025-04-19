@@ -12,5 +12,56 @@
 	"typescript": true,
 	"version": "0.9.4",
 	"svelte_range": "^4.2.1",
-	"last_rune_check_version": "0.9.4"
+	"last_rune_check_version": "0.9.4",
+	"dependencies": [
+		{
+			"name": "kolorist",
+			"semver": "^1.8.0"
+		},
+		{
+			"name": "minimist",
+			"semver": "^1.2.8"
+		},
+		{
+			"name": "mustache",
+			"semver": "^4.2.0"
+		},
+		{
+			"name": "prompts",
+			"semver": "^2.4.2"
+		},
+		{
+			"name": "@types/minimist",
+			"semver": "^1.2.3"
+		},
+		{
+			"name": "@types/mustache",
+			"semver": "^4.2.3"
+		},
+		{
+			"name": "@types/node",
+			"semver": "^20.8.4"
+		},
+		{
+			"name": "@types/prompts",
+			"semver": "^2.4.6"
+		},
+		{
+			"name": "prettier",
+			"semver": "^3.0.3"
+		},
+		{
+			"name": "prettier-plugin-svelte",
+			"semver": "^3.0.3"
+		},
+		{
+			"name": "svelte",
+			"semver": "^4.2.1"
+		},
+		{
+			"name": "typescript",
+			"semver": "^5.2.2"
+		}
+	],
+	"unpacked_size": 736945
 }

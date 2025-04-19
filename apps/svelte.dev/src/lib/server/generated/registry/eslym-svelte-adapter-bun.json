@@ -12,5 +12,28 @@
 	"typescript": true,
 	"version": "0.5.9",
 	"kit_range": "^1.30.4",
-	"last_rune_check_version": "0.5.9"
+	"last_rune_check_version": "0.5.9",
+	"dependencies": [
+		{
+			"name": "@rollup/plugin-commonjs",
+			"semver": "^25.0.7"
+		},
+		{
+			"name": "@rollup/plugin-json",
+			"semver": "^6.1.0"
+		},
+		{
+			"name": "@rollup/plugin-node-resolve",
+			"semver": "^15.2.3"
+		},
+		{
+			"name": "rollup",
+			"semver": "^4.12.1"
+		},
+		{
+			"name": "tiny-glob",
+			"semver": "^0.2.9"
+		}
+	],
+	"unpacked_size": 42834
 }

@@ -12,5 +12,16 @@
 	"typescript": false,
 	"version": "0.0.1",
 	"svelte_range": "^3.5.0",
-	"last_rune_check_version": "0.0.1"
+	"last_rune_check_version": "0.0.1",
+	"dependencies": [
+		{
+			"name": "ant-rare-words-utils",
+			"semver": "^0.0.10"
+		},
+		{
+			"name": "lodash",
+			"semver": "^4.17.21"
+		}
+	],
+	"unpacked_size": 1262455
 }

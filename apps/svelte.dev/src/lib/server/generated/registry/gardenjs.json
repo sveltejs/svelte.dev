@@ -12,5 +12,40 @@
 	"typescript": false,
 	"version": "1.4.1",
 	"svelte_range": "5.17.3",
-	"last_rune_check_version": "1.4.1"
+	"last_rune_check_version": "1.4.1",
+	"dependencies": [
+		{
+			"name": "@inquirer/checkbox",
+			"semver": "1.5.0"
+		},
+		{
+			"name": "@inquirer/prompts",
+			"semver": "3.3.0"
+		},
+		{
+			"name": "@inquirer/select",
+			"semver": "^2.0.0"
+		},
+		{
+			"name": "highlight.js",
+			"semver": "11.10.0"
+		},
+		{
+			"name": "marked",
+			"semver": "4.3.0"
+		},
+		{
+			"name": "node-watch",
+			"semver": "0.7.4"
+		},
+		{
+			"name": "open",
+			"semver": "10.1.0"
+		},
+		{
+			"name": "vite-node",
+			"semver": "2.1.8"
+		}
+	],
+	"unpacked_size": 1295359
 }

@@ -13,5 +13,52 @@
 	"version": "0.150.1",
 	"svelte_range": "^5",
 	"kit_range": "^2.20.5",
-	"last_rune_check_version": "0.150.1"
+	"last_rune_check_version": "0.150.1",
+	"dependencies": [
+		{
+			"name": "@ryanatkn/belt",
+			"semver": "^0.30.2"
+		},
+		{
+			"name": "chokidar",
+			"semver": "^4.0.3"
+		},
+		{
+			"name": "dotenv",
+			"semver": "^16.5.0"
+		},
+		{
+			"name": "esm-env",
+			"semver": "^1.2.2"
+		},
+		{
+			"name": "mri",
+			"semver": "^1.2.0"
+		},
+		{
+			"name": "oxc-parser",
+			"semver": "^0.63.0"
+		},
+		{
+			"name": "prettier",
+			"semver": "^3.5.3"
+		},
+		{
+			"name": "prettier-plugin-svelte",
+			"semver": "^3.3.3"
+		},
+		{
+			"name": "ts-morph",
+			"semver": "^25.0.1"
+		},
+		{
+			"name": "tslib",
+			"semver": "^2.8.1"
+		},
+		{
+			"name": "zod",
+			"semver": "^3.24.2"
+		}
+	],
+	"unpacked_size": 825010
 }

@@ -12,5 +12,44 @@
 	"typescript": true,
 	"version": "3.0.20",
 	"svelte_range": "^3.0.0 || ^4.0.0",
-	"last_rune_check_version": "3.0.20"
+	"last_rune_check_version": "3.0.20",
+	"dependencies": [
+		{
+			"name": "eventsource-parser",
+			"semver": "1.0.0"
+		},
+		{
+			"name": "jsondiffpatch",
+			"semver": "^0.6.0"
+		},
+		{
+			"name": "nanoid",
+			"semver": "3.3.6"
+		},
+		{
+			"name": "solid-swr-store",
+			"semver": "0.10.7"
+		},
+		{
+			"name": "sswr",
+			"semver": "2.0.0"
+		},
+		{
+			"name": "swr",
+			"semver": "2.2.0"
+		},
+		{
+			"name": "swr-store",
+			"semver": "0.10.6"
+		},
+		{
+			"name": "swrv",
+			"semver": "1.0.4"
+		},
+		{
+			"name": "zod-to-json-schema",
+			"semver": "^3.22.4"
+		}
+	],
+	"unpacked_size": 1732703
 }

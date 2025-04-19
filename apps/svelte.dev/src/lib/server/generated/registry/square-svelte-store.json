@@ -29,5 +29,12 @@
 	"typescript": true,
 	"version": "1.0.18",
 	"svelte_range": ">= 3.0.0 < 5.0.0",
-	"last_rune_check_version": "1.0.18"
+	"last_rune_check_version": "1.0.18",
+	"dependencies": [
+		{
+			"name": "cookie-storage",
+			"semver": "^6.1.0"
+		}
+	],
+	"unpacked_size": 145426
 }

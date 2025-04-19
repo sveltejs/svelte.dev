@@ -13,5 +13,20 @@
 	"version": "2.1.0",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.0.0",
-	"last_rune_check_version": "2.1.0"
+	"last_rune_check_version": "2.1.0",
+	"dependencies": [
+		{
+			"name": "@types/node",
+			"semver": "^20.10.0"
+		},
+		{
+			"name": "commander",
+			"semver": "^11.1.0"
+		},
+		{
+			"name": "ts-node",
+			"semver": "^10.9.1"
+		}
+	],
+	"unpacked_size": 215288
 }

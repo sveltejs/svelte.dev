@@ -12,5 +12,24 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.0.6",
 	"last_rune_check_version": "0.0.11",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@auth/core",
+			"semver": "^0.32.0"
+		},
+		{
+			"name": "@auth/sveltekit",
+			"semver": "^1.1.0"
+		},
+		{
+			"name": "@sveltejs/kit",
+			"semver": "^2.0.6"
+		},
+		{
+			"name": "stripe",
+			"semver": "^14.14.0"
+		}
+	],
+	"unpacked_size": 24076
 }

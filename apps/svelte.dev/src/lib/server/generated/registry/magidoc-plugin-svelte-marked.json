@@ -13,5 +13,20 @@
 	"version": "6.2.0",
 	"svelte_range": "4.2.19",
 	"kit_range": "2.6.1",
-	"last_rune_check_version": "6.2.0"
+	"last_rune_check_version": "6.2.0",
+	"dependencies": [
+		{
+			"name": "github-slugger",
+			"semver": "2.0.0"
+		},
+		{
+			"name": "marked",
+			"semver": "14.1.2"
+		},
+		{
+			"name": "svelte",
+			"semver": "4.2.19"
+		}
+	],
+	"unpacked_size": 37828
 }

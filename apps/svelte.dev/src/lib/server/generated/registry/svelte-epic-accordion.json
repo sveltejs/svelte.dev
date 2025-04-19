@@ -11,5 +11,12 @@
 	"version": "0.0.6",
 	"svelte_range": "^4.2.1",
 	"last_rune_check_version": "0.0.6",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@changesets/cli",
+			"semver": "^2.26.2"
+		}
+	],
+	"unpacked_size": 17710
 }

@@ -13,5 +13,12 @@
 	"version": "0.0.5",
 	"svelte_range": "^3.46.0",
 	"kit_range": "next",
-	"last_rune_check_version": "0.0.5"
+	"last_rune_check_version": "0.0.5",
+	"dependencies": [
+		{
+			"name": "jsqr",
+			"semver": "^1.4.0"
+		}
+	],
+	"unpacked_size": 13935
 }

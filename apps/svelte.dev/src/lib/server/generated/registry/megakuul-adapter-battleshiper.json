@@ -12,5 +12,16 @@
 	"typescript": true,
 	"version": "0.5.8",
 	"kit_range": "^2.4.0",
-	"last_rune_check_version": "0.5.8"
+	"last_rune_check_version": "0.5.8",
+	"dependencies": [
+		{
+			"name": "adm-zip",
+			"semver": "^0.5.16"
+		},
+		{
+			"name": "esbuild",
+			"semver": "^0.23.1"
+		}
+	],
+	"unpacked_size": 7272
 }

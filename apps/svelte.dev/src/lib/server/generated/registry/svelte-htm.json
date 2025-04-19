@@ -12,5 +12,28 @@
 	"typescript": true,
 	"version": "1.2.0",
 	"svelte_range": "3.x",
-	"last_rune_check_version": "1.2.0"
+	"last_rune_check_version": "1.2.0",
+	"dependencies": [
+		{
+			"name": "@babel/runtime-corejs3",
+			"semver": "^7.19.0"
+		},
+		{
+			"name": "core-js",
+			"semver": "^3.25.1"
+		},
+		{
+			"name": "htm",
+			"semver": "^3.1.1"
+		},
+		{
+			"name": "svelte-fragment-component",
+			"semver": "^1.2.0"
+		},
+		{
+			"name": "svelte-hyperscript",
+			"semver": "^1.2.1"
+		}
+	],
+	"unpacked_size": 142198
 }

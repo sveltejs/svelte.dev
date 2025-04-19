@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "0.3.0",
 	"svelte_range": "^4.2.19",
-	"last_rune_check_version": "0.3.0"
+	"last_rune_check_version": "0.3.0",
+	"dependencies": [
+		{
+			"name": "vite",
+			"semver": "^5.4.10"
+		}
+	],
+	"unpacked_size": 12521
 }

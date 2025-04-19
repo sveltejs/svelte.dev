@@ -12,5 +12,24 @@
 	"typescript": true,
 	"version": "0.3.0",
 	"kit_range": "^2.16.1",
-	"last_rune_check_version": "0.3.0"
+	"last_rune_check_version": "0.3.0",
+	"dependencies": [
+		{
+			"name": "bun-types",
+			"semver": "^1.2.0"
+		},
+		{
+			"name": "typescript",
+			"semver": "^5.7.3"
+		},
+		{
+			"name": "undici-types",
+			"semver": "^6.20.0"
+		},
+		{
+			"name": "@sveltejs/vite-plugin-svelte",
+			"semver": "^5.0.1"
+		}
+	],
+	"unpacked_size": 32641
 }

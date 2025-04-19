@@ -12,5 +12,12 @@
 	"typescript": true,
 	"version": "0.1.6",
 	"svelte_range": "^3.0.0",
-	"last_rune_check_version": "0.1.6"
+	"last_rune_check_version": "0.1.6",
+	"dependencies": [
+		{
+			"name": "immer",
+			"semver": "^9.0.12"
+		}
+	],
+	"unpacked_size": 162286
 }

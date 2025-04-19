@@ -11,5 +11,20 @@
 	"version": "0.0.8",
 	"svelte_range": "^3.31.2",
 	"last_rune_check_version": "0.0.8",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "lodash.clone",
+			"semver": "^4.5.0"
+		},
+		{
+			"name": "lodash.topath",
+			"semver": "^4.5.2"
+		},
+		{
+			"name": "yup",
+			"semver": "^0.32.8"
+		}
+	],
+	"unpacked_size": 720489
 }

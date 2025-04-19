@@ -12,5 +12,16 @@
 	"runes": true,
 	"last_rune_check_version": "0.2.0",
 	"version": "0.2.0",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "@zag-js/menu",
+			"semver": "^1.7.0"
+		},
+		{
+			"name": "@zag-js/svelte",
+			"semver": "^1.7.0"
+		}
+	],
+	"unpacked_size": 12362
 }

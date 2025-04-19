@@ -12,5 +12,84 @@
 	"typescript": true,
 	"version": "0.17.12",
 	"svelte_range": "^4.2.19",
-	"last_rune_check_version": "0.17.12"
+	"last_rune_check_version": "0.17.12",
+	"dependencies": [
+		{
+			"name": "@jridgewell/trace-mapping",
+			"semver": "^0.3.25"
+		},
+		{
+			"name": "@vscode/emmet-helper",
+			"semver": "2.8.4"
+		},
+		{
+			"name": "chokidar",
+			"semver": "^4.0.1"
+		},
+		{
+			"name": "estree-walker",
+			"semver": "^2.0.1"
+		},
+		{
+			"name": "fdir",
+			"semver": "^6.2.0"
+		},
+		{
+			"name": "globrex",
+			"semver": "^0.1.2"
+		},
+		{
+			"name": "lodash",
+			"semver": "^4.17.21"
+		},
+		{
+			"name": "prettier",
+			"semver": "~3.3.3"
+		},
+		{
+			"name": "prettier-plugin-svelte",
+			"semver": "^3.3.0"
+		},
+		{
+			"name": "svelte",
+			"semver": "^4.2.19"
+		},
+		{
+			"name": "typescript",
+			"semver": "^5.8.2"
+		},
+		{
+			"name": "typescript-auto-import-cache",
+			"semver": "^0.3.5"
+		},
+		{
+			"name": "vscode-css-languageservice",
+			"semver": "~6.3.2"
+		},
+		{
+			"name": "vscode-html-languageservice",
+			"semver": "~5.3.2"
+		},
+		{
+			"name": "vscode-languageserver",
+			"semver": "9.0.1"
+		},
+		{
+			"name": "vscode-languageserver-protocol",
+			"semver": "3.17.5"
+		},
+		{
+			"name": "vscode-languageserver-types",
+			"semver": "3.17.5"
+		},
+		{
+			"name": "vscode-uri",
+			"semver": "~3.0.0"
+		},
+		{
+			"name": "svelte2tsx",
+			"semver": "~0.7.35"
+		}
+	],
+	"unpacked_size": 1513638
 }

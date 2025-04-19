@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 import { PACKAGES_META } from '../../src/lib/packages-meta.js';
 import type { Package } from '../../src/lib/server/content.js';
 import svelte_society_list from '../../src/lib/society-npm.json' with { type: 'json' };
-import { sort_packages } from '../../src/routes/(packages)/packages/packages-search.js';
+import { sort_downloads } from '../../src/routes/packages/search.js';
 import {
 	composite_runes_types_check,
 	fetch_downloads_for_package,
@@ -636,7 +636,7 @@ async function remove_forks() {
 	const to_delete_packages = new Set<string>();
 	for (const set of repo_url_to_interim_package.values()) {
 		// find the most popular package
-		const max = Array.from(set).sort((a, b) => sort_packages(a, b, 'popularity'))[0];
+		const max = Array.from(set).sort((a, b) => sort_downloads(a, b))[0];
 
 		// Now, delete entries from set where not even one author is in the max package
 		for (const pkg of set) {
@@ -732,6 +732,17 @@ async function update_cache(update_stats = true) {
 		delete data.svelte5;
 		// @ts-expect-error
 		delete data.dependents;
+		// @ts-expect-error
+		delete data.unpackedSize;
+
+		data.dependencies = Object.entries(latest_package_json.dependencies ?? {}).map(
+			([name, version]) => ({
+				name,
+				semver: version as string
+			})
+		);
+
+		data.unpacked_size = latest_package_json.dist.unpackedSize;
 
 		const { runes, types } = await composite_runes_types_check(
 			pkg_name,
@@ -880,7 +891,7 @@ for (let i = 0; i < 1; i++) {
 
 // await update_overrides();
 
-update_cache();
+update_cache(false);
 
 // update_composite_ts_runes_data();
 

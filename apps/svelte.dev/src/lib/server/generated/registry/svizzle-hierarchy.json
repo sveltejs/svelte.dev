@@ -12,5 +12,24 @@
 	"typescript": false,
 	"version": "0.1.0",
 	"svelte_range": "^3.59.2",
-	"last_rune_check_version": "0.1.0"
+	"last_rune_check_version": "0.1.0",
+	"dependencies": [
+		{
+			"name": "@svizzle/ui",
+			"semver": "^0.13.0"
+		},
+		{
+			"name": "@svizzle/utils",
+			"semver": "^0.21.0"
+		},
+		{
+			"name": "d3-hierarchy",
+			"semver": "^3.1.2"
+		},
+		{
+			"name": "lamb",
+			"semver": "^0.61.1"
+		}
+	],
+	"unpacked_size": 9006
 }

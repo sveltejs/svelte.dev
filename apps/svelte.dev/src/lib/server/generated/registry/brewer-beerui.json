@@ -13,5 +13,36 @@
 	"version": "1.1.17",
 	"svelte_range": "^3.55.1",
 	"kit_range": "1.10.0",
-	"last_rune_check_version": "1.1.17"
+	"last_rune_check_version": "1.1.17",
+	"dependencies": [
+		{
+			"name": "@sveltejs/kit",
+			"semver": "1.10.0"
+		},
+		{
+			"name": "acorn",
+			"semver": "^8.8.0"
+		},
+		{
+			"name": "async-validator",
+			"semver": "^4.2.5"
+		},
+		{
+			"name": "autoprefixer",
+			"semver": "^10.4.12"
+		},
+		{
+			"name": "cssnano",
+			"semver": "^5.1.13"
+		},
+		{
+			"name": "postcss",
+			"semver": "^8.4.16"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.55.1"
+		}
+	],
+	"unpacked_size": 1033189
 }

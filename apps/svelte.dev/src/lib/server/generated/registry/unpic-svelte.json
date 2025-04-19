@@ -13,5 +13,16 @@
 	"version": "1.0.0",
 	"svelte_range": "^5",
 	"kit_range": "^2.9.0",
-	"last_rune_check_version": "1.0.0"
+	"last_rune_check_version": "1.0.0",
+	"dependencies": [
+		{
+			"name": "style-object-to-css-string",
+			"semver": "1.1.3"
+		},
+		{
+			"name": "@unpic/core",
+			"semver": "^1.0.0"
+		}
+	],
+	"unpacked_size": 10186
 }

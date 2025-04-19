@@ -5,13 +5,20 @@
 	"authors": ["takamunesuda"],
 	"homepage": "https://github.com/takamunesuda/svecium#readme",
 	"downloads": 8,
-	"updated": "2025-03-23T06:30:23.685Z",
+	"updated": "2025-04-17T03:33:32.524Z",
 	"tags": ["ui"],
 	"runes": true,
 	"github_stars": 3,
 	"typescript": true,
-	"version": "0.0.1",
+	"version": "0.0.12",
 	"svelte_range": "^5.x",
 	"kit_range": "^2.16.0",
-	"last_rune_check_version": "0.0.1"
+	"last_rune_check_version": "0.0.12",
+	"dependencies": [
+		{
+			"name": "cesium-mvt-imagery-provider",
+			"semver": "^1.4.1"
+		}
+	],
+	"unpacked_size": 37516
 }

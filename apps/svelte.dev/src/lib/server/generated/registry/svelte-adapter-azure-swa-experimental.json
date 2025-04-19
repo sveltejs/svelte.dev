@@ -12,5 +12,16 @@
 	"version": "0.21.12",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.21.12",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "esbuild",
+			"semver": "^0.25.0"
+		},
+		{
+			"name": "set-cookie-parser",
+			"semver": "^2.6.0"
+		}
+	],
+	"unpacked_size": 34273
 }

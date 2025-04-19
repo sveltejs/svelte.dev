@@ -12,5 +12,64 @@
 	"typescript": true,
 	"version": "0.10.1",
 	"svelte_range": "3.2.0",
-	"last_rune_check_version": "0.10.1"
+	"last_rune_check_version": "0.10.1",
+	"dependencies": [
+		{
+			"name": "cosmiconfig",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "lodash",
+			"semver": "^4.17.10"
+		},
+		{
+			"name": "prettier",
+			"semver": "1.17.0"
+		},
+		{
+			"name": "prettier-plugin-svelte",
+			"semver": "0.5.1"
+		},
+		{
+			"name": "sinon",
+			"semver": "^4.5.0"
+		},
+		{
+			"name": "source-map",
+			"semver": "^0.7.3"
+		},
+		{
+			"name": "svelte",
+			"semver": "3.2.0"
+		},
+		{
+			"name": "typescript",
+			"semver": "3.4.5"
+		},
+		{
+			"name": "vscode-css-languageservice",
+			"semver": "3.0.13"
+		},
+		{
+			"name": "vscode-emmet-helper",
+			"semver": "1.2.15"
+		},
+		{
+			"name": "vscode-html-languageservice",
+			"semver": "2.1.12"
+		},
+		{
+			"name": "vscode-languageserver",
+			"semver": "5.2.1"
+		},
+		{
+			"name": "vscode-languageserver-types",
+			"semver": "3.14.0"
+		},
+		{
+			"name": "vscode-uri",
+			"semver": "1.0.6"
+		}
+	],
+	"unpacked_size": 213021
 }

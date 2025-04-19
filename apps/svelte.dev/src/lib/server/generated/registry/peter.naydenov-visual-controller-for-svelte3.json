@@ -12,5 +12,12 @@
 	"typescript": false,
 	"version": "2.1.2",
 	"svelte_range": "^4.2.19",
-	"last_rune_check_version": "2.1.2"
+	"last_rune_check_version": "2.1.2",
+	"dependencies": [
+		{
+			"name": "ask-for-promise",
+			"semver": "^3.0.1"
+		}
+	],
+	"unpacked_size": 27244
 }

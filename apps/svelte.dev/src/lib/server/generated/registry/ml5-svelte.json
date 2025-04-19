@@ -13,5 +13,16 @@
 	"version": "0.2.5",
 	"svelte_range": "^3.53.1",
 	"kit_range": "next",
-	"last_rune_check_version": "0.2.5"
+	"last_rune_check_version": "0.2.5",
+	"dependencies": [
+		{
+			"name": "ml5",
+			"semver": "^0.12.2"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.53.1"
+		}
+	],
+	"unpacked_size": 6403
 }

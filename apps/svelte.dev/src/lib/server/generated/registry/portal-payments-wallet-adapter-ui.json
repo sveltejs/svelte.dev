@@ -13,5 +13,24 @@
 	"version": "2.3.0",
 	"svelte_range": "^3.46.2",
 	"kit_range": "^1.20.1",
-	"last_rune_check_version": "2.3.0"
+	"last_rune_check_version": "2.3.0",
+	"dependencies": [
+		{
+			"name": "@portal-payments/solana-wallet-names",
+			"semver": "^2.1.0"
+		},
+		{
+			"name": "@solana/web3.js",
+			"semver": "^1.77.3"
+		},
+		{
+			"name": "eventemitter3",
+			"semver": "^4.0.7"
+		},
+		{
+			"name": "svelte",
+			"semver": "^3.46.2"
+		}
+	],
+	"unpacked_size": 74847
 }

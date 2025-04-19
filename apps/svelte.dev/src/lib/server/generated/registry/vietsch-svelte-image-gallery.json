@@ -12,5 +12,24 @@
 	"version": "1.1.2",
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.0.0",
-	"last_rune_check_version": "1.1.2"
+	"last_rune_check_version": "1.1.2",
+	"dependencies": [
+		{
+			"name": "@react2svelte/swipable",
+			"semver": "^0.1.4"
+		},
+		{
+			"name": "@react2svelte/swipeable",
+			"semver": "^0.1.4"
+		},
+		{
+			"name": "clsx",
+			"semver": "^1.2.1"
+		},
+		{
+			"name": "throttle-debounce",
+			"semver": "^5.0.0"
+		}
+	],
+	"unpacked_size": 105880
 }

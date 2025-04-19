@@ -13,5 +13,20 @@
 	"version": "4.1.0",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.27.6",
-	"last_rune_check_version": "4.1.0"
+	"last_rune_check_version": "4.1.0",
+	"dependencies": [
+		{
+			"name": "@untemps/svelte-use-drop-outside",
+			"semver": "^1.6.0"
+		},
+		{
+			"name": "@untemps/svelte-use-tooltip",
+			"semver": "^2.8.0"
+		},
+		{
+			"name": "@untemps/utils",
+			"semver": "^3.0.0"
+		}
+	],
+	"unpacked_size": 69890
 }

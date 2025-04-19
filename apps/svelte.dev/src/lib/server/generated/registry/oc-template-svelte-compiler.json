@@ -12,5 +12,24 @@
 	"typescript": true,
 	"version": "0.0.8",
 	"svelte_range": "^5.23.0",
-	"last_rune_check_version": "0.0.8"
+	"last_rune_check_version": "0.0.8",
+	"dependencies": [
+		{
+			"name": "@sveltejs/vite-plugin-svelte",
+			"semver": "^5.0.3"
+		},
+		{
+			"name": "oc-template-svelte",
+			"semver": "^0.0.2"
+		},
+		{
+			"name": "oc-vite-compiler",
+			"semver": "^4.1.2"
+		},
+		{
+			"name": "svelte",
+			"semver": "^5.23.0"
+		}
+	],
+	"unpacked_size": 71031
 }

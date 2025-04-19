@@ -11,5 +11,180 @@
 	"homepage": "https://sveltematerialui.com/",
 	"typescript": false,
 	"version": "8.0.0-beta.3",
-	"last_rune_check_version": "8.0.0-beta.3"
+	"last_rune_check_version": "8.0.0-beta.3",
+	"dependencies": [
+		{
+			"name": "@smui-extra/accordion",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui-extra/autocomplete",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui-extra/badge",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui-extra/bottom-app-bar",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui-extra/chip-input",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/banner",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/button",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/card",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/checkbox",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/chips",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/circular-progress",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/common",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/data-table",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/dialog",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/drawer",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/fab",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/floating-label",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/form-field",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/icon-button",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/image-list",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/layout-grid",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/line-ripple",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/linear-progress",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/list",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/menu",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/menu-surface",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/notched-outline",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/paper",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/radio",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/ripple",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/segmented-button",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/select",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/slider",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/snackbar",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/switch",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/tab",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/tab-bar",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/tab-indicator",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/tab-scroller",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/textfield",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/tooltip",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/top-app-bar",
+			"semver": "^8.0.0-beta.3"
+		},
+		{
+			"name": "@smui/touch-target",
+			"semver": "^8.0.0-beta.3"
+		}
+	],
+	"unpacked_size": 8144253
 }

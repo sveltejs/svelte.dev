@@ -13,5 +13,116 @@
 	"version": "1.0.8",
 	"svelte_range": "^3.56.0 || ^4.0.0 || ^5.0.0",
 	"kit_range": "^2.17.3",
-	"last_rune_check_version": "1.0.8"
+	"last_rune_check_version": "1.0.8",
+	"dependencies": [
+		{
+			"name": "@dagrejs/dagre",
+			"semver": "^1.1.4"
+		},
+		{
+			"name": "@layerstack/svelte-actions",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "@layerstack/svelte-stores",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "@layerstack/tailwind",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "@layerstack/utils",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "d3-array",
+			"semver": "^3.2.4"
+		},
+		{
+			"name": "d3-color",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "d3-delaunay",
+			"semver": "^6.0.4"
+		},
+		{
+			"name": "d3-dsv",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "d3-force",
+			"semver": "^3.0.0"
+		},
+		{
+			"name": "d3-geo",
+			"semver": "^3.1.1"
+		},
+		{
+			"name": "d3-geo-voronoi",
+			"semver": "^2.1.0"
+		},
+		{
+			"name": "d3-hierarchy",
+			"semver": "^3.1.2"
+		},
+		{
+			"name": "d3-interpolate",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "d3-interpolate-path",
+			"semver": "^2.3.0"
+		},
+		{
+			"name": "d3-path",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "d3-quadtree",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "d3-random",
+			"semver": "^3.0.1"
+		},
+		{
+			"name": "d3-sankey",
+			"semver": "^0.12.3"
+		},
+		{
+			"name": "d3-scale",
+			"semver": "^4.0.2"
+		},
+		{
+			"name": "d3-scale-chromatic",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "d3-shape",
+			"semver": "^3.2.0"
+		},
+		{
+			"name": "d3-tile",
+			"semver": "^1.0.0"
+		},
+		{
+			"name": "d3-time",
+			"semver": "^3.1.0"
+		},
+		{
+			"name": "date-fns",
+			"semver": "^4.1.0"
+		},
+		{
+			"name": "layercake",
+			"semver": "^8.4.2"
+		},
+		{
+			"name": "lodash-es",
+			"semver": "^4.17.21"
+		}
+	],
+	"unpacked_size": 602575
 }

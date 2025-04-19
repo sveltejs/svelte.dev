@@ -12,5 +12,52 @@
 	"version": "0.0.2",
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
-	"last_rune_check_version": "0.0.2"
+	"last_rune_check_version": "0.0.2",
+	"dependencies": [
+		{
+			"name": "@types/fs-extra",
+			"semver": "^9.0.13"
+		},
+		{
+			"name": "esm",
+			"semver": "^3.2.25"
+		},
+		{
+			"name": "fontello-batch-cli",
+			"semver": "^4.0.0"
+		},
+		{
+			"name": "fontello-cli",
+			"semver": "^0.6.2"
+		},
+		{
+			"name": "lodash",
+			"semver": "^4.17.21"
+		},
+		{
+			"name": "needle",
+			"semver": "^2.6.0"
+		},
+		{
+			"name": "open",
+			"semver": "^7.4.2"
+		},
+		{
+			"name": "svelte2tsx",
+			"semver": "^0.5.7"
+		},
+		{
+			"name": "svgpath",
+			"semver": "^2.3.1"
+		},
+		{
+			"name": "unzip",
+			"semver": "^0.1.11"
+		},
+		{
+			"name": "xmldom",
+			"semver": "^0.3.0"
+		}
+	],
+	"unpacked_size": 1369859
 }

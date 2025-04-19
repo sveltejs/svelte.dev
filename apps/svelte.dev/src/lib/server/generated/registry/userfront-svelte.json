@@ -13,5 +13,12 @@
 	"version": "0.1.1",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.20.2",
-	"last_rune_check_version": "0.1.1"
+	"last_rune_check_version": "0.1.1",
+	"dependencies": [
+		{
+			"name": "@sveltejs/kit",
+			"semver": "^2.20.2"
+		}
+	],
+	"unpacked_size": 14371
 }

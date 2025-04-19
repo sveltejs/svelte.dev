@@ -12,5 +12,64 @@
 	"typescript": true,
 	"version": "3.3.8",
 	"svelte_range": "^3.0.0 || ^4.0.0",
-	"last_rune_check_version": "3.3.8"
+	"last_rune_check_version": "3.3.8",
+	"dependencies": [
+		{
+			"name": "@ai-sdk/provider",
+			"semver": "0.0.19"
+		},
+		{
+			"name": "@ai-sdk/provider-utils",
+			"semver": "1.0.11"
+		},
+		{
+			"name": "@ai-sdk/react",
+			"semver": "0.0.43"
+		},
+		{
+			"name": "@ai-sdk/solid",
+			"semver": "0.0.34"
+		},
+		{
+			"name": "@ai-sdk/svelte",
+			"semver": "0.0.36"
+		},
+		{
+			"name": "@ai-sdk/ui-utils",
+			"semver": "0.0.31"
+		},
+		{
+			"name": "@ai-sdk/vue",
+			"semver": "0.0.35"
+		},
+		{
+			"name": "@opentelemetry/api",
+			"semver": "1.9.0"
+		},
+		{
+			"name": "eventsource-parser",
+			"semver": "1.1.2"
+		},
+		{
+			"name": "jsondiffpatch",
+			"semver": "0.6.0"
+		},
+		{
+			"name": "json-schema",
+			"semver": "0.4.0"
+		},
+		{
+			"name": "nanoid",
+			"semver": "3.3.6"
+		},
+		{
+			"name": "secure-json-parse",
+			"semver": "2.7.0"
+		},
+		{
+			"name": "zod-to-json-schema",
+			"semver": "3.22.5"
+		}
+	],
+	"unpacked_size": 1951319
 }

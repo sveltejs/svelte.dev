@@ -13,5 +13,24 @@
 	"version": "1.0.3",
 	"svelte_range": "^5.0.0",
 	"kit_range": "2.9.0",
-	"last_rune_check_version": "1.0.3"
+	"last_rune_check_version": "1.0.3",
+	"dependencies": [
+		{
+			"name": "@fluent/dom",
+			"semver": "^0.10.0"
+		},
+		{
+			"name": "@fluent/sequence",
+			"semver": "^0.8.0"
+		},
+		{
+			"name": "@rollup/pluginutils",
+			"semver": "^5.1.3"
+		},
+		{
+			"name": "cached-iterable",
+			"semver": "^0.3.0"
+		}
+	],
+	"unpacked_size": 45151
 }

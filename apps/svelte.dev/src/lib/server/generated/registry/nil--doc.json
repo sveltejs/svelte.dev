@@ -11,5 +11,12 @@
 	"version": "1.0.0",
 	"svelte_range": "^4.0.3",
 	"last_rune_check_version": "1.0.0",
-	"github_stars": 0
+	"github_stars": 0,
+	"dependencies": [
+		{
+			"name": "vanilla-picker",
+			"semver": "^2.12.1"
+		}
+	],
+	"unpacked_size": 103844
 }
