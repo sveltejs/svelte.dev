@@ -11,13 +11,17 @@
 
 	let { pkg, select }: Props = $props();
 
-	const new_url = new URL(page.url);
-	new_url.pathname = new_url.pathname.split(pkg.name)[0].replace(/\/$/, '');
-	new_url.pathname += '/' + pkg.name;
+	const new_path = $derived.by(() => {
+		const new_url = new URL(page.url);
+		new_url.pathname = new_url.pathname.split(pkg.name)[0].replace(/\/$/, '');
+		new_url.pathname += '/' + pkg.name;
+
+		return new_url.pathname + new_url.search;
+	});
 </script>
 
 <a
-	href={new_url.pathname + new_url.search}
+	href={new_path}
 	class="card"
 	data-pubdate={pkg.updated}
 	onclick={() => select(pkg.name)}

@@ -23,16 +23,14 @@
 	const formatter = new Intl.NumberFormat();
 
 	function select(pkg: string) {
-		const new_url = new URL(page.url);
-		new_url.pathname = new_url.pathname + '/' + pkg;
-		replaceState(new_url, {});
+		page.url.pathname = page.url.pathname + '/' + pkg;
+		replaceState(page.url, {});
 		selected = data.packages.find((p) => p.name === pkg);
 	}
 
 	function deselect() {
-		const new_url = new URL(page.url);
-		new_url.pathname = new_url.pathname.split(selected!.name)[0].replace(/\/$/, '');
-		replaceState(new_url, {});
+		page.url.pathname = page.url.pathname.split(selected!.name)[0].replace(/\/$/, '');
+		replaceState(page.url, {});
 
 		selected = undefined;
 	}
