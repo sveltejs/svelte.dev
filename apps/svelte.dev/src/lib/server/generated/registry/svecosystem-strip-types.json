@@ -8,7 +8,7 @@
 	"updated": "2025-03-25T13:51:55.447Z",
 	"tags": ["tooling"],
 	"runes": false,
-	"github_stars": 11,
+	"github_stars": 12,
 	"typescript": true,
 	"version": "0.0.2",
 	"svelte_range": "^5.25.3",
@@ -31,5 +31,19 @@
 			"semver": "^5.25.3"
 		}
 	],
-	"unpacked_size": 11753
+	"unpacked_size": 11753,
+	"downloads_history": [
+		{
+			"range": [1742754600000, 1743359399999],
+			"value": 238
+		},
+		{
+			"range": [1743359400000, 1743964199999],
+			"value": 112
+		},
+		{
+			"range": [1743964200000, 1744568999999],
+			"value": 32
+		}
+	]
 }

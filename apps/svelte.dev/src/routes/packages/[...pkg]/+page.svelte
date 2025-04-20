@@ -1,14 +1,14 @@
 <script lang="ts">
+	import { pushState } from '$app/navigation';
+	import { page } from '$app/state';
 	import { forcefocus } from '@sveltejs/site-kit/actions';
 	import { Icon } from '@sveltejs/site-kit/components';
 	import { QueryParamSerde, reactive_query_params } from '@sveltejs/site-kit/reactivity';
 	import { fly } from 'svelte/transition';
 	import Category from '../Category.svelte';
 	import PackageCard from '../PackageCard.svelte';
-	import { search } from '../search';
 	import PackageDetails from '../PackageDetails.svelte';
-	import { page } from '$app/state';
-	import { replaceState } from '$app/navigation';
+	import { search } from '../search';
 
 	const { data } = $props();
 
@@ -24,13 +24,13 @@
 
 	function select(pkg: string) {
 		page.url.pathname = page.url.pathname + '/' + pkg;
-		replaceState(page.url, {});
+		pushState(page.url, {});
 		selected = data.packages.find((p) => p.name === pkg);
 	}
 
 	function deselect() {
 		page.url.pathname = page.url.pathname.split(selected!.name)[0].replace(/\/$/, '');
-		replaceState(page.url, {});
+		pushState(page.url, {});
 
 		selected = undefined;
 	}

@@ -8,11 +8,33 @@
 	"updated": "2025-04-18T07:15:10.238Z",
 	"tags": ["tooling"],
 	"runes": true,
-	"github_stars": 48,
+	"github_stars": 51,
 	"typescript": true,
 	"version": "2.0.0-next.9",
 	"svelte_range": "^5.25.0",
 	"last_rune_check_version": "2.0.0-next.9",
 	"dependencies": [],
-	"unpacked_size": 40892
+	"unpacked_size": 40892,
+	"downloads_history": [
+		{
+			"range": [1741545000000, 1742149799999],
+			"value": 273
+		},
+		{
+			"range": [1742149800000, 1742754599999],
+			"value": 60
+		},
+		{
+			"range": [1742754600000, 1743359399999],
+			"value": 108
+		},
+		{
+			"range": [1743359400000, 1743964199999],
+			"value": 219
+		},
+		{
+			"range": [1743964200000, 1744568999999],
+			"value": 147
+		}
+	]
 }

@@ -14,5 +14,11 @@
 	"last_rune_check_version": "0.0.9",
 	"github_stars": 0,
 	"dependencies": [],
-	"unpacked_size": 17455
+	"unpacked_size": 17455,
+	"downloads_history": [
+		{
+			"range": [1743964200000, 1744568999999],
+			"value": 454
+		}
+	]
 }

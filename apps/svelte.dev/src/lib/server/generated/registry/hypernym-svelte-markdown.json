@@ -8,7 +8,7 @@
 	"updated": "2025-03-18T19:02:47.745Z",
 	"tags": ["content", "tooling"],
 	"runes": false,
-	"github_stars": 6,
+	"github_stars": 7,
 	"typescript": true,
 	"version": "0.6.0",
 	"svelte_range": ">=5.0.0",
@@ -67,5 +67,27 @@
 			"semver": "^2.7.0"
 		}
 	],
-	"unpacked_size": 29347
+	"unpacked_size": 29347,
+	"downloads_history": [
+		{
+			"range": [1741545000000, 1742149799999],
+			"value": 242
+		},
+		{
+			"range": [1742149800000, 1742754599999],
+			"value": 105
+		},
+		{
+			"range": [1742754600000, 1743359399999],
+			"value": 21
+		},
+		{
+			"range": [1743359400000, 1743964199999],
+			"value": 14
+		},
+		{
+			"range": [1743964200000, 1744568999999],
+			"value": 25
+		}
+	]
 }

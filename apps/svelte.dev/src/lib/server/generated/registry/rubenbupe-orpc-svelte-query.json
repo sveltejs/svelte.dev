@@ -19,5 +19,19 @@
 			"semver": "0.0.0-next.e8cc9ca"
 		}
 	],
-	"unpacked_size": 27430
+	"unpacked_size": 27430,
+	"downloads_history": [
+		{
+			"range": [1742754600000, 1743359399999],
+			"value": 341
+		},
+		{
+			"range": [1743359400000, 1743964199999],
+			"value": 64
+		},
+		{
+			"range": [1743964200000, 1744568999999],
+			"value": 28
+		}
+	]
 }

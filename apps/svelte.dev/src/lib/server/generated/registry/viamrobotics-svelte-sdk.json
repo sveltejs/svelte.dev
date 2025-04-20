@@ -15,5 +15,23 @@
 	"kit_range": "^2.20.5",
 	"last_rune_check_version": "0.1.4",
 	"dependencies": [],
-	"unpacked_size": 44872
+	"unpacked_size": 44872,
+	"downloads_history": [
+		{
+			"range": [1742149800000, 1742754599999],
+			"value": 88
+		},
+		{
+			"range": [1742754600000, 1743359399999],
+			"value": 110
+		},
+		{
+			"range": [1743359400000, 1743964199999],
+			"value": 11
+		},
+		{
+			"range": [1743964200000, 1744568999999],
+			"value": 30
+		}
+	]
 }

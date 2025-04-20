@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Package } from '$lib/server/content';
 	import { ago } from '$lib/time';
+	import Chart from './Chart.svelte';
 	import { format_bytes, format_number } from './utils';
 
 	type Props = {
@@ -69,6 +70,8 @@
 <code>pnpm add {pkg.name}</code>
 
 <br /><br /><br />
+
+<Chart history={pkg.downloads_history} height="300" />
 
 {#if pkg.dependencies.length}
 	<h2>Dependencies</h2>

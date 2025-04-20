@@ -14,5 +14,27 @@
 	"last_rune_check_version": "0.0.7",
 	"github_stars": 0,
 	"dependencies": [],
-	"unpacked_size": 28477
+	"unpacked_size": 28477,
+	"downloads_history": [
+		{
+			"range": [1741545000000, 1742149799999],
+			"value": 340
+		},
+		{
+			"range": [1742149800000, 1742754599999],
+			"value": 15
+		},
+		{
+			"range": [1742754600000, 1743359399999],
+			"value": 3
+		},
+		{
+			"range": [1743359400000, 1743964199999],
+			"value": 2
+		},
+		{
+			"range": [1743964200000, 1744568999999],
+			"value": 10
+		}
+	]
 }

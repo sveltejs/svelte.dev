@@ -29,11 +29,41 @@
 	"updated": "2025-02-19T08:06:02.625Z",
 	"tags": ["integration"],
 	"runes": false,
-	"github_stars": 32,
+	"github_stars": 36,
 	"typescript": true,
 	"version": "1.0.29",
 	"svelte_range": "^4.2.8",
 	"last_rune_check_version": "1.0.29",
 	"dependencies": [],
-	"unpacked_size": 184120
+	"unpacked_size": 184120,
+	"downloads_history": [
+		{
+			"range": [1739730600000, 1740335399999],
+			"value": 60
+		},
+		{
+			"range": [1740335400000, 1740940199999],
+			"value": 6
+		},
+		{
+			"range": [1741545000000, 1742149799999],
+			"value": 3
+		},
+		{
+			"range": [1742149800000, 1742754599999],
+			"value": 17
+		},
+		{
+			"range": [1742754600000, 1743359399999],
+			"value": 24
+		},
+		{
+			"range": [1743359400000, 1743964199999],
+			"value": 20
+		},
+		{
+			"range": [1743964200000, 1744568999999],
+			"value": 12
+		}
+	]
 }

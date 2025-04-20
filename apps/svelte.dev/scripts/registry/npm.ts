@@ -287,22 +287,11 @@ function sub_days(date: Date, days: number): Date {
 	return result;
 }
 
-/**
- * Formats a date according to a simple format string
- */
-function format(date: Date, format_str: string): string {
-	const year = date.getFullYear();
-	const month = String(date.getMonth() + 1).padStart(2, '0');
-	const day = String(date.getDate()).padStart(2, '0');
-
-	return format_str.replace('yyyy', year.toString()).replace('MM', month).replace('dd', day);
-}
-
 const API_BASE_URL = 'https://api.npmjs.org/';
 export const REGISTRY_BASE_URL = 'https://registry.npmjs.org/';
 
-const END_DATE = format(new Date(), 'yyyy-MM-dd');
-const START_DATE = format(sub_days(new Date(), 7), 'yyyy-MM-dd');
+const END_DATE = format_date(new Date());
+const START_DATE = format_date(sub_days(new Date(), 7));
 
 const PAGE_SIZE = 100;
 
@@ -319,26 +308,200 @@ export async function fetch_downloads_for_package(pkg: string): Promise<number> 
 }
 
 /**
- * Gets details for a package from the npm registry
+ * Get the date of the Monday of the current week
  */
-export async function fetch_details_for_package(pkg_name: string): Promise<any> {
-	const url = new URL(`${REGISTRY_BASE_URL}-/v1/search`);
-	url.searchParams.set('text', `name:${pkg_name}`); // Search for the exact package name
-	url.searchParams.set('size', '5'); // Limit to 5 results to keep it efficient
+function get_current_week_monday(): Date {
+	const now = new Date();
+	const day_of_week = now.getDay(); // 0 is Sunday, 1 is Monday, etc.
+	const diff = now.getDate() - day_of_week + (day_of_week === 0 ? -6 : 1); // Adjust when day is Sunday
+	const monday = new Date(now.setDate(diff));
+	monday.setHours(0, 0, 0, 0); // Set to midnight
+	return monday;
+}
 
-	const response = await superfetch(url, { headers: HEADERS, cache: 'force-cache' });
+/**
+ * Format date to YYYY-MM-DD format for npm API
+ */
+function format_date(date: Date): string {
+	return date.toISOString().split('T')[0];
+}
 
-	if (!response.ok) {
-		console.error(`Error searching for package ${pkg_name}: ${response.status}`);
-		return { dependents: 0, downloads: 0 };
+/**
+ * Group array of daily downloads into weekly totals
+ * Each week starts on Monday
+ */
+function group_into_weekly_totals(
+	daily_downloads: { downloads: number; day: string }[]
+): { range: [number, number]; value: number }[] {
+	const result: { range: [number, number]; value: number }[] = [];
+
+	// Sort downloads by date to ensure proper ordering
+	const sorted_downloads = [...daily_downloads].sort(
+		(a, b) => new Date(a.day).getTime() - new Date(b.day).getTime()
+	);
+
+	// Find the first Monday in the data to properly align weeks
+	let current_week_start_index = 0;
+	for (let i = 0; i < sorted_downloads.length; i++) {
+		const date = new Date(sorted_downloads[i].day);
+		if (date.getDay() === 1) {
+			// Monday is 1
+			current_week_start_index = i;
+			break;
+		}
 	}
 
-	const data = await response.json();
+	// Process each week
+	for (let i = current_week_start_index; i < sorted_downloads.length; i += 7) {
+		// Get up to 7 days for the current week
+		const week_data = sorted_downloads.slice(i, i + 7);
 
-	// Find the exact package name match
-	const matched_package = data.objects?.find((obj: any) => obj.package.name === pkg_name);
+		// Skip incomplete weeks (less than 7 days) at the end
+		if (week_data.length < 7) break;
 
-	return matched_package;
+		// Calculate total downloads for the week
+		const total_downloads = week_data.reduce((sum, day) => sum + day.downloads, 0);
+		if (total_downloads === 0) continue;
+
+		// Calculate week range (Monday 00:00 to Sunday 23:59:59.999)
+		const week_start = new Date(week_data[0].day);
+		week_start.setHours(0, 0, 0, 0);
+
+		const week_end = new Date(week_start);
+		week_end.setDate(week_end.getDate() + 7);
+		week_end.setMilliseconds(-1); // Set to 23:59:59.999 of Sunday
+
+		result.push({
+			range: [week_start.getTime(), week_end.getTime()],
+			value: total_downloads
+		});
+	}
+
+	return result;
+}
+
+/**
+ * Fetches weekly download history for an npm package over the past 104 weeks
+ * Optimized to only fetch new data when existing data is provided
+ *
+ * @param pkg_name The name of the npm package
+ * @param existing_data Optional existing data to check before fetching
+ * @returns Array of weekly download data points with range and total value
+ */
+export async function fetch_package_download_history(
+	pkg_name: string,
+	existing_data?: { range: [number, number]; value: number }[]
+): Promise<{ range: [number, number]; value: number }[]> {
+	const API_BASE_URL = 'https://api.npmjs.org/';
+	const current_monday = get_current_week_monday();
+	const WEEKS_TO_KEEP = 104;
+
+	try {
+		// Start with a full date range for the API request
+		let start_date = new Date(current_monday);
+		start_date.setDate(start_date.getDate() - (WEEKS_TO_KEEP * 7 + 7)); // Add extra days to ensure alignment
+		let formatted_start_date = format_date(start_date);
+		let end_date = format_date(current_monday);
+
+		// If we have existing data, check if we can optimize the request
+		if (existing_data && existing_data.length > 0) {
+			// Sort existing data by date to ensure proper ordering
+			const sorted_data = [...existing_data].sort((a, b) => a.range[0] - b.range[0]);
+
+			// Check if we have the current week in our data
+			const has_current_week = sorted_data.some((item) => {
+				const item_week_start = new Date(item.range[0]);
+				return (
+					item_week_start.getFullYear() === current_monday.getFullYear() &&
+					item_week_start.getMonth() === current_monday.getMonth() &&
+					item_week_start.getDate() === current_monday.getDate()
+				);
+			});
+
+			// If we already have current week data, just return the data
+			if (has_current_week) {
+				return sorted_data.slice(-WEEKS_TO_KEEP);
+			}
+
+			// Check for the most recent week we have data for
+			let most_recent_date = new Date(0); // Start with epoch time
+
+			for (const item of sorted_data) {
+				const item_date = new Date(item.range[0]);
+				if (item_date > most_recent_date) {
+					most_recent_date = item_date;
+				}
+			}
+
+			// If we have reasonably recent data, we can optimize the fetch
+			if (most_recent_date.getTime() > 0) {
+				// Get the week after our most recent data
+				const fetch_from_date = new Date(most_recent_date);
+				// Move to next Monday
+				fetch_from_date.setDate(fetch_from_date.getDate() + 7);
+
+				// Only fetch from that date if it's before current Monday
+				if (fetch_from_date < current_monday) {
+					formatted_start_date = format_date(fetch_from_date);
+				}
+			}
+		}
+
+		// Call the npm API for the required range
+		const url = `${API_BASE_URL}downloads/range/${formatted_start_date}:${end_date}/${pkg_name}`;
+
+		const response = await superfetch(url, {
+			headers: HEADERS
+		});
+
+		if (!response.ok) {
+			console.error(`Error fetching download history for ${pkg_name}: ${response.status}`);
+			return existing_data || [];
+		}
+
+		const data = await response.json();
+
+		// Process the downloads data into weekly totals
+		if (data && data.downloads && Array.isArray(data.downloads)) {
+			const new_weekly_data = group_into_weekly_totals(data.downloads);
+
+			// If we have existing data, merge it with new data
+			if (existing_data && existing_data.length > 0) {
+				const sorted_existing = [...existing_data].sort((a, b) => a.range[0] - b.range[0]);
+
+				// Use a map to merge data, with start date timestamp as key
+				const merged_map = new Map<number, { range: [number, number]; value: number }>();
+
+				// Add existing data to map
+				for (const item of sorted_existing) {
+					merged_map.set(item.range[0], item);
+				}
+
+				// Add/overwrite with new data
+				for (const item of new_weekly_data) {
+					merged_map.set(item.range[0], item);
+				}
+
+				// Convert map back to array and sort by date
+				const merged_result = Array.from(merged_map.values()).sort(
+					(a, b) => a.range[0] - b.range[0]
+				);
+
+				// Return only the last WEEKS_TO_KEEP entries
+				return merged_result.slice(-WEEKS_TO_KEEP);
+			}
+
+			// If no existing data, just return the new data
+			return new_weekly_data.slice(-WEEKS_TO_KEEP);
+		}
+
+		// If there was a problem with the data, return existing data or empty array
+		return existing_data || [];
+	} catch (error) {
+		console.error(`Error fetching download history for ${pkg_name}:`, error);
+		// If we have existing data, return that rather than an empty array on error
+		return existing_data || [];
+	}
 }
 
 /**

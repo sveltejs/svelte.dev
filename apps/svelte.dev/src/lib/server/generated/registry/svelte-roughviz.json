@@ -20,5 +20,15 @@
 			"semver": "^2.0.5"
 		}
 	],
-	"unpacked_size": 11963
+	"unpacked_size": 11963,
+	"downloads_history": [
+		{
+			"range": [1742754600000, 1743359399999],
+			"value": 63
+		},
+		{
+			"range": [1743964200000, 1744568999999],
+			"value": 5
+		}
+	]
 }

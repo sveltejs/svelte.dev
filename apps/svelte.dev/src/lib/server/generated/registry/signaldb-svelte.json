@@ -8,11 +8,25 @@
 	"updated": "2025-04-04T15:38:19.126Z",
 	"tags": ["miscellaneous"],
 	"runes": true,
-	"github_stars": 438,
+	"github_stars": 444,
 	"typescript": true,
 	"version": "1.1.1",
 	"svelte_range": "^5.7.0",
 	"last_rune_check_version": "1.1.1",
 	"dependencies": [],
-	"unpacked_size": 2593
+	"unpacked_size": 2593,
+	"downloads_history": [
+		{
+			"range": [1742754600000, 1743359399999],
+			"value": 30
+		},
+		{
+			"range": [1743359400000, 1743964199999],
+			"value": 110
+		},
+		{
+			"range": [1743964200000, 1744568999999],
+			"value": 44
+		}
+	]
 }

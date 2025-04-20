@@ -204,6 +204,8 @@ export interface Package {
 	dependencies: { name: string; semver: string }[];
 
 	unpacked_size: number;
+
+	downloads_history: { range: [number, number]; value: number }[];
 }
 
 /**

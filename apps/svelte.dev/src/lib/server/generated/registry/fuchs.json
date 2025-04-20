@@ -8,7 +8,7 @@
 	"updated": "2025-03-29T09:52:13.273Z",
 	"tags": ["design-system"],
 	"runes": true,
-	"github_stars": 27,
+	"github_stars": 28,
 	"typescript": true,
 	"version": "0.0.28",
 	"svelte_range": "^5.0.0",
@@ -136,5 +136,23 @@
 			"semver": "^7.9.1"
 		}
 	],
-	"unpacked_size": 618891
+	"unpacked_size": 618891,
+	"downloads_history": [
+		{
+			"range": [1742149800000, 1742754599999],
+			"value": 542
+		},
+		{
+			"range": [1742754600000, 1743359399999],
+			"value": 859
+		},
+		{
+			"range": [1743359400000, 1743964199999],
+			"value": 65
+		},
+		{
+			"range": [1743964200000, 1744568999999],
+			"value": 57
+		}
+	]
 }

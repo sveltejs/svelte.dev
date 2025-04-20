@@ -11,6 +11,7 @@ import { sort_downloads } from '../../src/routes/packages/search.js';
 import {
 	composite_runes_types_check,
 	fetch_downloads_for_package,
+	fetch_package_download_history,
 	HEADERS,
 	PackageCache,
 	REGISTRY_BASE_URL,
@@ -572,7 +573,7 @@ export async function fetch_github_data(
 		const response = await superfetch(api_url, {
 			headers: {
 				...HEADERS,
-				Accept: 'application/vnd.github.v3+json',
+				Accept: 'application/vnd.github.v3.star+json',
 				Authorization: `Bearer ${process.env.GITHUB_TOKEN}`
 			}
 		});
@@ -765,14 +766,14 @@ async function update_cache(update_stats = true) {
 			latest_package_json.devDependencies?.['@sveltejs/kit'];
 
 		if (update_stats) {
-			const [downloads, github_data] = await Promise.all([
-				fetch_downloads_for_package(pkg_name),
+			const [downloads_history, github_data] = await Promise.all([
+				fetch_package_download_history(pkg_name, data.downloads_history),
 				data.repo_url
 					? fetch_github_data(data.repo_url)
 					: Promise.resolve({ stars: 0, homepage: '' })
 			]);
 
-			data.downloads = downloads;
+			data.downloads_history = downloads_history;
 
 			if (github_data) data.github_stars = github_data.stars;
 		}
@@ -891,7 +892,9 @@ for (let i = 0; i < 1; i++) {
 
 // await update_overrides();
 
-update_cache(false);
+update_cache(true);
+
+// console.log(await fetch_package_download_history('neotraverse'));
 
 // update_composite_ts_runes_data();
 
