@@ -299,12 +299,17 @@ async function get_bundle(
 			let result: CompileResult;
 
 			if (id.endsWith('.svelte')) {
+				const is_gt_5 = Number(svelte.VERSION.split('.')[0]) >= 5;
+
 				const compilerOptions: any = {
 					filename: name + '.svelte',
-					generate: Number(svelte.VERSION.split('.')[0]) >= 5 ? 'client' : 'dom',
-					dev: true,
-					runes: options.runes
+					generate: is_gt_5 ? 'client' : 'dom',
+					dev: true
 				};
+
+				if (is_gt_5) {
+					compilerOptions.runes = options.runes;
+				}
 
 				if (can_use_experimental_async) {
 					compilerOptions.experimental = { async: true };
