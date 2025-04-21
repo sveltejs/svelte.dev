@@ -238,7 +238,7 @@ export interface Package {
 
 	unpacked_size: number;
 
-	downloads_history: { range: [number, number]; value: number }[];
+	downloads_history: [start_date: number, value: number][];
 }
 
 /**
@@ -526,4 +526,28 @@ function create_registry() {
 	return output;
 }
 
+export type MiniPackage = Pick<
+	Package,
+	'name' | 'description' | 'version' | 'updated' | 'official' | 'github_stars' | 'svelte'
+> & {
+	downloads: number;
+};
+
+export function mini_searchable_data(pkg: Package): MiniPackage {
+	const { name, description, version, updated, official, github_stars, downloads_history, svelte } =
+		pkg;
+
+	return {
+		name,
+		description,
+		version,
+		updated,
+		official,
+		github_stars,
+		downloads: downloads_history.at(-1)?.[1] ?? 0,
+		svelte
+	};
+}
+
 export const registry = create_registry();
+export const mini_registry = registry.map(mini_searchable_data);

@@ -1,15 +1,14 @@
 <script lang="ts">
-	import type { Package } from '$lib/server/content';
+	import type { MiniPackage } from '$lib/server/content';
 	import { prefersReducedMotion } from 'svelte/motion';
 	import PackageCard from './PackageCard.svelte';
 
 	interface Props {
 		title: string;
-		packages: Package[];
-		select: (pkg: string) => void;
+		packages: MiniPackage[];
 	}
 
-	let { title, packages, select }: Props = $props();
+	let { title, packages }: Props = $props();
 
 	let content: HTMLElement;
 	let scroller: HTMLElement;
@@ -58,7 +57,7 @@
 			<div bind:this={content} class="content">
 				{#each packages as pkg}
 					<div class="item">
-						<PackageCard {pkg} {select} />
+						<PackageCard {pkg} />
 					</div>
 				{/each}
 			</div>
@@ -77,7 +76,7 @@
 			<div class="content">
 				{#each packages as pkg}
 					<div class="item">
-						<PackageCard {pkg} {select} />
+						<PackageCard {pkg} />
 					</div>
 				{/each}
 			</div>

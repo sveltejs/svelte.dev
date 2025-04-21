@@ -14,14 +14,8 @@
 	"version": "0.0.9",
 	"github_stars": 0,
 	"downloads_history": [
-		{
-			"range": [1743359400000, 1743964199999],
-			"value": 478
-		},
-		{
-			"range": [1743964200000, 1744568999999],
-			"value": 49
-		}
+		[4106, 478],
+		[4113, 49]
 	],
 	"dependency_tree": {
 		"rootIndex": 0,

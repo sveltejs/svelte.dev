@@ -107,8 +107,8 @@
 	.dependency-tree {
 		font: var(--sk-font-mono);
 		white-space: pre;
-		max-height: 500px;
-		overflow: auto;
+		/* max-height: 500px; */
+		/* overflow: auto; */
 		border: 1px solid #ccc;
 		padding: 10px;
 		/* background-color: #f5f5f5; */

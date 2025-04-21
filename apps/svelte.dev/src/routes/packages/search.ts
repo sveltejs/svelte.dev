@@ -1,32 +1,32 @@
 import { PACKAGES_META } from '$lib/packages-meta';
-import type { Package } from '$lib/server/content';
+import type { MiniPackage } from '$lib/server/content';
 
 function escape(str: string) {
 	return str.replace(/[-[\]/{}()*+?.\\^$|]/g, '\\$&');
 }
 
-function sort_alphanumeric(a: Package, b: Package) {
+function sort_alphanumeric(a: MiniPackage, b: MiniPackage) {
 	return a.name < b.name ? -1 : 1;
 }
 
-export function sort_downloads(a: Package, b: Package) {
+export function sort_downloads(a: MiniPackage, b: MiniPackage) {
 	// TODO when would `downloads` be undefined?
 	return (b.downloads ?? 0) - (a.downloads ?? 0);
 }
 
-export function search(packages: Package[], query: string, versions: string[]) {
+export function search(packages: MiniPackage[], query: string, versions: string[]) {
 	const pattern = escape(query);
 
 	const exact = new RegExp(`\\b${pattern}\\b`, 'i');
 	const partial = new RegExp(pattern, 'i');
 
-	const exact_addons: Package[] = [];
-	const exact_official: Package[] = [];
-	const exact_unofficial: Package[] = [];
+	const exact_addons: MiniPackage[] = [];
+	const exact_official: MiniPackage[] = [];
+	const exact_unofficial: MiniPackage[] = [];
 
-	const partial_addons: Package[] = [];
-	const partial_official: Package[] = [];
-	const partial_unofficial: Package[] = [];
+	const partial_addons: MiniPackage[] = [];
+	const partial_official: MiniPackage[] = [];
+	const partial_unofficial: MiniPackage[] = [];
 
 	for (const pkg of packages) {
 		if (versions.length > 0 && !versions.some((v) => pkg.svelte[v as '3' | '4' | '5'])) {

@@ -13,12 +13,7 @@
 	"last_rune_check_version": "0.0.5",
 	"version": "0.0.5",
 	"github_stars": 0,
-	"downloads_history": [
-		{
-			"range": [1743964200000, 1744568999999],
-			"value": 228
-		}
-	],
+	"downloads_history": [[4113, 228]],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [

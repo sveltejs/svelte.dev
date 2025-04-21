@@ -854,6 +854,44 @@ async function check_graph(pkg: string, semver: string) {
 	console.log(`- Circular dependencies: ${flat_graph.circular.length}`);
 }
 
+/**
+ * Converts download history from the old format to the new format
+ * Old format: { range: [number, number], value: number }[]
+ * New format: [number, number][] where [day_number, value]
+ *
+ * @param old_data The download history in old format
+ * @returns The download history in new format
+ */
+function convert_download_history_format(
+	old_data: { range: [number, number]; value: number }[]
+): [number, number][] {
+	// January 1, 2014 00:00:00 UTC
+	const base_date = Date.UTC(2014, 0, 1);
+
+	return old_data.map((item) => {
+		// Get the start timestamp from the range
+		const start_timestamp = item.range[0];
+
+		// Convert to day number (days since Jan 1, 2014)
+		const day_number = Math.floor((start_timestamp - base_date) / (1000 * 60 * 60 * 24));
+
+		// Return as tuple [day_number, value]
+		return [day_number, item.value];
+	});
+}
+
+async function convert_download_history_format_old() {
+	for await (const [pkg_name, data] of PackageCache.entries()) {
+		if (!Array.isArray(data.downloads_history)) {
+			PackageCache.set(pkg_name, data);
+			continue;
+		}
+
+		data.downloads_history = convert_download_history_format(data.downloads_history as any);
+		PackageCache.set(pkg_name, data);
+	}
+}
+
 // update_versions_only();
 
 for (let i = 0; i < 1; i++) {
@@ -862,11 +900,13 @@ for (let i = 0; i < 1; i++) {
 
 // await update_overrides();
 
-update_cache({
-	composite: false,
-	graph: true,
-	stats: false
-});
+// update_cache({
+// 	composite: false,
+// 	graph: true,
+// 	stats: false
+// });
+
+convert_download_history_format_old();
 
 // console.log(await fetch_package_download_history('neotraverse'));
 

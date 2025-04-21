@@ -1,15 +1,14 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import type { Package } from '$lib/server/content';
+	import type { MiniPackage, Package } from '$lib/server/content';
 	import { ago } from '$lib/time';
 	import { format_number } from './utils';
 
 	type Props = {
-		pkg: Package;
-		select: (pkg: string) => void;
+		pkg: MiniPackage;
 	};
 
-	let { pkg, select }: Props = $props();
+	let { pkg }: Props = $props();
 
 	const new_path = $derived.by(() => {
 		const new_url = new URL(page.url);
@@ -23,7 +22,6 @@
 	href={new_path}
 	class="card"
 	data-pubdate={pkg.updated}
-	onclick={() => select(pkg.name)}
 	aria-label="Check out details about {pkg.name}"
 >
 	<header>

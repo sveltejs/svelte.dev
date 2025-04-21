@@ -1,10 +1,9 @@
 <script lang="ts">
-	import type { Package } from '$lib/server/content';
-	import { onMount } from 'svelte';
 	import { format_number } from './utils';
 
+	// Update the type definition to use the new format
 	type Props = {
-		history: Package['downloads_history'];
+		history: [number, number][]; // [day_number, value]
 		color?: string;
 		fill_opacity?: number;
 	};
@@ -14,7 +13,15 @@
 	// Fixed dimensions
 	const width = 1000;
 	const height = 300;
-	const padding = 40;
+	const padding = 20;
+
+	// January 1, 2014 00:00:00 UTC - Base date for day number conversion
+	const BASE_DATE = Date.UTC(2014, 0, 1);
+
+	// Convert day number to timestamp
+	function day_to_timestamp(day_number: number): number {
+		return BASE_DATE + day_number * 24 * 60 * 60 * 1000;
+	}
 
 	// SVG drawing parameters
 	let path_d = $state('');
@@ -25,13 +32,11 @@
 	const complete_history = $derived(ensure_complete_history(history));
 
 	// Ensure we have 104 weeks of data by filling in missing weeks with zeros
-	function ensure_complete_history(
-		history_data: Package['downloads_history']
-	): Package['downloads_history'] {
+	function ensure_complete_history(history_data: [number, number][]): [number, number][] {
 		if (!history_data || history_data.length === 0) return [];
 
-		// Sort data by start date (first element of range)
-		const sorted_data = [...history_data].sort((a, b) => a.range[0] - b.range[0]);
+		// Sort data by day number (first element of tuple)
+		const sorted_data = [...history_data].sort((a, b) => a[0] - b[0]);
 
 		// If we already have 104+ entries, just return the most recent 104
 		if (sorted_data.length >= 104) {
@@ -41,53 +46,41 @@
 		// We need to add entries to reach 104
 		const needed_entries = 104 - sorted_data.length;
 
-		// Find the earliest date in our data
-		const earliest_date = new Date(sorted_data[0].range[0]);
+		// Find the earliest day in our data
+		const earliest_day = sorted_data[0][0];
 
-		// Create a map of existing timestamps for quick lookup
-		const existing_timestamps = new Set(sorted_data.map((entry) => entry.range[0]));
+		// Create a set of existing day numbers for quick lookup
+		const existing_days = new Set(sorted_data.map((entry) => entry[0]));
 
 		// Generate new entries with earlier dates
-		const new_entries: Package['downloads_history'] = [];
+		const new_entries: [number, number][] = [];
 
-		// Start from the earliest date and go back in time
-		const current_date = new Date(earliest_date);
-		current_date.setDate(current_date.getDate() - 7); // Go back one week from earliest
+		// Start from the earliest day and go back in time
+		let current_day = earliest_day - 7; // Go back one week from earliest
 
 		for (let i = 0; i < needed_entries; i++) {
-			// Create range for this week
-			const start_timestamp = current_date.getTime();
-
-			// Check if this timestamp already exists in our data
-			if (!existing_timestamps.has(start_timestamp)) {
-				// Calculate end timestamp (7 days minus 1 millisecond)
-				const end_date = new Date(current_date);
-				end_date.setDate(end_date.getDate() + 7);
-				end_date.setMilliseconds(-1);
-
+			// Check if this day already exists in our data
+			if (!existing_days.has(current_day)) {
 				// Add new entry with zero downloads
-				new_entries.push({
-					range: [start_timestamp, end_date.getTime()],
-					value: 0
-				});
+				new_entries.push([current_day, 0]);
 			}
 
 			// Move back one more week
-			current_date.setDate(current_date.getDate() - 7);
+			current_day -= 7;
 		}
 
 		// Combine and sort all entries
-		const result = [...new_entries, ...sorted_data].sort((a, b) => a.range[0] - b.range[0]);
+		const result = [...new_entries, ...sorted_data].sort((a, b) => a[0] - b[0]);
 
 		// Return the most recent 104 entries
 		return result.slice(-104);
 	}
 
 	// Date formatter
-	const format_date = (timestamp: number) => {
-		const date = new Date(timestamp);
+	const format_date = (day_number: number) => {
+		const date = new Date(day_to_timestamp(day_number));
 		const months = 'Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split(' ');
-		return `${months[date.getMonth()]} ${date.getFullYear().toString().substr(2)}`;
+		return `${months[date.getUTCMonth()]} ${date.getUTCFullYear().toString().substr(2)}`;
 	};
 
 	// Helper function to create a smooth curve using cubic bezier splines
@@ -126,8 +119,8 @@
 		if (complete_history.length === 0) return;
 
 		// Find min and max values for scaling
-		max_value = Math.max(...complete_history.map((d) => d.value));
-		min_value = Math.min(...complete_history.map((d) => d.value));
+		max_value = Math.max(...complete_history.map((d) => d[1]));
+		min_value = Math.min(...complete_history.map((d) => d[1]));
 
 		// Add 10% padding to max value for better visualization
 		max_value = max_value * 1.1;
@@ -136,10 +129,10 @@
 		const chart_width = width - padding * 2;
 		const chart_height = height - padding * 2;
 
-		const x_scale = (x: number) => {
-			const min = complete_history[0].range[0];
-			const max = complete_history[complete_history.length - 1].range[1];
-			return padding + ((x - min) / (max - min)) * chart_width;
+		const x_scale = (day_number: number) => {
+			const min = complete_history[0][0];
+			const max = complete_history[complete_history.length - 1][0] + 7; // Add 7 days for the week range
+			return padding + ((day_number - min) / (max - min)) * chart_width;
 		};
 
 		const y_scale = (y: number) => {
@@ -147,14 +140,14 @@
 		};
 
 		// Create points
-		points = complete_history.map((d) => [x_scale(d.range[0]), y_scale(d.value)]);
+		points = complete_history.map((d) => [x_scale(d[0]), y_scale(d[1])]);
 
 		// Create a smooth curved path using bezier curves instead of lines
 		path_d = create_smooth_path(points);
 
 		// Create the path for the area with smooth top edge
-		const last_x = x_scale(complete_history[complete_history.length - 1].range[0]);
-		const first_x = x_scale(complete_history[0].range[0]);
+		const last_x = x_scale(complete_history[complete_history.length - 1][0]);
+		const first_x = x_scale(complete_history[0][0]);
 		const bottom_y = height - padding;
 
 		area_path_d = path_d + ` L ${last_x} ${bottom_y}` + ` L ${first_x} ${bottom_y}` + ' Z';
@@ -237,7 +230,7 @@
 						class="x-label"
 						style="bottom: {((padding - 25) / height) * 100}%; left: {x_percent}%;"
 					>
-						{format_date(data.range[0])}
+						{format_date(data[0])}
 					</div>
 				{/if}
 			{/each}

@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { pushState } from '$app/navigation';
-	import { page } from '$app/state';
+	import type { MiniPackage } from '$lib/server/content';
 	import { forcefocus } from '@sveltejs/site-kit/actions';
 	import { Icon } from '@sveltejs/site-kit/components';
 	import { QueryParamSerde, reactive_query_params } from '@sveltejs/site-kit/reactivity';
+	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 	import Category from '../Category.svelte';
 	import PackageCard from '../PackageCard.svelte';
@@ -17,23 +17,21 @@
 		svelte_versions: QueryParamSerde.array()
 	});
 
-	const filtered = $derived(search(data.packages, qps.query, qps.svelte_versions));
+	let filtered = $derived(data.results);
 	let selected = $derived(data.selected);
+
+	let complete_search_data = $state<MiniPackage[] | null>(null);
 
 	const formatter = new Intl.NumberFormat();
 
-	function select(pkg: string) {
-		page.url.pathname = page.url.pathname + '/' + pkg;
-		pushState(page.url, {});
-		selected = data.packages.find((p) => p.name === pkg);
-	}
+	$effect(() => {
+		if (complete_search_data)
+			filtered = search(complete_search_data, qps.query, qps.svelte_versions) as MiniPackage[];
+	});
 
-	function deselect() {
-		page.url.pathname = page.url.pathname.split(selected!.name)[0].replace(/\/$/, '');
-		pushState(page.url, {});
-
-		selected = undefined;
-	}
+	onMount(async () => {
+		complete_search_data = await fetch('/packages/search-data.json').then((r) => r.json());
+	});
 </script>
 
 <svelte:head>
@@ -48,8 +46,8 @@
 
 <div class="page content">
 	{#if selected}
-		<PackageDetails pkg={selected} {deselect} />
-	{:else}
+		<PackageDetails pkg={selected} />
+	{:else if data.total_packages && filtered && data.homepage}
 		<div class="controls">
 			<form onsubmit={(e) => e.preventDefault()}>
 				<label class="input-group">
@@ -65,7 +63,7 @@
 						}}
 						enterkeyhint="search"
 						bind:value={qps.query}
-						placeholder="Search {formatter.format(data.packages.length)} packages"
+						placeholder="Search {formatter.format(data.total_packages)} packages"
 						aria-describedby="search-description"
 						aria-label="Search"
 						spellcheck="false"
@@ -115,14 +113,14 @@
 			<div in:fly={{ y: 20 }} class="posts">
 				<section>
 					{#each filtered as pkg}
-						<PackageCard {pkg} {select} />
+						<PackageCard {pkg} />
 					{/each}
 				</section>
 			</div>
 		{:else}
 			<div in:fly={{ y: 20 }}>
 				{#each data.homepage as { title, packages }}
-					<Category {title} {packages} {select} />
+					<Category {title} {packages} />
 				{/each}
 			</div>
 		{/if}

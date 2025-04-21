@@ -14,18 +14,9 @@
 	"last_rune_check_version": "1.3.9",
 	"github_stars": 0,
 	"downloads_history": [
-		{
-			"range": [1742754600000, 1743359399999],
-			"value": 194
-		},
-		{
-			"range": [1743359400000, 1743964199999],
-			"value": 339
-		},
-		{
-			"range": [1743964200000, 1744568999999],
-			"value": 223
-		}
+		[4099, 194],
+		[4106, 339],
+		[4113, 223]
 	],
 	"dependency_tree": {
 		"rootIndex": 0,

@@ -15,14 +15,8 @@
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "0.0.21",
 	"downloads_history": [
-		{
-			"range": [1743359400000, 1743964199999],
-			"value": 78
-		},
-		{
-			"range": [1743964200000, 1744568999999],
-			"value": 546
-		}
+		[4106, 78],
+		[4113, 546]
 	],
 	"dependency_tree": {
 		"rootIndex": 0,

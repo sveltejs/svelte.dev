@@ -14,18 +14,9 @@
 	"svelte_range": "^5.25.3",
 	"last_rune_check_version": "0.0.2",
 	"downloads_history": [
-		{
-			"range": [1742754600000, 1743359399999],
-			"value": 238
-		},
-		{
-			"range": [1743359400000, 1743964199999],
-			"value": 112
-		},
-		{
-			"range": [1743964200000, 1744568999999],
-			"value": 32
-		}
+		[4099, 238],
+		[4106, 112],
+		[4113, 32]
 	],
 	"dependency_tree": {
 		"rootIndex": 0,

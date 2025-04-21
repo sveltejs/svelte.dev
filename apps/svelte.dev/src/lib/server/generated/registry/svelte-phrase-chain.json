@@ -13,12 +13,7 @@
 	"last_rune_check_version": "0.0.3-beta.14",
 	"version": "0.0.3-beta.14",
 	"github_stars": 0,
-	"downloads_history": [
-		{
-			"range": [1743964200000, 1744568999999],
-			"value": 190
-		}
-	],
+	"downloads_history": [[4113, 190]],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [

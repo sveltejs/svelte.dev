@@ -7,13 +7,12 @@
 
 	type Props = {
 		pkg: Package;
-		deselect: () => void;
 	};
 
-	const { pkg, deselect }: Props = $props();
+	const { pkg }: Props = $props();
 </script>
 
-<button onclick={deselect} class="raised"> &nbsp; Back &nbsp;</button>
+<a href="/packages" class="raised"> &nbsp; Back &nbsp;</a>
 <h1>
 	{pkg.name}
 
@@ -87,8 +86,8 @@
 
 <br /><br />
 
-<h2>Size</h2>
-<p>{format_bytes(pkg.unpacked_size)}</p>
+<h2>Install Size</h2>
+<p>{format_bytes(pkg.dependency_tree.packages.reduce((acc, pkg) => acc + (pkg.size ?? 0), 0))}</p>
 
 <style>
 	*:not(h1, h2) {
@@ -99,10 +98,6 @@
 		display: flex;
 		gap: 2rem;
 		align-items: center;
-	}
-
-	button {
-		font: var(--sk-font-ui-medium);
 	}
 
 	code {
