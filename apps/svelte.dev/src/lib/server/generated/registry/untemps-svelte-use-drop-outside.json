@@ -13,21 +13,6 @@
 	"version": "1.6.0",
 	"svelte_range": "3.49.0",
 	"last_rune_check_version": "1.6.0",
-	"dependencies": [
-		{
-			"name": "@untemps/dom-observer",
-			"semver": "^2.0.0"
-		},
-		{
-			"name": "@untemps/utils",
-			"semver": "^2.0.0"
-		},
-		{
-			"name": "svelte",
-			"semver": "3.49.0"
-		}
-	],
-	"unpacked_size": 224216,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -341,5 +326,48 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 109
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@untemps/svelte-use-drop-outside",
+				"version": "1.6.0",
+				"size": 224216
+			},
+			{
+				"name": "@untemps/dom-observer",
+				"version": "2.0.0",
+				"size": 76324
+			},
+			{
+				"name": "@untemps/utils",
+				"version": "2.6.0",
+				"size": 20540
+			},
+			{
+				"name": "@babel/runtime",
+				"version": "7.27.0",
+				"size": 249798
+			},
+			{
+				"name": "regenerator-runtime",
+				"version": "0.14.1",
+				"size": 27863
+			},
+			{
+				"name": "svelte",
+				"version": "3.49.0",
+				"size": 7247697
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[3, 4],
+			[0, 5]
+		],
+		"circular": []
+	}
 }

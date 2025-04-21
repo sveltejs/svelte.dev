@@ -13,17 +13,6 @@
 	"version": "3.3.2",
 	"svelte_range": "3.29.4",
 	"last_rune_check_version": "3.3.2",
-	"dependencies": [
-		{
-			"name": "@bahmutov/cy-rollup",
-			"semver": "2.0.0"
-		},
-		{
-			"name": "unfetch",
-			"semver": "4.1.0"
-		}
-	],
-	"unpacked_size": 23803,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -221,5 +210,42 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@tal500/cypress-svelte-unit-test",
+				"version": "3.3.2",
+				"size": 23803
+			},
+			{
+				"name": "@bahmutov/cy-rollup",
+				"version": "2.0.0",
+				"size": 3785
+			},
+			{
+				"name": "debug",
+				"version": "4.1.1",
+				"size": 81476
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "unfetch",
+				"version": "4.1.0",
+				"size": 30813
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[0, 4]
+		],
+		"circular": []
+	}
 }

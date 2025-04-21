@@ -13,8 +13,6 @@
 	"kit_range": "^1.24.0",
 	"last_rune_check_version": "2.1.0",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 11219,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -328,5 +326,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 25
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-copyright",
+				"version": "2.1.0",
+				"size": 11219
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

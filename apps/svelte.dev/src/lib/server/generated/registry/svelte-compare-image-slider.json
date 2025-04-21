@@ -13,13 +13,6 @@
 	"version": "0.1.15",
 	"svelte_range": "^3.23.2",
 	"last_rune_check_version": "0.1.15",
-	"dependencies": [
-		{
-			"name": "compare-image-slider",
-			"semver": "^0.1.15"
-		}
-	],
-	"unpacked_size": 294303,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +326,36 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 11
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-compare-image-slider",
+				"version": "0.1.15",
+				"size": 294303
+			},
+			{
+				"name": "compare-image-slider",
+				"version": "0.1.15",
+				"size": 340601
+			},
+			{
+				"name": "lit-element",
+				"version": "2.5.1",
+				"size": 331410
+			},
+			{
+				"name": "lit-html",
+				"version": "1.4.1",
+				"size": 708013
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3]
+		],
+		"circular": []
+	}
 }

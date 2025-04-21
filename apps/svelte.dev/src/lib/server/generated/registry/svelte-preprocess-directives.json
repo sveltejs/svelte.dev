@@ -13,17 +13,6 @@
 	"version": "0.1.2",
 	"svelte_range": "latest",
 	"last_rune_check_version": "0.1.2",
-	"dependencies": [
-		{
-			"name": "estree-walker",
-			"semver": "^2.0.2"
-		},
-		{
-			"name": "magic-string",
-			"semver": "^0.30.11"
-		}
-	],
-	"unpacked_size": 8085,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -285,5 +274,36 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-preprocess-directives",
+				"version": "0.1.2",
+				"size": 8085
+			},
+			{
+				"name": "estree-walker",
+				"version": "2.0.2",
+				"size": 50243
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3]
+		],
+		"circular": []
+	}
 }

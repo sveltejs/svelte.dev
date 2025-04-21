@@ -14,17 +14,6 @@
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.5.0",
 	"last_rune_check_version": "0.1.12",
-	"dependencies": [
-		{
-			"name": "react",
-			"semver": "^18.2.0"
-		},
-		{
-			"name": "react-dom",
-			"semver": "^18.2.0"
-		}
-	],
-	"unpacked_size": 5535,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -322,5 +311,51 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 8
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-react-kit",
+				"version": "0.1.12",
+				"size": 5535
+			},
+			{
+				"name": "react",
+				"version": "18.3.1",
+				"size": 318101
+			},
+			{
+				"name": "loose-envify",
+				"version": "1.4.0",
+				"size": 5814
+			},
+			{
+				"name": "js-tokens",
+				"version": "4.0.0"
+			},
+			{
+				"name": "react-dom",
+				"version": "18.3.1",
+				"size": 4513549
+			},
+			{
+				"name": "scheduler",
+				"version": "0.23.2",
+				"size": 93383
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[0, 4],
+			[4, 5],
+			[5, 2],
+			[2, 3],
+			[4, 2],
+			[2, 3]
+		],
+		"circular": []
+	}
 }

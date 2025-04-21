@@ -12,25 +12,6 @@
 	"svelte_range": "^5.25.3",
 	"last_rune_check_version": "0.1.0",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "esm-env",
-			"semver": "^1.2.2"
-		},
-		{
-			"name": "nanoid",
-			"semver": "^5.1.5"
-		},
-		{
-			"name": "runed",
-			"semver": "^0.25.0"
-		},
-		{
-			"name": "svelte-freeze",
-			"semver": "^0.1.5"
-		}
-	],
-	"unpacked_size": 32271,
 	"downloads_history": [
 		{
 			"range": [1742754600000, 1743359399999],
@@ -44,5 +25,45 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-stakkr",
+				"version": "0.1.0",
+				"size": 32271
+			},
+			{
+				"name": "esm-env",
+				"version": "1.2.2",
+				"size": 3784
+			},
+			{
+				"name": "nanoid",
+				"version": "5.1.5",
+				"size": 12143
+			},
+			{
+				"name": "runed",
+				"version": "0.25.0",
+				"size": 104008
+			},
+			{
+				"name": "svelte-freeze",
+				"version": "0.1.5",
+				"size": 9378
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[3, 1],
+			[0, 4],
+			[4, 3],
+			[3, 1]
+		],
+		"circular": []
+	}
 }

@@ -13,17 +13,6 @@
 	"version": "0.8.0",
 	"svelte_range": "^5.16.0",
 	"last_rune_check_version": "0.8.0",
-	"dependencies": [
-		{
-			"name": "@agnos-ui/core-bootstrap",
-			"semver": "0.8.0"
-		},
-		{
-			"name": "@agnos-ui/svelte-headless",
-			"semver": "0.8.0"
-		}
-	],
-	"unpacked_size": 199939,
 	"downloads_history": [
 		{
 			"range": [1713724200000, 1714328999999],
@@ -225,5 +214,44 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 16
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@agnos-ui/svelte-bootstrap",
+				"version": "0.8.0",
+				"size": 199939
+			},
+			{
+				"name": "@agnos-ui/core-bootstrap",
+				"version": "0.8.0",
+				"size": 154940
+			},
+			{
+				"name": "@agnos-ui/core",
+				"version": "0.8.0",
+				"size": 514487
+			},
+			{
+				"name": "clsx",
+				"version": "2.1.1",
+				"size": 8555
+			},
+			{
+				"name": "@agnos-ui/svelte-headless",
+				"version": "0.8.0",
+				"size": 23075
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[0, 4],
+			[4, 2],
+			[2, 3]
+		],
+		"circular": []
+	}
 }

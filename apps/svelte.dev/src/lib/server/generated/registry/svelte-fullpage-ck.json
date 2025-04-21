@@ -13,8 +13,6 @@
 	"svelte_range": "^3.0.0 || ^4.0.0",
 	"kit_range": "^1.23.0",
 	"last_rune_check_version": "1.0.2",
-	"dependencies": [],
-	"unpacked_size": 33035,
 	"downloads_history": [
 		{
 			"range": [1698604200000, 1699208999999],
@@ -284,5 +282,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-fullpage-ck",
+				"version": "1.0.2",
+				"size": 33035
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

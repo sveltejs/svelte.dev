@@ -12,29 +12,6 @@
 	"svelte_range": "^3.46.0 || ^4.0.0",
 	"last_rune_check_version": "0.11.2",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "@casual-ui/i18n",
-			"semver": "^0.1.7"
-		},
-		{
-			"name": "@casual-ui/styles",
-			"semver": ""
-		},
-		{
-			"name": "dayjs",
-			"semver": "^1.11.9"
-		},
-		{
-			"name": "@casual-ui/types",
-			"semver": "0.1.1"
-		},
-		{
-			"name": "@casual-ui/utils",
-			"semver": "0.0.3"
-		}
-	],
-	"unpacked_size": 663724,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -348,5 +325,67 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 15
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@casual-ui/svelte",
+				"version": "0.11.2",
+				"size": 663724
+			},
+			{
+				"name": "@casual-ui/i18n",
+				"version": "0.1.7",
+				"size": 6254
+			},
+			{
+				"name": "@casual-ui/styles",
+				"version": "0.1.1",
+				"size": 63570
+			},
+			{
+				"name": "dayjs",
+				"version": "1.11.13",
+				"size": 670277
+			},
+			{
+				"name": "@casual-ui/types",
+				"version": "0.1.1",
+				"size": 3364
+			},
+			{
+				"name": "@casual-ui/utils",
+				"version": "0.0.3",
+				"size": 2633
+			},
+			{
+				"name": "@floating-ui/dom",
+				"version": "1.6.13",
+				"size": 165945
+			},
+			{
+				"name": "@floating-ui/core",
+				"version": "1.6.9",
+				"size": 212585
+			},
+			{
+				"name": "@floating-ui/utils",
+				"version": "0.2.9",
+				"size": 64926
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[0, 4],
+			[0, 5],
+			[5, 6],
+			[6, 7],
+			[7, 8],
+			[6, 8]
+		],
+		"circular": []
+	}
 }

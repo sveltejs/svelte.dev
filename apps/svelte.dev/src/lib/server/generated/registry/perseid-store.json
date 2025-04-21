@@ -13,13 +13,6 @@
 	"version": "8.0.1",
 	"svelte_range": "^4.2.18",
 	"last_rune_check_version": "8.0.1",
-	"dependencies": [
-		{
-			"name": "path-to-regexp",
-			"semver": "^7.1.0"
-		}
-	],
-	"unpacked_size": 53170,
 	"downloads_history": [
 		{
 			"range": [1701628200000, 1702232999999],
@@ -269,5 +262,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 26
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@perseid/store",
+				"version": "8.0.1",
+				"size": 53170
+			},
+			{
+				"name": "path-to-regexp",
+				"version": "7.2.0",
+				"size": 65430
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

@@ -13,8 +13,6 @@
 	"version": "1.7.12",
 	"svelte_range": "^3.49.0",
 	"last_rune_check_version": "1.7.12",
-	"dependencies": [],
-	"unpacked_size": 135211,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -328,5 +326,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 31
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-virtual-infinite-list",
+				"version": "1.7.12",
+				"size": 135211
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

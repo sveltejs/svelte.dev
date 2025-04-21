@@ -11,8 +11,6 @@
 	"typescript": false,
 	"version": "0.0.27",
 	"last_rune_check_version": "0.0.27",
-	"dependencies": [],
-	"unpacked_size": 118649,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -326,5 +324,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 17
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-atoms",
+				"version": "0.0.27",
+				"size": 118649
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

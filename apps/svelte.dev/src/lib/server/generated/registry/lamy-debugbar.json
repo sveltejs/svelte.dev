@@ -14,33 +14,6 @@
 	"svelte_range": "^4.2.7",
 	"kit_range": "^1.27.6",
 	"last_rune_check_version": "0.3.1",
-	"dependencies": [
-		{
-			"name": "shikiji",
-			"semver": "^0.7.4"
-		},
-		{
-			"name": "@twind/core",
-			"semver": "^1.1.3"
-		},
-		{
-			"name": "@melt-ui/svelte",
-			"semver": "^0.63.0"
-		},
-		{
-			"name": "@twind/with-sveltekit",
-			"semver": "^1.1.3"
-		},
-		{
-			"name": "@twind/preset-tailwind",
-			"semver": "^1.1.4"
-		},
-		{
-			"name": "@twind/preset-autoprefix",
-			"semver": "^1.0.7"
-		}
-	],
-	"unpacked_size": 249772,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -298,5 +271,326 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "lamy-debugbar",
+				"version": "0.3.1",
+				"size": 249772
+			},
+			{
+				"name": "shikiji",
+				"version": "0.7.6",
+				"size": 7357939
+			},
+			{
+				"name": "hast-util-to-html",
+				"version": "9.0.5",
+				"size": 71798
+			},
+			{
+				"name": "@types/hast",
+				"version": "3.0.4",
+				"size": 9703
+			},
+			{
+				"name": "@types/unist",
+				"version": "3.0.3",
+				"size": 6262
+			},
+			{
+				"name": "ccount",
+				"version": "2.0.1",
+				"size": 7344
+			},
+			{
+				"name": "comma-separated-tokens",
+				"version": "2.0.3",
+				"size": 9971
+			},
+			{
+				"name": "hast-util-whitespace",
+				"version": "3.0.0",
+				"size": 11781
+			},
+			{
+				"name": "html-void-elements",
+				"version": "3.0.0",
+				"size": 6899
+			},
+			{
+				"name": "mdast-util-to-hast",
+				"version": "13.2.0",
+				"size": 124715
+			},
+			{
+				"name": "@types/mdast",
+				"version": "4.0.4",
+				"size": 29432
+			},
+			{
+				"name": "@ungap/structured-clone",
+				"version": "1.3.0",
+				"size": 27500
+			},
+			{
+				"name": "devlop",
+				"version": "1.1.0",
+				"size": 22010
+			},
+			{
+				"name": "dequal",
+				"version": "2.0.3",
+				"size": 14229
+			},
+			{
+				"name": "micromark-util-sanitize-uri",
+				"version": "2.0.1",
+				"size": 17917
+			},
+			{
+				"name": "micromark-util-character",
+				"version": "2.1.1",
+				"size": 42421
+			},
+			{
+				"name": "micromark-util-symbol",
+				"version": "2.0.1",
+				"size": 40530
+			},
+			{
+				"name": "micromark-util-types",
+				"version": "2.0.2",
+				"size": 38950
+			},
+			{
+				"name": "micromark-util-encode",
+				"version": "2.0.1",
+				"size": 7971
+			},
+			{
+				"name": "trim-lines",
+				"version": "3.0.1",
+				"size": 7493
+			},
+			{
+				"name": "unist-util-position",
+				"version": "5.0.0",
+				"size": 12779
+			},
+			{
+				"name": "unist-util-visit",
+				"version": "5.0.0",
+				"size": 28480
+			},
+			{
+				"name": "unist-util-is",
+				"version": "6.0.0",
+				"size": 27111
+			},
+			{
+				"name": "unist-util-visit-parents",
+				"version": "6.0.1",
+				"size": 32885
+			},
+			{
+				"name": "vfile",
+				"version": "6.0.3",
+				"size": 121686
+			},
+			{
+				"name": "vfile-message",
+				"version": "4.0.2",
+				"size": 22348
+			},
+			{
+				"name": "unist-util-stringify-position",
+				"version": "4.0.0",
+				"size": 13180
+			},
+			{
+				"name": "property-information",
+				"version": "7.0.0",
+				"size": 116609
+			},
+			{
+				"name": "space-separated-tokens",
+				"version": "2.0.2",
+				"size": 7753
+			},
+			{
+				"name": "stringify-entities",
+				"version": "4.0.4",
+				"size": 23780
+			},
+			{
+				"name": "character-entities-html4",
+				"version": "2.1.0",
+				"size": 11364
+			},
+			{
+				"name": "character-entities-legacy",
+				"version": "3.0.0",
+				"size": 9141
+			},
+			{
+				"name": "zwitch",
+				"version": "2.0.4",
+				"size": 13752
+			},
+			{
+				"name": "@twind/core",
+				"version": "1.1.3",
+				"size": 3550702
+			},
+			{
+				"name": "csstype",
+				"version": "3.1.3",
+				"size": 1246074
+			},
+			{
+				"name": "@melt-ui/svelte",
+				"version": "0.63.1",
+				"size": 1014720
+			},
+			{
+				"name": "nanoid",
+				"version": "4.0.2",
+				"size": 15272
+			},
+			{
+				"name": "focus-trap",
+				"version": "7.6.4",
+				"size": 670245
+			},
+			{
+				"name": "tabbable",
+				"version": "6.2.0",
+				"size": 411841
+			},
+			{
+				"name": "@floating-ui/dom",
+				"version": "1.6.13",
+				"size": 165945
+			},
+			{
+				"name": "@floating-ui/core",
+				"version": "1.6.9",
+				"size": 212585
+			},
+			{
+				"name": "@floating-ui/utils",
+				"version": "0.2.9",
+				"size": 64926
+			},
+			{
+				"name": "@internationalized/date",
+				"version": "3.8.0",
+				"size": 1010930
+			},
+			{
+				"name": "@swc/helpers",
+				"version": "0.5.17",
+				"size": 248378
+			},
+			{
+				"name": "tslib",
+				"version": "2.8.1",
+				"size": 90359
+			},
+			{
+				"name": "@twind/with-sveltekit",
+				"version": "1.1.3",
+				"size": 26222
+			},
+			{
+				"name": "@twind/preset-tailwind",
+				"version": "1.1.4",
+				"size": 2084399
+			},
+			{
+				"name": "@twind/preset-autoprefix",
+				"version": "1.0.7",
+				"size": 39468
+			},
+			{
+				"name": "style-vendorizer",
+				"version": "2.2.3",
+				"size": 24803
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[3, 4],
+			[2, 4],
+			[2, 5],
+			[2, 6],
+			[2, 7],
+			[7, 3],
+			[3, 4],
+			[2, 8],
+			[2, 9],
+			[9, 3],
+			[3, 4],
+			[9, 10],
+			[10, 4],
+			[9, 11],
+			[9, 12],
+			[12, 13],
+			[9, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17],
+			[14, 18],
+			[14, 16],
+			[9, 19],
+			[9, 20],
+			[20, 4],
+			[9, 21],
+			[21, 4],
+			[21, 22],
+			[22, 4],
+			[21, 23],
+			[23, 4],
+			[23, 22],
+			[22, 4],
+			[9, 24],
+			[24, 4],
+			[24, 25],
+			[25, 4],
+			[25, 26],
+			[26, 4],
+			[2, 27],
+			[2, 28],
+			[2, 29],
+			[29, 30],
+			[29, 31],
+			[2, 32],
+			[0, 33],
+			[33, 34],
+			[0, 35],
+			[35, 13],
+			[35, 36],
+			[35, 37],
+			[37, 38],
+			[35, 39],
+			[39, 40],
+			[40, 41],
+			[39, 41],
+			[35, 40],
+			[40, 41],
+			[35, 42],
+			[42, 43],
+			[43, 44],
+			[0, 45],
+			[0, 46],
+			[0, 47],
+			[47, 48]
+		],
+		"circular": []
+	}
 }

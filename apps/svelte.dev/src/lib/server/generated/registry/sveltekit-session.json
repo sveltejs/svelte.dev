@@ -14,21 +14,6 @@
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.5.0",
 	"last_rune_check_version": "0.2.3",
-	"dependencies": [
-		{
-			"name": "lodash",
-			"semver": "^4.17.21"
-		},
-		{
-			"name": "type-fest",
-			"semver": "^3.7.2"
-		},
-		{
-			"name": "uid-safe",
-			"semver": "^2.1.5"
-		}
-	],
-	"unpacked_size": 18514,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -286,5 +271,40 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 9
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "sveltekit-session",
+				"version": "0.2.3",
+				"size": 18514
+			},
+			{
+				"name": "lodash",
+				"version": "4.17.21",
+				"size": 1412415
+			},
+			{
+				"name": "type-fest",
+				"version": "3.13.1",
+				"size": 273907
+			},
+			{
+				"name": "uid-safe",
+				"version": "2.1.5"
+			},
+			{
+				"name": "random-bytes",
+				"version": "1.0.0"
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[3, 4]
+		],
+		"circular": []
+	}
 }

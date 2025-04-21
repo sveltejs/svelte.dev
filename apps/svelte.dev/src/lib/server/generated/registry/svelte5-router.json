@@ -13,8 +13,6 @@
 	"version": "3.0.2",
 	"svelte_range": "^5.0.0",
 	"last_rune_check_version": "3.0.2",
-	"dependencies": [],
-	"unpacked_size": 55059,
 	"downloads_history": [
 		{
 			"range": [1731868200000, 1732472999999],
@@ -100,5 +98,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 375
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte5-router",
+				"version": "3.0.2",
+				"size": 55059
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

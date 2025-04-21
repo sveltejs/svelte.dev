@@ -13,8 +13,6 @@
 	"version": "0.3.0",
 	"svelte_range": "^3.59.1",
 	"last_rune_check_version": "0.3.0",
-	"dependencies": [],
-	"unpacked_size": 4606713,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -312,5 +310,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 110
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-healthicons",
+				"version": "0.3.0",
+				"size": 4606713
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

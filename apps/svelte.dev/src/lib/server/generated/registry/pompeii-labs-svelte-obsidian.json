@@ -12,8 +12,6 @@
 	"svelte_range": "^5.22.1",
 	"last_rune_check_version": "0.0.5",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 9337,
 	"downloads_history": [
 		{
 			"range": [1740940200000, 1741544999999],
@@ -39,5 +37,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@pompeii-labs/svelte-obsidian",
+				"version": "0.0.5",
+				"size": 9337
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

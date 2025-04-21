@@ -13,13 +13,6 @@
 	"version": "1.0.5",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "1.0.5",
-	"dependencies": [
-		{
-			"name": "store",
-			"semver": "^2.0.12"
-		}
-	],
-	"unpacked_size": 28338,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -269,5 +262,21 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 11
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@parkingboss/svelte-storage",
+				"version": "1.0.5",
+				"size": 28338
+			},
+			{
+				"name": "store",
+				"version": "2.0.12"
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

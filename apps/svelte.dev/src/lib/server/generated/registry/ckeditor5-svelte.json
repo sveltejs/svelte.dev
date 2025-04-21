@@ -13,13 +13,6 @@
 	"version": "0.0.10",
 	"svelte_range": "^3.32.1",
 	"last_rune_check_version": "0.0.10",
-	"dependencies": [
-		{
-			"name": "just-debounce-it",
-			"semver": "^1.1.0"
-		}
-	],
-	"unpacked_size": 31731,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +326,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 258
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "ckeditor5-svelte",
+				"version": "0.0.10",
+				"size": 31731
+			},
+			{
+				"name": "just-debounce-it",
+				"version": "1.5.0",
+				"size": 4848
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

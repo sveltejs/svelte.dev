@@ -12,41 +12,6 @@
 	"version": "0.2.0",
 	"svelte_range": "^3.24.1",
 	"last_rune_check_version": "0.2.0",
-	"dependencies": [
-		{
-			"name": "@babel/runtime",
-			"semver": "^7.11.2"
-		},
-		{
-			"name": "@babel/runtime-corejs3",
-			"semver": "^7.11.2"
-		},
-		{
-			"name": "@types/es6-promise",
-			"semver": "^3.3.0"
-		},
-		{
-			"name": "@types/webpack-env",
-			"semver": "^1.15.2"
-		},
-		{
-			"name": "core-js",
-			"semver": "^3.6.5"
-		},
-		{
-			"name": "office-ui-fabric-js",
-			"semver": "^1.5.0"
-		},
-		{
-			"name": "robot3",
-			"semver": "^0.2.18"
-		},
-		{
-			"name": "svelte-robot-factory",
-			"semver": "^1.0.2"
-		}
-	],
-	"unpacked_size": 609735,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -268,5 +233,414 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "sp-svelte-modal-menu",
+				"version": "0.2.0",
+				"size": 609735
+			},
+			{
+				"name": "@babel/runtime",
+				"version": "7.27.0",
+				"size": 249798
+			},
+			{
+				"name": "regenerator-runtime",
+				"version": "0.14.1",
+				"size": 27863
+			},
+			{
+				"name": "@babel/runtime-corejs3",
+				"version": "7.27.0",
+				"size": 331596
+			},
+			{
+				"name": "core-js-pure",
+				"version": "3.41.0",
+				"size": 1122771
+			},
+			{
+				"name": "@types/es6-promise",
+				"version": "3.3.2",
+				"size": 1761
+			},
+			{
+				"name": "es6-promise",
+				"version": "4.2.8",
+				"size": 315432
+			},
+			{
+				"name": "@types/webpack-env",
+				"version": "1.18.8",
+				"size": 16988
+			},
+			{
+				"name": "core-js",
+				"version": "3.41.0",
+				"size": 1265563
+			},
+			{
+				"name": "office-ui-fabric-js",
+				"version": "1.5.0"
+			},
+			{
+				"name": "office-ui-fabric-core",
+				"version": "5.0.1"
+			},
+			{
+				"name": "robot3",
+				"version": "0.2.21",
+				"size": 26603
+			},
+			{
+				"name": "svelte-robot-factory",
+				"version": "1.0.6",
+				"size": 119860
+			},
+			{
+				"name": "rollup",
+				"version": "2.79.2",
+				"size": 6452533
+			},
+			{
+				"name": "rollup-plugin-terser",
+				"version": "7.0.2",
+				"size": 8464
+			},
+			{
+				"name": "@babel/code-frame",
+				"version": "7.26.2",
+				"size": 33160
+			},
+			{
+				"name": "js-tokens",
+				"version": "4.0.0"
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "@babel/helper-validator-identifier",
+				"version": "7.25.9",
+				"size": 48330
+			},
+			{
+				"name": "jest-worker",
+				"version": "26.6.2",
+				"size": 66949
+			},
+			{
+				"name": "@types/node",
+				"version": "22.14.1",
+				"size": 2331510
+			},
+			{
+				"name": "undici-types",
+				"version": "6.21.0",
+				"size": 83680
+			},
+			{
+				"name": "merge-stream",
+				"version": "2.0.0",
+				"size": 4306
+			},
+			{
+				"name": "supports-color",
+				"version": "7.2.0",
+				"size": 7035
+			},
+			{
+				"name": "has-flag",
+				"version": "4.0.0",
+				"size": 4419
+			},
+			{
+				"name": "serialize-javascript",
+				"version": "4.0.0",
+				"size": 16202
+			},
+			{
+				"name": "randombytes",
+				"version": "2.1.0",
+				"size": 6363
+			},
+			{
+				"name": "safe-buffer",
+				"version": "5.2.1",
+				"size": 32101
+			},
+			{
+				"name": "terser",
+				"version": "5.39.0",
+				"size": 2221569
+			},
+			{
+				"name": "@jridgewell/source-map",
+				"version": "0.3.6",
+				"size": 177363
+			},
+			{
+				"name": "@jridgewell/gen-mapping",
+				"version": "0.3.8",
+				"size": 81596
+			},
+			{
+				"name": "@jridgewell/set-array",
+				"version": "1.2.1",
+				"size": 17945
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "@jridgewell/trace-mapping",
+				"version": "0.3.25",
+				"size": 169330
+			},
+			{
+				"name": "@jridgewell/resolve-uri",
+				"version": "3.1.2",
+				"size": 53153
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "commander",
+				"version": "2.20.3",
+				"size": 62442
+			},
+			{
+				"name": "source-map-support",
+				"version": "0.5.21",
+				"size": 85177
+			},
+			{
+				"name": "buffer-from",
+				"version": "1.1.2",
+				"size": 5047
+			},
+			{
+				"name": "source-map",
+				"version": "0.6.1"
+			},
+			{
+				"name": "rollup-plugin-typescript2",
+				"version": "0.30.0",
+				"size": 5082205
+			},
+			{
+				"name": "@rollup/pluginutils",
+				"version": "4.2.1",
+				"size": 50858
+			},
+			{
+				"name": "picomatch",
+				"version": "2.3.1",
+				"size": 89952
+			},
+			{
+				"name": "estree-walker",
+				"version": "2.0.2",
+				"size": 50243
+			},
+			{
+				"name": "find-cache-dir",
+				"version": "3.3.2",
+				"size": 6793
+			},
+			{
+				"name": "pkg-dir",
+				"version": "4.2.0",
+				"size": 4750
+			},
+			{
+				"name": "find-up",
+				"version": "4.1.0",
+				"size": 11611
+			},
+			{
+				"name": "locate-path",
+				"version": "5.0.0",
+				"size": 6584
+			},
+			{
+				"name": "p-locate",
+				"version": "4.1.0",
+				"size": 7285
+			},
+			{
+				"name": "p-limit",
+				"version": "2.3.0",
+				"size": 7390
+			},
+			{
+				"name": "p-try",
+				"version": "2.2.0",
+				"size": 4371
+			},
+			{
+				"name": "path-exists",
+				"version": "4.0.0",
+				"size": 3919
+			},
+			{
+				"name": "make-dir",
+				"version": "3.1.0",
+				"size": 10042
+			},
+			{
+				"name": "semver",
+				"version": "6.3.1",
+				"size": 68343
+			},
+			{
+				"name": "commondir",
+				"version": "1.0.1"
+			},
+			{
+				"name": "fs-extra",
+				"version": "8.1.0",
+				"size": 127504
+			},
+			{
+				"name": "jsonfile",
+				"version": "4.0.0"
+			},
+			{
+				"name": "graceful-fs",
+				"version": "4.2.11",
+				"size": 32535
+			},
+			{
+				"name": "universalify",
+				"version": "0.1.2",
+				"size": 4705
+			},
+			{
+				"name": "resolve",
+				"version": "1.20.0",
+				"size": 114927
+			},
+			{
+				"name": "path-parse",
+				"version": "1.0.7",
+				"size": 4511
+			},
+			{
+				"name": "is-core-module",
+				"version": "2.16.1",
+				"size": 33475
+			},
+			{
+				"name": "hasown",
+				"version": "2.0.2",
+				"size": 8765
+			},
+			{
+				"name": "function-bind",
+				"version": "1.1.2",
+				"size": 31427
+			},
+			{
+				"name": "tslib",
+				"version": "2.1.0",
+				"size": 35212
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			},
+			{
+				"name": "typescript",
+				"version": "4.9.5",
+				"size": 66849652
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[3, 4],
+			[3, 2],
+			[0, 5],
+			[5, 6],
+			[0, 7],
+			[0, 8],
+			[0, 9],
+			[9, 10],
+			[0, 11],
+			[0, 12],
+			[12, 11],
+			[12, 13],
+			[12, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17],
+			[15, 18],
+			[14, 19],
+			[19, 20],
+			[20, 21],
+			[19, 22],
+			[19, 23],
+			[23, 24],
+			[14, 25],
+			[25, 26],
+			[26, 27],
+			[14, 28],
+			[28, 29],
+			[29, 30],
+			[30, 31],
+			[30, 32],
+			[30, 33],
+			[33, 34],
+			[33, 32],
+			[29, 33],
+			[33, 34],
+			[33, 32],
+			[28, 35],
+			[28, 36],
+			[28, 37],
+			[37, 38],
+			[37, 39],
+			[12, 40],
+			[40, 41],
+			[41, 42],
+			[41, 43],
+			[40, 44],
+			[44, 45],
+			[45, 46],
+			[46, 47],
+			[47, 48],
+			[48, 49],
+			[49, 50],
+			[46, 51],
+			[44, 52],
+			[52, 53],
+			[44, 54],
+			[40, 55],
+			[55, 56],
+			[55, 57],
+			[55, 58],
+			[40, 59],
+			[59, 60],
+			[59, 61],
+			[61, 62],
+			[62, 63],
+			[40, 64],
+			[12, 65],
+			[12, 66]
+		],
+		"circular": []
+	}
 }

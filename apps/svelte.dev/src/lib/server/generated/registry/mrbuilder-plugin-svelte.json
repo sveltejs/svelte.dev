@@ -12,17 +12,6 @@
 	"svelte_range": "^3.22.3",
 	"last_rune_check_version": "4.4.7-alpha.9",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "svelte",
-			"semver": "^3.22.3"
-		},
-		{
-			"name": "svelte-loader",
-			"semver": "^2.13.6"
-		}
-	],
-	"unpacked_size": 2504,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -260,5 +249,66 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 9
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@mrbuilder/plugin-svelte",
+				"version": "4.4.7-alpha.9",
+				"size": 2504
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			},
+			{
+				"name": "svelte-loader",
+				"version": "2.13.6",
+				"size": 22509
+			},
+			{
+				"name": "loader-utils",
+				"version": "1.4.2",
+				"size": 25854
+			},
+			{
+				"name": "json5",
+				"version": "1.0.2",
+				"size": 78288
+			},
+			{
+				"name": "minimist",
+				"version": "1.2.8",
+				"size": 54477
+			},
+			{
+				"name": "big.js",
+				"version": "5.2.2",
+				"size": 63868
+			},
+			{
+				"name": "emojis-list",
+				"version": "3.0.0",
+				"size": 53575
+			},
+			{
+				"name": "svelte-dev-helper",
+				"version": "1.1.9",
+				"size": 25281
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[3, 4],
+			[4, 5],
+			[3, 6],
+			[3, 7],
+			[2, 8]
+		],
+		"circular": []
+	}
 }

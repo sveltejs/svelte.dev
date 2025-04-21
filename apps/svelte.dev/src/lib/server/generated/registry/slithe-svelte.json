@@ -14,8 +14,6 @@
 	"svelte_range": "^5.8.1",
 	"kit_range": "^2.4.3",
 	"last_rune_check_version": "0.3.1",
-	"dependencies": [],
-	"unpacked_size": 83222,
 	"downloads_history": [
 		{
 			"range": [1705861800000, 1706466599999],
@@ -225,5 +223,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@slithe/svelte",
+				"version": "0.3.1",
+				"size": 83222
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

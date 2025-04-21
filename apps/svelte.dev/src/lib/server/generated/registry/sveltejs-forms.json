@@ -13,17 +13,6 @@
 	"version": "2.1.2",
 	"svelte_range": "~3.20.0",
 	"last_rune_check_version": "2.1.2",
-	"dependencies": [
-		{
-			"name": "lodash-es",
-			"semver": "~4.17.15"
-		},
-		{
-			"name": "svelte-writable-derived",
-			"semver": "~2.0.1"
-		}
-	],
-	"unpacked_size": 327970,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -337,5 +326,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 1128
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "sveltejs-forms",
+				"version": "2.1.2",
+				"size": 327970
+			},
+			{
+				"name": "lodash-es",
+				"version": "4.17.21",
+				"size": 636080
+			},
+			{
+				"name": "svelte-writable-derived",
+				"version": "2.0.1",
+				"size": 15451
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

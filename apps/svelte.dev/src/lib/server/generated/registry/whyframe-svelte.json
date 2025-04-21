@@ -13,25 +13,6 @@
 	"version": "0.1.8",
 	"svelte_range": "^4.2.19",
 	"last_rune_check_version": "0.1.8",
-	"dependencies": [
-		{
-			"name": "estree-walker",
-			"semver": "^3.0.3"
-		},
-		{
-			"name": "magic-string",
-			"semver": "^0.30.17"
-		},
-		{
-			"name": "svelte",
-			"semver": "^4.2.19"
-		},
-		{
-			"name": "svelte-parse-markup",
-			"semver": "^0.1.5"
-		}
-	],
-	"unpacked_size": 10788,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -341,5 +322,175 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 1441
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@whyframe/svelte",
+				"version": "0.1.8",
+				"size": 10788
+			},
+			{
+				"name": "estree-walker",
+				"version": "3.0.3",
+				"size": 17599
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "svelte",
+				"version": "4.2.19",
+				"size": 2633608
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "code-red",
+				"version": "1.0.4",
+				"size": 55185
+			},
+			{
+				"name": "periscopic",
+				"version": "3.1.0",
+				"size": 11219
+			},
+			{
+				"name": "is-reference",
+				"version": "3.0.3",
+				"size": 3953
+			},
+			{
+				"name": "css-tree",
+				"version": "2.3.1",
+				"size": 1190591
+			},
+			{
+				"name": "mdn-data",
+				"version": "2.0.30",
+				"size": 602138
+			},
+			{
+				"name": "source-map-js",
+				"version": "1.2.1",
+				"size": 139872
+			},
+			{
+				"name": "aria-query",
+				"version": "5.3.2",
+				"size": 176114
+			},
+			{
+				"name": "axobject-query",
+				"version": "4.1.0",
+				"size": 110878
+			},
+			{
+				"name": "locate-character",
+				"version": "3.0.0",
+				"size": 5325
+			},
+			{
+				"name": "@ampproject/remapping",
+				"version": "2.3.0",
+				"size": 78946
+			},
+			{
+				"name": "@jridgewell/gen-mapping",
+				"version": "0.3.8",
+				"size": 81596
+			},
+			{
+				"name": "@jridgewell/set-array",
+				"version": "1.2.1",
+				"size": 17945
+			},
+			{
+				"name": "@jridgewell/trace-mapping",
+				"version": "0.3.25",
+				"size": 169330
+			},
+			{
+				"name": "@jridgewell/resolve-uri",
+				"version": "3.1.2",
+				"size": 53153
+			},
+			{
+				"name": "svelte-parse-markup",
+				"version": "0.1.5",
+				"size": 8003
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[3, 4],
+			[0, 5],
+			[5, 6],
+			[5, 7],
+			[7, 4],
+			[7, 2],
+			[7, 6],
+			[7, 1],
+			[1, 2],
+			[7, 8],
+			[8, 2],
+			[8, 1],
+			[1, 2],
+			[8, 9],
+			[9, 2],
+			[5, 10],
+			[10, 11],
+			[10, 12],
+			[5, 13],
+			[5, 8],
+			[8, 2],
+			[8, 1],
+			[1, 2],
+			[8, 9],
+			[9, 2],
+			[5, 9],
+			[9, 2],
+			[5, 3],
+			[3, 4],
+			[5, 2],
+			[5, 1],
+			[1, 2],
+			[5, 14],
+			[5, 15],
+			[5, 16],
+			[16, 17],
+			[17, 18],
+			[17, 4],
+			[17, 19],
+			[19, 20],
+			[19, 4],
+			[16, 19],
+			[19, 20],
+			[19, 4],
+			[5, 19],
+			[19, 20],
+			[19, 4],
+			[5, 4],
+			[0, 21]
+		],
+		"circular": []
+	}
 }

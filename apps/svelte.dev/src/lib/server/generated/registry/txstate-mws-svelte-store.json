@@ -13,13 +13,6 @@
 	"version": "1.0.8",
 	"svelte_range": "^3.45.0",
 	"last_rune_check_version": "1.0.8",
-	"dependencies": [
-		{
-			"name": "txstate-utils",
-			"semver": "^1.6.12"
-		}
-	],
-	"unpacked_size": 29389,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +326,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 136
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@txstate-mws/svelte-store",
+				"version": "1.0.8",
+				"size": 29389
+			},
+			{
+				"name": "txstate-utils",
+				"version": "1.9.17",
+				"size": 221649
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

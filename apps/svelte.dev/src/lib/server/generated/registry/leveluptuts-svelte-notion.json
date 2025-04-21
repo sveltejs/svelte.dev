@@ -13,25 +13,6 @@
 	"version": "0.0.7",
 	"svelte_range": "^3.22.2",
 	"last_rune_check_version": "0.0.7",
-	"dependencies": [
-		{
-			"name": "highlight.js",
-			"semver": "^10.0.2"
-		},
-		{
-			"name": "marked",
-			"semver": "^1.0.0"
-		},
-		{
-			"name": "prism-svelte",
-			"semver": "^0.4.6"
-		},
-		{
-			"name": "prismjs",
-			"semver": "^1.20.0"
-		}
-	],
-	"unpacked_size": 9205,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -313,5 +294,42 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 12
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@leveluptuts/svelte-notion",
+				"version": "0.0.7",
+				"size": 9205
+			},
+			{
+				"name": "highlight.js",
+				"version": "10.7.3",
+				"size": 1710256
+			},
+			{
+				"name": "marked",
+				"version": "1.2.9",
+				"size": 267216
+			},
+			{
+				"name": "prism-svelte",
+				"version": "0.4.7",
+				"size": 6075
+			},
+			{
+				"name": "prismjs",
+				"version": "1.30.0",
+				"size": 2052735
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[0, 4]
+		],
+		"circular": []
+	}
 }

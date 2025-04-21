@@ -12,21 +12,6 @@
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "1.6.6",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "@iconify/iconify",
-			"semver": "<=1.0.7"
-		},
-		{
-			"name": "svelte",
-			"semver": "^3.0.0"
-		},
-		{
-			"name": "sveltestrap",
-			"semver": "github:bestguy/sveltestrap"
-		}
-	],
-	"unpacked_size": 5939,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -304,5 +289,41 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 8
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "sveltestrap-table",
+				"version": "1.6.6",
+				"size": 5939
+			},
+			{
+				"name": "@iconify/iconify",
+				"version": "1.0.7",
+				"size": 549644
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			},
+			{
+				"name": "sveltestrap",
+				"version": "5.11.3"
+			},
+			{
+				"name": "@popperjs/core",
+				"version": "2.11.8",
+				"size": 1463042
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[3, 4]
+		],
+		"circular": []
+	}
 }

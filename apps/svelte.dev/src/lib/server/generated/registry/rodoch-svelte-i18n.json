@@ -13,25 +13,6 @@
 	"version": "3.0.3",
 	"svelte_range": "^3.14.1",
 	"last_rune_check_version": "3.0.3",
-	"dependencies": [
-		{
-			"name": "commander",
-			"semver": "^4.0.1"
-		},
-		{
-			"name": "estree-walker",
-			"semver": "^0.9.0"
-		},
-		{
-			"name": "intl-messageformat",
-			"semver": "^7.5.2"
-		},
-		{
-			"name": "tiny-glob",
-			"semver": "^0.2.6"
-		}
-	],
-	"unpacked_size": 39792,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -225,5 +206,78 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@rodoch/svelte-i18n",
+				"version": "3.0.3",
+				"size": 39792
+			},
+			{
+				"name": "commander",
+				"version": "4.1.1",
+				"size": 93231
+			},
+			{
+				"name": "estree-walker",
+				"version": "0.9.0",
+				"size": 14837
+			},
+			{
+				"name": "intl-messageformat",
+				"version": "7.8.4",
+				"size": 716176
+			},
+			{
+				"name": "intl-format-cache",
+				"version": "4.3.1",
+				"size": 12647
+			},
+			{
+				"name": "intl-messageformat-parser",
+				"version": "3.6.4",
+				"size": 889239
+			},
+			{
+				"name": "@formatjs/intl-unified-numberformat",
+				"version": "3.3.7",
+				"size": 50566113
+			},
+			{
+				"name": "@formatjs/intl-utils",
+				"version": "2.3.0",
+				"size": 304197
+			},
+			{
+				"name": "tiny-glob",
+				"version": "0.2.9",
+				"size": 12092
+			},
+			{
+				"name": "globalyzer",
+				"version": "0.1.0",
+				"size": 11416
+			},
+			{
+				"name": "globrex",
+				"version": "0.1.2",
+				"size": 14164
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[3, 4],
+			[3, 5],
+			[5, 6],
+			[6, 7],
+			[0, 8],
+			[8, 9],
+			[8, 10]
+		],
+		"circular": []
+	}
 }

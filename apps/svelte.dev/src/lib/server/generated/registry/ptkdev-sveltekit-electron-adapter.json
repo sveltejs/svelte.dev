@@ -14,17 +14,6 @@
 	"svelte_range": "^3.55.1",
 	"kit_range": "^1.0.0",
 	"last_rune_check_version": "0.3.0",
-	"dependencies": [
-		{
-			"name": "replace-in-file",
-			"semver": "^6.3.5"
-		},
-		{
-			"name": "tiny-glob",
-			"semver": "^0.2.9"
-		}
-	],
-	"unpacked_size": 32934,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -338,5 +327,235 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 45
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@ptkdev/sveltekit-electron-adapter",
+				"version": "0.3.0",
+				"size": 32934
+			},
+			{
+				"name": "replace-in-file",
+				"version": "6.3.5",
+				"size": 95159
+			},
+			{
+				"name": "glob",
+				"version": "7.2.3",
+				"size": 55064
+			},
+			{
+				"name": "once",
+				"version": "1.4.0"
+			},
+			{
+				"name": "wrappy",
+				"version": "1.0.2"
+			},
+			{
+				"name": "inflight",
+				"version": "1.0.6"
+			},
+			{
+				"name": "inherits",
+				"version": "2.0.4",
+				"size": 3958
+			},
+			{
+				"name": "minimatch",
+				"version": "3.1.2",
+				"size": 34902
+			},
+			{
+				"name": "brace-expansion",
+				"version": "1.1.11",
+				"size": 11059
+			},
+			{
+				"name": "balanced-match",
+				"version": "1.0.2",
+				"size": 6939
+			},
+			{
+				"name": "concat-map",
+				"version": "0.0.1"
+			},
+			{
+				"name": "fs.realpath",
+				"version": "1.0.0"
+			},
+			{
+				"name": "path-is-absolute",
+				"version": "1.0.1"
+			},
+			{
+				"name": "chalk",
+				"version": "4.1.2",
+				"size": 35047
+			},
+			{
+				"name": "ansi-styles",
+				"version": "4.3.0",
+				"size": 16978
+			},
+			{
+				"name": "color-convert",
+				"version": "2.0.1",
+				"size": 27189
+			},
+			{
+				"name": "color-name",
+				"version": "1.1.4",
+				"size": 6693
+			},
+			{
+				"name": "supports-color",
+				"version": "7.2.0",
+				"size": 7035
+			},
+			{
+				"name": "has-flag",
+				"version": "4.0.0",
+				"size": 4419
+			},
+			{
+				"name": "yargs",
+				"version": "17.7.2",
+				"size": 292421
+			},
+			{
+				"name": "y18n",
+				"version": "5.0.8",
+				"size": 23435
+			},
+			{
+				"name": "cliui",
+				"version": "8.0.1",
+				"size": 32314
+			},
+			{
+				"name": "wrap-ansi",
+				"version": "7.0.0",
+				"size": 10648
+			},
+			{
+				"name": "string-width",
+				"version": "4.2.3",
+				"size": 5161
+			},
+			{
+				"name": "strip-ansi",
+				"version": "6.0.1",
+				"size": 4029
+			},
+			{
+				"name": "ansi-regex",
+				"version": "5.0.1",
+				"size": 5609
+			},
+			{
+				"name": "emoji-regex",
+				"version": "8.0.0",
+				"size": 48255
+			},
+			{
+				"name": "is-fullwidth-code-point",
+				"version": "3.0.0",
+				"size": 4994
+			},
+			{
+				"name": "escalade",
+				"version": "3.2.0",
+				"size": 12385
+			},
+			{
+				"name": "yargs-parser",
+				"version": "21.1.1",
+				"size": 128470
+			},
+			{
+				"name": "get-caller-file",
+				"version": "2.0.5",
+				"size": 4719
+			},
+			{
+				"name": "require-directory",
+				"version": "2.1.1"
+			},
+			{
+				"name": "tiny-glob",
+				"version": "0.2.9",
+				"size": 12092
+			},
+			{
+				"name": "globalyzer",
+				"version": "0.1.0",
+				"size": 11416
+			},
+			{
+				"name": "globrex",
+				"version": "0.1.2",
+				"size": 14164
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[3, 4],
+			[2, 5],
+			[5, 3],
+			[3, 4],
+			[5, 4],
+			[2, 6],
+			[2, 7],
+			[7, 8],
+			[8, 9],
+			[8, 10],
+			[2, 11],
+			[2, 12],
+			[1, 13],
+			[13, 14],
+			[14, 15],
+			[15, 16],
+			[13, 17],
+			[17, 18],
+			[1, 19],
+			[19, 20],
+			[19, 21],
+			[21, 22],
+			[22, 14],
+			[14, 15],
+			[15, 16],
+			[22, 23],
+			[23, 24],
+			[24, 25],
+			[23, 26],
+			[23, 27],
+			[22, 24],
+			[24, 25],
+			[21, 24],
+			[24, 25],
+			[21, 23],
+			[23, 24],
+			[24, 25],
+			[23, 26],
+			[23, 27],
+			[19, 28],
+			[19, 23],
+			[23, 24],
+			[24, 25],
+			[23, 26],
+			[23, 27],
+			[19, 29],
+			[19, 30],
+			[19, 31],
+			[0, 32],
+			[32, 33],
+			[32, 34]
+		],
+		"circular": []
+	}
 }

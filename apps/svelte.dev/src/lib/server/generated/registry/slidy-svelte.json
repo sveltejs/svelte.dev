@@ -13,13 +13,6 @@
 	"version": "3.5.3",
 	"svelte_range": "^5.0.0",
 	"last_rune_check_version": "3.5.3",
-	"dependencies": [
-		{
-			"name": "@slidy/core",
-			"semver": "^3.8.0"
-		}
-	],
-	"unpacked_size": 117483,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +326,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 207
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@slidy/svelte",
+				"version": "3.5.3",
+				"size": 117483
+			},
+			{
+				"name": "@slidy/core",
+				"version": "3.8.0",
+				"size": 53039
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

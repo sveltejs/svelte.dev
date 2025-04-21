@@ -12,17 +12,6 @@
 	"runes": false,
 	"last_rune_check_version": "0.1.0",
 	"version": "0.1.0",
-	"dependencies": [
-		{
-			"name": "dom7",
-			"semver": "^3.0.0"
-		},
-		{
-			"name": "ssr-window",
-			"semver": "^3.0.0"
-		}
-	],
-	"unpacked_size": 1819181,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -296,5 +285,31 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 26
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "rs-swiper",
+				"version": "0.1.0",
+				"size": 1819181
+			},
+			{
+				"name": "dom7",
+				"version": "3.0.0",
+				"size": 219185
+			},
+			{
+				"name": "ssr-window",
+				"version": "3.0.0",
+				"size": 21531
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

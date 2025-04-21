@@ -12,13 +12,6 @@
 	"svelte_range": "^3.46.2",
 	"last_rune_check_version": "0.20.18",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "style-to-object",
-			"semver": "^0.3.0"
-		}
-	],
-	"unpacked_size": 118565,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -312,5 +305,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 65
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@htmlbricks/hb-animated-container",
+				"version": "0.20.18",
+				"size": 118565
+			},
+			{
+				"name": "style-to-object",
+				"version": "0.3.0",
+				"size": 30488
+			},
+			{
+				"name": "inline-style-parser",
+				"version": "0.1.1",
+				"size": 30591
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2]
+		],
+		"circular": []
+	}
 }

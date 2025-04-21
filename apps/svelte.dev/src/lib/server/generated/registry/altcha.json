@@ -13,13 +13,6 @@
 	"version": "1.4.2",
 	"svelte_range": "^5.22.6",
 	"last_rune_check_version": "1.4.2",
-	"dependencies": [
-		{
-			"name": "@altcha/crypto",
-			"semver": "^0.0.1"
-		}
-	],
-	"unpacked_size": 343366,
 	"downloads_history": [
 		{
 			"range": [1699813800000, 1700418599999],
@@ -317,5 +310,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7927
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "altcha",
+				"version": "1.4.2",
+				"size": 343366
+			},
+			{
+				"name": "@altcha/crypto",
+				"version": "0.0.1",
+				"size": 38483
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

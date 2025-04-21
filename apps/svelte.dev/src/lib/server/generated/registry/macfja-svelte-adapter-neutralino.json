@@ -13,17 +13,6 @@
 	"version": "0.3.0",
 	"kit_range": "^1.0.0-next.208",
 	"last_rune_check_version": "0.3.0",
-	"dependencies": [
-		{
-			"name": "@sveltejs/adapter-static",
-			"semver": "^1.0.0-next.24"
-		},
-		{
-			"name": "chalk",
-			"semver": "^5.0.0"
-		}
-	],
-	"unpacked_size": 8561,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -337,5 +326,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 10
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@macfja/svelte-adapter-neutralino",
+				"version": "0.3.0",
+				"size": 8561
+			},
+			{
+				"name": "@sveltejs/adapter-static",
+				"version": "1.0.6",
+				"size": 8482
+			},
+			{
+				"name": "chalk",
+				"version": "5.4.1",
+				"size": 44242
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

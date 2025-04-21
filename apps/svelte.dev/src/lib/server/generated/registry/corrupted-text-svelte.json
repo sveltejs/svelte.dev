@@ -14,8 +14,6 @@
 	"kit_range": "^1.27.0",
 	"last_rune_check_version": "1.1.0",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 4874,
 	"downloads_history": [
 		{
 			"range": [1697999400000, 1698604199999],
@@ -209,5 +207,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "corrupted-text-svelte",
+				"version": "1.1.0",
+				"size": 4874
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

@@ -12,17 +12,6 @@
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "1.0.1",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "@fortawesome/free-solid-svg-icons",
-			"semver": "^5.15.4"
-		},
-		{
-			"name": "svelte-fa",
-			"semver": "^2.3.3"
-		}
-	],
-	"unpacked_size": 45965,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -336,5 +325,36 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 50
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-tree-viewer",
+				"version": "1.0.1",
+				"size": 45965
+			},
+			{
+				"name": "@fortawesome/free-solid-svg-icons",
+				"version": "5.15.4",
+				"size": 3087303
+			},
+			{
+				"name": "@fortawesome/fontawesome-common-types",
+				"version": "0.2.36",
+				"size": 147820
+			},
+			{
+				"name": "svelte-fa",
+				"version": "2.4.0",
+				"size": 98486
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3]
+		],
+		"circular": []
+	}
 }

@@ -13,8 +13,6 @@
 	"version": "0.4.0",
 	"svelte_range": "^4.2.1",
 	"last_rune_check_version": "0.4.0",
-	"dependencies": [],
-	"unpacked_size": 159664,
 	"downloads_history": [
 		{
 			"range": [1697999400000, 1698604199999],
@@ -296,5 +294,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "trilist",
+				"version": "0.4.0",
+				"size": 159664
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

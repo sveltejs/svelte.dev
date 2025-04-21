@@ -13,13 +13,6 @@
 	"version": "0.3.0",
 	"svelte_range": "^4.2.19",
 	"last_rune_check_version": "0.3.0",
-	"dependencies": [
-		{
-			"name": "vite",
-			"semver": "^5.4.10"
-		}
-	],
-	"unpacked_size": 12521,
 	"downloads_history": [
 		{
 			"range": [1730053800000, 1730658599999],
@@ -109,5 +102,66 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@yuna0x0/sk-lanyard",
+				"version": "0.3.0",
+				"size": 12521
+			},
+			{
+				"name": "vite",
+				"version": "5.4.18",
+				"size": 3276648
+			},
+			{
+				"name": "rollup",
+				"version": "4.40.0",
+				"size": 2726316
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "esbuild",
+				"version": "0.21.5",
+				"size": 133372
+			},
+			{
+				"name": "postcss",
+				"version": "8.5.3",
+				"size": 201969
+			},
+			{
+				"name": "nanoid",
+				"version": "3.3.11",
+				"size": 32583
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "source-map-js",
+				"version": "1.2.1",
+				"size": 139872
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[1, 4],
+			[1, 5],
+			[5, 6],
+			[5, 7],
+			[5, 8]
+		],
+		"circular": []
+	}
 }

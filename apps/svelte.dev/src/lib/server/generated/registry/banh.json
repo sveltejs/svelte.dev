@@ -13,17 +13,6 @@
 	"version": "0.6.2-beta.9",
 	"svelte_range": "^4.2.0",
 	"last_rune_check_version": "0.6.2-beta.9",
-	"dependencies": [
-		{
-			"name": "consola",
-			"semver": "^3.2.3"
-		},
-		{
-			"name": "hookable",
-			"semver": "^5.5.3"
-		}
-	],
-	"unpacked_size": 92224,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -245,5 +234,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 18
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "banh",
+				"version": "0.6.2-beta.9",
+				"size": 92224
+			},
+			{
+				"name": "consola",
+				"version": "3.4.2",
+				"size": 321586
+			},
+			{
+				"name": "hookable",
+				"version": "5.5.3",
+				"size": 39944
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

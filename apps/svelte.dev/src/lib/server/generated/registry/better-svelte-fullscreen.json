@@ -12,13 +12,6 @@
 	"version": "1.0.1",
 	"svelte_range": "^4.2.12",
 	"last_rune_check_version": "1.0.1",
-	"dependencies": [
-		{
-			"name": "screenfull",
-			"semver": "^6.0.2"
-		}
-	],
-	"unpacked_size": 33178,
 	"downloads_history": [
 		{
 			"range": [1709490600000, 1710095399999],
@@ -160,5 +153,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "better-svelte-fullscreen",
+				"version": "1.0.1",
+				"size": 33178
+			},
+			{
+				"name": "screenfull",
+				"version": "6.0.2",
+				"size": 17802
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

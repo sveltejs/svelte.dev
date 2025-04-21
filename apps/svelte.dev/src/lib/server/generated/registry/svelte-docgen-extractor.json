@@ -13,21 +13,6 @@
 	"version": "0.1.0",
 	"svelte_range": "^5.3.0",
 	"last_rune_check_version": "0.1.0",
-	"dependencies": [
-		{
-			"name": "svelte2tsx",
-			"semver": "^0.7.26"
-		},
-		{
-			"name": "zimmerframe",
-			"semver": "^1.1.2"
-		},
-		{
-			"name": "@types/estree",
-			"semver": "^1.0.6"
-		}
-	],
-	"unpacked_size": 29041,
 	"downloads_history": [
 		{
 			"range": [1733077800000, 1733682599999],
@@ -93,5 +78,67 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@svelte-docgen/extractor",
+				"version": "0.1.0",
+				"size": 29041
+			},
+			{
+				"name": "svelte2tsx",
+				"version": "0.7.36",
+				"size": 766555
+			},
+			{
+				"name": "dedent-js",
+				"version": "1.0.1"
+			},
+			{
+				"name": "pascal-case",
+				"version": "3.1.2",
+				"size": 14764
+			},
+			{
+				"name": "no-case",
+				"version": "3.0.4",
+				"size": 25128
+			},
+			{
+				"name": "lower-case",
+				"version": "2.0.2",
+				"size": 17661
+			},
+			{
+				"name": "tslib",
+				"version": "2.8.1",
+				"size": 90359
+			},
+			{
+				"name": "zimmerframe",
+				"version": "1.1.2",
+				"size": 12266
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[3, 4],
+			[4, 5],
+			[5, 6],
+			[4, 6],
+			[3, 6],
+			[0, 7],
+			[0, 8]
+		],
+		"circular": []
+	}
 }

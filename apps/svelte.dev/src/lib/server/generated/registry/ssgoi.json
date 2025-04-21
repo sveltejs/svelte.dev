@@ -14,8 +14,6 @@
 	"svelte_range": "^4.0.0 || ^5.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "2.0.0",
-	"dependencies": [],
-	"unpacked_size": 39909,
 	"downloads_history": [
 		{
 			"range": [1722191400000, 1722796199999],
@@ -165,5 +163,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 190
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "ssgoi",
+				"version": "2.0.0",
+				"size": 39909
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

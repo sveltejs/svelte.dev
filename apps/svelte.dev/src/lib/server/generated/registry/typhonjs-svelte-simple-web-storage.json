@@ -13,8 +13,6 @@
 	"version": "0.5.0",
 	"svelte_range": ">=4.x.x",
 	"last_rune_check_version": "0.5.0",
-	"dependencies": [],
-	"unpacked_size": 51666,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -268,5 +266,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 8
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@typhonjs-svelte/simple-web-storage",
+				"version": "0.5.0",
+				"size": 51666
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

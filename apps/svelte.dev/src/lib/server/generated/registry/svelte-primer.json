@@ -13,13 +13,6 @@
 	"version": "0.1.0",
 	"svelte_range": "^3.28.0",
 	"last_rune_check_version": "0.1.0",
-	"dependencies": [
-		{
-			"name": "svelte-octicons",
-			"semver": "^9.6.3"
-		}
-	],
-	"unpacked_size": 581638,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -257,5 +250,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 8
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-primer",
+				"version": "0.1.0",
+				"size": 581638
+			},
+			{
+				"name": "svelte-octicons",
+				"version": "9.6.3",
+				"size": 157778
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

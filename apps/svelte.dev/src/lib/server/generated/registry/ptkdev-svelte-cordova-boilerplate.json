@@ -13,25 +13,6 @@
 	"version": "1.0.20211120",
 	"svelte_range": "^3.44.2",
 	"last_rune_check_version": "1.0.20211120",
-	"dependencies": [
-		{
-			"name": "bulma",
-			"semver": "^0.9.3"
-		},
-		{
-			"name": "bulma-extensions",
-			"semver": "^6.2.7"
-		},
-		{
-			"name": "sirv-cli",
-			"semver": "^1.0.14"
-		},
-		{
-			"name": "svelte-spa-router",
-			"semver": "^3.2.0"
-		}
-	],
-	"unpacked_size": 6032654,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -289,5 +270,119 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@ptkdev/svelte-cordova-boilerplate",
+				"version": "1.0.20211120",
+				"size": 6032654
+			},
+			{
+				"name": "bulma",
+				"version": "0.9.4",
+				"size": 1259757
+			},
+			{
+				"name": "bulma-extensions",
+				"version": "6.2.7",
+				"size": 5425458
+			},
+			{
+				"name": "sirv-cli",
+				"version": "1.0.14",
+				"size": 11888
+			},
+			{
+				"name": "sade",
+				"version": "1.8.1",
+				"size": 31545
+			},
+			{
+				"name": "mri",
+				"version": "1.2.0",
+				"size": 13261
+			},
+			{
+				"name": "sirv",
+				"version": "1.0.19",
+				"size": 20668
+			},
+			{
+				"name": "mrmime",
+				"version": "1.0.1",
+				"size": 31038
+			},
+			{
+				"name": "totalist",
+				"version": "1.1.0",
+				"size": 7522
+			},
+			{
+				"name": "@polka/url",
+				"version": "1.0.0-next.29",
+				"size": 4815
+			},
+			{
+				"name": "kleur",
+				"version": "3.0.3",
+				"size": 9893
+			},
+			{
+				"name": "semiver",
+				"version": "1.1.0",
+				"size": 5444
+			},
+			{
+				"name": "get-port",
+				"version": "3.2.0"
+			},
+			{
+				"name": "tinydate",
+				"version": "1.3.0",
+				"size": 7410
+			},
+			{
+				"name": "local-access",
+				"version": "1.1.0",
+				"size": 4960
+			},
+			{
+				"name": "console-clear",
+				"version": "1.1.1",
+				"size": 2457
+			},
+			{
+				"name": "svelte-spa-router",
+				"version": "3.3.0",
+				"size": 60714
+			},
+			{
+				"name": "regexparam",
+				"version": "2.0.1",
+				"size": 15910
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[3, 4],
+			[4, 5],
+			[3, 6],
+			[6, 7],
+			[6, 8],
+			[6, 9],
+			[3, 10],
+			[3, 11],
+			[3, 12],
+			[3, 13],
+			[3, 14],
+			[3, 15],
+			[0, 16],
+			[16, 17]
+		],
+		"circular": []
+	}
 }

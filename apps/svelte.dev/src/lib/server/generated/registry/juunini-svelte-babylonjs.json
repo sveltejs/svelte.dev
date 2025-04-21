@@ -14,21 +14,6 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.0.1-alpha.18",
-	"dependencies": [
-		{
-			"name": "@babylonjs/core",
-			"semver": "^7.42.0"
-		},
-		{
-			"name": "@babylonjs/havok",
-			"semver": "^1.3.10"
-		},
-		{
-			"name": "uuid",
-			"semver": "^11.0.3"
-		}
-	],
-	"unpacked_size": 104528,
 	"downloads_history": [
 		{
 			"range": [1734892200000, 1735496999999],
@@ -94,5 +79,42 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@juunini/svelte-babylonjs",
+				"version": "0.0.1-alpha.18",
+				"size": 104528
+			},
+			{
+				"name": "@babylonjs/core",
+				"version": "7.54.3",
+				"size": 54260757
+			},
+			{
+				"name": "@babylonjs/havok",
+				"version": "1.3.10",
+				"size": 4378003
+			},
+			{
+				"name": "@types/emscripten",
+				"version": "1.40.1",
+				"size": 19399
+			},
+			{
+				"name": "uuid",
+				"version": "11.1.0",
+				"size": 132894
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[0, 4]
+		],
+		"circular": []
+	}
 }

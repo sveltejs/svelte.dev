@@ -14,17 +14,6 @@
 	"svelte_range": ">=3.47.0",
 	"kit_range": "^1.0.0-next.372",
 	"last_rune_check_version": "0.3.0",
-	"dependencies": [
-		{
-			"name": "@remix-run/router",
-			"semver": "0.2.0-pre.10"
-		},
-		{
-			"name": "svelte",
-			"semver": "^3.48.0"
-		}
-	],
-	"unpacked_size": 29416,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -234,5 +223,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "remix-router-svelte",
+				"version": "0.3.0",
+				"size": 29416
+			},
+			{
+				"name": "@remix-run/router",
+				"version": "0.2.0-pre.10",
+				"size": 849577
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

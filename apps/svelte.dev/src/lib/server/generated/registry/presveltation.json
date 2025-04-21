@@ -14,13 +14,6 @@
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.7.2",
 	"last_rune_check_version": "0.5.5",
-	"dependencies": [
-		{
-			"name": "svelte-local-storage-store",
-			"semver": "^0.4.0"
-		}
-	],
-	"unpacked_size": 22184,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -238,5 +231,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "presveltation",
+				"version": "0.5.5",
+				"size": 22184
+			},
+			{
+				"name": "svelte-local-storage-store",
+				"version": "0.4.0",
+				"size": 16362
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

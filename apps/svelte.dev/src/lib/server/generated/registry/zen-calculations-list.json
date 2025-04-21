@@ -12,13 +12,6 @@
 	"version": "0.0.22",
 	"svelte_range": "3.24.0",
 	"last_rune_check_version": "0.0.22",
-	"dependencies": [
-		{
-			"name": "@woden/svelte-simplebar",
-			"semver": "1.0.0"
-		}
-	],
-	"unpacked_size": 295235,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -216,5 +209,62 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 8
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "zen-calculations-list",
+				"version": "0.0.22",
+				"size": 295235
+			},
+			{
+				"name": "@woden/svelte-simplebar",
+				"version": "1.0.0",
+				"size": 442951
+			},
+			{
+				"name": "simplebar",
+				"version": "5.3.9",
+				"size": 538755
+			},
+			{
+				"name": "core-js",
+				"version": "3.41.0",
+				"size": 1265563
+			},
+			{
+				"name": "can-use-dom",
+				"version": "0.1.0"
+			},
+			{
+				"name": "lodash.memoize",
+				"version": "4.1.2"
+			},
+			{
+				"name": "lodash.debounce",
+				"version": "4.0.8"
+			},
+			{
+				"name": "lodash.throttle",
+				"version": "4.1.1"
+			},
+			{
+				"name": "@juggle/resize-observer",
+				"version": "3.4.0",
+				"size": 73672
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[2, 4],
+			[2, 5],
+			[2, 6],
+			[2, 7],
+			[2, 8]
+		],
+		"circular": []
+	}
 }

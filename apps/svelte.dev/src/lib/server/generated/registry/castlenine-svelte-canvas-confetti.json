@@ -14,8 +14,6 @@
 	"svelte_range": "^3.54.0 || ^4.0.0",
 	"kit_range": "^1.30.4",
 	"last_rune_check_version": "1.0.0",
-	"dependencies": [],
-	"unpacked_size": 36301,
 	"downloads_history": [
 		{
 			"range": [1714933800000, 1715538599999],
@@ -197,5 +195,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 28
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@castlenine/svelte-canvas-confetti",
+				"version": "1.0.0",
+				"size": 36301
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

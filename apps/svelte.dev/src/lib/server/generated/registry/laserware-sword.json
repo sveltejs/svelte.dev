@@ -13,8 +13,6 @@
 	"version": "3.2.1",
 	"svelte_range": ">=5",
 	"last_rune_check_version": "3.2.1",
-	"dependencies": [],
-	"unpacked_size": 18490,
 	"downloads_history": [
 		{
 			"range": [1709490600000, 1710095399999],
@@ -248,5 +246,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 22
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@laserware/sword",
+				"version": "3.2.1",
+				"size": 18490
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

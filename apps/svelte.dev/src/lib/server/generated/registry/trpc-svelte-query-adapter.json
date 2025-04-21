@@ -13,13 +13,6 @@
 	"version": "2.3.16",
 	"svelte_range": "^5",
 	"last_rune_check_version": "2.3.16",
-	"dependencies": [
-		{
-			"name": "proxy-deep",
-			"semver": "^4.0.1"
-		}
-	],
-	"unpacked_size": 57988,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +326,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 230
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "trpc-svelte-query-adapter",
+				"version": "2.3.16",
+				"size": 57988
+			},
+			{
+				"name": "proxy-deep",
+				"version": "4.0.1",
+				"size": 15477
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

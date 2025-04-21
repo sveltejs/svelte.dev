@@ -13,17 +13,6 @@
 	"version": "1.1.0",
 	"svelte_range": "^3.34.0",
 	"last_rune_check_version": "1.1.0",
-	"dependencies": [
-		{
-			"name": "tslib",
-			"semver": "~2.0.1"
-		},
-		{
-			"name": "yjs",
-			"semver": "^13.4.1"
-		}
-	],
-	"unpacked_size": 16233,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -329,5 +318,42 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelt-yjs",
+				"version": "1.1.0",
+				"size": 16233
+			},
+			{
+				"name": "tslib",
+				"version": "2.0.3",
+				"size": 34220
+			},
+			{
+				"name": "yjs",
+				"version": "13.6.26",
+				"size": 2301972
+			},
+			{
+				"name": "lib0",
+				"version": "0.2.104",
+				"size": 1881199
+			},
+			{
+				"name": "isomorphic.js",
+				"version": "0.2.5",
+				"size": 4941
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[3, 4]
+		],
+		"circular": []
+	}
 }

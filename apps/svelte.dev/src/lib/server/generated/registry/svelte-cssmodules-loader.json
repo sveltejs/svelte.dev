@@ -13,17 +13,6 @@
 	"version": "1.0.0",
 	"svelte_range": ">1.44.0",
 	"last_rune_check_version": "1.0.0",
-	"dependencies": [
-		{
-			"name": "loader-utils",
-			"semver": "^1.1.0"
-		},
-		{
-			"name": "schema-utils",
-			"semver": "^1.0.0"
-		}
-	],
-	"unpacked_size": 13973,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -225,5 +214,102 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-cssmodules-loader",
+				"version": "1.0.0",
+				"size": 13973
+			},
+			{
+				"name": "loader-utils",
+				"version": "1.4.2",
+				"size": 25854
+			},
+			{
+				"name": "json5",
+				"version": "1.0.2",
+				"size": 78288
+			},
+			{
+				"name": "minimist",
+				"version": "1.2.8",
+				"size": 54477
+			},
+			{
+				"name": "big.js",
+				"version": "5.2.2",
+				"size": 63868
+			},
+			{
+				"name": "emojis-list",
+				"version": "3.0.0",
+				"size": 53575
+			},
+			{
+				"name": "schema-utils",
+				"version": "1.0.0",
+				"size": 11504
+			},
+			{
+				"name": "ajv",
+				"version": "6.12.6",
+				"size": 929154
+			},
+			{
+				"name": "uri-js",
+				"version": "4.4.1",
+				"size": 469879
+			},
+			{
+				"name": "punycode",
+				"version": "2.3.1",
+				"size": 33514
+			},
+			{
+				"name": "fast-deep-equal",
+				"version": "3.1.3",
+				"size": 12966
+			},
+			{
+				"name": "json-schema-traverse",
+				"version": "0.4.1",
+				"size": 19564
+			},
+			{
+				"name": "fast-json-stable-stringify",
+				"version": "2.1.0",
+				"size": 16959
+			},
+			{
+				"name": "ajv-errors",
+				"version": "1.0.1",
+				"size": 41660
+			},
+			{
+				"name": "ajv-keywords",
+				"version": "3.5.2",
+				"size": 72887
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[1, 4],
+			[1, 5],
+			[0, 6],
+			[6, 7],
+			[7, 8],
+			[8, 9],
+			[7, 10],
+			[7, 11],
+			[7, 12],
+			[6, 13],
+			[6, 14]
+		],
+		"circular": []
+	}
 }

@@ -14,13 +14,6 @@
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
 	"last_rune_check_version": "0.2.0",
-	"dependencies": [
-		{
-			"name": "a11y-dialog",
-			"semver": "^7.3.0"
-		}
-	],
-	"unpacked_size": 11417,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -334,5 +327,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 379
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-a11y-dialog",
+				"version": "0.2.0",
+				"size": 11417
+			},
+			{
+				"name": "a11y-dialog",
+				"version": "7.5.3",
+				"size": 40268
+			},
+			{
+				"name": "focusable-selectors",
+				"version": "0.4.0",
+				"size": 4618
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2]
+		],
+		"circular": []
+	}
 }

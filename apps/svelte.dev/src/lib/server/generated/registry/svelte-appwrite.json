@@ -12,13 +12,6 @@
 	"svelte_range": "^3.32.0",
 	"last_rune_check_version": "0.2.3-beta",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "appwrite",
-			"semver": "^2.0.0"
-		}
-	],
-	"unpacked_size": 58288,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -328,5 +321,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-appwrite",
+				"version": "0.2.3-beta",
+				"size": 58288
+			},
+			{
+				"name": "appwrite",
+				"version": "2.0.0",
+				"size": 170064
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

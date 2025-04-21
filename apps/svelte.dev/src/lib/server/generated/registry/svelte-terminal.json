@@ -13,13 +13,6 @@
 	"last_rune_check_version": "0.0.1",
 	"version": "0.0.1",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "tailwind-merge",
-			"semver": "^3.0.2"
-		}
-	],
-	"unpacked_size": 64453,
 	"downloads_history": [
 		{
 			"range": [1743359400000, 1743964199999],
@@ -29,5 +22,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 26
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-terminal",
+				"version": "0.0.1",
+				"size": 64453
+			},
+			{
+				"name": "tailwind-merge",
+				"version": "3.2.0",
+				"size": 898001
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

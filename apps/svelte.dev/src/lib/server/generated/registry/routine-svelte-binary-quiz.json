@@ -13,21 +13,6 @@
 	"version": "0.0.3",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "0.0.3",
-	"dependencies": [
-		{
-			"name": "@rutynka/helper-bar-board",
-			"semver": "0.1.0"
-		},
-		{
-			"name": "@rutynka/helper-progress",
-			"semver": "^0.1.3"
-		},
-		{
-			"name": "sirv-cli",
-			"semver": "^2.0.0"
-		}
-	],
-	"unpacked_size": 14164,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -241,5 +226,158 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "routine-svelte-binary-quiz",
+				"version": "0.0.3",
+				"size": 14164
+			},
+			{
+				"name": "@rutynka/helper-bar-board",
+				"version": "0.1.0",
+				"size": 55421
+			},
+			{
+				"name": "sirv-cli",
+				"version": "1.0.14",
+				"size": 11888
+			},
+			{
+				"name": "sade",
+				"version": "1.8.1",
+				"size": 31545
+			},
+			{
+				"name": "mri",
+				"version": "1.2.0",
+				"size": 13261
+			},
+			{
+				"name": "sirv",
+				"version": "1.0.19",
+				"size": 20668
+			},
+			{
+				"name": "mrmime",
+				"version": "1.0.1",
+				"size": 31038
+			},
+			{
+				"name": "totalist",
+				"version": "1.1.0",
+				"size": 7522
+			},
+			{
+				"name": "@polka/url",
+				"version": "1.0.0-next.29",
+				"size": 4815
+			},
+			{
+				"name": "kleur",
+				"version": "3.0.3",
+				"size": 9893
+			},
+			{
+				"name": "semiver",
+				"version": "1.1.0",
+				"size": 5444
+			},
+			{
+				"name": "get-port",
+				"version": "3.2.0"
+			},
+			{
+				"name": "tinydate",
+				"version": "1.3.0",
+				"size": 7410
+			},
+			{
+				"name": "local-access",
+				"version": "1.1.0",
+				"size": 4960
+			},
+			{
+				"name": "console-clear",
+				"version": "1.1.1",
+				"size": 2457
+			},
+			{
+				"name": "@rutynka/helper-progress",
+				"version": "0.1.3",
+				"size": 23555
+			},
+			{
+				"name": "sirv-cli",
+				"version": "2.0.2",
+				"size": 18393
+			},
+			{
+				"name": "sirv",
+				"version": "2.0.4",
+				"size": 20745
+			},
+			{
+				"name": "mrmime",
+				"version": "2.0.1",
+				"size": 33008
+			},
+			{
+				"name": "totalist",
+				"version": "3.0.1",
+				"size": 7459
+			},
+			{
+				"name": "kleur",
+				"version": "4.1.5",
+				"size": 20250
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[3, 4],
+			[2, 5],
+			[5, 6],
+			[5, 7],
+			[5, 8],
+			[2, 9],
+			[2, 10],
+			[2, 11],
+			[2, 12],
+			[2, 13],
+			[2, 14],
+			[0, 15],
+			[15, 2],
+			[2, 3],
+			[3, 4],
+			[2, 5],
+			[5, 6],
+			[5, 7],
+			[5, 8],
+			[2, 9],
+			[2, 10],
+			[2, 11],
+			[2, 12],
+			[2, 13],
+			[2, 14],
+			[0, 16],
+			[16, 3],
+			[3, 4],
+			[16, 17],
+			[17, 18],
+			[17, 19],
+			[17, 8],
+			[16, 20],
+			[16, 10],
+			[16, 11],
+			[16, 12],
+			[16, 13],
+			[16, 14]
+		],
+		"circular": []
+	}
 }

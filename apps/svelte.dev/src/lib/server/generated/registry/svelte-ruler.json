@@ -13,13 +13,6 @@
 	"version": "0.19.0",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "0.19.0",
-	"dependencies": [
-		{
-			"name": "@scena/ruler",
-			"semver": "~0.20.0"
-		}
-	],
-	"unpacked_size": 27595,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +326,61 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 17
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-ruler",
+				"version": "0.19.0",
+				"size": 27595
+			},
+			{
+				"name": "@scena/ruler",
+				"version": "0.20.0",
+				"size": 209809
+			},
+			{
+				"name": "croact",
+				"version": "1.0.4",
+				"size": 414142
+			},
+			{
+				"name": "@daybrush/utils",
+				"version": "1.13.0",
+				"size": 456699
+			},
+			{
+				"name": "@egjs/list-differ",
+				"version": "1.0.1",
+				"size": 104427
+			},
+			{
+				"name": "croact-ruler",
+				"version": "0.18.0",
+				"size": 37909
+			},
+			{
+				"name": "@scena/react-ruler",
+				"version": "0.19.0",
+				"size": 160951
+			},
+			{
+				"name": "framework-utils",
+				"version": "1.1.0",
+				"size": 29583
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[2, 4],
+			[1, 5],
+			[5, 6],
+			[6, 3],
+			[6, 7]
+		],
+		"circular": []
+	}
 }

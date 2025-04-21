@@ -14,8 +14,6 @@
 	"svelte_range": "^3.42.2",
 	"kit_range": "^1.0.0-next.156",
 	"last_rune_check_version": "1.0.2",
-	"dependencies": [],
-	"unpacked_size": 3119,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -329,5 +327,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 252
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@macfja/svelte-multi-adapter",
+				"version": "1.0.2",
+				"size": 3119
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

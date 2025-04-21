@@ -12,17 +12,6 @@
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "1.0.5",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "basic-browser-request",
-			"semver": "^10.0.0"
-		},
-		{
-			"name": "lodash.throttle",
-			"semver": "^4.1.1"
-		}
-	],
-	"unpacked_size": 35681,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -232,5 +221,29 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-search-spotify",
+				"version": "1.0.5",
+				"size": 35681
+			},
+			{
+				"name": "basic-browser-request",
+				"version": "10.0.2",
+				"size": 3338578
+			},
+			{
+				"name": "lodash.throttle",
+				"version": "4.1.1"
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

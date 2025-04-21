@@ -13,13 +13,6 @@
 	"version": "2.2.1",
 	"svelte_range": "^3.32.1",
 	"last_rune_check_version": "2.2.1",
-	"dependencies": [
-		{
-			"name": "svelte",
-			"semver": "^3.32.1"
-		}
-	],
-	"unpacked_size": 25800,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +326,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 181
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svg-to-svelte",
+				"version": "2.2.1",
+				"size": 25800
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

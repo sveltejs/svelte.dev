@@ -14,21 +14,6 @@
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.5.0",
 	"last_rune_check_version": "0.0.6",
-	"dependencies": [
-		{
-			"name": "svelte",
-			"semver": "^3.54.0"
-		},
-		{
-			"name": "lodash.isequal",
-			"semver": "^4.5.0"
-		},
-		{
-			"name": "masonry-layout",
-			"semver": "^4.2.2"
-		}
-	],
-	"unpacked_size": 10521,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -314,5 +299,62 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 15
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@eirikk/svelte-masonry-layout",
+				"version": "0.0.6",
+				"size": 10521
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			},
+			{
+				"name": "lodash.isequal",
+				"version": "4.5.0"
+			},
+			{
+				"name": "masonry-layout",
+				"version": "4.2.2",
+				"size": 98101
+			},
+			{
+				"name": "get-size",
+				"version": "2.0.3",
+				"size": 17718
+			},
+			{
+				"name": "outlayer",
+				"version": "2.1.1"
+			},
+			{
+				"name": "ev-emitter",
+				"version": "1.1.1"
+			},
+			{
+				"name": "fizzy-ui-utils",
+				"version": "2.0.7"
+			},
+			{
+				"name": "desandro-matches-selector",
+				"version": "2.0.2"
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[3, 4],
+			[3, 5],
+			[5, 6],
+			[5, 4],
+			[5, 7],
+			[7, 8]
+		],
+		"circular": []
+	}
 }

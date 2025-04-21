@@ -12,29 +12,6 @@
 	"svelte_range": "3.24.0",
 	"last_rune_check_version": "0.9.8",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "@rdfjs/data-model",
-			"semver": "1.1.2"
-		},
-		{
-			"name": "@rdfjs/dataset",
-			"semver": "^1.0.1"
-		},
-		{
-			"name": "@types/rdf-js",
-			"semver": "3.0.3"
-		},
-		{
-			"name": "cl-editor",
-			"semver": "^2.1.0"
-		},
-		{
-			"name": "prefixplete",
-			"semver": "1.3.1"
-		}
-	],
-	"unpacked_size": 1607097,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -260,5 +237,197 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "rdfjs-svelte",
+				"version": "0.9.8",
+				"size": 1607097
+			},
+			{
+				"name": "@rdfjs/data-model",
+				"version": "1.1.2",
+				"size": 36195
+			},
+			{
+				"name": "@types/rdf-js",
+				"version": "2.0.12",
+				"size": 24296
+			},
+			{
+				"name": "@types/node",
+				"version": "22.14.1",
+				"size": 2331510
+			},
+			{
+				"name": "undici-types",
+				"version": "6.21.0",
+				"size": 83680
+			},
+			{
+				"name": "@rdfjs/dataset",
+				"version": "1.1.1",
+				"size": 29692
+			},
+			{
+				"name": "@rdfjs/data-model",
+				"version": "1.3.4",
+				"size": 48311
+			},
+			{
+				"name": "@rdfjs/types",
+				"version": "2.0.1",
+				"size": 41601
+			},
+			{
+				"name": "@types/rdf-js",
+				"version": "3.0.3",
+				"size": 24461
+			},
+			{
+				"name": "cl-editor",
+				"version": "2.3.0",
+				"size": 205571
+			},
+			{
+				"name": "prefixplete",
+				"version": "1.3.1",
+				"size": 650497
+			},
+			{
+				"name": "@babel/runtime",
+				"version": "7.27.0",
+				"size": 249798
+			},
+			{
+				"name": "regenerator-runtime",
+				"version": "0.14.1",
+				"size": 27863
+			},
+			{
+				"name": "@retog/sparql-client",
+				"version": "2.0.0-alpha",
+				"size": 10313
+			},
+			{
+				"name": "n3",
+				"version": "1.25.2",
+				"size": 610206
+			},
+			{
+				"name": "buffer",
+				"version": "6.0.3",
+				"size": 91279
+			},
+			{
+				"name": "base64-js",
+				"version": "1.5.1",
+				"size": 9624
+			},
+			{
+				"name": "ieee754",
+				"version": "1.2.1",
+				"size": 6796
+			},
+			{
+				"name": "readable-stream",
+				"version": "4.7.0",
+				"size": 217898
+			},
+			{
+				"name": "abort-controller",
+				"version": "3.0.0",
+				"size": 76297
+			},
+			{
+				"name": "event-target-shim",
+				"version": "5.0.1",
+				"size": 188883
+			},
+			{
+				"name": "events",
+				"version": "3.3.0",
+				"size": 82778
+			},
+			{
+				"name": "process",
+				"version": "0.11.10"
+			},
+			{
+				"name": "string_decoder",
+				"version": "1.3.0",
+				"size": 14427
+			},
+			{
+				"name": "safe-buffer",
+				"version": "5.2.1",
+				"size": 32101
+			},
+			{
+				"name": "node-fetch",
+				"version": "2.7.0",
+				"size": 162253
+			},
+			{
+				"name": "whatwg-url",
+				"version": "5.0.0"
+			},
+			{
+				"name": "tr46",
+				"version": "0.0.3"
+			},
+			{
+				"name": "webidl-conversions",
+				"version": "3.0.1"
+			},
+			{
+				"name": "awesomplete",
+				"version": "1.1.7",
+				"size": 165487
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[3, 4],
+			[0, 5],
+			[5, 6],
+			[6, 7],
+			[7, 3],
+			[3, 4],
+			[0, 8],
+			[8, 3],
+			[3, 4],
+			[0, 9],
+			[0, 10],
+			[10, 11],
+			[11, 12],
+			[10, 13],
+			[13, 11],
+			[11, 12],
+			[13, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17],
+			[14, 18],
+			[18, 19],
+			[19, 20],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 21],
+			[18, 22],
+			[18, 23],
+			[23, 24],
+			[13, 25],
+			[25, 26],
+			[26, 27],
+			[26, 28],
+			[10, 29]
+		],
+		"circular": []
+	}
 }

@@ -13,17 +13,6 @@
 	"version": "1.0.2",
 	"svelte_range": "^3.48.0",
 	"last_rune_check_version": "1.0.2",
-	"dependencies": [
-		{
-			"name": "clone",
-			"semver": "^2.1.2"
-		},
-		{
-			"name": "prosemirror-state",
-			"semver": "^1.3.4"
-		}
-	],
-	"unpacked_size": 15073,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -329,5 +318,64 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 13
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "prosemirror-svelte-nodeview",
+				"version": "1.0.2",
+				"size": 15073
+			},
+			{
+				"name": "clone",
+				"version": "2.1.2",
+				"size": 15879
+			},
+			{
+				"name": "prosemirror-state",
+				"version": "1.4.3",
+				"size": 183382,
+				"isCircular": true,
+				"circularTarget": 2
+			},
+			{
+				"name": "prosemirror-model",
+				"version": "1.25.0",
+				"size": 523551
+			},
+			{
+				"name": "orderedmap",
+				"version": "2.1.1",
+				"size": 14835
+			},
+			{
+				"name": "prosemirror-transform",
+				"version": "1.10.3",
+				"size": 316103
+			},
+			{
+				"name": "prosemirror-view",
+				"version": "1.39.1",
+				"size": 872388
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[3, 4],
+			[2, 5],
+			[5, 3],
+			[3, 4],
+			[2, 6],
+			[6, 3],
+			[3, 4],
+			[6, 2],
+			[6, 5],
+			[5, 3],
+			[3, 4]
+		],
+		"circular": [[6, 2]]
+	}
 }

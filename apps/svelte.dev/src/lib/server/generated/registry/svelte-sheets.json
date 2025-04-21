@@ -13,21 +13,6 @@
 	"kit_range": "next",
 	"last_rune_check_version": "1.0.0",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "b64-to-blob",
-			"semver": "^1.2.19"
-		},
-		{
-			"name": "hotkeys-js",
-			"semver": "^3.8.1"
-		},
-		{
-			"name": "xlsx",
-			"semver": "^0.16.9"
-		}
-	],
-	"unpacked_size": 73121,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -341,5 +326,120 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 65
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-sheets",
+				"version": "1.0.0",
+				"size": 73121
+			},
+			{
+				"name": "b64-to-blob",
+				"version": "1.2.19"
+			},
+			{
+				"name": "hotkeys-js",
+				"version": "3.13.9",
+				"size": 98148
+			},
+			{
+				"name": "xlsx",
+				"version": "0.16.9",
+				"size": 8872969
+			},
+			{
+				"name": "cfb",
+				"version": "1.2.2",
+				"size": 370889
+			},
+			{
+				"name": "adler-32",
+				"version": "1.3.1",
+				"size": 20386
+			},
+			{
+				"name": "crc-32",
+				"version": "1.2.2",
+				"size": 31044
+			},
+			{
+				"name": "ssf",
+				"version": "0.11.2",
+				"size": 97727
+			},
+			{
+				"name": "frac",
+				"version": "1.1.2",
+				"size": 12095
+			},
+			{
+				"name": "wmf",
+				"version": "1.0.2",
+				"size": 318283
+			},
+			{
+				"name": "word",
+				"version": "0.3.0",
+				"size": 14085
+			},
+			{
+				"name": "fflate",
+				"version": "0.3.11",
+				"size": 255898
+			},
+			{
+				"name": "adler-32",
+				"version": "1.2.0"
+			},
+			{
+				"name": "printj",
+				"version": "1.1.2",
+				"size": 113471
+			},
+			{
+				"name": "exit-on-epipe",
+				"version": "1.0.1"
+			},
+			{
+				"name": "codepage",
+				"version": "1.14.0",
+				"size": 6461340
+			},
+			{
+				"name": "commander",
+				"version": "2.14.1",
+				"size": 58015
+			},
+			{
+				"name": "commander",
+				"version": "2.17.1",
+				"size": 61159
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[3, 4],
+			[4, 5],
+			[4, 6],
+			[3, 7],
+			[7, 8],
+			[3, 9],
+			[3, 10],
+			[3, 6],
+			[3, 11],
+			[3, 12],
+			[12, 13],
+			[12, 14],
+			[3, 15],
+			[15, 16],
+			[15, 14],
+			[3, 17],
+			[3, 14]
+		],
+		"circular": []
+	}
 }

@@ -14,8 +14,6 @@
 	"last_rune_check_version": "0.1.11",
 	"version": "0.1.11",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 37362,
 	"downloads_history": [
 		{
 			"range": [1739730600000, 1740335399999],
@@ -45,5 +43,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 159
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-magic-scroller",
+				"version": "0.1.11",
+				"size": 37362
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

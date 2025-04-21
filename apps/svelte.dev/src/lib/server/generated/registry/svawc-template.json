@@ -13,13 +13,6 @@
 	"version": "1.0.2",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "1.0.2",
-	"dependencies": [
-		{
-			"name": "svawc",
-			"semver": "^0.0.1"
-		}
-	],
-	"unpacked_size": 108474,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -217,5 +210,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svawc-template",
+				"version": "1.0.2",
+				"size": 108474
+			},
+			{
+				"name": "svawc",
+				"version": "0.0.1",
+				"size": 97556
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

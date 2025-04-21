@@ -14,8 +14,6 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "1.0.7",
-	"dependencies": [],
-	"unpacked_size": 84297,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -273,5 +271,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 33
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-bird",
+				"version": "1.0.7",
+				"size": 84297
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

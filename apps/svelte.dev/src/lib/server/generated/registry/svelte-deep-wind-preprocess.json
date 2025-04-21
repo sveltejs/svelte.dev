@@ -13,13 +13,6 @@
 	"version": "0.0.8",
 	"svelte_range": "^3.49.0",
 	"last_rune_check_version": "0.0.8",
-	"dependencies": [
-		{
-			"name": "magic-string",
-			"semver": "^0.26.2"
-		}
-	],
-	"unpacked_size": 45167,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -225,5 +218,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-deep-wind-preprocess",
+				"version": "0.0.8",
+				"size": 45167
+			},
+			{
+				"name": "magic-string",
+				"version": "0.26.7",
+				"size": 400761
+			},
+			{
+				"name": "sourcemap-codec",
+				"version": "1.4.8",
+				"size": 31802
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2]
+		],
+		"circular": []
+	}
 }

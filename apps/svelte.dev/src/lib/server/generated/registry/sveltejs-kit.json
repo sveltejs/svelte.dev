@@ -13,53 +13,6 @@
 	"version": "2.20.7",
 	"svelte_range": "^4.0.0 || ^5.0.0-next.0",
 	"last_rune_check_version": "2.20.7",
-	"dependencies": [
-		{
-			"name": "@types/cookie",
-			"semver": "^0.6.0"
-		},
-		{
-			"name": "cookie",
-			"semver": "^0.6.0"
-		},
-		{
-			"name": "devalue",
-			"semver": "^5.1.0"
-		},
-		{
-			"name": "esm-env",
-			"semver": "^1.2.2"
-		},
-		{
-			"name": "import-meta-resolve",
-			"semver": "^4.1.0"
-		},
-		{
-			"name": "kleur",
-			"semver": "^4.1.5"
-		},
-		{
-			"name": "magic-string",
-			"semver": "^0.30.5"
-		},
-		{
-			"name": "mrmime",
-			"semver": "^2.0.0"
-		},
-		{
-			"name": "sade",
-			"semver": "^1.8.1"
-		},
-		{
-			"name": "set-cookie-parser",
-			"semver": "^2.6.0"
-		},
-		{
-			"name": "sirv",
-			"semver": "^3.0.0"
-		}
-	],
-	"unpacked_size": 820650,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -373,5 +326,109 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 524388
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@sveltejs/kit",
+				"version": "2.20.7",
+				"size": 820650
+			},
+			{
+				"name": "@types/cookie",
+				"version": "0.6.0",
+				"size": 10073
+			},
+			{
+				"name": "cookie",
+				"version": "0.6.0",
+				"size": 23736
+			},
+			{
+				"name": "devalue",
+				"version": "5.1.1",
+				"size": 31833
+			},
+			{
+				"name": "esm-env",
+				"version": "1.2.2",
+				"size": 3784
+			},
+			{
+				"name": "import-meta-resolve",
+				"version": "4.1.0",
+				"size": 77354
+			},
+			{
+				"name": "kleur",
+				"version": "4.1.5",
+				"size": 20250
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "mrmime",
+				"version": "2.0.1",
+				"size": 33008
+			},
+			{
+				"name": "sade",
+				"version": "1.8.1",
+				"size": 31545
+			},
+			{
+				"name": "mri",
+				"version": "1.2.0",
+				"size": 13261
+			},
+			{
+				"name": "set-cookie-parser",
+				"version": "2.7.1",
+				"size": 16074
+			},
+			{
+				"name": "sirv",
+				"version": "3.0.1",
+				"size": 21845
+			},
+			{
+				"name": "@polka/url",
+				"version": "1.0.0-next.29",
+				"size": 4815
+			},
+			{
+				"name": "totalist",
+				"version": "3.0.1",
+				"size": 7459
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[0, 4],
+			[0, 5],
+			[0, 6],
+			[0, 7],
+			[7, 8],
+			[0, 9],
+			[0, 10],
+			[10, 11],
+			[0, 12],
+			[0, 13],
+			[13, 14],
+			[13, 9],
+			[13, 15]
+		],
+		"circular": []
+	}
 }

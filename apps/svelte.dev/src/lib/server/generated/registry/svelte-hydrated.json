@@ -14,8 +14,6 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "2.0.0",
-	"dependencies": [],
-	"unpacked_size": 5582,
 	"downloads_history": [
 		{
 			"range": [1702233000000, 1702837799999],
@@ -297,5 +295,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6425
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-hydrated",
+				"version": "2.0.0",
+				"size": 5582
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

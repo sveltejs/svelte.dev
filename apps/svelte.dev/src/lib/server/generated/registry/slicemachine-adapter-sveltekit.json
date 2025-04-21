@@ -28,53 +28,6 @@
 	"svelte_range": "^3.54.0 || ^4.0.0-next.0 || ^5.0.0-next.1",
 	"kit_range": "^1 || ^2",
 	"last_rune_check_version": "0.3.74",
-	"dependencies": [
-		{
-			"name": "fp-ts",
-			"semver": "^2.13.1"
-		},
-		{
-			"name": "io-ts",
-			"semver": "^2.2.20"
-		},
-		{
-			"name": "monocle-ts",
-			"semver": "^2.3.13"
-		},
-		{
-			"name": "newtype-ts",
-			"semver": "^0.3.5"
-		},
-		{
-			"name": "common-tags",
-			"semver": "^1.8.2"
-		},
-		{
-			"name": "io-ts-types",
-			"semver": "^0.5.19"
-		},
-		{
-			"name": "pascal-case",
-			"semver": "^3.1.2"
-		},
-		{
-			"name": "@prismicio/simulator",
-			"semver": "^0.1.4"
-		},
-		{
-			"name": "prettier-plugin-svelte",
-			"semver": "^3.0.3"
-		},
-		{
-			"name": "@slicemachine/plugin-kit",
-			"semver": "0.4.73"
-		},
-		{
-			"name": "@prismicio/types-internal",
-			"semver": "3.8.0"
-		}
-	],
-	"unpacked_size": 5534274,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -388,5 +341,769 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 2861
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@slicemachine/adapter-sveltekit",
+				"version": "0.3.74",
+				"size": 5534274
+			},
+			{
+				"name": "fp-ts",
+				"version": "2.16.10",
+				"size": 4737356
+			},
+			{
+				"name": "io-ts",
+				"version": "2.2.22",
+				"size": 460155
+			},
+			{
+				"name": "monocle-ts",
+				"version": "2.3.13",
+				"size": 368346
+			},
+			{
+				"name": "newtype-ts",
+				"version": "0.3.5",
+				"size": 34841
+			},
+			{
+				"name": "common-tags",
+				"version": "1.8.2",
+				"size": 228182
+			},
+			{
+				"name": "io-ts-types",
+				"version": "0.5.19",
+				"size": 137448
+			},
+			{
+				"name": "pascal-case",
+				"version": "3.1.2",
+				"size": 14764
+			},
+			{
+				"name": "no-case",
+				"version": "3.0.4",
+				"size": 25128
+			},
+			{
+				"name": "lower-case",
+				"version": "2.0.2",
+				"size": 17661
+			},
+			{
+				"name": "tslib",
+				"version": "2.8.1",
+				"size": 90359
+			},
+			{
+				"name": "@prismicio/simulator",
+				"version": "0.1.4",
+				"size": 306643
+			},
+			{
+				"name": "statuses",
+				"version": "2.0.1",
+				"size": 12116
+			},
+			{
+				"name": "@types/statuses",
+				"version": "2.0.5",
+				"size": 4632
+			},
+			{
+				"name": "@prismicio/client",
+				"version": "7.17.2",
+				"size": 1634767
+			},
+			{
+				"name": "imgix-url-builder",
+				"version": "0.0.6",
+				"size": 430381
+			},
+			{
+				"name": "prettier-plugin-svelte",
+				"version": "3.3.3",
+				"size": 1503936
+			},
+			{
+				"name": "@slicemachine/plugin-kit",
+				"version": "0.4.73",
+				"size": 685154
+			},
+			{
+				"name": "defu",
+				"version": "6.1.4",
+				"size": 19561
+			},
+			{
+				"name": "dotenv",
+				"version": "16.3.1",
+				"size": 71560
+			},
+			{
+				"name": "p-limit",
+				"version": "4.0.0",
+				"size": 7788
+			},
+			{
+				"name": "yocto-queue",
+				"version": "1.2.1",
+				"size": 8009
+			},
+			{
+				"name": "fs-extra",
+				"version": "11.1.1",
+				"size": 59493
+			},
+			{
+				"name": "jsonfile",
+				"version": "6.1.0",
+				"size": 19750
+			},
+			{
+				"name": "universalify",
+				"version": "2.0.1",
+				"size": 4675
+			},
+			{
+				"name": "graceful-fs",
+				"version": "4.2.11",
+				"size": 32535
+			},
+			{
+				"name": "prettier",
+				"version": "3.5.3",
+				"size": 7876465
+			},
+			{
+				"name": "io-ts-reporters",
+				"version": "2.0.1",
+				"size": 25020
+			},
+			{
+				"name": "@scarf/scarf",
+				"version": "1.4.0",
+				"size": 38647
+			},
+			{
+				"name": "@prismicio/client",
+				"version": "7.17.0",
+				"size": 1628815
+			},
+			{
+				"name": "imgix-url-builder",
+				"version": "0.0.5",
+				"size": 429532
+			},
+			{
+				"name": "prismic-ts-codegen",
+				"version": "0.1.25",
+				"size": 3626139
+			},
+			{
+				"name": "joi",
+				"version": "17.13.3",
+				"size": 531117
+			},
+			{
+				"name": "@hapi/hoek",
+				"version": "9.3.0",
+				"size": 51451
+			},
+			{
+				"name": "@hapi/topo",
+				"version": "5.1.0",
+				"size": 10720
+			},
+			{
+				"name": "@sideway/address",
+				"version": "4.1.5",
+				"size": 55851
+			},
+			{
+				"name": "@sideway/formula",
+				"version": "3.0.1",
+				"size": 16939
+			},
+			{
+				"name": "@sideway/pinpoint",
+				"version": "2.0.0",
+				"size": 3643
+			},
+			{
+				"name": "jiti",
+				"version": "1.21.7",
+				"size": 2003102
+			},
+			{
+				"name": "meow",
+				"version": "12.0.1",
+				"size": 32185
+			},
+			{
+				"name": "redent",
+				"version": "4.0.0",
+				"size": 3853
+			},
+			{
+				"name": "indent-string",
+				"version": "5.0.0",
+				"size": 4744
+			},
+			{
+				"name": "strip-indent",
+				"version": "4.0.0",
+				"size": 3644
+			},
+			{
+				"name": "min-indent",
+				"version": "1.0.1",
+				"size": 2969
+			},
+			{
+				"name": "type-fest",
+				"version": "3.13.1",
+				"size": 273907
+			},
+			{
+				"name": "decamelize",
+				"version": "6.0.0",
+				"size": 6843
+			},
+			{
+				"name": "read-pkg-up",
+				"version": "9.1.0",
+				"size": 6629
+			},
+			{
+				"name": "find-up",
+				"version": "6.3.0",
+				"size": 17031
+			},
+			{
+				"name": "locate-path",
+				"version": "7.2.0",
+				"size": 7247
+			},
+			{
+				"name": "p-locate",
+				"version": "6.0.0",
+				"size": 7032
+			},
+			{
+				"name": "path-exists",
+				"version": "5.0.0",
+				"size": 4118
+			},
+			{
+				"name": "read-pkg",
+				"version": "7.1.0",
+				"size": 5981
+			},
+			{
+				"name": "@types/normalize-package-data",
+				"version": "2.4.4",
+				"size": 5813
+			},
+			{
+				"name": "normalize-package-data",
+				"version": "3.0.3",
+				"size": 27888
+			},
+			{
+				"name": "semver",
+				"version": "7.7.1",
+				"size": 96674
+			},
+			{
+				"name": "is-core-module",
+				"version": "2.16.1",
+				"size": 33475
+			},
+			{
+				"name": "hasown",
+				"version": "2.0.2",
+				"size": 8765
+			},
+			{
+				"name": "function-bind",
+				"version": "1.1.2",
+				"size": 31427
+			},
+			{
+				"name": "hosted-git-info",
+				"version": "4.1.0",
+				"size": 24404
+			},
+			{
+				"name": "lru-cache",
+				"version": "6.0.0",
+				"size": 15643
+			},
+			{
+				"name": "yallist",
+				"version": "4.0.0",
+				"size": 14752
+			},
+			{
+				"name": "validate-npm-package-license",
+				"version": "3.0.4",
+				"size": 16597
+			},
+			{
+				"name": "spdx-correct",
+				"version": "3.2.0",
+				"size": 23412
+			},
+			{
+				"name": "spdx-expression-parse",
+				"version": "3.0.1",
+				"size": 11850
+			},
+			{
+				"name": "spdx-exceptions",
+				"version": "2.5.0",
+				"size": 3468
+			},
+			{
+				"name": "spdx-license-ids",
+				"version": "3.0.21",
+				"size": 12891
+			},
+			{
+				"name": "parse-json",
+				"version": "5.2.0",
+				"size": 5409
+			},
+			{
+				"name": "error-ex",
+				"version": "1.3.2",
+				"size": 9035
+			},
+			{
+				"name": "is-arrayish",
+				"version": "0.2.1"
+			},
+			{
+				"name": "@babel/code-frame",
+				"version": "7.26.2",
+				"size": 33160
+			},
+			{
+				"name": "js-tokens",
+				"version": "4.0.0"
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "@babel/helper-validator-identifier",
+				"version": "7.25.9",
+				"size": 48330
+			},
+			{
+				"name": "lines-and-columns",
+				"version": "1.2.4",
+				"size": 5386
+			},
+			{
+				"name": "json-parse-even-better-errors",
+				"version": "2.3.1",
+				"size": 10426
+			},
+			{
+				"name": "type-fest",
+				"version": "2.19.0",
+				"size": 201534
+			},
+			{
+				"name": "yargs-parser",
+				"version": "21.1.1",
+				"size": 128470
+			},
+			{
+				"name": "trim-newlines",
+				"version": "5.0.0",
+				"size": 4609
+			},
+			{
+				"name": "camelcase-keys",
+				"version": "8.0.2",
+				"size": 11622
+			},
+			{
+				"name": "camelcase",
+				"version": "7.0.1",
+				"size": 11720
+			},
+			{
+				"name": "map-obj",
+				"version": "4.3.0",
+				"size": 9492
+			},
+			{
+				"name": "quick-lru",
+				"version": "6.1.2",
+				"size": 15235
+			},
+			{
+				"name": "hard-rejection",
+				"version": "2.1.0",
+				"size": 5142
+			},
+			{
+				"name": "@types/minimist",
+				"version": "1.2.5",
+				"size": 6267
+			},
+			{
+				"name": "decamelize-keys",
+				"version": "2.0.1",
+				"size": 8496
+			},
+			{
+				"name": "minimist-options",
+				"version": "4.1.0",
+				"size": 8530
+			},
+			{
+				"name": "arrify",
+				"version": "1.0.1"
+			},
+			{
+				"name": "is-plain-obj",
+				"version": "1.1.0"
+			},
+			{
+				"name": "kind-of",
+				"version": "6.0.3",
+				"size": 22820
+			},
+			{
+				"name": "normalize-package-data",
+				"version": "5.0.0",
+				"size": 28174
+			},
+			{
+				"name": "hosted-git-info",
+				"version": "6.1.3",
+				"size": 26832
+			},
+			{
+				"name": "lru-cache",
+				"version": "7.18.3",
+				"size": 133924
+			},
+			{
+				"name": "fast-glob",
+				"version": "3.3.3",
+				"size": 98396
+			},
+			{
+				"name": "@nodelib/fs.stat",
+				"version": "2.0.5",
+				"size": 11845
+			},
+			{
+				"name": "@nodelib/fs.walk",
+				"version": "1.2.8",
+				"size": 26377
+			},
+			{
+				"name": "fastq",
+				"version": "1.19.1",
+				"size": 45922
+			},
+			{
+				"name": "reusify",
+				"version": "1.1.0",
+				"size": 11696
+			},
+			{
+				"name": "@nodelib/fs.scandir",
+				"version": "2.1.5",
+				"size": 22155
+			},
+			{
+				"name": "run-parallel",
+				"version": "1.2.0",
+				"size": 6563
+			},
+			{
+				"name": "queue-microtask",
+				"version": "1.2.3",
+				"size": 8367
+			},
+			{
+				"name": "glob-parent",
+				"version": "5.1.2",
+				"size": 12134
+			},
+			{
+				"name": "is-glob",
+				"version": "4.0.3",
+				"size": 13609
+			},
+			{
+				"name": "is-extglob",
+				"version": "2.1.1"
+			},
+			{
+				"name": "merge2",
+				"version": "1.4.1",
+				"size": 8897
+			},
+			{
+				"name": "micromatch",
+				"version": "4.0.8",
+				"size": 56599
+			},
+			{
+				"name": "braces",
+				"version": "3.0.3",
+				"size": 44635
+			},
+			{
+				"name": "fill-range",
+				"version": "7.1.1",
+				"size": 16743
+			},
+			{
+				"name": "to-regex-range",
+				"version": "5.0.1",
+				"size": 22939
+			},
+			{
+				"name": "is-number",
+				"version": "7.0.0",
+				"size": 9615
+			},
+			{
+				"name": "picomatch",
+				"version": "2.3.1",
+				"size": 89952
+			},
+			{
+				"name": "node-fetch",
+				"version": "3.3.2",
+				"size": 107319
+			},
+			{
+				"name": "data-uri-to-buffer",
+				"version": "4.0.1",
+				"size": 10049
+			},
+			{
+				"name": "fetch-blob",
+				"version": "3.2.0",
+				"size": 21755
+			},
+			{
+				"name": "node-domexception",
+				"version": "1.0.0",
+				"size": 29162
+			},
+			{
+				"name": "web-streams-polyfill",
+				"version": "3.3.3",
+				"size": 9036205
+			},
+			{
+				"name": "formdata-polyfill",
+				"version": "4.0.10",
+				"size": 32220
+			},
+			{
+				"name": "@prismicio/custom-types-client",
+				"version": "1.3.1",
+				"size": 177931
+			},
+			{
+				"name": "@prismicio/types-internal",
+				"version": "3.8.0",
+				"size": 4503540
+			},
+			{
+				"name": "uuid",
+				"version": "9.0.1",
+				"size": 123288
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[0, 4],
+			[0, 5],
+			[0, 6],
+			[0, 7],
+			[7, 8],
+			[8, 9],
+			[9, 10],
+			[8, 10],
+			[7, 10],
+			[0, 11],
+			[11, 12],
+			[11, 13],
+			[11, 14],
+			[14, 15],
+			[0, 16],
+			[0, 17],
+			[17, 18],
+			[17, 1],
+			[17, 2],
+			[17, 19],
+			[17, 20],
+			[20, 21],
+			[17, 22],
+			[22, 23],
+			[23, 24],
+			[22, 25],
+			[22, 24],
+			[17, 26],
+			[17, 5],
+			[17, 27],
+			[27, 28],
+			[17, 29],
+			[29, 30],
+			[17, 31],
+			[31, 32],
+			[32, 33],
+			[32, 34],
+			[34, 33],
+			[32, 35],
+			[35, 33],
+			[32, 36],
+			[32, 37],
+			[31, 38],
+			[31, 39],
+			[39, 40],
+			[40, 41],
+			[40, 42],
+			[42, 43],
+			[39, 44],
+			[39, 45],
+			[39, 46],
+			[46, 47],
+			[47, 48],
+			[48, 49],
+			[49, 20],
+			[20, 21],
+			[47, 50],
+			[46, 51],
+			[51, 52],
+			[51, 53],
+			[53, 54],
+			[53, 55],
+			[55, 56],
+			[56, 57],
+			[53, 58],
+			[58, 59],
+			[59, 60],
+			[53, 61],
+			[61, 62],
+			[62, 63],
+			[63, 64],
+			[63, 65],
+			[62, 65],
+			[61, 63],
+			[63, 64],
+			[63, 65],
+			[51, 66],
+			[66, 67],
+			[67, 68],
+			[66, 69],
+			[69, 70],
+			[69, 71],
+			[69, 72],
+			[66, 73],
+			[66, 74],
+			[51, 75],
+			[46, 75],
+			[39, 76],
+			[39, 77],
+			[39, 78],
+			[78, 79],
+			[78, 80],
+			[78, 81],
+			[78, 75],
+			[39, 82],
+			[39, 83],
+			[39, 84],
+			[84, 45],
+			[84, 80],
+			[84, 81],
+			[84, 44],
+			[39, 85],
+			[85, 86],
+			[85, 87],
+			[85, 88],
+			[39, 89],
+			[89, 54],
+			[89, 55],
+			[55, 56],
+			[56, 57],
+			[89, 90],
+			[90, 91],
+			[89, 61],
+			[61, 62],
+			[62, 63],
+			[63, 64],
+			[63, 65],
+			[62, 65],
+			[61, 63],
+			[63, 64],
+			[63, 65],
+			[31, 92],
+			[92, 93],
+			[92, 94],
+			[94, 95],
+			[95, 96],
+			[94, 97],
+			[97, 98],
+			[98, 99],
+			[97, 93],
+			[92, 100],
+			[100, 101],
+			[101, 102],
+			[92, 103],
+			[92, 104],
+			[104, 105],
+			[105, 106],
+			[106, 107],
+			[107, 108],
+			[104, 109],
+			[31, 81],
+			[31, 110],
+			[110, 111],
+			[110, 112],
+			[112, 113],
+			[112, 114],
+			[110, 115],
+			[115, 112],
+			[112, 113],
+			[112, 114],
+			[31, 5],
+			[31, 7],
+			[7, 8],
+			[8, 9],
+			[9, 10],
+			[8, 10],
+			[7, 10],
+			[31, 116],
+			[0, 117],
+			[117, 118],
+			[117, 10],
+			[117, 3],
+			[117, 4]
+		],
+		"circular": []
+	}
 }

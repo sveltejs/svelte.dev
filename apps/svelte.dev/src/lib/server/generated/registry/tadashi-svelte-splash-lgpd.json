@@ -13,8 +13,6 @@
 	"svelte_range": ">= 4 < 5",
 	"last_rune_check_version": "1.6.0",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 222826,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -272,5 +270,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@tadashi/svelte-splash-lgpd",
+				"version": "1.6.0",
+				"size": 222826
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

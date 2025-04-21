@@ -13,33 +13,6 @@
 	"version": "0.8.0",
 	"svelte_range": "^2.16.0",
 	"last_rune_check_version": "0.8.0",
-	"dependencies": [
-		{
-			"name": "inspect-with-kind",
-			"semver": "^1.0.5"
-		},
-		{
-			"name": "is-plain-object",
-			"semver": "^2.0.4"
-		},
-		{
-			"name": "plugin-error",
-			"semver": "^1.0.1"
-		},
-		{
-			"name": "svelte",
-			"semver": "^2.16.0"
-		},
-		{
-			"name": "vinyl",
-			"semver": "^2.2.0"
-		},
-		{
-			"name": "vinyl-sourcemaps-apply",
-			"semver": "^0.2.1"
-		}
-	],
-	"unpacked_size": 9260,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -353,5 +326,187 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 24
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "gulp-svelte",
+				"version": "0.8.0",
+				"size": 9260
+			},
+			{
+				"name": "inspect-with-kind",
+				"version": "1.0.5",
+				"size": 4952
+			},
+			{
+				"name": "kind-of",
+				"version": "6.0.3",
+				"size": 22820
+			},
+			{
+				"name": "is-plain-object",
+				"version": "2.0.4"
+			},
+			{
+				"name": "isobject",
+				"version": "3.0.1"
+			},
+			{
+				"name": "plugin-error",
+				"version": "1.0.1"
+			},
+			{
+				"name": "ansi-colors",
+				"version": "1.1.0",
+				"size": 21993
+			},
+			{
+				"name": "ansi-wrap",
+				"version": "0.1.0"
+			},
+			{
+				"name": "arr-diff",
+				"version": "4.0.0"
+			},
+			{
+				"name": "arr-union",
+				"version": "3.1.0"
+			},
+			{
+				"name": "extend-shallow",
+				"version": "3.0.2"
+			},
+			{
+				"name": "assign-symbols",
+				"version": "1.0.0"
+			},
+			{
+				"name": "is-extendable",
+				"version": "1.0.1"
+			},
+			{
+				"name": "svelte",
+				"version": "2.16.1",
+				"size": 981534
+			},
+			{
+				"name": "vinyl",
+				"version": "2.2.1",
+				"size": 24523
+			},
+			{
+				"name": "clone",
+				"version": "2.1.2",
+				"size": 15879
+			},
+			{
+				"name": "clone-buffer",
+				"version": "1.0.0"
+			},
+			{
+				"name": "clone-stats",
+				"version": "1.0.0"
+			},
+			{
+				"name": "cloneable-readable",
+				"version": "1.1.3",
+				"size": 21807
+			},
+			{
+				"name": "inherits",
+				"version": "2.0.4",
+				"size": 3958
+			},
+			{
+				"name": "process-nextick-args",
+				"version": "2.0.1",
+				"size": 3175
+			},
+			{
+				"name": "readable-stream",
+				"version": "2.3.8",
+				"size": 88115
+			},
+			{
+				"name": "isarray",
+				"version": "1.0.0"
+			},
+			{
+				"name": "safe-buffer",
+				"version": "5.1.2",
+				"size": 31686
+			},
+			{
+				"name": "core-util-is",
+				"version": "1.0.3",
+				"size": 4982
+			},
+			{
+				"name": "string_decoder",
+				"version": "1.1.1",
+				"size": 15298
+			},
+			{
+				"name": "util-deprecate",
+				"version": "1.0.2"
+			},
+			{
+				"name": "remove-trailing-separator",
+				"version": "1.1.0"
+			},
+			{
+				"name": "replace-ext",
+				"version": "1.0.1",
+				"size": 5520
+			},
+			{
+				"name": "vinyl-sourcemaps-apply",
+				"version": "0.2.1"
+			},
+			{
+				"name": "source-map",
+				"version": "0.5.7"
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[3, 4],
+			[0, 5],
+			[5, 6],
+			[6, 7],
+			[5, 8],
+			[5, 9],
+			[5, 10],
+			[10, 11],
+			[10, 12],
+			[12, 3],
+			[3, 4],
+			[0, 13],
+			[0, 14],
+			[14, 15],
+			[14, 16],
+			[14, 17],
+			[14, 18],
+			[18, 19],
+			[18, 20],
+			[18, 21],
+			[21, 22],
+			[21, 19],
+			[21, 23],
+			[21, 24],
+			[21, 25],
+			[25, 23],
+			[21, 26],
+			[21, 20],
+			[14, 27],
+			[14, 28],
+			[0, 29],
+			[29, 30]
+		],
+		"circular": []
+	}
 }

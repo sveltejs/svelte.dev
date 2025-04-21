@@ -13,101 +13,6 @@
 	"version": "1.0.5",
 	"svelte_range": "^5.25.3",
 	"last_rune_check_version": "1.0.5",
-	"dependencies": [
-		{
-			"name": "acorn",
-			"semver": "^8.14.1"
-		},
-		{
-			"name": "aria-query",
-			"semver": "^5.3.2"
-		},
-		{
-			"name": "axobject-query",
-			"semver": "^4.1.0"
-		},
-		{
-			"name": "builtin-modules",
-			"semver": "^3.3.0"
-		},
-		{
-			"name": "clsx",
-			"semver": "^2.1.1"
-		},
-		{
-			"name": "deepmerge",
-			"semver": "^4.3.1"
-		},
-		{
-			"name": "esm-env",
-			"semver": "^1.2.2"
-		},
-		{
-			"name": "esrap",
-			"semver": "^1.4.5"
-		},
-		{
-			"name": "estree-walker",
-			"semver": "^1.0.1"
-		},
-		{
-			"name": "function-bind",
-			"semver": "^1.1.2"
-		},
-		{
-			"name": "hasown",
-			"semver": "^2.0.2"
-		},
-		{
-			"name": "is-core-module",
-			"semver": "^2.16.1"
-		},
-		{
-			"name": "is-module",
-			"semver": "^1.0.0"
-		},
-		{
-			"name": "is-reference",
-			"semver": "^3.0.3"
-		},
-		{
-			"name": "locate-character",
-			"semver": "^3.0.0"
-		},
-		{
-			"name": "magic-string",
-			"semver": "^0.30.17"
-		},
-		{
-			"name": "path-parse",
-			"semver": "^1.0.7"
-		},
-		{
-			"name": "picomatch",
-			"semver": "^2.3.1"
-		},
-		{
-			"name": "resolve",
-			"semver": "^1.22.10"
-		},
-		{
-			"name": "resolve.exports",
-			"semver": "^2.0.3"
-		},
-		{
-			"name": "supports-preserve-symlinks-flag",
-			"semver": "^1.0.0"
-		},
-		{
-			"name": "undici-types",
-			"semver": "^6.20.0"
-		},
-		{
-			"name": "zimmerframe",
-			"semver": "^1.1.2"
-		}
-	],
-	"unpacked_size": 7551,
 	"downloads_history": [
 		{
 			"range": [1742754600000, 1743359399999],
@@ -121,5 +26,176 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 26
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@hotelchatai/svelte-chatbox",
+				"version": "1.0.5",
+				"size": 7551
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "aria-query",
+				"version": "5.3.2",
+				"size": 176114
+			},
+			{
+				"name": "axobject-query",
+				"version": "4.1.0",
+				"size": 110878
+			},
+			{
+				"name": "builtin-modules",
+				"version": "3.3.0",
+				"size": 4512
+			},
+			{
+				"name": "clsx",
+				"version": "2.1.1",
+				"size": 8555
+			},
+			{
+				"name": "deepmerge",
+				"version": "4.3.1",
+				"size": 31157
+			},
+			{
+				"name": "esm-env",
+				"version": "1.2.2",
+				"size": 3784
+			},
+			{
+				"name": "esrap",
+				"version": "1.4.6",
+				"size": 50818
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "estree-walker",
+				"version": "1.0.1",
+				"size": 15196
+			},
+			{
+				"name": "function-bind",
+				"version": "1.1.2",
+				"size": 31427
+			},
+			{
+				"name": "hasown",
+				"version": "2.0.2",
+				"size": 8765
+			},
+			{
+				"name": "is-core-module",
+				"version": "2.16.1",
+				"size": 33475
+			},
+			{
+				"name": "is-module",
+				"version": "1.0.0"
+			},
+			{
+				"name": "is-reference",
+				"version": "3.0.3",
+				"size": 3953
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "locate-character",
+				"version": "3.0.0",
+				"size": 5325
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "path-parse",
+				"version": "1.0.7",
+				"size": 4511
+			},
+			{
+				"name": "picomatch",
+				"version": "2.3.1",
+				"size": 89952
+			},
+			{
+				"name": "resolve",
+				"version": "1.22.10",
+				"size": 145619
+			},
+			{
+				"name": "supports-preserve-symlinks-flag",
+				"version": "1.0.0",
+				"size": 9178
+			},
+			{
+				"name": "resolve.exports",
+				"version": "2.0.3",
+				"size": 24050
+			},
+			{
+				"name": "undici-types",
+				"version": "6.21.0",
+				"size": 83680
+			},
+			{
+				"name": "zimmerframe",
+				"version": "1.1.2",
+				"size": 12266
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[0, 4],
+			[0, 5],
+			[0, 6],
+			[0, 7],
+			[0, 8],
+			[8, 9],
+			[0, 10],
+			[0, 11],
+			[0, 12],
+			[12, 11],
+			[0, 13],
+			[13, 12],
+			[12, 11],
+			[0, 14],
+			[0, 15],
+			[15, 16],
+			[0, 17],
+			[0, 18],
+			[18, 9],
+			[0, 19],
+			[0, 20],
+			[0, 21],
+			[21, 13],
+			[13, 12],
+			[12, 11],
+			[21, 19],
+			[21, 22],
+			[0, 23],
+			[0, 22],
+			[0, 24],
+			[0, 25]
+		],
+		"circular": []
+	}
 }

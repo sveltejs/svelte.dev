@@ -13,13 +13,6 @@
 	"svelte_range": "^3.24.0",
 	"last_rune_check_version": "1.0.3",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "svelte",
-			"semver": "^3.24.0"
-		}
-	],
-	"unpacked_size": 29819,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -217,5 +210,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "snowpack-sott",
+				"version": "1.0.3",
+				"size": 29819
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

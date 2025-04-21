@@ -13,13 +13,6 @@
 	"version": "2.2.0",
 	"svelte_range": "^3.32.3",
 	"last_rune_check_version": "2.2.0",
-	"dependencies": [
-		{
-			"name": "@popperjs/core",
-			"semver": "^2.9.1"
-		}
-	],
-	"unpacked_size": 366905,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +326,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 21
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "select-madu",
+				"version": "2.2.0",
+				"size": 366905
+			},
+			{
+				"name": "@popperjs/core",
+				"version": "2.11.8",
+				"size": 1463042
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

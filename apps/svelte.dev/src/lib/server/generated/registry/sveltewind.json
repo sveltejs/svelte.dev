@@ -13,37 +13,6 @@
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "3.2.0",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "@sveltejs/kit",
-			"semver": "^2.0.0"
-		},
-		{
-			"name": "imask",
-			"semver": "^7.6.1"
-		},
-		{
-			"name": "luxon",
-			"semver": "^3.5.0"
-		},
-		{
-			"name": "shiki",
-			"semver": "^1.23.0"
-		},
-		{
-			"name": "svelte",
-			"semver": "^5.0.0"
-		},
-		{
-			"name": "svelte-portal",
-			"semver": "^2.2.1"
-		},
-		{
-			"name": "tailwind-merge",
-			"semver": "^2.5.4"
-		}
-	],
-	"unpacked_size": 1269609,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -357,5 +326,597 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 17
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "sveltewind",
+				"version": "3.2.0",
+				"size": 1269609
+			},
+			{
+				"name": "@sveltejs/kit",
+				"version": "2.20.7",
+				"size": 820650
+			},
+			{
+				"name": "@types/cookie",
+				"version": "0.6.0",
+				"size": 10073
+			},
+			{
+				"name": "cookie",
+				"version": "0.6.0",
+				"size": 23736
+			},
+			{
+				"name": "devalue",
+				"version": "5.1.1",
+				"size": 31833
+			},
+			{
+				"name": "esm-env",
+				"version": "1.2.2",
+				"size": 3784
+			},
+			{
+				"name": "import-meta-resolve",
+				"version": "4.1.0",
+				"size": 77354
+			},
+			{
+				"name": "kleur",
+				"version": "4.1.5",
+				"size": 20250
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "mrmime",
+				"version": "2.0.1",
+				"size": 33008
+			},
+			{
+				"name": "sade",
+				"version": "1.8.1",
+				"size": 31545
+			},
+			{
+				"name": "mri",
+				"version": "1.2.0",
+				"size": 13261
+			},
+			{
+				"name": "set-cookie-parser",
+				"version": "2.7.1",
+				"size": 16074
+			},
+			{
+				"name": "sirv",
+				"version": "3.0.1",
+				"size": 21845
+			},
+			{
+				"name": "@polka/url",
+				"version": "1.0.0-next.29",
+				"size": 4815
+			},
+			{
+				"name": "totalist",
+				"version": "3.0.1",
+				"size": 7459
+			},
+			{
+				"name": "imask",
+				"version": "7.6.1",
+				"size": 1372715
+			},
+			{
+				"name": "@babel/runtime-corejs3",
+				"version": "7.27.0",
+				"size": 331596
+			},
+			{
+				"name": "core-js-pure",
+				"version": "3.41.0",
+				"size": 1122771
+			},
+			{
+				"name": "regenerator-runtime",
+				"version": "0.14.1",
+				"size": 27863
+			},
+			{
+				"name": "luxon",
+				"version": "3.6.1",
+				"size": 4506925
+			},
+			{
+				"name": "shiki",
+				"version": "1.29.2",
+				"size": 624040
+			},
+			{
+				"name": "@types/hast",
+				"version": "3.0.4",
+				"size": 9703
+			},
+			{
+				"name": "@types/unist",
+				"version": "3.0.3",
+				"size": 6262
+			},
+			{
+				"name": "@shikijs/core",
+				"version": "1.29.2",
+				"size": 106569
+			},
+			{
+				"name": "@shikijs/types",
+				"version": "1.29.2",
+				"size": 60634
+			},
+			{
+				"name": "@shikijs/vscode-textmate",
+				"version": "10.0.2",
+				"size": 129126
+			},
+			{
+				"name": "hast-util-to-html",
+				"version": "9.0.5",
+				"size": 71798
+			},
+			{
+				"name": "ccount",
+				"version": "2.0.1",
+				"size": 7344
+			},
+			{
+				"name": "comma-separated-tokens",
+				"version": "2.0.3",
+				"size": 9971
+			},
+			{
+				"name": "hast-util-whitespace",
+				"version": "3.0.0",
+				"size": 11781
+			},
+			{
+				"name": "html-void-elements",
+				"version": "3.0.0",
+				"size": 6899
+			},
+			{
+				"name": "mdast-util-to-hast",
+				"version": "13.2.0",
+				"size": 124715
+			},
+			{
+				"name": "@types/mdast",
+				"version": "4.0.4",
+				"size": 29432
+			},
+			{
+				"name": "@ungap/structured-clone",
+				"version": "1.3.0",
+				"size": 27500
+			},
+			{
+				"name": "devlop",
+				"version": "1.1.0",
+				"size": 22010
+			},
+			{
+				"name": "dequal",
+				"version": "2.0.3",
+				"size": 14229
+			},
+			{
+				"name": "micromark-util-sanitize-uri",
+				"version": "2.0.1",
+				"size": 17917
+			},
+			{
+				"name": "micromark-util-character",
+				"version": "2.1.1",
+				"size": 42421
+			},
+			{
+				"name": "micromark-util-symbol",
+				"version": "2.0.1",
+				"size": 40530
+			},
+			{
+				"name": "micromark-util-types",
+				"version": "2.0.2",
+				"size": 38950
+			},
+			{
+				"name": "micromark-util-encode",
+				"version": "2.0.1",
+				"size": 7971
+			},
+			{
+				"name": "trim-lines",
+				"version": "3.0.1",
+				"size": 7493
+			},
+			{
+				"name": "unist-util-position",
+				"version": "5.0.0",
+				"size": 12779
+			},
+			{
+				"name": "unist-util-visit",
+				"version": "5.0.0",
+				"size": 28480
+			},
+			{
+				"name": "unist-util-is",
+				"version": "6.0.0",
+				"size": 27111
+			},
+			{
+				"name": "unist-util-visit-parents",
+				"version": "6.0.1",
+				"size": 32885
+			},
+			{
+				"name": "vfile",
+				"version": "6.0.3",
+				"size": 121686
+			},
+			{
+				"name": "vfile-message",
+				"version": "4.0.2",
+				"size": 22348
+			},
+			{
+				"name": "unist-util-stringify-position",
+				"version": "4.0.0",
+				"size": 13180
+			},
+			{
+				"name": "property-information",
+				"version": "7.0.0",
+				"size": 116609
+			},
+			{
+				"name": "space-separated-tokens",
+				"version": "2.0.2",
+				"size": 7753
+			},
+			{
+				"name": "stringify-entities",
+				"version": "4.0.4",
+				"size": 23780
+			},
+			{
+				"name": "character-entities-html4",
+				"version": "2.1.0",
+				"size": 11364
+			},
+			{
+				"name": "character-entities-legacy",
+				"version": "3.0.0",
+				"size": 9141
+			},
+			{
+				"name": "zwitch",
+				"version": "2.0.4",
+				"size": 13752
+			},
+			{
+				"name": "@shikijs/engine-oniguruma",
+				"version": "1.29.2",
+				"size": 644385
+			},
+			{
+				"name": "@shikijs/engine-javascript",
+				"version": "1.29.2",
+				"size": 14548
+			},
+			{
+				"name": "oniguruma-to-es",
+				"version": "2.3.0",
+				"size": 1034120
+			},
+			{
+				"name": "regex",
+				"version": "5.1.1",
+				"size": 547145
+			},
+			{
+				"name": "regex-utilities",
+				"version": "2.3.0",
+				"size": 15439
+			},
+			{
+				"name": "emoji-regex-xs",
+				"version": "1.0.0",
+				"size": 7814
+			},
+			{
+				"name": "regex-recursion",
+				"version": "5.1.1",
+				"size": 55931
+			},
+			{
+				"name": "@shikijs/langs",
+				"version": "1.29.2",
+				"size": 7979540
+			},
+			{
+				"name": "@shikijs/themes",
+				"version": "1.29.2",
+				"size": 1201343
+			},
+			{
+				"name": "svelte",
+				"version": "5.28.1",
+				"size": 2426419
+			},
+			{
+				"name": "@ampproject/remapping",
+				"version": "2.3.0",
+				"size": 78946
+			},
+			{
+				"name": "@jridgewell/gen-mapping",
+				"version": "0.3.8",
+				"size": 81596
+			},
+			{
+				"name": "@jridgewell/set-array",
+				"version": "1.2.1",
+				"size": 17945
+			},
+			{
+				"name": "@jridgewell/trace-mapping",
+				"version": "0.3.25",
+				"size": 169330
+			},
+			{
+				"name": "@jridgewell/resolve-uri",
+				"version": "3.1.2",
+				"size": 53153
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "@sveltejs/acorn-typescript",
+				"version": "1.0.5",
+				"size": 197476
+			},
+			{
+				"name": "aria-query",
+				"version": "5.3.2",
+				"size": 176114
+			},
+			{
+				"name": "axobject-query",
+				"version": "4.1.0",
+				"size": 110878
+			},
+			{
+				"name": "clsx",
+				"version": "2.1.1",
+				"size": 8555
+			},
+			{
+				"name": "esrap",
+				"version": "1.4.6",
+				"size": 50818
+			},
+			{
+				"name": "is-reference",
+				"version": "3.0.3",
+				"size": 3953
+			},
+			{
+				"name": "locate-character",
+				"version": "3.0.0",
+				"size": 5325
+			},
+			{
+				"name": "zimmerframe",
+				"version": "1.1.2",
+				"size": 12266
+			},
+			{
+				"name": "svelte-portal",
+				"version": "2.2.1",
+				"size": 10935
+			},
+			{
+				"name": "tailwind-merge",
+				"version": "2.6.0",
+				"size": 713298
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[1, 4],
+			[1, 5],
+			[1, 6],
+			[1, 7],
+			[1, 8],
+			[8, 9],
+			[1, 10],
+			[1, 11],
+			[11, 12],
+			[1, 13],
+			[1, 14],
+			[14, 15],
+			[14, 10],
+			[14, 16],
+			[0, 17],
+			[17, 18],
+			[18, 19],
+			[18, 20],
+			[0, 21],
+			[0, 22],
+			[22, 23],
+			[23, 24],
+			[22, 25],
+			[25, 23],
+			[23, 24],
+			[25, 26],
+			[26, 23],
+			[23, 24],
+			[26, 27],
+			[25, 28],
+			[28, 23],
+			[23, 24],
+			[28, 24],
+			[28, 29],
+			[28, 30],
+			[28, 31],
+			[31, 23],
+			[23, 24],
+			[28, 32],
+			[28, 33],
+			[33, 23],
+			[23, 24],
+			[33, 34],
+			[34, 24],
+			[33, 35],
+			[33, 36],
+			[36, 37],
+			[33, 38],
+			[38, 39],
+			[39, 40],
+			[39, 41],
+			[38, 42],
+			[38, 40],
+			[33, 43],
+			[33, 44],
+			[44, 24],
+			[33, 45],
+			[45, 24],
+			[45, 46],
+			[46, 24],
+			[45, 47],
+			[47, 24],
+			[47, 46],
+			[46, 24],
+			[33, 48],
+			[48, 24],
+			[48, 49],
+			[49, 24],
+			[49, 50],
+			[50, 24],
+			[28, 51],
+			[28, 52],
+			[28, 53],
+			[53, 54],
+			[53, 55],
+			[28, 56],
+			[25, 27],
+			[25, 57],
+			[57, 26],
+			[26, 23],
+			[23, 24],
+			[26, 27],
+			[57, 27],
+			[25, 58],
+			[58, 26],
+			[26, 23],
+			[23, 24],
+			[26, 27],
+			[58, 59],
+			[59, 60],
+			[60, 61],
+			[59, 62],
+			[59, 63],
+			[63, 60],
+			[60, 61],
+			[63, 61],
+			[58, 27],
+			[22, 64],
+			[64, 26],
+			[26, 23],
+			[23, 24],
+			[26, 27],
+			[22, 26],
+			[26, 23],
+			[23, 24],
+			[26, 27],
+			[22, 65],
+			[65, 26],
+			[26, 23],
+			[23, 24],
+			[26, 27],
+			[22, 27],
+			[22, 57],
+			[57, 26],
+			[26, 23],
+			[23, 24],
+			[26, 27],
+			[57, 27],
+			[22, 58],
+			[58, 26],
+			[26, 23],
+			[23, 24],
+			[26, 27],
+			[58, 59],
+			[59, 60],
+			[60, 61],
+			[59, 62],
+			[59, 63],
+			[63, 60],
+			[60, 61],
+			[63, 61],
+			[58, 27],
+			[0, 66],
+			[66, 67],
+			[67, 68],
+			[68, 69],
+			[68, 9],
+			[68, 70],
+			[70, 71],
+			[70, 9],
+			[67, 70],
+			[70, 71],
+			[70, 9],
+			[66, 9],
+			[66, 72],
+			[66, 73],
+			[66, 74],
+			[66, 75],
+			[66, 76],
+			[66, 77],
+			[66, 5],
+			[66, 78],
+			[78, 9],
+			[66, 79],
+			[79, 72],
+			[66, 80],
+			[66, 8],
+			[8, 9],
+			[66, 81],
+			[0, 82],
+			[0, 83]
+		],
+		"circular": []
+	}
 }

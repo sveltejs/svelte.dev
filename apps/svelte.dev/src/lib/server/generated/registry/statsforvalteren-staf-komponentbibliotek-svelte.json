@@ -12,25 +12,6 @@
 	"version": "1.1.4",
 	"svelte_range": "^3.29.0",
 	"last_rune_check_version": "1.1.4",
-	"dependencies": [
-		{
-			"name": "@popperjs/core",
-			"semver": "^2.9.2"
-		},
-		{
-			"name": "bootstrap",
-			"semver": "^5.0.2"
-		},
-		{
-			"name": "@storybook/theming",
-			"semver": "^6.4.3"
-		},
-		{
-			"name": "highcharts",
-			"semver": "latest"
-		}
-	],
-	"unpacked_size": 1687789,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -248,5 +229,94 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@statsforvalteren/staf-komponentbibliotek-svelte",
+				"version": "1.1.4",
+				"size": 1687789
+			},
+			{
+				"name": "@popperjs/core",
+				"version": "2.11.8",
+				"size": 1463042
+			},
+			{
+				"name": "bootstrap",
+				"version": "5.3.5",
+				"size": 9610854
+			},
+			{
+				"name": "@storybook/theming",
+				"version": "6.5.16",
+				"size": 1522663
+			},
+			{
+				"name": "core-js",
+				"version": "3.41.0",
+				"size": 1265563
+			},
+			{
+				"name": "memoizerific",
+				"version": "1.11.3",
+				"size": 40516
+			},
+			{
+				"name": "map-or-similar",
+				"version": "1.5.0"
+			},
+			{
+				"name": "regenerator-runtime",
+				"version": "0.13.11",
+				"size": 27759
+			},
+			{
+				"name": "@storybook/client-logger",
+				"version": "6.5.16",
+				"size": 16392
+			},
+			{
+				"name": "global",
+				"version": "4.4.0",
+				"size": 3468
+			},
+			{
+				"name": "min-document",
+				"version": "2.19.0"
+			},
+			{
+				"name": "dom-walk",
+				"version": "0.1.2",
+				"size": 2658
+			},
+			{
+				"name": "process",
+				"version": "0.11.10"
+			},
+			{
+				"name": "highcharts",
+				"version": "12.2.0",
+				"size": 61169891
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[3, 4],
+			[3, 5],
+			[5, 6],
+			[3, 7],
+			[3, 8],
+			[8, 9],
+			[9, 10],
+			[10, 11],
+			[9, 12],
+			[8, 4],
+			[0, 13]
+		],
+		"circular": []
+	}
 }

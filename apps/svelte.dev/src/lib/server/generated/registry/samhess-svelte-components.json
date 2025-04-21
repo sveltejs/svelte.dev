@@ -14,17 +14,6 @@
 	"svelte_range": "^5.27.3",
 	"kit_range": "^2.20.7",
 	"last_rune_check_version": "0.3.1",
-	"dependencies": [
-		{
-			"name": "@lucide/svelte",
-			"semver": "^0.494.0"
-		},
-		{
-			"name": "svelte",
-			"semver": "^5.27.3"
-		}
-	],
-	"unpacked_size": 28668,
 	"downloads_history": [
 		{
 			"range": [1713119400000, 1713724199999],
@@ -198,5 +187,146 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 11
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@samhess/svelte-components",
+				"version": "0.3.1",
+				"size": 28668
+			},
+			{
+				"name": "@lucide/svelte",
+				"version": "0.494.0",
+				"size": 10138196
+			},
+			{
+				"name": "svelte",
+				"version": "5.28.1",
+				"size": 2426419
+			},
+			{
+				"name": "@ampproject/remapping",
+				"version": "2.3.0",
+				"size": 78946
+			},
+			{
+				"name": "@jridgewell/gen-mapping",
+				"version": "0.3.8",
+				"size": 81596
+			},
+			{
+				"name": "@jridgewell/set-array",
+				"version": "1.2.1",
+				"size": 17945
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "@jridgewell/trace-mapping",
+				"version": "0.3.25",
+				"size": 169330
+			},
+			{
+				"name": "@jridgewell/resolve-uri",
+				"version": "3.1.2",
+				"size": 53153
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "@sveltejs/acorn-typescript",
+				"version": "1.0.5",
+				"size": 197476
+			},
+			{
+				"name": "aria-query",
+				"version": "5.3.2",
+				"size": 176114
+			},
+			{
+				"name": "axobject-query",
+				"version": "4.1.0",
+				"size": 110878
+			},
+			{
+				"name": "clsx",
+				"version": "2.1.1",
+				"size": 8555
+			},
+			{
+				"name": "esm-env",
+				"version": "1.2.2",
+				"size": 3784
+			},
+			{
+				"name": "esrap",
+				"version": "1.4.6",
+				"size": 50818
+			},
+			{
+				"name": "is-reference",
+				"version": "3.0.3",
+				"size": 3953
+			},
+			{
+				"name": "locate-character",
+				"version": "3.0.0",
+				"size": 5325
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "zimmerframe",
+				"version": "1.1.2",
+				"size": 12266
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[3, 4],
+			[4, 5],
+			[4, 6],
+			[4, 7],
+			[7, 8],
+			[7, 6],
+			[3, 7],
+			[7, 8],
+			[7, 6],
+			[2, 6],
+			[2, 9],
+			[2, 10],
+			[2, 11],
+			[2, 12],
+			[2, 13],
+			[2, 14],
+			[2, 15],
+			[2, 16],
+			[16, 6],
+			[2, 17],
+			[17, 9],
+			[2, 18],
+			[2, 19],
+			[19, 6],
+			[2, 20]
+		],
+		"circular": []
+	}
 }

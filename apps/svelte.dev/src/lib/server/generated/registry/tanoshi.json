@@ -14,13 +14,6 @@
 	"svelte_range": "^4.2.0",
 	"kit_range": "^1.22.0",
 	"last_rune_check_version": "0.14.4",
-	"dependencies": [
-		{
-			"name": "iconify-icon",
-			"semver": "^1.0.8"
-		}
-	],
-	"unpacked_size": 327771,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -326,5 +319,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 20
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "tanoshi",
+				"version": "0.14.4",
+				"size": 327771
+			},
+			{
+				"name": "iconify-icon",
+				"version": "1.0.8",
+				"size": 236614
+			},
+			{
+				"name": "@iconify/types",
+				"version": "2.0.0",
+				"size": 25671
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2]
+		],
+		"circular": []
+	}
 }

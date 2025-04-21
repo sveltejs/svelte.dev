@@ -14,21 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.5",
 	"last_rune_check_version": "0.2.5",
-	"dependencies": [
-		{
-			"name": "canvas-confetti",
-			"semver": "^1.6.0"
-		},
-		{
-			"name": "prism-svelte",
-			"semver": "^0.5.0"
-		},
-		{
-			"name": "prismjs",
-			"semver": "^1.29.0"
-		}
-	],
-	"unpacked_size": 348794,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -342,5 +327,36 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 3306
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-legos",
+				"version": "0.2.5",
+				"size": 348794
+			},
+			{
+				"name": "canvas-confetti",
+				"version": "1.9.3",
+				"size": 92343
+			},
+			{
+				"name": "prism-svelte",
+				"version": "0.5.0",
+				"size": 6094
+			},
+			{
+				"name": "prismjs",
+				"version": "1.30.0",
+				"size": 2052735
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3]
+		],
+		"circular": []
+	}
 }

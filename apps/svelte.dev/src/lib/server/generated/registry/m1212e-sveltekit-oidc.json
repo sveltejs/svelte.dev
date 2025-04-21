@@ -13,17 +13,27 @@
 	"last_rune_check_version": "0.0.27",
 	"version": "0.0.27",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "@sinclair/typebox",
-			"semver": "^0.34.33"
-		}
-	],
-	"unpacked_size": 30462,
 	"downloads_history": [
 		{
 			"range": [1743964200000, 1744568999999],
 			"value": 1065
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@m1212e/sveltekit-oidc",
+				"version": "0.0.27",
+				"size": 30462
+			},
+			{
+				"name": "@sinclair/typebox",
+				"version": "0.34.33",
+				"size": 1870822
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

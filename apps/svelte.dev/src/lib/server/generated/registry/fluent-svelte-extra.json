@@ -14,29 +14,6 @@
 	"svelte_range": "^3.58.0",
 	"kit_range": "^1.0.0-next.310",
 	"last_rune_check_version": "2.0.7",
-	"dependencies": [
-		{
-			"name": "@bulatdashiev/svelte-slider",
-			"semver": "^1.0.3"
-		},
-		{
-			"name": "@sveltejs/adapter-auto",
-			"semver": "^3.1.1"
-		},
-		{
-			"name": "fluent-svelte",
-			"semver": "^1.6.0"
-		},
-		{
-			"name": "focus-trap",
-			"semver": "^6.7.3"
-		},
-		{
-			"name": "tabbable",
-			"semver": "^5.2.1"
-		}
-	],
-	"unpacked_size": 485702,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -346,5 +323,58 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 59
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "fluent-svelte-extra",
+				"version": "2.0.7",
+				"size": 485702
+			},
+			{
+				"name": "@bulatdashiev/svelte-slider",
+				"version": "1.0.3",
+				"size": 72451
+			},
+			{
+				"name": "@sveltejs/adapter-auto",
+				"version": "3.3.1",
+				"size": 7558
+			},
+			{
+				"name": "import-meta-resolve",
+				"version": "4.1.0",
+				"size": 77354
+			},
+			{
+				"name": "fluent-svelte",
+				"version": "1.6.0",
+				"size": 345341
+			},
+			{
+				"name": "focus-trap",
+				"version": "6.9.4",
+				"size": 447877
+			},
+			{
+				"name": "tabbable",
+				"version": "5.3.3",
+				"size": 320397
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[0, 4],
+			[4, 5],
+			[5, 6],
+			[4, 6],
+			[0, 5],
+			[5, 6],
+			[0, 6]
+		],
+		"circular": []
+	}
 }

@@ -13,8 +13,6 @@
 	"version": "5.3.0",
 	"svelte_range": "^3.50.0",
 	"last_rune_check_version": "5.3.0",
-	"dependencies": [],
-	"unpacked_size": 381269,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -320,5 +318,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 8
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-polaris-icons",
+				"version": "5.3.0",
+				"size": 381269
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

@@ -14,13 +14,6 @@
 	"kit_range": "^1.20.4",
 	"last_rune_check_version": "0.4.2",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "zod",
-			"semver": "^3.21.4"
-		}
-	],
-	"unpacked_size": 26212,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -310,5 +303,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 16
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "better-svelte-writable",
+				"version": "0.4.2",
+				"size": 26212
+			},
+			{
+				"name": "zod",
+				"version": "3.24.3",
+				"size": 697771
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

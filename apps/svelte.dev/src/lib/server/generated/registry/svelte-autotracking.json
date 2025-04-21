@@ -13,8 +13,6 @@
 	"version": "0.2.0",
 	"svelte_range": "^4.2.12",
 	"last_rune_check_version": "0.2.0",
-	"dependencies": [],
-	"unpacked_size": 39102,
 	"downloads_history": [
 		{
 			"range": [1714329000000, 1714933799999],
@@ -212,5 +210,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 47
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-autotracking",
+				"version": "0.2.0",
+				"size": 39102
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

@@ -13,57 +13,6 @@
 	"kit_range": "^1.15.9",
 	"last_rune_check_version": "0.61.2",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "@floating-ui/dom",
-			"semver": "^1.0.0"
-		},
-		{
-			"name": "@lezer/cpp",
-			"semver": "^1.0.0"
-		},
-		{
-			"name": "@lezer/css",
-			"semver": "^1.0.1"
-		},
-		{
-			"name": "@lezer/highlight",
-			"semver": "^1.1.2"
-		},
-		{
-			"name": "@lezer/html",
-			"semver": "^1.0.1"
-		},
-		{
-			"name": "@lezer/javascript",
-			"semver": "^1.0.2"
-		},
-		{
-			"name": "@lezer/json",
-			"semver": "^1.0.0"
-		},
-		{
-			"name": "@lezer/python",
-			"semver": "^1.1.1"
-		},
-		{
-			"name": "@lezer/rust",
-			"semver": "^1.0.0"
-		},
-		{
-			"name": "@mdi/js",
-			"semver": "^7.1.96"
-		},
-		{
-			"name": "@replit/codemirror-lang-svelte",
-			"semver": "^6.0.0"
-		},
-		{
-			"name": "uid",
-			"semver": "^1.0.0"
-		}
-	],
-	"unpacked_size": 103960,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -345,5 +294,149 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 21
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@kwangure/strawberry",
+				"version": "0.61.2",
+				"size": 103960
+			},
+			{
+				"name": "@floating-ui/dom",
+				"version": "1.6.13",
+				"size": 165945
+			},
+			{
+				"name": "@floating-ui/core",
+				"version": "1.6.9",
+				"size": 212585
+			},
+			{
+				"name": "@floating-ui/utils",
+				"version": "0.2.9",
+				"size": 64926
+			},
+			{
+				"name": "@lezer/cpp",
+				"version": "1.1.3",
+				"size": 440476
+			},
+			{
+				"name": "@lezer/common",
+				"version": "1.2.3",
+				"size": 239806
+			},
+			{
+				"name": "@lezer/highlight",
+				"version": "1.2.1",
+				"size": 98529
+			},
+			{
+				"name": "@lezer/lr",
+				"version": "1.4.2",
+				"size": 165976
+			},
+			{
+				"name": "@lezer/css",
+				"version": "1.1.11",
+				"size": 68542
+			},
+			{
+				"name": "@lezer/html",
+				"version": "1.3.10",
+				"size": 94333
+			},
+			{
+				"name": "@lezer/javascript",
+				"version": "1.5.1",
+				"size": 324205
+			},
+			{
+				"name": "@lezer/json",
+				"version": "1.0.3",
+				"size": 13660
+			},
+			{
+				"name": "@lezer/python",
+				"version": "1.1.18",
+				"size": 133922
+			},
+			{
+				"name": "@lezer/rust",
+				"version": "1.0.2",
+				"size": 298533
+			},
+			{
+				"name": "@mdi/js",
+				"version": "7.4.47",
+				"size": 6561254
+			},
+			{
+				"name": "@replit/codemirror-lang-svelte",
+				"version": "6.0.0",
+				"size": 190445
+			},
+			{
+				"name": "uid",
+				"version": "1.0.0",
+				"size": 6828
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[1, 3],
+			[0, 4],
+			[4, 5],
+			[4, 6],
+			[6, 5],
+			[4, 7],
+			[7, 5],
+			[0, 8],
+			[8, 5],
+			[8, 7],
+			[7, 5],
+			[8, 6],
+			[6, 5],
+			[0, 6],
+			[6, 5],
+			[0, 9],
+			[9, 7],
+			[7, 5],
+			[9, 6],
+			[6, 5],
+			[9, 5],
+			[0, 10],
+			[10, 7],
+			[7, 5],
+			[10, 5],
+			[10, 6],
+			[6, 5],
+			[0, 11],
+			[11, 5],
+			[11, 6],
+			[6, 5],
+			[11, 7],
+			[7, 5],
+			[0, 12],
+			[12, 5],
+			[12, 7],
+			[7, 5],
+			[12, 6],
+			[6, 5],
+			[0, 13],
+			[13, 5],
+			[13, 7],
+			[7, 5],
+			[13, 6],
+			[6, 5],
+			[0, 14],
+			[0, 15],
+			[0, 16]
+		],
+		"circular": []
+	}
 }

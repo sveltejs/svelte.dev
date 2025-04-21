@@ -12,17 +12,6 @@
 	"version": "0.1.8",
 	"svelte_range": "^3.44.2",
 	"last_rune_check_version": "0.1.8",
-	"dependencies": [
-		{
-			"name": "svelte",
-			"semver": "^3.44.2"
-		},
-		{
-			"name": "svelte-loader",
-			"semver": "^3.1.2"
-		}
-	],
-	"unpacked_size": 6131,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -264,5 +253,66 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "docusaurus-plugin-svelte",
+				"version": "0.1.8",
+				"size": 6131
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			},
+			{
+				"name": "svelte-loader",
+				"version": "3.2.4",
+				"size": 23583
+			},
+			{
+				"name": "loader-utils",
+				"version": "2.0.4",
+				"size": 36329
+			},
+			{
+				"name": "json5",
+				"version": "2.2.3",
+				"size": 235198
+			},
+			{
+				"name": "big.js",
+				"version": "5.2.2",
+				"size": 63868
+			},
+			{
+				"name": "emojis-list",
+				"version": "3.0.0",
+				"size": 53575
+			},
+			{
+				"name": "svelte-dev-helper",
+				"version": "1.1.9",
+				"size": 25281
+			},
+			{
+				"name": "svelte-hmr",
+				"version": "0.14.12",
+				"size": 79767
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[2, 7],
+			[2, 8]
+		],
+		"circular": []
+	}
 }

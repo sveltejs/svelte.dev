@@ -13,8 +13,6 @@
 	"version": "1.2.0",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "1.2.0",
-	"dependencies": [],
-	"unpacked_size": 1656176,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -316,5 +314,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 14
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@macfja/svelte-p5",
+				"version": "1.2.0",
+				"size": 1656176
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

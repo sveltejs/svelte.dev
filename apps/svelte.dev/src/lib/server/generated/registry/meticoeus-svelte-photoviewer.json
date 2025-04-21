@@ -14,8 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.27.4",
 	"last_rune_check_version": "0.3.0",
-	"dependencies": [],
-	"unpacked_size": 19973,
 	"downloads_history": [
 		{
 			"range": [1701023400000, 1701628199999],
@@ -209,5 +207,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@meticoeus/svelte-photoviewer",
+				"version": "0.3.0",
+				"size": 19973
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

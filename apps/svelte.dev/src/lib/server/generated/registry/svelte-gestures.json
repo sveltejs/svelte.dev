@@ -13,8 +13,6 @@
 	"version": "5.1.3",
 	"svelte_range": "^5.0.0-next.193",
 	"last_rune_check_version": "5.1.3",
-	"dependencies": [],
-	"unpacked_size": 121759,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -328,5 +326,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 9308
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-gestures",
+				"version": "5.1.3",
+				"size": 121759
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

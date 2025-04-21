@@ -11,8 +11,6 @@
 	"version": "0.50.0-alpha.27",
 	"last_rune_check_version": "0.50.0-alpha.27",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 58838,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -318,5 +316,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 789
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@htmlbricks/hb-sidebar-desktop",
+				"version": "0.50.0-alpha.27",
+				"size": 58838
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

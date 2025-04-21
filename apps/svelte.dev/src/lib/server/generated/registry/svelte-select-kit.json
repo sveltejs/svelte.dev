@@ -13,13 +13,6 @@
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.1.1",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "@smui/common",
-			"semver": "^7.0.0"
-		}
-	],
-	"unpacked_size": 31887,
 	"downloads_history": [
 		{
 			"range": [1723401000000, 1724005799999],
@@ -149,5 +142,75 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-select-kit",
+				"version": "0.1.1",
+				"size": 31887
+			},
+			{
+				"name": "@smui/common",
+				"version": "7.0.0",
+				"size": 150564
+			},
+			{
+				"name": "svelte2tsx",
+				"version": "0.7.36",
+				"size": 766555
+			},
+			{
+				"name": "dedent-js",
+				"version": "1.0.1"
+			},
+			{
+				"name": "pascal-case",
+				"version": "3.1.2",
+				"size": 14764
+			},
+			{
+				"name": "no-case",
+				"version": "3.0.4",
+				"size": 25128
+			},
+			{
+				"name": "lower-case",
+				"version": "2.0.2",
+				"size": 17661
+			},
+			{
+				"name": "tslib",
+				"version": "2.8.1",
+				"size": 90359
+			},
+			{
+				"name": "@material/dom",
+				"version": "14.0.0",
+				"size": 112738
+			},
+			{
+				"name": "@material/feature-targeting",
+				"version": "14.0.0",
+				"size": 15929
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[2, 4],
+			[4, 5],
+			[5, 6],
+			[6, 7],
+			[5, 7],
+			[4, 7],
+			[1, 8],
+			[8, 7],
+			[8, 9],
+			[9, 7]
+		],
+		"circular": []
+	}
 }

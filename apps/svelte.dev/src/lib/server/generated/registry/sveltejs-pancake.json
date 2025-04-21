@@ -12,13 +12,6 @@
 	"typescript": false,
 	"version": "0.0.18",
 	"last_rune_check_version": "0.0.18",
-	"dependencies": [
-		{
-			"name": "yootils",
-			"semver": "0.0.16"
-		}
-	],
-	"unpacked_size": 15519,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -332,5 +325,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 2603
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@sveltejs/pancake",
+				"version": "0.0.18",
+				"size": 15519
+			},
+			{
+				"name": "yootils",
+				"version": "0.0.16",
+				"size": 11400
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

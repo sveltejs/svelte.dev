@@ -13,8 +13,6 @@
 	"last_rune_check_version": "1.0.42",
 	"version": "1.0.42",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 1140221,
 	"downloads_history": [
 		{
 			"range": [1743359400000, 1743964199999],
@@ -24,5 +22,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 498
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@arenarium/maps",
+				"version": "1.0.42",
+				"size": 1140221
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

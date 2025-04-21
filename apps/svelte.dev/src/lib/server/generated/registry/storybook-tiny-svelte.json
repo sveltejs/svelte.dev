@@ -13,13 +13,6 @@
 	"version": "2.0.0",
 	"svelte_range": "^5.1.13",
 	"last_rune_check_version": "2.0.0",
-	"dependencies": [
-		{
-			"name": "@storybook-tiny/setup",
-			"semver": "1.0.1"
-		}
-	],
-	"unpacked_size": 9222,
 	"downloads_history": [
 		{
 			"range": [1724005800000, 1724610599999],
@@ -125,5 +118,140 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@storybook-tiny/svelte",
+				"version": "2.0.0",
+				"size": 9222
+			},
+			{
+				"name": "@storybook-tiny/setup",
+				"version": "1.0.1",
+				"size": 6602
+			},
+			{
+				"name": "shelljs",
+				"version": "0.8.5",
+				"size": 212044
+			},
+			{
+				"name": "glob",
+				"version": "7.2.3",
+				"size": 55064
+			},
+			{
+				"name": "once",
+				"version": "1.4.0"
+			},
+			{
+				"name": "wrappy",
+				"version": "1.0.2"
+			},
+			{
+				"name": "inflight",
+				"version": "1.0.6"
+			},
+			{
+				"name": "inherits",
+				"version": "2.0.4",
+				"size": 3958
+			},
+			{
+				"name": "minimatch",
+				"version": "3.1.2",
+				"size": 34902
+			},
+			{
+				"name": "brace-expansion",
+				"version": "1.1.11",
+				"size": 11059
+			},
+			{
+				"name": "balanced-match",
+				"version": "1.0.2",
+				"size": 6939
+			},
+			{
+				"name": "concat-map",
+				"version": "0.0.1"
+			},
+			{
+				"name": "fs.realpath",
+				"version": "1.0.0"
+			},
+			{
+				"name": "path-is-absolute",
+				"version": "1.0.1"
+			},
+			{
+				"name": "rechoir",
+				"version": "0.6.2"
+			},
+			{
+				"name": "resolve",
+				"version": "1.22.10",
+				"size": 145619
+			},
+			{
+				"name": "is-core-module",
+				"version": "2.16.1",
+				"size": 33475
+			},
+			{
+				"name": "hasown",
+				"version": "2.0.2",
+				"size": 8765
+			},
+			{
+				"name": "function-bind",
+				"version": "1.1.2",
+				"size": 31427
+			},
+			{
+				"name": "path-parse",
+				"version": "1.0.7",
+				"size": 4511
+			},
+			{
+				"name": "supports-preserve-symlinks-flag",
+				"version": "1.0.0",
+				"size": 9178
+			},
+			{
+				"name": "interpret",
+				"version": "1.4.0",
+				"size": 14852
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[3, 4],
+			[4, 5],
+			[3, 6],
+			[6, 4],
+			[4, 5],
+			[6, 5],
+			[3, 7],
+			[3, 8],
+			[8, 9],
+			[9, 10],
+			[9, 11],
+			[3, 12],
+			[3, 13],
+			[2, 14],
+			[14, 15],
+			[15, 16],
+			[16, 17],
+			[17, 18],
+			[15, 19],
+			[15, 20],
+			[2, 21]
+		],
+		"circular": []
+	}
 }

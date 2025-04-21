@@ -13,13 +13,6 @@
 	"version": "1.0.0",
 	"svelte_range": "3.x",
 	"last_rune_check_version": "1.0.0",
-	"dependencies": [
-		{
-			"name": "abstract-nested-router",
-			"semver": "^0.1.3"
-		}
-	],
-	"unpacked_size": 51280,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +326,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 45
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svero",
+				"version": "1.0.0",
+				"size": 51280
+			},
+			{
+				"name": "abstract-nested-router",
+				"version": "0.1.21",
+				"size": 30296
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

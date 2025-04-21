@@ -13,25 +13,6 @@
 	"version": "0.1.0",
 	"svelte_range": "^3.59.2",
 	"last_rune_check_version": "0.1.0",
-	"dependencies": [
-		{
-			"name": "@svizzle/ui",
-			"semver": "^0.13.0"
-		},
-		{
-			"name": "@svizzle/utils",
-			"semver": "^0.21.0"
-		},
-		{
-			"name": "d3-hierarchy",
-			"semver": "^3.1.2"
-		},
-		{
-			"name": "lamb",
-			"semver": "^0.61.1"
-		}
-	],
-	"unpacked_size": 9006,
 	"downloads_history": [
 		{
 			"range": [1700418600000, 1701023399999],
@@ -189,5 +170,121 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 3
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@svizzle/hierarchy",
+				"version": "0.1.0",
+				"size": 9006
+			},
+			{
+				"name": "@svizzle/ui",
+				"version": "0.13.0",
+				"size": 167159
+			},
+			{
+				"name": "@macfja/svelte-persistent-store",
+				"version": "2.4.2",
+				"size": 80842
+			},
+			{
+				"name": "@macfja/serializer",
+				"version": "1.1.4",
+				"size": 26769
+			},
+			{
+				"name": "browser-cookies",
+				"version": "1.2.0"
+			},
+			{
+				"name": "idb-keyval",
+				"version": "6.2.1",
+				"size": 53805
+			},
+			{
+				"name": "sjcl-codec-hex",
+				"version": "1.0.0"
+			},
+			{
+				"name": "sjcl-bit-array",
+				"version": "1.0.0"
+			},
+			{
+				"name": "sjcl-es",
+				"version": "2.0.0",
+				"size": 2265130
+			},
+			{
+				"name": "@svizzle/dom",
+				"version": "0.7.3",
+				"size": 10888
+			},
+			{
+				"name": "@svizzle/utils",
+				"version": "0.21.0",
+				"size": 269532
+			},
+			{
+				"name": "escape-string-regexp",
+				"version": "5.0.0",
+				"size": 3659
+			},
+			{
+				"name": "just-compare",
+				"version": "2.3.0",
+				"size": 9255
+			},
+			{
+				"name": "lamb",
+				"version": "0.61.1",
+				"size": 1101065
+			},
+			{
+				"name": "bowser",
+				"version": "2.11.0",
+				"size": 216913
+			},
+			{
+				"name": "d3-color",
+				"version": "3.1.0",
+				"size": 61152
+			},
+			{
+				"name": "d3-hierarchy",
+				"version": "3.1.2",
+				"size": 136230
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[2, 4],
+			[2, 5],
+			[2, 6],
+			[6, 7],
+			[2, 8],
+			[1, 9],
+			[9, 10],
+			[10, 11],
+			[10, 12],
+			[10, 13],
+			[9, 13],
+			[1, 10],
+			[10, 11],
+			[10, 12],
+			[10, 13],
+			[1, 14],
+			[1, 15],
+			[0, 10],
+			[10, 11],
+			[10, 12],
+			[10, 13],
+			[0, 16],
+			[0, 13]
+		],
+		"circular": []
+	}
 }

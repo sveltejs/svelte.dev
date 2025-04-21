@@ -13,29 +13,6 @@
 	"version": "0.1.13",
 	"svelte_range": "^3.30.0",
 	"last_rune_check_version": "0.1.13",
-	"dependencies": [
-		{
-			"name": "@fortawesome/fontawesome-svg-core",
-			"semver": "^1.2.27"
-		},
-		{
-			"name": "@fortawesome/free-brands-svg-icons",
-			"semver": "^5.12.0"
-		},
-		{
-			"name": "@fortawesome/free-regular-svg-icons",
-			"semver": "^5.12.0"
-		},
-		{
-			"name": "@fortawesome/free-solid-svg-icons",
-			"semver": "^5.12.0"
-		},
-		{
-			"name": "fontawesome-svelte",
-			"semver": "^2.0.0"
-		}
-	],
-	"unpacked_size": 115152,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -249,5 +226,57 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "tabular-svelte",
+				"version": "0.1.13",
+				"size": 115152
+			},
+			{
+				"name": "@fortawesome/fontawesome-svg-core",
+				"version": "1.2.36",
+				"size": 173667
+			},
+			{
+				"name": "@fortawesome/fontawesome-common-types",
+				"version": "0.2.36",
+				"size": 147820
+			},
+			{
+				"name": "@fortawesome/free-brands-svg-icons",
+				"version": "5.15.4",
+				"size": 1923406
+			},
+			{
+				"name": "@fortawesome/free-regular-svg-icons",
+				"version": "5.15.4",
+				"size": 502877
+			},
+			{
+				"name": "@fortawesome/free-solid-svg-icons",
+				"version": "5.15.4",
+				"size": 3087303
+			},
+			{
+				"name": "fontawesome-svelte",
+				"version": "2.0.1",
+				"size": 21824
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[3, 2],
+			[0, 4],
+			[4, 2],
+			[0, 5],
+			[5, 2],
+			[0, 6]
+		],
+		"circular": []
+	}
 }

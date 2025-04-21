@@ -12,13 +12,6 @@
 	"svelte_range": "*",
 	"last_rune_check_version": "2.4.6",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "@nostr-dev-kit/ndk",
-			"semver": "workspace:*"
-		}
-	],
-	"unpacked_size": 26674,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -332,5 +325,21 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 96
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@nostr-dev-kit/ndk-svelte",
+				"version": "2.4.6",
+				"size": 26674
+			},
+			{
+				"name": "@nostr-dev-kit/ndk",
+				"version": "workspace:*"
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

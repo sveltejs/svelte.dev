@@ -13,8 +13,6 @@
 	"kit_range": "^2.8.1",
 	"last_rune_check_version": "0.0.1",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 3515,
 	"downloads_history": [
 		{
 			"range": [1731263400000, 1731868199999],
@@ -84,5 +82,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@snuffkin/alexandria",
+				"version": "0.0.1",
+				"size": 3515
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

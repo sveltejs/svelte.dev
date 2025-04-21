@@ -12,8 +12,6 @@
 	"typescript": false,
 	"version": "10.4.0",
 	"last_rune_check_version": "10.4.0",
-	"dependencies": [],
-	"unpacked_size": 267756,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -327,5 +325,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 350
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@zooplus/zoo-web-components",
+				"version": "10.4.0",
+				"size": 267756
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

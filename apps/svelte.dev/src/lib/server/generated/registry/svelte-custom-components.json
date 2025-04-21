@@ -14,17 +14,6 @@
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
 	"last_rune_check_version": "1.2.2",
-	"dependencies": [
-		{
-			"name": "@imask/svelte",
-			"semver": "^6.4.2"
-		},
-		{
-			"name": "@tsconfig/svelte",
-			"semver": "^3.0.0"
-		}
-	],
-	"unpacked_size": 10245,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -314,5 +303,36 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 9
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-custom-components",
+				"version": "1.2.2",
+				"size": 10245
+			},
+			{
+				"name": "@imask/svelte",
+				"version": "6.6.3",
+				"size": 8401
+			},
+			{
+				"name": "imask",
+				"version": "6.6.3",
+				"size": 718962
+			},
+			{
+				"name": "@tsconfig/svelte",
+				"version": "3.0.0",
+				"size": 3585
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3]
+		],
+		"circular": []
+	}
 }

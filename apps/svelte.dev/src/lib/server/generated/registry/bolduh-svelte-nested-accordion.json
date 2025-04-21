@@ -13,17 +13,6 @@
 	"version": "0.2.1",
 	"svelte_range": "^4.2.10",
 	"last_rune_check_version": "0.2.1",
-	"dependencies": [
-		{
-			"name": "@fortawesome/free-solid-svg-icons",
-			"semver": "^6.5.1"
-		},
-		{
-			"name": "sirv-cli",
-			"semver": "^2.0.0"
-		}
-	],
-	"unpacked_size": 38318,
 	"downloads_history": [
 		{
 			"range": [1707676200000, 1708280999999],
@@ -237,5 +226,107 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 9
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@bolduh/svelte-nested-accordion",
+				"version": "0.2.1",
+				"size": 38318
+			},
+			{
+				"name": "@fortawesome/free-solid-svg-icons",
+				"version": "6.7.2",
+				"size": 5170494
+			},
+			{
+				"name": "@fortawesome/fontawesome-common-types",
+				"version": "6.7.2",
+				"size": 105292
+			},
+			{
+				"name": "sirv-cli",
+				"version": "2.0.2",
+				"size": 18393
+			},
+			{
+				"name": "sade",
+				"version": "1.8.1",
+				"size": 31545
+			},
+			{
+				"name": "mri",
+				"version": "1.2.0",
+				"size": 13261
+			},
+			{
+				"name": "sirv",
+				"version": "2.0.4",
+				"size": 20745
+			},
+			{
+				"name": "mrmime",
+				"version": "2.0.1",
+				"size": 33008
+			},
+			{
+				"name": "totalist",
+				"version": "3.0.1",
+				"size": 7459
+			},
+			{
+				"name": "@polka/url",
+				"version": "1.0.0-next.29",
+				"size": 4815
+			},
+			{
+				"name": "kleur",
+				"version": "4.1.5",
+				"size": 20250
+			},
+			{
+				"name": "semiver",
+				"version": "1.1.0",
+				"size": 5444
+			},
+			{
+				"name": "get-port",
+				"version": "3.2.0"
+			},
+			{
+				"name": "tinydate",
+				"version": "1.3.0",
+				"size": 7410
+			},
+			{
+				"name": "local-access",
+				"version": "1.1.0",
+				"size": 4960
+			},
+			{
+				"name": "console-clear",
+				"version": "1.1.1",
+				"size": 2457
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[3, 4],
+			[4, 5],
+			[3, 6],
+			[6, 7],
+			[6, 8],
+			[6, 9],
+			[3, 10],
+			[3, 11],
+			[3, 12],
+			[3, 13],
+			[3, 14],
+			[3, 15]
+		],
+		"circular": []
+	}
 }

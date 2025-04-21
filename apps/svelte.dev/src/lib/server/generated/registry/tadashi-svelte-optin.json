@@ -11,8 +11,6 @@
 	"version": "1.3.2",
 	"svelte_range": "4.2.19",
 	"last_rune_check_version": "1.3.2",
-	"dependencies": [],
-	"unpacked_size": 399198,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -238,5 +236,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 22
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@tadashi/svelte-optin",
+				"version": "1.3.2",
+				"size": 399198
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

@@ -13,33 +13,6 @@
 	"version": "0.4.1",
 	"svelte_range": "^3.14.1",
 	"last_rune_check_version": "0.4.1",
-	"dependencies": [
-		{
-			"name": "codemirror",
-			"semver": "^5.49.2"
-		},
-		{
-			"name": "estree-walker",
-			"semver": "^0.9.0"
-		},
-		{
-			"name": "marked",
-			"semver": "^4.0.0"
-		},
-		{
-			"name": "sourcemap-codec",
-			"semver": "^1.4.6"
-		},
-		{
-			"name": "svelte-json-tree",
-			"semver": "0.0.5"
-		},
-		{
-			"name": "yootils",
-			"semver": "0.0.16"
-		}
-	],
-	"unpacked_size": 557246,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -353,5 +326,54 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 167
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@sveltejs/svelte-repl",
+				"version": "0.4.1",
+				"size": 557246
+			},
+			{
+				"name": "codemirror",
+				"version": "5.65.19",
+				"size": 2962230
+			},
+			{
+				"name": "estree-walker",
+				"version": "0.9.0",
+				"size": 14837
+			},
+			{
+				"name": "marked",
+				"version": "4.3.0",
+				"size": 427518
+			},
+			{
+				"name": "sourcemap-codec",
+				"version": "1.4.8",
+				"size": 31802
+			},
+			{
+				"name": "svelte-json-tree",
+				"version": "0.0.5",
+				"size": 69287
+			},
+			{
+				"name": "yootils",
+				"version": "0.0.16",
+				"size": 11400
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[0, 4],
+			[0, 5],
+			[0, 6]
+		],
+		"circular": []
+	}
 }

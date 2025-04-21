@@ -13,17 +13,6 @@
 	"version": "0.0.1",
 	"svelte_range": "^3.5.0",
 	"last_rune_check_version": "0.0.1",
-	"dependencies": [
-		{
-			"name": "ant-rare-words-utils",
-			"semver": "^0.0.10"
-		},
-		{
-			"name": "lodash",
-			"semver": "^4.17.21"
-		}
-	],
-	"unpacked_size": 1262455,
 	"downloads_history": [
 		{
 			"range": [1698604200000, 1699208999999],
@@ -237,5 +226,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "ant-rare-words-svelte",
+				"version": "0.0.1",
+				"size": 1262455
+			},
+			{
+				"name": "ant-rare-words-utils",
+				"version": "0.0.10",
+				"size": 2648257
+			},
+			{
+				"name": "lodash",
+				"version": "4.17.21",
+				"size": 1412415
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

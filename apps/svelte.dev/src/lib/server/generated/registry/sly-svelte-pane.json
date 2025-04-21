@@ -13,8 +13,6 @@
 	"version": "1.1.1",
 	"svelte_range": "^4.0.0",
 	"last_rune_check_version": "1.1.1",
-	"dependencies": [],
-	"unpacked_size": 12328,
 	"downloads_history": [
 		{
 			"range": [1725820200000, 1726424999999],
@@ -132,5 +130,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 21
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "sly-svelte-pane",
+				"version": "1.1.1",
+				"size": 12328
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

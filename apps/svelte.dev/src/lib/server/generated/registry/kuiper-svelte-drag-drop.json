@@ -14,8 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.27.4",
 	"last_rune_check_version": "0.0.1",
-	"dependencies": [],
-	"unpacked_size": 9641,
 	"downloads_history": [
 		{
 			"range": [1701628200000, 1702232999999],
@@ -209,5 +207,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@kuiper/svelte-drag-drop",
+				"version": "0.0.1",
+				"size": 9641
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

@@ -24,13 +24,6 @@
 	"version": "1.1.1",
 	"svelte_range": ">=3.0.0",
 	"last_rune_check_version": "1.1.1",
-	"dependencies": [
-		{
-			"name": "lodash.clonedeep",
-			"semver": "^4.5.0"
-		}
-	],
-	"unpacked_size": 14543,
 	"downloads_history": [
 		{
 			"range": [1716143400000, 1716748199999],
@@ -220,5 +213,21 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 1318
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@highcharts/svelte",
+				"version": "1.1.1",
+				"size": 14543
+			},
+			{
+				"name": "lodash.clonedeep",
+				"version": "4.5.0"
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

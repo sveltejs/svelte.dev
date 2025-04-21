@@ -13,13 +13,6 @@
 	"version": "0.0.6",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "0.0.6",
-	"dependencies": [
-		{
-			"name": "braintapper-svelte-button",
-			"semver": "0.0.4"
-		}
-	],
-	"unpacked_size": 82034,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -225,5 +218,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "braintapper-svelte-modal",
+				"version": "0.0.6",
+				"size": 82034
+			},
+			{
+				"name": "braintapper-svelte-button",
+				"version": "0.0.4",
+				"size": 53680
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

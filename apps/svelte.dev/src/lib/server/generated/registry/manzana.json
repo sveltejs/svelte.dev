@@ -13,8 +13,6 @@
 	"version": "0.2.12",
 	"svelte_range": "^3.46.4",
 	"last_rune_check_version": "0.2.12",
-	"dependencies": [],
-	"unpacked_size": 975492,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -236,5 +234,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 11
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "manzana",
+				"version": "0.2.12",
+				"size": 975492
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

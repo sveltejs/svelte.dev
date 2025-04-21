@@ -14,8 +14,6 @@
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.5.0",
 	"last_rune_check_version": "0.0.15",
-	"dependencies": [],
-	"unpacked_size": 5979,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -229,5 +227,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "odd-components",
+				"version": "0.0.15",
+				"size": 5979
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

@@ -13,13 +13,6 @@
 	"version": "0.0.10",
 	"svelte_range": "^3.5.0",
 	"last_rune_check_version": "0.0.10",
-	"dependencies": [
-		{
-			"name": "camelcase",
-			"semver": "^6.3.0"
-		}
-	],
-	"unpacked_size": 203215,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +326,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 22
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "heroicons-for-svelte",
+				"version": "0.0.10",
+				"size": 203215
+			},
+			{
+				"name": "camelcase",
+				"version": "6.3.0",
+				"size": 11697
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

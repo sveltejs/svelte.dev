@@ -13,8 +13,6 @@
 	"version": "2.1.8",
 	"svelte_range": "^3.38.2",
 	"last_rune_check_version": "2.1.8",
-	"dependencies": [],
-	"unpacked_size": 161416,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -216,5 +214,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 13
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-gitcal",
+				"version": "2.1.8",
+				"size": 161416
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

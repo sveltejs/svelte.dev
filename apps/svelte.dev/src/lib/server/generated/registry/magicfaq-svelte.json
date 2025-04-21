@@ -12,8 +12,6 @@
 	"last_rune_check_version": "1.0.2",
 	"version": "1.0.2",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 12106,
 	"downloads_history": [
 		{
 			"range": [1743359400000, 1743964199999],
@@ -23,5 +21,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 13
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@magicfaq/svelte",
+				"version": "1.0.2",
+				"size": 12106
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

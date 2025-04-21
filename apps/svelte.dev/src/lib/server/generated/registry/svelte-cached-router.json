@@ -13,17 +13,6 @@
 	"version": "1.0.17",
 	"svelte_range": "^3.44.0",
 	"last_rune_check_version": "1.0.17",
-	"dependencies": [
-		{
-			"name": "animejs",
-			"semver": "^3.2.1"
-		},
-		{
-			"name": "page",
-			"semver": "^1.11.6"
-		}
-	],
-	"unpacked_size": 17261,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -221,5 +210,40 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 10
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-cached-router",
+				"version": "1.0.17",
+				"size": 17261
+			},
+			{
+				"name": "animejs",
+				"version": "3.2.2",
+				"size": 108672
+			},
+			{
+				"name": "page",
+				"version": "1.11.6",
+				"size": 113746
+			},
+			{
+				"name": "path-to-regexp",
+				"version": "1.2.1"
+			},
+			{
+				"name": "isarray",
+				"version": "0.0.1"
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[3, 4]
+		],
+		"circular": []
+	}
 }

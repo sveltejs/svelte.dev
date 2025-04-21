@@ -13,21 +13,6 @@
 	"version": "1.0.1",
 	"svelte_range": "^3.24.0",
 	"last_rune_check_version": "1.0.1",
-	"dependencies": [
-		{
-			"name": "magic-string",
-			"semver": "^0.25.7"
-		},
-		{
-			"name": "parse5",
-			"semver": "^6.0.1"
-		},
-		{
-			"name": "svelte",
-			"semver": "^3.24.0"
-		}
-	],
-	"unpacked_size": 14033,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -221,5 +206,42 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@pageql/pageql-auth",
+				"version": "1.0.1",
+				"size": 14033
+			},
+			{
+				"name": "magic-string",
+				"version": "0.25.9",
+				"size": 373056
+			},
+			{
+				"name": "sourcemap-codec",
+				"version": "1.4.8",
+				"size": 31802
+			},
+			{
+				"name": "parse5",
+				"version": "6.0.1",
+				"size": 331125
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[0, 4]
+		],
+		"circular": []
+	}
 }

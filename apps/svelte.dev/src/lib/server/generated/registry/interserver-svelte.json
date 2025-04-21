@@ -13,13 +13,6 @@
 	"version": "0.1.2",
 	"svelte_range": "3.x",
 	"last_rune_check_version": "0.1.2",
-	"dependencies": [
-		{
-			"name": "interserver",
-			"semver": "^0.1.2"
-		}
-	],
-	"unpacked_size": 15183,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -233,5 +226,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "interserver-svelte",
+				"version": "0.1.2",
+				"size": 15183
+			},
+			{
+				"name": "interserver",
+				"version": "0.1.2",
+				"size": 14191
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

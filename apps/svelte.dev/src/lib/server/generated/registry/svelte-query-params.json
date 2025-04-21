@@ -14,25 +14,6 @@
 	"svelte_range": "^5.0.0-next.169",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.2.5",
-	"dependencies": [
-		{
-			"name": "@sveltejs/kit",
-			"semver": "^2.0.0"
-		},
-		{
-			"name": "svelte",
-			"semver": "^5.0.0-next.1"
-		},
-		{
-			"name": "valibot",
-			"semver": "^0.31.0"
-		},
-		{
-			"name": "zod",
-			"semver": "^3.22.2"
-		}
-	],
-	"unpacked_size": 55338,
 	"downloads_history": [
 		{
 			"range": [1701023400000, 1701628199999],
@@ -310,5 +291,234 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 127
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-query-params",
+				"version": "0.2.5",
+				"size": 55338
+			},
+			{
+				"name": "@sveltejs/kit",
+				"version": "2.20.7",
+				"size": 820650
+			},
+			{
+				"name": "@types/cookie",
+				"version": "0.6.0",
+				"size": 10073
+			},
+			{
+				"name": "cookie",
+				"version": "0.6.0",
+				"size": 23736
+			},
+			{
+				"name": "devalue",
+				"version": "5.1.1",
+				"size": 31833
+			},
+			{
+				"name": "esm-env",
+				"version": "1.2.2",
+				"size": 3784
+			},
+			{
+				"name": "import-meta-resolve",
+				"version": "4.1.0",
+				"size": 77354
+			},
+			{
+				"name": "kleur",
+				"version": "4.1.5",
+				"size": 20250
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "mrmime",
+				"version": "2.0.1",
+				"size": 33008
+			},
+			{
+				"name": "sade",
+				"version": "1.8.1",
+				"size": 31545
+			},
+			{
+				"name": "mri",
+				"version": "1.2.0",
+				"size": 13261
+			},
+			{
+				"name": "set-cookie-parser",
+				"version": "2.7.1",
+				"size": 16074
+			},
+			{
+				"name": "sirv",
+				"version": "3.0.1",
+				"size": 21845
+			},
+			{
+				"name": "@polka/url",
+				"version": "1.0.0-next.29",
+				"size": 4815
+			},
+			{
+				"name": "totalist",
+				"version": "3.0.1",
+				"size": 7459
+			},
+			{
+				"name": "svelte",
+				"version": "5.28.1",
+				"size": 2426419
+			},
+			{
+				"name": "@ampproject/remapping",
+				"version": "2.3.0",
+				"size": 78946
+			},
+			{
+				"name": "@jridgewell/gen-mapping",
+				"version": "0.3.8",
+				"size": 81596
+			},
+			{
+				"name": "@jridgewell/set-array",
+				"version": "1.2.1",
+				"size": 17945
+			},
+			{
+				"name": "@jridgewell/trace-mapping",
+				"version": "0.3.25",
+				"size": 169330
+			},
+			{
+				"name": "@jridgewell/resolve-uri",
+				"version": "3.1.2",
+				"size": 53153
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "@sveltejs/acorn-typescript",
+				"version": "1.0.5",
+				"size": 197476
+			},
+			{
+				"name": "aria-query",
+				"version": "5.3.2",
+				"size": 176114
+			},
+			{
+				"name": "axobject-query",
+				"version": "4.1.0",
+				"size": 110878
+			},
+			{
+				"name": "clsx",
+				"version": "2.1.1",
+				"size": 8555
+			},
+			{
+				"name": "esrap",
+				"version": "1.4.6",
+				"size": 50818
+			},
+			{
+				"name": "is-reference",
+				"version": "3.0.3",
+				"size": 3953
+			},
+			{
+				"name": "locate-character",
+				"version": "3.0.0",
+				"size": 5325
+			},
+			{
+				"name": "zimmerframe",
+				"version": "1.1.2",
+				"size": 12266
+			},
+			{
+				"name": "valibot",
+				"version": "0.31.1",
+				"size": 1144915
+			},
+			{
+				"name": "zod",
+				"version": "3.24.3",
+				"size": 697771
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[1, 4],
+			[1, 5],
+			[1, 6],
+			[1, 7],
+			[1, 8],
+			[8, 9],
+			[1, 10],
+			[1, 11],
+			[11, 12],
+			[1, 13],
+			[1, 14],
+			[14, 15],
+			[14, 10],
+			[14, 16],
+			[0, 17],
+			[17, 18],
+			[18, 19],
+			[19, 20],
+			[19, 9],
+			[19, 21],
+			[21, 22],
+			[21, 9],
+			[18, 21],
+			[21, 22],
+			[21, 9],
+			[17, 9],
+			[17, 23],
+			[17, 24],
+			[17, 25],
+			[17, 26],
+			[17, 27],
+			[17, 28],
+			[17, 5],
+			[17, 29],
+			[29, 9],
+			[17, 30],
+			[30, 23],
+			[17, 31],
+			[17, 8],
+			[8, 9],
+			[17, 32],
+			[0, 33],
+			[0, 34]
+		],
+		"circular": []
+	}
 }

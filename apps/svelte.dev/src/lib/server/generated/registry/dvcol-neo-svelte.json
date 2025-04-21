@@ -14,25 +14,6 @@
 	"svelte_range": ">=5",
 	"kit_range": "^2.17.1",
 	"last_rune_check_version": "0.1.12",
-	"dependencies": [
-		{
-			"name": "@dvcol/common-utils",
-			"semver": "^1.29.0"
-		},
-		{
-			"name": "@dvcol/svelte-utils",
-			"semver": "^1.17.1"
-		},
-		{
-			"name": "@skeletonlabs/floating-ui-svelte",
-			"semver": "^0.3.9"
-		},
-		{
-			"name": "svelte",
-			"semver": "^5.22.6"
-		}
-	],
-	"unpacked_size": 1256464,
 	"downloads_history": [
 		{
 			"range": [1732473000000, 1733077799999],
@@ -114,5 +95,220 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 83
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@dvcol/neo-svelte",
+				"version": "0.1.12",
+				"size": 1256464
+			},
+			{
+				"name": "@dvcol/common-utils",
+				"version": "1.29.4",
+				"size": 319828
+			},
+			{
+				"name": "pretty-bytes",
+				"version": "6.1.1",
+				"size": 11276
+			},
+			{
+				"name": "uuid",
+				"version": "11.1.0",
+				"size": 132894
+			},
+			{
+				"name": "@dvcol/svelte-utils",
+				"version": "1.17.1",
+				"size": 51160
+			},
+			{
+				"name": "svelte",
+				"version": "5.28.1",
+				"size": 2426419
+			},
+			{
+				"name": "@ampproject/remapping",
+				"version": "2.3.0",
+				"size": 78946
+			},
+			{
+				"name": "@jridgewell/gen-mapping",
+				"version": "0.3.8",
+				"size": 81596
+			},
+			{
+				"name": "@jridgewell/set-array",
+				"version": "1.2.1",
+				"size": 17945
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "@jridgewell/trace-mapping",
+				"version": "0.3.25",
+				"size": 169330
+			},
+			{
+				"name": "@jridgewell/resolve-uri",
+				"version": "3.1.2",
+				"size": 53153
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "@sveltejs/acorn-typescript",
+				"version": "1.0.5",
+				"size": 197476
+			},
+			{
+				"name": "aria-query",
+				"version": "5.3.2",
+				"size": 176114
+			},
+			{
+				"name": "axobject-query",
+				"version": "4.1.0",
+				"size": 110878
+			},
+			{
+				"name": "clsx",
+				"version": "2.1.1",
+				"size": 8555
+			},
+			{
+				"name": "esm-env",
+				"version": "1.2.2",
+				"size": 3784
+			},
+			{
+				"name": "esrap",
+				"version": "1.4.6",
+				"size": 50818
+			},
+			{
+				"name": "is-reference",
+				"version": "3.0.3",
+				"size": 3953
+			},
+			{
+				"name": "locate-character",
+				"version": "3.0.0",
+				"size": 5325
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "zimmerframe",
+				"version": "1.1.2",
+				"size": 12266
+			},
+			{
+				"name": "@skeletonlabs/floating-ui-svelte",
+				"version": "0.3.9",
+				"size": 72282
+			},
+			{
+				"name": "@floating-ui/dom",
+				"version": "1.6.13",
+				"size": 165945
+			},
+			{
+				"name": "@floating-ui/core",
+				"version": "1.6.9",
+				"size": 212585
+			},
+			{
+				"name": "@floating-ui/utils",
+				"version": "0.2.9",
+				"size": 64926
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[0, 4],
+			[4, 1],
+			[1, 2],
+			[1, 3],
+			[4, 5],
+			[5, 6],
+			[6, 7],
+			[7, 8],
+			[7, 9],
+			[7, 10],
+			[10, 11],
+			[10, 9],
+			[6, 10],
+			[10, 11],
+			[10, 9],
+			[5, 9],
+			[5, 12],
+			[5, 13],
+			[5, 14],
+			[5, 15],
+			[5, 16],
+			[5, 17],
+			[5, 18],
+			[5, 19],
+			[19, 9],
+			[5, 20],
+			[20, 12],
+			[5, 21],
+			[5, 22],
+			[22, 9],
+			[5, 23],
+			[0, 24],
+			[24, 25],
+			[25, 26],
+			[26, 27],
+			[25, 27],
+			[24, 27],
+			[0, 5],
+			[5, 6],
+			[6, 7],
+			[7, 8],
+			[7, 9],
+			[7, 10],
+			[10, 11],
+			[10, 9],
+			[6, 10],
+			[10, 11],
+			[10, 9],
+			[5, 9],
+			[5, 12],
+			[5, 13],
+			[5, 14],
+			[5, 15],
+			[5, 16],
+			[5, 17],
+			[5, 18],
+			[5, 19],
+			[19, 9],
+			[5, 20],
+			[20, 12],
+			[5, 21],
+			[5, 22],
+			[22, 9],
+			[5, 23]
+		],
+		"circular": []
+	}
 }

@@ -13,8 +13,6 @@
 	"version": "0.2.3",
 	"svelte_range": "^5.19.10",
 	"last_rune_check_version": "0.2.3",
-	"dependencies": [],
-	"unpacked_size": 12410,
 	"downloads_history": [
 		{
 			"range": [1707676200000, 1708280999999],
@@ -228,5 +226,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 8
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@rattus-orm/svelte",
+				"version": "0.2.3",
+				"size": 12410
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

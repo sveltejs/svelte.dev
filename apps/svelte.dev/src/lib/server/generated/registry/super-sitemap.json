@@ -14,17 +14,6 @@
 	"svelte_range": ">=4.0.0 <6.0.0",
 	"kit_range": "^1.27.2",
 	"last_rune_check_version": "1.0.3",
-	"dependencies": [
-		{
-			"name": "directory-tree",
-			"semver": "^3.5.1"
-		},
-		{
-			"name": "fast-xml-parser",
-			"semver": "^4.3.2"
-		}
-	],
-	"unpacked_size": 128593,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -338,5 +327,150 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4255
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "super-sitemap",
+				"version": "1.0.3",
+				"size": 128593
+			},
+			{
+				"name": "directory-tree",
+				"version": "3.5.2",
+				"size": 27388
+			},
+			{
+				"name": "command-line-args",
+				"version": "5.2.1",
+				"size": 116754
+			},
+			{
+				"name": "typical",
+				"version": "4.0.0",
+				"size": 22508
+			},
+			{
+				"name": "array-back",
+				"version": "3.1.0",
+				"size": 8954
+			},
+			{
+				"name": "find-replace",
+				"version": "3.0.0",
+				"size": 12060
+			},
+			{
+				"name": "lodash.camelcase",
+				"version": "4.3.0"
+			},
+			{
+				"name": "command-line-usage",
+				"version": "6.1.3",
+				"size": 19732
+			},
+			{
+				"name": "chalk",
+				"version": "2.4.2",
+				"size": 26924
+			},
+			{
+				"name": "ansi-styles",
+				"version": "3.2.1",
+				"size": 9371
+			},
+			{
+				"name": "color-convert",
+				"version": "1.9.3",
+				"size": 26964
+			},
+			{
+				"name": "color-name",
+				"version": "1.1.3"
+			},
+			{
+				"name": "supports-color",
+				"version": "5.5.0",
+				"size": 6630
+			},
+			{
+				"name": "has-flag",
+				"version": "3.0.0"
+			},
+			{
+				"name": "escape-string-regexp",
+				"version": "1.0.5"
+			},
+			{
+				"name": "typical",
+				"version": "5.2.0",
+				"size": 26217
+			},
+			{
+				"name": "array-back",
+				"version": "4.0.2",
+				"size": 8937
+			},
+			{
+				"name": "table-layout",
+				"version": "1.0.2",
+				"size": 25948
+			},
+			{
+				"name": "wordwrapjs",
+				"version": "4.0.1",
+				"size": 11997
+			},
+			{
+				"name": "reduce-flatten",
+				"version": "2.0.0",
+				"size": 4242
+			},
+			{
+				"name": "deep-extend",
+				"version": "0.6.0",
+				"size": 9190
+			},
+			{
+				"name": "fast-xml-parser",
+				"version": "4.5.3",
+				"size": 230455
+			},
+			{
+				"name": "strnum",
+				"version": "1.1.2",
+				"size": 19247
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[2, 4],
+			[2, 5],
+			[5, 4],
+			[2, 6],
+			[1, 7],
+			[7, 8],
+			[8, 9],
+			[9, 10],
+			[10, 11],
+			[8, 12],
+			[12, 13],
+			[8, 14],
+			[7, 15],
+			[7, 16],
+			[7, 17],
+			[17, 15],
+			[17, 16],
+			[17, 18],
+			[18, 19],
+			[18, 15],
+			[17, 20],
+			[0, 21],
+			[21, 22]
+		],
+		"circular": []
+	}
 }

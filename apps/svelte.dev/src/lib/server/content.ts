@@ -146,6 +146,39 @@ export const docs = create_docs();
 export const examples = index.examples.children;
 
 /**
+ * Dependency graph node structure for nested representation
+ */
+export interface PackageDependencyNode {
+	name: string;
+	version: string;
+	dependencies: PackageDependencyNode[];
+	isCircular?: boolean;
+	circularRefId?: string;
+	size?: number;
+}
+
+/**
+ * Package metadata in a flat structure
+ */
+export interface FlatPackage {
+	name: string; // Package name
+	version: string; // Package version
+	isCircular?: boolean; // Whether this creates a circular reference
+	circularTarget?: number; // ID of target in circular reference
+	size?: number; // Package size in bytes (unpacked)
+}
+
+/**
+ * Flat optimized dependency graph with minimal overhead
+ */
+export interface FlatDependencyGraph {
+	rootIndex: number; // Index of the root package
+	packages: FlatPackage[]; // All unique packages (index is the implicit ID)
+	dependencies: [number, number][]; // All dependencies as [from, to] pairs
+	circular: [number, number][]; // Circular dependencies as [from, to] pairs
+}
+
+/**
  * Represents a Svelte package in the registry
  */
 export interface Package {
@@ -201,7 +234,7 @@ export interface Package {
 
 	typescript: boolean;
 
-	dependencies: { name: string; semver: string }[];
+	dependency_tree: FlatDependencyGraph;
 
 	unpacked_size: number;
 

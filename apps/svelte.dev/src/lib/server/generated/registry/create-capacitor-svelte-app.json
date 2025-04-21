@@ -13,33 +13,6 @@
 	"version": "0.0.25",
 	"svelte_range": "^4.2.7",
 	"last_rune_check_version": "0.0.25",
-	"dependencies": [
-		{
-			"name": "create-svelte",
-			"semver": "^6.3.5"
-		},
-		{
-			"name": "fs-extra",
-			"semver": "^10.1.0"
-		},
-		{
-			"name": "ip",
-			"semver": "^1.1.8"
-		},
-		{
-			"name": "kleur",
-			"semver": "^4.1.5"
-		},
-		{
-			"name": "mri",
-			"semver": "^1.2.0"
-		},
-		{
-			"name": "prompts",
-			"semver": "^2.4.2"
-		}
-	],
-	"unpacked_size": 42792,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +306,113 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 13
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "create-capacitor-svelte-app",
+				"version": "0.0.25",
+				"size": 42792
+			},
+			{
+				"name": "create-svelte",
+				"version": "6.4.0",
+				"size": 1080466
+			},
+			{
+				"name": "kleur",
+				"version": "4.1.5",
+				"size": 20250
+			},
+			{
+				"name": "@clack/prompts",
+				"version": "0.7.0",
+				"size": 45357
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "sisteransi",
+				"version": "1.0.5",
+				"size": 6791
+			},
+			{
+				"name": "@clack/core",
+				"version": "0.3.5",
+				"size": 273366
+			},
+			{
+				"name": "is-unicode-supported",
+				"version": "2.1.0",
+				"size": 3958
+			},
+			{
+				"name": "fs-extra",
+				"version": "10.1.0",
+				"size": 63278
+			},
+			{
+				"name": "jsonfile",
+				"version": "6.1.0",
+				"size": 19750
+			},
+			{
+				"name": "universalify",
+				"version": "2.0.1",
+				"size": 4675
+			},
+			{
+				"name": "graceful-fs",
+				"version": "4.2.11",
+				"size": 32535
+			},
+			{
+				"name": "ip",
+				"version": "1.1.9",
+				"size": 15451
+			},
+			{
+				"name": "mri",
+				"version": "1.2.0",
+				"size": 13261
+			},
+			{
+				"name": "prompts",
+				"version": "2.4.2",
+				"size": 186815
+			},
+			{
+				"name": "kleur",
+				"version": "3.0.3",
+				"size": 9893
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[6, 4],
+			[6, 5],
+			[3, 7],
+			[0, 8],
+			[8, 9],
+			[9, 10],
+			[8, 11],
+			[8, 10],
+			[0, 12],
+			[0, 2],
+			[0, 13],
+			[0, 14],
+			[14, 15],
+			[14, 5]
+		],
+		"circular": []
+	}
 }

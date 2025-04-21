@@ -13,13 +13,6 @@
 	"version": "1.0.2",
 	"svelte_range": "^3.37.0",
 	"last_rune_check_version": "1.0.2",
-	"dependencies": [
-		{
-			"name": "svelte-docster",
-			"semver": "^2.0.0"
-		}
-	],
-	"unpacked_size": 142597,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -217,5 +210,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "sveltyper",
+				"version": "1.0.2",
+				"size": 142597
+			},
+			{
+				"name": "svelte-docster",
+				"version": "2.0.1",
+				"size": 61200
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

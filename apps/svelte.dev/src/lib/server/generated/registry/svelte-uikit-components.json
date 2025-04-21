@@ -14,17 +14,6 @@
 	"svelte_range": "^4.2.19",
 	"kit_range": "^2.8.3",
 	"last_rune_check_version": "0.19.0",
-	"dependencies": [
-		{
-			"name": "prettier-plugin-svelte",
-			"semver": "^3.2.3"
-		},
-		{
-			"name": "svelte-highlight",
-			"semver": "^7.6.0"
-		}
-	],
-	"unpacked_size": 58779,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -322,5 +311,36 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 11
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-uikit-components",
+				"version": "0.19.0",
+				"size": 58779
+			},
+			{
+				"name": "prettier-plugin-svelte",
+				"version": "3.3.3",
+				"size": 1503936
+			},
+			{
+				"name": "svelte-highlight",
+				"version": "7.8.3",
+				"size": 875695
+			},
+			{
+				"name": "highlight.js",
+				"version": "11.11.1",
+				"size": 5433042
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3]
+		],
+		"circular": []
+	}
 }

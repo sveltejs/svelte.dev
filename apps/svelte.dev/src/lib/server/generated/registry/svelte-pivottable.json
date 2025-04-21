@@ -14,17 +14,6 @@
 	"svelte_range": "^3.55.1",
 	"kit_range": "^1.5.5",
 	"last_rune_check_version": "0.2.2",
-	"dependencies": [
-		{
-			"name": "sortablejs",
-			"semver": "^1.15.0"
-		},
-		{
-			"name": "svelte",
-			"semver": "^3.55.1"
-		}
-	],
-	"unpacked_size": 132407,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -338,5 +327,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 29
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-pivottable",
+				"version": "0.2.2",
+				"size": 132407
+			},
+			{
+				"name": "sortablejs",
+				"version": "1.15.6",
+				"size": 640877
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

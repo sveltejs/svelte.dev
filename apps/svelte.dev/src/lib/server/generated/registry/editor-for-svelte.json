@@ -13,13 +13,6 @@
 	"version": "1.0.9",
 	"svelte_range": "^4.2.12",
 	"last_rune_check_version": "1.0.9",
-	"dependencies": [
-		{
-			"name": "autosize",
-			"semver": "^6.0.1"
-		}
-	],
-	"unpacked_size": 18121,
 	"downloads_history": [
 		{
 			"range": [1717957800000, 1718562599999],
@@ -189,5 +182,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 12
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "editor-for-svelte",
+				"version": "1.0.9",
+				"size": 18121
+			},
+			{
+				"name": "autosize",
+				"version": "6.0.1",
+				"size": 25088
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

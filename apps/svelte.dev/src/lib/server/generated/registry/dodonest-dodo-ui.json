@@ -14,13 +14,6 @@
 	"last_rune_check_version": "0.1.0",
 	"version": "0.1.0",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "@iconify/svelte",
-			"semver": "^4.2.0"
-		}
-	],
-	"unpacked_size": 62169,
 	"downloads_history": [
 		{
 			"range": [1743359400000, 1743964199999],
@@ -30,5 +23,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 8
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@dodonest/dodo-ui",
+				"version": "0.1.0",
+				"size": 62169
+			},
+			{
+				"name": "@iconify/svelte",
+				"version": "4.2.0",
+				"size": 221607
+			},
+			{
+				"name": "@iconify/types",
+				"version": "2.0.0",
+				"size": 25671
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2]
+		],
+		"circular": []
+	}
 }

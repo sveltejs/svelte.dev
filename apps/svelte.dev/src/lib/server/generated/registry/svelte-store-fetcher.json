@@ -13,8 +13,6 @@
 	"version": "1.5.6",
 	"svelte_range": "3.38.1",
 	"last_rune_check_version": "1.5.6",
-	"dependencies": [],
-	"unpacked_size": 5145,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -232,5 +230,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 8
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-store-fetcher",
+				"version": "1.5.6",
+				"size": 5145
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

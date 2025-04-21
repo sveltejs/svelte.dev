@@ -13,13 +13,6 @@
 	"version": "0.1.10",
 	"svelte_range": "^3.20.1",
 	"last_rune_check_version": "0.1.10",
-	"dependencies": [
-		{
-			"name": "add-resize-listener",
-			"semver": "^2.0.1"
-		}
-	],
-	"unpacked_size": 83771,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -237,5 +230,21 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 20
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-custom-scrollbar",
+				"version": "0.1.10",
+				"size": 83771
+			},
+			{
+				"name": "add-resize-listener",
+				"version": "2.0.1"
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

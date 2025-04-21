@@ -14,8 +14,6 @@
 	"svelte_range": "^5",
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "0.2.4",
-	"dependencies": [],
-	"unpacked_size": 47356,
 	"downloads_history": [
 		{
 			"range": [1725820200000, 1726424999999],
@@ -141,5 +139,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 3
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@trasherdk/svelte-qrcode",
+				"version": "0.2.4",
+				"size": 47356
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

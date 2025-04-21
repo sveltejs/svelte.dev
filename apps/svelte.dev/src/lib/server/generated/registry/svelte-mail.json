@@ -13,17 +13,6 @@
 	"version": "0.1.1",
 	"svelte_range": "3.5.1",
 	"last_rune_check_version": "0.1.1",
-	"dependencies": [
-		{
-			"name": "html-to-text",
-			"semver": "5.1.1"
-		},
-		{
-			"name": "juice",
-			"semver": "5.2.0"
-		}
-	],
-	"unpacked_size": 16790,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -337,5 +326,723 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 41
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-mail",
+				"version": "0.1.1",
+				"size": 16790
+			},
+			{
+				"name": "html-to-text",
+				"version": "5.1.1",
+				"size": 89842
+			},
+			{
+				"name": "he",
+				"version": "1.2.0",
+				"size": 124138
+			},
+			{
+				"name": "htmlparser2",
+				"version": "3.10.1",
+				"size": 55027
+			},
+			{
+				"name": "domutils",
+				"version": "1.7.0",
+				"size": 20546
+			},
+			{
+				"name": "dom-serializer",
+				"version": "0.2.2",
+				"size": 9519
+			},
+			{
+				"name": "domelementtype",
+				"version": "2.3.0",
+				"size": 11359
+			},
+			{
+				"name": "entities",
+				"version": "2.2.0",
+				"size": 57673
+			},
+			{
+				"name": "domelementtype",
+				"version": "1.3.1",
+				"size": 2072
+			},
+			{
+				"name": "entities",
+				"version": "1.1.2",
+				"size": 57359
+			},
+			{
+				"name": "inherits",
+				"version": "2.0.4",
+				"size": 3958
+			},
+			{
+				"name": "domhandler",
+				"version": "2.4.2",
+				"size": 29945
+			},
+			{
+				"name": "readable-stream",
+				"version": "3.6.2",
+				"size": 123971
+			},
+			{
+				"name": "string_decoder",
+				"version": "1.3.0",
+				"size": 14427
+			},
+			{
+				"name": "safe-buffer",
+				"version": "5.2.1",
+				"size": 32101
+			},
+			{
+				"name": "util-deprecate",
+				"version": "1.0.2"
+			},
+			{
+				"name": "minimist",
+				"version": "1.2.8",
+				"size": 54477
+			},
+			{
+				"name": "lodash",
+				"version": "4.17.21",
+				"size": 1412415
+			},
+			{
+				"name": "juice",
+				"version": "5.2.0",
+				"size": 56142
+			},
+			{
+				"name": "slick",
+				"version": "1.12.2"
+			},
+			{
+				"name": "mensch",
+				"version": "0.3.4",
+				"size": 36564
+			},
+			{
+				"name": "cheerio",
+				"version": "0.22.0"
+			},
+			{
+				"name": "css-select",
+				"version": "1.2.0"
+			},
+			{
+				"name": "css-what",
+				"version": "2.1.3",
+				"size": 10642
+			},
+			{
+				"name": "domutils",
+				"version": "1.5.1"
+			},
+			{
+				"name": "boolbase",
+				"version": "1.0.0"
+			},
+			{
+				"name": "nth-check",
+				"version": "1.0.2",
+				"size": 5538
+			},
+			{
+				"name": "lodash.map",
+				"version": "4.6.0"
+			},
+			{
+				"name": "lodash.bind",
+				"version": "4.2.1"
+			},
+			{
+				"name": "lodash.pick",
+				"version": "4.4.0"
+			},
+			{
+				"name": "lodash.some",
+				"version": "4.6.0"
+			},
+			{
+				"name": "lodash.merge",
+				"version": "4.6.2",
+				"size": 54132
+			},
+			{
+				"name": "lodash.filter",
+				"version": "4.6.0"
+			},
+			{
+				"name": "lodash.reduce",
+				"version": "4.6.0"
+			},
+			{
+				"name": "lodash.reject",
+				"version": "4.6.0"
+			},
+			{
+				"name": "dom-serializer",
+				"version": "0.1.1",
+				"size": 4687
+			},
+			{
+				"name": "lodash.flatten",
+				"version": "4.4.0"
+			},
+			{
+				"name": "lodash.foreach",
+				"version": "4.5.0"
+			},
+			{
+				"name": "lodash.assignin",
+				"version": "4.2.0"
+			},
+			{
+				"name": "lodash.defaults",
+				"version": "4.2.0"
+			},
+			{
+				"name": "commander",
+				"version": "2.20.3",
+				"size": 62442
+			},
+			{
+				"name": "cross-spawn",
+				"version": "6.0.6",
+				"size": 18317
+			},
+			{
+				"name": "nice-try",
+				"version": "1.0.5",
+				"size": 3747
+			},
+			{
+				"name": "path-key",
+				"version": "2.0.1"
+			},
+			{
+				"name": "semver",
+				"version": "5.7.2",
+				"size": 63315
+			},
+			{
+				"name": "shebang-command",
+				"version": "1.2.0"
+			},
+			{
+				"name": "shebang-regex",
+				"version": "1.0.0"
+			},
+			{
+				"name": "which",
+				"version": "1.3.1",
+				"size": 9419
+			},
+			{
+				"name": "isexe",
+				"version": "2.0.0"
+			},
+			{
+				"name": "deep-extend",
+				"version": "0.6.0",
+				"size": 9190
+			},
+			{
+				"name": "web-resource-inliner",
+				"version": "4.3.4",
+				"size": 238429
+			},
+			{
+				"name": "async",
+				"version": "3.2.6",
+				"size": 807741
+			},
+			{
+				"name": "chalk",
+				"version": "2.4.2",
+				"size": 26924
+			},
+			{
+				"name": "ansi-styles",
+				"version": "3.2.1",
+				"size": 9371
+			},
+			{
+				"name": "color-convert",
+				"version": "1.9.3",
+				"size": 26964
+			},
+			{
+				"name": "color-name",
+				"version": "1.1.3"
+			},
+			{
+				"name": "supports-color",
+				"version": "5.5.0",
+				"size": 6630
+			},
+			{
+				"name": "has-flag",
+				"version": "3.0.0"
+			},
+			{
+				"name": "escape-string-regexp",
+				"version": "1.0.5"
+			},
+			{
+				"name": "xtend",
+				"version": "4.0.2",
+				"size": 6465
+			},
+			{
+				"name": "datauri",
+				"version": "2.0.0",
+				"size": 10595
+			},
+			{
+				"name": "image-size",
+				"version": "0.7.5",
+				"size": 30514
+			},
+			{
+				"name": "mimer",
+				"version": "1.1.1",
+				"size": 89857
+			},
+			{
+				"name": "request",
+				"version": "2.88.2",
+				"size": 209281
+			},
+			{
+				"name": "qs",
+				"version": "6.5.3",
+				"size": 125650
+			},
+			{
+				"name": "aws4",
+				"version": "1.13.2",
+				"size": 23399
+			},
+			{
+				"name": "uuid",
+				"version": "3.4.0",
+				"size": 34269
+			},
+			{
+				"name": "extend",
+				"version": "3.0.2",
+				"size": 23461
+			},
+			{
+				"name": "caseless",
+				"version": "0.12.0"
+			},
+			{
+				"name": "isstream",
+				"version": "0.1.2"
+			},
+			{
+				"name": "aws-sign2",
+				"version": "0.7.0"
+			},
+			{
+				"name": "form-data",
+				"version": "2.3.3",
+				"size": 119230
+			},
+			{
+				"name": "asynckit",
+				"version": "0.4.0"
+			},
+			{
+				"name": "mime-types",
+				"version": "2.1.35",
+				"size": 18272
+			},
+			{
+				"name": "mime-db",
+				"version": "1.52.0",
+				"size": 205539
+			},
+			{
+				"name": "combined-stream",
+				"version": "1.0.8",
+				"size": 11514
+			},
+			{
+				"name": "delayed-stream",
+				"version": "1.0.0"
+			},
+			{
+				"name": "oauth-sign",
+				"version": "0.9.0",
+				"size": 13805
+			},
+			{
+				"name": "tough-cookie",
+				"version": "2.5.0",
+				"size": 86644
+			},
+			{
+				"name": "psl",
+				"version": "1.15.0",
+				"size": 711982
+			},
+			{
+				"name": "punycode",
+				"version": "2.3.1",
+				"size": 33514
+			},
+			{
+				"name": "tunnel-agent",
+				"version": "0.6.0"
+			},
+			{
+				"name": "forever-agent",
+				"version": "0.6.1"
+			},
+			{
+				"name": "har-validator",
+				"version": "5.1.5",
+				"size": 8220
+			},
+			{
+				"name": "ajv",
+				"version": "6.12.6",
+				"size": 929154
+			},
+			{
+				"name": "uri-js",
+				"version": "4.4.1",
+				"size": 469879
+			},
+			{
+				"name": "fast-deep-equal",
+				"version": "3.1.3",
+				"size": 12966
+			},
+			{
+				"name": "json-schema-traverse",
+				"version": "0.4.1",
+				"size": 19564
+			},
+			{
+				"name": "fast-json-stable-stringify",
+				"version": "2.1.0",
+				"size": 16959
+			},
+			{
+				"name": "har-schema",
+				"version": "2.0.0"
+			},
+			{
+				"name": "is-typedarray",
+				"version": "1.0.0"
+			},
+			{
+				"name": "http-signature",
+				"version": "1.2.0"
+			},
+			{
+				"name": "sshpk",
+				"version": "1.18.0",
+				"size": 230846
+			},
+			{
+				"name": "asn1",
+				"version": "0.2.6",
+				"size": 19757
+			},
+			{
+				"name": "safer-buffer",
+				"version": "2.1.2",
+				"size": 42299
+			},
+			{
+				"name": "jsbn",
+				"version": "0.1.1"
+			},
+			{
+				"name": "getpass",
+				"version": "0.1.7"
+			},
+			{
+				"name": "assert-plus",
+				"version": "1.0.0"
+			},
+			{
+				"name": "dashdash",
+				"version": "1.14.1"
+			},
+			{
+				"name": "ecc-jsbn",
+				"version": "0.1.2",
+				"size": 27799
+			},
+			{
+				"name": "tweetnacl",
+				"version": "0.14.5"
+			},
+			{
+				"name": "bcrypt-pbkdf",
+				"version": "1.0.2",
+				"size": 28994
+			},
+			{
+				"name": "jsprim",
+				"version": "1.4.2",
+				"size": 31183
+			},
+			{
+				"name": "verror",
+				"version": "1.10.0"
+			},
+			{
+				"name": "extsprintf",
+				"version": "1.4.1",
+				"size": 30346
+			},
+			{
+				"name": "core-util-is",
+				"version": "1.0.2"
+			},
+			{
+				"name": "extsprintf",
+				"version": "1.3.0"
+			},
+			{
+				"name": "json-schema",
+				"version": "0.4.0",
+				"size": 26079
+			},
+			{
+				"name": "performance-now",
+				"version": "2.1.0"
+			},
+			{
+				"name": "json-stringify-safe",
+				"version": "5.0.1"
+			},
+			{
+				"name": "htmlparser2",
+				"version": "4.1.0",
+				"size": 91060
+			},
+			{
+				"name": "domutils",
+				"version": "2.8.0",
+				"size": 56647
+			},
+			{
+				"name": "domhandler",
+				"version": "4.3.1",
+				"size": 44583
+			},
+			{
+				"name": "dom-serializer",
+				"version": "1.4.1",
+				"size": 28312
+			},
+			{
+				"name": "domhandler",
+				"version": "3.3.0",
+				"size": 32610
+			},
+			{
+				"name": "valid-data-url",
+				"version": "2.0.0",
+				"size": 97646
+			},
+			{
+				"name": "lodash.unescape",
+				"version": "4.0.1"
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[3, 4],
+			[4, 5],
+			[5, 6],
+			[5, 7],
+			[4, 8],
+			[3, 9],
+			[3, 10],
+			[3, 11],
+			[11, 8],
+			[3, 8],
+			[3, 12],
+			[12, 10],
+			[12, 13],
+			[13, 14],
+			[12, 15],
+			[1, 16],
+			[1, 17],
+			[0, 18],
+			[18, 19],
+			[18, 20],
+			[18, 21],
+			[21, 9],
+			[21, 22],
+			[22, 23],
+			[22, 24],
+			[24, 5],
+			[5, 6],
+			[5, 7],
+			[24, 8],
+			[22, 25],
+			[22, 26],
+			[26, 25],
+			[21, 27],
+			[21, 3],
+			[3, 4],
+			[4, 5],
+			[5, 6],
+			[5, 7],
+			[4, 8],
+			[3, 9],
+			[3, 10],
+			[3, 11],
+			[11, 8],
+			[3, 8],
+			[3, 12],
+			[12, 10],
+			[12, 13],
+			[13, 14],
+			[12, 15],
+			[21, 28],
+			[21, 29],
+			[21, 30],
+			[21, 31],
+			[21, 32],
+			[21, 33],
+			[21, 34],
+			[21, 35],
+			[35, 8],
+			[35, 9],
+			[21, 36],
+			[21, 37],
+			[21, 38],
+			[21, 39],
+			[18, 40],
+			[18, 41],
+			[41, 42],
+			[41, 43],
+			[41, 44],
+			[41, 45],
+			[45, 46],
+			[41, 47],
+			[47, 48],
+			[18, 49],
+			[18, 50],
+			[50, 51],
+			[50, 52],
+			[52, 53],
+			[53, 54],
+			[54, 55],
+			[52, 56],
+			[56, 57],
+			[52, 58],
+			[50, 59],
+			[50, 60],
+			[60, 61],
+			[60, 62],
+			[50, 63],
+			[63, 64],
+			[63, 65],
+			[63, 66],
+			[63, 67],
+			[63, 68],
+			[63, 69],
+			[63, 70],
+			[63, 71],
+			[71, 72],
+			[71, 73],
+			[73, 74],
+			[71, 75],
+			[75, 76],
+			[63, 73],
+			[73, 74],
+			[63, 77],
+			[63, 14],
+			[63, 78],
+			[78, 79],
+			[79, 80],
+			[78, 80],
+			[63, 81],
+			[81, 14],
+			[63, 82],
+			[63, 83],
+			[83, 84],
+			[84, 85],
+			[85, 80],
+			[84, 86],
+			[84, 87],
+			[84, 88],
+			[83, 89],
+			[63, 90],
+			[63, 91],
+			[91, 92],
+			[92, 93],
+			[93, 94],
+			[92, 95],
+			[92, 96],
+			[96, 97],
+			[92, 98],
+			[98, 97],
+			[92, 99],
+			[99, 95],
+			[99, 94],
+			[92, 100],
+			[92, 97],
+			[92, 101],
+			[101, 100],
+			[92, 94],
+			[91, 102],
+			[102, 103],
+			[103, 104],
+			[103, 97],
+			[103, 105],
+			[102, 106],
+			[102, 97],
+			[102, 107],
+			[91, 97],
+			[63, 75],
+			[75, 76],
+			[63, 108],
+			[63, 109],
+			[50, 110],
+			[110, 111],
+			[111, 112],
+			[112, 6],
+			[111, 113],
+			[113, 6],
+			[113, 112],
+			[112, 6],
+			[113, 7],
+			[111, 6],
+			[110, 7],
+			[110, 114],
+			[114, 6],
+			[110, 6],
+			[50, 94],
+			[50, 115],
+			[50, 116]
+		],
+		"circular": []
+	}
 }

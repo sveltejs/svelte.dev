@@ -13,17 +13,6 @@
 	"version": "0.1.5",
 	"svelte_range": "3.12.1",
 	"last_rune_check_version": "0.1.5",
-	"dependencies": [
-		{
-			"name": "classnames",
-			"semver": "2.2.6"
-		},
-		{
-			"name": "popper.js",
-			"semver": "1.16.0"
-		}
-	],
-	"unpacked_size": 437585,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -329,5 +318,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 17
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-popper",
+				"version": "0.1.5",
+				"size": 437585
+			},
+			{
+				"name": "classnames",
+				"version": "2.2.6",
+				"size": 16331
+			},
+			{
+				"name": "popper.js",
+				"version": "1.16.0",
+				"size": 1725197
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

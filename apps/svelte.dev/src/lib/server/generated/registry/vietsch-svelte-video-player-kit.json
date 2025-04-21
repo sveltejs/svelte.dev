@@ -13,13 +13,6 @@
 	"version": "1.0.2",
 	"svelte_range": "^3.41.0 || ^4.0.0",
 	"last_rune_check_version": "1.0.2",
-	"dependencies": [
-		{
-			"name": "@vietsch/svelte-video-player-kit",
-			"semver": "^x.x.x"
-		}
-	],
-	"unpacked_size": 168584,
 	"downloads_history": [
 		{
 			"range": [1737311400000, 1737916199999],
@@ -65,5 +58,19 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@vietsch/svelte-video-player-kit",
+				"version": "1.0.2",
+				"size": 168584,
+				"isCircular": true,
+				"circularTarget": 0
+			}
+		],
+		"dependencies": [[0, 0]],
+		"circular": [[0, 0]]
+	}
 }

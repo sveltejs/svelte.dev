@@ -14,29 +14,6 @@
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.15.1",
 	"last_rune_check_version": "0.2.1",
-	"dependencies": [
-		{
-			"name": "@paralleldrive/cuid2",
-			"semver": "^2.2.0"
-		},
-		{
-			"name": "@prisma/client",
-			"semver": "^4.12.0"
-		},
-		{
-			"name": "esm-env",
-			"semver": "^1.0.0"
-		},
-		{
-			"name": "jose",
-			"semver": "^4.13.1"
-		},
-		{
-			"name": "zod",
-			"semver": "^3.21.4"
-		}
-	],
-	"unpacked_size": 59869,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -206,5 +183,60 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svauth",
+				"version": "0.2.1",
+				"size": 59869
+			},
+			{
+				"name": "@paralleldrive/cuid2",
+				"version": "2.2.2",
+				"size": 35454
+			},
+			{
+				"name": "@noble/hashes",
+				"version": "1.7.2",
+				"size": 1100967
+			},
+			{
+				"name": "@prisma/client",
+				"version": "4.16.2",
+				"size": 3263984
+			},
+			{
+				"name": "@prisma/engines-version",
+				"version": "4.16.1-1.4bc8b6e1b66cb932731fb1bdbbc550d1e010de81",
+				"size": 12690
+			},
+			{
+				"name": "esm-env",
+				"version": "1.2.2",
+				"size": 3784
+			},
+			{
+				"name": "jose",
+				"version": "4.15.9",
+				"size": 548521
+			},
+			{
+				"name": "zod",
+				"version": "3.24.3",
+				"size": 697771
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[3, 4],
+			[0, 5],
+			[0, 6],
+			[0, 7]
+		],
+		"circular": []
+	}
 }

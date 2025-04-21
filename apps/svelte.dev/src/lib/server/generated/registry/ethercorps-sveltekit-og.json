@@ -13,21 +13,6 @@
 	"kit_range": "^1.30.3",
 	"last_rune_check_version": "3.0.0",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "satori",
-			"semver": "^0.10.11"
-		},
-		{
-			"name": "@resvg/resvg-js",
-			"semver": "^2.6.0"
-		},
-		{
-			"name": "@ethercorps/svelte-h2j",
-			"semver": "^0.1.0"
-		}
-	],
-	"unpacked_size": 12367,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -341,5 +326,151 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4619
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@ethercorps/sveltekit-og",
+				"version": "3.0.0",
+				"size": 12367
+			},
+			{
+				"name": "satori",
+				"version": "0.10.14",
+				"size": 4098830
+			},
+			{
+				"name": "linebreak",
+				"version": "1.1.0",
+				"size": 218833
+			},
+			{
+				"name": "base64-js",
+				"version": "0.0.8"
+			},
+			{
+				"name": "unicode-trie",
+				"version": "2.0.0",
+				"size": 48887
+			},
+			{
+				"name": "pako",
+				"version": "0.2.9"
+			},
+			{
+				"name": "tiny-inflate",
+				"version": "1.0.3",
+				"size": 43000
+			},
+			{
+				"name": "emoji-regex",
+				"version": "10.4.0",
+				"size": 31990
+			},
+			{
+				"name": "escape-html",
+				"version": "1.0.3"
+			},
+			{
+				"name": "yoga-wasm-web",
+				"version": "0.3.3",
+				"size": 289748
+			},
+			{
+				"name": "css-box-shadow",
+				"version": "1.0.0-3"
+			},
+			{
+				"name": "parse-css-color",
+				"version": "0.2.1",
+				"size": 24044
+			},
+			{
+				"name": "color-name",
+				"version": "1.1.4",
+				"size": 6693
+			},
+			{
+				"name": "hex-rgb",
+				"version": "4.3.0",
+				"size": 6677
+			},
+			{
+				"name": "css-to-react-native",
+				"version": "3.2.0",
+				"size": 90021
+			},
+			{
+				"name": "camelize",
+				"version": "1.0.1",
+				"size": 12487
+			},
+			{
+				"name": "css-color-keywords",
+				"version": "1.0.0"
+			},
+			{
+				"name": "postcss-value-parser",
+				"version": "4.2.0",
+				"size": 27193
+			},
+			{
+				"name": "@shuding/opentype.js",
+				"version": "1.4.0-beta.0",
+				"size": 2963010
+			},
+			{
+				"name": "fflate",
+				"version": "0.7.4",
+				"size": 535414
+			},
+			{
+				"name": "string.prototype.codepointat",
+				"version": "0.2.1",
+				"size": 5382
+			},
+			{
+				"name": "css-background-parser",
+				"version": "0.1.0"
+			},
+			{
+				"name": "@resvg/resvg-js",
+				"version": "2.6.2",
+				"size": 44489
+			},
+			{
+				"name": "@ethercorps/svelte-h2j",
+				"version": "0.1.0",
+				"size": 15066
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[2, 4],
+			[4, 5],
+			[4, 6],
+			[1, 7],
+			[1, 8],
+			[1, 9],
+			[1, 10],
+			[1, 11],
+			[11, 12],
+			[11, 13],
+			[1, 14],
+			[14, 15],
+			[14, 16],
+			[14, 17],
+			[1, 18],
+			[18, 19],
+			[18, 20],
+			[1, 17],
+			[1, 21],
+			[0, 22],
+			[0, 23]
+		],
+		"circular": []
+	}
 }

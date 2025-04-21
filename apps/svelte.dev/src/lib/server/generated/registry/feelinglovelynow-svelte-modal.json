@@ -14,8 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.27.2",
 	"last_rune_check_version": "1.0.1",
-	"dependencies": [],
-	"unpacked_size": 9618,
 	"downloads_history": [
 		{
 			"range": [1698604200000, 1699208999999],
@@ -213,5 +211,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@feelinglovelynow/svelte-modal",
+				"version": "1.0.1",
+				"size": 9618
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

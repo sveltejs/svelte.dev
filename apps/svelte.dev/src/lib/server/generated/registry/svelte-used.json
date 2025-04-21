@@ -13,8 +13,6 @@
 	"kit_range": "^1.27.4",
 	"last_rune_check_version": "0.0.7",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 21843,
 	"downloads_history": [
 		{
 			"range": [1701023400000, 1701628199999],
@@ -236,5 +234,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-used",
+				"version": "0.0.7",
+				"size": 21843
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

@@ -13,17 +13,6 @@
 	"version": "1.2.8",
 	"svelte_range": "^3.29.0",
 	"last_rune_check_version": "1.2.8",
-	"dependencies": [
-		{
-			"name": "@types/papaparse",
-			"semver": "^5.3.1"
-		},
-		{
-			"name": "papaparse",
-			"semver": "^5.3.1"
-		}
-	],
-	"unpacked_size": 416640,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -337,5 +326,42 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 114
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-csv",
+				"version": "1.2.8",
+				"size": 416640
+			},
+			{
+				"name": "@types/papaparse",
+				"version": "5.3.15",
+				"size": 24070
+			},
+			{
+				"name": "@types/node",
+				"version": "22.14.1",
+				"size": 2331510
+			},
+			{
+				"name": "undici-types",
+				"version": "6.21.0",
+				"size": 83680
+			},
+			{
+				"name": "papaparse",
+				"version": "5.5.2",
+				"size": 263215
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[0, 4]
+		],
+		"circular": []
+	}
 }

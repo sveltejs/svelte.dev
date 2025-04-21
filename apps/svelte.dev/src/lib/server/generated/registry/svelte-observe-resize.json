@@ -13,13 +13,6 @@
 	"version": "1.0.1",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "1.0.1",
-	"dependencies": [
-		{
-			"name": "resize-observer-polyfill",
-			"semver": "^1.5.1"
-		}
-	],
-	"unpacked_size": 9408,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -329,5 +322,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 78
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-observe-resize",
+				"version": "1.0.1",
+				"size": 9408
+			},
+			{
+				"name": "resize-observer-polyfill",
+				"version": "1.5.1",
+				"size": 147320
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

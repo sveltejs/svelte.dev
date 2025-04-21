@@ -19,8 +19,6 @@
 	"svelte_range": "^3.50.1",
 	"last_rune_check_version": "1.12.3",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 184188,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -334,5 +332,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 1431
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@coding-blocks/web-components",
+				"version": "1.12.3",
+				"size": 184188
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

@@ -13,8 +13,6 @@
 	"version": "1.0.5",
 	"svelte_range": ">=3",
 	"last_rune_check_version": "1.0.5",
-	"dependencies": [],
-	"unpacked_size": 3769,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -328,5 +326,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 533
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-preprocess-remove-attribute",
+				"version": "1.0.5",
+				"size": 3769
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

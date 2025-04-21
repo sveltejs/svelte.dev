@@ -14,41 +14,6 @@
 	"svelte_range": "^3.50.1",
 	"kit_range": "next",
 	"last_rune_check_version": "1.0.2",
-	"dependencies": [
-		{
-			"name": "@zerodevx/svelte-toast",
-			"semver": "^0.8.2"
-		},
-		{
-			"name": "balloon-css",
-			"semver": "^1.2.0"
-		},
-		{
-			"name": "lodash.merge",
-			"semver": "^4.6.2"
-		},
-		{
-			"name": "lodash.clonedeep",
-			"semver": "^4.5.0"
-		},
-		{
-			"name": "nanoid",
-			"semver": "^4.0.0"
-		},
-		{
-			"name": "pretty-checkbox",
-			"semver": "^3.0.3"
-		},
-		{
-			"name": "svelte-scrollto-element",
-			"semver": "^0.7.0"
-		},
-		{
-			"name": "svelecte",
-			"semver": "^3.9.5"
-		}
-	],
-	"unpacked_size": 409979,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -362,5 +327,70 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 28
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@pragmatic-engineering/svelte-form-builder-community",
+				"version": "1.0.2",
+				"size": 409979
+			},
+			{
+				"name": "@zerodevx/svelte-toast",
+				"version": "0.8.2",
+				"size": 63659
+			},
+			{
+				"name": "balloon-css",
+				"version": "1.2.0",
+				"size": 26719
+			},
+			{
+				"name": "lodash.merge",
+				"version": "4.6.2",
+				"size": 54132
+			},
+			{
+				"name": "lodash.clonedeep",
+				"version": "4.5.0"
+			},
+			{
+				"name": "nanoid",
+				"version": "4.0.2",
+				"size": 15272
+			},
+			{
+				"name": "pretty-checkbox",
+				"version": "3.0.3"
+			},
+			{
+				"name": "svelte-scrollto-element",
+				"version": "0.7.0",
+				"size": 15737
+			},
+			{
+				"name": "svelecte",
+				"version": "3.17.3",
+				"size": 370277
+			},
+			{
+				"name": "svelte-tiny-virtual-list",
+				"version": "2.1.2",
+				"size": 139716
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[0, 4],
+			[0, 5],
+			[0, 6],
+			[0, 7],
+			[0, 8],
+			[8, 9]
+		],
+		"circular": []
+	}
 }

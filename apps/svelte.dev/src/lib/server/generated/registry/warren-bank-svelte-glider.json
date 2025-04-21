@@ -13,13 +13,6 @@
 	"version": "1.1.0",
 	"svelte_range": "*",
 	"last_rune_check_version": "1.1.0",
-	"dependencies": [
-		{
-			"name": "glider-js",
-			"semver": "^1.7.9"
-		}
-	],
-	"unpacked_size": 52460,
 	"downloads_history": [
 		{
 			"range": [1717353000000, 1717957799999],
@@ -149,5 +142,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@warren-bank/svelte-glider",
+				"version": "1.1.0",
+				"size": 52460
+			},
+			{
+				"name": "glider-js",
+				"version": "1.7.9",
+				"size": 1629300
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

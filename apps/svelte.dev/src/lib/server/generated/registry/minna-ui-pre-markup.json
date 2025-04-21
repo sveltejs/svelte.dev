@@ -13,17 +13,6 @@
 	"version": "0.21.0",
 	"svelte_range": "^2.0.0",
 	"last_rune_check_version": "0.21.0",
-	"dependencies": [
-		{
-			"name": "deepmerge",
-			"semver": "^3.1.0"
-		},
-		{
-			"name": "html-minifier",
-			"semver": "3.5.21"
-		}
-	],
-	"unpacked_size": 23671,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -253,5 +242,98 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 20
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@minna-ui/pre-markup",
+				"version": "0.21.0",
+				"size": 23671
+			},
+			{
+				"name": "deepmerge",
+				"version": "3.3.0",
+				"size": 22627
+			},
+			{
+				"name": "html-minifier",
+				"version": "3.5.21",
+				"size": 95870
+			},
+			{
+				"name": "camel-case",
+				"version": "3.0.0"
+			},
+			{
+				"name": "no-case",
+				"version": "2.3.2"
+			},
+			{
+				"name": "lower-case",
+				"version": "1.1.4"
+			},
+			{
+				"name": "upper-case",
+				"version": "1.1.3"
+			},
+			{
+				"name": "clean-css",
+				"version": "4.2.4",
+				"size": 437796
+			},
+			{
+				"name": "source-map",
+				"version": "0.6.1"
+			},
+			{
+				"name": "commander",
+				"version": "2.17.1",
+				"size": 61159
+			},
+			{
+				"name": "he",
+				"version": "1.2.0",
+				"size": 124138
+			},
+			{
+				"name": "param-case",
+				"version": "2.1.1"
+			},
+			{
+				"name": "relateurl",
+				"version": "0.2.7"
+			},
+			{
+				"name": "uglify-js",
+				"version": "3.4.10",
+				"size": 689788
+			},
+			{
+				"name": "commander",
+				"version": "2.19.0",
+				"size": 61383
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[3, 4],
+			[4, 5],
+			[3, 6],
+			[2, 7],
+			[7, 8],
+			[2, 9],
+			[2, 10],
+			[2, 11],
+			[11, 4],
+			[4, 5],
+			[2, 12],
+			[2, 13],
+			[13, 14],
+			[13, 8]
+		],
+		"circular": []
+	}
 }

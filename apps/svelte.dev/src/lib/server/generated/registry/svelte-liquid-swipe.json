@@ -14,8 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.24.1",
 	"last_rune_check_version": "2.1.1",
-	"dependencies": [],
-	"unpacked_size": 38476,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -261,5 +259,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 9
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-liquid-swipe",
+				"version": "2.1.1",
+				"size": 38476
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

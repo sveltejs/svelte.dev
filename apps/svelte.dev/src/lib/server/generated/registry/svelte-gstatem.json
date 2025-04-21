@@ -13,13 +13,6 @@
 	"version": "1.0.0-alpha.1",
 	"svelte_range": ">=3.0.0",
 	"last_rune_check_version": "1.0.0-alpha.1",
-	"dependencies": [
-		{
-			"name": "gstatem",
-			"semver": "^1.0.10"
-		}
-	],
-	"unpacked_size": 8137,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -193,5 +186,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 8
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-gstatem",
+				"version": "1.0.0-alpha.1",
+				"size": 8137
+			},
+			{
+				"name": "gstatem",
+				"version": "1.0.14",
+				"size": 14353
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

@@ -13,37 +13,6 @@
 	"version": "2.1.0",
 	"svelte_range": "^3.46.4",
 	"last_rune_check_version": "2.1.0",
-	"dependencies": [
-		{
-			"name": "acorn",
-			"semver": "^8.7.1"
-		},
-		{
-			"name": "chalk",
-			"semver": "^5.0.1"
-		},
-		{
-			"name": "chokidar",
-			"semver": "^3.5.3"
-		},
-		{
-			"name": "commander",
-			"semver": "^9.4.0"
-		},
-		{
-			"name": "fs-extra",
-			"semver": "^10.1.0"
-		},
-		{
-			"name": "svelte",
-			"semver": "^3.46.4"
-		},
-		{
-			"name": "url-join",
-			"semver": "^5.0.0"
-		}
-	],
-	"unpacked_size": 25063,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -241,5 +210,160 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svbuild",
+				"version": "2.1.0",
+				"size": 25063
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "chalk",
+				"version": "5.4.1",
+				"size": 44242
+			},
+			{
+				"name": "chokidar",
+				"version": "3.6.0",
+				"size": 90200
+			},
+			{
+				"name": "braces",
+				"version": "3.0.3",
+				"size": 44635
+			},
+			{
+				"name": "fill-range",
+				"version": "7.1.1",
+				"size": 16743
+			},
+			{
+				"name": "to-regex-range",
+				"version": "5.0.1",
+				"size": 22939
+			},
+			{
+				"name": "is-number",
+				"version": "7.0.0",
+				"size": 9615
+			},
+			{
+				"name": "is-glob",
+				"version": "4.0.3",
+				"size": 13609
+			},
+			{
+				"name": "is-extglob",
+				"version": "2.1.1"
+			},
+			{
+				"name": "anymatch",
+				"version": "3.1.3",
+				"size": 9654
+			},
+			{
+				"name": "picomatch",
+				"version": "2.3.1",
+				"size": 89952
+			},
+			{
+				"name": "normalize-path",
+				"version": "3.0.0",
+				"size": 9219
+			},
+			{
+				"name": "readdirp",
+				"version": "3.6.0",
+				"size": 20472
+			},
+			{
+				"name": "glob-parent",
+				"version": "5.1.2",
+				"size": 12134
+			},
+			{
+				"name": "is-binary-path",
+				"version": "2.1.0",
+				"size": 3078
+			},
+			{
+				"name": "binary-extensions",
+				"version": "2.3.0",
+				"size": 5030
+			},
+			{
+				"name": "commander",
+				"version": "9.5.0",
+				"size": 173252
+			},
+			{
+				"name": "fs-extra",
+				"version": "10.1.0",
+				"size": 63278
+			},
+			{
+				"name": "jsonfile",
+				"version": "6.1.0",
+				"size": 19750
+			},
+			{
+				"name": "universalify",
+				"version": "2.0.1",
+				"size": 4675
+			},
+			{
+				"name": "graceful-fs",
+				"version": "4.2.11",
+				"size": 32535
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			},
+			{
+				"name": "url-join",
+				"version": "5.0.0",
+				"size": 4742
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[3, 4],
+			[4, 5],
+			[5, 6],
+			[6, 7],
+			[3, 8],
+			[8, 9],
+			[3, 10],
+			[10, 11],
+			[10, 12],
+			[3, 13],
+			[13, 11],
+			[3, 14],
+			[14, 8],
+			[8, 9],
+			[3, 15],
+			[15, 16],
+			[3, 12],
+			[0, 17],
+			[0, 18],
+			[18, 19],
+			[19, 20],
+			[18, 21],
+			[18, 20],
+			[0, 22],
+			[0, 23]
+		],
+		"circular": []
+	}
 }

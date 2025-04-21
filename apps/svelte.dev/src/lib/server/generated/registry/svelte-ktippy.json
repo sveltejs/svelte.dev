@@ -13,13 +13,6 @@
 	"version": "1.2.1",
 	"svelte_range": "^3.42.6",
 	"last_rune_check_version": "1.2.1",
-	"dependencies": [
-		{
-			"name": "tippy.js",
-			"semver": "^6.3.1"
-		}
-	],
-	"unpacked_size": 99135,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -269,5 +262,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 14
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-ktippy",
+				"version": "1.2.1",
+				"size": 99135
+			},
+			{
+				"name": "tippy.js",
+				"version": "6.3.7",
+				"size": 2067120
+			},
+			{
+				"name": "@popperjs/core",
+				"version": "2.11.8",
+				"size": 1463042
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2]
+		],
+		"circular": []
+	}
 }

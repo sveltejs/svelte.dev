@@ -12,13 +12,6 @@
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "1.0.1",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "screenfull",
-			"semver": "^5.1.0"
-		}
-	],
-	"unpacked_size": 136496,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -248,5 +241,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 10
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@jacksonfrankland/game-kit",
+				"version": "1.0.1",
+				"size": 136496
+			},
+			{
+				"name": "screenfull",
+				"version": "5.2.0",
+				"size": 18128
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

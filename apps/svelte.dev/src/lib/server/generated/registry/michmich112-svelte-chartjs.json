@@ -13,13 +13,6 @@
 	"version": "1.1.1",
 	"svelte_range": "^3.31.0",
 	"last_rune_check_version": "1.1.1",
-	"dependencies": [
-		{
-			"name": "chart.js",
-			"semver": "^3.5.0"
-		}
-	],
-	"unpacked_size": 909912,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -265,5 +258,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 9
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@michmich112/svelte-chartjs",
+				"version": "1.1.1",
+				"size": 909912
+			},
+			{
+				"name": "chart.js",
+				"version": "3.9.1",
+				"size": 21078923
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

@@ -12,17 +12,6 @@
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "0.1.4",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "slideout",
-			"semver": "^1.0.1"
-		},
-		{
-			"name": "tailwindcss",
-			"semver": "^1.1.4"
-		}
-	],
-	"unpacked_size": 304336,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -256,5 +245,589 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 73
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@m30wth/jun-prime",
+				"version": "0.1.4",
+				"size": 304336
+			},
+			{
+				"name": "slideout",
+				"version": "1.0.1"
+			},
+			{
+				"name": "decouple",
+				"version": "0.0.2"
+			},
+			{
+				"name": "emitter",
+				"version": "0.0.7"
+			},
+			{
+				"name": "tailwindcss",
+				"version": "1.9.6",
+				"size": 21414120
+			},
+			{
+				"name": "bytes",
+				"version": "3.1.2",
+				"size": 12270
+			},
+			{
+				"name": "chalk",
+				"version": "4.1.2",
+				"size": 35047
+			},
+			{
+				"name": "ansi-styles",
+				"version": "4.3.0",
+				"size": 16978
+			},
+			{
+				"name": "color-convert",
+				"version": "2.0.1",
+				"size": 27189
+			},
+			{
+				"name": "color-name",
+				"version": "1.1.4",
+				"size": 6693
+			},
+			{
+				"name": "supports-color",
+				"version": "7.2.0",
+				"size": 7035
+			},
+			{
+				"name": "has-flag",
+				"version": "4.0.0",
+				"size": 4419
+			},
+			{
+				"name": "color",
+				"version": "3.2.1",
+				"size": 16581
+			},
+			{
+				"name": "color-string",
+				"version": "1.9.1",
+				"size": 10115
+			},
+			{
+				"name": "simple-swizzle",
+				"version": "0.2.2"
+			},
+			{
+				"name": "is-arrayish",
+				"version": "0.3.2",
+				"size": 54720
+			},
+			{
+				"name": "color-convert",
+				"version": "1.9.3",
+				"size": 26964
+			},
+			{
+				"name": "color-name",
+				"version": "1.1.3"
+			},
+			{
+				"name": "lodash",
+				"version": "4.17.21",
+				"size": 1412415
+			},
+			{
+				"name": "postcss",
+				"version": "7.0.39",
+				"size": 541344
+			},
+			{
+				"name": "picocolors",
+				"version": "0.2.1",
+				"size": 5813
+			},
+			{
+				"name": "source-map",
+				"version": "0.6.1"
+			},
+			{
+				"name": "resolve",
+				"version": "1.22.10",
+				"size": 145619
+			},
+			{
+				"name": "is-core-module",
+				"version": "2.16.1",
+				"size": 33475
+			},
+			{
+				"name": "hasown",
+				"version": "2.0.2",
+				"size": 8765
+			},
+			{
+				"name": "function-bind",
+				"version": "1.1.2",
+				"size": 31427
+			},
+			{
+				"name": "path-parse",
+				"version": "1.0.7",
+				"size": 4511
+			},
+			{
+				"name": "supports-preserve-symlinks-flag",
+				"version": "1.0.0",
+				"size": 9178
+			},
+			{
+				"name": "fs-extra",
+				"version": "8.1.0",
+				"size": 127504
+			},
+			{
+				"name": "jsonfile",
+				"version": "4.0.0"
+			},
+			{
+				"name": "graceful-fs",
+				"version": "4.2.11",
+				"size": 32535
+			},
+			{
+				"name": "universalify",
+				"version": "0.1.2",
+				"size": 4705
+			},
+			{
+				"name": "detective",
+				"version": "5.2.1",
+				"size": 20760
+			},
+			{
+				"name": "acorn-node",
+				"version": "1.8.2",
+				"size": 45278
+			},
+			{
+				"name": "acorn",
+				"version": "7.4.1",
+				"size": 1209760
+			},
+			{
+				"name": "acorn-walk",
+				"version": "7.2.0",
+				"size": 100036
+			},
+			{
+				"name": "xtend",
+				"version": "4.0.2",
+				"size": 6465
+			},
+			{
+				"name": "defined",
+				"version": "1.0.1",
+				"size": 10746
+			},
+			{
+				"name": "minimist",
+				"version": "1.2.8",
+				"size": 54477
+			},
+			{
+				"name": "html-tags",
+				"version": "3.3.1",
+				"size": 5943
+			},
+			{
+				"name": "node-emoji",
+				"version": "1.11.0",
+				"size": 223799
+			},
+			{
+				"name": "postcss-js",
+				"version": "2.0.3",
+				"size": 10141
+			},
+			{
+				"name": "camelcase-css",
+				"version": "2.0.1",
+				"size": 4051
+			},
+			{
+				"name": "object-hash",
+				"version": "2.2.0",
+				"size": 59029
+			},
+			{
+				"name": "autoprefixer",
+				"version": "9.8.8",
+				"size": 289279
+			},
+			{
+				"name": "browserslist",
+				"version": "4.24.4",
+				"size": 64926
+			},
+			{
+				"name": "caniuse-lite",
+				"version": "1.0.30001715",
+				"size": 2211246
+			},
+			{
+				"name": "electron-to-chromium",
+				"version": "1.5.139",
+				"size": 161922
+			},
+			{
+				"name": "node-releases",
+				"version": "2.0.19",
+				"size": 37225
+			},
+			{
+				"name": "update-browserslist-db",
+				"version": "1.1.3",
+				"size": 14770
+			},
+			{
+				"name": "escalade",
+				"version": "3.2.0",
+				"size": 12385
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "num2fraction",
+				"version": "1.2.2"
+			},
+			{
+				"name": "normalize-range",
+				"version": "0.1.2"
+			},
+			{
+				"name": "postcss-value-parser",
+				"version": "4.2.0",
+				"size": 27193
+			},
+			{
+				"name": "normalize.css",
+				"version": "8.0.1",
+				"size": 16417
+			},
+			{
+				"name": "pretty-hrtime",
+				"version": "1.0.3"
+			},
+			{
+				"name": "postcss-nested",
+				"version": "4.2.3",
+				"size": 12645
+			},
+			{
+				"name": "postcss-selector-parser",
+				"version": "6.1.2",
+				"size": 186430
+			},
+			{
+				"name": "cssesc",
+				"version": "3.0.0",
+				"size": 17488
+			},
+			{
+				"name": "util-deprecate",
+				"version": "1.0.2"
+			},
+			{
+				"name": "reduce-css-calc",
+				"version": "2.1.8",
+				"size": 144159
+			},
+			{
+				"name": "css-unit-converter",
+				"version": "1.1.2",
+				"size": 5607
+			},
+			{
+				"name": "postcss-value-parser",
+				"version": "3.3.1",
+				"size": 19086
+			},
+			{
+				"name": "postcss-functions",
+				"version": "3.0.0"
+			},
+			{
+				"name": "glob",
+				"version": "7.2.3",
+				"size": 55064
+			},
+			{
+				"name": "once",
+				"version": "1.4.0"
+			},
+			{
+				"name": "wrappy",
+				"version": "1.0.2"
+			},
+			{
+				"name": "inflight",
+				"version": "1.0.6"
+			},
+			{
+				"name": "inherits",
+				"version": "2.0.4",
+				"size": 3958
+			},
+			{
+				"name": "minimatch",
+				"version": "3.1.2",
+				"size": 34902
+			},
+			{
+				"name": "brace-expansion",
+				"version": "1.1.11",
+				"size": 11059
+			},
+			{
+				"name": "balanced-match",
+				"version": "1.0.2",
+				"size": 6939
+			},
+			{
+				"name": "concat-map",
+				"version": "0.0.1"
+			},
+			{
+				"name": "fs.realpath",
+				"version": "1.0.0"
+			},
+			{
+				"name": "path-is-absolute",
+				"version": "1.0.1"
+			},
+			{
+				"name": "object-assign",
+				"version": "4.1.1"
+			},
+			{
+				"name": "postcss",
+				"version": "6.0.23",
+				"size": 658430
+			},
+			{
+				"name": "chalk",
+				"version": "2.4.2",
+				"size": 26924
+			},
+			{
+				"name": "ansi-styles",
+				"version": "3.2.1",
+				"size": 9371
+			},
+			{
+				"name": "supports-color",
+				"version": "5.5.0",
+				"size": 6630
+			},
+			{
+				"name": "has-flag",
+				"version": "3.0.0"
+			},
+			{
+				"name": "escape-string-regexp",
+				"version": "1.0.5"
+			},
+			{
+				"name": "@fullhuman/postcss-purgecss",
+				"version": "2.3.0",
+				"size": 9730
+			},
+			{
+				"name": "postcss",
+				"version": "7.0.32",
+				"size": 1089539
+			},
+			{
+				"name": "supports-color",
+				"version": "6.1.0",
+				"size": 7462
+			},
+			{
+				"name": "purgecss",
+				"version": "2.3.0",
+				"size": 40581
+			},
+			{
+				"name": "commander",
+				"version": "5.1.0",
+				"size": 106839
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[0, 4],
+			[4, 5],
+			[4, 6],
+			[6, 7],
+			[7, 8],
+			[8, 9],
+			[6, 10],
+			[10, 11],
+			[4, 12],
+			[12, 13],
+			[13, 9],
+			[13, 14],
+			[14, 15],
+			[12, 16],
+			[16, 17],
+			[4, 18],
+			[4, 19],
+			[19, 20],
+			[19, 21],
+			[4, 22],
+			[22, 23],
+			[23, 24],
+			[24, 25],
+			[22, 26],
+			[22, 27],
+			[4, 28],
+			[28, 29],
+			[28, 30],
+			[28, 31],
+			[4, 32],
+			[32, 33],
+			[33, 34],
+			[33, 35],
+			[33, 36],
+			[32, 37],
+			[32, 38],
+			[4, 39],
+			[4, 40],
+			[40, 18],
+			[4, 41],
+			[41, 42],
+			[41, 19],
+			[19, 20],
+			[19, 21],
+			[4, 43],
+			[4, 44],
+			[44, 19],
+			[19, 20],
+			[19, 21],
+			[44, 20],
+			[44, 45],
+			[45, 46],
+			[45, 47],
+			[45, 48],
+			[45, 49],
+			[49, 50],
+			[49, 51],
+			[44, 46],
+			[44, 52],
+			[44, 53],
+			[44, 54],
+			[4, 45],
+			[45, 46],
+			[45, 47],
+			[45, 48],
+			[45, 49],
+			[49, 50],
+			[49, 51],
+			[4, 55],
+			[4, 56],
+			[4, 57],
+			[57, 19],
+			[19, 20],
+			[19, 21],
+			[57, 58],
+			[58, 59],
+			[58, 60],
+			[4, 61],
+			[61, 62],
+			[61, 63],
+			[4, 64],
+			[64, 65],
+			[65, 66],
+			[66, 67],
+			[65, 68],
+			[68, 66],
+			[66, 67],
+			[68, 67],
+			[65, 69],
+			[65, 70],
+			[70, 71],
+			[71, 72],
+			[71, 73],
+			[65, 74],
+			[65, 75],
+			[64, 76],
+			[64, 77],
+			[77, 78],
+			[78, 79],
+			[79, 16],
+			[16, 17],
+			[78, 80],
+			[80, 81],
+			[78, 82],
+			[77, 21],
+			[77, 80],
+			[80, 81],
+			[64, 63],
+			[4, 54],
+			[4, 58],
+			[58, 59],
+			[58, 60],
+			[4, 83],
+			[83, 84],
+			[84, 78],
+			[78, 79],
+			[79, 16],
+			[16, 17],
+			[78, 80],
+			[80, 81],
+			[78, 82],
+			[84, 21],
+			[84, 85],
+			[85, 81],
+			[83, 86],
+			[86, 65],
+			[65, 66],
+			[66, 67],
+			[65, 68],
+			[68, 66],
+			[66, 67],
+			[68, 67],
+			[65, 69],
+			[65, 70],
+			[70, 71],
+			[71, 72],
+			[71, 73],
+			[65, 74],
+			[65, 75],
+			[86, 84],
+			[84, 78],
+			[78, 79],
+			[79, 16],
+			[16, 17],
+			[78, 80],
+			[80, 81],
+			[78, 82],
+			[84, 21],
+			[84, 85],
+			[85, 81],
+			[86, 87],
+			[86, 58],
+			[58, 59],
+			[58, 60]
+		],
+		"circular": []
+	}
 }

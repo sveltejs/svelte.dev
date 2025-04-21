@@ -13,33 +13,6 @@
 	"version": "4.0.1",
 	"svelte_range": "^5.1.0",
 	"last_rune_check_version": "4.0.1",
-	"dependencies": [
-		{
-			"name": "hast-util-to-html",
-			"semver": "^9.0.3"
-		},
-		{
-			"name": "lodash.debounce",
-			"semver": "^4.0.8"
-		},
-		{
-			"name": "magic-string",
-			"semver": "^0.30.14"
-		},
-		{
-			"name": "svelte-parse-markup",
-			"semver": "^0.1.5"
-		},
-		{
-			"name": "svg-parser",
-			"semver": "^2.0.4"
-		},
-		{
-			"name": "zimmerframe",
-			"semver": "^1.1.2"
-		}
-	],
-	"unpacked_size": 32023,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -353,5 +326,255 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 1131
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@svelte-put/inline-svg",
+				"version": "4.0.1",
+				"size": 32023
+			},
+			{
+				"name": "hast-util-to-html",
+				"version": "9.0.5",
+				"size": 71798
+			},
+			{
+				"name": "@types/hast",
+				"version": "3.0.4",
+				"size": 9703
+			},
+			{
+				"name": "@types/unist",
+				"version": "3.0.3",
+				"size": 6262
+			},
+			{
+				"name": "ccount",
+				"version": "2.0.1",
+				"size": 7344
+			},
+			{
+				"name": "comma-separated-tokens",
+				"version": "2.0.3",
+				"size": 9971
+			},
+			{
+				"name": "hast-util-whitespace",
+				"version": "3.0.0",
+				"size": 11781
+			},
+			{
+				"name": "html-void-elements",
+				"version": "3.0.0",
+				"size": 6899
+			},
+			{
+				"name": "mdast-util-to-hast",
+				"version": "13.2.0",
+				"size": 124715
+			},
+			{
+				"name": "@types/mdast",
+				"version": "4.0.4",
+				"size": 29432
+			},
+			{
+				"name": "@ungap/structured-clone",
+				"version": "1.3.0",
+				"size": 27500
+			},
+			{
+				"name": "devlop",
+				"version": "1.1.0",
+				"size": 22010
+			},
+			{
+				"name": "dequal",
+				"version": "2.0.3",
+				"size": 14229
+			},
+			{
+				"name": "micromark-util-sanitize-uri",
+				"version": "2.0.1",
+				"size": 17917
+			},
+			{
+				"name": "micromark-util-character",
+				"version": "2.1.1",
+				"size": 42421
+			},
+			{
+				"name": "micromark-util-symbol",
+				"version": "2.0.1",
+				"size": 40530
+			},
+			{
+				"name": "micromark-util-types",
+				"version": "2.0.2",
+				"size": 38950
+			},
+			{
+				"name": "micromark-util-encode",
+				"version": "2.0.1",
+				"size": 7971
+			},
+			{
+				"name": "trim-lines",
+				"version": "3.0.1",
+				"size": 7493
+			},
+			{
+				"name": "unist-util-position",
+				"version": "5.0.0",
+				"size": 12779
+			},
+			{
+				"name": "unist-util-visit",
+				"version": "5.0.0",
+				"size": 28480
+			},
+			{
+				"name": "unist-util-is",
+				"version": "6.0.0",
+				"size": 27111
+			},
+			{
+				"name": "unist-util-visit-parents",
+				"version": "6.0.1",
+				"size": 32885
+			},
+			{
+				"name": "vfile",
+				"version": "6.0.3",
+				"size": 121686
+			},
+			{
+				"name": "vfile-message",
+				"version": "4.0.2",
+				"size": 22348
+			},
+			{
+				"name": "unist-util-stringify-position",
+				"version": "4.0.0",
+				"size": 13180
+			},
+			{
+				"name": "property-information",
+				"version": "7.0.0",
+				"size": 116609
+			},
+			{
+				"name": "space-separated-tokens",
+				"version": "2.0.2",
+				"size": 7753
+			},
+			{
+				"name": "stringify-entities",
+				"version": "4.0.4",
+				"size": 23780
+			},
+			{
+				"name": "character-entities-html4",
+				"version": "2.1.0",
+				"size": 11364
+			},
+			{
+				"name": "character-entities-legacy",
+				"version": "3.0.0",
+				"size": 9141
+			},
+			{
+				"name": "zwitch",
+				"version": "2.0.4",
+				"size": 13752
+			},
+			{
+				"name": "lodash.debounce",
+				"version": "4.0.8"
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "svelte-parse-markup",
+				"version": "0.1.5",
+				"size": 8003
+			},
+			{
+				"name": "svg-parser",
+				"version": "2.0.4",
+				"size": 48935
+			},
+			{
+				"name": "zimmerframe",
+				"version": "1.1.2",
+				"size": 12266
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[1, 3],
+			[1, 4],
+			[1, 5],
+			[1, 6],
+			[6, 2],
+			[2, 3],
+			[1, 7],
+			[1, 8],
+			[8, 2],
+			[2, 3],
+			[8, 9],
+			[9, 3],
+			[8, 10],
+			[8, 11],
+			[11, 12],
+			[8, 13],
+			[13, 14],
+			[14, 15],
+			[14, 16],
+			[13, 17],
+			[13, 15],
+			[8, 18],
+			[8, 19],
+			[19, 3],
+			[8, 20],
+			[20, 3],
+			[20, 21],
+			[21, 3],
+			[20, 22],
+			[22, 3],
+			[22, 21],
+			[21, 3],
+			[8, 23],
+			[23, 3],
+			[23, 24],
+			[24, 3],
+			[24, 25],
+			[25, 3],
+			[1, 26],
+			[1, 27],
+			[1, 28],
+			[28, 29],
+			[28, 30],
+			[1, 31],
+			[0, 32],
+			[0, 33],
+			[33, 34],
+			[0, 35],
+			[0, 36],
+			[0, 37]
+		],
+		"circular": []
+	}
 }

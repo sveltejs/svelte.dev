@@ -13,13 +13,6 @@
 	"version": "0.0.6",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "0.0.6",
-	"dependencies": [
-		{
-			"name": "shiki",
-			"semver": "^0.1.7"
-		}
-	],
-	"unpacked_size": 51661,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -293,5 +286,67 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-shiki",
+				"version": "0.0.6",
+				"size": 51661
+			},
+			{
+				"name": "shiki",
+				"version": "0.1.7",
+				"size": 191778
+			},
+			{
+				"name": "onigasm",
+				"version": "2.2.5",
+				"size": 565820
+			},
+			{
+				"name": "lru-cache",
+				"version": "5.1.1",
+				"size": 15714
+			},
+			{
+				"name": "yallist",
+				"version": "3.1.1",
+				"size": 14766
+			},
+			{
+				"name": "shiki-themes",
+				"version": "0.1.7",
+				"size": 501748
+			},
+			{
+				"name": "json5",
+				"version": "2.2.3",
+				"size": 235198
+			},
+			{
+				"name": "vscode-textmate",
+				"version": "4.0.1"
+			},
+			{
+				"name": "shiki-languages",
+				"version": "0.1.6",
+				"size": 1823346
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[3, 4],
+			[1, 5],
+			[5, 6],
+			[5, 7],
+			[1, 8],
+			[8, 7],
+			[1, 7]
+		],
+		"circular": []
+	}
 }

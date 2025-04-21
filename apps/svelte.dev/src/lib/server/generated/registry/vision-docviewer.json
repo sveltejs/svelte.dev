@@ -12,13 +12,6 @@
 	"last_rune_check_version": "0.0.29",
 	"version": "0.0.29",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "pdfjs-dist",
-			"semver": "^3.7.107"
-		}
-	],
-	"unpacked_size": 19850664,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -244,5 +237,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 35
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "vision-docviewer",
+				"version": "0.0.29",
+				"size": 19850664
+			},
+			{
+				"name": "pdfjs-dist",
+				"version": "3.11.174",
+				"size": 32521023
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

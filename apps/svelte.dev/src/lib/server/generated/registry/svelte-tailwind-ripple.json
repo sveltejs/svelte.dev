@@ -14,8 +14,6 @@
 	"kit_range": "^2.16.1",
 	"last_rune_check_version": "2.1.1",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 7174,
 	"downloads_history": [
 		{
 			"range": [1721586600000, 1722191399999],
@@ -161,5 +159,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 21
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-tailwind-ripple",
+				"version": "2.1.1",
+				"size": 7174
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

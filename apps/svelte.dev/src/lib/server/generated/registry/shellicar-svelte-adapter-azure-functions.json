@@ -13,13 +13,6 @@
 	"version": "0.2.2",
 	"kit_range": "^2.15.2",
 	"last_rune_check_version": "0.2.2",
-	"dependencies": [
-		{
-			"name": "esbuild",
-			"semver": "^0.24.2"
-		}
-	],
-	"unpacked_size": 1866535,
 	"downloads_history": [
 		{
 			"range": [1735497000000, 1736101799999],
@@ -81,5 +74,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@shellicar/svelte-adapter-azure-functions",
+				"version": "0.2.2",
+				"size": 1866535
+			},
+			{
+				"name": "esbuild",
+				"version": "0.24.2",
+				"size": 133805
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

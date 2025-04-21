@@ -14,13 +14,6 @@
 	"svelte_range": "^4.0.0 || ^5.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "6.2.4",
-	"dependencies": [
-		{
-			"name": "@tolgee/web",
-			"semver": "6.2.4"
-		}
-	],
-	"unpacked_size": 30098,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -334,5 +327,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 628
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@tolgee/svelte",
+				"version": "6.2.4",
+				"size": 30098
+			},
+			{
+				"name": "@tolgee/web",
+				"version": "6.2.4",
+				"size": 52984075
+			},
+			{
+				"name": "@tolgee/core",
+				"version": "6.2.4",
+				"size": 999314
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2]
+		],
+		"circular": []
+	}
 }

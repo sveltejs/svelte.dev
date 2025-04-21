@@ -13,21 +13,6 @@
 	"version": "0.0.4",
 	"svelte_range": "3.39.0",
 	"last_rune_check_version": "0.0.4",
-	"dependencies": [
-		{
-			"name": "choom-theme",
-			"semver": "0.1.0"
-		},
-		{
-			"name": "clsx",
-			"semver": "^1.1.1"
-		},
-		{
-			"name": "nanoid",
-			"semver": "^3.1.30"
-		}
-	],
-	"unpacked_size": 238129,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -273,5 +258,36 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "choom-svelte",
+				"version": "0.0.4",
+				"size": 238129
+			},
+			{
+				"name": "choom-theme",
+				"version": "0.1.0",
+				"size": 26424
+			},
+			{
+				"name": "clsx",
+				"version": "1.2.1",
+				"size": 5671
+			},
+			{
+				"name": "nanoid",
+				"version": "3.3.11",
+				"size": 32583
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3]
+		],
+		"circular": []
+	}
 }

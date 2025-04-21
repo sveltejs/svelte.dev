@@ -13,8 +13,6 @@
 	"version": "1.0.0",
 	"svelte_range": "^4.2.18",
 	"last_rune_check_version": "1.0.0",
-	"dependencies": [],
-	"unpacked_size": 6048,
 	"downloads_history": [
 		{
 			"range": [1729449000000, 1730053799999],
@@ -104,5 +102,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "sly-boop",
+				"version": "1.0.0",
+				"size": 6048
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

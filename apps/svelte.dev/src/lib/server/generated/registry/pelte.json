@@ -13,41 +13,6 @@
 	"version": "0.5.0",
 	"svelte_range": "^3.12.1",
 	"last_rune_check_version": "0.5.0",
-	"dependencies": [
-		{
-			"name": "commander",
-			"semver": "^4.0.1"
-		},
-		{
-			"name": "prompts",
-			"semver": "^2.3.0"
-		},
-		{
-			"name": "publish-svelte",
-			"semver": "^0.2.0"
-		},
-		{
-			"name": "rollup",
-			"semver": "^1.25.1"
-		},
-		{
-			"name": "rollup-plugin-commonjs",
-			"semver": "^10.1.0"
-		},
-		{
-			"name": "rollup-plugin-node-resolve",
-			"semver": "^5.2.0"
-		},
-		{
-			"name": "rollup-plugin-svelte",
-			"semver": "^5.1.0"
-		},
-		{
-			"name": "svelte",
-			"semver": "^3.12.1"
-		}
-	],
-	"unpacked_size": 48455,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -253,5 +218,248 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 20
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "pelte",
+				"version": "0.5.0",
+				"size": 48455
+			},
+			{
+				"name": "commander",
+				"version": "4.1.1",
+				"size": 93231
+			},
+			{
+				"name": "prompts",
+				"version": "2.4.2",
+				"size": 186815
+			},
+			{
+				"name": "kleur",
+				"version": "3.0.3",
+				"size": 9893
+			},
+			{
+				"name": "sisteransi",
+				"version": "1.0.5",
+				"size": 6791
+			},
+			{
+				"name": "publish-svelte",
+				"version": "0.2.0",
+				"size": 42942
+			},
+			{
+				"name": "rollup",
+				"version": "1.32.1",
+				"size": 2241853
+			},
+			{
+				"name": "acorn",
+				"version": "7.4.1",
+				"size": 1209760
+			},
+			{
+				"name": "@types/node",
+				"version": "22.14.1",
+				"size": 2331510
+			},
+			{
+				"name": "undici-types",
+				"version": "6.21.0",
+				"size": 83680
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "rollup-plugin-commonjs",
+				"version": "10.1.0",
+				"size": 211806
+			},
+			{
+				"name": "estree-walker",
+				"version": "0.6.1",
+				"size": 9526
+			},
+			{
+				"name": "is-reference",
+				"version": "1.2.1",
+				"size": 6374
+			},
+			{
+				"name": "magic-string",
+				"version": "0.25.9",
+				"size": 373056
+			},
+			{
+				"name": "sourcemap-codec",
+				"version": "1.4.8",
+				"size": 31802
+			},
+			{
+				"name": "resolve",
+				"version": "1.22.10",
+				"size": 145619
+			},
+			{
+				"name": "is-core-module",
+				"version": "2.16.1",
+				"size": 33475
+			},
+			{
+				"name": "hasown",
+				"version": "2.0.2",
+				"size": 8765
+			},
+			{
+				"name": "function-bind",
+				"version": "1.1.2",
+				"size": 31427
+			},
+			{
+				"name": "path-parse",
+				"version": "1.0.7",
+				"size": 4511
+			},
+			{
+				"name": "supports-preserve-symlinks-flag",
+				"version": "1.0.0",
+				"size": 9178
+			},
+			{
+				"name": "rollup-pluginutils",
+				"version": "2.8.2",
+				"size": 246173
+			},
+			{
+				"name": "rollup-plugin-node-resolve",
+				"version": "5.2.0",
+				"size": 55968
+			},
+			{
+				"name": "@types/resolve",
+				"version": "0.0.8",
+				"size": 6590
+			},
+			{
+				"name": "builtin-modules",
+				"version": "3.3.0",
+				"size": 4512
+			},
+			{
+				"name": "is-module",
+				"version": "1.0.0"
+			},
+			{
+				"name": "rollup-plugin-svelte",
+				"version": "5.2.3",
+				"size": 20967
+			},
+			{
+				"name": "require-relative",
+				"version": "0.8.7"
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[2, 4],
+			[0, 5],
+			[5, 1],
+			[5, 2],
+			[2, 3],
+			[2, 4],
+			[5, 6],
+			[6, 7],
+			[6, 8],
+			[8, 9],
+			[6, 10],
+			[5, 11],
+			[11, 12],
+			[11, 13],
+			[13, 10],
+			[11, 14],
+			[14, 15],
+			[11, 16],
+			[16, 17],
+			[17, 18],
+			[18, 19],
+			[16, 20],
+			[16, 21],
+			[11, 22],
+			[22, 12],
+			[5, 23],
+			[23, 24],
+			[24, 8],
+			[8, 9],
+			[23, 25],
+			[23, 26],
+			[23, 16],
+			[16, 17],
+			[17, 18],
+			[18, 19],
+			[16, 20],
+			[16, 21],
+			[23, 22],
+			[22, 12],
+			[5, 27],
+			[27, 28],
+			[27, 22],
+			[22, 12],
+			[27, 15],
+			[5, 29],
+			[0, 6],
+			[6, 7],
+			[6, 8],
+			[8, 9],
+			[6, 10],
+			[0, 11],
+			[11, 12],
+			[11, 13],
+			[13, 10],
+			[11, 14],
+			[14, 15],
+			[11, 16],
+			[16, 17],
+			[17, 18],
+			[18, 19],
+			[16, 20],
+			[16, 21],
+			[11, 22],
+			[22, 12],
+			[0, 23],
+			[23, 24],
+			[24, 8],
+			[8, 9],
+			[23, 25],
+			[23, 26],
+			[23, 16],
+			[16, 17],
+			[17, 18],
+			[18, 19],
+			[16, 20],
+			[16, 21],
+			[23, 22],
+			[22, 12],
+			[0, 27],
+			[27, 28],
+			[27, 22],
+			[22, 12],
+			[27, 15],
+			[0, 29]
+		],
+		"circular": []
+	}
 }

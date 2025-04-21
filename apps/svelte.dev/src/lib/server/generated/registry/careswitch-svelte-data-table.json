@@ -14,8 +14,6 @@
 	"svelte_range": "^5.0.0-next.1",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.6.3",
-	"dependencies": [],
-	"unpacked_size": 21381,
 	"downloads_history": [
 		{
 			"range": [1720377000000, 1720981799999],
@@ -177,5 +175,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 49
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@careswitch/svelte-data-table",
+				"version": "0.6.3",
+				"size": 21381
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

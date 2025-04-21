@@ -13,13 +13,6 @@
 	"svelte_range": "^4.2.7",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.0.8",
-	"dependencies": [
-		{
-			"name": "ts-node",
-			"semver": "^10.9.2"
-		}
-	],
-	"unpacked_size": 6775,
 	"downloads_history": [
 		{
 			"range": [1717957800000, 1718562599999],
@@ -137,5 +130,121 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "web-component-framework",
+				"version": "0.0.8",
+				"size": 6775
+			},
+			{
+				"name": "ts-node",
+				"version": "10.9.2",
+				"size": 757333
+			},
+			{
+				"name": "yn",
+				"version": "3.1.1",
+				"size": 6314
+			},
+			{
+				"name": "arg",
+				"version": "4.1.3",
+				"size": 12901
+			},
+			{
+				"name": "diff",
+				"version": "4.0.2",
+				"size": 334802
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "acorn-walk",
+				"version": "8.3.4",
+				"size": 52296
+			},
+			{
+				"name": "make-error",
+				"version": "1.3.6",
+				"size": 12434
+			},
+			{
+				"name": "create-require",
+				"version": "1.1.1",
+				"size": 6254
+			},
+			{
+				"name": "@tsconfig/node10",
+				"version": "1.0.11",
+				"size": 2312
+			},
+			{
+				"name": "@tsconfig/node12",
+				"version": "1.0.11",
+				"size": 2497
+			},
+			{
+				"name": "@tsconfig/node14",
+				"version": "1.0.3",
+				"size": 2392
+			},
+			{
+				"name": "@tsconfig/node16",
+				"version": "1.0.4",
+				"size": 2447
+			},
+			{
+				"name": "v8-compile-cache-lib",
+				"version": "3.0.1",
+				"size": 18165
+			},
+			{
+				"name": "@cspotcode/source-map-support",
+				"version": "0.8.1",
+				"size": 102089
+			},
+			{
+				"name": "@jridgewell/trace-mapping",
+				"version": "0.3.9",
+				"size": 92278
+			},
+			{
+				"name": "@jridgewell/resolve-uri",
+				"version": "3.1.2",
+				"size": 53153
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[1, 4],
+			[1, 5],
+			[1, 6],
+			[6, 5],
+			[1, 7],
+			[1, 8],
+			[1, 9],
+			[1, 10],
+			[1, 11],
+			[1, 12],
+			[1, 13],
+			[1, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17]
+		],
+		"circular": []
+	}
 }

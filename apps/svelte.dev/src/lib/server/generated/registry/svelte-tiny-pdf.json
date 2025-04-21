@@ -13,13 +13,6 @@
 	"version": "1.0.2",
 	"svelte_range": "^3.55.0 || ^4.0.0",
 	"last_rune_check_version": "1.0.2",
-	"dependencies": [
-		{
-			"name": "pdfjs-dist",
-			"semver": "^4.7.76"
-		}
-	],
-	"unpacked_size": 9180,
 	"downloads_history": [
 		{
 			"range": [1731868200000, 1732472999999],
@@ -93,5 +86,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-tiny-pdf",
+				"version": "1.0.2",
+				"size": 9180
+			},
+			{
+				"name": "pdfjs-dist",
+				"version": "4.10.38",
+				"size": 37350025
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

@@ -13,21 +13,6 @@
 	"version": "9.6.1",
 	"svelte_range": "^4.2.18",
 	"last_rune_check_version": "9.6.1",
-	"dependencies": [
-		{
-			"name": "vanilla-swipe",
-			"semver": "^2.4.1"
-		},
-		{
-			"name": "vanillajs-datepicker",
-			"semver": "^1.3.4"
-		},
-		{
-			"name": "zxcvbn",
-			"semver": "^4.4.2"
-		}
-	],
-	"unpacked_size": 1105413,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -341,5 +326,35 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 98
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@perfectthings/ui",
+				"version": "9.6.1",
+				"size": 1105413
+			},
+			{
+				"name": "vanilla-swipe",
+				"version": "2.4.1",
+				"size": 48884
+			},
+			{
+				"name": "vanillajs-datepicker",
+				"version": "1.3.4",
+				"size": 1628270
+			},
+			{
+				"name": "zxcvbn",
+				"version": "4.4.2"
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3]
+		],
+		"circular": []
+	}
 }

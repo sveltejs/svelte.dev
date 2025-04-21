@@ -14,21 +14,6 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.20.7",
 	"last_rune_check_version": "0.8.2",
-	"dependencies": [
-		{
-			"name": "github-slugger",
-			"semver": "^2.0.0"
-		},
-		{
-			"name": "htmlparser2",
-			"semver": "^10.0.0"
-		},
-		{
-			"name": "marked",
-			"semver": "^15.0.8"
-		}
-	],
-	"unpacked_size": 117227,
 	"downloads_history": [
 		{
 			"range": [1730053800000, 1730658599999],
@@ -126,5 +111,79 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 2804
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@humanspeak/svelte-markdown",
+				"version": "0.8.2",
+				"size": 117227
+			},
+			{
+				"name": "github-slugger",
+				"version": "2.0.0",
+				"size": 15900
+			},
+			{
+				"name": "htmlparser2",
+				"version": "10.0.0",
+				"size": 488506
+			},
+			{
+				"name": "domelementtype",
+				"version": "2.3.0",
+				"size": 11359
+			},
+			{
+				"name": "domhandler",
+				"version": "5.0.3",
+				"size": 75339
+			},
+			{
+				"name": "domutils",
+				"version": "3.2.2",
+				"size": 166738
+			},
+			{
+				"name": "dom-serializer",
+				"version": "2.0.0",
+				"size": 28813
+			},
+			{
+				"name": "entities",
+				"version": "4.5.0",
+				"size": 412892
+			},
+			{
+				"name": "entities",
+				"version": "6.0.0",
+				"size": 540419
+			},
+			{
+				"name": "marked",
+				"version": "15.0.8",
+				"size": 967863
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[2, 4],
+			[4, 3],
+			[2, 5],
+			[5, 6],
+			[6, 3],
+			[6, 4],
+			[4, 3],
+			[6, 7],
+			[5, 3],
+			[5, 4],
+			[4, 3],
+			[2, 8],
+			[0, 9]
+		],
+		"circular": []
+	}
 }

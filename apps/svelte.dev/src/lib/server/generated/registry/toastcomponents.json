@@ -13,21 +13,6 @@
 	"kit_range": "next",
 	"last_rune_check_version": "0.0.10",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "date-fns",
-			"semver": "^2.28.0"
-		},
-		{
-			"name": "tui-date-picker",
-			"semver": "^4.3.1"
-		},
-		{
-			"name": "tui-time-picker",
-			"semver": "^2.1.4"
-		}
-	],
-	"unpacked_size": 5740,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -261,5 +246,49 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "toastcomponents",
+				"version": "0.0.10",
+				"size": 5740
+			},
+			{
+				"name": "date-fns",
+				"version": "2.30.0",
+				"size": 6685407
+			},
+			{
+				"name": "@babel/runtime",
+				"version": "7.27.0",
+				"size": 249798
+			},
+			{
+				"name": "regenerator-runtime",
+				"version": "0.14.1",
+				"size": 27863
+			},
+			{
+				"name": "tui-date-picker",
+				"version": "4.3.3",
+				"size": 309779
+			},
+			{
+				"name": "tui-time-picker",
+				"version": "2.1.6",
+				"size": 171729
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[0, 4],
+			[4, 5],
+			[0, 5]
+		],
+		"circular": []
+	}
 }

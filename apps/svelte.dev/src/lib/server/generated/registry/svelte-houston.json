@@ -12,17 +12,6 @@
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "0.0.4",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "intertype",
-			"semver": "^7.6.3"
-		},
-		{
-			"name": "mudom",
-			"semver": "^0.2.1"
-		}
-	],
-	"unpacked_size": 20527,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -244,5 +233,38 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 8
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-houston",
+				"version": "0.0.4",
+				"size": 20527
+			},
+			{
+				"name": "intertype",
+				"version": "7.7.1",
+				"size": 486368
+			},
+			{
+				"name": "multimix",
+				"version": "5.0.0",
+				"size": 38187
+			},
+			{
+				"name": "mudom",
+				"version": "0.2.3",
+				"size": 196688
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[3, 1],
+			[1, 2]
+		],
+		"circular": []
+	}
 }

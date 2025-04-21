@@ -13,8 +13,6 @@
 	"version": "1.6.6",
 	"svelte_range": "^3.35.0",
 	"last_rune_check_version": "1.6.6",
-	"dependencies": [],
-	"unpacked_size": 3312,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -248,5 +246,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 24
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-dynamic-iconify",
+				"version": "1.6.6",
+				"size": 3312
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

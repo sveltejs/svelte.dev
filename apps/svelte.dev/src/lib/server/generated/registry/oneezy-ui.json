@@ -14,25 +14,6 @@
 	"svelte_range": "^5.0.0-next.136",
 	"kit_range": "^2.5.10",
 	"last_rune_check_version": "2.0.0-next.37",
-	"dependencies": [
-		{
-			"name": "runed",
-			"semver": "^0.10.0"
-		},
-		{
-			"name": "daisyui",
-			"semver": "^4.12.2"
-		},
-		{
-			"name": "mode-watcher",
-			"semver": "^0.3.0"
-		},
-		{
-			"name": "unplugin-icons",
-			"semver": "^0.19.0"
-		}
-	],
-	"unpacked_size": 2984966,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -294,5 +275,288 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 52
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@oneezy/ui",
+				"version": "2.0.0-next.37",
+				"size": 2984966
+			},
+			{
+				"name": "runed",
+				"version": "0.10.0",
+				"size": 50181
+			},
+			{
+				"name": "nanoid",
+				"version": "5.1.5",
+				"size": 12143
+			},
+			{
+				"name": "daisyui",
+				"version": "4.12.24",
+				"size": 3772361
+			},
+			{
+				"name": "culori",
+				"version": "3.3.0",
+				"size": 1053436
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "postcss-js",
+				"version": "4.0.1",
+				"size": 8449
+			},
+			{
+				"name": "camelcase-css",
+				"version": "2.0.1",
+				"size": 4051
+			},
+			{
+				"name": "css-selector-tokenizer",
+				"version": "0.8.0",
+				"size": 18441
+			},
+			{
+				"name": "cssesc",
+				"version": "3.0.0",
+				"size": 17488
+			},
+			{
+				"name": "fastparse",
+				"version": "1.1.2",
+				"size": 7843
+			},
+			{
+				"name": "mode-watcher",
+				"version": "0.3.1",
+				"size": 21767
+			},
+			{
+				"name": "unplugin-icons",
+				"version": "0.19.3",
+				"size": 93625
+			},
+			{
+				"name": "debug",
+				"version": "4.4.0",
+				"size": 42798
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "kolorist",
+				"version": "1.8.0",
+				"size": 51023
+			},
+			{
+				"name": "unplugin",
+				"version": "1.16.1",
+				"size": 192604
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "webpack-virtual-modules",
+				"version": "0.6.2",
+				"size": 46451
+			},
+			{
+				"name": "local-pkg",
+				"version": "0.5.1",
+				"size": 27691
+			},
+			{
+				"name": "mlly",
+				"version": "1.7.4",
+				"size": 232257,
+				"isCircular": true,
+				"circularTarget": 20
+			},
+			{
+				"name": "pathe",
+				"version": "2.0.3",
+				"size": 51332
+			},
+			{
+				"name": "pkg-types",
+				"version": "1.3.1",
+				"size": 74137
+			},
+			{
+				"name": "confbox",
+				"version": "0.1.8",
+				"size": 269092
+			},
+			{
+				"name": "ufo",
+				"version": "1.6.1",
+				"size": 104757
+			},
+			{
+				"name": "pkg-types",
+				"version": "^1.3.0",
+				"isCircular": true,
+				"circularTarget": 25
+			},
+			{
+				"name": "@antfu/utils",
+				"version": "0.7.10",
+				"size": 108107
+			},
+			{
+				"name": "@iconify/utils",
+				"version": "2.3.0",
+				"size": 466084
+			},
+			{
+				"name": "@antfu/install-pkg",
+				"version": "1.0.0",
+				"size": 10159
+			},
+			{
+				"name": "package-manager-detector",
+				"version": "0.2.11",
+				"size": 37694
+			},
+			{
+				"name": "quansync",
+				"version": "0.2.10",
+				"size": 23881
+			},
+			{
+				"name": "tinyexec",
+				"version": "0.3.2",
+				"size": 46086
+			},
+			{
+				"name": "@antfu/utils",
+				"version": "8.1.1",
+				"size": 111075
+			},
+			{
+				"name": "globals",
+				"version": "15.15.0",
+				"size": 177210
+			},
+			{
+				"name": "local-pkg",
+				"version": "1.1.1",
+				"size": 20354
+			},
+			{
+				"name": "pkg-types",
+				"version": "2.1.0",
+				"size": 35610
+			},
+			{
+				"name": "confbox",
+				"version": "0.2.2",
+				"size": 134791
+			},
+			{
+				"name": "exsolve",
+				"version": "1.0.5",
+				"size": 59435
+			},
+			{
+				"name": "@iconify/types",
+				"version": "2.0.0",
+				"size": 25671
+			},
+			{
+				"name": "@antfu/install-pkg",
+				"version": "0.4.1",
+				"size": 9504
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[6, 7],
+			[3, 8],
+			[8, 9],
+			[8, 10],
+			[0, 11],
+			[0, 12],
+			[12, 13],
+			[13, 14],
+			[12, 15],
+			[12, 16],
+			[16, 17],
+			[16, 18],
+			[12, 19],
+			[19, 20],
+			[20, 17],
+			[20, 21],
+			[20, 22],
+			[22, 20],
+			[22, 21],
+			[22, 23],
+			[20, 24],
+			[19, 22],
+			[22, 20],
+			[20, 17],
+			[20, 21],
+			[20, 25],
+			[20, 24],
+			[22, 21],
+			[22, 23],
+			[12, 26],
+			[12, 27],
+			[27, 28],
+			[28, 29],
+			[29, 30],
+			[28, 31],
+			[27, 32],
+			[27, 13],
+			[13, 14],
+			[27, 33],
+			[27, 15],
+			[27, 34],
+			[34, 20],
+			[20, 17],
+			[20, 21],
+			[20, 25],
+			[20, 24],
+			[34, 35],
+			[35, 36],
+			[35, 37],
+			[35, 21],
+			[34, 30],
+			[27, 20],
+			[20, 17],
+			[20, 21],
+			[20, 25],
+			[20, 24],
+			[27, 38],
+			[12, 39],
+			[39, 31],
+			[39, 29],
+			[29, 30]
+		],
+		"circular": [
+			[22, 20],
+			[25, 25],
+			[25, 25],
+			[25, 25]
+		]
+	}
 }

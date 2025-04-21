@@ -13,17 +13,6 @@
 	"version": "1.1.5",
 	"svelte_range": "^3.8.0",
 	"last_rune_check_version": "1.1.5",
-	"dependencies": [
-		{
-			"name": "fast-copy",
-			"semver": "^2.0.3"
-		},
-		{
-			"name": "ramda",
-			"semver": "^0.26.1"
-		}
-	],
-	"unpacked_size": 140749,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -309,5 +298,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-deep-store",
+				"version": "1.1.5",
+				"size": 140749
+			},
+			{
+				"name": "fast-copy",
+				"version": "2.1.7",
+				"size": 118523
+			},
+			{
+				"name": "ramda",
+				"version": "0.26.1",
+				"size": 1039889
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

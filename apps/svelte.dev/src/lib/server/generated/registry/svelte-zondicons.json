@@ -13,8 +13,6 @@
 	"version": "1.0.1",
 	"svelte_range": "latest",
 	"last_rune_check_version": "1.0.1",
-	"dependencies": [],
-	"unpacked_size": 613981,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -236,5 +234,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-zondicons",
+				"version": "1.0.1",
+				"size": 613981
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

@@ -13,17 +13,6 @@
 	"version": "0.0.9",
 	"svelte_range": "^3.55.0",
 	"last_rune_check_version": "0.0.9",
-	"dependencies": [
-		{
-			"name": "rxjs",
-			"semver": "^7.8.0"
-		},
-		{
-			"name": "svelte",
-			"semver": "^3.55.0"
-		}
-	],
-	"unpacked_size": 4817,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -337,5 +326,36 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 25
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-to-observable",
+				"version": "0.0.9",
+				"size": 4817
+			},
+			{
+				"name": "rxjs",
+				"version": "7.8.2",
+				"size": 4497673
+			},
+			{
+				"name": "tslib",
+				"version": "2.8.1",
+				"size": 90359
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3]
+		],
+		"circular": []
+	}
 }

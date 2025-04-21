@@ -13,21 +13,6 @@
 	"version": "1.1.7",
 	"svelte_range": "^3.36.0",
 	"last_rune_check_version": "1.1.7",
-	"dependencies": [
-		{
-			"name": "clone-deep",
-			"semver": "^4.0.1"
-		},
-		{
-			"name": "fast-deep-equal",
-			"semver": "^3.1.3"
-		},
-		{
-			"name": "svelte",
-			"semver": "^3.36.0"
-		}
-	],
-	"unpacked_size": 193911,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -301,5 +286,59 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 12
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-specma",
+				"version": "1.1.7",
+				"size": 193911
+			},
+			{
+				"name": "clone-deep",
+				"version": "4.0.1",
+				"size": 8000
+			},
+			{
+				"name": "is-plain-object",
+				"version": "2.0.4"
+			},
+			{
+				"name": "isobject",
+				"version": "3.0.1"
+			},
+			{
+				"name": "kind-of",
+				"version": "6.0.3",
+				"size": 22820
+			},
+			{
+				"name": "shallow-clone",
+				"version": "3.0.1",
+				"size": 9446
+			},
+			{
+				"name": "fast-deep-equal",
+				"version": "3.1.3",
+				"size": 12966
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[1, 4],
+			[1, 5],
+			[5, 4],
+			[0, 6],
+			[0, 7]
+		],
+		"circular": []
+	}
 }

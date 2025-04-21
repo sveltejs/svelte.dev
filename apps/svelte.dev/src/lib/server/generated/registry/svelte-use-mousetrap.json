@@ -13,13 +13,6 @@
 	"version": "1.0.1",
 	"svelte_range": "3.x",
 	"last_rune_check_version": "1.0.1",
-	"dependencies": [
-		{
-			"name": "mousetrap",
-			"semver": "^1.6.5"
-		}
-	],
-	"unpacked_size": 5295,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +326,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 83
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-use-mousetrap",
+				"version": "1.0.1",
+				"size": 5295
+			},
+			{
+				"name": "mousetrap",
+				"version": "1.6.5",
+				"size": 195929
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

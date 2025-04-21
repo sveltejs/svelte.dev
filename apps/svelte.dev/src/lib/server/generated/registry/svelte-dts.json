@@ -13,21 +13,6 @@
 	"version": "0.3.7",
 	"svelte_range": "^3.32.3",
 	"last_rune_check_version": "0.3.7",
-	"dependencies": [
-		{
-			"name": "commander",
-			"semver": "^7.1.0"
-		},
-		{
-			"name": "recursive-readdir",
-			"semver": "^2.2.2"
-		},
-		{
-			"name": "tmp",
-			"semver": "^0.2.1"
-		}
-	],
-	"unpacked_size": 35526,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -341,5 +326,59 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 2640
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-dts",
+				"version": "0.3.7",
+				"size": 35526
+			},
+			{
+				"name": "commander",
+				"version": "7.2.0",
+				"size": 144710
+			},
+			{
+				"name": "recursive-readdir",
+				"version": "2.2.3",
+				"size": 5824
+			},
+			{
+				"name": "minimatch",
+				"version": "3.1.2",
+				"size": 34902
+			},
+			{
+				"name": "brace-expansion",
+				"version": "1.1.11",
+				"size": 11059
+			},
+			{
+				"name": "balanced-match",
+				"version": "1.0.2",
+				"size": 6939
+			},
+			{
+				"name": "concat-map",
+				"version": "0.0.1"
+			},
+			{
+				"name": "tmp",
+				"version": "0.2.3",
+				"size": 54359
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[3, 4],
+			[4, 5],
+			[4, 6],
+			[0, 7]
+		],
+		"circular": []
+	}
 }

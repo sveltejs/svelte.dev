@@ -1,11 +1,17 @@
 import * as fsp from 'node:fs/promises';
 import path from 'node:path';
+import { pipeline } from 'node:stream';
 import { fileURLToPath } from 'node:url';
+import { createGunzip } from 'node:zlib';
+import pacote from 'pacote';
 import { format as prettier_format, resolveConfig, type Options } from 'prettier';
 import { extract } from 'tar-stream';
-import type { Package } from '../../src/lib/server/content.js';
-import { pipeline } from 'node:stream';
-import { createGunzip, gunzip } from 'node:zlib';
+import type {
+	FlatDependencyGraph,
+	FlatPackage,
+	Package,
+	PackageDependencyNode
+} from '../../src/lib/server/content.js';
 
 /**
  * Simple queue implementation for limiting concurrent requests
@@ -860,6 +866,470 @@ export async function composite_runes_types_check(name: string, version: string)
 		runes: has_runes,
 		types: has_types
 	};
+}
+
+/**
+ * Cache to store already resolved package information
+ * Using name@version as keys
+ */
+const dependency_cache = new Map<string, PackageDependencyNode>();
+
+/**
+ * Fetches package info with resolved version directly from npm
+ */
+async function fetch_package_info(pkg_name: string, semver: string) {
+	return await pacote.manifest(`${pkg_name}@${semver}`);
+}
+
+/**
+ * Build dependency graph for a package with depth limitation
+ *
+ * @param pkg_name The name of the package
+ * @param semver The semver range for the package
+ * @param max_depth Maximum recursion depth (default: 10)
+ * @param current_depth Current recursion depth (used internally)
+ * @param path_stack Current dependency path to detect cycles
+ * @returns A dependency graph node
+ */
+/**
+ * Build dependency graph for a package with depth limitation
+ * Modified to capture package size information
+ */
+export async function build_dependency_graph(
+	pkg_name: string,
+	semver: string = 'latest',
+	max_depth: number = 10,
+	current_depth: number = 0,
+	path_stack: string[] = []
+): Promise<PackageDependencyNode> {
+	try {
+		// Create cache key using name and semver
+		const cache_key = `${pkg_name}@${semver}`;
+
+		// Check if this package is already in our current path (circular dependency)
+		const circular_index = path_stack.indexOf(cache_key);
+		if (circular_index !== -1) {
+			// We found a genuine circular reference
+			return {
+				name: pkg_name,
+				version: semver,
+				dependencies: [],
+				isCircular: true,
+				circularRefId: cache_key
+			};
+		}
+
+		// Check if we already processed this package+version in a different path
+		if (dependency_cache.has(cache_key)) {
+			return dependency_cache.get(cache_key)!;
+		}
+
+		// Track current path by adding this package
+		const current_path = [...path_stack, cache_key];
+
+		// Fetch package info with resolved version directly from npm
+		const pkg_info = await fetch_package_info(pkg_name, semver);
+
+		if (!pkg_info) {
+			// Return a stub node if we couldn't fetch the package
+			return {
+				name: pkg_name,
+				version: semver,
+				dependencies: []
+			};
+		}
+
+		// Use the exact version that npm resolved
+		const exact_version = pkg_info.version;
+		const exact_key = `${pkg_name}@${exact_version}`;
+
+		// Extract package size if available
+		const size = pkg_info.dist?.unpackedSize;
+
+		// Create node for this package
+		const node: PackageDependencyNode = {
+			name: pkg_name,
+			version: exact_version,
+			dependencies: [],
+			size: size
+		};
+
+		// Store in cache immediately to handle circular dependencies
+		dependency_cache.set(cache_key, node);
+		dependency_cache.set(exact_key, node); // Cache with exact version too
+
+		// Stop recursion if we've reached max depth
+		if (current_depth >= max_depth) {
+			return node;
+		}
+
+		// Get dependencies for this package
+		const dependencies = pkg_info.dependencies || {};
+
+		// Process dependencies sequentially
+		for (const [dep_name, dep_semver] of Object.entries(dependencies)) {
+			try {
+				// Process one dependency at a time, passing the current path
+				const dep_node = await build_dependency_graph(
+					dep_name,
+					dep_semver as string,
+					max_depth,
+					current_depth + 1,
+					current_path
+				);
+
+				node.dependencies.push(dep_node);
+			} catch (err) {
+				console.error(`Error processing dependency ${dep_name}@${dep_semver}:`, err);
+			}
+		}
+
+		return node;
+	} catch (error) {
+		console.error(`Error in build_dependency_graph for ${pkg_name}@${semver}:`, error);
+		return {
+			name: pkg_name,
+			version: semver,
+			dependencies: []
+		};
+	}
+}
+
+/**
+ * Build a dependency graph directly from a package.json object
+ *
+ * @param package_json Raw package.json content
+ * @param max_depth Maximum recursion depth
+ * @returns A complete dependency graph
+ */
+export async function build_graph_from_package_json(
+	package_json: any,
+	max_depth: number = 10
+): Promise<PackageDependencyNode> {
+	try {
+		// Clear the dependency cache for a fresh start
+		dependency_cache.clear();
+
+		if (!package_json || typeof package_json !== 'object') {
+			throw new Error('Invalid package.json data');
+		}
+
+		// Create the root node
+		const root_node: PackageDependencyNode = {
+			name: package_json.name || 'unknown',
+			version: package_json.version || 'unknown',
+			size: package_json.dist.unpackedSize,
+			dependencies: []
+		};
+
+		// If no dependencies, return early
+		const dependencies = package_json.dependencies || {};
+		if (Object.keys(dependencies).length === 0) {
+			return root_node;
+		}
+
+		// Process each dependency sequentially
+		for (const [dep_name, dep_semver] of Object.entries(dependencies)) {
+			try {
+				// Start with empty path for each top-level dependency
+				const dep_node = await build_dependency_graph(
+					dep_name,
+					dep_semver as string,
+					max_depth,
+					1,
+					[]
+				);
+
+				root_node.dependencies.push(dep_node);
+			} catch (error) {
+				console.error(`Error processing root dependency ${dep_name}@${dep_semver}:`, error);
+				// Continue with other dependencies
+			}
+		}
+
+		return root_node;
+	} catch (error) {
+		console.error('Error in build_graph_from_package_json:', error);
+		return {
+			name: package_json?.name || 'unknown',
+			version: package_json?.version || 'unknown',
+			dependencies: []
+		};
+	}
+}
+
+/**
+ * Converts a dependency graph to a highly optimized flat structure
+ * Now including package size information
+ */
+export function flatten_dependency_graph(graph: PackageDependencyNode): FlatDependencyGraph {
+	const packages: FlatPackage[] = [];
+	const dependencies: [number, number][] = [];
+	const circular: [number, number][] = [];
+
+	// Map to track package indices
+	const packageIndices = new Map<string, number>();
+
+	// Get or create index for a package
+	function getPackageIndex(node: PackageDependencyNode): number {
+		const key = `${node.name}@${node.version}`;
+		if (packageIndices.has(key)) {
+			return packageIndices.get(key)!;
+		}
+
+		// Create new entry
+		const index = packages.length;
+		packageIndices.set(key, index);
+
+		// Include size information if available
+		packages.push({
+			name: node.name,
+			version: node.version,
+			size: node.size
+		});
+
+		return index;
+	}
+
+	// Process the tree and build flat structures
+	function processNode(
+		node: PackageDependencyNode,
+		parentIndex: number | null = null,
+		visited = new Set<string>()
+	): number {
+		// Create a unique identifier for this node
+		const nodeKey = `${node.name}@${node.version}`;
+
+		// Check if we've already visited this node in the current traversal path
+		if (visited.has(nodeKey)) {
+			// We've found a circular reference
+			const index = getPackageIndex(node);
+
+			// If this has a parent, add the dependency
+			if (parentIndex !== null) {
+				dependencies.push([parentIndex, index]);
+
+				// Mark it as circular if not already marked
+				if (!packages[index].isCircular) {
+					packages[index].isCircular = true;
+					packages[index].circularTarget = index; // Self-reference as fallback
+
+					// Add to circular dependencies
+					circular.push([parentIndex, index]);
+				}
+			}
+
+			// Don't process further to prevent infinite recursion
+			return index;
+		}
+
+		// Get index for this package
+		const index = getPackageIndex(node);
+
+		// If this has a parent, add the dependency
+		if (parentIndex !== null) {
+			dependencies.push([parentIndex, index]);
+		}
+
+		// Handle explicit circular reference
+		if (node.isCircular && node.circularRefId) {
+			const [targetName, targetVersion] = node.circularRefId.split('@');
+
+			// Create a stub node for the circular target
+			let targetNode: PackageDependencyNode = {
+				name: targetName,
+				version: targetVersion,
+				dependencies: []
+			};
+
+			// Get the target index
+			const targetIndex = getPackageIndex(targetNode);
+
+			// Update package with circular info
+			packages[index].isCircular = true;
+			packages[index].circularTarget = targetIndex;
+
+			// Add to circular dependencies
+			circular.push([index, targetIndex]);
+
+			// For circular references, don't process children
+			return index;
+		}
+
+		// Add this node to the visited set for this traversal path
+		const newVisited = new Set(visited);
+		newVisited.add(nodeKey);
+
+		// Process all dependencies
+		for (const dep of node.dependencies) {
+			processNode(dep, index, newVisited);
+		}
+
+		return index;
+	}
+
+	// Start processing from root
+	const rootIndex = processNode(graph);
+
+	return {
+		rootIndex,
+		packages,
+		dependencies,
+		circular
+	};
+}
+
+/**
+ * Reconstructs a nested dependency graph from the flat structure
+ * Preserving size information
+ */
+export function unflatten_dependency_graph(flat: FlatDependencyGraph): PackageDependencyNode {
+	// First, create a map of dependencies by source
+	const dependencyMap = new Map<number, number[]>();
+
+	for (const [from, to] of flat.dependencies) {
+		if (!dependencyMap.has(from)) {
+			dependencyMap.set(from, []);
+		}
+		dependencyMap.get(from)!.push(to);
+	}
+
+	// Cache for already built nodes to handle circular references
+	const builtNodes = new Map<number, PackageDependencyNode>();
+
+	// Recursively build the tree
+	function buildNode(index: number): PackageDependencyNode {
+		// If already built, return the cached node
+		if (builtNodes.has(index)) {
+			return builtNodes.get(index)!;
+		}
+
+		const pkg = flat.packages[index];
+
+		// Create the node
+		const node: PackageDependencyNode = {
+			name: pkg.name,
+			version: pkg.version,
+			dependencies: [],
+			size: pkg.size
+		};
+
+		// Cache it immediately to handle circular refs
+		builtNodes.set(index, node);
+
+		// Handle circular reference
+		if (pkg.isCircular && pkg.circularTarget !== undefined) {
+			node.isCircular = true;
+			const targetPkg = flat.packages[pkg.circularTarget];
+			node.circularRefId = `${targetPkg.name}@${targetPkg.version}`;
+			// For circular nodes, we stop here and don't add children
+			return node;
+		}
+
+		// Add dependencies
+		const childIndices = dependencyMap.get(index) || [];
+		node.dependencies = childIndices.map((childIndex) => buildNode(childIndex));
+
+		return node;
+	}
+
+	// Start building from the root
+	return buildNode(flat.rootIndex);
+}
+
+/**
+ * Calculate the total size of the dependency tree
+ */
+export function calculate_total_size(graph: FlatDependencyGraph): {
+	totalSize: number;
+	sizeWithDependencies: Map<number, number>;
+} {
+	// Create a map of dependencies by source
+	const dependencyMap = new Map<number, number[]>();
+
+	for (const [from, to] of graph.dependencies) {
+		if (!dependencyMap.has(from)) {
+			dependencyMap.set(from, []);
+		}
+		dependencyMap.get(from)!.push(to);
+	}
+
+	// Calculate size including all dependencies
+	const sizeWithDependencies = new Map<number, number>();
+
+	function calculatePackageSize(index: number, visited = new Set<number>()): number {
+		// Avoid cycles
+		if (visited.has(index)) return 0;
+		visited.add(index);
+
+		// Get this package's size
+		const pkg = graph.packages[index];
+		const ownSize = pkg.size || 0;
+
+		// Add sizes of all dependencies
+		const children = dependencyMap.get(index) || [];
+		let dependenciesSize = 0;
+
+		for (const childIndex of children) {
+			dependenciesSize += calculatePackageSize(childIndex, new Set(visited));
+		}
+
+		const totalSize = ownSize + dependenciesSize;
+		sizeWithDependencies.set(index, totalSize);
+
+		return totalSize;
+	}
+
+	// Calculate from root
+	const totalSize = calculatePackageSize(graph.rootIndex);
+
+	return { totalSize, sizeWithDependencies };
+}
+
+/**
+ * Build and flatten a dependency graph in one step
+ */
+export async function build_flat_dependency_graph(
+	pkg_name: string,
+	semver: string = 'latest',
+	max_depth: number = 10
+): Promise<FlatDependencyGraph> {
+	const graph = await build_dependency_graph(pkg_name, semver, max_depth);
+	return flatten_dependency_graph(graph);
+}
+
+/**
+ * Build a flat dependency graph from a package.json object
+ */
+export async function build_flat_graph_from_package_json(
+	package_json: any,
+	max_depth: number = 10
+): Promise<FlatDependencyGraph> {
+	const graph = await build_graph_from_package_json(package_json);
+	return flatten_dependency_graph(graph);
+}
+
+/**
+ * Find all circular dependencies in a flat graph
+ * Returns them in a readable format
+ */
+export function find_circular_dependencies(graph: FlatDependencyGraph): {
+	from: string;
+	fromVersion: string;
+	to: string;
+	toVersion: string;
+}[] {
+	return graph.circular.map(([fromIndex, toIndex]) => {
+		const fromPkg = graph.packages[fromIndex];
+		const toPkg = graph.packages[toIndex];
+
+		return {
+			from: fromPkg.name,
+			fromVersion: fromPkg.version,
+			to: toPkg.name,
+			toVersion: toPkg.version
+		};
+	});
 }
 
 /** Options for searching npm packages */

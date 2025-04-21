@@ -13,17 +13,6 @@
 	"version": "1.0.12",
 	"svelte_range": "^3.55.1",
 	"last_rune_check_version": "1.0.12",
-	"dependencies": [
-		{
-			"name": "kleur",
-			"semver": "^4.1.5"
-		},
-		{
-			"name": "prompts",
-			"semver": "^2.4.2"
-		}
-	],
-	"unpacked_size": 63287,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -257,5 +246,42 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "create-sveltekit-starterpack",
+				"version": "1.0.12",
+				"size": 63287
+			},
+			{
+				"name": "kleur",
+				"version": "4.1.5",
+				"size": 20250
+			},
+			{
+				"name": "prompts",
+				"version": "2.4.2",
+				"size": 186815
+			},
+			{
+				"name": "kleur",
+				"version": "3.0.3",
+				"size": 9893
+			},
+			{
+				"name": "sisteransi",
+				"version": "1.0.5",
+				"size": 6791
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[2, 4]
+		],
+		"circular": []
+	}
 }

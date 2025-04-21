@@ -14,8 +14,6 @@
 	"svelte_range": ">=5",
 	"kit_range": "^2.20.5",
 	"last_rune_check_version": "0.1.4",
-	"dependencies": [],
-	"unpacked_size": 44872,
 	"downloads_history": [
 		{
 			"range": [1742149800000, 1742754599999],
@@ -33,5 +31,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 30
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@viamrobotics/svelte-sdk",
+				"version": "0.1.4",
+				"size": 44872
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

@@ -13,8 +13,6 @@
 	"version": "1.0.3",
 	"svelte_range": "^4.0.0",
 	"last_rune_check_version": "1.0.3",
-	"dependencies": [],
-	"unpacked_size": 29992,
 	"downloads_history": [
 		{
 			"range": [1701628200000, 1702232999999],
@@ -128,5 +126,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 11
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@whoisyeshua-svelte/modal-custom-element",
+				"version": "1.0.3",
+				"size": 29992
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

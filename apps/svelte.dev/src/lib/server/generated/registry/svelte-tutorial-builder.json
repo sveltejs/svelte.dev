@@ -13,8 +13,6 @@
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "1.1.1",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 27296,
 	"downloads_history": [
 		{
 			"range": [1717957800000, 1718562599999],
@@ -176,5 +174,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-tutorial-builder",
+				"version": "1.1.1",
+				"size": 27296
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

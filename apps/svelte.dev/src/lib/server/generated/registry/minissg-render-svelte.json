@@ -13,8 +13,6 @@
 	"version": "4.0.1",
 	"svelte_range": "^5",
 	"last_rune_check_version": "4.0.1",
-	"dependencies": [],
-	"unpacked_size": 8904,
 	"downloads_history": [
 		{
 			"range": [1701628200000, 1702232999999],
@@ -220,5 +218,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@minissg/render-svelte",
+				"version": "4.0.1",
+				"size": 8904
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

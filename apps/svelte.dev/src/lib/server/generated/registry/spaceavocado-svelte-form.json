@@ -13,13 +13,6 @@
 	"version": "1.0.4",
 	"svelte_range": "^3.8.1",
 	"last_rune_check_version": "1.0.4",
-	"dependencies": [
-		{
-			"name": "@spaceavocado/type-check",
-			"semver": "^1.0.1"
-		}
-	],
-	"unpacked_size": 38213,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +326,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 870
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@spaceavocado/svelte-form",
+				"version": "1.0.4",
+				"size": 38213
+			},
+			{
+				"name": "@spaceavocado/type-check",
+				"version": "1.0.2",
+				"size": 21447
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

@@ -14,13 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.22.0",
 	"last_rune_check_version": "1.2.3",
-	"dependencies": [
-		{
-			"name": "@fontsource-variable/dosis",
-			"semver": "^5.0.4"
-		}
-	],
-	"unpacked_size": 17072,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -302,5 +295,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 13
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "carrusel",
+				"version": "1.2.3",
+				"size": 17072
+			},
+			{
+				"name": "@fontsource-variable/dosis",
+				"version": "5.2.5",
+				"size": 72335
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

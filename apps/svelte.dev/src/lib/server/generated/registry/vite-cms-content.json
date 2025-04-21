@@ -13,13 +13,6 @@
 	"version": "1.0.0-beta",
 	"svelte_range": "^3.46.6",
 	"last_rune_check_version": "1.0.0-beta",
-	"dependencies": [
-		{
-			"name": "marked",
-			"semver": "^4.0.12"
-		}
-	],
-	"unpacked_size": 8939,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -189,5 +182,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@vite-cms/content",
+				"version": "1.0.0-beta",
+				"size": 8939
+			},
+			{
+				"name": "marked",
+				"version": "4.3.0",
+				"size": 427518
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

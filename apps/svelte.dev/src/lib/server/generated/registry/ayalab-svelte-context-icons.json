@@ -13,8 +13,6 @@
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.3.0",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 7266,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -276,5 +274,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 10
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@ayalab/svelte-context-icons",
+				"version": "0.3.0",
+				"size": 7266
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

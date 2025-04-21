@@ -13,17 +13,6 @@
 	"version": "4.5.0",
 	"svelte_range": "^4.2.1",
 	"last_rune_check_version": "4.5.0",
-	"dependencies": [
-		{
-			"name": "node-html-parser",
-			"semver": "^6.1.5"
-		},
-		{
-			"name": "svelte",
-			"semver": "^4.2.1"
-		}
-	],
-	"unpacked_size": 14554,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -297,5 +286,237 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 266
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@floratmin/svelte-fragment-divider",
+				"version": "4.5.0",
+				"size": 14554
+			},
+			{
+				"name": "node-html-parser",
+				"version": "6.1.13",
+				"size": 165463
+			},
+			{
+				"name": "he",
+				"version": "1.2.0",
+				"size": 124138
+			},
+			{
+				"name": "css-select",
+				"version": "5.1.0",
+				"size": 224084
+			},
+			{
+				"name": "boolbase",
+				"version": "1.0.0"
+			},
+			{
+				"name": "css-what",
+				"version": "6.1.0",
+				"size": 66038
+			},
+			{
+				"name": "domhandler",
+				"version": "5.0.3",
+				"size": 75339
+			},
+			{
+				"name": "domelementtype",
+				"version": "2.3.0",
+				"size": 11359
+			},
+			{
+				"name": "domutils",
+				"version": "3.2.2",
+				"size": 166738
+			},
+			{
+				"name": "dom-serializer",
+				"version": "2.0.0",
+				"size": 28813
+			},
+			{
+				"name": "entities",
+				"version": "4.5.0",
+				"size": 412892
+			},
+			{
+				"name": "nth-check",
+				"version": "2.1.1",
+				"size": 42555
+			},
+			{
+				"name": "svelte",
+				"version": "4.2.19",
+				"size": 2633608
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "code-red",
+				"version": "1.0.4",
+				"size": 55185
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "estree-walker",
+				"version": "3.0.3",
+				"size": 17599
+			},
+			{
+				"name": "periscopic",
+				"version": "3.1.0",
+				"size": 11219
+			},
+			{
+				"name": "is-reference",
+				"version": "3.0.3",
+				"size": 3953
+			},
+			{
+				"name": "css-tree",
+				"version": "2.3.1",
+				"size": 1190591
+			},
+			{
+				"name": "mdn-data",
+				"version": "2.0.30",
+				"size": 602138
+			},
+			{
+				"name": "source-map-js",
+				"version": "1.2.1",
+				"size": 139872
+			},
+			{
+				"name": "aria-query",
+				"version": "5.3.2",
+				"size": 176114
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "axobject-query",
+				"version": "4.1.0",
+				"size": 110878
+			},
+			{
+				"name": "locate-character",
+				"version": "3.0.0",
+				"size": 5325
+			},
+			{
+				"name": "@ampproject/remapping",
+				"version": "2.3.0",
+				"size": 78946
+			},
+			{
+				"name": "@jridgewell/gen-mapping",
+				"version": "0.3.8",
+				"size": 81596
+			},
+			{
+				"name": "@jridgewell/set-array",
+				"version": "1.2.1",
+				"size": 17945
+			},
+			{
+				"name": "@jridgewell/trace-mapping",
+				"version": "0.3.25",
+				"size": 169330
+			},
+			{
+				"name": "@jridgewell/resolve-uri",
+				"version": "3.1.2",
+				"size": 53153
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[6, 7],
+			[3, 8],
+			[8, 9],
+			[9, 7],
+			[9, 6],
+			[6, 7],
+			[9, 10],
+			[8, 7],
+			[8, 6],
+			[6, 7],
+			[3, 11],
+			[11, 4],
+			[0, 12],
+			[12, 13],
+			[12, 14],
+			[14, 15],
+			[14, 16],
+			[14, 13],
+			[14, 17],
+			[17, 16],
+			[14, 18],
+			[18, 16],
+			[18, 17],
+			[17, 16],
+			[18, 19],
+			[19, 16],
+			[12, 20],
+			[20, 21],
+			[20, 22],
+			[12, 23],
+			[12, 18],
+			[18, 16],
+			[18, 17],
+			[17, 16],
+			[18, 19],
+			[19, 16],
+			[12, 19],
+			[19, 16],
+			[12, 24],
+			[24, 15],
+			[12, 16],
+			[12, 17],
+			[17, 16],
+			[12, 25],
+			[12, 26],
+			[12, 27],
+			[27, 28],
+			[28, 29],
+			[28, 15],
+			[28, 30],
+			[30, 31],
+			[30, 15],
+			[27, 30],
+			[30, 31],
+			[30, 15],
+			[12, 30],
+			[30, 31],
+			[30, 15],
+			[12, 15]
+		],
+		"circular": []
+	}
 }

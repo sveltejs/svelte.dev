@@ -14,25 +14,6 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.8.5",
 	"last_rune_check_version": "2.0.8",
-	"dependencies": [
-		{
-			"name": "flatpickr_plus",
-			"semver": "^1.1.20"
-		},
-		{
-			"name": "postcss",
-			"semver": "^8.4.49"
-		},
-		{
-			"name": "postcss-import",
-			"semver": "^16.1.0"
-		},
-		{
-			"name": "svelte-preprocess",
-			"semver": "^6.0.3"
-		}
-	],
-	"unpacked_size": 43888,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -346,5 +327,112 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 252
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-flatpickr-plus",
+				"version": "2.0.8",
+				"size": 43888
+			},
+			{
+				"name": "flatpickr_plus",
+				"version": "1.1.20",
+				"size": 1175550
+			},
+			{
+				"name": "postcss",
+				"version": "8.5.3",
+				"size": 201969
+			},
+			{
+				"name": "nanoid",
+				"version": "3.3.11",
+				"size": 32583
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "source-map-js",
+				"version": "1.2.1",
+				"size": 139872
+			},
+			{
+				"name": "postcss-import",
+				"version": "16.1.0",
+				"size": 29924
+			},
+			{
+				"name": "postcss-value-parser",
+				"version": "4.2.0",
+				"size": 27193
+			},
+			{
+				"name": "read-cache",
+				"version": "1.0.0"
+			},
+			{
+				"name": "pify",
+				"version": "2.3.0"
+			},
+			{
+				"name": "resolve",
+				"version": "1.22.10",
+				"size": 145619
+			},
+			{
+				"name": "is-core-module",
+				"version": "2.16.1",
+				"size": 33475
+			},
+			{
+				"name": "hasown",
+				"version": "2.0.2",
+				"size": 8765
+			},
+			{
+				"name": "function-bind",
+				"version": "1.1.2",
+				"size": 31427
+			},
+			{
+				"name": "path-parse",
+				"version": "1.0.7",
+				"size": 4511
+			},
+			{
+				"name": "supports-preserve-symlinks-flag",
+				"version": "1.0.0",
+				"size": 9178
+			},
+			{
+				"name": "svelte-preprocess",
+				"version": "6.0.3",
+				"size": 97158
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[2, 4],
+			[2, 5],
+			[0, 6],
+			[6, 7],
+			[6, 8],
+			[8, 9],
+			[6, 10],
+			[10, 11],
+			[11, 12],
+			[12, 13],
+			[10, 14],
+			[10, 15],
+			[0, 16]
+		],
+		"circular": []
+	}
 }

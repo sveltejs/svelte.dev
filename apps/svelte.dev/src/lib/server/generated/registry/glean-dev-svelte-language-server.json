@@ -13,65 +13,6 @@
 	"version": "0.10.1",
 	"svelte_range": "3.2.0",
 	"last_rune_check_version": "0.10.1",
-	"dependencies": [
-		{
-			"name": "cosmiconfig",
-			"semver": "^4.0.0"
-		},
-		{
-			"name": "lodash",
-			"semver": "^4.17.10"
-		},
-		{
-			"name": "prettier",
-			"semver": "1.17.0"
-		},
-		{
-			"name": "prettier-plugin-svelte",
-			"semver": "0.5.1"
-		},
-		{
-			"name": "sinon",
-			"semver": "^4.5.0"
-		},
-		{
-			"name": "source-map",
-			"semver": "^0.7.3"
-		},
-		{
-			"name": "svelte",
-			"semver": "3.2.0"
-		},
-		{
-			"name": "typescript",
-			"semver": "3.4.5"
-		},
-		{
-			"name": "vscode-css-languageservice",
-			"semver": "3.0.13"
-		},
-		{
-			"name": "vscode-emmet-helper",
-			"semver": "1.2.15"
-		},
-		{
-			"name": "vscode-html-languageservice",
-			"semver": "2.1.12"
-		},
-		{
-			"name": "vscode-languageserver",
-			"semver": "5.2.1"
-		},
-		{
-			"name": "vscode-languageserver-types",
-			"semver": "3.14.0"
-		},
-		{
-			"name": "vscode-uri",
-			"semver": "1.0.6"
-		}
-	],
-	"unpacked_size": 213021,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -345,5 +286,323 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@glean-dev/svelte-language-server",
+				"version": "0.10.1",
+				"size": 213021
+			},
+			{
+				"name": "cosmiconfig",
+				"version": "4.0.0"
+			},
+			{
+				"name": "is-directory",
+				"version": "0.3.1"
+			},
+			{
+				"name": "js-yaml",
+				"version": "3.14.1",
+				"size": 291327
+			},
+			{
+				"name": "argparse",
+				"version": "1.0.10",
+				"size": 116446
+			},
+			{
+				"name": "sprintf-js",
+				"version": "1.0.3"
+			},
+			{
+				"name": "esprima",
+				"version": "4.0.1",
+				"size": 314361
+			},
+			{
+				"name": "parse-json",
+				"version": "4.0.0"
+			},
+			{
+				"name": "error-ex",
+				"version": "1.3.2",
+				"size": 9035
+			},
+			{
+				"name": "is-arrayish",
+				"version": "0.2.1"
+			},
+			{
+				"name": "json-parse-better-errors",
+				"version": "1.0.2",
+				"size": 6702
+			},
+			{
+				"name": "require-from-string",
+				"version": "2.0.2",
+				"size": 3422
+			},
+			{
+				"name": "lodash",
+				"version": "4.17.21",
+				"size": 1412415
+			},
+			{
+				"name": "prettier",
+				"version": "1.17.0",
+				"size": 9297686
+			},
+			{
+				"name": "prettier-plugin-svelte",
+				"version": "0.5.1",
+				"size": 64970
+			},
+			{
+				"name": "tslib",
+				"version": "1.14.1",
+				"size": 33965
+			},
+			{
+				"name": "sinon",
+				"version": "4.5.0",
+				"size": 3516596
+			},
+			{
+				"name": "diff",
+				"version": "3.5.0",
+				"size": 622126
+			},
+			{
+				"name": "nise",
+				"version": "1.5.3",
+				"size": 222914
+			},
+			{
+				"name": "lolex",
+				"version": "5.1.2",
+				"size": 135827
+			},
+			{
+				"name": "@sinonjs/commons",
+				"version": "1.8.6",
+				"size": 38716
+			},
+			{
+				"name": "type-detect",
+				"version": "4.0.8"
+			},
+			{
+				"name": "just-extend",
+				"version": "4.2.1",
+				"size": 5928
+			},
+			{
+				"name": "path-to-regexp",
+				"version": "1.9.0",
+				"size": 24223
+			},
+			{
+				"name": "isarray",
+				"version": "0.0.1"
+			},
+			{
+				"name": "@sinonjs/formatio",
+				"version": "3.2.2",
+				"size": 19835
+			},
+			{
+				"name": "@sinonjs/samsam",
+				"version": "3.3.3",
+				"size": 90380
+			},
+			{
+				"name": "array-from",
+				"version": "2.1.1"
+			},
+			{
+				"name": "@sinonjs/text-encoding",
+				"version": "0.7.3",
+				"size": 650614
+			},
+			{
+				"name": "lolex",
+				"version": "2.7.5",
+				"size": 80743
+			},
+			{
+				"name": "lodash.get",
+				"version": "4.4.2"
+			},
+			{
+				"name": "type-detect",
+				"version": "4.1.0",
+				"size": 38728
+			},
+			{
+				"name": "supports-color",
+				"version": "5.5.0",
+				"size": 6630
+			},
+			{
+				"name": "has-flag",
+				"version": "3.0.0"
+			},
+			{
+				"name": "@sinonjs/formatio",
+				"version": "2.0.0",
+				"size": 20247
+			},
+			{
+				"name": "samsam",
+				"version": "1.3.0"
+			},
+			{
+				"name": "source-map",
+				"version": "0.7.4",
+				"size": 226000
+			},
+			{
+				"name": "svelte",
+				"version": "3.2.0",
+				"size": 1005321
+			},
+			{
+				"name": "typescript",
+				"version": "3.4.5",
+				"size": 43982802
+			},
+			{
+				"name": "vscode-css-languageservice",
+				"version": "3.0.13",
+				"size": 2289665
+			},
+			{
+				"name": "vscode-nls",
+				"version": "4.1.2",
+				"size": 26127
+			},
+			{
+				"name": "vscode-languageserver-types",
+				"version": "3.17.5",
+				"size": 376701
+			},
+			{
+				"name": "vscode-emmet-helper",
+				"version": "1.2.15",
+				"size": 424749
+			},
+			{
+				"name": "@emmetio/extract-abbreviation",
+				"version": "0.1.6",
+				"size": 19881
+			},
+			{
+				"name": "jsonc-parser",
+				"version": "1.0.3",
+				"size": 155675
+			},
+			{
+				"name": "vscode-html-languageservice",
+				"version": "2.1.12",
+				"size": 1432355
+			},
+			{
+				"name": "vscode-uri",
+				"version": "1.0.8",
+				"size": 62203
+			},
+			{
+				"name": "vscode-languageserver",
+				"version": "5.2.1",
+				"size": 102050
+			},
+			{
+				"name": "vscode-languageserver-protocol",
+				"version": "3.14.1",
+				"size": 125509
+			},
+			{
+				"name": "vscode-jsonrpc",
+				"version": "4.0.0",
+				"size": 118507
+			},
+			{
+				"name": "vscode-languageserver-types",
+				"version": "3.14.0",
+				"size": 236123
+			},
+			{
+				"name": "vscode-uri",
+				"version": "1.0.6",
+				"size": 57857
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[3, 4],
+			[4, 5],
+			[3, 6],
+			[1, 7],
+			[7, 8],
+			[8, 9],
+			[7, 10],
+			[1, 11],
+			[0, 12],
+			[0, 13],
+			[0, 14],
+			[14, 15],
+			[0, 16],
+			[16, 17],
+			[16, 18],
+			[18, 19],
+			[19, 20],
+			[20, 21],
+			[18, 22],
+			[18, 23],
+			[23, 24],
+			[18, 25],
+			[25, 20],
+			[20, 21],
+			[25, 26],
+			[26, 12],
+			[26, 27],
+			[26, 20],
+			[20, 21],
+			[18, 28],
+			[16, 29],
+			[16, 30],
+			[16, 31],
+			[16, 32],
+			[32, 33],
+			[16, 34],
+			[34, 35],
+			[0, 36],
+			[0, 37],
+			[0, 38],
+			[0, 39],
+			[39, 40],
+			[39, 41],
+			[0, 42],
+			[42, 43],
+			[42, 44],
+			[42, 41],
+			[0, 45],
+			[45, 40],
+			[45, 46],
+			[45, 41],
+			[0, 47],
+			[47, 46],
+			[47, 48],
+			[48, 49],
+			[48, 50],
+			[0, 50],
+			[0, 51]
+		],
+		"circular": []
+	}
 }

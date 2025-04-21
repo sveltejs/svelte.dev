@@ -13,8 +13,6 @@
 	"version": "1.1.0",
 	"svelte_range": "^5.1.0",
 	"last_rune_check_version": "1.1.0",
-	"dependencies": [],
-	"unpacked_size": 20258,
 	"downloads_history": [
 		{
 			"range": [1720377000000, 1720981799999],
@@ -160,5 +158,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 18
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@svelte-put/swipeable",
+				"version": "1.1.0",
+				"size": 20258
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

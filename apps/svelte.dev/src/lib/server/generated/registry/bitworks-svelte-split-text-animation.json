@@ -14,17 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.4",
 	"last_rune_check_version": "1.0.9",
-	"dependencies": [
-		{
-			"name": "gsap",
-			"semver": "^3.12.2"
-		},
-		{
-			"name": "split-type",
-			"semver": "^0.3.3"
-		}
-	],
-	"unpacked_size": 6176,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -282,5 +271,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 9
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@bitworks/svelte-split-text-animation",
+				"version": "1.0.9",
+				"size": 6176
+			},
+			{
+				"name": "gsap",
+				"version": "3.12.7",
+				"size": 4002982
+			},
+			{
+				"name": "split-type",
+				"version": "0.3.4",
+				"size": 158805
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

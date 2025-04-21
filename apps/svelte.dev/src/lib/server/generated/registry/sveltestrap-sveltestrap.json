@@ -13,13 +13,6 @@
 	"version": "7.1.0",
 	"svelte_range": "^4.0.0 || ^5.0.0 || ^5.0.0-next.0",
 	"last_rune_check_version": "7.1.0",
-	"dependencies": [
-		{
-			"name": "@popperjs/core",
-			"semver": "^2.11.8"
-		}
-	],
-	"unpacked_size": 1348392,
 	"downloads_history": [
 		{
 			"range": [1702233000000, 1702837799999],
@@ -301,5 +294,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4934
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@sveltestrap/sveltestrap",
+				"version": "7.1.0",
+				"size": 1348392
+			},
+			{
+				"name": "@popperjs/core",
+				"version": "2.11.8",
+				"size": 1463042
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

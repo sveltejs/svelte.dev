@@ -13,13 +13,6 @@
 	"version": "2.1.1",
 	"svelte_range": "^3.16.5",
 	"last_rune_check_version": "2.1.1",
-	"dependencies": [
-		{
-			"name": "svelte-portal",
-			"semver": "^2.1.2"
-		}
-	],
-	"unpacked_size": 49144,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -233,5 +226,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@sinnerjoe/svelte-touch-datepicker",
+				"version": "2.1.1",
+				"size": 49144
+			},
+			{
+				"name": "svelte-portal",
+				"version": "2.2.1",
+				"size": 10935
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

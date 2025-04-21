@@ -13,17 +13,6 @@
 	"version": "1.1.2",
 	"svelte_range": "^3.38.2",
 	"last_rune_check_version": "1.1.2",
-	"dependencies": [
-		{
-			"name": "dom7",
-			"semver": "^4.0.4"
-		},
-		{
-			"name": "ssr-window",
-			"semver": "^4.0.2"
-		}
-	],
-	"unpacked_size": 3785083,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -289,5 +278,31 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "swiper-test-chw",
+				"version": "1.1.2",
+				"size": 3785083
+			},
+			{
+				"name": "dom7",
+				"version": "4.0.6",
+				"size": 291816
+			},
+			{
+				"name": "ssr-window",
+				"version": "4.0.2",
+				"size": 20352
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

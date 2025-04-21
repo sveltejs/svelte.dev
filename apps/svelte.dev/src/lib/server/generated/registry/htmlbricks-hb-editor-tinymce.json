@@ -12,13 +12,6 @@
 	"svelte_range": "^3.46.2",
 	"last_rune_check_version": "0.20.18",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "@tinymce/tinymce-webcomponent",
-			"semver": "^1.2.0"
-		}
-	],
-	"unpacked_size": 149028,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -320,5 +313,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 180
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@htmlbricks/hb-editor-tinymce",
+				"version": "0.20.18",
+				"size": 149028
+			},
+			{
+				"name": "@tinymce/tinymce-webcomponent",
+				"version": "1.2.0",
+				"size": 19439
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

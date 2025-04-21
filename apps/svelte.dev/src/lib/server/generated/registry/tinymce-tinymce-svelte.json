@@ -13,13 +13,6 @@
 	"version": "3.0.0",
 	"svelte_range": "^4.2.17",
 	"last_rune_check_version": "3.0.0",
-	"dependencies": [
-		{
-			"name": "rollup-plugin-execute",
-			"semver": "^1.1.1"
-		}
-	],
-	"unpacked_size": 276660,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +326,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 2781
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@tinymce/tinymce-svelte",
+				"version": "3.0.0",
+				"size": 276660
+			},
+			{
+				"name": "rollup-plugin-execute",
+				"version": "1.1.1",
+				"size": 2991
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

@@ -13,17 +13,6 @@
 	"version": "0.5.20",
 	"svelte_range": "^3.6.1",
 	"last_rune_check_version": "0.5.20",
-	"dependencies": [
-		{
-			"name": "@sveltejs/gestures",
-			"semver": "0.0.1"
-		},
-		{
-			"name": "siema",
-			"semver": "^1.5.1"
-		}
-	],
-	"unpacked_size": 84023,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -293,5 +282,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 22
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@centroculturadigital-mx/svelte-carousel",
+				"version": "0.5.20",
+				"size": 84023
+			},
+			{
+				"name": "@sveltejs/gestures",
+				"version": "0.0.1",
+				"size": 9454
+			},
+			{
+				"name": "siema",
+				"version": "1.5.1",
+				"size": 21889
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

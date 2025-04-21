@@ -13,17 +13,6 @@
 	"version": "0.3.3",
 	"svelte_range": "^3.55.0",
 	"last_rune_check_version": "0.3.3",
-	"dependencies": [
-		{
-			"name": "globby",
-			"semver": "^13.0.0"
-		},
-		{
-			"name": "pathe",
-			"semver": "^1.0.0"
-		}
-	],
-	"unpacked_size": 28365,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -257,5 +246,163 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@vessel-js/svelte",
+				"version": "0.3.3",
+				"size": 28365
+			},
+			{
+				"name": "globby",
+				"version": "13.2.2",
+				"size": 25146
+			},
+			{
+				"name": "slash",
+				"version": "4.0.0",
+				"size": 3834
+			},
+			{
+				"name": "ignore",
+				"version": "5.3.2",
+				"size": 53630
+			},
+			{
+				"name": "merge2",
+				"version": "1.4.1",
+				"size": 8897
+			},
+			{
+				"name": "dir-glob",
+				"version": "3.0.1",
+				"size": 5417
+			},
+			{
+				"name": "path-type",
+				"version": "4.0.0",
+				"size": 5407
+			},
+			{
+				"name": "fast-glob",
+				"version": "3.3.3",
+				"size": 98396
+			},
+			{
+				"name": "@nodelib/fs.stat",
+				"version": "2.0.5",
+				"size": 11845
+			},
+			{
+				"name": "@nodelib/fs.walk",
+				"version": "1.2.8",
+				"size": 26377
+			},
+			{
+				"name": "fastq",
+				"version": "1.19.1",
+				"size": 45922
+			},
+			{
+				"name": "reusify",
+				"version": "1.1.0",
+				"size": 11696
+			},
+			{
+				"name": "@nodelib/fs.scandir",
+				"version": "2.1.5",
+				"size": 22155
+			},
+			{
+				"name": "run-parallel",
+				"version": "1.2.0",
+				"size": 6563
+			},
+			{
+				"name": "queue-microtask",
+				"version": "1.2.3",
+				"size": 8367
+			},
+			{
+				"name": "glob-parent",
+				"version": "5.1.2",
+				"size": 12134
+			},
+			{
+				"name": "is-glob",
+				"version": "4.0.3",
+				"size": 13609
+			},
+			{
+				"name": "is-extglob",
+				"version": "2.1.1"
+			},
+			{
+				"name": "micromatch",
+				"version": "4.0.8",
+				"size": 56599
+			},
+			{
+				"name": "braces",
+				"version": "3.0.3",
+				"size": 44635
+			},
+			{
+				"name": "fill-range",
+				"version": "7.1.1",
+				"size": 16743
+			},
+			{
+				"name": "to-regex-range",
+				"version": "5.0.1",
+				"size": 22939
+			},
+			{
+				"name": "is-number",
+				"version": "7.0.0",
+				"size": 9615
+			},
+			{
+				"name": "picomatch",
+				"version": "2.3.1",
+				"size": 89952
+			},
+			{
+				"name": "pathe",
+				"version": "1.1.2",
+				"size": 30806
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[1, 4],
+			[1, 5],
+			[5, 6],
+			[1, 7],
+			[7, 8],
+			[7, 9],
+			[9, 10],
+			[10, 11],
+			[9, 12],
+			[12, 13],
+			[13, 14],
+			[12, 8],
+			[7, 15],
+			[15, 16],
+			[16, 17],
+			[7, 4],
+			[7, 18],
+			[18, 19],
+			[19, 20],
+			[20, 21],
+			[21, 22],
+			[18, 23],
+			[0, 24]
+		],
+		"circular": []
+	}
 }

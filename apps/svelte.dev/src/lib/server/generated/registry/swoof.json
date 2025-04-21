@@ -13,17 +13,6 @@
 	"version": "0.1.9",
 	"svelte_range": "^3.29.4",
 	"last_rune_check_version": "0.1.9",
-	"dependencies": [
-		{
-			"name": "firebase",
-			"semver": "^7.24.0"
-		},
-		{
-			"name": "observable-membrane",
-			"semver": "^1.0.1"
-		}
-	],
-	"unpacked_size": 2611464,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -273,5 +262,639 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 42
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "swoof",
+				"version": "0.1.9",
+				"size": 2611464
+			},
+			{
+				"name": "firebase",
+				"version": "7.24.0",
+				"size": 19007469
+			},
+			{
+				"name": "@firebase/app",
+				"version": "0.6.11",
+				"size": 453412
+			},
+			{
+				"name": "tslib",
+				"version": "1.14.1",
+				"size": 33965
+			},
+			{
+				"name": "dom-storage",
+				"version": "2.1.0",
+				"size": 17490
+			},
+			{
+				"name": "@firebase/util",
+				"version": "0.3.2",
+				"size": 662454
+			},
+			{
+				"name": "xmlhttprequest",
+				"version": "1.8.0"
+			},
+			{
+				"name": "@firebase/logger",
+				"version": "0.2.6",
+				"size": 75126
+			},
+			{
+				"name": "@firebase/app-types",
+				"version": "0.6.1",
+				"size": 9460
+			},
+			{
+				"name": "@firebase/component",
+				"version": "0.1.19",
+				"size": 109825
+			},
+			{
+				"name": "@firebase/auth",
+				"version": "0.15.0",
+				"size": 5540927
+			},
+			{
+				"name": "@firebase/auth-types",
+				"version": "0.10.1",
+				"size": 15175
+			},
+			{
+				"name": "@firebase/storage",
+				"version": "0.3.43",
+				"size": 1076451
+			},
+			{
+				"name": "@firebase/storage-types",
+				"version": "0.3.13",
+				"size": 4758
+			},
+			{
+				"name": "@firebase/database",
+				"version": "0.6.13",
+				"size": 6423115
+			},
+			{
+				"name": "faye-websocket",
+				"version": "0.11.3",
+				"size": 30705
+			},
+			{
+				"name": "websocket-driver",
+				"version": "0.7.4",
+				"size": 67439
+			},
+			{
+				"name": "http-parser-js",
+				"version": "0.5.10",
+				"size": 26471
+			},
+			{
+				"name": "safe-buffer",
+				"version": "5.2.1",
+				"size": 32101
+			},
+			{
+				"name": "websocket-extensions",
+				"version": "0.1.4",
+				"size": 55037
+			},
+			{
+				"name": "@firebase/database-types",
+				"version": "0.5.2",
+				"size": 5702
+			},
+			{
+				"name": "@firebase/auth-interop-types",
+				"version": "0.1.5",
+				"size": 2053
+			},
+			{
+				"name": "@firebase/polyfill",
+				"version": "0.3.36",
+				"size": 4414
+			},
+			{
+				"name": "core-js",
+				"version": "3.6.5",
+				"size": 663758
+			},
+			{
+				"name": "promise-polyfill",
+				"version": "8.1.3",
+				"size": 42465
+			},
+			{
+				"name": "whatwg-fetch",
+				"version": "2.0.4",
+				"size": 23102
+			},
+			{
+				"name": "@firebase/analytics",
+				"version": "0.6.0",
+				"size": 388397
+			},
+			{
+				"name": "@firebase/installations",
+				"version": "0.4.17",
+				"size": 556897
+			},
+			{
+				"name": "idb",
+				"version": "3.0.2",
+				"size": 198860
+			},
+			{
+				"name": "@firebase/installations-types",
+				"version": "0.3.4",
+				"size": 2326
+			},
+			{
+				"name": "@firebase/analytics-types",
+				"version": "0.4.0",
+				"size": 8161
+			},
+			{
+				"name": "@firebase/firestore",
+				"version": "1.18.0",
+				"size": 26214242
+			},
+			{
+				"name": "node-fetch",
+				"version": "2.6.1",
+				"size": 157766
+			},
+			{
+				"name": "@grpc/grpc-js",
+				"version": "1.13.3",
+				"size": 1967741
+			},
+			{
+				"name": "@grpc/proto-loader",
+				"version": "0.7.15",
+				"size": 121381
+			},
+			{
+				"name": "lodash.camelcase",
+				"version": "4.3.0"
+			},
+			{
+				"name": "long",
+				"version": "5.3.2",
+				"size": 139458
+			},
+			{
+				"name": "protobufjs",
+				"version": "7.5.0",
+				"size": 2878515
+			},
+			{
+				"name": "@protobufjs/aspromise",
+				"version": "1.1.2"
+			},
+			{
+				"name": "@protobufjs/base64",
+				"version": "1.1.2"
+			},
+			{
+				"name": "@protobufjs/codegen",
+				"version": "2.0.4"
+			},
+			{
+				"name": "@protobufjs/eventemitter",
+				"version": "1.1.0"
+			},
+			{
+				"name": "@protobufjs/fetch",
+				"version": "1.1.0"
+			},
+			{
+				"name": "@protobufjs/inquire",
+				"version": "1.1.0"
+			},
+			{
+				"name": "@protobufjs/float",
+				"version": "1.0.2"
+			},
+			{
+				"name": "@protobufjs/path",
+				"version": "1.1.2"
+			},
+			{
+				"name": "@protobufjs/pool",
+				"version": "1.1.0"
+			},
+			{
+				"name": "@protobufjs/utf8",
+				"version": "1.1.0"
+			},
+			{
+				"name": "@types/node",
+				"version": "22.14.1",
+				"size": 2331510
+			},
+			{
+				"name": "undici-types",
+				"version": "6.21.0",
+				"size": 83680
+			},
+			{
+				"name": "yargs",
+				"version": "17.7.2",
+				"size": 292421
+			},
+			{
+				"name": "y18n",
+				"version": "5.0.8",
+				"size": 23435
+			},
+			{
+				"name": "cliui",
+				"version": "8.0.1",
+				"size": 32314
+			},
+			{
+				"name": "wrap-ansi",
+				"version": "7.0.0",
+				"size": 10648
+			},
+			{
+				"name": "ansi-styles",
+				"version": "4.3.0",
+				"size": 16978
+			},
+			{
+				"name": "color-convert",
+				"version": "2.0.1",
+				"size": 27189
+			},
+			{
+				"name": "color-name",
+				"version": "1.1.4",
+				"size": 6693
+			},
+			{
+				"name": "string-width",
+				"version": "4.2.3",
+				"size": 5161
+			},
+			{
+				"name": "strip-ansi",
+				"version": "6.0.1",
+				"size": 4029
+			},
+			{
+				"name": "ansi-regex",
+				"version": "5.0.1",
+				"size": 5609
+			},
+			{
+				"name": "emoji-regex",
+				"version": "8.0.0",
+				"size": 48255
+			},
+			{
+				"name": "is-fullwidth-code-point",
+				"version": "3.0.0",
+				"size": 4994
+			},
+			{
+				"name": "escalade",
+				"version": "3.2.0",
+				"size": 12385
+			},
+			{
+				"name": "yargs-parser",
+				"version": "21.1.1",
+				"size": 128470
+			},
+			{
+				"name": "get-caller-file",
+				"version": "2.0.5",
+				"size": 4719
+			},
+			{
+				"name": "require-directory",
+				"version": "2.1.1"
+			},
+			{
+				"name": "@js-sdsl/ordered-map",
+				"version": "4.4.2",
+				"size": 400201
+			},
+			{
+				"name": "@grpc/proto-loader",
+				"version": "0.5.6",
+				"size": 29479
+			},
+			{
+				"name": "protobufjs",
+				"version": "6.11.4",
+				"size": 14657694
+			},
+			{
+				"name": "long",
+				"version": "4.0.0"
+			},
+			{
+				"name": "@types/long",
+				"version": "4.0.2",
+				"size": 13261
+			},
+			{
+				"name": "@firebase/firestore-types",
+				"version": "1.14.0",
+				"size": 14264
+			},
+			{
+				"name": "@firebase/webchannel-wrapper",
+				"version": "0.4.0",
+				"size": 3209694
+			},
+			{
+				"name": "@firebase/functions",
+				"version": "0.5.1",
+				"size": 256458
+			},
+			{
+				"name": "@firebase/functions-types",
+				"version": "0.3.17",
+				"size": 5745
+			},
+			{
+				"name": "@firebase/messaging-types",
+				"version": "0.5.0",
+				"size": 4088
+			},
+			{
+				"name": "@firebase/messaging",
+				"version": "0.7.1",
+				"size": 536467
+			},
+			{
+				"name": "@firebase/performance",
+				"version": "0.4.2",
+				"size": 502571
+			},
+			{
+				"name": "@firebase/performance-types",
+				"version": "0.0.13",
+				"size": 4448
+			},
+			{
+				"name": "@firebase/remote-config",
+				"version": "0.1.28",
+				"size": 399199
+			},
+			{
+				"name": "@firebase/remote-config-types",
+				"version": "0.1.9",
+				"size": 5918
+			},
+			{
+				"name": "observable-membrane",
+				"version": "1.1.5",
+				"size": 94384
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[2, 4],
+			[2, 5],
+			[5, 3],
+			[2, 6],
+			[2, 7],
+			[2, 8],
+			[2, 9],
+			[9, 3],
+			[9, 5],
+			[5, 3],
+			[1, 10],
+			[10, 11],
+			[1, 5],
+			[5, 3],
+			[1, 12],
+			[12, 3],
+			[12, 5],
+			[5, 3],
+			[12, 9],
+			[9, 3],
+			[9, 5],
+			[5, 3],
+			[12, 13],
+			[1, 14],
+			[14, 3],
+			[14, 5],
+			[5, 3],
+			[14, 15],
+			[15, 16],
+			[16, 17],
+			[16, 18],
+			[16, 19],
+			[14, 7],
+			[14, 9],
+			[9, 3],
+			[9, 5],
+			[5, 3],
+			[14, 20],
+			[20, 8],
+			[14, 21],
+			[1, 22],
+			[22, 23],
+			[22, 24],
+			[22, 25],
+			[1, 26],
+			[26, 3],
+			[26, 5],
+			[5, 3],
+			[26, 7],
+			[26, 9],
+			[9, 3],
+			[9, 5],
+			[5, 3],
+			[26, 27],
+			[27, 28],
+			[27, 3],
+			[27, 5],
+			[5, 3],
+			[27, 9],
+			[9, 3],
+			[9, 5],
+			[5, 3],
+			[27, 29],
+			[26, 30],
+			[1, 8],
+			[1, 31],
+			[31, 3],
+			[31, 32],
+			[31, 33],
+			[33, 34],
+			[34, 35],
+			[34, 36],
+			[34, 37],
+			[37, 38],
+			[37, 39],
+			[37, 40],
+			[37, 41],
+			[37, 42],
+			[42, 38],
+			[42, 43],
+			[37, 44],
+			[37, 43],
+			[37, 45],
+			[37, 46],
+			[37, 47],
+			[37, 48],
+			[48, 49],
+			[37, 36],
+			[34, 50],
+			[50, 51],
+			[50, 52],
+			[52, 53],
+			[53, 54],
+			[54, 55],
+			[55, 56],
+			[53, 57],
+			[57, 58],
+			[58, 59],
+			[57, 60],
+			[57, 61],
+			[53, 58],
+			[58, 59],
+			[52, 58],
+			[58, 59],
+			[52, 57],
+			[57, 58],
+			[58, 59],
+			[57, 60],
+			[57, 61],
+			[50, 62],
+			[50, 57],
+			[57, 58],
+			[58, 59],
+			[57, 60],
+			[57, 61],
+			[50, 63],
+			[50, 64],
+			[50, 65],
+			[33, 66],
+			[31, 5],
+			[5, 3],
+			[31, 7],
+			[31, 67],
+			[67, 68],
+			[68, 69],
+			[68, 70],
+			[68, 48],
+			[48, 49],
+			[68, 45],
+			[68, 46],
+			[68, 47],
+			[68, 42],
+			[42, 38],
+			[42, 43],
+			[68, 44],
+			[68, 39],
+			[68, 40],
+			[68, 43],
+			[68, 38],
+			[68, 41],
+			[67, 35],
+			[31, 9],
+			[9, 3],
+			[9, 5],
+			[5, 3],
+			[31, 71],
+			[31, 72],
+			[1, 73],
+			[73, 3],
+			[73, 32],
+			[73, 9],
+			[9, 3],
+			[9, 5],
+			[5, 3],
+			[73, 74],
+			[73, 75],
+			[1, 76],
+			[76, 28],
+			[76, 3],
+			[76, 5],
+			[5, 3],
+			[76, 9],
+			[9, 3],
+			[9, 5],
+			[5, 3],
+			[76, 27],
+			[27, 28],
+			[27, 3],
+			[27, 5],
+			[5, 3],
+			[27, 9],
+			[9, 3],
+			[9, 5],
+			[5, 3],
+			[27, 29],
+			[76, 75],
+			[1, 77],
+			[77, 3],
+			[77, 5],
+			[5, 3],
+			[77, 7],
+			[77, 9],
+			[9, 3],
+			[9, 5],
+			[5, 3],
+			[77, 27],
+			[27, 28],
+			[27, 3],
+			[27, 5],
+			[5, 3],
+			[27, 9],
+			[9, 3],
+			[9, 5],
+			[5, 3],
+			[27, 29],
+			[77, 78],
+			[1, 27],
+			[27, 28],
+			[27, 3],
+			[27, 5],
+			[5, 3],
+			[27, 9],
+			[9, 3],
+			[9, 5],
+			[5, 3],
+			[27, 29],
+			[1, 79],
+			[79, 3],
+			[79, 5],
+			[5, 3],
+			[79, 7],
+			[79, 9],
+			[9, 3],
+			[9, 5],
+			[5, 3],
+			[79, 27],
+			[27, 28],
+			[27, 3],
+			[27, 5],
+			[5, 3],
+			[27, 9],
+			[9, 3],
+			[9, 5],
+			[5, 3],
+			[27, 29],
+			[79, 80],
+			[0, 81]
+		],
+		"circular": []
+	}
 }

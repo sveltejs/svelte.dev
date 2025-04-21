@@ -11,8 +11,6 @@
 	"version": "1.0.1",
 	"svelte_range": "^3.44.0",
 	"last_rune_check_version": "1.0.1",
-	"dependencies": [],
-	"unpacked_size": 125504,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -182,5 +180,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "sussy-components",
+				"version": "1.0.1",
+				"size": 125504
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

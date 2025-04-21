@@ -13,57 +13,6 @@
 	"version": "2.0.0-next",
 	"svelte_range": "^3.46.6",
 	"last_rune_check_version": "2.0.0-next",
-	"dependencies": [
-		{
-			"name": "sirv",
-			"semver": "^1.0.18"
-		},
-		{
-			"name": "polka",
-			"semver": "^1.0.0-next.22"
-		},
-		{
-			"name": "cookie",
-			"semver": "0.4.1"
-		},
-		{
-			"name": "dotenv",
-			"semver": "^10.0.0"
-		},
-		{
-			"name": "colorette",
-			"semver": "^2.0.16"
-		},
-		{
-			"name": "commander",
-			"semver": "^9.2.0"
-		},
-		{
-			"name": "pluralize",
-			"semver": "^8.0.0"
-		},
-		{
-			"name": "formidable",
-			"semver": "^2.0.1"
-		},
-		{
-			"name": "hash-equals",
-			"semver": "^0.0.5"
-		},
-		{
-			"name": "express-session",
-			"semver": "^1.17.2"
-		},
-		{
-			"name": "@kodepandai/flydrive",
-			"semver": "^2.0.1"
-		},
-		{
-			"name": "@kodepandai/node-input-validator",
-			"semver": "^1.0.0-beta"
-		}
-	],
-	"unpacked_size": 106249,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -373,5 +322,637 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 230
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@lunoxjs/core",
+				"version": "2.0.0-next",
+				"size": 106249
+			},
+			{
+				"name": "sirv",
+				"version": "1.0.19",
+				"size": 20668
+			},
+			{
+				"name": "mrmime",
+				"version": "1.0.1",
+				"size": 31038
+			},
+			{
+				"name": "totalist",
+				"version": "1.1.0",
+				"size": 7522
+			},
+			{
+				"name": "@polka/url",
+				"version": "1.0.0-next.29",
+				"size": 4815
+			},
+			{
+				"name": "polka",
+				"version": "1.0.0-next.28",
+				"size": 33033
+			},
+			{
+				"name": "trouter",
+				"version": "4.0.0",
+				"size": 14300
+			},
+			{
+				"name": "regexparam",
+				"version": "3.0.0",
+				"size": 14498
+			},
+			{
+				"name": "cookie",
+				"version": "0.4.1",
+				"size": 18123
+			},
+			{
+				"name": "dotenv",
+				"version": "10.0.0",
+				"size": 24884
+			},
+			{
+				"name": "colorette",
+				"version": "2.0.20",
+				"size": 17009
+			},
+			{
+				"name": "commander",
+				"version": "9.5.0",
+				"size": 173252
+			},
+			{
+				"name": "pluralize",
+				"version": "8.0.0",
+				"size": 17725
+			},
+			{
+				"name": "formidable",
+				"version": "2.1.0",
+				"size": 94710
+			},
+			{
+				"name": "qs",
+				"version": "6.14.0",
+				"size": 268238
+			},
+			{
+				"name": "side-channel",
+				"version": "1.1.0",
+				"size": 21545
+			},
+			{
+				"name": "es-errors",
+				"version": "1.3.0",
+				"size": 12324
+			},
+			{
+				"name": "object-inspect",
+				"version": "1.13.4",
+				"size": 102920
+			},
+			{
+				"name": "side-channel-list",
+				"version": "1.0.0",
+				"size": 14741
+			},
+			{
+				"name": "side-channel-map",
+				"version": "1.0.1",
+				"size": 13348
+			},
+			{
+				"name": "call-bound",
+				"version": "1.0.4",
+				"size": 17106
+			},
+			{
+				"name": "call-bind-apply-helpers",
+				"version": "1.0.2",
+				"size": 15952
+			},
+			{
+				"name": "function-bind",
+				"version": "1.1.2",
+				"size": 31427
+			},
+			{
+				"name": "get-intrinsic",
+				"version": "1.3.0",
+				"size": 46542
+			},
+			{
+				"name": "es-define-property",
+				"version": "1.0.1",
+				"size": 10217
+			},
+			{
+				"name": "es-object-atoms",
+				"version": "1.1.1",
+				"size": 11442
+			},
+			{
+				"name": "get-proto",
+				"version": "1.0.1",
+				"size": 10840
+			},
+			{
+				"name": "dunder-proto",
+				"version": "1.0.1",
+				"size": 13003
+			},
+			{
+				"name": "gopd",
+				"version": "1.2.0",
+				"size": 9869
+			},
+			{
+				"name": "has-symbols",
+				"version": "1.1.0",
+				"size": 23409
+			},
+			{
+				"name": "hasown",
+				"version": "2.0.2",
+				"size": 8765
+			},
+			{
+				"name": "math-intrinsics",
+				"version": "1.1.0",
+				"size": 17323
+			},
+			{
+				"name": "side-channel-weakmap",
+				"version": "1.0.2",
+				"size": 14667
+			},
+			{
+				"name": "once",
+				"version": "1.4.0"
+			},
+			{
+				"name": "wrappy",
+				"version": "1.0.2"
+			},
+			{
+				"name": "hexoid",
+				"version": "1.0.0",
+				"size": 7718
+			},
+			{
+				"name": "dezalgo",
+				"version": "1.0.4",
+				"size": 2955
+			},
+			{
+				"name": "asap",
+				"version": "2.0.6"
+			},
+			{
+				"name": "hash-equals",
+				"version": "0.0.5",
+				"size": 5510
+			},
+			{
+				"name": "express-session",
+				"version": "1.18.1",
+				"size": 86838
+			},
+			{
+				"name": "depd",
+				"version": "2.0.0",
+				"size": 27117
+			},
+			{
+				"name": "debug",
+				"version": "2.6.9"
+			},
+			{
+				"name": "ms",
+				"version": "2.0.0"
+			},
+			{
+				"name": "cookie",
+				"version": "0.7.2",
+				"size": 23382
+			},
+			{
+				"name": "parseurl",
+				"version": "1.3.3",
+				"size": 10299
+			},
+			{
+				"name": "uid-safe",
+				"version": "2.1.5"
+			},
+			{
+				"name": "random-bytes",
+				"version": "1.0.0"
+			},
+			{
+				"name": "on-headers",
+				"version": "1.0.2",
+				"size": 7538
+			},
+			{
+				"name": "safe-buffer",
+				"version": "5.2.1",
+				"size": 32101
+			},
+			{
+				"name": "cookie-signature",
+				"version": "1.0.7",
+				"size": 4083
+			},
+			{
+				"name": "@kodepandai/flydrive",
+				"version": "2.0.1",
+				"size": 33445
+			},
+			{
+				"name": "fs-extra",
+				"version": "9.1.0",
+				"size": 129795
+			},
+			{
+				"name": "jsonfile",
+				"version": "6.1.0",
+				"size": 19750
+			},
+			{
+				"name": "universalify",
+				"version": "2.0.1",
+				"size": 4675
+			},
+			{
+				"name": "graceful-fs",
+				"version": "4.2.11",
+				"size": 32535
+			},
+			{
+				"name": "at-least-node",
+				"version": "1.0.0",
+				"size": 2625
+			},
+			{
+				"name": "node-exceptions",
+				"version": "4.0.1",
+				"size": 11067
+			},
+			{
+				"name": "@kodepandai/node-input-validator",
+				"version": "1.0.0-beta",
+				"size": 229782
+			},
+			{
+				"name": "file-type",
+				"version": "16.5.4",
+				"size": 76681
+			},
+			{
+				"name": "strtok3",
+				"version": "6.3.0",
+				"size": 52187
+			},
+			{
+				"name": "peek-readable",
+				"version": "4.1.0",
+				"size": 16198
+			},
+			{
+				"name": "@tokenizer/token",
+				"version": "0.3.0",
+				"size": 3037
+			},
+			{
+				"name": "token-types",
+				"version": "4.2.1",
+				"size": 24684
+			},
+			{
+				"name": "ieee754",
+				"version": "1.2.1",
+				"size": 6796
+			},
+			{
+				"name": "readable-web-to-node-stream",
+				"version": "3.0.4",
+				"size": 10787
+			},
+			{
+				"name": "readable-stream",
+				"version": "4.7.0",
+				"size": 217898
+			},
+			{
+				"name": "abort-controller",
+				"version": "3.0.0",
+				"size": 76297
+			},
+			{
+				"name": "event-target-shim",
+				"version": "5.0.1",
+				"size": 188883
+			},
+			{
+				"name": "buffer",
+				"version": "6.0.3",
+				"size": 91279
+			},
+			{
+				"name": "base64-js",
+				"version": "1.5.1",
+				"size": 9624
+			},
+			{
+				"name": "events",
+				"version": "3.3.0",
+				"size": 82778
+			},
+			{
+				"name": "process",
+				"version": "0.11.10"
+			},
+			{
+				"name": "string_decoder",
+				"version": "1.3.0",
+				"size": 14427
+			},
+			{
+				"name": "mime-types",
+				"version": "2.1.35",
+				"size": 18272
+			},
+			{
+				"name": "mime-db",
+				"version": "1.52.0",
+				"size": 205539
+			},
+			{
+				"name": "read-chunk",
+				"version": "3.2.0",
+				"size": 4490
+			},
+			{
+				"name": "pify",
+				"version": "4.0.1",
+				"size": 7234
+			},
+			{
+				"name": "with-open-file",
+				"version": "0.1.7",
+				"size": 3588
+			},
+			{
+				"name": "p-finally",
+				"version": "1.0.0"
+			},
+			{
+				"name": "p-try",
+				"version": "2.2.0",
+				"size": 4371
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[1, 4],
+			[0, 5],
+			[5, 4],
+			[5, 6],
+			[6, 7],
+			[0, 8],
+			[0, 9],
+			[0, 10],
+			[0, 11],
+			[0, 12],
+			[0, 13],
+			[13, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17],
+			[15, 18],
+			[18, 16],
+			[18, 17],
+			[15, 19],
+			[19, 20],
+			[20, 21],
+			[21, 16],
+			[21, 22],
+			[20, 23],
+			[23, 21],
+			[21, 16],
+			[21, 22],
+			[23, 24],
+			[23, 16],
+			[23, 25],
+			[25, 16],
+			[23, 22],
+			[23, 26],
+			[26, 27],
+			[27, 21],
+			[21, 16],
+			[21, 22],
+			[27, 16],
+			[27, 28],
+			[26, 25],
+			[25, 16],
+			[23, 28],
+			[23, 29],
+			[23, 30],
+			[30, 22],
+			[23, 31],
+			[19, 16],
+			[19, 23],
+			[23, 21],
+			[21, 16],
+			[21, 22],
+			[23, 24],
+			[23, 16],
+			[23, 25],
+			[25, 16],
+			[23, 22],
+			[23, 26],
+			[26, 27],
+			[27, 21],
+			[21, 16],
+			[21, 22],
+			[27, 16],
+			[27, 28],
+			[26, 25],
+			[25, 16],
+			[23, 28],
+			[23, 29],
+			[23, 30],
+			[30, 22],
+			[23, 31],
+			[19, 17],
+			[15, 32],
+			[32, 20],
+			[20, 21],
+			[21, 16],
+			[21, 22],
+			[20, 23],
+			[23, 21],
+			[21, 16],
+			[21, 22],
+			[23, 24],
+			[23, 16],
+			[23, 25],
+			[25, 16],
+			[23, 22],
+			[23, 26],
+			[26, 27],
+			[27, 21],
+			[21, 16],
+			[21, 22],
+			[27, 16],
+			[27, 28],
+			[26, 25],
+			[25, 16],
+			[23, 28],
+			[23, 29],
+			[23, 30],
+			[30, 22],
+			[23, 31],
+			[32, 16],
+			[32, 23],
+			[23, 21],
+			[21, 16],
+			[21, 22],
+			[23, 24],
+			[23, 16],
+			[23, 25],
+			[25, 16],
+			[23, 22],
+			[23, 26],
+			[26, 27],
+			[27, 21],
+			[21, 16],
+			[21, 22],
+			[27, 16],
+			[27, 28],
+			[26, 25],
+			[25, 16],
+			[23, 28],
+			[23, 29],
+			[23, 30],
+			[30, 22],
+			[23, 31],
+			[32, 17],
+			[32, 19],
+			[19, 20],
+			[20, 21],
+			[21, 16],
+			[21, 22],
+			[20, 23],
+			[23, 21],
+			[21, 16],
+			[21, 22],
+			[23, 24],
+			[23, 16],
+			[23, 25],
+			[25, 16],
+			[23, 22],
+			[23, 26],
+			[26, 27],
+			[27, 21],
+			[21, 16],
+			[21, 22],
+			[27, 16],
+			[27, 28],
+			[26, 25],
+			[25, 16],
+			[23, 28],
+			[23, 29],
+			[23, 30],
+			[30, 22],
+			[23, 31],
+			[19, 16],
+			[19, 23],
+			[23, 21],
+			[21, 16],
+			[21, 22],
+			[23, 24],
+			[23, 16],
+			[23, 25],
+			[25, 16],
+			[23, 22],
+			[23, 26],
+			[26, 27],
+			[27, 21],
+			[21, 16],
+			[21, 22],
+			[27, 16],
+			[27, 28],
+			[26, 25],
+			[25, 16],
+			[23, 28],
+			[23, 29],
+			[23, 30],
+			[30, 22],
+			[23, 31],
+			[19, 17],
+			[13, 33],
+			[33, 34],
+			[13, 35],
+			[13, 36],
+			[36, 37],
+			[36, 34],
+			[0, 38],
+			[0, 39],
+			[39, 40],
+			[39, 41],
+			[41, 42],
+			[39, 43],
+			[39, 44],
+			[39, 45],
+			[45, 46],
+			[39, 47],
+			[39, 48],
+			[39, 49],
+			[0, 50],
+			[50, 51],
+			[51, 52],
+			[52, 53],
+			[51, 54],
+			[51, 53],
+			[51, 55],
+			[50, 56],
+			[0, 57],
+			[57, 58],
+			[58, 59],
+			[59, 60],
+			[59, 61],
+			[58, 62],
+			[62, 63],
+			[62, 61],
+			[58, 64],
+			[64, 65],
+			[65, 66],
+			[66, 67],
+			[65, 68],
+			[68, 69],
+			[68, 63],
+			[65, 70],
+			[65, 71],
+			[65, 72],
+			[72, 48],
+			[57, 73],
+			[73, 74],
+			[57, 75],
+			[75, 76],
+			[75, 77],
+			[77, 78],
+			[77, 79],
+			[77, 76]
+		],
+		"circular": []
+	}
 }

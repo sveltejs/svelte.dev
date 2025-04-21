@@ -13,13 +13,6 @@
 	"version": "0.0.1",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "0.0.1",
-	"dependencies": [
-		{
-			"name": "@toast-ui/editor",
-			"semver": "^2.0.0"
-		}
-	],
-	"unpacked_size": 5426,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -277,5 +270,48 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "tui-editor-svelte",
+				"version": "0.0.1",
+				"size": 5426
+			},
+			{
+				"name": "@toast-ui/editor",
+				"version": "2.5.4",
+				"size": 1750844
+			},
+			{
+				"name": "@types/codemirror",
+				"version": "0.0.71",
+				"size": 97944
+			},
+			{
+				"name": "@types/tern",
+				"version": "0.23.9",
+				"size": 39229
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "codemirror",
+				"version": "5.65.19",
+				"size": 2962230
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[3, 4],
+			[1, 5]
+		],
+		"circular": []
+	}
 }

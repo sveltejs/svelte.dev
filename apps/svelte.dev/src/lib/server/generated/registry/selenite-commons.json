@@ -14,45 +14,6 @@
 	"svelte_range": "^5.2.0",
 	"kit_range": "^2.8.1",
 	"last_rune_check_version": "0.30.12",
-	"dependencies": [
-		{
-			"name": "@neodrag/svelte",
-			"semver": "^2.0.6"
-		},
-		{
-			"name": "@selenite/commons-rs",
-			"semver": "^0.1.2"
-		},
-		{
-			"name": "autosize",
-			"semver": "^6.0.1"
-		},
-		{
-			"name": "core-js",
-			"semver": "^3.39.0"
-		},
-		{
-			"name": "fast-xml-parser",
-			"semver": "^4.5.0"
-		},
-		{
-			"name": "ml-classify-text",
-			"semver": "^2.0.1"
-		},
-		{
-			"name": "pluralize",
-			"semver": "^8.0.0"
-		},
-		{
-			"name": "svelte-portal",
-			"semver": "^2.2.1"
-		},
-		{
-			"name": "uuid",
-			"semver": "11.0.3"
-		}
-	],
-	"unpacked_size": 226536,
 	"downloads_history": [
 		{
 			"range": [1720377000000, 1720981799999],
@@ -210,5 +171,102 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 141
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@selenite/commons",
+				"version": "0.30.12",
+				"size": 226536
+			},
+			{
+				"name": "@neodrag/svelte",
+				"version": "2.3.2",
+				"size": 33675
+			},
+			{
+				"name": "@selenite/commons-rs",
+				"version": "0.1.2",
+				"size": 257996
+			},
+			{
+				"name": "autosize",
+				"version": "6.0.1",
+				"size": 25088
+			},
+			{
+				"name": "core-js",
+				"version": "3.41.0",
+				"size": 1265563
+			},
+			{
+				"name": "fast-xml-parser",
+				"version": "4.5.3",
+				"size": 230455
+			},
+			{
+				"name": "strnum",
+				"version": "1.1.2",
+				"size": 19247
+			},
+			{
+				"name": "ml-classify-text",
+				"version": "2.0.1",
+				"size": 185262
+			},
+			{
+				"name": "xregexp",
+				"version": "5.1.2",
+				"size": 842962
+			},
+			{
+				"name": "@babel/runtime-corejs3",
+				"version": "7.27.0",
+				"size": 331596
+			},
+			{
+				"name": "core-js-pure",
+				"version": "3.41.0",
+				"size": 1122771
+			},
+			{
+				"name": "regenerator-runtime",
+				"version": "0.14.1",
+				"size": 27863
+			},
+			{
+				"name": "pluralize",
+				"version": "8.0.0",
+				"size": 17725
+			},
+			{
+				"name": "svelte-portal",
+				"version": "2.2.1",
+				"size": 10935
+			},
+			{
+				"name": "uuid",
+				"version": "11.0.3",
+				"size": 293890
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[0, 4],
+			[0, 5],
+			[5, 6],
+			[0, 7],
+			[7, 8],
+			[8, 9],
+			[9, 10],
+			[9, 11],
+			[0, 12],
+			[0, 13],
+			[0, 14]
+		],
+		"circular": []
+	}
 }

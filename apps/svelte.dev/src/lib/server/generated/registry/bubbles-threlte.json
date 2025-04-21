@@ -14,21 +14,6 @@
 	"svelte_range": "^4.2.7",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "1.0.0",
-	"dependencies": [
-		{
-			"name": "@threlte/core",
-			"semver": "^7.3.1"
-		},
-		{
-			"name": "@types/three",
-			"semver": "^0.167.0"
-		},
-		{
-			"name": "three",
-			"semver": "^0.167.0"
-		}
-	],
-	"unpacked_size": 35783,
 	"downloads_history": [
 		{
 			"range": [1724610600000, 1725215399999],
@@ -134,5 +119,72 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "bubbles-threlte",
+				"version": "1.0.0",
+				"size": 35783
+			},
+			{
+				"name": "@threlte/core",
+				"version": "7.3.1",
+				"size": 298303
+			},
+			{
+				"name": "mitt",
+				"version": "3.0.1",
+				"size": 26444
+			},
+			{
+				"name": "@types/three",
+				"version": "0.167.2",
+				"size": 1238495
+			},
+			{
+				"name": "fflate",
+				"version": "0.8.2",
+				"size": 773398
+			},
+			{
+				"name": "@types/webxr",
+				"version": "0.5.22",
+				"size": 43142
+			},
+			{
+				"name": "meshoptimizer",
+				"version": "0.18.1",
+				"size": 163292
+			},
+			{
+				"name": "@types/stats.js",
+				"version": "0.17.3",
+				"size": 4069
+			},
+			{
+				"name": "@tweenjs/tween.js",
+				"version": "23.1.3",
+				"size": 161333
+			},
+			{
+				"name": "three",
+				"version": "0.167.1",
+				"size": 24544740
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[3, 7],
+			[3, 8],
+			[0, 9]
+		],
+		"circular": []
+	}
 }

@@ -13,13 +13,6 @@
 	"version": "1.0.1",
 	"svelte_range": "^4.0.4",
 	"last_rune_check_version": "1.0.1",
-	"dependencies": [
-		{
-			"name": "@sveu/shared",
-			"semver": "^1.0.1"
-		}
-	],
-	"unpacked_size": 111452,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +326,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 140
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@sveu/browser",
+				"version": "1.0.1",
+				"size": 111452
+			},
+			{
+				"name": "@sveu/shared",
+				"version": "1.0.1",
+				"size": 88938
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

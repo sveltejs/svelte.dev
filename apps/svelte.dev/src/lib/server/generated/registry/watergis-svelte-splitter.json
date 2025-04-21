@@ -14,8 +14,6 @@
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "2.0.0",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 21624,
 	"downloads_history": [
 		{
 			"range": [1724005800000, 1724610599999],
@@ -153,5 +151,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 45
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@watergis/svelte-splitter",
+				"version": "2.0.0",
+				"size": 21624
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

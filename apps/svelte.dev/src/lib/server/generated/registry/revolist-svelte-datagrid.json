@@ -13,13 +13,6 @@
 	"version": "4.15.5",
 	"svelte_range": "^5.2.7",
 	"last_rune_check_version": "4.15.5",
-	"dependencies": [
-		{
-			"name": "@revolist/revogrid",
-			"semver": "4.15.5"
-		}
-	],
-	"unpacked_size": 74764,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +326,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 704
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@revolist/svelte-datagrid",
+				"version": "4.15.5",
+				"size": 74764
+			},
+			{
+				"name": "@revolist/revogrid",
+				"version": "4.15.5",
+				"size": 13500582
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

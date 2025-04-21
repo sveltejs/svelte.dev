@@ -13,8 +13,6 @@
 	"version": "2.3.0",
 	"svelte_range": "^3.30.0",
 	"last_rune_check_version": "2.3.0",
-	"dependencies": [],
-	"unpacked_size": 168475,
 	"downloads_history": [
 		{
 			"range": [1708281000000, 1708885799999],
@@ -144,5 +142,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-grid-2023",
+				"version": "2.3.0",
+				"size": 168475
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

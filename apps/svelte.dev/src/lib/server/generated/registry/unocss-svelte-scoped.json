@@ -13,29 +13,6 @@
 	"version": "66.1.0-beta.12",
 	"svelte_range": "^5.26.1",
 	"last_rune_check_version": "66.1.0-beta.12",
-	"dependencies": [
-		{
-			"name": "css-tree",
-			"semver": "^3.1.0"
-		},
-		{
-			"name": "magic-string",
-			"semver": "^0.30.17"
-		},
-		{
-			"name": "@unocss/config",
-			"semver": "66.1.0-beta.12"
-		},
-		{
-			"name": "@unocss/preset-uno",
-			"semver": "66.1.0-beta.12"
-		},
-		{
-			"name": "@unocss/reset",
-			"semver": "66.1.0-beta.12"
-		}
-	],
-	"unpacked_size": 43466,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -349,5 +326,138 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 973
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@unocss/svelte-scoped",
+				"version": "66.1.0-beta.12",
+				"size": 43466
+			},
+			{
+				"name": "css-tree",
+				"version": "3.1.0",
+				"size": 1327071
+			},
+			{
+				"name": "mdn-data",
+				"version": "2.12.2",
+				"size": 662356
+			},
+			{
+				"name": "source-map-js",
+				"version": "1.2.1",
+				"size": 139872
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "@unocss/config",
+				"version": "66.1.0-beta.12",
+				"size": 5830
+			},
+			{
+				"name": "unconfig",
+				"version": "7.3.1",
+				"size": 23611
+			},
+			{
+				"name": "@quansync/fs",
+				"version": "0.1.2",
+				"size": 10864
+			},
+			{
+				"name": "quansync",
+				"version": "0.2.10",
+				"size": 23881
+			},
+			{
+				"name": "defu",
+				"version": "6.1.4",
+				"size": 19561
+			},
+			{
+				"name": "jiti",
+				"version": "2.4.2",
+				"size": 2131809
+			},
+			{
+				"name": "@unocss/core",
+				"version": "66.1.0-beta.12",
+				"size": 128877
+			},
+			{
+				"name": "@unocss/preset-uno",
+				"version": "66.1.0-beta.12",
+				"size": 4499
+			},
+			{
+				"name": "@unocss/preset-wind3",
+				"version": "66.1.0-beta.12",
+				"size": 91440
+			},
+			{
+				"name": "@unocss/rule-utils",
+				"version": "66.1.0-beta.12",
+				"size": 21384
+			},
+			{
+				"name": "@unocss/preset-mini",
+				"version": "66.1.0-beta.12",
+				"size": 225621
+			},
+			{
+				"name": "@unocss/extractor-arbitrary-variants",
+				"version": "66.1.0-beta.12",
+				"size": 5764
+			},
+			{
+				"name": "@unocss/reset",
+				"version": "66.1.0-beta.12",
+				"size": 49706
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[0, 4],
+			[4, 5],
+			[0, 6],
+			[6, 7],
+			[7, 8],
+			[8, 9],
+			[7, 10],
+			[7, 11],
+			[7, 9],
+			[6, 12],
+			[0, 13],
+			[13, 12],
+			[13, 14],
+			[14, 12],
+			[14, 15],
+			[15, 4],
+			[4, 5],
+			[15, 12],
+			[14, 16],
+			[16, 17],
+			[17, 12],
+			[16, 15],
+			[15, 4],
+			[4, 5],
+			[15, 12],
+			[16, 12],
+			[0, 18]
+		],
+		"circular": []
+	}
 }

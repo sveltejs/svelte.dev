@@ -14,8 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.0.6",
-	"dependencies": [],
-	"unpacked_size": 4659,
 	"downloads_history": [
 		{
 			"range": [1703442600000, 1704047399999],
@@ -197,5 +195,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 11
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "dekilte-ui",
+				"version": "0.0.6",
+				"size": 4659
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

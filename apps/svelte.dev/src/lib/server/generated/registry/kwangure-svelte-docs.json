@@ -13,25 +13,6 @@
 	"version": "0.5.2",
 	"svelte_range": "^3.46.0",
 	"last_rune_check_version": "0.5.2",
-	"dependencies": [
-		{
-			"name": "@rollup/pluginutils",
-			"semver": "^5.0.2"
-		},
-		{
-			"name": "comment-parser",
-			"semver": "^1.1.5"
-		},
-		{
-			"name": "css-tree",
-			"semver": "^2.2.1"
-		},
-		{
-			"name": "mdn-data",
-			"semver": "^2.0.28"
-		}
-	],
-	"unpacked_size": 17894,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -261,5 +242,72 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 9
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@kwangure/svelte-docs",
+				"version": "0.5.2",
+				"size": 17894
+			},
+			{
+				"name": "@rollup/pluginutils",
+				"version": "5.1.4",
+				"size": 58354
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "estree-walker",
+				"version": "2.0.2",
+				"size": 50243
+			},
+			{
+				"name": "picomatch",
+				"version": "4.0.2",
+				"size": 85237
+			},
+			{
+				"name": "comment-parser",
+				"version": "1.4.1",
+				"size": 365999
+			},
+			{
+				"name": "css-tree",
+				"version": "2.3.1",
+				"size": 1190591
+			},
+			{
+				"name": "mdn-data",
+				"version": "2.0.30",
+				"size": 602138
+			},
+			{
+				"name": "source-map-js",
+				"version": "1.2.1",
+				"size": 139872
+			},
+			{
+				"name": "mdn-data",
+				"version": "2.21.0",
+				"size": 690717
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[1, 4],
+			[0, 5],
+			[0, 6],
+			[6, 7],
+			[6, 8],
+			[0, 9]
+		],
+		"circular": []
+	}
 }

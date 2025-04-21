@@ -14,8 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "1.0.1",
-	"dependencies": [],
-	"unpacked_size": 9042172,
 	"downloads_history": [
 		{
 			"range": [1719167400000, 1719772199999],
@@ -185,5 +183,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 23
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "isaxvelte-pro",
+				"version": "1.0.1",
+				"size": 9042172
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

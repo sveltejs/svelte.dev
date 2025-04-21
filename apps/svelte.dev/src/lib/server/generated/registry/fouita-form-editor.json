@@ -13,17 +13,6 @@
 	"version": "0.0.5",
 	"svelte_range": "^3.55.0",
 	"last_rune_check_version": "0.0.5",
-	"dependencies": [
-		{
-			"name": "@tailwindcss/forms",
-			"semver": "^0.5.3"
-		},
-		{
-			"name": "tailwind-editor",
-			"semver": "^0.2.1"
-		}
-	],
-	"unpacked_size": 1063639,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -245,5 +234,36 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@fouita/form-editor",
+				"version": "0.0.5",
+				"size": 1063639
+			},
+			{
+				"name": "@tailwindcss/forms",
+				"version": "0.5.10",
+				"size": 54509
+			},
+			{
+				"name": "mini-svg-data-uri",
+				"version": "1.4.4",
+				"size": 10460
+			},
+			{
+				"name": "tailwind-editor",
+				"version": "0.2.2",
+				"size": 458987
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3]
+		],
+		"circular": []
+	}
 }

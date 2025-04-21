@@ -11,8 +11,6 @@
 	"version": "0.50.0-alpha.27",
 	"last_rune_check_version": "0.50.0-alpha.27",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 66842,
 	"downloads_history": [
 		{
 			"range": [1711305000000, 1711909799999],
@@ -190,5 +188,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 707
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@htmlbricks/hb-matrix-video",
+				"version": "0.50.0-alpha.27",
+				"size": 66842
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

@@ -13,29 +13,6 @@
 	"version": "3.2.1",
 	"svelte_range": ">4.0",
 	"last_rune_check_version": "3.2.1",
-	"dependencies": [
-		{
-			"name": "@metamask/jazzicon",
-			"semver": "^2.0.0"
-		},
-		{
-			"name": "ethereum-blockies-base64",
-			"semver": "^1.0.2"
-		},
-		{
-			"name": "ethers",
-			"semver": "6.x"
-		},
-		{
-			"name": "svelte",
-			"semver": ">4.0"
-		},
-		{
-			"name": "svelte-proxied-store",
-			"semver": "^2.0.4"
-		}
-	],
-	"unpacked_size": 2212883,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -341,5 +318,256 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 20
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "ethers-svelte",
+				"version": "3.2.1",
+				"size": 2212883
+			},
+			{
+				"name": "@metamask/jazzicon",
+				"version": "2.0.0",
+				"size": 5867
+			},
+			{
+				"name": "color",
+				"version": "0.11.4"
+			},
+			{
+				"name": "clone",
+				"version": "1.0.4",
+				"size": 11132
+			},
+			{
+				"name": "color-string",
+				"version": "0.3.0"
+			},
+			{
+				"name": "color-name",
+				"version": "1.1.4",
+				"size": 6693
+			},
+			{
+				"name": "color-convert",
+				"version": "1.9.3",
+				"size": 26964
+			},
+			{
+				"name": "color-name",
+				"version": "1.1.3"
+			},
+			{
+				"name": "mersenne-twister",
+				"version": "1.1.0"
+			},
+			{
+				"name": "ethereum-blockies-base64",
+				"version": "1.0.2",
+				"size": 16593
+			},
+			{
+				"name": "pnglib",
+				"version": "0.0.1"
+			},
+			{
+				"name": "ethers",
+				"version": "6.13.5",
+				"size": 12625472
+			},
+			{
+				"name": "ws",
+				"version": "8.17.1",
+				"size": 141358
+			},
+			{
+				"name": "tslib",
+				"version": "2.7.0",
+				"size": 86155
+			},
+			{
+				"name": "aes-js",
+				"version": "4.0.0-beta.5",
+				"size": 737817
+			},
+			{
+				"name": "@types/node",
+				"version": "22.7.5",
+				"size": 2254135
+			},
+			{
+				"name": "undici-types",
+				"version": "6.19.8",
+				"size": 84225
+			},
+			{
+				"name": "@noble/curves",
+				"version": "1.2.0",
+				"size": 1354635
+			},
+			{
+				"name": "@noble/hashes",
+				"version": "1.3.2",
+				"size": 746880
+			},
+			{
+				"name": "@adraffy/ens-normalize",
+				"version": "1.10.1",
+				"size": 445992
+			},
+			{
+				"name": "svelte",
+				"version": "5.28.1",
+				"size": 2426419
+			},
+			{
+				"name": "@ampproject/remapping",
+				"version": "2.3.0",
+				"size": 78946
+			},
+			{
+				"name": "@jridgewell/gen-mapping",
+				"version": "0.3.8",
+				"size": 81596
+			},
+			{
+				"name": "@jridgewell/set-array",
+				"version": "1.2.1",
+				"size": 17945
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "@jridgewell/trace-mapping",
+				"version": "0.3.25",
+				"size": 169330
+			},
+			{
+				"name": "@jridgewell/resolve-uri",
+				"version": "3.1.2",
+				"size": 53153
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "@sveltejs/acorn-typescript",
+				"version": "1.0.5",
+				"size": 197476
+			},
+			{
+				"name": "aria-query",
+				"version": "5.3.2",
+				"size": 176114
+			},
+			{
+				"name": "axobject-query",
+				"version": "4.1.0",
+				"size": 110878
+			},
+			{
+				"name": "clsx",
+				"version": "2.1.1",
+				"size": 8555
+			},
+			{
+				"name": "esm-env",
+				"version": "1.2.2",
+				"size": 3784
+			},
+			{
+				"name": "esrap",
+				"version": "1.4.6",
+				"size": 50818
+			},
+			{
+				"name": "is-reference",
+				"version": "3.0.3",
+				"size": 3953
+			},
+			{
+				"name": "locate-character",
+				"version": "3.0.0",
+				"size": 5325
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "zimmerframe",
+				"version": "1.1.2",
+				"size": 12266
+			},
+			{
+				"name": "svelte-proxied-store",
+				"version": "2.0.4",
+				"size": 30004
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[2, 4],
+			[4, 5],
+			[2, 6],
+			[6, 7],
+			[1, 8],
+			[0, 9],
+			[9, 10],
+			[0, 11],
+			[11, 12],
+			[11, 13],
+			[11, 14],
+			[11, 15],
+			[15, 16],
+			[11, 17],
+			[17, 18],
+			[11, 18],
+			[11, 19],
+			[0, 20],
+			[20, 21],
+			[21, 22],
+			[22, 23],
+			[22, 24],
+			[22, 25],
+			[25, 26],
+			[25, 24],
+			[21, 25],
+			[25, 26],
+			[25, 24],
+			[20, 24],
+			[20, 27],
+			[20, 28],
+			[20, 29],
+			[20, 30],
+			[20, 31],
+			[20, 32],
+			[20, 33],
+			[20, 34],
+			[34, 24],
+			[20, 35],
+			[35, 27],
+			[20, 36],
+			[20, 37],
+			[37, 24],
+			[20, 38],
+			[0, 39]
+		],
+		"circular": []
+	}
 }

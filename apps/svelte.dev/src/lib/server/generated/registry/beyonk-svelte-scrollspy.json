@@ -13,13 +13,6 @@
 	"version": "2.1.2",
 	"svelte_range": "^3.6.1",
 	"last_rune_check_version": "2.1.2",
-	"dependencies": [
-		{
-			"name": "intersection-observer",
-			"semver": "^0.7.0"
-		}
-	],
-	"unpacked_size": 38443,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +326,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 41
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@beyonk/svelte-scrollspy",
+				"version": "2.1.2",
+				"size": 38443
+			},
+			{
+				"name": "intersection-observer",
+				"version": "0.7.0",
+				"size": 69318
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

@@ -13,17 +13,6 @@
 	"version": "0.0.1-alpha.1",
 	"svelte_range": "^3.20.1",
 	"last_rune_check_version": "0.0.1-alpha.1",
-	"dependencies": [
-		{
-			"name": "fast-glob",
-			"semver": "^3.2.2"
-		},
-		{
-			"name": "svelte",
-			"semver": "^3.20.1"
-		}
-	],
-	"unpacked_size": 12009,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -213,5 +202,132 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "hindsight",
+				"version": "0.0.1-alpha.1",
+				"size": 12009
+			},
+			{
+				"name": "fast-glob",
+				"version": "3.3.3",
+				"size": 98396
+			},
+			{
+				"name": "@nodelib/fs.stat",
+				"version": "2.0.5",
+				"size": 11845
+			},
+			{
+				"name": "@nodelib/fs.walk",
+				"version": "1.2.8",
+				"size": 26377
+			},
+			{
+				"name": "fastq",
+				"version": "1.19.1",
+				"size": 45922
+			},
+			{
+				"name": "reusify",
+				"version": "1.1.0",
+				"size": 11696
+			},
+			{
+				"name": "@nodelib/fs.scandir",
+				"version": "2.1.5",
+				"size": 22155
+			},
+			{
+				"name": "run-parallel",
+				"version": "1.2.0",
+				"size": 6563
+			},
+			{
+				"name": "queue-microtask",
+				"version": "1.2.3",
+				"size": 8367
+			},
+			{
+				"name": "glob-parent",
+				"version": "5.1.2",
+				"size": 12134
+			},
+			{
+				"name": "is-glob",
+				"version": "4.0.3",
+				"size": 13609
+			},
+			{
+				"name": "is-extglob",
+				"version": "2.1.1"
+			},
+			{
+				"name": "merge2",
+				"version": "1.4.1",
+				"size": 8897
+			},
+			{
+				"name": "micromatch",
+				"version": "4.0.8",
+				"size": 56599
+			},
+			{
+				"name": "braces",
+				"version": "3.0.3",
+				"size": 44635
+			},
+			{
+				"name": "fill-range",
+				"version": "7.1.1",
+				"size": 16743
+			},
+			{
+				"name": "to-regex-range",
+				"version": "5.0.1",
+				"size": 22939
+			},
+			{
+				"name": "is-number",
+				"version": "7.0.0",
+				"size": 9615
+			},
+			{
+				"name": "picomatch",
+				"version": "2.3.1",
+				"size": 89952
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[3, 4],
+			[4, 5],
+			[3, 6],
+			[6, 7],
+			[7, 8],
+			[6, 2],
+			[1, 9],
+			[9, 10],
+			[10, 11],
+			[1, 12],
+			[1, 13],
+			[13, 14],
+			[14, 15],
+			[15, 16],
+			[16, 17],
+			[13, 18],
+			[0, 19]
+		],
+		"circular": []
+	}
 }

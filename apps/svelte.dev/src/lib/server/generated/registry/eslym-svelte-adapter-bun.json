@@ -13,29 +13,6 @@
 	"version": "0.5.9",
 	"kit_range": "^1.30.4",
 	"last_rune_check_version": "0.5.9",
-	"dependencies": [
-		{
-			"name": "@rollup/plugin-commonjs",
-			"semver": "^25.0.7"
-		},
-		{
-			"name": "@rollup/plugin-json",
-			"semver": "^6.1.0"
-		},
-		{
-			"name": "@rollup/plugin-node-resolve",
-			"semver": "^15.2.3"
-		},
-		{
-			"name": "rollup",
-			"semver": "^4.12.1"
-		},
-		{
-			"name": "tiny-glob",
-			"semver": "^0.2.9"
-		}
-	],
-	"unpacked_size": 42834,
 	"downloads_history": [
 		{
 			"range": [1709490600000, 1710095399999],
@@ -269,5 +246,224 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 64
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@eslym/svelte-adapter-bun",
+				"version": "0.5.9",
+				"size": 42834
+			},
+			{
+				"name": "@rollup/plugin-commonjs",
+				"version": "25.0.8",
+				"size": 258175
+			},
+			{
+				"name": "glob",
+				"version": "8.1.0",
+				"size": 56156
+			},
+			{
+				"name": "once",
+				"version": "1.4.0"
+			},
+			{
+				"name": "wrappy",
+				"version": "1.0.2"
+			},
+			{
+				"name": "inflight",
+				"version": "1.0.6"
+			},
+			{
+				"name": "inherits",
+				"version": "2.0.4",
+				"size": 3958
+			},
+			{
+				"name": "minimatch",
+				"version": "5.1.6",
+				"size": 38919
+			},
+			{
+				"name": "brace-expansion",
+				"version": "2.0.1",
+				"size": 11486
+			},
+			{
+				"name": "balanced-match",
+				"version": "1.0.2",
+				"size": 6939
+			},
+			{
+				"name": "fs.realpath",
+				"version": "1.0.0"
+			},
+			{
+				"name": "commondir",
+				"version": "1.0.1"
+			},
+			{
+				"name": "is-reference",
+				"version": "1.2.1",
+				"size": 6374
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "estree-walker",
+				"version": "2.0.2",
+				"size": 50243
+			},
+			{
+				"name": "@rollup/pluginutils",
+				"version": "5.1.4",
+				"size": 58354
+			},
+			{
+				"name": "picomatch",
+				"version": "4.0.2",
+				"size": 85237
+			},
+			{
+				"name": "@rollup/plugin-json",
+				"version": "6.1.0",
+				"size": 10683
+			},
+			{
+				"name": "@rollup/plugin-node-resolve",
+				"version": "15.3.1",
+				"size": 154449
+			},
+			{
+				"name": "resolve",
+				"version": "1.22.10",
+				"size": 145619
+			},
+			{
+				"name": "is-core-module",
+				"version": "2.16.1",
+				"size": 33475
+			},
+			{
+				"name": "hasown",
+				"version": "2.0.2",
+				"size": 8765
+			},
+			{
+				"name": "function-bind",
+				"version": "1.1.2",
+				"size": 31427
+			},
+			{
+				"name": "path-parse",
+				"version": "1.0.7",
+				"size": 4511
+			},
+			{
+				"name": "supports-preserve-symlinks-flag",
+				"version": "1.0.0",
+				"size": 9178
+			},
+			{
+				"name": "deepmerge",
+				"version": "4.3.1",
+				"size": 31157
+			},
+			{
+				"name": "is-module",
+				"version": "1.0.0"
+			},
+			{
+				"name": "@types/resolve",
+				"version": "1.20.2",
+				"size": 9885
+			},
+			{
+				"name": "rollup",
+				"version": "4.40.0",
+				"size": 2726316
+			},
+			{
+				"name": "tiny-glob",
+				"version": "0.2.9",
+				"size": 12092
+			},
+			{
+				"name": "globalyzer",
+				"version": "0.1.0",
+				"size": 11416
+			},
+			{
+				"name": "globrex",
+				"version": "0.1.2",
+				"size": 14164
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[3, 4],
+			[2, 5],
+			[5, 3],
+			[3, 4],
+			[5, 4],
+			[2, 6],
+			[2, 7],
+			[7, 8],
+			[8, 9],
+			[2, 10],
+			[1, 11],
+			[1, 12],
+			[12, 13],
+			[1, 14],
+			[14, 15],
+			[1, 16],
+			[1, 17],
+			[17, 13],
+			[17, 16],
+			[17, 18],
+			[0, 19],
+			[19, 17],
+			[17, 13],
+			[17, 16],
+			[17, 18],
+			[0, 20],
+			[20, 21],
+			[21, 22],
+			[22, 23],
+			[23, 24],
+			[21, 25],
+			[21, 26],
+			[20, 27],
+			[20, 28],
+			[20, 29],
+			[20, 17],
+			[17, 13],
+			[17, 16],
+			[17, 18],
+			[0, 30],
+			[30, 13],
+			[0, 31],
+			[31, 32],
+			[31, 33]
+		],
+		"circular": []
+	}
 }

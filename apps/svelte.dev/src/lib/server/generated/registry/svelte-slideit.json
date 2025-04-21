@@ -13,13 +13,6 @@
 	"version": "0.6.0",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "0.6.0",
-	"dependencies": [
-		{
-			"name": "@glidejs/glide",
-			"semver": "^3.4.1"
-		}
-	],
-	"unpacked_size": 235066,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -229,5 +222,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-slideit",
+				"version": "0.6.0",
+				"size": 235066
+			},
+			{
+				"name": "@glidejs/glide",
+				"version": "3.7.1",
+				"size": 449869
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

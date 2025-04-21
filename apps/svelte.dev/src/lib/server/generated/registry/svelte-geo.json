@@ -14,21 +14,6 @@
 	"svelte_range": "^3.42.6",
 	"kit_range": "next",
 	"last_rune_check_version": "0.3.0",
-	"dependencies": [
-		{
-			"name": "d3-geo",
-			"semver": "^3.0.1"
-		},
-		{
-			"name": "d3-scale",
-			"semver": "^4.0.2"
-		},
-		{
-			"name": "d3-zoom",
-			"semver": "^3.0.0"
-		}
-	],
-	"unpacked_size": 15956,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -338,5 +323,129 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 11
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-geo",
+				"version": "0.3.0",
+				"size": 15956
+			},
+			{
+				"name": "d3-geo",
+				"version": "3.1.1",
+				"size": 227065
+			},
+			{
+				"name": "d3-array",
+				"version": "3.2.4",
+				"size": 163730
+			},
+			{
+				"name": "internmap",
+				"version": "2.0.3",
+				"size": 10470
+			},
+			{
+				"name": "d3-scale",
+				"version": "4.0.2",
+				"size": 174363
+			},
+			{
+				"name": "d3-format",
+				"version": "3.1.0",
+				"size": 57833
+			},
+			{
+				"name": "d3-interpolate",
+				"version": "3.0.1",
+				"size": 69687
+			},
+			{
+				"name": "d3-color",
+				"version": "3.1.0",
+				"size": 61152
+			},
+			{
+				"name": "d3-time",
+				"version": "3.1.0",
+				"size": 64483
+			},
+			{
+				"name": "d3-time-format",
+				"version": "4.1.0",
+				"size": 85603
+			},
+			{
+				"name": "d3-zoom",
+				"version": "3.0.0",
+				"size": 86878
+			},
+			{
+				"name": "d3-dispatch",
+				"version": "3.0.1",
+				"size": 15604
+			},
+			{
+				"name": "d3-drag",
+				"version": "3.0.0",
+				"size": 43023
+			},
+			{
+				"name": "d3-selection",
+				"version": "3.0.0",
+				"size": 134715
+			},
+			{
+				"name": "d3-transition",
+				"version": "3.0.1",
+				"size": 110525
+			},
+			{
+				"name": "d3-ease",
+				"version": "3.0.1",
+				"size": 34629
+			},
+			{
+				"name": "d3-timer",
+				"version": "3.0.1",
+				"size": 18405
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[0, 4],
+			[4, 2],
+			[2, 3],
+			[4, 5],
+			[4, 6],
+			[6, 7],
+			[4, 8],
+			[8, 2],
+			[2, 3],
+			[4, 9],
+			[9, 8],
+			[8, 2],
+			[2, 3],
+			[0, 10],
+			[10, 11],
+			[10, 12],
+			[12, 11],
+			[12, 13],
+			[10, 6],
+			[6, 7],
+			[10, 13],
+			[10, 14],
+			[14, 7],
+			[14, 11],
+			[14, 15],
+			[14, 6],
+			[6, 7],
+			[14, 16]
+		],
+		"circular": []
+	}
 }

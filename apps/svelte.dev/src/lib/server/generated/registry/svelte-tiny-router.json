@@ -13,8 +13,6 @@
 	"version": "1.0.4",
 	"svelte_range": ">=5.0.0",
 	"last_rune_check_version": "1.0.4",
-	"dependencies": [],
-	"unpacked_size": 44227,
 	"downloads_history": [
 		{
 			"range": [1739125800000, 1739730599999],
@@ -52,5 +50,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 13
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-tiny-router",
+				"version": "1.0.4",
+				"size": 44227
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

@@ -13,8 +13,6 @@
 	"version": "0.9.1",
 	"svelte_range": "^3.54.0",
 	"last_rune_check_version": "0.9.1",
-	"dependencies": [],
-	"unpacked_size": 31518,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -212,5 +210,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "et-date-svelte",
+				"version": "0.9.1",
+				"size": 31518
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

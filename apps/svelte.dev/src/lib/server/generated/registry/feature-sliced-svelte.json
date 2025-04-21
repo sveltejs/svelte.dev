@@ -13,8 +13,6 @@
 	"kit_range": "^1.20.4",
 	"last_rune_check_version": "1.4.0",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 15771,
 	"downloads_history": [
 		{
 			"range": [1699209000000, 1699813799999],
@@ -280,5 +278,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "feature-sliced-svelte",
+				"version": "1.4.0",
+				"size": 15771
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

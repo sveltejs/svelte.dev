@@ -14,29 +14,6 @@
 	"svelte_range": "^5.0.0-next.1",
 	"kit_range": "^2.6.2",
 	"last_rune_check_version": "0.5.0",
-	"dependencies": [
-		{
-			"name": "@accuser/mdast-util-type-guards",
-			"semver": "^1.2.0"
-		},
-		{
-			"name": "@accuser/svelte-unist",
-			"semver": "^0.5.0"
-		},
-		{
-			"name": "@types/mdast",
-			"semver": "^4.0.4"
-		},
-		{
-			"name": "mdast-util-from-markdown",
-			"semver": "^2.0.1"
-		},
-		{
-			"name": "micromark-util-types",
-			"semver": "^2.0.0"
-		}
-	],
-	"unpacked_size": 22626,
 	"downloads_history": [
 		{
 			"range": [1727634600000, 1728239399999],
@@ -130,5 +107,355 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@accuser/svelte-mdast",
+				"version": "0.5.0",
+				"size": 22626
+			},
+			{
+				"name": "@accuser/mdast-util-type-guards",
+				"version": "1.2.0",
+				"size": 143498
+			},
+			{
+				"name": "@accuser/unist-util-type-guards",
+				"version": "1.1.0",
+				"size": 16631
+			},
+			{
+				"name": "@accuser/svelte-unist",
+				"version": "0.5.0",
+				"size": 7899
+			},
+			{
+				"name": "@types/unist",
+				"version": "3.0.3",
+				"size": 6262
+			},
+			{
+				"name": "@types/mdast",
+				"version": "4.0.4",
+				"size": 29432
+			},
+			{
+				"name": "mdast-util-from-markdown",
+				"version": "2.0.2",
+				"size": 97828
+			},
+			{
+				"name": "decode-named-character-reference",
+				"version": "1.1.0",
+				"size": 9403
+			},
+			{
+				"name": "character-entities",
+				"version": "2.0.2",
+				"size": 44634
+			},
+			{
+				"name": "devlop",
+				"version": "1.1.0",
+				"size": 22010
+			},
+			{
+				"name": "dequal",
+				"version": "2.0.3",
+				"size": 14229
+			},
+			{
+				"name": "mdast-util-to-string",
+				"version": "4.0.0",
+				"size": 12692
+			},
+			{
+				"name": "micromark",
+				"version": "4.0.2",
+				"size": 209635
+			},
+			{
+				"name": "@types/debug",
+				"version": "4.1.12",
+				"size": 6450
+			},
+			{
+				"name": "@types/ms",
+				"version": "2.1.0",
+				"size": 5101
+			},
+			{
+				"name": "debug",
+				"version": "4.4.0",
+				"size": 42798
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "micromark-core-commonmark",
+				"version": "2.0.3",
+				"size": 266840
+			},
+			{
+				"name": "micromark-factory-destination",
+				"version": "2.0.1",
+				"size": 20549
+			},
+			{
+				"name": "micromark-util-character",
+				"version": "2.1.1",
+				"size": 42421
+			},
+			{
+				"name": "micromark-util-symbol",
+				"version": "2.0.1",
+				"size": 40530
+			},
+			{
+				"name": "micromark-util-types",
+				"version": "2.0.2",
+				"size": 38950
+			},
+			{
+				"name": "micromark-factory-label",
+				"version": "2.0.1",
+				"size": 17588
+			},
+			{
+				"name": "micromark-factory-space",
+				"version": "2.0.1",
+				"size": 13753
+			},
+			{
+				"name": "micromark-factory-title",
+				"version": "2.0.1",
+				"size": 16527
+			},
+			{
+				"name": "micromark-factory-whitespace",
+				"version": "2.0.1",
+				"size": 12143
+			},
+			{
+				"name": "micromark-util-chunked",
+				"version": "2.0.1",
+				"size": 16255
+			},
+			{
+				"name": "micromark-util-classify-character",
+				"version": "2.0.1",
+				"size": 11428
+			},
+			{
+				"name": "micromark-util-html-tag-name",
+				"version": "2.0.1",
+				"size": 10426
+			},
+			{
+				"name": "micromark-util-normalize-identifier",
+				"version": "2.0.1",
+				"size": 12256
+			},
+			{
+				"name": "micromark-util-resolve-all",
+				"version": "2.0.1",
+				"size": 10316
+			},
+			{
+				"name": "micromark-util-subtokenize",
+				"version": "2.1.0",
+				"size": 51162
+			},
+			{
+				"name": "micromark-util-combine-extensions",
+				"version": "2.0.1",
+				"size": 12387
+			},
+			{
+				"name": "micromark-util-decode-numeric-character-reference",
+				"version": "2.0.2",
+				"size": 11414
+			},
+			{
+				"name": "micromark-util-encode",
+				"version": "2.0.1",
+				"size": 7971
+			},
+			{
+				"name": "micromark-util-sanitize-uri",
+				"version": "2.0.1",
+				"size": 17917
+			},
+			{
+				"name": "micromark-util-decode-string",
+				"version": "2.0.1",
+				"size": 11088
+			},
+			{
+				"name": "unist-util-stringify-position",
+				"version": "4.0.0",
+				"size": 13180
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[3, 2],
+			[3, 4],
+			[0, 5],
+			[5, 4],
+			[0, 6],
+			[6, 5],
+			[5, 4],
+			[6, 4],
+			[6, 7],
+			[7, 8],
+			[6, 9],
+			[9, 10],
+			[6, 11],
+			[11, 5],
+			[5, 4],
+			[6, 12],
+			[12, 13],
+			[13, 14],
+			[12, 15],
+			[15, 16],
+			[12, 7],
+			[7, 8],
+			[12, 9],
+			[9, 10],
+			[12, 17],
+			[17, 7],
+			[7, 8],
+			[17, 9],
+			[9, 10],
+			[17, 18],
+			[18, 19],
+			[19, 20],
+			[19, 21],
+			[18, 20],
+			[18, 21],
+			[17, 22],
+			[22, 9],
+			[9, 10],
+			[22, 19],
+			[19, 20],
+			[19, 21],
+			[22, 20],
+			[22, 21],
+			[17, 23],
+			[23, 19],
+			[19, 20],
+			[19, 21],
+			[23, 21],
+			[17, 24],
+			[24, 23],
+			[23, 19],
+			[19, 20],
+			[19, 21],
+			[23, 21],
+			[24, 19],
+			[19, 20],
+			[19, 21],
+			[24, 20],
+			[24, 21],
+			[17, 25],
+			[25, 23],
+			[23, 19],
+			[19, 20],
+			[19, 21],
+			[23, 21],
+			[25, 19],
+			[19, 20],
+			[19, 21],
+			[25, 20],
+			[25, 21],
+			[17, 19],
+			[19, 20],
+			[19, 21],
+			[17, 26],
+			[26, 20],
+			[17, 27],
+			[27, 19],
+			[19, 20],
+			[19, 21],
+			[27, 20],
+			[27, 21],
+			[17, 28],
+			[17, 29],
+			[29, 20],
+			[17, 30],
+			[30, 21],
+			[17, 31],
+			[31, 9],
+			[9, 10],
+			[31, 26],
+			[26, 20],
+			[31, 20],
+			[31, 21],
+			[17, 20],
+			[17, 21],
+			[12, 23],
+			[23, 19],
+			[19, 20],
+			[19, 21],
+			[23, 21],
+			[12, 19],
+			[19, 20],
+			[19, 21],
+			[12, 26],
+			[26, 20],
+			[12, 32],
+			[32, 26],
+			[26, 20],
+			[32, 21],
+			[12, 33],
+			[33, 20],
+			[12, 34],
+			[12, 29],
+			[29, 20],
+			[12, 30],
+			[30, 21],
+			[12, 35],
+			[35, 19],
+			[19, 20],
+			[19, 21],
+			[35, 34],
+			[35, 20],
+			[12, 31],
+			[31, 9],
+			[9, 10],
+			[31, 26],
+			[26, 20],
+			[31, 20],
+			[31, 21],
+			[12, 20],
+			[12, 21],
+			[6, 33],
+			[33, 20],
+			[6, 36],
+			[36, 19],
+			[19, 20],
+			[19, 21],
+			[36, 33],
+			[33, 20],
+			[36, 20],
+			[36, 7],
+			[7, 8],
+			[6, 29],
+			[29, 20],
+			[6, 20],
+			[6, 21],
+			[6, 37],
+			[37, 4],
+			[0, 21]
+		],
+		"circular": []
+	}
 }

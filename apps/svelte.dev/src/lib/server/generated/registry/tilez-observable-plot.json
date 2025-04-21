@@ -14,13 +14,6 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.7.2",
 	"last_rune_check_version": "1.0.0",
-	"dependencies": [
-		{
-			"name": "tilez",
-			"semver": "^1.0.0"
-		}
-	],
-	"unpacked_size": 5307,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -282,5 +275,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 3
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "tilez-observable-plot",
+				"version": "1.0.0",
+				"size": 5307
+			},
+			{
+				"name": "tilez",
+				"version": "1.0.2",
+				"size": 103215
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

@@ -13,8 +13,6 @@
 	"version": "1.0.4",
 	"svelte_range": ">=4.0.0",
 	"last_rune_check_version": "1.0.4",
-	"dependencies": [],
-	"unpacked_size": 7949,
 	"downloads_history": [
 		{
 			"range": [1742754600000, 1743359399999],
@@ -28,5 +26,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 20
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-screensize-widget",
+				"version": "1.0.4",
+				"size": 7949
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

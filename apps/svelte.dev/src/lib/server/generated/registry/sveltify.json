@@ -13,25 +13,6 @@
 	"version": "3.0.0",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "3.0.0",
-	"dependencies": [
-		{
-			"name": "just-pascal-case",
-			"semver": "^1.1.0"
-		},
-		{
-			"name": "magic-string",
-			"semver": "0.25.2"
-		},
-		{
-			"name": "svelte",
-			"semver": "^3.0.0"
-		},
-		{
-			"name": "through2",
-			"semver": "^2.0.5"
-		}
-	],
-	"unpacked_size": 3616,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -345,5 +326,101 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 13
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "sveltify",
+				"version": "3.0.0",
+				"size": 3616
+			},
+			{
+				"name": "just-pascal-case",
+				"version": "1.1.0",
+				"size": 3133
+			},
+			{
+				"name": "magic-string",
+				"version": "0.25.2",
+				"size": 360760
+			},
+			{
+				"name": "sourcemap-codec",
+				"version": "1.4.8",
+				"size": 31802
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			},
+			{
+				"name": "through2",
+				"version": "2.0.5",
+				"size": 9649
+			},
+			{
+				"name": "readable-stream",
+				"version": "2.3.8",
+				"size": 88115
+			},
+			{
+				"name": "isarray",
+				"version": "1.0.0"
+			},
+			{
+				"name": "inherits",
+				"version": "2.0.4",
+				"size": 3958
+			},
+			{
+				"name": "safe-buffer",
+				"version": "5.1.2",
+				"size": 31686
+			},
+			{
+				"name": "core-util-is",
+				"version": "1.0.3",
+				"size": 4982
+			},
+			{
+				"name": "string_decoder",
+				"version": "1.1.1",
+				"size": 15298
+			},
+			{
+				"name": "util-deprecate",
+				"version": "1.0.2"
+			},
+			{
+				"name": "process-nextick-args",
+				"version": "2.0.1",
+				"size": 3175
+			},
+			{
+				"name": "xtend",
+				"version": "4.0.2",
+				"size": 6465
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[0, 4],
+			[0, 5],
+			[5, 6],
+			[6, 7],
+			[6, 8],
+			[6, 9],
+			[6, 10],
+			[6, 11],
+			[11, 9],
+			[6, 12],
+			[6, 13],
+			[5, 14]
+		],
+		"circular": []
+	}
 }

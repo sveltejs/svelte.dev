@@ -13,33 +13,6 @@
 	"version": "0.1.2",
 	"svelte_range": "^4.2.7",
 	"last_rune_check_version": "0.1.2",
-	"dependencies": [
-		{
-			"name": "@rollup/plugin-replace",
-			"semver": "^5.0.5"
-		},
-		{
-			"name": "@sveltejs/vite-plugin-svelte",
-			"semver": "^3.0.1"
-		},
-		{
-			"name": "deepmerge",
-			"semver": "^4.3.1"
-		},
-		{
-			"name": "esbuild",
-			"semver": "^0.19.9"
-		},
-		{
-			"name": "fast-glob",
-			"semver": "^3.3.2"
-		},
-		{
-			"name": "vite",
-			"semver": "^5.0.12"
-		}
-	],
-	"unpacked_size": 72804,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -321,5 +294,270 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "golte",
+				"version": "0.1.2",
+				"size": 72804
+			},
+			{
+				"name": "@rollup/plugin-replace",
+				"version": "5.0.7",
+				"size": 26414
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "@rollup/pluginutils",
+				"version": "5.1.4",
+				"size": 58354
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "estree-walker",
+				"version": "2.0.2",
+				"size": 50243
+			},
+			{
+				"name": "picomatch",
+				"version": "4.0.2",
+				"size": 85237
+			},
+			{
+				"name": "@sveltejs/vite-plugin-svelte",
+				"version": "3.1.2",
+				"size": 126232
+			},
+			{
+				"name": "debug",
+				"version": "4.4.0",
+				"size": 42798
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "kleur",
+				"version": "4.1.5",
+				"size": 20250
+			},
+			{
+				"name": "vitefu",
+				"version": "0.2.5",
+				"size": 19174
+			},
+			{
+				"name": "deepmerge",
+				"version": "4.3.1",
+				"size": 31157
+			},
+			{
+				"name": "svelte-hmr",
+				"version": "0.16.0",
+				"size": 75417
+			},
+			{
+				"name": "@sveltejs/vite-plugin-svelte-inspector",
+				"version": "2.1.0",
+				"size": 25824
+			},
+			{
+				"name": "esbuild",
+				"version": "0.19.12",
+				"size": 133381
+			},
+			{
+				"name": "fast-glob",
+				"version": "3.3.3",
+				"size": 98396
+			},
+			{
+				"name": "@nodelib/fs.stat",
+				"version": "2.0.5",
+				"size": 11845
+			},
+			{
+				"name": "@nodelib/fs.walk",
+				"version": "1.2.8",
+				"size": 26377
+			},
+			{
+				"name": "fastq",
+				"version": "1.19.1",
+				"size": 45922
+			},
+			{
+				"name": "reusify",
+				"version": "1.1.0",
+				"size": 11696
+			},
+			{
+				"name": "@nodelib/fs.scandir",
+				"version": "2.1.5",
+				"size": 22155
+			},
+			{
+				"name": "run-parallel",
+				"version": "1.2.0",
+				"size": 6563
+			},
+			{
+				"name": "queue-microtask",
+				"version": "1.2.3",
+				"size": 8367
+			},
+			{
+				"name": "glob-parent",
+				"version": "5.1.2",
+				"size": 12134
+			},
+			{
+				"name": "is-glob",
+				"version": "4.0.3",
+				"size": 13609
+			},
+			{
+				"name": "is-extglob",
+				"version": "2.1.1"
+			},
+			{
+				"name": "merge2",
+				"version": "1.4.1",
+				"size": 8897
+			},
+			{
+				"name": "micromatch",
+				"version": "4.0.8",
+				"size": 56599
+			},
+			{
+				"name": "braces",
+				"version": "3.0.3",
+				"size": 44635
+			},
+			{
+				"name": "fill-range",
+				"version": "7.1.1",
+				"size": 16743
+			},
+			{
+				"name": "to-regex-range",
+				"version": "5.0.1",
+				"size": 22939
+			},
+			{
+				"name": "is-number",
+				"version": "7.0.0",
+				"size": 9615
+			},
+			{
+				"name": "picomatch",
+				"version": "2.3.1",
+				"size": 89952
+			},
+			{
+				"name": "vite",
+				"version": "5.4.18",
+				"size": 3276648
+			},
+			{
+				"name": "rollup",
+				"version": "4.40.0",
+				"size": 2726316
+			},
+			{
+				"name": "esbuild",
+				"version": "0.21.5",
+				"size": 133372
+			},
+			{
+				"name": "postcss",
+				"version": "8.5.3",
+				"size": 201969
+			},
+			{
+				"name": "nanoid",
+				"version": "3.3.11",
+				"size": 32583
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "source-map-js",
+				"version": "1.2.1",
+				"size": 139872
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[1, 4],
+			[4, 5],
+			[4, 6],
+			[4, 7],
+			[0, 8],
+			[8, 9],
+			[9, 10],
+			[8, 11],
+			[8, 12],
+			[8, 13],
+			[8, 14],
+			[8, 2],
+			[2, 3],
+			[8, 15],
+			[15, 9],
+			[9, 10],
+			[0, 13],
+			[0, 16],
+			[0, 17],
+			[17, 18],
+			[17, 19],
+			[19, 20],
+			[20, 21],
+			[19, 22],
+			[22, 23],
+			[23, 24],
+			[22, 18],
+			[17, 25],
+			[25, 26],
+			[26, 27],
+			[17, 28],
+			[17, 29],
+			[29, 30],
+			[30, 31],
+			[31, 32],
+			[32, 33],
+			[29, 34],
+			[0, 35],
+			[35, 36],
+			[36, 5],
+			[35, 37],
+			[35, 38],
+			[38, 39],
+			[38, 40],
+			[38, 41]
+		],
+		"circular": []
+	}
 }

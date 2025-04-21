@@ -13,33 +13,6 @@
 	"version": "0.6.8",
 	"svelte_range": "^3.59.2",
 	"last_rune_check_version": "0.6.8",
-	"dependencies": [
-		{
-			"name": "@svizzle/dom",
-			"semver": "^0.7.3"
-		},
-		{
-			"name": "@svizzle/geometry",
-			"semver": "^0.6.1"
-		},
-		{
-			"name": "@svizzle/utils",
-			"semver": "^0.21.0"
-		},
-		{
-			"name": "d3-array",
-			"semver": "^3.2.4"
-		},
-		{
-			"name": "d3-scale",
-			"semver": "^4.0.2"
-		},
-		{
-			"name": "lamb",
-			"semver": "^0.61.1"
-		}
-	],
-	"unpacked_size": 37676,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +306,116 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 14
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@svizzle/histogram",
+				"version": "0.6.8",
+				"size": 37676
+			},
+			{
+				"name": "@svizzle/dom",
+				"version": "0.7.3",
+				"size": 10888
+			},
+			{
+				"name": "@svizzle/utils",
+				"version": "0.21.0",
+				"size": 269532
+			},
+			{
+				"name": "escape-string-regexp",
+				"version": "5.0.0",
+				"size": 3659
+			},
+			{
+				"name": "just-compare",
+				"version": "2.3.0",
+				"size": 9255
+			},
+			{
+				"name": "lamb",
+				"version": "0.61.1",
+				"size": 1101065
+			},
+			{
+				"name": "@svizzle/geometry",
+				"version": "0.6.1",
+				"size": 14784
+			},
+			{
+				"name": "d3-array",
+				"version": "3.2.4",
+				"size": 163730
+			},
+			{
+				"name": "internmap",
+				"version": "2.0.3",
+				"size": 10470
+			},
+			{
+				"name": "d3-scale",
+				"version": "4.0.2",
+				"size": 174363
+			},
+			{
+				"name": "d3-format",
+				"version": "3.1.0",
+				"size": 57833
+			},
+			{
+				"name": "d3-interpolate",
+				"version": "3.0.1",
+				"size": 69687
+			},
+			{
+				"name": "d3-color",
+				"version": "3.1.0",
+				"size": 61152
+			},
+			{
+				"name": "d3-time",
+				"version": "3.1.0",
+				"size": 64483
+			},
+			{
+				"name": "d3-time-format",
+				"version": "4.1.0",
+				"size": 85603
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[2, 4],
+			[2, 5],
+			[1, 5],
+			[0, 6],
+			[6, 5],
+			[0, 2],
+			[2, 3],
+			[2, 4],
+			[2, 5],
+			[0, 7],
+			[7, 8],
+			[0, 9],
+			[9, 7],
+			[7, 8],
+			[9, 10],
+			[9, 11],
+			[11, 12],
+			[9, 13],
+			[13, 7],
+			[7, 8],
+			[9, 14],
+			[14, 13],
+			[13, 7],
+			[7, 8],
+			[0, 5]
+		],
+		"circular": []
+	}
 }

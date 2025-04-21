@@ -13,13 +13,6 @@
 	"version": "2.3.2",
 	"svelte_range": "^3.42.5",
 	"last_rune_check_version": "2.3.2",
-	"dependencies": [
-		{
-			"name": "@actus/core",
-			"semver": "^2.3.2"
-		}
-	],
-	"unpacked_size": 1586884,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -321,5 +314,68 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 12
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@actus/svelte",
+				"version": "2.3.2",
+				"size": 1586884
+			},
+			{
+				"name": "@actus/core",
+				"version": "2.3.2",
+				"size": 312546
+			},
+			{
+				"name": "nearley",
+				"version": "2.20.1",
+				"size": 75813
+			},
+			{
+				"name": "commander",
+				"version": "2.20.3",
+				"size": 62442
+			},
+			{
+				"name": "moo",
+				"version": "0.5.2",
+				"size": 32679
+			},
+			{
+				"name": "railroad-diagrams",
+				"version": "1.0.0"
+			},
+			{
+				"name": "randexp",
+				"version": "0.4.6"
+			},
+			{
+				"name": "discontinuous-range",
+				"version": "1.0.0"
+			},
+			{
+				"name": "ret",
+				"version": "0.1.15"
+			},
+			{
+				"name": "xstate",
+				"version": "4.38.3",
+				"size": 793710
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[2, 4],
+			[2, 5],
+			[2, 6],
+			[6, 7],
+			[6, 8],
+			[1, 9]
+		],
+		"circular": []
+	}
 }

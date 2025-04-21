@@ -13,25 +13,6 @@
 	"version": "2.0.0",
 	"svelte_range": "3.55.0",
 	"last_rune_check_version": "2.0.0",
-	"dependencies": [
-		{
-			"name": "@tadashi/common",
-			"semver": "3.0.0"
-		},
-		{
-			"name": "@tadashi/flatten-object",
-			"semver": "3.1.0"
-		},
-		{
-			"name": "@tadashi/unflatten-object",
-			"semver": "2.0.2"
-		},
-		{
-			"name": "@xet/totp-wasm-web",
-			"semver": "1.0.0"
-		}
-	],
-	"unpacked_size": 349036,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -337,5 +318,48 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 19
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@tadashi/svelte-pesquisa",
+				"version": "2.0.0",
+				"size": 349036
+			},
+			{
+				"name": "@tadashi/common",
+				"version": "3.0.0",
+				"size": 17122
+			},
+			{
+				"name": "@tadashi/flatten-object",
+				"version": "3.1.0",
+				"size": 3784
+			},
+			{
+				"name": "@tadashi/unflatten-object",
+				"version": "2.0.2",
+				"size": 4708
+			},
+			{
+				"name": "lodash.merge",
+				"version": "4.6.2",
+				"size": 54132
+			},
+			{
+				"name": "@xet/totp-wasm-web",
+				"version": "1.0.0",
+				"size": 73308
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[3, 4],
+			[0, 5]
+		],
+		"circular": []
+	}
 }

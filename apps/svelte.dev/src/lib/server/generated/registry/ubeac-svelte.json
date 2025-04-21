@@ -14,45 +14,6 @@
 	"svelte_range": "^3.55.0",
 	"kit_range": "^1.0.0",
 	"last_rune_check_version": "0.1.2",
-	"dependencies": [
-		{
-			"name": "@googlemaps/js-api-loader",
-			"semver": "^1.14.3"
-		},
-		{
-			"name": "@iconify/svelte",
-			"semver": "^3.0.1"
-		},
-		{
-			"name": "@popperjs/core",
-			"semver": "^2.11.6"
-		},
-		{
-			"name": "change-case",
-			"semver": "^4.1.2"
-		},
-		{
-			"name": "inputmask",
-			"semver": "^5.0.7"
-		},
-		{
-			"name": "litepicker",
-			"semver": "^2.0.12"
-		},
-		{
-			"name": "moment",
-			"semver": "^2.29.4"
-		},
-		{
-			"name": "swiper",
-			"semver": "^8.4.5"
-		},
-		{
-			"name": "tom-select",
-			"semver": "^2.2.2"
-		}
-	],
-	"unpacked_size": 2506669,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -354,5 +315,262 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 53
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@ubeac/svelte",
+				"version": "0.1.2",
+				"size": 2506669
+			},
+			{
+				"name": "@googlemaps/js-api-loader",
+				"version": "1.16.8",
+				"size": 227761
+			},
+			{
+				"name": "@iconify/svelte",
+				"version": "3.1.6",
+				"size": 435856
+			},
+			{
+				"name": "@iconify/types",
+				"version": "2.0.0",
+				"size": 25671
+			},
+			{
+				"name": "@popperjs/core",
+				"version": "2.11.8",
+				"size": 1463042
+			},
+			{
+				"name": "change-case",
+				"version": "4.1.2",
+				"size": 9329
+			},
+			{
+				"name": "tslib",
+				"version": "2.8.1",
+				"size": 90359
+			},
+			{
+				"name": "no-case",
+				"version": "3.0.4",
+				"size": 25128
+			},
+			{
+				"name": "lower-case",
+				"version": "2.0.2",
+				"size": 17661
+			},
+			{
+				"name": "dot-case",
+				"version": "3.0.4",
+				"size": 10481
+			},
+			{
+				"name": "path-case",
+				"version": "3.0.4",
+				"size": 10136
+			},
+			{
+				"name": "camel-case",
+				"version": "4.1.2",
+				"size": 14251
+			},
+			{
+				"name": "pascal-case",
+				"version": "3.1.2",
+				"size": 14764
+			},
+			{
+				"name": "param-case",
+				"version": "3.0.4",
+				"size": 10221
+			},
+			{
+				"name": "snake-case",
+				"version": "3.0.4",
+				"size": 10360
+			},
+			{
+				"name": "header-case",
+				"version": "2.0.4",
+				"size": 10288
+			},
+			{
+				"name": "capital-case",
+				"version": "1.0.4",
+				"size": 11593
+			},
+			{
+				"name": "upper-case-first",
+				"version": "2.0.2",
+				"size": 8856
+			},
+			{
+				"name": "constant-case",
+				"version": "3.0.4",
+				"size": 11086
+			},
+			{
+				"name": "upper-case",
+				"version": "2.0.2",
+				"size": 15640
+			},
+			{
+				"name": "sentence-case",
+				"version": "3.0.4",
+				"size": 12161
+			},
+			{
+				"name": "inputmask",
+				"version": "5.0.9",
+				"size": 1404074
+			},
+			{
+				"name": "litepicker",
+				"version": "2.0.12",
+				"size": 725979
+			},
+			{
+				"name": "moment",
+				"version": "2.30.1",
+				"size": 4350323
+			},
+			{
+				"name": "swiper",
+				"version": "8.4.7",
+				"size": 4663649
+			},
+			{
+				"name": "dom7",
+				"version": "4.0.6",
+				"size": 291816
+			},
+			{
+				"name": "ssr-window",
+				"version": "4.0.2",
+				"size": 20352
+			},
+			{
+				"name": "tom-select",
+				"version": "2.4.3",
+				"size": 3490767
+			},
+			{
+				"name": "@orchidjs/sifter",
+				"version": "1.1.0",
+				"size": 222636
+			},
+			{
+				"name": "@orchidjs/unicode-variants",
+				"version": "1.1.2",
+				"size": 179003
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[0, 4],
+			[0, 5],
+			[5, 6],
+			[5, 7],
+			[7, 8],
+			[8, 6],
+			[7, 6],
+			[5, 9],
+			[9, 7],
+			[7, 8],
+			[8, 6],
+			[7, 6],
+			[9, 6],
+			[5, 10],
+			[10, 9],
+			[9, 7],
+			[7, 8],
+			[8, 6],
+			[7, 6],
+			[9, 6],
+			[10, 6],
+			[5, 11],
+			[11, 12],
+			[12, 7],
+			[7, 8],
+			[8, 6],
+			[7, 6],
+			[12, 6],
+			[11, 6],
+			[5, 13],
+			[13, 9],
+			[9, 7],
+			[7, 8],
+			[8, 6],
+			[7, 6],
+			[9, 6],
+			[13, 6],
+			[5, 14],
+			[14, 9],
+			[9, 7],
+			[7, 8],
+			[8, 6],
+			[7, 6],
+			[9, 6],
+			[14, 6],
+			[5, 15],
+			[15, 16],
+			[16, 7],
+			[7, 8],
+			[8, 6],
+			[7, 6],
+			[16, 6],
+			[16, 17],
+			[17, 6],
+			[15, 6],
+			[5, 12],
+			[12, 7],
+			[7, 8],
+			[8, 6],
+			[7, 6],
+			[12, 6],
+			[5, 16],
+			[16, 7],
+			[7, 8],
+			[8, 6],
+			[7, 6],
+			[16, 6],
+			[16, 17],
+			[17, 6],
+			[5, 18],
+			[18, 7],
+			[7, 8],
+			[8, 6],
+			[7, 6],
+			[18, 6],
+			[18, 19],
+			[19, 6],
+			[5, 20],
+			[20, 7],
+			[7, 8],
+			[8, 6],
+			[7, 6],
+			[20, 6],
+			[20, 17],
+			[17, 6],
+			[0, 21],
+			[0, 22],
+			[0, 23],
+			[0, 24],
+			[24, 25],
+			[25, 26],
+			[24, 26],
+			[0, 27],
+			[27, 28],
+			[28, 29],
+			[27, 29]
+		],
+		"circular": []
+	}
 }

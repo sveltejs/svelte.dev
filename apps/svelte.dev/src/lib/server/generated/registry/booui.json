@@ -13,21 +13,6 @@
 	"version": "3.3.2",
 	"svelte_range": "^3.4.4",
 	"last_rune_check_version": "3.3.2",
-	"dependencies": [
-		{
-			"name": "clsx",
-			"semver": "^1.0.4"
-		},
-		{
-			"name": "lodash.isobject",
-			"semver": "^3.0.2"
-		},
-		{
-			"name": "lodash.tonumber",
-			"semver": "^4.0.3"
-		}
-	],
-	"unpacked_size": 962147,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -253,5 +238,34 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "booui",
+				"version": "3.3.2",
+				"size": 962147
+			},
+			{
+				"name": "clsx",
+				"version": "1.2.1",
+				"size": 5671
+			},
+			{
+				"name": "lodash.isobject",
+				"version": "3.0.2"
+			},
+			{
+				"name": "lodash.tonumber",
+				"version": "4.0.3"
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3]
+		],
+		"circular": []
+	}
 }

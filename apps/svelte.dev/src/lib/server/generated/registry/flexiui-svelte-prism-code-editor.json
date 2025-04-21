@@ -12,13 +12,6 @@
 	"svelte_range": "^5.19.9",
 	"last_rune_check_version": "0.0.13",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "prism-code-editor",
-			"semver": "^3.4.0"
-		}
-	],
-	"unpacked_size": 10648,
 	"downloads_history": [
 		{
 			"range": [1735497000000, 1736101799999],
@@ -80,5 +73,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 13
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@flexiui/svelte-prism-code-editor",
+				"version": "0.0.13",
+				"size": 10648
+			},
+			{
+				"name": "prism-code-editor",
+				"version": "3.4.0",
+				"size": 2768023
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

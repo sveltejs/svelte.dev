@@ -14,17 +14,6 @@
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
 	"last_rune_check_version": "0.0.12",
-	"dependencies": [
-		{
-			"name": "@lukeed/uuid",
-			"semver": "^2.0.0"
-		},
-		{
-			"name": "@types/ace",
-			"semver": "^0.0.48"
-		}
-	],
-	"unpacked_size": 110432,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -234,5 +223,36 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@pjsr/svelte-components",
+				"version": "0.0.12",
+				"size": 110432
+			},
+			{
+				"name": "@lukeed/uuid",
+				"version": "2.0.1",
+				"size": 9770
+			},
+			{
+				"name": "@lukeed/csprng",
+				"version": "1.1.0",
+				"size": 5968
+			},
+			{
+				"name": "@types/ace",
+				"version": "0.0.48",
+				"size": 107717
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3]
+		],
+		"circular": []
+	}
 }

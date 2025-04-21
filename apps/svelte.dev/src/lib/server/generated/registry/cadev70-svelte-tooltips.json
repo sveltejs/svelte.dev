@@ -14,13 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.5",
 	"last_rune_check_version": "0.2.0",
-	"dependencies": [
-		{
-			"name": "@popperjs/core",
-			"semver": "^2.11.8"
-		}
-	],
-	"unpacked_size": 8059,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -214,5 +207,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@cadev70/svelte-tooltips",
+				"version": "0.2.0",
+				"size": 8059
+			},
+			{
+				"name": "@popperjs/core",
+				"version": "2.11.8",
+				"size": 1463042
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

@@ -12,13 +12,6 @@
 	"svelte_range": "^5.0.0-next.115",
 	"last_rune_check_version": "0.3.4",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "milkytables",
-			"semver": "^0.1.4"
-		}
-	],
-	"unpacked_size": 25517,
 	"downloads_history": [
 		{
 			"range": [1714329000000, 1714933799999],
@@ -196,5 +189,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "milkytables-svelte-5",
+				"version": "0.3.4",
+				"size": 25517
+			},
+			{
+				"name": "milkytables",
+				"version": "0.1.4",
+				"size": 25261
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

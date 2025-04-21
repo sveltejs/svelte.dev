@@ -14,17 +14,6 @@
 	"svelte_range": "^3.44.0",
 	"kit_range": "^1.0.0-next.260",
 	"last_rune_check_version": "1.0.7",
-	"dependencies": [
-		{
-			"name": "graphql",
-			"semver": "^16.2.0"
-		},
-		{
-			"name": "mdsvex",
-			"semver": "^0.9.8"
-		}
-	],
-	"unpacked_size": 24460,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -238,5 +227,62 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@imtala/gql-docs",
+				"version": "1.0.7",
+				"size": 24460
+			},
+			{
+				"name": "graphql",
+				"version": "16.10.0",
+				"size": 1363943
+			},
+			{
+				"name": "mdsvex",
+				"version": "0.9.8",
+				"size": 4187161
+			},
+			{
+				"name": "prismjs",
+				"version": "1.30.0",
+				"size": 2052735
+			},
+			{
+				"name": "@types/unist",
+				"version": "2.0.11",
+				"size": 8543
+			},
+			{
+				"name": "prism-svelte",
+				"version": "0.4.7",
+				"size": 6075
+			},
+			{
+				"name": "vfile-message",
+				"version": "2.0.4",
+				"size": 12600
+			},
+			{
+				"name": "unist-util-stringify-position",
+				"version": "2.0.3",
+				"size": 8531
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[2, 4],
+			[2, 5],
+			[2, 6],
+			[6, 4],
+			[6, 7],
+			[7, 4]
+		],
+		"circular": []
+	}
 }

@@ -13,137 +13,6 @@
 	"svelte_range": "^5.6.2",
 	"last_rune_check_version": "2.3.0",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "@babel/core",
-			"semver": "7.26.10"
-		},
-		{
-			"name": "@babel/preset-env",
-			"semver": "7.26.9"
-		},
-		{
-			"name": "@rollup/plugin-alias",
-			"semver": "5.1.1"
-		},
-		{
-			"name": "@rollup/plugin-babel",
-			"semver": "6.0.4"
-		},
-		{
-			"name": "@rollup/plugin-commonjs",
-			"semver": "28.0.3"
-		},
-		{
-			"name": "@rollup/plugin-json",
-			"semver": "6.1.0"
-		},
-		{
-			"name": "@rollup/plugin-node-resolve",
-			"semver": "16.0.1"
-		},
-		{
-			"name": "@rollup/plugin-replace",
-			"semver": "6.0.2"
-		},
-		{
-			"name": "@rollup/plugin-terser",
-			"semver": "0.4.4"
-		},
-		{
-			"name": "archiver",
-			"semver": "7.0.1"
-		},
-		{
-			"name": "chalk",
-			"semver": "5.4.1"
-		},
-		{
-			"name": "find-up",
-			"semver": "7.0.0"
-		},
-		{
-			"name": "form-data",
-			"semver": "4.0.2"
-		},
-		{
-			"name": "fs-extra",
-			"semver": "11.3.0"
-		},
-		{
-			"name": "glob",
-			"semver": "^11.0.1"
-		},
-		{
-			"name": "got",
-			"semver": "14.4.6"
-		},
-		{
-			"name": "gzip-size",
-			"semver": "7.0.0"
-		},
-		{
-			"name": "lodash-es",
-			"semver": "4.17.21"
-		},
-		{
-			"name": "minimist",
-			"semver": "^1.2.8"
-		},
-		{
-			"name": "postcss",
-			"semver": "8.5.3"
-		},
-		{
-			"name": "postcss-preset-env",
-			"semver": "^10.1.5"
-		},
-		{
-			"name": "postcss-pxtorem",
-			"semver": "6.1.0"
-		},
-		{
-			"name": "pretty-bytes",
-			"semver": "6.1.1"
-		},
-		{
-			"name": "prompts",
-			"semver": "2.4.2"
-		},
-		{
-			"name": "rollup",
-			"semver": "4.37.0"
-		},
-		{
-			"name": "rollup-plugin-postcss",
-			"semver": "4.0.2"
-		},
-		{
-			"name": "rollup-plugin-string",
-			"semver": "3.0.0"
-		},
-		{
-			"name": "rollup-plugin-svelte",
-			"semver": "7.2.2"
-		},
-		{
-			"name": "slash",
-			"semver": "5.1.0"
-		},
-		{
-			"name": "svelte-preprocess",
-			"semver": "6.0.3"
-		},
-		{
-			"name": "@soleil-se/build-config",
-			"semver": "^1.3.0"
-		},
-		{
-			"name": "@soleil-se/build-utils",
-			"semver": "^1.8.2"
-		}
-	],
-	"unpacked_size": 41577,
 	"downloads_history": [
 		{
 			"range": [1738521000000, 1739125799999],
@@ -185,5 +54,1476 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 132
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@soleil-se/build-app",
+				"version": "2.3.0",
+				"size": 41577
+			},
+			{
+				"name": "@babel/core",
+				"version": "7.26.10",
+				"size": 795988
+			},
+			{
+				"name": "debug",
+				"version": "4.4.0",
+				"size": 42798
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "json5",
+				"version": "2.2.3",
+				"size": 235198
+			},
+			{
+				"name": "semver",
+				"version": "6.3.1",
+				"size": 68343
+			},
+			{
+				"name": "gensync",
+				"version": "1.0.0-beta.2",
+				"size": 28891
+			},
+			{
+				"name": "@babel/types",
+				"version": "7.27.0",
+				"size": 2583295
+			},
+			{
+				"name": "@babel/helper-string-parser",
+				"version": "7.25.9",
+				"size": 31816
+			},
+			{
+				"name": "@babel/helper-validator-identifier",
+				"version": "7.25.9",
+				"size": 48330
+			},
+			{
+				"name": "@babel/parser",
+				"version": "7.27.0",
+				"size": 1924962
+			},
+			{
+				"name": "@babel/helpers",
+				"version": "7.27.0",
+				"size": 866498
+			},
+			{
+				"name": "@babel/template",
+				"version": "7.27.0",
+				"size": 70675
+			},
+			{
+				"name": "@babel/code-frame",
+				"version": "7.26.2",
+				"size": 33160
+			},
+			{
+				"name": "js-tokens",
+				"version": "4.0.0"
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "@babel/traverse",
+				"version": "7.27.0",
+				"size": 676526
+			},
+			{
+				"name": "@babel/generator",
+				"version": "7.27.0",
+				"size": 559855
+			},
+			{
+				"name": "@jridgewell/gen-mapping",
+				"version": "0.3.8",
+				"size": 81596
+			},
+			{
+				"name": "@jridgewell/set-array",
+				"version": "1.2.1",
+				"size": 17945
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "@jridgewell/trace-mapping",
+				"version": "0.3.25",
+				"size": 169330
+			},
+			{
+				"name": "@jridgewell/resolve-uri",
+				"version": "3.1.2",
+				"size": 53153
+			},
+			{
+				"name": "jsesc",
+				"version": "3.1.0",
+				"size": 32280
+			},
+			{
+				"name": "globals",
+				"version": "11.12.0",
+				"size": 39779
+			},
+			{
+				"name": "convert-source-map",
+				"version": "2.0.0",
+				"size": 15854
+			},
+			{
+				"name": "@ampproject/remapping",
+				"version": "2.3.0",
+				"size": 78946
+			},
+			{
+				"name": "@babel/helper-module-transforms",
+				"version": "7.26.0",
+				"size": 160842
+			},
+			{
+				"name": "@babel/helper-module-imports",
+				"version": "7.25.9",
+				"size": 63714
+			},
+			{
+				"name": "@babel/helper-compilation-targets",
+				"version": "7.27.0",
+				"size": 53776
+			},
+			{
+				"name": "@babel/compat-data",
+				"version": "7.26.8",
+				"size": 66428
+			},
+			{
+				"name": "@babel/helper-validator-option",
+				"version": "7.25.9",
+				"size": 11775
+			},
+			{
+				"name": "browserslist",
+				"version": "4.24.4",
+				"size": 64926
+			},
+			{
+				"name": "caniuse-lite",
+				"version": "1.0.30001715",
+				"size": 2211246
+			},
+			{
+				"name": "electron-to-chromium",
+				"version": "1.5.139",
+				"size": 161922
+			},
+			{
+				"name": "node-releases",
+				"version": "2.0.19",
+				"size": 37225
+			},
+			{
+				"name": "update-browserslist-db",
+				"version": "1.1.3",
+				"size": 14770
+			},
+			{
+				"name": "escalade",
+				"version": "3.2.0",
+				"size": 12385
+			},
+			{
+				"name": "lru-cache",
+				"version": "5.1.1",
+				"size": 15714
+			},
+			{
+				"name": "yallist",
+				"version": "3.1.1",
+				"size": 14766
+			},
+			{
+				"name": "@babel/preset-env",
+				"version": "7.26.9",
+				"size": 153075
+			},
+			{
+				"name": "core-js-compat",
+				"version": "3.41.0",
+				"size": 775766
+			},
+			{
+				"name": "@babel/preset-modules",
+				"version": "0.1.6-no-external-plugins",
+				"size": 38576
+			},
+			{
+				"name": "esutils",
+				"version": "2.0.3",
+				"size": 50582
+			},
+			{
+				"name": "@babel/helper-plugin-utils",
+				"version": "7.26.5",
+				"size": 11985
+			},
+			{
+				"name": "babel-plugin-polyfill-corejs2",
+				"version": "0.4.13",
+				"size": 81459
+			},
+			{
+				"name": "@babel/helper-define-polyfill-provider",
+				"version": "0.6.4",
+				"size": 226587
+			},
+			{
+				"name": "lodash.debounce",
+				"version": "4.0.8"
+			},
+			{
+				"name": "resolve",
+				"version": "1.22.10",
+				"size": 145619
+			},
+			{
+				"name": "is-core-module",
+				"version": "2.16.1",
+				"size": 33475
+			},
+			{
+				"name": "hasown",
+				"version": "2.0.2",
+				"size": 8765
+			},
+			{
+				"name": "function-bind",
+				"version": "1.1.2",
+				"size": 31427
+			},
+			{
+				"name": "path-parse",
+				"version": "1.0.7",
+				"size": 4511
+			},
+			{
+				"name": "supports-preserve-symlinks-flag",
+				"version": "1.0.0",
+				"size": 9178
+			},
+			{
+				"name": "babel-plugin-polyfill-corejs3",
+				"version": "0.11.1",
+				"size": 221237
+			},
+			{
+				"name": "@babel/plugin-transform-for-of",
+				"version": "7.26.9",
+				"size": 44850
+			},
+			{
+				"name": "@babel/helper-skip-transparent-expression-wrappers",
+				"version": "7.25.9",
+				"size": 6001
+			},
+			{
+				"name": "@babel/plugin-transform-spread",
+				"version": "7.25.9",
+				"size": 23422
+			},
+			{
+				"name": "@babel/plugin-transform-classes",
+				"version": "7.25.9",
+				"size": 91170
+			},
+			{
+				"name": "@babel/helper-replace-supers",
+				"version": "7.26.5",
+				"size": 43308
+			},
+			{
+				"name": "@babel/helper-optimise-call-expression",
+				"version": "7.25.9",
+				"size": 6672
+			},
+			{
+				"name": "@babel/helper-member-expression-to-functions",
+				"version": "7.25.9",
+				"size": 54675
+			},
+			{
+				"name": "@babel/helper-annotate-as-pure",
+				"version": "7.25.9",
+				"size": 4054
+			},
+			{
+				"name": "@babel/plugin-transform-literals",
+				"version": "7.25.9",
+				"size": 4627
+			},
+			{
+				"name": "babel-plugin-polyfill-regenerator",
+				"version": "0.6.4",
+				"size": 9736
+			},
+			{
+				"name": "@babel/plugin-transform-new-target",
+				"version": "7.25.9",
+				"size": 10234
+			},
+			{
+				"name": "@babel/plugin-transform-parameters",
+				"version": "7.25.9",
+				"size": 65125
+			},
+			{
+				"name": "@babel/plugin-transform-modules-amd",
+				"version": "7.25.9",
+				"size": 20879
+			},
+			{
+				"name": "@babel/plugin-transform-modules-umd",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-transform-regenerator",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-transform-dotall-regex",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-transform-json-strings",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-transform-object-super",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-transform-sticky-regex",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-transform-block-scoping",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-transform-destructuring",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-transform-function-name",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-transform-typeof-symbol",
+				"version": "^7.26.7"
+			},
+			{
+				"name": "@babel/plugin-transform-unicode-regex",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-syntax-import-assertions",
+				"version": "^7.26.0"
+			},
+			{
+				"name": "@babel/plugin-syntax-import-attributes",
+				"version": "^7.26.0"
+			},
+			{
+				"name": "@babel/plugin-transform-duplicate-keys",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-transform-dynamic-import",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-transform-reserved-words",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-syntax-unicode-sets-regex",
+				"version": "^7.18.6"
+			},
+			{
+				"name": "@babel/plugin-transform-arrow-functions",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-transform-private-methods",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-transform-unicode-escapes",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-transform-class-properties",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-transform-modules-commonjs",
+				"version": "^7.26.3"
+			},
+			{
+				"name": "@babel/plugin-transform-modules-systemjs",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-transform-regexp-modifiers",
+				"version": "^7.26.0"
+			},
+			{
+				"name": "@babel/plugin-transform-numeric-separator",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-transform-optional-chaining",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-transform-property-literals",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-transform-template-literals",
+				"version": "^7.26.8"
+			},
+			{
+				"name": "@babel/plugin-transform-async-to-generator",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-transform-class-static-block",
+				"version": "^7.26.0"
+			},
+			{
+				"name": "@babel/plugin-transform-object-rest-spread",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-transform-unicode-sets-regex",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-transform-computed-properties",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-transform-shorthand-properties",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-transform-export-namespace-from",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-transform-block-scoped-functions",
+				"version": "^7.26.5"
+			},
+			{
+				"name": "@babel/plugin-transform-optional-catch-binding",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-transform-unicode-property-regex",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-transform-exponentiation-operator",
+				"version": "^7.26.3"
+			},
+			{
+				"name": "@babel/plugin-proposal-private-property-in-object",
+				"version": "7.21.0-placeholder-for-preset-env.2"
+			},
+			{
+				"name": "@babel/plugin-transform-async-generator-functions",
+				"version": "^7.26.8"
+			},
+			{
+				"name": "@babel/plugin-transform-member-expression-literals",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-transform-private-property-in-object",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-transform-nullish-coalescing-operator",
+				"version": "^7.26.6"
+			},
+			{
+				"name": "@babel/plugin-transform-logical-assignment-operators",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-transform-named-capturing-groups-regex",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-bugfix-firefox-class-in-computed-class-key",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-bugfix-safari-class-field-initializer-scope",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-bugfix-v8-static-class-fields-redefine-readonly",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-transform-duplicate-named-capturing-groups-regex",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression",
+				"version": "^7.25.9"
+			},
+			{
+				"name": "@rollup/plugin-alias",
+				"version": "5.1.1"
+			},
+			{
+				"name": "@rollup/plugin-babel",
+				"version": "6.0.4"
+			},
+			{
+				"name": "@rollup/plugin-commonjs",
+				"version": "28.0.3"
+			},
+			{
+				"name": "@rollup/plugin-json",
+				"version": "6.1.0"
+			},
+			{
+				"name": "@rollup/plugin-node-resolve",
+				"version": "16.0.1"
+			},
+			{
+				"name": "@rollup/plugin-replace",
+				"version": "6.0.2"
+			},
+			{
+				"name": "@rollup/plugin-terser",
+				"version": "0.4.4"
+			},
+			{
+				"name": "archiver",
+				"version": "7.0.1"
+			},
+			{
+				"name": "chalk",
+				"version": "5.4.1"
+			},
+			{
+				"name": "find-up",
+				"version": "7.0.0"
+			},
+			{
+				"name": "form-data",
+				"version": "4.0.2"
+			},
+			{
+				"name": "fs-extra",
+				"version": "11.3.0"
+			},
+			{
+				"name": "glob",
+				"version": "^11.0.1"
+			},
+			{
+				"name": "got",
+				"version": "14.4.6"
+			},
+			{
+				"name": "gzip-size",
+				"version": "7.0.0"
+			},
+			{
+				"name": "lodash-es",
+				"version": "4.17.21"
+			},
+			{
+				"name": "minimist",
+				"version": "^1.2.8"
+			},
+			{
+				"name": "postcss",
+				"version": "8.5.3"
+			},
+			{
+				"name": "postcss-preset-env",
+				"version": "^10.1.5"
+			},
+			{
+				"name": "postcss-pxtorem",
+				"version": "6.1.0"
+			},
+			{
+				"name": "pretty-bytes",
+				"version": "6.1.1"
+			},
+			{
+				"name": "prompts",
+				"version": "2.4.2"
+			},
+			{
+				"name": "rollup",
+				"version": "4.37.0"
+			},
+			{
+				"name": "rollup-plugin-postcss",
+				"version": "4.0.2"
+			},
+			{
+				"name": "rollup-plugin-string",
+				"version": "3.0.0"
+			},
+			{
+				"name": "rollup-plugin-svelte",
+				"version": "7.2.2"
+			},
+			{
+				"name": "slash",
+				"version": "5.1.0"
+			},
+			{
+				"name": "svelte-preprocess",
+				"version": "6.0.3"
+			},
+			{
+				"name": "@soleil-se/build-config",
+				"version": "^1.3.0"
+			},
+			{
+				"name": "@soleil-se/build-utils",
+				"version": "^1.8.2"
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[1, 4],
+			[1, 5],
+			[1, 6],
+			[1, 7],
+			[7, 8],
+			[7, 9],
+			[1, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[1, 11],
+			[11, 12],
+			[12, 13],
+			[13, 14],
+			[13, 15],
+			[13, 9],
+			[12, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[12, 7],
+			[7, 8],
+			[7, 9],
+			[11, 7],
+			[7, 8],
+			[7, 9],
+			[1, 12],
+			[12, 13],
+			[13, 14],
+			[13, 15],
+			[13, 9],
+			[12, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[12, 7],
+			[7, 8],
+			[7, 9],
+			[1, 16],
+			[16, 13],
+			[13, 14],
+			[13, 15],
+			[13, 9],
+			[16, 17],
+			[17, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[17, 7],
+			[7, 8],
+			[7, 9],
+			[17, 18],
+			[18, 19],
+			[18, 20],
+			[18, 21],
+			[21, 22],
+			[21, 20],
+			[17, 21],
+			[21, 22],
+			[21, 20],
+			[17, 23],
+			[16, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[16, 12],
+			[12, 13],
+			[13, 14],
+			[13, 15],
+			[13, 9],
+			[12, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[12, 7],
+			[7, 8],
+			[7, 9],
+			[16, 7],
+			[7, 8],
+			[7, 9],
+			[16, 2],
+			[2, 3],
+			[16, 24],
+			[1, 17],
+			[17, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[17, 7],
+			[7, 8],
+			[7, 9],
+			[17, 18],
+			[18, 19],
+			[18, 20],
+			[18, 21],
+			[21, 22],
+			[21, 20],
+			[17, 21],
+			[21, 22],
+			[21, 20],
+			[17, 23],
+			[1, 13],
+			[13, 14],
+			[13, 15],
+			[13, 9],
+			[1, 25],
+			[1, 26],
+			[26, 18],
+			[18, 19],
+			[18, 20],
+			[18, 21],
+			[21, 22],
+			[21, 20],
+			[26, 21],
+			[21, 22],
+			[21, 20],
+			[1, 27],
+			[27, 16],
+			[16, 13],
+			[13, 14],
+			[13, 15],
+			[13, 9],
+			[16, 17],
+			[17, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[17, 7],
+			[7, 8],
+			[7, 9],
+			[17, 18],
+			[18, 19],
+			[18, 20],
+			[18, 21],
+			[21, 22],
+			[21, 20],
+			[17, 21],
+			[21, 22],
+			[21, 20],
+			[17, 23],
+			[16, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[16, 12],
+			[12, 13],
+			[13, 14],
+			[13, 15],
+			[13, 9],
+			[12, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[12, 7],
+			[7, 8],
+			[7, 9],
+			[16, 7],
+			[7, 8],
+			[7, 9],
+			[16, 2],
+			[2, 3],
+			[16, 24],
+			[27, 28],
+			[28, 7],
+			[7, 8],
+			[7, 9],
+			[28, 16],
+			[16, 13],
+			[13, 14],
+			[13, 15],
+			[13, 9],
+			[16, 17],
+			[17, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[17, 7],
+			[7, 8],
+			[7, 9],
+			[17, 18],
+			[18, 19],
+			[18, 20],
+			[18, 21],
+			[21, 22],
+			[21, 20],
+			[17, 21],
+			[21, 22],
+			[21, 20],
+			[17, 23],
+			[16, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[16, 12],
+			[12, 13],
+			[13, 14],
+			[13, 15],
+			[13, 9],
+			[12, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[12, 7],
+			[7, 8],
+			[7, 9],
+			[16, 7],
+			[7, 8],
+			[7, 9],
+			[16, 2],
+			[2, 3],
+			[16, 24],
+			[27, 9],
+			[1, 29],
+			[29, 30],
+			[29, 31],
+			[29, 32],
+			[32, 33],
+			[32, 34],
+			[32, 35],
+			[32, 36],
+			[36, 37],
+			[36, 15],
+			[29, 38],
+			[38, 39],
+			[29, 5],
+			[0, 40],
+			[40, 5],
+			[40, 41],
+			[41, 32],
+			[32, 33],
+			[32, 34],
+			[32, 35],
+			[32, 36],
+			[36, 37],
+			[36, 15],
+			[40, 30],
+			[40, 42],
+			[42, 43],
+			[42, 7],
+			[7, 8],
+			[7, 9],
+			[42, 44],
+			[40, 44],
+			[40, 45],
+			[45, 30],
+			[45, 46],
+			[46, 29],
+			[29, 30],
+			[29, 31],
+			[29, 32],
+			[32, 33],
+			[32, 34],
+			[32, 35],
+			[32, 36],
+			[36, 37],
+			[36, 15],
+			[29, 38],
+			[38, 39],
+			[29, 5],
+			[46, 44],
+			[46, 2],
+			[2, 3],
+			[46, 47],
+			[46, 48],
+			[48, 49],
+			[49, 50],
+			[50, 51],
+			[48, 52],
+			[48, 53],
+			[45, 5],
+			[40, 54],
+			[54, 41],
+			[41, 32],
+			[32, 33],
+			[32, 34],
+			[32, 35],
+			[32, 36],
+			[36, 37],
+			[36, 15],
+			[54, 46],
+			[46, 29],
+			[29, 30],
+			[29, 31],
+			[29, 32],
+			[32, 33],
+			[32, 34],
+			[32, 35],
+			[32, 36],
+			[36, 37],
+			[36, 15],
+			[29, 38],
+			[38, 39],
+			[29, 5],
+			[46, 44],
+			[46, 2],
+			[2, 3],
+			[46, 47],
+			[46, 48],
+			[48, 49],
+			[49, 50],
+			[50, 51],
+			[48, 52],
+			[48, 53],
+			[40, 31],
+			[40, 55],
+			[55, 44],
+			[55, 56],
+			[56, 7],
+			[7, 8],
+			[7, 9],
+			[56, 16],
+			[16, 13],
+			[13, 14],
+			[13, 15],
+			[13, 9],
+			[16, 17],
+			[17, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[17, 7],
+			[7, 8],
+			[7, 9],
+			[17, 18],
+			[18, 19],
+			[18, 20],
+			[18, 21],
+			[21, 22],
+			[21, 20],
+			[17, 21],
+			[21, 22],
+			[21, 20],
+			[17, 23],
+			[16, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[16, 12],
+			[12, 13],
+			[13, 14],
+			[13, 15],
+			[13, 9],
+			[12, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[12, 7],
+			[7, 8],
+			[7, 9],
+			[16, 7],
+			[7, 8],
+			[7, 9],
+			[16, 2],
+			[2, 3],
+			[16, 24],
+			[40, 57],
+			[57, 44],
+			[57, 56],
+			[56, 7],
+			[7, 8],
+			[7, 9],
+			[56, 16],
+			[16, 13],
+			[13, 14],
+			[13, 15],
+			[13, 9],
+			[16, 17],
+			[17, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[17, 7],
+			[7, 8],
+			[7, 9],
+			[17, 18],
+			[18, 19],
+			[18, 20],
+			[18, 21],
+			[21, 22],
+			[21, 20],
+			[17, 21],
+			[21, 22],
+			[21, 20],
+			[17, 23],
+			[16, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[16, 12],
+			[12, 13],
+			[13, 14],
+			[13, 15],
+			[13, 9],
+			[12, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[12, 7],
+			[7, 8],
+			[7, 9],
+			[16, 7],
+			[7, 8],
+			[7, 9],
+			[16, 2],
+			[2, 3],
+			[16, 24],
+			[40, 58],
+			[58, 24],
+			[58, 16],
+			[16, 13],
+			[13, 14],
+			[13, 15],
+			[13, 9],
+			[16, 17],
+			[17, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[17, 7],
+			[7, 8],
+			[7, 9],
+			[17, 18],
+			[18, 19],
+			[18, 20],
+			[18, 21],
+			[21, 22],
+			[21, 20],
+			[17, 21],
+			[21, 22],
+			[21, 20],
+			[17, 23],
+			[16, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[16, 12],
+			[12, 13],
+			[13, 14],
+			[13, 15],
+			[13, 9],
+			[12, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[12, 7],
+			[7, 8],
+			[7, 9],
+			[16, 7],
+			[7, 8],
+			[7, 9],
+			[16, 2],
+			[2, 3],
+			[16, 24],
+			[58, 44],
+			[58, 59],
+			[59, 16],
+			[16, 13],
+			[13, 14],
+			[13, 15],
+			[13, 9],
+			[16, 17],
+			[17, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[17, 7],
+			[7, 8],
+			[7, 9],
+			[17, 18],
+			[18, 19],
+			[18, 20],
+			[18, 21],
+			[21, 22],
+			[21, 20],
+			[17, 21],
+			[21, 22],
+			[21, 20],
+			[17, 23],
+			[16, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[16, 12],
+			[12, 13],
+			[13, 14],
+			[13, 15],
+			[13, 9],
+			[12, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[12, 7],
+			[7, 8],
+			[7, 9],
+			[16, 7],
+			[7, 8],
+			[7, 9],
+			[16, 2],
+			[2, 3],
+			[16, 24],
+			[59, 60],
+			[60, 7],
+			[7, 8],
+			[7, 9],
+			[59, 61],
+			[61, 7],
+			[7, 8],
+			[7, 9],
+			[61, 16],
+			[16, 13],
+			[13, 14],
+			[13, 15],
+			[13, 9],
+			[16, 17],
+			[17, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[17, 7],
+			[7, 8],
+			[7, 9],
+			[17, 18],
+			[18, 19],
+			[18, 20],
+			[18, 21],
+			[21, 22],
+			[21, 20],
+			[17, 21],
+			[21, 22],
+			[21, 20],
+			[17, 23],
+			[16, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[16, 12],
+			[12, 13],
+			[13, 14],
+			[13, 15],
+			[13, 9],
+			[12, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[12, 7],
+			[7, 8],
+			[7, 9],
+			[16, 7],
+			[7, 8],
+			[7, 9],
+			[16, 2],
+			[2, 3],
+			[16, 24],
+			[58, 62],
+			[62, 7],
+			[7, 8],
+			[7, 9],
+			[58, 29],
+			[29, 30],
+			[29, 31],
+			[29, 32],
+			[32, 33],
+			[32, 34],
+			[32, 35],
+			[32, 36],
+			[36, 37],
+			[36, 15],
+			[29, 38],
+			[38, 39],
+			[29, 5],
+			[40, 63],
+			[63, 44],
+			[40, 29],
+			[29, 30],
+			[29, 31],
+			[29, 32],
+			[32, 33],
+			[32, 34],
+			[32, 35],
+			[32, 36],
+			[36, 37],
+			[36, 15],
+			[29, 38],
+			[38, 39],
+			[29, 5],
+			[40, 64],
+			[64, 46],
+			[46, 29],
+			[29, 30],
+			[29, 31],
+			[29, 32],
+			[32, 33],
+			[32, 34],
+			[32, 35],
+			[32, 36],
+			[36, 37],
+			[36, 15],
+			[29, 38],
+			[38, 39],
+			[29, 5],
+			[46, 44],
+			[46, 2],
+			[2, 3],
+			[46, 47],
+			[46, 48],
+			[48, 49],
+			[49, 50],
+			[50, 51],
+			[48, 52],
+			[48, 53],
+			[40, 65],
+			[65, 44],
+			[40, 66],
+			[66, 44],
+			[40, 67],
+			[67, 44],
+			[67, 27],
+			[27, 16],
+			[16, 13],
+			[13, 14],
+			[13, 15],
+			[13, 9],
+			[16, 17],
+			[17, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[17, 7],
+			[7, 8],
+			[7, 9],
+			[17, 18],
+			[18, 19],
+			[18, 20],
+			[18, 21],
+			[21, 22],
+			[21, 20],
+			[17, 21],
+			[21, 22],
+			[21, 20],
+			[17, 23],
+			[16, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[16, 12],
+			[12, 13],
+			[13, 14],
+			[13, 15],
+			[13, 9],
+			[12, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[12, 7],
+			[7, 8],
+			[7, 9],
+			[16, 7],
+			[7, 8],
+			[7, 9],
+			[16, 2],
+			[2, 3],
+			[16, 24],
+			[27, 28],
+			[28, 7],
+			[7, 8],
+			[7, 9],
+			[28, 16],
+			[16, 13],
+			[13, 14],
+			[13, 15],
+			[13, 9],
+			[16, 17],
+			[17, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[17, 7],
+			[7, 8],
+			[7, 9],
+			[17, 18],
+			[18, 19],
+			[18, 20],
+			[18, 21],
+			[21, 22],
+			[21, 20],
+			[17, 21],
+			[21, 22],
+			[21, 20],
+			[17, 23],
+			[16, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[16, 12],
+			[12, 13],
+			[13, 14],
+			[13, 15],
+			[13, 9],
+			[12, 10],
+			[10, 7],
+			[7, 8],
+			[7, 9],
+			[12, 7],
+			[7, 8],
+			[7, 9],
+			[16, 7],
+			[7, 8],
+			[7, 9],
+			[16, 2],
+			[2, 3],
+			[16, 24],
+			[27, 9],
+			[40, 68],
+			[40, 69],
+			[40, 70],
+			[40, 71],
+			[40, 72],
+			[40, 73],
+			[40, 74],
+			[40, 75],
+			[40, 76],
+			[40, 77],
+			[40, 78],
+			[40, 79],
+			[40, 80],
+			[40, 81],
+			[40, 82],
+			[40, 83],
+			[40, 84],
+			[40, 85],
+			[40, 86],
+			[40, 87],
+			[40, 88],
+			[40, 89],
+			[40, 90],
+			[40, 91],
+			[40, 92],
+			[40, 93],
+			[40, 94],
+			[40, 95],
+			[40, 96],
+			[40, 97],
+			[40, 98],
+			[40, 99],
+			[40, 100],
+			[40, 101],
+			[40, 102],
+			[40, 103],
+			[40, 104],
+			[40, 105],
+			[40, 106],
+			[40, 107],
+			[40, 108],
+			[40, 109],
+			[40, 110],
+			[40, 111],
+			[40, 112],
+			[40, 113],
+			[40, 114],
+			[40, 115],
+			[40, 116],
+			[40, 117],
+			[40, 118],
+			[40, 119],
+			[0, 120],
+			[0, 121],
+			[0, 122],
+			[0, 123],
+			[0, 124],
+			[0, 125],
+			[0, 126],
+			[0, 127],
+			[0, 128],
+			[0, 129],
+			[0, 130],
+			[0, 131],
+			[0, 132],
+			[0, 133],
+			[0, 134],
+			[0, 135],
+			[0, 136],
+			[0, 137],
+			[0, 138],
+			[0, 139],
+			[0, 140],
+			[0, 141],
+			[0, 142],
+			[0, 143],
+			[0, 144],
+			[0, 145],
+			[0, 146],
+			[0, 147],
+			[0, 148],
+			[0, 149]
+		],
+		"circular": []
+	}
 }

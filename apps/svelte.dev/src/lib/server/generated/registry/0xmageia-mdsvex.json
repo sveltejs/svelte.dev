@@ -13,25 +13,6 @@
 	"version": "0.1.1",
 	"svelte_range": ">=3 <5",
 	"last_rune_check_version": "0.1.1",
-	"dependencies": [
-		{
-			"name": "@types/unist",
-			"semver": "^2.0.3"
-		},
-		{
-			"name": "prism-svelte",
-			"semver": "^0.4.7"
-		},
-		{
-			"name": "prismjs",
-			"semver": "^1.17.1"
-		},
-		{
-			"name": "vfile-message",
-			"semver": "^2.0.4"
-		}
-	],
-	"unpacked_size": 2184234,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -277,5 +258,50 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 11
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@0xmageia/mdsvex",
+				"version": "0.1.1",
+				"size": 2184234
+			},
+			{
+				"name": "@types/unist",
+				"version": "2.0.11",
+				"size": 8543
+			},
+			{
+				"name": "prism-svelte",
+				"version": "0.4.7",
+				"size": 6075
+			},
+			{
+				"name": "prismjs",
+				"version": "1.30.0",
+				"size": 2052735
+			},
+			{
+				"name": "vfile-message",
+				"version": "2.0.4",
+				"size": 12600
+			},
+			{
+				"name": "unist-util-stringify-position",
+				"version": "2.0.3",
+				"size": 8531
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[0, 4],
+			[4, 1],
+			[4, 5],
+			[5, 1]
+		],
+		"circular": []
+	}
 }

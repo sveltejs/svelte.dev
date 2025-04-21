@@ -13,33 +13,6 @@
 	"version": "5.0.3",
 	"svelte_range": "^5.0.0",
 	"last_rune_check_version": "5.0.3",
-	"dependencies": [
-		{
-			"name": "debug",
-			"semver": "^4.4.0"
-		},
-		{
-			"name": "kleur",
-			"semver": "^4.1.5"
-		},
-		{
-			"name": "vitefu",
-			"semver": "^1.0.4"
-		},
-		{
-			"name": "deepmerge",
-			"semver": "^4.3.1"
-		},
-		{
-			"name": "magic-string",
-			"semver": "^0.30.15"
-		},
-		{
-			"name": "@sveltejs/vite-plugin-svelte-inspector",
-			"semver": "^4.0.1"
-		}
-	],
-	"unpacked_size": 126450,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -353,5 +326,68 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 681273
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@sveltejs/vite-plugin-svelte",
+				"version": "5.0.3",
+				"size": 126450
+			},
+			{
+				"name": "debug",
+				"version": "4.4.0",
+				"size": 42798
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "kleur",
+				"version": "4.1.5",
+				"size": 20250
+			},
+			{
+				"name": "vitefu",
+				"version": "1.0.6",
+				"size": 21035
+			},
+			{
+				"name": "deepmerge",
+				"version": "4.3.1",
+				"size": 31157
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "@sveltejs/vite-plugin-svelte-inspector",
+				"version": "4.0.1",
+				"size": 25886
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[0, 4],
+			[0, 5],
+			[0, 6],
+			[6, 7],
+			[0, 8],
+			[8, 1],
+			[1, 2]
+		],
+		"circular": []
+	}
 }

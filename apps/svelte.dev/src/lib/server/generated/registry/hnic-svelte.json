@@ -12,8 +12,6 @@
 	"svelte_range": "^4.2.18",
 	"last_rune_check_version": "1.0.13",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 114537,
 	"downloads_history": [
 		{
 			"range": [1724610600000, 1725215399999],
@@ -47,5 +45,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 25
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "hnic-svelte",
+				"version": "1.0.13",
+				"size": 114537
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

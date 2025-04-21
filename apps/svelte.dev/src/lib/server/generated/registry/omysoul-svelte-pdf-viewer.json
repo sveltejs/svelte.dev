@@ -12,13 +12,6 @@
 	"svelte_range": "^3.23.2",
 	"last_rune_check_version": "0.0.3",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "pdfjs-dist",
-			"semver": "2.4.456"
-		}
-	],
-	"unpacked_size": 104640,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -252,5 +245,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@omysoul/svelte-pdf-viewer",
+				"version": "0.0.3",
+				"size": 104640
+			},
+			{
+				"name": "pdfjs-dist",
+				"version": "2.4.456",
+				"size": 19348590
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

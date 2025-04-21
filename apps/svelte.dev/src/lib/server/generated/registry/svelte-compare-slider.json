@@ -14,8 +14,6 @@
 	"kit_range": "^2.12.1",
 	"last_rune_check_version": "0.2.0",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 7939,
 	"downloads_history": [
 		{
 			"range": [1708281000000, 1708885799999],
@@ -245,5 +243,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-compare-slider",
+				"version": "0.2.0",
+				"size": 7939
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

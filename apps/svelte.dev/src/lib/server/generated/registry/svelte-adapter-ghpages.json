@@ -14,13 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.0.0 || ^2.0.0",
 	"last_rune_check_version": "0.2.2",
-	"dependencies": [
-		{
-			"name": "@sveltejs/adapter-static",
-			"semver": "^2.0.0 || ^3.0.0"
-		}
-	],
-	"unpacked_size": 11278,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -334,5 +327,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 10871
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-adapter-ghpages",
+				"version": "0.2.2",
+				"size": 11278
+			},
+			{
+				"name": "@sveltejs/adapter-static",
+				"version": "3.0.8",
+				"size": 8593
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

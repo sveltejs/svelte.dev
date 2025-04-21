@@ -12,13 +12,6 @@
 	"typescript": false,
 	"version": "2.0.1",
 	"last_rune_check_version": "2.0.1",
-	"dependencies": [
-		{
-			"name": "svelte-preprocess-filter",
-			"semver": "^1.0.0"
-		}
-	],
-	"unpacked_size": 22363,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -332,5 +325,21 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 672
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-preprocess-sass",
+				"version": "2.0.1",
+				"size": 22363
+			},
+			{
+				"name": "svelte-preprocess-filter",
+				"version": "1.0.0"
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

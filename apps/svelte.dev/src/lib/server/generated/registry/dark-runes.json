@@ -13,21 +13,6 @@
 	"version": "0.1.6",
 	"svelte_range": "^5.0.0-next.29",
 	"last_rune_check_version": "0.1.6",
-	"dependencies": [
-		{
-			"name": "acorn",
-			"semver": "^8.11.2"
-		},
-		{
-			"name": "estree-walker",
-			"semver": "^3.0.3"
-		},
-		{
-			"name": "magic-string",
-			"semver": "^0.30.3"
-		}
-	],
-	"unpacked_size": 34564,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -341,5 +326,48 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 10
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "dark-runes",
+				"version": "0.1.6",
+				"size": 34564
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "estree-walker",
+				"version": "3.0.3",
+				"size": 17599
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[0, 4],
+			[4, 5]
+		],
+		"circular": []
+	}
 }

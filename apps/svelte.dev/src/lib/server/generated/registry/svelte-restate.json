@@ -13,13 +13,6 @@
 	"version": "0.1.6",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "0.1.6",
-	"dependencies": [
-		{
-			"name": "immer",
-			"semver": "^9.0.12"
-		}
-	],
-	"unpacked_size": 162286,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +326,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-restate",
+				"version": "0.1.6",
+				"size": 162286
+			},
+			{
+				"name": "immer",
+				"version": "9.0.21",
+				"size": 871966
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

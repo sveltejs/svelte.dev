@@ -13,17 +13,6 @@
 	"version": "2.1.9",
 	"svelte_range": "^5.0.0",
 	"last_rune_check_version": "2.1.9",
-	"dependencies": [
-		{
-			"name": "@ai-sdk/ui-utils",
-			"semver": "1.2.8"
-		},
-		{
-			"name": "@ai-sdk/provider-utils",
-			"semver": "2.2.7"
-		}
-	],
-	"unpacked_size": 91200,
 	"downloads_history": [
 		{
 			"range": [1717957800000, 1718562599999],
@@ -201,5 +190,67 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 343180
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@ai-sdk/svelte",
+				"version": "2.1.9",
+				"size": 91200
+			},
+			{
+				"name": "@ai-sdk/ui-utils",
+				"version": "1.2.8",
+				"size": 402961
+			},
+			{
+				"name": "@ai-sdk/provider",
+				"version": "1.1.3",
+				"size": 174890
+			},
+			{
+				"name": "json-schema",
+				"version": "0.4.0",
+				"size": 26079
+			},
+			{
+				"name": "@ai-sdk/provider-utils",
+				"version": "2.2.7",
+				"size": 4367429
+			},
+			{
+				"name": "nanoid",
+				"version": "3.3.11",
+				"size": 32583
+			},
+			{
+				"name": "secure-json-parse",
+				"version": "2.7.0",
+				"size": 40656
+			},
+			{
+				"name": "zod-to-json-schema",
+				"version": "3.24.5",
+				"size": 211797
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[1, 4],
+			[4, 5],
+			[4, 2],
+			[2, 3],
+			[4, 6],
+			[1, 7],
+			[0, 4],
+			[4, 5],
+			[4, 2],
+			[2, 3],
+			[4, 6]
+		],
+		"circular": []
+	}
 }

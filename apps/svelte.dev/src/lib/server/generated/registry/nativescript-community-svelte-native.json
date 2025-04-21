@@ -34,8 +34,6 @@
 	"version": "1.0.29",
 	"svelte_range": "^4.2.8",
 	"last_rune_check_version": "1.0.29",
-	"dependencies": [],
-	"unpacked_size": 184120,
 	"downloads_history": [
 		{
 			"range": [1739730600000, 1740335399999],
@@ -65,5 +63,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 12
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@nativescript-community/svelte-native",
+				"version": "1.0.29",
+				"size": 184120
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

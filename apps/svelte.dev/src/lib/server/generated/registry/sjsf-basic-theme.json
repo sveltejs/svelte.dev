@@ -13,8 +13,6 @@
 	"version": "2.0.0-next.9",
 	"svelte_range": "^5.25.0",
 	"last_rune_check_version": "2.0.0-next.9",
-	"dependencies": [],
-	"unpacked_size": 40892,
 	"downloads_history": [
 		{
 			"range": [1741545000000, 1742149799999],
@@ -36,5 +34,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 147
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@sjsf/basic-theme",
+				"version": "2.0.0-next.9",
+				"size": 40892
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

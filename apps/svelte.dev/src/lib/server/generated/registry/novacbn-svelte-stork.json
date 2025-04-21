@@ -14,13 +14,6 @@
 	"svelte_range": "^3.38.3",
 	"kit_range": "^1.0.0-next.142",
 	"last_rune_check_version": "0.0.6",
-	"dependencies": [
-		{
-			"name": "svelte",
-			"semver": "^3.38.3"
-		}
-	],
-	"unpacked_size": 44952,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -254,5 +247,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@novacbn/svelte-stork",
+				"version": "0.0.6",
+				"size": 44952
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

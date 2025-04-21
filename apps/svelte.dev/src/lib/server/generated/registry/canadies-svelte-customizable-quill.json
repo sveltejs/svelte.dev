@@ -13,13 +13,6 @@
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "1.0.5",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "quill",
-			"semver": "^2.0.2"
-		}
-	],
-	"unpacked_size": 6034,
 	"downloads_history": [
 		{
 			"range": [1726425000000, 1727029799999],
@@ -129,5 +122,64 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 12
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@canadies/svelte-customizable-quill",
+				"version": "1.0.5",
+				"size": 6034
+			},
+			{
+				"name": "quill",
+				"version": "2.0.3",
+				"size": 3036362
+			},
+			{
+				"name": "lodash-es",
+				"version": "4.17.21",
+				"size": 636080
+			},
+			{
+				"name": "parchment",
+				"version": "3.0.0",
+				"size": 315994
+			},
+			{
+				"name": "quill-delta",
+				"version": "5.1.0",
+				"size": 95333
+			},
+			{
+				"name": "fast-diff",
+				"version": "1.3.0",
+				"size": 52314
+			},
+			{
+				"name": "lodash.clonedeep",
+				"version": "4.5.0"
+			},
+			{
+				"name": "lodash.isequal",
+				"version": "4.5.0"
+			},
+			{
+				"name": "eventemitter3",
+				"version": "5.0.1",
+				"size": 73390
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[1, 4],
+			[4, 5],
+			[4, 6],
+			[4, 7],
+			[1, 8]
+		],
+		"circular": []
+	}
 }

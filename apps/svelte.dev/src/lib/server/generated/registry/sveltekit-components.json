@@ -14,17 +14,6 @@
 	"svelte_range": "^3.52.0",
 	"kit_range": "^1.0.0-next.516",
 	"last_rune_check_version": "0.6.0",
-	"dependencies": [
-		{
-			"name": "@fontsource/fira-mono",
-			"semver": "^4.5.10"
-		},
-		{
-			"name": "@fontsource/source-sans-pro",
-			"semver": "^4.5.11"
-		}
-	],
-	"unpacked_size": 273667,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -234,5 +223,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "sveltekit-components",
+				"version": "0.6.0",
+				"size": 273667
+			},
+			{
+				"name": "@fontsource/fira-mono",
+				"version": "4.5.10",
+				"size": 1021999
+			},
+			{
+				"name": "@fontsource/source-sans-pro",
+				"version": "4.5.11",
+				"size": 3029632
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

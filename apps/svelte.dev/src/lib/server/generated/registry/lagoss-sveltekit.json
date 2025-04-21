@@ -13,8 +13,6 @@
 	"version": "0.2.1",
 	"kit_range": "^1.0.0",
 	"last_rune_check_version": "0.2.1",
-	"dependencies": [],
-	"unpacked_size": 39052,
 	"downloads_history": [
 		{
 			"range": [1708885800000, 1709490599999],
@@ -152,5 +150,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@lagoss/sveltekit",
+				"version": "0.2.1",
+				"size": 39052
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

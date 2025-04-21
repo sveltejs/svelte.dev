@@ -13,69 +13,6 @@
 	"version": "0.2.4",
 	"svelte_range": "^3.35.0",
 	"last_rune_check_version": "0.2.4",
-	"dependencies": [
-		{
-			"name": "@snowsvex/snowsvex-plugin",
-			"semver": "file:../snowsvex-plugin"
-		},
-		{
-			"name": "chalk",
-			"semver": "^4.1.0"
-		},
-		{
-			"name": "clear",
-			"semver": "^0.1.0"
-		},
-		{
-			"name": "commander",
-			"semver": "^7.1.0"
-		},
-		{
-			"name": "cosmiconfig",
-			"semver": "^7.0.0"
-		},
-		{
-			"name": "estree-walker",
-			"semver": "^3.0.0"
-		},
-		{
-			"name": "figlet",
-			"semver": "^1.5.0"
-		},
-		{
-			"name": "js-yaml",
-			"semver": "^4.0.0"
-		},
-		{
-			"name": "locate-character",
-			"semver": "^2.0.5"
-		},
-		{
-			"name": "magic-string",
-			"semver": "^0.25.7"
-		},
-		{
-			"name": "mdsvex",
-			"semver": "^0.8.9"
-		},
-		{
-			"name": "snowpack",
-			"semver": "^3.0.13"
-		},
-		{
-			"name": "svelte",
-			"semver": "^3.35.0"
-		},
-		{
-			"name": "unified",
-			"semver": "^9.2.1"
-		},
-		{
-			"name": "uuid",
-			"semver": "^8.3.2"
-		}
-	],
-	"unpacked_size": 185161,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -309,5 +246,1848 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 12
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@snowsvex/snowsvex",
+				"version": "0.2.4",
+				"size": 185161
+			},
+			{
+				"name": "@snowsvex/snowsvex-plugin",
+				"version": "file:../snowsvex-plugin"
+			},
+			{
+				"name": "chalk",
+				"version": "4.1.2",
+				"size": 35047
+			},
+			{
+				"name": "ansi-styles",
+				"version": "4.3.0",
+				"size": 16978
+			},
+			{
+				"name": "color-convert",
+				"version": "2.0.1",
+				"size": 27189
+			},
+			{
+				"name": "color-name",
+				"version": "1.1.4",
+				"size": 6693
+			},
+			{
+				"name": "supports-color",
+				"version": "7.2.0",
+				"size": 7035
+			},
+			{
+				"name": "has-flag",
+				"version": "4.0.0",
+				"size": 4419
+			},
+			{
+				"name": "clear",
+				"version": "0.1.0",
+				"size": 2035
+			},
+			{
+				"name": "commander",
+				"version": "7.2.0",
+				"size": 144710
+			},
+			{
+				"name": "cosmiconfig",
+				"version": "7.1.0",
+				"size": 92011
+			},
+			{
+				"name": "@types/parse-json",
+				"version": "4.0.2",
+				"size": 2946
+			},
+			{
+				"name": "import-fresh",
+				"version": "3.3.1",
+				"size": 4693
+			},
+			{
+				"name": "parent-module",
+				"version": "1.0.1",
+				"size": 3922
+			},
+			{
+				"name": "callsites",
+				"version": "3.1.0",
+				"size": 6332
+			},
+			{
+				"name": "resolve-from",
+				"version": "4.0.0"
+			},
+			{
+				"name": "parse-json",
+				"version": "5.2.0",
+				"size": 5409
+			},
+			{
+				"name": "error-ex",
+				"version": "1.3.2",
+				"size": 9035
+			},
+			{
+				"name": "is-arrayish",
+				"version": "0.2.1"
+			},
+			{
+				"name": "@babel/code-frame",
+				"version": "7.26.2",
+				"size": 33160
+			},
+			{
+				"name": "js-tokens",
+				"version": "4.0.0"
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "@babel/helper-validator-identifier",
+				"version": "7.25.9",
+				"size": 48330
+			},
+			{
+				"name": "lines-and-columns",
+				"version": "1.2.4",
+				"size": 5386
+			},
+			{
+				"name": "json-parse-even-better-errors",
+				"version": "2.3.1",
+				"size": 10426
+			},
+			{
+				"name": "path-type",
+				"version": "4.0.0",
+				"size": 5407
+			},
+			{
+				"name": "yaml",
+				"version": "1.10.2",
+				"size": 448149
+			},
+			{
+				"name": "estree-walker",
+				"version": "3.0.3",
+				"size": 17599
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "figlet",
+				"version": "1.8.1",
+				"size": 6130902
+			},
+			{
+				"name": "js-yaml",
+				"version": "4.1.0",
+				"size": 404738
+			},
+			{
+				"name": "argparse",
+				"version": "2.0.1",
+				"size": 171548
+			},
+			{
+				"name": "locate-character",
+				"version": "2.0.5"
+			},
+			{
+				"name": "magic-string",
+				"version": "0.25.9",
+				"size": 373056
+			},
+			{
+				"name": "sourcemap-codec",
+				"version": "1.4.8",
+				"size": 31802
+			},
+			{
+				"name": "mdsvex",
+				"version": "0.8.9",
+				"size": 2737030
+			},
+			{
+				"name": "prismjs",
+				"version": "1.30.0",
+				"size": 2052735
+			},
+			{
+				"name": "@types/unist",
+				"version": "2.0.11",
+				"size": 8543
+			},
+			{
+				"name": "vfile-message",
+				"version": "2.0.4",
+				"size": 12600
+			},
+			{
+				"name": "unist-util-stringify-position",
+				"version": "2.0.3",
+				"size": 8531
+			},
+			{
+				"name": "snowpack",
+				"version": "3.8.8",
+				"size": 726961
+			},
+			{
+				"name": "@npmcli/arborist",
+				"version": "2.10.0",
+				"size": 392820
+			},
+			{
+				"name": "ssri",
+				"version": "8.0.1",
+				"size": 46908
+			},
+			{
+				"name": "minipass",
+				"version": "3.3.6",
+				"size": 48090
+			},
+			{
+				"name": "yallist",
+				"version": "4.0.0",
+				"size": 14752
+			},
+			{
+				"name": "mkdirp",
+				"version": "1.0.4",
+				"size": 19088
+			},
+			{
+				"name": "pacote",
+				"version": "11.3.5",
+				"size": 65572
+			},
+			{
+				"name": "tar",
+				"version": "6.2.1",
+				"size": 166613
+			},
+			{
+				"name": "chownr",
+				"version": "2.0.0",
+				"size": 5748
+			},
+			{
+				"name": "minipass",
+				"version": "5.0.0",
+				"size": 69475
+			},
+			{
+				"name": "minizlib",
+				"version": "2.1.2",
+				"size": 17309
+			},
+			{
+				"name": "fs-minipass",
+				"version": "2.1.0",
+				"size": 14089
+			},
+			{
+				"name": "rimraf",
+				"version": "3.0.2",
+				"size": 17327
+			},
+			{
+				"name": "glob",
+				"version": "7.2.3",
+				"size": 55064
+			},
+			{
+				"name": "once",
+				"version": "1.4.0"
+			},
+			{
+				"name": "wrappy",
+				"version": "1.0.2"
+			},
+			{
+				"name": "inflight",
+				"version": "1.0.6"
+			},
+			{
+				"name": "inherits",
+				"version": "2.0.4",
+				"size": 3958
+			},
+			{
+				"name": "minimatch",
+				"version": "3.1.2",
+				"size": 34902
+			},
+			{
+				"name": "brace-expansion",
+				"version": "1.1.11",
+				"size": 11059
+			},
+			{
+				"name": "balanced-match",
+				"version": "1.0.2",
+				"size": 6939
+			},
+			{
+				"name": "concat-map",
+				"version": "0.0.1"
+			},
+			{
+				"name": "fs.realpath",
+				"version": "1.0.0"
+			},
+			{
+				"name": "path-is-absolute",
+				"version": "1.0.1"
+			},
+			{
+				"name": "cacache",
+				"version": "15.3.0",
+				"size": 76264
+			},
+			{
+				"name": "p-map",
+				"version": "4.0.0",
+				"size": 8687
+			},
+			{
+				"name": "aggregate-error",
+				"version": "3.1.0",
+				"size": 6690
+			},
+			{
+				"name": "clean-stack",
+				"version": "2.2.0",
+				"size": 5508
+			},
+			{
+				"name": "indent-string",
+				"version": "4.0.0",
+				"size": 4398
+			},
+			{
+				"name": "lru-cache",
+				"version": "6.0.0",
+				"size": 15643
+			},
+			{
+				"name": "@npmcli/fs",
+				"version": "1.1.1",
+				"size": 41853
+			},
+			{
+				"name": "semver",
+				"version": "7.7.1",
+				"size": 96674
+			},
+			{
+				"name": "@gar/promisify",
+				"version": "1.1.3",
+				"size": 4197
+			},
+			{
+				"name": "infer-owner",
+				"version": "1.0.4",
+				"size": 4290
+			},
+			{
+				"name": "minipass-flush",
+				"version": "1.0.5",
+				"size": 3771
+			},
+			{
+				"name": "unique-filename",
+				"version": "1.1.1",
+				"size": 41421
+			},
+			{
+				"name": "unique-slug",
+				"version": "2.0.2",
+				"size": 2679
+			},
+			{
+				"name": "imurmurhash",
+				"version": "0.1.4"
+			},
+			{
+				"name": "minipass-collect",
+				"version": "1.0.2",
+				"size": 4870
+			},
+			{
+				"name": "promise-inflight",
+				"version": "1.0.1"
+			},
+			{
+				"name": "@npmcli/move-file",
+				"version": "1.1.2",
+				"size": 7895
+			},
+			{
+				"name": "minipass-pipeline",
+				"version": "1.2.4",
+				"size": 7004
+			},
+			{
+				"name": "@npmcli/git",
+				"version": "2.1.0",
+				"size": 21661
+			},
+			{
+				"name": "which",
+				"version": "2.0.2",
+				"size": 9975
+			},
+			{
+				"name": "isexe",
+				"version": "2.0.0"
+			},
+			{
+				"name": "promise-retry",
+				"version": "2.0.1",
+				"size": 15556
+			},
+			{
+				"name": "err-code",
+				"version": "2.0.3",
+				"size": 12280
+			},
+			{
+				"name": "retry",
+				"version": "0.12.0",
+				"size": 32210
+			},
+			{
+				"name": "npm-pick-manifest",
+				"version": "6.1.1",
+				"size": 22587
+			},
+			{
+				"name": "npm-package-arg",
+				"version": "8.1.5",
+				"size": 16600
+			},
+			{
+				"name": "hosted-git-info",
+				"version": "4.1.0",
+				"size": 24404
+			},
+			{
+				"name": "validate-npm-package-name",
+				"version": "3.0.0"
+			},
+			{
+				"name": "builtins",
+				"version": "1.0.3"
+			},
+			{
+				"name": "npm-install-checks",
+				"version": "4.0.0",
+				"size": 5169
+			},
+			{
+				"name": "npm-normalize-package-bin",
+				"version": "1.0.1",
+				"size": 131250
+			},
+			{
+				"name": "@npmcli/promise-spawn",
+				"version": "1.3.2",
+				"size": 6014
+			},
+			{
+				"name": "npm-packlist",
+				"version": "2.2.2",
+				"size": 23890
+			},
+			{
+				"name": "ignore-walk",
+				"version": "3.0.4",
+				"size": 11022
+			},
+			{
+				"name": "npm-bundled",
+				"version": "1.1.2",
+				"size": 9743
+			},
+			{
+				"name": "@npmcli/run-script",
+				"version": "1.8.6",
+				"size": 16519
+			},
+			{
+				"name": "node-gyp",
+				"version": "7.1.2",
+				"size": 1931732
+			},
+			{
+				"name": "nopt",
+				"version": "5.0.0",
+				"size": 25840
+			},
+			{
+				"name": "abbrev",
+				"version": "1.1.1"
+			},
+			{
+				"name": "npmlog",
+				"version": "4.1.2"
+			},
+			{
+				"name": "gauge",
+				"version": "2.7.4"
+			},
+			{
+				"name": "aproba",
+				"version": "1.2.0"
+			},
+			{
+				"name": "strip-ansi",
+				"version": "3.0.1"
+			},
+			{
+				"name": "ansi-regex",
+				"version": "2.1.1"
+			},
+			{
+				"name": "wide-align",
+				"version": "1.1.5",
+				"size": 4467
+			},
+			{
+				"name": "string-width",
+				"version": "4.2.3",
+				"size": 5161
+			},
+			{
+				"name": "strip-ansi",
+				"version": "6.0.1",
+				"size": 4029
+			},
+			{
+				"name": "emoji-regex",
+				"version": "8.0.0",
+				"size": 48255
+			},
+			{
+				"name": "is-fullwidth-code-point",
+				"version": "3.0.0",
+				"size": 4994
+			},
+			{
+				"name": "has-unicode",
+				"version": "2.0.1"
+			},
+			{
+				"name": "signal-exit",
+				"version": "3.0.7",
+				"size": 9958
+			},
+			{
+				"name": "string-width",
+				"version": "1.0.2"
+			},
+			{
+				"name": "code-point-at",
+				"version": "1.1.0"
+			},
+			{
+				"name": "is-fullwidth-code-point",
+				"version": "1.0.0"
+			},
+			{
+				"name": "number-is-nan",
+				"version": "1.0.1"
+			},
+			{
+				"name": "object-assign",
+				"version": "4.1.1"
+			},
+			{
+				"name": "console-control-strings",
+				"version": "1.1.0"
+			},
+			{
+				"name": "set-blocking",
+				"version": "2.0.0"
+			},
+			{
+				"name": "are-we-there-yet",
+				"version": "1.1.7",
+				"size": 14650
+			},
+			{
+				"name": "delegates",
+				"version": "1.0.0"
+			},
+			{
+				"name": "readable-stream",
+				"version": "2.3.8",
+				"size": 88115
+			},
+			{
+				"name": "isarray",
+				"version": "1.0.0"
+			},
+			{
+				"name": "safe-buffer",
+				"version": "5.1.2",
+				"size": 31686
+			},
+			{
+				"name": "core-util-is",
+				"version": "1.0.3",
+				"size": 4982
+			},
+			{
+				"name": "string_decoder",
+				"version": "1.1.1",
+				"size": 15298
+			},
+			{
+				"name": "util-deprecate",
+				"version": "1.0.2"
+			},
+			{
+				"name": "process-nextick-args",
+				"version": "2.0.1",
+				"size": 3175
+			},
+			{
+				"name": "request",
+				"version": "2.88.2",
+				"size": 209281
+			},
+			{
+				"name": "qs",
+				"version": "6.5.3",
+				"size": 125650
+			},
+			{
+				"name": "aws4",
+				"version": "1.13.2",
+				"size": 23399
+			},
+			{
+				"name": "uuid",
+				"version": "3.4.0",
+				"size": 34269
+			},
+			{
+				"name": "extend",
+				"version": "3.0.2",
+				"size": 23461
+			},
+			{
+				"name": "caseless",
+				"version": "0.12.0"
+			},
+			{
+				"name": "isstream",
+				"version": "0.1.2"
+			},
+			{
+				"name": "aws-sign2",
+				"version": "0.7.0"
+			},
+			{
+				"name": "form-data",
+				"version": "2.3.3",
+				"size": 119230
+			},
+			{
+				"name": "asynckit",
+				"version": "0.4.0"
+			},
+			{
+				"name": "mime-types",
+				"version": "2.1.35",
+				"size": 18272
+			},
+			{
+				"name": "mime-db",
+				"version": "1.52.0",
+				"size": 205539
+			},
+			{
+				"name": "combined-stream",
+				"version": "1.0.8",
+				"size": 11514
+			},
+			{
+				"name": "delayed-stream",
+				"version": "1.0.0"
+			},
+			{
+				"name": "oauth-sign",
+				"version": "0.9.0",
+				"size": 13805
+			},
+			{
+				"name": "safe-buffer",
+				"version": "5.2.1",
+				"size": 32101
+			},
+			{
+				"name": "tough-cookie",
+				"version": "2.5.0",
+				"size": 86644
+			},
+			{
+				"name": "psl",
+				"version": "1.15.0",
+				"size": 711982
+			},
+			{
+				"name": "punycode",
+				"version": "2.3.1",
+				"size": 33514
+			},
+			{
+				"name": "tunnel-agent",
+				"version": "0.6.0"
+			},
+			{
+				"name": "forever-agent",
+				"version": "0.6.1"
+			},
+			{
+				"name": "har-validator",
+				"version": "5.1.5",
+				"size": 8220
+			},
+			{
+				"name": "ajv",
+				"version": "6.12.6",
+				"size": 929154
+			},
+			{
+				"name": "uri-js",
+				"version": "4.4.1",
+				"size": 469879
+			},
+			{
+				"name": "fast-deep-equal",
+				"version": "3.1.3",
+				"size": 12966
+			},
+			{
+				"name": "json-schema-traverse",
+				"version": "0.4.1",
+				"size": 19564
+			},
+			{
+				"name": "fast-json-stable-stringify",
+				"version": "2.1.0",
+				"size": 16959
+			},
+			{
+				"name": "har-schema",
+				"version": "2.0.0"
+			},
+			{
+				"name": "is-typedarray",
+				"version": "1.0.0"
+			},
+			{
+				"name": "http-signature",
+				"version": "1.2.0"
+			},
+			{
+				"name": "sshpk",
+				"version": "1.18.0",
+				"size": 230846
+			},
+			{
+				"name": "asn1",
+				"version": "0.2.6",
+				"size": 19757
+			},
+			{
+				"name": "safer-buffer",
+				"version": "2.1.2",
+				"size": 42299
+			},
+			{
+				"name": "jsbn",
+				"version": "0.1.1"
+			},
+			{
+				"name": "getpass",
+				"version": "0.1.7"
+			},
+			{
+				"name": "assert-plus",
+				"version": "1.0.0"
+			},
+			{
+				"name": "dashdash",
+				"version": "1.14.1"
+			},
+			{
+				"name": "ecc-jsbn",
+				"version": "0.1.2",
+				"size": 27799
+			},
+			{
+				"name": "tweetnacl",
+				"version": "0.14.5"
+			},
+			{
+				"name": "bcrypt-pbkdf",
+				"version": "1.0.2",
+				"size": 28994
+			},
+			{
+				"name": "jsprim",
+				"version": "1.4.2",
+				"size": 31183
+			},
+			{
+				"name": "verror",
+				"version": "1.10.0"
+			},
+			{
+				"name": "extsprintf",
+				"version": "1.4.1",
+				"size": 30346
+			},
+			{
+				"name": "core-util-is",
+				"version": "1.0.2"
+			},
+			{
+				"name": "extsprintf",
+				"version": "1.3.0"
+			},
+			{
+				"name": "json-schema",
+				"version": "0.4.0",
+				"size": 26079
+			},
+			{
+				"name": "combined-stream",
+				"version": "~1.0.6"
+			},
+			{
+				"name": "performance-now",
+				"version": "^2.1.0"
+			},
+			{
+				"name": "json-stringify-safe",
+				"version": "~5.0.1"
+			},
+			{
+				"name": "env-paths",
+				"version": "^2.2.0"
+			},
+			{
+				"name": "graceful-fs",
+				"version": "^4.2.3"
+			},
+			{
+				"name": "@npmcli/node-gyp",
+				"version": "^1.0.2"
+			},
+			{
+				"name": "read-package-json-fast",
+				"version": "^2.0.1"
+			},
+			{
+				"name": "npm-registry-fetch",
+				"version": "^11.0.0"
+			},
+			{
+				"name": "@npmcli/promise-spawn",
+				"version": "^1.2.0"
+			},
+			{
+				"name": "@npmcli/installed-package-contents",
+				"version": "^1.0.6"
+			},
+			{
+				"name": "cacache",
+				"version": "^15.0.3"
+			},
+			{
+				"name": "proc-log",
+				"version": "^1.0.0"
+			},
+			{
+				"name": "bin-links",
+				"version": "^2.2.1"
+			},
+			{
+				"name": "treeverse",
+				"version": "^1.0.4"
+			},
+			{
+				"name": "walk-up-path",
+				"version": "^1.0.0"
+			},
+			{
+				"name": "npm-package-arg",
+				"version": "^8.1.5"
+			},
+			{
+				"name": "@npmcli/node-gyp",
+				"version": "^1.0.1"
+			},
+			{
+				"name": "@npmcli/move-file",
+				"version": "^1.1.0"
+			},
+			{
+				"name": "npm-pick-manifest",
+				"version": "^6.1.0"
+			},
+			{
+				"name": "mkdirp-infer-owner",
+				"version": "^2.0.0"
+			},
+			{
+				"name": "promise-call-limit",
+				"version": "^1.0.1"
+			},
+			{
+				"name": "json-stringify-nice",
+				"version": "^1.1.4"
+			},
+			{
+				"name": "parse-conflict-json",
+				"version": "^1.1.1"
+			},
+			{
+				"name": "@npmcli/package-json",
+				"version": "^1.0.1"
+			},
+			{
+				"name": "common-ancestor-path",
+				"version": "^1.0.1"
+			},
+			{
+				"name": "@npmcli/map-workspaces",
+				"version": "^1.0.2"
+			},
+			{
+				"name": "read-package-json-fast",
+				"version": "^2.0.2"
+			},
+			{
+				"name": "readdir-scoped-modules",
+				"version": "^1.1.0"
+			},
+			{
+				"name": "promise-all-reject-late",
+				"version": "^1.0.0"
+			},
+			{
+				"name": "@npmcli/name-from-folder",
+				"version": "^1.0.1"
+			},
+			{
+				"name": "@npmcli/metavuln-calculator",
+				"version": "^1.1.0"
+			},
+			{
+				"name": "@isaacs/string-locale-compare",
+				"version": "^1.0.1"
+			},
+			{
+				"name": "json-parse-even-better-errors",
+				"version": "^2.3.1"
+			},
+			{
+				"name": "@npmcli/installed-package-contents",
+				"version": "^1.0.7"
+			},
+			{
+				"name": "bufferutil",
+				"version": "^4.0.2"
+			},
+			{
+				"name": "cachedir",
+				"version": "^2.3.0"
+			},
+			{
+				"name": "cheerio",
+				"version": "1.0.0-rc.10"
+			},
+			{
+				"name": "chokidar",
+				"version": "^3.4.0"
+			},
+			{
+				"name": "cli-spinners",
+				"version": "^2.5.0"
+			},
+			{
+				"name": "compressible",
+				"version": "^2.0.18"
+			},
+			{
+				"name": "deepmerge",
+				"version": "^4.2.2"
+			},
+			{
+				"name": "default-browser-id",
+				"version": "^2.0.0"
+			},
+			{
+				"name": "detect-port",
+				"version": "^1.3.0"
+			},
+			{
+				"name": "es-module-lexer",
+				"version": "^0.3.24"
+			},
+			{
+				"name": "esbuild",
+				"version": "~0.9.0"
+			},
+			{
+				"name": "esinstall",
+				"version": "^1.1.7"
+			},
+			{
+				"name": "estree-walker",
+				"version": "^2.0.2"
+			},
+			{
+				"name": "etag",
+				"version": "^1.8.1"
+			},
+			{
+				"name": "execa",
+				"version": "^5.1.1"
+			},
+			{
+				"name": "fdir",
+				"version": "^5.0.0"
+			},
+			{
+				"name": "find-cache-dir",
+				"version": "^3.3.1"
+			},
+			{
+				"name": "find-up",
+				"version": "^5.0.0"
+			},
+			{
+				"name": "glob",
+				"version": "^7.1.7"
+			},
+			{
+				"name": "httpie",
+				"version": "^1.1.2"
+			},
+			{
+				"name": "is-plain-object",
+				"version": "^5.0.0"
+			},
+			{
+				"name": "is-reference",
+				"version": "^1.2.1"
+			},
+			{
+				"name": "isbinaryfile",
+				"version": "^4.0.6"
+			},
+			{
+				"name": "jsonschema",
+				"version": "~1.2.5"
+			},
+			{
+				"name": "kleur",
+				"version": "^4.1.1"
+			},
+			{
+				"name": "meriyah",
+				"version": "^3.1.6"
+			},
+			{
+				"name": "mime-types",
+				"version": "^2.1.26"
+			},
+			{
+				"name": "npm-run-path",
+				"version": "^4.0.1"
+			},
+			{
+				"name": "open",
+				"version": "^8.2.1"
+			},
+			{
+				"name": "pacote",
+				"version": "^11.3.4"
+			},
+			{
+				"name": "periscopic",
+				"version": "^2.0.3"
+			},
+			{
+				"name": "picomatch",
+				"version": "^2.3.0"
+			},
+			{
+				"name": "postcss",
+				"version": "^8.3.5"
+			},
+			{
+				"name": "postcss-modules",
+				"version": "^4.0.0"
+			},
+			{
+				"name": "resolve",
+				"version": "^1.20.0"
+			},
+			{
+				"name": "resolve-from",
+				"version": "^5.0.0"
+			},
+			{
+				"name": "rimraf",
+				"version": "^3.0.0"
+			},
+			{
+				"name": "rollup",
+				"version": "~2.37.1"
+			},
+			{
+				"name": "signal-exit",
+				"version": "^3.0.3"
+			},
+			{
+				"name": "slash",
+				"version": "~3.0.0"
+			},
+			{
+				"name": "skypack",
+				"version": "^0.3.2"
+			},
+			{
+				"name": "source-map",
+				"version": "^0.7.3"
+			},
+			{
+				"name": "strip-ansi",
+				"version": "^6.0.0"
+			},
+			{
+				"name": "strip-comments",
+				"version": "^2.0.1"
+			},
+			{
+				"name": "utf-8-validate",
+				"version": "^5.0.3"
+			},
+			{
+				"name": "ws",
+				"version": "^7.3.0"
+			},
+			{
+				"name": "yargs-parser",
+				"version": "^20.0.0"
+			},
+			{
+				"name": "svelte",
+				"version": "^3.35.0"
+			},
+			{
+				"name": "unified",
+				"version": "^9.2.1"
+			},
+			{
+				"name": "uuid",
+				"version": "^8.3.2"
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[3, 4],
+			[4, 5],
+			[2, 6],
+			[6, 7],
+			[0, 8],
+			[0, 9],
+			[0, 10],
+			[10, 11],
+			[10, 12],
+			[12, 13],
+			[13, 14],
+			[12, 15],
+			[10, 16],
+			[16, 17],
+			[17, 18],
+			[16, 19],
+			[19, 20],
+			[19, 21],
+			[19, 22],
+			[16, 23],
+			[16, 24],
+			[10, 25],
+			[10, 26],
+			[0, 27],
+			[27, 28],
+			[0, 29],
+			[0, 30],
+			[30, 31],
+			[0, 32],
+			[0, 33],
+			[33, 34],
+			[0, 35],
+			[35, 36],
+			[35, 37],
+			[35, 38],
+			[38, 37],
+			[38, 39],
+			[39, 37],
+			[0, 40],
+			[40, 41],
+			[41, 42],
+			[42, 43],
+			[43, 44],
+			[41, 45],
+			[41, 46],
+			[46, 47],
+			[47, 48],
+			[47, 45],
+			[47, 44],
+			[47, 49],
+			[47, 50],
+			[50, 44],
+			[50, 43],
+			[43, 44],
+			[47, 51],
+			[51, 43],
+			[43, 44],
+			[46, 42],
+			[42, 43],
+			[43, 44],
+			[46, 48],
+			[46, 45],
+			[46, 52],
+			[52, 53],
+			[53, 54],
+			[54, 55],
+			[53, 56],
+			[56, 54],
+			[54, 55],
+			[56, 55],
+			[53, 57],
+			[53, 58],
+			[58, 59],
+			[59, 60],
+			[59, 61],
+			[53, 62],
+			[53, 63],
+			[46, 64],
+			[64, 47],
+			[47, 48],
+			[47, 45],
+			[47, 44],
+			[47, 49],
+			[47, 50],
+			[50, 44],
+			[50, 43],
+			[43, 44],
+			[47, 51],
+			[51, 43],
+			[43, 44],
+			[64, 53],
+			[53, 54],
+			[54, 55],
+			[53, 56],
+			[56, 54],
+			[54, 55],
+			[56, 55],
+			[53, 57],
+			[53, 58],
+			[58, 59],
+			[59, 60],
+			[59, 61],
+			[53, 62],
+			[53, 63],
+			[64, 42],
+			[42, 43],
+			[43, 44],
+			[64, 65],
+			[65, 66],
+			[66, 67],
+			[66, 68],
+			[64, 48],
+			[64, 45],
+			[64, 52],
+			[52, 53],
+			[53, 54],
+			[54, 55],
+			[53, 56],
+			[56, 54],
+			[54, 55],
+			[56, 55],
+			[53, 57],
+			[53, 58],
+			[58, 59],
+			[59, 60],
+			[59, 61],
+			[53, 62],
+			[53, 63],
+			[64, 43],
+			[43, 44],
+			[64, 69],
+			[69, 44],
+			[64, 70],
+			[70, 71],
+			[70, 72],
+			[64, 51],
+			[51, 43],
+			[43, 44],
+			[64, 73],
+			[64, 74],
+			[74, 43],
+			[43, 44],
+			[64, 75],
+			[75, 76],
+			[76, 77],
+			[64, 78],
+			[78, 43],
+			[43, 44],
+			[64, 79],
+			[64, 80],
+			[80, 45],
+			[80, 52],
+			[52, 53],
+			[53, 54],
+			[54, 55],
+			[53, 56],
+			[56, 54],
+			[54, 55],
+			[56, 55],
+			[53, 57],
+			[53, 58],
+			[58, 59],
+			[59, 60],
+			[59, 61],
+			[53, 62],
+			[53, 63],
+			[64, 81],
+			[81, 43],
+			[43, 44],
+			[46, 43],
+			[43, 44],
+			[46, 82],
+			[82, 83],
+			[83, 84],
+			[82, 45],
+			[82, 71],
+			[82, 69],
+			[69, 44],
+			[82, 85],
+			[85, 86],
+			[85, 87],
+			[82, 79],
+			[82, 88],
+			[88, 71],
+			[88, 89],
+			[89, 71],
+			[89, 90],
+			[90, 69],
+			[69, 44],
+			[89, 91],
+			[91, 92],
+			[88, 93],
+			[93, 71],
+			[88, 94],
+			[82, 95],
+			[95, 73],
+			[46, 51],
+			[51, 43],
+			[43, 44],
+			[46, 73],
+			[46, 96],
+			[96, 53],
+			[53, 54],
+			[54, 55],
+			[53, 56],
+			[56, 54],
+			[54, 55],
+			[56, 55],
+			[53, 57],
+			[53, 58],
+			[58, 59],
+			[59, 60],
+			[59, 61],
+			[53, 62],
+			[53, 63],
+			[96, 97],
+			[97, 58],
+			[58, 59],
+			[59, 60],
+			[59, 61],
+			[96, 98],
+			[98, 94],
+			[96, 94],
+			[46, 85],
+			[85, 86],
+			[85, 87],
+			[46, 89],
+			[89, 71],
+			[89, 90],
+			[90, 69],
+			[69, 44],
+			[89, 91],
+			[91, 92],
+			[46, 88],
+			[88, 71],
+			[88, 89],
+			[89, 71],
+			[89, 90],
+			[90, 69],
+			[69, 44],
+			[89, 91],
+			[91, 92],
+			[88, 93],
+			[93, 71],
+			[88, 94],
+			[46, 99],
+			[99, 100],
+			[100, 47],
+			[47, 48],
+			[47, 45],
+			[47, 44],
+			[47, 49],
+			[47, 50],
+			[50, 44],
+			[50, 43],
+			[43, 44],
+			[47, 51],
+			[51, 43],
+			[43, 44],
+			[100, 53],
+			[53, 54],
+			[54, 55],
+			[53, 56],
+			[56, 54],
+			[54, 55],
+			[56, 55],
+			[53, 57],
+			[53, 58],
+			[58, 59],
+			[59, 60],
+			[59, 61],
+			[53, 62],
+			[53, 63],
+			[100, 101],
+			[101, 102],
+			[100, 83],
+			[83, 84],
+			[100, 103],
+			[103, 104],
+			[104, 105],
+			[104, 106],
+			[106, 107],
+			[104, 108],
+			[108, 109],
+			[109, 110],
+			[109, 111],
+			[109, 112],
+			[104, 113],
+			[104, 114],
+			[104, 115],
+			[115, 106],
+			[106, 107],
+			[115, 116],
+			[115, 117],
+			[117, 118],
+			[104, 119],
+			[104, 120],
+			[103, 121],
+			[103, 122],
+			[122, 123],
+			[122, 124],
+			[124, 125],
+			[124, 57],
+			[124, 126],
+			[124, 127],
+			[124, 128],
+			[128, 126],
+			[124, 129],
+			[124, 130],
+			[103, 120],
+			[100, 52],
+			[52, 53],
+			[53, 54],
+			[54, 55],
+			[53, 56],
+			[56, 54],
+			[54, 55],
+			[56, 55],
+			[53, 57],
+			[53, 58],
+			[58, 59],
+			[59, 60],
+			[59, 61],
+			[53, 62],
+			[53, 63],
+			[100, 71],
+			[100, 131],
+			[131, 132],
+			[131, 133],
+			[131, 134],
+			[131, 135],
+			[131, 136],
+			[131, 137],
+			[131, 138],
+			[131, 139],
+			[139, 140],
+			[139, 141],
+			[141, 142],
+			[139, 143],
+			[143, 144],
+			[131, 141],
+			[141, 142],
+			[131, 145],
+			[131, 146],
+			[131, 147],
+			[147, 148],
+			[148, 149],
+			[147, 149],
+			[131, 150],
+			[150, 146],
+			[131, 151],
+			[131, 152],
+			[152, 153],
+			[153, 154],
+			[154, 149],
+			[153, 155],
+			[153, 156],
+			[153, 157],
+			[152, 158],
+			[131, 159],
+			[131, 160],
+			[160, 161],
+			[161, 162],
+			[162, 163],
+			[161, 164],
+			[161, 165],
+			[165, 166],
+			[161, 167],
+			[167, 166],
+			[161, 168],
+			[168, 164],
+			[168, 163],
+			[161, 169],
+			[161, 166],
+			[161, 170],
+			[170, 169],
+			[161, 163],
+			[160, 171],
+			[171, 172],
+			[172, 173],
+			[172, 166],
+			[172, 174],
+			[171, 175],
+			[171, 166],
+			[171, 176],
+			[160, 166],
+			[131, 177],
+			[131, 178],
+			[131, 179],
+			[100, 180],
+			[100, 181],
+			[99, 182],
+			[99, 95],
+			[95, 73],
+			[99, 183],
+			[46, 184],
+			[46, 185],
+			[46, 183],
+			[46, 186],
+			[41, 52],
+			[52, 53],
+			[53, 54],
+			[54, 55],
+			[53, 56],
+			[56, 54],
+			[54, 55],
+			[56, 55],
+			[53, 57],
+			[53, 58],
+			[58, 59],
+			[59, 60],
+			[59, 61],
+			[53, 62],
+			[53, 63],
+			[41, 71],
+			[41, 187],
+			[41, 188],
+			[41, 189],
+			[41, 190],
+			[41, 191],
+			[41, 192],
+			[41, 193],
+			[41, 194],
+			[41, 195],
+			[41, 99],
+			[99, 100],
+			[100, 47],
+			[47, 48],
+			[47, 45],
+			[47, 44],
+			[47, 49],
+			[47, 50],
+			[50, 44],
+			[50, 43],
+			[43, 44],
+			[47, 51],
+			[51, 43],
+			[43, 44],
+			[100, 53],
+			[53, 54],
+			[54, 55],
+			[53, 56],
+			[56, 54],
+			[54, 55],
+			[56, 55],
+			[53, 57],
+			[53, 58],
+			[58, 59],
+			[59, 60],
+			[59, 61],
+			[53, 62],
+			[53, 63],
+			[100, 101],
+			[101, 102],
+			[100, 83],
+			[83, 84],
+			[100, 103],
+			[103, 104],
+			[104, 105],
+			[104, 106],
+			[106, 107],
+			[104, 108],
+			[108, 109],
+			[109, 110],
+			[109, 111],
+			[109, 112],
+			[104, 113],
+			[104, 114],
+			[104, 115],
+			[115, 106],
+			[106, 107],
+			[115, 116],
+			[115, 117],
+			[117, 118],
+			[104, 119],
+			[104, 120],
+			[103, 121],
+			[103, 122],
+			[122, 123],
+			[122, 124],
+			[124, 125],
+			[124, 57],
+			[124, 126],
+			[124, 127],
+			[124, 128],
+			[128, 126],
+			[124, 129],
+			[124, 130],
+			[103, 120],
+			[100, 52],
+			[52, 53],
+			[53, 54],
+			[54, 55],
+			[53, 56],
+			[56, 54],
+			[54, 55],
+			[56, 55],
+			[53, 57],
+			[53, 58],
+			[58, 59],
+			[59, 60],
+			[59, 61],
+			[53, 62],
+			[53, 63],
+			[100, 71],
+			[100, 131],
+			[131, 132],
+			[131, 133],
+			[131, 134],
+			[131, 135],
+			[131, 136],
+			[131, 137],
+			[131, 138],
+			[131, 139],
+			[139, 140],
+			[139, 141],
+			[141, 142],
+			[139, 143],
+			[143, 144],
+			[131, 141],
+			[141, 142],
+			[131, 145],
+			[131, 146],
+			[131, 147],
+			[147, 148],
+			[148, 149],
+			[147, 149],
+			[131, 150],
+			[150, 146],
+			[131, 151],
+			[131, 152],
+			[152, 153],
+			[153, 154],
+			[154, 149],
+			[153, 155],
+			[153, 156],
+			[153, 157],
+			[152, 158],
+			[131, 159],
+			[131, 160],
+			[160, 161],
+			[161, 162],
+			[162, 163],
+			[161, 164],
+			[161, 165],
+			[165, 166],
+			[161, 167],
+			[167, 166],
+			[161, 168],
+			[168, 164],
+			[168, 163],
+			[161, 169],
+			[161, 166],
+			[161, 170],
+			[170, 169],
+			[161, 163],
+			[160, 171],
+			[171, 172],
+			[172, 173],
+			[172, 166],
+			[172, 174],
+			[171, 175],
+			[171, 166],
+			[171, 176],
+			[160, 166],
+			[131, 177],
+			[131, 178],
+			[131, 179],
+			[100, 180],
+			[100, 181],
+			[99, 182],
+			[99, 95],
+			[95, 73],
+			[99, 183],
+			[41, 196],
+			[41, 93],
+			[93, 71],
+			[41, 184],
+			[41, 197],
+			[41, 198],
+			[41, 199],
+			[41, 200],
+			[41, 201],
+			[41, 202],
+			[41, 203],
+			[41, 204],
+			[41, 205],
+			[41, 206],
+			[41, 207],
+			[41, 208],
+			[41, 209],
+			[41, 210],
+			[40, 211],
+			[40, 212],
+			[40, 213],
+			[40, 214],
+			[40, 215],
+			[40, 216],
+			[40, 10],
+			[10, 11],
+			[10, 12],
+			[12, 13],
+			[13, 14],
+			[12, 15],
+			[10, 16],
+			[16, 17],
+			[17, 18],
+			[16, 19],
+			[19, 20],
+			[19, 21],
+			[19, 22],
+			[16, 23],
+			[16, 24],
+			[10, 25],
+			[10, 26],
+			[40, 217],
+			[40, 218],
+			[40, 219],
+			[40, 220],
+			[40, 221],
+			[40, 222],
+			[40, 223],
+			[40, 224],
+			[40, 225],
+			[40, 226],
+			[40, 227],
+			[40, 228],
+			[40, 229],
+			[40, 230],
+			[40, 231],
+			[40, 232],
+			[40, 233],
+			[40, 234],
+			[40, 235],
+			[40, 33],
+			[33, 34],
+			[40, 236],
+			[40, 237],
+			[40, 45],
+			[40, 238],
+			[40, 239],
+			[40, 240],
+			[40, 241],
+			[40, 242],
+			[40, 243],
+			[40, 244],
+			[40, 245],
+			[40, 246],
+			[40, 247],
+			[40, 248],
+			[40, 249],
+			[40, 250],
+			[40, 251],
+			[40, 252],
+			[40, 253],
+			[40, 254],
+			[40, 255],
+			[40, 256],
+			[40, 257],
+			[0, 258],
+			[0, 259],
+			[0, 260]
+		],
+		"circular": []
+	}
 }

@@ -13,8 +13,6 @@
 	"version": "0.2.2",
 	"svelte_range": "^4.0.5",
 	"last_rune_check_version": "0.2.2",
-	"dependencies": [],
-	"unpacked_size": 2278266,
 	"downloads_history": [
 		{
 			"range": [1707676200000, 1708280999999],
@@ -204,5 +202,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@biggiepete/svelte-editorjs",
+				"version": "0.2.2",
+				"size": 2278266
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

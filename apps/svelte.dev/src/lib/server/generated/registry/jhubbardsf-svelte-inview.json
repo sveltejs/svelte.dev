@@ -13,8 +13,6 @@
 	"svelte_range": "^3.0.0 || ^4.0.0",
 	"last_rune_check_version": "4.0.2",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 45607,
 	"downloads_history": [
 		{
 			"range": [1720981800000, 1721586599999],
@@ -168,5 +166,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 13
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@jhubbardsf/svelte-inview",
+				"version": "4.0.2",
+				"size": 45607
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

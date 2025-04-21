@@ -13,8 +13,6 @@
 	"version": "0.1.1",
 	"svelte_range": "^5.0.0",
 	"last_rune_check_version": "0.1.1",
-	"dependencies": [],
-	"unpacked_size": 142891,
 	"downloads_history": [
 		{
 			"range": [1740940200000, 1741544999999],
@@ -40,5 +38,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 9
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svseeds",
+				"version": "0.1.1",
+				"size": 142891
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

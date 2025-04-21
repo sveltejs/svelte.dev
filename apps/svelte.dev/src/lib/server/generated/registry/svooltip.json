@@ -14,13 +14,6 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.17.1",
 	"last_rune_check_version": "0.9.0",
-	"dependencies": [
-		{
-			"name": "@floating-ui/dom",
-			"semver": "^1.6.13"
-		}
-	],
-	"unpacked_size": 20605,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -334,5 +327,37 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 627
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svooltip",
+				"version": "0.9.0",
+				"size": 20605
+			},
+			{
+				"name": "@floating-ui/dom",
+				"version": "1.6.13",
+				"size": 165945
+			},
+			{
+				"name": "@floating-ui/core",
+				"version": "1.6.9",
+				"size": 212585
+			},
+			{
+				"name": "@floating-ui/utils",
+				"version": "0.2.9",
+				"size": 64926
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[1, 3]
+		],
+		"circular": []
+	}
 }

@@ -13,8 +13,6 @@
 	"version": "0.40.3",
 	"svelte_range": ">=5.0",
 	"last_rune_check_version": "0.40.3",
-	"dependencies": [],
-	"unpacked_size": 1283344,
 	"downloads_history": [
 		{
 			"range": [1740940200000, 1741544999999],
@@ -40,5 +38,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 16
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@dolsem/virtua",
+				"version": "0.40.3",
+				"size": 1283344
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

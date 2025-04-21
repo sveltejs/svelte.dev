@@ -13,8 +13,6 @@
 	"version": "1.0.0",
 	"svelte_range": "^4.2.19",
 	"last_rune_check_version": "1.0.0",
-	"dependencies": [],
-	"unpacked_size": 3198,
 	"downloads_history": [
 		{
 			"range": [1724610600000, 1725215399999],
@@ -128,5 +126,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 10
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-disqus-component",
+				"version": "1.0.0",
+				"size": 3198
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

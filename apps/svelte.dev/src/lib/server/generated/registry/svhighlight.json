@@ -14,17 +14,6 @@
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.7.2",
 	"last_rune_check_version": "0.7.1",
-	"dependencies": [
-		{
-			"name": "highlight.js",
-			"semver": "^11.7.0"
-		},
-		{
-			"name": "scroll-into-view-if-needed",
-			"semver": "^3.0.4"
-		}
-	],
-	"unpacked_size": 19337,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -338,5 +327,36 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 379
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svhighlight",
+				"version": "0.7.1",
+				"size": 19337
+			},
+			{
+				"name": "highlight.js",
+				"version": "11.11.1",
+				"size": 5433042
+			},
+			{
+				"name": "scroll-into-view-if-needed",
+				"version": "3.1.0",
+				"size": 44784
+			},
+			{
+				"name": "compute-scroll-into-view",
+				"version": "3.1.1",
+				"size": 95312
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3]
+		],
+		"circular": []
+	}
 }

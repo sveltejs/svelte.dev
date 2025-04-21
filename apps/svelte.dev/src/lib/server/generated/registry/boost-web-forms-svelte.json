@@ -12,8 +12,6 @@
 	"version": "1.9.0",
 	"svelte_range": "^3.37.0",
 	"last_rune_check_version": "1.9.0",
-	"dependencies": [],
-	"unpacked_size": 6954,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -203,5 +201,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "boost-web-forms-svelte",
+				"version": "1.9.0",
+				"size": 6954
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

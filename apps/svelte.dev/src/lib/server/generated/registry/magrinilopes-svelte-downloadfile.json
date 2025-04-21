@@ -13,13 +13,6 @@
 	"svelte_range": "3.35.0",
 	"last_rune_check_version": "0.1.2",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "@tadashi/fd",
-			"semver": "^1.0.1"
-		}
-	],
-	"unpacked_size": 23220,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -313,5 +306,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 18
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@magrinilopes/svelte-downloadfile",
+				"version": "0.1.2",
+				"size": 23220
+			},
+			{
+				"name": "@tadashi/fd",
+				"version": "1.1.1",
+				"size": 6835
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

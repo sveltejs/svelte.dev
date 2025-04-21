@@ -13,13 +13,6 @@
 	"version": "1.0.1",
 	"svelte_range": "^3.5.1",
 	"last_rune_check_version": "1.0.1",
-	"dependencies": [
-		{
-			"name": "url-pattern",
-			"semver": "^1.0.3"
-		}
-	],
-	"unpacked_size": 13436,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +326,21 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 16
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-hash-router",
+				"version": "1.0.1",
+				"size": 13436
+			},
+			{
+				"name": "url-pattern",
+				"version": "1.0.3"
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

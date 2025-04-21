@@ -13,17 +13,6 @@
 	"version": "0.6.3",
 	"svelte_range": "3.x",
 	"last_rune_check_version": "0.6.3",
-	"dependencies": [
-		{
-			"name": "fast-json-stable-stringify",
-			"semver": "^2.1.0"
-		},
-		{
-			"name": "plain-tag",
-			"semver": "^0.1.2"
-		}
-	],
-	"unpacked_size": 156960,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -329,5 +318,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 16
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@svelkit/graphql",
+				"version": "0.6.3",
+				"size": 156960
+			},
+			{
+				"name": "fast-json-stable-stringify",
+				"version": "2.1.0",
+				"size": 16959
+			},
+			{
+				"name": "plain-tag",
+				"version": "0.1.3",
+				"size": 4531
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

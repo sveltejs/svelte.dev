@@ -14,8 +14,6 @@
 	"svelte_range": "^3.54.0 || ^4.0.0",
 	"kit_range": "^1.30.4",
 	"last_rune_check_version": "1.4.0",
-	"dependencies": [],
-	"unpacked_size": 21307,
 	"downloads_history": [
 		{
 			"range": [1717957800000, 1718562599999],
@@ -181,5 +179,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 38
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@castlenine/svelte-aoe",
+				"version": "1.4.0",
+				"size": 21307
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

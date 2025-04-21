@@ -13,8 +13,6 @@
 	"version": "1.7.1",
 	"svelte_range": "^3.38.2",
 	"last_rune_check_version": "1.7.1",
-	"dependencies": [],
-	"unpacked_size": 96270,
 	"downloads_history": [
 		{
 			"range": [1728239400000, 1728844199999],
@@ -120,5 +118,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 20
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "sveltick",
+				"version": "1.7.1",
+				"size": 96270
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

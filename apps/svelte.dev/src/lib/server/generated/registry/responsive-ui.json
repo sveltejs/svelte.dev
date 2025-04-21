@@ -13,141 +13,6 @@
 	"version": "1.1.0-alpha.58",
 	"svelte_range": "^3.46.2",
 	"last_rune_check_version": "1.1.0-alpha.58",
-	"dependencies": [
-		{
-			"name": "@responsive-ui/accordion",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/action-sheet",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/bottom-bar",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/bottom-sheet",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/button",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/card",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/checkbox",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/column",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/date-picker",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/ellipsis",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/fab",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/header",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/icon",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/input",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/input-number",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/label",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/link",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/loader",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/poster",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/responsive",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/row",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/search",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/select",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/show-more",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/snackbar",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/stepper",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/switch",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/tab",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/table",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/tag",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/textarea",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/tooltip",
-			"semver": "*"
-		},
-		{
-			"name": "@responsive-ui/upload",
-			"semver": "*"
-		}
-	],
-	"unpacked_size": 1022236,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -441,5 +306,230 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 31
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "responsive-ui",
+				"version": "1.1.0-alpha.58",
+				"size": 1022236
+			},
+			{
+				"name": "@responsive-ui/accordion",
+				"version": "1.1.0-alpha.58",
+				"size": 78477
+			},
+			{
+				"name": "@responsive-ui/action-sheet",
+				"version": "1.1.0-alpha.58",
+				"size": 230743
+			},
+			{
+				"name": "@responsive-ui/bottom-bar",
+				"version": "1.1.0-alpha.58",
+				"size": 61319
+			},
+			{
+				"name": "@responsive-ui/bottom-sheet",
+				"version": "1.1.0-alpha.58",
+				"size": 125198
+			},
+			{
+				"name": "@responsive-ui/button",
+				"version": "1.1.0-alpha.58",
+				"size": 62923
+			},
+			{
+				"name": "@responsive-ui/card",
+				"version": "1.1.0-alpha.58",
+				"size": 56585
+			},
+			{
+				"name": "@responsive-ui/checkbox",
+				"version": "1.1.0-alpha.58",
+				"size": 67000
+			},
+			{
+				"name": "@responsive-ui/column",
+				"version": "1.1.0-alpha.58",
+				"size": 71417
+			},
+			{
+				"name": "@responsive-ui/date-picker",
+				"version": "1.1.0-alpha.58",
+				"size": 203209
+			},
+			{
+				"name": "@wetix/utils",
+				"version": "1.0.0-beta.0",
+				"size": 62381
+			},
+			{
+				"name": "@responsive-ui/ellipsis",
+				"version": "1.1.0-alpha.58",
+				"size": 56729
+			},
+			{
+				"name": "@responsive-ui/fab",
+				"version": "1.1.0-alpha.58",
+				"size": 91900
+			},
+			{
+				"name": "@responsive-ui/header",
+				"version": "1.1.0-alpha.58",
+				"size": 55240
+			},
+			{
+				"name": "@responsive-ui/icon",
+				"version": "1.1.0-alpha.58",
+				"size": 61057
+			},
+			{
+				"name": "@responsive-ui/input",
+				"version": "1.1.0-alpha.58",
+				"size": 73362
+			},
+			{
+				"name": "@responsive-ui/input-number",
+				"version": "1.1.0-alpha.58",
+				"size": 85070
+			},
+			{
+				"name": "@responsive-ui/label",
+				"version": "1.1.0-alpha.58",
+				"size": 56140
+			},
+			{
+				"name": "@responsive-ui/link",
+				"version": "1.0.9-alpha.6",
+				"size": 58646
+			},
+			{
+				"name": "@responsive-ui/loader",
+				"version": "1.1.0-alpha.58",
+				"size": 73119
+			},
+			{
+				"name": "@responsive-ui/poster",
+				"version": "1.1.0-alpha.58",
+				"size": 55603
+			},
+			{
+				"name": "@responsive-ui/responsive",
+				"version": "1.1.0-alpha.58",
+				"size": 57434
+			},
+			{
+				"name": "@responsive-ui/row",
+				"version": "1.1.0-alpha.58",
+				"size": 56937
+			},
+			{
+				"name": "@responsive-ui/search",
+				"version": "1.1.0-alpha.58",
+				"size": 66759
+			},
+			{
+				"name": "@responsive-ui/select",
+				"version": "1.1.0-alpha.58",
+				"size": 202632
+			},
+			{
+				"name": "@wetix/animation",
+				"version": "0.2.2",
+				"size": 6266
+			},
+			{
+				"name": "@responsive-ui/show-more",
+				"version": "1.1.0-alpha.58",
+				"size": 77489
+			},
+			{
+				"name": "@responsive-ui/snackbar",
+				"version": "1.1.0-alpha.58",
+				"size": 96939
+			},
+			{
+				"name": "@responsive-ui/stepper",
+				"version": "1.1.0-alpha.58",
+				"size": 58458
+			},
+			{
+				"name": "@responsive-ui/switch",
+				"version": "1.1.0-alpha.58",
+				"size": 55089
+			},
+			{
+				"name": "@responsive-ui/tab",
+				"version": "1.1.0-alpha.58",
+				"size": 90539
+			},
+			{
+				"name": "@responsive-ui/table",
+				"version": "1.1.0-alpha.58",
+				"size": 150643
+			},
+			{
+				"name": "@responsive-ui/tag",
+				"version": "1.1.0-alpha.58",
+				"size": 67539
+			},
+			{
+				"name": "@responsive-ui/textarea",
+				"version": "1.1.0-alpha.58",
+				"size": 74599
+			},
+			{
+				"name": "@responsive-ui/tooltip",
+				"version": "1.1.0-alpha.58",
+				"size": 113856
+			},
+			{
+				"name": "@responsive-ui/upload",
+				"version": "1.1.0-alpha.58",
+				"size": 83497
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[0, 4],
+			[0, 5],
+			[0, 6],
+			[0, 7],
+			[0, 8],
+			[0, 9],
+			[9, 10],
+			[0, 11],
+			[0, 12],
+			[0, 13],
+			[0, 14],
+			[0, 15],
+			[0, 16],
+			[0, 17],
+			[0, 18],
+			[0, 19],
+			[0, 20],
+			[0, 21],
+			[0, 22],
+			[0, 23],
+			[0, 24],
+			[24, 25],
+			[24, 10],
+			[0, 26],
+			[0, 27],
+			[27, 25],
+			[0, 28],
+			[0, 29],
+			[0, 30],
+			[0, 31],
+			[0, 32],
+			[0, 33],
+			[0, 34],
+			[0, 35]
+		],
+		"circular": []
+	}
 }

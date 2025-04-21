@@ -14,21 +14,6 @@
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
 	"last_rune_check_version": "2.0.2",
-	"dependencies": [
-		{
-			"name": "bulma",
-			"semver": "^0.9.4"
-		},
-		{
-			"name": "open-props",
-			"semver": "^1.4.3"
-		},
-		{
-			"name": "@picocss/pico",
-			"semver": "^1.5.3"
-		}
-	],
-	"unpacked_size": 47766,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -318,5 +303,36 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 9
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@bizmate-oss/svelte-formly",
+				"version": "2.0.2",
+				"size": 47766
+			},
+			{
+				"name": "bulma",
+				"version": "0.9.4",
+				"size": 1259757
+			},
+			{
+				"name": "open-props",
+				"version": "1.7.15",
+				"size": 1041873
+			},
+			{
+				"name": "@picocss/pico",
+				"version": "1.5.13",
+				"size": 2820127
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3]
+		],
+		"circular": []
+	}
 }

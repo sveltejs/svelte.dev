@@ -13,13 +13,6 @@
 	"version": "1.0.8",
 	"svelte_range": "^4.2.8",
 	"last_rune_check_version": "1.0.8",
-	"dependencies": [
-		{
-			"name": "regexparam",
-			"semver": "2.0.2"
-		}
-	],
-	"unpacked_size": 62726,
 	"downloads_history": [
 		{
 			"range": [1725820200000, 1726424999999],
@@ -145,5 +138,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 43
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@keenmate/svelte-spa-router",
+				"version": "1.0.8",
+				"size": 62726
+			},
+			{
+				"name": "regexparam",
+				"version": "2.0.2",
+				"size": 13840
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

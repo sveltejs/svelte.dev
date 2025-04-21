@@ -13,13 +13,6 @@
 	"version": "1.0.3",
 	"svelte_range": "^3.12.1",
 	"last_rune_check_version": "1.0.3",
-	"dependencies": [
-		{
-			"name": "@semantic-release/git",
-			"semver": "^7.0.16"
-		}
-	],
-	"unpacked_size": 6984,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -321,5 +314,453 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "rollup-plugin-svelte-ssr",
+				"version": "1.0.3",
+				"size": 6984
+			},
+			{
+				"name": "@semantic-release/git",
+				"version": "7.0.18",
+				"size": 28362
+			},
+			{
+				"name": "@semantic-release/error",
+				"version": "2.2.0",
+				"size": 5038
+			},
+			{
+				"name": "aggregate-error",
+				"version": "3.1.0",
+				"size": 6690
+			},
+			{
+				"name": "clean-stack",
+				"version": "2.2.0",
+				"size": 5508
+			},
+			{
+				"name": "indent-string",
+				"version": "4.0.0",
+				"size": 4398
+			},
+			{
+				"name": "debug",
+				"version": "4.4.0",
+				"size": 42798
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "dir-glob",
+				"version": "3.0.1",
+				"size": 5417
+			},
+			{
+				"name": "path-type",
+				"version": "4.0.0",
+				"size": 5407
+			},
+			{
+				"name": "execa",
+				"version": "3.4.0",
+				"size": 53960
+			},
+			{
+				"name": "onetime",
+				"version": "5.1.2",
+				"size": 6173
+			},
+			{
+				"name": "mimic-fn",
+				"version": "2.1.0",
+				"size": 4457
+			},
+			{
+				"name": "is-stream",
+				"version": "2.0.1",
+				"size": 5927
+			},
+			{
+				"name": "p-finally",
+				"version": "2.0.1",
+				"size": 3365
+			},
+			{
+				"name": "get-stream",
+				"version": "5.2.0",
+				"size": 12397
+			},
+			{
+				"name": "pump",
+				"version": "3.0.2",
+				"size": 8762
+			},
+			{
+				"name": "once",
+				"version": "1.4.0"
+			},
+			{
+				"name": "wrappy",
+				"version": "1.0.2"
+			},
+			{
+				"name": "end-of-stream",
+				"version": "1.4.4",
+				"size": 6234
+			},
+			{
+				"name": "cross-spawn",
+				"version": "7.0.6",
+				"size": 16094
+			},
+			{
+				"name": "which",
+				"version": "2.0.2",
+				"size": 9975
+			},
+			{
+				"name": "isexe",
+				"version": "2.0.0"
+			},
+			{
+				"name": "path-key",
+				"version": "3.1.1",
+				"size": 4553
+			},
+			{
+				"name": "shebang-command",
+				"version": "2.0.0",
+				"size": 2556
+			},
+			{
+				"name": "shebang-regex",
+				"version": "3.0.0",
+				"size": 2828
+			},
+			{
+				"name": "signal-exit",
+				"version": "3.0.7",
+				"size": 9958
+			},
+			{
+				"name": "merge-stream",
+				"version": "2.0.0",
+				"size": 4306
+			},
+			{
+				"name": "npm-run-path",
+				"version": "4.0.1",
+				"size": 8128
+			},
+			{
+				"name": "human-signals",
+				"version": "1.1.1",
+				"size": 42370
+			},
+			{
+				"name": "strip-final-newline",
+				"version": "2.0.0",
+				"size": 3046
+			},
+			{
+				"name": "fs-extra",
+				"version": "8.1.0",
+				"size": 127504
+			},
+			{
+				"name": "jsonfile",
+				"version": "4.0.0"
+			},
+			{
+				"name": "graceful-fs",
+				"version": "4.2.11",
+				"size": 32535
+			},
+			{
+				"name": "universalify",
+				"version": "0.1.2",
+				"size": 4705
+			},
+			{
+				"name": "globby",
+				"version": "10.0.2",
+				"size": 22044
+			},
+			{
+				"name": "glob",
+				"version": "7.2.3",
+				"size": 55064
+			},
+			{
+				"name": "inflight",
+				"version": "1.0.6"
+			},
+			{
+				"name": "inherits",
+				"version": "2.0.4",
+				"size": 3958
+			},
+			{
+				"name": "minimatch",
+				"version": "3.1.2",
+				"size": 34902
+			},
+			{
+				"name": "brace-expansion",
+				"version": "1.1.11",
+				"size": 11059
+			},
+			{
+				"name": "balanced-match",
+				"version": "1.0.2",
+				"size": 6939
+			},
+			{
+				"name": "concat-map",
+				"version": "0.0.1"
+			},
+			{
+				"name": "fs.realpath",
+				"version": "1.0.0"
+			},
+			{
+				"name": "path-is-absolute",
+				"version": "1.0.1"
+			},
+			{
+				"name": "slash",
+				"version": "3.0.0",
+				"size": 3507
+			},
+			{
+				"name": "ignore",
+				"version": "5.3.2",
+				"size": 53630
+			},
+			{
+				"name": "merge2",
+				"version": "1.4.1",
+				"size": 8897
+			},
+			{
+				"name": "fast-glob",
+				"version": "3.3.3",
+				"size": 98396
+			},
+			{
+				"name": "@nodelib/fs.stat",
+				"version": "2.0.5",
+				"size": 11845
+			},
+			{
+				"name": "@nodelib/fs.walk",
+				"version": "1.2.8",
+				"size": 26377
+			},
+			{
+				"name": "fastq",
+				"version": "1.19.1",
+				"size": 45922
+			},
+			{
+				"name": "reusify",
+				"version": "1.1.0",
+				"size": 11696
+			},
+			{
+				"name": "@nodelib/fs.scandir",
+				"version": "2.1.5",
+				"size": 22155
+			},
+			{
+				"name": "run-parallel",
+				"version": "1.2.0",
+				"size": 6563
+			},
+			{
+				"name": "queue-microtask",
+				"version": "1.2.3",
+				"size": 8367
+			},
+			{
+				"name": "glob-parent",
+				"version": "5.1.2",
+				"size": 12134
+			},
+			{
+				"name": "is-glob",
+				"version": "4.0.3",
+				"size": 13609
+			},
+			{
+				"name": "is-extglob",
+				"version": "2.1.1"
+			},
+			{
+				"name": "micromatch",
+				"version": "4.0.8",
+				"size": 56599
+			},
+			{
+				"name": "braces",
+				"version": "3.0.3",
+				"size": 44635
+			},
+			{
+				"name": "fill-range",
+				"version": "7.1.1",
+				"size": 16743
+			},
+			{
+				"name": "to-regex-range",
+				"version": "5.0.1",
+				"size": 22939
+			},
+			{
+				"name": "is-number",
+				"version": "7.0.0",
+				"size": 9615
+			},
+			{
+				"name": "picomatch",
+				"version": "2.3.1",
+				"size": 89952
+			},
+			{
+				"name": "@types/glob",
+				"version": "7.2.0",
+				"size": 6608
+			},
+			{
+				"name": "@types/minimatch",
+				"version": "5.1.2",
+				"size": 12522
+			},
+			{
+				"name": "@types/node",
+				"version": "22.14.1",
+				"size": 2331510
+			},
+			{
+				"name": "undici-types",
+				"version": "6.21.0",
+				"size": 83680
+			},
+			{
+				"name": "array-union",
+				"version": "2.1.0",
+				"size": 3169
+			},
+			{
+				"name": "lodash",
+				"version": "4.17.21",
+				"size": 1412415
+			},
+			{
+				"name": "p-reduce",
+				"version": "2.1.0",
+				"size": 6142
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[3, 4],
+			[3, 5],
+			[1, 6],
+			[6, 7],
+			[1, 8],
+			[8, 9],
+			[1, 10],
+			[10, 11],
+			[11, 12],
+			[10, 13],
+			[10, 14],
+			[10, 15],
+			[15, 16],
+			[16, 17],
+			[17, 18],
+			[16, 19],
+			[19, 17],
+			[17, 18],
+			[10, 20],
+			[20, 21],
+			[21, 22],
+			[20, 23],
+			[20, 24],
+			[24, 25],
+			[10, 26],
+			[10, 27],
+			[10, 28],
+			[28, 23],
+			[10, 29],
+			[10, 30],
+			[1, 31],
+			[31, 32],
+			[31, 33],
+			[31, 34],
+			[1, 35],
+			[35, 36],
+			[36, 17],
+			[17, 18],
+			[36, 37],
+			[37, 17],
+			[17, 18],
+			[37, 18],
+			[36, 38],
+			[36, 39],
+			[39, 40],
+			[40, 41],
+			[40, 42],
+			[36, 43],
+			[36, 44],
+			[35, 45],
+			[35, 46],
+			[35, 47],
+			[35, 8],
+			[8, 9],
+			[35, 48],
+			[48, 49],
+			[48, 50],
+			[50, 51],
+			[51, 52],
+			[50, 53],
+			[53, 54],
+			[54, 55],
+			[53, 49],
+			[48, 56],
+			[56, 57],
+			[57, 58],
+			[48, 47],
+			[48, 59],
+			[59, 60],
+			[60, 61],
+			[61, 62],
+			[62, 63],
+			[59, 64],
+			[35, 65],
+			[65, 66],
+			[65, 67],
+			[67, 68],
+			[35, 69],
+			[1, 70],
+			[1, 59],
+			[59, 60],
+			[60, 61],
+			[61, 62],
+			[62, 63],
+			[59, 64],
+			[1, 71]
+		],
+		"circular": []
+	}
 }

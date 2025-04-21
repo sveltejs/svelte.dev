@@ -13,29 +13,6 @@
 	"version": "0.0.5",
 	"svelte_range": "^5.8.1",
 	"last_rune_check_version": "0.0.5",
-	"dependencies": [
-		{
-			"name": "@jridgewell/sourcemap-codec",
-			"semver": "^1.5.0"
-		},
-		{
-			"name": "@volar/language-core",
-			"semver": "^2.4.10"
-		},
-		{
-			"name": "svelte2tsx",
-			"semver": "^0.7.30"
-		},
-		{
-			"name": "twoslash",
-			"semver": "^0.2.12"
-		},
-		{
-			"name": "twoslash-protocol",
-			"semver": "^0.2.12"
-		}
-	],
-	"unpacked_size": 21212,
 	"downloads_history": [
 		{
 			"range": [1733077800000, 1733682599999],
@@ -105,5 +82,104 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@hugokorte/twoslash-svelte",
+				"version": "0.0.5",
+				"size": 21212
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "@volar/language-core",
+				"version": "2.4.12",
+				"size": 29507
+			},
+			{
+				"name": "@volar/source-map",
+				"version": "2.4.12",
+				"size": 13808
+			},
+			{
+				"name": "svelte2tsx",
+				"version": "0.7.36",
+				"size": 766555
+			},
+			{
+				"name": "dedent-js",
+				"version": "1.0.1"
+			},
+			{
+				"name": "pascal-case",
+				"version": "3.1.2",
+				"size": 14764
+			},
+			{
+				"name": "no-case",
+				"version": "3.0.4",
+				"size": 25128
+			},
+			{
+				"name": "lower-case",
+				"version": "2.0.2",
+				"size": 17661
+			},
+			{
+				"name": "tslib",
+				"version": "2.8.1",
+				"size": 90359
+			},
+			{
+				"name": "twoslash",
+				"version": "0.2.12",
+				"size": 141946
+			},
+			{
+				"name": "@typescript/vfs",
+				"version": "1.6.1",
+				"size": 247012
+			},
+			{
+				"name": "debug",
+				"version": "4.4.0",
+				"size": 42798
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "twoslash-protocol",
+				"version": "0.2.12",
+				"size": 25216
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[0, 4],
+			[4, 5],
+			[4, 6],
+			[6, 7],
+			[7, 8],
+			[8, 9],
+			[7, 9],
+			[6, 9],
+			[0, 10],
+			[10, 11],
+			[11, 12],
+			[12, 13],
+			[10, 14],
+			[0, 14]
+		],
+		"circular": []
+	}
 }

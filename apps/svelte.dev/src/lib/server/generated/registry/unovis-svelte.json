@@ -21,8 +21,6 @@
 	"version": "1.5.1",
 	"svelte_range": "^3.48.0 || ^4.0.0 ",
 	"last_rune_check_version": "1.5.1",
-	"dependencies": [],
-	"unpacked_size": 72060,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -336,5 +334,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 3058
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@unovis/svelte",
+				"version": "1.5.1",
+				"size": 72060
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

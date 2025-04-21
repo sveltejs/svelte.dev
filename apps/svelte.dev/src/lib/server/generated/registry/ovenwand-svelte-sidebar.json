@@ -12,13 +12,6 @@
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "0.0.5",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "@ovenwand/util",
-			"semver": "^0.0.1"
-		}
-	],
-	"unpacked_size": 6713,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -232,5 +225,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@ovenwand/svelte-sidebar",
+				"version": "0.0.5",
+				"size": 6713
+			},
+			{
+				"name": "@ovenwand/util",
+				"version": "0.0.1",
+				"size": 13027
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

@@ -13,25 +13,6 @@
 	"version": "3.0.0",
 	"svelte_range": "^5.0.0",
 	"last_rune_check_version": "3.0.0",
-	"dependencies": [
-		{
-			"name": "@shikijs/core",
-			"semver": "^1.22.0"
-		},
-		{
-			"name": "estree-walker",
-			"semver": "^3.0.3"
-		},
-		{
-			"name": "magic-string",
-			"semver": "^0.30.12"
-		},
-		{
-			"name": "shiki",
-			"semver": "^1.22.0"
-		}
-	],
-	"unpacked_size": 229111,
 	"downloads_history": [
 		{
 			"range": [1724610600000, 1725215399999],
@@ -157,5 +138,450 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 20
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@samplekit/preprocess-shiki",
+				"version": "3.0.0",
+				"size": 229111
+			},
+			{
+				"name": "@shikijs/core",
+				"version": "1.29.2",
+				"size": 106569
+			},
+			{
+				"name": "@types/hast",
+				"version": "3.0.4",
+				"size": 9703
+			},
+			{
+				"name": "@types/unist",
+				"version": "3.0.3",
+				"size": 6262
+			},
+			{
+				"name": "@shikijs/types",
+				"version": "1.29.2",
+				"size": 60634
+			},
+			{
+				"name": "@shikijs/vscode-textmate",
+				"version": "10.0.2",
+				"size": 129126
+			},
+			{
+				"name": "hast-util-to-html",
+				"version": "9.0.5",
+				"size": 71798
+			},
+			{
+				"name": "ccount",
+				"version": "2.0.1",
+				"size": 7344
+			},
+			{
+				"name": "comma-separated-tokens",
+				"version": "2.0.3",
+				"size": 9971
+			},
+			{
+				"name": "hast-util-whitespace",
+				"version": "3.0.0",
+				"size": 11781
+			},
+			{
+				"name": "html-void-elements",
+				"version": "3.0.0",
+				"size": 6899
+			},
+			{
+				"name": "mdast-util-to-hast",
+				"version": "13.2.0",
+				"size": 124715
+			},
+			{
+				"name": "@types/mdast",
+				"version": "4.0.4",
+				"size": 29432
+			},
+			{
+				"name": "@ungap/structured-clone",
+				"version": "1.3.0",
+				"size": 27500
+			},
+			{
+				"name": "devlop",
+				"version": "1.1.0",
+				"size": 22010
+			},
+			{
+				"name": "dequal",
+				"version": "2.0.3",
+				"size": 14229
+			},
+			{
+				"name": "micromark-util-sanitize-uri",
+				"version": "2.0.1",
+				"size": 17917
+			},
+			{
+				"name": "micromark-util-character",
+				"version": "2.1.1",
+				"size": 42421
+			},
+			{
+				"name": "micromark-util-symbol",
+				"version": "2.0.1",
+				"size": 40530
+			},
+			{
+				"name": "micromark-util-types",
+				"version": "2.0.2",
+				"size": 38950
+			},
+			{
+				"name": "micromark-util-encode",
+				"version": "2.0.1",
+				"size": 7971
+			},
+			{
+				"name": "trim-lines",
+				"version": "3.0.1",
+				"size": 7493
+			},
+			{
+				"name": "unist-util-position",
+				"version": "5.0.0",
+				"size": 12779
+			},
+			{
+				"name": "unist-util-visit",
+				"version": "5.0.0",
+				"size": 28480
+			},
+			{
+				"name": "unist-util-is",
+				"version": "6.0.0",
+				"size": 27111
+			},
+			{
+				"name": "unist-util-visit-parents",
+				"version": "6.0.1",
+				"size": 32885
+			},
+			{
+				"name": "vfile",
+				"version": "6.0.3",
+				"size": 121686
+			},
+			{
+				"name": "vfile-message",
+				"version": "4.0.2",
+				"size": 22348
+			},
+			{
+				"name": "unist-util-stringify-position",
+				"version": "4.0.0",
+				"size": 13180
+			},
+			{
+				"name": "property-information",
+				"version": "7.0.0",
+				"size": 116609
+			},
+			{
+				"name": "space-separated-tokens",
+				"version": "2.0.2",
+				"size": 7753
+			},
+			{
+				"name": "stringify-entities",
+				"version": "4.0.4",
+				"size": 23780
+			},
+			{
+				"name": "character-entities-html4",
+				"version": "2.1.0",
+				"size": 11364
+			},
+			{
+				"name": "character-entities-legacy",
+				"version": "3.0.0",
+				"size": 9141
+			},
+			{
+				"name": "zwitch",
+				"version": "2.0.4",
+				"size": 13752
+			},
+			{
+				"name": "@shikijs/engine-oniguruma",
+				"version": "1.29.2",
+				"size": 644385
+			},
+			{
+				"name": "@shikijs/engine-javascript",
+				"version": "1.29.2",
+				"size": 14548
+			},
+			{
+				"name": "oniguruma-to-es",
+				"version": "2.3.0",
+				"size": 1034120
+			},
+			{
+				"name": "regex",
+				"version": "5.1.1",
+				"size": 547145
+			},
+			{
+				"name": "regex-utilities",
+				"version": "2.3.0",
+				"size": 15439
+			},
+			{
+				"name": "emoji-regex-xs",
+				"version": "1.0.0",
+				"size": 7814
+			},
+			{
+				"name": "regex-recursion",
+				"version": "5.1.1",
+				"size": 55931
+			},
+			{
+				"name": "estree-walker",
+				"version": "3.0.3",
+				"size": 17599
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "shiki",
+				"version": "1.29.2",
+				"size": 624040
+			},
+			{
+				"name": "@shikijs/langs",
+				"version": "1.29.2",
+				"size": 7979540
+			},
+			{
+				"name": "@shikijs/themes",
+				"version": "1.29.2",
+				"size": 1201343
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[1, 4],
+			[4, 2],
+			[2, 3],
+			[4, 5],
+			[1, 6],
+			[6, 2],
+			[2, 3],
+			[6, 3],
+			[6, 7],
+			[6, 8],
+			[6, 9],
+			[9, 2],
+			[2, 3],
+			[6, 10],
+			[6, 11],
+			[11, 2],
+			[2, 3],
+			[11, 12],
+			[12, 3],
+			[11, 13],
+			[11, 14],
+			[14, 15],
+			[11, 16],
+			[16, 17],
+			[17, 18],
+			[17, 19],
+			[16, 20],
+			[16, 18],
+			[11, 21],
+			[11, 22],
+			[22, 3],
+			[11, 23],
+			[23, 3],
+			[23, 24],
+			[24, 3],
+			[23, 25],
+			[25, 3],
+			[25, 24],
+			[24, 3],
+			[11, 26],
+			[26, 3],
+			[26, 27],
+			[27, 3],
+			[27, 28],
+			[28, 3],
+			[6, 29],
+			[6, 30],
+			[6, 31],
+			[31, 32],
+			[31, 33],
+			[6, 34],
+			[1, 5],
+			[1, 35],
+			[35, 4],
+			[4, 2],
+			[2, 3],
+			[4, 5],
+			[35, 5],
+			[1, 36],
+			[36, 4],
+			[4, 2],
+			[2, 3],
+			[4, 5],
+			[36, 37],
+			[37, 38],
+			[38, 39],
+			[37, 40],
+			[37, 41],
+			[41, 38],
+			[38, 39],
+			[41, 39],
+			[36, 5],
+			[0, 42],
+			[42, 43],
+			[0, 44],
+			[44, 45],
+			[0, 46],
+			[46, 2],
+			[2, 3],
+			[46, 1],
+			[1, 2],
+			[2, 3],
+			[1, 4],
+			[4, 2],
+			[2, 3],
+			[4, 5],
+			[1, 6],
+			[6, 2],
+			[2, 3],
+			[6, 3],
+			[6, 7],
+			[6, 8],
+			[6, 9],
+			[9, 2],
+			[2, 3],
+			[6, 10],
+			[6, 11],
+			[11, 2],
+			[2, 3],
+			[11, 12],
+			[12, 3],
+			[11, 13],
+			[11, 14],
+			[14, 15],
+			[11, 16],
+			[16, 17],
+			[17, 18],
+			[17, 19],
+			[16, 20],
+			[16, 18],
+			[11, 21],
+			[11, 22],
+			[22, 3],
+			[11, 23],
+			[23, 3],
+			[23, 24],
+			[24, 3],
+			[23, 25],
+			[25, 3],
+			[25, 24],
+			[24, 3],
+			[11, 26],
+			[26, 3],
+			[26, 27],
+			[27, 3],
+			[27, 28],
+			[28, 3],
+			[6, 29],
+			[6, 30],
+			[6, 31],
+			[31, 32],
+			[31, 33],
+			[6, 34],
+			[1, 5],
+			[1, 35],
+			[35, 4],
+			[4, 2],
+			[2, 3],
+			[4, 5],
+			[35, 5],
+			[1, 36],
+			[36, 4],
+			[4, 2],
+			[2, 3],
+			[4, 5],
+			[36, 37],
+			[37, 38],
+			[38, 39],
+			[37, 40],
+			[37, 41],
+			[41, 38],
+			[38, 39],
+			[41, 39],
+			[36, 5],
+			[46, 47],
+			[47, 4],
+			[4, 2],
+			[2, 3],
+			[4, 5],
+			[46, 4],
+			[4, 2],
+			[2, 3],
+			[4, 5],
+			[46, 48],
+			[48, 4],
+			[4, 2],
+			[2, 3],
+			[4, 5],
+			[46, 5],
+			[46, 35],
+			[35, 4],
+			[4, 2],
+			[2, 3],
+			[4, 5],
+			[35, 5],
+			[46, 36],
+			[36, 4],
+			[4, 2],
+			[2, 3],
+			[4, 5],
+			[36, 37],
+			[37, 38],
+			[38, 39],
+			[37, 40],
+			[37, 41],
+			[41, 38],
+			[38, 39],
+			[41, 39],
+			[36, 5]
+		],
+		"circular": []
+	}
 }

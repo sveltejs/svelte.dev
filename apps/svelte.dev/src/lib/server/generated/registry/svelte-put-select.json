@@ -14,17 +14,6 @@
 	"svelte_range": "^3.55.0 || ^4.0.0",
 	"kit_range": "2.5.5",
 	"last_rune_check_version": "0.2.5",
-	"dependencies": [
-		{
-			"name": "@svelte-put/shortcut",
-			"semver": "^3.1.1"
-		},
-		{
-			"name": "@svelte-put/clickoutside",
-			"semver": "^3.0.2"
-		}
-	],
-	"unpacked_size": 24358,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -326,5 +315,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 8
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@svelte-put/select",
+				"version": "0.2.5",
+				"size": 24358
+			},
+			{
+				"name": "@svelte-put/shortcut",
+				"version": "3.2.0",
+				"size": 24894
+			},
+			{
+				"name": "@svelte-put/clickoutside",
+				"version": "3.0.2",
+				"size": 12352
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

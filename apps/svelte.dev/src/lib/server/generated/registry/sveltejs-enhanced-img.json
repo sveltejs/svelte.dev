@@ -13,29 +13,6 @@
 	"version": "0.4.4",
 	"svelte_range": "^5.0.0",
 	"last_rune_check_version": "0.4.4",
-	"dependencies": [
-		{
-			"name": "magic-string",
-			"semver": "^0.30.5"
-		},
-		{
-			"name": "sharp",
-			"semver": "^0.33.5"
-		},
-		{
-			"name": "svelte-parse-markup",
-			"semver": "^0.1.5"
-		},
-		{
-			"name": "vite-imagetools",
-			"semver": "^7.0.1"
-		},
-		{
-			"name": "zimmerframe",
-			"semver": "^1.1.2"
-		}
-	],
-	"unpacked_size": 20575,
 	"downloads_history": [
 		{
 			"range": [1699209000000, 1699813799999],
@@ -337,5 +314,142 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 19638
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@sveltejs/enhanced-img",
+				"version": "0.4.4",
+				"size": 20575
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "sharp",
+				"version": "0.33.5",
+				"size": 502829
+			},
+			{
+				"name": "color",
+				"version": "4.2.3",
+				"size": 16806
+			},
+			{
+				"name": "color-string",
+				"version": "1.9.1",
+				"size": 10115
+			},
+			{
+				"name": "color-name",
+				"version": "1.1.4",
+				"size": 6693
+			},
+			{
+				"name": "simple-swizzle",
+				"version": "0.2.2"
+			},
+			{
+				"name": "is-arrayish",
+				"version": "0.3.2",
+				"size": 54720
+			},
+			{
+				"name": "color-convert",
+				"version": "2.0.1",
+				"size": 27189
+			},
+			{
+				"name": "semver",
+				"version": "7.7.1",
+				"size": 96674
+			},
+			{
+				"name": "detect-libc",
+				"version": "2.0.3",
+				"size": 23627
+			},
+			{
+				"name": "svelte-parse-markup",
+				"version": "0.1.5",
+				"size": 8003
+			},
+			{
+				"name": "vite-imagetools",
+				"version": "7.0.5",
+				"size": 42673
+			},
+			{
+				"name": "@rollup/pluginutils",
+				"version": "5.1.4",
+				"size": 58354
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "estree-walker",
+				"version": "2.0.2",
+				"size": 50243
+			},
+			{
+				"name": "picomatch",
+				"version": "4.0.2",
+				"size": 85237
+			},
+			{
+				"name": "imagetools-core",
+				"version": "7.0.2",
+				"size": 79998
+			},
+			{
+				"name": "zimmerframe",
+				"version": "1.1.2",
+				"size": 12266
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[3, 4],
+			[4, 5],
+			[5, 6],
+			[5, 7],
+			[7, 8],
+			[4, 9],
+			[9, 6],
+			[3, 10],
+			[3, 11],
+			[0, 12],
+			[0, 13],
+			[13, 14],
+			[14, 15],
+			[14, 16],
+			[14, 17],
+			[13, 3],
+			[3, 4],
+			[4, 5],
+			[5, 6],
+			[5, 7],
+			[7, 8],
+			[4, 9],
+			[9, 6],
+			[3, 10],
+			[3, 11],
+			[13, 18],
+			[0, 19]
+		],
+		"circular": []
+	}
 }

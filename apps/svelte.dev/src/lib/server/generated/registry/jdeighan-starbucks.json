@@ -13,29 +13,6 @@
 	"version": "10.0.4",
 	"svelte_range": "^3.49.0",
 	"last_rune_check_version": "10.0.4",
-	"dependencies": [
-		{
-			"name": "@jdeighan/coffee-utils",
-			"semver": "^10.0.8"
-		},
-		{
-			"name": "@jdeighan/mapper",
-			"semver": "^28.0.16"
-		},
-		{
-			"name": "coffeescript",
-			"semver": "^2.7.0"
-		},
-		{
-			"name": "cross-env",
-			"semver": "^7.0.3"
-		},
-		{
-			"name": "mustache",
-			"semver": "^4.2.0"
-		}
-	],
-	"unpacked_size": 100997,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -301,5 +278,176 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 162
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@jdeighan/starbucks",
+				"version": "10.0.4",
+				"size": 100997
+			},
+			{
+				"name": "@jdeighan/coffee-utils",
+				"version": "10.0.17",
+				"size": 195662
+			},
+			{
+				"name": "cross-env",
+				"version": "7.0.3",
+				"size": 29080
+			},
+			{
+				"name": "cross-spawn",
+				"version": "7.0.6",
+				"size": 16094
+			},
+			{
+				"name": "which",
+				"version": "2.0.2",
+				"size": 9975
+			},
+			{
+				"name": "isexe",
+				"version": "2.0.0"
+			},
+			{
+				"name": "path-key",
+				"version": "3.1.1",
+				"size": 4553
+			},
+			{
+				"name": "shebang-command",
+				"version": "2.0.0",
+				"size": 2556
+			},
+			{
+				"name": "shebang-regex",
+				"version": "3.0.0",
+				"size": 2828
+			},
+			{
+				"name": "js-yaml",
+				"version": "4.1.0",
+				"size": 404738
+			},
+			{
+				"name": "argparse",
+				"version": "2.0.1",
+				"size": 171548
+			},
+			{
+				"name": "n-readlines",
+				"version": "1.0.1",
+				"size": 98316
+			},
+			{
+				"name": "readline-sync",
+				"version": "1.4.10",
+				"size": 132872
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			},
+			{
+				"name": "@jdeighan/mapper",
+				"version": "28.0.27",
+				"size": 247063
+			},
+			{
+				"name": "marked",
+				"version": "4.3.0",
+				"size": 427518
+			},
+			{
+				"name": "sass",
+				"version": "1.86.3",
+				"size": 5693005
+			},
+			{
+				"name": "chokidar",
+				"version": "4.0.3",
+				"size": 148759
+			},
+			{
+				"name": "readdirp",
+				"version": "4.1.2",
+				"size": 36127
+			},
+			{
+				"name": "immutable",
+				"version": "5.1.1",
+				"size": 736872
+			},
+			{
+				"name": "source-map-js",
+				"version": "1.2.1",
+				"size": 139872
+			},
+			{
+				"name": "coffeescript",
+				"version": "2.7.0",
+				"size": 1890484
+			},
+			{
+				"name": "mustache",
+				"version": "4.2.0",
+				"size": 113734
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[3, 4],
+			[4, 5],
+			[3, 6],
+			[3, 7],
+			[7, 8],
+			[1, 9],
+			[9, 10],
+			[1, 11],
+			[1, 12],
+			[1, 13],
+			[0, 14],
+			[14, 1],
+			[1, 2],
+			[2, 3],
+			[3, 4],
+			[4, 5],
+			[3, 6],
+			[3, 7],
+			[7, 8],
+			[1, 9],
+			[9, 10],
+			[1, 11],
+			[1, 12],
+			[1, 13],
+			[14, 2],
+			[2, 3],
+			[3, 4],
+			[4, 5],
+			[3, 6],
+			[3, 7],
+			[7, 8],
+			[14, 15],
+			[14, 16],
+			[16, 17],
+			[17, 18],
+			[16, 19],
+			[16, 20],
+			[0, 21],
+			[0, 2],
+			[2, 3],
+			[3, 4],
+			[4, 5],
+			[3, 6],
+			[3, 7],
+			[7, 8],
+			[0, 22]
+		],
+		"circular": []
+	}
 }

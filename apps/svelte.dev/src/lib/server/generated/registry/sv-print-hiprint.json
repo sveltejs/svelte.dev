@@ -12,41 +12,6 @@
 	"svelte_range": "^3.55.0",
 	"last_rune_check_version": "0.2.9",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "@claviska/jquery-minicolors",
-			"semver": "^2.3.6"
-		},
-		{
-			"name": "canvg",
-			"semver": "^3.0.10"
-		},
-		{
-			"name": "html-to-image",
-			"semver": "^1.11.11"
-		},
-		{
-			"name": "jquery",
-			"semver": "^3.6.0"
-		},
-		{
-			"name": "jsbarcode",
-			"semver": "^3.11.5"
-		},
-		{
-			"name": "jspdf",
-			"semver": "^2.5.1"
-		},
-		{
-			"name": "nzh",
-			"semver": "1.0.8"
-		},
-		{
-			"name": "socket.io-client",
-			"semver": "^4.5.1"
-		}
-	],
-	"unpacked_size": 2081393,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -360,5 +325,198 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 179
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@sv-print/hiprint",
+				"version": "0.2.9",
+				"size": 2081393
+			},
+			{
+				"name": "@claviska/jquery-minicolors",
+				"version": "2.3.6",
+				"size": 165883
+			},
+			{
+				"name": "canvg",
+				"version": "3.0.11",
+				"size": 1368719
+			},
+			{
+				"name": "raf",
+				"version": "3.4.1",
+				"size": 8100
+			},
+			{
+				"name": "performance-now",
+				"version": "2.1.0"
+			},
+			{
+				"name": "core-js",
+				"version": "3.41.0",
+				"size": 1265563
+			},
+			{
+				"name": "rgbcolor",
+				"version": "1.0.1"
+			},
+			{
+				"name": "@types/raf",
+				"version": "3.4.3",
+				"size": 2849
+			},
+			{
+				"name": "svg-pathdata",
+				"version": "6.0.3",
+				"size": 209549
+			},
+			{
+				"name": "@babel/runtime",
+				"version": "7.27.0",
+				"size": 249798
+			},
+			{
+				"name": "regenerator-runtime",
+				"version": "0.14.1",
+				"size": 27863
+			},
+			{
+				"name": "stackblur-canvas",
+				"version": "2.7.0",
+				"size": 151690
+			},
+			{
+				"name": "regenerator-runtime",
+				"version": "0.13.11",
+				"size": 27759
+			},
+			{
+				"name": "html-to-image",
+				"version": "1.11.13",
+				"size": 315082
+			},
+			{
+				"name": "jquery",
+				"version": "3.7.1",
+				"size": 1246374
+			},
+			{
+				"name": "jsbarcode",
+				"version": "3.11.6",
+				"size": 562834
+			},
+			{
+				"name": "jspdf",
+				"version": "2.5.2",
+				"size": 14798108
+			},
+			{
+				"name": "atob",
+				"version": "2.1.2",
+				"size": 36200
+			},
+			{
+				"name": "btoa",
+				"version": "1.2.1",
+				"size": 32050
+			},
+			{
+				"name": "fflate",
+				"version": "0.8.2",
+				"size": 773398
+			},
+			{
+				"name": "nzh",
+				"version": "1.0.8",
+				"size": 71272
+			},
+			{
+				"name": "socket.io-client",
+				"version": "4.8.1",
+				"size": 1414277
+			},
+			{
+				"name": "@socket.io/component-emitter",
+				"version": "3.1.2",
+				"size": 21216
+			},
+			{
+				"name": "debug",
+				"version": "4.3.7",
+				"size": 42060
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "engine.io-client",
+				"version": "6.6.3",
+				"size": 863361
+			},
+			{
+				"name": "engine.io-parser",
+				"version": "5.2.3",
+				"size": 45773
+			},
+			{
+				"name": "ws",
+				"version": "8.17.1",
+				"size": 141358
+			},
+			{
+				"name": "xmlhttprequest-ssl",
+				"version": "2.1.2",
+				"size": 25414
+			},
+			{
+				"name": "socket.io-parser",
+				"version": "4.2.4",
+				"size": 58497
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[3, 4],
+			[2, 5],
+			[2, 6],
+			[2, 7],
+			[2, 8],
+			[2, 9],
+			[9, 10],
+			[2, 11],
+			[2, 12],
+			[0, 13],
+			[0, 14],
+			[0, 15],
+			[0, 16],
+			[16, 17],
+			[16, 18],
+			[16, 19],
+			[16, 9],
+			[9, 10],
+			[0, 20],
+			[0, 21],
+			[21, 22],
+			[21, 23],
+			[23, 24],
+			[21, 25],
+			[25, 22],
+			[25, 23],
+			[23, 24],
+			[25, 26],
+			[25, 27],
+			[25, 28],
+			[21, 29],
+			[29, 23],
+			[23, 24],
+			[29, 22]
+		],
+		"circular": []
+	}
 }

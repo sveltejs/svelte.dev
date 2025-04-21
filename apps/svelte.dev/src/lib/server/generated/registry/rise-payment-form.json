@@ -13,21 +13,6 @@
 	"version": "1.0.0-alpha.6",
 	"svelte_range": "3.18.0",
 	"last_rune_check_version": "1.0.0-alpha.6",
-	"dependencies": [
-		{
-			"name": "jsencrypt",
-			"semver": "3.0.0-rc.1"
-		},
-		{
-			"name": "lodash.get",
-			"semver": "4.4.2"
-		},
-		{
-			"name": "node-jsencrypt",
-			"semver": "1.0.0"
-		}
-	],
-	"unpacked_size": 1343958,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -249,5 +234,62 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 11
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@rise/payment-form",
+				"version": "1.0.0-alpha.6",
+				"size": 1343958
+			},
+			{
+				"name": "jsencrypt",
+				"version": "3.0.0-rc.1",
+				"size": 1596020
+			},
+			{
+				"name": "lodash.get",
+				"version": "4.4.2"
+			},
+			{
+				"name": "node-jsencrypt",
+				"version": "1.0.0"
+			},
+			{
+				"name": "get-random-values",
+				"version": "1.2.2",
+				"size": 4741
+			},
+			{
+				"name": "global",
+				"version": "4.4.0",
+				"size": 3468
+			},
+			{
+				"name": "min-document",
+				"version": "2.19.0"
+			},
+			{
+				"name": "dom-walk",
+				"version": "0.1.2",
+				"size": 2658
+			},
+			{
+				"name": "process",
+				"version": "0.11.10"
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[3, 4],
+			[4, 5],
+			[5, 6],
+			[6, 7],
+			[5, 8]
+		],
+		"circular": []
+	}
 }

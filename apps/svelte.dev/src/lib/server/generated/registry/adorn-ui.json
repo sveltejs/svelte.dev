@@ -14,21 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.23.0",
 	"last_rune_check_version": "0.0.10",
-	"dependencies": [
-		{
-			"name": "@renzp/classes",
-			"semver": "^0.0.3"
-		},
-		{
-			"name": "@renzp/number-correct",
-			"semver": "^0.0.6"
-		},
-		{
-			"name": "@renzp/utils",
-			"semver": "^0.3.4"
-		}
-	],
-	"unpacked_size": 1285512,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -330,5 +315,36 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 21
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "adorn-ui",
+				"version": "0.0.10",
+				"size": 1285512
+			},
+			{
+				"name": "@renzp/classes",
+				"version": "0.0.3",
+				"size": 2576
+			},
+			{
+				"name": "@renzp/number-correct",
+				"version": "0.0.6",
+				"size": 30930
+			},
+			{
+				"name": "@renzp/utils",
+				"version": "0.3.11",
+				"size": 179811
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3]
+		],
+		"circular": []
+	}
 }

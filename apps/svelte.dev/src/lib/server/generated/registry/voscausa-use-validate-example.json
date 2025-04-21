@@ -12,13 +12,6 @@
 	"version": "1.2.5",
 	"svelte_range": "^3.59.2",
 	"last_rune_check_version": "1.2.5",
-	"dependencies": [
-		{
-			"name": "@voscausa/svelte-use-validate",
-			"semver": "github:voscausa/svelte-use-validate"
-		}
-	],
-	"unpacked_size": 43510,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -240,5 +233,21 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@voscausa/use-validate-example",
+				"version": "1.2.5",
+				"size": 43510
+			},
+			{
+				"name": "@voscausa/svelte-use-validate",
+				"version": "1.4.8"
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

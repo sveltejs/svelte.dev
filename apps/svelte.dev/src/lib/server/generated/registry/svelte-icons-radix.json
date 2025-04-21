@@ -14,8 +14,6 @@
 	"svelte_range": "^3.43.1 || ^4.0.0",
 	"kit_range": "^1.20.4",
 	"last_rune_check_version": "0.1.1",
-	"dependencies": [],
-	"unpacked_size": 416644,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -201,5 +199,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-icons-radix",
+				"version": "0.1.1",
+				"size": 416644
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

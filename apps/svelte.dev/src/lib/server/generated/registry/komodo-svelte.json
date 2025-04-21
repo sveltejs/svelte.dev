@@ -13,8 +13,6 @@
 	"version": "0.1.0",
 	"svelte_range": ">=5",
 	"last_rune_check_version": "0.1.0",
-	"dependencies": [],
-	"unpacked_size": 19929,
 	"downloads_history": [
 		{
 			"range": [1717353000000, 1717957799999],
@@ -160,5 +158,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 11
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "komodo-svelte",
+				"version": "0.1.0",
+				"size": 19929
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

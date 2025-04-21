@@ -13,13 +13,6 @@
 	"version": "0.8.0",
 	"svelte_range": "^5.16.0",
 	"last_rune_check_version": "0.8.0",
-	"dependencies": [
-		{
-			"name": "magic-string",
-			"semver": "^0.30.14"
-		}
-	],
-	"unpacked_size": 12760,
 	"downloads_history": [
 		{
 			"range": [1713724200000, 1714328999999],
@@ -221,5 +214,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 17
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@agnos-ui/svelte-preprocess",
+				"version": "0.8.0",
+				"size": 12760
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2]
+		],
+		"circular": []
+	}
 }

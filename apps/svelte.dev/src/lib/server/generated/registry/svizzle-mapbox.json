@@ -13,21 +13,6 @@
 	"version": "0.2.0",
 	"svelte_range": "^3.59.2",
 	"last_rune_check_version": "0.2.0",
-	"dependencies": [
-		{
-			"name": "@mapbox/geo-viewport",
-			"semver": "^0.4.1"
-		},
-		{
-			"name": "@svizzle/dom",
-			"semver": "^0.7.3"
-		},
-		{
-			"name": "mapbox-gl",
-			"semver": "^2.15.0"
-		}
-	],
-	"unpacked_size": 20029,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -257,5 +242,234 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@svizzle/mapbox",
+				"version": "0.2.0",
+				"size": 20029
+			},
+			{
+				"name": "@mapbox/geo-viewport",
+				"version": "0.4.1",
+				"size": 21984
+			},
+			{
+				"name": "@mapbox/sphericalmercator",
+				"version": "1.1.0",
+				"size": 18412
+			},
+			{
+				"name": "@svizzle/dom",
+				"version": "0.7.3",
+				"size": 10888
+			},
+			{
+				"name": "@svizzle/utils",
+				"version": "0.21.0",
+				"size": 269532
+			},
+			{
+				"name": "escape-string-regexp",
+				"version": "5.0.0",
+				"size": 3659
+			},
+			{
+				"name": "just-compare",
+				"version": "2.3.0",
+				"size": 9255
+			},
+			{
+				"name": "lamb",
+				"version": "0.61.1",
+				"size": 1101065
+			},
+			{
+				"name": "mapbox-gl",
+				"version": "2.15.0",
+				"size": 42793006
+			},
+			{
+				"name": "rw",
+				"version": "1.3.3"
+			},
+			{
+				"name": "pbf",
+				"version": "3.3.0",
+				"size": 126091
+			},
+			{
+				"name": "ieee754",
+				"version": "1.2.1",
+				"size": 6796
+			},
+			{
+				"name": "resolve-protobuf-schema",
+				"version": "2.1.0",
+				"size": 5243
+			},
+			{
+				"name": "protocol-buffers-schema",
+				"version": "3.6.0",
+				"size": 68684
+			},
+			{
+				"name": "earcut",
+				"version": "2.2.4",
+				"size": 95170
+			},
+			{
+				"name": "kdbush",
+				"version": "4.0.2",
+				"size": 34356
+			},
+			{
+				"name": "vt-pbf",
+				"version": "3.1.3",
+				"size": 11989
+			},
+			{
+				"name": "@mapbox/point-geometry",
+				"version": "0.1.0"
+			},
+			{
+				"name": "@mapbox/vector-tile",
+				"version": "1.3.1",
+				"size": 261972
+			},
+			{
+				"name": "potpack",
+				"version": "2.0.0",
+				"size": 7114
+			},
+			{
+				"name": "gl-matrix",
+				"version": "3.4.3",
+				"size": 769666
+			},
+			{
+				"name": "tinyqueue",
+				"version": "2.0.3",
+				"size": 8739
+			},
+			{
+				"name": "geojson-vt",
+				"version": "3.2.1",
+				"size": 71076
+			},
+			{
+				"name": "grid-index",
+				"version": "1.1.0",
+				"size": 11957
+			},
+			{
+				"name": "quickselect",
+				"version": "2.0.0",
+				"size": 5984
+			},
+			{
+				"name": "supercluster",
+				"version": "8.0.1",
+				"size": 57707
+			},
+			{
+				"name": "murmurhash-js",
+				"version": "1.0.0"
+			},
+			{
+				"name": "csscolorparser",
+				"version": "1.0.3"
+			},
+			{
+				"name": "@mapbox/tiny-sdf",
+				"version": "2.0.6",
+				"size": 10711
+			},
+			{
+				"name": "@mapbox/whoots-js",
+				"version": "3.1.0",
+				"size": 10488
+			},
+			{
+				"name": "@mapbox/unitbezier",
+				"version": "0.0.1",
+				"size": 5015
+			},
+			{
+				"name": "@mapbox/geojson-rewind",
+				"version": "0.5.2",
+				"size": 4595
+			},
+			{
+				"name": "get-stream",
+				"version": "6.0.1",
+				"size": 12176
+			},
+			{
+				"name": "minimist",
+				"version": "1.2.8",
+				"size": 54477
+			},
+			{
+				"name": "@mapbox/mapbox-gl-supported",
+				"version": "2.0.1",
+				"size": 12030
+			},
+			{
+				"name": "@mapbox/jsonlint-lines-primitives",
+				"version": "2.0.2",
+				"size": 67804
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[3, 4],
+			[4, 5],
+			[4, 6],
+			[4, 7],
+			[3, 7],
+			[0, 8],
+			[8, 9],
+			[8, 10],
+			[10, 11],
+			[10, 12],
+			[12, 13],
+			[8, 14],
+			[8, 15],
+			[8, 16],
+			[16, 17],
+			[16, 18],
+			[18, 17],
+			[16, 10],
+			[10, 11],
+			[10, 12],
+			[12, 13],
+			[8, 19],
+			[8, 20],
+			[8, 21],
+			[8, 22],
+			[8, 23],
+			[8, 24],
+			[8, 25],
+			[25, 15],
+			[8, 26],
+			[8, 27],
+			[8, 28],
+			[8, 29],
+			[8, 30],
+			[8, 18],
+			[18, 17],
+			[8, 31],
+			[31, 32],
+			[31, 33],
+			[8, 17],
+			[8, 34],
+			[8, 35]
+		],
+		"circular": []
+	}
 }

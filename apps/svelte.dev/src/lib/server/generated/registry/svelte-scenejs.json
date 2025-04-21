@@ -14,17 +14,6 @@
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.0.0",
 	"last_rune_check_version": "1.0.0-beta.12",
-	"dependencies": [
-		{
-			"name": "@cfcs/svelte",
-			"semver": "^0.1.0"
-		},
-		{
-			"name": "scenejs",
-			"semver": "~1.10.3"
-		}
-	],
-	"unpacked_size": 85326,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -318,5 +307,70 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-scenejs",
+				"version": "1.0.0-beta.12",
+				"size": 85326
+			},
+			{
+				"name": "@cfcs/svelte",
+				"version": "0.1.0",
+				"size": 727895
+			},
+			{
+				"name": "@cfcs/core",
+				"version": "0.1.0",
+				"size": 359444
+			},
+			{
+				"name": "@egjs/component",
+				"version": "3.0.5",
+				"size": 456301
+			},
+			{
+				"name": "scenejs",
+				"version": "1.10.3",
+				"size": 1308972
+			},
+			{
+				"name": "@daybrush/utils",
+				"version": "1.13.0",
+				"size": 456699
+			},
+			{
+				"name": "@scena/event-emitter",
+				"version": "1.0.5",
+				"size": 79242
+			},
+			{
+				"name": "css-styled",
+				"version": "1.0.8",
+				"size": 66411
+			},
+			{
+				"name": "order-map",
+				"version": "0.3.1",
+				"size": 105206
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[0, 4],
+			[4, 2],
+			[2, 3],
+			[4, 5],
+			[4, 6],
+			[6, 5],
+			[4, 7],
+			[7, 5],
+			[4, 8]
+		],
+		"circular": []
+	}
 }

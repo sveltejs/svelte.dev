@@ -14,8 +14,6 @@
 	"svelte_range": "^4.0.0 || ^5.0.0",
 	"kit_range": "^1.27.4",
 	"last_rune_check_version": "0.0.15",
-	"dependencies": [],
-	"unpacked_size": 15505,
 	"downloads_history": [
 		{
 			"range": [1701628200000, 1702232999999],
@@ -297,5 +295,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-unstyled-tags",
+				"version": "0.0.15",
+				"size": 15505
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

@@ -13,13 +13,6 @@
 	"svelte_range": "*",
 	"last_rune_check_version": "1.3.0",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "soon-i18n-common",
-			"semver": "^1.3.0"
-		}
-	],
-	"unpacked_size": 9695,
 	"downloads_history": [
 		{
 			"range": [1728239400000, 1728844199999],
@@ -121,5 +114,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "soon-i18n-svelte",
+				"version": "1.3.0",
+				"size": 9695
+			},
+			{
+				"name": "soon-i18n-common",
+				"version": "1.3.0",
+				"size": 7611
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

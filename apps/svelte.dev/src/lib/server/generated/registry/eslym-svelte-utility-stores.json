@@ -12,8 +12,6 @@
 	"svelte_range": "^5.8.0",
 	"last_rune_check_version": "2.1.3",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 24460,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -247,5 +245,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 14
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@eslym/svelte-utility-stores",
+				"version": "2.1.3",
+				"size": 24460
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

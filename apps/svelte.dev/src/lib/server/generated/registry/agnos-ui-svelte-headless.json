@@ -13,13 +13,6 @@
 	"version": "0.8.0",
 	"svelte_range": "^5.16.0",
 	"last_rune_check_version": "0.8.0",
-	"dependencies": [
-		{
-			"name": "@agnos-ui/core",
-			"semver": "0.8.0"
-		}
-	],
-	"unpacked_size": 23075,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +326,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 20
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@agnos-ui/svelte-headless",
+				"version": "0.8.0",
+				"size": 23075
+			},
+			{
+				"name": "@agnos-ui/core",
+				"version": "0.8.0",
+				"size": 514487
+			},
+			{
+				"name": "clsx",
+				"version": "2.1.1",
+				"size": 8555
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2]
+		],
+		"circular": []
+	}
 }

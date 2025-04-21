@@ -13,8 +13,6 @@
 	"last_rune_check_version": "0.0.1",
 	"version": "0.0.1",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 15318,
 	"downloads_history": [
 		{
 			"range": [1743359400000, 1743964199999],
@@ -24,5 +22,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 16
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-tinybase",
+				"version": "0.0.1",
+				"size": 15318
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

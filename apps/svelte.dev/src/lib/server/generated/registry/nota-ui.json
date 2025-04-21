@@ -14,13 +14,6 @@
 	"svelte_range": "^3.56.0",
 	"kit_range": "^1.11.0",
 	"last_rune_check_version": "0.0.19-alpha",
-	"dependencies": [
-		{
-			"name": "svelte",
-			"semver": "^3.56.0"
-		}
-	],
-	"unpacked_size": 194889,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -250,5 +243,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 11
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "nota-ui",
+				"version": "0.0.19-alpha",
+				"size": 194889
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

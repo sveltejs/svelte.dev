@@ -12,13 +12,6 @@
 	"typescript": true,
 	"version": "1.52.0",
 	"last_rune_check_version": "1.52.0",
-	"dependencies": [
-		{
-			"name": "playwright-core",
-			"semver": "1.52.0"
-		}
-	],
-	"unpacked_size": 3181378,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -332,5 +325,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 13453465
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "playwright",
+				"version": "1.52.0",
+				"size": 3181378
+			},
+			{
+				"name": "playwright-core",
+				"version": "1.52.0",
+				"size": 7962441
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

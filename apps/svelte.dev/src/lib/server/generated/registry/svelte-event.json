@@ -13,8 +13,6 @@
 	"version": "0.0.13",
 	"svelte_range": "5.0.0-next.1",
 	"last_rune_check_version": "0.0.13",
-	"dependencies": [],
-	"unpacked_size": 40425,
 	"downloads_history": [
 		{
 			"range": [1700418600000, 1701023399999],
@@ -240,5 +238,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 8
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-event",
+				"version": "0.0.13",
+				"size": 40425
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

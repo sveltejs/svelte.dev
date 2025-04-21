@@ -13,109 +13,6 @@
 	"version": "0.29.19",
 	"svelte_range": "^3.35.0",
 	"last_rune_check_version": "0.29.19",
-	"dependencies": [
-		{
-			"name": "@tiptap/core",
-			"semver": "^2.0.0-beta.62"
-		},
-		{
-			"name": "@tiptap/extension-blockquote",
-			"semver": "^2.0.0-beta.12"
-		},
-		{
-			"name": "@tiptap/extension-bold",
-			"semver": "^2.0.0-beta.12"
-		},
-		{
-			"name": "@tiptap/extension-bullet-list",
-			"semver": "^2.0.0-beta.12"
-		},
-		{
-			"name": "@tiptap/extension-character-count",
-			"semver": "^2.0.0-beta.12"
-		},
-		{
-			"name": "@tiptap/extension-code",
-			"semver": "^2.0.0-beta.12"
-		},
-		{
-			"name": "@tiptap/extension-code-block",
-			"semver": "^2.0.0-beta.14"
-		},
-		{
-			"name": "@tiptap/extension-document",
-			"semver": "^2.0.0-beta.11"
-		},
-		{
-			"name": "@tiptap/extension-heading",
-			"semver": "^2.0.0-beta.12"
-		},
-		{
-			"name": "@tiptap/extension-history",
-			"semver": "^2.0.0-beta.11"
-		},
-		{
-			"name": "@tiptap/extension-image",
-			"semver": "^2.0.0-beta.13"
-		},
-		{
-			"name": "@tiptap/extension-italic",
-			"semver": "^2.0.0-beta.12"
-		},
-		{
-			"name": "@tiptap/extension-link",
-			"semver": "^2.0.0-beta.16"
-		},
-		{
-			"name": "@tiptap/extension-list-item",
-			"semver": "^2.0.0-beta.12"
-		},
-		{
-			"name": "@tiptap/extension-ordered-list",
-			"semver": "^2.0.0-beta.12"
-		},
-		{
-			"name": "@tiptap/extension-paragraph",
-			"semver": "^2.0.0-beta.13"
-		},
-		{
-			"name": "@tiptap/extension-text",
-			"semver": "^2.0.0-beta.11"
-		},
-		{
-			"name": "@tiptap/extension-typography",
-			"semver": "^2.0.0-beta.11"
-		},
-		{
-			"name": "diff",
-			"semver": "^5.0.0"
-		},
-		{
-			"name": "marked",
-			"semver": "^2.0.1"
-		},
-		{
-			"name": "parse-full-name-esm",
-			"semver": "^1.2.5"
-		},
-		{
-			"name": "svelte-intersection-observer",
-			"semver": "^0.7.0"
-		},
-		{
-			"name": "svelte-portal",
-			"semver": "^2.1.2"
-		},
-		{
-			"name": "validator",
-			"semver": "^13.6.0"
-		},
-		{
-			"name": "zxcvbn-esm",
-			"semver": "^4.4.7"
-		}
-	],
-	"unpacked_size": 1340298,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -421,5 +318,174 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 61
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@nick-mazuk/ui-svelte",
+				"version": "0.29.19",
+				"size": 1340298
+			},
+			{
+				"name": "@tiptap/core",
+				"version": "2.11.7",
+				"size": 2546013
+			},
+			{
+				"name": "@tiptap/extension-blockquote",
+				"version": "2.11.7",
+				"size": 20603
+			},
+			{
+				"name": "@tiptap/extension-bold",
+				"version": "2.11.7",
+				"size": 31774
+			},
+			{
+				"name": "@tiptap/extension-bullet-list",
+				"version": "2.11.7",
+				"size": 29385
+			},
+			{
+				"name": "@tiptap/extension-character-count",
+				"version": "2.11.7",
+				"size": 58459
+			},
+			{
+				"name": "@tiptap/extension-code",
+				"version": "2.11.7",
+				"size": 25242
+			},
+			{
+				"name": "@tiptap/extension-code-block",
+				"version": "2.11.7",
+				"size": 84197
+			},
+			{
+				"name": "@tiptap/extension-document",
+				"version": "2.11.7",
+				"size": 6443
+			},
+			{
+				"name": "@tiptap/extension-heading",
+				"version": "2.11.7",
+				"size": 31013
+			},
+			{
+				"name": "@tiptap/extension-history",
+				"version": "2.11.7",
+				"size": 20863
+			},
+			{
+				"name": "@tiptap/extension-image",
+				"version": "2.11.7",
+				"size": 25935
+			},
+			{
+				"name": "@tiptap/extension-italic",
+				"version": "2.11.7",
+				"size": 31914
+			},
+			{
+				"name": "@tiptap/extension-link",
+				"version": "2.11.7",
+				"size": 180532
+			},
+			{
+				"name": "linkifyjs",
+				"version": "4.2.0",
+				"size": 260682
+			},
+			{
+				"name": "@tiptap/extension-list-item",
+				"version": "2.11.7",
+				"size": 15835
+			},
+			{
+				"name": "@tiptap/extension-ordered-list",
+				"version": "2.11.7",
+				"size": 39002
+			},
+			{
+				"name": "@tiptap/extension-paragraph",
+				"version": "2.11.7",
+				"size": 14727
+			},
+			{
+				"name": "@tiptap/extension-text",
+				"version": "2.11.7",
+				"size": 5838
+			},
+			{
+				"name": "@tiptap/extension-typography",
+				"version": "2.11.7",
+				"size": 90260
+			},
+			{
+				"name": "diff",
+				"version": "5.2.0",
+				"size": 429334
+			},
+			{
+				"name": "marked",
+				"version": "2.1.3",
+				"size": 309889
+			},
+			{
+				"name": "parse-full-name-esm",
+				"version": "1.2.6",
+				"size": 23948
+			},
+			{
+				"name": "svelte-intersection-observer",
+				"version": "0.7.1",
+				"size": 44104
+			},
+			{
+				"name": "svelte-portal",
+				"version": "2.2.1",
+				"size": 10935
+			},
+			{
+				"name": "validator",
+				"version": "13.15.0",
+				"size": 790658
+			},
+			{
+				"name": "zxcvbn-esm",
+				"version": "4.4.7",
+				"size": 2796475
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[0, 4],
+			[0, 5],
+			[0, 6],
+			[0, 7],
+			[0, 8],
+			[0, 9],
+			[0, 10],
+			[0, 11],
+			[0, 12],
+			[0, 13],
+			[13, 14],
+			[0, 15],
+			[0, 16],
+			[0, 17],
+			[0, 18],
+			[0, 19],
+			[0, 20],
+			[0, 21],
+			[0, 22],
+			[0, 23],
+			[0, 24],
+			[0, 25],
+			[0, 26]
+		],
+		"circular": []
+	}
 }

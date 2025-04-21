@@ -14,37 +14,6 @@
 	"kit_range": "1.0.0-next.535",
 	"last_rune_check_version": "0.2.4",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "date-fns",
-			"semver": "^2.29.3"
-		},
-		{
-			"name": "dexie",
-			"semver": "^3.2.2"
-		},
-		{
-			"name": "ioredis",
-			"semver": "^5.2.4"
-		},
-		{
-			"name": "svelte-browser",
-			"semver": "^0.4.6"
-		},
-		{
-			"name": "svelte-petit-utils",
-			"semver": "^0.3.5"
-		},
-		{
-			"name": "svelte-tick-timer",
-			"semver": "^0.2.2"
-		},
-		{
-			"name": "tslib",
-			"semver": "^2.4.1"
-		}
-	],
-	"unpacked_size": 13374,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -246,5 +215,156 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 9
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-storage",
+				"version": "0.2.4",
+				"size": 13374
+			},
+			{
+				"name": "date-fns",
+				"version": "2.30.0",
+				"size": 6685407
+			},
+			{
+				"name": "@babel/runtime",
+				"version": "7.27.0",
+				"size": 249798
+			},
+			{
+				"name": "regenerator-runtime",
+				"version": "0.14.1",
+				"size": 27863
+			},
+			{
+				"name": "dexie",
+				"version": "3.2.7",
+				"size": 2592017
+			},
+			{
+				"name": "ioredis",
+				"version": "5.6.1",
+				"size": 717288
+			},
+			{
+				"name": "@ioredis/commands",
+				"version": "1.2.0",
+				"size": 55589
+			},
+			{
+				"name": "cluster-key-slot",
+				"version": "1.1.2",
+				"size": 12180
+			},
+			{
+				"name": "debug",
+				"version": "4.4.0",
+				"size": 42798
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "denque",
+				"version": "2.1.0",
+				"size": 30361
+			},
+			{
+				"name": "lodash.defaults",
+				"version": "4.2.0"
+			},
+			{
+				"name": "lodash.isarguments",
+				"version": "3.1.0"
+			},
+			{
+				"name": "redis-errors",
+				"version": "1.2.0"
+			},
+			{
+				"name": "redis-parser",
+				"version": "3.0.0"
+			},
+			{
+				"name": "standard-as-callback",
+				"version": "2.1.0",
+				"size": 5303
+			},
+			{
+				"name": "svelte-browser",
+				"version": "0.4.6",
+				"size": 53597
+			},
+			{
+				"name": "svelte-petit-utils",
+				"version": "0.3.7",
+				"size": 51225
+			},
+			{
+				"name": "tslib",
+				"version": "2.8.1",
+				"size": 90359
+			},
+			{
+				"name": "ua-parser-js",
+				"version": "1.0.40",
+				"size": 118884
+			},
+			{
+				"name": "svelte-tick-timer",
+				"version": "0.2.2",
+				"size": 142702
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[0, 4],
+			[0, 5],
+			[5, 6],
+			[5, 7],
+			[5, 8],
+			[8, 9],
+			[5, 10],
+			[5, 11],
+			[5, 12],
+			[5, 13],
+			[5, 14],
+			[14, 13],
+			[5, 15],
+			[0, 16],
+			[16, 17],
+			[17, 18],
+			[16, 18],
+			[16, 19],
+			[0, 17],
+			[17, 18],
+			[0, 20],
+			[20, 1],
+			[1, 2],
+			[2, 3],
+			[20, 21],
+			[20, 16],
+			[16, 17],
+			[17, 18],
+			[16, 18],
+			[16, 19],
+			[20, 17],
+			[17, 18],
+			[20, 18],
+			[0, 18]
+		],
+		"circular": []
+	}
 }

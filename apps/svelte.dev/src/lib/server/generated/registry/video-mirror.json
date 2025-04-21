@@ -12,21 +12,6 @@
 	"svelte_range": "3.46.3",
 	"last_rune_check_version": "4.6.1",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "audio-activity",
-			"semver": "1.0.0"
-		},
-		{
-			"name": "media-devices",
-			"semver": "0.2.0"
-		},
-		{
-			"name": "raj",
-			"semver": "^1.0.0"
-		}
-	],
-	"unpacked_size": 1167594,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -260,5 +245,35 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 9
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "video-mirror",
+				"version": "4.6.1",
+				"size": 1167594
+			},
+			{
+				"name": "audio-activity",
+				"version": "1.0.0"
+			},
+			{
+				"name": "media-devices",
+				"version": "0.2.0",
+				"size": 292049
+			},
+			{
+				"name": "raj",
+				"version": "1.0.0",
+				"size": 29061
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3]
+		],
+		"circular": []
+	}
 }

@@ -13,13 +13,6 @@
 	"version": "0.10.0",
 	"kit_range": "^2.5.28",
 	"last_rune_check_version": "0.10.0",
-	"dependencies": [
-		{
-			"name": "tiny-glob",
-			"semver": "^0.2.9"
-		}
-	],
-	"unpacked_size": 49147,
 	"downloads_history": [
 		{
 			"range": [1728239400000, 1728844199999],
@@ -113,5 +106,36 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@kfont/svelte-adapter-bun",
+				"version": "0.10.0",
+				"size": 49147
+			},
+			{
+				"name": "tiny-glob",
+				"version": "0.2.9",
+				"size": 12092
+			},
+			{
+				"name": "globalyzer",
+				"version": "0.1.0",
+				"size": 11416
+			},
+			{
+				"name": "globrex",
+				"version": "0.1.2",
+				"size": 14164
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3]
+		],
+		"circular": []
+	}
 }

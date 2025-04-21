@@ -12,21 +12,6 @@
 	"version": "0.0.0",
 	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
 	"last_rune_check_version": "0.0.0",
-	"dependencies": [
-		{
-			"name": "@nopends-sdk/provider-utils",
-			"semver": "0.0.0"
-		},
-		{
-			"name": "@nopends-sdk/ui-utils",
-			"semver": "0.0.0"
-		},
-		{
-			"name": "sswr",
-			"semver": "^2.1.0"
-		}
-	],
-	"unpacked_size": 122570,
 	"downloads_history": [
 		{
 			"range": [1737916200000, 1738520999999],
@@ -56,5 +41,86 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 14
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@nopends-sdk/svelte",
+				"version": "0.0.0",
+				"size": 122570
+			},
+			{
+				"name": "@nopends-sdk/provider-utils",
+				"version": "0.0.0",
+				"size": 4331023
+			},
+			{
+				"name": "@nopends-sdk/provider",
+				"version": "0.0.0",
+				"size": 144784
+			},
+			{
+				"name": "json-schema",
+				"version": "0.4.0",
+				"size": 26079
+			},
+			{
+				"name": "eventsource-parser",
+				"version": "3.0.1",
+				"size": 249830
+			},
+			{
+				"name": "nanoid",
+				"version": "3.3.11",
+				"size": 32583
+			},
+			{
+				"name": "secure-json-parse",
+				"version": "2.7.0",
+				"size": 40656
+			},
+			{
+				"name": "@nopends-sdk/ui-utils",
+				"version": "0.0.0",
+				"size": 348147
+			},
+			{
+				"name": "zod-to-json-schema",
+				"version": "3.24.5",
+				"size": 211797
+			},
+			{
+				"name": "sswr",
+				"version": "2.2.0",
+				"size": 32631
+			},
+			{
+				"name": "swrev",
+				"version": "4.0.0",
+				"size": 31743
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[1, 4],
+			[1, 5],
+			[1, 6],
+			[0, 7],
+			[7, 2],
+			[2, 3],
+			[7, 1],
+			[1, 2],
+			[2, 3],
+			[1, 4],
+			[1, 5],
+			[1, 6],
+			[7, 8],
+			[0, 9],
+			[9, 10]
+		],
+		"circular": []
+	}
 }

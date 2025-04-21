@@ -14,13 +14,6 @@
 	"svelte_range": "^3.46.2",
 	"kit_range": "next",
 	"last_rune_check_version": "1.0.16-alpha.0",
-	"dependencies": [
-		{
-			"name": "eventemitter3",
-			"semver": "^4.0.7"
-		}
-	],
-	"unpacked_size": 19673,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -334,5 +327,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 12
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@svelte-on-solana/wallet-adapter-anchor",
+				"version": "1.0.16-alpha.0",
+				"size": 19673
+			},
+			{
+				"name": "eventemitter3",
+				"version": "4.0.7",
+				"size": 37967
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

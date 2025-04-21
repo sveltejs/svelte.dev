@@ -13,13 +13,6 @@
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.2.4",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "dasmaql",
-			"semver": "^0.2.19"
-		}
-	],
-	"unpacked_size": 18279,
 	"downloads_history": [
 		{
 			"range": [1707676200000, 1708280999999],
@@ -233,5 +226,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "dasmaql-svelte",
+				"version": "0.2.4",
+				"size": 18279
+			},
+			{
+				"name": "dasmaql",
+				"version": "0.2.21",
+				"size": 254410
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

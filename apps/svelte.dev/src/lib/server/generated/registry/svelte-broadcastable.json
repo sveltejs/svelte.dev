@@ -14,8 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.27.4",
 	"last_rune_check_version": "1.0.1",
-	"dependencies": [],
-	"unpacked_size": 4174,
 	"downloads_history": [
 		{
 			"range": [1700418600000, 1701023399999],
@@ -301,5 +299,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 9
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-broadcastable",
+				"version": "1.0.1",
+				"size": 4174
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

@@ -14,17 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.4",
 	"last_rune_check_version": "0.0.24",
-	"dependencies": [
-		{
-			"name": "svelte-loading-spinners",
-			"semver": "^0.3.4"
-		},
-		{
-			"name": "@iconify/svelte",
-			"semver": "^3.1.4"
-		}
-	],
-	"unpacked_size": 23688,
 	"downloads_history": [
 		{
 			"range": [1699209000000, 1699813799999],
@@ -326,5 +315,36 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 99
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@valiantlynx/svelte-ui",
+				"version": "0.0.24",
+				"size": 23688
+			},
+			{
+				"name": "svelte-loading-spinners",
+				"version": "0.3.6",
+				"size": 67989
+			},
+			{
+				"name": "@iconify/svelte",
+				"version": "3.1.6",
+				"size": 435856
+			},
+			{
+				"name": "@iconify/types",
+				"version": "2.0.0",
+				"size": 25671
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3]
+		],
+		"circular": []
+	}
 }

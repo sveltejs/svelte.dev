@@ -13,21 +13,6 @@
 	"version": "1.2.22",
 	"svelte_range": "3.x",
 	"last_rune_check_version": "1.2.22",
-	"dependencies": [
-		{
-			"name": "gray-matter",
-			"semver": "^4.0.2"
-		},
-		{
-			"name": "mdsvex",
-			"semver": "^0.9.7"
-		},
-		{
-			"name": "svelte",
-			"semver": "3.x"
-		}
-	],
-	"unpacked_size": 28500,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -285,5 +270,118 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 55
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "rollup-plugin-mdsvex-pages",
+				"version": "1.2.22",
+				"size": 28500
+			},
+			{
+				"name": "gray-matter",
+				"version": "4.0.3",
+				"size": 38621
+			},
+			{
+				"name": "js-yaml",
+				"version": "3.14.1",
+				"size": 291327
+			},
+			{
+				"name": "argparse",
+				"version": "1.0.10",
+				"size": 116446
+			},
+			{
+				"name": "sprintf-js",
+				"version": "1.0.3"
+			},
+			{
+				"name": "esprima",
+				"version": "4.0.1",
+				"size": 314361
+			},
+			{
+				"name": "kind-of",
+				"version": "6.0.3",
+				"size": 22820
+			},
+			{
+				"name": "section-matter",
+				"version": "1.0.0"
+			},
+			{
+				"name": "extend-shallow",
+				"version": "2.0.1"
+			},
+			{
+				"name": "is-extendable",
+				"version": "0.1.1"
+			},
+			{
+				"name": "strip-bom-string",
+				"version": "1.0.0"
+			},
+			{
+				"name": "mdsvex",
+				"version": "0.9.8",
+				"size": 4187161
+			},
+			{
+				"name": "prismjs",
+				"version": "1.30.0",
+				"size": 2052735
+			},
+			{
+				"name": "@types/unist",
+				"version": "2.0.11",
+				"size": 8543
+			},
+			{
+				"name": "prism-svelte",
+				"version": "0.4.7",
+				"size": 6075
+			},
+			{
+				"name": "vfile-message",
+				"version": "2.0.4",
+				"size": 12600
+			},
+			{
+				"name": "unist-util-stringify-position",
+				"version": "2.0.3",
+				"size": 8531
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[3, 4],
+			[2, 5],
+			[1, 6],
+			[1, 7],
+			[7, 8],
+			[8, 9],
+			[7, 6],
+			[1, 10],
+			[0, 11],
+			[11, 12],
+			[11, 13],
+			[11, 14],
+			[11, 15],
+			[15, 13],
+			[15, 16],
+			[16, 13],
+			[0, 17]
+		],
+		"circular": []
+	}
 }

@@ -13,45 +13,6 @@
 	"version": "2.0.21",
 	"svelte_range": "^3.55.1",
 	"last_rune_check_version": "2.0.21",
-	"dependencies": [
-		{
-			"name": "bundle-require",
-			"semver": "^4.0.1"
-		},
-		{
-			"name": "esbuild",
-			"semver": "^0.16.17"
-		},
-		{
-			"name": "esbuild-svelte",
-			"semver": "^0.7.3"
-		},
-		{
-			"name": "fast-glob",
-			"semver": "^3.2.12"
-		},
-		{
-			"name": "fs-extra",
-			"semver": "^11.1.0"
-		},
-		{
-			"name": "livereload",
-			"semver": "^0.9.3"
-		},
-		{
-			"name": "sade",
-			"semver": "^1.8.1"
-		},
-		{
-			"name": "sirv",
-			"semver": "^2.0.2"
-		},
-		{
-			"name": "svelte",
-			"semver": "^3.55.1"
-		}
-	],
-	"unpacked_size": 1443964,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -277,5 +238,289 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 21
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@iuser/svelteup",
+				"version": "2.0.21",
+				"size": 1443964
+			},
+			{
+				"name": "bundle-require",
+				"version": "4.2.1",
+				"size": 25309
+			},
+			{
+				"name": "load-tsconfig",
+				"version": "0.2.5",
+				"size": 17135
+			},
+			{
+				"name": "esbuild",
+				"version": "0.16.17",
+				"size": 127275
+			},
+			{
+				"name": "esbuild-svelte",
+				"version": "0.7.4",
+				"size": 33561
+			},
+			{
+				"name": "fast-glob",
+				"version": "3.3.3",
+				"size": 98396
+			},
+			{
+				"name": "@nodelib/fs.stat",
+				"version": "2.0.5",
+				"size": 11845
+			},
+			{
+				"name": "@nodelib/fs.walk",
+				"version": "1.2.8",
+				"size": 26377
+			},
+			{
+				"name": "fastq",
+				"version": "1.19.1",
+				"size": 45922
+			},
+			{
+				"name": "reusify",
+				"version": "1.1.0",
+				"size": 11696
+			},
+			{
+				"name": "@nodelib/fs.scandir",
+				"version": "2.1.5",
+				"size": 22155
+			},
+			{
+				"name": "run-parallel",
+				"version": "1.2.0",
+				"size": 6563
+			},
+			{
+				"name": "queue-microtask",
+				"version": "1.2.3",
+				"size": 8367
+			},
+			{
+				"name": "glob-parent",
+				"version": "5.1.2",
+				"size": 12134
+			},
+			{
+				"name": "is-glob",
+				"version": "4.0.3",
+				"size": 13609
+			},
+			{
+				"name": "is-extglob",
+				"version": "2.1.1"
+			},
+			{
+				"name": "merge2",
+				"version": "1.4.1",
+				"size": 8897
+			},
+			{
+				"name": "micromatch",
+				"version": "4.0.8",
+				"size": 56599
+			},
+			{
+				"name": "braces",
+				"version": "3.0.3",
+				"size": 44635
+			},
+			{
+				"name": "fill-range",
+				"version": "7.1.1",
+				"size": 16743
+			},
+			{
+				"name": "to-regex-range",
+				"version": "5.0.1",
+				"size": 22939
+			},
+			{
+				"name": "is-number",
+				"version": "7.0.0",
+				"size": 9615
+			},
+			{
+				"name": "picomatch",
+				"version": "2.3.1",
+				"size": 89952
+			},
+			{
+				"name": "fs-extra",
+				"version": "11.3.0",
+				"size": 55287
+			},
+			{
+				"name": "graceful-fs",
+				"version": "4.2.11",
+				"size": 32535
+			},
+			{
+				"name": "jsonfile",
+				"version": "6.1.0",
+				"size": 19750
+			},
+			{
+				"name": "universalify",
+				"version": "2.0.1",
+				"size": 4675
+			},
+			{
+				"name": "livereload",
+				"version": "0.9.3",
+				"size": 55569
+			},
+			{
+				"name": "chokidar",
+				"version": "3.6.0",
+				"size": 90200
+			},
+			{
+				"name": "anymatch",
+				"version": "3.1.3",
+				"size": 9654
+			},
+			{
+				"name": "normalize-path",
+				"version": "3.0.0",
+				"size": 9219
+			},
+			{
+				"name": "readdirp",
+				"version": "3.6.0",
+				"size": 20472
+			},
+			{
+				"name": "is-binary-path",
+				"version": "2.1.0",
+				"size": 3078
+			},
+			{
+				"name": "binary-extensions",
+				"version": "2.3.0",
+				"size": 5030
+			},
+			{
+				"name": "livereload-js",
+				"version": "3.4.1",
+				"size": 264766
+			},
+			{
+				"name": "opts",
+				"version": "2.0.2",
+				"size": 31126
+			},
+			{
+				"name": "ws",
+				"version": "7.5.10",
+				"size": 122307
+			},
+			{
+				"name": "sade",
+				"version": "1.8.1",
+				"size": 31545
+			},
+			{
+				"name": "mri",
+				"version": "1.2.0",
+				"size": 13261
+			},
+			{
+				"name": "sirv",
+				"version": "2.0.4",
+				"size": 20745
+			},
+			{
+				"name": "mrmime",
+				"version": "2.0.1",
+				"size": 33008
+			},
+			{
+				"name": "totalist",
+				"version": "3.0.1",
+				"size": 7459
+			},
+			{
+				"name": "@polka/url",
+				"version": "1.0.0-next.29",
+				"size": 4815
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[0, 4],
+			[0, 5],
+			[5, 6],
+			[5, 7],
+			[7, 8],
+			[8, 9],
+			[7, 10],
+			[10, 11],
+			[11, 12],
+			[10, 6],
+			[5, 13],
+			[13, 14],
+			[14, 15],
+			[5, 16],
+			[5, 17],
+			[17, 18],
+			[18, 19],
+			[19, 20],
+			[20, 21],
+			[17, 22],
+			[0, 23],
+			[23, 24],
+			[23, 25],
+			[25, 26],
+			[23, 26],
+			[0, 27],
+			[27, 28],
+			[28, 18],
+			[18, 19],
+			[19, 20],
+			[20, 21],
+			[28, 14],
+			[14, 15],
+			[28, 29],
+			[29, 22],
+			[29, 30],
+			[28, 31],
+			[31, 22],
+			[28, 13],
+			[13, 14],
+			[14, 15],
+			[28, 32],
+			[32, 33],
+			[28, 30],
+			[27, 34],
+			[27, 35],
+			[27, 36],
+			[0, 37],
+			[37, 38],
+			[0, 39],
+			[39, 40],
+			[39, 41],
+			[39, 42],
+			[0, 43]
+		],
+		"circular": []
+	}
 }

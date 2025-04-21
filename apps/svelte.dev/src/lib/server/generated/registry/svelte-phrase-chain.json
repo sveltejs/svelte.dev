@@ -13,29 +13,65 @@
 	"last_rune_check_version": "0.0.3-beta.14",
 	"version": "0.0.3-beta.14",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "@sveltejs/adapter-static",
-			"semver": "^3.0.8"
-		},
-		{
-			"name": "@types/bun",
-			"semver": "^1.2.8"
-		},
-		{
-			"name": "zod",
-			"semver": "^3.24.2"
-		},
-		{
-			"name": "commander",
-			"semver": "^13.1.0"
-		}
-	],
-	"unpacked_size": 173845,
 	"downloads_history": [
 		{
 			"range": [1743964200000, 1744568999999],
 			"value": 190
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-phrase-chain",
+				"version": "0.0.3-beta.14",
+				"size": 173845
+			},
+			{
+				"name": "@sveltejs/adapter-static",
+				"version": "3.0.8",
+				"size": 8593
+			},
+			{
+				"name": "@types/bun",
+				"version": "1.2.10",
+				"size": 4006
+			},
+			{
+				"name": "bun-types",
+				"version": "1.2.10",
+				"size": 1640734
+			},
+			{
+				"name": "@types/node",
+				"version": "22.14.1",
+				"size": 2331510
+			},
+			{
+				"name": "undici-types",
+				"version": "6.21.0",
+				"size": 83680
+			},
+			{
+				"name": "zod",
+				"version": "3.24.3",
+				"size": 697771
+			},
+			{
+				"name": "commander",
+				"version": "13.1.0",
+				"size": 200514
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[3, 4],
+			[4, 5],
+			[0, 6],
+			[0, 7]
+		],
+		"circular": []
+	}
 }

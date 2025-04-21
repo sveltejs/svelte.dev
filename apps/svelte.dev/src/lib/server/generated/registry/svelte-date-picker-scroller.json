@@ -14,13 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.0.6",
-	"dependencies": [
-		{
-			"name": "seamless-scroll-polyfill",
-			"semver": "^2.3.4"
-		}
-	],
-	"unpacked_size": 21052,
 	"downloads_history": [
 		{
 			"range": [1707676200000, 1708280999999],
@@ -210,5 +203,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-date-picker-scroller",
+				"version": "0.0.6",
+				"size": 21052
+			},
+			{
+				"name": "seamless-scroll-polyfill",
+				"version": "2.3.4",
+				"size": 320635
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

@@ -14,8 +14,6 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.7.3",
 	"last_rune_check_version": "1.3.0",
-	"dependencies": [],
-	"unpacked_size": 53534,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -325,5 +323,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 82
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@svelstack/state",
+				"version": "1.3.0",
+				"size": 53534
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

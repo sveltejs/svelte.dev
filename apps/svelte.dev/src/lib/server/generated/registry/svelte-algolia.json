@@ -14,13 +14,6 @@
 	"svelte_range": "^3.52.0",
 	"kit_range": "1.0.0-next.524",
 	"last_rune_check_version": "0.3.2",
-	"dependencies": [
-		{
-			"name": "algoliasearch",
-			"semver": "^4.14.2"
-		}
-	],
-	"unpacked_size": 29569,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -330,5 +323,229 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 25
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-algolia",
+				"version": "0.3.2",
+				"size": 29569
+			},
+			{
+				"name": "algoliasearch",
+				"version": "4.24.0",
+				"size": 209761
+			},
+			{
+				"name": "@algolia/recommend",
+				"version": "4.24.0",
+				"size": 85358
+			},
+			{
+				"name": "@algolia/transporter",
+				"version": "4.24.0",
+				"size": 50106
+			},
+			{
+				"name": "@algolia/cache-common",
+				"version": "4.24.0",
+				"size": 5577
+			},
+			{
+				"name": "@algolia/logger-common",
+				"version": "4.24.0",
+				"size": 2157
+			},
+			{
+				"name": "@algolia/requester-common",
+				"version": "4.24.0",
+				"size": 2762
+			},
+			{
+				"name": "@algolia/client-common",
+				"version": "4.24.0",
+				"size": 10575
+			},
+			{
+				"name": "@algolia/client-search",
+				"version": "4.24.0",
+				"size": 190339
+			},
+			{
+				"name": "@algolia/logger-console",
+				"version": "4.24.0",
+				"size": 2371
+			},
+			{
+				"name": "@algolia/cache-in-memory",
+				"version": "4.24.0",
+				"size": 3628
+			},
+			{
+				"name": "@algolia/requester-node-http",
+				"version": "4.24.0",
+				"size": 9215
+			},
+			{
+				"name": "@algolia/requester-browser-xhr",
+				"version": "4.24.0",
+				"size": 6246
+			},
+			{
+				"name": "@algolia/cache-browser-local-storage",
+				"version": "4.24.0",
+				"size": 8153
+			},
+			{
+				"name": "@algolia/client-account",
+				"version": "4.24.0",
+				"size": 6781
+			},
+			{
+				"name": "@algolia/client-analytics",
+				"version": "4.24.0",
+				"size": 12282
+			},
+			{
+				"name": "@algolia/client-personalization",
+				"version": "4.24.0",
+				"size": 6507
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[2, 4],
+			[2, 7],
+			[7, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[7, 6],
+			[2, 8],
+			[8, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[8, 7],
+			[7, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[7, 6],
+			[8, 6],
+			[2, 5],
+			[2, 9],
+			[9, 5],
+			[2, 10],
+			[10, 4],
+			[2, 6],
+			[2, 11],
+			[11, 6],
+			[2, 12],
+			[12, 6],
+			[2, 13],
+			[13, 4],
+			[1, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[1, 4],
+			[1, 7],
+			[7, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[7, 6],
+			[1, 8],
+			[8, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[8, 7],
+			[7, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[7, 6],
+			[8, 6],
+			[1, 5],
+			[1, 14],
+			[14, 7],
+			[7, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[7, 6],
+			[14, 8],
+			[8, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[8, 7],
+			[7, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[7, 6],
+			[8, 6],
+			[14, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[1, 9],
+			[9, 5],
+			[1, 10],
+			[10, 4],
+			[1, 15],
+			[15, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[15, 7],
+			[7, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[7, 6],
+			[15, 8],
+			[8, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[8, 7],
+			[7, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[7, 6],
+			[8, 6],
+			[15, 6],
+			[1, 6],
+			[1, 11],
+			[11, 6],
+			[1, 12],
+			[12, 6],
+			[1, 16],
+			[16, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[16, 7],
+			[7, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[7, 6],
+			[16, 6],
+			[1, 13],
+			[13, 4]
+		],
+		"circular": []
+	}
 }

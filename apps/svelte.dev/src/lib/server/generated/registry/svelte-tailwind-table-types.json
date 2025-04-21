@@ -13,8 +13,6 @@
 	"svelte_range": "^3.42.1",
 	"kit_range": "next",
 	"last_rune_check_version": "1.1.4",
-	"dependencies": [],
-	"unpacked_size": 101797,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -208,5 +206,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 16
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-tailwind-table-types",
+				"version": "1.1.4",
+				"size": 101797
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

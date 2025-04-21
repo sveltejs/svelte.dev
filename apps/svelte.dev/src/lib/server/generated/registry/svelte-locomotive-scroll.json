@@ -13,17 +13,6 @@
 	"kit_range": "next",
 	"last_rune_check_version": "0.0.5",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "imagesloaded",
-			"semver": "^5.0.0"
-		},
-		{
-			"name": "lodash.debounce",
-			"semver": "^4.0.8"
-		}
-	],
-	"unpacked_size": 16409,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -329,5 +318,35 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 22
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-locomotive-scroll",
+				"version": "0.0.5",
+				"size": 16409
+			},
+			{
+				"name": "imagesloaded",
+				"version": "5.0.0",
+				"size": 36863
+			},
+			{
+				"name": "ev-emitter",
+				"version": "2.1.2",
+				"size": 11803
+			},
+			{
+				"name": "lodash.debounce",
+				"version": "4.0.8"
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3]
+		],
+		"circular": []
+	}
 }

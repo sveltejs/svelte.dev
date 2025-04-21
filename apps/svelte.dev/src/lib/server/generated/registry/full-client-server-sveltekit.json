@@ -14,13 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.22.6",
 	"last_rune_check_version": "1.0.3",
-	"dependencies": [
-		{
-			"name": "events",
-			"semver": "^3.3.0"
-		}
-	],
-	"unpacked_size": 93938,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -330,5 +323,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 35
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "full-client-server-sveltekit",
+				"version": "1.0.3",
+				"size": 93938
+			},
+			{
+				"name": "events",
+				"version": "3.3.0",
+				"size": 82778
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

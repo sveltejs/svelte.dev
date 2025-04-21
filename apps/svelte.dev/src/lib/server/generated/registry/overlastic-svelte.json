@@ -13,17 +13,6 @@
 	"version": "0.8.1",
 	"svelte_range": "^3.57.0",
 	"last_rune_check_version": "0.8.1",
-	"dependencies": [
-		{
-			"name": "svelte",
-			"semver": "^3.57.0"
-		},
-		{
-			"name": "@overlastic/core",
-			"semver": "^0.8.1"
-		}
-	],
-	"unpacked_size": 39731,
 	"downloads_history": [
 		{
 			"range": [1715538600000, 1716143399999],
@@ -173,5 +162,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@overlastic/svelte",
+				"version": "0.8.1",
+				"size": 39731
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			},
+			{
+				"name": "@overlastic/core",
+				"version": "0.8.1",
+				"size": 21055
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

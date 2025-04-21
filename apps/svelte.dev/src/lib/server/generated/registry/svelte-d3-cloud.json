@@ -13,25 +13,6 @@
 	"version": "0.0.2",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "0.0.2",
-	"dependencies": [
-		{
-			"name": "d3-cloud",
-			"semver": "^1.2.5"
-		},
-		{
-			"name": "d3-scale",
-			"semver": "^4.0.0"
-		},
-		{
-			"name": "d3-scale-chromatic",
-			"semver": "^3.0.0"
-		},
-		{
-			"name": "d3-selection",
-			"semver": "^3.0.0"
-		}
-	],
-	"unpacked_size": 130942,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -345,5 +326,98 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 47
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-d3-cloud",
+				"version": "0.0.2",
+				"size": 130942
+			},
+			{
+				"name": "d3-cloud",
+				"version": "1.2.7",
+				"size": 36014
+			},
+			{
+				"name": "d3-dispatch",
+				"version": "1.0.6",
+				"size": 16186
+			},
+			{
+				"name": "d3-scale",
+				"version": "4.0.2",
+				"size": 174363
+			},
+			{
+				"name": "d3-array",
+				"version": "3.2.4",
+				"size": 163730
+			},
+			{
+				"name": "internmap",
+				"version": "2.0.3",
+				"size": 10470
+			},
+			{
+				"name": "d3-format",
+				"version": "3.1.0",
+				"size": 57833
+			},
+			{
+				"name": "d3-interpolate",
+				"version": "3.0.1",
+				"size": 69687
+			},
+			{
+				"name": "d3-color",
+				"version": "3.1.0",
+				"size": 61152
+			},
+			{
+				"name": "d3-time",
+				"version": "3.1.0",
+				"size": 64483
+			},
+			{
+				"name": "d3-time-format",
+				"version": "4.1.0",
+				"size": 85603
+			},
+			{
+				"name": "d3-scale-chromatic",
+				"version": "3.1.0",
+				"size": 75697
+			},
+			{
+				"name": "d3-selection",
+				"version": "3.0.0",
+				"size": 134715
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[3, 4],
+			[4, 5],
+			[3, 6],
+			[3, 7],
+			[7, 8],
+			[3, 9],
+			[9, 4],
+			[4, 5],
+			[3, 10],
+			[10, 9],
+			[9, 4],
+			[4, 5],
+			[0, 11],
+			[11, 8],
+			[11, 7],
+			[7, 8],
+			[0, 12]
+		],
+		"circular": []
+	}
 }

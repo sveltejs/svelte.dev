@@ -14,8 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.0.0 || ^2.0.0",
 	"last_rune_check_version": "1.2.0",
-	"dependencies": [],
-	"unpacked_size": 35001,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -329,5 +327,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 170
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "sk-oidc-oauth",
+				"version": "1.2.0",
+				"size": 35001
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

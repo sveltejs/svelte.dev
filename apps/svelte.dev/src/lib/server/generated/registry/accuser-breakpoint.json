@@ -14,8 +14,6 @@
 	"svelte_range": "^3.49.0",
 	"kit_range": "1.0.0-next.459",
 	"last_rune_check_version": "0.3.0",
-	"dependencies": [],
-	"unpacked_size": 5119,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -245,5 +243,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 8
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@accuser/breakpoint",
+				"version": "0.3.0",
+				"size": 5119
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

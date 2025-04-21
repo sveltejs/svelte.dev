@@ -12,8 +12,6 @@
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "1.0.1",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 17315,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -171,5 +169,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "gb7svelteds",
+				"version": "1.0.1",
+				"size": 17315
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

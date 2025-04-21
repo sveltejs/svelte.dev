@@ -13,17 +13,6 @@
 	"version": "1.0.3",
 	"svelte_range": "^3.12.1",
 	"last_rune_check_version": "1.0.3",
-	"dependencies": [
-		{
-			"name": "css-in-js-utils",
-			"semver": "^3.0.2"
-		},
-		{
-			"name": "flat",
-			"semver": "^5.0.0"
-		}
-	],
-	"unpacked_size": 98105,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -261,5 +250,36 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "shineup",
+				"version": "1.0.3",
+				"size": 98105
+			},
+			{
+				"name": "css-in-js-utils",
+				"version": "3.1.0",
+				"size": 61101
+			},
+			{
+				"name": "hyphenate-style-name",
+				"version": "1.1.0",
+				"size": 5006
+			},
+			{
+				"name": "flat",
+				"version": "5.0.2",
+				"size": 26578
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3]
+		],
+		"circular": []
+	}
 }

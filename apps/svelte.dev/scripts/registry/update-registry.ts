@@ -9,8 +9,8 @@ import type { Package } from '../../src/lib/server/content.js';
 import svelte_society_list from '../../src/lib/society-npm.json' with { type: 'json' };
 import { sort_downloads } from '../../src/routes/packages/search.js';
 import {
+	build_flat_graph_from_package_json,
 	composite_runes_types_check,
-	fetch_downloads_for_package,
 	fetch_package_download_history,
 	HEADERS,
 	PackageCache,
@@ -716,8 +716,15 @@ async function update_overrides() {
  * Updates package cache with latest npm data
  * Uses existing request_queue from superfetch for concurrency control
  */
-async function update_cache(update_stats = true) {
+async function update_cache(update: { stats?: boolean; composite?: boolean; graph?: boolean }) {
+	update.composite ??= true;
+	update.graph ??= true;
+	update.stats ??= true;
+
 	for await (const [pkg_name, data] of PackageCache.entries()) {
+		// TODO: REMOVE
+		if (data.dependency_tree) continue;
+
 		const package_detail = await superfetch(`${REGISTRY_BASE_URL}${pkg_name}`).then((r) =>
 			r.json()
 		);
@@ -735,23 +742,22 @@ async function update_cache(update_stats = true) {
 		delete data.dependents;
 		// @ts-expect-error
 		delete data.unpackedSize;
+		// @ts-expect-error
+		delete data.dependencies;
+		// @ts-expect-error
+		delete data.unpacked_size;
 
-		data.dependencies = Object.entries(latest_package_json.dependencies ?? {}).map(
-			([name, version]) => ({
-				name,
-				semver: version as string
-			})
-		);
+		let dep_tree_promise: ReturnType<typeof build_flat_graph_from_package_json> =
+			Promise.resolve() as any;
+		if (update.graph) {
+			console.log('huh', data.dependency_tree);
+			dep_tree_promise = build_flat_graph_from_package_json(latest_package_json);
+		}
 
-		data.unpacked_size = latest_package_json.dist.unpackedSize;
-
-		const { runes, types } = await composite_runes_types_check(
-			pkg_name,
-			latest_package_json.version
-		);
-		data.typescript = types;
-		data.runes = runes;
-		data.last_rune_check_version = latest_package_json.version;
+		let composite_promise: ReturnType<typeof composite_runes_types_check> =
+			Promise.resolve() as any;
+		if (update.composite)
+			composite_promise = composite_runes_types_check(pkg_name, latest_package_json.version);
 
 		data.version = latest_package_json.version;
 		data.updated = package_detail.time?.[latest];
@@ -765,18 +771,45 @@ async function update_cache(update_stats = true) {
 			latest_package_json.dependencies?.['@sveltejs/kit'] ??
 			latest_package_json.devDependencies?.['@sveltejs/kit'];
 
-		if (update_stats) {
-			const [downloads_history, github_data] = await Promise.all([
-				fetch_package_download_history(pkg_name, data.downloads_history),
-				data.repo_url
-					? fetch_github_data(data.repo_url)
-					: Promise.resolve({ stars: 0, homepage: '' })
-			]);
+		let download_promise = Promise.resolve(null) as unknown as Promise<
+			Package['downloads_history']
+		>;
+		let github_promise = Promise.resolve(null) as unknown as Promise<{
+			stars: number;
+			homepage: string;
+		} | null>;
 
-			data.downloads_history = downloads_history;
+		if (update.stats) {
+			download_promise = fetch_package_download_history(pkg_name, data.downloads_history);
+			github_promise = data.repo_url
+				? fetch_github_data(data.repo_url)
+				: Promise.resolve({
+						stars: 0,
+						homepage: ''
+					});
+		}
+
+		const [dep_tree, composite_check, downloads_history, github_data] = await Promise.all([
+			dep_tree_promise,
+			composite_promise,
+			download_promise,
+			github_promise
+		]);
+
+		if (update.graph) data.dependency_tree = dep_tree;
+
+		if (update.composite) {
+			data.typescript = composite_check.types;
+			data.runes = composite_check.runes;
+		}
+
+		if (update.stats) {
+			if (downloads_history) data.downloads_history = downloads_history;
 
 			if (github_data) data.github_stars = github_data.stars;
 		}
+
+		data.last_rune_check_version = latest_package_json.version;
 
 		PackageCache.set(pkg_name, data);
 	}
@@ -806,83 +839,20 @@ async function* create_map_batch_generator(
 	}
 }
 
-async function delete_legacy_svelte5_field() {
-	for await (const [pkg_name, data] of PackageCache.entries()) {
-		// @ts-expect-error
-		if (data.svelte5) {
-			// @ts-expect-error
-			delete data.svelte5;
-			PackageCache.set(pkg_name, data);
-		}
-	}
+async function check_graph(pkg: string, semver: string) {
+	const package_json_data = await superfetch(`${REGISTRY_BASE_URL}${pkg}/${semver}`, {
+		headers: HEADERS
+	}).then((r) => r.json());
+
+	const flat_graph = await build_flat_graph_from_package_json(package_json_data, 5);
+
+	console.log(JSON.stringify(flat_graph));
+
+	console.log(`Built dependency graph for ${pkg}@${semver} from cache`);
+	console.log(`- Total packages: ${flat_graph.packages.length}`);
+	console.log(`- Total dependencies: ${flat_graph.dependencies.length}`);
+	console.log(`- Circular dependencies: ${flat_graph.circular.length}`);
 }
-
-async function update_composite_ts_runes_data() {
-	for await (const [pkg_name, data] of PackageCache.entries()) {
-		if (data.last_rune_check_version === data.version) continue;
-
-		const checks = await composite_runes_types_check(pkg_name, data.version);
-
-		data.typescript = checks.types;
-		data.runes = checks.runes;
-
-		data.last_rune_check_version = data.version;
-
-		PackageCache.set(pkg_name, data);
-	}
-}
-
-// async function update_whether_runes() {
-// 	for await (const [pkg_name, data] of PackageCache.entries()) {
-// 		if (data.last_rune_check_version === data.version) continue;
-// 		// if (data.runes) continue;
-
-// 		const check = await composite_runes_types_check(pkg_name, data.version);
-
-// 		data.last_rune_check_version = data.version;
-// 		data.runes = check;
-
-// 		PackageCache.set(pkg_name, data);
-// 	}
-// }
-
-// /** @deprecated */
-// async function TEMPORARY_update_typescript_for_unmarked_to_accomodate_for_wrong_function() {
-// 	for await (const [pkg_name, data] of PackageCache.entries()) {
-// 		if (data.typescript.has_types) continue;
-
-// 		console.log(`TRYING ${pkg_name}`);
-
-// 		const package_detail = await superfetch(`${REGISTRY_BASE_URL}${pkg_name}`).then((r) =>
-// 			r.json()
-// 		);
-
-// 		const latest = package_detail['dist-tags']?.latest;
-// 		if (!latest) continue;
-
-// 		const latest_package_json = package_detail.versions[latest];
-
-// 		const typescript_data = await check_typescript_types(latest_package_json);
-// 		data.typescript = typescript_data;
-// 		PackageCache.set(pkg_name, data);
-// 	}
-// }
-
-// async function update_versions_only() {
-// 	for await (const [pkg_name, data] of PackageCache.entries()) {
-// 		const package_detail = await superfetch(`${REGISTRY_BASE_URL}${pkg_name}`).then((r) =>
-// 			r.json()
-// 		);
-
-// 		const latest = package_detail['dist-tags']?.latest;
-// 		if (!latest) continue;
-
-// 		const latest_package_json = package_detail.versions[latest];
-
-// 		data.version = latest_package_json.version;
-// 		PackageCache.set(pkg_name, data);
-// 	}
-// }
 
 // update_versions_only();
 
@@ -892,7 +862,11 @@ for (let i = 0; i < 1; i++) {
 
 // await update_overrides();
 
-update_cache(true);
+update_cache({
+	composite: false,
+	graph: true,
+	stats: false
+});
 
 // console.log(await fetch_package_download_history('neotraverse'));
 
@@ -922,3 +896,5 @@ svelte_society_list;
 // program.name('packages').description('Package to curate the svelte.dev/packages list');
 
 // program.command('update').addArgument({ name: 'github-stars', required: false });
+
+// await check_graph('nxext-svelte-16', 'latest');

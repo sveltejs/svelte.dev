@@ -13,25 +13,6 @@
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.0.0",
 	"last_rune_check_version": "1.1.2",
-	"dependencies": [
-		{
-			"name": "@react2svelte/swipable",
-			"semver": "^0.1.4"
-		},
-		{
-			"name": "@react2svelte/swipeable",
-			"semver": "^0.1.4"
-		},
-		{
-			"name": "clsx",
-			"semver": "^1.2.1"
-		},
-		{
-			"name": "throttle-debounce",
-			"semver": "^5.0.0"
-		}
-	],
-	"unpacked_size": 105880,
 	"downloads_history": [
 		{
 			"range": [1737311400000, 1737916199999],
@@ -81,5 +62,42 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 20
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@vietsch/svelte-image-gallery",
+				"version": "1.1.2",
+				"size": 105880
+			},
+			{
+				"name": "@react2svelte/swipable",
+				"version": "0.1.4",
+				"size": 20201
+			},
+			{
+				"name": "@react2svelte/swipeable",
+				"version": "0.1.4",
+				"size": 23959
+			},
+			{
+				"name": "clsx",
+				"version": "1.2.1",
+				"size": 5671
+			},
+			{
+				"name": "throttle-debounce",
+				"version": "5.0.2",
+				"size": 68632
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[0, 4]
+		],
+		"circular": []
+	}
 }

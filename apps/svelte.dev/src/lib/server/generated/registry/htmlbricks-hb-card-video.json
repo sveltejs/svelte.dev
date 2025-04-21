@@ -11,8 +11,6 @@
 	"version": "0.50.0-alpha.27",
 	"last_rune_check_version": "0.50.0-alpha.27",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 42796,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -318,5 +316,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 829
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@htmlbricks/hb-card-video",
+				"version": "0.50.0-alpha.27",
+				"size": 42796
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

@@ -13,25 +13,6 @@
 	"version": "0.2.3",
 	"svelte_range": ">= 3",
 	"last_rune_check_version": "0.2.3",
-	"dependencies": [
-		{
-			"name": "lodash.assign",
-			"semver": "^4.2.0"
-		},
-		{
-			"name": "lodash.intersection",
-			"semver": "^4.4.0"
-		},
-		{
-			"name": "lodash.keys",
-			"semver": "^4.2.0"
-		},
-		{
-			"name": "lodash.omit",
-			"semver": "^4.5.0"
-		}
-	],
-	"unpacked_size": 31580,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -253,5 +234,38 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@coding-g/webpacker-svelte",
+				"version": "0.2.3",
+				"size": 31580
+			},
+			{
+				"name": "lodash.assign",
+				"version": "4.2.0"
+			},
+			{
+				"name": "lodash.intersection",
+				"version": "4.4.0"
+			},
+			{
+				"name": "lodash.keys",
+				"version": "4.2.0"
+			},
+			{
+				"name": "lodash.omit",
+				"version": "4.5.0"
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[0, 4]
+		],
+		"circular": []
+	}
 }

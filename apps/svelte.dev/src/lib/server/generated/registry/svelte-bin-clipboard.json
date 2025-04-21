@@ -13,8 +13,6 @@
 	"kit_range": "^1.20.4",
 	"last_rune_check_version": "0.1.4",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 9924,
 	"downloads_history": [
 		{
 			"range": [1699209000000, 1699813799999],
@@ -288,5 +286,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 160
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@svelte-bin/clipboard",
+				"version": "0.1.4",
+				"size": 9924
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

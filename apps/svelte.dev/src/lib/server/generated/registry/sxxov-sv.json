@@ -14,13 +14,6 @@
 	"svelte_range": "^4.2.9",
 	"kit_range": "^2.5.0",
 	"last_rune_check_version": "0.27.7",
-	"dependencies": [
-		{
-			"name": "@sxxov/ut",
-			"semver": "^3.10.1"
-		}
-	],
-	"unpacked_size": 273857,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -314,5 +307,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 83
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@sxxov/sv",
+				"version": "0.27.7",
+				"size": 273857
+			},
+			{
+				"name": "@sxxov/ut",
+				"version": "3.11.1",
+				"size": 302783
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

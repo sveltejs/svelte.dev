@@ -14,8 +14,6 @@
 	"svelte_range": "3.x || 4.x",
 	"kit_range": "^1.27.6",
 	"last_rune_check_version": "0.1.1",
-	"dependencies": [],
-	"unpacked_size": 17239,
 	"downloads_history": [
 		{
 			"range": [1699813800000, 1700418599999],
@@ -253,5 +251,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 9
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@sveu/sveltekit-security",
+				"version": "0.1.1",
+				"size": 17239
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

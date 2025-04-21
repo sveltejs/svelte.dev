@@ -13,8 +13,6 @@
 	"version": "0.36.0",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "0.36.0",
-	"dependencies": [],
-	"unpacked_size": 152286,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -300,5 +298,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 94
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@minna-ui/collapse",
+				"version": "0.36.0",
+				"size": 152286
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

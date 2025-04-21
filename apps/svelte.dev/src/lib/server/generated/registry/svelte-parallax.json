@@ -13,13 +13,6 @@
 	"version": "0.6.0",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "0.6.0",
-	"dependencies": [
-		{
-			"name": "focus-options-polyfill",
-			"semver": "^1.6.0"
-		}
-	],
-	"unpacked_size": 150272,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +326,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 318
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-parallax",
+				"version": "0.6.0",
+				"size": 150272
+			},
+			{
+				"name": "focus-options-polyfill",
+				"version": "1.6.0",
+				"size": 11041
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

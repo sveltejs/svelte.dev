@@ -30,13 +30,6 @@
 	"version": "1.0.18",
 	"svelte_range": ">= 3.0.0 < 5.0.0",
 	"last_rune_check_version": "1.0.18",
-	"dependencies": [
-		{
-			"name": "cookie-storage",
-			"semver": "^6.1.0"
-		}
-	],
-	"unpacked_size": 145426,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -350,5 +343,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5647
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@square/svelte-store",
+				"version": "1.0.18",
+				"size": 145426
+			},
+			{
+				"name": "cookie-storage",
+				"version": "6.1.0",
+				"size": 18398
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

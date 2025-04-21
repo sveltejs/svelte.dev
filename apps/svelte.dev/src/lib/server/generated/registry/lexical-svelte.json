@@ -13,45 +13,6 @@
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
 	"last_rune_check_version": "1.0.0-beta.4",
-	"dependencies": [
-		{
-			"name": "@lexical/dragon",
-			"semver": "^0.2.9"
-		},
-		{
-			"name": "@lexical/hashtag",
-			"semver": "^0.2.9"
-		},
-		{
-			"name": "@lexical/history",
-			"semver": "^0.2.9"
-		},
-		{
-			"name": "@lexical/link",
-			"semver": "^0.2.9"
-		},
-		{
-			"name": "@lexical/mark",
-			"semver": "^0.2.9"
-		},
-		{
-			"name": "@lexical/plain-text",
-			"semver": "^0.2.9"
-		},
-		{
-			"name": "@lexical/rich-text",
-			"semver": "^0.2.9"
-		},
-		{
-			"name": "@lexical/text",
-			"semver": "^0.2.9"
-		},
-		{
-			"name": "lexical",
-			"semver": "^0.2.9"
-		}
-	],
-	"unpacked_size": 54928,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -309,5 +270,122 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "lexical-svelte",
+				"version": "1.0.0-beta.4",
+				"size": 54928
+			},
+			{
+				"name": "@lexical/dragon",
+				"version": "0.2.9",
+				"size": 7044
+			},
+			{
+				"name": "@lexical/hashtag",
+				"version": "0.2.9",
+				"size": 5511
+			},
+			{
+				"name": "@lexical/utils",
+				"version": "0.2.9",
+				"size": 12332,
+				"isCircular": true,
+				"circularTarget": 5
+			},
+			{
+				"name": "@lexical/list",
+				"version": "0.2.9",
+				"size": 50236
+			},
+			{
+				"name": "",
+				"version": "lexical/utils"
+			},
+			{
+				"name": "@lexical/table",
+				"version": "0.2.9",
+				"size": 91350
+			},
+			{
+				"name": "@lexical/history",
+				"version": "0.2.9",
+				"size": 17169
+			},
+			{
+				"name": "@lexical/link",
+				"version": "0.2.9",
+				"size": 10340
+			},
+			{
+				"name": "@lexical/mark",
+				"version": "0.2.9",
+				"size": 14117
+			},
+			{
+				"name": "@lexical/plain-text",
+				"version": "0.2.9",
+				"size": 19051
+			},
+			{
+				"name": "@lexical/rich-text",
+				"version": "0.2.9",
+				"size": 33110
+			},
+			{
+				"name": "@lexical/text",
+				"version": "0.2.9",
+				"size": 19708
+			},
+			{
+				"name": "lexical",
+				"version": "0.2.9",
+				"size": 395247
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[3, 4],
+			[4, 3],
+			[3, 6],
+			[6, 3],
+			[0, 7],
+			[7, 3],
+			[3, 4],
+			[4, 3],
+			[3, 6],
+			[6, 3],
+			[0, 8],
+			[8, 3],
+			[3, 4],
+			[4, 3],
+			[3, 6],
+			[6, 3],
+			[0, 9],
+			[9, 3],
+			[3, 4],
+			[4, 3],
+			[3, 6],
+			[6, 3],
+			[0, 10],
+			[0, 11],
+			[0, 12],
+			[0, 13]
+		],
+		"circular": [
+			[3, 5],
+			[3, 5],
+			[3, 5],
+			[3, 5],
+			[3, 5],
+			[3, 5],
+			[3, 5],
+			[3, 5]
+		]
+	}
 }

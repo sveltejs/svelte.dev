@@ -13,13 +13,6 @@
 	"version": "1.0.0-beta.34",
 	"svelte_range": "^3.46.4",
 	"last_rune_check_version": "1.0.0-beta.34",
-	"dependencies": [
-		{
-			"name": "uuid",
-			"semver": "^8.3.2"
-		}
-	],
-	"unpacked_size": 20876,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -325,5 +318,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 9
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "webln-v4v",
+				"version": "1.0.0-beta.34",
+				"size": 20876
+			},
+			{
+				"name": "uuid",
+				"version": "8.3.2",
+				"size": 116098
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

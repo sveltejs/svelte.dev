@@ -12,13 +12,6 @@
 	"svelte_range": ">=3.20.0",
 	"last_rune_check_version": "1.1.0",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "input-core",
-			"semver": "2.0.1"
-		}
-	],
-	"unpacked_size": 12793,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -332,5 +325,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 1914
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-input-mask",
+				"version": "1.1.0",
+				"size": 12793
+			},
+			{
+				"name": "input-core",
+				"version": "2.0.1",
+				"size": 39667
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

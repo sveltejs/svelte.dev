@@ -13,13 +13,6 @@
 	"version": "0.0.2",
 	"svelte_range": "^3.20.1",
 	"last_rune_check_version": "0.0.2",
-	"dependencies": [
-		{
-			"name": "vizceral",
-			"semver": "^4.9.0"
-		}
-	],
-	"unpacked_size": 294795,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -253,5 +246,57 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "vizceral-svelte",
+				"version": "0.0.2",
+				"size": 294795
+			},
+			{
+				"name": "vizceral",
+				"version": "4.9.0",
+				"size": 5732048
+			},
+			{
+				"name": "@tweenjs/tween.js",
+				"version": "16.11.0"
+			},
+			{
+				"name": "chroma-js",
+				"version": "1.4.1",
+				"size": 933154
+			},
+			{
+				"name": "hammerjs",
+				"version": "2.0.8"
+			},
+			{
+				"name": "lodash",
+				"version": "4.17.21",
+				"size": 1412415
+			},
+			{
+				"name": "numeral",
+				"version": "1.5.6"
+			},
+			{
+				"name": "three",
+				"version": "0.106.2",
+				"size": 21160554
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[1, 4],
+			[1, 5],
+			[1, 6],
+			[1, 7]
+		],
+		"circular": []
+	}
 }

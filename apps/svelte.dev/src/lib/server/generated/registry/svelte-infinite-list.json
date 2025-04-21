@@ -13,8 +13,6 @@
 	"version": "1.0.0",
 	"svelte_range": "^3.24.0",
 	"last_rune_check_version": "1.0.0",
-	"dependencies": [],
-	"unpacked_size": 250374,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -200,5 +198,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-infinite-list",
+				"version": "1.0.0",
+				"size": 250374
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

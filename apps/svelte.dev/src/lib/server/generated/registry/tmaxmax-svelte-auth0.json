@@ -13,13 +13,6 @@
 	"version": "1.1.0",
 	"svelte_range": "3.35.0",
 	"last_rune_check_version": "1.1.0",
-	"dependencies": [
-		{
-			"name": "@auth0/auth0-spa-js",
-			"semver": "2.0.7"
-		}
-	],
-	"unpacked_size": 436235,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -253,5 +246,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@tmaxmax/svelte-auth0",
+				"version": "1.1.0",
+				"size": 436235
+			},
+			{
+				"name": "@auth0/auth0-spa-js",
+				"version": "2.0.7",
+				"size": 1121620
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

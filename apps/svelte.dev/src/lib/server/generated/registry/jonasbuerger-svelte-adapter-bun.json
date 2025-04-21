@@ -13,8 +13,6 @@
 	"version": "2.3.0",
 	"kit_range": "^1.30.4",
 	"last_rune_check_version": "2.3.0",
-	"dependencies": [],
-	"unpacked_size": 35593,
 	"downloads_history": [
 		{
 			"range": [1719772200000, 1720376999999],
@@ -172,5 +170,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 47
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@jonasbuerger/svelte-adapter-bun",
+				"version": "2.3.0",
+				"size": 35593
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

@@ -13,17 +13,6 @@
 	"svelte_range": "^3.45.0",
 	"kit_range": "^1.0.0-next.1",
 	"last_rune_check_version": "0.0.1",
-	"dependencies": [
-		{
-			"name": "svelte",
-			"semver": "^3.45.0"
-		},
-		{
-			"name": "typescript",
-			"semver": "^4.5.4"
-		}
-	],
-	"unpacked_size": 191882,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -225,5 +214,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "cosmik",
+				"version": "0.0.1",
+				"size": 191882
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			},
+			{
+				"name": "typescript",
+				"version": "4.9.5",
+				"size": 66849652
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

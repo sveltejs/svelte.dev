@@ -12,13 +12,6 @@
 	"version": "6.2.0",
 	"svelte_range": "^5.17.3",
 	"last_rune_check_version": "6.2.0",
-	"dependencies": [
-		{
-			"name": "@preact/signals",
-			"semver": "^2.0.0"
-		}
-	],
-	"unpacked_size": 270818,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -312,5 +305,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 19
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@kvndy/undo-manager",
+				"version": "6.2.0",
+				"size": 270818
+			},
+			{
+				"name": "@preact/signals",
+				"version": "2.0.4",
+				"size": 143864
+			},
+			{
+				"name": "@preact/signals-core",
+				"version": "1.8.0",
+				"size": 183979
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2]
+		],
+		"circular": []
+	}
 }

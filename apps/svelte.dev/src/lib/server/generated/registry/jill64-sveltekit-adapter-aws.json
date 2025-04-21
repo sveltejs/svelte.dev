@@ -13,61 +13,6 @@
 	"version": "1.11.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "1.11.0",
-	"dependencies": [
-		{
-			"name": "@jill64/types-lambda",
-			"semver": "1.2.3"
-		},
-		{
-			"name": "@types/mime-types",
-			"semver": "2.1.4"
-		},
-		{
-			"name": "@types/cookie",
-			"semver": "1.0.0"
-		},
-		{
-			"name": "aws-cdk",
-			"semver": "2.1003.0"
-		},
-		{
-			"name": "aws-cdk-lib",
-			"semver": "2.183.0"
-		},
-		{
-			"name": "tsx",
-			"semver": "4.19.3"
-		},
-		{
-			"name": "constructs",
-			"semver": "10.4.2"
-		},
-		{
-			"name": "dotenv",
-			"semver": "16.4.7"
-		},
-		{
-			"name": "esbuild",
-			"semver": "0.25.1"
-		},
-		{
-			"name": "mime-types",
-			"semver": "2.1.35"
-		},
-		{
-			"name": "nanoid",
-			"semver": "5.1.3"
-		},
-		{
-			"name": "eslint",
-			"semver": "9.22.0"
-		},
-		{
-			"name": "cf2-builder",
-			"semver": "1.2.2"
-		}
-	],
-	"unpacked_size": 90520,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -381,5 +326,858 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 241
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@jill64/sveltekit-adapter-aws",
+				"version": "1.11.0",
+				"size": 90520
+			},
+			{
+				"name": "@jill64/types-lambda",
+				"version": "1.2.3",
+				"size": 40320
+			},
+			{
+				"name": "@types/mime-types",
+				"version": "2.1.4",
+				"size": 3385
+			},
+			{
+				"name": "@types/cookie",
+				"version": "1.0.0",
+				"size": 1722
+			},
+			{
+				"name": "cookie",
+				"version": "1.0.2",
+				"size": 46521
+			},
+			{
+				"name": "aws-cdk",
+				"version": "2.1003.0",
+				"size": 26161967
+			},
+			{
+				"name": "aws-cdk-lib",
+				"version": "2.183.0",
+				"size": 90859858
+			},
+			{
+				"name": "case",
+				"version": "1.6.3",
+				"size": 39118
+			},
+			{
+				"name": "yaml",
+				"version": "1.10.2",
+				"size": 448149
+			},
+			{
+				"name": "table",
+				"version": "6.9.0",
+				"size": 334820
+			},
+			{
+				"name": "ajv",
+				"version": "8.17.1",
+				"size": 1030888
+			},
+			{
+				"name": "fast-deep-equal",
+				"version": "3.1.3",
+				"size": 12966
+			},
+			{
+				"name": "fast-uri",
+				"version": "3.0.6",
+				"size": 109402
+			},
+			{
+				"name": "json-schema-traverse",
+				"version": "1.0.0",
+				"size": 22220
+			},
+			{
+				"name": "require-from-string",
+				"version": "2.0.2",
+				"size": 3422
+			},
+			{
+				"name": "slice-ansi",
+				"version": "4.0.0",
+				"size": 6434
+			},
+			{
+				"name": "ansi-styles",
+				"version": "4.3.0",
+				"size": 16978
+			},
+			{
+				"name": "color-convert",
+				"version": "2.0.1",
+				"size": 27189
+			},
+			{
+				"name": "color-name",
+				"version": "1.1.4",
+				"size": 6693
+			},
+			{
+				"name": "astral-regex",
+				"version": "2.0.0",
+				"size": 3401
+			},
+			{
+				"name": "is-fullwidth-code-point",
+				"version": "3.0.0",
+				"size": 4994
+			},
+			{
+				"name": "strip-ansi",
+				"version": "6.0.1",
+				"size": 4029
+			},
+			{
+				"name": "ansi-regex",
+				"version": "5.0.1",
+				"size": 5609
+			},
+			{
+				"name": "string-width",
+				"version": "4.2.3",
+				"size": 5161
+			},
+			{
+				"name": "emoji-regex",
+				"version": "8.0.0",
+				"size": 48255
+			},
+			{
+				"name": "lodash.truncate",
+				"version": "4.4.2"
+			},
+			{
+				"name": "ignore",
+				"version": "5.3.2",
+				"size": 53630
+			},
+			{
+				"name": "semver",
+				"version": "7.7.1",
+				"size": 96674
+			},
+			{
+				"name": "fs-extra",
+				"version": "11.3.0",
+				"size": 55287
+			},
+			{
+				"name": "graceful-fs",
+				"version": "4.2.11",
+				"size": 32535
+			},
+			{
+				"name": "jsonfile",
+				"version": "6.1.0",
+				"size": 19750
+			},
+			{
+				"name": "universalify",
+				"version": "2.0.1",
+				"size": 4675
+			},
+			{
+				"name": "punycode",
+				"version": "2.3.1",
+				"size": 33514
+			},
+			{
+				"name": "minimatch",
+				"version": "3.1.2",
+				"size": 34902
+			},
+			{
+				"name": "brace-expansion",
+				"version": "1.1.11",
+				"size": 11059
+			},
+			{
+				"name": "balanced-match",
+				"version": "1.0.2",
+				"size": 6939
+			},
+			{
+				"name": "concat-map",
+				"version": "0.0.1"
+			},
+			{
+				"name": "jsonschema",
+				"version": "1.5.0",
+				"size": 83470
+			},
+			{
+				"name": "mime-types",
+				"version": "2.1.35",
+				"size": 18272
+			},
+			{
+				"name": "mime-db",
+				"version": "1.52.0",
+				"size": 205539
+			},
+			{
+				"name": "@balena/dockerignore",
+				"version": "1.0.2",
+				"size": 36691
+			},
+			{
+				"name": "@aws-cdk/asset-awscli-v1",
+				"version": "2.2.232",
+				"size": 18812269
+			},
+			{
+				"name": "@aws-cdk/cloud-assembly-schema",
+				"version": "40.7.0",
+				"size": 649040
+			},
+			{
+				"name": "jsonschema",
+				"version": "1.4.1",
+				"size": 81842
+			},
+			{
+				"name": "@aws-cdk/asset-node-proxy-agent-v6",
+				"version": "2.1.0",
+				"size": 1706191
+			},
+			{
+				"name": "tsx",
+				"version": "4.19.3",
+				"size": 426124
+			},
+			{
+				"name": "esbuild",
+				"version": "0.25.2",
+				"size": 134169
+			},
+			{
+				"name": "get-tsconfig",
+				"version": "4.10.0",
+				"size": 115818
+			},
+			{
+				"name": "resolve-pkg-maps",
+				"version": "1.0.0",
+				"size": 15037
+			},
+			{
+				"name": "constructs",
+				"version": "10.4.2",
+				"size": 190106
+			},
+			{
+				"name": "dotenv",
+				"version": "16.4.7",
+				"size": 75773
+			},
+			{
+				"name": "esbuild",
+				"version": "0.25.1",
+				"size": 133970
+			},
+			{
+				"name": "nanoid",
+				"version": "5.1.3",
+				"size": 12143
+			},
+			{
+				"name": "eslint",
+				"version": "9.22.0",
+				"size": 3466276
+			},
+			{
+				"name": "ajv",
+				"version": "6.12.6",
+				"size": 929154
+			},
+			{
+				"name": "uri-js",
+				"version": "4.4.1",
+				"size": 469879
+			},
+			{
+				"name": "json-schema-traverse",
+				"version": "0.4.1",
+				"size": 19564
+			},
+			{
+				"name": "fast-json-stable-stringify",
+				"version": "2.1.0",
+				"size": 16959
+			},
+			{
+				"name": "chalk",
+				"version": "4.1.2",
+				"size": 35047
+			},
+			{
+				"name": "supports-color",
+				"version": "7.2.0",
+				"size": 7035
+			},
+			{
+				"name": "has-flag",
+				"version": "4.0.0",
+				"size": 4419
+			},
+			{
+				"name": "debug",
+				"version": "4.4.0",
+				"size": 42798
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "espree",
+				"version": "10.3.0",
+				"size": 79348
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "acorn-jsx",
+				"version": "5.3.2",
+				"size": 24385
+			},
+			{
+				"name": "eslint-visitor-keys",
+				"version": "4.2.0",
+				"size": 36136
+			},
+			{
+				"name": "esquery",
+				"version": "1.6.0",
+				"size": 1037210
+			},
+			{
+				"name": "estraverse",
+				"version": "5.3.0",
+				"size": 37094
+			},
+			{
+				"name": "esutils",
+				"version": "2.0.3",
+				"size": 50582
+			},
+			{
+				"name": "find-up",
+				"version": "5.0.0",
+				"size": 11761
+			},
+			{
+				"name": "locate-path",
+				"version": "6.0.0",
+				"size": 7017
+			},
+			{
+				"name": "p-locate",
+				"version": "5.0.0",
+				"size": 7240
+			},
+			{
+				"name": "p-limit",
+				"version": "3.1.0",
+				"size": 7754
+			},
+			{
+				"name": "yocto-queue",
+				"version": "0.1.0",
+				"size": 6027
+			},
+			{
+				"name": "path-exists",
+				"version": "4.0.0",
+				"size": 3919
+			},
+			{
+				"name": "is-glob",
+				"version": "4.0.3",
+				"size": 13609
+			},
+			{
+				"name": "is-extglob",
+				"version": "2.1.1"
+			},
+			{
+				"name": "@eslint/js",
+				"version": "9.22.0",
+				"size": 14932
+			},
+			{
+				"name": "optionator",
+				"version": "0.9.4",
+				"size": 50157
+			},
+			{
+				"name": "prelude-ls",
+				"version": "1.2.1",
+				"size": 36741
+			},
+			{
+				"name": "deep-is",
+				"version": "0.1.4",
+				"size": 8114
+			},
+			{
+				"name": "word-wrap",
+				"version": "1.2.5",
+				"size": 11845
+			},
+			{
+				"name": "type-check",
+				"version": "0.4.0",
+				"size": 21167
+			},
+			{
+				"name": "levn",
+				"version": "0.4.1",
+				"size": 24947
+			},
+			{
+				"name": "fast-levenshtein",
+				"version": "2.0.6"
+			},
+			{
+				"name": "cross-spawn",
+				"version": "7.0.6",
+				"size": 16094
+			},
+			{
+				"name": "which",
+				"version": "2.0.2",
+				"size": 9975
+			},
+			{
+				"name": "isexe",
+				"version": "2.0.0"
+			},
+			{
+				"name": "path-key",
+				"version": "3.1.1",
+				"size": 4553
+			},
+			{
+				"name": "shebang-command",
+				"version": "2.0.0",
+				"size": 2556
+			},
+			{
+				"name": "shebang-regex",
+				"version": "3.0.0",
+				"size": 2828
+			},
+			{
+				"name": "glob-parent",
+				"version": "6.0.2",
+				"size": 7719
+			},
+			{
+				"name": "imurmurhash",
+				"version": "0.1.4"
+			},
+			{
+				"name": "@eslint/core",
+				"version": "0.12.0",
+				"size": 65114
+			},
+			{
+				"name": "@types/json-schema",
+				"version": "7.0.15",
+				"size": 31748
+			},
+			{
+				"name": "eslint-scope",
+				"version": "8.3.0",
+				"size": 155422
+			},
+			{
+				"name": "esrecurse",
+				"version": "4.3.0",
+				"size": 13527
+			},
+			{
+				"name": "lodash.merge",
+				"version": "4.6.2",
+				"size": 54132
+			},
+			{
+				"name": "@humanfs/node",
+				"version": "0.16.6",
+				"size": 44106
+			},
+			{
+				"name": "@humanwhocodes/retry",
+				"version": "0.3.1",
+				"size": 45429
+			},
+			{
+				"name": "@humanfs/core",
+				"version": "0.19.1",
+				"size": 72735
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "natural-compare",
+				"version": "1.4.0"
+			},
+			{
+				"name": "@eslint/eslintrc",
+				"version": "3.3.1",
+				"size": 690806
+			},
+			{
+				"name": "globals",
+				"version": "14.0.0",
+				"size": 117263
+			},
+			{
+				"name": "import-fresh",
+				"version": "3.3.1",
+				"size": 4693
+			},
+			{
+				"name": "parent-module",
+				"version": "1.0.1",
+				"size": 3922
+			},
+			{
+				"name": "callsites",
+				"version": "3.1.0",
+				"size": 6332
+			},
+			{
+				"name": "resolve-from",
+				"version": "4.0.0"
+			},
+			{
+				"name": "js-yaml",
+				"version": "4.1.0",
+				"size": 404738
+			},
+			{
+				"name": "argparse",
+				"version": "2.0.1",
+				"size": 171548
+			},
+			{
+				"name": "strip-json-comments",
+				"version": "3.1.1",
+				"size": 6959
+			},
+			{
+				"name": "file-entry-cache",
+				"version": "8.0.0",
+				"size": 16022
+			},
+			{
+				"name": "flat-cache",
+				"version": "4.0.1",
+				"size": 29321
+			},
+			{
+				"name": "keyv",
+				"version": "4.5.4",
+				"size": 27751
+			},
+			{
+				"name": "json-buffer",
+				"version": "3.0.1",
+				"size": 5404
+			},
+			{
+				"name": "flatted",
+				"version": "3.3.3",
+				"size": 31530
+			},
+			{
+				"name": "@eslint/plugin-kit",
+				"version": "0.2.8",
+				"size": 76842
+			},
+			{
+				"name": "@eslint/core",
+				"version": "0.13.0",
+				"size": 64791
+			},
+			{
+				"name": "@eslint/config-array",
+				"version": "0.19.2",
+				"size": 314532
+			},
+			{
+				"name": "@eslint/object-schema",
+				"version": "2.1.6",
+				"size": 56960
+			},
+			{
+				"name": "@humanwhocodes/retry",
+				"version": "0.4.2",
+				"size": 64979
+			},
+			{
+				"name": "escape-string-regexp",
+				"version": "4.0.0",
+				"size": 3790
+			},
+			{
+				"name": "@eslint/config-helpers",
+				"version": "0.1.0",
+				"size": 53939
+			},
+			{
+				"name": "@eslint-community/regexpp",
+				"version": "4.12.1",
+				"size": 472794
+			},
+			{
+				"name": "@eslint-community/eslint-utils",
+				"version": "4.6.1",
+				"size": 476789
+			},
+			{
+				"name": "eslint-visitor-keys",
+				"version": "3.4.3",
+				"size": 32278
+			},
+			{
+				"name": "@humanwhocodes/module-importer",
+				"version": "1.0.1",
+				"size": 21177
+			},
+			{
+				"name": "json-stable-stringify-without-jsonify",
+				"version": "1.0.1"
+			},
+			{
+				"name": "cf2-builder",
+				"version": "1.2.2",
+				"size": 19904
+			},
+			{
+				"name": "@jill64/ts-cli",
+				"version": "1.3.5",
+				"size": 20771
+			},
+			{
+				"name": "@jill64/transform",
+				"version": "1.0.4",
+				"size": 4589
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[3, 4],
+			[0, 5],
+			[0, 6],
+			[6, 7],
+			[6, 8],
+			[6, 9],
+			[9, 10],
+			[10, 11],
+			[10, 12],
+			[10, 13],
+			[10, 14],
+			[9, 15],
+			[15, 16],
+			[16, 17],
+			[17, 18],
+			[15, 19],
+			[15, 20],
+			[9, 21],
+			[21, 22],
+			[9, 23],
+			[23, 21],
+			[21, 22],
+			[23, 24],
+			[23, 20],
+			[9, 25],
+			[6, 26],
+			[6, 27],
+			[6, 28],
+			[28, 29],
+			[28, 30],
+			[30, 31],
+			[28, 31],
+			[6, 32],
+			[6, 33],
+			[33, 34],
+			[34, 35],
+			[34, 36],
+			[6, 37],
+			[6, 38],
+			[38, 39],
+			[6, 40],
+			[6, 41],
+			[6, 42],
+			[42, 27],
+			[42, 43],
+			[6, 44],
+			[0, 45],
+			[45, 46],
+			[45, 47],
+			[47, 48],
+			[0, 49],
+			[0, 50],
+			[0, 51],
+			[0, 38],
+			[38, 39],
+			[0, 52],
+			[0, 53],
+			[53, 54],
+			[54, 55],
+			[55, 32],
+			[54, 11],
+			[54, 56],
+			[54, 57],
+			[53, 58],
+			[58, 16],
+			[16, 17],
+			[17, 18],
+			[58, 59],
+			[59, 60],
+			[53, 61],
+			[61, 62],
+			[53, 63],
+			[63, 64],
+			[63, 65],
+			[63, 66],
+			[53, 26],
+			[53, 67],
+			[67, 68],
+			[53, 69],
+			[53, 70],
+			[70, 71],
+			[71, 72],
+			[72, 73],
+			[73, 74],
+			[70, 75],
+			[53, 76],
+			[76, 77],
+			[53, 33],
+			[33, 34],
+			[34, 35],
+			[34, 36],
+			[53, 78],
+			[53, 79],
+			[79, 80],
+			[79, 81],
+			[79, 82],
+			[79, 83],
+			[83, 80],
+			[79, 84],
+			[84, 80],
+			[84, 83],
+			[83, 80],
+			[79, 85],
+			[53, 86],
+			[86, 87],
+			[87, 88],
+			[86, 89],
+			[86, 90],
+			[90, 91],
+			[53, 92],
+			[92, 76],
+			[76, 77],
+			[53, 93],
+			[53, 94],
+			[94, 95],
+			[53, 96],
+			[96, 97],
+			[97, 68],
+			[96, 68],
+			[53, 98],
+			[53, 99],
+			[99, 100],
+			[99, 101],
+			[53, 102],
+			[53, 11],
+			[53, 103],
+			[53, 104],
+			[104, 54],
+			[54, 55],
+			[55, 32],
+			[54, 11],
+			[54, 56],
+			[54, 57],
+			[104, 61],
+			[61, 62],
+			[104, 63],
+			[63, 64],
+			[63, 65],
+			[63, 66],
+			[104, 105],
+			[104, 26],
+			[104, 106],
+			[106, 107],
+			[107, 108],
+			[106, 109],
+			[104, 110],
+			[110, 111],
+			[104, 33],
+			[33, 34],
+			[34, 35],
+			[34, 36],
+			[104, 112],
+			[53, 113],
+			[113, 114],
+			[114, 115],
+			[115, 116],
+			[114, 117],
+			[53, 118],
+			[118, 119],
+			[119, 95],
+			[118, 84],
+			[84, 80],
+			[84, 83],
+			[83, 80],
+			[53, 95],
+			[53, 66],
+			[53, 120],
+			[120, 61],
+			[61, 62],
+			[120, 33],
+			[33, 34],
+			[34, 35],
+			[34, 36],
+			[120, 121],
+			[53, 122],
+			[53, 123],
+			[53, 124],
+			[53, 125],
+			[53, 126],
+			[126, 127],
+			[53, 128],
+			[53, 129],
+			[0, 130],
+			[130, 51],
+			[130, 131],
+			[131, 132]
+		],
+		"circular": []
+	}
 }

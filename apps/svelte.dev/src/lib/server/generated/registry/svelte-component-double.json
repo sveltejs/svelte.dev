@@ -13,8 +13,6 @@
 	"version": "2.1.0",
 	"svelte_range": ">= 3.16",
 	"last_rune_check_version": "2.1.0",
-	"dependencies": [],
-	"unpacked_size": 17624,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -328,5 +326,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 570
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-component-double",
+				"version": "2.1.0",
+				"size": 17624
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

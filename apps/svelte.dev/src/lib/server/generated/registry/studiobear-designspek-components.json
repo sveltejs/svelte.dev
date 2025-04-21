@@ -12,13 +12,6 @@
 	"svelte_range": "^3.20.1",
 	"last_rune_check_version": "0.4.4",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "@studiobear/designspek",
-			"semver": "^0.4.2"
-		}
-	],
-	"unpacked_size": 394191,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -260,5 +253,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 10
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@studiobear/designspek-components",
+				"version": "0.4.4",
+				"size": 394191
+			},
+			{
+				"name": "@studiobear/designspek",
+				"version": "0.4.4",
+				"size": 445642
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2]
+		],
+		"circular": []
+	}
 }

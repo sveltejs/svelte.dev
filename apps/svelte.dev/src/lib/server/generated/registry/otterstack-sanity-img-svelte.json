@@ -14,17 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.4",
 	"last_rune_check_version": "0.2.3",
-	"dependencies": [
-		{
-			"name": "@otterstack/sanity-img-lib",
-			"semver": "^0.2.0"
-		},
-		{
-			"name": "@sanity/image-url",
-			"semver": "^1.0.2"
-		}
-	],
-	"unpacked_size": 7140,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -270,5 +259,31 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 10
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@otterstack/sanity-img-svelte",
+				"version": "0.2.3",
+				"size": 7140
+			},
+			{
+				"name": "@otterstack/sanity-img-lib",
+				"version": "0.2.0",
+				"size": 18733
+			},
+			{
+				"name": "@sanity/image-url",
+				"version": "1.1.0",
+				"size": 178005
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

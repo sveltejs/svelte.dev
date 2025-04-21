@@ -14,8 +14,6 @@
 	"svelte_range": "^3.48.0",
 	"kit_range": "next",
 	"last_rune_check_version": "1.0.0-next.0",
-	"dependencies": [],
-	"unpacked_size": 22399,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -329,5 +327,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 81
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-adapter-github",
+				"version": "1.0.0-next.0",
+				"size": 22399
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

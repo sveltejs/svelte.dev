@@ -12,21 +12,6 @@
 	"typescript": false,
 	"version": "1.0.7",
 	"last_rune_check_version": "1.0.7",
-	"dependencies": [
-		{
-			"name": "acorn",
-			"semver": "^7.1.1"
-		},
-		{
-			"name": "acorn-walk",
-			"semver": "^7.1.1"
-		},
-		{
-			"name": "node-fetch",
-			"semver": "^2.6.0"
-		}
-	],
-	"unpacked_size": 886651,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -336,5 +321,51 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-preprocessor-fetch",
+				"version": "1.0.7",
+				"size": 886651
+			},
+			{
+				"name": "acorn",
+				"version": "7.4.1",
+				"size": 1209760
+			},
+			{
+				"name": "acorn-walk",
+				"version": "7.2.0",
+				"size": 100036
+			},
+			{
+				"name": "node-fetch",
+				"version": "2.7.0",
+				"size": 162253
+			},
+			{
+				"name": "whatwg-url",
+				"version": "5.0.0"
+			},
+			{
+				"name": "tr46",
+				"version": "0.0.3"
+			},
+			{
+				"name": "webidl-conversions",
+				"version": "3.0.1"
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[3, 4],
+			[4, 5],
+			[4, 6]
+		],
+		"circular": []
+	}
 }

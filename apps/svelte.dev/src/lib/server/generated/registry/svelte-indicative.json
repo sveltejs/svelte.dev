@@ -13,13 +13,6 @@
 	"version": "1.0.0-alpha.4",
 	"svelte_range": "3.23.0",
 	"last_rune_check_version": "1.0.0-alpha.4",
-	"dependencies": [
-		{
-			"name": "indicative",
-			"semver": "7.4.4"
-		}
-	],
-	"unpacked_size": 1806154,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -233,5 +226,130 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-indicative",
+				"version": "1.0.0-alpha.4",
+				"size": 1806154
+			},
+			{
+				"name": "indicative",
+				"version": "7.4.4",
+				"size": 21046
+			},
+			{
+				"name": "indicative-compiler",
+				"version": "7.2.4",
+				"size": 56299
+			},
+			{
+				"name": "indicative-parser",
+				"version": "7.1.4",
+				"size": 37755
+			},
+			{
+				"name": "haye",
+				"version": "2.0.2",
+				"size": 14662
+			},
+			{
+				"name": "isobject",
+				"version": "4.0.0",
+				"size": 7765
+			},
+			{
+				"name": "lodash.get",
+				"version": "4.4.2"
+			},
+			{
+				"name": "lodash.set",
+				"version": "4.3.2"
+			},
+			{
+				"name": "pope",
+				"version": "2.0.2"
+			},
+			{
+				"name": "indicative-formatters",
+				"version": "7.2.4",
+				"size": 9644
+			},
+			{
+				"name": "indicative-rules",
+				"version": "7.3.1",
+				"size": 187109
+			},
+			{
+				"name": "@slynova/slug",
+				"version": "1.1.2",
+				"size": 2616
+			},
+			{
+				"name": "charmap",
+				"version": "1.1.6",
+				"size": 9667
+			},
+			{
+				"name": "es6-object-assign",
+				"version": "1.1.0"
+			},
+			{
+				"name": "lodash.kebabcase",
+				"version": "4.1.1"
+			},
+			{
+				"name": "date-fns",
+				"version": "1.30.1",
+				"size": 728177
+			},
+			{
+				"name": "indicative-utils",
+				"version": "7.0.4",
+				"size": 11098
+			},
+			{
+				"name": "pluralize",
+				"version": "8.0.0",
+				"size": 17725
+			},
+			{
+				"name": "striptags",
+				"version": "3.2.0",
+				"size": 17860
+			},
+			{
+				"name": "validator",
+				"version": "12.2.0",
+				"size": 347108
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[3, 4],
+			[2, 5],
+			[2, 6],
+			[2, 7],
+			[2, 8],
+			[1, 9],
+			[1, 3],
+			[3, 4],
+			[1, 10],
+			[10, 11],
+			[11, 12],
+			[12, 13],
+			[11, 14],
+			[10, 15],
+			[10, 16],
+			[16, 6],
+			[10, 17],
+			[10, 18],
+			[10, 19]
+		],
+		"circular": []
+	}
 }

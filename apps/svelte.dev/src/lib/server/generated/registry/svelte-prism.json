@@ -13,17 +13,6 @@
 	"version": "1.1.6",
 	"svelte_range": "^3.47.0",
 	"last_rune_check_version": "1.1.6",
-	"dependencies": [
-		{
-			"name": "prism-svelte",
-			"semver": "^0.4.7"
-		},
-		{
-			"name": "prismjs",
-			"semver": "^1.27.0"
-		}
-	],
-	"unpacked_size": 5889,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -337,5 +326,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 371
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-prism",
+				"version": "1.1.6",
+				"size": 5889
+			},
+			{
+				"name": "prism-svelte",
+				"version": "0.4.7",
+				"size": 6075
+			},
+			{
+				"name": "prismjs",
+				"version": "1.30.0",
+				"size": 2052735
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

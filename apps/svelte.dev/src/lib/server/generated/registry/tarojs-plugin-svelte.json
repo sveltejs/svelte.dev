@@ -13,25 +13,6 @@
 	"version": "2.0.3",
 	"svelte_range": "4.0.0",
 	"last_rune_check_version": "2.0.3",
-	"dependencies": [
-		{
-			"name": "patch-package",
-			"semver": "^7.0.0"
-		},
-		{
-			"name": "svelte",
-			"semver": "4.0.0"
-		},
-		{
-			"name": "svelte-loader",
-			"semver": "^3.1.8"
-		},
-		{
-			"name": "svelte-preprocess",
-			"semver": "^5.0.4"
-		}
-	],
-	"unpacked_size": 301041,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -305,5 +286,576 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 20
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "tarojs-plugin-svelte",
+				"version": "2.0.3",
+				"size": 301041
+			},
+			{
+				"name": "patch-package",
+				"version": "7.0.2",
+				"size": 296122
+			},
+			{
+				"name": "tmp",
+				"version": "0.0.33"
+			},
+			{
+				"name": "os-tmpdir",
+				"version": "1.0.2"
+			},
+			{
+				"name": "open",
+				"version": "7.4.2",
+				"size": 41922
+			},
+			{
+				"name": "is-wsl",
+				"version": "2.2.0",
+				"size": 3757
+			},
+			{
+				"name": "is-docker",
+				"version": "2.2.1",
+				"size": 3013
+			},
+			{
+				"name": "yaml",
+				"version": "2.7.1",
+				"size": 682531
+			},
+			{
+				"name": "chalk",
+				"version": "4.1.2",
+				"size": 35047
+			},
+			{
+				"name": "ansi-styles",
+				"version": "4.3.0",
+				"size": 16978
+			},
+			{
+				"name": "color-convert",
+				"version": "2.0.1",
+				"size": 27189
+			},
+			{
+				"name": "color-name",
+				"version": "1.1.4",
+				"size": 6693
+			},
+			{
+				"name": "supports-color",
+				"version": "7.2.0",
+				"size": 7035
+			},
+			{
+				"name": "has-flag",
+				"version": "4.0.0",
+				"size": 4419
+			},
+			{
+				"name": "slash",
+				"version": "2.0.0",
+				"size": 2819
+			},
+			{
+				"name": "rimraf",
+				"version": "2.7.1",
+				"size": 15463
+			},
+			{
+				"name": "glob",
+				"version": "7.2.3",
+				"size": 55064
+			},
+			{
+				"name": "once",
+				"version": "1.4.0"
+			},
+			{
+				"name": "wrappy",
+				"version": "1.0.2"
+			},
+			{
+				"name": "inflight",
+				"version": "1.0.6"
+			},
+			{
+				"name": "inherits",
+				"version": "2.0.4",
+				"size": 3958
+			},
+			{
+				"name": "minimatch",
+				"version": "3.1.2",
+				"size": 34902
+			},
+			{
+				"name": "brace-expansion",
+				"version": "1.1.11",
+				"size": 11059
+			},
+			{
+				"name": "balanced-match",
+				"version": "1.0.2",
+				"size": 6939
+			},
+			{
+				"name": "concat-map",
+				"version": "0.0.1"
+			},
+			{
+				"name": "fs.realpath",
+				"version": "1.0.0"
+			},
+			{
+				"name": "path-is-absolute",
+				"version": "1.0.1"
+			},
+			{
+				"name": "semver",
+				"version": "7.7.1",
+				"size": 96674
+			},
+			{
+				"name": "ci-info",
+				"version": "3.9.0",
+				"size": 26061
+			},
+			{
+				"name": "fs-extra",
+				"version": "9.1.0",
+				"size": 129795
+			},
+			{
+				"name": "jsonfile",
+				"version": "6.1.0",
+				"size": 19750
+			},
+			{
+				"name": "universalify",
+				"version": "2.0.1",
+				"size": 4675
+			},
+			{
+				"name": "graceful-fs",
+				"version": "4.2.11",
+				"size": 32535
+			},
+			{
+				"name": "at-least-node",
+				"version": "1.0.0",
+				"size": 2625
+			},
+			{
+				"name": "minimist",
+				"version": "1.2.8",
+				"size": 54477
+			},
+			{
+				"name": "klaw-sync",
+				"version": "6.0.0",
+				"size": 10427
+			},
+			{
+				"name": "cross-spawn",
+				"version": "7.0.6",
+				"size": 16094
+			},
+			{
+				"name": "which",
+				"version": "2.0.2",
+				"size": 9975
+			},
+			{
+				"name": "isexe",
+				"version": "2.0.0"
+			},
+			{
+				"name": "path-key",
+				"version": "3.1.1",
+				"size": 4553
+			},
+			{
+				"name": "shebang-command",
+				"version": "2.0.0",
+				"size": 2556
+			},
+			{
+				"name": "shebang-regex",
+				"version": "3.0.0",
+				"size": 2828
+			},
+			{
+				"name": "@yarnpkg/lockfile",
+				"version": "1.1.0",
+				"size": 279773
+			},
+			{
+				"name": "find-yarn-workspace-root",
+				"version": "2.0.0",
+				"size": 16706
+			},
+			{
+				"name": "micromatch",
+				"version": "4.0.8",
+				"size": 56599
+			},
+			{
+				"name": "braces",
+				"version": "3.0.3",
+				"size": 44635
+			},
+			{
+				"name": "fill-range",
+				"version": "7.1.1",
+				"size": 16743
+			},
+			{
+				"name": "to-regex-range",
+				"version": "5.0.1",
+				"size": 22939
+			},
+			{
+				"name": "is-number",
+				"version": "7.0.0",
+				"size": 9615
+			},
+			{
+				"name": "picomatch",
+				"version": "2.3.1",
+				"size": 89952
+			},
+			{
+				"name": "svelte",
+				"version": "4.0.0",
+				"size": 2608609
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "code-red",
+				"version": "1.0.4",
+				"size": 55185
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "estree-walker",
+				"version": "3.0.3",
+				"size": 17599
+			},
+			{
+				"name": "periscopic",
+				"version": "3.1.0",
+				"size": 11219
+			},
+			{
+				"name": "is-reference",
+				"version": "3.0.3",
+				"size": 3953
+			},
+			{
+				"name": "css-tree",
+				"version": "2.3.1",
+				"size": 1190591
+			},
+			{
+				"name": "mdn-data",
+				"version": "2.0.30",
+				"size": 602138
+			},
+			{
+				"name": "source-map-js",
+				"version": "1.2.1",
+				"size": 139872
+			},
+			{
+				"name": "aria-query",
+				"version": "5.3.2",
+				"size": 176114
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "axobject-query",
+				"version": "3.2.4",
+				"size": 109209
+			},
+			{
+				"name": "locate-character",
+				"version": "3.0.0",
+				"size": 5325
+			},
+			{
+				"name": "@ampproject/remapping",
+				"version": "2.3.0",
+				"size": 78946
+			},
+			{
+				"name": "@jridgewell/gen-mapping",
+				"version": "0.3.8",
+				"size": 81596
+			},
+			{
+				"name": "@jridgewell/set-array",
+				"version": "1.2.1",
+				"size": 17945
+			},
+			{
+				"name": "@jridgewell/trace-mapping",
+				"version": "0.3.25",
+				"size": 169330
+			},
+			{
+				"name": "@jridgewell/resolve-uri",
+				"version": "3.1.2",
+				"size": 53153
+			},
+			{
+				"name": "svelte-loader",
+				"version": "3.2.4",
+				"size": 23583
+			},
+			{
+				"name": "loader-utils",
+				"version": "2.0.4",
+				"size": 36329
+			},
+			{
+				"name": "json5",
+				"version": "2.2.3",
+				"size": 235198
+			},
+			{
+				"name": "big.js",
+				"version": "5.2.2",
+				"size": 63868
+			},
+			{
+				"name": "emojis-list",
+				"version": "3.0.0",
+				"size": 53575
+			},
+			{
+				"name": "svelte-dev-helper",
+				"version": "1.1.9",
+				"size": 25281
+			},
+			{
+				"name": "svelte-hmr",
+				"version": "0.14.12",
+				"size": 79767
+			},
+			{
+				"name": "svelte-preprocess",
+				"version": "5.1.4",
+				"size": 165119
+			},
+			{
+				"name": "sorcery",
+				"version": "0.11.1",
+				"size": 64292
+			},
+			{
+				"name": "sander",
+				"version": "0.5.1"
+			},
+			{
+				"name": "es6-promise",
+				"version": "3.3.1"
+			},
+			{
+				"name": "mkdirp",
+				"version": "0.5.6",
+				"size": 7688
+			},
+			{
+				"name": "buffer-crc32",
+				"version": "1.0.0",
+				"size": 16801
+			},
+			{
+				"name": "@types/pug",
+				"version": "2.0.10",
+				"size": 9695
+			},
+			{
+				"name": "strip-indent",
+				"version": "3.0.0",
+				"size": 3312
+			},
+			{
+				"name": "min-indent",
+				"version": "1.0.1",
+				"size": 2969
+			},
+			{
+				"name": "detect-indent",
+				"version": "6.1.0",
+				"size": 9681
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[1, 4],
+			[4, 5],
+			[5, 6],
+			[4, 6],
+			[1, 7],
+			[1, 8],
+			[8, 9],
+			[9, 10],
+			[10, 11],
+			[8, 12],
+			[12, 13],
+			[1, 14],
+			[1, 15],
+			[15, 16],
+			[16, 17],
+			[17, 18],
+			[16, 19],
+			[19, 17],
+			[17, 18],
+			[19, 18],
+			[16, 20],
+			[16, 21],
+			[21, 22],
+			[22, 23],
+			[22, 24],
+			[16, 25],
+			[16, 26],
+			[1, 27],
+			[1, 28],
+			[1, 29],
+			[29, 30],
+			[30, 31],
+			[29, 32],
+			[29, 31],
+			[29, 33],
+			[1, 34],
+			[1, 35],
+			[35, 32],
+			[1, 36],
+			[36, 37],
+			[37, 38],
+			[36, 39],
+			[36, 40],
+			[40, 41],
+			[1, 42],
+			[1, 43],
+			[43, 44],
+			[44, 45],
+			[45, 46],
+			[46, 47],
+			[47, 48],
+			[44, 49],
+			[0, 50],
+			[50, 51],
+			[50, 52],
+			[52, 53],
+			[52, 54],
+			[52, 51],
+			[52, 55],
+			[55, 54],
+			[52, 56],
+			[56, 54],
+			[56, 55],
+			[55, 54],
+			[56, 57],
+			[57, 54],
+			[50, 58],
+			[58, 59],
+			[58, 60],
+			[50, 61],
+			[50, 56],
+			[56, 54],
+			[56, 55],
+			[55, 54],
+			[56, 57],
+			[57, 54],
+			[50, 57],
+			[57, 54],
+			[50, 62],
+			[62, 53],
+			[50, 55],
+			[55, 54],
+			[50, 63],
+			[50, 64],
+			[50, 65],
+			[65, 66],
+			[66, 67],
+			[66, 53],
+			[66, 68],
+			[68, 69],
+			[68, 53],
+			[65, 68],
+			[68, 69],
+			[68, 53],
+			[50, 68],
+			[68, 69],
+			[68, 53],
+			[50, 53],
+			[0, 70],
+			[70, 71],
+			[71, 72],
+			[71, 73],
+			[71, 74],
+			[70, 75],
+			[70, 76],
+			[0, 77],
+			[77, 78],
+			[78, 79],
+			[79, 80],
+			[79, 81],
+			[81, 34],
+			[79, 15],
+			[15, 16],
+			[16, 17],
+			[17, 18],
+			[16, 19],
+			[19, 17],
+			[17, 18],
+			[19, 18],
+			[16, 20],
+			[16, 21],
+			[21, 22],
+			[22, 23],
+			[22, 24],
+			[16, 25],
+			[16, 26],
+			[79, 32],
+			[78, 34],
+			[78, 82],
+			[78, 53],
+			[77, 83],
+			[77, 62],
+			[62, 53],
+			[77, 84],
+			[84, 85],
+			[77, 86]
+		],
+		"circular": []
+	}
 }

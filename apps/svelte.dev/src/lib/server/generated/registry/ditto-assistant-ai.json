@@ -13,45 +13,6 @@
 	"version": "3.0.20",
 	"svelte_range": "^3.0.0 || ^4.0.0",
 	"last_rune_check_version": "3.0.20",
-	"dependencies": [
-		{
-			"name": "eventsource-parser",
-			"semver": "1.0.0"
-		},
-		{
-			"name": "jsondiffpatch",
-			"semver": "^0.6.0"
-		},
-		{
-			"name": "nanoid",
-			"semver": "3.3.6"
-		},
-		{
-			"name": "solid-swr-store",
-			"semver": "0.10.7"
-		},
-		{
-			"name": "sswr",
-			"semver": "2.0.0"
-		},
-		{
-			"name": "swr",
-			"semver": "2.2.0"
-		},
-		{
-			"name": "swr-store",
-			"semver": "0.10.6"
-		},
-		{
-			"name": "swrv",
-			"semver": "1.0.4"
-		},
-		{
-			"name": "zod-to-json-schema",
-			"semver": "^3.22.4"
-		}
-	],
-	"unpacked_size": 1732703,
 	"downloads_history": [
 		{
 			"range": [1710095400000, 1710700199999],
@@ -229,5 +190,102 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "ditto-assistant-ai",
+				"version": "3.0.20",
+				"size": 1732703
+			},
+			{
+				"name": "eventsource-parser",
+				"version": "1.0.0",
+				"size": 46472
+			},
+			{
+				"name": "jsondiffpatch",
+				"version": "0.6.2",
+				"size": 119506
+			},
+			{
+				"name": "diff-match-patch",
+				"version": "1.0.5",
+				"size": 97445
+			},
+			{
+				"name": "@types/diff-match-patch",
+				"version": "1.0.36",
+				"size": 5828
+			},
+			{
+				"name": "nanoid",
+				"version": "3.3.6",
+				"size": 21685
+			},
+			{
+				"name": "solid-swr-store",
+				"version": "0.10.7",
+				"size": 17520
+			},
+			{
+				"name": "sswr",
+				"version": "2.0.0",
+				"size": 26884
+			},
+			{
+				"name": "swrev",
+				"version": "4.0.0",
+				"size": 31743
+			},
+			{
+				"name": "swr",
+				"version": "2.2.0",
+				"size": 262895
+			},
+			{
+				"name": "use-sync-external-store",
+				"version": "1.5.0",
+				"size": 28186
+			},
+			{
+				"name": "swr-store",
+				"version": "0.10.6",
+				"size": 134664
+			},
+			{
+				"name": "dequal",
+				"version": "2.0.3",
+				"size": 14229
+			},
+			{
+				"name": "swrv",
+				"version": "1.0.4",
+				"size": 146908
+			},
+			{
+				"name": "zod-to-json-schema",
+				"version": "3.24.5",
+				"size": 211797
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[2, 4],
+			[0, 5],
+			[0, 6],
+			[0, 7],
+			[7, 8],
+			[0, 9],
+			[9, 10],
+			[0, 11],
+			[11, 12],
+			[0, 13],
+			[0, 14]
+		],
+		"circular": []
+	}
 }

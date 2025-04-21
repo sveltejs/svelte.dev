@@ -13,25 +13,6 @@
 	"version": "1.3.54",
 	"svelte_range": "^4 || ^3",
 	"last_rune_check_version": "1.3.54",
-	"dependencies": [
-		{
-			"name": "@snowpack/plugin-svelte",
-			"semver": "3.7.0"
-		},
-		{
-			"name": "prettier-plugin-svelte",
-			"semver": "3.2.4"
-		},
-		{
-			"name": "svelte-loader",
-			"semver": "3.2.3"
-		},
-		{
-			"name": "vite-plugin-svelte",
-			"semver": "3.0.1"
-		}
-	],
-	"unpacked_size": 16924,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -341,5 +322,313 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 452
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@leanup/stack-svelte",
+				"version": "1.3.54",
+				"size": 16924
+			},
+			{
+				"name": "@snowpack/plugin-svelte",
+				"version": "3.7.0",
+				"size": 19537
+			},
+			{
+				"name": "rollup-plugin-svelte",
+				"version": "7.2.2",
+				"size": 15322
+			},
+			{
+				"name": "@rollup/pluginutils",
+				"version": "4.2.1",
+				"size": 50858
+			},
+			{
+				"name": "picomatch",
+				"version": "2.3.1",
+				"size": 89952
+			},
+			{
+				"name": "estree-walker",
+				"version": "2.0.2",
+				"size": 50243
+			},
+			{
+				"name": "resolve.exports",
+				"version": "2.0.3",
+				"size": 24050
+			},
+			{
+				"name": "svelte-hmr",
+				"version": "0.13.5",
+				"size": 82750
+			},
+			{
+				"name": "svelte-preprocess",
+				"version": "4.10.7",
+				"size": 102125
+			},
+			{
+				"name": "sorcery",
+				"version": "0.10.0"
+			},
+			{
+				"name": "sander",
+				"version": "0.5.1"
+			},
+			{
+				"name": "es6-promise",
+				"version": "3.3.1"
+			},
+			{
+				"name": "mkdirp",
+				"version": "0.5.6",
+				"size": 7688
+			},
+			{
+				"name": "minimist",
+				"version": "1.2.8",
+				"size": 54477
+			},
+			{
+				"name": "rimraf",
+				"version": "2.7.1",
+				"size": 15463
+			},
+			{
+				"name": "glob",
+				"version": "7.2.3",
+				"size": 55064
+			},
+			{
+				"name": "once",
+				"version": "1.4.0"
+			},
+			{
+				"name": "wrappy",
+				"version": "1.0.2"
+			},
+			{
+				"name": "inflight",
+				"version": "1.0.6"
+			},
+			{
+				"name": "inherits",
+				"version": "2.0.4",
+				"size": 3958
+			},
+			{
+				"name": "minimatch",
+				"version": "3.1.2",
+				"size": 34902
+			},
+			{
+				"name": "brace-expansion",
+				"version": "1.1.11",
+				"size": 11059
+			},
+			{
+				"name": "balanced-match",
+				"version": "1.0.2",
+				"size": 6939
+			},
+			{
+				"name": "concat-map",
+				"version": "0.0.1"
+			},
+			{
+				"name": "fs.realpath",
+				"version": "1.0.0"
+			},
+			{
+				"name": "path-is-absolute",
+				"version": "1.0.1"
+			},
+			{
+				"name": "graceful-fs",
+				"version": "4.2.11",
+				"size": 32535
+			},
+			{
+				"name": "buffer-crc32",
+				"version": "0.2.13"
+			},
+			{
+				"name": "sourcemap-codec",
+				"version": "1.4.8",
+				"size": 31802
+			},
+			{
+				"name": "@types/pug",
+				"version": "2.0.10",
+				"size": 9695
+			},
+			{
+				"name": "@types/sass",
+				"version": "1.43.1",
+				"size": 13146
+			},
+			{
+				"name": "@types/node",
+				"version": "22.14.1",
+				"size": 2331510
+			},
+			{
+				"name": "undici-types",
+				"version": "6.21.0",
+				"size": 83680
+			},
+			{
+				"name": "magic-string",
+				"version": "0.25.9",
+				"size": 373056
+			},
+			{
+				"name": "strip-indent",
+				"version": "3.0.0",
+				"size": 3312
+			},
+			{
+				"name": "min-indent",
+				"version": "1.0.1",
+				"size": 2969
+			},
+			{
+				"name": "detect-indent",
+				"version": "6.1.0",
+				"size": 9681
+			},
+			{
+				"name": "prettier-plugin-svelte",
+				"version": "3.2.4",
+				"size": 1496306
+			},
+			{
+				"name": "svelte-loader",
+				"version": "3.2.3",
+				"size": 23099
+			},
+			{
+				"name": "svelte-hmr",
+				"version": "0.14.12",
+				"size": 79767
+			},
+			{
+				"name": "loader-utils",
+				"version": "2.0.4",
+				"size": 36329
+			},
+			{
+				"name": "json5",
+				"version": "2.2.3",
+				"size": 235198
+			},
+			{
+				"name": "big.js",
+				"version": "5.2.2",
+				"size": 63868
+			},
+			{
+				"name": "emojis-list",
+				"version": "3.0.0",
+				"size": 53575
+			},
+			{
+				"name": "svelte-dev-helper",
+				"version": "1.1.9",
+				"size": 25281
+			},
+			{
+				"name": "vite-plugin-svelte",
+				"version": "3.0.1",
+				"size": 12270
+			},
+			{
+				"name": "rollup-plugin-svelte",
+				"version": "6.1.1",
+				"size": 24531
+			},
+			{
+				"name": "require-relative",
+				"version": "0.8.7"
+			},
+			{
+				"name": "rollup-pluginutils",
+				"version": "2.8.2",
+				"size": 246173
+			},
+			{
+				"name": "estree-walker",
+				"version": "0.6.1",
+				"size": 9526
+			},
+			{
+				"name": "svelte-hmr",
+				"version": "0.11.6",
+				"size": 66111
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[3, 4],
+			[3, 5],
+			[2, 6],
+			[1, 7],
+			[1, 8],
+			[8, 9],
+			[9, 10],
+			[10, 11],
+			[10, 12],
+			[12, 13],
+			[10, 14],
+			[14, 15],
+			[15, 16],
+			[16, 17],
+			[15, 18],
+			[18, 16],
+			[16, 17],
+			[18, 17],
+			[15, 19],
+			[15, 20],
+			[20, 21],
+			[21, 22],
+			[21, 23],
+			[15, 24],
+			[15, 25],
+			[10, 26],
+			[9, 13],
+			[9, 27],
+			[9, 28],
+			[8, 29],
+			[8, 30],
+			[30, 31],
+			[31, 32],
+			[8, 33],
+			[33, 28],
+			[8, 34],
+			[34, 35],
+			[8, 36],
+			[0, 37],
+			[0, 38],
+			[38, 39],
+			[38, 40],
+			[40, 41],
+			[40, 42],
+			[40, 43],
+			[38, 44],
+			[0, 45],
+			[45, 46],
+			[46, 47],
+			[46, 48],
+			[48, 49],
+			[46, 28],
+			[45, 50]
+		],
+		"circular": []
+	}
 }

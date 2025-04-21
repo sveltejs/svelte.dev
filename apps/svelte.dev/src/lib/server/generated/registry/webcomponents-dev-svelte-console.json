@@ -12,13 +12,6 @@
 	"version": "0.1.2",
 	"svelte_range": "^3.14.1",
 	"last_rune_check_version": "0.1.2",
-	"dependencies": [
-		{
-			"name": "svelte-json-tree",
-			"semver": "0.0.7"
-		}
-	],
-	"unpacked_size": 104231,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -232,5 +225,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@webcomponents-dev/svelte-console",
+				"version": "0.1.2",
+				"size": 104231
+			},
+			{
+				"name": "svelte-json-tree",
+				"version": "0.0.7",
+				"size": 70028
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

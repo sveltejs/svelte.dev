@@ -14,33 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.6.2",
 	"last_rune_check_version": "0.9.31",
-	"dependencies": [
-		{
-			"name": "@effect/schema",
-			"semver": "0.74.1"
-		},
-		{
-			"name": "@oslojs/crypto",
-			"semver": "^1.0.1"
-		},
-		{
-			"name": "@oslojs/encoding",
-			"semver": "^1.1.0"
-		},
-		{
-			"name": "effect",
-			"semver": "3.8.4"
-		},
-		{
-			"name": "@passlock/client",
-			"semver": "0.9.30"
-		},
-		{
-			"name": "@passlock/shared",
-			"semver": "0.9.30"
-		}
-	],
-	"unpacked_size": 68424,
 	"downloads_history": [
 		{
 			"range": [1720377000000, 1720981799999],
@@ -198,5 +171,98 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 12
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@passlock/sveltekit",
+				"version": "0.9.31",
+				"size": 68424
+			},
+			{
+				"name": "@effect/schema",
+				"version": "0.74.1",
+				"size": 2314573
+			},
+			{
+				"name": "fast-check",
+				"version": "3.23.2",
+				"size": 1326070
+			},
+			{
+				"name": "pure-rand",
+				"version": "6.1.0",
+				"size": 84036
+			},
+			{
+				"name": "@oslojs/crypto",
+				"version": "1.0.1",
+				"size": 73349
+			},
+			{
+				"name": "@oslojs/asn1",
+				"version": "1.0.0",
+				"size": 55641
+			},
+			{
+				"name": "@oslojs/binary",
+				"version": "1.0.0",
+				"size": 13610
+			},
+			{
+				"name": "@oslojs/encoding",
+				"version": "1.1.0",
+				"size": 17748
+			},
+			{
+				"name": "effect",
+				"version": "3.8.4",
+				"size": 18271362
+			},
+			{
+				"name": "@passlock/client",
+				"version": "0.9.30",
+				"size": 290115
+			},
+			{
+				"name": "@github/webauthn-json",
+				"version": "2.1.1",
+				"size": 300885
+			},
+			{
+				"name": "@passlock/shared",
+				"version": "0.9.30",
+				"size": 120129
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[0, 4],
+			[4, 5],
+			[5, 6],
+			[4, 6],
+			[0, 7],
+			[0, 8],
+			[0, 9],
+			[9, 1],
+			[1, 2],
+			[2, 3],
+			[9, 10],
+			[9, 8],
+			[9, 11],
+			[11, 1],
+			[1, 2],
+			[2, 3],
+			[11, 8],
+			[0, 11],
+			[11, 1],
+			[1, 2],
+			[2, 3],
+			[11, 8]
+		],
+		"circular": []
+	}
 }

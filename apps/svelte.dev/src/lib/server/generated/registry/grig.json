@@ -13,8 +13,6 @@
 	"svelte_range": "*",
 	"last_rune_check_version": "0.2.3",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 39290,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -276,5 +274,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 8
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "grig",
+				"version": "0.2.3",
+				"size": 39290
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

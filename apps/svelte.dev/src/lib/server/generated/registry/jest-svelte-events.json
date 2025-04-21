@@ -13,8 +13,6 @@
 	"version": "1.0.5",
 	"svelte_range": ">= 3",
 	"last_rune_check_version": "1.0.5",
-	"dependencies": [],
-	"unpacked_size": 28530,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -312,5 +310,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 36
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "jest-svelte-events",
+				"version": "1.0.5",
+				"size": 28530
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

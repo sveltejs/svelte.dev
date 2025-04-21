@@ -12,13 +12,6 @@
 	"svelte_range": "^4.0.3",
 	"last_rune_check_version": "1.0.0",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "vanilla-picker",
-			"semver": "^2.12.1"
-		}
-	],
-	"unpacked_size": 103844,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -288,5 +281,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 60
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@nil-/doc",
+				"version": "1.0.0",
+				"size": 103844
+			},
+			{
+				"name": "vanilla-picker",
+				"version": "2.12.3",
+				"size": 219550
+			},
+			{
+				"name": "@sphinxxxx/color-conversion",
+				"version": "2.2.2",
+				"size": 36745
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2]
+		],
+		"circular": []
+	}
 }

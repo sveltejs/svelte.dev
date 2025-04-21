@@ -14,17 +14,6 @@
 	"svelte_range": ">=3.55.0",
 	"kit_range": "1.16.3",
 	"last_rune_check_version": "0.15.7",
-	"dependencies": [
-		{
-			"name": "@floating-ui/dom",
-			"semver": "1.2.8"
-		},
-		{
-			"name": "@stitches/core",
-			"semver": "1.2.8"
-		}
-	],
-	"unpacked_size": 2089131,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -338,5 +327,42 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 536
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@svelteuidev/core",
+				"version": "0.15.7",
+				"size": 2089131
+			},
+			{
+				"name": "@floating-ui/dom",
+				"version": "1.2.8",
+				"size": 128254
+			},
+			{
+				"name": "@floating-ui/core",
+				"version": "1.6.9",
+				"size": 212585
+			},
+			{
+				"name": "@floating-ui/utils",
+				"version": "0.2.9",
+				"size": 64926
+			},
+			{
+				"name": "@stitches/core",
+				"version": "1.2.8",
+				"size": 511229
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[0, 4]
+		],
+		"circular": []
+	}
 }

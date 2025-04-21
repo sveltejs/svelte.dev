@@ -13,13 +13,6 @@
 	"version": "1.0.3",
 	"svelte_range": "^3.37.0",
 	"last_rune_check_version": "1.0.3",
-	"dependencies": [
-		{
-			"name": "focus-trap",
-			"semver": "^6.7.1"
-		}
-	],
-	"unpacked_size": 113196,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -317,5 +310,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 16
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "signin-with-matrix",
+				"version": "1.0.3",
+				"size": 113196
+			},
+			{
+				"name": "focus-trap",
+				"version": "6.9.4",
+				"size": 447877
+			},
+			{
+				"name": "tabbable",
+				"version": "5.3.3",
+				"size": 320397
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2]
+		],
+		"circular": []
+	}
 }

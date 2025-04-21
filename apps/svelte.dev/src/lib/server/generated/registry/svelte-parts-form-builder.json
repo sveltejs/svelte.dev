@@ -13,17 +13,6 @@
 	"version": "0.0.23",
 	"svelte_range": "^3.31.0",
 	"last_rune_check_version": "0.0.23",
-	"dependencies": [
-		{
-			"name": "@svelte-parts/form",
-			"semver": "^0.0.22"
-		},
-		{
-			"name": "@svelte-parts/icons",
-			"semver": "^0.0.22"
-		}
-	],
-	"unpacked_size": 18900,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -289,5 +278,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@svelte-parts/form-builder",
+				"version": "0.0.23",
+				"size": 18900
+			},
+			{
+				"name": "@svelte-parts/form",
+				"version": "0.0.22",
+				"size": 16001
+			},
+			{
+				"name": "@svelte-parts/icons",
+				"version": "0.0.22",
+				"size": 370657
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

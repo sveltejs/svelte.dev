@@ -13,8 +13,6 @@
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.3.0",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 129011,
 	"downloads_history": [
 		{
 			"range": [1739125800000, 1739730599999],
@@ -52,5 +50,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 11
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@wjfe/n-savant",
+				"version": "0.3.0",
+				"size": 129011
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

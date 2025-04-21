@@ -14,8 +14,6 @@
 	"svelte_range": "^3.54.0 || ^4.0.0",
 	"kit_range": "^1.22.3",
 	"last_rune_check_version": "0.7.4",
-	"dependencies": [],
-	"unpacked_size": 3491809,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -329,5 +327,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 127
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-materialdesign-icons",
+				"version": "0.7.4",
+				"size": 3491809
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

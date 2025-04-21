@@ -14,53 +14,6 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.5.27",
 	"last_rune_check_version": "2.1.0",
-	"dependencies": [
-		{
-			"name": "@xterm/addon-attach",
-			"semver": "^0.11.0"
-		},
-		{
-			"name": "@xterm/addon-canvas",
-			"semver": "^0.7.0"
-		},
-		{
-			"name": "@xterm/addon-clipboard",
-			"semver": "^0.1.0"
-		},
-		{
-			"name": "@xterm/addon-fit",
-			"semver": "^0.10.0"
-		},
-		{
-			"name": "@xterm/addon-image",
-			"semver": "^0.8.0"
-		},
-		{
-			"name": "@xterm/addon-search",
-			"semver": "^0.15.0"
-		},
-		{
-			"name": "@xterm/addon-serialize",
-			"semver": "^0.13.0"
-		},
-		{
-			"name": "@xterm/addon-unicode11",
-			"semver": "^0.8.0"
-		},
-		{
-			"name": "@xterm/addon-web-links",
-			"semver": "^0.11.0"
-		},
-		{
-			"name": "@xterm/addon-webgl",
-			"semver": "^0.18.0"
-		},
-		{
-			"name": "@xterm/xterm",
-			"semver": "^5.5.0"
-		}
-	],
-	"unpacked_size": 22621,
 	"downloads_history": [
 		{
 			"range": [1713724200000, 1714328999999],
@@ -266,5 +219,90 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 185
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@battlefieldduck/xterm-svelte",
+				"version": "2.1.0",
+				"size": 22621
+			},
+			{
+				"name": "@xterm/addon-attach",
+				"version": "0.11.0",
+				"size": 12994
+			},
+			{
+				"name": "@xterm/addon-canvas",
+				"version": "0.7.0",
+				"size": 540692
+			},
+			{
+				"name": "@xterm/addon-clipboard",
+				"version": "0.1.0",
+				"size": 41920
+			},
+			{
+				"name": "js-base64",
+				"version": "3.7.7",
+				"size": 38601
+			},
+			{
+				"name": "@xterm/addon-fit",
+				"version": "0.10.0",
+				"size": 13516
+			},
+			{
+				"name": "@xterm/addon-image",
+				"version": "0.8.0",
+				"size": 451456
+			},
+			{
+				"name": "@xterm/addon-search",
+				"version": "0.15.0",
+				"size": 95779
+			},
+			{
+				"name": "@xterm/addon-serialize",
+				"version": "0.13.0",
+				"size": 161686
+			},
+			{
+				"name": "@xterm/addon-unicode11",
+				"version": "0.8.0",
+				"size": 66170
+			},
+			{
+				"name": "@xterm/addon-web-links",
+				"version": "0.11.0",
+				"size": 30197
+			},
+			{
+				"name": "@xterm/addon-webgl",
+				"version": "0.18.0",
+				"size": 576337
+			},
+			{
+				"name": "@xterm/xterm",
+				"version": "5.5.0",
+				"size": 2400898
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[3, 4],
+			[0, 5],
+			[0, 6],
+			[0, 7],
+			[0, 8],
+			[0, 9],
+			[0, 10],
+			[0, 11],
+			[0, 12]
+		],
+		"circular": []
+	}
 }

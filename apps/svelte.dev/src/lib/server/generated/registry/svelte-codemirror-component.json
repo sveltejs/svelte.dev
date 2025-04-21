@@ -13,33 +13,6 @@
 	"version": "0.0.3",
 	"svelte_range": "^3.38.3",
 	"last_rune_check_version": "0.0.3",
-	"dependencies": [
-		{
-			"name": "codemirror",
-			"semver": "^5.65.2"
-		},
-		{
-			"name": "csslint",
-			"semver": "^1.0.5"
-		},
-		{
-			"name": "htmlhint",
-			"semver": "^1.1.2"
-		},
-		{
-			"name": "javascript-interface-library",
-			"semver": "^0.1.14"
-		},
-		{
-			"name": "jshint",
-			"semver": "^2.13.4"
-		},
-		{
-			"name": "jsonlint",
-			"semver": "^1.6.3"
-		}
-	],
-	"unpacked_size": 6707760,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -321,5 +294,376 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-codemirror-component",
+				"version": "0.0.3",
+				"size": 6707760
+			},
+			{
+				"name": "codemirror",
+				"version": "5.65.19",
+				"size": 2962230
+			},
+			{
+				"name": "csslint",
+				"version": "1.0.5"
+			},
+			{
+				"name": "clone",
+				"version": "2.1.2",
+				"size": 15879
+			},
+			{
+				"name": "parserlib",
+				"version": "1.1.1"
+			},
+			{
+				"name": "htmlhint",
+				"version": "1.1.4",
+				"size": 314416
+			},
+			{
+				"name": "async",
+				"version": "3.2.3",
+				"size": 820507
+			},
+			{
+				"name": "chalk",
+				"version": "4.1.2",
+				"size": 35047
+			},
+			{
+				"name": "ansi-styles",
+				"version": "4.3.0",
+				"size": 16978
+			},
+			{
+				"name": "color-convert",
+				"version": "2.0.1",
+				"size": 27189
+			},
+			{
+				"name": "color-name",
+				"version": "1.1.4",
+				"size": 6693
+			},
+			{
+				"name": "supports-color",
+				"version": "7.2.0",
+				"size": 7035
+			},
+			{
+				"name": "has-flag",
+				"version": "4.0.0",
+				"size": 4419
+			},
+			{
+				"name": "commander",
+				"version": "9.5.0",
+				"size": 173252
+			},
+			{
+				"name": "glob",
+				"version": "7.2.3",
+				"size": 55064
+			},
+			{
+				"name": "once",
+				"version": "1.4.0"
+			},
+			{
+				"name": "wrappy",
+				"version": "1.0.2"
+			},
+			{
+				"name": "inflight",
+				"version": "1.0.6"
+			},
+			{
+				"name": "inherits",
+				"version": "2.0.4",
+				"size": 3958
+			},
+			{
+				"name": "minimatch",
+				"version": "3.1.2",
+				"size": 34902
+			},
+			{
+				"name": "brace-expansion",
+				"version": "1.1.11",
+				"size": 11059
+			},
+			{
+				"name": "balanced-match",
+				"version": "1.0.2",
+				"size": 6939
+			},
+			{
+				"name": "concat-map",
+				"version": "0.0.1"
+			},
+			{
+				"name": "fs.realpath",
+				"version": "1.0.0"
+			},
+			{
+				"name": "path-is-absolute",
+				"version": "1.0.1"
+			},
+			{
+				"name": "is-glob",
+				"version": "4.0.3",
+				"size": 13609
+			},
+			{
+				"name": "is-extglob",
+				"version": "2.1.1"
+			},
+			{
+				"name": "node-fetch",
+				"version": "2.7.0",
+				"size": 162253
+			},
+			{
+				"name": "whatwg-url",
+				"version": "5.0.0"
+			},
+			{
+				"name": "tr46",
+				"version": "0.0.3"
+			},
+			{
+				"name": "webidl-conversions",
+				"version": "3.0.1"
+			},
+			{
+				"name": "strip-json-comments",
+				"version": "3.1.0",
+				"size": 6878
+			},
+			{
+				"name": "xml",
+				"version": "1.0.1"
+			},
+			{
+				"name": "javascript-interface-library",
+				"version": "0.1.14",
+				"size": 382260
+			},
+			{
+				"name": "jshint",
+				"version": "2.13.6",
+				"size": 3312976
+			},
+			{
+				"name": "cli",
+				"version": "1.0.1"
+			},
+			{
+				"name": "exit",
+				"version": "0.1.2"
+			},
+			{
+				"name": "console-browserify",
+				"version": "1.1.0"
+			},
+			{
+				"name": "date-now",
+				"version": "0.1.4"
+			},
+			{
+				"name": "htmlparser2",
+				"version": "3.8.3"
+			},
+			{
+				"name": "domutils",
+				"version": "1.5.1"
+			},
+			{
+				"name": "dom-serializer",
+				"version": "0.2.2",
+				"size": 9519
+			},
+			{
+				"name": "domelementtype",
+				"version": "2.3.0",
+				"size": 11359
+			},
+			{
+				"name": "entities",
+				"version": "2.2.0",
+				"size": 57673
+			},
+			{
+				"name": "domelementtype",
+				"version": "1.3.1",
+				"size": 2072
+			},
+			{
+				"name": "entities",
+				"version": "1.0.0"
+			},
+			{
+				"name": "domhandler",
+				"version": "2.3.0"
+			},
+			{
+				"name": "readable-stream",
+				"version": "1.1.14"
+			},
+			{
+				"name": "isarray",
+				"version": "0.0.1"
+			},
+			{
+				"name": "core-util-is",
+				"version": "1.0.3",
+				"size": 4982
+			},
+			{
+				"name": "string_decoder",
+				"version": "0.10.31"
+			},
+			{
+				"name": "lodash",
+				"version": "4.17.21",
+				"size": 1412415
+			},
+			{
+				"name": "minimatch",
+				"version": "3.0.8",
+				"size": 34664
+			},
+			{
+				"name": "strip-json-comments",
+				"version": "1.0.4"
+			},
+			{
+				"name": "jsonlint",
+				"version": "1.6.3",
+				"size": 63069
+			},
+			{
+				"name": "nomnom",
+				"version": "1.8.1"
+			},
+			{
+				"name": "underscore",
+				"version": "1.6.0"
+			},
+			{
+				"name": "chalk",
+				"version": "0.4.0"
+			},
+			{
+				"name": "has-color",
+				"version": "0.1.7"
+			},
+			{
+				"name": "strip-ansi",
+				"version": "0.1.1"
+			},
+			{
+				"name": "ansi-styles",
+				"version": "1.0.0"
+			},
+			{
+				"name": "JSV",
+				"version": "4.0.2"
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[2, 4],
+			[0, 5],
+			[5, 6],
+			[5, 7],
+			[7, 8],
+			[8, 9],
+			[9, 10],
+			[7, 11],
+			[11, 12],
+			[5, 13],
+			[5, 14],
+			[14, 15],
+			[15, 16],
+			[14, 17],
+			[17, 15],
+			[15, 16],
+			[17, 16],
+			[14, 18],
+			[14, 19],
+			[19, 20],
+			[20, 21],
+			[20, 22],
+			[14, 23],
+			[14, 24],
+			[5, 25],
+			[25, 26],
+			[5, 27],
+			[27, 28],
+			[28, 29],
+			[28, 30],
+			[5, 31],
+			[5, 32],
+			[0, 33],
+			[0, 34],
+			[34, 35],
+			[35, 14],
+			[14, 15],
+			[15, 16],
+			[14, 17],
+			[17, 15],
+			[15, 16],
+			[17, 16],
+			[14, 18],
+			[14, 19],
+			[19, 20],
+			[20, 21],
+			[20, 22],
+			[14, 23],
+			[14, 24],
+			[35, 36],
+			[34, 37],
+			[37, 38],
+			[34, 36],
+			[34, 39],
+			[39, 40],
+			[40, 41],
+			[41, 42],
+			[41, 43],
+			[40, 44],
+			[39, 45],
+			[39, 46],
+			[46, 44],
+			[39, 44],
+			[39, 47],
+			[47, 48],
+			[47, 18],
+			[47, 49],
+			[47, 50],
+			[34, 51],
+			[34, 52],
+			[52, 20],
+			[20, 21],
+			[20, 22],
+			[34, 53],
+			[0, 54],
+			[54, 55],
+			[55, 56],
+			[55, 57],
+			[57, 58],
+			[57, 59],
+			[57, 60],
+			[54, 61]
+		],
+		"circular": []
+	}
 }

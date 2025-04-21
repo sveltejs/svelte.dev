@@ -13,17 +13,6 @@
 	"version": "5.7.0",
 	"kit_range": "^2.4.0",
 	"last_rune_check_version": "5.7.0",
-	"dependencies": [
-		{
-			"name": "@vercel/nft",
-			"semver": "^0.29.2"
-		},
-		{
-			"name": "esbuild",
-			"semver": "^0.24.0"
-		}
-	],
-	"unpacked_size": 36505,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -337,5 +326,454 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 72596
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@sveltejs/adapter-vercel",
+				"version": "5.7.0",
+				"size": 36505
+			},
+			{
+				"name": "@vercel/nft",
+				"version": "0.29.2",
+				"size": 331042
+			},
+			{
+				"name": "@mapbox/node-pre-gyp",
+				"version": "2.0.0",
+				"size": 187474
+			},
+			{
+				"name": "consola",
+				"version": "3.4.2",
+				"size": 321586
+			},
+			{
+				"name": "detect-libc",
+				"version": "2.0.3",
+				"size": 23627
+			},
+			{
+				"name": "https-proxy-agent",
+				"version": "7.0.6",
+				"size": 35157
+			},
+			{
+				"name": "agent-base",
+				"version": "7.1.3",
+				"size": 31548
+			},
+			{
+				"name": "debug",
+				"version": "4.4.0",
+				"size": 42798
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "node-fetch",
+				"version": "2.7.0",
+				"size": 162253
+			},
+			{
+				"name": "whatwg-url",
+				"version": "5.0.0"
+			},
+			{
+				"name": "tr46",
+				"version": "0.0.3"
+			},
+			{
+				"name": "webidl-conversions",
+				"version": "3.0.1"
+			},
+			{
+				"name": "nopt",
+				"version": "8.1.0",
+				"size": 28128
+			},
+			{
+				"name": "abbrev",
+				"version": "3.0.1",
+				"size": 4961
+			},
+			{
+				"name": "semver",
+				"version": "7.7.1",
+				"size": 96674
+			},
+			{
+				"name": "tar",
+				"version": "7.4.3",
+				"size": 1239499
+			},
+			{
+				"name": "@isaacs/fs-minipass",
+				"version": "4.0.1",
+				"size": 100617
+			},
+			{
+				"name": "minipass",
+				"version": "7.1.2",
+				"size": 286202
+			},
+			{
+				"name": "chownr",
+				"version": "3.0.0",
+				"size": 22048
+			},
+			{
+				"name": "minizlib",
+				"version": "3.0.2",
+				"size": 110996
+			},
+			{
+				"name": "mkdirp",
+				"version": "3.0.1",
+				"size": 106656
+			},
+			{
+				"name": "yallist",
+				"version": "5.0.0",
+				"size": 80297
+			},
+			{
+				"name": "@rollup/pluginutils",
+				"version": "5.1.4",
+				"size": 58354
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "estree-walker",
+				"version": "2.0.2",
+				"size": 50243
+			},
+			{
+				"name": "picomatch",
+				"version": "4.0.2",
+				"size": 85237
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "acorn-import-attributes",
+				"version": "1.9.5",
+				"size": 32011
+			},
+			{
+				"name": "async-sema",
+				"version": "3.1.1",
+				"size": 13495
+			},
+			{
+				"name": "bindings",
+				"version": "1.5.0",
+				"size": 11230
+			},
+			{
+				"name": "file-uri-to-path",
+				"version": "1.0.0"
+			},
+			{
+				"name": "glob",
+				"version": "10.4.5",
+				"size": 474716
+			},
+			{
+				"name": "jackspeak",
+				"version": "3.4.3",
+				"size": 297017
+			},
+			{
+				"name": "@isaacs/cliui",
+				"version": "8.0.2",
+				"size": 27797
+			},
+			{
+				"name": "string-width",
+				"version": "5.1.2",
+				"size": 5781
+			},
+			{
+				"name": "strip-ansi",
+				"version": "7.1.0",
+				"size": 4321
+			},
+			{
+				"name": "ansi-regex",
+				"version": "6.1.0",
+				"size": 5412
+			},
+			{
+				"name": "emoji-regex",
+				"version": "9.2.2",
+				"size": 97916
+			},
+			{
+				"name": "eastasianwidth",
+				"version": "0.2.0"
+			},
+			{
+				"name": "string-width-cjs",
+				"version": "4.2.3",
+				"size": 5161
+			},
+			{
+				"name": "strip-ansi",
+				"version": "6.0.1",
+				"size": 4029
+			},
+			{
+				"name": "ansi-regex",
+				"version": "5.0.1",
+				"size": 5609
+			},
+			{
+				"name": "emoji-regex",
+				"version": "8.0.0",
+				"size": 48255
+			},
+			{
+				"name": "is-fullwidth-code-point",
+				"version": "3.0.0",
+				"size": 4994
+			},
+			{
+				"name": "strip-ansi-cjs",
+				"version": "6.0.1",
+				"size": 4029
+			},
+			{
+				"name": "wrap-ansi",
+				"version": "8.1.0",
+				"size": 11777
+			},
+			{
+				"name": "ansi-styles",
+				"version": "6.2.1",
+				"size": 17512
+			},
+			{
+				"name": "wrap-ansi-cjs",
+				"version": "7.0.0",
+				"size": 10648
+			},
+			{
+				"name": "ansi-styles",
+				"version": "4.3.0",
+				"size": 16978
+			},
+			{
+				"name": "color-convert",
+				"version": "2.0.1",
+				"size": 27189
+			},
+			{
+				"name": "color-name",
+				"version": "1.1.4",
+				"size": 6693
+			},
+			{
+				"name": "string-width",
+				"version": "4.2.3",
+				"size": 5161
+			},
+			{
+				"name": "minimatch",
+				"version": "9.0.5",
+				"size": 435003
+			},
+			{
+				"name": "brace-expansion",
+				"version": "2.0.1",
+				"size": 11486
+			},
+			{
+				"name": "balanced-match",
+				"version": "1.0.2",
+				"size": 6939
+			},
+			{
+				"name": "path-scurry",
+				"version": "1.11.1",
+				"size": 535479
+			},
+			{
+				"name": "lru-cache",
+				"version": "10.4.3",
+				"size": 804301
+			},
+			{
+				"name": "foreground-child",
+				"version": "3.3.1",
+				"size": 68302
+			},
+			{
+				"name": "cross-spawn",
+				"version": "7.0.6",
+				"size": 16094
+			},
+			{
+				"name": "which",
+				"version": "2.0.2",
+				"size": 9975
+			},
+			{
+				"name": "isexe",
+				"version": "2.0.0"
+			},
+			{
+				"name": "path-key",
+				"version": "3.1.1",
+				"size": 4553
+			},
+			{
+				"name": "shebang-command",
+				"version": "2.0.0",
+				"size": 2556
+			},
+			{
+				"name": "shebang-regex",
+				"version": "3.0.0",
+				"size": 2828
+			},
+			{
+				"name": "signal-exit",
+				"version": "4.1.0",
+				"size": 76966
+			},
+			{
+				"name": "package-json-from-dist",
+				"version": "1.0.1",
+				"size": 36453
+			},
+			{
+				"name": "graceful-fs",
+				"version": "4.2.11",
+				"size": 32535
+			},
+			{
+				"name": "node-gyp-build",
+				"version": "4.8.4",
+				"size": 13864
+			},
+			{
+				"name": "resolve-from",
+				"version": "5.0.0",
+				"size": 5824
+			},
+			{
+				"name": "esbuild",
+				"version": "0.24.2",
+				"size": 133805
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[2, 4],
+			[2, 5],
+			[5, 6],
+			[5, 7],
+			[7, 8],
+			[2, 9],
+			[9, 10],
+			[10, 11],
+			[10, 12],
+			[2, 13],
+			[13, 14],
+			[2, 15],
+			[2, 16],
+			[16, 17],
+			[17, 18],
+			[16, 19],
+			[16, 18],
+			[16, 20],
+			[20, 18],
+			[16, 21],
+			[16, 22],
+			[1, 23],
+			[23, 24],
+			[23, 25],
+			[23, 26],
+			[1, 27],
+			[1, 28],
+			[1, 29],
+			[1, 30],
+			[30, 31],
+			[1, 25],
+			[1, 32],
+			[32, 18],
+			[32, 33],
+			[33, 34],
+			[34, 35],
+			[35, 36],
+			[36, 37],
+			[35, 38],
+			[35, 39],
+			[34, 40],
+			[40, 41],
+			[41, 42],
+			[40, 43],
+			[40, 44],
+			[34, 36],
+			[36, 37],
+			[34, 45],
+			[45, 42],
+			[34, 46],
+			[46, 47],
+			[46, 35],
+			[35, 36],
+			[36, 37],
+			[35, 38],
+			[35, 39],
+			[46, 36],
+			[36, 37],
+			[34, 48],
+			[48, 49],
+			[49, 50],
+			[50, 51],
+			[48, 52],
+			[52, 41],
+			[41, 42],
+			[52, 43],
+			[52, 44],
+			[48, 41],
+			[41, 42],
+			[32, 53],
+			[53, 54],
+			[54, 55],
+			[32, 56],
+			[56, 18],
+			[56, 57],
+			[32, 58],
+			[58, 59],
+			[59, 60],
+			[60, 61],
+			[59, 62],
+			[59, 63],
+			[63, 64],
+			[58, 65],
+			[32, 66],
+			[1, 67],
+			[1, 68],
+			[1, 26],
+			[1, 69],
+			[0, 70]
+		],
+		"circular": []
+	}
 }

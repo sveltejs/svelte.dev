@@ -13,13 +13,6 @@
 	"version": "4.0.0",
 	"svelte_range": "^5",
 	"last_rune_check_version": "4.0.0",
-	"dependencies": [
-		{
-			"name": "regexparam",
-			"semver": "^3"
-		}
-	],
-	"unpacked_size": 8233,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -273,5 +266,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@koffeine/svelte-router",
+				"version": "4.0.0",
+				"size": 8233
+			},
+			{
+				"name": "regexparam",
+				"version": "3.0.0",
+				"size": 14498
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

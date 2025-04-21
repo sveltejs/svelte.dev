@@ -12,8 +12,6 @@
 	"svelte_range": "^4.2.18",
 	"last_rune_check_version": "0.0.6",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 307491,
 	"downloads_history": [
 		{
 			"range": [1720377000000, 1720981799999],
@@ -131,5 +129,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "x-ui-components-svelte",
+				"version": "0.0.6",
+				"size": 307491
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

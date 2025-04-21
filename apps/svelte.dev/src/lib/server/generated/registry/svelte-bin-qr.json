@@ -13,13 +13,6 @@
 	"kit_range": "^1.20.4",
 	"last_rune_check_version": "0.0.2",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "qrcode-generator",
-			"semver": "^1.4.4"
-		}
-	],
-	"unpacked_size": 114982,
 	"downloads_history": [
 		{
 			"range": [1699209000000, 1699813799999],
@@ -249,5 +242,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@svelte-bin/qr",
+				"version": "0.0.2",
+				"size": 114982
+			},
+			{
+				"name": "qrcode-generator",
+				"version": "1.4.4",
+				"size": 116754
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

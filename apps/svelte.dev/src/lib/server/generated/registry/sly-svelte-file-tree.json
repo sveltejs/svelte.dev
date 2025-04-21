@@ -13,13 +13,6 @@
 	"version": "1.0.3",
 	"svelte_range": "^4.0.0",
 	"last_rune_check_version": "1.0.3",
-	"dependencies": [
-		{
-			"name": "uuid",
-			"semver": "^10.0.0"
-		}
-	],
-	"unpacked_size": 56506,
 	"downloads_history": [
 		{
 			"range": [1727029800000, 1727634599999],
@@ -133,5 +126,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "sly-svelte-file-tree",
+				"version": "1.0.3",
+				"size": 56506
+			},
+			{
+				"name": "uuid",
+				"version": "10.0.0",
+				"size": 168173
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

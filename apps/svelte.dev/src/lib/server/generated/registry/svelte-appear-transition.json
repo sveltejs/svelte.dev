@@ -13,8 +13,6 @@
 	"kit_range": "^2.5.26",
 	"last_rune_check_version": "0.0.3",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 12633,
 	"downloads_history": [
 		{
 			"range": [1717957800000, 1718562599999],
@@ -156,5 +154,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-appear-transition",
+				"version": "0.0.3",
+				"size": 12633
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

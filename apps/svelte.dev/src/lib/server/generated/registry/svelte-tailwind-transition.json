@@ -14,8 +14,6 @@
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.0.2",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 8034,
 	"downloads_history": [
 		{
 			"range": [1731868200000, 1732472999999],
@@ -85,5 +83,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 3
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-tailwind-transition",
+				"version": "0.0.2",
+				"size": 8034
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

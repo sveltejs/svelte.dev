@@ -13,25 +13,6 @@
 	"svelte_range": "^3.43.0",
 	"last_rune_check_version": "0.0.20",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "just-debounce-it",
-			"semver": "^1.5.0"
-		},
-		{
-			"name": "just-diff",
-			"semver": "^3.1.1"
-		},
-		{
-			"name": "klona",
-			"semver": "^2.0.4"
-		},
-		{
-			"name": "pointer-props",
-			"semver": "^1.0.1"
-		}
-	],
-	"unpacked_size": 169065,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -345,5 +326,54 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 25
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "jsonapi-svelte-form",
+				"version": "0.0.20",
+				"size": 169065
+			},
+			{
+				"name": "just-debounce-it",
+				"version": "1.5.0",
+				"size": 4848
+			},
+			{
+				"name": "just-diff",
+				"version": "3.1.1",
+				"size": 9214
+			},
+			{
+				"name": "klona",
+				"version": "2.0.6",
+				"size": 23173
+			},
+			{
+				"name": "pointer-props",
+				"version": "1.1.4",
+				"size": 32665
+			},
+			{
+				"name": "dlv",
+				"version": "1.1.3",
+				"size": 5802
+			},
+			{
+				"name": "dset",
+				"version": "3.1.4",
+				"size": 10779
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[0, 4],
+			[4, 5],
+			[4, 6]
+		],
+		"circular": []
+	}
 }

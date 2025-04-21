@@ -12,8 +12,6 @@
 	"version": "0.1.1",
 	"svelte_range": "3.16.5",
 	"last_rune_check_version": "0.1.1",
-	"dependencies": [],
-	"unpacked_size": 163234,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -223,5 +221,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelt-youtube",
+				"version": "0.1.1",
+				"size": 163234
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

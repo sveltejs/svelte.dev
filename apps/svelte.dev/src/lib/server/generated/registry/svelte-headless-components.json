@@ -13,17 +13,6 @@
 	"kit_range": "^1.20.4",
 	"last_rune_check_version": "2.2.0",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "@paralleldrive/cuid2",
-			"semver": "^2.2.2"
-		},
-		{
-			"name": "esm-env",
-			"semver": "^1.0.0"
-		}
-	],
-	"unpacked_size": 49151,
 	"downloads_history": [
 		{
 			"range": [1701628200000, 1702232999999],
@@ -309,5 +298,36 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 23
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-headless-components",
+				"version": "2.2.0",
+				"size": 49151
+			},
+			{
+				"name": "@paralleldrive/cuid2",
+				"version": "2.2.2",
+				"size": 35454
+			},
+			{
+				"name": "@noble/hashes",
+				"version": "1.7.2",
+				"size": 1100967
+			},
+			{
+				"name": "esm-env",
+				"version": "1.2.2",
+				"size": 3784
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3]
+		],
+		"circular": []
+	}
 }

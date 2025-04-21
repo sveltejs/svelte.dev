@@ -13,13 +13,6 @@
 	"version": "0.0.5",
 	"svelte_range": "^3.30.0",
 	"last_rune_check_version": "0.0.5",
-	"dependencies": [
-		{
-			"name": "lodash.debounce",
-			"semver": "^4.0.8"
-		}
-	],
-	"unpacked_size": 45998,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -329,5 +322,21 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 63
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@apsc/color",
+				"version": "0.0.5",
+				"size": 45998
+			},
+			{
+				"name": "lodash.debounce",
+				"version": "4.0.8"
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

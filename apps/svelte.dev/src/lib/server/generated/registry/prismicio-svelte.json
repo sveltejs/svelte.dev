@@ -40,17 +40,6 @@
 	"svelte_range": ">=4 || ^5.0.0-next.1",
 	"kit_range": ">=1",
 	"last_rune_check_version": "1.5.0",
-	"dependencies": [
-		{
-			"name": "esm-env",
-			"semver": "^1.0.0"
-		},
-		{
-			"name": "@prismicio/richtext",
-			"semver": "^2.1.5"
-		}
-	],
-	"unpacked_size": 84695,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -364,5 +353,36 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 664
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@prismicio/svelte",
+				"version": "1.5.0",
+				"size": 84695
+			},
+			{
+				"name": "esm-env",
+				"version": "1.2.2",
+				"size": 3784
+			},
+			{
+				"name": "@prismicio/richtext",
+				"version": "2.1.5",
+				"size": 91460
+			},
+			{
+				"name": "@prismicio/types",
+				"version": "0.2.9",
+				"size": 197052
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3]
+		],
+		"circular": []
+	}
 }

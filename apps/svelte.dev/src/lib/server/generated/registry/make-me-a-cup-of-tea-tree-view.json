@@ -14,8 +14,6 @@
 	"svelte_range": "^3.50.1",
 	"kit_range": "^1.0.0-next.480",
 	"last_rune_check_version": "0.0.7",
-	"dependencies": [],
-	"unpacked_size": 378879,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -217,5 +215,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 14
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@make-me-a-cup-of-tea/tree-view",
+				"version": "0.0.7",
+				"size": 378879
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

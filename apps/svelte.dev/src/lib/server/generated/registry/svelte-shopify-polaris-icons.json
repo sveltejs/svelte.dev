@@ -14,25 +14,6 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.7.3",
 	"last_rune_check_version": "0.0.18",
-	"dependencies": [
-		{
-			"name": "@floating-ui/dom",
-			"semver": "^1.6.11"
-		},
-		{
-			"name": "flowbite",
-			"semver": "^2.5.2"
-		},
-		{
-			"name": "flowbite-svelte",
-			"semver": "^0.47.1"
-		},
-		{
-			"name": "svelte-meta-tags",
-			"semver": "^4.0.4"
-		}
-	],
-	"unpacked_size": 923961,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -290,5 +271,256 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-shopify-polaris-icons",
+				"version": "0.0.18",
+				"size": 923961
+			},
+			{
+				"name": "@floating-ui/dom",
+				"version": "1.6.13",
+				"size": 165945
+			},
+			{
+				"name": "@floating-ui/core",
+				"version": "1.6.9",
+				"size": 212585
+			},
+			{
+				"name": "@floating-ui/utils",
+				"version": "0.2.9",
+				"size": 64926
+			},
+			{
+				"name": "flowbite",
+				"version": "2.5.2",
+				"size": 5332844,
+				"isCircular": true,
+				"circularTarget": 4
+			},
+			{
+				"name": "@popperjs/core",
+				"version": "2.11.8",
+				"size": 1463042
+			},
+			{
+				"name": "mini-svg-data-uri",
+				"version": "1.4.4",
+				"size": 10460
+			},
+			{
+				"name": "flowbite-datepicker",
+				"version": "1.3.2",
+				"size": 1893079
+			},
+			{
+				"name": "@rollup/plugin-node-resolve",
+				"version": "15.3.1",
+				"size": 154449
+			},
+			{
+				"name": "resolve",
+				"version": "1.22.10",
+				"size": 145619
+			},
+			{
+				"name": "is-core-module",
+				"version": "2.16.1",
+				"size": 33475
+			},
+			{
+				"name": "hasown",
+				"version": "2.0.2",
+				"size": 8765
+			},
+			{
+				"name": "function-bind",
+				"version": "1.1.2",
+				"size": 31427
+			},
+			{
+				"name": "path-parse",
+				"version": "1.0.7",
+				"size": 4511
+			},
+			{
+				"name": "supports-preserve-symlinks-flag",
+				"version": "1.0.0",
+				"size": 9178
+			},
+			{
+				"name": "deepmerge",
+				"version": "4.3.1",
+				"size": 31157
+			},
+			{
+				"name": "is-module",
+				"version": "1.0.0"
+			},
+			{
+				"name": "@types/resolve",
+				"version": "1.20.2",
+				"size": 9885
+			},
+			{
+				"name": "@rollup/pluginutils",
+				"version": "5.1.4",
+				"size": 58354
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "estree-walker",
+				"version": "2.0.2",
+				"size": 50243
+			},
+			{
+				"name": "picomatch",
+				"version": "4.0.2",
+				"size": 85237
+			},
+			{
+				"name": "flowbite-svelte",
+				"version": "0.47.4",
+				"size": 595063
+			},
+			{
+				"name": "apexcharts",
+				"version": "3.54.1",
+				"size": 4666917
+			},
+			{
+				"name": "svg.easing.js",
+				"version": "2.0.0"
+			},
+			{
+				"name": "svg.js",
+				"version": "2.7.1",
+				"size": 1031533
+			},
+			{
+				"name": "svg.filter.js",
+				"version": "2.0.2"
+			},
+			{
+				"name": "svg.resize.js",
+				"version": "1.4.3",
+				"size": 32977
+			},
+			{
+				"name": "svg.select.js",
+				"version": "2.1.2"
+			},
+			{
+				"name": "svg.select.js",
+				"version": "3.0.1",
+				"size": 27053
+			},
+			{
+				"name": "svg.draggable.js",
+				"version": "2.2.2",
+				"size": 15634
+			},
+			{
+				"name": "svg.pathmorphing.js",
+				"version": "0.1.3",
+				"size": 21180
+			},
+			{
+				"name": "@yr/monotone-cubic-spline",
+				"version": "1.0.3"
+			},
+			{
+				"name": "tailwind-merge",
+				"version": "2.6.0",
+				"size": 713298
+			},
+			{
+				"name": "svelte-meta-tags",
+				"version": "4.2.0",
+				"size": 23384
+			},
+			{
+				"name": "schema-dts",
+				"version": "1.1.5",
+				"size": 936027
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[1, 3],
+			[0, 4],
+			[4, 5],
+			[4, 6],
+			[4, 7],
+			[7, 8],
+			[8, 9],
+			[9, 10],
+			[10, 11],
+			[11, 12],
+			[9, 13],
+			[9, 14],
+			[8, 15],
+			[8, 16],
+			[8, 17],
+			[8, 18],
+			[18, 19],
+			[18, 20],
+			[18, 21],
+			[7, 4],
+			[0, 22],
+			[22, 4],
+			[4, 5],
+			[4, 6],
+			[4, 7],
+			[7, 8],
+			[8, 9],
+			[9, 10],
+			[10, 11],
+			[11, 12],
+			[9, 13],
+			[9, 14],
+			[8, 15],
+			[8, 16],
+			[8, 17],
+			[8, 18],
+			[18, 19],
+			[18, 20],
+			[18, 21],
+			[7, 4],
+			[22, 23],
+			[23, 24],
+			[24, 25],
+			[23, 26],
+			[26, 25],
+			[23, 27],
+			[27, 25],
+			[27, 28],
+			[28, 25],
+			[23, 29],
+			[29, 25],
+			[23, 30],
+			[30, 25],
+			[23, 31],
+			[31, 25],
+			[23, 32],
+			[22, 33],
+			[22, 1],
+			[1, 2],
+			[2, 3],
+			[1, 3],
+			[0, 34],
+			[34, 35]
+		],
+		"circular": [[7, 4]]
+	}
 }

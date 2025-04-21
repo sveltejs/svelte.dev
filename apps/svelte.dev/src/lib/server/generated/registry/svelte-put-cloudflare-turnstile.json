@@ -13,8 +13,6 @@
 	"version": "1.2.0",
 	"svelte_range": "^5.1.0",
 	"last_rune_check_version": "1.2.0",
-	"dependencies": [],
-	"unpacked_size": 17320,
 	"downloads_history": [
 		{
 			"range": [1706466600000, 1707071399999],
@@ -264,5 +262,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 468
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@svelte-put/cloudflare-turnstile",
+				"version": "1.2.0",
+				"size": 17320
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

@@ -13,8 +13,6 @@
 	"version": "0.9.46",
 	"svelte_range": ">=3.23.0",
 	"last_rune_check_version": "0.9.46",
-	"dependencies": [],
-	"unpacked_size": 320851,
 	"downloads_history": [
 		{
 			"range": [1714933800000, 1715538599999],
@@ -140,5 +138,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-dnd-action-abstrato",
+				"version": "0.9.46",
+				"size": 320851
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

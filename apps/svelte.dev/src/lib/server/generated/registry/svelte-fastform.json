@@ -12,21 +12,6 @@
 	"svelte_range": "^3.31.2",
 	"last_rune_check_version": "0.0.8",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "lodash.clone",
-			"semver": "^4.5.0"
-		},
-		{
-			"name": "lodash.topath",
-			"semver": "^4.5.2"
-		},
-		{
-			"name": "yup",
-			"semver": "^0.32.8"
-		}
-	],
-	"unpacked_size": 720489,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -252,5 +237,82 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 12
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-fastform",
+				"version": "0.0.8",
+				"size": 720489
+			},
+			{
+				"name": "lodash.clone",
+				"version": "4.5.0"
+			},
+			{
+				"name": "lodash.topath",
+				"version": "4.5.2"
+			},
+			{
+				"name": "yup",
+				"version": "0.32.11",
+				"size": 319578
+			},
+			{
+				"name": "lodash",
+				"version": "4.17.21",
+				"size": 1412415
+			},
+			{
+				"name": "toposort",
+				"version": "2.0.2",
+				"size": 16683
+			},
+			{
+				"name": "lodash-es",
+				"version": "4.17.21",
+				"size": 636080
+			},
+			{
+				"name": "nanoclone",
+				"version": "0.2.1",
+				"size": 6122
+			},
+			{
+				"name": "@types/lodash",
+				"version": "4.17.16",
+				"size": 867997
+			},
+			{
+				"name": "property-expr",
+				"version": "2.0.6",
+				"size": 10306
+			},
+			{
+				"name": "@babel/runtime",
+				"version": "7.27.0",
+				"size": 249798
+			},
+			{
+				"name": "regenerator-runtime",
+				"version": "0.14.1",
+				"size": 27863
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[3, 7],
+			[3, 8],
+			[3, 9],
+			[3, 10],
+			[10, 11]
+		],
+		"circular": []
+	}
 }

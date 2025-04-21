@@ -13,8 +13,6 @@
 	"kit_range": "^2.9.0",
 	"last_rune_check_version": "0.0.1",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 14704,
 	"downloads_history": [
 		{
 			"range": [1735497000000, 1736101799999],
@@ -76,5 +74,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@tagnumelite/svelte-chartjs",
+				"version": "0.0.1",
+				"size": 14704
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

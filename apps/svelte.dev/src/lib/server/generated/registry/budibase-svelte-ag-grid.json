@@ -12,13 +12,6 @@
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "1.0.4",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "ag-grid-community",
-			"semver": "^24.0.0"
-		}
-	],
-	"unpacked_size": 4446220,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -332,5 +325,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 292
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@budibase/svelte-ag-grid",
+				"version": "1.0.4",
+				"size": 4446220
+			},
+			{
+				"name": "ag-grid-community",
+				"version": "24.1.0",
+				"size": 26040504
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

@@ -13,8 +13,6 @@
 	"version": "4.12.1",
 	"svelte_range": "^5.16.2",
 	"last_rune_check_version": "4.12.1",
-	"dependencies": [],
-	"unpacked_size": 1437615,
 	"downloads_history": [
 		{
 			"range": [1733682600000, 1734287399999],
@@ -80,5 +78,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@proicons/svelte",
+				"version": "4.12.1",
+				"size": 1437615
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

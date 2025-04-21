@@ -13,17 +13,6 @@
 	"version": "0.0.24",
 	"svelte_range": "^4.2.19",
 	"last_rune_check_version": "0.0.24",
-	"dependencies": [
-		{
-			"name": "mp4box",
-			"semver": "^0.4.9"
-		},
-		{
-			"name": "ua-parser-js",
-			"semver": "^1.0.2"
-		}
-	],
-	"unpacked_size": 15704093,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -337,5 +326,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 544
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "scrolly-video",
+				"version": "0.0.24",
+				"size": 15704093
+			},
+			{
+				"name": "mp4box",
+				"version": "0.4.9",
+				"size": 968163
+			},
+			{
+				"name": "ua-parser-js",
+				"version": "1.0.40",
+				"size": 118884
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

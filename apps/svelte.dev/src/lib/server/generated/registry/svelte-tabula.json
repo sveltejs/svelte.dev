@@ -12,13 +12,6 @@
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "0.1.1",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "rollup-plugin-typescript2",
-			"semver": "^0.29.0"
-		}
-	],
-	"unpacked_size": 46639,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -240,5 +233,154 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-tabula",
+				"version": "0.1.1",
+				"size": 46639
+			},
+			{
+				"name": "rollup-plugin-typescript2",
+				"version": "0.29.0",
+				"size": 4954061
+			},
+			{
+				"name": "@rollup/pluginutils",
+				"version": "3.1.0",
+				"size": 47695
+			},
+			{
+				"name": "picomatch",
+				"version": "2.3.1",
+				"size": 89952
+			},
+			{
+				"name": "@types/estree",
+				"version": "0.0.39",
+				"size": 17818
+			},
+			{
+				"name": "estree-walker",
+				"version": "1.0.1",
+				"size": 15196
+			},
+			{
+				"name": "find-cache-dir",
+				"version": "3.3.2",
+				"size": 6793
+			},
+			{
+				"name": "pkg-dir",
+				"version": "4.2.0",
+				"size": 4750
+			},
+			{
+				"name": "find-up",
+				"version": "4.1.0",
+				"size": 11611
+			},
+			{
+				"name": "locate-path",
+				"version": "5.0.0",
+				"size": 6584
+			},
+			{
+				"name": "p-locate",
+				"version": "4.1.0",
+				"size": 7285
+			},
+			{
+				"name": "p-limit",
+				"version": "2.3.0",
+				"size": 7390
+			},
+			{
+				"name": "p-try",
+				"version": "2.2.0",
+				"size": 4371
+			},
+			{
+				"name": "path-exists",
+				"version": "4.0.0",
+				"size": 3919
+			},
+			{
+				"name": "make-dir",
+				"version": "3.1.0",
+				"size": 10042
+			},
+			{
+				"name": "semver",
+				"version": "6.3.1",
+				"size": 68343
+			},
+			{
+				"name": "commondir",
+				"version": "1.0.1"
+			},
+			{
+				"name": "fs-extra",
+				"version": "8.1.0",
+				"size": 127504
+			},
+			{
+				"name": "jsonfile",
+				"version": "4.0.0"
+			},
+			{
+				"name": "graceful-fs",
+				"version": "4.2.11",
+				"size": 32535
+			},
+			{
+				"name": "universalify",
+				"version": "0.1.2",
+				"size": 4705
+			},
+			{
+				"name": "resolve",
+				"version": "1.17.0",
+				"size": 105143
+			},
+			{
+				"name": "path-parse",
+				"version": "1.0.7",
+				"size": 4511
+			},
+			{
+				"name": "tslib",
+				"version": "2.0.1",
+				"size": 32856
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[2, 4],
+			[2, 5],
+			[1, 6],
+			[6, 7],
+			[7, 8],
+			[8, 9],
+			[9, 10],
+			[10, 11],
+			[11, 12],
+			[8, 13],
+			[6, 14],
+			[14, 15],
+			[6, 16],
+			[1, 17],
+			[17, 18],
+			[17, 19],
+			[17, 20],
+			[1, 21],
+			[21, 22],
+			[1, 23]
+		],
+		"circular": []
+	}
 }

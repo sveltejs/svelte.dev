@@ -13,13 +13,6 @@
 	"version": "1.0.0",
 	"svelte_range": "3.52.0",
 	"last_rune_check_version": "1.0.0",
-	"dependencies": [
-		{
-			"name": "svelte",
-			"semver": "3.52.0"
-		}
-	],
-	"unpacked_size": 5165,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -329,5 +322,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 10
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@jamen/svelte-router",
+				"version": "1.0.0",
+				"size": 5165
+			},
+			{
+				"name": "svelte",
+				"version": "3.52.0",
+				"size": 8928020
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

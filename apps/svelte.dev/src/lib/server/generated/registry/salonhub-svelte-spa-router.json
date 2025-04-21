@@ -13,13 +13,6 @@
 	"version": "5.0.0",
 	"svelte_range": "^5.0",
 	"last_rune_check_version": "5.0.0",
-	"dependencies": [
-		{
-			"name": "regexparam",
-			"semver": "2.0.2"
-		}
-	],
-	"unpacked_size": 62720,
 	"downloads_history": [
 		{
 			"range": [1733077800000, 1733682599999],
@@ -89,5 +82,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@salonhub/svelte-spa-router",
+				"version": "5.0.0",
+				"size": 62720
+			},
+			{
+				"name": "regexparam",
+				"version": "2.0.2",
+				"size": 13840
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

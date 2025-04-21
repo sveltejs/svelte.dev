@@ -12,8 +12,6 @@
 	"version": "0.0.38",
 	"svelte_range": "^3.44.0",
 	"last_rune_check_version": "0.0.38",
-	"dependencies": [],
-	"unpacked_size": 398057,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -267,5 +265,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 16
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@crypto-pepe/pepekit",
+				"version": "0.0.38",
+				"size": 398057
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

@@ -13,13 +13,6 @@
 	"version": "2.1.1",
 	"svelte_range": ">= 3",
 	"last_rune_check_version": "2.1.1",
-	"dependencies": [
-		{
-			"name": "deasync",
-			"semver": "^0.1.19"
-		}
-	],
-	"unpacked_size": 11784,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +326,41 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 1649
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "jest-transform-svelte",
+				"version": "2.1.1",
+				"size": 11784
+			},
+			{
+				"name": "deasync",
+				"version": "0.1.30",
+				"size": 7383252
+			},
+			{
+				"name": "bindings",
+				"version": "1.5.0",
+				"size": 11230
+			},
+			{
+				"name": "file-uri-to-path",
+				"version": "1.0.0"
+			},
+			{
+				"name": "node-addon-api",
+				"version": "1.7.2",
+				"size": 755159
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[1, 4]
+		],
+		"circular": []
+	}
 }

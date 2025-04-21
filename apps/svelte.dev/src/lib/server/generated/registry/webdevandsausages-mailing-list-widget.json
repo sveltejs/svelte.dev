@@ -13,33 +13,6 @@
 	"version": "0.1.0",
 	"svelte_range": "3.9.1",
 	"last_rune_check_version": "0.1.0",
-	"dependencies": [
-		{
-			"name": "classcat",
-			"semver": "4.0.2"
-		},
-		{
-			"name": "daggy",
-			"semver": "1.4.0"
-		},
-		{
-			"name": "ky",
-			"semver": "0.13.0"
-		},
-		{
-			"name": "ramda",
-			"semver": "0.26.1"
-		},
-		{
-			"name": "simplebar",
-			"semver": "4.3.0-alpha.0"
-		},
-		{
-			"name": "smoothscroll-polyfill",
-			"semver": "0.4.4"
-		}
-	],
-	"unpacked_size": 117193,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -233,5 +206,97 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@webdevandsausages/mailing-list-widget",
+				"version": "0.1.0",
+				"size": 117193
+			},
+			{
+				"name": "classcat",
+				"version": "4.0.2",
+				"size": 8075
+			},
+			{
+				"name": "daggy",
+				"version": "1.4.0",
+				"size": 11723
+			},
+			{
+				"name": "sanctuary-type-classes",
+				"version": "3.0.0"
+			},
+			{
+				"name": "sanctuary-type-identifiers",
+				"version": "1.0.0"
+			},
+			{
+				"name": "ky",
+				"version": "0.13.0",
+				"size": 50152
+			},
+			{
+				"name": "ramda",
+				"version": "0.26.1",
+				"size": 1039889
+			},
+			{
+				"name": "simplebar",
+				"version": "4.3.0-alpha.0",
+				"size": 372512
+			},
+			{
+				"name": "core-js",
+				"version": "3.41.0",
+				"size": 1265563
+			},
+			{
+				"name": "can-use-dom",
+				"version": "0.1.0"
+			},
+			{
+				"name": "lodash.memoize",
+				"version": "4.1.2"
+			},
+			{
+				"name": "lodash.debounce",
+				"version": "4.0.8"
+			},
+			{
+				"name": "lodash.throttle",
+				"version": "4.1.1"
+			},
+			{
+				"name": "resize-observer-polyfill",
+				"version": "1.5.1",
+				"size": 147320
+			},
+			{
+				"name": "smoothscroll-polyfill",
+				"version": "0.4.4",
+				"size": 145136
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[3, 4],
+			[2, 4],
+			[0, 5],
+			[0, 6],
+			[0, 7],
+			[7, 8],
+			[7, 9],
+			[7, 10],
+			[7, 11],
+			[7, 12],
+			[7, 13],
+			[0, 14]
+		],
+		"circular": []
+	}
 }

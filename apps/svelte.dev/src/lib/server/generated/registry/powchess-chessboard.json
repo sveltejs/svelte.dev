@@ -14,8 +14,6 @@
 	"svelte_range": "^4.2.2",
 	"kit_range": "1.27.3",
 	"last_rune_check_version": "1.4.12",
-	"dependencies": [],
-	"unpacked_size": 445822,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -317,5 +315,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 84
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@powchess/chessboard",
+				"version": "1.4.12",
+				"size": 445822
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

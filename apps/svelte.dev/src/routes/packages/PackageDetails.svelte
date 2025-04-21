@@ -2,6 +2,7 @@
 	import type { Package } from '$lib/server/content';
 	import { ago } from '$lib/time';
 	import Chart from './Chart.svelte';
+	import DependencyGraph from './DependencyGraph.svelte';
 	import { format_bytes, format_number } from './utils';
 
 	type Props = {
@@ -71,16 +72,18 @@
 
 <br /><br /><br />
 
-<Chart history={pkg.downloads_history} height="300" />
+<Chart history={pkg.downloads_history} />
 
-{#if pkg.dependencies.length}
+<DependencyGraph graph={pkg.dependency_tree} />
+
+<!-- {#if pkg.dependencies.length}
 	<h2>Dependencies</h2>
 	<ul>
 		{#each pkg.dependencies as { name, semver }}
 			<li><span>{name}</span>@<span>{semver}</span></li>
 		{/each}
 	</ul>
-{/if}
+{/if} -->
 
 <br /><br />
 

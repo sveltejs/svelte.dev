@@ -12,8 +12,6 @@
 	"version": "2.0.4",
 	"svelte_range": "^3.30.1",
 	"last_rune_check_version": "2.0.4",
-	"dependencies": [],
-	"unpacked_size": 3783553,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -327,5 +325,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 63
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelty",
+				"version": "2.0.4",
+				"size": 3783553
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

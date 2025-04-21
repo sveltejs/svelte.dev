@@ -13,25 +13,6 @@
 	"svelte_range": ">=5.0.0 || <6.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "1.0.2",
-	"dependencies": [
-		{
-			"name": "@mysten/sui.js",
-			"semver": "0.45.1"
-		},
-		{
-			"name": "@mysten/wallet-standard",
-			"semver": "^0.10.1"
-		},
-		{
-			"name": "@suiet/wallet-sdk",
-			"semver": "^0.2.19"
-		},
-		{
-			"name": "@wallet-standard/base",
-			"semver": "^1.0.1"
-		}
-	],
-	"unpacked_size": 2002,
 	"downloads_history": [
 		{
 			"range": [1711909800000, 1712514599999],
@@ -173,5 +154,406 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "officiaenim",
+				"version": "1.0.2",
+				"size": 2002
+			},
+			{
+				"name": "@mysten/sui.js",
+				"version": "0.45.1",
+				"size": 2481037
+			},
+			{
+				"name": "events",
+				"version": "3.3.0",
+				"size": 82778
+			},
+			{
+				"name": "tweetnacl",
+				"version": "1.0.3",
+				"size": 174912
+			},
+			{
+				"name": "@mysten/bcs",
+				"version": "0.8.1",
+				"size": 627905
+			},
+			{
+				"name": "bs58",
+				"version": "5.0.0",
+				"size": 6213
+			},
+			{
+				"name": "base-x",
+				"version": "4.0.1",
+				"size": 9606
+			},
+			{
+				"name": "superstruct",
+				"version": "1.0.4",
+				"size": 179367
+			},
+			{
+				"name": "@scure/bip32",
+				"version": "1.6.2",
+				"size": 65666
+			},
+			{
+				"name": "@noble/curves",
+				"version": "1.8.2",
+				"size": 1645456
+			},
+			{
+				"name": "@noble/hashes",
+				"version": "1.7.2",
+				"size": 1100967
+			},
+			{
+				"name": "@scure/base",
+				"version": "1.2.4",
+				"size": 136736
+			},
+			{
+				"name": "@scure/bip39",
+				"version": "1.5.4",
+				"size": 382767
+			},
+			{
+				"name": "@suchipi/femver",
+				"version": "1.0.0",
+				"size": 7330
+			},
+			{
+				"name": "@open-rpc/client-js",
+				"version": "1.8.1",
+				"size": 282852
+			},
+			{
+				"name": "isomorphic-fetch",
+				"version": "3.0.0",
+				"size": 6339
+			},
+			{
+				"name": "node-fetch",
+				"version": "2.7.0",
+				"size": 162253
+			},
+			{
+				"name": "whatwg-url",
+				"version": "5.0.0"
+			},
+			{
+				"name": "tr46",
+				"version": "0.0.3"
+			},
+			{
+				"name": "webidl-conversions",
+				"version": "3.0.1"
+			},
+			{
+				"name": "whatwg-fetch",
+				"version": "3.6.20",
+				"size": 57427
+			},
+			{
+				"name": "isomorphic-ws",
+				"version": "5.0.0",
+				"size": 4044
+			},
+			{
+				"name": "strict-event-emitter-types",
+				"version": "2.0.0",
+				"size": 10323
+			},
+			{
+				"name": "ws",
+				"version": "7.5.10",
+				"size": 122307
+			},
+			{
+				"name": "@mysten/wallet-standard",
+				"version": "0.10.3",
+				"size": 139238
+			},
+			{
+				"name": "@mysten/sui.js",
+				"version": "0.50.1",
+				"size": 3765580
+			},
+			{
+				"name": "bech32",
+				"version": "2.0.0",
+				"size": 10209
+			},
+			{
+				"name": "graphql",
+				"version": "16.10.0",
+				"size": 1363943
+			},
+			{
+				"name": "gql.tada",
+				"version": "1.8.10",
+				"size": 157503
+			},
+			{
+				"name": "@0no-co/graphql.web",
+				"version": "1.1.2",
+				"size": 105373
+			},
+			{
+				"name": "@0no-co/graphqlsp",
+				"version": "1.12.16",
+				"size": 1439549
+			},
+			{
+				"name": "@gql.tada/internal",
+				"version": "1.0.8",
+				"size": 399242
+			},
+			{
+				"name": "@gql.tada/cli-utils",
+				"version": "1.6.3",
+				"size": 1963734
+			},
+			{
+				"name": "@mysten/bcs",
+				"version": "0.11.1",
+				"size": 575101
+			},
+			{
+				"name": "@graphql-typed-document-node/core",
+				"version": "3.2.0",
+				"size": 2959
+			},
+			{
+				"name": "@wallet-standard/core",
+				"version": "1.0.3",
+				"size": 14566
+			},
+			{
+				"name": "@wallet-standard/app",
+				"version": "1.1.0",
+				"size": 47755
+			},
+			{
+				"name": "@wallet-standard/base",
+				"version": "1.1.0",
+				"size": 43736
+			},
+			{
+				"name": "@wallet-standard/wallet",
+				"version": "1.1.0",
+				"size": 58142
+			},
+			{
+				"name": "@wallet-standard/features",
+				"version": "1.1.0",
+				"size": 41150
+			},
+			{
+				"name": "@suiet/wallet-sdk",
+				"version": "0.2.22",
+				"size": 272067
+			},
+			{
+				"name": "buffer",
+				"version": "6.0.3",
+				"size": 91279
+			},
+			{
+				"name": "base64-js",
+				"version": "1.5.1",
+				"size": 9624
+			},
+			{
+				"name": "ieee754",
+				"version": "1.2.1",
+				"size": 6796
+			},
+			{
+				"name": "@mysten/sui.js",
+				"version": "0.54.1",
+				"size": 4406207
+			},
+			{
+				"name": "@mysten/wallet-standard",
+				"version": "0.11.6",
+				"size": 182302
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[1, 4],
+			[4, 5],
+			[5, 6],
+			[1, 7],
+			[1, 8],
+			[8, 9],
+			[9, 10],
+			[8, 10],
+			[8, 11],
+			[1, 12],
+			[12, 10],
+			[12, 11],
+			[1, 9],
+			[9, 10],
+			[1, 10],
+			[1, 13],
+			[1, 14],
+			[14, 15],
+			[15, 16],
+			[16, 17],
+			[17, 18],
+			[17, 19],
+			[15, 20],
+			[14, 21],
+			[14, 22],
+			[14, 23],
+			[0, 24],
+			[24, 25],
+			[25, 26],
+			[25, 27],
+			[25, 28],
+			[28, 29],
+			[28, 30],
+			[30, 27],
+			[30, 31],
+			[31, 29],
+			[28, 32],
+			[32, 30],
+			[30, 27],
+			[30, 31],
+			[31, 29],
+			[32, 27],
+			[32, 31],
+			[31, 29],
+			[28, 31],
+			[31, 29],
+			[25, 3],
+			[25, 33],
+			[33, 5],
+			[5, 6],
+			[25, 7],
+			[25, 8],
+			[8, 9],
+			[9, 10],
+			[8, 10],
+			[8, 11],
+			[25, 12],
+			[12, 10],
+			[12, 11],
+			[25, 9],
+			[9, 10],
+			[25, 10],
+			[25, 13],
+			[25, 34],
+			[24, 35],
+			[35, 36],
+			[36, 37],
+			[35, 37],
+			[35, 38],
+			[38, 37],
+			[35, 39],
+			[39, 37],
+			[0, 40],
+			[40, 41],
+			[41, 42],
+			[41, 43],
+			[40, 3],
+			[40, 7],
+			[40, 10],
+			[40, 44],
+			[44, 26],
+			[44, 27],
+			[44, 28],
+			[28, 29],
+			[28, 30],
+			[30, 27],
+			[30, 31],
+			[31, 29],
+			[28, 32],
+			[32, 30],
+			[30, 27],
+			[30, 31],
+			[31, 29],
+			[32, 27],
+			[32, 31],
+			[31, 29],
+			[28, 31],
+			[31, 29],
+			[44, 3],
+			[44, 33],
+			[33, 5],
+			[5, 6],
+			[44, 7],
+			[44, 8],
+			[8, 9],
+			[9, 10],
+			[8, 10],
+			[8, 11],
+			[44, 12],
+			[12, 10],
+			[12, 11],
+			[44, 9],
+			[9, 10],
+			[44, 10],
+			[44, 13],
+			[44, 34],
+			[40, 45],
+			[45, 44],
+			[44, 26],
+			[44, 27],
+			[44, 28],
+			[28, 29],
+			[28, 30],
+			[30, 27],
+			[30, 31],
+			[31, 29],
+			[28, 32],
+			[32, 30],
+			[30, 27],
+			[30, 31],
+			[31, 29],
+			[32, 27],
+			[32, 31],
+			[31, 29],
+			[28, 31],
+			[31, 29],
+			[44, 3],
+			[44, 33],
+			[33, 5],
+			[5, 6],
+			[44, 7],
+			[44, 8],
+			[8, 9],
+			[9, 10],
+			[8, 10],
+			[8, 11],
+			[44, 12],
+			[12, 10],
+			[12, 11],
+			[44, 9],
+			[9, 10],
+			[44, 10],
+			[44, 13],
+			[44, 34],
+			[45, 35],
+			[35, 36],
+			[36, 37],
+			[35, 37],
+			[35, 38],
+			[38, 37],
+			[35, 39],
+			[39, 37],
+			[0, 37]
+		],
+		"circular": []
+	}
 }

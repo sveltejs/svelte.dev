@@ -13,12 +13,6 @@
 	"version": "1.0.0",
 	"svelte_range": "^1.44.1",
 	"last_rune_check_version": "1.0.0",
-	"dependencies": [
-		{
-			"name": "loader-utils",
-			"semver": "^1.1.0"
-		}
-	],
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -232,5 +226,47 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-preprocess-loader",
+				"version": "1.0.0"
+			},
+			{
+				"name": "loader-utils",
+				"version": "1.4.2",
+				"size": 25854
+			},
+			{
+				"name": "json5",
+				"version": "1.0.2",
+				"size": 78288
+			},
+			{
+				"name": "minimist",
+				"version": "1.2.8",
+				"size": 54477
+			},
+			{
+				"name": "big.js",
+				"version": "5.2.2",
+				"size": 63868
+			},
+			{
+				"name": "emojis-list",
+				"version": "3.0.0",
+				"size": 53575
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[1, 4],
+			[1, 5]
+		],
+		"circular": []
+	}
 }

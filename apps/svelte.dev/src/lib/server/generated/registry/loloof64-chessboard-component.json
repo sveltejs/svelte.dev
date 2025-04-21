@@ -13,8 +13,6 @@
 	"version": "0.26.0",
 	"svelte_range": "^3.49.0",
 	"last_rune_check_version": "0.26.0",
-	"dependencies": [],
-	"unpacked_size": 243785,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -272,5 +270,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 115
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@loloof64/chessboard-component",
+				"version": "0.26.0",
+				"size": 243785
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

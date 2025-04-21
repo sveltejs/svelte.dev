@@ -14,17 +14,6 @@
 	"svelte_range": "^3.59.2",
 	"kit_range": "^1.30.4",
 	"last_rune_check_version": "1.0.3",
-	"dependencies": [
-		{
-			"name": "@floating-ui/core",
-			"semver": "^1.6.0"
-		},
-		{
-			"name": "@floating-ui/dom",
-			"semver": "^1.6.3"
-		}
-	],
-	"unpacked_size": 14854,
 	"downloads_history": [
 		{
 			"range": [1709490600000, 1710095399999],
@@ -250,5 +239,39 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 12
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "lc-svelte-floating-ui",
+				"version": "1.0.3",
+				"size": 14854
+			},
+			{
+				"name": "@floating-ui/core",
+				"version": "1.6.9",
+				"size": 212585
+			},
+			{
+				"name": "@floating-ui/utils",
+				"version": "0.2.9",
+				"size": 64926
+			},
+			{
+				"name": "@floating-ui/dom",
+				"version": "1.6.13",
+				"size": 165945
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[3, 1],
+			[1, 2],
+			[3, 2]
+		],
+		"circular": []
+	}
 }

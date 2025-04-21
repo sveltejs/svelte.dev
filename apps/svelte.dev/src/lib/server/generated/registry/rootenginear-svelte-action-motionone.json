@@ -14,13 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.6.0",
-	"dependencies": [
-		{
-			"name": "motion",
-			"semver": "^12.0.0"
-		}
-	],
-	"unpacked_size": 9063,
 	"downloads_history": [
 		{
 			"range": [1723401000000, 1724005799999],
@@ -158,5 +151,50 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 13
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@rootenginear/svelte-action-motionone",
+				"version": "0.6.0",
+				"size": 9063
+			},
+			{
+				"name": "motion",
+				"version": "12.7.4",
+				"size": 1672513
+			},
+			{
+				"name": "framer-motion",
+				"version": "12.7.4",
+				"size": 2705003
+			},
+			{
+				"name": "motion-dom",
+				"version": "12.7.4",
+				"size": 247832
+			},
+			{
+				"name": "motion-utils",
+				"version": "12.7.2",
+				"size": 19610
+			},
+			{
+				"name": "tslib",
+				"version": "2.8.1",
+				"size": 90359
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[3, 4],
+			[2, 4],
+			[2, 5],
+			[1, 5]
+		],
+		"circular": []
+	}
 }

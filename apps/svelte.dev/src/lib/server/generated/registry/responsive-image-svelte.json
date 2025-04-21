@@ -13,17 +13,6 @@
 	"version": "1.1.0",
 	"svelte_range": "^5.0.0",
 	"last_rune_check_version": "1.1.0",
-	"dependencies": [
-		{
-			"name": "blurhash",
-			"semver": "^2.0.0"
-		},
-		{
-			"name": "@responsive-image/core",
-			"semver": "^1.1.0"
-		}
-	],
-	"unpacked_size": 10867,
 	"downloads_history": [
 		{
 			"range": [1737916200000, 1738520999999],
@@ -57,5 +46,36 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@responsive-image/svelte",
+				"version": "1.1.0",
+				"size": 10867
+			},
+			{
+				"name": "blurhash",
+				"version": "2.0.5",
+				"size": 58793
+			},
+			{
+				"name": "@responsive-image/core",
+				"version": "1.1.0",
+				"size": 10415
+			},
+			{
+				"name": "base64-arraybuffer",
+				"version": "1.0.2",
+				"size": 24289
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3]
+		],
+		"circular": []
+	}
 }

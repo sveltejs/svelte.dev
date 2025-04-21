@@ -13,8 +13,6 @@
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "0.0.3",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 21554,
 	"downloads_history": [
 		{
 			"range": [1742149800000, 1742754599999],
@@ -32,5 +30,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 148
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@tomatrow/ag-grid-svelte",
+				"version": "0.0.3",
+				"size": 21554
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

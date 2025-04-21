@@ -13,13 +13,6 @@
 	"version": "1.0.5",
 	"svelte_range": "^5.25.3",
 	"last_rune_check_version": "1.0.5",
-	"dependencies": [
-		{
-			"name": "katex",
-			"semver": "^0.16.21"
-		}
-	],
-	"unpacked_size": 1534293,
 	"downloads_history": [
 		{
 			"range": [1742754600000, 1743359399999],
@@ -33,5 +26,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 20
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "mathsnap",
+				"version": "1.0.5",
+				"size": 1534293
+			},
+			{
+				"name": "katex",
+				"version": "0.16.22",
+				"size": 3984019
+			},
+			{
+				"name": "commander",
+				"version": "8.3.0",
+				"size": 151267
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2]
+		],
+		"circular": []
+	}
 }

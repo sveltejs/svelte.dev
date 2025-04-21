@@ -13,21 +13,6 @@
 	"version": "0.2.13",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "0.2.13",
-	"dependencies": [
-		{
-			"name": "@smui/common",
-			"semver": "^1.0.0-beta.21"
-		},
-		{
-			"name": "svelte-feather-icons",
-			"semver": "^3.2.2"
-		},
-		{
-			"name": "svelte-normalize-css",
-			"semver": "^1.0.0"
-		}
-	],
-	"unpacked_size": 211119,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -281,5 +266,43 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 12
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@botala/pine",
+				"version": "0.2.13",
+				"size": 211119
+			},
+			{
+				"name": "@smui/common",
+				"version": "1.0.0",
+				"size": 31591
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			},
+			{
+				"name": "svelte-feather-icons",
+				"version": "3.6.0",
+				"size": 908638
+			},
+			{
+				"name": "svelte-normalize-css",
+				"version": "1.0.0",
+				"size": 35043
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[3, 2],
+			[0, 4]
+		],
+		"circular": []
+	}
 }

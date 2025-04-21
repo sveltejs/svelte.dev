@@ -12,13 +12,6 @@
 	"version": "1.0.1",
 	"svelte_range": "^3.20.1",
 	"last_rune_check_version": "1.0.1",
-	"dependencies": [
-		{
-			"name": "proi-ui-icons",
-			"semver": "^0.0.7"
-		}
-	],
-	"unpacked_size": 336264,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -212,5 +205,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-alert-and-button",
+				"version": "1.0.1",
+				"size": 336264
+			},
+			{
+				"name": "proi-ui-icons",
+				"version": "0.0.7",
+				"size": 204193
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

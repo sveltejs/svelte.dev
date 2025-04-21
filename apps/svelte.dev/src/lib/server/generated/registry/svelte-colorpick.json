@@ -12,13 +12,6 @@
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "0.1.7",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "d3-color",
-			"semver": "^2.0.0"
-		}
-	],
-	"unpacked_size": 193921,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -332,5 +325,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 51
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-colorpick",
+				"version": "0.1.7",
+				"size": 193921
+			},
+			{
+				"name": "d3-color",
+				"version": "2.0.0",
+				"size": 60251
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

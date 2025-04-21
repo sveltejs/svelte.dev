@@ -13,13 +13,6 @@
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.2.0",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "@sveltekit-board/db",
-			"semver": "^1.0.0"
-		}
-	],
-	"unpacked_size": 12603,
 	"downloads_history": [
 		{
 			"range": [1713724200000, 1714328999999],
@@ -145,5 +138,268 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@sveltekit-board/authenticator",
+				"version": "0.2.0",
+				"size": 12603
+			},
+			{
+				"name": "@sveltekit-board/db",
+				"version": "1.3.0",
+				"size": 29702
+			},
+			{
+				"name": "@types/node",
+				"version": "20.17.30",
+				"size": 2230550
+			},
+			{
+				"name": "undici-types",
+				"version": "6.19.8",
+				"size": 84225
+			},
+			{
+				"name": "@types/pg",
+				"version": "8.11.13",
+				"size": 16309
+			},
+			{
+				"name": "pg-types",
+				"version": "4.0.2",
+				"size": 17535
+			},
+			{
+				"name": "pg-int8",
+				"version": "1.0.1"
+			},
+			{
+				"name": "pg-numeric",
+				"version": "1.0.2",
+				"size": 4175
+			},
+			{
+				"name": "postgres-array",
+				"version": "3.0.4",
+				"size": 6425
+			},
+			{
+				"name": "postgres-bytea",
+				"version": "3.0.0",
+				"size": 9326
+			},
+			{
+				"name": "obuf",
+				"version": "1.1.2",
+				"size": 19129
+			},
+			{
+				"name": "postgres-date",
+				"version": "2.1.0",
+				"size": 9861
+			},
+			{
+				"name": "postgres-interval",
+				"version": "3.0.0",
+				"size": 8083
+			},
+			{
+				"name": "postgres-range",
+				"version": "1.1.4",
+				"size": 10095
+			},
+			{
+				"name": "@types/node",
+				"version": "22.14.1",
+				"size": 2331510
+			},
+			{
+				"name": "undici-types",
+				"version": "6.21.0",
+				"size": 83680
+			},
+			{
+				"name": "pg-protocol",
+				"version": "1.8.0",
+				"size": 188302
+			},
+			{
+				"name": "dotenv",
+				"version": "16.5.0",
+				"size": 75565
+			},
+			{
+				"name": "mysql2",
+				"version": "3.14.0",
+				"size": 525948
+			},
+			{
+				"name": "aws-ssl-profiles",
+				"version": "1.1.2",
+				"size": 228109
+			},
+			{
+				"name": "denque",
+				"version": "2.1.0",
+				"size": 30361
+			},
+			{
+				"name": "generate-function",
+				"version": "2.3.1",
+				"size": 9036
+			},
+			{
+				"name": "is-property",
+				"version": "1.0.2"
+			},
+			{
+				"name": "iconv-lite",
+				"version": "0.6.3",
+				"size": 348518
+			},
+			{
+				"name": "safer-buffer",
+				"version": "2.1.2",
+				"size": 42299
+			},
+			{
+				"name": "long",
+				"version": "5.3.2",
+				"size": 139458
+			},
+			{
+				"name": "lru.min",
+				"version": "1.1.2",
+				"size": 34457
+			},
+			{
+				"name": "named-placeholders",
+				"version": "1.1.3",
+				"size": 7152
+			},
+			{
+				"name": "lru-cache",
+				"version": "7.18.3",
+				"size": 133924
+			},
+			{
+				"name": "seq-queue",
+				"version": "0.0.5"
+			},
+			{
+				"name": "sqlstring",
+				"version": "2.3.3",
+				"size": 17255
+			},
+			{
+				"name": "pg",
+				"version": "8.14.1",
+				"size": 86374
+			},
+			{
+				"name": "pg-connection-string",
+				"version": "2.7.0",
+				"size": 9098
+			},
+			{
+				"name": "pg-pool",
+				"version": "3.8.0",
+				"size": 69742
+			},
+			{
+				"name": "pg-types",
+				"version": "2.2.0",
+				"size": 35296
+			},
+			{
+				"name": "postgres-array",
+				"version": "2.0.0",
+				"size": 4903
+			},
+			{
+				"name": "postgres-bytea",
+				"version": "1.0.0"
+			},
+			{
+				"name": "postgres-date",
+				"version": "1.0.7",
+				"size": 5915
+			},
+			{
+				"name": "postgres-interval",
+				"version": "1.2.0",
+				"size": 6727
+			},
+			{
+				"name": "xtend",
+				"version": "4.0.2",
+				"size": 6465
+			},
+			{
+				"name": "pgpass",
+				"version": "1.0.5",
+				"size": 10323
+			},
+			{
+				"name": "split2",
+				"version": "4.2.0",
+				"size": 17419
+			},
+			{
+				"name": "typescript",
+				"version": "5.8.3",
+				"size": 22867703
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[1, 4],
+			[4, 5],
+			[5, 6],
+			[5, 7],
+			[5, 8],
+			[5, 9],
+			[9, 10],
+			[5, 11],
+			[5, 12],
+			[5, 13],
+			[4, 14],
+			[14, 15],
+			[4, 16],
+			[1, 17],
+			[1, 18],
+			[18, 19],
+			[18, 20],
+			[18, 21],
+			[21, 22],
+			[18, 23],
+			[23, 24],
+			[18, 25],
+			[18, 26],
+			[18, 27],
+			[27, 28],
+			[18, 29],
+			[18, 30],
+			[1, 31],
+			[31, 32],
+			[31, 33],
+			[31, 16],
+			[31, 34],
+			[34, 6],
+			[34, 35],
+			[34, 36],
+			[34, 37],
+			[34, 38],
+			[38, 39],
+			[31, 40],
+			[40, 41],
+			[1, 42]
+		],
+		"circular": []
+	}
 }

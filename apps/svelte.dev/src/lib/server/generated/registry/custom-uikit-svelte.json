@@ -13,21 +13,6 @@
 	"version": "2.6.1",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "2.6.1",
-	"dependencies": [
-		{
-			"name": "caniuse-lite",
-			"semver": "^1.0.30001285"
-		},
-		{
-			"name": "debounce",
-			"semver": "^1.2.0"
-		},
-		{
-			"name": "leven",
-			"semver": "^3.1.0"
-		}
-	],
-	"unpacked_size": 1642584,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -309,5 +294,36 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 85
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "custom-uikit-svelte",
+				"version": "2.6.1",
+				"size": 1642584
+			},
+			{
+				"name": "caniuse-lite",
+				"version": "1.0.30001715",
+				"size": 2211246
+			},
+			{
+				"name": "debounce",
+				"version": "1.2.1",
+				"size": 11960
+			},
+			{
+				"name": "leven",
+				"version": "3.1.0",
+				"size": 5342
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3]
+		],
+		"circular": []
+	}
 }

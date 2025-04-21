@@ -24,13 +24,6 @@
 	"version": "1.16.0",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "1.16.0",
-	"dependencies": [
-		{
-			"name": "@egjs/grid",
-			"semver": "~1.16.0"
-		}
-	],
-	"unpacked_size": 70478,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -344,5 +337,56 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 231
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@egjs/svelte-grid",
+				"version": "1.16.0",
+				"size": 70478
+			},
+			{
+				"name": "@egjs/grid",
+				"version": "1.16.0",
+				"size": 1689602
+			},
+			{
+				"name": "@egjs/imready",
+				"version": "1.4.1",
+				"size": 396623
+			},
+			{
+				"name": "@cfcs/core",
+				"version": "0.0.24",
+				"size": 349968
+			},
+			{
+				"name": "@egjs/component",
+				"version": "3.0.5",
+				"size": 456301
+			},
+			{
+				"name": "@egjs/children-differ",
+				"version": "1.0.1",
+				"size": 109956
+			},
+			{
+				"name": "@egjs/list-differ",
+				"version": "1.0.1",
+				"size": 104427
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[3, 4],
+			[2, 4],
+			[1, 4],
+			[1, 5],
+			[5, 6]
+		],
+		"circular": []
+	}
 }

@@ -14,21 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.18.3",
-	"dependencies": [
-		{
-			"name": "svelte-keyed",
-			"semver": "^2.0.0"
-		},
-		{
-			"name": "svelte-render",
-			"semver": "^2.0.1"
-		},
-		{
-			"name": "svelte-subscribe",
-			"semver": "^2.0.1"
-		}
-	],
-	"unpacked_size": 156861,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -342,5 +327,37 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 13012
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-headless-table",
+				"version": "0.18.3",
+				"size": 156861
+			},
+			{
+				"name": "svelte-keyed",
+				"version": "2.0.0",
+				"size": 11257
+			},
+			{
+				"name": "svelte-render",
+				"version": "2.0.1",
+				"size": 14503
+			},
+			{
+				"name": "svelte-subscribe",
+				"version": "2.0.1",
+				"size": 7144
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[0, 3]
+		],
+		"circular": []
+	}
 }

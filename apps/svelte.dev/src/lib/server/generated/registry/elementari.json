@@ -5,90 +5,15 @@
 	"authors": ["janosh"],
 	"homepage": "https://janosh.github.io/elementari",
 	"downloads": 138,
-	"updated": "2025-04-20T00:37:33.090Z",
+	"updated": "2025-04-20T14:18:54.938Z",
 	"tags": ["ui"],
 	"runes": true,
 	"github_stars": 147,
 	"typescript": true,
-	"version": "0.3.6",
+	"version": "0.3.7",
 	"svelte_range": "5.27.1",
 	"kit_range": "^2.20.7",
-	"last_rune_check_version": "0.3.6",
-	"dependencies": [
-		{
-			"name": "@sveltejs/kit",
-			"semver": "^2.20.7"
-		},
-		{
-			"name": "@threlte/core",
-			"semver": "8.0.2"
-		},
-		{
-			"name": "@threlte/extras",
-			"semver": "^9.1.3"
-		},
-		{
-			"name": "@types/d3-force",
-			"semver": "^3.0.10"
-		},
-		{
-			"name": "d3",
-			"semver": "^7.9.0"
-		},
-		{
-			"name": "d3-array",
-			"semver": "^3.2.4"
-		},
-		{
-			"name": "d3-color",
-			"semver": "^3.1.0"
-		},
-		{
-			"name": "d3-force",
-			"semver": "^3.0.0"
-		},
-		{
-			"name": "d3-format",
-			"semver": "^3.1.0"
-		},
-		{
-			"name": "d3-interpolate-path",
-			"semver": "^2.3.0"
-		},
-		{
-			"name": "d3-scale",
-			"semver": "^4.0.2"
-		},
-		{
-			"name": "d3-scale-chromatic",
-			"semver": "^3.1.0"
-		},
-		{
-			"name": "d3-shape",
-			"semver": "^3.2.0"
-		},
-		{
-			"name": "highlight.js",
-			"semver": "^11.11.1"
-		},
-		{
-			"name": "svelte",
-			"semver": "5.27.1"
-		},
-		{
-			"name": "svelte-multiselect",
-			"semver": "11.0.0-rc.1"
-		},
-		{
-			"name": "svelte-zoo",
-			"semver": "^0.4.17"
-		},
-		{
-			"name": "three",
-			"semver": "^0.175.0"
-		}
-	],
-	"unpacked_size": 495717,
+	"last_rune_check_version": "0.3.7",
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -402,5 +327,853 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 138
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "elementari",
+				"version": "0.3.7",
+				"size": 499836
+			},
+			{
+				"name": "@sveltejs/kit",
+				"version": "2.20.7",
+				"size": 820650
+			},
+			{
+				"name": "@types/cookie",
+				"version": "0.6.0",
+				"size": 10073
+			},
+			{
+				"name": "cookie",
+				"version": "0.6.0",
+				"size": 23736
+			},
+			{
+				"name": "devalue",
+				"version": "5.1.1",
+				"size": 31833
+			},
+			{
+				"name": "esm-env",
+				"version": "1.2.2",
+				"size": 3784
+			},
+			{
+				"name": "import-meta-resolve",
+				"version": "4.1.0",
+				"size": 77354
+			},
+			{
+				"name": "kleur",
+				"version": "4.1.5",
+				"size": 20250
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "mrmime",
+				"version": "2.0.1",
+				"size": 33008
+			},
+			{
+				"name": "sade",
+				"version": "1.8.1",
+				"size": 31545
+			},
+			{
+				"name": "mri",
+				"version": "1.2.0",
+				"size": 13261
+			},
+			{
+				"name": "set-cookie-parser",
+				"version": "2.7.1",
+				"size": 16074
+			},
+			{
+				"name": "sirv",
+				"version": "3.0.1",
+				"size": 21845
+			},
+			{
+				"name": "@polka/url",
+				"version": "1.0.0-next.29",
+				"size": 4815
+			},
+			{
+				"name": "totalist",
+				"version": "3.0.1",
+				"size": 7459
+			},
+			{
+				"name": "@threlte/core",
+				"version": "8.0.2",
+				"size": 145153
+			},
+			{
+				"name": "mitt",
+				"version": "3.0.1",
+				"size": 26444
+			},
+			{
+				"name": "@threlte/extras",
+				"version": "9.1.3",
+				"size": 360169
+			},
+			{
+				"name": "@threejs-kit/instanced-sprite-mesh",
+				"version": "2.5.1",
+				"size": 141023
+			},
+			{
+				"name": "diet-sprite",
+				"version": "0.0.1",
+				"size": 207
+			},
+			{
+				"name": "earcut",
+				"version": "2.2.4",
+				"size": 95170
+			},
+			{
+				"name": "maath",
+				"version": "0.10.8",
+				"size": 304666
+			},
+			{
+				"name": "three-instanced-uniforms-mesh",
+				"version": "0.52.4",
+				"size": 43101
+			},
+			{
+				"name": "troika-three-utils",
+				"version": "0.52.4",
+				"size": 117561
+			},
+			{
+				"name": "camera-controls",
+				"version": "2.10.1",
+				"size": 369401
+			},
+			{
+				"name": "three-mesh-bvh",
+				"version": "0.9.0",
+				"size": 1615548
+			},
+			{
+				"name": "three-perf",
+				"version": "1.0.10"
+			},
+			{
+				"name": "troika-three-text",
+				"version": "0.52.4",
+				"size": 742883
+			},
+			{
+				"name": "bidi-js",
+				"version": "1.0.3",
+				"size": 160810
+			},
+			{
+				"name": "require-from-string",
+				"version": "2.0.2",
+				"size": 3422
+			},
+			{
+				"name": "troika-worker-utils",
+				"version": "0.52.0",
+				"size": 73411
+			},
+			{
+				"name": "webgl-sdf-generator",
+				"version": "1.1.1",
+				"size": 128555
+			},
+			{
+				"name": "tweakpane",
+				"version": "3.1.10",
+				"size": 460922
+			},
+			{
+				"name": "three-viewport-gizmo",
+				"version": "2.2.0",
+				"size": 476081
+			},
+			{
+				"name": "@types/d3-force",
+				"version": "3.0.10",
+				"size": 50825
+			},
+			{
+				"name": "d3",
+				"version": "7.9.0",
+				"size": 871285
+			},
+			{
+				"name": "d3-array",
+				"version": "3.2.4",
+				"size": 163730
+			},
+			{
+				"name": "internmap",
+				"version": "2.0.3",
+				"size": 10470
+			},
+			{
+				"name": "d3-axis",
+				"version": "3.0.0",
+				"size": 31410
+			},
+			{
+				"name": "d3-brush",
+				"version": "3.0.0",
+				"size": 66555
+			},
+			{
+				"name": "d3-dispatch",
+				"version": "3.0.1",
+				"size": 15604
+			},
+			{
+				"name": "d3-drag",
+				"version": "3.0.0",
+				"size": 43023
+			},
+			{
+				"name": "d3-selection",
+				"version": "3.0.0",
+				"size": 134715
+			},
+			{
+				"name": "d3-interpolate",
+				"version": "3.0.1",
+				"size": 69687
+			},
+			{
+				"name": "d3-color",
+				"version": "3.1.0",
+				"size": 61152
+			},
+			{
+				"name": "d3-transition",
+				"version": "3.0.1",
+				"size": 110525
+			},
+			{
+				"name": "d3-ease",
+				"version": "3.0.1",
+				"size": 34629
+			},
+			{
+				"name": "d3-timer",
+				"version": "3.0.1",
+				"size": 18405
+			},
+			{
+				"name": "d3-chord",
+				"version": "3.0.1",
+				"size": 38549
+			},
+			{
+				"name": "d3-path",
+				"version": "3.1.0",
+				"size": 20858
+			},
+			{
+				"name": "d3-contour",
+				"version": "4.0.2",
+				"size": 49313
+			},
+			{
+				"name": "d3-delaunay",
+				"version": "6.0.4",
+				"size": 104453
+			},
+			{
+				"name": "delaunator",
+				"version": "5.0.1",
+				"size": 55274
+			},
+			{
+				"name": "robust-predicates",
+				"version": "3.0.2",
+				"size": 296008
+			},
+			{
+				"name": "d3-dsv",
+				"version": "3.0.1",
+				"size": 51233
+			},
+			{
+				"name": "commander",
+				"version": "7.2.0",
+				"size": 144710
+			},
+			{
+				"name": "iconv-lite",
+				"version": "0.6.3",
+				"size": 348518
+			},
+			{
+				"name": "safer-buffer",
+				"version": "2.1.2",
+				"size": 42299
+			},
+			{
+				"name": "rw",
+				"version": "1.3.3"
+			},
+			{
+				"name": "d3-fetch",
+				"version": "3.0.1",
+				"size": 16419
+			},
+			{
+				"name": "d3-force",
+				"version": "3.0.0",
+				"size": 89551
+			},
+			{
+				"name": "d3-quadtree",
+				"version": "3.0.1",
+				"size": 43391
+			},
+			{
+				"name": "d3-format",
+				"version": "3.1.0",
+				"size": 57833
+			},
+			{
+				"name": "d3-geo",
+				"version": "3.1.1",
+				"size": 227065
+			},
+			{
+				"name": "d3-hierarchy",
+				"version": "3.1.2",
+				"size": 136230
+			},
+			{
+				"name": "d3-polygon",
+				"version": "3.0.1",
+				"size": 14827
+			},
+			{
+				"name": "d3-random",
+				"version": "3.0.1",
+				"size": 38102
+			},
+			{
+				"name": "d3-scale",
+				"version": "4.0.2",
+				"size": 174363
+			},
+			{
+				"name": "d3-time",
+				"version": "3.1.0",
+				"size": 64483
+			},
+			{
+				"name": "d3-time-format",
+				"version": "4.1.0",
+				"size": 85603
+			},
+			{
+				"name": "d3-scale-chromatic",
+				"version": "3.1.0",
+				"size": 75697
+			},
+			{
+				"name": "d3-shape",
+				"version": "3.2.0",
+				"size": 247267
+			},
+			{
+				"name": "d3-zoom",
+				"version": "3.0.0",
+				"size": 86878
+			},
+			{
+				"name": "d3-interpolate-path",
+				"version": "2.3.0",
+				"size": 58101
+			},
+			{
+				"name": "highlight.js",
+				"version": "11.11.1",
+				"size": 5433042
+			},
+			{
+				"name": "svelte",
+				"version": "5.27.1",
+				"size": 2408118
+			},
+			{
+				"name": "clsx",
+				"version": "2.1.1",
+				"size": 8555
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "esrap",
+				"version": "1.4.6",
+				"size": 50818
+			},
+			{
+				"name": "aria-query",
+				"version": "5.3.2",
+				"size": 176114
+			},
+			{
+				"name": "zimmerframe",
+				"version": "1.1.2",
+				"size": 12266
+			},
+			{
+				"name": "is-reference",
+				"version": "3.0.3",
+				"size": 3953
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "axobject-query",
+				"version": "4.1.0",
+				"size": 110878
+			},
+			{
+				"name": "locate-character",
+				"version": "3.0.0",
+				"size": 5325
+			},
+			{
+				"name": "@ampproject/remapping",
+				"version": "2.3.0",
+				"size": 78946
+			},
+			{
+				"name": "@jridgewell/gen-mapping",
+				"version": "0.3.8",
+				"size": 81596
+			},
+			{
+				"name": "@jridgewell/set-array",
+				"version": "1.2.1",
+				"size": 17945
+			},
+			{
+				"name": "@jridgewell/trace-mapping",
+				"version": "0.3.25",
+				"size": 169330
+			},
+			{
+				"name": "@jridgewell/resolve-uri",
+				"version": "3.1.2",
+				"size": 53153
+			},
+			{
+				"name": "@sveltejs/acorn-typescript",
+				"version": "1.0.5",
+				"size": 197476
+			},
+			{
+				"name": "svelte-multiselect",
+				"version": "11.0.0-rc.1",
+				"size": 91791
+			},
+			{
+				"name": "svelte",
+				"version": "4.2.12",
+				"size": 2631982
+			},
+			{
+				"name": "code-red",
+				"version": "1.0.4",
+				"size": 55185
+			},
+			{
+				"name": "estree-walker",
+				"version": "3.0.3",
+				"size": 17599
+			},
+			{
+				"name": "periscopic",
+				"version": "3.1.0",
+				"size": 11219
+			},
+			{
+				"name": "css-tree",
+				"version": "2.3.1",
+				"size": 1190591
+			},
+			{
+				"name": "mdn-data",
+				"version": "2.0.30",
+				"size": 602138
+			},
+			{
+				"name": "source-map-js",
+				"version": "1.2.1",
+				"size": 139872
+			},
+			{
+				"name": "svelte-zoo",
+				"version": "0.4.17",
+				"size": 64130
+			},
+			{
+				"name": "svelte",
+				"version": "5.20.1",
+				"size": 2493017
+			},
+			{
+				"name": "acorn-typescript",
+				"version": "1.4.13",
+				"size": 531856
+			},
+			{
+				"name": "tippy.js",
+				"version": "6.3.7",
+				"size": 2067120
+			},
+			{
+				"name": "@popperjs/core",
+				"version": "2.11.8",
+				"size": 1463042
+			},
+			{
+				"name": "three",
+				"version": "0.175.0",
+				"size": 29941315
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[1, 4],
+			[1, 5],
+			[1, 6],
+			[1, 7],
+			[1, 8],
+			[8, 9],
+			[1, 10],
+			[1, 11],
+			[11, 12],
+			[1, 13],
+			[1, 14],
+			[14, 15],
+			[14, 10],
+			[14, 16],
+			[0, 17],
+			[17, 18],
+			[0, 19],
+			[19, 20],
+			[20, 21],
+			[20, 22],
+			[20, 23],
+			[20, 24],
+			[24, 25],
+			[20, 25],
+			[19, 26],
+			[19, 27],
+			[19, 28],
+			[28, 29],
+			[29, 30],
+			[30, 31],
+			[29, 25],
+			[29, 32],
+			[29, 33],
+			[28, 34],
+			[19, 35],
+			[19, 29],
+			[29, 30],
+			[30, 31],
+			[29, 25],
+			[29, 32],
+			[29, 33],
+			[0, 36],
+			[0, 37],
+			[37, 38],
+			[38, 39],
+			[37, 40],
+			[37, 41],
+			[41, 42],
+			[41, 43],
+			[43, 42],
+			[43, 44],
+			[41, 45],
+			[45, 46],
+			[41, 44],
+			[41, 47],
+			[47, 46],
+			[47, 42],
+			[47, 48],
+			[47, 45],
+			[45, 46],
+			[47, 49],
+			[37, 50],
+			[50, 51],
+			[37, 46],
+			[37, 52],
+			[52, 38],
+			[38, 39],
+			[37, 53],
+			[53, 54],
+			[54, 55],
+			[37, 42],
+			[37, 43],
+			[43, 42],
+			[43, 44],
+			[37, 56],
+			[56, 57],
+			[56, 58],
+			[58, 59],
+			[56, 60],
+			[37, 48],
+			[37, 61],
+			[61, 56],
+			[56, 57],
+			[56, 58],
+			[58, 59],
+			[56, 60],
+			[37, 62],
+			[62, 42],
+			[62, 63],
+			[62, 49],
+			[37, 64],
+			[37, 65],
+			[65, 38],
+			[38, 39],
+			[37, 66],
+			[37, 45],
+			[45, 46],
+			[37, 51],
+			[37, 67],
+			[37, 63],
+			[37, 68],
+			[37, 69],
+			[69, 38],
+			[38, 39],
+			[69, 64],
+			[69, 45],
+			[45, 46],
+			[69, 70],
+			[70, 38],
+			[38, 39],
+			[69, 71],
+			[71, 70],
+			[70, 38],
+			[38, 39],
+			[37, 72],
+			[72, 46],
+			[72, 45],
+			[45, 46],
+			[37, 44],
+			[37, 73],
+			[73, 51],
+			[37, 70],
+			[70, 38],
+			[38, 39],
+			[37, 71],
+			[71, 70],
+			[70, 38],
+			[38, 39],
+			[37, 49],
+			[37, 47],
+			[47, 46],
+			[47, 42],
+			[47, 48],
+			[47, 45],
+			[45, 46],
+			[47, 49],
+			[37, 74],
+			[74, 42],
+			[74, 43],
+			[43, 42],
+			[43, 44],
+			[74, 45],
+			[45, 46],
+			[74, 44],
+			[74, 47],
+			[47, 46],
+			[47, 42],
+			[47, 48],
+			[47, 45],
+			[45, 46],
+			[47, 49],
+			[0, 38],
+			[38, 39],
+			[0, 46],
+			[0, 62],
+			[62, 42],
+			[62, 63],
+			[62, 49],
+			[0, 64],
+			[0, 75],
+			[0, 69],
+			[69, 38],
+			[38, 39],
+			[69, 64],
+			[69, 45],
+			[45, 46],
+			[69, 70],
+			[70, 38],
+			[38, 39],
+			[69, 71],
+			[71, 70],
+			[70, 38],
+			[38, 39],
+			[0, 72],
+			[72, 46],
+			[72, 45],
+			[45, 46],
+			[0, 73],
+			[73, 51],
+			[0, 76],
+			[0, 77],
+			[77, 78],
+			[77, 79],
+			[77, 80],
+			[80, 9],
+			[77, 5],
+			[77, 81],
+			[77, 82],
+			[77, 83],
+			[83, 84],
+			[77, 8],
+			[8, 9],
+			[77, 84],
+			[77, 85],
+			[77, 86],
+			[77, 87],
+			[87, 88],
+			[88, 89],
+			[88, 9],
+			[88, 90],
+			[90, 91],
+			[90, 9],
+			[87, 90],
+			[90, 91],
+			[90, 9],
+			[77, 92],
+			[77, 9],
+			[0, 93],
+			[93, 94],
+			[94, 79],
+			[94, 95],
+			[95, 9],
+			[95, 84],
+			[95, 79],
+			[95, 96],
+			[96, 84],
+			[95, 97],
+			[97, 84],
+			[97, 96],
+			[96, 84],
+			[97, 83],
+			[83, 84],
+			[94, 98],
+			[98, 99],
+			[98, 100],
+			[94, 81],
+			[94, 97],
+			[97, 84],
+			[97, 96],
+			[96, 84],
+			[97, 83],
+			[83, 84],
+			[94, 83],
+			[83, 84],
+			[94, 8],
+			[8, 9],
+			[94, 84],
+			[94, 96],
+			[96, 84],
+			[94, 85],
+			[94, 86],
+			[94, 87],
+			[87, 88],
+			[88, 89],
+			[88, 9],
+			[88, 90],
+			[90, 91],
+			[90, 9],
+			[87, 90],
+			[90, 91],
+			[90, 9],
+			[94, 90],
+			[90, 91],
+			[90, 9],
+			[94, 9],
+			[0, 101],
+			[101, 1],
+			[1, 2],
+			[1, 3],
+			[1, 4],
+			[1, 5],
+			[1, 6],
+			[1, 7],
+			[1, 8],
+			[8, 9],
+			[1, 10],
+			[1, 11],
+			[11, 12],
+			[1, 13],
+			[1, 14],
+			[14, 15],
+			[14, 10],
+			[14, 16],
+			[101, 76],
+			[101, 102],
+			[102, 78],
+			[102, 79],
+			[102, 80],
+			[80, 9],
+			[102, 5],
+			[102, 81],
+			[102, 82],
+			[102, 83],
+			[83, 84],
+			[102, 8],
+			[8, 9],
+			[102, 84],
+			[102, 85],
+			[102, 103],
+			[102, 86],
+			[102, 87],
+			[87, 88],
+			[88, 89],
+			[88, 9],
+			[88, 90],
+			[90, 91],
+			[90, 9],
+			[87, 90],
+			[90, 91],
+			[90, 9],
+			[102, 9],
+			[101, 104],
+			[104, 105],
+			[0, 106]
+		],
+		"circular": []
+	}
 }

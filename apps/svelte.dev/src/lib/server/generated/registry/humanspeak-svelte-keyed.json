@@ -14,8 +14,6 @@
 	"svelte_range": "^5.19.3",
 	"kit_range": "^2.16.1",
 	"last_rune_check_version": "5.0.1",
-	"dependencies": [],
-	"unpacked_size": 17196,
 	"downloads_history": [
 		{
 			"range": [1730658600000, 1731263399999],
@@ -105,5 +103,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 1048
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@humanspeak/svelte-keyed",
+				"version": "5.0.1",
+				"size": 17196
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

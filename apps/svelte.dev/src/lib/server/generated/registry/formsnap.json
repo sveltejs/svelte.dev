@@ -13,13 +13,6 @@
 	"kit_range": "^2.5.28",
 	"last_rune_check_version": "2.0.1",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "svelte-toolbelt",
-			"semver": "^0.5.0"
-		}
-	],
-	"unpacked_size": 62292,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +326,42 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 35777
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "formsnap",
+				"version": "2.0.1",
+				"size": 62292
+			},
+			{
+				"name": "svelte-toolbelt",
+				"version": "0.5.0",
+				"size": 40657
+			},
+			{
+				"name": "clsx",
+				"version": "2.1.1",
+				"size": 8555
+			},
+			{
+				"name": "style-to-object",
+				"version": "1.0.8",
+				"size": 42236
+			},
+			{
+				"name": "inline-style-parser",
+				"version": "0.2.4",
+				"size": 39561
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[3, 4]
+		],
+		"circular": []
+	}
 }

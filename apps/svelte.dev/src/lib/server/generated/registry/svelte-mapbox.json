@@ -14,8 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.5.0",
 	"last_rune_check_version": "0.6.0",
-	"dependencies": [],
-	"unpacked_size": 18247,
 	"downloads_history": [
 		{
 			"range": [1697999400000, 1698604199999],
@@ -325,5 +323,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 12
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-mapbox",
+				"version": "0.6.0",
+				"size": 18247
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

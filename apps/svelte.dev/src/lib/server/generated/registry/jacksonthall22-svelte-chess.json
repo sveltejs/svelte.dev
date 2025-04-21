@@ -14,21 +14,6 @@
 	"kit_range": "^2.5.5",
 	"last_rune_check_version": "0.1.0",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "@jacksonthall22/chess.ts",
-			"semver": "^0.1.12"
-		},
-		{
-			"name": "@jacksonthall22/svelte-chessground",
-			"semver": "^0.0.2"
-		},
-		{
-			"name": "@sveltejs/vite-plugin-svelte",
-			"semver": "^3.0.2"
-		}
-	],
-	"unpacked_size": 39900,
 	"downloads_history": [
 		{
 			"range": [1714329000000, 1714933799999],
@@ -214,5 +199,98 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 12
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@jacksonthall22/svelte-chess",
+				"version": "0.1.0",
+				"size": 39900
+			},
+			{
+				"name": "@jacksonthall22/chess.ts",
+				"version": "0.1.12",
+				"size": 691597
+			},
+			{
+				"name": "@jacksonthall22/svelte-chessground",
+				"version": "0.0.2",
+				"size": 95839
+			},
+			{
+				"name": "chessground",
+				"version": "8.4.0",
+				"size": 333656
+			},
+			{
+				"name": "@sveltejs/vite-plugin-svelte",
+				"version": "3.1.2",
+				"size": 126232
+			},
+			{
+				"name": "debug",
+				"version": "4.4.0",
+				"size": 42798
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "kleur",
+				"version": "4.1.5",
+				"size": 20250
+			},
+			{
+				"name": "vitefu",
+				"version": "0.2.5",
+				"size": 19174
+			},
+			{
+				"name": "deepmerge",
+				"version": "4.3.1",
+				"size": 31157
+			},
+			{
+				"name": "svelte-hmr",
+				"version": "0.16.0",
+				"size": 75417
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "@sveltejs/vite-plugin-svelte-inspector",
+				"version": "2.1.0",
+				"size": 25824
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[0, 4],
+			[4, 5],
+			[5, 6],
+			[4, 7],
+			[4, 8],
+			[4, 9],
+			[4, 10],
+			[4, 11],
+			[11, 12],
+			[4, 13],
+			[13, 5],
+			[5, 6]
+		],
+		"circular": []
+	}
 }

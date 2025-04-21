@@ -13,57 +13,6 @@
 	"version": "0.9.4",
 	"svelte_range": "^4.2.1",
 	"last_rune_check_version": "0.9.4",
-	"dependencies": [
-		{
-			"name": "kolorist",
-			"semver": "^1.8.0"
-		},
-		{
-			"name": "minimist",
-			"semver": "^1.2.8"
-		},
-		{
-			"name": "mustache",
-			"semver": "^4.2.0"
-		},
-		{
-			"name": "prompts",
-			"semver": "^2.4.2"
-		},
-		{
-			"name": "@types/minimist",
-			"semver": "^1.2.3"
-		},
-		{
-			"name": "@types/mustache",
-			"semver": "^4.2.3"
-		},
-		{
-			"name": "@types/node",
-			"semver": "^20.8.4"
-		},
-		{
-			"name": "@types/prompts",
-			"semver": "^2.4.6"
-		},
-		{
-			"name": "prettier",
-			"semver": "^3.0.3"
-		},
-		{
-			"name": "prettier-plugin-svelte",
-			"semver": "^3.0.3"
-		},
-		{
-			"name": "svelte",
-			"semver": "^4.2.1"
-		},
-		{
-			"name": "typescript",
-			"semver": "^5.2.2"
-		}
-	],
-	"unpacked_size": 736945,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -377,5 +326,262 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 268
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "create-chrome-ext",
+				"version": "0.9.4",
+				"size": 736945
+			},
+			{
+				"name": "kolorist",
+				"version": "1.8.0",
+				"size": 51023
+			},
+			{
+				"name": "minimist",
+				"version": "1.2.8",
+				"size": 54477
+			},
+			{
+				"name": "mustache",
+				"version": "4.2.0",
+				"size": 113734
+			},
+			{
+				"name": "prompts",
+				"version": "2.4.2",
+				"size": 186815
+			},
+			{
+				"name": "kleur",
+				"version": "3.0.3",
+				"size": 9893
+			},
+			{
+				"name": "sisteransi",
+				"version": "1.0.5",
+				"size": 6791
+			},
+			{
+				"name": "@types/minimist",
+				"version": "1.2.5",
+				"size": 6267
+			},
+			{
+				"name": "@types/mustache",
+				"version": "4.2.5",
+				"size": 15170
+			},
+			{
+				"name": "@types/node",
+				"version": "20.17.30",
+				"size": 2230550
+			},
+			{
+				"name": "undici-types",
+				"version": "6.19.8",
+				"size": 84225
+			},
+			{
+				"name": "@types/prompts",
+				"version": "2.4.9",
+				"size": 7957
+			},
+			{
+				"name": "@types/node",
+				"version": "22.14.1",
+				"size": 2331510
+			},
+			{
+				"name": "undici-types",
+				"version": "6.21.0",
+				"size": 83680
+			},
+			{
+				"name": "prettier",
+				"version": "3.5.3",
+				"size": 7876465
+			},
+			{
+				"name": "prettier-plugin-svelte",
+				"version": "3.3.3",
+				"size": 1503936
+			},
+			{
+				"name": "svelte",
+				"version": "4.2.19",
+				"size": 2633608
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "code-red",
+				"version": "1.0.4",
+				"size": 55185
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "estree-walker",
+				"version": "3.0.3",
+				"size": 17599
+			},
+			{
+				"name": "periscopic",
+				"version": "3.1.0",
+				"size": 11219
+			},
+			{
+				"name": "is-reference",
+				"version": "3.0.3",
+				"size": 3953
+			},
+			{
+				"name": "css-tree",
+				"version": "2.3.1",
+				"size": 1190591
+			},
+			{
+				"name": "mdn-data",
+				"version": "2.0.30",
+				"size": 602138
+			},
+			{
+				"name": "source-map-js",
+				"version": "1.2.1",
+				"size": 139872
+			},
+			{
+				"name": "aria-query",
+				"version": "5.3.2",
+				"size": 176114
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "axobject-query",
+				"version": "4.1.0",
+				"size": 110878
+			},
+			{
+				"name": "locate-character",
+				"version": "3.0.0",
+				"size": 5325
+			},
+			{
+				"name": "@ampproject/remapping",
+				"version": "2.3.0",
+				"size": 78946
+			},
+			{
+				"name": "@jridgewell/gen-mapping",
+				"version": "0.3.8",
+				"size": 81596
+			},
+			{
+				"name": "@jridgewell/set-array",
+				"version": "1.2.1",
+				"size": 17945
+			},
+			{
+				"name": "@jridgewell/trace-mapping",
+				"version": "0.3.25",
+				"size": 169330
+			},
+			{
+				"name": "@jridgewell/resolve-uri",
+				"version": "3.1.2",
+				"size": 53153
+			},
+			{
+				"name": "typescript",
+				"version": "5.8.3",
+				"size": 22867703
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[0, 4],
+			[4, 5],
+			[4, 6],
+			[0, 7],
+			[0, 8],
+			[0, 9],
+			[9, 10],
+			[0, 11],
+			[11, 5],
+			[11, 12],
+			[12, 13],
+			[0, 14],
+			[0, 15],
+			[0, 16],
+			[16, 17],
+			[16, 18],
+			[18, 19],
+			[18, 20],
+			[18, 17],
+			[18, 21],
+			[21, 20],
+			[18, 22],
+			[22, 20],
+			[22, 21],
+			[21, 20],
+			[22, 23],
+			[23, 20],
+			[16, 24],
+			[24, 25],
+			[24, 26],
+			[16, 27],
+			[16, 22],
+			[22, 20],
+			[22, 21],
+			[21, 20],
+			[22, 23],
+			[23, 20],
+			[16, 23],
+			[23, 20],
+			[16, 28],
+			[28, 19],
+			[16, 20],
+			[16, 21],
+			[21, 20],
+			[16, 29],
+			[16, 30],
+			[16, 31],
+			[31, 32],
+			[32, 33],
+			[32, 19],
+			[32, 34],
+			[34, 35],
+			[34, 19],
+			[31, 34],
+			[34, 35],
+			[34, 19],
+			[16, 34],
+			[34, 35],
+			[34, 19],
+			[16, 19],
+			[0, 36]
+		],
+		"circular": []
+	}
 }

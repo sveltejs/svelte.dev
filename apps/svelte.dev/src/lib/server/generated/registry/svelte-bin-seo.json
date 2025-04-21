@@ -13,8 +13,6 @@
 	"kit_range": "^1.20.4",
 	"last_rune_check_version": "0.0.1",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 39862,
 	"downloads_history": [
 		{
 			"range": [1699813800000, 1700418599999],
@@ -196,5 +194,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@svelte-bin/seo",
+				"version": "0.0.1",
+				"size": 39862
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

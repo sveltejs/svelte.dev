@@ -14,25 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.4",
 	"last_rune_check_version": "2.0.0",
-	"dependencies": [
-		{
-			"name": "@untemps/read-per-minute",
-			"semver": "^2.0.1"
-		},
-		{
-			"name": "@untemps/svelte-use-drop-outside",
-			"semver": "^1.6.0"
-		},
-		{
-			"name": "@untemps/svelte-use-tooltip",
-			"semver": "^2.8.0"
-		},
-		{
-			"name": "@untemps/utils",
-			"semver": "^3.0.0"
-		}
-	],
-	"unpacked_size": 25578,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -338,5 +319,77 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 20
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@untemps/svelte-readotron",
+				"version": "2.0.0",
+				"size": 25578
+			},
+			{
+				"name": "@untemps/read-per-minute",
+				"version": "2.1.0",
+				"size": 7489
+			},
+			{
+				"name": "@untemps/svelte-use-drop-outside",
+				"version": "1.6.0",
+				"size": 224216
+			},
+			{
+				"name": "@untemps/dom-observer",
+				"version": "2.0.0",
+				"size": 76324
+			},
+			{
+				"name": "@untemps/utils",
+				"version": "2.6.0",
+				"size": 20540
+			},
+			{
+				"name": "@babel/runtime",
+				"version": "7.27.0",
+				"size": 249798
+			},
+			{
+				"name": "regenerator-runtime",
+				"version": "0.14.1",
+				"size": 27863
+			},
+			{
+				"name": "svelte",
+				"version": "3.49.0",
+				"size": 7247697
+			},
+			{
+				"name": "@untemps/svelte-use-tooltip",
+				"version": "2.8.0",
+				"size": 246967
+			},
+			{
+				"name": "@untemps/utils",
+				"version": "3.0.0",
+				"size": 15728
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[2, 4],
+			[4, 5],
+			[5, 6],
+			[2, 7],
+			[0, 8],
+			[8, 7],
+			[8, 4],
+			[4, 5],
+			[5, 6],
+			[8, 3],
+			[0, 9]
+		],
+		"circular": []
+	}
 }

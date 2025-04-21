@@ -11,25 +11,6 @@
 	"version": "0.3.0",
 	"last_rune_check_version": "0.3.0",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "esbuild",
-			"semver": "^0.12.2"
-		},
-		{
-			"name": "mime",
-			"semver": "^2.5.2"
-		},
-		{
-			"name": "node-fetch",
-			"semver": "^3.0.0"
-		},
-		{
-			"name": "yargs",
-			"semver": "^17.2.1"
-		}
-	],
-	"unpacked_size": 35309,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -339,5 +320,178 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@budgetdraw/sveltekit-cloudflare-adapter",
+				"version": "0.3.0",
+				"size": 35309
+			},
+			{
+				"name": "esbuild",
+				"version": "0.12.29",
+				"size": 92169
+			},
+			{
+				"name": "mime",
+				"version": "2.6.0",
+				"size": 60114
+			},
+			{
+				"name": "node-fetch",
+				"version": "3.3.2",
+				"size": 107319
+			},
+			{
+				"name": "data-uri-to-buffer",
+				"version": "4.0.1",
+				"size": 10049
+			},
+			{
+				"name": "fetch-blob",
+				"version": "3.2.0",
+				"size": 21755
+			},
+			{
+				"name": "node-domexception",
+				"version": "1.0.0",
+				"size": 29162
+			},
+			{
+				"name": "web-streams-polyfill",
+				"version": "3.3.3",
+				"size": 9036205
+			},
+			{
+				"name": "formdata-polyfill",
+				"version": "4.0.10",
+				"size": 32220
+			},
+			{
+				"name": "yargs",
+				"version": "17.7.2",
+				"size": 292421
+			},
+			{
+				"name": "y18n",
+				"version": "5.0.8",
+				"size": 23435
+			},
+			{
+				"name": "cliui",
+				"version": "8.0.1",
+				"size": 32314
+			},
+			{
+				"name": "wrap-ansi",
+				"version": "7.0.0",
+				"size": 10648
+			},
+			{
+				"name": "ansi-styles",
+				"version": "4.3.0",
+				"size": 16978
+			},
+			{
+				"name": "color-convert",
+				"version": "2.0.1",
+				"size": 27189
+			},
+			{
+				"name": "color-name",
+				"version": "1.1.4",
+				"size": 6693
+			},
+			{
+				"name": "string-width",
+				"version": "4.2.3",
+				"size": 5161
+			},
+			{
+				"name": "strip-ansi",
+				"version": "6.0.1",
+				"size": 4029
+			},
+			{
+				"name": "ansi-regex",
+				"version": "5.0.1",
+				"size": 5609
+			},
+			{
+				"name": "emoji-regex",
+				"version": "8.0.0",
+				"size": 48255
+			},
+			{
+				"name": "is-fullwidth-code-point",
+				"version": "3.0.0",
+				"size": 4994
+			},
+			{
+				"name": "escalade",
+				"version": "3.2.0",
+				"size": 12385
+			},
+			{
+				"name": "yargs-parser",
+				"version": "21.1.1",
+				"size": 128470
+			},
+			{
+				"name": "get-caller-file",
+				"version": "2.0.5",
+				"size": 4719
+			},
+			{
+				"name": "require-directory",
+				"version": "2.1.1"
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[3, 4],
+			[3, 5],
+			[5, 6],
+			[5, 7],
+			[3, 8],
+			[8, 5],
+			[5, 6],
+			[5, 7],
+			[0, 9],
+			[9, 10],
+			[9, 11],
+			[11, 12],
+			[12, 13],
+			[13, 14],
+			[14, 15],
+			[12, 16],
+			[16, 17],
+			[17, 18],
+			[16, 19],
+			[16, 20],
+			[12, 17],
+			[17, 18],
+			[11, 17],
+			[17, 18],
+			[11, 16],
+			[16, 17],
+			[17, 18],
+			[16, 19],
+			[16, 20],
+			[9, 21],
+			[9, 16],
+			[16, 17],
+			[17, 18],
+			[16, 19],
+			[16, 20],
+			[9, 22],
+			[9, 23],
+			[9, 24]
+		],
+		"circular": []
+	}
 }

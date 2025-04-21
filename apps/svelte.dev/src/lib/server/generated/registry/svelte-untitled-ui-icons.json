@@ -12,8 +12,6 @@
 	"svelte_range": "^4.0.0",
 	"last_rune_check_version": "1.0.4",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 1693552,
 	"downloads_history": [
 		{
 			"range": [1714933800000, 1715538599999],
@@ -195,5 +193,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-untitled-ui-icons",
+				"version": "1.0.4",
+				"size": 1693552
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

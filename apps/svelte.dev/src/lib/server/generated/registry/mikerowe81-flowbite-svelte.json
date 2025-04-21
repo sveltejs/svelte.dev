@@ -14,25 +14,6 @@
 	"svelte_range": "^3.55.1 || ^4.0.0 || ^5.0.0",
 	"kit_range": "^2.17.2",
 	"last_rune_check_version": "0.48.3",
-	"dependencies": [
-		{
-			"name": "@floating-ui/dom",
-			"semver": "^1.6.13"
-		},
-		{
-			"name": "apexcharts",
-			"semver": "^3.54.1"
-		},
-		{
-			"name": "flowbite",
-			"semver": "^3.1.2"
-		},
-		{
-			"name": "tailwind-merge",
-			"semver": "^3.0.1"
-		}
-	],
-	"unpacked_size": 618812,
 	"downloads_history": [
 		{
 			"range": [1729449000000, 1730053799999],
@@ -130,5 +111,266 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 32
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@mikerowe81/flowbite-svelte",
+				"version": "0.48.3",
+				"size": 618812
+			},
+			{
+				"name": "@floating-ui/dom",
+				"version": "1.6.13",
+				"size": 165945
+			},
+			{
+				"name": "@floating-ui/core",
+				"version": "1.6.9",
+				"size": 212585
+			},
+			{
+				"name": "@floating-ui/utils",
+				"version": "0.2.9",
+				"size": 64926
+			},
+			{
+				"name": "apexcharts",
+				"version": "3.54.1",
+				"size": 4666917
+			},
+			{
+				"name": "svg.easing.js",
+				"version": "2.0.0"
+			},
+			{
+				"name": "svg.js",
+				"version": "2.7.1",
+				"size": 1031533
+			},
+			{
+				"name": "svg.filter.js",
+				"version": "2.0.2"
+			},
+			{
+				"name": "svg.resize.js",
+				"version": "1.4.3",
+				"size": 32977
+			},
+			{
+				"name": "svg.select.js",
+				"version": "2.1.2"
+			},
+			{
+				"name": "svg.select.js",
+				"version": "3.0.1",
+				"size": 27053
+			},
+			{
+				"name": "svg.draggable.js",
+				"version": "2.2.2",
+				"size": 15634
+			},
+			{
+				"name": "svg.pathmorphing.js",
+				"version": "0.1.3",
+				"size": 21180
+			},
+			{
+				"name": "@yr/monotone-cubic-spline",
+				"version": "1.0.3"
+			},
+			{
+				"name": "flowbite",
+				"version": "3.1.2",
+				"size": 5444807
+			},
+			{
+				"name": "@popperjs/core",
+				"version": "2.11.8",
+				"size": 1463042
+			},
+			{
+				"name": "flowbite-datepicker",
+				"version": "1.3.2",
+				"size": 1893079
+			},
+			{
+				"name": "@rollup/plugin-node-resolve",
+				"version": "15.3.1",
+				"size": 154449
+			},
+			{
+				"name": "resolve",
+				"version": "1.22.10",
+				"size": 145619
+			},
+			{
+				"name": "is-core-module",
+				"version": "2.16.1",
+				"size": 33475
+			},
+			{
+				"name": "hasown",
+				"version": "2.0.2",
+				"size": 8765
+			},
+			{
+				"name": "function-bind",
+				"version": "1.1.2",
+				"size": 31427
+			},
+			{
+				"name": "path-parse",
+				"version": "1.0.7",
+				"size": 4511
+			},
+			{
+				"name": "supports-preserve-symlinks-flag",
+				"version": "1.0.0",
+				"size": 9178
+			},
+			{
+				"name": "deepmerge",
+				"version": "4.3.1",
+				"size": 31157
+			},
+			{
+				"name": "is-module",
+				"version": "1.0.0"
+			},
+			{
+				"name": "@types/resolve",
+				"version": "1.20.2",
+				"size": 9885
+			},
+			{
+				"name": "@rollup/pluginutils",
+				"version": "5.1.4",
+				"size": 58354
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "estree-walker",
+				"version": "2.0.2",
+				"size": 50243
+			},
+			{
+				"name": "picomatch",
+				"version": "4.0.2",
+				"size": 85237
+			},
+			{
+				"name": "flowbite",
+				"version": "2.5.2",
+				"size": 5332844
+			},
+			{
+				"name": "mini-svg-data-uri",
+				"version": "1.4.4",
+				"size": 10460
+			},
+			{
+				"name": "flowbite",
+				"version": "^2.0.0",
+				"isCircular": true,
+				"circularTarget": 33
+			},
+			{
+				"name": "postcss",
+				"version": "8.5.3",
+				"size": 201969
+			},
+			{
+				"name": "nanoid",
+				"version": "3.3.11",
+				"size": 32583
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "source-map-js",
+				"version": "1.2.1",
+				"size": 139872
+			},
+			{
+				"name": "tailwind-merge",
+				"version": "3.2.0",
+				"size": 898001
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[1, 3],
+			[0, 4],
+			[4, 5],
+			[5, 6],
+			[4, 7],
+			[7, 6],
+			[4, 8],
+			[8, 6],
+			[8, 9],
+			[9, 6],
+			[4, 10],
+			[10, 6],
+			[4, 11],
+			[11, 6],
+			[4, 12],
+			[12, 6],
+			[4, 13],
+			[0, 14],
+			[14, 15],
+			[14, 16],
+			[16, 17],
+			[17, 18],
+			[18, 19],
+			[19, 20],
+			[20, 21],
+			[18, 22],
+			[18, 23],
+			[17, 24],
+			[17, 25],
+			[17, 26],
+			[17, 27],
+			[27, 28],
+			[27, 29],
+			[27, 30],
+			[16, 31],
+			[31, 15],
+			[31, 32],
+			[31, 16],
+			[16, 17],
+			[17, 18],
+			[18, 19],
+			[19, 20],
+			[20, 21],
+			[18, 22],
+			[18, 23],
+			[17, 24],
+			[17, 25],
+			[17, 26],
+			[17, 27],
+			[27, 28],
+			[27, 29],
+			[27, 30],
+			[16, 33],
+			[14, 32],
+			[14, 34],
+			[34, 35],
+			[34, 36],
+			[34, 37],
+			[0, 38]
+		],
+		"circular": [[33, 33]]
+	}
 }

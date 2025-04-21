@@ -13,8 +13,6 @@
 	"version": "0.5.4",
 	"svelte_range": "^5.0.0||^4.0.0",
 	"last_rune_check_version": "0.5.4",
-	"dependencies": [],
-	"unpacked_size": 72554,
 	"downloads_history": [
 		{
 			"range": [1724005800000, 1724610599999],
@@ -152,5 +150,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 29
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svader",
+				"version": "0.5.4",
+				"size": 72554
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

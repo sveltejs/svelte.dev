@@ -11,13 +11,6 @@
 	"version": "1.0.2-f2",
 	"svelte_range": "^3.53.1",
 	"last_rune_check_version": "1.0.2-f2",
-	"dependencies": [
-		{
-			"name": "svelte-select",
-			"semver": "^4.4.7"
-		}
-	],
-	"unpacked_size": 109586,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -243,5 +236,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "utfpr-svelte",
+				"version": "1.0.2-f2",
+				"size": 109586
+			},
+			{
+				"name": "svelte-select",
+				"version": "4.4.7",
+				"size": 168208
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

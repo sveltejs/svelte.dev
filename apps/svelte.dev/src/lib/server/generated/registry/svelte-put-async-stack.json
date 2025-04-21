@@ -13,8 +13,6 @@
 	"version": "1.0.0",
 	"svelte_range": "^5.1.0",
 	"last_rune_check_version": "1.0.0",
-	"dependencies": [],
-	"unpacked_size": 27234,
 	"downloads_history": [
 		{
 			"range": [1718562600000, 1719167399999],
@@ -188,5 +186,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 62
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@svelte-put/async-stack",
+				"version": "1.0.0",
+				"size": 27234
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

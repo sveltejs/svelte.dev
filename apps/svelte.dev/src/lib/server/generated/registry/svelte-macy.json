@@ -14,13 +14,6 @@
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
 	"last_rune_check_version": "1.2.1",
-	"dependencies": [
-		{
-			"name": "macy",
-			"semver": "^2.5.1"
-		}
-	],
-	"unpacked_size": 9302,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -326,5 +319,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 13
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-macy",
+				"version": "1.2.1",
+				"size": 9302
+			},
+			{
+				"name": "macy",
+				"version": "2.5.1",
+				"size": 20550
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

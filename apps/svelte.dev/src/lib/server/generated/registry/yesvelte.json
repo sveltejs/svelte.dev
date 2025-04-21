@@ -14,41 +14,6 @@
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.5.0",
 	"last_rune_check_version": "0.0.2-next.0",
-	"dependencies": [
-		{
-			"name": "moment",
-			"semver": "^2.29.4"
-		},
-		{
-			"name": "swiper",
-			"semver": "^8.4.5"
-		},
-		{
-			"name": "inputmask",
-			"semver": "^5.0.7"
-		},
-		{
-			"name": "litepicker",
-			"semver": "^2.0.12"
-		},
-		{
-			"name": "tom-select",
-			"semver": "^2.2.2"
-		},
-		{
-			"name": "change-case",
-			"semver": "^4.1.2"
-		},
-		{
-			"name": "iconify-icon",
-			"semver": "^1.0.5"
-		},
-		{
-			"name": "@popperjs/core",
-			"semver": "^2.11.6"
-		}
-	],
-	"unpacked_size": 331268,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -362,5 +327,256 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 529
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "yesvelte",
+				"version": "0.0.2-next.0",
+				"size": 331268
+			},
+			{
+				"name": "moment",
+				"version": "2.30.1",
+				"size": 4350323
+			},
+			{
+				"name": "swiper",
+				"version": "8.4.7",
+				"size": 4663649
+			},
+			{
+				"name": "dom7",
+				"version": "4.0.6",
+				"size": 291816
+			},
+			{
+				"name": "ssr-window",
+				"version": "4.0.2",
+				"size": 20352
+			},
+			{
+				"name": "inputmask",
+				"version": "5.0.9",
+				"size": 1404074
+			},
+			{
+				"name": "litepicker",
+				"version": "2.0.12",
+				"size": 725979
+			},
+			{
+				"name": "tom-select",
+				"version": "2.4.3",
+				"size": 3490767
+			},
+			{
+				"name": "@orchidjs/sifter",
+				"version": "1.1.0",
+				"size": 222636
+			},
+			{
+				"name": "@orchidjs/unicode-variants",
+				"version": "1.1.2",
+				"size": 179003
+			},
+			{
+				"name": "change-case",
+				"version": "4.1.2",
+				"size": 9329
+			},
+			{
+				"name": "tslib",
+				"version": "2.8.1",
+				"size": 90359
+			},
+			{
+				"name": "no-case",
+				"version": "3.0.4",
+				"size": 25128
+			},
+			{
+				"name": "lower-case",
+				"version": "2.0.2",
+				"size": 17661
+			},
+			{
+				"name": "dot-case",
+				"version": "3.0.4",
+				"size": 10481
+			},
+			{
+				"name": "path-case",
+				"version": "3.0.4",
+				"size": 10136
+			},
+			{
+				"name": "camel-case",
+				"version": "4.1.2",
+				"size": 14251
+			},
+			{
+				"name": "pascal-case",
+				"version": "3.1.2",
+				"size": 14764
+			},
+			{
+				"name": "param-case",
+				"version": "3.0.4",
+				"size": 10221
+			},
+			{
+				"name": "snake-case",
+				"version": "3.0.4",
+				"size": 10360
+			},
+			{
+				"name": "header-case",
+				"version": "2.0.4",
+				"size": 10288
+			},
+			{
+				"name": "capital-case",
+				"version": "1.0.4",
+				"size": 11593
+			},
+			{
+				"name": "upper-case-first",
+				"version": "2.0.2",
+				"size": 8856
+			},
+			{
+				"name": "constant-case",
+				"version": "3.0.4",
+				"size": 11086
+			},
+			{
+				"name": "upper-case",
+				"version": "2.0.2",
+				"size": 15640
+			},
+			{
+				"name": "sentence-case",
+				"version": "3.0.4",
+				"size": 12161
+			},
+			{
+				"name": "iconify-icon",
+				"version": "1.0.8",
+				"size": 236614
+			},
+			{
+				"name": "@iconify/types",
+				"version": "2.0.0",
+				"size": 25671
+			},
+			{
+				"name": "@popperjs/core",
+				"version": "2.11.8",
+				"size": 1463042
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[3, 4],
+			[2, 4],
+			[0, 5],
+			[0, 6],
+			[0, 7],
+			[7, 8],
+			[8, 9],
+			[7, 9],
+			[0, 10],
+			[10, 11],
+			[10, 12],
+			[12, 13],
+			[13, 11],
+			[12, 11],
+			[10, 14],
+			[14, 12],
+			[12, 13],
+			[13, 11],
+			[12, 11],
+			[14, 11],
+			[10, 15],
+			[15, 14],
+			[14, 12],
+			[12, 13],
+			[13, 11],
+			[12, 11],
+			[14, 11],
+			[15, 11],
+			[10, 16],
+			[16, 17],
+			[17, 12],
+			[12, 13],
+			[13, 11],
+			[12, 11],
+			[17, 11],
+			[16, 11],
+			[10, 18],
+			[18, 14],
+			[14, 12],
+			[12, 13],
+			[13, 11],
+			[12, 11],
+			[14, 11],
+			[18, 11],
+			[10, 19],
+			[19, 14],
+			[14, 12],
+			[12, 13],
+			[13, 11],
+			[12, 11],
+			[14, 11],
+			[19, 11],
+			[10, 20],
+			[20, 21],
+			[21, 12],
+			[12, 13],
+			[13, 11],
+			[12, 11],
+			[21, 11],
+			[21, 22],
+			[22, 11],
+			[20, 11],
+			[10, 17],
+			[17, 12],
+			[12, 13],
+			[13, 11],
+			[12, 11],
+			[17, 11],
+			[10, 21],
+			[21, 12],
+			[12, 13],
+			[13, 11],
+			[12, 11],
+			[21, 11],
+			[21, 22],
+			[22, 11],
+			[10, 23],
+			[23, 12],
+			[12, 13],
+			[13, 11],
+			[12, 11],
+			[23, 11],
+			[23, 24],
+			[24, 11],
+			[10, 25],
+			[25, 12],
+			[12, 13],
+			[13, 11],
+			[12, 11],
+			[25, 11],
+			[25, 22],
+			[22, 11],
+			[0, 26],
+			[26, 27],
+			[0, 28]
+		],
+		"circular": []
+	}
 }

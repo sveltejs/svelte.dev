@@ -12,37 +12,6 @@
 	"version": "2.2.29",
 	"svelte_range": "^3.0.0 || ^4.0.0",
 	"last_rune_check_version": "2.2.29",
-	"dependencies": [
-		{
-			"name": "eventsource-parser",
-			"semver": "1.0.0"
-		},
-		{
-			"name": "nanoid",
-			"semver": "3.3.6"
-		},
-		{
-			"name": "solid-swr-store",
-			"semver": "0.10.7"
-		},
-		{
-			"name": "sswr",
-			"semver": "2.0.0"
-		},
-		{
-			"name": "swr",
-			"semver": "2.2.0"
-		},
-		{
-			"name": "swr-store",
-			"semver": "0.10.6"
-		},
-		{
-			"name": "swrv",
-			"semver": "1.0.4"
-		}
-	],
-	"unpacked_size": 50429,
 	"downloads_history": [
 		{
 			"range": [1702233000000, 1702837799999],
@@ -232,5 +201,78 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@khulnasoft/ai-sdk",
+				"version": "2.2.29",
+				"size": 50429
+			},
+			{
+				"name": "eventsource-parser",
+				"version": "1.0.0",
+				"size": 46472
+			},
+			{
+				"name": "nanoid",
+				"version": "3.3.6",
+				"size": 21685
+			},
+			{
+				"name": "solid-swr-store",
+				"version": "0.10.7",
+				"size": 17520
+			},
+			{
+				"name": "sswr",
+				"version": "2.0.0",
+				"size": 26884
+			},
+			{
+				"name": "swrev",
+				"version": "4.0.0",
+				"size": 31743
+			},
+			{
+				"name": "swr",
+				"version": "2.2.0",
+				"size": 262895
+			},
+			{
+				"name": "use-sync-external-store",
+				"version": "1.5.0",
+				"size": 28186
+			},
+			{
+				"name": "swr-store",
+				"version": "0.10.6",
+				"size": 134664
+			},
+			{
+				"name": "dequal",
+				"version": "2.0.3",
+				"size": 14229
+			},
+			{
+				"name": "swrv",
+				"version": "1.0.4",
+				"size": 146908
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[0, 4],
+			[4, 5],
+			[0, 6],
+			[6, 7],
+			[0, 8],
+			[8, 9],
+			[0, 10]
+		],
+		"circular": []
+	}
 }

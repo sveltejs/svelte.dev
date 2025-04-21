@@ -13,21 +13,6 @@
 	"svelte_range": "^3.53.1",
 	"last_rune_check_version": "1.0.1",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "graphql-combine-query",
-			"semver": "^1.2.4"
-		},
-		{
-			"name": "lodash-es",
-			"semver": "^4.17.21"
-		},
-		{
-			"name": "zen-observable-ts",
-			"semver": "^1.1.0"
-		}
-	],
-	"unpacked_size": 49866,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -261,5 +246,48 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-apollo-wrappers",
+				"version": "1.0.1",
+				"size": 49866
+			},
+			{
+				"name": "graphql-combine-query",
+				"version": "1.2.4",
+				"size": 31764
+			},
+			{
+				"name": "lodash-es",
+				"version": "4.17.21",
+				"size": 636080
+			},
+			{
+				"name": "zen-observable-ts",
+				"version": "1.1.0",
+				"size": 20890
+			},
+			{
+				"name": "@types/zen-observable",
+				"version": "0.8.3",
+				"size": 10121
+			},
+			{
+				"name": "zen-observable",
+				"version": "0.8.15",
+				"size": 72504
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[3, 4],
+			[3, 5]
+		],
+		"circular": []
+	}
 }

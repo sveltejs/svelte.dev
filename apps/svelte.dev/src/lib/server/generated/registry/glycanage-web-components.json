@@ -13,17 +13,6 @@
 	"version": "1.135.0",
 	"svelte_range": "4.1.1",
 	"last_rune_check_version": "1.135.0",
-	"dependencies": [
-		{
-			"name": "echarts",
-			"semver": "5.4.3"
-		},
-		{
-			"name": "echarts-stat",
-			"semver": "^1.2.0"
-		}
-	],
-	"unpacked_size": 536288,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -337,5 +326,43 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 54
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@glycanage/web-components",
+				"version": "1.135.0",
+				"size": 536288
+			},
+			{
+				"name": "echarts",
+				"version": "5.4.3",
+				"size": 41691873
+			},
+			{
+				"name": "tslib",
+				"version": "2.3.0",
+				"size": 39032
+			},
+			{
+				"name": "zrender",
+				"version": "5.4.4",
+				"size": 4104033
+			},
+			{
+				"name": "echarts-stat",
+				"version": "1.2.0",
+				"size": 1100595
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[3, 2],
+			[0, 4]
+		],
+		"circular": []
+	}
 }

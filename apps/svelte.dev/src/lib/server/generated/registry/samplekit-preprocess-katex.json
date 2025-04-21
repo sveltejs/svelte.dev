@@ -13,21 +13,6 @@
 	"version": "2.0.1",
 	"svelte_range": "^5.0.0",
 	"last_rune_check_version": "2.0.1",
-	"dependencies": [
-		{
-			"name": "estree-walker",
-			"semver": "^3.0.3"
-		},
-		{
-			"name": "katex",
-			"semver": "^0.16.11"
-		},
-		{
-			"name": "magic-string",
-			"semver": "^0.30.12"
-		}
-	],
-	"unpacked_size": 1103253,
 	"downloads_history": [
 		{
 			"range": [1724610600000, 1725215399999],
@@ -149,5 +134,54 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 13
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@samplekit/preprocess-katex",
+				"version": "2.0.1",
+				"size": 1103253
+			},
+			{
+				"name": "estree-walker",
+				"version": "3.0.3",
+				"size": 17599
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "katex",
+				"version": "0.16.22",
+				"size": 3984019
+			},
+			{
+				"name": "commander",
+				"version": "8.3.0",
+				"size": 151267
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[3, 4],
+			[0, 5],
+			[5, 6]
+		],
+		"circular": []
+	}
 }

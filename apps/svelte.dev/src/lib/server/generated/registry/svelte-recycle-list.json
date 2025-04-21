@@ -13,8 +13,6 @@
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "1.0.0-beta.1",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 15424,
 	"downloads_history": [
 		{
 			"range": [1739730600000, 1740335399999],
@@ -36,5 +34,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 3
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-recycle-list",
+				"version": "1.0.0-beta.1",
+				"size": 15424
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

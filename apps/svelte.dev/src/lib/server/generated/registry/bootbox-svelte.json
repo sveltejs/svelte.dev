@@ -13,13 +13,6 @@
 	"version": "1.0.9",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "1.0.9",
-	"dependencies": [
-		{
-			"name": "sveltestrap",
-			"semver": "*"
-		}
-	],
-	"unpacked_size": 421695,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -273,5 +266,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "bootbox-svelte",
+				"version": "1.0.9",
+				"size": 421695
+			},
+			{
+				"name": "sveltestrap",
+				"version": "5.11.3",
+				"size": 1502651
+			},
+			{
+				"name": "@popperjs/core",
+				"version": "2.11.8",
+				"size": 1463042
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2]
+		],
+		"circular": []
+	}
 }

@@ -13,13 +13,6 @@
 	"version": "0.3.4",
 	"svelte_range": "^3.29.0",
 	"last_rune_check_version": "0.3.4",
-	"dependencies": [
-		{
-			"name": "svelte-keyboard",
-			"semver": "0.2.0"
-		}
-	],
-	"unpacked_size": 1418001,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -329,5 +322,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 23
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-crossword",
+				"version": "0.3.4",
+				"size": 1418001
+			},
+			{
+				"name": "svelte-keyboard",
+				"version": "0.2.0",
+				"size": 180119
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

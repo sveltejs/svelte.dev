@@ -13,12 +13,22 @@
 	"last_rune_check_version": "0.0.11",
 	"version": "0.0.11",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 15883,
 	"downloads_history": [
 		{
 			"range": [1743964200000, 1744568999999],
 			"value": 380
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "updatelogic",
+				"version": "0.0.11",
+				"size": 15883
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

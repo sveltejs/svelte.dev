@@ -14,13 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.4",
 	"last_rune_check_version": "1.0.2",
-	"dependencies": [
-		{
-			"name": "styled-qr-code",
-			"semver": "^1.0.0"
-		}
-	],
-	"unpacked_size": 3211,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -334,5 +327,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 103
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-qrcode-action",
+				"version": "1.0.2",
+				"size": 3211
+			},
+			{
+				"name": "styled-qr-code",
+				"version": "1.0.0",
+				"size": 332271
+			},
+			{
+				"name": "qrcode-generator",
+				"version": "1.4.4",
+				"size": 116754
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2]
+		],
+		"circular": []
+	}
 }

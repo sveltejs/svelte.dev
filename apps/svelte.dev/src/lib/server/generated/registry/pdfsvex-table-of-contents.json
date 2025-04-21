@@ -12,13 +12,6 @@
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "0.1.5",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "@pdfsvex/dynamic-page-number",
-			"semver": "0.0.15"
-		}
-	],
-	"unpacked_size": 119896,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -276,5 +269,42 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 8
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@pdfsvex/table-of-contents",
+				"version": "0.1.5",
+				"size": 119896
+			},
+			{
+				"name": "@pdfsvex/dynamic-page-number",
+				"version": "0.0.15",
+				"size": 36939
+			},
+			{
+				"name": "@pdfsvex/pdfsvex",
+				"version": "0.1.7",
+				"size": 118910
+			},
+			{
+				"name": "uid",
+				"version": "2.0.2",
+				"size": 15467
+			},
+			{
+				"name": "@lukeed/csprng",
+				"version": "1.1.0",
+				"size": 5968
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[3, 4]
+		],
+		"circular": []
+	}
 }

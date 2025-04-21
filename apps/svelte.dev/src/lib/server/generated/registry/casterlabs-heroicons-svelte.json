@@ -14,8 +14,6 @@
 	"last_rune_check_version": "2.2.1",
 	"version": "2.2.1",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 1596936,
 	"downloads_history": [
 		{
 			"range": [1743359400000, 1743964199999],
@@ -25,5 +23,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 15
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@casterlabs/heroicons-svelte",
+				"version": "2.2.1",
+				"size": 1596936
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

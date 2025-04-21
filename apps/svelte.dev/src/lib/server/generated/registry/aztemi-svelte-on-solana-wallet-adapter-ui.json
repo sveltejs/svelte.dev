@@ -14,29 +14,6 @@
 	"svelte_range": "^3.46.2",
 	"kit_range": "next",
 	"last_rune_check_version": "1.1.5",
-	"dependencies": [
-		{
-			"name": "@solana-mobile/wallet-adapter-mobile",
-			"semver": "^2.1.2"
-		},
-		{
-			"name": "@solana/wallet-standard-util",
-			"semver": "^1.1.1"
-		},
-		{
-			"name": "@solana/wallet-standard-wallet-adapter-base",
-			"semver": "^1.1.2"
-		},
-		{
-			"name": "@wallet-standard/app",
-			"semver": "^1.0.1"
-		},
-		{
-			"name": "eventemitter3",
-			"semver": "^4.0.7"
-		}
-	],
-	"unpacked_size": 55657,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -346,5 +323,505 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@aztemi/svelte-on-solana-wallet-adapter-ui",
+				"version": "1.1.5",
+				"size": 55657
+			},
+			{
+				"name": "@solana-mobile/wallet-adapter-mobile",
+				"version": "2.1.5",
+				"size": 341985
+			},
+			{
+				"name": "qrcode",
+				"version": "1.5.4",
+				"size": 135364
+			},
+			{
+				"name": "dijkstrajs",
+				"version": "1.0.3",
+				"size": 10798
+			},
+			{
+				"name": "pngjs",
+				"version": "5.0.0",
+				"size": 1021215
+			},
+			{
+				"name": "yargs",
+				"version": "15.4.1",
+				"size": 230562
+			},
+			{
+				"name": "y18n",
+				"version": "4.0.3",
+				"size": 10991
+			},
+			{
+				"name": "cliui",
+				"version": "6.0.0",
+				"size": 14873
+			},
+			{
+				"name": "wrap-ansi",
+				"version": "6.2.0",
+				"size": 9500
+			},
+			{
+				"name": "ansi-styles",
+				"version": "4.3.0",
+				"size": 16978
+			},
+			{
+				"name": "color-convert",
+				"version": "2.0.1",
+				"size": 27189
+			},
+			{
+				"name": "color-name",
+				"version": "1.1.4",
+				"size": 6693
+			},
+			{
+				"name": "string-width",
+				"version": "4.2.3",
+				"size": 5161
+			},
+			{
+				"name": "strip-ansi",
+				"version": "6.0.1",
+				"size": 4029
+			},
+			{
+				"name": "ansi-regex",
+				"version": "5.0.1",
+				"size": 5609
+			},
+			{
+				"name": "emoji-regex",
+				"version": "8.0.0",
+				"size": 48255
+			},
+			{
+				"name": "is-fullwidth-code-point",
+				"version": "3.0.0",
+				"size": 4994
+			},
+			{
+				"name": "find-up",
+				"version": "4.1.0",
+				"size": 11611
+			},
+			{
+				"name": "locate-path",
+				"version": "5.0.0",
+				"size": 6584
+			},
+			{
+				"name": "p-locate",
+				"version": "4.1.0",
+				"size": 7285
+			},
+			{
+				"name": "p-limit",
+				"version": "2.3.0",
+				"size": 7390
+			},
+			{
+				"name": "p-try",
+				"version": "2.2.0",
+				"size": 4371
+			},
+			{
+				"name": "path-exists",
+				"version": "4.0.0",
+				"size": 3919
+			},
+			{
+				"name": "decamelize",
+				"version": "1.2.0"
+			},
+			{
+				"name": "set-blocking",
+				"version": "2.0.0"
+			},
+			{
+				"name": "which-module",
+				"version": "2.0.1",
+				"size": 4036
+			},
+			{
+				"name": "yargs-parser",
+				"version": "18.1.3",
+				"size": 71482
+			},
+			{
+				"name": "camelcase",
+				"version": "5.3.1",
+				"size": 7447
+			},
+			{
+				"name": "get-caller-file",
+				"version": "2.0.5",
+				"size": 4719
+			},
+			{
+				"name": "require-directory",
+				"version": "2.1.1"
+			},
+			{
+				"name": "require-main-filename",
+				"version": "2.0.0",
+				"size": 3928
+			},
+			{
+				"name": "js-base64",
+				"version": "3.7.7",
+				"size": 38601
+			},
+			{
+				"name": "@solana/wallet-adapter-base",
+				"version": "0.9.24",
+				"size": 96759
+			},
+			{
+				"name": "eventemitter3",
+				"version": "4.0.7",
+				"size": 37967
+			},
+			{
+				"name": "@wallet-standard/base",
+				"version": "1.1.0",
+				"size": 43736
+			},
+			{
+				"name": "@wallet-standard/features",
+				"version": "1.1.0",
+				"size": 41150
+			},
+			{
+				"name": "@solana/wallet-standard-features",
+				"version": "1.3.0",
+				"size": 50417
+			},
+			{
+				"name": "@solana-mobile/mobile-wallet-adapter-protocol-web3js",
+				"version": "2.1.5",
+				"size": 72458
+			},
+			{
+				"name": "bs58",
+				"version": "5.0.0",
+				"size": 6213
+			},
+			{
+				"name": "base-x",
+				"version": "4.0.1",
+				"size": 9606
+			},
+			{
+				"name": "@solana-mobile/mobile-wallet-adapter-protocol",
+				"version": "2.1.5",
+				"size": 343678
+			},
+			{
+				"name": "@wallet-standard/core",
+				"version": "1.1.1",
+				"size": 14946
+			},
+			{
+				"name": "@wallet-standard/app",
+				"version": "1.1.0",
+				"size": 47755
+			},
+			{
+				"name": "@wallet-standard/errors",
+				"version": "0.1.1",
+				"size": 114333
+			},
+			{
+				"name": "chalk",
+				"version": "5.4.1",
+				"size": 44242
+			},
+			{
+				"name": "commander",
+				"version": "13.1.0",
+				"size": 200514
+			},
+			{
+				"name": "@wallet-standard/wallet",
+				"version": "1.1.0",
+				"size": 58142
+			},
+			{
+				"name": "@solana/wallet-standard",
+				"version": "1.1.4",
+				"size": 14213
+			},
+			{
+				"name": "@solana/wallet-standard-core",
+				"version": "1.1.2",
+				"size": 14505
+			},
+			{
+				"name": "@solana/wallet-standard-util",
+				"version": "1.1.2",
+				"size": 68989
+			},
+			{
+				"name": "@noble/curves",
+				"version": "1.8.2",
+				"size": 1645456
+			},
+			{
+				"name": "@noble/hashes",
+				"version": "1.7.2",
+				"size": 1100967
+			},
+			{
+				"name": "@solana/wallet-standard-chains",
+				"version": "1.1.1",
+				"size": 18043
+			},
+			{
+				"name": "@solana/wallet-standard-wallet-adapter",
+				"version": "1.1.4",
+				"size": 14333
+			},
+			{
+				"name": "@solana/wallet-standard-wallet-adapter-base",
+				"version": "1.1.4",
+				"size": 206844
+			},
+			{
+				"name": "@solana/wallet-standard-wallet-adapter-react",
+				"version": "1.1.4",
+				"size": 29275
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[2, 4],
+			[2, 5],
+			[5, 6],
+			[5, 7],
+			[7, 8],
+			[8, 9],
+			[9, 10],
+			[10, 11],
+			[8, 12],
+			[12, 13],
+			[13, 14],
+			[12, 15],
+			[12, 16],
+			[8, 13],
+			[13, 14],
+			[7, 13],
+			[13, 14],
+			[7, 12],
+			[12, 13],
+			[13, 14],
+			[12, 15],
+			[12, 16],
+			[5, 17],
+			[17, 18],
+			[18, 19],
+			[19, 20],
+			[20, 21],
+			[17, 22],
+			[5, 23],
+			[5, 24],
+			[5, 12],
+			[12, 13],
+			[13, 14],
+			[12, 15],
+			[12, 16],
+			[5, 25],
+			[5, 26],
+			[26, 27],
+			[26, 23],
+			[5, 28],
+			[5, 29],
+			[5, 30],
+			[1, 31],
+			[1, 32],
+			[32, 33],
+			[32, 34],
+			[32, 35],
+			[35, 34],
+			[32, 36],
+			[36, 34],
+			[36, 35],
+			[35, 34],
+			[1, 36],
+			[36, 34],
+			[36, 35],
+			[35, 34],
+			[1, 37],
+			[37, 38],
+			[38, 39],
+			[37, 31],
+			[37, 40],
+			[40, 31],
+			[40, 41],
+			[41, 42],
+			[42, 34],
+			[41, 34],
+			[41, 43],
+			[43, 44],
+			[43, 45],
+			[41, 35],
+			[35, 34],
+			[41, 46],
+			[46, 34],
+			[40, 47],
+			[47, 48],
+			[48, 49],
+			[49, 50],
+			[50, 51],
+			[49, 52],
+			[52, 34],
+			[49, 36],
+			[36, 34],
+			[36, 35],
+			[35, 34],
+			[48, 52],
+			[52, 34],
+			[48, 36],
+			[36, 34],
+			[36, 35],
+			[35, 34],
+			[47, 53],
+			[53, 54],
+			[54, 42],
+			[42, 34],
+			[54, 34],
+			[54, 46],
+			[46, 34],
+			[54, 35],
+			[35, 34],
+			[54, 32],
+			[32, 33],
+			[32, 34],
+			[32, 35],
+			[35, 34],
+			[32, 36],
+			[36, 34],
+			[36, 35],
+			[35, 34],
+			[54, 49],
+			[49, 50],
+			[50, 51],
+			[49, 52],
+			[52, 34],
+			[49, 36],
+			[36, 34],
+			[36, 35],
+			[35, 34],
+			[54, 52],
+			[52, 34],
+			[54, 36],
+			[36, 34],
+			[36, 35],
+			[35, 34],
+			[53, 55],
+			[55, 42],
+			[42, 34],
+			[55, 34],
+			[55, 54],
+			[54, 42],
+			[42, 34],
+			[54, 34],
+			[54, 46],
+			[46, 34],
+			[54, 35],
+			[35, 34],
+			[54, 32],
+			[32, 33],
+			[32, 34],
+			[32, 35],
+			[35, 34],
+			[32, 36],
+			[36, 34],
+			[36, 35],
+			[35, 34],
+			[54, 49],
+			[49, 50],
+			[50, 51],
+			[49, 52],
+			[52, 34],
+			[49, 36],
+			[36, 34],
+			[36, 35],
+			[35, 34],
+			[54, 52],
+			[52, 34],
+			[54, 36],
+			[36, 34],
+			[36, 35],
+			[35, 34],
+			[40, 49],
+			[49, 50],
+			[50, 51],
+			[49, 52],
+			[52, 34],
+			[49, 36],
+			[36, 34],
+			[36, 35],
+			[35, 34],
+			[0, 49],
+			[49, 50],
+			[50, 51],
+			[49, 52],
+			[52, 34],
+			[49, 36],
+			[36, 34],
+			[36, 35],
+			[35, 34],
+			[0, 54],
+			[54, 42],
+			[42, 34],
+			[54, 34],
+			[54, 46],
+			[46, 34],
+			[54, 35],
+			[35, 34],
+			[54, 32],
+			[32, 33],
+			[32, 34],
+			[32, 35],
+			[35, 34],
+			[32, 36],
+			[36, 34],
+			[36, 35],
+			[35, 34],
+			[54, 49],
+			[49, 50],
+			[50, 51],
+			[49, 52],
+			[52, 34],
+			[49, 36],
+			[36, 34],
+			[36, 35],
+			[35, 34],
+			[54, 52],
+			[52, 34],
+			[54, 36],
+			[36, 34],
+			[36, 35],
+			[35, 34],
+			[0, 42],
+			[42, 34],
+			[0, 33]
+		],
+		"circular": []
+	}
 }

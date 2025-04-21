@@ -13,25 +13,6 @@
 	"version": "0.9.0",
 	"svelte_range": "^3.23.2",
 	"last_rune_check_version": "0.9.0",
-	"dependencies": [
-		{
-			"name": "dayjs",
-			"semver": "^1.8.28"
-		},
-		{
-			"name": "simplebar",
-			"semver": "^5.2.0"
-		},
-		{
-			"name": "sirv-cli",
-			"semver": "^0.4.4"
-		},
-		{
-			"name": "tippy.js",
-			"semver": "^6.2.3"
-		}
-	],
-	"unpacked_size": 348479,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -273,5 +254,139 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 11
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelponents",
+				"version": "0.9.0",
+				"size": 348479
+			},
+			{
+				"name": "dayjs",
+				"version": "1.11.13",
+				"size": 670277
+			},
+			{
+				"name": "simplebar",
+				"version": "5.3.9",
+				"size": 538755
+			},
+			{
+				"name": "core-js",
+				"version": "3.41.0",
+				"size": 1265563
+			},
+			{
+				"name": "can-use-dom",
+				"version": "0.1.0"
+			},
+			{
+				"name": "lodash.memoize",
+				"version": "4.1.2"
+			},
+			{
+				"name": "lodash.debounce",
+				"version": "4.0.8"
+			},
+			{
+				"name": "lodash.throttle",
+				"version": "4.1.1"
+			},
+			{
+				"name": "@juggle/resize-observer",
+				"version": "3.4.0",
+				"size": 73672
+			},
+			{
+				"name": "sirv-cli",
+				"version": "0.4.6",
+				"size": 8101
+			},
+			{
+				"name": "sade",
+				"version": "1.8.1",
+				"size": 31545
+			},
+			{
+				"name": "mri",
+				"version": "1.2.0",
+				"size": 13261
+			},
+			{
+				"name": "sirv",
+				"version": "0.4.6",
+				"size": 10106
+			},
+			{
+				"name": "mime",
+				"version": "2.6.0",
+				"size": 60114
+			},
+			{
+				"name": "@polka/url",
+				"version": "0.5.0",
+				"size": 3717
+			},
+			{
+				"name": "kleur",
+				"version": "3.0.3",
+				"size": 9893
+			},
+			{
+				"name": "get-port",
+				"version": "3.2.0"
+			},
+			{
+				"name": "tinydate",
+				"version": "1.3.0",
+				"size": 7410
+			},
+			{
+				"name": "local-access",
+				"version": "1.1.0",
+				"size": 4960
+			},
+			{
+				"name": "console-clear",
+				"version": "1.1.1",
+				"size": 2457
+			},
+			{
+				"name": "tippy.js",
+				"version": "6.3.7",
+				"size": 2067120
+			},
+			{
+				"name": "@popperjs/core",
+				"version": "2.11.8",
+				"size": 1463042
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[2, 4],
+			[2, 5],
+			[2, 6],
+			[2, 7],
+			[2, 8],
+			[0, 9],
+			[9, 10],
+			[10, 11],
+			[9, 12],
+			[12, 13],
+			[12, 14],
+			[9, 15],
+			[9, 16],
+			[9, 17],
+			[9, 18],
+			[9, 19],
+			[0, 20],
+			[20, 21]
+		],
+		"circular": []
+	}
 }

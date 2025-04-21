@@ -13,13 +13,6 @@
 	"version": "0.21.0",
 	"svelte_range": "^3.43.0",
 	"last_rune_check_version": "0.21.0",
-	"dependencies": [
-		{
-			"name": "svelte-hmr",
-			"semver": "^0.14.7"
-		}
-	],
-	"unpacked_size": 11403,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -253,5 +246,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 14
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@reboost/plugin-svelte",
+				"version": "0.21.0",
+				"size": 11403
+			},
+			{
+				"name": "svelte-hmr",
+				"version": "0.14.12",
+				"size": 79767
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

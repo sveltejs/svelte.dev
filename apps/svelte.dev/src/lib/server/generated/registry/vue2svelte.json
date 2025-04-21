@@ -13,25 +13,6 @@
 	"version": "0.0.11",
 	"svelte_range": "^3.6.2",
 	"last_rune_check_version": "0.0.11",
-	"dependencies": [
-		{
-			"name": "prismjs",
-			"semver": "^1.17.1"
-		},
-		{
-			"name": "svelte",
-			"semver": "^3.6.2"
-		},
-		{
-			"name": "vue",
-			"semver": "^2.6.10"
-		},
-		{
-			"name": "vue-prism-editor",
-			"semver": "^0.2.1"
-		}
-	],
-	"unpacked_size": 748164,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -265,5 +246,143 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "vue2svelte",
+				"version": "0.0.11",
+				"size": 748164
+			},
+			{
+				"name": "prismjs",
+				"version": "1.30.0",
+				"size": 2052735
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			},
+			{
+				"name": "vue",
+				"version": "2.7.16",
+				"size": 4511532
+			},
+			{
+				"name": "csstype",
+				"version": "3.1.3",
+				"size": 1246074
+			},
+			{
+				"name": "@vue/compiler-sfc",
+				"version": "2.7.16",
+				"size": 675677
+			},
+			{
+				"name": "postcss",
+				"version": "8.5.3",
+				"size": 201969
+			},
+			{
+				"name": "nanoid",
+				"version": "3.3.11",
+				"size": 32583
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "source-map-js",
+				"version": "1.2.1",
+				"size": 139872
+			},
+			{
+				"name": "source-map",
+				"version": "0.6.1"
+			},
+			{
+				"name": "@babel/parser",
+				"version": "7.27.0",
+				"size": 1924962
+			},
+			{
+				"name": "@babel/types",
+				"version": "7.27.0",
+				"size": 2583295
+			},
+			{
+				"name": "@babel/helper-string-parser",
+				"version": "7.25.9",
+				"size": 31816
+			},
+			{
+				"name": "@babel/helper-validator-identifier",
+				"version": "7.25.9",
+				"size": 48330
+			},
+			{
+				"name": "vue-prism-editor",
+				"version": "0.2.1",
+				"size": 477193
+			},
+			{
+				"name": "dom-iterator",
+				"version": "1.0.2",
+				"size": 27606
+			},
+			{
+				"name": "component-props",
+				"version": "1.1.1"
+			},
+			{
+				"name": "component-xor",
+				"version": "0.0.4"
+			},
+			{
+				"name": "escape-html",
+				"version": "1.0.3"
+			},
+			{
+				"name": "unescape",
+				"version": "1.0.1"
+			},
+			{
+				"name": "extend-shallow",
+				"version": "2.0.1"
+			},
+			{
+				"name": "is-extendable",
+				"version": "0.1.1"
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[3, 4],
+			[3, 5],
+			[5, 6],
+			[6, 7],
+			[6, 8],
+			[6, 9],
+			[5, 10],
+			[5, 11],
+			[11, 12],
+			[12, 13],
+			[12, 14],
+			[0, 15],
+			[15, 16],
+			[16, 17],
+			[16, 18],
+			[15, 19],
+			[15, 20],
+			[20, 21],
+			[21, 22]
+		],
+		"circular": []
+	}
 }

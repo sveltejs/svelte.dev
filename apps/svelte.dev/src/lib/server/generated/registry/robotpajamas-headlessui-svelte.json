@@ -14,8 +14,6 @@
 	"svelte_range": ">=5",
 	"kit_range": "^2.9.0",
 	"last_rune_check_version": "2.2.0-beta.3",
-	"dependencies": [],
-	"unpacked_size": 72426,
 	"downloads_history": [
 		{
 			"range": [1733682600000, 1734287399999],
@@ -81,5 +79,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@robotpajamas/headlessui-svelte",
+				"version": "2.2.0-beta.3",
+				"size": 72426
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

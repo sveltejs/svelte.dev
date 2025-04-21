@@ -12,29 +12,6 @@
 	"svelte_range": "4.*",
 	"last_rune_check_version": "0.0.5",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "ts-clone-node",
-			"semver": "^2.0.4"
-		},
-		{
-			"name": "astring",
-			"semver": "^1.8.6"
-		},
-		{
-			"name": "estree-walker",
-			"semver": "^3.0.3"
-		},
-		{
-			"name": "magic-string",
-			"semver": "^0.30.0"
-		},
-		{
-			"name": "postcss",
-			"semver": "^8.4.24"
-		}
-	],
-	"unpacked_size": 171809,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -280,5 +257,90 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 3
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte2tsx-component",
+				"version": "0.0.5",
+				"size": 171809
+			},
+			{
+				"name": "ts-clone-node",
+				"version": "2.0.4",
+				"size": 902161
+			},
+			{
+				"name": "compatfactory",
+				"version": "2.0.9",
+				"size": 589621
+			},
+			{
+				"name": "helpertypes",
+				"version": "0.0.19",
+				"size": 35408
+			},
+			{
+				"name": "astring",
+				"version": "1.9.0",
+				"size": 273164
+			},
+			{
+				"name": "estree-walker",
+				"version": "3.0.3",
+				"size": 17599
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "postcss",
+				"version": "8.5.3",
+				"size": 201969
+			},
+			{
+				"name": "nanoid",
+				"version": "3.3.11",
+				"size": 32583
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "source-map-js",
+				"version": "1.2.1",
+				"size": 139872
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[0, 4],
+			[0, 5],
+			[5, 6],
+			[0, 7],
+			[7, 8],
+			[0, 9],
+			[9, 10],
+			[9, 11],
+			[9, 12]
+		],
+		"circular": []
+	}
 }

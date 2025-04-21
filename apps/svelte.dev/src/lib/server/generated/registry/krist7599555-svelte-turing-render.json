@@ -13,17 +13,6 @@
 	"kit_range": "^1.22.3",
 	"last_rune_check_version": "2.2.4",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "build",
-			"semver": "^0.1.4"
-		},
-		{
-			"name": "svelte",
-			"semver": "^4.0.5"
-		}
-	],
-	"unpacked_size": 12615,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -261,5 +250,437 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 19
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@krist7599555/svelte-turing-render",
+				"version": "2.2.4",
+				"size": 12615
+			},
+			{
+				"name": "build",
+				"version": "0.1.4"
+			},
+			{
+				"name": "jsmin",
+				"version": "1.0.1"
+			},
+			{
+				"name": "cssmin",
+				"version": "0.3.2"
+			},
+			{
+				"name": "walker",
+				"version": "1.0.8",
+				"size": 5799
+			},
+			{
+				"name": "makeerror",
+				"version": "1.0.12",
+				"size": 6073
+			},
+			{
+				"name": "tmpl",
+				"version": "1.0.5",
+				"size": 2774
+			},
+			{
+				"name": "wrench",
+				"version": "1.3.9"
+			},
+			{
+				"name": "winston",
+				"version": "3.17.0",
+				"size": 271047
+			},
+			{
+				"name": "@dabh/diagnostics",
+				"version": "2.0.3",
+				"size": 30135
+			},
+			{
+				"name": "colorspace",
+				"version": "1.1.4",
+				"size": 3582
+			},
+			{
+				"name": "color",
+				"version": "3.2.1",
+				"size": 16581
+			},
+			{
+				"name": "color-string",
+				"version": "1.9.1",
+				"size": 10115
+			},
+			{
+				"name": "color-name",
+				"version": "1.1.4",
+				"size": 6693
+			},
+			{
+				"name": "simple-swizzle",
+				"version": "0.2.2"
+			},
+			{
+				"name": "is-arrayish",
+				"version": "0.3.2",
+				"size": 54720
+			},
+			{
+				"name": "color-convert",
+				"version": "1.9.3",
+				"size": 26964
+			},
+			{
+				"name": "color-name",
+				"version": "1.1.3"
+			},
+			{
+				"name": "text-hex",
+				"version": "1.0.0",
+				"size": 2718
+			},
+			{
+				"name": "enabled",
+				"version": "2.0.0",
+				"size": 5893
+			},
+			{
+				"name": "kuler",
+				"version": "2.0.0",
+				"size": 6094
+			},
+			{
+				"name": "@colors/colors",
+				"version": "1.6.0",
+				"size": 41466
+			},
+			{
+				"name": "async",
+				"version": "3.2.6",
+				"size": 807741
+			},
+			{
+				"name": "is-stream",
+				"version": "2.0.1",
+				"size": 5927
+			},
+			{
+				"name": "logform",
+				"version": "2.7.0",
+				"size": 110996
+			},
+			{
+				"name": "@types/triple-beam",
+				"version": "1.3.5",
+				"size": 3361
+			},
+			{
+				"name": "fecha",
+				"version": "4.2.3",
+				"size": 143859
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "safe-stable-stringify",
+				"version": "2.5.0",
+				"size": 30687
+			},
+			{
+				"name": "triple-beam",
+				"version": "1.4.1",
+				"size": 10220
+			},
+			{
+				"name": "one-time",
+				"version": "1.0.0",
+				"size": 6089
+			},
+			{
+				"name": "fn.name",
+				"version": "1.1.0",
+				"size": 6209
+			},
+			{
+				"name": "readable-stream",
+				"version": "3.6.2",
+				"size": 123971
+			},
+			{
+				"name": "inherits",
+				"version": "2.0.4",
+				"size": 3958
+			},
+			{
+				"name": "string_decoder",
+				"version": "1.3.0",
+				"size": 14427
+			},
+			{
+				"name": "safe-buffer",
+				"version": "5.2.1",
+				"size": 32101
+			},
+			{
+				"name": "util-deprecate",
+				"version": "1.0.2"
+			},
+			{
+				"name": "stack-trace",
+				"version": "0.0.10"
+			},
+			{
+				"name": "winston-transport",
+				"version": "4.9.0",
+				"size": 54595
+			},
+			{
+				"name": "jxLoader",
+				"version": "0.1.1"
+			},
+			{
+				"name": "promised-io",
+				"version": "0.3.6",
+				"size": 93361
+			},
+			{
+				"name": "moo-server",
+				"version": "1.3.0"
+			},
+			{
+				"name": "js-yaml",
+				"version": "0.3.7"
+			},
+			{
+				"name": "timespan",
+				"version": "2.3.0"
+			},
+			{
+				"name": "uglify-js",
+				"version": "1.3.5"
+			},
+			{
+				"name": "svelte",
+				"version": "4.2.19",
+				"size": 2633608
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "code-red",
+				"version": "1.0.4",
+				"size": 55185
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "estree-walker",
+				"version": "3.0.3",
+				"size": 17599
+			},
+			{
+				"name": "periscopic",
+				"version": "3.1.0",
+				"size": 11219
+			},
+			{
+				"name": "is-reference",
+				"version": "3.0.3",
+				"size": 3953
+			},
+			{
+				"name": "css-tree",
+				"version": "2.3.1",
+				"size": 1190591
+			},
+			{
+				"name": "mdn-data",
+				"version": "2.0.30",
+				"size": 602138
+			},
+			{
+				"name": "source-map-js",
+				"version": "1.2.1",
+				"size": 139872
+			},
+			{
+				"name": "aria-query",
+				"version": "5.3.2",
+				"size": 176114
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "axobject-query",
+				"version": "4.1.0",
+				"size": 110878
+			},
+			{
+				"name": "locate-character",
+				"version": "3.0.0",
+				"size": 5325
+			},
+			{
+				"name": "@ampproject/remapping",
+				"version": "2.3.0",
+				"size": 78946
+			},
+			{
+				"name": "@jridgewell/gen-mapping",
+				"version": "0.3.8",
+				"size": 81596
+			},
+			{
+				"name": "@jridgewell/set-array",
+				"version": "1.2.1",
+				"size": 17945
+			},
+			{
+				"name": "@jridgewell/trace-mapping",
+				"version": "0.3.25",
+				"size": 169330
+			},
+			{
+				"name": "@jridgewell/resolve-uri",
+				"version": "3.1.2",
+				"size": 53153
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[1, 4],
+			[4, 5],
+			[5, 6],
+			[1, 7],
+			[1, 8],
+			[8, 9],
+			[9, 10],
+			[10, 11],
+			[11, 12],
+			[12, 13],
+			[12, 14],
+			[14, 15],
+			[11, 16],
+			[16, 17],
+			[10, 18],
+			[9, 19],
+			[9, 20],
+			[8, 21],
+			[8, 22],
+			[8, 23],
+			[8, 24],
+			[24, 21],
+			[24, 25],
+			[24, 26],
+			[24, 27],
+			[24, 28],
+			[24, 29],
+			[8, 30],
+			[30, 31],
+			[8, 32],
+			[32, 33],
+			[32, 34],
+			[34, 35],
+			[32, 36],
+			[8, 28],
+			[8, 37],
+			[8, 29],
+			[8, 38],
+			[38, 24],
+			[24, 21],
+			[24, 25],
+			[24, 26],
+			[24, 27],
+			[24, 28],
+			[24, 29],
+			[38, 32],
+			[32, 33],
+			[32, 34],
+			[34, 35],
+			[32, 36],
+			[38, 29],
+			[1, 39],
+			[39, 40],
+			[39, 4],
+			[4, 5],
+			[5, 6],
+			[39, 41],
+			[39, 42],
+			[1, 43],
+			[1, 44],
+			[1, 41],
+			[1, 40],
+			[0, 45],
+			[45, 46],
+			[45, 47],
+			[47, 48],
+			[47, 49],
+			[47, 46],
+			[47, 50],
+			[50, 49],
+			[47, 51],
+			[51, 49],
+			[51, 50],
+			[50, 49],
+			[51, 52],
+			[52, 49],
+			[45, 53],
+			[53, 54],
+			[53, 55],
+			[45, 56],
+			[45, 51],
+			[51, 49],
+			[51, 50],
+			[50, 49],
+			[51, 52],
+			[52, 49],
+			[45, 52],
+			[52, 49],
+			[45, 57],
+			[57, 48],
+			[45, 49],
+			[45, 50],
+			[50, 49],
+			[45, 58],
+			[45, 59],
+			[45, 60],
+			[60, 61],
+			[61, 62],
+			[61, 48],
+			[61, 63],
+			[63, 64],
+			[63, 48],
+			[60, 63],
+			[63, 64],
+			[63, 48],
+			[45, 63],
+			[63, 64],
+			[63, 48],
+			[45, 48]
+		],
+		"circular": []
+	}
 }

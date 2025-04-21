@@ -13,17 +13,6 @@
 	"version": "0.1.1",
 	"svelte_range": "^3.42.1",
 	"last_rune_check_version": "0.1.1",
-	"dependencies": [
-		{
-			"name": "magic-string",
-			"semver": "^0.25.7"
-		},
-		{
-			"name": "svelte",
-			"semver": "^3.42.1"
-		}
-	],
-	"unpacked_size": 460197,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -229,5 +218,36 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "spre",
+				"version": "0.1.1",
+				"size": 460197
+			},
+			{
+				"name": "magic-string",
+				"version": "0.25.9",
+				"size": 373056
+			},
+			{
+				"name": "sourcemap-codec",
+				"version": "1.4.8",
+				"size": 31802
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3]
+		],
+		"circular": []
+	}
 }

@@ -14,8 +14,6 @@
 	"kit_range": "^2.12.2",
 	"last_rune_check_version": "0.0.5",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 5623,
 	"downloads_history": [
 		{
 			"range": [1727634600000, 1728239399999],
@@ -125,5 +123,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 14
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-lenis",
+				"version": "0.0.5",
+				"size": 5623
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

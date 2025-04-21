@@ -13,13 +13,6 @@
 	"version": "0.8.0",
 	"svelte_range": "^5",
 	"last_rune_check_version": "0.8.0",
-	"dependencies": [
-		{
-			"name": "globals",
-			"semver": "^16.0.0"
-		}
-	],
-	"unpacked_size": 18369,
 	"downloads_history": [
 		{
 			"range": [1705257000000, 1705861799999],
@@ -281,5 +274,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 147
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@ryanatkn/eslint-config",
+				"version": "0.8.0",
+				"size": 18369
+			},
+			{
+				"name": "globals",
+				"version": "16.0.0",
+				"size": 187424
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

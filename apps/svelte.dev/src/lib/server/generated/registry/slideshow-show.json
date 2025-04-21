@@ -14,13 +14,6 @@
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
 	"last_rune_check_version": "0.0.6",
-	"dependencies": [
-		{
-			"name": "highlight.js",
-			"semver": "^11.5.1"
-		}
-	],
-	"unpacked_size": 9280,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -246,5 +239,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@slideshow/show",
+				"version": "0.0.6",
+				"size": 9280
+			},
+			{
+				"name": "highlight.js",
+				"version": "11.11.1",
+				"size": 5433042
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

@@ -13,8 +13,6 @@
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "0.0.1",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 5639,
 	"downloads_history": [
 		{
 			"range": [1742754600000, 1743359399999],
@@ -28,5 +26,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "formulatte",
+				"version": "0.0.1",
+				"size": 5639
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

@@ -13,13 +13,6 @@
 	"version": "1.1.1",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "1.1.1",
-	"dependencies": [
-		{
-			"name": "rollup-plugin-import-css",
-			"semver": "^3.0.0"
-		}
-	],
-	"unpacked_size": 1539835,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -321,5 +314,48 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 11
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-advanced-tables",
+				"version": "1.1.1",
+				"size": 1539835
+			},
+			{
+				"name": "rollup-plugin-import-css",
+				"version": "3.5.8",
+				"size": 15115
+			},
+			{
+				"name": "@rollup/pluginutils",
+				"version": "5.1.4",
+				"size": 58354
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "estree-walker",
+				"version": "2.0.2",
+				"size": 50243
+			},
+			{
+				"name": "picomatch",
+				"version": "4.0.2",
+				"size": 85237
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[2, 4],
+			[2, 5]
+		],
+		"circular": []
+	}
 }

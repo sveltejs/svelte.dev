@@ -12,17 +12,6 @@
 	"version": "1.0.12",
 	"svelte_range": "^3.24.0",
 	"last_rune_check_version": "1.0.12",
-	"dependencies": [
-		{
-			"name": "fuzzysort",
-			"semver": "^1.1.4"
-		},
-		{
-			"name": "node-waves",
-			"semver": "^0.7.6"
-		}
-	],
-	"unpacked_size": 918726,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -336,5 +325,29 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 32
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "mdbsvelte",
+				"version": "1.0.12",
+				"size": 918726
+			},
+			{
+				"name": "fuzzysort",
+				"version": "1.9.0",
+				"size": 32361
+			},
+			{
+				"name": "node-waves",
+				"version": "0.7.6"
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

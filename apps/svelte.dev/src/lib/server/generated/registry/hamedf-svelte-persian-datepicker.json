@@ -14,13 +14,6 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.17.3",
 	"last_rune_check_version": "0.0.20",
-	"dependencies": [
-		{
-			"name": "@alireza-ab/persian-date",
-			"semver": "^2.6.2"
-		}
-	],
-	"unpacked_size": 109493,
 	"downloads_history": [
 		{
 			"range": [1740335400000, 1740940199999],
@@ -50,5 +43,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 33
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@hamedf/svelte-persian-datepicker",
+				"version": "0.0.20",
+				"size": 109493
+			},
+			{
+				"name": "@alireza-ab/persian-date",
+				"version": "2.6.2",
+				"size": 582076
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

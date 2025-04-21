@@ -13,17 +13,6 @@
 	"version": "0.19.29",
 	"svelte_range": "^4.0.0",
 	"last_rune_check_version": "0.19.29",
-	"dependencies": [
-		{
-			"name": "@svelement-ui/util-array-2-class-string",
-			"semver": "*"
-		},
-		{
-			"name": "@svelement-ui/util-array-2-style-string",
-			"semver": "*"
-		}
-	],
-	"unpacked_size": 437106,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -321,5 +310,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 13
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@svelement-ui/icon",
+				"version": "0.19.29",
+				"size": 437106
+			},
+			{
+				"name": "@svelement-ui/util-array-2-class-string",
+				"version": "0.19.0",
+				"size": 10283
+			},
+			{
+				"name": "@svelement-ui/util-array-2-style-string",
+				"version": "0.19.0",
+				"size": 9015
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

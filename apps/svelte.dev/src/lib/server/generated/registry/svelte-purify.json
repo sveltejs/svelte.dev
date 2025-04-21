@@ -14,13 +14,6 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "2.20.5",
 	"last_rune_check_version": "2.0.6",
-	"dependencies": [
-		{
-			"name": "universal-dompurify",
-			"semver": "1.0.25"
-		}
-	],
-	"unpacked_size": 7514,
 	"downloads_history": [
 		{
 			"range": [1701023400000, 1701628199999],
@@ -310,5 +303,291 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 447
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-purify",
+				"version": "2.0.6",
+				"size": 7514
+			},
+			{
+				"name": "universal-dompurify",
+				"version": "1.0.25",
+				"size": 5752
+			},
+			{
+				"name": "@types/dompurify",
+				"version": "3.2.0",
+				"size": 1739
+			},
+			{
+				"name": "dompurify",
+				"version": "3.2.5",
+				"size": 806266
+			},
+			{
+				"name": "dompurify",
+				"version": "3.2.4",
+				"size": 308064
+			},
+			{
+				"name": "jsdom",
+				"version": "26.1.0",
+				"size": 3179723
+			},
+			{
+				"name": "ws",
+				"version": "8.18.1",
+				"size": 146780
+			},
+			{
+				"name": "saxes",
+				"version": "6.0.0",
+				"size": 163774
+			},
+			{
+				"name": "xmlchars",
+				"version": "2.2.0",
+				"size": 58957
+			},
+			{
+				"name": "nwsapi",
+				"version": "2.2.20",
+				"size": 85858
+			},
+			{
+				"name": "parse5",
+				"version": "7.2.1",
+				"size": 694639
+			},
+			{
+				"name": "entities",
+				"version": "4.5.0",
+				"size": 412892
+			},
+			{
+				"name": "cssstyle",
+				"version": "4.3.1",
+				"size": 148609
+			},
+			{
+				"name": "@asamuzakjp/css-color",
+				"version": "3.1.3",
+				"size": 2088274
+			},
+			{
+				"name": "@csstools/css-calc",
+				"version": "2.1.3",
+				"size": 70683
+			},
+			{
+				"name": "@csstools/css-color-parser",
+				"version": "3.0.9",
+				"size": 96785
+			},
+			{
+				"name": "@csstools/color-helpers",
+				"version": "5.0.2",
+				"size": 79946
+			},
+			{
+				"name": "@csstools/css-parser-algorithms",
+				"version": "3.0.4",
+				"size": 45265
+			},
+			{
+				"name": "@csstools/css-tokenizer",
+				"version": "3.0.3",
+				"size": 72786
+			},
+			{
+				"name": "lru-cache",
+				"version": "10.4.3",
+				"size": 804301
+			},
+			{
+				"name": "rrweb-cssom",
+				"version": "0.8.0",
+				"size": 105478
+			},
+			{
+				"name": "data-urls",
+				"version": "5.0.0",
+				"size": 7834
+			},
+			{
+				"name": "whatwg-mimetype",
+				"version": "4.0.0",
+				"size": 16721
+			},
+			{
+				"name": "whatwg-url",
+				"version": "14.2.0",
+				"size": 98558
+			},
+			{
+				"name": "tr46",
+				"version": "5.1.1",
+				"size": 225902
+			},
+			{
+				"name": "punycode",
+				"version": "2.3.1",
+				"size": 33514
+			},
+			{
+				"name": "webidl-conversions",
+				"version": "7.0.0",
+				"size": 24242
+			},
+			{
+				"name": "decimal.js",
+				"version": "10.5.0",
+				"size": 284225
+			},
+			{
+				"name": "symbol-tree",
+				"version": "3.2.4",
+				"size": 57073
+			},
+			{
+				"name": "tough-cookie",
+				"version": "5.1.2",
+				"size": 227724
+			},
+			{
+				"name": "tldts",
+				"version": "6.1.86",
+				"size": 2977311
+			},
+			{
+				"name": "tldts-core",
+				"version": "6.1.86",
+				"size": 222678
+			},
+			{
+				"name": "whatwg-encoding",
+				"version": "3.1.1",
+				"size": 13339
+			},
+			{
+				"name": "iconv-lite",
+				"version": "0.6.3",
+				"size": 348518
+			},
+			{
+				"name": "safer-buffer",
+				"version": "2.1.2",
+				"size": 42299
+			},
+			{
+				"name": "http-proxy-agent",
+				"version": "7.0.2",
+				"size": 23348
+			},
+			{
+				"name": "agent-base",
+				"version": "7.1.3",
+				"size": 31548
+			},
+			{
+				"name": "debug",
+				"version": "4.4.0",
+				"size": 42798
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "https-proxy-agent",
+				"version": "7.0.6",
+				"size": 35157
+			},
+			{
+				"name": "w3c-xmlserializer",
+				"version": "5.0.0",
+				"size": 17973
+			},
+			{
+				"name": "xml-name-validator",
+				"version": "5.0.0",
+				"size": 13574
+			},
+			{
+				"name": "html-encoding-sniffer",
+				"version": "4.0.0",
+				"size": 11662
+			},
+			{
+				"name": "is-potential-custom-element-name",
+				"version": "1.0.1",
+				"size": 3918
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[1, 4],
+			[1, 5],
+			[5, 6],
+			[5, 7],
+			[7, 8],
+			[5, 9],
+			[5, 10],
+			[10, 11],
+			[5, 12],
+			[12, 13],
+			[13, 14],
+			[13, 15],
+			[15, 16],
+			[15, 14],
+			[13, 17],
+			[13, 18],
+			[13, 19],
+			[12, 20],
+			[5, 21],
+			[21, 22],
+			[21, 23],
+			[23, 24],
+			[24, 25],
+			[23, 26],
+			[5, 27],
+			[5, 23],
+			[23, 24],
+			[24, 25],
+			[23, 26],
+			[5, 20],
+			[5, 28],
+			[5, 29],
+			[29, 30],
+			[30, 31],
+			[5, 32],
+			[32, 33],
+			[33, 34],
+			[5, 22],
+			[5, 35],
+			[35, 36],
+			[35, 37],
+			[37, 38],
+			[5, 39],
+			[39, 36],
+			[39, 37],
+			[37, 38],
+			[5, 40],
+			[40, 41],
+			[5, 26],
+			[5, 41],
+			[5, 42],
+			[42, 32],
+			[32, 33],
+			[33, 34],
+			[5, 43]
+		],
+		"circular": []
+	}
 }

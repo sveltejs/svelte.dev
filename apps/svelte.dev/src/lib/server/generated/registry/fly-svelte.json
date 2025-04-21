@@ -13,12 +13,6 @@
 	"version": "1.0.0",
 	"svelte_range": "^1.11.2",
 	"last_rune_check_version": "1.0.0",
-	"dependencies": [
-		{
-			"name": "svelte",
-			"semver": "^1.11.2"
-		}
-	],
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -228,5 +222,21 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "fly-svelte",
+				"version": "1.0.0"
+			},
+			{
+				"name": "svelte",
+				"version": "1.64.1",
+				"size": 2417739
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

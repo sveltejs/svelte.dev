@@ -13,8 +13,6 @@
 	"version": "1.1.0-alpha.58",
 	"svelte_range": "^3.46.2",
 	"last_rune_check_version": "1.1.0-alpha.58",
-	"dependencies": [],
-	"unpacked_size": 77489,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -324,5 +322,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 63
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@responsive-ui/show-more",
+				"version": "1.1.0-alpha.58",
+				"size": 77489
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

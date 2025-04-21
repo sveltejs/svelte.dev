@@ -13,8 +13,6 @@
 	"version": "1.0.0",
 	"svelte_range": "^4.2.18",
 	"last_rune_check_version": "1.0.0",
-	"dependencies": [],
-	"unpacked_size": 123427,
 	"downloads_history": [
 		{
 			"range": [1741545000000, 1742149799999],
@@ -28,5 +26,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "beet-root-red",
+				"version": "1.0.0",
+				"size": 123427
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

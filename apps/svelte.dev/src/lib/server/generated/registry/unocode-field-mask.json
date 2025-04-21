@@ -12,25 +12,6 @@
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "0.3.7",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "mitt",
-			"semver": "^1.2.0"
-		},
-		{
-			"name": "mobile-device-detect",
-			"semver": "^0.4.3"
-		},
-		{
-			"name": "uid",
-			"semver": "^1.0.0"
-		},
-		{
-			"name": "vanilla-masker",
-			"semver": "^1.2.0"
-		}
-	],
-	"unpacked_size": 162416,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -288,5 +269,41 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 26
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@unocode/field-mask",
+				"version": "0.3.7",
+				"size": 162416
+			},
+			{
+				"name": "mitt",
+				"version": "1.2.0",
+				"size": 15426
+			},
+			{
+				"name": "mobile-device-detect",
+				"version": "0.4.3",
+				"size": 47930
+			},
+			{
+				"name": "uid",
+				"version": "1.0.0",
+				"size": 6828
+			},
+			{
+				"name": "vanilla-masker",
+				"version": "1.2.0"
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[0, 4]
+		],
+		"circular": []
+	}
 }

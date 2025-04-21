@@ -14,8 +14,6 @@
 	"svelte_range": "^4.2.18",
 	"kit_range": "^1.20.2",
 	"last_rune_check_version": "2.0.0",
-	"dependencies": [],
-	"unpacked_size": 1159522,
 	"downloads_history": [
 		{
 			"range": [1722796200000, 1723400999999],
@@ -153,5 +151,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 16
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte4-headlessui",
+				"version": "2.0.0",
+				"size": 1159522
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

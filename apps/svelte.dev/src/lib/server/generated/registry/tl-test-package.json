@@ -13,17 +13,6 @@
 	"last_rune_check_version": "1.0.5",
 	"version": "1.0.5",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "chart.js",
-			"semver": "^4.4.8"
-		},
-		{
-			"name": "chartjs-plugin-datalabels",
-			"semver": "^2.2.0"
-		}
-	],
-	"unpacked_size": 546739,
 	"downloads_history": [
 		{
 			"range": [1743359400000, 1743964199999],
@@ -33,5 +22,36 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 38
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "tl-test-package",
+				"version": "1.0.5",
+				"size": 546739
+			},
+			{
+				"name": "chart.js",
+				"version": "4.4.9",
+				"size": 4961506
+			},
+			{
+				"name": "@kurkle/color",
+				"version": "0.3.4",
+				"size": 78965
+			},
+			{
+				"name": "chartjs-plugin-datalabels",
+				"version": "2.2.0",
+				"size": 92387
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3]
+		],
+		"circular": []
+	}
 }

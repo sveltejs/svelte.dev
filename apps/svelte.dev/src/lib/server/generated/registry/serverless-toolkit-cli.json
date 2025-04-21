@@ -13,113 +13,6 @@
 	"version": "3.0.83",
 	"svelte_range": "3.52.0",
 	"last_rune_check_version": "3.0.83",
-	"dependencies": [
-		{
-			"name": "@serverless-toolkit/stacks",
-			"semver": "^3.0.83"
-		},
-		{
-			"name": "aws-cdk",
-			"semver": "2.50.0"
-		},
-		{
-			"name": "aws-cdk-lib",
-			"semver": "2.50.0"
-		},
-		{
-			"name": "aws-sdk",
-			"semver": "2.1246.0"
-		},
-		{
-			"name": "chokidar",
-			"semver": "3.5.3"
-		},
-		{
-			"name": "cli-spinner",
-			"semver": "0.2.10"
-		},
-		{
-			"name": "constructs",
-			"semver": "10.1.148"
-		},
-		{
-			"name": "degit",
-			"semver": "2.8.4"
-		},
-		{
-			"name": "dotenv",
-			"semver": "16.0.3"
-		},
-		{
-			"name": "enquirer",
-			"semver": "2.3.6"
-		},
-		{
-			"name": "esbuild",
-			"semver": "0.15.13"
-		},
-		{
-			"name": "esbuild-node-externals",
-			"semver": "1.5.0"
-		},
-		{
-			"name": "esbuild-sass-plugin",
-			"semver": "2.4.0"
-		},
-		{
-			"name": "esbuild-svelte",
-			"semver": "0.7.1"
-		},
-		{
-			"name": "mdsvex",
-			"semver": "0.10.6"
-		},
-		{
-			"name": "node-sass",
-			"semver": "7.0.3"
-		},
-		{
-			"name": "playwright",
-			"semver": "1.27.1"
-		},
-		{
-			"name": "prettier",
-			"semver": "2.7.1"
-		},
-		{
-			"name": "replace-in-files",
-			"semver": "3.0.0"
-		},
-		{
-			"name": "sass",
-			"semver": "1.55.0"
-		},
-		{
-			"name": "svelte",
-			"semver": "3.52.0"
-		},
-		{
-			"name": "svelte-preprocess",
-			"semver": "4.10.7"
-		},
-		{
-			"name": "typescript",
-			"semver": "4.8.4"
-		},
-		{
-			"name": "update-dotenv",
-			"semver": "1.1.1"
-		},
-		{
-			"name": "ws-reconnect",
-			"semver": "1.0.7"
-		},
-		{
-			"name": "yargs",
-			"semver": "17.6.1"
-		}
-	],
-	"unpacked_size": 57502,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -365,5 +258,4158 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 67
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@serverless-toolkit/cli",
+				"version": "3.0.83",
+				"size": 57502
+			},
+			{
+				"name": "@serverless-toolkit/stacks",
+				"version": "3.0.83",
+				"size": 198194
+			},
+			{
+				"name": "@aws-cdk/aws-apigatewayv2-alpha",
+				"version": "2.50.0-alpha.0",
+				"size": 827432
+			},
+			{
+				"name": "@aws-cdk/aws-apigatewayv2-authorizers-alpha",
+				"version": "2.50.0-alpha.0",
+				"size": 227321
+			},
+			{
+				"name": "@aws-cdk/aws-apigatewayv2-integrations-alpha",
+				"version": "2.50.0-alpha.0",
+				"size": 237213
+			},
+			{
+				"name": "@serverless-toolkit/sdk",
+				"version": "3.0.83",
+				"size": 8297
+			},
+			{
+				"name": "aws-sdk",
+				"version": "2.1246.0",
+				"size": 75816400
+			},
+			{
+				"name": "sax",
+				"version": "1.2.1"
+			},
+			{
+				"name": "url",
+				"version": "0.10.3"
+			},
+			{
+				"name": "punycode",
+				"version": "1.3.2"
+			},
+			{
+				"name": "querystring",
+				"version": "0.2.0"
+			},
+			{
+				"name": "util",
+				"version": "0.12.5",
+				"size": 33728
+			},
+			{
+				"name": "inherits",
+				"version": "2.0.4",
+				"size": 3958
+			},
+			{
+				"name": "is-arguments",
+				"version": "1.2.0",
+				"size": 32731
+			},
+			{
+				"name": "call-bound",
+				"version": "1.0.4",
+				"size": 17106
+			},
+			{
+				"name": "call-bind-apply-helpers",
+				"version": "1.0.2",
+				"size": 15952
+			},
+			{
+				"name": "es-errors",
+				"version": "1.3.0",
+				"size": 12324
+			},
+			{
+				"name": "function-bind",
+				"version": "1.1.2",
+				"size": 31427
+			},
+			{
+				"name": "get-intrinsic",
+				"version": "1.3.0",
+				"size": 46542
+			},
+			{
+				"name": "es-define-property",
+				"version": "1.0.1",
+				"size": 10217
+			},
+			{
+				"name": "es-object-atoms",
+				"version": "1.1.1",
+				"size": 11442
+			},
+			{
+				"name": "get-proto",
+				"version": "1.0.1",
+				"size": 10840
+			},
+			{
+				"name": "dunder-proto",
+				"version": "1.0.1",
+				"size": 13003
+			},
+			{
+				"name": "gopd",
+				"version": "1.2.0",
+				"size": 9869
+			},
+			{
+				"name": "has-symbols",
+				"version": "1.1.0",
+				"size": 23409
+			},
+			{
+				"name": "hasown",
+				"version": "2.0.2",
+				"size": 8765
+			},
+			{
+				"name": "math-intrinsics",
+				"version": "1.1.0",
+				"size": 17323
+			},
+			{
+				"name": "has-tostringtag",
+				"version": "1.0.2",
+				"size": 17603
+			},
+			{
+				"name": "is-generator-function",
+				"version": "1.1.0",
+				"size": 35698
+			},
+			{
+				"name": "safe-regex-test",
+				"version": "1.1.0",
+				"size": 11917
+			},
+			{
+				"name": "is-regex",
+				"version": "1.2.1",
+				"size": 35732
+			},
+			{
+				"name": "is-typed-array",
+				"version": "1.1.15",
+				"size": 21922
+			},
+			{
+				"name": "which-typed-array",
+				"version": "1.1.19",
+				"size": 43913
+			},
+			{
+				"name": "available-typed-arrays",
+				"version": "1.0.7",
+				"size": 20380
+			},
+			{
+				"name": "possible-typed-array-names",
+				"version": "1.1.0",
+				"size": 9698
+			},
+			{
+				"name": "call-bind",
+				"version": "1.0.8",
+				"size": 22902
+			},
+			{
+				"name": "set-function-length",
+				"version": "1.2.2",
+				"size": 14747
+			},
+			{
+				"name": "define-data-property",
+				"version": "1.1.4",
+				"size": 30851
+			},
+			{
+				"name": "has-property-descriptors",
+				"version": "1.0.2",
+				"size": 10911
+			},
+			{
+				"name": "for-each",
+				"version": "0.3.5",
+				"size": 23915
+			},
+			{
+				"name": "is-callable",
+				"version": "1.2.7",
+				"size": 28950
+			},
+			{
+				"name": "uuid",
+				"version": "8.0.0",
+				"size": 92955
+			},
+			{
+				"name": "buffer",
+				"version": "4.9.2",
+				"size": 263614
+			},
+			{
+				"name": "base64-js",
+				"version": "1.5.1",
+				"size": 9624
+			},
+			{
+				"name": "ieee754",
+				"version": "1.2.1",
+				"size": 6796
+			},
+			{
+				"name": "isarray",
+				"version": "1.0.0"
+			},
+			{
+				"name": "events",
+				"version": "1.1.1"
+			},
+			{
+				"name": "xml2js",
+				"version": "0.4.19"
+			},
+			{
+				"name": "sax",
+				"version": "1.4.1",
+				"size": 56017
+			},
+			{
+				"name": "xmlbuilder",
+				"version": "9.0.7",
+				"size": 104231
+			},
+			{
+				"name": "ieee754",
+				"version": "1.1.13",
+				"size": 6245
+			},
+			{
+				"name": "jmespath",
+				"version": "0.16.0",
+				"size": 81076
+			},
+			{
+				"name": "aws-cdk",
+				"version": "2.50.0",
+				"size": 54332250
+			},
+			{
+				"name": "aws-cdk-lib",
+				"version": "2.50.0",
+				"size": 93575732
+			},
+			{
+				"name": "case",
+				"version": "1.6.3",
+				"size": 39118
+			},
+			{
+				"name": "yaml",
+				"version": "1.10.2",
+				"size": 448149
+			},
+			{
+				"name": "ignore",
+				"version": "5.3.2",
+				"size": 53630
+			},
+			{
+				"name": "semver",
+				"version": "7.7.1",
+				"size": 96674
+			},
+			{
+				"name": "fs-extra",
+				"version": "9.1.0",
+				"size": 129795
+			},
+			{
+				"name": "jsonfile",
+				"version": "6.1.0",
+				"size": 19750
+			},
+			{
+				"name": "universalify",
+				"version": "2.0.1",
+				"size": 4675
+			},
+			{
+				"name": "graceful-fs",
+				"version": "4.2.11",
+				"size": 32535
+			},
+			{
+				"name": "at-least-node",
+				"version": "1.0.0",
+				"size": 2625
+			},
+			{
+				"name": "punycode",
+				"version": "2.3.1",
+				"size": 33514
+			},
+			{
+				"name": "minimatch",
+				"version": "3.1.2",
+				"size": 34902
+			},
+			{
+				"name": "brace-expansion",
+				"version": "1.1.11",
+				"size": 11059
+			},
+			{
+				"name": "balanced-match",
+				"version": "1.0.2",
+				"size": 6939
+			},
+			{
+				"name": "concat-map",
+				"version": "0.0.1"
+			},
+			{
+				"name": "jsonschema",
+				"version": "1.5.0",
+				"size": 83470
+			},
+			{
+				"name": "@balena/dockerignore",
+				"version": "1.0.2",
+				"size": 36691
+			},
+			{
+				"name": "aws-lambda",
+				"version": "1.0.7",
+				"size": 26144
+			},
+			{
+				"name": "aws-sdk",
+				"version": "2.1692.0",
+				"size": 98158637
+			},
+			{
+				"name": "xml2js",
+				"version": "0.6.2",
+				"size": 3436188
+			},
+			{
+				"name": "xmlbuilder",
+				"version": "11.0.1",
+				"size": 168433
+			},
+			{
+				"name": "js-yaml",
+				"version": "3.14.1",
+				"size": 291327
+			},
+			{
+				"name": "argparse",
+				"version": "1.0.10",
+				"size": 116446
+			},
+			{
+				"name": "sprintf-js",
+				"version": "1.0.3"
+			},
+			{
+				"name": "esprima",
+				"version": "4.0.1",
+				"size": 314361
+			},
+			{
+				"name": "watchpack",
+				"version": "2.4.2",
+				"size": 56385
+			},
+			{
+				"name": "glob-to-regexp",
+				"version": "0.4.1",
+				"size": 18100
+			},
+			{
+				"name": "commander",
+				"version": "3.0.2",
+				"size": 77942
+			},
+			{
+				"name": "constructs",
+				"version": "10.1.148",
+				"size": 154223
+			},
+			{
+				"name": "dotenv",
+				"version": "16.0.3",
+				"size": 36605
+			},
+			{
+				"name": "esbuild",
+				"version": "0.15.13",
+				"size": 120692
+			},
+			{
+				"name": "esbuild-node-externals",
+				"version": "1.5.0",
+				"size": 22769
+			},
+			{
+				"name": "tslib",
+				"version": "2.3.1",
+				"size": 39088
+			},
+			{
+				"name": "find-up",
+				"version": "5.0.0",
+				"size": 11761
+			},
+			{
+				"name": "locate-path",
+				"version": "6.0.0",
+				"size": 7017
+			},
+			{
+				"name": "p-locate",
+				"version": "5.0.0",
+				"size": 7240
+			},
+			{
+				"name": "p-limit",
+				"version": "3.1.0",
+				"size": 7754
+			},
+			{
+				"name": "yocto-queue",
+				"version": "0.1.0",
+				"size": 6027
+			},
+			{
+				"name": "path-exists",
+				"version": "4.0.0",
+				"size": 3919
+			},
+			{
+				"name": "esbuild-svelte",
+				"version": "0.7.1",
+				"size": 33053
+			},
+			{
+				"name": "lambda-multipart-parser",
+				"version": "1.0.1",
+				"size": 9509
+			},
+			{
+				"name": "busboy",
+				"version": "0.3.1",
+				"size": 681474
+			},
+			{
+				"name": "dicer",
+				"version": "0.3.0",
+				"size": 61859
+			},
+			{
+				"name": "streamsearch",
+				"version": "0.1.2"
+			},
+			{
+				"name": "mdsvex",
+				"version": "0.10.6",
+				"size": 4185484
+			},
+			{
+				"name": "prismjs",
+				"version": "1.30.0",
+				"size": 2052735
+			},
+			{
+				"name": "@types/unist",
+				"version": "2.0.11",
+				"size": 8543
+			},
+			{
+				"name": "prism-svelte",
+				"version": "0.4.7",
+				"size": 6075
+			},
+			{
+				"name": "vfile-message",
+				"version": "2.0.4",
+				"size": 12600
+			},
+			{
+				"name": "unist-util-stringify-position",
+				"version": "2.0.3",
+				"size": 8531
+			},
+			{
+				"name": "mime-types",
+				"version": "2.1.35",
+				"size": 18272
+			},
+			{
+				"name": "mime-db",
+				"version": "1.52.0",
+				"size": 205539
+			},
+			{
+				"name": "node-fetch",
+				"version": "3.2.10",
+				"size": 106676
+			},
+			{
+				"name": "data-uri-to-buffer",
+				"version": "4.0.1",
+				"size": 10049
+			},
+			{
+				"name": "fetch-blob",
+				"version": "3.2.0",
+				"size": 21755
+			},
+			{
+				"name": "node-domexception",
+				"version": "1.0.0",
+				"size": 29162
+			},
+			{
+				"name": "web-streams-polyfill",
+				"version": "3.3.3",
+				"size": 9036205
+			},
+			{
+				"name": "formdata-polyfill",
+				"version": "4.0.10",
+				"size": 32220
+			},
+			{
+				"name": "prettier",
+				"version": "2.7.1",
+				"size": 15817551
+			},
+			{
+				"name": "svelte",
+				"version": "3.52.0",
+				"size": 8928020
+			},
+			{
+				"name": "svelte-preprocess",
+				"version": "4.10.7",
+				"size": 102125
+			},
+			{
+				"name": "sorcery",
+				"version": "0.10.0"
+			},
+			{
+				"name": "sander",
+				"version": "0.5.1"
+			},
+			{
+				"name": "es6-promise",
+				"version": "3.3.1"
+			},
+			{
+				"name": "mkdirp",
+				"version": "0.5.6",
+				"size": 7688
+			},
+			{
+				"name": "minimist",
+				"version": "1.2.8",
+				"size": 54477
+			},
+			{
+				"name": "rimraf",
+				"version": "2.7.1",
+				"size": 15463
+			},
+			{
+				"name": "glob",
+				"version": "7.2.3",
+				"size": 55064
+			},
+			{
+				"name": "once",
+				"version": "1.4.0"
+			},
+			{
+				"name": "wrappy",
+				"version": "1.0.2"
+			},
+			{
+				"name": "inflight",
+				"version": "1.0.6"
+			},
+			{
+				"name": "fs.realpath",
+				"version": "1.0.0"
+			},
+			{
+				"name": "path-is-absolute",
+				"version": "1.0.1"
+			},
+			{
+				"name": "buffer-crc32",
+				"version": "0.2.13"
+			},
+			{
+				"name": "sourcemap-codec",
+				"version": "1.4.8",
+				"size": 31802
+			},
+			{
+				"name": "@types/pug",
+				"version": "2.0.10",
+				"size": 9695
+			},
+			{
+				"name": "@types/sass",
+				"version": "1.43.1",
+				"size": 13146
+			},
+			{
+				"name": "@types/node",
+				"version": "22.14.1",
+				"size": 2331510
+			},
+			{
+				"name": "undici-types",
+				"version": "6.21.0",
+				"size": 83680
+			},
+			{
+				"name": "magic-string",
+				"version": "0.25.9",
+				"size": 373056
+			},
+			{
+				"name": "strip-indent",
+				"version": "3.0.0",
+				"size": 3312
+			},
+			{
+				"name": "min-indent",
+				"version": "1.0.1",
+				"size": 2969
+			},
+			{
+				"name": "detect-indent",
+				"version": "6.1.0",
+				"size": 9681
+			},
+			{
+				"name": "typescript",
+				"version": "4.8.4",
+				"size": 68761436
+			},
+			{
+				"name": "uuid",
+				"version": "9.0.0",
+				"size": 122687
+			},
+			{
+				"name": "vm2",
+				"version": "3.9.11",
+				"size": 207628
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "acorn-walk",
+				"version": "8.3.4",
+				"size": 52296
+			},
+			{
+				"name": "chokidar",
+				"version": "3.5.3",
+				"size": 90082
+			},
+			{
+				"name": "braces",
+				"version": "3.0.3",
+				"size": 44635
+			},
+			{
+				"name": "fill-range",
+				"version": "7.1.1",
+				"size": 16743
+			},
+			{
+				"name": "to-regex-range",
+				"version": "5.0.1",
+				"size": 22939
+			},
+			{
+				"name": "is-number",
+				"version": "7.0.0",
+				"size": 9615
+			},
+			{
+				"name": "is-glob",
+				"version": "4.0.3",
+				"size": 13609
+			},
+			{
+				"name": "is-extglob",
+				"version": "2.1.1"
+			},
+			{
+				"name": "anymatch",
+				"version": "3.1.3",
+				"size": 9654
+			},
+			{
+				"name": "picomatch",
+				"version": "2.3.1",
+				"size": 89952
+			},
+			{
+				"name": "normalize-path",
+				"version": "3.0.0",
+				"size": 9219
+			},
+			{
+				"name": "readdirp",
+				"version": "3.6.0",
+				"size": 20472
+			},
+			{
+				"name": "glob-parent",
+				"version": "5.1.2",
+				"size": 12134
+			},
+			{
+				"name": "is-binary-path",
+				"version": "2.1.0",
+				"size": 3078
+			},
+			{
+				"name": "binary-extensions",
+				"version": "2.3.0",
+				"size": 5030
+			},
+			{
+				"name": "cli-spinner",
+				"version": "0.2.10",
+				"size": 85107
+			},
+			{
+				"name": "degit",
+				"version": "2.8.4",
+				"size": 1781716
+			},
+			{
+				"name": "enquirer",
+				"version": "2.3.6",
+				"size": 197406
+			},
+			{
+				"name": "ansi-colors",
+				"version": "4.1.3",
+				"size": 26143
+			},
+			{
+				"name": "esbuild-sass-plugin",
+				"version": "2.4.0",
+				"size": 51512
+			},
+			{
+				"name": "esbuild",
+				"version": "0.15.18",
+				"size": 121336
+			},
+			{
+				"name": "resolve",
+				"version": "1.22.10",
+				"size": 145619
+			},
+			{
+				"name": "is-core-module",
+				"version": "2.16.1",
+				"size": 33475
+			},
+			{
+				"name": "path-parse",
+				"version": "1.0.7",
+				"size": 4511
+			},
+			{
+				"name": "supports-preserve-symlinks-flag",
+				"version": "1.0.0",
+				"size": 9178
+			},
+			{
+				"name": "sass",
+				"version": "1.86.3",
+				"size": 5693005
+			},
+			{
+				"name": "chokidar",
+				"version": "4.0.3",
+				"size": 148759
+			},
+			{
+				"name": "readdirp",
+				"version": "4.1.2",
+				"size": 36127
+			},
+			{
+				"name": "immutable",
+				"version": "5.1.1",
+				"size": 736872
+			},
+			{
+				"name": "source-map-js",
+				"version": "1.2.1",
+				"size": 139872
+			},
+			{
+				"name": "node-sass",
+				"version": "7.0.3",
+				"size": 4640242
+			},
+			{
+				"name": "nan",
+				"version": "2.22.2",
+				"size": 444175
+			},
+			{
+				"name": "gaze",
+				"version": "1.1.3",
+				"size": 25850
+			},
+			{
+				"name": "globule",
+				"version": "1.3.4",
+				"size": 15020
+			},
+			{
+				"name": "glob",
+				"version": "7.1.7",
+				"size": 55910
+			},
+			{
+				"name": "lodash",
+				"version": "4.17.21",
+				"size": 1412415
+			},
+			{
+				"name": "minimatch",
+				"version": "3.0.8",
+				"size": 34664
+			},
+			{
+				"name": "meow",
+				"version": "9.0.0",
+				"size": 24773
+			},
+			{
+				"name": "redent",
+				"version": "3.0.0",
+				"size": 3599
+			},
+			{
+				"name": "indent-string",
+				"version": "4.0.0",
+				"size": 4398
+			},
+			{
+				"name": "type-fest",
+				"version": "0.18.1",
+				"size": 102019
+			},
+			{
+				"name": "decamelize",
+				"version": "1.2.0"
+			},
+			{
+				"name": "read-pkg-up",
+				"version": "7.0.1",
+				"size": 6727
+			},
+			{
+				"name": "find-up",
+				"version": "4.1.0",
+				"size": 11611
+			},
+			{
+				"name": "locate-path",
+				"version": "5.0.0",
+				"size": 6584
+			},
+			{
+				"name": "p-locate",
+				"version": "4.1.0",
+				"size": 7285
+			},
+			{
+				"name": "p-limit",
+				"version": "2.3.0",
+				"size": 7390
+			},
+			{
+				"name": "p-try",
+				"version": "2.2.0",
+				"size": 4371
+			},
+			{
+				"name": "read-pkg",
+				"version": "5.2.0",
+				"size": 6049
+			},
+			{
+				"name": "@types/normalize-package-data",
+				"version": "2.4.4",
+				"size": 5813
+			},
+			{
+				"name": "normalize-package-data",
+				"version": "2.5.0",
+				"size": 26646
+			},
+			{
+				"name": "semver",
+				"version": "5.7.2",
+				"size": 63315
+			},
+			{
+				"name": "hosted-git-info",
+				"version": "2.8.9",
+				"size": 25818
+			},
+			{
+				"name": "validate-npm-package-license",
+				"version": "3.0.4",
+				"size": 16597
+			},
+			{
+				"name": "spdx-correct",
+				"version": "3.2.0",
+				"size": 23412
+			},
+			{
+				"name": "spdx-expression-parse",
+				"version": "3.0.1",
+				"size": 11850
+			},
+			{
+				"name": "spdx-exceptions",
+				"version": "2.5.0",
+				"size": 3468
+			},
+			{
+				"name": "spdx-license-ids",
+				"version": "3.0.21",
+				"size": 12891
+			},
+			{
+				"name": "parse-json",
+				"version": "5.2.0",
+				"size": 5409
+			},
+			{
+				"name": "error-ex",
+				"version": "1.3.2",
+				"size": 9035
+			},
+			{
+				"name": "is-arrayish",
+				"version": "0.2.1"
+			},
+			{
+				"name": "@babel/code-frame",
+				"version": "7.26.2",
+				"size": 33160
+			},
+			{
+				"name": "js-tokens",
+				"version": "4.0.0"
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "@babel/helper-validator-identifier",
+				"version": "7.25.9",
+				"size": 48330
+			},
+			{
+				"name": "lines-and-columns",
+				"version": "1.2.4",
+				"size": 5386
+			},
+			{
+				"name": "json-parse-even-better-errors",
+				"version": "2.3.1",
+				"size": 10426
+			},
+			{
+				"name": "type-fest",
+				"version": "0.6.0",
+				"size": 29621
+			},
+			{
+				"name": "type-fest",
+				"version": "0.8.1",
+				"size": 57947
+			},
+			{
+				"name": "yargs-parser",
+				"version": "20.2.9",
+				"size": 124417
+			},
+			{
+				"name": "trim-newlines",
+				"version": "3.0.1",
+				"size": 3852
+			},
+			{
+				"name": "camelcase-keys",
+				"version": "6.2.2",
+				"size": 8859
+			},
+			{
+				"name": "camelcase",
+				"version": "5.3.1",
+				"size": 7447
+			},
+			{
+				"name": "map-obj",
+				"version": "4.3.0",
+				"size": 9492
+			},
+			{
+				"name": "quick-lru",
+				"version": "4.0.1",
+				"size": 7469
+			},
+			{
+				"name": "hard-rejection",
+				"version": "2.1.0",
+				"size": 5142
+			},
+			{
+				"name": "@types/minimist",
+				"version": "1.2.5",
+				"size": 6267
+			},
+			{
+				"name": "decamelize-keys",
+				"version": "1.1.1",
+				"size": 4034
+			},
+			{
+				"name": "map-obj",
+				"version": "1.0.1"
+			},
+			{
+				"name": "minimist-options",
+				"version": "4.1.0",
+				"size": 8530
+			},
+			{
+				"name": "arrify",
+				"version": "1.0.1"
+			},
+			{
+				"name": "is-plain-obj",
+				"version": "1.1.0"
+			},
+			{
+				"name": "kind-of",
+				"version": "6.0.3",
+				"size": 22820
+			},
+			{
+				"name": "normalize-package-data",
+				"version": "3.0.3",
+				"size": 27888
+			},
+			{
+				"name": "hosted-git-info",
+				"version": "4.1.0",
+				"size": 24404
+			},
+			{
+				"name": "lru-cache",
+				"version": "6.0.0",
+				"size": 15643
+			},
+			{
+				"name": "yallist",
+				"version": "4.0.0",
+				"size": 14752
+			},
+			{
+				"name": "chalk",
+				"version": "4.1.2",
+				"size": 35047
+			},
+			{
+				"name": "ansi-styles",
+				"version": "4.3.0",
+				"size": 16978
+			},
+			{
+				"name": "color-convert",
+				"version": "2.0.1",
+				"size": 27189
+			},
+			{
+				"name": "color-name",
+				"version": "1.1.4",
+				"size": 6693
+			},
+			{
+				"name": "supports-color",
+				"version": "7.2.0",
+				"size": 7035
+			},
+			{
+				"name": "has-flag",
+				"version": "4.0.0",
+				"size": 4419
+			},
+			{
+				"name": "npmlog",
+				"version": "5.0.1",
+				"size": 16566
+			},
+			{
+				"name": "gauge",
+				"version": "3.0.2",
+				"size": 48549
+			},
+			{
+				"name": "aproba",
+				"version": "2.0.0",
+				"size": 8047
+			},
+			{
+				"name": "strip-ansi",
+				"version": "6.0.1",
+				"size": 4029
+			},
+			{
+				"name": "ansi-regex",
+				"version": "5.0.1",
+				"size": 5609
+			},
+			{
+				"name": "wide-align",
+				"version": "1.1.5",
+				"size": 4467
+			},
+			{
+				"name": "string-width",
+				"version": "4.2.3",
+				"size": 5161
+			},
+			{
+				"name": "emoji-regex",
+				"version": "8.0.0",
+				"size": 48255
+			},
+			{
+				"name": "is-fullwidth-code-point",
+				"version": "3.0.0",
+				"size": 4994
+			},
+			{
+				"name": "has-unicode",
+				"version": "2.0.1"
+			},
+			{
+				"name": "signal-exit",
+				"version": "3.0.7",
+				"size": 9958
+			},
+			{
+				"name": "color-support",
+				"version": "1.1.3"
+			},
+			{
+				"name": "object-assign",
+				"version": "4.1.1"
+			},
+			{
+				"name": "console-control-strings",
+				"version": "1.1.0"
+			},
+			{
+				"name": "set-blocking",
+				"version": "2.0.0"
+			},
+			{
+				"name": "are-we-there-yet",
+				"version": "2.0.0",
+				"size": 14102
+			},
+			{
+				"name": "delegates",
+				"version": "1.0.0"
+			},
+			{
+				"name": "readable-stream",
+				"version": "3.6.2",
+				"size": 123971
+			},
+			{
+				"name": "string_decoder",
+				"version": "1.3.0",
+				"size": 14427
+			},
+			{
+				"name": "safe-buffer",
+				"version": "5.2.1",
+				"size": 32101
+			},
+			{
+				"name": "util-deprecate",
+				"version": "1.0.2"
+			},
+			{
+				"name": "request",
+				"version": "2.88.2",
+				"size": 209281
+			},
+			{
+				"name": "qs",
+				"version": "6.5.3",
+				"size": 125650
+			},
+			{
+				"name": "aws4",
+				"version": "1.13.2",
+				"size": 23399
+			},
+			{
+				"name": "uuid",
+				"version": "3.4.0",
+				"size": 34269
+			},
+			{
+				"name": "extend",
+				"version": "3.0.2",
+				"size": 23461
+			},
+			{
+				"name": "caseless",
+				"version": "0.12.0"
+			},
+			{
+				"name": "isstream",
+				"version": "0.1.2"
+			},
+			{
+				"name": "aws-sign2",
+				"version": "0.7.0"
+			},
+			{
+				"name": "form-data",
+				"version": "2.3.3",
+				"size": 119230
+			},
+			{
+				"name": "asynckit",
+				"version": "0.4.0"
+			},
+			{
+				"name": "combined-stream",
+				"version": "1.0.8",
+				"size": 11514
+			},
+			{
+				"name": "delayed-stream",
+				"version": "1.0.0"
+			},
+			{
+				"name": "oauth-sign",
+				"version": "0.9.0",
+				"size": 13805
+			},
+			{
+				"name": "tough-cookie",
+				"version": "2.5.0",
+				"size": 86644
+			},
+			{
+				"name": "psl",
+				"version": "1.15.0",
+				"size": 711982
+			},
+			{
+				"name": "tunnel-agent",
+				"version": "0.6.0"
+			},
+			{
+				"name": "forever-agent",
+				"version": "0.6.1"
+			},
+			{
+				"name": "har-validator",
+				"version": "5.1.5",
+				"size": 8220
+			},
+			{
+				"name": "ajv",
+				"version": "6.12.6",
+				"size": 929154
+			},
+			{
+				"name": "uri-js",
+				"version": "4.4.1",
+				"size": 469879
+			},
+			{
+				"name": "fast-deep-equal",
+				"version": "3.1.3",
+				"size": 12966
+			},
+			{
+				"name": "json-schema-traverse",
+				"version": "0.4.1",
+				"size": 19564
+			},
+			{
+				"name": "fast-json-stable-stringify",
+				"version": "2.1.0",
+				"size": 16959
+			},
+			{
+				"name": "har-schema",
+				"version": "2.0.0"
+			},
+			{
+				"name": "is-typedarray",
+				"version": "1.0.0"
+			},
+			{
+				"name": "http-signature",
+				"version": "1.2.0"
+			},
+			{
+				"name": "sshpk",
+				"version": "1.18.0",
+				"size": 230846
+			},
+			{
+				"name": "asn1",
+				"version": "0.2.6",
+				"size": 19757
+			},
+			{
+				"name": "safer-buffer",
+				"version": "2.1.2",
+				"size": 42299
+			},
+			{
+				"name": "jsbn",
+				"version": "0.1.1"
+			},
+			{
+				"name": "getpass",
+				"version": "0.1.7"
+			},
+			{
+				"name": "assert-plus",
+				"version": "1.0.0"
+			},
+			{
+				"name": "dashdash",
+				"version": "1.14.1"
+			},
+			{
+				"name": "ecc-jsbn",
+				"version": "0.1.2",
+				"size": 27799
+			},
+			{
+				"name": "tweetnacl",
+				"version": "0.14.5"
+			},
+			{
+				"name": "bcrypt-pbkdf",
+				"version": "1.0.2",
+				"size": 28994
+			},
+			{
+				"name": "jsprim",
+				"version": "1.4.2",
+				"size": 31183
+			},
+			{
+				"name": "verror",
+				"version": "1.10.0"
+			},
+			{
+				"name": "extsprintf",
+				"version": "1.4.1",
+				"size": 30346
+			},
+			{
+				"name": "core-util-is",
+				"version": "1.0.2"
+			},
+			{
+				"name": "extsprintf",
+				"version": "1.3.0"
+			},
+			{
+				"name": "json-schema",
+				"version": "0.4.0",
+				"size": 26079
+			},
+			{
+				"name": "performance-now",
+				"version": "2.1.0"
+			},
+			{
+				"name": "json-stringify-safe",
+				"version": "5.0.1"
+			},
+			{
+				"name": "node-gyp",
+				"version": "8.4.1",
+				"size": 1977960
+			},
+			{
+				"name": "tar",
+				"version": "6.2.1",
+				"size": 166613
+			},
+			{
+				"name": "chownr",
+				"version": "2.0.0",
+				"size": 5748
+			},
+			{
+				"name": "mkdirp",
+				"version": "1.0.4",
+				"size": 19088
+			},
+			{
+				"name": "minipass",
+				"version": "5.0.0",
+				"size": 69475
+			},
+			{
+				"name": "minizlib",
+				"version": "2.1.2",
+				"size": 17309
+			},
+			{
+				"name": "minipass",
+				"version": "3.3.6",
+				"size": 48090
+			},
+			{
+				"name": "fs-minipass",
+				"version": "2.1.0",
+				"size": 14089
+			},
+			{
+				"name": "nopt",
+				"version": "5.0.0",
+				"size": 25840
+			},
+			{
+				"name": "abbrev",
+				"version": "1.1.1"
+			},
+			{
+				"name": "which",
+				"version": "2.0.2",
+				"size": 9975
+			},
+			{
+				"name": "isexe",
+				"version": "2.0.0"
+			},
+			{
+				"name": "npmlog",
+				"version": "6.0.2",
+				"size": 17096
+			},
+			{
+				"name": "gauge",
+				"version": "4.0.4",
+				"size": 43163
+			},
+			{
+				"name": "are-we-there-yet",
+				"version": "3.0.1",
+				"size": 14296
+			},
+			{
+				"name": "rimraf",
+				"version": "3.0.2",
+				"size": 17327
+			},
+			{
+				"name": "env-paths",
+				"version": "2.2.1",
+				"size": 10163
+			},
+			{
+				"name": "make-fetch-happen",
+				"version": "9.1.0",
+				"size": 57581
+			},
+			{
+				"name": "ssri",
+				"version": "8.0.1",
+				"size": 46908
+			},
+			{
+				"name": "cacache",
+				"version": "15.3.0",
+				"size": 76264
+			},
+			{
+				"name": "p-map",
+				"version": "4.0.0",
+				"size": 8687
+			},
+			{
+				"name": "aggregate-error",
+				"version": "3.1.0",
+				"size": 6690
+			},
+			{
+				"name": "clean-stack",
+				"version": "2.2.0",
+				"size": 5508
+			},
+			{
+				"name": "@npmcli/fs",
+				"version": "1.1.1",
+				"size": 41853
+			},
+			{
+				"name": "@gar/promisify",
+				"version": "1.1.3",
+				"size": 4197
+			},
+			{
+				"name": "infer-owner",
+				"version": "1.0.4",
+				"size": 4290
+			},
+			{
+				"name": "minipass-flush",
+				"version": "1.0.5",
+				"size": 3771
+			},
+			{
+				"name": "unique-filename",
+				"version": "1.1.1",
+				"size": 41421
+			},
+			{
+				"name": "unique-slug",
+				"version": "2.0.2",
+				"size": 2679
+			},
+			{
+				"name": "imurmurhash",
+				"version": "0.1.4"
+			},
+			{
+				"name": "minipass-collect",
+				"version": "1.0.2",
+				"size": 4870
+			},
+			{
+				"name": "promise-inflight",
+				"version": "1.0.1"
+			},
+			{
+				"name": "@npmcli/move-file",
+				"version": "1.1.2",
+				"size": 7895
+			},
+			{
+				"name": "minipass-pipeline",
+				"version": "1.2.4",
+				"size": 7004
+			},
+			{
+				"name": "is-lambda",
+				"version": "1.0.1"
+			},
+			{
+				"name": "negotiator",
+				"version": "0.6.4",
+				"size": 28556
+			},
+			{
+				"name": "promise-retry",
+				"version": "2.0.1",
+				"size": 15556
+			},
+			{
+				"name": "err-code",
+				"version": "2.0.3",
+				"size": 12280
+			},
+			{
+				"name": "retry",
+				"version": "0.12.0",
+				"size": 32210
+			},
+			{
+				"name": "agentkeepalive",
+				"version": "4.6.0",
+				"size": 33916
+			},
+			{
+				"name": "humanize-ms",
+				"version": "1.2.1"
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "minipass-fetch",
+				"version": "1.4.1",
+				"size": 43181
+			},
+			{
+				"name": "minipass-sized",
+				"version": "1.0.3",
+				"size": 123865
+			},
+			{
+				"name": "http-proxy-agent",
+				"version": "4.0.1",
+				"size": 17062
+			},
+			{
+				"name": "@tootallnate/once",
+				"version": "1.1.2",
+				"size": 4085
+			},
+			{
+				"name": "agent-base",
+				"version": "6.0.2",
+				"size": 34582
+			},
+			{
+				"name": "debug",
+				"version": "4.4.0",
+				"size": 42798
+			},
+			{
+				"name": "https-proxy-agent",
+				"version": "5.0.1",
+				"size": 26008
+			},
+			{
+				"name": "socks-proxy-agent",
+				"version": "6.2.1",
+				"size": 22880
+			},
+			{
+				"name": "socks",
+				"version": "2.8.4",
+				"size": 156296
+			},
+			{
+				"name": "ip-address",
+				"version": "9.0.5",
+				"size": 176898
+			},
+			{
+				"name": "jsbn",
+				"version": "1.1.0"
+			},
+			{
+				"name": "sprintf-js",
+				"version": "1.1.3",
+				"size": 39879
+			},
+			{
+				"name": "smart-buffer",
+				"version": "4.2.0",
+				"size": 138027
+			},
+			{
+				"name": "http-cache-semantics",
+				"version": "4.1.1",
+				"size": 35938
+			},
+			{
+				"name": "get-stdin",
+				"version": "4.0.1"
+			},
+			{
+				"name": "sass-graph",
+				"version": "4.0.1",
+				"size": 14091
+			},
+			{
+				"name": "scss-tokenizer",
+				"version": "0.4.3",
+				"size": 40015
+			},
+			{
+				"name": "js-base64",
+				"version": "2.6.4",
+				"size": 18962
+			},
+			{
+				"name": "source-map",
+				"version": "0.7.4",
+				"size": 226000
+			},
+			{
+				"name": "yargs",
+				"version": "17.7.2",
+				"size": 292421
+			},
+			{
+				"name": "y18n",
+				"version": "5.0.8",
+				"size": 23435
+			},
+			{
+				"name": "cliui",
+				"version": "8.0.1",
+				"size": 32314
+			},
+			{
+				"name": "wrap-ansi",
+				"version": "7.0.0",
+				"size": 10648
+			},
+			{
+				"name": "escalade",
+				"version": "3.2.0",
+				"size": 12385
+			},
+			{
+				"name": "yargs-parser",
+				"version": "21.1.1",
+				"size": 128470
+			},
+			{
+				"name": "get-caller-file",
+				"version": "2.0.5",
+				"size": 4719
+			},
+			{
+				"name": "require-directory",
+				"version": "2.1.1"
+			},
+			{
+				"name": "cross-spawn",
+				"version": "7.0.6",
+				"size": 16094
+			},
+			{
+				"name": "path-key",
+				"version": "3.1.1",
+				"size": 4553
+			},
+			{
+				"name": "shebang-command",
+				"version": "2.0.0",
+				"size": 2556
+			},
+			{
+				"name": "shebang-regex",
+				"version": "3.0.0",
+				"size": 2828
+			},
+			{
+				"name": "async-foreach",
+				"version": "0.1.3"
+			},
+			{
+				"name": "stdout-stream",
+				"version": "1.4.1",
+				"size": 4469
+			},
+			{
+				"name": "readable-stream",
+				"version": "2.3.8",
+				"size": 88115
+			},
+			{
+				"name": "safe-buffer",
+				"version": "5.1.2",
+				"size": 31686
+			},
+			{
+				"name": "core-util-is",
+				"version": "1.0.3",
+				"size": 4982
+			},
+			{
+				"name": "string_decoder",
+				"version": "1.1.1",
+				"size": 15298
+			},
+			{
+				"name": "process-nextick-args",
+				"version": "2.0.1",
+				"size": 3175
+			},
+			{
+				"name": "true-case-path",
+				"version": "1.0.3",
+				"size": 15739
+			},
+			{
+				"name": "playwright",
+				"version": "1.27.1",
+				"size": 24252
+			},
+			{
+				"name": "playwright-core",
+				"version": "1.27.1",
+				"size": 7105618
+			},
+			{
+				"name": "replace-in-files",
+				"version": "3.0.0",
+				"size": 32997
+			},
+			{
+				"name": "co",
+				"version": "4.6.0"
+			},
+			{
+				"name": "es6-promisify",
+				"version": "6.1.1",
+				"size": 7212
+			},
+			{
+				"name": "globby",
+				"version": "11.1.0",
+				"size": 21758
+			},
+			{
+				"name": "slash",
+				"version": "3.0.0",
+				"size": 3507
+			},
+			{
+				"name": "merge2",
+				"version": "1.4.1",
+				"size": 8897
+			},
+			{
+				"name": "dir-glob",
+				"version": "3.0.1",
+				"size": 5417
+			},
+			{
+				"name": "path-type",
+				"version": "4.0.0",
+				"size": 5407
+			},
+			{
+				"name": "fast-glob",
+				"version": "3.3.3",
+				"size": 98396
+			},
+			{
+				"name": "@nodelib/fs.stat",
+				"version": "2.0.5",
+				"size": 11845
+			},
+			{
+				"name": "@nodelib/fs.walk",
+				"version": "1.2.8",
+				"size": 26377
+			},
+			{
+				"name": "fastq",
+				"version": "1.19.1",
+				"size": 45922
+			},
+			{
+				"name": "reusify",
+				"version": "1.1.0",
+				"size": 11696
+			},
+			{
+				"name": "@nodelib/fs.scandir",
+				"version": "2.1.5",
+				"size": 22155
+			},
+			{
+				"name": "run-parallel",
+				"version": "1.2.0",
+				"size": 6563
+			},
+			{
+				"name": "queue-microtask",
+				"version": "1.2.3",
+				"size": 8367
+			},
+			{
+				"name": "micromatch",
+				"version": "4.0.8",
+				"size": 56599
+			},
+			{
+				"name": "array-union",
+				"version": "2.1.0",
+				"size": 3169
+			},
+			{
+				"name": "is-binary",
+				"version": "0.1.0"
+			},
+			{
+				"name": "sass",
+				"version": "1.55.0",
+				"size": 4573719
+			},
+			{
+				"name": "chokidar",
+				"version": "3.6.0",
+				"size": 90200
+			},
+			{
+				"name": "immutable",
+				"version": "4.3.7",
+				"size": 681948
+			},
+			{
+				"name": "update-dotenv",
+				"version": "1.1.1",
+				"size": 3864
+			},
+			{
+				"name": "ws-reconnect",
+				"version": "1.0.7",
+				"size": 40575
+			},
+			{
+				"name": "ws",
+				"version": "8.18.1",
+				"size": 146780
+			},
+			{
+				"name": "yargs",
+				"version": "17.6.1",
+				"size": 290101
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[1, 4],
+			[1, 5],
+			[5, 6],
+			[6, 7],
+			[6, 8],
+			[8, 9],
+			[8, 10],
+			[6, 11],
+			[11, 12],
+			[11, 13],
+			[13, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17],
+			[14, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[13, 27],
+			[27, 24],
+			[11, 28],
+			[28, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17],
+			[14, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[28, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[28, 27],
+			[27, 24],
+			[28, 29],
+			[29, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17],
+			[14, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[29, 16],
+			[29, 30],
+			[30, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17],
+			[14, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[30, 23],
+			[30, 27],
+			[27, 24],
+			[30, 25],
+			[25, 17],
+			[11, 31],
+			[31, 32],
+			[32, 33],
+			[33, 34],
+			[32, 35],
+			[35, 15],
+			[15, 16],
+			[15, 17],
+			[35, 19],
+			[35, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[35, 36],
+			[36, 37],
+			[37, 19],
+			[37, 16],
+			[37, 23],
+			[36, 16],
+			[36, 17],
+			[36, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[36, 23],
+			[36, 38],
+			[38, 19],
+			[32, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17],
+			[14, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[32, 39],
+			[39, 40],
+			[32, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[32, 23],
+			[32, 27],
+			[27, 24],
+			[11, 32],
+			[32, 33],
+			[33, 34],
+			[32, 35],
+			[35, 15],
+			[15, 16],
+			[15, 17],
+			[35, 19],
+			[35, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[35, 36],
+			[36, 37],
+			[37, 19],
+			[37, 16],
+			[37, 23],
+			[36, 16],
+			[36, 17],
+			[36, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[36, 23],
+			[36, 38],
+			[38, 19],
+			[32, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17],
+			[14, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[32, 39],
+			[39, 40],
+			[32, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[32, 23],
+			[32, 27],
+			[27, 24],
+			[6, 41],
+			[6, 42],
+			[42, 43],
+			[42, 44],
+			[42, 45],
+			[6, 46],
+			[6, 47],
+			[47, 48],
+			[47, 49],
+			[6, 50],
+			[6, 51],
+			[6, 10],
+			[1, 52],
+			[1, 53],
+			[53, 54],
+			[53, 55],
+			[53, 56],
+			[53, 57],
+			[53, 58],
+			[58, 59],
+			[59, 60],
+			[58, 61],
+			[58, 60],
+			[58, 62],
+			[53, 63],
+			[53, 64],
+			[64, 65],
+			[65, 66],
+			[65, 67],
+			[53, 68],
+			[53, 69],
+			[1, 70],
+			[70, 71],
+			[71, 7],
+			[71, 8],
+			[8, 9],
+			[8, 10],
+			[71, 11],
+			[11, 12],
+			[11, 13],
+			[13, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17],
+			[14, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[13, 27],
+			[27, 24],
+			[11, 28],
+			[28, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17],
+			[14, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[28, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[28, 27],
+			[27, 24],
+			[28, 29],
+			[29, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17],
+			[14, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[29, 16],
+			[29, 30],
+			[30, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17],
+			[14, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[30, 23],
+			[30, 27],
+			[27, 24],
+			[30, 25],
+			[25, 17],
+			[11, 31],
+			[31, 32],
+			[32, 33],
+			[33, 34],
+			[32, 35],
+			[35, 15],
+			[15, 16],
+			[15, 17],
+			[35, 19],
+			[35, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[35, 36],
+			[36, 37],
+			[37, 19],
+			[37, 16],
+			[37, 23],
+			[36, 16],
+			[36, 17],
+			[36, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[36, 23],
+			[36, 38],
+			[38, 19],
+			[32, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17],
+			[14, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[32, 39],
+			[39, 40],
+			[32, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[32, 23],
+			[32, 27],
+			[27, 24],
+			[11, 32],
+			[32, 33],
+			[33, 34],
+			[32, 35],
+			[35, 15],
+			[15, 16],
+			[15, 17],
+			[35, 19],
+			[35, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[35, 36],
+			[36, 37],
+			[37, 19],
+			[37, 16],
+			[37, 23],
+			[36, 16],
+			[36, 17],
+			[36, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[36, 23],
+			[36, 38],
+			[38, 19],
+			[32, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17],
+			[14, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[32, 39],
+			[39, 40],
+			[32, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[32, 23],
+			[32, 27],
+			[27, 24],
+			[71, 41],
+			[71, 42],
+			[42, 43],
+			[42, 44],
+			[42, 45],
+			[71, 46],
+			[71, 72],
+			[72, 48],
+			[72, 73],
+			[71, 50],
+			[71, 51],
+			[71, 10],
+			[70, 74],
+			[74, 75],
+			[75, 76],
+			[74, 77],
+			[70, 78],
+			[78, 79],
+			[78, 61],
+			[70, 80],
+			[1, 6],
+			[6, 7],
+			[6, 8],
+			[8, 9],
+			[8, 10],
+			[6, 11],
+			[11, 12],
+			[11, 13],
+			[13, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17],
+			[14, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[13, 27],
+			[27, 24],
+			[11, 28],
+			[28, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17],
+			[14, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[28, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[28, 27],
+			[27, 24],
+			[28, 29],
+			[29, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17],
+			[14, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[29, 16],
+			[29, 30],
+			[30, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17],
+			[14, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[30, 23],
+			[30, 27],
+			[27, 24],
+			[30, 25],
+			[25, 17],
+			[11, 31],
+			[31, 32],
+			[32, 33],
+			[33, 34],
+			[32, 35],
+			[35, 15],
+			[15, 16],
+			[15, 17],
+			[35, 19],
+			[35, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[35, 36],
+			[36, 37],
+			[37, 19],
+			[37, 16],
+			[37, 23],
+			[36, 16],
+			[36, 17],
+			[36, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[36, 23],
+			[36, 38],
+			[38, 19],
+			[32, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17],
+			[14, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[32, 39],
+			[39, 40],
+			[32, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[32, 23],
+			[32, 27],
+			[27, 24],
+			[11, 32],
+			[32, 33],
+			[33, 34],
+			[32, 35],
+			[35, 15],
+			[15, 16],
+			[15, 17],
+			[35, 19],
+			[35, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[35, 36],
+			[36, 37],
+			[37, 19],
+			[37, 16],
+			[37, 23],
+			[36, 16],
+			[36, 17],
+			[36, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[36, 23],
+			[36, 38],
+			[38, 19],
+			[32, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17],
+			[14, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[32, 39],
+			[39, 40],
+			[32, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[32, 23],
+			[32, 27],
+			[27, 24],
+			[6, 41],
+			[6, 42],
+			[42, 43],
+			[42, 44],
+			[42, 45],
+			[6, 46],
+			[6, 47],
+			[47, 48],
+			[47, 49],
+			[6, 50],
+			[6, 51],
+			[6, 10],
+			[1, 81],
+			[1, 82],
+			[1, 83],
+			[1, 84],
+			[84, 85],
+			[84, 86],
+			[86, 87],
+			[87, 88],
+			[88, 89],
+			[89, 90],
+			[86, 91],
+			[1, 92],
+			[1, 93],
+			[93, 94],
+			[94, 95],
+			[95, 96],
+			[1, 97],
+			[97, 98],
+			[97, 99],
+			[97, 100],
+			[97, 101],
+			[101, 99],
+			[101, 102],
+			[102, 99],
+			[1, 103],
+			[103, 104],
+			[1, 105],
+			[105, 106],
+			[105, 107],
+			[107, 108],
+			[107, 109],
+			[105, 110],
+			[110, 107],
+			[107, 108],
+			[107, 109],
+			[1, 111],
+			[1, 112],
+			[1, 113],
+			[113, 114],
+			[114, 115],
+			[115, 116],
+			[115, 117],
+			[117, 118],
+			[115, 119],
+			[119, 120],
+			[120, 121],
+			[121, 122],
+			[120, 123],
+			[123, 121],
+			[121, 122],
+			[123, 122],
+			[120, 12],
+			[120, 64],
+			[64, 65],
+			[65, 66],
+			[65, 67],
+			[120, 124],
+			[120, 125],
+			[115, 61],
+			[114, 118],
+			[114, 126],
+			[114, 127],
+			[113, 128],
+			[113, 129],
+			[129, 130],
+			[130, 131],
+			[113, 132],
+			[132, 127],
+			[113, 133],
+			[133, 134],
+			[113, 135],
+			[1, 136],
+			[1, 137],
+			[1, 138],
+			[138, 139],
+			[138, 140],
+			[140, 139],
+			[0, 52],
+			[0, 53],
+			[53, 54],
+			[53, 55],
+			[53, 56],
+			[53, 57],
+			[53, 58],
+			[58, 59],
+			[59, 60],
+			[58, 61],
+			[58, 60],
+			[58, 62],
+			[53, 63],
+			[53, 64],
+			[64, 65],
+			[65, 66],
+			[65, 67],
+			[53, 68],
+			[53, 69],
+			[0, 6],
+			[6, 7],
+			[6, 8],
+			[8, 9],
+			[8, 10],
+			[6, 11],
+			[11, 12],
+			[11, 13],
+			[13, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17],
+			[14, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[13, 27],
+			[27, 24],
+			[11, 28],
+			[28, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17],
+			[14, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[28, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[28, 27],
+			[27, 24],
+			[28, 29],
+			[29, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17],
+			[14, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[29, 16],
+			[29, 30],
+			[30, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17],
+			[14, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[30, 23],
+			[30, 27],
+			[27, 24],
+			[30, 25],
+			[25, 17],
+			[11, 31],
+			[31, 32],
+			[32, 33],
+			[33, 34],
+			[32, 35],
+			[35, 15],
+			[15, 16],
+			[15, 17],
+			[35, 19],
+			[35, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[35, 36],
+			[36, 37],
+			[37, 19],
+			[37, 16],
+			[37, 23],
+			[36, 16],
+			[36, 17],
+			[36, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[36, 23],
+			[36, 38],
+			[38, 19],
+			[32, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17],
+			[14, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[32, 39],
+			[39, 40],
+			[32, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[32, 23],
+			[32, 27],
+			[27, 24],
+			[11, 32],
+			[32, 33],
+			[33, 34],
+			[32, 35],
+			[35, 15],
+			[15, 16],
+			[15, 17],
+			[35, 19],
+			[35, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[35, 36],
+			[36, 37],
+			[37, 19],
+			[37, 16],
+			[37, 23],
+			[36, 16],
+			[36, 17],
+			[36, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[36, 23],
+			[36, 38],
+			[38, 19],
+			[32, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17],
+			[14, 18],
+			[18, 15],
+			[15, 16],
+			[15, 17],
+			[18, 19],
+			[18, 16],
+			[18, 20],
+			[20, 16],
+			[18, 17],
+			[18, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[18, 23],
+			[18, 24],
+			[18, 25],
+			[25, 17],
+			[18, 26],
+			[32, 39],
+			[39, 40],
+			[32, 21],
+			[21, 22],
+			[22, 15],
+			[22, 16],
+			[22, 23],
+			[21, 20],
+			[20, 16],
+			[32, 23],
+			[32, 27],
+			[27, 24],
+			[6, 41],
+			[6, 42],
+			[42, 43],
+			[42, 44],
+			[42, 45],
+			[6, 46],
+			[6, 47],
+			[47, 48],
+			[47, 49],
+			[6, 50],
+			[6, 51],
+			[6, 10],
+			[0, 141],
+			[141, 142],
+			[142, 143],
+			[143, 144],
+			[144, 145],
+			[141, 146],
+			[146, 147],
+			[141, 148],
+			[148, 149],
+			[148, 150],
+			[141, 151],
+			[151, 149],
+			[141, 152],
+			[152, 146],
+			[146, 147],
+			[141, 153],
+			[153, 154],
+			[141, 150],
+			[0, 155],
+			[0, 81],
+			[0, 156],
+			[0, 82],
+			[0, 157],
+			[157, 158],
+			[0, 83],
+			[0, 84],
+			[84, 85],
+			[84, 86],
+			[86, 87],
+			[87, 88],
+			[88, 89],
+			[89, 90],
+			[86, 91],
+			[0, 159],
+			[159, 160],
+			[159, 161],
+			[161, 162],
+			[162, 25],
+			[25, 17],
+			[161, 163],
+			[161, 164],
+			[159, 165],
+			[165, 166],
+			[166, 167],
+			[165, 168],
+			[165, 169],
+			[0, 92],
+			[0, 97],
+			[97, 98],
+			[97, 99],
+			[97, 100],
+			[97, 101],
+			[101, 99],
+			[101, 102],
+			[102, 99],
+			[0, 170],
+			[170, 171],
+			[170, 172],
+			[172, 173],
+			[173, 174],
+			[174, 121],
+			[121, 122],
+			[174, 123],
+			[123, 121],
+			[121, 122],
+			[123, 122],
+			[174, 12],
+			[174, 64],
+			[64, 65],
+			[65, 66],
+			[65, 67],
+			[174, 124],
+			[174, 125],
+			[173, 175],
+			[173, 176],
+			[176, 65],
+			[65, 66],
+			[65, 67],
+			[170, 120],
+			[120, 121],
+			[121, 122],
+			[120, 123],
+			[123, 121],
+			[121, 122],
+			[123, 122],
+			[120, 12],
+			[120, 64],
+			[64, 65],
+			[65, 66],
+			[65, 67],
+			[120, 124],
+			[120, 125],
+			[170, 177],
+			[177, 178],
+			[178, 179],
+			[178, 133],
+			[133, 134],
+			[177, 180],
+			[177, 181],
+			[177, 182],
+			[182, 183],
+			[183, 184],
+			[184, 185],
+			[185, 186],
+			[186, 187],
+			[183, 91],
+			[182, 188],
+			[188, 189],
+			[188, 190],
+			[190, 191],
+			[190, 161],
+			[161, 162],
+			[162, 25],
+			[25, 17],
+			[161, 163],
+			[161, 164],
+			[190, 192],
+			[190, 193],
+			[193, 194],
+			[194, 195],
+			[195, 196],
+			[195, 197],
+			[194, 197],
+			[193, 195],
+			[195, 196],
+			[195, 197],
+			[188, 198],
+			[198, 199],
+			[199, 200],
+			[198, 201],
+			[201, 202],
+			[201, 203],
+			[201, 204],
+			[198, 205],
+			[198, 206],
+			[188, 207],
+			[182, 208],
+			[177, 209],
+			[177, 210],
+			[177, 211],
+			[211, 212],
+			[211, 213],
+			[211, 214],
+			[177, 215],
+			[177, 216],
+			[177, 217],
+			[217, 181],
+			[217, 218],
+			[177, 219],
+			[219, 220],
+			[219, 221],
+			[219, 222],
+			[177, 223],
+			[223, 57],
+			[223, 162],
+			[162, 25],
+			[25, 17],
+			[223, 224],
+			[224, 225],
+			[225, 226],
+			[223, 193],
+			[193, 194],
+			[194, 195],
+			[195, 196],
+			[195, 197],
+			[194, 197],
+			[193, 195],
+			[195, 196],
+			[195, 197],
+			[170, 227],
+			[227, 228],
+			[228, 229],
+			[229, 230],
+			[227, 231],
+			[231, 232],
+			[170, 175],
+			[170, 233],
+			[233, 234],
+			[234, 235],
+			[234, 236],
+			[236, 237],
+			[234, 238],
+			[238, 239],
+			[239, 236],
+			[236, 237],
+			[239, 240],
+			[239, 241],
+			[234, 242],
+			[234, 243],
+			[234, 239],
+			[239, 236],
+			[236, 237],
+			[239, 240],
+			[239, 241],
+			[234, 244],
+			[234, 245],
+			[234, 246],
+			[233, 247],
+			[233, 248],
+			[248, 249],
+			[248, 250],
+			[250, 12],
+			[250, 251],
+			[251, 252],
+			[250, 253],
+			[233, 246],
+			[170, 254],
+			[254, 255],
+			[254, 256],
+			[254, 257],
+			[254, 258],
+			[254, 259],
+			[254, 260],
+			[254, 261],
+			[254, 262],
+			[262, 263],
+			[262, 103],
+			[103, 104],
+			[262, 264],
+			[264, 265],
+			[254, 103],
+			[103, 104],
+			[254, 266],
+			[254, 252],
+			[254, 267],
+			[267, 268],
+			[268, 63],
+			[267, 63],
+			[254, 269],
+			[269, 252],
+			[254, 270],
+			[254, 271],
+			[271, 272],
+			[272, 273],
+			[273, 63],
+			[272, 274],
+			[272, 275],
+			[272, 276],
+			[271, 277],
+			[254, 278],
+			[254, 279],
+			[279, 280],
+			[280, 281],
+			[281, 282],
+			[280, 283],
+			[280, 284],
+			[284, 285],
+			[280, 286],
+			[286, 285],
+			[280, 287],
+			[287, 283],
+			[287, 282],
+			[280, 288],
+			[280, 285],
+			[280, 289],
+			[289, 288],
+			[280, 282],
+			[279, 290],
+			[290, 291],
+			[291, 292],
+			[291, 285],
+			[291, 293],
+			[290, 294],
+			[290, 285],
+			[290, 295],
+			[279, 285],
+			[254, 264],
+			[264, 265],
+			[254, 296],
+			[254, 297],
+			[170, 298],
+			[298, 299],
+			[299, 300],
+			[299, 301],
+			[299, 226],
+			[299, 302],
+			[299, 303],
+			[303, 226],
+			[303, 304],
+			[304, 226],
+			[299, 305],
+			[305, 304],
+			[304, 226],
+			[298, 120],
+			[120, 121],
+			[121, 122],
+			[120, 123],
+			[123, 121],
+			[121, 122],
+			[123, 122],
+			[120, 12],
+			[120, 64],
+			[64, 65],
+			[65, 66],
+			[65, 67],
+			[120, 124],
+			[120, 125],
+			[298, 306],
+			[306, 307],
+			[298, 308],
+			[308, 309],
+			[298, 310],
+			[310, 311],
+			[311, 235],
+			[311, 236],
+			[236, 237],
+			[311, 238],
+			[238, 239],
+			[239, 236],
+			[236, 237],
+			[239, 240],
+			[239, 241],
+			[311, 242],
+			[311, 243],
+			[311, 239],
+			[239, 236],
+			[236, 237],
+			[239, 240],
+			[239, 241],
+			[311, 244],
+			[311, 246],
+			[310, 247],
+			[310, 312],
+			[312, 249],
+			[312, 250],
+			[250, 12],
+			[250, 251],
+			[251, 252],
+			[250, 253],
+			[310, 246],
+			[298, 313],
+			[313, 120],
+			[120, 121],
+			[121, 122],
+			[120, 123],
+			[123, 121],
+			[121, 122],
+			[123, 122],
+			[120, 12],
+			[120, 64],
+			[64, 65],
+			[65, 66],
+			[65, 67],
+			[120, 124],
+			[120, 125],
+			[298, 57],
+			[298, 314],
+			[298, 61],
+			[298, 315],
+			[315, 316],
+			[316, 304],
+			[304, 226],
+			[315, 317],
+			[317, 299],
+			[299, 300],
+			[299, 301],
+			[299, 226],
+			[299, 302],
+			[299, 303],
+			[303, 226],
+			[303, 304],
+			[304, 226],
+			[299, 305],
+			[305, 304],
+			[304, 226],
+			[317, 120],
+			[120, 121],
+			[121, 122],
+			[120, 123],
+			[123, 121],
+			[121, 122],
+			[123, 122],
+			[120, 12],
+			[120, 64],
+			[64, 65],
+			[65, 66],
+			[65, 67],
+			[120, 124],
+			[120, 125],
+			[317, 316],
+			[316, 304],
+			[304, 226],
+			[317, 318],
+			[318, 319],
+			[319, 320],
+			[319, 179],
+			[317, 300],
+			[317, 301],
+			[317, 313],
+			[313, 120],
+			[120, 121],
+			[121, 122],
+			[120, 123],
+			[123, 121],
+			[121, 122],
+			[123, 122],
+			[120, 12],
+			[120, 64],
+			[64, 65],
+			[65, 66],
+			[65, 67],
+			[120, 124],
+			[120, 125],
+			[317, 304],
+			[304, 226],
+			[317, 225],
+			[225, 226],
+			[317, 321],
+			[321, 57],
+			[321, 322],
+			[317, 305],
+			[305, 304],
+			[304, 226],
+			[317, 323],
+			[317, 324],
+			[324, 304],
+			[304, 226],
+			[317, 325],
+			[325, 326],
+			[326, 327],
+			[317, 328],
+			[328, 304],
+			[304, 226],
+			[317, 329],
+			[317, 330],
+			[330, 301],
+			[330, 313],
+			[313, 120],
+			[120, 121],
+			[121, 122],
+			[120, 123],
+			[123, 121],
+			[121, 122],
+			[123, 122],
+			[120, 12],
+			[120, 64],
+			[64, 65],
+			[65, 66],
+			[65, 67],
+			[120, 124],
+			[120, 125],
+			[317, 331],
+			[331, 304],
+			[304, 226],
+			[315, 304],
+			[304, 226],
+			[315, 332],
+			[315, 225],
+			[225, 226],
+			[315, 333],
+			[315, 334],
+			[334, 335],
+			[334, 336],
+			[315, 337],
+			[337, 338],
+			[338, 339],
+			[315, 340],
+			[340, 304],
+			[304, 226],
+			[340, 303],
+			[303, 226],
+			[303, 304],
+			[304, 226],
+			[340, 341],
+			[341, 304],
+			[304, 226],
+			[315, 324],
+			[324, 304],
+			[304, 226],
+			[315, 342],
+			[342, 343],
+			[342, 344],
+			[344, 345],
+			[345, 339],
+			[342, 345],
+			[345, 339],
+			[315, 328],
+			[328, 304],
+			[304, 226],
+			[315, 346],
+			[346, 345],
+			[345, 339],
+			[346, 344],
+			[344, 345],
+			[345, 339],
+			[315, 331],
+			[331, 304],
+			[304, 226],
+			[315, 347],
+			[347, 345],
+			[345, 339],
+			[347, 348],
+			[348, 349],
+			[349, 350],
+			[349, 351],
+			[348, 352],
+			[347, 344],
+			[344, 345],
+			[345, 339],
+			[315, 353],
+			[170, 354],
+			[170, 355],
+			[355, 120],
+			[120, 121],
+			[121, 122],
+			[120, 123],
+			[123, 121],
+			[121, 122],
+			[123, 122],
+			[120, 12],
+			[120, 64],
+			[64, 65],
+			[65, 66],
+			[65, 67],
+			[120, 124],
+			[120, 125],
+			[355, 175],
+			[355, 356],
+			[356, 357],
+			[356, 358],
+			[355, 359],
+			[359, 360],
+			[359, 361],
+			[361, 362],
+			[362, 228],
+			[228, 229],
+			[229, 230],
+			[362, 239],
+			[239, 236],
+			[236, 237],
+			[239, 240],
+			[239, 241],
+			[362, 236],
+			[236, 237],
+			[361, 236],
+			[236, 237],
+			[361, 239],
+			[239, 236],
+			[236, 237],
+			[239, 240],
+			[239, 241],
+			[359, 363],
+			[359, 239],
+			[239, 236],
+			[236, 237],
+			[239, 240],
+			[239, 241],
+			[359, 364],
+			[359, 365],
+			[359, 366],
+			[170, 367],
+			[367, 308],
+			[308, 309],
+			[367, 368],
+			[367, 369],
+			[369, 370],
+			[170, 371],
+			[170, 372],
+			[372, 373],
+			[373, 45],
+			[373, 12],
+			[373, 374],
+			[373, 375],
+			[373, 376],
+			[376, 374],
+			[373, 253],
+			[373, 377],
+			[170, 378],
+			[378, 120],
+			[120, 121],
+			[121, 122],
+			[120, 123],
+			[123, 121],
+			[121, 122],
+			[123, 122],
+			[120, 12],
+			[120, 64],
+			[64, 65],
+			[65, 66],
+			[65, 67],
+			[120, 124],
+			[120, 125],
+			[0, 379],
+			[379, 380],
+			[0, 111],
+			[0, 381],
+			[381, 382],
+			[381, 383],
+			[381, 384],
+			[384, 385],
+			[384, 56],
+			[384, 386],
+			[384, 387],
+			[387, 388],
+			[384, 389],
+			[389, 390],
+			[389, 391],
+			[391, 392],
+			[392, 393],
+			[391, 394],
+			[394, 395],
+			[395, 396],
+			[394, 390],
+			[389, 152],
+			[152, 146],
+			[146, 147],
+			[389, 386],
+			[389, 397],
+			[397, 142],
+			[142, 143],
+			[143, 144],
+			[144, 145],
+			[397, 149],
+			[384, 398],
+			[381, 399],
+			[381, 175],
+			[0, 400],
+			[400, 401],
+			[401, 142],
+			[142, 143],
+			[143, 144],
+			[144, 145],
+			[401, 146],
+			[146, 147],
+			[401, 148],
+			[148, 149],
+			[148, 150],
+			[401, 151],
+			[151, 149],
+			[401, 152],
+			[152, 146],
+			[146, 147],
+			[401, 153],
+			[153, 154],
+			[401, 150],
+			[400, 402],
+			[400, 169],
+			[0, 112],
+			[0, 113],
+			[113, 114],
+			[114, 115],
+			[115, 116],
+			[115, 117],
+			[117, 118],
+			[115, 119],
+			[119, 120],
+			[120, 121],
+			[121, 122],
+			[120, 123],
+			[123, 121],
+			[121, 122],
+			[123, 122],
+			[120, 12],
+			[120, 64],
+			[64, 65],
+			[65, 66],
+			[65, 67],
+			[120, 124],
+			[120, 125],
+			[115, 61],
+			[114, 118],
+			[114, 126],
+			[114, 127],
+			[113, 128],
+			[113, 129],
+			[129, 130],
+			[130, 131],
+			[113, 132],
+			[132, 127],
+			[113, 133],
+			[133, 134],
+			[113, 135],
+			[0, 136],
+			[0, 403],
+			[0, 404],
+			[404, 405],
+			[0, 406],
+			[406, 360],
+			[406, 361],
+			[361, 362],
+			[362, 228],
+			[228, 229],
+			[229, 230],
+			[362, 239],
+			[239, 236],
+			[236, 237],
+			[239, 240],
+			[239, 241],
+			[362, 236],
+			[236, 237],
+			[361, 236],
+			[236, 237],
+			[361, 239],
+			[239, 236],
+			[236, 237],
+			[239, 240],
+			[239, 241],
+			[406, 363],
+			[406, 239],
+			[239, 236],
+			[236, 237],
+			[239, 240],
+			[239, 241],
+			[406, 364],
+			[406, 365],
+			[406, 366]
+		],
+		"circular": []
+	}
 }

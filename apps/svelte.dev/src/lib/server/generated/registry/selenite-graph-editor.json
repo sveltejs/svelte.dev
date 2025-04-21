@@ -13,145 +13,6 @@
 	"svelte_range": "5.2.0",
 	"kit_range": "^2.8.1",
 	"last_rune_check_version": "0.1.20",
-	"dependencies": [
-		{
-			"name": "@isomorphic-git/lightning-fs",
-			"semver": "^4.6.0"
-		},
-		{
-			"name": "@skeletonlabs/floating-ui-svelte",
-			"semver": "^0.3.1"
-		},
-		{
-			"name": "autoprefixer",
-			"semver": "^10.4.20"
-		},
-		{
-			"name": "broadcast-channel",
-			"semver": "^7.0.0"
-		},
-		{
-			"name": "buffer",
-			"semver": "^6.0.3"
-		},
-		{
-			"name": "color",
-			"semver": "^4.2.3"
-		},
-		{
-			"name": "d3-shape",
-			"semver": "^3.2.0"
-		},
-		{
-			"name": "dexie",
-			"semver": "^4.0.9"
-		},
-		{
-			"name": "fast-xml-parser",
-			"semver": "^4.5.0"
-		},
-		{
-			"name": "isomorphic-git",
-			"semver": "^1.27.1"
-		},
-		{
-			"name": "lodash-es",
-			"semver": "^4.17.21"
-		},
-		{
-			"name": "regenerator-runtime",
-			"semver": "^0.14.1"
-		},
-		{
-			"name": "rete",
-			"semver": "^2.0.5"
-		},
-		{
-			"name": "rete-area-plugin",
-			"semver": "^2.1.3"
-		},
-		{
-			"name": "rete-auto-arrange-plugin",
-			"semver": "^2.0.2"
-		},
-		{
-			"name": "rete-comment-plugin",
-			"semver": "^2.1.0"
-		},
-		{
-			"name": "rete-connection-path-plugin",
-			"semver": "^2.0.4"
-		},
-		{
-			"name": "rete-connection-plugin",
-			"semver": "^2.0.5"
-		},
-		{
-			"name": "rete-context-menu-plugin",
-			"semver": "^2.0.4"
-		},
-		{
-			"name": "rete-engine",
-			"semver": "^2.0.2"
-		},
-		{
-			"name": "rete-history-plugin",
-			"semver": "^2.0.2"
-		},
-		{
-			"name": "rete-render-utils",
-			"semver": "^2.0.3"
-		},
-		{
-			"name": "rete-structures",
-			"semver": "^2.0.3"
-		},
-		{
-			"name": "rete-svelte-plugin",
-			"semver": "^2.0.3"
-		},
-		{
-			"name": "runed",
-			"semver": "^0.15.3"
-		},
-		{
-			"name": "sass",
-			"semver": "^1.81.0"
-		},
-		{
-			"name": "svelte-css-vars",
-			"semver": "^0.0.3"
-		},
-		{
-			"name": "svelte-fa",
-			"semver": "^4.0.3"
-		},
-		{
-			"name": "svelte-floating-ui",
-			"semver": "^1.5.9"
-		},
-		{
-			"name": "svelte-persisted-store",
-			"semver": "^0.12.0"
-		},
-		{
-			"name": "svelte-portal",
-			"semver": "^2.2.1"
-		},
-		{
-			"name": "tailwind-scrollbar",
-			"semver": "^3.1.0"
-		},
-		{
-			"name": "uuid",
-			"semver": "^11.0.3"
-		},
-		{
-			"name": "wu",
-			"semver": "^2.1.0"
-		}
-	],
-	"unpacked_size": 700710,
 	"downloads_history": [
 		{
 			"range": [1718562600000, 1719167399999],
@@ -325,5 +186,614 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 69
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@selenite/graph-editor",
+				"version": "0.1.20",
+				"size": 700710
+			},
+			{
+				"name": "@isomorphic-git/lightning-fs",
+				"version": "4.6.0",
+				"size": 88645
+			},
+			{
+				"name": "@isomorphic-git/idb-keyval",
+				"version": "3.3.2",
+				"size": 32235
+			},
+			{
+				"name": "isomorphic-textencoder",
+				"version": "1.0.1",
+				"size": 2819
+			},
+			{
+				"name": "fast-text-encoding",
+				"version": "1.0.6",
+				"size": 32194
+			},
+			{
+				"name": "just-debounce-it",
+				"version": "1.1.0",
+				"size": 2573
+			},
+			{
+				"name": "just-once",
+				"version": "1.1.0",
+				"size": 2280
+			},
+			{
+				"name": "@skeletonlabs/floating-ui-svelte",
+				"version": "0.3.9",
+				"size": 72282
+			},
+			{
+				"name": "@floating-ui/dom",
+				"version": "1.6.13",
+				"size": 165945
+			},
+			{
+				"name": "@floating-ui/core",
+				"version": "1.6.9",
+				"size": 212585
+			},
+			{
+				"name": "@floating-ui/utils",
+				"version": "0.2.9",
+				"size": 64926
+			},
+			{
+				"name": "autoprefixer",
+				"version": "10.4.21",
+				"size": 199184
+			},
+			{
+				"name": "browserslist",
+				"version": "4.24.4",
+				"size": 64926
+			},
+			{
+				"name": "caniuse-lite",
+				"version": "1.0.30001715",
+				"size": 2211246
+			},
+			{
+				"name": "electron-to-chromium",
+				"version": "1.5.139",
+				"size": 161922
+			},
+			{
+				"name": "node-releases",
+				"version": "2.0.19",
+				"size": 37225
+			},
+			{
+				"name": "update-browserslist-db",
+				"version": "1.1.3",
+				"size": 14770
+			},
+			{
+				"name": "escalade",
+				"version": "3.2.0",
+				"size": 12385
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "fraction.js",
+				"version": "4.3.7",
+				"size": 86195
+			},
+			{
+				"name": "normalize-range",
+				"version": "0.1.2"
+			},
+			{
+				"name": "postcss-value-parser",
+				"version": "4.2.0",
+				"size": 27193
+			},
+			{
+				"name": "broadcast-channel",
+				"version": "7.1.0",
+				"size": 534998
+			},
+			{
+				"name": "@babel/runtime",
+				"version": "7.27.0",
+				"size": 249798
+			},
+			{
+				"name": "regenerator-runtime",
+				"version": "0.14.1",
+				"size": 27863
+			},
+			{
+				"name": "oblivious-set",
+				"version": "1.4.0",
+				"size": 28762
+			},
+			{
+				"name": "p-queue",
+				"version": "6.6.2",
+				"size": 30906
+			},
+			{
+				"name": "p-timeout",
+				"version": "3.2.0",
+				"size": 7377
+			},
+			{
+				"name": "p-finally",
+				"version": "1.0.0"
+			},
+			{
+				"name": "eventemitter3",
+				"version": "4.0.7",
+				"size": 37967
+			},
+			{
+				"name": "unload",
+				"version": "2.4.1",
+				"size": 37676
+			},
+			{
+				"name": "buffer",
+				"version": "6.0.3",
+				"size": 91279
+			},
+			{
+				"name": "base64-js",
+				"version": "1.5.1",
+				"size": 9624
+			},
+			{
+				"name": "ieee754",
+				"version": "1.2.1",
+				"size": 6796
+			},
+			{
+				"name": "color",
+				"version": "4.2.3",
+				"size": 16806
+			},
+			{
+				"name": "color-string",
+				"version": "1.9.1",
+				"size": 10115
+			},
+			{
+				"name": "color-name",
+				"version": "1.1.4",
+				"size": 6693
+			},
+			{
+				"name": "simple-swizzle",
+				"version": "0.2.2"
+			},
+			{
+				"name": "is-arrayish",
+				"version": "0.3.2",
+				"size": 54720
+			},
+			{
+				"name": "color-convert",
+				"version": "2.0.1",
+				"size": 27189
+			},
+			{
+				"name": "d3-shape",
+				"version": "3.2.0",
+				"size": 247267
+			},
+			{
+				"name": "d3-path",
+				"version": "3.1.0",
+				"size": 20858
+			},
+			{
+				"name": "dexie",
+				"version": "4.0.11",
+				"size": 2986544
+			},
+			{
+				"name": "fast-xml-parser",
+				"version": "4.5.3",
+				"size": 230455
+			},
+			{
+				"name": "strnum",
+				"version": "1.1.2",
+				"size": 19247
+			},
+			{
+				"name": "isomorphic-git",
+				"version": "1.30.1",
+				"size": 3283012
+			},
+			{
+				"name": "async-lock",
+				"version": "1.4.1",
+				"size": 18255
+			},
+			{
+				"name": "clean-git-ref",
+				"version": "2.0.1",
+				"size": 2326
+			},
+			{
+				"name": "crc-32",
+				"version": "1.2.2",
+				"size": 31044
+			},
+			{
+				"name": "diff3",
+				"version": "0.0.3"
+			},
+			{
+				"name": "ignore",
+				"version": "5.3.2",
+				"size": 53630
+			},
+			{
+				"name": "minimisted",
+				"version": "2.0.1",
+				"size": 3493
+			},
+			{
+				"name": "minimist",
+				"version": "1.2.8",
+				"size": 54477
+			},
+			{
+				"name": "pako",
+				"version": "1.0.11",
+				"size": 788283
+			},
+			{
+				"name": "path-browserify",
+				"version": "1.0.1",
+				"size": 54293
+			},
+			{
+				"name": "pify",
+				"version": "4.0.1",
+				"size": 7234
+			},
+			{
+				"name": "readable-stream",
+				"version": "3.6.2",
+				"size": 123971
+			},
+			{
+				"name": "inherits",
+				"version": "2.0.4",
+				"size": 3958
+			},
+			{
+				"name": "string_decoder",
+				"version": "1.3.0",
+				"size": 14427
+			},
+			{
+				"name": "safe-buffer",
+				"version": "5.2.1",
+				"size": 32101
+			},
+			{
+				"name": "util-deprecate",
+				"version": "1.0.2"
+			},
+			{
+				"name": "sha.js",
+				"version": "2.4.11",
+				"size": 31084
+			},
+			{
+				"name": "simple-get",
+				"version": "4.0.1",
+				"size": 14971
+			},
+			{
+				"name": "decompress-response",
+				"version": "6.0.0",
+				"size": 5472
+			},
+			{
+				"name": "mimic-response",
+				"version": "3.1.0",
+				"size": 6003
+			},
+			{
+				"name": "once",
+				"version": "1.4.0"
+			},
+			{
+				"name": "wrappy",
+				"version": "1.0.2"
+			},
+			{
+				"name": "simple-concat",
+				"version": "1.0.1",
+				"size": 4624
+			},
+			{
+				"name": "lodash-es",
+				"version": "4.17.21",
+				"size": 636080
+			},
+			{
+				"name": "rete",
+				"version": "2.0.5",
+				"size": 225568
+			},
+			{
+				"name": "rete-area-plugin",
+				"version": "2.1.3",
+				"size": 489659
+			},
+			{
+				"name": "rete-auto-arrange-plugin",
+				"version": "2.0.2",
+				"size": 224983
+			},
+			{
+				"name": "rete-comment-plugin",
+				"version": "2.1.0",
+				"size": 264793
+			},
+			{
+				"name": "rete-connection-path-plugin",
+				"version": "2.0.4",
+				"size": 89723
+			},
+			{
+				"name": "rete-connection-plugin",
+				"version": "2.0.5",
+				"size": 266144
+			},
+			{
+				"name": "rete-context-menu-plugin",
+				"version": "2.0.6",
+				"size": 98522
+			},
+			{
+				"name": "rete-engine",
+				"version": "2.1.1",
+				"size": 181123
+			},
+			{
+				"name": "rete-history-plugin",
+				"version": "2.1.0",
+				"size": 199491
+			},
+			{
+				"name": "rete-render-utils",
+				"version": "2.0.3",
+				"size": 144055
+			},
+			{
+				"name": "rete-structures",
+				"version": "2.0.3",
+				"size": 138613
+			},
+			{
+				"name": "rete-svelte-plugin",
+				"version": "2.1.0",
+				"size": 3390641
+			},
+			{
+				"name": "runed",
+				"version": "0.15.4",
+				"size": 69462
+			},
+			{
+				"name": "esm-env",
+				"version": "1.2.2",
+				"size": 3784
+			},
+			{
+				"name": "sass",
+				"version": "1.86.3",
+				"size": 5693005
+			},
+			{
+				"name": "chokidar",
+				"version": "4.0.3",
+				"size": 148759
+			},
+			{
+				"name": "readdirp",
+				"version": "4.1.2",
+				"size": 36127
+			},
+			{
+				"name": "immutable",
+				"version": "5.1.1",
+				"size": 736872
+			},
+			{
+				"name": "source-map-js",
+				"version": "1.2.1",
+				"size": 139872
+			},
+			{
+				"name": "svelte-css-vars",
+				"version": "0.0.3",
+				"size": 3549
+			},
+			{
+				"name": "svelte-fa",
+				"version": "4.0.3",
+				"size": 24578
+			},
+			{
+				"name": "svelte-floating-ui",
+				"version": "1.6.2",
+				"size": 71906
+			},
+			{
+				"name": "svelte-persisted-store",
+				"version": "0.12.0",
+				"size": 29408
+			},
+			{
+				"name": "svelte-portal",
+				"version": "2.2.1",
+				"size": 10935
+			},
+			{
+				"name": "tailwind-scrollbar",
+				"version": "3.1.0",
+				"size": 18019
+			},
+			{
+				"name": "uuid",
+				"version": "11.1.0",
+				"size": 132894
+			},
+			{
+				"name": "wu",
+				"version": "2.1.0"
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[3, 4],
+			[1, 5],
+			[1, 6],
+			[0, 7],
+			[7, 8],
+			[8, 9],
+			[9, 10],
+			[8, 10],
+			[7, 10],
+			[0, 11],
+			[11, 12],
+			[12, 13],
+			[12, 14],
+			[12, 15],
+			[12, 16],
+			[16, 17],
+			[16, 18],
+			[11, 13],
+			[11, 19],
+			[11, 20],
+			[11, 18],
+			[11, 21],
+			[0, 22],
+			[22, 23],
+			[23, 24],
+			[22, 25],
+			[22, 26],
+			[26, 27],
+			[27, 28],
+			[26, 29],
+			[22, 30],
+			[0, 31],
+			[31, 32],
+			[31, 33],
+			[0, 34],
+			[34, 35],
+			[35, 36],
+			[35, 37],
+			[37, 38],
+			[34, 39],
+			[39, 36],
+			[0, 40],
+			[40, 41],
+			[0, 42],
+			[0, 43],
+			[43, 44],
+			[0, 45],
+			[45, 46],
+			[45, 47],
+			[45, 48],
+			[45, 49],
+			[45, 50],
+			[45, 51],
+			[51, 52],
+			[45, 53],
+			[45, 54],
+			[45, 55],
+			[45, 56],
+			[56, 57],
+			[56, 58],
+			[58, 59],
+			[56, 60],
+			[45, 61],
+			[61, 57],
+			[61, 59],
+			[45, 62],
+			[62, 63],
+			[63, 64],
+			[62, 65],
+			[65, 66],
+			[62, 67],
+			[0, 68],
+			[0, 24],
+			[0, 69],
+			[69, 23],
+			[23, 24],
+			[0, 70],
+			[70, 23],
+			[23, 24],
+			[0, 71],
+			[71, 23],
+			[23, 24],
+			[0, 72],
+			[72, 23],
+			[23, 24],
+			[0, 73],
+			[73, 23],
+			[23, 24],
+			[0, 74],
+			[74, 23],
+			[23, 24],
+			[0, 75],
+			[75, 23],
+			[23, 24],
+			[0, 76],
+			[76, 23],
+			[23, 24],
+			[0, 77],
+			[77, 23],
+			[23, 24],
+			[0, 78],
+			[78, 23],
+			[23, 24],
+			[0, 79],
+			[0, 80],
+			[80, 23],
+			[23, 24],
+			[0, 81],
+			[81, 82],
+			[0, 83],
+			[83, 84],
+			[84, 85],
+			[83, 86],
+			[83, 87],
+			[0, 88],
+			[0, 89],
+			[0, 90],
+			[90, 8],
+			[8, 9],
+			[9, 10],
+			[8, 10],
+			[0, 91],
+			[0, 92],
+			[0, 93],
+			[0, 94],
+			[0, 95]
+		],
+		"circular": []
+	}
 }

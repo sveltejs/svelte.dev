@@ -13,8 +13,6 @@
 	"kit_range": "next",
 	"last_rune_check_version": "1.0.8",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 14785,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -260,5 +258,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@caparturo/svelte-custom-dropdown",
+				"version": "1.0.8",
+				"size": 14785
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

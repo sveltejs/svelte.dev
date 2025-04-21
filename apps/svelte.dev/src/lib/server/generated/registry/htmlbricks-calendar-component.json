@@ -12,17 +12,6 @@
 	"svelte_range": "^3.44.3",
 	"last_rune_check_version": "0.2.4",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "date-holidays",
-			"semver": "^3.12.2"
-		},
-		{
-			"name": "dayjs",
-			"semver": "^1.10.7"
-		}
-	],
-	"unpacked_size": 2657297,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -236,5 +225,117 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@htmlbricks/calendar-component",
+				"version": "0.2.4",
+				"size": 2657297
+			},
+			{
+				"name": "date-holidays",
+				"version": "3.24.2",
+				"size": 2795217
+			},
+			{
+				"name": "date-holidays-parser",
+				"version": "3.4.7",
+				"size": 234661
+			},
+			{
+				"name": "astronomia",
+				"version": "4.1.1",
+				"size": 18657888
+			},
+			{
+				"name": "caldate",
+				"version": "2.0.5",
+				"size": 21796
+			},
+			{
+				"name": "moment-timezone",
+				"version": "0.5.48",
+				"size": 2843422
+			},
+			{
+				"name": "moment",
+				"version": "2.30.1",
+				"size": 4350323
+			},
+			{
+				"name": "date-bengali-revised",
+				"version": "2.0.2",
+				"size": 19202
+			},
+			{
+				"name": "date-chinese",
+				"version": "2.1.4",
+				"size": 42396
+			},
+			{
+				"name": "date-easter",
+				"version": "1.0.3",
+				"size": 10725
+			},
+			{
+				"name": "deepmerge",
+				"version": "4.3.1",
+				"size": 31157
+			},
+			{
+				"name": "jalaali-js",
+				"version": "1.2.8",
+				"size": 28546
+			},
+			{
+				"name": "js-yaml",
+				"version": "4.1.0",
+				"size": 404738
+			},
+			{
+				"name": "argparse",
+				"version": "2.0.1",
+				"size": 171548
+			},
+			{
+				"name": "lodash",
+				"version": "4.17.21",
+				"size": 1412415
+			},
+			{
+				"name": "prepin",
+				"version": "1.0.3",
+				"size": 15665
+			},
+			{
+				"name": "dayjs",
+				"version": "1.11.13",
+				"size": 670277
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[2, 4],
+			[4, 5],
+			[5, 6],
+			[2, 7],
+			[2, 8],
+			[8, 3],
+			[2, 9],
+			[2, 10],
+			[2, 11],
+			[2, 5],
+			[5, 6],
+			[1, 12],
+			[12, 13],
+			[1, 14],
+			[1, 15],
+			[0, 16]
+		],
+		"circular": []
+	}
 }

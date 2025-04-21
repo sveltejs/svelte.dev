@@ -13,17 +13,6 @@
 	"version": "1.14.0",
 	"svelte_range": "^3.37.0 || ^4.0.0 || ^5.0.0",
 	"last_rune_check_version": "1.14.0",
-	"dependencies": [
-		{
-			"name": "eslint-plugin-svelte",
-			"semver": "^3.3.3"
-		},
-		{
-			"name": "svelte-eslint-parser",
-			"semver": "^1.1.0"
-		}
-	],
-	"unpacked_size": 30211,
 	"downloads_history": [
 		{
 			"range": [1702837800000, 1703442599999],
@@ -285,5 +274,203 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 48
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@witheslint/preset-svelte",
+				"version": "1.14.0",
+				"size": 30211
+			},
+			{
+				"name": "eslint-plugin-svelte",
+				"version": "3.5.1",
+				"size": 761285
+			},
+			{
+				"name": "@eslint-community/eslint-utils",
+				"version": "4.6.1",
+				"size": 476789
+			},
+			{
+				"name": "eslint-visitor-keys",
+				"version": "3.4.3",
+				"size": 32278
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "esutils",
+				"version": "2.0.3",
+				"size": 50582
+			},
+			{
+				"name": "known-css-properties",
+				"version": "0.35.0",
+				"size": 37356
+			},
+			{
+				"name": "postcss",
+				"version": "8.5.3",
+				"size": 201969
+			},
+			{
+				"name": "nanoid",
+				"version": "3.3.11",
+				"size": 32583
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "source-map-js",
+				"version": "1.2.1",
+				"size": 139872
+			},
+			{
+				"name": "postcss-load-config",
+				"version": "3.1.4",
+				"size": 22743
+			},
+			{
+				"name": "yaml",
+				"version": "1.10.2",
+				"size": 448149
+			},
+			{
+				"name": "lilconfig",
+				"version": "2.1.0",
+				"size": 16587
+			},
+			{
+				"name": "postcss-safe-parser",
+				"version": "7.0.1",
+				"size": 5431
+			},
+			{
+				"name": "semver",
+				"version": "7.7.1",
+				"size": 96674
+			},
+			{
+				"name": "svelte-eslint-parser",
+				"version": "1.1.3",
+				"size": 340046
+			},
+			{
+				"name": "eslint-scope",
+				"version": "8.3.0",
+				"size": 155422
+			},
+			{
+				"name": "esrecurse",
+				"version": "4.3.0",
+				"size": 13527
+			},
+			{
+				"name": "estraverse",
+				"version": "5.3.0",
+				"size": 37094
+			},
+			{
+				"name": "eslint-visitor-keys",
+				"version": "4.2.0",
+				"size": 36136
+			},
+			{
+				"name": "espree",
+				"version": "10.3.0",
+				"size": 79348
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "acorn-jsx",
+				"version": "5.3.2",
+				"size": 24385
+			},
+			{
+				"name": "postcss-scss",
+				"version": "4.0.9",
+				"size": 19425
+			},
+			{
+				"name": "postcss-selector-parser",
+				"version": "7.1.0",
+				"size": 187187
+			},
+			{
+				"name": "cssesc",
+				"version": "3.0.0",
+				"size": 17488
+			},
+			{
+				"name": "util-deprecate",
+				"version": "1.0.2"
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[1, 4],
+			[1, 5],
+			[1, 6],
+			[1, 7],
+			[7, 8],
+			[7, 9],
+			[7, 10],
+			[1, 11],
+			[11, 12],
+			[11, 13],
+			[1, 14],
+			[1, 15],
+			[1, 16],
+			[16, 17],
+			[17, 18],
+			[18, 19],
+			[17, 19],
+			[16, 20],
+			[16, 21],
+			[21, 22],
+			[21, 23],
+			[21, 20],
+			[16, 7],
+			[7, 8],
+			[7, 9],
+			[7, 10],
+			[16, 24],
+			[16, 25],
+			[25, 26],
+			[25, 27],
+			[0, 16],
+			[16, 17],
+			[17, 18],
+			[18, 19],
+			[17, 19],
+			[16, 20],
+			[16, 21],
+			[21, 22],
+			[21, 23],
+			[21, 20],
+			[16, 7],
+			[7, 8],
+			[7, 9],
+			[7, 10],
+			[16, 24],
+			[16, 25],
+			[25, 26],
+			[25, 27]
+		],
+		"circular": []
+	}
 }

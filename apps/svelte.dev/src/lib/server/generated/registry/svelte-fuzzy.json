@@ -13,17 +13,6 @@
 	"version": "2.1.0",
 	"svelte_range": "^3.42.4",
 	"last_rune_check_version": "2.1.0",
-	"dependencies": [
-		{
-			"name": "format-fuse.js",
-			"semver": "^1.0.2"
-		},
-		{
-			"name": "fuse.js",
-			"semver": "^3.6.1"
-		}
-	],
-	"unpacked_size": 76774,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -337,5 +326,58 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 20
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-fuzzy",
+				"version": "2.1.0",
+				"size": 76774
+			},
+			{
+				"name": "format-fuse.js",
+				"version": "1.0.3",
+				"size": 6158
+			},
+			{
+				"name": "set-value",
+				"version": "4.1.0",
+				"size": 20749
+			},
+			{
+				"name": "is-plain-object",
+				"version": "2.0.4"
+			},
+			{
+				"name": "isobject",
+				"version": "3.0.1"
+			},
+			{
+				"name": "is-primitive",
+				"version": "3.0.1",
+				"size": 6795
+			},
+			{
+				"name": "strind",
+				"version": "0.3.1",
+				"size": 7886
+			},
+			{
+				"name": "fuse.js",
+				"version": "3.6.1",
+				"size": 31488
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[3, 4],
+			[2, 5],
+			[1, 6],
+			[0, 7]
+		],
+		"circular": []
+	}
 }

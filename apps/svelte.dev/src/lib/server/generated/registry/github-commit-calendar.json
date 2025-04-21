@@ -14,17 +14,6 @@
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.5.0",
 	"last_rune_check_version": "1.1.0",
-	"dependencies": [
-		{
-			"name": "graphql-request",
-			"semver": "^5.2.0"
-		},
-		{
-			"name": "mysvelte-ui",
-			"semver": "^0.0.21+latest"
-		}
-	],
-	"unpacked_size": 19041,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -266,5 +255,208 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 8
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "github-commit-calendar",
+				"version": "1.1.0",
+				"size": 19041
+			},
+			{
+				"name": "graphql-request",
+				"version": "5.2.0",
+				"size": 291991
+			},
+			{
+				"name": "form-data",
+				"version": "3.0.3",
+				"size": 31368
+			},
+			{
+				"name": "asynckit",
+				"version": "0.4.0"
+			},
+			{
+				"name": "mime-types",
+				"version": "2.1.35",
+				"size": 18272
+			},
+			{
+				"name": "mime-db",
+				"version": "1.52.0",
+				"size": 205539
+			},
+			{
+				"name": "combined-stream",
+				"version": "1.0.8",
+				"size": 11514
+			},
+			{
+				"name": "delayed-stream",
+				"version": "1.0.0"
+			},
+			{
+				"name": "es-set-tostringtag",
+				"version": "2.1.0",
+				"size": 14544
+			},
+			{
+				"name": "es-errors",
+				"version": "1.3.0",
+				"size": 12324
+			},
+			{
+				"name": "get-intrinsic",
+				"version": "1.3.0",
+				"size": 46542
+			},
+			{
+				"name": "call-bind-apply-helpers",
+				"version": "1.0.2",
+				"size": 15952
+			},
+			{
+				"name": "function-bind",
+				"version": "1.1.2",
+				"size": 31427
+			},
+			{
+				"name": "es-define-property",
+				"version": "1.0.1",
+				"size": 10217
+			},
+			{
+				"name": "es-object-atoms",
+				"version": "1.1.1",
+				"size": 11442
+			},
+			{
+				"name": "get-proto",
+				"version": "1.0.1",
+				"size": 10840
+			},
+			{
+				"name": "dunder-proto",
+				"version": "1.0.1",
+				"size": 13003
+			},
+			{
+				"name": "gopd",
+				"version": "1.2.0",
+				"size": 9869
+			},
+			{
+				"name": "has-symbols",
+				"version": "1.1.0",
+				"size": 23409
+			},
+			{
+				"name": "hasown",
+				"version": "2.0.2",
+				"size": 8765
+			},
+			{
+				"name": "math-intrinsics",
+				"version": "1.1.0",
+				"size": 17323
+			},
+			{
+				"name": "has-tostringtag",
+				"version": "1.0.2",
+				"size": 17603
+			},
+			{
+				"name": "cross-fetch",
+				"version": "3.2.0",
+				"size": 93584
+			},
+			{
+				"name": "node-fetch",
+				"version": "2.7.0",
+				"size": 162253
+			},
+			{
+				"name": "whatwg-url",
+				"version": "5.0.0"
+			},
+			{
+				"name": "tr46",
+				"version": "0.0.3"
+			},
+			{
+				"name": "webidl-conversions",
+				"version": "3.0.1"
+			},
+			{
+				"name": "extract-files",
+				"version": "9.0.0",
+				"size": 26024
+			},
+			{
+				"name": "@graphql-typed-document-node/core",
+				"version": "3.2.0",
+				"size": 2959
+			},
+			{
+				"name": "mysvelte-ui",
+				"version": "0.0.21",
+				"size": 77227
+			},
+			{
+				"name": "@types/gtag.js",
+				"version": "0.0.12",
+				"size": 7968
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[2, 4],
+			[4, 5],
+			[2, 6],
+			[6, 7],
+			[2, 8],
+			[8, 9],
+			[8, 10],
+			[10, 11],
+			[11, 9],
+			[11, 12],
+			[10, 13],
+			[10, 9],
+			[10, 14],
+			[14, 9],
+			[10, 12],
+			[10, 15],
+			[15, 16],
+			[16, 11],
+			[11, 9],
+			[11, 12],
+			[16, 9],
+			[16, 17],
+			[15, 14],
+			[14, 9],
+			[10, 17],
+			[10, 18],
+			[10, 19],
+			[19, 12],
+			[10, 20],
+			[8, 21],
+			[21, 18],
+			[8, 19],
+			[19, 12],
+			[1, 22],
+			[22, 23],
+			[23, 24],
+			[24, 25],
+			[24, 26],
+			[1, 27],
+			[1, 28],
+			[0, 29],
+			[29, 30]
+		],
+		"circular": []
+	}
 }

@@ -12,17 +12,6 @@
 	"version": "0.0.9",
 	"svelte_range": "^3.38.2",
 	"last_rune_check_version": "0.0.9",
-	"dependencies": [
-		{
-			"name": "resolve",
-			"semver": "^1.20.0"
-		},
-		{
-			"name": "sass",
-			"semver": "^1.42.1"
-		}
-	],
-	"unpacked_size": 119600,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -248,5 +237,84 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 9
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@svelterialjs/process",
+				"version": "0.0.9",
+				"size": 119600
+			},
+			{
+				"name": "resolve",
+				"version": "1.22.10",
+				"size": 145619
+			},
+			{
+				"name": "is-core-module",
+				"version": "2.16.1",
+				"size": 33475
+			},
+			{
+				"name": "hasown",
+				"version": "2.0.2",
+				"size": 8765
+			},
+			{
+				"name": "function-bind",
+				"version": "1.1.2",
+				"size": 31427
+			},
+			{
+				"name": "path-parse",
+				"version": "1.0.7",
+				"size": 4511
+			},
+			{
+				"name": "supports-preserve-symlinks-flag",
+				"version": "1.0.0",
+				"size": 9178
+			},
+			{
+				"name": "sass",
+				"version": "1.86.3",
+				"size": 5693005
+			},
+			{
+				"name": "chokidar",
+				"version": "4.0.3",
+				"size": 148759
+			},
+			{
+				"name": "readdirp",
+				"version": "4.1.2",
+				"size": 36127
+			},
+			{
+				"name": "immutable",
+				"version": "5.1.1",
+				"size": 736872
+			},
+			{
+				"name": "source-map-js",
+				"version": "1.2.1",
+				"size": 139872
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[3, 4],
+			[1, 5],
+			[1, 6],
+			[0, 7],
+			[7, 8],
+			[8, 9],
+			[7, 10],
+			[7, 11]
+		],
+		"circular": []
+	}
 }

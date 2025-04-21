@@ -13,13 +13,6 @@
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.1.1",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "svelte-formique",
-			"semver": "^0.1.1"
-		}
-	],
-	"unpacked_size": 123160,
 	"downloads_history": [
 		{
 			"range": [1737311400000, 1737916199999],
@@ -69,5 +62,19 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 9
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-formique",
+				"version": "0.1.1",
+				"size": 123160,
+				"isCircular": true,
+				"circularTarget": 0
+			}
+		],
+		"dependencies": [[0, 0]],
+		"circular": [[0, 0]]
+	}
 }

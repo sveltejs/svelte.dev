@@ -13,8 +13,6 @@
 	"version": "2.0.6",
 	"svelte_range": "^5.0.0",
 	"last_rune_check_version": "2.0.6",
-	"dependencies": [],
-	"unpacked_size": 10731,
 	"downloads_history": [
 		{
 			"range": [1737916200000, 1738520999999],
@@ -56,5 +54,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 13
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "vite-plugin-svelte-anywhere",
+				"version": "2.0.6",
+				"size": 10731
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

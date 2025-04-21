@@ -12,17 +12,6 @@
 	"typescript": true,
 	"version": "3.0.1",
 	"last_rune_check_version": "3.0.1",
-	"dependencies": [
-		{
-			"name": "@sveltejs/adapter-static",
-			"semver": "^3.0.1"
-		},
-		{
-			"name": "yaml",
-			"semver": "^2.4.1"
-		}
-	],
-	"unpacked_size": 11384,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -336,5 +325,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 90
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-adapter-static-digitalocean",
+				"version": "3.0.1",
+				"size": 11384
+			},
+			{
+				"name": "@sveltejs/adapter-static",
+				"version": "3.0.8",
+				"size": 8593
+			},
+			{
+				"name": "yaml",
+				"version": "2.7.1",
+				"size": 682531
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

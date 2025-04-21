@@ -12,8 +12,6 @@
 	"last_rune_check_version": "0.1.8",
 	"version": "0.1.8",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 130845,
 	"downloads_history": [
 		{
 			"range": [1740940200000, 1741544999999],
@@ -35,5 +33,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 337
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "vite-plugin-svelte-imgsrc2import",
+				"version": "0.1.8",
+				"size": 130845
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

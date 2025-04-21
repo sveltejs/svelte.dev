@@ -14,17 +14,6 @@
 	"svelte_range": "^3.20.1",
 	"kit_range": "^1.0.0-next.347",
 	"last_rune_check_version": "0.0.9",
-	"dependencies": [
-		{
-			"name": "@urql/svelte",
-			"semver": "^2.0.0"
-		},
-		{
-			"name": "graphql",
-			"semver": "^16.5.0"
-		}
-	],
-	"unpacked_size": 193926,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -250,5 +239,49 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 12
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@nelson.tech/wp-svelte",
+				"version": "0.0.9",
+				"size": 193926
+			},
+			{
+				"name": "@urql/svelte",
+				"version": "2.0.2",
+				"size": 83525
+			},
+			{
+				"name": "wonka",
+				"version": "4.0.15",
+				"size": 348827
+			},
+			{
+				"name": "@urql/core",
+				"version": "2.6.1",
+				"size": 501999
+			},
+			{
+				"name": "@graphql-typed-document-node/core",
+				"version": "3.2.0",
+				"size": 2959
+			},
+			{
+				"name": "graphql",
+				"version": "16.10.0",
+				"size": 1363943
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[3, 2],
+			[3, 4],
+			[0, 5]
+		],
+		"circular": []
+	}
 }

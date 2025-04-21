@@ -14,13 +14,6 @@
 	"svelte_range": ">=3.0.0",
 	"kit_range": ">=1.0.0",
 	"last_rune_check_version": "0.3.0",
-	"dependencies": [
-		{
-			"name": "ress",
-			"semver": ">=1.0.0"
-		}
-	],
-	"unpacked_size": 34527,
 	"downloads_history": [
 		{
 			"range": [1705257000000, 1705861799999],
@@ -282,5 +275,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 154
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-gym",
+				"version": "0.3.0",
+				"size": 34527
+			},
+			{
+				"name": "ress",
+				"version": "5.0.2",
+				"size": 20743
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

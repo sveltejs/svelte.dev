@@ -13,29 +13,6 @@
 	"version": "0.1.1",
 	"kit_range": "^2.4.0",
 	"last_rune_check_version": "0.1.1",
-	"dependencies": [
-		{
-			"name": "rollup",
-			"semver": "^4.9.5"
-		},
-		{
-			"name": "rollup-plugin-copy",
-			"semver": "^3.5.0"
-		},
-		{
-			"name": "@rollup/plugin-json",
-			"semver": "^6.1.0"
-		},
-		{
-			"name": "@rollup/plugin-commonjs",
-			"semver": "^28.0.1"
-		},
-		{
-			"name": "@rollup/plugin-node-resolve",
-			"semver": "^16.0.0"
-		}
-	],
-	"unpacked_size": 148893,
 	"downloads_history": [
 		{
 			"range": [1734892200000, 1735496999999],
@@ -97,5 +74,441 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 9
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@jaecktec/adapter-aws-lambda",
+				"version": "0.1.1",
+				"size": 148893
+			},
+			{
+				"name": "rollup",
+				"version": "4.40.0",
+				"size": 2726316
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "rollup-plugin-copy",
+				"version": "3.5.0",
+				"size": 16580
+			},
+			{
+				"name": "@types/fs-extra",
+				"version": "8.1.5",
+				"size": 23165
+			},
+			{
+				"name": "@types/node",
+				"version": "22.14.1",
+				"size": 2331510
+			},
+			{
+				"name": "undici-types",
+				"version": "6.21.0",
+				"size": 83680
+			},
+			{
+				"name": "colorette",
+				"version": "1.4.0",
+				"size": 11316
+			},
+			{
+				"name": "fs-extra",
+				"version": "8.1.0",
+				"size": 127504
+			},
+			{
+				"name": "jsonfile",
+				"version": "4.0.0"
+			},
+			{
+				"name": "graceful-fs",
+				"version": "4.2.11",
+				"size": 32535
+			},
+			{
+				"name": "universalify",
+				"version": "0.1.2",
+				"size": 4705
+			},
+			{
+				"name": "globby",
+				"version": "10.0.1",
+				"size": 21937
+			},
+			{
+				"name": "glob",
+				"version": "7.2.3",
+				"size": 55064
+			},
+			{
+				"name": "once",
+				"version": "1.4.0"
+			},
+			{
+				"name": "wrappy",
+				"version": "1.0.2"
+			},
+			{
+				"name": "inflight",
+				"version": "1.0.6"
+			},
+			{
+				"name": "inherits",
+				"version": "2.0.4",
+				"size": 3958
+			},
+			{
+				"name": "minimatch",
+				"version": "3.1.2",
+				"size": 34902
+			},
+			{
+				"name": "brace-expansion",
+				"version": "1.1.11",
+				"size": 11059
+			},
+			{
+				"name": "balanced-match",
+				"version": "1.0.2",
+				"size": 6939
+			},
+			{
+				"name": "concat-map",
+				"version": "0.0.1"
+			},
+			{
+				"name": "fs.realpath",
+				"version": "1.0.0"
+			},
+			{
+				"name": "path-is-absolute",
+				"version": "1.0.1"
+			},
+			{
+				"name": "slash",
+				"version": "3.0.0",
+				"size": 3507
+			},
+			{
+				"name": "ignore",
+				"version": "5.3.2",
+				"size": 53630
+			},
+			{
+				"name": "merge2",
+				"version": "1.4.1",
+				"size": 8897
+			},
+			{
+				"name": "dir-glob",
+				"version": "3.0.1",
+				"size": 5417
+			},
+			{
+				"name": "path-type",
+				"version": "4.0.0",
+				"size": 5407
+			},
+			{
+				"name": "fast-glob",
+				"version": "3.3.3",
+				"size": 98396
+			},
+			{
+				"name": "@nodelib/fs.stat",
+				"version": "2.0.5",
+				"size": 11845
+			},
+			{
+				"name": "@nodelib/fs.walk",
+				"version": "1.2.8",
+				"size": 26377
+			},
+			{
+				"name": "fastq",
+				"version": "1.19.1",
+				"size": 45922
+			},
+			{
+				"name": "reusify",
+				"version": "1.1.0",
+				"size": 11696
+			},
+			{
+				"name": "@nodelib/fs.scandir",
+				"version": "2.1.5",
+				"size": 22155
+			},
+			{
+				"name": "run-parallel",
+				"version": "1.2.0",
+				"size": 6563
+			},
+			{
+				"name": "queue-microtask",
+				"version": "1.2.3",
+				"size": 8367
+			},
+			{
+				"name": "glob-parent",
+				"version": "5.1.2",
+				"size": 12134
+			},
+			{
+				"name": "is-glob",
+				"version": "4.0.3",
+				"size": 13609
+			},
+			{
+				"name": "is-extglob",
+				"version": "2.1.1"
+			},
+			{
+				"name": "micromatch",
+				"version": "4.0.8",
+				"size": 56599
+			},
+			{
+				"name": "braces",
+				"version": "3.0.3",
+				"size": 44635
+			},
+			{
+				"name": "fill-range",
+				"version": "7.1.1",
+				"size": 16743
+			},
+			{
+				"name": "to-regex-range",
+				"version": "5.0.1",
+				"size": 22939
+			},
+			{
+				"name": "is-number",
+				"version": "7.0.0",
+				"size": 9615
+			},
+			{
+				"name": "picomatch",
+				"version": "2.3.1",
+				"size": 89952
+			},
+			{
+				"name": "@types/glob",
+				"version": "7.2.0",
+				"size": 6608
+			},
+			{
+				"name": "@types/minimatch",
+				"version": "5.1.2",
+				"size": 12522
+			},
+			{
+				"name": "array-union",
+				"version": "2.1.0",
+				"size": 3169
+			},
+			{
+				"name": "is-plain-object",
+				"version": "3.0.1",
+				"size": 9457
+			},
+			{
+				"name": "@rollup/plugin-json",
+				"version": "6.1.0",
+				"size": 10683
+			},
+			{
+				"name": "@rollup/pluginutils",
+				"version": "5.1.4",
+				"size": 58354
+			},
+			{
+				"name": "estree-walker",
+				"version": "2.0.2",
+				"size": 50243
+			},
+			{
+				"name": "picomatch",
+				"version": "4.0.2",
+				"size": 85237
+			},
+			{
+				"name": "@rollup/plugin-commonjs",
+				"version": "28.0.3",
+				"size": 263273
+			},
+			{
+				"name": "commondir",
+				"version": "1.0.1"
+			},
+			{
+				"name": "fdir",
+				"version": "6.4.4",
+				"size": 45593
+			},
+			{
+				"name": "is-reference",
+				"version": "1.2.1",
+				"size": 6374
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "@rollup/plugin-node-resolve",
+				"version": "16.0.1",
+				"size": 155994
+			},
+			{
+				"name": "@types/resolve",
+				"version": "1.20.2",
+				"size": 9885
+			},
+			{
+				"name": "deepmerge",
+				"version": "4.3.1",
+				"size": 31157
+			},
+			{
+				"name": "is-module",
+				"version": "1.0.0"
+			},
+			{
+				"name": "resolve",
+				"version": "1.22.10",
+				"size": 145619
+			},
+			{
+				"name": "is-core-module",
+				"version": "2.16.1",
+				"size": 33475
+			},
+			{
+				"name": "hasown",
+				"version": "2.0.2",
+				"size": 8765
+			},
+			{
+				"name": "function-bind",
+				"version": "1.1.2",
+				"size": 31427
+			},
+			{
+				"name": "path-parse",
+				"version": "1.0.7",
+				"size": 4511
+			},
+			{
+				"name": "supports-preserve-symlinks-flag",
+				"version": "1.0.0",
+				"size": 9178
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[3, 4],
+			[4, 5],
+			[5, 6],
+			[3, 7],
+			[3, 8],
+			[8, 9],
+			[8, 10],
+			[8, 11],
+			[3, 12],
+			[12, 13],
+			[13, 14],
+			[14, 15],
+			[13, 16],
+			[16, 14],
+			[14, 15],
+			[16, 15],
+			[13, 17],
+			[13, 18],
+			[18, 19],
+			[19, 20],
+			[19, 21],
+			[13, 22],
+			[13, 23],
+			[12, 24],
+			[12, 25],
+			[12, 26],
+			[12, 27],
+			[27, 28],
+			[12, 29],
+			[29, 30],
+			[29, 31],
+			[31, 32],
+			[32, 33],
+			[31, 34],
+			[34, 35],
+			[35, 36],
+			[34, 30],
+			[29, 37],
+			[37, 38],
+			[38, 39],
+			[29, 26],
+			[29, 40],
+			[40, 41],
+			[41, 42],
+			[42, 43],
+			[43, 44],
+			[40, 45],
+			[12, 46],
+			[46, 47],
+			[46, 5],
+			[5, 6],
+			[12, 48],
+			[3, 49],
+			[0, 50],
+			[50, 51],
+			[51, 2],
+			[51, 52],
+			[51, 53],
+			[0, 54],
+			[54, 51],
+			[51, 2],
+			[51, 52],
+			[51, 53],
+			[54, 55],
+			[54, 52],
+			[54, 56],
+			[54, 57],
+			[57, 2],
+			[54, 58],
+			[58, 59],
+			[54, 53],
+			[0, 60],
+			[60, 51],
+			[51, 2],
+			[51, 52],
+			[51, 53],
+			[60, 61],
+			[60, 62],
+			[60, 63],
+			[60, 64],
+			[64, 65],
+			[65, 66],
+			[66, 67],
+			[64, 68],
+			[64, 69]
+		],
+		"circular": []
+	}
 }

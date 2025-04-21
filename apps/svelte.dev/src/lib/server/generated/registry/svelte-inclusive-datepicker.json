@@ -13,13 +13,6 @@
 	"version": "1.0.2",
 	"svelte_range": "^3.38.1",
 	"last_rune_check_version": "1.0.2",
-	"dependencies": [
-		{
-			"name": "@date-io/core",
-			"semver": "^2.10.7"
-		}
-	],
-	"unpacked_size": 210042,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +326,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 21
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-inclusive-datepicker",
+				"version": "1.0.2",
+				"size": 210042
+			},
+			{
+				"name": "@date-io/core",
+				"version": "2.17.0",
+				"size": 9500
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

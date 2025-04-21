@@ -13,8 +13,6 @@
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "1.0.0",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 1572858,
 	"downloads_history": [
 		{
 			"range": [1722191400000, 1722796199999],
@@ -136,5 +134,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 3
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svesome",
+				"version": "1.0.0",
+				"size": 1572858
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

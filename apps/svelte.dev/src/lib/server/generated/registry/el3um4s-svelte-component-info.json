@@ -14,17 +14,6 @@
 	"svelte_range": "^3.44.3",
 	"kit_range": "next",
 	"last_rune_check_version": "0.0.12",
-	"dependencies": [
-		{
-			"name": "@el3um4s/match",
-			"semver": "^0.0.2"
-		},
-		{
-			"name": "svelte2tsx",
-			"semver": "^0.4.12"
-		}
-	],
-	"unpacked_size": 23179,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -282,5 +271,61 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@el3um4s/svelte-component-info",
+				"version": "0.0.12",
+				"size": 23179
+			},
+			{
+				"name": "@el3um4s/match",
+				"version": "0.0.2",
+				"size": 4398
+			},
+			{
+				"name": "svelte2tsx",
+				"version": "0.4.14",
+				"size": 526831
+			},
+			{
+				"name": "dedent-js",
+				"version": "1.0.1"
+			},
+			{
+				"name": "pascal-case",
+				"version": "3.1.2",
+				"size": 14764
+			},
+			{
+				"name": "no-case",
+				"version": "3.0.4",
+				"size": 25128
+			},
+			{
+				"name": "lower-case",
+				"version": "2.0.2",
+				"size": 17661
+			},
+			{
+				"name": "tslib",
+				"version": "2.8.1",
+				"size": 90359
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[2, 4],
+			[4, 5],
+			[5, 6],
+			[6, 7],
+			[5, 7],
+			[4, 7]
+		],
+		"circular": []
+	}
 }

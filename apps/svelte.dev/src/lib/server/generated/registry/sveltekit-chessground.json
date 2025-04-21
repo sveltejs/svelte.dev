@@ -14,13 +14,6 @@
 	"kit_range": "^1.15.1",
 	"last_rune_check_version": "2.0.6",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "chessground",
-			"semver": "^8.3.9"
-		}
-	],
-	"unpacked_size": 94514,
 	"downloads_history": [
 		{
 			"range": [1701628200000, 1702232999999],
@@ -254,5 +247,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "sveltekit-chessground",
+				"version": "2.0.6",
+				"size": 94514
+			},
+			{
+				"name": "chessground",
+				"version": "8.4.0",
+				"size": 333656
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

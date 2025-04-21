@@ -1,27 +1,20 @@
 <script lang="ts">
 	import type { Package } from '$lib/server/content';
-	import { onMount, untrack } from 'svelte';
-	import { on } from 'svelte/events';
+	import { onMount } from 'svelte';
 	import { format_number } from './utils';
 
 	type Props = {
 		history: Package['downloads_history'];
-		height?: string | number;
 		color?: string;
 		fill_opacity?: number;
 	};
 
-	let {
-		history,
-		height = '300', // Now a string with optional units or number
-		color = 'var(--sk-fg-accent)', // Default blue color
-		fill_opacity = 0.2
-	}: Props = $props();
+	let { history, color = 'var(--sk-fg-accent)', fill_opacity = 0.2 }: Props = $props();
 
-	// Local state
-	let container_width = $state<number>();
-	let container_height = $state<number>();
-	let container = $state<HTMLElement>();
+	// Fixed dimensions
+	const width = 1000;
+	const height = 300;
+	const padding = 40;
 
 	// SVG drawing parameters
 	let path_d = $state('');
@@ -128,14 +121,9 @@
 		return path;
 	}
 
-	// Calculate the SVG paths once we have data and dimensions
-	$effect(() => {
-		if (complete_history.length > 0 && container_width && container_height)
-			untrack(() => calculate_paths());
-	});
-
+	// Calculate the SVG paths
 	function calculate_paths() {
-		if (complete_history.length === 0 || !container_width || !container_height) return;
+		if (complete_history.length === 0) return;
 
 		// Find min and max values for scaling
 		max_value = Math.max(...complete_history.map((d) => d.value));
@@ -144,10 +132,9 @@
 		// Add 10% padding to max value for better visualization
 		max_value = max_value * 1.1;
 
-		// Calculate points for the chart
-		const padding = Math.min(40, container_width * 0.1); // Responsive padding
-		const chart_width = container_width - padding * 2;
-		const chart_height = container_height - padding * 2;
+		// Calculate chart area
+		const chart_width = width - padding * 2;
+		const chart_height = height - padding * 2;
 
 		const x_scale = (x: number) => {
 			const min = complete_history[0].range[0];
@@ -156,7 +143,7 @@
 		};
 
 		const y_scale = (y: number) => {
-			return container_height! - padding - (y / max_value) * chart_height;
+			return height - padding - (y / max_value) * chart_height;
 		};
 
 		// Create points
@@ -168,147 +155,92 @@
 		// Create the path for the area with smooth top edge
 		const last_x = x_scale(complete_history[complete_history.length - 1].range[0]);
 		const first_x = x_scale(complete_history[0].range[0]);
-		const bottom_y = container_height - padding;
+		const bottom_y = height - padding;
 
 		area_path_d = path_d + ` L ${last_x} ${bottom_y}` + ` L ${first_x} ${bottom_y}` + ' Z';
 	}
 
-	// Handle resize
-	function handle_resize() {
-		if (container) {
-			container_width = container.clientWidth;
-			container_height =
-				typeof height === 'number' ? height : parseInt(height, 10) || container.clientWidth * 0.5; // Default to 50% of width
-		}
-	}
-
-	onMount(() => {
-		handle_resize();
-
-		return on(window, 'resize', handle_resize);
-	});
+	// onMount(() => {
+	calculate_paths();
+	// });
 </script>
 
-<div
-	class="chart-container"
-	bind:this={container}
-	style="height: {typeof height === 'string' ? height : `${height}px`};"
->
+<div class="chart-container">
 	{#if !complete_history || complete_history.length === 0}
-		<div class="no-data" style="width: {container_width}px; height: {container_height}px">
-			No download data available
-		</div>
-	{:else if container_width && container_height}
-		<svg width={container_width} height={container_height}>
-			<!-- Y-axis grid lines (every 25% of max value) -->
-			{#each [0.25, 0.5, 0.75] as ratio}
-				{@const y_pos =
-					container_height -
-					Math.min(40, container_width * 0.1) -
-					ratio * (container_height - Math.min(40, container_width * 0.1) * 2)}
+		<div class="no-data">No download data available</div>
+	{:else}
+		<svg viewBox="0 0 {width} {height}" class="chart-svg">
+			<!-- Foreground/chart elements -->
+			<g class="chart-elements">
+				<!-- Area fill -->
+				<path d={area_path_d} fill={color} fill-opacity={fill_opacity} stroke="none" />
+
+				<!-- Line -->
+				<path d={path_d} fill="none" stroke={color} stroke-width="2" />
+
+				<!-- Y-axis -->
 				<line
-					x1={Math.min(40, container_width * 0.1)}
-					y1={y_pos}
-					x2={container_width - Math.min(40, container_width * 0.1)}
-					y2={y_pos}
+					x1={padding}
+					y1={padding}
+					x2={padding}
+					y2={height - padding}
 					stroke="currentColor"
 					stroke-width="1"
-					opacity="0.1"
+					opacity="0.2"
 				/>
-				<text
-					x={Math.min(35, container_width * 0.09)}
-					y={y_pos + 5}
-					text-anchor="end"
-					font-size={Math.max(10, Math.min(12, container_width * 0.02))}
-					fill="currentColor"
-					opacity="0.7"
-				>
-					{format_number(Math.round(max_value * ratio))}
-				</text>
-			{/each}
 
-			<!-- X-axis labels (adaptive based on container width) -->
-			{#each complete_history as data, i}
-				{@const skip_factor = Math.ceil(
-					complete_history.length / Math.min(13, Math.max(4, container_width / 100))
-				)}
-				{#if i % skip_factor === 0}
-					<text
-						x={points[i]?.[0] || 0}
-						y={container_height - Math.min(20, container_height * 0.06)}
-						text-anchor="middle"
-						font-size={Math.max(8, Math.min(10, container_width * 0.015))}
-						fill="currentColor"
-						opacity="0.7"
-					>
-						{format_date(data.range[0])}
-					</text>
-				{/if}
-			{/each}
+				<!-- X-axis -->
+				<line
+					x1={padding}
+					y1={height - padding}
+					x2={width - padding}
+					y2={height - padding}
+					stroke="currentColor"
+					stroke-width="1"
+					opacity="0.2"
+				/>
 
-			<!-- Area fill -->
-			<path d={area_path_d} fill={color} fill-opacity={fill_opacity} stroke="none" />
-
-			<!-- Line -->
-			<path d={path_d} fill="none" stroke={color} stroke-width="2" />
-
-			<!-- Y-axis -->
-			<line
-				x1={Math.min(40, container_width * 0.1)}
-				y1={Math.min(40, container_height * 0.1)}
-				x2={Math.min(40, container_width * 0.1)}
-				y2={container_height - Math.min(40, container_height * 0.1)}
-				stroke="currentColor"
-				stroke-width="1"
-				opacity="0.2"
-			/>
-
-			<!-- X-axis -->
-			<line
-				x1={Math.min(40, container_width * 0.1)}
-				y1={container_height - Math.min(40, container_height * 0.1)}
-				x2={container_width - Math.min(40, container_width * 0.1)}
-				y2={container_height - Math.min(40, container_height * 0.1)}
-				stroke="currentColor"
-				stroke-width="1"
-				opacity="0.2"
-			/>
-
-			<!-- Max value label -->
-			<text
-				x={Math.min(35, container_width * 0.09)}
-				y={Math.min(45, container_height * 0.15)}
-				text-anchor="end"
-				font-size={Math.max(10, Math.min(12, container_width * 0.02))}
-				fill="currentColor"
-				opacity="0.7"
-			>
-				{format_number(Math.round(max_value))}
-			</text>
-
-			<!-- Zero value label -->
-			<text
-				x={Math.min(35, container_width * 0.09)}
-				y={container_height - Math.min(35, container_height * 0.09)}
-				text-anchor="end"
-				font-size={Math.max(10, Math.min(12, container_width * 0.02))}
-				fill="currentColor"
-				opacity="0.7"
-			>
-				0
-			</text>
+				<!-- Y-axis grid lines (every 25% of max value) -->
+				{#each [0.25, 0.5, 0.75] as ratio}
+					{@const y_pos = height - padding - ratio * (height - padding * 2)}
+					<line
+						x1={padding}
+						y1={y_pos}
+						x2={width - padding}
+						y2={y_pos}
+						stroke="currentColor"
+						stroke-width="1"
+						opacity="0.1"
+					/>
+				{/each}
+			</g>
 		</svg>
 
-		<!-- Totals summary -->
-		<div class="totals">
-			<div>
-				<strong>Total Downloads (All Time):</strong>
-				{complete_history.reduce((sum, data) => sum + data.value, 0).toLocaleString()}
-			</div>
-			<div>
-				<strong>Latest Week:</strong>
-				{complete_history[complete_history.length - 1]?.value.toLocaleString() || 0}
-			</div>
+		<!-- SVG overlay for labels - these will maintain their size -->
+		<div class="labels-overlay">
+			<!-- Y-axis value labels -->
+			{#each [0, 0.25, 0.5, 0.75, 1] as ratio}
+				{@const y_percent =
+					100 - ratio * (100 - (padding / height) * 100 * 2) - (padding / height) * 100}
+				{@const label_value = format_number(Math.round(max_value * ratio))}
+				<div class="y-label" style="top: {y_percent}%; left: {((padding - 5) / width) * 100}%;">
+					{label_value}
+				</div>
+			{/each}
+
+			<!-- X-axis date labels -->
+			{#each complete_history as data, i}
+				{@const skip_factor = Math.ceil(complete_history.length / 13)}
+				{#if i % skip_factor === 0 && points[i]}
+					{@const x_percent = (points[i][0] / width) * 100}
+					<div
+						class="x-label"
+						style="bottom: {((padding - 25) / height) * 100}%; left: {x_percent}%;"
+					>
+						{format_date(data.range[0])}
+					</div>
+				{/if}
+			{/each}
 		</div>
 	{/if}
 </div>
@@ -327,32 +259,62 @@
 		margin: 20px 0;
 	}
 
+	.chart-svg {
+		width: 100%;
+		height: auto;
+		display: block;
+		overflow: visible;
+		position: relative;
+		z-index: 1;
+	}
+
 	.no-data {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		height: 100%;
-		min-height: 200px;
+		height: 200px;
 		color: currentColor;
 		opacity: 0.6;
 	}
 
-	.totals {
-		margin-top: 1rem;
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		font-size: 0.875rem;
+	.labels-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+		z-index: 2;
 	}
 
-	@media (min-width: 640px) {
-		.totals {
-			flex-direction: row;
-			justify-content: space-between;
+	.y-label {
+		position: absolute;
+		transform: translateY(-50%) translateX(-100%);
+		text-align: right;
+		font: var(--sk-font-ui-small);
+		color: currentColor;
+		opacity: 0.7;
+	}
+
+	.x-label {
+		position: absolute;
+		transform: translateX(-50%);
+		font: var(--sk-font-ui-small);
+		text-align: center;
+		opacity: 0.7;
+		white-space: nowrap;
+	}
+
+	@media (max-width: 600px) {
+		.y-label,
+		.x-label {
+			font-size: 9px !important;
 		}
 	}
 
-	svg {
-		overflow: visible;
+	@media (max-width: 350px) {
+		.x-label {
+			font-size: 8px;
+		}
 	}
 </style>

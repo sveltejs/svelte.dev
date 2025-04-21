@@ -13,25 +13,6 @@
 	"version": "0.1.1",
 	"svelte_range": "^4.2.18",
 	"last_rune_check_version": "0.1.1",
-	"dependencies": [
-		{
-			"name": "@solana/wallet-adapter-base",
-			"semver": "^0.9.23"
-		},
-		{
-			"name": "@solana/wallet-standard-wallet-adapter-base",
-			"semver": "^1.1.2"
-		},
-		{
-			"name": "eventemitter3",
-			"semver": "^5.0.1"
-		},
-		{
-			"name": "@thewuh/wallet-standard-wallet-adapter-svelte",
-			"semver": "0.1.1"
-		}
-	],
-	"unpacked_size": 84396,
 	"downloads_history": [
 		{
 			"range": [1721586600000, 1722191399999],
@@ -161,5 +142,134 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@thewuh/wallet-adapter-svelte-core",
+				"version": "0.1.1",
+				"size": 84396
+			},
+			{
+				"name": "@solana/wallet-adapter-base",
+				"version": "0.9.24",
+				"size": 96759
+			},
+			{
+				"name": "eventemitter3",
+				"version": "4.0.7",
+				"size": 37967
+			},
+			{
+				"name": "@wallet-standard/base",
+				"version": "1.1.0",
+				"size": 43736
+			},
+			{
+				"name": "@wallet-standard/features",
+				"version": "1.1.0",
+				"size": 41150
+			},
+			{
+				"name": "@solana/wallet-standard-features",
+				"version": "1.3.0",
+				"size": 50417
+			},
+			{
+				"name": "@solana/wallet-standard-wallet-adapter-base",
+				"version": "1.1.4",
+				"size": 206844
+			},
+			{
+				"name": "@wallet-standard/app",
+				"version": "1.1.0",
+				"size": 47755
+			},
+			{
+				"name": "@wallet-standard/wallet",
+				"version": "1.1.0",
+				"size": 58142
+			},
+			{
+				"name": "@solana/wallet-standard-util",
+				"version": "1.1.2",
+				"size": 68989
+			},
+			{
+				"name": "@noble/curves",
+				"version": "1.8.2",
+				"size": 1645456
+			},
+			{
+				"name": "@noble/hashes",
+				"version": "1.7.2",
+				"size": 1100967
+			},
+			{
+				"name": "@solana/wallet-standard-chains",
+				"version": "1.1.1",
+				"size": 18043
+			},
+			{
+				"name": "eventemitter3",
+				"version": "5.0.1",
+				"size": 73390
+			},
+			{
+				"name": "@thewuh/wallet-standard-wallet-adapter-svelte",
+				"version": "0.1.1",
+				"size": 30389
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[1, 4],
+			[4, 3],
+			[1, 5],
+			[5, 3],
+			[5, 4],
+			[4, 3],
+			[0, 6],
+			[6, 7],
+			[7, 3],
+			[6, 3],
+			[6, 8],
+			[8, 3],
+			[6, 4],
+			[4, 3],
+			[6, 1],
+			[1, 2],
+			[1, 3],
+			[1, 4],
+			[4, 3],
+			[1, 5],
+			[5, 3],
+			[5, 4],
+			[4, 3],
+			[6, 9],
+			[9, 10],
+			[10, 11],
+			[9, 12],
+			[12, 3],
+			[9, 5],
+			[5, 3],
+			[5, 4],
+			[4, 3],
+			[6, 12],
+			[12, 3],
+			[6, 5],
+			[5, 3],
+			[5, 4],
+			[4, 3],
+			[0, 13],
+			[0, 14],
+			[14, 7],
+			[7, 3],
+			[14, 3]
+		],
+		"circular": []
+	}
 }

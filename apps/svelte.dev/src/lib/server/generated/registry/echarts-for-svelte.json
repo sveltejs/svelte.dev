@@ -13,13 +13,6 @@
 	"version": "0.1.11",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "0.1.11",
-	"dependencies": [
-		{
-			"name": "size-sensor",
-			"semver": "^0.2.5"
-		}
-	],
-	"unpacked_size": 17179,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +326,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 50
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "echarts-for-svelte",
+				"version": "0.1.11",
+				"size": 17179
+			},
+			{
+				"name": "size-sensor",
+				"version": "0.2.6",
+				"size": 16191
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

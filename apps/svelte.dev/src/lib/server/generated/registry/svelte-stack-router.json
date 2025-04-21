@@ -13,13 +13,6 @@
 	"version": "2.4.6",
 	"svelte_range": "^3.38.2",
 	"last_rune_check_version": "2.4.6",
-	"dependencies": [
-		{
-			"name": "regexparam",
-			"semver": "^1.3.0"
-		}
-	],
-	"unpacked_size": 164313,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -321,5 +314,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 23
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-stack-router",
+				"version": "2.4.6",
+				"size": 164313
+			},
+			{
+				"name": "regexparam",
+				"version": "1.3.0",
+				"size": 10257
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

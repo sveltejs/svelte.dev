@@ -13,13 +13,6 @@
 	"version": "1.6.7",
 	"svelte_range": "^3.37.0",
 	"last_rune_check_version": "1.6.7",
-	"dependencies": [
-		{
-			"name": "perfect-scrollbar",
-			"semver": "^1.5.0"
-		}
-	],
-	"unpacked_size": 10794,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -257,5 +250,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@deboxsoft/svelte-virtual-list",
+				"version": "1.6.7",
+				"size": 10794
+			},
+			{
+				"name": "perfect-scrollbar",
+				"version": "1.5.6",
+				"size": 489475
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

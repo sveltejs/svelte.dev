@@ -13,17 +13,6 @@
 	"version": "2.1.1",
 	"svelte_range": "^3.20.1",
 	"last_rune_check_version": "2.1.1",
-	"dependencies": [
-		{
-			"name": "@jsier/deep-value",
-			"semver": "^1.2.1"
-		},
-		{
-			"name": "fast-sort",
-			"semver": "^3.4.0"
-		}
-	],
-	"unpacked_size": 1671900,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -245,5 +234,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 16
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "extended-table",
+				"version": "2.1.1",
+				"size": 1671900
+			},
+			{
+				"name": "@jsier/deep-value",
+				"version": "1.2.1",
+				"size": 4113
+			},
+			{
+				"name": "fast-sort",
+				"version": "3.4.1",
+				"size": 34634
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

@@ -13,13 +13,6 @@
 	"version": "1.0.0",
 	"svelte_range": "^3.48.0",
 	"last_rune_check_version": "1.0.0",
-	"dependencies": [
-		{
-			"name": "svelte",
-			"semver": "^3.48.0"
-		}
-	],
-	"unpacked_size": 4232,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -233,5 +226,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@aredridel/svelte-lens-store",
+				"version": "1.0.0",
+				"size": 4232
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

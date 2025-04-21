@@ -14,17 +14,6 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.5.27",
 	"last_rune_check_version": "0.1.33",
-	"dependencies": [
-		{
-			"name": "@layout-projection/core",
-			"semver": "^0.12.0"
-		},
-		{
-			"name": "runed",
-			"semver": "^0.15.3"
-		}
-	],
-	"unpacked_size": 30972,
 	"downloads_history": [
 		{
 			"range": [1731868200000, 1732472999999],
@@ -98,5 +87,78 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@omicrxn/mercury",
+				"version": "0.1.33",
+				"size": 30972
+			},
+			{
+				"name": "@layout-projection/core",
+				"version": "0.12.0",
+				"size": 104170
+			},
+			{
+				"name": "tslib",
+				"version": "2.8.1",
+				"size": 90359
+			},
+			{
+				"name": "popmotion",
+				"version": "11.0.5",
+				"size": 304115
+			},
+			{
+				"name": "framesync",
+				"version": "6.1.2",
+				"size": 42561
+			},
+			{
+				"name": "tslib",
+				"version": "2.4.0",
+				"size": 49968
+			},
+			{
+				"name": "hey-listen",
+				"version": "1.0.8",
+				"size": 8894
+			},
+			{
+				"name": "style-value-types",
+				"version": "5.1.2",
+				"size": 58607
+			},
+			{
+				"name": "runed",
+				"version": "0.15.4",
+				"size": 69462
+			},
+			{
+				"name": "esm-env",
+				"version": "1.2.2",
+				"size": 3784
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[3, 4],
+			[4, 5],
+			[3, 6],
+			[3, 7],
+			[7, 6],
+			[7, 5],
+			[3, 5],
+			[1, 7],
+			[7, 6],
+			[7, 5],
+			[0, 8],
+			[8, 9]
+		],
+		"circular": []
+	}
 }

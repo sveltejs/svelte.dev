@@ -29,8 +29,6 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.0.11",
-	"dependencies": [],
-	"unpacked_size": 24699,
 	"downloads_history": [
 		{
 			"range": [1712514600000, 1713119399999],
@@ -244,5 +242,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 35
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "convex-svelte",
+				"version": "0.0.11",
+				"size": 24699
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

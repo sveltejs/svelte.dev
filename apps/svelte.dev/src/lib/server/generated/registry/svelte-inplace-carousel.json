@@ -13,17 +13,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "1.2.0",
-	"dependencies": [
-		{
-			"name": "clsx",
-			"semver": "^2.1.1"
-		},
-		{
-			"name": "tailwind-merge",
-			"semver": "^2.4.0"
-		}
-	],
-	"unpacked_size": 26178,
 	"downloads_history": [
 		{
 			"range": [1722796200000, 1723400999999],
@@ -157,5 +146,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 10
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-inplace-carousel",
+				"version": "1.2.0",
+				"size": 26178
+			},
+			{
+				"name": "clsx",
+				"version": "2.1.1",
+				"size": 8555
+			},
+			{
+				"name": "tailwind-merge",
+				"version": "2.6.0",
+				"size": 713298
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

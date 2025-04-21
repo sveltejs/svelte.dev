@@ -14,8 +14,6 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.20.2",
 	"last_rune_check_version": "1.1.4",
-	"dependencies": [],
-	"unpacked_size": 21267,
 	"downloads_history": [
 		{
 			"range": [1739730600000, 1740335399999],
@@ -49,5 +47,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 43
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@embedz/svelte",
+				"version": "1.1.4",
+				"size": 21267
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

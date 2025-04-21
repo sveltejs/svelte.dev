@@ -13,61 +13,6 @@
 	"version": "1.0.4",
 	"svelte_range": "^3.38.2",
 	"last_rune_check_version": "1.0.4",
-	"dependencies": [
-		{
-			"name": "function-bind",
-			"semver": "^1.1.1"
-		},
-		{
-			"name": "deepmerge",
-			"semver": "^4.2.2"
-		},
-		{
-			"name": "builtin-modules",
-			"semver": "^3.2.0"
-		},
-		{
-			"name": "estree-walker",
-			"semver": "^0.6.1"
-		},
-		{
-			"name": "has",
-			"semver": "^1.0.3"
-		},
-		{
-			"name": "is-module",
-			"semver": "^1.0.0"
-		},
-		{
-			"name": "is-core-module",
-			"semver": "^2.3.0"
-		},
-		{
-			"name": "path-parse",
-			"semver": "^1.0.6"
-		},
-		{
-			"name": "picomatch",
-			"semver": "^2.2.3"
-		},
-		{
-			"name": "require-relative",
-			"semver": "^0.8.7"
-		},
-		{
-			"name": "resolve",
-			"semver": "^1.20.0"
-		},
-		{
-			"name": "rollup-pluginutils",
-			"semver": "^2.8.2"
-		},
-		{
-			"name": "tslib",
-			"semver": "^2.2.0"
-		}
-	],
-	"unpacked_size": 8352,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -381,5 +326,112 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 70
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-dob-picker",
+				"version": "1.0.4",
+				"size": 8352
+			},
+			{
+				"name": "function-bind",
+				"version": "1.1.2",
+				"size": 31427
+			},
+			{
+				"name": "deepmerge",
+				"version": "4.3.1",
+				"size": 31157
+			},
+			{
+				"name": "builtin-modules",
+				"version": "3.3.0",
+				"size": 4512
+			},
+			{
+				"name": "estree-walker",
+				"version": "0.6.1",
+				"size": 9526
+			},
+			{
+				"name": "has",
+				"version": "1.0.4",
+				"size": 3025
+			},
+			{
+				"name": "is-module",
+				"version": "1.0.0"
+			},
+			{
+				"name": "is-core-module",
+				"version": "2.16.1",
+				"size": 33475
+			},
+			{
+				"name": "hasown",
+				"version": "2.0.2",
+				"size": 8765
+			},
+			{
+				"name": "path-parse",
+				"version": "1.0.7",
+				"size": 4511
+			},
+			{
+				"name": "picomatch",
+				"version": "2.3.1",
+				"size": 89952
+			},
+			{
+				"name": "require-relative",
+				"version": "0.8.7"
+			},
+			{
+				"name": "resolve",
+				"version": "1.22.10",
+				"size": 145619
+			},
+			{
+				"name": "supports-preserve-symlinks-flag",
+				"version": "1.0.0",
+				"size": 9178
+			},
+			{
+				"name": "rollup-pluginutils",
+				"version": "2.8.2",
+				"size": 246173
+			},
+			{
+				"name": "tslib",
+				"version": "2.8.1",
+				"size": 90359
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[0, 4],
+			[0, 5],
+			[0, 6],
+			[0, 7],
+			[7, 8],
+			[8, 1],
+			[0, 9],
+			[0, 10],
+			[0, 11],
+			[0, 12],
+			[12, 7],
+			[7, 8],
+			[8, 1],
+			[12, 9],
+			[12, 13],
+			[0, 14],
+			[14, 4],
+			[0, 15]
+		],
+		"circular": []
+	}
 }

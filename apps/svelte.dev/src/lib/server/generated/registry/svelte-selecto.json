@@ -13,13 +13,6 @@
 	"version": "1.26.3",
 	"svelte_range": "^3.48.0",
 	"last_rune_check_version": "1.26.3",
-	"dependencies": [
-		{
-			"name": "selecto",
-			"semver": "~1.26.3"
-		}
-	],
-	"unpacked_size": 26415,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +326,128 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 289
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-selecto",
+				"version": "1.26.3",
+				"size": 26415
+			},
+			{
+				"name": "selecto",
+				"version": "1.26.3",
+				"size": 910936
+			},
+			{
+				"name": "@daybrush/utils",
+				"version": "1.13.0",
+				"size": 456699
+			},
+			{
+				"name": "@egjs/children-differ",
+				"version": "1.0.1",
+				"size": 109956
+			},
+			{
+				"name": "@egjs/list-differ",
+				"version": "1.0.1",
+				"size": 104427
+			},
+			{
+				"name": "@scena/dragscroll",
+				"version": "1.4.0",
+				"size": 136412
+			},
+			{
+				"name": "@scena/event-emitter",
+				"version": "1.0.5",
+				"size": 79242
+			},
+			{
+				"name": "css-styled",
+				"version": "1.0.8",
+				"size": 66411
+			},
+			{
+				"name": "css-to-mat",
+				"version": "1.1.1",
+				"size": 209214
+			},
+			{
+				"name": "@scena/matrix",
+				"version": "1.1.1",
+				"size": 159558
+			},
+			{
+				"name": "framework-utils",
+				"version": "1.1.0",
+				"size": 29583
+			},
+			{
+				"name": "gesto",
+				"version": "1.19.4",
+				"size": 397526
+			},
+			{
+				"name": "keycon",
+				"version": "1.4.0",
+				"size": 213901
+			},
+			{
+				"name": "@cfcs/core",
+				"version": "0.0.6",
+				"size": 147794
+			},
+			{
+				"name": "@egjs/component",
+				"version": "3.0.5",
+				"size": 456301
+			},
+			{
+				"name": "keycode",
+				"version": "2.2.1",
+				"size": 117694
+			},
+			{
+				"name": "overlap-area",
+				"version": "1.1.0",
+				"size": 265113
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[3, 4],
+			[1, 5],
+			[5, 2],
+			[5, 6],
+			[6, 2],
+			[1, 6],
+			[6, 2],
+			[1, 7],
+			[7, 2],
+			[1, 8],
+			[8, 2],
+			[8, 9],
+			[9, 2],
+			[1, 10],
+			[1, 11],
+			[11, 2],
+			[11, 6],
+			[6, 2],
+			[1, 12],
+			[12, 2],
+			[12, 6],
+			[6, 2],
+			[12, 13],
+			[13, 14],
+			[12, 15],
+			[1, 16],
+			[16, 2]
+		],
+		"circular": []
+	}
 }

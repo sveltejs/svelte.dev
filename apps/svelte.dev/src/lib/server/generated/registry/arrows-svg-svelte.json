@@ -13,13 +13,6 @@
 	"version": "0.1.1",
 	"svelte_range": "^4.2.12",
 	"last_rune_check_version": "0.1.1",
-	"dependencies": [
-		{
-			"name": "arrows-svg",
-			"semver": "^1.8.1"
-		}
-	],
-	"unpacked_size": 78540,
 	"downloads_history": [
 		{
 			"range": [1712514600000, 1713119399999],
@@ -189,5 +182,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 10
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "arrows-svg-svelte",
+				"version": "0.1.1",
+				"size": 78540
+			},
+			{
+				"name": "arrows-svg",
+				"version": "1.8.1",
+				"size": 43069
+			},
+			{
+				"name": "preact",
+				"version": "10.26.5",
+				"size": 1440251
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2]
+		],
+		"circular": []
+	}
 }

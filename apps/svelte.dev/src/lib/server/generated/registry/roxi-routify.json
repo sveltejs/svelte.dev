@@ -13,53 +13,6 @@
 	"version": "2.18.18",
 	"svelte_range": "^3.48.0",
 	"last_rune_check_version": "2.18.18",
-	"dependencies": [
-		{
-			"name": "esm",
-			"semver": "^3.2.25"
-		},
-		{
-			"name": "chalk",
-			"semver": "^4.1.2"
-		},
-		{
-			"name": "fs-extra",
-			"semver": "^9.1.0"
-		},
-		{
-			"name": "@roxi/ssr",
-			"semver": "^0.2.1"
-		},
-		{
-			"name": "commander",
-			"semver": "^7.2.0"
-		},
-		{
-			"name": "configent",
-			"semver": "^2.2.0"
-		},
-		{
-			"name": "picomatch",
-			"semver": "^2.3.1"
-		},
-		{
-			"name": "@types/node",
-			"semver": "^12.20.52"
-		},
-		{
-			"name": "cheap-watch",
-			"semver": "^1.0.4"
-		},
-		{
-			"name": "log-symbols",
-			"semver": "^3.0.0"
-		},
-		{
-			"name": "rollup-pluginutils",
-			"semver": "^2.8.2"
-		}
-	],
-	"unpacked_size": 603907,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -373,5 +326,682 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 3323
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@roxi/routify",
+				"version": "2.18.18",
+				"size": 603907
+			},
+			{
+				"name": "esm",
+				"version": "3.2.25",
+				"size": 308556
+			},
+			{
+				"name": "chalk",
+				"version": "4.1.2",
+				"size": 35047
+			},
+			{
+				"name": "ansi-styles",
+				"version": "4.3.0",
+				"size": 16978
+			},
+			{
+				"name": "color-convert",
+				"version": "2.0.1",
+				"size": 27189
+			},
+			{
+				"name": "color-name",
+				"version": "1.1.4",
+				"size": 6693
+			},
+			{
+				"name": "supports-color",
+				"version": "7.2.0",
+				"size": 7035
+			},
+			{
+				"name": "has-flag",
+				"version": "4.0.0",
+				"size": 4419
+			},
+			{
+				"name": "fs-extra",
+				"version": "9.1.0",
+				"size": 129795
+			},
+			{
+				"name": "jsonfile",
+				"version": "6.1.0",
+				"size": 19750
+			},
+			{
+				"name": "universalify",
+				"version": "2.0.1",
+				"size": 4675
+			},
+			{
+				"name": "graceful-fs",
+				"version": "4.2.11",
+				"size": 32535
+			},
+			{
+				"name": "at-least-node",
+				"version": "1.0.0",
+				"size": 2625
+			},
+			{
+				"name": "@roxi/ssr",
+				"version": "0.2.1",
+				"size": 6996
+			},
+			{
+				"name": "bufferutil",
+				"version": "4.0.9",
+				"size": 371859
+			},
+			{
+				"name": "node-gyp-build",
+				"version": "4.8.4",
+				"size": 13864
+			},
+			{
+				"name": "jsdom",
+				"version": "16.7.0",
+				"size": 2769471
+			},
+			{
+				"name": "ws",
+				"version": "7.5.10",
+				"size": 122307
+			},
+			{
+				"name": "abab",
+				"version": "2.0.6",
+				"size": 10444
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "cssom",
+				"version": "0.4.4",
+				"size": 48718
+			},
+			{
+				"name": "saxes",
+				"version": "5.0.1",
+				"size": 164263
+			},
+			{
+				"name": "xmlchars",
+				"version": "2.2.0",
+				"size": 58957
+			},
+			{
+				"name": "nwsapi",
+				"version": "2.2.20",
+				"size": 85858
+			},
+			{
+				"name": "parse5",
+				"version": "6.0.1",
+				"size": 331125
+			},
+			{
+				"name": "cssstyle",
+				"version": "2.3.0",
+				"size": 176221
+			},
+			{
+				"name": "cssom",
+				"version": "0.3.8",
+				"size": 48996
+			},
+			{
+				"name": "data-urls",
+				"version": "2.0.0",
+				"size": 8084
+			},
+			{
+				"name": "whatwg-mimetype",
+				"version": "2.3.0",
+				"size": 16182
+			},
+			{
+				"name": "whatwg-url",
+				"version": "8.7.0",
+				"size": 90738
+			},
+			{
+				"name": "tr46",
+				"version": "2.1.0",
+				"size": 210389
+			},
+			{
+				"name": "punycode",
+				"version": "2.3.1",
+				"size": 33514
+			},
+			{
+				"name": "lodash",
+				"version": "4.17.21",
+				"size": 1412415
+			},
+			{
+				"name": "webidl-conversions",
+				"version": "6.1.0",
+				"size": 25919
+			},
+			{
+				"name": "escodegen",
+				"version": "2.1.0",
+				"size": 108549
+			},
+			{
+				"name": "estraverse",
+				"version": "5.3.0",
+				"size": 37094
+			},
+			{
+				"name": "esutils",
+				"version": "2.0.3",
+				"size": 50582
+			},
+			{
+				"name": "esprima",
+				"version": "4.0.1",
+				"size": 314361
+			},
+			{
+				"name": "form-data",
+				"version": "3.0.3",
+				"size": 31368
+			},
+			{
+				"name": "asynckit",
+				"version": "0.4.0"
+			},
+			{
+				"name": "mime-types",
+				"version": "2.1.35",
+				"size": 18272
+			},
+			{
+				"name": "mime-db",
+				"version": "1.52.0",
+				"size": 205539
+			},
+			{
+				"name": "combined-stream",
+				"version": "1.0.8",
+				"size": 11514
+			},
+			{
+				"name": "delayed-stream",
+				"version": "1.0.0"
+			},
+			{
+				"name": "es-set-tostringtag",
+				"version": "2.1.0",
+				"size": 14544
+			},
+			{
+				"name": "es-errors",
+				"version": "1.3.0",
+				"size": 12324
+			},
+			{
+				"name": "get-intrinsic",
+				"version": "1.3.0",
+				"size": 46542
+			},
+			{
+				"name": "call-bind-apply-helpers",
+				"version": "1.0.2",
+				"size": 15952
+			},
+			{
+				"name": "function-bind",
+				"version": "1.1.2",
+				"size": 31427
+			},
+			{
+				"name": "es-define-property",
+				"version": "1.0.1",
+				"size": 10217
+			},
+			{
+				"name": "es-object-atoms",
+				"version": "1.1.1",
+				"size": 11442
+			},
+			{
+				"name": "get-proto",
+				"version": "1.0.1",
+				"size": 10840
+			},
+			{
+				"name": "dunder-proto",
+				"version": "1.0.1",
+				"size": 13003
+			},
+			{
+				"name": "gopd",
+				"version": "1.2.0",
+				"size": 9869
+			},
+			{
+				"name": "has-symbols",
+				"version": "1.1.0",
+				"size": 23409
+			},
+			{
+				"name": "hasown",
+				"version": "2.0.2",
+				"size": 8765
+			},
+			{
+				"name": "math-intrinsics",
+				"version": "1.1.0",
+				"size": 17323
+			},
+			{
+				"name": "has-tostringtag",
+				"version": "1.0.2",
+				"size": 17603
+			},
+			{
+				"name": "decimal.js",
+				"version": "10.5.0",
+				"size": 284225
+			},
+			{
+				"name": "symbol-tree",
+				"version": "3.2.4",
+				"size": 57073
+			},
+			{
+				"name": "w3c-hr-time",
+				"version": "1.0.2",
+				"size": 16806
+			},
+			{
+				"name": "browser-process-hrtime",
+				"version": "1.0.0",
+				"size": 3525
+			},
+			{
+				"name": "domexception",
+				"version": "2.0.1",
+				"size": 15542
+			},
+			{
+				"name": "webidl-conversions",
+				"version": "5.0.0",
+				"size": 19951
+			},
+			{
+				"name": "tough-cookie",
+				"version": "4.1.4",
+				"size": 111787
+			},
+			{
+				"name": "psl",
+				"version": "1.15.0",
+				"size": 711982
+			},
+			{
+				"name": "url-parse",
+				"version": "1.5.10",
+				"size": 62957
+			},
+			{
+				"name": "querystringify",
+				"version": "2.2.0",
+				"size": 6959
+			},
+			{
+				"name": "requires-port",
+				"version": "1.0.0"
+			},
+			{
+				"name": "universalify",
+				"version": "0.2.0",
+				"size": 4787
+			},
+			{
+				"name": "acorn-globals",
+				"version": "6.0.0",
+				"size": 9103
+			},
+			{
+				"name": "acorn",
+				"version": "7.4.1",
+				"size": 1209760
+			},
+			{
+				"name": "acorn-walk",
+				"version": "7.2.0",
+				"size": 100036
+			},
+			{
+				"name": "whatwg-encoding",
+				"version": "1.0.5",
+				"size": 12341
+			},
+			{
+				"name": "iconv-lite",
+				"version": "0.4.24",
+				"size": 335941
+			},
+			{
+				"name": "safer-buffer",
+				"version": "2.1.2",
+				"size": 42299
+			},
+			{
+				"name": "http-proxy-agent",
+				"version": "4.0.1",
+				"size": 17062
+			},
+			{
+				"name": "@tootallnate/once",
+				"version": "1.1.2",
+				"size": 4085
+			},
+			{
+				"name": "agent-base",
+				"version": "6.0.2",
+				"size": 34582
+			},
+			{
+				"name": "debug",
+				"version": "4.4.0",
+				"size": 42798
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "https-proxy-agent",
+				"version": "5.0.1",
+				"size": 26008
+			},
+			{
+				"name": "w3c-xmlserializer",
+				"version": "2.0.0",
+				"size": 18036
+			},
+			{
+				"name": "xml-name-validator",
+				"version": "3.0.0"
+			},
+			{
+				"name": "html-encoding-sniffer",
+				"version": "2.0.1",
+				"size": 11469
+			},
+			{
+				"name": "is-potential-custom-element-name",
+				"version": "1.0.1",
+				"size": 3918
+			},
+			{
+				"name": "node-fetch",
+				"version": "2.7.0",
+				"size": 162253
+			},
+			{
+				"name": "whatwg-url",
+				"version": "5.0.0"
+			},
+			{
+				"name": "tr46",
+				"version": "0.0.3"
+			},
+			{
+				"name": "webidl-conversions",
+				"version": "3.0.1"
+			},
+			{
+				"name": "utf-8-validate",
+				"version": "5.0.10",
+				"size": 402875
+			},
+			{
+				"name": "commander",
+				"version": "7.2.0",
+				"size": 144710
+			},
+			{
+				"name": "configent",
+				"version": "2.2.0",
+				"size": 109070
+			},
+			{
+				"name": "dotenv",
+				"version": "8.6.0",
+				"size": 23876
+			},
+			{
+				"name": "picomatch",
+				"version": "2.3.1",
+				"size": 89952
+			},
+			{
+				"name": "@types/node",
+				"version": "12.20.55",
+				"size": 760037
+			},
+			{
+				"name": "cheap-watch",
+				"version": "1.0.4",
+				"size": 37194
+			},
+			{
+				"name": "log-symbols",
+				"version": "3.0.0",
+				"size": 4107
+			},
+			{
+				"name": "chalk",
+				"version": "2.4.2",
+				"size": 26924
+			},
+			{
+				"name": "ansi-styles",
+				"version": "3.2.1",
+				"size": 9371
+			},
+			{
+				"name": "color-convert",
+				"version": "1.9.3",
+				"size": 26964
+			},
+			{
+				"name": "color-name",
+				"version": "1.1.3"
+			},
+			{
+				"name": "supports-color",
+				"version": "5.5.0",
+				"size": 6630
+			},
+			{
+				"name": "has-flag",
+				"version": "3.0.0"
+			},
+			{
+				"name": "escape-string-regexp",
+				"version": "1.0.5"
+			},
+			{
+				"name": "rollup-pluginutils",
+				"version": "2.8.2",
+				"size": 246173
+			},
+			{
+				"name": "estree-walker",
+				"version": "0.6.1",
+				"size": 9526
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[3, 4],
+			[4, 5],
+			[2, 6],
+			[6, 7],
+			[0, 8],
+			[8, 9],
+			[9, 10],
+			[8, 11],
+			[8, 10],
+			[8, 12],
+			[0, 13],
+			[13, 14],
+			[14, 15],
+			[13, 16],
+			[16, 17],
+			[16, 18],
+			[16, 19],
+			[16, 20],
+			[16, 21],
+			[21, 22],
+			[16, 23],
+			[16, 24],
+			[16, 25],
+			[25, 26],
+			[16, 27],
+			[27, 18],
+			[27, 28],
+			[27, 29],
+			[29, 30],
+			[30, 31],
+			[29, 32],
+			[29, 33],
+			[16, 34],
+			[34, 35],
+			[34, 36],
+			[34, 37],
+			[16, 38],
+			[38, 39],
+			[38, 40],
+			[40, 41],
+			[38, 42],
+			[42, 43],
+			[38, 44],
+			[44, 45],
+			[44, 46],
+			[46, 47],
+			[47, 45],
+			[47, 48],
+			[46, 49],
+			[46, 45],
+			[46, 50],
+			[50, 45],
+			[46, 48],
+			[46, 51],
+			[51, 52],
+			[52, 47],
+			[47, 45],
+			[47, 48],
+			[52, 45],
+			[52, 53],
+			[51, 50],
+			[50, 45],
+			[46, 53],
+			[46, 54],
+			[46, 55],
+			[55, 48],
+			[46, 56],
+			[44, 57],
+			[57, 54],
+			[44, 55],
+			[55, 48],
+			[16, 58],
+			[16, 29],
+			[29, 30],
+			[30, 31],
+			[29, 32],
+			[29, 33],
+			[16, 59],
+			[16, 60],
+			[60, 61],
+			[16, 62],
+			[62, 63],
+			[16, 64],
+			[64, 65],
+			[65, 31],
+			[64, 31],
+			[64, 66],
+			[66, 67],
+			[66, 68],
+			[64, 69],
+			[16, 70],
+			[70, 71],
+			[70, 72],
+			[16, 73],
+			[73, 74],
+			[74, 75],
+			[16, 28],
+			[16, 76],
+			[76, 77],
+			[76, 78],
+			[78, 79],
+			[79, 80],
+			[76, 79],
+			[79, 80],
+			[16, 81],
+			[81, 79],
+			[79, 80],
+			[81, 78],
+			[78, 79],
+			[79, 80],
+			[16, 82],
+			[82, 83],
+			[16, 33],
+			[16, 83],
+			[16, 84],
+			[84, 73],
+			[73, 74],
+			[74, 75],
+			[16, 85],
+			[13, 86],
+			[86, 87],
+			[87, 88],
+			[87, 89],
+			[13, 90],
+			[90, 15],
+			[0, 91],
+			[0, 92],
+			[92, 93],
+			[0, 94],
+			[0, 95],
+			[0, 96],
+			[0, 97],
+			[97, 98],
+			[98, 99],
+			[99, 100],
+			[100, 101],
+			[98, 102],
+			[102, 103],
+			[98, 104],
+			[0, 105],
+			[105, 106]
+		],
+		"circular": []
+	}
 }

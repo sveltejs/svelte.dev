@@ -13,8 +13,6 @@
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.0.0-next.587",
 	"last_rune_check_version": "1.0.4",
-	"dependencies": [],
-	"unpacked_size": 7787,
 	"downloads_history": [
 		{
 			"range": [1703442600000, 1704047399999],
@@ -212,5 +210,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@chanapongpan/svelte-common",
+				"version": "1.0.4",
+				"size": 7787
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

@@ -13,8 +13,6 @@
 	"svelte_range": "^5.0.0-next.243",
 	"last_rune_check_version": "3.2.8",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 1490308,
 	"downloads_history": [
 		{
 			"range": [1737916200000, 1738520999999],
@@ -44,5 +42,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 16
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@3-/prettier-plugin-svelte",
+				"version": "3.2.8",
+				"size": 1490308
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

@@ -13,13 +13,6 @@
 	"version": "0.2.2",
 	"svelte_range": "^3.23.0",
 	"last_rune_check_version": "0.2.2",
-	"dependencies": [
-		{
-			"name": "ua-parser-js",
-			"semver": "^0.7.21"
-		}
-	],
-	"unpacked_size": 69753,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +326,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 362
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-device-detector",
+				"version": "0.2.2",
+				"size": 69753
+			},
+			{
+				"name": "ua-parser-js",
+				"version": "0.7.40",
+				"size": 118884
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

@@ -14,21 +14,6 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "2.15.1",
 	"last_rune_check_version": "2.1.6",
-	"dependencies": [
-		{
-			"name": "@jill64/svelte-device-theme",
-			"semver": "2.0.1"
-		},
-		{
-			"name": "svelte-french-toast",
-			"semver": "1.2.0"
-		},
-		{
-			"name": "svelte-mq-store",
-			"semver": "3.0.0"
-		}
-	],
-	"unpacked_size": 15127,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -342,5 +327,43 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 9026
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@jill64/svelte-toast",
+				"version": "2.1.6",
+				"size": 15127
+			},
+			{
+				"name": "@jill64/svelte-device-theme",
+				"version": "2.0.1",
+				"size": 5385
+			},
+			{
+				"name": "svelte-mq-store",
+				"version": "3.0.0",
+				"size": 5590
+			},
+			{
+				"name": "svelte-french-toast",
+				"version": "1.2.0",
+				"size": 161031
+			},
+			{
+				"name": "svelte-writable-derived",
+				"version": "3.1.1",
+				"size": 22021
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[3, 4],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

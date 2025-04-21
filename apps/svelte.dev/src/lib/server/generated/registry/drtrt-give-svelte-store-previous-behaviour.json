@@ -13,8 +13,6 @@
 	"version": "1.2.1",
 	"svelte_range": "3 || 4",
 	"last_rune_check_version": "1.2.1",
-	"dependencies": [],
-	"unpacked_size": 21161,
 	"downloads_history": [
 		{
 			"range": [1698604200000, 1699208999999],
@@ -296,5 +294,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 18
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@drtrt/give-svelte-store-previous-behaviour",
+				"version": "1.2.1",
+				"size": 21161
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

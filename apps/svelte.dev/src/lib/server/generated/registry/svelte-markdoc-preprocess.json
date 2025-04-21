@@ -13,37 +13,6 @@
 	"version": "3.0.0",
 	"svelte_range": "^5.25.5",
 	"last_rune_check_version": "3.0.0",
-	"dependencies": [
-		{
-			"name": "@markdoc/markdoc",
-			"semver": "^0.5.1"
-		},
-		{
-			"name": "estree-walker",
-			"semver": "^3.0.3"
-		},
-		{
-			"name": "html-escaper",
-			"semver": "^3.0.3"
-		},
-		{
-			"name": "js-yaml",
-			"semver": "^4.1.0"
-		},
-		{
-			"name": "lovely-logs",
-			"semver": "^2.6.0"
-		},
-		{
-			"name": "svelte",
-			"semver": "^5.25.5"
-		},
-		{
-			"name": "typescript",
-			"semver": "^5.8.2"
-		}
-	],
-	"unpacked_size": 69708,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -357,5 +326,183 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 460
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-markdoc-preprocess",
+				"version": "3.0.0",
+				"size": 69708
+			},
+			{
+				"name": "@markdoc/markdoc",
+				"version": "0.5.1",
+				"size": 1912436
+			},
+			{
+				"name": "estree-walker",
+				"version": "3.0.3",
+				"size": 17599
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "html-escaper",
+				"version": "3.0.3",
+				"size": 15567
+			},
+			{
+				"name": "js-yaml",
+				"version": "4.1.0",
+				"size": 404738
+			},
+			{
+				"name": "argparse",
+				"version": "2.0.1",
+				"size": 171548
+			},
+			{
+				"name": "lovely-logs",
+				"version": "2.6.0",
+				"size": 29222
+			},
+			{
+				"name": "svelte",
+				"version": "5.28.1",
+				"size": 2426419
+			},
+			{
+				"name": "@ampproject/remapping",
+				"version": "2.3.0",
+				"size": 78946
+			},
+			{
+				"name": "@jridgewell/gen-mapping",
+				"version": "0.3.8",
+				"size": 81596
+			},
+			{
+				"name": "@jridgewell/set-array",
+				"version": "1.2.1",
+				"size": 17945
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "@jridgewell/trace-mapping",
+				"version": "0.3.25",
+				"size": 169330
+			},
+			{
+				"name": "@jridgewell/resolve-uri",
+				"version": "3.1.2",
+				"size": 53153
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "@sveltejs/acorn-typescript",
+				"version": "1.0.5",
+				"size": 197476
+			},
+			{
+				"name": "aria-query",
+				"version": "5.3.2",
+				"size": 176114
+			},
+			{
+				"name": "axobject-query",
+				"version": "4.1.0",
+				"size": 110878
+			},
+			{
+				"name": "clsx",
+				"version": "2.1.1",
+				"size": 8555
+			},
+			{
+				"name": "esm-env",
+				"version": "1.2.2",
+				"size": 3784
+			},
+			{
+				"name": "esrap",
+				"version": "1.4.6",
+				"size": 50818
+			},
+			{
+				"name": "is-reference",
+				"version": "3.0.3",
+				"size": 3953
+			},
+			{
+				"name": "locate-character",
+				"version": "3.0.0",
+				"size": 5325
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "zimmerframe",
+				"version": "1.1.2",
+				"size": 12266
+			},
+			{
+				"name": "typescript",
+				"version": "5.8.3",
+				"size": 22867703
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[0, 4],
+			[0, 5],
+			[5, 6],
+			[0, 7],
+			[0, 8],
+			[8, 9],
+			[9, 10],
+			[10, 11],
+			[10, 12],
+			[10, 13],
+			[13, 14],
+			[13, 12],
+			[9, 13],
+			[13, 14],
+			[13, 12],
+			[8, 12],
+			[8, 3],
+			[8, 15],
+			[8, 16],
+			[8, 17],
+			[8, 18],
+			[8, 19],
+			[8, 20],
+			[8, 21],
+			[21, 12],
+			[8, 22],
+			[22, 3],
+			[8, 23],
+			[8, 24],
+			[24, 12],
+			[8, 25],
+			[0, 26]
+		],
+		"circular": []
+	}
 }

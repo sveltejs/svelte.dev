@@ -13,8 +13,6 @@
 	"version": "0.7.1",
 	"svelte_range": "4.x",
 	"last_rune_check_version": "0.7.1",
-	"dependencies": [],
-	"unpacked_size": 71063,
 	"downloads_history": [
 		{
 			"range": [1704047400000, 1704652199999],
@@ -220,5 +218,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "p44",
+				"version": "0.7.1",
+				"size": 71063
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

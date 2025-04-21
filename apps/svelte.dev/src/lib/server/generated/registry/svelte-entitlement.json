@@ -13,13 +13,6 @@
 	"version": "2.0.37",
 	"svelte_range": "^5.27.0",
 	"last_rune_check_version": "2.0.37",
-	"dependencies": [
-		{
-			"name": "svelte-dnd-action",
-			"semver": "^0.9.59"
-		}
-	],
-	"unpacked_size": 8100,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +326,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 430
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-entitlement",
+				"version": "2.0.37",
+				"size": 8100
+			},
+			{
+				"name": "svelte-dnd-action",
+				"version": "0.9.60",
+				"size": 330948
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

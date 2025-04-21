@@ -14,17 +14,6 @@
 	"svelte_range": "^3.54.0 || ^4.0.0 || ^5.0.0-0",
 	"kit_range": "^1.0.0 || ^2.0.0",
 	"last_rune_check_version": "1.9.0",
-	"dependencies": [
-		{
-			"name": "set-cookie-parser",
-			"semver": "^2.7.0"
-		},
-		{
-			"name": "@auth/core",
-			"semver": "0.39.0"
-		}
-	],
-	"unpacked_size": 139890,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -338,5 +327,60 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 15867
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@auth/sveltekit",
+				"version": "1.9.0",
+				"size": 139890
+			},
+			{
+				"name": "set-cookie-parser",
+				"version": "2.7.1",
+				"size": 16074
+			},
+			{
+				"name": "@auth/core",
+				"version": "0.39.0",
+				"size": 1837346
+			},
+			{
+				"name": "@panva/hkdf",
+				"version": "1.2.1",
+				"size": 12779
+			},
+			{
+				"name": "jose",
+				"version": "6.0.10",
+				"size": 250861
+			},
+			{
+				"name": "oauth4webapi",
+				"version": "3.5.0",
+				"size": 311032
+			},
+			{
+				"name": "preact",
+				"version": "10.24.3",
+				"size": 1415207
+			},
+			{
+				"name": "preact-render-to-string",
+				"version": "6.5.11",
+				"size": 798570
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[2, 4],
+			[2, 5],
+			[2, 6],
+			[2, 7]
+		],
+		"circular": []
+	}
 }

@@ -14,13 +14,6 @@
 	"svelte_range": "^3.0.0 || ^4.0.0",
 	"kit_range": "^1.20.5",
 	"last_rune_check_version": "1.3.7",
-	"dependencies": [
-		{
-			"name": "tailwind-merge",
-			"semver": "^1.13.2"
-		}
-	],
-	"unpacked_size": 526439,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -278,5 +271,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 65
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@liquidiqq/iconkit",
+				"version": "1.3.7",
+				"size": 526439
+			},
+			{
+				"name": "tailwind-merge",
+				"version": "1.14.0",
+				"size": 764962
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

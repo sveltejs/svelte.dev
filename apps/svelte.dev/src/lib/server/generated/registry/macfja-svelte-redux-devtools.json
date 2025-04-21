@@ -13,8 +13,6 @@
 	"version": "1.0.0",
 	"svelte_range": "*",
 	"last_rune_check_version": "1.0.0",
-	"dependencies": [],
-	"unpacked_size": 20286,
 	"downloads_history": [
 		{
 			"range": [1732473000000, 1733077799999],
@@ -76,5 +74,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@macfja/svelte-redux-devtools",
+				"version": "1.0.0",
+				"size": 20286
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

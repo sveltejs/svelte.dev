@@ -14,13 +14,6 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.0.1",
-	"dependencies": [
-		{
-			"name": "pagedjs",
-			"semver": "^0.4.3"
-		}
-	],
-	"unpacked_size": 16015,
 	"downloads_history": [
 		{
 			"range": [1736706600000, 1737311399999],
@@ -74,5 +67,191 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 64
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-pagedjs",
+				"version": "0.0.1",
+				"size": 16015
+			},
+			{
+				"name": "pagedjs",
+				"version": "0.4.3",
+				"size": 5915854
+			},
+			{
+				"name": "css-tree",
+				"version": "1.1.3",
+				"size": 989149
+			},
+			{
+				"name": "mdn-data",
+				"version": "2.0.14",
+				"size": 561782
+			},
+			{
+				"name": "source-map",
+				"version": "0.6.1"
+			},
+			{
+				"name": "clear-cut",
+				"version": "2.0.2"
+			},
+			{
+				"name": "event-emitter",
+				"version": "0.3.5"
+			},
+			{
+				"name": "es5-ext",
+				"version": "0.10.64",
+				"size": 373969,
+				"isCircular": true,
+				"circularTarget": 7
+			},
+			{
+				"name": "es6-iterator",
+				"version": "2.0.3"
+			},
+			{
+				"name": "d",
+				"version": "1.0.2",
+				"size": 14209,
+				"isCircular": true,
+				"circularTarget": 9
+			},
+			{
+				"name": "type",
+				"version": "2.7.3",
+				"size": 89348
+			},
+			{
+				"name": "es6-symbol",
+				"version": "3.1.4",
+				"size": 16511
+			},
+			{
+				"name": "es5-ext",
+				"version": "^0.10.64",
+				"isCircular": true,
+				"circularTarget": 12
+			},
+			{
+				"name": "ext",
+				"version": "1.7.0",
+				"size": 23083
+			},
+			{
+				"name": "esniff",
+				"version": "2.0.1",
+				"size": 60911
+			},
+			{
+				"name": "event-emitter",
+				"version": "^0.3.5",
+				"isCircular": true,
+				"circularTarget": 15
+			},
+			{
+				"name": "next-tick",
+				"version": "1.1.0",
+				"size": 7650
+			},
+			{
+				"name": "es6-iterator",
+				"version": "^2.0.3",
+				"isCircular": true,
+				"circularTarget": 17
+			},
+			{
+				"name": "@babel/runtime",
+				"version": "7.27.0",
+				"size": 249798
+			},
+			{
+				"name": "regenerator-runtime",
+				"version": "0.14.1",
+				"size": 27863
+			},
+			{
+				"name": "@babel/polyfill",
+				"version": "7.12.1",
+				"size": 442528
+			},
+			{
+				"name": "core-js",
+				"version": "2.6.12",
+				"size": 2262779
+			},
+			{
+				"name": "regenerator-runtime",
+				"version": "0.13.11",
+				"size": 27759
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[2, 4],
+			[1, 5],
+			[1, 6],
+			[6, 7],
+			[7, 8],
+			[8, 9],
+			[9, 7],
+			[9, 10],
+			[8, 7],
+			[8, 11],
+			[11, 9],
+			[9, 12],
+			[9, 10],
+			[11, 13],
+			[13, 10],
+			[7, 11],
+			[11, 9],
+			[9, 12],
+			[9, 10],
+			[11, 13],
+			[13, 10],
+			[7, 14],
+			[14, 9],
+			[9, 12],
+			[9, 10],
+			[14, 7],
+			[14, 15],
+			[14, 10],
+			[7, 16],
+			[6, 9],
+			[9, 7],
+			[7, 17],
+			[7, 11],
+			[11, 9],
+			[11, 13],
+			[13, 10],
+			[7, 14],
+			[14, 9],
+			[14, 7],
+			[14, 15],
+			[14, 10],
+			[7, 16],
+			[9, 10],
+			[1, 18],
+			[18, 19],
+			[1, 20],
+			[20, 21],
+			[20, 22]
+		],
+		"circular": [
+			[9, 7],
+			[12, 12],
+			[12, 12],
+			[12, 12],
+			[15, 15],
+			[17, 17],
+			[11, 9],
+			[15, 15]
+		]
+	}
 }

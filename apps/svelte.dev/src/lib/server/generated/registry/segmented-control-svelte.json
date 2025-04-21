@@ -14,8 +14,6 @@
 	"svelte_range": "^3.46.6",
 	"kit_range": "next",
 	"last_rune_check_version": "3.8.3",
-	"dependencies": [],
-	"unpacked_size": 15620,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -285,5 +283,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 14
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "segmented-control-svelte",
+				"version": "3.8.3",
+				"size": 15620
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

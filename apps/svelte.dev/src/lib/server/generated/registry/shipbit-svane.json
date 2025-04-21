@@ -14,8 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.4",
 	"last_rune_check_version": "2.0.2",
-	"dependencies": [],
-	"unpacked_size": 10880,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -325,5 +323,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 9
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@shipbit/svane",
+				"version": "2.0.2",
+				"size": 10880
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

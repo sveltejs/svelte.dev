@@ -13,8 +13,6 @@
 	"kit_range": "^1.5.0",
 	"last_rune_check_version": "1.1.0",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 16093,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -192,5 +190,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "sveltefire-extended",
+				"version": "1.1.0",
+				"size": 16093
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

@@ -14,37 +14,6 @@
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "0.0.9",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "@threlte/core",
-			"semver": "^8.0.1"
-		},
-		{
-			"name": "@threlte/extras",
-			"semver": "^9.0.1"
-		},
-		{
-			"name": "postprocessing",
-			"semver": "^6.36.7"
-		},
-		{
-			"name": "three",
-			"semver": "^0.173.0"
-		},
-		{
-			"name": "three-stdlib",
-			"semver": "^2.35.13"
-		},
-		{
-			"name": "vite-plugin-glsl",
-			"semver": "^1.3.1"
-		},
-		{
-			"name": "vite-plugin-string",
-			"semver": "^1.2.3"
-		}
-	],
-	"unpacked_size": 169360,
 	"downloads_history": [
 		{
 			"range": [1739125800000, 1739730599999],
@@ -82,5 +51,233 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 53
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "threlte-postprocessing",
+				"version": "0.0.9",
+				"size": 169360
+			},
+			{
+				"name": "@threlte/core",
+				"version": "8.0.2",
+				"size": 145153
+			},
+			{
+				"name": "mitt",
+				"version": "3.0.1",
+				"size": 26444
+			},
+			{
+				"name": "@threlte/extras",
+				"version": "9.1.3",
+				"size": 360169
+			},
+			{
+				"name": "@threejs-kit/instanced-sprite-mesh",
+				"version": "2.5.1",
+				"size": 141023
+			},
+			{
+				"name": "diet-sprite",
+				"version": "0.0.1",
+				"size": 207
+			},
+			{
+				"name": "earcut",
+				"version": "2.2.4",
+				"size": 95170
+			},
+			{
+				"name": "maath",
+				"version": "0.10.8",
+				"size": 304666
+			},
+			{
+				"name": "three-instanced-uniforms-mesh",
+				"version": "0.52.4",
+				"size": 43101
+			},
+			{
+				"name": "troika-three-utils",
+				"version": "0.52.4",
+				"size": 117561
+			},
+			{
+				"name": "camera-controls",
+				"version": "2.10.1",
+				"size": 369401
+			},
+			{
+				"name": "three-mesh-bvh",
+				"version": "0.9.0",
+				"size": 1615548
+			},
+			{
+				"name": "three-perf",
+				"version": "1.0.10"
+			},
+			{
+				"name": "troika-three-text",
+				"version": "0.52.4",
+				"size": 742883
+			},
+			{
+				"name": "bidi-js",
+				"version": "1.0.3",
+				"size": 160810
+			},
+			{
+				"name": "require-from-string",
+				"version": "2.0.2",
+				"size": 3422
+			},
+			{
+				"name": "troika-worker-utils",
+				"version": "0.52.0",
+				"size": 73411
+			},
+			{
+				"name": "webgl-sdf-generator",
+				"version": "1.1.1",
+				"size": 128555
+			},
+			{
+				"name": "tweakpane",
+				"version": "3.1.10",
+				"size": 460922
+			},
+			{
+				"name": "three-viewport-gizmo",
+				"version": "2.2.0",
+				"size": 476081
+			},
+			{
+				"name": "postprocessing",
+				"version": "6.37.2",
+				"size": 2751616
+			},
+			{
+				"name": "three",
+				"version": "0.173.0",
+				"size": 27515555
+			},
+			{
+				"name": "three-stdlib",
+				"version": "2.35.15",
+				"size": 26405958
+			},
+			{
+				"name": "@types/draco3d",
+				"version": "1.4.10",
+				"size": 12106
+			},
+			{
+				"name": "@types/offscreencanvas",
+				"version": "2019.7.3",
+				"size": 8887
+			},
+			{
+				"name": "@types/webxr",
+				"version": "0.5.22",
+				"size": 43142
+			},
+			{
+				"name": "draco3d",
+				"version": "1.5.7",
+				"size": 873175
+			},
+			{
+				"name": "fflate",
+				"version": "0.6.10",
+				"size": 519723
+			},
+			{
+				"name": "potpack",
+				"version": "1.0.2",
+				"size": 11008
+			},
+			{
+				"name": "vite-plugin-glsl",
+				"version": "1.4.1",
+				"size": 41343
+			},
+			{
+				"name": "@rollup/pluginutils",
+				"version": "5.1.4",
+				"size": 58354
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "estree-walker",
+				"version": "2.0.2",
+				"size": 50243
+			},
+			{
+				"name": "picomatch",
+				"version": "4.0.2",
+				"size": 85237
+			},
+			{
+				"name": "vite-plugin-string",
+				"version": "1.2.3",
+				"size": 9278
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[3, 4],
+			[4, 5],
+			[4, 6],
+			[4, 7],
+			[4, 8],
+			[8, 9],
+			[4, 9],
+			[3, 10],
+			[3, 11],
+			[3, 12],
+			[12, 13],
+			[13, 14],
+			[14, 15],
+			[13, 9],
+			[13, 16],
+			[13, 17],
+			[12, 18],
+			[3, 19],
+			[3, 13],
+			[13, 14],
+			[14, 15],
+			[13, 9],
+			[13, 16],
+			[13, 17],
+			[0, 20],
+			[0, 21],
+			[0, 22],
+			[22, 23],
+			[22, 24],
+			[22, 25],
+			[22, 26],
+			[22, 27],
+			[22, 28],
+			[0, 29],
+			[29, 30],
+			[30, 31],
+			[30, 32],
+			[30, 33],
+			[0, 34],
+			[34, 30],
+			[30, 31],
+			[30, 32],
+			[30, 33]
+		],
+		"circular": []
+	}
 }

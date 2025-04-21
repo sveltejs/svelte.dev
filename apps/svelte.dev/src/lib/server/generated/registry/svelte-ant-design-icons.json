@@ -14,8 +14,6 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.7.2",
 	"last_rune_check_version": "2.0.1",
-	"dependencies": [],
-	"unpacked_size": 2196605,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -329,5 +327,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 151
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-ant-design-icons",
+				"version": "2.0.1",
+				"size": 2196605
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

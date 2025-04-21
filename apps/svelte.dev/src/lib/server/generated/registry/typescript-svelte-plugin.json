@@ -13,17 +13,6 @@
 	"version": "0.3.46",
 	"svelte_range": "^4.2.19",
 	"last_rune_check_version": "0.3.46",
-	"dependencies": [
-		{
-			"name": "@jridgewell/sourcemap-codec",
-			"semver": "^1.5.0"
-		},
-		{
-			"name": "svelte2tsx",
-			"semver": "~0.7.35"
-		}
-	],
-	"unpacked_size": 158180,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -337,5 +326,61 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 12015
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "typescript-svelte-plugin",
+				"version": "0.3.46",
+				"size": 158180
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "svelte2tsx",
+				"version": "0.7.36",
+				"size": 766555
+			},
+			{
+				"name": "dedent-js",
+				"version": "1.0.1"
+			},
+			{
+				"name": "pascal-case",
+				"version": "3.1.2",
+				"size": 14764
+			},
+			{
+				"name": "no-case",
+				"version": "3.0.4",
+				"size": 25128
+			},
+			{
+				"name": "lower-case",
+				"version": "2.0.2",
+				"size": 17661
+			},
+			{
+				"name": "tslib",
+				"version": "2.8.1",
+				"size": 90359
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[2, 4],
+			[4, 5],
+			[5, 6],
+			[6, 7],
+			[5, 7],
+			[4, 7]
+		],
+		"circular": []
+	}
 }

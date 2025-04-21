@@ -13,8 +13,6 @@
 	"version": "0.1.0",
 	"svelte_range": ">3.0.0",
 	"last_rune_check_version": "0.1.0",
-	"dependencies": [],
-	"unpacked_size": 14575,
 	"downloads_history": [
 		{
 			"range": [1722796200000, 1723400999999],
@@ -160,5 +158,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 2585
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "vitest-browser-svelte",
+				"version": "0.1.0",
+				"size": 14575
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

@@ -13,8 +13,6 @@
 	"kit_range": "^1.27.4",
 	"last_rune_check_version": "0.2.3",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 75078,
 	"downloads_history": [
 		{
 			"range": [1700418600000, 1701023399999],
@@ -212,5 +210,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svouter",
+				"version": "0.2.3",
+				"size": 75078
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

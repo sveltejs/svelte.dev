@@ -14,13 +14,6 @@
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.0.0",
 	"last_rune_check_version": "0.1.0",
-	"dependencies": [
-		{
-			"name": "heroicons",
-			"semver": "^2.0.13"
-		}
-	],
-	"unpacked_size": 886273,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -334,5 +327,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 10
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@krowten/svelte-heroicons",
+				"version": "0.1.0",
+				"size": 886273
+			},
+			{
+				"name": "heroicons",
+				"version": "2.2.0",
+				"size": 700262
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

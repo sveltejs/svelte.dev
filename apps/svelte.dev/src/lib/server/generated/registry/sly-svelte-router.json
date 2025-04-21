@@ -13,8 +13,6 @@
 	"version": "1.0.31",
 	"svelte_range": "^4.2.18",
 	"last_rune_check_version": "1.0.31",
-	"dependencies": [],
-	"unpacked_size": 26382,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -296,5 +294,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 13
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "sly-svelte-router",
+				"version": "1.0.31",
+				"size": 26382
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

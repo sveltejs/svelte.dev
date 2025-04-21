@@ -13,8 +13,6 @@
 	"version": "1.1.0",
 	"svelte_range": "^3.23.2",
 	"last_rune_check_version": "1.1.0",
-	"dependencies": [],
-	"unpacked_size": 8955,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -228,5 +226,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@aroleaf/svelte-textarea-autoresize",
+				"version": "1.1.0",
+				"size": 8955
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

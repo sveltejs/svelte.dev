@@ -14,8 +14,6 @@
 	"svelte_range": "^4.2.11",
 	"kit_range": "^2.5.0",
 	"last_rune_check_version": "0.1.0",
-	"dependencies": [],
-	"unpacked_size": 6036,
 	"downloads_history": [
 		{
 			"range": [1707676200000, 1708280999999],
@@ -217,5 +215,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-cleanable-store",
+				"version": "0.1.0",
+				"size": 6036
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

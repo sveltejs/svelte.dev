@@ -12,13 +12,6 @@
 	"version": "1.0.3",
 	"svelte_range": "^3.29.7",
 	"last_rune_check_version": "1.0.3",
-	"dependencies": [
-		{
-			"name": "svelte",
-			"semver": "^3.29.7"
-		}
-	],
-	"unpacked_size": 20082,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -296,5 +289,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-digital-alarm-number",
+				"version": "1.0.3",
+				"size": 20082
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

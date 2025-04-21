@@ -12,13 +12,6 @@
 	"svelte_range": "^3.44.3",
 	"last_rune_check_version": "0.2.4",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "dayjs",
-			"semver": "^1.10.7"
-		}
-	],
-	"unpacked_size": 146174,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -288,5 +281,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 27
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@htmlbricks/videogallerybootstrap-component",
+				"version": "0.2.4",
+				"size": 146174
+			},
+			{
+				"name": "dayjs",
+				"version": "1.11.13",
+				"size": 670277
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

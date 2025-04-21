@@ -13,37 +13,6 @@
 	"version": "6.0.0",
 	"svelte_range": "^4.2.1",
 	"last_rune_check_version": "6.0.0",
-	"dependencies": [
-		{
-			"name": "babylon",
-			"semver": "^6.18.0"
-		},
-		{
-			"name": "@babel/traverse",
-			"semver": "7.23.0"
-		},
-		{
-			"name": "@babel/types",
-			"semver": "7.23.0"
-		},
-		{
-			"name": "@babel/generator",
-			"semver": "7.23.0"
-		},
-		{
-			"name": "@homer0/jimple",
-			"semver": "^3.0.0"
-		},
-		{
-			"name": "@homer0/simple-logger",
-			"semver": "^3.0.0"
-		},
-		{
-			"name": "@rollup/pluginutils",
-			"semver": "^5.0.4"
-		}
-	],
-	"unpacked_size": 74166,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -357,5 +326,300 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 16
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-extend",
+				"version": "6.0.0",
+				"size": 74166
+			},
+			{
+				"name": "babylon",
+				"version": "6.18.0"
+			},
+			{
+				"name": "@babel/traverse",
+				"version": "7.23.0",
+				"size": 603312
+			},
+			{
+				"name": "debug",
+				"version": "4.4.0",
+				"size": 42798
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "globals",
+				"version": "11.12.0",
+				"size": 39779
+			},
+			{
+				"name": "@babel/types",
+				"version": "7.27.0",
+				"size": 2583295
+			},
+			{
+				"name": "@babel/helper-string-parser",
+				"version": "7.25.9",
+				"size": 31816
+			},
+			{
+				"name": "@babel/helper-validator-identifier",
+				"version": "7.25.9",
+				"size": 48330
+			},
+			{
+				"name": "@babel/parser",
+				"version": "7.27.0",
+				"size": 1924962
+			},
+			{
+				"name": "@babel/generator",
+				"version": "7.27.0",
+				"size": 559855
+			},
+			{
+				"name": "@jridgewell/gen-mapping",
+				"version": "0.3.8",
+				"size": 81596
+			},
+			{
+				"name": "@jridgewell/set-array",
+				"version": "1.2.1",
+				"size": 17945
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "@jridgewell/trace-mapping",
+				"version": "0.3.25",
+				"size": 169330
+			},
+			{
+				"name": "@jridgewell/resolve-uri",
+				"version": "3.1.2",
+				"size": 53153
+			},
+			{
+				"name": "jsesc",
+				"version": "3.1.0",
+				"size": 32280
+			},
+			{
+				"name": "@babel/code-frame",
+				"version": "7.26.2",
+				"size": 33160
+			},
+			{
+				"name": "js-tokens",
+				"version": "4.0.0"
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "@babel/helper-function-name",
+				"version": "7.24.7",
+				"size": 21736
+			},
+			{
+				"name": "@babel/template",
+				"version": "7.27.0",
+				"size": 70675
+			},
+			{
+				"name": "@babel/helper-hoist-variables",
+				"version": "7.24.7",
+				"size": 6993
+			},
+			{
+				"name": "@babel/helper-environment-visitor",
+				"version": "7.24.7",
+				"size": 6719
+			},
+			{
+				"name": "@babel/helper-split-export-declaration",
+				"version": "7.24.7",
+				"size": 10811
+			},
+			{
+				"name": "@babel/types",
+				"version": "7.23.0",
+				"size": 2412841
+			},
+			{
+				"name": "to-fast-properties",
+				"version": "2.0.0"
+			},
+			{
+				"name": "@babel/generator",
+				"version": "7.23.0",
+				"size": 487035
+			},
+			{
+				"name": "jsesc",
+				"version": "2.5.2",
+				"size": 31974
+			},
+			{
+				"name": "@homer0/jimple",
+				"version": "3.0.10",
+				"size": 149895
+			},
+			{
+				"name": "@homer0/simple-logger",
+				"version": "3.0.10",
+				"size": 61141
+			},
+			{
+				"name": "@homer0/package-info",
+				"version": "3.0.10",
+				"size": 28564
+			},
+			{
+				"name": "@homer0/deferred",
+				"version": "3.0.10",
+				"size": 10575
+			},
+			{
+				"name": "@homer0/path-utils",
+				"version": "3.0.10",
+				"size": 32678
+			},
+			{
+				"name": "colors",
+				"version": "1.4.0",
+				"size": 39506
+			},
+			{
+				"name": "@rollup/pluginutils",
+				"version": "5.1.4",
+				"size": 58354
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "estree-walker",
+				"version": "2.0.2",
+				"size": 50243
+			},
+			{
+				"name": "picomatch",
+				"version": "4.0.2",
+				"size": 85237
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[3, 4],
+			[2, 5],
+			[2, 6],
+			[6, 7],
+			[6, 8],
+			[2, 9],
+			[9, 6],
+			[6, 7],
+			[6, 8],
+			[2, 10],
+			[10, 9],
+			[9, 6],
+			[6, 7],
+			[6, 8],
+			[10, 6],
+			[6, 7],
+			[6, 8],
+			[10, 11],
+			[11, 12],
+			[11, 13],
+			[11, 14],
+			[14, 15],
+			[14, 13],
+			[10, 14],
+			[14, 15],
+			[14, 13],
+			[10, 16],
+			[2, 17],
+			[17, 18],
+			[17, 19],
+			[17, 8],
+			[2, 20],
+			[20, 6],
+			[6, 7],
+			[6, 8],
+			[20, 21],
+			[21, 17],
+			[17, 18],
+			[17, 19],
+			[17, 8],
+			[21, 9],
+			[9, 6],
+			[6, 7],
+			[6, 8],
+			[21, 6],
+			[6, 7],
+			[6, 8],
+			[2, 22],
+			[22, 6],
+			[6, 7],
+			[6, 8],
+			[2, 23],
+			[23, 6],
+			[6, 7],
+			[6, 8],
+			[2, 24],
+			[24, 6],
+			[6, 7],
+			[6, 8],
+			[0, 25],
+			[25, 26],
+			[25, 7],
+			[25, 8],
+			[0, 27],
+			[27, 28],
+			[27, 6],
+			[6, 7],
+			[6, 8],
+			[27, 11],
+			[11, 12],
+			[11, 13],
+			[11, 14],
+			[14, 15],
+			[14, 13],
+			[27, 14],
+			[14, 15],
+			[14, 13],
+			[0, 29],
+			[0, 30],
+			[30, 29],
+			[30, 31],
+			[31, 32],
+			[31, 29],
+			[31, 33],
+			[33, 29],
+			[30, 33],
+			[33, 29],
+			[30, 34],
+			[0, 35],
+			[35, 36],
+			[35, 37],
+			[35, 38]
+		],
+		"circular": []
+	}
 }

@@ -30,13 +30,6 @@
 	"version": "5.2.7",
 	"svelte_range": "^3 || ^4 || ^5 || ^5.0.0-next.0",
 	"last_rune_check_version": "5.2.7",
-	"dependencies": [
-		{
-			"name": "@testing-library/dom",
-			"semver": "^10.0.0"
-		}
-	],
-	"unpacked_size": 46748,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -350,5 +343,149 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 174274
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@testing-library/svelte",
+				"version": "5.2.7",
+				"size": 46748
+			},
+			{
+				"name": "@testing-library/dom",
+				"version": "10.4.0",
+				"size": 2427761
+			},
+			{
+				"name": "chalk",
+				"version": "4.1.2",
+				"size": 35047
+			},
+			{
+				"name": "ansi-styles",
+				"version": "4.3.0",
+				"size": 16978
+			},
+			{
+				"name": "color-convert",
+				"version": "2.0.1",
+				"size": 27189
+			},
+			{
+				"name": "color-name",
+				"version": "1.1.4",
+				"size": 6693
+			},
+			{
+				"name": "supports-color",
+				"version": "7.2.0",
+				"size": 7035
+			},
+			{
+				"name": "has-flag",
+				"version": "4.0.0",
+				"size": 4419
+			},
+			{
+				"name": "lz-string",
+				"version": "1.5.0",
+				"size": 175825
+			},
+			{
+				"name": "aria-query",
+				"version": "5.3.0",
+				"size": 192147
+			},
+			{
+				"name": "dequal",
+				"version": "2.0.3",
+				"size": 14229
+			},
+			{
+				"name": "pretty-format",
+				"version": "27.5.1",
+				"size": 70072
+			},
+			{
+				"name": "react-is",
+				"version": "17.0.2",
+				"size": 24767
+			},
+			{
+				"name": "ansi-regex",
+				"version": "5.0.1",
+				"size": 5609
+			},
+			{
+				"name": "ansi-styles",
+				"version": "5.2.0",
+				"size": 13596
+			},
+			{
+				"name": "@babel/runtime",
+				"version": "7.27.0",
+				"size": 249798
+			},
+			{
+				"name": "regenerator-runtime",
+				"version": "0.14.1",
+				"size": 27863
+			},
+			{
+				"name": "@babel/code-frame",
+				"version": "7.26.2",
+				"size": 33160
+			},
+			{
+				"name": "js-tokens",
+				"version": "4.0.0"
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "@babel/helper-validator-identifier",
+				"version": "7.25.9",
+				"size": 48330
+			},
+			{
+				"name": "@types/aria-query",
+				"version": "5.0.4",
+				"size": 11983
+			},
+			{
+				"name": "dom-accessibility-api",
+				"version": "0.5.16",
+				"size": 257340
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[3, 4],
+			[4, 5],
+			[2, 6],
+			[6, 7],
+			[1, 8],
+			[1, 9],
+			[9, 10],
+			[1, 11],
+			[11, 12],
+			[11, 13],
+			[11, 14],
+			[1, 15],
+			[15, 16],
+			[1, 17],
+			[17, 18],
+			[17, 19],
+			[17, 20],
+			[1, 21],
+			[1, 22]
+		],
+		"circular": []
+	}
 }

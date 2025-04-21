@@ -14,8 +14,6 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.17.2",
 	"last_rune_check_version": "0.8.0",
-	"dependencies": [],
-	"unpacked_size": 36310,
 	"downloads_history": [
 		{
 			"range": [1717353000000, 1717957799999],
@@ -193,5 +191,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 10
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@wjfe/single-spa-svelte",
+				"version": "0.8.0",
+				"size": 36310
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

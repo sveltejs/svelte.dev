@@ -14,13 +14,6 @@
 	"svelte_range": "^4.2.12",
 	"kit_range": "1.x || 2.x",
 	"last_rune_check_version": "0.6.1",
-	"dependencies": [
-		{
-			"name": "@isaacs/ttlcache",
-			"semver": "^1.4.1"
-		}
-	],
-	"unpacked_size": 32335,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -334,5 +327,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 2973
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "sveltekit-rate-limiter",
+				"version": "0.6.1",
+				"size": 32335
+			},
+			{
+				"name": "@isaacs/ttlcache",
+				"version": "1.4.1",
+				"size": 25201
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

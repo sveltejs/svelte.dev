@@ -13,25 +13,6 @@
 	"version": "3.0.1",
 	"svelte_range": "^5.15.0",
 	"last_rune_check_version": "3.0.1",
-	"dependencies": [
-		{
-			"name": "acorn",
-			"semver": "^8.5.0"
-		},
-		{
-			"name": "big.js",
-			"semver": "^6.1.1"
-		},
-		{
-			"name": "estree-walker",
-			"semver": "^2.0.2"
-		},
-		{
-			"name": "magic-string",
-			"semver": "^0.25.7"
-		}
-	],
-	"unpacked_size": 117413,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -345,5 +326,48 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 1087
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-preprocess-cssmodules",
+				"version": "3.0.1",
+				"size": 117413
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "big.js",
+				"version": "6.2.2",
+				"size": 58665
+			},
+			{
+				"name": "estree-walker",
+				"version": "2.0.2",
+				"size": 50243
+			},
+			{
+				"name": "magic-string",
+				"version": "0.25.9",
+				"size": 373056
+			},
+			{
+				"name": "sourcemap-codec",
+				"version": "1.4.8",
+				"size": 31802
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[0, 4],
+			[4, 5]
+		],
+		"circular": []
+	}
 }

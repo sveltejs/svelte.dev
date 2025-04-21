@@ -12,17 +12,6 @@
 	"typescript": false,
 	"version": "2.7.3",
 	"last_rune_check_version": "2.7.3",
-	"dependencies": [
-		{
-			"name": "front-matter",
-			"semver": "^3.2.1"
-		},
-		{
-			"name": "marked",
-			"semver": "^1.0.0"
-		}
-	],
-	"unpacked_size": 16115,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -336,5 +325,53 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 102
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-preprocess-markdown",
+				"version": "2.7.3",
+				"size": 16115
+			},
+			{
+				"name": "front-matter",
+				"version": "3.2.1",
+				"size": 10597
+			},
+			{
+				"name": "js-yaml",
+				"version": "3.14.1",
+				"size": 291327
+			},
+			{
+				"name": "argparse",
+				"version": "1.0.10",
+				"size": 116446
+			},
+			{
+				"name": "sprintf-js",
+				"version": "1.0.3"
+			},
+			{
+				"name": "esprima",
+				"version": "4.0.1",
+				"size": 314361
+			},
+			{
+				"name": "marked",
+				"version": "1.2.9",
+				"size": 267216
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[3, 4],
+			[2, 5],
+			[0, 6]
+		],
+		"circular": []
+	}
 }

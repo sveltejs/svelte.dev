@@ -13,8 +13,6 @@
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.0.10",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 11896,
 	"downloads_history": [
 		{
 			"range": [1717957800000, 1718562599999],
@@ -192,5 +190,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 198
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-autosize-input",
+				"version": "0.0.10",
+				"size": 11896
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

@@ -13,13 +13,6 @@
 	"version": "1.1.1",
 	"svelte_range": "^3.19.1",
 	"last_rune_check_version": "1.1.1",
-	"dependencies": [
-		{
-			"name": "chroma-js",
-			"semver": "^2.1.0"
-		}
-	],
-	"unpacked_size": 889235,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +326,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 47
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-chroma-picker",
+				"version": "1.1.1",
+				"size": 889235
+			},
+			{
+				"name": "chroma-js",
+				"version": "2.6.0",
+				"size": 309001
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

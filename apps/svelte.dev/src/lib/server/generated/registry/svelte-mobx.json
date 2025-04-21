@@ -13,17 +13,6 @@
 	"version": "1.0.0",
 	"svelte_range": "^3",
 	"last_rune_check_version": "1.0.0",
-	"dependencies": [
-		{
-			"name": "mobx",
-			"semver": "^6"
-		},
-		{
-			"name": "svelte",
-			"semver": "^3"
-		}
-	],
-	"unpacked_size": 4605,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -337,5 +326,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 11
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-mobx",
+				"version": "1.0.0",
+				"size": 4605
+			},
+			{
+				"name": "mobx",
+				"version": "6.13.7",
+				"size": 4334846
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

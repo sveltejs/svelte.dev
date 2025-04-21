@@ -13,45 +13,6 @@
 	"version": "0.2.6",
 	"svelte_range": "^3.29.0",
 	"last_rune_check_version": "0.2.6",
-	"dependencies": [
-		{
-			"name": "@rollup/plugin-commonjs",
-			"semver": "^15.1.0"
-		},
-		{
-			"name": "@rollup/plugin-html",
-			"semver": "^0.2.0"
-		},
-		{
-			"name": "@rollup/plugin-node-resolve",
-			"semver": "^9.0.0"
-		},
-		{
-			"name": "@rollup/plugin-virtual",
-			"semver": "^2.0.3"
-		},
-		{
-			"name": "glob",
-			"semver": "^7.1.6"
-		},
-		{
-			"name": "rollup-plugin-copy",
-			"semver": "^3.3.0"
-		},
-		{
-			"name": "rollup-plugin-css-chunks",
-			"semver": "^1.2.8"
-		},
-		{
-			"name": "rollup-plugin-svelte",
-			"semver": "^6.0.2"
-		},
-		{
-			"name": "rollup-plugin-terser",
-			"semver": "^7.0.2"
-		}
-	],
-	"unpacked_size": 14006,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -269,5 +230,657 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 10
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "rollup-config-sven",
+				"version": "0.2.6",
+				"size": 14006
+			},
+			{
+				"name": "@rollup/plugin-commonjs",
+				"version": "15.1.0",
+				"size": 300373
+			},
+			{
+				"name": "glob",
+				"version": "7.2.3",
+				"size": 55064
+			},
+			{
+				"name": "once",
+				"version": "1.4.0"
+			},
+			{
+				"name": "wrappy",
+				"version": "1.0.2"
+			},
+			{
+				"name": "inflight",
+				"version": "1.0.6"
+			},
+			{
+				"name": "inherits",
+				"version": "2.0.4",
+				"size": 3958
+			},
+			{
+				"name": "minimatch",
+				"version": "3.1.2",
+				"size": 34902
+			},
+			{
+				"name": "brace-expansion",
+				"version": "1.1.11",
+				"size": 11059
+			},
+			{
+				"name": "balanced-match",
+				"version": "1.0.2",
+				"size": 6939
+			},
+			{
+				"name": "concat-map",
+				"version": "0.0.1"
+			},
+			{
+				"name": "fs.realpath",
+				"version": "1.0.0"
+			},
+			{
+				"name": "path-is-absolute",
+				"version": "1.0.1"
+			},
+			{
+				"name": "resolve",
+				"version": "1.22.10",
+				"size": 145619
+			},
+			{
+				"name": "is-core-module",
+				"version": "2.16.1",
+				"size": 33475
+			},
+			{
+				"name": "hasown",
+				"version": "2.0.2",
+				"size": 8765
+			},
+			{
+				"name": "function-bind",
+				"version": "1.1.2",
+				"size": 31427
+			},
+			{
+				"name": "path-parse",
+				"version": "1.0.7",
+				"size": 4511
+			},
+			{
+				"name": "supports-preserve-symlinks-flag",
+				"version": "1.0.0",
+				"size": 9178
+			},
+			{
+				"name": "commondir",
+				"version": "1.0.1"
+			},
+			{
+				"name": "is-reference",
+				"version": "1.2.1",
+				"size": 6374
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "magic-string",
+				"version": "0.25.9",
+				"size": 373056
+			},
+			{
+				"name": "sourcemap-codec",
+				"version": "1.4.8",
+				"size": 31802
+			},
+			{
+				"name": "estree-walker",
+				"version": "2.0.2",
+				"size": 50243
+			},
+			{
+				"name": "@rollup/pluginutils",
+				"version": "3.1.0",
+				"size": 47695
+			},
+			{
+				"name": "picomatch",
+				"version": "2.3.1",
+				"size": 89952
+			},
+			{
+				"name": "@types/estree",
+				"version": "0.0.39",
+				"size": 17818
+			},
+			{
+				"name": "estree-walker",
+				"version": "1.0.1",
+				"size": 15196
+			},
+			{
+				"name": "@rollup/plugin-html",
+				"version": "0.2.4",
+				"size": 15380
+			},
+			{
+				"name": "@rollup/plugin-node-resolve",
+				"version": "9.0.0",
+				"size": 53849
+			},
+			{
+				"name": "deepmerge",
+				"version": "4.3.1",
+				"size": 31157
+			},
+			{
+				"name": "is-module",
+				"version": "1.0.0"
+			},
+			{
+				"name": "@types/resolve",
+				"version": "1.17.1",
+				"size": 7689
+			},
+			{
+				"name": "@types/node",
+				"version": "22.14.1",
+				"size": 2331510
+			},
+			{
+				"name": "undici-types",
+				"version": "6.21.0",
+				"size": 83680
+			},
+			{
+				"name": "builtin-modules",
+				"version": "3.3.0",
+				"size": 4512
+			},
+			{
+				"name": "@rollup/plugin-virtual",
+				"version": "2.1.0",
+				"size": 7272
+			},
+			{
+				"name": "rollup-plugin-copy",
+				"version": "3.5.0",
+				"size": 16580
+			},
+			{
+				"name": "@types/fs-extra",
+				"version": "8.1.5",
+				"size": 23165
+			},
+			{
+				"name": "colorette",
+				"version": "1.4.0",
+				"size": 11316
+			},
+			{
+				"name": "fs-extra",
+				"version": "8.1.0",
+				"size": 127504
+			},
+			{
+				"name": "jsonfile",
+				"version": "4.0.0"
+			},
+			{
+				"name": "graceful-fs",
+				"version": "4.2.11",
+				"size": 32535
+			},
+			{
+				"name": "universalify",
+				"version": "0.1.2",
+				"size": 4705
+			},
+			{
+				"name": "globby",
+				"version": "10.0.1",
+				"size": 21937
+			},
+			{
+				"name": "slash",
+				"version": "3.0.0",
+				"size": 3507
+			},
+			{
+				"name": "ignore",
+				"version": "5.3.2",
+				"size": 53630
+			},
+			{
+				"name": "merge2",
+				"version": "1.4.1",
+				"size": 8897
+			},
+			{
+				"name": "dir-glob",
+				"version": "3.0.1",
+				"size": 5417
+			},
+			{
+				"name": "path-type",
+				"version": "4.0.0",
+				"size": 5407
+			},
+			{
+				"name": "fast-glob",
+				"version": "3.3.3",
+				"size": 98396
+			},
+			{
+				"name": "@nodelib/fs.stat",
+				"version": "2.0.5",
+				"size": 11845
+			},
+			{
+				"name": "@nodelib/fs.walk",
+				"version": "1.2.8",
+				"size": 26377
+			},
+			{
+				"name": "fastq",
+				"version": "1.19.1",
+				"size": 45922
+			},
+			{
+				"name": "reusify",
+				"version": "1.1.0",
+				"size": 11696
+			},
+			{
+				"name": "@nodelib/fs.scandir",
+				"version": "2.1.5",
+				"size": 22155
+			},
+			{
+				"name": "run-parallel",
+				"version": "1.2.0",
+				"size": 6563
+			},
+			{
+				"name": "queue-microtask",
+				"version": "1.2.3",
+				"size": 8367
+			},
+			{
+				"name": "glob-parent",
+				"version": "5.1.2",
+				"size": 12134
+			},
+			{
+				"name": "is-glob",
+				"version": "4.0.3",
+				"size": 13609
+			},
+			{
+				"name": "is-extglob",
+				"version": "2.1.1"
+			},
+			{
+				"name": "micromatch",
+				"version": "4.0.8",
+				"size": 56599
+			},
+			{
+				"name": "braces",
+				"version": "3.0.3",
+				"size": 44635
+			},
+			{
+				"name": "fill-range",
+				"version": "7.1.1",
+				"size": 16743
+			},
+			{
+				"name": "to-regex-range",
+				"version": "5.0.1",
+				"size": 22939
+			},
+			{
+				"name": "is-number",
+				"version": "7.0.0",
+				"size": 9615
+			},
+			{
+				"name": "@types/glob",
+				"version": "7.2.0",
+				"size": 6608
+			},
+			{
+				"name": "@types/minimatch",
+				"version": "5.1.2",
+				"size": 12522
+			},
+			{
+				"name": "array-union",
+				"version": "2.1.0",
+				"size": 3169
+			},
+			{
+				"name": "is-plain-object",
+				"version": "3.0.1",
+				"size": 9457
+			},
+			{
+				"name": "rollup-plugin-css-chunks",
+				"version": "1.2.9",
+				"size": 10634
+			},
+			{
+				"name": "rollup-pluginutils",
+				"version": "2.8.2",
+				"size": 246173
+			},
+			{
+				"name": "estree-walker",
+				"version": "0.6.1",
+				"size": 9526
+			},
+			{
+				"name": "rollup-plugin-svelte",
+				"version": "6.1.1",
+				"size": 24531
+			},
+			{
+				"name": "require-relative",
+				"version": "0.8.7"
+			},
+			{
+				"name": "rollup-plugin-terser",
+				"version": "7.0.2",
+				"size": 8464
+			},
+			{
+				"name": "@babel/code-frame",
+				"version": "7.26.2",
+				"size": 33160
+			},
+			{
+				"name": "js-tokens",
+				"version": "4.0.0"
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "@babel/helper-validator-identifier",
+				"version": "7.25.9",
+				"size": 48330
+			},
+			{
+				"name": "jest-worker",
+				"version": "26.6.2",
+				"size": 66949
+			},
+			{
+				"name": "merge-stream",
+				"version": "2.0.0",
+				"size": 4306
+			},
+			{
+				"name": "supports-color",
+				"version": "7.2.0",
+				"size": 7035
+			},
+			{
+				"name": "has-flag",
+				"version": "4.0.0",
+				"size": 4419
+			},
+			{
+				"name": "serialize-javascript",
+				"version": "4.0.0",
+				"size": 16202
+			},
+			{
+				"name": "randombytes",
+				"version": "2.1.0",
+				"size": 6363
+			},
+			{
+				"name": "safe-buffer",
+				"version": "5.2.1",
+				"size": 32101
+			},
+			{
+				"name": "terser",
+				"version": "5.39.0",
+				"size": 2221569
+			},
+			{
+				"name": "@jridgewell/source-map",
+				"version": "0.3.6",
+				"size": 177363
+			},
+			{
+				"name": "@jridgewell/gen-mapping",
+				"version": "0.3.8",
+				"size": 81596
+			},
+			{
+				"name": "@jridgewell/set-array",
+				"version": "1.2.1",
+				"size": 17945
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "@jridgewell/trace-mapping",
+				"version": "0.3.25",
+				"size": 169330
+			},
+			{
+				"name": "@jridgewell/resolve-uri",
+				"version": "3.1.2",
+				"size": 53153
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "commander",
+				"version": "2.20.3",
+				"size": 62442
+			},
+			{
+				"name": "source-map-support",
+				"version": "0.5.21",
+				"size": 85177
+			},
+			{
+				"name": "buffer-from",
+				"version": "1.1.2",
+				"size": 5047
+			},
+			{
+				"name": "source-map",
+				"version": "0.6.1"
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[3, 4],
+			[2, 5],
+			[5, 3],
+			[3, 4],
+			[5, 4],
+			[2, 6],
+			[2, 7],
+			[7, 8],
+			[8, 9],
+			[8, 10],
+			[2, 11],
+			[2, 12],
+			[1, 13],
+			[13, 14],
+			[14, 15],
+			[15, 16],
+			[13, 17],
+			[13, 18],
+			[1, 19],
+			[1, 20],
+			[20, 21],
+			[1, 22],
+			[22, 23],
+			[1, 24],
+			[1, 25],
+			[25, 26],
+			[25, 27],
+			[25, 28],
+			[0, 29],
+			[0, 30],
+			[30, 13],
+			[13, 14],
+			[14, 15],
+			[15, 16],
+			[13, 17],
+			[13, 18],
+			[30, 31],
+			[30, 32],
+			[30, 33],
+			[33, 34],
+			[34, 35],
+			[30, 36],
+			[30, 25],
+			[25, 26],
+			[25, 27],
+			[25, 28],
+			[0, 37],
+			[0, 2],
+			[2, 3],
+			[3, 4],
+			[2, 5],
+			[5, 3],
+			[3, 4],
+			[5, 4],
+			[2, 6],
+			[2, 7],
+			[7, 8],
+			[8, 9],
+			[8, 10],
+			[2, 11],
+			[2, 12],
+			[0, 38],
+			[38, 39],
+			[39, 34],
+			[34, 35],
+			[38, 40],
+			[38, 41],
+			[41, 42],
+			[41, 43],
+			[41, 44],
+			[38, 45],
+			[45, 2],
+			[2, 3],
+			[3, 4],
+			[2, 5],
+			[5, 3],
+			[3, 4],
+			[5, 4],
+			[2, 6],
+			[2, 7],
+			[7, 8],
+			[8, 9],
+			[8, 10],
+			[2, 11],
+			[2, 12],
+			[45, 46],
+			[45, 47],
+			[45, 48],
+			[45, 49],
+			[49, 50],
+			[45, 51],
+			[51, 52],
+			[51, 53],
+			[53, 54],
+			[54, 55],
+			[53, 56],
+			[56, 57],
+			[57, 58],
+			[56, 52],
+			[51, 59],
+			[59, 60],
+			[60, 61],
+			[51, 48],
+			[51, 62],
+			[62, 63],
+			[63, 64],
+			[64, 65],
+			[65, 66],
+			[62, 26],
+			[45, 67],
+			[67, 68],
+			[67, 34],
+			[34, 35],
+			[45, 69],
+			[38, 70],
+			[0, 71],
+			[71, 72],
+			[72, 73],
+			[71, 23],
+			[0, 74],
+			[74, 75],
+			[74, 72],
+			[72, 73],
+			[74, 23],
+			[0, 76],
+			[76, 77],
+			[77, 78],
+			[77, 79],
+			[77, 80],
+			[76, 81],
+			[81, 34],
+			[34, 35],
+			[81, 82],
+			[81, 83],
+			[83, 84],
+			[76, 85],
+			[85, 86],
+			[86, 87],
+			[76, 88],
+			[88, 89],
+			[89, 90],
+			[90, 91],
+			[90, 92],
+			[90, 93],
+			[93, 94],
+			[93, 92],
+			[89, 93],
+			[93, 94],
+			[93, 92],
+			[88, 95],
+			[88, 96],
+			[88, 97],
+			[97, 98],
+			[97, 99]
+		],
+		"circular": []
+	}
 }

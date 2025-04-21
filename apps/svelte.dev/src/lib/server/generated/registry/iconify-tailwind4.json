@@ -12,17 +12,6 @@
 	"typescript": true,
 	"version": "1.0.6",
 	"last_rune_check_version": "1.0.6",
-	"dependencies": [
-		{
-			"name": "@iconify/types",
-			"semver": "^2.0.0"
-		},
-		{
-			"name": "@iconify/utils",
-			"semver": "^2.2.1"
-		}
-	],
-	"unpacked_size": 18212,
 	"downloads_history": [
 		{
 			"range": [1734892200000, 1735496999999],
@@ -88,5 +77,166 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 3889
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@iconify/tailwind4",
+				"version": "1.0.6",
+				"size": 18212
+			},
+			{
+				"name": "@iconify/types",
+				"version": "2.0.0",
+				"size": 25671
+			},
+			{
+				"name": "@iconify/utils",
+				"version": "2.3.0",
+				"size": 466084
+			},
+			{
+				"name": "@antfu/install-pkg",
+				"version": "1.0.0",
+				"size": 10159
+			},
+			{
+				"name": "package-manager-detector",
+				"version": "0.2.11",
+				"size": 37694
+			},
+			{
+				"name": "quansync",
+				"version": "0.2.10",
+				"size": 23881
+			},
+			{
+				"name": "tinyexec",
+				"version": "0.3.2",
+				"size": 46086
+			},
+			{
+				"name": "@antfu/utils",
+				"version": "8.1.1",
+				"size": 111075
+			},
+			{
+				"name": "debug",
+				"version": "4.4.0",
+				"size": 42798
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "globals",
+				"version": "15.15.0",
+				"size": 177210
+			},
+			{
+				"name": "kolorist",
+				"version": "1.8.0",
+				"size": 51023
+			},
+			{
+				"name": "local-pkg",
+				"version": "1.1.1",
+				"size": 20354
+			},
+			{
+				"name": "mlly",
+				"version": "1.7.4",
+				"size": 232257
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "pathe",
+				"version": "2.0.3",
+				"size": 51332
+			},
+			{
+				"name": "pkg-types",
+				"version": "1.3.1",
+				"size": 74137
+			},
+			{
+				"name": "mlly",
+				"version": "^1.7.4",
+				"isCircular": true,
+				"circularTarget": 17
+			},
+			{
+				"name": "confbox",
+				"version": "0.1.8",
+				"size": 269092
+			},
+			{
+				"name": "ufo",
+				"version": "1.6.1",
+				"size": 104757
+			},
+			{
+				"name": "pkg-types",
+				"version": "2.1.0",
+				"size": 35610
+			},
+			{
+				"name": "confbox",
+				"version": "0.2.2",
+				"size": 134791
+			},
+			{
+				"name": "exsolve",
+				"version": "1.0.5",
+				"size": 59435
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[3, 4],
+			[4, 5],
+			[3, 6],
+			[2, 7],
+			[2, 8],
+			[8, 9],
+			[2, 10],
+			[2, 11],
+			[2, 12],
+			[12, 13],
+			[13, 14],
+			[13, 15],
+			[13, 16],
+			[16, 17],
+			[16, 15],
+			[16, 18],
+			[13, 19],
+			[12, 20],
+			[20, 21],
+			[20, 22],
+			[20, 15],
+			[12, 5],
+			[2, 13],
+			[13, 14],
+			[13, 15],
+			[13, 16],
+			[16, 17],
+			[16, 15],
+			[16, 18],
+			[13, 19],
+			[2, 1]
+		],
+		"circular": [
+			[17, 17],
+			[17, 17]
+		]
+	}
 }

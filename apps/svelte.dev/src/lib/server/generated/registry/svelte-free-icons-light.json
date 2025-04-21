@@ -14,8 +14,6 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "1.0.2",
-	"dependencies": [],
-	"unpacked_size": 12175226,
 	"downloads_history": [
 		{
 			"range": [1741545000000, 1742149799999],
@@ -29,5 +27,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-free-icons-light",
+				"version": "1.0.2",
+				"size": 12175226
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

@@ -12,8 +12,6 @@
 	"svelte_range": "^3.23.2",
 	"last_rune_check_version": "0.2.2",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 97202,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -271,5 +269,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 13
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "ticatec-svelte-datatable",
+				"version": "0.2.2",
+				"size": 97202
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

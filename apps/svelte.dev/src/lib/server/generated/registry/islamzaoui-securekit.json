@@ -12,8 +12,6 @@
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "1.1.0",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 46568,
 	"downloads_history": [
 		{
 			"range": [1727029800000, 1727634599999],
@@ -111,5 +109,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 11
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@islamzaoui/securekit",
+				"version": "1.1.0",
+				"size": 46568
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

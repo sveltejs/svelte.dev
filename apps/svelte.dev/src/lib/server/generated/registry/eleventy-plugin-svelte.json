@@ -13,25 +13,6 @@
 	"version": "1.1.0",
 	"svelte_range": "^3.30.0",
 	"last_rune_check_version": "1.1.0",
-	"dependencies": [
-		{
-			"name": "@rollup/plugin-node-resolve",
-			"semver": "^10.0.0"
-		},
-		{
-			"name": "globby",
-			"semver": "^11.0.1"
-		},
-		{
-			"name": "rollup",
-			"semver": "^2.33.3"
-		},
-		{
-			"name": "svelte",
-			"semver": "^3.30.0"
-		}
-	],
-	"unpacked_size": 14618,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -345,5 +326,271 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 174
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "eleventy-plugin-svelte",
+				"version": "1.1.0",
+				"size": 14618
+			},
+			{
+				"name": "@rollup/plugin-node-resolve",
+				"version": "10.0.0",
+				"size": 54050
+			},
+			{
+				"name": "resolve",
+				"version": "1.22.10",
+				"size": 145619
+			},
+			{
+				"name": "is-core-module",
+				"version": "2.16.1",
+				"size": 33475
+			},
+			{
+				"name": "hasown",
+				"version": "2.0.2",
+				"size": 8765
+			},
+			{
+				"name": "function-bind",
+				"version": "1.1.2",
+				"size": 31427
+			},
+			{
+				"name": "path-parse",
+				"version": "1.0.7",
+				"size": 4511
+			},
+			{
+				"name": "supports-preserve-symlinks-flag",
+				"version": "1.0.0",
+				"size": 9178
+			},
+			{
+				"name": "deepmerge",
+				"version": "4.3.1",
+				"size": 31157
+			},
+			{
+				"name": "is-module",
+				"version": "1.0.0"
+			},
+			{
+				"name": "@types/resolve",
+				"version": "1.17.1",
+				"size": 7689
+			},
+			{
+				"name": "@types/node",
+				"version": "22.14.1",
+				"size": 2331510
+			},
+			{
+				"name": "undici-types",
+				"version": "6.21.0",
+				"size": 83680
+			},
+			{
+				"name": "builtin-modules",
+				"version": "3.3.0",
+				"size": 4512
+			},
+			{
+				"name": "@rollup/pluginutils",
+				"version": "3.1.0",
+				"size": 47695
+			},
+			{
+				"name": "picomatch",
+				"version": "2.3.1",
+				"size": 89952
+			},
+			{
+				"name": "@types/estree",
+				"version": "0.0.39",
+				"size": 17818
+			},
+			{
+				"name": "estree-walker",
+				"version": "1.0.1",
+				"size": 15196
+			},
+			{
+				"name": "globby",
+				"version": "11.1.0",
+				"size": 21758
+			},
+			{
+				"name": "slash",
+				"version": "3.0.0",
+				"size": 3507
+			},
+			{
+				"name": "ignore",
+				"version": "5.3.2",
+				"size": 53630
+			},
+			{
+				"name": "merge2",
+				"version": "1.4.1",
+				"size": 8897
+			},
+			{
+				"name": "dir-glob",
+				"version": "3.0.1",
+				"size": 5417
+			},
+			{
+				"name": "path-type",
+				"version": "4.0.0",
+				"size": 5407
+			},
+			{
+				"name": "fast-glob",
+				"version": "3.3.3",
+				"size": 98396
+			},
+			{
+				"name": "@nodelib/fs.stat",
+				"version": "2.0.5",
+				"size": 11845
+			},
+			{
+				"name": "@nodelib/fs.walk",
+				"version": "1.2.8",
+				"size": 26377
+			},
+			{
+				"name": "fastq",
+				"version": "1.19.1",
+				"size": 45922
+			},
+			{
+				"name": "reusify",
+				"version": "1.1.0",
+				"size": 11696
+			},
+			{
+				"name": "@nodelib/fs.scandir",
+				"version": "2.1.5",
+				"size": 22155
+			},
+			{
+				"name": "run-parallel",
+				"version": "1.2.0",
+				"size": 6563
+			},
+			{
+				"name": "queue-microtask",
+				"version": "1.2.3",
+				"size": 8367
+			},
+			{
+				"name": "glob-parent",
+				"version": "5.1.2",
+				"size": 12134
+			},
+			{
+				"name": "is-glob",
+				"version": "4.0.3",
+				"size": 13609
+			},
+			{
+				"name": "is-extglob",
+				"version": "2.1.1"
+			},
+			{
+				"name": "micromatch",
+				"version": "4.0.8",
+				"size": 56599
+			},
+			{
+				"name": "braces",
+				"version": "3.0.3",
+				"size": 44635
+			},
+			{
+				"name": "fill-range",
+				"version": "7.1.1",
+				"size": 16743
+			},
+			{
+				"name": "to-regex-range",
+				"version": "5.0.1",
+				"size": 22939
+			},
+			{
+				"name": "is-number",
+				"version": "7.0.0",
+				"size": 9615
+			},
+			{
+				"name": "array-union",
+				"version": "2.1.0",
+				"size": 3169
+			},
+			{
+				"name": "rollup",
+				"version": "2.79.2",
+				"size": 6452533
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[3, 4],
+			[4, 5],
+			[2, 6],
+			[2, 7],
+			[1, 8],
+			[1, 9],
+			[1, 10],
+			[10, 11],
+			[11, 12],
+			[1, 13],
+			[1, 14],
+			[14, 15],
+			[14, 16],
+			[14, 17],
+			[0, 18],
+			[18, 19],
+			[18, 20],
+			[18, 21],
+			[18, 22],
+			[22, 23],
+			[18, 24],
+			[24, 25],
+			[24, 26],
+			[26, 27],
+			[27, 28],
+			[26, 29],
+			[29, 30],
+			[30, 31],
+			[29, 25],
+			[24, 32],
+			[32, 33],
+			[33, 34],
+			[24, 21],
+			[24, 35],
+			[35, 36],
+			[36, 37],
+			[37, 38],
+			[38, 39],
+			[35, 15],
+			[18, 40],
+			[0, 41],
+			[0, 42]
+		],
+		"circular": []
+	}
 }

@@ -14,13 +14,6 @@
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
 	"last_rune_check_version": "1.0.3",
-	"dependencies": [
-		{
-			"name": "@floating-ui/dom",
-			"semver": "^0.5.2"
-		}
-	],
-	"unpacked_size": 14355,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -298,5 +291,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 8
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-tooltip-simple",
+				"version": "1.0.3",
+				"size": 14355
+			},
+			{
+				"name": "@floating-ui/dom",
+				"version": "0.5.4",
+				"size": 105070
+			},
+			{
+				"name": "@floating-ui/core",
+				"version": "0.7.3",
+				"size": 180215
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2]
+		],
+		"circular": []
+	}
 }

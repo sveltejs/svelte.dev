@@ -13,21 +13,6 @@
 	"version": "3.5.0",
 	"svelte_range": "^3.44",
 	"last_rune_check_version": "3.5.0",
-	"dependencies": [
-		{
-			"name": "@activewidgets/datagrid",
-			"semver": "3.5.0"
-		},
-		{
-			"name": "@activewidgets/frameworks",
-			"semver": "3.5.0"
-		},
-		{
-			"name": "@activewidgets/ui",
-			"semver": "*"
-		}
-	],
-	"unpacked_size": 16091,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -341,5 +326,42 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 14
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@activewidgets/svelte",
+				"version": "3.5.0",
+				"size": 16091
+			},
+			{
+				"name": "@activewidgets/datagrid",
+				"version": "3.5.0",
+				"size": 559807
+			},
+			{
+				"name": "@activewidgets/frameworks",
+				"version": "3.5.0",
+				"size": 195087
+			},
+			{
+				"name": "@activewidgets/ui",
+				"version": "0.0.2",
+				"size": 22358
+			},
+			{
+				"name": "@activewidgets/theme",
+				"version": "0.0.2",
+				"size": 17147
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[3, 4]
+		],
+		"circular": []
+	}
 }

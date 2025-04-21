@@ -14,17 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.25.0",
 	"last_rune_check_version": "3.1.2",
-	"dependencies": [
-		{
-			"name": "@medusajs/types",
-			"semver": "^1.11.1"
-		},
-		{
-			"name": "sveltekit-superfetch",
-			"semver": "^3.0.2"
-		}
-	],
-	"unpacked_size": 39143,
 	"downloads_history": [
 		{
 			"range": [1701023400000, 1701628199999],
@@ -226,5 +215,42 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@dukerupert/sveltekit-medusa-client",
+				"version": "3.1.2",
+				"size": 39143
+			},
+			{
+				"name": "@medusajs/types",
+				"version": "1.11.17",
+				"size": 1759253
+			},
+			{
+				"name": "sveltekit-superfetch",
+				"version": "3.0.3",
+				"size": 15726
+			},
+			{
+				"name": "nanoid",
+				"version": "5.1.5",
+				"size": 12143
+			},
+			{
+				"name": "@isaacs/ttlcache",
+				"version": "1.4.1",
+				"size": 25201
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[2, 4]
+		],
+		"circular": []
+	}
 }

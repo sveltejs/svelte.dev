@@ -13,21 +13,6 @@
 	"version": "1.0.3",
 	"svelte_range": "^3.55.1",
 	"last_rune_check_version": "1.0.3",
-	"dependencies": [
-		{
-			"name": "find-cache-dir",
-			"semver": "^3.2.0"
-		},
-		{
-			"name": "make-dir",
-			"semver": "^3.1.0"
-		},
-		{
-			"name": "svelte",
-			"semver": "^3.55.1"
-		}
-	],
-	"unpacked_size": 7192,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -213,5 +198,91 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "import-svelte",
+				"version": "1.0.3",
+				"size": 7192
+			},
+			{
+				"name": "find-cache-dir",
+				"version": "3.3.2",
+				"size": 6793
+			},
+			{
+				"name": "pkg-dir",
+				"version": "4.2.0",
+				"size": 4750
+			},
+			{
+				"name": "find-up",
+				"version": "4.1.0",
+				"size": 11611
+			},
+			{
+				"name": "locate-path",
+				"version": "5.0.0",
+				"size": 6584
+			},
+			{
+				"name": "p-locate",
+				"version": "4.1.0",
+				"size": 7285
+			},
+			{
+				"name": "p-limit",
+				"version": "2.3.0",
+				"size": 7390
+			},
+			{
+				"name": "p-try",
+				"version": "2.2.0",
+				"size": 4371
+			},
+			{
+				"name": "path-exists",
+				"version": "4.0.0",
+				"size": 3919
+			},
+			{
+				"name": "make-dir",
+				"version": "3.1.0",
+				"size": 10042
+			},
+			{
+				"name": "semver",
+				"version": "6.3.1",
+				"size": 68343
+			},
+			{
+				"name": "commondir",
+				"version": "1.0.1"
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[3, 4],
+			[4, 5],
+			[5, 6],
+			[6, 7],
+			[3, 8],
+			[1, 9],
+			[9, 10],
+			[1, 11],
+			[0, 9],
+			[9, 10],
+			[0, 12]
+		],
+		"circular": []
+	}
 }

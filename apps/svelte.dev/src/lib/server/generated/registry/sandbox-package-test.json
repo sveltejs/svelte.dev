@@ -13,8 +13,6 @@
 	"kit_range": "^2.20.2",
 	"last_rune_check_version": "0.0.30",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 5102,
 	"downloads_history": [
 		{
 			"range": [1733682600000, 1734287399999],
@@ -84,5 +82,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 85
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "sandbox-package-test",
+				"version": "0.0.30",
+				"size": 5102
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

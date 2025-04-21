@@ -13,17 +13,6 @@
 	"version": "0.6.0",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "0.6.0",
-	"dependencies": [
-		{
-			"name": "siema",
-			"semver": "^1.5.1"
-		},
-		{
-			"name": "svelte-icons",
-			"semver": "^2.1.0"
-		}
-	],
-	"unpacked_size": 10546148,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -277,5 +266,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@apetrisor/nox-ui",
+				"version": "0.6.0",
+				"size": 10546148
+			},
+			{
+				"name": "siema",
+				"version": "1.5.1",
+				"size": 21889
+			},
+			{
+				"name": "svelte-icons",
+				"version": "2.1.0",
+				"size": 10155084
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

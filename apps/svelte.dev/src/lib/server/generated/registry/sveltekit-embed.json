@@ -13,8 +13,6 @@
 	"kit_range": "^2.17.1",
 	"last_rune_check_version": "0.0.20",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 37891,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -328,5 +326,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 970
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "sveltekit-embed",
+				"version": "0.0.20",
+				"size": 37891
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

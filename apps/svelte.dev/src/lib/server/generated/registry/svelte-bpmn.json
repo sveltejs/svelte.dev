@@ -25,13 +25,6 @@
 	"version": "0.1.0",
 	"svelte_range": "^3.41.0",
 	"last_rune_check_version": "0.1.0",
-	"dependencies": [
-		{
-			"name": "bpmn-js",
-			"semver": "^8.7.1"
-		}
-	],
-	"unpacked_size": 345699,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -345,5 +338,163 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 20
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-bpmn",
+				"version": "0.1.0",
+				"size": 345699
+			},
+			{
+				"name": "bpmn-js",
+				"version": "8.10.0",
+				"size": 4129036
+			},
+			{
+				"name": "ids",
+				"version": "1.0.5",
+				"size": 72187
+			},
+			{
+				"name": "min-dom",
+				"version": "3.2.1",
+				"size": 55346
+			},
+			{
+				"name": "domify",
+				"version": "1.4.2",
+				"size": 4174
+			},
+			{
+				"name": "indexof",
+				"version": "0.0.1"
+			},
+			{
+				"name": "min-dash",
+				"version": "3.8.1",
+				"size": 67936
+			},
+			{
+				"name": "component-event",
+				"version": "0.1.4"
+			},
+			{
+				"name": "matches-selector",
+				"version": "1.2.0"
+			},
+			{
+				"name": "inherits",
+				"version": "2.0.4",
+				"size": 3958
+			},
+			{
+				"name": "tiny-svg",
+				"version": "2.2.4",
+				"size": 68172
+			},
+			{
+				"name": "css.escape",
+				"version": "1.5.1"
+			},
+			{
+				"name": "diagram-js",
+				"version": "7.9.0",
+				"size": 663833
+			},
+			{
+				"name": "didi",
+				"version": "5.2.1",
+				"size": 40367
+			},
+			{
+				"name": "hammerjs",
+				"version": "2.0.8"
+			},
+			{
+				"name": "object-refs",
+				"version": "0.3.0",
+				"size": 22555
+			},
+			{
+				"name": "path-intersection",
+				"version": "2.2.1",
+				"size": 30322
+			},
+			{
+				"name": "bpmn-moddle",
+				"version": "7.1.3",
+				"size": 486097
+			},
+			{
+				"name": "moddle",
+				"version": "5.0.4",
+				"size": 83761
+			},
+			{
+				"name": "moddle-xml",
+				"version": "9.0.6",
+				"size": 215542
+			},
+			{
+				"name": "saxen",
+				"version": "8.1.2",
+				"size": 94116
+			},
+			{
+				"name": "diagram-js-direct-editing",
+				"version": "1.8.0",
+				"size": 18379
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[3, 7],
+			[3, 8],
+			[1, 9],
+			[1, 6],
+			[1, 10],
+			[1, 11],
+			[1, 12],
+			[12, 13],
+			[12, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[3, 7],
+			[3, 8],
+			[12, 14],
+			[12, 9],
+			[12, 6],
+			[12, 10],
+			[12, 11],
+			[12, 15],
+			[12, 16],
+			[1, 17],
+			[17, 18],
+			[18, 6],
+			[17, 6],
+			[17, 19],
+			[19, 20],
+			[19, 18],
+			[18, 6],
+			[19, 6],
+			[1, 15],
+			[1, 21],
+			[21, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[3, 7],
+			[3, 8],
+			[21, 6]
+		],
+		"circular": []
+	}
 }

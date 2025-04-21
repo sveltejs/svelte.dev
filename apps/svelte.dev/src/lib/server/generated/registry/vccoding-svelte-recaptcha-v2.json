@@ -13,8 +13,6 @@
 	"version": "0.0.7",
 	"svelte_range": "^3.44.0",
 	"last_rune_check_version": "0.0.7",
-	"dependencies": [],
-	"unpacked_size": 32199,
 	"downloads_history": [
 		{
 			"range": [1711909800000, 1712514599999],
@@ -148,5 +146,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 3
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@vccoding/svelte-recaptcha-v2",
+				"version": "0.0.7",
+				"size": 32199
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

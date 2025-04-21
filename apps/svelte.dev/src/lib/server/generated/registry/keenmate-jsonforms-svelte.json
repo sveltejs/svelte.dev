@@ -13,21 +13,6 @@
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "0.0.3",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "@jsonforms/core",
-			"semver": "^3.5.1"
-		},
-		{
-			"name": "ajv",
-			"semver": "^8.17.1"
-		},
-		{
-			"name": "lodash",
-			"semver": "^4.17.21"
-		}
-	],
-	"unpacked_size": 18172,
 	"downloads_history": [
 		{
 			"range": [1742149800000, 1742754599999],
@@ -45,5 +30,83 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@keenmate/jsonforms-svelte",
+				"version": "0.0.3",
+				"size": 18172
+			},
+			{
+				"name": "@jsonforms/core",
+				"version": "3.5.1",
+				"size": 1098527
+			},
+			{
+				"name": "ajv",
+				"version": "8.17.1",
+				"size": 1030888
+			},
+			{
+				"name": "fast-deep-equal",
+				"version": "3.1.3",
+				"size": 12966
+			},
+			{
+				"name": "fast-uri",
+				"version": "3.0.6",
+				"size": 109402
+			},
+			{
+				"name": "json-schema-traverse",
+				"version": "1.0.0",
+				"size": 22220
+			},
+			{
+				"name": "require-from-string",
+				"version": "2.0.2",
+				"size": 3422
+			},
+			{
+				"name": "lodash",
+				"version": "4.17.21",
+				"size": 1412415
+			},
+			{
+				"name": "ajv-formats",
+				"version": "2.1.1",
+				"size": 52227
+			},
+			{
+				"name": "@types/json-schema",
+				"version": "7.0.15",
+				"size": 31748
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[2, 4],
+			[2, 5],
+			[2, 6],
+			[1, 7],
+			[1, 8],
+			[8, 2],
+			[2, 3],
+			[2, 4],
+			[2, 5],
+			[2, 6],
+			[1, 9],
+			[0, 2],
+			[2, 3],
+			[2, 4],
+			[2, 5],
+			[2, 6],
+			[0, 7]
+		],
+		"circular": []
+	}
 }

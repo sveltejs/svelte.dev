@@ -14,41 +14,6 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.1",
 	"last_rune_check_version": "1.1.2",
-	"dependencies": [
-		{
-			"name": "@animotion/motion",
-			"semver": "^2.0.1"
-		},
-		{
-			"name": "@fontsource/atkinson-hyperlegible",
-			"semver": "^5.1.1"
-		},
-		{
-			"name": "@fontsource/monaspace-neon",
-			"semver": "^5.1.0"
-		},
-		{
-			"name": "@tailwindcss/vite",
-			"semver": "4.0.0"
-		},
-		{
-			"name": "reveal.js",
-			"semver": "5.1.0"
-		},
-		{
-			"name": "shiki",
-			"semver": "^2.1.0"
-		},
-		{
-			"name": "shiki-magic-move",
-			"semver": "^1.0.0"
-		},
-		{
-			"name": "tailwindcss",
-			"semver": "4.0.0"
-		}
-	],
-	"unpacked_size": 33996,
 	"downloads_history": [
 		{
 			"range": [1715538600000, 1716143399999],
@@ -242,5 +207,475 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 33
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@animotion/core",
+				"version": "1.1.2",
+				"size": 33996
+			},
+			{
+				"name": "@animotion/motion",
+				"version": "2.0.1",
+				"size": 8842
+			},
+			{
+				"name": "d3-interpolate",
+				"version": "3.0.1",
+				"size": 69687
+			},
+			{
+				"name": "d3-color",
+				"version": "3.1.0",
+				"size": 61152
+			},
+			{
+				"name": "@fontsource/atkinson-hyperlegible",
+				"version": "5.2.5",
+				"size": 225790
+			},
+			{
+				"name": "@fontsource/monaspace-neon",
+				"version": "5.2.5",
+				"size": 1371334
+			},
+			{
+				"name": "@tailwindcss/vite",
+				"version": "4.0.0",
+				"size": 11154
+			},
+			{
+				"name": "tailwindcss",
+				"version": "4.0.0",
+				"size": 554496
+			},
+			{
+				"name": "lightningcss",
+				"version": "1.29.3",
+				"size": 500181
+			},
+			{
+				"name": "detect-libc",
+				"version": "2.0.3",
+				"size": 23627
+			},
+			{
+				"name": "@tailwindcss/node",
+				"version": "4.1.4",
+				"size": 102619
+			},
+			{
+				"name": "jiti",
+				"version": "2.4.2",
+				"size": 2131809
+			},
+			{
+				"name": "tailwindcss",
+				"version": "4.1.4",
+				"size": 657224
+			},
+			{
+				"name": "lightningcss",
+				"version": "1.29.2",
+				"size": 500013
+			},
+			{
+				"name": "enhanced-resolve",
+				"version": "5.18.1",
+				"size": 213354
+			},
+			{
+				"name": "graceful-fs",
+				"version": "4.2.11",
+				"size": 32535
+			},
+			{
+				"name": "tapable",
+				"version": "2.2.1",
+				"size": 46927
+			},
+			{
+				"name": "@tailwindcss/oxide",
+				"version": "4.1.4",
+				"size": 14125
+			},
+			{
+				"name": "reveal.js",
+				"version": "5.1.0",
+				"size": 5755069
+			},
+			{
+				"name": "shiki",
+				"version": "2.5.0",
+				"size": 649290
+			},
+			{
+				"name": "@types/hast",
+				"version": "3.0.4",
+				"size": 9703
+			},
+			{
+				"name": "@types/unist",
+				"version": "3.0.3",
+				"size": 6262
+			},
+			{
+				"name": "@shikijs/core",
+				"version": "2.5.0",
+				"size": 109444
+			},
+			{
+				"name": "@shikijs/types",
+				"version": "2.5.0",
+				"size": 61315
+			},
+			{
+				"name": "@shikijs/vscode-textmate",
+				"version": "10.0.2",
+				"size": 129126
+			},
+			{
+				"name": "hast-util-to-html",
+				"version": "9.0.5",
+				"size": 71798
+			},
+			{
+				"name": "ccount",
+				"version": "2.0.1",
+				"size": 7344
+			},
+			{
+				"name": "comma-separated-tokens",
+				"version": "2.0.3",
+				"size": 9971
+			},
+			{
+				"name": "hast-util-whitespace",
+				"version": "3.0.0",
+				"size": 11781
+			},
+			{
+				"name": "html-void-elements",
+				"version": "3.0.0",
+				"size": 6899
+			},
+			{
+				"name": "mdast-util-to-hast",
+				"version": "13.2.0",
+				"size": 124715
+			},
+			{
+				"name": "@types/mdast",
+				"version": "4.0.4",
+				"size": 29432
+			},
+			{
+				"name": "@ungap/structured-clone",
+				"version": "1.3.0",
+				"size": 27500
+			},
+			{
+				"name": "devlop",
+				"version": "1.1.0",
+				"size": 22010
+			},
+			{
+				"name": "dequal",
+				"version": "2.0.3",
+				"size": 14229
+			},
+			{
+				"name": "micromark-util-sanitize-uri",
+				"version": "2.0.1",
+				"size": 17917
+			},
+			{
+				"name": "micromark-util-character",
+				"version": "2.1.1",
+				"size": 42421
+			},
+			{
+				"name": "micromark-util-symbol",
+				"version": "2.0.1",
+				"size": 40530
+			},
+			{
+				"name": "micromark-util-types",
+				"version": "2.0.2",
+				"size": 38950
+			},
+			{
+				"name": "micromark-util-encode",
+				"version": "2.0.1",
+				"size": 7971
+			},
+			{
+				"name": "trim-lines",
+				"version": "3.0.1",
+				"size": 7493
+			},
+			{
+				"name": "unist-util-position",
+				"version": "5.0.0",
+				"size": 12779
+			},
+			{
+				"name": "unist-util-visit",
+				"version": "5.0.0",
+				"size": 28480
+			},
+			{
+				"name": "unist-util-is",
+				"version": "6.0.0",
+				"size": 27111
+			},
+			{
+				"name": "unist-util-visit-parents",
+				"version": "6.0.1",
+				"size": 32885
+			},
+			{
+				"name": "vfile",
+				"version": "6.0.3",
+				"size": 121686
+			},
+			{
+				"name": "vfile-message",
+				"version": "4.0.2",
+				"size": 22348
+			},
+			{
+				"name": "unist-util-stringify-position",
+				"version": "4.0.0",
+				"size": 13180
+			},
+			{
+				"name": "property-information",
+				"version": "7.0.0",
+				"size": 116609
+			},
+			{
+				"name": "space-separated-tokens",
+				"version": "2.0.2",
+				"size": 7753
+			},
+			{
+				"name": "stringify-entities",
+				"version": "4.0.4",
+				"size": 23780
+			},
+			{
+				"name": "character-entities-html4",
+				"version": "2.1.0",
+				"size": 11364
+			},
+			{
+				"name": "character-entities-legacy",
+				"version": "3.0.0",
+				"size": 9141
+			},
+			{
+				"name": "zwitch",
+				"version": "2.0.4",
+				"size": 13752
+			},
+			{
+				"name": "@shikijs/engine-oniguruma",
+				"version": "2.5.0",
+				"size": 644380
+			},
+			{
+				"name": "@shikijs/engine-javascript",
+				"version": "2.5.0",
+				"size": 14742
+			},
+			{
+				"name": "oniguruma-to-es",
+				"version": "3.1.1",
+				"size": 1077712
+			},
+			{
+				"name": "regex",
+				"version": "6.0.1",
+				"size": 555301
+			},
+			{
+				"name": "regex-utilities",
+				"version": "2.3.0",
+				"size": 15439
+			},
+			{
+				"name": "emoji-regex-xs",
+				"version": "1.0.0",
+				"size": 7814
+			},
+			{
+				"name": "regex-recursion",
+				"version": "6.0.2",
+				"size": 53810
+			},
+			{
+				"name": "@shikijs/langs",
+				"version": "2.5.0",
+				"size": 7871920
+			},
+			{
+				"name": "@shikijs/themes",
+				"version": "2.5.0",
+				"size": 1202799
+			},
+			{
+				"name": "shiki-magic-move",
+				"version": "1.1.0",
+				"size": 90360
+			},
+			{
+				"name": "diff-match-patch-es",
+				"version": "1.0.1",
+				"size": 146457
+			},
+			{
+				"name": "ohash",
+				"version": "2.0.11",
+				"size": 19934
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[0, 4],
+			[0, 5],
+			[0, 6],
+			[6, 7],
+			[6, 8],
+			[8, 9],
+			[6, 10],
+			[10, 11],
+			[10, 12],
+			[10, 13],
+			[13, 9],
+			[10, 14],
+			[14, 15],
+			[14, 16],
+			[6, 17],
+			[0, 18],
+			[0, 19],
+			[19, 20],
+			[20, 21],
+			[19, 22],
+			[22, 20],
+			[20, 21],
+			[22, 23],
+			[23, 20],
+			[20, 21],
+			[23, 24],
+			[22, 25],
+			[25, 20],
+			[20, 21],
+			[25, 21],
+			[25, 26],
+			[25, 27],
+			[25, 28],
+			[28, 20],
+			[20, 21],
+			[25, 29],
+			[25, 30],
+			[30, 20],
+			[20, 21],
+			[30, 31],
+			[31, 21],
+			[30, 32],
+			[30, 33],
+			[33, 34],
+			[30, 35],
+			[35, 36],
+			[36, 37],
+			[36, 38],
+			[35, 39],
+			[35, 37],
+			[30, 40],
+			[30, 41],
+			[41, 21],
+			[30, 42],
+			[42, 21],
+			[42, 43],
+			[43, 21],
+			[42, 44],
+			[44, 21],
+			[44, 43],
+			[43, 21],
+			[30, 45],
+			[45, 21],
+			[45, 46],
+			[46, 21],
+			[46, 47],
+			[47, 21],
+			[25, 48],
+			[25, 49],
+			[25, 50],
+			[50, 51],
+			[50, 52],
+			[25, 53],
+			[22, 24],
+			[22, 54],
+			[54, 23],
+			[23, 20],
+			[20, 21],
+			[23, 24],
+			[54, 24],
+			[22, 55],
+			[55, 23],
+			[23, 20],
+			[20, 21],
+			[23, 24],
+			[55, 56],
+			[56, 57],
+			[57, 58],
+			[56, 59],
+			[56, 60],
+			[60, 58],
+			[55, 24],
+			[19, 61],
+			[61, 23],
+			[23, 20],
+			[20, 21],
+			[23, 24],
+			[19, 23],
+			[23, 20],
+			[20, 21],
+			[23, 24],
+			[19, 62],
+			[62, 23],
+			[23, 20],
+			[20, 21],
+			[23, 24],
+			[19, 24],
+			[19, 54],
+			[54, 23],
+			[23, 20],
+			[20, 21],
+			[23, 24],
+			[54, 24],
+			[19, 55],
+			[55, 23],
+			[23, 20],
+			[20, 21],
+			[23, 24],
+			[55, 56],
+			[56, 57],
+			[57, 58],
+			[56, 59],
+			[56, 60],
+			[60, 58],
+			[55, 24],
+			[0, 63],
+			[63, 64],
+			[63, 65],
+			[0, 7]
+		],
+		"circular": []
+	}
 }

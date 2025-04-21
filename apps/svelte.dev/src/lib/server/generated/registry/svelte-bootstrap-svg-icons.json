@@ -14,8 +14,6 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.7.3",
 	"last_rune_check_version": "2.0.0",
-	"dependencies": [],
-	"unpacked_size": 4796155,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -329,5 +327,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 2208
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-bootstrap-svg-icons",
+				"version": "2.0.0",
+				"size": 4796155
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

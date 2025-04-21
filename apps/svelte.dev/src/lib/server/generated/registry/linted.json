@@ -13,77 +13,6 @@
 	"version": "28.26.0",
 	"svelte_range": "^5.27.2",
 	"last_rune_check_version": "28.26.0",
-	"dependencies": [
-		{
-			"name": "svelte",
-			"semver": "^5.27.2"
-		},
-		{
-			"name": "@eslint/css",
-			"semver": "0.6.0"
-		},
-		{
-			"name": "@eslinted/core",
-			"semver": "18.5.3"
-		},
-		{
-			"name": "eslint-plugin-yml",
-			"semver": "1.17.0"
-		},
-		{
-			"name": "typescript-eslint",
-			"semver": "8.30.1"
-		},
-		{
-			"name": "@eslinted/defaults",
-			"semver": "10.10.0"
-		},
-		{
-			"name": "yaml-eslint-parser",
-			"semver": "1.3.0"
-		},
-		{
-			"name": "@html-eslint/parser",
-			"semver": "0.39.0"
-		},
-		{
-			"name": "eslint-plugin-jsonc",
-			"semver": "2.20.0"
-		},
-		{
-			"name": "eslint-plugin-mocha",
-			"semver": "10.5.0"
-		},
-		{
-			"name": "jsonc-eslint-parser",
-			"semver": "2.4.0"
-		},
-		{
-			"name": "eslint-plugin-svelte",
-			"semver": "3.5.1"
-		},
-		{
-			"name": "svelte-eslint-parser",
-			"semver": "1.1.2"
-		},
-		{
-			"name": "@stylistic/eslint-plugin",
-			"semver": "4.2.0"
-		},
-		{
-			"name": "eslint-plugin-chai-expect",
-			"semver": "3.1.0"
-		},
-		{
-			"name": "@html-eslint/eslint-plugin",
-			"semver": "0.39.0"
-		},
-		{
-			"name": "eslint-plugin-chai-friendly",
-			"semver": "1.0.1"
-		}
-	],
-	"unpacked_size": 34266,
 	"downloads_history": [
 		{
 			"range": [1719167400000, 1719772199999],
@@ -253,5 +182,1058 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 641
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "linted",
+				"version": "28.26.0",
+				"size": 34266
+			},
+			{
+				"name": "svelte",
+				"version": "5.28.1",
+				"size": 2426419
+			},
+			{
+				"name": "@ampproject/remapping",
+				"version": "2.3.0",
+				"size": 78946
+			},
+			{
+				"name": "@jridgewell/gen-mapping",
+				"version": "0.3.8",
+				"size": 81596
+			},
+			{
+				"name": "@jridgewell/set-array",
+				"version": "1.2.1",
+				"size": 17945
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "@jridgewell/trace-mapping",
+				"version": "0.3.25",
+				"size": 169330
+			},
+			{
+				"name": "@jridgewell/resolve-uri",
+				"version": "3.1.2",
+				"size": 53153
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "@sveltejs/acorn-typescript",
+				"version": "1.0.5",
+				"size": 197476
+			},
+			{
+				"name": "aria-query",
+				"version": "5.3.2",
+				"size": 176114
+			},
+			{
+				"name": "axobject-query",
+				"version": "4.1.0",
+				"size": 110878
+			},
+			{
+				"name": "clsx",
+				"version": "2.1.1",
+				"size": 8555
+			},
+			{
+				"name": "esm-env",
+				"version": "1.2.2",
+				"size": 3784
+			},
+			{
+				"name": "esrap",
+				"version": "1.4.6",
+				"size": 50818
+			},
+			{
+				"name": "is-reference",
+				"version": "3.0.3",
+				"size": 3953
+			},
+			{
+				"name": "locate-character",
+				"version": "3.0.0",
+				"size": 5325
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "zimmerframe",
+				"version": "1.1.2",
+				"size": 12266
+			},
+			{
+				"name": "@eslint/css",
+				"version": "0.6.0",
+				"size": 291655
+			},
+			{
+				"name": "@eslint/core",
+				"version": "0.10.0",
+				"size": 59880
+			},
+			{
+				"name": "@types/json-schema",
+				"version": "7.0.15",
+				"size": 31748
+			},
+			{
+				"name": "@eslint/css-tree",
+				"version": "3.4.0",
+				"size": 1429231
+			},
+			{
+				"name": "mdn-data",
+				"version": "2.20.0",
+				"size": 690704
+			},
+			{
+				"name": "source-map-js",
+				"version": "1.2.1",
+				"size": 139872
+			},
+			{
+				"name": "@eslint/plugin-kit",
+				"version": "0.2.8",
+				"size": 76842
+			},
+			{
+				"name": "@eslint/core",
+				"version": "0.13.0",
+				"size": 64791
+			},
+			{
+				"name": "levn",
+				"version": "0.4.1",
+				"size": 24947
+			},
+			{
+				"name": "prelude-ls",
+				"version": "1.2.1",
+				"size": 36741
+			},
+			{
+				"name": "type-check",
+				"version": "0.4.0",
+				"size": 21167
+			},
+			{
+				"name": "@eslinted/core",
+				"version": "18.5.3",
+				"size": 261799
+			},
+			{
+				"name": "globals",
+				"version": "16.0.0",
+				"size": 187424
+			},
+			{
+				"name": "eslint-plugin-yml",
+				"version": "1.17.0",
+				"size": 287697
+			},
+			{
+				"name": "debug",
+				"version": "4.4.0",
+				"size": 42798
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "escape-string-regexp",
+				"version": "4.0.0",
+				"size": 3790
+			},
+			{
+				"name": "eslint-compat-utils",
+				"version": "0.6.5",
+				"size": 55193
+			},
+			{
+				"name": "semver",
+				"version": "7.7.1",
+				"size": 96674
+			},
+			{
+				"name": "natural-compare",
+				"version": "1.4.0"
+			},
+			{
+				"name": "yaml-eslint-parser",
+				"version": "1.3.0",
+				"size": 91686
+			},
+			{
+				"name": "eslint-visitor-keys",
+				"version": "3.4.3",
+				"size": 32278
+			},
+			{
+				"name": "yaml",
+				"version": "2.7.1",
+				"size": 682531
+			},
+			{
+				"name": "typescript-eslint",
+				"version": "8.30.1",
+				"size": 24036
+			},
+			{
+				"name": "@typescript-eslint/utils",
+				"version": "8.30.1",
+				"size": 267422
+			},
+			{
+				"name": "@typescript-eslint/types",
+				"version": "8.30.1",
+				"size": 171161
+			},
+			{
+				"name": "@eslint-community/eslint-utils",
+				"version": "4.6.1",
+				"size": 476789
+			},
+			{
+				"name": "@typescript-eslint/scope-manager",
+				"version": "8.30.1",
+				"size": 458615
+			},
+			{
+				"name": "@typescript-eslint/visitor-keys",
+				"version": "8.30.1",
+				"size": 13994
+			},
+			{
+				"name": "eslint-visitor-keys",
+				"version": "4.2.0",
+				"size": 36136
+			},
+			{
+				"name": "@typescript-eslint/typescript-estree",
+				"version": "8.30.1",
+				"size": 411782
+			},
+			{
+				"name": "is-glob",
+				"version": "4.0.3",
+				"size": 13609
+			},
+			{
+				"name": "is-extglob",
+				"version": "2.1.1"
+			},
+			{
+				"name": "fast-glob",
+				"version": "3.3.3",
+				"size": 98396
+			},
+			{
+				"name": "@nodelib/fs.stat",
+				"version": "2.0.5",
+				"size": 11845
+			},
+			{
+				"name": "@nodelib/fs.walk",
+				"version": "1.2.8",
+				"size": 26377
+			},
+			{
+				"name": "fastq",
+				"version": "1.19.1",
+				"size": 45922
+			},
+			{
+				"name": "reusify",
+				"version": "1.1.0",
+				"size": 11696
+			},
+			{
+				"name": "@nodelib/fs.scandir",
+				"version": "2.1.5",
+				"size": 22155
+			},
+			{
+				"name": "run-parallel",
+				"version": "1.2.0",
+				"size": 6563
+			},
+			{
+				"name": "queue-microtask",
+				"version": "1.2.3",
+				"size": 8367
+			},
+			{
+				"name": "glob-parent",
+				"version": "5.1.2",
+				"size": 12134
+			},
+			{
+				"name": "merge2",
+				"version": "1.4.1",
+				"size": 8897
+			},
+			{
+				"name": "micromatch",
+				"version": "4.0.8",
+				"size": 56599
+			},
+			{
+				"name": "braces",
+				"version": "3.0.3",
+				"size": 44635
+			},
+			{
+				"name": "fill-range",
+				"version": "7.1.1",
+				"size": 16743
+			},
+			{
+				"name": "to-regex-range",
+				"version": "5.0.1",
+				"size": 22939
+			},
+			{
+				"name": "is-number",
+				"version": "7.0.0",
+				"size": 9615
+			},
+			{
+				"name": "picomatch",
+				"version": "2.3.1",
+				"size": 89952
+			},
+			{
+				"name": "minimatch",
+				"version": "9.0.5",
+				"size": 435003
+			},
+			{
+				"name": "brace-expansion",
+				"version": "2.0.1",
+				"size": 11486
+			},
+			{
+				"name": "balanced-match",
+				"version": "1.0.2",
+				"size": 6939
+			},
+			{
+				"name": "ts-api-utils",
+				"version": "2.1.0",
+				"size": 356154
+			},
+			{
+				"name": "@typescript-eslint/parser",
+				"version": "8.30.1",
+				"size": 14346
+			},
+			{
+				"name": "@typescript-eslint/eslint-plugin",
+				"version": "8.30.1",
+				"size": 2494583
+			},
+			{
+				"name": "ignore",
+				"version": "5.3.2",
+				"size": 53630
+			},
+			{
+				"name": "graphemer",
+				"version": "1.4.0",
+				"size": 811810
+			},
+			{
+				"name": "@eslint-community/regexpp",
+				"version": "4.12.1",
+				"size": 472794
+			},
+			{
+				"name": "@typescript-eslint/type-utils",
+				"version": "8.30.1",
+				"size": 96057
+			},
+			{
+				"name": "@eslinted/defaults",
+				"version": "10.10.0",
+				"size": 522678
+			},
+			{
+				"name": "@html-eslint/parser",
+				"version": "0.39.0",
+				"size": 16174
+			},
+			{
+				"name": "@html-eslint/template-syntax-parser",
+				"version": "0.39.0",
+				"size": 14073
+			},
+			{
+				"name": "es-html-parser",
+				"version": "0.1.1",
+				"size": 141138
+			},
+			{
+				"name": "eslint-plugin-jsonc",
+				"version": "2.20.0",
+				"size": 316482
+			},
+			{
+				"name": "eslint-json-compat-utils",
+				"version": "0.2.1",
+				"size": 54208
+			},
+			{
+				"name": "esquery",
+				"version": "1.6.0",
+				"size": 1037210
+			},
+			{
+				"name": "estraverse",
+				"version": "5.3.0",
+				"size": 37094
+			},
+			{
+				"name": "espree",
+				"version": "10.3.0",
+				"size": 79348
+			},
+			{
+				"name": "acorn-jsx",
+				"version": "5.3.2",
+				"size": 24385
+			},
+			{
+				"name": "jsonc-eslint-parser",
+				"version": "2.4.0",
+				"size": 77838
+			},
+			{
+				"name": "espree",
+				"version": "9.6.1",
+				"size": 73642
+			},
+			{
+				"name": "synckit",
+				"version": "0.10.3",
+				"size": 78902
+			},
+			{
+				"name": "tslib",
+				"version": "2.8.1",
+				"size": 90359
+			},
+			{
+				"name": "@pkgr/core",
+				"version": "0.2.4",
+				"size": 9476
+			},
+			{
+				"name": "eslint-plugin-mocha",
+				"version": "10.5.0",
+				"size": 95792
+			},
+			{
+				"name": "eslint-utils",
+				"version": "3.0.0",
+				"size": 358383
+			},
+			{
+				"name": "eslint-visitor-keys",
+				"version": "2.1.0",
+				"size": 24680
+			},
+			{
+				"name": "globals",
+				"version": "13.24.0",
+				"size": 52113
+			},
+			{
+				"name": "type-fest",
+				"version": "0.20.2",
+				"size": 110590
+			},
+			{
+				"name": "rambda",
+				"version": "7.5.0",
+				"size": 770032
+			},
+			{
+				"name": "eslint-plugin-svelte",
+				"version": "3.5.1",
+				"size": 761285
+			},
+			{
+				"name": "esutils",
+				"version": "2.0.3",
+				"size": 50582
+			},
+			{
+				"name": "known-css-properties",
+				"version": "0.35.0",
+				"size": 37356
+			},
+			{
+				"name": "postcss",
+				"version": "8.5.3",
+				"size": 201969
+			},
+			{
+				"name": "nanoid",
+				"version": "3.3.11",
+				"size": 32583
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "postcss-load-config",
+				"version": "3.1.4",
+				"size": 22743
+			},
+			{
+				"name": "yaml",
+				"version": "1.10.2",
+				"size": 448149
+			},
+			{
+				"name": "lilconfig",
+				"version": "2.1.0",
+				"size": 16587
+			},
+			{
+				"name": "postcss-safe-parser",
+				"version": "7.0.1",
+				"size": 5431
+			},
+			{
+				"name": "svelte-eslint-parser",
+				"version": "1.1.3",
+				"size": 340046
+			},
+			{
+				"name": "eslint-scope",
+				"version": "8.3.0",
+				"size": 155422
+			},
+			{
+				"name": "esrecurse",
+				"version": "4.3.0",
+				"size": 13527
+			},
+			{
+				"name": "postcss-scss",
+				"version": "4.0.9",
+				"size": 19425
+			},
+			{
+				"name": "postcss-selector-parser",
+				"version": "7.1.0",
+				"size": 187187
+			},
+			{
+				"name": "cssesc",
+				"version": "3.0.0",
+				"size": 17488
+			},
+			{
+				"name": "util-deprecate",
+				"version": "1.0.2"
+			},
+			{
+				"name": "svelte-eslint-parser",
+				"version": "1.1.2",
+				"size": 339096
+			},
+			{
+				"name": "@stylistic/eslint-plugin",
+				"version": "4.2.0",
+				"size": 798165
+			},
+			{
+				"name": "picomatch",
+				"version": "4.0.2",
+				"size": 85237
+			},
+			{
+				"name": "eslint-plugin-chai-expect",
+				"version": "3.1.0",
+				"size": 12902
+			},
+			{
+				"name": "@html-eslint/eslint-plugin",
+				"version": "0.39.0",
+				"size": 271139
+			},
+			{
+				"name": "@html-eslint/template-parser",
+				"version": "0.39.0",
+				"size": 19216
+			},
+			{
+				"name": "eslint-plugin-chai-friendly",
+				"version": "1.0.1",
+				"size": 16199
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[6, 7],
+			[6, 5],
+			[2, 6],
+			[6, 7],
+			[6, 5],
+			[1, 5],
+			[1, 8],
+			[1, 9],
+			[1, 10],
+			[1, 11],
+			[1, 12],
+			[1, 13],
+			[1, 14],
+			[1, 15],
+			[15, 5],
+			[1, 16],
+			[16, 8],
+			[1, 17],
+			[1, 18],
+			[18, 5],
+			[1, 19],
+			[0, 20],
+			[20, 21],
+			[21, 22],
+			[20, 23],
+			[23, 24],
+			[23, 25],
+			[20, 26],
+			[26, 27],
+			[27, 22],
+			[26, 28],
+			[28, 29],
+			[28, 30],
+			[30, 29],
+			[0, 31],
+			[31, 32],
+			[0, 33],
+			[33, 34],
+			[34, 35],
+			[33, 36],
+			[33, 37],
+			[37, 38],
+			[33, 39],
+			[33, 40],
+			[40, 41],
+			[40, 42],
+			[0, 43],
+			[43, 44],
+			[44, 45],
+			[44, 46],
+			[46, 41],
+			[44, 47],
+			[47, 45],
+			[47, 48],
+			[48, 49],
+			[48, 45],
+			[44, 50],
+			[50, 34],
+			[34, 35],
+			[50, 38],
+			[50, 51],
+			[51, 52],
+			[50, 53],
+			[53, 54],
+			[53, 55],
+			[55, 56],
+			[56, 57],
+			[55, 58],
+			[58, 59],
+			[59, 60],
+			[58, 54],
+			[53, 61],
+			[61, 51],
+			[51, 52],
+			[53, 62],
+			[53, 63],
+			[63, 64],
+			[64, 65],
+			[65, 66],
+			[66, 67],
+			[63, 68],
+			[50, 69],
+			[69, 70],
+			[70, 71],
+			[50, 72],
+			[50, 45],
+			[50, 48],
+			[48, 49],
+			[48, 45],
+			[43, 73],
+			[73, 34],
+			[34, 35],
+			[73, 45],
+			[73, 48],
+			[48, 49],
+			[48, 45],
+			[73, 47],
+			[47, 45],
+			[47, 48],
+			[48, 49],
+			[48, 45],
+			[73, 50],
+			[50, 34],
+			[34, 35],
+			[50, 38],
+			[50, 51],
+			[51, 52],
+			[50, 53],
+			[53, 54],
+			[53, 55],
+			[55, 56],
+			[56, 57],
+			[55, 58],
+			[58, 59],
+			[59, 60],
+			[58, 54],
+			[53, 61],
+			[61, 51],
+			[51, 52],
+			[53, 62],
+			[53, 63],
+			[63, 64],
+			[64, 65],
+			[65, 66],
+			[66, 67],
+			[63, 68],
+			[50, 69],
+			[69, 70],
+			[70, 71],
+			[50, 72],
+			[50, 45],
+			[50, 48],
+			[48, 49],
+			[48, 45],
+			[43, 74],
+			[74, 75],
+			[74, 76],
+			[74, 72],
+			[74, 39],
+			[74, 44],
+			[44, 45],
+			[44, 46],
+			[46, 41],
+			[44, 47],
+			[47, 45],
+			[47, 48],
+			[48, 49],
+			[48, 45],
+			[44, 50],
+			[50, 34],
+			[34, 35],
+			[50, 38],
+			[50, 51],
+			[51, 52],
+			[50, 53],
+			[53, 54],
+			[53, 55],
+			[55, 56],
+			[56, 57],
+			[55, 58],
+			[58, 59],
+			[59, 60],
+			[58, 54],
+			[53, 61],
+			[61, 51],
+			[51, 52],
+			[53, 62],
+			[53, 63],
+			[63, 64],
+			[64, 65],
+			[65, 66],
+			[66, 67],
+			[63, 68],
+			[50, 69],
+			[69, 70],
+			[70, 71],
+			[50, 72],
+			[50, 45],
+			[50, 48],
+			[48, 49],
+			[48, 45],
+			[74, 77],
+			[74, 78],
+			[78, 34],
+			[34, 35],
+			[78, 72],
+			[78, 44],
+			[44, 45],
+			[44, 46],
+			[46, 41],
+			[44, 47],
+			[47, 45],
+			[47, 48],
+			[48, 49],
+			[48, 45],
+			[44, 50],
+			[50, 34],
+			[34, 35],
+			[50, 38],
+			[50, 51],
+			[51, 52],
+			[50, 53],
+			[53, 54],
+			[53, 55],
+			[55, 56],
+			[56, 57],
+			[55, 58],
+			[58, 59],
+			[59, 60],
+			[58, 54],
+			[53, 61],
+			[61, 51],
+			[51, 52],
+			[53, 62],
+			[53, 63],
+			[63, 64],
+			[64, 65],
+			[65, 66],
+			[66, 67],
+			[63, 68],
+			[50, 69],
+			[69, 70],
+			[70, 71],
+			[50, 72],
+			[50, 45],
+			[50, 48],
+			[48, 49],
+			[48, 45],
+			[78, 50],
+			[50, 34],
+			[34, 35],
+			[50, 38],
+			[50, 51],
+			[51, 52],
+			[50, 53],
+			[53, 54],
+			[53, 55],
+			[55, 56],
+			[56, 57],
+			[55, 58],
+			[58, 59],
+			[59, 60],
+			[58, 54],
+			[53, 61],
+			[61, 51],
+			[51, 52],
+			[53, 62],
+			[53, 63],
+			[63, 64],
+			[64, 65],
+			[65, 66],
+			[66, 67],
+			[63, 68],
+			[50, 69],
+			[69, 70],
+			[70, 71],
+			[50, 72],
+			[50, 45],
+			[50, 48],
+			[48, 49],
+			[48, 45],
+			[74, 48],
+			[48, 49],
+			[48, 45],
+			[74, 47],
+			[47, 45],
+			[47, 48],
+			[48, 49],
+			[48, 45],
+			[0, 79],
+			[0, 40],
+			[40, 41],
+			[40, 42],
+			[0, 80],
+			[80, 81],
+			[80, 82],
+			[0, 83],
+			[83, 46],
+			[46, 41],
+			[83, 37],
+			[37, 38],
+			[83, 84],
+			[84, 85],
+			[85, 86],
+			[83, 87],
+			[87, 9],
+			[87, 88],
+			[87, 49],
+			[83, 76],
+			[83, 89],
+			[89, 9],
+			[89, 41],
+			[89, 90],
+			[90, 9],
+			[90, 88],
+			[90, 41],
+			[89, 38],
+			[83, 39],
+			[83, 91],
+			[91, 92],
+			[91, 93],
+			[0, 94],
+			[94, 95],
+			[95, 96],
+			[94, 97],
+			[97, 98],
+			[94, 99],
+			[0, 89],
+			[89, 9],
+			[89, 41],
+			[89, 90],
+			[90, 9],
+			[90, 88],
+			[90, 41],
+			[89, 38],
+			[0, 100],
+			[100, 46],
+			[46, 41],
+			[100, 5],
+			[100, 101],
+			[100, 102],
+			[100, 103],
+			[103, 104],
+			[103, 105],
+			[103, 25],
+			[100, 106],
+			[106, 107],
+			[106, 108],
+			[100, 109],
+			[100, 38],
+			[100, 110],
+			[110, 111],
+			[111, 112],
+			[112, 86],
+			[111, 86],
+			[110, 49],
+			[110, 87],
+			[87, 9],
+			[87, 88],
+			[87, 49],
+			[110, 103],
+			[103, 104],
+			[103, 105],
+			[103, 25],
+			[110, 113],
+			[110, 114],
+			[114, 115],
+			[114, 116],
+			[0, 117],
+			[117, 87],
+			[87, 9],
+			[87, 88],
+			[87, 49],
+			[117, 103],
+			[103, 104],
+			[103, 105],
+			[103, 25],
+			[117, 111],
+			[111, 112],
+			[112, 86],
+			[111, 86],
+			[117, 113],
+			[117, 49],
+			[117, 114],
+			[114, 115],
+			[114, 116],
+			[0, 118],
+			[118, 44],
+			[44, 45],
+			[44, 46],
+			[46, 41],
+			[44, 47],
+			[47, 45],
+			[47, 48],
+			[48, 49],
+			[48, 45],
+			[44, 50],
+			[50, 34],
+			[34, 35],
+			[50, 38],
+			[50, 51],
+			[51, 52],
+			[50, 53],
+			[53, 54],
+			[53, 55],
+			[55, 56],
+			[56, 57],
+			[55, 58],
+			[58, 59],
+			[59, 60],
+			[58, 54],
+			[53, 61],
+			[61, 51],
+			[51, 52],
+			[53, 62],
+			[53, 63],
+			[63, 64],
+			[64, 65],
+			[65, 66],
+			[66, 67],
+			[63, 68],
+			[50, 69],
+			[69, 70],
+			[70, 71],
+			[50, 72],
+			[50, 45],
+			[50, 48],
+			[48, 49],
+			[48, 45],
+			[118, 49],
+			[118, 87],
+			[87, 9],
+			[87, 88],
+			[87, 49],
+			[118, 86],
+			[118, 119],
+			[0, 120],
+			[0, 121],
+			[121, 122],
+			[122, 82],
+			[121, 81],
+			[0, 123]
+		],
+		"circular": []
+	}
 }

@@ -12,8 +12,6 @@
 	"svelte_range": "^4.2.19",
 	"last_rune_check_version": "1.0.5",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 71967,
 	"downloads_history": [
 		{
 			"range": [1727634600000, 1728239399999],
@@ -115,5 +113,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-flex-slider",
+				"version": "1.0.5",
+				"size": 71967
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

@@ -13,13 +13,6 @@
 	"version": "1.0.0-alpha.7",
 	"svelte_range": "^3.20.1",
 	"last_rune_check_version": "1.0.0-alpha.7",
-	"dependencies": [
-		{
-			"name": "svelte-css-vars",
-			"semver": "0.0.1"
-		}
-	],
-	"unpacked_size": 1520407,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -293,5 +286,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@colorfuldots/svelteit",
+				"version": "1.0.0-alpha.7",
+				"size": 1520407
+			},
+			{
+				"name": "svelte-css-vars",
+				"version": "0.0.1",
+				"size": 2752
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

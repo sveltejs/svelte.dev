@@ -13,17 +13,6 @@
 	"version": "6.1.2",
 	"svelte_range": "^5.0.0-next.0",
 	"last_rune_check_version": "6.1.2",
-	"dependencies": [
-		{
-			"name": "multi-path-matcher",
-			"semver": "^4.1.1"
-		},
-		{
-			"name": "svelte-dnd-action",
-			"semver": "^0.9.47"
-		}
-	],
-	"unpacked_size": 57004,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -337,5 +326,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 462
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-guard-history-router",
+				"version": "6.1.2",
+				"size": 57004
+			},
+			{
+				"name": "multi-path-matcher",
+				"version": "4.1.2",
+				"size": 14172
+			},
+			{
+				"name": "svelte-dnd-action",
+				"version": "0.9.60",
+				"size": 330948
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

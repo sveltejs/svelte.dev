@@ -14,13 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.0.9",
-	"dependencies": [
-		{
-			"name": "swipe-core-provider",
-			"semver": "^1.0.9"
-		}
-	],
-	"unpacked_size": 12943,
 	"downloads_history": [
 		{
 			"range": [1702233000000, 1702837799999],
@@ -226,5 +219,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-custom-swipe",
+				"version": "0.0.9",
+				"size": 12943
+			},
+			{
+				"name": "swipe-core-provider",
+				"version": "1.0.10",
+				"size": 13132
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

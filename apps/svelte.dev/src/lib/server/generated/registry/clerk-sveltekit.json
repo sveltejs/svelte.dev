@@ -14,17 +14,6 @@
 	"svelte_range": "^4.0.0||^5.0.0",
 	"kit_range": "^1.25.1||^2.0.2",
 	"last_rune_check_version": "0.4.2",
-	"dependencies": [
-		{
-			"name": "@clerk/backend",
-			"semver": "^0.32.1"
-		},
-		{
-			"name": "@clerk/clerk-js",
-			"semver": "^4.61.0"
-		}
-	],
-	"unpacked_size": 36853,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -338,5 +327,1039 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 278
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "clerk-sveltekit",
+				"version": "0.4.2",
+				"size": 36853
+			},
+			{
+				"name": "@clerk/backend",
+				"version": "0.32.1",
+				"size": 762436
+			},
+			{
+				"name": "tslib",
+				"version": "2.4.1",
+				"size": 52789
+			},
+			{
+				"name": "cookie",
+				"version": "0.5.0",
+				"size": 23137
+			},
+			{
+				"name": "deepmerge",
+				"version": "4.2.2",
+				"size": 30093
+			},
+			{
+				"name": "@types/node",
+				"version": "16.18.6",
+				"size": 3422735
+			},
+			{
+				"name": "@clerk/types",
+				"version": "3.57.0",
+				"size": 331095
+			},
+			{
+				"name": "csstype",
+				"version": "3.1.1",
+				"size": 1185259
+			},
+			{
+				"name": "@clerk/shared",
+				"version": "1.0.1",
+				"size": 544707
+			},
+			{
+				"name": "swr",
+				"version": "2.2.0",
+				"size": 262895
+			},
+			{
+				"name": "use-sync-external-store",
+				"version": "1.5.0",
+				"size": 28186
+			},
+			{
+				"name": "js-cookie",
+				"version": "3.0.1",
+				"size": 27400
+			},
+			{
+				"name": "glob-to-regexp",
+				"version": "0.4.1",
+				"size": 18100
+			},
+			{
+				"name": "snakecase-keys",
+				"version": "5.4.4",
+				"size": 6547
+			},
+			{
+				"name": "map-obj",
+				"version": "4.3.0",
+				"size": 9492
+			},
+			{
+				"name": "snake-case",
+				"version": "3.0.4",
+				"size": 10360
+			},
+			{
+				"name": "dot-case",
+				"version": "3.0.4",
+				"size": 10481
+			},
+			{
+				"name": "no-case",
+				"version": "3.0.4",
+				"size": 25128
+			},
+			{
+				"name": "lower-case",
+				"version": "2.0.2",
+				"size": 17661
+			},
+			{
+				"name": "tslib",
+				"version": "2.8.1",
+				"size": 90359
+			},
+			{
+				"name": "type-fest",
+				"version": "2.19.0",
+				"size": 201534
+			},
+			{
+				"name": "node-fetch-native",
+				"version": "1.0.1",
+				"size": 629206
+			},
+			{
+				"name": "@peculiar/webcrypto",
+				"version": "1.4.1",
+				"size": 194826
+			},
+			{
+				"name": "pvtsutils",
+				"version": "1.3.6",
+				"size": 40763
+			},
+			{
+				"name": "webcrypto-core",
+				"version": "1.8.1",
+				"size": 164653
+			},
+			{
+				"name": "@peculiar/asn1-schema",
+				"version": "2.3.15",
+				"size": 93075
+			},
+			{
+				"name": "asn1js",
+				"version": "3.0.6",
+				"size": 282853
+			},
+			{
+				"name": "pvutils",
+				"version": "1.1.3",
+				"size": 32094
+			},
+			{
+				"name": "@peculiar/json-schema",
+				"version": "1.1.12",
+				"size": 51918
+			},
+			{
+				"name": "@clerk/clerk-js",
+				"version": "4.73.14",
+				"size": 6304739
+			},
+			{
+				"name": "qs",
+				"version": "6.11.0",
+				"size": 229455
+			},
+			{
+				"name": "side-channel",
+				"version": "1.1.0",
+				"size": 21545
+			},
+			{
+				"name": "es-errors",
+				"version": "1.3.0",
+				"size": 12324
+			},
+			{
+				"name": "object-inspect",
+				"version": "1.13.4",
+				"size": 102920
+			},
+			{
+				"name": "side-channel-list",
+				"version": "1.0.0",
+				"size": 14741
+			},
+			{
+				"name": "side-channel-map",
+				"version": "1.0.1",
+				"size": 13348
+			},
+			{
+				"name": "call-bound",
+				"version": "1.0.4",
+				"size": 17106
+			},
+			{
+				"name": "call-bind-apply-helpers",
+				"version": "1.0.2",
+				"size": 15952
+			},
+			{
+				"name": "function-bind",
+				"version": "1.1.2",
+				"size": 31427
+			},
+			{
+				"name": "get-intrinsic",
+				"version": "1.3.0",
+				"size": 46542
+			},
+			{
+				"name": "es-define-property",
+				"version": "1.0.1",
+				"size": 10217
+			},
+			{
+				"name": "es-object-atoms",
+				"version": "1.1.1",
+				"size": 11442
+			},
+			{
+				"name": "get-proto",
+				"version": "1.0.1",
+				"size": 10840
+			},
+			{
+				"name": "dunder-proto",
+				"version": "1.0.1",
+				"size": 13003
+			},
+			{
+				"name": "gopd",
+				"version": "1.2.0",
+				"size": 9869
+			},
+			{
+				"name": "has-symbols",
+				"version": "1.1.0",
+				"size": 23409
+			},
+			{
+				"name": "hasown",
+				"version": "2.0.2",
+				"size": 8765
+			},
+			{
+				"name": "math-intrinsics",
+				"version": "1.1.0",
+				"size": 17323
+			},
+			{
+				"name": "side-channel-weakmap",
+				"version": "1.0.2",
+				"size": 14667
+			},
+			{
+				"name": "dequal",
+				"version": "2.0.3",
+				"size": 14229
+			},
+			{
+				"name": "core-js",
+				"version": "3.26.1",
+				"size": 1031342
+			},
+			{
+				"name": "@clerk/types",
+				"version": "3.65.5",
+				"size": 335859
+			},
+			{
+				"name": "qrcode.react",
+				"version": "3.1.0",
+				"size": 72319
+			},
+			{
+				"name": "@clerk/shared",
+				"version": "1.4.2",
+				"size": 580294
+			},
+			{
+				"name": "@emotion/cache",
+				"version": "11.11.0",
+				"size": 129544
+			},
+			{
+				"name": "stylis",
+				"version": "4.2.0",
+				"size": 134152
+			},
+			{
+				"name": "@emotion/sheet",
+				"version": "1.4.0",
+				"size": 29483
+			},
+			{
+				"name": "@emotion/utils",
+				"version": "1.4.2",
+				"size": 19952
+			},
+			{
+				"name": "@emotion/memoize",
+				"version": "0.8.1",
+				"size": 4290
+			},
+			{
+				"name": "@emotion/weak-memoize",
+				"version": "0.3.1",
+				"size": 6076
+			},
+			{
+				"name": "@emotion/react",
+				"version": "11.11.1",
+				"size": 583635
+			},
+			{
+				"name": "@babel/runtime",
+				"version": "7.27.0",
+				"size": 249798
+			},
+			{
+				"name": "regenerator-runtime",
+				"version": "0.14.1",
+				"size": 27863
+			},
+			{
+				"name": "@emotion/cache",
+				"version": "11.14.0",
+				"size": 244106
+			},
+			{
+				"name": "@emotion/memoize",
+				"version": "0.9.0",
+				"size": 4009
+			},
+			{
+				"name": "@emotion/weak-memoize",
+				"version": "0.4.0",
+				"size": 5807
+			},
+			{
+				"name": "@emotion/serialize",
+				"version": "1.3.3",
+				"size": 52736
+			},
+			{
+				"name": "@emotion/hash",
+				"version": "0.9.2",
+				"size": 9928
+			},
+			{
+				"name": "@emotion/unitless",
+				"version": "0.10.0",
+				"size": 6026
+			},
+			{
+				"name": "csstype",
+				"version": "3.1.3",
+				"size": 1246074
+			},
+			{
+				"name": "@emotion/babel-plugin",
+				"version": "11.13.5",
+				"size": 152334
+			},
+			{
+				"name": "@babel/helper-module-imports",
+				"version": "7.25.9",
+				"size": 63714
+			},
+			{
+				"name": "@babel/types",
+				"version": "7.27.0",
+				"size": 2583295
+			},
+			{
+				"name": "@babel/helper-string-parser",
+				"version": "7.25.9",
+				"size": 31816
+			},
+			{
+				"name": "@babel/helper-validator-identifier",
+				"version": "7.25.9",
+				"size": 48330
+			},
+			{
+				"name": "@babel/traverse",
+				"version": "7.27.0",
+				"size": 676526
+			},
+			{
+				"name": "@babel/code-frame",
+				"version": "7.26.2",
+				"size": 33160
+			},
+			{
+				"name": "js-tokens",
+				"version": "4.0.0"
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "@babel/generator",
+				"version": "7.27.0",
+				"size": 559855
+			},
+			{
+				"name": "@babel/parser",
+				"version": "7.27.0",
+				"size": 1924962
+			},
+			{
+				"name": "@jridgewell/gen-mapping",
+				"version": "0.3.8",
+				"size": 81596
+			},
+			{
+				"name": "@jridgewell/set-array",
+				"version": "1.2.1",
+				"size": 17945
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "@jridgewell/trace-mapping",
+				"version": "0.3.25",
+				"size": 169330
+			},
+			{
+				"name": "@jridgewell/resolve-uri",
+				"version": "3.1.2",
+				"size": 53153
+			},
+			{
+				"name": "jsesc",
+				"version": "3.1.0",
+				"size": 32280
+			},
+			{
+				"name": "@babel/template",
+				"version": "7.27.0",
+				"size": 70675
+			},
+			{
+				"name": "debug",
+				"version": "4.4.0",
+				"size": 42798
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "globals",
+				"version": "11.12.0",
+				"size": 39779
+			},
+			{
+				"name": "babel-plugin-macros",
+				"version": "3.1.0",
+				"size": 37983
+			},
+			{
+				"name": "cosmiconfig",
+				"version": "7.1.0",
+				"size": 92011
+			},
+			{
+				"name": "@types/parse-json",
+				"version": "4.0.2",
+				"size": 2946
+			},
+			{
+				"name": "import-fresh",
+				"version": "3.3.1",
+				"size": 4693
+			},
+			{
+				"name": "parent-module",
+				"version": "1.0.1",
+				"size": 3922
+			},
+			{
+				"name": "callsites",
+				"version": "3.1.0",
+				"size": 6332
+			},
+			{
+				"name": "resolve-from",
+				"version": "4.0.0"
+			},
+			{
+				"name": "parse-json",
+				"version": "5.2.0",
+				"size": 5409
+			},
+			{
+				"name": "error-ex",
+				"version": "1.3.2",
+				"size": 9035
+			},
+			{
+				"name": "is-arrayish",
+				"version": "0.2.1"
+			},
+			{
+				"name": "lines-and-columns",
+				"version": "1.2.4",
+				"size": 5386
+			},
+			{
+				"name": "json-parse-even-better-errors",
+				"version": "2.3.1",
+				"size": 10426
+			},
+			{
+				"name": "path-type",
+				"version": "4.0.0",
+				"size": 5407
+			},
+			{
+				"name": "yaml",
+				"version": "1.10.2",
+				"size": 448149
+			},
+			{
+				"name": "resolve",
+				"version": "1.22.10",
+				"size": 145619
+			},
+			{
+				"name": "is-core-module",
+				"version": "2.16.1",
+				"size": 33475
+			},
+			{
+				"name": "path-parse",
+				"version": "1.0.7",
+				"size": 4511
+			},
+			{
+				"name": "supports-preserve-symlinks-flag",
+				"version": "1.0.0",
+				"size": 9178
+			},
+			{
+				"name": "convert-source-map",
+				"version": "1.9.0",
+				"size": 11434
+			},
+			{
+				"name": "escape-string-regexp",
+				"version": "4.0.0",
+				"size": 3790
+			},
+			{
+				"name": "find-root",
+				"version": "1.1.0"
+			},
+			{
+				"name": "source-map",
+				"version": "0.5.7"
+			},
+			{
+				"name": "hoist-non-react-statics",
+				"version": "3.3.2",
+				"size": 38855
+			},
+			{
+				"name": "react-is",
+				"version": "16.13.1",
+				"size": 23954
+			},
+			{
+				"name": "@emotion/use-insertion-effect-with-fallbacks",
+				"version": "1.2.0",
+				"size": 10941
+			},
+			{
+				"name": "@zxcvbn-ts/core",
+				"version": "3.0.4",
+				"size": 1110345
+			},
+			{
+				"name": "fastest-levenshtein",
+				"version": "1.0.16",
+				"size": 21281
+			},
+			{
+				"name": "browser-tabs-lock",
+				"version": "1.2.15",
+				"size": 32276
+			},
+			{
+				"name": "lodash",
+				"version": "4.17.21",
+				"size": 1412415
+			},
+			{
+				"name": "copy-to-clipboard",
+				"version": "3.3.3",
+				"size": 15135
+			},
+			{
+				"name": "toggle-selection",
+				"version": "1.0.6"
+			},
+			{
+				"name": "@floating-ui/react",
+				"version": "0.25.4",
+				"size": 602933
+			},
+			{
+				"name": "tabbable",
+				"version": "6.2.0",
+				"size": 411841
+			},
+			{
+				"name": "@floating-ui/utils",
+				"version": "0.1.6",
+				"size": 52683
+			},
+			{
+				"name": "@floating-ui/react-dom",
+				"version": "2.1.2",
+				"size": 61480
+			},
+			{
+				"name": "@floating-ui/dom",
+				"version": "1.6.13",
+				"size": 165945
+			},
+			{
+				"name": "@floating-ui/core",
+				"version": "1.6.9",
+				"size": 212585
+			},
+			{
+				"name": "@floating-ui/utils",
+				"version": "0.2.9",
+				"size": 64926
+			},
+			{
+				"name": "regenerator-runtime",
+				"version": "0.13.11",
+				"size": 27759
+			},
+			{
+				"name": "@clerk/localizations",
+				"version": "1.28.10",
+				"size": 4047569
+			},
+			{
+				"name": "@zxcvbn-ts/language-common",
+				"version": "3.0.4",
+				"size": 2461221
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[1, 4],
+			[1, 5],
+			[1, 6],
+			[6, 7],
+			[1, 8],
+			[8, 9],
+			[9, 10],
+			[8, 11],
+			[8, 12],
+			[1, 13],
+			[13, 14],
+			[13, 15],
+			[15, 16],
+			[16, 17],
+			[17, 18],
+			[18, 19],
+			[17, 19],
+			[16, 19],
+			[15, 19],
+			[13, 20],
+			[1, 21],
+			[1, 22],
+			[22, 19],
+			[22, 23],
+			[23, 19],
+			[22, 24],
+			[24, 25],
+			[25, 26],
+			[26, 23],
+			[23, 19],
+			[26, 27],
+			[26, 19],
+			[25, 23],
+			[23, 19],
+			[25, 19],
+			[24, 28],
+			[28, 19],
+			[24, 26],
+			[26, 23],
+			[23, 19],
+			[26, 27],
+			[26, 19],
+			[24, 23],
+			[23, 19],
+			[24, 19],
+			[22, 25],
+			[25, 26],
+			[26, 23],
+			[23, 19],
+			[26, 27],
+			[26, 19],
+			[25, 23],
+			[23, 19],
+			[25, 19],
+			[22, 28],
+			[28, 19],
+			[0, 29],
+			[29, 30],
+			[30, 31],
+			[31, 32],
+			[31, 33],
+			[31, 34],
+			[34, 32],
+			[34, 33],
+			[31, 35],
+			[35, 36],
+			[36, 37],
+			[37, 32],
+			[37, 38],
+			[36, 39],
+			[39, 37],
+			[37, 32],
+			[37, 38],
+			[39, 40],
+			[39, 32],
+			[39, 41],
+			[41, 32],
+			[39, 38],
+			[39, 42],
+			[42, 43],
+			[43, 37],
+			[37, 32],
+			[37, 38],
+			[43, 32],
+			[43, 44],
+			[42, 41],
+			[41, 32],
+			[39, 44],
+			[39, 45],
+			[39, 46],
+			[46, 38],
+			[39, 47],
+			[35, 32],
+			[35, 39],
+			[39, 37],
+			[37, 32],
+			[37, 38],
+			[39, 40],
+			[39, 32],
+			[39, 41],
+			[41, 32],
+			[39, 38],
+			[39, 42],
+			[42, 43],
+			[43, 37],
+			[37, 32],
+			[37, 38],
+			[43, 32],
+			[43, 44],
+			[42, 41],
+			[41, 32],
+			[39, 44],
+			[39, 45],
+			[39, 46],
+			[46, 38],
+			[39, 47],
+			[35, 33],
+			[31, 48],
+			[48, 36],
+			[36, 37],
+			[37, 32],
+			[37, 38],
+			[36, 39],
+			[39, 37],
+			[37, 32],
+			[37, 38],
+			[39, 40],
+			[39, 32],
+			[39, 41],
+			[41, 32],
+			[39, 38],
+			[39, 42],
+			[42, 43],
+			[43, 37],
+			[37, 32],
+			[37, 38],
+			[43, 32],
+			[43, 44],
+			[42, 41],
+			[41, 32],
+			[39, 44],
+			[39, 45],
+			[39, 46],
+			[46, 38],
+			[39, 47],
+			[48, 32],
+			[48, 39],
+			[39, 37],
+			[37, 32],
+			[37, 38],
+			[39, 40],
+			[39, 32],
+			[39, 41],
+			[41, 32],
+			[39, 38],
+			[39, 42],
+			[42, 43],
+			[43, 37],
+			[37, 32],
+			[37, 38],
+			[43, 32],
+			[43, 44],
+			[42, 41],
+			[41, 32],
+			[39, 44],
+			[39, 45],
+			[39, 46],
+			[46, 38],
+			[39, 47],
+			[48, 33],
+			[48, 35],
+			[35, 36],
+			[36, 37],
+			[37, 32],
+			[37, 38],
+			[36, 39],
+			[39, 37],
+			[37, 32],
+			[37, 38],
+			[39, 40],
+			[39, 32],
+			[39, 41],
+			[41, 32],
+			[39, 38],
+			[39, 42],
+			[42, 43],
+			[43, 37],
+			[37, 32],
+			[37, 38],
+			[43, 32],
+			[43, 44],
+			[42, 41],
+			[41, 32],
+			[39, 44],
+			[39, 45],
+			[39, 46],
+			[46, 38],
+			[39, 47],
+			[35, 32],
+			[35, 39],
+			[39, 37],
+			[37, 32],
+			[37, 38],
+			[39, 40],
+			[39, 32],
+			[39, 41],
+			[41, 32],
+			[39, 38],
+			[39, 42],
+			[42, 43],
+			[43, 37],
+			[37, 32],
+			[37, 38],
+			[43, 32],
+			[43, 44],
+			[42, 41],
+			[41, 32],
+			[39, 44],
+			[39, 45],
+			[39, 46],
+			[46, 38],
+			[39, 47],
+			[35, 33],
+			[29, 49],
+			[29, 50],
+			[29, 51],
+			[51, 7],
+			[29, 52],
+			[29, 53],
+			[53, 9],
+			[9, 10],
+			[53, 11],
+			[53, 12],
+			[29, 54],
+			[54, 55],
+			[54, 56],
+			[54, 57],
+			[54, 58],
+			[54, 59],
+			[29, 60],
+			[60, 61],
+			[61, 62],
+			[60, 63],
+			[63, 64],
+			[63, 56],
+			[63, 57],
+			[63, 65],
+			[63, 55],
+			[60, 57],
+			[60, 66],
+			[66, 67],
+			[66, 64],
+			[66, 68],
+			[66, 57],
+			[66, 69],
+			[60, 70],
+			[70, 71],
+			[71, 72],
+			[72, 73],
+			[72, 74],
+			[71, 75],
+			[75, 76],
+			[76, 77],
+			[76, 78],
+			[76, 74],
+			[75, 79],
+			[79, 80],
+			[80, 72],
+			[72, 73],
+			[72, 74],
+			[79, 72],
+			[72, 73],
+			[72, 74],
+			[79, 81],
+			[81, 82],
+			[81, 83],
+			[81, 84],
+			[84, 85],
+			[84, 83],
+			[79, 84],
+			[84, 85],
+			[84, 83],
+			[79, 86],
+			[75, 80],
+			[80, 72],
+			[72, 73],
+			[72, 74],
+			[75, 87],
+			[87, 76],
+			[76, 77],
+			[76, 78],
+			[76, 74],
+			[87, 80],
+			[80, 72],
+			[72, 73],
+			[72, 74],
+			[87, 72],
+			[72, 73],
+			[72, 74],
+			[75, 72],
+			[72, 73],
+			[72, 74],
+			[75, 88],
+			[88, 89],
+			[75, 90],
+			[70, 61],
+			[61, 62],
+			[70, 67],
+			[70, 64],
+			[70, 66],
+			[66, 67],
+			[66, 64],
+			[66, 68],
+			[66, 57],
+			[66, 69],
+			[70, 91],
+			[91, 61],
+			[61, 62],
+			[91, 92],
+			[92, 93],
+			[92, 94],
+			[94, 95],
+			[95, 96],
+			[94, 97],
+			[92, 98],
+			[98, 99],
+			[99, 100],
+			[98, 76],
+			[76, 77],
+			[76, 78],
+			[76, 74],
+			[98, 101],
+			[98, 102],
+			[92, 103],
+			[92, 104],
+			[91, 105],
+			[105, 106],
+			[106, 46],
+			[46, 38],
+			[105, 107],
+			[105, 108],
+			[70, 109],
+			[70, 110],
+			[70, 111],
+			[70, 112],
+			[70, 55],
+			[60, 59],
+			[60, 113],
+			[113, 114],
+			[60, 115],
+			[29, 116],
+			[116, 117],
+			[29, 118],
+			[118, 119],
+			[29, 120],
+			[120, 121],
+			[29, 122],
+			[122, 123],
+			[122, 124],
+			[122, 125],
+			[125, 126],
+			[126, 127],
+			[127, 128],
+			[126, 128],
+			[29, 129],
+			[29, 130],
+			[130, 51],
+			[51, 7],
+			[29, 131]
+		],
+		"circular": []
+	}
 }

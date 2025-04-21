@@ -14,17 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.5.2",
 	"last_rune_check_version": "0.1.6",
-	"dependencies": [
-		{
-			"name": "rvfc-polyfill",
-			"semver": "^1.0.7"
-		},
-		{
-			"name": "barcode-detector",
-			"semver": "^2.2.4"
-		}
-	],
-	"unpacked_size": 19839,
 	"downloads_history": [
 		{
 			"range": [1705861800000, 1706466599999],
@@ -274,5 +263,48 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 9
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-barcode-scanner",
+				"version": "0.1.6",
+				"size": 19839
+			},
+			{
+				"name": "rvfc-polyfill",
+				"version": "1.0.7",
+				"size": 39692
+			},
+			{
+				"name": "barcode-detector",
+				"version": "2.3.1",
+				"size": 262014
+			},
+			{
+				"name": "zxing-wasm",
+				"version": "1.3.4",
+				"size": 2972785
+			},
+			{
+				"name": "@types/emscripten",
+				"version": "1.40.1",
+				"size": 19399
+			},
+			{
+				"name": "@types/dom-webcodecs",
+				"version": "0.1.11",
+				"size": 19493
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[3, 4],
+			[2, 5]
+		],
+		"circular": []
+	}
 }

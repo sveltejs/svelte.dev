@@ -14,53 +14,6 @@
 	"svelte_range": "^5",
 	"kit_range": "^2.20.5",
 	"last_rune_check_version": "0.150.1",
-	"dependencies": [
-		{
-			"name": "@ryanatkn/belt",
-			"semver": "^0.30.2"
-		},
-		{
-			"name": "chokidar",
-			"semver": "^4.0.3"
-		},
-		{
-			"name": "dotenv",
-			"semver": "^16.5.0"
-		},
-		{
-			"name": "esm-env",
-			"semver": "^1.2.2"
-		},
-		{
-			"name": "mri",
-			"semver": "^1.2.0"
-		},
-		{
-			"name": "oxc-parser",
-			"semver": "^0.63.0"
-		},
-		{
-			"name": "prettier",
-			"semver": "^3.5.3"
-		},
-		{
-			"name": "prettier-plugin-svelte",
-			"semver": "^3.3.3"
-		},
-		{
-			"name": "ts-morph",
-			"semver": "^25.0.1"
-		},
-		{
-			"name": "tslib",
-			"semver": "^2.8.1"
-		},
-		{
-			"name": "zod",
-			"semver": "^3.24.2"
-		}
-	],
-	"unpacked_size": 825010,
 	"downloads_history": [
 		{
 			"range": [1707676200000, 1708280999999],
@@ -306,5 +259,240 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 272
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@ryanatkn/gro",
+				"version": "0.150.1",
+				"size": 825010
+			},
+			{
+				"name": "@ryanatkn/belt",
+				"version": "0.30.2",
+				"size": 203146
+			},
+			{
+				"name": "chokidar",
+				"version": "4.0.3",
+				"size": 148759
+			},
+			{
+				"name": "readdirp",
+				"version": "4.1.2",
+				"size": 36127
+			},
+			{
+				"name": "dotenv",
+				"version": "16.5.0",
+				"size": 75565
+			},
+			{
+				"name": "esm-env",
+				"version": "1.2.2",
+				"size": 3784
+			},
+			{
+				"name": "mri",
+				"version": "1.2.0",
+				"size": 13261
+			},
+			{
+				"name": "oxc-parser",
+				"version": "0.63.0",
+				"size": 345103
+			},
+			{
+				"name": "@oxc-project/types",
+				"version": "0.63.0",
+				"size": 43888
+			},
+			{
+				"name": "prettier",
+				"version": "3.5.3",
+				"size": 7876465
+			},
+			{
+				"name": "prettier-plugin-svelte",
+				"version": "3.3.3",
+				"size": 1503936
+			},
+			{
+				"name": "ts-morph",
+				"version": "25.0.1",
+				"size": 1427243
+			},
+			{
+				"name": "@ts-morph/common",
+				"version": "0.26.1",
+				"size": 11609929
+			},
+			{
+				"name": "minimatch",
+				"version": "9.0.5",
+				"size": 435003
+			},
+			{
+				"name": "brace-expansion",
+				"version": "2.0.1",
+				"size": 11486
+			},
+			{
+				"name": "balanced-match",
+				"version": "1.0.2",
+				"size": 6939
+			},
+			{
+				"name": "path-browserify",
+				"version": "1.0.1",
+				"size": 54293
+			},
+			{
+				"name": "fast-glob",
+				"version": "3.3.3",
+				"size": 98396
+			},
+			{
+				"name": "@nodelib/fs.stat",
+				"version": "2.0.5",
+				"size": 11845
+			},
+			{
+				"name": "@nodelib/fs.walk",
+				"version": "1.2.8",
+				"size": 26377
+			},
+			{
+				"name": "fastq",
+				"version": "1.19.1",
+				"size": 45922
+			},
+			{
+				"name": "reusify",
+				"version": "1.1.0",
+				"size": 11696
+			},
+			{
+				"name": "@nodelib/fs.scandir",
+				"version": "2.1.5",
+				"size": 22155
+			},
+			{
+				"name": "run-parallel",
+				"version": "1.2.0",
+				"size": 6563
+			},
+			{
+				"name": "queue-microtask",
+				"version": "1.2.3",
+				"size": 8367
+			},
+			{
+				"name": "glob-parent",
+				"version": "5.1.2",
+				"size": 12134
+			},
+			{
+				"name": "is-glob",
+				"version": "4.0.3",
+				"size": 13609
+			},
+			{
+				"name": "is-extglob",
+				"version": "2.1.1"
+			},
+			{
+				"name": "merge2",
+				"version": "1.4.1",
+				"size": 8897
+			},
+			{
+				"name": "micromatch",
+				"version": "4.0.8",
+				"size": 56599
+			},
+			{
+				"name": "braces",
+				"version": "3.0.3",
+				"size": 44635
+			},
+			{
+				"name": "fill-range",
+				"version": "7.1.1",
+				"size": 16743
+			},
+			{
+				"name": "to-regex-range",
+				"version": "5.0.1",
+				"size": 22939
+			},
+			{
+				"name": "is-number",
+				"version": "7.0.0",
+				"size": 9615
+			},
+			{
+				"name": "picomatch",
+				"version": "2.3.1",
+				"size": 89952
+			},
+			{
+				"name": "code-block-writer",
+				"version": "13.0.3",
+				"size": 115202
+			},
+			{
+				"name": "tslib",
+				"version": "2.8.1",
+				"size": 90359
+			},
+			{
+				"name": "zod",
+				"version": "3.24.3",
+				"size": 697771
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[0, 4],
+			[0, 5],
+			[0, 6],
+			[0, 7],
+			[7, 8],
+			[0, 9],
+			[0, 10],
+			[0, 11],
+			[11, 12],
+			[12, 13],
+			[13, 14],
+			[14, 15],
+			[12, 16],
+			[12, 17],
+			[17, 18],
+			[17, 19],
+			[19, 20],
+			[20, 21],
+			[19, 22],
+			[22, 23],
+			[23, 24],
+			[22, 18],
+			[17, 25],
+			[25, 26],
+			[26, 27],
+			[17, 28],
+			[17, 29],
+			[29, 30],
+			[30, 31],
+			[31, 32],
+			[32, 33],
+			[29, 34],
+			[11, 35],
+			[0, 36],
+			[0, 37]
+		],
+		"circular": []
+	}
 }

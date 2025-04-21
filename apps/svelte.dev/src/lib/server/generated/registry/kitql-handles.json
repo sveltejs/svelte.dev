@@ -14,21 +14,6 @@
 	"svelte_range": "^3.54.0 || ^4.0.0 || ^5.0.0",
 	"kit_range": "^2.4.0",
 	"last_rune_check_version": "0.2.4",
-	"dependencies": [
-		{
-			"name": "vary",
-			"semver": "^1.1.2"
-		},
-		{
-			"name": "esm-env",
-			"semver": "^1.0.0"
-		},
-		{
-			"name": "@kitql/helpers",
-			"semver": "0.8.12"
-		}
-	],
-	"unpacked_size": 46489,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -342,5 +327,36 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 154
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@kitql/handles",
+				"version": "0.2.4",
+				"size": 46489
+			},
+			{
+				"name": "vary",
+				"version": "1.1.2"
+			},
+			{
+				"name": "esm-env",
+				"version": "1.2.2",
+				"size": 3784
+			},
+			{
+				"name": "@kitql/helpers",
+				"version": "0.8.12",
+				"size": 113333
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[3, 2]
+		],
+		"circular": []
+	}
 }

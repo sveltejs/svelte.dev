@@ -13,8 +13,6 @@
 	"version": "3.6.3",
 	"kit_range": "^1.27.0",
 	"last_rune_check_version": "3.6.3",
-	"dependencies": [],
-	"unpacked_size": 28327,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -328,5 +326,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 3625
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "trpc-sveltekit",
+				"version": "3.6.3",
+				"size": 28327
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

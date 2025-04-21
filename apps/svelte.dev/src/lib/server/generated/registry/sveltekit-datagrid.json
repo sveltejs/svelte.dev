@@ -13,45 +13,6 @@
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "0.0.3",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "@sveltejs/adapter-node",
-			"semver": "^5.2.12"
-		},
-		{
-			"name": "@tailwindcss/vite",
-			"semver": "^4.0.14"
-		},
-		{
-			"name": "@types/pdfmake",
-			"semver": "^0.2.11"
-		},
-		{
-			"name": "docx",
-			"semver": "^9.3.0"
-		},
-		{
-			"name": "jspdf",
-			"semver": "^2.5.2"
-		},
-		{
-			"name": "jspdf-autotable",
-			"semver": "^3.8.4"
-		},
-		{
-			"name": "lucide-svelte",
-			"semver": "^0.482.0"
-		},
-		{
-			"name": "pdfmake",
-			"semver": "^0.2.18"
-		},
-		{
-			"name": "xlsx",
-			"semver": "^0.18.5"
-		}
-	],
-	"unpacked_size": 148456,
 	"downloads_history": [
 		{
 			"range": [1742149800000, 1742754599999],
@@ -69,5 +30,978 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 10
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "sveltekit-datagrid",
+				"version": "0.0.3",
+				"size": 148456
+			},
+			{
+				"name": "@sveltejs/adapter-node",
+				"version": "5.2.12",
+				"size": 55122
+			},
+			{
+				"name": "@rollup/plugin-commonjs",
+				"version": "28.0.3",
+				"size": 263273
+			},
+			{
+				"name": "@rollup/pluginutils",
+				"version": "5.1.4",
+				"size": 58354
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "estree-walker",
+				"version": "2.0.2",
+				"size": 50243
+			},
+			{
+				"name": "picomatch",
+				"version": "4.0.2",
+				"size": 85237
+			},
+			{
+				"name": "commondir",
+				"version": "1.0.1"
+			},
+			{
+				"name": "fdir",
+				"version": "6.4.4",
+				"size": 45593
+			},
+			{
+				"name": "is-reference",
+				"version": "1.2.1",
+				"size": 6374
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "@rollup/plugin-json",
+				"version": "6.1.0",
+				"size": 10683
+			},
+			{
+				"name": "@rollup/plugin-node-resolve",
+				"version": "16.0.1",
+				"size": 155994
+			},
+			{
+				"name": "@types/resolve",
+				"version": "1.20.2",
+				"size": 9885
+			},
+			{
+				"name": "deepmerge",
+				"version": "4.3.1",
+				"size": 31157
+			},
+			{
+				"name": "is-module",
+				"version": "1.0.0"
+			},
+			{
+				"name": "resolve",
+				"version": "1.22.10",
+				"size": 145619
+			},
+			{
+				"name": "is-core-module",
+				"version": "2.16.1",
+				"size": 33475
+			},
+			{
+				"name": "hasown",
+				"version": "2.0.2",
+				"size": 8765
+			},
+			{
+				"name": "function-bind",
+				"version": "1.1.2",
+				"size": 31427
+			},
+			{
+				"name": "path-parse",
+				"version": "1.0.7",
+				"size": 4511
+			},
+			{
+				"name": "supports-preserve-symlinks-flag",
+				"version": "1.0.0",
+				"size": 9178
+			},
+			{
+				"name": "rollup",
+				"version": "4.40.0",
+				"size": 2726316
+			},
+			{
+				"name": "@tailwindcss/vite",
+				"version": "4.1.4",
+				"size": 9343
+			},
+			{
+				"name": "tailwindcss",
+				"version": "4.1.4",
+				"size": 657224
+			},
+			{
+				"name": "@tailwindcss/node",
+				"version": "4.1.4",
+				"size": 102619
+			},
+			{
+				"name": "jiti",
+				"version": "2.4.2",
+				"size": 2131809
+			},
+			{
+				"name": "lightningcss",
+				"version": "1.29.2",
+				"size": 500013
+			},
+			{
+				"name": "detect-libc",
+				"version": "2.0.3",
+				"size": 23627
+			},
+			{
+				"name": "enhanced-resolve",
+				"version": "5.18.1",
+				"size": 213354
+			},
+			{
+				"name": "graceful-fs",
+				"version": "4.2.11",
+				"size": 32535
+			},
+			{
+				"name": "tapable",
+				"version": "2.2.1",
+				"size": 46927
+			},
+			{
+				"name": "@tailwindcss/oxide",
+				"version": "4.1.4",
+				"size": 14125
+			},
+			{
+				"name": "@types/pdfmake",
+				"version": "0.2.11",
+				"size": 69318
+			},
+			{
+				"name": "@types/node",
+				"version": "22.14.1",
+				"size": 2331510
+			},
+			{
+				"name": "undici-types",
+				"version": "6.21.0",
+				"size": 83680
+			},
+			{
+				"name": "@types/pdfkit",
+				"version": "0.13.9",
+				"size": 32856
+			},
+			{
+				"name": "docx",
+				"version": "9.4.1",
+				"size": 3324795
+			},
+			{
+				"name": "hash.js",
+				"version": "1.1.7",
+				"size": 41697
+			},
+			{
+				"name": "inherits",
+				"version": "2.0.4",
+				"size": 3958
+			},
+			{
+				"name": "minimalistic-assert",
+				"version": "1.0.1",
+				"size": 1547
+			},
+			{
+				"name": "jszip",
+				"version": "3.10.1",
+				"size": 762000
+			},
+			{
+				"name": "lie",
+				"version": "3.3.0",
+				"size": 59145
+			},
+			{
+				"name": "immediate",
+				"version": "3.0.6"
+			},
+			{
+				"name": "pako",
+				"version": "1.0.11",
+				"size": 788283
+			},
+			{
+				"name": "setimmediate",
+				"version": "1.0.5"
+			},
+			{
+				"name": "readable-stream",
+				"version": "2.3.8",
+				"size": 88115
+			},
+			{
+				"name": "isarray",
+				"version": "1.0.0"
+			},
+			{
+				"name": "safe-buffer",
+				"version": "5.1.2",
+				"size": 31686
+			},
+			{
+				"name": "core-util-is",
+				"version": "1.0.3",
+				"size": 4982
+			},
+			{
+				"name": "string_decoder",
+				"version": "1.1.1",
+				"size": 15298
+			},
+			{
+				"name": "util-deprecate",
+				"version": "1.0.2"
+			},
+			{
+				"name": "process-nextick-args",
+				"version": "2.0.1",
+				"size": 3175
+			},
+			{
+				"name": "nanoid",
+				"version": "5.1.5",
+				"size": 12143
+			},
+			{
+				"name": "xml",
+				"version": "1.0.1"
+			},
+			{
+				"name": "xml-js",
+				"version": "1.6.11",
+				"size": 420551
+			},
+			{
+				"name": "sax",
+				"version": "1.4.1",
+				"size": 56017
+			},
+			{
+				"name": "jspdf",
+				"version": "2.5.2",
+				"size": 14798108
+			},
+			{
+				"name": "atob",
+				"version": "2.1.2",
+				"size": 36200
+			},
+			{
+				"name": "btoa",
+				"version": "1.2.1",
+				"size": 32050
+			},
+			{
+				"name": "fflate",
+				"version": "0.8.2",
+				"size": 773398
+			},
+			{
+				"name": "@babel/runtime",
+				"version": "7.27.0",
+				"size": 249798
+			},
+			{
+				"name": "regenerator-runtime",
+				"version": "0.14.1",
+				"size": 27863
+			},
+			{
+				"name": "jspdf-autotable",
+				"version": "3.8.4",
+				"size": 253477
+			},
+			{
+				"name": "lucide-svelte",
+				"version": "0.482.0",
+				"size": 12005612
+			},
+			{
+				"name": "pdfmake",
+				"version": "0.2.18",
+				"size": 13542457
+			},
+			{
+				"name": "xmldoc",
+				"version": "1.3.0",
+				"size": 41386
+			},
+			{
+				"name": "iconv-lite",
+				"version": "0.6.3",
+				"size": 348518
+			},
+			{
+				"name": "safer-buffer",
+				"version": "2.1.2",
+				"size": 42299
+			},
+			{
+				"name": "@foliojs-fork/pdfkit",
+				"version": "0.15.3",
+				"size": 1953742
+			},
+			{
+				"name": "crypto-js",
+				"version": "4.2.0",
+				"size": 486947
+			},
+			{
+				"name": "@foliojs-fork/fontkit",
+				"version": "1.9.2",
+				"size": 3432411
+			},
+			{
+				"name": "brotli",
+				"version": "1.3.3",
+				"size": 1503586
+			},
+			{
+				"name": "base64-js",
+				"version": "1.5.1",
+				"size": 9624
+			},
+			{
+				"name": "clone",
+				"version": "1.0.4",
+				"size": 11132
+			},
+			{
+				"name": "deep-equal",
+				"version": "1.1.2",
+				"size": 75315
+			},
+			{
+				"name": "is-arguments",
+				"version": "1.2.0",
+				"size": 32731
+			},
+			{
+				"name": "call-bound",
+				"version": "1.0.4",
+				"size": 17106
+			},
+			{
+				"name": "call-bind-apply-helpers",
+				"version": "1.0.2",
+				"size": 15952
+			},
+			{
+				"name": "es-errors",
+				"version": "1.3.0",
+				"size": 12324
+			},
+			{
+				"name": "get-intrinsic",
+				"version": "1.3.0",
+				"size": 46542
+			},
+			{
+				"name": "es-define-property",
+				"version": "1.0.1",
+				"size": 10217
+			},
+			{
+				"name": "es-object-atoms",
+				"version": "1.1.1",
+				"size": 11442
+			},
+			{
+				"name": "get-proto",
+				"version": "1.0.1",
+				"size": 10840
+			},
+			{
+				"name": "dunder-proto",
+				"version": "1.0.1",
+				"size": 13003
+			},
+			{
+				"name": "gopd",
+				"version": "1.2.0",
+				"size": 9869
+			},
+			{
+				"name": "has-symbols",
+				"version": "1.1.0",
+				"size": 23409
+			},
+			{
+				"name": "math-intrinsics",
+				"version": "1.1.0",
+				"size": 17323
+			},
+			{
+				"name": "has-tostringtag",
+				"version": "1.0.2",
+				"size": 17603
+			},
+			{
+				"name": "is-date-object",
+				"version": "1.1.0",
+				"size": 24172
+			},
+			{
+				"name": "is-regex",
+				"version": "1.2.1",
+				"size": 35732
+			},
+			{
+				"name": "object-is",
+				"version": "1.1.6",
+				"size": 27025
+			},
+			{
+				"name": "call-bind",
+				"version": "1.0.8",
+				"size": 22902
+			},
+			{
+				"name": "set-function-length",
+				"version": "1.2.2",
+				"size": 14747
+			},
+			{
+				"name": "define-data-property",
+				"version": "1.1.4",
+				"size": 30851
+			},
+			{
+				"name": "has-property-descriptors",
+				"version": "1.0.2",
+				"size": 10911
+			},
+			{
+				"name": "define-properties",
+				"version": "1.2.1",
+				"size": 12890
+			},
+			{
+				"name": "object-keys",
+				"version": "1.1.1",
+				"size": 26544
+			},
+			{
+				"name": "regexp.prototype.flags",
+				"version": "1.5.4",
+				"size": 44310
+			},
+			{
+				"name": "set-function-name",
+				"version": "2.0.2",
+				"size": 16720
+			},
+			{
+				"name": "functions-have-names",
+				"version": "1.2.3",
+				"size": 16715
+			},
+			{
+				"name": "dfa",
+				"version": "1.2.0",
+				"size": 137726
+			},
+			{
+				"name": "@foliojs-fork/restructure",
+				"version": "2.0.2",
+				"size": 118461
+			},
+			{
+				"name": "tiny-inflate",
+				"version": "1.0.3",
+				"size": 43000
+			},
+			{
+				"name": "unicode-properties",
+				"version": "1.4.1",
+				"size": 76299
+			},
+			{
+				"name": "unicode-trie",
+				"version": "2.0.0",
+				"size": 48887
+			},
+			{
+				"name": "pako",
+				"version": "0.2.9"
+			},
+			{
+				"name": "@foliojs-fork/linebreak",
+				"version": "1.1.2",
+				"size": 1121538
+			},
+			{
+				"name": "base64-js",
+				"version": "1.3.1",
+				"size": 9181
+			},
+			{
+				"name": "jpeg-exif",
+				"version": "1.1.4",
+				"size": 920251
+			},
+			{
+				"name": "png-js",
+				"version": "1.0.0",
+				"size": 3114151
+			},
+			{
+				"name": "xlsx",
+				"version": "0.18.5",
+				"size": 7499035
+			},
+			{
+				"name": "cfb",
+				"version": "1.2.2",
+				"size": 370889
+			},
+			{
+				"name": "adler-32",
+				"version": "1.3.1",
+				"size": 20386
+			},
+			{
+				"name": "crc-32",
+				"version": "1.2.2",
+				"size": 31044
+			},
+			{
+				"name": "ssf",
+				"version": "0.11.2",
+				"size": 97727
+			},
+			{
+				"name": "frac",
+				"version": "1.1.2",
+				"size": 12095
+			},
+			{
+				"name": "wmf",
+				"version": "1.0.2",
+				"size": 318283
+			},
+			{
+				"name": "word",
+				"version": "0.3.0",
+				"size": 14085
+			},
+			{
+				"name": "codepage",
+				"version": "1.15.0",
+				"size": 5676274
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[2, 7],
+			[2, 5],
+			[2, 8],
+			[2, 9],
+			[9, 4],
+			[2, 10],
+			[10, 11],
+			[2, 6],
+			[1, 12],
+			[12, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[1, 13],
+			[13, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[13, 14],
+			[13, 15],
+			[13, 16],
+			[13, 17],
+			[17, 18],
+			[18, 19],
+			[19, 20],
+			[17, 21],
+			[17, 22],
+			[1, 23],
+			[23, 4],
+			[0, 24],
+			[24, 25],
+			[24, 26],
+			[26, 27],
+			[26, 25],
+			[26, 28],
+			[28, 29],
+			[26, 30],
+			[30, 31],
+			[30, 32],
+			[24, 33],
+			[0, 34],
+			[34, 35],
+			[35, 36],
+			[34, 37],
+			[37, 35],
+			[35, 36],
+			[0, 38],
+			[38, 35],
+			[35, 36],
+			[38, 39],
+			[39, 40],
+			[39, 41],
+			[38, 42],
+			[42, 43],
+			[43, 44],
+			[42, 45],
+			[42, 46],
+			[42, 47],
+			[47, 48],
+			[47, 40],
+			[47, 49],
+			[47, 50],
+			[47, 51],
+			[51, 49],
+			[47, 52],
+			[47, 53],
+			[38, 54],
+			[38, 55],
+			[38, 56],
+			[56, 57],
+			[0, 58],
+			[58, 59],
+			[58, 60],
+			[58, 61],
+			[58, 62],
+			[62, 63],
+			[0, 64],
+			[0, 65],
+			[0, 66],
+			[66, 67],
+			[67, 57],
+			[66, 68],
+			[68, 69],
+			[66, 70],
+			[70, 71],
+			[70, 72],
+			[72, 73],
+			[73, 74],
+			[72, 75],
+			[72, 76],
+			[76, 77],
+			[77, 78],
+			[78, 79],
+			[79, 80],
+			[79, 20],
+			[78, 81],
+			[81, 79],
+			[79, 80],
+			[79, 20],
+			[81, 82],
+			[81, 80],
+			[81, 83],
+			[83, 80],
+			[81, 20],
+			[81, 84],
+			[84, 85],
+			[85, 79],
+			[85, 80],
+			[85, 86],
+			[84, 83],
+			[83, 80],
+			[81, 86],
+			[81, 87],
+			[81, 19],
+			[19, 20],
+			[81, 88],
+			[77, 89],
+			[89, 87],
+			[76, 90],
+			[90, 78],
+			[78, 79],
+			[79, 80],
+			[79, 20],
+			[78, 81],
+			[81, 79],
+			[79, 80],
+			[79, 20],
+			[81, 82],
+			[81, 80],
+			[81, 83],
+			[83, 80],
+			[81, 20],
+			[81, 84],
+			[84, 85],
+			[85, 79],
+			[85, 80],
+			[85, 86],
+			[84, 83],
+			[83, 80],
+			[81, 86],
+			[81, 87],
+			[81, 19],
+			[19, 20],
+			[81, 88],
+			[90, 89],
+			[89, 87],
+			[76, 91],
+			[91, 78],
+			[78, 79],
+			[79, 80],
+			[79, 20],
+			[78, 81],
+			[81, 79],
+			[79, 80],
+			[79, 20],
+			[81, 82],
+			[81, 80],
+			[81, 83],
+			[83, 80],
+			[81, 20],
+			[81, 84],
+			[84, 85],
+			[85, 79],
+			[85, 80],
+			[85, 86],
+			[84, 83],
+			[83, 80],
+			[81, 86],
+			[81, 87],
+			[81, 19],
+			[19, 20],
+			[81, 88],
+			[91, 86],
+			[91, 89],
+			[89, 87],
+			[91, 19],
+			[19, 20],
+			[76, 92],
+			[92, 93],
+			[93, 79],
+			[79, 80],
+			[79, 20],
+			[93, 82],
+			[93, 81],
+			[81, 79],
+			[79, 80],
+			[79, 20],
+			[81, 82],
+			[81, 80],
+			[81, 83],
+			[83, 80],
+			[81, 20],
+			[81, 84],
+			[84, 85],
+			[85, 79],
+			[85, 80],
+			[85, 86],
+			[84, 83],
+			[83, 80],
+			[81, 86],
+			[81, 87],
+			[81, 19],
+			[19, 20],
+			[81, 88],
+			[93, 94],
+			[94, 95],
+			[95, 82],
+			[95, 80],
+			[95, 86],
+			[94, 80],
+			[94, 20],
+			[94, 81],
+			[81, 79],
+			[79, 80],
+			[79, 20],
+			[81, 82],
+			[81, 80],
+			[81, 83],
+			[83, 80],
+			[81, 20],
+			[81, 84],
+			[84, 85],
+			[85, 79],
+			[85, 80],
+			[85, 86],
+			[84, 83],
+			[83, 80],
+			[81, 86],
+			[81, 87],
+			[81, 19],
+			[19, 20],
+			[81, 88],
+			[94, 86],
+			[94, 96],
+			[96, 82],
+			[92, 97],
+			[97, 95],
+			[95, 82],
+			[95, 80],
+			[95, 86],
+			[97, 96],
+			[96, 82],
+			[97, 98],
+			[76, 98],
+			[76, 99],
+			[99, 93],
+			[93, 79],
+			[79, 80],
+			[79, 20],
+			[93, 82],
+			[93, 81],
+			[81, 79],
+			[79, 80],
+			[79, 20],
+			[81, 82],
+			[81, 80],
+			[81, 83],
+			[83, 80],
+			[81, 20],
+			[81, 84],
+			[84, 85],
+			[85, 79],
+			[85, 80],
+			[85, 86],
+			[84, 83],
+			[83, 80],
+			[81, 86],
+			[81, 87],
+			[81, 19],
+			[19, 20],
+			[81, 88],
+			[93, 94],
+			[94, 95],
+			[95, 82],
+			[95, 80],
+			[95, 86],
+			[94, 80],
+			[94, 20],
+			[94, 81],
+			[81, 79],
+			[79, 80],
+			[79, 20],
+			[81, 82],
+			[81, 80],
+			[81, 83],
+			[83, 80],
+			[81, 20],
+			[81, 84],
+			[84, 85],
+			[85, 79],
+			[85, 80],
+			[85, 86],
+			[84, 83],
+			[83, 80],
+			[81, 86],
+			[81, 87],
+			[81, 19],
+			[19, 20],
+			[81, 88],
+			[94, 86],
+			[94, 96],
+			[96, 82],
+			[99, 97],
+			[97, 95],
+			[95, 82],
+			[95, 80],
+			[95, 86],
+			[97, 96],
+			[96, 82],
+			[97, 98],
+			[99, 80],
+			[99, 84],
+			[84, 85],
+			[85, 79],
+			[85, 80],
+			[85, 86],
+			[84, 83],
+			[83, 80],
+			[99, 86],
+			[99, 100],
+			[100, 95],
+			[95, 82],
+			[95, 80],
+			[95, 86],
+			[100, 80],
+			[100, 101],
+			[100, 96],
+			[96, 82],
+			[72, 102],
+			[72, 103],
+			[72, 104],
+			[72, 105],
+			[105, 74],
+			[105, 106],
+			[106, 107],
+			[106, 104],
+			[72, 106],
+			[106, 107],
+			[106, 104],
+			[70, 108],
+			[108, 109],
+			[108, 106],
+			[106, 107],
+			[106, 104],
+			[70, 110],
+			[70, 111],
+			[66, 108],
+			[108, 109],
+			[108, 106],
+			[106, 107],
+			[106, 104],
+			[0, 112],
+			[112, 113],
+			[113, 114],
+			[113, 115],
+			[112, 116],
+			[116, 117],
+			[112, 118],
+			[112, 119],
+			[112, 115],
+			[112, 114],
+			[112, 120]
+		],
+		"circular": []
+	}
 }

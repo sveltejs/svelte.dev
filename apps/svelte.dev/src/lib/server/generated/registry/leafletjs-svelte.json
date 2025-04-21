@@ -14,25 +14,6 @@
 	"svelte_range": "^4.0.5",
 	"kit_range": "^1.25.2",
 	"last_rune_check_version": "0.1.1",
-	"dependencies": [
-		{
-			"name": "@types/leaflet",
-			"semver": "^1.9.6"
-		},
-		{
-			"name": "@types/leaflet-draw",
-			"semver": "^1.0.8"
-		},
-		{
-			"name": "leaflet",
-			"semver": "^1.9.4"
-		},
-		{
-			"name": "leaflet-draw",
-			"semver": "^1.0.4"
-		}
-	],
-	"unpacked_size": 49387,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -278,5 +259,50 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "leafletjs-svelte",
+				"version": "0.1.1",
+				"size": 49387
+			},
+			{
+				"name": "@types/leaflet",
+				"version": "1.9.17",
+				"size": 112669
+			},
+			{
+				"name": "@types/geojson",
+				"version": "7946.0.16",
+				"size": 9514
+			},
+			{
+				"name": "@types/leaflet-draw",
+				"version": "1.0.11",
+				"size": 31910
+			},
+			{
+				"name": "leaflet",
+				"version": "1.9.4",
+				"size": 3739487
+			},
+			{
+				"name": "leaflet-draw",
+				"version": "1.0.4",
+				"size": 2640631
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[3, 1],
+			[1, 2],
+			[0, 4],
+			[0, 5]
+		],
+		"circular": []
+	}
 }

@@ -13,13 +13,6 @@
 	"version": "0.2.0",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "0.2.0",
-	"dependencies": [
-		{
-			"name": "toqs",
-			"semver": "^1.0.2"
-		}
-	],
-	"unpacked_size": 9857,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -293,5 +286,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 17
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-fetch",
+				"version": "0.2.0",
+				"size": 9857
+			},
+			{
+				"name": "toqs",
+				"version": "1.0.2",
+				"size": 835
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

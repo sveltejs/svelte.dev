@@ -12,61 +12,6 @@
 	"svelte_range": "3.*",
 	"last_rune_check_version": "2.0.0-beta.3",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "boxen",
-			"semver": "^5.1.2"
-		},
-		{
-			"name": "chalk",
-			"semver": "^2.4.2"
-		},
-		{
-			"name": "commander",
-			"semver": "^6.2.1"
-		},
-		{
-			"name": "esbuild",
-			"semver": "^0.14.25"
-		},
-		{
-			"name": "esbuild-svelte",
-			"semver": "^0.6.3"
-		},
-		{
-			"name": "figlet",
-			"semver": "^1.5.2"
-		},
-		{
-			"name": "glob",
-			"semver": "^7.2.0"
-		},
-		{
-			"name": "got",
-			"semver": "11.8.3"
-		},
-		{
-			"name": "gradient-string",
-			"semver": "^2.0.0"
-		},
-		{
-			"name": "minimist",
-			"semver": "^1.2.5"
-		},
-		{
-			"name": "ora",
-			"semver": "5.4.1"
-		},
-		{
-			"name": "semver",
-			"semver": "^6.3.0"
-		},
-		{
-			"name": "shelljs",
-			"semver": "^0.8.5"
-		}
-	],
-	"unpacked_size": 9851,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -292,5 +237,717 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 12
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@cmex/cli",
+				"version": "2.0.0-beta.3",
+				"size": 9851
+			},
+			{
+				"name": "boxen",
+				"version": "5.1.2",
+				"size": 18414
+			},
+			{
+				"name": "chalk",
+				"version": "4.1.2",
+				"size": 35047
+			},
+			{
+				"name": "ansi-styles",
+				"version": "4.3.0",
+				"size": 16978
+			},
+			{
+				"name": "color-convert",
+				"version": "2.0.1",
+				"size": 27189
+			},
+			{
+				"name": "color-name",
+				"version": "1.1.4",
+				"size": 6693
+			},
+			{
+				"name": "supports-color",
+				"version": "7.2.0",
+				"size": 7035
+			},
+			{
+				"name": "has-flag",
+				"version": "4.0.0",
+				"size": 4419
+			},
+			{
+				"name": "camelcase",
+				"version": "6.3.0",
+				"size": 11697
+			},
+			{
+				"name": "cli-boxes",
+				"version": "2.2.1",
+				"size": 6138
+			},
+			{
+				"name": "type-fest",
+				"version": "0.20.2",
+				"size": 110590
+			},
+			{
+				"name": "wrap-ansi",
+				"version": "7.0.0",
+				"size": 10648
+			},
+			{
+				"name": "string-width",
+				"version": "4.2.3",
+				"size": 5161
+			},
+			{
+				"name": "strip-ansi",
+				"version": "6.0.1",
+				"size": 4029
+			},
+			{
+				"name": "ansi-regex",
+				"version": "5.0.1",
+				"size": 5609
+			},
+			{
+				"name": "emoji-regex",
+				"version": "8.0.0",
+				"size": 48255
+			},
+			{
+				"name": "is-fullwidth-code-point",
+				"version": "3.0.0",
+				"size": 4994
+			},
+			{
+				"name": "ansi-align",
+				"version": "3.0.1",
+				"size": 7684
+			},
+			{
+				"name": "widest-line",
+				"version": "3.1.0",
+				"size": 3729
+			},
+			{
+				"name": "chalk",
+				"version": "2.4.2",
+				"size": 26924
+			},
+			{
+				"name": "ansi-styles",
+				"version": "3.2.1",
+				"size": 9371
+			},
+			{
+				"name": "color-convert",
+				"version": "1.9.3",
+				"size": 26964
+			},
+			{
+				"name": "color-name",
+				"version": "1.1.3"
+			},
+			{
+				"name": "supports-color",
+				"version": "5.5.0",
+				"size": 6630
+			},
+			{
+				"name": "has-flag",
+				"version": "3.0.0"
+			},
+			{
+				"name": "escape-string-regexp",
+				"version": "1.0.5"
+			},
+			{
+				"name": "commander",
+				"version": "6.2.1",
+				"size": 113457
+			},
+			{
+				"name": "esbuild",
+				"version": "0.14.54",
+				"size": 119589
+			},
+			{
+				"name": "esbuild-svelte",
+				"version": "0.6.3",
+				"size": 32036
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			},
+			{
+				"name": "figlet",
+				"version": "1.8.1",
+				"size": 6130902
+			},
+			{
+				"name": "glob",
+				"version": "7.2.3",
+				"size": 55064
+			},
+			{
+				"name": "once",
+				"version": "1.4.0"
+			},
+			{
+				"name": "wrappy",
+				"version": "1.0.2"
+			},
+			{
+				"name": "inflight",
+				"version": "1.0.6"
+			},
+			{
+				"name": "inherits",
+				"version": "2.0.4",
+				"size": 3958
+			},
+			{
+				"name": "minimatch",
+				"version": "3.1.2",
+				"size": 34902
+			},
+			{
+				"name": "brace-expansion",
+				"version": "1.1.11",
+				"size": 11059
+			},
+			{
+				"name": "balanced-match",
+				"version": "1.0.2",
+				"size": 6939
+			},
+			{
+				"name": "concat-map",
+				"version": "0.0.1"
+			},
+			{
+				"name": "fs.realpath",
+				"version": "1.0.0"
+			},
+			{
+				"name": "path-is-absolute",
+				"version": "1.0.1"
+			},
+			{
+				"name": "got",
+				"version": "11.8.3",
+				"size": 268493
+			},
+			{
+				"name": "p-cancelable",
+				"version": "2.1.1",
+				"size": 13542
+			},
+			{
+				"name": "responselike",
+				"version": "2.0.1",
+				"size": 4685
+			},
+			{
+				"name": "lowercase-keys",
+				"version": "2.0.0",
+				"size": 2781
+			},
+			{
+				"name": "http2-wrapper",
+				"version": "1.0.3",
+				"size": 53109
+			},
+			{
+				"name": "quick-lru",
+				"version": "5.1.1",
+				"size": 8645
+			},
+			{
+				"name": "resolve-alpn",
+				"version": "1.2.1",
+				"size": 4645
+			},
+			{
+				"name": "@sindresorhus/is",
+				"version": "4.6.0",
+				"size": 57457
+			},
+			{
+				"name": "cacheable-lookup",
+				"version": "5.0.4",
+				"size": 23919
+			},
+			{
+				"name": "cacheable-request",
+				"version": "7.0.4",
+				"size": 16750
+			},
+			{
+				"name": "keyv",
+				"version": "4.5.4",
+				"size": 27751
+			},
+			{
+				"name": "json-buffer",
+				"version": "3.0.1",
+				"size": 5404
+			},
+			{
+				"name": "get-stream",
+				"version": "5.2.0",
+				"size": 12397
+			},
+			{
+				"name": "pump",
+				"version": "3.0.2",
+				"size": 8762
+			},
+			{
+				"name": "end-of-stream",
+				"version": "1.4.4",
+				"size": 6234
+			},
+			{
+				"name": "normalize-url",
+				"version": "6.1.0",
+				"size": 21244
+			},
+			{
+				"name": "clone-response",
+				"version": "1.0.3",
+				"size": 4526
+			},
+			{
+				"name": "mimic-response",
+				"version": "1.0.1",
+				"size": 3584
+			},
+			{
+				"name": "http-cache-semantics",
+				"version": "4.1.1",
+				"size": 35938
+			},
+			{
+				"name": "@types/responselike",
+				"version": "1.0.3",
+				"size": 4604
+			},
+			{
+				"name": "@types/node",
+				"version": "22.14.1",
+				"size": 2331510
+			},
+			{
+				"name": "undici-types",
+				"version": "6.21.0",
+				"size": 83680
+			},
+			{
+				"name": "decompress-response",
+				"version": "6.0.0",
+				"size": 5472
+			},
+			{
+				"name": "mimic-response",
+				"version": "3.1.0",
+				"size": 6003
+			},
+			{
+				"name": "@szmarczak/http-timer",
+				"version": "4.0.6",
+				"size": 10824
+			},
+			{
+				"name": "defer-to-connect",
+				"version": "2.0.1",
+				"size": 5444
+			},
+			{
+				"name": "@types/cacheable-request",
+				"version": "6.0.3",
+				"size": 9281
+			},
+			{
+				"name": "@types/keyv",
+				"version": "3.1.4",
+				"size": 6123
+			},
+			{
+				"name": "@types/http-cache-semantics",
+				"version": "4.0.4",
+				"size": 9278
+			},
+			{
+				"name": "gradient-string",
+				"version": "2.0.2",
+				"size": 11550
+			},
+			{
+				"name": "tinygradient",
+				"version": "1.1.5",
+				"size": 60968
+			},
+			{
+				"name": "tinycolor2",
+				"version": "1.6.0",
+				"size": 284855
+			},
+			{
+				"name": "@types/tinycolor2",
+				"version": "1.4.6",
+				"size": 23687
+			},
+			{
+				"name": "minimist",
+				"version": "1.2.8",
+				"size": 54477
+			},
+			{
+				"name": "ora",
+				"version": "5.4.1",
+				"size": 23247
+			},
+			{
+				"name": "bl",
+				"version": "4.1.0",
+				"size": 64427
+			},
+			{
+				"name": "buffer",
+				"version": "5.7.1",
+				"size": 82527
+			},
+			{
+				"name": "base64-js",
+				"version": "1.5.1",
+				"size": 9624
+			},
+			{
+				"name": "ieee754",
+				"version": "1.2.1",
+				"size": 6796
+			},
+			{
+				"name": "readable-stream",
+				"version": "3.6.2",
+				"size": 123971
+			},
+			{
+				"name": "string_decoder",
+				"version": "1.3.0",
+				"size": 14427
+			},
+			{
+				"name": "safe-buffer",
+				"version": "5.2.1",
+				"size": 32101
+			},
+			{
+				"name": "util-deprecate",
+				"version": "1.0.2"
+			},
+			{
+				"name": "wcwidth",
+				"version": "1.0.1"
+			},
+			{
+				"name": "defaults",
+				"version": "1.0.4",
+				"size": 3842
+			},
+			{
+				"name": "clone",
+				"version": "1.0.4",
+				"size": 11132
+			},
+			{
+				"name": "cli-cursor",
+				"version": "3.1.0",
+				"size": 4372
+			},
+			{
+				"name": "restore-cursor",
+				"version": "3.1.0",
+				"size": 2817
+			},
+			{
+				"name": "onetime",
+				"version": "5.1.2",
+				"size": 6173
+			},
+			{
+				"name": "mimic-fn",
+				"version": "2.1.0",
+				"size": 4457
+			},
+			{
+				"name": "signal-exit",
+				"version": "3.0.7",
+				"size": 9958
+			},
+			{
+				"name": "log-symbols",
+				"version": "4.1.0",
+				"size": 4580
+			},
+			{
+				"name": "is-unicode-supported",
+				"version": "0.1.0",
+				"size": 3535
+			},
+			{
+				"name": "cli-spinners",
+				"version": "2.9.2",
+				"size": 32113
+			},
+			{
+				"name": "is-interactive",
+				"version": "1.0.0",
+				"size": 4619
+			},
+			{
+				"name": "semver",
+				"version": "6.3.1",
+				"size": 68343
+			},
+			{
+				"name": "shelljs",
+				"version": "0.8.5",
+				"size": 212044
+			},
+			{
+				"name": "rechoir",
+				"version": "0.6.2"
+			},
+			{
+				"name": "resolve",
+				"version": "1.22.10",
+				"size": 145619
+			},
+			{
+				"name": "is-core-module",
+				"version": "2.16.1",
+				"size": 33475
+			},
+			{
+				"name": "hasown",
+				"version": "2.0.2",
+				"size": 8765
+			},
+			{
+				"name": "function-bind",
+				"version": "1.1.2",
+				"size": 31427
+			},
+			{
+				"name": "path-parse",
+				"version": "1.0.7",
+				"size": 4511
+			},
+			{
+				"name": "supports-preserve-symlinks-flag",
+				"version": "1.0.0",
+				"size": 9178
+			},
+			{
+				"name": "interpret",
+				"version": "1.4.0",
+				"size": 14852
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[3, 4],
+			[4, 5],
+			[2, 6],
+			[6, 7],
+			[1, 8],
+			[1, 9],
+			[1, 10],
+			[1, 11],
+			[11, 3],
+			[3, 4],
+			[4, 5],
+			[11, 12],
+			[12, 13],
+			[13, 14],
+			[12, 15],
+			[12, 16],
+			[11, 13],
+			[13, 14],
+			[1, 17],
+			[17, 12],
+			[12, 13],
+			[13, 14],
+			[12, 15],
+			[12, 16],
+			[1, 18],
+			[18, 12],
+			[12, 13],
+			[13, 14],
+			[12, 15],
+			[12, 16],
+			[1, 12],
+			[12, 13],
+			[13, 14],
+			[12, 15],
+			[12, 16],
+			[0, 19],
+			[19, 20],
+			[20, 21],
+			[21, 22],
+			[19, 23],
+			[23, 24],
+			[19, 25],
+			[0, 26],
+			[0, 27],
+			[0, 28],
+			[28, 29],
+			[0, 30],
+			[0, 31],
+			[31, 32],
+			[32, 33],
+			[31, 34],
+			[34, 32],
+			[32, 33],
+			[34, 33],
+			[31, 35],
+			[31, 36],
+			[36, 37],
+			[37, 38],
+			[37, 39],
+			[31, 40],
+			[31, 41],
+			[0, 42],
+			[42, 43],
+			[42, 44],
+			[44, 45],
+			[42, 46],
+			[46, 47],
+			[46, 48],
+			[42, 45],
+			[42, 49],
+			[42, 50],
+			[42, 51],
+			[51, 52],
+			[52, 53],
+			[51, 54],
+			[54, 55],
+			[55, 32],
+			[32, 33],
+			[55, 56],
+			[56, 32],
+			[32, 33],
+			[51, 44],
+			[44, 45],
+			[51, 57],
+			[51, 58],
+			[58, 59],
+			[51, 45],
+			[51, 60],
+			[42, 61],
+			[61, 62],
+			[62, 63],
+			[42, 64],
+			[64, 65],
+			[42, 66],
+			[66, 67],
+			[42, 68],
+			[68, 69],
+			[69, 62],
+			[62, 63],
+			[68, 62],
+			[62, 63],
+			[68, 61],
+			[61, 62],
+			[62, 63],
+			[68, 70],
+			[0, 71],
+			[71, 2],
+			[2, 3],
+			[3, 4],
+			[4, 5],
+			[2, 6],
+			[6, 7],
+			[71, 72],
+			[72, 73],
+			[72, 74],
+			[0, 75],
+			[0, 76],
+			[76, 77],
+			[77, 78],
+			[78, 79],
+			[78, 80],
+			[77, 35],
+			[77, 81],
+			[81, 35],
+			[81, 82],
+			[82, 83],
+			[81, 84],
+			[76, 2],
+			[2, 3],
+			[3, 4],
+			[4, 5],
+			[2, 6],
+			[6, 7],
+			[76, 85],
+			[85, 86],
+			[86, 87],
+			[76, 88],
+			[88, 89],
+			[89, 90],
+			[90, 91],
+			[89, 92],
+			[76, 13],
+			[13, 14],
+			[76, 93],
+			[93, 2],
+			[2, 3],
+			[3, 4],
+			[4, 5],
+			[2, 6],
+			[6, 7],
+			[93, 94],
+			[76, 95],
+			[76, 96],
+			[76, 94],
+			[0, 97],
+			[0, 98],
+			[98, 31],
+			[31, 32],
+			[32, 33],
+			[31, 34],
+			[34, 32],
+			[32, 33],
+			[34, 33],
+			[31, 35],
+			[31, 36],
+			[36, 37],
+			[37, 38],
+			[37, 39],
+			[31, 40],
+			[31, 41],
+			[98, 99],
+			[99, 100],
+			[100, 101],
+			[101, 102],
+			[102, 103],
+			[100, 104],
+			[100, 105],
+			[98, 106]
+		],
+		"circular": []
+	}
 }

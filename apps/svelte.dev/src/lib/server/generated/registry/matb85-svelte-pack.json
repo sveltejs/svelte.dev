@@ -13,17 +13,6 @@
 	"version": "5.0.2",
 	"svelte_range": "^5.20.5",
 	"last_rune_check_version": "5.0.2",
-	"dependencies": [
-		{
-			"name": "@matb85/base-pack",
-			"semver": "^5.0.2"
-		},
-		{
-			"name": "modular-slider",
-			"semver": "^1.0.3"
-		}
-	],
-	"unpacked_size": 11287,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -337,5 +326,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 34
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@matb85/svelte-pack",
+				"version": "5.0.2",
+				"size": 11287
+			},
+			{
+				"name": "@matb85/base-pack",
+				"version": "5.0.2",
+				"size": 15251
+			},
+			{
+				"name": "modular-slider",
+				"version": "1.0.3",
+				"size": 29632
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

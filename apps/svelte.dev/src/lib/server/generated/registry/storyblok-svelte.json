@@ -23,13 +23,6 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.20.2",
 	"last_rune_check_version": "5.0.1",
-	"dependencies": [
-		{
-			"name": "@storyblok/js",
-			"semver": "3.3.1"
-		}
-	],
-	"unpacked_size": 26910,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -343,5 +336,36 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 725
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@storyblok/svelte",
+				"version": "5.0.1",
+				"size": 26910
+			},
+			{
+				"name": "@storyblok/js",
+				"version": "3.3.1",
+				"size": 90936
+			},
+			{
+				"name": "@storyblok/richtext",
+				"version": "3.1.0",
+				"size": 42971
+			},
+			{
+				"name": "storyblok-js-client",
+				"version": "6.10.11",
+				"size": 250806
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3]
+		],
+		"circular": []
+	}
 }

@@ -13,37 +13,6 @@
 	"version": "2.0.5",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "2.0.5",
-	"dependencies": [
-		{
-			"name": "@rollup/plugin-commonjs",
-			"semver": "^22.0.2"
-		},
-		{
-			"name": "@rollup/plugin-typescript",
-			"semver": "^8.5.0"
-		},
-		{
-			"name": "@tsconfig/svelte",
-			"semver": "^3.0.0"
-		},
-		{
-			"name": "rollup-plugin-dts",
-			"semver": "^4.2.2"
-		},
-		{
-			"name": "svelte-preprocess",
-			"semver": "^4.10.7"
-		},
-		{
-			"name": "tslib",
-			"semver": "^2.4.0"
-		},
-		{
-			"name": "typescript",
-			"semver": "^4.8.3"
-		}
-	],
-	"unpacked_size": 88187,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -357,5 +326,339 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 21
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-burger-menu",
+				"version": "2.0.5",
+				"size": 88187
+			},
+			{
+				"name": "@rollup/plugin-commonjs",
+				"version": "22.0.2",
+				"size": 466488
+			},
+			{
+				"name": "glob",
+				"version": "7.2.3",
+				"size": 55064
+			},
+			{
+				"name": "once",
+				"version": "1.4.0"
+			},
+			{
+				"name": "wrappy",
+				"version": "1.0.2"
+			},
+			{
+				"name": "inflight",
+				"version": "1.0.6"
+			},
+			{
+				"name": "inherits",
+				"version": "2.0.4",
+				"size": 3958
+			},
+			{
+				"name": "minimatch",
+				"version": "3.1.2",
+				"size": 34902
+			},
+			{
+				"name": "brace-expansion",
+				"version": "1.1.11",
+				"size": 11059
+			},
+			{
+				"name": "balanced-match",
+				"version": "1.0.2",
+				"size": 6939
+			},
+			{
+				"name": "concat-map",
+				"version": "0.0.1"
+			},
+			{
+				"name": "fs.realpath",
+				"version": "1.0.0"
+			},
+			{
+				"name": "path-is-absolute",
+				"version": "1.0.1"
+			},
+			{
+				"name": "resolve",
+				"version": "1.22.10",
+				"size": 145619
+			},
+			{
+				"name": "is-core-module",
+				"version": "2.16.1",
+				"size": 33475
+			},
+			{
+				"name": "hasown",
+				"version": "2.0.2",
+				"size": 8765
+			},
+			{
+				"name": "function-bind",
+				"version": "1.1.2",
+				"size": 31427
+			},
+			{
+				"name": "path-parse",
+				"version": "1.0.7",
+				"size": 4511
+			},
+			{
+				"name": "supports-preserve-symlinks-flag",
+				"version": "1.0.0",
+				"size": 9178
+			},
+			{
+				"name": "commondir",
+				"version": "1.0.1"
+			},
+			{
+				"name": "is-reference",
+				"version": "1.2.1",
+				"size": 6374
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "magic-string",
+				"version": "0.25.9",
+				"size": 373056
+			},
+			{
+				"name": "sourcemap-codec",
+				"version": "1.4.8",
+				"size": 31802
+			},
+			{
+				"name": "estree-walker",
+				"version": "2.0.2",
+				"size": 50243
+			},
+			{
+				"name": "@rollup/pluginutils",
+				"version": "3.1.0",
+				"size": 47695
+			},
+			{
+				"name": "picomatch",
+				"version": "2.3.1",
+				"size": 89952
+			},
+			{
+				"name": "@types/estree",
+				"version": "0.0.39",
+				"size": 17818
+			},
+			{
+				"name": "estree-walker",
+				"version": "1.0.1",
+				"size": 15196
+			},
+			{
+				"name": "@rollup/plugin-typescript",
+				"version": "8.5.0",
+				"size": 94003
+			},
+			{
+				"name": "@tsconfig/svelte",
+				"version": "3.0.0",
+				"size": 3585
+			},
+			{
+				"name": "rollup-plugin-dts",
+				"version": "4.2.3",
+				"size": 180736
+			},
+			{
+				"name": "magic-string",
+				"version": "0.26.7",
+				"size": 400761
+			},
+			{
+				"name": "svelte-preprocess",
+				"version": "4.10.7",
+				"size": 102125
+			},
+			{
+				"name": "sorcery",
+				"version": "0.10.0"
+			},
+			{
+				"name": "sander",
+				"version": "0.5.1"
+			},
+			{
+				"name": "es6-promise",
+				"version": "3.3.1"
+			},
+			{
+				"name": "mkdirp",
+				"version": "0.5.6",
+				"size": 7688
+			},
+			{
+				"name": "minimist",
+				"version": "1.2.8",
+				"size": 54477
+			},
+			{
+				"name": "rimraf",
+				"version": "2.7.1",
+				"size": 15463
+			},
+			{
+				"name": "graceful-fs",
+				"version": "4.2.11",
+				"size": 32535
+			},
+			{
+				"name": "buffer-crc32",
+				"version": "0.2.13"
+			},
+			{
+				"name": "@types/pug",
+				"version": "2.0.10",
+				"size": 9695
+			},
+			{
+				"name": "@types/sass",
+				"version": "1.43.1",
+				"size": 13146
+			},
+			{
+				"name": "@types/node",
+				"version": "22.14.1",
+				"size": 2331510
+			},
+			{
+				"name": "undici-types",
+				"version": "6.21.0",
+				"size": 83680
+			},
+			{
+				"name": "strip-indent",
+				"version": "3.0.0",
+				"size": 3312
+			},
+			{
+				"name": "min-indent",
+				"version": "1.0.1",
+				"size": 2969
+			},
+			{
+				"name": "detect-indent",
+				"version": "6.1.0",
+				"size": 9681
+			},
+			{
+				"name": "tslib",
+				"version": "2.8.1",
+				"size": 90359
+			},
+			{
+				"name": "typescript",
+				"version": "4.9.5",
+				"size": 66849652
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[3, 4],
+			[2, 5],
+			[5, 3],
+			[3, 4],
+			[5, 4],
+			[2, 6],
+			[2, 7],
+			[7, 8],
+			[8, 9],
+			[8, 10],
+			[2, 11],
+			[2, 12],
+			[1, 13],
+			[13, 14],
+			[14, 15],
+			[15, 16],
+			[13, 17],
+			[13, 18],
+			[1, 19],
+			[1, 20],
+			[20, 21],
+			[1, 22],
+			[22, 23],
+			[1, 24],
+			[1, 25],
+			[25, 26],
+			[25, 27],
+			[25, 28],
+			[0, 29],
+			[29, 13],
+			[13, 14],
+			[14, 15],
+			[15, 16],
+			[13, 17],
+			[13, 18],
+			[29, 25],
+			[25, 26],
+			[25, 27],
+			[25, 28],
+			[0, 30],
+			[0, 31],
+			[31, 32],
+			[32, 23],
+			[0, 33],
+			[33, 34],
+			[34, 35],
+			[35, 36],
+			[35, 37],
+			[37, 38],
+			[35, 39],
+			[39, 2],
+			[2, 3],
+			[3, 4],
+			[2, 5],
+			[5, 3],
+			[3, 4],
+			[5, 4],
+			[2, 6],
+			[2, 7],
+			[7, 8],
+			[8, 9],
+			[8, 10],
+			[2, 11],
+			[2, 12],
+			[35, 40],
+			[34, 38],
+			[34, 41],
+			[34, 23],
+			[33, 42],
+			[33, 43],
+			[43, 44],
+			[44, 45],
+			[33, 22],
+			[22, 23],
+			[33, 46],
+			[46, 47],
+			[33, 48],
+			[0, 49],
+			[0, 50]
+		],
+		"circular": []
+	}
 }

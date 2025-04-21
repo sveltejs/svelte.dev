@@ -13,17 +13,6 @@
 	"version": "0.0.23",
 	"svelte_range": "^3.29.7",
 	"last_rune_check_version": "0.0.23",
-	"dependencies": [
-		{
-			"name": "d3-selection",
-			"semver": "^2.0.0"
-		},
-		{
-			"name": "d3-zoom",
-			"semver": "^2.0.0"
-		}
-	],
-	"unpacked_size": 5375,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -337,5 +326,79 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 52
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@svelte-parts/zoom",
+				"version": "0.0.23",
+				"size": 5375
+			},
+			{
+				"name": "d3-selection",
+				"version": "2.0.0",
+				"size": 133005
+			},
+			{
+				"name": "d3-zoom",
+				"version": "2.0.0",
+				"size": 87243
+			},
+			{
+				"name": "d3-dispatch",
+				"version": "2.0.0",
+				"size": 16155
+			},
+			{
+				"name": "d3-drag",
+				"version": "2.0.0",
+				"size": 42848
+			},
+			{
+				"name": "d3-interpolate",
+				"version": "2.0.1",
+				"size": 70166
+			},
+			{
+				"name": "d3-color",
+				"version": "2.0.0",
+				"size": 60251
+			},
+			{
+				"name": "d3-transition",
+				"version": "2.0.0",
+				"size": 109590
+			},
+			{
+				"name": "d3-ease",
+				"version": "2.0.0",
+				"size": 34353
+			},
+			{
+				"name": "d3-timer",
+				"version": "2.0.0",
+				"size": 18933
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[2, 4],
+			[4, 3],
+			[4, 1],
+			[2, 5],
+			[5, 6],
+			[2, 1],
+			[2, 7],
+			[7, 6],
+			[7, 3],
+			[7, 8],
+			[7, 5],
+			[5, 6],
+			[7, 9]
+		],
+		"circular": []
+	}
 }

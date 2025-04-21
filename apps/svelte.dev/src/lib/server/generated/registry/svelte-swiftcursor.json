@@ -14,8 +14,6 @@
 	"svelte_range": "^5.1.11",
 	"kit_range": "^2.8.0",
 	"last_rune_check_version": "1.0.8",
-	"dependencies": [],
-	"unpacked_size": 5463,
 	"downloads_history": [
 		{
 			"range": [1730658600000, 1731263399999],
@@ -85,5 +83,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-swiftcursor",
+				"version": "1.0.8",
+				"size": 5463
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

@@ -13,8 +13,6 @@
 	"version": "0.0.95",
 	"svelte_range": "^3.16.1",
 	"last_rune_check_version": "0.0.95",
-	"dependencies": [],
-	"unpacked_size": 16927,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -328,5 +326,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 34
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-images",
+				"version": "0.0.95",
+				"size": 16927
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

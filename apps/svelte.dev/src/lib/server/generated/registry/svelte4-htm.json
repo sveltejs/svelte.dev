@@ -12,29 +12,6 @@
 	"version": "1.0.1",
 	"svelte_range": "3.x || 4.x",
 	"last_rune_check_version": "1.0.1",
-	"dependencies": [
-		{
-			"name": "@babel/runtime-corejs3",
-			"semver": "^7.19.0"
-		},
-		{
-			"name": "core-js",
-			"semver": "^3.25.1"
-		},
-		{
-			"name": "htm",
-			"semver": "^3.1.1"
-		},
-		{
-			"name": "svelte-hyperscript",
-			"semver": "^1.2.1"
-		},
-		{
-			"name": "svelte4-fragment-component",
-			"semver": "^1.0.3"
-		}
-	],
-	"unpacked_size": 140805,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -344,5 +321,64 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 586
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte4-htm",
+				"version": "1.0.1",
+				"size": 140805
+			},
+			{
+				"name": "@babel/runtime-corejs3",
+				"version": "7.27.0",
+				"size": 331596
+			},
+			{
+				"name": "core-js-pure",
+				"version": "3.41.0",
+				"size": 1122771
+			},
+			{
+				"name": "regenerator-runtime",
+				"version": "0.14.1",
+				"size": 27863
+			},
+			{
+				"name": "core-js",
+				"version": "3.41.0",
+				"size": 1265563
+			},
+			{
+				"name": "htm",
+				"version": "3.1.1",
+				"size": 88480
+			},
+			{
+				"name": "svelte-hyperscript",
+				"version": "1.2.1",
+				"size": 197340
+			},
+			{
+				"name": "svelte4-fragment-component",
+				"version": "1.0.3",
+				"size": 86324
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[0, 4],
+			[0, 5],
+			[0, 6],
+			[6, 1],
+			[1, 2],
+			[1, 3],
+			[6, 4],
+			[0, 7]
+		],
+		"circular": []
+	}
 }

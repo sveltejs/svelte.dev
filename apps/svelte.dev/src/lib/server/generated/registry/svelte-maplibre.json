@@ -14,29 +14,6 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.8.1",
 	"last_rune_check_version": "1.0.0",
-	"dependencies": [
-		{
-			"name": "d3-geo",
-			"semver": "^3.1.0"
-		},
-		{
-			"name": "dequal",
-			"semver": "^2.0.3"
-		},
-		{
-			"name": "just-compare",
-			"semver": "^2.3.0"
-		},
-		{
-			"name": "maplibre-gl",
-			"semver": "^4.0.0 || ^5.0.1"
-		},
-		{
-			"name": "pmtiles",
-			"semver": "^3.0.3"
-		}
-	],
-	"unpacked_size": 187662,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -350,5 +327,311 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5396
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-maplibre",
+				"version": "1.0.0",
+				"size": 187662
+			},
+			{
+				"name": "d3-geo",
+				"version": "3.1.1",
+				"size": 227065
+			},
+			{
+				"name": "d3-array",
+				"version": "3.2.4",
+				"size": 163730
+			},
+			{
+				"name": "internmap",
+				"version": "2.0.3",
+				"size": 10470
+			},
+			{
+				"name": "dequal",
+				"version": "2.0.3",
+				"size": 14229
+			},
+			{
+				"name": "just-compare",
+				"version": "2.3.0",
+				"size": 9255
+			},
+			{
+				"name": "maplibre-gl",
+				"version": "5.3.1",
+				"size": 38023356
+			},
+			{
+				"name": "@mapbox/geojson-rewind",
+				"version": "0.5.2",
+				"size": 4595
+			},
+			{
+				"name": "get-stream",
+				"version": "6.0.1",
+				"size": 12176
+			},
+			{
+				"name": "minimist",
+				"version": "1.2.8",
+				"size": 54477
+			},
+			{
+				"name": "@mapbox/jsonlint-lines-primitives",
+				"version": "2.0.2",
+				"size": 67804
+			},
+			{
+				"name": "@mapbox/point-geometry",
+				"version": "0.1.0"
+			},
+			{
+				"name": "@mapbox/tiny-sdf",
+				"version": "2.0.6",
+				"size": 10711
+			},
+			{
+				"name": "@mapbox/unitbezier",
+				"version": "0.0.1",
+				"size": 5015
+			},
+			{
+				"name": "@mapbox/vector-tile",
+				"version": "1.3.1",
+				"size": 261972
+			},
+			{
+				"name": "@mapbox/whoots-js",
+				"version": "3.1.0",
+				"size": 10488
+			},
+			{
+				"name": "@maplibre/maplibre-gl-style-spec",
+				"version": "23.1.0",
+				"size": 9205094
+			},
+			{
+				"name": "json-stringify-pretty-compact",
+				"version": "4.0.0",
+				"size": 7412
+			},
+			{
+				"name": "quickselect",
+				"version": "3.0.0",
+				"size": 5287
+			},
+			{
+				"name": "rw",
+				"version": "1.3.3"
+			},
+			{
+				"name": "tinyqueue",
+				"version": "3.0.0",
+				"size": 4937
+			},
+			{
+				"name": "@types/geojson",
+				"version": "7946.0.16",
+				"size": 9514
+			},
+			{
+				"name": "@types/geojson-vt",
+				"version": "3.2.5",
+				"size": 6961
+			},
+			{
+				"name": "@types/mapbox__point-geometry",
+				"version": "0.1.4",
+				"size": 5041
+			},
+			{
+				"name": "@types/mapbox__vector-tile",
+				"version": "1.3.4",
+				"size": 4645
+			},
+			{
+				"name": "@types/pbf",
+				"version": "3.0.5",
+				"size": 5511
+			},
+			{
+				"name": "@types/supercluster",
+				"version": "7.1.3",
+				"size": 8399
+			},
+			{
+				"name": "earcut",
+				"version": "3.0.1",
+				"size": 57432
+			},
+			{
+				"name": "geojson-vt",
+				"version": "4.0.2",
+				"size": 72236
+			},
+			{
+				"name": "gl-matrix",
+				"version": "3.4.3",
+				"size": 769666
+			},
+			{
+				"name": "global-prefix",
+				"version": "4.0.0",
+				"size": 8060
+			},
+			{
+				"name": "ini",
+				"version": "4.1.3",
+				"size": 12132
+			},
+			{
+				"name": "kind-of",
+				"version": "6.0.3",
+				"size": 22820
+			},
+			{
+				"name": "which",
+				"version": "4.0.0",
+				"size": 7505
+			},
+			{
+				"name": "isexe",
+				"version": "3.1.1",
+				"size": 42976
+			},
+			{
+				"name": "kdbush",
+				"version": "4.0.2",
+				"size": 34356
+			},
+			{
+				"name": "murmurhash-js",
+				"version": "1.0.0"
+			},
+			{
+				"name": "pbf",
+				"version": "3.3.0",
+				"size": 126091
+			},
+			{
+				"name": "ieee754",
+				"version": "1.2.1",
+				"size": 6796
+			},
+			{
+				"name": "resolve-protobuf-schema",
+				"version": "2.1.0",
+				"size": 5243
+			},
+			{
+				"name": "protocol-buffers-schema",
+				"version": "3.6.0",
+				"size": 68684
+			},
+			{
+				"name": "potpack",
+				"version": "2.0.0",
+				"size": 7114
+			},
+			{
+				"name": "supercluster",
+				"version": "8.0.1",
+				"size": 57707
+			},
+			{
+				"name": "vt-pbf",
+				"version": "3.1.3",
+				"size": 11989
+			},
+			{
+				"name": "pmtiles",
+				"version": "3.2.1",
+				"size": 209863
+			},
+			{
+				"name": "fflate",
+				"version": "0.8.2",
+				"size": 773398
+			},
+			{
+				"name": "@types/leaflet",
+				"version": "1.9.17",
+				"size": 112669
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[0, 4],
+			[0, 5],
+			[0, 6],
+			[6, 7],
+			[7, 8],
+			[7, 9],
+			[6, 10],
+			[6, 11],
+			[6, 12],
+			[6, 13],
+			[6, 14],
+			[14, 11],
+			[6, 15],
+			[6, 16],
+			[16, 10],
+			[16, 13],
+			[16, 17],
+			[16, 9],
+			[16, 18],
+			[16, 19],
+			[16, 20],
+			[6, 21],
+			[6, 22],
+			[22, 21],
+			[6, 23],
+			[6, 24],
+			[24, 25],
+			[24, 21],
+			[24, 23],
+			[6, 25],
+			[6, 26],
+			[26, 21],
+			[6, 27],
+			[6, 28],
+			[6, 29],
+			[6, 30],
+			[30, 31],
+			[30, 32],
+			[30, 33],
+			[33, 34],
+			[6, 35],
+			[6, 36],
+			[6, 37],
+			[37, 38],
+			[37, 39],
+			[39, 40],
+			[6, 41],
+			[6, 18],
+			[6, 42],
+			[42, 35],
+			[6, 20],
+			[6, 43],
+			[43, 11],
+			[43, 14],
+			[14, 11],
+			[43, 37],
+			[37, 38],
+			[37, 39],
+			[39, 40],
+			[0, 44],
+			[44, 45],
+			[44, 46],
+			[46, 21]
+		],
+		"circular": []
+	}
 }

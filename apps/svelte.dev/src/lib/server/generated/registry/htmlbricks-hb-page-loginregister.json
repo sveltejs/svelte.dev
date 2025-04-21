@@ -12,17 +12,6 @@
 	"svelte_range": "^3.46.2",
 	"last_rune_check_version": "0.15.7",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "@htmlbricks/hb-auth",
-			"semver": "^0.15.7"
-		},
-		{
-			"name": "@htmlbricks/hb-layout",
-			"semver": "^0.15.7"
-		}
-	],
-	"unpacked_size": 182433,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -284,5 +273,243 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 295
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@htmlbricks/hb-page-loginregister",
+				"version": "0.15.7",
+				"size": 182433
+			},
+			{
+				"name": "@htmlbricks/hb-auth",
+				"version": "0.15.40",
+				"size": 219786
+			},
+			{
+				"name": "@htmlbricks/hb-form",
+				"version": "0.15.40",
+				"size": 272545
+			},
+			{
+				"name": "@htmlbricks/hb-input-area",
+				"version": "0.15.40",
+				"size": 123474
+			},
+			{
+				"name": "@htmlbricks/hb-input-date",
+				"version": "0.15.40",
+				"size": 121396
+			},
+			{
+				"name": "@htmlbricks/hb-input-file",
+				"version": "0.15.40",
+				"size": 122639
+			},
+			{
+				"name": "@htmlbricks/hb-input-text",
+				"version": "0.15.40",
+				"size": 130231
+			},
+			{
+				"name": "@htmlbricks/hb-input-color",
+				"version": "0.15.40",
+				"size": 133884
+			},
+			{
+				"name": "rgb-hex",
+				"version": "4.1.0",
+				"size": 4816
+			},
+			{
+				"name": "debounce",
+				"version": "1.2.1",
+				"size": 11960
+			},
+			{
+				"name": "html-colors",
+				"version": "0.0.6",
+				"size": 8009
+			},
+			{
+				"name": "unique-random-array",
+				"version": "1.0.1",
+				"size": 3579
+			},
+			{
+				"name": "unique-random",
+				"version": "1.0.0"
+			},
+			{
+				"name": "@htmlbricks/hb-input-email",
+				"version": "0.15.40",
+				"size": 122401
+			},
+			{
+				"name": "@htmlbricks/hb-input-radio",
+				"version": "0.15.40",
+				"size": 126455
+			},
+			{
+				"name": "@htmlbricks/hb-input-number",
+				"version": "0.15.40",
+				"size": 133790
+			},
+			{
+				"name": "@htmlbricks/hb-input-select",
+				"version": "0.15.40",
+				"size": 125613
+			},
+			{
+				"name": "@htmlbricks/hb-input-checkbox",
+				"version": "0.15.40",
+				"size": 119094
+			},
+			{
+				"name": "@htmlbricks/hb-input-datetime",
+				"version": "0.15.40",
+				"size": 167878
+			},
+			{
+				"name": "@htmlbricks/hb-auth-social-login-button",
+				"version": "0.15.40",
+				"size": 138882
+			},
+			{
+				"name": "@htmlbricks/hb-layout",
+				"version": "0.15.40",
+				"size": 198379
+			},
+			{
+				"name": "style-to-object",
+				"version": "0.3.0",
+				"size": 30488
+			},
+			{
+				"name": "inline-style-parser",
+				"version": "0.1.1",
+				"size": 30591
+			},
+			{
+				"name": "@htmlbricks/hb-layout-mobile",
+				"version": "0.15.40",
+				"size": 196078
+			},
+			{
+				"name": "@htmlbricks/hb-footer",
+				"version": "0.15.40",
+				"size": 280126
+			},
+			{
+				"name": "@htmlbricks/hb-contact-item",
+				"version": "0.15.40",
+				"size": 119663
+			},
+			{
+				"name": "@htmlbricks/hb-navbar",
+				"version": "0.15.40",
+				"size": 143832
+			},
+			{
+				"name": "@htmlbricks/hb-dropdown-simple",
+				"version": "0.15.40",
+				"size": 114040
+			},
+			{
+				"name": "@htmlbricks/hb-jsutils",
+				"version": "0.15.40",
+				"size": 15609
+			},
+			{
+				"name": "@htmlbricks/hb-offcanvas",
+				"version": "0.15.40",
+				"size": 152485
+			},
+			{
+				"name": "@htmlbricks/hb-sidenav-link",
+				"version": "0.15.40",
+				"size": 199921
+			},
+			{
+				"name": "@htmlbricks/hb-sidebar-desktop",
+				"version": "0.15.40",
+				"size": 158660
+			},
+			{
+				"name": "@htmlbricks/hb-cookie-law-banner",
+				"version": "0.15.40",
+				"size": 126873
+			},
+			{
+				"name": "@htmlbricks/hb-layout-desktop",
+				"version": "0.15.40",
+				"size": 205374
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[2, 4],
+			[2, 5],
+			[2, 6],
+			[2, 7],
+			[7, 8],
+			[7, 9],
+			[7, 10],
+			[10, 11],
+			[11, 12],
+			[2, 13],
+			[2, 14],
+			[2, 15],
+			[2, 16],
+			[2, 17],
+			[2, 18],
+			[18, 4],
+			[18, 15],
+			[1, 19],
+			[0, 20],
+			[20, 9],
+			[20, 21],
+			[21, 22],
+			[20, 23],
+			[23, 9],
+			[23, 21],
+			[21, 22],
+			[23, 24],
+			[24, 25],
+			[23, 26],
+			[26, 27],
+			[23, 28],
+			[23, 29],
+			[29, 21],
+			[21, 22],
+			[29, 30],
+			[29, 31],
+			[31, 21],
+			[21, 22],
+			[31, 30],
+			[23, 31],
+			[31, 21],
+			[21, 22],
+			[31, 30],
+			[23, 32],
+			[20, 33],
+			[33, 9],
+			[33, 21],
+			[21, 22],
+			[33, 24],
+			[24, 25],
+			[33, 26],
+			[26, 27],
+			[33, 28],
+			[33, 31],
+			[31, 21],
+			[21, 22],
+			[31, 30],
+			[33, 32]
+		],
+		"circular": []
+	}
 }

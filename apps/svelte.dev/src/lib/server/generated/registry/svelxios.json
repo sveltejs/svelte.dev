@@ -14,21 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.0.0",
 	"last_rune_check_version": "2.1.0",
-	"dependencies": [
-		{
-			"name": "@types/node",
-			"semver": "^20.10.0"
-		},
-		{
-			"name": "commander",
-			"semver": "^11.1.0"
-		},
-		{
-			"name": "ts-node",
-			"semver": "^10.9.1"
-		}
-	],
-	"unpacked_size": 215288,
 	"downloads_history": [
 		{
 			"range": [1701023400000, 1701628199999],
@@ -294,5 +279,139 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelxios",
+				"version": "2.1.0",
+				"size": 215288
+			},
+			{
+				"name": "@types/node",
+				"version": "20.17.30",
+				"size": 2230550
+			},
+			{
+				"name": "undici-types",
+				"version": "6.19.8",
+				"size": 84225
+			},
+			{
+				"name": "commander",
+				"version": "11.1.0",
+				"size": 176667
+			},
+			{
+				"name": "ts-node",
+				"version": "10.9.2",
+				"size": 757333
+			},
+			{
+				"name": "yn",
+				"version": "3.1.1",
+				"size": 6314
+			},
+			{
+				"name": "arg",
+				"version": "4.1.3",
+				"size": 12901
+			},
+			{
+				"name": "diff",
+				"version": "4.0.2",
+				"size": 334802
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "acorn-walk",
+				"version": "8.3.4",
+				"size": 52296
+			},
+			{
+				"name": "make-error",
+				"version": "1.3.6",
+				"size": 12434
+			},
+			{
+				"name": "create-require",
+				"version": "1.1.1",
+				"size": 6254
+			},
+			{
+				"name": "@tsconfig/node10",
+				"version": "1.0.11",
+				"size": 2312
+			},
+			{
+				"name": "@tsconfig/node12",
+				"version": "1.0.11",
+				"size": 2497
+			},
+			{
+				"name": "@tsconfig/node14",
+				"version": "1.0.3",
+				"size": 2392
+			},
+			{
+				"name": "@tsconfig/node16",
+				"version": "1.0.4",
+				"size": 2447
+			},
+			{
+				"name": "v8-compile-cache-lib",
+				"version": "3.0.1",
+				"size": 18165
+			},
+			{
+				"name": "@cspotcode/source-map-support",
+				"version": "0.8.1",
+				"size": 102089
+			},
+			{
+				"name": "@jridgewell/trace-mapping",
+				"version": "0.3.9",
+				"size": 92278
+			},
+			{
+				"name": "@jridgewell/resolve-uri",
+				"version": "3.1.2",
+				"size": 53153
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[0, 4],
+			[4, 5],
+			[4, 6],
+			[4, 7],
+			[4, 8],
+			[4, 9],
+			[9, 8],
+			[4, 10],
+			[4, 11],
+			[4, 12],
+			[4, 13],
+			[4, 14],
+			[4, 15],
+			[4, 16],
+			[4, 17],
+			[17, 18],
+			[18, 19],
+			[18, 20]
+		],
+		"circular": []
+	}
 }

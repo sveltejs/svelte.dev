@@ -11,8 +11,6 @@
 	"version": "0.1.5",
 	"svelte_range": "^3.29.0",
 	"last_rune_check_version": "0.1.5",
-	"dependencies": [],
-	"unpacked_size": 12788,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -230,5 +228,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 8
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@svelte-library/svelte-persistable",
+				"version": "0.1.5",
+				"size": 12788
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

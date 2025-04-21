@@ -13,13 +13,6 @@
 	"version": "0.4.0",
 	"svelte_range": "^5",
 	"last_rune_check_version": "0.4.0",
-	"dependencies": [
-		{
-			"name": "esm-env",
-			"semver": "^1.2.2"
-		}
-	],
-	"unpacked_size": 38404,
 	"downloads_history": [
 		{
 			"range": [1732473000000, 1733077799999],
@@ -101,5 +94,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 72
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "sv-router",
+				"version": "0.4.0",
+				"size": 38404
+			},
+			{
+				"name": "esm-env",
+				"version": "1.2.2",
+				"size": 3784
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

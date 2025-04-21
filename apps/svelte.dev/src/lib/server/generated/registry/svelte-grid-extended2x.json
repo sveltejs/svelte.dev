@@ -14,8 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "1.1.5",
-	"dependencies": [],
-	"unpacked_size": 58243,
 	"downloads_history": [
 		{
 			"range": [1712514600000, 1713119399999],
@@ -185,5 +183,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-grid-extended2x",
+				"version": "1.1.5",
+				"size": 58243
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

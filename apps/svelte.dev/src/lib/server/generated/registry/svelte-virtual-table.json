@@ -12,8 +12,6 @@
 	"svelte_range": "^5.20.0",
 	"kit_range": "^2.5.27",
 	"last_rune_check_version": "2.0.2",
-	"dependencies": [],
-	"unpacked_size": 18337,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -327,5 +325,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 37
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-virtual-table",
+				"version": "2.0.2",
+				"size": 18337
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

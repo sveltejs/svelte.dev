@@ -14,13 +14,6 @@
 	"svelte_range": "^3.50.1",
 	"kit_range": "1.0.0-next.477",
 	"last_rune_check_version": "0.1.18",
-	"dependencies": [
-		{
-			"name": "has-match",
-			"semver": "^1.0.3"
-		}
-	],
-	"unpacked_size": 13044,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -238,5 +231,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "soggy",
+				"version": "0.1.18",
+				"size": 13044
+			},
+			{
+				"name": "has-match",
+				"version": "1.0.6",
+				"size": 3051
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

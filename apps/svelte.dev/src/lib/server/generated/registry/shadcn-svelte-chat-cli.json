@@ -14,37 +14,6 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "1.2.3",
-	"dependencies": [
-		{
-			"name": "@types/fs-extra",
-			"semver": "^11.0.4"
-		},
-		{
-			"name": "chalk",
-			"semver": "^5.4.1"
-		},
-		{
-			"name": "commander",
-			"semver": "^13.1.0"
-		},
-		{
-			"name": "fs-extra",
-			"semver": "^11.3.0"
-		},
-		{
-			"name": "ora",
-			"semver": "^8.2.0"
-		},
-		{
-			"name": "prompts",
-			"semver": "^2.4.2"
-		},
-		{
-			"name": "type-fest",
-			"semver": "^4.35.0"
-		}
-	],
-	"unpacked_size": 34528,
 	"downloads_history": [
 		{
 			"range": [1739730600000, 1740335399999],
@@ -78,5 +47,211 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 17
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@shadcn-svelte-chat/cli",
+				"version": "1.2.3",
+				"size": 34528
+			},
+			{
+				"name": "@types/fs-extra",
+				"version": "11.0.4",
+				"size": 36831
+			},
+			{
+				"name": "@types/node",
+				"version": "22.14.1",
+				"size": 2331510
+			},
+			{
+				"name": "undici-types",
+				"version": "6.21.0",
+				"size": 83680
+			},
+			{
+				"name": "@types/jsonfile",
+				"version": "6.1.4",
+				"size": 5630
+			},
+			{
+				"name": "chalk",
+				"version": "5.4.1",
+				"size": 44242
+			},
+			{
+				"name": "commander",
+				"version": "13.1.0",
+				"size": 200514
+			},
+			{
+				"name": "fs-extra",
+				"version": "11.3.0",
+				"size": 55287
+			},
+			{
+				"name": "graceful-fs",
+				"version": "4.2.11",
+				"size": 32535
+			},
+			{
+				"name": "jsonfile",
+				"version": "6.1.0",
+				"size": 19750
+			},
+			{
+				"name": "universalify",
+				"version": "2.0.1",
+				"size": 4675
+			},
+			{
+				"name": "ora",
+				"version": "8.2.0",
+				"size": 27514
+			},
+			{
+				"name": "cli-cursor",
+				"version": "5.0.0",
+				"size": 4109
+			},
+			{
+				"name": "restore-cursor",
+				"version": "5.1.0",
+				"size": 3129
+			},
+			{
+				"name": "onetime",
+				"version": "7.0.0",
+				"size": 5447
+			},
+			{
+				"name": "mimic-function",
+				"version": "5.0.1",
+				"size": 8096
+			},
+			{
+				"name": "signal-exit",
+				"version": "4.1.0",
+				"size": 76966
+			},
+			{
+				"name": "cli-spinners",
+				"version": "2.9.2",
+				"size": 32113
+			},
+			{
+				"name": "is-interactive",
+				"version": "2.0.0",
+				"size": 4726
+			},
+			{
+				"name": "is-unicode-supported",
+				"version": "2.1.0",
+				"size": 3958
+			},
+			{
+				"name": "log-symbols",
+				"version": "6.0.0",
+				"size": 4246
+			},
+			{
+				"name": "is-unicode-supported",
+				"version": "1.3.0",
+				"size": 3884
+			},
+			{
+				"name": "stdin-discarder",
+				"version": "0.2.2",
+				"size": 4041
+			},
+			{
+				"name": "string-width",
+				"version": "7.2.0",
+				"size": 7773
+			},
+			{
+				"name": "emoji-regex",
+				"version": "10.4.0",
+				"size": 31990
+			},
+			{
+				"name": "get-east-asian-width",
+				"version": "1.3.0",
+				"size": 15688
+			},
+			{
+				"name": "strip-ansi",
+				"version": "7.1.0",
+				"size": 4321
+			},
+			{
+				"name": "ansi-regex",
+				"version": "6.1.0",
+				"size": 5412
+			},
+			{
+				"name": "prompts",
+				"version": "2.4.2",
+				"size": 186815
+			},
+			{
+				"name": "kleur",
+				"version": "3.0.3",
+				"size": 9893
+			},
+			{
+				"name": "sisteransi",
+				"version": "1.0.5",
+				"size": 6791
+			},
+			{
+				"name": "type-fest",
+				"version": "4.40.0",
+				"size": 438455
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[1, 4],
+			[4, 2],
+			[2, 3],
+			[0, 5],
+			[0, 6],
+			[0, 7],
+			[7, 8],
+			[7, 9],
+			[9, 10],
+			[7, 10],
+			[0, 11],
+			[11, 5],
+			[11, 12],
+			[12, 13],
+			[13, 14],
+			[14, 15],
+			[13, 16],
+			[11, 17],
+			[11, 18],
+			[11, 19],
+			[11, 20],
+			[20, 5],
+			[20, 21],
+			[11, 22],
+			[11, 23],
+			[23, 24],
+			[23, 25],
+			[23, 26],
+			[26, 27],
+			[11, 26],
+			[26, 27],
+			[0, 28],
+			[28, 29],
+			[28, 30],
+			[0, 31]
+		],
+		"circular": []
+	}
 }

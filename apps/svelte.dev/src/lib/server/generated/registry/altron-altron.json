@@ -14,13 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.4",
 	"last_rune_check_version": "4.0.1",
-	"dependencies": [
-		{
-			"name": "nanoid",
-			"semver": "^5.0.3"
-		}
-	],
-	"unpacked_size": 47268,
 	"downloads_history": [
 		{
 			"range": [1699813800000, 1700418599999],
@@ -314,5 +307,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 14
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@altron/altron",
+				"version": "4.0.1",
+				"size": 47268
+			},
+			{
+				"name": "nanoid",
+				"version": "5.1.5",
+				"size": 12143
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

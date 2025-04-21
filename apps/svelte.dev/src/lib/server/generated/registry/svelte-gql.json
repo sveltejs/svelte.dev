@@ -13,57 +13,6 @@
 	"version": "0.1.9",
 	"svelte_range": "^3.5.1",
 	"last_rune_check_version": "0.1.9",
-	"dependencies": [
-		{
-			"name": "@sindresorhus/fnv1a",
-			"semver": "^1.2.0"
-		},
-		{
-			"name": "callbag-merge-map",
-			"semver": "^0.0.1"
-		},
-		{
-			"name": "callbag-observe",
-			"semver": "^1.0.0"
-		},
-		{
-			"name": "callbag-of",
-			"semver": "^2.0.0"
-		},
-		{
-			"name": "callbag-pipe",
-			"semver": "^1.2.0"
-		},
-		{
-			"name": "extract-files",
-			"semver": "^5.0.1"
-		},
-		{
-			"name": "shadow-callbag",
-			"semver": "^1.0.0"
-		},
-		{
-			"name": "tallbag-filter",
-			"semver": "^1.0.0"
-		},
-		{
-			"name": "tallbag-from-fetch",
-			"semver": "^1.0.3"
-		},
-		{
-			"name": "tallbag-map",
-			"semver": "^1.0.0"
-		},
-		{
-			"name": "tallbag-share",
-			"semver": "^1.0.0"
-		},
-		{
-			"name": "tallbag-take",
-			"semver": "^1.0.0"
-		}
-	],
-	"unpacked_size": 130445,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -345,5 +294,126 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 12
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-gql",
+				"version": "0.1.9",
+				"size": 130445
+			},
+			{
+				"name": "@sindresorhus/fnv1a",
+				"version": "1.2.0",
+				"size": 4102
+			},
+			{
+				"name": "callbag-merge-map",
+				"version": "0.0.1",
+				"size": 5440
+			},
+			{
+				"name": "callbag-observe",
+				"version": "1.0.0"
+			},
+			{
+				"name": "callbag-of",
+				"version": "2.0.1",
+				"size": 3764
+			},
+			{
+				"name": "callbag",
+				"version": "1.5.1",
+				"size": 24894
+			},
+			{
+				"name": "callbag-pipe",
+				"version": "1.2.0",
+				"size": 8831
+			},
+			{
+				"name": "extract-files",
+				"version": "5.0.1",
+				"size": 20439
+			},
+			{
+				"name": "shadow-callbag",
+				"version": "1.0.0",
+				"size": 20327
+			},
+			{
+				"name": "callbag",
+				"version": "1.2.0",
+				"size": 24431
+			},
+			{
+				"name": "tallbag-filter",
+				"version": "1.0.0",
+				"size": 8274
+			},
+			{
+				"name": "tallbag",
+				"version": "1.2.0",
+				"size": 73626
+			},
+			{
+				"name": "tallbag-from-fetch",
+				"version": "1.0.5",
+				"size": 3940
+			},
+			{
+				"name": "tallbag-map",
+				"version": "1.0.0",
+				"size": 8194
+			},
+			{
+				"name": "tallbag-share",
+				"version": "1.0.0",
+				"size": 15007
+			},
+			{
+				"name": "tallbag-take",
+				"version": "1.0.0",
+				"size": 8761
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[0, 4],
+			[4, 5],
+			[0, 6],
+			[0, 7],
+			[0, 8],
+			[8, 9],
+			[0, 10],
+			[10, 11],
+			[11, 9],
+			[10, 8],
+			[8, 9],
+			[0, 12],
+			[12, 8],
+			[8, 9],
+			[12, 11],
+			[11, 9],
+			[0, 13],
+			[13, 8],
+			[8, 9],
+			[13, 11],
+			[11, 9],
+			[0, 14],
+			[14, 11],
+			[11, 9],
+			[14, 8],
+			[8, 9],
+			[0, 15],
+			[15, 11],
+			[11, 9],
+			[15, 8],
+			[8, 9]
+		],
+		"circular": []
+	}
 }

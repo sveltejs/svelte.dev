@@ -14,8 +14,6 @@
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.0.0",
 	"last_rune_check_version": "0.2.5",
-	"dependencies": [],
-	"unpacked_size": 13087,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -289,5 +287,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "val-i18n-svelte",
+				"version": "0.2.5",
+				"size": 13087
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

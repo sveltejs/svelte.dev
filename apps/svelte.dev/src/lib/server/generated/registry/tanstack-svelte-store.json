@@ -13,13 +13,6 @@
 	"version": "0.7.0",
 	"svelte_range": "^5.0.0",
 	"last_rune_check_version": "0.7.0",
-	"dependencies": [
-		{
-			"name": "@tanstack/store",
-			"semver": "0.7.0"
-		}
-	],
-	"unpacked_size": 6713,
 	"downloads_history": [
 		{
 			"range": [1718562600000, 1719167399999],
@@ -193,5 +186,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 68
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@tanstack/svelte-store",
+				"version": "0.7.0",
+				"size": 6713
+			},
+			{
+				"name": "@tanstack/store",
+				"version": "0.7.0",
+				"size": 80777
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

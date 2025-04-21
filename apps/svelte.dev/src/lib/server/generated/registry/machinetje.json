@@ -14,8 +14,6 @@
 	"svelte_range": "^5.0.0-next.143",
 	"kit_range": "^2.5.10",
 	"last_rune_check_version": "0.4.0",
-	"dependencies": [],
-	"unpacked_size": 22622,
 	"downloads_history": [
 		{
 			"range": [1707676200000, 1708280999999],
@@ -185,5 +183,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "machinetje",
+				"version": "0.4.0",
+				"size": 22622
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

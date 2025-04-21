@@ -14,29 +14,6 @@
 	"svelte_range": "^5.0.0-next.259",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "1.0.3",
-	"dependencies": [
-		{
-			"name": "@ag-grid-community/client-side-row-model",
-			"semver": "^32.2.1"
-		},
-		{
-			"name": "@ag-grid-community/core",
-			"semver": "^32.2.1"
-		},
-		{
-			"name": "@ag-grid-community/theming",
-			"semver": "^32.2.0"
-		},
-		{
-			"name": "@ag-grid-enterprise/row-grouping",
-			"semver": "^32.2.1"
-		},
-		{
-			"name": "svelte",
-			"semver": "^5.0.0-next.259"
-		}
-	],
-	"unpacked_size": 17028,
 	"downloads_history": [
 		{
 			"range": [1726425000000, 1727029799999],
@@ -158,5 +135,196 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 29
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "ag-grid-svelte5",
+				"version": "1.0.3",
+				"size": 17028
+			},
+			{
+				"name": "@ag-grid-community/client-side-row-model",
+				"version": "32.3.5",
+				"size": 596774
+			},
+			{
+				"name": "tslib",
+				"version": "2.8.1",
+				"size": 90359
+			},
+			{
+				"name": "@ag-grid-community/core",
+				"version": "32.3.5",
+				"size": 6192583
+			},
+			{
+				"name": "ag-charts-types",
+				"version": "10.3.5",
+				"size": 327993
+			},
+			{
+				"name": "@ag-grid-community/theming",
+				"version": "32.3.5",
+				"size": 1169098
+			},
+			{
+				"name": "@ag-grid-enterprise/row-grouping",
+				"version": "32.3.5",
+				"size": 603895
+			},
+			{
+				"name": "@ag-grid-enterprise/core",
+				"version": "32.3.5",
+				"size": 1098298
+			},
+			{
+				"name": "svelte",
+				"version": "5.28.1",
+				"size": 2426419
+			},
+			{
+				"name": "@ampproject/remapping",
+				"version": "2.3.0",
+				"size": 78946
+			},
+			{
+				"name": "@jridgewell/gen-mapping",
+				"version": "0.3.8",
+				"size": 81596
+			},
+			{
+				"name": "@jridgewell/set-array",
+				"version": "1.2.1",
+				"size": 17945
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "@jridgewell/trace-mapping",
+				"version": "0.3.25",
+				"size": 169330
+			},
+			{
+				"name": "@jridgewell/resolve-uri",
+				"version": "3.1.2",
+				"size": 53153
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "@sveltejs/acorn-typescript",
+				"version": "1.0.5",
+				"size": 197476
+			},
+			{
+				"name": "aria-query",
+				"version": "5.3.2",
+				"size": 176114
+			},
+			{
+				"name": "axobject-query",
+				"version": "4.1.0",
+				"size": 110878
+			},
+			{
+				"name": "clsx",
+				"version": "2.1.1",
+				"size": 8555
+			},
+			{
+				"name": "esm-env",
+				"version": "1.2.2",
+				"size": 3784
+			},
+			{
+				"name": "esrap",
+				"version": "1.4.6",
+				"size": 50818
+			},
+			{
+				"name": "is-reference",
+				"version": "3.0.3",
+				"size": 3953
+			},
+			{
+				"name": "locate-character",
+				"version": "3.0.0",
+				"size": 5325
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "zimmerframe",
+				"version": "1.1.2",
+				"size": 12266
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[3, 2],
+			[3, 4],
+			[0, 3],
+			[3, 2],
+			[3, 4],
+			[0, 5],
+			[5, 2],
+			[5, 3],
+			[3, 2],
+			[3, 4],
+			[0, 6],
+			[6, 3],
+			[3, 2],
+			[3, 4],
+			[6, 7],
+			[7, 3],
+			[3, 2],
+			[3, 4],
+			[0, 8],
+			[8, 9],
+			[9, 10],
+			[10, 11],
+			[10, 12],
+			[10, 13],
+			[13, 14],
+			[13, 12],
+			[9, 13],
+			[13, 14],
+			[13, 12],
+			[8, 12],
+			[8, 15],
+			[8, 16],
+			[8, 17],
+			[8, 18],
+			[8, 19],
+			[8, 20],
+			[8, 21],
+			[8, 22],
+			[22, 12],
+			[8, 23],
+			[23, 15],
+			[8, 24],
+			[8, 25],
+			[25, 12],
+			[8, 26]
+		],
+		"circular": []
+	}
 }

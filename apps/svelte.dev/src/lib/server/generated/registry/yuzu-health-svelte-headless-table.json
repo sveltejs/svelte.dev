@@ -13,21 +13,6 @@
 	"svelte_range": "^3 || ^4",
 	"kit_range": "^1.0.1",
 	"last_rune_check_version": "0.18.5",
-	"dependencies": [
-		{
-			"name": "svelte-keyed",
-			"semver": "^1.1.6"
-		},
-		{
-			"name": "svelte-render",
-			"semver": "^1.6.1"
-		},
-		{
-			"name": "svelte-subscribe",
-			"semver": "^1.0.5"
-		}
-	],
-	"unpacked_size": 157940,
 	"downloads_history": [
 		{
 			"range": [1702233000000, 1702837799999],
@@ -297,5 +282,37 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 15
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@yuzu-health/svelte-headless-table",
+				"version": "0.18.5",
+				"size": 157940
+			},
+			{
+				"name": "svelte-keyed",
+				"version": "1.1.7",
+				"size": 15684
+			},
+			{
+				"name": "svelte-render",
+				"version": "1.6.1",
+				"size": 13951
+			},
+			{
+				"name": "svelte-subscribe",
+				"version": "1.0.6",
+				"size": 7788
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[0, 3]
+		],
+		"circular": []
+	}
 }

@@ -14,8 +14,6 @@
 	"svelte_range": "^5.16.0",
 	"kit_range": "^2.12.1",
 	"last_rune_check_version": "0.6.2",
-	"dependencies": [],
-	"unpacked_size": 196811,
 	"downloads_history": [
 		{
 			"range": [1720981800000, 1721586599999],
@@ -165,5 +163,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 57
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "mytril",
+				"version": "0.6.2",
+				"size": 196811
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

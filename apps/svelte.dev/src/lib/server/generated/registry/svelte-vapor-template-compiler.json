@@ -13,33 +13,6 @@
 	"version": "0.0.5",
 	"svelte_range": "4.2.18",
 	"last_rune_check_version": "0.0.5",
-	"dependencies": [
-		{
-			"name": "@babel/parser",
-			"semver": "^7.26.2"
-		},
-		{
-			"name": "@vue-vapor/compiler-dom",
-			"semver": "https://pkg.pr.new/vuejs/vue-vapor/@vue/compiler-dom@3f6ce96"
-		},
-		{
-			"name": "@vue-vapor/compiler-vapor",
-			"semver": "https://pkg.pr.new/vuejs/vue-vapor/@vue/compiler-vapor@3f6ce96"
-		},
-		{
-			"name": "@vue-vapor/shared",
-			"semver": "https://pkg.pr.new/vuejs/vue-vapor/@vue/shared@3f6ce96"
-		},
-		{
-			"name": "astring",
-			"semver": "^1.8.6"
-		},
-		{
-			"name": "svelte",
-			"semver": "4.2.18"
-		}
-	],
-	"unpacked_size": 175571,
 	"downloads_history": [
 		{
 			"range": [1724610600000, 1725215399999],
@@ -145,5 +118,255 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-vapor-template-compiler",
+				"version": "0.0.5",
+				"size": 175571
+			},
+			{
+				"name": "@babel/parser",
+				"version": "7.27.0",
+				"size": 1924962
+			},
+			{
+				"name": "@babel/types",
+				"version": "7.27.0",
+				"size": 2583295
+			},
+			{
+				"name": "@babel/helper-string-parser",
+				"version": "7.25.9",
+				"size": 31816
+			},
+			{
+				"name": "@babel/helper-validator-identifier",
+				"version": "7.25.9",
+				"size": 48330
+			},
+			{
+				"name": "@vue-vapor/compiler-dom",
+				"version": "3.5.13"
+			},
+			{
+				"name": "@vue/shared",
+				"version": "3.5.13"
+			},
+			{
+				"name": "@vue/compiler-core",
+				"version": "3.5.13"
+			},
+			{
+				"name": "entities",
+				"version": "4.5.0",
+				"size": 412892
+			},
+			{
+				"name": "estree-walker",
+				"version": "2.0.2",
+				"size": 50243
+			},
+			{
+				"name": "source-map-js",
+				"version": "1.2.1",
+				"size": 139872
+			},
+			{
+				"name": "@vue-vapor/compiler-vapor",
+				"version": "3.0.0-vapor"
+			},
+			{
+				"name": "@vue/compiler-dom",
+				"version": "3.5.13"
+			},
+			{
+				"name": "@vue-vapor/shared",
+				"version": "3.5.13"
+			},
+			{
+				"name": "astring",
+				"version": "1.9.0",
+				"size": 273164
+			},
+			{
+				"name": "svelte",
+				"version": "4.2.18",
+				"size": 2632915
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "code-red",
+				"version": "1.0.4",
+				"size": 55185
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "estree-walker",
+				"version": "3.0.3",
+				"size": 17599
+			},
+			{
+				"name": "periscopic",
+				"version": "3.1.0",
+				"size": 11219
+			},
+			{
+				"name": "is-reference",
+				"version": "3.0.3",
+				"size": 3953
+			},
+			{
+				"name": "css-tree",
+				"version": "2.3.1",
+				"size": 1190591
+			},
+			{
+				"name": "mdn-data",
+				"version": "2.0.30",
+				"size": 602138
+			},
+			{
+				"name": "aria-query",
+				"version": "5.3.2",
+				"size": 176114
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "axobject-query",
+				"version": "4.1.0",
+				"size": 110878
+			},
+			{
+				"name": "locate-character",
+				"version": "3.0.0",
+				"size": 5325
+			},
+			{
+				"name": "@ampproject/remapping",
+				"version": "2.3.0",
+				"size": 78946
+			},
+			{
+				"name": "@jridgewell/gen-mapping",
+				"version": "0.3.8",
+				"size": 81596
+			},
+			{
+				"name": "@jridgewell/set-array",
+				"version": "1.2.1",
+				"size": 17945
+			},
+			{
+				"name": "@jridgewell/trace-mapping",
+				"version": "0.3.25",
+				"size": 169330
+			},
+			{
+				"name": "@jridgewell/resolve-uri",
+				"version": "3.1.2",
+				"size": 53153
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[2, 4],
+			[0, 5],
+			[5, 6],
+			[5, 7],
+			[7, 1],
+			[1, 2],
+			[2, 3],
+			[2, 4],
+			[7, 6],
+			[7, 8],
+			[7, 9],
+			[7, 10],
+			[0, 11],
+			[11, 12],
+			[12, 6],
+			[12, 7],
+			[7, 1],
+			[1, 2],
+			[2, 3],
+			[2, 4],
+			[7, 6],
+			[7, 8],
+			[7, 9],
+			[7, 10],
+			[11, 6],
+			[11, 10],
+			[0, 13],
+			[0, 14],
+			[0, 15],
+			[15, 16],
+			[15, 17],
+			[17, 18],
+			[17, 19],
+			[17, 16],
+			[17, 20],
+			[20, 19],
+			[17, 21],
+			[21, 19],
+			[21, 20],
+			[20, 19],
+			[21, 22],
+			[22, 19],
+			[15, 23],
+			[23, 24],
+			[23, 10],
+			[15, 25],
+			[15, 21],
+			[21, 19],
+			[21, 20],
+			[20, 19],
+			[21, 22],
+			[22, 19],
+			[15, 22],
+			[22, 19],
+			[15, 26],
+			[26, 18],
+			[15, 19],
+			[15, 20],
+			[20, 19],
+			[15, 27],
+			[15, 28],
+			[15, 29],
+			[29, 30],
+			[30, 31],
+			[30, 18],
+			[30, 32],
+			[32, 33],
+			[32, 18],
+			[29, 32],
+			[32, 33],
+			[32, 18],
+			[15, 32],
+			[32, 33],
+			[32, 18],
+			[15, 18]
+		],
+		"circular": []
+	}
 }

@@ -14,8 +14,6 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.5.27",
 	"last_rune_check_version": "1.0.0",
-	"dependencies": [],
-	"unpacked_size": 10896,
 	"downloads_history": [
 		{
 			"range": [1711909800000, 1712514599999],
@@ -233,5 +231,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 84
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-guard",
+				"version": "1.0.0",
+				"size": 10896
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

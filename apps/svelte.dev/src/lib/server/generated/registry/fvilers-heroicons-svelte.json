@@ -14,8 +14,6 @@
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "2.1.5-fix.3",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 1283353,
 	"downloads_history": [
 		{
 			"range": [1730053800000, 1730658599999],
@@ -105,5 +103,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 9
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@fvilers/heroicons-svelte",
+				"version": "2.1.5-fix.3",
+				"size": 1283353
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

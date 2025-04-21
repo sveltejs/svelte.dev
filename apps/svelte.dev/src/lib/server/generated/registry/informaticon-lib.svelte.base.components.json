@@ -13,8 +13,6 @@
 	"svelte_range": "~3.49.0",
 	"kit_range": "1.0.0-next.475",
 	"last_rune_check_version": "0.0.1",
-	"dependencies": [],
-	"unpacked_size": 2764,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -304,5 +302,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 19
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@informaticon/lib.svelte.base.components",
+				"version": "0.0.1",
+				"size": 2764
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

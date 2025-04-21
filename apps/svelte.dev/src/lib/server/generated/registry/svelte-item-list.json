@@ -13,13 +13,6 @@
 	"version": "2.8.5",
 	"svelte_range": "^3.15.0",
 	"last_rune_check_version": "2.8.5",
-	"dependencies": [
-		{
-			"name": "timeago.js",
-			"semver": "^4.0.2"
-		}
-	],
-	"unpacked_size": 178130,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -329,5 +322,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 26
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-item-list",
+				"version": "2.8.5",
+				"size": 178130
+			},
+			{
+				"name": "timeago.js",
+				"version": "4.0.2",
+				"size": 262230
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

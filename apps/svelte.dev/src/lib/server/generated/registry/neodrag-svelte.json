@@ -13,8 +13,6 @@
 	"version": "2.3.2",
 	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
 	"last_rune_check_version": "2.3.2",
-	"dependencies": [],
-	"unpacked_size": 33675,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -328,5 +326,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 3787
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@neodrag/svelte",
+				"version": "2.3.2",
+				"size": 33675
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

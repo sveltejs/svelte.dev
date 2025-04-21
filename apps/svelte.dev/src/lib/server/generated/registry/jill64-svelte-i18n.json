@@ -14,29 +14,6 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "2.2.1",
-	"dependencies": [
-		{
-			"name": "@jill64/svelte-html",
-			"semver": "2.0.0"
-		},
-		{
-			"name": "@jill64/svelte-menu",
-			"semver": "2.0.1"
-		},
-		{
-			"name": "@jill64/svelte-storage",
-			"semver": "2.0.0"
-		},
-		{
-			"name": "accept-language",
-			"semver": "3.0.20"
-		},
-		{
-			"name": "svelte-baked-cookie",
-			"semver": "2.0.2"
-		}
-	],
-	"unpacked_size": 30649,
 	"downloads_history": [
 		{
 			"range": [1698604200000, 1699208999999],
@@ -342,5 +319,92 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4585
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@jill64/svelte-i18n",
+				"version": "2.2.1",
+				"size": 30649
+			},
+			{
+				"name": "@jill64/svelte-html",
+				"version": "2.0.0",
+				"size": 7386
+			},
+			{
+				"name": "@jill64/svelte-menu",
+				"version": "2.0.1",
+				"size": 8291
+			},
+			{
+				"name": "@jill64/svelte-storage",
+				"version": "2.0.0",
+				"size": 7494
+			},
+			{
+				"name": "@jill64/typed-storage",
+				"version": "3.1.5",
+				"size": 6769
+			},
+			{
+				"name": "ts-serde",
+				"version": "1.0.8",
+				"size": 11096
+			},
+			{
+				"name": "devalue",
+				"version": "5.1.1",
+				"size": 31833
+			},
+			{
+				"name": "accept-language",
+				"version": "3.0.20",
+				"size": 20444
+			},
+			{
+				"name": "bcp47",
+				"version": "1.1.2"
+			},
+			{
+				"name": "svelte-baked-cookie",
+				"version": "2.0.2",
+				"size": 10363
+			},
+			{
+				"name": "cookie",
+				"version": "1.0.2",
+				"size": 46521
+			},
+			{
+				"name": "@types/cookie",
+				"version": "1.0.0",
+				"size": 1722
+			},
+			{
+				"name": "@jill64/transform",
+				"version": "1.0.4",
+				"size": 4589
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[3, 4],
+			[4, 5],
+			[5, 6],
+			[0, 7],
+			[7, 8],
+			[0, 9],
+			[9, 10],
+			[9, 5],
+			[5, 6],
+			[9, 11],
+			[11, 10],
+			[9, 12]
+		],
+		"circular": []
+	}
 }

@@ -13,17 +13,6 @@
 	"svelte_range": "^3.49.0",
 	"kit_range": "1.0.0-next.401",
 	"last_rune_check_version": "0.1.5",
-	"dependencies": [
-		{
-			"name": "cookie",
-			"semver": "^0.5.0"
-		},
-		{
-			"name": "jose",
-			"semver": "^4.8.3"
-		}
-	],
-	"unpacked_size": 169890,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +322,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 10
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "sveltekit-oauth",
+				"version": "0.1.5",
+				"size": 169890
+			},
+			{
+				"name": "cookie",
+				"version": "0.5.0",
+				"size": 23137
+			},
+			{
+				"name": "jose",
+				"version": "4.15.9",
+				"size": 548521
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

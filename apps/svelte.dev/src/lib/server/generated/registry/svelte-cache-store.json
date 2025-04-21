@@ -12,8 +12,6 @@
 	"svelte_range": "^5.0.0-next.260",
 	"last_rune_check_version": "0.5.6",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 126887,
 	"downloads_history": [
 		{
 			"range": [1727029800000, 1727634599999],
@@ -115,5 +113,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-cache-store",
+				"version": "0.5.6",
+				"size": 126887
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

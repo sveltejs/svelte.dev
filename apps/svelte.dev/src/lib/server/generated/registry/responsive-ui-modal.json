@@ -13,8 +13,6 @@
 	"version": "1.1.0-alpha.58",
 	"svelte_range": "^3.46.2",
 	"last_rune_check_version": "1.1.0-alpha.58",
-	"dependencies": [],
-	"unpacked_size": 148577,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -308,5 +306,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 14
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@responsive-ui/modal",
+				"version": "1.1.0-alpha.58",
+				"size": 148577
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

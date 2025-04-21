@@ -13,17 +13,6 @@
 	"version": "1.0.1",
 	"svelte_range": "^3.29.4",
 	"last_rune_check_version": "1.0.1",
-	"dependencies": [
-		{
-			"name": "codejar",
-			"semver": "^3.2.2"
-		},
-		{
-			"name": "prismjs",
-			"semver": "^1.22.0"
-		}
-	],
-	"unpacked_size": 12748,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -337,5 +326,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 96
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-code-editor",
+				"version": "1.0.1",
+				"size": 12748
+			},
+			{
+				"name": "codejar",
+				"version": "3.7.0",
+				"size": 45381
+			},
+			{
+				"name": "prismjs",
+				"version": "1.30.0",
+				"size": 2052735
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

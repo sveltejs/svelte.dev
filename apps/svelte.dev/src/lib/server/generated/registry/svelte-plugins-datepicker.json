@@ -13,8 +13,6 @@
 	"version": "1.0.11",
 	"svelte_range": "^4.2.8",
 	"last_rune_check_version": "1.0.11",
-	"dependencies": [],
-	"unpacked_size": 383103,
 	"downloads_history": [
 		{
 			"range": [1700418600000, 1701023399999],
@@ -308,5 +306,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 3844
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@svelte-plugins/datepicker",
+				"version": "1.0.11",
+				"size": 383103
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

@@ -14,8 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.27.6",
 	"last_rune_check_version": "0.0.5",
-	"dependencies": [],
-	"unpacked_size": 10174,
 	"downloads_history": [
 		{
 			"range": [1700418600000, 1701023399999],
@@ -181,5 +179,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 11
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "sveltekit-route-hooks",
+				"version": "0.0.5",
+				"size": 10174
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

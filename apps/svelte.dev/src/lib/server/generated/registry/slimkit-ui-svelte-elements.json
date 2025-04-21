@@ -12,13 +12,6 @@
 	"svelte_range": "^3.20.1",
 	"last_rune_check_version": "0.0.16",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "@svgdotjs/svg.js",
-			"semver": "^3.1.1"
-		}
-	],
-	"unpacked_size": 4026093,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -288,5 +281,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 11
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@slimkit-ui/svelte-elements",
+				"version": "0.0.16",
+				"size": 4026093
+			},
+			{
+				"name": "@svgdotjs/svg.js",
+				"version": "3.2.4",
+				"size": 2644256
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

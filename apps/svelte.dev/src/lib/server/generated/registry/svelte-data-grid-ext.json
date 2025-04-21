@@ -13,21 +13,6 @@
 	"version": "3.0.1",
 	"svelte_range": "^3.16.7",
 	"last_rune_check_version": "3.0.1",
-	"dependencies": [
-		{
-			"name": "debounce",
-			"semver": "^1.2.0"
-		},
-		{
-			"name": "deep-diff",
-			"semver": "^1.0.2"
-		},
-		{
-			"name": "detect-browser",
-			"semver": "^4.8.0"
-		}
-	],
-	"unpacked_size": 150749,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -209,5 +194,36 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-data-grid-ext",
+				"version": "3.0.1",
+				"size": 150749
+			},
+			{
+				"name": "debounce",
+				"version": "1.2.1",
+				"size": 11960
+			},
+			{
+				"name": "deep-diff",
+				"version": "1.0.2",
+				"size": 542187
+			},
+			{
+				"name": "detect-browser",
+				"version": "4.8.0",
+				"size": 15097
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3]
+		],
+		"circular": []
+	}
 }

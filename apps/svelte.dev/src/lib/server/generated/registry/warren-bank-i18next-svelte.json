@@ -13,8 +13,6 @@
 	"version": "1.2.0",
 	"svelte_range": "*",
 	"last_rune_check_version": "1.2.0",
-	"dependencies": [],
-	"unpacked_size": 24880,
 	"downloads_history": [
 		{
 			"range": [1713119400000, 1713724199999],
@@ -164,5 +162,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@warren-bank/i18next-svelte",
+				"version": "1.2.0",
+				"size": 24880
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

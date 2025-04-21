@@ -13,21 +13,6 @@
 	"version": "1.0.10",
 	"svelte_range": "^3.44.3",
 	"last_rune_check_version": "1.0.10",
-	"dependencies": [
-		{
-			"name": "bootstrap",
-			"semver": "^5.3.1"
-		},
-		{
-			"name": "ol",
-			"semver": "^7.4.0"
-		},
-		{
-			"name": "sveltestrap",
-			"semver": "^5.11.1"
-		}
-	],
-	"unpacked_size": 3595798,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -225,5 +210,233 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "kspatial-template1",
+				"version": "1.0.10",
+				"size": 3595798
+			},
+			{
+				"name": "bootstrap",
+				"version": "5.3.5",
+				"size": 9610854
+			},
+			{
+				"name": "ol",
+				"version": "7.5.2",
+				"size": 9839265
+			},
+			{
+				"name": "pbf",
+				"version": "3.2.1",
+				"size": 124748
+			},
+			{
+				"name": "ieee754",
+				"version": "1.2.1",
+				"size": 6796
+			},
+			{
+				"name": "resolve-protobuf-schema",
+				"version": "2.1.0",
+				"size": 5243
+			},
+			{
+				"name": "protocol-buffers-schema",
+				"version": "3.6.0",
+				"size": 68684
+			},
+			{
+				"name": "rbush",
+				"version": "3.0.1",
+				"size": 47977
+			},
+			{
+				"name": "quickselect",
+				"version": "2.0.0",
+				"size": 5984
+			},
+			{
+				"name": "earcut",
+				"version": "2.2.4",
+				"size": 95170
+			},
+			{
+				"name": "geotiff",
+				"version": "2.1.3",
+				"size": 2129932
+			},
+			{
+				"name": "@petamoriken/float16",
+				"version": "3.9.2",
+				"size": 280362
+			},
+			{
+				"name": "lerc",
+				"version": "3.0.0",
+				"size": 140069
+			},
+			{
+				"name": "pako",
+				"version": "2.1.0",
+				"size": 1640808
+			},
+			{
+				"name": "parse-headers",
+				"version": "2.0.6",
+				"size": 6902
+			},
+			{
+				"name": "quick-lru",
+				"version": "6.1.2",
+				"size": 15235
+			},
+			{
+				"name": "web-worker",
+				"version": "1.5.0",
+				"size": 31056
+			},
+			{
+				"name": "xml-utils",
+				"version": "1.10.2",
+				"size": 30415
+			},
+			{
+				"name": "zstddec",
+				"version": "0.1.0",
+				"size": 315328
+			},
+			{
+				"name": "ol-mapbox-style",
+				"version": "10.7.0",
+				"size": 6600627
+			},
+			{
+				"name": "ol-mapbox-style",
+				"version": "^10.1.0",
+				"isCircular": true,
+				"circularTarget": 20
+			},
+			{
+				"name": "mapbox-to-css-font",
+				"version": "2.4.5",
+				"size": 6162
+			},
+			{
+				"name": "@mapbox/mapbox-gl-style-spec",
+				"version": "13.28.0",
+				"size": 3277248
+			},
+			{
+				"name": "rw",
+				"version": "1.3.3"
+			},
+			{
+				"name": "minimist",
+				"version": "1.2.8",
+				"size": 54477
+			},
+			{
+				"name": "sort-object",
+				"version": "0.3.2"
+			},
+			{
+				"name": "sort-asc",
+				"version": "0.1.0"
+			},
+			{
+				"name": "sort-desc",
+				"version": "0.1.1"
+			},
+			{
+				"name": "csscolorparser",
+				"version": "1.0.3"
+			},
+			{
+				"name": "@mapbox/unitbezier",
+				"version": "0.0.0"
+			},
+			{
+				"name": "@mapbox/point-geometry",
+				"version": "0.1.0"
+			},
+			{
+				"name": "json-stringify-pretty-compact",
+				"version": "2.0.0",
+				"size": 9642
+			},
+			{
+				"name": "@mapbox/jsonlint-lines-primitives",
+				"version": "2.0.2",
+				"size": 67804
+			},
+			{
+				"name": "sveltestrap",
+				"version": "5.11.3",
+				"size": 1502651
+			},
+			{
+				"name": "@popperjs/core",
+				"version": "2.11.8",
+				"size": 1463042
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[3, 4],
+			[3, 5],
+			[5, 6],
+			[2, 7],
+			[7, 8],
+			[2, 9],
+			[2, 10],
+			[10, 11],
+			[10, 12],
+			[10, 13],
+			[10, 14],
+			[10, 15],
+			[10, 16],
+			[10, 17],
+			[10, 18],
+			[2, 19],
+			[19, 2],
+			[2, 3],
+			[3, 4],
+			[3, 5],
+			[5, 6],
+			[2, 7],
+			[7, 8],
+			[2, 9],
+			[2, 10],
+			[10, 11],
+			[10, 12],
+			[10, 13],
+			[10, 14],
+			[10, 15],
+			[10, 16],
+			[10, 17],
+			[10, 18],
+			[2, 20],
+			[19, 21],
+			[19, 22],
+			[22, 23],
+			[22, 24],
+			[22, 25],
+			[25, 26],
+			[25, 27],
+			[22, 28],
+			[22, 29],
+			[22, 30],
+			[22, 31],
+			[22, 32],
+			[0, 33],
+			[33, 34]
+		],
+		"circular": [[20, 20]]
+	}
 }

@@ -12,21 +12,6 @@
 	"svelte_range": "^3.44.2",
 	"last_rune_check_version": "0.0.3",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "create-esm-loader",
-			"semver": "^0.1.1"
-		},
-		{
-			"name": "svelte",
-			"semver": "^3.44.2"
-		},
-		{
-			"name": "svelte-preprocess",
-			"semver": "^4.9.8"
-		}
-	],
-	"unpacked_size": 9879,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -332,5 +317,205 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 72
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-esm-loader",
+				"version": "0.0.3",
+				"size": 9879
+			},
+			{
+				"name": "create-esm-loader",
+				"version": "0.1.2",
+				"size": 19727
+			},
+			{
+				"name": "semver",
+				"version": "7.7.1",
+				"size": 96674
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			},
+			{
+				"name": "svelte-preprocess",
+				"version": "4.10.7",
+				"size": 102125
+			},
+			{
+				"name": "sorcery",
+				"version": "0.10.0"
+			},
+			{
+				"name": "sander",
+				"version": "0.5.1"
+			},
+			{
+				"name": "es6-promise",
+				"version": "3.3.1"
+			},
+			{
+				"name": "mkdirp",
+				"version": "0.5.6",
+				"size": 7688
+			},
+			{
+				"name": "minimist",
+				"version": "1.2.8",
+				"size": 54477
+			},
+			{
+				"name": "rimraf",
+				"version": "2.7.1",
+				"size": 15463
+			},
+			{
+				"name": "glob",
+				"version": "7.2.3",
+				"size": 55064
+			},
+			{
+				"name": "once",
+				"version": "1.4.0"
+			},
+			{
+				"name": "wrappy",
+				"version": "1.0.2"
+			},
+			{
+				"name": "inflight",
+				"version": "1.0.6"
+			},
+			{
+				"name": "inherits",
+				"version": "2.0.4",
+				"size": 3958
+			},
+			{
+				"name": "minimatch",
+				"version": "3.1.2",
+				"size": 34902
+			},
+			{
+				"name": "brace-expansion",
+				"version": "1.1.11",
+				"size": 11059
+			},
+			{
+				"name": "balanced-match",
+				"version": "1.0.2",
+				"size": 6939
+			},
+			{
+				"name": "concat-map",
+				"version": "0.0.1"
+			},
+			{
+				"name": "fs.realpath",
+				"version": "1.0.0"
+			},
+			{
+				"name": "path-is-absolute",
+				"version": "1.0.1"
+			},
+			{
+				"name": "graceful-fs",
+				"version": "4.2.11",
+				"size": 32535
+			},
+			{
+				"name": "buffer-crc32",
+				"version": "0.2.13"
+			},
+			{
+				"name": "sourcemap-codec",
+				"version": "1.4.8",
+				"size": 31802
+			},
+			{
+				"name": "@types/pug",
+				"version": "2.0.10",
+				"size": 9695
+			},
+			{
+				"name": "@types/sass",
+				"version": "1.43.1",
+				"size": 13146
+			},
+			{
+				"name": "@types/node",
+				"version": "22.14.1",
+				"size": 2331510
+			},
+			{
+				"name": "undici-types",
+				"version": "6.21.0",
+				"size": 83680
+			},
+			{
+				"name": "magic-string",
+				"version": "0.25.9",
+				"size": 373056
+			},
+			{
+				"name": "strip-indent",
+				"version": "3.0.0",
+				"size": 3312
+			},
+			{
+				"name": "min-indent",
+				"version": "1.0.1",
+				"size": 2969
+			},
+			{
+				"name": "detect-indent",
+				"version": "6.1.0",
+				"size": 9681
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[0, 4],
+			[4, 5],
+			[5, 6],
+			[6, 7],
+			[6, 8],
+			[8, 9],
+			[6, 10],
+			[10, 11],
+			[11, 12],
+			[12, 13],
+			[11, 14],
+			[14, 12],
+			[12, 13],
+			[14, 13],
+			[11, 15],
+			[11, 16],
+			[16, 17],
+			[17, 18],
+			[17, 19],
+			[11, 20],
+			[11, 21],
+			[6, 22],
+			[5, 9],
+			[5, 23],
+			[5, 24],
+			[4, 25],
+			[4, 26],
+			[26, 27],
+			[27, 28],
+			[4, 29],
+			[29, 24],
+			[4, 30],
+			[30, 31],
+			[4, 32]
+		],
+		"circular": []
+	}
 }

@@ -13,29 +13,6 @@
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.16.3",
 	"last_rune_check_version": "0.0.5",
-	"dependencies": [
-		{
-			"name": "@sveltejs/kit",
-			"semver": "^1.16.3"
-		},
-		{
-			"name": "axios",
-			"semver": "^1.4.0"
-		},
-		{
-			"name": "dotenv",
-			"semver": "^16.0.3"
-		},
-		{
-			"name": "firebase-admin",
-			"semver": "^11.8.0"
-		},
-		{
-			"name": "lodash",
-			"semver": "^4.17.21"
-		}
-	],
-	"unpacked_size": 59299,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -209,5 +186,706 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-widgets-firebase",
+				"version": "0.0.5",
+				"size": 59299
+			},
+			{
+				"name": "@sveltejs/kit",
+				"version": "1.30.4",
+				"size": 685130
+			},
+			{
+				"name": "sade",
+				"version": "1.8.1",
+				"size": 31545
+			},
+			{
+				"name": "mri",
+				"version": "1.2.0",
+				"size": 13261
+			},
+			{
+				"name": "sirv",
+				"version": "2.0.4",
+				"size": 20745
+			},
+			{
+				"name": "mrmime",
+				"version": "2.0.1",
+				"size": 33008
+			},
+			{
+				"name": "totalist",
+				"version": "3.0.1",
+				"size": 7459
+			},
+			{
+				"name": "@polka/url",
+				"version": "1.0.0-next.29",
+				"size": 4815
+			},
+			{
+				"name": "kleur",
+				"version": "4.1.5",
+				"size": 20250
+			},
+			{
+				"name": "cookie",
+				"version": "0.5.0",
+				"size": 23137
+			},
+			{
+				"name": "mrmime",
+				"version": "1.0.1",
+				"size": 31038
+			},
+			{
+				"name": "undici",
+				"version": "5.29.0",
+				"size": 1172246
+			},
+			{
+				"name": "@fastify/busboy",
+				"version": "2.1.1",
+				"size": 80189
+			},
+			{
+				"name": "devalue",
+				"version": "4.3.3",
+				"size": 25628
+			},
+			{
+				"name": "esm-env",
+				"version": "1.2.2",
+				"size": 3784
+			},
+			{
+				"name": "tiny-glob",
+				"version": "0.2.9",
+				"size": 12092
+			},
+			{
+				"name": "globalyzer",
+				"version": "0.1.0",
+				"size": 11416
+			},
+			{
+				"name": "globrex",
+				"version": "0.1.2",
+				"size": 14164
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "@types/cookie",
+				"version": "0.5.4",
+				"size": 9449
+			},
+			{
+				"name": "set-cookie-parser",
+				"version": "2.7.1",
+				"size": 16074
+			},
+			{
+				"name": "@sveltejs/vite-plugin-svelte",
+				"version": "2.5.3",
+				"size": 118376
+			},
+			{
+				"name": "debug",
+				"version": "4.4.0",
+				"size": 42798
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "vitefu",
+				"version": "0.2.5",
+				"size": 19174
+			},
+			{
+				"name": "deepmerge",
+				"version": "4.3.1",
+				"size": 31157
+			},
+			{
+				"name": "svelte-hmr",
+				"version": "0.15.3",
+				"size": 78275
+			},
+			{
+				"name": "@sveltejs/vite-plugin-svelte-inspector",
+				"version": "1.0.4",
+				"size": 22389
+			},
+			{
+				"name": "axios",
+				"version": "1.8.4",
+				"size": 2142875
+			},
+			{
+				"name": "form-data",
+				"version": "4.0.2",
+				"size": 31836
+			},
+			{
+				"name": "asynckit",
+				"version": "0.4.0"
+			},
+			{
+				"name": "combined-stream",
+				"version": "1.0.8",
+				"size": 11514
+			},
+			{
+				"name": "delayed-stream",
+				"version": "1.0.0"
+			},
+			{
+				"name": "es-set-tostringtag",
+				"version": "2.1.0",
+				"size": 14544
+			},
+			{
+				"name": "es-errors",
+				"version": "1.3.0",
+				"size": 12324
+			},
+			{
+				"name": "get-intrinsic",
+				"version": "1.3.0",
+				"size": 46542
+			},
+			{
+				"name": "call-bind-apply-helpers",
+				"version": "1.0.2",
+				"size": 15952
+			},
+			{
+				"name": "function-bind",
+				"version": "1.1.2",
+				"size": 31427
+			},
+			{
+				"name": "es-define-property",
+				"version": "1.0.1",
+				"size": 10217
+			},
+			{
+				"name": "es-object-atoms",
+				"version": "1.1.1",
+				"size": 11442
+			},
+			{
+				"name": "get-proto",
+				"version": "1.0.1",
+				"size": 10840
+			},
+			{
+				"name": "dunder-proto",
+				"version": "1.0.1",
+				"size": 13003
+			},
+			{
+				"name": "gopd",
+				"version": "1.2.0",
+				"size": 9869
+			},
+			{
+				"name": "has-symbols",
+				"version": "1.1.0",
+				"size": 23409
+			},
+			{
+				"name": "hasown",
+				"version": "2.0.2",
+				"size": 8765
+			},
+			{
+				"name": "math-intrinsics",
+				"version": "1.1.0",
+				"size": 17323
+			},
+			{
+				"name": "has-tostringtag",
+				"version": "1.0.2",
+				"size": 17603
+			},
+			{
+				"name": "mime-types",
+				"version": "2.1.35",
+				"size": 18272
+			},
+			{
+				"name": "mime-db",
+				"version": "1.52.0",
+				"size": 205539
+			},
+			{
+				"name": "proxy-from-env",
+				"version": "1.1.0",
+				"size": 29452
+			},
+			{
+				"name": "follow-redirects",
+				"version": "1.15.9",
+				"size": 29918
+			},
+			{
+				"name": "dotenv",
+				"version": "16.5.0",
+				"size": 75565
+			},
+			{
+				"name": "firebase-admin",
+				"version": "11.11.1",
+				"size": 1303633
+			},
+			{
+				"name": "uuid",
+				"version": "9.0.1",
+				"size": 123288
+			},
+			{
+				"name": "jwks-rsa",
+				"version": "3.2.0",
+				"size": 28089
+			},
+			{
+				"name": "jose",
+				"version": "4.15.9",
+				"size": 548521
+			},
+			{
+				"name": "limiter",
+				"version": "1.1.5",
+				"size": 23166
+			},
+			{
+				"name": "lru-memoizer",
+				"version": "2.3.0",
+				"size": 71693
+			},
+			{
+				"name": "lru-cache",
+				"version": "6.0.0",
+				"size": 15643
+			},
+			{
+				"name": "yallist",
+				"version": "4.0.0",
+				"size": 14752
+			},
+			{
+				"name": "lodash.clonedeep",
+				"version": "4.5.0"
+			},
+			{
+				"name": "@types/express",
+				"version": "4.17.21",
+				"size": 7863
+			},
+			{
+				"name": "@types/qs",
+				"version": "6.9.18",
+				"size": 7457
+			},
+			{
+				"name": "@types/body-parser",
+				"version": "1.19.5",
+				"size": 7648
+			},
+			{
+				"name": "@types/node",
+				"version": "22.14.1",
+				"size": 2331510
+			},
+			{
+				"name": "undici-types",
+				"version": "6.21.0",
+				"size": 83680
+			},
+			{
+				"name": "@types/connect",
+				"version": "3.4.38",
+				"size": 5907
+			},
+			{
+				"name": "@types/serve-static",
+				"version": "1.15.7",
+				"size": 7790
+			},
+			{
+				"name": "@types/send",
+				"version": "0.17.4",
+				"size": 9849
+			},
+			{
+				"name": "@types/mime",
+				"version": "1.3.5",
+				"size": 3781
+			},
+			{
+				"name": "@types/http-errors",
+				"version": "2.0.4",
+				"size": 6587
+			},
+			{
+				"name": "@types/express-serve-static-core",
+				"version": "4.19.6",
+				"size": 46221
+			},
+			{
+				"name": "@types/range-parser",
+				"version": "1.2.7",
+				"size": 4615
+			},
+			{
+				"name": "@types/jsonwebtoken",
+				"version": "9.0.9",
+				"size": 13677
+			},
+			{
+				"name": "@types/ms",
+				"version": "2.1.0",
+				"size": 5101
+			},
+			{
+				"name": "node-forge",
+				"version": "1.3.1",
+				"size": 1657079
+			},
+			{
+				"name": "jsonwebtoken",
+				"version": "9.0.2",
+				"size": 43482
+			},
+			{
+				"name": "jws",
+				"version": "3.2.2",
+				"size": 17682
+			},
+			{
+				"name": "jwa",
+				"version": "1.4.1",
+				"size": 13688
+			},
+			{
+				"name": "safe-buffer",
+				"version": "5.2.1",
+				"size": 32101
+			},
+			{
+				"name": "ecdsa-sig-formatter",
+				"version": "1.0.11",
+				"size": 20588
+			},
+			{
+				"name": "buffer-equal-constant-time",
+				"version": "1.0.1"
+			},
+			{
+				"name": "semver",
+				"version": "7.7.1",
+				"size": 96674
+			},
+			{
+				"name": "lodash.once",
+				"version": "4.1.1"
+			},
+			{
+				"name": "lodash.includes",
+				"version": "4.3.0"
+			},
+			{
+				"name": "lodash.isnumber",
+				"version": "3.0.3"
+			},
+			{
+				"name": "lodash.isstring",
+				"version": "4.0.1"
+			},
+			{
+				"name": "lodash.isboolean",
+				"version": "3.0.3"
+			},
+			{
+				"name": "lodash.isinteger",
+				"version": "4.0.4"
+			},
+			{
+				"name": "lodash.isplainobject",
+				"version": "4.0.6"
+			},
+			{
+				"name": "@fastify/busboy",
+				"version": "1.2.1",
+				"size": 71933
+			},
+			{
+				"name": "text-decoding",
+				"version": "1.0.0",
+				"size": 1254655
+			},
+			{
+				"name": "@firebase/database-types",
+				"version": "0.10.4",
+				"size": 14748
+			},
+			{
+				"name": "@firebase/util",
+				"version": "1.9.3",
+				"size": 1150757
+			},
+			{
+				"name": "tslib",
+				"version": "2.8.1",
+				"size": 90359
+			},
+			{
+				"name": "@firebase/app-types",
+				"version": "0.9.0",
+				"size": 11268
+			},
+			{
+				"name": "@firebase/database-compat",
+				"version": "0.3.4",
+				"size": 2574457
+			},
+			{
+				"name": "@firebase/logger",
+				"version": "0.4.0",
+				"size": 87823
+			},
+			{
+				"name": "@firebase/database",
+				"version": "0.14.4",
+				"size": 10583032
+			},
+			{
+				"name": "faye-websocket",
+				"version": "0.11.4",
+				"size": 30789
+			},
+			{
+				"name": "websocket-driver",
+				"version": "0.7.4",
+				"size": 67439
+			},
+			{
+				"name": "http-parser-js",
+				"version": "0.5.10",
+				"size": 26471
+			},
+			{
+				"name": "websocket-extensions",
+				"version": "0.1.4",
+				"size": 55037
+			},
+			{
+				"name": "@firebase/component",
+				"version": "0.6.4",
+				"size": 187870
+			},
+			{
+				"name": "@firebase/auth-interop-types",
+				"version": "0.2.1",
+				"size": 3003
+			},
+			{
+				"name": "lodash",
+				"version": "4.17.21",
+				"size": 1412415
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[1, 4],
+			[4, 5],
+			[4, 6],
+			[4, 7],
+			[1, 8],
+			[1, 9],
+			[1, 10],
+			[1, 11],
+			[11, 12],
+			[1, 13],
+			[1, 14],
+			[1, 15],
+			[15, 16],
+			[15, 17],
+			[1, 18],
+			[18, 19],
+			[1, 20],
+			[1, 21],
+			[1, 22],
+			[22, 23],
+			[23, 24],
+			[22, 8],
+			[22, 25],
+			[22, 26],
+			[22, 27],
+			[22, 18],
+			[18, 19],
+			[22, 28],
+			[28, 23],
+			[23, 24],
+			[0, 29],
+			[29, 30],
+			[30, 31],
+			[30, 32],
+			[32, 33],
+			[30, 34],
+			[34, 35],
+			[34, 36],
+			[36, 37],
+			[37, 35],
+			[37, 38],
+			[36, 39],
+			[36, 35],
+			[36, 40],
+			[40, 35],
+			[36, 38],
+			[36, 41],
+			[41, 42],
+			[42, 37],
+			[37, 35],
+			[37, 38],
+			[42, 35],
+			[42, 43],
+			[41, 40],
+			[40, 35],
+			[36, 43],
+			[36, 44],
+			[36, 45],
+			[45, 38],
+			[36, 46],
+			[34, 47],
+			[47, 44],
+			[34, 45],
+			[45, 38],
+			[30, 48],
+			[48, 49],
+			[29, 50],
+			[29, 51],
+			[0, 52],
+			[0, 53],
+			[53, 54],
+			[53, 55],
+			[55, 56],
+			[55, 23],
+			[23, 24],
+			[55, 57],
+			[55, 58],
+			[58, 59],
+			[59, 60],
+			[58, 61],
+			[55, 62],
+			[62, 63],
+			[62, 64],
+			[64, 65],
+			[65, 66],
+			[64, 67],
+			[67, 65],
+			[65, 66],
+			[62, 68],
+			[68, 65],
+			[65, 66],
+			[68, 69],
+			[69, 70],
+			[69, 65],
+			[65, 66],
+			[68, 71],
+			[62, 72],
+			[72, 63],
+			[72, 65],
+			[65, 66],
+			[72, 69],
+			[69, 70],
+			[69, 65],
+			[65, 66],
+			[72, 73],
+			[55, 74],
+			[74, 75],
+			[74, 65],
+			[65, 66],
+			[53, 76],
+			[53, 65],
+			[65, 66],
+			[53, 77],
+			[77, 24],
+			[77, 78],
+			[78, 79],
+			[79, 80],
+			[79, 81],
+			[81, 80],
+			[79, 82],
+			[78, 80],
+			[77, 83],
+			[77, 84],
+			[77, 85],
+			[77, 86],
+			[77, 87],
+			[77, 88],
+			[77, 89],
+			[77, 90],
+			[53, 91],
+			[91, 92],
+			[53, 93],
+			[93, 94],
+			[94, 95],
+			[93, 96],
+			[53, 97],
+			[97, 95],
+			[97, 94],
+			[94, 95],
+			[97, 98],
+			[98, 95],
+			[97, 99],
+			[99, 95],
+			[99, 94],
+			[94, 95],
+			[99, 100],
+			[100, 101],
+			[101, 102],
+			[101, 80],
+			[101, 103],
+			[99, 98],
+			[98, 95],
+			[99, 104],
+			[104, 95],
+			[104, 94],
+			[94, 95],
+			[99, 105],
+			[97, 104],
+			[104, 95],
+			[104, 94],
+			[94, 95],
+			[97, 93],
+			[93, 94],
+			[94, 95],
+			[93, 96],
+			[0, 106]
+		],
+		"circular": []
+	}
 }

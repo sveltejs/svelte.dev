@@ -13,17 +13,6 @@
 	"version": "1.0.1",
 	"svelte_range": "^4.2.12",
 	"last_rune_check_version": "1.0.1",
-	"dependencies": [
-		{
-			"name": "html-parse-stringify",
-			"semver": "^3.0.1"
-		},
-		{
-			"name": "i18next",
-			"semver": "^23.10.1"
-		}
-	],
-	"unpacked_size": 19762,
 	"downloads_history": [
 		{
 			"range": [1710095400000, 1710700199999],
@@ -173,5 +162,47 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@kainstar/svelte-i18next",
+				"version": "1.0.1",
+				"size": 19762
+			},
+			{
+				"name": "html-parse-stringify",
+				"version": "3.0.1",
+				"size": 55524
+			},
+			{
+				"name": "void-elements",
+				"version": "3.1.0"
+			},
+			{
+				"name": "i18next",
+				"version": "23.16.8",
+				"size": 639937
+			},
+			{
+				"name": "@babel/runtime",
+				"version": "7.27.0",
+				"size": 249798
+			},
+			{
+				"name": "regenerator-runtime",
+				"version": "0.14.1",
+				"size": 27863
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[3, 4],
+			[4, 5]
+		],
+		"circular": []
+	}
 }

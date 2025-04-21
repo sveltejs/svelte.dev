@@ -13,8 +13,6 @@
 	"svelte_range": "^5.22.6",
 	"last_rune_check_version": "5.9.1",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 36867,
 	"downloads_history": [
 		{
 			"range": [1738521000000, 1739125799999],
@@ -56,5 +54,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 47
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@soleil-se/app-util",
+				"version": "5.9.1",
+				"size": 36867
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

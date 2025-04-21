@@ -13,8 +13,6 @@
 	"version": "0.3.33",
 	"svelte_range": ">=3 <5",
 	"last_rune_check_version": "0.3.33",
-	"dependencies": [],
-	"unpacked_size": 36743,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -328,5 +326,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 190
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@wundergraph/svelte-query",
+				"version": "0.3.33",
+				"size": 36743
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

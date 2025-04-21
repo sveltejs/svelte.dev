@@ -14,17 +14,6 @@
 	"kit_range": "^1.22.5",
 	"last_rune_check_version": "0.11.1",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "chess.js",
-			"semver": "^1.0.0-beta.6"
-		},
-		{
-			"name": "svelte-chessground",
-			"semver": "^2.0.2"
-		}
-	],
-	"unpacked_size": 45046,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -338,5 +327,36 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 25
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-chess",
+				"version": "0.11.1",
+				"size": 45046
+			},
+			{
+				"name": "chess.js",
+				"version": "1.2.0",
+				"size": 396016
+			},
+			{
+				"name": "svelte-chessground",
+				"version": "2.0.3",
+				"size": 93962
+			},
+			{
+				"name": "chessground",
+				"version": "8.4.0",
+				"size": 333656
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3]
+		],
+		"circular": []
+	}
 }

@@ -24,17 +24,6 @@
 	"version": "1.8.0",
 	"svelte_range": "^3.31.0",
 	"last_rune_check_version": "1.8.0",
-	"dependencies": [
-		{
-			"name": "@cfcs/svelte",
-			"semver": "^0.1.0"
-		},
-		{
-			"name": "@egjs/conveyer",
-			"semver": "~1.8.0"
-		}
-	],
-	"unpacked_size": 46184,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -348,5 +337,72 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 34
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@egjs/svelte-conveyer",
+				"version": "1.8.0",
+				"size": 46184
+			},
+			{
+				"name": "@cfcs/svelte",
+				"version": "0.1.0",
+				"size": 727895
+			},
+			{
+				"name": "@cfcs/core",
+				"version": "0.1.0",
+				"size": 359444
+			},
+			{
+				"name": "@egjs/component",
+				"version": "3.0.5",
+				"size": 456301
+			},
+			{
+				"name": "@egjs/conveyer",
+				"version": "1.8.0",
+				"size": 668096
+			},
+			{
+				"name": "@egjs/axes",
+				"version": "3.9.1",
+				"size": 2615734
+			},
+			{
+				"name": "@egjs/agent",
+				"version": "2.4.4",
+				"size": 177069
+			},
+			{
+				"name": "@egjs/children-differ",
+				"version": "1.0.1",
+				"size": 109956
+			},
+			{
+				"name": "@egjs/list-differ",
+				"version": "1.0.1",
+				"size": 104427
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[0, 4],
+			[4, 2],
+			[2, 3],
+			[4, 5],
+			[5, 2],
+			[2, 3],
+			[5, 6],
+			[5, 3],
+			[4, 7],
+			[7, 8],
+			[4, 3]
+		],
+		"circular": []
+	}
 }

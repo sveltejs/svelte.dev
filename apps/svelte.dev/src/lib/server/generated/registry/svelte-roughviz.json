@@ -14,13 +14,6 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "0.0.1",
-	"dependencies": [
-		{
-			"name": "rough-viz",
-			"semver": "^2.0.5"
-		}
-	],
-	"unpacked_size": 11963,
 	"downloads_history": [
 		{
 			"range": [1742754600000, 1743359399999],
@@ -30,5 +23,219 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-roughviz",
+				"version": "0.0.1",
+				"size": 11963
+			},
+			{
+				"name": "rough-viz",
+				"version": "2.0.5",
+				"size": 10976571
+			},
+			{
+				"name": "d3-array",
+				"version": "2.12.1",
+				"size": 135892
+			},
+			{
+				"name": "internmap",
+				"version": "1.0.1",
+				"size": 10299
+			},
+			{
+				"name": "d3-axis",
+				"version": "1.0.12",
+				"size": 81291
+			},
+			{
+				"name": "d3-fetch",
+				"version": "1.2.0",
+				"size": 17027
+			},
+			{
+				"name": "d3-dsv",
+				"version": "1.2.0",
+				"size": 50395
+			},
+			{
+				"name": "commander",
+				"version": "2.20.3",
+				"size": 62442
+			},
+			{
+				"name": "iconv-lite",
+				"version": "0.4.24",
+				"size": 335941
+			},
+			{
+				"name": "safer-buffer",
+				"version": "2.1.2",
+				"size": 42299
+			},
+			{
+				"name": "rw",
+				"version": "1.3.3"
+			},
+			{
+				"name": "d3-force",
+				"version": "3.0.0",
+				"size": 89551
+			},
+			{
+				"name": "d3-dispatch",
+				"version": "3.0.1",
+				"size": 15604
+			},
+			{
+				"name": "d3-quadtree",
+				"version": "3.0.1",
+				"size": 43391
+			},
+			{
+				"name": "d3-timer",
+				"version": "3.0.1",
+				"size": 18405
+			},
+			{
+				"name": "d3-format",
+				"version": "1.4.5",
+				"size": 58715
+			},
+			{
+				"name": "d3-scale",
+				"version": "3.3.0",
+				"size": 174828
+			},
+			{
+				"name": "d3-format",
+				"version": "2.0.0",
+				"size": 58128
+			},
+			{
+				"name": "d3-interpolate",
+				"version": "2.0.1",
+				"size": 70166
+			},
+			{
+				"name": "d3-color",
+				"version": "2.0.0",
+				"size": 60251
+			},
+			{
+				"name": "d3-time",
+				"version": "2.1.1",
+				"size": 66208
+			},
+			{
+				"name": "d3-time-format",
+				"version": "3.0.0",
+				"size": 84163
+			},
+			{
+				"name": "d3-scale-chromatic",
+				"version": "1.5.0",
+				"size": 104512
+			},
+			{
+				"name": "d3-color",
+				"version": "1.4.1",
+				"size": 60111
+			},
+			{
+				"name": "d3-interpolate",
+				"version": "1.4.0",
+				"size": 69594
+			},
+			{
+				"name": "d3-selection",
+				"version": "1.4.2",
+				"size": 132410
+			},
+			{
+				"name": "d3-shape",
+				"version": "1.3.7",
+				"size": 231330
+			},
+			{
+				"name": "d3-path",
+				"version": "1.0.9",
+				"size": 20235
+			},
+			{
+				"name": "roughjs",
+				"version": "4.6.6",
+				"size": 169684
+			},
+			{
+				"name": "hachure-fill",
+				"version": "0.5.2",
+				"size": 8675
+			},
+			{
+				"name": "path-data-parser",
+				"version": "0.1.0",
+				"size": 33682
+			},
+			{
+				"name": "points-on-curve",
+				"version": "0.2.0",
+				"size": 18400
+			},
+			{
+				"name": "points-on-path",
+				"version": "0.2.1",
+				"size": 9657
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[1, 4],
+			[1, 5],
+			[5, 6],
+			[6, 7],
+			[6, 8],
+			[8, 9],
+			[6, 10],
+			[1, 11],
+			[11, 12],
+			[11, 13],
+			[11, 14],
+			[1, 15],
+			[1, 16],
+			[16, 2],
+			[2, 3],
+			[16, 17],
+			[16, 18],
+			[18, 19],
+			[16, 20],
+			[20, 2],
+			[2, 3],
+			[16, 21],
+			[21, 20],
+			[20, 2],
+			[2, 3],
+			[1, 22],
+			[22, 23],
+			[22, 24],
+			[24, 23],
+			[1, 25],
+			[1, 26],
+			[26, 27],
+			[1, 28],
+			[28, 29],
+			[28, 30],
+			[28, 31],
+			[28, 32],
+			[32, 30],
+			[32, 31]
+		],
+		"circular": []
+	}
 }

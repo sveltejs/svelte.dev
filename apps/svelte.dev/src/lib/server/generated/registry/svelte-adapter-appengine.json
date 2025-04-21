@@ -13,25 +13,6 @@
 	"version": "1.2.0",
 	"kit_range": "^1.0.0 || ^2.0.0",
 	"last_rune_check_version": "1.2.0",
-	"dependencies": [
-		{
-			"name": "esbuild",
-			"semver": "^0.25.0"
-		},
-		{
-			"name": "polka",
-			"semver": "^1.0.0-next.22"
-		},
-		{
-			"name": "sirv",
-			"semver": "^2.0.2"
-		},
-		{
-			"name": "yaml",
-			"semver": "^2.2.1"
-		}
-	],
-	"unpacked_size": 27294,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -345,5 +326,73 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 104
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-adapter-appengine",
+				"version": "1.2.0",
+				"size": 27294
+			},
+			{
+				"name": "esbuild",
+				"version": "0.25.2",
+				"size": 134169
+			},
+			{
+				"name": "polka",
+				"version": "1.0.0-next.28",
+				"size": 33033
+			},
+			{
+				"name": "@polka/url",
+				"version": "1.0.0-next.29",
+				"size": 4815
+			},
+			{
+				"name": "trouter",
+				"version": "4.0.0",
+				"size": 14300
+			},
+			{
+				"name": "regexparam",
+				"version": "3.0.0",
+				"size": 14498
+			},
+			{
+				"name": "sirv",
+				"version": "2.0.4",
+				"size": 20745
+			},
+			{
+				"name": "mrmime",
+				"version": "2.0.1",
+				"size": 33008
+			},
+			{
+				"name": "totalist",
+				"version": "3.0.1",
+				"size": 7459
+			},
+			{
+				"name": "yaml",
+				"version": "2.7.1",
+				"size": 682531
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[2, 4],
+			[4, 5],
+			[0, 6],
+			[6, 7],
+			[6, 8],
+			[6, 3],
+			[0, 9]
+		],
+		"circular": []
+	}
 }

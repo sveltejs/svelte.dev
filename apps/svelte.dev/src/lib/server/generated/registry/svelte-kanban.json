@@ -14,21 +14,6 @@
 	"svelte_range": "^3.46.4",
 	"kit_range": "^1.0.0-next.294",
 	"last_rune_check_version": "0.0.960",
-	"dependencies": [
-		{
-			"name": "sass",
-			"semver": "^1.55.0"
-		},
-		{
-			"name": "svelte2tsx",
-			"semver": "^0.4.14"
-		},
-		{
-			"name": "vite",
-			"semver": "^3.1.8"
-		}
-	],
-	"unpacked_size": 59452,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -342,5 +327,158 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 49
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-kanban",
+				"version": "0.0.960",
+				"size": 59452
+			},
+			{
+				"name": "sass",
+				"version": "1.86.3",
+				"size": 5693005
+			},
+			{
+				"name": "chokidar",
+				"version": "4.0.3",
+				"size": 148759
+			},
+			{
+				"name": "readdirp",
+				"version": "4.1.2",
+				"size": 36127
+			},
+			{
+				"name": "immutable",
+				"version": "5.1.1",
+				"size": 736872
+			},
+			{
+				"name": "source-map-js",
+				"version": "1.2.1",
+				"size": 139872
+			},
+			{
+				"name": "svelte2tsx",
+				"version": "0.4.14",
+				"size": 526831
+			},
+			{
+				"name": "dedent-js",
+				"version": "1.0.1"
+			},
+			{
+				"name": "pascal-case",
+				"version": "3.1.2",
+				"size": 14764
+			},
+			{
+				"name": "no-case",
+				"version": "3.0.4",
+				"size": 25128
+			},
+			{
+				"name": "lower-case",
+				"version": "2.0.2",
+				"size": 17661
+			},
+			{
+				"name": "tslib",
+				"version": "2.8.1",
+				"size": 90359
+			},
+			{
+				"name": "vite",
+				"version": "3.2.11",
+				"size": 3202955
+			},
+			{
+				"name": "rollup",
+				"version": "2.79.2",
+				"size": 6452533
+			},
+			{
+				"name": "esbuild",
+				"version": "0.15.18",
+				"size": 121336
+			},
+			{
+				"name": "postcss",
+				"version": "8.5.3",
+				"size": 201969
+			},
+			{
+				"name": "nanoid",
+				"version": "3.3.11",
+				"size": 32583
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "resolve",
+				"version": "1.22.10",
+				"size": 145619
+			},
+			{
+				"name": "is-core-module",
+				"version": "2.16.1",
+				"size": 33475
+			},
+			{
+				"name": "hasown",
+				"version": "2.0.2",
+				"size": 8765
+			},
+			{
+				"name": "function-bind",
+				"version": "1.1.2",
+				"size": 31427
+			},
+			{
+				"name": "path-parse",
+				"version": "1.0.7",
+				"size": 4511
+			},
+			{
+				"name": "supports-preserve-symlinks-flag",
+				"version": "1.0.0",
+				"size": 9178
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[1, 4],
+			[1, 5],
+			[0, 6],
+			[6, 7],
+			[6, 8],
+			[8, 9],
+			[9, 10],
+			[10, 11],
+			[9, 11],
+			[8, 11],
+			[0, 12],
+			[12, 13],
+			[12, 14],
+			[12, 15],
+			[15, 16],
+			[15, 17],
+			[15, 5],
+			[12, 18],
+			[18, 19],
+			[19, 20],
+			[20, 21],
+			[18, 22],
+			[18, 23]
+		],
+		"circular": []
+	}
 }

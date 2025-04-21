@@ -14,8 +14,6 @@
 	"kit_range": "^2.9.0",
 	"last_rune_check_version": "1.3.2",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 40531,
 	"downloads_history": [
 		{
 			"range": [1732473000000, 1733077799999],
@@ -97,5 +95,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 32
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-firebase-state",
+				"version": "1.3.2",
+				"size": 40531
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

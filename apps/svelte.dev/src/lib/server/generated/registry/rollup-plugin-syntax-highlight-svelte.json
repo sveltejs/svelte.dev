@@ -13,17 +13,6 @@
 	"version": "0.1.0",
 	"svelte_range": "^3.50.1",
 	"last_rune_check_version": "0.1.0",
-	"dependencies": [
-		{
-			"name": "magic-string",
-			"semver": "^0.26.5"
-		},
-		{
-			"name": "shiki",
-			"semver": "^0.11.1"
-		}
-	],
-	"unpacked_size": 45411,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -241,5 +230,54 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "rollup-plugin-syntax-highlight-svelte",
+				"version": "0.1.0",
+				"size": 45411
+			},
+			{
+				"name": "magic-string",
+				"version": "0.26.7",
+				"size": 400761
+			},
+			{
+				"name": "sourcemap-codec",
+				"version": "1.4.8",
+				"size": 31802
+			},
+			{
+				"name": "shiki",
+				"version": "0.11.1",
+				"size": 8417723
+			},
+			{
+				"name": "jsonc-parser",
+				"version": "3.3.1",
+				"size": 212821
+			},
+			{
+				"name": "vscode-textmate",
+				"version": "6.0.0",
+				"size": 329130
+			},
+			{
+				"name": "vscode-oniguruma",
+				"version": "1.7.0",
+				"size": 490376
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6]
+		],
+		"circular": []
+	}
 }

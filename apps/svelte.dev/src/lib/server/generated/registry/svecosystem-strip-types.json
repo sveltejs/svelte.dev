@@ -13,25 +13,6 @@
 	"version": "0.0.2",
 	"svelte_range": "^5.25.3",
 	"last_rune_check_version": "0.0.2",
-	"dependencies": [
-		{
-			"name": "estree-walker",
-			"semver": "^3.0.3"
-		},
-		{
-			"name": "magic-string",
-			"semver": "^0.30.17"
-		},
-		{
-			"name": "pathe",
-			"semver": "^2.0.3"
-		},
-		{
-			"name": "svelte",
-			"semver": "^5.25.3"
-		}
-	],
-	"unpacked_size": 11753,
 	"downloads_history": [
 		{
 			"range": [1742754600000, 1743359399999],
@@ -45,5 +26,155 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 32
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@svecosystem/strip-types",
+				"version": "0.0.2",
+				"size": 11753
+			},
+			{
+				"name": "estree-walker",
+				"version": "3.0.3",
+				"size": 17599
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "pathe",
+				"version": "2.0.3",
+				"size": 51332
+			},
+			{
+				"name": "svelte",
+				"version": "5.28.1",
+				"size": 2426419
+			},
+			{
+				"name": "@ampproject/remapping",
+				"version": "2.3.0",
+				"size": 78946
+			},
+			{
+				"name": "@jridgewell/gen-mapping",
+				"version": "0.3.8",
+				"size": 81596
+			},
+			{
+				"name": "@jridgewell/set-array",
+				"version": "1.2.1",
+				"size": 17945
+			},
+			{
+				"name": "@jridgewell/trace-mapping",
+				"version": "0.3.25",
+				"size": 169330
+			},
+			{
+				"name": "@jridgewell/resolve-uri",
+				"version": "3.1.2",
+				"size": 53153
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "@sveltejs/acorn-typescript",
+				"version": "1.0.5",
+				"size": 197476
+			},
+			{
+				"name": "aria-query",
+				"version": "5.3.2",
+				"size": 176114
+			},
+			{
+				"name": "axobject-query",
+				"version": "4.1.0",
+				"size": 110878
+			},
+			{
+				"name": "clsx",
+				"version": "2.1.1",
+				"size": 8555
+			},
+			{
+				"name": "esm-env",
+				"version": "1.2.2",
+				"size": 3784
+			},
+			{
+				"name": "esrap",
+				"version": "1.4.6",
+				"size": 50818
+			},
+			{
+				"name": "is-reference",
+				"version": "3.0.3",
+				"size": 3953
+			},
+			{
+				"name": "locate-character",
+				"version": "3.0.0",
+				"size": 5325
+			},
+			{
+				"name": "zimmerframe",
+				"version": "1.1.2",
+				"size": 12266
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[3, 4],
+			[0, 5],
+			[0, 6],
+			[6, 7],
+			[7, 8],
+			[8, 9],
+			[8, 4],
+			[8, 10],
+			[10, 11],
+			[10, 4],
+			[7, 10],
+			[10, 11],
+			[10, 4],
+			[6, 4],
+			[6, 2],
+			[6, 12],
+			[6, 13],
+			[6, 14],
+			[6, 15],
+			[6, 16],
+			[6, 17],
+			[6, 18],
+			[18, 4],
+			[6, 19],
+			[19, 2],
+			[6, 20],
+			[6, 3],
+			[3, 4],
+			[6, 21]
+		],
+		"circular": []
+	}
 }

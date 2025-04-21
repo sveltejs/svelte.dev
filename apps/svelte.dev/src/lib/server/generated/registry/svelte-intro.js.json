@@ -14,8 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.27.4",
 	"last_rune_check_version": "0.0.4",
-	"dependencies": [],
-	"unpacked_size": 6961,
 	"downloads_history": [
 		{
 			"range": [1699813800000, 1700418599999],
@@ -253,5 +251,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-intro.js",
+				"version": "0.0.4",
+				"size": 6961
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

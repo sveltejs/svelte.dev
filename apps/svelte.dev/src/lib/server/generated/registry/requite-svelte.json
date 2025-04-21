@@ -13,8 +13,6 @@
 	"version": "1.0.0-alpha.0",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "1.0.0-alpha.0",
-	"dependencies": [],
-	"unpacked_size": 32190,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -200,5 +198,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "requite-svelte",
+				"version": "1.0.0-alpha.0",
+				"size": 32190
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

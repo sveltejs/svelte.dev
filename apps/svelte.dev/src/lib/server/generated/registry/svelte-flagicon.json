@@ -13,13 +13,6 @@
 	"version": "0.2.0",
 	"svelte_range": "^3.22.2",
 	"last_rune_check_version": "0.2.0",
-	"dependencies": [
-		{
-			"name": "uuid",
-			"semver": "^8.0.0"
-		}
-	],
-	"unpacked_size": 21041733,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -301,5 +294,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 29
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-flagicon",
+				"version": "0.2.0",
+				"size": 21041733
+			},
+			{
+				"name": "uuid",
+				"version": "8.3.2",
+				"size": 116098
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

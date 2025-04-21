@@ -13,13 +13,6 @@
 	"version": "2.0.0",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "2.0.0",
-	"dependencies": [
-		{
-			"name": "jsbarcode",
-			"semver": "^3.11.3"
-		}
-	],
-	"unpacked_size": 282934,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +326,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 237
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-barcode",
+				"version": "2.0.0",
+				"size": 282934
+			},
+			{
+				"name": "jsbarcode",
+				"version": "3.11.6",
+				"size": 562834
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

@@ -13,13 +13,6 @@
 	"version": "0.1.1",
 	"svelte_range": "^3.19.2",
 	"last_rune_check_version": "0.1.1",
-	"dependencies": [
-		{
-			"name": "@juggle/resize-observer",
-			"semver": "^3.1.1"
-		}
-	],
-	"unpacked_size": 52009,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +326,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 14
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-actions-resize",
+				"version": "0.1.1",
+				"size": 52009
+			},
+			{
+				"name": "@juggle/resize-observer",
+				"version": "3.4.0",
+				"size": 73672
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

@@ -13,13 +13,6 @@
 	"version": "1.0.5",
 	"svelte_range": "^1.60.0",
 	"last_rune_check_version": "1.0.5",
-	"dependencies": [
-		{
-			"name": "ladda",
-			"semver": "^2.0.1"
-		}
-	],
-	"unpacked_size": 19663,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -241,5 +234,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-ladda",
+				"version": "1.0.5",
+				"size": 19663
+			},
+			{
+				"name": "ladda",
+				"version": "2.0.3",
+				"size": 40889
+			},
+			{
+				"name": "spin.js",
+				"version": "4.1.2",
+				"size": 11897
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2]
+		],
+		"circular": []
+	}
 }

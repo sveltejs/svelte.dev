@@ -13,17 +13,6 @@
 	"version": "2.0.2",
 	"svelte_range": "^3.52.0",
 	"last_rune_check_version": "2.0.2",
-	"dependencies": [
-		{
-			"name": "svelte",
-			"semver": "^3.52.0"
-		},
-		{
-			"name": "yup",
-			"semver": "^0.32.11"
-		}
-	],
-	"unpacked_size": 41843,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -201,5 +190,78 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-form-easy",
+				"version": "2.0.2",
+				"size": 41843
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			},
+			{
+				"name": "yup",
+				"version": "0.32.11",
+				"size": 319578
+			},
+			{
+				"name": "lodash",
+				"version": "4.17.21",
+				"size": 1412415
+			},
+			{
+				"name": "toposort",
+				"version": "2.0.2",
+				"size": 16683
+			},
+			{
+				"name": "lodash-es",
+				"version": "4.17.21",
+				"size": 636080
+			},
+			{
+				"name": "nanoclone",
+				"version": "0.2.1",
+				"size": 6122
+			},
+			{
+				"name": "@types/lodash",
+				"version": "4.17.16",
+				"size": 867997
+			},
+			{
+				"name": "property-expr",
+				"version": "2.0.6",
+				"size": 10306
+			},
+			{
+				"name": "@babel/runtime",
+				"version": "7.27.0",
+				"size": 249798
+			},
+			{
+				"name": "regenerator-runtime",
+				"version": "0.14.1",
+				"size": 27863
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[2, 4],
+			[2, 5],
+			[2, 6],
+			[2, 7],
+			[2, 8],
+			[2, 9],
+			[9, 10]
+		],
+		"circular": []
+	}
 }

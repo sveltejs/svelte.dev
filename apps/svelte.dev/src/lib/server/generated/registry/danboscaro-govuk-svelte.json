@@ -13,8 +13,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.15.0",
 	"last_rune_check_version": "0.0.7",
-	"dependencies": [],
-	"unpacked_size": 428206,
 	"downloads_history": [
 		{
 			"range": [1699209000000, 1699813799999],
@@ -120,5 +118,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 15
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@danboscaro/govuk-svelte",
+				"version": "0.0.7",
+				"size": 428206
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

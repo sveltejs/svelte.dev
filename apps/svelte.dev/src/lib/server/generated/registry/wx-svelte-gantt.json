@@ -12,49 +12,6 @@
 	"typescript": false,
 	"version": "2.1.1",
 	"last_rune_check_version": "2.1.1",
-	"dependencies": [
-		{
-			"name": "wx-gantt-data-provider",
-			"semver": "2.1.1"
-		},
-		{
-			"name": "wx-gantt-locales",
-			"semver": "2.1.1"
-		},
-		{
-			"name": "wx-gantt-store",
-			"semver": "2.1.1"
-		},
-		{
-			"name": "wx-lib-dom",
-			"semver": "0.8.0"
-		},
-		{
-			"name": "wx-lib-state",
-			"semver": "1.9.0"
-		},
-		{
-			"name": "wx-lib-svelte",
-			"semver": "0.5.1"
-		},
-		{
-			"name": "wx-svelte-core",
-			"semver": "2.1.0"
-		},
-		{
-			"name": "wx-svelte-menu",
-			"semver": "2.1.0"
-		},
-		{
-			"name": "wx-svelte-grid",
-			"semver": "2.1.0"
-		},
-		{
-			"name": "wx-svelte-toolbar",
-			"semver": "2.1.0"
-		}
-	],
-	"unpacked_size": 121964,
 	"downloads_history": [
 		{
 			"range": [1728239400000, 1728844199999],
@@ -164,5 +121,142 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 1823
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "wx-svelte-gantt",
+				"version": "2.1.1",
+				"size": 121964
+			},
+			{
+				"name": "wx-gantt-data-provider",
+				"version": "2.1.1",
+				"size": 290007
+			},
+			{
+				"name": "wx-lib-data-provider",
+				"version": "1.5.1",
+				"size": 91605
+			},
+			{
+				"name": "wx-gantt-locales",
+				"version": "2.1.1",
+				"size": 2751
+			},
+			{
+				"name": "wx-gantt-store",
+				"version": "2.1.1",
+				"size": 424017
+			},
+			{
+				"name": "wx-lib-state",
+				"version": "1.9.0",
+				"size": 104486
+			},
+			{
+				"name": "date-fns",
+				"version": "3.6.0",
+				"size": 22153202
+			},
+			{
+				"name": "wx-lib-dom",
+				"version": "0.8.0",
+				"size": 77513
+			},
+			{
+				"name": "wx-lib-svelte",
+				"version": "0.5.1",
+				"size": 109499
+			},
+			{
+				"name": "wx-svelte-core",
+				"version": "2.1.0",
+				"size": 172783
+			},
+			{
+				"name": "wx-core-locales",
+				"version": "2.1.0",
+				"size": 9502
+			},
+			{
+				"name": "wx-svelte-menu",
+				"version": "2.1.0",
+				"size": 17287
+			},
+			{
+				"name": "wx-svelte-grid",
+				"version": "2.1.0",
+				"size": 86121
+			},
+			{
+				"name": "wx-grid-store",
+				"version": "2.1.0",
+				"size": 199122
+			},
+			{
+				"name": "wx-grid-locales",
+				"version": "2.1.0",
+				"size": 676
+			},
+			{
+				"name": "wx-grid-data-provider",
+				"version": "2.1.0",
+				"size": 30950
+			},
+			{
+				"name": "wx-svelte-toolbar",
+				"version": "2.1.0",
+				"size": 18645
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[0, 4],
+			[4, 5],
+			[4, 6],
+			[0, 7],
+			[0, 5],
+			[0, 8],
+			[0, 9],
+			[9, 7],
+			[9, 8],
+			[9, 10],
+			[0, 11],
+			[11, 7],
+			[11, 9],
+			[9, 7],
+			[9, 8],
+			[9, 10],
+			[0, 12],
+			[12, 7],
+			[12, 5],
+			[12, 13],
+			[13, 5],
+			[12, 8],
+			[12, 9],
+			[9, 7],
+			[9, 8],
+			[9, 10],
+			[12, 11],
+			[11, 7],
+			[11, 9],
+			[9, 7],
+			[9, 8],
+			[9, 10],
+			[12, 14],
+			[12, 15],
+			[15, 2],
+			[0, 16],
+			[16, 7],
+			[16, 9],
+			[9, 7],
+			[9, 8],
+			[9, 10]
+		],
+		"circular": []
+	}
 }

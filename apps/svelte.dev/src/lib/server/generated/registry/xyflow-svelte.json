@@ -14,21 +14,6 @@
 	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
 	"kit_range": "^2.5.4",
 	"last_rune_check_version": "0.1.37",
-	"dependencies": [
-		{
-			"name": "@svelte-put/shortcut",
-			"semver": "3.1.1"
-		},
-		{
-			"name": "classcat",
-			"semver": "^5.0.4"
-		},
-		{
-			"name": "@xyflow/system",
-			"semver": "0.0.57"
-		}
-	],
-	"unpacked_size": 282944,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -342,5 +327,139 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 27790
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@xyflow/svelte",
+				"version": "0.1.37",
+				"size": 282944
+			},
+			{
+				"name": "@svelte-put/shortcut",
+				"version": "3.1.1",
+				"size": 21647
+			},
+			{
+				"name": "classcat",
+				"version": "5.0.5",
+				"size": 5189
+			},
+			{
+				"name": "@xyflow/system",
+				"version": "0.0.57",
+				"size": 626653
+			},
+			{
+				"name": "@types/d3-drag",
+				"version": "3.0.7",
+				"size": 25755
+			},
+			{
+				"name": "@types/d3-selection",
+				"version": "3.0.11",
+				"size": 66002
+			},
+			{
+				"name": "@types/d3-transition",
+				"version": "3.0.9",
+				"size": 42311
+			},
+			{
+				"name": "@types/d3-zoom",
+				"version": "3.0.8",
+				"size": 36666
+			},
+			{
+				"name": "@types/d3-interpolate",
+				"version": "3.0.4",
+				"size": 24501
+			},
+			{
+				"name": "@types/d3-color",
+				"version": "3.1.3",
+				"size": 27916
+			},
+			{
+				"name": "d3-drag",
+				"version": "3.0.0",
+				"size": 43023
+			},
+			{
+				"name": "d3-dispatch",
+				"version": "3.0.1",
+				"size": 15604
+			},
+			{
+				"name": "d3-selection",
+				"version": "3.0.0",
+				"size": 134715
+			},
+			{
+				"name": "d3-zoom",
+				"version": "3.0.0",
+				"size": 86878
+			},
+			{
+				"name": "d3-interpolate",
+				"version": "3.0.1",
+				"size": 69687
+			},
+			{
+				"name": "d3-color",
+				"version": "3.1.0",
+				"size": 61152
+			},
+			{
+				"name": "d3-transition",
+				"version": "3.0.1",
+				"size": 110525
+			},
+			{
+				"name": "d3-ease",
+				"version": "3.0.1",
+				"size": 34629
+			},
+			{
+				"name": "d3-timer",
+				"version": "3.0.1",
+				"size": 18405
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[3, 4],
+			[4, 5],
+			[3, 5],
+			[3, 6],
+			[6, 5],
+			[3, 7],
+			[7, 5],
+			[7, 8],
+			[8, 9],
+			[3, 10],
+			[10, 11],
+			[10, 12],
+			[3, 12],
+			[3, 13],
+			[13, 11],
+			[13, 10],
+			[10, 11],
+			[10, 12],
+			[13, 14],
+			[14, 15],
+			[13, 12],
+			[13, 16],
+			[16, 15],
+			[16, 11],
+			[16, 17],
+			[16, 14],
+			[14, 15],
+			[16, 18]
+		],
+		"circular": []
+	}
 }

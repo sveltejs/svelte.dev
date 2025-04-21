@@ -13,21 +13,6 @@
 	"version": "2.0.1",
 	"svelte_range": "4.x || 5.x",
 	"last_rune_check_version": "2.0.1",
-	"dependencies": [
-		{
-			"name": "@markdoc/markdoc",
-			"semver": "^0.4.0"
-		},
-		{
-			"name": "js-yaml",
-			"semver": "^4.1.0"
-		},
-		{
-			"name": "markdown-it",
-			"semver": "^14.1.0"
-		}
-	],
-	"unpacked_size": 40898,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -245,5 +230,74 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 8
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "markdoc-svelte",
+				"version": "2.0.1",
+				"size": 40898
+			},
+			{
+				"name": "@markdoc/markdoc",
+				"version": "0.4.0",
+				"size": 1904124
+			},
+			{
+				"name": "js-yaml",
+				"version": "4.1.0",
+				"size": 404738
+			},
+			{
+				"name": "argparse",
+				"version": "2.0.1",
+				"size": 171548
+			},
+			{
+				"name": "markdown-it",
+				"version": "14.1.0",
+				"size": 767399
+			},
+			{
+				"name": "entities",
+				"version": "4.5.0",
+				"size": 412892
+			},
+			{
+				"name": "linkify-it",
+				"version": "5.0.0",
+				"size": 55391
+			},
+			{
+				"name": "uc.micro",
+				"version": "2.1.0",
+				"size": 13257
+			},
+			{
+				"name": "mdurl",
+				"version": "2.0.0",
+				"size": 37524
+			},
+			{
+				"name": "punycode.js",
+				"version": "2.3.1",
+				"size": 33517
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[0, 4],
+			[4, 3],
+			[4, 5],
+			[4, 6],
+			[6, 7],
+			[4, 8],
+			[4, 9],
+			[4, 7]
+		],
+		"circular": []
+	}
 }

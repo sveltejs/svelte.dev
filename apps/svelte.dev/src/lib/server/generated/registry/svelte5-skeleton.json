@@ -13,8 +13,6 @@
 	"version": "2.4.1",
 	"svelte_range": "^5.0.0",
 	"last_rune_check_version": "2.4.1",
-	"dependencies": [],
-	"unpacked_size": 8055,
 	"downloads_history": [
 		{
 			"range": [1722796200000, 1723400999999],
@@ -140,5 +138,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte5-skeleton",
+				"version": "2.4.1",
+				"size": 8055
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

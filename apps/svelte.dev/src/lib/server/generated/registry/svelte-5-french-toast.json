@@ -14,13 +14,6 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.15.2",
 	"last_rune_check_version": "2.0.4",
-	"dependencies": [
-		{
-			"name": "svelte-writable-derived",
-			"semver": "^3.1.1"
-		}
-	],
-	"unpacked_size": 161090,
 	"downloads_history": [
 		{
 			"range": [1729449000000, 1730053799999],
@@ -122,5 +115,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 539
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-5-french-toast",
+				"version": "2.0.4",
+				"size": 161090
+			},
+			{
+				"name": "svelte-writable-derived",
+				"version": "3.1.1",
+				"size": 22021
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

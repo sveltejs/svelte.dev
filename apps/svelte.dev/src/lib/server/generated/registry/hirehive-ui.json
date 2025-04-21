@@ -12,37 +12,6 @@
 	"svelte_range": "^3.48.0",
 	"last_rune_check_version": "1.12.1",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "@popperjs/core",
-			"semver": "^2.11.5"
-		},
-		{
-			"name": "@tailwindcss/forms",
-			"semver": "^0.2.1"
-		},
-		{
-			"name": "clipboard-copy",
-			"semver": "^4.0.1"
-		},
-		{
-			"name": "focus-trap",
-			"semver": "^6.8.0"
-		},
-		{
-			"name": "svelte-headlessui-combobox-temporary",
-			"semver": "^0.0.7"
-		},
-		{
-			"name": "svelte-portal",
-			"semver": "^2.1.2"
-		},
-		{
-			"name": "svelte-useactions",
-			"semver": "^1.0.2"
-		}
-	],
-	"unpacked_size": 2578731,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -352,5 +321,72 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 98
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "hirehive-ui",
+				"version": "1.12.1",
+				"size": 2578731
+			},
+			{
+				"name": "@popperjs/core",
+				"version": "2.11.8",
+				"size": 1463042
+			},
+			{
+				"name": "@tailwindcss/forms",
+				"version": "0.2.1",
+				"size": 42804
+			},
+			{
+				"name": "mini-svg-data-uri",
+				"version": "1.4.4",
+				"size": 10460
+			},
+			{
+				"name": "clipboard-copy",
+				"version": "4.0.1",
+				"size": 6603
+			},
+			{
+				"name": "focus-trap",
+				"version": "6.9.4",
+				"size": 447877
+			},
+			{
+				"name": "tabbable",
+				"version": "5.3.3",
+				"size": 320397
+			},
+			{
+				"name": "svelte-headlessui-combobox-temporary",
+				"version": "0.0.7",
+				"size": 361669
+			},
+			{
+				"name": "svelte-portal",
+				"version": "2.2.1",
+				"size": 10935
+			},
+			{
+				"name": "svelte-useactions",
+				"version": "1.0.2",
+				"size": 6819
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[0, 4],
+			[0, 5],
+			[5, 6],
+			[0, 7],
+			[0, 8],
+			[0, 9]
+		],
+		"circular": []
+	}
 }

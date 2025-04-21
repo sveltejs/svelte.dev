@@ -13,17 +13,6 @@
 	"version": "0.1.4",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "0.1.4",
-	"dependencies": [
-		{
-			"name": "apollo-link-ws",
-			"semver": "^1.0.20"
-		},
-		{
-			"name": "ws",
-			"semver": "^7.5.3"
-		}
-	],
-	"unpacked_size": 69856,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -329,5 +318,85 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 39
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-apollo-client",
+				"version": "0.1.4",
+				"size": 69856
+			},
+			{
+				"name": "apollo-link-ws",
+				"version": "1.0.20",
+				"size": 17659
+			},
+			{
+				"name": "apollo-link",
+				"version": "1.2.14",
+				"size": 100317
+			},
+			{
+				"name": "apollo-utilities",
+				"version": "1.3.4",
+				"size": 567478
+			},
+			{
+				"name": "@wry/equality",
+				"version": "0.1.11",
+				"size": 29214
+			},
+			{
+				"name": "tslib",
+				"version": "1.14.1",
+				"size": 33965
+			},
+			{
+				"name": "fast-json-stable-stringify",
+				"version": "2.1.0",
+				"size": 16959
+			},
+			{
+				"name": "ts-invariant",
+				"version": "0.4.4",
+				"size": 16668
+			},
+			{
+				"name": "zen-observable-ts",
+				"version": "0.8.21",
+				"size": 14129
+			},
+			{
+				"name": "zen-observable",
+				"version": "0.8.15",
+				"size": 72504
+			},
+			{
+				"name": "ws",
+				"version": "7.5.10",
+				"size": 122307
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[3, 4],
+			[4, 5],
+			[3, 6],
+			[3, 7],
+			[7, 5],
+			[3, 5],
+			[2, 7],
+			[7, 5],
+			[2, 5],
+			[2, 8],
+			[8, 5],
+			[8, 9],
+			[1, 5],
+			[0, 10]
+		],
+		"circular": []
+	}
 }

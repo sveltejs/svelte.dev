@@ -13,17 +13,6 @@
 	"version": "8.6.0",
 	"svelte_range": "^3.49.0 || ^4.0.0 || ^5.0.0",
 	"last_rune_check_version": "8.6.0",
-	"dependencies": [
-		{
-			"name": "embla-carousel",
-			"semver": "8.6.0"
-		},
-		{
-			"name": "embla-carousel-reactive-utils",
-			"semver": "8.6.0"
-		}
-	],
-	"unpacked_size": 50335,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -337,5 +326,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 27696
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "embla-carousel-svelte",
+				"version": "8.6.0",
+				"size": 50335
+			},
+			{
+				"name": "embla-carousel",
+				"version": "8.6.0",
+				"size": 489743
+			},
+			{
+				"name": "embla-carousel-reactive-utils",
+				"version": "8.6.0",
+				"size": 34372
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

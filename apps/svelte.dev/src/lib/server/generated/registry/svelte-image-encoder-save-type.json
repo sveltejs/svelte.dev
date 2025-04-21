@@ -13,13 +13,6 @@
 	"version": "1.2.8",
 	"svelte_range": "^3.5.1",
 	"last_rune_check_version": "1.2.8",
-	"dependencies": [
-		{
-			"name": "detect-pointer-events",
-			"semver": "^1.0.1"
-		}
-	],
-	"unpacked_size": 74276,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -193,5 +186,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 9
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-image-encoder-save-type",
+				"version": "1.2.8",
+				"size": 74276
+			},
+			{
+				"name": "detect-pointer-events",
+				"version": "1.0.2",
+				"size": 10094
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

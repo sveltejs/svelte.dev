@@ -13,17 +13,6 @@
 	"svelte_range": "^3.42.6",
 	"kit_range": "next",
 	"last_rune_check_version": "0.0.18",
-	"dependencies": [
-		{
-			"name": "match-sorter",
-			"semver": "^6.3.1"
-		},
-		{
-			"name": "svelte-portal",
-			"semver": "^2.1.2"
-		}
-	],
-	"unpacked_size": 28057,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -281,5 +270,48 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 30
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-kbar",
+				"version": "0.0.18",
+				"size": 28057
+			},
+			{
+				"name": "match-sorter",
+				"version": "6.3.4",
+				"size": 170353
+			},
+			{
+				"name": "@babel/runtime",
+				"version": "7.27.0",
+				"size": 249798
+			},
+			{
+				"name": "regenerator-runtime",
+				"version": "0.14.1",
+				"size": 27863
+			},
+			{
+				"name": "remove-accents",
+				"version": "0.5.0",
+				"size": 13380
+			},
+			{
+				"name": "svelte-portal",
+				"version": "2.2.1",
+				"size": 10935
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[1, 4],
+			[0, 5]
+		],
+		"circular": []
+	}
 }

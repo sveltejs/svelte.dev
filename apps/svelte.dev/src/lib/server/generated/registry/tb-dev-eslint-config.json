@@ -12,37 +12,6 @@
 	"typescript": true,
 	"version": "7.0.1",
 	"last_rune_check_version": "7.0.1",
-	"dependencies": [
-		{
-			"name": "@typescript-eslint/eslint-plugin",
-			"semver": "^8.30.1"
-		},
-		{
-			"name": "@typescript-eslint/parser",
-			"semver": "^8.30.1"
-		},
-		{
-			"name": "eslint-plugin-perfectionist",
-			"semver": "^4.11.0"
-		},
-		{
-			"name": "eslint-plugin-unicorn",
-			"semver": "^58.0.0"
-		},
-		{
-			"name": "eslint-plugin-vue",
-			"semver": "^10.0.0"
-		},
-		{
-			"name": "globals",
-			"semver": "^16.0.0"
-		},
-		{
-			"name": "vue-eslint-parser",
-			"semver": "^10.1.3"
-		}
-	],
-	"unpacked_size": 34892,
 	"downloads_history": [
 		{
 			"range": [1701023400000, 1701628199999],
@@ -332,5 +301,857 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 92
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@tb-dev/eslint-config",
+				"version": "7.0.1",
+				"size": 34892
+			},
+			{
+				"name": "@typescript-eslint/eslint-plugin",
+				"version": "8.30.1",
+				"size": 2494583
+			},
+			{
+				"name": "ignore",
+				"version": "5.3.2",
+				"size": 53630
+			},
+			{
+				"name": "graphemer",
+				"version": "1.4.0",
+				"size": 811810
+			},
+			{
+				"name": "ts-api-utils",
+				"version": "2.1.0",
+				"size": 356154
+			},
+			{
+				"name": "natural-compare",
+				"version": "1.4.0"
+			},
+			{
+				"name": "@typescript-eslint/utils",
+				"version": "8.30.1",
+				"size": 267422
+			},
+			{
+				"name": "@typescript-eslint/types",
+				"version": "8.30.1",
+				"size": 171161
+			},
+			{
+				"name": "@eslint-community/eslint-utils",
+				"version": "4.6.1",
+				"size": 476789
+			},
+			{
+				"name": "eslint-visitor-keys",
+				"version": "3.4.3",
+				"size": 32278
+			},
+			{
+				"name": "@typescript-eslint/scope-manager",
+				"version": "8.30.1",
+				"size": 458615
+			},
+			{
+				"name": "@typescript-eslint/visitor-keys",
+				"version": "8.30.1",
+				"size": 13994
+			},
+			{
+				"name": "eslint-visitor-keys",
+				"version": "4.2.0",
+				"size": 36136
+			},
+			{
+				"name": "@typescript-eslint/typescript-estree",
+				"version": "8.30.1",
+				"size": 411782
+			},
+			{
+				"name": "debug",
+				"version": "4.4.0",
+				"size": 42798
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "semver",
+				"version": "7.7.1",
+				"size": 96674
+			},
+			{
+				"name": "is-glob",
+				"version": "4.0.3",
+				"size": 13609
+			},
+			{
+				"name": "is-extglob",
+				"version": "2.1.1"
+			},
+			{
+				"name": "fast-glob",
+				"version": "3.3.3",
+				"size": 98396
+			},
+			{
+				"name": "@nodelib/fs.stat",
+				"version": "2.0.5",
+				"size": 11845
+			},
+			{
+				"name": "@nodelib/fs.walk",
+				"version": "1.2.8",
+				"size": 26377
+			},
+			{
+				"name": "fastq",
+				"version": "1.19.1",
+				"size": 45922
+			},
+			{
+				"name": "reusify",
+				"version": "1.1.0",
+				"size": 11696
+			},
+			{
+				"name": "@nodelib/fs.scandir",
+				"version": "2.1.5",
+				"size": 22155
+			},
+			{
+				"name": "run-parallel",
+				"version": "1.2.0",
+				"size": 6563
+			},
+			{
+				"name": "queue-microtask",
+				"version": "1.2.3",
+				"size": 8367
+			},
+			{
+				"name": "glob-parent",
+				"version": "5.1.2",
+				"size": 12134
+			},
+			{
+				"name": "merge2",
+				"version": "1.4.1",
+				"size": 8897
+			},
+			{
+				"name": "micromatch",
+				"version": "4.0.8",
+				"size": 56599
+			},
+			{
+				"name": "braces",
+				"version": "3.0.3",
+				"size": 44635
+			},
+			{
+				"name": "fill-range",
+				"version": "7.1.1",
+				"size": 16743
+			},
+			{
+				"name": "to-regex-range",
+				"version": "5.0.1",
+				"size": 22939
+			},
+			{
+				"name": "is-number",
+				"version": "7.0.0",
+				"size": 9615
+			},
+			{
+				"name": "picomatch",
+				"version": "2.3.1",
+				"size": 89952
+			},
+			{
+				"name": "minimatch",
+				"version": "9.0.5",
+				"size": 435003
+			},
+			{
+				"name": "brace-expansion",
+				"version": "2.0.1",
+				"size": 11486
+			},
+			{
+				"name": "balanced-match",
+				"version": "1.0.2",
+				"size": 6939
+			},
+			{
+				"name": "@eslint-community/regexpp",
+				"version": "4.12.1",
+				"size": 472794
+			},
+			{
+				"name": "@typescript-eslint/type-utils",
+				"version": "8.30.1",
+				"size": 96057
+			},
+			{
+				"name": "@typescript-eslint/parser",
+				"version": "8.30.1",
+				"size": 14346
+			},
+			{
+				"name": "eslint-plugin-perfectionist",
+				"version": "4.11.0",
+				"size": 302721
+			},
+			{
+				"name": "natural-orderby",
+				"version": "5.0.0",
+				"size": 72452
+			},
+			{
+				"name": "eslint-plugin-unicorn",
+				"version": "58.0.0",
+				"size": 747461
+			},
+			{
+				"name": "@babel/helper-validator-identifier",
+				"version": "7.25.9",
+				"size": 48330
+			},
+			{
+				"name": "@eslint/plugin-kit",
+				"version": "0.2.8",
+				"size": 76842
+			},
+			{
+				"name": "@eslint/core",
+				"version": "0.13.0",
+				"size": 64791
+			},
+			{
+				"name": "@types/json-schema",
+				"version": "7.0.15",
+				"size": 31748
+			},
+			{
+				"name": "levn",
+				"version": "0.4.1",
+				"size": 24947
+			},
+			{
+				"name": "prelude-ls",
+				"version": "1.2.1",
+				"size": 36741
+			},
+			{
+				"name": "type-check",
+				"version": "0.4.0",
+				"size": 21167
+			},
+			{
+				"name": "ci-info",
+				"version": "4.2.0",
+				"size": 28914
+			},
+			{
+				"name": "clean-regexp",
+				"version": "1.0.0"
+			},
+			{
+				"name": "escape-string-regexp",
+				"version": "1.0.5"
+			},
+			{
+				"name": "core-js-compat",
+				"version": "3.41.0",
+				"size": 775766
+			},
+			{
+				"name": "browserslist",
+				"version": "4.24.4",
+				"size": 64926
+			},
+			{
+				"name": "caniuse-lite",
+				"version": "1.0.30001715",
+				"size": 2211246
+			},
+			{
+				"name": "electron-to-chromium",
+				"version": "1.5.139",
+				"size": 161922
+			},
+			{
+				"name": "node-releases",
+				"version": "2.0.19",
+				"size": 37225
+			},
+			{
+				"name": "update-browserslist-db",
+				"version": "1.1.3",
+				"size": 14770
+			},
+			{
+				"name": "escalade",
+				"version": "3.2.0",
+				"size": 12385
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "esquery",
+				"version": "1.6.0",
+				"size": 1037210
+			},
+			{
+				"name": "estraverse",
+				"version": "5.3.0",
+				"size": 37094
+			},
+			{
+				"name": "globals",
+				"version": "16.0.0",
+				"size": 187424
+			},
+			{
+				"name": "indent-string",
+				"version": "5.0.0",
+				"size": 4744
+			},
+			{
+				"name": "is-builtin-module",
+				"version": "5.0.0",
+				"size": 3864
+			},
+			{
+				"name": "builtin-modules",
+				"version": "5.0.0",
+				"size": 4856
+			},
+			{
+				"name": "jsesc",
+				"version": "3.1.0",
+				"size": 32280
+			},
+			{
+				"name": "pluralize",
+				"version": "8.0.0",
+				"size": 17725
+			},
+			{
+				"name": "read-package-up",
+				"version": "11.0.0",
+				"size": 6279
+			},
+			{
+				"name": "find-up-simple",
+				"version": "1.0.1",
+				"size": 7253
+			},
+			{
+				"name": "read-pkg",
+				"version": "9.0.1",
+				"size": 6918
+			},
+			{
+				"name": "@types/normalize-package-data",
+				"version": "2.4.4",
+				"size": 5813
+			},
+			{
+				"name": "normalize-package-data",
+				"version": "6.0.2",
+				"size": 28210
+			},
+			{
+				"name": "hosted-git-info",
+				"version": "7.0.2",
+				"size": 26587
+			},
+			{
+				"name": "lru-cache",
+				"version": "10.4.3",
+				"size": 804301
+			},
+			{
+				"name": "validate-npm-package-license",
+				"version": "3.0.4",
+				"size": 16597
+			},
+			{
+				"name": "spdx-correct",
+				"version": "3.2.0",
+				"size": 23412
+			},
+			{
+				"name": "spdx-expression-parse",
+				"version": "3.0.1",
+				"size": 11850
+			},
+			{
+				"name": "spdx-exceptions",
+				"version": "2.5.0",
+				"size": 3468
+			},
+			{
+				"name": "spdx-license-ids",
+				"version": "3.0.21",
+				"size": 12891
+			},
+			{
+				"name": "parse-json",
+				"version": "8.3.0",
+				"size": 10975
+			},
+			{
+				"name": "@babel/code-frame",
+				"version": "7.26.2",
+				"size": 33160
+			},
+			{
+				"name": "js-tokens",
+				"version": "4.0.0"
+			},
+			{
+				"name": "index-to-position",
+				"version": "1.1.0",
+				"size": 4045
+			},
+			{
+				"name": "type-fest",
+				"version": "4.40.0",
+				"size": 438455
+			},
+			{
+				"name": "unicorn-magic",
+				"version": "0.1.0",
+				"size": 3450
+			},
+			{
+				"name": "regexp-tree",
+				"version": "0.1.27",
+				"size": 313692
+			},
+			{
+				"name": "regjsparser",
+				"version": "0.12.0",
+				"size": 73459
+			},
+			{
+				"name": "jsesc",
+				"version": "3.0.2",
+				"size": 31726
+			},
+			{
+				"name": "strip-indent",
+				"version": "4.0.0",
+				"size": 3644
+			},
+			{
+				"name": "min-indent",
+				"version": "1.0.1",
+				"size": 2969
+			},
+			{
+				"name": "eslint-plugin-vue",
+				"version": "10.0.0",
+				"size": 1380013
+			},
+			{
+				"name": "nth-check",
+				"version": "2.1.1",
+				"size": 42555
+			},
+			{
+				"name": "boolbase",
+				"version": "1.0.0"
+			},
+			{
+				"name": "postcss-selector-parser",
+				"version": "6.1.2",
+				"size": 186430
+			},
+			{
+				"name": "cssesc",
+				"version": "3.0.0",
+				"size": 17488
+			},
+			{
+				"name": "util-deprecate",
+				"version": "1.0.2"
+			},
+			{
+				"name": "xml-name-validator",
+				"version": "4.0.0",
+				"size": 13545
+			},
+			{
+				"name": "vue-eslint-parser",
+				"version": "10.1.3",
+				"size": 1127262
+			},
+			{
+				"name": "eslint-scope",
+				"version": "8.3.0",
+				"size": 155422
+			},
+			{
+				"name": "esrecurse",
+				"version": "4.3.0",
+				"size": 13527
+			},
+			{
+				"name": "espree",
+				"version": "10.3.0",
+				"size": 79348
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "acorn-jsx",
+				"version": "5.3.2",
+				"size": 24385
+			},
+			{
+				"name": "lodash",
+				"version": "4.17.21",
+				"size": 1412415
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[1, 4],
+			[1, 5],
+			[1, 6],
+			[6, 7],
+			[6, 8],
+			[8, 9],
+			[6, 10],
+			[10, 7],
+			[10, 11],
+			[11, 12],
+			[11, 7],
+			[6, 13],
+			[13, 14],
+			[14, 15],
+			[13, 16],
+			[13, 17],
+			[17, 18],
+			[13, 19],
+			[19, 20],
+			[19, 21],
+			[21, 22],
+			[22, 23],
+			[21, 24],
+			[24, 25],
+			[25, 26],
+			[24, 20],
+			[19, 27],
+			[27, 17],
+			[17, 18],
+			[19, 28],
+			[19, 29],
+			[29, 30],
+			[30, 31],
+			[31, 32],
+			[32, 33],
+			[29, 34],
+			[13, 35],
+			[35, 36],
+			[36, 37],
+			[13, 4],
+			[13, 7],
+			[13, 11],
+			[11, 12],
+			[11, 7],
+			[1, 38],
+			[1, 39],
+			[39, 14],
+			[14, 15],
+			[39, 4],
+			[39, 6],
+			[6, 7],
+			[6, 8],
+			[8, 9],
+			[6, 10],
+			[10, 7],
+			[10, 11],
+			[11, 12],
+			[11, 7],
+			[6, 13],
+			[13, 14],
+			[14, 15],
+			[13, 16],
+			[13, 17],
+			[17, 18],
+			[13, 19],
+			[19, 20],
+			[19, 21],
+			[21, 22],
+			[22, 23],
+			[21, 24],
+			[24, 25],
+			[25, 26],
+			[24, 20],
+			[19, 27],
+			[27, 17],
+			[17, 18],
+			[19, 28],
+			[19, 29],
+			[29, 30],
+			[30, 31],
+			[31, 32],
+			[32, 33],
+			[29, 34],
+			[13, 35],
+			[35, 36],
+			[36, 37],
+			[13, 4],
+			[13, 7],
+			[13, 11],
+			[11, 12],
+			[11, 7],
+			[39, 13],
+			[13, 14],
+			[14, 15],
+			[13, 16],
+			[13, 17],
+			[17, 18],
+			[13, 19],
+			[19, 20],
+			[19, 21],
+			[21, 22],
+			[22, 23],
+			[21, 24],
+			[24, 25],
+			[25, 26],
+			[24, 20],
+			[19, 27],
+			[27, 17],
+			[17, 18],
+			[19, 28],
+			[19, 29],
+			[29, 30],
+			[30, 31],
+			[31, 32],
+			[32, 33],
+			[29, 34],
+			[13, 35],
+			[35, 36],
+			[36, 37],
+			[13, 4],
+			[13, 7],
+			[13, 11],
+			[11, 12],
+			[11, 7],
+			[1, 11],
+			[11, 12],
+			[11, 7],
+			[1, 10],
+			[10, 7],
+			[10, 11],
+			[11, 12],
+			[11, 7],
+			[0, 40],
+			[40, 14],
+			[14, 15],
+			[40, 7],
+			[40, 11],
+			[11, 12],
+			[11, 7],
+			[40, 10],
+			[10, 7],
+			[10, 11],
+			[11, 12],
+			[11, 7],
+			[40, 13],
+			[13, 14],
+			[14, 15],
+			[13, 16],
+			[13, 17],
+			[17, 18],
+			[13, 19],
+			[19, 20],
+			[19, 21],
+			[21, 22],
+			[22, 23],
+			[21, 24],
+			[24, 25],
+			[25, 26],
+			[24, 20],
+			[19, 27],
+			[27, 17],
+			[17, 18],
+			[19, 28],
+			[19, 29],
+			[29, 30],
+			[30, 31],
+			[31, 32],
+			[32, 33],
+			[29, 34],
+			[13, 35],
+			[35, 36],
+			[36, 37],
+			[13, 4],
+			[13, 7],
+			[13, 11],
+			[11, 12],
+			[11, 7],
+			[0, 41],
+			[41, 7],
+			[41, 6],
+			[6, 7],
+			[6, 8],
+			[8, 9],
+			[6, 10],
+			[10, 7],
+			[10, 11],
+			[11, 12],
+			[11, 7],
+			[6, 13],
+			[13, 14],
+			[14, 15],
+			[13, 16],
+			[13, 17],
+			[17, 18],
+			[13, 19],
+			[19, 20],
+			[19, 21],
+			[21, 22],
+			[22, 23],
+			[21, 24],
+			[24, 25],
+			[25, 26],
+			[24, 20],
+			[19, 27],
+			[27, 17],
+			[17, 18],
+			[19, 28],
+			[19, 29],
+			[29, 30],
+			[30, 31],
+			[31, 32],
+			[32, 33],
+			[29, 34],
+			[13, 35],
+			[35, 36],
+			[36, 37],
+			[13, 4],
+			[13, 7],
+			[13, 11],
+			[11, 12],
+			[11, 7],
+			[41, 42],
+			[0, 43],
+			[43, 44],
+			[43, 8],
+			[8, 9],
+			[43, 45],
+			[45, 46],
+			[46, 47],
+			[45, 48],
+			[48, 49],
+			[48, 50],
+			[50, 49],
+			[43, 51],
+			[43, 52],
+			[52, 53],
+			[43, 54],
+			[54, 55],
+			[55, 56],
+			[55, 57],
+			[55, 58],
+			[55, 59],
+			[59, 60],
+			[59, 61],
+			[43, 62],
+			[62, 63],
+			[43, 64],
+			[43, 65],
+			[43, 66],
+			[66, 67],
+			[43, 68],
+			[43, 69],
+			[43, 70],
+			[70, 71],
+			[70, 72],
+			[72, 73],
+			[72, 74],
+			[74, 16],
+			[74, 75],
+			[75, 76],
+			[74, 77],
+			[77, 78],
+			[78, 79],
+			[79, 80],
+			[79, 81],
+			[78, 81],
+			[77, 79],
+			[79, 80],
+			[79, 81],
+			[72, 82],
+			[82, 83],
+			[83, 84],
+			[83, 61],
+			[83, 44],
+			[82, 85],
+			[82, 86],
+			[72, 86],
+			[72, 87],
+			[70, 86],
+			[43, 88],
+			[43, 89],
+			[89, 90],
+			[43, 16],
+			[43, 91],
+			[91, 92],
+			[0, 93],
+			[93, 8],
+			[8, 9],
+			[93, 5],
+			[93, 94],
+			[94, 95],
+			[93, 96],
+			[96, 97],
+			[96, 98],
+			[93, 16],
+			[93, 99],
+			[0, 64],
+			[0, 100],
+			[100, 14],
+			[14, 15],
+			[100, 101],
+			[101, 102],
+			[102, 63],
+			[101, 63],
+			[100, 12],
+			[100, 103],
+			[103, 104],
+			[103, 105],
+			[103, 12],
+			[100, 62],
+			[62, 63],
+			[100, 106],
+			[100, 16]
+		],
+		"circular": []
+	}
 }

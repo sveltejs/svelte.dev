@@ -13,8 +13,6 @@
 	"version": "1.0.0",
 	"svelte_range": "^3.46.4",
 	"last_rune_check_version": "1.0.0",
-	"dependencies": [],
-	"unpacked_size": 306314,
 	"downloads_history": [
 		{
 			"range": [1704047400000, 1704652199999],
@@ -244,5 +242,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-scrollbar",
+				"version": "1.0.0",
+				"size": 306314
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

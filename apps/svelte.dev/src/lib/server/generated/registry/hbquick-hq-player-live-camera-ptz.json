@@ -12,21 +12,6 @@
 	"svelte_range": "^3.46.2",
 	"last_rune_check_version": "0.0.6",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "@htmlbricks/hb-player-live-camera-ptz",
-			"semver": "^0.19.33"
-		},
-		{
-			"name": "ptz-client-api-requests",
-			"semver": "^0.0.19"
-		},
-		{
-			"name": "style-to-object",
-			"semver": "^0.3.0"
-		}
-	],
-	"unpacked_size": 173004,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -244,5 +229,285 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 12
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@hbquick/hq-player-live-camera-ptz",
+				"version": "0.0.6",
+				"size": 173004
+			},
+			{
+				"name": "@htmlbricks/hb-player-live-camera-ptz",
+				"version": "0.19.34",
+				"size": 254310
+			},
+			{
+				"name": "style-to-object",
+				"version": "0.3.0",
+				"size": 30488
+			},
+			{
+				"name": "inline-style-parser",
+				"version": "0.1.1",
+				"size": 30591
+			},
+			{
+				"name": "@htmlbricks/hb-table",
+				"version": "0.19.34",
+				"size": 454238
+			},
+			{
+				"name": "dayjs",
+				"version": "1.11.13",
+				"size": 670277
+			},
+			{
+				"name": "bootstrap-icons",
+				"version": "1.11.3",
+				"size": 2926281
+			},
+			{
+				"name": "@htmlbricks/hb-form",
+				"version": "0.19.34",
+				"size": 328146
+			},
+			{
+				"name": "@htmlbricks/hb-input-area",
+				"version": "0.19.34",
+				"size": 130098
+			},
+			{
+				"name": "@htmlbricks/hb-input-date",
+				"version": "0.19.34",
+				"size": 135149
+			},
+			{
+				"name": "@htmlbricks/hb-input-file",
+				"version": "0.19.34",
+				"size": 159416
+			},
+			{
+				"name": "@htmlbricks/hb-input-text",
+				"version": "0.19.34",
+				"size": 135801
+			},
+			{
+				"name": "@htmlbricks/hb-input-color",
+				"version": "0.19.34",
+				"size": 139552
+			},
+			{
+				"name": "rgb-hex",
+				"version": "4.1.0",
+				"size": 4816
+			},
+			{
+				"name": "debounce",
+				"version": "1.2.1",
+				"size": 11960
+			},
+			{
+				"name": "html-colors",
+				"version": "0.0.6",
+				"size": 8009
+			},
+			{
+				"name": "unique-random-array",
+				"version": "1.0.1",
+				"size": 3579
+			},
+			{
+				"name": "unique-random",
+				"version": "1.0.0"
+			},
+			{
+				"name": "@htmlbricks/hb-input-email",
+				"version": "0.19.34",
+				"size": 129025
+			},
+			{
+				"name": "@htmlbricks/hb-input-radio",
+				"version": "0.19.34",
+				"size": 133193
+			},
+			{
+				"name": "@htmlbricks/hb-input-range",
+				"version": "0.19.34",
+				"size": 140491
+			},
+			{
+				"name": "@htmlbricks/hb-input-number",
+				"version": "0.19.34",
+				"size": 140484
+			},
+			{
+				"name": "@htmlbricks/hb-input-select",
+				"version": "0.19.34",
+				"size": 132313
+			},
+			{
+				"name": "@htmlbricks/hb-input-checkbox",
+				"version": "0.19.34",
+				"size": 125870
+			},
+			{
+				"name": "@htmlbricks/hb-input-datetime",
+				"version": "0.19.34",
+				"size": 187171
+			},
+			{
+				"name": "@htmlbricks/hb-input-array-objects",
+				"version": "0.19.34",
+				"size": 185477
+			},
+			{
+				"name": "@htmlbricks/hb-form",
+				"version": "^0.19.34",
+				"isCircular": true,
+				"circularTarget": 27
+			},
+			{
+				"name": "",
+				"version": "htmlbricks/hb-form"
+			},
+			{
+				"name": "@htmlbricks/hb-table",
+				"version": "^0.19.34",
+				"isCircular": true,
+				"circularTarget": 29
+			},
+			{
+				"name": "",
+				"version": "htmlbricks/hb-table"
+			},
+			{
+				"name": "@htmlbricks/hb-dialog",
+				"version": "0.19.34",
+				"size": 179861
+			},
+			{
+				"name": "@htmlbricks/hb-paginate",
+				"version": "0.19.34",
+				"size": 124864
+			},
+			{
+				"name": "@htmlbricks/hb-dialogform",
+				"version": "0.19.34",
+				"size": 181448
+			},
+			{
+				"name": "@htmlbricks/hb-player-live",
+				"version": "0.19.34",
+				"size": 2249087
+			},
+			{
+				"name": "hls.js",
+				"version": "1.6.2",
+				"size": 23906784
+			},
+			{
+				"name": "simple-webrtc-element",
+				"version": "0.0.1",
+				"size": 30460
+			},
+			{
+				"name": "simple-webrtc-element-whep",
+				"version": "0.0.5",
+				"size": 40188
+			},
+			{
+				"name": "@htmlbricks/hb-pad-joystick",
+				"version": "0.19.34",
+				"size": 175797
+			},
+			{
+				"name": "html5-joystick-new",
+				"version": "0.0.6",
+				"size": 97102
+			},
+			{
+				"name": "ptz-client-api-requests",
+				"version": "0.0.19",
+				"size": 30195
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[1, 4],
+			[4, 5],
+			[4, 6],
+			[4, 7],
+			[7, 8],
+			[7, 9],
+			[7, 10],
+			[7, 11],
+			[7, 12],
+			[12, 13],
+			[12, 14],
+			[12, 15],
+			[15, 16],
+			[16, 17],
+			[7, 18],
+			[7, 19],
+			[7, 20],
+			[7, 21],
+			[7, 22],
+			[7, 23],
+			[7, 24],
+			[24, 9],
+			[24, 21],
+			[7, 25],
+			[25, 26],
+			[25, 28],
+			[4, 30],
+			[4, 31],
+			[4, 32],
+			[32, 7],
+			[7, 8],
+			[7, 9],
+			[7, 10],
+			[7, 11],
+			[7, 12],
+			[12, 13],
+			[12, 14],
+			[12, 15],
+			[15, 16],
+			[16, 17],
+			[7, 18],
+			[7, 19],
+			[7, 20],
+			[7, 21],
+			[7, 22],
+			[7, 23],
+			[7, 24],
+			[24, 9],
+			[24, 21],
+			[7, 25],
+			[25, 26],
+			[25, 28],
+			[32, 30],
+			[1, 30],
+			[1, 33],
+			[33, 34],
+			[33, 35],
+			[33, 36],
+			[1, 37],
+			[37, 2],
+			[2, 3],
+			[37, 38],
+			[0, 39],
+			[0, 2],
+			[2, 3]
+		],
+		"circular": [
+			[26, 27],
+			[28, 29],
+			[26, 27],
+			[28, 29]
+		]
+	}
 }

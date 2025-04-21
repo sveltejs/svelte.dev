@@ -13,29 +13,6 @@
 	"version": "0.0.1-alpha.11",
 	"svelte_range": "^3.6.4",
 	"last_rune_check_version": "0.0.1-alpha.11",
-	"dependencies": [
-		{
-			"name": "@ant-design/colors",
-			"semver": "^3.1.0"
-		},
-		{
-			"name": "@ant-design/icons",
-			"semver": "^2.1.1"
-		},
-		{
-			"name": "svelte",
-			"semver": "^3.6.4"
-		},
-		{
-			"name": "tslib",
-			"semver": "^1.10.0"
-		},
-		{
-			"name": "warning",
-			"semver": "^4.0.3"
-		}
-	],
-	"unpacked_size": 1584439,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -329,5 +306,65 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 9
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "ant-design-svelte",
+				"version": "0.0.1-alpha.11",
+				"size": 1584439
+			},
+			{
+				"name": "@ant-design/colors",
+				"version": "3.2.2",
+				"size": 10851
+			},
+			{
+				"name": "tinycolor2",
+				"version": "1.6.0",
+				"size": 284855
+			},
+			{
+				"name": "@ant-design/icons",
+				"version": "2.1.1",
+				"size": 3349884
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			},
+			{
+				"name": "tslib",
+				"version": "1.14.1",
+				"size": 33965
+			},
+			{
+				"name": "warning",
+				"version": "4.0.3",
+				"size": 9472
+			},
+			{
+				"name": "loose-envify",
+				"version": "1.4.0",
+				"size": 5814
+			},
+			{
+				"name": "js-tokens",
+				"version": "4.0.0"
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[0, 4],
+			[0, 5],
+			[0, 6],
+			[6, 7],
+			[7, 8]
+		],
+		"circular": []
+	}
 }

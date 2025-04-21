@@ -12,8 +12,6 @@
 	"svelte_range": "^3.24.1",
 	"last_rune_check_version": "3.0.1",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 33808,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -327,5 +325,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 203
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@beyonk/svelte-facebook-pixel",
+				"version": "3.0.1",
+				"size": 33808
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

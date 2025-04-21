@@ -13,21 +13,6 @@
 	"version": "0.8.0",
 	"svelte_range": "^3.55.1",
 	"last_rune_check_version": "0.8.0",
-	"dependencies": [
-		{
-			"name": "@agufaui/config",
-			"semver": "^0.8.0"
-		},
-		{
-			"name": "@agufaui/locale",
-			"semver": "^0.5.0"
-		},
-		{
-			"name": "@agufaui/theme",
-			"semver": "^0.8.0"
-		}
-	],
-	"unpacked_size": 189131,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -261,5 +246,35 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 9
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@agufaui/svelte",
+				"version": "0.8.0",
+				"size": 189131
+			},
+			{
+				"name": "@agufaui/config",
+				"version": "0.8.0",
+				"size": 25699
+			},
+			{
+				"name": "@agufaui/locale",
+				"version": "^0.5.0"
+			},
+			{
+				"name": "@agufaui/theme",
+				"version": "0.8.0",
+				"size": 263533
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3]
+		],
+		"circular": []
+	}
 }

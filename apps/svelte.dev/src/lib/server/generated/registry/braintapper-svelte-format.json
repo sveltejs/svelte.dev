@@ -13,13 +13,6 @@
 	"version": "0.0.8",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "0.0.8",
-	"dependencies": [
-		{
-			"name": "sugar-and-spice",
-			"semver": "0.0.5"
-		}
-	],
-	"unpacked_size": 744448,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -285,5 +278,43 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 10
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "braintapper-svelte-format",
+				"version": "0.0.8",
+				"size": 744448
+			},
+			{
+				"name": "sugar-and-spice",
+				"version": "0.0.5",
+				"size": 21812
+			},
+			{
+				"name": "sugar",
+				"version": "2.0.6",
+				"size": 2058286
+			},
+			{
+				"name": "sugar-core",
+				"version": "2.0.6",
+				"size": 261921
+			},
+			{
+				"name": "sugar-inflections",
+				"version": "2.0.6",
+				"size": 399283
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[1, 4],
+			[4, 3]
+		],
+		"circular": []
+	}
 }

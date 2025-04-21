@@ -12,8 +12,6 @@
 	"svelte_range": "^5.19.9",
 	"last_rune_check_version": "1.0.9",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 5489,
 	"downloads_history": [
 		{
 			"range": [1730658600000, 1731263399999],
@@ -107,5 +105,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@flexiui/svelte-quote",
+				"version": "1.0.9",
+				"size": 5489
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

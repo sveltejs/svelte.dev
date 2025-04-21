@@ -13,13 +13,6 @@
 	"version": "0.0.26",
 	"svelte_range": "^3.29.7",
 	"last_rune_check_version": "0.0.26",
-	"dependencies": [
-		{
-			"name": "codemirror",
-			"semver": "^5.58.2"
-		}
-	],
-	"unpacked_size": 10265,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -313,5 +306,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 16
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@svelte-parts/editor",
+				"version": "0.0.26",
+				"size": 10265
+			},
+			{
+				"name": "codemirror",
+				"version": "5.65.19",
+				"size": 2962230
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

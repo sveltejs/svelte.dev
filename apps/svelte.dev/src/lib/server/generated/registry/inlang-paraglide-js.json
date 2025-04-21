@@ -12,37 +12,6 @@
 	"typescript": true,
 	"version": "2.0.12",
 	"last_rune_check_version": "2.0.12",
-	"dependencies": [
-		{
-			"name": "commander",
-			"semver": "11.1.0"
-		},
-		{
-			"name": "consola",
-			"semver": "3.4.0"
-		},
-		{
-			"name": "json5",
-			"semver": "2.2.3"
-		},
-		{
-			"name": "unplugin",
-			"semver": "^2.1.2"
-		},
-		{
-			"name": "urlpattern-polyfill",
-			"semver": "^10.0.0"
-		},
-		{
-			"name": "@inlang/sdk",
-			"semver": "2.4.8"
-		},
-		{
-			"name": "@inlang/recommend-sherlock",
-			"semver": "0.2.1"
-		}
-	],
-	"unpacked_size": 419441,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -356,5 +325,177 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 145060
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@inlang/paraglide-js",
+				"version": "2.0.12",
+				"size": 419441
+			},
+			{
+				"name": "commander",
+				"version": "11.1.0",
+				"size": 176667
+			},
+			{
+				"name": "consola",
+				"version": "3.4.0",
+				"size": 313650
+			},
+			{
+				"name": "json5",
+				"version": "2.2.3",
+				"size": 235198
+			},
+			{
+				"name": "unplugin",
+				"version": "2.3.2",
+				"size": 182727
+			},
+			{
+				"name": "acorn",
+				"version": "8.14.1",
+				"size": 547473
+			},
+			{
+				"name": "picomatch",
+				"version": "4.0.2",
+				"size": 85237
+			},
+			{
+				"name": "webpack-virtual-modules",
+				"version": "0.6.2",
+				"size": 46451
+			},
+			{
+				"name": "urlpattern-polyfill",
+				"version": "10.0.0",
+				"size": 49908
+			},
+			{
+				"name": "@inlang/sdk",
+				"version": "2.4.8",
+				"size": 1042458
+			},
+			{
+				"name": "@sinclair/typebox",
+				"version": "0.31.28",
+				"size": 535697
+			},
+			{
+				"name": "kysely",
+				"version": "0.27.6",
+				"size": 2964117
+			},
+			{
+				"name": "uuid",
+				"version": "10.0.0",
+				"size": 168173
+			},
+			{
+				"name": "sqlite-wasm-kysely",
+				"version": "0.3.0",
+				"size": 2313451
+			},
+			{
+				"name": "@sqlite.org/sqlite-wasm",
+				"version": "3.48.0-build4",
+				"size": 2980440
+			},
+			{
+				"name": "@lix-js/sdk",
+				"version": "0.4.7",
+				"size": 1468711
+			},
+			{
+				"name": "dedent",
+				"version": "1.5.1",
+				"size": 13912
+			},
+			{
+				"name": "human-id",
+				"version": "4.1.1",
+				"size": 51268
+			},
+			{
+				"name": "js-sha256",
+				"version": "0.11.0",
+				"size": 39462
+			},
+			{
+				"name": "@lix-js/server-protocol-schema",
+				"version": "0.1.1",
+				"size": 11760
+			},
+			{
+				"name": "@inlang/recommend-sherlock",
+				"version": "0.2.1",
+				"size": 35043
+			},
+			{
+				"name": "comment-json",
+				"version": "4.2.5",
+				"size": 46378
+			},
+			{
+				"name": "array-timsort",
+				"version": "1.0.3",
+				"size": 36164
+			},
+			{
+				"name": "core-util-is",
+				"version": "1.0.3",
+				"size": 4982
+			},
+			{
+				"name": "esprima",
+				"version": "4.0.1",
+				"size": 314361
+			},
+			{
+				"name": "has-own-prop",
+				"version": "2.0.0",
+				"size": 2842
+			},
+			{
+				"name": "repeat-string",
+				"version": "1.6.1"
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3],
+			[0, 4],
+			[4, 5],
+			[4, 6],
+			[4, 7],
+			[0, 8],
+			[0, 9],
+			[9, 10],
+			[9, 11],
+			[9, 12],
+			[9, 13],
+			[13, 14],
+			[9, 15],
+			[15, 16],
+			[15, 17],
+			[15, 18],
+			[15, 11],
+			[15, 12],
+			[15, 19],
+			[15, 13],
+			[13, 14],
+			[0, 20],
+			[20, 21],
+			[21, 22],
+			[21, 23],
+			[21, 24],
+			[21, 25],
+			[21, 26]
+		],
+		"circular": []
+	}
 }

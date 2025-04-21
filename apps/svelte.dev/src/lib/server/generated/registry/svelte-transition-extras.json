@@ -14,13 +14,6 @@
 	"kit_range": "next",
 	"last_rune_check_version": "0.1.5",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "svelte",
-			"semver": "^3.44.0"
-		}
-	],
-	"unpacked_size": 11759,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -218,5 +211,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-transition-extras",
+				"version": "0.1.5",
+				"size": 11759
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

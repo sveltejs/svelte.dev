@@ -13,8 +13,6 @@
 	"version": "1.0.6",
 	"svelte_range": "*",
 	"last_rune_check_version": "1.0.6",
-	"dependencies": [],
-	"unpacked_size": 34585,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -244,5 +242,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@nativescript-dom/svelte-types",
+				"version": "1.0.6",
+				"size": 34585
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

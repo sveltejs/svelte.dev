@@ -14,25 +14,6 @@
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.5.0",
 	"last_rune_check_version": "0.0.9",
-	"dependencies": [
-		{
-			"name": "@sveltejs/package",
-			"semver": "^2.0.1"
-		},
-		{
-			"name": "highlight.js",
-			"semver": "^11.7.0"
-		},
-		{
-			"name": "marked",
-			"semver": "^4.2.12"
-		},
-		{
-			"name": "svelte",
-			"semver": "^3.54.0"
-		}
-	],
-	"unpacked_size": 15225,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -346,5 +327,115 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 583
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@k4ung/svelte-otp",
+				"version": "0.0.9",
+				"size": 15225
+			},
+			{
+				"name": "@sveltejs/package",
+				"version": "2.3.11",
+				"size": 30366
+			},
+			{
+				"name": "chokidar",
+				"version": "4.0.3",
+				"size": 148759
+			},
+			{
+				"name": "readdirp",
+				"version": "4.1.2",
+				"size": 36127
+			},
+			{
+				"name": "kleur",
+				"version": "4.1.5",
+				"size": 20250
+			},
+			{
+				"name": "sade",
+				"version": "1.8.1",
+				"size": 31545
+			},
+			{
+				"name": "mri",
+				"version": "1.2.0",
+				"size": 13261
+			},
+			{
+				"name": "semver",
+				"version": "7.7.1",
+				"size": 96674
+			},
+			{
+				"name": "svelte2tsx",
+				"version": "0.7.36",
+				"size": 766555
+			},
+			{
+				"name": "dedent-js",
+				"version": "1.0.1"
+			},
+			{
+				"name": "pascal-case",
+				"version": "3.1.2",
+				"size": 14764
+			},
+			{
+				"name": "no-case",
+				"version": "3.0.4",
+				"size": 25128
+			},
+			{
+				"name": "lower-case",
+				"version": "2.0.2",
+				"size": 17661
+			},
+			{
+				"name": "tslib",
+				"version": "2.8.1",
+				"size": 90359
+			},
+			{
+				"name": "highlight.js",
+				"version": "11.11.1",
+				"size": 5433042
+			},
+			{
+				"name": "marked",
+				"version": "4.3.0",
+				"size": 427518
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[1, 4],
+			[1, 5],
+			[5, 6],
+			[1, 7],
+			[1, 8],
+			[8, 9],
+			[8, 10],
+			[10, 11],
+			[11, 12],
+			[12, 13],
+			[11, 13],
+			[10, 13],
+			[0, 14],
+			[0, 15],
+			[0, 16]
+		],
+		"circular": []
+	}
 }

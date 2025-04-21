@@ -13,21 +13,6 @@
 	"version": "1.1.0",
 	"svelte_range": "*",
 	"last_rune_check_version": "1.1.0",
-	"dependencies": [
-		{
-			"name": "prettier-plugin-svelte",
-			"semver": "~3.3.3"
-		},
-		{
-			"name": "prettier-plugin-tailwindcss",
-			"semver": "~0.6.11"
-		},
-		{
-			"name": "@viamrobotics/prettier-config",
-			"semver": "^1.0.1"
-		}
-	],
-	"unpacked_size": 14180,
 	"downloads_history": [
 		{
 			"range": [1733077800000, 1733682599999],
@@ -105,5 +90,36 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 272
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@viamrobotics/prettier-config-svelte",
+				"version": "1.1.0",
+				"size": 14180
+			},
+			{
+				"name": "prettier-plugin-svelte",
+				"version": "3.3.3",
+				"size": 1503936
+			},
+			{
+				"name": "prettier-plugin-tailwindcss",
+				"version": "0.6.11",
+				"size": 4380864
+			},
+			{
+				"name": "@viamrobotics/prettier-config",
+				"version": "1.0.1",
+				"size": 13457
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[0, 3]
+		],
+		"circular": []
+	}
 }

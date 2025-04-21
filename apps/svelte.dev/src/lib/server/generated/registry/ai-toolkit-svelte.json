@@ -13,17 +13,6 @@
 	"version": "1.1.22",
 	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
 	"last_rune_check_version": "1.1.22",
-	"dependencies": [
-		{
-			"name": "@ai-toolkit/provider-utils",
-			"semver": "2.1.11"
-		},
-		{
-			"name": "@ai-toolkit/ui-utils",
-			"semver": "1.1.17"
-		}
-	],
-	"unpacked_size": 114625,
 	"downloads_history": [
 		{
 			"range": [1740940200000, 1741544999999],
@@ -45,5 +34,74 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@ai-toolkit/svelte",
+				"version": "1.1.22",
+				"size": 114625
+			},
+			{
+				"name": "@ai-toolkit/provider-utils",
+				"version": "2.1.11",
+				"size": 4324659
+			},
+			{
+				"name": "@ai-toolkit/provider",
+				"version": "1.0.10",
+				"size": 149641
+			},
+			{
+				"name": "json-schema",
+				"version": "0.4.0",
+				"size": 26079
+			},
+			{
+				"name": "eventsource-parser",
+				"version": "3.0.1",
+				"size": 249830
+			},
+			{
+				"name": "nanoid",
+				"version": "3.3.11",
+				"size": 32583
+			},
+			{
+				"name": "secure-json-parse",
+				"version": "2.7.0",
+				"size": 40656
+			},
+			{
+				"name": "@ai-toolkit/ui-utils",
+				"version": "1.1.17",
+				"size": 384391
+			},
+			{
+				"name": "zod-to-json-schema",
+				"version": "3.24.5",
+				"size": 211797
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[1, 4],
+			[1, 5],
+			[1, 6],
+			[0, 7],
+			[7, 2],
+			[2, 3],
+			[7, 1],
+			[1, 2],
+			[2, 3],
+			[1, 4],
+			[1, 5],
+			[1, 6],
+			[7, 8]
+		],
+		"circular": []
+	}
 }

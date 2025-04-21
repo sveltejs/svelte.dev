@@ -13,41 +13,6 @@
 	"version": "0.1.0",
 	"svelte_range": "^3.59.2",
 	"last_rune_check_version": "0.1.0",
-	"dependencies": [
-		{
-			"name": "@svizzle/dom",
-			"semver": "^0.7.3"
-		},
-		{
-			"name": "@svizzle/ui",
-			"semver": "^0.13.0"
-		},
-		{
-			"name": "@svizzle/utils",
-			"semver": "^0.21.0"
-		},
-		{
-			"name": "d3-array",
-			"semver": "^3.2.4"
-		},
-		{
-			"name": "d3-quadtree",
-			"semver": "^3.0.1"
-		},
-		{
-			"name": "d3-scale",
-			"semver": "^4.0.2"
-		},
-		{
-			"name": "d3-shape",
-			"semver": "^3.2.0"
-		},
-		{
-			"name": "lamb",
-			"semver": "^0.61.1"
-		}
-	],
-	"unpacked_size": 35287,
 	"downloads_history": [
 		{
 			"range": [1700418600000, 1701023399999],
@@ -213,5 +178,189 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@svizzle/trends",
+				"version": "0.1.0",
+				"size": 35287
+			},
+			{
+				"name": "@svizzle/dom",
+				"version": "0.7.3",
+				"size": 10888
+			},
+			{
+				"name": "@svizzle/utils",
+				"version": "0.21.0",
+				"size": 269532
+			},
+			{
+				"name": "escape-string-regexp",
+				"version": "5.0.0",
+				"size": 3659
+			},
+			{
+				"name": "just-compare",
+				"version": "2.3.0",
+				"size": 9255
+			},
+			{
+				"name": "lamb",
+				"version": "0.61.1",
+				"size": 1101065
+			},
+			{
+				"name": "@svizzle/ui",
+				"version": "0.13.0",
+				"size": 167159
+			},
+			{
+				"name": "@macfja/svelte-persistent-store",
+				"version": "2.4.2",
+				"size": 80842
+			},
+			{
+				"name": "@macfja/serializer",
+				"version": "1.1.4",
+				"size": 26769
+			},
+			{
+				"name": "browser-cookies",
+				"version": "1.2.0"
+			},
+			{
+				"name": "idb-keyval",
+				"version": "6.2.1",
+				"size": 53805
+			},
+			{
+				"name": "sjcl-codec-hex",
+				"version": "1.0.0"
+			},
+			{
+				"name": "sjcl-bit-array",
+				"version": "1.0.0"
+			},
+			{
+				"name": "sjcl-es",
+				"version": "2.0.0",
+				"size": 2265130
+			},
+			{
+				"name": "bowser",
+				"version": "2.11.0",
+				"size": 216913
+			},
+			{
+				"name": "d3-color",
+				"version": "3.1.0",
+				"size": 61152
+			},
+			{
+				"name": "d3-array",
+				"version": "3.2.4",
+				"size": 163730
+			},
+			{
+				"name": "internmap",
+				"version": "2.0.3",
+				"size": 10470
+			},
+			{
+				"name": "d3-quadtree",
+				"version": "3.0.1",
+				"size": 43391
+			},
+			{
+				"name": "d3-scale",
+				"version": "4.0.2",
+				"size": 174363
+			},
+			{
+				"name": "d3-format",
+				"version": "3.1.0",
+				"size": 57833
+			},
+			{
+				"name": "d3-interpolate",
+				"version": "3.0.1",
+				"size": 69687
+			},
+			{
+				"name": "d3-time",
+				"version": "3.1.0",
+				"size": 64483
+			},
+			{
+				"name": "d3-time-format",
+				"version": "4.1.0",
+				"size": 85603
+			},
+			{
+				"name": "d3-shape",
+				"version": "3.2.0",
+				"size": 247267
+			},
+			{
+				"name": "d3-path",
+				"version": "3.1.0",
+				"size": 20858
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[2, 4],
+			[2, 5],
+			[1, 5],
+			[0, 6],
+			[6, 7],
+			[7, 8],
+			[7, 9],
+			[7, 10],
+			[7, 11],
+			[11, 12],
+			[7, 13],
+			[6, 1],
+			[1, 2],
+			[2, 3],
+			[2, 4],
+			[2, 5],
+			[1, 5],
+			[6, 2],
+			[2, 3],
+			[2, 4],
+			[2, 5],
+			[6, 14],
+			[6, 15],
+			[0, 2],
+			[2, 3],
+			[2, 4],
+			[2, 5],
+			[0, 16],
+			[16, 17],
+			[0, 18],
+			[0, 19],
+			[19, 16],
+			[16, 17],
+			[19, 20],
+			[19, 21],
+			[21, 15],
+			[19, 22],
+			[22, 16],
+			[16, 17],
+			[19, 23],
+			[23, 22],
+			[22, 16],
+			[16, 17],
+			[0, 24],
+			[24, 25],
+			[0, 5]
+		],
+		"circular": []
+	}
 }

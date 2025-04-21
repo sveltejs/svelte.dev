@@ -13,13 +13,6 @@
 	"version": "1.0.3",
 	"svelte_range": "^3.4.2",
 	"last_rune_check_version": "1.0.3",
-	"dependencies": [
-		{
-			"name": "@material/fab",
-			"semver": "^2.1.1"
-		}
-	],
-	"unpacked_size": 44205,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -285,5 +278,106 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 15
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-scrollable-card",
+				"version": "1.0.3",
+				"size": 44205
+			},
+			{
+				"name": "@material/fab",
+				"version": "2.3.0",
+				"size": 151404
+			},
+			{
+				"name": "@material/rtl",
+				"version": "0.42.0",
+				"size": 10496
+			},
+			{
+				"name": "@material/shape",
+				"version": "1.1.1",
+				"size": 14562
+			},
+			{
+				"name": "@material/feature-targeting",
+				"version": "0.44.1",
+				"size": 10113
+			},
+			{
+				"name": "@material/theme",
+				"version": "1.1.0",
+				"size": 66835
+			},
+			{
+				"name": "@material/ripple",
+				"version": "2.3.0",
+				"size": 520670
+			},
+			{
+				"name": "tslib",
+				"version": "1.14.1",
+				"size": 33965
+			},
+			{
+				"name": "@material/dom",
+				"version": "1.1.0",
+				"size": 42230
+			},
+			{
+				"name": "@material/base",
+				"version": "1.0.0",
+				"size": 165118
+			},
+			{
+				"name": "@material/animation",
+				"version": "1.0.0",
+				"size": 120792
+			},
+			{
+				"name": "@material/elevation",
+				"version": "1.1.0",
+				"size": 39369
+			},
+			{
+				"name": "@material/typography",
+				"version": "2.3.0",
+				"size": 47152
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[3, 4],
+			[1, 5],
+			[5, 4],
+			[1, 6],
+			[6, 7],
+			[6, 8],
+			[8, 7],
+			[6, 9],
+			[9, 7],
+			[6, 5],
+			[5, 4],
+			[6, 10],
+			[10, 7],
+			[6, 4],
+			[1, 10],
+			[10, 7],
+			[1, 11],
+			[11, 5],
+			[5, 4],
+			[11, 10],
+			[10, 7],
+			[11, 4],
+			[1, 12],
+			[12, 4],
+			[1, 4]
+		],
+		"circular": []
+	}
 }

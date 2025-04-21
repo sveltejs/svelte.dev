@@ -13,8 +13,6 @@
 	"version": "1.0.1",
 	"svelte_range": "^5.0.0",
 	"last_rune_check_version": "1.0.1",
-	"dependencies": [],
-	"unpacked_size": 17355,
 	"downloads_history": [
 		{
 			"range": [1736101800000, 1736706599999],
@@ -64,5 +62,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-bonsai",
+				"version": "1.0.1",
+				"size": 17355
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

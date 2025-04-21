@@ -14,8 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.0.5",
-	"dependencies": [],
-	"unpacked_size": 42222,
 	"downloads_history": [
 		{
 			"range": [1723401000000, 1724005799999],
@@ -141,5 +139,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 9
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-search-engine",
+				"version": "0.0.5",
+				"size": 42222
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

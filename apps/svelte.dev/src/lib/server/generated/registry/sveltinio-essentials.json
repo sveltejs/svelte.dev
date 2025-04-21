@@ -14,13 +14,6 @@
 	"svelte_range": "^3.59.2 || ^4.0.0",
 	"kit_range": "^1.25.1",
 	"last_rune_check_version": "0.7.9",
-	"dependencies": [
-		{
-			"name": "@sveltinio/ts-utils",
-			"semver": "^0.8.0"
-		}
-	],
-	"unpacked_size": 120404,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -334,5 +327,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 24
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@sveltinio/essentials",
+				"version": "0.7.9",
+				"size": 120404
+			},
+			{
+				"name": "@sveltinio/ts-utils",
+				"version": "0.8.0",
+				"size": 149180
+			},
+			{
+				"name": "neverthrow",
+				"version": "6.2.2",
+				"size": 90835
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2]
+		],
+		"circular": []
+	}
 }

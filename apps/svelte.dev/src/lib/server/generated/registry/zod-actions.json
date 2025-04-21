@@ -14,13 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.27.4",
 	"last_rune_check_version": "0.0.7",
-	"dependencies": [
-		{
-			"name": "zod",
-			"semver": "^3.22.4"
-		}
-	],
-	"unpacked_size": 19085,
 	"downloads_history": [
 		{
 			"range": [1701023400000, 1701628199999],
@@ -210,5 +203,21 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "zod-actions",
+				"version": "0.0.7",
+				"size": 19085
+			},
+			{
+				"name": "zod",
+				"version": "^3.22.4"
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

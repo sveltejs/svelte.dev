@@ -13,13 +13,6 @@
 	"version": "1.1.0",
 	"svelte_range": "^3.20.1",
 	"last_rune_check_version": "1.1.0",
-	"dependencies": [
-		{
-			"name": "page",
-			"semver": "^1.11.5"
-		}
-	],
-	"unpacked_size": 721450,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -301,5 +294,34 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 14
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@6edesign/svelte-router",
+				"version": "1.1.0",
+				"size": 721450
+			},
+			{
+				"name": "page",
+				"version": "1.11.6",
+				"size": 113746
+			},
+			{
+				"name": "path-to-regexp",
+				"version": "1.2.1"
+			},
+			{
+				"name": "isarray",
+				"version": "0.0.1"
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3]
+		],
+		"circular": []
+	}
 }

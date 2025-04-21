@@ -13,8 +13,6 @@
 	"version": "1.1.5",
 	"svelte_range": "^4.2.18 || ^5.0.0-next.164",
 	"last_rune_check_version": "1.1.5",
-	"dependencies": [],
-	"unpacked_size": 24054,
 	"downloads_history": [
 		{
 			"range": [1719772200000, 1720376999999],
@@ -180,5 +178,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 73
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-cartesian",
+				"version": "1.1.5",
+				"size": 24054
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

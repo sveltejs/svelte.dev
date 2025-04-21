@@ -13,57 +13,6 @@
 	"version": "0.0.65",
 	"svelte_range": "^5.19.6",
 	"last_rune_check_version": "0.0.65",
-	"dependencies": [
-		{
-			"name": "dom-to-image-more",
-			"semver": "^3.0.2"
-		},
-		{
-			"name": "grapesjs",
-			"semver": "^0.22.5"
-		},
-		{
-			"name": "monaco-editor",
-			"semver": "^0.52.2"
-		},
-		{
-			"name": "grapesjs-custom-code",
-			"semver": "^1.0.2"
-		},
-		{
-			"name": "grapesjs-parser-postcss",
-			"semver": "^1.0.3"
-		},
-		{
-			"name": "grapesjs-style-bg",
-			"semver": "^2.0.2"
-		},
-		{
-			"name": "grapesjs-tooltip",
-			"semver": "^0.1.8"
-		},
-		{
-			"name": "grapesjs-touch",
-			"semver": "^0.1.1"
-		},
-		{
-			"name": "grapesjs-typed",
-			"semver": "^2.0.1"
-		},
-		{
-			"name": "lit",
-			"semver": "^3.2.1"
-		},
-		{
-			"name": "nprogress",
-			"semver": "^0.2.0"
-		},
-		{
-			"name": "papaparse",
-			"semver": "^5.5.2"
-		}
-	],
-	"unpacked_size": 41847352,
 	"downloads_history": [
 		{
 			"range": [1740335400000, 1740940199999],
@@ -93,5 +42,215 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 77
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@blinkx/editor",
+				"version": "0.0.65",
+				"size": 41847352
+			},
+			{
+				"name": "dom-to-image-more",
+				"version": "3.5.0",
+				"size": 515324
+			},
+			{
+				"name": "grapesjs",
+				"version": "0.22.6",
+				"size": 11471631
+			},
+			{
+				"name": "@types/backbone",
+				"version": "1.4.15",
+				"size": 29635
+			},
+			{
+				"name": "@types/jquery",
+				"version": "3.5.32",
+				"size": 1122585
+			},
+			{
+				"name": "@types/sizzle",
+				"version": "2.3.9",
+				"size": 5084
+			},
+			{
+				"name": "@types/underscore",
+				"version": "1.13.0",
+				"size": 258098
+			},
+			{
+				"name": "backbone",
+				"version": "1.4.1",
+				"size": 181979
+			},
+			{
+				"name": "underscore",
+				"version": "1.13.7",
+				"size": 906308
+			},
+			{
+				"name": "backbone-undo",
+				"version": "0.2.6",
+				"size": 50285
+			},
+			{
+				"name": "backbone",
+				"version": "1.6.1",
+				"size": 189896
+			},
+			{
+				"name": "codemirror",
+				"version": "5.63.0",
+				"size": 2924446
+			},
+			{
+				"name": "codemirror-formatting",
+				"version": "1.0.0"
+			},
+			{
+				"name": "html-entities",
+				"version": "1.4.0",
+				"size": 68625
+			},
+			{
+				"name": "promise-polyfill",
+				"version": "8.3.0",
+				"size": 49710
+			},
+			{
+				"name": "underscore",
+				"version": "1.13.1",
+				"size": 901347
+			},
+			{
+				"name": "monaco-editor",
+				"version": "0.52.2",
+				"size": 98831340
+			},
+			{
+				"name": "grapesjs-custom-code",
+				"version": "1.0.2",
+				"size": 29224
+			},
+			{
+				"name": "grapesjs-parser-postcss",
+				"version": "1.0.3",
+				"size": 246627
+			},
+			{
+				"name": "grapesjs-style-bg",
+				"version": "2.0.2",
+				"size": 91015
+			},
+			{
+				"name": "grapesjs-style-gradient",
+				"version": "3.0.3",
+				"size": 74719
+			},
+			{
+				"name": "grapick",
+				"version": "0.1.13",
+				"size": 77775
+			},
+			{
+				"name": "grapesjs-tooltip",
+				"version": "0.1.8",
+				"size": 30347
+			},
+			{
+				"name": "grapesjs-touch",
+				"version": "0.1.1",
+				"size": 136378
+			},
+			{
+				"name": "grapesjs-typed",
+				"version": "2.0.1",
+				"size": 23629
+			},
+			{
+				"name": "lit",
+				"version": "3.3.0",
+				"size": 107036
+			},
+			{
+				"name": "@lit/reactive-element",
+				"version": "2.1.0",
+				"size": 862132
+			},
+			{
+				"name": "@lit-labs/ssr-dom-shim",
+				"version": "1.3.0",
+				"size": 82956
+			},
+			{
+				"name": "lit-element",
+				"version": "4.2.0",
+				"size": 123325
+			},
+			{
+				"name": "lit-html",
+				"version": "3.3.0",
+				"size": 1707238
+			},
+			{
+				"name": "@types/trusted-types",
+				"version": "2.0.7",
+				"size": 8577
+			},
+			{
+				"name": "nprogress",
+				"version": "0.2.0"
+			},
+			{
+				"name": "papaparse",
+				"version": "5.5.2",
+				"size": 263215
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[3, 4],
+			[4, 5],
+			[3, 6],
+			[2, 7],
+			[7, 8],
+			[2, 9],
+			[9, 8],
+			[9, 10],
+			[10, 8],
+			[2, 11],
+			[2, 12],
+			[2, 13],
+			[2, 14],
+			[2, 15],
+			[0, 16],
+			[0, 17],
+			[0, 18],
+			[0, 19],
+			[19, 20],
+			[20, 21],
+			[0, 22],
+			[0, 23],
+			[0, 24],
+			[0, 25],
+			[25, 26],
+			[26, 27],
+			[25, 28],
+			[28, 27],
+			[28, 26],
+			[26, 27],
+			[28, 29],
+			[29, 30],
+			[25, 29],
+			[29, 30],
+			[0, 31],
+			[0, 32]
+		],
+		"circular": []
+	}
 }

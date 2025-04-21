@@ -13,21 +13,6 @@
 	"version": "5.0.4",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "5.0.4",
-	"dependencies": [
-		{
-			"name": "css-typed-om",
-			"semver": "^0.4.0"
-		},
-		{
-			"name": "param-case",
-			"semver": "^3.0.4"
-		},
-		{
-			"name": "uppercamelcase",
-			"semver": "^3.0.0"
-		}
-	],
-	"unpacked_size": 249512,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -297,5 +282,67 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 24
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "power-styles",
+				"version": "5.0.4",
+				"size": 249512
+			},
+			{
+				"name": "css-typed-om",
+				"version": "0.4.0",
+				"size": 67063
+			},
+			{
+				"name": "param-case",
+				"version": "3.0.4",
+				"size": 10221
+			},
+			{
+				"name": "dot-case",
+				"version": "3.0.4",
+				"size": 10481
+			},
+			{
+				"name": "no-case",
+				"version": "3.0.4",
+				"size": 25128
+			},
+			{
+				"name": "lower-case",
+				"version": "2.0.2",
+				"size": 17661
+			},
+			{
+				"name": "tslib",
+				"version": "2.8.1",
+				"size": 90359
+			},
+			{
+				"name": "uppercamelcase",
+				"version": "3.0.0"
+			},
+			{
+				"name": "camelcase",
+				"version": "4.1.0"
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[3, 4],
+			[4, 5],
+			[5, 6],
+			[4, 6],
+			[3, 6],
+			[2, 6],
+			[0, 7],
+			[7, 8]
+		],
+		"circular": []
+	}
 }

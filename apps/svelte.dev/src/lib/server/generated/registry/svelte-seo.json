@@ -14,13 +14,6 @@
 	"svelte_range": "^3.55.0",
 	"kit_range": "^1.30.4",
 	"last_rune_check_version": "1.6.1",
-	"dependencies": [
-		{
-			"name": "schema-dts",
-			"semver": "^1.1.2"
-		}
-	],
-	"unpacked_size": 37398,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -334,5 +327,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 2596
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-seo",
+				"version": "1.6.1",
+				"size": 37398
+			},
+			{
+				"name": "schema-dts",
+				"version": "1.1.5",
+				"size": 936027
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

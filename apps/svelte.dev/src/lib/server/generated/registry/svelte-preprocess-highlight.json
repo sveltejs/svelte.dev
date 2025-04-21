@@ -13,25 +13,6 @@
 	"version": "0.1.0",
 	"svelte_range": "^3.48.0",
 	"last_rune_check_version": "0.1.0",
-	"dependencies": [
-		{
-			"name": "highlight.js",
-			"semver": "^11.5.1"
-		},
-		{
-			"name": "magic-string",
-			"semver": "^0.26.2"
-		},
-		{
-			"name": "prettier",
-			"semver": "^2.7.1"
-		},
-		{
-			"name": "prettier-plugin-svelte",
-			"semver": "^2.7.0"
-		}
-	],
-	"unpacked_size": 11531,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -273,5 +254,48 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-preprocess-highlight",
+				"version": "0.1.0",
+				"size": 11531
+			},
+			{
+				"name": "highlight.js",
+				"version": "11.11.1",
+				"size": 5433042
+			},
+			{
+				"name": "magic-string",
+				"version": "0.26.7",
+				"size": 400761
+			},
+			{
+				"name": "sourcemap-codec",
+				"version": "1.4.8",
+				"size": 31802
+			},
+			{
+				"name": "prettier",
+				"version": "2.8.8",
+				"size": 11238446
+			},
+			{
+				"name": "prettier-plugin-svelte",
+				"version": "2.10.1",
+				"size": 268019
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[0, 4],
+			[0, 5]
+		],
+		"circular": []
+	}
 }

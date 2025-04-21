@@ -14,8 +14,6 @@
 	"svelte_range": "^3.55.1",
 	"kit_range": "1.1.1",
 	"last_rune_check_version": "0.1.8",
-	"dependencies": [],
-	"unpacked_size": 48826,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -329,5 +327,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 3300
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-dnd-list",
+				"version": "0.1.8",
+				"size": 48826
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

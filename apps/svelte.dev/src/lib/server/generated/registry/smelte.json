@@ -12,57 +12,6 @@
 	"svelte_range": "^3.31.2",
 	"last_rune_check_version": "1.1.8",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "autoprefixer",
-			"semver": "^9.8.6"
-		},
-		{
-			"name": "merge-deep",
-			"semver": "^3.0.3"
-		},
-		{
-			"name": "postcss",
-			"semver": "^8.2.6"
-		},
-		{
-			"name": "postcss-import",
-			"semver": "^14.0.0"
-		},
-		{
-			"name": "postcss-input-range",
-			"semver": "^4.0.0"
-		},
-		{
-			"name": "postcss-url",
-			"semver": "^10.1.1"
-		},
-		{
-			"name": "rollup-plugin-postcss",
-			"semver": "^4.0.0"
-		},
-		{
-			"name": "svelte",
-			"semver": "^3.31.2"
-		},
-		{
-			"name": "svelte-typed-component",
-			"semver": "^1.1.1"
-		},
-		{
-			"name": "tailwind-css-variables",
-			"semver": "^2.0.3"
-		},
-		{
-			"name": "tailwindcss",
-			"semver": "^2.0.3"
-		},
-		{
-			"name": "tinycolor2",
-			"semver": "^1.4.2"
-		}
-	],
-	"unpacked_size": 964737,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -376,5 +325,1694 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 1631
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "smelte",
+				"version": "1.1.8",
+				"size": 964737
+			},
+			{
+				"name": "autoprefixer",
+				"version": "9.8.8",
+				"size": 289279
+			},
+			{
+				"name": "postcss",
+				"version": "7.0.39",
+				"size": 541344
+			},
+			{
+				"name": "picocolors",
+				"version": "0.2.1",
+				"size": 5813
+			},
+			{
+				"name": "source-map",
+				"version": "0.6.1"
+			},
+			{
+				"name": "browserslist",
+				"version": "4.24.4",
+				"size": 64926
+			},
+			{
+				"name": "caniuse-lite",
+				"version": "1.0.30001715",
+				"size": 2211246
+			},
+			{
+				"name": "electron-to-chromium",
+				"version": "1.5.139",
+				"size": 161922
+			},
+			{
+				"name": "node-releases",
+				"version": "2.0.19",
+				"size": 37225
+			},
+			{
+				"name": "update-browserslist-db",
+				"version": "1.1.3",
+				"size": 14770
+			},
+			{
+				"name": "escalade",
+				"version": "3.2.0",
+				"size": 12385
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "num2fraction",
+				"version": "1.2.2"
+			},
+			{
+				"name": "normalize-range",
+				"version": "0.1.2"
+			},
+			{
+				"name": "postcss-value-parser",
+				"version": "4.2.0",
+				"size": 27193
+			},
+			{
+				"name": "merge-deep",
+				"version": "3.0.3",
+				"size": 8465
+			},
+			{
+				"name": "arr-union",
+				"version": "3.1.0"
+			},
+			{
+				"name": "clone-deep",
+				"version": "0.2.4"
+			},
+			{
+				"name": "for-own",
+				"version": "0.1.5"
+			},
+			{
+				"name": "for-in",
+				"version": "1.0.2"
+			},
+			{
+				"name": "is-plain-object",
+				"version": "2.0.4"
+			},
+			{
+				"name": "isobject",
+				"version": "3.0.1"
+			},
+			{
+				"name": "kind-of",
+				"version": "3.2.2"
+			},
+			{
+				"name": "is-buffer",
+				"version": "1.1.6"
+			},
+			{
+				"name": "lazy-cache",
+				"version": "1.0.4"
+			},
+			{
+				"name": "shallow-clone",
+				"version": "0.1.2"
+			},
+			{
+				"name": "is-extendable",
+				"version": "0.1.1"
+			},
+			{
+				"name": "kind-of",
+				"version": "2.0.1"
+			},
+			{
+				"name": "lazy-cache",
+				"version": "0.2.7"
+			},
+			{
+				"name": "mixin-object",
+				"version": "2.0.1"
+			},
+			{
+				"name": "for-in",
+				"version": "0.1.8"
+			},
+			{
+				"name": "postcss",
+				"version": "8.5.3",
+				"size": 201969
+			},
+			{
+				"name": "nanoid",
+				"version": "3.3.11",
+				"size": 32583
+			},
+			{
+				"name": "source-map-js",
+				"version": "1.2.1",
+				"size": 139872
+			},
+			{
+				"name": "postcss-import",
+				"version": "14.1.0",
+				"size": 27007
+			},
+			{
+				"name": "read-cache",
+				"version": "1.0.0"
+			},
+			{
+				"name": "pify",
+				"version": "2.3.0"
+			},
+			{
+				"name": "resolve",
+				"version": "1.22.10",
+				"size": 145619
+			},
+			{
+				"name": "is-core-module",
+				"version": "2.16.1",
+				"size": 33475
+			},
+			{
+				"name": "hasown",
+				"version": "2.0.2",
+				"size": 8765
+			},
+			{
+				"name": "function-bind",
+				"version": "1.1.2",
+				"size": 31427
+			},
+			{
+				"name": "path-parse",
+				"version": "1.0.7",
+				"size": 4511
+			},
+			{
+				"name": "supports-preserve-symlinks-flag",
+				"version": "1.0.0",
+				"size": 9178
+			},
+			{
+				"name": "postcss-input-range",
+				"version": "4.0.0"
+			},
+			{
+				"name": "postcss",
+				"version": "6.0.23",
+				"size": 658430
+			},
+			{
+				"name": "chalk",
+				"version": "2.4.2",
+				"size": 26924
+			},
+			{
+				"name": "ansi-styles",
+				"version": "3.2.1",
+				"size": 9371
+			},
+			{
+				"name": "color-convert",
+				"version": "1.9.3",
+				"size": 26964
+			},
+			{
+				"name": "color-name",
+				"version": "1.1.3"
+			},
+			{
+				"name": "supports-color",
+				"version": "5.5.0",
+				"size": 6630
+			},
+			{
+				"name": "has-flag",
+				"version": "3.0.0"
+			},
+			{
+				"name": "escape-string-regexp",
+				"version": "1.0.5"
+			},
+			{
+				"name": "postcss-selector-parser",
+				"version": "2.2.3"
+			},
+			{
+				"name": "uniq",
+				"version": "1.0.1"
+			},
+			{
+				"name": "flatten",
+				"version": "1.0.3",
+				"size": 3680
+			},
+			{
+				"name": "indexes-of",
+				"version": "1.0.1"
+			},
+			{
+				"name": "postcss-url",
+				"version": "10.1.3",
+				"size": 41231
+			},
+			{
+				"name": "make-dir",
+				"version": "3.1.0",
+				"size": 10042
+			},
+			{
+				"name": "semver",
+				"version": "6.3.1",
+				"size": 68343
+			},
+			{
+				"name": "mime",
+				"version": "2.5.2",
+				"size": 59664
+			},
+			{
+				"name": "minimatch",
+				"version": "3.0.8",
+				"size": 34664
+			},
+			{
+				"name": "brace-expansion",
+				"version": "1.1.11",
+				"size": 11059
+			},
+			{
+				"name": "balanced-match",
+				"version": "1.0.2",
+				"size": 6939
+			},
+			{
+				"name": "concat-map",
+				"version": "0.0.1"
+			},
+			{
+				"name": "xxhashjs",
+				"version": "0.2.2"
+			},
+			{
+				"name": "cuint",
+				"version": "0.2.2"
+			},
+			{
+				"name": "rollup-plugin-postcss",
+				"version": "4.0.2",
+				"size": 42469
+			},
+			{
+				"name": "chalk",
+				"version": "4.1.2",
+				"size": 35047
+			},
+			{
+				"name": "ansi-styles",
+				"version": "4.3.0",
+				"size": 16978
+			},
+			{
+				"name": "color-convert",
+				"version": "2.0.1",
+				"size": 27189
+			},
+			{
+				"name": "color-name",
+				"version": "1.1.4",
+				"size": 6693
+			},
+			{
+				"name": "supports-color",
+				"version": "7.2.0",
+				"size": 7035
+			},
+			{
+				"name": "has-flag",
+				"version": "4.0.0",
+				"size": 4419
+			},
+			{
+				"name": "concat-with-sourcemaps",
+				"version": "1.1.0",
+				"size": 8210
+			},
+			{
+				"name": "cssnano",
+				"version": "5.1.15",
+				"size": 73784
+			},
+			{
+				"name": "yaml",
+				"version": "1.10.2",
+				"size": 448149
+			},
+			{
+				"name": "lilconfig",
+				"version": "2.1.0",
+				"size": 16587
+			},
+			{
+				"name": "cssnano-preset-default",
+				"version": "5.2.14",
+				"size": 21964
+			},
+			{
+				"name": "postcss-calc",
+				"version": "8.2.4",
+				"size": 188487
+			},
+			{
+				"name": "postcss-selector-parser",
+				"version": "6.1.2",
+				"size": 186430
+			},
+			{
+				"name": "cssesc",
+				"version": "3.0.0",
+				"size": 17488
+			},
+			{
+				"name": "util-deprecate",
+				"version": "1.0.2"
+			},
+			{
+				"name": "postcss-svgo",
+				"version": "5.1.0",
+				"size": 13520
+			},
+			{
+				"name": "svgo",
+				"version": "2.8.0",
+				"size": 975338
+			},
+			{
+				"name": "csso",
+				"version": "4.2.0",
+				"size": 592991
+			},
+			{
+				"name": "css-tree",
+				"version": "1.1.3",
+				"size": 989149
+			},
+			{
+				"name": "mdn-data",
+				"version": "2.0.14",
+				"size": 561782
+			},
+			{
+				"name": "stable",
+				"version": "0.1.8",
+				"size": 8408
+			},
+			{
+				"name": "commander",
+				"version": "7.2.0",
+				"size": 144710
+			},
+			{
+				"name": "css-select",
+				"version": "4.3.0",
+				"size": 82444
+			},
+			{
+				"name": "boolbase",
+				"version": "1.0.0"
+			},
+			{
+				"name": "css-what",
+				"version": "6.1.0",
+				"size": 66038
+			},
+			{
+				"name": "domhandler",
+				"version": "4.3.1",
+				"size": 44583
+			},
+			{
+				"name": "domelementtype",
+				"version": "2.3.0",
+				"size": 11359
+			},
+			{
+				"name": "domutils",
+				"version": "2.8.0",
+				"size": 56647
+			},
+			{
+				"name": "dom-serializer",
+				"version": "1.4.1",
+				"size": 28312
+			},
+			{
+				"name": "entities",
+				"version": "2.2.0",
+				"size": 57673
+			},
+			{
+				"name": "nth-check",
+				"version": "2.1.1",
+				"size": 42555
+			},
+			{
+				"name": "@trysound/sax",
+				"version": "0.2.0",
+				"size": 48776
+			},
+			{
+				"name": "cssnano-utils",
+				"version": "3.1.0",
+				"size": 6532
+			},
+			{
+				"name": "postcss-colormin",
+				"version": "5.3.1",
+				"size": 8412
+			},
+			{
+				"name": "colord",
+				"version": "2.9.3",
+				"size": 113812
+			},
+			{
+				"name": "caniuse-api",
+				"version": "3.0.0",
+				"size": 12212
+			},
+			{
+				"name": "lodash.uniq",
+				"version": "4.5.0"
+			},
+			{
+				"name": "lodash.memoize",
+				"version": "4.1.2"
+			},
+			{
+				"name": "postcss-merge-rules",
+				"version": "5.1.4",
+				"size": 23389
+			},
+			{
+				"name": "postcss-discard-empty",
+				"version": "5.1.1",
+				"size": 5054
+			},
+			{
+				"name": "postcss-minify-params",
+				"version": "5.1.4",
+				"size": 6692
+			},
+			{
+				"name": "postcss-normalize-url",
+				"version": "5.1.0",
+				"size": 8776
+			},
+			{
+				"name": "normalize-url",
+				"version": "6.1.0",
+				"size": 21244
+			},
+			{
+				"name": "css-declaration-sorter",
+				"version": "6.4.1",
+				"size": 83837
+			},
+			{
+				"name": "postcss-convert-values",
+				"version": "5.1.3",
+				"size": 11650
+			},
+			{
+				"name": "postcss-merge-longhand",
+				"version": "5.1.7",
+				"size": 49455
+			},
+			{
+				"name": "stylehacks",
+				"version": "5.1.1",
+				"size": 30703
+			},
+			{
+				"name": "postcss-ordered-values",
+				"version": "5.1.3",
+				"size": 28880
+			},
+			{
+				"name": "postcss-reduce-initial",
+				"version": "5.1.2",
+				"size": 16598
+			},
+			{
+				"name": "postcss-discard-comments",
+				"version": "5.1.2",
+				"size": 10669
+			},
+			{
+				"name": "postcss-minify-gradients",
+				"version": "5.1.1",
+				"size": 11054
+			},
+			{
+				"name": "postcss-minify-selectors",
+				"version": "5.2.1",
+				"size": 9510
+			},
+			{
+				"name": "postcss-normalize-string",
+				"version": "5.1.0",
+				"size": 12270
+			},
+			{
+				"name": "postcss-unique-selectors",
+				"version": "5.1.1",
+				"size": 5212
+			},
+			{
+				"name": "postcss-normalize-charset",
+				"version": "5.1.0",
+				"size": 5058
+			},
+			{
+				"name": "postcss-normalize-unicode",
+				"version": "5.1.1",
+				"size": 5922
+			},
+			{
+				"name": "postcss-reduce-transforms",
+				"version": "5.1.0",
+				"size": 9868
+			},
+			{
+				"name": "postcss-discard-duplicates",
+				"version": "5.1.0",
+				"size": 8139
+			},
+			{
+				"name": "postcss-discard-overridden",
+				"version": "5.1.0",
+				"size": 9231
+			},
+			{
+				"name": "postcss-minify-font-values",
+				"version": "5.1.0",
+				"size": 18093
+			},
+			{
+				"name": "postcss-normalize-positions",
+				"version": "5.1.1",
+				"size": 8320
+			},
+			{
+				"name": "postcss-normalize-whitespace",
+				"version": "5.1.1",
+				"size": 6597
+			},
+			{
+				"name": "postcss-normalize-repeat-style",
+				"version": "5.1.1",
+				"size": 7471
+			},
+			{
+				"name": "postcss-normalize-display-values",
+				"version": "5.1.0",
+				"size": 7004
+			},
+			{
+				"name": "postcss-normalize-timing-functions",
+				"version": "5.1.0",
+				"size": 7097
+			},
+			{
+				"name": "import-cwd",
+				"version": "3.0.0",
+				"size": 4874
+			},
+			{
+				"name": "import-from",
+				"version": "3.0.0",
+				"size": 5024
+			},
+			{
+				"name": "resolve-from",
+				"version": "5.0.0",
+				"size": 5824
+			},
+			{
+				"name": "p-queue",
+				"version": "6.6.2",
+				"size": 30906
+			},
+			{
+				"name": "p-timeout",
+				"version": "3.2.0",
+				"size": 7377
+			},
+			{
+				"name": "p-finally",
+				"version": "1.0.0"
+			},
+			{
+				"name": "eventemitter3",
+				"version": "4.0.7",
+				"size": 37967
+			},
+			{
+				"name": "pify",
+				"version": "5.0.0",
+				"size": 8867
+			},
+			{
+				"name": "postcss-load-config",
+				"version": "3.1.4",
+				"size": 22743
+			},
+			{
+				"name": "postcss-modules",
+				"version": "4.3.1",
+				"size": 32296
+			},
+			{
+				"name": "string-hash",
+				"version": "1.1.3"
+			},
+			{
+				"name": "generic-names",
+				"version": "4.0.0",
+				"size": 13006
+			},
+			{
+				"name": "loader-utils",
+				"version": "3.3.1",
+				"size": 32146
+			},
+			{
+				"name": "lodash.camelcase",
+				"version": "4.3.0"
+			},
+			{
+				"name": "icss-replace-symbols",
+				"version": "1.1.0"
+			},
+			{
+				"name": "postcss-modules-scope",
+				"version": "3.2.1",
+				"size": 17465
+			},
+			{
+				"name": "postcss-selector-parser",
+				"version": "7.1.0",
+				"size": 187187
+			},
+			{
+				"name": "postcss-modules-values",
+				"version": "4.0.0",
+				"size": 9657
+			},
+			{
+				"name": "icss-utils",
+				"version": "5.1.0",
+				"size": 9998
+			},
+			{
+				"name": "postcss-modules-extract-imports",
+				"version": "3.1.0",
+				"size": 11185
+			},
+			{
+				"name": "postcss-modules-local-by-default",
+				"version": "4.2.0",
+				"size": 26331
+			},
+			{
+				"name": "promise.series",
+				"version": "0.2.0"
+			},
+			{
+				"name": "rollup-pluginutils",
+				"version": "2.8.2",
+				"size": 246173
+			},
+			{
+				"name": "estree-walker",
+				"version": "0.6.1",
+				"size": 9526
+			},
+			{
+				"name": "safe-identifier",
+				"version": "0.4.2",
+				"size": 6325
+			},
+			{
+				"name": "style-inject",
+				"version": "0.3.0"
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			},
+			{
+				"name": "svelte-typed-component",
+				"version": "1.2.0",
+				"size": 5472
+			},
+			{
+				"name": "tailwind-css-variables",
+				"version": "2.0.3",
+				"size": 10776
+			},
+			{
+				"name": "tailwindcss",
+				"version": "2.2.19",
+				"size": 34516801
+			},
+			{
+				"name": "arg",
+				"version": "5.0.2",
+				"size": 13665
+			},
+			{
+				"name": "dlv",
+				"version": "1.1.3",
+				"size": 5802
+			},
+			{
+				"name": "tmp",
+				"version": "0.2.3",
+				"size": 54359
+			},
+			{
+				"name": "bytes",
+				"version": "3.1.2",
+				"size": 12270
+			},
+			{
+				"name": "color",
+				"version": "4.2.3",
+				"size": 16806
+			},
+			{
+				"name": "color-string",
+				"version": "1.9.1",
+				"size": 10115
+			},
+			{
+				"name": "simple-swizzle",
+				"version": "0.2.2"
+			},
+			{
+				"name": "is-arrayish",
+				"version": "0.3.2",
+				"size": 54720
+			},
+			{
+				"name": "lodash",
+				"version": "4.17.21",
+				"size": 1412415
+			},
+			{
+				"name": "is-glob",
+				"version": "4.0.3",
+				"size": 13609
+			},
+			{
+				"name": "is-extglob",
+				"version": "2.1.1"
+			},
+			{
+				"name": "chokidar",
+				"version": "3.6.0",
+				"size": 90200
+			},
+			{
+				"name": "braces",
+				"version": "3.0.3",
+				"size": 44635
+			},
+			{
+				"name": "fill-range",
+				"version": "7.1.1",
+				"size": 16743
+			},
+			{
+				"name": "to-regex-range",
+				"version": "5.0.1",
+				"size": 22939
+			},
+			{
+				"name": "is-number",
+				"version": "7.0.0",
+				"size": 9615
+			},
+			{
+				"name": "anymatch",
+				"version": "3.1.3",
+				"size": 9654
+			},
+			{
+				"name": "picomatch",
+				"version": "2.3.1",
+				"size": 89952
+			},
+			{
+				"name": "normalize-path",
+				"version": "3.0.0",
+				"size": 9219
+			},
+			{
+				"name": "readdirp",
+				"version": "3.6.0",
+				"size": 20472
+			},
+			{
+				"name": "glob-parent",
+				"version": "5.1.2",
+				"size": 12134
+			},
+			{
+				"name": "is-binary-path",
+				"version": "2.1.0",
+				"size": 3078
+			},
+			{
+				"name": "binary-extensions",
+				"version": "2.3.0",
+				"size": 5030
+			},
+			{
+				"name": "fs-extra",
+				"version": "10.1.0",
+				"size": 63278
+			},
+			{
+				"name": "jsonfile",
+				"version": "6.1.0",
+				"size": 19750
+			},
+			{
+				"name": "universalify",
+				"version": "2.0.1",
+				"size": 4675
+			},
+			{
+				"name": "graceful-fs",
+				"version": "4.2.11",
+				"size": 32535
+			},
+			{
+				"name": "purgecss",
+				"version": "4.1.3",
+				"size": 58240
+			},
+			{
+				"name": "glob",
+				"version": "7.2.3",
+				"size": 55064
+			},
+			{
+				"name": "once",
+				"version": "1.4.0"
+			},
+			{
+				"name": "wrappy",
+				"version": "1.0.2"
+			},
+			{
+				"name": "inflight",
+				"version": "1.0.6"
+			},
+			{
+				"name": "inherits",
+				"version": "2.0.4",
+				"size": 3958
+			},
+			{
+				"name": "minimatch",
+				"version": "3.1.2",
+				"size": 34902
+			},
+			{
+				"name": "fs.realpath",
+				"version": "1.0.0"
+			},
+			{
+				"name": "path-is-absolute",
+				"version": "1.0.1"
+			},
+			{
+				"name": "commander",
+				"version": "8.3.0",
+				"size": 151267
+			},
+			{
+				"name": "detective",
+				"version": "5.2.1",
+				"size": 20760
+			},
+			{
+				"name": "acorn-node",
+				"version": "1.8.2",
+				"size": 45278
+			},
+			{
+				"name": "acorn",
+				"version": "7.4.1",
+				"size": 1209760
+			},
+			{
+				"name": "acorn-walk",
+				"version": "7.2.0",
+				"size": 100036
+			},
+			{
+				"name": "xtend",
+				"version": "4.0.2",
+				"size": 6465
+			},
+			{
+				"name": "defined",
+				"version": "1.0.1",
+				"size": 10746
+			},
+			{
+				"name": "minimist",
+				"version": "1.2.8",
+				"size": 54477
+			},
+			{
+				"name": "fast-glob",
+				"version": "3.3.3",
+				"size": 98396
+			},
+			{
+				"name": "@nodelib/fs.stat",
+				"version": "2.0.5",
+				"size": 11845
+			},
+			{
+				"name": "@nodelib/fs.walk",
+				"version": "1.2.8",
+				"size": 26377
+			},
+			{
+				"name": "fastq",
+				"version": "1.19.1",
+				"size": 45922
+			},
+			{
+				"name": "reusify",
+				"version": "1.1.0",
+				"size": 11696
+			},
+			{
+				"name": "@nodelib/fs.scandir",
+				"version": "2.1.5",
+				"size": 22155
+			},
+			{
+				"name": "run-parallel",
+				"version": "1.2.0",
+				"size": 6563
+			},
+			{
+				"name": "queue-microtask",
+				"version": "1.2.3",
+				"size": 8367
+			},
+			{
+				"name": "merge2",
+				"version": "1.4.1",
+				"size": 8897
+			},
+			{
+				"name": "micromatch",
+				"version": "4.0.8",
+				"size": 56599
+			},
+			{
+				"name": "html-tags",
+				"version": "3.3.1",
+				"size": 5943
+			},
+			{
+				"name": "quick-lru",
+				"version": "5.1.1",
+				"size": 8645
+			},
+			{
+				"name": "didyoumean",
+				"version": "1.2.2",
+				"size": 17255
+			},
+			{
+				"name": "node-emoji",
+				"version": "1.11.0",
+				"size": 223799
+			},
+			{
+				"name": "postcss-js",
+				"version": "3.0.3",
+				"size": 11663
+			},
+			{
+				"name": "camelcase-css",
+				"version": "2.0.1",
+				"size": 4051
+			},
+			{
+				"name": "cosmiconfig",
+				"version": "7.1.0",
+				"size": 92011
+			},
+			{
+				"name": "@types/parse-json",
+				"version": "4.0.2",
+				"size": 2946
+			},
+			{
+				"name": "import-fresh",
+				"version": "3.3.1",
+				"size": 4693
+			},
+			{
+				"name": "parent-module",
+				"version": "1.0.1",
+				"size": 3922
+			},
+			{
+				"name": "callsites",
+				"version": "3.1.0",
+				"size": 6332
+			},
+			{
+				"name": "resolve-from",
+				"version": "4.0.0"
+			},
+			{
+				"name": "parse-json",
+				"version": "5.2.0",
+				"size": 5409
+			},
+			{
+				"name": "error-ex",
+				"version": "1.3.2",
+				"size": 9035
+			},
+			{
+				"name": "is-arrayish",
+				"version": "0.2.1"
+			},
+			{
+				"name": "@babel/code-frame",
+				"version": "7.26.2",
+				"size": 33160
+			},
+			{
+				"name": "js-tokens",
+				"version": "4.0.0"
+			},
+			{
+				"name": "@babel/helper-validator-identifier",
+				"version": "7.25.9",
+				"size": 48330
+			},
+			{
+				"name": "lines-and-columns",
+				"version": "1.2.4",
+				"size": 5386
+			},
+			{
+				"name": "json-parse-even-better-errors",
+				"version": "2.3.1",
+				"size": 10426
+			},
+			{
+				"name": "path-type",
+				"version": "4.0.0",
+				"size": 5407
+			},
+			{
+				"name": "glob-parent",
+				"version": "6.0.2",
+				"size": 7719
+			},
+			{
+				"name": "object-hash",
+				"version": "2.2.0",
+				"size": 59029
+			},
+			{
+				"name": "is-color-stop",
+				"version": "1.1.0"
+			},
+			{
+				"name": "css-color-names",
+				"version": "0.0.4"
+			},
+			{
+				"name": "hex-color-regex",
+				"version": "1.1.0"
+			},
+			{
+				"name": "hsl-regex",
+				"version": "1.0.0"
+			},
+			{
+				"name": "hsla-regex",
+				"version": "1.0.0"
+			},
+			{
+				"name": "rgb-regex",
+				"version": "1.0.1"
+			},
+			{
+				"name": "rgba-regex",
+				"version": "1.0.0"
+			},
+			{
+				"name": "lodash.topath",
+				"version": "4.5.2"
+			},
+			{
+				"name": "pretty-hrtime",
+				"version": "1.0.3"
+			},
+			{
+				"name": "postcss-nested",
+				"version": "5.0.6",
+				"size": 11838
+			},
+			{
+				"name": "reduce-css-calc",
+				"version": "2.1.8",
+				"size": 144159
+			},
+			{
+				"name": "css-unit-converter",
+				"version": "1.1.2",
+				"size": 5607
+			},
+			{
+				"name": "postcss-value-parser",
+				"version": "3.3.1",
+				"size": 19086
+			},
+			{
+				"name": "modern-normalize",
+				"version": "1.1.0",
+				"size": 9816
+			},
+			{
+				"name": "tinycolor2",
+				"version": "1.6.0",
+				"size": 284855
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[2, 4],
+			[1, 3],
+			[1, 5],
+			[5, 6],
+			[5, 7],
+			[5, 8],
+			[5, 9],
+			[9, 10],
+			[9, 11],
+			[1, 6],
+			[1, 12],
+			[1, 13],
+			[1, 14],
+			[0, 15],
+			[15, 16],
+			[15, 17],
+			[17, 18],
+			[18, 19],
+			[17, 20],
+			[20, 21],
+			[17, 22],
+			[22, 23],
+			[17, 24],
+			[17, 25],
+			[25, 26],
+			[25, 27],
+			[27, 23],
+			[25, 28],
+			[25, 29],
+			[29, 30],
+			[29, 26],
+			[15, 22],
+			[22, 23],
+			[0, 31],
+			[31, 32],
+			[31, 11],
+			[31, 33],
+			[0, 34],
+			[34, 14],
+			[34, 35],
+			[35, 36],
+			[34, 37],
+			[37, 38],
+			[38, 39],
+			[39, 40],
+			[37, 41],
+			[37, 42],
+			[0, 43],
+			[43, 44],
+			[44, 45],
+			[45, 46],
+			[46, 47],
+			[47, 48],
+			[45, 49],
+			[49, 50],
+			[45, 51],
+			[44, 4],
+			[44, 49],
+			[49, 50],
+			[43, 52],
+			[52, 53],
+			[52, 54],
+			[52, 55],
+			[0, 56],
+			[56, 57],
+			[57, 58],
+			[56, 59],
+			[56, 60],
+			[60, 61],
+			[61, 62],
+			[61, 63],
+			[56, 64],
+			[64, 65],
+			[0, 66],
+			[66, 67],
+			[67, 68],
+			[68, 69],
+			[69, 70],
+			[67, 71],
+			[71, 72],
+			[66, 73],
+			[73, 4],
+			[66, 74],
+			[74, 75],
+			[74, 76],
+			[74, 77],
+			[77, 78],
+			[78, 14],
+			[78, 79],
+			[79, 80],
+			[79, 81],
+			[77, 82],
+			[82, 14],
+			[82, 83],
+			[83, 84],
+			[84, 85],
+			[85, 86],
+			[85, 4],
+			[83, 87],
+			[83, 85],
+			[85, 86],
+			[85, 4],
+			[83, 88],
+			[83, 89],
+			[89, 90],
+			[89, 91],
+			[89, 92],
+			[92, 93],
+			[89, 94],
+			[94, 92],
+			[92, 93],
+			[94, 95],
+			[95, 93],
+			[95, 92],
+			[92, 93],
+			[95, 96],
+			[94, 93],
+			[89, 97],
+			[97, 90],
+			[83, 11],
+			[83, 98],
+			[77, 99],
+			[77, 100],
+			[100, 101],
+			[100, 102],
+			[102, 103],
+			[102, 5],
+			[5, 6],
+			[5, 7],
+			[5, 8],
+			[5, 9],
+			[9, 10],
+			[9, 11],
+			[102, 6],
+			[102, 104],
+			[100, 5],
+			[5, 6],
+			[5, 7],
+			[5, 8],
+			[5, 9],
+			[9, 10],
+			[9, 11],
+			[100, 14],
+			[77, 105],
+			[105, 102],
+			[102, 103],
+			[102, 5],
+			[5, 6],
+			[5, 7],
+			[5, 8],
+			[5, 9],
+			[9, 10],
+			[9, 11],
+			[102, 6],
+			[102, 104],
+			[105, 5],
+			[5, 6],
+			[5, 7],
+			[5, 8],
+			[5, 9],
+			[9, 10],
+			[9, 11],
+			[105, 99],
+			[105, 79],
+			[79, 80],
+			[79, 81],
+			[77, 106],
+			[77, 107],
+			[107, 5],
+			[5, 6],
+			[5, 7],
+			[5, 8],
+			[5, 9],
+			[9, 10],
+			[9, 11],
+			[107, 99],
+			[107, 14],
+			[77, 108],
+			[108, 109],
+			[108, 14],
+			[77, 110],
+			[77, 111],
+			[111, 5],
+			[5, 6],
+			[5, 7],
+			[5, 8],
+			[5, 9],
+			[9, 10],
+			[9, 11],
+			[111, 14],
+			[77, 112],
+			[112, 113],
+			[113, 5],
+			[5, 6],
+			[5, 7],
+			[5, 8],
+			[5, 9],
+			[9, 10],
+			[9, 11],
+			[113, 79],
+			[79, 80],
+			[79, 81],
+			[112, 14],
+			[77, 114],
+			[114, 99],
+			[114, 14],
+			[77, 115],
+			[115, 102],
+			[102, 103],
+			[102, 5],
+			[5, 6],
+			[5, 7],
+			[5, 8],
+			[5, 9],
+			[9, 10],
+			[9, 11],
+			[102, 6],
+			[102, 104],
+			[115, 5],
+			[5, 6],
+			[5, 7],
+			[5, 8],
+			[5, 9],
+			[9, 10],
+			[9, 11],
+			[77, 116],
+			[77, 117],
+			[117, 101],
+			[117, 99],
+			[117, 14],
+			[77, 118],
+			[118, 79],
+			[79, 80],
+			[79, 81],
+			[77, 119],
+			[119, 14],
+			[77, 120],
+			[120, 79],
+			[79, 80],
+			[79, 81],
+			[77, 121],
+			[77, 122],
+			[122, 5],
+			[5, 6],
+			[5, 7],
+			[5, 8],
+			[5, 9],
+			[9, 10],
+			[9, 11],
+			[122, 14],
+			[77, 123],
+			[123, 14],
+			[77, 124],
+			[77, 125],
+			[77, 126],
+			[126, 14],
+			[77, 127],
+			[127, 14],
+			[77, 128],
+			[128, 14],
+			[77, 129],
+			[129, 14],
+			[77, 130],
+			[130, 14],
+			[77, 131],
+			[131, 14],
+			[66, 132],
+			[132, 133],
+			[133, 134],
+			[66, 135],
+			[135, 136],
+			[136, 137],
+			[135, 138],
+			[66, 139],
+			[66, 140],
+			[140, 75],
+			[140, 76],
+			[66, 141],
+			[141, 142],
+			[141, 143],
+			[143, 144],
+			[141, 145],
+			[141, 146],
+			[141, 147],
+			[147, 148],
+			[148, 80],
+			[148, 81],
+			[141, 149],
+			[149, 150],
+			[141, 151],
+			[141, 152],
+			[152, 150],
+			[152, 148],
+			[148, 80],
+			[148, 81],
+			[152, 14],
+			[66, 153],
+			[66, 37],
+			[37, 38],
+			[38, 39],
+			[39, 40],
+			[37, 41],
+			[37, 42],
+			[66, 154],
+			[154, 155],
+			[66, 156],
+			[66, 157],
+			[0, 158],
+			[0, 159],
+			[0, 160],
+			[0, 161],
+			[161, 162],
+			[161, 163],
+			[161, 164],
+			[161, 165],
+			[161, 67],
+			[67, 68],
+			[68, 69],
+			[69, 70],
+			[67, 71],
+			[71, 72],
+			[161, 166],
+			[166, 167],
+			[167, 70],
+			[167, 168],
+			[168, 169],
+			[166, 69],
+			[69, 70],
+			[161, 170],
+			[161, 171],
+			[171, 172],
+			[161, 37],
+			[37, 38],
+			[38, 39],
+			[39, 40],
+			[37, 41],
+			[37, 42],
+			[161, 173],
+			[173, 174],
+			[174, 175],
+			[175, 176],
+			[176, 177],
+			[173, 171],
+			[171, 172],
+			[173, 178],
+			[178, 179],
+			[178, 180],
+			[173, 181],
+			[181, 179],
+			[173, 182],
+			[182, 171],
+			[171, 172],
+			[173, 183],
+			[183, 184],
+			[173, 180],
+			[161, 185],
+			[185, 186],
+			[186, 187],
+			[185, 188],
+			[185, 187],
+			[161, 189],
+			[189, 190],
+			[190, 191],
+			[191, 192],
+			[190, 193],
+			[193, 191],
+			[191, 192],
+			[193, 192],
+			[190, 194],
+			[190, 195],
+			[195, 61],
+			[61, 62],
+			[61, 63],
+			[190, 196],
+			[190, 197],
+			[189, 31],
+			[31, 32],
+			[31, 11],
+			[31, 33],
+			[189, 198],
+			[189, 79],
+			[79, 80],
+			[79, 81],
+			[161, 199],
+			[199, 200],
+			[200, 201],
+			[200, 202],
+			[200, 203],
+			[199, 204],
+			[199, 205],
+			[161, 206],
+			[206, 207],
+			[206, 208],
+			[208, 209],
+			[209, 210],
+			[208, 211],
+			[211, 212],
+			[212, 213],
+			[211, 207],
+			[206, 182],
+			[182, 171],
+			[171, 172],
+			[206, 214],
+			[206, 215],
+			[215, 174],
+			[174, 175],
+			[175, 176],
+			[176, 177],
+			[215, 179],
+			[161, 216],
+			[161, 217],
+			[161, 218],
+			[161, 219],
+			[219, 170],
+			[161, 220],
+			[220, 221],
+			[220, 31],
+			[31, 32],
+			[31, 11],
+			[31, 33],
+			[161, 222],
+			[222, 223],
+			[222, 224],
+			[224, 225],
+			[225, 226],
+			[224, 227],
+			[222, 228],
+			[228, 229],
+			[229, 230],
+			[228, 231],
+			[231, 232],
+			[231, 11],
+			[231, 233],
+			[228, 234],
+			[228, 235],
+			[222, 236],
+			[222, 75],
+			[161, 237],
+			[237, 171],
+			[171, 172],
+			[161, 238],
+			[161, 239],
+			[239, 240],
+			[239, 241],
+			[239, 242],
+			[239, 243],
+			[239, 244],
+			[239, 245],
+			[161, 246],
+			[161, 247],
+			[161, 180],
+			[161, 248],
+			[248, 79],
+			[79, 80],
+			[79, 81],
+			[161, 249],
+			[249, 250],
+			[249, 251],
+			[161, 252],
+			[161, 140],
+			[140, 75],
+			[140, 76],
+			[161, 14],
+			[161, 79],
+			[79, 80],
+			[79, 81],
+			[0, 253]
+		],
+		"circular": []
+	}
 }

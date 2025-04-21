@@ -11,8 +11,6 @@
 	"typescript": true,
 	"version": "0.1.13",
 	"last_rune_check_version": "0.1.13",
-	"dependencies": [],
-	"unpacked_size": 681590,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -326,5 +324,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 14
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "sveltekit-adapter-firebase",
+				"version": "0.1.13",
+				"size": 681590
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

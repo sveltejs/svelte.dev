@@ -14,8 +14,6 @@
 	"svelte_range": "^3.56.0",
 	"kit_range": "1.27.1",
 	"last_rune_check_version": "4.1.8",
-	"dependencies": [],
-	"unpacked_size": 128706,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -329,5 +327,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 21
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@specialdoom/proi-ui",
+				"version": "4.1.8",
+				"size": 128706
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

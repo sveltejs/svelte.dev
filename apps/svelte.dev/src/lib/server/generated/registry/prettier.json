@@ -24,8 +24,6 @@
 	"typescript": true,
 	"version": "3.5.3",
 	"last_rune_check_version": "3.5.3",
-	"dependencies": [],
-	"unpacked_size": 7876465,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -339,5 +337,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 49716466
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "prettier",
+				"version": "3.5.3",
+				"size": 7876465
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

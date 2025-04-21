@@ -13,145 +13,6 @@
 	"version": "4.6.4",
 	"svelte_range": "^3.34.0",
 	"last_rune_check_version": "4.6.4",
-	"dependencies": [
-		{
-			"name": "@vtmn/css",
-			"semver": "^3.0.2"
-		},
-		{
-			"name": "@vtmn/css-accordion",
-			"semver": "^1.1.7"
-		},
-		{
-			"name": "@vtmn/css-alert",
-			"semver": "^1.1.4"
-		},
-		{
-			"name": "@vtmn/css-badge",
-			"semver": "^1.1.4"
-		},
-		{
-			"name": "@vtmn/css-breadcrumb",
-			"semver": "^1.1.4"
-		},
-		{
-			"name": "@vtmn/css-button",
-			"semver": "^1.1.4"
-		},
-		{
-			"name": "@vtmn/css-card",
-			"semver": "^1.1.4"
-		},
-		{
-			"name": "@vtmn/css-checkbox",
-			"semver": "^1.1.4"
-		},
-		{
-			"name": "@vtmn/css-chip",
-			"semver": "^2.0.1"
-		},
-		{
-			"name": "@vtmn/css-design-tokens",
-			"semver": "^1.1.3"
-		},
-		{
-			"name": "@vtmn/css-divider",
-			"semver": "^1.1.4"
-		},
-		{
-			"name": "@vtmn/css-dropdown",
-			"semver": "^1.1.4"
-		},
-		{
-			"name": "@vtmn/css-link",
-			"semver": "^1.1.4"
-		},
-		{
-			"name": "@vtmn/css-list",
-			"semver": "^1.1.4"
-		},
-		{
-			"name": "@vtmn/css-loader",
-			"semver": "^1.1.4"
-		},
-		{
-			"name": "@vtmn/css-modal",
-			"semver": "^1.1.4"
-		},
-		{
-			"name": "@vtmn/css-navbar",
-			"semver": "^2.0.3"
-		},
-		{
-			"name": "@vtmn/css-popover",
-			"semver": "^1.1.4"
-		},
-		{
-			"name": "@vtmn/css-price",
-			"semver": "^1.1.4"
-		},
-		{
-			"name": "@vtmn/css-progressbar",
-			"semver": "^1.1.4"
-		},
-		{
-			"name": "@vtmn/css-quantity",
-			"semver": "^1.1.5"
-		},
-		{
-			"name": "@vtmn/css-radio-button",
-			"semver": "^1.1.4"
-		},
-		{
-			"name": "@vtmn/css-rating",
-			"semver": "^1.1.7"
-		},
-		{
-			"name": "@vtmn/css-search",
-			"semver": "^1.1.10"
-		},
-		{
-			"name": "@vtmn/css-select",
-			"semver": "^1.1.4"
-		},
-		{
-			"name": "@vtmn/css-skeleton",
-			"semver": "^1.1.4"
-		},
-		{
-			"name": "@vtmn/css-snackbar",
-			"semver": "^1.1.4"
-		},
-		{
-			"name": "@vtmn/css-tabs",
-			"semver": "^1.1.4"
-		},
-		{
-			"name": "@vtmn/css-tag",
-			"semver": "^1.1.4"
-		},
-		{
-			"name": "@vtmn/css-text-input",
-			"semver": "^1.1.4"
-		},
-		{
-			"name": "@vtmn/css-toast",
-			"semver": "^1.1.4"
-		},
-		{
-			"name": "@vtmn/css-toggle",
-			"semver": "^1.1.5"
-		},
-		{
-			"name": "@vtmn/css-tooltip",
-			"semver": "^1.1.4"
-		},
-		{
-			"name": "@vtmn/icons",
-			"semver": "^1.3.0"
-		}
-	],
-	"unpacked_size": 1559505,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -465,5 +326,225 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7572
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@vtmn/svelte",
+				"version": "4.6.4",
+				"size": 1559505
+			},
+			{
+				"name": "@vtmn/css",
+				"version": "3.0.2",
+				"size": 38030820
+			},
+			{
+				"name": "@vtmn/css-accordion",
+				"version": "1.1.7",
+				"size": 38162
+			},
+			{
+				"name": "@vtmn/icons",
+				"version": "1.3.0",
+				"size": 1062903
+			},
+			{
+				"name": "@vtmn/css-alert",
+				"version": "1.1.4",
+				"size": 52597
+			},
+			{
+				"name": "@vtmn/css-badge",
+				"version": "1.1.4",
+				"size": 24920
+			},
+			{
+				"name": "@vtmn/css-breadcrumb",
+				"version": "1.1.4",
+				"size": 26890
+			},
+			{
+				"name": "@vtmn/css-button",
+				"version": "1.1.4",
+				"size": 62858
+			},
+			{
+				"name": "@vtmn/css-card",
+				"version": "1.1.4",
+				"size": 37276
+			},
+			{
+				"name": "@vtmn/css-checkbox",
+				"version": "1.1.4",
+				"size": 37226
+			},
+			{
+				"name": "@vtmn/css-chip",
+				"version": "2.0.1",
+				"size": 74852
+			},
+			{
+				"name": "@vtmn/css-design-tokens",
+				"version": "1.1.3",
+				"size": 821270
+			},
+			{
+				"name": "@vtmn/css-divider",
+				"version": "1.1.4",
+				"size": 31527
+			},
+			{
+				"name": "@vtmn/css-dropdown",
+				"version": "1.1.4",
+				"size": 44694
+			},
+			{
+				"name": "@vtmn/css-link",
+				"version": "1.1.4",
+				"size": 34250
+			},
+			{
+				"name": "@vtmn/css-list",
+				"version": "1.1.4",
+				"size": 46859
+			},
+			{
+				"name": "@vtmn/css-loader",
+				"version": "1.1.4",
+				"size": 27849
+			},
+			{
+				"name": "@vtmn/css-modal",
+				"version": "1.1.4",
+				"size": 39587
+			},
+			{
+				"name": "@vtmn/css-navbar",
+				"version": "2.0.3",
+				"size": 37365
+			},
+			{
+				"name": "@vtmn/css-popover",
+				"version": "1.1.4",
+				"size": 44007
+			},
+			{
+				"name": "@vtmn/css-price",
+				"version": "1.1.4",
+				"size": 25953
+			},
+			{
+				"name": "@vtmn/css-progressbar",
+				"version": "1.1.4",
+				"size": 48696
+			},
+			{
+				"name": "@vtmn/css-quantity",
+				"version": "1.1.5",
+				"size": 43768
+			},
+			{
+				"name": "@vtmn/css-radio-button",
+				"version": "1.1.4",
+				"size": 35381
+			},
+			{
+				"name": "@vtmn/css-rating",
+				"version": "1.1.7",
+				"size": 54511
+			},
+			{
+				"name": "@vtmn/css-search",
+				"version": "1.1.10",
+				"size": 49331
+			},
+			{
+				"name": "@vtmn/css-select",
+				"version": "1.1.4",
+				"size": 37125
+			},
+			{
+				"name": "@vtmn/css-skeleton",
+				"version": "1.1.4",
+				"size": 29757
+			},
+			{
+				"name": "@vtmn/css-snackbar",
+				"version": "1.1.4",
+				"size": 31152
+			},
+			{
+				"name": "@vtmn/css-tabs",
+				"version": "1.1.4",
+				"size": 38651
+			},
+			{
+				"name": "@vtmn/css-tag",
+				"version": "1.1.4",
+				"size": 31391
+			},
+			{
+				"name": "@vtmn/css-text-input",
+				"version": "1.1.4",
+				"size": 42436
+			},
+			{
+				"name": "@vtmn/css-toast",
+				"version": "1.1.4",
+				"size": 34984
+			},
+			{
+				"name": "@vtmn/css-toggle",
+				"version": "1.1.5",
+				"size": 48643
+			},
+			{
+				"name": "@vtmn/css-tooltip",
+				"version": "1.1.4",
+				"size": 46192
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[0, 4],
+			[0, 5],
+			[0, 6],
+			[0, 7],
+			[0, 8],
+			[0, 9],
+			[0, 10],
+			[0, 11],
+			[0, 12],
+			[0, 13],
+			[0, 14],
+			[0, 15],
+			[0, 16],
+			[0, 17],
+			[0, 18],
+			[0, 19],
+			[0, 20],
+			[0, 21],
+			[0, 22],
+			[0, 23],
+			[0, 24],
+			[24, 3],
+			[0, 25],
+			[25, 3],
+			[0, 26],
+			[0, 27],
+			[0, 28],
+			[0, 29],
+			[0, 30],
+			[0, 31],
+			[0, 32],
+			[0, 33],
+			[0, 34],
+			[0, 3]
+		],
+		"circular": []
+	}
 }

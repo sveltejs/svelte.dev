@@ -13,13 +13,6 @@
 	"kit_range": "^1.27.4",
 	"last_rune_check_version": "0.0.7",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "interactjs",
-			"semver": "^1.10.26"
-		}
-	],
-	"unpacked_size": 11225,
 	"downloads_history": [
 		{
 			"range": [1705861800000, 1706466599999],
@@ -229,5 +222,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-polaroids",
+				"version": "0.0.7",
+				"size": 11225
+			},
+			{
+				"name": "interactjs",
+				"version": "1.10.27",
+				"size": 1398779
+			},
+			{
+				"name": "@interactjs/types",
+				"version": "1.10.27",
+				"size": 135854
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2]
+		],
+		"circular": []
+	}
 }

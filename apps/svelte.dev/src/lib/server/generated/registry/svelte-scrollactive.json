@@ -14,13 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.4",
 	"last_rune_check_version": "0.0.9",
-	"dependencies": [
-		{
-			"name": "bezier-easing",
-			"semver": "^2.0.3"
-		}
-	],
-	"unpacked_size": 25638,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -334,5 +327,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 28
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-scrollactive",
+				"version": "0.0.9",
+				"size": 25638
+			},
+			{
+				"name": "bezier-easing",
+				"version": "2.1.0",
+				"size": 14884
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

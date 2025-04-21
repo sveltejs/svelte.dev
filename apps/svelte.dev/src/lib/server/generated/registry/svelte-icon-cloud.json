@@ -13,17 +13,6 @@
 	"version": "1.0.0",
 	"svelte_range": "^4.0.0",
 	"last_rune_check_version": "1.0.0",
-	"dependencies": [
-		{
-			"name": "@csstools/convert-colors",
-			"semver": "^2.0.0"
-		},
-		{
-			"name": "simple-icons",
-			"semver": "^14.8.0"
-		}
-	],
-	"unpacked_size": 38357,
 	"downloads_history": [
 		{
 			"range": [1740335400000, 1740940199999],
@@ -49,5 +38,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 27
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-icon-cloud",
+				"version": "1.0.0",
+				"size": 38357
+			},
+			{
+				"name": "@csstools/convert-colors",
+				"version": "2.0.0",
+				"size": 202180
+			},
+			{
+				"name": "simple-icons",
+				"version": "14.12.3",
+				"size": 15680020
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

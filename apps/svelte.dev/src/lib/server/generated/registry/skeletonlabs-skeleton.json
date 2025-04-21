@@ -12,8 +12,6 @@
 	"typescript": false,
 	"version": "3.1.2",
 	"last_rune_check_version": "3.1.2",
-	"dependencies": [],
-	"unpacked_size": 450362,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -327,5 +325,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 26004
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@skeletonlabs/skeleton",
+				"version": "3.1.2",
+				"size": 450362
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

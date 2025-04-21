@@ -13,21 +13,6 @@
 	"version": "2.0.2",
 	"svelte_range": "^3.49.0",
 	"last_rune_check_version": "2.0.2",
-	"dependencies": [
-		{
-			"name": "crypto-js",
-			"semver": "^4.1.1"
-		},
-		{
-			"name": "localforage",
-			"semver": "^1.10.0"
-		},
-		{
-			"name": "lodash.clonedeep",
-			"semver": "^4.5.0"
-		}
-	],
-	"unpacked_size": 29146,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -257,5 +242,45 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "spa-storage",
+				"version": "2.0.2",
+				"size": 29146
+			},
+			{
+				"name": "crypto-js",
+				"version": "4.2.0",
+				"size": 486947
+			},
+			{
+				"name": "localforage",
+				"version": "1.10.0",
+				"size": 467670
+			},
+			{
+				"name": "lie",
+				"version": "3.1.1"
+			},
+			{
+				"name": "immediate",
+				"version": "3.0.6"
+			},
+			{
+				"name": "lodash.clonedeep",
+				"version": "4.5.0"
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[3, 4],
+			[0, 5]
+		],
+		"circular": []
+	}
 }

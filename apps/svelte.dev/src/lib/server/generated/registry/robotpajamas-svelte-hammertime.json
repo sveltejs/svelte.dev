@@ -14,13 +14,6 @@
 	"svelte_range": ">= 3.54.0 < 5.0.0",
 	"kit_range": "^1.25.1",
 	"last_rune_check_version": "0.0.3",
-	"dependencies": [
-		{
-			"name": "hammerjs",
-			"semver": "^2.0.8"
-		}
-	],
-	"unpacked_size": 7458,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -234,5 +227,21 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@robotpajamas/svelte-hammertime",
+				"version": "0.0.3",
+				"size": 7458
+			},
+			{
+				"name": "hammerjs",
+				"version": "2.0.8"
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

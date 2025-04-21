@@ -12,8 +12,6 @@
 	"svelte_range": "^3.31.0",
 	"last_rune_check_version": "3.2.0",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 66931,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -327,5 +325,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 106
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@beyonk/svelte-googlemaps",
+				"version": "3.2.0",
+				"size": 66931
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

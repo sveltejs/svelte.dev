@@ -13,17 +13,6 @@
 	"version": "1.0.2",
 	"svelte_range": "^3.17.1",
 	"last_rune_check_version": "1.0.2",
-	"dependencies": [
-		{
-			"name": "@pyoner/svelte-form-common",
-			"semver": "^0.1.2"
-		},
-		{
-			"name": "is-what",
-			"semver": "^3.7.1"
-		}
-	],
-	"unpacked_size": 519026,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -329,5 +318,36 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 18
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@pyoner/svelte-form",
+				"version": "1.0.2",
+				"size": 519026
+			},
+			{
+				"name": "@pyoner/svelte-form-common",
+				"version": "0.1.2",
+				"size": 7062
+			},
+			{
+				"name": "json-schema-typed",
+				"version": "7.0.3",
+				"size": 56923
+			},
+			{
+				"name": "is-what",
+				"version": "3.14.1",
+				"size": 62310
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3]
+		],
+		"circular": []
+	}
 }

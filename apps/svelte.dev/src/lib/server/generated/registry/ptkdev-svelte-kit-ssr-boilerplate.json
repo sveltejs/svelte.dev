@@ -14,17 +14,6 @@
 	"svelte_range": "^3.38.2",
 	"kit_range": "next",
 	"last_rune_check_version": "1.0.20210516",
-	"dependencies": [
-		{
-			"name": "bulma",
-			"semver": "^0.9.2"
-		},
-		{
-			"name": "bulma-extensions",
-			"semver": "^6.2.7"
-		}
-	],
-	"unpacked_size": 1661741,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -230,5 +219,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@ptkdev/svelte-kit-ssr-boilerplate",
+				"version": "1.0.20210516",
+				"size": 1661741
+			},
+			{
+				"name": "bulma",
+				"version": "0.9.4",
+				"size": 1259757
+			},
+			{
+				"name": "bulma-extensions",
+				"version": "6.2.7",
+				"size": 5425458
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

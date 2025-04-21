@@ -12,17 +12,6 @@
 	"svelte_range": "^3.20.1",
 	"last_rune_check_version": "1.0.2",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "lz-string",
-			"semver": "^1.4.4"
-		},
-		{
-			"name": "svelte",
-			"semver": "^3.20.1"
-		}
-	],
-	"unpacked_size": 13213,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -212,5 +201,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@n0n3br/svelte-persist-store",
+				"version": "1.0.2",
+				"size": 13213
+			},
+			{
+				"name": "lz-string",
+				"version": "1.5.0",
+				"size": 175825
+			},
+			{
+				"name": "svelte",
+				"version": "3.59.2",
+				"size": 10624206
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2]
+		],
+		"circular": []
+	}
 }

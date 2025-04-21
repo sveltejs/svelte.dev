@@ -14,17 +14,6 @@
 	"svelte_range": "^3.46.0",
 	"kit_range": "next",
 	"last_rune_check_version": "1.1.27",
-	"dependencies": [
-		{
-			"name": "agnostic-helpers",
-			"semver": "^1.0.2"
-		},
-		{
-			"name": "svelte-a11y-dialog",
-			"semver": "^0.2.0"
-		}
-	],
-	"unpacked_size": 401429,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -338,5 +327,42 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 398
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "agnostic-svelte",
+				"version": "1.1.27",
+				"size": 401429
+			},
+			{
+				"name": "agnostic-helpers",
+				"version": "1.0.3",
+				"size": 22737
+			},
+			{
+				"name": "svelte-a11y-dialog",
+				"version": "0.2.0",
+				"size": 11417
+			},
+			{
+				"name": "a11y-dialog",
+				"version": "7.5.3",
+				"size": 40268
+			},
+			{
+				"name": "focusable-selectors",
+				"version": "0.4.0",
+				"size": 4618
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[3, 4]
+		],
+		"circular": []
+	}
 }

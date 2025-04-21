@@ -14,13 +14,6 @@
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
 	"last_rune_check_version": "0.0.8",
-	"dependencies": [
-		{
-			"name": "@iconify/svelte",
-			"semver": "^2.1.0"
-		}
-	],
-	"unpacked_size": 3231,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -250,5 +243,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 7
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@boundedinfinity/svelte-ea",
+				"version": "0.0.8",
+				"size": 3231
+			},
+			{
+				"name": "@iconify/svelte",
+				"version": "2.2.1",
+				"size": 475449
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

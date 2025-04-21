@@ -13,13 +13,6 @@
 	"version": "0.2.2",
 	"svelte_range": "^3.46.4",
 	"last_rune_check_version": "0.2.2",
-	"dependencies": [
-		{
-			"name": "watch",
-			"semver": "^1.0.2"
-		}
-	],
-	"unpacked_size": 320848,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -205,5 +198,41 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 4
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@fmented/scp",
+				"version": "0.2.2",
+				"size": 320848
+			},
+			{
+				"name": "watch",
+				"version": "1.0.2"
+			},
+			{
+				"name": "exec-sh",
+				"version": "0.2.2",
+				"size": 21217
+			},
+			{
+				"name": "merge",
+				"version": "1.2.1",
+				"size": 7313
+			},
+			{
+				"name": "minimist",
+				"version": "1.2.8",
+				"size": 54477
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[1, 4]
+		],
+		"circular": []
+	}
 }

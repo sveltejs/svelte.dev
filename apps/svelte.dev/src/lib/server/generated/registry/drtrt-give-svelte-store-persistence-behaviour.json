@@ -13,8 +13,6 @@
 	"version": "1.0.1",
 	"svelte_range": "3 || 4",
 	"last_rune_check_version": "1.0.1",
-	"dependencies": [],
-	"unpacked_size": 38478,
 	"downloads_history": [
 		{
 			"range": [1699209000000, 1699813799999],
@@ -288,5 +286,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 11
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@drtrt/give-svelte-store-persistence-behaviour",
+				"version": "1.0.1",
+				"size": 38478
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

@@ -13,69 +13,6 @@
 	"version": "0.11.9",
 	"svelte_range": "^5.23.0",
 	"last_rune_check_version": "0.11.9",
-	"dependencies": [
-		{
-			"name": "@loom-io/converter",
-			"semver": "0.12.11"
-		},
-		{
-			"name": "@loom-io/core",
-			"semver": "^0.12.11"
-		},
-		{
-			"name": "@loom-io/front-matter-converter",
-			"semver": "^0.12.11"
-		},
-		{
-			"name": "@loom-io/json-converter",
-			"semver": "0.12.11"
-		},
-		{
-			"name": "@loom-io/node-filesystem-adapter",
-			"semver": "^0.12.11"
-		},
-		{
-			"name": "@loom-io/yaml-converter",
-			"semver": "0.12.11"
-		},
-		{
-			"name": "@modyfi/vite-plugin-yaml",
-			"semver": "^1.1.1"
-		},
-		{
-			"name": "@sveltejs/vite-plugin-svelte",
-			"semver": "^5.0.3"
-		},
-		{
-			"name": "front-matter",
-			"semver": "^4.0.2"
-		},
-		{
-			"name": "markdown-it",
-			"semver": "^14.1.0"
-		},
-		{
-			"name": "minimist",
-			"semver": "^1.2.8"
-		},
-		{
-			"name": "pipe-and-combine",
-			"semver": "^0.7.11"
-		},
-		{
-			"name": "sharp",
-			"semver": "^0.34.1"
-		},
-		{
-			"name": "valibot",
-			"semver": "^1.0.0"
-		},
-		{
-			"name": "vitest",
-			"semver": "^3.1.1"
-		}
-	],
-	"unpacked_size": 110699,
 	"downloads_history": [
 		{
 			"range": [1716143400000, 1716748199999],
@@ -257,5 +194,602 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 477
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "embodi",
+				"version": "0.11.9",
+				"size": 110699
+			},
+			{
+				"name": "@loom-io/converter",
+				"version": "0.12.11",
+				"size": 6173
+			},
+			{
+				"name": "@loom-io/core",
+				"version": "0.12.11",
+				"size": 51484
+			},
+			{
+				"name": "@loom-io/common",
+				"version": "1.0.2",
+				"size": 5373
+			},
+			{
+				"name": "@loom-io/front-matter-converter",
+				"version": "0.12.11",
+				"size": 9380
+			},
+			{
+				"name": "yaml",
+				"version": "2.7.1",
+				"size": 682531
+			},
+			{
+				"name": "@loom-io/json-converter",
+				"version": "0.12.11",
+				"size": 2037
+			},
+			{
+				"name": "@loom-io/node-filesystem-adapter",
+				"version": "0.12.11",
+				"size": 11357
+			},
+			{
+				"name": "@loom-io/yaml-converter",
+				"version": "0.12.11",
+				"size": 2336
+			},
+			{
+				"name": "@modyfi/vite-plugin-yaml",
+				"version": "1.1.1",
+				"size": 8776
+			},
+			{
+				"name": "@rollup/pluginutils",
+				"version": "5.1.0",
+				"size": 57092
+			},
+			{
+				"name": "picomatch",
+				"version": "2.3.1",
+				"size": 89952
+			},
+			{
+				"name": "@types/estree",
+				"version": "1.0.7",
+				"size": 26147
+			},
+			{
+				"name": "estree-walker",
+				"version": "2.0.2",
+				"size": 50243
+			},
+			{
+				"name": "js-yaml",
+				"version": "4.1.0",
+				"size": 404738
+			},
+			{
+				"name": "argparse",
+				"version": "2.0.1",
+				"size": 171548
+			},
+			{
+				"name": "tosource",
+				"version": "2.0.0-alpha.3",
+				"size": 17610
+			},
+			{
+				"name": "@sveltejs/vite-plugin-svelte",
+				"version": "5.0.3",
+				"size": 126450
+			},
+			{
+				"name": "debug",
+				"version": "4.4.0",
+				"size": 42798
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "kleur",
+				"version": "4.1.5",
+				"size": 20250
+			},
+			{
+				"name": "vitefu",
+				"version": "1.0.6",
+				"size": 21035
+			},
+			{
+				"name": "deepmerge",
+				"version": "4.3.1",
+				"size": 31157
+			},
+			{
+				"name": "magic-string",
+				"version": "0.30.17",
+				"size": 467464
+			},
+			{
+				"name": "@jridgewell/sourcemap-codec",
+				"version": "1.5.0",
+				"size": 112815
+			},
+			{
+				"name": "@sveltejs/vite-plugin-svelte-inspector",
+				"version": "4.0.1",
+				"size": 25886
+			},
+			{
+				"name": "front-matter",
+				"version": "4.0.2",
+				"size": 11322
+			},
+			{
+				"name": "js-yaml",
+				"version": "3.14.1",
+				"size": 291327
+			},
+			{
+				"name": "argparse",
+				"version": "1.0.10",
+				"size": 116446
+			},
+			{
+				"name": "sprintf-js",
+				"version": "1.0.3"
+			},
+			{
+				"name": "esprima",
+				"version": "4.0.1",
+				"size": 314361
+			},
+			{
+				"name": "markdown-it",
+				"version": "14.1.0",
+				"size": 767399
+			},
+			{
+				"name": "entities",
+				"version": "4.5.0",
+				"size": 412892
+			},
+			{
+				"name": "linkify-it",
+				"version": "5.0.0",
+				"size": 55391
+			},
+			{
+				"name": "uc.micro",
+				"version": "2.1.0",
+				"size": 13257
+			},
+			{
+				"name": "mdurl",
+				"version": "2.0.0",
+				"size": 37524
+			},
+			{
+				"name": "punycode.js",
+				"version": "2.3.1",
+				"size": 33517
+			},
+			{
+				"name": "minimist",
+				"version": "1.2.8",
+				"size": 54477
+			},
+			{
+				"name": "pipe-and-combine",
+				"version": "0.7.11",
+				"size": 47290
+			},
+			{
+				"name": "sharp",
+				"version": "0.34.1",
+				"size": 522192
+			},
+			{
+				"name": "color",
+				"version": "4.2.3",
+				"size": 16806
+			},
+			{
+				"name": "color-string",
+				"version": "1.9.1",
+				"size": 10115
+			},
+			{
+				"name": "color-name",
+				"version": "1.1.4",
+				"size": 6693
+			},
+			{
+				"name": "simple-swizzle",
+				"version": "0.2.2"
+			},
+			{
+				"name": "is-arrayish",
+				"version": "0.3.2",
+				"size": 54720
+			},
+			{
+				"name": "color-convert",
+				"version": "2.0.1",
+				"size": 27189
+			},
+			{
+				"name": "detect-libc",
+				"version": "2.0.3",
+				"size": 23627
+			},
+			{
+				"name": "semver",
+				"version": "7.7.1",
+				"size": 96674
+			},
+			{
+				"name": "valibot",
+				"version": "1.0.0",
+				"size": 1674042
+			},
+			{
+				"name": "vitest",
+				"version": "3.1.1",
+				"size": 1549717
+			},
+			{
+				"name": "chai",
+				"version": "5.2.0",
+				"size": 515470
+			},
+			{
+				"name": "assertion-error",
+				"version": "2.0.1",
+				"size": 5832
+			},
+			{
+				"name": "check-error",
+				"version": "2.1.1",
+				"size": 11383
+			},
+			{
+				"name": "deep-eql",
+				"version": "5.0.2",
+				"size": 23888
+			},
+			{
+				"name": "loupe",
+				"version": "3.1.3",
+				"size": 59533
+			},
+			{
+				"name": "pathval",
+				"version": "2.0.0",
+				"size": 15049
+			},
+			{
+				"name": "expect-type",
+				"version": "1.2.1",
+				"size": 116102
+			},
+			{
+				"name": "pathe",
+				"version": "2.0.3",
+				"size": 51332
+			},
+			{
+				"name": "std-env",
+				"version": "3.9.0",
+				"size": 26086
+			},
+			{
+				"name": "tinybench",
+				"version": "2.9.0",
+				"size": 62945
+			},
+			{
+				"name": "tinyexec",
+				"version": "0.3.2",
+				"size": 46086
+			},
+			{
+				"name": "tinypool",
+				"version": "1.0.2",
+				"size": 57335
+			},
+			{
+				"name": "tinyrainbow",
+				"version": "2.0.0",
+				"size": 8108
+			},
+			{
+				"name": "vite",
+				"version": "6.3.2",
+				"size": 2649534
+			},
+			{
+				"name": "esbuild",
+				"version": "0.25.2",
+				"size": 134169
+			},
+			{
+				"name": "fdir",
+				"version": "6.4.4",
+				"size": 45593
+			},
+			{
+				"name": "picomatch",
+				"version": "4.0.2",
+				"size": 85237
+			},
+			{
+				"name": "postcss",
+				"version": "8.5.3",
+				"size": 201969
+			},
+			{
+				"name": "nanoid",
+				"version": "3.3.11",
+				"size": 32583
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "source-map-js",
+				"version": "1.2.1",
+				"size": 139872
+			},
+			{
+				"name": "rollup",
+				"version": "4.40.0",
+				"size": 2726316
+			},
+			{
+				"name": "tinyglobby",
+				"version": "0.2.13",
+				"size": 31264
+			},
+			{
+				"name": "why-is-node-running",
+				"version": "2.3.0",
+				"size": 7296
+			},
+			{
+				"name": "siginfo",
+				"version": "2.0.0",
+				"size": 4789
+			},
+			{
+				"name": "stackback",
+				"version": "0.0.2"
+			},
+			{
+				"name": "@vitest/expect",
+				"version": "3.1.1",
+				"size": 175143
+			},
+			{
+				"name": "@vitest/utils",
+				"version": "3.1.1",
+				"size": 158409
+			},
+			{
+				"name": "@vitest/pretty-format",
+				"version": "3.1.1",
+				"size": 57985
+			},
+			{
+				"name": "@vitest/spy",
+				"version": "3.1.1",
+				"size": 20269
+			},
+			{
+				"name": "tinyspy",
+				"version": "3.0.2",
+				"size": 17595
+			},
+			{
+				"name": "@vitest/mocker",
+				"version": "3.1.1",
+				"size": 155548
+			},
+			{
+				"name": "estree-walker",
+				"version": "3.0.3",
+				"size": 17599
+			},
+			{
+				"name": "@vitest/runner",
+				"version": "3.1.1",
+				"size": 107820
+			},
+			{
+				"name": "vite-node",
+				"version": "3.1.1",
+				"size": 198621
+			},
+			{
+				"name": "cac",
+				"version": "6.7.14",
+				"size": 81801
+			},
+			{
+				"name": "es-module-lexer",
+				"version": "1.6.0",
+				"size": 91298
+			},
+			{
+				"name": "@vitest/snapshot",
+				"version": "3.1.1",
+				"size": 87058
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[0, 2],
+			[2, 3],
+			[0, 4],
+			[4, 5],
+			[0, 6],
+			[0, 7],
+			[7, 3],
+			[0, 8],
+			[8, 5],
+			[0, 9],
+			[9, 10],
+			[10, 11],
+			[10, 12],
+			[10, 13],
+			[9, 14],
+			[14, 15],
+			[9, 16],
+			[0, 17],
+			[17, 18],
+			[18, 19],
+			[17, 20],
+			[17, 21],
+			[17, 22],
+			[17, 23],
+			[23, 24],
+			[17, 25],
+			[25, 18],
+			[18, 19],
+			[0, 26],
+			[26, 27],
+			[27, 28],
+			[28, 29],
+			[27, 30],
+			[0, 31],
+			[31, 15],
+			[31, 32],
+			[31, 33],
+			[33, 34],
+			[31, 35],
+			[31, 36],
+			[31, 34],
+			[0, 37],
+			[0, 38],
+			[0, 39],
+			[39, 40],
+			[40, 41],
+			[41, 42],
+			[41, 43],
+			[43, 44],
+			[40, 45],
+			[45, 42],
+			[39, 46],
+			[39, 47],
+			[0, 48],
+			[0, 49],
+			[49, 50],
+			[50, 51],
+			[50, 52],
+			[50, 53],
+			[50, 54],
+			[50, 55],
+			[49, 18],
+			[18, 19],
+			[49, 56],
+			[49, 23],
+			[23, 24],
+			[49, 57],
+			[49, 58],
+			[49, 59],
+			[49, 60],
+			[49, 61],
+			[49, 62],
+			[49, 63],
+			[63, 64],
+			[63, 65],
+			[63, 66],
+			[63, 67],
+			[67, 68],
+			[67, 69],
+			[67, 70],
+			[63, 71],
+			[71, 12],
+			[63, 72],
+			[72, 65],
+			[72, 66],
+			[49, 73],
+			[73, 74],
+			[73, 75],
+			[49, 76],
+			[76, 50],
+			[50, 51],
+			[50, 52],
+			[50, 53],
+			[50, 54],
+			[50, 55],
+			[76, 62],
+			[76, 77],
+			[77, 54],
+			[77, 62],
+			[77, 78],
+			[78, 62],
+			[76, 79],
+			[79, 80],
+			[49, 78],
+			[78, 62],
+			[49, 81],
+			[81, 82],
+			[82, 12],
+			[81, 23],
+			[23, 24],
+			[81, 79],
+			[79, 80],
+			[49, 79],
+			[79, 80],
+			[49, 77],
+			[77, 54],
+			[77, 62],
+			[77, 78],
+			[78, 62],
+			[49, 83],
+			[83, 57],
+			[83, 77],
+			[77, 54],
+			[77, 62],
+			[77, 78],
+			[78, 62],
+			[49, 84],
+			[84, 85],
+			[84, 18],
+			[18, 19],
+			[84, 86],
+			[84, 57],
+			[84, 63],
+			[63, 64],
+			[63, 65],
+			[63, 66],
+			[63, 67],
+			[67, 68],
+			[67, 69],
+			[67, 70],
+			[63, 71],
+			[71, 12],
+			[63, 72],
+			[72, 65],
+			[72, 66],
+			[49, 87],
+			[87, 23],
+			[23, 24],
+			[87, 57],
+			[87, 78],
+			[78, 62]
+		],
+		"circular": []
+	}
 }

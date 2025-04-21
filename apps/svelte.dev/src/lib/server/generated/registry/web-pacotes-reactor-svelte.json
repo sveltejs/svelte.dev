@@ -12,8 +12,6 @@
 	"version": "0.0.5",
 	"svelte_range": "^4.0.0",
 	"last_rune_check_version": "0.0.5",
-	"dependencies": [],
-	"unpacked_size": 17406,
 	"downloads_history": [
 		{
 			"range": [1711305000000, 1711909799999],
@@ -211,5 +209,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@web-pacotes/reactor-svelte",
+				"version": "0.0.5",
+				"size": 17406
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

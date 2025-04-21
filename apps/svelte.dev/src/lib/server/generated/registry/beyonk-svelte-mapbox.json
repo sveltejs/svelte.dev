@@ -13,8 +13,6 @@
 	"kit_range": "^2.8.0",
 	"last_rune_check_version": "11.0.0",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 47701,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -328,5 +326,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 1569
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@beyonk/svelte-mapbox",
+				"version": "11.0.0",
+				"size": 47701
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

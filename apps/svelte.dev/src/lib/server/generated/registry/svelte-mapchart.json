@@ -11,17 +11,6 @@
 	"version": "0.0.2",
 	"svelte_range": "3.15.0",
 	"last_rune_check_version": "0.0.2",
-	"dependencies": [
-		{
-			"name": "d3-geo",
-			"semver": "1.11.9"
-		},
-		{
-			"name": "topojson-client",
-			"semver": "3.1.0"
-		}
-	],
-	"unpacked_size": 475818,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -247,5 +236,42 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 11
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-mapchart",
+				"version": "0.0.2",
+				"size": 475818
+			},
+			{
+				"name": "d3-geo",
+				"version": "1.11.9",
+				"size": 281304
+			},
+			{
+				"name": "d3-array",
+				"version": "1.2.4",
+				"size": 103000
+			},
+			{
+				"name": "topojson-client",
+				"version": "3.1.0",
+				"size": 67594
+			},
+			{
+				"name": "commander",
+				"version": "2.20.3",
+				"size": 62442
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[3, 4]
+		],
+		"circular": []
+	}
 }

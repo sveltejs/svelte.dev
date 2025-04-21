@@ -13,13 +13,6 @@
 	"version": "0.0.0-dev-20220114223210",
 	"svelte_range": "^3.38.2",
 	"last_rune_check_version": "0.0.0-dev-20220114223210",
-	"dependencies": [
-		{
-			"name": "@ui-machines/core",
-			"semver": "0.0.0-dev-20220114223210"
-		}
-	],
-	"unpacked_size": 6209,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -293,5 +286,54 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 51
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@ui-machines/svelte",
+				"version": "0.0.0-dev-20220114223210",
+				"size": 6209
+			},
+			{
+				"name": "@ui-machines/core",
+				"version": "0.0.0-dev-20220114223210",
+				"size": 168079
+			},
+			{
+				"name": "klona",
+				"version": "2.0.6",
+				"size": 23173
+			},
+			{
+				"name": "valtio",
+				"version": "1.13.2",
+				"size": 311978
+			},
+			{
+				"name": "derive-valtio",
+				"version": "0.1.0",
+				"size": 61493
+			},
+			{
+				"name": "proxy-compare",
+				"version": "2.6.0",
+				"size": 107112
+			},
+			{
+				"name": "use-sync-external-store",
+				"version": "1.2.0",
+				"size": 38046
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[3, 4],
+			[3, 5],
+			[3, 6]
+		],
+		"circular": []
+	}
 }

@@ -13,13 +13,6 @@
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.0.0",
 	"last_rune_check_version": "2.0.0-np",
-	"dependencies": [
-		{
-			"name": "joinclass",
-			"semver": "^1.0.0"
-		}
-	],
-	"unpacked_size": 28574,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -257,5 +250,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-modal-z",
+				"version": "2.0.0-np",
+				"size": 28574
+			},
+			{
+				"name": "joinclass",
+				"version": "1.0.0",
+				"size": 5131
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

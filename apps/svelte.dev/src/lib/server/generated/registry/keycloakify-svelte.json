@@ -14,8 +14,6 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.19.0",
 	"last_rune_check_version": "0.1.7",
-	"dependencies": [],
-	"unpacked_size": 1003016,
 	"downloads_history": [
 		{
 			"range": [1732473000000, 1733077799999],
@@ -97,5 +95,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 23
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@keycloakify/svelte",
+				"version": "0.1.7",
+				"size": 1003016
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

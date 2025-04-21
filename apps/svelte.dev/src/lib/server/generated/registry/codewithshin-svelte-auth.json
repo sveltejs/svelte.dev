@@ -14,57 +14,6 @@
 	"svelte_range": "^3.44.0",
 	"kit_range": "next",
 	"last_rune_check_version": "0.1.7",
-	"dependencies": [
-		{
-			"name": "@lukeed/uuid",
-			"semver": "^2.0.0"
-		},
-		{
-			"name": "@sendgrid/mail",
-			"semver": "^7.6.2"
-		},
-		{
-			"name": "@types/cookie",
-			"semver": "^0.4.1"
-		},
-		{
-			"name": "cookie",
-			"semver": "^0.4.2"
-		},
-		{
-			"name": "dotenv",
-			"semver": "^16.0.0"
-		},
-		{
-			"name": "jsonwebtoken",
-			"semver": "^8.5.1"
-		},
-		{
-			"name": "jwt-decode",
-			"semver": "^3.1.2"
-		},
-		{
-			"name": "mongodb",
-			"semver": "^4.4.1"
-		},
-		{
-			"name": "nodemailer",
-			"semver": "^6.7.2"
-		},
-		{
-			"name": "nodemailer-sendgrid",
-			"semver": "^1.0.3"
-		},
-		{
-			"name": "string-hash",
-			"semver": "^1.1.3"
-		},
-		{
-			"name": "uuid",
-			"semver": "^8.3.2"
-		}
-	],
-	"unpacked_size": 29337,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -298,5 +247,782 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@codewithshin/svelte-auth",
+				"version": "0.1.7",
+				"size": 29337
+			},
+			{
+				"name": "@lukeed/uuid",
+				"version": "2.0.1",
+				"size": 9770
+			},
+			{
+				"name": "@lukeed/csprng",
+				"version": "1.1.0",
+				"size": 5968
+			},
+			{
+				"name": "@sendgrid/mail",
+				"version": "7.7.0",
+				"size": 17182
+			},
+			{
+				"name": "@sendgrid/client",
+				"version": "7.7.0",
+				"size": 319163
+			},
+			{
+				"name": "axios",
+				"version": "0.26.1",
+				"size": 398302
+			},
+			{
+				"name": "follow-redirects",
+				"version": "1.15.9",
+				"size": 29918
+			},
+			{
+				"name": "@sendgrid/helpers",
+				"version": "7.7.0",
+				"size": 143306
+			},
+			{
+				"name": "deepmerge",
+				"version": "4.3.1",
+				"size": 31157
+			},
+			{
+				"name": "@types/cookie",
+				"version": "0.4.1",
+				"size": 8983
+			},
+			{
+				"name": "cookie",
+				"version": "0.4.2",
+				"size": 19721
+			},
+			{
+				"name": "dotenv",
+				"version": "16.5.0",
+				"size": 75565
+			},
+			{
+				"name": "jsonwebtoken",
+				"version": "8.5.1",
+				"size": 73903
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "jws",
+				"version": "3.2.2",
+				"size": 17682
+			},
+			{
+				"name": "jwa",
+				"version": "1.4.1",
+				"size": 13688
+			},
+			{
+				"name": "safe-buffer",
+				"version": "5.2.1",
+				"size": 32101
+			},
+			{
+				"name": "ecdsa-sig-formatter",
+				"version": "1.0.11",
+				"size": 20588
+			},
+			{
+				"name": "buffer-equal-constant-time",
+				"version": "1.0.1"
+			},
+			{
+				"name": "semver",
+				"version": "5.7.2",
+				"size": 63315
+			},
+			{
+				"name": "lodash.once",
+				"version": "4.1.1"
+			},
+			{
+				"name": "lodash.includes",
+				"version": "4.3.0"
+			},
+			{
+				"name": "lodash.isnumber",
+				"version": "3.0.3"
+			},
+			{
+				"name": "lodash.isstring",
+				"version": "4.0.1"
+			},
+			{
+				"name": "lodash.isboolean",
+				"version": "3.0.3"
+			},
+			{
+				"name": "lodash.isinteger",
+				"version": "4.0.4"
+			},
+			{
+				"name": "lodash.isplainobject",
+				"version": "4.0.6"
+			},
+			{
+				"name": "jwt-decode",
+				"version": "3.1.2",
+				"size": 29725
+			},
+			{
+				"name": "mongodb",
+				"version": "4.17.2",
+				"size": 2737983
+			},
+			{
+				"name": "bson",
+				"version": "4.7.2",
+				"size": 2875624
+			},
+			{
+				"name": "buffer",
+				"version": "5.7.1",
+				"size": 82527
+			},
+			{
+				"name": "base64-js",
+				"version": "1.5.1",
+				"size": 9624
+			},
+			{
+				"name": "ieee754",
+				"version": "1.2.1",
+				"size": 6796
+			},
+			{
+				"name": "socks",
+				"version": "2.8.4",
+				"size": 156296
+			},
+			{
+				"name": "ip-address",
+				"version": "9.0.5",
+				"size": 176898
+			},
+			{
+				"name": "jsbn",
+				"version": "1.1.0"
+			},
+			{
+				"name": "sprintf-js",
+				"version": "1.1.3",
+				"size": 39879
+			},
+			{
+				"name": "smart-buffer",
+				"version": "4.2.0",
+				"size": 138027
+			},
+			{
+				"name": "mongodb-connection-string-url",
+				"version": "2.6.0",
+				"size": 38432
+			},
+			{
+				"name": "whatwg-url",
+				"version": "11.0.0",
+				"size": 94695
+			},
+			{
+				"name": "tr46",
+				"version": "3.0.0",
+				"size": 215265
+			},
+			{
+				"name": "punycode",
+				"version": "2.3.1",
+				"size": 33514
+			},
+			{
+				"name": "webidl-conversions",
+				"version": "7.0.0",
+				"size": 24242
+			},
+			{
+				"name": "@types/whatwg-url",
+				"version": "8.2.2",
+				"size": 14478
+			},
+			{
+				"name": "@types/node",
+				"version": "22.14.1",
+				"size": 2331510
+			},
+			{
+				"name": "undici-types",
+				"version": "6.21.0",
+				"size": 83680
+			},
+			{
+				"name": "@types/webidl-conversions",
+				"version": "7.0.3",
+				"size": 6767
+			},
+			{
+				"name": "nodemailer",
+				"version": "6.10.1",
+				"size": 507785
+			},
+			{
+				"name": "nodemailer-sendgrid",
+				"version": "1.0.3",
+				"size": 8850
+			},
+			{
+				"name": "@sendgrid/mail",
+				"version": "6.5.5",
+				"size": 15285
+			},
+			{
+				"name": "@sendgrid/client",
+				"version": "6.5.5",
+				"size": 314534
+			},
+			{
+				"name": "request",
+				"version": "2.88.2",
+				"size": 209281
+			},
+			{
+				"name": "qs",
+				"version": "6.5.3",
+				"size": 125650
+			},
+			{
+				"name": "aws4",
+				"version": "1.13.2",
+				"size": 23399
+			},
+			{
+				"name": "uuid",
+				"version": "3.4.0",
+				"size": 34269
+			},
+			{
+				"name": "extend",
+				"version": "3.0.2",
+				"size": 23461
+			},
+			{
+				"name": "caseless",
+				"version": "0.12.0"
+			},
+			{
+				"name": "isstream",
+				"version": "0.1.2"
+			},
+			{
+				"name": "aws-sign2",
+				"version": "0.7.0"
+			},
+			{
+				"name": "form-data",
+				"version": "2.3.3",
+				"size": 119230
+			},
+			{
+				"name": "asynckit",
+				"version": "0.4.0"
+			},
+			{
+				"name": "mime-types",
+				"version": "2.1.35",
+				"size": 18272
+			},
+			{
+				"name": "mime-db",
+				"version": "1.52.0",
+				"size": 205539
+			},
+			{
+				"name": "combined-stream",
+				"version": "1.0.8",
+				"size": 11514
+			},
+			{
+				"name": "delayed-stream",
+				"version": "1.0.0"
+			},
+			{
+				"name": "oauth-sign",
+				"version": "0.9.0",
+				"size": 13805
+			},
+			{
+				"name": "tough-cookie",
+				"version": "2.5.0",
+				"size": 86644
+			},
+			{
+				"name": "psl",
+				"version": "1.15.0",
+				"size": 711982
+			},
+			{
+				"name": "tunnel-agent",
+				"version": "0.6.0"
+			},
+			{
+				"name": "forever-agent",
+				"version": "0.6.1"
+			},
+			{
+				"name": "har-validator",
+				"version": "5.1.5",
+				"size": 8220
+			},
+			{
+				"name": "ajv",
+				"version": "6.12.6",
+				"size": 929154
+			},
+			{
+				"name": "uri-js",
+				"version": "4.4.1",
+				"size": 469879
+			},
+			{
+				"name": "fast-deep-equal",
+				"version": "3.1.3",
+				"size": 12966
+			},
+			{
+				"name": "json-schema-traverse",
+				"version": "0.4.1",
+				"size": 19564
+			},
+			{
+				"name": "fast-json-stable-stringify",
+				"version": "2.1.0",
+				"size": 16959
+			},
+			{
+				"name": "har-schema",
+				"version": "2.0.0"
+			},
+			{
+				"name": "is-typedarray",
+				"version": "1.0.0"
+			},
+			{
+				"name": "http-signature",
+				"version": "1.2.0"
+			},
+			{
+				"name": "sshpk",
+				"version": "1.18.0",
+				"size": 230846
+			},
+			{
+				"name": "asn1",
+				"version": "0.2.6",
+				"size": 19757
+			},
+			{
+				"name": "safer-buffer",
+				"version": "2.1.2",
+				"size": 42299
+			},
+			{
+				"name": "jsbn",
+				"version": "0.1.1"
+			},
+			{
+				"name": "getpass",
+				"version": "0.1.7"
+			},
+			{
+				"name": "assert-plus",
+				"version": "1.0.0"
+			},
+			{
+				"name": "dashdash",
+				"version": "1.14.1"
+			},
+			{
+				"name": "ecc-jsbn",
+				"version": "0.1.2",
+				"size": 27799
+			},
+			{
+				"name": "tweetnacl",
+				"version": "0.14.5"
+			},
+			{
+				"name": "bcrypt-pbkdf",
+				"version": "1.0.2",
+				"size": 28994
+			},
+			{
+				"name": "jsprim",
+				"version": "1.4.2",
+				"size": 31183
+			},
+			{
+				"name": "verror",
+				"version": "1.10.0"
+			},
+			{
+				"name": "extsprintf",
+				"version": "1.4.1",
+				"size": 30346
+			},
+			{
+				"name": "core-util-is",
+				"version": "1.0.2"
+			},
+			{
+				"name": "extsprintf",
+				"version": "1.3.0"
+			},
+			{
+				"name": "json-schema",
+				"version": "0.4.0",
+				"size": 26079
+			},
+			{
+				"name": "performance-now",
+				"version": "2.1.0"
+			},
+			{
+				"name": "json-stringify-safe",
+				"version": "5.0.1"
+			},
+			{
+				"name": "@types/request",
+				"version": "2.48.12",
+				"size": 19780
+			},
+			{
+				"name": "form-data",
+				"version": "2.5.3",
+				"size": 30454
+			},
+			{
+				"name": "es-set-tostringtag",
+				"version": "2.1.0",
+				"size": 14544
+			},
+			{
+				"name": "es-errors",
+				"version": "1.3.0",
+				"size": 12324
+			},
+			{
+				"name": "get-intrinsic",
+				"version": "1.3.0",
+				"size": 46542
+			},
+			{
+				"name": "call-bind-apply-helpers",
+				"version": "1.0.2",
+				"size": 15952
+			},
+			{
+				"name": "function-bind",
+				"version": "1.1.2",
+				"size": 31427
+			},
+			{
+				"name": "es-define-property",
+				"version": "1.0.1",
+				"size": 10217
+			},
+			{
+				"name": "es-object-atoms",
+				"version": "1.1.1",
+				"size": 11442
+			},
+			{
+				"name": "get-proto",
+				"version": "1.0.1",
+				"size": 10840
+			},
+			{
+				"name": "dunder-proto",
+				"version": "1.0.1",
+				"size": 13003
+			},
+			{
+				"name": "gopd",
+				"version": "1.2.0",
+				"size": 9869
+			},
+			{
+				"name": "has-symbols",
+				"version": "1.1.0",
+				"size": 23409
+			},
+			{
+				"name": "hasown",
+				"version": "2.0.2",
+				"size": 8765
+			},
+			{
+				"name": "math-intrinsics",
+				"version": "1.1.0",
+				"size": 17323
+			},
+			{
+				"name": "has-tostringtag",
+				"version": "1.0.2",
+				"size": 17603
+			},
+			{
+				"name": "@types/caseless",
+				"version": "0.12.5",
+				"size": 4720
+			},
+			{
+				"name": "@types/tough-cookie",
+				"version": "4.0.5",
+				"size": 13536
+			},
+			{
+				"name": "@sendgrid/helpers",
+				"version": "6.5.5",
+				"size": 132230
+			},
+			{
+				"name": "chalk",
+				"version": "2.4.2",
+				"size": 26924
+			},
+			{
+				"name": "ansi-styles",
+				"version": "3.2.1",
+				"size": 9371
+			},
+			{
+				"name": "color-convert",
+				"version": "1.9.3",
+				"size": 26964
+			},
+			{
+				"name": "color-name",
+				"version": "1.1.3"
+			},
+			{
+				"name": "supports-color",
+				"version": "5.5.0",
+				"size": 6630
+			},
+			{
+				"name": "has-flag",
+				"version": "3.0.0"
+			},
+			{
+				"name": "escape-string-regexp",
+				"version": "1.0.5"
+			},
+			{
+				"name": "string-hash",
+				"version": "1.1.3"
+			},
+			{
+				"name": "uuid",
+				"version": "8.3.2",
+				"size": 116098
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[0, 3],
+			[3, 4],
+			[4, 5],
+			[5, 6],
+			[4, 7],
+			[7, 8],
+			[3, 7],
+			[7, 8],
+			[0, 9],
+			[0, 10],
+			[0, 11],
+			[0, 12],
+			[12, 13],
+			[12, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17],
+			[17, 16],
+			[15, 18],
+			[14, 16],
+			[12, 19],
+			[12, 20],
+			[12, 21],
+			[12, 22],
+			[12, 23],
+			[12, 24],
+			[12, 25],
+			[12, 26],
+			[0, 27],
+			[0, 28],
+			[28, 29],
+			[29, 30],
+			[30, 31],
+			[30, 32],
+			[28, 33],
+			[33, 34],
+			[34, 35],
+			[34, 36],
+			[33, 37],
+			[28, 38],
+			[38, 39],
+			[39, 40],
+			[40, 41],
+			[39, 42],
+			[38, 43],
+			[43, 44],
+			[44, 45],
+			[43, 46],
+			[0, 47],
+			[0, 48],
+			[48, 49],
+			[49, 50],
+			[50, 51],
+			[51, 52],
+			[51, 53],
+			[51, 54],
+			[51, 55],
+			[51, 56],
+			[51, 57],
+			[51, 58],
+			[51, 59],
+			[59, 60],
+			[59, 61],
+			[61, 62],
+			[59, 63],
+			[63, 64],
+			[51, 61],
+			[61, 62],
+			[51, 65],
+			[51, 16],
+			[51, 66],
+			[66, 67],
+			[67, 41],
+			[66, 41],
+			[51, 68],
+			[68, 16],
+			[51, 69],
+			[51, 70],
+			[70, 71],
+			[71, 72],
+			[72, 41],
+			[71, 73],
+			[71, 74],
+			[71, 75],
+			[70, 76],
+			[51, 77],
+			[51, 78],
+			[78, 79],
+			[79, 80],
+			[80, 81],
+			[79, 82],
+			[79, 83],
+			[83, 84],
+			[79, 85],
+			[85, 84],
+			[79, 86],
+			[86, 82],
+			[86, 81],
+			[79, 87],
+			[79, 84],
+			[79, 88],
+			[88, 87],
+			[79, 81],
+			[78, 89],
+			[89, 90],
+			[90, 91],
+			[90, 84],
+			[90, 92],
+			[89, 93],
+			[89, 84],
+			[89, 94],
+			[78, 84],
+			[51, 63],
+			[63, 64],
+			[51, 95],
+			[51, 96],
+			[50, 97],
+			[97, 98],
+			[98, 60],
+			[98, 61],
+			[61, 62],
+			[98, 16],
+			[98, 63],
+			[63, 64],
+			[98, 99],
+			[99, 100],
+			[99, 101],
+			[101, 102],
+			[102, 100],
+			[102, 103],
+			[101, 104],
+			[101, 100],
+			[101, 105],
+			[105, 100],
+			[101, 103],
+			[101, 106],
+			[106, 107],
+			[107, 102],
+			[107, 100],
+			[107, 108],
+			[106, 105],
+			[105, 100],
+			[101, 108],
+			[101, 109],
+			[101, 110],
+			[110, 103],
+			[101, 111],
+			[99, 112],
+			[112, 109],
+			[99, 110],
+			[110, 103],
+			[97, 44],
+			[44, 45],
+			[97, 113],
+			[97, 114],
+			[50, 115],
+			[115, 116],
+			[116, 117],
+			[117, 118],
+			[118, 119],
+			[116, 120],
+			[120, 121],
+			[116, 122],
+			[115, 8],
+			[49, 115],
+			[115, 116],
+			[116, 117],
+			[117, 118],
+			[118, 119],
+			[116, 120],
+			[120, 121],
+			[116, 122],
+			[115, 8],
+			[0, 123],
+			[0, 124]
+		],
+		"circular": []
+	}
 }

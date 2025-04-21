@@ -13,8 +13,6 @@
 	"version": "2.2.4",
 	"svelte_range": "^5.22.1",
 	"last_rune_check_version": "2.2.4",
-	"dependencies": [],
-	"unpacked_size": 431818,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -316,5 +314,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 10
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "tweakpane-css",
+				"version": "2.2.4",
+				"size": 431818
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

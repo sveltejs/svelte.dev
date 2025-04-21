@@ -13,13 +13,6 @@
 	"version": "1.0.25",
 	"svelte_range": "^3.31.2",
 	"last_rune_check_version": "1.0.25",
-	"dependencies": [
-		{
-			"name": "easy-reactive",
-			"semver": "1.0.4"
-		}
-	],
-	"unpacked_size": 66371,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -333,5 +326,39 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 6774
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svelte-carousel",
+				"version": "1.0.25",
+				"size": 66371
+			},
+			{
+				"name": "easy-reactive",
+				"version": "1.0.4",
+				"size": 18245
+			},
+			{
+				"name": "lodash.clonedeep",
+				"version": "4.5.0"
+			},
+			{
+				"name": "lodash.get",
+				"version": "4.4.2"
+			},
+			{
+				"name": "lodash.isequal",
+				"version": "4.5.0"
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[1, 4]
+		],
+		"circular": []
+	}
 }

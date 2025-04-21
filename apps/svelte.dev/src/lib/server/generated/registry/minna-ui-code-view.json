@@ -13,8 +13,6 @@
 	"version": "0.24.0",
 	"svelte_range": "3.4.4",
 	"last_rune_check_version": "0.24.0",
-	"dependencies": [],
-	"unpacked_size": 163186,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -300,5 +298,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 67
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@minna-ui/code-view",
+				"version": "0.24.0",
+				"size": 163186
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

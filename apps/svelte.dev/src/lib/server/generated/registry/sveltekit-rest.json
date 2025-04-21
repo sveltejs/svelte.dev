@@ -14,13 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.27.4",
 	"last_rune_check_version": "0.6.2",
-	"dependencies": [
-		{
-			"name": "zod",
-			"semver": "^3.22.4"
-		}
-	],
-	"unpacked_size": 17880,
 	"downloads_history": [
 		{
 			"range": [1700418600000, 1701023399999],
@@ -238,5 +231,22 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "sveltekit-rest",
+				"version": "0.6.2",
+				"size": 17880
+			},
+			{
+				"name": "zod",
+				"version": "3.24.3",
+				"size": 697771
+			}
+		],
+		"dependencies": [[0, 1]],
+		"circular": []
+	}
 }

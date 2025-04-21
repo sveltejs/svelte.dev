@@ -12,13 +12,6 @@
 	"svelte_range": "^3.37.0",
 	"last_rune_check_version": "1.1.2",
 	"github_stars": 0,
-	"dependencies": [
-		{
-			"name": "hylid-bridge",
-			"semver": "^1.0.5"
-		}
-	],
-	"unpacked_size": 90342,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -332,5 +325,30 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 32
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "subscribe-msg-svelte",
+				"version": "1.1.2",
+				"size": 90342
+			},
+			{
+				"name": "hylid-bridge",
+				"version": "1.1.0",
+				"size": 863520
+			},
+			{
+				"name": "@types/miniprogram",
+				"version": "1.0.8",
+				"size": 85506
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2]
+		],
+		"circular": []
+	}
 }

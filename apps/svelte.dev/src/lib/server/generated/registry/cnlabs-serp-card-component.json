@@ -12,8 +12,6 @@
 	"svelte_range": "^3.20.1",
 	"last_rune_check_version": "1.0.47",
 	"github_stars": 0,
-	"dependencies": [],
-	"unpacked_size": 73079,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -275,5 +273,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 14
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@cnlabs/serp-card-component",
+				"version": "1.0.47",
+				"size": 73079
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }

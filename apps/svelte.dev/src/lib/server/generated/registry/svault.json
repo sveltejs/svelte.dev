@@ -14,41 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.4",
 	"last_rune_check_version": "1.1.3",
-	"dependencies": [
-		{
-			"name": "bcrypt",
-			"semver": "^5.0.1"
-		},
-		{
-			"name": "bcryptjs",
-			"semver": "^2.4.3"
-		},
-		{
-			"name": "cookie",
-			"semver": "^0.5.0"
-		},
-		{
-			"name": "dotenv",
-			"semver": "^16.3.1"
-		},
-		{
-			"name": "google-auth-library",
-			"semver": "^8.9.0"
-		},
-		{
-			"name": "nanoid",
-			"semver": "^4.0.2"
-		},
-		{
-			"name": "pg",
-			"semver": "^8.11.1"
-		},
-		{
-			"name": "process",
-			"semver": "^0.11.10"
-		}
-	],
-	"unpacked_size": 112177,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -354,5 +319,627 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "svault",
+				"version": "1.1.3",
+				"size": 112177
+			},
+			{
+				"name": "bcrypt",
+				"version": "5.1.1",
+				"size": 110858
+			},
+			{
+				"name": "node-addon-api",
+				"version": "5.1.0",
+				"size": 379971
+			},
+			{
+				"name": "@mapbox/node-pre-gyp",
+				"version": "1.0.11",
+				"size": 169518
+			},
+			{
+				"name": "tar",
+				"version": "6.2.1",
+				"size": 166613
+			},
+			{
+				"name": "chownr",
+				"version": "2.0.0",
+				"size": 5748
+			},
+			{
+				"name": "mkdirp",
+				"version": "1.0.4",
+				"size": 19088
+			},
+			{
+				"name": "yallist",
+				"version": "4.0.0",
+				"size": 14752
+			},
+			{
+				"name": "minipass",
+				"version": "5.0.0",
+				"size": 69475
+			},
+			{
+				"name": "minizlib",
+				"version": "2.1.2",
+				"size": 17309
+			},
+			{
+				"name": "minipass",
+				"version": "3.3.6",
+				"size": 48090
+			},
+			{
+				"name": "fs-minipass",
+				"version": "2.1.0",
+				"size": 14089
+			},
+			{
+				"name": "nopt",
+				"version": "5.0.0",
+				"size": 25840
+			},
+			{
+				"name": "abbrev",
+				"version": "1.1.1"
+			},
+			{
+				"name": "npmlog",
+				"version": "5.0.1",
+				"size": 16566
+			},
+			{
+				"name": "gauge",
+				"version": "3.0.2",
+				"size": 48549
+			},
+			{
+				"name": "aproba",
+				"version": "2.0.0",
+				"size": 8047
+			},
+			{
+				"name": "strip-ansi",
+				"version": "6.0.1",
+				"size": 4029
+			},
+			{
+				"name": "ansi-regex",
+				"version": "5.0.1",
+				"size": 5609
+			},
+			{
+				"name": "wide-align",
+				"version": "1.1.5",
+				"size": 4467
+			},
+			{
+				"name": "string-width",
+				"version": "4.2.3",
+				"size": 5161
+			},
+			{
+				"name": "emoji-regex",
+				"version": "8.0.0",
+				"size": 48255
+			},
+			{
+				"name": "is-fullwidth-code-point",
+				"version": "3.0.0",
+				"size": 4994
+			},
+			{
+				"name": "has-unicode",
+				"version": "2.0.1"
+			},
+			{
+				"name": "signal-exit",
+				"version": "3.0.7",
+				"size": 9958
+			},
+			{
+				"name": "color-support",
+				"version": "1.1.3"
+			},
+			{
+				"name": "object-assign",
+				"version": "4.1.1"
+			},
+			{
+				"name": "console-control-strings",
+				"version": "1.1.0"
+			},
+			{
+				"name": "set-blocking",
+				"version": "2.0.0"
+			},
+			{
+				"name": "are-we-there-yet",
+				"version": "2.0.0",
+				"size": 14102
+			},
+			{
+				"name": "delegates",
+				"version": "1.0.0"
+			},
+			{
+				"name": "readable-stream",
+				"version": "3.6.2",
+				"size": 123971
+			},
+			{
+				"name": "inherits",
+				"version": "2.0.4",
+				"size": 3958
+			},
+			{
+				"name": "string_decoder",
+				"version": "1.3.0",
+				"size": 14427
+			},
+			{
+				"name": "safe-buffer",
+				"version": "5.2.1",
+				"size": 32101
+			},
+			{
+				"name": "util-deprecate",
+				"version": "1.0.2"
+			},
+			{
+				"name": "rimraf",
+				"version": "3.0.2",
+				"size": 17327
+			},
+			{
+				"name": "glob",
+				"version": "7.2.3",
+				"size": 55064
+			},
+			{
+				"name": "once",
+				"version": "1.4.0"
+			},
+			{
+				"name": "wrappy",
+				"version": "1.0.2"
+			},
+			{
+				"name": "inflight",
+				"version": "1.0.6"
+			},
+			{
+				"name": "minimatch",
+				"version": "3.1.2",
+				"size": 34902
+			},
+			{
+				"name": "brace-expansion",
+				"version": "1.1.11",
+				"size": 11059
+			},
+			{
+				"name": "balanced-match",
+				"version": "1.0.2",
+				"size": 6939
+			},
+			{
+				"name": "concat-map",
+				"version": "0.0.1"
+			},
+			{
+				"name": "fs.realpath",
+				"version": "1.0.0"
+			},
+			{
+				"name": "path-is-absolute",
+				"version": "1.0.1"
+			},
+			{
+				"name": "semver",
+				"version": "7.7.1",
+				"size": 96674
+			},
+			{
+				"name": "make-dir",
+				"version": "3.1.0",
+				"size": 10042
+			},
+			{
+				"name": "semver",
+				"version": "6.3.1",
+				"size": 68343
+			},
+			{
+				"name": "node-fetch",
+				"version": "2.7.0",
+				"size": 162253
+			},
+			{
+				"name": "whatwg-url",
+				"version": "5.0.0"
+			},
+			{
+				"name": "tr46",
+				"version": "0.0.3"
+			},
+			{
+				"name": "webidl-conversions",
+				"version": "3.0.1"
+			},
+			{
+				"name": "detect-libc",
+				"version": "2.0.3",
+				"size": 23627
+			},
+			{
+				"name": "https-proxy-agent",
+				"version": "5.0.1",
+				"size": 26008
+			},
+			{
+				"name": "debug",
+				"version": "4.4.0",
+				"size": 42798
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "agent-base",
+				"version": "6.0.2",
+				"size": 34582
+			},
+			{
+				"name": "bcryptjs",
+				"version": "2.4.3"
+			},
+			{
+				"name": "cookie",
+				"version": "0.5.0",
+				"size": 23137
+			},
+			{
+				"name": "dotenv",
+				"version": "16.5.0",
+				"size": 75565
+			},
+			{
+				"name": "google-auth-library",
+				"version": "8.9.0",
+				"size": 516019
+			},
+			{
+				"name": "jws",
+				"version": "4.0.0",
+				"size": 17682
+			},
+			{
+				"name": "jwa",
+				"version": "2.0.0",
+				"size": 13685
+			},
+			{
+				"name": "ecdsa-sig-formatter",
+				"version": "1.0.11",
+				"size": 20588
+			},
+			{
+				"name": "buffer-equal-constant-time",
+				"version": "1.0.1"
+			},
+			{
+				"name": "arrify",
+				"version": "2.0.1",
+				"size": 3185
+			},
+			{
+				"name": "gaxios",
+				"version": "5.1.3",
+				"size": 73554
+			},
+			{
+				"name": "extend",
+				"version": "3.0.2",
+				"size": 23461
+			},
+			{
+				"name": "is-stream",
+				"version": "2.0.1",
+				"size": 5927
+			},
+			{
+				"name": "gtoken",
+				"version": "6.1.2",
+				"size": 38695
+			},
+			{
+				"name": "google-p12-pem",
+				"version": "4.0.1",
+				"size": 25216
+			},
+			{
+				"name": "node-forge",
+				"version": "1.3.1",
+				"size": 1657079
+			},
+			{
+				"name": "base64-js",
+				"version": "1.5.1",
+				"size": 9624
+			},
+			{
+				"name": "lru-cache",
+				"version": "6.0.0",
+				"size": 15643
+			},
+			{
+				"name": "gcp-metadata",
+				"version": "5.3.0",
+				"size": 75154
+			},
+			{
+				"name": "json-bigint",
+				"version": "1.0.0",
+				"size": 37345
+			},
+			{
+				"name": "bignumber.js",
+				"version": "9.3.0",
+				"size": 351328
+			},
+			{
+				"name": "fast-text-encoding",
+				"version": "1.0.6",
+				"size": 32194
+			},
+			{
+				"name": "nanoid",
+				"version": "4.0.2",
+				"size": 15272
+			},
+			{
+				"name": "pg",
+				"version": "8.14.1",
+				"size": 86374
+			},
+			{
+				"name": "pg-connection-string",
+				"version": "2.7.0",
+				"size": 9098
+			},
+			{
+				"name": "pg-pool",
+				"version": "3.8.0",
+				"size": 69742
+			},
+			{
+				"name": "pg-protocol",
+				"version": "1.8.0",
+				"size": 188302
+			},
+			{
+				"name": "pg-types",
+				"version": "2.2.0",
+				"size": 35296
+			},
+			{
+				"name": "pg-int8",
+				"version": "1.0.1"
+			},
+			{
+				"name": "postgres-array",
+				"version": "2.0.0",
+				"size": 4903
+			},
+			{
+				"name": "postgres-bytea",
+				"version": "1.0.0"
+			},
+			{
+				"name": "postgres-date",
+				"version": "1.0.7",
+				"size": 5915
+			},
+			{
+				"name": "postgres-interval",
+				"version": "1.2.0",
+				"size": 6727
+			},
+			{
+				"name": "xtend",
+				"version": "4.0.2",
+				"size": 6465
+			},
+			{
+				"name": "pgpass",
+				"version": "1.0.5",
+				"size": 10323
+			},
+			{
+				"name": "split2",
+				"version": "4.2.0",
+				"size": 17419
+			},
+			{
+				"name": "process",
+				"version": "0.11.10"
+			}
+		],
+		"dependencies": [
+			[0, 1],
+			[1, 2],
+			[1, 3],
+			[3, 4],
+			[4, 5],
+			[4, 6],
+			[4, 7],
+			[4, 8],
+			[4, 9],
+			[9, 7],
+			[9, 10],
+			[10, 7],
+			[4, 11],
+			[11, 10],
+			[10, 7],
+			[3, 12],
+			[12, 13],
+			[3, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17],
+			[17, 18],
+			[15, 19],
+			[19, 20],
+			[20, 17],
+			[17, 18],
+			[20, 21],
+			[20, 22],
+			[15, 23],
+			[15, 24],
+			[15, 20],
+			[20, 17],
+			[17, 18],
+			[20, 21],
+			[20, 22],
+			[15, 25],
+			[15, 26],
+			[15, 27],
+			[14, 28],
+			[14, 29],
+			[29, 30],
+			[29, 31],
+			[31, 32],
+			[31, 33],
+			[33, 34],
+			[31, 35],
+			[14, 27],
+			[3, 36],
+			[36, 37],
+			[37, 38],
+			[38, 39],
+			[37, 40],
+			[40, 38],
+			[38, 39],
+			[40, 39],
+			[37, 32],
+			[37, 41],
+			[41, 42],
+			[42, 43],
+			[42, 44],
+			[37, 45],
+			[37, 46],
+			[3, 47],
+			[3, 48],
+			[48, 49],
+			[3, 50],
+			[50, 51],
+			[51, 52],
+			[51, 53],
+			[3, 54],
+			[3, 55],
+			[55, 56],
+			[56, 57],
+			[55, 58],
+			[58, 56],
+			[56, 57],
+			[0, 59],
+			[0, 60],
+			[0, 61],
+			[0, 62],
+			[62, 63],
+			[63, 64],
+			[64, 34],
+			[64, 65],
+			[65, 34],
+			[64, 66],
+			[63, 34],
+			[62, 67],
+			[62, 68],
+			[68, 69],
+			[68, 70],
+			[68, 50],
+			[50, 51],
+			[51, 52],
+			[51, 53],
+			[68, 55],
+			[55, 56],
+			[56, 57],
+			[55, 58],
+			[58, 56],
+			[56, 57],
+			[62, 71],
+			[71, 63],
+			[63, 64],
+			[64, 34],
+			[64, 65],
+			[65, 34],
+			[64, 66],
+			[63, 34],
+			[71, 68],
+			[68, 69],
+			[68, 70],
+			[68, 50],
+			[50, 51],
+			[51, 52],
+			[51, 53],
+			[68, 55],
+			[55, 56],
+			[56, 57],
+			[55, 58],
+			[58, 56],
+			[56, 57],
+			[71, 72],
+			[72, 73],
+			[62, 74],
+			[62, 75],
+			[75, 7],
+			[62, 76],
+			[76, 68],
+			[68, 69],
+			[68, 70],
+			[68, 50],
+			[50, 51],
+			[51, 52],
+			[51, 53],
+			[68, 55],
+			[55, 56],
+			[56, 57],
+			[55, 58],
+			[58, 56],
+			[56, 57],
+			[76, 77],
+			[77, 78],
+			[62, 79],
+			[62, 65],
+			[65, 34],
+			[0, 80],
+			[0, 81],
+			[81, 82],
+			[81, 83],
+			[81, 84],
+			[81, 85],
+			[85, 86],
+			[85, 87],
+			[85, 88],
+			[85, 89],
+			[85, 90],
+			[90, 91],
+			[81, 92],
+			[92, 93],
+			[0, 94]
+		],
+		"circular": []
+	}
 }

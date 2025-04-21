@@ -14,8 +14,6 @@
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.4",
 	"last_rune_check_version": "0.0.2",
-	"dependencies": [],
-	"unpacked_size": 10664,
 	"downloads_history": [
 		{
 			"range": [1697394600000, 1697999399999],
@@ -245,5 +243,17 @@
 			"range": [1743964200000, 1744568999999],
 			"value": 5
 		}
-	]
+	],
+	"dependency_tree": {
+		"rootIndex": 0,
+		"packages": [
+			{
+				"name": "@konkat/svelte-spy",
+				"version": "0.0.2",
+				"size": 10664
+			}
+		],
+		"dependencies": [],
+		"circular": []
+	}
 }
