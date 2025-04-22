@@ -177,6 +177,15 @@
 
 			<button disabled={!can_migrate} onclick={migrate}>Migrate to Svelte 5, if possible</button>
 
+			<label class="option">
+				<span>Svelte version</span>
+				<input
+					value={workspace.svelte_version}
+					placeholder="latest"
+					onchange={(ev) => (workspace.svelte_version = ev.currentTarget.value)}
+				/>
+			</label>
+
 			{#if download}
 				<button onclick={download}>Download app</button>
 			{/if}
@@ -278,7 +287,7 @@
 		}
 	}
 
-	input {
+	.file-tabs input {
 		position: absolute;
 		width: calc(100% - var(--padding-left) - var(--padding-right));
 		border: none;
@@ -316,6 +325,18 @@
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
+	}
+
+	.option input {
+		background: transparent;
+		border: 1px solid var(--sk-border);
+		border-radius: var(--sk-border-radius);
+		color: currentColor;
+		width: 0;
+		flex: 1;
+		padding: 0.2rem 0.6rem;
+		height: 3.2rem;
+		font: var(--sk-font-ui-medium);
 	}
 
 	svg {
