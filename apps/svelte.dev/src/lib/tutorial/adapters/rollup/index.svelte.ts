@@ -5,16 +5,20 @@ import type { Adapter } from '$lib/tutorial';
 import type { File, Item } from '@sveltejs/repl/workspace';
 
 let done = false;
+let svelte_version = 'latest';
 
 export const state = new (class RollupState {
 	progress = $state.raw({ value: 0, text: 'initialising' });
 	bundler = new Bundler({
-		svelte_version: 'latest',
+		svelte_version,
 		onstatus: (val) => {
 			if (!done && val === null) {
 				done = true;
 				this.progress = { value: 1, text: 'ready' };
 			}
+		},
+		onversion: (version) => {
+			svelte_version = version;
 		}
 	});
 })();
@@ -33,7 +37,8 @@ export async function create(): Promise<Adapter> {
 				.map((f) => ({ ...f, name: f.name.slice(9) })),
 			{
 				// TODO support Tailwind here?
-				runes: true
+				runes: true,
+				svelte_version
 			}
 		);
 	}
