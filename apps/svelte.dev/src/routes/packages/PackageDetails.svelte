@@ -73,7 +73,11 @@
 
 <Chart history={pkg.downloads_history} />
 
-<DependencyGraph graph={pkg.dependency_tree} />
+<div style="width: 100%; overflow-x: auto">
+	<img src="/packages/{pkg.name}/graph/dependency.svg" alt="Dependency graph" />
+</div>
+
+<!-- <DependencyGraph graph={pkg.dependency_tree} /> -->
 
 <!-- {#if pkg.dependencies.length}
 	<h2>Dependencies</h2>

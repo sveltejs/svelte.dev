@@ -17,7 +17,7 @@ export async function GET({ params }) {
 	});
 }
 
-export async function entries({}) {
+export async function entries() {
 	return registry.map((v) => {
 		return {
 			pkg: v.name
@@ -39,7 +39,7 @@ function truncate(text: string, max_length = 20): string {
  * @param max_depth Maximum depth of dependencies to display (default: 15)
  * @returns SVG string representation of the dependency graph
  */
-function generate_dependency_graph_svg(pkg: Package, max_depth: number = 15): string {
+function generate_dependency_graph_svg(pkg: Package, max_depth: number = 25): string {
 	// Layout configuration
 	const NODE_WIDTH = 180;
 	const NODE_HEIGHT = 60;
