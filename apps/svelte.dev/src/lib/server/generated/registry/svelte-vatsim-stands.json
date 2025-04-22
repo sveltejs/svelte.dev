@@ -5,15 +5,15 @@
 	"authors": ["kristiankunc"],
 	"homepage": "https://github.com/kristiankunc/svelte-vatsim-stands#readme",
 	"downloads": 8,
-	"updated": "2025-04-16T14:50:53.233Z",
+	"updated": "2025-04-21T21:37:02.813Z",
 	"tags": ["ui"],
 	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
-	"last_rune_check_version": "1.2.0",
+	"last_rune_check_version": "1.2.1",
 	"downloads_history": [
 		[4064, 347],
 		[4071, 74],
@@ -29,8 +29,8 @@
 		"packages": [
 			{
 				"name": "svelte-vatsim-stands",
-				"version": "1.2.0",
-				"size": 35010
+				"version": "1.2.1",
+				"size": 33926
 			},
 			{
 				"name": "ol",

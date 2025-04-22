@@ -5,15 +5,15 @@
 	"authors": ["ryanatkn"],
 	"homepage": "https://gro.ryanatkn.com/",
 	"downloads": 272,
-	"updated": "2025-04-13T17:59:08.918Z",
+	"updated": "2025-04-20T20:22:35.951Z",
 	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 19,
 	"typescript": true,
-	"version": "0.150.1",
+	"version": "0.151.0",
 	"svelte_range": "^5",
-	"kit_range": "^2.20.5",
-	"last_rune_check_version": "0.150.1",
+	"kit_range": "^2.20.7",
+	"last_rune_check_version": "0.151.0",
 	"downloads_history": [
 		[3693, 238],
 		[3700, 479],
@@ -82,8 +82,8 @@
 		"packages": [
 			{
 				"name": "@ryanatkn/gro",
-				"version": "0.150.1",
-				"size": 825010
+				"version": "0.151.0",
+				"size": 825639
 			},
 			{
 				"name": "@ryanatkn/belt",

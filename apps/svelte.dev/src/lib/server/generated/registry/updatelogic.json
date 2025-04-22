@@ -5,13 +5,13 @@
 	"repo_url": "",
 	"authors": ["falkz"],
 	"downloads": 380,
-	"updated": "2025-04-16T21:11:48.110Z",
+	"updated": "2025-04-21T11:56:08.465Z",
 	"tags": ["miscellaneous"],
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
 	"runes": true,
-	"last_rune_check_version": "0.0.11",
-	"version": "0.0.11",
+	"last_rune_check_version": "0.0.13",
+	"version": "0.0.13",
 	"github_stars": 0,
 	"downloads_history": [[4113, 380]],
 	"dependency_tree": {
@@ -19,8 +19,8 @@
 		"packages": [
 			{
 				"name": "updatelogic",
-				"version": "0.0.11",
-				"size": 15883
+				"version": "0.0.13",
+				"size": 17561
 			}
 		],
 		"dependencies": [],

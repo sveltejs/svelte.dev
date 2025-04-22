@@ -5,13 +5,13 @@
 	"authors": ["metonym"],
 	"homepage": "https://svelte.carbondesignsystem.com/",
 	"downloads": 9338,
-	"updated": "2025-04-18T17:47:48.776Z",
+	"updated": "2025-04-21T16:31:56.739Z",
 	"tags": ["design-system"],
 	"runes": false,
 	"github_stars": 2781,
 	"typescript": true,
-	"version": "0.89.0",
-	"last_rune_check_version": "0.89.0",
+	"version": "0.89.1",
+	"last_rune_check_version": "0.89.1",
 	"downloads_history": [
 		[3574, 48785],
 		[3581, 55123],
@@ -97,8 +97,8 @@
 		"packages": [
 			{
 				"name": "carbon-components-svelte",
-				"version": "0.89.0",
-				"size": 4533800
+				"version": "0.89.1",
+				"size": 4534386
 			},
 			{
 				"name": "@ibm/telemetry-js",

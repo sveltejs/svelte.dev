@@ -4,14 +4,14 @@
 	"repo_url": "",
 	"authors": ["ottomated"],
 	"downloads": 170,
-	"updated": "2025-04-19T07:11:29.903Z",
+	"updated": "2025-04-22T07:13:40.547Z",
 	"tags": ["ui"],
 	"runes": true,
 	"typescript": true,
-	"version": "0.3.43",
+	"version": "0.3.44",
 	"svelte_range": "^5.0.0-next.1",
 	"kit_range": "^2.0.0",
-	"last_rune_check_version": "0.3.43",
+	"last_rune_check_version": "0.3.44",
 	"github_stars": 0,
 	"downloads_history": [
 		[3826, 50],
@@ -62,8 +62,8 @@
 		"packages": [
 			{
 				"name": "@o7/icon",
-				"version": "0.3.43",
-				"size": 15240157
+				"version": "0.3.44",
+				"size": 15243269
 			},
 			{
 				"name": "magic-string",

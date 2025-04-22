@@ -88,7 +88,9 @@
 			{
 				"name": "svelte-tawk-to-chat-widget",
 				"version": "0.0.1",
-				"size": 19750
+				"size": 19750,
+				"isCircular": true,
+				"circularTarget": 0
 			}
 		],
 		"dependencies": [[0, 1]],

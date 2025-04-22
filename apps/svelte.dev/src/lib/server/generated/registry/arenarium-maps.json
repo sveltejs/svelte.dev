@@ -5,13 +5,13 @@
 	"repo_url": "",
 	"authors": ["marko.smilja"],
 	"downloads": 498,
-	"updated": "2025-04-19T16:40:43.089Z",
+	"updated": "2025-04-20T15:16:20.811Z",
 	"tags": ["ui", "integration"],
 	"svelte_range": "^5.0.0",
-	"kit_range": "^2.20.4",
+	"kit_range": "^2.20.7",
 	"runes": false,
-	"last_rune_check_version": "1.0.42",
-	"version": "1.0.42",
+	"last_rune_check_version": "1.0.45",
+	"version": "1.0.45",
 	"github_stars": 0,
 	"downloads_history": [
 		[4106, 1276],
@@ -22,8 +22,8 @@
 		"packages": [
 			{
 				"name": "@arenarium/maps",
-				"version": "1.0.42",
-				"size": 1140221
+				"version": "1.0.45",
+				"size": 1141356
 			}
 		],
 		"dependencies": [],

@@ -5,14 +5,14 @@
 	"authors": ["scirexs"],
 	"homepage": "https://github.com/scirexs/svseeds-ui#readme",
 	"downloads": 9,
-	"updated": "2025-04-20T07:28:01.433Z",
+	"updated": "2025-04-22T08:02:39.729Z",
 	"tags": ["ui"],
 	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
-	"version": "0.1.1",
+	"version": "0.2.0",
 	"svelte_range": "^5.0.0",
-	"last_rune_check_version": "0.1.1",
+	"last_rune_check_version": "0.2.0",
 	"downloads_history": [
 		[4078, 54],
 		[4085, 6],
@@ -26,8 +26,8 @@
 		"packages": [
 			{
 				"name": "svseeds",
-				"version": "0.1.1",
-				"size": 142891
+				"version": "0.2.0",
+				"size": 143436
 			}
 		],
 		"dependencies": [],

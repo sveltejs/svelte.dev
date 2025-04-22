@@ -104,8 +104,8 @@
 			},
 			{
 				"name": "sass",
-				"version": "1.86.3",
-				"size": 5693005
+				"version": "1.87.0",
+				"size": 5699197
 			},
 			{
 				"name": "chokidar",

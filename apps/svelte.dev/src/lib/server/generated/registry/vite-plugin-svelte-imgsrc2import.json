@@ -5,12 +5,12 @@
 	"repo_url": "",
 	"authors": ["main2017"],
 	"downloads": 337,
-	"updated": "2025-04-18T10:09:59.055Z",
+	"updated": "2025-04-21T07:07:12.292Z",
 	"tags": ["tooling"],
 	"svelte_range": ">=3.0.0",
 	"runes": false,
-	"last_rune_check_version": "0.1.8",
-	"version": "0.1.8",
+	"last_rune_check_version": "0.1.29",
+	"version": "0.1.29",
 	"github_stars": 0,
 	"downloads_history": [
 		[4078, 56],
@@ -24,8 +24,8 @@
 		"packages": [
 			{
 				"name": "vite-plugin-svelte-imgsrc2import",
-				"version": "0.1.8",
-				"size": 130845
+				"version": "0.1.29",
+				"size": 131040
 			}
 		],
 		"dependencies": [],

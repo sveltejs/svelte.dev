@@ -5,14 +5,14 @@
 	"authors": ["vkurko"],
 	"homepage": "https://vkurko.github.io/calendar/",
 	"downloads": 5669,
-	"updated": "2025-04-16T18:13:20.930Z",
+	"updated": "2025-04-21T08:36:11.940Z",
 	"tags": ["ui"],
 	"runes": true,
 	"github_stars": 1656,
 	"typescript": false,
-	"version": "4.0.1",
+	"version": "4.0.2",
 	"svelte_range": "^5.25.10",
-	"last_rune_check_version": "4.0.1",
+	"last_rune_check_version": "4.0.2",
 	"downloads_history": [
 		[3574, 1904],
 		[3581, 2060],
@@ -98,8 +98,8 @@
 		"packages": [
 			{
 				"name": "@event-calendar/core",
-				"version": "4.0.1",
-				"size": 553669
+				"version": "4.0.2",
+				"size": 554301
 			}
 		],
 		"dependencies": [],

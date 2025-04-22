@@ -5,15 +5,15 @@
 	"authors": ["shinichiokada"],
 	"homepage": "https://flowbite-svelte-admin-dashboard.vercel.app/",
 	"downloads": 87,
-	"updated": "2024-02-09T19:18:55.629Z",
+	"updated": "2025-04-22T05:45:01.471Z",
 	"tags": ["design-system"],
 	"runes": false,
 	"github_stars": 395,
 	"typescript": false,
-	"version": "0.1.2",
-	"svelte_range": "^4.0.0",
-	"kit_range": "^2.0.0",
-	"last_rune_check_version": "0.1.2",
+	"version": "1.0.2",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.20.7",
+	"last_rune_check_version": "1.0.2",
 	"downloads_history": [
 		[3574, 81],
 		[3581, 12],
@@ -99,228 +99,11 @@
 		"packages": [
 			{
 				"name": "flowbite-svelte-admin-dashboard",
-				"version": "0.1.2",
-				"size": 20437
-			},
-			{
-				"name": "flowbite-svelte",
-				"version": "0.44.24",
-				"size": 638298
-			},
-			{
-				"name": "flowbite",
-				"version": "2.5.2",
-				"size": 5332844
-			},
-			{
-				"name": "@popperjs/core",
-				"version": "2.11.8",
-				"size": 1463042
-			},
-			{
-				"name": "mini-svg-data-uri",
-				"version": "1.4.4",
-				"size": 10460
-			},
-			{
-				"name": "flowbite-datepicker",
-				"version": "1.3.2",
-				"size": 1893079
-			},
-			{
-				"name": "@rollup/plugin-node-resolve",
-				"version": "15.3.1",
-				"size": 154449
-			},
-			{
-				"name": "resolve",
-				"version": "1.22.10",
-				"size": 145619
-			},
-			{
-				"name": "is-core-module",
-				"version": "2.16.1",
-				"size": 33475
-			},
-			{
-				"name": "hasown",
-				"version": "2.0.2",
-				"size": 8765
-			},
-			{
-				"name": "function-bind",
-				"version": "1.1.2",
-				"size": 31427
-			},
-			{
-				"name": "path-parse",
-				"version": "1.0.7",
-				"size": 4511
-			},
-			{
-				"name": "supports-preserve-symlinks-flag",
-				"version": "1.0.0",
-				"size": 9178
-			},
-			{
-				"name": "deepmerge",
-				"version": "4.3.1",
-				"size": 31157
-			},
-			{
-				"name": "is-module",
-				"version": "1.0.0"
-			},
-			{
-				"name": "@types/resolve",
-				"version": "1.20.2",
-				"size": 9885
-			},
-			{
-				"name": "@rollup/pluginutils",
-				"version": "5.1.4",
-				"size": 58354
-			},
-			{
-				"name": "@types/estree",
-				"version": "1.0.7",
-				"size": 26147
-			},
-			{
-				"name": "estree-walker",
-				"version": "2.0.2",
-				"size": 50243
-			},
-			{
-				"name": "picomatch",
-				"version": "4.0.2",
-				"size": 85237
-			},
-			{
-				"name": "flowbite-datepicker",
-				"version": "^1.3.0",
-				"isCircular": true,
-				"circularTarget": 20
-			},
-			{
-				"name": "apexcharts",
-				"version": "3.54.1",
-				"size": 4666917
-			},
-			{
-				"name": "svg.easing.js",
-				"version": "2.0.0"
-			},
-			{
-				"name": "svg.js",
-				"version": "2.7.1",
-				"size": 1031533
-			},
-			{
-				"name": "svg.filter.js",
-				"version": "2.0.2"
-			},
-			{
-				"name": "svg.resize.js",
-				"version": "1.4.3",
-				"size": 32977
-			},
-			{
-				"name": "svg.select.js",
-				"version": "2.1.2"
-			},
-			{
-				"name": "svg.select.js",
-				"version": "3.0.1",
-				"size": 27053
-			},
-			{
-				"name": "svg.draggable.js",
-				"version": "2.2.2",
-				"size": 15634
-			},
-			{
-				"name": "svg.pathmorphing.js",
-				"version": "0.1.3",
-				"size": 21180
-			},
-			{
-				"name": "@yr/monotone-cubic-spline",
-				"version": "1.0.3"
-			},
-			{
-				"name": "tailwind-merge",
-				"version": "2.6.0",
-				"size": 713298
-			},
-			{
-				"name": "@floating-ui/dom",
-				"version": "1.6.13",
-				"size": 165945
-			},
-			{
-				"name": "@floating-ui/core",
-				"version": "1.6.9",
-				"size": 212585
-			},
-			{
-				"name": "@floating-ui/utils",
-				"version": "0.2.9",
-				"size": 64926
-			},
-			{
-				"name": "flowbite-svelte-icons",
-				"version": "1.6.2",
-				"size": 3066619
+				"version": "1.0.2",
+				"size": 90825
 			}
 		],
-		"dependencies": [
-			[0, 1],
-			[1, 2],
-			[2, 3],
-			[2, 4],
-			[2, 5],
-			[5, 6],
-			[6, 7],
-			[7, 8],
-			[8, 9],
-			[9, 10],
-			[7, 11],
-			[7, 12],
-			[6, 13],
-			[6, 14],
-			[6, 15],
-			[6, 16],
-			[16, 17],
-			[16, 18],
-			[16, 19],
-			[5, 2],
-			[2, 3],
-			[2, 4],
-			[2, 20],
-			[1, 21],
-			[21, 22],
-			[22, 23],
-			[21, 24],
-			[24, 23],
-			[21, 25],
-			[25, 23],
-			[25, 26],
-			[26, 23],
-			[21, 27],
-			[27, 23],
-			[21, 28],
-			[28, 23],
-			[21, 29],
-			[29, 23],
-			[21, 30],
-			[1, 31],
-			[1, 32],
-			[32, 33],
-			[33, 34],
-			[32, 34],
-			[0, 35]
-		],
-		"circular": [[20, 20]]
+		"dependencies": [],
+		"circular": []
 	}
 }

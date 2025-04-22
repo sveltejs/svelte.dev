@@ -50,6 +50,8 @@ export async function load({ params, url }) {
 		// Find the package in the list
 		pkg = registry.find((pkg) => pkg.name === params.pkg);
 
+		console.log(pkg?.dependency_tree);
+
 		return {
 			selected: pkg
 		};

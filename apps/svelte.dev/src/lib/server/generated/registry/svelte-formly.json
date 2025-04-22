@@ -125,17 +125,9 @@
 			{
 				"name": "svelte-formly-light",
 				"version": "0.0.5",
-				"size": 38213
-			},
-			{
-				"name": "svelte-formly-light",
-				"version": "0.0.4",
-				"size": 31920
-			},
-			{
-				"name": "svelte-formly-light",
-				"version": "0.0.3",
-				"size": 31916
+				"size": 38213,
+				"isCircular": true,
+				"circularTarget": 4
 			}
 		],
 		"dependencies": [
@@ -146,16 +138,7 @@
 			[4, 1],
 			[4, 2],
 			[4, 3],
-			[4, 5],
-			[5, 1],
-			[5, 2],
-			[5, 3],
-			[5, 6],
-			[6, 1],
-			[6, 3],
-			[6, 7],
-			[7, 1],
-			[7, 3]
+			[4, 5]
 		],
 		"circular": []
 	}

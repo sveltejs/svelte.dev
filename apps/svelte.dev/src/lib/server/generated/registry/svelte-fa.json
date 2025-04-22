@@ -5,15 +5,15 @@
 	"authors": ["cweili"],
 	"homepage": "https://cweili.github.io/svelte-fa/",
 	"downloads": 19468,
-	"updated": "2024-09-24T11:56:41.400Z",
+	"updated": "2025-04-22T07:14:58.359Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 401,
 	"typescript": true,
-	"version": "4.0.3",
+	"version": "4.0.4",
 	"svelte_range": "^4.0.0 || ^5.0.0",
-	"kit_range": "^2.0.6",
-	"last_rune_check_version": "4.0.3",
+	"kit_range": "^2.5.28",
+	"last_rune_check_version": "4.0.4",
 	"downloads_history": [
 		[3574, 12092],
 		[3581, 10599],
@@ -99,8 +99,8 @@
 		"packages": [
 			{
 				"name": "svelte-fa",
-				"version": "4.0.3",
-				"size": 24578
+				"version": "4.0.4",
+				"size": 24694
 			}
 		],
 		"dependencies": [],

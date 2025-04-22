@@ -46,8 +46,8 @@
 			},
 			{
 				"name": "svelte-fa",
-				"version": "4.0.3",
-				"size": 24578
+				"version": "4.0.4",
+				"size": 24694
 			}
 		],
 		"dependencies": [

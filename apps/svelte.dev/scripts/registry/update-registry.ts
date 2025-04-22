@@ -723,7 +723,7 @@ async function update_cache(update: { stats?: boolean; composite?: boolean; grap
 
 	for await (const [pkg_name, data] of PackageCache.entries()) {
 		// TODO: REMOVE
-		if (data.dependency_tree) continue;
+		// if (data.dependency_tree) continue;
 
 		const package_detail = await superfetch(`${REGISTRY_BASE_URL}${pkg_name}`).then((r) =>
 			r.json()
@@ -750,7 +750,6 @@ async function update_cache(update: { stats?: boolean; composite?: boolean; grap
 		let dep_tree_promise: ReturnType<typeof build_flat_graph_from_package_json> =
 			Promise.resolve() as any;
 		if (update.graph) {
-			console.log('huh', data.dependency_tree);
 			dep_tree_promise = build_flat_graph_from_package_json(latest_package_json);
 		}
 
@@ -900,13 +899,13 @@ for (let i = 0; i < 1; i++) {
 
 // await update_overrides();
 
-// update_cache({
-// 	composite: false,
-// 	graph: true,
-// 	stats: false
-// });
+update_cache({
+	composite: false,
+	graph: true,
+	stats: false
+});
 
-convert_download_history_format_old();
+// convert_download_history_format_old();
 
 // console.log(await fetch_package_download_history('neotraverse'));
 
@@ -937,4 +936,4 @@ svelte_society_list;
 
 // program.command('update').addArgument({ name: 'github-stars', required: false });
 
-// await check_graph('nxext-svelte-16', 'latest');
+// await check_graph('prosemirror-svelte', 'latest');

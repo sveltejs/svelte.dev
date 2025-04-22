@@ -73,7 +73,8 @@
 			},
 			{
 				"name": "zod",
-				"version": "^3.22.4"
+				"version": "3.24.3",
+				"size": 697771
 			}
 		],
 		"dependencies": [[0, 1]],

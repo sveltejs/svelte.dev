@@ -5,14 +5,14 @@
 	"authors": ["ericfennis"],
 	"homepage": "https://lucide.dev",
 	"downloads": 87668,
-	"updated": "2025-04-18T15:19:43.497Z",
+	"updated": "2025-04-21T10:22:34.395Z",
 	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 16707,
 	"typescript": true,
-	"version": "0.501.0",
+	"version": "0.503.0",
 	"svelte_range": "^3 || ^4 || ^5.0.0-next.42",
-	"last_rune_check_version": "0.501.0",
+	"last_rune_check_version": "0.503.0",
 	"downloads_history": [
 		[3574, 16604],
 		[3581, 15514],
@@ -98,8 +98,8 @@
 		"packages": [
 			{
 				"name": "lucide-svelte",
-				"version": "0.501.0",
-				"size": 12196177
+				"version": "0.503.0",
+				"size": 12211823
 			}
 		],
 		"dependencies": [],

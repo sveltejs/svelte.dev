@@ -1075,9 +1075,11 @@ export async function build_graph_from_package_json(
 	}
 }
 
+// In npm.ts, modify the flattening function:
+
 /**
  * Converts a dependency graph to a highly optimized flat structure
- * Now including package size information
+ * with accurate circular dependency detection
  */
 export function flatten_dependency_graph(graph: PackageDependencyNode): FlatDependencyGraph {
 	const packages: FlatPackage[] = [];
@@ -1085,54 +1087,89 @@ export function flatten_dependency_graph(graph: PackageDependencyNode): FlatDepe
 	const circular: [number, number][] = [];
 
 	// Map to track package indices
-	const packageIndices = new Map<string, number>();
+	const package_indices = new Map<string, number>();
+
+	// Map to track package indices by name (for version resolution)
+	const package_name_indices = new Map<string, number[]>();
+
+	// Set to track already processed dependency relationships
+	const processed_dependencies = new Set<string>();
+	const processed_circulars = new Set<string>();
 
 	// Get or create index for a package
-	function getPackageIndex(node: PackageDependencyNode): number {
+	function get_package_index(node: PackageDependencyNode): number {
 		const key = `${node.name}@${node.version}`;
-		if (packageIndices.has(key)) {
-			return packageIndices.get(key)!;
+		if (package_indices.has(key)) {
+			return package_indices.get(key)!;
 		}
 
 		// Create new entry
 		const index = packages.length;
-		packageIndices.set(key, index);
+		package_indices.set(key, index);
+
+		// Track packages by name for version resolution
+		if (!package_name_indices.has(node.name)) {
+			package_name_indices.set(node.name, []);
+		}
+		package_name_indices.get(node.name)!.push(index);
 
 		// Include size information if available
 		packages.push({
 			name: node.name,
 			version: node.version,
-			size: node.size
+			size: node.size,
+			// Only include isCircular field if it's true - optimization
+			...(node.isCircular ? { isCircular: true } : {})
 		});
 
 		return index;
 	}
 
 	// Process the tree and build flat structures
-	function processNode(
+	function process_node(
 		node: PackageDependencyNode,
-		parentIndex: number | null = null,
-		visited = new Set<string>()
+		parent_index: number | null = null,
+		path = new Set<string>(), // Track packages in path by name (for circular detection)
+		index_path = new Set<number>() // Track actual indices in path
 	): number {
-		// Create a unique identifier for this node
-		const nodeKey = `${node.name}@${node.version}`;
+		// Get index for this package
+		const index = get_package_index(node);
 
-		// Check if we've already visited this node in the current traversal path
-		if (visited.has(nodeKey)) {
-			// We've found a circular reference
-			const index = getPackageIndex(node);
+		// If this has a parent, add the dependency if not already processed
+		if (parent_index !== null) {
+			const dep_key = `${parent_index}->${index}`;
 
-			// If this has a parent, add the dependency
-			if (parentIndex !== null) {
-				dependencies.push([parentIndex, index]);
+			if (!processed_dependencies.has(dep_key)) {
+				dependencies.push([parent_index, index]);
+				processed_dependencies.add(dep_key);
+			}
+		}
 
-				// Mark it as circular if not already marked
-				if (!packages[index].isCircular) {
-					packages[index].isCircular = true;
-					packages[index].circularTarget = index; // Self-reference as fallback
+		// Check if we've already visited a package with this name in the current path
+		if (path.has(node.name)) {
+			// Find the first occurrence of this package name in the path
+			const target_indices = package_name_indices.get(node.name) || [];
 
-					// Add to circular dependencies
-					circular.push([parentIndex, index]);
+			// Find the index that's in our current path
+			let target_index = -1;
+			for (const idx of target_indices) {
+				if (index_path.has(idx)) {
+					target_index = idx;
+					break;
+				}
+			}
+
+			if (target_index !== -1 && parent_index !== null) {
+				// We found a circular reference to another version of the same package
+				// Only set isCircular field when true
+				packages[index].isCircular = true;
+				packages[index].circularTarget = target_index;
+
+				// Add to circular dependencies if not already present
+				const circular_key = `${parent_index}->${target_index}`;
+				if (!processed_circulars.has(circular_key)) {
+					circular.push([parent_index, target_index]);
+					processed_circulars.add(circular_key);
 				}
 			}
 
@@ -1140,59 +1177,156 @@ export function flatten_dependency_graph(graph: PackageDependencyNode): FlatDepe
 			return index;
 		}
 
-		// Get index for this package
-		const index = getPackageIndex(node);
-
-		// If this has a parent, add the dependency
-		if (parentIndex !== null) {
-			dependencies.push([parentIndex, index]);
-		}
-
-		// Handle explicit circular reference
+		// Handle explicit circular reference (using circularRefId property)
 		if (node.isCircular && node.circularRefId) {
-			const [targetName, targetVersion] = node.circularRefId.split('@');
+			const [target_name, target_version] = node.circularRefId.split('@');
 
 			// Create a stub node for the circular target
-			let targetNode: PackageDependencyNode = {
-				name: targetName,
-				version: targetVersion,
+			let target_node: PackageDependencyNode = {
+				name: target_name,
+				version: target_version,
 				dependencies: []
 			};
 
 			// Get the target index
-			const targetIndex = getPackageIndex(targetNode);
+			const target_index = get_package_index(target_node);
 
-			// Update package with circular info
+			// Update package with circular info - only setting fields when needed
 			packages[index].isCircular = true;
-			packages[index].circularTarget = targetIndex;
+			packages[index].circularTarget = target_index;
 
-			// Add to circular dependencies
-			circular.push([index, targetIndex]);
+			// Add to circular dependencies if not already present
+			const circular_key = `${parent_index}->${target_index}`;
+			if (parent_index !== null && !processed_circulars.has(circular_key)) {
+				circular.push([parent_index, target_index]);
+				processed_circulars.add(circular_key);
+			}
 
 			// For circular references, don't process children
 			return index;
 		}
 
-		// Add this node to the visited set for this traversal path
-		const newVisited = new Set(visited);
-		newVisited.add(nodeKey);
+		// Add this node to the paths for this traversal only
+		const new_path = new Set(path);
+		new_path.add(node.name);
+
+		const new_index_path = new Set(index_path);
+		new_index_path.add(index);
 
 		// Process all dependencies
-		for (const dep of node.dependencies) {
-			processNode(dep, index, newVisited);
+		const deps = [...node.dependencies];
+		for (const dep of deps) {
+			process_node(dep, index, new_path, new_index_path);
 		}
 
 		return index;
 	}
 
 	// Start processing from root
-	const rootIndex = processNode(graph);
+	const root_index = process_node(graph);
+
+	// Post-process circular references to ensure they're accurate
+	// Remove any self-references unless they're explicitly marked in input
+	const validated_circular: [number, number][] = circular.filter(([from, to]) => {
+		// Skip trivial self-references that aren't explicitly marked
+		if (from === to && !packages[from].isCircular) {
+			return false;
+		}
+		return true;
+	});
 
 	return {
-		rootIndex,
+		rootIndex: root_index,
 		packages,
 		dependencies,
-		circular
+		circular: validated_circular
+	};
+}
+
+/**
+ * Fixes an existing flat graph with improper circular references
+ */
+export function fix_circular_references(graph: FlatDependencyGraph): FlatDependencyGraph {
+	const fixed_circular: [number, number][] = [];
+	const processed = new Set<string>();
+
+	// Map packages by name for version detection
+	const packages_by_name = new Map<string, number[]>();
+
+	for (let i = 0; i < graph.packages.length; i++) {
+		const pkg = graph.packages[i];
+		if (!packages_by_name.has(pkg.name)) {
+			packages_by_name.set(pkg.name, []);
+		}
+		packages_by_name.get(pkg.name)!.push(i);
+	}
+
+	// Fix circular dependencies based on dependency links
+	const dependency_map = new Map<number, number[]>();
+	for (const [from, to] of graph.dependencies) {
+		if (!dependency_map.has(from)) {
+			dependency_map.set(from, []);
+		}
+		dependency_map.get(from)!.push(to);
+	}
+
+	// Look for circular dependencies through the dependency chain
+	for (const [from, to] of graph.circular) {
+		// Skip self-references that aren't meaningful
+		if (from === to) {
+			const from_pkg = graph.packages[from];
+			const same_name_indices = packages_by_name.get(from_pkg.name) || [];
+
+			// Try to find a better circular reference
+			for (const same_idx of same_name_indices) {
+				if (same_idx !== from) {
+					// Check if there's a dependency path
+					const dependents = dependency_map.get(from) || [];
+					for (const dep of dependents) {
+						const key = `${from}->${dep}`;
+						if (!processed.has(key)) {
+							fixed_circular.push([from, dep]);
+							processed.add(key);
+						}
+					}
+					break;
+				}
+			}
+			continue;
+		}
+
+		// For valid circular references, keep them
+		const key = `${from}->${to}`;
+		if (!processed.has(key)) {
+			fixed_circular.push([from, to]);
+			processed.add(key);
+		}
+	}
+
+	// Fix package circular targets if they're self-referential
+	const fixed_packages = [...graph.packages];
+	for (let i = 0; i < fixed_packages.length; i++) {
+		const pkg = fixed_packages[i];
+
+		if (pkg.isCircular && pkg.circularTarget === i) {
+			// This is a self-reference. Try to find a better target.
+			const same_name_packages = packages_by_name.get(pkg.name) || [];
+
+			for (const same_idx of same_name_packages) {
+				if (same_idx !== i) {
+					// Use this as the target instead
+					pkg.circularTarget = same_idx;
+					break;
+				}
+			}
+		}
+	}
+
+	return {
+		rootIndex: graph.rootIndex,
+		packages: fixed_packages,
+		dependencies: graph.dependencies,
+		circular: fixed_circular
 	};
 }
 

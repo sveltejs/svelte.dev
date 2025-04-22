@@ -103,8 +103,7 @@
 			},
 			{
 				"name": "@sveltinio/essentials",
-				"version": "0.7.9",
-				"size": 120404
+				"version": "^0.7.9"
 			},
 			{
 				"name": "@sveltinio/ts-utils",
@@ -119,8 +118,6 @@
 		],
 		"dependencies": [
 			[0, 1],
-			[1, 2],
-			[2, 3],
 			[0, 2],
 			[2, 3]
 		],

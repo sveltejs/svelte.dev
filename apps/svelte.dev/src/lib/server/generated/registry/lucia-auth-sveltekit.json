@@ -103,8 +103,8 @@
 			},
 			{
 				"name": "@noble/hashes",
-				"version": "1.7.2",
-				"size": 1100967
+				"version": "1.8.0",
+				"size": 1145416
 			}
 		],
 		"dependencies": [[0, 1]],

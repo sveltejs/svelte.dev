@@ -5,14 +5,14 @@
 	"authors": ["evilpingwin"],
 	"homepage": "https://github.com/pngwn/MDsveX#readme",
 	"downloads": 37885,
-	"updated": "2024-08-17T01:30:39.693Z",
+	"updated": "2025-04-22T00:52:34.693Z",
 	"tags": ["content"],
 	"runes": false,
 	"github_stars": 2644,
 	"typescript": true,
-	"version": "0.12.3",
+	"version": "0.12.5",
 	"svelte_range": "^3.56.0 || ^4.0.0 || ^5.0.0-next.120",
-	"last_rune_check_version": "0.12.3",
+	"last_rune_check_version": "0.12.5",
 	"downloads_history": [
 		[3574, 13867],
 		[3581, 13707],
@@ -98,8 +98,18 @@
 		"packages": [
 			{
 				"name": "mdsvex",
-				"version": "0.12.3",
-				"size": 1164292
+				"version": "0.12.5",
+				"size": 1780962
+			},
+			{
+				"name": "@types/mdast",
+				"version": "4.0.4",
+				"size": 29432
+			},
+			{
+				"name": "@types/unist",
+				"version": "3.0.3",
+				"size": 6262
 			},
 			{
 				"name": "@types/unist",
@@ -117,6 +127,21 @@
 				"size": 2052735
 			},
 			{
+				"name": "unist-util-visit",
+				"version": "2.0.3",
+				"size": 10555
+			},
+			{
+				"name": "unist-util-is",
+				"version": "4.1.0",
+				"size": 13746
+			},
+			{
+				"name": "unist-util-visit-parents",
+				"version": "3.1.1",
+				"size": 16831
+			},
+			{
 				"name": "vfile-message",
 				"version": "2.0.4",
 				"size": 12600
@@ -129,12 +154,20 @@
 		],
 		"dependencies": [
 			[0, 1],
-			[0, 2],
+			[1, 2],
 			[0, 3],
 			[0, 4],
-			[4, 1],
-			[4, 5],
-			[5, 1]
+			[0, 5],
+			[0, 6],
+			[6, 3],
+			[6, 7],
+			[6, 8],
+			[8, 3],
+			[8, 7],
+			[0, 9],
+			[9, 3],
+			[9, 10],
+			[10, 3]
 		],
 		"circular": []
 	}

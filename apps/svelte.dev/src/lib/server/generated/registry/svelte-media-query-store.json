@@ -100,7 +100,9 @@
 			{
 				"name": "svelte-media-query-store",
 				"version": "0.0.3",
-				"size": 8902
+				"size": 8902,
+				"isCircular": true,
+				"circularTarget": 0
 			}
 		],
 		"dependencies": [[0, 1]],

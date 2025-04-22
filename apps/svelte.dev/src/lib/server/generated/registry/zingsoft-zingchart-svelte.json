@@ -106,7 +106,7 @@
 			},
 			{
 				"name": "zingchart-constants",
-				"version": "github:zingchart/zingchart-constants#master"
+				"version": "1.0.5"
 			}
 		],
 		"dependencies": [

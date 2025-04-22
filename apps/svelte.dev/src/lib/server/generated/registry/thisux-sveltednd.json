@@ -49,24 +49,12 @@
 			{
 				"name": "@thisux/sveltednd",
 				"version": "0.0.18",
-				"size": 28368
-			},
-			{
-				"name": "@thisux/sveltednd",
-				"version": "0.0.17",
-				"size": 28131
-			},
-			{
-				"name": "@thisux/sveltednd",
-				"version": "0.0.14",
-				"size": 26194
+				"size": 28368,
+				"isCircular": true,
+				"circularTarget": 0
 			}
 		],
-		"dependencies": [
-			[0, 1],
-			[1, 2],
-			[2, 3]
-		],
+		"dependencies": [[0, 1]],
 		"circular": []
 	}
 }
