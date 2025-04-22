@@ -2,6 +2,8 @@ import { registry, type Package } from '$lib/server/content';
 import { error, text } from '@sveltejs/kit';
 import { format_bytes } from '../../../utils';
 
+export const prerender = true;
+
 export async function GET({ params }) {
 	const { pkg } = params;
 
@@ -12,6 +14,14 @@ export async function GET({ params }) {
 		headers: {
 			'Content-type': 'image/svg+xml'
 		}
+	});
+}
+
+export async function entries({}) {
+	return registry.map((v) => {
+		return {
+			pkg: v.name
+		};
 	});
 }
 
