@@ -219,9 +219,14 @@ let local_svelte_pkg: Promise<any>;
 export async function resolve_local(specifier: string) {
 	const pkg = await (local_svelte_pkg ??= fetch(LOCAL_PKG_URL).then((r) => r.json()));
 
-	const subpath = resolve.exports(pkg, specifier.replace('svelte', '.'), {
-		browser: true
-	})![0] as string;
+	const subpath =
+		specifier[0] === '#'
+			? (resolve.imports(pkg, specifier, {
+					browser: true
+				})![0] as string)
+			: (resolve.exports(pkg, specifier.replace('svelte', '.'), {
+					browser: true
+				})![0] as string);
 
 	return new URL(subpath, LOCAL_PKG_URL).href;
 }

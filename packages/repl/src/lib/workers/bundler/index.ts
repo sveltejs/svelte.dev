@@ -219,9 +219,12 @@ async function get_bundle(
 			}
 
 			// importing a file from the same package via pkg.imports
-			if (importee[0] === '#' && current) {
-				const subpath = resolve_subpath(current, importee);
-				return normalize_path(current, subpath.slice(2));
+			if (importee[0] === '#') {
+				if (current) {
+					const subpath = resolve_subpath(current, importee);
+					return normalize_path(current, subpath.slice(2));
+				}
+				return await resolve_local(importee);
 			}
 
 			// importing an external package -> `npm://$/<name>@<version>/<path>`
