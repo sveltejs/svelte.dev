@@ -52,7 +52,7 @@ const nav_links: NavigationLink[] = [
 ];
 
 const banner: BannerData = {
-	id: 'barcelona',
+	id: 'barcelona-2025-tickets',
 	start: new Date('21 April, 2025 00:00:00 UTC'),
 	end: new Date('6 May, 2025 23:59:59 UTC'),
 	arrow: true,
