@@ -41,8 +41,8 @@ function truncate(text: string, max_length = 20): string {
  */
 function generate_dependency_graph_svg(pkg: Package, max_depth: number = 25): string {
 	// Layout configuration
-	const NODE_WIDTH = 180;
-	const NODE_HEIGHT = 60;
+	const NODE_WIDTH = 250;
+	const NODE_HEIGHT = 30;
 	const LEVEL_GAP = 200;
 	const NODE_GAP = 40;
 	const MARGIN = 50;
@@ -312,19 +312,10 @@ function generate_dependency_graph_svg(pkg: Package, max_depth: number = 25): st
           font-weight="bold"
           fill="${text_color}"
         >
-          ${truncate(node.name, 20)}
+          ${truncate(node.name, 20)}@${node.version}
         </text>
         
-        <!-- Version -->
-        <text 
-          x="10" 
-          y="38" 
-          font-family="monospace"
-          font-size="12"
-          fill="#718096"
-        >
-          @${node.version}
-        </text>`;
+        `;
 
 		// Add size if available
 		if (node.size) {
