@@ -32,19 +32,15 @@ function truncate(text: string, max_length = 20): string {
 	return text.length > max_length ? text.substring(0, max_length) + '...' : text;
 }
 
-/**
- * Generate an SVG string representation of a package dependency graph
- *
- * @param pkg The package object with dependency graph data
- * @param max_depth Maximum depth of dependencies to display (default: 15)
- * @returns SVG string representation of the dependency graph
- */
 function generate_dependency_graph_svg(pkg: Package, max_depth: number = 25): string {
 	// Layout configuration
-	const NODE_WIDTH = 250;
-	const NODE_HEIGHT = 30;
+	const NODE_HEIGHT = 40;
+	const MIN_NODE_WIDTH = 200;
+	const MAX_NODE_WIDTH = 400; // Increased maximum width
+	const TEXT_PADDING = 60; // More padding to ensure text fits
+	const FONT_WIDTH_FACTOR = 7.5; // Slightly increased for better text fitting
 	const LEVEL_GAP = 200;
-	const NODE_GAP = 40;
+	const NODE_GAP = 20;
 	const MARGIN = 50;
 
 	// Extract the dependency graph from the package
@@ -76,6 +72,8 @@ function generate_dependency_graph_svg(pkg: Package, max_depth: number = 25): st
 		x: number;
 		y: number;
 		level: number;
+		width: number;
+		display_text: string; // Store truncated text
 	};
 
 	type Connection = {
@@ -83,6 +81,41 @@ function generate_dependency_graph_svg(pkg: Package, max_depth: number = 25): st
 		to_id: number;
 		is_circular: boolean;
 	};
+
+	// Calculate width for a package name and get truncated text
+	function calculate_node_data(
+		name: string,
+		version: string
+	): { width: number; display_text: string } {
+		// Create the display text
+		const full_text = `${name}@${version}`;
+
+		// Calculate the width needed
+		const calculated_width = full_text.length * FONT_WIDTH_FACTOR + TEXT_PADDING;
+		const width = Math.min(MAX_NODE_WIDTH, Math.max(MIN_NODE_WIDTH, calculated_width));
+
+		// How many characters can we fit?
+		const max_chars = Math.floor((width - TEXT_PADDING) / FONT_WIDTH_FACTOR);
+
+		// Truncate if needed
+		let display_text = full_text;
+		if (full_text.length > max_chars) {
+			// Try to keep the version part if possible
+			const version_part = `@${version}`;
+			const version_len = version_part.length;
+			const name_len = max_chars - version_len - 3; // -3 for ellipsis
+
+			if (name_len > 5) {
+				// If we can show at least 5 chars of the name
+				display_text = `${name.substring(0, name_len)}...${version_part}`;
+			} else {
+				// If too long, just truncate the whole thing
+				display_text = `${full_text.substring(0, max_chars - 3)}...`;
+			}
+		}
+
+		return { width, display_text };
+	}
 
 	// Create adjacency lists for dependencies
 	const outgoing_edges = new Map<number, number[]>();
@@ -157,15 +190,38 @@ function generate_dependency_graph_svg(pkg: Package, max_depth: number = 25): st
 		});
 	}
 
+	// Calculate widths for each node
+	const node_data = new Map<number, { width: number; display_text: string }>();
+	for (const [level, node_indices] of nodes_by_level.entries()) {
+		for (const node_index of node_indices) {
+			const pkg = graph.packages[node_index];
+			node_data.set(node_index, calculate_node_data(pkg.name, pkg.version));
+		}
+	}
+
 	// Position nodes
 	let max_x = 0;
 	let max_y = 0;
 	const nodes: PositionedNode[] = [];
 
+	// Use fixed width for all nodes in a level for better alignment
+	const level_widths = new Map<number, number>();
+	for (const [level, node_indices] of nodes_by_level.entries()) {
+		// Use a consistent width for the level (the max of all nodes or MIN_NODE_WIDTH)
+		let level_width = MIN_NODE_WIDTH;
+		for (const node_index of node_indices) {
+			const node_width = node_data.get(node_index)!.width;
+			level_width = Math.max(level_width, node_width);
+		}
+		level_widths.set(level, level_width);
+	}
+
 	// Create positioned nodes
 	for (const [level, node_indices] of nodes_by_level.entries()) {
-		const level_x = MARGIN + level * (NODE_WIDTH + LEVEL_GAP);
-		max_x = Math.max(max_x, level_x + NODE_WIDTH);
+		const level_x = MARGIN + level * (level_widths.get(0)! + LEVEL_GAP);
+		const node_width = level_widths.get(level)!;
+
+		max_x = Math.max(max_x, level_x + node_width);
 
 		node_indices.forEach((node_index, index) => {
 			const pkg = graph.packages[node_index];
@@ -180,7 +236,9 @@ function generate_dependency_graph_svg(pkg: Package, max_depth: number = 25): st
 				is_circular: !!pkg.isCircular,
 				x: level_x,
 				y: y,
-				level: level
+				level: level,
+				width: node_width,
+				display_text: node_data.get(node_index)!.display_text
 			});
 		});
 	}
@@ -218,12 +276,12 @@ function generate_dependency_graph_svg(pkg: Package, max_depth: number = 25): st
 
 	// Generate a path between two nodes
 	function generate_path(from_node: PositionedNode, to_node: PositionedNode): string {
-		const source_x = from_node.x + NODE_WIDTH;
+		const source_x = from_node.x + from_node.width;
 		const source_y = from_node.y + NODE_HEIGHT / 2;
 		const target_x = to_node.x;
 		const target_y = to_node.y + NODE_HEIGHT / 2;
 
-		const control_dist = Math.min(80, (to_node.x - from_node.x) / 2);
+		const control_dist = Math.min(80, (to_node.x - from_node.x - from_node.width) / 2);
 
 		return `M ${source_x} ${source_y} C ${source_x + control_dist} ${source_y}, ${target_x - control_dist} ${target_y}, ${target_x} ${target_y}`;
 	}
@@ -294,7 +352,7 @@ function generate_dependency_graph_svg(pkg: Package, max_depth: number = 25): st
       <g transform="translate(${node.x}, ${node.y})">
         <!-- Node background -->
         <rect 
-          width="${NODE_WIDTH}" 
+          width="${node.width}" 
           height="${NODE_HEIGHT}" 
           rx="4" 
           ry="4" 
@@ -303,26 +361,24 @@ function generate_dependency_graph_svg(pkg: Package, max_depth: number = 25): st
           stroke-width="1"
         />
         
-        <!-- Package name -->
+        <!-- Package name and version (pre-truncated) -->
         <text 
           x="10" 
-          y="20" 
+          y="18" 
           font-family="monospace"
           font-size="14"
           font-weight="bold"
           fill="${text_color}"
         >
-          ${truncate(node.name, 20)}@${node.version}
-        </text>
-        
-        `;
+          ${node.display_text}
+        </text>`;
 
 		// Add size if available
 		if (node.size) {
 			svg += `
         <text 
           x="10" 
-          y="52" 
+          y="32" 
           font-family="monospace"
           font-size="10"
           fill="#a0aec0"
@@ -334,9 +390,9 @@ function generate_dependency_graph_svg(pkg: Package, max_depth: number = 25): st
 		// Add circular indicator
 		if (node.is_circular) {
 			svg += `
-        <circle cx="${NODE_WIDTH - 10}" cy="10" r="6" fill="#f56565" />
+        <circle cx="${node.width - 10}" cy="10" r="6" fill="#f56565" />
         <text 
-          x="${NODE_WIDTH - 10}" 
+          x="${node.width - 10}" 
           y="13" 
           font-family="monospace"
           font-size="10"
