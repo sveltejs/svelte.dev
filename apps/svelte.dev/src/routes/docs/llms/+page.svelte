@@ -20,8 +20,12 @@
 				the CLI
 			</li>
 			<li>
-				<a href="/llms-small.txt">/llms-small.txt</a> — compressed documentation for use with smaller
+				<a href="/llms-medium.txt">/llms-medium.txt</a> — compressed documentation for use with medium
 				context windows
+			</li>
+			<li>
+				<a href="/llms-small.txt">/llms-small.txt</a> — highly compressed documentation for use with
+				smaller context windows
 			</li>
 		</ul>
 

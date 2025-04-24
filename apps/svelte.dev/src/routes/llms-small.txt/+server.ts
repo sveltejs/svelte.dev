@@ -1,39 +1,10 @@
-import { generate_llm_content, sections } from '$lib/server/llms';
+import svelte from './content-svelte.md?raw';
+import sveltekit from './content-sveltekit.md?raw';
 
 export function GET() {
-	const main_content = generate_llm_content({
-		sections,
-		ignore: [
-			// Svelte ignores
-			'docs/svelte/legacy/**/*',
-			'docs/svelte/misc/custom-elements',
-			'docs/svelte/misc/v4-migration-guide',
-			'docs/svelte/misc/v5-migration-guide',
-			'docs/svelte/misc/faq',
-			'docs/svelte/reference/compiler-errors',
-			'docs/svelte/reference/compiler-warnings',
-			'docs/svelte/reference/runtime-errors',
-			'docs/svelte/reference/runtime-warnings',
-			'docs/svelte/reference/svelte-legacy',
-			'**/xx-*',
-
-			// SvelteKit ignores
-			'docs/kit/advanced/packaging',
-			'docs/kit/appendix/**/*',
-			'docs/kit/best-practices/performance',
-			'docs/kit/build-and-deploy/*adapter-*',
-			'docs/kit/build-and-deploy/writing-adapters'
-		],
-		minimize: {
-			remove_legacy: true,
-			remove_note_blocks: true,
-			remove_details_blocks: true,
-			remove_playground_links: true,
-			remove_prettier_ignore: true,
-			normalize_whitespace: true
-		}
-	});
-	const content = `<SYSTEM>This is the abridged developer documentation for Svelte and SvelteKit.</SYSTEM>\n\n${main_content}`;
+	const content =
+		'<SYSTEM>This is the abridged developer documentation for Svelte and SvelteKit.</SYSTEM>\n\n' +
+		`# Svelte documentation\n\n${svelte}\n\n# SvelteKit documentation\n\n${sveltekit}`;
 
 	return new Response(content, {
 		status: 200,
