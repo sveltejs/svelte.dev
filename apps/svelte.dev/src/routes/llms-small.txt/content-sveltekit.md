@@ -57,18 +57,6 @@ export default {
   - `.svelte-kit/` is auto‑generated and safe to ignore or delete; it will be recreated on `dev`/`build`.
   - Do **NOT** commit `.svelte-kit/` to version control.
 
-## Web standards
-
-- **Fetch API & HTTP primitives:**
-  - Use `fetch` on server/routes/hooks and in the browser (`Request`, `Response`, `Headers`), plus `json()` helper.
-  - Do **NOT** roll your own HTTP parsing; instead use the platform’s `fetch` and `Request`/`Response` interfaces.
-- **FormData & Streams:**
-  - Handle form submissions with `await event.request.formData()`, and stream large or chunked responses with `ReadableStream`/`WritableStream`/`TransformStream`.
-  - Do **NOT** load huge payloads into memory entirely; instead use streams when appropriate.
-- **URL APIs & Web Crypto:**
-  - Access `event.url` or `page.url`, use `url.searchParams` for queries, and generate secure values with `crypto.randomUUID()`.
-  - Do **NOT** manually parse query strings or roll your own UUIDs; instead rely on `URLSearchParams` and the Web Crypto API.
-
 ## Routing
 
 - **Filesystem router:** `src/routes` maps directories to URL paths: Everything with a `+page.svelte` file inside it becomes a visitable URL, e.g. `src/routes/hello/+page.svelte` becomes `/hello`. `[param]` folders define dynamic segments. Do NOT use other file system router conventions, e.g. `src/routes/hello.svelte` does NOT become available als URL `/hello`
@@ -92,7 +80,7 @@ export default {
 
 - Load data for pages via `export function load({ params })` (typed `PageLoad`), return value is put into `data` prop in component
 - Can export `prerender`, `ssr`, and `csr` consts here to influence how page is rendered.
-- Do **not** include private logic (DB or env vars); if needed, use `+page.server.js`.
+- Do **not** include private logic (DB or env vars), can **not** export `actions` from here; if needed, use `+page.server.js`.
 
 ```js
 import type { PageLoad } from './$types';
@@ -384,7 +372,7 @@ export async function load({ untrack, url }) {
 
 ### Form actions
 
-- A `+page.server.js` can export `export const actions: Actions = { default: async (event) => {…} }`; `<form method="POST">` in `+page.svelte` posts to the default action without any JS.
+- A `+page.server.js` can export `export const actions: Actions = { default: async (event) => {…} }`; `<form method="POST">` in `+page.svelte` posts to the default action without any JS. `+page.js` or `+layout.js` or `+layout.server.js` can NOT export `actions`
 - Name multiple actions (`login`, `register`) in `actions`, invoke with `action="?/register"` or `button formaction="?/register"`; do NOT use `default` name in this case.
 - Each action gets `{ request, cookies, params }`, uses `await request.formData()`, sets cookies or DB state, and returns an object that appears on the page as `form` (typed via `PageProps`).
 
@@ -437,7 +425,7 @@ Use it with a simple form:
 
 ### Progressive enhancement
 
-- Apply `use:enhance` from `$app/forms` to `<form>` to intercept submissions, prevent full reloads, update `form`, `page.form`, `page.status`, reset the form, invalidate all data, handle redirects, render errors, and restore focus.
+- Apply `use:enhance` from `$app/forms` to `<form>` to intercept submissions, prevent full reloads, update `form`, `page.form`, `page.status`, reset the form, invalidate all data, handle redirects, render errors, and restore focus. Do NOT use onsubmit event for progressive enhancement
 - To customize, provide a callback that runs before submit and returns a handler; use `update()` for default logic or `applyAction(result)` to apply form data without full invalidation.
 - You can also write your own `onsubmit` listener using `fetch`, then `deserialize` the response and `applyAction`/`invalidateAll`; do NOT use `JSON.parse` for action responses.
 
@@ -452,12 +440,6 @@ Use it with a simple form:
 	<!-- form content -->
 </form>
 ```
-
-### Alternatives & GET vs POST
-
-- For simple JSON APIs, use `+server.js` routes and `fetch` instead of actions; but you lose `<form>` semantics and progressive enhancement.
-- `<form method="GET">` acts like an `<a>` tag, invoking `load` with query parameters and client routing, not an action.
-- Do NOT use GET for data‑changing operations; reserve POST for actions that modify state.
 
 ## Page options
 
@@ -482,17 +464,6 @@ Use it with a simple form:
 
 - `export const csr = false` prevents hydration, omits JS bundle, disables `<script>`s, form enhancements, client routing, and HMR.
 - Ideal for purely static pages (e.g. marketing or blog posts); do NOT disable CSR on pages requiring interactivity.
-
-#### trailingSlash
-
-- `export const trailingSlash = 'never'|'always'|'ignore'` controls URL normalization and prerender output (`about.html` vs `about/index.html`).
-- Cascades through layouts and server routes; do NOT rely on default if you need consistent URL behavior across environments.
-
-#### config
-
-- `export const config: AdapterConfig = { … }` provides adapter-specific deployment settings; top‑level keys merge but nested objects are overwritten.
-- Layout `config` values are inherited by child pages, which override only specified keys.
-- Do NOT repeat the entire config for minor tweaks; specify only the properties you need to change.
 
 ## State management
 
@@ -523,18 +494,6 @@ Use it with a simple form:
 - Rest parameters (`[...file]`) capture an unknown number of segments (e.g. `src/routes/hello/[...path]` catches all routes under `/hello`) and expose them as a single string; use a catch‑all route `+error.svelte` to render nested custom 404 pages.
 - Optional parameters (`[[lang]]`) make a segment optional, e.g. for `[[lang]]/home` both `/home` and `/en/home` map to the same route; cannot follow a rest parameter.
 - Matchers in `src/params/type.js` let you constrain `[param=type]` (e.g. only “apple” or “orange”), falling back to other routes or a 404 if the test fails.
-
-### Sorting
-
-- Routes are sorted by specificity: static > parameter with matcher > simple parameter > optional/rest > catch‑all.
-- Alphabetical order breaks ties.
-- Ensures `/foo-abc` matches `foo-abc` before `foo-[c]`, then optional, then `[b]`, then `[...catchall]`.
-
-### Encoding
-
-- Escape filesystem/URL‑reserved characters using `[x+nn]` (hex code) or `[u+nnnn]` (Unicode code point), e.g. `:-)` → `[x+3a]-[x+29]`.
-- Surrogate pairs are unnecessary; code points up to `10ffff` work.
-- Use `':'.charCodeAt(0).toString(16)` to compute hex codes.
 
 ### Advanced layouts
 
@@ -567,27 +526,17 @@ Use it with a simple form:
 
 ## Link options
 
+The following are HTML attributes you can put on any HTML element.
+
 - `data-sveltekit-preload-data="hover"|"tap"` preloads `load` on link hover (`touchstart`) or immediate tap; use `"tap"` for fast‑changing data.
 - `data-sveltekit-preload-code="eager"|"viewport"|"hover"|"tap"` preloads JS/CSS aggressively or on scroll/hover/tap to improve load times.
 - `data-sveltekit-reload` forces full-page reload; `data-sveltekit-replacestate` uses `replaceState`; `data-sveltekit-keepfocus` retains focus; `data-sveltekit-noscroll` preserves scroll position; disable any by setting the value to `"false"`.
-
-## Service workers
-
-- Drop `src/service-worker.js` (or `/service-worker/index.js`) to auto-register a module‑type SW; disable or relocate via `config.kit.files.serviceWorker` or custom registration logic.
-- In the SW, import `{ build, files, version }` from `$service-worker`, use unique cache names, cache assets on `install`, purge old caches on `activate`, and intercept `fetch` to serve cached or network resources.
-- During dev only modern browsers support module SWs; when manually registering use `{ type: dev ? 'module' : 'classic' }`; enable TypeScript SW typings with triple‑slash refs and casting `self` to `ServiceWorkerGlobalScope`. For richer PWA tooling, consider the Vite PWA plugin.
 
 ## Server-only modules
 
 - `$env/static/private` and `$env/dynamic/private` can only be imported into server‑only files (`hooks.server.js`, `+page.server.js`); prevents leaking secrets to the client.
 - `$app/server` (e.g. the `read()` API) is likewise restricted to server‑side code.
 - Make your own modules server‑only by naming them `*.server.js` or placing them in `src/lib/server/`; any public‑facing import chain to these files triggers a build error.
-
-## Snapshots
-
-- Export a `snapshot` object with `capture()` returning serializable state and `restore(value)` reapplying it; SvelteKit stores this in history entries and `sessionStorage`.
-- Captures ephemeral DOM state (form inputs, scroll positions) before navigation and restores on back‑navigation or reload.
-- Ensure captured values are JSON‑serializable so they persist correctly across sessions.
 
 ## Shallow routing
 
@@ -604,13 +553,6 @@ Use it with a simple form:
 ## Reference docs
 
 ### Imports from `@sveltejs/kit`
-
-- **VERSION**: the SvelteKit version string
-
-  ```js
-  import { VERSION } from '@sveltejs/kit';
-  console.log(VERSION); // e.g. "2.20.1"
-  ```
 
 - **error**: throw an HTTP error and halt request processing
 
@@ -699,214 +641,6 @@ Use it with a simple form:
   }
   ```
 
-- **Action**: form action handler type
-
-  ```ts
-  type Action = (event: RequestEvent) => Promise<Record<string, any> | void>;
-  ```
-
-- **ActionFailure**: object returned by `fail`
-
-  ```ts
-  interface ActionFailure<T> {
-  	status: number;
-  	data: T;
-  	[Symbol.for('fail')]: true;
-  }
-  ```
-
-- **ActionResult**: shape of enhanced form action responses
-
-  ```ts
-  type ActionResult =
-  	| { type: 'success'; status: number; data?: any }
-  	| { type: 'failure'; status: number; data?: any }
-  	| { type: 'redirect'; status: number; location: string }
-  	| { type: 'error'; status?: number; error: any };
-  ```
-
-- **Actions**: record of named `Action`s
-
-  ```ts
-  export const actions: Actions = {
-  	default: async (event) => {
-  		/* … */
-  	}
-  };
-  ```
-
-- **Cookies**: API to get/set/delete HTTP cookies. Available on the request event
-
-  ```ts
-  export function load(event) {
-  	event.cookies.set('session', token, { path: '/' });
-  	const user = event.cookies.get('session');
-  }
-  ```
-
-- **Handle**: server hook to intercept all requests. Needs to be inside `src/hooks.server.ts`
-
-  ```ts
-  export const handle: Handle = async ({ event, resolve }) => {
-  	event.locals.user = await getUser(event.cookies.get('sid'));
-  	return resolve(event);
-  };
-  ```
-
-- **HandleFetch**: server hook to modify internal `fetch`. Needs to be inside `src/hooks.server.ts`
-
-  ```ts
-  export const handleFetch: HandleFetch = async ({ request, fetch }) => {
-  	if (request.url.startsWith(API)) request.headers.set('x-api', 'true');
-  	return fetch(request);
-  };
-  ```
-
-- **HandleServerError**: server hook for uncaught errors. Needs to be inside `src/hooks.server.ts`
-
-  ```ts
-  export const handleError: HandleServerError = ({ error }) => {
-  	console.error(error);
-  	return { message: 'Internal Error' };
-  };
-  ```
-
-- **HandleClientError**: client hook for uncaught navigation errors. Needs to be inside `src/hooks.client.ts`
-
-  ```ts
-  export const handleError: HandleClientError = ({ error }) => {
-  	console.error('Client error', error);
-  };
-  ```
-
-- **Reroute** _(v2.3+)_: universal hook to rewrite paths before routing. Needs to be inside `src/hooks.ts`
-
-  ```ts
-  export const reroute: Reroute = ({ url }) => {
-  	if (url.pathname === '/home') return '/';
-  };
-  ```
-
-- **Transport**: transport custom types across server↔client. Needs to be inside `src/hooks.ts`
-
-  ```ts
-  export const transport: Transport = {
-  	Date: { encode: (d) => d.toISOString(), decode: (s) => new Date(s) }
-  };
-  ```
-
-- **Load**: generic type for `+page.js`/`+layout.js` `load` functions
-
-  ```ts
-  export const load: Load = async ({ params, fetch }) => ({ post: await fetch(...) });
-  ```
-
-- **LoadEvent**: argument to universal `load` functions
-
-  ```ts
-  export function load({ params, fetch, setHeaders, parent }: LoadEvent) {
-  	/* … */
-  }
-  ```
-
-- **ServerLoad**: generic type for server‑only `load` in `+page.server.js`
-
-  ```ts
-  export const load: ServerLoad = async ({ params }) => ({ post: await db.get(params.id) });
-  ```
-
-- **ServerLoadEvent**: argument to `+page.server.js` `load`
-
-  ```ts
-  export function load({ params, cookies, parent }: ServerLoadEvent) {
-  	/* … */
-  }
-  ```
-
-- **RequestEvent**: argument to endpoints and server `load`/`action`
-
-  ```ts
-  export async function POST({ request, cookies, params }: RequestEvent) {
-  	/* … */
-  }
-  ```
-
-- **RequestHandler**: type for `+server.js` verb handlers
-
-  ```ts
-  export const GET: RequestHandler = ({ url }) => new Response('ok');
-  ```
-
-- **Snapshot**: save/restore ephemeral page or layout state.
-
-  ```svelte
-  <script>
-    let comment = $state();
-    export const snapshot: Snapshot<string> = {
-        capture: () => comment,
-        restore: v => comment = v
-    };
-  </script>
-  ```
-
-- **SubmitFunction**: parameter to `use:enhance` for progressive forms
-
-  ```svelte
-  <form method=post use:enhance={({ formData, submitter }: SubmitFunction) => {
-    if (submitter.name === 'save') cancel();
-  }}>...</form>
-  ```
-
-- **BeforeNavigate**: argument to `beforeNavigate` callbacks
-
-  ```js
-  beforeNavigate(({ cancel }: BeforeNavigate) => {
-  	if (!confirm('Leave?')) cancel();
-  });
-  ```
-
-- **AfterNavigate**: argument to `afterNavigate` callbacks
-
-  ```js
-  afterNavigate(({ type, to }: AfterNavigate) => console.log('navigated via', type));
-  ```
-
-- **OnNavigate**: argument to `onNavigate` callbacks
-
-  ```js
-  onNavigate(({ to, delta }: OnNavigate) => console.log('will go to', to));
-  ```
-
-- **Navigation**: base shape for navigation events
-
-  ```ts
-  interface Navigation {
-  	from: NavigationTarget;
-  	to: NavigationTarget;
-  	type: NavigationType;
-  	willUnload: boolean;
-  	complete: Promise<void>;
-  }
-  ```
-
-- **NavigationTarget**: info about before/after navigation pages
-
-  ```ts
-  interface NavigationTarget {
-  	url: URL;
-  	params: Record<string, string>;
-  	route: { id: string | null };
-  }
-  ```
-
-- **NavigationType**: `'enter'|'form'|'link'|'goto'|'popstate'|'leave'`
-- **Page**: reactive `page` object shape: `{ url, params, route, status, error, data, state, form }`
-- **ParamMatcher**: `(param: string) => boolean` to validate route params
-- **PrerenderOption**: `boolean | 'auto'` to control page prerendering
-- **Redirect**: object thrown by `redirect()`: `{ status, location }`
-- **ResolveOptions**: options for `resolve(event, opts)`: `transformPageChunk`, `filterSerializedResponseHeaders`, `preload`
-- **TrailingSlash**: `'never'|'always'|'ignore'` config for URL slashes
-
 ### Imports from `@sveltejs/kit/hooks`
 
 - **sequence**: compose multiple `handle` hooks into one, merging their options
@@ -914,85 +648,6 @@ Use it with a simple form:
   ```js
   import { sequence } from '@sveltejs/kit/hooks';
   export const handle = sequence(handleOne, handleTwo);
-  ```
-
-### Imports from `@sveltejs/kit/node/polyfills`
-
-- **installPolyfills**: inject `crypto`, `File`, etc. as globals in Node
-
-  ```js
-  import { installPolyfills } from '@sveltejs/kit/node/polyfills';
-  installPolyfills();
-  ```
-
-### Imports from `@sveltejs/kit/node`
-
-- **createReadableStream** _(v2.4+)_: turn a filesystem path into a `ReadableStream`
-
-  ```js
-  import { createReadableStream } from '@sveltejs/kit/node';
-  const stream = createReadableStream('/path/to/file.txt');
-  ```
-
-- **getRequest**: adapt Node’s `IncomingMessage` to a Fetch `Request`
-
-  ```js
-  import { getRequest } from '@sveltejs/kit/node';
-  const request = await getRequest({ request: req, base: '/app' });
-  ```
-
-- **setResponse**: write a Fetch `Response` back to Node’s `ServerResponse`
-
-  ```js
-  import { setResponse } from '@sveltejs/kit/node';
-
-  function nodeMiddleware(req, res) {
-    const response = doSomething(req);
-    await setResponse(res, response);
-  }
-  ```
-
-### Imports from `@sveltejs/kit/node`
-
-- **sveltekit**: Vite plugin factory for SvelteKit integration
-
-  ```js
-  // vite.config.js
-  import { defineConfig } from 'vite';
-  import { sveltekit } from '@sveltejs/kit/vite';
-  export default defineConfig({ plugins: [sveltekit()] });
-  ```
-
-### Imports from `$app/environment`
-
-- **browser**: `true` when code runs in the browser
-
-  ```js
-  import { browser } from '$app/environment';
-  console.log(browser); // false during SSR
-  ```
-
-- **building**: `true` during build or prerendering phases
-
-  ```js
-  import { building } from '$app/environment';
-  if (!building) {
-  	/* runtime‑only code */
-  }
-  ```
-
-- **dev**: `true` when running via the dev server
-
-  ```js
-  import { dev } from '$app/environment';
-  console.log(dev); // true in `npm run dev`
-  ```
-
-- **version**: the `config.kit.version.name` value
-
-  ```js
-  import { version } from '$app/environment';
-  console.log(version); // e.g. "1.0.0"
   ```
 
 ### Imports from `$app/forms`
@@ -1226,47 +881,13 @@ Use it with a simple form:
 
 ### `$lib` alias
 
-- **$lib**: alias for `src/lib`, e.g.
+Alias for `src/lib` folder, e.g.
 
-  ```svelte
-  <script>
-    import Button from '$lib/Button.svelte';
-  </script>
-  <Button>Click me</Button>
-  ```
+```svelte
+<script>
+  import Button from '$lib/Button.svelte';
+</script>
+<Button>Click me</Button>
+```
 
-### Imports from `$service-worker`
-
-- **base** _(service worker)_: deployment base path, derived from `location.pathname`
-
-  ```js
-  import { base } from '$service-worker';
-  console.log(`cache.addAll(${base}/build/${filename})`);
-  ```
-
-- **build**: array of Vite‑generated asset URLs for precaching
-
-  ```js
-  import { build } from '$service-worker';
-  caches.open(`v${version}`).then((c) => c.addAll(build));
-  ```
-
-- **files**: array of URLs for `static` (or `config.kit.files.assets`) directory
-
-  ```js
-  import { files } from '$service-worker';
-  files.forEach((url) => console.log('static asset:', url));
-  ```
-
-- **prerendered**: list of prerendered pathnames for offline support
-
-  ```js
-  import { prerendered } from '$service-worker';
-  console.log(prerendered);
-  ```
-
-- **version**: app version string (`config.kit.version.name`), used for cache‑busting
-  ```js
-  import { version } from '$service-worker';
-  const cacheName = `cache-v${version}`;
-  ```
+means that there's a component at `src/lib/Button.svelte`.
