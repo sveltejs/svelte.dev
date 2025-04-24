@@ -4,6 +4,8 @@ SvelteKit supports all rendering modes: SPA, SSR, SSG, and you can mix them with
 
 ## Setup
 
+Scaffold a new SvelteKit project using `npx sv create` then follow the instructions. Do NOT use `npm create svelte` anymore, this command is deprecated.
+
 A SvelteKit project needs a `package.json` with the following contents at minimum:
 
 ```json
