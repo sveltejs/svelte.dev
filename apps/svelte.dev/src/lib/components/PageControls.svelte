@@ -4,6 +4,7 @@
 
 	interface Props {
 		repo: string;
+		llms?: boolean;
 		prev: null | {
 			path: string;
 			title: string;
@@ -14,16 +15,18 @@
 		};
 	}
 
-	let { repo, prev, next }: Props = $props();
+	let { repo, prev, next, llms }: Props = $props();
 </script>
 
 <p class="edit">
 	<a href={repo}>
 		<Icon name="edit" /> Edit this page on GitHub
 	</a>
-	<a href={page.url.pathname.replace(/\/$/, '') + '/llms.txt'}>
-		<Icon name="contents" /> llms.txt
-	</a>
+	{#if llms}
+		<a href={page.url.pathname.replace(/\/$/, '') + '/llms.txt'}>
+			<Icon name="contents" /> llms.txt
+		</a>
+	{/if}
 </p>
 
 <div class="controls">
