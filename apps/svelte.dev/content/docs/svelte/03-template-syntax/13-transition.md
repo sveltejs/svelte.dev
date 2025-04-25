@@ -23,6 +23,10 @@ The `transition:` directive indicates a _bidirectional_ transition, which means 
 {/if}
 ```
 
+## Built-in transitions
+
+A selection of built-in transitions can be imported from the [`svelte/transition`](svelte-transition) module.
+
 ## Local vs global
 
 Transitions are local by default. Local transitions only play when the block they belong to is created or destroyed, _not_ when parent blocks are created or destroyed.
@@ -36,10 +40,6 @@ Transitions are local by default. Local transitions only play when the block the
 	{/if}
 {/if}
 ```
-
-## Built-in transitions
-
-A selection of built-in transitions can be imported from the [`svelte/transition`](svelte-transition) module.
 
 ## Transition parameters
 

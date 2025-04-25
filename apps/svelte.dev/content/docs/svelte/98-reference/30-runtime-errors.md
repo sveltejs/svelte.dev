@@ -28,7 +28,7 @@ A component is attempting to bind to a non-bindable property `%key%` belonging t
 ### component_api_changed
 
 ```
-Calling `%method%` on a component instance (of %component%) is no longer valid in Svelte 5
+%parent% called `%method%` on an instance of %component%, which is no longer valid in Svelte 5
 ```
 
 See the [migration guide](/docs/svelte/v5-migration-guide#Components-are-no-longer-classes) for more information.
@@ -135,36 +135,29 @@ Cannot set prototype of `$state` object
 Updating state inside a derived or a template expression is forbidden. If the value should not be reactive, declare it without `$state`
 ```
 
-This error occurs when state is updated while evaluating a `$derived`. You might encounter it while trying to 'derive' two pieces of state in one go:
+This error is thrown in a situation like this:
 
 ```svelte
 <script>
-	let count = $state(0);
-
-	let even = $state(true);
-
-	let odd = $derived.by(() => {
-		even = count % 2 === 0;
-		return !even;
-	});
+    let count = $state(0);
+    let multiple = $derived.by(() => {
+        const result = count * 2;
+        if (result > 10) {
+            count = 0;
+        }
+        return result;
+    });
 </script>
 
-<button onclick={() => count++}>{count}</button>
-
-<p>{count} is even: {even}</p>
-<p>{count} is odd: {odd}</p>
+<button onclick={() => count++}>{count} / {multiple}</button>
 ```
 
-This is forbidden because it introduces instability: if `<p>{count} is even: {even}</p>` is updated before `odd` is recalculated, `even` will be stale. In most cases the solution is to make everything derived:
+Here, the `$derived` updates `count`, which is `$state` and therefore forbidden to do. It is forbidden because the reactive graph could become unstable as a result, leading to subtle bugs, like values being stale or effects firing in the wrong order. To prevent this, Svelte errors when detecting an update to a `$state` variable.
 
-```js
-let count = 0;
-// ---cut---
-let even = $derived(count % 2 === 0);
-let odd = $derived(!even);
-```
-
-If side-effects are unavoidable, use [`$effect`]($effect) instead.
+To fix this:
+- See if it's possible to refactor your `$derived` such that the update becomes unnecessary
+- Think about why you need to update `$state` inside a `$derived` in the first place. Maybe it's because you're using `bind:`, which leads you down a bad code path, and separating input and output path (by splitting it up to an attribute and an event, or by using [Function bindings](bind#Function-bindings)) makes it possible avoid the update
+- If it's unavoidable, you may need to use an [`$effect`]($effect) instead. This could include splitting parts of the `$derived` into an [`$effect`]($effect) which does the updates
 
 
 ## Server errors
@@ -214,12 +207,6 @@ This error would be thrown in a setup like this:
 
 Here, `List.svelte` is using `{@render children(item)` which means it expects `Parent.svelte` to use snippets. Instead, `Parent.svelte` uses the deprecated `let:` directive. This combination of APIs is incompatible, hence the error.
 
-### invalid_snippet_arguments
-
-```
-A snippet function was passed invalid arguments. Snippets should only be instantiated via `{@render ...}`
-```
-
 ### lifecycle_outside_component
 
 ```
@@ -242,43 +229,6 @@ Certain lifecycle methods can only be used during component initialisation. To f
 </script>
 
 <button onclick={handleClick}>click me</button>
-```
-
-### snippet_without_render_tag
-
-```
-Attempted to render a snippet without a `{@render}` block. This would cause the snippet code to be stringified instead of its content being rendered to the DOM. To fix this, change `{snippet}` to `{@render snippet()}`.
-```
-
-A component throwing this error will look something like this (`children` is not being rendered):
-
-```svelte
-<script>
-    let { children } = $props();
-</script>
-
-{children}
-```
-
-...or like this (a parent component is passing a snippet where a non-snippet value is expected):
-
-```svelte
-<!--- file: Parent.svelte --->
-<ChildComponent>
-  {#snippet label()}
-    <span>Hi!</span>
-  {/snippet}
-</ChildComponent>
-```
-
-```svelte
-<!--- file: Child.svelte --->
-<script>
-  let { label } = $props();
-</script>
-
-<!-- This component doesn't expect a snippet, but the parent provided one -->
-<p>{label}</p>
 ```
 
 ### store_invalid_shape

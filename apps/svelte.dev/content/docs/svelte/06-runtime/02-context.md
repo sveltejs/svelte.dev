@@ -95,7 +95,7 @@ interface User {}
 // ---cut---
 import { getContext, setContext } from 'svelte';
 
-const key = {};
+let key = {};
 
 /** @param {User} user */
 export function setUserContext(user) {
