@@ -1,5 +1,5 @@
 import { error } from '@sveltejs/kit';
-import svelte from '../../../../llms-small.txt/content-sveltekit.md?raw';
+import svelte from '../../../../llms-small.txt/content-svelte.md?raw';
 import sveltekit from '../../../../llms-small.txt/content-sveltekit.md?raw';
 
 export const prerender = true;
