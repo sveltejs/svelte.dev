@@ -1,8 +1,8 @@
-import { generate_llm_content, sections } from '$lib/server/llms';
+import { generate_llm_content, topics } from '$lib/server/llms';
 
 export function GET() {
 	const main_content = generate_llm_content({
-		sections,
+		topics,
 		ignore: [
 			// Svelte ignores
 			'docs/svelte/legacy/**/*',
