@@ -7,16 +7,16 @@ export const prerender = true;
 export function entries() {
 	return [
 		{ topic: 'svelte', path: '' },
-		{ topic: 'sveltekit', path: '' }
+		{ topic: 'kit', path: '' }
 	];
 }
 
 export function GET({ params }) {
-	if ((params.topic !== 'svelte' && params.topic !== 'sveltekit') || params.path) {
+	if ((params.topic !== 'svelte' && params.topic !== 'kit') || params.path) {
 		error(404, 'Not Found');
 	}
 
-	const content = params.topic === 'sveltekit' ? sveltekit : svelte;
+	const content = params.topic === 'kit' ? sveltekit : svelte;
 
 	return new Response(content, {
 		status: 200,
