@@ -32,8 +32,14 @@
 		<p>...and package-level documentation:</p>
 
 		<ul>
-			<li><a href="/docs/svelte/llms.txt">/docs/svelte/llms.txt</a></li>
-			<li><a href="/docs/kit/llms.txt">/docs/kit/llms.txt</a></li>
+			<li>
+				<a href="/docs/svelte/llms.txt">/docs/svelte/llms.txt</a> /
+				<a href="/docs/svelte/llms.txt">/docs/svelte/llms-small.txt</a>
+			</li>
+			<li>
+				<a href="/docs/kit/llms.txt">/docs/kit/llms.txt</a> /
+				<a href="/docs/kit/llms.txt">/docs/kit/llms-small.txt</a>
+			</li>
 			<li><a href="/docs/cli/llms.txt">/docs/cli/llms.txt</a></li>
 		</ul>
 	</Text>
