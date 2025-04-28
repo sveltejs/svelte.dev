@@ -5,13 +5,12 @@ author: Dani Sandoval
 authorURL: https://dreamindani.com
 ---
 
-Only a week until [Svelte Summit Spring 2025](https://www.sveltesummit.com/)! If you can't make it in-person to Barcelona, you can purchase a virutal ticket [here](https://www.sveltesummit.com/virtual-ticket).
+Only a week until [Svelte Summit Spring 2025](https://www.sveltesummit.com/)! If you can't make it in-person to Barcelona, you can purchase a virtual ticket [here](https://www.sveltesummit.com/virtual-ticket).
 
 But before that, we've got a few updates to highlight...
 
 ## What's new in Svelte and SvelteKit
 
-- `css.hasGlobal` has been added to the `compile` output to improve the performance of compiling global styles (**svelte@5.26.0**, [#15450](https://github.com/sveltejs/svelte/pull/15450))
 - Certain expressions will now be partially evaluated to improve runtime performance (**svelte@5.27.0/5.28.0**, [#15494](https://github.com/sveltejs/svelte/pull/15494)/[#15781](https://github.com/sveltejs/svelte/pull/15781))
 - The Svelte CLI (`sv`) has added a `--install <package-manager>` flag to `create` and `add` to specify which package manager to use when running (**cli@0.8.1**, [#531](https://github.com/sveltejs/cli/pull/531))
 - `adapter-cloudflare` has added support for specifically building Cloudflare Workers Static Assets (**adapter-cloudflare@7.0.0**, [#13634](https://github.com/sveltejs/kit/pull/13634))
