@@ -13,10 +13,10 @@ But before that, we've got a few updates to highlight...
 
 - Certain expressions will now be partially evaluated to improve runtime performance (**svelte@5.27.0/5.28.0**, [#15494](https://github.com/sveltejs/svelte/pull/15494)/[#15781](https://github.com/sveltejs/svelte/pull/15781))
 - The Svelte CLI (`sv`) has added a `--install <package-manager>` flag to `create` and `add` to specify which package manager to use when running (**cli@0.8.1**, [#531](https://github.com/sveltejs/cli/pull/531))
-- `adapter-cloudflare` has added support for specifically building Cloudflare Workers Static Assets (**adapter-cloudflare@7.0.0**, [#13634](https://github.com/sveltejs/kit/pull/13634))
+- The two separate CloudFlare adapters have been merged into one: `adapter-cloudflare`  (**adapter-cloudflare@7.0.0**, [#13634](https://github.com/sveltejs/kit/pull/13634))
 - `adapter-vercel` will now create symlink functions for each route, for better observability (**adapter-vercel@5.7.0**, [#13679](https://github.com/sveltejs/kit/pull/13679))
 
-There we a number of fixes in SvelteKit too - including an improvement to the `HandleServerError` hook to give it access `getRequestEvent`!
+There were a number of fixes in SvelteKit too - including an improvement to the `HandleServerError` hook to give it access to `getRequestEvent`!
 
 For a full list of bug fixes in Svelte, SvelteKit and its adapters, check out their CHANGELOGs here, [here](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md) and [here](https://github.com/sveltejs/kit/tree/main/packages). Interested in all the new fixes in language tools? You can find them [here](https://github.com/sveltejs/language-tools/releases).
 
