@@ -1,6 +1,6 @@
 ---
 title: "What's new in Svelte: May 2025"
-description: 'Svelte Summit soon! Plus, await in components
+description: 'Svelte Summit soon! Plus, await in components'
 author: Dani Sandoval
 authorURL: https://dreamindani.com
 ---
