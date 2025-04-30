@@ -11,6 +11,8 @@ But before that, we've got a few updates to highlight...
 
 ## What's new in Svelte and SvelteKit
 
+The Svelte maintainers have been hard at work building out [Asynchronous Svelte](https://github.com/sveltejs/svelte/discussions/15845) this month, but still found the time to ship some helpful features. If you're interested in trying out the async branch, or just want to follow along with the development, check out [feat: allow await in components #15844](https://github.com/sveltejs/svelte/pull/15844)
+
 - Certain expressions will now be partially evaluated to improve runtime performance (**svelte@5.27.0/5.28.0**, [#15494](https://github.com/sveltejs/svelte/pull/15494)/[#15781](https://github.com/sveltejs/svelte/pull/15781))
 - The Svelte CLI (`sv`) has added a `--install <package-manager>` flag to `create` and `add` to specify which package manager to use when running (**cli@0.8.1**, [#531](https://github.com/sveltejs/cli/pull/531))
 - The two separate CloudFlare adapters have been merged into one: `adapter-cloudflare`  (**adapter-cloudflare@7.0.0**, [#13634](https://github.com/sveltejs/kit/pull/13634))
