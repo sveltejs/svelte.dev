@@ -16,7 +16,7 @@ But before that, we've got a few updates to highlight...
 - The two separate CloudFlare adapters have been merged into one: `adapter-cloudflare`  (**adapter-cloudflare@7.0.0**, [#13634](https://github.com/sveltejs/kit/pull/13634))
 - `adapter-vercel` will now create symlink functions for each route, for better observability (**adapter-vercel@5.7.0**, [#13679](https://github.com/sveltejs/kit/pull/13679))
 
-There were a number of fixes in SvelteKit too - including an improvement to the `HandleServerError` hook to give it access to `getRequestEvent`!
+There were a number of fixes in SvelteKit too - including an improvement to the `HandleServerError` hook to give it access to `getRequestEvent`! ([#13666](https://github.com/sveltejs/kit/pull/13666))
 
 For a full list of bug fixes in Svelte, SvelteKit and its adapters, check out their CHANGELOGs [here](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md) and [here](https://github.com/sveltejs/kit/tree/main/packages). Interested in all the new fixes in language tools? You can find them [here](https://github.com/sveltejs/language-tools/releases).
 
@@ -31,7 +31,7 @@ For a full list of bug fixes in Svelte, SvelteKit and its adapters, check out th
 - [CMSDocs](https://cmsdocs.com/) transforms your Google Docs into Blog CMS
 - [Svelte Changelog v2](https://svelte-changelog.dev/) is out now and is a reimagined way of staying up to date on all the new changes in the Svelte ecosystem
 - [Hookah UI](https://github.com/AdamShannag/hookah-ui) is a visual configuration builder for the Hookah project
-- [Mockiapi](https://github.com/sfeSantos/mockiapi) is a mock API server that allows you to define endpoints, return custom JSON responses, and simulate real-world API behavior
+- [mockiapi](https://github.com/sfeSantos/mockiapi) is a mock API server that allows you to define endpoints, return custom JSON responses, and simulate real-world API behavior
 - [soarSQL](https://soarsql.com/) is an SQL editor made for analytical processing on Postgres, MySQL, and CSVs - powered by duckDB
 - [Persona Simulator](https://personasim.fow.sh/) helps you practice your communication skills by chatting with different personas
 - [Typo](https://typo.robino.dev/) is a web-based markdown editor with formatting in codeblocks and typescript execution
