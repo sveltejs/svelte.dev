@@ -15,7 +15,7 @@ The Svelte maintainers have been hard at work building out [Asynchronous Svelte]
 
 - Certain expressions will now be partially evaluated to improve runtime performance (**svelte@5.27.0/5.28.0**, [#15494](https://github.com/sveltejs/svelte/pull/15494)/[#15781](https://github.com/sveltejs/svelte/pull/15781))
 - The Svelte CLI (`sv`) has added a `--install <package-manager>` flag to `create` and `add` to specify which package manager to use when running (**cli@0.8.1**, [#531](https://github.com/sveltejs/cli/pull/531))
-- The two separate CloudFlare adapters have been merged into one: `adapter-cloudflare`  (**adapter-cloudflare@7.0.0**, [#13634](https://github.com/sveltejs/kit/pull/13634))
+- The two separate CloudFlare adapters have been merged into one: `adapter-cloudflare` (**adapter-cloudflare@7.0.0**, [#13634](https://github.com/sveltejs/kit/pull/13634))
 - `adapter-vercel` will now create symlink functions for each route, for better observability (**adapter-vercel@5.7.0**, [#13679](https://github.com/sveltejs/kit/pull/13679))
 
 There were a number of fixes in SvelteKit too - including an improvement to the `HandleServerError` hook to give it access to `getRequestEvent`! ([#13666](https://github.com/sveltejs/kit/pull/13666))
@@ -39,7 +39,6 @@ For a full list of bug fixes in Svelte, SvelteKit and its adapters, check out th
 - [Typo](https://typo.robino.dev/) is a web-based markdown editor with formatting in codeblocks and typescript execution
 - [FernOS](https://github.com/mrtechtroid/fernos) is a lightweight operating system running inside your browser
 
-
 ### Learning Resources
 
 _Featuring Svelte Contributors and Ambassadors_
@@ -48,7 +47,6 @@ _Featuring Svelte Contributors and Ambassadors_
 - [Svelte London - April 2025](https://www.youtube.com/watch?v=7m6HExTKAqM)
   - Building cross-platform browser extensions with Svelte by Oliver Turner ([10:52](https://www.youtube.com/live/7m6HExTKAqM?si=tWUKbSm2IuhO0N_r&t=652))
   - Kioko: Coding CAD by Armel de Montgros and Soloman Azizi ([43:00](https://www.youtube.com/live/7m6HExTKAqM?si=EOmS3Hy-AwIgrBTU&t=2613))
-
 
 _This Week in Svelte_
 
