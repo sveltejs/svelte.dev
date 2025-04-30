@@ -7,8 +7,95 @@ title: $app/server
 
 ```js
 // @noErrors
-import { getRequestEvent, read } from '$app/server';
+import {
+	DedupeCache,
+	dedupe,
+	getRequestEvent,
+	getUnderlyingFunction,
+	read
+} from '$app/server';
 ```
+
+## DedupeCache
+
+Defines the cache of functions for this request.
+
+<div class="ts-block">
+
+```dts
+class DedupeCache {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+private _values;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+has<F extends (...args: any[]) => any>(fn: F, ...args: Parameters<F>): boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- `fn` - The function to check.
+- `args` - The arguments to check.
+- <span class="tag">returns</span> - Whether the function call is cached.
+
+</div>
+
+Check if a given function call is cached.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+remove<F extends (...args: any[]) => any>(fn: F, ...args: Parameters<F>): boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- `fn` - The function to remove.
+- `args` - The arguments to remove.
+- <span class="tag">returns</span> - Whether the function call was removed.
+
+</div>
+
+Remove a function call from the cache.
+
+</div>
+</div></div>
+
+
+
+## dedupe
+
+Creates a deduplicated function. This means that within a request, if multiple
+calls are made with the same arguments, the underlying function will only be
+called once and the result will be cached and returned for all subsequent calls.
+
+<div class="ts-block">
+
+```dts
+function dedupe<F extends (...args: any[]) => any>(
+	fn: F
+): F;
+```
+
+</div>
+
+
 
 ## getRequestEvent
 
@@ -29,6 +116,22 @@ function getRequestEvent(): RequestEvent<
 	Partial<Record<string, string>>,
 	string | null
 >;
+```
+
+</div>
+
+
+
+## getUnderlyingFunction
+
+Gets the underlying function that was turned into a proxy.
+
+<div class="ts-block">
+
+```dts
+function getUnderlyingFunction<
+	F extends (...args: any[]) => any
+>(fn: F): F;
 ```
 
 </div>
