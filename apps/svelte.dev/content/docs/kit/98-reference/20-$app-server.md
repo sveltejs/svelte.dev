@@ -11,7 +11,7 @@ import {
 	DedupeCache,
 	dedupe,
 	getRequestEvent,
-	getUnderlyingFunction,
+	getUnderlyingDedupeFunction,
 	read
 } from '$app/server';
 ```
@@ -122,14 +122,14 @@ function getRequestEvent(): RequestEvent<
 
 
 
-## getUnderlyingFunction
+## getUnderlyingDedupeFunction
 
 Gets the underlying function that was turned into a proxy.
 
 <div class="ts-block">
 
 ```dts
-function getUnderlyingFunction<
+function getUnderlyingDedupeFunction<
 	F extends (...args: any[]) => any
 >(fn: F): F;
 ```
