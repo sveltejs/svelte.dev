@@ -18,7 +18,7 @@ But before that, we've got a few updates to highlight...
 
 There were a number of fixes in SvelteKit too - including an improvement to the `HandleServerError` hook to give it access to `getRequestEvent`!
 
-For a full list of bug fixes in Svelte, SvelteKit and its adapters, check out their CHANGELOGs here, [here](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md) and [here](https://github.com/sveltejs/kit/tree/main/packages). Interested in all the new fixes in language tools? You can find them [here](https://github.com/sveltejs/language-tools/releases).
+For a full list of bug fixes in Svelte, SvelteKit and its adapters, check out their CHANGELOGs [here](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md) and [here](https://github.com/sveltejs/kit/tree/main/packages). Interested in all the new fixes in language tools? You can find them [here](https://github.com/sveltejs/language-tools/releases).
 
 ---
 
@@ -62,11 +62,12 @@ _To Read_
 
 ### Libraries, Tools & Components
 
-- DiaperBS is an advanced bottom sheet component for Svelte 5
+- [diaper](https://github.com/devantic/diaper) is an advanced bottom sheet component for Svelte 5
 - [mcp-svelte-docs](https://github.com/spences10/mcp-svelte-docs) is an MCP server that lets you search and access Svelte documentation with built-in caching
 - [Version 4 of Anime.js](https://animejs.com/) - a popular JS animation library - has been released
 - [DeepWiki](https://deepwiki.com/sveltejs/svelte) has created a comprehensive introduction to the Svelte framework repository
 - [Vite Static Assets Plugin](https://www.npmjs.com/package/vite-static-assets-plugin) is a Vite plugin that automatically scans your static assets directory, generates a type-safe TypeScript module with all asset paths to help during build or development time
+- [Mode Watcher v1](https://github.com/svecosystem/mode-watcher) provides simple light/dark mode management, now rewritten with first-class Svelte 5 support
 
 That's it for this month! Let us know if we missed anything on [Reddit](https://www.reddit.com/r/sveltejs/) or [Discord](https://discord.gg/svelte).
 
