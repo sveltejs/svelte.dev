@@ -1108,9 +1108,24 @@ type HandleClientError = (input: {
 
 </div>
 
+## HandleClientFetch
+
+The [`handleFetch`](/docs/kit/hooks#Shared-hooks-handleFetch) hook allows you to modify (or replace) a `fetch` request that happens inside a `load` function that runs on the client
+
+<div class="ts-block">
+
+```dts
+type HandleClientFetch = (input: {
+	request: Request;
+	fetch: typeof fetch;
+}) => MaybePromise<Response>;
+```
+
+</div>
+
 ## HandleFetch
 
-The [`handleFetch`](/docs/kit/hooks#Server-hooks-handleFetch) hook allows you to modify (or replace) a `fetch` request that happens inside a `load` function that runs on the server (or during pre-rendering)
+The [`handleFetch`](/docs/kit/hooks#Shared-hooks-handleFetch) hook allows you to modify (or replace) a `fetch` request that happens inside a `load` function that runs on the server (or during pre-rendering)
 
 <div class="ts-block">
 
