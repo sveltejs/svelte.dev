@@ -15,6 +15,7 @@ import {
 	createEventDispatcher,
 	createRawSnippet,
 	flushSync,
+	getAbortSignal,
 	getAllContexts,
 	getContext,
 	hasContext,
@@ -285,6 +286,18 @@ Returns void if no callback is provided, otherwise returns the result of calling
 
 ```dts
 function flushSync<T = void>(fn?: (() => T) | undefined): T;
+```
+
+</div>
+
+
+
+## getAbortSignal
+
+<div class="ts-block">
+
+```dts
+function getAbortSignal(): AbortSignal;
 ```
 
 </div>
