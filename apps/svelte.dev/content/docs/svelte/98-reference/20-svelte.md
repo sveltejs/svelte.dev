@@ -294,6 +294,28 @@ function flushSync<T = void>(fn?: (() => T) | undefined): T;
 
 ## getAbortSignal
 
+Returns an [`AbortSignal`](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal) that aborts when the current [derived](/docs/svelte/$derived) or [effect](/docs/svelte/$effect) re-runs or is destroyed.
+
+Must be called while a derived or effect is running.
+
+```svelte
+<script>
+	import { getAbortSignal } from 'svelte';
+
+	let { id } = $props();
+
+	async function getData(id) {
+		const response = await fetch(`/items/${id}`, {
+			signal: getAbortSignal()
+		});
+
+		return await response.json();
+	}
+
+	const data = $derived(await getData(id));
+</script>
+```
+
 <div class="ts-block">
 
 ```dts
