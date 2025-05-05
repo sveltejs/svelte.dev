@@ -129,6 +129,9 @@ async function create_snippet_cache() {
 
 const snippets = await create_snippet_cache();
 
+const VALID_LINK_REGEX =
+	/^(?!.*git@)(?!.*:\/\/git@)(?:(?:https?|wss?|s?ftp|ftps|file|smb|nfs|telnet|ldap|ssh|sftp|rtsp|rtmp|rdp|vnc|x-callback-url|[a-zA-Z][a-zA-Z0-9+.-]+):\/\/(?:(?:[a-zA-Z0-9\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(?:%[\dA-F]{2}))+(?::(?:\d+))?(?:(?:\/(?:(?:[a-zA-Z0-9\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(?:%[\dA-F]{2}))+)*(?:\?(?:(?:[a-zA-Z0-9\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(?:%[\dA-F]{2})|[&=+$,\-_.!~*'()#])+)?(?:#(?:(?:[a-zA-Z0-9\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(?:%[\dA-F]{2})|[&=+$,\-_.!~*'()#])+)?)?)$/i;
+
 /**
  * A super markdown renderer function. Renders svelte and kit docs specific specific markdown code to html.
  *
@@ -362,6 +365,13 @@ export async function render_content_markdown(
 			}
 
 			return `<blockquote>${content}</blockquote>`;
+		},
+		link({ href, title, tokens }) {
+			if (VALID_LINK_REGEX.test(href)) {
+				return `<a href="${href}" title="${title}">${tokens[0].raw}</a>`;
+			}
+
+			return `[${title}](${href})`;
 		}
 	});
 }

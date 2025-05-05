@@ -13,7 +13,7 @@
 </script>
 
 <section>
-	<a href="/packages" class="raised"> &nbsp; Back &nbsp;</a>
+	<a href="../packages" class="raised"> &nbsp; Back &nbsp;</a>
 	<h1>
 		{pkg.name}
 
@@ -25,21 +25,26 @@
 
 	<p>{pkg.description}</p>
 
-	<div style="display: flex; gap: 0.75rem">
+	<div style="display: flex; gap: 0.75rem" data-sveltekit-reload>
 		<a
 			href="https://npmjs.org/package/{pkg.name}"
 			target="_blank"
-			rel="noreferrer"
+			rel="noreferrer external"
 			aria-label="View on npm">npm</a
 		>
 
 		{#if pkg.repo_url}
-			<a href={pkg.repo_url} target="_blank" rel="noreferrer" aria-label="View on GitHub">github</a>
+			<a href={pkg.repo_url} target="_blank" rel="noreferrer external" aria-label="View on GitHub"
+				>github</a
+			>
 		{/if}
 
 		{#if pkg.homepage}
-			<a href={pkg.homepage} target="_blank" rel="noreferrer" aria-label="View project homepage"
-				>homepage</a
+			<a
+				href={pkg.homepage}
+				target="_blank"
+				rel="noreferrer external"
+				aria-label="View project homepage">homepage</a
 			>
 		{/if}
 	</div>
@@ -48,12 +53,14 @@
 
 	<h2>Package Popularity</h2>
 
-	<p class="stats">
+	<p class="stats" data-sveltekit-reload>
 		{#if pkg.downloads}
 			<span title="{pkg.downloads} downloads">
 				<span data-icon="download"></span>
-				{format_number(+pkg.downloads)} (<a href="https://www.npmcharts.com/compare/{pkg.name}"
-					>+99% YoY</a
+				{format_number(+pkg.downloads)} (<a
+					rel="external"
+					target="_blank"
+					href="https://www.npmcharts.com/compare/{pkg.name}">+99% YoY</a
 				>)
 			</span>
 		{/if}
@@ -88,8 +95,11 @@
 
 	<h2>Package Weight</h2>
 	<p>
-		<a href="https://npmgraph.js.org/?q={encoded_pkg}" title="999 transitive dependencies"
-			>999 dependencies</a
+		<a
+			rel="external"
+			target="_blank"
+			href="https://npmgraph.js.org/?q={encoded_pkg}"
+			title="999 transitive dependencies">999 dependencies</a
 		>
 	</p>
 	<p>
@@ -125,7 +135,7 @@
 	{#if pkg.readme}
 		<h2>README</h2>
 
-		{@html pkg.readme}
+		<div data-sveltekit-reload>{@html pkg.readme}</div>
 	{/if}
 </section>
 

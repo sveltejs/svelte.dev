@@ -13,6 +13,17 @@ const config = {
 		prerender: {
 			origin: 'https://svelte.dev',
 
+			handleHttpError(error) {
+				console.log(error);
+
+				if (error.path.startsWith('/packages') || error.referrer.startsWith('/packages')) {
+					// Some external links from readme that maybe wrong but not our responsibility
+					return 'ignore';
+				}
+
+				throw new Error(error.message);
+			},
+
 			handleMissingId(warning) {
 				if (warning.id.startsWith('H4sIA')) {
 					// playground link — do nothing
