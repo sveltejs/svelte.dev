@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Package } from '$lib/server/content';
 	import { ago } from '$lib/time';
-	import { format_bytes, format_number } from './utils';
+	import { format_bytes, format_number } from '../utils';
 
 	type Props = {
 		pkg: Package;

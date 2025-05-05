@@ -1,11 +1,7 @@
 <script lang="ts">
-	import type {
-		FlatDependencyGraph,
-		PackageDependencyNode,
-		FlatPackage
-	} from '$lib/server/content';
-	import { format_bytes } from './utils';
+	import type { FlatDependencyGraph } from '$lib/server/content';
 	import { onMount } from 'svelte';
+	import { format_bytes } from '../utils';
 
 	export let graph: FlatDependencyGraph;
 	export let max_depth: number = 15;

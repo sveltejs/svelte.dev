@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { format_number } from './utils';
+	import { format_number } from '../utils';
 
 	// Update the type definition to use the new format
 	type Props = {
