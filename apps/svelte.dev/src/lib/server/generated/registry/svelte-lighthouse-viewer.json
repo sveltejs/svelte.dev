@@ -4,12 +4,12 @@
 	"authors": ["dvelasquez"],
 	"homepage": "https://dvelasquez.github.io/lighthouse-viewer/packages/svelte-lighthouse-viewer/demo/index.html",
 	"downloads": 271,
-	"updated": "2025-05-04T10:22:57.707Z",
+	"updated": "2025-05-05T07:16:04.274Z",
 	"tags": ["tooling"],
 	"typescript": true,
-	"version": "0.2.68",
+	"version": "0.2.70",
 	"svelte_range": "^3.23.2 || ^4.0.0 || ^5.0.0",
-	"last_rune_check_version": "0.2.68",
+	"last_rune_check_version": "0.2.70",
 	"github_stars": 0,
 	"dependency_tree": {
 		"rootIndex": 0,
@@ -102,5 +102,7 @@
 		[4114, 271],
 		[4121, 393],
 		[4128, 278]
-	]
+	],
+	"esm": true,
+	"cjs": true
 }

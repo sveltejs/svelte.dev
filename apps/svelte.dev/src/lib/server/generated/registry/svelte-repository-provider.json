@@ -5,13 +5,13 @@
 	"authors": ["arlac77"],
 	"homepage": "https://github.com/arlac77/svelte-repository-provider#readme",
 	"downloads": 102,
-	"updated": "2025-05-02T09:23:42.681Z",
+	"updated": "2025-05-05T09:59:48.320Z",
 	"tags": ["miscellaneous"],
 	"github_stars": 0,
 	"typescript": false,
-	"version": "2.0.32",
+	"version": "2.0.33",
 	"svelte_range": "^5.28.2",
-	"last_rune_check_version": "2.0.32",
+	"last_rune_check_version": "2.0.33",
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -1453,5 +1453,7 @@
 		[4114, 102],
 		[4121, 433],
 		[4128, 151]
-	]
+	],
+	"esm": false,
+	"cjs": false
 }

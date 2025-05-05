@@ -4,12 +4,12 @@
 	"repo_url": "",
 	"authors": ["asangawee"],
 	"downloads": 12,
-	"updated": "2025-05-04T10:56:27.070Z",
+	"updated": "2025-05-05T00:14:42.734Z",
 	"tags": ["media"],
 	"typescript": true,
-	"version": "3.0.1",
+	"version": "3.0.3",
 	"svelte_range": "^5.0.0",
-	"last_rune_check_version": "3.0.1",
+	"last_rune_check_version": "3.0.3",
 	"github_stars": 0,
 	"dependency_tree": {
 		"rootIndex": 0,
@@ -231,5 +231,7 @@
 		[4114, 12],
 		[4121, 14],
 		[4128, 7]
-	]
+	],
+	"esm": true,
+	"cjs": false
 }

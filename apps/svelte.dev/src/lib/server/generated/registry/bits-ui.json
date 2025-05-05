@@ -5,14 +5,14 @@
 	"authors": ["huntabyte"],
 	"homepage": "https://github.com/huntabyte/bits-ui#readme",
 	"downloads": 148580,
-	"updated": "2025-05-04T00:19:33.523Z",
+	"updated": "2025-05-05T01:58:11.183Z",
 	"tags": ["design-system", "ui"],
 	"github_stars": 2075,
 	"typescript": true,
-	"version": "1.4.4",
+	"version": "1.4.6",
 	"svelte_range": "^5.11.0",
 	"kit_range": "^2.16.1",
-	"last_rune_check_version": "1.4.4",
+	"last_rune_check_version": "1.4.6",
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -189,5 +189,7 @@
 		[4114, 148580],
 		[4121, 136762],
 		[4128, 133291]
-	]
+	],
+	"esm": true,
+	"cjs": false
 }

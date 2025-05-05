@@ -210,6 +210,10 @@ export interface Package {
 
 	outdated?: boolean;
 
+	esm: boolean;
+
+	cjs: boolean;
+
 	deprecated?: boolean;
 
 	svelte: {

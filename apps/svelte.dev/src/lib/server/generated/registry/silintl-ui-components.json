@@ -5,13 +5,13 @@
 	"authors": ["fillup", "wcjr11", "matt-h", "schparky", "hobbitronics"],
 	"homepage": "https://github.com/silinternational/ui-components#readme",
 	"downloads": 175,
-	"updated": "2025-04-11T05:10:52.133Z",
+	"updated": "2025-05-05T04:03:14.900Z",
 	"tags": ["design-system"],
 	"github_stars": 4,
 	"typescript": true,
-	"version": "11.8.1",
+	"version": "11.9.0",
 	"svelte_range": "^4.0.0",
-	"last_rune_check_version": "11.8.1",
+	"last_rune_check_version": "11.9.0",
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -935,5 +935,7 @@
 		[4114, 175],
 		[4121, 102],
 		[4128, 208]
-	]
+	],
+	"esm": true,
+	"cjs": false
 }

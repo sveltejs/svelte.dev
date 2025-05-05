@@ -1026,7 +1026,7 @@
 		],
 		"circular": []
 	},
-	"readme": "# LayerChart\n\n![](https://img.shields.io/github/license/techniq/layerchart?style=flat)\n[![](https://img.shields.io/npm/v/layerchart?style=flat)](https://www.npmjs.com/package/layerchart)\n![npm](https://img.shields.io/npm/dw/layerchart?style=flat&color=orange)\n\n![](https://img.shields.io/github/license/layerchart?style=flat)\n[![](https://dcbadge.vercel.app/api/server/697JhMPD3t?style=flat)](https://discord.gg/697JhMPD3t)\n\nA large collection of composable Svelte chart components to build a wide range of visualizations\n\n- Cartesian (Bar, Area, Stack, Scatter)\n- Radial (Pie, Arc, Sunburst)\n- Hierarchy (Pack, Tree, Treemap, Sunburst)\n- Graph (Sankey)\n- Geo (Choropleth, Spike, Bubble, Point, Globe)\n\nInteractions\n\n- Tooltip, Highlights, Pan/Zoom\n\nSVG\n\n- Basic (Arc, Circle, Group, Line, Spline, Text)\n- Gradients and Patterns\n- ClipPath\n- Multi-line text\n\nOthers\n\n- Legends including ColorRamps\n\nSee also [Svelte UX](http://svelte-ux.techniq.dev) for a large collection of components, actions, stores, and utilities to build highly interactive applications.\n\n## Publishing\n\n- `npm run changeset` for each changelog worthy change\n- `npm run version` to bump `package.json` version based on changesets, materialize changesets into CHANGELOG.md\n- Commit as `Version bump to x.y.z` (TODO: automate)\n- `npm run publish` to publish version to npm\n- `git push --tags` to publish tags to Github\n",
+	"readme": "",
 	"legacy_svelte": false,
 	"downloads_history": [
 		[3589, 167],
@@ -1107,5 +1107,7 @@
 		[4114, 6111],
 		[4121, 5409],
 		[4128, 5721]
-	]
+	],
+	"esm": true,
+	"cjs": false
 }

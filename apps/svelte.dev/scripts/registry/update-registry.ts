@@ -801,6 +801,8 @@ async function update_cache(update: { stats?: boolean; composite?: boolean; grap
 		if (update.composite) {
 			data.typescript = composite_check.types;
 			data.legacy_svelte = composite_check.legacy_svelte;
+			data.esm = composite_check.esm;
+			data.cjs = composite_check.cjs;
 		}
 
 		if (update.stats) {
@@ -887,8 +889,8 @@ for (let i = 0; i < 1; i++) {
 
 update_cache({
 	composite: true,
-	graph: true,
-	stats: true
+	graph: false,
+	stats: false
 });
 
 // convert_download_history_format_old();

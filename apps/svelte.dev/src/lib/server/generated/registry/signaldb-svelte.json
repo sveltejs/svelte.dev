@@ -26,5 +26,7 @@
 	},
 	"readme": "# @signaldb/svelte\n\nThis is the [Svelte 5](https://svelte.dev) plugin for [SignalDB](https://github.com/maxnowack/signaldb). SignalDB is a local-first JavaScript database with real-time sync, enabling optimistic UI with signal-based reactivity across multiple frameworks.\n\nSee https://signaldb.js.org/reference/svelte/ for more information.\n",
 	"legacy_svelte": false,
-	"downloads_history": [[4128, 17]]
+	"downloads_history": [[4128, 17]],
+	"esm": true,
+	"cjs": false
 }

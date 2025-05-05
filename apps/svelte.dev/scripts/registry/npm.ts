@@ -886,14 +886,6 @@ export async function stream_package_tarball(
 	});
 }
 
-/**
- * Checks a package for TypeScript support and Svelte runes usage
- * Also determines if the package is using legacy Svelte mode
- *
- * @param name The package name
- * @param version The package version
- * @returns Object with runes, types, and legacy mode detection
- */
 export async function composite_runes_types_check(name: string, version: string) {
 	let has_runes = false;
 	let has_types = false;
@@ -901,12 +893,103 @@ export async function composite_runes_types_check(name: string, version: string)
 	let has_svelte_js_ts_files = false;
 	let has_js_files = false;
 
+	// Module format detection
+	let is_esm = false;
+	let is_cjs = false;
+	let has_package_json = false;
+	let package_json_content = null;
+
+	// ESM indicators
+	let has_mjs_files = false;
+	let has_esm_dir = false;
+	let has_module_field = false;
+	let has_exports_field = false;
+	let has_type_module = false;
+
+	// CJS indicators
+	let has_cjs_files = false;
+	let has_cjs_dir = false;
+	let has_main_field = false;
+
 	// Keep track of analyzed Svelte files to check if any use runes
 	const svelte_files_analyzed = new Set<string>();
 
 	await stream_package_tarball(name, version, ({ content, filename, stop }) => {
-		// Early termination if we've found both runes and types
-		if (has_runes && has_types) stop();
+		// Check for package.json first
+		if (filename === 'package.json' || filename.endsWith('/package.json')) {
+			has_package_json = true;
+
+			try {
+				const pkg_json = JSON.parse(content);
+				package_json_content = pkg_json;
+
+				// Check for ESM indicators in package.json
+				has_type_module = pkg_json.type === 'module';
+				has_module_field = !!pkg_json.module;
+				has_exports_field = !!pkg_json.exports;
+
+				// Check for CJS indicators in package.json
+				has_main_field = !!pkg_json.main;
+
+				// Detailed exports analysis for conditional exports
+				if (has_exports_field) {
+					const exports_field = pkg_json.exports as Record<string, any>;
+
+					// Check if exports has import/require conditions
+					if (typeof exports_field === 'object' && !Array.isArray(exports_field)) {
+						// Root exports can have import/require conditions
+						if (exports_field.import || exports_field.require) {
+							if (exports_field.import) is_esm = true;
+							if (exports_field.require) is_cjs = true;
+						}
+
+						// Check subpaths for import/require conditions
+						Object.entries(exports_field).forEach(([key, value]) => {
+							if (typeof value === 'object' && !Array.isArray(value)) {
+								if (value.import) is_esm = true;
+								if (value.require) is_cjs = true;
+							}
+						});
+					}
+				}
+			} catch (e) {
+				// Handle JSON parse error
+				console.error(`Error parsing package.json for ${name}:`, e);
+			}
+		}
+
+		// Check file extensions for module format indicators
+		if (filename.endsWith('.mjs')) {
+			has_mjs_files = true;
+			is_esm = true;
+		}
+
+		if (filename.endsWith('.cjs')) {
+			has_cjs_files = true;
+			is_cjs = true;
+		}
+
+		// Check for conventional directory structures
+		if (
+			filename.includes('/dist/esm/') ||
+			filename.includes('/esm/') ||
+			filename.includes('/es/')
+		) {
+			has_esm_dir = true;
+			is_esm = true;
+		}
+
+		if (
+			filename.includes('/dist/cjs/') ||
+			filename.includes('/cjs/') ||
+			filename.includes('/commonjs/')
+		) {
+			has_cjs_dir = true;
+			is_cjs = true;
+		}
+
+		// Continue with existing TypeScript and runes detection
+		if (has_runes && has_types && is_esm !== undefined && is_cjs !== undefined) stop();
 
 		// Check for TypeScript files or declaration files
 		if (
@@ -928,7 +1011,6 @@ export async function composite_runes_types_check(name: string, version: string)
 		// Check for Svelte files with runes
 		if (filename.endsWith('.svelte')) {
 			has_svelte_files = true;
-
 			if (!has_runes) {
 				has_runes = detect_runes(content);
 				svelte_files_analyzed.add(filename);
@@ -940,9 +1022,23 @@ export async function composite_runes_types_check(name: string, version: string)
 		}
 	});
 
+	// Final determination of module formats
+
+	// If no explicit indicators found, make a best guess
+	if (!is_esm && !is_cjs) {
+		// Default for packages with no explicit indicators
+		if (has_type_module) {
+			is_esm = true;
+		} else if (has_main_field && !has_module_field) {
+			is_cjs = true;
+		} else if (has_js_files) {
+			// Legacy pattern: .js files are traditionally CJS unless type:module
+			is_cjs = true;
+		}
+	}
+
 	// Determine if the package is using legacy mode
 	let is_legacy = true;
-
 	if (has_runes) {
 		// Case 1 & 2: If we found any runes, it's not legacy
 		is_legacy = false;
@@ -956,7 +1052,9 @@ export async function composite_runes_types_check(name: string, version: string)
 
 	return {
 		types: has_types,
-		legacy_svelte: is_legacy
+		legacy_svelte: is_legacy,
+		esm: is_esm,
+		cjs: is_cjs
 	};
 }
 

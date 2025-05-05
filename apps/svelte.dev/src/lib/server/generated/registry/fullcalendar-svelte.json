@@ -42,5 +42,7 @@
 	"downloads_history": [
 		[4121, 3],
 		[4128, 3]
-	]
+	],
+	"esm": true,
+	"cjs": false
 }

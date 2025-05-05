@@ -606,5 +606,7 @@
 		[4121, 118],
 		[4128, 57]
 	],
-	"github_stars": 0
+	"github_stars": 0,
+	"esm": true,
+	"cjs": false
 }
