@@ -8,12 +8,12 @@ export async function load({ params }) {
 	const pkg = registry.find((pkg) => pkg.name === params.pkg);
 	if (!pkg) error(404, 'Package not found');
 
-	// pkg.readme = pkg.readme
-	// 	? await render_content('README.md', pkg.readme, {
-	// 			check: false,
-	// 			allow_diffs: true
-	// 		})
-	// 	: '';
+	pkg.readme = pkg.readme
+		? await render_content('README.md', pkg.readme, {
+				check: false,
+				allow_diffs: true
+			})
+		: '';
 
 	return {
 		pkg
