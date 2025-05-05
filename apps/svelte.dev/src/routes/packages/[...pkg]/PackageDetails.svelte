@@ -13,7 +13,7 @@
 </script>
 
 <section>
-	<a href="../packages" class="raised"> &nbsp; Back &nbsp;</a>
+	<a href="/packages" class="raised"> &nbsp; Back &nbsp;</a>
 	<h1>
 		{pkg.name}
 
@@ -131,12 +131,12 @@
 		{/each}
 	</ul>
 {/if} -->
-
+	<!-- 
 	{#if pkg.readme}
 		<h2>README</h2>
 
 		<div data-sveltekit-reload>{@html pkg.readme}</div>
-	{/if}
+	{/if} -->
 </section>
 
 <style>
