@@ -1,7 +1,6 @@
 import { read } from '$app/server';
 import { PACKAGES_META } from '$lib/packages-meta';
 import type { Document, DocumentSummary } from '@sveltejs/site-kit';
-import { render_content_markdown } from '@sveltejs/site-kit/markdown';
 import { create_index } from '@sveltejs/site-kit/server/content';
 import { render_content } from './renderer';
 
@@ -516,19 +515,13 @@ export function supports_svelte_versions(version_range: string): {
 	return result;
 }
 
-async function create_registry() {
+function create_registry() {
 	let output: Package[] = [];
 
 	for (const frontmatter of Object.values(registry_docs)) {
 		const json = JSON.parse(frontmatter);
 		json.official = PACKAGES_META.is_official(json.name);
 		json.svelte = supports_svelte_versions(json.svelte_range);
-		json.readme = json.readme
-			? await render_content('README.md', json.readme, {
-					check: false,
-					allow_diffs: true
-				})
-			: '';
 
 		output.push(json);
 	}
@@ -559,5 +552,5 @@ export function mini_searchable_data(pkg: Package): MiniPackage {
 	};
 }
 
-export const registry = await create_registry();
+export const registry = create_registry();
 export const mini_registry = registry.map(mini_searchable_data);
