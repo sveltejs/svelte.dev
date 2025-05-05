@@ -7,19 +7,11 @@
 	"downloads": 25,
 	"updated": "2025-03-18T19:02:47.745Z",
 	"tags": ["content", "tooling"],
-	"runes": false,
-	"github_stars": 7,
+	"github_stars": 12,
 	"typescript": true,
 	"version": "0.6.0",
 	"svelte_range": ">=5.0.0",
 	"last_rune_check_version": "0.6.0",
-	"downloads_history": [
-		[4085, 242],
-		[4092, 105],
-		[4099, 21],
-		[4106, 14],
-		[4113, 25]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -553,5 +545,16 @@
 			[0, 70]
 		],
 		"circular": []
-	}
+	},
+	"readme": "<h1 align=\"center\">Svelte Markdown</h1>\n\n<p align=\"center\">Svelte Markdown Preprocessor.</p>\n\n<p align=\"center\">\n  <a href=\"https://github.com/hypernym-studio/svelte-markdown\">Repository</a>\n  <span>✦</span>\n  <a href=\"https://www.npmjs.com/package/@hypernym/svelte-markdown\">Package</a>\n  <span>✦</span>\n  <a href=\"https://github.com/hypernym-studio/svelte-markdown/releases\">Releases</a>\n  <span>✦</span>\n  <a href=\"https://github.com/hypernym-studio/svelte-markdown/discussions\">Discussions</a>\n</p>\n\n<br>\n\n<pre align=\"center\">pnpm add -D @hypernym/svelte-markdown</pre>\n\n<br>\n\n## Community\n\nFeel free to ask questions or share new ideas.\n\nUse the official [discussions](https://github.com/hypernym-studio/svelte-markdown/discussions) to get involved.\n\n## Contribute\n\nCheck out the quick [guide](https://github.com/hypernym-studio/svelte-markdown/blob/main/.github/CONTRIBUTING.md) for more info.\n\n## License\n\nDeveloped in 🇭🇷 Croatia, © Hypernym Studio.\n\nReleased under the [MIT](https://github.com/hypernym-studio/svelte-markdown/blob/main/packages/svelte-markdown/LICENSE.txt) license.\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4086, 242],
+		[4093, 105],
+		[4100, 21],
+		[4107, 14],
+		[4114, 25],
+		[4121, 9],
+		[4128, 2]
+	]
 }

@@ -16,102 +16,21 @@
 	],
 	"homepage": "https://github.com/getsentry/sentry-javascript/tree/master/packages/sveltekit",
 	"downloads": 45770,
-	"updated": "2025-04-16T13:36:17.390Z",
+	"updated": "2025-04-29T15:50:46.371Z",
 	"tags": ["integration", "server"],
-	"runes": false,
-	"github_stars": 8228,
+	"github_stars": 8244,
 	"typescript": true,
-	"version": "9.13.0",
+	"version": "9.15.0",
 	"svelte_range": "^4.2.8",
 	"kit_range": "2.x",
-	"last_rune_check_version": "9.13.0",
-	"downloads_history": [
-		[3574, 14837],
-		[3581, 14511],
-		[3588, 10240],
-		[3595, 15085],
-		[3602, 15450],
-		[3609, 16103],
-		[3616, 20312],
-		[3623, 32415],
-		[3630, 46213],
-		[3637, 41028],
-		[3644, 5808],
-		[3651, 11492],
-		[3658, 15394],
-		[3665, 17100],
-		[3672, 17155],
-		[3679, 16015],
-		[3686, 16351],
-		[3693, 18658],
-		[3700, 20421],
-		[3707, 21149],
-		[3714, 20863],
-		[3721, 20645],
-		[3728, 24650],
-		[3735, 17064],
-		[3742, 18292],
-		[3749, 18972],
-		[3756, 21798],
-		[3763, 23160],
-		[3770, 21488],
-		[3777, 19765],
-		[3784, 23586],
-		[3791, 24154],
-		[3798, 25292],
-		[3805, 26134],
-		[3812, 28695],
-		[3819, 28159],
-		[3826, 26875],
-		[3833, 24767],
-		[3840, 26618],
-		[3847, 30286],
-		[3854, 27052],
-		[3861, 29633],
-		[3868, 31499],
-		[3875, 30705],
-		[3882, 31568],
-		[3889, 34331],
-		[3896, 34033],
-		[3903, 37750],
-		[3910, 36608],
-		[3917, 39951],
-		[3924, 39683],
-		[3931, 57423],
-		[3938, 52533],
-		[3945, 38507],
-		[3952, 39367],
-		[3959, 38670],
-		[3966, 35843],
-		[3973, 43405],
-		[3980, 41905],
-		[3987, 43660],
-		[3994, 45221],
-		[4001, 42809],
-		[4008, 17317],
-		[4015, 20922],
-		[4022, 36302],
-		[4029, 41310],
-		[4036, 43890],
-		[4043, 44115],
-		[4050, 49496],
-		[4057, 52853],
-		[4064, 46137],
-		[4071, 49009],
-		[4078, 49548],
-		[4085, 46276],
-		[4092, 50064],
-		[4099, 50490],
-		[4106, 51297],
-		[4113, 45770]
-	],
+	"last_rune_check_version": "9.15.0",
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
 			{
 				"name": "@sentry/sveltekit",
-				"version": "9.13.0",
-				"size": 516651
+				"version": "9.15.0",
+				"size": 517431
 			},
 			{
 				"name": "@babel/parser",
@@ -120,33 +39,33 @@
 			},
 			{
 				"name": "@babel/types",
-				"version": "7.27.0",
-				"size": 2583295
+				"version": "7.27.1",
+				"size": 2597469
 			},
 			{
 				"name": "@babel/helper-string-parser",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 31816
 			},
 			{
 				"name": "@babel/helper-validator-identifier",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 48330
 			},
 			{
 				"name": "@sentry/cloudflare",
-				"version": "9.13.0",
-				"size": 203643
+				"version": "9.15.0",
+				"size": 204091
 			},
 			{
 				"name": "@sentry/core",
-				"version": "9.13.0",
-				"size": 3290466
+				"version": "9.15.0",
+				"size": 3447501
 			},
 			{
 				"name": "@sentry/node",
-				"version": "9.13.0",
-				"size": 2105559
+				"version": "9.15.0",
+				"size": 2109272
 			},
 			{
 				"name": "@opentelemetry/api",
@@ -210,7 +129,8 @@
 			},
 			{
 				"name": "module-details-from-path",
-				"version": "1.0.3"
+				"version": "1.0.4",
+				"size": 3958
 			},
 			{
 				"name": "require-in-the-middle",
@@ -284,8 +204,8 @@
 			},
 			{
 				"name": "@types/node",
-				"version": "22.14.1",
-				"size": 2331510
+				"version": "22.15.3",
+				"size": 2350386
 			},
 			{
 				"name": "undici-types",
@@ -442,8 +362,8 @@
 			},
 			{
 				"name": "pg-protocol",
-				"version": "1.8.0",
-				"size": 188302
+				"version": "1.9.5",
+				"size": 188347
 			},
 			{
 				"name": "@types/pg-pool",
@@ -452,8 +372,8 @@
 			},
 			{
 				"name": "@types/pg",
-				"version": "8.11.13",
-				"size": 16309
+				"version": "8.11.14",
+				"size": 16312
 			},
 			{
 				"name": "pg-types",
@@ -527,42 +447,42 @@
 			},
 			{
 				"name": "@prisma/instrumentation",
-				"version": "6.5.0",
-				"size": 40286
+				"version": "6.6.0",
+				"size": 39494
 			},
 			{
 				"name": "@sentry/opentelemetry",
-				"version": "9.13.0",
-				"size": 523891
+				"version": "9.15.0",
+				"size": 523727
 			},
 			{
 				"name": "@sentry/svelte",
-				"version": "9.13.0",
-				"size": 72544
+				"version": "9.15.0",
+				"size": 72532
 			},
 			{
 				"name": "@sentry/browser",
-				"version": "9.13.0",
-				"size": 1180554
+				"version": "9.15.0",
+				"size": 1179635
 			},
 			{
 				"name": "@sentry-internal/browser-utils",
-				"version": "9.13.0",
-				"size": 745508
+				"version": "9.15.0",
+				"size": 745454
 			},
 			{
 				"name": "@sentry-internal/feedback",
-				"version": "9.13.0",
-				"size": 550725
+				"version": "9.15.0",
+				"size": 550647
 			},
 			{
 				"name": "@sentry-internal/replay",
-				"version": "9.13.0",
-				"size": 2550426
+				"version": "9.15.0",
+				"size": 2550154
 			},
 			{
 				"name": "@sentry-internal/replay-canvas",
-				"version": "9.13.0",
+				"version": "9.15.0",
 				"size": 802286
 			},
 			{
@@ -750,62 +670,13 @@
 			},
 			{
 				"name": "@babel/core",
-				"version": "7.26.10",
-				"size": 795988
+				"version": "7.27.1",
+				"size": 794180
 			},
 			{
-				"name": "json5",
-				"version": "2.2.3",
-				"size": 235198
-			},
-			{
-				"name": "semver",
-				"version": "6.3.1",
-				"size": 68343
-			},
-			{
-				"name": "gensync",
-				"version": "1.0.0-beta.2",
-				"size": 28891
-			},
-			{
-				"name": "@babel/parser",
-				"version": "7.27.0",
-				"size": 1924962
-			},
-			{
-				"name": "@babel/helpers",
-				"version": "7.27.0",
-				"size": 866498
-			},
-			{
-				"name": "@babel/template",
-				"version": "7.27.0",
-				"size": 70675
-			},
-			{
-				"name": "@babel/code-frame",
-				"version": "7.26.2",
-				"size": 33160
-			},
-			{
-				"name": "js-tokens",
-				"version": "4.0.0"
-			},
-			{
-				"name": "picocolors",
-				"version": "1.1.1",
-				"size": 6373
-			},
-			{
-				"name": "@babel/traverse",
-				"version": "7.27.0",
-				"size": 676526
-			},
-			{
-				"name": "@babel/generator",
-				"version": "7.27.0",
-				"size": 559855
+				"name": "@ampproject/remapping",
+				"version": "2.3.0",
+				"size": 78946
 			},
 			{
 				"name": "@jridgewell/gen-mapping",
@@ -828,64 +699,63 @@
 				"size": 53153
 			},
 			{
+				"name": "@babel/code-frame",
+				"version": "7.27.1",
+				"size": 33160
+			},
+			{
+				"name": "js-tokens",
+				"version": "4.0.0"
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "@babel/generator",
+				"version": "7.27.1",
+				"size": 560098
+			},
+			{
+				"name": "@babel/parser",
+				"version": "7.27.1",
+				"size": 1859876
+			},
+			{
 				"name": "jsesc",
 				"version": "3.1.0",
 				"size": 32280
 			},
 			{
-				"name": "globals",
-				"version": "11.12.0",
-				"size": 39779
-			},
-			{
-				"name": "convert-source-map",
-				"version": "2.0.0",
-				"size": 15854
-			},
-			{
-				"name": "@ampproject/remapping",
-				"version": "2.3.0",
-				"size": 78946
-			},
-			{
-				"name": "@babel/helper-module-transforms",
-				"version": "7.26.0",
-				"size": 160842
-			},
-			{
-				"name": "@babel/helper-module-imports",
-				"version": "7.25.9",
-				"size": 63714
-			},
-			{
 				"name": "@babel/helper-compilation-targets",
-				"version": "7.27.0",
+				"version": "7.27.1",
 				"size": 53776
 			},
 			{
 				"name": "@babel/compat-data",
-				"version": "7.26.8",
-				"size": 66428
+				"version": "7.27.1",
+				"size": 66193
 			},
 			{
 				"name": "@babel/helper-validator-option",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 11775
 			},
 			{
 				"name": "browserslist",
-				"version": "4.24.4",
-				"size": 64926
+				"version": "4.24.5",
+				"size": 65174
 			},
 			{
 				"name": "caniuse-lite",
-				"version": "1.0.30001715",
-				"size": 2211246
+				"version": "1.0.30001716",
+				"size": 2214832
 			},
 			{
 				"name": "electron-to-chromium",
-				"version": "1.5.140",
-				"size": 162065
+				"version": "1.5.149",
+				"size": 163189
 			},
 			{
 				"name": "node-releases",
@@ -911,6 +781,56 @@
 				"name": "yallist",
 				"version": "3.1.1",
 				"size": 14766
+			},
+			{
+				"name": "semver",
+				"version": "6.3.1",
+				"size": 68343
+			},
+			{
+				"name": "@babel/helper-module-transforms",
+				"version": "7.27.1",
+				"size": 160852
+			},
+			{
+				"name": "@babel/helper-module-imports",
+				"version": "7.27.1",
+				"size": 63724
+			},
+			{
+				"name": "@babel/traverse",
+				"version": "7.27.1",
+				"size": 689113
+			},
+			{
+				"name": "@babel/template",
+				"version": "7.27.1",
+				"size": 70675
+			},
+			{
+				"name": "globals",
+				"version": "11.12.0",
+				"size": 39779
+			},
+			{
+				"name": "@babel/helpers",
+				"version": "7.27.1",
+				"size": 861892
+			},
+			{
+				"name": "convert-source-map",
+				"version": "2.0.0",
+				"size": 15854
+			},
+			{
+				"name": "gensync",
+				"version": "1.0.0-beta.2",
+				"size": 28891
+			},
+			{
+				"name": "json5",
+				"version": "2.2.3",
+				"size": 235198
 			},
 			{
 				"name": "@sentry/cli",
@@ -1250,66 +1170,66 @@
 			[123, 128],
 			[112, 95],
 			[112, 129],
-			[129, 22],
 			[129, 130],
-			[129, 131],
-			[129, 132],
-			[129, 2],
-			[129, 133],
-			[133, 2],
-			[129, 134],
-			[134, 135],
-			[135, 136],
-			[136, 137],
-			[136, 138],
-			[136, 4],
-			[135, 133],
-			[135, 2],
-			[134, 2],
+			[130, 131],
+			[131, 132],
+			[131, 93],
+			[131, 133],
+			[133, 134],
+			[133, 93],
+			[130, 133],
 			[129, 135],
-			[129, 139],
-			[139, 136],
-			[139, 140],
-			[140, 133],
-			[140, 2],
-			[140, 141],
-			[141, 142],
-			[141, 93],
-			[141, 143],
-			[143, 144],
-			[143, 93],
-			[140, 143],
-			[140, 145],
-			[139, 133],
-			[139, 135],
+			[135, 4],
+			[135, 136],
+			[135, 137],
+			[129, 138],
+			[138, 139],
 			[139, 2],
-			[139, 22],
-			[139, 146],
-			[129, 140],
-			[129, 136],
-			[129, 147],
-			[129, 148],
-			[148, 141],
-			[148, 143],
-			[129, 149],
-			[149, 139],
-			[149, 150],
-			[150, 2],
-			[150, 139],
-			[149, 4],
-			[129, 151],
-			[151, 152],
-			[151, 153],
-			[151, 154],
+			[138, 2],
+			[138, 131],
+			[138, 133],
+			[138, 140],
+			[129, 141],
+			[141, 142],
+			[141, 143],
+			[141, 144],
+			[144, 145],
+			[144, 146],
+			[144, 147],
+			[144, 148],
+			[148, 149],
+			[148, 137],
+			[141, 150],
+			[150, 151],
+			[141, 152],
+			[129, 153],
+			[153, 154],
 			[154, 155],
-			[154, 156],
-			[154, 157],
-			[154, 158],
-			[158, 159],
-			[158, 138],
-			[151, 160],
-			[160, 161],
-			[151, 131],
+			[155, 135],
+			[155, 138],
+			[155, 139],
+			[155, 156],
+			[156, 135],
+			[156, 139],
+			[156, 2],
+			[155, 2],
+			[155, 22],
+			[155, 157],
+			[154, 2],
+			[153, 4],
+			[153, 155],
+			[129, 158],
+			[158, 156],
+			[158, 2],
+			[129, 139],
+			[129, 156],
+			[129, 155],
+			[129, 2],
+			[129, 159],
+			[129, 22],
+			[129, 160],
+			[129, 161],
+			[129, 152],
 			[112, 162],
 			[162, 163],
 			[163, 164],
@@ -1343,5 +1263,87 @@
 			[184, 186]
 		],
 		"circular": []
-	}
+	},
+	"readme": "<p align=\"center\">\n  <a href=\"https://sentry.io/?utm_source=github&utm_medium=logo\" target=\"_blank\">\n    <img src=\"https://sentry-brand.storage.googleapis.com/sentry-wordmark-dark-280x84.png\" alt=\"Sentry\" width=\"280\" height=\"84\">\n  </a>\n</p>\n\n# Official Sentry SDK for SvelteKit\n\n[![npm version](https://img.shields.io/npm/v/@sentry/sveltekit.svg)](https://www.npmjs.com/package/@sentry/sveltekit)\n[![npm dm](https://img.shields.io/npm/dm/@sentry/sveltekit.svg)](https://www.npmjs.com/package/@sentry/sveltekit)\n[![npm dt](https://img.shields.io/npm/dt/@sentry/sveltekit.svg)](https://www.npmjs.com/package/@sentry/sveltekit)\n\n## Links\n\n- [Official SDK Docs](https://docs.sentry.io/platforms/javascript/guides/sveltekit/)\n\n## Compatibility\n\nThe minimum supported version of SvelteKit is `1.0.0`. The SDK works best with Vite 4.2 and newer. Older Vite versions\nmight not generate source maps correctly.\n\nThe SDK supports the following SvelteKit adapters:\n\n- `@sveltejs/adapter-auto` - for Vercel with the Node runtime. Other deployment targets might work but we don't\n  guarantee compatibility.\n- `@sveltejs/adapter-vercel` - only for Node (Lambda) runtimes, not yet Vercel's edge runtime\n- `@sveltejs/adapter-node`\n\nIf you use the SDK with other adapters, we cannot guarantee that everything works as expected. You might need to\n[manually configure source maps upload](#-configuring-source-maps-upload). The SDK is currently not compatible with\nnone-Node server runtimes, such as Vercel's Edge runtime or Cloudflare workers.\n\n## General\n\nThis package is a wrapper around `@sentry/node` for the server and `@sentry/svelte` for the client side, with added\nfunctionality related to SvelteKit.\n\n## Automatic Setup\n\nWe recommend installing the SDK by running the\n[Sentry wizard](https://docs.sentry.io/platforms/javascript/guides/sveltekit/#install) in the root directory of your\nproject:\n\n```sh\nnpx @sentry/wizard@latest -i sveltekit\n```\n\nTake a look at the sections below if you want to customize your SDK configuration.\n\n## Manual Setup\n\nIf the setup through the wizard doesn't work for you, you can also set up the SDK manually.\n\n### 1. Prerequesits & Installation\n\n1. Install the Sentry SvelteKit SDK:\n\n   ```bash\n   # Using npm\n   npm install @sentry/sveltekit\n\n   # Using yarn\n   yarn add @sentry/sveltekit\n   ```\n\n### 2. Client-side Setup\n\nThe Sentry SvelteKit SDK mostly relies on [SvelteKit Hooks](https://kit.svelte.dev/docs/hooks) to capture error and\nperformance data.\n\n1. If you don't already have a client hooks file, create a new one in `src/hooks.client.(js|ts)`.\n\n2. On the top of your `hooks.client.(js|ts)` file, initialize the Sentry SDK:\n\n   ```javascript\n   // hooks.client.(js|ts)\n   import * as Sentry from '@sentry/sveltekit';\n\n   Sentry.init({\n     dsn: '__DSN__',\n     tracesSampleRate: 1.0,\n     // For instance, initialize Session Replay:\n     replaysSessionSampleRate: 0.1,\n     replaysOnErrorSampleRate: 1.0,\n     integrations: [Sentry.replayIntegration()],\n   });\n   ```\n\n3. Add our `handleErrorWithSentry` function to the `handleError` hook:\n\n   ```javascript\n   // hooks.client.(js|ts)\n   import { handleErrorWithSentry } from '@sentry/sveltekit';\n\n   const myErrorHandler = ({ error, event }) => {\n     console.error('An error occurred on the client side:', error, event);\n   };\n\n   export const handleError = handleErrorWithSentry(myErrorHandler);\n   // or alternatively, if you don't have a custom error handler:\n   // export const handleError = handleErrorWithSentry();\n   ```\n\n### 3. Server-side Setup\n\n1. If you don't already have a server hooks file, create a new one in `src/hooks.server.(js|ts)`.\n\n2. On the top of your `hooks.server.(js|ts)` file, initialize the Sentry SDK:\n\n   ```javascript\n   // hooks.server.(js|ts)\n   import * as Sentry from '@sentry/sveltekit';\n\n   Sentry.init({\n     dsn: '__DSN__',\n     tracesSampleRate: 1.0,\n   });\n   ```\n\n3. Add our `handleErrorWithSentry` function to the `handleError` hook:\n\n   ```javascript\n   // hooks.server.(js|ts)\n   import { handleErrorWithSentry } from '@sentry/sveltekit';\n\n   const myErrorHandler = ({ error, event }) => {\n     console.error('An error occurred on the server side:', error, event);\n   };\n\n   export const handleError = handleErrorWithSentry(myErrorHandler);\n   // or alternatively, if you don't have a custom error handler:\n   // export const handleError = handleErrorWithSentry();\n   ```\n\n4. Add our request handler to the `handle` hook in `hooks.server.ts`:\n\n   ```javascript\n   // hooks.server.(js|ts)\n   import { sentryHandle } from '@sentry/sveltekit';\n\n   export const handle = sentryHandle();\n   // or alternatively, if you already have a handler defined, use the `sequence` function\n   // see: https://kit.svelte.dev/docs/modules#sveltejs-kit-hooks-sequence\n   // export const handle = sequence(sentryHandle(), yourHandler());\n   ```\n\n### 4. Vite Setup\n\nAdd `sentrySvelteKit` to your Vite plugins in `vite.config.(js|ts)` file so that the Sentry SDK can apply build-time\nfeatures. Make sure that it is added _before_ the `sveltekit` plugin:\n\n```javascript\n// vite.config.(js|ts)\nimport { sveltekit } from '@sveltejs/kit/vite';\nimport { sentrySvelteKit } from '@sentry/sveltekit';\n\nexport default {\n  plugins: [sentrySvelteKit(), sveltekit()],\n  // ... rest of your Vite config\n};\n```\n\nThis adds the\n[Sentry Vite Plugin](https://github.com/getsentry/sentry-javascript-bundler-plugins/tree/main/packages/vite-plugin) to\nyour Vite config to automatically upload source maps to Sentry.\n\n---\n\n## Uploading Source Maps\n\nAfter completing the [Vite Setup](#5-vite-setup), the SDK will automatically upload source maps to Sentry, when you\nbuild your project. However, you still need to specify your Sentry auth token as well as your org and project slugs. You\ncan either set them as env variables (for example in a `.env` file):\n\n- `SENTRY_ORG` your Sentry org slug\n- `SENTRY_PROJECT` your Sentry project slug\n- `SENTRY_AUTH_TOKEN` your Sentry auth token\n\nOr you can pass them in whatever form you prefer to `sentrySvelteKit`:\n\n```js\n// vite.config.(js|ts)\nimport { sveltekit } from '@sveltejs/kit/vite';\nimport { sentrySvelteKit } from '@sentry/sveltekit';\n\nexport default {\n  plugins: [\n    sentrySvelteKit({\n      sourceMapsUploadOptions: {\n        org: 'my-org-slug',\n        project: 'my-project-slug',\n        authToken: process.env.SENTRY_AUTH_TOKEN,\n      },\n    }),\n    sveltekit(),\n  ],\n  // ... rest of your Vite config\n};\n```\n\n### Configuring Source maps upload\n\nUnder `sourceMapsUploadOptions`, you can also specify all additional options supported by the\n[Sentry Vite Plugin](https://www.npmjs.com/package/@sentry/vite-plugin). This might be useful if you're using adapters\nother than the Node adapter or have a more customized build setup.\n\n```js\n// vite.config.(js|ts)\nimport { sveltekit } from '@sveltejs/kit/vite';\nimport { sentrySvelteKit } from '@sentry/sveltekit';\n\nexport default {\n  plugins: [\n    sentrySvelteKit({\n      sourceMapsUploadOptions: {\n        org: 'my-org-slug',\n        project: 'my-project-slug',\n        authToken: process.env.SENTRY_AUTH_TOKEN,\n        include: ['dist'],\n        cleanArtifacts: true,\n        setCommits: {\n          auto: true,\n        },\n      },\n    }),\n    sveltekit(),\n  ],\n  // ... rest of your Vite config\n};\n```\n\n### Disabling automatic source map upload\n\nIf you don't want to upload source maps automatically, you can disable it as follows:\n\n```js\n// vite.config.(js|ts)\nimport { sveltekit } from '@sveltejs/kit/vite';\nimport { sentrySvelteKit } from '@sentry/sveltekit';\n\nexport default {\n  plugins: [\n    sentrySvelteKit({\n      autoUploadSourceMaps: false,\n    }),\n    sveltekit(),\n  ],\n  // ... rest of your Vite config\n};\n```\n\n## Configure Auto-Instrumentation\n\nThe SDK mostly relies on [SvelteKit's hooks](https://kit.svelte.dev/docs/hooks) to collect error and performance data.\nHowever, SvelteKit doesn't yet offer a hook for universal or server-only `load` function calls. Therefore, the SDK uses\na Vite plugin to auto-instrument `load` functions so that you don't have to add a Sentry wrapper to each function\nmanually. Auto-instrumentation is enabled by default, as soon as you add the `sentrySvelteKit()` function call to your\n`vite.config.(js|ts)`. However, you can customize the behavior, or disable it entirely. In this case, you can still\nmanually wrap specific `load` functions with the `withSentry` function.\n\nNote: The SDK will only auto-instrument `load` functions in `+page` or `+layout` files that do not yet contain any\nSentry code. If you already have custom Sentry code in such files, you'll have to\n[manually](#instrument-load-functions-manually) add our wrapper to your `load` functions.\n\n### Customize Auto-instrumentation\n\nBy passing the `autoInstrument` option to `sentrySvelteKit` you can disable auto-instrumentation entirely, or customize\nwhich `load` functions should be instrumented:\n\n```javascript\n// vite.config.(js|ts)\nimport { sveltekit } from '@sveltejs/kit/vite';\nimport { sentrySvelteKit } from '@sentry/sveltekit';\n\nexport default {\n  plugins: [\n    sentrySvelteKit({\n      autoInstrument: {\n        load: true, // universal load functions\n        serverLoad: false, // server-only load functions\n      },\n    }),\n    sveltekit(),\n  ],\n  // ... rest of your Vite config\n};\n```\n\n### Disable Auto-instrumentation\n\nIf you set the `autoInstrument` option to `false`, the SDK won't auto-instrument any `load` function. You can still\n[manually instrument](#instrument-load-functions-manually) specific `load` functions.\n\n```javascript\n// vite.config.(js|ts)\nimport { sveltekit } from '@sveltejs/kit/vite';\nimport { sentrySvelteKit } from '@sentry/sveltekit';\n\nexport default {\n  plugins: [\n    sentrySvelteKit({\n      autoInstrument: false;\n    }),\n    sveltekit(),\n  ],\n  // ... rest of your Vite config\n};\n```\n\n### Instrument `load` Functions Manually\n\nIf you don't want to use auto-instrumentation, you can also manually instrument specific `load` functions with our load\nfunction wrappers:\n\nTo instrument your universal `load` functions in `+(page|layout).(js|ts)`, wrap our `wrapLoadWithSentry` function around\nyour load code:\n\n```javascript\nimport { wrapLoadWithSentry } from '@sentry/sveltekit';\n\nexport const load = wrapLoadWithSentry(event => {\n  //... your load code\n});\n```\n\nTo instrument server `load` functions in `+(page|layout).server.(js|ts)`, wrap our `wrapServerLoadWithSentry` function\naround your load code:\n\n```javascript\nimport { wrapServerLoadWithSentry } from '@sentry/sveltekit';\n\nexport const load = wrapServerLoadWithSentry(event => {\n  //... your server load code\n});\n```\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3589, 10240],
+		[3596, 15085],
+		[3603, 15450],
+		[3610, 16103],
+		[3617, 20312],
+		[3624, 32415],
+		[3631, 46213],
+		[3638, 41028],
+		[3645, 5808],
+		[3652, 11492],
+		[3659, 15394],
+		[3666, 17100],
+		[3673, 17155],
+		[3680, 16015],
+		[3687, 16351],
+		[3694, 18658],
+		[3701, 20421],
+		[3708, 21149],
+		[3715, 20863],
+		[3722, 20645],
+		[3729, 24650],
+		[3736, 17064],
+		[3743, 18292],
+		[3750, 18972],
+		[3757, 21798],
+		[3764, 23160],
+		[3771, 21488],
+		[3778, 19765],
+		[3785, 23586],
+		[3792, 24154],
+		[3799, 25292],
+		[3806, 26134],
+		[3813, 28695],
+		[3820, 28159],
+		[3827, 26875],
+		[3834, 24767],
+		[3841, 26618],
+		[3848, 30286],
+		[3855, 27052],
+		[3862, 29633],
+		[3869, 31499],
+		[3876, 30705],
+		[3883, 31568],
+		[3890, 34331],
+		[3897, 34033],
+		[3904, 37750],
+		[3911, 36608],
+		[3918, 39951],
+		[3925, 39683],
+		[3932, 57423],
+		[3939, 52533],
+		[3946, 38507],
+		[3953, 39367],
+		[3960, 38670],
+		[3967, 35843],
+		[3974, 43405],
+		[3981, 41905],
+		[3988, 43660],
+		[3995, 45221],
+		[4002, 42809],
+		[4009, 17317],
+		[4016, 20922],
+		[4023, 36302],
+		[4030, 41310],
+		[4037, 43890],
+		[4044, 44115],
+		[4051, 49496],
+		[4058, 52853],
+		[4065, 46137],
+		[4072, 49009],
+		[4079, 49548],
+		[4086, 46276],
+		[4093, 50064],
+		[4100, 50490],
+		[4107, 51297],
+		[4114, 45770],
+		[4121, 40176],
+		[4128, 42470]
+	]
 }

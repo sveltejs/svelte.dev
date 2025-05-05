@@ -7,19 +7,11 @@
 	"downloads": 6,
 	"updated": "2025-03-09T18:58:49.742Z",
 	"tags": ["miscellaneous"],
-	"runes": false,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "1.1.22",
 	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
 	"last_rune_check_version": "1.1.22",
-	"downloads_history": [
-		[4078, 49],
-		[4085, 7],
-		[4092, 15],
-		[4099, 11],
-		[4113, 6]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -82,5 +74,16 @@
 			[7, 8]
 		],
 		"circular": []
-	}
+	},
+	"legacy_svelte": false,
+	"readme": "# AI TOOLKIT: Svelte provider\n\n[Svelte](https://svelte.dev/) UI components for the [AI TOOLKIT](https://sdk.khulnasoft.com/docs):\n\n- [`useChat`](https://sdk.khulnasoft.com/docs/reference/ai-toolkit-ui/use-chat) hook\n- [`useCompletion`](https://sdk.khulnasoft.com/docs/reference/ai-toolkit-ui/use-completion) hook\n- [`useAssistant`](https://sdk.khulnasoft.com/docs/reference/ai-toolkit-ui/use-assistant) hook\n",
+	"downloads_history": [
+		[4079, 49],
+		[4086, 7],
+		[4093, 15],
+		[4100, 11],
+		[4114, 6],
+		[4121, 14],
+		[4128, 4]
+	]
 }

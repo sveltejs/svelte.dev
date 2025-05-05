@@ -6,23 +6,11 @@
 	"downloads": 6,
 	"updated": "2025-02-14T08:06:19.200Z",
 	"tags": ["tooling"],
-	"runes": true,
 	"typescript": true,
 	"version": "0.0.4",
 	"svelte_range": "^5.19.6",
 	"last_rune_check_version": "0.0.4",
 	"github_stars": 0,
-	"downloads_history": [
-		[4057, 238],
-		[4064, 17],
-		[4071, 5],
-		[4078, 2],
-		[4085, 7],
-		[4092, 9],
-		[4099, 4],
-		[4106, 1],
-		[4113, 6]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -34,5 +22,21 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# What\n\nA tool can collect other tools in the web project.\n\n# Install\n\n```bash\nnpm install @yakiisama/whale\n```\n\n# Usage\n\n```js\nimport * as Whale from '@yakiisama/whale';\n//or umd cdn https://cdn.jsdelivr.net/npm/@yakiisama/whale/dist/umd/index.min.js\nWhale.config({\n    mainLogo: './src/assets/svelte.svg',\n}).createWhale({\n    name: 'demo',\n    desc: 'this is a demo',\n    logo: './src/assets/img/cheese.svg',\n    dom: a,\n}).createWhale({\n    name: 'test',\n    desc: 'this is a test',\n    logo: './src/assets/img/ice-cream.svg',\n    dom: b,\n});\n\n```\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4058, 238],
+		[4065, 17],
+		[4072, 5],
+		[4079, 2],
+		[4086, 7],
+		[4093, 9],
+		[4100, 4],
+		[4107, 1],
+		[4114, 6],
+		[4121, 7],
+		[4128, 1],
+		[4135, 5]
+	]
 }

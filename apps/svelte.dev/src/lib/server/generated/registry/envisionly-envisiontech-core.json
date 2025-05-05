@@ -5,27 +5,21 @@
 	"authors": ["paulgeoghegan"],
 	"homepage": "https://envisionly.tech",
 	"downloads": 166,
-	"updated": "2025-04-11T14:45:18.929Z",
+	"updated": "2025-05-02T11:00:30.283Z",
 	"tags": ["design-system"],
-	"runes": true,
 	"typescript": true,
-	"version": "0.8.1",
+	"version": "0.9.0",
 	"svelte_range": "^5.0.0",
-	"kit_range": "^2.20.4",
-	"last_rune_check_version": "0.8.1",
+	"kit_range": "^2.20.8",
+	"last_rune_check_version": "0.9.0",
 	"github_stars": 0,
-	"downloads_history": [
-		[4099, 438],
-		[4106, 287],
-		[4113, 166]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
 			{
 				"name": "@envisionly/envisiontech-core",
-				"version": "0.8.1",
-				"size": 79040
+				"version": "0.9.0",
+				"size": 110115
 			},
 			{
 				"name": "@commitlint/cli",
@@ -49,8 +43,8 @@
 			},
 			{
 				"name": "@types/node",
-				"version": "22.14.1",
-				"size": 2331510
+				"version": "22.15.3",
+				"size": 2350386
 			},
 			{
 				"name": "undici-types",
@@ -309,8 +303,13 @@
 			},
 			{
 				"name": "@babel/code-frame",
-				"version": "7.26.2",
+				"version": "7.27.1",
 				"size": 33160
+			},
+			{
+				"name": "@babel/helper-validator-identifier",
+				"version": "7.27.1",
+				"size": 48330
 			},
 			{
 				"name": "js-tokens",
@@ -320,11 +319,6 @@
 				"name": "picocolors",
 				"version": "1.1.1",
 				"size": 6373
-			},
-			{
-				"name": "@babel/helper-validator-identifier",
-				"version": "7.25.9",
-				"size": 48330
 			},
 			{
 				"name": "lines-and-columns",
@@ -638,8 +632,8 @@
 			},
 			{
 				"name": "type-fest",
-				"version": "4.40.0",
-				"size": 438455
+				"version": "4.40.1",
+				"size": 438790
 			},
 			{
 				"name": "add-stream",
@@ -770,7 +764,7 @@
 			},
 			{
 				"name": "@tailwindcss/cli",
-				"version": "4.1.4",
+				"version": "4.1.5",
 				"size": 14547
 			},
 			{
@@ -780,8 +774,8 @@
 			},
 			{
 				"name": "tailwindcss",
-				"version": "4.1.4",
-				"size": 657224
+				"version": "4.1.5",
+				"size": 658207
 			},
 			{
 				"name": "@parcel/watcher",
@@ -853,8 +847,8 @@
 			},
 			{
 				"name": "@tailwindcss/node",
-				"version": "4.1.4",
-				"size": 102619
+				"version": "4.1.5",
+				"size": 102645
 			},
 			{
 				"name": "lightningcss",
@@ -863,18 +857,23 @@
 			},
 			{
 				"name": "detect-libc",
-				"version": "2.0.3",
-				"size": 23627
+				"version": "2.0.4",
+				"size": 23652
 			},
 			{
 				"name": "@tailwindcss/oxide",
-				"version": "4.1.4",
+				"version": "4.1.5",
 				"size": 14125
 			},
 			{
 				"name": "husky",
 				"version": "9.1.7",
 				"size": 4041
+			},
+			{
+				"name": "libphonenumber-js",
+				"version": "1.12.7",
+				"size": 8367359
 			},
 			{
 				"name": "lint-staged",
@@ -1321,7 +1320,7 @@
 			[102, 10],
 			[0, 153],
 			[153, 154],
-			[153, 61],
+			[153, 62],
 			[153, 155],
 			[153, 156],
 			[156, 157],
@@ -1346,64 +1345,74 @@
 			[153, 173],
 			[0, 174],
 			[0, 175],
-			[175, 7],
-			[175, 176],
-			[175, 177],
-			[177, 178],
-			[175, 179],
-			[179, 180],
+			[0, 176],
+			[176, 7],
+			[176, 177],
+			[176, 178],
+			[178, 179],
+			[176, 180],
 			[180, 181],
-			[179, 182],
-			[179, 183],
-			[179, 184],
-			[184, 185],
+			[181, 182],
+			[180, 183],
+			[180, 184],
+			[180, 185],
 			[185, 186],
-			[184, 187],
-			[184, 188],
-			[188, 189],
-			[179, 190],
-			[179, 191],
-			[179, 192],
-			[192, 193],
-			[179, 194],
-			[179, 195],
-			[175, 196],
-			[175, 197],
-			[197, 198],
+			[186, 187],
+			[185, 188],
+			[185, 189],
+			[189, 190],
+			[180, 191],
+			[180, 192],
+			[180, 193],
+			[193, 194],
+			[180, 195],
+			[180, 196],
+			[176, 197],
+			[176, 198],
 			[198, 199],
 			[199, 200],
-			[199, 201],
-			[198, 202],
-			[202, 203],
-			[202, 204],
-			[202, 205],
-			[205, 206],
-			[197, 207],
-			[197, 208],
-			[197, 209],
-			[209, 210],
+			[200, 201],
+			[200, 202],
+			[199, 203],
+			[203, 204],
+			[203, 205],
+			[203, 206],
+			[206, 207],
+			[198, 208],
+			[198, 209],
+			[198, 210],
 			[210, 211],
-			[209, 212],
-			[212, 213],
+			[211, 212],
+			[210, 213],
 			[213, 214],
 			[214, 215],
-			[213, 190],
-			[209, 216],
-			[216, 200],
-			[216, 217],
-			[217, 204],
-			[209, 205],
-			[209, 218],
-			[218, 200],
-			[218, 202],
+			[215, 216],
+			[214, 191],
+			[210, 217],
+			[217, 201],
+			[217, 218],
 			[218, 205],
-			[197, 219],
-			[197, 218],
-			[175, 160],
-			[175, 220],
-			[175, 221],
-			[175, 222]
+			[210, 206],
+			[210, 219],
+			[219, 201],
+			[219, 203],
+			[219, 206],
+			[198, 220],
+			[198, 219],
+			[176, 160],
+			[176, 221],
+			[176, 222],
+			[176, 223]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Envisiontech-Core\r\n\r\n[![NPM Version](https://img.shields.io/npm/v/%40envisionly%2Fenvisiontech-core)](https://img.shields.io/npm/v/%40envisionly%2Fenvisiontech-core)\r\n[![NPM Last Update](https://img.shields.io/npm/last-update/%40envisionly%2Fenvisiontech-core)](https://img.shields.io/npm/last-update/%40envisionly%2Fenvisiontech-core)\r\n[![NPM Downloads](https://img.shields.io/npm/dy/%40envisionly%2Fenvisiontech-core)](https://img.shields.io/npm/dy/%40envisionly%2Fenvisiontech-core)\r\n\r\nEnvisiontech-Core provides a set of reusable Svelte components to help you build consistent and\r\naccessible user interfaces.\r\n\r\n## Warning!\r\n\r\nPlease be aware that this is currently in very early development and is not ready for production.\r\n\r\n---\r\n\r\n## Changelog\r\n\r\nSee the [CHANGELOG.md](https://github.com/Envisionly/Envisiontech-Core/blob/main/CHANGELOG.md) file for a detailed history of changes.\r\n\r\n---\r\n\r\n## Quick Start\r\n\r\n### Installation\r\n\r\nInstall the library via npm:\r\n\r\n```bash\r\nnpm install @envisionly/envisiontech-core\r\n```\r\n\r\n### Using Components\r\n\r\nNow you can use the components in your Svelte files. For example:\r\n\r\n```svelte\r\n<script lang=\"ts\">\r\n\timport EnvisionButton from '@envisionly/envisiontech-core';\r\n</script>\r\n\r\n<EnvisionButton text=\"Click Me\" size=\"large\" onclick={() => alert('Button clicked!')} />\r\n```\r\n\r\n---\r\n\r\n## Component Categories\r\n\r\nCurrently we have the following component categories available:\r\n\r\n- Content: These components are used for displaying content sto the users. An example of this is our EnvisionVideoPlayer component.\r\n- Controls: These components are used for controling an application. For example our EnvisionButton component.\r\n- inputs: Components that are used in forms and for gathering user input. Example, our EnvisionCheckbox component.\r\n- layout: These components are used for displaying information. Our EnvisionCard and EnvisionGrid components are great examples.\r\n- navigation: For navigating around the navigation. For example our EnvisionLink component.\r\n\r\n---\r\n\r\n## Theming\r\n\r\nCurrently we have one theme and you can customize the following colours by creating your own css variables.\r\n\r\n### Colors\r\n\r\n- envision-primary: This is the primary blue color that we use for things like background colors and the color of clickable components like links.\r\n- envision-secondary: This is the gold color that you will see used for things like outlines and hovor affects.\r\n- envision-primary-contrast: The high-contrast version of the envision-primary color. This is used when the user has high-contrast enabled.\r\n- envision-secondary-contrast: The high-contrast version of the envision-secondary color. This is used when the user has high-contrast enabled.\r\n\r\n### Example\r\n\r\nThe following is an example of how you can customise your theme.\r\n\r\n```css\r\n<style>\r\n\t:root {\r\n\t\t/* Primary colours */\r\n\t\t--color-envision-primary: #191970;\r\n\t\t--color-envision-secondary: #daa520;\r\n\r\n\t\t/* High contrast colours */\r\n\t\t--color-envision-primary-contrast: #161664;\r\n\t\t--color-envision-secondary-contrast: #000000;\r\n\t}\r\n</style>\r\n```\r\n\r\n---\r\n\r\n## Resources\r\n\r\n- [NPM Package](https://www.npmjs.com/package/@envisionly/envisiontech-core)\r\n- [Documentation](https://envisiontech-core.vercel.app/?path=/docs/introduction--docs)\r\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4100, 438],
+		[4107, 287],
+		[4114, 166],
+		[4121, 38],
+		[4128, 54]
+	]
 }

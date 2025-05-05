@@ -7,19 +7,12 @@
 	"downloads": 68,
 	"updated": "2025-04-03T10:44:39.974Z",
 	"tags": ["ui", "design-system"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.0.15",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "0.0.15",
-	"downloads_history": [
-		[4092, 153],
-		[4099, 25],
-		[4106, 473],
-		[4113, 68]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -44,5 +37,15 @@
 			[1, 2]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Dodo Ui\n\nUI framework for Svelte\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4093, 153],
+		[4100, 25],
+		[4107, 473],
+		[4114, 68],
+		[4121, 6],
+		[4128, 23]
+	]
 }

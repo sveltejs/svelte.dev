@@ -7,17 +7,11 @@
 	"downloads": 38,
 	"updated": "2025-04-04T17:02:39.287Z",
 	"tags": ["content", "tooling"],
-	"runes": false,
-	"github_stars": 7,
+	"github_stars": 12,
 	"typescript": true,
 	"version": "0.11.0",
 	"svelte_range": ">=5.0.0",
 	"last_rune_check_version": "0.11.0",
-	"downloads_history": [
-		[4099, 57],
-		[4106, 176],
-		[4113, 38]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -551,5 +545,15 @@
 			[0, 70]
 		],
 		"circular": []
-	}
+	},
+	"readme": "<h1 align=\"center\">@sveltek/markdown</h1>\n\n<p align=\"center\">Svelte Markdown Preprocessor.</p>\n\n<br>\n\n## Community\n\nFeel free to ask questions or share new ideas.\n\nUse the official [discussions](https://github.com/sveltek/markdown/discussions) to get involved.\n\n## Contribute\n\nCheck out the quick [guide](https://github.com/sveltek/markdown/blob/main/.github/CONTRIBUTING.md) for more info.\n\n## License\n\nDeveloped in 🇭🇷 Croatia, © Sveltek.\n\nReleased under the [MIT](LICENSE.txt) license.\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4100, 57],
+		[4107, 176],
+		[4114, 38],
+		[4121, 10],
+		[4128, 14],
+		[4135, 12]
+	]
 }

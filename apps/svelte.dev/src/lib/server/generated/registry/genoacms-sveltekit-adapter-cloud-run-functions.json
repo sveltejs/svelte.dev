@@ -7,35 +7,11 @@
 	"downloads": 8,
 	"updated": "2024-11-23T10:52:34.927Z",
 	"tags": ["adapter"],
-	"runes": false,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "1.0.0",
 	"kit_range": "^2.4.0",
 	"last_rune_check_version": "1.0.0",
-	"downloads_history": [
-		[3973, 277],
-		[3980, 33],
-		[3987, 13],
-		[3994, 25],
-		[4001, 11],
-		[4008, 6],
-		[4015, 11],
-		[4022, 9],
-		[4029, 9],
-		[4036, 10],
-		[4043, 10],
-		[4050, 1],
-		[4057, 1],
-		[4064, 6],
-		[4071, 12],
-		[4078, 15],
-		[4085, 17],
-		[4092, 7],
-		[4099, 2],
-		[4106, 19],
-		[4113, 8]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -149,8 +125,8 @@
 			},
 			{
 				"name": "rollup",
-				"version": "4.40.0",
-				"size": 2726316
+				"version": "4.40.1",
+				"size": 2727114
 			}
 		],
 		"dependencies": [
@@ -184,5 +160,32 @@
 			[22, 3]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# @genoacms/sveltekit-adapter-cloud-run-functions\n\n[Adapter](https://svelte.dev/docs/kit/adapters) for SvelteKit apps that generates a Cloud Run Function definiton.\n\n## Docs\n\nThis adapter is not intended for general use, it was made specifically for GenoaCMS.\nCatch is that the generated code needs to be archived and uploaded to Cloud Run Functions, which is done by [GCP adapter for GenoaCMS](https://github.com/GenoaCMS/adapter-gcp/blob/master/src/services/deployment/deploy.ts).\nNo configuration reqired, generates similar code to node adapter, but with different request parsing. The function is exported as `handler`.\n\n## Changelog\n\n[The Changelog for this package is available on GitHub](https://github.com/GenoaCMS/sveltekit-adapter-cloud-run-functions/blob/master/CHANGELOG.md).\n\n## License\n\n[MIT](LICENSE)\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3974, 277],
+		[3981, 33],
+		[3988, 13],
+		[3995, 25],
+		[4002, 11],
+		[4009, 6],
+		[4016, 11],
+		[4023, 9],
+		[4030, 9],
+		[4037, 10],
+		[4044, 10],
+		[4051, 1],
+		[4058, 1],
+		[4065, 6],
+		[4072, 12],
+		[4079, 15],
+		[4086, 17],
+		[4093, 7],
+		[4100, 2],
+		[4107, 19],
+		[4114, 8],
+		[4121, 5],
+		[4128, 2]
+	]
 }

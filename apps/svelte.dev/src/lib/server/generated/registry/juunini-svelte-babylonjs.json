@@ -7,31 +7,12 @@
 	"downloads": 7,
 	"updated": "2025-01-07T13:50:54.674Z",
 	"tags": ["ui"],
-	"runes": true,
 	"github_stars": 1,
 	"typescript": true,
 	"version": "0.0.1-alpha.18",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.0.1-alpha.18",
-	"downloads_history": [
-		[4008, 420],
-		[4015, 523],
-		[4022, 220],
-		[4029, 60],
-		[4036, 4],
-		[4043, 15],
-		[4050, 22],
-		[4057, 2],
-		[4064, 6],
-		[4071, 9],
-		[4078, 2],
-		[4085, 15],
-		[4092, 17],
-		[4099, 17],
-		[4106, 19],
-		[4113, 7]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -68,5 +49,27 @@
 			[0, 4]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# @juunini/svelte-babylonjs\n\n## Caution\n\n> ❗ This is WIP and not ready for production use.\n\n## Introduction\n\nEasily create 3D scenes with Babylon.js in Svelte.\n\n## Installation\n\n```bash\nnpm install @juunini/svelte-babylonjs\nyarn add @juunini/svelte-babylonjs\npnpm add @juunini/svelte-babylonjs\nbun add @juunini/svelte-babylonjs\n```\n\n## Usage\n\nYou can see the example and code below link (storybook)  \nhttps://juunini.github.io/svelte-babylonjs  \n\n---\n\n![image](https://github.com/user-attachments/assets/95007a0b-6ef6-45f4-a910-e4ade279f79f)\n\n```svelte\n<script lang=\"ts\">\n  import { Vector3 } from '@babylonjs/core/Maths/math.vector';\n\n  import Canvas from '@juunini/svelte-babylonjs/Canvas.svelte';\n  import BabylonEngine from '@juunini/svelte-babylonjs/engine/Engine.svelte';\n  import BabylonScene from '@juunini/svelte-babylonjs/Scene.svelte';\n  import BabylonFreeCamera from '@juunini/svelte-babylonjs/camera/FreeCamera.svelte';\n  import BabylonGround from '@juunini/svelte-babylonjs/mesh/Ground.svelte';\n  import BabylonHemisphericLight from '@juunini/svelte-babylonjs/light/HemisphericLight.svelte';\n  import BabylonSphere from '@juunini/svelte-babylonjs/mesh/Sphere.svelte';\n</script>\n\n<Canvas style=\"width: 100%;\">\n  <BabylonEngine>\n    <BabylonScene>\n      <BabylonFreeCamera position={new Vector3(0, 5, -10)} />\n      <BabylonHemisphericLight direction={new Vector3(0, 1, 0)} intensity={0.7} />\n      <BabylonGround options={{ width: 6, height: 6 }} />\n      <BabylonSphere options={{ diameter: 2, segments: 32 }} position={new Vector3(0, 1, 0)} />\n    </BabylonScene>\n  </BabylonEngine>\n</Canvas>\n```\n\n### Bind Mesh, Camera, Light, etc.\n\nYou can bind the mesh to a variable.  \n(Not only Mesh, but also Camera, Light, etc.)\n\n```svelte\n<script lang=\"ts\">\n  import type { GroundMesh } from '@babylonjs/core/Meshes/groundMesh';\n  import BabylonGround from '@juunini/svelte-babylonjs/mesh/Ground.svelte';\n\n  let groundMesh = $state<GroundMesh>();\n\n  $effect(() => {\n    // using groundMesh here...\n  });\n</script>\n\n<BabylonGround bind:mesh={groundMesh} />\n```\n\n## License\n\n[MIT](LICENSE)\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4009, 420],
+		[4016, 523],
+		[4023, 220],
+		[4030, 60],
+		[4037, 4],
+		[4044, 15],
+		[4051, 22],
+		[4058, 2],
+		[4065, 6],
+		[4072, 9],
+		[4079, 2],
+		[4086, 15],
+		[4093, 17],
+		[4100, 17],
+		[4107, 19],
+		[4114, 7],
+		[4121, 10],
+		[4128, 1]
+	]
 }

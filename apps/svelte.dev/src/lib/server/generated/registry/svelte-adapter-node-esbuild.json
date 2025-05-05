@@ -7,23 +7,11 @@
 	"downloads": 22,
 	"updated": "2025-03-19T02:18:13.792Z",
 	"tags": ["adapter"],
-	"runes": false,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.2.5",
 	"kit_range": "^2.8.2",
 	"last_rune_check_version": "0.2.5",
-	"downloads_history": [
-		[4057, 56],
-		[4064, 66],
-		[4071, 23],
-		[4078, 2],
-		[4085, 7],
-		[4092, 384],
-		[4099, 55],
-		[4106, 19],
-		[4113, 22]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -34,7 +22,7 @@
 			},
 			{
 				"name": "esbuild",
-				"version": "0.25.2",
+				"version": "0.25.3",
 				"size": 134169
 			},
 			{
@@ -85,5 +73,20 @@
 			[7, 8]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# SvelteKit Adapter for Node.js with ESBuild\n\n## Introduction\n\nThis SvelteKit adapter allows you to run your SvelteKit application using Node.js with the ESBuild bundler.\nIt handles cases such as server assets and node native modules more gracefully than the original `@svelte/adapter-node`.\nAdditionally, it optionally supports Prometheus metrics, if enabled by installing the `prom-client` peer dependency and setting the `METRICS_PATH` environment variable.\n\n## Options\n\n```ts\nimport type { BuildOptions } from 'esbuild';\n\ntype AdapterOptions = {\n    // The output directory for the built application.\n    out?: string;\n    // Whether to precompress the output files with gzip and brotli.\n    precompress?: boolean;\n    // Prefix for environment variables.\n    envPrefix?: string;\n    // Options for the ESBuild bundler.\n    esbuild?: BuildOptions;\n};\n```\n\n## Environment Variables\n\nYou can customize various aspects of the server at runtime by modifying the environment variables:\n\n- `METRICS_PATH`: Path for the Prometheus metrics endpoint. If not provided, metrics will not be exposed.\n- `METRICS_PREFIX`: Prefix for Prometheus metrics.\n- `METRICS_LABEL_label`: label for Prometheus metrics. Can be any arbitrary label.\n- `SOCKET_PATH`: Path for the Unix domain socket. If not provided, an HTTP server will be used.\n- `HOST`: The host address (default is `0.0.0.0`).\n- `PORT`: The port number to listen on (only relevant if no `SOCKET_PATH` is set).\n- `ORIGIN`: The origin header value.\n- `PROTOCOL_HEADER`: The header informing SvelteKit the protocol it is being served.\n- `HOST_HEADER`: The host header, as above.\n- `PORT_HEADER`: The port header, as above.\n- `ADDRESS_HEADER`: The header informing SvelteKit the original client address.\n- `XFF_DEPTH`: If `ADDRESS_HEADER` is set to `X-Forwarded-For`, the amount of trusted proxies in front of the server.\n- `BODY_SIZE_LIMIT`: The body size limit, in bytes. Can also set with a unit suffix (e.g., `10M` for 10 megabytes).\n- `SHUTDOWN_TIMEOUT`: Timeout in seconds before forcefully closing connections after SIGTERM or SIGINT.\n- `IDLE_TIMEOUT`: Number of seconds until the app automatically sleeps when using socket activation.\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4058, 56],
+		[4065, 66],
+		[4072, 23],
+		[4079, 2],
+		[4086, 7],
+		[4093, 384],
+		[4100, 55],
+		[4107, 19],
+		[4114, 22],
+		[4121, 8],
+		[4128, 2]
+	]
 }

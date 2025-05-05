@@ -722,9 +722,6 @@ async function update_cache(update: { stats?: boolean; composite?: boolean; grap
 	update.stats ??= true;
 
 	for await (const [pkg_name, data] of PackageCache.entries()) {
-		// TODO: REMOVE
-		// if (data.dependency_tree) continue;
-
 		const package_detail = await superfetch(`${REGISTRY_BASE_URL}${pkg_name}`).then((r) =>
 			r.json()
 		);
@@ -746,6 +743,12 @@ async function update_cache(update: { stats?: boolean; composite?: boolean; grap
 		delete data.dependencies;
 		// @ts-expect-error
 		delete data.unpacked_size;
+		// @ts-expect-error
+		delete data.runes;
+
+		// TODO REMOVE
+		// @ts-expect-error
+		delete data.downloads_history;
 
 		let dep_tree_promise: ReturnType<typeof build_flat_graph_from_package_json> =
 			Promise.resolve() as any;
@@ -778,6 +781,8 @@ async function update_cache(update: { stats?: boolean; composite?: boolean; grap
 			homepage: string;
 		} | null>;
 
+		data.readme = package_detail.readme;
+
 		if (update.stats) {
 			download_promise = fetch_package_download_history(pkg_name, data.downloads_history);
 			github_promise = data.repo_url
@@ -799,7 +804,7 @@ async function update_cache(update: { stats?: boolean; composite?: boolean; grap
 
 		if (update.composite) {
 			data.typescript = composite_check.types;
-			data.runes = composite_check.runes;
+			data.legacy_svelte = composite_check.legacy_svelte;
 		}
 
 		if (update.stats) {
@@ -836,21 +841,6 @@ async function* create_map_batch_generator(
 		const batch_entries = entries.slice(i, i + batch_size);
 		yield new Map(batch_entries);
 	}
-}
-
-async function check_graph(pkg: string, semver: string) {
-	const package_json_data = await superfetch(`${REGISTRY_BASE_URL}${pkg}/${semver}`, {
-		headers: HEADERS
-	}).then((r) => r.json());
-
-	const flat_graph = await build_flat_graph_from_package_json(package_json_data, 5);
-
-	console.log(JSON.stringify(flat_graph));
-
-	console.log(`Built dependency graph for ${pkg}@${semver} from cache`);
-	console.log(`- Total packages: ${flat_graph.packages.length}`);
-	console.log(`- Total dependencies: ${flat_graph.dependencies.length}`);
-	console.log(`- Circular dependencies: ${flat_graph.circular.length}`);
 }
 
 /**
@@ -900,9 +890,9 @@ for (let i = 0; i < 1; i++) {
 // await update_overrides();
 
 update_cache({
-	composite: false,
+	composite: true,
 	graph: true,
-	stats: false
+	stats: true
 });
 
 // convert_download_history_format_old();

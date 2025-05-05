@@ -7,32 +7,11 @@
 	"downloads": 13,
 	"updated": "2025-03-30T14:07:35.261Z",
 	"tags": ["miscellaneous"],
-	"runes": false,
 	"github_stars": 11,
 	"typescript": true,
 	"version": "1.1.0",
 	"svelte_range": "^5.0.0",
 	"last_rune_check_version": "1.1.0",
-	"downloads_history": [
-		[3994, 72],
-		[4001, 8],
-		[4008, 6],
-		[4015, 6],
-		[4022, 5],
-		[4029, 3],
-		[4036, 7],
-		[4043, 12],
-		[4050, 4],
-		[4057, 10],
-		[4064, 1],
-		[4071, 11],
-		[4078, 3],
-		[4085, 6],
-		[4092, 2],
-		[4099, 57],
-		[4106, 16],
-		[4113, 13]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -120,8 +99,8 @@
 			},
 			{
 				"name": "svelte",
-				"version": "5.28.1",
-				"size": 2426419
+				"version": "5.28.2",
+				"size": 2426223
 			},
 			{
 				"name": "@ampproject/remapping",
@@ -318,5 +297,29 @@
 			[36, 45]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Svelte persistent runes\n\nA Svelte reactive rune that keep its value through pages and reloads\n\n![GitHub Repo stars](https://img.shields.io/github/stars/macfja/svelte-persistent-store?style=social)\n![NPM bundle size](https://img.shields.io/bundlephobia/minzip/@macfja/svelte-persistent-store)\n![Download per week](https://img.shields.io/npm/dw/@macfja/svelte-persistent-store)\n![License](https://img.shields.io/npm/l/@macfja/svelte-persistent-store)\n![NPM version](https://img.shields.io/npm/v/@macfja/svelte-persistent-store)\n[![Checked with Biome](https://img.shields.io/badge/Checked_with-Biome-60a5fa?style=flat&logo=biome)](https://biomejs.dev)\n\n[ **[D E M O](https://www.sveltelab.dev/5aypljhy6qtirvp)** ]\n\n## Installation\n\nWith [NPM](https://www.npmjs.com/package/@macfja/svelte-persistent-runes)\n```sh\nnpm install --save-dev @macfja/svelte-persistent-runes\n# or\nyarn add --save-dev @macfja/svelte-persistent-runes\n# or\npnpm add --save-dev @macfja/svelte-persistent-runes\n# or\ndeno install --dev npm:@macfja/svelte-persistent-runes\n```\n\n## Quickstart\n\nUpdate your `./svelte.config.js` to add a new preprocessor:\n```diff\n import adapter from '@sveltejs/adapter-auto';\n+import persist from \"@macfja/svelte-persistent-runes/preprocessor\"\n const config = {\n+ \tpreprocess: [persist()],\n\tkit: {\n\t\tadapter: adapter()\n\t}\n };\n export default config;\n```\n\nReplace your `$state` with `$persist`:\n```diff\n <script>\n+import \"@macfja/svelte-persistent-runes\"\n-let count = $state(0);\n+let count = $persist(0, 'counter');\n </script>\n```\n\n## Usage\n\nThis library have 2 parts:\n- A preprocessor to add the `$persist` rune (and optionally a Vite plugin).\n- A set of configuration to persist your data.\n\nYou MUST add the preprocessor to use `$persist`.\nIt's as simple as to add it in your Svelte configuration (`svelte.config.js`) with the import of `@macfja/svelte-persistent-runes/plugins`\n\n<details>\n<summary>./svelte.config.js</summary>\n\n```js\nimport adapter from '@sveltejs/adapter-auto';\nimport { vitePreprocess } from '@sveltejs/vite-plugin-svelte';\nimport { persistPreprocessor } from \"@macfja/svelte-persistent-runes/plugins\"\n\n/** @type {import('@sveltejs/kit').Config} */\nconst config = {\n\tpreprocess: [vitePreprocess(), persistPreprocessor()],\n\tkit: {\n\t\tadapter: adapter()\n\t}\n};\n\nexport default config;\n```\n\n</details>\n\n> [!IMPORTANT]\n> If you are using `*.svelte.js`/`*.svelte.ts` file you need to also add a Vite plugin:\n> <details><summary>./vite.config.ts</summary>\n>\n> ```ts\n> import { sveltekit } from '@sveltejs/kit/vite';\n> import { defineConfig } from 'vite';\n> import { persistPlugin as persist } from \"@macfja/svelte-persistent-runes/plugins\";\n>\n> export default defineConfig({\n>   plugins: [persist(), sveltekit()]\n> });\n> ```\n>\n> </details>\n\nNow that the preprocessor is added, you can use the `$persist` rune instead of the `$state` rune.\n\n<details>\n<summary>./src/anywhere/component.svelte</summary>\n\n```html\n<script>\nimport \"@macfja/svelte-persistent-runes\"\nlet count = $persist(0, 'counter');\n</script>\n<div class=\"counter\">\n    <button onclick={() => (count -= 1)} aria-label=\"Decrease the counter by one\">-</button>\n    <div><strong>{count}</strong></div>\n    <button onclick={() => (count += 1)} aria-label=\"Increase the counter by one\">+</button>\n</div>\n```\n\n</details>\n\n<details>\n<summary>./src/anywhere/data.svelte.ts</summary>\n\n```ts\nimport \"@macfja/svelte-persistent-runes\"\nexport class Person {\n    name = $persist('John', 'user-name')\n    age = $persist(33, 'user-age')\n    \n    greet(): string {\n        return `Hello ${this.name}`;\n    }\n    birthday(): string {\n        this.age += 1;\n        return `Happy birthday ${this.name}!`\n    }\n}\nexport const currentUser = new Person()\n```\n\n</details>\n\n> [!IMPORTANT]\n> You need to import `import \"@macfja/svelte-persistent-runes\"` to prevent Typescript to complain about the unknown function `$persist`\n>\n> ---\n>\n> You can add this import in an ambient Typescript Module (like `./src/app.d.ts` in SvelteKit), and you won't need to import it in every file\n\n### Definition\n\n```ts\ntype PersistentRunesOptions = {\n    /**\n     * Convert the source data into its string representation\n     * @param input The source data\n     * @return The string representation of data\n     */\n    serialize<T>(input: T): string;\n    /**\n     * Convert back the string representation into the source data\n     * @param input The string representation of the date\n     * @return The new data based on its string representation\n     */\n    deserialize<T>(input: string): T;\n    /**\n     * Write data into the store\n     * @param key The storage key to write\n     * @param value The data to write\n     */\n    storageWrite(key: string, value: string): void;\n    /**\n     * Read data from the storage\n     * @param key The storage key to read\n     * @returns The data or `undefined` if the data don't exist in the storage\n     */\n    storageRead(key: string): string | undefined;\n};\n\n/**\n * A reactive state, that can restore its state upon page reload\n * @param initial The initial value of the state\n * @param key The storage key of the state. Must be unique in your application\n * @param options The persistence options (how and where)\n */\ndeclare function $persist<T>(initial: T, key: string, options?: Partial<PersistentRunesOption>)\n```\n\n### Options\n\nYou can customize how and where the state value is persisted.\n\nThe `$persist` runes take a third (and optional) parameter of type `PersistentRunesOption`.\n\nThe options consist of 2 main part: the serializer and the storage. It can be defined as a plain object or as the result of the `buildOptions` (impoerted from `@macfja/svelte-persistent-runes/options`)\n\n```ts\n/**\n * Create a `PersistentRunesOptions` from a serializer and a storage\n * @param serializer The serializer to use (if `undefined` then `JsonSerializer` will be used)\n * @param storage The storage to use (if `undefined` then `BrowserLocalStorage` will be used)\n */\ndeclare function buildOptions(\n    serializer: PersistentRunesSerializer | undefined, \n    storage: PersistentRunesStorage | undefined\n): PersistentRunesOptions;\n```\n\n\n#### The serializer\n\nThe serializer part of the option are:\n - `serialize`: This function is responsible for converting the original type into a string\n - `deserialize`: This function is responsible to convert back a string to the original type\n\nThe library have several built-in serializer:\n - `JsonSerializerFactory`: factory to create a JSON based serializer\n   - `JsonSerializer`: A basic JSON serializer (no replacer, nor reviver)\n - `DevalueSerializerFactory`: factory to create a [Devalue] based serializer\n   - `DevalueSerializer`: A basic [Devalue] serializer (no reducers, nor revivers)\n - `ESSerializerSerializerFactory`: factory to create a [ESSerializer] based serializer\n   - `ESSerializerSerializer`: A basic [ESSerializer] serializer (no SerializeOptions, nor classes)\n - `MacfjaSerializerFactory`: factory to create a [@macfja/serializer] based serializer\n   - `MacfjaSerializer`: A basic [@macfja/serializer] serializer (no additional classes mapping)\n - `SuperJsonSerializer`: A [superjson] serializer\n - `NextJsonSerializerFactory`: factory to create a [next-json] based serializer\n   - `NextJsonSerializerFactory`: A basic [next-json] serializer (no options, nor replacers, nor revivers)\n - `PhpSerializeSerializerFactory`: factory to create a [php-serialize] based serializer\n   - `PhpSerializeSerializer`: A basic [php-serialize] serializer (no options)\n - `SerializeAnythingSerializerFactory`: factory to create a [serialize-anything] based serializer\n   - `SerializeAnythingSerializer`: A basic [serialize-anything] serializer (no options)\n\n[ESSerializer]: https://www.npmjs.com/package/esserializer\n[Devalue]: https://www.npmjs.com/package/devalue\n[@macfja/serializer]: https://www.npmjs.com/package/@macfja/serializer\n[superjson]: https://www.npmjs.com/package/superjson\n[next-json]: https://www.npmjs.com/package/next-json\n[php-serialize]: https://www.npmjs.com/package/php-serialize\n[serialize-anything]: https://www.npmjs.com/package/serialize-anything\n\n#### The storage\n\nThe storage part of the option are:\n - `storageWrite`: This function is responsible to write data into the storage\n - `storageRead`: This function is responsible to read data from the storage\n\nThe library have several built-in storage:\n- `BrowserCookieStorageFactory`: factory to create a Cookie based storage (DOM API, browser only)\n   - `BrowserCookieStorage`: A basic Cookie storage (no particular options, except for `samesite: Strict`)\n- `BrowserLocalStorage`: a browser localStorage storage ([DOM API](https://developer.mozilla.org/en-US/docs/Web/API/Storage), browser only)\n- `BrowserSessionStorage`: a browser sessionStorage storage ([DOM API](https://developer.mozilla.org/en-US/docs/Web/API/Storage), browser only)\n- `addEncryptionStorage`: a wrapper function to add AES [GCM encryption] on stored data\n\n[GCM encryption]: https://en.wikipedia.org/wiki/Galois/Counter_Mode\n\n#### Example\n\n<details>\n\n<summary>Browser session storage and @macfja/serializer</summary>\n\n```html\n<script>\nimport \"@macfja/svelte-persistent-runes\"\nimport {\n    buildOptions,\n    MacfjaSerializer,\n    BrowserSessionStorage\n} \"@macfja/svelte-persistent-runes/options\"\nlet count = $persist(0, 'counter', buildOptions(MacfjaSerializer, BrowserSessionStorage));\n</script>\n<div class=\"counter\">\n    <button onclick={() => (count -= 1)} aria-label=\"Decrease the counter by one\">-</button>\n    <div><strong>{count}</strong></div>\n    <button onclick={() => (count += 1)} aria-label=\"Increase the counter by one\">+</button>\n</div>\n```\n\n</details>\n\n<details>\n\n<summary>Browser local storage, encrypted and SuperJson </summary>\n\n```html\n<script>\nimport \"@macfja/svelte-persistent-runes\"\nimport {\n    buildOptions,\n    SuperJsnoSerializer,\n    BrowserLocalStorage,\n    addEncryptionStorage\n} \"@macfja/svelte-persistent-runes/options\"\nlet count = $persist(0, 'counter', buildOptions(\n    SuperJsnoSerializer,\n    addEncryptionStorage(BrowserLocalStorage, '12345678901234567890123456879012')\n);\n</script>\n<div class=\"counter\">\n    <button onclick={() => (count -= 1)} aria-label=\"Decrease the counter by one\">-</button>\n    <div><strong>{count}</strong></div>\n    <button onclick={() => (count += 1)} aria-label=\"Increase the counter by one\">+</button>\n</div>\n```\n\n</details>\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3995, 72],
+		[4002, 8],
+		[4009, 6],
+		[4016, 6],
+		[4023, 5],
+		[4030, 3],
+		[4037, 7],
+		[4044, 12],
+		[4051, 4],
+		[4058, 10],
+		[4065, 1],
+		[4072, 11],
+		[4079, 3],
+		[4086, 6],
+		[4093, 2],
+		[4100, 57],
+		[4107, 16],
+		[4114, 13],
+		[4121, 13],
+		[4128, 18]
+	]
 }

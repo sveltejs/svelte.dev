@@ -7,18 +7,12 @@
 	"downloads": 20,
 	"updated": "2025-04-01T06:23:03.821Z",
 	"tags": ["ui"],
-	"runes": true,
 	"github_stars": 1,
 	"typescript": true,
 	"version": "1.0.4",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.20.2",
 	"last_rune_check_version": "1.0.4",
-	"downloads_history": [
-		[4099, 180],
-		[4106, 72],
-		[4113, 20]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -30,5 +24,14 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# Flowbite Svelte Illustrations\n\n[Docs](https://flowbite-svelte-illustrations.codewithshin.com/)\n\n## Requirements\n\n- Svelte 5\n- tailwindCSS\n\n## Installation\n\n```sh\npnpm i -D flowbite-svelte-illustrations\n```\n\n## How to use\n\n```svelte\n<script lang=\"ts\">\n\timport { A404NotFoundSmiley, A404NotFoundSmileyDark } from 'flowbite-svelte-illustrations';\n</script>\n\n<div class=\"dark:hidden\">\n\t<A404NotFoundSmiley />\n</div>\n<div class=\"hidden dark:block\">\n\t<A404NotFoundSmileyDark />\n</div>\n```\n\n## Types\n\n```ts\nexport type TitleType = {\n\tid?: string;\n\ttitle?: string;\n};\n\nexport type DescType = {\n\tid?: string;\n\tdesc?: string;\n};\n\nimport type { SVGAttributes } from 'svelte/elements';\ninterface Props extends SVGAttributes<SVGElement> {\n\tcolor1?: string;\n\tcolor2?: string;\n\tcolor3?: string;\n\tcolor4?: string;\n\t// more colors depends on illustration\n\tariaLabel?: string;\n\tclass?: string;\n\theight?: string;\n\ttitle?: TitleType;\n\tdesc?: DescType;\n}\n```\n\n## Props\n\n```md\n- color1 = '#2563eb',\n- color2 = '#9ab7f6',\n- color3 = '#c8d8fa',\n- color4 = '#d6e2fb',\n  // more colors depends on illustration\n- ariaLabel = <file name>,\n- class: className = 'shrink-0 w-auto max-w-[16rem] h-40 text-gray-800 dark:text-white',\n- height = '100',\n- title,\n- desc,\n- ...restProps\n```\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4100, 180],
+		[4107, 72],
+		[4114, 20],
+		[4121, 11],
+		[4128, 17]
+	]
 }

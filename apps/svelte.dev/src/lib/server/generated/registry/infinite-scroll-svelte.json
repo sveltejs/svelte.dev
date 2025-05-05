@@ -7,28 +7,12 @@
 	"downloads": 18,
 	"updated": "2025-01-11T08:11:21.097Z",
 	"tags": ["miscellaneous"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.3.6",
 	"svelte_range": "5.16.5",
 	"kit_range": "2.15.2",
 	"last_rune_check_version": "0.3.6",
-	"downloads_history": [
-		[4022, 1185],
-		[4029, 108],
-		[4036, 10],
-		[4043, 17],
-		[4050, 17],
-		[4057, 3],
-		[4064, 7],
-		[4071, 16],
-		[4078, 6],
-		[4085, 24],
-		[4099, 40],
-		[4106, 10],
-		[4113, 18]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -40,5 +24,24 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# infinite-scroll-svelte\r\n\r\nWrapper that fires events when the user has scrolled it to the beginning or end\r\n\r\n## Important\r\n\r\n- All set keys inside `<InfiniteScroll />` must be unique, otherwise auto-scrolling will not work\r\n\r\n- `onPrev` and `onNext` **will block** the event handler until one of the them completes.\r\n\r\n- First and last elements are temporarily marked with \\[data-infinite-scroll-xxxxx\\] identifiers for internal work, so **only sequence elements should be inside** `<InfiniteScroll>`:\r\n\r\nIncorrect\r\n\r\n```svelte\r\n<InfiniteScroll>\r\n\t<h1>Title</h1>\r\n\t{#each items as item (item)}\r\n\t\t{item}\r\n\t{/each}\r\n</InfiniteScroll>\r\n```\r\n\r\nCorrect\r\n\r\n```svelte\r\n<SomeWrapper>\r\n\t<h1>Title</h1>\r\n\t<InfiniteScroll>\r\n\t\t{#each items as item (item)}\r\n\t\t\t{item}\r\n\t\t{/each}\r\n\t</InfiniteScroll>\r\n</SomeWrapper>\r\n```\r\n\r\n## Props\r\n\r\n| Property                      | Type                     | Default     | Description                                                                                                                 |\r\n| ----------------------------- | ------------------------ | ----------- | --------------------------------------------------------------------------------------------------------------------------- |\r\n| `children`                    | `Snippet`                |             |                                                                                                                             |\r\n| `onPrev?`                     | `async fn()`             | `() => {}`  | Occurs when the user scrolls the container to the top                                                                       |\r\n| `onNext?`                     | `async fn()`             | `() => {}`  | Occurs when the user scrolls to the end of the container                                                                    |\r\n| `scrollX?`                    | `boolean`                | `false`     | Horizontal scrolling                                                                                                        |\r\n| `scrollY?`                    | `boolean`                | `true`      | Vertical scrolling                                                                                                          |\r\n| `thresholdPrevInPx?`          | `number`                 | `120`       | Container start threshold for calling `onPrev`                                                                              |\r\n| `thresholdNextInPx?`          | `number`                 | `120`       | Container end threshold for calling `onNext`                                                                                |\r\n| `throttleInMs?`=              | `number`                 | `150`       | Interval between `onscroll` event calls                                                                                     |\r\n| `promiseRejectTimeoutInSecs?` | `number`                 | `5`         | Tthe maximum time to wait for the `onPrev` and `onNext` functions, if the timeout is exceeded, the onError event will occur |\r\n| `onLock?`                     | `() => void`             | `() => {}`  | Fires when one of the `onPrev` or `onNext` functions called                                                                 |\r\n| `onUnlock?`                   | `() => void`             | `() => {}`  | Fires when one of the `onPrev` or `onNext` functions completes (good tone for hiding the loading)                           |\r\n| `onError?`                    | `(error: Error) => void` | `() => {}`  | Fires when one of the `onPrev` or `onNext` functions fails                                                                  |\r\n| `...props?`                   | `HTMLAttributes`         | `undefined` | HTML element attributes                                                                                                     |\r\n\r\n## Example\r\n\r\n```svelte\r\n<script lang=\"ts\">\r\n\timport { InfiniteScroll } from 'infinite-scroll-svelte';\r\n\r\n\tconst items = $state<number[]>([...Array(100).keys()]);\r\n\tconst handleNext = async () => items.push(Math.random());\r\n</script>\r\n\r\n<InfiniteScroll class=\"size-64 border-2 border-current\" throttleInMs={50} onNext={handleNext}>\r\n\t{#each items as item (item)}\r\n\t\t<div>{item}</div>\r\n\t{/each}\r\n</InfiniteScroll>\r\n```\r\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4023, 1185],
+		[4030, 108],
+		[4037, 10],
+		[4044, 17],
+		[4051, 17],
+		[4058, 3],
+		[4065, 7],
+		[4072, 16],
+		[4079, 6],
+		[4086, 24],
+		[4100, 40],
+		[4107, 10],
+		[4114, 18],
+		[4121, 14],
+		[4128, 10]
+	]
 }

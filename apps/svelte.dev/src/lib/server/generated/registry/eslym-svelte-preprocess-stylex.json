@@ -6,23 +6,12 @@
 	"downloads": 17,
 	"updated": "2025-03-08T13:50:29.157Z",
 	"tags": ["tooling"],
-	"runes": false,
 	"github_stars": 0,
 	"homepage": null,
 	"typescript": true,
 	"version": "0.1.5",
 	"svelte_range": ">=5.0.0",
 	"last_rune_check_version": "0.1.5",
-	"downloads_history": [
-		[4064, 151],
-		[4071, 194],
-		[4078, 246],
-		[4085, 45],
-		[4092, 50],
-		[4099, 7],
-		[4106, 6],
-		[4113, 17]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -34,5 +23,19 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4065, 151],
+		[4072, 194],
+		[4079, 246],
+		[4086, 45],
+		[4093, 50],
+		[4100, 7],
+		[4107, 6],
+		[4114, 17],
+		[4121, 5],
+		[4128, 2]
+	]
 }

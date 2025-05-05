@@ -7,17 +7,12 @@
 	"downloads": 5,
 	"updated": "2025-03-24T02:04:46.492Z",
 	"tags": ["ui"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.0.1",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "0.0.1",
-	"downloads_history": [
-		[4099, 63],
-		[4113, 5]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -227,5 +222,14 @@
 			[32, 31]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# svelte-roughviz\n\nIt's a Svelte-wrapper for [roughViz.js](https://github.com/jwilber/roughViz). See examples in the `+page.svelte`.\n\n## Installation\n\n```bash\nnpm install svelte-roughviz\n```\n\n## Components\n\n- Bar,\n- BarH,\n- Donut,\n- Line,\n- Pie,\n- Scatter,\n- StackedBar\n- Network\n- Force\n\n## Usage\n\nExample for using the BarH-Chart.\n\n```svelte\n<BarH\n  title=\"Vehicles I've Had\"\n  titleFontSize=\"1.5rem\"\n  legend={false}\n  margin={{ top: 50, bottom: 100, left: 160, right: 0 }}\n  data={{\n    labels: [\n      \"1992 Ford Aerostar Van\",\n      \"2013 Kia Rio\",\n      \"1980 Honda CB 125s\",\n      \"1992 Toyota Tercel\",\n    ],\n    values: [8, 4, 6, 2],\n  }}\n  xLabel=\"Time Owned (Years)\"\n  strokeWidth=\"2\"\n  fillStyle=\"zigzag-line\"\n  highlight=\"gold\"\n/>\n```\n\nUseful tip: \n- You can use props `style` and `class` to customize the chart's style.\n- add `.link {// your style}` when using `Network` component.\n\n## Development\n\nRun it via\n```bash\nnpm run dev\n```\nThis runs an example app (at `http://localhost:5173/`) via [sv](https://svelte.dev/docs/cli/overview).\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4100, 63],
+		[4114, 5],
+		[4121, 4],
+		[4128, 6],
+		[4135, 6]
+	]
 }

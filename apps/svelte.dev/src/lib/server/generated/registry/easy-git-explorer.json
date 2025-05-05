@@ -7,42 +7,11 @@
 	"downloads": 6,
 	"updated": "2024-06-25T23:59:37.496Z",
 	"tags": ["tooling"],
-	"runes": false,
 	"github_stars": 0,
 	"typescript": false,
 	"version": "0.2.1",
 	"svelte_range": "^4.2.8",
 	"last_rune_check_version": "0.2.1",
-	"downloads_history": [
-		[3819, 58],
-		[3826, 109],
-		[3833, 7],
-		[3840, 7],
-		[3847, 4],
-		[3854, 1],
-		[3861, 3],
-		[3868, 2],
-		[3875, 4],
-		[3882, 1],
-		[3889, 3],
-		[3903, 7],
-		[3917, 3],
-		[3924, 4],
-		[3945, 2],
-		[3952, 1],
-		[3973, 4],
-		[4001, 1],
-		[4015, 2],
-		[4022, 4],
-		[4029, 3],
-		[4036, 6],
-		[4043, 5],
-		[4050, 2],
-		[4064, 1],
-		[4092, 3],
-		[4106, 6],
-		[4113, 6]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -335,8 +304,138 @@
 			},
 			{
 				"name": "fastify",
-				"version": "4.29.0",
-				"size": 2459906
+				"version": "4.29.1",
+				"size": 2463825
+			},
+			{
+				"name": "@fastify/ajv-compiler",
+				"version": "3.6.0",
+				"size": 53075
+			},
+			{
+				"name": "ajv",
+				"version": "8.17.1",
+				"size": 1030888
+			},
+			{
+				"name": "fast-deep-equal",
+				"version": "3.1.3",
+				"size": 12966
+			},
+			{
+				"name": "fast-uri",
+				"version": "3.0.6",
+				"size": 109402
+			},
+			{
+				"name": "json-schema-traverse",
+				"version": "1.0.0",
+				"size": 22220
+			},
+			{
+				"name": "require-from-string",
+				"version": "2.0.2",
+				"size": 3422
+			},
+			{
+				"name": "fast-uri",
+				"version": "2.4.0",
+				"size": 64382
+			},
+			{
+				"name": "ajv-formats",
+				"version": "2.1.1",
+				"size": 52227
+			},
+			{
+				"name": "@fastify/error",
+				"version": "3.4.1",
+				"size": 18460
+			},
+			{
+				"name": "@fastify/fast-json-stringify-compiler",
+				"version": "4.3.0",
+				"size": 22748
+			},
+			{
+				"name": "fast-json-stringify",
+				"version": "5.16.1",
+				"size": 368570
+			},
+			{
+				"name": "rfdc",
+				"version": "1.4.1",
+				"size": 27150
+			},
+			{
+				"name": "ajv-formats",
+				"version": "3.0.1",
+				"size": 56763
+			},
+			{
+				"name": "json-schema-ref-resolver",
+				"version": "1.0.1",
+				"size": 55958
+			},
+			{
+				"name": "@fastify/merge-json-schemas",
+				"version": "0.1.1",
+				"size": 101012
+			},
+			{
+				"name": "abstract-logging",
+				"version": "2.0.1",
+				"size": 2300
+			},
+			{
+				"name": "avvio",
+				"version": "8.4.0",
+				"size": 181742
+			},
+			{
+				"name": "fast-content-type-parse",
+				"version": "1.1.0",
+				"size": 20784
+			},
+			{
+				"name": "find-my-way",
+				"version": "8.2.2",
+				"size": 384810
+			},
+			{
+				"name": "safe-regex2",
+				"version": "3.1.0",
+				"size": 7566
+			},
+			{
+				"name": "ret",
+				"version": "0.4.3",
+				"size": 66235
+			},
+			{
+				"name": "fast-querystring",
+				"version": "1.1.2",
+				"size": 19065
+			},
+			{
+				"name": "light-my-request",
+				"version": "5.14.0",
+				"size": 129981
+			},
+			{
+				"name": "cookie",
+				"version": "0.7.2",
+				"size": 23382
+			},
+			{
+				"name": "process-warning",
+				"version": "3.0.0",
+				"size": 21995
+			},
+			{
+				"name": "set-cookie-parser",
+				"version": "2.7.1",
+				"size": 16074
 			},
 			{
 				"name": "pino",
@@ -404,26 +503,6 @@
 				"size": 70022
 			},
 			{
-				"name": "rfdc",
-				"version": "1.4.1",
-				"size": 27150
-			},
-			{
-				"name": "avvio",
-				"version": "8.4.0",
-				"size": 181742
-			},
-			{
-				"name": "@fastify/error",
-				"version": "3.4.1",
-				"size": 18460
-			},
-			{
-				"name": "semver",
-				"version": "7.7.1",
-				"size": 96674
-			},
-			{
 				"name": "proxy-addr",
 				"version": "2.0.7",
 				"size": 15399
@@ -439,134 +518,24 @@
 				"size": 42145
 			},
 			{
-				"name": "toad-cache",
-				"version": "3.7.0",
-				"size": 49551
-			},
-			{
-				"name": "find-my-way",
-				"version": "8.2.2",
-				"size": 384810
-			},
-			{
-				"name": "safe-regex2",
-				"version": "3.1.0",
-				"size": 7566
-			},
-			{
-				"name": "ret",
-				"version": "0.4.3",
-				"size": 66235
-			},
-			{
-				"name": "fast-deep-equal",
-				"version": "3.1.3",
-				"size": 12966
-			},
-			{
-				"name": "fast-querystring",
-				"version": "1.1.2",
-				"size": 19065
-			},
-			{
-				"name": "process-warning",
-				"version": "3.0.0",
-				"size": 21995
-			},
-			{
-				"name": "abstract-logging",
-				"version": "2.0.1",
-				"size": 2300
-			},
-			{
-				"name": "light-my-request",
-				"version": "5.14.0",
-				"size": 129981
-			},
-			{
-				"name": "cookie",
-				"version": "0.7.2",
-				"size": 23382
-			},
-			{
-				"name": "set-cookie-parser",
-				"version": "2.7.1",
-				"size": 16074
-			},
-			{
 				"name": "secure-json-parse",
 				"version": "2.7.0",
 				"size": 40656
 			},
 			{
-				"name": "fast-json-stringify",
-				"version": "5.16.1",
-				"size": 368570
+				"name": "semver",
+				"version": "7.7.1",
+				"size": 96674
 			},
 			{
-				"name": "ajv",
-				"version": "8.17.1",
-				"size": 1030888
-			},
-			{
-				"name": "fast-uri",
-				"version": "3.0.6",
-				"size": 109402
-			},
-			{
-				"name": "json-schema-traverse",
-				"version": "1.0.0",
-				"size": 22220
-			},
-			{
-				"name": "require-from-string",
-				"version": "2.0.2",
-				"size": 3422
-			},
-			{
-				"name": "fast-uri",
-				"version": "2.4.0",
-				"size": 64382
-			},
-			{
-				"name": "ajv-formats",
-				"version": "3.0.1",
-				"size": 56763
-			},
-			{
-				"name": "json-schema-ref-resolver",
-				"version": "1.0.1",
-				"size": 55958
-			},
-			{
-				"name": "@fastify/merge-json-schemas",
-				"version": "0.1.1",
-				"size": 101012
-			},
-			{
-				"name": "@fastify/ajv-compiler",
-				"version": "3.6.0",
-				"size": 53075
-			},
-			{
-				"name": "ajv-formats",
-				"version": "2.1.1",
-				"size": 52227
-			},
-			{
-				"name": "fast-content-type-parse",
-				"version": "1.1.0",
-				"size": 20784
-			},
-			{
-				"name": "@fastify/fast-json-stringify-compiler",
-				"version": "4.3.0",
-				"size": 22748
+				"name": "toad-cache",
+				"version": "3.7.0",
+				"size": 49551
 			},
 			{
 				"name": "open",
-				"version": "10.1.1",
-				"size": 55216
+				"version": "10.1.2",
+				"size": 56489
 			},
 			{
 				"name": "default-browser",
@@ -645,8 +614,8 @@
 			},
 			{
 				"name": "svelte2tsx",
-				"version": "0.7.36",
-				"size": 766555
+				"version": "0.7.37",
+				"size": 772627
 			},
 			{
 				"name": "dedent-js",
@@ -1194,65 +1163,65 @@
 			[0, 58],
 			[58, 59],
 			[59, 60],
-			[59, 61],
-			[59, 62],
-			[59, 63],
-			[63, 64],
+			[60, 61],
+			[60, 62],
+			[60, 63],
+			[60, 64],
 			[59, 65],
 			[59, 66],
-			[59, 67],
-			[59, 68],
-			[59, 69],
-			[59, 70],
-			[70, 60],
-			[59, 71],
-			[71, 68],
-			[58, 72],
-			[58, 73],
-			[73, 42],
-			[73, 74],
-			[58, 75],
-			[58, 76],
-			[76, 77],
-			[76, 78],
-			[58, 79],
-			[58, 80],
-			[80, 81],
-			[81, 82],
-			[80, 83],
-			[80, 84],
-			[84, 54],
+			[66, 60],
+			[58, 67],
+			[58, 68],
+			[68, 69],
+			[69, 60],
+			[69, 70],
+			[69, 65],
+			[69, 71],
+			[71, 60],
+			[69, 61],
+			[69, 72],
+			[72, 61],
+			[69, 73],
+			[73, 61],
 			[58, 74],
+			[58, 75],
+			[75, 42],
+			[75, 67],
+			[58, 76],
+			[58, 69],
+			[58, 77],
+			[77, 78],
+			[78, 79],
+			[77, 61],
+			[77, 80],
+			[80, 54],
+			[58, 81],
+			[81, 82],
+			[81, 83],
+			[81, 84],
 			[58, 85],
-			[58, 86],
-			[58, 87],
-			[87, 88],
-			[87, 85],
-			[87, 89],
-			[58, 90],
-			[58, 91],
-			[91, 92],
-			[92, 83],
-			[92, 93],
-			[92, 94],
-			[92, 95],
-			[91, 72],
-			[91, 96],
-			[91, 97],
-			[97, 92],
-			[91, 83],
-			[91, 98],
-			[98, 83],
-			[91, 99],
-			[99, 83],
-			[58, 100],
-			[100, 92],
-			[100, 96],
-			[100, 101],
-			[101, 92],
+			[85, 86],
+			[85, 87],
+			[85, 88],
+			[85, 89],
+			[89, 90],
+			[85, 91],
+			[85, 92],
+			[85, 93],
+			[85, 94],
+			[85, 95],
+			[85, 96],
+			[96, 86],
+			[85, 97],
+			[97, 94],
+			[58, 83],
+			[58, 98],
+			[98, 99],
+			[98, 100],
+			[58, 70],
+			[58, 101],
 			[58, 102],
 			[58, 103],
-			[103, 91],
 			[0, 104],
 			[104, 105],
 			[105, 106],
@@ -1923,5 +1892,39 @@
 			[215, 128]
 		],
 		"circular": []
-	}
+	},
+	"legacy_svelte": false,
+	"readme": "# Easy Git Explorer\r\n\r\nEasily explore your git repositories.\r\n\r\n## Table of Contents\r\n\r\n- [Easy Git Explorer](#easy-git-explorer)\r\n  - [Table of Contents](#table-of-contents)\r\n  - [Install](#install)\r\n  - [Use](#use)\r\n  - [Arguments](#arguments)\r\n  - [Changelog](#changelog)\r\n  - [FAQs](#faqs)\r\n\r\n## Install\r\n\r\n```cmd\r\nnpm install -g easy-git-explorer\r\n```\r\n\r\n## Use\r\n\r\nRun the following command on the folder where you git repository is:\r\n\r\n```cmd\r\nnpx easy-git-explorer\r\n```\r\n\r\n## Arguments\r\n\r\nNo arguments for now.\r\n\r\n## Changelog\r\n\r\n**Version 0.2:**\r\n\r\n- added header and table components\r\n\r\n**Version 0.1:**\r\n\r\n- published library\r\n\r\n## FAQs\r\n\r\nNo FAQs for now. (⌐■_■)",
+	"downloads_history": [
+		[3820, 58],
+		[3827, 109],
+		[3834, 7],
+		[3841, 7],
+		[3848, 4],
+		[3855, 1],
+		[3862, 3],
+		[3869, 2],
+		[3876, 4],
+		[3883, 1],
+		[3890, 3],
+		[3904, 7],
+		[3918, 3],
+		[3925, 4],
+		[3946, 2],
+		[3953, 1],
+		[3974, 4],
+		[4002, 1],
+		[4016, 2],
+		[4023, 4],
+		[4030, 3],
+		[4037, 6],
+		[4044, 5],
+		[4051, 2],
+		[4065, 1],
+		[4093, 3],
+		[4107, 6],
+		[4114, 6],
+		[4121, 9],
+		[4128, 2]
+	]
 }

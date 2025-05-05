@@ -7,23 +7,12 @@
 	"downloads": 43,
 	"updated": "2025-03-21T21:08:50.224Z",
 	"tags": ["media"],
-	"runes": true,
 	"github_stars": 17,
 	"typescript": true,
 	"version": "1.1.4",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.20.2",
 	"last_rune_check_version": "1.1.4",
-	"downloads_history": [
-		[4064, 910],
-		[4071, 2648],
-		[4078, 373],
-		[4085, 116],
-		[4092, 365],
-		[4099, 200],
-		[4106, 23],
-		[4113, 43]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -35,5 +24,19 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# embedz\n\n[![NPM](https://img.shields.io/npm/v/@embedz/svelte?color=red)](https://www.npmjs.com/package/@embedz/svelte)\n[![MIT License](https://img.shields.io/github/license/embedz/embedz.svg?color=blue)](https://github.com/embedz/embedz/blob/next/LICENSE)\n\nEasy, dependency free embeds for Svelte and Vue.\n\n[Demo](https://svelte.dev/playground/ca582264a045460b99fc444a0b3d30f1?version=5.20.4)\n\n## Installation\n\n```shell\n# npm\nnpm install @embedz/svelte\n```\n\n```shell\n# pnpm\npnpm install @embedz/svelte\n```\n\n```shell\n# yarn\nyarn add @embedz/svelte\n```\n\n## Usage\n\n```svelte\n<script>\n  import { Dailymotion, Vimeo, YouTube } from \"@embedz/svelte\";\n</script>\n\n<YouTube \n  id=\"C7eGZUBdL4g\" \n  posterquality=\"max\"\n/>\n```\n\n\n## Youtube\n\n### id\n\ntype: ``string``\n\n```svelte\n<YouTube id=\"C7eGZUBdL4g\" />\n```\n\nYou can also pass in the full URL for the video\n\n```svelte\n<YouTube id=\"https://youtu.be/C7eGZUBdL4g\" />\n```\n\n### poster\n\ntype: ``string``\n\n```svelte\n<YouTube\n  id=\"C7eGZUBdL4g\"\n  poster=\"https://picsum.photos/1280/720\"\n/>\n```\n\n### posterquality\n\ntype: ``\"max\" | \"high\" | \"default\" | \"low\"``\n\ndefault: ``\"default\"``\n\n```svelte\n<YouTube\n  id=\"C7eGZUBdL4g\"\n  posterquality=\"low\"\n/>\n```\n\n### params\n\ntype: ``string``\n\n```svelte\n<YouTube\n  id=\"C7eGZUBdL4g\"\n  params=\"controls=0&mute=1\"\n/>\n```\n\n### ratio\n\ntype: ``string``\n\n```svelte\n<YouTube\n  id=\"C7eGZUBdL4g\"\n  ratio=\"4:3\"\n/>\n```\n\n### title\n\ntype: ``string``\n\n```svelte\n<YouTube\n  id=\"C7eGZUBdL4g\"\n  title=\"Rock the House\"\n/>\n```\n\n## Vimeo\n\n### id\n\ntype: ``string``\n\n```svelte\n<Vimeo id=\"32001208\" />\n```\n\nYou can also pass in the full URL for the video\n\n```svelte\n<Vimeo id=\"https://vimeo.com/32001208\" />\n```\n\n### poster\n\ntype: ``string``\n\n```svelte\n<Vimeo\n  id=\"32001208\"\n  poster=\"https://picsum.photos/1280/720\"\n/>\n```\n\n### posterquality\n\ntype: ``\"max\" | \"high\" | \"default\" | \"low\"``\n\ndefault: ``\"default\"``\n\n```svelte\n<Vimeo\n  id=\"32001208\"\n  posterquality=\"low\"\n/>\n```\n\n### params\n\ntype: ``string``\n\n```svelte\n<Vimeo\n  id=\"32001208\"\n  params=\"controls=0&mute=1\"\n/>\n```\n\n### ratio\n\ntype: ``string``\n\n```svelte\n<Vimeo\n  id=\"32001208\"\n  ratio=\"4:3\"\n/>\n```\n\n### title\n\ntype: ``string``\n\n```svelte\n<Vimeo\n  id=\"32001208\"\n  title=\"Earth\"\n/>\n```\n\n## Dailymotion\n\n### id\n\ntype: ``string``\n\n```svelte\n<Dailymotion id=\"x8e31lf\" />\n```\n\nYou can also pass in the full URL for the video\n\n```svelte\n<Dailymotion id=\"https://dai.ly/x8e31lf\" />\n```\n\n### poster\n\ntype: ``string``\n\n```svelte\n<Dailymotion \n  id=\"x8e31lf\"\n  poster=\"https://picsum.photos/1280/720\"\n/>\n```\n\n### posterquality\n\ntype: ``\"max\" | \"high\" | \"default\" | \"low\"``\n\ndefault: ``\"default\"``\n\n```svelte\n<Dailymotion \n  id=\"x8e31lf\"\n  posterquality=\"low\"\n/>\n```\n\n### params\n\ntype: ``string``\n\n```svelte\n<Dailymotion \n  id=\"x8e31lf\"\n  params=\"mute=true&loop=false\"\n/>\n```\n\n### ratio\n\ntype: ``string``\n\n```svelte\n<Dailymotion \n  id=\"x8e31lf\"\n  ratio=\"4:3\"\n/>\n```\n\n### title\n\ntype: ``string``\n\n```svelte\n<Dailymotion \n  id=\"x8e31lf\"\n  title=\"Dolby Vision\"\n/>\n```\n\n## Development\n\n```shell\ngit clone https://github.com/embedz/embedz.git\ncd embedz/packages/svelte\nnpm install\nnpm run dev -- --open\n```\n\n## License\n\nLicensed under the [MIT license](https://github.com/embedz/embedz/blob/main/LICENSE.md).\n\n## Contributors\n\nContributions are welcome! Please feel free to submit a Pull Request.\n\n<a href=\"https://github.com/vueframe/vueframe/graphs/contributors\">\n  <img src=\"https://contrib.rocks/image?repo=vueframe/vueframe\" />\n</a>",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4065, 910],
+		[4072, 2648],
+		[4079, 373],
+		[4086, 116],
+		[4093, 365],
+		[4100, 200],
+		[4107, 23],
+		[4114, 43],
+		[4121, 37],
+		[4128, 37]
+	]
 }

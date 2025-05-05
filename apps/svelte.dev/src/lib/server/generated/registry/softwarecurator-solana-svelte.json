@@ -7,51 +7,12 @@
 	"downloads": 7,
 	"updated": "2024-05-03T05:50:46.872Z",
 	"tags": ["integration"],
-	"runes": true,
 	"github_stars": 3,
 	"typescript": true,
 	"version": "0.1.0",
 	"svelte_range": "^4.0.0 || ^5.0.0-next.1",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.1.0",
-	"downloads_history": [
-		[3749, 80],
-		[3756, 11],
-		[3763, 3],
-		[3770, 171],
-		[3777, 18],
-		[3784, 7],
-		[3791, 11],
-		[3798, 1],
-		[3805, 5],
-		[3812, 1],
-		[3819, 6],
-		[3833, 14],
-		[3840, 1],
-		[3847, 1],
-		[3861, 12],
-		[3868, 1],
-		[3882, 1],
-		[3896, 11],
-		[3917, 5],
-		[3924, 1],
-		[3938, 4],
-		[3945, 2],
-		[3959, 5],
-		[3973, 2],
-		[3994, 2],
-		[4001, 1],
-		[4015, 13],
-		[4036, 16],
-		[4043, 14],
-		[4050, 3],
-		[4057, 1],
-		[4071, 1],
-		[4078, 5],
-		[4092, 5],
-		[4106, 12],
-		[4113, 7]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -67,13 +28,13 @@
 			},
 			{
 				"name": "@solana/wallet-adapter-base",
-				"version": "0.9.24",
-				"size": 96759
+				"version": "0.9.26",
+				"size": 96760
 			},
 			{
-				"name": "eventemitter3",
-				"version": "4.0.7",
-				"size": 37967
+				"name": "@solana/wallet-standard-features",
+				"version": "1.3.0",
+				"size": 50417
 			},
 			{
 				"name": "@wallet-standard/base",
@@ -86,42 +47,34 @@
 				"size": 41150
 			},
 			{
-				"name": "@solana/wallet-standard-features",
-				"version": "1.3.0",
-				"size": 50417
+				"name": "eventemitter3",
+				"version": "5.0.1",
+				"size": 73390
 			},
 			{
 				"name": "@solana/web3.js",
-				"version": "1.98.0",
-				"size": 10934200
+				"version": "1.98.2",
+				"size": 11148516
 			},
 			{
-				"name": "bs58",
-				"version": "4.0.1"
+				"name": "@babel/runtime",
+				"version": "7.27.1",
+				"size": 246647
 			},
 			{
-				"name": "base-x",
-				"version": "3.0.11",
-				"size": 9524
+				"name": "@noble/curves",
+				"version": "1.9.0",
+				"size": 1697790
 			},
 			{
-				"name": "safe-buffer",
-				"version": "5.2.1",
-				"size": 32101
+				"name": "@noble/hashes",
+				"version": "1.8.0",
+				"size": 1145416
 			},
 			{
-				"name": "bn.js",
-				"version": "5.2.1",
-				"size": 99045
-			},
-			{
-				"name": "borsh",
-				"version": "0.7.0",
-				"size": 34598
-			},
-			{
-				"name": "text-encoding-utf-8",
-				"version": "1.0.2"
+				"name": "@solana/buffer-layout",
+				"version": "4.0.1",
+				"size": 197207
 			},
 			{
 				"name": "buffer",
@@ -139,6 +92,77 @@
 				"size": 6796
 			},
 			{
+				"name": "@solana/codecs-numbers",
+				"version": "2.1.0",
+				"size": 460338
+			},
+			{
+				"name": "@solana/errors",
+				"version": "2.1.0",
+				"size": 1379520
+			},
+			{
+				"name": "chalk",
+				"version": "5.4.1",
+				"size": 44242
+			},
+			{
+				"name": "commander",
+				"version": "13.1.0",
+				"size": 200514
+			},
+			{
+				"name": "@solana/codecs-core",
+				"version": "2.1.0",
+				"size": 913610
+			},
+			{
+				"name": "agentkeepalive",
+				"version": "4.6.0",
+				"size": 33916
+			},
+			{
+				"name": "humanize-ms",
+				"version": "1.2.1"
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "bn.js",
+				"version": "5.2.2",
+				"size": 99205
+			},
+			{
+				"name": "borsh",
+				"version": "0.7.0",
+				"size": 34598
+			},
+			{
+				"name": "bs58",
+				"version": "4.0.1"
+			},
+			{
+				"name": "base-x",
+				"version": "3.0.11",
+				"size": 9524
+			},
+			{
+				"name": "safe-buffer",
+				"version": "5.2.1",
+				"size": 32101
+			},
+			{
+				"name": "text-encoding-utf-8",
+				"version": "1.0.2"
+			},
+			{
+				"name": "fast-stable-stringify",
+				"version": "1.0.0"
+			},
+			{
 				"name": "jayson",
 				"version": "4.2.0",
 				"size": 162772
@@ -150,8 +174,8 @@
 			},
 			{
 				"name": "@types/node",
-				"version": "22.14.1",
-				"size": 2331510
+				"version": "22.15.3",
+				"size": 2350386
 			},
 			{
 				"name": "undici-types",
@@ -238,72 +262,14 @@
 				"version": "3.0.1"
 			},
 			{
-				"name": "superstruct",
-				"version": "2.0.2",
-				"size": 182337
-			},
-			{
-				"name": "@noble/curves",
-				"version": "1.8.2",
-				"size": 1645456
-			},
-			{
-				"name": "@noble/hashes",
-				"version": "1.7.2",
-				"size": 1100967
-			},
-			{
-				"name": "@noble/hashes",
-				"version": "1.8.0",
-				"size": 1145416
-			},
-			{
-				"name": "bigint-buffer",
-				"version": "1.1.5",
-				"size": 55730
-			},
-			{
-				"name": "bindings",
-				"version": "1.5.0",
-				"size": 11230
-			},
-			{
-				"name": "file-uri-to-path",
-				"version": "1.0.0"
-			},
-			{
-				"name": "@babel/runtime",
-				"version": "7.27.0",
-				"size": 249798
-			},
-			{
-				"name": "regenerator-runtime",
-				"version": "0.14.1",
-				"size": 27863
-			},
-			{
-				"name": "agentkeepalive",
-				"version": "4.6.0",
-				"size": 33916
-			},
-			{
-				"name": "humanize-ms",
-				"version": "1.2.1"
-			},
-			{
-				"name": "ms",
-				"version": "2.1.3",
-				"size": 6721
-			},
-			{
 				"name": "rpc-websockets",
 				"version": "9.1.1",
 				"size": 333032
 			},
 			{
 				"name": "ws",
-				"version": "8.18.1",
-				"size": 146780
+				"version": "8.18.2",
+				"size": 147181
 			},
 			{
 				"name": "@types/ws",
@@ -326,18 +292,9 @@
 				"size": 90359
 			},
 			{
-				"name": "eventemitter3",
-				"version": "5.0.1",
-				"size": 73390
-			},
-			{
-				"name": "@solana/buffer-layout",
-				"version": "4.0.1",
-				"size": 197207
-			},
-			{
-				"name": "fast-stable-stringify",
-				"version": "1.0.0"
+				"name": "superstruct",
+				"version": "2.0.2",
+				"size": 182337
 			},
 			{
 				"name": "svelte",
@@ -374,91 +331,135 @@
 			[0, 1],
 			[1, 2],
 			[2, 3],
+			[3, 4],
+			[3, 5],
+			[5, 4],
 			[2, 4],
 			[2, 5],
-			[5, 4],
 			[2, 6],
-			[6, 4],
-			[6, 5],
 			[1, 7],
 			[7, 8],
-			[8, 9],
+			[7, 9],
 			[9, 10],
+			[7, 10],
 			[7, 11],
-			[7, 12],
-			[12, 11],
-			[12, 8],
+			[11, 12],
 			[12, 13],
-			[7, 14],
-			[14, 15],
-			[14, 16],
-			[7, 17],
-			[17, 18],
-			[18, 19],
-			[19, 20],
-			[17, 21],
-			[17, 22],
-			[22, 19],
-			[17, 23],
-			[17, 24],
-			[17, 25],
+			[12, 14],
+			[7, 15],
+			[15, 16],
+			[16, 17],
+			[16, 18],
+			[15, 19],
+			[19, 16],
+			[7, 20],
+			[20, 21],
+			[21, 22],
+			[7, 23],
+			[7, 24],
+			[24, 23],
+			[24, 25],
 			[25, 26],
-			[17, 27],
-			[17, 28],
-			[17, 29],
-			[17, 30],
+			[26, 27],
+			[24, 28],
+			[7, 25],
+			[7, 12],
+			[7, 29],
+			[7, 30],
 			[30, 31],
-			[17, 32],
-			[17, 33],
-			[7, 34],
-			[34, 35],
-			[35, 36],
-			[35, 37],
-			[7, 38],
-			[7, 39],
-			[39, 40],
-			[7, 41],
-			[7, 42],
-			[42, 43],
+			[31, 32],
+			[32, 33],
+			[30, 34],
+			[30, 35],
+			[35, 32],
+			[30, 36],
+			[30, 37],
+			[30, 38],
+			[38, 39],
+			[30, 40],
+			[30, 41],
+			[30, 42],
+			[30, 43],
 			[43, 44],
-			[7, 45],
-			[45, 46],
+			[30, 45],
+			[30, 46],
 			[7, 47],
 			[47, 48],
 			[48, 49],
-			[7, 50],
-			[50, 51],
-			[50, 32],
-			[50, 14],
-			[50, 52],
-			[52, 19],
-			[50, 53],
-			[50, 54],
-			[54, 55],
-			[50, 56],
+			[48, 50],
+			[7, 51],
+			[51, 52],
+			[51, 45],
+			[51, 12],
+			[51, 53],
+			[53, 32],
+			[51, 54],
+			[51, 55],
+			[55, 56],
+			[51, 6],
 			[7, 57],
-			[57, 14],
-			[7, 58],
-			[1, 59],
+			[1, 58],
 			[0, 2],
-			[0, 60],
-			[60, 61],
-			[61, 4],
+			[0, 59],
+			[59, 60],
 			[60, 4],
-			[60, 62],
-			[62, 4],
-			[60, 5],
-			[60, 2],
-			[60, 63],
-			[63, 39],
-			[63, 64],
-			[64, 4],
-			[63, 6],
-			[60, 64],
-			[60, 6],
+			[59, 4],
+			[59, 61],
+			[61, 4],
+			[59, 5],
+			[59, 2],
+			[59, 62],
+			[62, 9],
+			[62, 63],
+			[63, 4],
+			[62, 3],
+			[59, 63],
+			[59, 3],
 			[0, 7],
-			[0, 61]
+			[0, 60]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# @softwarecurator/solana-svelte\n\nThis npm package provides a set of tools and components designed for Svelte applications to interact with the Solana blockchain. It simplifies the process of connecting to wallets, sending transactions, and managing state within Svelte apps.\n\n## Installation\n\nTo add this library to your Svelte project, run:\n\n```bash\nnpm install @softwarecurator/solana-svelte\n```\n\n## Usages\n\n### solanaProvider\n\nThe `solanaProvider` is a wrapper that gives access to give access to use solana throughout the application.\n\nExample Usage:\n\n```svelte\n<script lang=\"ts\">\n\timport { SolanaProvider } from '@softwarecurator/solana-svelte';\n\n\tconst { children } = $props();\n</script>\n\n<SolanaProvider>\n\t{@render children()}\n</SolanaProvider>\n```\n\n### ConnectButton\n\nThe `ConnectButton` is a svelte component that gives the developer a quick button that will connect to the solana blockchain via detected providers\n\n```svelte\n<script lang=\"ts\">\n\timport { ConnectButton } from '@softwarecurator/solana-svelte';\n</script>\n\n<div class=\"flex justify-center items-center h-screen\">\n\t<ConnectButton maxNumberOfWallets={3} />\n</div>\n```\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3750, 80],
+		[3757, 11],
+		[3764, 3],
+		[3771, 171],
+		[3778, 18],
+		[3785, 7],
+		[3792, 11],
+		[3799, 1],
+		[3806, 5],
+		[3813, 1],
+		[3820, 6],
+		[3834, 14],
+		[3841, 1],
+		[3848, 1],
+		[3862, 12],
+		[3869, 1],
+		[3883, 1],
+		[3897, 11],
+		[3918, 5],
+		[3925, 1],
+		[3939, 4],
+		[3946, 2],
+		[3960, 5],
+		[3974, 2],
+		[3995, 2],
+		[4002, 1],
+		[4016, 13],
+		[4037, 16],
+		[4044, 14],
+		[4051, 3],
+		[4058, 1],
+		[4072, 1],
+		[4079, 5],
+		[4093, 5],
+		[4107, 12],
+		[4114, 7],
+		[4121, 5],
+		[4128, 3]
+	]
 }

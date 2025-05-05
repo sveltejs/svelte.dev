@@ -7,31 +7,12 @@
 	"downloads": 9120,
 	"updated": "2024-12-28T00:40:53.815Z",
 	"tags": ["miscellaneous"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.0.1",
 	"svelte_range": "^5.0.0",
 	"kit_range": "2.15.1",
 	"last_rune_check_version": "0.0.1",
-	"downloads_history": [
-		[4008, 3585],
-		[4015, 25796],
-		[4022, 10931],
-		[4029, 28039],
-		[4036, 31892],
-		[4043, 17357],
-		[4050, 14471],
-		[4057, 5559],
-		[4064, 2509],
-		[4071, 4098],
-		[4078, 6526],
-		[4085, 22496],
-		[4092, 20453],
-		[4099, 7478],
-		[4106, 14648],
-		[4113, 9120]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -43,5 +24,27 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "<!----- BEGIN GHOST DOCS HEADER ----->\n\n# @jill64/svelte-observer\n\n<!----- BEGIN GHOST DOCS BADGES ----->\n\n<a href=\"https://npmjs.com/package/@jill64/svelte-observer\"><img src=\"https://img.shields.io/npm/v/@jill64/svelte-observer\" alt=\"npm-version\" /></a> <a href=\"https://npmjs.com/package/@jill64/svelte-observer\"><img src=\"https://img.shields.io/npm/l/@jill64/svelte-observer\" alt=\"npm-license\" /></a> <a href=\"https://npmjs.com/package/@jill64/svelte-observer\"><img src=\"https://img.shields.io/npm/dm/@jill64/svelte-observer\" alt=\"npm-download-month\" /></a> <a href=\"https://npmjs.com/package/@jill64/svelte-observer\"><img src=\"https://img.shields.io/bundlephobia/min/@jill64/svelte-observer\" alt=\"npm-min-size\" /></a> <a href=\"https://github.com/jill64/svelte-observer/actions/workflows/ci.yml\"><img src=\"https://github.com/jill64/svelte-observer/actions/workflows/ci.yml/badge.svg\" alt=\"ci.yml\" /></a> <a href=\"https://svelte-observer.jill64.dev\"><img src=\"https://img.shields.io/website?up_message=working&down_message=down&url=https%3A%2F%2Fsvelte-observer.jill64.dev\" alt=\"website\" /></a>\n\n<!----- END GHOST DOCS BADGES ----->\n\n🔭 Library for Svelte to make Promise status easily observable from outside\n\n## [Demo](https://svelte-observer.jill64.dev)\n\n<!----- END GHOST DOCS HEADER ----->\n\n## Installation\n\n```bash\nnpm i @jill64/svelte-observer\n```\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import { observable } from '@jill64/svelte-observer'\n\n  // Define the asynchronous function you want to observe\n  const wait1Sec = async () => {\n    await new Promise((resolve) => setTimeout(resolve, 1000))\n  }\n  const wait1SecThrow = async () => {\n    await new Promise((resolve) => setTimeout(resolve, 1000))\n    throw new Error('Expected Error')\n  } // Create Proxy\n\n  let { status, observed } = $derived(observable())\n\n  // Define proxied functions\n  let observedWait1Sec = $derived(observed(wait1Sec))\n  let observedWait1SecThrow = $derived(observed(wait1SecThrow))\n</script>\n\n<!-- `IDLE` => Click => `PENDING` => 1sec => `FULFILLED` => 5sec(default) => `IDLE` -->\n<button onclick={observedWait1Sec} aria-label=\"Success\"> Success </button>\n\n<!-- `IDLE` => Click => `PENDING` => 1sec => `REJECTED` => 5sec(default) => `IDLE` -->\n<button onclick={observedWait1SecThrow} aria-label=\"Error\"> Error </button>\n\n<!-- PromiseStatus -->\n<output>{status}</output>\n```\n\n<!----- BEGIN GHOST DOCS FOOTER ----->\n\n## License\n\n[MIT](LICENSE)\n\n<!----- END GHOST DOCS FOOTER ----->\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4009, 3585],
+		[4016, 25796],
+		[4023, 10931],
+		[4030, 28039],
+		[4037, 31892],
+		[4044, 17357],
+		[4051, 14471],
+		[4058, 5559],
+		[4065, 2509],
+		[4072, 4098],
+		[4079, 6526],
+		[4086, 22496],
+		[4093, 20453],
+		[4100, 7478],
+		[4107, 14648],
+		[4114, 9120],
+		[4121, 11449],
+		[4128, 2007]
+	]
 }

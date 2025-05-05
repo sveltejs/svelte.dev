@@ -5,34 +5,20 @@
 	"authors": ["jlacostaec"],
 	"homepage": "https://github.com/JLAcostaEC/svgtosvelte#readme",
 	"downloads": 16,
-	"updated": "2025-02-20T20:44:57.416Z",
+	"updated": "2025-04-30T16:21:57.599Z",
 	"tags": ["tooling"],
-	"runes": false,
 	"github_stars": 5,
 	"typescript": true,
-	"version": "1.1.6",
+	"version": "1.2.0",
 	"svelte_range": "^5.16.1",
-	"last_rune_check_version": "1.1.6",
-	"downloads_history": [
-		[4043, 2],
-		[4050, 17],
-		[4057, 4],
-		[4064, 497],
-		[4071, 34],
-		[4078, 2],
-		[4085, 18],
-		[4092, 18],
-		[4099, 1],
-		[4106, 11],
-		[4113, 16]
-	],
+	"last_rune_check_version": "1.2.0",
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
 			{
 				"name": "@jlacostaec/svgtosvelte",
-				"version": "1.1.6",
-				"size": 21065
+				"version": "1.2.0",
+				"size": 25947
 			},
 			{
 				"name": "commander",
@@ -51,8 +37,8 @@
 			},
 			{
 				"name": "svelte",
-				"version": "5.28.1",
-				"size": 2426419
+				"version": "5.28.2",
+				"size": 2426223
 			},
 			{
 				"name": "@ampproject/remapping",
@@ -141,8 +127,8 @@
 			},
 			{
 				"name": "svelte-check",
-				"version": "4.1.6",
-				"size": 4887797
+				"version": "4.1.7",
+				"size": 5486687
 			},
 			{
 				"name": "chokidar",
@@ -214,5 +200,22 @@
 			[27, 28]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# SVG to Svelte\n\n`svgtosvelte` is the Best Way to Convert SVG to Svelte 5 Components\n\n## Table of Contents\n\n- [Installation](#installation)\n- [Usage](#usage)\n- [Options](#options)\n- [Examples](#examples)\n- [License](#license)\n- [Contributing](#contributing)\n\n## Installation\n\nTo install the package, use the following command:\n\n```sh\nnpm install -D @jlacostaec/svgtosvelte\n```\n\n```sh\npnpm add -D @jlacostaec/svgtosvelte\n```\n\n```sh\nyarn add -D @jlacostaec/svgtosvelte\n```\n\n## Usage\n\nYou can use the `svgtosvelte` CLI to convert SVG files to Svelte components. The basic command is:\n\n```sh\nsvgtosvelte <source> [destination] [options]\n```\n\n- `<source>`: Source directory containing SVG files.\n- `[destination]`: Destination directory for Svelte components (default: src/lib).\n\n### Options\n\n- `-p, --prefix <prefix>`: Add a prefix to component names (default: '').\n- `-s, --suffix <suffix>`: Add a suffix to component names (default: '').\n- `-c, --casing <casing>`: Set casing for component names (default: PascalCase).\n- `-t, --typescript`: Use TypeScript in generated components (default: false).\n- `-a, --attributes`: Add/Override SVG attributes on demand (default []).\n- `-f, --filter`: Filter icons with specific words out of selection (default: [])\n- `-e, --exclude`: Exclude specific words from the icon/component name (default: [])\n- `-r, --registry`: Create a JSON object detailing each component info (default: false)\n- `-k, --kit`: Tell the CLI that you’re using SvelteKit, which will prevent errors caused by using the word “server” in `src/lib` by moving all icons to `src/lib/icons` folder.\n\n## Examples:\n\nConvert SVG files in the icons directory to Svelte components in the src/lib directory:\n\n```sh\nsvgtosvelte icons\n```\n\nConvert SVG files with a prefix and suffix:\n\n```sh\nsvgtosvelte icons -p Icon -s Component\n```\n\nConvert SVG files from a SVG Package to different output folder with camelCase naming and TypeScript:\n\n```sh\nsvgtosvelte node_modules/path-to-pkg/icons/ src/utils/icons -c camelCase -t\n```\n\n## API\n\nYou can also use the package programmatically:\n\n```ts\nimport { convertSvgsToSvelte } from '@jlacostaec/svgtosvelte';\n\nconvertSvgsToSvelte(source: string, outDir: string, options: Options): void\n```\n\n### Parameters\n\n- `source: string`: The folder containing all the SVG files to be converted.\n- `outDir: string`: Destination folder for all created Svelte files.\n- `option.prefix: string`: The name appended to the beginning of each component name.\n- `option.suffix: string`: The name appended to the end of each component name.\n- `option.casing: string`: Convert all components name to the given casing. (PascalCase, camelCase, kebab-case, snake_case)\n- `option.useTypeScript: boolean`: Whether to use TS for file types or not.\n- `option.attributes: string[]`: Add/Override SVG attributes on demand (default []).\n- `option.filter: string[]`: Filter icons with specific words out of selection (default: [])\n- `option.exclude: string[]`: Exclude specific words from the icon/component name (default: [])\n- `option.registry: boolean`: Create a JSON object detailing each component info (default: false)\n- `option.kit: boolean`: Tell the CLI that you’re using SvelteKit, which will prevent errors caused by using the word “server” in `src/lib`.\n\n### Example\n\n```javascript\nimport { convertSvgsToSvelte } from '@jlacostaec/svgtosvelte';\n\nconvertSvgsToSvelte('src/path-to-svgs-folder/', 'src/lib/', {\n  prefix: 'Svg2Svelte',\n  suffix: 'byAuthor',\n  casing: 'PascalCase',\n  useTypeScript: true,\n  updatefwh: false,\n  filter: [],\n  exclude: ['2'],\n  registry: true,\n  kit: true\n});\n```\n\n```\nOutput files\n\n-> src/lib/\n    -------------------\n      /icons/\n        IconsWithTheWordSERVER.svelte\n\n      Svg2SvelteAlertFillByAuthor.svelte\n      ...RestOfIcons.svelte\n      registry.json\n      index.ts\n    -------------------\n```\n\n## License\n\nThis project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for details.\n\n## Contributing\n\nContributions are welcome! Please open an issue or submit a pull request for any changes.\n\n## Contact\n\nFor any questions or feedback, please [contact me here](https://jorgelacosta.com).\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4044, 2],
+		[4051, 17],
+		[4058, 4],
+		[4065, 497],
+		[4072, 34],
+		[4079, 2],
+		[4086, 18],
+		[4093, 18],
+		[4100, 1],
+		[4107, 11],
+		[4114, 16],
+		[4121, 9],
+		[4128, 6]
+	]
 }

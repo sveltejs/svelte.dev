@@ -7,40 +7,12 @@
 	"downloads": 8,
 	"updated": "2024-08-17T15:03:17.755Z",
 	"tags": ["design-system"],
-	"runes": false,
 	"github_stars": 1,
 	"typescript": true,
 	"version": "0.0.7",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.0.7",
-	"downloads_history": [
-		[3875, 322],
-		[3882, 26],
-		[3889, 31],
-		[3896, 7],
-		[3903, 21],
-		[3910, 7],
-		[3917, 5],
-		[3924, 2],
-		[3938, 8],
-		[3945, 1],
-		[3952, 2],
-		[3980, 1],
-		[3987, 7],
-		[4001, 1],
-		[4008, 1],
-		[4015, 4],
-		[4022, 11],
-		[4029, 5],
-		[4036, 4],
-		[4043, 8],
-		[4050, 4],
-		[4064, 1],
-		[4099, 7],
-		[4106, 15],
-		[4113, 8]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -56,8 +28,8 @@
 			},
 			{
 				"name": "@types/node",
-				"version": "22.14.1",
-				"size": 2331510
+				"version": "22.15.3",
+				"size": 2350386
 			},
 			{
 				"name": "undici-types",
@@ -723,5 +695,36 @@
 			[4, 104]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Ninja Form Kit\n\nElevate your form development with Ninja Form Kit, a powerful TypeScript library that seamlessly integrates with your theme. This robust toolkit unifies UI generation and form validation into a single configuration object, streamlining your workflow. Leverage type-safe components to create polished, responsive forms with minimal effort. From basic inputs to complex layouts, Ninja Form Kit empowers developers to build professional, user-friendly forms while maintaining code consistency across projects. Simplify your form creation process and enhance productivity with our comprehensive, TypeScript-first solution.\n\n\n## Table of Contents\n\n- [Ninja Form Kit](#ninja-form-kit)\n  - [Table of Contents](#table-of-contents)\n  - [Installation](#installation)\n  - [Quick Start](#quick-start)\n    - [Define the config in loader](#define-the-config-in-loader)\n    - [Use the Form in your template/component](#use-the-form-in-your-templatecomponent)\n    - [Validate the form with actions](#validate-the-form-with-actions)\n    - [Form Config Options](#form-config-options)\n    - [FormField Options](#formfield-options)\n  - [Validation](#validation)\n    - [Validation Options](#validation-options)\n  - [Theming](#theming)\n  - [More examples](#more-examples)\n    - [Register Form](#register-form)\n    - [Login Form](#login-form)\n  - [License](#license)\n\n## Installation\n\nTo install Ninja Form Kit, use npm or yarn:\n\n```sh\nnpm install ninjaformkit\n# or\nyarn add ninjaformkit\n\n```\n\n## Quick Start\n\nTo configure your form, define a formConfig object in your `+page.server.ts` file. This object allows you to specify form properties such as method, action, fields, and validation rules. For optimal type safety, ensure your formConfig adheres to the FormConfig interface. Important: Define `formConfig` outside the load function to guarantee accessibility within actions.\n\n### Define the config in loader\n\n```ts\n\nimport { type FormConfig } from 'ninjaformkit'\n\nconst formConfig = {\n\tmethod: 'post',\n\tfields: {\n\t\temail: {\n\t\t\ttype: 'text',\n\t\t\tvariant: 'email',\n\t\t\tplaceholder: 'Enter your email...',\n\t\t\tlabel: 'Email',\n\t\t\tvalidate: {\n\t\t\t\trequired: true,\n\t\t\t\tisEmail: true\n\t\t\t}\n\t\t},\n\t\tmessage: {\n\t\t\ttype: 'textarea',\n\t\t\tplaceholder: 'Enter your message...',\n\t\t\tlabel: 'Message',\n\t\t\tvalidate: {\n\t\t\t\trequired: true,\n\t\t\t\tminLength: 10,\n\t\t\t\tmaxLength: 500\n\t\t\t}\n\t\t},\n\t\tsubmit: {\n\t\t\ttype: 'submit',\n\t\t\tlabel: 'Submit'\n\t\t}\n\t}\n} satisfies FormConfig;\n\nexport const load: PageServerLoad = async () => {\n\treturn { formConfig };\n};\n\n```\n\n### Use the Form in your template/component\n\n```svelte\n\n<script lang=\"ts\">\n    import { Form } from 'ninjaformkit'\n    export let data;\n</script>\n\n<Form config={data.formConfig} />\n\n\n```\n\n### Validate the form with actions\n\n```ts\n\nimport { validate } from 'ninjaformkit'\n\nexport const actions = {\n\tdefault: async ({ request }) => {\n\t\tconst { errors, hasErrors, values } = await validate(request, formConfig);\n\n\t\tif (hasErrors) {\n                        // Errors will appears under each input that validation fails\n\t\t\treturn fail(400, { errors });\n\t\t}\n\n\t// Process the type safe form values \n        await sendEmail({\n            email: values.email, // string\n            message: values.message // string\n        });\n        \n        return redirect(301, '/');\n \n\t}\n} satisfies Actions;\n\n```\n\n### Form Config Options\n\nThe `formConfig` object allows you to configure various aspects of your form. Below is a table explaining each option:\n\n| Option      | Type                                                                 | Description                                                                                   |\n|-------------|----------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|\n| `action`    | `string`                                                             | The URL to which the form data will be submitted. Optional.                                   |\n| `encType`   | `'application/x-www-form-urlencoded' \\| 'multipart/form-data' \\| 'text/plain'` | The encoding type for the form. Optional.                                                     |\n| `method`    | `'get' \\| 'post'`                                                    | The HTTP method to use when submitting the form. Required.                                    |\n| `fields`    | `Record<string, FormField>`                                          | An object where each key is a field name and the value is a `FormField` object. Required.     |\n| `runLoader` | `boolean` | Denotes weather to run sveltekits `invalidateAll` hook. Optional\n\n### FormField Options\n\nEach field in the `fields` object is a `FormField` with the following options:\n\n| Option          | Type                                                                 | Description                                                                                   |\n|-----------------|----------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|\n| `type`          | `'text' \\| 'textarea' \\| 'submit' \\| 'checkbox' \\| 'radio' \\| 'toggle' \\| 'select' \\| 'file'` | The type of the form field. Required.                                                         |\n| `label`         | `string`                                                             | The label for the form field. Required.                                                       |\n| `defaultValue`  | `string \\| number \\| null`                                           | The default value for the form field. Optional.                                               |\n| `defaultChecked`| `boolean`                                                            | The default checked state for checkbox, radio, or toggle fields. Optional.                    |\n| `width`         | `1 \\| 2 \\| 3 \\| 4 \\| 5 \\| 6 \\| 7 \\| 8 \\| 9 \\| 10 \\| 11 \\| 12`         | The width of the form field, used for fieldset grid layout. Optional. Defaults to 12.                       |\n| `variant`       | `'password' \\| 'email' \\| 'text' \\| 'color' \\| 'number'`             | The variant of the form field, specifying a more specific type. Works with the \"text\" input type. Defaults to \"text\". Optional.                     |\n| `placeholder`   | `string`                                                             | The placeholder text for the form field. Optional.                                            |\n| `multiple`      | `boolean`                                                            | Whether the field allows multiple values (e.g., for file and select inputs). Optional.                   |\n| `break`         | `boolean`                                                            | Weather to break into a new row in grid. Optional.                                     |\n| `icon`          | `string`                                                             | An icon to display with the form field. This relies on @iconify library (e.g. `material-symbols:verified-user`) Optional.                                             |\n| `options`       | `{ value: string \\| number; label: string; }[]`                      | An array of options for select and radio fields. Each option has a `value` and a `label`. Optional. Note Select and Radio inputs will throw an error if these values are not set.    |\n| `disabled`      | `boolean`                                                            | Whether the form field is disabled. Optional.                                                 |\n| `before`        | `string`                                                             | Content to display before the form field. Optional.                                           |\n| `after`         | `string`                                                             | Content to display after the form field. Optional.                                            |\n| `validate`      | `object`                                                             | Validation rules for the form field. Optional.          \n\n## Validation                                      \n\nNinja Form Kit currently has 19 validate options.\n\n### Validation Options\n\nThe `validate` object allows you to specify validation rules for the form field. Below is a table explaining each option:\n\n| Option            | Type          | Description                                                                                   |\n|-------------------|---------------|-----------------------------------------------------------------------------------------------|\n| `required`        | `boolean`     | Whether the field is required.                                                                |\n| `minLength`       | `number`      | The minimum length of the field value.                                                        |\n| `maxLength`       | `number`      | The maximum length of the field value.                                                        |\n| `min`             | `number`      | The minimum value for numeric fields.                                                         |\n| `max`             | `number`      | The maximum value for numeric fields.                                                         |\n| `isEmail`         | `boolean`     | Whether the field value should be a valid email address.                                      |\n| `isUrl`           | `boolean`     | Whether the field value should be a valid URL.                                                |\n| `isNumber`        | `boolean`     | Whether the field value should be a valid number.                                             |\n| `isFloat`         | `boolean`     | Whether the field value should be a valid float.                                              |\n| `isAlpha`         | `boolean`     | Whether the field value should contain only alphabetic characters.                            |\n| `isAlphanumeric`  | `boolean`     | Whether the field value should contain only alphanumeric characters.                          |\n| `isDate`          | `boolean`     | Whether the field value should be a valid date.                                               |\n| `isTime`          | `boolean`     | Whether the field value should be a valid time.                                               |\n| `isDateTime`      | `boolean`     | Whether the field value should be a valid date-time.                                          |\n| `mimeTypes`       | `Array<string>`| An array of acceptable MIME types for file inputs.                                            |\n| `maxSize`         | `number`      | The maximum file size for file inputs, in bytes.                                              |\n| `matches`         | `string`      | A regex pattern that the field value should match.                                            |\n| `badPasswordCheck`| `boolean`     | Whether to check the field value against a list of common bad passwords. Utilises pwned passwords API.                   |\n\n## Theming\n\nNinja Form Kit offers a wide array of customizable CSS variables. Simply import the CSS file into your `+layout.svelte` and tailor the variables to perfectly match your theme.\n\n```css\n\n:root {\n    --nfk-font: ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\";\n    --nfk-default: #005f8b; // Button, radio and toggle colours\n    --nfk-default-hover: #0a5171; // Button, radio and toggle colours hover\n    --nfk-text: #000000; // text colour for labels\n    --nkf-input-bg: #f3f4f6; // Back ground colour for form inputs\n    --nkf-input-bg-file-hover: #f3f4f6; // Hover state for file input\n    --nfk-button-text: #ffffff; // Text colout for buttons and radio\n    --nkf-placeholder: #a0aec0; // Placeholder text colour\n    --nfk-border: #e2e8f0; // Input border\n    --nkf-error: #e53e3e; // Error color for border and error text\n    --nkf-required: #e84949; // Required asterix on inouts with validation rules\n    --nfk-outline: #0073aa; // Outline for inout focused\n    --nfk-gap-x: 14px; // Gap between inputs row\n    --nfk-gap-y: 14px; // Gap between inputs colun\n}\n\n@media (prefers-color-scheme: dark) {\n    :root {\n        --nfk-default: #005f8b;\n        --nfk-text: #FFFFFF;\n        --nkf-input-bg: #35383c;\n        --nkf-input-bg-file-hover: #595c61;\n        --nfk-button-text: #ffffff;\n        --nkf-placeholder: #dfe3e7;\n        --nfk-border: #e2e8f0;\n        --nkf-error: #e53e3e;\n        --nkf-required: #e84949;\n        --nfk-outline: #0073aa;\n        --nkf-btn-text: #ffffff;\n    }\n}\n\n```\n\n## More examples\n\n### Register Form\n\n```ts \nconst formConfig = {\n\tmethod: 'post',\n\tfields: {\n\t\tusername: {\n\t\t\ttype: 'text',\n\t\t\tlabel: 'Username',\n\t\t\tplaceholder: 'Enter your username...',\n\t\t\twidth: 5,\n\t\t\tvalidate: {\n\t\t\t\trequired: true,\n\t\t\t\tminLength: 3,\n\t\t\t\tmaxLength: 20\n\t\t\t}\n\t\t},\n\t\temail: {\n\t\t\ttype: 'text',\n\t\t\tvariant: 'email',\n\t\t\tlabel: 'Email',\n\t\t\tplaceholder: 'Enter your email...',\n\t\t\twidth: 7,\n\t\t\tvalidate: {\n\t\t\t\trequired: true,\n\t\t\t\tisEmail: true\n\t\t\t}\n\t\t},\n\t\treferer: {\n\t\t\ttype: 'select',\n\t\t\tlabel: 'Referer',\n\t\t\tplaceholder: 'Select an option...',\n\t\t\twidth: 4,\n\t\t\toptions: [\n\t\t\t\t{ label: 'Google', value: 'google' },\n\t\t\t\t{ label: 'Friend', value: 'friend' },\n\t\t\t\t{ label: 'Other', value: 'other' }\n\t\t\t],\n\t\t\tbreak: true,\n\t\t\tvalidate: {\n\t\t\t\trequired: true\n\t\t\t}\n\t\t},\n\t\taccountType: {\n\t\t\ttype: 'radio',\n\t\t\tlabel: 'Account Type',\n\t\t\twidth: 8,\n\t\t\toptions: [\n\t\t\t\t{ label: 'Personal', value: 'personal' },\n\t\t\t\t{ label: 'Business', value: 'business' }\n\t\t\t],\n\t\t\tvalidate: {\n\t\t\t\trequired: true\n\t\t\t}\n\t\t},\n\t\tpassword: {\n\t\t\ttype: 'text',\n\t\t\tvariant: 'password',\n\t\t\tlabel: 'Password',\n\t\t\tplaceholder: 'Enter your password...',\n\t\t\twidth: 6,\n\t\t\tvalidate: {\n\t\t\t\trequired: true,\n\t\t\t\tminLength: 8,\n\t\t\t\tbadPasswordCheck: true\n\t\t\t}\n\t\t},\n\t\tconfirmPassword: {\n\t\t\ttype: 'text',\n\t\t\tvariant: 'password',\n\t\t\tlabel: 'Confirm Password',\n\t\t\tplaceholder: 'Confirm your password...',\n\t\t\twidth: 6,\n\t\t\tvalidate: {\n\t\t\t\trequired: true,\n\t\t\t\tmatches: 'password'\n\t\t\t}\n\t\t},\n\t\tnewsletter: {\n\t\t\ttype: 'checkbox',\n\t\t\tlabel: 'Subscribe to newsletter',\n\t\t\tdefaultChecked: true\n\t\t},\n\t\tsubmit: {\n\t\t\ttype: 'submit',\n\t\t\tlabel: 'Submit'\n\t\t}\n\t}\n} satisfies FormConfig;\n\n```\n\n### Login Form\n\n```ts\n\nconst formConfig = {\n\tmethod: 'post',\n\tfields: {\n\t\temail: {\n\t\t\ttype: 'text',\n\t\t\tvariant: 'email',\n\t\t\tplaceholder: 'Enter your email...',\n\t\t\tlabel: 'Email',\n\t\t\tvalidate: {\n\t\t\t\trequired: true,\n\t\t\t\tisEmail: true\n\t\t\t},\n                        after: `<a href=\"/reset-password\" class=\"text-sm mt-3 text-right\">Forgot Password</a>`\n\t\t},\n\t\tpassword: {\n\t\t\ttype: 'text',\n\t\t\tvariant: 'password',\n\t\t\tplaceholder: 'Enter your password...',\n\t\t\tlabel: 'Password',\n\t\t\tvalidate: {\n\t\t\t\trequired: true\n\t\t\t}\n\t\t},\n\t\trememberMe: {\n\t\t\ttype: 'checkbox',\n\t\t\tlabel: 'Remember me'\n\t\t},\n\t\tsubmit: {\n\t\t\ttype: 'submit',\n\t\t\tlabel: 'Submit'\n\t\t}\n\t}\n} satisfies FormConfig;\n\n```\n\n## License\n\nThis project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.",
+	"legacy_svelte": true,
+	"downloads_history": [
+		[3876, 322],
+		[3883, 26],
+		[3890, 31],
+		[3897, 7],
+		[3904, 21],
+		[3911, 7],
+		[3918, 5],
+		[3925, 2],
+		[3939, 8],
+		[3946, 1],
+		[3953, 2],
+		[3981, 1],
+		[3988, 7],
+		[4002, 1],
+		[4009, 1],
+		[4016, 4],
+		[4023, 11],
+		[4030, 5],
+		[4037, 4],
+		[4044, 8],
+		[4051, 4],
+		[4065, 1],
+		[4100, 7],
+		[4107, 15],
+		[4114, 8],
+		[4121, 6],
+		[4128, 8]
+	]
 }

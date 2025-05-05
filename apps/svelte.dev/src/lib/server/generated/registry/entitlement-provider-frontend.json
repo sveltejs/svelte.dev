@@ -7,92 +7,11 @@
 	"downloads": 47,
 	"updated": "2024-08-01T21:58:57.486Z",
 	"tags": ["miscellaneous"],
-	"runes": false,
 	"github_stars": 1,
 	"typescript": true,
 	"version": "1.15.12",
 	"svelte_range": "^5.0.0-next.205",
 	"last_rune_check_version": "1.15.12",
-	"downloads_history": [
-		[3574, 212],
-		[3581, 4],
-		[3588, 119],
-		[3595, 436],
-		[3602, 411],
-		[3609, 258],
-		[3616, 179],
-		[3623, 7],
-		[3630, 3],
-		[3637, 217],
-		[3644, 29],
-		[3651, 9],
-		[3658, 39],
-		[3665, 162],
-		[3672, 11],
-		[3679, 266],
-		[3686, 37],
-		[3693, 228],
-		[3700, 312],
-		[3707, 175],
-		[3714, 229],
-		[3721, 310],
-		[3728, 290],
-		[3735, 78],
-		[3742, 31],
-		[3749, 141],
-		[3756, 121],
-		[3763, 129],
-		[3770, 79],
-		[3777, 107],
-		[3784, 173],
-		[3791, 183],
-		[3798, 113],
-		[3805, 181],
-		[3812, 41],
-		[3819, 101],
-		[3826, 25],
-		[3833, 179],
-		[3840, 437],
-		[3847, 60],
-		[3854, 183],
-		[3861, 79],
-		[3868, 38],
-		[3875, 52],
-		[3882, 26],
-		[3889, 163],
-		[3896, 17],
-		[3903, 14],
-		[3910, 19],
-		[3917, 23],
-		[3924, 3],
-		[3931, 39],
-		[3938, 19],
-		[3945, 32],
-		[3952, 16],
-		[3959, 19],
-		[3966, 20],
-		[3973, 182],
-		[3980, 166],
-		[3987, 11],
-		[3994, 52],
-		[4001, 22],
-		[4008, 29],
-		[4015, 148],
-		[4022, 101],
-		[4029, 16],
-		[4036, 64],
-		[4043, 109],
-		[4050, 49],
-		[4057, 1],
-		[4064, 34],
-		[4071, 17],
-		[4078, 8],
-		[4085, 66],
-		[4092, 158],
-		[4099, 35],
-		[4106, 326],
-		[4113, 47]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -123,13 +42,13 @@
 			},
 			{
 				"name": "@kronos-integration/service",
-				"version": "11.2.3",
+				"version": "11.2.5",
 				"size": 70280
 			},
 			{
 				"name": "loglevel-mixin",
-				"version": "7.2.2",
-				"size": 21078
+				"version": "7.2.3",
+				"size": 20368
 			},
 			{
 				"name": "remove-sensible-values",
@@ -153,8 +72,8 @@
 			},
 			{
 				"name": "svelte-dnd-action",
-				"version": "0.9.60",
-				"size": 330948
+				"version": "0.9.61",
+				"size": 332230
 			},
 			{
 				"name": "mf-styling",
@@ -163,12 +82,12 @@
 			},
 			{
 				"name": "svelte-command",
-				"version": "3.0.27",
+				"version": "3.0.28",
 				"size": 16784
 			},
 			{
 				"name": "svelte-common",
-				"version": "6.19.0",
+				"version": "6.19.2",
 				"size": 47828
 			},
 			{
@@ -178,8 +97,8 @@
 			},
 			{
 				"name": "npm-pkgbuild",
-				"version": "18.1.1",
-				"size": 135432
+				"version": "18.1.2",
+				"size": 135453
 			},
 			{
 				"name": "@npmcli/arborist",
@@ -675,8 +594,8 @@
 			},
 			{
 				"name": "@sigstore/tuf",
-				"version": "3.1.0",
-				"size": 50762
+				"version": "3.1.1",
+				"size": 45466
 			},
 			{
 				"name": "tuf-js",
@@ -695,8 +614,8 @@
 			},
 			{
 				"name": "@sigstore/verify",
-				"version": "2.1.0",
-				"size": 72309
+				"version": "2.1.1",
+				"size": 71913
 			},
 			{
 				"name": "npm-packlist",
@@ -774,8 +693,8 @@
 			},
 			{
 				"name": "@npmcli/redact",
-				"version": "3.2.0",
-				"size": 16759
+				"version": "3.2.1",
+				"size": 16859
 			},
 			{
 				"name": "@npmcli/query",
@@ -888,8 +807,8 @@
 			},
 			{
 				"name": "detect-libc",
-				"version": "2.0.3",
-				"size": 23627
+				"version": "2.0.4",
+				"size": 23652
 			},
 			{
 				"name": "https-proxy-agent",
@@ -1109,7 +1028,7 @@
 			},
 			{
 				"name": "npm-package-walker",
-				"version": "8.0.0",
+				"version": "8.0.3",
 				"size": 10306
 			},
 			{
@@ -1149,17 +1068,17 @@
 			},
 			{
 				"name": "uti",
-				"version": "8.7.1",
-				"size": 44749
+				"version": "8.7.2",
+				"size": 45326
 			},
 			{
 				"name": "svelte-entitlement",
-				"version": "2.0.37",
+				"version": "2.0.38",
 				"size": 8100
 			},
 			{
 				"name": "svelte-session-manager",
-				"version": "3.0.37",
+				"version": "3.0.39",
 				"size": 25188
 			},
 			{
@@ -1523,5 +1442,87 @@
 			[0, 215]
 		],
 		"circular": []
-	}
+	},
+	"readme": "[![Svelte v5](https://img.shields.io/badge/svelte-v5-orange.svg)](https://svelte.dev)\n[![npm](https://img.shields.io/npm/v/entitlement-provider-frontend.svg)](https://www.npmjs.com/package/entitlement-provider-frontend)\n[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)\n[![bundlejs](https://deno.bundlejs.com/?q=entitlement-provider-frontend\\&badge=detailed)](https://bundlejs.com/?q=entitlement-provider-frontend)\n[![downloads](http://img.shields.io/npm/dm/entitlement-provider-frontend.svg?style=flat-square)](https://npmjs.org/package/entitlement-provider-frontend)\n[![GitHub Issues](https://img.shields.io/github/issues/arlac77/entitlement-provider-frontend.svg?style=flat-square)](https://github.com/arlac77/entitlement-provider-frontend/issues)\n[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Farlac77%2Fentitlement-provider-frontend%2Fbadge\\&style=flat)](https://actions-badge.atrox.dev/arlac77/entitlement-provider-frontend/goto)\n[![Coverage Status](https://coveralls.io/repos/arlac77/entitlement-provider-frontend/badge.svg)](https://coveralls.io/github/arlac77/entitlement-provider-frontend)\n",
+	"legacy_svelte": true,
+	"downloads_history": [
+		[3589, 119],
+		[3596, 436],
+		[3603, 411],
+		[3610, 258],
+		[3617, 179],
+		[3624, 7],
+		[3631, 3],
+		[3638, 217],
+		[3645, 29],
+		[3652, 9],
+		[3659, 39],
+		[3666, 162],
+		[3673, 11],
+		[3680, 266],
+		[3687, 37],
+		[3694, 228],
+		[3701, 312],
+		[3708, 175],
+		[3715, 229],
+		[3722, 310],
+		[3729, 290],
+		[3736, 78],
+		[3743, 31],
+		[3750, 141],
+		[3757, 121],
+		[3764, 129],
+		[3771, 79],
+		[3778, 107],
+		[3785, 173],
+		[3792, 183],
+		[3799, 113],
+		[3806, 181],
+		[3813, 41],
+		[3820, 101],
+		[3827, 25],
+		[3834, 179],
+		[3841, 437],
+		[3848, 60],
+		[3855, 183],
+		[3862, 79],
+		[3869, 38],
+		[3876, 52],
+		[3883, 26],
+		[3890, 163],
+		[3897, 17],
+		[3904, 14],
+		[3911, 19],
+		[3918, 23],
+		[3925, 3],
+		[3932, 39],
+		[3939, 19],
+		[3946, 32],
+		[3953, 16],
+		[3960, 19],
+		[3967, 20],
+		[3974, 182],
+		[3981, 166],
+		[3988, 11],
+		[3995, 52],
+		[4002, 22],
+		[4009, 29],
+		[4016, 148],
+		[4023, 101],
+		[4030, 16],
+		[4037, 64],
+		[4044, 109],
+		[4051, 49],
+		[4058, 1],
+		[4065, 34],
+		[4072, 17],
+		[4079, 8],
+		[4086, 66],
+		[4093, 158],
+		[4100, 35],
+		[4107, 326],
+		[4114, 47],
+		[4121, 108],
+		[4128, 32]
+	]
 }

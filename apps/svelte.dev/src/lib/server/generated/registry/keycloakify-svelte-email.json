@@ -7,23 +7,12 @@
 	"downloads": 8,
 	"updated": "2025-01-27T06:54:54.330Z",
 	"tags": ["tooling"],
-	"runes": true,
 	"github_stars": 2,
 	"typescript": true,
 	"version": "0.0.6",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.1",
 	"last_rune_check_version": "0.0.6",
-	"downloads_history": [
-		[4043, 16],
-		[4057, 4],
-		[4064, 3],
-		[4071, 2],
-		[4085, 1],
-		[4099, 39],
-		[4106, 2],
-		[4113, 8]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -454,5 +443,19 @@
 			[67, 68]
 		],
 		"circular": []
-	}
+	},
+	"readme": "![svelte-email-banner](https://user-images.githubusercontent.com/59960385/216772883-6cc40ff9-ef6e-4269-bed3-17c1023bbaf6.png)\n\n<div align=\"center\"><strong>Svelte Email</strong></div>\n<div align=\"center\">Designing emails has never been easier.</div>\n<br />\n<div align=\"center\">\n<a href=\"https://svelte-email.vercel.app/\">Documentation</a> \n<span> · </span>\n<a href=\"https://github.com/keycloakify/svelte-email\">GitHub</a> \n</div>\n\n# Introduction\n\nThis is a fork of <a href=\"https://github.com/carstenlebek/svelte-email\">Carsten Lebek's Svelte Email project</a>.\n\n`svelte-email` enables you to write and design email templates with svelte and render them to HTML or plain text.\n\n# Installation\n\nInstall the package to your existing SvelteKit project:\n\n```bash title=\"npm\"\nnpm install @keycloakify/svelte-email\n```\n\n```bash title=\"yarn\"\nyarn install @keycloakify/svelte-email\n```\n\n# Getting started\n\n## 1. Create an email using Svelte\n\n`src/$lib/emails/Hello.svelte`\n\n```html\n<script>\n  import { Button, Hr, Html, Text } from 'svelte-email';\n\n  export let name = 'World';\n</script>\n\n<html lang=\"en\">\n  <Text> Hello, {name}! </Text>\n  <hr />\n  <button href=\"https://svelte.dev\">Visit Svelte</button>\n</html>\n```\n\n## 2. Send email\n\nThis example uses [Nodemailer](https://nodemailer.com/about/) to send the email. You can use any other email service provider.\n\n`src/routes/emails/hello/+server.js`\n\n```js\nimport { render } from 'svelte-email';\nimport Hello from '$lib/emails/Hello.svelte';\nimport nodemailer from 'nodemailer';\n\nconst transporter = nodemailer.createTransport({\n  host: 'smtp.ethereal.email',\n  port: 587,\n  secure: false,\n  auth: {\n    user: 'my_user',\n    pass: 'my_password',\n  },\n});\n\nconst emailHtml = render({\n  template: Hello,\n  props: {\n    name: 'Svelte',\n  },\n});\n\nconst options = {\n  from: 'you@example.com',\n  to: 'user@gmail.com',\n  subject: 'hello world',\n  html: emailHtml,\n};\n\ntransporter.sendMail(options);\n```\n\n# Documentation\n\nFor more information, please visit the [documentation](https://svelte-email.vercel.app/).\n\n# Components\n\nA set of standard components to help you build amazing emails without having to deal with the mess of creating table-based layouts and maintaining archaic markup.\n\n- [HTML](https://svelte-email.vercel.app/docs/components/HTML)\n- [Head](https://svelte-email.vercel.app/docs/components/head)\n- [Heading](https://svelte-email.vercel.app/docs/components/heading)\n- [Button](https://svelte-email.vercel.app/docs/components/button)\n- [Link](https://svelte-email.vercel.app/docs/components/link)\n- [Image](https://svelte-email.vercel.app/docs/components/image)\n- [Divider](https://svelte-email.vercel.app/docs/components/hr)\n- [Paragraph](https://svelte-email.vercel.app/docs/components/paragraph)\n- [Container](https://svelte-email.vercel.app/docs/components/container)\n- [Preview](https://svelte-email.vercel.app/docs/components/preview)\n- [Body](https://svelte-email.vercel.app/docs/components/body)\n- [Column](https://svelte-email.vercel.app/docs/components/column)\n- [Section](https://svelte-email.vercel.app/docs/components/section)\n\n# Integrations\n\nEmails built with React Email can be converted into HTML and sent using any email service provider. Here are some examples:\n\n- [Nodemailer](https://github.com/resendlabs/react-email/tree/main/examples/nodemailer)\n- [SendGrid](https://github.com/resendlabs/react-email/tree/main/examples/sendgrid)\n- [Postmark](https://github.com/resendlabs/react-email/tree/main/examples/postmark)\n- [AWS SES](https://github.com/resendlabs/react-email/tree/main/examples/aws-ses)\n\n## Author\n\n- Luca Peruzzo ([@luca-peruzzo](https://github.com/luca-peruzzo))\n\n### Authors of the original project [svelte-email](https://github.com/keycloakify/svelte-email)\n\n- Carsten Lebek ([@carstenlebek](https://twitter.com/carstenlebek1))\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4044, 16],
+		[4058, 4],
+		[4065, 3],
+		[4072, 2],
+		[4086, 1],
+		[4100, 39],
+		[4107, 2],
+		[4114, 8],
+		[4121, 7],
+		[4128, 8]
+	]
 }

@@ -7,31 +7,12 @@
 	"downloads": 3,
 	"updated": "2024-12-09T07:52:21.368Z",
 	"tags": ["ui"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.0.1-a",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.0.1-a",
-	"downloads_history": [
-		[3987, 48],
-		[3994, 101],
-		[4001, 1],
-		[4008, 3],
-		[4015, 5],
-		[4022, 4],
-		[4029, 6],
-		[4036, 7],
-		[4043, 5],
-		[4050, 2],
-		[4064, 1],
-		[4071, 2],
-		[4078, 1],
-		[4099, 2],
-		[4106, 4],
-		[4113, 3]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -43,5 +24,27 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# Dead Simple Svelte Tables\n\nThis simple table component allows you to easily create tables by just providing the table component and the data. There's no need to define columns or configure numerous options. It's perfect for quickly generating simple tables.\n\n## Just a table\n\n```svelte\n<Table {data} />\n```\n\nPut your data, and that's it!\n\n### How should I style it ?\n\nYou can style the table by creating a CSS file and applying styles to the semantic table elements. Here's an example:\n\nCreate a `table.css` file with the following content:\n\n```css\ntable {\n\twidth: 100%;\n\tborder-collapse: collapse;\n}\n\nth,\ntd {\n\tborder: 1px solid #ddd;\n\tpadding: 8px;\n}\n\nth {\n\tbackground-color: #f2f2f2;\n\ttext-align: left;\n}\n```\n\nThen, import this CSS file in your Svelte component:\n\n```js\nimport './table.css';\n```\n\nThis will apply the styles to your table, making it look more polished and readable.\n\n### But do you have any styles ready?\n\nNot at this point of the project, but preferably yes!\nYou can also use some ready table styles like \"pico.css\" or many others.\n\n### What about row actions? How to manage these?\n\nGood one! Here and there you need to manage data in tables by going to row details, quick edit or delete row. All these are crucial for a table components. We are using just urls for buttons, or any snippet using an id for a row .\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3988, 48],
+		[3995, 101],
+		[4002, 1],
+		[4009, 3],
+		[4016, 5],
+		[4023, 4],
+		[4030, 6],
+		[4037, 7],
+		[4044, 5],
+		[4051, 2],
+		[4065, 1],
+		[4072, 2],
+		[4079, 1],
+		[4100, 2],
+		[4107, 4],
+		[4114, 3],
+		[4121, 6],
+		[4128, 5]
+	]
 }

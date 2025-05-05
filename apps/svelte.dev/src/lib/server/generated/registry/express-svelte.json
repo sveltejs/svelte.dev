@@ -7,85 +7,11 @@
 	"downloads": 14,
 	"updated": "2021-07-16T13:56:13.440Z",
 	"tags": ["server"],
-	"runes": false,
 	"github_stars": 11,
 	"typescript": false,
 	"version": "1.0.8",
 	"svelte_range": "^3.38.2",
 	"last_rune_check_version": "1.0.8",
-	"downloads_history": [
-		[3574, 22],
-		[3581, 2],
-		[3588, 7],
-		[3595, 23],
-		[3602, 2],
-		[3609, 12],
-		[3616, 2],
-		[3623, 25],
-		[3630, 1],
-		[3644, 5],
-		[3665, 11],
-		[3679, 2],
-		[3686, 2],
-		[3693, 5],
-		[3700, 1],
-		[3707, 3],
-		[3714, 4],
-		[3721, 1],
-		[3728, 8],
-		[3735, 1],
-		[3742, 4],
-		[3749, 4],
-		[3756, 10],
-		[3763, 14],
-		[3770, 25],
-		[3777, 22],
-		[3784, 26],
-		[3791, 8],
-		[3798, 18],
-		[3805, 16],
-		[3812, 8],
-		[3819, 7],
-		[3826, 1],
-		[3833, 43],
-		[3840, 16],
-		[3847, 8],
-		[3854, 53],
-		[3861, 20],
-		[3868, 4],
-		[3875, 66],
-		[3882, 7],
-		[3889, 1],
-		[3896, 5],
-		[3903, 11],
-		[3910, 10],
-		[3917, 3],
-		[3924, 2],
-		[3938, 1],
-		[3945, 2],
-		[3959, 7],
-		[3966, 86],
-		[3973, 10],
-		[3980, 1],
-		[3987, 4],
-		[3994, 14],
-		[4001, 1],
-		[4015, 3],
-		[4022, 3],
-		[4029, 10],
-		[4036, 12],
-		[4043, 17],
-		[4050, 4],
-		[4057, 4],
-		[4064, 4],
-		[4071, 1],
-		[4078, 2],
-		[4085, 10],
-		[4092, 45],
-		[4099, 12],
-		[4106, 3],
-		[4113, 14]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -96,87 +22,13 @@
 			},
 			{
 				"name": "@babel/core",
-				"version": "7.26.10",
-				"size": 795988
+				"version": "7.27.1",
+				"size": 794180
 			},
 			{
-				"name": "debug",
-				"version": "4.4.0",
-				"size": 42798
-			},
-			{
-				"name": "ms",
-				"version": "2.1.3",
-				"size": 6721
-			},
-			{
-				"name": "json5",
-				"version": "2.2.3",
-				"size": 235198
-			},
-			{
-				"name": "semver",
-				"version": "6.3.1",
-				"size": 68343
-			},
-			{
-				"name": "gensync",
-				"version": "1.0.0-beta.2",
-				"size": 28891
-			},
-			{
-				"name": "@babel/types",
-				"version": "7.27.0",
-				"size": 2583295
-			},
-			{
-				"name": "@babel/helper-string-parser",
-				"version": "7.25.9",
-				"size": 31816
-			},
-			{
-				"name": "@babel/helper-validator-identifier",
-				"version": "7.25.9",
-				"size": 48330
-			},
-			{
-				"name": "@babel/parser",
-				"version": "7.27.0",
-				"size": 1924962
-			},
-			{
-				"name": "@babel/helpers",
-				"version": "7.27.0",
-				"size": 866498
-			},
-			{
-				"name": "@babel/template",
-				"version": "7.27.0",
-				"size": 70675
-			},
-			{
-				"name": "@babel/code-frame",
-				"version": "7.26.2",
-				"size": 33160
-			},
-			{
-				"name": "js-tokens",
-				"version": "4.0.0"
-			},
-			{
-				"name": "picocolors",
-				"version": "1.1.1",
-				"size": 6373
-			},
-			{
-				"name": "@babel/traverse",
-				"version": "7.27.0",
-				"size": 676526
-			},
-			{
-				"name": "@babel/generator",
-				"version": "7.27.0",
-				"size": 559855
+				"name": "@ampproject/remapping",
+				"version": "2.3.0",
+				"size": 78946
 			},
 			{
 				"name": "@jridgewell/gen-mapping",
@@ -204,64 +56,78 @@
 				"size": 53153
 			},
 			{
+				"name": "@babel/code-frame",
+				"version": "7.27.1",
+				"size": 33160
+			},
+			{
+				"name": "@babel/helper-validator-identifier",
+				"version": "7.27.1",
+				"size": 48330
+			},
+			{
+				"name": "js-tokens",
+				"version": "4.0.0"
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "@babel/generator",
+				"version": "7.27.1",
+				"size": 560098
+			},
+			{
+				"name": "@babel/parser",
+				"version": "7.27.1",
+				"size": 1859876
+			},
+			{
+				"name": "@babel/types",
+				"version": "7.27.1",
+				"size": 2597469
+			},
+			{
+				"name": "@babel/helper-string-parser",
+				"version": "7.27.1",
+				"size": 31816
+			},
+			{
 				"name": "jsesc",
 				"version": "3.1.0",
 				"size": 32280
 			},
 			{
-				"name": "globals",
-				"version": "11.12.0",
-				"size": 39779
-			},
-			{
-				"name": "convert-source-map",
-				"version": "2.0.0",
-				"size": 15854
-			},
-			{
-				"name": "@ampproject/remapping",
-				"version": "2.3.0",
-				"size": 78946
-			},
-			{
-				"name": "@babel/helper-module-transforms",
-				"version": "7.26.0",
-				"size": 160842
-			},
-			{
-				"name": "@babel/helper-module-imports",
-				"version": "7.25.9",
-				"size": 63714
-			},
-			{
 				"name": "@babel/helper-compilation-targets",
-				"version": "7.27.0",
+				"version": "7.27.1",
 				"size": 53776
 			},
 			{
 				"name": "@babel/compat-data",
-				"version": "7.26.8",
-				"size": 66428
+				"version": "7.27.1",
+				"size": 66193
 			},
 			{
 				"name": "@babel/helper-validator-option",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 11775
 			},
 			{
 				"name": "browserslist",
-				"version": "4.24.4",
-				"size": 64926
+				"version": "4.24.5",
+				"size": 65174
 			},
 			{
 				"name": "caniuse-lite",
-				"version": "1.0.30001715",
-				"size": 2211246
+				"version": "1.0.30001716",
+				"size": 2214832
 			},
 			{
 				"name": "electron-to-chromium",
-				"version": "1.5.140",
-				"size": 162065
+				"version": "1.5.149",
+				"size": 163189
 			},
 			{
 				"name": "node-releases",
@@ -289,19 +155,79 @@
 				"size": 14766
 			},
 			{
+				"name": "semver",
+				"version": "6.3.1",
+				"size": 68343
+			},
+			{
+				"name": "@babel/helper-module-transforms",
+				"version": "7.27.1",
+				"size": 160852
+			},
+			{
+				"name": "@babel/helper-module-imports",
+				"version": "7.27.1",
+				"size": 63724
+			},
+			{
+				"name": "@babel/traverse",
+				"version": "7.27.1",
+				"size": 689113
+			},
+			{
+				"name": "@babel/template",
+				"version": "7.27.1",
+				"size": 70675
+			},
+			{
+				"name": "debug",
+				"version": "4.4.0",
+				"size": 42798
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "globals",
+				"version": "11.12.0",
+				"size": 39779
+			},
+			{
+				"name": "@babel/helpers",
+				"version": "7.27.1",
+				"size": 861892
+			},
+			{
+				"name": "convert-source-map",
+				"version": "2.0.0",
+				"size": 15854
+			},
+			{
+				"name": "gensync",
+				"version": "1.0.0-beta.2",
+				"size": 28891
+			},
+			{
+				"name": "json5",
+				"version": "2.2.3",
+				"size": 235198
+			},
+			{
 				"name": "@babel/plugin-syntax-dynamic-import",
 				"version": "7.8.3",
 				"size": 2472
 			},
 			{
 				"name": "@babel/helper-plugin-utils",
-				"version": "7.26.5",
-				"size": 11985
+				"version": "7.27.1",
+				"size": 11818
 			},
 			{
 				"name": "@babel/plugin-transform-runtime",
-				"version": "7.26.10",
-				"size": 37366
+				"version": "7.27.1",
+				"size": 37381
 			},
 			{
 				"name": "babel-plugin-polyfill-corejs2",
@@ -354,8 +280,8 @@
 			},
 			{
 				"name": "core-js-compat",
-				"version": "3.41.0",
-				"size": 775766
+				"version": "3.42.0",
+				"size": 772930
 			},
 			{
 				"name": "babel-plugin-polyfill-regenerator",
@@ -364,113 +290,73 @@
 			},
 			{
 				"name": "@babel/preset-env",
-				"version": "7.26.9",
-				"size": 153075
+				"version": "7.27.1",
+				"size": 153034
 			},
 			{
-				"name": "@babel/preset-modules",
-				"version": "0.1.6-no-external-plugins",
-				"size": 38576
+				"name": "@babel/plugin-bugfix-firefox-class-in-computed-class-key",
+				"version": "7.27.1",
+				"size": 11901
 			},
 			{
-				"name": "esutils",
-				"version": "2.0.3",
-				"size": 50582
+				"name": "@babel/plugin-bugfix-safari-class-field-initializer-scope",
+				"version": "7.27.1",
+				"size": 10842
 			},
 			{
-				"name": "@babel/plugin-transform-for-of",
-				"version": "7.26.9",
-				"size": 44850
+				"name": "@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression",
+				"version": "7.27.1",
+				"size": 7706
+			},
+			{
+				"name": "@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining",
+				"version": "7.27.1",
+				"size": 10649
 			},
 			{
 				"name": "@babel/helper-skip-transparent-expression-wrappers",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 6001
 			},
 			{
-				"name": "@babel/plugin-transform-spread",
-				"version": "7.25.9",
-				"size": 23422
+				"name": "@babel/plugin-transform-optional-chaining",
+				"version": "7.27.1",
+				"size": 37601
 			},
 			{
-				"name": "@babel/plugin-transform-classes",
-				"version": "7.25.9",
-				"size": 91170
+				"name": "@babel/plugin-bugfix-v8-static-class-fields-redefine-readonly",
+				"version": "7.27.1",
+				"size": 25724
 			},
 			{
-				"name": "@babel/helper-replace-supers",
-				"version": "7.26.5",
-				"size": 43308
+				"name": "@babel/plugin-proposal-private-property-in-object",
+				"version": "7.21.0-placeholder-for-preset-env.2",
+				"size": 16339
 			},
 			{
-				"name": "@babel/helper-optimise-call-expression",
-				"version": "7.25.9",
-				"size": 6672
+				"name": "@babel/plugin-syntax-import-assertions",
+				"version": "7.27.1",
+				"size": 5735
 			},
 			{
-				"name": "@babel/helper-member-expression-to-functions",
-				"version": "7.25.9",
-				"size": 54675
+				"name": "@babel/plugin-syntax-import-attributes",
+				"version": "7.27.1",
+				"size": 6354
 			},
 			{
-				"name": "@babel/helper-annotate-as-pure",
-				"version": "7.25.9",
-				"size": 4054
-			},
-			{
-				"name": "@babel/plugin-transform-literals",
-				"version": "7.25.9",
-				"size": 4627
-			},
-			{
-				"name": "@babel/plugin-transform-new-target",
-				"version": "7.25.9",
-				"size": 10234
-			},
-			{
-				"name": "@babel/plugin-transform-parameters",
-				"version": "7.25.9",
-				"size": 65125
-			},
-			{
-				"name": "@babel/plugin-transform-modules-amd",
-				"version": "7.25.9",
-				"size": 20879
-			},
-			{
-				"name": "@babel/plugin-transform-modules-umd",
-				"version": "7.25.9",
-				"size": 25547
-			},
-			{
-				"name": "@babel/plugin-transform-regenerator",
-				"version": "7.27.0",
-				"size": 6730
-			},
-			{
-				"name": "regenerator-transform",
-				"version": "0.15.2",
-				"size": 135426
-			},
-			{
-				"name": "@babel/runtime",
-				"version": "7.27.0",
-				"size": 249798
-			},
-			{
-				"name": "regenerator-runtime",
-				"version": "0.14.1",
-				"size": 27863
-			},
-			{
-				"name": "@babel/plugin-transform-dotall-regex",
-				"version": "7.25.9",
-				"size": 4134
+				"name": "@babel/plugin-syntax-unicode-sets-regex",
+				"version": "7.18.6",
+				"size": 3396
 			},
 			{
 				"name": "@babel/helper-create-regexp-features-plugin",
-				"version": "7.27.0",
-				"size": 26825
+				"version": "7.27.1",
+				"size": 26824
+			},
+			{
+				"name": "@babel/helper-annotate-as-pure",
+				"version": "7.27.1",
+				"size": 4054
 			},
 			{
 				"name": "regexpu-core",
@@ -523,264 +409,294 @@
 				"size": 26301
 			},
 			{
-				"name": "@babel/plugin-transform-json-strings",
-				"version": "7.25.9",
-				"size": 5744
-			},
-			{
-				"name": "@babel/plugin-transform-object-super",
-				"version": "7.25.9",
-				"size": 9218
-			},
-			{
-				"name": "@babel/plugin-transform-sticky-regex",
-				"version": "7.25.9",
-				"size": 4643
-			},
-			{
-				"name": "@babel/plugin-transform-block-scoping",
-				"version": "7.27.0",
-				"size": 88154
-			},
-			{
-				"name": "@babel/plugin-transform-destructuring",
-				"version": "7.25.9",
-				"size": 85401
-			},
-			{
-				"name": "@babel/plugin-transform-function-name",
-				"version": "7.25.9",
-				"size": 7115
-			},
-			{
-				"name": "@babel/plugin-transform-typeof-symbol",
-				"version": "7.27.0",
-				"size": 10520
-			},
-			{
-				"name": "@babel/plugin-transform-unicode-regex",
-				"version": "7.25.9",
-				"size": 3934
-			},
-			{
-				"name": "@babel/plugin-syntax-import-assertions",
-				"version": "7.26.0",
-				"size": 5735
-			},
-			{
-				"name": "@babel/plugin-syntax-import-attributes",
-				"version": "7.26.0",
-				"size": 6354
-			},
-			{
-				"name": "@babel/plugin-transform-duplicate-keys",
-				"version": "7.25.9",
-				"size": 9113
-			},
-			{
-				"name": "@babel/plugin-transform-dynamic-import",
-				"version": "7.25.9",
-				"size": 6127
-			},
-			{
-				"name": "@babel/plugin-transform-reserved-words",
-				"version": "7.25.9",
-				"size": 4243
-			},
-			{
-				"name": "@babel/plugin-syntax-unicode-sets-regex",
-				"version": "7.18.6",
-				"size": 3396
-			},
-			{
 				"name": "@babel/plugin-transform-arrow-functions",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 5550
 			},
 			{
-				"name": "@babel/plugin-transform-private-methods",
-				"version": "7.25.9",
-				"size": 4874
-			},
-			{
-				"name": "@babel/helper-create-class-features-plugin",
-				"version": "7.27.0",
-				"size": 441091
-			},
-			{
-				"name": "@babel/plugin-transform-unicode-escapes",
-				"version": "7.25.9",
-				"size": 13899
-			},
-			{
-				"name": "@babel/plugin-transform-class-properties",
-				"version": "7.25.9",
-				"size": 5028
-			},
-			{
-				"name": "@babel/plugin-transform-modules-commonjs",
-				"version": "7.26.3",
-				"size": 41662
-			},
-			{
-				"name": "@babel/plugin-transform-modules-systemjs",
-				"version": "7.25.9",
-				"size": 66605
-			},
-			{
-				"name": "@babel/plugin-transform-regexp-modifiers",
-				"version": "7.26.0",
-				"size": 4216
-			},
-			{
-				"name": "@babel/plugin-transform-numeric-separator",
-				"version": "7.25.9",
-				"size": 5291
-			},
-			{
-				"name": "@babel/plugin-transform-optional-chaining",
-				"version": "7.25.9",
-				"size": 37685
-			},
-			{
-				"name": "@babel/plugin-transform-property-literals",
-				"version": "7.25.9",
-				"size": 4716
-			},
-			{
-				"name": "@babel/plugin-transform-template-literals",
-				"version": "7.26.8",
-				"size": 15828
-			},
-			{
-				"name": "@babel/plugin-transform-async-to-generator",
-				"version": "7.25.9",
-				"size": 8004
-			},
-			{
-				"name": "@babel/helper-remap-async-to-generator",
-				"version": "7.25.9",
-				"size": 9711
-			},
-			{
-				"name": "@babel/helper-wrap-function",
-				"version": "7.25.9",
-				"size": 15802
-			},
-			{
-				"name": "@babel/plugin-transform-class-static-block",
-				"version": "7.26.0",
-				"size": 10239
-			},
-			{
-				"name": "@babel/plugin-transform-object-rest-spread",
-				"version": "7.25.9",
-				"size": 72499
-			},
-			{
-				"name": "@babel/plugin-transform-unicode-sets-regex",
-				"version": "7.25.9",
-				"size": 4919
-			},
-			{
-				"name": "@babel/plugin-transform-computed-properties",
-				"version": "7.25.9",
-				"size": 22684
-			},
-			{
-				"name": "@babel/plugin-transform-shorthand-properties",
-				"version": "7.25.9",
-				"size": 7107
-			},
-			{
-				"name": "@babel/plugin-transform-export-namespace-from",
-				"version": "7.25.9",
-				"size": 7991
-			},
-			{
-				"name": "@babel/plugin-transform-block-scoped-functions",
-				"version": "7.26.5",
-				"size": 7149
-			},
-			{
-				"name": "@babel/plugin-transform-optional-catch-binding",
-				"version": "7.25.9",
-				"size": 4719
-			},
-			{
-				"name": "@babel/plugin-transform-unicode-property-regex",
-				"version": "7.25.9",
-				"size": 5030
-			},
-			{
-				"name": "@babel/plugin-transform-exponentiation-operator",
-				"version": "7.26.3",
-				"size": 11489
-			},
-			{
-				"name": "@babel/plugin-proposal-private-property-in-object",
-				"version": "7.21.0-placeholder-for-preset-env.2",
-				"size": 16339
-			},
-			{
 				"name": "@babel/plugin-transform-async-generator-functions",
-				"version": "7.26.8",
+				"version": "7.27.1",
 				"size": 20293
 			},
 			{
-				"name": "@babel/plugin-transform-member-expression-literals",
-				"version": "7.25.9",
-				"size": 4942
+				"name": "@babel/helper-remap-async-to-generator",
+				"version": "7.27.1",
+				"size": 9833
 			},
 			{
-				"name": "@babel/plugin-transform-private-property-in-object",
-				"version": "7.25.9",
-				"size": 19812
+				"name": "@babel/helper-wrap-function",
+				"version": "7.27.1",
+				"size": 18935
 			},
 			{
-				"name": "@babel/plugin-transform-nullish-coalescing-operator",
-				"version": "7.26.6",
-				"size": 10396
+				"name": "@babel/plugin-transform-async-to-generator",
+				"version": "7.27.1",
+				"size": 8004
 			},
 			{
-				"name": "@babel/plugin-transform-logical-assignment-operators",
-				"version": "7.25.9",
-				"size": 8472
+				"name": "@babel/plugin-transform-block-scoped-functions",
+				"version": "7.27.1",
+				"size": 7149
 			},
 			{
-				"name": "@babel/plugin-transform-named-capturing-groups-regex",
-				"version": "7.25.9",
-				"size": 4858
+				"name": "@babel/plugin-transform-block-scoping",
+				"version": "7.27.1",
+				"size": 88153
 			},
 			{
-				"name": "@babel/plugin-bugfix-firefox-class-in-computed-class-key",
-				"version": "7.25.9",
-				"size": 11901
+				"name": "@babel/plugin-transform-class-properties",
+				"version": "7.27.1",
+				"size": 5028
 			},
 			{
-				"name": "@babel/plugin-bugfix-safari-class-field-initializer-scope",
-				"version": "7.25.9",
-				"size": 10842
+				"name": "@babel/helper-create-class-features-plugin",
+				"version": "7.27.1",
+				"size": 441090
 			},
 			{
-				"name": "@babel/plugin-bugfix-v8-static-class-fields-redefine-readonly",
-				"version": "7.25.9",
-				"size": 25724
+				"name": "@babel/helper-member-expression-to-functions",
+				"version": "7.27.1",
+				"size": 54694
 			},
 			{
-				"name": "@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining",
-				"version": "7.25.9",
-				"size": 10649
+				"name": "@babel/helper-optimise-call-expression",
+				"version": "7.27.1",
+				"size": 6672
+			},
+			{
+				"name": "@babel/helper-replace-supers",
+				"version": "7.27.1",
+				"size": 43308
+			},
+			{
+				"name": "@babel/plugin-transform-class-static-block",
+				"version": "7.27.1",
+				"size": 10239
+			},
+			{
+				"name": "@babel/plugin-transform-classes",
+				"version": "7.27.1",
+				"size": 91170
+			},
+			{
+				"name": "@babel/plugin-transform-computed-properties",
+				"version": "7.27.1",
+				"size": 22684
+			},
+			{
+				"name": "@babel/plugin-transform-destructuring",
+				"version": "7.27.1",
+				"size": 85401
+			},
+			{
+				"name": "@babel/plugin-transform-dotall-regex",
+				"version": "7.27.1",
+				"size": 4134
+			},
+			{
+				"name": "@babel/plugin-transform-duplicate-keys",
+				"version": "7.27.1",
+				"size": 9113
 			},
 			{
 				"name": "@babel/plugin-transform-duplicate-named-capturing-groups-regex",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 5338
 			},
 			{
-				"name": "@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression",
-				"version": "7.25.9",
-				"size": 7706
+				"name": "@babel/plugin-transform-dynamic-import",
+				"version": "7.27.1",
+				"size": 6127
+			},
+			{
+				"name": "@babel/plugin-transform-exponentiation-operator",
+				"version": "7.27.1",
+				"size": 11489
+			},
+			{
+				"name": "@babel/plugin-transform-export-namespace-from",
+				"version": "7.27.1",
+				"size": 7991
+			},
+			{
+				"name": "@babel/plugin-transform-for-of",
+				"version": "7.27.1",
+				"size": 44850
+			},
+			{
+				"name": "@babel/plugin-transform-function-name",
+				"version": "7.27.1",
+				"size": 7115
+			},
+			{
+				"name": "@babel/plugin-transform-json-strings",
+				"version": "7.27.1",
+				"size": 5744
+			},
+			{
+				"name": "@babel/plugin-transform-literals",
+				"version": "7.27.1",
+				"size": 4627
+			},
+			{
+				"name": "@babel/plugin-transform-logical-assignment-operators",
+				"version": "7.27.1",
+				"size": 8472
+			},
+			{
+				"name": "@babel/plugin-transform-member-expression-literals",
+				"version": "7.27.1",
+				"size": 4942
+			},
+			{
+				"name": "@babel/plugin-transform-modules-amd",
+				"version": "7.27.1",
+				"size": 20879
+			},
+			{
+				"name": "@babel/plugin-transform-modules-commonjs",
+				"version": "7.27.1",
+				"size": 41578
+			},
+			{
+				"name": "@babel/plugin-transform-modules-systemjs",
+				"version": "7.27.1",
+				"size": 66605
+			},
+			{
+				"name": "@babel/plugin-transform-modules-umd",
+				"version": "7.27.1",
+				"size": 25552
+			},
+			{
+				"name": "@babel/plugin-transform-named-capturing-groups-regex",
+				"version": "7.27.1",
+				"size": 4858
+			},
+			{
+				"name": "@babel/plugin-transform-new-target",
+				"version": "7.27.1",
+				"size": 10234
+			},
+			{
+				"name": "@babel/plugin-transform-nullish-coalescing-operator",
+				"version": "7.27.1",
+				"size": 10396
+			},
+			{
+				"name": "@babel/plugin-transform-numeric-separator",
+				"version": "7.27.1",
+				"size": 5291
+			},
+			{
+				"name": "@babel/plugin-transform-object-rest-spread",
+				"version": "7.27.1",
+				"size": 72499
+			},
+			{
+				"name": "@babel/plugin-transform-parameters",
+				"version": "7.27.1",
+				"size": 65125
+			},
+			{
+				"name": "@babel/plugin-transform-object-super",
+				"version": "7.27.1",
+				"size": 9218
+			},
+			{
+				"name": "@babel/plugin-transform-optional-catch-binding",
+				"version": "7.27.1",
+				"size": 4719
+			},
+			{
+				"name": "@babel/plugin-transform-private-methods",
+				"version": "7.27.1",
+				"size": 4874
+			},
+			{
+				"name": "@babel/plugin-transform-private-property-in-object",
+				"version": "7.27.1",
+				"size": 19812
+			},
+			{
+				"name": "@babel/plugin-transform-property-literals",
+				"version": "7.27.1",
+				"size": 4716
+			},
+			{
+				"name": "@babel/plugin-transform-regenerator",
+				"version": "7.27.1",
+				"size": 173843
+			},
+			{
+				"name": "@babel/plugin-transform-regexp-modifiers",
+				"version": "7.27.1",
+				"size": 4216
+			},
+			{
+				"name": "@babel/plugin-transform-reserved-words",
+				"version": "7.27.1",
+				"size": 4243
+			},
+			{
+				"name": "@babel/plugin-transform-shorthand-properties",
+				"version": "7.27.1",
+				"size": 7107
+			},
+			{
+				"name": "@babel/plugin-transform-spread",
+				"version": "7.27.1",
+				"size": 23422
+			},
+			{
+				"name": "@babel/plugin-transform-sticky-regex",
+				"version": "7.27.1",
+				"size": 4643
+			},
+			{
+				"name": "@babel/plugin-transform-template-literals",
+				"version": "7.27.1",
+				"size": 15828
+			},
+			{
+				"name": "@babel/plugin-transform-typeof-symbol",
+				"version": "7.27.1",
+				"size": 10519
+			},
+			{
+				"name": "@babel/plugin-transform-unicode-escapes",
+				"version": "7.27.1",
+				"size": 13899
+			},
+			{
+				"name": "@babel/plugin-transform-unicode-property-regex",
+				"version": "7.27.1",
+				"size": 5030
+			},
+			{
+				"name": "@babel/plugin-transform-unicode-regex",
+				"version": "7.27.1",
+				"size": 3934
+			},
+			{
+				"name": "@babel/plugin-transform-unicode-sets-regex",
+				"version": "7.27.1",
+				"size": 4919
+			},
+			{
+				"name": "@babel/preset-modules",
+				"version": "0.1.6-no-external-plugins",
+				"size": 38576
+			},
+			{
+				"name": "esutils",
+				"version": "2.0.3",
+				"size": 50582
+			},
+			{
+				"name": "@babel/runtime",
+				"version": "7.27.1",
+				"size": 246647
 			},
 			{
 				"name": "@nuxt/devalue",
@@ -921,8 +837,8 @@
 			},
 			{
 				"name": "@types/node",
-				"version": "22.14.1",
-				"size": 2331510
+				"version": "22.15.3",
+				"size": 2350386
 			},
 			{
 				"name": "undici-types",
@@ -941,8 +857,8 @@
 			},
 			{
 				"name": "core-js",
-				"version": "3.41.0",
-				"size": 1265563
+				"version": "3.42.0",
+				"size": 1272681
 			},
 			{
 				"name": "eval",
@@ -1184,79 +1100,78 @@
 			[0, 1],
 			[1, 2],
 			[2, 3],
-			[1, 4],
-			[1, 5],
-			[1, 6],
-			[1, 7],
-			[7, 8],
-			[7, 9],
-			[1, 10],
-			[10, 7],
-			[1, 11],
-			[11, 12],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[6, 7],
+			[6, 5],
+			[2, 6],
+			[1, 8],
+			[8, 9],
+			[8, 10],
+			[8, 11],
+			[1, 12],
 			[12, 13],
 			[13, 14],
-			[13, 15],
-			[13, 9],
-			[12, 10],
-			[12, 7],
-			[11, 7],
-			[1, 12],
-			[1, 16],
-			[16, 13],
-			[16, 17],
-			[17, 10],
-			[17, 7],
-			[17, 18],
-			[18, 19],
-			[18, 20],
-			[18, 21],
-			[21, 22],
-			[21, 20],
-			[17, 21],
-			[17, 23],
-			[16, 10],
-			[16, 12],
-			[16, 7],
-			[16, 2],
-			[16, 24],
+			[14, 15],
+			[14, 9],
+			[12, 14],
+			[12, 3],
+			[12, 6],
+			[12, 16],
 			[1, 17],
-			[1, 13],
-			[1, 25],
-			[1, 26],
-			[26, 18],
-			[26, 21],
-			[1, 27],
-			[27, 16],
-			[27, 28],
-			[28, 7],
-			[28, 16],
-			[27, 9],
+			[17, 18],
+			[17, 19],
+			[17, 20],
+			[20, 21],
+			[20, 22],
+			[20, 23],
+			[20, 24],
+			[24, 25],
+			[24, 11],
+			[17, 26],
+			[26, 27],
+			[17, 28],
 			[1, 29],
 			[29, 30],
+			[30, 31],
+			[31, 8],
+			[31, 12],
+			[31, 13],
+			[31, 32],
+			[32, 8],
+			[32, 13],
+			[32, 14],
+			[31, 14],
+			[31, 33],
+			[33, 34],
+			[31, 35],
+			[30, 14],
+			[29, 9],
 			[29, 31],
-			[29, 32],
-			[32, 33],
-			[32, 34],
-			[32, 35],
-			[32, 36],
-			[36, 37],
-			[36, 15],
-			[29, 38],
-			[38, 39],
-			[29, 5],
+			[1, 36],
+			[36, 32],
+			[36, 14],
+			[1, 13],
+			[1, 32],
+			[1, 31],
+			[1, 14],
+			[1, 37],
+			[1, 33],
+			[1, 38],
+			[1, 39],
+			[1, 28],
 			[0, 40],
 			[40, 41],
 			[0, 42],
-			[42, 5],
+			[42, 30],
 			[42, 41],
-			[42, 28],
 			[42, 43],
-			[43, 30],
+			[43, 18],
 			[43, 44],
-			[44, 29],
+			[44, 17],
 			[44, 41],
-			[44, 2],
+			[44, 33],
 			[44, 45],
 			[44, 46],
 			[46, 47],
@@ -1264,329 +1179,402 @@
 			[48, 49],
 			[46, 50],
 			[46, 51],
-			[43, 5],
+			[43, 28],
 			[42, 52],
 			[52, 53],
-			[53, 32],
+			[53, 20],
 			[52, 44],
 			[42, 54],
 			[54, 44],
+			[42, 28],
 			[0, 55],
-			[55, 5],
-			[55, 53],
-			[55, 30],
-			[55, 56],
-			[56, 57],
-			[56, 7],
-			[56, 41],
+			[55, 18],
+			[55, 17],
 			[55, 41],
-			[55, 43],
-			[55, 52],
-			[55, 31],
+			[55, 19],
+			[55, 56],
+			[56, 41],
+			[56, 31],
+			[55, 57],
+			[57, 41],
 			[55, 58],
 			[58, 41],
-			[58, 59],
-			[59, 7],
-			[59, 16],
-			[55, 60],
-			[60, 41],
-			[60, 59],
-			[55, 61],
-			[61, 24],
-			[61, 16],
+			[55, 59],
+			[59, 41],
+			[59, 60],
+			[60, 31],
+			[60, 14],
+			[59, 61],
 			[61, 41],
-			[61, 62],
-			[62, 16],
-			[62, 63],
-			[63, 7],
-			[62, 64],
-			[64, 7],
-			[64, 16],
-			[61, 65],
-			[65, 7],
-			[61, 29],
+			[61, 60],
+			[55, 62],
+			[62, 41],
+			[62, 31],
+			[55, 63],
+			[55, 64],
+			[64, 41],
+			[55, 65],
+			[65, 41],
 			[55, 66],
-			[66, 41],
-			[55, 29],
-			[55, 54],
-			[55, 67],
-			[67, 41],
-			[55, 68],
-			[68, 41],
-			[55, 69],
-			[69, 41],
-			[69, 27],
-			[55, 70],
-			[70, 41],
-			[70, 27],
-			[55, 71],
-			[71, 41],
-			[71, 72],
-			[72, 73],
+			[66, 67],
+			[67, 68],
+			[68, 14],
+			[67, 69],
+			[69, 70],
+			[69, 71],
+			[71, 70],
+			[69, 72],
+			[69, 73],
 			[73, 74],
-			[55, 75],
-			[75, 41],
+			[69, 75],
 			[75, 76],
-			[76, 65],
-			[76, 77],
-			[77, 78],
-			[77, 79],
-			[79, 78],
-			[77, 80],
-			[77, 81],
+			[75, 77],
+			[69, 78],
+			[67, 28],
+			[66, 41],
+			[55, 79],
+			[79, 41],
+			[55, 80],
+			[80, 41],
+			[80, 81],
+			[81, 68],
 			[81, 82],
-			[77, 83],
-			[83, 84],
-			[83, 85],
-			[77, 86],
-			[76, 5],
-			[55, 87],
-			[87, 41],
-			[55, 88],
-			[88, 41],
-			[88, 62],
-			[55, 89],
-			[89, 41],
-			[55, 90],
-			[90, 41],
+			[82, 32],
+			[82, 31],
+			[82, 14],
+			[81, 31],
+			[80, 31],
+			[55, 83],
+			[83, 30],
+			[83, 41],
+			[83, 81],
+			[55, 84],
+			[84, 41],
+			[55, 85],
+			[85, 41],
+			[55, 86],
+			[86, 87],
+			[87, 68],
+			[87, 88],
+			[88, 31],
+			[88, 14],
+			[87, 89],
+			[89, 14],
+			[87, 90],
+			[90, 88],
+			[90, 89],
+			[90, 31],
+			[87, 60],
+			[87, 31],
+			[87, 28],
+			[86, 41],
 			[55, 91],
+			[91, 87],
 			[91, 41],
 			[55, 92],
-			[92, 16],
+			[92, 68],
+			[92, 17],
 			[92, 41],
-			[92, 29],
+			[92, 90],
+			[92, 31],
+			[92, 35],
 			[55, 93],
 			[93, 41],
+			[93, 32],
 			[55, 94],
 			[94, 41],
-			[94, 76],
 			[55, 95],
+			[95, 67],
 			[95, 41],
 			[55, 96],
 			[96, 41],
 			[55, 97],
+			[97, 67],
 			[97, 41],
 			[55, 98],
 			[98, 41],
 			[55, 99],
 			[99, 41],
 			[55, 100],
-			[100, 76],
 			[100, 41],
 			[55, 101],
 			[101, 41],
+			[101, 60],
 			[55, 102],
+			[102, 17],
 			[102, 41],
-			[102, 103],
-			[103, 65],
-			[103, 64],
-			[103, 63],
-			[103, 62],
-			[103, 59],
-			[103, 16],
-			[103, 5],
+			[102, 31],
+			[55, 103],
+			[103, 41],
 			[55, 104],
 			[104, 41],
 			[55, 105],
 			[105, 41],
-			[105, 103],
 			[55, 106],
 			[106, 41],
-			[106, 27],
 			[55, 107],
-			[107, 16],
+			[107, 29],
 			[107, 41],
-			[107, 27],
-			[107, 9],
 			[55, 108],
+			[108, 29],
 			[108, 41],
-			[108, 76],
 			[55, 109],
+			[109, 29],
 			[109, 41],
+			[109, 9],
+			[109, 31],
 			[55, 110],
+			[110, 29],
 			[110, 41],
-			[110, 59],
 			[55, 111],
+			[111, 67],
 			[111, 41],
 			[55, 112],
 			[112, 41],
 			[55, 113],
 			[113, 41],
-			[113, 28],
-			[113, 114],
-			[114, 16],
-			[114, 115],
-			[115, 7],
-			[115, 12],
-			[115, 16],
-			[114, 65],
-			[55, 116],
+			[55, 114],
+			[114, 41],
+			[55, 115],
+			[115, 17],
+			[115, 41],
+			[115, 116],
 			[116, 41],
-			[116, 103],
 			[55, 117],
 			[117, 41],
-			[117, 29],
-			[117, 68],
+			[117, 90],
 			[55, 118],
 			[118, 41],
-			[118, 76],
+			[55, 61],
+			[55, 116],
 			[55, 119],
-			[119, 12],
+			[119, 87],
 			[119, 41],
 			[55, 120],
+			[120, 68],
+			[120, 87],
 			[120, 41],
 			[55, 121],
 			[121, 41],
 			[55, 122],
 			[122, 41],
 			[55, 123],
+			[123, 67],
 			[123, 41],
 			[55, 124],
 			[124, 41],
-			[124, 76],
 			[55, 125],
 			[125, 41],
 			[55, 126],
+			[126, 41],
+			[126, 60],
 			[55, 127],
-			[127, 16],
 			[127, 41],
-			[127, 114],
 			[55, 128],
 			[128, 41],
 			[55, 129],
 			[129, 41],
-			[129, 65],
-			[129, 103],
 			[55, 130],
 			[130, 41],
 			[55, 131],
+			[131, 67],
 			[131, 41],
 			[55, 132],
+			[132, 67],
 			[132, 41],
-			[132, 76],
 			[55, 133],
-			[133, 16],
+			[133, 67],
 			[133, 41],
 			[55, 134],
+			[134, 135],
+			[134, 14],
 			[134, 41],
-			[55, 135],
-			[135, 16],
-			[135, 41],
-			[55, 136],
-			[136, 41],
-			[136, 110],
-			[136, 59],
-			[55, 137],
-			[137, 41],
-			[137, 76],
-			[55, 138],
-			[138, 41],
-			[0, 73],
+			[55, 43],
+			[55, 52],
+			[55, 54],
+			[55, 53],
+			[55, 28],
+			[0, 136],
+			[0, 137],
+			[137, 138],
 			[0, 139],
+			[139, 30],
 			[139, 140],
-			[0, 141],
-			[141, 28],
-			[141, 142],
-			[142, 143],
-			[142, 144],
-			[142, 145],
-			[0, 146],
+			[140, 141],
+			[140, 142],
+			[140, 143],
+			[0, 144],
+			[144, 145],
+			[145, 146],
 			[146, 147],
-			[147, 148],
-			[148, 149],
-			[147, 150],
-			[150, 148],
-			[150, 149],
-			[147, 151],
-			[147, 152],
-			[152, 153],
-			[153, 154],
-			[153, 155],
-			[147, 156],
-			[147, 157],
-			[146, 46],
-			[146, 158],
-			[146, 159],
+			[145, 148],
+			[148, 146],
+			[148, 147],
+			[145, 149],
+			[145, 150],
+			[150, 151],
+			[151, 152],
+			[151, 153],
+			[145, 154],
+			[145, 155],
+			[144, 46],
+			[144, 156],
+			[144, 157],
+			[157, 158],
+			[144, 159],
 			[159, 160],
-			[146, 161],
-			[161, 162],
-			[146, 163],
-			[146, 142],
-			[0, 164],
-			[164, 46],
-			[164, 165],
-			[164, 166],
-			[164, 167],
-			[167, 168],
-			[168, 169],
-			[164, 170],
-			[164, 142],
+			[144, 161],
+			[144, 140],
+			[0, 162],
+			[162, 46],
+			[162, 163],
+			[162, 164],
+			[162, 165],
+			[165, 166],
+			[166, 167],
+			[162, 168],
+			[162, 140],
+			[0, 169],
+			[169, 159],
+			[169, 140],
+			[0, 170],
 			[0, 171],
-			[171, 161],
-			[171, 142],
-			[0, 172],
+			[171, 166],
+			[171, 172],
 			[0, 173],
-			[173, 168],
 			[173, 174],
-			[0, 175],
+			[173, 175],
 			[175, 176],
-			[175, 177],
-			[177, 178],
+			[176, 177],
+			[175, 178],
 			[178, 179],
-			[177, 180],
-			[180, 181],
+			[179, 180],
+			[178, 174],
+			[173, 181],
 			[181, 182],
-			[180, 176],
-			[175, 183],
-			[183, 184],
-			[184, 185],
-			[175, 186],
-			[175, 187],
+			[182, 183],
+			[173, 184],
+			[173, 185],
+			[185, 186],
+			[186, 187],
 			[187, 188],
 			[188, 189],
-			[189, 190],
+			[185, 141],
+			[0, 190],
 			[190, 191],
-			[187, 143],
-			[0, 192],
-			[192, 193],
-			[193, 194],
-			[192, 195],
-			[192, 194],
-			[192, 196],
+			[191, 192],
+			[190, 193],
+			[190, 192],
+			[190, 194],
+			[0, 195],
+			[0, 196],
 			[0, 197],
-			[0, 198],
+			[197, 198],
+			[198, 141],
+			[198, 161],
 			[0, 199],
+			[199, 198],
 			[199, 200],
-			[200, 143],
-			[200, 163],
 			[0, 201],
-			[201, 200],
 			[201, 202],
-			[0, 203],
-			[203, 204],
+			[202, 203],
+			[202, 150],
+			[0, 204],
+			[204, 8],
 			[204, 205],
-			[204, 152],
-			[0, 206],
-			[206, 13],
-			[206, 207],
-			[207, 168],
+			[205, 166],
+			[205, 206],
+			[205, 207],
 			[207, 208],
-			[207, 209],
+			[204, 209],
 			[209, 210],
-			[206, 211],
-			[211, 212],
+			[210, 211],
+			[204, 212],
 			[212, 213],
-			[206, 214],
-			[214, 215],
-			[215, 18],
-			[215, 21],
-			[214, 216],
-			[214, 217],
-			[214, 218],
-			[218, 219],
-			[218, 220],
-			[0, 218]
+			[213, 3],
+			[213, 6],
+			[212, 214],
+			[212, 215],
+			[212, 216],
+			[216, 217],
+			[216, 218],
+			[0, 216]
 		],
 		"circular": []
-	}
+	},
+	"readme": "Express Svelte\n==================\n\nA straightforward [Svelte](https://github.com/sveltejs/svelte) view engine for [Express](https://github.com/expressjs/express).\n\n## Install\nInstall via npm.\n```bash\nnpm install express-svelte --save\n```\n\n## Goals & Design\n\nI created this project because of the lack of a simple way to create, compile, render and hydrate views for simple non-SPA web apps.\n\nIt is a view engine rather than an app framework (like [svelte-kit](https://kit.svelte.dev/), [Sapper](https://github.com/sveltejs/sapper) or [Next.js](https://github.com/vercel/next.js)).\n\nIt [bypasses the express built-in view engine](https://strongloop.com/strongblog/bypassing-express-view-rendering-for-speed-and-modularity) and instead it sets a `res.svelte` function. The reason behind this is to avoid be tightly coupled with express (can be easily extended for use with [Polka](https://github.com/lukeed/polka)) and some limitations like the `app.locals` and `res.locals` merge logic. \n\n## Features\n- Static content without hydration.\n- Hydration.\n- Compile views asynchronously (no need of `svelte/register`) with sane defaults and customizable configuration.\n    * Support for preprocess plugins.\n    * Replace values (like `process.env.NODE_ENV` and `process.browser`).\n    * Dedupe dependencies.\n    * Sourcemap support.\n    * Cache.\n- Global values set at top-level component via [Svelte Context API](https://svelte.dev/docs#getContext):\n    * Global **props** based on `opts.globalProps`.\n    * Global **stores** based on `opts.globalStores`.\n- Customizable root [lodash template](https://lodash.com/docs/4.17.15#template) ([very fast](https://ghcdn.rawgit.org/eta-dev/eta/master/browser-tests/benchmark.html) and similar to EJS syntax). \n\n## Basic setup and usage\n\n> Full setup example available at [express-svelte-example](https://github.com/maxiruani/express-svelte-example).\n\n```javascript\nconst expressSvelte = require('express-svelte');\n// ...\n\n// Configure\napp.use(expressSvelte({ /* config */ }));\n\n// Render view\napp.get((req, res, next) => {\n    res.svelte('View', {\n        props: { /* ... */ },\n        globalProps: { /* ... */ },\n        globalStores: { /* ... */ }\n    });\n});\n```\n\n## Config options\n\n#### `viewsDirname`\n**Type:** `String | String[]`.\n\nDefaults to `process.cwd() + \"/views\"`.\n\nA directory or an array of directories for the app's views (svelte files).\n\n#### `bundlesDirname`\n**Type:** `String | String[]`.\n\nDefaults to `process.cwd() + \"/public/dist\"`.\n\nA directory or an array of directories for the app's views compiled bundles (js and css files) generated by the client rollup config.\n\n#### `bundlesPattern`\n**Type:** `String`.\n\nDefaults to `\"[name]-[hash][extname]\"`.\n\nBundles rollup output format. `[name]` will be used for easy reference at `globalAssets`.\n\n#### `bundlesHost`\n**Type:** `String`.\n\nDefaults to `\"\"`.\n\nAn optional host to prefix JS or CSS bundles. Eg, a CDN host or different subdomain.\n\n#### `defaultExtension`\n**Type:** `String`.\n\nDefaults to `\".svelte\"\"`.\n\nEngine default extension resolution. The lookup has the same behavior as Express built-in `res.render` function.\nIf you do `res.svelte('View')` it will look for `\"View.svelte\"`.\n\n#### `templateFilename`\n**Type:** `String`.\n\nDefaults to absolute path to package's default root lodash template.\n\nIf the default template does not fit for you, you can set a customized root template.\n\n#### `env`\n**Type:** `Boolean`.\n\nDefaults to `process.env.NODE_ENV` or `\"development\"` if not set.\n\nUsed to determine `dev` and `cache` values if not specified.\n\nIt replaces `process.env.NODE_ENV` with [@rollup/plugin-replace plugin](https://github.com/rollup/plugins/tree/master/packages/replace#readme) by default.\n\n#### `dev`\n**Type:** `Boolean`.\n\nDefault is inferred with `env`. If `env` is `\"development\"` or `\"testing\"` is set to `true`.\n\nIt sets `dev`, `preserveComments` and `preserveWhitespace` properties at [rollup-plugin-svelte](https://github.com/sveltejs/rollup-plugin-svelte) plugin and enables source map support.\n\n#### `cache`\n**Type:** `Boolean`.\n\nDefault is inferred with `env`. If `env` is `\"development\"` or `\"testing\"` is set to `false`.\n\n#### `hydratable`\n**Type:** `Boolean`.\n\nDefault is `false`.\n\nHydratable value to be used at [rollup-plugin-svelte](https://github.com/sveltejs/rollup-plugin-svelte) plugin.\n\nIf disabled, props and globals won't be exposed in the HTML.\n\n#### `legacy`\n**Type:** `Boolean`.\n\nDefault is `true`.\n\nA combination of modern and legacy  builds will be used, the modern with `type=\"module\"` attribute and the legacy with the `nomodule` attribute.\n \nBrowsers that understand `type=\"module\"` should ignore scripts with a `nomodule` attribute. This means you can serve a module tree to module-supporting browsers while providing a fall-back to other browsers.\n \nYou can read the full article about this [here](https://jakearchibald.com/2017/es-modules-in-browsers/).\n\nIf enabled, when using [rollup-plugin-express-svelte](https://github.com/maxiruani/rollup-plugin-express-svelte) it needs to be configured to build both bundles. You can check out the [express-svelte-example](https://github.com/maxiruani/express-svelte-example).\n\n#### `replace`\n**Type:** `Object`.\n\nDefault is `{}`.\n\nObject with key-value pairs to be replaced with [@rollup/plugin-replace plugin](https://github.com/rollup/plugins/tree/master/packages/replace#readme) plugin.\n\nLike `process.env.NODE_ENV` replacement, a default replacement for `process.env.browser` is made.\n\n#### `preprocess`\n**Type:** `Array`.\n\nDefault is `[]`.\n\nPreprocess array to be used at [rollup-plugin-svelte](https://github.com/sveltejs/rollup-plugin-svelte) plugin.\n\n#### `dedupe`\n**Type:** `String[]`.\n\nDefault is `[]`.\n\nDependencies array to dedupe array to be used at [@rollup/plugin-node-resolve](https://github.com/rollup/plugins/tree/master/packages/node-resolve/#readme) plugin.\n\nEvery dependency you add will extend the following dedupe array:\n```javascript\n [\n    'svelte',\n    'svelte/animate',\n    'svelte/easing',\n    'svelte/internal',\n    'svelte/motion',\n    'svelte/store',\n    'svelte/transition'\n]\n```\n\n## Render options\n\n#### `cache`\n**Type:** `Boolean`.\n\nOverrides option set at the main config.\n\n#### `hydratable`\n**Type:** `Boolean`.\n\nOverrides option set at the main config.\n\n#### `templateFilename`\n**Type:** `String`.\n\nOverrides option set at the main config or package's default.\n\n#### `props`\n**Type:** `Object`.\n\nProps passed to View svelte component. You will receive these props exporting each property in the view.\n\n#### `globalProps`\n**Type:** `Object`.\n\nProps passed global context accessible via `getContext('global.props')`.\n\n#### `globalStores`\n**Type:** `Object`.\n\nProps passed global store accessible via `getContext('global.stores')`.\n\n## Props, global props and global stores logic and behavior\n\nFor `props`, each property can be accessed via `export let propertyName`. You can use defaults too.\n\nIf you need to make data available globally to all components in the view you can set your values at:\n\nFor `globalProps` accessed via `getContext('global.props')`:\n\nFor `globalStores` accessed via `getContext('global.stores')`:\n- The engine will create a svelte store for every first level value of the `globalStores` provided object.\n\nExpress example:\n```javascript\n\nres.render('View', {\n    props: {\n        localValue: 1 \n    },\n    globalProps: {\n        title: 'Some title!'\n    },\n    globalStores: {\n        user: { name: 'John' },\n        session: { sessionValue: 2 }\n    }\n});\n```\n\nSvelte example: `View.svelte`\n```svelte\n<script>\n    import { getContext } from 'svelte';\n    const { title } = getContext('global.props');  \n    const { user, session } = getContext('global.stores');\n  \n    export let localValue = null;\n</script>\n\n<svelte:head>\n  <title>{title}</title>\n</svelte:head>\n\n<span>{localValue}</span>\n<span>{$user.name}</span>\n<span>{$session.sessionValue}</span>\n````\n\n## Template\n\nThe variables it receives are:\n - `head`: Output from `<svelte:head>` component.\n - `style`: CSS code.\n - `globalProps`: Serialized global props.\n - `globalStore`: Serialized global store.\n - `props`: View props.\n - `script`: Script url.\n - `scriptLegacy`: Script url of legacy build.\n - `scriptModern`: Script url of modern build.\n - `hydratable`: Boolean indicating if the view is hydratable.\n - `legacy`: Boolean indicating if legacy support is enabled.\n - `html`: HTML code.\n \n Also [@nuxt/devalue](https://github.com/nuxt/devalue) function is provided to serialize props.\n This is made at template level to avoid serializing props that are not necessary according to hydration config.\n \n \n",
+	"legacy_svelte": true,
+	"downloads_history": [
+		[3589, 7],
+		[3596, 23],
+		[3603, 2],
+		[3610, 12],
+		[3617, 2],
+		[3624, 25],
+		[3631, 1],
+		[3645, 5],
+		[3666, 11],
+		[3680, 2],
+		[3687, 2],
+		[3694, 5],
+		[3701, 1],
+		[3708, 3],
+		[3715, 4],
+		[3722, 1],
+		[3729, 8],
+		[3736, 1],
+		[3743, 4],
+		[3750, 4],
+		[3757, 10],
+		[3764, 14],
+		[3771, 25],
+		[3778, 22],
+		[3785, 26],
+		[3792, 8],
+		[3799, 18],
+		[3806, 16],
+		[3813, 8],
+		[3820, 7],
+		[3827, 1],
+		[3834, 43],
+		[3841, 16],
+		[3848, 8],
+		[3855, 53],
+		[3862, 20],
+		[3869, 4],
+		[3876, 66],
+		[3883, 7],
+		[3890, 1],
+		[3897, 5],
+		[3904, 11],
+		[3911, 10],
+		[3918, 3],
+		[3925, 2],
+		[3939, 1],
+		[3946, 2],
+		[3960, 7],
+		[3967, 86],
+		[3974, 10],
+		[3981, 1],
+		[3988, 4],
+		[3995, 14],
+		[4002, 1],
+		[4016, 3],
+		[4023, 3],
+		[4030, 10],
+		[4037, 12],
+		[4044, 17],
+		[4051, 4],
+		[4058, 4],
+		[4065, 4],
+		[4072, 1],
+		[4079, 2],
+		[4086, 10],
+		[4093, 45],
+		[4100, 12],
+		[4107, 3],
+		[4114, 14],
+		[4121, 18],
+		[4128, 18]
+	]
 }

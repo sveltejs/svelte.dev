@@ -7,35 +7,12 @@
 	"downloads": 83,
 	"updated": "2025-04-21T19:23:02.096Z",
 	"tags": ["ui", "design-system"],
-	"runes": true,
 	"github_stars": 15,
 	"typescript": true,
 	"version": "1.1.2",
 	"svelte_range": ">=5",
 	"kit_range": "^2.20.7",
 	"last_rune_check_version": "1.1.2",
-	"downloads_history": [
-		[3980, 186],
-		[3987, 13],
-		[3994, 4],
-		[4001, 10],
-		[4008, 5],
-		[4015, 90],
-		[4022, 168],
-		[4029, 42],
-		[4036, 25],
-		[4043, 39],
-		[4050, 34],
-		[4057, 13],
-		[4064, 238],
-		[4071, 24],
-		[4078, 43],
-		[4085, 47],
-		[4092, 27],
-		[4099, 15],
-		[4106, 11],
-		[4113, 83]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -66,8 +43,8 @@
 			},
 			{
 				"name": "svelte",
-				"version": "5.28.1",
-				"size": 2426419
+				"version": "5.28.2",
+				"size": 2426223
 			},
 			{
 				"name": "@ampproject/remapping",
@@ -166,13 +143,13 @@
 			},
 			{
 				"name": "@floating-ui/dom",
-				"version": "1.6.13",
-				"size": 165945
+				"version": "1.7.0",
+				"size": 166707
 			},
 			{
 				"name": "@floating-ui/core",
-				"version": "1.6.9",
-				"size": 212585
+				"version": "1.7.0",
+				"size": 214929
 			},
 			{
 				"name": "@floating-ui/utils",
@@ -220,5 +197,31 @@
 			[0, 5]
 		],
 		"circular": []
-	}
+	},
+	"legacy_svelte": false,
+	"readme": "<h1 align=\"center\">Welcome to <i>Neo Svelte</i></h1>\n<h3 align=\"center\">A neo-morphic ui library for svelte 5</h3>\n\n<p>\n  <img src=\"https://img.shields.io/badge/pnpm-%3E%3D8.0.0-blue.svg\" />\n  <img src=\"https://img.shields.io/badge/node-%3E%3D20.0.0-blue.svg\" />\n  <a href=\"https://github.com/dvcol/neo-svelte#readme\" target=\"_blank\">\n    <img alt=\"Documentation\" src=\"https://img.shields.io/badge/documentation-yes-brightgreen.svg\" />\n  </a>\n  <a href=\"https://github.com/dvcol/neo-svelte/graphs/commit-activity\" target=\"_blank\">\n    <img alt=\"Maintenance\" src=\"https://img.shields.io/badge/Maintained%3F-yes-green.svg\" />\n  </a>\n  <a href=\"https://github.com/dvcol/neo-svelte/blob/master/LICENSE\" target=\"_blank\">\n    <img alt=\"License: MIT\" src=\"https://img.shields.io/github/license/dvcol/neo-svelte\" />\n  </a>\n <a href=\"https://paypal.me/dvcol/5\" target=\"_blank\">\n    <img alt=\"donate\" src=\"https://img.shields.io/badge/Donate%20€-PayPal-brightgreen.svg\" />\n  </a>\n</p>\n\n## Description\n\nNeo Svelte is a modern UI library for Svelte 5, designed to bring a sleek, soft, and futuristic look to web applications with neumorphism and glassmorphism design elements.\n\nIt provides a collection of pre-styled, accessible, and highly customizable components that make it easy to build visually appealing UIs with minimal effort.\n\n## Prerequisites\n\nNote: Svelte Simple Router is a svelte 5 native library, and will not work with prior versions of svelte.\n\n- svelte >= 5.0.0\n\n## Install\n\n```sh\npnpm add @dvcol/neo-svelte\n```\n\n## Getting Started\n\nWrap any component inside the style provider\n\n```svelte\n<script lang=\"ts\">\n  import { NeoThemeProvider } from '@dvcol/neo-svelte';\n</script>\n\n<NeoThemeProvider>\n  ...\n</NeoThemeProvider>\n```\n\nThen import any of the components you want to use.\n\nSee examples in the demo (code [here](https://github.com/dvcol/neo-svelte/tree/fed1b3f42e863e18968c77256527a837957b3304/demo/components), live demo [here](https://dvcol.github.io/neo-svelte/#/inputs)).\n\n## TODO\n\n- [ ] @media any-pointer:coarse any-hover:none\n- [ ] move to inline/bloc to support writing-mode\n- [x] Buttons\n  - [x] toggle\n  - [x] groups\n  - [ ] floating (speed dial)\n  - [ ] split\n- [x] tags/pills\n  - [x] badge\n- [x] Tabs\n- [x] Card\n- [x] Inputs\n  - [x] Password\n  - [x] Pin\n  - [x] Color picker\n  - [x] checkbox\n  - [x] radio\n- [x] Text Area\n  - [ ] @ / # tags\n- [x] file picker\n  - [x] drag & drop\n  - [x] multiple\n- [x] numbers\n  - [x] digits\n  - [ ] phone\n  - [ ] credit card\n  - [x] pin\n- [x] time/date/week\n  - [ ] range\n- [x] switch\n- [x] slider\n  - [x] range\n  - [x] inset\n  - [x] custom before-after\n  - [x] steps\n  - [x] ticks\n  - [ ] vertical\n  - [ ] circular\n  - [ ] rating (stars)\n- [x] select\n  - [x] native\n  - [x] custom\n- [x] form\n\n  - [x] validation\n  - [x] fieldset\n\n- [x] list\n\n  - [x] select\n    - [x] multiple\n    - [x] disabled\n    - [x] readonly\n    - [x] sections\n    - [x] keyboard navigation\n  - [x] scroll shadow\n  - [ ] virtualized\n  - [ ] infinite scroll\n  - [ ] drag & drop\n  - [ ] pagination\n  - [ ] drag & drop\n  - [ ] timeline\n  - [ ] pull/scroll to refresh\n  - [x] filter\n  - [x] sort\n  - [ ] tree\n\n- [x] progress\n\n  - [x] vertical\n  - [ ] circular\n  - [ ] meter (progress group)\n  - [x] ticks\n  - [x] min/max\n  - [x] indeterminate\n  - [x] color/background\n  - [x] duration/timeout\n  - [x] start/stop/cancel/finish/reset\n\n- [x] collapse\n\n  - [x] description\n  - [x] vertical\n  - [x] accordion\n  - [x] controlled (min, max, toggle)\n\n- [x] stepper\n\n  - [x] vertical\n  - [ ] collapse\n  - [x] progress/dots\n  - [x] controls (cancel, next, prev, finish)\n  - [x] touch swipe\n\n- [x] tooltip\n\n  - [x] popconfirm\n  - [x] popselect\n  - [x] popstepper\n\n- [ ] Modal/dialog\n\n  - [x] HTML Dialog\n    - [x] animation (slide/fade)\n    - [x] stepper\n    - [x] confirm\n    - [x] backdrop\n    - [x] position (center, top, bottom, left, right)\n    - [x] custom tag (not dialog)\n    - [x] draggable\n  - [ ] HTML Popover\n  - [x] Drawer\n    - [x] size (width, height)\n    - [x] scrollable\n    - [x] close button\n    - [ ] persistant\n\n- [x] menu\n\n  - [x] nested menus\n  - [ ] collapsable (expand below)\n  - [ ] menu pane (multi column, expand right/left)\n  - [ ] menu list\n  - [x] Dropdown\n  - [x] Sections\n  - [x] Dividers\n\n- [ ] Chat\n  - [ ] infinite scroll\n  - [ ] virtual scroll\n  - [ ] async\n  - [ ] stream\n  - [ ] generative text animation\n  - [ ] scroll to bottom\n  - [ ] typing indicator\n  - [ ] read indicator\n  - [ ] reactions\n  - [ ] threads\n  - [ ] @ / # tags\n  - [ ] mentions\n  - [ ] attachments\n  - [ ] gifs/images\n  - [ ] videos\n  - [ ] audio\n  - [ ] custom cards (contact, etc.)\n  - [ ] custom bubbles\n  - [ ] custom input\n- [ ] table\n- [ ] pagination\n\n- [ ] auto-complete\n\n  - [ ] @ / # tags\n  - [ ] select\n  - [ ] multiple\n  - [ ] auto-complete\n    - [ ] @ / # tags\n\n- [ ] image\n  - [ ] videos\n  - [ ] carousel\n  - [ ] parallax\n- [ ] avatar\n\n  - [x] badge\n\n- [x] PointerTracker (Pointer Events)\n\n  - [x] track cursor\n  - [x] grow to tabindex targets\n  - [x] twist, tilt & pressure support (for supported pencils)\n\n- [ ] loader\n  - [ ] spinner\n  - [X] matrix\n  - [ ] pull to refresh (top, bottom, left, right)\n  - [x] skeleton\n  - [x] lazy load\n  - [X] suspense\n\n- [ ] text\n  - [ ] elevation\n  - [ ] code block (shiki ?)\n  - [x] ellipsis\n  - [x] mark\n  - [x] scroll & shadow\n  - [x] typing animation\n    - [x] fake cursor\n    - [x] fake typos\n    - [x] random pauses\n\n- [ ] Alerts\n  - [ ] toast\n  - [ ] rich notification\n- [ ] container\n  - [x] transition\n  - [ ] split/resizable\n  - [ ] flex\n  - [ ] grid\n  - [ ] masonry ?\n\n## Author\n\n- Github: [@dvcol](https://github.com/dvcol)\n\n## Show your support\n\nGive a ⭐️ if this project helped you!\n\n <a href=\"https://paypal.me/dvcol/5\" target=\"_blank\">\n    <img alt=\"donate\" src=\"https://img.shields.io/badge/Donate%20€-PayPal-brightgreen.svg\" />\n</a>\n\n## 📝 License\n\nThis project is [MIT](https://github.com/dvcol/neo-svelte/blob/master/LICENSE) licensed.\n\n---\n\n_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_\n",
+	"downloads_history": [
+		[3981, 186],
+		[3988, 13],
+		[3995, 4],
+		[4002, 10],
+		[4009, 5],
+		[4016, 90],
+		[4023, 168],
+		[4030, 42],
+		[4037, 25],
+		[4044, 39],
+		[4051, 34],
+		[4058, 13],
+		[4065, 238],
+		[4072, 24],
+		[4079, 43],
+		[4086, 47],
+		[4093, 27],
+		[4100, 15],
+		[4107, 11],
+		[4114, 83],
+		[4121, 90],
+		[4128, 264]
+	]
 }

@@ -6,26 +6,11 @@
 	"downloads": 14,
 	"updated": "2025-01-24T03:49:04.914Z",
 	"tags": ["ui"],
-	"runes": false,
 	"typescript": true,
 	"version": "0.2.8",
 	"svelte_range": "^4.2.7",
 	"last_rune_check_version": "0.2.8",
 	"github_stars": 0,
-	"downloads_history": [
-		[4036, 33],
-		[4043, 2],
-		[4050, 4],
-		[4057, 1],
-		[4064, 8],
-		[4071, 3],
-		[4078, 4],
-		[4085, 1],
-		[4092, 2],
-		[4099, 64],
-		[4106, 12],
-		[4113, 14]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -221,13 +206,13 @@
 			},
 			{
 				"name": "@floating-ui/dom",
-				"version": "1.6.13",
-				"size": 165945
+				"version": "1.7.0",
+				"size": 166707
 			},
 			{
 				"name": "@floating-ui/core",
-				"version": "1.6.9",
-				"size": 212585
+				"version": "1.7.0",
+				"size": 214929
 			},
 			{
 				"name": "@floating-ui/utils",
@@ -325,5 +310,23 @@
 			[42, 35]
 		],
 		"circular": []
-	}
+	},
+	"readme": "ERROR: No README data found!",
+	"legacy_svelte": true,
+	"downloads_history": [
+		[4037, 33],
+		[4044, 2],
+		[4051, 4],
+		[4058, 1],
+		[4065, 8],
+		[4072, 3],
+		[4079, 4],
+		[4086, 1],
+		[4093, 2],
+		[4100, 64],
+		[4107, 12],
+		[4114, 14],
+		[4121, 13],
+		[4128, 8]
+	]
 }

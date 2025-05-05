@@ -10,14 +10,9 @@
 	"tags": ["content"],
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
-	"runes": true,
 	"last_rune_check_version": "0.1.0",
 	"version": "0.1.0",
 	"github_stars": 0,
-	"downloads_history": [
-		[4106, 153],
-		[4113, 28]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -52,8 +47,8 @@
 			},
 			{
 				"name": "detect-libc",
-				"version": "2.0.3",
-				"size": 23627
+				"version": "2.0.4",
+				"size": 23652
 			},
 			{
 				"name": "expand-template",
@@ -81,8 +76,8 @@
 			},
 			{
 				"name": "node-abi",
-				"version": "3.74.0",
-				"size": 16642
+				"version": "3.75.0",
+				"size": 16891
 			},
 			{
 				"name": "semver",
@@ -366,8 +361,8 @@
 			},
 			{
 				"name": "dedent",
-				"version": "1.5.3",
-				"size": 23909
+				"version": "1.6.0",
+				"size": 24484
 			},
 			{
 				"name": "dotenv",
@@ -406,13 +401,13 @@
 			},
 			{
 				"name": "@floating-ui/dom",
-				"version": "1.6.13",
-				"size": 165945
+				"version": "1.7.0",
+				"size": 166707
 			},
 			{
 				"name": "@floating-ui/core",
-				"version": "1.6.9",
-				"size": 212585
+				"version": "1.7.0",
+				"size": 214929
 			},
 			{
 				"name": "@floating-ui/utils",
@@ -466,13 +461,13 @@
 			},
 			{
 				"name": "@tiptap/pm",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 24466
 			},
 			{
 				"name": "prosemirror-menu",
-				"version": "1.2.4",
-				"size": 111446
+				"version": "1.2.5",
+				"size": 113350
 			},
 			{
 				"name": "crelt",
@@ -486,8 +481,8 @@
 			},
 			{
 				"name": "prosemirror-model",
-				"version": "1.25.0",
-				"size": 523551
+				"version": "1.25.1",
+				"size": 524300
 			},
 			{
 				"name": "orderedmap",
@@ -496,13 +491,13 @@
 			},
 			{
 				"name": "prosemirror-transform",
-				"version": "1.10.3",
-				"size": 316103
+				"version": "1.10.4",
+				"size": 317199
 			},
 			{
 				"name": "prosemirror-view",
-				"version": "1.39.1",
-				"size": 872388,
+				"version": "1.39.2",
+				"size": 909536,
 				"isCircular": true,
 				"circularTarget": 97
 			},
@@ -534,8 +529,8 @@
 			},
 			{
 				"name": "prosemirror-keymap",
-				"version": "1.2.2",
-				"size": 25670
+				"version": "1.2.3",
+				"size": 26164
 			},
 			{
 				"name": "w3c-keyname",
@@ -614,8 +609,8 @@
 			},
 			{
 				"name": "prosemirror-dropcursor",
-				"version": "1.8.1",
-				"size": 30848
+				"version": "1.8.2",
+				"size": 34065
 			},
 			{
 				"name": "prosemirror-inputrules",
@@ -712,8 +707,8 @@
 			},
 			{
 				"name": "better-call",
-				"version": "1.0.8",
-				"size": 1092550
+				"version": "1.0.9",
+				"size": 1094268
 			},
 			{
 				"name": "@better-fetch/fetch",
@@ -822,12 +817,12 @@
 			},
 			{
 				"name": "@tiptap/core",
-				"version": "2.11.7",
-				"size": 2546013
+				"version": "2.11.9",
+				"size": 2545985
 			},
 			{
 				"name": "@tiptap/html",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 29723
 			},
 			{
@@ -852,18 +847,18 @@
 			},
 			{
 				"name": "browserslist",
-				"version": "4.24.4",
-				"size": 64926
+				"version": "4.24.5",
+				"size": 65174
 			},
 			{
 				"name": "caniuse-lite",
-				"version": "1.0.30001715",
-				"size": 2211246
+				"version": "1.0.30001716",
+				"size": 2214832
 			},
 			{
 				"name": "electron-to-chromium",
-				"version": "1.5.140",
-				"size": 162065
+				"version": "1.5.149",
+				"size": 163189
 			},
 			{
 				"name": "node-releases",
@@ -945,102 +940,102 @@
 			},
 			{
 				"name": "@tiptap/starter-kit",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 58648
 			},
 			{
 				"name": "@tiptap/extension-bold",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 31774
 			},
 			{
 				"name": "@tiptap/extension-code",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 25242
 			},
 			{
 				"name": "@tiptap/extension-text",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 5838
 			},
 			{
 				"name": "@tiptap/extension-italic",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 31914
 			},
 			{
 				"name": "@tiptap/extension-strike",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 25981
 			},
 			{
 				"name": "@tiptap/extension-heading",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 31013
 			},
 			{
 				"name": "@tiptap/extension-history",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 20863
 			},
 			{
 				"name": "@tiptap/extension-document",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 6443
 			},
 			{
 				"name": "@tiptap/extension-gapcursor",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 14772
 			},
 			{
 				"name": "@tiptap/extension-list-item",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 15835
 			},
 			{
 				"name": "@tiptap/extension-paragraph",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 14727
 			},
 			{
 				"name": "@tiptap/extension-blockquote",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 20603
 			},
 			{
 				"name": "@tiptap/extension-code-block",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 84197
 			},
 			{
 				"name": "@tiptap/extension-dropcursor",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 11938
 			},
 			{
 				"name": "@tiptap/extension-hard-break",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 27449
 			},
 			{
 				"name": "@tiptap/extension-text-style",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 34779
 			},
 			{
 				"name": "@tiptap/extension-bullet-list",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 29385
 			},
 			{
 				"name": "@tiptap/extension-ordered-list",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 39002
 			},
 			{
 				"name": "@tiptap/extension-horizontal-rule",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 35676
 			},
 			{
@@ -1050,7 +1045,7 @@
 			},
 			{
 				"name": "@tiptap/extension-link",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 180532
 			},
 			{
@@ -1065,17 +1060,17 @@
 			},
 			{
 				"name": "@tiptap/extension-highlight",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 31889
 			},
 			{
 				"name": "@tiptap/extension-typography",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 90260
 			},
 			{
 				"name": "@tiptap/extension-bubble-menu",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 98385
 			},
 			{
@@ -1090,7 +1085,7 @@
 			},
 			{
 				"name": "@tiptap/extension-placeholder",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 37819
 			},
 			{
@@ -1478,5 +1473,13 @@
 			[97, 93],
 			[93, 97]
 		]
-	}
+	},
+	"readme": "# Field URL\n\nField component for Rizom CMS.\nSimple component that display the document URL.",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4107, 153],
+		[4114, 28],
+		[4121, 134],
+		[4128, 20]
+	]
 }

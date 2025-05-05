@@ -5,63 +5,21 @@
 	"authors": ["moonlyss"],
 	"homepage": "https://github.com/ShaitanLyss/selenite-commons#readme",
 	"downloads": 141,
-	"updated": "2025-03-31T13:25:35.300Z",
+	"updated": "2025-05-01T17:16:17.271Z",
 	"tags": ["miscellaneous"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
-	"version": "0.30.12",
+	"version": "1.0.7",
 	"svelte_range": "^5.2.0",
-	"kit_range": "^2.8.1",
-	"last_rune_check_version": "0.30.12",
-	"downloads_history": [
-		[3840, 439],
-		[3847, 1265],
-		[3854, 1701],
-		[3861, 1605],
-		[3868, 821],
-		[3875, 301],
-		[3882, 1248],
-		[3889, 422],
-		[3896, 3737],
-		[3903, 1013],
-		[3910, 354],
-		[3917, 9],
-		[3924, 6],
-		[3931, 4],
-		[3938, 167],
-		[3945, 12],
-		[3952, 2],
-		[3959, 6],
-		[3966, 302],
-		[3973, 19],
-		[3980, 2],
-		[3987, 5],
-		[3994, 50],
-		[4001, 34],
-		[4008, 34],
-		[4015, 39],
-		[4022, 173],
-		[4029, 40],
-		[4036, 107],
-		[4043, 108],
-		[4050, 94],
-		[4057, 2],
-		[4064, 8],
-		[4071, 6],
-		[4078, 4],
-		[4085, 2],
-		[4092, 181],
-		[4106, 286],
-		[4113, 141]
-	],
+	"kit_range": "^2.20.7",
+	"last_rune_check_version": "1.0.7",
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
 			{
 				"name": "@selenite/commons",
-				"version": "0.30.12",
-				"size": 226536
+				"version": "1.0.7",
+				"size": 230412
 			},
 			{
 				"name": "@neodrag/svelte",
@@ -80,8 +38,8 @@
 			},
 			{
 				"name": "core-js",
-				"version": "3.41.0",
-				"size": 1265563
+				"version": "3.42.0",
+				"size": 1272681
 			},
 			{
 				"name": "fast-xml-parser",
@@ -105,18 +63,13 @@
 			},
 			{
 				"name": "@babel/runtime-corejs3",
-				"version": "7.27.0",
-				"size": 331596
+				"version": "7.27.1",
+				"size": 328415
 			},
 			{
 				"name": "core-js-pure",
-				"version": "3.41.0",
-				"size": 1122771
-			},
-			{
-				"name": "regenerator-runtime",
-				"version": "0.14.1",
-				"size": 27863
+				"version": "3.42.0",
+				"size": 1129517
 			},
 			{
 				"name": "pluralize",
@@ -130,8 +83,8 @@
 			},
 			{
 				"name": "uuid",
-				"version": "11.0.3",
-				"size": 293890
+				"version": "11.1.0",
+				"size": 132894
 			}
 		],
 		"dependencies": [
@@ -145,11 +98,55 @@
 			[7, 8],
 			[8, 9],
 			[9, 10],
-			[9, 11],
+			[0, 11],
 			[0, 12],
-			[0, 13],
-			[0, 14]
+			[0, 13]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Selenite Commons\n\nThis typescript package provides a set of frequently used utilities, types and svelte actions for building projects\nwith Typescript and Svelte.\n\nIt is part of the Selenite initiative.\n\n[Documentation](https://shaitanlyss.github.io/selenite-commons/modules.html)\n\n## Usage\n\nThis package can be installed in your project with any package manager :\n\n```bash\nnpm i @selenite/commons\nyarn add @selenite/commons\npnpm i @selenite/commons\nbun i @selenite/commons\n```\n\nBe careful that some of the functions use WASM code from an associated package : _selenite-commons-rs_.\nTherefore, if you use tools like Vite or Rollup, you need to add a plugin to the configuration.\n\nAn example of such a plugin is : https://github.com/nshen/vite-plugin-wasm-pack. It is used like this :\n\n```\n// vite.config.ts\nimport wasmPack from 'vite-plugin-wasm-pack'\nexport default defineConfig({\n\tplugins: [\n\t\twasmPack([], ['@selenite/commons-rs']),\n...\n```\n\n## Development\n\nThe project is developed with Typescript and uses vitest for testing. It uses [pnpm](https://pnpm.io/installation) as a package manager and builder.\n\nYou can start the dev server with :\n\n```bash\npnpm dev\n```\n\n## Documentation\n\nThe documentation is generated with TypeDoc and can be built with the following command :\n\n```bash\npnpm docgen\n```\n\nIt will then be accessible in the [docs folder](./docs).\n\n## Publishing\n\nThe package will automatically be built and published (if there's a version change) when pushed to the main branch.\n\nYou can manually publish it on npm with the following command :\n\n```bash\nnpm publish --access public\n# rust code (selenite-commons-rs)\npnpm wasm-pack publish --access public\n```\n\n## TODO\n\n- Document everything\n- Create action to use text content as title | and which adds truncate by default (with css)\n- Try removing newline at end of xml format\n- Add Portal Component\n- Make custom tailwind plugin regrouping all the tailwind plugins used and the configuration\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3841, 439],
+		[3848, 1265],
+		[3855, 1701],
+		[3862, 1605],
+		[3869, 821],
+		[3876, 301],
+		[3883, 1248],
+		[3890, 422],
+		[3897, 3737],
+		[3904, 1013],
+		[3911, 354],
+		[3918, 9],
+		[3925, 6],
+		[3932, 4],
+		[3939, 167],
+		[3946, 12],
+		[3953, 2],
+		[3960, 6],
+		[3967, 302],
+		[3974, 19],
+		[3981, 2],
+		[3988, 5],
+		[3995, 50],
+		[4002, 34],
+		[4009, 34],
+		[4016, 39],
+		[4023, 173],
+		[4030, 40],
+		[4037, 107],
+		[4044, 108],
+		[4051, 94],
+		[4058, 2],
+		[4065, 8],
+		[4072, 6],
+		[4079, 4],
+		[4086, 2],
+		[4093, 181],
+		[4107, 286],
+		[4114, 141],
+		[4121, 74],
+		[4128, 47]
+	]
 }

@@ -6,27 +6,11 @@
 	"downloads": 4,
 	"updated": "2024-12-25T07:54:08.335Z",
 	"tags": ["ui"],
-	"runes": false,
 	"typescript": true,
 	"version": "0.0.1",
 	"svelte_range": "^5.0.0",
 	"last_rune_check_version": "0.0.1",
 	"github_stars": 0,
-	"downloads_history": [
-		[4008, 70],
-		[4015, 4],
-		[4022, 5],
-		[4029, 1],
-		[4036, 3],
-		[4043, 7],
-		[4050, 2],
-		[4057, 1],
-		[4078, 1],
-		[4085, 4],
-		[4099, 2],
-		[4106, 2],
-		[4113, 4]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -38,5 +22,24 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"legacy_svelte": true,
+	"readme": "# Typewriter Svelte\n\nA minimal, customizable terminal-style typewriter effect component for Svelte applications. Perfect for creating command-line style interfaces or adding a retro typing animation to your text.\n\n## Installation\n\n```bash\nnpm install @burnamn/typewriter-svelte\n```\n\n## Usage\n\n```svelte\n<script>\n    import { Typewriter } from '@burnamn/typewriter-svelte';\n</script>\n\n<!-- Basic usage -->\n<Typewriter speed={50} textColor=\"#00ff00\">\n    tracking and analyzing...\n</Typewriter>\n\n<!-- With custom options -->\n<Typewriter \n    speed={75}\n    startDelay={1500}\n    cursorChar=\"█\"\n    cursorColor=\"#00ff00\"\n    textColor=\"#00ff00\"\n    showCursor={true}\n>\n    Your gateway...\n</Typewriter>\n```\n\n## Props\n\n| Prop | Type | Default | Description |\n|------|------|---------|-------------|\n| `speed` | number | `50` | Typing speed in milliseconds per character |\n| `startDelay` | number | `0` | Delay before typing starts (in milliseconds) |\n| `showCursor` | boolean | `true` | Whether to show the blinking cursor |\n| `cursorChar` | string | `'█'` | Character to use for the cursor |\n| `cursorColor` | string | `'#00ff00'` | Color of the cursor |\n| `textColor` | string | `'#00ff00'` | Color of the typed text |\n\n## Features\n\n- 🚀 Lightweight and performant\n- 🎨 Fully customizable colors and cursor\n- ⌨️ Authentic terminal typing effect\n- ⏱️ Configurable typing speed and delay\n- 🎯 Written in TypeScript\n- 📦 Zero dependencies\n\n## Examples\n\n### Terminal Command Effect\n```svelte\n<Typewriter speed={50} textColor=\"#00ff00\">\n    > npm install @burnamn/typewriter-svelte\n</Typewriter>\n```\n\n### Matrix Style\n```svelte\n<Typewriter \n    speed={100}\n    cursorChar=\"|\"\n    textColor=\"#00ff00\"\n    cursorColor=\"#00ff00\"\n>\n    Wake up, Neo...\n</Typewriter>\n```\n\n## License\n\nMIT\n\n## Contributing\n\nContributions are welcome! Please feel free to submit a Pull Request.         ",
+	"downloads_history": [
+		[4009, 70],
+		[4016, 4],
+		[4023, 5],
+		[4030, 1],
+		[4037, 3],
+		[4044, 7],
+		[4051, 2],
+		[4058, 1],
+		[4079, 1],
+		[4086, 4],
+		[4100, 2],
+		[4107, 2],
+		[4114, 4],
+		[4121, 7],
+		[4128, 1]
+	]
 }

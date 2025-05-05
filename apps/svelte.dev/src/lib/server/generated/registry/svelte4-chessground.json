@@ -7,26 +7,12 @@
 	"downloads": 6,
 	"updated": "2025-02-02T14:37:13.750Z",
 	"tags": ["ui"],
-	"runes": false,
 	"typescript": true,
 	"version": "3.0.1",
 	"svelte_range": "4.2.19",
 	"kit_range": "^1.30.4",
 	"last_rune_check_version": "3.0.1",
 	"github_stars": 0,
-	"downloads_history": [
-		[4043, 132],
-		[4050, 102],
-		[4057, 12],
-		[4064, 1],
-		[4071, 6],
-		[4078, 13],
-		[4085, 11],
-		[4092, 3],
-		[4099, 7],
-		[4106, 22],
-		[4113, 6]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -180,5 +166,23 @@
 			[2, 5]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Svelte Chessground\r\n\r\nA Svelte chessboard component.\r\nSvelte-chessground is a wrapper around the full-featured [Chessground](https://github.com/lichess-org/chessground), the open source chess UI developed for Lichess.\r\n\r\n![Chessground screenshots in 2D and 3D](https://github.com/gtim/svelte-chessground/blob/main/static/chessground-screenshot.jpg?raw=true)\r\n\r\nTake a look at the [live demos](https://gtim.github.io/svelte-chessground-examples/watch-ai).\r\n\r\nNote: Chessground does not contain chess logic. If you want a chessboard with legal moves and pawn promotion without additional code, you're looking for [svelte-chess](https://github.com/gtim/svelte-chess).\r\n\r\n## Usage\r\n\r\nInstall:\r\n\r\n    npm install svelte-chessground\r\n\r\nDisplay a chessboard where any pieces can be moved:\r\n\r\n    <script>\r\n        import {Chessground} from 'svelte-chessground';\r\n    </script>    \r\n\r\n    <Chessground />\r\n    \r\nThe component expands to maximum width.\r\nChessground is extensively configurable through props. Parameters and descriptions can be found in the original Chessground's [config.ts](https://github.com/lichess-org/chessground/blob/master/src/config.ts). For instance, to display a specific position and flip the board:\r\n\r\n    <script>\r\n        import {Chessground} from 'svelte-chessground';\r\n        let fen = '7k/5K2/7P/6pP/8/8/8/8 w - - 0 1'; // Forsyth-Edwards Notation\r\n        let orientation = 'black';\r\n    </script>    \r\n\r\n    <Chessground {fen} {orientation}/>\r\n    \r\nThese props enjoy the usual svelte reactivity magic: changing `orientation` or `fen` at any time will change the board.\r\nYou can find more examples in the [svelte-chessground-examples](https://github.com/gtim/svelte-chessground-examples/), including:\r\n* [allowing only legal moves](https://github.com/gtim/svelte-chessground-examples/blob/main/src/routes/legal/%2Bpage.svelte) ([demo](https://gtim.github.io/svelte-chessground-examples/legal))\r\n* [reactive position and orientation](https://github.com/gtim/svelte-chessground-examples/blob/main/src/routes/reactive/%2Bpage.svelte) ([demo](https://gtim.github.io/svelte-chessground-examples/reactive))\r\n* [playing against random AI](https://github.com/gtim/svelte-chessground-examples/blob/main/src/routes/vs-ai/%2Bpage.svelte) ([demo](https://gtim.github.io/svelte-chessground-examples/vs-ai))\r\n* [watching random AI's play](https://github.com/gtim/svelte-chessground-examples/blob/main/src/routes/watch-ai/%2Bpage.svelte) ([demo](https://gtim.github.io/svelte-chessground-examples/watch-ai))\r\n* [custom CSS](https://github.com/gtim/svelte-chessground-examples/blob/main/src/routes/style/%2Bpage.svelte) ([demo](https://gtim.github.io/svelte-chessground-examples/style))\r\n\r\nChessground contains no chess logic, and as such can be used for chess variations. Examples that require chess logic import [chess.js](https://github.com/jhlywa/chess.js).\r\n    \r\n### Styling\r\n\r\nChessground can be completely restyled through CSS. The component imports default stylesheets. To apply your own, you have two options:\r\n\r\n1. Override specific CSS commands with a scoped `:global` and `!important`:\r\n\r\n        <div class=\"override_background\">\r\n            <Chessground />\r\n        </div>\r\n        <style>\r\n            div.override_background :global(.cg-wrap cg-board) {\r\n                background-image:url(\"/my-board.jpg\") !important; /* replace chessboard image */\r\n            }\r\n        </style>\r\n\r\n2. Apply your own full chessground stylesheet instead of the defaults by setting the `class` prop and importing your own stylesheet.\r\nBy changing the class name from the default, none of the default stylesheets will apply, not even the piece SVGs.\r\nAdditionally, you can use the provided `ChessgroundUnstyled` component, which is completely unstyled.\r\n\r\n        <script>\r\n            import {ChessgroundUnstyled} from 'svelte-chessground';\r\n            import '$lib/my-chessboard.css';\r\n        </script>\r\n        <ChessgroundUnstyled class=\"my-chessboard\" />\r\n\r\nYou can find working code for both approaches in the [custom styles examples](https://github.com/gtim/svelte-chessground-examples/blob/main/src/routes/style/%2Bpage.svelte).\r\n\r\n## Building the package\r\n\r\nTo build the package yourself:\r\n\r\n    $ git clone https://github.com/gtim/svelte-chessground.git\r\n    $ cd svelte-chessground\r\n    $ npm run build\r\n",
+	"legacy_svelte": true,
+	"downloads_history": [
+		[4044, 132],
+		[4051, 102],
+		[4058, 12],
+		[4065, 1],
+		[4072, 6],
+		[4079, 13],
+		[4086, 11],
+		[4093, 3],
+		[4100, 7],
+		[4107, 22],
+		[4114, 6],
+		[4121, 8],
+		[4128, 7],
+		[4135, 4]
+	]
 }

@@ -7,30 +7,11 @@
 	"downloads": 6,
 	"updated": "2024-12-07T09:42:13.836Z",
 	"tags": ["tooling"],
-	"runes": false,
 	"github_stars": 12,
 	"typescript": true,
 	"version": "0.1.0",
 	"svelte_range": "^5.3.0",
 	"last_rune_check_version": "0.1.0",
-	"downloads_history": [
-		[3987, 69],
-		[3994, 16],
-		[4001, 8],
-		[4008, 1],
-		[4015, 4],
-		[4022, 3],
-		[4029, 1],
-		[4036, 5],
-		[4043, 9],
-		[4050, 1],
-		[4057, 3],
-		[4071, 1],
-		[4085, 1],
-		[4092, 1],
-		[4106, 4],
-		[4113, 6]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -41,8 +22,8 @@
 			},
 			{
 				"name": "svelte2tsx",
-				"version": "0.7.36",
-				"size": 766555
+				"version": "0.7.37",
+				"size": 772627
 			},
 			{
 				"name": "dedent-js",
@@ -92,5 +73,27 @@
 			[0, 8]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# `@svelte-docgen/extractor`\n\n![NPM Version](https://img.shields.io/npm/v/@svelte-docgen/extractor?style=for-the-badge&logo=npm)\n\nPackage for extracting documentation data/nodes from Svelte component files.\n\n> [!NOTE]\n> Use this package if you want to create your own parser, analyser or generator.\n\n## Dependencies\n\nThe following list powers this package:\n\n1. [`parse()`](https://svelte.dev/docs/svelte/svelte-compiler#parse) from `\"svelte/compiler\"`,\n1. compiler from [`svelte2tsx`](https://github.com/sveltejs/language-tools/tree/master/packages/svelte2tsx),\n1. [TypeScript Compiler API](https://www.typescriptlang.org/docs/handbook/compiler-api.html).\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3988, 69],
+		[3995, 16],
+		[4002, 8],
+		[4009, 1],
+		[4016, 4],
+		[4023, 3],
+		[4030, 1],
+		[4037, 5],
+		[4044, 9],
+		[4051, 1],
+		[4058, 3],
+		[4072, 1],
+		[4086, 1],
+		[4093, 1],
+		[4107, 4],
+		[4114, 6],
+		[4121, 7],
+		[4128, 3]
+	]
 }

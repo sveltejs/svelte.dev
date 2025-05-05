@@ -7,23 +7,12 @@
 	"downloads": 31,
 	"updated": "2025-03-04T01:36:17.905Z",
 	"tags": ["ui"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.0.11",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.17.3",
 	"last_rune_check_version": "0.0.11",
-	"downloads_history": [
-		[4064, 614],
-		[4071, 48],
-		[4078, 196],
-		[4085, 17],
-		[4092, 12],
-		[4099, 1],
-		[4106, 17],
-		[4113, 31]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -34,39 +23,53 @@
 			},
 			{
 				"name": "motion",
-				"version": "12.7.4",
-				"size": 1672513
+				"version": "12.9.4",
+				"size": 1746016
+			},
+			{
+				"name": "framer-motion",
+				"version": "12.9.4",
+				"size": 2398226
+			},
+			{
+				"name": "motion-dom",
+				"version": "12.9.4",
+				"size": 592341
+			},
+			{
+				"name": "motion-utils",
+				"version": "12.9.4",
+				"size": 44970
 			},
 			{
 				"name": "tslib",
 				"version": "2.8.1",
 				"size": 90359
-			},
-			{
-				"name": "framer-motion",
-				"version": "12.7.4",
-				"size": 2705003
-			},
-			{
-				"name": "motion-dom",
-				"version": "12.7.4",
-				"size": 247832
-			},
-			{
-				"name": "motion-utils",
-				"version": "12.7.2",
-				"size": 19610
 			}
 		],
 		"dependencies": [
 			[0, 1],
 			[1, 2],
-			[1, 3],
-			[3, 2],
+			[2, 3],
 			[3, 4],
-			[4, 5],
-			[3, 5]
+			[2, 4],
+			[2, 5],
+			[1, 5]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# @humanspeak/svelte-motion\n\n[![NPM version](https://img.shields.io/npm/v/@humanspeak/svelte-motion.svg)](https://www.npmjs.com/package/@humanspeak/svelte-motion)\n[![Build Status](https://github.com/humanspeak/svelte-motion/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/humanspeak/svelte-motion/actions/workflows/npm-publish.yml)\n[![Coverage Status](https://coveralls.io/repos/github/humanspeak/svelte-motion/badge.svg?branch=main)](https://coveralls.io/github/humanspeak/svelte-motion?branch=main)\n[![License](https://img.shields.io/npm/l/@humanspeak/svelte-motion.svg)](https://github.com/humanspeak/svelte-motion/blob/main/LICENSE)\n[![Downloads](https://img.shields.io/npm/dm/@humanspeak/svelte-motion.svg)](https://www.npmjs.com/package/@humanspeak/svelte-motion)\n[![CodeQL](https://github.com/humanspeak/svelte-motion/actions/workflows/codeql.yml/badge.svg)](https://github.com/humanspeak/svelte-motion/actions/workflows/codeql.yml)\n[![Install size](https://packagephobia.com/badge?p=@humanspeak/svelte-motion)](https://packagephobia.com/result?p=@humanspeak/svelte-motion)\n[![Code Style: Trunk](https://img.shields.io/badge/code%20style-trunk-blue.svg)](https://trunk.io)\n[![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-%230074c1.svg)](http://www.typescriptlang.org/)\n[![Types](https://img.shields.io/npm/types/@humanspeak/svelte-motion.svg)](https://www.npmjs.com/package/@humanspeak/svelte-motion)\n[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/humanspeak/svelte-motion/graphs/commit-activity)\n\n## Why are we here?\n\nJust a little wrapper for motion. I love their work! The typical this is a WIP, if you have issues please give me a react example working so that I can work to ensure its running properly 😍\n\n## Supported Elements\n\n### Regular Elements\n\n- `motion.a`\n- `motion.article`\n- `motion.aside`\n- `motion.blockquote`\n- `motion.button`\n- `motion.code`\n- `motion.dd`\n- `motion.div`\n- `motion.dl`\n- `motion.dt`\n- `motion.fieldset`\n- `motion.figcaption`\n- `motion.figure`\n- `motion.footer`\n- `motion.form`\n- `motion.h1`\n- `motion.h2`\n- `motion.h3`\n- `motion.h4`\n- `motion.h5`\n- `motion.h6`\n- `motion.header`\n- `motion.label`\n- `motion.legend`\n- `motion.li`\n- `motion.main`\n- `motion.nav`\n- `motion.ol`\n- `motion.option`\n- `motion.p`\n- `motion.pre`\n- `motion.section`\n- `motion.select`\n- `motion.span`\n- `motion.table`\n- `motion.tbody`\n- `motion.td`\n- `motion.textarea`\n- `motion.tfoot`\n- `motion.th`\n- `motion.thead`\n- `motion.tr`\n- `motion.ul`\n\n### Void Elements\n\n- `motion.area`\n- `motion.base`\n- `motion.br`\n- `motion.col`\n- `motion.embed`\n- `motion.hr`\n- `motion.img`\n- `motion.input`\n- `motion.param`\n- `motion.source`\n- `motion.track`\n- `motion.wbr`\n\n## Configuration\n\n### MotionConfig\n\nThis package includes support for `MotionConfig`, which allows you to set default motion settings for all child components. See the [Reach - Motion Config](https://motion.dev/docs/react-motion-config) for more details.\n\n```svelte\n<MotionConfig transition={{ duration: 0.5 }}>\n    <!-- All motion components inside will inherit these settings -->\n    <motion.div animate={{ scale: 1.2 }}>Inherits 0.5s duration</motion.div>\n</MotionConfig>\n```\n\n#### Current Limitations\n\nSome Motion features are not yet implemented:\n\n- `reducedMotion` settings\n- `features` configuration\n- Performance optimizations like `transformPagePoint`\n- Advanced transition controls\n\nWe're actively working on adding these features. Check our GitHub issues for progress updates or to contribute.\n\n## External Dependencies\n\nThis package carefully selects its dependencies to provide a robust and maintainable solution:\n\n### Core Dependencies\n\n- **motion**\n    - High-performance animation library for the web\n    - Provides smooth, hardware-accelerated animations\n    - Supports spring physics and custom easing\n    - Used for creating fluid motion and transitions\n\n### Examples\n\n| Motion                                                                                                   | REPL                                                                                          |\n| -------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |\n| [React - Enter Animation](https://examples.motion.dev/react/enter-animation)                             | [View Example](https://svelte.dev/playground/7f60c347729f4ea48b1a4590c9dedc02?version=5.20.2) |\n| [Random - Shiny Button](https://www.youtube.com/watch?v=jcpLprT5F0I) by [@verse\\_](https://x.com/verse_) | [View Example](https://svelte.dev/playground/96f9e0bf624f4396adaf06c519147450?version=5.20.2) |\n\n## License\n\nMIT © [Humanspeak, Inc.](LICENSE)\n\n## Credits\n\nMade with ♥ by [Humanspeak](https://humanspeak.com)\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4065, 614],
+		[4072, 48],
+		[4079, 196],
+		[4086, 17],
+		[4093, 12],
+		[4100, 1],
+		[4107, 17],
+		[4114, 31],
+		[4121, 12],
+		[4128, 7]
+	]
 }

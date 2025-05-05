@@ -7,37 +7,11 @@
 	"downloads": 9,
 	"updated": "2024-11-17T01:58:22.910Z",
 	"tags": ["tooling"],
-	"runes": false,
 	"github_stars": 34,
 	"typescript": false,
 	"version": "0.0.24",
 	"svelte_range": "^3.58.0",
 	"last_rune_check_version": "0.0.24",
-	"downloads_history": [
-		[3945, 318],
-		[3952, 32],
-		[3959, 5],
-		[3966, 72],
-		[3973, 21],
-		[3980, 4],
-		[3987, 8],
-		[3994, 6],
-		[4008, 7],
-		[4015, 8],
-		[4022, 11],
-		[4029, 20],
-		[4036, 14],
-		[4043, 13],
-		[4050, 5],
-		[4057, 5],
-		[4064, 4],
-		[4078, 4],
-		[4085, 3],
-		[4092, 5],
-		[4099, 7],
-		[4106, 15],
-		[4113, 9]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -266,18 +240,18 @@
 			},
 			{
 				"name": "browserslist",
-				"version": "4.24.4",
-				"size": 64926
+				"version": "4.24.5",
+				"size": 65174
 			},
 			{
 				"name": "caniuse-lite",
-				"version": "1.0.30001715",
-				"size": 2211246
+				"version": "1.0.30001716",
+				"size": 2214832
 			},
 			{
 				"name": "electron-to-chromium",
-				"version": "1.5.140",
-				"size": 162065
+				"version": "1.5.149",
+				"size": 163189
 			},
 			{
 				"name": "node-releases",
@@ -1878,5 +1852,34 @@
 			[202, 74]
 		],
 		"circular": []
-	}
+	},
+	"readme": "> ⚠️ **NOTICE:** While this tool is currently functional, it has not nearly been battle-tested enough to ensure it works in most use-cases.\n\n## Usage\nThis tool can be used with `npx`:\n```bash\nnpx svelte-bundle -i <input-dir> -o <output-dir>\n```\n### Full Documentation: [https://github.com/uhteddy/svelte-bundle/wiki](https://github.com/uhteddy/svelte-bundle/wiki)\n\n# Svelte Bundle CLI\n\n**Svelte Bundle CLI** is a simple command-line tool that allows you to bundle a Svelte application into a single `.html` file using Vite and SSR (Server-Side Rendering). The goal of this tool is to make it easy to bundle Svelte apps for deployment, particularly for cases where everything needs to be contained in a single file.\n\nJust note, the purpose of this tool is **NOT** to bundle an entire Svelte app, in-fact it is highly discouraged due to the overhead of the generated file. The purpose of this is to expand the capabilities of svelte to work on systems like certain Content Management Systems (CMS) that only allow HTML, CSS, and JS. It also was created with SSR so that the generated file is SEO-safe where necessary elements are already hydrated.\n\nUtilizing this you will be able to develop a page with the joy of svelte and be able to directly get a single `.html` file that you can utilize getting full use-case of svelte.\n\n⚠️ **Note**: This tool is **NOT** made to function with SvelteKit natively, this takes a single `.svelte` file as input and will output a single `.html` file.\n\n## Inspiration\nThis tool was inspired by the need I had when it came to updating the CMS for a company I worked for. They were looking for more custom content on their website which used an outdated CMS. Pages were only able to include HTML, CSS, and JS.\n\nPure HTML, CSS, and JS can be grainular and more-importantly, lacks the reactivity that Svelte has. Meaning, to develop certain features I had to focus a lot more on the \"what to do\" when data changes, rather than Svelte handling that for me.\n\nSo, I searched for tools around that could be of assistance. I found [figsvelte](https://github.com/thomas-lowry/figsvelte) which was of so much help in the underlying understanding of what to do. But, it did not accomplish all I was looking for. I needed a solution that didn't just generate an HTML file with JS that hydrated the page. Through a lot of tinkering around I was able to finally get the system to work.\n\nI noticed through a lot of google searches I wasn't the only one looking for a solution like this, yet, I was unable to find one that addressed everything I was looking for. So, for this reason I have decided to build svelte-bundle to take care of this in a much more simplistic and CLI way.\n\n## Features\n- [x] Bundles Svelte applications\n- [x] Outputs a single `.html` file ready for deployment.\n- [x] CLI arguments for specifying input and output directories.\n- [x] Tests and CI integration.\n- [x] Handle CSS and assets within the bundled file.\n- [x] Add tailwindcss support, **this is in beta**.\n- [x] Implement error handling and more robust validation.",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3946, 318],
+		[3953, 32],
+		[3960, 5],
+		[3967, 72],
+		[3974, 21],
+		[3981, 4],
+		[3988, 8],
+		[3995, 6],
+		[4009, 7],
+		[4016, 8],
+		[4023, 11],
+		[4030, 20],
+		[4037, 14],
+		[4044, 13],
+		[4051, 5],
+		[4058, 5],
+		[4065, 4],
+		[4079, 4],
+		[4086, 3],
+		[4093, 5],
+		[4100, 7],
+		[4107, 15],
+		[4114, 9],
+		[4121, 9],
+		[4128, 4]
+	]
 }

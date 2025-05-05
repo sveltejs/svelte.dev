@@ -7,17 +7,12 @@
 	"downloads": 546,
 	"updated": "2025-04-17T22:31:05.034Z",
 	"tags": ["ui"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.0.21",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "0.0.21",
-	"downloads_history": [
-		[4106, 78],
-		[4113, 546]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -29,5 +24,14 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# veilchen\n\nveilchen is a set of reusable Svelte components, styled with DaisyUI.\n\nRequirements:\n\n- [Svelte 5](https://svelte.dev/docs/svelte/overview)\n- [DaisyUI 5](https://daisyui.com/docs/v5/)\n- [tailwindcss 4](https://tailwindcss.com/docs/installation/using-vite)\n\n## Setup\n\nFollow the DaisyUI installation guide incl. custom theme setup.\n\n```bash\nnpm i -D @thwbh/veilchen\n```\n\nOpen your `style.css` file. Insert this line after `@import 'tailwindcss'`.\n\n```css\n@source '../node_modules/@thwbh/veilchen';\n```\n\nThis needs to be inserted due to the fact that tailwind's JIT compiler will not scan the `node_modules` folder when excluded in `.gitignore`.\n\n## Usage\n\n### ButtonGroup.svelte\n\n```sveltehtml\n<script lang=\"ts\">\n    const entries = [\n        new KeyValuePair('y', 'Yes'),\n        new KeyValuePair('n', 'No')\n    ];\n\n    let value = $state('y');\n</script>\n\n<ButtonGroup label=\"Sex\" bind:value {entries} />\n```\n\n### Example 1: Basic Button Group with Default Binding\n\n```sveltehtml\n<script lang=\"ts\">\n    import { ButtonGroup } from '@thwbh/veilchen';\n\n    const entries = [\n        new KeyValuePair('a', 'Option A'),\n        new KeyValuePair('b', 'Option B'),\n        new KeyValuePair('c', 'Option C')\n    ];\n\n    let value = $state('a'); // Default to 'Option A'\n</script>\n\n<ButtonGroup label=\"Choose an option\" bind:value {entries} />\n```\n\n---\n\n### Example 2: Button Group with Inline Entries\n\n```sveltehtml\n<script lang=\"ts\">\n    import { ButtonGroup } from '@thwbh/veilchen';\n\n    let selectedValue = $state('1');\n</script>\n\n<ButtonGroup\n    label=\"Select a Number\"\n    bind:value={selectedValue}\n    entries={[\n        new KeyValuePair('1', 'One'),\n        new KeyValuePair('2', 'Two'),\n        new KeyValuePair('3', 'Three')\n    ]}\n/>\n```\n\n---\n\n### Example 3: Handling `on:change` Event\n\n```sveltehtml\n<script lang=\"ts\">\n    import { ButtonGroup } from '@thwbh/veilchen';\n\n    const entries = [\n        new KeyValuePair('x', 'Choice X'),\n        new KeyValuePair('y', 'Choice Y'),\n        new KeyValuePair('z', 'Choice Z')\n    ];\n\n    let selectedKey = $state('x');\n\n    function handleChange(newValue: string) {\n        console.log('Selected value changed to:', newValue);\n    }\n</script>\n\n<ButtonGroup\n    label=\"Pick a letter\"\n    bind:value={selectedKey}\n    {entries}\n    on:change={handleChange}\n/>\n```\n\n## RangeInput.svelte Examples\n\n### Example 1: Basic Range Input\n\n```sveltehtml\n<script lang=\"ts\">\n    import { RangeInput } from '@thwbh/veilchen';\n\n    let value = $state(50); // Default value\n</script>\n\n<RangeInput\n    label=\"Adjust Volume\"\n    bind:value\n    min={0}\n    max={100}\n/>\n```\n\n---\n\n### Example 2: Range Input with Custom Steps\n\n```sveltehtml\n<script lang=\"ts\">\n    import { RangeInput } from '@thwbh/veilchen';\n\n    let brightness = $state(10); // Default value\n</script>\n\n<RangeInput\n    label=\"Brightness\"\n    bind:value={brightness}\n    min={0}\n    max={50}\n    step={5}\n/>\n```\n\n---\n\n## Stack.svelte Examples\n\n### Example 1: Basic Stack Layout\n\n```sveltehtml\n<script lang=\"ts\">\n    import { Stack } from '@thwbh/veilchen';\n</script>\n\n<Stack>\n    <div class=\"p-4 bg-base-200\">Element 1</div>\n    <div class=\"p-4 bg-base-300\">Element 2</div>\n    <div class=\"p-4 bg-base-200\">Element 3</div>\n</Stack>\n```\n\n---\n\n### Example 2: Stack with Gap and Vertical Alignment\n\n```sveltehtml\n<script lang=\"ts\">\n    import { Stack } from '@thwbh/veilchen';\n</script>\n\n<Stack gap=\"4\" vertical>\n    <div class=\"p-4 bg-base-200\">Header</div>\n    <div class=\"p-4 bg-base-300\">Main Content</div>\n    <div class=\"p-4 bg-base-200\">Footer</div>\n</Stack>\n```\n\n## ValidatedInput.svelte Examples\n\n### Example 1: Basic Input with Validation\n\n```sveltehtml\n\n<script lang=\"ts\">\n\timport { ValidatedInput } from '@thwbh/veilchen';\n\n\tlet value = $state('');\n\tlet errorMessage = '';\n</script>\n\n<ValidatedInput\n\tlabel=\"Username\"\n\tbind:value\n\tvalidate={(value) => value.length > 0 ? '' : 'This field is required'}\n>\n\t<p class=\"text-error\">{errorMessage}</p>\n</ValidatedInput>\n```\n\n---\n\n### Example 2: Input with Regex Validation\n\n```sveltehtml\n<script lang=\"ts\">\n    import { ValidatedInput } from '@thwbh/veilchen';\n\n    let password = $state('');\n</script>\n\n<ValidatedInput\n\tbind:value={password}\n\tlabel=\"Password\"\n\ttype=\"password\"\n\trequired\n\tplaceholder=\"Password\"\n\tminlength={8}\n\tpattern=\"(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]){'{'}3{'}'}\"\n\ttitle=\"Must be more than 8 characters, including number, lowercase letter, uppercase letter\"\n>\n\tMust be more than 8 characters, including\n\t<br />At least one number\n\t<br />At least one lowercase letter\n\t<br />At least one uppercase letter\n</ValidatedInput>\n```\n\n## Stepper.svelte Examples\n\n### Example 1: Basic Usage\n\n```sveltehtml\n<Stepper\n\t\tbind:currentStep={current}\n\t\tonnext={handleNextStep}\n\t\tonback={handleBackStep}\n\t\tonfinish={handleFinish}\n\t\tactiveClass={'badge-primary'}\n\t>\n\t\t{#snippet step1()}\n\t\t\t<div>\n\t\t\t\t<strong>Header 1</strong>\n\t\t\t\t<span>Content 1</span>\n\t\t\t</div>\n\t\t{/snippet}\n\t\t{#snippet step2()}\n\t\t\t<div>\n\t\t\t\t<strong>Header 2</strong>\n\t\t\t\t<span>Content 2</span>\n\t\t\t</div>\n\t\t{/snippet}\n\t\t{#snippet step3()}\n\t\t\t<div>\n\t\t\t\t<strong>Header 3</strong>\n\t\t\t\t<span>Content 3</span>\n\t\t\t</div>\n\t\t{/snippet}\n\t\t{#snippet step4()}\n\t\t\t<div>\n\t\t\t\t<strong>Header 4</strong>\n\t\t\t\t<span>Content 4</span>\n\t\t\t</div>\n\t\t{/snippet}\n\t</Stepper>\n```\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4107, 78],
+		[4114, 546],
+		[4121, 528],
+		[4128, 72],
+		[4135, 27]
+	]
 }

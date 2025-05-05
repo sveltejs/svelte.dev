@@ -7,33 +7,11 @@
 	"downloads": 272,
 	"updated": "2025-04-07T17:10:19.076Z",
 	"tags": ["tooling"],
-	"runes": false,
 	"github_stars": 2,
 	"typescript": true,
 	"version": "1.1.0",
 	"svelte_range": "*",
 	"last_rune_check_version": "1.1.0",
-	"downloads_history": [
-		[3987, 184],
-		[3994, 161],
-		[4001, 73],
-		[4008, 10],
-		[4015, 94],
-		[4022, 175],
-		[4029, 223],
-		[4036, 136],
-		[4043, 112],
-		[4050, 176],
-		[4057, 152],
-		[4064, 64],
-		[4071, 63],
-		[4078, 96],
-		[4085, 115],
-		[4092, 129],
-		[4099, 111],
-		[4106, 178],
-		[4113, 272]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -64,5 +42,31 @@
 			[0, 3]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Viam's Prettier Config for Svelte\n\nThis module contains [Viam][]'s shared [Prettier][] configurations for Prettier v3 in [Svelte][] projects.\n\n[viam]: https://www.viam.com/\n[prettier]: https://prettier.io/\n[svelte]: https://svelte.dev/\n\n## Usage\n\nUse the [Svelte config](./prettier-config-svelte.js) for Svelte projects.\n\n```shell\npnpm add --save-dev prettier @viamrobotics/prettier-config-svelte\n```\n\n```js\n// prettier.config.js\nexport default '@viamrobotics/prettier-config-svelte';\n```\n\nIf the project is inside a monorepo, you'll need to specify the path to your Tailwind config.\n\n```js\n// prettier.config.js\nimport path from 'node:path';\n\nimport baseConfig from '@viamrobotics/prettier-config-svelte';\n\n/** @satisfies {import('prettier').Config} */\nconst config = {\n  ...baseConfig,\n  tailwindConfig: path.join(import.meta.dirname, 'tailwind.config.ts'),\n};\n\nexport default config;\n```\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3988, 184],
+		[3995, 161],
+		[4002, 73],
+		[4009, 10],
+		[4016, 94],
+		[4023, 175],
+		[4030, 223],
+		[4037, 136],
+		[4044, 112],
+		[4051, 176],
+		[4058, 152],
+		[4065, 64],
+		[4072, 63],
+		[4079, 96],
+		[4086, 115],
+		[4093, 129],
+		[4100, 111],
+		[4107, 178],
+		[4114, 272],
+		[4121, 168],
+		[4128, 156],
+		[4135, 136]
+	]
 }

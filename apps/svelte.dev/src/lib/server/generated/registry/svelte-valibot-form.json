@@ -7,39 +7,12 @@
 	"downloads": 18,
 	"updated": "2025-01-02T20:25:25.572Z",
 	"tags": ["miscellaneous"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.0.8",
 	"svelte_range": "^5.1.15",
 	"kit_range": "^2.8.0",
 	"last_rune_check_version": "0.0.8",
-	"downloads_history": [
-		[3945, 57],
-		[3952, 70],
-		[3959, 2],
-		[3966, 142],
-		[3973, 8],
-		[3980, 67],
-		[3987, 11],
-		[3994, 25],
-		[4001, 5],
-		[4008, 88],
-		[4015, 89],
-		[4022, 21],
-		[4029, 9],
-		[4036, 24],
-		[4043, 12],
-		[4050, 16],
-		[4057, 2],
-		[4064, 8],
-		[4071, 4],
-		[4078, 2],
-		[4085, 1],
-		[4099, 16],
-		[4106, 17],
-		[4113, 18]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -50,8 +23,8 @@
 			},
 			{
 				"name": "@sveltejs/kit",
-				"version": "2.20.7",
-				"size": 820650
+				"version": "2.20.8",
+				"size": 820819
 			},
 			{
 				"name": "@types/cookie",
@@ -259,5 +232,36 @@
 			[0, 33]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Valibot SvelteKit Form\r\n\r\nThis is a validation library for SvelteKit, integrating Valibot to simplify validation on both front and backend.\r\nThis library provides reusable form components, context-aware validation, and error handling.\r\n\r\n## Table of Contents\r\n\r\n- [Installation](#installation)\r\n- [Usage](#usage)\r\n  - [Form Setup](#form-setup)\r\n  - [Custom Inputs](#custom-inputs)\r\n  - [Server Actions](#server-actions)\r\n- [API Reference](#api-reference)\r\n  - [ValibotForm Props](#valibotform-props)\r\n  - [Context Access](#context-access)\r\n- [Example](#example)\r\n\r\n---\r\n\r\n## Installation\r\n\r\nInstall the library using npm:\r\n\r\n```bash\r\nnpm install svelte-valibot-form\r\n```\r\n\r\nMake sure to install its dependencies:\r\n\r\n```bash\r\nnpm install valibot\r\n```\r\n\r\n## Usage\r\n\r\n### Form Setup\r\n\r\nTo create a form that validates data based on a schema, import `ValibotForm` and pass the necessary schema. Here’s a basic login form example:\r\n\r\n```svelte\r\n<!-- +page.svelte -->\r\n<script lang=\"ts\">\r\n\timport FileInput from '$lib/components/FileInput.svelte';\r\n\timport GenericInput from '$lib/components/GenericInput.svelte';\r\n\timport ValibotForm from '$lib/components/ValibotForm.svelte';\r\n\timport { ValibotAction } from '$lib/index.js';\r\n\timport { LoginSchema, type LoginSchemaType } from '$lib/schema/LoginSchema.js';\r\n\timport type { InferOutput } from 'valibot';\r\n\r\n\tconst login = async (data: InferOutput<LoginSchemaType>) => await ValibotAction.call('login', LoginSchema, data);\r\n</script>\r\n\r\n<ValibotForm\r\n\tschema={LoginSchema}\r\n\tdefaultValues={{ email: '', password: 'teste', file: [new File([], 'test.png')] }}\r\n\tonSubmit={login}\r\n\tonError={console.log}\r\n>\r\n\t<GenericInput name=\"email\" type=\"email\" placeholder=\"Email\" />\r\n\t<GenericInput name=\"password\" type=\"password\" placeholder=\"Password\" />\r\n\t<FileInput name=\"file\" multiple />\r\n\t<button type=\"submit\">Login</button>\r\n</ValibotForm>\r\n```\r\n\r\n### Custom Inputs\r\n\r\nTo access validation errors and default values directly within your form elements, use `getContext` to retrieve the validation context.\r\n\r\n### Form Input Example\r\n\r\n```svelte\r\n<script lang=\"ts\">\r\n\timport { getContext } from 'svelte';\r\n\timport type { LoginSchemaType } from '$lib/schema/LoginSchema.js';\r\n\timport type { ValibotErrorContext, ValibotErrorKey } from '$lib/types.js';\r\n\r\n\tconst props: SvelteHTMLElements['input'] = $props();\r\n\tconst ctx = getContext<ValibotErrorContext<LoginSchemaType>>('form');\r\n\tconst key = props.name as ValibotErrorKey<LoginSchemaType>;\r\n\r\n\tconst defaultValue = ctx?.defaultValues?.[key];\r\n\tconst error = ctx?.errors?.[key];\r\n\r\n\tlet files: FileList | null = $state(null);\r\n\r\n\t$effect(() => {\r\n\t\tif (defaultValue) {\r\n\t\t\tconst dt = new DataTransfer();\r\n\t\t\tArray.isArray(defaultValue) ? defaultValue.forEach((file) => dt.items.add(file)) : dt.items.add(defaultValue);\r\n\t\t\tfiles = dt.files;\r\n\t\t}\r\n\t});\r\n</script>\r\n\r\n<div>\r\n\t<input type=\"file\" bind:files {...props} />\r\n\t{#if error}\r\n\t\t<p>{error}</p>\r\n\t{/if}\r\n</div>\r\n```\r\n\r\n### Normal Input Example\r\n\r\n```svelte\r\n<script lang=\"ts\">\r\n\timport { getContext } from 'svelte';\r\n\timport type { SvelteHTMLElements } from 'svelte/elements';\r\n\tconst props: SvelteHTMLElements['input'] = $props();\r\n\timport type { LoginSchemaType } from '$lib/schema/LoginSchema.js';\r\n\timport type { ValibotErrorContext, ValibotErrorKey } from '$lib/types.js';\r\n\r\n\tconst key = props.name as ValibotErrorKey<LoginSchemaType>;\r\n\tconst ctx = getContext<ValibotErrorContext<LoginSchemaType>>('form');\r\n\r\n\tconst value = ctx?.defaultValues?.[key];\r\n\tconst error = $derived(ctx?.errors?.[key]);\r\n</script>\r\n\r\n<div>\r\n\t<input {value} {...props} />\r\n\t{#if error}\r\n\t\t<p>{error}</p>\r\n\t{/if}\r\n</div>\r\n```\r\n\r\n### Server Actions\r\n\r\nOn the server side, simply parse incoming form data using the `ValibotAction` wrapper function with the schema to validate the data.\r\nThe return object of the Action will have a new member called `data` that has all the submitted data.\r\n\r\n```typescript\r\n// +page.server.ts\r\nimport { withValibot } from '$lib/request/WithSchema.js';\r\nimport { LoginSchema } from '$lib/schema/LoginSchema.js';\r\nimport type { Actions } from './$types.js';\r\n\r\nexport const actions: Actions = {\r\n\tlogin: withValibot(LoginSchema, async ({ data, request }) => {\r\n\t\tconsole.log(request);\r\n\t\tconsole.log(data);\r\n\t})\r\n};\r\n```\r\n\r\n## API Reference\r\n\r\n### ValibotForm Props\r\n\r\nThe `ValibotForm` component accepts the following props:\r\n\r\n```typescript\r\ntype ValibotFormProps = SvelteHTMLElements['form'] & {\r\n\tschema: Schema;\r\n\tforceSubmit?: boolean;\r\n\tdefaultValues?: Partial<v.InferInput<Schema>>;\r\n\tonSubmit?: (values: v.InferOutput<Schema>) => void;\r\n\tonError?: (errors: [v.InferIssue<Schema>, ...v.InferIssue<Schema>[]]) => void;\r\n};\r\n```\r\n\r\n- **schema** (required): Validation schema based on Valibot.\r\n- **forceSubmit**: (optional) Forces form submission when set to true, will be automatically set to false after use.\r\n- **defaultValues**: (optional) Set initial values for the form fields.\r\n- **onSubmit**: Callback function invoked when form validation is successful.\r\n- **onError**: Callback function invoked with validation errors.\r\n\r\n### Context Access\r\n\r\nEach form element can access validation context properties such as `defaultValues` and `errors` using `getContext`.\r\n\r\n```typescript\r\nconst ctx = getContext<ValibotErrorContext<LoginSchemaType>>('form');\r\n```\r\n\r\n- **defaultValues**: Access default values set in the form.\r\n- **errors**: Access validation errors associated with each form field.\r\n\r\n## Example\r\n\r\nHere’s a complete example to illustrate the library’s usage.\r\n\r\n```svelte\r\n<script lang=\"ts\">\r\n\timport ValibotForm from '$lib/components/ValibotForm.svelte';\r\n\timport GenericInput from '$lib/components/GenericInput.svelte';\r\n\timport { LoginSchema, type LoginSchemaType } from '$lib/schema/LoginSchema.js';\r\n\timport { ValibotAction } from '$lib/index.js';\r\n\timport type { InferOutput } from 'valibot';\r\n\r\n\tconst login = async (data: InferOutput<LoginSchemaType>) => await ValibotAction.call('login', LoginSchema, data);\r\n</script>\r\n\r\n<ValibotForm schema={LoginSchema} defaultValues={{ email: '', password: '' }} onSubmit={login} onError={console.error}>\r\n\t<GenericInput name=\"email\" type=\"email\" placeholder=\"Email\" />\r\n\t<GenericInput name=\"password\" type=\"password\" placeholder=\"Password\" />\r\n\t<button type=\"submit\">Login</button>\r\n</ValibotForm>\r\n```\r\n## ValibotAction\r\n\r\nThe `ValibotAction` class is a utility for submitting validated form data directly to server actions in SvelteKit. \r\nIt allows for seamless form submission, including handling file uploads, transforming the form data, and validating inputs against a Valibot schema before sending to the server.\r\n\r\n### How It Works\r\n\r\n`ValibotAction.call` validates the input data with the provided Valibot schema. If validation succeeds, it converts the data into `FormData`, handling nested objects and file uploads. \r\nThen, it sends the data to the specified server action endpoint. If the `invalidate` option is set, the cache will be invalidated after a successful submission.\r\n\r\n### Usage\r\n\r\nIn a form component, `ValibotAction.call` can be used to validate and send form data:\r\n\r\n```typescript\r\nimport { ValibotAction } from '$lib/index.js';\r\nimport { LoginSchema, type LoginSchemaType } from '$lib/schema/LoginSchema.js';\r\nimport type { InferOutput } from 'valibot';\r\n\r\nconst login = async (data: InferOutput<LoginSchemaType>) => await ValibotAction.call('login', LoginSchema, data);\r\n```\r\n\r\n### API\r\n\r\n#### `ValibotAction.call`\r\n\r\n```typescript\r\nstatic async call<Schema extends GenericValibotObject>(\r\n  action: string,\r\n  schema: Schema,\r\n  data: InferInput<Schema>,\r\n  options?: ActionOptions\r\n): Promise<{ success: boolean; errors?: Record<string, string>; issues?: ValibotIssue[] }>\r\n```\r\n\r\n- **action** (string): Name of the server action to invoke.\r\n- **schema** (GenericValibotObject): A Valibot schema defining validation rules for the data.\r\n- **data** (InferInput<Schema>): Input data to validate and send to the server action.\r\n- **options** (ActionOptions, optional): Additional options, including:\r\n\r\n  - `invalidate` (boolean): If `true`, invalidates the client-side cache after successful submission. Defaults to `true`.\r\n\r\n- **Returns**: An object containing:\r\n  - `success` (boolean): Indicates if the validation and submission were successful.\r\n  - `errors` (optional): An error map generated if validation fails.\r\n  - `issues` (optional): Array of Valibot validation issues if validation fails.\r\n\r\n## License\r\n\r\nThis project is licensed under the MIT License.\r\n\r\n---\r\n\r\nThis README provides a structured overview of your Valibot SvelteKit library, detailing the setup and usage of key components, properties, and context, with example code snippets. Let me know if you'd like further customization!\r\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3946, 57],
+		[3953, 70],
+		[3960, 2],
+		[3967, 142],
+		[3974, 8],
+		[3981, 67],
+		[3988, 11],
+		[3995, 25],
+		[4002, 5],
+		[4009, 88],
+		[4016, 89],
+		[4023, 21],
+		[4030, 9],
+		[4037, 24],
+		[4044, 12],
+		[4051, 16],
+		[4058, 2],
+		[4065, 8],
+		[4072, 4],
+		[4079, 2],
+		[4086, 1],
+		[4100, 16],
+		[4107, 17],
+		[4114, 18],
+		[4121, 22],
+		[4128, 10],
+		[4135, 15]
+	]
 }

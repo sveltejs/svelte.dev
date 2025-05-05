@@ -7,17 +7,11 @@
 	"downloads": 178,
 	"updated": "2025-04-04T16:31:05.935Z",
 	"tags": ["media"],
-	"runes": true,
 	"typescript": true,
 	"version": "0.2.4",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "0.2.4",
-	"downloads_history": [
-		[4099, 195],
-		[4106, 245],
-		[4113, 178]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -60,5 +54,14 @@
 			[0, 5]
 		],
 		"circular": []
-	}
+	},
+	"legacy_svelte": false,
+	"readme": "<div align=\"center\">\n<br />\n\n![Player](https://s3.amazonaws.com/dev.droplab.com/repo_banners/%40droplab-svelte-videoplayer-banner.jpg)\n\n<h1>Svelte-Videoplayer</h3>\n\n#### Svelte Mux Video Component\n\n*Svelte-Videoplayer is a component developed by [Droplab](https://droplab.com) for playing Mux videos.*\n\n</div>\n\n### Install\n\n```bash\npnpm install @droplab/svelte-videoplayer\n```\n\n### License\n\nMade with 💛!\n\nPublished under [MIT License](./LICENSE).",
+	"downloads_history": [
+		[4100, 195],
+		[4107, 245],
+		[4114, 178],
+		[4121, 186],
+		[4128, 156]
+	]
 }

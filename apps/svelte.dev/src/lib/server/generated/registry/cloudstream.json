@@ -7,20 +7,12 @@
 	"downloads": 10,
 	"updated": "2025-03-09T19:27:51.399Z",
 	"tags": ["media"],
-	"runes": true,
 	"github_stars": 1,
 	"typescript": true,
 	"version": "1.0.1",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "1.0.1",
-	"downloads_history": [
-		[4078, 106],
-		[4085, 12],
-		[4092, 7],
-		[4106, 2],
-		[4113, 10]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -32,5 +24,16 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"legacy_svelte": false,
+	"readme": "# CloudStream\r\n\r\n[![NPM](https://img.shields.io/npm/v/cloudstream?color=red)](https://www.npmjs.com/package/cloudstream)\r\n[![MIT License](https://img.shields.io/github/license/GreenestGoat/cloudstream.svg?color=blue)](https://github.com/GreenestGoat/cloudstream/blob/next/LICENSE)\r\n\r\nSvelte component for Cloudflare Stream\r\n\r\n[Demo](https://svelte.dev/playground/77a3baaf835249d0be3eefc08a4b40ae?version=5.22.6)\r\n\r\n## Installation\r\n\r\n```shell\r\n# npm\r\nnpm install cloudstream\r\n```\r\n\r\n```shell\r\n# pnpm\r\npnpm install cloudstream\r\n```\r\n\r\n```shell\r\n# yarn\r\nyarn add cloudstream\r\n```\r\n\r\n## Usage\r\n\r\n```svelte\r\n<script>\r\n  import { CloudStream } from \"cloudstream\";\r\n</script>\r\n\r\n<CloudStream\r\n  videoid=\"6b9e68b07dfee8cc2d116e4c51d6a957\"\r\n  customer=\"f33zs165nr7gyfy4\"\r\n  params={{\r\n    loop: false,\r\n    muted: true\r\n  }}\r\n/>\r\n```\r\n\r\n## Development\r\n\r\n```shell\r\ngit clone https://github.com/GreenestGoat/cloudstream.git\r\nnpm install\r\nnpm run dev -- --open\r\n```\r\n\r\n## License\r\n\r\nLicensed under the [MIT license](https://github.com/GreenestGoat/cloudstream/blob/main/LICENSE.md).\r\n\r\n## Contributors\r\n\r\nContributions are welcome! Please feel free to submit a Pull Request.\r\n\r\n<a href=\"https://github.com/GreenestGoat/cloudstream/graphs/contributors\">\r\n  <img src=\"https://contrib.rocks/image?repo=GreenestGoat/cloudstream\" />\r\n</a>",
+	"downloads_history": [
+		[4079, 106],
+		[4086, 12],
+		[4093, 7],
+		[4107, 2],
+		[4114, 10],
+		[4121, 7],
+		[4128, 5]
+	]
 }

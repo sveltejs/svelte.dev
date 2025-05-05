@@ -7,36 +7,12 @@
 	"downloads": 35,
 	"updated": "2025-03-05T17:47:34.712Z",
 	"tags": ["design-system"],
-	"runes": false,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.0.3",
 	"svelte_range": "^4.2.13",
 	"kit_range": "2.8.0",
 	"last_rune_check_version": "0.0.3",
-	"downloads_history": [
-		[3973, 59],
-		[3980, 8],
-		[3987, 3],
-		[3994, 3],
-		[4001, 2],
-		[4008, 2],
-		[4015, 2],
-		[4022, 4],
-		[4029, 5],
-		[4036, 5],
-		[4043, 12],
-		[4050, 18],
-		[4057, 3],
-		[4064, 5],
-		[4071, 12],
-		[4078, 71],
-		[4085, 35],
-		[4092, 23],
-		[4099, 43],
-		[4106, 19],
-		[4113, 35]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -62,13 +38,13 @@
 			},
 			{
 				"name": "@floating-ui/dom",
-				"version": "1.6.13",
-				"size": 165945
+				"version": "1.7.0",
+				"size": 166707
 			},
 			{
 				"name": "@floating-ui/core",
-				"version": "1.6.9",
-				"size": 212585
+				"version": "1.7.0",
+				"size": 214929
 			},
 			{
 				"name": "@floating-ui/utils",
@@ -99,5 +75,32 @@
 			[0, 8]
 		],
 		"circular": []
-	}
+	},
+	"legacy_svelte": true,
+	"readme": "<h1 align=\"center\">Svelvunity - Where apps get alive</h1>\n\n![build](https://github.com/AmadeusITGroup/Svelvunity/workflows/ci/badge.svg)\n\n## Introduction\n\nWelcome to Svelvunity, a [Svelte](https://svelte.dev/) library designed to provide developers with reusable components and utilities to accelerate the development of Svelte applications.\n\nSvelvunity is a library of Svelte web components designed to streamline your development process. With Svelvunity, you can integrate pre-built components into your projects without starting from scratch.\n\n- [Features](#features)\n- [Getting Started](#getting-started)\n- [Usage](#usage)\n- [Contributing](#contributing)\n- [License](#license)\n\n## Features\n\n- **Reusable Components**: Leverage a suite of pre-built Svelte components designed for efficiency and ease of use.\n- **Customizable**: Easily theme and customize components to fit the branding and style of your application.\n- **Performance Optimized**: Built with performance in mind, ensuring your applications run smoothly.\n- **Fully Typed**: Take advantage of [TypeScript](https://typescriptlang.org/) support for type safety and an enhanced developer experience.\n- **Effortless Integration**: Seamlessly integrate components into your existing Svelte projects with minimal setup.\n\n## Getting Started\n\nTo start using Svelvunity in your project, install Svelvunity by running the following command in your project directory:\n\n```bash\nnpm install @amadeus-it-group/svelvunity\n```\n\nFor comprehensive information on each component and how to use it, see the [Documentation](https://mehtapcavdar.github.io/svelvunity/).\n\n## Usage\n\nImport the components you need and start using them in your Svelte application:\n\n```typescript\n<script>\n  import { Datepicker } from '@amadeus-it-group/svelvunity';\n</script>\n\n<Datepicker />\n```\n\n## Contributing\n\nWe welcome contributions! Please read our [Contribution Guidelines](./CONTRIBUTING.md) to get started.\n\n## License\n\nThis project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.\n",
+	"downloads_history": [
+		[3974, 59],
+		[3981, 8],
+		[3988, 3],
+		[3995, 3],
+		[4002, 2],
+		[4009, 2],
+		[4016, 2],
+		[4023, 4],
+		[4030, 5],
+		[4037, 5],
+		[4044, 12],
+		[4051, 18],
+		[4058, 3],
+		[4065, 5],
+		[4072, 12],
+		[4079, 71],
+		[4086, 35],
+		[4093, 23],
+		[4100, 43],
+		[4107, 19],
+		[4114, 35],
+		[4121, 14],
+		[4128, 8]
+	]
 }

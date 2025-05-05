@@ -7,28 +7,12 @@
 	"downloads": 13,
 	"updated": "2025-01-15T21:26:47.393Z",
 	"tags": ["integration"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.0.1",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.0.1",
-	"downloads_history": [
-		[4029, 64],
-		[4036, 8],
-		[4043, 15],
-		[4050, 6],
-		[4057, 9],
-		[4064, 13],
-		[4071, 9],
-		[4078, 13],
-		[4085, 11],
-		[4092, 6],
-		[4099, 11],
-		[4106, 15],
-		[4113, 13]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -40,5 +24,25 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# Svelte SureFeedback\n\nA Svelte wrapper component for SureFeedback (ProjectHuddle) that provides seamless integration with your Svelte applications.\n\n## Installation\n\n```bash\nnpm install svelte-surefeedback\n```\n\n## Features\n\n- 🚀 Easy integration with Svelte applications\n- 🔒 Type-safe with full TypeScript support\n- 🎯 Automatic script loading and cleanup\n- 🔄 Token persistence management\n- 🐛 Debug mode for troubleshooting\n- ⏱️ Configurable timeout handling\n- 🎭 Event callbacks for load and error states\n\n## Usage\n\nBasic usage:\n\n```svelte\n<script>\n  import { SureFeedback } from 'svelte-surefeedback';\n</script>\n\n<SureFeedback \n  url=\"//feedback.mindhyv.com/?p=YOUR_PROJECT_ID&ph_apikey=YOUR_API_KEY\" \n/>\n```\n\nAdvanced usage with all options:\n\n```svelte\n<script>\n  import { SureFeedback } from 'svelte-surefeedback';\n\n  function handleError(error) {\n    console.error('SureFeedback error:', error);\n  }\n\n  function handleLoaded() {\n    console.log('SureFeedback loaded successfully');\n  }\n</script>\n\n<SureFeedback \n  url=\"//feedback.mindhyv.com/?p=YOUR_PROJECT_ID&ph_apikey=YOUR_API_KEY\"\n  enabled={true}\n  debug={true}\n  timeout={15000}\n  persistToken={true}\n  tokenKey=\"ph_access_token\"\n  onError={handleError}\n  onLoaded={handleLoaded}\n/>\n```\n\n## Configuration Options\n\n| Option | Type | Default | Description |\n|--------|------|---------|-------------|\n| `url` | `string` | Required | The SureFeedback URL with your project ID and API key |\n| `enabled` | `boolean` | `true` | Enable/disable the feedback widget |\n| `debug` | `boolean` | `false` | Enable debug mode for detailed logging |\n| `timeout` | `number` | `10000` | Script loading timeout in milliseconds |\n| `persistToken` | `boolean` | `true` | Whether to persist the access token in localStorage |\n| `tokenKey` | `string` | `'ph_access_token'` | Custom key for storing the token |\n| `onError` | `(error: string) => void` | `undefined` | Callback function for error handling |\n| `onLoaded` | `() => void` | `undefined` | Callback function when script loads successfully |\n\n## Error Handling\n\nThe component includes built-in error handling for:\n- Invalid URLs\n- Missing required parameters\n- Script loading failures\n- Timeout issues\n- LocalStorage access problems\n\nErrors are displayed in a clear message and can be caught using the `onError` callback.\n\n## Debug Mode\n\nWhen debug mode is enabled, the component will log detailed information about:\n- Script loading process\n- Token management\n- Error states\n- Cleanup operations\n\nEnable debug mode during development:\n\n```svelte\n<SureFeedback \n  url=\"your-url\"\n  debug={true}\n/>\n```\n\n## TypeScript Support\n\nThe package includes full TypeScript definitions. You can import types:\n\n```typescript\nimport type { SureFeedbackProps } from 'svelte-surefeedback';\n```\n\n## Requirements\n\n- Svelte 5.x\n- SureFeedback/ProjectHuddle account and API credentials\n\n## License\n\nMIT\n\n## Contributing\n\nContributions are welcome! Please feel free to submit a Pull Request.",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4030, 64],
+		[4037, 8],
+		[4044, 15],
+		[4051, 6],
+		[4058, 9],
+		[4065, 13],
+		[4072, 9],
+		[4079, 13],
+		[4086, 11],
+		[4093, 6],
+		[4100, 11],
+		[4107, 15],
+		[4114, 13],
+		[4121, 9],
+		[4128, 4],
+		[4135, 5]
+	]
 }

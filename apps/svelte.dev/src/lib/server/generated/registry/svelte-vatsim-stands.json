@@ -5,32 +5,21 @@
 	"authors": ["kristiankunc"],
 	"homepage": "https://github.com/kristiankunc/svelte-vatsim-stands#readme",
 	"downloads": 8,
-	"updated": "2025-04-21T21:37:02.813Z",
+	"updated": "2025-04-24T13:41:42.486Z",
 	"tags": ["ui"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
-	"version": "1.2.1",
+	"version": "1.2.2",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
-	"last_rune_check_version": "1.2.1",
-	"downloads_history": [
-		[4064, 347],
-		[4071, 74],
-		[4078, 16],
-		[4085, 20],
-		[4092, 8],
-		[4099, 1],
-		[4106, 2],
-		[4113, 8]
-	],
+	"last_rune_check_version": "1.2.2",
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
 			{
 				"name": "svelte-vatsim-stands",
-				"version": "1.2.1",
-				"size": 33926
+				"version": "1.2.2",
+				"size": 34102
 			},
 			{
 				"name": "ol",
@@ -138,5 +127,20 @@
 			[1, 17]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Svelte VATSIM Stands\n\nA Svelte component to display VATSIM stand occupancy.\n\n## Preview\n\n![image](https://github.com/user-attachments/assets/b4287ed3-15c3-4100-ba5a-f4970b9816e9)\n\n## Installation\n\n```bash\nnpm install svelte-vatsim-stands\n```\n\n## Usage\n\nComponent parameters\n\n```svelte\n<!--\nUsing the Map component to display the map:\n\ttileUlr: URL of the tile source \n    (defaults to satellite view)\n\tviewParams: Initial view parameters \n    {center: [longitude, latitude], zoom: number} (defaults to center of the world)\n\tsourcePath: Path to the stand data source accessible from the client \n    (can be relative or absolute)\n    thresholds: Thresholds for stand occupancy and pilot distance\n    bind:currentStand: Binding to the current stand data\n-->\n\n<script lang=\"ts\">\n\timport { Map, tileUrls, type StandData } from \"svelte-vatsim-stands\";\n</script>\n\n<Map\n\ttileUlr={tileUrls.SATELLITE}\n\tviewParams={{\n\t\tcenter: [24.8085431, 59.4153153],\n\t\tzoom: 16.25\n\t}}\n\tsourcePath=\"/test-stands/EETN.txt\"\n\tthresholds={{\n\t\tktsMaxGroundSpeed: 1,\n\t\tkmDistanceFromCenter: 10,\n\t\tftDefaultWingSpan: 50\n\t}}\n\tbind:currentStand\n/>\n```\n\n1. Minimal example\n\n```svelte\n<script lang=\"ts\">\n\timport { Map, tileUrls, type StandData } from \"svelte-vatsim-stands\";\n</script>\n\n<Map\n\ttileUlr={tileUrls.SATELLITE}\n\tviewParams={{\n\t\tcenter: [24.8085431, 59.4153153],\n\t\tzoom: 16.25\n\t}}\n\tsourcePath=\"/test-stands/EETN.txt\"\n/>\n```\n\n2. Example with a tooltip defined\n\n```svelte\n<script lang=\"ts\">\n\timport { Map, tileUrls, type StandData } from \"svelte-vatsim-stands\";\n\n\tlet currentStand: StandData | null = $state(null);\n\tlet mouseX = $state(0);\n\tlet mouseY = $state(0);\n\n\tfunction handleMouseMove(event: MouseEvent) {\n\t\tmouseX = event.clientX;\n\t\tmouseY = event.clientY;\n\t}\n</script>\n\n<svelte:window on:mousemove={handleMouseMove} />\n\n{#if currentStand}\n\t<div class=\"fixed z-[1000] rounded-lg bg-white p-4 shadow-lg\" style=\"top: {mouseY + 10}px; left: {mouseX + 10}px;\">\n\t\t<p>Stand <span class=\"font-bold\">{currentStand.name}</span>{!currentStand.occupied ? \" ✅\" : \" ❌\"}</p>\n\t\t{#if currentStand.occupied}\n\t\t\t<p>Occupied by {currentStand.pilot?.callsign}</p>\n\t\t{/if}\n\t</div>\n{/if}\n\n<Map\n\ttileUlr={tileUrls.SATELLITE}\n\tviewParams={{\n\t\tcenter: [24.8085431, 59.4153153],\n\t\tzoom: 16.25\n\t}}\n\tsourcePath=\"/test-stands/EETN.txt\"\n\tbind:currentStand\n/>\n```\n\n### Stand source\n\nA publicly accessible txt file following the EuroScope sectorfile format is required to be passed to the component.\n`[N/S]DDD.MM.SS.mmm:[E/W]DDD.MM.SS.mmm:LABEL` is the format of each line in the file.\n\nEmpty lines and lines starting with `;` are ignored.\n\nExample files can be seen in [static/test-stands](static/test-stands).\n\n## Thresholds\n\nA few default thresholds are defined that can be overridden with the `thresholds` param\n\nPilots with the following conditions are considered not to be at the airport:\n\n- Ground speed greater than **1**.\n- Callsign includes `_`.\n- Further than **10km** from the defined centerpoint.\n\nTo deem a stand occupied, they must be within a wingspan (ftDefaultWingSpan as fallback) distance of the stand.\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4065, 347],
+		[4072, 74],
+		[4079, 16],
+		[4086, 20],
+		[4093, 8],
+		[4100, 1],
+		[4107, 2],
+		[4114, 8],
+		[4121, 65],
+		[4128, 108],
+		[4135, 12]
+	]
 }

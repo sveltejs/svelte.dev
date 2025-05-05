@@ -9,11 +9,9 @@
 	"tags": ["miscellaneous"],
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
-	"runes": true,
 	"last_rune_check_version": "0.0.3-beta.14",
 	"version": "0.0.3-beta.14",
 	"github_stars": 0,
-	"downloads_history": [[4113, 190]],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -29,18 +27,18 @@
 			},
 			{
 				"name": "@types/bun",
-				"version": "1.2.10",
+				"version": "1.2.12",
 				"size": 4006
 			},
 			{
 				"name": "bun-types",
-				"version": "1.2.10",
-				"size": 1640734
+				"version": "1.2.12",
+				"size": 1651178
 			},
 			{
 				"name": "@types/node",
-				"version": "22.14.1",
-				"size": 2331510
+				"version": "22.15.3",
+				"size": 2350386
 			},
 			{
 				"name": "undici-types",
@@ -49,8 +47,8 @@
 			},
 			{
 				"name": "zod",
-				"version": "3.24.3",
-				"size": 697771
+				"version": "3.24.4",
+				"size": 698927
 			},
 			{
 				"name": "commander",
@@ -68,5 +66,12 @@
 			[0, 7]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Svelte Phrase Chain\n\nA powerful, type-safe internationalization (i18n) library for Svelte applications. Built with Svelte 5 runes and TypeScript for a modern, reactive localization experience.\n\n[![Made with Svelte](https://img.shields.io/badge/Made%20With-Svelte-FF3E00?style=flat-square&logo=svelte)](https://svelte.dev/)\n[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)\n[![Svelte 5](https://img.shields.io/badge/Svelte-5-FF3E00?style=flat-square&logo=svelte)](https://svelte.dev/)\n\n\n## 🛠️ CLI Quickstart\n\nSvelte Phrase Chain uses a dedicated CLI for project initialization, ensuring a streamlined setup process.\n\n### 1. Install via CLI\n> **Note:** You can skip installing the package, as the CLI will effectively just copy paste all necessary files to your project.\n\n```bash\n# Using bun\nbunx svelte-phrase-chain init\n\n# Using npm\nnpx svelte-phrase-chain init\n\n# Using pnpm\npnpx  svelte-phrase-chain init\n\n```\n\n\nThe CLI accepts several options to customize your setup:\n\n```bash\n# Full example with all options\nbunx svelte-phrase-chain init \\\n  --locales en,fr,es,de \\\n  --fallbackLocale en \\\n  --persistLocale \\\n  --localStorageKey app_locale \\\n  --translationsDir src/lib/i18n/translations \\\n  --generateTranslations \\\n  --debug\n```\n\n| Option | Description | Default |\n|--------|-------------|---------|\n| `--locales` | Supported locales (comma-separated) | `en,es,fr` |\n| `--fallbackLocale` | Fallback locale | `en` |\n| `--persistLocale` | Persist locale in localStorage | `true` |\n| `--localStorageKey` | LocalStorage key for locale | `app_locale` |\n| `--translationsDir` | Translations folder path | `src/lib/translations` |\n| `--generateTranslations` | Generate initial translation JSON files | `true` |\n| `--debug` | Enable debug logging | `true` |\n\n### 2. Generated files\n\nThe CLI will generate:\n\n```\nsrc/\n└── lib/\n    ├── i18n/\n    │   ├── i18n.ts              # Main i18n configuration & exports\n    │   └── core/                # Core implementation files\n    │       ├── index.svelte.ts  # Main i18n functionality\n    │       └── types.ts         # TypeScript types\n    └── translations/            # Translation JSON files\n        ├── en.json\n        ├── es.json\n        └── fr.json\n```\n\n### 3. Import and use i18n in your components\n\n```svelte\n<script lang=\"ts\">\n  import { t, setLocale, locale, initLocale } from '$lib/i18n/i18n';\n  import type { Locale } from '$lib/i18n/i18n';\n  \n  // Initialize with browser detection\n  initLocale({ \n    preferBrowser: true, \n    preferStorage: true,\n    defaultLocale: 'en'\n  });\n  \n  // Example usage\n  let name = $state(\"User\");\n  let messageCount = $state(1);\n  \n  function changeLanguage(lang: Locale) {\n    setLocale(lang);\n  }\n</script>\n\n<h1>{t('common.welcome')}</h1>\n<p>{t('common.greeting', { name })}</p>\n\n<p>{t('user.messageCount', { count: messageCount }, messageCount)}</p>\n\n<!-- Language switcher -->\n<div>\n  <p>Current locale: {locale()}</p>\n  <button onclick={() => changeLanguage('en')}>English</button>\n  <button onclick={() => changeLanguage('fr')}>Français</button>\n  <button onclick={() => changeLanguage('es')}>Español</button>\n</div>\n```\n\n## Philosophy\n\nSvelte Phrase Chain follows the \"code is yours, do what you want with it\" approach, similar to shadcn and other projects. It is designed with sensible defaults, but all you need to add is up to you:\n\n- Want to support multiple English versions (en-gb, en-us, en-au)? Feel free to add it!\n- Don't like how plurals are handled? Feel free to rewrite it!\n- Need to customize anything? The code is yours to modify.\n\n### How CLI Affects Your Code\n\nWhen you run the CLI:\n\n- Yes, it will overwrite code if you run it again in an existing project\n- But as you own the code, you can validate the changes via your source control of choice\n- Add and merge changes you want (especially if you've customized it to fit your needs)\n- All generated code belongs to your project - modify it freely to match your requirements\n\n## Why Svelte Phrase Chain?\n\nWhile there are several i18n solutions for Svelte like svelte-i18n and typesafe-i18n, Svelte Phrase Chain offers distinct advantages:\n\n- **Built for Svelte 5** - Leverages runes for true reactivity without stores or contexts\n- **Fully Type-Safe** - TypeScript-first approach with automatic type generation from translation files\n- **Modern API** - Clean, intuitive API designed for the latest Svelte development practices\n- **Zero External Dependencies** - Core functionality has no runtime dependencies beyond Svelte itself\n- **Fine-Grained Reactivity** - Updates only what changes, optimized for Svelte's rendering model\n- **Extensible by Design** - Built with customization and extension in mind\n\n## Features\n\n- 🔄 **Reactive** - Built with Svelte 5 runes for automatic reactivity\n- 🔍 **Type-safe** - Full TypeScript support with auto-completion for translation keys\n- 🌐 **Dynamic locale switching** - Change languages on-the-fly\n- 📦 **Lazy loading** - Load translation files on demand based on the active locale\n- 📊 **Rich formatting options**:\n  - 📝 Parameter interpolation (`Hello, {name}!`)\n  - 🔢 Pluralization with count-aware formatting\n  - 📅 Date formatting with relative time support\n  - 🧮 Number formatting with currency and percent support\n- 🧪 **Schema validation** - Zod-powered schema validation for translation files\n\n## Translation File Structure\n\nThe library expects JSON files with translations for each locale:\n\n```json\n// src/lib/translations/en.json\n{\n  \"common\": {\n    \"welcome\": \"Welcome to our app\",\n    \"greeting\": \"Hello, {name}!\",\n    \"footer\": \"© 2025 Awesome App. All rights reserved.\"\n  },\n  \"user\": {\n    \"messageCount\": {\n      \"zero\": \"No messages\",\n      \"one\": \"You have {count} unread message\",\n      \"other\": \"You have {count} unread messages\"\n    }\n  }\n}\n```\n\n## Advanced Usage\n\n### Date Formatting\n\n```svelte\n<script>\n  import { t } from '$lib/i18n/i18n';\n  \n  const joinDate = new Date('2023-01-15');\n  const lastLoginDate = new Date(Date.now() - 3600000); // 1 hour ago\n</script>\n\n<!-- In your translation file: \"user.joinDate\": \"Member since {date:date}\" -->\n<p>{t('user.joinDate', { date: joinDate })}</p>\n\n<!-- In your translation file: \"user.lastLogin\": \"Last login: {date:relative}\" -->\n<p>{t('user.lastLogin', { date: lastLoginDate })}</p>\n```\n\n### Pluralization\n\n```svelte\n<script>\n  import { t } from '$lib/i18n/i18n';\n  \n  let count = $state(1);\n  \n  function increment() {\n    count++;\n  }\n</script>\n\n<!--\nTranslation structure in user.messageCount:\n{\n  \"zero\": \"No messages\",\n  \"one\": \"{count} message\",\n  \"other\": \"{count} messages\"\n}\n-->\n\n<p>{t('user.messageCount', { count }, count)}</p>\n<button on:click={increment}>Add Message</button>\n```\n\n### Schema Validation\n\nUse the provided schema tools to validate your translation files:\n\n```typescript\n// scripts/validate-translations.ts\nimport { createI18nSchema } from 'svelte-phrase-chain/schema';\nimport en from '../src/lib/translations/en.json';\nimport es from '../src/lib/translations/es.json';\nimport fr from '../src/lib/translations/fr.json';\n\nconst mySchema = createI18nSchema({\n  pluralKeyIdentifier: (key) => key.endsWith('Count'),\n  requiredPluralKeys: ['one', 'other'],\n  optionalPluralKeys: ['zero', 'few', 'many'],\n  allowedDateFormats: ['date', 'relative', 'fullDate']\n});\n\n// Validate all translation files\ntry {\n  const enValid = mySchema.parse(en);\n  const esValid = mySchema.parse(es);\n  const frValid = mySchema.parse(fr);\n  console.log(\"✅ All translation files are valid!\");\n} catch (error) {\n  console.error(\"❌ Validation failed:\", error);\n  process.exit(1);\n}\n```\n\n## Browser Compatibility\n\nSupports all modern browsers with ECMAScript 2015 (ES6) support, with features relying on:\n- `Intl` API for formatting\n- Dynamic imports for lazy loading\n\n## Contributing\n\nContributions are welcome! Please feel free to submit a Pull Request.\n\n## License\n\nThis project is licensed under the MIT License - see the LICENSE file for details.\n\n## Acknowledgments\n\n* Built with Svelte 5 and TypeScript\n* Inspired by modern i18n libraries like react-intl and i18next",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4114, 190],
+		[4121, 322],
+		[4128, 32]
+	]
 }

@@ -5,38 +5,21 @@
 	"authors": ["eirikk"],
 	"homepage": "https://inspect.eirik.space",
 	"downloads": 381,
-	"updated": "2025-04-07T11:18:18.630Z",
+	"updated": "2025-04-28T10:32:23.745Z",
 	"tags": ["tooling"],
-	"runes": true,
-	"github_stars": 82,
+	"github_stars": 98,
 	"typescript": true,
-	"version": "0.6.2",
-	"svelte_range": "^5.19.0",
-	"kit_range": "^2.9.1",
-	"last_rune_check_version": "0.6.2",
-	"downloads_history": [
-		[4022, 218],
-		[4029, 61],
-		[4036, 56],
-		[4043, 9],
-		[4050, 51],
-		[4057, 658],
-		[4064, 2555],
-		[4071, 2104],
-		[4078, 1718],
-		[4085, 1137],
-		[4092, 1200],
-		[4099, 558],
-		[4106, 304],
-		[4113, 381]
-	],
+	"version": "0.7.2",
+	"svelte_range": "^5.25.8",
+	"kit_range": "^2.20.7",
+	"last_rune_check_version": "0.7.2",
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
 			{
 				"name": "svelte-inspect-value",
-				"version": "0.6.2",
-				"size": 249593
+				"version": "0.7.2",
+				"size": 282532
 			},
 			{
 				"name": "esm-env",
@@ -44,14 +27,14 @@
 				"size": 3784
 			},
 			{
-				"name": "highlight.js",
-				"version": "11.11.1",
-				"size": 5433042
-			},
-			{
 				"name": "fast-deep-equal",
 				"version": "3.1.3",
 				"size": 12966
+			},
+			{
+				"name": "highlight.js",
+				"version": "11.11.1",
+				"size": 5433042
 			}
 		],
 		"dependencies": [
@@ -60,5 +43,25 @@
 			[0, 3]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Svelte Inspect Value\n\n[![NPM Version](https://img.shields.io/npm/v/svelte-inspect-value)](https://www.npmjs.com/package/svelte-inspect-value)\n[![GitHub Repo stars](https://img.shields.io/github/stars/ampled/svelte-inspect-value)](https://github.com/ampled/svelte-inspect-value)\n\n![inspect screenshot](https://raw.githubusercontent.com/ampled/svelte-inspect-value/refs/heads/main/img.webp)\n\n- [Demo and documentation](https://inspect.eirik.space)\n- [Svelte Playground](https://svelte.dev/playground/956365d6905c44298234ff4d9c60741e?version=5.17.3)\n\n## Description\n\nA collection of ambitious value inspector components in the veins of `svelte-json-tree` and `react-json-view`.\n\nIt aims to be a valuable devtool for monitoring state and debugging.\n\n## Installation and use\n\nInstall `svelte-inspect-value` with your favourite package manager.\n\n```svelte\n<script>\n  import Inspect from 'svelte-inspect-value'\n\n  let name = $state('')\n  let age = $state(42)\n</script>\n\n<Inspect value={{ name, age }} />\n<!-- or -->\n<Inspect.Values {name} {age} />\n```\n\n### Features\n\n- view state in a tree-view\n- aims to support most JavaScript built-ins with specialized views displaying information relevant to to developers, including:\n  - `Map` and `Set`\n  - `Promise`\n  - `Date`\n  - `URL` and `URLSearchParams`\n  - `TypedArray`\n  - HTML elements\n  - `Function`\n  - `Class`\n  - Svelte stores and Observables\n- Fixed position drawer / panel component\n- customizable theming\n- syntax highlighting for functions and html elements using hljs\n- embed media if a string value is a link / path ending with an embeddable image or audio file extension (disabled by default)\n\n# Acknowledgements\n\n- the \"drak\"-theme is based on the [dracula](https://draculatheme.com/) color scheme\n- the \"stereo\"-theme is based on the [monokai](https://monokai.pro/) color scheme\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4023, 218],
+		[4030, 61],
+		[4037, 56],
+		[4044, 9],
+		[4051, 51],
+		[4058, 658],
+		[4065, 2555],
+		[4072, 2104],
+		[4079, 1718],
+		[4086, 1137],
+		[4093, 1200],
+		[4100, 558],
+		[4107, 304],
+		[4114, 381],
+		[4121, 171],
+		[4128, 582]
+	]
 }

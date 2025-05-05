@@ -7,19 +7,12 @@
 	"downloads": 8,
 	"updated": "2025-03-12T12:42:28.158Z",
 	"tags": ["miscellaneous"],
-	"runes": false,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "1.0.0",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "1.0.0",
-	"downloads_history": [
-		[4085, 176],
-		[4092, 14],
-		[4106, 1],
-		[4113, 8]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -31,5 +24,15 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# Svelte mask library\n\nTiny (8.5kb) mask library. Supports svelte 4 and svelte 5;\nPretty easy to use;\n\n### Installation\n```bash\nnpm i pixel-mask-svelte\n```\n\n### Usage\n```sveltehtml\n<script lang=\"ts\">\nimport {masked} from 'pixel-mask-svelte';\n</script>\n\n<input type=\"text\" use:masked={'###-###-###'} />\n<input type=\"text\" use:masked={'##.##.####'} />\n<input type=\"text\" use:masked={'AAA-###-aaa'} />\n<input type=\"text\" use:masked={'+1 (###) ###-####'} />\n```\n\n### Custom tokens\n\n```sveltehtml\n<script lang=\"ts\">\n\timport {masked} from 'pixel-mask-svelte';\n\t\n\tconst myTokens: {[p: string]: {pattern?: RegExp; escape?: boolean; transform?: (v: string) => string}} = {\n        myToken: {escape: true},\n        a: {pattern: /[a-zA-Z]/, transform: (v: string) => v.toLocaleLowerCase()},\n        '#': {pattern: /\\d/}\n    };\n\t\n\tconst maskedCustom = (el: HTMLInputElement, mask: string) => {\n\t\treturn masked(el, mask, myTokens);\n    };\n</script>\n```\n\n### Patterns\n<table>\n    <thead>\n        <tr>\n            <th>Placeholder</th>\n            <th>Format</th>\n        </tr>\n    </thead>\n    <tbody>\n        <tr>\n            <td>#</td>\n            <td>Number (0-9)</td>\n        </tr>\n        <tr>\n            <td>S</td>\n            <td>Letter in any case (a-z,A-Z)</td>\n        </tr>\n        <tr>\n            <td>A</td>\n            <td>Letter in upper case</td>\n        </tr>\n        <tr>\n            <td>a</td>\n            <td>Letter in lower case</td>\n        </tr>\n        <tr>\n            <td>X</td>\n            <td>Any symbol</td>\n        </tr>\n        <tr>\n            <td>!</td>\n            <td>Escape character</td>\n        </tr>\n    </tbody>\n</table>",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4086, 176],
+		[4093, 14],
+		[4107, 1],
+		[4114, 8],
+		[4121, 8],
+		[4128, 5]
+	]
 }

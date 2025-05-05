@@ -7,26 +7,10 @@
 	"downloads": 4,
 	"updated": "2025-01-19T18:33:07.380Z",
 	"tags": ["design-system"],
-	"runes": false,
 	"typescript": true,
 	"version": "0.0.2",
 	"svelte_range": "^5.0.0",
 	"last_rune_check_version": "0.0.2",
-	"downloads_history": [
-		[4029, 104],
-		[4036, 18],
-		[4043, 11],
-		[4050, 5],
-		[4057, 2],
-		[4064, 3],
-		[4071, 8],
-		[4078, 3],
-		[4085, 5],
-		[4092, 3],
-		[4099, 2],
-		[4106, 1],
-		[4113, 4]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -77,13 +61,13 @@
 			},
 			{
 				"name": "@floating-ui/dom",
-				"version": "1.6.13",
-				"size": 165945
+				"version": "1.7.0",
+				"size": 166707
 			},
 			{
 				"name": "@floating-ui/core",
-				"version": "1.6.9",
-				"size": 212585
+				"version": "1.7.0",
+				"size": 214929
 			},
 			{
 				"name": "@floating-ui/utils",
@@ -146,5 +130,24 @@
 			[16, 17]
 		],
 		"circular": []
-	}
+	},
+	"legacy_svelte": true,
+	"readme": "# @shadcn-svelte/ui\n\nBeautifully designed components built with Svelte 5, Tailwind CSS, and bits-ui.\n\n## Installation\n\n```bash\npnpm add @shadcn-svelte/ui\n```\n\n## Usage\n\n1. Add the following to your `tailwind.config.js`:\n\n```js\n/** @type {import('tailwindcss').Config} */\nexport default {\n  content: [\n    \"./src/**/*.{html,js,svelte,ts}\",\n    \"./node_modules/@shadcn-svelte/ui/**/*.{js,ts,svelte}\",\n  ],\n  theme: {\n    extend: {},\n  },\n  plugins: [\n    require(\"@tailwindcss/forms\"),\n    require(\"@tailwindcss/typography\"),\n    require(\"@tailwindcss/container-queries\"),\n  ],\n}\n```\n\n2. Import and use components:\n\n```svelte\n<script>\n  import { Button } from '@shadcn-svelte/ui'\n</script>\n\n<Button>Click me</Button>\n```\n\n## Components\n\n- Button\n- [List other available components]\n\n## Development\n\n```bash\npnpm install\npnpm dev\n```\n\n## License\n\nMIT © [hermny](https://github.com/hermny)\n",
+	"downloads_history": [
+		[4030, 104],
+		[4037, 18],
+		[4044, 11],
+		[4051, 5],
+		[4058, 2],
+		[4065, 3],
+		[4072, 8],
+		[4079, 3],
+		[4086, 5],
+		[4093, 3],
+		[4100, 2],
+		[4107, 1],
+		[4114, 4],
+		[4121, 4],
+		[4128, 3]
+	]
 }

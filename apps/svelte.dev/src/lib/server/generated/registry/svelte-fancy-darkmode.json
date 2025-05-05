@@ -7,27 +7,12 @@
 	"downloads": 1487,
 	"updated": "2025-03-18T12:21:38.319Z",
 	"tags": ["ui"],
-	"runes": true,
-	"github_stars": 5,
+	"github_stars": 6,
 	"typescript": true,
 	"version": "1.1.2",
 	"svelte_range": "^5.23.0",
 	"kit_range": "^2.19.1",
 	"last_rune_check_version": "1.1.2",
-	"downloads_history": [
-		[4036, 1441],
-		[4043, 1881],
-		[4050, 2414],
-		[4057, 1936],
-		[4064, 2227],
-		[4071, 2127],
-		[4078, 2103],
-		[4085, 1881],
-		[4092, 1754],
-		[4099, 1622],
-		[4106, 1610],
-		[4113, 1487]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -44,5 +29,23 @@
 		],
 		"dependencies": [[0, 1]],
 		"circular": []
-	}
+	},
+	"readme": "# svelte-fancy-darkmode\n\n[![npm version](https://img.shields.io/npm/v/svelte-fancy-darkmode?color=yellow)](https://npmjs.com/package/svelte-fancy-darkmode)\n[![npm downloads](https://img.shields.io/npm/dm/svelte-fancy-darkmode?color=yellow)](https://npmjs.com/package/svelte-fancy-darkmode)\n\n![Screen Recording 2025-01-24 at 21 28 50](https://github.com/user-attachments/assets/053dcf9a-69f3-4e9f-bc9c-0a16d40cfa48)\n\nA beautiful dark mode toggle for your Svelte app using view transition api.\n\n## Installation\n\n```bash\nnpm install svelte-fancy-darkmode\n```\n\n## Usage\n\nSee the [example page](./src/routes/+page.svelte).\n\n## Example Website\n\n- https://ryoppippi.com\n- https://pr.ryoppippi.com\n\n## License\n\n[MIT](./LICENSE)\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4037, 1441],
+		[4044, 1881],
+		[4051, 2414],
+		[4058, 1936],
+		[4065, 2227],
+		[4072, 2127],
+		[4079, 2103],
+		[4086, 1881],
+		[4093, 1754],
+		[4100, 1622],
+		[4107, 1610],
+		[4114, 1487],
+		[4121, 1493],
+		[4128, 1490]
+	]
 }

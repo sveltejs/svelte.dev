@@ -7,91 +7,11 @@
 	"downloads": 15,
 	"updated": "2020-12-27T03:17:48.310Z",
 	"tags": ["tooling"],
-	"runes": false,
 	"github_stars": 36,
 	"typescript": true,
 	"version": "0.2.1",
 	"svelte_range": "^3.31.0",
 	"last_rune_check_version": "0.2.1",
-	"downloads_history": [
-		[3574, 27],
-		[3581, 21],
-		[3588, 2],
-		[3595, 8],
-		[3602, 17],
-		[3609, 23],
-		[3616, 2],
-		[3630, 5],
-		[3637, 2],
-		[3644, 24],
-		[3651, 3],
-		[3658, 4],
-		[3665, 20],
-		[3672, 1],
-		[3679, 3],
-		[3686, 5],
-		[3693, 1],
-		[3700, 2],
-		[3707, 2],
-		[3714, 11],
-		[3721, 12],
-		[3728, 24],
-		[3735, 3],
-		[3742, 3],
-		[3749, 3],
-		[3756, 2],
-		[3763, 11],
-		[3770, 14],
-		[3777, 3],
-		[3784, 5],
-		[3791, 4],
-		[3798, 6],
-		[3805, 9],
-		[3812, 2],
-		[3819, 3],
-		[3826, 1],
-		[3833, 7],
-		[3840, 1],
-		[3847, 1],
-		[3854, 10],
-		[3861, 64],
-		[3868, 1],
-		[3875, 4],
-		[3882, 5],
-		[3889, 29],
-		[3896, 32],
-		[3903, 7],
-		[3910, 11],
-		[3917, 6],
-		[3924, 18],
-		[3931, 19],
-		[3938, 29],
-		[3945, 37],
-		[3952, 11],
-		[3959, 2],
-		[3966, 443],
-		[3973, 2],
-		[3980, 5],
-		[3987, 8],
-		[3994, 6],
-		[4001, 3],
-		[4008, 19],
-		[4015, 16],
-		[4022, 9],
-		[4029, 43],
-		[4036, 28],
-		[4043, 18],
-		[4050, 7],
-		[4057, 8],
-		[4064, 7],
-		[4071, 28],
-		[4078, 3],
-		[4085, 4],
-		[4092, 14],
-		[4099, 22],
-		[4106, 11],
-		[4113, 15]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -166,37 +86,37 @@
 			},
 			{
 				"name": "@babel/types",
-				"version": "7.27.0",
-				"size": 2583295
+				"version": "7.27.1",
+				"size": 2597469
 			},
 			{
 				"name": "@babel/helper-string-parser",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 31816
 			},
 			{
 				"name": "@babel/helper-validator-identifier",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 48330
 			},
 			{
 				"name": "@babel/parser",
-				"version": "7.27.0",
-				"size": 1924962
+				"version": "7.27.1",
+				"size": 1859876
 			},
 			{
 				"name": "@babel/helpers",
-				"version": "7.27.0",
-				"size": 866498
+				"version": "7.27.1",
+				"size": 861892
 			},
 			{
 				"name": "@babel/template",
-				"version": "7.27.0",
+				"version": "7.27.1",
 				"size": 70675
 			},
 			{
 				"name": "@babel/code-frame",
-				"version": "7.26.2",
+				"version": "7.27.1",
 				"size": 33160
 			},
 			{
@@ -210,13 +130,13 @@
 			},
 			{
 				"name": "@babel/traverse",
-				"version": "7.27.0",
-				"size": 676526
+				"version": "7.27.1",
+				"size": 689113
 			},
 			{
 				"name": "@babel/generator",
-				"version": "7.27.0",
-				"size": 559855
+				"version": "7.27.1",
+				"size": 560098
 			},
 			{
 				"name": "@jridgewell/gen-mapping",
@@ -260,72 +180,72 @@
 			},
 			{
 				"name": "@babel/preset-typescript",
-				"version": "7.27.0",
-				"size": 25779
+				"version": "7.27.1",
+				"size": 25778
 			},
 			{
 				"name": "@babel/helper-plugin-utils",
-				"version": "7.26.5",
-				"size": 11985
+				"version": "7.27.1",
+				"size": 11818
 			},
 			{
 				"name": "@babel/helper-validator-option",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 11775
 			},
 			{
 				"name": "@babel/plugin-syntax-jsx",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 4141
 			},
 			{
 				"name": "@babel/plugin-transform-modules-commonjs",
-				"version": "7.26.3",
-				"size": 41662
+				"version": "7.27.1",
+				"size": 41578
 			},
 			{
 				"name": "@babel/helper-module-transforms",
-				"version": "7.26.0",
-				"size": 160842
+				"version": "7.27.1",
+				"size": 160852
 			},
 			{
 				"name": "@babel/helper-module-imports",
-				"version": "7.25.9",
-				"size": 63714
+				"version": "7.27.1",
+				"size": 63724
 			},
 			{
 				"name": "@babel/plugin-transform-typescript",
-				"version": "7.27.0",
-				"size": 143556
+				"version": "7.27.1",
+				"size": 143560
 			},
 			{
 				"name": "@babel/helper-annotate-as-pure",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 4054
 			},
 			{
 				"name": "@babel/helper-create-class-features-plugin",
-				"version": "7.27.0",
-				"size": 441091
+				"version": "7.27.1",
+				"size": 441090
 			},
 			{
 				"name": "@babel/helper-member-expression-to-functions",
-				"version": "7.25.9",
-				"size": 54675
+				"version": "7.27.1",
+				"size": 54694
 			},
 			{
 				"name": "@babel/helper-optimise-call-expression",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 6672
 			},
 			{
 				"name": "@babel/helper-replace-supers",
-				"version": "7.26.5",
+				"version": "7.27.1",
 				"size": 43308
 			},
 			{
 				"name": "@babel/helper-skip-transparent-expression-wrappers",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 6001
 			},
 			{
@@ -335,7 +255,7 @@
 			},
 			{
 				"name": "@babel/plugin-syntax-typescript",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 7039
 			},
 			{
@@ -508,18 +428,8 @@
 			},
 			{
 				"name": "@babel/core",
-				"version": "7.26.10",
-				"size": 795988
-			},
-			{
-				"name": "gensync",
-				"version": "1.0.0-beta.2",
-				"size": 28891
-			},
-			{
-				"name": "convert-source-map",
-				"version": "2.0.0",
-				"size": 15854
+				"version": "7.27.1",
+				"size": 794180
 			},
 			{
 				"name": "@ampproject/remapping",
@@ -528,28 +438,28 @@
 			},
 			{
 				"name": "@babel/helper-compilation-targets",
-				"version": "7.27.0",
+				"version": "7.27.1",
 				"size": 53776
 			},
 			{
 				"name": "@babel/compat-data",
-				"version": "7.26.8",
-				"size": 66428
+				"version": "7.27.1",
+				"size": 66193
 			},
 			{
 				"name": "browserslist",
-				"version": "4.24.4",
-				"size": 64926
+				"version": "4.24.5",
+				"size": 65174
 			},
 			{
 				"name": "caniuse-lite",
-				"version": "1.0.30001715",
-				"size": 2211246
+				"version": "1.0.30001716",
+				"size": 2214832
 			},
 			{
 				"name": "electron-to-chromium",
-				"version": "1.5.140",
-				"size": 162065
+				"version": "1.5.149",
+				"size": 163189
 			},
 			{
 				"name": "node-releases",
@@ -575,6 +485,16 @@
 				"name": "yallist",
 				"version": "3.1.1",
 				"size": 14766
+			},
+			{
+				"name": "convert-source-map",
+				"version": "2.0.0",
+				"size": 15854
+			},
+			{
+				"name": "gensync",
+				"version": "1.0.0-beta.2",
+				"size": 28891
 			},
 			{
 				"name": "cli-common",
@@ -1745,8 +1665,8 @@
 			},
 			{
 				"name": "@types/node",
-				"version": "22.14.1",
-				"size": 2331510
+				"version": "22.15.3",
+				"size": 2350386
 			},
 			{
 				"name": "undici-types",
@@ -2003,9 +1923,9 @@
 			[1, 18],
 			[18, 19],
 			[19, 20],
+			[20, 16],
 			[20, 21],
 			[20, 22],
-			[20, 16],
 			[19, 17],
 			[19, 14],
 			[18, 14],
@@ -2037,30 +1957,30 @@
 			[33, 36],
 			[36, 34],
 			[33, 37],
-			[37, 34],
 			[37, 38],
-			[38, 23],
 			[38, 39],
-			[39, 14],
 			[39, 23],
+			[39, 14],
 			[38, 16],
+			[38, 23],
+			[37, 34],
 			[33, 40],
 			[40, 41],
 			[41, 14],
 			[40, 42],
 			[42, 41],
 			[42, 43],
-			[43, 14],
 			[43, 23],
+			[43, 14],
 			[42, 44],
 			[44, 14],
 			[42, 45],
-			[45, 23],
-			[45, 44],
 			[45, 43],
+			[45, 44],
+			[45, 23],
 			[42, 46],
-			[46, 14],
 			[46, 23],
+			[46, 14],
 			[42, 23],
 			[42, 47],
 			[40, 34],
@@ -2105,35 +2025,35 @@
 			[0, 82],
 			[0, 83],
 			[83, 84],
-			[84, 2],
-			[84, 4],
-			[84, 47],
 			[84, 85],
-			[84, 14],
-			[84, 17],
+			[85, 25],
+			[85, 28],
+			[84, 20],
+			[84, 24],
+			[84, 86],
+			[86, 87],
+			[86, 35],
+			[86, 88],
+			[88, 89],
+			[88, 90],
+			[88, 91],
+			[88, 92],
+			[92, 93],
+			[92, 22],
+			[86, 94],
+			[94, 95],
+			[86, 47],
+			[84, 38],
 			[84, 18],
+			[84, 17],
 			[84, 19],
 			[84, 23],
-			[84, 24],
-			[84, 20],
-			[84, 86],
-			[84, 87],
-			[87, 25],
-			[87, 28],
-			[84, 38],
-			[84, 88],
-			[88, 89],
-			[88, 35],
-			[88, 90],
-			[90, 91],
-			[90, 92],
-			[90, 93],
-			[90, 94],
-			[94, 95],
-			[94, 22],
-			[88, 96],
-			[96, 97],
-			[88, 47],
+			[84, 14],
+			[84, 96],
+			[84, 2],
+			[84, 97],
+			[84, 4],
+			[84, 47],
 			[83, 49],
 			[83, 98],
 			[98, 99],
@@ -2680,5 +2600,86 @@
 			[209, 207],
 			[209, 210]
 		]
-	}
+	},
+	"readme": "# SvelteDraft &middot; ![Build Status](https://github.com/mistlog/svelte-draft/workflows/build/badge.svg) [![Coverage Status](https://coveralls.io/repos/github/mistlog/svelte-draft/badge.svg)](https://coveralls.io/github/mistlog/svelte-draft)\n\nDevelop svelte app in typedraft, with possibly complete typescript support.\n\n## Documentation\n\nThe document is maintained in [svelte-draft-docs](https://github.com/mistlog/svelte-draft-docs).\n\n## License\n\nSvelteDraft is [MIT licensed](https://github.com/mistlog/svelte-draft/blob/master/LICENSE).\n\n\n\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3589, 2],
+		[3596, 8],
+		[3603, 17],
+		[3610, 23],
+		[3617, 2],
+		[3631, 5],
+		[3638, 2],
+		[3645, 24],
+		[3652, 3],
+		[3659, 4],
+		[3666, 20],
+		[3673, 1],
+		[3680, 3],
+		[3687, 5],
+		[3694, 1],
+		[3701, 2],
+		[3708, 2],
+		[3715, 11],
+		[3722, 12],
+		[3729, 24],
+		[3736, 3],
+		[3743, 3],
+		[3750, 3],
+		[3757, 2],
+		[3764, 11],
+		[3771, 14],
+		[3778, 3],
+		[3785, 5],
+		[3792, 4],
+		[3799, 6],
+		[3806, 9],
+		[3813, 2],
+		[3820, 3],
+		[3827, 1],
+		[3834, 7],
+		[3841, 1],
+		[3848, 1],
+		[3855, 10],
+		[3862, 64],
+		[3869, 1],
+		[3876, 4],
+		[3883, 5],
+		[3890, 29],
+		[3897, 32],
+		[3904, 7],
+		[3911, 11],
+		[3918, 6],
+		[3925, 18],
+		[3932, 19],
+		[3939, 29],
+		[3946, 37],
+		[3953, 11],
+		[3960, 2],
+		[3967, 443],
+		[3974, 2],
+		[3981, 5],
+		[3988, 8],
+		[3995, 6],
+		[4002, 3],
+		[4009, 19],
+		[4016, 16],
+		[4023, 9],
+		[4030, 43],
+		[4037, 28],
+		[4044, 18],
+		[4051, 7],
+		[4058, 8],
+		[4065, 7],
+		[4072, 28],
+		[4079, 3],
+		[4086, 4],
+		[4093, 14],
+		[4100, 22],
+		[4107, 11],
+		[4114, 15],
+		[4121, 12],
+		[4128, 17]
+	]
 }

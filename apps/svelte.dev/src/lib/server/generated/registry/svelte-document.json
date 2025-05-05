@@ -7,58 +7,11 @@
 	"downloads": 5,
 	"updated": "2024-02-17T16:48:18.497Z",
 	"tags": ["tooling"],
-	"runes": false,
 	"typescript": false,
 	"version": "1.1.0",
 	"svelte_range": "^4.2.11",
 	"last_rune_check_version": "1.1.0",
 	"github_stars": 0,
-	"downloads_history": [
-		[3693, 431],
-		[3700, 104],
-		[3707, 19],
-		[3714, 10],
-		[3721, 7],
-		[3728, 10],
-		[3742, 2],
-		[3749, 4],
-		[3756, 9],
-		[3763, 1],
-		[3770, 2],
-		[3777, 11],
-		[3791, 1],
-		[3798, 1],
-		[3805, 6],
-		[3819, 1],
-		[3833, 48],
-		[3847, 2],
-		[3861, 6],
-		[3868, 2],
-		[3889, 10],
-		[3896, 2],
-		[3910, 1],
-		[3917, 2],
-		[3924, 1],
-		[3931, 1],
-		[3938, 10],
-		[3945, 2],
-		[3952, 2],
-		[3966, 2],
-		[3973, 2],
-		[3980, 1],
-		[3987, 2],
-		[3994, 2],
-		[4001, 1],
-		[4015, 1],
-		[4036, 15],
-		[4043, 8],
-		[4050, 6],
-		[4064, 1],
-		[4092, 1],
-		[4099, 27],
-		[4106, 1],
-		[4113, 5]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -99,8 +52,8 @@
 			},
 			{
 				"name": "ws",
-				"version": "8.18.1",
-				"size": 146780
+				"version": "8.18.2",
+				"size": 147181
 			},
 			{
 				"name": "saxes",
@@ -119,13 +72,13 @@
 			},
 			{
 				"name": "parse5",
-				"version": "7.2.1",
-				"size": 694639
+				"version": "7.3.0",
+				"size": 695873
 			},
 			{
 				"name": "entities",
-				"version": "4.5.0",
-				"size": 412892
+				"version": "6.0.0",
+				"size": 540419
 			},
 			{
 				"name": "cssstyle",
@@ -134,8 +87,8 @@
 			},
 			{
 				"name": "@asamuzakjp/css-color",
-				"version": "3.1.4",
-				"size": 2088594
+				"version": "3.1.7",
+				"size": 2093573
 			},
 			{
 				"name": "@csstools/css-calc",
@@ -469,8 +422,13 @@
 			},
 			{
 				"name": "@babel/code-frame",
-				"version": "7.26.2",
+				"version": "7.27.1",
 				"size": 33160
+			},
+			{
+				"name": "@babel/helper-validator-identifier",
+				"version": "7.27.1",
+				"size": 48330
 			},
 			{
 				"name": "js-tokens",
@@ -480,11 +438,6 @@
 				"name": "picocolors",
 				"version": "1.1.1",
 				"size": 6373
-			},
-			{
-				"name": "@babel/helper-validator-identifier",
-				"version": "7.25.9",
-				"size": 48330
 			},
 			{
 				"name": "lines-and-columns",
@@ -1160,5 +1113,55 @@
 			[157, 5]
 		],
 		"circular": []
-	}
+	},
+	"readme": "<p>\n    <img src=\"./logo.svg\" width=\"64\" height=\"64\" align=\"right\">\n    <h1>svelte-document</h1>\n<p>\n\nCreate documents, resumes, or presentations from a collection of Svelte files. No configuration needed, and exports to a very portable PDF file.\n\n## Usage\n\n### Getting started\n\nInstall `svelte-document` from `npm` as a global package, then invoke it in any directory containing `.svelte` pages that you want formatted into a PDF. A file called `document.pdf` will be generated in the current working directory.\n\n```sh\n# Install the package globally\nnpm install -g svelte-document\n\n# Invoke the command\nsvelte-document\n```\n\n### Page semantics and ordering\n\nTo order your pages is to simply number them: `1.svelte`, `2.svelte`, `3.svelte`, and so on. The order which your filesystem presents the files do not impact the order in the document. You can also title your page by inserting any contents after a space character, like so: `5 How to Install Linux.svelte`.\n\nYou can also use periods in your number to create subsections if needed, such as in `5.1 Troubleshooting.svelte`.\n\nFolders are not parsed, so you can use them to store components and assets, and files starting with `+` are ignored, save for `+layout.svelte` (explained later).\n\n### Page metadata in components\n\nYou can export the following Svelte variables in a `<script>...</script>` block and they will be automatically filled in by the tool:\n\n| Variable name | Description                                                                                                                 |\n| ------------- | --------------------------------------------------------------------------------------------------------------------------- |\n| `page_name`   | The name of the page provided after the page index in your file name. If there is no name, this value will be empty (`\"\"`). |\n| `page_path`   | The full path to the current page component.                                                                                |\n| `page_index`  | The page index from the file name. This is a string.                                                                        |\n| `page_count`  | The number of the page, starting from 1. This is an integer.                                                                |\n\n### Importing assets\n\n#### Images\n\nYou can import images directly like so:\n\n```svelte\n<script>\n    import img from \"./my-image.png\"\n</script>\n\n<img src={img} />\n```\n\n#### Fonts\n\nFonts can also be imported. The file name of the font can be used in `font-family` styling, like so:\n\n```svelte\n<script>\n    import \"./FontFile.ttf\"\n</script>\n\n<div style=\"font-family: FontFile;\">Hello world!</div>\n```\n\n### Layout\n\nYou can provide a `+layout.svelte` file that will wrap every page. Its functionality is the same as [SvelteKit's `+layout.svelte`](https://kit.svelte.dev/docs/routing#layout).\n\n> [!TIP]\n> Layout files can import CSS stylesheets using import statements, like so: `import \"./styles.css\"`. Other pages cannot import CSS stylesheets, but can use `<style>...</style>` blocks.\n\n## Configuration\n\n`svelte-document` is zero configuration, but you can provide optional configuration in a `document.config.json` file in the root of your document files, with the following fields:\n| Field | Default | Description |\n|-|-|-|\n| `size` | `A4` | Dimensions of the page. Accepted values: `A5`, `A4`, `A3`, `B5`, `B4`, `JIS-B5`, `JIS-B4`, `letter`, `legal`, `ledger`, or a set of custom dimensions with the following format: `{number}in/cm/mm {number}in/cm/mm`, such as `24in 24in` or `300mm 300mm`. |\n| `orientation` | `portrait` | Orientation of the page. Accepted values: `portrait`, `landscape` |\n| `out` | `document.pdf` | Output file path/name, relative to the current working directory. |\n\n## Roadmap\n\n- [x] Implement PostCSS to support plugins such as TailwindCSS and Sass.\n  - **Done.** `svelte.config.js` is now considered during compilation, so preprocessors (e.g. `svelte-preprocess`) can be used to implement suport for TailwindCSS, Sass, PostCSS, etc. Needs testing.\n- [ ] Implement plugin mechanism to extend functionality.\n- [ ] Better compatibility with projects using Node packages.\n\n## License\n\n```\nCopyright (c) 2024 Louka Ménard Blondin\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n```\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3694, 431],
+		[3701, 104],
+		[3708, 19],
+		[3715, 10],
+		[3722, 7],
+		[3729, 10],
+		[3743, 2],
+		[3750, 4],
+		[3757, 9],
+		[3764, 1],
+		[3771, 2],
+		[3778, 11],
+		[3792, 1],
+		[3799, 1],
+		[3806, 6],
+		[3820, 1],
+		[3834, 48],
+		[3848, 2],
+		[3862, 6],
+		[3869, 2],
+		[3890, 10],
+		[3897, 2],
+		[3911, 1],
+		[3918, 2],
+		[3925, 1],
+		[3932, 1],
+		[3939, 10],
+		[3946, 2],
+		[3953, 2],
+		[3967, 2],
+		[3974, 2],
+		[3981, 1],
+		[3988, 2],
+		[3995, 2],
+		[4002, 1],
+		[4016, 1],
+		[4037, 15],
+		[4044, 8],
+		[4051, 6],
+		[4065, 1],
+		[4093, 1],
+		[4100, 27],
+		[4107, 1],
+		[4114, 5],
+		[4121, 8],
+		[4128, 18]
+	]
 }

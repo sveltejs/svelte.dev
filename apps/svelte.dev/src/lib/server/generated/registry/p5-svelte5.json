@@ -7,30 +7,12 @@
 	"downloads": 4,
 	"updated": "2024-12-08T17:20:46.911Z",
 	"tags": ["ui"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "1.0.0",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.9.0",
 	"last_rune_check_version": "1.0.0",
-	"downloads_history": [
-		[3987, 57],
-		[3994, 9],
-		[4001, 2],
-		[4008, 2],
-		[4015, 3],
-		[4022, 2],
-		[4036, 5],
-		[4043, 4],
-		[4050, 2],
-		[4057, 1],
-		[4064, 1],
-		[4092, 2],
-		[4099, 1],
-		[4106, 3],
-		[4113, 4]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -42,5 +24,26 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "<br>\n\n<div align=\"center\">\n<img src=\"https://raw.githubusercontent.com/CodigoDemente/p5-svelte5/refs/heads/main/static/logo.svg\" alt=\"p5-svelte5 logo\" width=\"80\" />\n</div>\n\n<h1 align=\"center\">p5-svelte5</h1>\n\n<p align=\"center\">\n<a href=\"https://github.com/CodigoDemente/p5-svelte5/actions/workflows/build.yml?branch=main\"><img src=\"https://github.com/CodigoDemente/p5-svelte5/actions/workflows/build.yml/badge.svg\" alt=\"Build CI\"></a>\n<a href=\"https://app.netlify.com/sites/p5-svelte5/deploys\"><img src=\"https://img.shields.io/netlify/7dd33ce7-b638-4540-83d1-4442ef026efc?logo=netlify&logoColor=white\" alt=\"Netlify Status\"></a>\n<a href=\"https://www.npmjs.com/package/p5-svelte5\"><img src=\"https://img.shields.io/npm/v/p5-svelte5?color=%23ed225d\" alt=\"NPM version\"></a>\n</p>\n\nTrying to get <a href=\"https://p5js.org/\">p5</a> up and running in [Svelte](https://svelte.dev/) can be a pain. So here's an absolutely dead simple way of tossing it into your project.\n\nThe API is super simple; you get a <code>P5</code> component which accepts a <code>sketch</code> prop. You can make use of Svelte's reactivity system to bind props or params within your p5 sketch just as you would with regular Svelte! You can even have multiple p5 components per page without any scoping issues!\n\n<p align=\"center\">\n\t<a href=\"https://p5-svelte5.netlify.app/\" target=\"_blank\">📘 Docs + Examples</a>\n</p>\n\n<p align=\"center\">\n\t<a href=\"https://svelte.dev/repl/c5fd1d8347cd4e47afe0e519aedbb3a5?version=3.31.2\" target=\"_blank\">🌱 Simple Demo</a>\n</p>\n\n## Usage\n\n### Install:\n\n```ps\npnpm i p5-svelte5\n```\n\nDepending on your environment, you may be alerted upon installing `p5-svelte5` that `p5` is a required peer dependency which you must install yourself. Thus do:\n\n```ps\npnpm i -D p5\n```\n\nNow add `p5-svelte5` to your project (ex. `src/App.svelte`):\n\n```svelte\n<script lang=\"ts\">\n\timport P5 from 'p5-svelte5';\n\tlet width = 55;\n\tlet height = 55;\n\n\tconst sketch = (p5) => {\n\t\tp5.setup = () => {\n\t\t\tp5.createCanvas(400, 400);\n\t\t};\n\n\t\tp5.draw = () => {\n\t\t\tp5.ellipse(p5.width / 2, p5.height / 2, width, height);\n\t\t};\n\t};\n</script>\n\n<label>\n\tWidth\n\t<input type=\"range\" bind:value={width} min=\"100\" max=\"1000\" step=\"0.01\" />\n\t{width}\n</label>\n\n<label>\n\tHeight\n\t<input type=\"range\" bind:value={height} min=\"100\" max=\"1000\" step=\"0.01\" />\n\t{height}\n</label>\n\n<P5 {sketch} />\n```\n\n### Output:\n\n<div align=\"center\">\n\t<img src=\"https://dev-to-uploads.s3.amazonaws.com/i/ajyz894enhdgdvot441x.gif\" alt=\"using Svelte's reactivity system to bind parameters to a p5 sketch\" />\n</div>\n\n## Available Props\n\n| prop             | description                                                                                                                           | type          | default             | required? |\n| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------- | ------------------- | --------- |\n| `sketch`         | Your p5 sketch in instance mode                                                                                                       | `Sketch`      | `undefined`         | yes       |\n| `target`         | An HTML element/node to mount the p5 canvas onto giving you full control of the parent wrapper that p5 renders a canvas as a child to | `HTMLElement` | `undefined`         | no        |\n| `parentDivStyle` | CSS Styling for the underlying `div` target contained in `<P5/>`. Note: this will do nothing when paired with a `target` prop         | `string`      | `'display: block;'` | no        |\n| `debug`          | Logs everything about the p5 instance to the console for debugging purposes                                                           | `boolean`     | `false`             | no        |\n\n## p5.js instance mode\n\nSvelte doesn't allow us to globally expose the p5 library by installing it to the `window` (which is how p5 is commonly installed in vanilla js projects). Therefore, p5 must be used in instance mode with this component. That means you'll have to call library functions with a `p5.` preceding them like in the example above.\n\n## Debug Mode\n\nYou can access the internals of your p5 instance and the available native classes that `p5-svelte5` automatically makes available to your project via passing the `debug` prop:\n\n```svelte\n<P5 {sketch} debug />\n```\n\n## Events\n\nThe `<P5/>` component emits a few events you can listen to.\n\n### `ref`\n\nEmits a reference to the DOM element target which the p5 instance mounts to.\n\n### `instance`\n\nThis event fires on init of the p5 project instance, emitting a reference to that p5 project instance object.\n\n## TypeScript support + Intellisense\n\n`p5-svelte5` exposes a `Sketch` type representing the p5 sketch in instance mode. This gives your editor prying eyes into p5's type system, supports autocomplete, and inline documentation of all the p5 goodies to make your life a little easier.\n\n### 😤 Before\n\nhttps://user-images.githubusercontent.com/43280336/161372626-32634e5b-37b1-4f56-b708-518200b1021f.mov\n\n### 🧙‍♀️ After\n\nhttps://user-images.githubusercontent.com/43280336/161373024-01c1a01d-b9ea-4ce4-8787-c42329a50ff6.mov\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3988, 57],
+		[3995, 9],
+		[4002, 2],
+		[4009, 2],
+		[4016, 3],
+		[4023, 2],
+		[4037, 5],
+		[4044, 4],
+		[4051, 2],
+		[4058, 1],
+		[4065, 1],
+		[4093, 2],
+		[4100, 1],
+		[4107, 3],
+		[4114, 4],
+		[4121, 5],
+		[4128, 2]
+	]
 }

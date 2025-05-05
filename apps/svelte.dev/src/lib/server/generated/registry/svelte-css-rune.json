@@ -5,36 +5,20 @@
 	"authors": ["jannitschke"],
 	"homepage": "https://github.com/JanNitschke/svelte-css-rune#readme",
 	"downloads": 9,
-	"updated": "2025-01-20T23:39:23.346Z",
+	"updated": "2025-05-04T20:27:15.001Z",
 	"tags": ["ui"],
-	"runes": false,
-	"github_stars": 8,
+	"github_stars": 9,
 	"typescript": true,
-	"version": "0.2.1",
-	"svelte_range": "^5.15.0",
-	"last_rune_check_version": "0.2.1",
-	"downloads_history": [
-		[4029, 338],
-		[4036, 120],
-		[4043, 28],
-		[4050, 19],
-		[4057, 17],
-		[4064, 13],
-		[4071, 17],
-		[4078, 8],
-		[4085, 19],
-		[4092, 2],
-		[4099, 20],
-		[4106, 1],
-		[4113, 9]
-	],
+	"version": "0.3.0",
+	"svelte_range": "5.x",
+	"last_rune_check_version": "0.3.0",
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
 			{
 				"name": "svelte-css-rune",
-				"version": "0.2.1",
-				"size": 80452
+				"version": "0.3.0",
+				"size": 95342
 			},
 			{
 				"name": "magic-string",
@@ -52,5 +36,24 @@
 			[1, 2]
 		],
 		"circular": []
-	}
+	},
+	"readme": "README.md",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4030, 338],
+		[4037, 120],
+		[4044, 28],
+		[4051, 19],
+		[4058, 17],
+		[4065, 13],
+		[4072, 17],
+		[4079, 8],
+		[4086, 19],
+		[4093, 2],
+		[4100, 20],
+		[4107, 1],
+		[4114, 9],
+		[4121, 12],
+		[4128, 7]
+	]
 }

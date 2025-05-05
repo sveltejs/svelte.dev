@@ -7,25 +7,11 @@
 	"downloads": 11,
 	"updated": "2025-02-16T00:54:26.725Z",
 	"tags": ["integration"],
-	"runes": false,
 	"github_stars": 2,
 	"typescript": true,
 	"version": "1.1.0",
 	"svelte_range": "^4.0.0",
 	"last_rune_check_version": "1.1.0",
-	"downloads_history": [
-		[4043, 35],
-		[4050, 243],
-		[4057, 110],
-		[4064, 20],
-		[4071, 6],
-		[4078, 6],
-		[4085, 25],
-		[4092, 1],
-		[4099, 7],
-		[4106, 2],
-		[4113, 11]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -179,5 +165,22 @@
 			[2, 5]
 		],
 		"circular": []
-	}
+	},
+	"legacy_svelte": true,
+	"readme": "# Closure Next Svelte Integration\n\nPlug-and-play integration between Closure Next components and Svelte applications.\n\n## Installation\n\n```bash\nnpm install @closure-next/svelte\n```\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import { closureComponent } from '@closure-next/svelte';\n  import { MyClosureComponent } from './my-component';\n  \n  let target: HTMLElement;\n  \n  const component = closureComponent({\n    target,\n    component: MyClosureComponent,\n    props: {\n      // Initial props\n      title: 'Hello from Closure Next'\n    }\n  });\n  \n  // Component is automatically destroyed when the Svelte component is destroyed\n</script>\n\n<div bind:this={target}></div>\n```\n\n## Features\n\n- 🔌 Plug-and-play integration\n- ⚡️ Full TypeScript support\n- 🔄 Reactive props\n- 🧹 Automatic cleanup\n- 🎯 Direct DOM integration\n- 🔧 Compatible with Svelte's component lifecycle\n\n## API Reference\n\n### `closureComponent<T extends Component>(options: ClosureComponentOptions<T>)`\n\nCreates a Svelte-compatible wrapper for a Closure Next component.\n\n#### Options\n\n- `target`: HTMLElement - The DOM element to render the component into\n- `component`: Constructor - The Closure Next component class\n- `props?`: Object - Initial props for the component\n\n#### Returns\n\nA Svelte component instance that wraps the Closure Next component.\n\n## Example\n\n```svelte\n<script lang=\"ts\">\n  import { closureComponent } from '@closure-next/svelte';\n  import { Button } from '@closure-next/core';\n  \n  let buttonTarget: HTMLElement;\n  \n  const button = closureComponent({\n    target: buttonTarget,\n    component: Button,\n    props: {\n      label: 'Click me',\n      onClick: () => alert('Button clicked!')\n    }\n  });\n</script>\n\n<div bind:this={buttonTarget}></div>\n```\n\n## TypeScript Support\n\nThe integration includes full TypeScript support:\n\n```typescript\nimport type { Component } from '@closure-next/core';\n\ninterface MyComponentProps {\n  title: string;\n  onClick: () => void;\n}\n\nclass MyComponent extends Component {\n  // Implementation\n}\n\nconst component = closureComponent<MyComponent>({\n  target: element,\n  component: MyComponent,\n  props: {\n    title: 'Hello', // Type-checked\n    onClick: () => {} // Type-checked\n  }\n});\n```\n",
+	"downloads_history": [
+		[4044, 35],
+		[4051, 243],
+		[4058, 110],
+		[4065, 20],
+		[4072, 6],
+		[4079, 6],
+		[4086, 25],
+		[4093, 1],
+		[4100, 7],
+		[4107, 2],
+		[4114, 11],
+		[4121, 9],
+		[4128, 6]
+	]
 }

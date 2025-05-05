@@ -7,36 +7,10 @@
 	"downloads": 4,
 	"updated": "2024-08-09T19:29:34.276Z",
 	"tags": ["adapter"],
-	"runes": false,
 	"typescript": true,
 	"version": "1.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "1.0.0",
-	"downloads_history": [
-		[3868, 75],
-		[3875, 13],
-		[3882, 4],
-		[3896, 2],
-		[3903, 7],
-		[3910, 1],
-		[3917, 1],
-		[3924, 1],
-		[3938, 3],
-		[3945, 1],
-		[3959, 2],
-		[3966, 1],
-		[3994, 3],
-		[4015, 2],
-		[4022, 2],
-		[4036, 4],
-		[4043, 7],
-		[4050, 2],
-		[4057, 1],
-		[4071, 1],
-		[4092, 1],
-		[4106, 3],
-		[4113, 4]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -47,8 +21,8 @@
 			},
 			{
 				"name": "@cloudflare/workers-types",
-				"version": "4.20250422.0",
-				"size": 5040670
+				"version": "4.20250504.0",
+				"size": 5063414
 			},
 			{
 				"name": "@iarna/toml",
@@ -67,5 +41,34 @@
 			[0, 3]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# adapter-cloudflare-workers\n\nSvelteKit adapter that creates a Cloudflare Workers site using a function for dynamic server rendering.\n\n**Requires [Wrangler v2](https://developers.cloudflare.com/workers/wrangler/get-started/).** Wrangler v1 is no longer supported.\n\n## Docs\n\n[Docs](https://kit.svelte.dev/docs/adapter-cloudflare-workers)\n\n## Changelog\n\n[The Changelog for this package is available on GitHub](https://github.com/sveltejs/kit/blob/main/packages/adapter-cloudflare-workers/CHANGELOG.md).\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3869, 75],
+		[3876, 13],
+		[3883, 4],
+		[3897, 2],
+		[3904, 7],
+		[3911, 1],
+		[3918, 1],
+		[3925, 1],
+		[3939, 3],
+		[3946, 1],
+		[3960, 2],
+		[3967, 1],
+		[3995, 3],
+		[4016, 2],
+		[4023, 2],
+		[4037, 4],
+		[4044, 7],
+		[4051, 2],
+		[4058, 1],
+		[4072, 1],
+		[4093, 1],
+		[4107, 3],
+		[4114, 4],
+		[4121, 7],
+		[4128, 2]
+	]
 }

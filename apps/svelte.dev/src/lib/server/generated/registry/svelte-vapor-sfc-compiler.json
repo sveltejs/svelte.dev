@@ -7,42 +7,11 @@
 	"downloads": 3,
 	"updated": "2024-11-27T11:37:00.184Z",
 	"tags": ["tooling"],
-	"runes": false,
 	"github_stars": 35,
 	"typescript": true,
 	"version": "0.0.5",
 	"svelte_range": "4.2.18",
 	"last_rune_check_version": "0.0.5",
-	"downloads_history": [
-		[3889, 52],
-		[3896, 14],
-		[3903, 74],
-		[3910, 5],
-		[3917, 3],
-		[3924, 2],
-		[3938, 5],
-		[3945, 2],
-		[3952, 2],
-		[3959, 3],
-		[3966, 2],
-		[3973, 3],
-		[3980, 76],
-		[3987, 7],
-		[3994, 2],
-		[4001, 1],
-		[4008, 3],
-		[4015, 6],
-		[4022, 2],
-		[4029, 3],
-		[4036, 10],
-		[4043, 6],
-		[4050, 3],
-		[4064, 1],
-		[4071, 3],
-		[4099, 3],
-		[4106, 7],
-		[4113, 3]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -53,22 +22,22 @@
 			},
 			{
 				"name": "@babel/parser",
-				"version": "7.27.0",
-				"size": 1924962
+				"version": "7.27.1",
+				"size": 1859876
 			},
 			{
 				"name": "@babel/types",
-				"version": "7.27.0",
-				"size": 2583295
+				"version": "7.27.1",
+				"size": 2597469
 			},
 			{
 				"name": "@babel/helper-string-parser",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 31816
 			},
 			{
 				"name": "@babel/helper-validator-identifier",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 48330
 			},
 			{
@@ -145,8 +114,8 @@
 			},
 			{
 				"name": "ast-kit",
-				"version": "1.4.2",
-				"size": 94163
+				"version": "1.4.3",
+				"size": 105684
 			},
 			{
 				"name": "pathe",
@@ -368,5 +337,40 @@
 			[45, 26]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# svelte-vapor-sfc-compiler\n\n> SFC-flavoured vapor svelte component compiler\n\n## ©️ License\n\n[MIT](http://opensource.org/licenses/MIT)\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3890, 52],
+		[3897, 14],
+		[3904, 74],
+		[3911, 5],
+		[3918, 3],
+		[3925, 2],
+		[3939, 5],
+		[3946, 2],
+		[3953, 2],
+		[3960, 3],
+		[3967, 2],
+		[3974, 3],
+		[3981, 76],
+		[3988, 7],
+		[3995, 2],
+		[4002, 1],
+		[4009, 3],
+		[4016, 6],
+		[4023, 2],
+		[4030, 3],
+		[4037, 10],
+		[4044, 6],
+		[4051, 3],
+		[4065, 1],
+		[4072, 3],
+		[4100, 3],
+		[4107, 7],
+		[4114, 3],
+		[4121, 4],
+		[4128, 3],
+		[4135, 8]
+	]
 }

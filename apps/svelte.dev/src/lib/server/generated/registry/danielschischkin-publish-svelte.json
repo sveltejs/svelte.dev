@@ -7,65 +7,11 @@
 	"downloads": 5,
 	"updated": "2021-09-17T12:19:35.260Z",
 	"tags": ["tooling"],
-	"runes": false,
 	"github_stars": 0,
 	"typescript": false,
 	"version": "0.8.1",
 	"svelte_range": "^3.12.1",
 	"last_rune_check_version": "0.8.1",
-	"downloads_history": [
-		[3574, 6],
-		[3581, 1],
-		[3588, 2],
-		[3595, 4],
-		[3602, 2],
-		[3609, 4],
-		[3616, 1],
-		[3630, 1],
-		[3637, 1],
-		[3644, 2],
-		[3651, 1],
-		[3658, 1],
-		[3665, 4],
-		[3686, 1],
-		[3707, 1],
-		[3714, 1],
-		[3721, 3],
-		[3735, 2],
-		[3763, 2],
-		[3770, 3],
-		[3777, 1],
-		[3784, 1],
-		[3798, 2],
-		[3805, 2],
-		[3812, 1],
-		[3833, 1],
-		[3840, 1],
-		[3854, 11],
-		[3861, 5],
-		[3875, 3],
-		[3889, 3],
-		[3903, 4],
-		[3910, 1],
-		[3931, 1],
-		[3938, 1],
-		[3959, 1],
-		[3966, 1],
-		[3987, 8],
-		[4008, 3],
-		[4015, 3],
-		[4022, 4],
-		[4029, 1],
-		[4036, 3],
-		[4043, 5],
-		[4050, 2],
-		[4057, 2],
-		[4071, 2],
-		[4085, 3],
-		[4092, 16],
-		[4099, 2],
-		[4113, 5]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -76,87 +22,13 @@
 			},
 			{
 				"name": "@babel/core",
-				"version": "7.26.10",
-				"size": 795988
+				"version": "7.27.1",
+				"size": 794180
 			},
 			{
-				"name": "debug",
-				"version": "4.4.0",
-				"size": 42798
-			},
-			{
-				"name": "ms",
-				"version": "2.1.3",
-				"size": 6721
-			},
-			{
-				"name": "json5",
-				"version": "2.2.3",
-				"size": 235198
-			},
-			{
-				"name": "semver",
-				"version": "6.3.1",
-				"size": 68343
-			},
-			{
-				"name": "gensync",
-				"version": "1.0.0-beta.2",
-				"size": 28891
-			},
-			{
-				"name": "@babel/types",
-				"version": "7.27.0",
-				"size": 2583295
-			},
-			{
-				"name": "@babel/helper-string-parser",
-				"version": "7.25.9",
-				"size": 31816
-			},
-			{
-				"name": "@babel/helper-validator-identifier",
-				"version": "7.25.9",
-				"size": 48330
-			},
-			{
-				"name": "@babel/parser",
-				"version": "7.27.0",
-				"size": 1924962
-			},
-			{
-				"name": "@babel/helpers",
-				"version": "7.27.0",
-				"size": 866498
-			},
-			{
-				"name": "@babel/template",
-				"version": "7.27.0",
-				"size": 70675
-			},
-			{
-				"name": "@babel/code-frame",
-				"version": "7.26.2",
-				"size": 33160
-			},
-			{
-				"name": "js-tokens",
-				"version": "4.0.0"
-			},
-			{
-				"name": "picocolors",
-				"version": "1.1.1",
-				"size": 6373
-			},
-			{
-				"name": "@babel/traverse",
-				"version": "7.27.0",
-				"size": 676526
-			},
-			{
-				"name": "@babel/generator",
-				"version": "7.27.0",
-				"size": 559855
+				"name": "@ampproject/remapping",
+				"version": "2.3.0",
+				"size": 78946
 			},
 			{
 				"name": "@jridgewell/gen-mapping",
@@ -184,64 +56,78 @@
 				"size": 53153
 			},
 			{
+				"name": "@babel/code-frame",
+				"version": "7.27.1",
+				"size": 33160
+			},
+			{
+				"name": "@babel/helper-validator-identifier",
+				"version": "7.27.1",
+				"size": 48330
+			},
+			{
+				"name": "js-tokens",
+				"version": "4.0.0"
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "@babel/generator",
+				"version": "7.27.1",
+				"size": 560098
+			},
+			{
+				"name": "@babel/parser",
+				"version": "7.27.1",
+				"size": 1859876
+			},
+			{
+				"name": "@babel/types",
+				"version": "7.27.1",
+				"size": 2597469
+			},
+			{
+				"name": "@babel/helper-string-parser",
+				"version": "7.27.1",
+				"size": 31816
+			},
+			{
 				"name": "jsesc",
 				"version": "3.1.0",
 				"size": 32280
 			},
 			{
-				"name": "globals",
-				"version": "11.12.0",
-				"size": 39779
-			},
-			{
-				"name": "convert-source-map",
-				"version": "2.0.0",
-				"size": 15854
-			},
-			{
-				"name": "@ampproject/remapping",
-				"version": "2.3.0",
-				"size": 78946
-			},
-			{
-				"name": "@babel/helper-module-transforms",
-				"version": "7.26.0",
-				"size": 160842
-			},
-			{
-				"name": "@babel/helper-module-imports",
-				"version": "7.25.9",
-				"size": 63714
-			},
-			{
 				"name": "@babel/helper-compilation-targets",
-				"version": "7.27.0",
+				"version": "7.27.1",
 				"size": 53776
 			},
 			{
 				"name": "@babel/compat-data",
-				"version": "7.26.8",
-				"size": 66428
+				"version": "7.27.1",
+				"size": 66193
 			},
 			{
 				"name": "@babel/helper-validator-option",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 11775
 			},
 			{
 				"name": "browserslist",
-				"version": "4.24.4",
-				"size": 64926
+				"version": "4.24.5",
+				"size": 65174
 			},
 			{
 				"name": "caniuse-lite",
-				"version": "1.0.30001715",
-				"size": 2211246
+				"version": "1.0.30001716",
+				"size": 2214832
 			},
 			{
 				"name": "electron-to-chromium",
-				"version": "1.5.140",
-				"size": 162065
+				"version": "1.5.149",
+				"size": 163189
 			},
 			{
 				"name": "node-releases",
@@ -267,6 +153,66 @@
 				"name": "yallist",
 				"version": "3.1.1",
 				"size": 14766
+			},
+			{
+				"name": "semver",
+				"version": "6.3.1",
+				"size": 68343
+			},
+			{
+				"name": "@babel/helper-module-transforms",
+				"version": "7.27.1",
+				"size": 160852
+			},
+			{
+				"name": "@babel/helper-module-imports",
+				"version": "7.27.1",
+				"size": 63724
+			},
+			{
+				"name": "@babel/traverse",
+				"version": "7.27.1",
+				"size": 689113
+			},
+			{
+				"name": "@babel/template",
+				"version": "7.27.1",
+				"size": 70675
+			},
+			{
+				"name": "debug",
+				"version": "4.4.0",
+				"size": 42798
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "globals",
+				"version": "11.12.0",
+				"size": 39779
+			},
+			{
+				"name": "@babel/helpers",
+				"version": "7.27.1",
+				"size": 861892
+			},
+			{
+				"name": "convert-source-map",
+				"version": "2.0.0",
+				"size": 15854
+			},
+			{
+				"name": "gensync",
+				"version": "1.0.0-beta.2",
+				"size": 28891
+			},
+			{
+				"name": "json5",
+				"version": "2.2.3",
+				"size": 235198
 			},
 			{
 				"name": "@rollup/plugin-commonjs",
@@ -422,8 +368,8 @@
 			},
 			{
 				"name": "@types/node",
-				"version": "22.14.1",
-				"size": 2331510
+				"version": "22.15.3",
+				"size": 2350386
 			},
 			{
 				"name": "undici-types",
@@ -724,67 +670,67 @@
 			[0, 1],
 			[1, 2],
 			[2, 3],
-			[1, 4],
-			[1, 5],
-			[1, 6],
-			[1, 7],
-			[7, 8],
-			[7, 9],
-			[1, 10],
-			[10, 7],
-			[1, 11],
-			[11, 12],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[6, 7],
+			[6, 5],
+			[2, 6],
+			[1, 8],
+			[8, 9],
+			[8, 10],
+			[8, 11],
+			[1, 12],
 			[12, 13],
 			[13, 14],
-			[13, 15],
-			[13, 9],
-			[12, 10],
-			[12, 7],
-			[11, 7],
-			[1, 12],
-			[1, 16],
-			[16, 13],
-			[16, 17],
-			[17, 10],
-			[17, 7],
-			[17, 18],
-			[18, 19],
-			[18, 20],
-			[18, 21],
-			[21, 22],
-			[21, 20],
-			[17, 21],
-			[17, 23],
-			[16, 10],
-			[16, 12],
-			[16, 7],
-			[16, 2],
-			[16, 24],
+			[14, 15],
+			[14, 9],
+			[12, 14],
+			[12, 3],
+			[12, 6],
+			[12, 16],
 			[1, 17],
-			[1, 13],
-			[1, 25],
-			[1, 26],
-			[26, 18],
-			[26, 21],
-			[1, 27],
-			[27, 16],
-			[27, 28],
-			[28, 7],
-			[28, 16],
-			[27, 9],
+			[17, 18],
+			[17, 19],
+			[17, 20],
+			[20, 21],
+			[20, 22],
+			[20, 23],
+			[20, 24],
+			[24, 25],
+			[24, 11],
+			[17, 26],
+			[26, 27],
+			[17, 28],
 			[1, 29],
 			[29, 30],
+			[30, 31],
+			[31, 8],
+			[31, 12],
+			[31, 13],
+			[31, 32],
+			[32, 8],
+			[32, 13],
+			[32, 14],
+			[31, 14],
+			[31, 33],
+			[33, 34],
+			[31, 35],
+			[30, 14],
+			[29, 9],
 			[29, 31],
-			[29, 32],
-			[32, 33],
-			[32, 34],
-			[32, 35],
-			[32, 36],
-			[36, 37],
-			[36, 15],
-			[29, 38],
-			[38, 39],
-			[29, 5],
+			[1, 36],
+			[36, 32],
+			[36, 14],
+			[1, 13],
+			[1, 32],
+			[1, 31],
+			[1, 14],
+			[1, 37],
+			[1, 33],
+			[1, 38],
+			[1, 39],
+			[1, 28],
 			[0, 40],
 			[40, 41],
 			[41, 42],
@@ -831,7 +777,7 @@
 			[0, 77],
 			[0, 78],
 			[78, 79],
-			[78, 15],
+			[78, 11],
 			[78, 80],
 			[0, 81],
 			[81, 82],
@@ -901,5 +847,60 @@
 			[0, 132]
 		],
 		"circular": []
-	}
+	},
+	"legacy_svelte": false,
+	"readme": "# publish-svelte\npublish-svelte or \"pelte\" is a cli tool to easily compile, bundle and publish svelte components to npm. \nThe bundle will contain both svelte files and vanilla js files, so the components can run \"everywhere\" no matter the framework. \nA readme file will also be published to npm, which will describe how to use the component. \n\n\"pelte\" is optimal if you have an existing svelte project and you quickly want to share one of your components with the world. \nYou don't need to extract the component from your project and fiddle with npm link and import statements.\n\n#### Installation \n```text\nnpm install -g publish-svelte\n``` \n\n#### Usage\nPublish your svelte component to npm:\n\n```text\npelte ./MySvelteComponent.svelte\n```\nThis will automatically compile, bundle and publish to npm. The first time you publish a component, \"pelte\" will be ask for a name and a version. You can just press enter if you like the suggestions. \n\n\"pelte\" will create two files MySvelteComponent.md and MySvelteComponent.json. In the md-file you can describe your component and in the json-file you can change the name, version and more.\n\nYou can also increment the package version with patch, minor or major. Here the component is published with a patched version:\n```text\npelte ./MySvelteComponent.svelte --patch\n```\n\n#### Where is the bundle?\nThe bundle is removed after publish. You can examine the bundle without publishing to npm with:\n```text\npelte ./MySvelteComponent.svelte --skip-publish --keep-bundle\n```\n\"--skip-publish\" to skip publishing to npm and \"--keep-bundle\" will keep the bundle files which are otherwise cleaned.\n\nFor instance, you can open the index-example-umd.html and see your component in action.\n\n#### Custom Elements (aka web components) \nPelte will automatically create a web component if your svelte component contains this line: \n\n```html\n<svelte:options tag=\"my-svelte-component\"/>\n```\nThen you can use the web component like this: \n```html\n<body>\n    <my-svelte-component></my-svelte-component>\n</body>\n```\n\nYou can read more on the official svelte page [svelte page](https://svelte.dev/docs#Custom_element_API)  \n\n#### Programmatic Usage\n\nIn rare cases, you might want to run `pelte` programmatically.\n\n```js\nconst { pelte } = require('publish-svelte');\n\nconst options = {\n  srcFile: __dirname + '/Simple.svelte',\n  keepBundle: true,\n  skipPublish: true\n}\n\npelte(options)\n```\n\nPelte also exports a `generate` function that will generate bundles in-memory, but not write them to a file. This can be used if you want fine-grained control of the output bundle.\n\n_Note: The `keepBundle` and `skipPublish` options are ignored by `generate`_\n\n```js\nconst { generate } = require('publish-svelte');\n\nconst options = {\n  srcFile: __dirname + '/Simple.svelte',\n}\n\ngenerate(options).then(bundles => {\n  const umd = bundles.find(bundle => bundle.options.format === 'umd')\n  console.log('this is the umd bundle', umd)\n})\n```\n\n#### Help?\n\nSee other available arguments with:\n```text\npelte ./MySvelteComponent.svelte --help\n```\n#### FEATURES COMING SOON: \nSoon I will add some other features:\n* Better typescript support. There is some support but I have not tested more complex svelte components. \n* A react adapter should be included. Likely by using [svelte adapter](https://github.com/pngwn/svelte-adapter)\n* Autogenerated typescript\n* Angular adapter. If possible? \n* Third party dependencies are added as optional dependencies. This is required for when a svelte project imports a pelte package.\n",
+	"downloads_history": [
+		[3589, 2],
+		[3596, 4],
+		[3603, 2],
+		[3610, 4],
+		[3617, 1],
+		[3631, 1],
+		[3638, 1],
+		[3645, 2],
+		[3652, 1],
+		[3659, 1],
+		[3666, 4],
+		[3687, 1],
+		[3708, 1],
+		[3715, 1],
+		[3722, 3],
+		[3736, 2],
+		[3764, 2],
+		[3771, 3],
+		[3778, 1],
+		[3785, 1],
+		[3799, 2],
+		[3806, 2],
+		[3813, 1],
+		[3834, 1],
+		[3841, 1],
+		[3855, 11],
+		[3862, 5],
+		[3876, 3],
+		[3890, 3],
+		[3904, 4],
+		[3911, 1],
+		[3932, 1],
+		[3939, 1],
+		[3960, 1],
+		[3967, 1],
+		[3988, 8],
+		[4009, 3],
+		[4016, 3],
+		[4023, 4],
+		[4030, 1],
+		[4037, 3],
+		[4044, 5],
+		[4051, 2],
+		[4058, 2],
+		[4072, 2],
+		[4086, 3],
+		[4093, 16],
+		[4100, 2],
+		[4114, 5],
+		[4121, 6],
+		[4128, 4]
+	]
 }

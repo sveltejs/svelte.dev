@@ -7,70 +7,11 @@
 	"downloads": 16,
 	"updated": "2022-12-20T04:44:13.841Z",
 	"tags": ["content"],
-	"runes": false,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "2.0.2",
 	"svelte_range": "^3.53.1",
 	"last_rune_check_version": "2.0.2",
-	"downloads_history": [
-		[3574, 18],
-		[3581, 1],
-		[3588, 2],
-		[3595, 29],
-		[3602, 1],
-		[3609, 13],
-		[3623, 1],
-		[3630, 4],
-		[3644, 2],
-		[3658, 2],
-		[3665, 16],
-		[3672, 1],
-		[3693, 2],
-		[3721, 2],
-		[3749, 16],
-		[3763, 1],
-		[3770, 1],
-		[3777, 1],
-		[3798, 2],
-		[3805, 1],
-		[3819, 1],
-		[3826, 1],
-		[3833, 38],
-		[3840, 71],
-		[3847, 2],
-		[3854, 11],
-		[3861, 31],
-		[3868, 2],
-		[3882, 18],
-		[3889, 3],
-		[3896, 15],
-		[3903, 1],
-		[3910, 3],
-		[3917, 1],
-		[3924, 2],
-		[3931, 2],
-		[3938, 2],
-		[3945, 6],
-		[3952, 2],
-		[3966, 2],
-		[3973, 2],
-		[3994, 1],
-		[4015, 4],
-		[4022, 21],
-		[4029, 2],
-		[4036, 19],
-		[4043, 14],
-		[4050, 3],
-		[4057, 2],
-		[4071, 2],
-		[4078, 1],
-		[4085, 1],
-		[4092, 14],
-		[4099, 29],
-		[4106, 32],
-		[4113, 16]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -81,87 +22,13 @@
 			},
 			{
 				"name": "@babel/core",
-				"version": "7.26.10",
-				"size": 795988
+				"version": "7.27.1",
+				"size": 794180
 			},
 			{
-				"name": "debug",
-				"version": "4.4.0",
-				"size": 42798
-			},
-			{
-				"name": "ms",
-				"version": "2.1.3",
-				"size": 6721
-			},
-			{
-				"name": "json5",
-				"version": "2.2.3",
-				"size": 235198
-			},
-			{
-				"name": "semver",
-				"version": "6.3.1",
-				"size": 68343
-			},
-			{
-				"name": "gensync",
-				"version": "1.0.0-beta.2",
-				"size": 28891
-			},
-			{
-				"name": "@babel/types",
-				"version": "7.27.0",
-				"size": 2583295
-			},
-			{
-				"name": "@babel/helper-string-parser",
-				"version": "7.25.9",
-				"size": 31816
-			},
-			{
-				"name": "@babel/helper-validator-identifier",
-				"version": "7.25.9",
-				"size": 48330
-			},
-			{
-				"name": "@babel/parser",
-				"version": "7.27.0",
-				"size": 1924962
-			},
-			{
-				"name": "@babel/helpers",
-				"version": "7.27.0",
-				"size": 866498
-			},
-			{
-				"name": "@babel/template",
-				"version": "7.27.0",
-				"size": 70675
-			},
-			{
-				"name": "@babel/code-frame",
-				"version": "7.26.2",
-				"size": 33160
-			},
-			{
-				"name": "js-tokens",
-				"version": "4.0.0"
-			},
-			{
-				"name": "picocolors",
-				"version": "1.1.1",
-				"size": 6373
-			},
-			{
-				"name": "@babel/traverse",
-				"version": "7.27.0",
-				"size": 676526
-			},
-			{
-				"name": "@babel/generator",
-				"version": "7.27.0",
-				"size": 559855
+				"name": "@ampproject/remapping",
+				"version": "2.3.0",
+				"size": 78946
 			},
 			{
 				"name": "@jridgewell/gen-mapping",
@@ -189,64 +56,78 @@
 				"size": 53153
 			},
 			{
+				"name": "@babel/code-frame",
+				"version": "7.27.1",
+				"size": 33160
+			},
+			{
+				"name": "@babel/helper-validator-identifier",
+				"version": "7.27.1",
+				"size": 48330
+			},
+			{
+				"name": "js-tokens",
+				"version": "4.0.0"
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "@babel/generator",
+				"version": "7.27.1",
+				"size": 560098
+			},
+			{
+				"name": "@babel/parser",
+				"version": "7.27.1",
+				"size": 1859876
+			},
+			{
+				"name": "@babel/types",
+				"version": "7.27.1",
+				"size": 2597469
+			},
+			{
+				"name": "@babel/helper-string-parser",
+				"version": "7.27.1",
+				"size": 31816
+			},
+			{
 				"name": "jsesc",
 				"version": "3.1.0",
 				"size": 32280
 			},
 			{
-				"name": "globals",
-				"version": "11.12.0",
-				"size": 39779
-			},
-			{
-				"name": "convert-source-map",
-				"version": "2.0.0",
-				"size": 15854
-			},
-			{
-				"name": "@ampproject/remapping",
-				"version": "2.3.0",
-				"size": 78946
-			},
-			{
-				"name": "@babel/helper-module-transforms",
-				"version": "7.26.0",
-				"size": 160842
-			},
-			{
-				"name": "@babel/helper-module-imports",
-				"version": "7.25.9",
-				"size": 63714
-			},
-			{
 				"name": "@babel/helper-compilation-targets",
-				"version": "7.27.0",
+				"version": "7.27.1",
 				"size": 53776
 			},
 			{
 				"name": "@babel/compat-data",
-				"version": "7.26.8",
-				"size": 66428
+				"version": "7.27.1",
+				"size": 66193
 			},
 			{
 				"name": "@babel/helper-validator-option",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 11775
 			},
 			{
 				"name": "browserslist",
-				"version": "4.24.4",
-				"size": 64926
+				"version": "4.24.5",
+				"size": 65174
 			},
 			{
 				"name": "caniuse-lite",
-				"version": "1.0.30001715",
-				"size": 2211246
+				"version": "1.0.30001716",
+				"size": 2214832
 			},
 			{
 				"name": "electron-to-chromium",
-				"version": "1.5.140",
-				"size": 162065
+				"version": "1.5.149",
+				"size": 163189
 			},
 			{
 				"name": "node-releases",
@@ -274,9 +155,69 @@
 				"size": 14766
 			},
 			{
+				"name": "semver",
+				"version": "6.3.1",
+				"size": 68343
+			},
+			{
+				"name": "@babel/helper-module-transforms",
+				"version": "7.27.1",
+				"size": 160852
+			},
+			{
+				"name": "@babel/helper-module-imports",
+				"version": "7.27.1",
+				"size": 63724
+			},
+			{
+				"name": "@babel/traverse",
+				"version": "7.27.1",
+				"size": 689113
+			},
+			{
+				"name": "@babel/template",
+				"version": "7.27.1",
+				"size": 70675
+			},
+			{
+				"name": "debug",
+				"version": "4.4.0",
+				"size": 42798
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "globals",
+				"version": "11.12.0",
+				"size": 39779
+			},
+			{
+				"name": "@babel/helpers",
+				"version": "7.27.1",
+				"size": 861892
+			},
+			{
+				"name": "convert-source-map",
+				"version": "2.0.0",
+				"size": 15854
+			},
+			{
+				"name": "gensync",
+				"version": "1.0.0-beta.2",
+				"size": 28891
+			},
+			{
+				"name": "json5",
+				"version": "2.2.3",
+				"size": 235198
+			},
+			{
 				"name": "@babel/helper-plugin-utils",
-				"version": "7.26.5",
-				"size": 11985
+				"version": "7.27.1",
+				"size": 11818
 			},
 			{
 				"name": "@formatjs/icu-messageformat-parser",
@@ -328,67 +269,67 @@
 			[0, 1],
 			[1, 2],
 			[2, 3],
-			[1, 4],
-			[1, 5],
-			[1, 6],
-			[1, 7],
-			[7, 8],
-			[7, 9],
-			[1, 10],
-			[10, 7],
-			[1, 11],
-			[11, 12],
+			[3, 4],
+			[3, 5],
+			[3, 6],
+			[6, 7],
+			[6, 5],
+			[2, 6],
+			[1, 8],
+			[8, 9],
+			[8, 10],
+			[8, 11],
+			[1, 12],
 			[12, 13],
 			[13, 14],
-			[13, 15],
-			[13, 9],
-			[12, 10],
-			[12, 7],
-			[11, 7],
-			[1, 12],
-			[1, 16],
-			[16, 13],
-			[16, 17],
-			[17, 10],
-			[17, 7],
-			[17, 18],
-			[18, 19],
-			[18, 20],
-			[18, 21],
-			[21, 22],
-			[21, 20],
-			[17, 21],
-			[17, 23],
-			[16, 10],
-			[16, 12],
-			[16, 7],
-			[16, 2],
-			[16, 24],
+			[14, 15],
+			[14, 9],
+			[12, 14],
+			[12, 3],
+			[12, 6],
+			[12, 16],
 			[1, 17],
-			[1, 13],
-			[1, 25],
-			[1, 26],
-			[26, 18],
-			[26, 21],
-			[1, 27],
-			[27, 16],
-			[27, 28],
-			[28, 7],
-			[28, 16],
-			[27, 9],
+			[17, 18],
+			[17, 19],
+			[17, 20],
+			[20, 21],
+			[20, 22],
+			[20, 23],
+			[20, 24],
+			[24, 25],
+			[24, 11],
+			[17, 26],
+			[26, 27],
+			[17, 28],
 			[1, 29],
 			[29, 30],
+			[30, 31],
+			[31, 8],
+			[31, 12],
+			[31, 13],
+			[31, 32],
+			[32, 8],
+			[32, 13],
+			[32, 14],
+			[31, 14],
+			[31, 33],
+			[33, 34],
+			[31, 35],
+			[30, 14],
+			[29, 9],
 			[29, 31],
-			[29, 32],
-			[32, 33],
-			[32, 34],
-			[32, 35],
-			[32, 36],
-			[36, 37],
-			[36, 15],
-			[29, 38],
-			[38, 39],
-			[29, 5],
+			[1, 36],
+			[36, 32],
+			[36, 14],
+			[1, 13],
+			[1, 32],
+			[1, 31],
+			[1, 14],
+			[1, 37],
+			[1, 33],
+			[1, 38],
+			[1, 39],
+			[1, 28],
 			[0, 40],
 			[0, 41],
 			[41, 42],
@@ -406,5 +347,64 @@
 			[0, 49]
 		],
 		"circular": []
-	}
+	},
+	"readme": "![Svelte Intl Precompile](https://raw.githubusercontent.com/cibernox/svelte-intl-precompile/main/logos/svelte-intl-precompile-double-line.svg)\n\n## Svelte-intl-precompile\n\nThis i18n library for Svelte.js has an API identical (or at least very similar) to https://github.com/kaisermann/svelte-i18n but has\na different approach to processing translations.\n\nInstead of doing all the work in the client, much like Svelte.js acts as a compiler for your app, this library acts as a compiler\nfor your translations.\n\n## Check the documentation page, it's better than this Readme\n\nGo to [https://svelte-intl-precompile.com](https://svelte-intl-precompile.com)\n\nStill, there you have the rest of the Readme.\n\n### Why would I want to use it? How does it work?\nThis approach is different than the taken by libraries like intl-messageformat or format-message, which do all the work in the browser. The approach taken by those libraries is more flexible as you can just load json files with translations in plain text and that's it, but it also means the library needs to ship a parser for the ICU message syntax, and it always has to have ship code for all the features that the ICU syntax supports, even features you might not use, making those libraries several times bigger.\n\nThis process spares the browser of the burden of doing the same process in the user's devices, resulting in smaller and faster apps.\n\nFor instance if an app has the following set of translations:\n```json\n{\n  \"plain\": \"Some text without interpolations\",\n  \"interpolated\": \"A text where I interpolate {count} times\",\n  \"time\": \"Now is {now, time}\",\n  \"number\": \"My favorite number is {n, number}\",\n  \"pluralized\": \"I have {count, plural,=0 {no cats} =1 {one cat} other {{count} cats}}\",\n  \"pluralized-with-hash\": \"I have {count, plural, zero {no cats} one {just # cat} other {# cats}}\",\n  \"selected\": \"{gender, select, male {He is a good boy} female {She is a good girl} other {They are good fellas}}\",\n  \"numberSkeleton\": \"Your account balance is {n, number, ::currency/CAD sign-always}\",\n  \"installProgress\": \"{progress, number, ::percent scale/100 .##} completed\"\n}\n```\n\nThe babel plugin will analyze and understand the strings in the ICU message syntax and transform them into something like:\n```js\nimport { __interpolate, __number, __plural, __select, __time } from \"precompile-intl-runtime\";\nexport default {\n  plain: \"Some text without interpolations\",\n  interpolated: count => `A text where I interpolate ${__interpolate(count)} times`,\n  time: now => `Now is ${__time(now)}`,\n  number: n => `My favorite number is ${__number(n)}`,\n  pluralized: count => `I have ${__plural(count, { 0: \"no cats\", 1: \"one cat\", h: `${__interpolate(count)} cats`})}`,\n  \"pluralized-with-hash\": count => `I have ${__plural(count, { z: \"no cats\", o: `just ${count} cat`, h: `${count} cats`})}`,\n  selected: gender => __select(gender, { male: \"He is a good boy\", female: \"She is a good girl\", other: \"They are good fellas\"}),\n  numberSkeleton: n => `Your account balance is ${__number(n, { style: 'currency', currency: 'CAD', signDisplay: 'always' })}`,\n  installProgress: progress => `${__number(progress / 100, { style: 'percent', maximumFractionDigits: 2 })} completed`\n}\n```\n\nNow the translations are either strings or functions that take some arguments and generate strings using some utility helpers. Those utility helpers are very small and use the native Intl API available in all modern browsers and in node. Also, unused helpers are tree-shaken by rollup.\n\nWhen the above code is minified it will results in an output that compact that often is shorter than the original ICU string:\n\n```\n\"pluralized-with-hash\": \"I have {count, plural, zero {no cats} one {just # cat} other {# cats}}\",\n--------------------------------------------------------------------------------------------------\n\"pluralized-with-hash\":t=>`I have ${jt(t,{z:\"no cats\",o:`just ${t} cat`,h:`${t} cats`})}`\n```\n\nThe combination of a very small and treeshakeable runtime with moving the parsing into the build step results in an extremely small footprint and\nextremely fast performance.\n\n**How small, you may ask?** \nUsually adds less than 2kb to your final build size after compression and minification, when compared with nearly 15kb that alternatives with\na runtime ICU-message parser like `svelte-i18n` add.\n\n**How fast, you may also ask?** \nWhen rendering a key that has also been rendered before around 25% faster. For initial rendering or rendering a keys that haven't been rendered \nbefore, around 400% faster.\n\n### Setup\nFirst of all, you can find a working sveltekit app configured to use `svelte-intl-precompile` in https://github.com/cibernox/sample-app-svelte-intl-precompile.\nIf you struggle with any of the following steps you can always use that app to compare it with yours:\n\n1. Install `svelte-intl-precompile` as a runtime dependency.\n\n2. Create a folder to put your translations. I like to use a `/messages` or `/locales` folder on the root. On that folder, create `en.json`, `es.json` (you can also create JS files exporting objects with the translations) and as many files as languages you want. On each file, export an object with your translations:\n```json\n{\n  \"recent.aria\": \"Find recently viewed tides\",\n  \"menu\": \"Menu\",\n  \"foot\": \"{count} {count, plural, =1 {foot} other {feet}}\",\n}\n```\n\n3. In your `svelte.config.js` import the function exported by `svelte-intl-precompile/sveltekit-plugin` and invoke with the folder where you've placed\nyour translation files it to your list of Vite plugins:\n```js\nimport precompileIntl from \"svelte-intl-precompile/sveltekit-plugin\";\n\n/** @type {import('@sveltejs/kit').Config} */\nmodule.exports = {\n  kit: {\n    target: '#svelte',\n    vite: {\n      plugins: [\n        // if your translations are defined in /locales/[lang].js\n        precompileIntl('locales')\n        // precompileIntl('locales', '$myprefix') // also you can change import path prefix for json files ($locales by default)\n      ]\n    }\n  }\n};\n```\n\nIf you are using CommonJS, you can instead use `const precompileIntl = require(\"svelte-intl-precompile/sveltekit-plugin\");`.\n\nFrom this step onward the library almost identical to use and configure to the popular `svelte-i18n`. It has the same features and only the import path is different. You can check the docs of `svelte-i18n` for examples and details in the configuration options.\n\n4. Now you need some initialization code to register your locales and configure your preferences. You can import your languages statically (which will add them to your bundle) or register loaders that will load the translations lazily. The best place to put this configuration is inside a `<script context=\"module\">` on your `src/$layout.svelte`\n```html\n<script>\n  import { addMessages, init, getLocaleFromNavigator /*, register */ } from 'svelte-intl-precompile';\n  import en from '$locales/en.js';  // If using typescript you can also use the .ts extension.\n  import es from '$locales/es.js'   // load from $myprefix/es.js you configured a custom import path.\n  // if you put your translations in js files, import then usin the relative path. E.g. `import en from '../../locales/en.js'`\n  // @ts-ignore\n  addMessages('en', en);\n  addMessages('es', es);\n  // register('es', () => import('$locales/es.js')); <-- use this approach if you want locales to be load lazily\n\n  init({\n    fallbackLocale: 'en',\n    initialLocale: getLocaleFromNavigator()\n  });\n</script>\n\n<script>\n  import '../app.css';\n</script>\n\n<slot />\n```\n\n5. Now on your `.svelte` files you start translating using the `t` store exported from `svelte-intl-precompile`:\n```html\n<script>\n\timport { t } from 'svelte-intl-precompile'\n</script>\n<footer class=\"l-footer\">\n\t<p class=\"t-footer\">{$t(\"hightide\")} {$t(\"footer.cta\")}</p>\n</footer>\n```\n\n\n## Note for automatic browser locale detection when server side rendering\n\nIf you want to automatically detect your user's locale from the browser using `getLocaleFromNavigator()` but you are\nserver side rendering your app (which sveltekit does by default), you need to take some extra steps for the\nlocale used when SSR matches the locale when hydrating the app which would cause texts to change.\n\nYou can pass to `getLocaleFromNavigator` an optional argument which is the locale to use when SSR'ing your app.\nHow you get that value depends on how you run your app, but for instance using sveltekit you can extract it from the\n`accept-language` HTTP header of the request, using [Hooks](https://kit.svelte.dev/docs#hooks)\n\nYou can use `getSession` to extract the preferred locale from the request headers and store it in the session object,\nwhich is made available to the client:\n```js\n// src/hooks.js\nexport function getSession(request) {\n  let acceptedLanguage = request.headers[\"accept-language\"] && request.headers[\"accept-language\"].split(',')[0];`\n  return { acceptedLanguage };\n}\n```\n\nThen you can use the `session` store to pass it to the `init` function:\n```html\n<!-- __layout.svelte -->\n<script context=\"module\">\n  import { register, init, waitLocale, getLocaleFromNavigator } from 'svelte-intl-precompile';\n  register('en', () => import('$locales/en-us'));\n  register('en-US', () => import('$locales/en-US'));\n  register('es-GB', () => import('$locales/es-GB'));\t\n\t\n  export async function load({session}) {\n    init({\n      fallbackLocale: 'en',\n      initialLocale: session.acceptedLanguage || getLocaleFromNavigator(),\n    });\n    await waitLocale(); // awaits for initialLocale language pack to finish loading;\n    return {};\n  }\n</script>\n```\n\nIf you have a lot of languages or want to register all available languages, you can use the `registerAll` function:\n\n```html\n<!-- __layout.svelte -->\n<script context=\"module\">\n  import { register, init, waitLocale, getLocaleFromNavigator } from 'svelte-intl-precompile';\n  import { registerAll } from '$locales';\n\n  // Equivalent to a `register(\"lang\", () => import('$locales/lang'))` fro each lang file in localesRoot.\n  registerAll();\n\n  export async function load({session}) {\n    init({\n      fallbackLocale: 'en',\n      initialLocale: session.acceptedLanguage || getLocaleFromNavigator(),\n    });\n    await waitLocale(); // awaits for initialLocale language pack to finish loading;\n    return {};\n  }\n</script>\n```\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3589, 2],
+		[3596, 29],
+		[3603, 1],
+		[3610, 13],
+		[3624, 1],
+		[3631, 4],
+		[3645, 2],
+		[3659, 2],
+		[3666, 16],
+		[3673, 1],
+		[3694, 2],
+		[3722, 2],
+		[3750, 16],
+		[3764, 1],
+		[3771, 1],
+		[3778, 1],
+		[3799, 2],
+		[3806, 1],
+		[3820, 1],
+		[3827, 1],
+		[3834, 38],
+		[3841, 71],
+		[3848, 2],
+		[3855, 11],
+		[3862, 31],
+		[3869, 2],
+		[3883, 18],
+		[3890, 3],
+		[3897, 15],
+		[3904, 1],
+		[3911, 3],
+		[3918, 1],
+		[3925, 2],
+		[3932, 2],
+		[3939, 2],
+		[3946, 6],
+		[3953, 2],
+		[3967, 2],
+		[3974, 2],
+		[3995, 1],
+		[4016, 4],
+		[4023, 21],
+		[4030, 2],
+		[4037, 19],
+		[4044, 14],
+		[4051, 3],
+		[4058, 2],
+		[4072, 2],
+		[4079, 1],
+		[4086, 1],
+		[4093, 14],
+		[4100, 29],
+		[4107, 32],
+		[4114, 16],
+		[4121, 10]
+	]
 }

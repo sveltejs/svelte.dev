@@ -6,32 +6,11 @@
 	"downloads": 11,
 	"updated": "2024-12-20T23:12:03.095Z",
 	"tags": ["miscellaneous"],
-	"runes": true,
 	"typescript": true,
 	"version": "1.1.3",
 	"svelte_range": "^5.0.0",
 	"last_rune_check_version": "1.1.3",
 	"github_stars": 0,
-	"downloads_history": [
-		[3994, 118],
-		[4001, 586],
-		[4008, 38],
-		[4015, 83],
-		[4022, 35],
-		[4029, 30],
-		[4036, 19],
-		[4043, 47],
-		[4050, 17],
-		[4057, 32],
-		[4064, 8],
-		[4071, 8],
-		[4078, 9],
-		[4085, 6],
-		[4092, 1],
-		[4099, 16],
-		[4106, 12],
-		[4113, 11]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -43,5 +22,29 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# Svelte-MainLoop\n\n[![npm version](https://badge.fury.io/js/svelte-mainloop.svg?kill_cache=1)](https://badge.fury.io/js/svelte-mainloop)\n[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)\n\nA svelte wrapper for mainloop.js that handles function registration and cleanup, and lets you join and leave the loop with a single component. It also provides some debugging info and tools, exposes all of the standard mainloop.js functionality, is fully typed, and provides inline documentation through intellisense.\n\n* [MainLoop.js on github](https://github.com/IceCreamYou/MainLoop.js)\n* [MainLoop.js documentation](https://icecreamyou.github.io/MainLoop.js/docs/#!/api/MainLoop)\n* [Test App](https://retrotheft.github.io/svelte-mainloop/) - reference alongside the Test App code to see some examples of how to use.\n\n## Requirements\n\n- [![Svelte](https://img.shields.io/badge/Svelte-5.x-FF3E00?logo=svelte)](https://www.npmjs.com/package/svelte?activeTab=versions)\n- Browser environment with `requestAnimationFrame` support. If you're running node, try using [mainloop.js]('https://github.com/IceCreamYou/MainLoop.js') directly.\n- If you're running SvelteKit, `svelte-mainloop` will provide a dummy loop for ssr, and should run correctly on the client side.\n\n## Getting Started\n\nFirst, install svelte-mainloop:\n\n```\nnpm install svelte-mainloop\n```\n\nThen import the **JoinLoop** component, write your update function (this will get called each frame, basically) and pass update to JoinLoop:\n\n```svelte\n<script>\n   import { JoinLoop } from 'svelte-mainloop'\n\n   function update() {\n      // do something\n   }\n</script>\n\n<JoinLoop {update} />\n```\n\n[Try it on the Svelte Playground](https://svelte.dev/playground/74147e1570fe40be9f2314d90a0c2150?version=5.14.0)\n\nThat's literally all you need to do to get moving, but svelte-mainloop has a lot more functionality.\n\nFor starters, MainLoop gives you 4 different stages of the loop to tap into, which are used for various purposes. Each stage uses a callback that is slightly different, with different parameters. The most common one, and the one used above, is **update**. (the others are **begin**, **draw** and **end**.)\n\n**Update** accepts **delta**, which is the time since the last update. You can use this to keep track of the time your app has been running, like so:\n\n```svelte\n<script>\n   import { JoinLoop } from 'svelte-mainloop'\n\n   let timeElapsed = $state(0)\n\n   function update(delta) {\n      timeElapsed += delta\n   }\n</script>\n\n{timeElapsed} seconds passed.\n\n<JoinLoop {update} />\n```\n\n> IMPORTANT: MainLoop.js by default provides its delta value as the number of milliseconds, so at 60fps the `delta` is 16.67. Svelte-mainloop divides this by 1000 when passing it to callbacks, in order to express delta in seconds.\n\nIf you want to remove your component from the loop, perhaps because it is paused or has completed its task, you can do so by wrapping JoinLoop in an #if block. JoinLoop will handle the cleanup for you.\n\n```svelte\n<script>\n   import { JoinLoop } from 'svelte-mainloop'\n\n   const COMPLETION_TIME = 10\n\n   let isPaused = $state(false)\n   let timeElapsed = $state(0)\n\n   function update(delta) {\n      timeElapsed += delta\n   }\n</script>\n\n{timeElapsed} seconds passed.\n\n<button onclick={() => isPaused = !isPaused}>{ isPaused ? 'Play' : 'Pause'}<button>\n\n{#if !isPaused && timeElapsed < COMPLETION_TIME}\n   <JoinLoop {update} />\n{/if}\n```\n\n(You could also check for these and immediately return out of your update function, but doing it this way means that mainloop won't iterate over this component at all if it doesn't have to.)\n\nThere are three other stages you can also use: begin, draw, and end.\n\nIt's highly recommended to read through the mainloop docs to understand what each stage is used for and what parameters they pass in to the callback.\n\n## ViewLoop\n\nYou can import the **ViewLoop** component and display it in your app in order to display some information about the mainloop.\n\n```svelte\n<script>\n   import { ViewLoop } from 'svelte-mainloop'\n</script>\n\n<ViewLoop />\n```\n\nIn addition to providing start/stop and reset buttons, **ViewLoop** displays:\n\n- The loop's current FPS\n- The current frame (increments with each draw call)\n- The current tick (increments with each update call)\n- `Timestamp` Time since the app was loaded\n- `Last Timestamp` (updates when the loop is stopped)\n- `Last Absence` - the length of time the loop was paused for previously\n- `Last Delta` - the delta of the last update (expressed in milliseconds here)\n- MainLoop's `panic` boolean\n\n**ViewLoop** also displays the number of functions that are registered with each stage of the loop. This can be useful to check if you have a memory leak and are not removing items from the loop when they're done.\n\n## Typescript\n\nsvelte-mainloop is fully typed and should provide inline help via intellisense. Most of this is taken from the mainloop.js documentation directly.\n\nYou can also import the callback function types explicitly using typescript, and type them using arrow function syntax:\n\n```svelte\n<script lang=\"ts\">\n   import type { BeginCallback, UpdateCallback, DrawCallback, EndCallback} from 'svelte-mainloop'\n\n   const update: UpdateCallback = (delta: number) => {\n      // your code here\n   }\n</script>\n```\n\nOr if you prefer, you can type the callback functions with jsdoc:\n\n```svelte\n<script>\n   // Use this option if you're using vanilla js\n   /** @type {import('svelte-mainloop').UpdateCallback} */\n   function update(delta: number) {\n      prevValue = value;\n      value = (value + delta) % max;\n   }\n</script>\n```\n\n```svelte\n<script lang=\"ts\">\n   // use this option if you hate arrow functions\n   // using implements - make sure to import the type\n   import type { UpdateCallback} from 'svelte-mainloop'\n   \n   /** @implements {UpdateCallback} */\n   function update(delta: number) {\n      prevValue = value;\n      value = (value + delta) % max;\n   }\n</script>\n```\n\nThis might be useful if you prefer to use the `function` keyword. In all three cases, hovering over the `UpdateCallback` keyword will display intellisense.\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3995, 118],
+		[4002, 586],
+		[4009, 38],
+		[4016, 83],
+		[4023, 35],
+		[4030, 30],
+		[4037, 19],
+		[4044, 47],
+		[4051, 17],
+		[4058, 32],
+		[4065, 8],
+		[4072, 8],
+		[4079, 9],
+		[4086, 6],
+		[4093, 1],
+		[4100, 16],
+		[4107, 12],
+		[4114, 11],
+		[4121, 18],
+		[4128, 10]
+	]
 }

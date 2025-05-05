@@ -7,27 +7,12 @@
 	"downloads": 4,
 	"updated": "2025-01-20T14:07:52.783Z",
 	"tags": ["integration"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.0.2",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.0.2",
-	"downloads_history": [
-		[4036, 113],
-		[4043, 17],
-		[4050, 8],
-		[4057, 3],
-		[4064, 6],
-		[4071, 4],
-		[4078, 1],
-		[4085, 5],
-		[4092, 2],
-		[4099, 4],
-		[4106, 1],
-		[4113, 4]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -44,5 +29,23 @@
 		],
 		"dependencies": [[0, 1]],
 		"circular": []
-	}
+	},
+	"readme": "# Svelte PocketBase Reactive Wrapper\n\nA reactive wrapper for PocketBase collections and records in SvelteKit, allowing automatic updates and reactivity.\n\n## Installation\n\nEnsure you have `pocketbase` installed:\n\n```sh\nnpm install pocketbase\n```\n\nThen, add the wrapper files to your SvelteKit project.\n\n---\n\n## Usage\n\n### 1. Initialize PocketBase\n\n`pocketbase.svelte.ts` provides a reactive user store and PocketBase instance. The PocketBase URL should be set via an environment variable:\n\n```ts\nexport const pb = new PocketBase(process.env.POCKETBASE_URL);\n```\n\nAdditionally, `user.current` is a reactive store that holds the current authenticated user.\n\n```ts\nimport { pb, user } from '$lib/pocketbase/pocketbase.svelte.js';\n```\n\nYou can authenticate users:\n\n```ts\nconst login = async () => {\n\tconst auth = await pb.collection('users').authWithPassword('email@example.com', 'password');\n\tconsole.log(auth);\n};\n\nconst logout = async () => {\n\tuser.logout();\n};\n```\n\n---\n\n### 2. Working with Collections\n\n#### Reactive List of Records\n\nUse `CollectionList<T>` to track a collection reactively, where `T` is the type of the record.\n\n```ts\nimport { CollectionList } from '$lib/pocketbase/CollectionList.svelte.js';\n\ntype TestRecord = { id: string; content: string };\n\nconst test = new CollectionList<TestRecord>({\n\tname: 'test',\n\tonInit: async (collection) => await collection.getFullList(),\n\tonUpdate: (record) => ({ ...record, updated: true }),\n\tonCreate: (record) => ({ ...record, new: true }),\n\tonDelete: (record) => console.log(`Record deleted: ${record.id}`)\n});\n```\n\n- **onInit(collection)**: An optional function that runs when the collection is initialized. It should return a list of records.\n- **onUpdate(record)**: Called when a record is updated. Can modify and return the updated record.\n- **onCreate(record)**: Called when a new record is created. Can modify and return the newly created record.\n- **onDelete(record)**: Called when a record is deleted. Can be used for cleanup actions.\n\nRender in a Svelte component:\n\n```svelte\n<ul>\n\t{#each test.records as record}\n\t\t<li>{record.id}</li>\n\t{/each}\n</ul>\n```\n\n#### Creating a New Record\n\n```ts\nconst createTest = async () => {\n\tawait pb.collection('test').create({ content: 'test ' + Math.random() });\n};\n```\n\n---\n\n### 3. Working with a Single Record\n\nUse `CollectionRecord<T>` to track a single record reactively, where `T` is the type of the record.\n\n```ts\nimport { CollectionRecord } from '$lib/pocketbase/CollectionRecord.svelte.js';\n\ntype TestRecord = { id: string; content: string };\n\nconst record = new CollectionRecord<TestRecord>({\n\tname: 'test',\n\trecordId: '119p42gj5817e6u',\n\tonInit: async (collection) => await collection.getOne('119p42gj5817e6u'),\n\tonUpdate: (record) => ({ ...record, modified: true }),\n\tonCreate: (record) => ({ ...record, initialized: true }),\n\tonDelete: (record) => console.log(`Record ${record.id} deleted`)\n});\n```\n\n- **onInit(collection)**: Runs when the record is initialized. Should return the specific record.\n- **onUpdate(record)**: Called when the record is updated. Can modify and return the updated record.\n- **onCreate(record)**: Called when the record is created. Can modify and return the newly created record.\n- **onDelete(record)**: Called when the record is deleted.\n\nRender in a Svelte component:\n\n```svelte\n<p>Record Content: {record.record?.content}</p>\n```\n\n---\n\n## Features\n\n- 🔄 **Reactive Collections & Records**: Automatically update on changes.\n- 🔑 **Authentication Handling**: Tracks authenticated users.\n- 🔥 **Real-time Updates**: Uses PocketBase's subscription system.\n- 🏗 **Lightweight & Modular**: Designed for SvelteKit applications.\n\n---\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4037, 113],
+		[4044, 17],
+		[4051, 8],
+		[4058, 3],
+		[4065, 6],
+		[4072, 4],
+		[4079, 1],
+		[4086, 5],
+		[4093, 2],
+		[4100, 4],
+		[4107, 1],
+		[4114, 4],
+		[4121, 6],
+		[4128, 3]
+	]
 }

@@ -7,22 +7,11 @@
 	"downloads": 5,
 	"updated": "2025-02-13T17:31:53.489Z",
 	"tags": ["media"],
-	"runes": true,
-	"github_stars": 157,
+	"github_stars": 158,
 	"typescript": true,
 	"version": "1.1.0",
 	"svelte_range": "^5.0.0",
 	"last_rune_check_version": "1.1.0",
-	"downloads_history": [
-		[4043, 11],
-		[4050, 1],
-		[4057, 83],
-		[4064, 6],
-		[4071, 4],
-		[4085, 6],
-		[4092, 3],
-		[4113, 5]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -53,5 +42,19 @@
 			[2, 3]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# @responsive-image/svelte\n\nSvelte component to render responsive images, provided as locally processed images or loaded remotely from Image CDNs.\n\nPart of the [ResponsiveImage](https://github.com/simonihmig/responsive-image) project.\n\n## Compatibility\n\n- Svelte 5 or above\n\n## Documentation\n\nVisit [responsive-image.dev](https://responsive-image.dev) for our complete documentation site.\n\n## License\n\nThis project is licensed under the [MIT License](LICENSE.md).\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4044, 11],
+		[4051, 1],
+		[4058, 83],
+		[4065, 6],
+		[4072, 4],
+		[4086, 6],
+		[4093, 3],
+		[4114, 5],
+		[4121, 8],
+		[4128, 6]
+	]
 }

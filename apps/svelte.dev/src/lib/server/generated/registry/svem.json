@@ -7,20 +7,11 @@
 	"downloads": 8,
 	"updated": "2025-03-16T01:58:53.353Z",
 	"tags": ["tooling"],
-	"runes": false,
-	"github_stars": 11,
+	"github_stars": 12,
 	"typescript": true,
 	"version": "0.0.5",
 	"svelte_range": "^5.20.2",
 	"last_rune_check_version": "0.0.5",
-	"downloads_history": [
-		[4078, 269],
-		[4085, 117],
-		[4092, 42],
-		[4099, 10],
-		[4106, 7],
-		[4113, 8]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -241,13 +232,13 @@
 			},
 			{
 				"name": "parse5",
-				"version": "7.2.1",
-				"size": 694639
+				"version": "7.3.0",
+				"size": 695873
 			},
 			{
 				"name": "entities",
-				"version": "4.5.0",
-				"size": 412892
+				"version": "6.0.0",
+				"size": 540419
 			},
 			{
 				"name": "hast-util-is-element",
@@ -823,18 +814,13 @@
 			},
 			{
 				"name": "oniguruma-to-es",
-				"version": "4.2.0",
-				"size": 989258
-			},
-			{
-				"name": "emoji-regex-xs",
-				"version": "1.0.0",
-				"size": 7814
+				"version": "4.3.3",
+				"size": 994705
 			},
 			{
 				"name": "oniguruma-parser",
-				"version": "0.11.2",
-				"size": 655523
+				"version": "0.12.1",
+				"size": 662523
 			},
 			{
 				"name": "regex",
@@ -1341,24 +1327,36 @@
 			[159, 160],
 			[160, 161],
 			[160, 162],
-			[160, 163],
-			[163, 164],
-			[160, 165],
-			[165, 164],
+			[162, 163],
+			[160, 164],
+			[164, 163],
 			[159, 35],
+			[158, 165],
+			[165, 3],
+			[165, 35],
 			[158, 166],
-			[166, 3],
 			[166, 35],
 			[158, 167],
 			[167, 35],
-			[158, 168],
-			[168, 35],
 			[158, 35],
 			[0, 47],
-			[0, 169],
-			[169, 26],
-			[169, 170]
+			[0, 168],
+			[168, 26],
+			[168, 169]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Svem\n\nSvem is a preprocessor for Svelte in Markdown. It allows you to write Svelte components in Markdown files. Insipired by Vitepress, Svem aims to provide a simple and easy way to write Svelte components in Markdown files.\n\n[![Preview](https://beerush-id.github.io/svem/images/preview.jpg)](https://beerush-id.github.io/svem/images/preview.webm)\n\n## Installation\n\n```bash\nbun add -d svem\n```\n\n## Usage\n\nTo use Svem, update your `svelte.config.js` file to to include `svem` in the preprocess array.\n\n```javascript\nimport adapter from '@sveltejs/adapter-cloudflare';\nimport { vitePreprocess } from '@sveltejs/vite-plugin-svelte';\nimport { svem } from 'svem';\n\nconst config = {\n\tpreprocess: [vitePreprocess(), svem()],\n\tkit: {\n\t\tadapter: adapter()\n\t},\n\textensions: ['.svelte', '.svem', '.svx']\n};\n\nexport default config;\n```\n\n## Features\n\n- Supports Svelte syntax highlighting.\n- Supports markdown syntax highlighting.\n- Write Svelte components in Markdown files.\n- Frontmatter.\n- Code blocks.\n- Code highlighting (using Shiki).\n- Inline code highlighting.\n- Code group blocks\n- Code preview blocks\n- Callout blocks (tip, note, important, warning, caution).\n- Layouts.\n- Heading links generation and injection.\n\n> Note:\n> Only one script tag is allowed in a Svem file.\n\nTo make working with Svem easier, you can use the [Svem VSCode extension](https://marketplace.visualstudio.com/items?itemName=beerush.svem). It provides syntax highlighting, snippets, and basic intellisense for Svem files.\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4079, 269],
+		[4086, 117],
+		[4093, 42],
+		[4100, 10],
+		[4107, 7],
+		[4114, 8],
+		[4121, 27],
+		[4128, 8],
+		[4135, 9]
+	]
 }

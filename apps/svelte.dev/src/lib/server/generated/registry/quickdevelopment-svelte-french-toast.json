@@ -7,31 +7,12 @@
 	"downloads": 6,
 	"updated": "2024-12-18T18:36:39.505Z",
 	"tags": ["ui"],
-	"runes": false,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "1.2.2",
 	"svelte_range": "^3.57.0 || ^4.0.0 || ^5.0.0",
 	"kit_range": "^1.20.5",
 	"last_rune_check_version": "1.2.2",
-	"downloads_history": [
-		[4001, 108],
-		[4008, 6],
-		[4015, 8],
-		[4022, 10],
-		[4029, 6],
-		[4036, 6],
-		[4043, 10],
-		[4050, 3],
-		[4057, 2],
-		[4064, 1],
-		[4071, 2],
-		[4078, 1],
-		[4092, 2],
-		[4099, 5],
-		[4106, 4],
-		[4113, 6]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -48,5 +29,27 @@
 		],
 		"dependencies": [[0, 1]],
 		"circular": []
-	}
+	},
+	"readme": "<img src=\"./header-image.png\" alt=\"\" />\r\n<p align=\"center\">\r\n<img src=\"https://badgen.net/badge/license/MIT/blue\" />\r\n<img src=\"https://badgen.net/npm/v/svelte-french-toast\" />\r\n</p>\r\n<p align=\"center\">\r\n<a href=\"https://svelte-french-toast.vercel.app\">Website</a> · <a href=\"https://npmjs.com/package/svelte-french-toast\">NPM Package</a>\r\n</p>\r\n\r\n# svelte-french-toast\r\n\r\n> Buttery smooth Svelte notifications.\r\n\r\nsvelte-french-toast is a Svelte port of Timo Lins’s react-hot-toast, a lightweight, customizable, and beautiful-by-default toast notification library.\r\n\r\n## Installation\r\n\r\nInstall the package with your favorite package manager:\r\n\r\n```\r\nnpm install svelte-french-toast\r\n```\r\n\r\n```\r\npnpm install svelte-french-toast\r\n```\r\n\r\n```\r\nyarn add svelte-french-toast\r\n```\r\n\r\n## Basic usage\r\n\r\nMount a `<Toaster />` at the top level of your app and use the `toast` API to display toasts.\r\n\r\n```js\r\n<script>\r\n\timport toast, {Toaster} from 'svelte-french-toast'\r\n\r\n\tfunction handleClick() {\r\n\t\ttoast.success('Hello, world!')\r\n\t}\r\n</script>\r\n\r\n<Toaster />\r\n<button type=\"button\" on:click={handleClick}>Toast</button>\r\n```\r\n\r\nFor more usage examples, see [the website](https://svelte-french-toast.vercel.app).\r\n\r\n## Thanks\r\n\r\nThanks to the original author of React Hot Toast and its contributors.\r\n\r\n```\r\nMIT License\r\n\r\nCopyright (c) 2020 Timo Lins\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy\r\nof this software and associated documentation files (the \"Software\"), to deal\r\nin the Software without restriction, including without limitation the rights\r\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\r\ncopies of the Software, and to permit persons to whom the Software is\r\nfurnished to do so, subject to the following conditions:\r\n\r\nThe above copyright notice and this permission notice shall be included in all\r\ncopies or substantial portions of the Software.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\r\nSOFTWARE.\r\n```\r\n",
+	"legacy_svelte": true,
+	"downloads_history": [
+		[4002, 108],
+		[4009, 6],
+		[4016, 8],
+		[4023, 10],
+		[4030, 6],
+		[4037, 6],
+		[4044, 10],
+		[4051, 3],
+		[4058, 2],
+		[4065, 1],
+		[4072, 2],
+		[4079, 1],
+		[4093, 2],
+		[4100, 5],
+		[4107, 4],
+		[4114, 6],
+		[4121, 7],
+		[4128, 2]
+	]
 }

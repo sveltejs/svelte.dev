@@ -7,30 +7,12 @@
 	"downloads": 5,
 	"updated": "2025-01-10T10:00:43.527Z",
 	"tags": ["integration"],
-	"runes": false,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "1.0.1",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "1.0.1",
-	"downloads_history": [
-		[4001, 57],
-		[4008, 7],
-		[4015, 4],
-		[4022, 68],
-		[4029, 9],
-		[4036, 6],
-		[4043, 11],
-		[4050, 5],
-		[4057, 3],
-		[4064, 1],
-		[4078, 1],
-		[4085, 9],
-		[4092, 12],
-		[4099, 18],
-		[4113, 5]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -41,8 +23,8 @@
 			},
 			{
 				"name": "svelte",
-				"version": "5.28.1",
-				"size": 2426419
+				"version": "5.28.2",
+				"size": 2426223
 			},
 			{
 				"name": "@ampproject/remapping",
@@ -163,5 +145,26 @@
 			[1, 19]
 		],
 		"circular": []
-	}
+	},
+	"legacy_svelte": true,
+	"readme": "# adCAPTCHA Svelte\n\nThis package provides a Svelte component for adCAPTCHA. The AdCAPTCHA component is used to show a CAPTCHA on your website, by adding the necessary script and html. After a successful completion of a captcha a success token is exposed which should be validated (using [@adcaptcha/node](/packages/node/README.md)) to make sure it is real and that it hasn’t already been used before.\n\n\n## Installation\n\n```bash\nnpm install @adcaptcha/svelte\n```\n\n## Usage\n\n#### Placement ID\nA Placement ID is used to specify what media will be shown in a CAPTCHA. To create a Placement ID, visit [AdCAPTCHA dashboard](https://app.adcaptcha.com/login). \n\n[Documentation](https://docs.adcaptcha.com/wordpress/setup) to learn how to create a Placement ID.\n\n#### onComplete\nThis is a callback that will execute after successfully completing a CAPTCHA. In this example we are using it to get the success token, but can also be used perform different actions e.g. to remove the disabled attribute from submission buttons and change styling rules.\n\n#### setKeywords\nIf you would like to target specific media for a captcha using keywords, you can do this \nby calling \"window.adcap.setKeywords()\" with an array of strings. The adCAPTCHA widget \nwill then prioritise media that match the keywords you have provided.\n\nMake sure to also add the keywords to the specified media in the [AdCAPTCHA dashboard](https://app.adcaptcha.com/login). \n\n```jsx\n<script lang=\"ts\">\n    import { adCAPTCHA as AdCAPTCHA , getSuccessToken } from \"@adcaptcha/svelte\";\n\n    let token: string | null = null;\n    const PLACEMENT_ID = import.meta.env.VITE_SVELTE_APP_PLACEMENT_ID || \"\";\n\n    const handleComplete = () => {\n      token = getSuccessToken();\n    };\n</script>\n  <div>\n    <AdCAPTCHA placementID={PLACEMENT_ID} onComplete={handleComplete} />\n  </div>\n```\n",
+	"downloads_history": [
+		[4002, 57],
+		[4009, 7],
+		[4016, 4],
+		[4023, 68],
+		[4030, 9],
+		[4037, 6],
+		[4044, 11],
+		[4051, 5],
+		[4058, 3],
+		[4065, 1],
+		[4079, 1],
+		[4086, 9],
+		[4093, 12],
+		[4100, 18],
+		[4114, 5],
+		[4121, 12],
+		[4128, 1]
+	]
 }

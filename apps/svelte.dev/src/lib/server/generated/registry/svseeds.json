@@ -5,32 +5,36 @@
 	"authors": ["scirexs"],
 	"homepage": "https://github.com/scirexs/svseeds-ui#readme",
 	"downloads": 9,
-	"updated": "2025-04-22T08:02:39.729Z",
+	"updated": "2025-04-28T07:29:44.234Z",
 	"tags": ["ui"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
-	"version": "0.2.0",
+	"version": "0.3.8",
 	"svelte_range": "^5.0.0",
-	"last_rune_check_version": "0.2.0",
-	"downloads_history": [
-		[4078, 54],
-		[4085, 6],
-		[4092, 55],
-		[4099, 154],
-		[4106, 10],
-		[4113, 9]
-	],
+	"last_rune_check_version": "0.3.8",
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
 			{
 				"name": "svseeds",
-				"version": "0.2.0",
-				"size": 143436
+				"version": "0.3.8",
+				"size": 143841
 			}
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# SvSeeds - Simple Components for Svelte\n\n[![npm version](https://img.shields.io/npm/v/svseeds)](https://www.npmjs.com/package/svseeds)\n[![JSR](https://jsr.io/badges/@svseeds/ui)](https://jsr.io/@svseeds/ui)\n[![license](https://img.shields.io/npm/l/svseeds)](LICENSE.md)\n\nSvSeeds is a collection of essential functional components for Svelte development. These components are intentionally designed with minimal styling, giving you complete freedom to apply your own styles based on your project requirements. For specialized needs, you can download the components as .svelte files through our CLI tool and customize their functionality directly.\n\n**WIP**\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4079, 54],
+		[4086, 6],
+		[4093, 55],
+		[4100, 154],
+		[4107, 10],
+		[4114, 9],
+		[4121, 101],
+		[4128, 512],
+		[4135, 112]
+	]
 }

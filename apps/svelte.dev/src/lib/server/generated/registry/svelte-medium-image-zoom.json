@@ -5,42 +5,45 @@
 	"authors": ["moonlitgrace"],
 	"homepage": "https://github.com/moonlitgrace/svelte-medium-image-zoom",
 	"downloads": 90,
-	"updated": "2025-04-12T08:00:36.738Z",
+	"updated": "2025-04-26T08:00:20.934Z",
 	"tags": ["ui"],
-	"runes": true,
-	"github_stars": 11,
+	"github_stars": 12,
 	"typescript": true,
-	"version": "0.2.5",
+	"version": "0.2.6",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
-	"last_rune_check_version": "0.2.5",
-	"downloads_history": [
-		[4015, 829],
-		[4022, 110],
-		[4029, 368],
-		[4036, 28],
-		[4043, 121],
-		[4050, 79],
-		[4057, 83],
-		[4064, 18],
-		[4071, 22],
-		[4078, 52],
-		[4085, 122],
-		[4092, 135],
-		[4099, 53],
-		[4106, 42],
-		[4113, 90]
-	],
+	"last_rune_check_version": "0.2.6",
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
 			{
 				"name": "svelte-medium-image-zoom",
-				"version": "0.2.5",
-				"size": 48745
+				"version": "0.2.6",
+				"size": 49067
 			}
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# svelte-medium-image-zoom\n\n[![NPM Version](https://img.shields.io/npm/v/svelte-medium-image-zoom?style=flat-square)](https://www.npmjs.com/package/svelte-medium-image-zoom)\n[![NPM License](https://img.shields.io/npm/l/svelte-medium-image-zoom?style=flat-square)](https://www.npmjs.com/package/svelte-medium-image-zoom)\n[![NPM Unpacked Size](https://img.shields.io/npm/unpacked-size/svelte-medium-image-zoom?style=flat-square)](https://www.npmjs.com/package/svelte-medium-image-zoom)\n[![NPM Downloads](https://img.shields.io/npm/dm/svelte-medium-image-zoom?style=flat-square)](https://www.npmjs.com/package/svelte-medium-image-zoom)\n\nThe original [medium.com-inspired image zooming](https://medium.design/image-zoom-on-medium-24d146fc0c20) library for [Svelte](https://svelte.dev/).\\\n[View the storybook examples](https://moonlitgrace.github.io/svelte-medium-image-zoom/)\nto see various usages.\n\nFeatures:\n\n- `<img />`, including all [`object-fit`](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)\n  values, any [`object-position`](https://developer.mozilla.org/en-US/docs/Web/CSS/object-position),\n  and [`loading=\"lazy\"`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-loading)\n- `<div>` and `<span>` with any [`background-image`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image),\n  [`background-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size),\n  and [`background-position`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position)\n- `<picture>` with `<source />` and `<img />` (coming)\n- `<figure>` with `<img />` (coming)\n- `<svg>` (coming)\n- [Custom zoom modal content](#custom-zoom-modal-content) (👇)\n- Zero `dependencies`\n\nRequirements to know about:\n\n- `<dialog>` element ([caniuse dialog](https://caniuse.com/dialog))\n- `ResizeObserver` ([caniuse ResizeObserver](https://caniuse.com/mdn-api_resizeobserver))\n- Package build target is `ESNext`. If you need to support older environments,\n  run this package through your build system.\n\n## Quickstart\n\n```bash\nnpm install --save svelte-medium-image-zoom\n```\n\n<!-- prettier-ignore-start -->\n```svelte\n<script lang=\"ts\">\n  import Zoom from 'svelte-medium-image-zoom';\n  import 'svelte-medium-image-zoom/dist/styles.css';\n</script>\n\n<Zoom>\n  <img\n    alt=\"That Wanaka Tree, New Zealand by Laura Smetsers\"\n    src=\"/media/andres-iga.jpg\"\n    width=\"500\"\n  />\n</Zoom>\n```\n<!-- prettier-ignore-end -->\n\n## API\n\nNote: component type props are rendered as `snippets`, check [this](https://svelte.dev/docs/svelte/snippet) for more.\\\n[example use](https://github.com/moonlitgrace/svelte-medium-image-zoom/pull/17)\n\n<!-- prettier-ignore-start -->\n```ts\nexport interface ZoomProps {\n  // Accessible label text for when you want to unzoom.\n  // Default: 'Minimize image'\n  a11y_name_button_unzoom?: string;\n\n  // Accessible label text for when you want to zoom.\n  // Default: 'Expand image'\n  a11y_name_button_zoom?: string;\n\n  // Your image (required).\n  children: Snippet<[]>;\n\n  // Custom CSS class to add to the unzoom and zoom buttons.\n  class_button?: string;\n\n  // Custom CSS class to add to the zoomed <dialog>.\n  class_dialog?: string;\n\n  // Transition duration for modal image and overlay elements.\n  // Default: 300ms\n  duration?: string | number;\n\n  // Provide your own unzoom button icon.\n  // Default: ICompress\n  icon_unzoom?: Snippet<[]>;\n\n  // Provide your own zoom button icon.\n  // Default: IEnlarge\n  icon_zoom?: Snippet<[]>;\n\n  // Tell the component whether or not it should be zoomed.\n  // Default: false\n  is_zoomed?: boolean;\n\n  // Listen for hints from the component about when you\n  // should zoom (`true` value) or unzoom (`false` value).\n  on_zoom_change?: (value: boolean) => void;\n\n  // Specify what type of element should be used for\n  // internal component usage. This is useful if the\n  // image is inside a <p> or <button>, for example.\n  // Default: 'div'\n  wrap_element?: 'div' | 'span';\n\n  // Provide your own custom modal content component.\n  zoom_content?: Snippet<[{\n    img: Snippet<[]>;\n    button_unzoom: Snippet<[]>;\n    modal_state: IModalState;\n    handle_unzoom: () => void;\n  }]>;\n\n  // Offset in pixels the zoomed image should\n  // be from the window's boundaries.\n  // Default: 0\n  zoom_margin?: number;\n}\n```\n<!-- prettier-ignore-end -->\n\n## Basic Usage\n\nImport the component and the CSS, wrap your image with the component, and the\ncomponent will handle it's own state.\n\n```svelte\n<script lang=\"ts\">\n  import Zoom from 'svelte-medium-image-zoom';\n  import 'svelte-medium-image-zoom/dist/styles.css';\n</script>\n\n<!-- <img /> -->\n<Zoom>\n  <img\n    alt=\"That Wanaka Tree, New Zealand by Laura Smetsers\"\n    src=\"/path/to/thatwanakatree.jpg\"\n    width=\"500\"\n  />\n</Zoom>\n\n<!-- <div> -->\n<Zoom>\n  <div\n    aria-label=\"That Wanaka Tree, New Zealand by Laura Smetsers\"\n    role=\"img\"\n    class=\"div-img\"\n    style=\"\n      background-color: #fff;\n      background-image: url(/media/laura-smetsers.jpg);\n      background-position: 50%;\n      background-repeat: no-repeat;\n      background-size: cover;\n      width: 500px;\n      height: 300px;\n    \"\n  ></div>\n</Zoom>\n```\n\n### Controlled usage\n\nImport the component and the CSS, wrap your image with the component, and then dictate the `is_zoomed` with `on_zoom_change` handler state to the component.\n\n```svelte\n<script lang=\"ts\">\n  import Zoom from 'svelte-medium-image-zoom';\n  import 'svelte-medium-image-zoom/dist/styles.css';\n\n  let is_zoomed = $state(false);\n</script>\n\n<Zoom\n  {is_zoomed}\n  on_zoom_change={(z) => (is_zoomed = z)}\n  wrap_element=\"span\"\n  zoom_margin={25}\n>\n  <img\n    alt=\"That Wanaka Tree, New Zealand by Laura Smetsers\"\n    src=\"/path/to/thatwanakatree.jpg\"\n    width=\"500\"\n    decoding=\"async\"\n    loading=\"lazy\"\n  />\n</Zoom>\n```\n\nThe `on_zoom_change` prop accepts a callback that will receive `true` or `false`\nbased on events that occur (like click or scroll events) to assist you in\ndetermining when to zoom and unzoom the component.\n\n## Styles\n\nYou can import the default styles from `svelte-medium-image-zoom/dist/styles.css`\nand override the values from your code, or you can copy [the styles.css\nfile](./src/lib/styles.css) and alter it to your liking. The latter is the best\noption, given `rem`s should be used instead of `px` to account for different\ndefault browser font sizes, and it's hard for a library to guess at what these\nvalues should be.\n\nAn example of customizing the transition duration, timing function, overlay\nbackground color, and unzoom button styles with `:focus-visible` can be found in\nthis story: [custom-modal-styles](https://moonlitgrace.github.io/svelte-medium-image-zoom/?path=/story/img--custom-modal-styles).\n\n## Custom zoom modal content\n\nIf you want to customize the zoomed modal experience with a caption, form, or\nother set of components, you can do so by providing a custom component to the\n`zoom_content` prop.\n\n[View the live example of custom zoom modal content.](https://moonlitgrace.github.io/svelte-medium-image-zoom/?path=/story/img--modal-figure-caption)\n\nBelow is some example code that demonstrates how to use this feature.\n\n```svelte\n<script lang=\"ts\">\n  import Zoom from 'svelte-medium-image-zoom';\n  import 'svelte-medium-image-zoom/dist/styles.css';\n</script>\n\n<Zoom>\n  {#snippet zoom_content({ img, button_unzoom, modal_state })}\n    {@render button_unzoom()}\n    <figure>\n      {@render img()}\n      <figcaption\n        class=\"zoom-caption zoom-caption--bottom\"\n        class:zoom-caption--loaded={modal_state === 'LOADED'}\n      >\n        That Wanaka Tree, also known as the Wanaka Willow, is a willow tree located at the\n        southern end of Lake Wānaka in the Otago region of New Zealand.\n        <cite className=\"zoom-caption-cite\">\n          Wikipedia, <a\n            className=\"zoom-caption-link\"\n            href=\"https://en.wikipedia.org/wiki/That_Wanaka_Tree\"\n          >\n            That Wanaka Tree\n          </a>\n        </cite>\n      </figcaption>\n    </figure>\n  {/snippet}\n  <img\n    alt=\"That Wanaka Tree, New Zealand by Laura Smetsers\"\n    src=\"/path/to/thatwanakatree.jpg\"\n    width=\"500\"\n    decoding=\"async\"\n    loading=\"lazy\"\n  />\n</Zoom>\n```\n\n## Credits\n\nThis project is inspired from [rpearce](https://github.com/rpearce)'s [`react-medium-image-zoom`](https://github.com/rpearce/react-medium-image-zoom) library.\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4016, 829],
+		[4023, 110],
+		[4030, 368],
+		[4037, 28],
+		[4044, 121],
+		[4051, 79],
+		[4058, 83],
+		[4065, 18],
+		[4072, 22],
+		[4079, 52],
+		[4086, 122],
+		[4093, 135],
+		[4100, 53],
+		[4107, 42],
+		[4114, 90],
+		[4121, 36],
+		[4128, 64]
+	]
 }

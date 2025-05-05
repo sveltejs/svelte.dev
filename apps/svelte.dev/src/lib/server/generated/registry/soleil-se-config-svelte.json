@@ -7,24 +7,11 @@
 	"downloads": 33,
 	"updated": "2025-03-11T14:11:59.784Z",
 	"tags": ["miscellaneous"],
-	"runes": false,
 	"typescript": true,
 	"version": "1.27.17",
 	"svelte_range": "^3.46.0 || ^4.0.0 || ^5.0.0-next || ^5.0.0",
 	"last_rune_check_version": "1.27.17",
 	"github_stars": 0,
-	"downloads_history": [
-		[4050, 3097],
-		[4057, 207],
-		[4064, 320],
-		[4071, 87],
-		[4078, 57],
-		[4085, 242],
-		[4092, 94],
-		[4099, 13],
-		[4106, 17],
-		[4113, 33]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -45,8 +32,8 @@
 			},
 			{
 				"name": "svelte-dnd-action",
-				"version": "0.9.60",
-				"size": 330948
+				"version": "0.9.61",
+				"size": 332230
 			},
 			{
 				"name": "@soleil-se/config-validate",
@@ -61,5 +48,21 @@
 			[0, 4]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# @soleil-se/svelte-config\n\n[Documentation](https://docs.soleil.se/packages/config-svelte/) | [Changelog](https://docs.soleil.se/packages/config-svelte//changelog)\n",
+	"legacy_svelte": true,
+	"downloads_history": [
+		[4051, 3097],
+		[4058, 207],
+		[4065, 320],
+		[4072, 87],
+		[4079, 57],
+		[4086, 242],
+		[4093, 94],
+		[4100, 13],
+		[4107, 17],
+		[4114, 33],
+		[4121, 60],
+		[4128, 32]
+	]
 }

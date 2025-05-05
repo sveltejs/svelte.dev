@@ -7,19 +7,12 @@
 	"downloads": 30,
 	"updated": "2025-04-18T20:56:04.920Z",
 	"tags": ["integration"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.1.4",
 	"svelte_range": ">=5",
 	"kit_range": "^2.20.5",
 	"last_rune_check_version": "0.1.4",
-	"downloads_history": [
-		[4092, 88],
-		[4099, 110],
-		[4106, 11],
-		[4113, 30]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -31,5 +24,16 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# viam-svelte-sdk\n\n`pnpm i --save @viamrobotics/svelte-sdk @viamrobotics/sdk @tanstack/svelte-query`\n\n## Getting started\n\nThe Viam Svelte SDK provides a reactive layer over `@viamrobotics/sdk`.\n\nTo get started, Include the `ViamProvider` component. Any child component will have access to the SDK hooks.\n\nA map of `PartID`s to `DialConf`s must also be provided to connect to your machine(s).\n\n```svelte\n<script lang=\"ts\">\nimport { ViamProvider } from '@viamrobotics/svelte-sdk';\nimport type { DialConf } from '@viamrobotics/sdk';\n\nlet { children } = $props();\n\nconst dialConfigs: Record<string, DialConf> = {\n  'my-part-id': {\n    host: 'my-host',\n    credentials: {\n      type: 'api-key',\n      authEntity: 'my-api-key-id',\n      payload: 'my-api-key-value',\n    },\n    signalingAddress: 'https://app.viam.com:443',\n    disableSessions: false,\n  },\n};\n</script>\n\n<ViamProvider {dialConfigs}>\n  {@render children()}\n</ViamProvider>\n```\n\n### useRobotClient / useConnectionStatus\n\nIn any child component, you can access the `RobotClient` and `MachineConnectionStatus` of any connected machine with the `useRobotClient` and `useConnectionStatus` hooks.\n\n```svelte\n<script lang=\"ts\">\nimport { useConnectionStatus, useRobotClient } from '@viamrobotics/svelte-sdk';\n\ninterface Props {\n  partID: string;\n}\n\nlet { partID }: Props = $props();\n\nconst status = useConnectionStatus(() => partID);\nconst client = useRobotClient(() => partID);\n\n$inspect(status.current);\n$inspect(client.current);\n</script>\n```\n\n### createRobotQuery / createRobotMutation\n\nTo execute queries / mutations directly on the robot client, use the following convenience hooks.\n\n```svelte\n<script lang=\"ts\">\nimport {\n  createRobotMutation,\n  createRobotQuery,\n  useRobotClient,\n} from '@viamrobotics/svelte-sdk';\n\nlet { partID } = $props();\n\nconst client = useRobotClient(() => partID);\nconst version = createRobotQuery(client, 'getVersion');\nconst stopAll = createRobotMutation(client, 'stopAll');\n</script>\n\n{#if version.current.error}\n  Error fetching version: {version.current.error.message}\n{:else if version.current.data}\n  <p>Platform: {version.current.data.platform}</p>\n  <p>API version: {version.current.data.apiVersion}</p>\n  <p>Version: {version.current.data.version}</p>\n{/if}\n\n<button onclick={() => stopAll.current.mutate([])}> Stop All </button>\n```\n\n### createResourceClient / createResourceQuery / createResourceMutation\n\nTo create and execute queries / mutations on resource (component / service) clients, use the following convenience hooks.\n\n```svelte\n<script lang=\"ts\">\nimport { BaseClient } from '@viamrobotics/sdk';\nimport {\n  createResourceClient,\n  createResourceQuery,\n  createResourceMutation,\n} from '@viamrobotics/svelte-sdk';\n\ninterface Props {\n  partID: string;\n  name: string;\n}\n\nlet { partID, name }: Props = $props();\n\nconst client = createResourceClient(\n  BaseClient,\n  () => partID,\n  () => name\n);\n\nconst isMoving = createResourceQuery(client, 'isMoving');\nconst moveStraight = createResourceMutation(client, 'moveStraight');\n</script>\n\nIs moving: {isMoving.current.data ?? false}\n\n<button onclick={() => moveStraight.current.mutate([100, 10])}> Move </button>\n```\n\n### createStreamClient\n\nA hook for more easily dealing with StreamClient.\n\n```svelte\n<script lang=\"ts\">\nimport { createStreamClient } from '@viamrobotics/svelte-sdk';\n\ninterface Props {\n  partID: string;\n  name: string;\n}\n\nlet { partID, name }: Props = $props();\n\nlet element: HTMLVideoElement;\n\nconst client = createStreamClient(\n  () => partID,\n  () => name\n);\n\n$effect(() => {\n  element.srcObject = client.mediaStream;\n});\n\n$effect(() => {\n  const [firstResolution] = client.resolutions ?? [];\n\n  console.log(firstResolution);\n\n  if (firstResolution) {\n    client.setResolution(firstResolution);\n  }\n});\n</script>\n\n<video\n  muted\n  autoplay\n  controls={false}\n  playsinline\n  bind:this={element}\n></video>\n```\n\n### useMachineStatus\n\nWraps `robotClient.getMachineStatus()` in a reactive query at the ViamProvider level.\n\n```svelte\n<script lang=\"ts\">\nimport { useMachineStatus } from '@viamrobotics/svelte-sdk';\n\ninterface Props {\n  partID: string;\n}\n\nlet { partID }: Props = $props();\n\nconst machineStatus = useMachineStatus(() => partID);\n\n$inspect(machineStatus.current);\n$inspect(machineStatus.error);\n$inspect(machineStatus.fetching);\n</script>\n```\n\n### useResourceNames\n\nWraps `robotClient.resourceNames()` in a reactive query at the ViamProvider level. Supports optional filtering by resource subtype.\n\n```svelte\n<script lang=\"ts\">\nimport { useResourceNames } from '@viamrobotics/svelte-sdk';\n\ninterface Props {\n  partID: string;\n}\n\nlet { partID }: Props = $props();\n\nconst resources = useResourceNames(() => partID);\nconst arms = useResourceNames(\n  () => partID,\n  () => 'arm'\n);\n\n$inspect(resources.current);\n$inspect(resources.error);\n$inspect(resources.fetching);\n</script>\n```\n\n## Developing\n\nFirst install dependencies with `pnpm install`, then start a development server:\n\n```bash\npnpm dev\n\n# or start the server and open the app in a new browser tab\npnpm dev -- --open\n```\n\n## Building and Publishing\n\nTo build the library:\n\n```bash\npnpm package\n```\n\nTo publish a new version of the library, run the changeset CLI:\n\n```bash\nnpx @changesets/cli\n```\n\nThis will trigger the github changeset bot to prepare a new version in CI.\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4093, 88],
+		[4100, 110],
+		[4107, 11],
+		[4114, 30],
+		[4121, 201],
+		[4128, 33],
+		[4135, 29]
+	]
 }

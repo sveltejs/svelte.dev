@@ -7,22 +7,12 @@
 	"downloads": 46,
 	"updated": "2025-02-27T18:35:40.228Z",
 	"tags": ["ui"],
-	"runes": true,
-	"github_stars": 6,
+	"github_stars": 7,
 	"typescript": true,
 	"version": "0.0.6",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "0.0.6",
-	"downloads_history": [
-		[4071, 287],
-		[4078, 14],
-		[4085, 8],
-		[4092, 76],
-		[4099, 76],
-		[4106, 201],
-		[4113, 46]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -34,5 +24,18 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "ERROR: No README data found!",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4072, 287],
+		[4079, 14],
+		[4086, 8],
+		[4093, 76],
+		[4100, 76],
+		[4107, 201],
+		[4114, 46],
+		[4121, 86],
+		[4128, 59]
+	]
 }

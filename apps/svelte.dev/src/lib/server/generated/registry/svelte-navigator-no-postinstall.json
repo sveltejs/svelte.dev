@@ -7,17 +7,11 @@
 	"downloads": 567,
 	"updated": "2025-03-24T12:55:12.404Z",
 	"tags": ["router"],
-	"runes": false,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "3.2.4",
 	"svelte_range": "3.x",
 	"last_rune_check_version": "3.2.4",
-	"downloads_history": [
-		[4099, 654],
-		[4106, 627],
-		[4113, 567]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -67,5 +61,14 @@
 			[3, 6]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Svelte Navigator\n\n> This package is a fork of `svelte-navigator`: the postinstall script was\n> removed because it causes issues on Node >= 20.16 and is only useful for\n> development.\n\nhttps://www.npmjs.com/package/svelte-navigator\n",
+	"legacy_svelte": true,
+	"downloads_history": [
+		[4100, 654],
+		[4107, 627],
+		[4114, 567],
+		[4121, 607],
+		[4128, 429]
+	]
 }

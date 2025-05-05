@@ -6,20 +6,11 @@
 	"downloads": 6,
 	"updated": "2025-03-11T19:59:08.053Z",
 	"tags": ["integration"],
-	"runes": true,
 	"typescript": true,
 	"version": "0.0.5",
 	"svelte_range": "^5.22.1",
 	"last_rune_check_version": "0.0.5",
 	"github_stars": 0,
-	"downloads_history": [
-		[4078, 153],
-		[4085, 149],
-		[4092, 15],
-		[4099, 5],
-		[4106, 3],
-		[4113, 6]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -31,5 +22,17 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "ERROR: No README data found!",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4079, 153],
+		[4086, 149],
+		[4093, 15],
+		[4100, 5],
+		[4107, 3],
+		[4114, 6],
+		[4121, 6],
+		[4128, 3]
+	]
 }

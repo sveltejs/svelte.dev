@@ -7,31 +7,11 @@
 	"downloads": 5,
 	"updated": "2024-12-15T21:43:10.073Z",
 	"tags": ["tooling"],
-	"runes": false,
-	"github_stars": 660,
+	"github_stars": 670,
 	"typescript": true,
 	"version": "0.0.5",
 	"svelte_range": "^5.8.1",
 	"last_rune_check_version": "0.0.5",
-	"downloads_history": [
-		[3987, 131],
-		[3994, 195],
-		[4001, 42],
-		[4008, 9],
-		[4015, 10],
-		[4022, 7],
-		[4029, 4],
-		[4036, 22],
-		[4043, 10],
-		[4050, 6],
-		[4057, 1],
-		[4064, 2],
-		[4071, 1],
-		[4085, 2],
-		[4092, 5],
-		[4106, 18],
-		[4113, 5]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -47,18 +27,18 @@
 			},
 			{
 				"name": "@volar/language-core",
-				"version": "2.4.12",
-				"size": 29507
+				"version": "2.4.13",
+				"size": 37805
 			},
 			{
 				"name": "@volar/source-map",
-				"version": "2.4.12",
+				"version": "2.4.13",
 				"size": 13808
 			},
 			{
 				"name": "svelte2tsx",
-				"version": "0.7.36",
-				"size": 766555
+				"version": "0.7.37",
+				"size": 772627
 			},
 			{
 				"name": "dedent-js",
@@ -130,5 +110,28 @@
 			[0, 14]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# twoslash-svelte\n\nExtended Twoslash for Svelte support.\n\nNote: This is a temporary package that will be archived/nuked once [this PR](https://github.com/twoslashes/twoslash/pull/57#issuecomment-2508888284) is merged.\nThere are no API changes planned so once that PR is out you will simply have to replace `@hugokorte/twoslash-svelte` with `twoslash-svelte`.\n\n[📚 Documentation](https://deploy-preview-57--twoslash.netlify.app/packages/svelte)\n\n## License\n\n[MIT](./LICENSE) License © 2024-PRESENT [Hugos68](https://github.com/Hugos68)",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3988, 131],
+		[3995, 195],
+		[4002, 42],
+		[4009, 9],
+		[4016, 10],
+		[4023, 7],
+		[4030, 4],
+		[4037, 22],
+		[4044, 10],
+		[4051, 6],
+		[4058, 1],
+		[4065, 2],
+		[4072, 1],
+		[4086, 2],
+		[4093, 5],
+		[4107, 18],
+		[4114, 5],
+		[4121, 6],
+		[4128, 2]
+	]
 }

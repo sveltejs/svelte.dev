@@ -7,17 +7,11 @@
 	"downloads": 6,
 	"updated": "2025-03-11T16:15:54.794Z",
 	"tags": ["ui"],
-	"runes": false,
 	"github_stars": 0,
 	"typescript": false,
 	"version": "1.0.0",
 	"svelte_range": "^4.2.18",
 	"last_rune_check_version": "1.0.0",
-	"downloads_history": [
-		[4085, 56],
-		[4092, 4],
-		[4113, 6]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -29,5 +23,14 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"legacy_svelte": true,
+	"readme": "# beet-root-red\r\nComponent library Svelte\r\n",
+	"downloads_history": [
+		[4086, 56],
+		[4093, 4],
+		[4114, 6],
+		[4121, 5],
+		[4128, 3]
+	]
 }

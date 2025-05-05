@@ -7,32 +7,12 @@
 	"downloads": 3,
 	"updated": "2024-11-23T13:34:27.106Z",
 	"tags": ["ui"],
-	"runes": true,
 	"typescript": true,
 	"version": "0.0.2",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.0.2",
 	"github_stars": 0,
-	"downloads_history": [
-		[3973, 120],
-		[3980, 15],
-		[3987, 4],
-		[3994, 2],
-		[4001, 2],
-		[4008, 2],
-		[4015, 5],
-		[4022, 3],
-		[4029, 4],
-		[4036, 5],
-		[4043, 4],
-		[4050, 3],
-		[4057, 1],
-		[4064, 3],
-		[4099, 2],
-		[4106, 4],
-		[4113, 3]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -44,5 +24,29 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# Svelte Tailwind Transition\n\n```bash\n# install with npm\nnpm install svelte-tailwind-transition\n\n# install with yarn\nyarn add svelte-tailwind-transition\n\n# install with pnpm\npnpm add svelte-tailwind-transition\n```\n\n## Setup\n\nsetup your Tailwind configuration\n\n```js\n// tailwind.config.js\n\n/** @type {import('tailwindcss').Config} */\nexport default {\n\tcontent: [\n\t\t'./src/**/*.{html,js,svelte,ts}',\n\t\t'./node_modules/svelte-tailwind-transition/**/*.{html,js,svelte,ts}'\n\t],\n\ttheme: {\n\t\textend: {}\n\t},\n\tplugins: []\n};\n```\n\n## Example\n\n```svelte\n<script lang=\"ts\">\n\timport Transition from 'svelte-tailwind-transition';\n\tlet run: boolean = $state(false);\n\tlet show: boolean = $state(false);\n</script>\n\n<div class=\"mb-4\">\n\t<button\n\t\tclass=\"rounded bg-blue-300 px-2 py-1\"\n\t\tonclick={() => {\n\t\t\tif (!run) {\n\t\t\t\tshow = !show;\n\t\t\t\trun = true;\n\t\t\t}\n\t\t}}\n\t>\n\t\tClick\n\t</button>\n</div>\n<Transition\n\t{show}\n\tenter=\"duration-1000\"\n\tenterFrom=\"scale-y-0 opacity-0\"\n\tenterTo=\"scale-y-100 opacity-100\"\n\tleave=\"duration-1000\"\n\tleaveFrom=\"scale-y-100 opacity-100\"\n\tleaveTo=\"scale-y-0 opacity-0\"\n\tbeforeEnter={() => console.log('beforeEnter')}\n\tafterEnter={() => {\n\t\tconsole.log('afterEnter');\n\t\trun = false;\n\t}}\n\tbeforeLeave={() => console.log('beforeLeave')}\n\tafterLeave={() => {\n\t\tconsole.log('afterLeave');\n\t\trun = false;\n\t}}\n>\n\t<div class=\"block w-24 origin-top overflow-hidden rounded bg-red-500\">\n\t\t<ul>\n\t\t\t<li>Menu 1</li>\n\t\t\t<li>Menu 2</li>\n\t\t\t<li>Menu 3</li>\n\t\t\t<li>Menu 4</li>\n\t\t</ul>\n\t</div>\n</Transition>\n```\n\n## Props\n\n| Prop Name   | Type     | Default Value |\n| ----------- | -------- | ------------- |\n| children    | Snippet  |               |\n| show        | boolean  | false         |\n| enter       | string   |               |\n| enterFrom   | string   |               |\n| enterTo     | string   |               |\n| leave       | string   |               |\n| leaveFrom   | string   |               |\n| leaveTo     | string   |               |\n| beforeEnter | function |               |\n| afterEnter  | function |               |\n| beforeLeave | function |               |\n| afterLeave  | function |               |\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3974, 120],
+		[3981, 15],
+		[3988, 4],
+		[3995, 2],
+		[4002, 2],
+		[4009, 2],
+		[4016, 5],
+		[4023, 3],
+		[4030, 4],
+		[4037, 5],
+		[4044, 4],
+		[4051, 3],
+		[4058, 1],
+		[4065, 3],
+		[4100, 2],
+		[4107, 4],
+		[4114, 3],
+		[4121, 6],
+		[4128, 4],
+		[4135, 6]
+	]
 }

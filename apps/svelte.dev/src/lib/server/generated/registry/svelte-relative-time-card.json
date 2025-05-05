@@ -6,17 +6,12 @@
 	"downloads": 8,
 	"updated": "2025-03-31T16:06:10.690Z",
 	"tags": ["ui"],
-	"runes": true,
 	"typescript": true,
 	"version": "0.0.1",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.20.2",
 	"last_rune_check_version": "0.0.1",
 	"github_stars": 0,
-	"downloads_history": [
-		[4106, 58],
-		[4113, 8]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -32,18 +27,18 @@
 			},
 			{
 				"name": "@tailwindcss/vite",
-				"version": "4.1.4",
+				"version": "4.1.5",
 				"size": 9343
 			},
 			{
 				"name": "tailwindcss",
-				"version": "4.1.4",
-				"size": 657224
+				"version": "4.1.5",
+				"size": 658207
 			},
 			{
 				"name": "@tailwindcss/node",
-				"version": "4.1.4",
-				"size": 102619
+				"version": "4.1.5",
+				"size": 102645
 			},
 			{
 				"name": "jiti",
@@ -77,18 +72,18 @@
 			},
 			{
 				"name": "@tailwindcss/oxide",
-				"version": "4.1.4",
+				"version": "4.1.5",
 				"size": 14125
 			},
 			{
 				"name": "bits-ui",
-				"version": "1.3.19",
-				"size": 1686875
+				"version": "1.4.4",
+				"size": 1691448
 			},
 			{
 				"name": "@floating-ui/core",
-				"version": "1.6.9",
-				"size": 212585
+				"version": "1.7.0",
+				"size": 214929
 			},
 			{
 				"name": "@floating-ui/utils",
@@ -97,8 +92,8 @@
 			},
 			{
 				"name": "@floating-ui/dom",
-				"version": "1.6.13",
-				"size": 165945
+				"version": "1.7.0",
+				"size": 166707
 			},
 			{
 				"name": "@internationalized/date",
@@ -192,5 +187,13 @@
 			[0, 3]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Svelte Relative Time Card\n\nA hover card component that displays relative time relative to local time with timezone information. Built for Svelte 5.\n\n## Installation\n\n```bash\nnpm install svelte-relative-time-card\n# or\npnpm add svelte-relative-time-card\n# or\nyarn add svelte-relative-time-card\n```\n\n## Usage\n\nImport the component and its styles:\n\n```svelte\n<script lang=\"ts\">\n\timport { RelativeTimeCard } from 'svelte-relative-time-card';\n</script>\n\n<RelativeTimeCard date={new Date()} />\n```\n\n## API\n\n### Props\n\n| Prop             | Type                                     | Default     | Description                                                          |\n| ---------------- | ---------------------------------------- | ----------- | -------------------------------------------------------------------- |\n| `date`           | `Date \\| string \\| number`               | Required    | The date to display. Can be a Date object, ISO string, or timestamp. |\n| `timezones`      | `string[]`                               | `[\"UTC\"]`   | List of timezones to display in the hover card.                      |\n| `updateInterval` | `number`                                 | `1000`      | Interval in milliseconds to update the relative time display.        |\n| `variant`        | `\"default\" \\| \"muted\" \\| \"ghost\"`        | `\"default\"` | The visual style of the trigger element.                             |\n| `side`           | `\"top\" \\| \"right\" \\| \"bottom\" \\| \"left\"` | `\"top\"`     | The preferred side of the trigger to render against when open.       |\n| `align`          | `\"start\" \\| \"center\" \\| \"end\"`           | `\"center\"`  | The preferred alignment against the trigger.                         |\n| `sideOffset`     | `number`                                 | `4`         | The distance in pixels from the trigger.                             |\n| `alignOffset`    | `number`                                 | `0`         | An offset in pixels from the \"start\" or \"end\" alignment options.     |\n| `openDelay`      | `number`                                 | `500`       | The delay in milliseconds before the hover card opens.               |\n| `closeDelay`     | `number`                                 | `300`       | The delay in milliseconds before the hover card closes.              |\n| `trigger`        | `(props: { dateObj: Date }) => Snippet`  | -           | Custom trigger element render function.                              |\n\n### Variants\n\nThe component supports three visual variants for the trigger element:\n\n- `default`: Standard appearance with 70% opacity, increasing to 90% on hover\n- `muted`: Subtle appearance with 50% opacity, increasing to 70% on hover\n- `ghost`: Text-only appearance with underline on hover\n\n## Examples\n\n### Basic Usage\n\n```svelte\n<RelativeTimeCard date={new Date()} />\n```\n\n### Multiple Timezones\n\n```svelte\n<RelativeTimeCard\n\tdate={new Date()}\n\ttimezones={['America/New_York', 'Europe/London', 'Asia/Tokyo']}\n/>\n```\n\n### Custom Trigger\n\n```svelte\n<RelativeTimeCard date={new Date()}>\n\t{#snippet trigger({ dateObj })}\n\t\t<button class=\"custom-trigger\">\n\t\t\t<Clock class=\"icon\" size={16} />\n\t\t\tView time details\n\t\t</button>\n\t{/snippet}\n</RelativeTimeCard>\n```\n\n### Different Positions\n\n```svelte\n<RelativeTimeCard date={new Date()} side=\"top\" align=\"start\">\n\t{#snippet trigger({ dateObj })}\n\t\tTop Start\n\t{/snippet}\n</RelativeTimeCard>\n\n<RelativeTimeCard date={new Date()} side=\"right\" align=\"center\">\n\t{#snippet trigger({ dateObj })}\n\t\tRight Center\n\t{/snippet}\n</RelativeTimeCard>\n\n<RelativeTimeCard date={new Date()} side=\"bottom\" align=\"end\">\n\t{#snippet trigger({ dateObj })}\n\t\tBottom End\n\t{/snippet}\n</RelativeTimeCard>\n```\n\n## Accessibility\n\nThe component is fully keyboard accessible:\n\n- Focusable via Tab key\n- Shows preview on focus\n- Hides preview on blur\n- Supports custom trigger elements\n\n## Styling\n\nThe component uses CSS variables for theming. You can customize the appearance by setting these variables in your CSS:\n\n```css\n:root {\n\t--background: hsl(0 0% 100%);\n\t--foreground: hsl(240 10% 3.9%);\n\t--muted: hsl(240 4.8% 95.9%);\n\t--muted-foreground: hsl(240 3.8% 46.1%);\n\t--popover: hsl(0 0% 100%);\n\t--popover-foreground: hsl(240 10% 3.9%);\n\t--border: hsl(240 5.9% 90%);\n\t--ring: hsl(240 5% 64.9%);\n\t--radius: 0.5rem;\n}\n```\n\n## Credits\n\n- [Dice UI](https://www.diceui.com/docs/components/relative-time-card): React implementation by [@sadmann7](https://github.com/sadmann7)\n- [@JohnPhamous](https://x.com/JohnPhamous/status/1836091528911216803) for original idea\n\n## License\n\nMIT\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4107, 58],
+		[4114, 8],
+		[4121, 7],
+		[4128, 7]
+	]
 }

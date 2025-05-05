@@ -7,70 +7,11 @@
 	"downloads": 4,
 	"updated": "2023-12-12T14:32:43.261Z",
 	"tags": ["tooling"],
-	"runes": true,
 	"github_stars": 2,
 	"typescript": false,
 	"version": "0.0.2",
 	"svelte_range": "^4.2.8",
 	"last_rune_check_version": "0.0.2",
-	"downloads_history": [
-		[3623, 61],
-		[3630, 64],
-		[3637, 2],
-		[3644, 4],
-		[3651, 5],
-		[3658, 2],
-		[3665, 8],
-		[3672, 2],
-		[3679, 1],
-		[3686, 2],
-		[3693, 4],
-		[3700, 3],
-		[3707, 22],
-		[3714, 32],
-		[3721, 16],
-		[3728, 17],
-		[3735, 12],
-		[3742, 37],
-		[3749, 8],
-		[3756, 11],
-		[3763, 46],
-		[3770, 10],
-		[3777, 11],
-		[3784, 22],
-		[3791, 9],
-		[3798, 25],
-		[3805, 38],
-		[3812, 19],
-		[3819, 16],
-		[3826, 30],
-		[3833, 73],
-		[3840, 25],
-		[3847, 20],
-		[3854, 24],
-		[3861, 16],
-		[3868, 19],
-		[3875, 12],
-		[3882, 10],
-		[3889, 31],
-		[3896, 23],
-		[3903, 3],
-		[3917, 1],
-		[3931, 1],
-		[3945, 1],
-		[3952, 1],
-		[3980, 1],
-		[4015, 2],
-		[4022, 1],
-		[4029, 22],
-		[4036, 7],
-		[4043, 5],
-		[4050, 3],
-		[4064, 1],
-		[4092, 1],
-		[4099, 6],
-		[4113, 4]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -247,87 +188,13 @@
 			},
 			{
 				"name": "@babel/core",
-				"version": "7.26.10",
-				"size": 795988
+				"version": "7.27.1",
+				"size": 794180
 			},
 			{
-				"name": "debug",
-				"version": "4.4.0",
-				"size": 42798
-			},
-			{
-				"name": "ms",
-				"version": "2.1.3",
-				"size": 6721
-			},
-			{
-				"name": "json5",
-				"version": "2.2.3",
-				"size": 235198
-			},
-			{
-				"name": "semver",
-				"version": "6.3.1",
-				"size": 68343
-			},
-			{
-				"name": "gensync",
-				"version": "1.0.0-beta.2",
-				"size": 28891
-			},
-			{
-				"name": "@babel/types",
-				"version": "7.27.0",
-				"size": 2583295
-			},
-			{
-				"name": "@babel/helper-string-parser",
-				"version": "7.25.9",
-				"size": 31816
-			},
-			{
-				"name": "@babel/helper-validator-identifier",
-				"version": "7.25.9",
-				"size": 48330
-			},
-			{
-				"name": "@babel/parser",
-				"version": "7.27.0",
-				"size": 1924962
-			},
-			{
-				"name": "@babel/helpers",
-				"version": "7.27.0",
-				"size": 866498
-			},
-			{
-				"name": "@babel/template",
-				"version": "7.27.0",
-				"size": 70675
-			},
-			{
-				"name": "@babel/code-frame",
-				"version": "7.26.2",
-				"size": 33160
-			},
-			{
-				"name": "js-tokens",
-				"version": "4.0.0"
-			},
-			{
-				"name": "picocolors",
-				"version": "1.1.1",
-				"size": 6373
-			},
-			{
-				"name": "@babel/traverse",
-				"version": "7.27.0",
-				"size": 676526
-			},
-			{
-				"name": "@babel/generator",
-				"version": "7.27.0",
-				"size": 559855
+				"name": "@ampproject/remapping",
+				"version": "2.3.0",
+				"size": 78946
 			},
 			{
 				"name": "@jridgewell/gen-mapping",
@@ -355,64 +222,78 @@
 				"size": 53153
 			},
 			{
+				"name": "@babel/code-frame",
+				"version": "7.27.1",
+				"size": 33160
+			},
+			{
+				"name": "@babel/helper-validator-identifier",
+				"version": "7.27.1",
+				"size": 48330
+			},
+			{
+				"name": "js-tokens",
+				"version": "4.0.0"
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "@babel/generator",
+				"version": "7.27.1",
+				"size": 560098
+			},
+			{
+				"name": "@babel/parser",
+				"version": "7.27.1",
+				"size": 1859876
+			},
+			{
+				"name": "@babel/types",
+				"version": "7.27.1",
+				"size": 2597469
+			},
+			{
+				"name": "@babel/helper-string-parser",
+				"version": "7.27.1",
+				"size": 31816
+			},
+			{
 				"name": "jsesc",
 				"version": "3.1.0",
 				"size": 32280
 			},
 			{
-				"name": "globals",
-				"version": "11.12.0",
-				"size": 39779
-			},
-			{
-				"name": "convert-source-map",
-				"version": "2.0.0",
-				"size": 15854
-			},
-			{
-				"name": "@ampproject/remapping",
-				"version": "2.3.0",
-				"size": 78946
-			},
-			{
-				"name": "@babel/helper-module-transforms",
-				"version": "7.26.0",
-				"size": 160842
-			},
-			{
-				"name": "@babel/helper-module-imports",
-				"version": "7.25.9",
-				"size": 63714
-			},
-			{
 				"name": "@babel/helper-compilation-targets",
-				"version": "7.27.0",
+				"version": "7.27.1",
 				"size": 53776
 			},
 			{
 				"name": "@babel/compat-data",
-				"version": "7.26.8",
-				"size": 66428
+				"version": "7.27.1",
+				"size": 66193
 			},
 			{
 				"name": "@babel/helper-validator-option",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 11775
 			},
 			{
 				"name": "browserslist",
-				"version": "4.24.4",
-				"size": 64926
+				"version": "4.24.5",
+				"size": 65174
 			},
 			{
 				"name": "caniuse-lite",
-				"version": "1.0.30001715",
-				"size": 2211246
+				"version": "1.0.30001716",
+				"size": 2214832
 			},
 			{
 				"name": "electron-to-chromium",
-				"version": "1.5.140",
-				"size": 162065
+				"version": "1.5.149",
+				"size": 163189
 			},
 			{
 				"name": "node-releases",
@@ -440,9 +321,69 @@
 				"size": 14766
 			},
 			{
+				"name": "semver",
+				"version": "6.3.1",
+				"size": 68343
+			},
+			{
+				"name": "@babel/helper-module-transforms",
+				"version": "7.27.1",
+				"size": 160852
+			},
+			{
+				"name": "@babel/helper-module-imports",
+				"version": "7.27.1",
+				"size": 63724
+			},
+			{
+				"name": "@babel/traverse",
+				"version": "7.27.1",
+				"size": 689113
+			},
+			{
+				"name": "@babel/template",
+				"version": "7.27.1",
+				"size": 70675
+			},
+			{
+				"name": "debug",
+				"version": "4.4.0",
+				"size": 42798
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "globals",
+				"version": "11.12.0",
+				"size": 39779
+			},
+			{
+				"name": "@babel/helpers",
+				"version": "7.27.1",
+				"size": 861892
+			},
+			{
+				"name": "convert-source-map",
+				"version": "2.0.0",
+				"size": 15854
+			},
+			{
+				"name": "gensync",
+				"version": "1.0.0-beta.2",
+				"size": 28891
+			},
+			{
+				"name": "json5",
+				"version": "2.2.3",
+				"size": 235198
+			},
+			{
 				"name": "flow-parser",
-				"version": "0.268.0",
-				"size": 746645
+				"version": "0.269.1",
+				"size": 747285
 			},
 			{
 				"name": "graceful-fs",
@@ -451,28 +392,8 @@
 			},
 			{
 				"name": "@babel/register",
-				"version": "7.25.9",
-				"size": 59681
-			},
-			{
-				"name": "pirates",
-				"version": "4.0.7",
-				"size": 12564
-			},
-			{
-				"name": "make-dir",
-				"version": "2.1.0",
-				"size": 9198
-			},
-			{
-				"name": "pify",
-				"version": "4.0.1",
-				"size": 7234
-			},
-			{
-				"name": "semver",
-				"version": "5.7.2",
-				"size": 63315
+				"version": "7.27.1",
+				"size": 61652
 			},
 			{
 				"name": "clone-deep",
@@ -537,8 +458,28 @@
 				"version": "3.0.0"
 			},
 			{
+				"name": "make-dir",
+				"version": "2.1.0",
+				"size": 9198
+			},
+			{
+				"name": "pify",
+				"version": "4.0.1",
+				"size": 7234
+			},
+			{
+				"name": "semver",
+				"version": "5.7.2",
+				"size": 63315
+			},
+			{
 				"name": "commondir",
 				"version": "1.0.1"
+			},
+			{
+				"name": "pirates",
+				"version": "4.0.7",
+				"size": 12564
 			},
 			{
 				"name": "source-map-support",
@@ -566,97 +507,97 @@
 			},
 			{
 				"name": "@babel/preset-flow",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 9076
 			},
 			{
 				"name": "@babel/helper-plugin-utils",
-				"version": "7.26.5",
-				"size": 11985
+				"version": "7.27.1",
+				"size": 11818
 			},
 			{
 				"name": "@babel/plugin-transform-flow-strip-types",
-				"version": "7.26.5",
+				"version": "7.27.1",
 				"size": 18090
 			},
 			{
 				"name": "@babel/plugin-syntax-flow",
-				"version": "7.26.0",
+				"version": "7.27.1",
 				"size": 5852
 			},
 			{
 				"name": "@babel/preset-typescript",
-				"version": "7.27.0",
-				"size": 25779
+				"version": "7.27.1",
+				"size": 25778
 			},
 			{
 				"name": "@babel/plugin-syntax-jsx",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 4141
 			},
 			{
 				"name": "@babel/plugin-transform-modules-commonjs",
-				"version": "7.26.3",
-				"size": 41662
+				"version": "7.27.1",
+				"size": 41578
 			},
 			{
 				"name": "@babel/plugin-transform-typescript",
-				"version": "7.27.0",
-				"size": 143556
+				"version": "7.27.1",
+				"size": 143560
 			},
 			{
 				"name": "@babel/helper-annotate-as-pure",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 4054
 			},
 			{
 				"name": "@babel/helper-create-class-features-plugin",
-				"version": "7.27.0",
-				"size": 441091
+				"version": "7.27.1",
+				"size": 441090
 			},
 			{
 				"name": "@babel/helper-member-expression-to-functions",
-				"version": "7.25.9",
-				"size": 54675
+				"version": "7.27.1",
+				"size": 54694
 			},
 			{
 				"name": "@babel/helper-optimise-call-expression",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 6672
 			},
 			{
 				"name": "@babel/helper-replace-supers",
-				"version": "7.26.5",
+				"version": "7.27.1",
 				"size": 43308
 			},
 			{
 				"name": "@babel/helper-skip-transparent-expression-wrappers",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 6001
 			},
 			{
 				"name": "@babel/plugin-syntax-typescript",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 7039
 			},
 			{
 				"name": "@babel/plugin-transform-private-methods",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 4874
 			},
 			{
 				"name": "@babel/plugin-transform-class-properties",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 5028
 			},
 			{
 				"name": "@babel/plugin-transform-optional-chaining",
-				"version": "7.25.9",
-				"size": 37685
+				"version": "7.27.1",
+				"size": 37601
 			},
 			{
 				"name": "@babel/plugin-transform-nullish-coalescing-operator",
-				"version": "7.26.6",
+				"version": "7.27.1",
 				"size": 10396
 			},
 			{
@@ -886,91 +827,91 @@
 			[1, 36],
 			[36, 37],
 			[37, 38],
-			[36, 39],
-			[36, 40],
-			[36, 41],
-			[36, 42],
-			[42, 43],
-			[42, 44],
-			[36, 45],
-			[45, 42],
-			[36, 46],
-			[46, 47],
+			[38, 39],
+			[38, 40],
+			[38, 41],
+			[41, 42],
+			[41, 40],
+			[37, 41],
+			[36, 43],
+			[43, 44],
+			[43, 45],
+			[43, 46],
+			[36, 47],
 			[47, 48],
 			[48, 49],
-			[48, 50],
-			[48, 44],
-			[47, 45],
-			[47, 42],
-			[46, 42],
-			[36, 47],
-			[36, 51],
-			[51, 48],
-			[51, 52],
-			[52, 45],
-			[52, 42],
-			[52, 53],
-			[53, 54],
-			[53, 55],
-			[53, 56],
-			[56, 57],
-			[56, 55],
-			[52, 56],
-			[52, 58],
-			[51, 45],
-			[51, 47],
-			[51, 42],
-			[51, 37],
-			[51, 59],
+			[49, 50],
+			[49, 44],
+			[47, 49],
+			[47, 38],
+			[47, 41],
+			[47, 51],
 			[36, 52],
-			[36, 48],
-			[36, 60],
-			[36, 61],
-			[61, 53],
-			[61, 56],
-			[36, 62],
-			[62, 51],
-			[62, 63],
-			[63, 42],
-			[63, 51],
-			[62, 44],
+			[52, 53],
+			[52, 54],
+			[52, 55],
+			[55, 56],
+			[55, 57],
+			[55, 58],
+			[55, 59],
+			[59, 60],
+			[59, 46],
+			[52, 61],
+			[61, 62],
+			[52, 63],
 			[36, 64],
 			[64, 65],
+			[65, 66],
+			[66, 43],
+			[66, 47],
+			[66, 48],
+			[66, 67],
+			[67, 43],
+			[67, 48],
+			[67, 49],
+			[66, 49],
+			[66, 68],
+			[68, 69],
+			[66, 70],
+			[65, 49],
+			[64, 44],
 			[64, 66],
-			[64, 67],
-			[67, 68],
-			[67, 69],
-			[67, 70],
-			[67, 71],
-			[71, 72],
-			[71, 50],
-			[64, 73],
-			[73, 74],
-			[64, 40],
+			[36, 71],
+			[71, 67],
+			[71, 49],
+			[36, 48],
+			[36, 67],
+			[36, 66],
+			[36, 49],
+			[36, 72],
+			[36, 68],
+			[36, 73],
+			[36, 74],
+			[36, 63],
 			[1, 75],
 			[1, 76],
-			[1, 45],
+			[1, 48],
 			[1, 77],
 			[77, 78],
-			[77, 79],
+			[78, 79],
 			[79, 80],
-			[79, 81],
-			[77, 82],
-			[82, 83],
+			[78, 81],
+			[78, 82],
+			[82, 81],
+			[77, 83],
 			[83, 84],
-			[82, 85],
-			[82, 86],
-			[86, 85],
-			[77, 87],
+			[84, 85],
+			[85, 86],
+			[86, 87],
 			[87, 88],
 			[88, 89],
-			[89, 90],
-			[90, 91],
+			[86, 90],
+			[83, 91],
 			[91, 92],
-			[92, 93],
-			[90, 94],
-			[87, 79],
-			[87, 95],
+			[91, 93],
+			[83, 94],
+			[77, 91],
+			[77, 95],
 			[77, 96],
 			[96, 97],
 			[96, 25],
@@ -980,48 +921,48 @@
 			[98, 100],
 			[1, 101],
 			[101, 102],
-			[101, 66],
+			[101, 54],
 			[101, 103],
+			[103, 102],
 			[103, 104],
 			[104, 102],
-			[103, 102],
 			[1, 105],
 			[105, 102],
-			[105, 66],
+			[105, 54],
 			[105, 106],
 			[106, 102],
 			[105, 107],
+			[107, 64],
 			[107, 102],
-			[107, 62],
 			[105, 108],
 			[108, 109],
-			[109, 42],
+			[109, 49],
 			[108, 110],
 			[110, 109],
 			[110, 111],
-			[111, 42],
-			[111, 51],
+			[111, 66],
+			[111, 49],
 			[110, 112],
-			[112, 42],
+			[112, 49],
 			[110, 113],
-			[113, 51],
-			[113, 112],
 			[113, 111],
+			[113, 112],
+			[113, 66],
 			[110, 114],
-			[114, 42],
-			[114, 51],
-			[110, 51],
-			[110, 40],
+			[114, 66],
+			[114, 49],
+			[110, 66],
+			[110, 63],
 			[108, 102],
 			[108, 114],
 			[108, 115],
 			[115, 102],
 			[1, 116],
-			[116, 102],
 			[116, 110],
+			[116, 102],
 			[1, 117],
-			[117, 102],
 			[117, 110],
+			[117, 102],
 			[1, 107],
 			[1, 118],
 			[118, 102],
@@ -1047,7 +988,7 @@
 			[0, 131],
 			[131, 132],
 			[131, 133],
-			[133, 55],
+			[133, 40],
 			[133, 134],
 			[133, 132],
 			[133, 135],
@@ -1064,14 +1005,14 @@
 			[131, 136],
 			[131, 137],
 			[131, 142],
-			[142, 55],
+			[142, 40],
 			[131, 134],
 			[131, 135],
 			[131, 143],
 			[131, 144],
-			[131, 61],
-			[131, 56],
-			[131, 55],
+			[131, 37],
+			[131, 41],
+			[131, 40],
 			[0, 145],
 			[145, 146],
 			[145, 147],
@@ -1085,12 +1026,75 @@
 			[148, 150],
 			[147, 150],
 			[147, 149],
-			[145, 72],
+			[145, 60],
 			[145, 149],
 			[145, 154],
 			[145, 155],
 			[145, 156]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# sveltemod\n[![npm version](http://img.shields.io/npm/v/sveltemod.svg?style=flat)](https://npmjs.org/package/sveltemod 'View this project on npm')\n\nA CLI to run codemods for Svelte\nThis project use [jscodeshift](https://github.com/facebook/jscodeshift)  underneath which allows this tool to leverage the standard codemod tooling for JavaScript in Svelte projects.\n\n## Install\n```\nnpm install -g sveltemod\n```\n\n## Usage\n```\nsveltemod <codemod> <file>\n```\n\nExample:\n```\nsveltemod transforms/v5-derived.js src/App.svelte\n```\n\nYou can also use jscodeshift to run the codemods like:\n```\njscodeshift --transform=./transforms/v5-derived.js --extensions=svelte ./src/App.svelte\n```\n\n\n## Available codemods:\n### v5/derived.js\n\n#### Before\n```js\n$: area = width * height;\n```\n\n#### After\n```js\nconst area = $derived(width * height);\n```\n\n### v5/effect.js\n\n#### Before\n```js\n$: console.log(area);\n```\n\n#### After\n```js\n$effect(() => {\n    console.log(area);\n});\n\n```\n\n\n### v5/props.js\n\n#### Before\n```js\nexport let width;\nexport let height;\n\n```\n\n#### After\n```js\nlet { width, height } = $props();\n\n```\n\n\n### v5/state.js\n\n#### Before\n```js\nlet count = 0;\n```\n\n#### After\n```js\n\nlet count = $state(0);\n```\n\n## Differences from svelte-migrate\n- It uses jscodeshift underneath which is kind of standard tooling for codemods\n- It completely uses AST based transforms instead of regex replacement which [svelte-migrate](https://github.com/sveltejs/kit/tree/master/packages/migrate) mostly uses\n- You can run any Jscodeshift based transform available out there not just something comes with svelte-migrate\n- Currently svelte-migrate doesn't have codemods for v5 or runes, I try to address that\n- It is extendable with other transforms for html, css, sass and so on\n\n## References:\n- https://github.com/sveltejs/kit/discussions/5774\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3624, 61],
+		[3631, 64],
+		[3638, 2],
+		[3645, 4],
+		[3652, 5],
+		[3659, 2],
+		[3666, 8],
+		[3673, 2],
+		[3680, 1],
+		[3687, 2],
+		[3694, 4],
+		[3701, 3],
+		[3708, 22],
+		[3715, 32],
+		[3722, 16],
+		[3729, 17],
+		[3736, 12],
+		[3743, 37],
+		[3750, 8],
+		[3757, 11],
+		[3764, 46],
+		[3771, 10],
+		[3778, 11],
+		[3785, 22],
+		[3792, 9],
+		[3799, 25],
+		[3806, 38],
+		[3813, 19],
+		[3820, 16],
+		[3827, 30],
+		[3834, 73],
+		[3841, 25],
+		[3848, 20],
+		[3855, 24],
+		[3862, 16],
+		[3869, 19],
+		[3876, 12],
+		[3883, 10],
+		[3890, 31],
+		[3897, 23],
+		[3904, 3],
+		[3918, 1],
+		[3932, 1],
+		[3946, 1],
+		[3953, 1],
+		[3981, 1],
+		[4016, 2],
+		[4023, 1],
+		[4030, 22],
+		[4037, 7],
+		[4044, 5],
+		[4051, 3],
+		[4065, 1],
+		[4093, 1],
+		[4100, 6],
+		[4114, 4],
+		[4121, 8],
+		[4128, 5],
+		[4135, 4]
+	]
 }

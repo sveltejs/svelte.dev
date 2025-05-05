@@ -7,24 +7,12 @@
 	"downloads": 6,
 	"updated": "2025-02-06T10:36:42.105Z",
 	"tags": ["miscellaneous"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.9.4",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "0.9.4",
-	"downloads_history": [
-		[4050, 261],
-		[4057, 7],
-		[4064, 4],
-		[4071, 8],
-		[4078, 2],
-		[4085, 4],
-		[4099, 4],
-		[4106, 1],
-		[4113, 6]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -36,5 +24,20 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# Work in progress\n\nSvelte Library inspired by Hypership's [React Cookie Manager](https://github.com/hypershiphq/react-cookie-manager) that aims to recreate their GDPR compliant cookie library for Svelte. Work in progress.\n\n[Demo](https://svelte-cookie-manager.amine-rahmane.fr/)\n\n# Known issues\n\n- Manage Cookie modal doesn't always open\n- Not everything is up to par with Svelte 5 standards\n- Typescript linting\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4051, 261],
+		[4058, 7],
+		[4065, 4],
+		[4072, 8],
+		[4079, 2],
+		[4086, 4],
+		[4100, 4],
+		[4107, 1],
+		[4114, 6],
+		[4121, 10],
+		[4128, 4]
+	]
 }

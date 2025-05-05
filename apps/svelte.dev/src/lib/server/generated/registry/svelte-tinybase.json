@@ -9,14 +9,9 @@
 	"tags": ["miscellaneous"],
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
-	"runes": true,
 	"last_rune_check_version": "0.0.1",
 	"version": "0.0.1",
 	"github_stars": 0,
-	"downloads_history": [
-		[4106, 36],
-		[4113, 16]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -28,5 +23,14 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# svelte-tinybase\n\nA tinybase adapter for Svelte.\n\n## Introduction\n\nsvelte-tinybase is a library that allows you to use Tinybase with Svelte 5 in a reactive way.\n\nTinybase is a lightweight database for the web. It's a simple, yet powerful tool for building web applications. It's really incredible, honestly. Only problem is that they only provide first-class support for React.\n\nSo, this library is my attempt to bring the power of Tinybase to Svelte 5.\n\n## Installation\n\nFirst of all, you'll have to install the library:\n\n- npm: `npm i svelte-tinybase`\n- pnpm: `pnpm i svelte-tinybase`\n- yarn: `yarn add svelte-tinybase`\n- bun: `bun i svelte-tinybase`\n\n## Usage\n\nTo use svelte-tinybase, you'll first need to have a Tinybase store initialized. You can check [tinybase's documentation](https://tinybase.org/guides/the-basics/creating-a-store/) for more information.\n\n> You'll likely want to also explore other topics, like [schemas](https://tinybase.org/guides/schemas/using-schemas/) and [persistance](https://tinybase.org/guides/persistence/an-intro-to-persistence/).\n>\n> `svelte-tinybase` takes full advantage of schemas.\n\nOnce you have your store, you can start using the hooks `svelte-tinybase` provides.\n\n### useTable\n\nThe `useTable` hook is used to always have the latest table data in a reactive way.\n\n```ts\nimport { useTable } from \"svelte-tinybase\";\n\nconst tasks = useTable(store, \"tasks\");\n\ntasks.value; // contains the latest table data. It's reactive.\n```\n\n### useRow\n\nThe `useRow` hook is used to always have the latest row data in a reactive way.\n\n```ts\nimport { useRow } from \"svelte-tinybase\";\n\nconst task = useRow(store, \"tasks\", \"taskId\");\n\ntask.value; // contains the latest row data. It's reactive.\n```\n\n### useCell\n\nThe `useCell` hook is used to always have the latest cell data in a reactive way.\n\n```ts\nimport { useCell } from \"svelte-tinybase\";\n\nconst title = useCell(store, \"tasks\", \"taskId\", \"title\");\n\ntitle.value; // contains the latest cell data. It's reactive.\n```\n\n### useValues\n\nThe `useValues` hook is used to always have the latest store values in a reactive way.\n\n```ts\nimport { useValues } from \"svelte-tinybase\";\n\nconst values = useValues(store);\n\nvalues.value; // contains the latest store values. It's reactive.\n```\n\n## Reactiveness\n\nThe value will update when the data changes, which will render the new value in the UI. The value is also reactive to changes, and even bindable.\n\n```svelte\n<input bind:value={values.value.title} />\n```\n\n## Examples & Demo\n\nFeel free to check out the demo on [svelte-tinybase.polv.dev](https://svelte-tinybase.polv.dev). [Source is here](/src/demos/todo-list/TodoList.svelte)\n\n## Inspired by\n\nInspired by [s1adem4n](https://github.com/s1adem4n) [(this comment)](https://github.com/tinyplex/tinybase/discussions/144#discussioncomment-12286852)\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4107, 36],
+		[4114, 16],
+		[4121, 7],
+		[4128, 4],
+		[4135, 8]
+	]
 }

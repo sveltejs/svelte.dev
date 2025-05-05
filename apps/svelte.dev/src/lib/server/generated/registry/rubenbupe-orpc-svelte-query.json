@@ -7,17 +7,11 @@
 	"downloads": 28,
 	"updated": "2025-03-30T11:59:02.924Z",
 	"tags": ["server"],
-	"runes": false,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.0.0-next.e8cc9ca",
 	"svelte_range": ">=4.2.0",
 	"last_rune_check_version": "0.0.0-next.e8cc9ca",
-	"downloads_history": [
-		[4099, 341],
-		[4106, 64],
-		[4113, 28]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -38,8 +32,8 @@
 			},
 			{
 				"name": "type-fest",
-				"version": "4.40.0",
-				"size": 438455
+				"version": "4.40.1",
+				"size": 438790
 			}
 		],
 		"dependencies": [
@@ -48,5 +42,14 @@
 			[1, 3]
 		],
 		"circular": []
-	}
+	},
+	"readme": "",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4100, 341],
+		[4107, 64],
+		[4114, 28],
+		[4121, 19],
+		[4128, 18]
+	]
 }

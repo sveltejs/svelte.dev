@@ -7,78 +7,11 @@
 	"downloads": 11,
 	"updated": "2018-01-22T00:00:17.733Z",
 	"tags": ["tooling"],
-	"runes": false,
 	"github_stars": 5,
 	"typescript": false,
 	"version": "5.0.0",
 	"svelte_range": "~1.53.0",
 	"last_rune_check_version": "5.0.0",
-	"downloads_history": [
-		[3574, 18],
-		[3581, 13],
-		[3588, 1],
-		[3595, 3],
-		[3602, 16],
-		[3609, 2],
-		[3616, 2],
-		[3637, 1],
-		[3644, 28],
-		[3651, 2],
-		[3658, 1],
-		[3665, 13],
-		[3672, 2],
-		[3679, 3],
-		[3686, 1],
-		[3693, 4],
-		[3707, 11],
-		[3714, 1],
-		[3742, 4],
-		[3763, 1],
-		[3770, 13],
-		[3777, 2],
-		[3784, 1],
-		[3791, 12],
-		[3798, 2],
-		[3805, 2],
-		[3812, 1],
-		[3819, 10],
-		[3826, 1],
-		[3833, 1],
-		[3840, 4],
-		[3847, 1],
-		[3854, 9],
-		[3861, 45],
-		[3868, 17],
-		[3882, 10],
-		[3889, 15],
-		[3910, 2],
-		[3917, 5],
-		[3924, 1],
-		[3931, 3],
-		[3938, 4],
-		[3945, 1],
-		[3952, 1],
-		[3959, 3],
-		[3966, 7],
-		[3973, 3],
-		[3980, 13],
-		[3994, 2],
-		[4015, 1],
-		[4022, 4],
-		[4029, 15],
-		[4036, 8],
-		[4043, 16],
-		[4050, 4],
-		[4057, 1],
-		[4064, 9],
-		[4071, 3],
-		[4078, 11],
-		[4085, 2],
-		[4092, 3],
-		[4099, 38],
-		[4106, 3],
-		[4113, 11]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -1055,8 +988,8 @@
 			},
 			{
 				"name": "bn.js",
-				"version": "5.2.1",
-				"size": 99045
+				"version": "5.2.2",
+				"size": 99205
 			},
 			{
 				"name": "browserify-rsa",
@@ -1080,8 +1013,8 @@
 			},
 			{
 				"name": "bn.js",
-				"version": "4.12.1",
-				"size": 99880
+				"version": "4.12.2",
+				"size": 99927
 			},
 			{
 				"name": "brorand",
@@ -3571,18 +3504,18 @@
 			},
 			{
 				"name": "browserslist",
-				"version": "4.24.4",
-				"size": 64926
+				"version": "4.24.5",
+				"size": 65174
 			},
 			{
 				"name": "caniuse-lite",
-				"version": "1.0.30001715",
-				"size": 2211246
+				"version": "1.0.30001716",
+				"size": 2214832
 			},
 			{
 				"name": "electron-to-chromium",
-				"version": "1.5.140",
-				"size": 162065
+				"version": "1.5.149",
+				"size": 163189
 			},
 			{
 				"name": "node-releases",
@@ -3911,8 +3844,8 @@
 			},
 			{
 				"name": "caniuse-db",
-				"version": "1.0.30001715",
-				"size": 21243704
+				"version": "1.0.30001716",
+				"size": 21298251
 			},
 			{
 				"name": "browserslist",
@@ -5287,8 +5220,8 @@
 			},
 			{
 				"name": "portfinder",
-				"version": "1.0.36",
-				"size": 22503
+				"version": "1.0.37",
+				"size": 22489
 			},
 			{
 				"name": "async",
@@ -7863,5 +7796,73 @@
 			[687, 684],
 			[720, 684]
 		]
-	}
+	},
+	"readme": "# Neutrino Svelte preset\r\n\r\n[![npm](https://img.shields.io/npm/v/neutrino-preset-svelte.svg)](https://www.npmjs.com/package/neutrino-preset-svelte)\r\n[![npm](https://img.shields.io/npm/dt/neutrino-preset-svelte.svg)](https://www.npmjs.com/package/neutrino-preset-svelte)\r\n[![Greenkeeper badge](https://badges.greenkeeper.io/constgen/neutrino-preset-svelte.svg)](https://greenkeeper.io/)\r\n\r\n`neutrino-preset-svelte` is a [Neutrino](https://neutrino.js.org) preset for creation of [Svelte](https://svelte.technology) applications for web platforms.\r\n\r\n## Features\r\n\r\n- Zero upfront configuration necessary to start developing and building a Svelte web app\r\n- Modern Babel compilation supporting ES modules, last several major browser versions, async functions, dynamic imports, ES class properties, rest spread operators and automatic polyfills bound to platforms\r\n- Webpack loaders for importing HTML Svelte components, CSS, images, icons, and fonts\r\n- ESlint integration in Svelte components `<script>` tags\r\n- Webpack Dev Server during development on \"localhost\" and local network IP for external devices access\r\n- Automatic creation of HTML pages, no templating of \"index.html\" necessary\r\n- Hot reloading support\r\n- Tree-shaking to create smaller bundles\r\n- Production-optimized bundles with Babili minification, source maps and easy chunking\r\n- Extensible to customize your project as needed\r\n\r\n## Requirements\r\n\r\n- Node.js v6.9+\r\n- Neutrino v8\r\n\r\n## Installation\r\n\r\n`neutrino-preset-svelte` can be installed from NPM. Make sure `neutrino`, and `neutrino-preset-svelte` are development dependencies in your project. `svelte` is installed as an internal dependency of `neutrino-preset-svelte`\r\n\r\n```\r\n❯ npm install --save-dev neutrino neutrino-preset-svelte\r\n```\r\n\r\nDon't install Svelte in your project because it is already included to the preset. The used Svelte version is always mentioned in the [Release notes](https://github.com/constgen/neutrino-preset-svelte/releases)\r\n\r\n## Project Layout\r\n\r\n`neutrino-preset-svelte` follows the standard [project layout](https://neutrino.js.org/project-layout) specified by Neutrino. This means that by default all project source code should live in a directory named `src` in the root of the project. This includes JavaScript files, CSS stylesheets, images, and any other assets that would be available to your compiled project. Only files explicitly imported or lazy loaded to your project will be bundled.\r\n\r\n## Quickstart\r\n\r\nAfter installing Neutrino and the Svelte preset, add a new directory named `src` in the root of the project, with a single JS file named `index.js` in it. You can mound you application to the document `<body>`. Edit your `src/index.js` file with the following:\r\n\r\n```js\r\nimport Main from './main.html'\r\nimport './common.css'\r\n\r\nnew Main({\r\n  target: document.body\r\n})\r\n```\r\n\r\nYou can change this code base to better match your needs.\r\n\r\nNow edit your project's `package.json` to add commands for starting and building the application:\r\n\r\n```json\r\n{\r\n  \"scripts\": {\r\n    \"start\": \"neutrino start\",\r\n    \"build\": \"neutrino build\"\r\n  }\r\n}\r\n```\r\nAnd add the new file `.neutrinorc.js` in the root of the project:\r\n\r\n```js\r\nmodule.exports = {\r\n  use: [\r\n    'neutrino-preset-svelte'\r\n  ]\r\n}\r\n```\r\n\r\nStart the app. \r\n\r\n```\r\n❯ npm start\r\n✔ Development server running on: http://0.0.0.0:5000\r\n✔ Build completed\r\n```\r\n\r\nThe console shows that application started at \"http://0.0.0.0:5000\". This is a way how `webpack-dev-server` starts in both \"localhost:5000\" and local network IP address (e.g. \"http://192.168.1.100:5000\"). External IP may be useful for mobile development. The preset tries to automatically start (if not disabled in [custom options](#preset-options)) a browser with the URL of the server IP address (if not changed in [custom options](#preset-options)).\r\n\r\n## Building\r\n\r\n`neutrino-preset-svelte` builds static assets to the `build` directory by default when running `neutrino build`. \r\n\r\n```\r\n❯ npm run build\r\n```\r\n\r\nYou can either serve or deploy the contents of this build directory as a static site.\r\n\r\n## Static assets\r\n\r\nIf you wish to copy files to the build directory that are not imported from application code, you can place them in a directory within `src` called `static`. All files in this directory will be copied from `src/static` to `build/static`.\r\n\r\n## Hot Reloading\r\n\r\n`neutrino-preset-svelte` supports Hot Reloading of files that was changed. Hot Module Replacement is supported only in CSS files. This means that changing of CSS will rerender only a part of styles, and changing of the rest of modules will reload the page.\r\n\r\n<!--Using dynamic imports with `import()` will automatically create split points and hot replace those modules upon modification during development.-->\r\n\r\n## Preset options\r\n\r\nYou can provide custom options and have them merged with this preset's default options to easily affect how this\r\npreset builds. You can modify the preset settings from `.neutrinorc.js` by overriding with an options object. Use\r\nan array pair instead of a string to supply these options in `.neutrinorc.js`.\r\n\r\nThe following shows how you can pass an options object to the preset and override its options, showing the defaults:\r\n\r\n**.neutrinorc.js**\r\n```js\r\nmodule.exports = {\r\n  use: [\r\n    ['neutrino-preset-svelte', {\r\n      // options related to generating the HTML document\r\n      html: {\r\n        title: `${name} ${version}`,\r\n        filename: 'index.html',\r\n        template: path.resolve(__dirname, 'template.ejs'),\r\n        inject: 'head',\r\n        mobile: true,\r\n        minify: {\r\n          collapseWhitespace: true, \r\n          preserveLineBreaks: true\r\n        }\r\n      },\r\n\r\n      // options related to a development server\r\n      server: {\r\n        https: false,\r\n        public: true,\r\n        port: 5000,\r\n        open: true,\r\n        contentBase: neutrino.options.source\r\n      },\r\n\r\n      // supported browsers in a Browser List format\r\n      browsers: [\r\n        'last 3 chrome versions',\r\n        'last 3 firefox versions',\r\n        'last 3 edge versions',\r\n        'last 3 opera versions',\r\n        'last 3 safari versions',\r\n        'last 1 ie version',\r\n        'last 1 ie_mob version',\r\n        'last 1 blackberry version',\r\n        'last 3 and_chr versions',\r\n        'last 3 and_ff versions',\r\n        'last 3 op_mob versions',\r\n        'last 2 op_mini versions',\r\n        'ios >= 8',\r\n        'android >= 4'\r\n      ]\r\n    }]\r\n  ]\r\n};\r\n```\r\n\r\n*Example: Enable HTTPS, disable auto-opening of a browser, change the page title, define supported browsers:*\r\n\r\n**.neutrinorc.js**\r\n```js\r\nmodule.exports = {\r\n  use: [\r\n    ['neutrino-preset-svelte', {\r\n      // Example: disable Hot Module Replacement\r\n      server: {\r\n        https: true,\r\n        open: false\r\n      },\r\n\r\n      // Example: change the page title\r\n      html: {\r\n        title: 'Svelte App'\r\n      },\r\n\r\n      // Example: change supported browsers\r\n      browsers: [\r\n        'last 3 versions'\r\n      ]\r\n    }]\r\n  ]\r\n};\r\n```\r\n\r\n## Customizing\r\n\r\nConsumers may provide their custom configurations for different parts of the current preset that will override its defaults. Also if you want to construct your own preset based on `neutrino-preset-svelte` you can use information below.\r\n\r\nTo override the build configuration, start with the documentation on [customization](https://neutrino.js.org/customization). `neutrino-preset-svelte` creates some conventions to make overriding the configuration easier once you are ready to make changes.\r\n\r\n### Entry points\r\n\r\nBy default the Svelte preset creates these entry points to your application:\r\n\r\n- `polyfill`: contains platform polyfills according to the chosen browsers in the Browser List.\r\n- `index`: maps to the `index.js` file in the src directory. This value is provided by `neutrino.options.entry`.\r\n\r\n### Rules\r\n\r\nThe following is a list of rules and their identifiers which can be overridden:\r\n\r\n- `compile`: Compiles JS files from the src directory using Babel. Contains a single loader named `babel`;\r\n- `svelte`: Compiles Svelte components to JavaScript modules. Contains a single loader named the same `svelte`;\r\n- `style`: Allows importing CSS stylesheets from modules. Contains two loaders named `style` and `css`;\r\n- `img`, `svg`, `ico`: Allows import image files from modules. Each contains a single loader named `url`;\r\n- `woff`, `ttf`: Allows importing WOFF and TTF font files from modules. Each contains a single loader named `url`;\r\n- `eot`: Allows importing EOT font files from modules. Contains a single loader named `file`.\r\n\r\n### Plugins\r\n\r\nThe following is a list of plugins and their identifiers which can be overridden:\r\n\r\n- `env`: Injects the value of NODE_ENV into the application as process.env.NODE_ENV;\r\n- `html`: Creates HTML files when building.\r\n- `html-defer`: Adds `defer` attribute to `<script>` tags in HTML files when building;\r\n- `chunk`: Defines chunks for manifest and vendor entry points.\r\n- `hot`: Enables hot module reloading;\r\n- `clean`: Clears the contents of build prior to creating a production bundle;\r\n- `copy`: Copies files during build, defaults from `src/static` to `build/static`.\r\n<!--- `progress`: Displays a progress bar when using neutrino build.-->\r\n\r\n### Override configuration\r\n\r\nBy following the [customization guide](https://neutrino.js.org/customization) and knowing the rule, loader, and plugin IDs above,\r\nyou can override and augment the build by providing a function to your `.neutrinorc.js` use array. You can also make these changes from the Neutrino API in a custom middleware.\r\n\r\n#### Vendoring\r\n\r\nBy defining an entry point named `vendor` you can split out external dependencies into a chunk separate\r\nfrom your application code.\r\n\r\n_Example: Put lodash into a separate \"vendor\" chunk:_\r\n\r\n**.neutrinorc.js**\r\n```js\r\nmodule.exports = {\r\n  use: [\r\n    'neutrino-preset-svelte',\r\n    neutrino => neutrino.config.entry('vendor').add('lodash')\r\n  ]\r\n}\r\n```",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3589, 1],
+		[3596, 3],
+		[3603, 16],
+		[3610, 2],
+		[3617, 2],
+		[3638, 1],
+		[3645, 28],
+		[3652, 2],
+		[3659, 1],
+		[3666, 13],
+		[3673, 2],
+		[3680, 3],
+		[3687, 1],
+		[3694, 4],
+		[3708, 11],
+		[3715, 1],
+		[3743, 4],
+		[3764, 1],
+		[3771, 13],
+		[3778, 2],
+		[3785, 1],
+		[3792, 12],
+		[3799, 2],
+		[3806, 2],
+		[3813, 1],
+		[3820, 10],
+		[3827, 1],
+		[3834, 1],
+		[3841, 4],
+		[3848, 1],
+		[3855, 9],
+		[3862, 45],
+		[3869, 17],
+		[3883, 10],
+		[3890, 15],
+		[3911, 2],
+		[3918, 5],
+		[3925, 1],
+		[3932, 3],
+		[3939, 4],
+		[3946, 1],
+		[3953, 1],
+		[3960, 3],
+		[3967, 7],
+		[3974, 3],
+		[3981, 13],
+		[3995, 2],
+		[4016, 1],
+		[4023, 4],
+		[4030, 15],
+		[4037, 8],
+		[4044, 16],
+		[4051, 4],
+		[4058, 1],
+		[4065, 9],
+		[4072, 3],
+		[4079, 11],
+		[4086, 2],
+		[4093, 3],
+		[4100, 38],
+		[4107, 3],
+		[4114, 11],
+		[4121, 22],
+		[4128, 1]
+	]
 }

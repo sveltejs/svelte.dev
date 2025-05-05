@@ -5,87 +5,50 @@
 	"authors": ["calvojp"],
 	"homepage": "https://github.com/calvo-jp/ui-ingredients#readme",
 	"downloads": 371,
-	"updated": "2025-04-12T04:57:42.159Z",
+	"updated": "2025-05-03T07:05:36.053Z",
 	"tags": ["ui"],
-	"runes": true,
 	"github_stars": 47,
 	"typescript": true,
-	"version": "1.4.0",
+	"version": "1.6.0",
 	"svelte_range": "^5.20.0",
-	"kit_range": "^2.20.5",
-	"last_rune_check_version": "1.4.0",
-	"downloads_history": [
-		[3882, 1009],
-		[3889, 876],
-		[3896, 283],
-		[3903, 746],
-		[3910, 385],
-		[3917, 1081],
-		[3924, 259],
-		[3931, 482],
-		[3938, 370],
-		[3945, 302],
-		[3952, 163],
-		[3959, 135],
-		[3966, 101],
-		[3973, 256],
-		[3980, 197],
-		[3987, 1001],
-		[3994, 217],
-		[4001, 179],
-		[4008, 472],
-		[4015, 252],
-		[4022, 131],
-		[4029, 4626],
-		[4036, 1200],
-		[4043, 349],
-		[4050, 318],
-		[4057, 210],
-		[4064, 198],
-		[4071, 124],
-		[4078, 340],
-		[4085, 997],
-		[4092, 239],
-		[4099, 496],
-		[4106, 444],
-		[4113, 371]
-	],
+	"kit_range": "^2.20.8",
+	"last_rune_check_version": "1.6.0",
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
 			{
 				"name": "ui-ingredients",
-				"version": "1.4.0",
-				"size": 833518
+				"version": "1.6.0",
+				"size": 832844
 			},
 			{
 				"name": "@zag-js/accordion",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 32515
 			},
 			{
 				"name": "@zag-js/anatomy",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 5886
 			},
 			{
 				"name": "@zag-js/core",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 33163
 			},
 			{
 				"name": "@zag-js/utils",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 45241
 			},
 			{
 				"name": "@zag-js/dom-query",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 123232
 			},
 			{
 				"name": "@zag-js/types",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 140506
 			},
 			{
@@ -95,82 +58,82 @@
 			},
 			{
 				"name": "@zag-js/angle-slider",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 31432
 			},
 			{
 				"name": "@zag-js/rect-utils",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 63834
 			},
 			{
 				"name": "@zag-js/auto-resize",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 11416
 			},
 			{
 				"name": "@zag-js/avatar",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 16627
 			},
 			{
 				"name": "@zag-js/carousel",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 68761
 			},
 			{
 				"name": "@zag-js/scroll-snap",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 15998
 			},
 			{
 				"name": "@zag-js/checkbox",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 30411
 			},
 			{
 				"name": "@zag-js/focus-visible",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 18504
 			},
 			{
 				"name": "@zag-js/clipboard",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 21448
 			},
 			{
 				"name": "@zag-js/collapsible",
-				"version": "1.11.0",
-				"size": 28954
+				"version": "1.12.0",
+				"size": 29040
 			},
 			{
 				"name": "@zag-js/collection",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 115460
 			},
 			{
 				"name": "@zag-js/color-picker",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 126666
 			},
 			{
 				"name": "@zag-js/dismissable",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 21746
 			},
 			{
 				"name": "@zag-js/interact-outside",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 21222
 			},
 			{
 				"name": "@zag-js/color-utils",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 67636
 			},
 			{
 				"name": "@zag-js/popper",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 35031
 			},
 			{
@@ -180,8 +143,8 @@
 			},
 			{
 				"name": "@floating-ui/core",
-				"version": "1.6.9",
-				"size": 212585
+				"version": "1.7.0",
+				"size": 214929
 			},
 			{
 				"name": "@floating-ui/utils",
@@ -190,72 +153,72 @@
 			},
 			{
 				"name": "@zag-js/combobox",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 132396
 			},
 			{
 				"name": "@zag-js/aria-hidden",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 12320
 			},
 			{
 				"name": "@zag-js/date-picker",
-				"version": "1.11.0",
-				"size": 183139
+				"version": "1.12.0",
+				"size": 183839
 			},
 			{
 				"name": "@zag-js/live-region",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 6214
 			},
 			{
 				"name": "@zag-js/date-utils",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 60371
 			},
 			{
 				"name": "@zag-js/dialog",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 32421
 			},
 			{
 				"name": "@zag-js/remove-scroll",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 6747
 			},
 			{
 				"name": "@zag-js/focus-trap",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 67108
 			},
 			{
 				"name": "@zag-js/editable",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 48916
 			},
 			{
 				"name": "@zag-js/file-upload",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 55645
 			},
 			{
 				"name": "@zag-js/file-utils",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 22028
 			},
 			{
 				"name": "@zag-js/i18n-utils",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 31461
 			},
 			{
 				"name": "@zag-js/floating-panel",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 81769
 			},
 			{
 				"name": "@zag-js/store",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 26404
 			},
 			{
@@ -265,27 +228,27 @@
 			},
 			{
 				"name": "@zag-js/highlight-word",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 9706
 			},
 			{
 				"name": "@zag-js/hover-card",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 32857
 			},
 			{
 				"name": "@zag-js/listbox",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 77938
 			},
 			{
 				"name": "@zag-js/menu",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 110489
 			},
 			{
 				"name": "@zag-js/number-input",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 80056
 			},
 			{
@@ -305,32 +268,32 @@
 			},
 			{
 				"name": "@zag-js/pagination",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 35984
 			},
 			{
 				"name": "@zag-js/pin-input",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 50119
 			},
 			{
 				"name": "@zag-js/popover",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 39948
 			},
 			{
 				"name": "@zag-js/presence",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 17647
 			},
 			{
 				"name": "@zag-js/progress",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 29404
 			},
 			{
 				"name": "@zag-js/qr-code",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 18456
 			},
 			{
@@ -345,22 +308,22 @@
 			},
 			{
 				"name": "@zag-js/radio-group",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 42414
 			},
 			{
 				"name": "@zag-js/rating-group",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 40201
 			},
 			{
 				"name": "@zag-js/select",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 103817
 			},
 			{
 				"name": "@zag-js/signature-pad",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 32004
 			},
 			{
@@ -370,77 +333,77 @@
 			},
 			{
 				"name": "@zag-js/slider",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 78570
 			},
 			{
 				"name": "@zag-js/splitter",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 94913
 			},
 			{
 				"name": "@zag-js/steps",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 29157
 			},
 			{
 				"name": "@zag-js/svelte",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 17881
 			},
 			{
 				"name": "@zag-js/switch",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 28954
 			},
 			{
 				"name": "@zag-js/tabs",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 50866
 			},
 			{
 				"name": "@zag-js/tags-input",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 95025
 			},
 			{
 				"name": "@zag-js/time-picker",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 82396
 			},
 			{
 				"name": "@zag-js/timer",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 28897
 			},
 			{
 				"name": "@zag-js/toast",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 86818
 			},
 			{
 				"name": "@zag-js/toggle",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 16042
 			},
 			{
 				"name": "@zag-js/toggle-group",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 33963
 			},
 			{
 				"name": "@zag-js/tooltip",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 42867
 			},
 			{
 				"name": "@zag-js/tour",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 88999
 			},
 			{
 				"name": "@zag-js/tree-view",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 77831
 			},
 			{
@@ -570,12 +533,12 @@
 			[35, 6],
 			[0, 36],
 			[36, 2],
+			[36, 5],
 			[36, 37],
 			[37, 38],
 			[38, 5],
-			[36, 5],
-			[36, 38],
 			[36, 3],
+			[36, 38],
 			[36, 4],
 			[36, 6],
 			[0, 39],
@@ -654,18 +617,18 @@
 			[53, 3],
 			[53, 6],
 			[0, 54],
-			[54, 5],
 			[54, 2],
-			[54, 4],
 			[54, 3],
 			[54, 6],
+			[54, 5],
+			[54, 4],
 			[0, 55],
 			[55, 56],
 			[56, 41],
 			[55, 57],
 			[55, 2],
-			[55, 5],
 			[55, 3],
+			[55, 5],
 			[55, 4],
 			[55, 6],
 			[0, 58],
@@ -743,18 +706,18 @@
 			[69, 6],
 			[0, 70],
 			[70, 2],
-			[70, 20],
 			[70, 3],
+			[70, 20],
+			[70, 6],
 			[70, 5],
 			[70, 23],
-			[70, 6],
 			[70, 4],
 			[0, 71],
 			[71, 2],
-			[71, 6],
-			[71, 5],
-			[71, 4],
 			[71, 3],
+			[71, 5],
+			[71, 6],
+			[71, 4],
 			[0, 72],
 			[72, 2],
 			[72, 3],
@@ -803,5 +766,46 @@
 			[0, 78]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# ui-ingredients\r\n\r\nHeadless component library for [Svelte](https://svelte.dev/) powered by [zag](https://zagjs.com/)\r\n\r\n## Installation\r\n\r\n```bash\r\nnpm install ui-ingredients\r\n```\r\n\r\n## Usage\r\n\r\n```svelte\r\n<script>\r\n  import {Dialog, Portal} from 'ui-ingredients';\r\n  import {XCloseIcon} from '$lib/icons';\r\n  import {Button} from '$lib/ui';\r\n</script>\r\n\r\n<Dialog.Root lazyMount keepMounted>\r\n  <Dialog.Trigger>\r\n    {#snippet asChild(attrs)}\r\n      <Button {...attrs}>Open</Button>\r\n    {/snippet}\r\n  </Dialog.Trigger>\r\n\r\n  <Portal>\r\n    <Dialog.Backdrop />\r\n    <Dialog.Positioner>\r\n      <Dialog.Content>\r\n        <Dialog.Title>Title</Dialog.Title>\r\n        <Dialog.Description>Description</Dialog.Description>\r\n        <Dialog.CloseTrigger>\r\n          <XCloseIcon />\r\n        </Dialog.CloseTrigger>\r\n      </Dialog.Content>\r\n    </Dialog.Positioner>\r\n  </Portal>\r\n</Dialog.Root>\r\n```\r\n\r\n## Inspiration\r\n\r\n- [zag](https://zagjs.com/) - The fantastic library that powers UI ingredients\r\n- [ark](https://ark-ui.com/) - The outstanding headless component library that greatly inspired this one\r\n\r\n## Documentation\r\n\r\nBrowse the [documentation](https://ui-ingredients.vercel.app/) for more information on how to use UI Ingredients\r\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3883, 1009],
+		[3890, 876],
+		[3897, 283],
+		[3904, 746],
+		[3911, 385],
+		[3918, 1081],
+		[3925, 259],
+		[3932, 482],
+		[3939, 370],
+		[3946, 302],
+		[3953, 163],
+		[3960, 135],
+		[3967, 101],
+		[3974, 256],
+		[3981, 197],
+		[3988, 1001],
+		[3995, 217],
+		[4002, 179],
+		[4009, 472],
+		[4016, 252],
+		[4023, 131],
+		[4030, 4626],
+		[4037, 1200],
+		[4044, 349],
+		[4051, 318],
+		[4058, 210],
+		[4065, 198],
+		[4072, 124],
+		[4079, 340],
+		[4086, 997],
+		[4093, 239],
+		[4100, 496],
+		[4107, 444],
+		[4114, 371],
+		[4121, 195],
+		[4128, 332],
+		[4135, 314]
+	]
 }

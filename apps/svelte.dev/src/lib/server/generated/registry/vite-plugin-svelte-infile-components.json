@@ -7,27 +7,12 @@
 	"downloads": 3,
 	"updated": "2025-01-10T12:06:19.071Z",
 	"tags": ["tooling"],
-	"runes": false,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.1.2",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.1.2",
-	"downloads_history": [
-		[4022, 173],
-		[4029, 15],
-		[4036, 8],
-		[4043, 7],
-		[4050, 7],
-		[4057, 4],
-		[4064, 3],
-		[4078, 1],
-		[4085, 3],
-		[4099, 6],
-		[4106, 2],
-		[4113, 3]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -53,5 +38,24 @@
 			[2, 1]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Vite Plugin for Svelte Infile Components\n\nEnables multiple components inside a svelte file.\n\nUse the following syntax:\n\n```svelte\n<script lang=\"ts\">\n\timport Counter from 'infile:MyCounter.svelte';\n</script>\n\n<span>Svelte Component<span>\n\n<Counter />\n\n<style>\n\tspan {\n\t\tfont-size: 1.5rem;\n\t\tfont-weight: bold;\n\t}\n</style>\n\n---\n\n<template id=\"MyCounter\">\n\t<script>\n\t\tlet count = $state(0);\n\t</script>\n\n\t<span>Infile component with a counter</span>\n\n\t<button onclick={() => (count += 1)}>Count here: {count}</button>\n\n\t<style>\n\t\tspan {\n\t\t\tcolor: blue;\n\t\t}\n\t</style>\n</template>\n```\n\nFor more complete developer experience, check out the [vscode extension](https://github.com/jangxyz/svelte-infile-components/tree/main/packages/svelte-vscode).\n\n## Quick Start\n\nInstall vite plugin and configure it in `vite.config.ts`.\n\n```bash\nnpm install vite-plugin-svelte-infile-components\n```\n\nSet `vite.config.ts` as following:\n\n```typeScript\nimport { defineConfig } from 'vitest/config';\nimport { sveltekit } from '@sveltejs/kit/vite';\nimport {\n  infileComponentsVitePlugin,\n} from 'vite-plugin-svelte-infile-components';\n\nexport default defineConfig({\n  plugins: [\n    infileComponentsVitePlugin(),\n    sveltekit(),\n  ],\n});\n```\n\n### 2. adjust prettier-plugin-svelte options\n\nIn case you are using svelte with kit (`sv create`), or manually using the prettier-plugin-svelte package, set the `svelteSortOrder` property in prettierrc file to `\"none\"`.\n\n```json\n{\n  \"useTabs\": true,\n  \"singleQuote\": true,\n  \"trailingComma\": \"es5\",\n  \"printWidth\": 100,\n  \"plugins\": [\"prettier-plugin-svelte\"],\n  \"svelteSortOrder\": \"none\",\n  \"overrides\": [\n    {\n      \"files\": \"*.svelte\",\n      \"options\": {\n        \"parser\": \"svelte\"\n      }\n    }\n  ]\n}\n```\n\nThis is required because by default the prettier plugin tries to reorder a svelte component file in \"options-scripts-markup-styles\" order, which means the `<template>` tag in the end will be moved above the `<style>` tag on formatting. (Scheduled for further investigation)\n\n### 3. Install vscode extension\n\nCheck out the [vscode extension](https://github.com/jangxyz/svelte-infile-components/tree/main/packages/svelte-vscode) for more complete developer experience.\n\n### 4. Enjoy!\n\nNow you can add multiple infile components. Works for both `npm run build` and `npm run dev`.\n\n## Features\n\n- allow multiple components inside a single Svelte file.\n- works with JavaScript & TypeScript\n\n### Infile components\n\nYou can append an infile component inside a `<template>` tag, followed by a triple dash separator(`---`). You must set an `id` attribute to the template tag, which will be used as name of the module to import from.\nOnce you have declared an infile component, you import it as if it is a virtual module, with a `infile:` prefix. You can import it as any name you like. If you have two infile components in a file, you can even import it from both the main component and the other infile component.\n\nIt is possible to have multiple infile components, and import from one another. Each component will have its own namespace for script and styles, so it makes it easier to move it into a separate file later on.\n\n```svelte\n<script lang=\"ts\">\n\timport Counter from 'infile:MyCounter.svelte'\n\timport Title from 'infile:Title.svelte'\n</script>\n\n<Title>The main component</Title>\n\n<Counter />\n\n---\n\n<template id=\"MyCounter\">\n\t<script>\n\t\timport Title from 'infile:Title.svelte':\n\t\tlet count = $state(0);\n\t</script>\n\n\t<Title>Infile counter component</Title>\n\n\t<button onclick={() => (count += 1)}>Count here: {count}</button>\n</template>\n\n---\n\n<template id=\"Title\">\n\t<script>\n\t\tlet { children } = $props();\n\t</script>\n\n\t<span>\n\t\t{#render children()}\n\t</span>\n</template>\n```\n\n## Architecture\n\n1. Vite plugin\n\n   Before compiling the svelte component, the vite plugin compiles the infile component first and injects the compiled code into the main component. Since svelte components are functions, it lives as a function inside the main component.\n\n   User can access the component by *import*ing it with a specific import name. Since it does not live in an actual file, we make it as a virtual module prefixed with `infile:`. You can import it as any name you would like. If you have two infile components in a file, you can even import it from both the main component and the other infile component.\n\n   Vite plugin is what makes `npm run build` and `npm run dev` work. It also works nicely with HMR during development.\n\n2. VSCode extension\n\n   Compiling the svelte component and making it run is achievable by vite, but the editing experience is a different story. By default the IDE does not know about importing 'infile:components'. It will -- in case of vscode -- show a red squiggly to denote that the module is not found. Therefore we provide a svelte Language Server Protocol to _tell_ the editor that it's okay.\n\n   In the process, we add some additional features like code refactoring to enhance the developing experience with infile components. Currently there are two refactoring commands available: 1) extract the current selection as an infile component, and 2) move the current infile component to a separate file. More features are under its way.\n\n## TODO\n\nImplementations:\n\n- (./) multiple infile components\n- (./) HMR\n- sourcemap support\n- error diagnostics\n- goto definitions\n- refactoring (rename, extract as infile component, etc.)\n- snippet templates\n\nMore:\n\n- more IDE support for LSP: neovim, jetbrains\n- sveltelab template\n- doc site\n\n## FAQ\n\n### Q. But why? Why should we have multiple components in a Single File Component?\n\nSince the beginning, there were lot of requests on allowing multiple components in a svelte file, like this one: [#2940/Multiple components in one file](https://github.com/sveltejs/svelte/issues/2940). Users from all over found that the feature was _missing_, and they would like to have it inspite of svelte being a \"Single File Component\" based.\n\nHowever the members of Svelte has officially noted that providing multiple components in a single file component would not do. Keeping one component in one file makes it a clear and straightforward structure, it aligns with Svelte's design principle of simplicity, and the user don't have to learn yet another syntax. The official answer for multiple components was that you should create a new file, and most of the time you would get used to it.\nThey did add Snippets in Svelte 5, but it is a bit different -- see the next question.\n\nMeanwhile, others like Ryan Carniato -- the author of SolidJS -- insisted that Single File Components is bad because the act of splitting a file hurts developer experience during development and refactoring. It's the reason why SolidJS turned to use JSX instead of SFC.\n\nHence the infile component project was born. The Svelte team is not going to make it, but still a lot of people think it is important. It's a perfect opportunity for a plugin. Users can try it out, see if it's worth it. The Svelte team can see how the user responds to the alternative implementation.\n\n### Q. Don't we already have Snippets?\n\nSnippets and Infile Components are a bit different. While they provide some common features, like extractable markup in a single file, the differences between them reveals the purpose they exist.\n\nSnippets share logic and style from the main component. It is used for easier access, like inside a `{#each}` block ir an `{#if} {:else}` block. However, it would be a pain to actually extract this into a separate component, because the styles and logic are tangled to the main component.\n\nInfile components do not share the logic nor inherit the style. It is independent from the main component, and it _just happens_ to be on the same file. It's about to be extracted into a new file, but you are still not sure whether creating a new file is worth it. You might end up reverting the split, and delete the file after all. Instead of actualy file creation / deletion, you can test it out inside the same file. That's what infile components are for.\n\n### Q. Are triples dash necessary?\n\nThe triple dash separator exists to express a visual cutting line, like the ones you used to see in paper forms (hey, go bring your scissors!).\n\nThere are some ideas about using plain `<template>` tags to express a snippet, since it _resides inside_ the main component. The idea is still being articulated, but when it is realized, the dashed separator will be able to distinguish between the two.\n\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4023, 173],
+		[4030, 15],
+		[4037, 8],
+		[4044, 7],
+		[4051, 7],
+		[4058, 4],
+		[4065, 3],
+		[4079, 1],
+		[4086, 3],
+		[4100, 6],
+		[4107, 2],
+		[4114, 3],
+		[4121, 8],
+		[4128, 1],
+		[4135, 3]
+	]
 }

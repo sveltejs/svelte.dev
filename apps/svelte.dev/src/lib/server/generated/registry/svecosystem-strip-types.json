@@ -7,17 +7,11 @@
 	"downloads": 32,
 	"updated": "2025-03-25T13:51:55.447Z",
 	"tags": ["tooling"],
-	"runes": false,
 	"github_stars": 12,
 	"typescript": true,
 	"version": "0.0.2",
 	"svelte_range": "^5.25.3",
 	"last_rune_check_version": "0.0.2",
-	"downloads_history": [
-		[4099, 238],
-		[4106, 112],
-		[4113, 32]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -164,5 +158,14 @@
 			[6, 21]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# @svecosystem/strip-types\n\nA type stripper for Svelte.\n\n```sh\npnpm install @svecosystem/strip-types\n```\n\n```ts\nimport { strip } from '@svecosystem/strip-types';\n\nconst ts = `<script lang=\"ts\">\n    let value = $state<string>('');\n</script>`\n\nconst js = strip(ts);\n```\n\n**In**\n\n```svelte\n<script lang=\"ts\">\n    type Foo = number\n\n    let value = $state<Foo>('');\n</script>\n\n<input bind:value/>\n```\n\n**Out**\n\n```svelte\n<script>\n    let value = $state('');\n</script>\n\n<input bind:value/>\n```\n\n## Formatting\n\nBy default `@svecosystem/strip-types` will remove leading and trailing whitespace when removing nodes. This will result in an output that is correctly formatted (with a small performance penalty).\n\nIf you are doing your own formatting you can disable this behavior with the `format` option like so:\n```ts\nconst js = strip(ts, { format: false });\n```\n\n### Empty Script Tags\n\nEmpty script tags can be created as a side effect of removing types or because there was an empty script tag just to enable TypeScript for the template.\n\nIn any case they serve no use in the output code and will be removed by default. You can disable this behavior with the `removeEmptyScripts` option like so:\n```ts\nconst js = strip(ts, { removeEmptyScripts: false });\n```\n\n## Limitations\n\n### Formatting\n\nWhile `@svecosystem/strip-types` includes a `format` option it is not a formatter. It will do it's best to maintain the formatting of the original code when stripping types but it is still recommended to use your own formatter if possible.\n\n### Unsupported Syntax\n\n- ❌ Enums \n```ts\nenum Foo {\n    Bar\n}\n```\n- ❌ Constructor Parameter Properties\n```ts\nclass Foo {\n    // the access modifier (public) is not allowed\n    constructor(public bar) {\n\n    }\n}\n```  \n\n## Contributing\n\nInstall dependencies:\n\n```sh\npnpm install\n```\n\nRun tests:\n\n```sh\npnpm test\n```\n\nAdd a changeset with your changes:\n```sh\npnpm changeset\n```\n\nFinally before you commit your changes run:\n\n```sh\npnpm format\n\npnpm check\n```\n\n### Tests\n\nIf you are contributing please make sure to include tests.\n\nAll the test cases can be found under `./tests/cases`.\n\nEach case is a folder with 2 files a `ts.svelte` and a `js.svelte`. `js.svelte` should be the stripped version of the `ts.svelte`. If you don't provide `js.svelte` then `vitest` will expect `strip` to error.\n\n**Example test case**\n```\ntests\n└── cases\n    ├── <your test name>\n    │   ├── js.svelte\n    │   └── ts.svelte\n    └── ...\n```",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4100, 238],
+		[4107, 112],
+		[4114, 32],
+		[4121, 44],
+		[4128, 42]
+	]
 }

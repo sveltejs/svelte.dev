@@ -9,14 +9,9 @@
 	"updated": "2025-04-04T14:28:51.424Z",
 	"tags": ["miscellaneous"],
 	"svelte_range": "^4.2.7",
-	"runes": false,
 	"last_rune_check_version": "1.0.5",
 	"version": "1.0.5",
 	"github_stars": 0,
-	"downloads_history": [
-		[4106, 298],
-		[4113, 38]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -47,5 +42,14 @@
 			[0, 3]
 		],
 		"circular": []
-	}
+	},
+	"readme": "ERROR: No README data found!",
+	"legacy_svelte": true,
+	"downloads_history": [
+		[4107, 298],
+		[4114, 38],
+		[4121, 14],
+		[4128, 13],
+		[4135, 6]
+	]
 }

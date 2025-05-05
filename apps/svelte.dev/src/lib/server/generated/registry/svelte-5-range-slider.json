@@ -7,26 +7,12 @@
 	"downloads": 5,
 	"updated": "2025-01-30T15:30:23.484Z",
 	"tags": ["ui"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.0.8",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "0.0.8",
-	"downloads_history": [
-		[4043, 438],
-		[4050, 19],
-		[4057, 14],
-		[4064, 3],
-		[4071, 6],
-		[4078, 7],
-		[4085, 13],
-		[4092, 28],
-		[4099, 21],
-		[4106, 10],
-		[4113, 5]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -38,5 +24,22 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# RangeSlider - Svelte Component\n\nA customizable double-thumb range slider built for Svelte. This component allows users to select a range between a minimum and maximum value with two draggable thumbs.\n\n## Installation\n\nInstall the package via npm:\n\n```sh\nnpm install svelte-5-range-slider\n```\n\n## Usage\n\nImport the `RangeSlider` component into your Svelte file and bind it to two state variables:\n\n```svelte\n<script lang=\"ts\">\n  import RangeSlider  from \"svelte-5-range-slider/RangeSlider.svelte\";\n\n  let thumb1 = $state(25);\n  let thumb2 = $state(50);\n\n  const trackOptions = {\n    height: 12,\n    color: \"#323841\",\n    radius: 10000,\n    connecting: {\n      color: \"#ECF9FF\",\n      padding: 4,\n      radius: 100000,\n    },\n  };\n\n  const thumbOptions = {\n    color: \"#1D232A\",\n    size: 16,\n    radius: 20,\n  };\n\n  const sliderOptions = {\n    min: 18,\n    max: 90,\n    step: 1,\n  };\n</script>\n\n<div class=\"slider-container\">\n  <span>{thumb1} - {thumb2}</span>\n  <RangeSlider\n    bind:thumb1\n    bind:thumb2\n    {sliderOptions}\n    {trackOptions}\n    {thumbOptions}\n  />\n</div>\n```\n\n## Examples\n\n![RangeSlider Preview](static/examples.png)\n\n## Props\n\n### `sliderOptions: SliderOptions`\n\n- `min` (number) - Minimum value of the slider\n- `max` (number) - Maximum value of the slider\n- `step` (number) - Increment steps\n\n### `trackOptions: TrackOptions`\n\n- `height` (number) - Height of the track\n- `color` (string) - Color of the track\n- `radius` (number) - Border radius of the track\n- `connecting.color` (string) - Color of the selected range section\n- `connecting.padding` (number) - Padding around the selected range\n- `connecting.radius` (number) - Border radius of the selected range\n\n### `thumbOptions: ThumbOptions`\n\n- `color` (string) - Color of the thumb\n- `size` (number) - Size of the thumb\n- `radius` (number) - Border radius of the thumb\n- `border.size` (number) - Border width of the thumb (optional)\n- `border.color` (string) - Border color of the thumb (optional)\n\n## Types\n\n```ts\ninterface TrackOptions {\n  height: number;\n  color: string;\n  radius: number;\n  class?: string;\n  connecting?: {\n    color: string;\n    padding: number;\n    radius: number;\n    class?: string;\n  } | null;\n}\n\ninterface ThumbOptions {\n  color: string;\n  size: number;\n  radius: number;\n  class?: string;\n  border?: {\n    size: number;\n    color: string;\n  } | null;\n}\n\ninterface SliderOptions {\n  min: number;\n  max: number;\n  step: number;\n}\n```\n\n## Events\n\nThis component automatically updates `thumb1` and `thumb2` values when the user interacts with the slider.\n\n## Styling\n\nThe slider is styled via inline styles and can be customized using the provided options. If additional styling is needed, you can wrap it in a styled container and apply CSS classes accordingly.\n\n## License\n\nThis project is licensed under the MIT License.\n\n---\n\nHappy coding! 🎉\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4044, 438],
+		[4051, 19],
+		[4058, 14],
+		[4065, 3],
+		[4072, 6],
+		[4079, 7],
+		[4086, 13],
+		[4093, 28],
+		[4100, 21],
+		[4107, 10],
+		[4114, 5],
+		[4121, 9],
+		[4128, 2]
+	]
 }

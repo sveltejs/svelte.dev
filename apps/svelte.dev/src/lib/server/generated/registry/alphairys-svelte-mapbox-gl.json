@@ -6,56 +6,12 @@
 	"downloads": 6,
 	"updated": "2024-02-28T19:02:57.141Z",
 	"tags": ["ui", "miscellaneous"],
-	"runes": false,
 	"typescript": true,
 	"version": "0.0.1",
 	"svelte_range": "^3.0.0",
 	"kit_range": "^1.0.0-next.587",
 	"last_rune_check_version": "0.0.1",
 	"github_stars": 0,
-	"downloads_history": [
-		[3707, 57],
-		[3714, 3],
-		[3721, 3],
-		[3728, 4],
-		[3735, 1],
-		[3756, 2],
-		[3770, 1],
-		[3777, 3],
-		[3784, 1],
-		[3798, 1],
-		[3805, 3],
-		[3826, 1],
-		[3833, 6],
-		[3840, 1],
-		[3854, 2],
-		[3861, 2],
-		[3875, 2],
-		[3882, 1],
-		[3903, 2],
-		[3910, 3],
-		[3917, 2],
-		[3931, 3],
-		[3959, 1],
-		[3980, 1],
-		[3987, 1],
-		[3994, 1],
-		[4001, 1],
-		[4008, 1],
-		[4015, 2],
-		[4022, 2],
-		[4029, 2],
-		[4036, 2],
-		[4043, 5],
-		[4050, 3],
-		[4057, 1],
-		[4064, 1],
-		[4071, 1],
-		[4085, 6],
-		[4092, 1],
-		[4099, 4],
-		[4113, 6]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -76,105 +32,8 @@
 			},
 			{
 				"name": "mapbox-gl",
-				"version": "3.11.0",
-				"size": 54771219
-			},
-			{
-				"name": "@mapbox/jsonlint-lines-primitives",
-				"version": "2.0.2",
-				"size": 67804
-			},
-			{
-				"name": "@mapbox/mapbox-gl-supported",
-				"version": "3.0.0",
-				"size": 9193
-			},
-			{
-				"name": "@mapbox/point-geometry",
-				"version": "0.1.0"
-			},
-			{
-				"name": "@mapbox/tiny-sdf",
-				"version": "2.0.6",
-				"size": 10711
-			},
-			{
-				"name": "@mapbox/unitbezier",
-				"version": "0.0.1",
-				"size": 5015
-			},
-			{
-				"name": "@mapbox/vector-tile",
-				"version": "1.3.1",
-				"size": 261972
-			},
-			{
-				"name": "@mapbox/whoots-js",
-				"version": "3.1.0",
-				"size": 10488
-			},
-			{
-				"name": "@types/geojson-vt",
-				"version": "3.2.5",
-				"size": 6961
-			},
-			{
-				"name": "@types/mapbox__point-geometry",
-				"version": "0.1.4",
-				"size": 5041
-			},
-			{
-				"name": "@types/mapbox__vector-tile",
-				"version": "1.3.4",
-				"size": 4645
-			},
-			{
-				"name": "@types/pbf",
-				"version": "3.0.5",
-				"size": 5511
-			},
-			{
-				"name": "@types/supercluster",
-				"version": "7.1.3",
-				"size": 8399
-			},
-			{
-				"name": "cheap-ruler",
-				"version": "4.0.0",
-				"size": 48159
-			},
-			{
-				"name": "csscolorparser",
-				"version": "1.0.3"
-			},
-			{
-				"name": "earcut",
-				"version": "3.0.1",
-				"size": 57432
-			},
-			{
-				"name": "geojson-vt",
-				"version": "4.0.2",
-				"size": 72236
-			},
-			{
-				"name": "gl-matrix",
-				"version": "3.4.3",
-				"size": 769666
-			},
-			{
-				"name": "grid-index",
-				"version": "1.1.0",
-				"size": 11957
-			},
-			{
-				"name": "kdbush",
-				"version": "4.0.2",
-				"size": 34356
-			},
-			{
-				"name": "murmurhash-js",
-				"version": "1.0.0"
+				"version": "3.11.1",
+				"size": 54865424
 			},
 			{
 				"name": "pbf",
@@ -197,24 +56,38 @@
 				"size": 68684
 			},
 			{
+				"name": "earcut",
+				"version": "3.0.1",
+				"size": 57432
+			},
+			{
+				"name": "kdbush",
+				"version": "4.0.2",
+				"size": 34356
+			},
+			{
+				"name": "vt-pbf",
+				"version": "3.1.3",
+				"size": 11989
+			},
+			{
+				"name": "@mapbox/point-geometry",
+				"version": "0.1.0"
+			},
+			{
+				"name": "@mapbox/vector-tile",
+				"version": "1.3.1",
+				"size": 261972
+			},
+			{
 				"name": "potpack",
 				"version": "2.0.0",
 				"size": 7114
 			},
 			{
-				"name": "quickselect",
-				"version": "3.0.0",
-				"size": 5287
-			},
-			{
-				"name": "serialize-to-js",
-				"version": "3.1.2",
-				"size": 25690
-			},
-			{
-				"name": "supercluster",
-				"version": "8.0.1",
-				"size": 57707
+				"name": "gl-matrix",
+				"version": "3.4.3",
+				"size": 769666
 			},
 			{
 				"name": "tinyqueue",
@@ -222,9 +95,92 @@
 				"size": 4937
 			},
 			{
-				"name": "vt-pbf",
-				"version": "3.1.3",
-				"size": 11989
+				"name": "@types/pbf",
+				"version": "3.0.5",
+				"size": 5511
+			},
+			{
+				"name": "geojson-vt",
+				"version": "4.0.2",
+				"size": 72236
+			},
+			{
+				"name": "grid-index",
+				"version": "1.1.0",
+				"size": 11957
+			},
+			{
+				"name": "cheap-ruler",
+				"version": "4.0.0",
+				"size": 48159
+			},
+			{
+				"name": "quickselect",
+				"version": "3.0.0",
+				"size": 5287
+			},
+			{
+				"name": "supercluster",
+				"version": "8.0.1",
+				"size": 57707
+			},
+			{
+				"name": "murmurhash-js",
+				"version": "1.0.0"
+			},
+			{
+				"name": "csscolorparser",
+				"version": "1.0.3"
+			},
+			{
+				"name": "serialize-to-js",
+				"version": "3.1.2",
+				"size": 25690
+			},
+			{
+				"name": "@mapbox/tiny-sdf",
+				"version": "2.0.6",
+				"size": 10711
+			},
+			{
+				"name": "@mapbox/whoots-js",
+				"version": "3.1.0",
+				"size": 10488
+			},
+			{
+				"name": "@types/geojson-vt",
+				"version": "3.2.5",
+				"size": 6961
+			},
+			{
+				"name": "@mapbox/unitbezier",
+				"version": "0.0.1",
+				"size": 5015
+			},
+			{
+				"name": "@types/supercluster",
+				"version": "7.1.3",
+				"size": 8399
+			},
+			{
+				"name": "@types/mapbox__vector-tile",
+				"version": "1.3.4",
+				"size": 4645
+			},
+			{
+				"name": "@types/mapbox__point-geometry",
+				"version": "0.1.4",
+				"size": 5041
+			},
+			{
+				"name": "@mapbox/mapbox-gl-supported",
+				"version": "3.0.0",
+				"size": 9193
+			},
+			{
+				"name": "@mapbox/jsonlint-lines-primitives",
+				"version": "2.0.2",
+				"size": 67804
 			},
 			{
 				"name": "@turf/turf",
@@ -1044,46 +1000,46 @@
 			[1, 2],
 			[0, 3],
 			[3, 4],
-			[3, 5],
-			[3, 6],
-			[3, 7],
+			[4, 5],
+			[4, 6],
+			[6, 7],
 			[3, 8],
 			[3, 9],
-			[9, 6],
 			[3, 10],
-			[3, 2],
-			[3, 11],
-			[11, 2],
-			[3, 12],
+			[10, 11],
+			[10, 12],
+			[12, 11],
+			[10, 4],
 			[3, 13],
-			[13, 14],
-			[13, 2],
-			[13, 12],
 			[3, 14],
 			[3, 15],
-			[15, 2],
 			[3, 16],
 			[3, 17],
 			[3, 18],
 			[3, 19],
 			[3, 20],
 			[3, 21],
+			[21, 9],
 			[3, 22],
+			[3, 2],
 			[3, 23],
 			[3, 24],
-			[24, 25],
-			[24, 26],
-			[26, 27],
+			[3, 25],
+			[3, 26],
+			[3, 27],
+			[27, 2],
 			[3, 28],
+			[3, 12],
 			[3, 29],
+			[29, 2],
+			[3, 11],
 			[3, 30],
-			[3, 31],
-			[31, 22],
+			[30, 16],
+			[30, 2],
+			[30, 31],
 			[3, 32],
+			[3, 31],
 			[3, 33],
-			[33, 6],
-			[33, 9],
-			[33, 24],
 			[0, 34],
 			[34, 35],
 			[35, 36],
@@ -1673,5 +1629,52 @@
 			[197, 196]
 		],
 		"circular": []
-	}
+	},
+	"legacy_svelte": true,
+	"readme": "# create-svelte\n\nEverything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).\n\n## Creating a project\n\nIf you're seeing this, you've probably already done this step. Congrats!\n\n```bash\n# create a new project in the current directory\nnpm create svelte@latest\n\n# create a new project in my-app\nnpm create svelte@latest my-app\n```\n\n## Developing\n\nOnce you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:\n\n```bash\nnpm run dev\n\n# or start the server and open the app in a new browser tab\nnpm run dev -- --open\n```\n\n## Building\n\nTo create a production version of your app:\n\n```bash\nnpm run build\n```\n\nYou can preview the production build with `npm run preview`.\n\n> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.\n",
+	"downloads_history": [
+		[3708, 57],
+		[3715, 3],
+		[3722, 3],
+		[3729, 4],
+		[3736, 1],
+		[3757, 2],
+		[3771, 1],
+		[3778, 3],
+		[3785, 1],
+		[3799, 1],
+		[3806, 3],
+		[3827, 1],
+		[3834, 6],
+		[3841, 1],
+		[3855, 2],
+		[3862, 2],
+		[3876, 2],
+		[3883, 1],
+		[3904, 2],
+		[3911, 3],
+		[3918, 2],
+		[3932, 3],
+		[3960, 1],
+		[3981, 1],
+		[3988, 1],
+		[3995, 1],
+		[4002, 1],
+		[4009, 1],
+		[4016, 2],
+		[4023, 2],
+		[4030, 2],
+		[4037, 2],
+		[4044, 5],
+		[4051, 3],
+		[4058, 1],
+		[4065, 1],
+		[4072, 1],
+		[4086, 6],
+		[4093, 1],
+		[4100, 4],
+		[4114, 6],
+		[4121, 11],
+		[4128, 4]
+	]
 }

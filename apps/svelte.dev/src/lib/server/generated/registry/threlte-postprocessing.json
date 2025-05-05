@@ -7,24 +7,12 @@
 	"downloads": 53,
 	"updated": "2025-03-03T10:26:51.067Z",
 	"tags": ["ui"],
-	"runes": true,
 	"typescript": true,
 	"version": "0.0.9",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "0.0.9",
 	"github_stars": 0,
-	"downloads_history": [
-		[4057, 332],
-		[4064, 23],
-		[4071, 17],
-		[4078, 145],
-		[4085, 27],
-		[4092, 9],
-		[4099, 38],
-		[4106, 160],
-		[4113, 53]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -45,8 +33,8 @@
 			},
 			{
 				"name": "@threlte/extras",
-				"version": "9.1.3",
-				"size": 360169
+				"version": "9.1.4",
+				"size": 360960
 			},
 			{
 				"name": "@threejs-kit/instanced-sprite-mesh",
@@ -129,8 +117,8 @@
 			},
 			{
 				"name": "postprocessing",
-				"version": "6.37.2",
-				"size": 2751616
+				"version": "6.37.3",
+				"size": 2750928
 			},
 			{
 				"name": "three",
@@ -139,8 +127,8 @@
 			},
 			{
 				"name": "three-stdlib",
-				"version": "2.35.15",
-				"size": 26405958
+				"version": "2.36.0",
+				"size": 26405014
 			},
 			{
 				"name": "@types/draco3d",
@@ -244,5 +232,21 @@
 			[34, 30]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Threlte Postprocessing\n\n[//]: # (<p align=\"center\">)\n\n[//]: # (  <img width=\"1200\" src=\"https://raw.githubusercontent.com/1bye/threlte-postprocessing/main/banner.png\" alt=\"Threlte Postprocessing\" />)\n\n[//]: # (</p>)\n\n[![Version](https://img.shields.io/npm/v/threlte-postprocessing?style=flat&colorA=000000&colorB=000000)](https://www.npmjs.com/package/threlte-postprocessing)\n[![Downloads](https://img.shields.io/npm/dt/threlte-postprocessing.svg?style=flat&colorA=000000&colorB=000000)](https://www.npmjs.com/package/threlte-postprocessing)\n[![License](https://img.shields.io/npm/l/threlte-postprocessing?style=flat&colorA=000000&colorB=000000)](https://github.com/1bye/threlte-postprocessing/blob/main/LICENSE)\n\nThrelte Postprocessing is a postprocessing effects library for [Threlte](https://threlte.xyz/), bringing powerful post-processing capabilities to your Svelte 3D applications. Built on top of [three.js](https://threejs.org/) and [postprocessing](https://github.com/pmndrs/postprocessing), it provides a set of ready-to-use effects that can be easily integrated into your Threlte scenes.\n\n```bash\nnpm install threlte-postprocessing\n```\n\n## Quick start 🚀\n\n```svelte\n<script lang=\"ts\">\n  import { Canvas } from \"@threlte/core\";\n  import Scene from \"./Scene.svelte\";\n</script>\n\n<Canvas>\n  <Scene />\n</Canvas>\n```\n\n```svelte\n<script lang=\"ts\">\n  import { EffectComposer } from 'threlte-postprocessing'\n  import { DepthOfFieldEffect, BloomEffect, NoiseEffect, VignetteEffect } from 'threlte-postprocessing/effects'\n</script>\n\n<EffectComposer>\n  <DepthOfFieldEffect focusDistance={0} focalLength={0.02} bokehScale={2} height={480} />\n  <BloomEffect luminanceThreshold={0} luminanceSmoothing={0.9} height={300} />\n  <NoiseEffect opacity={0.02} />\n  <VignetteEffect eskil={false} offset={0.1} darkness={1.1} />\n</EffectComposer>\n```\n\n## Demo\nLink to [demo](https://codesandbox.io/p/github/1bye/threlte-postprocessing/main)\n\n## Features ✨\n\n- 🎯 Seamless integration with Threlte and Svelte\n- ⚡️ Simple, declarative API\n- 🎨 Rich set of post-processing effects\n- 📦 Tree-shakeable effects\n- 🔧 Fully typed with TypeScript\n- 🎮 Real-time effect parameter updates\n\n## Effects Documentation 📚\n\n### Bloom\nAdds a glow effect to bright areas of the scene.\n\n```svelte\n<BloomEffect\n  intensity={1.0}           // The intensity of the bloom effect (default: 1.0)\n  luminanceThreshold={0.9}  // Minimum luminance required for bloom (default: 0.9)\n  luminanceSmoothing={0.025}// Smoothing of the luminance threshold (default: 0.025)\n  mipmapBlur={false}       // Whether to use mipmap blur (default: false)\n  height={480}             // Render height (default: 480)\n/>\n```\n\n### BrightnessContrast\nAdjusts the brightness and contrast of the scene.\n\n```svelte\n<BrightnessContrastEffect\n  brightness={0}           // Brightness adjustment (-1 to 1, default: 0)\n  contrast={0}            // Contrast adjustment (-1 to 1, default: 0)\n/>\n```\n\n### ChromaticAberration\nSimulates lens color separation artifacts.\n\n```svelte\n<ChromaticAberrationEffect\n  offset={[0.002, 0.002]}  // RGB offset vector (default: [0.002, 0.002])\n  radialModulation={false} // Enable radial offset modulation (default: false)\n  modulationOffset={0.15}  // Modulation offset (default: 0.15)\n/>\n```\n\n### ColorAverage\nReduces the image to a single average color.\n\n```svelte\n<ColorAverageEffect />\n```\n\n### ColorDepth\nReduces the color depth of the image.\n\n```svelte\n<ColorDepthEffect\n  bits={16}               // Number of bits per channel (default: 16)\n/>\n```\n\n### ColorGrading\nApplies color adjustments to the final render.\n\n```svelte\n<ColorGradingEffect\n  lut={texture}            // Color lookup texture\n  lutSize={32}            // Size of the lookup texture (default: 32)\n  intensity={1.0}         // Effect intensity (default: 1.0)\n/>\n```\n\n### Depth\nRenders the scene's depth buffer.\n\n```svelte\n<DepthEffect\n  inverted={false}        // Invert the depth values (default: false)\n  near={0}               // Near plane distance (default: 0)\n  far={1}               // Far plane distance (default: 1)\n/>\n```\n\n### DepthOfField\nSimulates camera focus effects by blurring objects based on their distance from the focal point.\n\n```svelte\n<DepthOfFieldEffect\n  focusDistance={0.0}      // Distance to the focus point (default: 0.0)\n  focalLength={0.02}       // Focal length of the simulated camera (default: 0.02)\n  bokehScale={2.0}         // Size of the bokeh effect (default: 2.0)\n  height={480}             // Render height (default: 480)\n/>\n```\n\n### DotScreen\nCreates a dot-screen effect similar to halftone printing.\n\n```svelte\n<DotScreenEffect\n  angle={1.57}            // Pattern angle in radians (default: 1.57)\n  scale={1.0}             // Pattern scale (default: 1.0)\n/>\n```\n\n### Glitch\nCreates digital glitch effects.\n\n```svelte\n<GlitchEffect\n  delay={[1.5, 3.5]}      // Min/max delay between glitches (default: [1.5, 3.5])\n  duration={[0.6, 1.0]}   // Min/max glitch duration (default: [0.6, 1.0])\n  strength={[0.3, 1.0]}   // Min/max glitch strength (default: [0.3, 1.0])\n  mode={GlitchMode.CONSTANT} // Glitch mode (CONSTANT, SPORADIC)\n/>\n```\n\n### GodRays\nCreates volumetric lighting effects.\n\n```svelte\n<GodRaysEffect\n  decay={0.95}            // Light decay factor (default: 0.95)\n  density={0.96}          // Ray density (default: 0.96)\n  weight={0.4}            // Ray weight (default: 0.4)\n  exposure={0.6}          // Ray exposure (default: 0.6)\n  samples={60}            // Number of samples (default: 60)\n/>\n```\n\n### Grid\nOverlays a grid pattern on the scene.\n\n```svelte\n<GridEffect\n  scale={1.0}             // Grid scale (default: 1.0)\n  lineWidth={0.0}         // Grid line width (default: 0.0)\n/>\n```\n\n### HueSaturation\nAdjusts the hue and saturation of the scene.\n\n```svelte\n<HueSaturationEffect\n  hue={0}                 // Hue adjustment (-Math.PI to Math.PI, default: 0)\n  saturation={0}          // Saturation adjustment (-1 to 1, default: 0)\n/>\n```\n\n### Noise\nAdds film grain or noise to the scene.\n\n```svelte\n<NoiseEffect\n  opacity={0.02}           // Noise opacity (default: 0.02)\n  premultiply={false}      // Whether to premultiply the noise (default: false)\n  blendFunction={BlendFunction.SCREEN} // Blend mode for the noise\n/>\n```\n\n### Pixelation\nCreates a pixelated effect by reducing the resolution.\n\n```svelte\n<PixelationEffect\n  granularity={5}         // Size of pixels (default: 5)\n/>\n```\n\n### Scanline\nAdds scanlines to the scene, similar to old CRT displays.\n\n```svelte\n<ScanlineEffect\n  density={1.25}          // Line density (default: 1.25)\n/>\n```\n\n### Sepia\nApplies a sepia tone to the scene.\n\n```svelte\n<SepiaEffect\n  intensity={1.0}         // Effect intensity (default: 1.0)\n/>\n```\n\n### SMAA (Subpixel Morphological Antialiasing)\nProvides high-quality antialiasing.\n\n```svelte\n<SMAAEffect\n  preset={SMAAPreset.HIGH} // Quality preset (LOW, MEDIUM, HIGH, ULTRA)\n  edgeDetectionMode={EdgeDetectionMode.COLOR} // Detection mode (COLOR, DEPTH, LUMA)\n/>\n```\n\n### ToneMapping\nApplies tone mapping to the scene.\n\n```svelte\n<ToneMappingEffect\n  mode={ToneMappingMode.REINHARD} // Tone mapping mode (REINHARD, OPTIMIZED, ACES, HEJL)\n  exposure={1.0}          // Exposure level (default: 1.0)\n  maxLuminance={16.0}     // Maximum luminance (default: 16.0)\n  middleGrey={0.6}        // Middle grey point (default: 0.6)\n  whitePoint={16.0}       // White point (default: 16.0)\n/>\n```\n\n### Vignette\nDarkens the edges of the scene.\n\n```svelte\n<VignetteEffect\n  offset={0.5}             // Offset of the effect (default: 0.5)\n  darkness={0.5}           // Intensity of the darkening (default: 0.5)\n  eskil={false}            // Use Eskil's vignette technique (default: false)\n/>\n```\n\n### Custom Fluid Effect\nFluid like in [react-fluid](https://github.com/whatisjery/react-fluid-distortion/tree/main)\n```svelte\n<script lang=\"ts\">\n    import { FluidEffect } from \"threlte-postprocessing/custom\";\n</script>\n\n<!-- Don't forget to wrap it with <EffectComposer>! -->\n<FluidEffect />\n```\n\n### And more...\nYou can check more effects in [effects folder](./src/lib/effects)\n\n## Contributing 🤝\n\nWe welcome contributions! Here's how you can help:\n\n1. Fork the repository\n2. Create your feature branch (`git checkout -b feature/amazing-effect`)\n3. Commit your changes (`git commit -m 'Add amazing effect'`)\n4. Push to the branch (`git push origin feature/amazing-effect`)\n5. Open a Pull Request\n\n## Performance Tips 💨\n\n- Only use the effects you need\n- Adjust effect quality settings based on device capabilities\n- Consider using the `<EffectComposer>` component for better control\n- Enable effect pass switching for dynamic performance optimization\n\n## Credits 🙏\n\nThis library builds upon several amazing projects:\n- [Threlte](https://threlte.xyz/)\n- [three.js](https://threejs.org/)\n- [postprocessing](https://github.com/pmndrs/postprocessing)\n\n## License 📄\n\nThis project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.\n\n---\n\n<p align=\"center\">Made with ❤️ for the Threlte and Svelte community</p>",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4058, 332],
+		[4065, 23],
+		[4072, 17],
+		[4079, 145],
+		[4086, 27],
+		[4093, 9],
+		[4100, 38],
+		[4107, 160],
+		[4114, 53],
+		[4121, 31],
+		[4128, 25],
+		[4135, 23]
+	]
 }

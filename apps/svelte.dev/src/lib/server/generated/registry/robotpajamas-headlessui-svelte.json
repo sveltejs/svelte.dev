@@ -7,31 +7,12 @@
 	"downloads": 5,
 	"updated": "2024-12-11T14:10:54.356Z",
 	"tags": ["ui", "design-system"],
-	"runes": true,
 	"github_stars": 1,
 	"typescript": true,
 	"version": "2.2.0-beta.3",
 	"svelte_range": ">=5",
 	"kit_range": "^2.9.0",
 	"last_rune_check_version": "2.2.0-beta.3",
-	"downloads_history": [
-		[3994, 288],
-		[4001, 17],
-		[4008, 9],
-		[4015, 16],
-		[4022, 10],
-		[4029, 10],
-		[4036, 15],
-		[4043, 9],
-		[4050, 4],
-		[4057, 1],
-		[4064, 2],
-		[4071, 3],
-		[4078, 1],
-		[4092, 5],
-		[4106, 15],
-		[4113, 5]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -43,5 +24,27 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# headlessui-svelte\n\nThis is an alpha port of [HeadlessUI](https://headlessui.com/) targeting Svelte 5 (or later).\n\nA primary design goal is to stay as reasonably faithful to the HeadlessUI-React API as possible, in order to integrate better with [TailwindUI](https://tailwindui.com/). A secondary design goal is to align folder naming and tests, in order to reduce cognitive burden when porting and making updates.\n\nThis can manifest in strange, but intentional, ways:\n- the existence of a `hooks` folder (not [SvelteKit hooks](https://svelte.dev/docs/kit/hooks))\n- using test functions from the main headlessui repo, instead of the equivalent `testing-library` functionality\n- the existence of a `Fragment` component\n- ...\n\n## Installation\n\n```bash\nnpm install @robotpajamas/headlessui-svelte\n```\n\n## Documentation\n\nFull documenation and examples will eventually live at [headlessui-svelte.com](https://headlessui-svelte.com)\n\n## Progress\n\nThe target compatibility for the components below is based on [HeadlessUI React 2.2.0 (d71fb9c)](https://github.com/tailwindlabs/headlessui/tree/d71fb9cd2e12f5a48617b26e6bb3db90b3e07965). A component is considered completed when most of the mapped-over tests pass, and the component functions similarly to [headlessui.com](headlessui.com).\n\n### Forms\n\n- [ ] Button\n- [ ] Checkbox\n- [ ] Combobox\n- [ ] Description\n- [ ] Field\n- [ ] Fieldset\n- [ ] Input\n- [ ] Label\n- [ ] Listbox\n- [ ] Radio Group\n- [ ] Select\n- [ ] Switch\n- [ ] Textarea\n\n### Components\n\n- [ ] Dropdown Menu\n- [ ] Disclosure\n- [ ] Dialog\n- [ ] Popover\n- [ ] Portal\n- [ ] Tabs\n- [ ] Transition\n\n## Community\n\nOther Svelte-based HeadlessUI implementations:\n\n- CaptainCodeman: https://github.com/CaptainCodeman/svelte-headlessui\n- rgossiaux: https://github.com/rgossiaux/svelte-headlessui\n\n## License\n\nThis library is licensed under the MIT license; see the LICENSE file for more.\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3995, 288],
+		[4002, 17],
+		[4009, 9],
+		[4016, 16],
+		[4023, 10],
+		[4030, 10],
+		[4037, 15],
+		[4044, 9],
+		[4051, 4],
+		[4058, 1],
+		[4065, 2],
+		[4072, 3],
+		[4079, 1],
+		[4093, 5],
+		[4107, 15],
+		[4114, 5],
+		[4121, 6],
+		[4128, 4]
+	]
 }

@@ -7,19 +7,11 @@
 	"downloads": 17,
 	"updated": "2025-03-18T08:58:38.341Z",
 	"tags": ["tooling"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.0.8",
 	"svelte_range": "^5.23.0",
 	"last_rune_check_version": "0.0.8",
-	"downloads_history": [
-		[4085, 211],
-		[4092, 205],
-		[4099, 37],
-		[4106, 4],
-		[4113, 17]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -98,77 +90,13 @@
 			},
 			{
 				"name": "@babel/core",
-				"version": "7.26.10",
-				"size": 795988
+				"version": "7.27.1",
+				"size": 794180
 			},
 			{
-				"name": "json5",
-				"version": "2.2.3",
-				"size": 235198
-			},
-			{
-				"name": "semver",
-				"version": "6.3.1",
-				"size": 68343
-			},
-			{
-				"name": "gensync",
-				"version": "1.0.0-beta.2",
-				"size": 28891
-			},
-			{
-				"name": "@babel/types",
-				"version": "7.27.0",
-				"size": 2583295
-			},
-			{
-				"name": "@babel/helper-string-parser",
-				"version": "7.25.9",
-				"size": 31816
-			},
-			{
-				"name": "@babel/helper-validator-identifier",
-				"version": "7.25.9",
-				"size": 48330
-			},
-			{
-				"name": "@babel/parser",
-				"version": "7.27.0",
-				"size": 1924962
-			},
-			{
-				"name": "@babel/helpers",
-				"version": "7.27.0",
-				"size": 866498
-			},
-			{
-				"name": "@babel/template",
-				"version": "7.27.0",
-				"size": 70675
-			},
-			{
-				"name": "@babel/code-frame",
-				"version": "7.26.2",
-				"size": 33160
-			},
-			{
-				"name": "js-tokens",
-				"version": "4.0.0"
-			},
-			{
-				"name": "picocolors",
-				"version": "1.1.1",
-				"size": 6373
-			},
-			{
-				"name": "@babel/traverse",
-				"version": "7.27.0",
-				"size": 676526
-			},
-			{
-				"name": "@babel/generator",
-				"version": "7.27.0",
-				"size": 559855
+				"name": "@ampproject/remapping",
+				"version": "2.3.0",
+				"size": 78946
 			},
 			{
 				"name": "@jridgewell/gen-mapping",
@@ -191,64 +119,78 @@
 				"size": 53153
 			},
 			{
+				"name": "@babel/code-frame",
+				"version": "7.27.1",
+				"size": 33160
+			},
+			{
+				"name": "@babel/helper-validator-identifier",
+				"version": "7.27.1",
+				"size": 48330
+			},
+			{
+				"name": "js-tokens",
+				"version": "4.0.0"
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "@babel/generator",
+				"version": "7.27.1",
+				"size": 560098
+			},
+			{
+				"name": "@babel/parser",
+				"version": "7.27.1",
+				"size": 1859876
+			},
+			{
+				"name": "@babel/types",
+				"version": "7.27.1",
+				"size": 2597469
+			},
+			{
+				"name": "@babel/helper-string-parser",
+				"version": "7.27.1",
+				"size": 31816
+			},
+			{
 				"name": "jsesc",
 				"version": "3.1.0",
 				"size": 32280
 			},
 			{
-				"name": "globals",
-				"version": "11.12.0",
-				"size": 39779
-			},
-			{
-				"name": "convert-source-map",
-				"version": "2.0.0",
-				"size": 15854
-			},
-			{
-				"name": "@ampproject/remapping",
-				"version": "2.3.0",
-				"size": 78946
-			},
-			{
-				"name": "@babel/helper-module-transforms",
-				"version": "7.26.0",
-				"size": 160842
-			},
-			{
-				"name": "@babel/helper-module-imports",
-				"version": "7.25.9",
-				"size": 63714
-			},
-			{
 				"name": "@babel/helper-compilation-targets",
-				"version": "7.27.0",
+				"version": "7.27.1",
 				"size": 53776
 			},
 			{
 				"name": "@babel/compat-data",
-				"version": "7.26.8",
-				"size": 66428
+				"version": "7.27.1",
+				"size": 66193
 			},
 			{
 				"name": "@babel/helper-validator-option",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 11775
 			},
 			{
 				"name": "browserslist",
-				"version": "4.24.4",
-				"size": 64926
+				"version": "4.24.5",
+				"size": 65174
 			},
 			{
 				"name": "caniuse-lite",
-				"version": "1.0.30001715",
-				"size": 2211246
+				"version": "1.0.30001716",
+				"size": 2214832
 			},
 			{
 				"name": "electron-to-chromium",
-				"version": "1.5.140",
-				"size": 162065
+				"version": "1.5.149",
+				"size": 163189
 			},
 			{
 				"name": "node-releases",
@@ -276,6 +218,56 @@
 				"size": 14766
 			},
 			{
+				"name": "semver",
+				"version": "6.3.1",
+				"size": 68343
+			},
+			{
+				"name": "@babel/helper-module-transforms",
+				"version": "7.27.1",
+				"size": 160852
+			},
+			{
+				"name": "@babel/helper-module-imports",
+				"version": "7.27.1",
+				"size": 63724
+			},
+			{
+				"name": "@babel/traverse",
+				"version": "7.27.1",
+				"size": 689113
+			},
+			{
+				"name": "@babel/template",
+				"version": "7.27.1",
+				"size": 70675
+			},
+			{
+				"name": "globals",
+				"version": "11.12.0",
+				"size": 39779
+			},
+			{
+				"name": "@babel/helpers",
+				"version": "7.27.1",
+				"size": 861892
+			},
+			{
+				"name": "convert-source-map",
+				"version": "2.0.0",
+				"size": 15854
+			},
+			{
+				"name": "gensync",
+				"version": "1.0.0-beta.2",
+				"size": 28891
+			},
+			{
+				"name": "json5",
+				"version": "2.2.3",
+				"size": 235198
+			},
+			{
 				"name": "builtin-modules",
 				"version": "3.3.0",
 				"size": 4512
@@ -287,8 +279,8 @@
 			},
 			{
 				"name": "es-module-lexer",
-				"version": "1.6.0",
-				"size": 91298
+				"version": "1.7.0",
+				"size": 93440
 			},
 			{
 				"name": "find-package-json",
@@ -379,177 +371,78 @@
 			},
 			{
 				"name": "@babel/preset-env",
-				"version": "7.26.9",
-				"size": 153075
-			},
-			{
-				"name": "core-js-compat",
-				"version": "3.41.0",
-				"size": 775766
-			},
-			{
-				"name": "@babel/preset-modules",
-				"version": "0.1.6-no-external-plugins",
-				"size": 38576
-			},
-			{
-				"name": "esutils",
-				"version": "2.0.3",
-				"size": 50582
+				"version": "7.27.1",
+				"size": 153034
 			},
 			{
 				"name": "@babel/helper-plugin-utils",
-				"version": "7.26.5",
-				"size": 11985
+				"version": "7.27.1",
+				"size": 11818
 			},
 			{
-				"name": "babel-plugin-polyfill-corejs2",
-				"version": "0.4.13",
-				"size": 81459
+				"name": "@babel/plugin-bugfix-firefox-class-in-computed-class-key",
+				"version": "7.27.1",
+				"size": 11901
 			},
 			{
-				"name": "@babel/helper-define-polyfill-provider",
-				"version": "0.6.4",
-				"size": 226587
+				"name": "@babel/plugin-bugfix-safari-class-field-initializer-scope",
+				"version": "7.27.1",
+				"size": 10842
 			},
 			{
-				"name": "lodash.debounce",
-				"version": "4.0.8"
+				"name": "@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression",
+				"version": "7.27.1",
+				"size": 7706
 			},
 			{
-				"name": "resolve",
-				"version": "1.22.10",
-				"size": 145619
-			},
-			{
-				"name": "is-core-module",
-				"version": "2.16.1",
-				"size": 33475
-			},
-			{
-				"name": "hasown",
-				"version": "2.0.2",
-				"size": 8765
-			},
-			{
-				"name": "function-bind",
-				"version": "1.1.2",
-				"size": 31427
-			},
-			{
-				"name": "path-parse",
-				"version": "1.0.7",
-				"size": 4511
-			},
-			{
-				"name": "supports-preserve-symlinks-flag",
-				"version": "1.0.0",
-				"size": 9178
-			},
-			{
-				"name": "babel-plugin-polyfill-corejs3",
-				"version": "0.11.1",
-				"size": 221237
-			},
-			{
-				"name": "@babel/plugin-transform-for-of",
-				"version": "7.26.9",
-				"size": 44850
+				"name": "@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining",
+				"version": "7.27.1",
+				"size": 10649
 			},
 			{
 				"name": "@babel/helper-skip-transparent-expression-wrappers",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 6001
 			},
 			{
-				"name": "@babel/plugin-transform-spread",
-				"version": "7.25.9",
-				"size": 23422
+				"name": "@babel/plugin-transform-optional-chaining",
+				"version": "7.27.1",
+				"size": 37601
 			},
 			{
-				"name": "@babel/plugin-transform-classes",
-				"version": "7.25.9",
-				"size": 91170
+				"name": "@babel/plugin-bugfix-v8-static-class-fields-redefine-readonly",
+				"version": "7.27.1",
+				"size": 25724
 			},
 			{
-				"name": "@babel/helper-replace-supers",
-				"version": "7.26.5",
-				"size": 43308
+				"name": "@babel/plugin-proposal-private-property-in-object",
+				"version": "7.21.0-placeholder-for-preset-env.2",
+				"size": 16339
 			},
 			{
-				"name": "@babel/helper-optimise-call-expression",
-				"version": "7.25.9",
-				"size": 6672
+				"name": "@babel/plugin-syntax-import-assertions",
+				"version": "7.27.1",
+				"size": 5735
 			},
 			{
-				"name": "@babel/helper-member-expression-to-functions",
-				"version": "7.25.9",
-				"size": 54675
+				"name": "@babel/plugin-syntax-import-attributes",
+				"version": "7.27.1",
+				"size": 6354
 			},
 			{
-				"name": "@babel/helper-annotate-as-pure",
-				"version": "7.25.9",
-				"size": 4054
-			},
-			{
-				"name": "@babel/plugin-transform-literals",
-				"version": "7.25.9",
-				"size": 4627
-			},
-			{
-				"name": "babel-plugin-polyfill-regenerator",
-				"version": "0.6.4",
-				"size": 9736
-			},
-			{
-				"name": "@babel/plugin-transform-new-target",
-				"version": "7.25.9",
-				"size": 10234
-			},
-			{
-				"name": "@babel/plugin-transform-parameters",
-				"version": "7.25.9",
-				"size": 65125
-			},
-			{
-				"name": "@babel/plugin-transform-modules-amd",
-				"version": "7.25.9",
-				"size": 20879
-			},
-			{
-				"name": "@babel/plugin-transform-modules-umd",
-				"version": "7.25.9",
-				"size": 25547
-			},
-			{
-				"name": "@babel/plugin-transform-regenerator",
-				"version": "7.27.0",
-				"size": 6730
-			},
-			{
-				"name": "regenerator-transform",
-				"version": "0.15.2",
-				"size": 135426
-			},
-			{
-				"name": "@babel/runtime",
-				"version": "7.27.0",
-				"size": 249798
-			},
-			{
-				"name": "regenerator-runtime",
-				"version": "0.14.1",
-				"size": 27863
-			},
-			{
-				"name": "@babel/plugin-transform-dotall-regex",
-				"version": "7.25.9",
-				"size": 4134
+				"name": "@babel/plugin-syntax-unicode-sets-regex",
+				"version": "7.18.6",
+				"size": 3396
 			},
 			{
 				"name": "@babel/helper-create-regexp-features-plugin",
-				"version": "7.27.0",
-				"size": 26825
+				"version": "7.27.1",
+				"size": 26824
+			},
+			{
+				"name": "@babel/helper-annotate-as-pure",
+				"version": "7.27.1",
+				"size": 4054
 			},
 			{
 				"name": "regexpu-core",
@@ -602,264 +495,348 @@
 				"size": 26301
 			},
 			{
-				"name": "@babel/plugin-transform-json-strings",
-				"version": "7.25.9",
-				"size": 5744
-			},
-			{
-				"name": "@babel/plugin-transform-object-super",
-				"version": "7.25.9",
-				"size": 9218
-			},
-			{
-				"name": "@babel/plugin-transform-sticky-regex",
-				"version": "7.25.9",
-				"size": 4643
-			},
-			{
-				"name": "@babel/plugin-transform-block-scoping",
-				"version": "7.27.0",
-				"size": 88154
-			},
-			{
-				"name": "@babel/plugin-transform-destructuring",
-				"version": "7.25.9",
-				"size": 85401
-			},
-			{
-				"name": "@babel/plugin-transform-function-name",
-				"version": "7.25.9",
-				"size": 7115
-			},
-			{
-				"name": "@babel/plugin-transform-typeof-symbol",
-				"version": "7.27.0",
-				"size": 10520
-			},
-			{
-				"name": "@babel/plugin-transform-unicode-regex",
-				"version": "7.25.9",
-				"size": 3934
-			},
-			{
-				"name": "@babel/plugin-syntax-import-assertions",
-				"version": "7.26.0",
-				"size": 5735
-			},
-			{
-				"name": "@babel/plugin-syntax-import-attributes",
-				"version": "7.26.0",
-				"size": 6354
-			},
-			{
-				"name": "@babel/plugin-transform-duplicate-keys",
-				"version": "7.25.9",
-				"size": 9113
-			},
-			{
-				"name": "@babel/plugin-transform-dynamic-import",
-				"version": "7.25.9",
-				"size": 6127
-			},
-			{
-				"name": "@babel/plugin-transform-reserved-words",
-				"version": "7.25.9",
-				"size": 4243
-			},
-			{
-				"name": "@babel/plugin-syntax-unicode-sets-regex",
-				"version": "7.18.6",
-				"size": 3396
-			},
-			{
 				"name": "@babel/plugin-transform-arrow-functions",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 5550
 			},
 			{
-				"name": "@babel/plugin-transform-private-methods",
-				"version": "7.25.9",
-				"size": 4874
-			},
-			{
-				"name": "@babel/helper-create-class-features-plugin",
-				"version": "7.27.0",
-				"size": 441091
-			},
-			{
-				"name": "@babel/plugin-transform-unicode-escapes",
-				"version": "7.25.9",
-				"size": 13899
-			},
-			{
-				"name": "@babel/plugin-transform-class-properties",
-				"version": "7.25.9",
-				"size": 5028
-			},
-			{
-				"name": "@babel/plugin-transform-modules-commonjs",
-				"version": "7.26.3",
-				"size": 41662
-			},
-			{
-				"name": "@babel/plugin-transform-modules-systemjs",
-				"version": "7.25.9",
-				"size": 66605
-			},
-			{
-				"name": "@babel/plugin-transform-regexp-modifiers",
-				"version": "7.26.0",
-				"size": 4216
-			},
-			{
-				"name": "@babel/plugin-transform-numeric-separator",
-				"version": "7.25.9",
-				"size": 5291
-			},
-			{
-				"name": "@babel/plugin-transform-optional-chaining",
-				"version": "7.25.9",
-				"size": 37685
-			},
-			{
-				"name": "@babel/plugin-transform-property-literals",
-				"version": "7.25.9",
-				"size": 4716
-			},
-			{
-				"name": "@babel/plugin-transform-template-literals",
-				"version": "7.26.8",
-				"size": 15828
-			},
-			{
-				"name": "@babel/plugin-transform-async-to-generator",
-				"version": "7.25.9",
-				"size": 8004
-			},
-			{
-				"name": "@babel/helper-remap-async-to-generator",
-				"version": "7.25.9",
-				"size": 9711
-			},
-			{
-				"name": "@babel/helper-wrap-function",
-				"version": "7.25.9",
-				"size": 15802
-			},
-			{
-				"name": "@babel/plugin-transform-class-static-block",
-				"version": "7.26.0",
-				"size": 10239
-			},
-			{
-				"name": "@babel/plugin-transform-object-rest-spread",
-				"version": "7.25.9",
-				"size": 72499
-			},
-			{
-				"name": "@babel/plugin-transform-unicode-sets-regex",
-				"version": "7.25.9",
-				"size": 4919
-			},
-			{
-				"name": "@babel/plugin-transform-computed-properties",
-				"version": "7.25.9",
-				"size": 22684
-			},
-			{
-				"name": "@babel/plugin-transform-shorthand-properties",
-				"version": "7.25.9",
-				"size": 7107
-			},
-			{
-				"name": "@babel/plugin-transform-export-namespace-from",
-				"version": "7.25.9",
-				"size": 7991
-			},
-			{
-				"name": "@babel/plugin-transform-block-scoped-functions",
-				"version": "7.26.5",
-				"size": 7149
-			},
-			{
-				"name": "@babel/plugin-transform-optional-catch-binding",
-				"version": "7.25.9",
-				"size": 4719
-			},
-			{
-				"name": "@babel/plugin-transform-unicode-property-regex",
-				"version": "7.25.9",
-				"size": 5030
-			},
-			{
-				"name": "@babel/plugin-transform-exponentiation-operator",
-				"version": "7.26.3",
-				"size": 11489
-			},
-			{
-				"name": "@babel/plugin-proposal-private-property-in-object",
-				"version": "7.21.0-placeholder-for-preset-env.2",
-				"size": 16339
-			},
-			{
 				"name": "@babel/plugin-transform-async-generator-functions",
-				"version": "7.26.8",
+				"version": "7.27.1",
 				"size": 20293
 			},
 			{
-				"name": "@babel/plugin-transform-member-expression-literals",
-				"version": "7.25.9",
-				"size": 4942
+				"name": "@babel/helper-remap-async-to-generator",
+				"version": "7.27.1",
+				"size": 9833
 			},
 			{
-				"name": "@babel/plugin-transform-private-property-in-object",
-				"version": "7.25.9",
-				"size": 19812
+				"name": "@babel/helper-wrap-function",
+				"version": "7.27.1",
+				"size": 18935
 			},
 			{
-				"name": "@babel/plugin-transform-nullish-coalescing-operator",
-				"version": "7.26.6",
-				"size": 10396
+				"name": "@babel/plugin-transform-async-to-generator",
+				"version": "7.27.1",
+				"size": 8004
 			},
 			{
-				"name": "@babel/plugin-transform-logical-assignment-operators",
-				"version": "7.25.9",
-				"size": 8472
+				"name": "@babel/plugin-transform-block-scoped-functions",
+				"version": "7.27.1",
+				"size": 7149
 			},
 			{
-				"name": "@babel/plugin-transform-named-capturing-groups-regex",
-				"version": "7.25.9",
-				"size": 4858
+				"name": "@babel/plugin-transform-block-scoping",
+				"version": "7.27.1",
+				"size": 88153
 			},
 			{
-				"name": "@babel/plugin-bugfix-firefox-class-in-computed-class-key",
-				"version": "7.25.9",
-				"size": 11901
+				"name": "@babel/plugin-transform-class-properties",
+				"version": "7.27.1",
+				"size": 5028
 			},
 			{
-				"name": "@babel/plugin-bugfix-safari-class-field-initializer-scope",
-				"version": "7.25.9",
-				"size": 10842
+				"name": "@babel/helper-create-class-features-plugin",
+				"version": "7.27.1",
+				"size": 441090
 			},
 			{
-				"name": "@babel/plugin-bugfix-v8-static-class-fields-redefine-readonly",
-				"version": "7.25.9",
-				"size": 25724
+				"name": "@babel/helper-member-expression-to-functions",
+				"version": "7.27.1",
+				"size": 54694
 			},
 			{
-				"name": "@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining",
-				"version": "7.25.9",
-				"size": 10649
+				"name": "@babel/helper-optimise-call-expression",
+				"version": "7.27.1",
+				"size": 6672
+			},
+			{
+				"name": "@babel/helper-replace-supers",
+				"version": "7.27.1",
+				"size": 43308
+			},
+			{
+				"name": "@babel/plugin-transform-class-static-block",
+				"version": "7.27.1",
+				"size": 10239
+			},
+			{
+				"name": "@babel/plugin-transform-classes",
+				"version": "7.27.1",
+				"size": 91170
+			},
+			{
+				"name": "@babel/plugin-transform-computed-properties",
+				"version": "7.27.1",
+				"size": 22684
+			},
+			{
+				"name": "@babel/plugin-transform-destructuring",
+				"version": "7.27.1",
+				"size": 85401
+			},
+			{
+				"name": "@babel/plugin-transform-dotall-regex",
+				"version": "7.27.1",
+				"size": 4134
+			},
+			{
+				"name": "@babel/plugin-transform-duplicate-keys",
+				"version": "7.27.1",
+				"size": 9113
 			},
 			{
 				"name": "@babel/plugin-transform-duplicate-named-capturing-groups-regex",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 5338
 			},
 			{
-				"name": "@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression",
-				"version": "7.25.9",
-				"size": 7706
+				"name": "@babel/plugin-transform-dynamic-import",
+				"version": "7.27.1",
+				"size": 6127
+			},
+			{
+				"name": "@babel/plugin-transform-exponentiation-operator",
+				"version": "7.27.1",
+				"size": 11489
+			},
+			{
+				"name": "@babel/plugin-transform-export-namespace-from",
+				"version": "7.27.1",
+				"size": 7991
+			},
+			{
+				"name": "@babel/plugin-transform-for-of",
+				"version": "7.27.1",
+				"size": 44850
+			},
+			{
+				"name": "@babel/plugin-transform-function-name",
+				"version": "7.27.1",
+				"size": 7115
+			},
+			{
+				"name": "@babel/plugin-transform-json-strings",
+				"version": "7.27.1",
+				"size": 5744
+			},
+			{
+				"name": "@babel/plugin-transform-literals",
+				"version": "7.27.1",
+				"size": 4627
+			},
+			{
+				"name": "@babel/plugin-transform-logical-assignment-operators",
+				"version": "7.27.1",
+				"size": 8472
+			},
+			{
+				"name": "@babel/plugin-transform-member-expression-literals",
+				"version": "7.27.1",
+				"size": 4942
+			},
+			{
+				"name": "@babel/plugin-transform-modules-amd",
+				"version": "7.27.1",
+				"size": 20879
+			},
+			{
+				"name": "@babel/plugin-transform-modules-commonjs",
+				"version": "7.27.1",
+				"size": 41578
+			},
+			{
+				"name": "@babel/plugin-transform-modules-systemjs",
+				"version": "7.27.1",
+				"size": 66605
+			},
+			{
+				"name": "@babel/plugin-transform-modules-umd",
+				"version": "7.27.1",
+				"size": 25552
+			},
+			{
+				"name": "@babel/plugin-transform-named-capturing-groups-regex",
+				"version": "7.27.1",
+				"size": 4858
+			},
+			{
+				"name": "@babel/plugin-transform-new-target",
+				"version": "7.27.1",
+				"size": 10234
+			},
+			{
+				"name": "@babel/plugin-transform-nullish-coalescing-operator",
+				"version": "7.27.1",
+				"size": 10396
+			},
+			{
+				"name": "@babel/plugin-transform-numeric-separator",
+				"version": "7.27.1",
+				"size": 5291
+			},
+			{
+				"name": "@babel/plugin-transform-object-rest-spread",
+				"version": "7.27.1",
+				"size": 72499
+			},
+			{
+				"name": "@babel/plugin-transform-parameters",
+				"version": "7.27.1",
+				"size": 65125
+			},
+			{
+				"name": "@babel/plugin-transform-object-super",
+				"version": "7.27.1",
+				"size": 9218
+			},
+			{
+				"name": "@babel/plugin-transform-optional-catch-binding",
+				"version": "7.27.1",
+				"size": 4719
+			},
+			{
+				"name": "@babel/plugin-transform-private-methods",
+				"version": "7.27.1",
+				"size": 4874
+			},
+			{
+				"name": "@babel/plugin-transform-private-property-in-object",
+				"version": "7.27.1",
+				"size": 19812
+			},
+			{
+				"name": "@babel/plugin-transform-property-literals",
+				"version": "7.27.1",
+				"size": 4716
+			},
+			{
+				"name": "@babel/plugin-transform-regenerator",
+				"version": "7.27.1",
+				"size": 173843
+			},
+			{
+				"name": "@babel/plugin-transform-regexp-modifiers",
+				"version": "7.27.1",
+				"size": 4216
+			},
+			{
+				"name": "@babel/plugin-transform-reserved-words",
+				"version": "7.27.1",
+				"size": 4243
+			},
+			{
+				"name": "@babel/plugin-transform-shorthand-properties",
+				"version": "7.27.1",
+				"size": 7107
+			},
+			{
+				"name": "@babel/plugin-transform-spread",
+				"version": "7.27.1",
+				"size": 23422
+			},
+			{
+				"name": "@babel/plugin-transform-sticky-regex",
+				"version": "7.27.1",
+				"size": 4643
+			},
+			{
+				"name": "@babel/plugin-transform-template-literals",
+				"version": "7.27.1",
+				"size": 15828
+			},
+			{
+				"name": "@babel/plugin-transform-typeof-symbol",
+				"version": "7.27.1",
+				"size": 10519
+			},
+			{
+				"name": "@babel/plugin-transform-unicode-escapes",
+				"version": "7.27.1",
+				"size": 13899
+			},
+			{
+				"name": "@babel/plugin-transform-unicode-property-regex",
+				"version": "7.27.1",
+				"size": 5030
+			},
+			{
+				"name": "@babel/plugin-transform-unicode-regex",
+				"version": "7.27.1",
+				"size": 3934
+			},
+			{
+				"name": "@babel/plugin-transform-unicode-sets-regex",
+				"version": "7.27.1",
+				"size": 4919
+			},
+			{
+				"name": "@babel/preset-modules",
+				"version": "0.1.6-no-external-plugins",
+				"size": 38576
+			},
+			{
+				"name": "esutils",
+				"version": "2.0.3",
+				"size": 50582
+			},
+			{
+				"name": "babel-plugin-polyfill-corejs2",
+				"version": "0.4.13",
+				"size": 81459
+			},
+			{
+				"name": "@babel/helper-define-polyfill-provider",
+				"version": "0.6.4",
+				"size": 226587
+			},
+			{
+				"name": "lodash.debounce",
+				"version": "4.0.8"
+			},
+			{
+				"name": "resolve",
+				"version": "1.22.10",
+				"size": 145619
+			},
+			{
+				"name": "is-core-module",
+				"version": "2.16.1",
+				"size": 33475
+			},
+			{
+				"name": "hasown",
+				"version": "2.0.2",
+				"size": 8765
+			},
+			{
+				"name": "function-bind",
+				"version": "1.1.2",
+				"size": 31427
+			},
+			{
+				"name": "path-parse",
+				"version": "1.0.7",
+				"size": 4511
+			},
+			{
+				"name": "supports-preserve-symlinks-flag",
+				"version": "1.0.0",
+				"size": 9178
+			},
+			{
+				"name": "babel-plugin-polyfill-corejs3",
+				"version": "0.11.1",
+				"size": 221237
+			},
+			{
+				"name": "core-js-compat",
+				"version": "3.42.0",
+				"size": 772930
+			},
+			{
+				"name": "babel-plugin-polyfill-regenerator",
+				"version": "0.6.4",
+				"size": 9736
 			},
 			{
 				"name": "clean-css",
@@ -892,7 +869,7 @@
 			},
 			{
 				"name": "esbuild",
-				"version": "0.25.2",
+				"version": "0.25.3",
 				"size": 134169
 			},
 			{
@@ -912,8 +889,8 @@
 			},
 			{
 				"name": "rollup",
-				"version": "4.40.0",
-				"size": 2726316
+				"version": "4.40.1",
+				"size": 2727114
 			},
 			{
 				"name": "@types/estree",
@@ -922,8 +899,8 @@
 			},
 			{
 				"name": "vite",
-				"version": "6.3.2",
-				"size": 2649534
+				"version": "6.3.4",
+				"size": 2651190
 			},
 			{
 				"name": "fdir",
@@ -947,8 +924,8 @@
 			},
 			{
 				"name": "svelte",
-				"version": "5.28.1",
-				"size": 2426419
+				"version": "5.28.2",
+				"size": 2426223
 			},
 			{
 				"name": "acorn",
@@ -1018,68 +995,68 @@
 			[10, 13],
 			[0, 14],
 			[14, 15],
-			[15, 2],
 			[15, 16],
-			[15, 17],
-			[15, 18],
-			[15, 19],
+			[16, 17],
+			[17, 18],
+			[17, 8],
+			[17, 19],
 			[19, 20],
-			[19, 21],
-			[15, 22],
-			[22, 19],
-			[15, 23],
-			[23, 24],
-			[24, 25],
-			[25, 26],
-			[25, 27],
-			[25, 21],
-			[24, 22],
-			[24, 19],
-			[23, 19],
-			[15, 24],
-			[15, 28],
-			[28, 25],
-			[28, 29],
-			[29, 22],
-			[29, 19],
-			[29, 30],
-			[30, 31],
-			[30, 8],
-			[30, 32],
-			[32, 33],
-			[32, 8],
-			[29, 32],
-			[29, 34],
-			[28, 22],
-			[28, 24],
-			[28, 19],
-			[28, 2],
-			[28, 35],
-			[15, 29],
+			[19, 8],
+			[16, 19],
+			[15, 21],
+			[21, 22],
+			[21, 23],
+			[21, 24],
 			[15, 25],
-			[15, 36],
-			[15, 37],
-			[37, 30],
-			[37, 32],
-			[15, 38],
-			[38, 28],
-			[38, 39],
-			[39, 19],
-			[39, 28],
-			[38, 21],
-			[15, 40],
-			[40, 41],
-			[40, 42],
-			[40, 43],
+			[25, 26],
+			[26, 27],
+			[27, 28],
+			[27, 22],
+			[25, 27],
+			[25, 17],
+			[25, 19],
+			[25, 29],
+			[15, 30],
+			[30, 31],
+			[30, 32],
+			[30, 33],
+			[33, 34],
+			[33, 35],
+			[33, 36],
+			[33, 37],
+			[37, 38],
+			[37, 24],
+			[30, 39],
+			[39, 40],
+			[30, 41],
+			[15, 42],
+			[42, 43],
 			[43, 44],
-			[43, 45],
-			[43, 46],
-			[43, 47],
-			[47, 48],
+			[44, 21],
+			[44, 25],
+			[44, 26],
+			[44, 45],
+			[45, 21],
+			[45, 26],
+			[45, 27],
+			[44, 27],
+			[44, 2],
+			[44, 46],
+			[43, 27],
+			[42, 22],
+			[42, 44],
+			[15, 47],
+			[47, 45],
 			[47, 27],
-			[40, 49],
-			[49, 50],
-			[40, 17],
+			[15, 26],
+			[15, 45],
+			[15, 44],
+			[15, 27],
+			[15, 48],
+			[15, 2],
+			[15, 49],
+			[15, 50],
+			[15, 41],
 			[14, 51],
 			[14, 52],
 			[14, 53],
@@ -1105,274 +1082,282 @@
 			[60, 71],
 			[71, 15],
 			[71, 72],
-			[72, 17],
+			[72, 31],
+			[72, 30],
 			[72, 73],
-			[73, 43],
-			[72, 41],
+			[72, 32],
 			[72, 74],
-			[74, 75],
-			[74, 19],
-			[74, 76],
+			[74, 73],
+			[74, 44],
+			[72, 75],
+			[75, 73],
 			[72, 76],
+			[76, 73],
 			[72, 77],
-			[77, 41],
+			[77, 73],
 			[77, 78],
-			[78, 40],
-			[78, 76],
-			[78, 2],
-			[78, 79],
-			[78, 80],
-			[80, 81],
-			[81, 82],
-			[82, 83],
-			[80, 84],
-			[80, 85],
-			[77, 17],
-			[72, 86],
-			[86, 73],
-			[86, 78],
-			[72, 42],
-			[72, 87],
-			[87, 76],
+			[78, 44],
+			[78, 27],
+			[77, 79],
+			[79, 73],
+			[79, 78],
+			[72, 80],
+			[80, 73],
+			[80, 44],
+			[72, 81],
+			[72, 82],
+			[82, 73],
+			[72, 83],
+			[83, 73],
+			[72, 84],
+			[84, 85],
+			[85, 86],
+			[86, 27],
+			[85, 87],
 			[87, 88],
-			[88, 19],
-			[88, 28],
-			[72, 89],
-			[89, 76],
+			[87, 89],
 			[89, 88],
-			[72, 90],
-			[90, 35],
-			[90, 28],
-			[90, 76],
-			[90, 91],
-			[91, 28],
+			[87, 90],
+			[87, 91],
 			[91, 92],
-			[92, 19],
-			[91, 93],
-			[93, 19],
-			[93, 28],
-			[90, 94],
-			[94, 19],
-			[90, 40],
-			[72, 95],
-			[95, 76],
-			[72, 40],
-			[72, 96],
-			[96, 78],
+			[87, 93],
+			[93, 94],
+			[93, 95],
+			[87, 96],
+			[85, 41],
+			[84, 73],
 			[72, 97],
-			[97, 76],
+			[97, 73],
 			[72, 98],
-			[98, 76],
-			[72, 99],
-			[99, 76],
-			[99, 38],
-			[72, 100],
-			[100, 76],
-			[100, 38],
+			[98, 73],
+			[98, 99],
+			[99, 86],
+			[99, 100],
+			[100, 45],
+			[100, 44],
+			[100, 27],
+			[99, 44],
+			[98, 44],
 			[72, 101],
-			[101, 76],
-			[101, 102],
-			[102, 103],
-			[103, 104],
-			[72, 105],
-			[105, 76],
+			[101, 43],
+			[101, 73],
+			[101, 99],
+			[72, 102],
+			[102, 73],
+			[72, 103],
+			[103, 73],
+			[72, 104],
+			[104, 105],
+			[105, 86],
 			[105, 106],
-			[106, 94],
-			[106, 107],
-			[107, 108],
-			[107, 109],
-			[109, 108],
-			[107, 110],
-			[107, 111],
-			[111, 112],
-			[107, 113],
-			[113, 114],
-			[113, 115],
-			[107, 116],
-			[106, 17],
+			[106, 44],
+			[106, 27],
+			[105, 107],
+			[107, 27],
+			[105, 108],
+			[108, 106],
+			[108, 107],
+			[108, 44],
+			[105, 78],
+			[105, 44],
+			[105, 41],
+			[104, 73],
+			[72, 109],
+			[109, 105],
+			[109, 73],
+			[72, 110],
+			[110, 86],
+			[110, 30],
+			[110, 73],
+			[110, 108],
+			[110, 44],
+			[110, 46],
+			[72, 111],
+			[111, 73],
+			[111, 45],
+			[72, 112],
+			[112, 73],
+			[72, 113],
+			[113, 85],
+			[113, 73],
+			[72, 114],
+			[114, 73],
+			[72, 115],
+			[115, 85],
+			[115, 73],
+			[72, 116],
+			[116, 73],
 			[72, 117],
-			[117, 76],
+			[117, 73],
 			[72, 118],
-			[118, 76],
-			[118, 91],
+			[118, 73],
 			[72, 119],
-			[119, 76],
+			[119, 73],
+			[119, 78],
 			[72, 120],
-			[120, 76],
+			[120, 30],
+			[120, 73],
+			[120, 44],
 			[72, 121],
-			[121, 76],
+			[121, 73],
 			[72, 122],
-			[122, 28],
-			[122, 76],
-			[122, 40],
+			[122, 73],
 			[72, 123],
-			[123, 76],
+			[123, 73],
 			[72, 124],
-			[124, 76],
-			[124, 106],
+			[124, 73],
 			[72, 125],
-			[125, 76],
+			[125, 42],
+			[125, 73],
 			[72, 126],
-			[126, 76],
+			[126, 42],
+			[126, 73],
 			[72, 127],
-			[127, 76],
+			[127, 42],
+			[127, 73],
+			[127, 22],
+			[127, 44],
 			[72, 128],
-			[128, 76],
+			[128, 42],
+			[128, 73],
 			[72, 129],
-			[129, 76],
+			[129, 85],
+			[129, 73],
 			[72, 130],
-			[130, 106],
-			[130, 76],
+			[130, 73],
 			[72, 131],
-			[131, 76],
+			[131, 73],
 			[72, 132],
-			[132, 76],
-			[132, 133],
-			[133, 94],
-			[133, 93],
-			[133, 92],
-			[133, 91],
-			[133, 88],
-			[133, 28],
-			[133, 17],
-			[72, 134],
-			[134, 76],
+			[132, 73],
+			[72, 133],
+			[133, 30],
+			[133, 73],
+			[133, 134],
+			[134, 73],
 			[72, 135],
-			[135, 76],
-			[135, 133],
+			[135, 73],
+			[135, 108],
 			[72, 136],
-			[136, 76],
-			[136, 38],
+			[136, 73],
+			[72, 79],
+			[72, 134],
 			[72, 137],
-			[137, 28],
-			[137, 76],
-			[137, 38],
-			[137, 21],
+			[137, 105],
+			[137, 73],
 			[72, 138],
-			[138, 76],
-			[138, 106],
+			[138, 86],
+			[138, 105],
+			[138, 73],
 			[72, 139],
-			[139, 76],
+			[139, 73],
 			[72, 140],
-			[140, 76],
-			[140, 88],
+			[140, 73],
 			[72, 141],
-			[141, 76],
+			[141, 85],
+			[141, 73],
 			[72, 142],
-			[142, 76],
+			[142, 73],
 			[72, 143],
-			[143, 76],
-			[143, 39],
-			[143, 144],
-			[144, 28],
-			[144, 145],
-			[145, 19],
-			[145, 24],
-			[145, 28],
-			[144, 94],
+			[143, 73],
+			[72, 144],
+			[144, 73],
+			[144, 78],
+			[72, 145],
+			[145, 73],
 			[72, 146],
-			[146, 76],
-			[146, 133],
+			[146, 73],
 			[72, 147],
-			[147, 76],
-			[147, 40],
-			[147, 98],
+			[147, 73],
 			[72, 148],
-			[148, 76],
-			[148, 106],
+			[148, 73],
 			[72, 149],
-			[149, 24],
-			[149, 76],
+			[149, 85],
+			[149, 73],
 			[72, 150],
-			[150, 76],
+			[150, 85],
+			[150, 73],
 			[72, 151],
-			[151, 76],
+			[151, 85],
+			[151, 73],
 			[72, 152],
-			[152, 76],
-			[72, 153],
-			[153, 76],
+			[152, 153],
+			[152, 27],
+			[152, 73],
 			[72, 154],
-			[154, 76],
-			[154, 106],
-			[72, 155],
-			[155, 76],
-			[72, 156],
-			[72, 157],
-			[157, 28],
-			[157, 76],
-			[157, 144],
-			[72, 158],
-			[158, 76],
-			[72, 159],
-			[159, 76],
-			[159, 94],
-			[159, 133],
-			[72, 160],
-			[160, 76],
-			[72, 161],
-			[161, 76],
-			[72, 162],
-			[162, 76],
-			[162, 106],
+			[154, 31],
+			[154, 155],
+			[155, 30],
+			[155, 73],
+			[155, 2],
+			[155, 156],
+			[155, 157],
+			[157, 158],
+			[158, 159],
+			[159, 160],
+			[157, 161],
+			[157, 162],
+			[154, 41],
 			[72, 163],
-			[163, 28],
-			[163, 76],
-			[72, 164],
-			[164, 76],
+			[163, 164],
+			[164, 33],
+			[163, 155],
 			[72, 165],
-			[165, 28],
-			[165, 76],
-			[72, 166],
-			[166, 76],
-			[166, 140],
-			[166, 88],
-			[72, 167],
-			[167, 76],
-			[167, 106],
-			[72, 168],
-			[168, 76],
+			[165, 155],
+			[72, 164],
+			[72, 41],
+			[71, 166],
+			[166, 167],
+			[71, 168],
 			[71, 169],
-			[169, 170],
-			[71, 171],
-			[71, 172],
-			[60, 171],
-			[14, 173],
-			[14, 174],
-			[174, 175],
-			[174, 176],
+			[60, 168],
+			[14, 170],
+			[14, 171],
+			[171, 172],
+			[171, 173],
+			[173, 174],
+			[173, 24],
+			[173, 175],
+			[171, 176],
 			[176, 177],
-			[176, 27],
-			[176, 178],
-			[174, 179],
-			[179, 180],
-			[14, 181],
-			[181, 175],
-			[181, 182],
-			[181, 183],
-			[181, 176],
+			[14, 178],
+			[178, 179],
+			[178, 176],
+			[178, 172],
+			[178, 173],
+			[178, 180],
+			[178, 181],
 			[181, 179],
-			[181, 184],
-			[184, 182],
-			[184, 183],
-			[14, 185],
-			[0, 186],
-			[186, 37],
-			[186, 8],
-			[186, 180],
-			[186, 187],
-			[186, 188],
-			[186, 189],
-			[186, 190],
-			[186, 191],
-			[186, 192],
-			[186, 193],
-			[193, 8],
-			[186, 194],
-			[194, 180],
-			[186, 195],
-			[186, 7],
-			[186, 196]
+			[181, 180],
+			[14, 182],
+			[0, 183],
+			[183, 16],
+			[183, 8],
+			[183, 177],
+			[183, 184],
+			[183, 185],
+			[183, 186],
+			[183, 187],
+			[183, 188],
+			[183, 189],
+			[183, 190],
+			[190, 8],
+			[183, 191],
+			[191, 177],
+			[183, 192],
+			[183, 7],
+			[183, 193]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# oc-template-svelte-compiler - Compiler module\n\nOC template to compile components of type `oc-template-svelte`\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4086, 211],
+		[4093, 205],
+		[4100, 37],
+		[4107, 4],
+		[4114, 17],
+		[4121, 6],
+		[4128, 2]
+	]
 }

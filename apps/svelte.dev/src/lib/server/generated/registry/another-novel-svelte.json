@@ -7,37 +7,12 @@
 	"downloads": 5,
 	"updated": "2024-10-06T19:09:46.082Z",
 	"tags": ["content"],
-	"runes": false,
 	"github_stars": 1,
 	"typescript": true,
 	"version": "1.2.0",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.4",
 	"last_rune_check_version": "1.2.0",
-	"downloads_history": [
-		[3924, 381],
-		[3931, 59],
-		[3938, 31],
-		[3952, 3],
-		[3959, 1],
-		[3980, 2],
-		[3987, 6],
-		[3994, 1],
-		[4001, 1],
-		[4008, 1],
-		[4015, 2],
-		[4022, 6],
-		[4029, 5],
-		[4036, 5],
-		[4043, 7],
-		[4050, 5],
-		[4057, 1],
-		[4064, 5],
-		[4071, 1],
-		[4092, 7],
-		[4106, 13],
-		[4113, 5]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -88,13 +63,13 @@
 			},
 			{
 				"name": "@floating-ui/dom",
-				"version": "1.6.13",
-				"size": 165945
+				"version": "1.7.0",
+				"size": 166707
 			},
 			{
 				"name": "@floating-ui/core",
-				"version": "1.6.9",
-				"size": 212585
+				"version": "1.7.0",
+				"size": 214929
 			},
 			{
 				"name": "@floating-ui/utils",
@@ -145,8 +120,8 @@
 			},
 			{
 				"name": "ws",
-				"version": "8.18.1",
-				"size": 146780
+				"version": "8.18.2",
+				"size": 147181
 			},
 			{
 				"name": "@types/ws",
@@ -155,8 +130,8 @@
 			},
 			{
 				"name": "@types/node",
-				"version": "22.14.1",
-				"size": 2331510
+				"version": "22.15.3",
+				"size": 2350386
 			},
 			{
 				"name": "undici-types",
@@ -175,12 +150,12 @@
 			},
 			{
 				"name": "@tiptap/core",
-				"version": "2.11.7",
-				"size": 2546013
+				"version": "2.11.9",
+				"size": 2545985
 			},
 			{
 				"name": "@tiptap/extension-bubble-menu",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 98385
 			},
 			{
@@ -195,27 +170,27 @@
 			},
 			{
 				"name": "@tiptap/extension-color",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 20420
 			},
 			{
 				"name": "@tiptap/extension-highlight",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 31889
 			},
 			{
 				"name": "@tiptap/extension-horizontal-rule",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 35676
 			},
 			{
 				"name": "@tiptap/extension-image",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 25935
 			},
 			{
 				"name": "@tiptap/extension-link",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 180532
 			},
 			{
@@ -230,33 +205,33 @@
 			},
 			{
 				"name": "@tiptap/extension-task-item",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 59158
 			},
 			{
 				"name": "@tiptap/extension-task-list",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 17481
 			},
 			{
 				"name": "@tiptap/extension-text-style",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 34779
 			},
 			{
 				"name": "@tiptap/extension-underline",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 20478
 			},
 			{
 				"name": "@tiptap/pm",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 24466
 			},
 			{
 				"name": "prosemirror-menu",
-				"version": "1.2.4",
-				"size": 111446
+				"version": "1.2.5",
+				"size": 113350
 			},
 			{
 				"name": "crelt",
@@ -270,8 +245,8 @@
 			},
 			{
 				"name": "prosemirror-model",
-				"version": "1.25.0",
-				"size": 523551
+				"version": "1.25.1",
+				"size": 524300
 			},
 			{
 				"name": "orderedmap",
@@ -280,13 +255,13 @@
 			},
 			{
 				"name": "prosemirror-transform",
-				"version": "1.10.3",
-				"size": 316103
+				"version": "1.10.4",
+				"size": 317199
 			},
 			{
 				"name": "prosemirror-view",
-				"version": "1.39.1",
-				"size": 872388,
+				"version": "1.39.2",
+				"size": 909536,
 				"isCircular": true,
 				"circularTarget": 49
 			},
@@ -318,8 +293,8 @@
 			},
 			{
 				"name": "prosemirror-keymap",
-				"version": "1.2.2",
-				"size": 25670
+				"version": "1.2.3",
+				"size": 26164
 			},
 			{
 				"name": "w3c-keyname",
@@ -398,8 +373,8 @@
 			},
 			{
 				"name": "prosemirror-dropcursor",
-				"version": "1.8.1",
-				"size": 30848
+				"version": "1.8.2",
+				"size": 34065
 			},
 			{
 				"name": "prosemirror-inputrules",
@@ -433,97 +408,97 @@
 			},
 			{
 				"name": "@tiptap/starter-kit",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 58648
 			},
 			{
 				"name": "@tiptap/extension-bold",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 31774
 			},
 			{
 				"name": "@tiptap/extension-code",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 25242
 			},
 			{
 				"name": "@tiptap/extension-text",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 5838
 			},
 			{
 				"name": "@tiptap/extension-italic",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 31914
 			},
 			{
 				"name": "@tiptap/extension-strike",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 25981
 			},
 			{
 				"name": "@tiptap/extension-heading",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 31013
 			},
 			{
 				"name": "@tiptap/extension-history",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 20863
 			},
 			{
 				"name": "@tiptap/extension-document",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 6443
 			},
 			{
 				"name": "@tiptap/extension-gapcursor",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 14772
 			},
 			{
 				"name": "@tiptap/extension-list-item",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 15835
 			},
 			{
 				"name": "@tiptap/extension-paragraph",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 14727
 			},
 			{
 				"name": "@tiptap/extension-blockquote",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 20603
 			},
 			{
 				"name": "@tiptap/extension-code-block",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 84197
 			},
 			{
 				"name": "@tiptap/extension-dropcursor",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 11938
 			},
 			{
 				"name": "@tiptap/extension-hard-break",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 27449
 			},
 			{
 				"name": "@tiptap/extension-bullet-list",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 29385
 			},
 			{
 				"name": "@tiptap/extension-ordered-list",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 39002
 			},
 			{
 				"name": "@tiptap/suggestion",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 130359
 			},
 			{
@@ -1066,5 +1041,33 @@
 			[49, 45],
 			[45, 49]
 		]
-	}
+	},
+	"legacy_svelte": true,
+	"readme": "# Novella Svelte\n\nHeavily biased Notion-style WYSIWYG editor without the bells and whistles. I'm maintaining this for my blogging website called [AcademiaScribes](https://academiascribes.com).\n\nBased on [Novel](https://github.com/steven-tey/novel)\n\nForked from [Novel-Svelte](https://github.com/DennisOluoch/novel-svelte)\n\nMade for [DennisOluoch](https://github.com/DennisOluoch)\n\n## Features\n\n- 📝 Rich Text Editor with Notion-style formatting\n- 🖼️ Image uploads with drag & drop, paste, and file selection\n- 💾 Auto-saving to local storage\n- ⚡ Lightning fast and lightweight\n- 🎨 Fully customizable with Tailwind CSS\n- 📱 Mobile-friendly and responsive\n\n## Techs and Works\n\n- **Svelte** - Frontend framework\n- **Tiptap** - Headless editor framework\n- **Tailwind CSS** - Styling\n\n## Installation\n\n```bash\nnpm i another-novel-svelte\n```\n\n## Basic Usage\n\n```svelte\n<script>\n    import { Editor } from 'another-novel-svelte';\n\n    let saveStatus = 'Saved';\n    let editor;\n\n    // Image upload configuration\n    const imageProviderConfig = {\n        provider: 'vercel',\n        bucketName: 'your-bucket-name',\n        accessToken: 'your-access-token'\n    };\n</script>\n\n<main>\n    <Editor\n        bind:editor\n        {imageProviderConfig}\n        onUpdate={() => {\n            saveStatus = 'Unsaved';\n        }}\n        onDebouncedUpdate={() => {\n            saveStatus = 'Saving...';\n            // Saving code goes here\n            saveStatus = 'Saved';\n        }}\n    >\n        <div>\n            {saveStatus}\n        </div>\n    </Editor>\n</main>\n```\n\n## Image Upload Configuration\n\nThe editor supports image uploads to multiple providers: Vercel Blob, Supabase Storage, and Cloudinary. Instead of using environment variables, we now pass the configuration directly to the Editor component.\n\n## Configuration Setup\n\nCreate a configuration object in your Svelte component:\n\n```typescript\nconst imageProviderConfig = {\n    provider: 'vercel', // Options: 'vercel', 'supabase', 'cloudinary'\n    bucketName: 'your-bucket-name',\n    accessToken: 'your-access-token',\n    // Additional properties based on the provider:\n    // For Supabase:\n    // supabaseUrl: 'your-project-url'\n    // For Cloudinary:\n    // cloudinaryCloudName: 'your-cloud-name'\n};\n```\n\nThen pass this configuration to the Editor component:\n\n```svelte\n<Editor {imageProviderConfig} ...otherProps>\n    <!-- Editor content -->\n</Editor>\n```\n\n### Provider Setup Instructions\n\n#### Vercel Blob\n\n1. Set up a Vercel project\n2. Get your Blob access token from the Vercel dashboard\n3. Configure the `imageProviderConfig` as shown above\n\n#### Supabase Storage\n\n1. Create a Supabase project\n2. Create a storage bucket\n3. Set the storage bucket to public if you want the images to be publicly accessible\n4. Get your service role key from the project settings\n5. Configure the `imageProviderConfig` as shown above, including the `supabaseUrl`\n\n#### Cloudinary\n\n1. Create a Cloudinary account\n2. Create an upload preset (can be done in the Settings > Upload section)\n3. Get your cloud name and API credentials\n4. Configure the `imageProviderConfig` as shown above, including the `cloudinaryCloudName`\n\n### Image Upload Features\n\n- 📤 Drag and drop image uploads\n- 📋 Paste images directly from clipboard\n- 🖼️ Support for all standard image formats (jpg, png, gif, etc.)\n- ⚖️ Maximum file size: 20MB\n- 🔄 Real-time upload status with toast notifications\n- 📏 Image resizing after upload\n- 💾 Automatic image optimization\n\n### Security Considerations\n\n⚠️ **Important**: The configuration passed to the Editor component will be visible in the client-side code. For production use, we strongly recommend implementing a server-side API endpoint to handle the actual upload operations.\n\n#### Recommended Production Setup\n\n1. Create a server-side API endpoint (using SvelteKit or your preferred backend):\n\n```typescript\n// routes/api/upload/+server.ts\nimport { json } from '@sveltejs/kit';\n\nexport async function POST({ request }) {\n    const file = await request.blob();\n    // Handle upload using server-side tokens\n    // Return the URL of the uploaded file\n    return json({ url: uploadedUrl });\n}\n```\n\n2. Use the server endpoint in production:\n\n```typescript\nconst uploadFile = async (file: File) => {\n    if (import.meta.env.DEV) {\n        // Use direct provider upload in development\n        return handleDirectUpload(file);\n    } else {\n        // Use server endpoint in production\n        const formData = new FormData();\n        formData.append('file', file);\n        const response = await fetch('/api/upload', {\n            method: 'POST',\n            body: formData\n        });\n        const { url } = await response.json();\n        return url;\n    }\n};\n```\n\n## Development\n\n1. Install Node.js and npm ([download here](https://nodejs.org/en/download/))\n\n2. Clone the repository:\n\n```bash\ngit clone https://github.com/DennisOluoch/novel-svelte.git\ncd novel-svelte\n```\n\n3. Install dependencies:\n\n```bash\nnpm install\n```\n\n4. Start the development server:\n\n```bash\nnpm run dev\n```\n\nVisit `http://localhost:5173/` to see the preview.\n\n### Props\n\n| Prop | Type | Default | Description |\n|------|------|---------|-------------|\n| `class` | `string` | `'relative min-h-[500px] w-full max-w-screen-lg border-stone-200 bg-white p-12 px-8 sm:mb-[calc(20vh)] sm:rounded-lg sm:border sm:px-12 sm:shadow-lg'` | Additional classes to add to the editor container |\n| `defaultValue` | `JSONContent \\| string` | `defaultEditorContent` | The default value to use for the editor |\n| `extensions` | `Extension[]` | `[]` | Additional extensions to use for the editor |\n| `editorProps` | `EditorProps` | `{}` | Additional props to pass to the Tiptap editor |\n| `onUpdate` | `(editor?: Editor) => void \\| Promise<void>` | `noop` | Callback function called on every editor update |\n| `onDebouncedUpdate` | `(editor?: Editor) => void \\| Promise<void>` | `noop` | Callback function called after debounce duration |\n| `debounceDuration` | `number` | `750` | Duration to debounce the onDebouncedUpdate callback |\n| `storageKey` | `string` | `'novel__content'` | Key to use for storing editor content in localStorage |\n| `disableLocalStorage` | `boolean` | `false` | Disable local storage read/save |\n| `imageProviderConfig` | `UploadConfig \\| undefined` | `undefined` | Configuration for image upload provider |\n\n### Contributing\n\nContributions are welcome! Please feel free to submit a Pull Request.\n\n### License\n\nMIT License\n",
+	"downloads_history": [
+		[3925, 381],
+		[3932, 59],
+		[3939, 31],
+		[3953, 3],
+		[3960, 1],
+		[3981, 2],
+		[3988, 6],
+		[3995, 1],
+		[4002, 1],
+		[4009, 1],
+		[4016, 2],
+		[4023, 6],
+		[4030, 5],
+		[4037, 5],
+		[4044, 7],
+		[4051, 5],
+		[4058, 1],
+		[4065, 5],
+		[4072, 1],
+		[4093, 7],
+		[4107, 13],
+		[4114, 5],
+		[4121, 11],
+		[4128, 11]
+	]
 }

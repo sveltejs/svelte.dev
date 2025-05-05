@@ -7,28 +7,11 @@
 	"downloads": 5,
 	"updated": "2025-01-09T09:33:44.219Z",
 	"tags": ["miscellaneous"],
-	"runes": false,
 	"github_stars": 29,
 	"typescript": true,
 	"version": "0.0.5",
 	"svelte_range": ">=5",
 	"last_rune_check_version": "0.0.5",
-	"downloads_history": [
-		[4022, 290],
-		[4029, 13],
-		[4036, 9],
-		[4043, 17],
-		[4050, 7],
-		[4057, 2],
-		[4064, 3],
-		[4071, 3],
-		[4078, 1],
-		[4085, 6],
-		[4092, 5],
-		[4099, 5],
-		[4106, 8],
-		[4113, 5]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -39,8 +22,8 @@
 			},
 			{
 				"name": "svelte",
-				"version": "5.28.1",
-				"size": 2426419
+				"version": "5.28.2",
+				"size": 2426223
 			},
 			{
 				"name": "@ampproject/remapping",
@@ -167,5 +150,25 @@
 			[0, 20]
 		],
 		"circular": []
-	}
+	},
+	"readme": "ERROR: No README data found!",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4023, 290],
+		[4030, 13],
+		[4037, 9],
+		[4044, 17],
+		[4051, 7],
+		[4058, 2],
+		[4065, 3],
+		[4072, 3],
+		[4079, 1],
+		[4086, 6],
+		[4093, 5],
+		[4100, 5],
+		[4107, 8],
+		[4114, 5],
+		[4121, 6],
+		[4128, 2]
+	]
 }

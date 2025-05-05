@@ -7,32 +7,11 @@
 	"downloads": 3,
 	"updated": "2024-11-24T22:37:23.575Z",
 	"tags": ["ui"],
-	"runes": true,
 	"typescript": true,
 	"version": "0.0.10",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.0.10",
-	"downloads_history": [
-		[3966, 183],
-		[3973, 70],
-		[3980, 18],
-		[3987, 9],
-		[3994, 6],
-		[4001, 3],
-		[4008, 3],
-		[4015, 13],
-		[4022, 7],
-		[4029, 3],
-		[4036, 16],
-		[4043, 10],
-		[4050, 3],
-		[4057, 1],
-		[4071, 1],
-		[4092, 4],
-		[4106, 8],
-		[4113, 3]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -73,8 +52,8 @@
 			},
 			{
 				"name": "@floating-ui/core",
-				"version": "1.6.9",
-				"size": 212585
+				"version": "1.7.0",
+				"size": 214929
 			},
 			{
 				"name": "@floating-ui/utils",
@@ -83,8 +62,8 @@
 			},
 			{
 				"name": "@floating-ui/dom",
-				"version": "1.6.13",
-				"size": 165945
+				"version": "1.7.0",
+				"size": 166707
 			},
 			{
 				"name": "@internationalized/date",
@@ -143,5 +122,29 @@
 			[6, 16]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# @michaelcuneo/meltui-components\n\nSvelte Rapid Components was created for my own personal Rapid Prototyping needs, but I have decided to make it public so that people can help troubleshoot/guide/assist where neccessary to ensure that these components are always the latest zero day technology with also maintaining the widest compatibility, while maintaining the very best practises.\n\n## Installing\n\n```bash\n# create a new project in the current directory\nnpm i -D @michaelcuneo/meltui-components\n```\n\n## Usage\nImport the component you need to use in the project.\nBecause this is a Svelte Library, rather than a Monorepo where you install only the component you need, you can install this entire svelte-rapid-components library and the beaty of svelte is... anything you import is will be the only part of this library that is compiled into the end build.\n\n```js\n# Import the component inside the <script> tag.\nimport { Image } from '@michaelcuneo/meltui-components';\n```\n\n```js\n@ Use the component where needed.\n<Image smallSrc=\"smallImage\" mediumSrc=\"mediumImage\" largeSrc=\"largeImage\" largeCrop=\"largeSquareImage\" smallCrop=\"smallSquareImage\" alt=\"altImageText\" />\n```\n\n## Help\nHelp is available on my Discord channel.\nPackage Sidebar\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3967, 183],
+		[3974, 70],
+		[3981, 18],
+		[3988, 9],
+		[3995, 6],
+		[4002, 3],
+		[4009, 3],
+		[4016, 13],
+		[4023, 7],
+		[4030, 3],
+		[4037, 16],
+		[4044, 10],
+		[4051, 3],
+		[4058, 1],
+		[4072, 1],
+		[4093, 4],
+		[4107, 8],
+		[4114, 3],
+		[4121, 5],
+		[4128, 6]
+	]
 }

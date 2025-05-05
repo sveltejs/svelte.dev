@@ -7,33 +7,11 @@
 	"downloads": 6,
 	"updated": "2025-01-13T00:53:32.795Z",
 	"tags": ["integration"],
-	"runes": false,
-	"github_stars": 2,
+	"github_stars": 3,
 	"typescript": true,
 	"version": "0.3.2",
 	"svelte_range": "^5.0.0",
 	"last_rune_check_version": "0.3.2",
-	"downloads_history": [
-		[3987, 67],
-		[3994, 4],
-		[4001, 123],
-		[4008, 10],
-		[4015, 9],
-		[4022, 152],
-		[4029, 91],
-		[4036, 15],
-		[4043, 13],
-		[4050, 7],
-		[4057, 5],
-		[4064, 6],
-		[4071, 3],
-		[4078, 1],
-		[4085, 3],
-		[4092, 6],
-		[4099, 6],
-		[4106, 1],
-		[4113, 6]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -82,5 +60,30 @@
 			[5, 6]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# phoria-svelte\n\nUse Svelte components in a Phoria Islands for dotnet project.\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3988, 67],
+		[3995, 4],
+		[4002, 123],
+		[4009, 10],
+		[4016, 9],
+		[4023, 152],
+		[4030, 91],
+		[4037, 15],
+		[4044, 13],
+		[4051, 7],
+		[4058, 5],
+		[4065, 6],
+		[4072, 3],
+		[4079, 1],
+		[4086, 3],
+		[4093, 6],
+		[4100, 6],
+		[4107, 1],
+		[4114, 6],
+		[4121, 9],
+		[4128, 4]
+	]
 }

@@ -7,90 +7,11 @@
 	"downloads": 9,
 	"updated": "2024-04-15T19:39:00.200Z",
 	"tags": ["integration"],
-	"runes": false,
 	"github_stars": 14,
 	"typescript": true,
 	"version": "1.1.5",
 	"svelte_range": "^3.0.0",
 	"last_rune_check_version": "1.1.5",
-	"downloads_history": [
-		[3574, 10],
-		[3588, 4],
-		[3595, 10],
-		[3602, 27],
-		[3609, 76],
-		[3616, 86],
-		[3623, 83],
-		[3630, 85],
-		[3637, 109],
-		[3644, 53],
-		[3651, 55],
-		[3658, 124],
-		[3665, 110],
-		[3672, 141],
-		[3679, 63],
-		[3686, 67],
-		[3693, 72],
-		[3700, 120],
-		[3707, 72],
-		[3714, 229],
-		[3721, 183],
-		[3728, 112],
-		[3735, 123],
-		[3742, 96],
-		[3749, 143],
-		[3756, 425],
-		[3763, 364],
-		[3770, 246],
-		[3777, 304],
-		[3784, 358],
-		[3791, 254],
-		[3798, 294],
-		[3805, 242],
-		[3812, 270],
-		[3819, 271],
-		[3826, 279],
-		[3833, 231],
-		[3840, 202],
-		[3847, 277],
-		[3854, 200],
-		[3861, 134],
-		[3868, 243],
-		[3875, 209],
-		[3882, 198],
-		[3889, 156],
-		[3896, 168],
-		[3903, 107],
-		[3910, 87],
-		[3917, 112],
-		[3924, 32],
-		[3931, 100],
-		[3938, 112],
-		[3945, 31],
-		[3952, 83],
-		[3959, 58],
-		[3966, 184],
-		[3973, 153],
-		[3980, 146],
-		[3987, 106],
-		[3994, 134],
-		[4001, 50],
-		[4008, 52],
-		[4015, 89],
-		[4022, 150],
-		[4029, 144],
-		[4036, 68],
-		[4043, 43],
-		[4050, 69],
-		[4057, 39],
-		[4064, 41],
-		[4071, 37],
-		[4078, 35],
-		[4085, 38],
-		[4099, 34],
-		[4106, 46],
-		[4113, 9]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -101,13 +22,13 @@
 			},
 			{
 				"name": "@solana/wallet-adapter-base",
-				"version": "0.9.24",
-				"size": 96759
+				"version": "0.9.26",
+				"size": 96760
 			},
 			{
-				"name": "eventemitter3",
-				"version": "4.0.7",
-				"size": 37967
+				"name": "@solana/wallet-standard-features",
+				"version": "1.3.0",
+				"size": 50417
 			},
 			{
 				"name": "@wallet-standard/base",
@@ -120,42 +41,34 @@
 				"size": 41150
 			},
 			{
-				"name": "@solana/wallet-standard-features",
-				"version": "1.3.0",
-				"size": 50417
+				"name": "eventemitter3",
+				"version": "5.0.1",
+				"size": 73390
 			},
 			{
 				"name": "@solana/web3.js",
-				"version": "1.98.0",
-				"size": 10934200
+				"version": "1.98.2",
+				"size": 11148516
 			},
 			{
-				"name": "bs58",
-				"version": "4.0.1"
+				"name": "@babel/runtime",
+				"version": "7.27.1",
+				"size": 246647
 			},
 			{
-				"name": "base-x",
-				"version": "3.0.11",
-				"size": 9524
+				"name": "@noble/curves",
+				"version": "1.9.0",
+				"size": 1697790
 			},
 			{
-				"name": "safe-buffer",
-				"version": "5.2.1",
-				"size": 32101
+				"name": "@noble/hashes",
+				"version": "1.8.0",
+				"size": 1145416
 			},
 			{
-				"name": "bn.js",
-				"version": "5.2.1",
-				"size": 99045
-			},
-			{
-				"name": "borsh",
-				"version": "0.7.0",
-				"size": 34598
-			},
-			{
-				"name": "text-encoding-utf-8",
-				"version": "1.0.2"
+				"name": "@solana/buffer-layout",
+				"version": "4.0.1",
+				"size": 197207
 			},
 			{
 				"name": "buffer",
@@ -173,6 +86,77 @@
 				"size": 6796
 			},
 			{
+				"name": "@solana/codecs-numbers",
+				"version": "2.1.0",
+				"size": 460338
+			},
+			{
+				"name": "@solana/errors",
+				"version": "2.1.0",
+				"size": 1379520
+			},
+			{
+				"name": "chalk",
+				"version": "5.4.1",
+				"size": 44242
+			},
+			{
+				"name": "commander",
+				"version": "13.1.0",
+				"size": 200514
+			},
+			{
+				"name": "@solana/codecs-core",
+				"version": "2.1.0",
+				"size": 913610
+			},
+			{
+				"name": "agentkeepalive",
+				"version": "4.6.0",
+				"size": 33916
+			},
+			{
+				"name": "humanize-ms",
+				"version": "1.2.1"
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "bn.js",
+				"version": "5.2.2",
+				"size": 99205
+			},
+			{
+				"name": "borsh",
+				"version": "0.7.0",
+				"size": 34598
+			},
+			{
+				"name": "bs58",
+				"version": "4.0.1"
+			},
+			{
+				"name": "base-x",
+				"version": "3.0.11",
+				"size": 9524
+			},
+			{
+				"name": "safe-buffer",
+				"version": "5.2.1",
+				"size": 32101
+			},
+			{
+				"name": "text-encoding-utf-8",
+				"version": "1.0.2"
+			},
+			{
+				"name": "fast-stable-stringify",
+				"version": "1.0.0"
+			},
+			{
 				"name": "jayson",
 				"version": "4.2.0",
 				"size": 162772
@@ -184,8 +168,8 @@
 			},
 			{
 				"name": "@types/node",
-				"version": "22.14.1",
-				"size": 2331510
+				"version": "22.15.3",
+				"size": 2350386
 			},
 			{
 				"name": "undici-types",
@@ -272,72 +256,14 @@
 				"version": "3.0.1"
 			},
 			{
-				"name": "superstruct",
-				"version": "2.0.2",
-				"size": 182337
-			},
-			{
-				"name": "@noble/curves",
-				"version": "1.8.2",
-				"size": 1645456
-			},
-			{
-				"name": "@noble/hashes",
-				"version": "1.7.2",
-				"size": 1100967
-			},
-			{
-				"name": "@noble/hashes",
-				"version": "1.8.0",
-				"size": 1145416
-			},
-			{
-				"name": "bigint-buffer",
-				"version": "1.1.5",
-				"size": 55730
-			},
-			{
-				"name": "bindings",
-				"version": "1.5.0",
-				"size": 11230
-			},
-			{
-				"name": "file-uri-to-path",
-				"version": "1.0.0"
-			},
-			{
-				"name": "@babel/runtime",
-				"version": "7.27.0",
-				"size": 249798
-			},
-			{
-				"name": "regenerator-runtime",
-				"version": "0.14.1",
-				"size": 27863
-			},
-			{
-				"name": "agentkeepalive",
-				"version": "4.6.0",
-				"size": 33916
-			},
-			{
-				"name": "humanize-ms",
-				"version": "1.2.1"
-			},
-			{
-				"name": "ms",
-				"version": "2.1.3",
-				"size": 6721
-			},
-			{
 				"name": "rpc-websockets",
 				"version": "9.1.1",
 				"size": 333032
 			},
 			{
 				"name": "ws",
-				"version": "8.18.1",
-				"size": 146780
+				"version": "8.18.2",
+				"size": 147181
 			},
 			{
 				"name": "@types/ws",
@@ -360,18 +286,9 @@
 				"size": 90359
 			},
 			{
-				"name": "eventemitter3",
-				"version": "5.0.1",
-				"size": 73390
-			},
-			{
-				"name": "@solana/buffer-layout",
-				"version": "4.0.1",
-				"size": 197207
-			},
-			{
-				"name": "fast-stable-stringify",
-				"version": "1.0.0"
+				"name": "superstruct",
+				"version": "2.0.2",
+				"size": 182337
 			},
 			{
 				"name": "svelte",
@@ -382,73 +299,156 @@
 		"dependencies": [
 			[0, 1],
 			[1, 2],
+			[2, 3],
+			[2, 4],
+			[4, 3],
 			[1, 3],
 			[1, 4],
-			[4, 3],
 			[1, 5],
-			[5, 3],
-			[5, 4],
 			[0, 6],
 			[6, 7],
-			[7, 8],
+			[6, 8],
 			[8, 9],
+			[6, 9],
 			[6, 10],
-			[6, 11],
-			[11, 10],
-			[11, 7],
+			[10, 11],
 			[11, 12],
-			[6, 13],
-			[13, 14],
-			[13, 15],
-			[6, 16],
-			[16, 17],
-			[17, 18],
-			[18, 19],
-			[16, 20],
-			[16, 21],
-			[21, 18],
-			[16, 22],
-			[16, 23],
-			[16, 24],
+			[11, 13],
+			[6, 14],
+			[14, 15],
+			[15, 16],
+			[15, 17],
+			[14, 18],
+			[18, 15],
+			[6, 19],
+			[19, 20],
+			[20, 21],
+			[6, 22],
+			[6, 23],
+			[23, 22],
+			[23, 24],
 			[24, 25],
-			[16, 26],
-			[16, 27],
-			[16, 28],
-			[16, 29],
+			[25, 26],
+			[23, 27],
+			[6, 24],
+			[6, 11],
+			[6, 28],
+			[6, 29],
 			[29, 30],
-			[16, 31],
-			[16, 32],
-			[6, 33],
-			[33, 34],
-			[34, 35],
-			[34, 36],
-			[6, 37],
-			[6, 38],
-			[38, 39],
-			[6, 40],
-			[6, 41],
-			[41, 42],
+			[30, 31],
+			[31, 32],
+			[29, 33],
+			[29, 34],
+			[34, 31],
+			[29, 35],
+			[29, 36],
+			[29, 37],
+			[37, 38],
+			[29, 39],
+			[29, 40],
+			[29, 41],
+			[29, 42],
 			[42, 43],
-			[6, 44],
-			[44, 45],
+			[29, 44],
+			[29, 45],
 			[6, 46],
 			[46, 47],
 			[47, 48],
-			[6, 49],
-			[49, 50],
-			[49, 31],
-			[49, 13],
-			[49, 51],
-			[51, 18],
-			[49, 52],
-			[49, 53],
-			[53, 54],
-			[49, 55],
+			[47, 49],
+			[6, 50],
+			[50, 51],
+			[50, 44],
+			[50, 11],
+			[50, 52],
+			[52, 31],
+			[50, 53],
+			[50, 54],
+			[54, 55],
+			[50, 5],
 			[6, 56],
-			[56, 13],
-			[6, 57],
-			[0, 58]
+			[0, 57]
 		],
 		"circular": []
-	}
+	},
+	"legacy_svelte": false,
+	"readme": "# `@svelte-on-solana/wallet-adapter-core`\n\nThe core of the wallet adapter is a Svelte Store which exposes methods and properties to run the wallet in your application. This allows to share this data among all components in your application.\n\n## Install\n\n```shell\nnpm install @solana/wallet-adapter-base \\\n            @solana/wallet-adapter-wallets \\\n            @solana/web3.js \\\n            @svelte-on-solana/wallet-adapter-core\n```\n\n## Use\n\nOnce it is installed, you can use it and subscribe to its methods as an usual Svelte Store:\n\n```html\n<script>\n    import { walletStore } from '@svelte-on-solana/wallet-adapter-core';\n    //...\n</script>\n\n{#if $walletStore?.connected}\n<div>My wallet is connected</div>\n{/if}\n```\n\n## UI\n\nTo complete the setup you will need to add some UI components which will provide the full experience to connect, disconnect and visualize address. You can choose between the [Svelte Template](https://github.com/sveltejs/template) or the [SvelteKit](https://kit.svelte.dev/) implementation. Both are using the same packages but setup is different. The UI packages offer different implementations for **Solana** and **Anchor**.\n\n-   [Using Svelte Template](https://github.com/svelte-on-solana/wallet-adapter/blob/master/packages/ui/README.md#svelte-template)\n-   [Using SvelteKit](https://github.com/svelte-on-solana/wallet-adapter/blob/master/packages/ui/README.md#sveltekit)\n",
+	"downloads_history": [
+		[3589, 4],
+		[3596, 10],
+		[3603, 27],
+		[3610, 76],
+		[3617, 86],
+		[3624, 83],
+		[3631, 85],
+		[3638, 109],
+		[3645, 53],
+		[3652, 55],
+		[3659, 124],
+		[3666, 110],
+		[3673, 141],
+		[3680, 63],
+		[3687, 67],
+		[3694, 72],
+		[3701, 120],
+		[3708, 72],
+		[3715, 229],
+		[3722, 183],
+		[3729, 112],
+		[3736, 123],
+		[3743, 96],
+		[3750, 143],
+		[3757, 425],
+		[3764, 364],
+		[3771, 246],
+		[3778, 304],
+		[3785, 358],
+		[3792, 254],
+		[3799, 294],
+		[3806, 242],
+		[3813, 270],
+		[3820, 271],
+		[3827, 279],
+		[3834, 231],
+		[3841, 202],
+		[3848, 277],
+		[3855, 200],
+		[3862, 134],
+		[3869, 243],
+		[3876, 209],
+		[3883, 198],
+		[3890, 156],
+		[3897, 168],
+		[3904, 107],
+		[3911, 87],
+		[3918, 112],
+		[3925, 32],
+		[3932, 100],
+		[3939, 112],
+		[3946, 31],
+		[3953, 83],
+		[3960, 58],
+		[3967, 184],
+		[3974, 153],
+		[3981, 146],
+		[3988, 106],
+		[3995, 134],
+		[4002, 50],
+		[4009, 52],
+		[4016, 89],
+		[4023, 150],
+		[4030, 144],
+		[4037, 68],
+		[4044, 43],
+		[4051, 69],
+		[4058, 39],
+		[4065, 41],
+		[4072, 37],
+		[4079, 35],
+		[4086, 38],
+		[4100, 34],
+		[4107, 46],
+		[4114, 9],
+		[4121, 12],
+		[4128, 3]
+	]
 }

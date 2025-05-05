@@ -5,49 +5,19 @@
 	"authors": ["marta-ko"],
 	"homepage": "https://svar.dev/svelte/datagrid/",
 	"downloads": 3073,
-	"updated": "2025-03-24T11:25:22.367Z",
+	"updated": "2025-04-28T09:39:11.064Z",
 	"tags": ["design-system"],
-	"runes": true,
-	"github_stars": 88,
+	"github_stars": 95,
 	"typescript": false,
-	"version": "2.1.3",
-	"last_rune_check_version": "2.1.3",
-	"downloads_history": [
-		[3931, 99],
-		[3938, 66],
-		[3945, 183],
-		[3952, 74],
-		[3959, 56],
-		[3966, 194],
-		[3973, 165],
-		[3980, 267],
-		[3987, 70],
-		[3994, 101],
-		[4001, 133],
-		[4008, 164],
-		[4015, 103],
-		[4022, 111],
-		[4029, 142],
-		[4036, 194],
-		[4043, 401],
-		[4050, 1918],
-		[4057, 3325],
-		[4064, 4039],
-		[4071, 3683],
-		[4078, 3996],
-		[4085, 5256],
-		[4092, 4086],
-		[4099, 3792],
-		[4106, 3517],
-		[4113, 3073]
-	],
+	"version": "2.1.4",
+	"last_rune_check_version": "2.1.4",
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
 			{
 				"name": "wx-svelte-grid",
-				"version": "2.1.3",
-				"size": 87327
+				"version": "2.1.4",
+				"size": 87466
 			},
 			{
 				"name": "wx-lib-dom",
@@ -81,7 +51,7 @@
 			},
 			{
 				"name": "wx-grid-data-provider",
-				"version": "2.1.3",
+				"version": "2.1.4",
 				"size": 30950
 			},
 			{
@@ -91,13 +61,13 @@
 			},
 			{
 				"name": "wx-grid-locales",
-				"version": "2.1.3",
+				"version": "2.1.4",
 				"size": 676
 			},
 			{
 				"name": "wx-grid-store",
-				"version": "2.1.3",
-				"size": 199363
+				"version": "2.1.4",
+				"size": 199641
 			}
 		],
 		"dependencies": [
@@ -118,5 +88,39 @@
 			[10, 2]
 		],
 		"circular": []
-	}
+	},
+	"readme": "<div align=\"center\">\n\t\n# SVAR Svelte DataGrid | Data Table\n\n</div>\n\n<div align=\"center\">\n\n[Website](https://svar.dev/svelte/datagrid/) • [Getting Started](https://docs.svar.dev/svelte/grid/getting_started/) • [Demos](https://docs.svar.dev/svelte/grid/samples/#/base/willow)\n\n</div>\n\n<div align=\"center\">\n\n[![npm](https://img.shields.io/npm/v/wx-svelte-grid.svg)](https://www.npmjs.com/package/wx-svelte-grid)\n[![License](https://img.shields.io/github/license/svar-widgets/grid)](https://github.com/svar-widgets/grid/blob/main/license.txt)\n[![npm downloads](https://img.shields.io/npm/dm/wx-svelte-grid.svg)](https://www.npmjs.com/package/wx-svelte-grid)\n[![Last Commit](https://img.shields.io/github/last-commit/svar-widgets/grid)](https://github.com/svar-widgets/grid)\n\n</div>\n\n[SVAR DataGrid](https://svar.dev/svelte/datagrid/) is an advanced Svelte component that enhances standard data tables, enabling you to create high-performance, feature-rich data grids that efficiently handle large data sets. Fully customizable, it supports inline editing with a variety of cell editors to meet diverse project requirements.\n\n<div align=\"center\">\n  <img src=\"https://cdn.svar.dev/public/react-grid.png\" alt=\"SVAR Svelte DataGrid - Screenshot\" width=\"700\">\n</div>\n\n# :sparkles: Key Features\n\n-   High performance (virtual scrolling and dynamic loading)\n-   In-cell editing with different cell editors (datepicker, combo, select, rich select, etc.)\n-   Sorting by multiple columns\n-   Responsive design to adapt to different screen/container sizes\n-   Multiple row selection\n-   Fixed columns\n-   Expandable/collapsible columns\n-   Customizable tooltips for grid cells\n-   Context menu\n-   Tree-like structure\n-   Paging\n-   Export to CSV\n-   Keyboard navigation\n-   RestDataProvider for easy backend data binding\n-   Dark and light skins\n\n# :hammer_and_wrench: How to Use\n\nTo use SVAR DataGrid, simply import the package and include the component in your Svelte file:\n\n```svelte\n<script>\n\timport { Grid } from \"wx-svelte-grid\";\n\n\tconst data = [\n\t\t{\n\t\t\tid: 12,\n\t\t\tname: \"Alex Brown\",\n\t\t\tyear: 1974,\n\t\t},\n\t];\n\tconst columns = [\n\t\t{\n\t\t\tid: \"name\",\n\t\t\theader: \"Title\",\n\t\t\tflexgrow: 1,\n\t\t\tsort: true,\n\t\t\teditor: \"text\",\n\t\t},\n\t\t{\n\t\t\tid: \"year\",\n\t\t\theader: \"Year\",\n\t\t\twidth: 100,\n\t\t\tsort: true,\n\t\t\teditor: \"text\",\n\t\t},\n\t];\n</script>\n\n<Grid {data} {columns} />\n```\n\nFor further instructions, see the detailed [how-to-start guide](https://docs.svar.dev/svelte/grid/getting_started).\n\n### :computer: How to Modify\n\nTypically, you don't need to modify the code. However, if you wish to do so, follow these steps:\n\n1. Run `yarn` to install dependencies. Note that this project is a monorepo using `yarn` workspaces, so npm will not work\n2. Start the project in development mode with `yarn start`\n\n### :white_check_mark: Run Tests\n\nTo run the test:\n\n1. Start the test examples with:\n    ```sh\n    yarn start:tests\n    ```\n2. In a separate console, run the end-to-end tests with:\n    ```sh\n    yarn test:cypress\n    ```\n\n### :speech_balloon: Need Help?\n\nJoin our [community forum](https://forum.svar.dev) to get help or post feature requests.\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3932, 99],
+		[3939, 66],
+		[3946, 183],
+		[3953, 74],
+		[3960, 56],
+		[3967, 194],
+		[3974, 165],
+		[3981, 267],
+		[3988, 70],
+		[3995, 101],
+		[4002, 133],
+		[4009, 164],
+		[4016, 103],
+		[4023, 111],
+		[4030, 142],
+		[4037, 194],
+		[4044, 401],
+		[4051, 1918],
+		[4058, 3325],
+		[4065, 4039],
+		[4072, 3683],
+		[4079, 3996],
+		[4086, 5256],
+		[4093, 4086],
+		[4100, 3792],
+		[4107, 3517],
+		[4114, 3073],
+		[4121, 3450],
+		[4128, 2967],
+		[4135, 3331]
+	]
 }

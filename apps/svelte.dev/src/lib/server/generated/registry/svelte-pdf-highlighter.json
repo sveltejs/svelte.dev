@@ -7,20 +7,12 @@
 	"downloads": 4,
 	"updated": "2025-02-25T20:44:22.028Z",
 	"tags": ["ui"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.1.0-alpha.0",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.1.0-alpha.0",
-	"downloads_history": [
-		[4071, 47],
-		[4078, 3],
-		[4085, 2],
-		[4092, 1],
-		[4113, 4]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -37,5 +29,16 @@
 		],
 		"dependencies": [[0, 1]],
 		"circular": []
-	}
+	},
+	"readme": "# svelte-pdf-highlighter\n\nWork in progress\n\nFork of [`react-pdf-highlighter-extended`](https://github.com/DanielArnould/react-pdf-highlighter-extended)\n\n`svelte-pdf-highlighter` is a [Svelte](https://svelte.dev/) library that provides a highly customisable annotation experience for PDF documents on the web, with text and rectangular highlights both supported. It leverages [PDF.js](https://github.com/mozilla/pdf.js) as its viewer. The highlight data format is also independent of the viewport, making it suitable for saving on a server.\n\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4072, 47],
+		[4079, 3],
+		[4086, 2],
+		[4093, 1],
+		[4114, 4],
+		[4121, 5],
+		[4128, 2]
+	]
 }

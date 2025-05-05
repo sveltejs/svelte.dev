@@ -7,33 +7,11 @@
 	"downloads": 4,
 	"updated": "2024-12-19T04:41:29.666Z",
 	"tags": ["tooling"],
-	"runes": false,
 	"github_stars": 4,
 	"typescript": true,
 	"version": "0.1.2",
 	"svelte_range": "^5.2.2",
 	"last_rune_check_version": "0.1.2",
-	"downloads_history": [
-		[3980, 59],
-		[3987, 83],
-		[3994, 4],
-		[4001, 61],
-		[4008, 5],
-		[4015, 6],
-		[4022, 7],
-		[4029, 4],
-		[4036, 6],
-		[4043, 7],
-		[4050, 4],
-		[4057, 2],
-		[4064, 4],
-		[4071, 3],
-		[4085, 3],
-		[4092, 3],
-		[4099, 12],
-		[4106, 7],
-		[4113, 4]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -334,7 +312,7 @@
 			},
 			{
 				"name": "esbuild",
-				"version": "0.25.2",
+				"version": "0.25.3",
 				"size": 134169
 			},
 			{
@@ -364,8 +342,8 @@
 			},
 			{
 				"name": "rollup",
-				"version": "4.40.0",
-				"size": 2726316
+				"version": "4.40.1",
+				"size": 2727114
 			},
 			{
 				"name": "@types/estree",
@@ -836,5 +814,31 @@
 			[50, 126]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Vite-Plugin-Svelte-Checker\n\n# Installation\n\n```bash\nnpm install vite-plugin-svelte-checker --save-dev\n```\n\n# Usage\n\n```tsx\n// vite.config.ts\n\nimport {defineConfig} from 'vite'\nimport {svelteChecker} from 'vite-plugin-svelte-checker'\n\nexport default defineConfig({\n    plugins: [\n        svelteChecker({\n            // configuration options\n        })\n    ]\n})\n```\n\n# Configuration Options\n\nBelow are the available configuration options for the plugin:\n\n| Option               | Type                                                 | Default | Description                          |\n|----------------------|------------------------------------------------------|---------|--------------------------------------|\n| typescript           | boolean, `{ tsConfigPath: string }`                  | `true`  | Enable TypeScript checking           |\n| cli                  | boolean, `{ theme: BundledTheme, enabled: boolean }` | `true`  | Display CLI checker results settings |\n| overlay              | boolean                                              | `true`  | Display browser overlay settings     |\n| ignoreWarnings       | boolean                                              | `false` | Ignore warning-level diagnostics     |\n| eslint (coming soon) | TBD                                                  | `false` | Enable ESLint checking               |\n\n# Methods\n\n## svelteChecker(options)\n\nCreates a new instance of the Svelte checker plugin.\n\n### Parameters\n\n- `options`: Configuration object (optional)\n\n# Example\n\n## Basic Configuration\n\n```ts\n\nimport {defineConfig} from 'vite'\nimport {svelteChecker} from 'vite-plugin-svelte-checker'\n\nexport default defineConfig({\n    plugins: [\n        svelteChecker({\n            typescript: true,\n            ignoreWarnings: false\n        })\n    ]\n})\n```\n\n# Contributing\n\nContributions are welcome! \n\n# License\n\nThis project is licensed under the MIT License - see the LICENSE file for details.",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3981, 59],
+		[3988, 83],
+		[3995, 4],
+		[4002, 61],
+		[4009, 5],
+		[4016, 6],
+		[4023, 7],
+		[4030, 4],
+		[4037, 6],
+		[4044, 7],
+		[4051, 4],
+		[4058, 2],
+		[4065, 4],
+		[4072, 3],
+		[4086, 3],
+		[4093, 3],
+		[4100, 12],
+		[4107, 7],
+		[4114, 4],
+		[4121, 8],
+		[4128, 117],
+		[4135, 66]
+	]
 }

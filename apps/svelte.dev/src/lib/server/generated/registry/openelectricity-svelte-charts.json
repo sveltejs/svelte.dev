@@ -5,32 +5,35 @@
 	"authors": ["nc9", "chienleng"],
 	"homepage": "https://github.com/opennem/svelte-charts#readme",
 	"downloads": 4,
-	"updated": "2025-02-21T05:00:28.723Z",
+	"updated": "2025-04-30T00:49:49.433Z",
 	"tags": ["ui"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
-	"version": "0.0.3",
+	"version": "0.2.8",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
-	"last_rune_check_version": "0.0.3",
-	"downloads_history": [
-		[4064, 112],
-		[4071, 13],
-		[4085, 4],
-		[4092, 2],
-		[4113, 4]
-	],
+	"last_rune_check_version": "0.2.8",
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
 			{
 				"name": "@openelectricity/svelte-charts",
-				"version": "0.0.3",
-				"size": 4140
+				"version": "0.2.8",
+				"size": 85650
 			}
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# Svelte Charts\n\nReusable time series charts built with Svelte 5 and LayerCake.\n\n## Installation\n\n```\nnpm install -D @openelectricity/svelte-charts layercake\n```\n\n## Usage\n\n... more to come\n\n## License\n\nOpen source under the MIT license. See the LICENSE file for details.\n\n## Publishing\n\n```\nnpm run build\n```\n\nthen\n\n```\nnpm publish\n```\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4065, 112],
+		[4072, 13],
+		[4086, 4],
+		[4093, 2],
+		[4114, 4],
+		[4121, 6],
+		[4128, 274]
+	]
 }

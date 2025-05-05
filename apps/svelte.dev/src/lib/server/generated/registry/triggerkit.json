@@ -7,22 +7,12 @@
 	"downloads": 31,
 	"updated": "2025-03-07T23:56:47.503Z",
 	"tags": ["tooling"],
-	"runes": false,
 	"github_stars": 7,
 	"typescript": true,
 	"version": "1.5.4",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "1.5.4",
-	"downloads_history": [
-		[4071, 179],
-		[4078, 76],
-		[4085, 33],
-		[4092, 114],
-		[4099, 67],
-		[4106, 58],
-		[4113, 31]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -34,5 +24,19 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# Triggerkit\n\nA Trigger.dev extension that enables seamless integration between SvelteKit and Trigger.dev by allowing you to use your SvelteKit functions directly in your Trigger.dev projects.\n\n[![npm version](https://badge.fury.io/js/triggerkit.svg)](https://badge.fury.io/js/triggerkit)\n[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)\n\n## Features\n\n- 🔄 Use SvelteKit functions directly in Trigger.dev jobs\n- 📦 Automatic function discovery and export\n- 🔍 TypeScript support with type preservation\n- 🌐 Works with Trigger.dev V3\n- 🎯 Configurable directory scanning\n\n## Installation\n\n```bash\nnpm add -D triggerkit\n```\n\n## Quick Start\n\n1. Configure Trigger.dev to use the plugin:\n\n```typescript\nimport { sveltekit } from '@sveltejs/kit/vite';\nimport { triggerkit } from 'triggerkit';\n\nexport default defineConfig({\n  project: \"your-project-id\",\n  runtime: \"node\",\n  build: {\n    extensions: [\n      triggerkit({\n        includeDirs: ['src/lib/server']\n      })\n    ]\n  }\n});\n```\n\n2. Write your server functions in SvelteKit:\n\n```typescript\n// src/lib/server/email.ts\nimport { EMAIL_API_KEY } from '$env/static/private';\n\n/**\n * Sends a welcome email to a new user\n */\nexport async function sendWelcomeEmail(userId: string) {\n  // Your email sending logic using EMAIL_API_KEY\n  return { success: true, userId };\n}\n```\n\n3. Use them in your Trigger.dev project:\n\n```typescript\nimport { sendWelcomeEmail } from \"virtual:triggerkit\";\nimport { task } from \"@trigger.dev/sdk/v3\";\n\nexport const welcomeEmailTask = task({\n  id: \"welcome-email\",\n  run: async (payload: { userId: string }) => {\n    const result = await sendWelcomeEmail(payload.userId);\n    return result;\n  },\n});\n```\n\n## Configuration\n\n```typescript\ninterface PluginOptions {\n  /**\n   * Directories to scan for exportable functions.\n   * @default ['src/lib', 'src/lib/server']\n   */\n  includeDirs?: string[];\n\n  /**\n   * File patterns to scan. Use forward slashes even on Windows.\n   * @default ['**/*.ts', '**/*.js', '**/+server.ts']\n   */\n  filePatterns?: string[];\n\n  /**\n   * Patterns to exclude from scanning. Use forward slashes even on Windows.\n   * @default ['**/node_modules/**', '**/*.test.ts', '**/*.spec.ts']\n   */\n  exclude?: string[];\n}\n```\n\n## Key Behaviors\n\n- Automatically discovers and exports functions from specified directories\n- Resolves module imports with automatic file extension handling\n- Supports TypeScript and JavaScript files\n- Preserves function types and metadata\n- Handles SvelteKit environment variable imports\n\n## Accessing Functions\n\nYou can access all discovered functions through the functions object:\n\n```typescript\nimport { functions } from 'virtual:triggerkit';\n// Call a discovered function\nawait functions.sendWelcomeEmail(userId);\n```\n\n## Environment Variables\n\nThe plugin automatically handles environment variables imported from `$env/static/private` or `$env/static/public`, making them available in your Trigger.dev tasks through `process.env`.\n\n## Contributing\n\nContributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.\n\n## License\n\nThis project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4072, 179],
+		[4079, 76],
+		[4086, 33],
+		[4093, 114],
+		[4100, 67],
+		[4107, 58],
+		[4114, 31],
+		[4121, 54],
+		[4128, 133],
+		[4135, 77]
+	]
 }

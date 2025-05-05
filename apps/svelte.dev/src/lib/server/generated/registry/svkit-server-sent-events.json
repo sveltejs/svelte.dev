@@ -7,24 +7,12 @@
 	"downloads": 5,
 	"updated": "2025-02-07T11:35:05.537Z",
 	"tags": ["server"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.0.3",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "0.0.3",
-	"downloads_history": [
-		[4050, 187],
-		[4057, 7],
-		[4064, 6],
-		[4071, 2],
-		[4078, 3],
-		[4085, 5],
-		[4099, 3],
-		[4106, 3],
-		[4113, 5]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -36,5 +24,21 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# SvelteKit Server-Sent Events (SSE) Library\n\nA lightweight wrapper for handling Server-Sent Events (SSE) in SvelteKit, simplifying real-time communication between the server and clients.\n\n## Features\n- Simple API for SSE integration in SvelteKit\n- Automatic reconnection options\n- Event-based communication for notifications and real-time updates\n\n## Installation\n\n```sh\nnpm install svkit-server-sent-events\n```\n\n## Usage\n\n### 1. Client-Side Connection\n\nImport and initialize the SSE client in your Svelte component:\n\n```ts\nimport SSEClient from 'svkit-server-sent-events';\n\nconst sseClient = new SSEClient('/notifications', {\n    reconnectOptions: {\n        interval: 1000,\n        delay: 1000\n    }\n});\n\nsseClient.on('notification', ({ data }) => {\n    const notification = JSON.parse(data);\n    console.log(notification);\n});\n\nsseClient.onerror = () => {\n    console.error('Error connecting to the server');\n};\n```\n\n### 2. Available Client Options\n\nThe `SSEClient` constructor accepts the following options:\n\n```ts\nnew SSEClient(url: string, options?: {\n    withCredentials?: boolean;\n    reconnectOptions?: {\n        interval: number;\n        delay: number;\n    };\n    manualConnection?: boolean;\n});\n```\n\n- **withCredentials**: Whether to send cookies and authentication headers.\n- **reconnectOptions**: Controls automatic reconnection.\n- **manualConnection**: If `true`, prevents auto-connection; `connect()` must be called manually.\n\n### 3. Server-Side Implementation\n\nCreate an SSE connection in your SvelteKit server route:\n\n```ts\nimport { SSEConnection } from 'svkit-server-sent-events';\nimport { randomUUID } from 'crypto';\n\nconst sseConnection = new SSEConnection<string>();\n\nexport async function GET({ request }) {\n    const clientId = randomUUID();\n\n    sseConnection.onConnect = (id) => {\n        console.log(`Successfully connected: ${id}`);\n        sseConnection.emit(id, \"connected\", \"Welcome!\");\n        sseConnection.broadcast(\"new_connection\", \"New client connected\");\n        sseConnection.emitMultiple([\"randomId1\", \"randomId2\"], \"new_connection\", \"New client connected\");\n    };\n\n    sseConnection.onDisconnect = (id) => {\n        console.log(`Client ${id} disconnected`);\n    };\n\n    return sseConnection.createStream(clientId, request);\n}\n```\n\n### 4. Server-Side API\n\n- **`emit(id, eventName, data)`**: Sends an event to a specific client.\n- **`broadcast(eventName, data)`**: Sends an event to all connected clients.\n- **`emitMultiple(ids, eventName, data)`**: Sends an event to multiple clients.\n\nExample:\n\n```ts\nsseConnection.emit(userId, \"notification\", \"New message received\");\nsseConnection.broadcast(\"global_update\", \"A global event occurred\");\nsseConnection.emitMultiple([\"user1\", \"user2\"], \"special_event\", \"VIP access granted\");\n```\n\n## License\n\nMIT License\n\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4051, 187],
+		[4058, 7],
+		[4065, 6],
+		[4072, 2],
+		[4079, 3],
+		[4086, 5],
+		[4100, 3],
+		[4107, 3],
+		[4114, 5],
+		[4121, 9],
+		[4128, 2],
+		[4135, 4]
+	]
 }

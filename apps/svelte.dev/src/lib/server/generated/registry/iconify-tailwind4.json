@@ -7,29 +7,10 @@
 	"downloads": 3889,
 	"updated": "2025-02-28T13:34:23.013Z",
 	"tags": ["tooling"],
-	"runes": false,
 	"github_stars": 4,
 	"typescript": true,
 	"version": "1.0.6",
 	"last_rune_check_version": "1.0.6",
-	"downloads_history": [
-		[4008, 133],
-		[4015, 12],
-		[4022, 16],
-		[4029, 72],
-		[4036, 82],
-		[4043, 192],
-		[4050, 449],
-		[4057, 600],
-		[4064, 1005],
-		[4071, 1687],
-		[4078, 2492],
-		[4085, 2673],
-		[4092, 3013],
-		[4099, 3027],
-		[4106, 3472],
-		[4113, 3889]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -180,5 +161,27 @@
 			[2, 1]
 		],
 		"circular": [[16, 13]]
-	}
+	},
+	"readme": "# Iconify plugin for Tailwind CSS 4\n\nDocumentation: https://iconify.design/docs/usage/css/tailwind/tailwind4/\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4009, 133],
+		[4016, 12],
+		[4023, 16],
+		[4030, 72],
+		[4037, 82],
+		[4044, 192],
+		[4051, 449],
+		[4058, 600],
+		[4065, 1005],
+		[4072, 1687],
+		[4079, 2492],
+		[4086, 2673],
+		[4093, 3013],
+		[4100, 3027],
+		[4107, 3472],
+		[4114, 3889],
+		[4121, 3635],
+		[4128, 4701]
+	]
 }

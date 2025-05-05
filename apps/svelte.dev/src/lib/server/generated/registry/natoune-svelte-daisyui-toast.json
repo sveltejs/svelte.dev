@@ -7,24 +7,12 @@
 	"downloads": 10,
 	"updated": "2025-02-13T20:46:30.430Z",
 	"tags": ["ui"],
-	"runes": false,
 	"github_stars": 1,
 	"typescript": true,
 	"version": "1.1.1",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "1.1.1",
-	"downloads_history": [
-		[4057, 262],
-		[4064, 11],
-		[4071, 11],
-		[4078, 29],
-		[4085, 15],
-		[4092, 9],
-		[4099, 2],
-		[4106, 8],
-		[4113, 10]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -36,5 +24,20 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "![Header Image](/header-image.png)\n<p align=\"center\">\n<img src=\"https://badgen.net/badge/license/MIT/422ad5\" />\n<img src=\"https://badgen.net/npm/v/@natoune/svelte-daisyui-toast\" />\n</p>\n<p align=\"center\">\n<a href=\"https://natoune.github.io/svelte-daisyui-toast\">Website</a> · <a href=\"https://npmjs.com/package/@natoune/svelte-daisyui-toast\">NPM Package</a>\n</p>\n\n# Svelte DaisyUI Toast\n\nA simple toaster component for Svelte with DaisyUI.  \nInspired by [Svelte French Toast](https://github.com/kbrgl/svelte-french-toast).\n\n## Installation\n\n```bash\nnpm install @natoune/svelte-daisyui-toast\n```\n\n```bash\npnpm install @natoune/svelte-daisyui-toast\n```\n\n```bash\nyarn add @natoune/svelte-daisyui-toast\n```\n\n## Usage\n\nMount a `<Toaster />` at the top level of your app and use the `toast` API to display toasts.\n\n```js\n<script>\n    import toast, { Toaster } from '@natoune/svelte-daisyui-toast'\n\n    function handleClick() {\n        toast.success('Hello, world!')\n    }\n</script>\n\n<Toaster />\n<button type=\"button\" onclick={handleClick}>Toast</button>\n```\n\nFor more usage examples, see [the website](https://natoune.github.io/svelte-daisyui-toast).\n\n## Thanks\n\nThanks to the original author of Svelte French Toast and its contributors.\n",
+	"legacy_svelte": true,
+	"downloads_history": [
+		[4058, 262],
+		[4065, 11],
+		[4072, 11],
+		[4079, 29],
+		[4086, 15],
+		[4093, 9],
+		[4100, 2],
+		[4107, 8],
+		[4114, 10],
+		[4121, 10],
+		[4128, 7]
+	]
 }

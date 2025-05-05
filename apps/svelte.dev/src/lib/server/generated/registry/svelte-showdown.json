@@ -7,28 +7,12 @@
 	"downloads": 10,
 	"updated": "2025-01-08T19:43:19.594Z",
 	"tags": ["content"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.4.1",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.15.2",
 	"last_rune_check_version": "0.4.1",
-	"downloads_history": [
-		[4015, 209],
-		[4022, 148],
-		[4029, 11],
-		[4036, 8],
-		[4043, 7],
-		[4050, 8],
-		[4064, 3],
-		[4071, 3],
-		[4078, 1],
-		[4085, 5],
-		[4092, 1],
-		[4099, 10],
-		[4113, 10]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -59,5 +43,25 @@
 			[2, 3]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Svelte Showdown\n\nUse [showdown](https://github.com/showdownjs/showdown) as a Svelte component.\n\n```bash\npnpm i svelte-showdown -D\n```\n\n## How to use\n\n```svelte\n<script>\n  import { SvelteShowdown } from 'svelte-showdown';\n\n  let content = $state('**This text is bold**, and this one contains emoji: :smile: :alien:');\n\n  const options = {\n    emoji: true\n  };\n</script>\n\n<SvelteShowdown {content} {options} />\n```\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4016, 209],
+		[4023, 148],
+		[4030, 11],
+		[4037, 8],
+		[4044, 7],
+		[4051, 8],
+		[4065, 3],
+		[4072, 3],
+		[4079, 1],
+		[4086, 5],
+		[4093, 1],
+		[4100, 10],
+		[4114, 10],
+		[4121, 10],
+		[4128, 12],
+		[4135, 14]
+	]
 }

@@ -7,25 +7,12 @@
 	"downloads": 53,
 	"updated": "2025-03-28T18:33:05.712Z",
 	"tags": ["ui"],
-	"runes": true,
 	"github_stars": 18,
 	"typescript": true,
 	"version": "1.5.2",
 	"svelte_range": "^5.9.0",
 	"kit_range": "^2.19.0",
 	"last_rune_check_version": "1.5.2",
-	"downloads_history": [
-		[4050, 207],
-		[4057, 834],
-		[4064, 27],
-		[4071, 12],
-		[4078, 8],
-		[4085, 2020],
-		[4092, 513],
-		[4099, 299],
-		[4106, 76],
-		[4113, 53]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -37,5 +24,21 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# SV-Marketing\n\n> 🚧 Still in active development.\n>\n> 🧑‍💻 Need to expose a variable? feel free to submit a PR.\n\nBuild beautiful marketing sites with SvelteKit - A lightweight, customizable component library for static marketing websites.\n\n## Features\n\n- 🚀 Built for SvelteKit\n- 🎨 Highly customizable through CSS variables\n- 📱 Fully responsive components\n- ⚡ Lightweight and fast\n- 🔧 Easy to integrate\n- 📈 SEO-friendly with the right semantic components and `jsonLD`\n\n## Installation\n\n```bash\nnpm install sv-marketing\n```\n\n## Available Components\n\n### Content Sections\n\n- Hero\n  - Basic Hero `<BasicHero {...props} />`\n  - Hero with Media `<MediaHero {...props} />`\n- Text & Media `<TextAndMedia {...props} />`\n- Features Grid `<Features {...props} />`\n- Pricing Table `<Pricing {...props} />`\n- Call-to-Action (CTA) `<CallToAction {...props} />`\n- Testimonials Grid `<Testimonials {...props} />`\n- FAQ Accordion `<FrequentlyAskedQuestions {...props} />` (with `SEO` ✨)\n- Brand Showcase List `<Brands {...props} />`\n- Blog List View `<BlogListing {...props} />`\n- Blog Post View `<BlogPost {...props} />`\n\n### Navigation & Structure\n\n- Layout `<Layout {...props} />`\n- Breadcrumbs `<Breadcrumbs {...props} />` (with `SEO` ✨)\n- Page SEO `<PageSeo {...props} />` (with `jsonLD` ✨)\n\n### Compose your own\n\n- SectionContainer `<SectionContainer {...props} />`, a wrapper for all sections (using a 12-column grid system)\n- SubSectionContainer `<SubSectionContainer {...props} />`, a container for organizing content within sections with these props:\n  - `children`: Svelte components to render inside the container\n  - `gridSize`: Sets container width ('full' by default)\n  - `gapSize`: Controls spacing between items ('small' by default)\n  - `align`: Alignment of content ('center' by default)\n  - `justifyUp`: Controls vertical alignment\n  - `itemsCount`: Specifies number of items in the container\n- SectionHeader `<SectionHeader {...props} />`, a header for each section with these props:\n  - `title`: Title of the section\n  - `subtitle`: Subtitle of the section\n  - `align`: Alignment of content ('center' by default)\n  - `justifyUp`: Controls vertical alignment\n  - `itemsCount`: Specifies number of items in the container\n\n## Usage\n\nComponents use Svelte's runes mode and can be styled through CSS variables imported to your `+layout.svelte` file.\n\n## CSS Variables\n\nThe following CSS variables can be customized:\n\n- `--section-max-width`: Sets the maximum width (`1200px` as fallback) for section containers to ensure consistent layout across different screen sizes.\n- `--color-primary`: Sets the primary color (`#00f` as fallback) for buttons and other elements.\n- `--color-primary-alternate-text`: Sets the text color for buttons and other elements that are styled (`#fff` as fallback).\n- `--color-primary-background`: Sets the background color for primary sections (`#eee` as fallback).\n- `--color-secondary-background`: Sets the background color for secondary sections (`#aaa` as fallback).\n- `--color-text`: Sets the text color (`#222` as fallback) for all text elements.\n\n## CSS Classes\n\nEach component has specific class names to enable custom styling in your own `CSS` files. These classes follow a consistent pattern:\n\n### Component Classes\n\n- **Section Container Classes**\n\n  - `.section` - Applied to all sections for generic styling\n  - Component-specific class (e.g., `.text-and-media`, `.hero`, `.features`) for targeted styling\n\n- **Item Classes**\n  - Component-specific item class (e.g., `.text-and-media-item`, `.features-item`) for styling individual items within a component\n  - `.sub-section` - Applied to sub-section containers within components\n\n### Component-Specific Classes\n\n- **Text and Media Component**\n\n  - `.text-and-media` - Main container\n  - `.text-and-media-item` - Individual text/media pairs\n  - `.text-and-media-media` - Media within text/media pairs\n\n- **Hero Components**\n\n  - `.basic-hero` - Basic hero section\n  - `.media-hero` - Hero with media section\n\n- **Features Component**\n\n  - `.features` - Main container\n  - `.features-item` - Individual feature items\n  - `.feature-media` - Media within feature items\n\n- **Testimonials Component**\n\n  - `.testimonials` - Main container\n  - `.testimonials-item` - Individual testimonial\n  - `.testimonial-media` - Avatar/media within testimonials\n\n- **Pricing Component**\n\n  - `.pricing` - Main container\n  - `.pricing-item` - Individual pricing plans\n\n- **FAQ Component**\n\n  - `.faq` - Main container\n  - `.faq-item` - Individual question/answer pairs\n\n- **Call-to-Action Component**\n\n  - `.cta` - Main container\n\n- **Brands Component**\n\n  - `.brands` - Main container\n  - `.brands-item` - Individual brand items\n\n- **Navbar Component**\n\n  - `.navbar` - Main container\n  - `.desktop-navbar` - Desktop navigation\n  - `.mobile-navbar` - Mobile navigation\n\n- **Footer Component**\n  - `.footer` - Main container\n  - `.footer-item` - Individual footer sub section\n\n### Example Usage\n\nTo style all text and media sections:\n\n```css\n.text-and-media {\n background-color: #f9f9f9;\n}\n\n.text-and-media-item {\n border-left: 3px solid var(--color-primary);\n}\n```\n\n## TODO\n\n- Add template `CSS` for quick start\n- Add demo site\n- Add Markdown support for `p` tags and blog posts\n- Add much clearer documentation\n- Add Contact Form component (with `API` Submission)\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4051, 207],
+		[4058, 834],
+		[4065, 27],
+		[4072, 12],
+		[4079, 8],
+		[4086, 2020],
+		[4093, 513],
+		[4100, 299],
+		[4107, 76],
+		[4114, 53],
+		[4121, 30],
+		[4128, 41]
+	]
 }

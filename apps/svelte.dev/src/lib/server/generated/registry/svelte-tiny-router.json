@@ -7,23 +7,11 @@
 	"downloads": 13,
 	"updated": "2025-04-17T08:47:09.755Z",
 	"tags": ["router"],
-	"runes": true,
-	"github_stars": 13,
+	"github_stars": 17,
 	"typescript": false,
 	"version": "1.0.4",
 	"svelte_range": ">=5.0.0",
 	"last_rune_check_version": "1.0.4",
-	"downloads_history": [
-		[4057, 109],
-		[4064, 22],
-		[4071, 3],
-		[4078, 3],
-		[4085, 80],
-		[4092, 13],
-		[4099, 11],
-		[4106, 2],
-		[4113, 13]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -35,5 +23,21 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# Svelte tiny Router\n\nA simple and efficient declarative routing library for Svelte 5 built with runes.\n\n## Install\n```\nnpm i svelte-tiny-router\n```\n\n## Use\n### route\n```svelte\n<!-- App.svelte -->\n<script>\n  import { Router, Route } from 'svelte-tiny-router';\n  import Home from './Home.svelte';\n  import About from './About.svelte';\n  import User from './User.svelte';\n</script>\n\n<Router>\n  <!-- Exact match for home page -->\n  <Route path=\"/\" component={Home} />\n\n  <!-- Static route -->\n  <Route path=\"/about\" component={About} />\n\n  <!-- Dynamic route: \"/user/123\" will match and pass { id: \"123\" } as a prop -->\n  <Route path=\"/user/:id\" component={User} />\n\n  <!-- Fallback route: no \"path\" prop means it always matches (e.g. for a 404 page) -->\n  <Route>\n    <p>Page not found.</p>\n  </Route>\n</Router>\n```\n\n### navigate\n```svelte\n<!-- SomeComponent.svelte -->\n<script>\n  import { navigate } from 'svelte-tiny-router';\n\n  function goToAbout() {\n    navigate('/about');\n  }\n</script>\n\n<button on:click={goToAbout}>Go to About Page</button>\n```\n\n### get then remove query strings\n```svelte\n<!-- SomeComponent.svelte -->\n<script>\n  import { useTinyRouter } from 'svelte-tiny-router';\n  const router = useTinyRouter();\n\n  // Check if the \"foo\" query parameter exists (i.e /myroute?foo=bar) and log it\n  if (router.hasQueryParam('foo')) {\n    console.log(\"Value of foo:\", router.getQueryParam('foo'));\n    router.removeQueryParams([\"foo\"]);\n  }\n</script>\n```\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4058, 109],
+		[4065, 22],
+		[4072, 3],
+		[4079, 3],
+		[4086, 80],
+		[4093, 13],
+		[4100, 11],
+		[4107, 2],
+		[4114, 13],
+		[4121, 57],
+		[4128, 17],
+		[4135, 23]
+	]
 }

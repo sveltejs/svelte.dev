@@ -7,43 +7,11 @@
 	"downloads": 6,
 	"updated": "2024-09-24T15:30:17.827Z",
 	"tags": ["adapter"],
-	"runes": false,
 	"github_stars": 2,
 	"typescript": true,
 	"version": "0.0.3",
 	"kit_range": "^2.4.0",
 	"last_rune_check_version": "0.0.3",
-	"downloads_history": [
-		[3917, 173],
-		[3924, 5],
-		[3931, 4],
-		[3938, 5],
-		[3945, 5],
-		[3952, 4],
-		[3959, 1],
-		[3966, 2],
-		[3973, 1],
-		[3980, 2],
-		[3987, 5],
-		[3994, 4],
-		[4001, 2],
-		[4008, 2],
-		[4015, 1],
-		[4022, 5],
-		[4029, 6],
-		[4036, 8],
-		[4043, 7],
-		[4050, 3],
-		[4057, 1],
-		[4064, 2],
-		[4071, 1],
-		[4078, 1],
-		[4085, 1],
-		[4092, 1],
-		[4099, 6],
-		[4106, 10],
-		[4113, 6]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -59,8 +27,8 @@
 			},
 			{
 				"name": "ws",
-				"version": "8.18.1",
-				"size": 146780
+				"version": "8.18.2",
+				"size": 147181
 			},
 			{
 				"name": "abab",
@@ -94,13 +62,13 @@
 			},
 			{
 				"name": "parse5",
-				"version": "7.2.1",
-				"size": 694639
+				"version": "7.3.0",
+				"size": 695873
 			},
 			{
 				"name": "entities",
-				"version": "4.5.0",
-				"size": 412892
+				"version": "6.0.0",
+				"size": 540419
 			},
 			{
 				"name": "cssstyle",
@@ -474,5 +442,41 @@
 			[1, 66]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# sveltekit-adapter-wordpress-admin (SKAWA)\n\n[Adapter](https://kit.svelte.dev/docs#adapters) for SvelteKit which turns your app into a wordpress plugin admin interface.\n\n## Usage\n\nInstall with `npm i -D sveltekit-adapter-wordpress-admin`, setup the adapter in `svelte.config.js`.\n\n### Example `svelte.config.js`\n\nNote: It's likely you will need to set custom base paths for Wordpress.\n\n```js\nimport adapter from 'sveltekit-adapter-wordpress-admin';\n\nimport { sveltePreprocess } from 'svelte-preprocess';\nimport { vitePreprocess } from '@sveltejs/vite-plugin-svelte';\n\n/** @type {import('@sveltejs/kit').Config} */\nconst config = {\n    preprocess: [sveltePreprocess(), vitePreprocess()],\n\n    kit: {\n        // adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.\n        // If your environment is not supported, or you settled on a specific environment, switch out the adapter.\n        // See https://kit.svelte.dev/docs/adapters for more information about adapters.\n        adapter: adapter({\n            pages: 'build',\n            assets: 'build',\n            fallback: null,\n            indexPath: 'index.php',\n            shadow: false,\n            menu: {\n                page_title: 'Svelte in Admin!',\n                menu_title: 'Svelte in Admin!',\n                icon: 'dashicons-generic',\n                slug: 'svelte-in-admin'\n            },\n            prefix: 'skawa_svelte_in_admin',\n            renderHead: (head) =>\n                [...head.querySelectorAll(`link[rel=\"modulepreload\"]`)]\n                    .map((element) => element.outerHTML)\n                    .join(''),\n            renderBody: (body) => body.innerHTML\n        }),\n\n        embedded: true\n    }\n};\n\nconst host = 'https://example.com';\n\n// handle wordpress url structure\nif (process.env.NODE_ENV === 'production') {\n    const base = '/wp-content/plugins/my-wp-plugin/admin/build';\n    config.kit.paths = {\n        base,\n        assets: host + base\n    };\n}\n\nexport default config;\n```\n\n### Example `index.php`\n\nNote: You can choose the path by setting `indexPath` in the adapter config.\n\n```php\n<!-- index.php -->\n<?php\n/**\n * Plugin Name: My Shortcode\n */\n\ninclude plugin_dir_path( __FILE__ ) . 'svelte_kit_shortcode.php';\n?>\n```\n\n## Attributions\n\nThis adapter was heavily inspired by [sveltekit-adapter-wordpress-shortcode](https://github.com/tomatrow/sveltekit-adapter-wordpress-shortcode) by **@tomatrow**.\n\nWordPress plugins bindings took inspirations from [this old repo](https://github.com/Ebeldev/svelte-wordpress-plugin) by **@Ebeldev**.\n\n<!--\n### Passing attributes and content\n\nBoth are inserted right before the svelte kit body.\n\n```html\n[my-shortcode attribute-a attribute-b attribute-c]\n<a href=\"/\">Home</a>\n[/my-shortcode]\n```\n\nbecomes\n\n```html\n<script id=\"my-shortcode-attributes\" type=\"application/json\">\n\t[\"attribute-a\", \"attribute-b\", \"attribute-c\"]\n</script>\n<template id=\"my-shortcode-content\">\n\t<a href=\"/\">Home</a>\n</template>\n<!-- svelte kit body stuff -_>\n```\n-->\n\n<!--\n## Style Isolation\n\n### (1) Shadow dom\n\nSetting the `shadow` option to true puts the head and body data under one shadow dom.\n\n### or (2) Postcss\n\nThe following configuration of `postcss` plugins should provide enough isolation from Wordpress styles.\n\nNote that `postcss-autoreset` is using the fork at `tomatrow/postcss-autoreset`.\n\n```js\nconst autoprefixer = require(\"autoprefixer\")\nconst cssnano = require(\"cssnano\")\nconst safeImportant = require(\"postcss-safe-important\")\nconst prefixer = require(\"postcss-prefix-selector\")\nconst initial = require(\"postcss-initial\")\nconst autoReset = require(\"postcss-autoreset\")\n\nconst mode = process.env.NODE_ENV\nconst dev = mode === \"development\"\n\nconst config = {\n\tplugins: [\n\t\tautoReset({ reset: \"revert\" }),\n\t\tinitial(),\n\t\tprefixer({\n\t\t\tprefix: \"#svelte\",\n\t\t\ttransform(prefix, selector, prefixedSelector) {\n\t\t\t\treturn [\"html\", \"body\"].includes(selector) ? `${selector} ${prefix}` : prefixedSelector\n\t\t\t}\n\t\t}),\n\t\tautoprefixer(),\n\t\tsafeImportant(),\n\t\t!dev &&\n\t\t\tcssnano({\n\t\t\t\tpreset: \"default\"\n\t\t\t})\n\t]\n}\n\nmodule.exports = config\n```\n-->\n\n## License\n\n[MIT](LICENSE)\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3918, 173],
+		[3925, 5],
+		[3932, 4],
+		[3939, 5],
+		[3946, 5],
+		[3953, 4],
+		[3960, 1],
+		[3967, 2],
+		[3974, 1],
+		[3981, 2],
+		[3988, 5],
+		[3995, 4],
+		[4002, 2],
+		[4009, 2],
+		[4016, 1],
+		[4023, 5],
+		[4030, 6],
+		[4037, 8],
+		[4044, 7],
+		[4051, 3],
+		[4058, 1],
+		[4065, 2],
+		[4072, 1],
+		[4079, 1],
+		[4086, 1],
+		[4093, 1],
+		[4100, 6],
+		[4107, 10],
+		[4114, 6],
+		[4121, 6],
+		[4128, 3],
+		[4135, 7]
+	]
 }

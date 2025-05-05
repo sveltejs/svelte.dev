@@ -7,30 +7,12 @@
 	"downloads": 6,
 	"updated": "2025-01-02T04:45:24.978Z",
 	"tags": ["ui"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.0.2",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.0.2",
-	"downloads_history": [
-		[4008, 60],
-		[4015, 77],
-		[4022, 5],
-		[4029, 2],
-		[4036, 5],
-		[4043, 9],
-		[4050, 3],
-		[4057, 1],
-		[4064, 3],
-		[4071, 1],
-		[4085, 1],
-		[4092, 2],
-		[4099, 2],
-		[4106, 6],
-		[4113, 6]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -42,5 +24,27 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# Festival App\n\nA mobile kiosk for festival information. Each festival day displays a pannable/zoomable map image with positioned stage pins.\nStages display artist schedules with links to more artist information.\n\n![Festival App Mobile Demo](https://ik.imagekit.io/thegoldendino/goldendino/festival-app-demo_wZDf1xAXB.gif?updatedAt=1735724073459&tr=w-300)\n\n[demo site](https://festival-app-dev.netlify.app/)\n\n## Features\n\n- Pannable/Zoomable map image\n- Configuration schema\n- Browser history state maintained.\n\n## Installing\n\n```sh\nnpm install --save-dev @thegoldendino/festival-app\n```\n\n## Usage\n\n```html\n<script lang=\"ts\">\n\timport FestivalApp from '@thegoldendino/festival-app';\n\timport type { ConfigParams } from '@thegoldendino/festival-app';\n\timport type { PageData } from './$types.js';\n\n\tlet { data }: { data: PageData } = $props();\n\n\tlet config: ConfigParams = {\n\t\tdays: data.days,\n\t\tartists: data.artists,\n\t\tstages: data.stages,\n\t\toptions: data.options\n\t};\n</script>\n\n<div class=\"mobile-preview\">\n\t<FestivalApp {config} />\n</div>\n\n<style>\n\t.mobile-preview {\n\t\twidth: 400px;\n\t\theight: 700px;\n\t}\n</style>\n\n```\n\n## Config Schema\n\n[docs/config.md](./docs/config.md)\n\n### Example Config [TOML](https://toml.io)\n\n- [days](./src/data/days.toml): schedule and map data for a festival day\n- [artists](./src/data/artists.toml): artist information\n- [stages](./src/data/stages.toml): stage information\n- [options](./src/data/options.toml): application specific options\n\n## Static Site Implementation\n\nThough any repository can generate a Config object, FestivalApp is designed to not require a CMS or any 3rd party backend.\nImage file nameing conventions provide a reference to the record keys in the DaysConfig and ArtistsConfig.\n\n### Example\n\n```toml\n# artists.toml\n\n[brasscheeks]\nname = \"Brass Cheeks\"\n```\n\n- `brasscheeks` key requires a corresponding image file `brasscheeks.jpg` (extension agnostic: 'png', 'jpeg', 'webp'). \n- We can then use Vite's file glob feature to pull all image files.\n- Similarly a Day record with key `2025-06-01` should have a corresponding map image `2025-06-01.png` file.\n\n### Merging Vite processed images\n\nEach [ConfigDay](./docs/config.md#configday) and [ConfigArtist](./docs/config.md#configartist) has an Image which includes [src, width, height](./docs/config.md#image). Instead of manually entering these values, Vite provides the ability to pull this data from a directory of images. **Each image must be named the same as the corresponding record key.**\n\n__see [+page.serve.ts](./src/lib/routes/+page.server.ts) for example.__\n\n## Styling\n\nThe FestivalApp takes advantage of svelte's ability to [pass custom properties](https://svelte.dev/docs/svelte/custom-properties) to its components.\n\n### Example\n\n\n```html\n<FestivalApp {config}\n\t--festapp-color-primary-hue=\"100\"\n\t--festapp-color-secondary-hue=\"187\"\n>\n```\n\n_see all custom property [variables.css](./src/lib/styles/variables.css)_\n\n\n## Developing\n\nOnce you've installed dependencies with `npm install`, start a development server:\n\n```bash\nnpm run dev\n\n# or start the server and open the app in a new browser tab\nnpm run dev -- --open\n```\n\nEverything inside `src/lib` is part of the festival-app library, everything inside `src/routes` is used as a showcase for the festival-app.\n\n## Building\n\nTo build your library:\n\n```bash\nnpm run package\n```\n\nTo create a production version of your showcase app:\n\n```bash\nnpm run build\n```\n\nYou can preview the production build with `npm run preview`.\n\n> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.\n\n## Publishing\n\nTo publish your library to [npm](https://www.npmjs.com):\n\n```bash\nnpm publish\n```\n\n## License\n\n[MIT](LICENSE.md)",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4009, 60],
+		[4016, 77],
+		[4023, 5],
+		[4030, 2],
+		[4037, 5],
+		[4044, 9],
+		[4051, 3],
+		[4058, 1],
+		[4065, 3],
+		[4072, 1],
+		[4086, 1],
+		[4093, 2],
+		[4100, 2],
+		[4107, 6],
+		[4114, 6],
+		[4121, 4],
+		[4128, 2],
+		[4135, 5]
+	]
 }

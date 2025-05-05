@@ -9,11 +9,9 @@
 	"tags": ["ui"],
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
-	"runes": true,
 	"last_rune_check_version": "0.0.5",
 	"version": "0.0.5",
 	"github_stars": 0,
-	"downloads_history": [[4113, 228]],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -34,8 +32,8 @@
 			},
 			{
 				"name": "animejs",
-				"version": "4.0.1",
-				"size": 1300757
+				"version": "4.0.2",
+				"size": 1300374
 			}
 		],
 		"dependencies": [
@@ -44,5 +42,13 @@
 			[0, 3]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Yuanlu Svelte Lib\n\n这是一个 Svelte 组件库\n\n\n# 对开发者\n\n## 发布\n```\nnpm login --registry=https://registry.npmjs.org\nnpm run build\nnpm publish --registry=https://registry.npmjs.org\n```",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4114, 228],
+		[4121, 38],
+		[4128, 19],
+		[4135, 7]
+	]
 }

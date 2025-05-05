@@ -7,29 +7,11 @@
 	"downloads": 5,
 	"updated": "2025-01-17T22:14:30.745Z",
 	"tags": ["ui", "design-system", "seo"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "1.0.39",
 	"svelte_range": "^5.0.0",
 	"last_rune_check_version": "1.0.39",
-	"downloads_history": [
-		[4015, 480],
-		[4022, 236],
-		[4029, 160],
-		[4036, 20],
-		[4043, 35],
-		[4050, 13],
-		[4057, 4],
-		[4064, 9],
-		[4071, 19],
-		[4078, 5],
-		[4085, 13],
-		[4092, 22],
-		[4099, 36],
-		[4106, 3],
-		[4113, 5]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -60,5 +42,26 @@
 			[0, 3]
 		],
 		"circular": []
-	}
+	},
+	"legacy_svelte": false,
+	"readme": "# ctw-kit\n\nCustom components and utilities for Svelte and TailwindCSS (DaisyUI)\n\n![image](https://github.com/user-attachments/assets/5075818e-2b37-4db5-a4a5-ebd0a36c6bde)\n\n\n## Installation\n\n```bash\nbun add ctw-kit\n# or\nnpm install ctw-kit\n```\n\n## Prerequisites\n\nThis library requires the following peer dependencies to be installed and configured in your application:\n\n```bash\nbun add -d tailwindcss daisyui\n# or\nnpm install -D tailwindcss daisyui\n```\n\nMake sure to configure TailwindCSS and DaisyUI in your application's `tailwind.config.js`:\n\n```js\n/** @type {import('tailwindcss').Config} */\nexport default {\n  content: ['./src/**/*.{html,js,svelte,ts}', './node_modules/ctw-kit/**/*.{html,js,svelte,ts}'],\n  plugins: [require('daisyui')],\n}\n```\n\n## Components\n\n- [x] [SEO](src/lib/components/SEO/README.md) - SEO meta tags management including Open Graph and Twitter cards\n- [x] Carousel - A customizable carousel component\n- [x] Emails - Email sending component using Resend\n- [x] Feedback - User feedback collection component\n- [x] Hello - Simple greeting component\n- [x] ThemeChange - Theme switcher component for DaisyUI\n- [x] TiltContent - Tilt effect component using vanilla-tilt\n\n## Development\n\n1. Clone the repository\n```bash\ngit clone https://github.com/ctwhome/ctw-kit.git\ncd ctw-kit\n```\n\n2. Install dependencies\n```bash\nbun install\n```\n\n3. Build the package\n```bash\nbun run build\n```\n\n## Publishing\n\nThis package uses fully automated releases. Push your changes to main using [Conventional Commits](https://www.conventionalcommits.org/) format:\n\n```bash\n# Features (minor version bump)\ngit commit -m \"feat: add new component\"\n\n# Bug fixes (patch version bump)\ngit commit -m \"fix: resolve styling issue\"\n\n# Breaking changes (major version bump)\ngit commit -m \"feat!: redesign API\"\n\ngit push origin main\n```\n\nThe automation will:\n1. Check if the version exists in npm registry\n2. Bump the version (patch)\n3. Create a git tag and GitHub release\n4. Build and publish to npm\n\nEverything happens automatically in the correct order - no manual steps needed after the initial setup.\n\n### First-time Setup\n\nYou'll need to set up two tokens in your repository's secrets (Settings → Secrets and variables → Actions):\n\n1. `PAT_TOKEN`: A GitHub Personal Access Token with repo permissions\n   - Go to GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic)\n   - Generate new token (classic)\n   - Select scopes: `repo` (full control of private repositories)\n   - Copy the token and add it as a repository secret named `PAT_TOKEN`\n\n2. `NPM_TOKEN`: An npm automation token\n   - Go to npmjs.com → Access Tokens → Generate New Token\n   - Select type: Automation\n   - Make sure 2FA is not required for automation tokens in your npm account settings\n     - Go to npmjs.com → Profile Settings → Authentication & Authorization\n     - Under \"Two-Factor Authentication\", ensure it's not set to \"Required for all operations\"\n   - Copy the token and add it as a repository secret named `NPM_TOKEN`\n\nAfter setting up these tokens, the automation will handle everything else - just push your changes to main using conventional commits.\n\n## License\n\nMIT\n",
+	"downloads_history": [
+		[4016, 480],
+		[4023, 236],
+		[4030, 160],
+		[4037, 20],
+		[4044, 35],
+		[4051, 13],
+		[4058, 4],
+		[4065, 9],
+		[4072, 19],
+		[4079, 5],
+		[4086, 13],
+		[4093, 22],
+		[4100, 36],
+		[4107, 3],
+		[4114, 5],
+		[4121, 10],
+		[4128, 9]
+	]
 }

@@ -7,36 +7,11 @@
 	"downloads": 4,
 	"updated": "2024-10-31T11:53:57.392Z",
 	"tags": ["integration"],
-	"runes": false,
 	"github_stars": 1,
 	"typescript": true,
 	"version": "0.3.0",
 	"svelte_range": "^4.2.19",
 	"last_rune_check_version": "0.3.0",
-	"downloads_history": [
-		[3952, 79],
-		[3959, 23],
-		[3966, 11],
-		[3973, 3],
-		[3980, 21],
-		[3987, 15],
-		[3994, 2],
-		[4001, 6],
-		[4008, 6],
-		[4015, 7],
-		[4022, 5],
-		[4029, 4],
-		[4036, 3],
-		[4043, 31],
-		[4050, 9],
-		[4057, 1],
-		[4064, 9],
-		[4071, 2],
-		[4092, 1],
-		[4099, 1],
-		[4106, 4],
-		[4113, 4]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -47,13 +22,13 @@
 			},
 			{
 				"name": "vite",
-				"version": "5.4.18",
-				"size": 3276648
+				"version": "5.4.19",
+				"size": 3278469
 			},
 			{
 				"name": "rollup",
-				"version": "4.40.0",
-				"size": 2726316
+				"version": "4.40.1",
+				"size": 2727114
 			},
 			{
 				"name": "@types/estree",
@@ -97,5 +72,34 @@
 			[5, 8]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# `sk-lanyard` (SvelteKit + Lanyard)\n\nSvelteKit integration with [Lanyard](https://github.com/Phineas/lanyard), an API to fetch your Discord presence.\n\n`sk-lanyard` is fully typed and supports the entire Lanyard API, using both REST and WebSockets.\n\nThe `useLanyard` function returns a reactive store containing presence data.\n\n## [Demo](https://stackblitz.com/edit/sk-lanyard-demo?file=src/routes/index.svelte)\n\n```html\n<script>\n\timport { useLanyard } from 'sk-lanyard';\n\tconst presence = useLanyard({ method: 'rest', id: '524722785302609941' });\n</script>\n\n<pre>\n    <!-- Because presence is a reactive store, use $presence to access the data -->\n    <code>{JSON.stringify($presence ?? {}, null, 2)}</code>\n</pre>\n```\n\n## Usage\n\n```ts\nimport { useLanyard } from 'sk-lanyard';\n\n// Optionally import Lanyard types\nimport type { LanyardData, LanyardHello } from 'sk-lanyard';\n```\n\n### REST\n\n```ts\n// Use the REST API to fetch a single user\nconst lanyard = useLanyard({ method: 'rest', id: '524722785302609941' });\n```\n\n```ts\n// Use an interval of 1000 ms\nconst lanyard = useLanyard({\n\tmethod: 'rest',\n\tpollInterval: 1000,\n\tid: '524722785302609941'\n});\n```\n\n```ts\n// Use a custom endpoint\nconst lanyard = useLanyard({\n\tmethod: 'rest',\n\trestUrl: 'https://lanyard.example.com/rest',\n\tid: '524722785302609941'\n});\n```\n\n### WebSockets\n\n```ts\n// Use the WebSockets API to subscribe to a single user\nconst lanyard = useLanyard({ method: 'ws', id: '524722785302609941' });\n```\n\n```ts\n// Subscribe to multiple users\nconst lanyard = useLanyard({\n\tmethod: 'ws',\n\tids: ['524722785302609941', '299707523370319883']\n});\n```\n\n```ts\n// Subscribe to all users tracked by Lanyard\nconst lanyard = useLanyard({ method: 'ws', all: true });\n```\n\n```ts\n// Use a custom endpoint\nconst lanyard = useLanyard({\n\tmethod: 'ws',\n\twsUrl: 'wss://lanyard.example.com/ws',\n\tid: '524722785302609941'\n});\n```\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3953, 79],
+		[3960, 23],
+		[3967, 11],
+		[3974, 3],
+		[3981, 21],
+		[3988, 15],
+		[3995, 2],
+		[4002, 6],
+		[4009, 6],
+		[4016, 7],
+		[4023, 5],
+		[4030, 4],
+		[4037, 3],
+		[4044, 31],
+		[4051, 9],
+		[4058, 1],
+		[4065, 9],
+		[4072, 2],
+		[4093, 1],
+		[4100, 1],
+		[4107, 4],
+		[4114, 4],
+		[4121, 9],
+		[4128, 3],
+		[4135, 10]
+	]
 }

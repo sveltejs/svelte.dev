@@ -7,92 +7,11 @@
 	"downloads": 132,
 	"updated": "2024-08-05T08:47:42.065Z",
 	"tags": ["ui"],
-	"runes": true,
 	"github_stars": 1,
 	"typescript": true,
 	"version": "2.0.1",
 	"svelte_range": "^5.0.0-next.208",
 	"last_rune_check_version": "2.0.1",
-	"downloads_history": [
-		[3574, 232],
-		[3581, 19],
-		[3588, 190],
-		[3595, 536],
-		[3602, 456],
-		[3609, 145],
-		[3616, 209],
-		[3623, 243],
-		[3630, 274],
-		[3637, 62],
-		[3644, 156],
-		[3651, 38],
-		[3658, 67],
-		[3665, 168],
-		[3672, 36],
-		[3679, 292],
-		[3686, 209],
-		[3693, 594],
-		[3700, 309],
-		[3707, 164],
-		[3714, 222],
-		[3721, 144],
-		[3728, 21],
-		[3735, 120],
-		[3742, 67],
-		[3749, 38],
-		[3756, 41],
-		[3763, 162],
-		[3770, 255],
-		[3777, 122],
-		[3784, 659],
-		[3791, 241],
-		[3798, 217],
-		[3805, 252],
-		[3812, 75],
-		[3819, 95],
-		[3826, 48],
-		[3833, 171],
-		[3840, 460],
-		[3847, 243],
-		[3854, 220],
-		[3861, 137],
-		[3868, 126],
-		[3875, 68],
-		[3882, 85],
-		[3889, 188],
-		[3896, 54],
-		[3903, 215],
-		[3910, 56],
-		[3917, 37],
-		[3924, 21],
-		[3931, 65],
-		[3938, 40],
-		[3945, 20],
-		[3952, 25],
-		[3959, 27],
-		[3966, 34],
-		[3973, 182],
-		[3980, 192],
-		[3987, 66],
-		[3994, 81],
-		[4001, 50],
-		[4008, 52],
-		[4015, 194],
-		[4022, 74],
-		[4029, 63],
-		[4036, 57],
-		[4043, 117],
-		[4050, 48],
-		[4057, 29],
-		[4064, 19],
-		[4071, 10],
-		[4078, 1],
-		[4085, 42],
-		[4092, 5],
-		[4099, 164],
-		[4106, 352],
-		[4113, 132]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -123,13 +42,13 @@
 			},
 			{
 				"name": "@kronos-integration/service",
-				"version": "11.2.3",
+				"version": "11.2.5",
 				"size": 70280
 			},
 			{
 				"name": "loglevel-mixin",
-				"version": "7.2.2",
-				"size": 21078
+				"version": "7.2.3",
+				"size": 20368
 			},
 			{
 				"name": "remove-sensible-values",
@@ -153,8 +72,8 @@
 			},
 			{
 				"name": "svelte-dnd-action",
-				"version": "0.9.60",
-				"size": 330948
+				"version": "0.9.61",
+				"size": 332230
 			},
 			{
 				"name": "mf-styling",
@@ -168,12 +87,12 @@
 			},
 			{
 				"name": "svelte-command",
-				"version": "3.0.27",
+				"version": "3.0.28",
 				"size": 16784
 			},
 			{
 				"name": "svelte-common",
-				"version": "6.19.0",
+				"version": "6.19.2",
 				"size": 47828
 			},
 			{
@@ -183,8 +102,8 @@
 			},
 			{
 				"name": "npm-pkgbuild",
-				"version": "18.1.1",
-				"size": 135432
+				"version": "18.1.2",
+				"size": 135453
 			},
 			{
 				"name": "@npmcli/arborist",
@@ -680,8 +599,8 @@
 			},
 			{
 				"name": "@sigstore/tuf",
-				"version": "3.1.0",
-				"size": 50762
+				"version": "3.1.1",
+				"size": 45466
 			},
 			{
 				"name": "tuf-js",
@@ -700,8 +619,8 @@
 			},
 			{
 				"name": "@sigstore/verify",
-				"version": "2.1.0",
-				"size": 72309
+				"version": "2.1.1",
+				"size": 71913
 			},
 			{
 				"name": "npm-packlist",
@@ -779,8 +698,8 @@
 			},
 			{
 				"name": "@npmcli/redact",
-				"version": "3.2.0",
-				"size": 16759
+				"version": "3.2.1",
+				"size": 16859
 			},
 			{
 				"name": "@npmcli/query",
@@ -1114,7 +1033,7 @@
 			},
 			{
 				"name": "npm-package-walker",
-				"version": "8.0.0",
+				"version": "8.0.3",
 				"size": 10306
 			},
 			{
@@ -1154,22 +1073,22 @@
 			},
 			{
 				"name": "uti",
-				"version": "8.7.1",
-				"size": 44749
+				"version": "8.7.2",
+				"size": 45326
 			},
 			{
 				"name": "svelte-entitlement",
-				"version": "2.0.37",
+				"version": "2.0.38",
 				"size": 8100
 			},
 			{
 				"name": "svelte-log-view",
-				"version": "6.3.43",
+				"version": "6.3.44",
 				"size": 10512
 			},
 			{
 				"name": "svelte-session-manager",
-				"version": "3.0.37",
+				"version": "3.0.39",
 				"size": 25188
 			},
 			{
@@ -1534,5 +1453,87 @@
 			[0, 217]
 		],
 		"circular": []
-	}
+	},
+	"readme": "[![Svelte v5](https://img.shields.io/badge/svelte-v5-orange.svg)](https://svelte.dev)\n[![npm](https://img.shields.io/npm/v/system-dashboard-frontend.svg)](https://www.npmjs.com/package/system-dashboard-frontend)\n[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)\n[![bundlejs](https://deno.bundlejs.com/?q=system-dashboard-frontend\\&badge=detailed)](https://bundlejs.com/?q=system-dashboard-frontend)\n[![downloads](http://img.shields.io/npm/dm/system-dashboard-frontend.svg?style=flat-square)](https://npmjs.org/package/system-dashboard-frontend)\n[![GitHub Issues](https://img.shields.io/github/issues/arlac77/system-dashboard-frontend.svg?style=flat-square)](https://github.com/arlac77/system-dashboard-frontend/issues)\n[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Farlac77%2Fsystem-dashboard-frontend%2Fbadge\\&style=flat)](https://actions-badge.atrox.dev/arlac77/system-dashboard-frontend/goto)\n[![Coverage Status](https://coveralls.io/repos/arlac77/system-dashboard-frontend/badge.svg)](https://coveralls.io/github/arlac77/system-dashboard-frontend)\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3596, 536],
+		[3603, 456],
+		[3610, 145],
+		[3617, 209],
+		[3624, 243],
+		[3631, 274],
+		[3638, 62],
+		[3645, 156],
+		[3652, 38],
+		[3659, 67],
+		[3666, 168],
+		[3673, 36],
+		[3680, 292],
+		[3687, 209],
+		[3694, 594],
+		[3701, 309],
+		[3708, 164],
+		[3715, 222],
+		[3722, 144],
+		[3729, 21],
+		[3736, 120],
+		[3743, 67],
+		[3750, 38],
+		[3757, 41],
+		[3764, 162],
+		[3771, 255],
+		[3778, 122],
+		[3785, 659],
+		[3792, 241],
+		[3799, 217],
+		[3806, 252],
+		[3813, 75],
+		[3820, 95],
+		[3827, 48],
+		[3834, 171],
+		[3841, 460],
+		[3848, 243],
+		[3855, 220],
+		[3862, 137],
+		[3869, 126],
+		[3876, 68],
+		[3883, 85],
+		[3890, 188],
+		[3897, 54],
+		[3904, 215],
+		[3911, 56],
+		[3918, 37],
+		[3925, 21],
+		[3932, 65],
+		[3939, 40],
+		[3946, 20],
+		[3953, 25],
+		[3960, 27],
+		[3967, 34],
+		[3974, 182],
+		[3981, 192],
+		[3988, 66],
+		[3995, 81],
+		[4002, 50],
+		[4009, 52],
+		[4016, 194],
+		[4023, 74],
+		[4030, 63],
+		[4037, 57],
+		[4044, 117],
+		[4051, 48],
+		[4058, 29],
+		[4065, 19],
+		[4072, 10],
+		[4079, 1],
+		[4086, 42],
+		[4093, 5],
+		[4100, 164],
+		[4107, 352],
+		[4114, 132],
+		[4121, 122],
+		[4128, 42],
+		[4135, 42]
+	]
 }

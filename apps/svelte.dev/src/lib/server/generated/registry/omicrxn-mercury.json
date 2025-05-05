@@ -7,33 +7,12 @@
 	"downloads": 7,
 	"updated": "2024-11-21T12:02:19.716Z",
 	"tags": ["ui"],
-	"runes": true,
 	"github_stars": 6,
 	"typescript": true,
 	"version": "0.1.33",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.5.27",
 	"last_rune_check_version": "0.1.33",
-	"downloads_history": [
-		[3973, 188],
-		[3980, 10],
-		[3987, 29],
-		[3994, 3],
-		[4001, 5],
-		[4008, 4],
-		[4015, 7],
-		[4022, 9],
-		[4029, 14],
-		[4036, 5],
-		[4043, 11],
-		[4050, 4],
-		[4057, 2],
-		[4064, 2],
-		[4071, 2],
-		[4092, 3],
-		[4106, 7],
-		[4113, 7]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -104,5 +83,29 @@
 			[8, 9]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Mercury\n\n**Mercury** is a powerful Svelte animation library built on top of AnimeJS, offering an intuitive, streamlined way to animate DOM elements directly using Svelte actions. Mercury allows for seamless integration with existing Svelte features like transitions, actions, and motion, while eliminating the need for wrapper components. It also introduces layout animations and exit animations inspired by Framer Motion, all while keeping a clean and svelte-friendly syntax.\n\n## Features\n\n- Leverages **AnimeJS** for powerful animations\n- Supports **layout animations**\n- Provides **exit animations**\n- Simple, expressive Svelte syntax using `use:mercury`\n- No wrapper components, all animations applied directly to DOM elements\n- Works with all Svelte features for the DOM like transitions, actions, and motion, which also allows for direct binding to the element\n\n## Installation\n\n```bash\nnpm install @omicrxn/mercury\n```\n\n## Usage\n\n```svelte\n<script>\n\timport { mercury,useExit } from '@omicrxn/mercury';\n\tlet show = true;\n</script>\n\n<button on:click={() => (show = !show)}>Toggle Show</button>\n\n{#if show}\n\t<div\n\t\tclass=\"w-24 h-24 rounded-lg bg-blue-400 border border-blue-600\"\n\t\tuse:mercury={{\n\t\t\topacity: 1,\n\t\t\tscale: [1, 2, 2, 1, 1],\n\t\t\trotate: [0, 0, 180, 180, 0],\n\t\t\tborderRadius: ['8%', '8%', '50%', '50%', '8%'],\n\t\t\tduration: 3,\n\t\t\tease: 'inOutSine',\n\t\t\tdelay: 0.5,\n\t\t\tloop: true\n\t\t}}\n\t\tout:useExit={{\n\t\t\topacity: 0,\n\t\t\tscale: 0,\n\t\t\tduration: 1\n\t\t}}\n\t></div>\n{/if}\n```\n\n## API\n\n### `use:mercury`\n\nThe primary action for applying animations to DOM elements. It accepts an object with animation parameters, similar to **AnimeJS**.\n\nExample Parameters:\n\n- `opacity`: The opacity of the element\n- `scale`: A series of values to scale the element\n- `rotate`: Rotate the element around the Z-axis\n- `borderRadius`: A series of values to animate the border-radius\n- `duration`: The length of the animation in seconds\n- `ease`: The easing function for the animation\n- `delay`: The delay before the animation starts\n- `loop`: Specifies if the animation should loop\n\n### `out:useExit`\n\nAction for defining exit animations when the element is removed from the DOM.\n\nExample Parameters:\n\n- `opacity`: The opacity change during exit\n- `scale`: The scale during exit\n- `duration`: The duration of the exit animation\n\n## Acknowledgments\nMercury is built on the shoulders of giants. Special thanks to the creators and maintainers of [Svelte](https://svelte.dev/), [Anime.js](https://github.com/juliangarnier/anime/), and special thanks to [@Char2sGu](https://github.com/Char2sGu) for helping me integrate layout projections into the library.\n\n\n## License\n\nMIT License\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3974, 188],
+		[3981, 10],
+		[3988, 29],
+		[3995, 3],
+		[4002, 5],
+		[4009, 4],
+		[4016, 7],
+		[4023, 9],
+		[4030, 14],
+		[4037, 5],
+		[4044, 11],
+		[4051, 4],
+		[4058, 2],
+		[4065, 2],
+		[4072, 2],
+		[4093, 3],
+		[4107, 7],
+		[4114, 7],
+		[4121, 8],
+		[4128, 61]
+	]
 }

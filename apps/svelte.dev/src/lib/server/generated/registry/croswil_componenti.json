@@ -6,21 +6,12 @@
 	"downloads": 16,
 	"updated": "2025-03-20T16:13:31.299Z",
 	"tags": ["ui"],
-	"runes": false,
 	"typescript": false,
 	"version": "1.0.19",
 	"svelte_range": "^4.2.15",
 	"kit_range": "^2.5.7",
 	"last_rune_check_version": "1.0.19",
 	"github_stars": 0,
-	"downloads_history": [
-		[4078, 1012],
-		[4085, 53],
-		[4092, 140],
-		[4099, 46],
-		[4106, 14],
-		[4113, 16]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -32,5 +23,17 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"legacy_svelte": false,
+	"readme": "# Progetto componenti di base per markuno e derivati\n\nSono stati inseriti i componenti di base sviluppati con tailwindcss per liprerie stile markuno",
+	"downloads_history": [
+		[4079, 1012],
+		[4086, 53],
+		[4093, 140],
+		[4100, 46],
+		[4107, 14],
+		[4114, 16],
+		[4121, 9],
+		[4128, 8]
+	]
 }

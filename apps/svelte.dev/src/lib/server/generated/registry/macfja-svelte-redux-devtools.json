@@ -7,29 +7,11 @@
 	"downloads": 4,
 	"updated": "2024-11-25T15:08:30.521Z",
 	"tags": ["tooling"],
-	"runes": false,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "1.0.0",
 	"svelte_range": "*",
 	"last_rune_check_version": "1.0.0",
-	"downloads_history": [
-		[3980, 63],
-		[3987, 7],
-		[3994, 2],
-		[4008, 3],
-		[4015, 4],
-		[4022, 3],
-		[4029, 1],
-		[4036, 4],
-		[4043, 6],
-		[4050, 2],
-		[4057, 1],
-		[4071, 1],
-		[4092, 1],
-		[4106, 3],
-		[4113, 4]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -41,5 +23,26 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# Redux Devtools connector for Svelte\n\nAllow to track and rewind stores value with Redux Devtools.\n\n![GitHub Repo stars](https://img.shields.io/github/stars/macfja/svelte-redux-devtools?style=social)\n![Download per week](https://img.shields.io/npm/dw/@macfja/svelte-redux-devtools)\n![License](https://img.shields.io/npm/l/@macfja/svelte-redux-devtools)\n![NPM version](https://img.shields.io/npm/v/@macfja/svelte-redux-devtools)\n[![JavaScript Style Guide: Biomejs](https://img.shields.io/badge/code%20style-biomejs-brightgreen.svg?style=flat)](https://biomejs.dev/ \"One toolchain for your web project\")\n\n## Installation\n\n### NPM\n\n```sh\nnpm install @macfja/svelte-redux-devtools\n```\n## Usage\n\n```sveltehtml\n<script lang=\"ts\">\nimport { writable } from \"svelte/store\"\nimport { trackStores } from \"@macfja/svelte-redux-devtools\";\nlet name = writable(\"John\");\nlet age = writable(33)\n\ntrackStores({ name, age }, { prefix: 'app', hasOneState: true })\n\n</script>\n\n<h1>Hello {$name}!</h1>\n\n<input bind:value={$name} />\n<input bind:value={$age} type=\"range\" min={0} max={120} />\n\n```\n\n## Contributing\n\nContributions are welcome. Please open up an issue or create PR if you would like to help out.\n\nRead more in the [Contributing file](CONTRIBUTING.md)\n\n## License\n\nThe MIT License (MIT). Please see [License File](LICENSE.md) for more information.\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3981, 63],
+		[3988, 7],
+		[3995, 2],
+		[4009, 3],
+		[4016, 4],
+		[4023, 3],
+		[4030, 1],
+		[4037, 4],
+		[4044, 6],
+		[4051, 2],
+		[4058, 1],
+		[4072, 1],
+		[4093, 1],
+		[4107, 3],
+		[4114, 4],
+		[4121, 6],
+		[4128, 2]
+	]
 }

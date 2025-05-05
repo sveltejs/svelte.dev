@@ -7,25 +7,11 @@
 	"downloads": 15,
 	"updated": "2025-02-02T22:26:13.248Z",
 	"tags": ["adapter"],
-	"runes": false,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.3.0",
 	"kit_range": "^2.16.1",
 	"last_rune_check_version": "0.3.0",
-	"downloads_history": [
-		[4043, 186],
-		[4050, 30],
-		[4057, 6],
-		[4064, 25],
-		[4071, 4],
-		[4078, 4],
-		[4085, 13],
-		[4092, 22],
-		[4099, 4],
-		[4106, 13],
-		[4113, 15]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -36,13 +22,13 @@
 			},
 			{
 				"name": "bun-types",
-				"version": "1.2.10",
-				"size": 1640734
+				"version": "1.2.12",
+				"size": 1651178
 			},
 			{
 				"name": "@types/node",
-				"version": "22.14.1",
-				"size": 2331510
+				"version": "22.15.3",
+				"size": 2350386
 			},
 			{
 				"name": "undici-types",
@@ -118,5 +104,22 @@
 			[13, 6]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# svelte-kit-bun\n\n> [!NOTE]\n> This is a work in progress.\n\nWhen finished, it should bundle your SvelteKit app into optimised Bun server.\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4044, 186],
+		[4051, 30],
+		[4058, 6],
+		[4065, 25],
+		[4072, 4],
+		[4079, 4],
+		[4086, 13],
+		[4093, 22],
+		[4100, 4],
+		[4107, 13],
+		[4114, 15],
+		[4121, 25],
+		[4128, 12]
+	]
 }

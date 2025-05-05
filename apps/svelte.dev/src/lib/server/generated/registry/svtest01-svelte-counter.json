@@ -5,27 +5,11 @@
 	"downloads": 4,
 	"updated": "2024-12-27T00:26:05.703Z",
 	"tags": ["ui"],
-	"runes": false,
 	"typescript": true,
 	"version": "6.0.0",
 	"svelte_range": "^5.0.0",
 	"last_rune_check_version": "6.0.0",
 	"github_stars": 0,
-	"downloads_history": [
-		[4008, 376],
-		[4015, 30],
-		[4022, 22],
-		[4029, 11],
-		[4036, 16],
-		[4043, 8],
-		[4050, 6],
-		[4064, 3],
-		[4071, 3],
-		[4078, 1],
-		[4099, 12],
-		[4106, 14],
-		[4113, 4]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -37,5 +21,25 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# svtest01-svelte-counter\n\nA customizable text editor component built with Svelte 5, optimized for React/Next.js.\n\n## Installation\n\n```bash\nnpm install svtest01-svelte-counter\n```\n\n## Usage in React/Next.js\n\n```tsx\n'use client';\nimport { Editor, useEditor } from 'svtest01-svelte-counter';\n\nexport default function EditorPage() {\n  const { text, setText } = useEditor('Initial text');\n\n  return (\n    <Editor\n      text={text}\n      size=\"medium\"\n      limit={100}\n      onTextChange={setText}\n    />\n  );\n}\n```\n\n## Props\n\n| Prop | Type | Default | Description |\n|------|------|---------|-------------|\n| text | string | '' | The editor content |\n| size | 'small' \\| 'medium' \\| 'large' | 'medium' | The size of the editor |\n| limit | number | 100 | Character limit |\n| onTextChange | (text: string) => void | undefined | Callback for text changes |\n\n## Custom Hook\n\nThe package includes a `useEditor` hook for easier state management:\n\n```tsx\nconst { text, setText } = useEditor('Initial text');\n```\n\n## License\n\nMIT",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4009, 376],
+		[4016, 30],
+		[4023, 22],
+		[4030, 11],
+		[4037, 16],
+		[4044, 8],
+		[4051, 6],
+		[4065, 3],
+		[4072, 3],
+		[4079, 1],
+		[4100, 12],
+		[4107, 14],
+		[4114, 4],
+		[4121, 9],
+		[4128, 8],
+		[4135, 4]
+	]
 }

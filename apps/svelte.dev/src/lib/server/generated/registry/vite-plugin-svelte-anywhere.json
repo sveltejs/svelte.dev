@@ -7,24 +7,11 @@
 	"downloads": 13,
 	"updated": "2025-02-14T20:01:21.281Z",
 	"tags": ["tooling"],
-	"runes": false,
 	"github_stars": 16,
 	"typescript": true,
 	"version": "2.0.6",
 	"svelte_range": "^5.0.0",
 	"last_rune_check_version": "2.0.6",
-	"downloads_history": [
-		[4043, 595],
-		[4050, 233],
-		[4057, 100],
-		[4064, 16],
-		[4071, 13],
-		[4078, 7],
-		[4085, 34],
-		[4099, 20],
-		[4106, 18],
-		[4113, 13]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -36,5 +23,22 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "![logo](docs/public/logo.png)\n\n# Vite Plugin Svelte Anywhere\nUse Svelte components anywhere.\n\nThis Vite plugin empowers developers to define reusable custom elements directly within their Svelte components. \n\nOnce set up, simply annotate your component with a custom tag, and it’s ready to be embedded anywhere HTML is accepted—no additional steps required.\n\n---\n\n### [Documentation](https://svelte-anywhere.dev)\n### [Demo](https://svelte-anywhere.dev/demo)\n\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4044, 595],
+		[4051, 233],
+		[4058, 100],
+		[4065, 16],
+		[4072, 13],
+		[4079, 7],
+		[4086, 34],
+		[4100, 20],
+		[4107, 18],
+		[4114, 13],
+		[4121, 131],
+		[4128, 9],
+		[4135, 10]
+	]
 }

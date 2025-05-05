@@ -7,19 +7,12 @@
 	"downloads": 19,
 	"updated": "2025-03-18T16:48:25.253Z",
 	"tags": ["ui"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "1.2.1",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.20.0",
 	"last_rune_check_version": "1.2.1",
-	"downloads_history": [
-		[4092, 274],
-		[4099, 58],
-		[4106, 28],
-		[4113, 19]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -35,8 +28,8 @@
 			},
 			{
 				"name": "bootstrap-icons",
-				"version": "1.11.3",
-				"size": 2926281
+				"version": "1.12.1",
+				"size": 2927632
 			}
 		],
 		"dependencies": [
@@ -44,5 +37,16 @@
 			[0, 2]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# @univ-lehavre/bootstrap\n\n[![DOI](https://zenodo.org/badge/950477046.svg)](https://doi.org/10.5281/zenodo.15044263)\n\nThis repository is dedicated to the user interface components using Bootstrap.\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4093, 274],
+		[4100, 58],
+		[4107, 28],
+		[4114, 19],
+		[4121, 5],
+		[4128, 2],
+		[4135, 6]
+	]
 }

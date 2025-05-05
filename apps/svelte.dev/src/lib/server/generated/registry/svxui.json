@@ -7,38 +7,12 @@
 	"downloads": 5,
 	"updated": "2024-12-23T11:55:03.593Z",
 	"tags": ["ui"],
-	"runes": true,
 	"typescript": true,
 	"version": "0.0.12",
 	"svelte_range": "^5.15.0",
 	"kit_range": "^2.15.0",
 	"last_rune_check_version": "0.0.12",
 	"github_stars": 0,
-	"downloads_history": [
-		[3938, 116],
-		[3945, 84],
-		[3952, 7],
-		[3959, 3],
-		[3966, 2],
-		[3980, 4],
-		[3987, 229],
-		[3994, 96],
-		[4001, 15],
-		[4008, 84],
-		[4015, 18],
-		[4022, 8],
-		[4029, 11],
-		[4036, 17],
-		[4043, 9],
-		[4050, 7],
-		[4064, 1],
-		[4071, 1],
-		[4078, 3],
-		[4085, 1],
-		[4099, 15],
-		[4106, 21],
-		[4113, 5]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -49,13 +23,13 @@
 			},
 			{
 				"name": "@floating-ui/dom",
-				"version": "1.6.13",
-				"size": 165945
+				"version": "1.7.0",
+				"size": 166707
 			},
 			{
 				"name": "@floating-ui/core",
-				"version": "1.6.9",
-				"size": 212585
+				"version": "1.7.0",
+				"size": 214929
 			},
 			{
 				"name": "@floating-ui/utils",
@@ -70,5 +44,35 @@
 			[1, 3]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# svxui\n\nSvxui is free and open-source UI component library for svelte app.\n\n--- \n\n## Interactive [Documentation](https://svxui.vercel.app/)\n\n## Features\n\n### 23 customizable components:\n- Type-safe with TypeScript.\n- Most components are based on [Radix UI Themes](https://www.radix-ui.com/themes/docs/overview/getting-started).\n\n### Accessible colors:\n- Based on [Radix Colors](https://www.radix-ui.com/colors).\n- Intuitive aliases `gray`/`primary`/`blue`/`green`/`yellow`/`orange`/`red`.\n  \n### Light & Dark themes:\n- Prevent FLOUC (Flash Of Unstyled Content).\n- Real time system theme tracking.\n- ssr/ssg compatible\n\n## Installation\n\n```bash\nnpm install svxui\npnpm install svxui\nyarn add svxui\n```\n\n## Development\n\n### Install \n\n```bash\npnpm install\n```\n\n### Serve docs site + lib\n\n```bash\npnpm run dev\n```\n\n### Serve lib only\n\n```bash\npnpm run dev:lib\n```\n\n## Credits\n\nSome parts of this lib come from the following:  \n(thanks to the developers for their incredible work!)\n\n-   [Radix UI](https://www.radix-ui.com/)\n-   [Svecosystem](https://github.com/svecosystem)\n-   [sthemer](https://github.com/ivanhofer/sthemer)\n-   [svelte-portal](https://github.com/romkor/svelte-portal)\n-   [trap-focus-svelte](https://github.com/henrygd/trap-focus-svelte)\n-   [clsx](https://github.com/lukeed/clsx)\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3939, 116],
+		[3946, 84],
+		[3953, 7],
+		[3960, 3],
+		[3967, 2],
+		[3981, 4],
+		[3988, 229],
+		[3995, 96],
+		[4002, 15],
+		[4009, 84],
+		[4016, 18],
+		[4023, 8],
+		[4030, 11],
+		[4037, 17],
+		[4044, 9],
+		[4051, 7],
+		[4065, 1],
+		[4072, 1],
+		[4079, 3],
+		[4086, 1],
+		[4100, 15],
+		[4107, 21],
+		[4114, 5],
+		[4121, 8],
+		[4128, 4],
+		[4135, 10]
+	]
 }

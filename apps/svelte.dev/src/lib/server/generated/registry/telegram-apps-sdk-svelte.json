@@ -5,52 +5,25 @@
 	"authors": ["dimitreee", "qbnk", "sorawalker", "mainsmirnov"],
 	"homepage": "https://github.com/Telegram-Mini-Apps/telegram-apps#readme",
 	"downloads": 156,
-	"updated": "2025-04-21T21:44:12.084Z",
+	"updated": "2025-04-27T21:48:27.067Z",
 	"tags": ["integration"],
-	"runes": false,
-	"github_stars": 933,
+	"github_stars": 946,
 	"typescript": true,
-	"version": "2.0.20",
+	"version": "2.0.23",
 	"svelte_range": "^5.2.3",
-	"last_rune_check_version": "2.0.20",
-	"downloads_history": [
-		[3952, 64],
-		[3959, 69],
-		[3966, 200],
-		[3973, 88],
-		[3980, 185],
-		[3987, 354],
-		[3994, 109],
-		[4001, 236],
-		[4008, 138],
-		[4015, 155],
-		[4022, 177],
-		[4029, 64],
-		[4036, 114],
-		[4043, 259],
-		[4050, 112],
-		[4057, 421],
-		[4064, 148],
-		[4071, 197],
-		[4078, 107],
-		[4085, 93],
-		[4092, 252],
-		[4099, 225],
-		[4106, 203],
-		[4113, 156]
-	],
+	"last_rune_check_version": "2.0.23",
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
 			{
 				"name": "@telegram-apps/sdk-svelte",
-				"version": "2.0.20",
-				"size": 26333
+				"version": "2.0.23",
+				"size": 26349
 			},
 			{
 				"name": "@telegram-apps/sdk",
-				"version": "3.8.0",
-				"size": 1307137
+				"version": "3.9.2",
+				"size": 1311637
 			},
 			{
 				"name": "better-promises",
@@ -69,8 +42,8 @@
 			},
 			{
 				"name": "@telegram-apps/bridge",
-				"version": "2.7.1",
-				"size": 567916
+				"version": "2.8.2",
+				"size": 574891
 			},
 			{
 				"name": "mitt",
@@ -84,13 +57,13 @@
 			},
 			{
 				"name": "@telegram-apps/toolkit",
-				"version": "2.0.0",
-				"size": 31948
+				"version": "2.1.2",
+				"size": 36139
 			},
 			{
 				"name": "@telegram-apps/transformers",
-				"version": "2.2.0",
-				"size": 532159
+				"version": "2.2.3",
+				"size": 532812
 			},
 			{
 				"name": "valibot",
@@ -162,5 +135,36 @@
 			[1, 11]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# @telegram-apps/sdk-svelte\n\n[code-badge]: https://img.shields.io/badge/source-black?logo=github\n\n[docs-badge]: https://img.shields.io/badge/documentation-blue?logo=gitbook&logoColor=white\n\n[code-link]: https://github.com/Telegram-Mini-Apps/telegram-apps/tree/master/packages/sdk-svelte\n\n[docs-link]: https://docs.telegram-mini-apps.com/packages/telegram-apps-sdk-svelte/\n\n[npm-link]: https://npmjs.com/package/@telegram-apps/sdk-svelte\n\n[npm-badge]: https://img.shields.io/npm/v/@telegram-apps/sdk-svelte?logo=npm\n\n[size-badge]: https://img.shields.io/bundlephobia/minzip/@telegram-apps/sdk-svelte\n\n[![NPM][npm-badge]][npm-link]\n![Size][size-badge]\n[![docs-badge]][docs-link]\n[![code-badge]][code-link]\n\nSvelte.js bindings\nfor [client SDK](https://docs.telegram-mini-apps.com/packages/telegram-apps-sdk/2-x). Includes\ncomposables, components and utilities\nfor comfortable usage of Svelte.js on the Telegram Mini Apps platform.\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3953, 64],
+		[3960, 69],
+		[3967, 200],
+		[3974, 88],
+		[3981, 185],
+		[3988, 354],
+		[3995, 109],
+		[4002, 236],
+		[4009, 138],
+		[4016, 155],
+		[4023, 177],
+		[4030, 64],
+		[4037, 114],
+		[4044, 259],
+		[4051, 112],
+		[4058, 421],
+		[4065, 148],
+		[4072, 197],
+		[4079, 107],
+		[4086, 93],
+		[4093, 252],
+		[4100, 225],
+		[4107, 203],
+		[4114, 156],
+		[4121, 117],
+		[4128, 193],
+		[4135, 110]
+	]
 }

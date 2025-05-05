@@ -7,30 +7,12 @@
 	"downloads": 6,
 	"updated": "2025-01-07T18:15:50.343Z",
 	"tags": ["tooling"],
-	"runes": false,
 	"github_stars": 0,
 	"typescript": false,
 	"version": "1.0.0-rc-3",
 	"svelte_range": "5.16.5",
 	"kit_range": "2.15.2",
 	"last_rune_check_version": "1.0.0-rc-3",
-	"downloads_history": [
-		[4015, 112],
-		[4022, 81],
-		[4029, 7],
-		[4036, 3],
-		[4043, 9],
-		[4050, 3],
-		[4057, 3],
-		[4064, 1],
-		[4071, 4],
-		[4078, 1],
-		[4085, 3],
-		[4092, 3],
-		[4099, 3],
-		[4106, 1],
-		[4113, 6]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -67,5 +49,26 @@
 			[3, 4]
 		],
 		"circular": []
-	}
+	},
+	"readme": "![Made to be Plundered](https://img.shields.io/badge/Made%20to%20be%20Plundered-royalblue)\n[![Latest version](https://img.shields.io/github/v/release/PaulioRandall/p69-svelte)](https://github.com/PaulioRandall/p69-svelte/releases)\n[![Release date](https://img.shields.io/github/release-date/PaulioRandall/p69-svelte)](https://github.com/PaulioRandall/p69-svelte/releases)\n\n# P69 Svelte\n\nSvelte preprocessor for **P69** (includes **P69 Files**).\n\n- **P69**: https://github.com/PaulioRandall/p69\n- **P69 Files**: https://github.com/PaulioRandall/p69-files\n- **P69 Svelte**: https://github.com/PaulioRandall/p69-svelte\n- **P69 Util**: https://github.com/PaulioRandall/p69-util\n\n## Contents\n\n- [Example](#example)\n- [Options](#options)\n\n## Example\n\n**svelte.config.js**\n\n```js\nimport P69 from 'p69'\nimport tokens from './src/tokens.js'\n\n// [Optional]\n// Compile .p69 files into a .css file.\n// ./src/**/*.p69 => ./src/app.css\nif (process.env.NODE_ENV === 'development') {\n\tP69.watch(tokens)\n} else {\n\tawait P69.file(tokens)\n}\n\nexport default {\n\t...,\n\tpreprocess: [P69.svelte(tokens)],\n\t...,\n}\n```\n\n**src/tokens.js**\n\n```js\nexport default {\n\tcolor: {\n\t\tbg: `rgb(40, 40, 40)`,\n\t\ttext: `rgb(250, 250, 250)`,\n\t\tstrong: `rgb(30, 85, 175)`,\n\t},\n\tfont: {\n\t\tsize: {\n\t\t\tsm: '0.8rem',\n\t\t\tmd: '1rem',\n\t\t\tlg: '1.2rem',\n\t\t\txl: '1.5rem',\n\t\t},\n\t\tfamily: {\n\t\t\tverdana: ['Verdana', 'sans-serif', 'Helvetica'],\n\t\t\thelvetica: ['Helvetica', 'Verdana', 'sans-serif'],\n\t\t},\n\t},\n\tspace: {\n\t\tsm: '1rem',\n\t\tmd: '2rem',\n\t\tlg: '4rem',\n\t\txl: '8rem',\n\t},\n\tmedia: {\n\t\tsmall_screen: 'max-width: 719px',\n\t\tnot_small_screen: 'min-width: 720px',\n\t},\n}\n```\n\n**src/routes/+page.svelte**\n\n```html\n<main>\n\t<h1>A title</h1>\n\n\t<section>\n\t\t<h2>A heading</h2>\n\t\t<p>A paragraph...</p>\n\t</section>\n</main>\n\n<style>\n\tmain {\n\t\tcolor: $color.text;\n\t\tfont-size: $font.size.md;\n\t\tfont-family: $font.family.verdana;\n\n\t\tpadding: $space.sm;\n\t\tbackground-color: $color.bg;\n\t}\n\n\th1 {\n\t\tcolor: $color.strong;\n\t\tfont-size: $font.size.xl;\n\t}\n\n\tsection {\n\t\tpadding-bottom: $space.md;\n\t}\n\n\t@media ($media.not_small_screen) {\n\t\tsection {\n\t\t\tpadding-bottom: $space.lg;\n\t\t}\n\t}\n</style>\n```\n\n**src/routes/+page.svelte** (after compiling)\n\n```html\n<main>\n\t<h1>A title</h1>\n\n\t<section>\n\t\t<h2>A heading</h2>\n\t\t<p>A paragraph...</p>\n\t</section>\n</main>\n\n<style>\n\tmain {\n\t\tcolor: rgb(250, 250, 250);\n\t\tfont-size: 1rem;\n\t\tfont-family: Verdana, sans-serif, Helvetica;\n\n\t\tpadding: 1rem;\n\t\tbackground-color: rgb(40, 40, 40);\n\t}\n\n\th1 {\n\t\tcolor: rgb(30, 85, 175);\n\t\tfont-size: 1.5rem;\n\t}\n\n\tsection {\n\t\tpadding-bottom: 2rem;\n\t}\n\n\t@media ($media.not_small_screen) {\n\t\tsection {\n\t\t\tpadding-bottom: 4rem;\n\t\t}\n\t}\n</style>\n```\n\n[^Back to contents](#contents)\n\n## Options\n\n```js\nP69.svelte(tokens, {\n\t// onError is called when an error occurs.\n\t//\n\t// If the error isn't thrown then processing will\n\t// continue for the remaining tokens.\n\tonError: (err, token) => {\n\t\t// By default, logs the error and carries on.\n\t},\n\n\t// If a style tag's lang attibute value is in\n\t// this list then it will be compiled as P69.\n\t//\n\t// 'undefined' means no lang attribute set.\n\tlangs: [undefined, 'p69', 'text/p69'],\n})\n```\n\n[^Back to contents](#contents)\n",
+	"legacy_svelte": true,
+	"downloads_history": [
+		[4016, 112],
+		[4023, 81],
+		[4030, 7],
+		[4037, 3],
+		[4044, 9],
+		[4051, 3],
+		[4058, 3],
+		[4065, 1],
+		[4072, 4],
+		[4079, 1],
+		[4086, 3],
+		[4093, 3],
+		[4100, 3],
+		[4107, 1],
+		[4114, 6],
+		[4121, 11],
+		[4128, 3]
+	]
 }

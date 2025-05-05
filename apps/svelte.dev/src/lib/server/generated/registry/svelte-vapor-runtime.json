@@ -7,37 +7,11 @@
 	"downloads": 3,
 	"updated": "2024-11-27T11:37:05.121Z",
 	"tags": ["tooling"],
-	"runes": false,
 	"github_stars": 35,
 	"typescript": true,
 	"version": "0.0.5",
 	"svelte_range": "4.2.18",
 	"last_rune_check_version": "0.0.5",
-	"downloads_history": [
-		[3903, 69],
-		[3910, 5],
-		[3924, 2],
-		[3938, 2],
-		[3945, 2],
-		[3952, 2],
-		[3959, 2],
-		[3973, 2],
-		[3980, 67],
-		[3987, 6],
-		[3994, 1],
-		[4001, 1],
-		[4008, 2],
-		[4015, 2],
-		[4022, 2],
-		[4029, 2],
-		[4036, 9],
-		[4043, 5],
-		[4050, 2],
-		[4064, 1],
-		[4099, 3],
-		[4106, 4],
-		[4113, 3]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -84,22 +58,22 @@
 			},
 			{
 				"name": "@babel/parser",
-				"version": "7.27.0",
-				"size": 1924962
+				"version": "7.27.1",
+				"size": 1859876
 			},
 			{
 				"name": "@babel/types",
-				"version": "7.27.0",
-				"size": 2583295
+				"version": "7.27.1",
+				"size": 2597469
 			},
 			{
 				"name": "@babel/helper-string-parser",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 31816
 			},
 			{
 				"name": "@babel/helper-validator-identifier",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 48330
 			},
 			{
@@ -228,5 +202,35 @@
 			[28, 21]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# svelte-vapor-runtime\n\n> Svelte runtime for vapor\n\n> [!IMPORTANT]\n> This package is intended to be used with bundlers. Don't use in application development.\n\n## ©️ License\n\n[MIT](http://opensource.org/licenses/MIT)\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3904, 69],
+		[3911, 5],
+		[3925, 2],
+		[3939, 2],
+		[3946, 2],
+		[3953, 2],
+		[3960, 2],
+		[3974, 2],
+		[3981, 67],
+		[3988, 6],
+		[3995, 1],
+		[4002, 1],
+		[4009, 2],
+		[4016, 2],
+		[4023, 2],
+		[4030, 2],
+		[4037, 9],
+		[4044, 5],
+		[4051, 2],
+		[4065, 1],
+		[4100, 3],
+		[4107, 4],
+		[4114, 3],
+		[4121, 6],
+		[4128, 1],
+		[4135, 6]
+	]
 }

@@ -5,33 +5,36 @@
 	"authors": ["jlacostaec"],
 	"homepage": "https://github.com/JLAcostaEC/fluentui-icons-svelte#readme",
 	"downloads": 54,
-	"updated": "2025-04-09T17:01:52.998Z",
+	"updated": "2025-04-30T18:46:36.945Z",
 	"tags": ["ui"],
-	"runes": true,
 	"github_stars": 4,
 	"typescript": true,
-	"version": "1.0.1",
+	"version": "1.0.3",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.17.2",
-	"last_rune_check_version": "1.0.1",
-	"downloads_history": [
-		[4064, 54],
-		[4071, 5],
-		[4085, 2],
-		[4092, 3],
-		[4099, 1],
-		[4113, 54]
-	],
+	"last_rune_check_version": "1.0.3",
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
 			{
 				"name": "fluentui-icons-svelte",
-				"version": "1.0.1",
-				"size": 4822410
+				"version": "1.0.3",
+				"size": 4772205
 			}
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "<h1 align=\"center\">\n  <img alt=\"Fluent UI Svelte Logo\" src=\"https://github.com/JLAcostaEC/fluentui-icons-svelte/blob/3166a6fd7fb015f8085b115cf2f9c5298de225e1/static/sveltefluent.png\" height=\"130\" style=\"margin-bottom: 20px\"/>\n  <br>\n  Fluent UI Icons for Svelte 5\n</h1>\n\nThis repository provides a curated set of **Microsoft’s Fluent UI Icons**, converted into **Svelte 5** components with the help of the [svgtosvelte](https://github.com/JLAcostaEC/svgtosvelte) CLI.\n\n> [!NOTE]\n> This repository is not affiliated with or connected to Microsoft in any way. It is merely an open-source package that provides their icons to use with Svelte 5 applications.\n\n## Features\n\n- **Microsoft Fluent UI Icons** – Taken from the official [Microsoft Open-Source Figma File](https://www.figma.com/community/file/836835755999342788).\n- **Icons exported by Colton Griffith** – You can visit his repository [here.](https://github.com/coltongriffith/fluenticons) Thank You.\n- **Some Colored Icons** – Available some color icons extracted from [Ofiicial Package](https://github.com/microsoft/fluentui-system-icons/tree/main/packages/svg-icons).\n- **Easy to Integrate** – Simply import the icon components you need and place them directly into your Svelte Apps.\n- **Customization Supported** – Pass props (e.g., `size`, `color`) to easily adjust icon appearance.\n\n## Installation\n\nYou can install the library using your preferred package manager:\n\n```\nnpm install -D fluentui-icons-svelte\n```\n\n```\npnpm add -D fluentui-icons-svelte\n```\n\n```\nyarn add -D fluentui-icons-svelte\n```\n\n## Usage\n\n### Base import:\n\n```svelte\n<script>\n\timport { AddCircleFilled } from 'fluentui-icons-svelte';\n</script>\n\n<AddCircleFilled />\n```\n\n### Direct import (recommended):\n\nImport the icon directly for faster compiling during development.\n\n```svelte\n<script>\n\timport AddCircleFilled from 'fluentui-icons-svelte/AddCircleFilled.svelte';\n</script>\n\n<AddCircleFilled />\n```\n\nIf you are trying to `Direct import` a file that contains the word `server` you must import it as follows:\n\n```svelte\n<script>\n\timport ServerFilled from 'fluentui-icons-svelte/icons/ServerFilled.svelte';\n</script>\n\n<ServerFilled />\n```\n\nThis because SvelteKit blocks the import/export of files containing the word \"server\" inside the \"src/lib\" folder.\n\n### Customize by passing props like size or color:\n\n```svelte\n<AddCircleFilled width=\"32\" height=\"32\" color=\"#0078D4\" />\n```\n\n## Contributing\n\nContributions are welcome! Feel free to open issues or pull requests for:\n\n- New icons.\n- Bug fixes.\n- Feature suggestions.\n- Documentation improvements.\n\n## License\n\nThis project is licensed under the MIT License. The icons are derived from Microsoft’s Fluent UI Iconography with the license: CC BY 4.0. Microsoft’s Colored Icons from official package are under MIT license.\n\n**Thank you for using the Fluent UI Icons for Svelte library!** If you have any questions or feedback, please don’t hesitate to open an issue or reach out.\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4065, 54],
+		[4072, 5],
+		[4086, 2],
+		[4093, 3],
+		[4100, 1],
+		[4114, 54],
+		[4121, 7],
+		[4128, 3]
+	]
 }

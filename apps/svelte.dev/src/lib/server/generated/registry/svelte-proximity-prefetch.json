@@ -10,14 +10,9 @@
 	"tags": ["router"],
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
-	"runes": true,
 	"last_rune_check_version": "0.0.1",
 	"version": "0.0.1",
 	"github_stars": 2,
-	"downloads_history": [
-		[4106, 18],
-		[4113, 33]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -29,5 +24,13 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# svelte-proximity-prefetch\n\nA Svelte wrapper that automatically prefetches pages based on the user's cursor position.\n\nRight now it is approximation-based. A voronoi-based approach is planned.\n\n## Installation\n\n```bash\n# npm\nnpm install svelte-proximity-prefetch\n\n# yarn\nyarn add svelte-proximity-prefetch\n\n# pnpm\npnpm add svelte-proximity-prefetch\n\n# bun\nbun add svelte-proximity-prefetch\n```\n\n## Usage\n\n### Basic Example\n\nWrap your app layout with the `ProximityPrefetch` component:\n\n```svelte\n<script>\n\timport { ProximityPrefetch } from 'svelte-proximity-prefetch';\n</script>\n\n<ProximityPrefetch>\n\t<!-- Your app content goes here -->\n\t<main>\n\t\t<a href=\"/about\">About</a>\n\t\t<a href=\"/contact\">Contact</a>\n\t</main>\n</ProximityPrefetch>\n```\n\n### Customization\n\nYou can customize the prefetching behavior with these props:\n\n```svelte\n<script>\n\timport { ProximityPrefetch } from 'svelte-proximity-prefetch';\n</script>\n\n<ProximityPrefetch threshold={200} predictionInterval={100}>\n\t<!-- Your app content -->\n</ProximityPrefetch>\n```\n\n#### Props\n\n| Prop                 | Type   | Default | Description                                                               |\n| -------------------- | ------ | ------- | ------------------------------------------------------------------------- |\n| `threshold`          | number | 200     | Distance in pixels that triggers prefetching when mouse approaches a link |\n| `predictionInterval` | number | 100     | Interval in milliseconds to check for nearby links                        |\n\n## Credits\n\nBased on @tannerlinsley's [work](https://x.com/tannerlinsley/status/1908723776650355111) for [TanStack Router](https://tanstack.com/router/latest).\nImplementation based on @pontusab's [gist](https://gist.github.com/pontusab/6f10cf651533e3fe466b0c856e1dcf19) of a Next.js implementation.\n\n## License\n\nMIT\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4107, 18],
+		[4114, 33],
+		[4121, 7],
+		[4128, 6]
+	]
 }

@@ -7,25 +7,12 @@
 	"downloads": 14,
 	"updated": "2025-02-09T10:46:30.491Z",
 	"tags": ["ui"],
-	"runes": true,
 	"github_stars": 3,
 	"typescript": true,
 	"version": "1.0.1",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "1.0.1",
-	"downloads_history": [
-		[4050, 104],
-		[4057, 30],
-		[4064, 15],
-		[4071, 13],
-		[4078, 4],
-		[4085, 6],
-		[4092, 4],
-		[4099, 9],
-		[4106, 22],
-		[4113, 14]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -37,5 +24,21 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# svelte-free-icons-solid\n\nThe free-icons set is a collection of over 23,000 freely available icons for various design projects.\n\nThis repository contains scripts to port the entire [free-icons](https://free-icons.github.io/free-icons/) set to Svelte and generates npm packages to be used in your Svelte projects.\n\n## Icons Organization\n\nThe free-icons contains 23661 icons grouped in the following way:\n\n- 554 `brand` icons\n- 3301 `thin` icons\n- 3301 `light` icons\n- 3301 `regular` icons\n- 3301 `solid` icons\n- 3301 `sharp light` icons\n- 3301 `sharp regular` icons\n- 3301 `sharp solid` icons\n\n## Svelte pakages name\n\nThe Svelte packages are named accordingly:\n\n- svelte-free-icons-brands\n- svelte-free-icons-thin\n- svelte-free-icons-light\n- svelte-free-icons-regular\n- svelte-free-icons-solid\n- svelte-free-icons-sharp-light\n- svelte-free-icons-sharp-regular\n- svelte-free-icons-sharp-solid\n\n## Svelte components names\n\nThe name of Svelte Icons (components) is based on original icon's name according this simple rule:\n\n- word1-word2-...-wordN -> Word1Word2...WordN\n\nLet's see few examples:\n\n- apartment -> Apartment.svelte\n- arrow-down-a-z -> ArrowDownAZ.svelte\n- bed-empty -> BedEmpty.svelte\n\nParticular attention should be put to icons which start with a digit:\n\n- 0 -> Zero.svelte\n- 1 -> One.svelte\n- ...\n- 42-group -> FourtwoGroup.svelte\n\nPretty obvious !!! :)\n\n## How to use Svelte icons\n\n### Install icons pack\n\n```bash\nnpm i -D svelte-free-icons-brands\nnpm i -D svelte-free-icons-thin\nnpm i -D svelte-free-icons-light\nnpm i -D svelte-free-icons-regular\nnpm i -D svelte-free-icons-solid\nnpm i -D svelte-free-icons-sharp-light\nnpm i -D svelte-free-icons-sharp-regular\nnpm i -D svelte-free-icons-sharp-solid\n```\n\n### import and use it in your .svelte component\n\n```js\n<script lang=\"ts\">\n    import { Github } from 'svelte-free-icons-brands';\n    import { Wifi } from 'svelte-free-icons-thin';\n    import { SquareParking } from 'svelte-free-icons-light';\n    import { CourtSport } from 'svelte-free-icons-regular';\n    import { Command } from 'svelte-free-icons-solid';\n    import { Diamond } from 'svelte-free-icons-sharp-light';\n    import { DoorOpen } from 'svelte-free-icons-sharp-regular';\n    import { Dolphin } from 'svelte-free-icons-sharp-solid';\n</script>\n...\n...\n...\n\n<Github /> <!-- lighgray 1rem icon -->\n<Wifi color=\"green\" size=\"3rem\" />\n<SquareParking color=\"red\" size=\"2rem\" /> <!-- red 2rem icon -->\n<CourtSport class=\"my own class\" /> <!-- specify your own classes -->\n<Command color=\"blue\" />\n<Diamond color=\"#080808\" />\n<DoorOpen size=\"32px\" />\n<Dolphin color=\"blue\" size=\"3rem\" />\n```\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4051, 104],
+		[4058, 30],
+		[4065, 15],
+		[4072, 13],
+		[4079, 4],
+		[4086, 6],
+		[4093, 4],
+		[4100, 9],
+		[4107, 22],
+		[4114, 14],
+		[4121, 13],
+		[4128, 5]
+	]
 }

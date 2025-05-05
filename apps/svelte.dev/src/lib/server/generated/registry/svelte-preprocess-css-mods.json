@@ -7,44 +7,12 @@
 	"downloads": 7,
 	"updated": "2024-08-10T11:13:13.749Z",
 	"tags": ["tooling"],
-	"runes": false,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.1.8",
 	"svelte_range": "5.0.0-next.210",
 	"kit_range": "^2.5.20",
 	"last_rune_check_version": "0.1.8",
-	"downloads_history": [
-		[3868, 477],
-		[3875, 49],
-		[3882, 13],
-		[3889, 1],
-		[3896, 11],
-		[3903, 17],
-		[3910, 10],
-		[3917, 6],
-		[3924, 1],
-		[3938, 14],
-		[3945, 2],
-		[3952, 1],
-		[3973, 6],
-		[3980, 1],
-		[3994, 4],
-		[4001, 3],
-		[4008, 1],
-		[4015, 10],
-		[4022, 1],
-		[4029, 1],
-		[4036, 7],
-		[4043, 7],
-		[4050, 7],
-		[4057, 1],
-		[4064, 2],
-		[4092, 1],
-		[4099, 9],
-		[4106, 18],
-		[4113, 7]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -80,8 +48,8 @@
 			},
 			{
 				"name": "type-fest",
-				"version": "4.40.0",
-				"size": 438455
+				"version": "4.40.1",
+				"size": 438790
 			},
 			{
 				"name": "defu",
@@ -242,12 +210,12 @@
 			},
 			{
 				"name": "tsx",
-				"version": "4.19.3",
-				"size": 426124
+				"version": "4.19.4",
+				"size": 426585
 			},
 			{
 				"name": "esbuild",
-				"version": "0.25.2",
+				"version": "0.25.3",
 				"size": 134169
 			},
 			{
@@ -373,5 +341,40 @@
 			[0, 23]
 		],
 		"circular": [[16, 13]]
-	}
+	},
+	"readme": "# svelte-preprocess-css-mods\n\n[![npm version](https://img.shields.io/npm/v/svelte-preprocess-css-mods?color=yellow)](https://npmjs.com/package/svelte-preprocess-css-mods)\n[![npm downloads](https://img.shields.io/npm/dm/svelte-preprocess-css-mods?color=yellow)](https://npmjs.com/package/svelte-preprocess-css-mods)\n\nSuccessor of [svelte-preprocess-cssmodules](https://github.com/micantoine/svelte-preprocess-cssmodules)\n\n## Installation\n\n```bash\nnpx nypm add -D svelte-preprocess-css-mods\n```\n\n## Usage\n\n### Config\n\n```javascript\n// svelte.config.js\n\nimport { cssModules } from 'svelte-preprocess-css-mods';\n\nexport default {\n\tpreprocess: cssModules({/* options */}),\n};\n```\n\nSee [options](./src/options.ts) for more information.\n\n### Svelte\n\n```svelte\n<!-- App.svelte -->\n<script>\n\timport styles from './App.module.css';\n</script>\n\n<div class={styles.container}>\n\t<h1 class={styles.title}>Hello World!</h1>\n</div>\n```\n\n```css\n/* App.module.css */\n.container {\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n}\n\n.title {\n\tcolor: red;\n}\n```\n\nget converted into:\n\n```svelte\n<script>\n\tconst styles = {\n\t\tcontainer: 'App_module_container',\n\t\ttitle: 'App_module_title',\n\t};\n</script>\n\n<div class={styles.container}>\n\t<h1 class={styles.title}>Hello World!</h1>\n</div>\n\n<style>\n  .App_module_container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n  }\n\n  .App_module_title {\n    color: red;\n  }\n</style>\n```\n\n## Related Works\n\n- [svelte-true-css-modules](https://github.com/naumstory/svelte-true-css-modules)\n- [svelte-preprocess-cssmodules](https://github.com/micantoine/svelte-preprocess-cssmodules)\n  - [I forked this project](https://github.com/ryoppippi/svelte-preprocess-cssmodules), but I gave it up\n\n## License\n\n[MIT](./LICENSE)\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3869, 477],
+		[3876, 49],
+		[3883, 13],
+		[3890, 1],
+		[3897, 11],
+		[3904, 17],
+		[3911, 10],
+		[3918, 6],
+		[3925, 1],
+		[3939, 14],
+		[3946, 2],
+		[3953, 1],
+		[3974, 6],
+		[3981, 1],
+		[3995, 4],
+		[4002, 3],
+		[4009, 1],
+		[4016, 10],
+		[4023, 1],
+		[4030, 1],
+		[4037, 7],
+		[4044, 7],
+		[4051, 7],
+		[4058, 1],
+		[4065, 2],
+		[4093, 1],
+		[4100, 9],
+		[4107, 18],
+		[4114, 7],
+		[4121, 10],
+		[4128, 4]
+	]
 }

@@ -7,60 +7,10 @@
 	"downloads": 5,
 	"updated": "2023-09-14T16:02:50.144Z",
 	"tags": ["miscellaneous"],
-	"runes": false,
 	"typescript": true,
 	"version": "1.0.1",
 	"svelte_range": "^4",
 	"last_rune_check_version": "1.0.1",
-	"downloads_history": [
-		[3574, 85],
-		[3581, 41],
-		[3588, 3],
-		[3595, 2],
-		[3602, 2],
-		[3609, 2],
-		[3616, 2],
-		[3630, 3],
-		[3644, 4],
-		[3658, 4],
-		[3665, 4],
-		[3679, 1],
-		[3707, 1],
-		[3714, 2],
-		[3721, 2],
-		[3728, 4],
-		[3742, 4],
-		[3756, 2],
-		[3770, 1],
-		[3777, 2],
-		[3784, 3],
-		[3805, 2],
-		[3833, 2],
-		[3840, 10],
-		[3854, 4],
-		[3861, 2],
-		[3882, 2],
-		[3889, 3],
-		[3896, 4],
-		[3903, 3],
-		[3931, 1],
-		[3938, 1],
-		[3945, 1],
-		[3952, 1],
-		[3959, 1],
-		[3966, 1],
-		[3980, 1],
-		[4015, 3],
-		[4029, 2],
-		[4036, 7],
-		[4043, 10],
-		[4050, 1],
-		[4057, 1],
-		[4092, 2],
-		[4099, 4],
-		[4106, 1],
-		[4113, 5]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -693,8 +643,8 @@
 			},
 			{
 				"name": "@types/node",
-				"version": "22.14.1",
-				"size": 2331510
+				"version": "22.15.3",
+				"size": 2350386
 			},
 			{
 				"name": "undici-types",
@@ -787,77 +737,13 @@
 			},
 			{
 				"name": "@babel/core",
-				"version": "7.26.10",
-				"size": 795988
+				"version": "7.27.1",
+				"size": 794180
 			},
 			{
-				"name": "json5",
-				"version": "2.2.3",
-				"size": 235198
-			},
-			{
-				"name": "semver",
-				"version": "6.3.1",
-				"size": 68343
-			},
-			{
-				"name": "gensync",
-				"version": "1.0.0-beta.2",
-				"size": 28891
-			},
-			{
-				"name": "@babel/types",
-				"version": "7.27.0",
-				"size": 2583295
-			},
-			{
-				"name": "@babel/helper-string-parser",
-				"version": "7.25.9",
-				"size": 31816
-			},
-			{
-				"name": "@babel/helper-validator-identifier",
-				"version": "7.25.9",
-				"size": 48330
-			},
-			{
-				"name": "@babel/parser",
-				"version": "7.27.0",
-				"size": 1924962
-			},
-			{
-				"name": "@babel/helpers",
-				"version": "7.27.0",
-				"size": 866498
-			},
-			{
-				"name": "@babel/template",
-				"version": "7.27.0",
-				"size": 70675
-			},
-			{
-				"name": "@babel/code-frame",
-				"version": "7.26.2",
-				"size": 33160
-			},
-			{
-				"name": "js-tokens",
-				"version": "4.0.0"
-			},
-			{
-				"name": "picocolors",
-				"version": "1.1.1",
-				"size": 6373
-			},
-			{
-				"name": "@babel/traverse",
-				"version": "7.27.0",
-				"size": 676526
-			},
-			{
-				"name": "@babel/generator",
-				"version": "7.27.0",
-				"size": 559855
+				"name": "@ampproject/remapping",
+				"version": "2.3.0",
+				"size": 78946
 			},
 			{
 				"name": "@jridgewell/gen-mapping",
@@ -885,64 +771,78 @@
 				"size": 53153
 			},
 			{
+				"name": "@babel/code-frame",
+				"version": "7.27.1",
+				"size": 33160
+			},
+			{
+				"name": "@babel/helper-validator-identifier",
+				"version": "7.27.1",
+				"size": 48330
+			},
+			{
+				"name": "js-tokens",
+				"version": "4.0.0"
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "@babel/generator",
+				"version": "7.27.1",
+				"size": 560098
+			},
+			{
+				"name": "@babel/parser",
+				"version": "7.27.1",
+				"size": 1859876
+			},
+			{
+				"name": "@babel/types",
+				"version": "7.27.1",
+				"size": 2597469
+			},
+			{
+				"name": "@babel/helper-string-parser",
+				"version": "7.27.1",
+				"size": 31816
+			},
+			{
 				"name": "jsesc",
 				"version": "3.1.0",
 				"size": 32280
 			},
 			{
-				"name": "globals",
-				"version": "11.12.0",
-				"size": 39779
-			},
-			{
-				"name": "convert-source-map",
-				"version": "2.0.0",
-				"size": 15854
-			},
-			{
-				"name": "@ampproject/remapping",
-				"version": "2.3.0",
-				"size": 78946
-			},
-			{
-				"name": "@babel/helper-module-transforms",
-				"version": "7.26.0",
-				"size": 160842
-			},
-			{
-				"name": "@babel/helper-module-imports",
-				"version": "7.25.9",
-				"size": 63714
-			},
-			{
 				"name": "@babel/helper-compilation-targets",
-				"version": "7.27.0",
+				"version": "7.27.1",
 				"size": 53776
 			},
 			{
 				"name": "@babel/compat-data",
-				"version": "7.26.8",
-				"size": 66428
+				"version": "7.27.1",
+				"size": 66193
 			},
 			{
 				"name": "@babel/helper-validator-option",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 11775
 			},
 			{
 				"name": "browserslist",
-				"version": "4.24.4",
-				"size": 64926
+				"version": "4.24.5",
+				"size": 65174
 			},
 			{
 				"name": "caniuse-lite",
-				"version": "1.0.30001715",
-				"size": 2211246
+				"version": "1.0.30001716",
+				"size": 2214832
 			},
 			{
 				"name": "electron-to-chromium",
-				"version": "1.5.140",
-				"size": 162065
+				"version": "1.5.149",
+				"size": 163189
 			},
 			{
 				"name": "node-releases",
@@ -968,6 +868,56 @@
 				"name": "yallist",
 				"version": "3.1.1",
 				"size": 14766
+			},
+			{
+				"name": "semver",
+				"version": "6.3.1",
+				"size": 68343
+			},
+			{
+				"name": "@babel/helper-module-transforms",
+				"version": "7.27.1",
+				"size": 160852
+			},
+			{
+				"name": "@babel/helper-module-imports",
+				"version": "7.27.1",
+				"size": 63724
+			},
+			{
+				"name": "@babel/traverse",
+				"version": "7.27.1",
+				"size": 689113
+			},
+			{
+				"name": "@babel/template",
+				"version": "7.27.1",
+				"size": 70675
+			},
+			{
+				"name": "globals",
+				"version": "11.12.0",
+				"size": 39779
+			},
+			{
+				"name": "@babel/helpers",
+				"version": "7.27.1",
+				"size": 861892
+			},
+			{
+				"name": "convert-source-map",
+				"version": "2.0.0",
+				"size": 15854
+			},
+			{
+				"name": "gensync",
+				"version": "1.0.0-beta.2",
+				"size": 28891
+			},
+			{
+				"name": "json5",
+				"version": "2.2.3",
+				"size": 235198
 			},
 			{
 				"name": "jest-haste-map",
@@ -1459,8 +1409,8 @@
 			},
 			{
 				"name": "@babel/helper-plugin-utils",
-				"version": "7.26.5",
-				"size": 11985
+				"version": "7.27.1",
+				"size": 11818
 			},
 			{
 				"name": "@istanbuljs/load-nyc-config",
@@ -1579,7 +1529,7 @@
 			},
 			{
 				"name": "@babel/plugin-syntax-import-attributes",
-				"version": "7.26.0",
+				"version": "7.27.1",
 				"size": 6354
 			},
 			{
@@ -3509,68 +3459,68 @@
 			[133, 138],
 			[133, 143],
 			[133, 144],
-			[144, 7],
 			[144, 145],
-			[144, 146],
-			[144, 147],
-			[144, 148],
-			[148, 149],
-			[148, 150],
+			[145, 146],
+			[146, 147],
+			[146, 148],
+			[146, 149],
+			[149, 150],
+			[149, 148],
+			[145, 149],
 			[144, 151],
-			[151, 148],
-			[144, 152],
-			[152, 153],
-			[153, 154],
-			[154, 155],
-			[154, 156],
-			[154, 150],
-			[153, 151],
-			[153, 148],
-			[152, 148],
-			[144, 153],
-			[144, 157],
-			[157, 154],
+			[151, 152],
+			[151, 153],
+			[151, 154],
+			[144, 155],
+			[155, 156],
+			[156, 157],
 			[157, 158],
-			[158, 151],
-			[158, 148],
-			[158, 159],
-			[159, 160],
-			[159, 161],
-			[159, 162],
-			[162, 163],
-			[162, 161],
-			[158, 162],
-			[158, 164],
-			[157, 151],
-			[157, 153],
-			[157, 148],
-			[157, 7],
-			[157, 165],
-			[144, 158],
-			[144, 154],
-			[144, 166],
-			[144, 167],
-			[167, 159],
-			[167, 162],
-			[144, 168],
-			[168, 157],
-			[168, 169],
-			[169, 148],
-			[169, 157],
-			[168, 150],
-			[144, 170],
-			[170, 171],
-			[170, 172],
-			[170, 173],
+			[157, 152],
+			[155, 157],
+			[155, 146],
+			[155, 149],
+			[155, 159],
+			[144, 160],
+			[160, 161],
+			[160, 162],
+			[160, 163],
+			[163, 164],
+			[163, 165],
+			[163, 166],
+			[163, 167],
+			[167, 168],
+			[167, 154],
+			[160, 169],
+			[169, 170],
+			[160, 171],
+			[144, 172],
+			[172, 173],
 			[173, 174],
-			[173, 175],
-			[173, 176],
-			[173, 177],
-			[177, 178],
-			[177, 156],
-			[170, 179],
-			[179, 180],
-			[170, 146],
+			[174, 151],
+			[174, 155],
+			[174, 156],
+			[174, 175],
+			[175, 151],
+			[175, 156],
+			[175, 157],
+			[174, 157],
+			[174, 7],
+			[174, 176],
+			[173, 157],
+			[172, 152],
+			[172, 174],
+			[144, 177],
+			[177, 175],
+			[177, 157],
+			[144, 156],
+			[144, 175],
+			[144, 174],
+			[144, 157],
+			[144, 178],
+			[144, 7],
+			[144, 179],
+			[144, 180],
+			[144, 171],
 			[133, 124],
 			[133, 132],
 			[133, 181],
@@ -3754,9 +3704,9 @@
 			[276, 286],
 			[275, 286],
 			[275, 287],
-			[287, 146],
+			[287, 171],
 			[287, 144],
-			[287, 151],
+			[287, 156],
 			[287, 286],
 			[287, 288],
 			[275, 289],
@@ -3776,18 +3726,18 @@
 			[133, 14],
 			[119, 302],
 			[302, 303],
-			[303, 148],
-			[303, 153],
+			[303, 157],
+			[303, 175],
 			[303, 304],
-			[304, 148],
-			[304, 151],
+			[304, 157],
+			[304, 156],
 			[304, 305],
-			[305, 148],
-			[305, 151],
+			[305, 157],
+			[305, 156],
 			[304, 306],
-			[306, 148],
+			[306, 157],
 			[304, 307],
-			[307, 148],
+			[307, 157],
 			[303, 306],
 			[302, 308],
 			[308, 309],
@@ -3831,7 +3781,7 @@
 			[0, 281],
 			[0, 139],
 			[0, 324],
-			[0, 173],
+			[0, 163],
 			[0, 325],
 			[325, 14],
 			[0, 260],
@@ -3840,7 +3790,7 @@
 			[0, 45],
 			[0, 327],
 			[0, 291],
-			[0, 174],
+			[0, 164],
 			[0, 238],
 			[0, 120],
 			[0, 328],
@@ -3917,7 +3867,7 @@
 			[369, 370],
 			[0, 371],
 			[371, 372],
-			[0, 175],
+			[0, 165],
 			[0, 373],
 			[0, 338],
 			[0, 248],
@@ -3929,7 +3879,7 @@
 			[0, 52],
 			[0, 65],
 			[0, 66],
-			[0, 178],
+			[0, 168],
 			[0, 377],
 			[0, 378],
 			[378, 379],
@@ -3998,7 +3948,7 @@
 			[410, 18],
 			[410, 124],
 			[410, 19],
-			[407, 154],
+			[407, 151],
 			[407, 412],
 			[405, 413],
 			[413, 120],
@@ -4062,7 +4012,7 @@
 			[0, 71],
 			[0, 446],
 			[0, 72],
-			[0, 147],
+			[0, 179],
 			[0, 447],
 			[0, 35],
 			[0, 298],
@@ -4175,7 +4125,7 @@
 			[0, 189],
 			[0, 288],
 			[0, 482],
-			[482, 146],
+			[482, 171],
 			[482, 144],
 			[482, 286],
 			[482, 288],
@@ -4260,7 +4210,7 @@
 			[508, 510],
 			[505, 512],
 			[512, 375],
-			[512, 154],
+			[512, 151],
 			[512, 513],
 			[512, 514],
 			[505, 515],
@@ -4326,7 +4276,7 @@
 			[530, 414],
 			[530, 124],
 			[530, 132],
-			[530, 148],
+			[530, 157],
 			[530, 503],
 			[530, 406],
 			[530, 410],
@@ -4362,7 +4312,7 @@
 			[520, 341],
 			[518, 530],
 			[518, 410],
-			[518, 157],
+			[518, 174],
 			[518, 476],
 			[518, 536],
 			[518, 526],
@@ -4546,14 +4496,14 @@
 			[0, 533],
 			[0, 562],
 			[0, 265],
-			[0, 155],
+			[0, 153],
 			[0, 299],
 			[0, 545],
 			[0, 572],
 			[0, 514],
 			[0, 13],
 			[0, 573],
-			[0, 145],
+			[0, 180],
 			[0, 232],
 			[0, 499],
 			[0, 534],
@@ -4569,7 +4519,7 @@
 			[0, 579],
 			[579, 580],
 			[0, 581],
-			[581, 146],
+			[581, 171],
 			[0, 582],
 			[0, 263],
 			[0, 216],
@@ -4598,7 +4548,7 @@
 			[585, 586],
 			[585, 587],
 			[585, 348],
-			[0, 176],
+			[0, 166],
 			[0, 507],
 			[0, 24],
 			[0, 401],
@@ -4637,7 +4587,7 @@
 			[0, 349],
 			[0, 384],
 			[0, 368],
-			[0, 156],
+			[0, 154],
 			[0, 23],
 			[0, 134],
 			[0, 591],
@@ -4734,7 +4684,7 @@
 			[0, 603],
 			[603, 547],
 			[603, 604],
-			[604, 161],
+			[604, 148],
 			[604, 605],
 			[604, 547],
 			[604, 606],
@@ -4751,14 +4701,14 @@
 			[603, 607],
 			[603, 608],
 			[603, 613],
-			[613, 161],
+			[613, 148],
 			[603, 605],
 			[603, 606],
 			[603, 614],
 			[603, 615],
-			[603, 167],
-			[603, 162],
-			[603, 161],
+			[603, 145],
+			[603, 149],
+			[603, 148],
 			[0, 552],
 			[0, 616],
 			[616, 617],
@@ -4859,5 +4809,56 @@
 			[102, 100],
 			[100, 103]
 		]
-	}
+	},
+	"readme": "![svelte-previous-banner](https://user-images.githubusercontent.com/42545742/102723346-20ac5700-4342-11eb-978d-222a2f4109d5.png)\n\n# svelte-previous\n\n[![npm version](http://img.shields.io/npm/v/svelte-previous.svg)](https://www.npmjs.com/package/svelte-previous)\n[![npm downloads](https://img.shields.io/npm/dm/svelte-previous.svg)](https://www.npmjs.com/package/svelte-previous)\n![license](https://img.shields.io/npm/l/svelte-previous)\n![build](https://img.shields.io/github/actions/workflow/status/bryanmylee/svelte-previous/publish.yml)\n[![coverage](https://coveralls.io/repos/github/bryanmylee/svelte-previous/badge.svg?branch=master)](https://coveralls.io/github/bryanmylee/svelte-previous?branch=master)\n[![size](https://img.shields.io/bundlephobia/min/svelte-previous)](https://bundlephobia.com/result?p=svelte-previous)\n\nSvelte stores that remember previous values!\n\nThis allows us to perform actions that depend on previous values, such as transitions between old and new values.\n\n## Installation\n\n```bash\n$ npm i @regexyl/svelte-previous\n```\n\nSince Svelte automatically bundles all required dependencies, you only need to install this package as a dev dependency with the -D flag.\n\n## Demo\n\nVisit the [REPL demo](https://svelte.dev/repl/1d3e752c51b848e6af264f3244f3e85c?version=3.31.0).\n\n## Usage\n\n`withPrevious` accepts an initial value, and returns a tuple comprising a [Writable](https://svelte.dev/tutorial/writable-stores) and a [Readable](https://svelte.dev/tutorial/readable-stores) store.\n\n```svelte\n<script>\n  import { withPrevious } from 'svelte-previous';\n\n  export let name;\n  // current is writable, while previous is read-only.\n  const [currentName, previousName] = withPrevious(0);\n  // To update the values, assign to the writable store.\n  $: $currentName = name;\n</script>\n\ntransition from {$previousName} to {$currentName}.\n```\n\n## Options\n\n`withPrevious` takes an options object as its second argument.\n\n### `numToTrack: number`\n\nBy default, `withPrevious` tracks one previous value.\n\nTo track more than one value, set `numToTrack`.\n\n```svelte\n<script>\n  const [current, prev1, prev2] = withPrevious(0, { numToTrack: 2 });\n</script>\n\nfrom {$prev2} to {$prev1} to {$current}.\n```\n\n### `initPrevious: T[]`\n\nTo initialize previous values with something besides `null`, pass an array of values from newest to oldest.\n\nMissing values will be filled with `null` and extra values will be ignored.\n\n```svelte\n<script>\n  const [current, prev1, prev2] = withPrevious(0, { numToTrack: 2, initPrevious: [1, 2, 3] })\n</script>\n\nfrom {$prev2} to {$prev1} to {$current}. <!-- from 2 to 1 to 0. -->\n```\n\n### `requireChange: boolean`\n\nDue to how reactivity is handled in Svelte, some assignments may assign the same value multiple times to a variable. Therefore, to prevent a single value from overwriting all previous values, a change in value is required before the current and previous values are updated.\n\nSet `requireChange = false` to change this behaviour.\n\n```ts\nconst [current, previous] = withPrevious(0, { requireChange: false });\n```\n\n### `isEqual: (a: T, b: T) => boolean`\n\nBy default, equality is determined with the `===` operator. However, `===` only checks equality by reference when comparing objects.\n\nProvide a custom `isEqual` function to compare objects.\n\n```ts\nconst [current, previous] = withPrevious(0, {\n  isEqual: (a, b) => a.name === b.name && a.age === b.age,\n});\n```\n\nIt is also possible to use [lodash.isequal](https://www.npmjs.com/package/lodash.isequal).\n\n```ts\nimport isEqual from 'lodash.isequal';\n\nconst [current, previous] = withPrevious(0, {\n  isEqual: isEqual,\n});\n```\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3589, 3],
+		[3596, 2],
+		[3603, 2],
+		[3610, 2],
+		[3617, 2],
+		[3631, 3],
+		[3645, 4],
+		[3659, 4],
+		[3666, 4],
+		[3680, 1],
+		[3708, 1],
+		[3715, 2],
+		[3722, 2],
+		[3729, 4],
+		[3743, 4],
+		[3757, 2],
+		[3771, 1],
+		[3778, 2],
+		[3785, 3],
+		[3806, 2],
+		[3834, 2],
+		[3841, 10],
+		[3855, 4],
+		[3862, 2],
+		[3883, 2],
+		[3890, 3],
+		[3897, 4],
+		[3904, 3],
+		[3932, 1],
+		[3939, 1],
+		[3946, 1],
+		[3953, 1],
+		[3960, 1],
+		[3967, 1],
+		[3981, 1],
+		[4016, 3],
+		[4030, 2],
+		[4037, 7],
+		[4044, 10],
+		[4051, 1],
+		[4058, 1],
+		[4093, 2],
+		[4100, 4],
+		[4107, 1],
+		[4114, 5],
+		[4121, 6],
+		[4128, 1]
+	]
 }

@@ -6,27 +6,12 @@
 	"downloads": 9,
 	"updated": "2025-02-17T08:54:27.666Z",
 	"tags": ["ui"],
-	"runes": false,
 	"typescript": false,
 	"version": "0.1.1",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.1.1",
 	"github_stars": 0,
-	"downloads_history": [
-		[4036, 655],
-		[4043, 30],
-		[4050, 23],
-		[4057, 3],
-		[4064, 85],
-		[4071, 5],
-		[4078, 3],
-		[4085, 31],
-		[4092, 2],
-		[4099, 11],
-		[4106, 7],
-		[4113, 9]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -40,5 +25,23 @@
 		],
 		"dependencies": [[0, 0]],
 		"circular": [[0, 0]]
-	}
+	},
+	"readme": "# Svelte-Formique\n\n\n<div align=\"center\">\n  <p align=\"center\">\n    <a href=\"https://bundlephobia.com/result?p=svelte-formique\">\n      <img src=\"https://img.shields.io/bundlephobia/minzip/svelte-formique?style=for-the-badge\" alt=\"npm size badge\" />\n    </a>\n    <a href=\"https://formiquejs.com\">\n      <img src=\"https://img.shields.io/badge/website-formiquejs.com-blue.svg?style=for-the-badge\" alt=\"Website badge\" />\n    </a>\n  </p>\n</div>\n\n\n\n\n<!--\n[![npm downloads](https://img.shields.io/npm/dm/svelte-formique.svg?style=for-the-badge)](https://www.npmjs.com/package/svelte-formique)\n\n[![npm](https://img.shields.io/npm/dt/svelte-formique.svg?style=for-the-badge)](https://www.npmjs.com/package/svelte-formique)\n\n[![Coverage Status](https://img.shields.io/coveralls/github/Gugulethu-Nyoni/svelte-formique/master?style=for-the-badge)](https://coveralls.io/github/Gugulethu-Nyoni/svelte-formique?branch=master)\n-->\n\n\n<img src=\"https://github.com/Gugulethu-Nyoni/formique/blob/main/images/formique-js-form-builder-anyframework.png\" alt=\"Formique JS Form Builder Example\">\n\n\n## About Formique\n\nFormique is a robust and elegant Web Content Accessibility Guidelines (WCAG) and Web Accessibility Initiative - Accessible Rich Internet Applications (WAI-ARIA)-compliant form-building library tailored for JavaScript enthusiasts. It supports a wide array of input types, features JS-driven themes, and offers advanced functionalities like nested conditional logic and dynamic dropdowns. Highly customizable and extensible, Formique is built for the Semantq JS Framework but seamlessly integrates with Vanilla JS, React, Vue, Angular, and Svelte. This guide covers implementing Formique in Svelte.\n\n## Features\n\n- **Declarative Syntax**: Define forms using a simple and intuitive schema.\n- **Wide Range of Inputs**: Supports text, email, number, password, date, time, file uploads, and more.\n- **Validation and Attributes**: Easily specify validation rules and attributes for each form field.\n- **Dynamic Form Generation**: Generate forms dynamically based on your schema.\n- **Framework Agnostic**: Currently works with Semantq and Vanilla JS (more frameworks to be added).\n- **Accessibility and Usability Compliant**: Formique yields form markup compliant with WCAG.\n- **Mobile Responsive**: Forms are mobile responsive out of the box.\n- **Nested Dynamic Conditional Logic**: Implement complex conditional logic to show or hide form fields based on user input.\n- **Dynamic Dropdowns**: Create dropdowns whose options change dynamically based on other field selections.\n- **JavaScript-Driven Themes**: Apply themes dynamically using JavaScript for a customizable user interface.\n- **WAI-ARIA and WCAG-Compliant HTML**: Ensure all form elements are accessible and meet WCAG standards.\n- **Progressive Enhancement**: Forms function with or without JavaScript, ensuring accessibility and functionality across all environments.\n\n## How to Install Formique in Svelte\n\n### Step 1: Install Svelte or SvelteKit\n\nCreate a new Svelte project using the following commands:\n\n```bash\n# create a new project in the current directory\nnpx sv create\n\n# create a new project in my-app\nnpx sv create my-app\n```\n\n#### Select the following options:\n\n- **SvelteKit minimal** (optional but preferred)\n- **Type checking with TypeScript** (optional but preferred)\n- **ESLint** (optional but preferred)\n- **npm** (required)\n\n\n> **Note:** Always refer to the latest official Svelte guide on how to create a Svelte app, as this may change. [Svelte Documentation: Creating a Project](https://svelte.dev/docs/kit/creating-a-project)\n\n\n## Developing\n\n```bash\nnpm run dev\n\n# or start the server and open the app in a new browser tab\nnpm run dev -- --open\n```\n\n\n## Demo: Creating a New Route in Svelte for Formique\n\n### Step 1: Create a New Route\n\nFor demo purposes, let's create a new route (page) in `src/routes/registration`.\n\n1. **Create the Route**:\n   - Create a new directory for the route:\n     ```bash\n     mkdir src/routes/registration\n     ```\n\n2. **Create the Svelte Page**:\n   - Inside the route directory, create a new Svelte page:\n     ```bash\n     touch src/routes/registration/+page.svelte\n     ```\n\n## Step 2: Add the CSS\n\nPaste the following Formique CSS in the `<head>` section of `src/app.html`:\n\n```html\n<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/formique-css@1.0.7/formique.min.css\" formique-style>\n```\n\n## Step 3: Install `svelte-formique`\n\nTo use Formique in your Svelte application, you need to install the `svelte-formique` package.\n\n\n```bash\nnpm i svelte-formique\n```\n\n### Step 4: Implement the Form in `+page.svelte`\n\nAdd the following code to +page.svelte:\n\n\n```svelte\n<script>\n  import { onMount } from 'svelte';\n  import Formique from 'svelte-formique';\n\n  // Define the form schema\n  const formSchema = [\n    ['text', 'name', 'Name', { required: true }],\n    ['text', 'surname', 'Surname', { required: true }],\n    ['email', 'email', 'Email', { required: true }],\n    ['singleSelect', 'title', 'Title', { required: true }, { dependents: ['status'] },\n      [\n        { value: 'mr', label: 'Mr' },\n        { value: 'ms', label: 'Ms' },\n        { value: 'mrs', label: 'Mrs' },\n        { value: 'dr', label: 'Dr' },\n        { value: 'prof', label: 'Prof' }\n      ]\n    ],\n    ['singleSelect', 'status', 'Status', { required: true }, { dependsOn: 'title', condition: 'prof' },\n      [\n        { value: 'full professor', label: 'Full Professor' },\n        { value: 'associate professor', label: 'Associate Professor' }\n      ]\n    ],\n    ['submit', 'submit', 'Submit', {}, { style: 'width: 100%;' }],\n  ];\n\n  // Define form parameters\n  const formParams = {\n    id: \"regForm\",\n    method: \"POST\",\n  };\n\n  // Define form settings\n  const formSettings = {\n    submitOnPage: true,\n    theme: \"midnight-blush\",\n    requiredFieldIndicator: true,\n    placeholders: true,  \n  };\n\n  // Initialize the form on component mount\n  onMount(() => {\n    const form = new Formique(formSchema, formParams, formSettings);\n  });\n</script>\n\n<!-- Target element where the form will be inserted -->\n<div id=\"formique\"></div>\n```\n## Step 5: View the Form\n\nTo see the form in your browser, run the following command:\n\n```bash\nnpm run dev\n```\n\nOnce the server is running, you can view the form at:\n\nhttp://localhost:5173/registration\n\n> **Note** If you want to use a custom target element (form container) ID, you can do so by adding the item (property) `containerId: 'element-id'` in the `formSettings` object. This is particularly useful when you need to implement multiple Formique forms on a single page.\nAlso, note that if the target element's ID is 'formique', you do not need to declare this item (property) in the `formSettings` object.\n\n\nFor more comprehensive details on Formique's features and usage and options visit the [Formique GitHub Repository](https://github.com/Gugulethu-Nyoni/formique).\n\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4037, 655],
+		[4044, 30],
+		[4051, 23],
+		[4058, 3],
+		[4065, 85],
+		[4072, 5],
+		[4079, 3],
+		[4086, 31],
+		[4093, 2],
+		[4100, 11],
+		[4107, 7],
+		[4114, 9],
+		[4121, 14],
+		[4128, 6]
+	]
 }

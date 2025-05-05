@@ -5,29 +5,33 @@
 	"authors": ["gmod.one"],
 	"homepage": "https://github.com/Be1zebub/svelte-screensize-widget#readme",
 	"downloads": 20,
-	"updated": "2025-03-31T12:47:39.670Z",
+	"updated": "2025-04-24T10:58:48.208Z",
 	"tags": ["tooling"],
-	"runes": false,
 	"github_stars": 5,
 	"typescript": false,
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"svelte_range": ">=4.0.0",
-	"last_rune_check_version": "1.0.4",
-	"downloads_history": [
-		[4099, 198],
-		[4106, 133],
-		[4113, 20]
-	],
+	"last_rune_check_version": "1.0.5",
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
 			{
 				"name": "svelte-screensize-widget",
-				"version": "1.0.4",
-				"size": 7949
+				"version": "1.0.5",
+				"size": 8530
 			}
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# Svelte Screen size Widget\r\n\r\n[![npm][badge-version]][npm] [![license][badge-license]][license]  \r\n[![npm downloads][badge-downloads]][npm] [![bundle size][badge-size]][bundlephobia]\r\n\r\nA Svelte widget to display the current screen size.  \r\nMust have for adaptive design developing.  \r\nYou can see name of current size-breakpoint & quick copy selector.\r\n\r\n![preview](preview.gif)\r\n\r\n## Usage\r\n\r\n```html\r\n<script>\r\n    import { ScreenSizeWidget } from \"svelte-screensize-widget\"\r\n</script>\r\n\r\n{#if import.meta.env.DEV}\r\n    <ScreenSizeWidget />\r\n{/if}\r\n```\r\n\r\n[badge-version]: https://img.shields.io/npm/v/svelte-screensize-widget.svg\r\n[npm]: https://www.npmjs.com/package/svelte-screensize-widget\r\n\r\n[badge-size]: https://img.shields.io/bundlephobia/minzip/svelte-screensize-widget.svg\r\n[bundlephobia]: https://bundlephobia.com/result?p=svelte-screensize-widget\r\n\r\n[badge-downloads]: https://img.shields.io/npm/dt/svelte-screensize-widget.svg\r\n\r\n[badge-license]: https://img.shields.io/npm/l/svelte-screensize-widget.svg\r\n[license]: https://github.com/Beelzebub/svelte-screensize-widget/blob/master/LICENSE\r\n",
+	"legacy_svelte": true,
+	"downloads_history": [
+		[4100, 198],
+		[4107, 133],
+		[4114, 20],
+		[4121, 28],
+		[4128, 74],
+		[4135, 8]
+	]
 }

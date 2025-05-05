@@ -28,21 +28,11 @@
 	"downloads": 12,
 	"updated": "2025-02-19T08:06:02.625Z",
 	"tags": ["integration"],
-	"runes": false,
-	"github_stars": 36,
+	"github_stars": 38,
 	"typescript": true,
 	"version": "1.0.29",
 	"svelte_range": "^4.2.8",
 	"last_rune_check_version": "1.0.29",
-	"downloads_history": [
-		[4064, 60],
-		[4071, 6],
-		[4085, 3],
-		[4092, 17],
-		[4099, 24],
-		[4106, 20],
-		[4113, 12]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -54,5 +44,18 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# Svelte Native\n\nCreate Mobile applications using native widgets via [Svelte](https://github.com/sveltejs/svelte) and [NativeScript](https://github.com/nativescript/nativescript).\n\nSee https://svelte-native.technology for docs and tutorials\n\n![todo in svelte-native](https://raw.githubusercontent.com/halfnelson/svelte-native/master/nativescript-svelte-todo.gif)\n\n## Features\n\nSvelte-Native includes Svelte specific integrations such as\n\n * The ability to use svelte components to create native applications on top of NativeScript core\n * Svelte specific navigation and modals eg `navigate({ page: MySvelteComponent })`\n * Integration with svelte's transistions eg `<label transition:fade=\"{duration: 2000}\">`\n * Integration with sveltes scoped styles\n * Complete coverage of the Nativescript core UI modules\n * Uses unmodified Svelte and Nativescript modules\n\n## Work In Progress\n\nWhile Svelte Native is feature complete, there are some items outstanding to bring it to the level of other Nativescript library integrations\n\n - [x] At least 1 emoji in readme.md :+1:\n - [ ] More Tests 😳 [#54](https://github.com/nativescript-community/svelte-native/issues/54)\n \n\n## Installation\n\nYou can get started developing with this using the latest template\n\n```bash\n$ npm install -g nativescript\n$ tns create myapp --template @nativescript/template-blank-svelte\n```\n\nA fresh Svelte Native app will be found in the `myapp` folder\n\nOnce installed use the `tns preview`, `tns build` or `tns run` commands as for a normal NativeScript application. \n\n## Usage\n\nApp.svelte\n```html\n<page>\n    <actionBar title=\"Svelte Native\"></actionBar>\n    <stackLayout>\n        <label text={msg}></label>\n        <button text=\"Change\" on:tap=\"{toggle}\"></button>\n    </stackLayout>\n</page>\n\n<script>\n  export let msg = 'Hello World!'\n  const toggle = () => {\n      msg = \"Hi from svelte\"\n  }\n</script>\n```\n\nMain.ts\n```js\nimport App from './components/App.svelte';\n\nimport { svelteNative } from 'svelte-native'\n\nsvelteNative(App, {msg: \"Hi from launcher\"});\n```\n\n## Examples\n\n### Svelte Native HackerNews\n\nSimple HackerNews client in Svelte Native.\n\nSee https://github.com/halfnelson/svelte-native-hackernews for the repo.\n\n![HackerNews Example Image](https://raw.githubusercontent.com/halfnelson/svelte-native-hackernews/master/nativescript-svelte-hn.gif)\n\n### Svelte Native Grocery\n\nGrocery app example in Svelte Native.\n\nSee https://github.com/halfnelson/svelte-native-grocery for the repo.\n\n![Grocery Example Image](https://raw.githubusercontent.com/halfnelson/svelte-native-grocery/master/nativescript-svelte-grocery.gif)\n\n### Svelte Native Realworld\n\nRealworld implementation app in Svelte Native.\n\nSee https://github.com/halfnelson/svelte-native-realworld for the repo.\n\n![Realworld Example Image](https://raw.githubusercontent.com/halfnelson/svelte-native-realworld/master/nativescript-svelte-realworld.gif)\n\n\n## Credits\n\nThe DOM implementation is based on the one from Nativescript-Vue. Thanks!\nThe API Docs were ported from the Nativescript-Vue Too\nThe Site Design is from SvelteJS\n\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4065, 60],
+		[4072, 6],
+		[4086, 3],
+		[4093, 17],
+		[4100, 24],
+		[4107, 20],
+		[4114, 12],
+		[4121, 11],
+		[4128, 14]
+	]
 }

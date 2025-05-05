@@ -7,18 +7,11 @@
 	"downloads": 5,
 	"updated": "2025-03-12T15:46:40.648Z",
 	"tags": ["tooling"],
-	"runes": false,
 	"github_stars": 4,
 	"typescript": true,
 	"version": "1.0.1",
 	"svelte_range": ">= 3.37.0 < 5",
 	"last_rune_check_version": "1.0.1",
-	"downloads_history": [
-		[4085, 62],
-		[4092, 4],
-		[4099, 5],
-		[4113, 5]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -30,5 +23,15 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"legacy_svelte": false,
+	"readme": "# Svelte Native Preprocessor\n\nA pre processor for [Svelte-Native](https://github.com/halfnelson/svelte-native).\n\nIt performs the following transforms to provide a better developer experience when using Svelte-Native:\n\n - [x] Changes `bind:text=\"{email}\"` to `text=\"{email}\" on:textChanged=\"{e => email = e.value}\"`\n \n\n## Installation\n\nUsing `nativescript-webpack >= 5.0.0` add to your `svelte.config.js`\n\n```js\nconst svelteNativePreprocessor = require(\"./svelte-native-preprocessor\");\n\nmodule.exports = {\n    compilerOptions: {\n        namespace: 'foreign'\n    },\n    preprocess: [svelteNativePreprocessor() /*, other preprocesser eg sveltePreprocessor() here */]\n}\n```\n\n## License\n\n[MIT](LICENSE).\n",
+	"downloads_history": [
+		[4086, 62],
+		[4093, 4],
+		[4100, 5],
+		[4114, 5],
+		[4121, 6],
+		[4128, 2]
+	]
 }

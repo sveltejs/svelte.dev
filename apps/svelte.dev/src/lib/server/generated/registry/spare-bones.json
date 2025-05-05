@@ -9,14 +9,9 @@
 	"tags": ["ui", "design-system"],
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
-	"runes": true,
 	"last_rune_check_version": "0.2.0",
 	"version": "0.2.0",
 	"github_stars": 0,
-	"downloads_history": [
-		[4106, 109],
-		[4113, 11]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -27,32 +22,32 @@
 			},
 			{
 				"name": "@zag-js/menu",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 110489
 			},
 			{
 				"name": "@zag-js/anatomy",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 5886
 			},
 			{
 				"name": "@zag-js/core",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 33163
 			},
 			{
 				"name": "@zag-js/utils",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 45241
 			},
 			{
 				"name": "@zag-js/dom-query",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 123232
 			},
 			{
 				"name": "@zag-js/types",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 140506
 			},
 			{
@@ -62,22 +57,22 @@
 			},
 			{
 				"name": "@zag-js/rect-utils",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 63834
 			},
 			{
 				"name": "@zag-js/dismissable",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 21746
 			},
 			{
 				"name": "@zag-js/interact-outside",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 21222
 			},
 			{
 				"name": "@zag-js/popper",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 35031
 			},
 			{
@@ -87,8 +82,8 @@
 			},
 			{
 				"name": "@floating-ui/core",
-				"version": "1.6.9",
-				"size": 212585
+				"version": "1.7.0",
+				"size": 214929
 			},
 			{
 				"name": "@floating-ui/utils",
@@ -97,7 +92,7 @@
 			},
 			{
 				"name": "@zag-js/svelte",
-				"version": "1.11.0",
+				"version": "1.12.0",
 				"size": 17881
 			}
 		],
@@ -132,5 +127,13 @@
 			[15, 4]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Spare Bones\n\nAdditional Svelte components to use with [Skeleton](https://skeleton.dev), powered by [Zag](https://zagjs.com).\n\n## Set Up\n\nInstall with `npm install spare-bones`, then add package's dist folder as a Tailwind source:\n\n```css\n@source @source '../node_modules/spare-bones/dist';\n```\n\nAdjust the path as needed for your project structure. [See the Tailwind documentation](https://tailwindcss.com/docs/detecting-classes-in-source-files#explicitly-registering-sources) for more info.\n\n## Components\n\n### Menu\n\nBasic usage:\n\n```svelte\n<script>\n\timport { Menu } from 'spare-bones';\n</script>\n\n<Menu\n\tonSelect={(details) => alert(details.value)}\n\taria-label=\"Menu\"\n\tcontentWidth=\"w-32\"\n\ttriggerBackground=\"preset-filled-primary-500\"\n>\n\t{#snippet trigger()}Menu{/snippet}\n\t<Menu.Item value=\"1\">Item 1</Menu.Item>\n\t<Menu.Item value=\"2\">Item 2</Menu.Item>\n\t<Menu.Item value=\"3\">Item 3</Menu.Item>\n\t<Menu.Item value=\"4\">Item 4</Menu.Item>\n</Menu>\n```\n\nSee [the types](https://github.com/oatmealproblem/spare-bones/blob/main/src/lib/components/Menu/types.ts) and [Zag documentation](https://zagjs.com/components/svelte/menu) for more information.\n\n## Developing\n\nOnce you've created a project and installed dependencies with `pnpm install`, start a development server:\n\n```bash\npnpm run dev\n\n# or start the server and open the app in a new browser tab\npnpm run dev -- --open\n```\n\nEverything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.\n\n## Building\n\nTo build the library:\n\n```bash\npnpm run package\n```\n\nTo create a production version of the showcase app:\n\n```bash\npnpm run build\n```\n\nYou can preview the production build with `pnpm run preview`.\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4107, 109],
+		[4114, 11],
+		[4121, 59],
+		[4128, 18]
+	]
 }

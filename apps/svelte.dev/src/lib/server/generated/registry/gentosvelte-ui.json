@@ -6,17 +6,11 @@
 	"downloads": 9,
 	"updated": "2025-03-24T10:38:35.028Z",
 	"tags": ["ui"],
-	"runes": true,
 	"typescript": true,
 	"version": "1.0.1",
 	"svelte_range": "^5.25.3",
 	"last_rune_check_version": "1.0.1",
 	"github_stars": 0,
-	"downloads_history": [
-		[4099, 120],
-		[4106, 3],
-		[4113, 9]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -28,5 +22,14 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4100, 120],
+		[4107, 3],
+		[4114, 9],
+		[4121, 10],
+		[4128, 5]
+	]
 }

@@ -5,34 +5,20 @@
 	"authors": ["badt"],
 	"homepage": "https://github.com/busthorne/papir",
 	"downloads": 5,
-	"updated": "2025-02-06T01:54:55.084Z",
+	"updated": "2025-04-23T21:29:04.720Z",
 	"tags": ["design-system"],
-	"runes": false,
 	"github_stars": 4,
 	"typescript": false,
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"svelte_range": "^4.2.19",
-	"last_rune_check_version": "0.0.4",
-	"downloads_history": [
-		[4043, 16],
-		[4050, 220],
-		[4057, 13],
-		[4064, 1],
-		[4071, 8],
-		[4078, 1],
-		[4085, 17],
-		[4092, 4],
-		[4099, 4],
-		[4106, 1],
-		[4113, 5]
-	],
+	"last_rune_check_version": "0.0.5",
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
 			{
 				"name": "@busthorne/papir",
-				"version": "0.0.4",
-				"size": 20757780
+				"version": "0.0.5",
+				"size": 20755844
 			},
 			{
 				"name": "@cartamd/plugin-code",
@@ -341,13 +327,13 @@
 			},
 			{
 				"name": "parse5",
-				"version": "7.2.1",
-				"size": 694639
+				"version": "7.3.0",
+				"size": 695873
 			},
 			{
 				"name": "entities",
-				"version": "4.5.0",
-				"size": 412892
+				"version": "6.0.0",
+				"size": 540419
 			},
 			{
 				"name": "@cartamd/plugin-math",
@@ -816,5 +802,22 @@
 			[75, 47]
 		],
 		"circular": []
-	}
+	},
+	"legacy_svelte": false,
+	"readme": "# Papir\n\n> A general-purpose design system, & UI component library, contrary to the chat paradigm.\n\nPapir is a Svelte implementation of a dramaturgy-inspired design system that reimagines chat interfaces as plays; above all, taking inspiration from the standard screenplay formatting and design language. We're not spirited by the commonplace practice of retrofitting rudimentary chat interfaces with ever-growing set of complex behaviours, widgets, & whatnot. Consider what Anthropic did with their [Artifact widgets][1]. Elegant at first glance, but ultimately _foreign_ to the text, on closer inspection.\n\nPapir chooses to borrow from the many years of literary tradition, & translate the expressiveness of dramatic writing to UI.\n\n![](./public/train_car.png)\n\n## Example\n\nPlease note the example is only illustrative, and the library have not been properly packaged yet.\n\n```svelte\n<script lang=\"ts\">\n\timport { Papir, Dialogue, Scene, Action, Transition, Buffer } from \"papir\";\n\timport \"papir/style.css\";\n\n\timport { typewriter } from \"papir/transition\";\n\timport { loremIpsum, demo } from \"./mock\";\n\tlet messages = demo();\n\tlet listening = true;\n\tlet prompt = \"\";\n</script>\n\n<Papir>\n\t<div in:typewriter={{ speed: 50 }}>\n\t\t<Scene prefix={\"int.\"} where={\"train car\"} when={\"future\"} />\n\t</div>\n\t<Action value={loremIpsum().slice(0, -1) + \".\"} />\n\t{#each $messages as m, i}\n\t\t{#if m.metadata[\"action\"]}\n\t\t\t{@const a = m.metadata.action}\n\t\t\t<Action>\n\t\t\t\t<Buffer markdown={a.content} />\n\t\t\t\t<!-- page margin contain artefacts, & is how users interact with the environment -->\n\t\t\t\t<aside slot=\"right\">\n\t\t\t\t\t{#each a.artefacts as artifact}\n\t\t\t\t\t\t<!-- render artefacts -->\n\t\t\t\t\t{/each}\n\t\t\t\t</aside>\n\t\t\t</Action>\n\t\t{/if}\n\t\t{#if m.content}\n\t\t\t<Dialogue role={m.role} parenthetical={m.metadata.paranthetical} markdown={m.content} />\n\t\t{/if}\n\t\t{#if m.transition}\n\t\t\t{@const t = m.transition}\n\t\t\t<Transition>\n\t\t\t\t<p in:typewriter={{ speed: 50 }}>{t.text}</p>\n\t\t\t\t<aside slot=\"right\">\n\t\t\t\t\t<!-- yes or no -->\n\t\t\t\t</aside>\n\t\t\t</Transition>\n\t\t{/if}\n\t{/each}\n\t{#if listening}\n\t\t<Dialogue prompt role={\"user\"} bind:markdown={prompt} />\n\t{/if}\n</Papir>\n```\n\nThe `Buffer` component is built from the beautiful [Carta][3]—a Markdown editor, and [Shiki][4] for syntax highlighting. Also: note that the `Action` and `Dialogue` components are both using `Buffer` under the hood, and like most other things in papir, they may be customised using slots. I know Svelte is moving away from slots and some other things, however I'm not sure I agree with the new direction, & I would hate to break Svelte 4 compatibility regardless.\n\n## Dramaturgy\n\nMuch can be said about the unreasonable efficiency of dramatic writing as a UI/UX paradigm.\n\nIn the recent years, many chat interfaces have been created to accommodate LLM's, RAG, and various agentic architectures. I believe they may have rushed to implement primitives that are not really good, and fundamentally limiting. Do we really need to be stuck in chat threads circa 2000's? A play is able to order events, speech and actions, and each primitive reads the same regardless of subject: not just for the actors that would take active part by being in the room, but also for the reader that would passively observe the unfolding events.\n\nA bunch of backends would make progressive summarisations of the chat history, and even more sophisticated queries like keeping a completely separate history of the chat for each participant, and so on. The _canonical_ chat history is completely separate from the chat history as it's seen by its participants, and it's been so for quite some time now.\n\n> Observation: chats are basically rooms, where people (and perhaps, agents) speak in turns.\n\n> Observation: in most \"AI\" chat interfaces, I still don't get to invite my friends to join!\n\n> Observation: traditional chats have few primitives, and they're really complicated, notoriously difficult to make well. A _play_ is different as it has to offer many primitives that are fundamentally very simple and easy to read. We can benefit from decades of literary experience.\n\nEach primitive in the textual representation of a play answers basic questions:\n\nWHERE? and WHEN?—clearly indicated by scene headings, i.e. rooms, spaces, and times:\n\n**INT. BOILER ROOM**\n\n**EXT. THE ESPLANADE — NIGHT**\n\nWHAT? and ABOUT WHAT?—in action statements.\n\nWHO? (HOW?) and WHAT?—dialogue.\n\n```\n        DOG PATRON\n    (returned)\nWoof! Woof! Woof! Grrrrrr, grrrrrr!\n\n        OWNER\nI understand everything, my good boy. We'll find you\nsome European bitches!\n\nMOVING ON:\n```\n\n### Margins\n\nConsider that where there's a page of text, there's margins. The biggest step forward in UX of AI systems, chat-bots, agents— the whole lot—in my opinion, was made by Anthropic in the form of [artefacts][1]. An artifact widget is alien to chat, but it doesn't have to be! In a play, there's ways to represent interdiscoursivity using interactive margins. Marks can be placed there strategically to affect how the text, and indeed, the conversations in it, are read: you can see different versions of events, or branches, meaning time travel.\n\nThis is contrary to how alternates have been so far implemented.\n\nWe can constantly re-write the action points and introduce transitions whenever new characters are introduced, the external world is concerned, or the context changes significantly. If Agent A in your chat wishes to bring Agent B to complete a certain task, the environment itself can fetch statistics on how long does B usually take to complete similar tasks, how much it costs, & present this information in the margin.\n\nThe user would be able to OK it, and the chat history would be updated accordingly.\n\nThis is a very simple example of how the chat history can be compressed and decompressed, and how the environment can influence the flow of the conversation. The more sophisticated backends can offer more sophisticated queries, such as keeping a completely separate history of the chat for each participant, and so on.\n\n### Roadmap\n\nThis repo is our second attempt at this idea, and we're still rewriting our internal tools to use it.\n\nWe'll soon be creating a NPM package, adding some helpful stores for handling typical OpenAI-like chat histories, exposing some rudimentary apis for controlling the buffers. There's talk about establishing some design language for margin-marks, some kind of artifact library for most common use-cases, and perhaps introducing animated components for interacting with it. If you know a thing or two about [Web Components][5] and have ideas how we could package them up, we could use all the help we can get!\n\n## Credits\n\nBrought to you by [Busthorne][2], Ukraine's vanguard language-games lab: we do computational discourse analysis, study intelligent forms, simulations. We've been doing lots of research in computational literature recently, where characters live inside a computer, and the readers are invited to play their parts in some kind of play. In the course of this research, it became clear to us that chat interfaces per se are not the best way to interact with agents, and we believe to have figured out a much more interesting way.\n\nLicense: MIT\n\n[1]: https://www.youtube.com/watch?v=vUdNaAAc4FY\n[2]: https://github.com/busthorne\n[3]: https://github.com/BearToCode/carta\n[4]: https://shiki.style/\n[5]: https://developer.mozilla.org/en-US/docs/Web/API/Web_components\n",
+	"downloads_history": [
+		[4044, 16],
+		[4051, 220],
+		[4058, 13],
+		[4065, 1],
+		[4072, 8],
+		[4079, 1],
+		[4086, 17],
+		[4093, 4],
+		[4100, 4],
+		[4107, 1],
+		[4114, 5],
+		[4121, 8],
+		[4128, 46]
+	]
 }

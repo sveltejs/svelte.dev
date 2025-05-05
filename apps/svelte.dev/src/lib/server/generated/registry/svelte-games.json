@@ -7,19 +7,12 @@
 	"downloads": 19,
 	"updated": "2025-03-26T09:42:10.917Z",
 	"tags": ["ui"],
-	"runes": true,
-	"github_stars": 2,
+	"github_stars": 4,
 	"typescript": true,
 	"version": "0.1.8",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "0.1.8",
-	"downloads_history": [
-		[4092, 299],
-		[4099, 280],
-		[4106, 16],
-		[4113, 19]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -56,5 +49,15 @@
 			[3, 4]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# svelte-games\n\n**Small, interactive games designed for loading or wait screens.** Easily import these lightweight, customizable game components into your Svelte projects to keep users entertained during downtime.\n\n[🎮 Play some of the games now!](https://doodad-labs.github.io/svelte-games/)\n\n## Quick Start\n\n### Installation\n\nInstall the package via npm:\n\n```bash\nnpm install svelte-games\n```\n\n### Usage\n\nSimply import the game component and drop it into your Svelte project:\n\n```svelte\n<script lang=\"ts\">\n  import TicTacToe from 'svelte-games/TicTacToe.svelte';\n</script>\n\n<TicTacToe />\n```\n\n## Available Games\n\nGame | Description | Import Path                     \n--- | --- | ---\n**Tic Tac Toe** | A classic strategy game where you face off against a bot on a 3x3 grid. Aim to get three of your marks in a row (horizontally, vertically, or diagonally) to win. | `svelte-games/TicTacToe.svelte`\n**Snap** | A fast-paced matching game on a 4x4 grid. Race against the clock to find and match all pairs of cards before time runs out. | `svelte-games/Snap.svelte`\n**Snake** | A classic arcade game where you control a growing snake. Navigate the snake to eat food and grow longer, but avoid colliding with the walls or yourself. | `svelte-games/Snake.svelte`\n**Sudoku** | A challenging logic-based number puzzle. Fill a 9x9 grid so that each row, column, and 3x3 subgrid contains all digits from 1 to 9 without repetition. | `svelte-games/Sudoku.svelte`\n**2048** | A addictive sliding tile puzzle game where you combine numbered tiles on a 4x4 grid. Swipe to move tiles, merge matching numbers to reach the elusive 2048 tile—or go even higher! | `svelte-games/Two048.svelte`\n\n## License\n\nThis project is licensed under the **GPL-3.0 License**. For more details, see the [LICENSE](LICENSE) file.\n\n## Contributing\n\nContributions are welcome! If you have ideas for new games or improvements, feel free to open an issue or submit a pull request.\n\nEnjoy adding a touch of fun to your Svelte projects!\n*Built with ❤️ by [Doodad Labs](https://github.com/doodad-labs).*\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4093, 299],
+		[4100, 280],
+		[4107, 16],
+		[4114, 19],
+		[4121, 30],
+		[4128, 24]
+	]
 }

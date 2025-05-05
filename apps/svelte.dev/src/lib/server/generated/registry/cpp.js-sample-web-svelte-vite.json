@@ -7,39 +7,11 @@
 	"downloads": 19,
 	"updated": "2025-01-19T13:37:33.028Z",
 	"tags": ["tooling"],
-	"runes": false,
 	"github_stars": 35,
 	"typescript": true,
 	"version": "1.0.1",
 	"svelte_range": "^5.15.0",
 	"last_rune_check_version": "1.0.1",
-	"downloads_history": [
-		[3945, 211],
-		[3952, 24],
-		[3959, 3],
-		[3966, 3],
-		[3973, 3],
-		[3980, 3],
-		[3987, 57],
-		[3994, 168],
-		[4001, 223],
-		[4008, 117],
-		[4015, 28],
-		[4022, 79],
-		[4029, 154],
-		[4036, 15],
-		[4043, 21],
-		[4050, 12],
-		[4057, 4],
-		[4064, 5],
-		[4071, 7],
-		[4078, 6],
-		[4085, 21],
-		[4092, 13],
-		[4099, 25],
-		[4106, 4],
-		[4113, 19]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -178,8 +150,8 @@
 			},
 			{
 				"name": "glob",
-				"version": "11.0.1",
-				"size": 474698
+				"version": "11.0.2",
+				"size": 475202
 			},
 			{
 				"name": "foreground-child",
@@ -356,8 +328,8 @@
 			},
 			{
 				"name": "rollup",
-				"version": "4.40.0",
-				"size": 2726316
+				"version": "4.40.1",
+				"size": 2727114
 			},
 			{
 				"name": "upath",
@@ -920,5 +892,36 @@
 			[145, 3]
 		],
 		"circular": []
-	}
+	},
+	"legacy_svelte": true,
+	"readme": "# @cpp.js/sample-web-svelte-vite\n**Cpp.js Svelte Vite sample**  \n\n<a href=\"https://www.npmjs.com/package/@cpp.js/sample-web-svelte-vite\">\n    <img alt=\"NPM version\" src=\"https://img.shields.io/npm/v/@cpp.js/sample-web-svelte-vite?style=for-the-badge\" />\n</a>\n<a href=\"https://github.com/bugra9/cpp.js/blob/main/LICENSE\">\n    <img alt=\"License\" src=\"https://img.shields.io/github/license/bugra9/cpp.js?style=for-the-badge\" />\n</a>\n<a href=\"https://cpp.js.org/docs/guide/integrate-into-existing-project/vite\">\n    <img alt=\"Docs - Vite\" src=\"https://img.shields.io/badge/Docs_-_Vite-20B2AA?style=for-the-badge\" />\n</a>\n\n# Getting Started\n\n>**Note**: Make sure you have completed the [Cpp.js - Prerequisites](https://cpp.js.org/docs/guide/getting-started/prerequisites) instructions.\n\n## Setup\n\nInstall the dependencies:\n\n```bash\npnpm install\n```\n\n## Get Started\n\nStart the dev server:\n\n```bash\npnpm run dev\n```\n\nBuild the app for production:\n\n```bash\npnpm run build\n```\n",
+	"downloads_history": [
+		[3946, 211],
+		[3953, 24],
+		[3960, 3],
+		[3967, 3],
+		[3974, 3],
+		[3981, 3],
+		[3988, 57],
+		[3995, 168],
+		[4002, 223],
+		[4009, 117],
+		[4016, 28],
+		[4023, 79],
+		[4030, 154],
+		[4037, 15],
+		[4044, 21],
+		[4051, 12],
+		[4058, 4],
+		[4065, 5],
+		[4072, 7],
+		[4079, 6],
+		[4086, 21],
+		[4093, 13],
+		[4100, 25],
+		[4107, 4],
+		[4114, 19],
+		[4121, 18],
+		[4128, 9]
+	]
 }

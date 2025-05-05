@@ -7,35 +7,12 @@
 	"downloads": 472,
 	"updated": "2024-12-01T09:46:06.383Z",
 	"tags": ["ui"],
-	"runes": true,
-	"github_stars": 20,
+	"github_stars": 22,
 	"typescript": true,
 	"version": "0.0.13",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.0.13",
-	"downloads_history": [
-		[3980, 415],
-		[3987, 62],
-		[3994, 17],
-		[4001, 85],
-		[4008, 16],
-		[4015, 22],
-		[4022, 58],
-		[4029, 137],
-		[4036, 81],
-		[4043, 54],
-		[4050, 45],
-		[4057, 143],
-		[4064, 82],
-		[4071, 340],
-		[4078, 694],
-		[4085, 438],
-		[4092, 524],
-		[4099, 293],
-		[4106, 389],
-		[4113, 472]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -71,8 +48,8 @@
 			},
 			{
 				"name": "svelte",
-				"version": "5.28.1",
-				"size": 2426419
+				"version": "5.28.2",
+				"size": 2426223
 			},
 			{
 				"name": "@ampproject/remapping",
@@ -202,5 +179,31 @@
 			[6, 24]
 		],
 		"circular": []
-	}
+	},
+	"legacy_svelte": false,
+	"readme": "# AG-Grid for Svelte 5\n\nDemo page: [https://bn-l.github.io/ag-grid-svelte5-extended](https://bn-l.github.io/ag-grid-svelte5-extended). The cell with the thermometer icon is a [svelte component](src/routes/BoldCell.svelte).\n\nThis builds on [JohnMaher1/ag-grid-svelte5](https://github.com/JohnMaher1/ag-grid-svelte5) with some additional features.\n\nTo use to use ag-grid with a framework you need to create an adaptor that follows this interface: [IFrameworkOverrides](https://github.com/ag-grid/ag-grid/blob/424be7dcadf9b964056ee8c451af9b041ce8877a/packages/ag-grid-community/src/interfaces/iFrameworkOverrides.ts#L7). Ag-grid give no documentation on building a framework integration. This is the adaptor code for svelte 5: [src/lib/SvelteFrameworkOverrides.svelte.ts](src/lib/SvelteFrameworkOverrides.svelte.ts)\n\n\n## Features\n\n- Fully svelte 5\n- **Put any svelte component in a grid cell** (see: [cell renderers](https://www.ag-grid.com/javascript-data-grid/component-cell-renderer/) for context)\n- Reactive data updates (based on $state, just update the data prop supplied to the table)\n- Cell editing (nothing extra to do, will just work like updating the data).\n- Reactive [grid options](https://www.ag-grid.com/javascript-data-grid/grid-options/).\n\n## Note\n\nAlways provide a [`getRowId`](https://www.ag-grid.com/javascript-data-grid/grid-options/#reference-rowModels-getRowId) function in [`initialOptions`](https://www.ag-grid.com/javascript-data-grid/grid-options/) for optimal performance\n\n## Installation\n\n```bash\nnpm install ag-grid-svelte5-extended\n```\n\n<br />\n\n## `AgGrid` Component\n\n| Prop | Type | Required | Description |\n|------|------|----------|-------------|\n| `initialOptions` | `GridOptions<T>` | Yes | Initial AG-Grid options |\n| `updateOptions` | `Omit<GridOptions<T>, 'getRowId'>` | No | Options to update after initialization |\n| `rowData` | `T[]` | No | Array of data to display |\n| `modules` | `Module[]` | No | AG-Grid modules to include |\n| `gridClass` | `string` | No | CSS class for grid (defaults to \"ag-theme-quartz\") |\n| `quickFilterText` | `string` | No | Text for quick filtering |\n| `sizeColumnsToFit` | `boolean` | No | Auto-size columns (default: true) |\n| `theme` | `GridTheme` | No | AG-Grid theme object |\n\n\n#### Usage\n\n(See [demo page source](src/routes/+page.svelte) for more extended example)\n\n```svelte\n<script lang=\"ts\" >\n    import { AgGrid } from \"ag-grid-svelte5-extended\";\n    import { ClientSideRowModelModule } from \"@ag-grid-community/client-side-row-model\";\n    import { themeQuartz } from \"@ag-grid-community/theming\";\n\n    interface Person {\n        id: string;\n        name: string;\n        age: number;\n    }\n\n    let rowData = $state<Person[]>([\n        { id: \"1\", name: \"John\", age: 25 },\n        { id: \"2\", name: \"Jane\", age: 30 },\n    ]);\n\n    const initialOptions = {\n        columnDefs: [\n            { field: \"name\" },\n            { field: \"age\" }\n        ],\n        getRowId: (params) => params.data.id,\n        theme: themeQuartz\n    };\n\n    const modules = [ClientSideRowModelModule];\n</script>\n\n\n<AgGrid { initialOptions } { rowData } { modules } />\n```\n\n<br />\n\n## `makeSvelteCellRenderer` helper function\n\nA utility function to create [AG-Grid cell renderers](https://www.ag-grid.com/javascript-data-grid/component-cell-renderer/) from Svelte components. Takes a svelte component and optionally the class for the container div. It's given [`ICellRendererParams`](https://www.ag-grid.com/javascript-data-grid/component-cell-renderer/#:~:text=The%20provided%20props%20(interface%20ICellRendererParams)%20are%3A) as props (with the cell's value as the `value` prop)\n\n```typescript\nfunction makeSvelteCellRenderer(\n    Component: Component<ICellRendererParams>,\n    containerDivClass?: string\n): ICellRenderer\n```\n\n#### Usage\n\n(See [demo page source](src/routes/+page.svelte) for more extended example)\n\n`CustomBoldCell.svelte`:\n\n```svelte\n    <div class=\"font-bold\" > { value } </div>\n\n    < script lang = \"ts\" >\n        import type { ICellRendererParams } from \"@ag-grid-community/core\";\n        let { value }: ICellRendererParams = $props();\n    </script>\n```\n`+page.svelte`:\n\n```svelte\n<script lang=\"ts\" >\n    import { makeSvelteCellRenderer } from \"ag-grid-svelte5-extended\";\n    import CustomCell from \"./CustomCell.svelte\";\n\n    const initialOptions = {\n        columnDefs: [\n            {\n                field: \"name\",\n                cellRenderer: makeSvelteCellRenderer(CustomCell)\n            }\n        ]\n    };\n\n    // etc\n</script>\n```\n\n\n\n",
+	"downloads_history": [
+		[3981, 415],
+		[3988, 62],
+		[3995, 17],
+		[4002, 85],
+		[4009, 16],
+		[4016, 22],
+		[4023, 58],
+		[4030, 137],
+		[4037, 81],
+		[4044, 54],
+		[4051, 45],
+		[4058, 143],
+		[4065, 82],
+		[4072, 340],
+		[4079, 694],
+		[4086, 438],
+		[4093, 524],
+		[4100, 293],
+		[4107, 389],
+		[4114, 472],
+		[4121, 244],
+		[4128, 140]
+	]
 }

@@ -7,38 +7,11 @@
 	"downloads": 5,
 	"updated": "2024-10-06T11:47:51.483Z",
 	"tags": ["adapter"],
-	"runes": false,
 	"github_stars": 1,
 	"typescript": true,
 	"version": "1.1.0",
 	"kit_range": "^2.6.0",
 	"last_rune_check_version": "1.1.0",
-	"downloads_history": [
-		[3924, 126],
-		[3931, 21],
-		[3938, 12],
-		[3945, 1],
-		[3952, 3],
-		[3959, 1],
-		[3966, 3],
-		[3973, 3],
-		[3980, 1],
-		[3987, 1],
-		[3994, 3],
-		[4008, 2],
-		[4015, 5],
-		[4022, 2],
-		[4029, 5],
-		[4036, 3],
-		[4043, 10],
-		[4050, 6],
-		[4057, 1],
-		[4064, 4],
-		[4071, 1],
-		[4092, 4],
-		[4106, 4],
-		[4113, 5]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -157,8 +130,8 @@
 			},
 			{
 				"name": "rollup",
-				"version": "4.40.0",
-				"size": 2726316
+				"version": "4.40.1",
+				"size": 2727114
 			},
 			{
 				"name": "tslib",
@@ -201,5 +174,35 @@
 			[0, 24]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# @mdd95/adapter-node\r\n\r\n[Adapter](https://kit.svelte.dev/docs/adapters) for SvelteKit apps that generates a standalone Node server with added support for WebSocket as plugin.\r\n\r\n## Installation\r\n\r\n```bash\r\nnpm install -D @mdd95/sveltekit-adapter-node\r\n```\r\n\r\n## Usage examples\r\n\r\n### Using [Node.js WebSocket library](https://github.com/websockets/ws)\r\n\r\n```ts\r\n// plugin.ts\r\nimport { WebSocketServer } from 'ws';\r\nimport type http from 'node:http';\r\n\r\nconst wss = new WebSocketServer({ noServer: true });\r\n\r\nwss.on('connection', (ws) => {\r\n\tws.on('message', (data) => {\r\n\t\tconsole.log('received: %s', data);\r\n\t});\r\n});\r\n\r\nexport default function plugin(server: http.Server) {\r\n\tserver.on('upgrade', function (req, socket, head) {\r\n\t\tif (req.url === '/') {\r\n\t\t\twss.handleUpgrade(req, socket, head, (ws) => {\r\n\t\t\t\twss.emit('connection', ws, req);\r\n\t\t\t});\r\n\t\t} else {\r\n\t\t\tsocket.destroy();\r\n\t\t}\r\n\t});\r\n}\r\n```\r\n\r\nUpdate svelte.config.js\r\n\r\n```js\r\n// svelte.config.js\r\nimport adapter from '@mdd95/sveltekit-adapter-node';\r\nimport { vitePreprocess } from '@sveltejs/vite-plugin-svelte';\r\n\r\n/** @type {import('@sveltejs/kit').Config} */\r\nconst config = {\r\n\tpreprocess: vitePreprocess(),\r\n\r\n\tkit: {\r\n\t\tadapter: adapter({\r\n\t\t\tpluginPath: 'plugin.ts'\r\n\t\t})\r\n\t}\r\n};\r\n\r\nexport default config;\r\n```\r\n\r\nDuring development, you can create a separate server\r\n\r\n```js\r\n// dev.ts\r\nimport http from 'node:http';\r\nimport plugin from './plugin.ts';\r\n\r\nconst PORT = 8000;\r\nconst server = http.createServer();\r\n\r\nplugin(server);\r\nserver.listen(PORT, () => {\r\n\tconsole.log(`Listening on http://localhost:${PORT}`);\r\n});\r\n```\r\n\r\nThen run it using `tsx`:\r\n\r\n```bash\r\nnpx tsx watch dev.ts\r\n```\r\n\r\nAnd run it parallel using `concurrently`\r\n\r\n```json\r\n// package.json\r\n{\r\n\t\"scripts\": {\r\n\t\t\"dev:vite\": \"vite dev\",\r\n\t\t\"dev:ws\": \"tsx watch dev.ts\",\r\n\t\t\"dev\": \"concurrently --kill-others \\\"npm run dev:vite\\\" \\\"npm run dev:ws\\\"\",\r\n\t\t\"preview\": \"node build/index.js\"\r\n\t}\r\n}\r\n```\r\n\r\n### Using [Socket.IO](https://github.com/socketio/socket.io)\r\n\r\n```ts\r\n// plugin.ts\r\nimport { dev } from '$app/environment';\r\nimport { Server } from 'socket.io';\r\nimport type http from 'node:http';\r\n\r\nexport default function plugin(server: http.Server) {\r\n\tconst io = new Server(server, {\r\n\t\tcors: { origin: dev && '*' }\r\n\t});\r\n\r\n\tio.on('connection', (socket) => {\r\n\t\t// Handle connection\r\n\t});\r\n}\r\n```\r\n\r\n```svelte\r\n<!-- src/routes/+page.svelte -->\r\n<script lang=\"ts\">\r\n\timport { dev } from '$app/environment';\r\n\timport { io } from 'socket.io-client';\r\n\r\n\t$effect(() => {\r\n\t\tconst socket = io(dev && 'ws://localhost:8000');\r\n\t});\r\n</script>\r\n```\r\n\r\n## Changelog\r\n\r\n[The Changelog for this package is available on GitHub](CHANGELOG.md).\r\n\r\n## License\r\n\r\n[MIT](LICENSE)\r\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3925, 126],
+		[3932, 21],
+		[3939, 12],
+		[3946, 1],
+		[3953, 3],
+		[3960, 1],
+		[3967, 3],
+		[3974, 3],
+		[3981, 1],
+		[3988, 1],
+		[3995, 3],
+		[4009, 2],
+		[4016, 5],
+		[4023, 2],
+		[4030, 5],
+		[4037, 3],
+		[4044, 10],
+		[4051, 6],
+		[4058, 1],
+		[4065, 4],
+		[4072, 1],
+		[4093, 4],
+		[4107, 4],
+		[4114, 5],
+		[4121, 18],
+		[4128, 5]
+	]
 }

@@ -7,30 +7,12 @@
 	"downloads": 3,
 	"updated": "2024-12-18T15:55:42.110Z",
 	"tags": ["tooling"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.1.1",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.9.0",
 	"last_rune_check_version": "0.1.1",
-	"downloads_history": [
-		[4001, 114],
-		[4008, 12],
-		[4015, 5],
-		[4022, 3],
-		[4029, 4],
-		[4036, 8],
-		[4043, 10],
-		[4050, 3],
-		[4057, 3],
-		[4064, 2],
-		[4071, 1],
-		[4078, 2],
-		[4092, 2],
-		[4106, 6],
-		[4113, 3]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -42,5 +24,26 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# SmartForms\n\nby [@LMarshallAfzal](https/github.com/lmarshallafzal)\n\n<!-- TODO: Tech stack icons go here for technologies used -->\n\n## Features\n\n- Generate Dynamic forms for svelte.\n- Apply styles and layout to the generated forms.\n- Implement complex input validation seamlessly.\n\n## Documentation\n\nThis svelte library provides a dynamic form generation system that allows for flexible and customisable form creation.\n<!-- TODO: Write documentation -->\n\n## Installation\n\nTo install:\n```\nnpm install smartforms\n```\n<!-- TODO: Write installation -->\n\n## Usage\n\nTBD\n<!-- TODO: Write usage -->\n\n## Building\n\nTo build your library:\n\n```bash\nnpm run package\n```\n\nTo create a production version of your showcase app:\n\n```bash\nnpm run build\n```\n\nYou can preview the production build with `npm run preview`.\n\n> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.\n\n## Publishing\n\nGo into the `package.json` and give your package the desired name through the `\"name\"` option. Also consider adding a `\"license\"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).\n\nTo publish your library to [npm](https://www.npmjs.com):\n\n```bash\nnpm publish\n```\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4002, 114],
+		[4009, 12],
+		[4016, 5],
+		[4023, 3],
+		[4030, 4],
+		[4037, 8],
+		[4044, 10],
+		[4051, 3],
+		[4058, 3],
+		[4065, 2],
+		[4072, 1],
+		[4079, 2],
+		[4093, 2],
+		[4107, 6],
+		[4114, 3],
+		[4121, 9],
+		[4128, 2]
+	]
 }

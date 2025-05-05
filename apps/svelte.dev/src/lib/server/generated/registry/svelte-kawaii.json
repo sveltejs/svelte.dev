@@ -7,18 +7,12 @@
 	"downloads": 52,
 	"updated": "2025-04-01T14:53:14.065Z",
 	"tags": ["ui"],
-	"runes": true,
 	"github_stars": 1,
 	"typescript": true,
 	"version": "0.3.4",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.20.2",
 	"last_rune_check_version": "0.3.4",
-	"downloads_history": [
-		[4099, 770],
-		[4106, 440],
-		[4113, 52]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -30,5 +24,14 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# Svelte Kawaii\n\n[![Version](https://img.shields.io/npm/v/svelte-kawaii.svg?style=flat-square)](https://www.npmjs.com/package/svelte-kawaii)\n![npm](https://img.shields.io/npm/dt/svelte-kawaii.svg)\n\nSvelte Kawaii is a Svelte port of [React Kawaii](https://react-kawaii.vercel.app/), offering cute SVG illustrations to add adorable characters to your Svelte applications. A simple way to bring some cuteness to your UI.\n\n<p align=\"center\">\n  <img src=\"https://raw.githubusercontent.com/shinokada/svelte-kawaii/refs/heads/main/static/images/svelte-kawaii-new.png\" width=\"500\" alt=\"Svelte Kawaii\">\n</p>\n\n## Installation\n\n```sh\npnpm i -D svelte-kawaii\n```\n\n## Props\n\n```md\n- size = 240,\n- mood = 'blissful',\n- color = '#A6E191',\n- uniqueId = crypto.randomUUID(),\n- ariaLabel = 'astronaut',\n- title,\n- desc,\n- ...restProps\n```\n\n## Types\n\n```ts\nimport type { SVGAttributes } from 'svelte/elements';\n\nexport type TitleType = {\n  id?: string;\n  title?: string;\n};\n\nexport type DescType = {\n  id?: string;\n  desc?: string;\n};\n\nexport type KawaiiMood = 'sad' | 'shocked' | 'happy' | 'blissful' | 'lovestruck' | 'excited' | 'ko';\n\nexport type KawaiiProps = SVGAttributes<SVGElement> & {\n  size?: number | string;\n  color?: string;\n  mood?: KawaiiMood;\n  uniqueId?: string;\n  ariaLabel?: string;\n  title?: TitleType;\n  desc?: DescType;\n};\n```\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import { Astronaut } from 'svelte-kawaii';\n</script>\n\n<Astronaut size={240} mood=\"happy\" color=\"#ffb3ba\" />\n```\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4100, 770],
+		[4107, 440],
+		[4114, 52],
+		[4121, 63],
+		[4128, 44]
+	]
 }

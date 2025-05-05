@@ -7,60 +7,12 @@
 	"downloads": 5,
 	"updated": "2025-01-22T05:20:57.781Z",
 	"tags": ["integration"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.0.12",
 	"svelte_range": ">=5.0.0 || <6.0.0",
 	"kit_range": "^2.16.1",
 	"last_rune_check_version": "0.0.12",
-	"downloads_history": [
-		[3672, 620],
-		[3679, 25],
-		[3686, 11],
-		[3693, 12],
-		[3700, 22],
-		[3707, 1],
-		[3714, 2],
-		[3721, 6],
-		[3735, 5],
-		[3749, 4],
-		[3756, 18],
-		[3770, 1],
-		[3777, 36],
-		[3784, 1],
-		[3791, 2],
-		[3798, 1],
-		[3805, 6],
-		[3819, 1],
-		[3833, 55],
-		[3840, 1],
-		[3847, 16],
-		[3861, 3],
-		[3868, 1],
-		[3875, 2],
-		[3889, 12],
-		[3896, 12],
-		[3910, 1],
-		[3924, 12],
-		[3931, 1],
-		[3945, 1],
-		[3952, 2],
-		[3959, 12],
-		[3973, 2],
-		[3994, 6],
-		[4015, 1],
-		[4036, 95],
-		[4043, 18],
-		[4050, 4],
-		[4057, 1],
-		[4064, 2],
-		[4071, 1],
-		[4085, 1],
-		[4099, 14],
-		[4106, 3],
-		[4113, 5]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -71,18 +23,38 @@
 			},
 			{
 				"name": "@mysten/sui",
-				"version": "1.28.0",
-				"size": 13338552
+				"version": "1.29.1",
+				"size": 14744511
 			},
 			{
-				"name": "graphql",
-				"version": "16.10.0",
-				"size": 1363943
+				"name": "@graphql-typed-document-node/core",
+				"version": "3.2.0",
+				"size": 2959
 			},
 			{
-				"name": "valibot",
-				"version": "0.36.0",
-				"size": 1408162
+				"name": "@noble/curves",
+				"version": "1.9.0",
+				"size": 1697790
+			},
+			{
+				"name": "@noble/hashes",
+				"version": "1.8.0",
+				"size": 1145416
+			},
+			{
+				"name": "@scure/base",
+				"version": "1.2.5",
+				"size": 163342
+			},
+			{
+				"name": "@scure/bip32",
+				"version": "1.7.0",
+				"size": 66700
+			},
+			{
+				"name": "@scure/bip39",
+				"version": "1.6.0",
+				"size": 383974
 			},
 			{
 				"name": "gql.tada",
@@ -100,6 +72,11 @@
 				"size": 1439549
 			},
 			{
+				"name": "graphql",
+				"version": "16.11.0",
+				"size": 1365791
+			},
+			{
 				"name": "@gql.tada/internal",
 				"version": "1.0.8",
 				"size": 399242
@@ -110,54 +87,24 @@
 				"size": 1963734
 			},
 			{
-				"name": "@mysten/bcs",
-				"version": "1.6.0",
-				"size": 359181
-			},
-			{
-				"name": "@scure/base",
-				"version": "1.2.4",
-				"size": 136736
-			},
-			{
-				"name": "@scure/bip32",
-				"version": "1.6.2",
-				"size": 65666
-			},
-			{
-				"name": "@noble/curves",
-				"version": "1.8.2",
-				"size": 1645456
-			},
-			{
-				"name": "@noble/hashes",
-				"version": "1.7.2",
-				"size": 1100967
-			},
-			{
-				"name": "@scure/bip39",
-				"version": "1.5.4",
-				"size": 382767
-			},
-			{
-				"name": "@mysten/utils",
-				"version": "0.0.0",
-				"size": 66953
-			},
-			{
-				"name": "@noble/hashes",
-				"version": "1.8.0",
-				"size": 1145416
-			},
-			{
 				"name": "poseidon-lite",
 				"version": "0.2.1",
 				"size": 628326
 			},
 			{
-				"name": "@graphql-typed-document-node/core",
-				"version": "3.2.0",
-				"size": 2959
+				"name": "valibot",
+				"version": "0.36.0",
+				"size": 1408162
+			},
+			{
+				"name": "@mysten/bcs",
+				"version": "1.6.1",
+				"size": 344345
+			},
+			{
+				"name": "@mysten/utils",
+				"version": "0.0.0",
+				"size": 66953
 			},
 			{
 				"name": "@mysten/wallet-standard",
@@ -216,13 +163,58 @@
 			},
 			{
 				"name": "@suiet/wallet-sdk",
-				"version": "0.3.3",
-				"size": 318030
+				"version": "0.3.7",
+				"size": 345030
+			},
+			{
+				"name": "@mysten/slush-wallet",
+				"version": "0.1.0",
+				"size": 237029
+			},
+			{
+				"name": "mitt",
+				"version": "3.0.1",
+				"size": 26444
 			},
 			{
 				"name": "@mysten/sui",
-				"version": "1.12.0",
-				"size": 5283700
+				"version": "1.28.2",
+				"size": 13341859
+			},
+			{
+				"name": "@mysten/bcs",
+				"version": "1.6.0",
+				"size": 359181
+			},
+			{
+				"name": "@mysten/wallet-standard",
+				"version": "0.14.7",
+				"size": 254575
+			},
+			{
+				"name": "@mysten/window-wallet-core",
+				"version": "0.0.2",
+				"size": 157333
+			},
+			{
+				"name": "jose",
+				"version": "6.0.10",
+				"size": 250861
+			},
+			{
+				"name": "@mysten/zksend",
+				"version": "0.11.0",
+				"size": 573242
+			},
+			{
+				"name": "nanostores",
+				"version": "0.10.3",
+				"size": 39813
+			},
+			{
+				"name": "@mysten/sui",
+				"version": "1.8.0",
+				"size": 5408662
 			},
 			{
 				"name": "bech32",
@@ -236,8 +228,8 @@
 			},
 			{
 				"name": "@mysten/bcs",
-				"version": "1.1.0",
-				"size": 354982
+				"version": "1.0.4",
+				"size": 349885
 			},
 			{
 				"name": "bs58",
@@ -256,43 +248,13 @@
 			},
 			{
 				"name": "@mysten/wallet-standard",
-				"version": "0.13.7",
-				"size": 243875
+				"version": "0.13.3",
+				"size": 242202
 			},
 			{
 				"name": "@wallet-standard/core",
 				"version": "1.0.3",
 				"size": 14566
-			},
-			{
-				"name": "@mysten/zksend",
-				"version": "0.11.0",
-				"size": 573242
-			},
-			{
-				"name": "mitt",
-				"version": "3.0.1",
-				"size": 26444
-			},
-			{
-				"name": "nanostores",
-				"version": "0.10.3",
-				"size": 39813
-			},
-			{
-				"name": "@mysten/sui",
-				"version": "1.8.0",
-				"size": 5408662
-			},
-			{
-				"name": "@mysten/bcs",
-				"version": "1.0.4",
-				"size": 349885
-			},
-			{
-				"name": "@mysten/wallet-standard",
-				"version": "0.13.3",
-				"size": 242202
 			},
 			{
 				"name": "@noble/hashes",
@@ -324,111 +286,173 @@
 			[0, 1],
 			[1, 2],
 			[1, 3],
+			[3, 4],
 			[1, 4],
-			[4, 5],
-			[4, 6],
-			[6, 2],
-			[6, 7],
+			[1, 5],
+			[1, 6],
+			[6, 3],
+			[6, 4],
+			[6, 5],
+			[1, 7],
+			[7, 4],
 			[7, 5],
-			[4, 8],
-			[8, 6],
-			[8, 2],
-			[8, 7],
-			[4, 7],
-			[1, 9],
-			[9, 10],
-			[1, 10],
+			[1, 8],
+			[8, 9],
+			[8, 10],
+			[10, 11],
+			[10, 12],
+			[12, 9],
+			[8, 13],
+			[13, 10],
+			[13, 11],
+			[13, 12],
+			[8, 12],
 			[1, 11],
-			[11, 12],
-			[12, 13],
-			[11, 13],
-			[11, 10],
 			[1, 14],
-			[14, 13],
-			[14, 10],
 			[1, 15],
-			[15, 10],
-			[1, 12],
 			[1, 16],
+			[16, 5],
+			[16, 17],
+			[17, 5],
 			[1, 17],
-			[1, 18],
-			[0, 19],
+			[0, 18],
+			[18, 19],
+			[19, 11],
+			[19, 15],
+			[19, 8],
 			[19, 20],
-			[20, 2],
-			[20, 3],
-			[20, 4],
-			[20, 21],
-			[21, 10],
-			[20, 10],
-			[20, 11],
-			[20, 14],
-			[20, 12],
-			[20, 16],
-			[20, 17],
-			[20, 18],
-			[19, 22],
+			[20, 5],
+			[19, 5],
+			[19, 6],
+			[19, 7],
+			[19, 3],
+			[19, 4],
+			[19, 14],
+			[19, 2],
+			[18, 21],
+			[21, 22],
 			[22, 23],
-			[23, 24],
-			[22, 24],
-			[22, 25],
-			[25, 26],
-			[25, 27],
-			[22, 28],
-			[28, 24],
-			[22, 29],
-			[29, 24],
-			[0, 30],
+			[21, 23],
+			[21, 24],
+			[24, 25],
+			[24, 26],
+			[21, 27],
+			[27, 23],
+			[21, 28],
+			[28, 23],
+			[0, 29],
+			[29, 30],
 			[30, 31],
-			[31, 32],
-			[31, 2],
-			[31, 3],
-			[31, 4],
-			[31, 33],
-			[31, 34],
-			[34, 35],
+			[30, 15],
+			[30, 32],
+			[32, 11],
+			[32, 15],
+			[32, 8],
+			[32, 33],
+			[33, 5],
+			[32, 5],
+			[32, 6],
+			[32, 7],
+			[32, 17],
+			[32, 3],
+			[32, 4],
+			[32, 14],
+			[32, 2],
+			[30, 17],
+			[30, 34],
+			[34, 32],
+			[34, 21],
+			[30, 35],
 			[35, 36],
-			[31, 11],
-			[31, 14],
-			[31, 12],
-			[31, 16],
-			[31, 37],
-			[31, 18],
-			[30, 38],
-			[38, 31],
-			[38, 39],
-			[39, 23],
-			[39, 24],
-			[39, 28],
-			[39, 29],
-			[30, 40],
-			[40, 41],
-			[40, 3],
-			[40, 42],
-			[40, 43],
-			[43, 32],
-			[43, 2],
-			[43, 3],
-			[43, 4],
-			[43, 33],
+			[35, 15],
+			[35, 17],
+			[29, 32],
+			[29, 34],
+			[29, 37],
+			[37, 31],
+			[37, 15],
+			[37, 38],
+			[37, 39],
+			[39, 40],
+			[39, 11],
+			[39, 15],
+			[39, 8],
+			[39, 41],
+			[39, 42],
+			[42, 43],
 			[43, 44],
-			[44, 35],
-			[43, 11],
-			[43, 14],
-			[43, 12],
-			[43, 16],
-			[43, 37],
-			[43, 18],
-			[40, 45],
-			[45, 43],
-			[45, 39],
-			[30, 46],
-			[30, 47],
-			[47, 48],
-			[47, 49],
-			[30, 50],
-			[30, 33],
-			[0, 24]
+			[39, 6],
+			[39, 7],
+			[39, 3],
+			[39, 4],
+			[39, 45],
+			[39, 2],
+			[37, 46],
+			[46, 39],
+			[46, 47],
+			[47, 22],
+			[47, 23],
+			[47, 27],
+			[47, 28],
+			[29, 48],
+			[29, 49],
+			[49, 50],
+			[49, 51],
+			[29, 52],
+			[29, 41],
+			[0, 23]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Sui Svelte\n[![npm version](https://badge.fury.io/js/sui-svelte.svg)](https://badge.fury.io/js/sui-svelte)\n\nProvides components for interacting with Sui wallets.\n\n# Showcase\n\n[SuiForge](https://suiforge.com/) uses sui-svelte to interact with SUI wallets.\n\n# Setup\n\nBarebones example:\n\nroutes/+page.svelte\n```ts\n<script lang=\"ts\">\n    import {ConnectButton} from \"sui-svelte/ConnectButton\"\n    import {SuiModule, account, SuiModule} from \"sui-svelte/SuiModule\"\n    \n    // (Optional) Callback to call when a Sui account is connected\n    const onConnect = () => {\n        if (account.value) {\n        console.log(\"Connected address: \", account.value.address)\n        }\n    }\n</script>\n\n<SuiModule {onConnect} />\n<ConnectButton />\n{#if account.value}\n    <div>Connected address: {account.value.address}</div>\n{/if}\n ```\n\n# Getting connected account\n\nThe account object exposes the connected account.\n\n\n ```ts\n <script lang=\"ts\">\n\timport { account } from \"sui-svelte/SuiModule\"\n\n    console.log(\"Is account connected?\", account.value !== undefined)\n    if (account.value) {\n        console.log(\"Connected account object:\", account.value)\n        console.log(\"Connected address:\", account.value.address)\n    }\n</script>\n  ```\n\n # Sending transactions\n\n Refer to [Sui guide on building transactions](https://docs.sui.io/guides/developer/sui-101/building-ptb).\n\n ```ts\n <script lang=\"ts\">\n\timport { signAndExecuteTransactionBlock } from \"sui-svelte/SuiModule\"\n\timport { TransactionBlock } from \"@mysten/sui.js/transactions\"\n\n\tconst sendTx = () => {\n        const txb = new TransactionBlock()\n        // Create a new coin with balance 100, based on the coins used as gas payment\n        const [coin] = txb.splitCoins(txb.gas, [txb.pure(100)])\n        // Transfer the split coin to a specific address\n        txb.transferObjects([coin], txb.pure(\"0xSomeSuiAddress\"))\n\n        // Execute using sui-svelte\n        signAndExecuteTransactionBlock(txb)\n    }\n</script>\n  ```\n\n# Manually trigger connect modal\n ```ts\n <script lang=\"ts\">\n\timport { connectWithModal } from \"sui-svelte/SuiModule\"\n\n    connectWithModal()\n</script>\n```\n\n# Customization\n\n## ConnectButton\n\nIs a \\<button> componnet and can be customized by passing a class or styles prop.\n\n```html\n<ConnectButton class=\"my-button-class\" style=\"background: red;\" />\n```\n\n## ConnectModal\n\nThe modal for connecting can be customized by passing a \"modal\" slot to the SuiModule.\n\nYou should always open the modal using the ConnectButton or the connect exported method from SuiModule, since this starts the process that ends when resolve gets called.\n\n```html\n<script lang=\"ts\">\n    import {SuiModule} from \"sui-svelte/SuiModule\"\n    import {connectModal, resolve} from \"sui-svelte/ConnectModal\"\n    import type { IWallet } from \"@suiet/wallet-sdk\"\n\n    // Get the wallet from the browser\n    func getWallet = (): IWallet  => {\n        ...\n        return suietWallet\n    }\n\n    // Call the modal resolve function with the wallet\n    const selectWallet = () => {\n        const wallet = getWallet()\n        resolve.value(wallet)\n    }\n\n    // If closed, call the close method of connectModal\n    const onClose = () => {\n        connectModal.close()\n    }\n</script>\n\n<SuiModule>\n    <div slot=\"modal\">\n        <button onclick={onClose}> Close </button>\n        <button onclick={selectWallet}> Select wallet </button>\n    </div>\n</SuiModule>\n```\n\n# Issues and contributions\n\nFeel free to submit PRs, or issues for any doubts or feature requests.\n\n# Contact\n\ncontact@encypherstudio.com",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3673, 620],
+		[3680, 25],
+		[3687, 11],
+		[3694, 12],
+		[3701, 22],
+		[3708, 1],
+		[3715, 2],
+		[3722, 6],
+		[3736, 5],
+		[3750, 4],
+		[3757, 18],
+		[3771, 1],
+		[3778, 36],
+		[3785, 1],
+		[3792, 2],
+		[3799, 1],
+		[3806, 6],
+		[3820, 1],
+		[3834, 55],
+		[3841, 1],
+		[3848, 16],
+		[3862, 3],
+		[3869, 1],
+		[3876, 2],
+		[3890, 12],
+		[3897, 12],
+		[3911, 1],
+		[3925, 12],
+		[3932, 1],
+		[3946, 1],
+		[3953, 2],
+		[3960, 12],
+		[3974, 2],
+		[3995, 6],
+		[4016, 1],
+		[4037, 95],
+		[4044, 18],
+		[4051, 4],
+		[4058, 1],
+		[4065, 2],
+		[4072, 1],
+		[4086, 1],
+		[4100, 14],
+		[4107, 3],
+		[4114, 5],
+		[4121, 12],
+		[4128, 3]
+	]
 }

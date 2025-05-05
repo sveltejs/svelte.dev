@@ -7,20 +7,12 @@
 	"downloads": 5,
 	"updated": "2025-03-12T03:32:39.043Z",
 	"tags": ["ui"],
-	"runes": false,
 	"typescript": true,
 	"version": "1.4.0",
 	"svelte_range": ">=3.50",
 	"kit_range": "2.0.2",
 	"last_rune_check_version": "1.4.0",
 	"github_stars": 0,
-	"downloads_history": [
-		[4085, 59],
-		[4092, 7],
-		[4099, 12],
-		[4106, 9],
-		[4113, 5]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -141,22 +133,22 @@
 			},
 			{
 				"name": "@babel/parser",
-				"version": "7.27.0",
-				"size": 1924962
+				"version": "7.27.1",
+				"size": 1859876
 			},
 			{
 				"name": "@babel/types",
-				"version": "7.27.0",
-				"size": 2583295
+				"version": "7.27.1",
+				"size": 2597469
 			},
 			{
 				"name": "@babel/helper-string-parser",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 31816
 			},
 			{
 				"name": "@babel/helper-validator-identifier",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 48330
 			},
 			{
@@ -539,5 +531,16 @@
 			[81, 67]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# svelte-notification\n\n[![NPM version][npm-img]][npm]\n[![Build Status][ci-img]][ci]\n[![Coverage Status][coveralls-img]][coveralls]\n\n[npm-img]: https://img.shields.io/npm/v/@tadashi/svelte-notification.svg\n[npm]: https://www.npmjs.com/package/@tadashi/svelte-notification\n[ci-img]: https://github.com/lagden/svelte-notification/actions/workflows/nodejs.yml/badge.svg\n[ci]: https://github.com/lagden/svelte-notification/actions/workflows/nodejs.yml\n[coveralls-img]: https://coveralls.io/repos/github/lagden/svelte-notification/badge.svg?branch=main\n[coveralls]: https://coveralls.io/github/lagden/svelte-notification?branch=main\n\n---\n\nSvelte component\n\n## Install\n\n```\n$ npm i -S @tadashi/svelte-notification\n```\n\n## API\n\n### acts.add(notification: Object): void\n\n#### notification\n\n| property | type   | required | default | description            |\n| -------- | ------ | -------- | ------- | ---------------------- |\n| mode\\*   | Enums  | no       | normal  | box type               |\n| message  | String | no       | -       | message inside box     |\n| lifetime | Number | no       | 0       | autodestroy in seconds |\n\nThe `mode` can be:\n\n```\n- normal\n- info\n- success || ok\n- warning || warn\n- danger  || error\n```\n\n### CSS Vars\n\n| vars                                                | default                          |\n| --------------------------------------------------- | -------------------------------- |\n| --tadashi_svelte_notifications_width                | 270px                            |\n| --tadashi_svelte_notifications_margin               | 0.9em                            |\n| --tadashi_svelte_notifications_zindex               | 1001                             |\n| \\-                                                  | \\-\n| --tadashi_svelte_notification_margin                | 0 0 0.9em                        |\n| --tadashi_svelte_notification_border_radius         | 3px                              |\n| --tadashi_svelte_notification_box_shadow            | 0 4px 10px hsl(0deg 0% 0% / 10%) |\n| --tadashi_svelte_notification\\_\\_content_padding    | 0.9em                            |\n| --tadashi_svelte_notification\\_\\_btn_font_size      | 1.5em                            |\n| --tadashi_svelte_notification\\_\\_btn_font_family    | monospace                        |\n| --tadashi_svelte_notification\\_\\_btn_after_content  | ✗                                |\n| --tadashi_svelte_notification_background            | hsl(0deg 100% 100% / 90%)        |\n| --tadashi_svelte_notification_color                 | hsl(0deg 0% 0%)                  |\n| --tadashi_svelte_notification\\_\\_success_background | hsl(149deg 96% 42% / 90%)        |\n| --tadashi_svelte_notification\\_\\_success_color      | hsl(0deg 100% 100%)              |\n| --tadashi_svelte_notification\\_\\_warning_background | hsl(44deg 100% 50% / 90%)        |\n| --tadashi_svelte_notification\\_\\_warning_color      | hsl(0deg 0% 0%)                  |\n| --tadashi_svelte_notification\\_\\_danger_background  | hsl(359deg 88% 64% / 90%)        |\n| --tadashi_svelte_notification\\_\\_danger_color       | hsl(0deg 100% 100%)              |\n| --tadashi_svelte_notification\\_\\_info_background    | hsl(213deg 56% 47% / 90%)        |\n| --tadashi_svelte_notification\\_\\_info_color         | hsl(0deg 100% 100%)              |\n\n## Usage\n\nYou can see an example here: https://svelte.dev/repl/d11f78c338f543c2b9c4ec529009dd4e\n\n```svelte\n<script>\n  import {Notifications, acts} from '@tadashi/svelte-notification'\n\n  let triggers = [\n    {mode: 'normal', message: 'Nothing to say...', lifetime: 2},\n    {mode: 'success', message: '✓ Nice!'},\n    {mode: 'info', message: 'ℹ Leve a japona'},\n    {mode: 'warn', message: '⚠ Já chegou o disco voador!'},\n    {mode: 'danger', message: '☠ Alta tensão'},\n  ]\n</script>\n\n{#each triggers as trigger}\n  <button\n    type=\"button\"\n    on:click={() => {\n      acts.add(trigger)\n    }}>Add {trigger.mode}</button\n  >\n{/each}\n\n<Notifications />\n```\n\n## Donate ❤️\n\nBTC: bc1q7famhuj5f25n6qvlm3sssnymk2qpxrfwpyq7g4\n\n\n## License\n\nMIT © [Thiago Lagden](https://github.com/lagden)\n",
+	"legacy_svelte": true,
+	"downloads_history": [
+		[4086, 59],
+		[4093, 7],
+		[4100, 12],
+		[4107, 9],
+		[4114, 5],
+		[4121, 7],
+		[4128, 4]
+	]
 }

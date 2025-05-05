@@ -7,26 +7,11 @@
 	"downloads": 20,
 	"updated": "2025-01-29T14:59:10.343Z",
 	"tags": ["media", "ui"],
-	"runes": false,
 	"typescript": true,
 	"version": "1.1.2",
 	"svelte_range": "^3.54.0",
 	"kit_range": "^1.0.0",
 	"last_rune_check_version": "1.1.2",
-	"downloads_history": [
-		[4036, 177],
-		[4043, 75],
-		[4050, 12],
-		[4057, 18],
-		[4064, 17],
-		[4071, 6],
-		[4078, 5],
-		[4085, 7],
-		[4092, 19],
-		[4099, 2],
-		[4106, 1],
-		[4113, 20]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -63,5 +48,24 @@
 			[0, 4]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# @react2svelte/image-gallery\n\n[![npm version](https://img.shields.io/npm/v/@react2svelte/image-gallery.svg)](https://www.npmjs.com/package/@react2svelte/image-gallery)\n\n**This is an image gallery for Svelte based on [react-image-gallery](https://github.com/xiaolin/react-image-gallery) v1.2.11. Many thanks to all the contributors of that package for their hard work!**\n\n### Live Demo (try it on mobile for swipe support)\n\n[react2svelte.github.io/image-gallery/](https://react2svelte.github.io/image-gallery/).\n\nReact image gallery is a React component for building image galleries and carousels\n\n## Features\n\n- [x] Mobile swipe gestures (using [@react2svelte/swipable](https://www.npmjs.com/package/@react2svelte/swipable))\n- [x] Thumbnail navigation\n- [x] Fullscreen support\n- [x] RTL support\n- [x] Responsive design\n- [x] Tons of customization options (see props below)\n- [x] `play`, `pause`, `slide`, `beforeslide`, `screenchange`, `imageload`, `imageerror`, `click` events\n\nNot yet ported\n\n- [ ] Custom rendered slides and controls\n- [ ] Some events (see below)\n\n## Getting started\n\nInstall the library\n\n```\nnpm i @react2svelte/image-gallery\n```\n\nUse it in your component/page\n\n```html\n<script lang=\"ts\">\n  import ImageGallery from '@react2svelte/image-gallery';\n\n  const images = [\n    {\n      original: 'https://picsum.photos/id/1018/1000/600/',\n      thumbnail: 'https://picsum.photos/id/1018/250/150/'\n    },\n    {\n      original: 'https://picsum.photos/id/1015/1000/600/',\n      thumbnail: 'https://picsum.photos/id/1015/250/150/'\n    },\n    {\n      original: 'https://picsum.photos/id/1019/1000/600/',\n      thumbnail: 'https://picsum.photos/id/1019/250/150/'\n    }\n  ];\n</script>\n\n<ImageGallery items=\"{images}\" />\n```\n\n### Demo\n\nYou can also have a look at the [demo page](https://react2svelte.github.io/image-gallery/) of the package, it allows setting library settings interactively. To run it locally:\n\n```\ngit clone https://github.com/react2svelte/image-gallery.git\ncd image-gallery\nnpm install\nnpm run dev\n```\n\nAnd open http://localhost:5173/\n\n## Props\n\n- `items`: (required) Array of objects, see example above,\n  - Available Properties\n    - `original` - image src url\n    - `thumbnail` - image thumbnail src url\n    - `fullscreen` - image for fullscreen (defaults to original)\n    - `originalHeight` - image height (html5 attribute)\n    - `originalWidth` - image width (html5 attribute)\n    - `loading` - image loading. Either \"lazy\" or \"eager\" (html5 attribute)\n    - `thumbnailHeight` - image height (html5 attribute)\n    - `thumbnailWidth` - image width (html5 attribute)\n    - `thumbnailLoading` - image loading. Either \"lazy\" or \"eager\" (html5 attribute)\n    - `originalClass` - custom image class\n    - `thumbnailClass` - custom thumbnail class\n    - `renderItem` - Function for custom rendering a specific slide (see renderItem below)\n    - `renderThumbInner` - Function for custom thumbnail renderer (see renderThumbInner below)\n    - `originalAlt` - image alt\n    - `thumbnailAlt` - thumbnail image alt\n    - `originalTitle` - image title\n    - `thumbnailTitle` - thumbnail image title\n    - `thumbnailLabel` - label for thumbnail\n    - `description` - description for image\n    - `srcSet` - image srcset (html5 attribute)\n    - `sizes` - image sizes (html5 attribute)\n    - `bulletClass` - extra class for the bullet of the item\n- `infinite`: Boolean, default `true`\n  - infinite sliding\n- `lazyLoad`: Boolean, default `false`\n- `showNav`: Boolean, default `true`\n- `showThumbnails`: Boolean, default `true`\n- `thumbnailPosition`: String, default `bottom`\n  - available positions: `top, right, bottom, left`\n- `showFullscreenButton`: Boolean, default `true`\n- `useBrowserFullscreen`: Boolean, default `true`\n  - if false, fullscreen will be done via css within the browser\n- `useTranslate3D`: Boolean, default `true`\n  - if false, will use `translate` instead of `translate3d` css property to transition slides\n- `showPlayButton`: Boolean, default `true`\n- `isRTL`: Boolean, default `false`\n  - if true, gallery's direction will be from right-to-left (to support right-to-left languages)\n- `showBullets`: Boolean, default `false`\n- `showIndex`: Boolean, default `false`\n- `autoPlay`: Boolean, default `false`\n- `disableThumbnailScroll`: Boolean, default `false`\n  - disables the thumbnail container from adjusting\n- `disableKeyDown`: Boolean, default `false`\n  - disables keydown listener for keyboard shortcuts (left arrow, right arrow, esc key)\n- `disableSwipe`: Boolean, default `false`\n- `disableThumbnailSwipe`: Boolean, default `false`\n- `onErrorImageURL`: String, default `undefined`\n  - an image src pointing to your default image if an image fails to load\n  - handles both slide image, and thumbnail image\n- `indexSeparator`: String, default `' / '`, ignored if `showIndex` is false\n- `slideDuration`: Number, default `450`\n  - transition duration during image slide in milliseconds\n- `swipingTransitionDuration`: Number, default `0`\n  - transition duration while swiping in milliseconds\n- `slideInterval`: Number, default `3000`\n- `slideOnThumbnailOver`: Boolean, default `false`\n- `flickThreshold`: Number (float), default `0.4`\n  - Determines the max velocity of a swipe before it's considered a flick (lower = more sensitive)\n- `swipeThreshold`: Number, default `30`\n  - A percentage of how far the offset of the current slide is swiped to trigger a slide event.\n    e.g. If the current slide is swiped less than 30% to the left or right, it will not trigger a slide event.\n- `stopPropagation`: Boolean, default `false`\n  - Automatically calls stopPropagation on all 'swipe' events.\n- `startIndex`: Number, default `0`\n- `additionalClass`: String,\n  - Additional class that will be added to the root node of the component.\n- `useWindowKeyDown`: Boolean, default `true`\n  - If `true`, listens to keydown events on window (window.addEventListener)\n  - If `false`, listens to keydown events on image gallery element (imageGalleryElement.addEventListener)\n\n## Functions\n\nThe following functions can be accessed:\n\n- `play()`: plays the slides\n- `pause()`: pauses the slides\n- `fullScreen()`: activates full screen\n- `exitFullScreen()`: deactivates full screen\n- `slideToIndex(index)`: slides to a specific index\n- `getCurrentIndex()`: returns the current index\n\n## Events\n\nAlready supported\n\n- [x] `slide`: Function, `details: { currentIndex: number }`\n- [x] `beforeslide`: Function, `details: { nextIndex: number }`\n- [x] `screenchange`: Function, `details: { fullscreen: boolean }`\n  - When fullscreen is toggled a boolean is passed to the callback\n- [x] `pause`: Function, `details: { currentIndex: number }`\n- [x] `play`: Function, `details: { currentIndex: number }`\n- [x] `imageload`: Function, `details: { index: number, event }`\n- [x] `imageerror`: Function, `details: { index: number, event }`\n- [x] `click`: Function, `details: event`\n\nNot yet supported\n\n- [ ] `onThumbnailError`: Function, `callback(event)`\n  - overrides onErrorImage\n- [ ] `onThumbnailClick`: Function, `callback(event, index)`\n- [ ] `onTouchMove`: Function, `callback(event) on gallery slide`\n- [ ] `onTouchEnd`: Function, `callback(event) on gallery slide`\n- [ ] `onTouchStart`: Function, `callback(event) on gallery slide`\n- [ ] `onMouseOver`: Function, `callback(event) on gallery slide`\n- [ ] `onMouseLeave`: Function, `callback(event) on gallery slide`\n\n## Custom Controls\n\n`react-image-gallery` supports rendering custom controls, this feature has not been ported yet.\n\n## License\n\nMIT\n",
+	"legacy_svelte": true,
+	"downloads_history": [
+		[4037, 177],
+		[4044, 75],
+		[4051, 12],
+		[4058, 18],
+		[4065, 17],
+		[4072, 6],
+		[4079, 5],
+		[4086, 7],
+		[4093, 19],
+		[4100, 2],
+		[4107, 1],
+		[4114, 20],
+		[4121, 7],
+		[4128, 2],
+		[4135, 11]
+	]
 }

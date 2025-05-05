@@ -7,24 +7,12 @@
 	"downloads": 14,
 	"updated": "2025-02-11T18:01:10.621Z",
 	"tags": ["server"],
-	"runes": false,
 	"github_stars": 13,
 	"typescript": true,
 	"version": "0.1.0",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.1.0",
-	"downloads_history": [
-		[4050, 328],
-		[4057, 70],
-		[4064, 13],
-		[4071, 9],
-		[4078, 5],
-		[4085, 8],
-		[4099, 6],
-		[4106, 4],
-		[4113, 14]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -55,5 +43,21 @@
 			[0, 3]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# sveltekit-server-islands\n\nServer islands were introduced by [the Astro team](https://astro.build/blog/future-of-astro-server-islands/) as a way to have bits of dynamic server rendered components in a \"sea\" of static prerendered content. This library is meant to be a userland implementation of server islands for sveltekit.\n\n## Installation\n\nTo install this library you can just use your favorite package manager\n\n```bash\npnpm add sveltekit-server-islands\n```\n\n## Setup\n\nOnce you installed the library you need to setup your project to allow for the library to work properly: firstly you need to include the vite plugin in your vite config\n\n```ts\nimport { sveltekit } from '@sveltejs/kit/vite';\nimport { islands } from 'sveltekit-server-islands/vite';\nimport { defineConfig } from 'vite';\n\nexport default defineConfig({\n\tplugins: [sveltekit(), islands()],\n});\n```\n\nsecondly you need to include the server handle in your `hooks.server.ts`\n\n```ts\nexport { handle } from 'sveltekit-server-islands';\n```\n\nP.s. if you already have your own handle you can use `sequence` from `@sveltejs/kit` to concatenate them\n\n```ts\nimport { sequence } from '@sveltejs/kit/hooks';\n\nimport { handle as islands } from 'sveltekit-server-islands';\n\nexport const handle = sequence(islands, ({ resolve, event }) => {\n\t// your handle\n\treturn resolve(event);\n});\n```\n\nFinally to take full advantage of server islands you should prerender your application so create a root `+layout.ts` and export a `prerender` variable\n\n```ts\nexport const prerender = true;\n```\n\nonce you've done this steps you can start authoring your server islands.\n\n## Authoring Server Islands\n\nThere's one extra limitation for this plugin to work: you need to put your islands components in a folder inside `/src/islands`\n\n```bash\nsrc/\n├── app.css\n├── app.d.ts\n├── app.html\n├── hooks.server.ts\n├── islands\n│   ├── CartCount.svelte\n│   ├── CustomerReviews.svelte\n│   ├── RecommendedProducts.svelte\n│   └── RoomAvailability.svelte\n├── lib\n│   ├── AddToCart.svelte\n│   ├── Stars.svelte\n│   └── index.ts\n└── routes\n    ├── +layout.svelte\n    ├── +layout.ts\n    ├── +page.svelte\n    └── api\n        └── cart\n            └── +server.ts\n```\n\nServer Islands components are a bit different from normal svelte components because they'll be server rendered and hydrated separately...this means that is very important for them to be able to load their own data. To achieve this you can export a `load` function just like one that you use in sveltekit from the `<script module>`. This function will be invoked and awaited during the server side rendering of the component and, just like a `+page.svelte` you will receive a `data` prop containing whatever you return from the load function.\n\nTo make everything as typesafe as possible we expose a type that you can import to type your props and your event. Here's an example of a Server Island.\n\n```svelte\n<script lang=\"ts\" module>\n\timport type { ServerIslandsProps, ServerIslandsEvent } from 'sveltekit-server-islands';\n\n\texport function load({ cookies }: ServerIslandEvent) {\n\t\tconst count = +(cookies.get('cart') ?? '0');\n\t\treturn { count };\n\t}\n</script>\n\n<script lang=\"ts\">\n\tlet { data }: ServerIslandProps<typeof load> = $props();\n</script>\n\n<span class=\"sr-only\">Cart</span>\n<span id=\"cart-count\" hidden={data?.count === 0}>{data?.count}</span>\n```\n\nBoth `ServerIslandsEvent` and `ServerIslandsProps` accept an additional type parameter to specify extra props that you want to accept in the component\n\n```svelte\n<script lang=\"ts\" module>\n\timport type { ServerIslandsProps, ServerIslandsEvent } from 'sveltekit-server-islands';\n\n\texport function load({ cookies, props }: ServerIslandEvent<{ name: string }>) {\n\t\tconst count = +(cookies.get('cart') ?? '0');\n\t\t// we have access to the props in the event\n\t\tif (props.name === 'root') {\n\t\t\tcount++;\n\t\t}\n\t\treturn { count };\n\t}\n</script>\n\n<script lang=\"ts\">\n\tlet { data, name }: ServerIslandProps<typeof load, { name: string }> = $props();\n</script>\n\n<span class=\"sr-only\">Cart ({name})</span>\n<span id=\"cart-count\" hidden={data?.count === 0}>{data?.count}</span>\n```\n\nAs you might have spotted this can introduce a bit of duplication, to prevent this we also expose a type `ServerIslands` that you can use to type both the load function and the props\n\n```svelte\n<script lang=\"ts\" module>\n\timport type { ServerIslands } from 'sveltekit-server-islands';\n\n\ttype MyIslandProps = ServerIslands<typeof load, { name: string }>;\n\n\texport function load({ cookies, props }: ServerIsland['event']>) {\n\t\tconst count = +(cookies.get('cart') ?? '0');\n\t\t// we have access to the props in the event\n\t\tif(props.name === \"root\"){\n\t\t\tcount++;\n\t\t}\n\t\treturn { count };\n\t}\n</script>\n\n<script lang=\"ts\">\n\tlet { data, name }: ServerIsland['props'] = $props();\n</script>\n\n<span class=\"sr-only\">Cart ({name})</span>\n<span id=\"cart-count\" hidden={data?.count === 0}>{data?.count}</span>\n```\n\nThe `ServerIslandsProps` type will also include another important type: a `fallback` snippet. When you use the component you can in-fact provide some markup that will be rendered before the fetch request to server side render the component starts.\n\n```svelte\n<script>\n\timport CartCount from '../islands/CartCount.svelte';\n</script>\n\n<CartCount>\n\t{#snippet fallback()}\n\t\tLoading...\n\t{/snippet}\n</CartCount>\n```\n\nNote that if you need it you can pass other props to the component (and even update them after the component has been mounted)\n\n## `csr=false` or `csr=true`\n\nThis library also works for both client side rendering set to `true` and to `false`. Since setting client side rendering to false will completely prevent svelte components scripts from executing during `build` and `dev` we also generate in the static folder a bundle for your islands.\n\nHowever if you decide to use `csr=false` there's some gotchas that you should be aware of:\n\n1. Your server islands will not be able to use any sveltekit import like `$app/page`, `$env/static/private` or even `$lib`\n2. While your server islands will be hydrated any other normal component will still have no interactivity\n3. For the above reason any feature that relies on non islands components is not available (like `setContext` and `getContext`)\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4051, 328],
+		[4058, 70],
+		[4065, 13],
+		[4072, 9],
+		[4079, 5],
+		[4086, 8],
+		[4100, 6],
+		[4107, 4],
+		[4114, 14],
+		[4121, 12],
+		[4128, 2],
+		[4135, 8]
+	]
 }

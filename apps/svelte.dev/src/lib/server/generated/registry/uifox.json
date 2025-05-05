@@ -7,19 +7,12 @@
 	"downloads": 12,
 	"updated": "2025-03-16T18:11:31.485Z",
 	"tags": ["ui", "design-system"],
-	"runes": true,
-	"github_stars": 28,
+	"github_stars": 37,
 	"typescript": true,
 	"version": "0.0.5",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "0.0.5",
-	"downloads_history": [
-		[4085, 54],
-		[4092, 9],
-		[4099, 4],
-		[4113, 12]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -35,13 +28,13 @@
 			},
 			{
 				"name": "zod",
-				"version": "3.24.3",
-				"size": 697771
+				"version": "3.24.4",
+				"size": 698927
 			},
 			{
 				"name": "tlds",
-				"version": "1.256.0",
-				"size": 18623
+				"version": "1.258.0",
+				"size": 18595
 			},
 			{
 				"name": "await-lock",
@@ -137,8 +130,8 @@
 			},
 			{
 				"name": "@threlte/extras",
-				"version": "9.1.3",
-				"size": 360169
+				"version": "9.1.4",
+				"size": 360960
 			},
 			{
 				"name": "@threejs-kit/instanced-sprite-mesh",
@@ -256,13 +249,13 @@
 			},
 			{
 				"name": "bits-ui",
-				"version": "1.3.19",
-				"size": 1686875
+				"version": "1.4.5",
+				"size": 1691384
 			},
 			{
 				"name": "@floating-ui/core",
-				"version": "1.6.9",
-				"size": 212585
+				"version": "1.7.0",
+				"size": 214929
 			},
 			{
 				"name": "@floating-ui/utils",
@@ -271,8 +264,8 @@
 			},
 			{
 				"name": "@floating-ui/dom",
-				"version": "1.6.13",
-				"size": 165945
+				"version": "1.7.0",
+				"size": 166707
 			},
 			{
 				"name": "@internationalized/date",
@@ -326,8 +319,8 @@
 			},
 			{
 				"name": "layerchart",
-				"version": "1.0.8",
-				"size": 602575
+				"version": "1.0.10",
+				"size": 602752
 			},
 			{
 				"name": "@dagrejs/dagre",
@@ -1095,8 +1088,8 @@
 			},
 			{
 				"name": "core-js",
-				"version": "3.41.0",
-				"size": 1265563
+				"version": "3.42.0",
+				"size": 1272681
 			},
 			{
 				"name": "custom-event-polyfill",
@@ -1497,5 +1490,16 @@
 			[0, 232]
 		],
 		"circular": []
-	}
+	},
+	"readme": "<img width=\"700\" alt=\"open-graph\" src=\"https://github.com/user-attachments/assets/912cf6b4-16f6-4a9e-a9cf-1add9d271f76\" />\n\n# 🦊 fox ui\n\n> **This is a public alpha release. Expect bugs and breaking changes.**\n\nsvelte v5 + tailwind v4\n\nSee all components here: https://flo-bit.dev/ui-kit\n\n## Quickstart\n\n### 1. Create a new svelte project with tailwind css (including `@tailwindcss/typography` and `@tailwindcss/forms` plugins)\n\n```bash\nnpx sv create my-project\n```\n\n### 2. Install fox-ui-svelte\n\n```bash\nnpm install fox-ui-svelte\n```\n\n### 3. set theme variables in your app.css (changing `gray` and `blue` to your preferred colors, using find and replace).\n\n```css\n@source \"../node_modules/fox-ui-svelte\";\n\n@theme {\n\t--color-base-50: var(--color-gray-50);\n\t--color-base-100: var(--color-gray-100);\n\t--color-base-200: var(--color-gray-200);\n\t--color-base-300: var(--color-gray-300);\n\t--color-base-400: var(--color-gray-400);\n\t--color-base-500: var(--color-gray-500);\n\t--color-base-600: var(--color-gray-600);\n\t--color-base-700: var(--color-gray-700);\n\t--color-base-800: var(--color-gray-800);\n\t--color-base-900: var(--color-gray-900);\n\t--color-base-950: var(--color-gray-950);\n\n\t--color-accent-50: var(--color-blue-50);\n\t--color-accent-100: var(--color-blue-100);\n\t--color-accent-200: var(--color-blue-200);\n\t--color-accent-300: var(--color-blue-300);\n\t--color-accent-400: var(--color-blue-400);\n\t--color-accent-500: var(--color-blue-500);\n\t--color-accent-600: var(--color-blue-600);\n\t--color-accent-700: var(--color-blue-700);\n\t--color-accent-800: var(--color-blue-800);\n\t--color-accent-900: var(--color-blue-900);\n\t--color-accent-950: var(--color-blue-950);\n}\n```\n\n### 4. Use the components\n\n```svelte\n<script>\n\timport { Button } from 'fox-ui-svelte';\n</script>\n\n<Button onclick={() => alert('clicked')}>Click me</Button>\n```\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4086, 54],
+		[4093, 9],
+		[4100, 4],
+		[4114, 12],
+		[4121, 3],
+		[4128, 2],
+		[4135, 4]
+	]
 }

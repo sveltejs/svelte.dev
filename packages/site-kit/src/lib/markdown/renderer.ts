@@ -212,18 +212,21 @@ const snippets = await create_snippet_cache();
 export async function render_content_markdown(
 	filename: string,
 	body: string,
-	options?: { check?: boolean },
+	options?: {
+		check?: boolean;
+		allow_diffs?: boolean;
+	},
 	twoslashBanner?: TwoslashBanner
 ) {
 	const headings: string[] = [];
-	const { check = true } = options ?? {};
+	const { check = true, allow_diffs = false } = options ?? {};
 
 	return await transform(body, {
 		async walkTokens(token) {
 			if (token.type === 'code') {
 				if (snippets.get(token.text)) return;
 
-				if (token.lang === 'diff') {
+				if (token.lang === 'diff' && !allow_diffs) {
 					throw new Error('Use +++ and --- annotations instead of diff blocks');
 				}
 

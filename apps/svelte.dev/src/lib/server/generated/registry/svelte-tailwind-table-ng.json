@@ -7,51 +7,10 @@
 	"downloads": 4,
 	"updated": "2022-09-09T15:46:56.958Z",
 	"tags": ["ui"],
-	"runes": false,
 	"typescript": false,
 	"version": "0.10.3",
 	"svelte_range": "^3.42.1",
 	"last_rune_check_version": "0.10.3",
-	"downloads_history": [
-		[3574, 8],
-		[3581, 1],
-		[3595, 1],
-		[3602, 4],
-		[3616, 1],
-		[3644, 8],
-		[3665, 5],
-		[3672, 1],
-		[3693, 1],
-		[3714, 233],
-		[3721, 1],
-		[3742, 1],
-		[3770, 5],
-		[3791, 3],
-		[3798, 1],
-		[3819, 1],
-		[3840, 20],
-		[3847, 2],
-		[3861, 1],
-		[3868, 1],
-		[3889, 11],
-		[3896, 1],
-		[3917, 1],
-		[3931, 1],
-		[3938, 4],
-		[3945, 1],
-		[3959, 1],
-		[3966, 1],
-		[3994, 1],
-		[4015, 4],
-		[4029, 4],
-		[4036, 6],
-		[4043, 5],
-		[4050, 3],
-		[4057, 1],
-		[4064, 1],
-		[4099, 9],
-		[4113, 4]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -219,8 +178,8 @@
 			},
 			{
 				"name": "@types/node",
-				"version": "22.14.1",
-				"size": 2331510
+				"version": "22.15.3",
+				"size": 2350386
 			},
 			{
 				"name": "undici-types",
@@ -343,8 +302,13 @@
 			},
 			{
 				"name": "@babel/code-frame",
-				"version": "7.26.2",
+				"version": "7.27.1",
 				"size": 33160
+			},
+			{
+				"name": "@babel/helper-validator-identifier",
+				"version": "7.27.1",
+				"size": 48330
 			},
 			{
 				"name": "js-tokens",
@@ -354,11 +318,6 @@
 				"name": "picocolors",
 				"version": "1.1.1",
 				"size": 6373
-			},
-			{
-				"name": "@babel/helper-validator-identifier",
-				"version": "7.25.9",
-				"size": 48330
 			},
 			{
 				"name": "jest-worker",
@@ -795,7 +754,7 @@
 			[88, 47],
 			[88, 91],
 			[91, 92],
-			[91, 61],
+			[91, 62],
 			[91, 93],
 			[88, 14],
 			[88, 42],
@@ -824,7 +783,7 @@
 			[88, 112],
 			[88, 113],
 			[88, 114],
-			[88, 61],
+			[88, 62],
 			[88, 115],
 			[115, 116],
 			[88, 117],
@@ -847,5 +806,48 @@
 			[88, 124]
 		],
 		"circular": []
-	}
+	},
+	"readme": "**This is not my code, but has seemed to dissapear off the internet. So here we are.**\n\n# Svelte Tailwind Table\n\nThe last Svelte Table library you will ever need. A Svelte component for rendering a dynamic table using tailwind CSS\n\n---\n### Check out the [demo]\n---\n\n## Key Features\n- Inbuilt SearchBar (Can be removed using props)\n- Most components are customizable\n- You can set onclick events/hyperlinks and more...\n- Customizable Pagination and Header Icons!\n- Sort and Filter\n- Custom icon column\n- Custom component data type\n- Interactive Rows with custom onclick events\n- Multiple themes (outlined, filled, borderless and more coming soon...)\n\n## What's new\n- Complete UI Refactor\n- Using latest design-system-svelte\n- Improved theme looks\n- New Icons\n- Code commenting for near future open sourcing\n\n## Coming soon!\n- Example Code used for the Demo\n\n## Check it out!\n<a href=\"https://drive.google.com/uc?export=view&id=1vYPGDjbSwoOTOZfYcSjamIi6MLq6LGIW\"><img src=\"https://drive.google.com/uc?export=view&id=1vYPGDjbSwoOTOZfYcSjamIi6MLq6LGIW\" style=\"width: 650px; max-width: 100%; height: auto\" title=\"Click to enlarge picture\" />\n\nDemo GIF 👇(OLD -- Do checkout latest demo using the demo link)\n\n<a href=\"https://drive.google.com/uc?export=view&id=1g_r74NKCGJPgjieUJxjaZwjeUhwhHpe7\"><img src=\"https://drive.google.com/uc?export=view&id=1g_r74NKCGJPgjieUJxjaZwjeUhwhHpe7\" style=\"width: 650px; max-width: 100%; height: auto\" title=\"Click to enlarge picture\" />\n\n## Installation\n---\n*[Tailwind css](https://tailwindcss.com/docs/installation#using-tailwind-via-cdn) in required for the table to be styled properly*\n\n`npm install svelte-tailwind-table`\n\n## Basic usage\n---\n```html\n<script>\n  import Table from 'svelte-tailwind-table';\n</script>\n\n<Table colData={...} rowData={...}/>\n```\n## Props\n\n| Prop Name              | Data Type  | Default value               |\n| ---------------------- | ---------- | --------------------------- |\n| `colData`              | `array`    | example with all data types |\n| `rowData`              | `array`    | example with 2 row values   |\n| `theme`                | `string`   | `outline`                   |\n| `showSearchBar`        | `boolean`  | `true`                      |\n| `searchStyles`         | `string`   | `\"\"`                        |\n| `searchText`           | `string`   | `\"\"`                        |\n| `showFilter`           | `boolean`  | `true`                      |\n| `filterButtonColor`    | `string`   | `\"red\"`                     |\n| `showHeaderIcons`      | `boolean`  | `true`                      |\n| `showHeaderOptions`    | `boolean`  | `true`                      |\n| `headerEditable`       | `boolean`  | `true`                      |\n| `borderBetweenColumns` | `boolean`  | `true`                      |\n| `numberAlign`          | `string`   | `\"right\"`                   |\n| `allCenter`            | `boolean`  | `false`                     |\n| `pagination`           | `boolean`  | `true`                      |\n| `paginationRows`       | `number`   | `10`                        |\n| `currentPage`          | `number`   | `1`                         |\n| `paginationType`       | `string`   | `default`                   |\n| `selectAllMenu`        | `boolean`  | `true`                      |\n| `onClickFunction`      | `function` | `()={}`                     |\n| `onRowClickFunction`   | `function` | `()={}`                     |\n| `interactiveRows`      | `boolean`  | `false`                     |\n| `interactiveRowColor`  | `string`   | `\"gray\"`                    |\n| `activeRow`            | `number`   | `0`                         |\n| `rowBorderTouch`       | `boolean`  | `true`                      |\n| `borderRadius`         | `text`     | `xl`                        |\n| `numbersSmall`         | `boolean`  | `true`                      |\n| `overrideClasses`      | `string`   | `\"\"`                        |\n\n### `colData`\nA 2-Dimensional array with the following properties:\n```js\ncolData = [\n    [\"Data type\", {heading: \"Column 1 heading\", data:{...}}],\n    [\"Data type\", {heading: \"Column 2 heading\", data:{...}}],\n]\n```\nRefer to [Datatypes](#data-types) for information regarding the `data:{...}`\n\n### `rowData`\nA 2-Dimensional array with the following properties:\n```js\nrowData = [\n    [ //row 1\n        {value: \"The value\", editable: true, href: \"This is optional\"},     //column 1 value\n        {value: \"The value\", editable: true, href: \"hyperlink for a cell\"}, //column 2 value\n    ],\n    [ //row 2\n        {value: \"The value\", editable: true}, //column 1 value\n        {value: \"The value\", editable: true}, //column 2 value\n    ]\n]\n```\nRefer to [Data Types](#data-types) for information regarding the `The value`\n\n### `theme`\nThe theme of the table.\n`outline` or `filled` makes the header background color white or grey.\n`borderless` makes the table borderless and transparent.\n\n### `showSearchBar`\nA boolean value to determine if the default search bar is shown or not.\n\n### `searchStyles`\nA string value to override the styling of the search bar.\n\n### `searchText`\nA string value to set the searched text for the search bar.\n\n### `showFilter`\nA boolean value to determine if the default filter is shown or not.\n\n### `filterButtonColor`\nA string value to set the color of the filter button.\n\n### `showHeaderIcons`\nA boolean value to determine if the header icons are shown or not.\n\n### `showHeaderOptions`\nA boolean value to determine if the header options are shown or not.\n\n### `headerEditable`\nA boolean value to determine if the header is editable or not.\n\n### `borderBetweenColumns`\nA boolean value to determine if the border between columns is shown or not.\n\n### `numberAlign`\nA string value to set the alignment of the number column (`\"right\"` or `\"left\"`).\n\n### `allCenter`\nA boolean value to determine if the cell values are centered or not.\n\n### `pagination`\nA boolean value to determine if the pagination is done or not.\n\n### `paginationRows`\nAn integer value to set the number of rows per page.\n\n### `currentPage`\nAn integer value to set the current page.\n\n### `paginationType`\nA string value to set the type of pagination.\n`default` or `detailed` - Detailed shows the number current showing data\nTheme of pagination is determined by the theme of the table.\n\n### `selectAllMenu`\nA boolean value to determine if the select all box is shown or not.\n\n### `onClickFunction`\nA function to call when a cell is clicked on\nThe function needs to be of format\n```js\nfunction yourFunctionName(event, cellData, colIndex, rowIndex){\n    // do anything using the params\n}\n```\n\n### `onRowClickFunction`\nA function to call when a row is clicked on (only if `interactiveRows` is set to `true`)\nThe function needs to be of format\n```js\nfunction yourFunctionName(event, rowIndex){\n    // do anything using the params\n}\n```\n\n### `interactiveRows`\nA boolean value to determine if the rows are interactive or not.\n\n### `interactiveRowColor`\nA string value to set the color of the interactive rows on active and hover.\n\n### `activeRow`\nAn integer value to set the active row. This is only used if `interactiveRows` is set to `true`.\n\n### `rowBorderTouch`\nA boolean value to determine if the row borders are touching the edges or are disconnected.\n\n### `borderRadius`\nA string value to set the border radius of the table.\nOne of `\"none\"`, `\"sm\"`, `\"md\"`, `\"lg\"`, `\"xl\"`, `\"2xl\"`, `\"3xl\"`, `\"4xl\"`, `\"5xl\"`, `\"6xl\"`, `\"7xl\"`, `\"full\"`\n\n### `numbersSmall`\nA boolean value to determine if the numbers are small or not. Makes the minimum width of the number column smaller or larger.\n\n### `overrideClasses`\nA string value to override the default classes.\n\n# Data Types\n\n## 🌐 Global Options\n```js\ndata: {\n    align: \"right\"/\"left\"/\"center\", //optional\n    iconAlign: \"right\"/\"left\"/\"center\", //optional\n    iconSvg: \"svg as string for overriding default svg\", //optional\n    showIcon: true/false, //optional\n}\n```\n\n## 📄 Text\n```js\ndata: {}\n```\n```js\nvalue: \"The value\"\n```\n\n## ✅ Checkbox\n```js\ndata: {checked: true}\n```\n```js\nvalue: boolean(false/true)\n```\n\n## 🔢 Number\n```js\ndata: {}\n```\n```js\nvalue: 123\n```\n\n## 🔽 Select\n```js\ndata: {\n    options: [\n        {text: \"Option 1\", color: \"#c3c3c3\"}, // color is optional\n        {text: \"Option 2\", color: \"#c4c4c4\"}, // When not provided default grey color will be assigned\n        {text: \"Option 3\", color: \"#c5c5c5\"},\n    ]\n}\n```\n```js\nvalue: {text: \"Option 1\", color: \"#c3c3c3\"}\n```\n\n## ⏬ Multiselect\n```js\ndata: {\n    options: [\n        {text: \"Option 1\"}, // color is optional here also\n        {text: \"Option 2\"}, // When not provided default grey color will be assigned\n        {text: \"Option 3\"},\n    ]\n}\n```\n```js\nvalue: [\n    {text: \"Option 1\"},\n    {text: \"Option 2\"}\n] // make sure to use same object value as in options\n```\n\n## 🖼 Image\n```js\ndata: {}\n```\n```js\nvalue: [\n    {\n        link:\"https://via.placeholder.com/150\",\n        href:\"https://www.example.com\"\n    }, //image 1\n    {\n        link:\"https://via.placeholder.com/150\",\n        href:\"https://www.example.com\"\n    }, //image 2\n]\n```\n\n## 📅 Date\n```js\ndata: {}\n```\n```js\nvalue: \"2003-02-19\"\n```\n\n## 🕒 Time\n```js\ndata: {}\n```\n```js\nvalue: \"12:00\"\n```\n\n## ⁝ Icon\n```js\ndata: {\n    svg: `<svg></svg>`, // default row svg string\n}\n```\n```js\nvalue: `<svg></svg>`/\"\" // override row svg string otherwise \"\"\n```\n\n***The above svg overrides are for row data and not the default header icon. Use [iconSvg prop](#data-types) for that***\n\n\n## 👨‍💻 Custom Component\n```js\ndata: {\n    component: CustomComponent, // Custom Component directly from import\n    defaultProps: { // props to pass to the component\n        prop1: \"value\",\n        prop2: \"value\"\n    }\n}\n```\n```js\nvalue: {\n    props: { // props to override default props\n        prop1: \"value\",\n        prop2: \"value\"\n    }\n}\n```\n\n***To fire and use events on custom components, dispatch an event named as \"event\" from the component and use on:customEvent prop on Table component; The details passed on to the \"event\" dispatch will be e.detail.e for the Table listener***\n\n### Example\n\n```html\n<!-- CustomComponent.svelte -->\n<script>\n    import {createEventDispatcher} from \"svelte\";\n    const dispatch = createEventDispatcher();\n</script>\n<div on:click={(e)=>{\n    dispatch(\"event\", {\n        active: false\n    })\n}}>\n    <!-- ... -->\n</div>\n```\n\n```html\n<!-- Main.svelte -->\n<Table on:customEvent={(e)=>{\n    console.log(e.detail.e) // logs {active: false}\n}}/>\n```\n\n[demo]: https://svelte-tailwind-table-demo.vercel.app/\n\n# Thank you so much checking out the package! 🙏\n## Hope you like it! 😇\n### Made with ❤️ by [Priyav Kaneria](https://priyavkaneria.me)\n\n-----\nContact me at [LinkedIn](https://www.linkedin.com/in/priyavkaneria/) or [Github](https://github.com/PriyavKaneria) or priyavkaneria@gmail.com",
+	"legacy_svelte": true,
+	"downloads_history": [
+		[3596, 1],
+		[3603, 4],
+		[3617, 1],
+		[3645, 8],
+		[3666, 5],
+		[3673, 1],
+		[3694, 1],
+		[3715, 233],
+		[3722, 1],
+		[3743, 1],
+		[3771, 5],
+		[3792, 3],
+		[3799, 1],
+		[3820, 1],
+		[3841, 20],
+		[3848, 2],
+		[3862, 1],
+		[3869, 1],
+		[3890, 11],
+		[3897, 1],
+		[3918, 1],
+		[3932, 1],
+		[3939, 4],
+		[3946, 1],
+		[3960, 1],
+		[3967, 1],
+		[3995, 1],
+		[4016, 4],
+		[4030, 4],
+		[4037, 6],
+		[4044, 5],
+		[4051, 3],
+		[4058, 1],
+		[4065, 1],
+		[4100, 9],
+		[4114, 4],
+		[4121, 9],
+		[4128, 2],
+		[4135, 4]
+	]
 }

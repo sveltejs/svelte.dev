@@ -7,21 +7,11 @@
 	"downloads": 77,
 	"updated": "2025-04-14T14:43:10.457Z",
 	"tags": ["tooling"],
-	"runes": false,
 	"github_stars": 1,
 	"typescript": true,
 	"version": "0.0.65",
 	"svelte_range": "^5.19.6",
 	"last_rune_check_version": "0.0.65",
-	"downloads_history": [
-		[4071, 1508],
-		[4078, 293],
-		[4085, 59],
-		[4092, 43],
-		[4099, 52],
-		[4106, 24],
-		[4113, 77]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -37,8 +27,8 @@
 			},
 			{
 				"name": "grapesjs",
-				"version": "0.22.6",
-				"size": 11471631
+				"version": "0.22.7",
+				"size": 11711373
 			},
 			{
 				"name": "@types/backbone",
@@ -229,5 +219,18 @@
 			[0, 32]
 		],
 		"circular": []
-	}
+	},
+	"legacy_svelte": false,
+	"readme": "",
+	"downloads_history": [
+		[4072, 1508],
+		[4079, 293],
+		[4086, 59],
+		[4093, 43],
+		[4100, 52],
+		[4107, 24],
+		[4114, 77],
+		[4121, 94],
+		[4128, 11]
+	]
 }

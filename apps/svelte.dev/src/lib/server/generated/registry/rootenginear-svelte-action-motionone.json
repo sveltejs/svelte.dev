@@ -7,49 +7,12 @@
 	"downloads": 13,
 	"updated": "2025-04-14T12:15:38.840Z",
 	"tags": ["ui"],
-	"runes": false,
 	"github_stars": 12,
 	"typescript": true,
 	"version": "0.6.0",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.6.0",
-	"downloads_history": [
-		[3875, 92],
-		[3882, 76],
-		[3889, 17],
-		[3896, 6],
-		[3903, 9],
-		[3910, 7],
-		[3917, 85],
-		[3924, 14],
-		[3931, 4],
-		[3938, 9],
-		[3945, 6],
-		[3952, 12],
-		[3959, 3],
-		[3966, 4],
-		[3973, 2],
-		[3980, 4],
-		[3987, 3],
-		[3994, 8],
-		[4001, 1],
-		[4008, 3],
-		[4015, 6],
-		[4022, 10],
-		[4029, 2],
-		[4036, 10],
-		[4043, 15],
-		[4050, 16],
-		[4057, 9],
-		[4064, 5],
-		[4071, 2],
-		[4078, 3],
-		[4085, 5],
-		[4092, 7],
-		[4106, 17],
-		[4113, 13]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -60,39 +23,79 @@
 			},
 			{
 				"name": "motion",
-				"version": "12.7.4",
-				"size": 1672513
+				"version": "12.9.4",
+				"size": 1746016
+			},
+			{
+				"name": "framer-motion",
+				"version": "12.9.4",
+				"size": 2398226
+			},
+			{
+				"name": "motion-dom",
+				"version": "12.9.4",
+				"size": 592341
+			},
+			{
+				"name": "motion-utils",
+				"version": "12.9.4",
+				"size": 44970
 			},
 			{
 				"name": "tslib",
 				"version": "2.8.1",
 				"size": 90359
-			},
-			{
-				"name": "framer-motion",
-				"version": "12.7.4",
-				"size": 2705003
-			},
-			{
-				"name": "motion-dom",
-				"version": "12.7.4",
-				"size": 247832
-			},
-			{
-				"name": "motion-utils",
-				"version": "12.7.2",
-				"size": 19610
 			}
 		],
 		"dependencies": [
 			[0, 1],
 			[1, 2],
-			[1, 3],
-			[3, 2],
+			[2, 3],
 			[3, 4],
-			[4, 5],
-			[3, 5]
+			[2, 4],
+			[2, 5],
+			[1, 5]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# @rootenginear/svelte-action-motionone\n\n[![npm](https://img.shields.io/npm/v/%40rootenginear%2Fsvelte-action-motionone?logo=npm&logoColor=%23CB3837&color=%23CB3837)](https://www.npmjs.com/package/@rootenginear/svelte-action-motionone) [![jsr](https://img.shields.io/jsr/v/%40rootenginear/svelte-action-motionone?logo=jsr&color=%23F7DF1E)](https://jsr.io/@rootenginear/svelte-action-motionone)\n\nUnofficial [Svelte Action](https://svelte.dev/docs/svelte-action) for [Motion One](https://motion.dev/) animation library\n\n```bash\nnpm install @rootenginear/svelte-action-motionone\n```\n\n```bash\ndeno add jsr:@rootenginear/svelte-action-motionone\n```\n\n## Documentation\n\n[Read the full documentation](https://rootenginear.github.io/svelte-action-motionone/)\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3876, 92],
+		[3883, 76],
+		[3890, 17],
+		[3897, 6],
+		[3904, 9],
+		[3911, 7],
+		[3918, 85],
+		[3925, 14],
+		[3932, 4],
+		[3939, 9],
+		[3946, 6],
+		[3953, 12],
+		[3960, 3],
+		[3967, 4],
+		[3974, 2],
+		[3981, 4],
+		[3988, 3],
+		[3995, 8],
+		[4002, 1],
+		[4009, 3],
+		[4016, 6],
+		[4023, 10],
+		[4030, 2],
+		[4037, 10],
+		[4044, 15],
+		[4051, 16],
+		[4058, 9],
+		[4065, 5],
+		[4072, 2],
+		[4079, 3],
+		[4086, 5],
+		[4093, 7],
+		[4107, 17],
+		[4114, 13],
+		[4121, 70],
+		[4128, 7]
+	]
 }

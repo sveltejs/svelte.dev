@@ -7,24 +7,12 @@
 	"downloads": 8,
 	"updated": "2025-03-16T07:58:40.326Z",
 	"tags": ["server", "tooling"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.0.3",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.17.1",
 	"last_rune_check_version": "0.0.3",
-	"downloads_history": [
-		[4057, 63],
-		[4064, 3],
-		[4071, 5],
-		[4078, 1],
-		[4085, 131],
-		[4092, 15],
-		[4099, 6],
-		[4106, 1],
-		[4113, 8]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -36,5 +24,21 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# Svelte Simple Query\n\nA simple yet powerful, lightweight data query library for Svelte 5, providing full control with built-in functionalities. Built with TypeScript for easy usage and strong typing.\n\n## Features\n\n- **TypeScript Support**: Fully typed for better development experience.\n- **Query Management**: Simple and flexible querying system.\n- **Data Management**: Supports fetching, caching, and mutations.\n- **Dynamic Querying**: Fetch dynamic endpoints effortlessly.\n\n## Installation\n\n```bash\nnpm install svelte-simple-query\n```\n\n### Usage\n\n```svelte\n<script lang=\"ts\">\n\timport { Query, useQuery } from 'svelte-simple-query';\n\n\tQuery.setup({\n\t\tbaseURI: 'https://jsonplaceholder.typicode.com'\n\t});\n\n\tinterface UserSchema {\n\t\tid: number;\n\t\tname: string;\n\t}\n\tconst users = useQuery<UserSchema[]>('/users');\n\tusers.fetch();\n</script>\n\n<div>\n\t{#if users.isLoading}\n\t\tLoading...\n\t{:else if users.data}\n\t\t{JSON.stringify(users.data)}\n\t{:else if users.isError}\n\t\t{users.isError}\n\t{:else}\n\t\t...\n\t{/if}\n</div>\n```\n\n## Example\n\n- **[Minimal](https://github.com/harryhdt/svelte-simple-query/tree/main/src/routes/example/minimal)**\n- **[Basic](https://github.com/harryhdt/svelte-simple-query/tree/main/src/routes/example/basic)**\n- **[Pagination](https://github.com/harryhdt/svelte-simple-query/tree/main/src/routes/example/pagination)**\n\n## Query API\n\n`Query.setup(options)` for the global configuration of queries.\n\n- **`baseURI`** _(string)_ - Base API endpoint.\n- **`baseInit`** _(object)_ - Default request options.\n- **`cacheTimeout`** _(number)_ - Cache expiration time in milliseconds, default `2000`.\n- **`onError(query, error)`** _(function)_ - Callback for errors.\n- **`onSuccess(query)`** _(function)_ - Callback for successful requests.\n- **`loadingSlowTimeout`** _(number)_ - Timeout duration in milliseconds before triggering slow loading handler, default `30000`.\n- **`onLoadingSlow(query)`** _(function)_ - Callback triggered when a query is loading slower than expected.\n- **`shouldRetryWhenError`** _(boolean)_ - Whether to retry on failure, default `false`.\n- **`retryCount`** _(number)_ - Number of retries on failure, default `5`.\n- **`retryDelay`** _(number)_ - Delay between retries in milliseconds, default `10000`.\n\n<br>\n\n`Query.clear(endpoint?: optional)`\n\nClears cached query results and resets internal query states. Useful when logging out users, refreshing data, or preventing stale responses.\n\n**Parameters:**\n\n- endpoint (optional, string) - If provided, only clears the cache for the specified endpoint.\n\n**Usage**\n\n```\nQuery.clear(); // Clears all cached queries\nQuery.clear(\"/users\"); // Clears cache only for the \"/users\" endpoint\n```\n\n<br>\n\n`Query.clearGroup(group: string)`\n\nClears all cached queries associated with a specific group. This is useful for managing grouped queries, such as clearing related data when switching views or updating dependent resources.\n\n**Parameters:**\n\n- group (string) - The name of the query group to clear.\n\n**Usage**\n\n```\nconst usersPageA = useQuery(\"/users?page=a\", { group: \"user-data\" });\nconst usersPageB = useQuery(\"/users?page=b\", { group: \"user-data\" });\nQuery.clearGroup(\"user-data\"); // Clears all queries tagged under \"user-data\"\n```\n\n<br>\n\n## API\n\n- **`useQuery(endpoint, options)`**: Fetch data from the specified endpoint with optional settings.\n- **`useSingleQuery(() => string, options)`**: Fetch a dynamic single resource dynamically with optional settings.\n- **`mutate(endpoint, options)`**: Perform a mutation the given endpoint with optional settings.\n\n## Query/Data Management\n\n`query.{...}` for managing data state and execution.\n\n- **`data`**: The response data from the query.\n- **`isError`**: Boolean indicating if an error occurred.\n- **`isLoading`**: Boolean indicating if the query is loading.\n- **`fetch()`**: Initiates a data fetch request.\n- **`refetch(options)`**: Re-fetches the query data with optional configurations.\n- **`mutate(options)`**: Mutate existing query data dynamically.\n- **`clear()`**: Clears the query cache, data, isError and isLoading.\n- **`endpoint`**: The API endpoint associated with the query.\n\n## License\n\nMIT\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4058, 63],
+		[4065, 3],
+		[4072, 5],
+		[4079, 1],
+		[4086, 131],
+		[4093, 15],
+		[4100, 6],
+		[4107, 1],
+		[4114, 8],
+		[4121, 20],
+		[4128, 3],
+		[4135, 4]
+	]
 }

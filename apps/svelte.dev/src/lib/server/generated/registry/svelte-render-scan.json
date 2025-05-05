@@ -7,25 +7,12 @@
 	"downloads": 895,
 	"updated": "2025-03-21T21:53:49.157Z",
 	"tags": ["tooling"],
-	"runes": true,
-	"github_stars": 94,
+	"github_stars": 103,
 	"typescript": true,
 	"version": "1.1.0",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "1.1.0",
-	"downloads_history": [
-		[4050, 216],
-		[4057, 223],
-		[4064, 132],
-		[4071, 142],
-		[4078, 151],
-		[4085, 262],
-		[4092, 725],
-		[4099, 896],
-		[4106, 661],
-		[4113, 895]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -37,5 +24,21 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# Svelte Render Scan\n\nVisual debugging tool for Svelte applications.\n\nSvelte port of [render-scan](https://github.com/NullVoxPopuli/render-scan/).\n\n![Screenshot of svelte-render-scan in action](.github/render-scan-demo.gif)\n\n## Installation\n\n```bash\nnpm install -D svelte-render-scan\n```\n\n## Usage\n\n```svelte\n<script>\n\timport { RenderScan } from 'svelte-render-scan';\n</script>\n\n<RenderScan />\n```\n\nThe overlay button appears in the bottom right corner and is enabled by default. You can disable it by clicking on it or setting the `initialEnabled` prop to `false`.\n\n## Props\n\n- `initialEnabled` (default: `true`) - Start with render scanning enabled\n- `offsetLeft` (default: `0`) - Offset the button left from its default position\n- `hideIcon` (default: `false`) - Hide the render scan button while keeping functionality active\n- `callback` (default: `undefined`) - Optional user defined function that gets called once per valid mutation. Signature is `(mutation:MutationRecord)=>void;`\n- `duration` (defult: `1000`) - Adjust how long the render scan highlights remain on screen in ms\n\n## Development\n\nClone this repository and install dependencies:\n\n```bash\nnvm use\nnpm install\nnpm run dev\n```\n\n## License\n\nMIT\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4051, 216],
+		[4058, 223],
+		[4065, 132],
+		[4072, 142],
+		[4079, 151],
+		[4086, 262],
+		[4093, 725],
+		[4100, 896],
+		[4107, 661],
+		[4114, 895],
+		[4121, 776],
+		[4128, 568]
+	]
 }

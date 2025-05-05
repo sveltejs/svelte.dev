@@ -7,46 +7,11 @@
 	"downloads": 4,
 	"updated": "2024-07-24T15:32:33.229Z",
 	"tags": ["integration"],
-	"runes": false,
 	"github_stars": 1,
 	"typescript": true,
 	"version": "0.1.1",
 	"svelte_range": "^4.2.18",
 	"last_rune_check_version": "0.1.1",
-	"downloads_history": [
-		[3854, 168],
-		[3861, 35],
-		[3868, 37],
-		[3875, 33],
-		[3882, 26],
-		[3889, 39],
-		[3896, 27],
-		[3903, 38],
-		[3910, 32],
-		[3917, 12],
-		[3924, 5],
-		[3931, 3],
-		[3938, 1],
-		[3945, 1],
-		[3952, 1],
-		[3959, 2],
-		[3980, 1],
-		[3994, 3],
-		[4015, 5],
-		[4022, 6],
-		[4029, 6],
-		[4036, 7],
-		[4043, 9],
-		[4050, 2],
-		[4057, 1],
-		[4071, 3],
-		[4078, 2],
-		[4085, 2],
-		[4092, 2],
-		[4099, 2],
-		[4106, 6],
-		[4113, 4]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -57,13 +22,13 @@
 			},
 			{
 				"name": "@solana/wallet-adapter-base",
-				"version": "0.9.24",
-				"size": 96759
+				"version": "0.9.26",
+				"size": 96760
 			},
 			{
-				"name": "eventemitter3",
-				"version": "4.0.7",
-				"size": 37967
+				"name": "@solana/wallet-standard-features",
+				"version": "1.3.0",
+				"size": 50417
 			},
 			{
 				"name": "@wallet-standard/base",
@@ -76,9 +41,9 @@
 				"size": 41150
 			},
 			{
-				"name": "@solana/wallet-standard-features",
-				"version": "1.3.0",
-				"size": 50417
+				"name": "eventemitter3",
+				"version": "5.0.1",
+				"size": 73390
 			},
 			{
 				"name": "@solana/wallet-standard-wallet-adapter-base",
@@ -102,23 +67,18 @@
 			},
 			{
 				"name": "@noble/curves",
-				"version": "1.8.2",
-				"size": 1645456
+				"version": "1.9.0",
+				"size": 1697790
 			},
 			{
 				"name": "@noble/hashes",
-				"version": "1.7.2",
-				"size": 1100967
+				"version": "1.8.0",
+				"size": 1145416
 			},
 			{
 				"name": "@solana/wallet-standard-chains",
 				"version": "1.1.1",
 				"size": 18043
-			},
-			{
-				"name": "eventemitter3",
-				"version": "5.0.1",
-				"size": 73390
 			},
 			{
 				"name": "@thewuh/wallet-standard-wallet-adapter-svelte",
@@ -129,12 +89,12 @@
 		"dependencies": [
 			[0, 1],
 			[1, 2],
+			[2, 3],
+			[2, 4],
+			[4, 3],
 			[1, 3],
 			[1, 4],
-			[4, 3],
 			[1, 5],
-			[5, 3],
-			[5, 4],
 			[0, 6],
 			[6, 7],
 			[7, 3],
@@ -148,14 +108,53 @@
 			[10, 11],
 			[9, 12],
 			[12, 3],
-			[9, 5],
+			[9, 2],
 			[6, 12],
-			[6, 5],
+			[6, 2],
+			[0, 5],
 			[0, 13],
-			[0, 14],
-			[14, 7],
-			[14, 3]
+			[13, 7],
+			[13, 3]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# `@thewuh/wallet-adapter-svelte-core`\n\nThe core of the wallet adapter is a Svelte Store which exposes methods and properties to run the wallet in your application. This allows to share this data among all components in your application.\n\n## Install\n\n```shell\nnpm install @thewuh/wallet-adapter-svelte-core \\\n            @solana/web3.js \\\n            @solana/wallet-adapter-wallets\n```\n\n## Use\n\nOnce it is installed, you can use it and subscribe to its methods as an usual Svelte Store:\n\n```svelte\n<script>\n    import { walletStore } from '@thewuh/wallet-adapter-svelte-core';\n    //...\n</script>\n\n{#if $walletStore?.connected}\n<div>My wallet is connected</div>\n{/if}\n```\n\n## UI\n\nTo complete the setup you will need to add some UI components which will provide the full experience to connect, disconnect and visualize address. You can choose between the [Svelte Template](https://github.com/sveltejs/template) or the [SvelteKit](https://kit.svelte.dev/) implementation.\n\n-   [Using UI Package](https://github.com/thewuhxyz/wallet-adapter-svelte/blob/main/packages/ui/README.md)\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3855, 168],
+		[3862, 35],
+		[3869, 37],
+		[3876, 33],
+		[3883, 26],
+		[3890, 39],
+		[3897, 27],
+		[3904, 38],
+		[3911, 32],
+		[3918, 12],
+		[3925, 5],
+		[3932, 3],
+		[3939, 1],
+		[3946, 1],
+		[3953, 1],
+		[3960, 2],
+		[3981, 1],
+		[3995, 3],
+		[4016, 5],
+		[4023, 6],
+		[4030, 6],
+		[4037, 7],
+		[4044, 9],
+		[4051, 2],
+		[4058, 1],
+		[4072, 3],
+		[4079, 2],
+		[4086, 2],
+		[4093, 2],
+		[4100, 2],
+		[4107, 6],
+		[4114, 4],
+		[4121, 6],
+		[4128, 3],
+		[4135, 5]
+	]
 }

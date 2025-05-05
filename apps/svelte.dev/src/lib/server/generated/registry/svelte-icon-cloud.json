@@ -7,20 +7,11 @@
 	"downloads": 27,
 	"updated": "2025-02-26T10:12:25.162Z",
 	"tags": ["ui"],
-	"runes": false,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "1.0.0",
 	"svelte_range": "^4.0.0",
 	"last_rune_check_version": "1.0.0",
-	"downloads_history": [
-		[4071, 66],
-		[4078, 26],
-		[4085, 10],
-		[4092, 4],
-		[4106, 69],
-		[4113, 27]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -45,5 +36,17 @@
 			[0, 2]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Svelte Icon Cloud\n\nA Svelte library for creating interactive 3D clouds of icons, built with TypeScript and fully compatible with SvelteKit. This is a Svelte implementation inspired by [react-icon-cloud](https://github.com/teaguestockwell/react-icon-cloud).\n\n[![NPM version](https://img.shields.io/npm/v/svelte-icon-cloud.svg?style=flat)](https://www.npmjs.com/package/svelte-icon-cloud)\n[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)\n\n<p align=\"center\">\n  <img src=\"https://user-images.githubusercontent.com/71202372/131417256-58058879-f14c-4c03-9bdf-03bd1c80f25d.gif\" alt=\"Icon Cloud Demo\" width=\"80%\">\n</p>\n\n## About\n\nAn interactive 3D tag cloud component for Svelte that renders icons into an engaging, interactive cloud. This library is a Svelte port of the excellent [react-icon-cloud](https://github.com/teaguestockwell/react-icon-cloud) by [Teague Stockwell](https://github.com/teaguestockwell).\n\n## Features\n\n- Create beautiful, interactive 3D clouds of icons\n- Seamless integration with [Simple Icons](https://simpleicons.org/)\n- Fully typed with TypeScript\n- SSR-friendly with SvelteKit\n- Customizable appearance and behavior\n- Responsive design with touch support\n- Loading and error states included\n- Lazy animation (pauses when off-screen)\n\n## Installation\n\n```bash\nnpm install svelte-icon-cloud\n```\n\n## Usage\n\n### Basic Example\n\n```svelte\n<script>\n  import { IconCloud } from 'svelte-icon-cloud';\n  \n  // Array of icon slugs from Simple Icons\n  const iconSlugs = ['svelte', 'typescript', 'github', 'vscode', 'tailwindcss'];\n</script>\n\n<IconCloud {iconSlugs} />\n```\n\n### Advanced Example\n\n```svelte\n<script>\n  import { IconCloud } from 'svelte-icon-cloud';\n  \n  const iconSlugs = ['svelte', 'typescript', 'github', 'vscode', 'tailwindcss'];\n  \n  // Customize the cloud options\n  const options = {\n    depth: 1.5,\n    imageScale: 2,\n    initial: [0.1, -0.1],\n    maxSpeed: 0.05,\n    minSpeed: 0.01,\n    shape: 'sphere',\n    wheelZoom: false,\n    fadeIn: 800,\n    tooltip: 'native'\n  };\n  \n  // Customize the container\n  const containerProps = {\n    style: 'height: 400px; width: 100%; background: #f5f5f5; border-radius: 10px;'\n  };\n</script>\n\n<IconCloud \n  {iconSlugs} \n  {options} \n  {containerProps} \n  theme=\"light\" \n  debug={false} \n/>\n```\n\n## Components\n\n### IconCloud\n\nThe main component that renders a cloud of icons from Simple Icons.\n\n#### Props\n\n| Prop | Type | Default | Description |\n|------|------|---------|-------------|\n| `iconSlugs` | `string[]` | `[]` | Array of icon slugs from Simple Icons |\n| `theme` | `'light' \\| 'dark'` | `'light'` | Theme for the icons |\n| `containerProps` | `object` | `{}` | Props for the container element |\n| `options` | `object` | `{}` | Options for the TagCanvas |\n| `debug` | `boolean` | `false` | Enable debug mode |\n\n### Cloud\n\nA lower-level component that renders a TagCanvas cloud.\n\n#### Props\n\n| Prop | Type | Default | Description |\n|------|------|---------|-------------|\n| `options` | `object` | `{}` | Options for the TagCanvas |\n| `containerProps` | `object` | `{}` | Props for the container element |\n| `canvasProps` | `object` | `{}` | Props for the canvas element |\n| `id` | `string` | `guid()` | Unique ID for the canvas |\n\n## API\n\n### Utility Functions\n\n- `fetchSimpleIcons({ slugs })`: Fetch icon data from Simple Icons\n- `renderSimpleIcon({ icon, bgHex, fallbackHex, minContrastRatio, size, aProps })`: Render a Simple Icon as HTML\n- `getSlug(name)`: Convert a name to a slug\n- `getSlugHexs(slugs)`: Get hex colors for slugs\n- `getSlugsPath(slugs)`: Get paths for slugs\n\n## Differences from react-icon-cloud\n\nThis library follows the same core principles as react-icon-cloud but is implemented specifically for Svelte. Key differences include:\n\n- Svelte component architecture instead of React\n- SvelteKit compatibility for SSR\n- Svelte-specific reactive patterns\n- Simplified API for Svelte developers\n\n## Credits\n\n- [react-icon-cloud](https://github.com/teaguestockwell/react-icon-cloud) by [Teague Stockwell](https://github.com/teaguestockwell) - The original React implementation that inspired this library\n- [Simple Icons](https://simpleicons.org/) - The comprehensive icon collection used in this library\n- [TagCanvas](https://www.goat1000.com/tagcanvas.php) - The underlying canvas library that powers the 3D cloud\n\n## License\n\nMIT © [Ahram-41](https://github.com/Ahram-41) ",
+	"legacy_svelte": true,
+	"downloads_history": [
+		[4072, 66],
+		[4079, 26],
+		[4086, 10],
+		[4093, 4],
+		[4107, 69],
+		[4114, 27],
+		[4121, 4],
+		[4128, 1]
+	]
 }

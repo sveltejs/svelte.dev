@@ -4,31 +4,35 @@
 	"repo_url": "",
 	"authors": ["sra448"],
 	"downloads": 9,
-	"updated": "2025-03-24T08:40:32.938Z",
+	"updated": "2025-05-04T12:02:15.003Z",
 	"tags": ["miscellaneous"],
-	"runes": true,
 	"typescript": true,
-	"version": "0.0.3",
+	"version": "0.1.1",
 	"svelte_range": "^5.0.0",
-	"kit_range": "^2.16.0",
-	"last_rune_check_version": "0.0.3",
+	"kit_range": "^2.20.8",
+	"last_rune_check_version": "0.1.1",
 	"github_stars": 0,
-	"downloads_history": [
-		[4092, 88],
-		[4099, 96],
-		[4106, 9],
-		[4113, 9]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
 			{
 				"name": "svelte-tiny-query",
-				"version": "0.0.3",
-				"size": 20070
+				"version": "0.1.1",
+				"size": 17839
 			}
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# Svelte Tiny Query 🦄\n\nDefine declarative queries that handle caching, deduping, reloading and help you simplify your codebase. Built on **Svelte 5's reactivity**, it’s _tiny_ (<1kB gzipped) and fully type-safe.\n\n**Features**\n\n- 🚀 Declarative and reactive queries\n- 💾 Caching and stale-time support\n- 👬 Deduplication of identical loads\n- 🚧 Query invalidation from anywhere\n- 🐍 Written in typescript\n\n## Usage\n\nIn your **Svelte 5** project, install the library.\n\n    npm install svelte-tiny-query --save\n\nAnd use it l.\n\n```svelte\n<script>\n  import { createQuery } from 'svelte-tiny-query';\n\n  const memeIdeaQuery = createQuery(['meme-ideas'], async ({ id }) => {\n    try {\n      const memeIdea = await fetchDataSomehow(id);\n      return { success: true, data: memeIdea };\n    } catch (e) {\n      return { success: false, error: 'Oopsie!' };\n    }\n  });\n\n  const param = $state({ id: 1 });\n\n  const { query } = memeIdeaQuery(param);\n</script>\n\n{#if query.loading}Query is loading{/if}\n{#if query.error}Error: {query.error}{/if}\n{#if query.data}Data: {query.data}{/if}\n\n<button onclick={() => param.id++}> Next Meme Idea</button>\n```\n\n## Basics\n\n### The Query\n\nA **query** is an abstraction for loading and caching data. It consists of a **loading function** which produces some data, and a **unique key** which identifies that data. Queries expose their reactive `data`, `error`, and `loading` state, along with a `refetch` function.\n\nSvelte Tiny Query uses Svelte 5's `$state` to **cache _all_ states of _all_ queries**, indexed by their keys. When you use a query, you are essentially getting reactive access to a small part of the global cache based on the current key.\n\n### Keys and Parameters\n\nQueries can have one or zero parameters, and the parameter can be reactive. If it is reactive and the value changes, the query now points to the new bit of global cache and triggers the loading function if appropriate.\n\nThe key of a query has to uniquely identify the data that the query produces, and thus depends also on the parameters of the query. In Svelte Tiny Query, the parameter is automatically included in the final key, but you can also use a function to\n\n### When is a query reloaded?\n\nEach query is loaded when it is first used (unless there exists not yet stale cache data for it) and when its `refetch` function is used.\n\n## API Reference\n\nSvelte Tiny Query only exports 2 functions (`createQuery` and `invalidateQueries`), 2 tiny helpers (`fail` and `succeed`) and one readonly state (`globalLoading`).\n\n### `createQuery`\n\n```typescript\n(\n  key: string[] | (param: P) => string[],\n  loadFn: (param: P) => LoadResult<T, E>,\n  options?: { initialData?: T, staleTime?: number }\n) =>\n  (param: P) => {\n    query: {\n      data: T | undefined,\n      error: E | undefined,\n      loading: boolean\n    },\n    refetch: () => void\n  }\n```\n\nCreates a query function which can be invoked to get reactive access to the query state.\n\n- `T` is the data that is returned by the loading function\n- `P` is the parameter which is passed into the query function\n- `E` is the error which might be returned by the loading function\n\n#### Param 1: Key\n\n```typescript\nkey: string[] | (P) => string[]\n```\n\nThe **key** of a query is crucial for caching and invalidating the query. It must be unique — otherwise, different queries will overwrite each other’s state.\n\n- If the key is a _function_, it receives the query's parameter and returns an array of strings. This allows for nested keys like `[\"meme-ideas\", \"1\", \"comments\"]`.\n\n- If the key is not a function but the query takes a parameter, the **parameter is serialized and appended to the key**. In the example above, the key intially is `[\"meme-ideas\", \"id:1\"]`.\n\n#### Param 2: Loading Function\n\n```typescript\nloadFn: (param: P) => Promise<LoadResult<T, E>>;\n```\n\nAn asychronous function that returns the new data or error. It accepts a parameter `P`, which is the value passed to the query. This parameter can be reactive, and if its value changes, the query will automatically re-initialize.\n\nThe function returns a `LoadResult`, which can either be:\n\n- `{ success: true, data: T }`\n- `{ success: false, error: E }`\n\nYou can use the helper functions `succeed(data: T)` and `fail(error: E)` to easily construct these values.\n\n#### Param 3: Options (optional)\n\n```typescript\noptions?: {\n  staleTime: 0 as number\n  initialData: undefined as T | undefined,\n}\n```\n\n- **staleTime**: Defines how long (in milliseconds) before the query is considered stale. Before this time is reached, the query is not automatically reloaded. Defaults to 0 (query always reloads) and can also be set to infinity, to prevent reloads completely.\n\n- **initialData**: This is used as the initial value of `data` before the query has finished loading (instead of undefined). Can be used to implement persisted queries.\n\n#### Return: The Query Function\n\n```typescript\n(param: P) => {\n  query: {\n    data: T | undefined,\n    error: E | undefined,\n    loading: boolean\n  },\n  refetch: () => void\n}\n```\n\nThe `createQuery` function returns a query function that gives you access to the reactive state of the query (`data`, `error`, `loading`), and a `refetch` function.\n\n- The query function checks the cache for existing data. If the data is found and not stale, it’s returned immediately.\n\n- If the data isn’t in the cache or is stale, the loading function is triggered. While it’s loading, the `loading` state is set to `true`.\n\n- Once the loading function completes, the query state updates with the new data or error, and the data is cached for future use.\n\n- The `refetch` function can be used to manually reload the data, which will update the cache and reset the state as needed.\n\n- If the query has reactive parameters, a change will trigger a re-initialization, causing a reload based on the new cache key.\n\n### `invalidateQueries`\n\n```typescript\n(key: string[]) => void\n```\n\nInvalidates a query and its children by key. If a query is invalidated, and it is active (on a mounted component), its loading function is triggered. This happens, whether the query is stale or not.\n\nIf multiple identical queries are invalidated, the loading function is only run once.\n\n### `globalLoading`\n\n```typescript\n{\n  count: number;\n}\n```\n\nReactive value that holds the number of currently active loadings.\n\n## What is Omited\n\nSvelte Tiny Query deliberately omits some features that other query libraries offer. Here are some of those:\n\n**Query Provider**<br />\nThere is no need to set up a query provider. Queries and their caches are global in your app.\n\n**Timed and Window Focus Reloading**<br />\nUse `$effect`, `setInterval` (or `addEventListener`) and `refetch` to achieve this yourself.\n\n**Dependent Queries**<br />\nUse `$derived` to conditionally invoke the query function.\n\n**Persisted Queries**<br />\nUse `initialData` to inject perstisted data into the query.\n\n**Mutations**<br />\nUse `invalidateQueries` anywhere in your app to invalidate queries. This means mutations can just be normal functions.\n\n## Roadmap\n\nWhile we want to keep the library _tiny_, there are a few things on our plate.\n\n- Optimistic updates (`upateQuery`)\n- Retries on error\n- Paginated and/or load-more queries\n- Query cancellation\n- Unused cache clearing (maybe?)\n- Tests (d'uh!)\n\n## Thanks\n\nThis library exists, because **Svelte 5 is awesome**! It solves the problem of caching almost by itself and allows this library to be so _tiny_ and simple.\n\nSvelte Tiny Query is also very much inspired by [**TanStack Query**](https://tanstack.com/query) (for which there exists a [svelte variant](https://tanstack.com/query/latest/docs/framework/svelte/overview)).\n\nAnd last but not least, if you are still reading this, thank you! We hope you give it a try and consider contributing.\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4093, 88],
+		[4100, 96],
+		[4107, 9],
+		[4114, 9],
+		[4121, 10],
+		[4128, 8],
+		[4135, 5]
+	]
 }

@@ -7,50 +7,12 @@
 	"downloads": 6,
 	"updated": "2024-03-21T15:06:42.434Z",
 	"tags": ["ui"],
-	"runes": false,
 	"github_stars": 0,
 	"typescript": false,
 	"version": "0.0.2",
 	"svelte_range": "^4.2.7",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.0.2",
-	"downloads_history": [
-		[3728, 49],
-		[3735, 4],
-		[3742, 3],
-		[3749, 4],
-		[3756, 1],
-		[3770, 1],
-		[3777, 2],
-		[3791, 1],
-		[3805, 2],
-		[3812, 1],
-		[3826, 1],
-		[3833, 6],
-		[3854, 1],
-		[3861, 3],
-		[3868, 1],
-		[3875, 1],
-		[3882, 1],
-		[3903, 1],
-		[3924, 1],
-		[3931, 3],
-		[3952, 1],
-		[3980, 1],
-		[4001, 1],
-		[4015, 2],
-		[4022, 3],
-		[4036, 2],
-		[4043, 8],
-		[4050, 2],
-		[4057, 1],
-		[4071, 1],
-		[4085, 1],
-		[4092, 1],
-		[4099, 2],
-		[4106, 1],
-		[4113, 6]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -149,18 +111,18 @@
 			},
 			{
 				"name": "browserslist",
-				"version": "4.24.4",
-				"size": 64926
+				"version": "4.24.5",
+				"size": 65174
 			},
 			{
 				"name": "caniuse-lite",
-				"version": "1.0.30001715",
-				"size": 2211246
+				"version": "1.0.30001716",
+				"size": 2214832
 			},
 			{
 				"name": "electron-to-chromium",
-				"version": "1.5.140",
-				"size": 162065
+				"version": "1.5.149",
+				"size": 163189
 			},
 			{
 				"name": "node-releases",
@@ -796,8 +758,8 @@
 			},
 			{
 				"name": "rollup",
-				"version": "4.40.0",
-				"size": 2726316
+				"version": "4.40.1",
+				"size": 2727114
 			},
 			{
 				"name": "sade",
@@ -1260,5 +1222,46 @@
 			[0, 146]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# 🌟 SvelteKit Custom MultiSelect Component 🌟\n\nHey there! Welcome to the SvelteKit Custom MultiSelect Component. This component is here to make your life easier when dealing with multiple selections in your SvelteKit projects. Let's dive in!\n\n## Installation\n\nFirst things first, you'll want to install this nifty component. Open up your terminal and type:\n\n```bash\nnpm install @haysquare/svelte-multiselect\n\n\nAnd that's it! You're ready to roll!\n\nUsage\n\nUsing the Custom MultiSelect component is a piece of cake! Just follow these simple steps:\n\nImport the component into your SvelteKit project.\nInclude it in your components or pages.\n\nSingle Use\nIf you need only one Custom MultiSelect in your application, simply use it directly:\n\n\n<script>\n  import MultiSelect from '@haysquare/svelte-multiselect';\n</script>\n\n<MultiSelect\n  {selectableItems}\n  {initialSelectedItems}\n  on:change={handleSelectionChange}\n/>\n\n\nMulti Use\n\nIf you need multiple instances of Custom MultiSelect, you can import and use it multiple times:\n\n<script>\n  import MultiSelect from '@haysquare/svelte-multiselect';\n</script>\n\n<MultiSelect\n  {selectableItems1}\n  {initialSelectedItems1}\n  on:change={handleSelectionChange1}\n/>\n\n<MultiSelect\n  {selectableItems2}\n  {initialSelectedItems2}\n  on:change={handleSelectionChange2}\n/>\n\nProps\n\n`selectableItems`: An array of items that can be selected.\n`initialSelectedItems`: An optional array of items that are initially selected.\n`on:change`: An event that emits the selected items whenever the selection changes.\n\nExample\n\nWanna see it in action? Sure thing!\n\n<script>\n  import MultiSelect from '@haysquare/svelte-multiselect';\n\n  let items = ['Apple', 'Banana', 'Orange'];\n  let selectedItems = [];\n\n  function handleSelectionChange(selected) {\n    selectedItems = selected;\n  }\n</script>\n\n<MultiSelect\n  {selectableItems}\n  {initialSelectedItems}\n  on:change={handleSelectionChange}\n/>\n\n\nLicense\nThis project is licensed under the MIT License. Feel free to use it however you like!\n\n\nThat's all there is to it! Thanks for checking out the SvelteKit Custom MultiSelect Component. Happy coding! ✨🚀\n\n\nThis README provides clear instructions for both single and multi-use cases of the component. Adjust the content as needed for your specific use case!\n",
+	"legacy_svelte": true,
+	"downloads_history": [
+		[3729, 49],
+		[3736, 4],
+		[3743, 3],
+		[3750, 4],
+		[3757, 1],
+		[3771, 1],
+		[3778, 2],
+		[3792, 1],
+		[3806, 2],
+		[3813, 1],
+		[3827, 1],
+		[3834, 6],
+		[3855, 1],
+		[3862, 3],
+		[3869, 1],
+		[3876, 1],
+		[3883, 1],
+		[3904, 1],
+		[3925, 1],
+		[3932, 3],
+		[3953, 1],
+		[3981, 1],
+		[4002, 1],
+		[4016, 2],
+		[4023, 3],
+		[4037, 2],
+		[4044, 8],
+		[4051, 2],
+		[4058, 1],
+		[4072, 1],
+		[4086, 1],
+		[4093, 1],
+		[4100, 2],
+		[4107, 1],
+		[4114, 6],
+		[4121, 7],
+		[4128, 2]
+	]
 }

@@ -9,14 +9,9 @@
 	"tags": ["ui"],
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
-	"runes": true,
 	"last_rune_check_version": "0.0.1",
 	"version": "0.0.1",
 	"github_stars": 0,
-	"downloads_history": [
-		[4106, 23],
-		[4113, 26]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -33,5 +28,14 @@
 		],
 		"dependencies": [[0, 1]],
 		"circular": []
-	}
+	},
+	"readme": "# Svelte-Terminal\n\n## WIP\n\n### Svelte library for a simple browser terminal\n\n![img.png](img.png)\n\n## Features\n\n* ### Custom Commands\n    * Command validation\n    * Numerous default commands\n\n```\nconst allCommands = [\n\tchangeDirectoryCommand,\n\tclearCommand,\n\tlistDirectoryCommand,\n\ttestCommand,\n\tprintCommand\n];\nexport const commands = new Commands(terminal);\ncommands.addCommands(allCommands);\n```\n\n```\nfunction testCommandFn(state: Terminal, parameters: Parameter[]) {\n\tconst paramsAsOutput = parameters.reduce((p, c) => {\n\t\tp += c.name + ' = ' + c.value + '\\n';\n\t\treturn p;\n\t}, '');\n\tstate.createMessage('Test Command Ran with Params -\\n' + paramsAsOutput);\n}\n\nconst testCommand = {\n\tname: 'test',\n\tdescription: 'Test output',\n\talias: ['test', 'ts'],\n\tparameters: [\n\t\t{\n\t\t\tname: 'name'\n\t\t}\n\t],\n\tfn: testCommandFn\n} as Command;\n\nexport default testCommand;\n```\n\n---\n\n* ### Simple file system\n    * Convert from JSON\n\n---\n\n```\nconst fileSystemMap: FileSystemInput = {\n\thome: {\n\t\t'test.txt': {\n\t\t\tcontents: 'this is a file'\n\t\t},\n\t\tprojects: {\n\t\t\tterminal: {},\n\t\t\tkienan: {\n\t\t\t\t'file.txt': {\n\t\t\t\t\tcontents: 'wow, another file'\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n};\n\nexport const fileSystem = new FileSystem(fileSystemMap);\n```\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4107, 23],
+		[4114, 26],
+		[4121, 6],
+		[4128, 4],
+		[4135, 7]
+	]
 }

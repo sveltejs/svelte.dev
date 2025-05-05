@@ -6,84 +6,12 @@
 	"downloads": 4,
 	"updated": "2021-05-23T02:39:48.174Z",
 	"tags": ["tooling"],
-	"runes": false,
 	"github_stars": 2,
 	"homepage": "",
 	"typescript": false,
 	"version": "16.1.0",
 	"svelte_range": "*",
 	"last_rune_check_version": "16.1.0",
-	"downloads_history": [
-		[3574, 40],
-		[3581, 1],
-		[3588, 4],
-		[3595, 21],
-		[3602, 4],
-		[3609, 3],
-		[3616, 1],
-		[3623, 3],
-		[3630, 3],
-		[3637, 4],
-		[3644, 23],
-		[3658, 2],
-		[3665, 20],
-		[3679, 3],
-		[3686, 1],
-		[3693, 2],
-		[3700, 7],
-		[3707, 1],
-		[3714, 4],
-		[3728, 1],
-		[3735, 3],
-		[3742, 19],
-		[3749, 1],
-		[3763, 20],
-		[3770, 3],
-		[3777, 1],
-		[3784, 2],
-		[3791, 1],
-		[3798, 1],
-		[3805, 2],
-		[3812, 1],
-		[3819, 2],
-		[3833, 3],
-		[3840, 3],
-		[3854, 22],
-		[3861, 124],
-		[3868, 1],
-		[3882, 21],
-		[3889, 17],
-		[3896, 20],
-		[3903, 19],
-		[3910, 21],
-		[3917, 3],
-		[3924, 9],
-		[3931, 21],
-		[3938, 7],
-		[3945, 10],
-		[3952, 18],
-		[3959, 1],
-		[3966, 20],
-		[3973, 2],
-		[3980, 7],
-		[3987, 11],
-		[3994, 4],
-		[4008, 19],
-		[4015, 13],
-		[4022, 19],
-		[4029, 12],
-		[4036, 31],
-		[4043, 6],
-		[4050, 4],
-		[4057, 4],
-		[4064, 1],
-		[4071, 5],
-		[4085, 20],
-		[4092, 63],
-		[4099, 21],
-		[4106, 33],
-		[4113, 4]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -153,37 +81,37 @@
 			},
 			{
 				"name": "@babel/types",
-				"version": "7.27.0",
-				"size": 2583295
+				"version": "7.27.1",
+				"size": 2597469
 			},
 			{
 				"name": "@babel/helper-string-parser",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 31816
 			},
 			{
 				"name": "@babel/helper-validator-identifier",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 48330
 			},
 			{
 				"name": "@babel/parser",
-				"version": "7.27.0",
-				"size": 1924962
+				"version": "7.27.1",
+				"size": 1859876
 			},
 			{
 				"name": "@babel/helpers",
-				"version": "7.27.0",
-				"size": 866498
+				"version": "7.27.1",
+				"size": 861892
 			},
 			{
 				"name": "@babel/template",
-				"version": "7.27.0",
+				"version": "7.27.1",
 				"size": 70675
 			},
 			{
 				"name": "@babel/code-frame",
-				"version": "7.26.2",
+				"version": "7.27.1",
 				"size": 33160
 			},
 			{
@@ -197,13 +125,13 @@
 			},
 			{
 				"name": "@babel/traverse",
-				"version": "7.27.0",
-				"size": 676526
+				"version": "7.27.1",
+				"size": 689113
 			},
 			{
 				"name": "@babel/generator",
-				"version": "7.27.0",
-				"size": 559855
+				"version": "7.27.1",
+				"size": 560098
 			},
 			{
 				"name": "@jridgewell/gen-mapping",
@@ -247,43 +175,43 @@
 			},
 			{
 				"name": "@babel/helper-module-transforms",
-				"version": "7.26.0",
-				"size": 160842
+				"version": "7.27.1",
+				"size": 160852
 			},
 			{
 				"name": "@babel/helper-module-imports",
-				"version": "7.25.9",
-				"size": 63714
+				"version": "7.27.1",
+				"size": 63724
 			},
 			{
 				"name": "@babel/helper-compilation-targets",
-				"version": "7.27.0",
+				"version": "7.27.1",
 				"size": 53776
 			},
 			{
 				"name": "@babel/compat-data",
-				"version": "7.26.8",
-				"size": 66428
+				"version": "7.27.1",
+				"size": 66193
 			},
 			{
 				"name": "@babel/helper-validator-option",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 11775
 			},
 			{
 				"name": "browserslist",
-				"version": "4.24.4",
-				"size": 64926
+				"version": "4.24.5",
+				"size": 65174
 			},
 			{
 				"name": "caniuse-lite",
-				"version": "1.0.30001715",
-				"size": 2211246
+				"version": "1.0.30001716",
+				"size": 2214832
 			},
 			{
 				"name": "electron-to-chromium",
-				"version": "1.5.140",
-				"size": 162065
+				"version": "1.5.149",
+				"size": 163189
 			},
 			{
 				"name": "node-releases",
@@ -466,9 +394,9 @@
 			[6, 17],
 			[17, 18],
 			[18, 19],
+			[19, 15],
 			[19, 20],
 			[19, 21],
-			[19, 15],
 			[18, 16],
 			[18, 13],
 			[17, 13],
@@ -495,11 +423,11 @@
 			[6, 19],
 			[6, 31],
 			[6, 32],
-			[32, 22],
 			[32, 33],
-			[33, 13],
 			[33, 22],
+			[33, 13],
 			[32, 15],
+			[32, 22],
 			[6, 34],
 			[34, 35],
 			[34, 36],
@@ -549,5 +477,78 @@
 			[0, 71]
 		],
 		"circular": []
-	}
+	},
+	"readme": "[![dependencies](https://img.shields.io/david/futagoza/eslint-config-futagozaryuu.svg?path=packages/@futagoza/eslint-config-svelte)](https://david-dm.org/futagoza/eslint-config-futagozaryuu?path=packages/@futagoza/eslint-config-svelte)\r\n[![History](https://img.shields.io/badge/history-CHANGELOG.md-orange.svg)](https://github.com/futagoza/eslint-config-futagozaryuu/blob/master/CHANGELOG.md)\r\n[![License](https://img.shields.io/badge/license-mit-blue.svg)](https://opensource.org/licenses/MIT)\r\n\r\n> This package contains configuration files for ESLint v7.15+<br>\r\n\r\nThis is a configuration file for ESLint that is used to lint JavaScript source embedded within my `.svelte` files.\r\n\r\n**NOTE 1:** This configuration is only for enabling `.svelte` linting, therefore it is recommended to also use [@futagoza/eslint-config-javascript](https://www.npmjs.com/package/@futagoza/eslint-config-javascript) or something similar alongside this configuration.\r\n\r\n**NOTE 2:** To lint `.svelte` files that contain TypeScript code blocks use [@futagoza/eslint-config-svelte.ts](https://www.npmjs.com/package/@futagoza/eslint-config-svelte.ts) instead of this package.\r\n\r\n**NOTE 3:** This configuration require's Svelte 3+, but the `peerDependencies` field is set as `\"svelte\": \"*\"` so that any version of Svelte supported by [eslint-plugin-svelte3](https://github.com/sveltejs/eslint-plugin-svelte3#readme) can be used.\r\n\r\n## installation\r\n\r\n```console\r\n$ npm i --save-dev @futagoza/eslint-config-svelte\r\n```\r\n\r\n## usage\r\n\r\nPut the following into your configuration (`.eslintrc.*` file or the _\"eslintConfig\"_ field in `package.json`):\r\n\r\n```json\r\n{\r\n    \"extends\": \"@futagoza/svelte\"\r\n}\r\n```\r\n\r\n## configurations\r\n\r\nA list of usable configurations as well the configurations they use:\r\n\r\n- __`@futagoza/svelte`__ (_default_, extends _[@futagoza/dev/code][ECD]_ and _[@futagoza/globals/browser][ECG]_)\r\n- __`@futagoza/svelte/sapper`__ (extends _default_ and optionally more (see below))\r\n\r\n## sapper configuration\r\n\r\nThe _@futagoza/svelte/sapper_ configuration will optionally extend other configurations:\r\n\r\n- Having a `src/client.js` file will use _[@futagoza/dev/code][ECD]_ and _[@futagoza/globals/browser][ECG]_\r\n- Having a `src/server.js` file will use _[@futagoza/dev/node][ECD]_\r\n- Having a `src/service-worker.js` file will use _[@futagoza/dev/code][ECD]_ and _[@futagoza/globals/worker][ECG]_\r\n\r\n**NOTE:** [Sapper](https://sapper.svelte.dev/) load's other `src/**/*.js` files, but these don't have expectations like the above.\r\n\r\n[ECD]: https://www.npmjs.com/package/@futagoza/eslint-config-dev\r\n[ECG]: https://www.npmjs.com/package/@futagoza/eslint-config-globals\r\n\r\n## license\r\n\r\nCopyright © 2019+ Futago-za Ryuu<br>\r\nReleased under the MIT License, [http://opensource.org/licenses/MIT](http://opensource.org/licenses/MIT)\r\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3589, 4],
+		[3596, 21],
+		[3603, 4],
+		[3610, 3],
+		[3617, 1],
+		[3624, 3],
+		[3631, 3],
+		[3638, 4],
+		[3645, 23],
+		[3659, 2],
+		[3666, 20],
+		[3680, 3],
+		[3687, 1],
+		[3694, 2],
+		[3701, 7],
+		[3708, 1],
+		[3715, 4],
+		[3729, 1],
+		[3736, 3],
+		[3743, 19],
+		[3750, 1],
+		[3764, 20],
+		[3771, 3],
+		[3778, 1],
+		[3785, 2],
+		[3792, 1],
+		[3799, 1],
+		[3806, 2],
+		[3813, 1],
+		[3820, 2],
+		[3834, 3],
+		[3841, 3],
+		[3855, 22],
+		[3862, 124],
+		[3869, 1],
+		[3883, 21],
+		[3890, 17],
+		[3897, 20],
+		[3904, 19],
+		[3911, 21],
+		[3918, 3],
+		[3925, 9],
+		[3932, 21],
+		[3939, 7],
+		[3946, 10],
+		[3953, 18],
+		[3960, 1],
+		[3967, 20],
+		[3974, 2],
+		[3981, 7],
+		[3988, 11],
+		[3995, 4],
+		[4009, 19],
+		[4016, 13],
+		[4023, 19],
+		[4030, 12],
+		[4037, 31],
+		[4044, 6],
+		[4051, 4],
+		[4058, 4],
+		[4065, 1],
+		[4072, 5],
+		[4086, 20],
+		[4093, 63],
+		[4100, 21],
+		[4107, 33],
+		[4114, 4],
+		[4121, 14],
+		[4128, 3]
+	]
 }

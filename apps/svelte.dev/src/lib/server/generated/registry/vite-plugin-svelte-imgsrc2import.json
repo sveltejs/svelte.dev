@@ -5,30 +5,34 @@
 	"repo_url": "",
 	"authors": ["main2017"],
 	"downloads": 337,
-	"updated": "2025-04-21T07:07:12.292Z",
+	"updated": "2025-04-26T14:52:56.329Z",
 	"tags": ["tooling"],
 	"svelte_range": ">=3.0.0",
-	"runes": false,
-	"last_rune_check_version": "0.1.29",
-	"version": "0.1.29",
+	"last_rune_check_version": "0.1.32",
+	"version": "0.1.32",
 	"github_stars": 0,
-	"downloads_history": [
-		[4078, 56],
-		[4085, 70],
-		[4092, 19],
-		[4099, 3],
-		[4113, 337]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
 			{
 				"name": "vite-plugin-svelte-imgsrc2import",
-				"version": "0.1.29",
-				"size": 131040
+				"version": "0.1.32",
+				"size": 183818
 			}
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "[npm]: https://img.shields.io/npm/v/vite-plugin-svelte-imgsrc2import\n[npm-url]: https://www.npmjs.com/package/vite-plugin-svelte-imgsrc2import\n[size]: https://packagephobia.now.sh/badge?p=vite-plugin-svelte-imgsrc2import\n[size-url]: https://packagephobia.now.sh/result?p=vite-plugin-svelte-imgsrc2import\n\n[![npm][npm]][npm-url]\n[![size][size]][size-url]\n[![libera manifesto](https://img.shields.io/badge/libera-manifesto-lightgrey.svg)](https://liberamanifesto.com)\n\n# vite-plugin-svelte-imgsrc2import\n\n🍣 A vite plugin to convert Svelte img src to import. \n🚀🚀🚀 You don't have to manually import the resource \"import logo from './assets/logo.png'\" and write \"src={logo}\", You just write 'src=\"./assets/logo.png\"' as usual.\n\n## covert\nbefore convert:\n```svelte\n<img src=\"./assets/logo.png\" alt=\"logo\">\n<img src={`./assets/logo${i}.png`} alt=\"logo\">\n<img src={i <= 3 ? `./assets/logo${i}.png` : './assets/logo6.png'} alt=\"logo\">\n```\nafter convert:\n```svelte\n<script>\n  import img___assets_logo_png from './assets/img/logo.png';\n\n  const img___assets_logo__i__png = new URL(`./assets/logo${i}.png`, import.meta.url).href\n  const img_i____3______assets_logo__i__png_______assets_logo6_png = new URL(i <= 3 ? `./assets/logo${i}.png` : './assets/logo6.png', import.meta.url).href\n</script>\n<img src={img___assets_logo_png} alt=\"logo\">\n<img src={img___assets_logo__i__png} alt=\"logo\">\n<img src={img_i____3______assets_logo__i__png_______assets_logo6_png} alt=\"logo\">\n```\n\n## Install\n\nUsing npm: \n\n```console\nnpm install vite-plugin-svelte-imgsrc2import --save-dev\n```\n\n## Usage\n\nCreate a `rollup.config.js` [configuration file](https://www.rollupjs.org/guide/en/#configuration-files) and import the plugin:\n\n```typescript\nimport svelteImgSrcToImport from 'vite-plugin-svelte-imgsrc2import';\n\nexport default {\n  ...\n  plugins: [\n    svelteImgSrcToImport(),\n    svelte(),\n  ]\n};\n```\n\nThen call `rollup` either via the [CLI](https://www.rollupjs.org/guide/en/#command-line-reference) or the [API](https://www.rollupjs.org/guide/en/#javascript-api).\n\n## Options\n\n```typescript\nimport svelteImgSrcToImport from 'vite-plugin-svelte-imgsrc2import';\n\nexport default {\n  ...\n  plugins: [\n    svelteImgSrcToImport({\n      include: '**/*.svelte', // Process all .svelte files\n      exclude: '**/ignore/*.svelte', // Exclude .svelte files in the ignore directory\n      prefix: 'customPrefix_', // Custom variable name prefix\n    }),\n    svelte(),\n  ]\n};\n```\n\n<!-- ## Meta\n\n[CONTRIBUTING](/.github/CONTRIBUTING.md)\n\n[LICENSE (MIT)](/LICENSE) -->\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4079, 56],
+		[4086, 70],
+		[4093, 19],
+		[4100, 3],
+		[4114, 337],
+		[4121, 375],
+		[4128, 361],
+		[4135, 24]
+	]
 }

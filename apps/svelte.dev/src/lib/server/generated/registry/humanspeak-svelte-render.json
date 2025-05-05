@@ -7,27 +7,12 @@
 	"downloads": 1061,
 	"updated": "2025-03-08T00:46:04.726Z",
 	"tags": ["miscellaneous"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "5.1.1",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.19.0",
 	"last_rune_check_version": "5.1.1",
-	"downloads_history": [
-		[4036, 71],
-		[4043, 120],
-		[4050, 74],
-		[4057, 60],
-		[4064, 56],
-		[4071, 275],
-		[4078, 486],
-		[4085, 530],
-		[4092, 244],
-		[4099, 790],
-		[4106, 636],
-		[4113, 1061]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -44,5 +29,23 @@
 		],
 		"dependencies": [[0, 1]],
 		"circular": []
-	}
+	},
+	"readme": "# svelte-render\n\n[![NPM version](https://img.shields.io/npm/v/@humanspeak/svelte-render.svg)](https://www.npmjs.com/package/@humanspeak/svelte-render)\n[![Build Status](https://github.com/humanspeak/svelte-render/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/humanspeak/svelte-render/actions/workflows/npm-publish.yml)\n[![Coverage Status](https://coveralls.io/repos/github/humanspeak/svelte-render/badge.svg?branch=main)](https://coveralls.io/github/humanspeak/svelte-render?branch=main)\n[![License](https://img.shields.io/npm/l/@humanspeak/svelte-render.svg)](https://github.com/humanspeak/svelte-render/blob/main/LICENSE)\n[![Downloads](https://img.shields.io/npm/dm/@humanspeak/svelte-render.svg)](https://www.npmjs.com/package/@humanspeak/svelte-render)\n[![CodeQL](https://github.com/humanspeak/svelte-render/actions/workflows/codeql.yml/badge.svg)](https://github.com/humanspeak/svelte-render/actions/workflows/codeql.yml)\n[![Install size](https://packagephobia.com/badge?p=@humanspeak/svelte-render)](https://packagephobia.com/result?p=@humanspeak/svelte-render)\n[![Code Style: Trunk](https://img.shields.io/badge/code%20style-trunk-blue.svg)](https://trunk.io)\n[![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-%230074c1.svg)](http://www.typescriptlang.org/)\n[![Types](https://img.shields.io/npm/types/@humanspeak/svelte-render.svg)](https://www.npmjs.com/package/@humanspeak/svelte-render)\n[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/humanspeak/svelte-render/graphs/commit-activity)\n\nManage complex Svelte behaviors outside of templates with full type safety.\n\n```svelte\n<script>\n    import { Render, createRender } from '@humanspeak/svelte-subscribe'\n    import Avatar from './Avatar.svelte'\n    // ...\n    const avatar = createRender(Avatar, { name: 'Ada Lovelace' })\n        .on('click', handleClick)\n        .on('launch', handleLaunch)\n</script>\n\n<Render of={avatar} />\n```\n\n## Installation\n\n```bash\n\nnpm i -D @humanspeak/svelte-render\n\n```\n\n## API\n\nSvelte Render was primarily built to support complex rendering definitions for [Svelte Headless Table](https://github.com/humanspeak/svelte-headless-table).\n\n### `<Render />`\n\n`<Render />` handles props and automatically registers the event handlers defined with `.on` as well as slot data defined with `.slot`.\n\n`of` accepts:\n\n- primitive data such as `number` and `string`\n- `Writable<number>` and `Writable<string>` for dynamic primitive data\n- `ComponentRenderConfig` returned by `createRender`\n\n```svelte\n<script>\n    const avatar = createRender(Avatar, { name: 'Ada Lovelace' })\n</script>\n\n<Render of={avatar} />\n```\n\nbecomes\n\n```svelte\n<Avatar name=\"Ada Lovelace\" />\n```\n\n### `createRender: (component, props)`\n\n`createRender` accepts a Svelte component and its props as arguments.\n\n`props` can be omitted if the component does not receive props but must be included otherwise.\n\n```ts\nconst icon = createRender(TickIcon) // ✅\nconst avatar = createRender(Avatar) // ❌ Type error.\nconst avatar = createRender(Avatar, { name: 'Ada Lovelace' }) // ✅\n```\n\nIf you need prop reactivity, `props` must be a [Svelte store](https://svelte.dev/tutorial/writable-stores).\n\n```ts\nconst avatarProps = writable({ name: 'Ada Lovelace' })\nconst avatar = createRender(Avatar, avatarProps)\n```\n\n### `.on(event, handler)`\n\n**deprecated** Note: this will be removed in a future version. It still works by concating the event to an on for instance `onclick` will be passed to the renderer.\n\nSvelte Render supports the Svelte event system by chaining `.on` calls on `createRender()`. Multiple event handlers can be registered for the same event type like the Svelte `on:` directive.\n\n```ts\nconst button = createRender(Button)\n    .on('click', handleClick)\n    .on('click', (ev) => console.log(ev))\n```\n\n`<Render of={button} />` becomes:\n\n```svelte\n<Button onclick={handleClick} onclick={(ev) => console.log(ev)} />\n```\n\nHowever, note that the callback handler passed into `.on(event, handler)` is not dynamic and will only capture references to variables as they were when the render configuration is created.\n\nIf you need a handler to access dynamic data, use a dynamic system like Svelte Stores.\n\n```ts\nconst counter = writable(0)\nconst button = createRender(Button).on('click', (ev) => counter.update((c) => c + 1))\n```\n\n### `.slot(...config)`\n\nSvelte Render also supports Svelte's default slot system.\n\n`.slot` receives any number of arguments with the same type as `of`, including `ComponentRenderConfig` returned by `createRender`, primitive data, and `Writable`. This makes it useful for rendering wrapper components such as `<Button />` and `<Label />`.\n\n_Due to technical limitations with Svelte 5, it is not possible to assign render configurations to named slots._\n\n```ts\nconst button = createRender(Button).slot(createRender(Icon, { name: 'user' }), 'Log in')\n```\n\n`<Render of={button} />` becomes:\n\n```svelte\n<Button>\n    <Icon name=\"user\" />\n    Log in\n</Button>\n```\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4037, 71],
+		[4044, 120],
+		[4051, 74],
+		[4058, 60],
+		[4065, 56],
+		[4072, 275],
+		[4079, 486],
+		[4086, 530],
+		[4093, 244],
+		[4100, 790],
+		[4107, 636],
+		[4114, 1061],
+		[4121, 693],
+		[4128, 1215]
+	]
 }

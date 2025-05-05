@@ -7,17 +7,11 @@
 	"downloads": 26,
 	"updated": "2025-03-26T01:45:43.879Z",
 	"tags": ["integration"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": false,
 	"version": "1.0.5",
 	"svelte_range": "^5.25.3",
 	"last_rune_check_version": "1.0.5",
-	"downloads_history": [
-		[4099, 385],
-		[4106, 23],
-		[4113, 26]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -185,5 +179,14 @@
 			[0, 25]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# @hotelchatai/svelte-chatbox\r\n\r\nA plugin to simplify embedding the chatbox iframe within svelte websites.\r\n\r\n## Example\r\n> [!IMPORTANT]  \r\n> Place the `Bot` component in the root `+layout.svelte`, at the bottom of the file (so that `Bot` loads last).\r\n```js\r\nimport Bot from '@hotelchatai/svelte-chatbox';\r\n```\r\n```svelte\r\n<Bot\r\n  src=\"https://v2.hotelchatai.com\"\r\n  bot=\"website\"\r\n  theme=\"forest\"\r\n  enableTickets={false}\r\n  displayName=\"Amei (阿美)\"\r\n/>\r\n```\r\n\r\n## Parameters\r\n- `src` - The bot root endpoint (almost always `\"https://v2.hotelchatai.com\"`)\r\n- `bot` - Bot codename corresponding to the hotel. For example, \"roumei\" for Roumei Boutique Hotel. \"website\" corresponds to our website's chatbot. Ask us for hotel codenames.\r\n- `theme` - Any of [Daisy UI themes](https://daisyui.com/docs/themes/).\r\n  - Recommended dark themes: \"dracula\", \"forest\", \"business\", \"night\", \"sunset\"\r\n  - Recommended light themes: \"nord\", \"autumn\"\r\n- `enableTickets` - Enables users to open tickets that hotel workers can check. Recommend leaving off to not confuse users for now.\r\n- `displayName` - Robot's visible chatbox name\r\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4100, 385],
+		[4107, 23],
+		[4114, 26],
+		[4121, 6],
+		[4128, 14]
+	]
 }

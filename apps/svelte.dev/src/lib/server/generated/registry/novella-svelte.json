@@ -7,49 +7,12 @@
 	"downloads": 5,
 	"updated": "2024-07-02T20:21:43.271Z",
 	"tags": ["content"],
-	"runes": false,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.2.0",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.4",
 	"last_rune_check_version": "0.2.0",
-	"downloads_history": [
-		[3791, 47],
-		[3798, 160],
-		[3805, 35],
-		[3812, 2],
-		[3819, 5],
-		[3826, 3],
-		[3833, 54],
-		[3840, 11],
-		[3847, 1],
-		[3854, 9],
-		[3861, 4],
-		[3868, 6],
-		[3882, 1],
-		[3889, 5],
-		[3903, 2],
-		[3917, 4],
-		[3924, 6],
-		[3931, 17],
-		[3952, 20],
-		[3959, 1],
-		[3966, 1],
-		[3980, 2],
-		[3987, 4],
-		[4015, 5],
-		[4022, 4],
-		[4029, 4],
-		[4036, 7],
-		[4043, 7],
-		[4050, 4],
-		[4064, 1],
-		[4092, 1],
-		[4099, 4],
-		[4106, 9],
-		[4113, 5]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -100,13 +63,13 @@
 			},
 			{
 				"name": "@floating-ui/dom",
-				"version": "1.6.13",
-				"size": 165945
+				"version": "1.7.0",
+				"size": 166707
 			},
 			{
 				"name": "@floating-ui/core",
-				"version": "1.6.9",
-				"size": 212585
+				"version": "1.7.0",
+				"size": 214929
 			},
 			{
 				"name": "@floating-ui/utils",
@@ -115,12 +78,12 @@
 			},
 			{
 				"name": "@tiptap/core",
-				"version": "2.11.7",
-				"size": 2546013
+				"version": "2.11.9",
+				"size": 2545985
 			},
 			{
 				"name": "@tiptap/extension-bubble-menu",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 98385
 			},
 			{
@@ -135,27 +98,27 @@
 			},
 			{
 				"name": "@tiptap/extension-color",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 20420
 			},
 			{
 				"name": "@tiptap/extension-highlight",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 31889
 			},
 			{
 				"name": "@tiptap/extension-horizontal-rule",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 35676
 			},
 			{
 				"name": "@tiptap/extension-image",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 25935
 			},
 			{
 				"name": "@tiptap/extension-link",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 180532
 			},
 			{
@@ -170,33 +133,33 @@
 			},
 			{
 				"name": "@tiptap/extension-task-item",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 59158
 			},
 			{
 				"name": "@tiptap/extension-task-list",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 17481
 			},
 			{
 				"name": "@tiptap/extension-text-style",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 34779
 			},
 			{
 				"name": "@tiptap/extension-underline",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 20478
 			},
 			{
 				"name": "@tiptap/pm",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 24466
 			},
 			{
 				"name": "prosemirror-menu",
-				"version": "1.2.4",
-				"size": 111446
+				"version": "1.2.5",
+				"size": 113350
 			},
 			{
 				"name": "crelt",
@@ -210,8 +173,8 @@
 			},
 			{
 				"name": "prosemirror-model",
-				"version": "1.25.0",
-				"size": 523551
+				"version": "1.25.1",
+				"size": 524300
 			},
 			{
 				"name": "orderedmap",
@@ -220,13 +183,13 @@
 			},
 			{
 				"name": "prosemirror-transform",
-				"version": "1.10.3",
-				"size": 316103
+				"version": "1.10.4",
+				"size": 317199
 			},
 			{
 				"name": "prosemirror-view",
-				"version": "1.39.1",
-				"size": 872388,
+				"version": "1.39.2",
+				"size": 909536,
 				"isCircular": true,
 				"circularTarget": 34
 			},
@@ -258,8 +221,8 @@
 			},
 			{
 				"name": "prosemirror-keymap",
-				"version": "1.2.2",
-				"size": 25670
+				"version": "1.2.3",
+				"size": 26164
 			},
 			{
 				"name": "w3c-keyname",
@@ -338,8 +301,8 @@
 			},
 			{
 				"name": "prosemirror-dropcursor",
-				"version": "1.8.1",
-				"size": 30848
+				"version": "1.8.2",
+				"size": 34065
 			},
 			{
 				"name": "prosemirror-inputrules",
@@ -373,97 +336,97 @@
 			},
 			{
 				"name": "@tiptap/starter-kit",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 58648
 			},
 			{
 				"name": "@tiptap/extension-bold",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 31774
 			},
 			{
 				"name": "@tiptap/extension-code",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 25242
 			},
 			{
 				"name": "@tiptap/extension-text",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 5838
 			},
 			{
 				"name": "@tiptap/extension-italic",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 31914
 			},
 			{
 				"name": "@tiptap/extension-strike",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 25981
 			},
 			{
 				"name": "@tiptap/extension-heading",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 31013
 			},
 			{
 				"name": "@tiptap/extension-history",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 20863
 			},
 			{
 				"name": "@tiptap/extension-document",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 6443
 			},
 			{
 				"name": "@tiptap/extension-gapcursor",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 14772
 			},
 			{
 				"name": "@tiptap/extension-list-item",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 15835
 			},
 			{
 				"name": "@tiptap/extension-paragraph",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 14727
 			},
 			{
 				"name": "@tiptap/extension-blockquote",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 20603
 			},
 			{
 				"name": "@tiptap/extension-code-block",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 84197
 			},
 			{
 				"name": "@tiptap/extension-dropcursor",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 11938
 			},
 			{
 				"name": "@tiptap/extension-hard-break",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 27449
 			},
 			{
 				"name": "@tiptap/extension-bullet-list",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 29385
 			},
 			{
 				"name": "@tiptap/extension-ordered-list",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 39002
 			},
 			{
 				"name": "@tiptap/suggestion",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 130359
 			},
 			{
@@ -986,5 +949,45 @@
 			[34, 30],
 			[30, 34]
 		]
-	}
+	},
+	"readme": "# Novella Svelte\r\n\r\nHeavily biased Notion-style WYSIWYG editor without the bells and whistles. I'm maintaining this for my upcoming blogging website called [BrainDead](https://github.com/BrainDeadSocial).\r\n\r\nBased on [Novel](https://github.com/steven-tey/novel)\r\n\r\nForked from [Novel-Svelte](https://github.com/TGlide/novel-svelte)\r\n\r\nMade for [BrainDead](https://github.com/BrainDeadSocial)\r\n\r\n## Techs and Works\r\n\r\n- **Svelte**\r\n- **Tiptap**\r\n- **Tailwind CSS**\r\n\r\n# Usage\r\n\r\n1. Set up your Svelte project.\r\n\r\n2. Install novella-svelte\r\n\r\n```bash\r\nnpm i novella-svelte\r\n```\r\n\r\n3. Import and Use\r\n\r\n```svelte\r\n<script>\r\n\timport { Editor } from 'novella-svelte';\r\n\r\n\tlet saveStatus = 'Saved';\r\n\tlet editor;\r\n</script>\r\n\r\n<main>\r\n\t<Editor\r\n\t\tbind:editor\r\n\t\tonUpdate={() => {\r\n\t\t\tsaveStatus = 'Unsaved';\r\n\t\t}}\r\n\t\tonDebouncedUpdate={() => {\r\n\t\t\tsaveStatus = 'Saving...';\r\n\t\t\t// Saving code go here\r\n\t\t\tsaveStatus = 'Saved';\r\n\t\t}}\r\n\t>\r\n\t\t<div>\r\n\t\t\t{saveStatus}\r\n\t\t</div>\r\n\t</Editor>\r\n</main>\r\n```\r\n\r\n# Development Installation\r\n\r\n1. Install Node.js and npm. Download them [here](https://nodejs.org/en/download/).\r\n\r\n2. Clone the repo\r\n\r\n```bash\r\ngit clone https://github.com/TGlide/novel-svelte.git\r\ncd novel-svelte\r\n```\r\n\r\n3. Install npm packages:\r\n\r\n```bash\r\nnpm install\r\n```\r\n\r\n4. Start vite server:\r\n\r\n```bash\r\nnpm run dev\r\n```\r\n\r\nGo to `http://localhost:5173/` to view the preview.\r\n",
+	"legacy_svelte": true,
+	"downloads_history": [
+		[3792, 47],
+		[3799, 160],
+		[3806, 35],
+		[3813, 2],
+		[3820, 5],
+		[3827, 3],
+		[3834, 54],
+		[3841, 11],
+		[3848, 1],
+		[3855, 9],
+		[3862, 4],
+		[3869, 6],
+		[3883, 1],
+		[3890, 5],
+		[3904, 2],
+		[3918, 4],
+		[3925, 6],
+		[3932, 17],
+		[3953, 20],
+		[3960, 1],
+		[3967, 1],
+		[3981, 2],
+		[3988, 4],
+		[4016, 5],
+		[4023, 4],
+		[4030, 4],
+		[4037, 7],
+		[4044, 7],
+		[4051, 4],
+		[4065, 1],
+		[4093, 1],
+		[4100, 4],
+		[4107, 9],
+		[4114, 5],
+		[4121, 6],
+		[4128, 8]
+	]
 }

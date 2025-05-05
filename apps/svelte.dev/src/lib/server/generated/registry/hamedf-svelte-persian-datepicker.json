@@ -7,22 +7,12 @@
 	"downloads": 33,
 	"updated": "2025-03-02T14:53:12.359Z",
 	"tags": ["ui"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.0.20",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.17.3",
 	"last_rune_check_version": "0.0.20",
-	"downloads_history": [
-		[4071, 1307],
-		[4078, 98],
-		[4085, 32],
-		[4092, 30],
-		[4099, 2],
-		[4106, 26],
-		[4113, 33]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -39,5 +29,18 @@
 		],
 		"dependencies": [[0, 1]],
 		"circular": []
-	}
+	},
+	"readme": "# Persian DatePicker Component (Svelte5)\n\nA highly customizable date picker component built with Svelte 5, supporting Persian (Jalali), Gregorian, and Arabic calendars. This component is inspired by and converted from [Alireza's Vue3 Persian DatePicker](https://github.com/alireza-ab/vue3-persian-datepicker).\n\n## Features\n\n- **Multiple Types**: Use the date, time, or datetime modes.\n- **Localization**: Supports multiple locales (e.g. `fa`, `en`, `ar`).\n- **Customization**: Customize display formats, input formats, colors, and styles.\n- **Shortcuts**: Predefined shortcuts for quick selections (e.g. yesterday, tomorrow, this week).\n- **Clearable Input**: Option to clear the selected date(s).\n\n## Documentation\n\nthis project obligate ALireza-ab Datepicker attributes as may find in [Documentations from Alireza-ab](https://alireza-ab.ir/datepicker)\n\n## Project Structure\n\n- **Component**: The main datepicker is implemented in [src/lib/DatePicker.svelte](src/lib/DatePicker.svelte).\n- **Core Logic**: Helper functions and shortcut definitions can be found in [src/lib/modules/core.ts](src/lib/modules/core.ts).\n- **Testing**: Component tests are written with Cypress and are located in [cypress/component/datepicker.cy.ts](cypress/component/datepicker.cy.ts).\n- **Styles**: The component styling is managed in the SASS/CSS files under [src/lib/assets/sass/app.scss](src/lib/assets/sass/app.scss) and [src/lib/assets/sass/app.css](src/lib/assets/sass/app.css).\n\n## Installation\n\nEnsure that you have [pnpm](https://pnpm.io/) installed. Then run:\n\n```sh\npnpm i @hamedf/svelte-persian-datepicker\n```\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4072, 1307],
+		[4079, 98],
+		[4086, 32],
+		[4093, 30],
+		[4100, 2],
+		[4107, 26],
+		[4114, 33],
+		[4121, 15],
+		[4128, 8]
+	]
 }

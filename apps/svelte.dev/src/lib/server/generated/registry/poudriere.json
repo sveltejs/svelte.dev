@@ -7,20 +7,12 @@
 	"downloads": 7,
 	"updated": "2025-03-12T15:40:22.902Z",
 	"tags": ["tooling"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.0.2",
 	"svelte_range": "^5.23.0",
 	"kit_range": "^2.19.0",
 	"last_rune_check_version": "0.0.2",
-	"downloads_history": [
-		[4085, 126],
-		[4092, 6],
-		[4099, 5],
-		[4106, 1],
-		[4113, 7]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -57,5 +49,16 @@
 			[0, 4]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Poudriere Monitoring App\n\nPoudriere is Port/Package build and test system for FreeBSD.\nPoudriere Monitoring App provides useful information for Poudriere,\nincluding past builds, build status, and jail status.\n\nThis project follows BSD-2-clause license (or \"FreeBSD License\").\nThe full license text can be found in [`LICENSE.md`](/LICENSE.md) file.\n\n## Installation\n\nWe use [Bun](https://bun.sh) due to its fast build time and install time.\nHowever, using other package managers such as [npm](https://docs.npmjs.com/cli/v11),\n[yarn](https://yarnpkg.com), and [pnpm](https://pnpm.io) should also work.\n[Deno](https://deno.com) is not tested yet, and although it might work, we\ndon't have any plan to officially support it.\n\nTo install:\n```bash\n$ bun install\n# or\n$ npm install\n# or\n$ yarn install\n# or\n$ pnpm install\n```\n\n## Developing\n\nThis project uses following technologies:\n - [SvelteKit](https://svelte.dev) for routing, building, etc.\n - [Svelte](https://svelte.dev) for components\n - [Tailwind CSS](https://tailwindcss.com) for CSS styling\n - [daisyUI](https://daisyui.com) for user interface\n - [TypeScript](https://www.typescriptlang.org) for type-safe programming\n - [Storybook](https://storybook.js.org) for UI component preview\n - [Vitest](https://vitest.dev) and [Playwright](https://playwright.dev) for testing\n - [EsLint](https://eslint.org) and [Prettier](https://prettier.io) for linting and formatting\n\nCurrently, the project is a single-page application (SPA), we are\nconsidering switching to server-side rendering (SSR).\n\nTo run a development server:\n```bash\nbun run dev\n\n# or start the server and open the app in a new browser tab\nbun run dev -- --open\n```\n\n## Building\n\nTo create a production version of your app:\n\n```bash\nbun run build\n```\n\nYou can preview the production build with `bun run preview`.",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4086, 126],
+		[4093, 6],
+		[4100, 5],
+		[4107, 1],
+		[4114, 7],
+		[4121, 5],
+		[4128, 1]
+	]
 }

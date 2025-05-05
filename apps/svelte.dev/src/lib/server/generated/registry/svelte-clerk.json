@@ -5,74 +5,81 @@
 	"authors": ["wobsoriano"],
 	"homepage": "https://github.com/wobsoriano/svelte-clerk#readme",
 	"downloads": 1002,
-	"updated": "2025-04-19T01:24:03.114Z",
+	"updated": "2025-04-29T21:05:48.412Z",
 	"tags": ["auth"],
-	"runes": true,
-	"github_stars": 112,
+	"github_stars": 117,
 	"typescript": true,
-	"version": "0.11.3",
+	"version": "0.11.5",
 	"svelte_range": "^5.11.0",
 	"kit_range": "^2.20.0",
-	"last_rune_check_version": "0.11.3",
-	"downloads_history": [
-		[3840, 279],
-		[3847, 652],
-		[3854, 170],
-		[3861, 23],
-		[3868, 444],
-		[3875, 115],
-		[3882, 25],
-		[3889, 117],
-		[3896, 129],
-		[3903, 286],
-		[3910, 255],
-		[3917, 92],
-		[3924, 134],
-		[3931, 221],
-		[3938, 390],
-		[3945, 234],
-		[3952, 527],
-		[3959, 375],
-		[3966, 542],
-		[3973, 486],
-		[3980, 353],
-		[3987, 674],
-		[3994, 807],
-		[4001, 422],
-		[4008, 232],
-		[4015, 202],
-		[4022, 323],
-		[4029, 479],
-		[4036, 649],
-		[4043, 749],
-		[4050, 657],
-		[4057, 569],
-		[4064, 532],
-		[4071, 438],
-		[4078, 629],
-		[4085, 693],
-		[4092, 490],
-		[4099, 1086],
-		[4106, 1037],
-		[4113, 1002]
-	],
+	"last_rune_check_version": "0.11.5",
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
 			{
 				"name": "svelte-clerk",
-				"version": "0.11.3",
-				"size": 59271
+				"version": "0.11.5",
+				"size": 59412
 			},
 			{
 				"name": "@clerk/backend",
-				"version": "1.29.2",
-				"size": 1743718
+				"version": "1.31.2",
+				"size": 1772830
+			},
+			{
+				"name": "tslib",
+				"version": "2.8.1",
+				"size": 90359
 			},
 			{
 				"name": "cookie",
 				"version": "1.0.2",
 				"size": 46521
+			},
+			{
+				"name": "@clerk/types",
+				"version": "4.56.3",
+				"size": 594894
+			},
+			{
+				"name": "csstype",
+				"version": "3.1.3",
+				"size": 1246074
+			},
+			{
+				"name": "@clerk/shared",
+				"version": "3.7.8",
+				"size": 1473300
+			},
+			{
+				"name": "swr",
+				"version": "2.3.3",
+				"size": 264138
+			},
+			{
+				"name": "dequal",
+				"version": "2.0.3",
+				"size": 14229
+			},
+			{
+				"name": "use-sync-external-store",
+				"version": "1.5.0",
+				"size": 28186
+			},
+			{
+				"name": "std-env",
+				"version": "3.9.0",
+				"size": 26086
+			},
+			{
+				"name": "js-cookie",
+				"version": "3.0.5",
+				"size": 26158
+			},
+			{
+				"name": "glob-to-regexp",
+				"version": "0.4.1",
+				"size": 18100
 			},
 			{
 				"name": "snakecase-keys",
@@ -105,59 +112,9 @@
 				"size": 17661
 			},
 			{
-				"name": "tslib",
-				"version": "2.8.1",
-				"size": 90359
-			},
-			{
 				"name": "type-fest",
-				"version": "4.40.0",
-				"size": 438455
-			},
-			{
-				"name": "@clerk/shared",
-				"version": "3.7.3",
-				"size": 1448539
-			},
-			{
-				"name": "dequal",
-				"version": "2.0.3",
-				"size": 14229
-			},
-			{
-				"name": "glob-to-regexp",
-				"version": "0.4.1",
-				"size": 18100
-			},
-			{
-				"name": "js-cookie",
-				"version": "3.0.5",
-				"size": 26158
-			},
-			{
-				"name": "std-env",
-				"version": "3.9.0",
-				"size": 26086
-			},
-			{
-				"name": "swr",
-				"version": "2.3.3",
-				"size": 264138
-			},
-			{
-				"name": "use-sync-external-store",
-				"version": "1.5.0",
-				"size": 28186
-			},
-			{
-				"name": "@clerk/types",
-				"version": "4.55.0",
-				"size": 593360
-			},
-			{
-				"name": "csstype",
-				"version": "3.1.3",
-				"size": 1246074
+				"version": "4.40.1",
+				"size": 438790
 			},
 			{
 				"name": "set-cookie-parser",
@@ -169,32 +126,78 @@
 			[0, 1],
 			[1, 2],
 			[1, 3],
-			[3, 4],
-			[3, 5],
-			[5, 6],
+			[1, 4],
+			[4, 5],
+			[1, 6],
 			[6, 7],
 			[7, 8],
-			[8, 9],
 			[7, 9],
-			[6, 9],
-			[5, 9],
-			[3, 10],
-			[1, 9],
-			[1, 11],
-			[11, 12],
-			[11, 13],
-			[11, 14],
-			[11, 15],
-			[11, 16],
-			[16, 12],
+			[6, 8],
+			[6, 10],
+			[6, 11],
+			[6, 4],
+			[6, 12],
+			[1, 13],
+			[13, 14],
+			[13, 15],
+			[15, 16],
 			[16, 17],
-			[11, 18],
-			[18, 19],
-			[1, 18],
-			[0, 11],
-			[0, 18],
+			[17, 18],
+			[18, 2],
+			[17, 2],
+			[16, 2],
+			[15, 2],
+			[13, 19],
+			[0, 6],
+			[0, 4],
 			[0, 20]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Svelte Clerk\n\nSvelte Clerk is the easiest way to add authentication and user management to your Svelte and SvelteKit applications. Add sign up, sign in, and profile management to your application in minutes.\n\nThis package is unofficial and not affiliated with Clerk. If you have issues or suggestions, please open an issue in this repository.\n\n## Documentation\n\nFor detailed setup and usage instructions, please visit the [documentation](https://svelte-clerk.netlify.app).\n\n## Acknowledgements\n\nSpecial thanks to [Mark Jaquith](https://github.com/markjaquith) for creating [clerk-sveltekit](https://github.com/markjaquith/clerk-sveltekit), which paved the way for this Svelte 5 implementation. His work provided valuable insights and foundation for building this SDK.\n\n## License\n\nMIT\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3841, 279],
+		[3848, 652],
+		[3855, 170],
+		[3862, 23],
+		[3869, 444],
+		[3876, 115],
+		[3883, 25],
+		[3890, 117],
+		[3897, 129],
+		[3904, 286],
+		[3911, 255],
+		[3918, 92],
+		[3925, 134],
+		[3932, 221],
+		[3939, 390],
+		[3946, 234],
+		[3953, 527],
+		[3960, 375],
+		[3967, 542],
+		[3974, 486],
+		[3981, 353],
+		[3988, 674],
+		[3995, 807],
+		[4002, 422],
+		[4009, 232],
+		[4016, 202],
+		[4023, 323],
+		[4030, 479],
+		[4037, 649],
+		[4044, 749],
+		[4051, 657],
+		[4058, 569],
+		[4065, 532],
+		[4072, 438],
+		[4079, 629],
+		[4086, 693],
+		[4093, 490],
+		[4100, 1086],
+		[4107, 1037],
+		[4114, 1002],
+		[4121, 1022],
+		[4128, 1003]
+	]
 }

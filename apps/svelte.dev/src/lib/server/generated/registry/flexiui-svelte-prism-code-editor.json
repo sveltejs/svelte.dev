@@ -6,29 +6,11 @@
 	"downloads": 13,
 	"updated": "2025-03-13T02:15:32.644Z",
 	"tags": ["ui"],
-	"runes": false,
 	"typescript": true,
 	"version": "0.0.13",
 	"svelte_range": "^5.19.9",
 	"last_rune_check_version": "0.0.13",
 	"github_stars": 0,
-	"downloads_history": [
-		[4015, 260],
-		[4022, 439],
-		[4029, 33],
-		[4036, 44],
-		[4043, 11],
-		[4050, 15],
-		[4057, 120],
-		[4064, 9],
-		[4071, 5],
-		[4078, 7],
-		[4085, 93],
-		[4092, 28],
-		[4099, 6],
-		[4106, 15],
-		[4113, 13]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -45,5 +27,26 @@
 		],
 		"dependencies": [[0, 1]],
 		"circular": []
-	}
+	},
+	"readme": "# `@flexiui/svelte-prism-code-editor`\n\nA lightweight and flexible Svelte component that wraps Prism Code Editor, providing syntax highlighting with ease of integration\n\n## Instalación\n\nPara instalar el componente `PrismCodeEditor` en tu proyecto de Svelte, puedes usar npm o yarn.\n\nCon npm:\n\n```bash\nnpm install @flexiui/svelte-prism-code-editor\n```\n\nCon yarn:\n\n```bash\nyarn add @flexiui/svelte-prism-code-editor\n```\n\n## Uso\n\nUna vez instalado, puedes usar el componente `TagsInput` en tu aplicación de Svelte.\n\n```svelte\n<script lang=\"ts\">\n  import { PrismCodeEditor } from '@flexiui/svelte-prism-code-editor';\n  \n  let value = null; // If value is null provides a sample code\n  \n  function onUpdate(e){\n    const { eventType, code } = e.detail;\n\n    if(eventType === 'update'){\n        value = code;\n    }\n  }\n</script>\n\n<PrismCodeEditor \non:update={e => onUpdate(e)}\nlanguage=\"css\" \nid=\"example-code-editor\" \n{value}\nclassName='no-drag'\n/>\n```\n\n### Propiedades del Componente\n\n| Propiedad | Tipo | Descripción |\n| --- | --- | --- |\n| `language` | `string` | El lenguaje de sintaxis del editor de código. | \n| `id` | `string` | El identificador del editor de código.\n| `value` | `string` | El valor del editor de código.\n| `className` | `string` | Clase de CSS personalizada del editor de código.\n\n### Eventos\n\n| Evento | Tipo | Descripción |\n| --- | --- | --- |\n| `update` | `{ eventType: 'update', code: string }` | Se emite cuando el código se actualiza.\n\n### Personalización\n\nPuedes personalizar aún más el comportamiento del componente mediante el uso de estilos CSS. Los estilos predeterminados pueden ser sobreescritos fácilmente mediante clases CSS.\n\n#### Ejemplo de estilos\n\n```css\n/* Puedes personalizar los estilos en tu propio archivo CSS */\n.tag-input {\n  background-color: #f0f0f0;\n  border-radius: 5px;\n  padding: 10px;\n}\n\n.tag-input .tag {\n  display: inline-block;\n  margin: 5px;\n  padding: 5px;\n  background-color: #007bff;\n  color: white;\n  border-radius: 3px;\n}\n```\n\n### Referencias/Creditos\n - [Prism Code Editor](https://github.com/FIameCaster/prism-code-editor)\n\n### Contribuciones\n\nSi deseas contribuir a este proyecto, puedes hacerlo mediante un **Pull Request** en el repositorio de GitHub. Por favor, sigue las mejores prácticas y asegúrate de que tu código pase las pruebas antes de hacer un PR.\n\n### Licencia\n\nEste proyecto está bajo la licencia **MIT**.",
+	"legacy_svelte": true,
+	"downloads_history": [
+		[4016, 260],
+		[4023, 439],
+		[4030, 33],
+		[4037, 44],
+		[4044, 11],
+		[4051, 15],
+		[4058, 120],
+		[4065, 9],
+		[4072, 5],
+		[4079, 7],
+		[4086, 93],
+		[4093, 28],
+		[4100, 6],
+		[4107, 15],
+		[4114, 13],
+		[4121, 13],
+		[4128, 49]
+	]
 }

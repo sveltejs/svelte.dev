@@ -7,69 +7,10 @@
 	"downloads": 8,
 	"updated": "2022-09-11T22:19:25.259Z",
 	"tags": ["tooling"],
-	"runes": false,
 	"typescript": true,
 	"version": "0.1.2",
 	"svelte_range": "3.50.1",
 	"last_rune_check_version": "0.1.2",
-	"downloads_history": [
-		[3574, 12],
-		[3595, 13],
-		[3616, 3],
-		[3623, 1],
-		[3644, 1],
-		[3651, 1],
-		[3665, 6],
-		[3672, 2],
-		[3693, 1],
-		[3721, 2],
-		[3735, 1],
-		[3742, 1],
-		[3749, 5],
-		[3756, 2],
-		[3770, 8],
-		[3777, 4],
-		[3791, 2],
-		[3798, 3],
-		[3805, 2],
-		[3819, 2],
-		[3833, 1],
-		[3840, 28],
-		[3847, 2],
-		[3861, 4],
-		[3875, 3],
-		[3882, 2],
-		[3889, 11],
-		[3896, 10],
-		[3903, 1],
-		[3910, 2],
-		[3917, 2],
-		[3924, 2],
-		[3931, 1],
-		[3938, 2],
-		[3945, 2],
-		[3952, 1],
-		[3959, 1],
-		[3966, 1],
-		[3973, 2],
-		[3980, 4],
-		[3987, 10],
-		[3994, 7],
-		[4001, 15],
-		[4008, 2],
-		[4015, 6],
-		[4029, 6],
-		[4036, 6],
-		[4043, 14],
-		[4050, 8],
-		[4057, 6],
-		[4064, 1],
-		[4071, 4],
-		[4092, 7],
-		[4099, 14],
-		[4106, 4],
-		[4113, 8]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -80,8 +21,8 @@
 			},
 			{
 				"name": "@iconify/json",
-				"version": "2.2.330",
-				"size": 379801322
+				"version": "2.2.334",
+				"size": 380123175
 			},
 			{
 				"name": "@iconify/types",
@@ -909,72 +850,13 @@
 			},
 			{
 				"name": "@babel/core",
-				"version": "7.26.10",
-				"size": 795988
+				"version": "7.27.1",
+				"size": 794180
 			},
 			{
-				"name": "json5",
-				"version": "2.2.3",
-				"size": 235198
-			},
-			{
-				"name": "semver",
-				"version": "6.3.1",
-				"size": 68343
-			},
-			{
-				"name": "gensync",
-				"version": "1.0.0-beta.2",
-				"size": 28891
-			},
-			{
-				"name": "@babel/types",
-				"version": "7.27.0",
-				"size": 2583295
-			},
-			{
-				"name": "@babel/helper-string-parser",
-				"version": "7.25.9",
-				"size": 31816
-			},
-			{
-				"name": "@babel/helper-validator-identifier",
-				"version": "7.25.9",
-				"size": 48330
-			},
-			{
-				"name": "@babel/parser",
-				"version": "7.27.0",
-				"size": 1924962
-			},
-			{
-				"name": "@babel/helpers",
-				"version": "7.27.0",
-				"size": 866498
-			},
-			{
-				"name": "@babel/template",
-				"version": "7.27.0",
-				"size": 70675
-			},
-			{
-				"name": "@babel/code-frame",
-				"version": "7.26.2",
-				"size": 33160
-			},
-			{
-				"name": "js-tokens",
-				"version": "4.0.0"
-			},
-			{
-				"name": "@babel/traverse",
-				"version": "7.27.0",
-				"size": 676526
-			},
-			{
-				"name": "@babel/generator",
-				"version": "7.27.0",
-				"size": 559855
+				"name": "@ampproject/remapping",
+				"version": "2.3.0",
+				"size": 78946
 			},
 			{
 				"name": "@jridgewell/gen-mapping",
@@ -1002,64 +884,73 @@
 				"size": 53153
 			},
 			{
+				"name": "@babel/code-frame",
+				"version": "7.27.1",
+				"size": 33160
+			},
+			{
+				"name": "@babel/helper-validator-identifier",
+				"version": "7.27.1",
+				"size": 48330
+			},
+			{
+				"name": "js-tokens",
+				"version": "4.0.0"
+			},
+			{
+				"name": "@babel/generator",
+				"version": "7.27.1",
+				"size": 560098
+			},
+			{
+				"name": "@babel/parser",
+				"version": "7.27.1",
+				"size": 1859876
+			},
+			{
+				"name": "@babel/types",
+				"version": "7.27.1",
+				"size": 2597469
+			},
+			{
+				"name": "@babel/helper-string-parser",
+				"version": "7.27.1",
+				"size": 31816
+			},
+			{
 				"name": "jsesc",
 				"version": "3.1.0",
 				"size": 32280
 			},
 			{
-				"name": "globals",
-				"version": "11.12.0",
-				"size": 39779
-			},
-			{
-				"name": "convert-source-map",
-				"version": "2.0.0",
-				"size": 15854
-			},
-			{
-				"name": "@ampproject/remapping",
-				"version": "2.3.0",
-				"size": 78946
-			},
-			{
-				"name": "@babel/helper-module-transforms",
-				"version": "7.26.0",
-				"size": 160842
-			},
-			{
-				"name": "@babel/helper-module-imports",
-				"version": "7.25.9",
-				"size": 63714
-			},
-			{
 				"name": "@babel/helper-compilation-targets",
-				"version": "7.27.0",
+				"version": "7.27.1",
 				"size": 53776
 			},
 			{
 				"name": "@babel/compat-data",
-				"version": "7.26.8",
-				"size": 66428
+				"version": "7.27.1",
+				"size": 66193
 			},
 			{
 				"name": "@babel/helper-validator-option",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 11775
 			},
 			{
 				"name": "browserslist",
-				"version": "4.24.4",
-				"size": 64926
+				"version": "4.24.5",
+				"size": 65174
 			},
 			{
 				"name": "caniuse-lite",
-				"version": "1.0.30001715",
-				"size": 2211246
+				"version": "1.0.30001716",
+				"size": 2214832
 			},
 			{
 				"name": "electron-to-chromium",
-				"version": "1.5.140",
-				"size": 162065
+				"version": "1.5.149",
+				"size": 163189
 			},
 			{
 				"name": "node-releases",
@@ -1085,6 +976,56 @@
 				"name": "yallist",
 				"version": "3.1.1",
 				"size": 14766
+			},
+			{
+				"name": "semver",
+				"version": "6.3.1",
+				"size": 68343
+			},
+			{
+				"name": "@babel/helper-module-transforms",
+				"version": "7.27.1",
+				"size": 160852
+			},
+			{
+				"name": "@babel/helper-module-imports",
+				"version": "7.27.1",
+				"size": 63724
+			},
+			{
+				"name": "@babel/traverse",
+				"version": "7.27.1",
+				"size": 689113
+			},
+			{
+				"name": "@babel/template",
+				"version": "7.27.1",
+				"size": 70675
+			},
+			{
+				"name": "globals",
+				"version": "11.12.0",
+				"size": 39779
+			},
+			{
+				"name": "@babel/helpers",
+				"version": "7.27.1",
+				"size": 861892
+			},
+			{
+				"name": "convert-source-map",
+				"version": "2.0.0",
+				"size": 15854
+			},
+			{
+				"name": "gensync",
+				"version": "1.0.0-beta.2",
+				"size": 28891
+			},
+			{
+				"name": "json5",
+				"version": "2.2.3",
+				"size": 235198
 			},
 			{
 				"name": "gray-matter",
@@ -1424,8 +1365,8 @@
 			},
 			{
 				"name": "es-module-lexer",
-				"version": "1.6.0",
-				"size": 91298
+				"version": "1.7.0",
+				"size": 93440
 			},
 			{
 				"name": "path-browserify",
@@ -1674,8 +1615,8 @@
 			},
 			{
 				"name": "vscode-css-languageservice",
-				"version": "6.3.4",
-				"size": 3657766
+				"version": "6.3.5",
+				"size": 3695236
 			},
 			{
 				"name": "@vscode/l10n",
@@ -1684,8 +1625,8 @@
 			},
 			{
 				"name": "vscode-html-languageservice",
-				"version": "5.3.3",
-				"size": 1584432
+				"version": "5.4.0",
+				"size": 1994281
 			},
 			{
 				"name": "vscode-languageserver-protocol",
@@ -2204,28 +2145,28 @@
 			},
 			{
 				"name": "@babel/plugin-transform-react-jsx",
-				"version": "7.25.9",
-				"size": 80019
-			},
-			{
-				"name": "@babel/plugin-syntax-jsx",
-				"version": "7.25.9",
-				"size": 4141
-			},
-			{
-				"name": "@babel/helper-plugin-utils",
-				"version": "7.26.5",
-				"size": 11985
+				"version": "7.27.1",
+				"size": 79340
 			},
 			{
 				"name": "@babel/helper-annotate-as-pure",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 4054
 			},
 			{
+				"name": "@babel/helper-plugin-utils",
+				"version": "7.27.1",
+				"size": 11818
+			},
+			{
+				"name": "@babel/plugin-syntax-jsx",
+				"version": "7.27.1",
+				"size": 4141
+			},
+			{
 				"name": "webpack",
-				"version": "5.99.6",
-				"size": 5301633
+				"version": "5.99.7",
+				"size": 5305518
 			},
 			{
 				"name": "@types/eslint-scope",
@@ -2394,8 +2335,8 @@
 			},
 			{
 				"name": "schema-utils",
-				"version": "4.3.0",
-				"size": 76517
+				"version": "4.3.2",
+				"size": 77279
 			},
 			{
 				"name": "ajv",
@@ -2444,8 +2385,8 @@
 			},
 			{
 				"name": "@types/node",
-				"version": "22.14.1",
-				"size": 2331510
+				"version": "22.15.3",
+				"size": 2350386
 			},
 			{
 				"name": "undici-types",
@@ -2728,68 +2669,68 @@
 			[4, 15],
 			[4, 167],
 			[4, 168],
-			[168, 74],
 			[168, 169],
-			[168, 170],
-			[168, 171],
-			[168, 172],
-			[172, 173],
-			[172, 174],
+			[169, 170],
+			[170, 171],
+			[170, 172],
+			[170, 173],
+			[173, 174],
+			[173, 172],
+			[169, 173],
 			[168, 175],
-			[175, 172],
-			[168, 176],
-			[176, 177],
-			[177, 178],
-			[178, 179],
-			[178, 43],
-			[178, 174],
-			[177, 175],
-			[177, 172],
-			[176, 172],
-			[168, 177],
-			[168, 180],
-			[180, 178],
-			[180, 181],
-			[181, 175],
-			[181, 172],
-			[181, 182],
-			[182, 183],
-			[182, 184],
-			[182, 185],
-			[185, 186],
-			[185, 184],
-			[181, 185],
-			[181, 187],
-			[180, 175],
-			[180, 177],
-			[180, 172],
-			[180, 74],
-			[180, 188],
-			[168, 181],
+			[175, 176],
+			[175, 177],
+			[175, 43],
 			[168, 178],
-			[168, 189],
-			[168, 190],
-			[190, 182],
-			[190, 185],
-			[168, 191],
-			[191, 180],
-			[191, 192],
-			[192, 172],
-			[192, 180],
-			[191, 174],
-			[168, 193],
-			[193, 194],
-			[193, 195],
-			[193, 196],
+			[178, 179],
+			[179, 180],
+			[180, 181],
+			[180, 176],
+			[178, 180],
+			[178, 170],
+			[178, 173],
+			[178, 182],
+			[168, 183],
+			[183, 184],
+			[183, 185],
+			[183, 186],
+			[186, 187],
+			[186, 188],
+			[186, 189],
+			[186, 190],
+			[190, 191],
+			[190, 43],
+			[183, 192],
+			[192, 193],
+			[183, 194],
+			[168, 195],
+			[195, 196],
 			[196, 197],
-			[196, 198],
-			[196, 199],
-			[196, 200],
-			[200, 201],
-			[200, 43],
-			[193, 202],
-			[202, 203],
-			[193, 170],
+			[197, 175],
+			[197, 178],
+			[197, 179],
+			[197, 198],
+			[198, 175],
+			[198, 179],
+			[198, 180],
+			[197, 180],
+			[197, 74],
+			[197, 199],
+			[196, 180],
+			[195, 176],
+			[195, 197],
+			[168, 200],
+			[200, 198],
+			[200, 180],
+			[168, 179],
+			[168, 198],
+			[168, 197],
+			[168, 180],
+			[168, 201],
+			[168, 74],
+			[168, 202],
+			[168, 203],
+			[168, 194],
 			[4, 204],
 			[204, 205],
 			[205, 206],
@@ -2801,11 +2742,11 @@
 			[210, 211],
 			[209, 208],
 			[204, 212],
-			[4, 172],
+			[4, 180],
 			[4, 213],
 			[4, 214],
 			[4, 215],
-			[215, 184],
+			[215, 172],
 			[4, 216],
 			[216, 217],
 			[217, 218],
@@ -2835,10 +2776,10 @@
 			[235, 236],
 			[236, 237],
 			[4, 238],
-			[4, 175],
+			[4, 179],
 			[4, 239],
 			[239, 240],
-			[239, 201],
+			[239, 191],
 			[4, 241],
 			[241, 242],
 			[4, 243],
@@ -2876,16 +2817,16 @@
 			[269, 271],
 			[267, 272],
 			[272, 269],
-			[4, 180],
+			[4, 197],
 			[4, 273],
 			[4, 274],
-			[4, 181],
+			[4, 178],
 			[4, 132],
 			[4, 275],
 			[4, 276],
 			[276, 277],
 			[276, 278],
-			[276, 169],
+			[276, 203],
 			[276, 45],
 			[276, 279],
 			[276, 266],
@@ -2900,15 +2841,15 @@
 			[280, 267],
 			[280, 286],
 			[4, 287],
-			[287, 172],
-			[287, 175],
+			[287, 180],
+			[287, 179],
 			[287, 288],
-			[288, 172],
-			[288, 175],
+			[288, 180],
+			[288, 179],
 			[287, 289],
-			[289, 172],
+			[289, 180],
 			[287, 290],
-			[290, 172],
+			[290, 180],
 			[4, 291],
 			[291, 292],
 			[292, 40],
@@ -2948,15 +2889,15 @@
 			[320, 321],
 			[320, 322],
 			[300, 323],
-			[323, 324],
-			[323, 311],
-			[323, 312],
 			[323, 304],
+			[323, 324],
+			[323, 312],
+			[323, 311],
 			[300, 325],
-			[325, 324],
-			[325, 311],
-			[325, 312],
 			[325, 304],
+			[325, 324],
+			[325, 312],
+			[325, 311],
 			[300, 312],
 			[300, 326],
 			[326, 327],
@@ -3277,13 +3218,13 @@
 			[427, 337],
 			[427, 101],
 			[4, 429],
-			[429, 172],
 			[429, 430],
-			[430, 431],
+			[430, 180],
+			[429, 196],
 			[429, 431],
-			[429, 192],
 			[429, 432],
-			[432, 172],
+			[432, 431],
+			[429, 180],
 			[0, 40],
 			[0, 39],
 			[0, 38],
@@ -3294,6 +3235,7 @@
 			[435, 436],
 			[434, 242],
 			[433, 242],
+			[433, 436],
 			[433, 437],
 			[437, 438],
 			[438, 439],
@@ -3334,7 +3276,7 @@
 			[453, 439],
 			[433, 452],
 			[433, 51],
-			[433, 196],
+			[433, 186],
 			[433, 454],
 			[433, 455],
 			[455, 225],
@@ -3365,7 +3307,7 @@
 			[474, 469],
 			[433, 456],
 			[433, 475],
-			[475, 185],
+			[475, 173],
 			[475, 476],
 			[476, 477],
 			[477, 478],
@@ -3378,8 +3320,8 @@
 			[481, 29],
 			[475, 482],
 			[482, 483],
-			[483, 182],
-			[483, 185],
+			[483, 170],
+			[483, 173],
 			[482, 51],
 			[482, 484],
 			[482, 485],
@@ -3391,5 +3333,66 @@
 			[433, 488]
 		],
 		"circular": []
-	}
+	},
+	"readme": "[![codecov](https://codecov.io/gh/Ernxst/icon-prerender/branch/main/graph/badge.svg?token=4FA8D7L8DL)](https://codecov.io/gh/Ernxst/icon-prerender)\n\n[![🚀 CI](https://github.com/Ernxst/icon-prerender/actions/workflows/ci.yml/badge.svg)](https://github.com/Ernxst/icon-prerender/actions/workflows/ci.yml)\n\n# 🚀 Icon Prerender\n\nA framework-agnostic plugin (likely compatible with your build tool) that prerenders your SVG icons at build time so your clients don't have to fetch them during browsing. Designed for ease-of-use and maximum performance.\n\n## Why?\n\nThere are several icon libraries out there. However, it is rare to find one that ticks all the following:\n\n- Works at build time (to minimise bundle size)\n- Does not affect your bundle size at all\n- Optimises SVGs at build time\n- Requires no configuration or fiddling with other configuration options\n- Allows you to simply specify icons in the template e.g., `mdi:chevron-right\n- Does not require importing a bunch of components or creating icon sets\n\nThis library is heavily inspired by [`astro-icon`](https://github.com/natemoo-re/astro-icon) and essentially works the same except:\n\n- `icon-prerender` works for any framework, even raw HTML (provided you use a bundler)\n- `astro-icon` provides icon components - `icon-prerender` allows you to use just HTML\n- `icon-prerender` provides much more flexibility on how icons are specified\n- `icon-prerender` allows you to inline raw SVG elements\n\nAgain, [`astro-icon`](https://github.com/natemoo-re/astro-icon) works in this way, but only supports `.astro` components and [does not work with server-side rendering](https://github.com/natemoo-re/astro-icon/issues/35).\n\n## Installation\n\nThis plugin requires [`@iconify/json`](https://www.npmjs.com/package/@iconify/json) as a peer dependency:\n\n```bash\nnpm i --save-dev icon-prerender @iconify/json\n```\n\n```bash\nyarn add -D icon-prerender @iconify/json\n```\n\n```bash\npnpm i -D icon-prerender @iconify/json\n```\n\nI also recommend installing and enabling the [`iconify-intellisense`](https://marketplace.visualstudio.com/items?itemName=antfu.iconify) VSCode extension by [Anthony Fu](https://github.com/antfu).\n\n## Usage\n\nIn the template, you can define an icon to prerender as either:\n\n- One of the following HTML elements _with_ a `data-icon` attribute:\n  - `<div>`\n  - `<span>`\n  - `<figure>`\n  - `<img>`\n  - `<svg>`\n  - any custom element tag\n- Any `<svg />` element wrapped around a `use` tag with either a `href` or `xlink:href` attribute i.e.:\n\n```html\n<svg>\n  <use href=\"assets/icon.svg#id\"></use>\n</svg>\n```\n\n- Note that for it to be valid HTML, you need to point to the ID of the element in the SVG file\n- This suffix is stripped when resolving the path to the raw SVG item\n\nThis last feather sets `icon-prerender` from other icon libraries as this is valid HTML - if you disabled `icon-prerender`, the above would still work (assuming the `href` points to a valid path). The only difference would be it would have to make an extra network request during runtime to fetch the SVG and would then have to render it.\n\nSo, the cases above describe the default resolution algorithm; by default, these are the only elements that will be transformed into `<svg />` elements. See [\"Configuration\"](#configuration) to see how this can be changed.\n\nAdditionally, the `data-icon` attribute can either be:\n\n- A `[pack]:[name]` string specifying the icon pack and the specific icon in the pack\n- A relative path to a `.svg` file\n  - Note that this is relative to the build output directory - you can modify the asset chunk names to make the filenames more predictable if needed\n  - This also means there is no need to register icon sets - just set the path to the SVG file and it will be inlined\n- An external URL pointing to an SVG file - this can be an API endpoint or simply a statically hosted SVG file\n  - The API **must** return an raw SVG (not JSON or HTML) and must contain `svg` in the `content-type` header\n\nWhatever you provide to `data-icon` will be resolved and prerendered at build time.\n\nAny attributes defined on the original element (apart from `data-icon` unless it is a `[pack]:[name]` string) will be preserved and will override identical attributes in the resolved SVG element, except:\n\n- The `class` will be concatenated from both elements\n- Any children will be merged from both elements with children in the resolved SVG appearing lower in the template\n  - In the case of a `<use>` tag wrapped inside an `<svg>`, the `<use>` tag will be removed\n\nNote that icons can be nested inside each other, however, children will be resolved first. So the innermost icon will be prerendered first.\n\nThen, you use the include the appropriate plugin with in your bundler's config:\n\n### Astro\n\n ```js\nimport { defineConfig } from \"astro/config\";\nimport icons from \"icon-prerender/astro\";\n\nexport default defineConfig({\n  integrations: [icons()],\n})\n```\n\n### Vite\n\n ```js\nimport { defineConfig } from \"vite\";\nimport icons from \"icon-prerender/vite\";\n\nexport default defineConfig({\n  plugins: [icons()],\n})\n```\n\n### Rollup\n\n ```js\nimport { defineConfig } from \"rollup\";\nimport icons from \"icon-prerender/rollup\";\n\nexport default defineConfig({\n  plugins: [icons()],\n})\n```\n\n### esbuild\n\n ```js\nimport esbuild from \"esbuild\";\nimport icons from \"icon-prerender/esbuild\";\n\nesbuild.build({\n  plugins: [icons()],\n}).catch(() => process.exit(1));\n```\n\n### Webpack\n\nIn CommonJS form:\n\n```js\nconst IconPrerenderPluginWebpackPlugin = require(\"icon-prerender/webpack\");\n\nmodule.exports = {\n  plugins: [new IconPrerenderPluginWebpackPlugin()],\n}\n```\n\n## Configuration\n\n- `include` - A regex, an array of strings (or regexes) of HTML attributes (can be custom) to\n  filter elements on\n  - If an attribute of any HTML element matches anything inside this array, it will be transformed into an SVG element.\n  - default `undefined` - enables default filtering\n\n- `exclude` - A regex, an array of strings (or regexes) of HTML attributes (can be custom) to\n  filter elements on\n  - If an attribute of any HTML element matches anything inside this array, it **will not** be transformed into an SVG element.\n  - default: `undefined` - enables default filtering\n\nNote: specifying `include` or `exclude` will not override default filtering - they are used to either include extra elements, or exclude elements that would have been included for transformation by default.\n\n## Roadmap\n\n- [ ] Allow consumers to disable default resolution via a new plugin option\n\n  - Completely custom resolution would then be achieved by simply using `include` and `exclude` in tandem with this new plugin option\n\n- [ ] Add more component tests, especially with larger files\n\nHave any other ideas? Make a suggestion in the [Discussions](https://github.com/Ernxst/icon-prerender/discussions) tab.\n\n## Contributing\n\nTo get started with development, you will need an editor (VS Code is recommended), a browser that runs JavaScript and some extra prerequisites:\n\n- [Node.js (>= 16)](https://nodejs.org)\n- [pnpm 7.5.2](https://pnpm.io/installation#using-corepack)\n\nTo get started with contributing to this project, first fork this git repository:\n\n```sh\ngit clone https://github.com/Ernxst/icon-prerender.git\n```\n\nThen, install dependencies and start coding.\n\n### Submitting Improvements\n\nIf you have a suggestion that would make this app better, please fork the repo and create a pull request. You can also\nsimply open an issue with the tag \"`enhancement`\".\n\n1. Fork the Project\n2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)\n3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)\n4. Push to the Branch (`git push origin feature/AmazingFeature`)\n5. Open a Pull Request\n\n## License\n\nDistributed under the MIT License. See [`LICENSE`](LICENSE) for more information.\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3596, 13],
+		[3617, 3],
+		[3624, 1],
+		[3645, 1],
+		[3652, 1],
+		[3666, 6],
+		[3673, 2],
+		[3694, 1],
+		[3722, 2],
+		[3736, 1],
+		[3743, 1],
+		[3750, 5],
+		[3757, 2],
+		[3771, 8],
+		[3778, 4],
+		[3792, 2],
+		[3799, 3],
+		[3806, 2],
+		[3820, 2],
+		[3834, 1],
+		[3841, 28],
+		[3848, 2],
+		[3862, 4],
+		[3876, 3],
+		[3883, 2],
+		[3890, 11],
+		[3897, 10],
+		[3904, 1],
+		[3911, 2],
+		[3918, 2],
+		[3925, 2],
+		[3932, 1],
+		[3939, 2],
+		[3946, 2],
+		[3953, 1],
+		[3960, 1],
+		[3967, 1],
+		[3974, 2],
+		[3981, 4],
+		[3988, 10],
+		[3995, 7],
+		[4002, 15],
+		[4009, 2],
+		[4016, 6],
+		[4030, 6],
+		[4037, 6],
+		[4044, 14],
+		[4051, 8],
+		[4058, 6],
+		[4065, 1],
+		[4072, 4],
+		[4093, 7],
+		[4100, 14],
+		[4107, 4],
+		[4114, 8],
+		[4121, 14],
+		[4128, 4]
+	]
 }

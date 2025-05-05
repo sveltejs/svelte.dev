@@ -7,35 +7,11 @@
 	"downloads": 2233,
 	"updated": "2025-04-17T12:10:05.214Z",
 	"tags": ["tooling"],
-	"runes": false,
-	"github_stars": 388,
+	"github_stars": 398,
 	"typescript": true,
 	"version": "1.47.1",
 	"svelte_range": "^5.25.9",
 	"last_rune_check_version": "1.47.1",
-	"downloads_history": [
-		[3973, 1174],
-		[3980, 1508],
-		[3987, 1426],
-		[3994, 644],
-		[4001, 648],
-		[4008, 347],
-		[4015, 447],
-		[4022, 900],
-		[4029, 1211],
-		[4036, 1580],
-		[4043, 1392],
-		[4050, 2053],
-		[4057, 1729],
-		[4064, 3248],
-		[4071, 2940],
-		[4078, 2329],
-		[4085, 1831],
-		[4092, 1828],
-		[4099, 1245],
-		[4106, 1480],
-		[4113, 2233]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -68,8 +44,8 @@
 			},
 			{
 				"name": "@types/node",
-				"version": "18.19.86",
-				"size": 2064617
+				"version": "18.19.87",
+				"size": 2064812
 			},
 			{
 				"name": "undici-types",
@@ -220,8 +196,8 @@
 			},
 			{
 				"name": "@types/node",
-				"version": "22.14.1",
-				"size": 2331510
+				"version": "22.15.3",
+				"size": 2350386
 			},
 			{
 				"name": "undici-types",
@@ -340,8 +316,8 @@
 			},
 			{
 				"name": "type-fest",
-				"version": "4.40.0",
-				"size": 438455
+				"version": "4.40.1",
+				"size": 438790
 			},
 			{
 				"name": "widest-line",
@@ -599,8 +575,8 @@
 			},
 			{
 				"name": "ignore",
-				"version": "7.0.3",
-				"size": 63148
+				"version": "7.0.4",
+				"size": 63139
 			},
 			{
 				"name": "node-fetch",
@@ -754,13 +730,13 @@
 			},
 			{
 				"name": "@octokit/webhooks",
-				"version": "13.8.0",
-				"size": 179133
+				"version": "13.8.2",
+				"size": 179098
 			},
 			{
 				"name": "@octokit/openapi-webhooks-types",
-				"version": "10.4.0",
-				"size": 2661484
+				"version": "11.0.0",
+				"size": 2661449
 			},
 			{
 				"name": "@octokit/webhooks-methods",
@@ -804,8 +780,8 @@
 			},
 			{
 				"name": "openai",
-				"version": "4.95.1",
-				"size": 3832047
+				"version": "4.97.0",
+				"size": 3976309
 			},
 			{
 				"name": "oxc-parser",
@@ -819,18 +795,18 @@
 			},
 			{
 				"name": "package-manager-detector",
-				"version": "1.2.0",
-				"size": 21960
+				"version": "1.3.0",
+				"size": 22408
 			},
 			{
 				"name": "parse5",
-				"version": "7.2.1",
-				"size": 694639
+				"version": "7.3.0",
+				"size": 695873
 			},
 			{
 				"name": "entities",
-				"version": "4.5.0",
-				"size": 412892
+				"version": "6.0.0",
+				"size": 540419
 			},
 			{
 				"name": "pathe",
@@ -849,8 +825,8 @@
 			},
 			{
 				"name": "svelte",
-				"version": "5.28.1",
-				"size": 2426419
+				"version": "5.28.2",
+				"size": 2426223
 			},
 			{
 				"name": "@ampproject/remapping",
@@ -988,23 +964,28 @@
 				"size": 619229
 			},
 			{
+				"name": "entities",
+				"version": "4.5.0",
+				"size": 412892
+			},
+			{
 				"name": "@babel/parser",
-				"version": "7.27.0",
-				"size": 1924962
+				"version": "7.27.1",
+				"size": 1859876
 			},
 			{
 				"name": "@babel/types",
-				"version": "7.27.0",
-				"size": 2583295
+				"version": "7.27.1",
+				"size": 2597469
 			},
 			{
 				"name": "@babel/helper-string-parser",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 31816
 			},
 			{
 				"name": "@babel/helper-validator-identifier",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 48330
 			},
 			{
@@ -1329,33 +1310,60 @@
 			[183, 189],
 			[189, 184],
 			[189, 190],
-			[190, 159],
-			[190, 184],
 			[190, 191],
-			[191, 192],
+			[190, 184],
+			[190, 192],
 			[192, 193],
-			[192, 194],
-			[190, 195],
+			[193, 194],
+			[193, 195],
 			[190, 196],
-			[183, 197],
-			[197, 198],
+			[190, 197],
+			[183, 198],
 			[198, 199],
-			[198, 43],
+			[199, 200],
+			[199, 43],
+			[199, 197],
+			[198, 184],
+			[198, 179],
+			[198, 192],
 			[198, 196],
-			[197, 184],
-			[197, 179],
-			[197, 191],
-			[197, 195],
-			[197, 196],
-			[197, 189],
-			[197, 200],
-			[200, 184],
-			[200, 189],
-			[197, 190],
-			[183, 201],
+			[198, 197],
+			[198, 189],
+			[198, 201],
 			[201, 184],
-			[201, 200]
+			[201, 189],
+			[198, 190],
+			[183, 202],
+			[202, 184],
+			[202, 201]
 		],
 		"circular": []
-	}
+	},
+	"readme": "<p align=\"center\">\n  <a href=\"https://jsrepo.dev\">\n    <picture>\n      <img src=\"https://github.com/user-attachments/assets/fb4b84c3-8f81-4e1d-a049-ed909c3dae68\">\n    </picture>\n    <h1 align=\"center\">jsrepo</h1>\n  </a>\n</p>\n\n<p align=\"center\">\n  <a aria-label=\"jsrepo logo\" href=\"https://jsrepo.dev\">\n    <img alt=\"\" src=\"https://jsrepo.dev/badges/jsrepo.svg\">\n  </a> \n</p>\n\n**jsrepo** is a CLI to build and distribute your code.\n\n## Getting Started\n\n- [Create a registry](https://jsrepo.dev/docs/registry)\n- [Download your blocks](https://jsrepo.dev/docs/setup)\n\n## Demos\n\n- [Create your first registry](https://youtu.be/IyJQI3z8PWg)\n- [Build your own shadcn-style library with jsrepo](https://youtu.be/zWfBt1vKb84)\n- [Building the shadcn/ui registry with jsrepo](https://youtu.be/tj7BUE9V7fw)\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3974, 1174],
+		[3981, 1508],
+		[3988, 1426],
+		[3995, 644],
+		[4002, 648],
+		[4009, 347],
+		[4016, 447],
+		[4023, 900],
+		[4030, 1211],
+		[4037, 1580],
+		[4044, 1392],
+		[4051, 2053],
+		[4058, 1729],
+		[4065, 3248],
+		[4072, 2940],
+		[4079, 2329],
+		[4086, 1831],
+		[4093, 1828],
+		[4100, 1245],
+		[4107, 1480],
+		[4114, 2233],
+		[4121, 1635],
+		[4128, 1310]
+	]
 }

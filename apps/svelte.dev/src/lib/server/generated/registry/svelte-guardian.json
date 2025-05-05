@@ -7,33 +7,12 @@
 	"downloads": 62,
 	"updated": "2025-04-16T12:17:02.515Z",
 	"tags": ["auth"],
-	"runes": false,
 	"github_stars": 1,
 	"typescript": true,
 	"version": "0.2.0-alpha-5",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.2.0-alpha-5",
-	"downloads_history": [
-		[3987, 369],
-		[3994, 485],
-		[4001, 105],
-		[4008, 239],
-		[4015, 42],
-		[4022, 27],
-		[4029, 10],
-		[4036, 28],
-		[4043, 27],
-		[4050, 25],
-		[4064, 60],
-		[4071, 20],
-		[4078, 16],
-		[4085, 3],
-		[4092, 2],
-		[4099, 18],
-		[4106, 7],
-		[4113, 62]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -89,8 +68,8 @@
 			},
 			{
 				"name": "@auth/sveltekit",
-				"version": "1.9.0",
-				"size": 139890
+				"version": "1.9.1",
+				"size": 139910
 			},
 			{
 				"name": "set-cookie-parser",
@@ -417,5 +396,29 @@
 			[0, 61]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# 🔐 Svelte Guardian\n\nBatteries included authentication for SvelteKit applications.\n\n## 🚀 Features\n\n- Secure credentials authentication\n- Multiple authentication providers\n- Robust security measures\n- Email verificatiom\n- Password reset\n- Role-based route protection\n- Flexible configuration\n- Comprehensive logging\n- Two-factor authentication support (incoming)\n\n## 📦 Installation\n\n```bash\npnpm add svelte-guardian # or use your favorite package manager\n```\n\n## 🔧 Basic Usage\n\n```typescript\nimport { guardianAuth } from 'svelte-guardian';\n\nexport const { handle } = guardianAuth({\n\tproviders: {\n\t\tgoogle: { enabled: true },\n\t\tcredentials: { enabled: true }\n\t},\n\tsecurity: {\n\t\tlevel: 'strict',\n\t\tmaxLoginAttempts: 5\n\t}\n});\n```\n\n## 📄 Documentation\n\n[Full documentation to be made available here]\n\n## 🔧 Configuration API\n\n### GuardianAuthOptions Interface\n\n```typescript\ninterface GuardianAuthOptions {\n\t// Provider Configurations\n\tproviders: {\n\t\tgoogle?: {\n\t\t\tenabled: boolean;\n\t\t\tclientId?: string;\n\t\t\tclientSecret?: string;\n\t\t\tstrict?: boolean;\n\t\t};\n\t\tcredentials?: {\n\t\t\tenabled: boolean;\n\t\t\tallowRegistration?: boolean;\n\t\t\tpasswordless?: boolean;\n\t\t};\n\t\tgithub?: {\n\t\t\tenabled: boolean;\n\t\t\tclientId?: string;\n\t\t\tclientSecret?: string;\n\t\t};\n\t\t// Extensible for more providers\n\t};\n\n\t// Security Configurations\n\tsecurity: {\n\t\tmaxLoginAttempts?: number;\n\t\tlockoutDuration?: number;\n\t\trequireEmailVerification?: boolean;\n\t\ttwoFactor?: {\n\t\t\tenabled: boolean;\n\t\t\tmethod?: 'email' | 'totp' | 'sms';\n\t\t};\n\t\tpasswordPolicy?: {\n\t\t\tminLength?: number;\n\t\t\trequireUppercase?: boolean;\n\t\t\trequireLowercase?: boolean;\n\t\t\trequireNumbers?: boolean;\n\t\t\trequireSpecialChars?: boolean;\n\t\t};\n\t};\n\n\t// Customization Options\n\tevents?: {\n\t\tonSignIn?: (user: User) => Promise;\n\t\tonRegistration?: (user: User) => Promise;\n\t\tonPasswordReset?: (user: User) => Promise;\n\t};\n\n\t// Advanced Configurations\n\tadvanced?: {\n\t\tsessionStrategy?: 'jwt' | 'database';\n\t\ttokenEncryption?: boolean;\n\t\trateLimiting?: {\n\t\t\tenabled: boolean;\n\t\t\trequestsPerMinute?: number;\n\t\t};\n\t};\n}\n```\n\n## 🛡️ Enhanced Security Features\n\n### 1. Two-Factor Authentication\n\n```typescript\nguardianAuth({\n\tsecurity: {\n\t\ttwoFactor: {\n\t\t\tenabled: true,\n\t\t\tmethod: 'totp' // Time-based One-Time Password\n\t\t}\n\t}\n});\n```\n\n### 2. Rate Limiting Configuration\n\n```typescript\nguardianAuth({\n\tadvanced: {\n\t\trateLimiting: {\n\t\t\tenabled: true,\n\t\t\trequestsPerMinute: 10\n\t\t}\n\t}\n});\n```\n\n## 📝 Comprehensive Logging\n\n```typescript\n// src/lib/logger.ts\nimport { createLogger } from 'svelte-guardian/logger';\n\nexport const authLogger = createLogger({\n\tlevel: 'info',\n\tdestinations: [\n\t\t{ type: 'console' },\n\t\t{\n\t\t\ttype: 'file',\n\t\t\tpath: './logs/auth.log',\n\t\t\tmaxSize: '10M',\n\t\t\tmaxFiles: 5\n\t\t},\n\t\t{\n\t\t\ttype: 'remote',\n\t\t\tendpoint: 'https://your-logging-service.com/logs'\n\t\t}\n\t]\n});\n```\n\n## 🔒 Environment Variables\n\nCreate a `.env` file in your project root:\n\n```env\n# Authentication Providers\nGUARDIAN_GOOGLE_CLIENT_ID=your_google_client_id\nGUARDIAN_GOOGLE_CLIENT_SECRET=your_google_client_secret\nGUARDIAN_GITHUB_CLIENT_ID=your_github_client_id\nGUARDIAN_GITHUB_CLIENT_SECRET=your_github_client_secret\n\n# Security\nGUARDIAN_JWT_SECRET=your_jwt_secret\nGUARDIAN_ENCRYPTION_KEY=your_encryption_key\n\n# Database\nDATABASE_URL=your_database_connection_string\n```\n\n## 🔬 Advanced Usage Example\n\n```typescript\nimport { guardianAuth, type User } from 'svelte-guardian';\nimport { authLogger } from '$lib/logger';\n\nexport const { handle } = guardianAuth({\n\tproviders: {\n\t\tgoogle: { enabled: true },\n\t\tcredentials: {\n\t\t\tenabled: true,\n\t\t\tallowRegistration: true\n\t\t}\n\t},\n\tsecurity: {\n\t\tmaxLoginAttempts: 5,\n\t\tlockoutDuration: 15 * 60 * 1000,\n\t\ttwoFactor: {\n\t\t\tenabled: true,\n\t\t\tmethod: 'totp'\n\t\t},\n\t\tpasswordPolicy: {\n\t\t\tminLength: 12,\n\t\t\trequireUppercase: true,\n\t\t\trequireNumbers: true,\n\t\t\trequireSpecialChars: true\n\t\t}\n\t},\n\tevents: {\n\t\tasync onSignIn(user: User) {\n\t\t\tauthLogger.info(`User signed in: ${user.email}`);\n\t\t\t// Additional custom logic\n\t\t},\n\t\tasync onRegistration(user: User) {\n\t\t\tauthLogger.info(`New user registered: ${user.email}`);\n\t\t\t// Send welcome email, etc.\n\t\t}\n\t},\n\tadvanced: {\n\t\tsessionStrategy: 'database',\n\t\trateLimiting: {\n\t\t\tenabled: true,\n\t\t\trequestsPerMinute: 10\n\t\t}\n\t}\n});\n```\n\n## Note:\n\nTo use this library, check out the example schema in src/prisma/schema.prisma and adapt it to whatever database provider you would use with this library. More info would soon be available in the documentation.\n\n## Roadmap and Feature Planning\n\nImmediate Priorities (v0.2.0)\nRole-based Route Protection\nLogging System\nComprehensive Documentation\nRobust Error Handling Middleware\nCustomizable Password Policies\n\nShort-term Goals (v0.3.0)\nRate Limiting and Brute Force Protection\nCustom Event Handlers\nMulti-Session Management\nSocial Account Linking\nAdditional Authentication Providers\n\nGitHub OAuth\nMicrosoft OAuth\nFacebook OAuth\nCustom SAML Provider\n\nTwo-Factor Authentication (2FA)\nAdvanced Logging and Audit Trail\nComprehensive Test Suite\n\nMid-term Goals (v0.4.0)\nAdvanced Role and Permission Management\nInternationalization (i18n) Support\n\n## 🛠 TODO\n\n- [ ] Implement two factor auth, rate limiting, refresh token rotation\n- [ ] Create comprehensive documentation site\n- [ ] Add more authentication providers and database providers\n- [ ] Develop admin dashboard for user management\n\n## 🤝 Contributing\n\n[Contribution guidelines]\n\n## 📄 License\n\nMIT License\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3988, 369],
+		[3995, 485],
+		[4002, 105],
+		[4009, 239],
+		[4016, 42],
+		[4023, 27],
+		[4030, 10],
+		[4037, 28],
+		[4044, 27],
+		[4051, 25],
+		[4065, 60],
+		[4072, 20],
+		[4079, 16],
+		[4086, 3],
+		[4093, 2],
+		[4100, 18],
+		[4107, 7],
+		[4114, 62],
+		[4121, 163],
+		[4128, 40]
+	]
 }

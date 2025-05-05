@@ -7,50 +7,12 @@
 	"downloads": 41,
 	"updated": "2025-03-14T14:36:14.866Z",
 	"tags": ["content", "ui"],
-	"runes": true,
 	"typescript": true,
 	"version": "1.6.0",
 	"svelte_range": "^5.14.0",
 	"kit_range": "^2.5.24",
 	"last_rune_check_version": "1.6.0",
 	"github_stars": 0,
-	"downloads_history": [
-		[3875, 67],
-		[3882, 58],
-		[3889, 602],
-		[3896, 37],
-		[3903, 87],
-		[3910, 23],
-		[3917, 78],
-		[3924, 136],
-		[3931, 90],
-		[3938, 35],
-		[3945, 11],
-		[3952, 4],
-		[3959, 6],
-		[3966, 10],
-		[3973, 13],
-		[3980, 2],
-		[3987, 27],
-		[3994, 17],
-		[4001, 14],
-		[4008, 8],
-		[4015, 11],
-		[4022, 23],
-		[4029, 7],
-		[4036, 12],
-		[4043, 30],
-		[4050, 14],
-		[4057, 15],
-		[4064, 4],
-		[4071, 89],
-		[4078, 12],
-		[4085, 62],
-		[4092, 27],
-		[4099, 1],
-		[4106, 16],
-		[4113, 41]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -66,8 +28,8 @@
 			},
 			{
 				"name": "@floating-ui/core",
-				"version": "1.6.9",
-				"size": 212585
+				"version": "1.7.0",
+				"size": 214929
 			},
 			{
 				"name": "@floating-ui/utils",
@@ -76,8 +38,8 @@
 			},
 			{
 				"name": "@sveltejs/kit",
-				"version": "2.20.7",
-				"size": 820650
+				"version": "2.20.8",
+				"size": 820819
 			},
 			{
 				"name": "@types/cookie",
@@ -251,8 +213,8 @@
 			},
 			{
 				"name": "@maplibre/maplibre-gl-style-spec",
-				"version": "23.1.0",
-				"size": 9205094
+				"version": "23.2.2",
+				"size": 9430299
 			},
 			{
 				"name": "json-stringify-pretty-compact",
@@ -869,8 +831,8 @@
 			},
 			{
 				"name": "@sigstore/tuf",
-				"version": "3.1.0",
-				"size": 50762
+				"version": "3.1.1",
+				"size": 45466
 			},
 			{
 				"name": "tuf-js",
@@ -889,8 +851,8 @@
 			},
 			{
 				"name": "@sigstore/verify",
-				"version": "2.1.0",
-				"size": 72309
+				"version": "2.1.1",
+				"size": 71913
 			},
 			{
 				"name": "@npmcli/git",
@@ -1033,8 +995,8 @@
 			},
 			{
 				"name": "@npmcli/redact",
-				"version": "3.2.0",
-				"size": 16759
+				"version": "3.2.1",
+				"size": 16859
 			},
 			{
 				"name": "@npmcli/installed-package-contents",
@@ -1202,8 +1164,8 @@
 			},
 			{
 				"name": "binary-extensions",
-				"version": "3.0.0",
-				"size": 5084
+				"version": "3.1.0",
+				"size": 5092
 			},
 			{
 				"name": "diff",
@@ -1291,8 +1253,8 @@
 			},
 			{
 				"name": "init-package-json",
-				"version": "8.0.0",
-				"size": 14079
+				"version": "8.1.1",
+				"size": 14196
 			},
 			{
 				"name": "promzard",
@@ -1463,8 +1425,8 @@
 			},
 			{
 				"name": "@floating-ui/dom",
-				"version": "1.6.13",
-				"size": 165945
+				"version": "1.7.0",
+				"size": 166707
 			},
 			{
 				"name": "vite-plugin-iso-import",
@@ -1473,8 +1435,8 @@
 			},
 			{
 				"name": "es-module-lexer",
-				"version": "1.6.0",
-				"size": 91298
+				"version": "1.7.0",
+				"size": 93440
 			}
 		],
 		"dependencies": [
@@ -1956,14 +1918,14 @@
 			[66, 208],
 			[66, 248],
 			[66, 249],
-			[249, 115],
-			[249, 131],
+			[249, 188],
+			[249, 171],
 			[249, 250],
 			[250, 115],
-			[249, 171],
-			[249, 188],
-			[249, 173],
+			[249, 115],
+			[249, 131],
 			[249, 189],
+			[249, 173],
 			[66, 145],
 			[66, 138],
 			[66, 170],
@@ -2031,5 +1993,46 @@
 			[286, 11]
 		],
 		"circular": []
-	}
+	},
+	"legacy_svelte": false,
+	"readme": "# create-svelte\n\nEverything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).\n\n## Creating a project\n\nIf you're seeing this, you've probably already done this step. Congrats!\n\n```bash\n# create a new project in the current directory\nnpm create svelte@latest\n\n# create a new project in my-app\nnpm create svelte@latest my-app\n```\n\n## Developing\n\nOnce you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:\n\n```bash\nnpm run dev\n\n# or start the server and open the app in a new browser tab\nnpm run dev -- --open\n```\n\n## Building\n\nTo create a production version of your app:\n\n```bash\nnpm run build\n```\n\nYou can preview the production build with `npm run preview`.\n\n> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.\n",
+	"downloads_history": [
+		[3876, 67],
+		[3883, 58],
+		[3890, 602],
+		[3897, 37],
+		[3904, 87],
+		[3911, 23],
+		[3918, 78],
+		[3925, 136],
+		[3932, 90],
+		[3939, 35],
+		[3946, 11],
+		[3953, 4],
+		[3960, 6],
+		[3967, 10],
+		[3974, 13],
+		[3981, 2],
+		[3988, 27],
+		[3995, 17],
+		[4002, 14],
+		[4009, 8],
+		[4016, 11],
+		[4023, 23],
+		[4030, 7],
+		[4037, 12],
+		[4044, 30],
+		[4051, 14],
+		[4058, 15],
+		[4065, 4],
+		[4072, 89],
+		[4079, 12],
+		[4086, 62],
+		[4093, 27],
+		[4100, 1],
+		[4107, 16],
+		[4114, 41],
+		[4121, 10],
+		[4128, 18]
+	]
 }

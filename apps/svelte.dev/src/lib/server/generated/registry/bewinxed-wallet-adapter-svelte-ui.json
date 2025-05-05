@@ -7,32 +7,12 @@
 	"downloads": 21,
 	"updated": "2024-08-27T19:09:03.201Z",
 	"tags": ["ui", "integration"],
-	"runes": true,
-	"github_stars": 8,
+	"github_stars": 9,
 	"typescript": true,
 	"version": "0.2.1",
 	"svelte_range": "^5.0.0-next.1",
 	"kit_range": "^2.5.24",
 	"last_rune_check_version": "0.2.1",
-	"downloads_history": [
-		[3910, 12],
-		[3917, 1],
-		[3931, 3],
-		[3938, 1],
-		[3959, 14],
-		[3973, 1],
-		[3987, 1],
-		[4001, 1],
-		[4036, 26],
-		[4043, 20],
-		[4064, 13],
-		[4071, 40],
-		[4078, 26],
-		[4092, 1],
-		[4099, 389],
-		[4106, 4],
-		[4113, 21]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -83,13 +63,13 @@
 			},
 			{
 				"name": "@noble/curves",
-				"version": "1.8.2",
-				"size": 1645456
+				"version": "1.9.0",
+				"size": 1697790
 			},
 			{
 				"name": "@noble/hashes",
-				"version": "1.7.2",
-				"size": 1100967
+				"version": "1.8.0",
+				"size": 1145416
 			},
 			{
 				"name": "@solana/wallet-standard-chains",
@@ -293,8 +273,8 @@
 			},
 			{
 				"name": "svelte",
-				"version": "5.28.1",
-				"size": 2426419
+				"version": "5.28.2",
+				"size": 2426223
 			},
 			{
 				"name": "@ampproject/remapping",
@@ -590,5 +570,28 @@
 			[51, 69]
 		],
 		"circular": []
-	}
+	},
+	"legacy_svelte": false,
+	"readme": "# `@bewinxed/wallet-adapter-svelte-ui`\n\nThis is a direct port of [anza-xyz/wallet-adapter](https://github.com/anza-xyz/wallet-adapter) to Svelte 5 (Will not support older versions).\n\nWith (IMO) better UI, Accessibility, and Performance.\n\n# Requirements\n**Note:** Svelte 5 & TailwindCSS are required!\n\n## Installation\nMake sure you install the [Wallet Adapter](https://www.npmjs.com/package/@bewinxed/wallet-adapter-svelte) first.\n```\nnpm install @bewinxed/wallet-adapter-svelte-ui\npnpm add @bewinxed/wallet-adapter-svelte-ui\nbun add @bewinxed/wallet-adapter-svelte-ui\n```\n\n## Setup\nAdd the connection/wallet/modal providers into your main layout.\n```svelte\n<script lang=\"ts\">\n\timport { ConnectionProvider, WalletProvider } from '@bewinxed/wallet-adapter-svelte';\n    import { WalletModalProvider, WalletMultiButton } from '@bewinxed/wallet-adapter-svelte-ui';\n\timport { Connection, PublicKey } from '@solana/web3.js';\n\timport { onMount } from 'svelte';\n</script>\n\n<ConnectionProvider config={{endpoint: 'https://api.mainnet-beta.solana.com'}}>\n\t<WalletProvider wallets={[]}>\n\t\t<WalletModalProvider>\n\t\t\t<WalletMultiButton />\n\t\t</WalletModalProvider>\n\t</WalletProvider>\n</ConnectionProvider>\n```\n\n## Context\nThe connection and wallet data are available in one rune, useSolana().\n```svelte\n<script lang=\"ts\">\n\timport { useSolana } from '@bewinxed/wallet-adapter-svelte';\n\n    const solana = useSolana();\n    const {connection, context} = $derived(solana);\n</script>\n\n{#if context.wallet}\n\t{context.wallet.publicKey}\n{/if}\n```\n\n## Events\nMultiple helpful event types have been exposed on the WalletProvider and WalletModalProvider, as well as the WalletMultiButton.\n# WalletProvider\n- onconnect\n- ondisconnect\n- onerror\n# WalletModalProvider\n- onopen\n- onclose\n# WalletMultiButton\n- onconnect\n- ondisconnect\n- onselectwallet\n- ...all HTML button props/handlers.\n\n# Changes/Fixes vs Wallet Adapter & Svelte-On-Solana\n- Wallets are auto detected now, no need to add them separately.\n- Updates in line with the React version (With much cleanup because react).\n- No svelte stores needed, all done with runes now.\n- Better UI (Styled with tailwind, CSS later if asked.)\n- Accessibility (Keyboard navigation, focus management, etc.)\n\n## Customization\n- You can pass classes/styles to the buttons now, making it easier to customize the button for your app vs fiddling with global CSS styles.\n```svelte\n<WalletMultiButton class=\"bg-red-500 text-white rounded-full p-2\" />\n```\n**Note:** The buttons have helpful attributes for styling, such as `square` and `flat`.\n| Attribute | Description |\n| --- | --- |\n| `square` | Removes border radius.\n| `flat` | Removes shadows.\n| `headless` | Removes all styling from the button, then you can pass your own styles.\n\n## CSS Variables (Will work next version)\nYou can use the following CSS variables to customize the WalletAdapter Svelte UI.\n| Variable | Description |\n| --- | --- |\n| `--solana-primary` | Primary color for the WalletAdapter Svelte UI.\n| `--solana-primary-light` | Lighter primary color for the WalletAdapter Svelte UI.\n| `--solana-secondary` | Secondary color for the WalletAdapter Svelte UI.\n| `--solana-secondary-light` | Lighter secondary color for the WalletAdapter Svelte UI.\n| `--solana-accent` | Accent color for the WalletAdapter Svelte UI.\n| `--solana-accent-light` | Lighter accent color for the WalletAdapter Svelte UI.\n| `--solana-backdrop` | Backdrop color for the WalletAdapter Svelte UI.\n\n## Comparison\nBetter Modal UI, Native modal on mobile.\n\nOld:\n![before](https://github.com/bewinxed/wallet-adapter-svelte-ui/blob/main/static/image-1.png?raw=true)\n\nNew:\n![after](https://github.com/bewinxed/wallet-adapter-svelte-ui/blob/main/static/image.png?raw=true)\n\n## Next up.\n- Add helpful utilities to generate messages/transactions/send transactions.\n- UI polishes.\n- Make sure Anchor works.\n- Migrate to @solana/web3.js 2.* experimental.",
+	"downloads_history": [
+		[3911, 12],
+		[3918, 1],
+		[3932, 3],
+		[3939, 1],
+		[3960, 14],
+		[3974, 1],
+		[3988, 1],
+		[4002, 1],
+		[4037, 26],
+		[4044, 20],
+		[4065, 13],
+		[4072, 40],
+		[4079, 26],
+		[4093, 1],
+		[4100, 389],
+		[4107, 4],
+		[4114, 21],
+		[4121, 7],
+		[4128, 35]
+	]
 }

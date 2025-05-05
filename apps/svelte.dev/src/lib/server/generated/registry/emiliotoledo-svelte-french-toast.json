@@ -7,27 +7,12 @@
 	"downloads": 8,
 	"updated": "2024-07-22T05:24:05.446Z",
 	"tags": ["ui"],
-	"runes": false,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "1.3.3",
 	"svelte_range": "^3.57.0 || ^4.0.0",
 	"kit_range": "^1.20.5",
 	"last_rune_check_version": "1.3.3",
-	"downloads_history": [
-		[3903, 1],
-		[3924, 1],
-		[3931, 1],
-		[3952, 1],
-		[3973, 1],
-		[4001, 1],
-		[4022, 1],
-		[4071, 1],
-		[4092, 22],
-		[4099, 20],
-		[4106, 1],
-		[4113, 8]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -44,5 +29,23 @@
 		],
 		"dependencies": [[0, 1]],
 		"circular": []
-	}
+	},
+	"readme": "<img src=\"./header-image.png\" alt=\"\" />\n<p align=\"center\">\n<img src=\"https://badgen.net/badge/license/MIT/blue\" />\n<img src=\"https://badgen.net/npm/v/svelte-french-toast\" />\n</p>\n<p align=\"center\">\n<a href=\"https://svelte-french-toast.vercel.app\">Website</a> · <a href=\"https://npmjs.com/package/svelte-french-toast\">NPM Package</a>\n</p>\n\n# svelte-french-toast\n\n> Buttery smooth Svelte notifications.\n\nsvelte-french-toast is a Svelte port of Timo Lins’s react-hot-toast, a lightweight, customizable, and beautiful-by-default toast notification library.\n\n## Installation\n\nInstall the package with your favorite package manager:\n\n```\nnpm install svelte-french-toast\n```\n\n```\npnpm install svelte-french-toast\n```\n\n```\nyarn add svelte-french-toast\n```\n\n## Basic usage\n\nMount a `<Toaster />` at the top level of your app and use the `toast` API to display toasts.\n\n```js\n<script>\n\timport toast, {Toaster} from 'svelte-french-toast'\n\n\tfunction handleClick() {\n\t\ttoast.success('Hello, world!')\n\t}\n</script>\n\n<Toaster />\n<button type=\"button\" on:click={handleClick}>Toast</button>\n```\n\nFor more usage examples, see [the website](https://svelte-french-toast.vercel.app).\n\n## Thanks\n\nThanks to the original author of React Hot Toast and its contributors.\n\n```\nMIT License\n\nCopyright (c) 2020 Timo Lins\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n```\n",
+	"legacy_svelte": true,
+	"downloads_history": [
+		[3904, 1],
+		[3925, 1],
+		[3932, 1],
+		[3953, 1],
+		[3974, 1],
+		[4002, 1],
+		[4023, 1],
+		[4072, 1],
+		[4093, 22],
+		[4100, 20],
+		[4107, 1],
+		[4114, 8],
+		[4121, 4],
+		[4128, 4]
+	]
 }

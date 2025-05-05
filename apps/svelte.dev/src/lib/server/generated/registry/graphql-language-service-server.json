@@ -20,125 +20,44 @@
 	],
 	"homepage": "https://github.com/graphql/graphiql/tree/main/packages/graphql-language-service-server#readme",
 	"downloads": 3210,
-	"updated": "2025-03-14T02:16:24.594Z",
+	"updated": "2025-05-04T16:17:49.133Z",
 	"tags": ["tooling"],
-	"runes": false,
-	"github_stars": 16381,
+	"github_stars": 16420,
 	"typescript": true,
-	"version": "2.14.1",
+	"version": "2.14.4",
 	"svelte_range": "^4.2.19",
-	"last_rune_check_version": "2.14.1",
-	"downloads_history": [
-		[3574, 2761],
-		[3581, 2817],
-		[3588, 1872],
-		[3595, 2848],
-		[3602, 2557],
-		[3609, 3672],
-		[3616, 3105],
-		[3623, 2680],
-		[3630, 2802],
-		[3637, 2661],
-		[3644, 2527],
-		[3651, 2891],
-		[3658, 4737],
-		[3665, 4711],
-		[3672, 6116],
-		[3679, 4477],
-		[3686, 3076],
-		[3693, 2899],
-		[3700, 3303],
-		[3707, 3033],
-		[3714, 2954],
-		[3721, 2755],
-		[3728, 2745],
-		[3735, 2323],
-		[3742, 2879],
-		[3749, 2993],
-		[3756, 2846],
-		[3763, 2746],
-		[3770, 3147],
-		[3777, 3007],
-		[3784, 3025],
-		[3791, 3151],
-		[3798, 3546],
-		[3805, 4213],
-		[3812, 3704],
-		[3819, 3429],
-		[3826, 3688],
-		[3833, 3684],
-		[3840, 3365],
-		[3847, 2977],
-		[3854, 3408],
-		[3861, 4989],
-		[3868, 5124],
-		[3875, 5016],
-		[3882, 4248],
-		[3889, 4039],
-		[3896, 3720],
-		[3903, 3611],
-		[3910, 4410],
-		[3917, 3927],
-		[3924, 3985],
-		[3931, 3623],
-		[3938, 4052],
-		[3945, 4082],
-		[3952, 3518],
-		[3959, 3764],
-		[3966, 3501],
-		[3973, 3675],
-		[3980, 3405],
-		[3987, 3061],
-		[3994, 3702],
-		[4001, 3202],
-		[4008, 2521],
-		[4015, 3013],
-		[4022, 3433],
-		[4029, 3789],
-		[4036, 3405],
-		[4043, 3716],
-		[4050, 3471],
-		[4057, 3554],
-		[4064, 2847],
-		[4071, 2757],
-		[4078, 3234],
-		[4085, 4266],
-		[4092, 3578],
-		[4099, 3132],
-		[4106, 2849],
-		[4113, 3210]
-	],
+	"last_rune_check_version": "2.14.4",
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
 			{
 				"name": "graphql-language-service-server",
-				"version": "2.14.1",
-				"size": 689013
+				"version": "2.14.4",
+				"size": 688818
 			},
 			{
 				"name": "@astrojs/compiler",
-				"version": "2.11.0",
-				"size": 5225541
+				"version": "2.12.0",
+				"size": 5226029
 			},
 			{
 				"name": "@babel/parser",
-				"version": "7.27.0",
-				"size": 1924962
+				"version": "7.27.1",
+				"size": 1859876
 			},
 			{
 				"name": "@babel/types",
-				"version": "7.27.0",
-				"size": 2583295
+				"version": "7.27.1",
+				"size": 2597469
 			},
 			{
 				"name": "@babel/helper-string-parser",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 31816
 			},
 			{
 				"name": "@babel/helper-validator-identifier",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 48330
 			},
 			{
@@ -314,67 +233,13 @@
 			},
 			{
 				"name": "@babel/core",
-				"version": "7.26.10",
-				"size": 795988
+				"version": "7.27.1",
+				"size": 794180
 			},
 			{
-				"name": "debug",
-				"version": "4.4.0",
-				"size": 42798
-			},
-			{
-				"name": "ms",
-				"version": "2.1.3",
-				"size": 6721
-			},
-			{
-				"name": "json5",
-				"version": "2.2.3",
-				"size": 235198
-			},
-			{
-				"name": "semver",
-				"version": "6.3.1",
-				"size": 68343
-			},
-			{
-				"name": "gensync",
-				"version": "1.0.0-beta.2",
-				"size": 28891
-			},
-			{
-				"name": "@babel/helpers",
-				"version": "7.27.0",
-				"size": 866498
-			},
-			{
-				"name": "@babel/template",
-				"version": "7.27.0",
-				"size": 70675
-			},
-			{
-				"name": "@babel/code-frame",
-				"version": "7.26.2",
-				"size": 33160
-			},
-			{
-				"name": "js-tokens",
-				"version": "4.0.0"
-			},
-			{
-				"name": "picocolors",
-				"version": "1.1.1",
-				"size": 6373
-			},
-			{
-				"name": "@babel/traverse",
-				"version": "7.27.0",
-				"size": 676526
-			},
-			{
-				"name": "@babel/generator",
-				"version": "7.27.0",
-				"size": 559855
+				"name": "@ampproject/remapping",
+				"version": "2.3.0",
+				"size": 78946
 			},
 			{
 				"name": "@jridgewell/gen-mapping",
@@ -402,64 +267,58 @@
 				"size": 53153
 			},
 			{
+				"name": "@babel/code-frame",
+				"version": "7.27.1",
+				"size": 33160
+			},
+			{
+				"name": "js-tokens",
+				"version": "4.0.0"
+			},
+			{
+				"name": "picocolors",
+				"version": "1.1.1",
+				"size": 6373
+			},
+			{
+				"name": "@babel/generator",
+				"version": "7.27.1",
+				"size": 560098
+			},
+			{
 				"name": "jsesc",
 				"version": "3.1.0",
 				"size": 32280
 			},
 			{
-				"name": "globals",
-				"version": "11.12.0",
-				"size": 39779
-			},
-			{
-				"name": "convert-source-map",
-				"version": "2.0.0",
-				"size": 15854
-			},
-			{
-				"name": "@ampproject/remapping",
-				"version": "2.3.0",
-				"size": 78946
-			},
-			{
-				"name": "@babel/helper-module-transforms",
-				"version": "7.26.0",
-				"size": 160842
-			},
-			{
-				"name": "@babel/helper-module-imports",
-				"version": "7.25.9",
-				"size": 63714
-			},
-			{
 				"name": "@babel/helper-compilation-targets",
-				"version": "7.27.0",
+				"version": "7.27.1",
 				"size": 53776
 			},
 			{
 				"name": "@babel/compat-data",
-				"version": "7.26.8",
-				"size": 66428
+				"version": "7.27.1",
+				"size": 66193
 			},
 			{
 				"name": "@babel/helper-validator-option",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 11775
 			},
 			{
 				"name": "browserslist",
-				"version": "4.24.4",
-				"size": 64926
+				"version": "4.24.5",
+				"size": 65174
 			},
 			{
 				"name": "caniuse-lite",
-				"version": "1.0.30001715",
-				"size": 2211246
+				"version": "1.0.30001716",
+				"size": 2214832
 			},
 			{
 				"name": "electron-to-chromium",
-				"version": "1.5.140",
-				"size": 162065
+				"version": "1.5.149",
+				"size": 163189
 			},
 			{
 				"name": "node-releases",
@@ -487,14 +346,74 @@
 				"size": 14766
 			},
 			{
+				"name": "semver",
+				"version": "6.3.1",
+				"size": 68343
+			},
+			{
+				"name": "@babel/helper-module-transforms",
+				"version": "7.27.1",
+				"size": 160852
+			},
+			{
+				"name": "@babel/helper-module-imports",
+				"version": "7.27.1",
+				"size": 63724
+			},
+			{
+				"name": "@babel/traverse",
+				"version": "7.27.1",
+				"size": 689113
+			},
+			{
+				"name": "@babel/template",
+				"version": "7.27.1",
+				"size": 70675
+			},
+			{
+				"name": "debug",
+				"version": "4.4.0",
+				"size": 42798
+			},
+			{
+				"name": "ms",
+				"version": "2.1.3",
+				"size": 6721
+			},
+			{
+				"name": "globals",
+				"version": "11.12.0",
+				"size": 39779
+			},
+			{
+				"name": "@babel/helpers",
+				"version": "7.27.1",
+				"size": 861892
+			},
+			{
+				"name": "convert-source-map",
+				"version": "2.0.0",
+				"size": 15854
+			},
+			{
+				"name": "gensync",
+				"version": "1.0.0-beta.2",
+				"size": 28891
+			},
+			{
+				"name": "json5",
+				"version": "2.2.3",
+				"size": 235198
+			},
+			{
 				"name": "@babel/plugin-syntax-import-assertions",
-				"version": "7.26.0",
+				"version": "7.27.1",
 				"size": 5735
 			},
 			{
 				"name": "@babel/helper-plugin-utils",
-				"version": "7.26.5",
-				"size": 11985
+				"version": "7.27.1",
+				"size": 11818
 			},
 			{
 				"name": "cosmiconfig-toml-loader",
@@ -670,8 +589,8 @@
 			},
 			{
 				"name": "ws",
-				"version": "8.18.1",
-				"size": 146780
+				"version": "8.18.2",
+				"size": 147181
 			},
 			{
 				"name": "@types/ws",
@@ -680,8 +599,8 @@
 			},
 			{
 				"name": "@types/node",
-				"version": "22.14.1",
-				"size": 2331510
+				"version": "22.15.3",
+				"size": 2350386
 			},
 			{
 				"name": "undici-types",
@@ -865,18 +784,18 @@
 			},
 			{
 				"name": "graphql-language-service",
-				"version": "5.3.0",
-				"size": 827949
-			},
-			{
-				"name": "nullthrows",
-				"version": "1.1.1",
-				"size": 2842
+				"version": "5.3.1",
+				"size": 825263
 			},
 			{
 				"name": "debounce-promise",
 				"version": "3.1.2",
 				"size": 18739
+			},
+			{
+				"name": "nullthrows",
+				"version": "1.1.1",
+				"size": 2842
 			},
 			{
 				"name": "vscode-languageserver-types",
@@ -975,8 +894,8 @@
 			},
 			{
 				"name": "svelte2tsx",
-				"version": "0.7.36",
-				"size": 766555
+				"version": "0.7.37",
+				"size": 772627
 			},
 			{
 				"name": "dedent-js",
@@ -1159,67 +1078,67 @@
 			[40, 41],
 			[41, 42],
 			[42, 43],
-			[41, 44],
-			[41, 45],
-			[41, 46],
-			[41, 3],
-			[41, 2],
-			[41, 47],
-			[47, 48],
-			[48, 49],
-			[49, 50],
-			[49, 51],
-			[49, 5],
-			[48, 2],
-			[48, 3],
-			[47, 3],
+			[43, 44],
+			[43, 45],
+			[43, 46],
+			[46, 47],
+			[46, 45],
+			[42, 46],
 			[41, 48],
-			[41, 52],
-			[52, 49],
-			[52, 53],
-			[53, 2],
-			[53, 3],
-			[53, 54],
-			[54, 55],
-			[54, 56],
-			[54, 57],
-			[57, 58],
-			[57, 56],
-			[53, 57],
-			[53, 59],
-			[52, 2],
-			[52, 48],
-			[52, 3],
-			[52, 42],
-			[52, 60],
+			[48, 5],
+			[48, 49],
+			[48, 50],
+			[41, 51],
+			[51, 2],
+			[51, 3],
+			[51, 43],
+			[51, 46],
+			[51, 52],
 			[41, 53],
-			[41, 49],
-			[41, 61],
-			[41, 62],
-			[62, 54],
-			[62, 57],
-			[41, 63],
-			[63, 52],
-			[63, 64],
-			[64, 3],
-			[64, 52],
-			[63, 5],
+			[53, 54],
+			[53, 55],
+			[53, 56],
+			[56, 57],
+			[56, 58],
+			[56, 59],
+			[56, 60],
+			[60, 61],
+			[60, 50],
+			[53, 62],
+			[62, 63],
+			[53, 64],
 			[41, 65],
 			[65, 66],
+			[66, 67],
+			[67, 48],
+			[67, 51],
+			[67, 2],
+			[67, 68],
+			[68, 48],
+			[68, 2],
+			[68, 3],
+			[67, 3],
+			[67, 69],
+			[69, 70],
+			[67, 71],
+			[66, 3],
+			[65, 5],
 			[65, 67],
-			[65, 68],
-			[68, 69],
-			[68, 70],
-			[68, 71],
-			[68, 72],
-			[72, 73],
-			[72, 51],
-			[65, 74],
-			[74, 75],
-			[65, 45],
+			[41, 72],
+			[72, 68],
+			[72, 3],
+			[41, 2],
+			[41, 68],
+			[41, 67],
+			[41, 3],
+			[41, 73],
+			[41, 69],
+			[41, 74],
+			[41, 75],
+			[41, 64],
 			[40, 3],
 			[40, 2],
-			[40, 52],
+			[40, 67],
 			[40, 35],
 			[40, 76],
 			[76, 77],
@@ -1255,7 +1174,7 @@
 			[95, 102],
 			[102, 103],
 			[103, 104],
-			[102, 49],
+			[102, 48],
 			[102, 105],
 			[102, 106],
 			[95, 13],
@@ -1381,12 +1300,12 @@
 			[0, 157],
 			[0, 158],
 			[0, 159],
-			[0, 154],
+			[0, 155],
 			[0, 160],
 			[0, 161],
 			[161, 162],
 			[161, 163],
-			[163, 56],
+			[163, 45],
 			[163, 164],
 			[163, 162],
 			[163, 165],
@@ -1403,14 +1322,14 @@
 			[161, 166],
 			[161, 167],
 			[161, 172],
-			[172, 56],
+			[172, 45],
 			[161, 164],
 			[161, 165],
 			[161, 173],
 			[161, 174],
-			[161, 62],
-			[161, 57],
-			[161, 56],
+			[161, 42],
+			[161, 46],
+			[161, 45],
 			[0, 175],
 			[175, 176],
 			[175, 177],
@@ -1448,7 +1367,7 @@
 			[187, 197],
 			[197, 198],
 			[198, 199],
-			[198, 51],
+			[198, 50],
 			[198, 170],
 			[197, 188],
 			[197, 172],
@@ -1465,5 +1384,87 @@
 			[201, 200]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# graphql-language-service-server\n\n[![NPM](https://img.shields.io/npm/v/graphql-language-service-server.svg?style=flat-square)](https://npmjs.com/graphql-language-service-server)\n![npm downloads](https://img.shields.io/npm/dm/graphql-language-service-server?label=npm%20downloads)\n[![License](https://img.shields.io/npm/l/graphql-language-service-server.svg?style=flat-square)](LICENSE)\n\n[Changelog](https://github.com/graphql/graphiql/blob/main/packages/graphql-language-service-server/CHANGELOG.md)\n|\n[API Docs](https://graphiql-test.netlify.app/typedoc/modules/graphql_language_service_server.html)\n| [Discord Channel](https://discord.gg/PXaRYrpgK4)\n\nServer process backing the\n[GraphQL Language Service](https://github.com/graphql/graphiql/tree/main/packages/graphql-language-service).\n\nGraphQL Language Service Server provides an interface for building GraphQL\nlanguage services for IDEs.\n\nPartial support for\n[Microsoft's Language Server Protocol](https://github.com/Microsoft/language-server-protocol)\nis in place, with more to come in the future.\n\nSupported features include:\n\n- Diagnostics (GraphQL syntax linting/validations) (**spec-compliant**)\n- Autocomplete suggestions (**spec-compliant**)\n- Hyperlink to fragment definitions and named types (type, input, enum)\n  definitions (**spec-compliant**)\n- Outline view support for queries\n- Support for `gql` `graphql` and other template tags inside javascript,\n  typescript, jsx, ts, vue and svelte files, and an interface to allow custom\n  parsing of all files.\n\n## Installation and Usage\n\n### Dependencies\n\n- An LSP compatible client with its own file watcher, that sends watch\n  notifications to the server, such as vscode, nvim, or sublime-lsp.\n- Node.js `^18.18.0 || >=20.9.0` or later is required.\n- (for now) a graphql config file is required\n\n### Installation\n\n```bash\nnpm install graphql-language-service-server\n# or\nyarn add graphql-language-service-server\n```\n\nWe also provide a CLI interface to this server, see\n[`graphql-language-service-cli`](../graphql-language-service-cli/)\n\n### Usage\n\nInitialize the GraphQL Language Server with the `startServer` function:\n\n```ts\nimport { startServer } from 'graphql-language-service-server';\n\nawait startServer({\n  method: 'node',\n});\n```\n\nIf you are developing a service or extension, this is the LSP language server\nyou want to run.\n\nWhen developing vscode extensions, just the above is enough to get started for\nyour extension's `ServerOptions.run.module`, for example.\n\n`startServer` function takes the following parameters:\n\n| Parameter      | Required                                             | Description                                                                       |\n| -------------- | ---------------------------------------------------- | --------------------------------------------------------------------------------- |\n| port           | `true` when method is `socket`, `false` otherwise    | port for the LSP server to run on                                                 |\n| method         | `false`                                              | `socket`, `streams`, or `node` (ipc)                                              |\n| config         | `false`                                              | custom `graphql-config` instance from `loadConfig` (see example above)            |\n| configDir      | `false`                                              | the directory where graphql-config is found                                       |\n| extensions     | `false`                                              | array of functions to transform the graphql-config and add extensions dynamically |\n| parser         | `false`                                              | Customize _all_ file parsing by overriding the default `parseDocument` function   |\n| fileExtensions | `false`. defaults to `['.js', '.ts', '.tsx, '.jsx']` | Customize file extensions used by the default LSP parser                          |\n\n### GraphQL configuration file\n\nYou _must_ provide a graphql config file\n\nCheck out [graphql-config](https://graphql-config.com/introduction) to learn the\nmany ways you can define your graphql config\n\n#### `.graphqlrc` or `.graphqlrc.yml/yaml` or `graphql.config.yml`\n\n```yaml\nschema: 'packages/api/src/schema.graphql'\ndocuments: 'packages/app/src/components/**/*.{tsx,ts}'\nextensions:\n  endpoints:\n    example:\n      url: 'http://localhost:8000'\n  customExtension:\n    foo: true\n```\n\n#### `.graphqlrc` or `.graphqlrc.json` or `graphql.config.json`\n\n```json\n{\n  \"schema\": \"https://localhost:8000\"\n}\n```\n\n#### `graphql.config.js` or `.graphqlrc.js`\n\n```js\nmodule.exports = { schema: 'https://localhost:8000' };\n```\n\n#### custom `startServer`\n\nuse graphql config [`loadConfig`](https://graphql-config.com/load-config) for\nfurther customization:\n\n```ts\nimport { loadConfig } from 'graphql-config'; // 3.0.0 or later!\n\n// with required params\nconst config = await loadConfig();\n\nawait startServer({\n  method: 'node',\n  // or instead of configName, an exact path (relative from rootDir or absolute)\n\n  // deprecated for: loadConfigOptions.rootDir. root directory for graphql config file(s), or for relative resolution for exact `filePath`. default process.cwd()\n  // configDir: '',\n  loadConfigOptions: {\n    // any of the options for graphql-config@3 `loadConfig()`\n    schema: await config.getSchema(),\n    // rootDir is same as `configDir` before, the path where the graphql config file would be found by cosmic-config\n    rootDir: 'config/',\n    // or - the relative or absolute path to your file\n    filePath: 'exact/path/to/config.js', // (also supports yml, json, ts, toml)\n    // myPlatform.config.js/json/yaml works now!\n    configName: 'myPlatform',\n  },\n});\n```\n\n<span id=\"custom-graphql-config\" />\n\n#### Custom `graphql-config` features\n\nThe graphql-config features we support are:\n\n```js\nmodule.exports = {\n  extensions: {\n    // add customDirectives (legacy). you can now provide multiple schema pointers to config.schema/project.schema, including inline strings. same with scalars or any SDL type that you'd like to append to the schema\n    customDirectives: ['@myExampleDirective'],\n    // a function that returns an array of validation rules, ala https://github.com/graphql/graphql-js/tree/main/src/validation/rules\n    // note that this file will be loaded by the vscode runtime, so the node version and other factors will come into play\n    customValidationRules: require('./config/customValidationRules'),\n    schemaCacheTTL: 1000, // reduce or increase minimum schema cache lifetime from 30000ms (30 seconds). you may want to reduce this if you are developing fullstack with network schema\n    languageService: {\n      // this is enabled by default if non-local files are specified in the project `schema`\n      // NOTE: this will disable all definition lookup for local SDL files\n      cacheSchemaFileForLookup: true,\n      // undefined by default which has the same effect as `true`, set to `false` if you are already using // `graphql-eslint` or some other tool for validating graphql in your IDE. Must be explicitly `false` to disable this feature, not just \"falsy\"\n      enableValidation: true,\n      // (experimental) enhanced auto expansion of graphql leaf fields and arguments\n      fillLeafsOnComplete: true,\n      // instead of jumping directly to the SDL file, you can override definition peek/jump results to point to different files or locations\n      // (for example, source files for your schema in any language!)\n      // based on Relay vscode's pathToLocateCommand\n      // see LocateCommand type!\n      locateCommand(projectName, typePath, info) {\n        // pass more info, such as GraphQLType with the ast node. info.project is also available if you need it\n        const { path, range } = ourLookupUtility(\n          projectName,\n          typePath,\n          info.type.node,\n        );\n        return { uri: path, range }; // range.start.line/range.end.character/etc, base 1\n        // you can also return relay LSP style\n        // return '/path/to/file.py:20:23'; // (range: 20:1 )\n        // return '/path/to/file.py'; // (range: 1:1 1:1)\n      },\n    },\n  },\n};\n```\n\nor for multi-project workspaces:\n\n```ts\n// graphql.config.ts\nexport default {\n  projects: {\n    myProject: {\n      schema: [\n        // internally in `graphql-config`, an attempt will be made to combine these schemas into one in-memory schema to use for validation, lookup, etc\n        'http://localhost:8080',\n        './my-project/schema.graphql',\n        './my-project/schema.ts',\n        '@customDirective(arg: String!)',\n        'scalar CustomScalar',\n      ],\n      // project specific defaults\n      extensions: {\n        languageService: {\n          cacheSchemaFileForLookup: true,\n          enableValidation: false,\n        },\n      },\n    },\n    anotherProject: {\n      schema: {\n        'http://localhost:8081': {\n          customHeaders: { Authorization: 'Bearer example' },\n        },\n      },\n    },\n  },\n  // global defaults for all projects\n  extensions: {\n    languageService: {\n      cacheSchemaFileForLookup: false,\n      enableValidation: true,\n    },\n  },\n};\n```\n\nYou can specify any of these settings globally as above, or per project. Read\nthe graphql-config docs to learn more about this!\n\nFor secrets (headers, urls, etc), you can import `dotenv()` and set a base path\nas you wish in your `graphql-config` file to pre-load `process.env` variables.\n\n### Troubleshooting notes\n\n- you may need to manually restart the language server for some of these\n  configurations to take effect\n- graphql-config's multi-project support is not related to multi-root workspaces\n  in vscode - in fact, each workspace can have multiple graphql config projects,\n  which is what makes multi-root workspaces tricky to support. coming soon!\n\n<span id=\"workspace-configuration\" />\n\n### Workspace Configuration\n\nThe LSP Server reads config by sending `workspace/configuration` method when it\ninitializes.\n\nNote: We still do not support LSP multi-root workspaces but will tackle this\nvery soon!\n\nMany LSP clients beyond vscode offer ways to set these configurations, such as\nvia `initializationOptions` in nvim.coc. The options are mostly designed to\nconfigure graphql-config's load parameters, the only thing we can't configure\nwith graphql config. The final option can be set in `graphql-config` as well\n\n| Parameter                                 | Default                                           | Description                                                                                                                                                                                                                                                                                         |\n| ----------------------------------------- | ------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `graphql-config.load.baseDir`             | workspace root or process.cwd()                   | the path where graphql config looks for config files                                                                                                                                                                                                                                                |\n| `graphql-config.load.filepath`            | `null`                                            | exact filepath of the config file.                                                                                                                                                                                                                                                                  |\n| `graphql-config.load.configName`          | `graphql`                                         | config name prefix instead of `graphql`                                                                                                                                                                                                                                                             |\n| `graphql-config.load.legacy`              | `true`                                            | backwards compatibility with `graphql-config@2`                                                                                                                                                                                                                                                     |\n| `graphql-config.dotEnvPath`               | `null`                                            | backwards compatibility with `graphql-config@2`                                                                                                                                                                                                                                                     |\n| `vscode-graphql.cacheSchemaFileForLookup` | `true` if `schema` contains non-SDL files or URLs | generate an SDL file based on your graphql-config schema configuration for definition lookup and other features. enabled by default when your `schema` config are URLs or introspection JSON, or if you have any non-local SDL files in `schema`                                                    |\n| `vscode-graphql.schemaCacheTTL`           | `30000`                                           | an integer value in milliseconds for the desired minimum cache lifetime for all schemas, which also causes the generated file to be re-written. set to 30s by default. effectively a \"lazy\" form of polling. if you are developing a schema alongside client queries, you may want to decrease this |\n| `vscode-graphql.debug`                    | `false`                                           | show more verbose log output in the output channel                                                                                                                                                                                                                                                  |\n\nall the `graphql-config.load.*` configuration values come from static\n`loadConfig()` options in graphql config.\n\n(more coming soon!)\n\n### Architectural Overview\n\nGraphQL Language Service currently communicates via Stream transport with the\nIDE server. GraphQL server will receive/send RPC messages to perform language\nservice features, while caching the necessary GraphQL artifacts such as fragment\ndefinitions, GraphQL schemas etc. More about the server interface and RPC\nmessage format below.\n\nThe IDE server should launch a separate GraphQL server with its own child\nprocess for each `.graphqlrc.yml` file the IDE finds (using the nearest ancestor\ndirectory relative to the file currently being edited):\n\n```\n./application\n\n  ./productA\n    .graphqlrc.yml\n    ProductAQuery.graphql\n    ProductASchema.graphql\n\n  ./productB\n    .graphqlrc.yml\n    ProductBQuery.graphql\n    ProductBSchema.graphql\n```\n\nA separate GraphQL server should be instantiated for `ProductA` and `ProductB`,\neach with its own `.graphqlrc.yml` file, as illustrated in the directory\nstructure above.\n\nThe IDE server should manage the lifecycle of the GraphQL server. Ideally, the\nIDE server should spawn a child process for each of the GraphQL Language Service\nprocesses necessary, and gracefully exit the processes as the IDE closes. In\ncase of errors or a sudden halt the GraphQL Language Service will close as the\nstream from the IDE closes.\n\n### Server Interface\n\nGraphQL Language Server uses [JSON-RPC](http://www.jsonrpc.org/specification) to\ncommunicate with the IDE servers. Microsoft's language server currently supports\ntwo communication transports: Stream (stdio) and IPC. For IPC transport, the\nreference guide to be used for development is\n[the language server protocol](https://microsoft.github.io/language-server-protocol/specification)\ndocumentation.\n\nFor each transport, there is a slight difference in JSON message format,\nespecially in how the methods to be invoked are defined - below are the\ncurrently supported methods for each transport (will be updated as progress is\nmade):\n\n|                      | Stream                       | IPC                                         |\n| -------------------: | ---------------------------- | ------------------------------------------- |\n|          Diagnostics | `getDiagnostics`             | `textDocument/publishDiagnostics`           |\n|       Autocompletion | `getAutocompleteSuggestions` | `textDocument/completion`                   |\n|              Outline | `getOutline`                 | `textDocument/outline`                      |\n|     Document Symbols | `getDocumentSymbols`         | `textDocument/symbols`                      |\n|    Workspace Symbols | `getWorkspaceSymbols`        | `workspace/symbols`                         |\n|     Go-to definition | `getDefinition`              | `textDocument/definition`                   |\n| Workspace Definition | `getWorkspaceDefinition`     | `workspace/definition`                      |\n|          File Events | Not supported yet            | `didOpen/didClose/didSave/didChange` events |\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3589, 1872],
+		[3596, 2848],
+		[3603, 2557],
+		[3610, 3672],
+		[3617, 3105],
+		[3624, 2680],
+		[3631, 2802],
+		[3638, 2661],
+		[3645, 2527],
+		[3652, 2891],
+		[3659, 4737],
+		[3666, 4711],
+		[3673, 6116],
+		[3680, 4477],
+		[3687, 3076],
+		[3694, 2899],
+		[3701, 3303],
+		[3708, 3033],
+		[3715, 2954],
+		[3722, 2755],
+		[3729, 2745],
+		[3736, 2323],
+		[3743, 2879],
+		[3750, 2993],
+		[3757, 2846],
+		[3764, 2746],
+		[3771, 3147],
+		[3778, 3007],
+		[3785, 3025],
+		[3792, 3151],
+		[3799, 3546],
+		[3806, 4213],
+		[3813, 3704],
+		[3820, 3429],
+		[3827, 3688],
+		[3834, 3684],
+		[3841, 3365],
+		[3848, 2977],
+		[3855, 3408],
+		[3862, 4989],
+		[3869, 5124],
+		[3876, 5016],
+		[3883, 4248],
+		[3890, 4039],
+		[3897, 3720],
+		[3904, 3611],
+		[3911, 4410],
+		[3918, 3927],
+		[3925, 3985],
+		[3932, 3623],
+		[3939, 4052],
+		[3946, 4082],
+		[3953, 3518],
+		[3960, 3764],
+		[3967, 3501],
+		[3974, 3675],
+		[3981, 3405],
+		[3988, 3061],
+		[3995, 3702],
+		[4002, 3202],
+		[4009, 2521],
+		[4016, 3013],
+		[4023, 3433],
+		[4030, 3789],
+		[4037, 3405],
+		[4044, 3716],
+		[4051, 3471],
+		[4058, 3554],
+		[4065, 2847],
+		[4072, 2757],
+		[4079, 3234],
+		[4086, 4266],
+		[4093, 3578],
+		[4100, 3132],
+		[4107, 2849],
+		[4114, 3210],
+		[4121, 3095],
+		[4128, 3293]
+	]
 }

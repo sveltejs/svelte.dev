@@ -7,33 +7,11 @@
 	"downloads": 266,
 	"updated": "2025-04-07T17:10:15.736Z",
 	"tags": ["tooling"],
-	"runes": false,
 	"github_stars": 2,
 	"typescript": true,
 	"version": "1.1.0",
 	"svelte_range": "*",
 	"last_rune_check_version": "1.1.0",
-	"downloads_history": [
-		[3987, 118],
-		[3994, 160],
-		[4001, 75],
-		[4008, 9],
-		[4015, 90],
-		[4022, 173],
-		[4029, 221],
-		[4036, 132],
-		[4043, 111],
-		[4050, 176],
-		[4057, 290],
-		[4064, 69],
-		[4071, 194],
-		[4078, 102],
-		[4085, 115],
-		[4092, 100],
-		[4099, 86],
-		[4106, 162],
-		[4113, 266]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -54,8 +32,8 @@
 			},
 			{
 				"name": "@eslint-community/eslint-utils",
-				"version": "4.6.1",
-				"size": 476789
+				"version": "4.7.0",
+				"size": 482928
 			},
 			{
 				"name": "eslint-visitor-keys",
@@ -213,13 +191,8 @@
 			},
 			{
 				"name": "@babel/runtime",
-				"version": "7.27.0",
-				"size": 249798
-			},
-			{
-				"name": "regenerator-runtime",
-				"version": "0.14.1",
-				"size": 27863
+				"version": "7.27.1",
+				"size": 246647
 			},
 			{
 				"name": "requireindex",
@@ -352,27 +325,27 @@
 			},
 			{
 				"name": "@typescript-eslint/scope-manager",
-				"version": "8.31.0",
+				"version": "8.31.1",
 				"size": 458615
 			},
 			{
 				"name": "@typescript-eslint/types",
-				"version": "8.31.0",
+				"version": "8.31.1",
 				"size": 171287
 			},
 			{
 				"name": "@typescript-eslint/visitor-keys",
-				"version": "8.31.0",
+				"version": "8.31.1",
 				"size": 13994
 			},
 			{
 				"name": "@typescript-eslint/utils",
-				"version": "8.31.0",
+				"version": "8.31.1",
 				"size": 267422
 			},
 			{
 				"name": "@typescript-eslint/typescript-estree",
-				"version": "8.31.0",
+				"version": "8.31.1",
 				"size": 411782
 			},
 			{
@@ -431,8 +404,8 @@
 			},
 			{
 				"name": "@vitest/eslint-plugin",
-				"version": "1.1.43",
-				"size": 285850
+				"version": "1.1.44",
+				"size": 285931
 			},
 			{
 				"name": "eslint-config-prettier",
@@ -450,44 +423,39 @@
 				"size": 747461
 			},
 			{
-				"name": "@babel/helper-validator-identifier",
-				"version": "7.25.9",
-				"size": 48330
-			},
-			{
-				"name": "@eslint/plugin-kit",
-				"version": "0.2.8",
-				"size": 76842
-			},
-			{
-				"name": "@eslint/core",
-				"version": "0.13.0",
-				"size": 64791
-			},
-			{
-				"name": "@types/json-schema",
-				"version": "7.0.15",
-				"size": 31748
-			},
-			{
-				"name": "levn",
-				"version": "0.4.1",
-				"size": 24947
-			},
-			{
-				"name": "prelude-ls",
-				"version": "1.2.1",
-				"size": 36741
-			},
-			{
-				"name": "type-check",
-				"version": "0.4.0",
-				"size": 21167
+				"name": "jsesc",
+				"version": "3.1.0",
+				"size": 32280
 			},
 			{
 				"name": "ci-info",
 				"version": "4.2.0",
 				"size": 28914
+			},
+			{
+				"name": "esquery",
+				"version": "1.6.0",
+				"size": 1037210
+			},
+			{
+				"name": "pluralize",
+				"version": "8.0.0",
+				"size": 17725
+			},
+			{
+				"name": "regexp-tree",
+				"version": "0.1.27",
+				"size": 313692
+			},
+			{
+				"name": "regjsparser",
+				"version": "0.12.0",
+				"size": 73459
+			},
+			{
+				"name": "jsesc",
+				"version": "3.0.2",
+				"size": 31726
 			},
 			{
 				"name": "clean-regexp",
@@ -498,24 +466,39 @@
 				"version": "1.0.5"
 			},
 			{
+				"name": "strip-indent",
+				"version": "4.0.0",
+				"size": 3644
+			},
+			{
+				"name": "min-indent",
+				"version": "1.0.1",
+				"size": 2969
+			},
+			{
+				"name": "indent-string",
+				"version": "5.0.0",
+				"size": 4744
+			},
+			{
 				"name": "core-js-compat",
-				"version": "3.41.0",
-				"size": 775766
+				"version": "3.42.0",
+				"size": 772930
 			},
 			{
 				"name": "browserslist",
-				"version": "4.24.4",
-				"size": 64926
+				"version": "4.24.5",
+				"size": 65174
 			},
 			{
 				"name": "caniuse-lite",
-				"version": "1.0.30001715",
-				"size": 2211246
+				"version": "1.0.30001716",
+				"size": 2214832
 			},
 			{
 				"name": "electron-to-chromium",
-				"version": "1.5.140",
-				"size": 162065
+				"version": "1.5.149",
+				"size": 163189
 			},
 			{
 				"name": "node-releases",
@@ -531,36 +514,6 @@
 				"name": "escalade",
 				"version": "3.2.0",
 				"size": 12385
-			},
-			{
-				"name": "esquery",
-				"version": "1.6.0",
-				"size": 1037210
-			},
-			{
-				"name": "indent-string",
-				"version": "5.0.0",
-				"size": 4744
-			},
-			{
-				"name": "is-builtin-module",
-				"version": "5.0.0",
-				"size": 3864
-			},
-			{
-				"name": "builtin-modules",
-				"version": "5.0.0",
-				"size": 4856
-			},
-			{
-				"name": "jsesc",
-				"version": "3.1.0",
-				"size": 32280
-			},
-			{
-				"name": "pluralize",
-				"version": "8.0.0",
-				"size": 17725
 			},
 			{
 				"name": "read-package-up",
@@ -629,8 +582,13 @@
 			},
 			{
 				"name": "@babel/code-frame",
-				"version": "7.26.2",
+				"version": "7.27.1",
 				"size": 33160
+			},
+			{
+				"name": "@babel/helper-validator-identifier",
+				"version": "7.27.1",
+				"size": 48330
 			},
 			{
 				"name": "js-tokens",
@@ -643,8 +601,8 @@
 			},
 			{
 				"name": "type-fest",
-				"version": "4.40.0",
-				"size": 438455
+				"version": "4.40.1",
+				"size": 438790
 			},
 			{
 				"name": "unicorn-magic",
@@ -652,29 +610,44 @@
 				"size": 3450
 			},
 			{
-				"name": "regexp-tree",
-				"version": "0.1.27",
-				"size": 313692
+				"name": "is-builtin-module",
+				"version": "5.0.0",
+				"size": 3864
 			},
 			{
-				"name": "regjsparser",
-				"version": "0.12.0",
-				"size": 73459
+				"name": "builtin-modules",
+				"version": "5.0.0",
+				"size": 4856
 			},
 			{
-				"name": "jsesc",
-				"version": "3.0.2",
-				"size": 31726
+				"name": "@eslint/plugin-kit",
+				"version": "0.2.8",
+				"size": 76842
 			},
 			{
-				"name": "strip-indent",
-				"version": "4.0.0",
-				"size": 3644
+				"name": "levn",
+				"version": "0.4.1",
+				"size": 24947
 			},
 			{
-				"name": "min-indent",
-				"version": "1.0.1",
-				"size": 2969
+				"name": "prelude-ls",
+				"version": "1.2.1",
+				"size": 36741
+			},
+			{
+				"name": "type-check",
+				"version": "0.4.0",
+				"size": 21167
+			},
+			{
+				"name": "@eslint/core",
+				"version": "0.13.0",
+				"size": 64791
+			},
+			{
+				"name": "@types/json-schema",
+				"version": "7.0.15",
+				"size": 31748
 			}
 		],
 		"dependencies": [
@@ -719,151 +692,176 @@
 			[8, 6],
 			[0, 34],
 			[34, 35],
-			[35, 36],
-			[34, 37],
-			[0, 38],
-			[38, 3],
-			[38, 39],
-			[38, 40],
-			[38, 41],
-			[38, 42],
-			[42, 43],
-			[42, 44],
-			[42, 45],
-			[38, 46],
-			[46, 47],
-			[46, 48],
-			[38, 49],
-			[38, 11],
-			[38, 50],
+			[34, 36],
+			[0, 37],
+			[37, 3],
+			[37, 38],
+			[37, 39],
+			[37, 40],
+			[37, 41],
+			[41, 42],
+			[41, 43],
+			[41, 44],
+			[37, 45],
+			[45, 46],
+			[45, 47],
+			[37, 48],
+			[37, 11],
+			[37, 49],
+			[49, 50],
 			[50, 51],
 			[51, 52],
-			[52, 53],
-			[51, 53],
-			[50, 7],
-			[50, 54],
-			[54, 55],
-			[54, 56],
-			[54, 7],
-			[50, 42],
-			[50, 57],
-			[50, 58],
-			[58, 59],
-			[58, 60],
+			[50, 52],
+			[49, 7],
+			[49, 53],
+			[53, 54],
+			[53, 55],
+			[53, 7],
+			[49, 41],
+			[49, 56],
+			[49, 57],
+			[57, 58],
+			[57, 59],
+			[0, 60],
+			[60, 14],
+			[60, 41],
 			[0, 61],
-			[61, 14],
-			[61, 42],
-			[0, 62],
+			[61, 62],
 			[62, 63],
-			[63, 64],
-			[63, 65],
-			[65, 7],
-			[65, 64],
-			[62, 66],
-			[66, 64],
-			[66, 3],
+			[62, 64],
+			[64, 7],
+			[64, 63],
+			[61, 65],
+			[65, 63],
+			[65, 3],
+			[65, 62],
+			[65, 66],
+			[66, 9],
+			[66, 11],
+			[66, 12],
+			[66, 14],
+			[66, 30],
+			[66, 33],
 			[66, 63],
-			[66, 67],
-			[67, 9],
-			[67, 11],
-			[67, 12],
-			[67, 14],
-			[67, 30],
-			[67, 33],
-			[67, 64],
-			[67, 65],
+			[66, 64],
+			[0, 67],
 			[0, 68],
-			[0, 69],
-			[69, 1],
-			[69, 70],
-			[70, 9],
-			[70, 2],
+			[68, 1],
+			[68, 69],
+			[69, 9],
+			[69, 2],
+			[69, 6],
+			[69, 5],
+			[69, 8],
+			[68, 70],
+			[70, 71],
+			[70, 72],
+			[70, 33],
+			[70, 73],
+			[70, 1],
+			[70, 74],
+			[70, 75],
+			[75, 9],
+			[75, 33],
+			[75, 1],
+			[75, 8],
 			[70, 6],
 			[70, 5],
-			[70, 8],
-			[69, 71],
-			[71, 72],
-			[71, 73],
-			[71, 33],
-			[71, 74],
-			[71, 1],
-			[71, 75],
-			[71, 76],
-			[76, 9],
-			[76, 33],
+			[0, 76],
+			[76, 77],
 			[76, 1],
-			[76, 8],
-			[71, 6],
-			[71, 5],
-			[0, 77],
-			[77, 78],
-			[77, 1],
-			[77, 79],
-			[77, 80],
-			[77, 81],
-			[77, 82],
-			[82, 83],
-			[82, 3],
-			[82, 84],
-			[84, 85],
-			[85, 86],
-			[84, 87],
+			[76, 78],
+			[76, 79],
+			[76, 80],
+			[76, 81],
+			[81, 82],
+			[81, 11],
+			[81, 83],
+			[81, 84],
+			[84, 52],
+			[81, 67],
+			[81, 85],
+			[81, 86],
+			[81, 87],
 			[87, 88],
-			[87, 89],
-			[89, 88],
-			[82, 90],
-			[82, 91],
+			[81, 89],
+			[89, 90],
+			[81, 91],
 			[91, 92],
-			[82, 93],
-			[93, 94],
+			[81, 93],
+			[81, 94],
 			[94, 95],
-			[94, 96],
-			[94, 97],
-			[94, 98],
-			[98, 99],
-			[98, 44],
-			[82, 100],
-			[100, 53],
-			[82, 68],
-			[82, 101],
-			[82, 102],
-			[102, 103],
-			[82, 104],
-			[82, 105],
-			[82, 106],
+			[95, 96],
+			[95, 97],
+			[95, 98],
+			[95, 99],
+			[99, 100],
+			[99, 43],
+			[81, 101],
+			[101, 102],
+			[101, 103],
+			[103, 104],
+			[103, 105],
+			[105, 11],
+			[105, 106],
 			[106, 107],
-			[106, 108],
+			[105, 108],
 			[108, 109],
-			[108, 110],
-			[110, 11],
+			[109, 110],
 			[110, 111],
-			[111, 112],
-			[110, 113],
+			[110, 112],
+			[109, 112],
+			[108, 110],
+			[103, 113],
 			[113, 114],
 			[114, 115],
-			[115, 116],
-			[115, 117],
-			[114, 117],
-			[113, 115],
-			[108, 118],
-			[118, 119],
-			[119, 120],
-			[119, 44],
-			[119, 83],
-			[118, 121],
-			[118, 122],
-			[108, 122],
-			[108, 123],
-			[106, 122],
-			[82, 124],
-			[82, 125],
-			[125, 126],
-			[82, 11],
-			[82, 127],
-			[127, 128],
-			[77, 68],
-			[77, 69]
+			[114, 116],
+			[114, 43],
+			[113, 117],
+			[113, 118],
+			[103, 118],
+			[103, 119],
+			[101, 118],
+			[81, 120],
+			[120, 121],
+			[81, 122],
+			[122, 123],
+			[123, 124],
+			[123, 125],
+			[125, 124],
+			[122, 126],
+			[126, 127],
+			[81, 3],
+			[81, 115],
+			[76, 67],
+			[76, 68]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Viam's ESLint Config for Svelte\n\nThis module contains [Viam][]'s shared [ESLint][] configurations for ESLint v9 in [Svelte][] projects.\n\n[viam]: https://www.viam.com/\n[eslint]: https://eslint.org/\n[svelte]: https://svelte.dev/\n\n## Base config\n\nExtend the [config](./eslint-config-svelte.js) in `eslint.config.js`.\n\n> [!TIP]\n> See the typescript-eslint docs on [type-aware linting](https://typescript-eslint.io/getting-started/typed-linting) to learn about how to configure `languageOptions`. Using `projectService: true` is recommended for new projects, but older projects may continue to use `project: './tsconfig.json'` for performance or compatibility reasons.\n\n```shell\npnpm add --save-dev eslint @viamrobotics/eslint-config-svelte\n```\n\n```js\n// eslint.config.js\nimport path from 'node:path';\n\nimport {\n  baseSvelteConfig,\n  createConfig,\n} from '@viamrobotics/eslint-config-svelte';\n\nexport default createConfig(\n  baseSvelteConfig,\n  {\n    languageOptions: {\n      parserOptions: {\n        projectService: true,\n        tsconfigRootDir: import.meta.dirname,\n      },\n    },\n    settings: {\n      tailwindcss: {\n        config: path.join(import.meta.dirname, 'tailwind.config.ts'),\n      },\n    },\n  },\n```\n\n## Non-Svelte projects\n\nSee [@viamrobotics/eslint-config](../eslint-config/)\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3988, 118],
+		[3995, 160],
+		[4002, 75],
+		[4009, 9],
+		[4016, 90],
+		[4023, 173],
+		[4030, 221],
+		[4037, 132],
+		[4044, 111],
+		[4051, 176],
+		[4058, 290],
+		[4065, 69],
+		[4072, 194],
+		[4079, 102],
+		[4086, 115],
+		[4093, 100],
+		[4100, 86],
+		[4107, 162],
+		[4114, 266],
+		[4121, 212],
+		[4128, 122],
+		[4135, 121]
+	]
 }

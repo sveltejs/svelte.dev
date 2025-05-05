@@ -7,31 +7,12 @@
 	"downloads": 318,
 	"updated": "2025-02-23T03:59:06.684Z",
 	"tags": ["miscellaneous"],
-	"runes": true,
 	"github_stars": 21,
 	"typescript": true,
 	"version": "1.15.1",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.15.0",
 	"last_rune_check_version": "1.15.1",
-	"downloads_history": [
-		[4008, 919],
-		[4015, 1183],
-		[4022, 331],
-		[4029, 1204],
-		[4036, 183],
-		[4043, 283],
-		[4050, 745],
-		[4057, 592],
-		[4064, 250],
-		[4071, 213],
-		[4078, 198],
-		[4085, 233],
-		[4092, 291],
-		[4099, 59],
-		[4106, 125],
-		[4113, 318]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -43,5 +24,27 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# SvelteUse\n\nA collection of Svelte 5 utilities.\n\n## Features\n\n-   Feature Rich (not exactly *yet*, but we're getting there)\n-   Complete documentation and demos\n-   Strongly-typed with Typescript\n-   Supports Svelte and SvelteKit (even with SSR enabled)\n\n## Installation\n\n```bash\nnpm install @sv-use/core\n```\n\nFor more information and documentation, see the [official website](https://svelte-librarian.github.io/sv-use).\n\n## FAQ\n\n1. Aren't there other libraries that do this already ?  \n   Yes there are. However, most of the libraries haven't transitioned to Svelte 5.\n1. Why use this one instead of [`svecosystem/runed`](https://github.com/svecosystem/runed) (or other libraries) ?\n   1. I wanted to make a library that had a lot of utilities to the level of [vueuse/vueuse](https://github.com/vueuse/vueuse) and/or [streamich/react-use](https://github.com/streamich/react-use). It's not there yet, but it's slowly growing.\n   1. I'm not a big fan of using the `use` prefix *everywhere*, especially when other verbs could be more descriptive.\n\n## Acknowledgements\n\nThough it's not a 1:1 port, I heavily took inspiration from these libraries to adapt the library for the Svelte ecosystem :\n\n-   [vueuse/vueuse](https://github.com/vueuse/vueuse)\n-   [streamich/react-use](https://github.com/streamich/react-use)\n-   [svecosystem/runed](https://github.com/svecosystem/runed)\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4009, 919],
+		[4016, 1183],
+		[4023, 331],
+		[4030, 1204],
+		[4037, 183],
+		[4044, 283],
+		[4051, 745],
+		[4058, 592],
+		[4065, 250],
+		[4072, 213],
+		[4079, 198],
+		[4086, 233],
+		[4093, 291],
+		[4100, 59],
+		[4107, 125],
+		[4114, 318],
+		[4121, 292],
+		[4128, 522]
+	]
 }

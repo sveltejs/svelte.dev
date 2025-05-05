@@ -6,17 +6,11 @@
 	"downloads": 6,
 	"updated": "2025-03-28T09:57:46.010Z",
 	"tags": ["router"],
-	"runes": true,
 	"typescript": true,
 	"version": "0.1.0",
 	"svelte_range": "^5.25.3",
 	"last_rune_check_version": "0.1.0",
 	"github_stars": 0,
-	"downloads_history": [
-		[4099, 66],
-		[4106, 5],
-		[4113, 6]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -55,5 +49,15 @@
 			[4, 3]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# svelte-stakkr\n\nstack navigator for Svelte\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4100, 66],
+		[4107, 5],
+		[4114, 6],
+		[4121, 7],
+		[4128, 5],
+		[4135, 5]
+	]
 }

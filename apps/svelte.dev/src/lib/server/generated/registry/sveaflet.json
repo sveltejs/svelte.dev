@@ -7,58 +7,12 @@
 	"downloads": 291,
 	"updated": "2025-02-23T11:47:05.924Z",
 	"tags": ["ui"],
-	"runes": true,
-	"github_stars": 70,
+	"github_stars": 71,
 	"typescript": true,
 	"version": "0.1.4",
 	"svelte_range": "^4.0.0 || ^5.0.0-next.0",
 	"kit_range": "^2.5.27",
 	"last_rune_check_version": "0.1.4",
-	"downloads_history": [
-		[3819, 155],
-		[3826, 184],
-		[3833, 93],
-		[3840, 35],
-		[3847, 174],
-		[3854, 20],
-		[3861, 109],
-		[3868, 127],
-		[3875, 56],
-		[3882, 61],
-		[3889, 34],
-		[3896, 38],
-		[3903, 60],
-		[3910, 59],
-		[3917, 52],
-		[3924, 262],
-		[3931, 154],
-		[3938, 143],
-		[3945, 69],
-		[3952, 61],
-		[3959, 55],
-		[3966, 53],
-		[3973, 129],
-		[3980, 101],
-		[3987, 180],
-		[3994, 204],
-		[4001, 193],
-		[4008, 196],
-		[4015, 241],
-		[4022, 726],
-		[4029, 736],
-		[4036, 367],
-		[4043, 438],
-		[4050, 265],
-		[4057, 255],
-		[4064, 338],
-		[4071, 435],
-		[4078, 405],
-		[4085, 308],
-		[4092, 263],
-		[4099, 440],
-		[4106, 260],
-		[4113, 291]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -104,73 +58,73 @@
 			},
 			{
 				"name": "algoliasearch",
-				"version": "5.23.4",
-				"size": 1387992
+				"version": "5.24.0",
+				"size": 1389324
 			},
 			{
 				"name": "@algolia/client-abtesting",
-				"version": "5.23.4",
-				"size": 501543
+				"version": "5.24.0",
+				"size": 502142
 			},
 			{
 				"name": "@algolia/client-common",
-				"version": "5.23.4",
-				"size": 158650
+				"version": "5.24.0",
+				"size": 162323
 			},
 			{
 				"name": "@algolia/requester-browser-xhr",
-				"version": "5.23.4",
+				"version": "5.24.0",
 				"size": 5493
 			},
 			{
 				"name": "@algolia/requester-fetch",
-				"version": "5.23.4",
+				"version": "5.24.0",
 				"size": 17876
 			},
 			{
 				"name": "@algolia/requester-node-http",
-				"version": "5.23.4",
+				"version": "5.24.0",
 				"size": 20360
 			},
 			{
 				"name": "@algolia/client-analytics",
-				"version": "5.23.4",
-				"size": 1492189
+				"version": "5.24.0",
+				"size": 1492788
 			},
 			{
 				"name": "@algolia/client-insights",
-				"version": "5.23.4",
-				"size": 438848
+				"version": "5.24.0",
+				"size": 439447
 			},
 			{
 				"name": "@algolia/client-personalization",
-				"version": "5.23.4",
-				"size": 375815
+				"version": "5.24.0",
+				"size": 376414
 			},
 			{
 				"name": "@algolia/client-query-suggestions",
-				"version": "5.23.4",
-				"size": 438850
+				"version": "5.24.0",
+				"size": 439449
 			},
 			{
 				"name": "@algolia/client-search",
-				"version": "5.23.4",
-				"size": 3198824
+				"version": "5.24.0",
+				"size": 3231305
 			},
 			{
 				"name": "@algolia/ingestion",
-				"version": "1.23.4",
-				"size": 2113080
+				"version": "1.24.0",
+				"size": 2113157
 			},
 			{
 				"name": "@algolia/monitoring",
-				"version": "1.23.4",
-				"size": 461160
+				"version": "1.24.0",
+				"size": 461759
 			},
 			{
 				"name": "@algolia/recommend",
-				"version": "5.23.4",
-				"size": 863014
+				"version": "5.24.0",
+				"size": 863656
 			},
 			{
 				"name": "preact",
@@ -390,5 +344,54 @@
 			[45, 46]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Sveaflet [![npm version](https://img.shields.io/npm/v/sveaflet.svg)](https://www.npmjs.com/package/sveaflet) [![Downloads](https://img.shields.io/npm/dt/sveaflet.svg)](https://www.npmjs.com/package/sveaflet) \r\n\r\nSveaflet = Svelte + Leaflet\r\n\r\n[Sveaflet](https://sveaflet.vercel.app/) is a library for the [Svelte](https://svelte.dev/) framework that wraps [Leaflet](https://leafletjs.com/) making it easy to crete reactive maps.\r\n\r\n## Installation\r\n\r\n```bash\r\nnpm install sveaflet --save\r\n```\r\n\r\nFor more detailed information you can follow the [Quick Start](https://sveaflet.vercel.app/docs/pages/quick-start).\r\n\r\n## Suportted Components\r\n\r\n- Circle\r\n- CircleMarker\r\n- Control\r\n- ControlAttribution\r\n- ControlLayers\r\n- ControlScale\r\n- ControlZoom\r\n- DivIcon\r\n- GeoJSON\r\n- Icon\r\n- ImageOverlay\r\n- LayerGroup\r\n- Map\r\n- Marker\r\n- Polygon\r\n- Polyline\r\n- Popup\r\n- Rectangle\r\n- SVGOverlay\r\n- TileLayer\r\n- TileLayerWMS\r\n- Tooltip\r\n- VideoOverlay\r\n\r\nMore details about [components](https://sveaflet.vercel.app/docs/components/Circle).\r\n\r\n## License\r\n\r\nThis project is licensed under the MIT License - see the [License](https://github.com/GrayFrost/sveaflet/blob/main/LICENSE) fle for details.\r\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3820, 155],
+		[3827, 184],
+		[3834, 93],
+		[3841, 35],
+		[3848, 174],
+		[3855, 20],
+		[3862, 109],
+		[3869, 127],
+		[3876, 56],
+		[3883, 61],
+		[3890, 34],
+		[3897, 38],
+		[3904, 60],
+		[3911, 59],
+		[3918, 52],
+		[3925, 262],
+		[3932, 154],
+		[3939, 143],
+		[3946, 69],
+		[3953, 61],
+		[3960, 55],
+		[3967, 53],
+		[3974, 129],
+		[3981, 101],
+		[3988, 180],
+		[3995, 204],
+		[4002, 193],
+		[4009, 196],
+		[4016, 241],
+		[4023, 726],
+		[4030, 736],
+		[4037, 367],
+		[4044, 438],
+		[4051, 265],
+		[4058, 255],
+		[4065, 338],
+		[4072, 435],
+		[4079, 405],
+		[4086, 308],
+		[4093, 263],
+		[4100, 440],
+		[4107, 260],
+		[4114, 291],
+		[4121, 131],
+		[4128, 182]
+	]
 }

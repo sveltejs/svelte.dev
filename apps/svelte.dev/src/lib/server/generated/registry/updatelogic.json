@@ -9,11 +9,9 @@
 	"tags": ["miscellaneous"],
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
-	"runes": true,
 	"last_rune_check_version": "0.0.13",
 	"version": "0.0.13",
 	"github_stars": 0,
-	"downloads_history": [[4113, 380]],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -25,5 +23,13 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# updatelogic\n\n> Lightweight State Management for Svelte\n\nA lightweight, type-safe state management solution for Svelte 5 applications inspired by Elm's Model-View-Update (MVU) architecture.\n\n## Features\n\n- **Centralized State** - Application state is organized in one location\n- **Automatic Updates** - State changes trigger UI updates\n- **Immutability Enforcement** - Prevents external mutation of state\n- **Structured Actions** - Actions and updates follow a consistent pattern within a single class\n- **Zero Config Logging** - Logs actions and state changes during development\n- **Lightweight** - Heavily uses Sveltes reactivity for updates and does not use any dependencies\n\n## When to Use\n\nUpdatelogic is ideal for client-side web applications with complex, interdependent state management needs. It particularly if your app's state has grown beyond simple component-level management but you don't want the overhead of Redux or similar libraries, updatelogic offers the perfect solution.\n\n## Installation\n\n```bash\nnpm install updatelogic\n```\n\n## Basic Usage\n\n### 1. Define your logic class\n\n```typescript\n// counter/logic.svelte.ts\nimport { createUpdateLogic } from \"updatelogic\";\n\ntype Data = {\n    count: number;\n};\n\nclass Logic {\n    data: Data = $state({ count: 0 });\n\n    increment() {\n        this.data.count += 1;\n    }\n}\n\nexport const logic = createUpdateLogic(Logic);\n```\n\n### 2. Use the logic in any component\n\n```svelte\n<!-- counter/+page.svelte -->\n<script lang=\"ts\">\n    import { logic } from \"./logic.svelte.js\";\n</script>\n\n<button onclick={logic.increment}>\n    clicks: {logic.data.count}\n</button>\n```\n\n## Async Operations\n\nUpdatelogic handles asynchronous operations elegantly with built-in loading state:\n\n```typescript\n// async/logic.svelte.ts\nimport { uninitialized, createUpdateLogic } from \"updatelogic\";\n\ntype Data = {\n    names: string[];\n};\n\nconst getNames = async (filter: string = \"\") => {\n    const response = await fetch(`./async/api?filter=${encodeURIComponent(filter)}`);\n    return response.json();\n};\n\nclass Logic {\n    data: Data = $state(uninitialized);\n    initialized = $state(false);\n\n    async init() {\n        this.data = await getNames();\n        this.initialized = true;\n    }\n\n    async setFilter(filter: string) {\n        const { names } = await getNames(filter);\n        this.data = { names };\n    }\n}\n\nexport const logic = createUpdateLogic(Logic);\n```\n\n```svelte\n<!-- async/+page.svelte -->\n<script lang=\"ts\">\n    import { logic } from \"./logic.svelte.js\";\n    logic.init();\n</script>\n\n{#if logic.initialized}\n    <input placeholder=\"Filter Names\" onchange={(e) => logic.setFilter(e.currentTarget.value)} />\n\n    <ul>\n        {#each logic.data.names as name}\n            <li>{name}</li>\n        {/each}\n    </ul>\n{/if}\n```\n\n## Advanced Features\n\n### Immutability Enforcement\n\nUpdatelogic enforces that state can only be mutated within logic class methods, preventing accidental state modifications from outside:\n\n```typescript\n// This works\nlogic.increment();\n\n// This will log an error and not change the state\nlogic.data.count = 5;\n```\n\n### Development Logging\n\nDuring development, updatelogic automatically logs all method calls, their arguments, state changes and returns for easier debugging:\n\n```\n┏ increment\n  STATE:\n  { data: { counter: 0 } }\n┗ increment\n  STATE:\n   { data: { counter: 1 } }\n  RETURNED:\n  undefined\n```\n\n### Custom Configuration\n\n```typescript\nconst logic = createUpdateLogic(Logic, {\n    logging: true, // Enable logging even in production\n    enforceImmutableData: false, // Allow external data mutations\n});\n```\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4114, 380],
+		[4121, 167],
+		[4128, 148],
+		[4135, 39]
+	]
 }

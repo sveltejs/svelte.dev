@@ -7,28 +7,11 @@
 	"downloads": 4,
 	"updated": "2025-02-26T13:27:15.563Z",
 	"tags": ["tooling"],
-	"runes": false,
-	"github_stars": 39,
+	"github_stars": 41,
 	"typescript": true,
 	"version": "1.1.0",
 	"svelte_range": "^5.19.7",
 	"last_rune_check_version": "1.1.0",
-	"downloads_history": [
-		[4015, 125],
-		[4022, 15],
-		[4029, 5],
-		[4036, 7],
-		[4043, 7],
-		[4050, 4],
-		[4057, 2],
-		[4064, 2],
-		[4071, 63],
-		[4078, 5],
-		[4085, 4],
-		[4092, 6],
-		[4106, 1],
-		[4113, 4]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -44,8 +27,8 @@
 			},
 			{
 				"name": "svelte",
-				"version": "5.28.1",
-				"size": 2426419
+				"version": "5.28.2",
+				"size": 2426223
 			},
 			{
 				"name": "@ampproject/remapping",
@@ -167,5 +150,25 @@
 			[2, 20]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Nodejs Loaders: Svelte\n\n<img src=\"https://raw.githubusercontent.com/nodejs-loaders/nodejs-loaders/refs/heads/main/logo.svg\" height=\"100\" width=\"100\" alt=\"@node.js loaders logo\" />\n\n[![npm version](https://img.shields.io/npm/v/@nodejs-loaders/svelte.svg)](https://www.npmjs.com/package/nodejs-loaders/svelte)\n![unpacked size](https://img.shields.io/npm/unpacked-size/@nodejs-loaders/svelte)\n\n**Environments**: dev, test\n\n**Compatible APIs**: [`module.register`](https://nodejs.org/api/module.html#moduleregisterspecifier-parenturl-options)\n\n\nThis loader enables importing [Svelte](https://svelte.dev) files, converting them to a plain javascript object. Svelte is a component framework that compiles to vanilla JavaScript.\n\nIt's useful for importing Svelte components in Node.js environments, such as testing or development.\n\n<details>\n<summary>Supported file extensions</summary>\n\n* `.svelte`\n</details>\n\n> [!WARNING]\n> `.svelte.ts` and `.svelte.js` files are not supported. This loader only supports `.svelte` files.\n> [Svelte documentation](https://svelte.dev/docs/svelte/svelte-js-files) about theses files.\n\n> [!NOTE]\n> Features based on [svelte-kit](https://svelte.dev/docs/kit/introduction) aren't supported yet. Pull requests welcome 🙂\n\n**Alternatives**\n\n* [`esm-loader-svelte`](https://www.npmjs.com/package/esm-loader-svelte)\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4016, 125],
+		[4023, 15],
+		[4030, 5],
+		[4037, 7],
+		[4044, 7],
+		[4051, 4],
+		[4058, 2],
+		[4065, 2],
+		[4072, 63],
+		[4079, 5],
+		[4086, 4],
+		[4093, 6],
+		[4107, 1],
+		[4114, 4],
+		[4121, 4],
+		[4128, 3]
+	]
 }

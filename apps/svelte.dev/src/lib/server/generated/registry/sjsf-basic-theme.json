@@ -5,31 +5,34 @@
 	"authors": ["x0k"],
 	"homepage": "https://x0k.github.io/svelte-jsonschema-form/",
 	"downloads": 147,
-	"updated": "2025-04-18T07:15:10.238Z",
+	"updated": "2025-05-02T22:59:25.476Z",
 	"tags": ["tooling"],
-	"runes": true,
-	"github_stars": 51,
+	"github_stars": 52,
 	"typescript": true,
-	"version": "2.0.0-next.9",
+	"version": "2.0.0-next.10",
 	"svelte_range": "^5.25.0",
-	"last_rune_check_version": "2.0.0-next.9",
-	"downloads_history": [
-		[4085, 273],
-		[4092, 60],
-		[4099, 108],
-		[4106, 219],
-		[4113, 147]
-	],
+	"last_rune_check_version": "2.0.0-next.10",
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
 			{
 				"name": "@sjsf/basic-theme",
-				"version": "2.0.0-next.9",
-				"size": 40892
+				"version": "2.0.0-next.10",
+				"size": 40115
 			}
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# @sjsf/basic-theme\n\nBasic theme for [svelte-jsonschema-form](https://github.com/x0k/svelte-jsonschema-form)\n\n- [Documentation](https://x0k.github.io/svelte-jsonschema-form/v2/themes/basic/)\n- [Playground](https://x0k.github.io/svelte-jsonschema-form/playground2/)\n\n## Installation\n\n```shell\nnpm install @sjsf/form@next @sjsf/basic-theme@next\n```\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import { createForm } from '@sjsf/form';\n  import { theme } from '@sjsf/basic-theme';\n\n  const form = createForm({\n    theme,\n    ...\n  })\n</script>\n```\n\n## License\n\nMIT\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4086, 273],
+		[4093, 60],
+		[4100, 108],
+		[4107, 219],
+		[4114, 147],
+		[4121, 93],
+		[4128, 66]
+	]
 }

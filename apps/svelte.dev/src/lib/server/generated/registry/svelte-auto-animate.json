@@ -7,27 +7,12 @@
 	"downloads": 8,
 	"updated": "2024-12-31T16:17:20.621Z",
 	"tags": ["ui"],
-	"runes": false,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.0.1",
 	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
 	"kit_range": "^2.15.1",
 	"last_rune_check_version": "0.0.1",
-	"downloads_history": [
-		[4015, 71],
-		[4022, 5],
-		[4029, 2],
-		[4036, 4],
-		[4043, 5],
-		[4050, 2],
-		[4064, 1],
-		[4071, 1],
-		[4085, 1],
-		[4099, 2],
-		[4106, 2],
-		[4113, 8]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -38,8 +23,8 @@
 			},
 			{
 				"name": "@sveltejs/adapter-vercel",
-				"version": "5.7.0",
-				"size": 36505
+				"version": "5.7.1",
+				"size": 36971
 			},
 			{
 				"name": "@vercel/nft",
@@ -382,8 +367,8 @@
 			},
 			{
 				"name": "esbuild",
-				"version": "0.24.2",
-				"size": 133805
+				"version": "0.25.3",
+				"size": 134169
 			}
 		],
 		"dependencies": [
@@ -474,5 +459,23 @@
 			[1, 71]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Svelte Flip\n\n## [@formkit/auto-animate](https://auto-animate.formkit.com/#usage-svelte) but only the flip animation\n\nSvelte default flip animation only works with elements that are direct children of a keyed each block.\nauto-animate adds flip animations to any element, but adds enter and exit transitions as well.\nThis package is a fork of auto animate that keeps only the flip animation, so you can use your svelte transitions with it.\n\n## Usage\n\n```svelte\n<script>\n\timport { flip } from 'svelte-auto-animate';\n</script>\n\n<div use:flip>\n\t...\n<div>\n```\n\nThat's it!\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4016, 71],
+		[4023, 5],
+		[4030, 2],
+		[4037, 4],
+		[4044, 5],
+		[4051, 2],
+		[4065, 1],
+		[4072, 1],
+		[4086, 1],
+		[4100, 2],
+		[4107, 2],
+		[4114, 8],
+		[4121, 6],
+		[4128, 2]
+	]
 }

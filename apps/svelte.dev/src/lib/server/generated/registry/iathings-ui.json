@@ -7,28 +7,12 @@
 	"downloads": 12,
 	"updated": "2025-01-20T20:52:03.798Z",
 	"tags": ["ui", "design-system"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.0.24",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.5.27",
 	"last_rune_check_version": "0.0.24",
-	"downloads_history": [
-		[4029, 310],
-		[4036, 1074],
-		[4043, 87],
-		[4050, 15],
-		[4057, 2],
-		[4064, 10],
-		[4071, 18],
-		[4078, 13],
-		[4085, 44],
-		[4092, 23],
-		[4099, 22],
-		[4106, 2],
-		[4113, 12]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -53,5 +37,24 @@
 			[0, 2]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# iathings-ui\n\n**iathings-ui** es una librería de componentes UI desarrollada por [IATHINGS](https://iathings.com) para uso interno en sus productos. Sin embargo, es de uso libre para cualquier persona bajo la licencia MIT.\n\n## Características\n\n- **Componentes personalizables**: Diseñados para ser altamente configurables.\n- **Basado en Svelte y TypeScript**: Moderno, eficiente y con tipado seguro.\n- **Licencia MIT**: Libre para usar, modificar y distribuir.\n\n## Instalación\n\nPara instalar la librería, ejecuta el siguiente comando:\n\n```bash\nnpm install iathings-ui\n```\n\n## Uso\n\nImporta los componentes en tu proyecto de Svelte:\n\n```svelte\n<script>\n  import { Button, Card, CheckBox, Input, Label, Layout, Modal, Separator, Switch, Tabs, Toast } from \"iathings-ui\";\n</script>\n\n<!-- Ejemplo de uso de algunos componentes -->\n<Button variant=\"primary\">Haz clic aquí</Button>\n\n<Card>\n  <h2>Título de la tarjeta</h2>\n  <p>Contenido de la tarjeta.</p>\n</Card>\n\n<Input placeholder=\"Escribe algo...\" />\n\n<Tabs tabs={[{ label: \"Pestaña 1\", content: \"Contenido 1\" }, { label: \"Pestaña 2\", content: \"Contenido 2\" }]} />\n```\n\n## Componentes Disponibles\n\n- **Button**: Botón personalizable con variantes y tamaños.\n- **Card**: Tarjeta para agrupar contenido relacionado.\n- **CheckBox**: Casilla de verificación para opciones binarias.\n- **Input**: Campo de entrada de texto personalizable.\n- **Label**: Etiqueta para formularios o textos descriptivos.\n- **Layout**: Componentes de diseño como contenedores, grids y flexbox.\n- **Modal**: Ventana modal para mostrar contenido emergente.\n- **Separator**: Línea divisoria para separar secciones.\n- **Switch**: Interruptor para alternar entre estados.\n- **Tabs**: Pestañas para organizar contenido en secciones.\n- **Toast**: Notificaciones emergentes temporales.\n\n## Storybook\n\nExplora todos los componentes y sus variantes en nuestro [Storybook](https://linuxer41.github.io/iathings-ui).\n\n## Contribución\n\nSi deseas contribuir a este proyecto, sigue estos pasos:\n\n1. Haz un fork del repositorio.\n2. Crea una rama con tu nueva funcionalidad (`git checkout -b feature/nueva-funcionalidad`).\n3. Realiza tus cambios y haz commit (`git commit -m 'Añade nueva funcionalidad'`).\n4. Haz push a la rama (`git push origin feature/nueva-funcionalidad`).\n5. Abre un Pull Request.\n\n## Licencia\n\nEste proyecto está bajo la licencia [MIT](LICENSE). Puedes usarlo libremente en tus proyectos personales o comerciales.",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4030, 310],
+		[4037, 1074],
+		[4044, 87],
+		[4051, 15],
+		[4058, 2],
+		[4065, 10],
+		[4072, 18],
+		[4079, 13],
+		[4086, 44],
+		[4093, 23],
+		[4100, 22],
+		[4107, 2],
+		[4114, 12],
+		[4121, 20],
+		[4128, 6]
+	]
 }

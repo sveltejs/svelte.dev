@@ -8,14 +8,9 @@
 	"updated": "2025-04-01T13:43:35.940Z",
 	"tags": ["integration"],
 	"svelte_range": "^5.25.5",
-	"runes": true,
 	"last_rune_check_version": "1.0.2",
 	"version": "1.0.2",
 	"github_stars": 0,
-	"downloads_history": [
-		[4106, 180],
-		[4113, 13]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -27,5 +22,13 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "\r\n---\r\n\r\n# @magicfaq/svelte\r\n\r\nA Svelte component for embedding the Magic FAQ widget.\r\n\r\n## Installation\r\n\r\nTo install the Magic FAQ component for Svelte, run:\r\n\r\n```sh\r\nnpm install @magicfaq/svelte\r\n```\r\n\r\nor\r\n\r\n```sh\r\nyarn add @magicfaq/svelte\r\n```\r\n\r\n## Usage\r\n\r\nIn your Svelte component, import and use the `MagicFAQ` component like this:\r\n\r\n```svelte\r\n<script lang=\"ts\">\r\n  import MagicFAQ from '@magicfaq/svelte';\r\n</script>\r\n\r\n<MagicFAQ uid=\"your-unique-id\" position=\"top-right\" />\r\n```\r\n\r\n## Props\r\n\r\n| Prop      | Type   | Description                                                                                   |\r\n|-----------|--------|-----------------------------------------------------------------------------------------------|\r\n| `uid`     | string | The unique ID of the Magic FAQ widget. This is required for the component to function properly. |\r\n| `position` | string | The position of the widget on the screen. Can be `top-left`, `top-right`, `bottom-left`, or `bottom-right`. Default is `bottom-right`. |\r\n\r\n## License\r\n\r\nThis project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.\r\n\r\n## Support\r\n\r\nFor support with the Magic FAQ widget, please visit our [support page](https://sudeepdev.co).\r\n\r\n---",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4107, 180],
+		[4114, 13],
+		[4121, 10],
+		[4128, 8]
+	]
 }

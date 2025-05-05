@@ -7,23 +7,12 @@
 	"downloads": 10,
 	"updated": "2025-02-20T12:35:00.882Z",
 	"tags": ["integration"],
-	"runes": true,
-	"github_stars": 73,
+	"github_stars": 72,
 	"typescript": true,
 	"version": "1.0.9",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.17.2",
 	"last_rune_check_version": "1.0.9",
-	"downloads_history": [
-		[4064, 548],
-		[4071, 36],
-		[4078, 3],
-		[4085, 13],
-		[4092, 11],
-		[4099, 2],
-		[4106, 3],
-		[4113, 10]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -48,5 +37,20 @@
 			[0, 2]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# vueframe\n\nSimple embeds for Svelte and Vue.\n\n![hero](https://raw.githubusercontent.com/vueframe/vueframe/refs/heads/main/banner/banner.png)\n\n## Documentation\n\nVisit https://vueframe.github.io/vueframe to view the documentation.\n\n## License\n\nLicensed under the [MIT license](https://github.com/vueframe/vueframe/blob/main/LICENSE.md).\n\n## Contributors\n\n<a href=\"https://github.com/vueframe/vueframe/graphs/contributors\">\n  <img src=\"https://contrib.rocks/image?repo=vueframe/vueframe\" />\n</a>",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4065, 548],
+		[4072, 36],
+		[4079, 3],
+		[4086, 13],
+		[4093, 11],
+		[4100, 2],
+		[4107, 3],
+		[4114, 10],
+		[4121, 7],
+		[4128, 6],
+		[4135, 7]
+	]
 }

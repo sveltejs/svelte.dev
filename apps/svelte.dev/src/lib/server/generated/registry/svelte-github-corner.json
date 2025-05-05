@@ -7,29 +7,12 @@
 	"downloads": 7,
 	"updated": "2024-12-05T21:23:41.035Z",
 	"tags": ["ui"],
-	"runes": true,
 	"github_stars": 1,
 	"typescript": true,
 	"version": "0.0.3",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.9.0",
 	"last_rune_check_version": "0.0.3",
-	"downloads_history": [
-		[3987, 167],
-		[3994, 21],
-		[4001, 1],
-		[4008, 4],
-		[4015, 8],
-		[4022, 5],
-		[4029, 5],
-		[4036, 12],
-		[4043, 5],
-		[4050, 2],
-		[4064, 2],
-		[4099, 3],
-		[4106, 6],
-		[4113, 7]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -41,5 +24,25 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# svelte-github-corner\n\nsimple little component for adding a github corner icon to your svelte projects\n\n[see it in action](https://flo-bit.dev/svelte-github-corner/)\n\n## install\n\n```bash\nnpm install svelte-github-corner\n```\n\n## use\n\n- the colors are optional, will default to black on white\n\n```svelte\n<script>\n\timport { GithubCorner } from 'svelte-github-corner';\n<\\/script>\n\n<GithubCorner\n\thref=\"https://github.com/flo-bit/svelte-github-corner\"\n\tcolor=\"#fff\"\n\tbackgroundColor=\"#151513\"\n/>\n```\n\n### using with tailwind\n\n- fill is background, text is icon\n\n```svelte\n<script>\n\timport { GithubCorner } from 'svelte-github-corner';\n<\\/script>\n\n<GithubCorner\n\thref=\"https://github.com/flo-bit/svelte-github-corner\"\n\tclass=\"fill-stone-900 text-stone-100 dark:fill-stone-100 dark:text-stone-900\"\n/>\n```\n\n## license\n\nMIT\n\n## credits\n\nbased on [github corners](https://github.com/tholman/github-corners) by Tim Holman",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3988, 167],
+		[3995, 21],
+		[4002, 1],
+		[4009, 4],
+		[4016, 8],
+		[4023, 5],
+		[4030, 5],
+		[4037, 12],
+		[4044, 5],
+		[4051, 2],
+		[4065, 2],
+		[4100, 3],
+		[4107, 6],
+		[4114, 7],
+		[4121, 5],
+		[4128, 3]
+	]
 }

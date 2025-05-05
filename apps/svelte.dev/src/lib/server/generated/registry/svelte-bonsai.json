@@ -7,26 +7,11 @@
 	"downloads": 6,
 	"updated": "2025-01-12T05:03:46.907Z",
 	"tags": ["ui"],
-	"runes": false,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "1.0.1",
 	"svelte_range": "^5.0.0",
 	"last_rune_check_version": "1.0.1",
-	"downloads_history": [
-		[4022, 118],
-		[4029, 19],
-		[4036, 5],
-		[4043, 9],
-		[4050, 5],
-		[4057, 3],
-		[4064, 8],
-		[4078, 1],
-		[4085, 2],
-		[4099, 4],
-		[4106, 2],
-		[4113, 6]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -38,5 +23,23 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# Svelte Bonsai\n\n<div style=\"display: flex; align-items: center; gap: 20px;\">\n  <img src=\"assets/bonsai-growing.gif\" alt=\"Bonsai Tree Animation\" height=\"350\">\n  <img src=\"assets/svelte-bonsai-logo.jpg\" alt=\"Svelte Bonsai Logo\" height=\"350\">\n</div>\n\nA customizable bonsai tree component for Svelte that grows and animates over time.\n\n## Installation\n\n```bash\nnpm install svelte-bonsai\n```\n\n## Usage\n\n```svelte\n<script>\n  import { BonsaiTree } from 'svelte-bonsai';\n</script>\n\n<BonsaiTree \n  width={600} \n  height={600} \n  autoGrow={true} \n  loopGrow={false} \n  growthInterval={1000} \n/>\n```\n\n## Props\n\n- `width` (number, default: 600): Width of the SVG canvas\n- `height` (number, default: 600): Height of the SVG canvas\n- `autoGrow` (boolean, default: true): Whether the tree should automatically grow\n- `loopGrow` (boolean, default: false): Whether the tree should reset and regrow after reaching full growth\n- `growthInterval` (number, default: 1000): Time in milliseconds between growth stages\n\n## Methods\n\nThe component exposes the following methods:\n\n- `grow()`: Manually trigger a growth stage. Returns false when fully grown.\n- `reset()`: Reset the tree to its initial state.\n- `resetAndGrow()`: Reset the tree and start auto-growing again.\n\n## Example\n\n```svelte\n<script>\n  import { BonsaiTree } from 'svelte-bonsai';\n  let bonsaiComponent;\n</script>\n\n<BonsaiTree \n  bind:this={bonsaiComponent}\n  width={600} \n  height={600} \n  autoGrow={false} \n/>\n\n<button on:click={() => bonsaiComponent.grow()}>\n  Grow\n</button>\n<button on:click={() => bonsaiComponent.reset()}>\n  Reset\n</button>\n<button on:click={() => bonsaiComponent.resetAndGrow()}>\n  Reset & Auto-grow\n</button>\n```\n\n",
+	"legacy_svelte": true,
+	"downloads_history": [
+		[4023, 118],
+		[4030, 19],
+		[4037, 5],
+		[4044, 9],
+		[4051, 5],
+		[4058, 3],
+		[4065, 8],
+		[4079, 1],
+		[4086, 2],
+		[4100, 4],
+		[4107, 2],
+		[4114, 6],
+		[4121, 8],
+		[4128, 7]
+	]
 }

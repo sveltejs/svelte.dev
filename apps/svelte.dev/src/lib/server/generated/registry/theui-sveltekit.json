@@ -7,93 +7,12 @@
 	"downloads": 30,
 	"updated": "2024-05-23T20:10:39.463Z",
 	"tags": ["design-system"],
-	"runes": false,
 	"github_stars": 4,
 	"typescript": true,
 	"version": "1.0.0-rc.53",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "1.0.0-rc.53",
-	"downloads_history": [
-		[3574, 111],
-		[3581, 294],
-		[3588, 191],
-		[3595, 1142],
-		[3602, 146],
-		[3609, 203],
-		[3616, 225],
-		[3623, 99],
-		[3630, 140],
-		[3637, 83],
-		[3644, 52],
-		[3651, 51],
-		[3658, 59],
-		[3665, 155],
-		[3672, 83],
-		[3679, 14],
-		[3686, 25],
-		[3693, 42],
-		[3700, 15],
-		[3707, 15],
-		[3714, 25],
-		[3721, 24],
-		[3728, 15],
-		[3735, 13],
-		[3742, 40],
-		[3749, 8],
-		[3756, 13],
-		[3763, 11],
-		[3770, 54],
-		[3777, 100],
-		[3784, 42],
-		[3791, 975],
-		[3798, 183],
-		[3805, 30],
-		[3812, 56],
-		[3819, 336],
-		[3826, 32],
-		[3833, 307],
-		[3840, 26],
-		[3847, 45],
-		[3854, 16],
-		[3861, 18],
-		[3868, 15],
-		[3875, 13],
-		[3882, 14],
-		[3889, 174],
-		[3896, 51],
-		[3903, 21],
-		[3910, 92],
-		[3917, 130],
-		[3924, 79],
-		[3931, 51],
-		[3938, 61],
-		[3945, 202],
-		[3952, 285],
-		[3959, 177],
-		[3966, 150],
-		[3973, 19],
-		[3980, 26],
-		[3987, 3],
-		[3994, 34],
-		[4001, 15],
-		[4008, 20],
-		[4015, 18],
-		[4022, 38],
-		[4029, 15],
-		[4036, 28],
-		[4043, 56],
-		[4050, 30],
-		[4057, 12],
-		[4064, 13],
-		[4071, 10],
-		[4078, 13],
-		[4085, 5],
-		[4092, 2],
-		[4099, 77],
-		[4106, 170],
-		[4113, 30]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -148,32 +67,32 @@
 			},
 			{
 				"name": "@tiptap/core",
-				"version": "2.11.7",
-				"size": 2546013
+				"version": "2.11.9",
+				"size": 2545985
 			},
 			{
 				"name": "@tiptap/extension-code",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 25242
 			},
 			{
 				"name": "@tiptap/extension-color",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 20420
 			},
 			{
 				"name": "@tiptap/extension-highlight",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 31889
 			},
 			{
 				"name": "@tiptap/extension-image",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 25935
 			},
 			{
 				"name": "@tiptap/extension-link",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 180532
 			},
 			{
@@ -183,73 +102,73 @@
 			},
 			{
 				"name": "@tiptap/extension-placeholder",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 37819
 			},
 			{
 				"name": "@tiptap/extension-subscript",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 21731
 			},
 			{
 				"name": "@tiptap/extension-superscript",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 22098
 			},
 			{
 				"name": "@tiptap/extension-table",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 181755
 			},
 			{
 				"name": "@tiptap/extension-table-cell",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 15587
 			},
 			{
 				"name": "@tiptap/extension-table-header",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 15790
 			},
 			{
 				"name": "@tiptap/extension-table-row",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 10538
 			},
 			{
 				"name": "@tiptap/extension-text-align",
-				"version": "2.11.7",
-				"size": 29580
+				"version": "2.11.9",
+				"size": 34306
 			},
 			{
 				"name": "@tiptap/extension-text-style",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 34779
 			},
 			{
 				"name": "@tiptap/extension-typography",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 90260
 			},
 			{
 				"name": "@tiptap/extension-underline",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 20478
 			},
 			{
 				"name": "@tiptap/extension-youtube",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 99841
 			},
 			{
 				"name": "@tiptap/pm",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 24466
 			},
 			{
 				"name": "prosemirror-menu",
-				"version": "1.2.4",
-				"size": 111446
+				"version": "1.2.5",
+				"size": 113350
 			},
 			{
 				"name": "crelt",
@@ -263,8 +182,8 @@
 			},
 			{
 				"name": "prosemirror-model",
-				"version": "1.25.0",
-				"size": 523551
+				"version": "1.25.1",
+				"size": 524300
 			},
 			{
 				"name": "orderedmap",
@@ -273,13 +192,13 @@
 			},
 			{
 				"name": "prosemirror-transform",
-				"version": "1.10.3",
-				"size": 316103
+				"version": "1.10.4",
+				"size": 317199
 			},
 			{
 				"name": "prosemirror-view",
-				"version": "1.39.1",
-				"size": 872388,
+				"version": "1.39.2",
+				"size": 909536,
 				"isCircular": true,
 				"circularTarget": 36
 			},
@@ -311,8 +230,8 @@
 			},
 			{
 				"name": "prosemirror-keymap",
-				"version": "1.2.2",
-				"size": 25670
+				"version": "1.2.3",
+				"size": 26164
 			},
 			{
 				"name": "w3c-keyname",
@@ -391,8 +310,8 @@
 			},
 			{
 				"name": "prosemirror-dropcursor",
-				"version": "1.8.1",
-				"size": 30848
+				"version": "1.8.2",
+				"size": 34065
 			},
 			{
 				"name": "prosemirror-inputrules",
@@ -426,92 +345,92 @@
 			},
 			{
 				"name": "@tiptap/starter-kit",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 58648
 			},
 			{
 				"name": "@tiptap/extension-bold",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 31774
 			},
 			{
 				"name": "@tiptap/extension-text",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 5838
 			},
 			{
 				"name": "@tiptap/extension-italic",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 31914
 			},
 			{
 				"name": "@tiptap/extension-strike",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 25981
 			},
 			{
 				"name": "@tiptap/extension-heading",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 31013
 			},
 			{
 				"name": "@tiptap/extension-history",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 20863
 			},
 			{
 				"name": "@tiptap/extension-document",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 6443
 			},
 			{
 				"name": "@tiptap/extension-gapcursor",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 14772
 			},
 			{
 				"name": "@tiptap/extension-list-item",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 15835
 			},
 			{
 				"name": "@tiptap/extension-paragraph",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 14727
 			},
 			{
 				"name": "@tiptap/extension-blockquote",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 20603
 			},
 			{
 				"name": "@tiptap/extension-code-block",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 84197
 			},
 			{
 				"name": "@tiptap/extension-dropcursor",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 11938
 			},
 			{
 				"name": "@tiptap/extension-hard-break",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 27449
 			},
 			{
 				"name": "@tiptap/extension-bullet-list",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 29385
 			},
 			{
 				"name": "@tiptap/extension-ordered-list",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 39002
 			},
 			{
 				"name": "@tiptap/extension-horizontal-rule",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 35676
 			},
 			{
@@ -867,5 +786,87 @@
 			[32, 36],
 			[0, 0]
 		]
-	}
+	},
+	"readme": "<h1 align=\"center\"> TheUI Sveltekit Components</h1>\n<div align=\"center\">\n\n[![npm version](https://badgen.net/npm/v/theui-sveltekit?color=red)](https://www.npmjs.com/package/theui-sveltekit)\n[![npm downloads](https://badgen.net/npm/dw/theui-sveltekit)](https://www.npmjs.com/package/theui-sveltekit)\n[![npm downloads](https://badgen.net/npm/dt/theui-sveltekit)](https://www.npmjs.com/package/theui-sveltekit)\n[![license](https://badgen.net/npm/license/theui-sveltekit)](https://github.com/mbparvezme/theui-sveltekit/blob/master/license.md)\n\n</div>\n\n<h2 align=\"center\">A tool for the <b>Sveltekit eco-system</b></h2>\n\n<div align=\"center\">\n  <img src=\"https://theui-beta.vercel.app/img/theui-sveltekit-components.svg\" width=\"400px\">\n</div>\n\nThe **theui-sveltekit** is [**TheUI**](https://www.theui.dev)'s official component library for [**Sveltekit**](https://kit.svelte.dev), built on top of TailwindCSS. It combines the strength of SvelteKit and the features of TailwindCSS to create a powerful tool that accelerates your development process.\n\n<br>\n\n## **Features**\n\n- Accessible components\n- Easy control of dark and light modes\n- Effortless theming and branding with a single line of CSS\n- Highly customizable\n- RTL supports (Upcoming)\n- Fully typed for enhanced development\n\n<br>\n\n## **Components**\n\n- General Components\n\n  - [Accordion](https://www.svelte.theui.dev/components/accordion)\n  - [Alert](https://www.svelte.theui.dev/components/alert)\n  - [Badge](https://www.svelte.theui.dev/components/badge)\n  - [Breadcrumb](https://www.svelte.theui.dev/components/breadcrumb)\n  - [Button](https://www.svelte.theui.dev/components/button)\n  - [Button group](https://www.svelte.theui.dev/components/button-group)\n  - [Chips](https://www.svelte.theui.dev/components/chips)\n  - [Collapse](https://www.svelte.theui.dev/components/collapse)\n  - [Container](https://www.svelte.theui.dev/components/container)\n  - [Drawer](https://www.svelte.theui.dev/components/drawer)\n  - [Dropdown](https://www.svelte.theui.dev/components/dropdown)\n  - [Floating Button](https://www.svelte.theui.dev/components/float-button)\n  - [Modal](https://www.svelte.theui.dev/components/modal)\n  - [Navbar](https://www.svelte.theui.dev/components/navbar)\n  - [Notification](https://www.svelte.theui.dev/components/notification)\n  - [Pagination](https://www.svelte.theui.dev/components/pagination)\n  - [Popup (Exit & Entry popup)](https://www.svelte.theui.dev/components/popup)\n  - [Progress bar](https://www.svelte.theui.dev/components/progress-bar)\n  - [SVG](https://www.svelte.theui.dev/components/svg)\n  - [Table](https://www.svelte.theui.dev/components/table)\n  - [Tabs](https://www.svelte.theui.dev/components/tabs)\n  - [Tooltip](https://www.svelte.theui.dev/components/tooltip)\n\n- Form Components\n\n  - [Check-box](https://www.svelte.theui.dev/components/check-box)\n  - [Fieldset](https://www.svelte.theui.dev/components/fieldset)\n  - [File input](https://www.svelte.theui.dev/components/file-input)\n  - [Form](https://www.svelte.theui.dev/components/form)\n  - [Helper text](https://www.svelte.theui.dev/components/helper-text)\n  - [Input](https://www.svelte.theui.dev/components/input)\n  - [Label](https://www.svelte.theui.dev/components/label)\n  - [Radio button](https://www.svelte.theui.dev/components/radio-button)\n  - [Select](https://www.svelte.theui.dev/components/select)\n  - [Textarea](https://www.svelte.theui.dev/components/textarea)\n  - [Text editor](https://www.svelte.theui.dev/components/text-editor)\n  - [Toggle](https://www.svelte.theui.dev/components/toggle)\n\n- Utility\n  - [Close](https://www.svelte.theui.dev/components/close)\n  - [Dark mode](https://www.svelte.theui.dev/components/dark-mode)\n\n<br>\n\n## **Installation Guide**\n\nTo add the Sveltekit Components library to your project, you can do it in two ways:\n\n1. Use the boilerplate from GitHub.\n2. Manual installation from scratch.\n\n<br>\n\n### **1. Use the Boilerplate from GitHub**\n\nTo install the boilerplate template, open your terminal and use the following command, replacing **<project-name>** with your desired project name.\n\n```bash\n# Clone the project\ngit clone https://github.com/mbparvezme/theui-sveltekit-starter.git app-name\n\n# Install node modules\nnpm i\n\n# Run the application\nnpm run dev\n```\n\n<br>\n\n### **2. Manually Install from Scratch**\n\nTo manually install the component library, follow these steps:\n\n#### **2.1 &nbsp;&nbsp; Install Svelte/Sveltekit**\n\n```bash\n# Install Sveltekit\nnpm create svelte@latest my-app\ncd my-app\n\n# Add TailwindCSS\nnpx svelte-add@latest tailwindcss\n\n# Install node modules\nnpm i\n\n# Install theui-svelte\nnpm i theui-sveltekit\n```\n\n<br>\n\n#### **2.2 &nbsp;&nbsp; Configuration**\n\nOpen the TailwindCSS configuration file called `tailwind.config.cjs` and replace all of its existing content with the code provided below.\n\n```js\n// 1. Update config.content\n// 2. Add config.presets\nconst config = {\n  content: [\n    \"./src/**/*.{html,js,svelte,ts}\",\n    \"./node_modules/theui-sveltekit/**/*.{html,js,svelte,ts}\", // New line\n  ],\n  presets: [require(\"theui-sveltekit/preset\")], // New line\n  darkMode: \"class\",\n  theme: {\n    extend: {},\n  },\n\n  plugins: [],\n};\n\nmodule.exports = config;\n```\n\nIf you wish to use the default colors or desire an instant design without any color customization, you can utilize the `style.postcss` file, which contains all the default CSS variables used in this component library. To do this, open `__layout.svelte` and import the core style file as follows:\n\n```html\n<script>\n  import \"theui-sveltekit/style\"; // Add this line inside script tag\n  import \"../app.postcss\";\n</script>\n```\n\nThe file contains the following CSS codes. If you prefer not to use the default colors, you can copy the following code into your `app.postcss` file and customize it according to your needs.\n\n```css\n@layer base {\n  :root {\n    --ui-brand: 80 70 230; /* #5046E6 */\n    --ui-brand-active: 67 56 202; /* #4338CA */\n    --ui-brand-secondary: 253 230 138; /* #FDE68A */\n    --ui-brand-secondary-active: 252 211 77; /* #FCD34D */\n    --ui-text-on-brand: 255 255 255; /* #FFFFFF */\n    --ui-text-on-brand-secondary: 8 8 24; /* #080818 */\n    --ui-text-default: 8 8 24; /* #080818 */\n    --ui-bg-primary: 255 255 255; /* #FFFFFF */\n    --ui-bg-secondary: 243 244 246; /* #F3F4F6 */\n    --ui-bg-tertiary: 229 231 235; /* #E5E7EB */\n\n    --max-width: 1408px;\n  }\n\n  :root.dark {\n    --ui-text-default: 229 231 235; /* #E5E7EB */\n    --ui-bg-primary: 8 8 24; /* #080818 */\n    --ui-bg-secondary: 22 22 38; /* #161626 */\n    --ui-bg-tertiary: 32 32 48; /* #202030 */\n  }\n\n  body {\n    @apply bg-primary text-default;\n  }\n}\n```\n\nAnd thats all. You are ready to start your awesome project now.\n\n<br>\n\n## **Default CSS Variables**\n\nThe component library is built on the powerful foundation of TailwindCSS, a tool capable of generating a wide array of CSS styles and a multitude of variables for your design. However, the real question is, do you truly need an extensive array of CSS variables for your design?\n\nHaving the ability to define numerous variables is not the issue. The challenge lies in maintaining design consistency. When you have an overwhelming number of options, it becomes all too easy to lose that consistency, leading to a haphazard and disjointed design.\n\nTo address this challenge, the \"TheUI Sveltekit\" component library introduces a set of carefully curated custom variables that seamlessly integrate with those offered by TailwindCSS. You can effortlessly customize your theme using just one line of code by altering the values of these custom variables.\n\n<br>\n\n### **Utility Variables**\n\nThere `--max-width` CSS variable exclusively used in the `Container` component to ensure that the width of the component remains consistent throughout the entire design. There is no dedicated CSS class for this property. Instead, you can apply it using a Tailwind CSS arbitrary value like `max-w-[var(--max-width)]`.\n\n```css\n--max-width\n```\n\n### **Colors Variables**\n\n\"TheUI Sveltekit\" component library offers the following CSS variables and their default values. Each CSS variable is prefixed with \"ui\" to prevent conflicts with other variables.\n\n```css\n  /* Brand colors */\n  --ui-brand\n  --ui-brand-active\n  --ui-brand-secondary\n  --ui-brand-secondary-active\n  /* Text colors */\n  --ui-text-on-brand\n  --ui-text-on-brand-secondary\n  --ui-text-default\n  /* Background colors */\n  --ui-bg-primary\n  --ui-bg-secondary\n  --ui-bg-tertiary\n```\n\n> Brand colors are universally accessible, ready to be used in various parts of your design. However, it's important to note that text colors are distinct from background colors, and vice versa. This separation ensures that you have the appropriate colors for both text and background elements, allowing for effective and visually pleasing design combinations.\n\n<br>\n\n### **Use of Custom Colors**\n\nYou have the flexibility to employ custom classes for integrating the custom colors into your design. The Sveltekit Components library incorporates the following classes to make this process seamless:\n\n| CLASS                         | DESCRIPTION                                                                                                                                                                                                                                 |\n| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| .[...]-brand                  | Apply the brand color to your component by using the \".bg-brand\" class for the background and \".text-brand\" for the foreground.                                                                                                             |\n| .[...]-brand-active           | Use these classes to indicate different states, such as active or hover, for an element. For example, apply the brand color with slight variations using \".bg-brand-active\" for the background and \".text-brand-active\" for the foreground. |\n| .[...]-brand-secondary        | If you wish to use a secondary brand color for your components, you can do so with the \".bg-brand-secondary\" class for the background and \".text-brand-secondary\" for the foreground. These classes offer additional design flexibility.    |\n| .[...]-brand-secondary-active | Similar to \".[...]-brand-active,\" but designed for the secondary brand color.                                                                                                                                                               |\n| .text-on-brand                | This class is for the foreground color when using the background color \".bg-brand.\"                                                                                                                                                         |\n| .text-on-brand-secondary      | This class serves as the foreground color when using the background color \".bg-brand-secondary.\"                                                                                                                                            |\n| .text-default                 | This class represents the default text/foreground color for the component library.                                                                                                                                                          |\n| .bg-primary                   | Use this class for the default/primary background color.                                                                                                                                                                                    |\n| .bg-secondary                 | Apply this class for the secondary background color.                                                                                                                                                                                        |\n| .bg-tertiary                  | Utilize this class for the tertiary background color.                                                                                                                                                                                       |\n\n<br>\n\n### **Color Customization**\n\nThe process of customizing colors in the Sveltekit Components library is straightforward and requires just a single line of code. To change the value of a specific CSS variable, follow these steps:\n\n- Identify the CSS variable you wish to customize. For instance, let's say you want to set your brand color to \"rgb(255, 0, 0)\" and change the default text color to \"rgb(0, 0, 0).\"\n- Open the `./src/app.css` or `./src/app.postcss` file in your project, which contains your TailwindCSS styles and add the following lines to the file:\n\n```css\n--ui-brand: 255 0 0;\n--ui-text-default: 0 0 0;\n```\n\nCongratulations! With this simple change, all the components using the brand color and the default text color will automatically adapt to the new color values. No further adjustments are necessary.\n\n> Writing the color values in the format provided, such as \"255 0 0,\" rather than the conventional RGB code like \"rgb(255, 255, 266,\" is essential because it aligns with TailwindCSS's methodology for applying opacity to colors.\n\nTailwindCSS allows you to easily adjust the opacity of colors using utility classes like \"bg-opacity-50\" to set a 50% opacity background. These utility classes are designed to work with color values expressed in the format you mentioned, \"255 0 0,\" and not with conventional RGB codes like \"rgb(255, 255, 266).\"\n\nBy adhering to this format, you ensure that you can seamlessly leverage TailwindCSS's opacity utilities to control the transparency of your colors, providing a consistent and flexible approach to design customization.\n\n<br>\n\n## **The z-index**\n\nIn this library, several components make use of z-index values. This document will provide you with information about the order of the z-index in these components.\n\nZ-index helps in managing the stacking order of elements and overlays, controlling their arrangement along the z-axis. It is not recommended to customize these values in the design, as doing so may disrupt the layout along the z-axis.\n\n| COMPONENT/Property | CLASS/Selector            | VALUE (Z-INDEX) |\n| ------------------ | ------------------------- | --------------- |\n| Dropdown           | .dropdown .backdrop       | 10              |\n| Dropdown           | .dropdown-content         | 11              |\n| Sticky positioned  | .sticky, [class$=:sticky] | 20              |\n| Fixed positioned   | .fixed, [class$=:fixed]   | 30              |\n| Offcanvas          | .offcanvas                | 40              |\n| Modal              | .modal                    | 50              |\n| Popup              | .popup                    | 60              |\n| Tooltip            | .tooltip                  | 70              |\n| Notifications      | .notifications            | 80              |\n\n<br>\n\n## **Contributions**\n\nPrior to commencing work on new features or bug fixes, kindly inform us. If you wish to propose a new feature, please create a feature request in [Github Issues](https://github.com/mbparvezme/theui-sveltekit/issues). This promotes open discussions and avoids redundant efforts. It encompasses tasks like adding new components, introducing utility features, and making major changes to existing work.\n\n<br>\n\n## **Copyright**\n\nThe code and documentation are copyright 2023 by [M B Parvez](https://www.mbparvez.me), [Gosoft](https://www.gosoft.io) and [TheUI](https://www.theui.dev).\n\n<br>\n\n## **License**\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\n<br>\n\n---\n\n<br>\n\n## **Special Thanks To [Gosoft.io](https://www.gosoft.io) and [BIPBY Digital](https://www.bipby.digital) for being our digital partner**\n",
+	"legacy_svelte": true,
+	"downloads_history": [
+		[3596, 1142],
+		[3603, 146],
+		[3610, 203],
+		[3617, 225],
+		[3624, 99],
+		[3631, 140],
+		[3638, 83],
+		[3645, 52],
+		[3652, 51],
+		[3659, 59],
+		[3666, 155],
+		[3673, 83],
+		[3680, 14],
+		[3687, 25],
+		[3694, 42],
+		[3701, 15],
+		[3708, 15],
+		[3715, 25],
+		[3722, 24],
+		[3729, 15],
+		[3736, 13],
+		[3743, 40],
+		[3750, 8],
+		[3757, 13],
+		[3764, 11],
+		[3771, 54],
+		[3778, 100],
+		[3785, 42],
+		[3792, 975],
+		[3799, 183],
+		[3806, 30],
+		[3813, 56],
+		[3820, 336],
+		[3827, 32],
+		[3834, 307],
+		[3841, 26],
+		[3848, 45],
+		[3855, 16],
+		[3862, 18],
+		[3869, 15],
+		[3876, 13],
+		[3883, 14],
+		[3890, 174],
+		[3897, 51],
+		[3904, 21],
+		[3911, 92],
+		[3918, 130],
+		[3925, 79],
+		[3932, 51],
+		[3939, 61],
+		[3946, 202],
+		[3953, 285],
+		[3960, 177],
+		[3967, 150],
+		[3974, 19],
+		[3981, 26],
+		[3988, 3],
+		[3995, 34],
+		[4002, 15],
+		[4009, 20],
+		[4016, 18],
+		[4023, 38],
+		[4030, 15],
+		[4037, 28],
+		[4044, 56],
+		[4051, 30],
+		[4058, 12],
+		[4065, 13],
+		[4072, 10],
+		[4079, 13],
+		[4086, 5],
+		[4093, 2],
+		[4100, 77],
+		[4107, 170],
+		[4114, 30],
+		[4121, 56],
+		[4128, 42],
+		[4135, 20]
+	]
 }

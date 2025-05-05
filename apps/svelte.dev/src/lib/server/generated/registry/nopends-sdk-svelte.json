@@ -7,20 +7,10 @@
 	"downloads": 14,
 	"updated": "2025-02-02T12:04:55.614Z",
 	"tags": ["integration"],
-	"runes": false,
 	"typescript": true,
 	"version": "0.0.0",
 	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
 	"last_rune_check_version": "0.0.0",
-	"downloads_history": [
-		[4043, 43],
-		[4050, 1],
-		[4057, 1],
-		[4064, 1],
-		[4071, 1],
-		[4099, 86],
-		[4113, 14]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -95,5 +85,18 @@
 			[9, 10]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# NOPENDS SDK: Svelte provider\n\n[Svelte](https://svelte.dev/) UI components for the [NOPENDS SDK](https://sdk.nopends.com/docs):\n\n- [`useChat`](https://sdk.nopends.com/docs/reference/ai-sdk-ui/use-chat) hook\n- [`useCompletion`](https://sdk.nopends.com/docs/reference/ai-sdk-ui/use-completion) hook\n- [`useAssistant`](https://sdk.nopends.com/docs/reference/ai-sdk-ui/use-assistant) hook\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4044, 43],
+		[4051, 1],
+		[4058, 1],
+		[4065, 1],
+		[4072, 1],
+		[4100, 86],
+		[4114, 14],
+		[4121, 5],
+		[4128, 9]
+	]
 }

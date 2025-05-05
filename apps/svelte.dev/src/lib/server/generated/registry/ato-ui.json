@@ -7,93 +7,12 @@
 	"downloads": 11,
 	"updated": "2023-11-25T19:05:39.718Z",
 	"tags": ["ui", "design-system"],
-	"runes": false,
 	"github_stars": 79,
 	"typescript": true,
 	"version": "0.4.0",
 	"svelte_range": ">=4",
 	"kit_range": "^1.27.6",
 	"last_rune_check_version": "0.4.0",
-	"downloads_history": [
-		[3574, 21],
-		[3581, 5],
-		[3588, 2],
-		[3595, 5],
-		[3602, 6],
-		[3609, 77],
-		[3616, 18],
-		[3623, 5],
-		[3630, 2],
-		[3637, 10],
-		[3644, 18],
-		[3651, 13],
-		[3658, 12],
-		[3665, 14],
-		[3672, 6],
-		[3679, 3],
-		[3686, 3],
-		[3693, 1],
-		[3700, 1],
-		[3707, 3],
-		[3714, 4],
-		[3721, 11],
-		[3728, 3],
-		[3735, 6],
-		[3742, 6],
-		[3749, 3],
-		[3756, 2],
-		[3763, 2],
-		[3770, 6],
-		[3777, 15],
-		[3784, 2],
-		[3791, 3],
-		[3798, 6],
-		[3805, 4],
-		[3812, 6],
-		[3819, 2],
-		[3826, 2],
-		[3833, 22],
-		[3840, 35],
-		[3847, 2],
-		[3854, 3],
-		[3861, 11],
-		[3868, 1],
-		[3875, 3],
-		[3882, 4],
-		[3889, 5],
-		[3896, 5],
-		[3903, 6],
-		[3910, 7],
-		[3917, 17],
-		[3924, 6],
-		[3931, 17],
-		[3938, 21],
-		[3945, 24],
-		[3952, 8],
-		[3959, 10],
-		[3966, 15],
-		[3973, 14],
-		[3980, 2],
-		[3987, 2],
-		[3994, 2],
-		[4001, 10],
-		[4008, 10],
-		[4015, 11],
-		[4022, 7],
-		[4029, 7],
-		[4036, 18],
-		[4043, 31],
-		[4050, 4],
-		[4057, 4],
-		[4064, 3],
-		[4071, 2],
-		[4078, 10],
-		[4085, 1],
-		[4092, 12],
-		[4099, 15],
-		[4106, 5],
-		[4113, 11]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -129,13 +48,13 @@
 			},
 			{
 				"name": "@floating-ui/dom",
-				"version": "1.6.13",
-				"size": 165945
+				"version": "1.7.0",
+				"size": 166707
 			},
 			{
 				"name": "@floating-ui/core",
-				"version": "1.6.9",
-				"size": 212585
+				"version": "1.7.0",
+				"size": 214929
 			},
 			{
 				"name": "@floating-ui/utils",
@@ -689,72 +608,42 @@
 			},
 			{
 				"name": "@babel/core",
-				"version": "7.26.10",
-				"size": 795988
-			},
-			{
-				"name": "json5",
-				"version": "2.2.3",
-				"size": 235198
-			},
-			{
-				"name": "semver",
-				"version": "6.3.1",
-				"size": 68343
-			},
-			{
-				"name": "gensync",
-				"version": "1.0.0-beta.2",
-				"size": 28891
-			},
-			{
-				"name": "@babel/types",
-				"version": "7.27.0",
-				"size": 2583295
-			},
-			{
-				"name": "@babel/helper-string-parser",
-				"version": "7.25.9",
-				"size": 31816
-			},
-			{
-				"name": "@babel/helper-validator-identifier",
-				"version": "7.25.9",
-				"size": 48330
-			},
-			{
-				"name": "@babel/parser",
-				"version": "7.27.0",
-				"size": 1924962
-			},
-			{
-				"name": "@babel/helpers",
-				"version": "7.27.0",
-				"size": 866498
-			},
-			{
-				"name": "@babel/template",
-				"version": "7.27.0",
-				"size": 70675
+				"version": "7.27.1",
+				"size": 794180
 			},
 			{
 				"name": "@babel/code-frame",
-				"version": "7.26.2",
+				"version": "7.27.1",
 				"size": 33160
+			},
+			{
+				"name": "@babel/helper-validator-identifier",
+				"version": "7.27.1",
+				"size": 48330
 			},
 			{
 				"name": "js-tokens",
 				"version": "4.0.0"
 			},
 			{
-				"name": "@babel/traverse",
-				"version": "7.27.0",
-				"size": 676526
+				"name": "@babel/generator",
+				"version": "7.27.1",
+				"size": 560098
 			},
 			{
-				"name": "@babel/generator",
-				"version": "7.27.0",
-				"size": 559855
+				"name": "@babel/parser",
+				"version": "7.27.1",
+				"size": 1859876
+			},
+			{
+				"name": "@babel/types",
+				"version": "7.27.1",
+				"size": 2597469
+			},
+			{
+				"name": "@babel/helper-string-parser",
+				"version": "7.27.1",
+				"size": 31816
 			},
 			{
 				"name": "jsesc",
@@ -762,54 +651,34 @@
 				"size": 32280
 			},
 			{
-				"name": "globals",
-				"version": "11.12.0",
-				"size": 39779
-			},
-			{
-				"name": "convert-source-map",
-				"version": "2.0.0",
-				"size": 15854
-			},
-			{
-				"name": "@babel/helper-module-transforms",
-				"version": "7.26.0",
-				"size": 160842
-			},
-			{
-				"name": "@babel/helper-module-imports",
-				"version": "7.25.9",
-				"size": 63714
-			},
-			{
 				"name": "@babel/helper-compilation-targets",
-				"version": "7.27.0",
+				"version": "7.27.1",
 				"size": 53776
 			},
 			{
 				"name": "@babel/compat-data",
-				"version": "7.26.8",
-				"size": 66428
+				"version": "7.27.1",
+				"size": 66193
 			},
 			{
 				"name": "@babel/helper-validator-option",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 11775
 			},
 			{
 				"name": "browserslist",
-				"version": "4.24.4",
-				"size": 64926
+				"version": "4.24.5",
+				"size": 65174
 			},
 			{
 				"name": "caniuse-lite",
-				"version": "1.0.30001715",
-				"size": 2211246
+				"version": "1.0.30001716",
+				"size": 2214832
 			},
 			{
 				"name": "electron-to-chromium",
-				"version": "1.5.140",
-				"size": 162065
+				"version": "1.5.149",
+				"size": 163189
 			},
 			{
 				"name": "node-releases",
@@ -837,63 +706,113 @@
 				"size": 14766
 			},
 			{
+				"name": "semver",
+				"version": "6.3.1",
+				"size": 68343
+			},
+			{
+				"name": "@babel/helper-module-transforms",
+				"version": "7.27.1",
+				"size": 160852
+			},
+			{
+				"name": "@babel/helper-module-imports",
+				"version": "7.27.1",
+				"size": 63724
+			},
+			{
+				"name": "@babel/traverse",
+				"version": "7.27.1",
+				"size": 689113
+			},
+			{
+				"name": "@babel/template",
+				"version": "7.27.1",
+				"size": 70675
+			},
+			{
+				"name": "globals",
+				"version": "11.12.0",
+				"size": 39779
+			},
+			{
+				"name": "@babel/helpers",
+				"version": "7.27.1",
+				"size": 861892
+			},
+			{
+				"name": "convert-source-map",
+				"version": "2.0.0",
+				"size": 15854
+			},
+			{
+				"name": "gensync",
+				"version": "1.0.0-beta.2",
+				"size": 28891
+			},
+			{
+				"name": "json5",
+				"version": "2.2.3",
+				"size": 235198
+			},
+			{
 				"name": "@babel/plugin-syntax-jsx",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 4141
 			},
 			{
 				"name": "@babel/helper-plugin-utils",
-				"version": "7.26.5",
-				"size": 11985
+				"version": "7.27.1",
+				"size": 11818
 			},
 			{
 				"name": "@babel/preset-typescript",
-				"version": "7.27.0",
-				"size": 25779
+				"version": "7.27.1",
+				"size": 25778
 			},
 			{
 				"name": "@babel/plugin-transform-modules-commonjs",
-				"version": "7.26.3",
-				"size": 41662
+				"version": "7.27.1",
+				"size": 41578
 			},
 			{
 				"name": "@babel/plugin-transform-typescript",
-				"version": "7.27.0",
-				"size": 143556
+				"version": "7.27.1",
+				"size": 143560
 			},
 			{
 				"name": "@babel/helper-annotate-as-pure",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 4054
 			},
 			{
 				"name": "@babel/helper-create-class-features-plugin",
-				"version": "7.27.0",
-				"size": 441091
+				"version": "7.27.1",
+				"size": 441090
 			},
 			{
 				"name": "@babel/helper-member-expression-to-functions",
-				"version": "7.25.9",
-				"size": 54675
+				"version": "7.27.1",
+				"size": 54694
 			},
 			{
 				"name": "@babel/helper-optimise-call-expression",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 6672
 			},
 			{
 				"name": "@babel/helper-replace-supers",
-				"version": "7.26.5",
+				"version": "7.27.1",
 				"size": 43308
 			},
 			{
 				"name": "@babel/helper-skip-transparent-expression-wrappers",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 6001
 			},
 			{
 				"name": "@babel/plugin-syntax-typescript",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 7039
 			}
 		],
@@ -1082,95 +1001,177 @@
 			[23, 18],
 			[23, 117],
 			[117, 118],
-			[118, 95],
+			[118, 64],
 			[118, 119],
-			[118, 120],
-			[118, 121],
+			[119, 120],
+			[119, 121],
+			[119, 83],
 			[118, 122],
 			[122, 123],
+			[123, 124],
+			[124, 125],
+			[124, 120],
 			[122, 124],
-			[118, 125],
-			[125, 122],
-			[118, 126],
-			[126, 127],
-			[127, 128],
-			[128, 129],
-			[128, 83],
-			[128, 124],
-			[127, 125],
-			[127, 122],
-			[126, 122],
+			[122, 65],
+			[122, 67],
+			[122, 126],
 			[118, 127],
-			[118, 130],
-			[130, 128],
+			[127, 128],
+			[127, 129],
+			[127, 130],
 			[130, 131],
-			[131, 125],
-			[131, 122],
-			[131, 65],
-			[131, 67],
-			[131, 132],
-			[130, 125],
-			[130, 127],
-			[130, 122],
-			[130, 95],
+			[130, 132],
 			[130, 133],
-			[118, 131],
-			[118, 128],
-			[118, 134],
-			[118, 64],
-			[118, 135],
-			[135, 130],
-			[135, 136],
-			[136, 122],
-			[136, 130],
-			[135, 124],
-			[118, 137],
-			[137, 138],
-			[137, 139],
-			[137, 140],
+			[130, 134],
+			[134, 135],
+			[134, 83],
+			[127, 136],
+			[136, 137],
+			[127, 138],
+			[118, 139],
+			[139, 140],
 			[140, 141],
-			[140, 142],
-			[140, 143],
-			[140, 144],
-			[144, 145],
-			[144, 83],
-			[137, 146],
-			[146, 147],
-			[137, 120],
+			[141, 119],
+			[141, 122],
+			[141, 123],
+			[141, 142],
+			[142, 119],
+			[142, 123],
+			[142, 124],
+			[141, 124],
+			[141, 95],
+			[141, 143],
+			[140, 124],
+			[139, 120],
+			[139, 141],
+			[118, 144],
+			[144, 142],
+			[144, 124],
+			[118, 123],
+			[118, 142],
+			[118, 141],
+			[118, 124],
+			[118, 145],
+			[118, 95],
+			[118, 146],
+			[118, 147],
+			[118, 138],
 			[117, 13],
 			[117, 148],
 			[148, 149],
 			[117, 150],
 			[150, 149],
-			[150, 139],
+			[150, 129],
 			[150, 148],
 			[150, 151],
+			[151, 139],
 			[151, 149],
-			[151, 135],
 			[150, 152],
 			[152, 153],
-			[153, 122],
+			[153, 124],
 			[152, 154],
 			[154, 153],
 			[154, 155],
-			[155, 122],
-			[155, 130],
+			[155, 141],
+			[155, 124],
 			[154, 156],
-			[156, 122],
+			[156, 124],
 			[154, 157],
-			[157, 130],
-			[157, 156],
 			[157, 155],
+			[157, 156],
+			[157, 141],
 			[154, 158],
-			[158, 122],
-			[158, 130],
-			[154, 130],
-			[154, 120],
+			[158, 141],
+			[158, 124],
+			[154, 141],
+			[154, 138],
 			[152, 149],
 			[152, 158],
 			[152, 159],
 			[159, 149]
 		],
 		"circular": [[103, 100]]
-	}
+	},
+	"legacy_svelte": true,
+	"readme": "![Ato UI](./static/seo/ato-ui-banner-resized.png 'Ato UI')\n\n# Ato UI\n\n[![npm-version](https://img.shields.io/npm/v/ato-ui?logo=npm&color=cc3534&style=flat-square)](https://www.npmjs.com/package/ato-ui)\n[![license](https://img.shields.io/badge/license-MIT-%23bada55?style=flat-square)](https://github.com/bennymi/ato-ui/blob/main/LICENSE)\n[![discord](https://dcbadge.vercel.app/api/server/7PXN3fs3tN?style=flat-square)](https://discord.gg/7PXN3fs3tN)\n\nThe elemental UI component library for Svelte, built with UnoCSS and Melt UI.\n\n## 🚀 Getting Started\n\nCheck out the [documentation](https://ato-ui.vercel.app/) for a detailed installation guide and project setup.\n\n```shell\npnpm add -D ato-ui\n```\n\n## ✨ Features\n\n- 🦄 Headless + Styled components\n- 🎨 Themeable with an easy to use designers page\n- 🎯 Written in TypeScript\n- 👍 Strict adherence to [WAI-ARIA guidelines](https://www.w3.org/WAI/ARIA/apg/) (built on top of accessible headless libraries)\n- ✈️ Convenient CSS shortcuts & tokens\n- 😃 Pure CSS icons of all your favourite icon sets thanks to iconify and [UnoCSS](https://github.com/unocss/unocss)\n\n## 👋 Community\n\nWant to discuss something with us? Come join us on [Discord](https://discord.gg/7PXN3fs3tN), we would love to see you there.\n\n<a href=\"https://discord.gg/7PXN3fs3tN\" alt=\"Ato UI Discord community\">\n<picture>\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://invidget.switchblade.xyz/7PXN3fs3tN\">\n  <img alt=\"Ato UI Discord community\" src=\"https://invidget.switchblade.xyz/7PXN3fs3tN?theme=dark\">\n</picture>\n</a>\n\n## ⚒️ Contributions\n\nDevelopers interested in contributing should read the [Code of Conduct](./CODE_OF_CONDUCT.md) and the [Contribution Guide](./CONTRIBUTING.md). PRs are welcomed. Find an open issue you can work on and come discuss it with us on discord.\n\n## 🌸 Credits\n\nThe following amazing projects made this library possible and / or inspired features:\n\n- [UnoCSS](https://github.com/unocss/unocss)\n- [Melt UI](https://github.com/melt-ui/melt-ui)\n- [Skeleton](https://github.com/skeletonlabs/skeleton)\n- [Onu UI](https://github.com/onu-ui/onu-ui)\n- [Anu](https://github.com/jd-solanki/anu)\n- [MDsveX](https://github.com/pngwn/mdsvex)\n- [TailwindCSS](https://github.com/tailwindlabs/tailwindcss)\n- [WindiCSS](https://windicss.org/)\n- [Shiki](https://github.com/shikijs/shiki)\n\n## License\n\n[MIT](./LICENSE) License &copy; 2023-PRESENT [Benedikt Mielke](https://github.com/bennymi)\n",
+	"downloads_history": [
+		[3589, 2],
+		[3596, 5],
+		[3603, 6],
+		[3610, 77],
+		[3617, 18],
+		[3624, 5],
+		[3631, 2],
+		[3638, 10],
+		[3645, 18],
+		[3652, 13],
+		[3659, 12],
+		[3666, 14],
+		[3673, 6],
+		[3680, 3],
+		[3687, 3],
+		[3694, 1],
+		[3701, 1],
+		[3708, 3],
+		[3715, 4],
+		[3722, 11],
+		[3729, 3],
+		[3736, 6],
+		[3743, 6],
+		[3750, 3],
+		[3757, 2],
+		[3764, 2],
+		[3771, 6],
+		[3778, 15],
+		[3785, 2],
+		[3792, 3],
+		[3799, 6],
+		[3806, 4],
+		[3813, 6],
+		[3820, 2],
+		[3827, 2],
+		[3834, 22],
+		[3841, 35],
+		[3848, 2],
+		[3855, 3],
+		[3862, 11],
+		[3869, 1],
+		[3876, 3],
+		[3883, 4],
+		[3890, 5],
+		[3897, 5],
+		[3904, 6],
+		[3911, 7],
+		[3918, 17],
+		[3925, 6],
+		[3932, 17],
+		[3939, 21],
+		[3946, 24],
+		[3953, 8],
+		[3960, 10],
+		[3967, 15],
+		[3974, 14],
+		[3981, 2],
+		[3988, 2],
+		[3995, 2],
+		[4002, 10],
+		[4009, 10],
+		[4016, 11],
+		[4023, 7],
+		[4030, 7],
+		[4037, 18],
+		[4044, 31],
+		[4051, 4],
+		[4058, 4],
+		[4065, 3],
+		[4072, 2],
+		[4079, 10],
+		[4086, 1],
+		[4093, 12],
+		[4100, 15],
+		[4107, 5],
+		[4114, 11],
+		[4121, 13],
+		[4128, 9]
+	]
 }

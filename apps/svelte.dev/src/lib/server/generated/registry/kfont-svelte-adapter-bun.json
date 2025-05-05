@@ -5,46 +5,44 @@
 	"authors": ["kfontenot"],
 	"homepage": "https://github.com/KyleFontenot/svelte-adapter-bun#readme",
 	"downloads": 7,
-	"updated": "2025-03-28T17:53:37.668Z",
+	"updated": "2025-04-29T22:19:03.558Z",
 	"tags": ["adapter"],
-	"runes": false,
 	"github_stars": 3,
 	"typescript": true,
-	"version": "0.10.0",
+	"version": "0.10.4",
 	"kit_range": "^2.5.28",
-	"last_rune_check_version": "0.10.0",
-	"downloads_history": [
-		[3931, 58],
-		[3938, 74],
-		[3945, 5],
-		[3959, 3],
-		[3966, 2],
-		[3973, 3],
-		[3987, 1],
-		[4001, 1],
-		[4008, 2],
-		[4015, 6],
-		[4022, 4],
-		[4029, 2],
-		[4036, 7],
-		[4043, 9],
-		[4050, 2],
-		[4057, 1],
-		[4064, 1],
-		[4071, 1],
-		[4085, 1],
-		[4092, 2],
-		[4099, 68],
-		[4106, 10],
-		[4113, 7]
-	],
+	"last_rune_check_version": "0.10.4",
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
 			{
 				"name": "@kfont/svelte-adapter-bun",
-				"version": "0.10.0",
-				"size": 49147
+				"version": "0.10.4",
+				"size": 59790
+			},
+			{
+				"name": "@types/bun",
+				"version": "1.2.12",
+				"size": 4006
+			},
+			{
+				"name": "bun-types",
+				"version": "1.2.12",
+				"size": 1651178
+			},
+			{
+				"name": "@types/node",
+				"version": "22.15.3",
+				"size": 2350386
+			},
+			{
+				"name": "undici-types",
+				"version": "6.21.0",
+				"size": 83680
+			},
+			{
+				"name": "callsite",
+				"version": "1.0.0"
 			},
 			{
 				"name": "tiny-glob",
@@ -65,8 +63,42 @@
 		"dependencies": [
 			[0, 1],
 			[1, 2],
-			[1, 3]
+			[2, 3],
+			[3, 4],
+			[0, 5],
+			[0, 6],
+			[6, 7],
+			[6, 8]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Fork Differences\n\n- Created a [vite plugin](#dev-vite-plugin) to enable development mode \n  websockets. \n- Changed the adapter's method of injecting websocket code.\n- Creates a designated `websocket.js` file in output.\n- Converted to Typescript.\n- Moved from Prettier to BiomeJS.\n- Updated to ES6 and Biome's linter practices.\n- Added TLS options for using hosted SSL certs. \n\n## Dev Vite Plugin \n\n```ts\n// vite.config.js\nimport { sveltekit } from '@sveltejs/kit/vite';\nimport { defineConfig } from 'vite';\nimport vitebunwsplugin from \"svelte-adapter-bun/vite\"\n// Can optionally pass in your Websocket handler into the plugin or just use \nthe normal hooks.server.ts function.\n//import handleWebsocket from './src/websocket';\n\nexport default defineConfig({\n  plugins: [\n    sveltekit(), \n    bunWSPlugin(handleWebsocket //optional passing, if you'd prefer)\n  ],\n});\n```\n\n## TLS\n`Bun.serve` offers the ability to pass in .pem certs outof the box. Bun officially takes a `BunFile`, a `Buffer`, the string of the cert's file content, or an array for the cert fields. At the moment, the tls option for this adapter only accepts a string of the path to the certs. This is because it instantiates a chokidar watcher for watching and swapping out the cert file if it is replaced such as when manually reneweing via certbot. \nAt the moment, when tls is used, the adapter creates two servers for production to run on both ports and auto-redirects for trying to upgrade when possible. \n\n---\n\n# svelte-adapter-bun\n\n[Adapter](https://kit.svelte.dev/docs/adapters) for SvelteKit apps that generates a standalone [Bun](https://github.com/oven-sh/bun) server.\n\n[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)\n\n## :zap: Usage\n\nInstall with `bun add -d svelte-adapter-bun`, then add the adapter to your `svelte.config.js`:\n\n```js\n// svelte.config.js\nimport adapter from \"svelte-adapter-bun\";\n\nexport default {\n  kit: {\n    adapter: adapter(),\n  },\n};\n```\n\nAfter building the server (`vite build`), use the following command to start:\n\n```\n# go to build directory\ncd build/\n\n# run Bun\nbun run start\n```\n\n## :gear: Options\n\nThe adapter can be configured with various options:\n\n```js\n// svelte.config.js\nimport adapter from \"svelte-adapter-bun\";\nexport default {\n  kit: {\n    adapter: adapter({\n      out: \"build\",\n      assets: true,\n      envPrefix: \"MY_CUSTOM_\",\n      development: true,\n      // precompress: true,\n      precompress: {\n        brotli: true,\n        gzip: true,\n        files: [\"htm\", \"html\"],\n      },\n      dynamic_origin: true,\n      xff_depth: 1,\n    }),\n  },\n};\n```\n\n### out\n\nThe directory to build the server to. It defaults to `build` — i.e. `bun run start` would start the server locally after it has been created.\n\n### assets\n\nBrowse a static assets. Default: `true`\n\n- [x] Support [HTTP range requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests)\n\n### precompress\n\nEnables precompressing using gzip and brotli for assets and prerendered pages. It defaults to `false`.\n\n#### brotli\n\nEnable brotli precompressing. It defaults to `false`.\n\n#### gzip\n\nEnable gzip precompressing. It defaults to `false`.\n\n#### files\n\nfile extensions to compress.It defaults to `['html','js','json','css','svg','xml','wasm']`.\n\n### envPrefix\n\nIf you need to change the name of the environment variables used to configure the deployment (for example, to deconflict with environment variables you don't control), you can specify a prefix:\n\n```js\nenvPrefix: \"MY_CUSTOM_\";\n```\n\n```\nMY_CUSTOM_HOST=127.0.0.1 \\\nMY_CUSTOM_PORT=4000 \\\nMY_CUSTOM_ORIGIN=https://my.site \\\nbun build/index.js\n```\n\n### development\n\nThis enables bun's error page. Default: `false`\n\n### dynamic_origin\n\nIf enabled use `PROTOCOL_HEADER` `HOST_HEADER` like origin. Default: `false`\n\n### xff_depth\n\nThe default value of XFF_DEPTH if environment is not set. Default: `1`\n\n## :spider_web: WebSocket Server\n\nhttps://bun.sh/docs/api/websockets\n\n```js\n// hooks.server.js\n\n/** @type {import(\"svelte-adapter-bun\").WebSocketHandler} */\nexport const handleWebsocket = {\n  open(ws) {\n    console.log(\"WebSocket opened\");\n    ws.send(\"Slava Ukraїni\");\n  },\n  /**\n   * @param {Request} request\n   * @param {Function} upgrade\n   */\n  upgrade(request, upgrade) {\n    const url = new URL(request.url);\n    if (url.pathname.startsWith(\"/ws\")) {\n      return upgrade(request);\n    }\n  },\n};\n```\n\n## Polyfills\n\nIf you need to use polyfills in your app, you can add them to the [`src/polyfills.js`](src/polyfills.js) file:\n\n```js\nclass Polifill {\n  constructor() {\n    ...\n  }\n}\n\nconst globals = {\n  Polifill,\n};\n```\n\n## :desktop_computer: Environment variables\n\n> Bun automatically reads configuration from `.env.local`, `.env.development` and `.env`\n\n### `PORT` and `HOST`\n\nBy default, the server will accept connections on `0.0.0.0` using port 3000. These can be customized with the `PORT` and `HOST` environment variables:\n\n```\nHOST=127.0.0.1 PORT=4000 bun build/index.js\n```\n\n### `ORIGIN`, `PROTOCOL_HEADER` and `HOST_HEADER`\n\nHTTP doesn't give SvelteKit a reliable way to know the URL that is currently being requested. The simplest way to tell SvelteKit where the app is being served is to set the `ORIGIN` environment variable:\n\n```\nORIGIN=https://my.site bun build/index.js\n```\n\nWith this, a request for the `/stuff` pathname will correctly resolve to `https://my.site/stuff`. Alternatively, you can specify headers that tell SvelteKit about the request protocol and host, from which it can construct the origin URL:\n\n```\nPROTOCOL_HEADER=x-forwarded-proto HOST_HEADER=x-forwarded-host bun build/index.js\n```\n\n> [`x-forwarded-proto`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Proto) and [`x-forwarded-host`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-Host) are de facto standard headers that forward the original protocol and host if you're using a reverse proxy (think load balancers and CDNs). You should only set these variables if your server is behind a trusted reverse proxy; otherwise, it'd be possible for clients to spoof these headers.\n\n### `ADDRESS_HEADER` and `XFF_DEPTH`\n\nThe [RequestEvent](https://kit.svelte.dev/docs/types#additional-types-requestevent) object passed to hooks and endpoints includes an `event.clientAddress` property representing the client's IP address. [Bun.js haven't got functionality](https://github.com/Jarred-Sumner/bun/issues/518) to get client's IP address, so SvelteKit will receive `127.0.0.1` or if your server is behind one or more proxies (such as a load balancer), you can get an IP address from headers, so we need to specify an `ADDRESS_HEADER` to read the address from:\n\n```\nADDRESS_HEADER=True-Client-IP bun build/index.js\n```\n\n> Headers can easily be spoofed. As with `PROTOCOL_HEADER` and `HOST_HEADER`, you should [know what you're doing](https://adam-p.ca/blog/2022/03/x-forwarded-for/) before setting these.\n> If the `ADDRESS_HEADER` is `X-Forwarded-For`, the header value will contain a comma-separated list of IP addresses. The `XFF_DEPTH` environment variable should specify how many trusted proxies sit in front of your server. E.g. if there are three trusted proxies, proxy 3 will forward the addresses of the original connection and the first two proxies:\n\n```\n<client address>, <proxy 1 address>, <proxy 2 address>\n```\n\nSome guides will tell you to read the left-most address, but this leaves you [vulnerable to spoofing](https://adam-p.ca/blog/2022/03/x-forwarded-for/):\n\n```\n<spoofed address>, <client address>, <proxy 1 address>, <proxy 2 address>\n```\n\nInstead, we read from the _right_, accounting for the number of trusted proxies. In this case, we would use `XFF_DEPTH=3`.\n\n> If you need to read the left-most address instead (and don't care about spoofing) — for example, to offer a geolocation service, where it's more important for the IP address to be _real_ than _trusted_, you can do so by inspecting the `x-forwarded-for` header within your app.\n\n## License\n\n[MIT](LICENSE) © [Volodymyr Palamar](https://github.com/gornostay25)\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3932, 58],
+		[3939, 74],
+		[3946, 5],
+		[3960, 3],
+		[3967, 2],
+		[3974, 3],
+		[3988, 1],
+		[4002, 1],
+		[4009, 2],
+		[4016, 6],
+		[4023, 4],
+		[4030, 2],
+		[4037, 7],
+		[4044, 9],
+		[4051, 2],
+		[4058, 1],
+		[4065, 1],
+		[4072, 1],
+		[4086, 1],
+		[4093, 2],
+		[4100, 68],
+		[4107, 10],
+		[4114, 7],
+		[4121, 7],
+		[4128, 123]
+	]
 }

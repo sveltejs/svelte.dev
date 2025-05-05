@@ -7,23 +7,12 @@
 	"downloads": 17,
 	"updated": "2025-02-25T06:54:55.032Z",
 	"tags": ["tooling"],
-	"runes": true,
 	"github_stars": 6,
 	"typescript": true,
 	"version": "1.2.3",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "1.2.3",
-	"downloads_history": [
-		[4064, 1132],
-		[4071, 236],
-		[4078, 44],
-		[4085, 32],
-		[4092, 30],
-		[4099, 4],
-		[4106, 6],
-		[4113, 17]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -39,8 +28,8 @@
 			},
 			{
 				"name": "@types/node",
-				"version": "22.14.1",
-				"size": 2331510
+				"version": "22.15.3",
+				"size": 2350386
 			},
 			{
 				"name": "undici-types",
@@ -184,8 +173,8 @@
 			},
 			{
 				"name": "type-fest",
-				"version": "4.40.0",
-				"size": 438455
+				"version": "4.40.1",
+				"size": 438790
 			}
 		],
 		"dependencies": [
@@ -227,5 +216,19 @@
 			[0, 31]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# shadcn-chat\n\nA CLI for adding **chat** components to your project.\n\n# Documentation\n\nCheck out the full documentation and API reference [here](##).\n\n# Installation\n\n> Some of the components rely on [shadcn-svelte](https://next.shadcn-svelte.com/docs/installation), so make sure to have it installed. Namely the button, avatar and textatrea components\n\n# init\n\nIt is recommended to install all components at once:\n\n```\nnpx @shadcn-svelte-chat/cli init\n```\n\nThe components will be installed in a subdirectory of the `components` folder: `src/components/ui/chat`\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4065, 1132],
+		[4072, 236],
+		[4079, 44],
+		[4086, 32],
+		[4093, 30],
+		[4100, 4],
+		[4107, 6],
+		[4114, 17],
+		[4121, 7],
+		[4128, 16]
+	]
 }

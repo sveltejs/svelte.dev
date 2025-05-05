@@ -7,93 +7,12 @@
 	"downloads": 456,
 	"updated": "2025-03-22T03:00:45.220Z",
 	"tags": ["ui"],
-	"runes": true,
-	"github_stars": 312,
+	"github_stars": 315,
 	"typescript": true,
 	"version": "0.0.8-dev.0",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
 	"last_rune_check_version": "0.0.8-dev.0",
-	"downloads_history": [
-		[3574, 74],
-		[3581, 155],
-		[3588, 15],
-		[3595, 15],
-		[3602, 12],
-		[3609, 8],
-		[3616, 11],
-		[3623, 659],
-		[3630, 131],
-		[3637, 95],
-		[3644, 513],
-		[3651, 24],
-		[3658, 180],
-		[3665, 190],
-		[3672, 42],
-		[3679, 102],
-		[3686, 42],
-		[3693, 77],
-		[3700, 36],
-		[3707, 54],
-		[3714, 35],
-		[3721, 36],
-		[3728, 66],
-		[3735, 29],
-		[3742, 71],
-		[3749, 38],
-		[3756, 49],
-		[3763, 78],
-		[3770, 56],
-		[3777, 71],
-		[3784, 74],
-		[3791, 118],
-		[3798, 40],
-		[3805, 39],
-		[3812, 93],
-		[3819, 161],
-		[3826, 159],
-		[3833, 119],
-		[3840, 88],
-		[3847, 64],
-		[3854, 55],
-		[3861, 173],
-		[3868, 148],
-		[3875, 138],
-		[3882, 95],
-		[3889, 120],
-		[3896, 151],
-		[3903, 192],
-		[3910, 205],
-		[3917, 118],
-		[3924, 270],
-		[3931, 103],
-		[3938, 124],
-		[3945, 143],
-		[3952, 98],
-		[3959, 209],
-		[3966, 554],
-		[3973, 315],
-		[3980, 381],
-		[3987, 227],
-		[3994, 314],
-		[4001, 507],
-		[4008, 405],
-		[4015, 388],
-		[4022, 573],
-		[4029, 536],
-		[4036, 445],
-		[4043, 455],
-		[4050, 614],
-		[4057, 568],
-		[4064, 562],
-		[4071, 534],
-		[4078, 506],
-		[4085, 450],
-		[4092, 657],
-		[4099, 509],
-		[4106, 548],
-		[4113, 456]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -104,22 +23,22 @@
 			},
 			{
 				"name": "@tiptap/core",
-				"version": "2.11.7",
-				"size": 2546013
+				"version": "2.11.9",
+				"size": 2545985
 			},
 			{
 				"name": "@tiptap/extension-code-block",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 84197
 			},
 			{
 				"name": "@tiptap/extension-code-block-lowlight",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 685447
 			},
 			{
 				"name": "@tiptap/extension-floating-menu",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 72184
 			},
 			{
@@ -134,12 +53,12 @@
 			},
 			{
 				"name": "@tiptap/extension-image",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 25935
 			},
 			{
 				"name": "@tiptap/extension-link",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 180532
 			},
 			{
@@ -149,18 +68,18 @@
 			},
 			{
 				"name": "@tiptap/extension-placeholder",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 37819
 			},
 			{
 				"name": "@tiptap/pm",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 24466
 			},
 			{
 				"name": "prosemirror-menu",
-				"version": "1.2.4",
-				"size": 111446
+				"version": "1.2.5",
+				"size": 113350
 			},
 			{
 				"name": "crelt",
@@ -174,8 +93,8 @@
 			},
 			{
 				"name": "prosemirror-model",
-				"version": "1.25.0",
-				"size": 523551
+				"version": "1.25.1",
+				"size": 524300
 			},
 			{
 				"name": "orderedmap",
@@ -184,13 +103,13 @@
 			},
 			{
 				"name": "prosemirror-transform",
-				"version": "1.10.3",
-				"size": 316103
+				"version": "1.10.4",
+				"size": 317199
 			},
 			{
 				"name": "prosemirror-view",
-				"version": "1.39.1",
-				"size": 872388,
+				"version": "1.39.2",
+				"size": 909536,
 				"isCircular": true,
 				"circularTarget": 18
 			},
@@ -222,8 +141,8 @@
 			},
 			{
 				"name": "prosemirror-keymap",
-				"version": "1.2.2",
-				"size": 25670
+				"version": "1.2.3",
+				"size": 26164
 			},
 			{
 				"name": "w3c-keyname",
@@ -302,8 +221,8 @@
 			},
 			{
 				"name": "prosemirror-dropcursor",
-				"version": "1.8.1",
-				"size": 30848
+				"version": "1.8.2",
+				"size": 34065
 			},
 			{
 				"name": "prosemirror-inputrules",
@@ -337,97 +256,97 @@
 			},
 			{
 				"name": "@tiptap/starter-kit",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 58648
 			},
 			{
 				"name": "@tiptap/extension-bold",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 31774
 			},
 			{
 				"name": "@tiptap/extension-code",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 25242
 			},
 			{
 				"name": "@tiptap/extension-text",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 5838
 			},
 			{
 				"name": "@tiptap/extension-italic",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 31914
 			},
 			{
 				"name": "@tiptap/extension-strike",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 25981
 			},
 			{
 				"name": "@tiptap/extension-heading",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 31013
 			},
 			{
 				"name": "@tiptap/extension-history",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 20863
 			},
 			{
 				"name": "@tiptap/extension-document",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 6443
 			},
 			{
 				"name": "@tiptap/extension-gapcursor",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 14772
 			},
 			{
 				"name": "@tiptap/extension-list-item",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 15835
 			},
 			{
 				"name": "@tiptap/extension-paragraph",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 14727
 			},
 			{
 				"name": "@tiptap/extension-blockquote",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 20603
 			},
 			{
 				"name": "@tiptap/extension-dropcursor",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 11938
 			},
 			{
 				"name": "@tiptap/extension-hard-break",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 27449
 			},
 			{
 				"name": "@tiptap/extension-text-style",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 34779
 			},
 			{
 				"name": "@tiptap/extension-bullet-list",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 29385
 			},
 			{
 				"name": "@tiptap/extension-ordered-list",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 39002
 			},
 			{
 				"name": "@tiptap/extension-horizontal-rule",
-				"version": "2.11.7",
+				"version": "2.11.9",
 				"size": 35676
 			},
 			{
@@ -603,5 +522,87 @@
 			[18, 14],
 			[14, 18]
 		]
-	}
+	},
+	"readme": "# Tipex\n\nTipex stands as an advanced rich text editor tailored for Svelte, meticulously engineered with the robust\nframeworks [Tiptap](https://tiptap.dev/) and [Prosemirror](https://prosemirror.net/). It empowers developers to\neffortlessly craft rich text editors, liberating them from the intricacies of underlying technologies, style management,\nand related complexities.\n\n> Svelte5 and runes mode activated! ✨🔮\n\n## Key Features\n\n- 🚀 **Svelte 5 Ready**: Built with Svelte 5's latest features including runes and snippets\n- 🎨 **Customizable Controls**: Flexible control system with both default and custom options\n- 🔌 **Plugin Architecture**: Extensible through Tiptap extensions\n- 📱 **Responsive**: Works great on both desktop and mobile devices\n- 🎯 **Floating Menu**: Context-aware floating toolbar for enhanced editing experience\n- 🔗 **Link Management**: Built-in link handling with preview and editing capabilities\n- 🎭 **Theming Support**: Easy styling with CSS variables and utility classes\n- ⚡ **Performance Optimized**: Leverages Svelte's reactivity for smooth editing\n- 💼 **TypeScript Support**: Full TypeScript support for better development experience\n\n## Installation\n\nInstall the package from [NPM](https://www.npmjs.com/package/@friendofsvelte/tipex):\n\n```bash\nnpm install \"@friendofsvelte/tipex\"\n```\n\n## Basic Usage\n\nImport the component and use it in your component:\n\n```svelte\n<script lang=\"ts\">\n    import {Tipex} from \"@friendofsvelte/tipex\";\n    \n    let body = `<p>This <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"\">content</a> is written by <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://bishwas.net/\">Bishwas</a> in 2023.</p>`;\n</script>\n\n<Tipex \n    {body} \n    controls \n    floating\n    style=\"margin-top: 1rem; margin-bottom: 0;\"\n    class=\"h-[70vh] border border-neutral-200\"\n/>\n```\n\n## Core Concepts\n\n### Control Modes\n\nTipex offers two control modes:\n\n1. **Default Controls** (`controls={true}`):\n    - Pre-built formatting toolbar\n    - Customizable through the `utilities` prop\n    - Perfect for quick implementation\n\n2. **Custom Controls** (`controls={false}`):\n    - Full control over the editor interface\n    - Use `controlComponent` for custom implementations\n    - Ideal for specialized use cases\n\n### Extension System\n\nTipex leverages Tiptap's extension system for enhanced functionality:\n\n```typescript\nimport { Tipex } from \"@friendofsvelte/tipex\";\nimport { TextAlign } from '@tiptap/extension-text-align';\n\nconst extensions = [\n\tTextAlign.configure({\n\t\ttypes: ['heading', 'paragraph'],\n\t}),\n];\n\n// Use in component\n<Tipex { extensions }\n/>\n```\n\n### Floating Menu\n\nThe floating menu provides context-aware formatting options:\n\n```svelte\n<Tipex floating /> // Enables the floating menu\n```\n\n## Advanced Usage\n\n### Custom Head and Foot Sections\n\nAdd custom components above or below the editor using Svelte 5 snippets:\n\n```svelte\n<script lang=\"ts\">\n    import {Tipex} from \"@friendofsvelte/tipex\";\n    \n    let body = \"\";\n</script>\n\n<Tipex {body}>\n    {#snippet head(editor)}\n        <CustomHeader {editor} />\n    {/snippet}\n    \n    {#snippet foot(editor)}\n        <CustomFooter {editor} />\n    {/snippet}\n</Tipex>\n```\n\n### Custom Utilities\n\nAdd custom controls while keeping the default toolbar:\n\n```svelte\n<script lang=\"ts\">\n    import {Tipex} from \"@friendofsvelte/tipex\";\n    \n    let body = \"\";\n</script>\n\n<Tipex {body} controls>\n    {#snippet utilities(editor)}\n        <CustomFormatting {editor} />\n    {/snippet}\n</Tipex>\n```\n\n### Custom Control Component\n\nCreate a completely custom control interface:\n\n```svelte\n<script lang=\"ts\">\n    import {Tipex} from \"@friendofsvelte/tipex\";\n    \n    let body = \"\";\n</script>\n\n<Tipex {body} controls={false}>\n    {#snippet controlComponent(editor)}\n        <MyCustomControls {editor} />\n    {/snippet}\n</Tipex>\n```\n\n## How to get html content from editor?\n\n```svelte\n<script lang=\"ts\">\n    import {Tipex} from \"@friendofsvelte/tipex\";\n    \n    let body = \"\";\n    let editor: Editor | undefined = $state();\n\n\tconst htmlContent = $derived(editor?.getHTML()); // Get HTML content\n </script>\n \n <Tipex {body} bind:tipex={editor} />\n ```\n\n## Documentation\n\nFor comprehensive documentation, visit [tipex.pages.dev](https://tipex.pages.dev/).\n\n## About Friend Of Svelte\n\n![Friend Of Svelte Logo](https://avatars.githubusercontent.com/u/143795012?s=200&v=4)\n\n[Friend Of Svelte](https://github.com/friendofsvelte) is a community-driven project to help Svelte developers find and\ndevelop awesome Svelte resources. Our mission is to create high-quality, maintainable, and accessible tools for the\nSvelte ecosystem.\n\n### Join the Community\n\n- 🌟 Star our repositories\n- 🤝 Contribute to projects\n- 📢 Share your ideas\n- 👥 Open memberships for everyone\n\nIf you like this project, you can be one of the friends by contributing to the project. Memberships are open for\neveryone.\n\n## License\n\nMIT Licensed. Copyright (c) 2023-2024 Friend of Svelte.",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3589, 15],
+		[3596, 15],
+		[3603, 12],
+		[3610, 8],
+		[3617, 11],
+		[3624, 659],
+		[3631, 131],
+		[3638, 95],
+		[3645, 513],
+		[3652, 24],
+		[3659, 180],
+		[3666, 190],
+		[3673, 42],
+		[3680, 102],
+		[3687, 42],
+		[3694, 77],
+		[3701, 36],
+		[3708, 54],
+		[3715, 35],
+		[3722, 36],
+		[3729, 66],
+		[3736, 29],
+		[3743, 71],
+		[3750, 38],
+		[3757, 49],
+		[3764, 78],
+		[3771, 56],
+		[3778, 71],
+		[3785, 74],
+		[3792, 118],
+		[3799, 40],
+		[3806, 39],
+		[3813, 93],
+		[3820, 161],
+		[3827, 159],
+		[3834, 119],
+		[3841, 88],
+		[3848, 64],
+		[3855, 55],
+		[3862, 173],
+		[3869, 148],
+		[3876, 138],
+		[3883, 95],
+		[3890, 120],
+		[3897, 151],
+		[3904, 192],
+		[3911, 205],
+		[3918, 118],
+		[3925, 270],
+		[3932, 103],
+		[3939, 124],
+		[3946, 143],
+		[3953, 98],
+		[3960, 209],
+		[3967, 554],
+		[3974, 315],
+		[3981, 381],
+		[3988, 227],
+		[3995, 314],
+		[4002, 507],
+		[4009, 405],
+		[4016, 388],
+		[4023, 573],
+		[4030, 536],
+		[4037, 445],
+		[4044, 455],
+		[4051, 614],
+		[4058, 568],
+		[4065, 562],
+		[4072, 534],
+		[4079, 506],
+		[4086, 450],
+		[4093, 657],
+		[4100, 509],
+		[4107, 548],
+		[4114, 456],
+		[4121, 436],
+		[4128, 482]
+	]
 }

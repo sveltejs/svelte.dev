@@ -10,14 +10,9 @@
 	"tags": ["tooling"],
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
-	"runes": false,
 	"last_rune_check_version": "0.0.1",
 	"version": "0.0.1",
 	"github_stars": 1,
-	"downloads_history": [
-		[4106, 54],
-		[4113, 6]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -29,5 +24,13 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# gg: never use console.log() to debug again!\n\n`gg()` is a lo**gg**er/debu**gg**er with several advantages:\n\n- Annotated with automatic _namespace_ based on source file and calling function.\n  - Each namespace gets a unique color for easier visual parsing.\n  - Simple syntax with wildcards to filter/hide debug output at runtime.\n  - Millisecond diff (timestamps) for each namespace.\n- Can be inserted into the middle of expressions (returns the value of the first argument).\n- Can output a link that opens the source file in your editor (like VS Code).\n- Simple to disable (turn all loggs into NOP's for production).\n- Faster to type.\n\n## Installation\n\n```\nnpm add @leftium/gg\n```\n\n## Usage\n\n_Coming soon..._\n\n## Inspirations\n\n### debug\n\n> A tiny JavaScript debugging utility modelled after Node.js core's debugging technique. Works in Node.js and web browsers.\n\n- https://www.npmjs.com/package/debug\n\n### q (python)\n\n> Quick and dirty debugging output for tired programmers.\n\n- https://github.com/zestyping/q\n- [Hacker News discussion](https://hw.leftium.com/#/item/9981430)\n- [PyCon lightning talk](https://www.youtube.com/watch?v=OL3De8BAhME#t=25m15s)\n\n### IceCream (python)\n\n> Never use print() to debug again\n\n- https://github.com/gruns/icecream\n- [Hacker News discussion](https://hw.leftium.com/#/item/26631467)\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4107, 54],
+		[4114, 6],
+		[4121, 6],
+		[4128, 2]
+	]
 }

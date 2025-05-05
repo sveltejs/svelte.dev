@@ -6,29 +6,24 @@
 	"authors": ["morbden"],
 	"homepage": "https://github.com/vulppi-dev/libs#readme",
 	"downloads": 17,
-	"updated": "2025-04-16T00:03:32.197Z",
+	"updated": "2025-04-26T22:25:42.189Z",
 	"tags": ["tooling"],
 	"svelte_range": "^5.25.6",
-	"runes": false,
-	"last_rune_check_version": "0.0.4",
-	"version": "0.0.4",
+	"last_rune_check_version": "0.1.2",
+	"version": "0.1.2",
 	"github_stars": 0,
-	"downloads_history": [
-		[4106, 118],
-		[4113, 17]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
 			{
 				"name": "@vulppi/bun-svelte-loader",
-				"version": "0.0.4",
-				"size": 46890
+				"version": "0.1.2",
+				"size": 49535
 			},
 			{
 				"name": "glob",
-				"version": "11.0.1",
-				"size": 474698
+				"version": "11.0.2",
+				"size": 475202
 			},
 			{
 				"name": "foreground-child",
@@ -258,5 +253,14 @@
 			[0, 37]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Vulppi Bun Svelte Loader\r\n\r\n## Overview\r\n\r\n`@vulppi/bun-svelte-loader` is a plugin for the [Bun](https://bun.sh/) JavaScript runtime that enables seamless loading and compilation of Svelte components. With this plugin, you can easily integrate Svelte into your Bun projects.\r\n\r\n## Installation\r\n\r\nInstall the plugin:\r\n\r\n```bash\r\nbun install @vulppi/bun-svelte-loader\r\n```\r\n\r\n## Usage\r\n\r\nTo use the plugin, add it to your `bunfig.toml` configuration file:\r\n\r\n```toml\r\n[serve.static]\r\nplugins=[\"@vulppi/bun-svelte-loader\"]\r\n```\r\n\r\nOnce configured, you can import and use Svelte components in your project:\r\n\r\n```ts\r\n//app.ts\r\nimport App from './App.svelte'\r\n\r\nconst app = new App({\r\n  target: document.body,\r\n  props: {\r\n    name: 'World',\r\n  },\r\n})\r\n\r\nexport default app\r\n```\r\n\r\n```html\r\n<!-- index.html -->\r\n<!DOCTYPE html>\r\n<html lang=\"en\">\r\n  <head>\r\n    <meta charset=\"UTF-8\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n    <title>Svelte App</title>\r\n  </head>\r\n  <body>\r\n    <script type=\"module\" src=\"./app.ts\"></script>\r\n  </body>\r\n</html>\r\n```\r\n\r\n## Features\r\n\r\n- Automatic compilation of `.svelte` files.\r\n- Seamless integration with Bun's plugin system.\r\n- Optimized for performance.\r\n\r\n## Contributing\r\n\r\nContributions are welcome! Feel free to open issues or submit pull requests to improve the plugin.\r\n\r\n## Support\r\n\r\nIf you encounter any issues or have questions, please open an issue on the [GitHub repository](https://github.com/vulppi-dev/libs/tree/main/bun-svelte-loader).\r\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4107, 118],
+		[4114, 17],
+		[4121, 104],
+		[4128, 129],
+		[4135, 20]
+	]
 }

@@ -400,6 +400,7 @@ function group_into_weekly_totals(
 		// Convert to day number
 		const start_day = timestamp_to_day_number(week_start_timestamp);
 
+		// Only add one entry per week
 		result.push([start_day, total_downloads]);
 	}
 
@@ -432,8 +433,11 @@ export async function fetch_package_download_history(
 
 		// If we have existing data, check if we can optimize the request
 		if (existing_data && existing_data.length > 0) {
+			// Filter out any duplicate entries first
+			const deduplicated_data = deduplicate_download_history(existing_data);
+
 			// Sort existing data by day number to ensure proper ordering
-			const sorted_data = [...existing_data].sort((a, b) => a[0] - b[0]);
+			const sorted_data = [...deduplicated_data].sort((a, b) => a[0] - b[0]);
 
 			// Convert current Monday to day number for comparison
 			const current_monday_day = timestamp_to_day_number(current_monday.getTime());
@@ -481,7 +485,7 @@ export async function fetch_package_download_history(
 
 		if (!response.ok) {
 			console.error(`Error fetching download history for ${pkg_name}: ${response.status}`);
-			return existing_data || [];
+			return existing_data ? deduplicate_download_history(existing_data) : [];
 		}
 
 		const data = await response.json();
@@ -492,7 +496,9 @@ export async function fetch_package_download_history(
 
 			// If we have existing data, merge it with new data
 			if (existing_data && existing_data.length > 0) {
-				const sorted_existing = [...existing_data].sort((a, b) => a[0] - b[0]);
+				// First deduplicate existing data
+				const deduplicated_existing = deduplicate_download_history(existing_data);
+				const sorted_existing = [...deduplicated_existing].sort((a, b) => a[0] - b[0]);
 
 				// Use a map to merge data, with start_day as key
 				const merged_map = new Map<number, [number, number]>();
@@ -519,12 +525,43 @@ export async function fetch_package_download_history(
 		}
 
 		// If there was a problem with the data, return existing data or empty array
-		return existing_data || [];
+		return existing_data ? deduplicate_download_history(existing_data) : [];
 	} catch (error) {
 		console.error(`Error fetching download history for ${pkg_name}:`, error);
 		// If we have existing data, return that rather than an empty array on error
-		return existing_data || [];
+		return existing_data ? deduplicate_download_history(existing_data) : [];
 	}
+}
+
+/**
+ * Deduplicate download history by removing entries with consecutive day numbers
+ * that have the same download count
+ */
+function deduplicate_download_history(data: [number, number][]): [number, number][] {
+	if (!data || data.length === 0) return [];
+
+	// Sort by day number first
+	const sorted = [...data].sort((a, b) => a[0] - b[0]);
+	const result: [number, number][] = [];
+
+	// Process each entry
+	for (let i = 0; i < sorted.length; i++) {
+		const current = sorted[i];
+
+		// Skip this entry if it appears to be a duplicate of the previous one
+		// (consecutive day with identical download count)
+		if (i > 0) {
+			const prev = sorted[i - 1];
+			// Check if this is a duplicate (consecutive day with same download count)
+			if (current[0] === prev[0] + 1 && current[1] === prev[1]) {
+				continue; // Skip this entry
+			}
+		}
+
+		result.push(current);
+	}
+
+	return result;
 }
 
 /**
@@ -849,11 +886,26 @@ export async function stream_package_tarball(
 	});
 }
 
+/**
+ * Checks a package for TypeScript support and Svelte runes usage
+ * Also determines if the package is using legacy Svelte mode
+ *
+ * @param name The package name
+ * @param version The package version
+ * @returns Object with runes, types, and legacy mode detection
+ */
 export async function composite_runes_types_check(name: string, version: string) {
 	let has_runes = false;
 	let has_types = false;
+	let has_svelte_files = false;
+	let has_svelte_js_ts_files = false;
+	let has_js_files = false;
+
+	// Keep track of analyzed Svelte files to check if any use runes
+	const svelte_files_analyzed = new Set<string>();
 
 	await stream_package_tarball(name, version, ({ content, filename, stop }) => {
+		// Early termination if we've found both runes and types
 		if (has_runes && has_types) stop();
 
 		// Check for TypeScript files or declaration files
@@ -868,20 +920,43 @@ export async function composite_runes_types_check(name: string, version: string)
 			has_types = true;
 		}
 
-		if (
-			!has_runes &&
-			(filename.endsWith('.svelte.ts') ||
-				filename.endsWith('.svelte.js') ||
-				filename.endsWith('.svelte'))
-		) {
-			// Do the rune check now
+		// Check for .js files
+		if (filename.endsWith('.js') || filename.endsWith('.mjs') || filename.endsWith('.cjs')) {
+			has_js_files = true;
+		}
+
+		// Check for Svelte files with runes
+		if (filename.endsWith('.svelte')) {
+			has_svelte_files = true;
+
+			if (!has_runes) {
+				has_runes = detect_runes(content);
+				svelte_files_analyzed.add(filename);
+			}
+		} else if (!has_runes && (filename.endsWith('.svelte.ts') || filename.endsWith('.svelte.js'))) {
+			has_svelte_js_ts_files = true;
 			has_runes = detect_runes(content);
+			svelte_files_analyzed.add(filename);
 		}
 	});
 
+	// Determine if the package is using legacy mode
+	let is_legacy = true;
+
+	if (has_runes) {
+		// Case 1 & 2: If we found any runes, it's not legacy
+		is_legacy = false;
+	} else if (!has_svelte_files && !has_svelte_js_ts_files && has_js_files) {
+		// Case 3: If no .svelte or .svelte.js/ts files, but has .js files, assume modern (not legacy)
+		is_legacy = false;
+	} else if (has_svelte_files && svelte_files_analyzed.size > 0 && !has_runes) {
+		// Case 4: Has .svelte files but no runes detected in any of them
+		is_legacy = true;
+	}
+
 	return {
-		runes: has_runes,
-		types: has_types
+		types: has_types,
+		legacy_svelte: is_legacy
 	};
 }
 
@@ -1551,7 +1626,7 @@ export function structured_interim_package_to_package(
 	data.github_stars = structured_package.meta.github_stars;
 	data.svelte_range = structured_package.meta.svelte_range;
 	data.kit_range = structured_package.meta.kit_range;
-	data.runes = structured_package.meta.runes;
+	data.legacy_svelte = structured_package.meta.runes;
 
 	return data;
 }

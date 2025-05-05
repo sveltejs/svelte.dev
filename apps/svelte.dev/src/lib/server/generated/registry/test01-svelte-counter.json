@@ -6,31 +6,11 @@
 	"downloads": 5,
 	"updated": "2024-11-21T15:56:47.015Z",
 	"tags": ["miscellaneous"],
-	"runes": true,
 	"typescript": false,
 	"version": "2.1.0",
 	"svelte_range": "^5.0.0",
 	"last_rune_check_version": "2.1.0",
 	"github_stars": 0,
-	"downloads_history": [
-		[3973, 178],
-		[3980, 21],
-		[3987, 6],
-		[3994, 3],
-		[4001, 2],
-		[4008, 4],
-		[4015, 6],
-		[4022, 6],
-		[4029, 6],
-		[4036, 10],
-		[4043, 8],
-		[4050, 4],
-		[4057, 1],
-		[4064, 1],
-		[4099, 3],
-		[4106, 6],
-		[4113, 5]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -163,5 +143,29 @@
 			[1, 19]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# This repo is no longer maintained. Consider using `npm init vite` and selecting the `svelte` option or — if you want a full-fledged app framework — use [SvelteKit](https://kit.svelte.dev), the official application framework for Svelte.\n\n---\n\n# svelte app\n\nThis is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.\n\nTo create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):\n\n```bash\nnpx degit sveltejs/template svelte-app\ncd svelte-app\n```\n\n*Note that you will need to have [Node.js](https://nodejs.org) installed.*\n\n\n## Get started\n\nInstall the dependencies...\n\n```bash\ncd svelte-app\nnpm install\n```\n\n...then start [Rollup](https://rollupjs.org):\n\n```bash\nnpm run dev\n```\n\nNavigate to [localhost:8080](http://localhost:8080). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.\n\nBy default, the server will only respond to requests from localhost. To allow connections from other computers, edit the `sirv` commands in package.json to include the option `--host 0.0.0.0`.\n\nIf you're using [Visual Studio Code](https://code.visualstudio.com/) we recommend installing the official extension [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode). If you are using other editors you may need to install a plugin in order to get syntax highlighting and intellisense.\n\n## Building and running in production mode\n\nTo create an optimised version of the app:\n\n```bash\nnpm run build\n```\n\nYou can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).\n\n\n## Single-page app mode\n\nBy default, sirv will only respond to requests that match files in `public`. This is to maximise compatibility with static fileservers, allowing you to deploy your app anywhere.\n\nIf you're building a single-page app (SPA) with multiple routes, sirv needs to be able to respond to requests for *any* path. You can make it so by editing the `\"start\"` command in package.json:\n\n```js\n\"start\": \"sirv public --single\"\n```\n\n## Using TypeScript\n\nThis template comes with a script to set up a TypeScript development environment, you can run it immediately after cloning the template with:\n\n```bash\nnode scripts/setupTypeScript.js\n```\n\nOr remove the script via:\n\n```bash\nrm scripts/setupTypeScript.js\n```\n\nIf you want to use `baseUrl` or `path` aliases within your `tsconfig`, you need to set up `@rollup/plugin-alias` to tell Rollup to resolve the aliases. For more info, see [this StackOverflow question](https://stackoverflow.com/questions/63427935/setup-tsconfig-path-in-svelte).\n\n## Deploying to the web\n\n### With [Vercel](https://vercel.com)\n\nInstall `vercel` if you haven't already:\n\n```bash\nnpm install -g vercel\n```\n\nThen, from within your project folder:\n\n```bash\ncd public\nvercel deploy --name my-project\n```\n\n### With [surge](https://surge.sh/)\n\nInstall `surge` if you haven't already:\n\n```bash\nnpm install -g surge\n```\n\nThen, from within your project folder:\n\n```bash\nnpm run build\nsurge public my-project.surge.sh\n```\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3974, 178],
+		[3981, 21],
+		[3988, 6],
+		[3995, 3],
+		[4002, 2],
+		[4009, 4],
+		[4016, 6],
+		[4023, 6],
+		[4030, 6],
+		[4037, 10],
+		[4044, 8],
+		[4051, 4],
+		[4058, 1],
+		[4065, 1],
+		[4100, 3],
+		[4107, 6],
+		[4114, 5],
+		[4121, 5],
+		[4128, 3],
+		[4135, 6]
+	]
 }

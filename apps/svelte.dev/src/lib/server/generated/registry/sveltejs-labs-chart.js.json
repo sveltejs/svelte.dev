@@ -7,19 +7,12 @@
 	"downloads": 20,
 	"updated": "2025-03-26T17:15:59.314Z",
 	"tags": ["ui"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "2.0.0",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.20.2",
 	"last_rune_check_version": "2.0.0",
-	"downloads_history": [
-		[4092, 162],
-		[4099, 213],
-		[4106, 13],
-		[4113, 20]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -31,5 +24,16 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# @sveltejs-labs/chart.js\n\n<img align=\"right\" width=\"100\" height=\"100\" alt=\"@sveltejs-labs/chart.js logo\" src=\"https://raw.githubusercontent.com/sveltejs-labs/chart.js/master/static/logo.png\">\n\nSvelte wrapper for [chart.js](https://www.chartjs.org/) Open for PRs and contributions!\n\n[![npm version](https://badge.fury.io/js/@sveltejs-labs%2Fchart.js.svg)](https://badge.fury.io/js/@sveltejs-labs%2Fchart.js)\n![NPM Version](https://img.shields.io/npm/v/%40sveltejs-labs%2Fchart.js)\n\n## Install\n\nInstall this library with peer dependencies:\n\n```shell\nbun add @sveltejs-labs/chart.js chart.js\n# or\npnpm add @sveltejs-labs/chart.js chart.js\n# or\nyarn add @sveltejs-labs/chart.js chart.js\n# or\nnpm i @sveltejs-labs/chart.js chart.js\n```\n\n## Usage\n\n```svelte\n<script>\n  import { Line } from '@sveltejs-labs/chart.js'\n</script>\n\n<Line data={...} />\n```\n\n### Custom Size\n\nIn order for Chart.js to obey the custom size you need to set `maintainAspectRatio` to false, example:\n\n```svelte\n<Line {data} width={100} height={50} options={{ maintainAspectRatio: false }} />\n```\n\n## License\n\nRead [LICENSE.md](LICENSE.md)\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4093, 162],
+		[4100, 213],
+		[4107, 13],
+		[4114, 20],
+		[4121, 78],
+		[4128, 13],
+		[4135, 9]
+	]
 }

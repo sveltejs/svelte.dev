@@ -6,75 +6,12 @@
 	"downloads": 5,
 	"updated": "2024-11-26T17:55:43.992Z",
 	"tags": ["media"],
-	"runes": true,
 	"typescript": true,
 	"version": "1.0.2",
 	"svelte_range": "^5.2.0",
 	"kit_range": "^2.8.1",
 	"last_rune_check_version": "1.0.2",
 	"github_stars": 0,
-	"downloads_history": [
-		[3574, 8],
-		[3581, 2],
-		[3588, 3],
-		[3595, 4],
-		[3602, 3],
-		[3609, 1],
-		[3623, 1],
-		[3630, 1],
-		[3637, 1],
-		[3644, 1],
-		[3651, 1],
-		[3658, 3],
-		[3665, 2],
-		[3679, 1],
-		[3686, 3],
-		[3700, 1],
-		[3714, 2],
-		[3728, 1],
-		[3735, 1],
-		[3749, 1],
-		[3763, 2],
-		[3777, 4],
-		[3798, 2],
-		[3805, 2],
-		[3826, 1],
-		[3833, 2],
-		[3840, 10],
-		[3854, 5],
-		[3861, 5],
-		[3868, 5],
-		[3875, 5],
-		[3882, 1],
-		[3903, 4],
-		[3924, 1],
-		[3931, 1],
-		[3938, 1],
-		[3952, 13],
-		[3959, 16],
-		[3966, 4],
-		[3973, 1],
-		[3980, 56],
-		[3987, 7],
-		[3994, 1],
-		[4001, 7],
-		[4008, 3],
-		[4015, 3],
-		[4022, 4],
-		[4029, 4],
-		[4036, 6],
-		[4043, 9],
-		[4050, 3],
-		[4057, 1],
-		[4064, 1],
-		[4071, 3],
-		[4078, 3],
-		[4085, 7],
-		[4092, 8],
-		[4099, 3],
-		[4106, 6],
-		[4113, 5]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -130,8 +67,8 @@
 			},
 			{
 				"name": "@sveltejs/kit",
-				"version": "2.20.7",
-				"size": 820650
+				"version": "2.20.8",
+				"size": 820819
 			},
 			{
 				"name": "@types/cookie",
@@ -220,8 +157,8 @@
 			},
 			{
 				"name": "svelte2tsx",
-				"version": "0.7.36",
-				"size": 766555
+				"version": "0.7.37",
+				"size": 772627
 			},
 			{
 				"name": "dedent-js",
@@ -279,8 +216,8 @@
 			},
 			{
 				"name": "@typescript-eslint/eslint-plugin",
-				"version": "8.31.0",
-				"size": 2495720
+				"version": "8.31.1",
+				"size": 2496020
 			},
 			{
 				"name": "ignore",
@@ -303,18 +240,18 @@
 			},
 			{
 				"name": "@typescript-eslint/utils",
-				"version": "8.31.0",
+				"version": "8.31.1",
 				"size": 267422
 			},
 			{
 				"name": "@typescript-eslint/types",
-				"version": "8.31.0",
+				"version": "8.31.1",
 				"size": 171287
 			},
 			{
 				"name": "@eslint-community/eslint-utils",
-				"version": "4.6.1",
-				"size": 476789
+				"version": "4.7.0",
+				"size": 482928
 			},
 			{
 				"name": "eslint-visitor-keys",
@@ -323,12 +260,12 @@
 			},
 			{
 				"name": "@typescript-eslint/scope-manager",
-				"version": "8.31.0",
+				"version": "8.31.1",
 				"size": 458615
 			},
 			{
 				"name": "@typescript-eslint/visitor-keys",
-				"version": "8.31.0",
+				"version": "8.31.1",
 				"size": 13994
 			},
 			{
@@ -338,7 +275,7 @@
 			},
 			{
 				"name": "@typescript-eslint/typescript-estree",
-				"version": "8.31.0",
+				"version": "8.31.1",
 				"size": 411782
 			},
 			{
@@ -452,18 +389,18 @@
 			},
 			{
 				"name": "@typescript-eslint/type-utils",
-				"version": "8.31.0",
+				"version": "8.31.1",
 				"size": 96057
 			},
 			{
 				"name": "@typescript-eslint/parser",
-				"version": "8.31.0",
+				"version": "8.31.1",
 				"size": 14346
 			},
 			{
 				"name": "eslint",
-				"version": "9.25.1",
-				"size": 2918794
+				"version": "9.26.0",
+				"size": 2927149
 			},
 			{
 				"name": "@eslint/config-array",
@@ -491,8 +428,8 @@
 			},
 			{
 				"name": "@eslint/config-helpers",
-				"version": "0.2.1",
-				"size": 54794
+				"version": "0.2.2",
+				"size": 55271
 			},
 			{
 				"name": "@eslint/core",
@@ -595,8 +532,8 @@
 			},
 			{
 				"name": "@eslint/js",
-				"version": "9.25.1",
-				"size": 14427
+				"version": "9.26.0",
+				"size": 14423
 			},
 			{
 				"name": "@eslint/plugin-kit",
@@ -644,6 +581,387 @@
 				"size": 64979
 			},
 			{
+				"name": "@modelcontextprotocol/sdk",
+				"version": "1.11.0",
+				"size": 4586362
+			},
+			{
+				"name": "content-type",
+				"version": "1.0.5",
+				"size": 10471
+			},
+			{
+				"name": "cors",
+				"version": "2.8.5",
+				"size": 19988
+			},
+			{
+				"name": "vary",
+				"version": "1.1.2"
+			},
+			{
+				"name": "object-assign",
+				"version": "4.1.1"
+			},
+			{
+				"name": "cross-spawn",
+				"version": "7.0.6",
+				"size": 16094
+			},
+			{
+				"name": "which",
+				"version": "2.0.2",
+				"size": 9975
+			},
+			{
+				"name": "isexe",
+				"version": "2.0.0"
+			},
+			{
+				"name": "path-key",
+				"version": "3.1.1",
+				"size": 4553
+			},
+			{
+				"name": "shebang-command",
+				"version": "2.0.0",
+				"size": 2556
+			},
+			{
+				"name": "shebang-regex",
+				"version": "3.0.0",
+				"size": 2828
+			},
+			{
+				"name": "eventsource",
+				"version": "3.0.6",
+				"size": 145939
+			},
+			{
+				"name": "eventsource-parser",
+				"version": "3.0.1",
+				"size": 249830
+			},
+			{
+				"name": "express",
+				"version": "5.1.0",
+				"size": 197014
+			},
+			{
+				"name": "qs",
+				"version": "6.14.0",
+				"size": 268238
+			},
+			{
+				"name": "side-channel",
+				"version": "1.1.0",
+				"size": 21545
+			},
+			{
+				"name": "es-errors",
+				"version": "1.3.0",
+				"size": 12324
+			},
+			{
+				"name": "object-inspect",
+				"version": "1.13.4",
+				"size": 102920
+			},
+			{
+				"name": "side-channel-list",
+				"version": "1.0.0",
+				"size": 14741
+			},
+			{
+				"name": "side-channel-map",
+				"version": "1.0.1",
+				"size": 13348
+			},
+			{
+				"name": "call-bound",
+				"version": "1.0.4",
+				"size": 17106
+			},
+			{
+				"name": "call-bind-apply-helpers",
+				"version": "1.0.2",
+				"size": 15952
+			},
+			{
+				"name": "function-bind",
+				"version": "1.1.2",
+				"size": 31427
+			},
+			{
+				"name": "get-intrinsic",
+				"version": "1.3.0",
+				"size": 46542
+			},
+			{
+				"name": "es-define-property",
+				"version": "1.0.1",
+				"size": 10217
+			},
+			{
+				"name": "es-object-atoms",
+				"version": "1.1.1",
+				"size": 11442
+			},
+			{
+				"name": "get-proto",
+				"version": "1.0.1",
+				"size": 10840
+			},
+			{
+				"name": "gopd",
+				"version": "1.2.0",
+				"size": 9869
+			},
+			{
+				"name": "has-symbols",
+				"version": "1.1.0",
+				"size": 23409
+			},
+			{
+				"name": "hasown",
+				"version": "2.0.2",
+				"size": 8765
+			},
+			{
+				"name": "math-intrinsics",
+				"version": "1.1.0",
+				"size": 17323
+			},
+			{
+				"name": "side-channel-weakmap",
+				"version": "1.0.2",
+				"size": 14667
+			},
+			{
+				"name": "etag",
+				"version": "1.8.1"
+			},
+			{
+				"name": "once",
+				"version": "1.4.0"
+			},
+			{
+				"name": "wrappy",
+				"version": "1.0.2"
+			},
+			{
+				"name": "send",
+				"version": "1.2.0",
+				"size": 46921
+			},
+			{
+				"name": "encodeurl",
+				"version": "2.0.0",
+				"size": 6980
+			},
+			{
+				"name": "escape-html",
+				"version": "1.0.3"
+			},
+			{
+				"name": "fresh",
+				"version": "2.0.0",
+				"size": 10289
+			},
+			{
+				"name": "http-errors",
+				"version": "2.0.0",
+				"size": 18808
+			},
+			{
+				"name": "depd",
+				"version": "2.0.0",
+				"size": 27117
+			},
+			{
+				"name": "inherits",
+				"version": "2.0.4",
+				"size": 3958
+			},
+			{
+				"name": "setprototypeof",
+				"version": "1.2.0",
+				"size": 4025
+			},
+			{
+				"name": "statuses",
+				"version": "2.0.1",
+				"size": 12116
+			},
+			{
+				"name": "toidentifier",
+				"version": "1.0.1",
+				"size": 4685
+			},
+			{
+				"name": "mime-types",
+				"version": "3.0.1",
+				"size": 22341
+			},
+			{
+				"name": "mime-db",
+				"version": "1.54.0",
+				"size": 225566
+			},
+			{
+				"name": "on-finished",
+				"version": "2.4.1",
+				"size": 13679
+			},
+			{
+				"name": "ee-first",
+				"version": "1.1.1"
+			},
+			{
+				"name": "range-parser",
+				"version": "1.2.1",
+				"size": 8457
+			},
+			{
+				"name": "cookie",
+				"version": "0.7.2",
+				"size": 23382
+			},
+			{
+				"name": "router",
+				"version": "2.2.0",
+				"size": 46851
+			},
+			{
+				"name": "is-promise",
+				"version": "4.0.0",
+				"size": 2958
+			},
+			{
+				"name": "parseurl",
+				"version": "1.3.3",
+				"size": 10299
+			},
+			{
+				"name": "path-to-regexp",
+				"version": "8.2.0",
+				"size": 55246
+			},
+			{
+				"name": "accepts",
+				"version": "2.0.0",
+				"size": 16917
+			},
+			{
+				"name": "negotiator",
+				"version": "1.0.0",
+				"size": 28710
+			},
+			{
+				"name": "type-is",
+				"version": "2.0.1",
+				"size": 21269
+			},
+			{
+				"name": "media-typer",
+				"version": "1.1.0",
+				"size": 9256
+			},
+			{
+				"name": "proxy-addr",
+				"version": "2.0.7",
+				"size": 15399
+			},
+			{
+				"name": "forwarded",
+				"version": "0.2.0",
+				"size": 5876
+			},
+			{
+				"name": "ipaddr.js",
+				"version": "1.9.1",
+				"size": 42145
+			},
+			{
+				"name": "body-parser",
+				"version": "2.2.0",
+				"size": 59258
+			},
+			{
+				"name": "bytes",
+				"version": "3.1.2",
+				"size": 12270
+			},
+			{
+				"name": "iconv-lite",
+				"version": "0.6.3",
+				"size": 348518
+			},
+			{
+				"name": "safer-buffer",
+				"version": "2.1.2",
+				"size": 42299
+			},
+			{
+				"name": "raw-body",
+				"version": "3.0.0",
+				"size": 26315
+			},
+			{
+				"name": "unpipe",
+				"version": "1.0.0"
+			},
+			{
+				"name": "finalhandler",
+				"version": "2.1.0",
+				"size": 17525
+			},
+			{
+				"name": "serve-static",
+				"version": "2.2.0",
+				"size": 25672
+			},
+			{
+				"name": "cookie-signature",
+				"version": "1.2.2",
+				"size": 4993
+			},
+			{
+				"name": "merge-descriptors",
+				"version": "2.0.0",
+				"size": 4373
+			},
+			{
+				"name": "content-disposition",
+				"version": "1.0.0",
+				"size": 19111
+			},
+			{
+				"name": "safe-buffer",
+				"version": "5.2.1",
+				"size": 32101
+			},
+			{
+				"name": "express-rate-limit",
+				"version": "7.5.0",
+				"size": 124427
+			},
+			{
+				"name": "pkce-challenge",
+				"version": "5.0.0",
+				"size": 14647
+			},
+			{
+				"name": "zod",
+				"version": "3.24.3",
+				"size": 697771
+			},
+			{
+				"name": "zod-to-json-schema",
+				"version": "3.24.5",
+				"size": 211797
+			},
+			{
 				"name": "@types/estree",
 				"version": "1.0.7",
 				"size": 26147
@@ -677,35 +995,6 @@
 				"name": "has-flag",
 				"version": "4.0.0",
 				"size": 4419
-			},
-			{
-				"name": "cross-spawn",
-				"version": "7.0.6",
-				"size": 16094
-			},
-			{
-				"name": "which",
-				"version": "2.0.2",
-				"size": 9975
-			},
-			{
-				"name": "isexe",
-				"version": "2.0.0"
-			},
-			{
-				"name": "path-key",
-				"version": "3.1.1",
-				"size": 4553
-			},
-			{
-				"name": "shebang-command",
-				"version": "2.0.0",
-				"size": 2556
-			},
-			{
-				"name": "shebang-regex",
-				"version": "3.0.0",
-				"size": 2828
 			},
 			{
 				"name": "escape-string-regexp",
@@ -865,21 +1154,8 @@
 				"size": 56156
 			},
 			{
-				"name": "once",
-				"version": "1.4.0"
-			},
-			{
-				"name": "wrappy",
-				"version": "1.0.2"
-			},
-			{
 				"name": "inflight",
 				"version": "1.0.6"
-			},
-			{
-				"name": "inherits",
-				"version": "2.0.4",
-				"size": 3958
 			},
 			{
 				"name": "minimatch",
@@ -907,8 +1183,8 @@
 			},
 			{
 				"name": "svelte",
-				"version": "5.28.1",
-				"size": 2426419
+				"version": "5.28.2",
+				"size": 2426223
 			},
 			{
 				"name": "@ampproject/remapping",
@@ -977,8 +1253,8 @@
 			},
 			{
 				"name": "svelte-check",
-				"version": "4.1.6",
-				"size": 4887797
+				"version": "4.1.7",
+				"size": 5486687
 			},
 			{
 				"name": "fdir",
@@ -992,13 +1268,13 @@
 			},
 			{
 				"name": "vite",
-				"version": "5.4.18",
-				"size": 3276648
+				"version": "5.4.19",
+				"size": 3278469
 			},
 			{
 				"name": "rollup",
-				"version": "4.40.0",
-				"size": 2726316
+				"version": "4.40.1",
+				"size": 2727114
 			},
 			{
 				"name": "esbuild",
@@ -1092,8 +1368,8 @@
 			},
 			{
 				"name": "es-module-lexer",
-				"version": "1.6.0",
-				"size": 91298
+				"version": "1.7.0",
+				"size": 93440
 			},
 			{
 				"name": "@vitest/spy",
@@ -1309,183 +1585,311 @@
 			[86, 103],
 			[77, 104],
 			[77, 105],
-			[105, 84],
 			[105, 106],
 			[106, 107],
 			[106, 108],
 			[108, 107],
+			[105, 84],
 			[77, 109],
 			[109, 110],
 			[109, 111],
 			[77, 112],
 			[77, 113],
 			[77, 114],
-			[77, 85],
-			[77, 87],
-			[77, 115],
-			[115, 116],
+			[114, 115],
+			[114, 116],
 			[116, 117],
-			[117, 118],
-			[115, 119],
+			[116, 118],
+			[114, 119],
 			[119, 120],
-			[77, 121],
-			[121, 122],
-			[122, 123],
-			[121, 124],
-			[121, 125],
+			[120, 121],
+			[119, 122],
+			[119, 123],
+			[123, 124],
+			[114, 125],
 			[125, 126],
-			[77, 36],
-			[77, 127],
-			[77, 128],
+			[114, 127],
+			[127, 128],
 			[128, 129],
 			[129, 130],
-			[128, 130],
-			[77, 51],
-			[77, 93],
-			[77, 131],
-			[131, 130],
-			[77, 132],
-			[77, 90],
-			[77, 133],
+			[129, 131],
+			[129, 132],
+			[132, 130],
+			[132, 131],
+			[129, 133],
 			[133, 134],
 			[134, 135],
+			[135, 130],
 			[135, 136],
 			[134, 137],
-			[77, 138],
-			[138, 139],
-			[139, 140],
-			[140, 141],
-			[141, 142],
-			[138, 143],
-			[77, 144],
-			[144, 53],
+			[137, 135],
+			[137, 138],
+			[137, 130],
+			[137, 139],
+			[137, 136],
+			[137, 140],
+			[137, 141],
+			[137, 142],
+			[137, 143],
+			[137, 144],
+			[133, 130],
+			[133, 137],
+			[133, 131],
+			[129, 145],
+			[145, 134],
+			[145, 130],
+			[145, 137],
+			[145, 131],
+			[145, 133],
+			[127, 146],
+			[127, 147],
+			[147, 148],
+			[127, 149],
+			[149, 36],
+			[149, 150],
+			[149, 151],
+			[149, 146],
+			[149, 152],
+			[149, 153],
+			[153, 154],
+			[153, 155],
+			[153, 156],
+			[153, 157],
+			[153, 158],
+			[149, 159],
+			[159, 160],
+			[149, 37],
+			[149, 161],
+			[161, 162],
+			[149, 163],
+			[149, 157],
+			[127, 117],
+			[127, 36],
+			[127, 152],
+			[127, 164],
+			[127, 165],
+			[165, 36],
+			[165, 154],
+			[165, 166],
+			[165, 167],
+			[165, 168],
+			[127, 169],
+			[169, 159],
+			[169, 170],
+			[127, 171],
+			[171, 115],
+			[171, 172],
+			[171, 159],
+			[127, 167],
+			[127, 157],
+			[127, 150],
+			[127, 159],
+			[127, 173],
+			[173, 174],
+			[173, 175],
+			[127, 176],
+			[176, 177],
+			[176, 115],
+			[176, 36],
+			[176, 153],
+			[176, 178],
+			[178, 179],
+			[176, 161],
+			[176, 128],
+			[176, 180],
+			[180, 177],
+			[180, 153],
+			[180, 178],
+			[180, 181],
+			[176, 171],
+			[127, 151],
+			[127, 153],
+			[127, 161],
+			[127, 115],
+			[127, 182],
+			[182, 36],
+			[182, 167],
+			[182, 157],
+			[182, 150],
+			[182, 151],
+			[182, 161],
+			[127, 163],
+			[127, 183],
+			[183, 150],
+			[183, 151],
+			[183, 167],
+			[183, 149],
+			[127, 184],
+			[127, 185],
+			[127, 186],
+			[186, 187],
+			[114, 188],
+			[114, 189],
+			[114, 180],
+			[114, 190],
+			[114, 191],
+			[77, 192],
+			[77, 85],
+			[77, 87],
+			[77, 193],
+			[193, 194],
+			[194, 195],
+			[195, 196],
+			[193, 197],
+			[197, 198],
+			[77, 119],
+			[77, 36],
+			[77, 199],
+			[77, 200],
+			[200, 201],
+			[201, 202],
+			[200, 202],
+			[77, 51],
+			[77, 93],
+			[77, 203],
+			[203, 202],
+			[77, 204],
+			[77, 90],
+			[77, 205],
+			[205, 206],
+			[206, 207],
+			[207, 208],
+			[206, 209],
+			[77, 210],
+			[210, 211],
+			[211, 212],
+			[212, 213],
+			[213, 214],
+			[210, 215],
+			[77, 216],
+			[216, 53],
 			[77, 41],
-			[77, 145],
+			[77, 217],
 			[77, 53],
-			[77, 146],
-			[77, 147],
+			[77, 218],
+			[77, 219],
 			[77, 80],
 			[77, 44],
-			[77, 148],
-			[148, 107],
-			[148, 149],
-			[148, 150],
-			[148, 108],
-			[148, 106],
-			[148, 151],
-			[4, 152],
-			[4, 153],
-			[4, 154],
-			[4, 155],
-			[155, 18],
-			[155, 156],
-			[155, 157],
-			[157, 158],
-			[158, 159],
-			[159, 160],
-			[158, 161],
-			[161, 159],
-			[161, 160],
-			[158, 162],
-			[158, 163],
-			[163, 72],
-			[158, 164],
-			[157, 165],
-			[165, 163],
-			[157, 166],
-			[166, 167],
-			[157, 167],
-			[4, 168],
-			[168, 169],
-			[169, 170],
-			[170, 171],
-			[170, 16],
-			[170, 172],
-			[172, 173],
-			[172, 16],
-			[169, 172],
-			[168, 16],
-			[168, 114],
-			[168, 94],
-			[168, 174],
-			[168, 175],
-			[168, 176],
-			[168, 177],
-			[168, 3],
-			[168, 178],
-			[178, 16],
-			[168, 179],
-			[179, 114],
-			[168, 180],
-			[168, 15],
-			[168, 181],
-			[4, 182],
-			[182, 172],
-			[182, 25],
-			[182, 183],
-			[182, 156],
-			[182, 18],
+			[77, 220],
+			[220, 107],
+			[220, 221],
+			[220, 222],
+			[220, 108],
+			[220, 106],
+			[220, 223],
+			[77, 190],
+			[4, 224],
+			[4, 225],
+			[4, 226],
+			[4, 227],
+			[227, 18],
+			[227, 228],
+			[227, 229],
+			[229, 230],
+			[230, 147],
+			[230, 231],
+			[231, 147],
+			[231, 148],
+			[230, 155],
+			[230, 232],
+			[232, 72],
+			[230, 233],
+			[229, 234],
+			[234, 232],
+			[229, 235],
+			[235, 236],
+			[229, 236],
+			[4, 237],
+			[237, 238],
+			[238, 239],
+			[239, 240],
+			[239, 16],
+			[239, 241],
+			[241, 242],
+			[241, 16],
+			[238, 241],
+			[237, 16],
+			[237, 192],
+			[237, 94],
+			[237, 243],
+			[237, 244],
+			[237, 245],
+			[237, 246],
+			[237, 3],
+			[237, 247],
+			[247, 16],
+			[237, 248],
+			[248, 192],
+			[237, 249],
+			[237, 15],
+			[237, 250],
+			[4, 251],
+			[251, 241],
+			[251, 25],
+			[251, 252],
+			[251, 228],
+			[251, 18],
 			[4, 33],
-			[4, 184],
-			[4, 185],
-			[185, 186],
-			[186, 114],
-			[185, 187],
-			[185, 188],
-			[188, 189],
-			[188, 156],
-			[188, 190],
-			[4, 191],
-			[191, 192],
-			[192, 193],
-			[192, 194],
-			[192, 195],
-			[192, 196],
-			[192, 197],
-			[191, 185],
-			[191, 36],
-			[191, 198],
-			[191, 199],
-			[191, 200],
-			[191, 201],
-			[191, 202],
-			[191, 203],
-			[203, 204],
-			[203, 185],
-			[203, 36],
-			[203, 198],
-			[203, 205],
-			[191, 206],
-			[206, 207],
-			[191, 208],
-			[191, 209],
-			[191, 15],
-			[191, 210],
-			[210, 196],
-			[210, 209],
-			[210, 211],
-			[211, 209],
-			[191, 212],
-			[212, 192],
-			[212, 206],
-			[212, 209],
-			[212, 210],
-			[191, 213],
-			[213, 206],
-			[213, 15],
-			[213, 214],
-			[214, 114],
-			[191, 215],
-			[215, 198],
-			[215, 210],
-			[191, 216],
-			[216, 198],
-			[216, 15],
-			[216, 211],
-			[191, 217],
-			[217, 218],
-			[217, 219],
-			[191, 211],
+			[4, 253],
+			[4, 254],
+			[254, 255],
+			[255, 192],
+			[254, 256],
+			[254, 257],
+			[257, 258],
+			[257, 228],
+			[257, 259],
+			[4, 260],
+			[260, 261],
+			[261, 262],
+			[261, 263],
+			[261, 264],
+			[261, 265],
+			[261, 266],
+			[260, 254],
+			[260, 36],
+			[260, 267],
+			[260, 268],
+			[260, 269],
+			[260, 270],
+			[260, 271],
+			[260, 272],
+			[272, 273],
+			[272, 254],
+			[272, 36],
+			[272, 267],
+			[272, 274],
+			[260, 275],
+			[275, 276],
+			[260, 277],
+			[260, 278],
+			[260, 15],
+			[260, 279],
+			[279, 265],
+			[279, 278],
+			[279, 280],
+			[280, 278],
+			[260, 281],
+			[281, 261],
+			[281, 275],
+			[281, 278],
+			[281, 279],
+			[260, 282],
+			[282, 275],
+			[282, 15],
+			[282, 283],
+			[283, 192],
+			[260, 284],
+			[284, 267],
+			[284, 279],
+			[260, 285],
+			[285, 267],
+			[285, 15],
+			[285, 280],
+			[260, 286],
+			[286, 287],
+			[286, 288],
+			[260, 280],
 			[0, 5],
 			[0, 8],
 			[0, 24],
@@ -1494,17 +1898,81 @@
 			[0, 40],
 			[0, 76],
 			[0, 77],
-			[0, 152],
-			[0, 153],
-			[0, 154],
-			[0, 155],
-			[0, 168],
-			[0, 182],
+			[0, 224],
+			[0, 225],
+			[0, 226],
+			[0, 227],
+			[0, 237],
+			[0, 251],
 			[0, 33],
-			[0, 184],
-			[0, 185],
-			[0, 191]
+			[0, 253],
+			[0, 254],
+			[0, 260]
 		],
 		"circular": []
-	}
+	},
+	"legacy_svelte": false,
+	"readme": "# easy-qrcode-reader-svelte\n\nUsing the Svelte library, you can easily read QR codes from a webcam or mobile camera while maintaining control over camera operations. This method relies on the CDN version of the jsQR.js library for QR code decoding. Alternatively, you can provide the URL path for your own 'jsQR.min.js' file.\n\n# Install\n\n```\nnpm install @cloudparker/easy-qrcode-reader-svelte --save-dev\n```\n\n# Screenshot\n\n<img src=\"https://raw.githubusercontent.com/paramanandapradhan/easy-qrcode-reader/main/static/easy-qrcode-reader.png.webp\" width=\"340\">\n\n\n# Usage\n\n```html\n <script lang=\"ts\">\n\timport EasyQrcodeReader from '$lib';\n\timport { onMount } from 'svelte';\n\n\tlet qrcodeReaderRef: EasyQrcodeReader;\n\n\tlet clientWidth: number;\n\n\tconst handleQrcode = (ev: CustomEvent) => {\n\t\tlet data = ev.detail;\n\t\tif (data) {\n\t\t\tconsole.log(data);\n\n\t\t\t//TODO: Handle the code and resume or close the camera\n\t\t\tqrcodeReaderRef.pause();\n\n\t\t\tsetTimeout(() => {\n\t\t\t\tqrcodeReaderRef.resume();\n\t\t\t}, 15000);\n\t\t}\n\t};\n\n\tonMount(() => {\n\t\treturn () => {\n\t\t\tqrcodeReaderRef && qrcodeReaderRef.close();\n\t\t};\n\t});\n</script>\n\n<div class=\"camera-container\" bind:clientWidth>\n\t<EasyQrcodeReader bind:this={qrcodeReaderRef} width={clientWidth} on:qrcode={handleQrcode} />\n</div>\n\n<style>\n\t.camera-container {\n\t\tdisplay: flex;\n\t\talign-items: center;\n\t\tjustify-content: center;\n\t}\n</style>\n\n```\n\n# Props\n\n### width:number\n\n_required_\n\nWidth of the camera view, height can be adjusted automatically.\n\n### jsQrUrl: string\n\n_default_: `https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js`\n\nUpdate your `jsQR.js` library path.\n\n### autoScan: boolean\n\n_default_: true\n\nAutomatically start the camera and scan qrcode\n\n\n# Events\n\n### on:qrcode\n\nIt will triggers when a qrcode scanned succesfully. it return the qrdcode data in sting format.\n\n# Public Methods\n\n### open(): void\n\nOpen camera for scan qrcode.\n\n### close(): void\n\nClose camera.\n\n### pause(): void\n\nPause camera.\n\n### resume(): void\n\nResume camera.\n\n### captureImage(): Promise<string>\n\nCapture image and return a promise with base64 image data. Also it will trigger on:image event when image captured.\n",
+	"downloads_history": [
+		[3589, 3],
+		[3596, 4],
+		[3603, 3],
+		[3610, 1],
+		[3624, 1],
+		[3631, 1],
+		[3638, 1],
+		[3645, 1],
+		[3652, 1],
+		[3659, 3],
+		[3666, 2],
+		[3680, 1],
+		[3687, 3],
+		[3701, 1],
+		[3715, 2],
+		[3729, 1],
+		[3736, 1],
+		[3750, 1],
+		[3764, 2],
+		[3778, 4],
+		[3799, 2],
+		[3806, 2],
+		[3827, 1],
+		[3834, 2],
+		[3841, 10],
+		[3855, 5],
+		[3862, 5],
+		[3869, 5],
+		[3876, 5],
+		[3883, 1],
+		[3904, 4],
+		[3925, 1],
+		[3932, 1],
+		[3939, 1],
+		[3953, 13],
+		[3960, 16],
+		[3967, 4],
+		[3974, 1],
+		[3981, 56],
+		[3988, 7],
+		[3995, 1],
+		[4002, 7],
+		[4009, 3],
+		[4016, 3],
+		[4023, 4],
+		[4030, 4],
+		[4037, 6],
+		[4044, 9],
+		[4051, 3],
+		[4058, 1],
+		[4065, 1],
+		[4072, 3],
+		[4079, 3],
+		[4086, 7],
+		[4093, 8],
+		[4100, 3],
+		[4107, 6],
+		[4114, 5],
+		[4121, 8],
+		[4128, 1]
+	]
 }

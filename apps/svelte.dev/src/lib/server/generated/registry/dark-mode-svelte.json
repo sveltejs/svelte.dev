@@ -7,20 +7,12 @@
 	"downloads": 13,
 	"updated": "2025-03-26T21:44:04.223Z",
 	"tags": ["miscellaneous"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "1.0.1",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.19.1",
 	"last_rune_check_version": "1.0.1",
-	"downloads_history": [
-		[4085, 59],
-		[4092, 12],
-		[4099, 85],
-		[4106, 7],
-		[4113, 13]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -32,5 +24,16 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"legacy_svelte": false,
+	"readme": "# Dark Mode Manager for Svelte 5\r\n\r\nA simple and efficient dark mode manager for Svelte 5, supporting user preference persistence, system preference detection, and easy toggling.\r\n\r\n## Features\r\n\r\n- Automatically syncs with system preferences (`prefers-color-scheme`)\r\n- Stores user preference in `localStorage`\r\n- Provides API for getting, setting, and toggling dark mode\r\n- Updates the DOM to apply dark mode via CSS class\r\n\r\n## Installation\r\n\r\n```bash\r\nnpm install dark-mode-svelte\r\n```\r\n\r\n## Usage\r\n\r\n### Import and Initialize\r\n\r\n```svelte\r\n<script>\r\n\timport { DarkMode, darkMode } from 'dark-mode-svelte';\r\n</script>\r\n```\r\n\r\n### Set the initializer\r\n\r\nTo prevent flashing from light to dark, place the `<DarkMode />` component as close to your\r\nroot component as possible. In Sveltekit this is usually your first `+layout.svelte`.\r\n\r\n```svelte\r\n<DarkMode />\r\n```\r\n\r\n### Get the Current Theme Mode\r\n\r\n```svelte\r\nconsole.log(darkMode.mode); // 'light' or 'dark'\r\n```\r\n\r\n### Set Theme Mode\r\n\r\n```svelte\r\n// Explicitly set mode darkMode.mode = 'dark'; // Set to dark mode darkMode.mode = 'light'; // Set\r\nto light mode darkMode.mode = undefined; // Reset to system preference\r\n```\r\n\r\n### Toggle Between Light and Dark Mode\r\n\r\n```svelte\r\n<button on:click={() => darkMode.toggle()}>\r\n\tToggle {darkMode.mode === 'dark' ? '🌞' : '🌙'}\r\n</button>\r\n```\r\n\r\n## How It Works\r\n\r\n1. **User Preference**\r\n   - If the user has explicitly set a theme (light/dark), that setting is used in localStorage.\r\n2. **System Preference **\r\n   - If no user preference exists, the system's preference is used.\r\n3. **Default Mode**\r\n   - If neither a user preference nor a system preference exists, the default is `light`.\r\n\r\n## API\r\n\r\n### `mode: 'light' | 'dark' | undefined`\r\n\r\n- **Getter:** Returns the current theme mode (`'light'` or `'dark'`), considering user and system preferences.\r\n- **Setter:** Updates the theme mode. Setting it to `undefined` resets it to follow system preference.\r\n\r\n### `toggle(): void`\r\n\r\nToggles between light and dark mode.\r\n\r\n## Styling\r\n\r\nThe component toggles a `dark` class on `document.documentElement`. Use CSS to define dark mode styles:\r\n\r\n```css\r\n/* Light Mode */\r\nbody {\r\n\tbackground-color: white;\r\n\tcolor: black;\r\n}\r\n\r\n/* Dark Mode */\r\n.dark body {\r\n\tbackground-color: black;\r\n\tcolor: white;\r\n}\r\n```\r\n\r\n## License\r\n\r\nMIT License. Feel free to use and modify it.\r\n\r\n## Contributing\r\n\r\nPull requests and improvements are welcome! If you find any issues, feel free to open an issue or create a PR.\r\n",
+	"downloads_history": [
+		[4086, 59],
+		[4093, 12],
+		[4100, 85],
+		[4107, 7],
+		[4114, 13],
+		[4121, 11],
+		[4128, 12]
+	]
 }

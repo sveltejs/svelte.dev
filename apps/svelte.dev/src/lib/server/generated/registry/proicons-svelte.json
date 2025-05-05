@@ -5,42 +5,45 @@
 	"authors": ["procode-software"],
 	"homepage": "https://github.com/ProCode-Software/proicons/tree/main/packages/proicons-svelte",
 	"downloads": 6,
-	"updated": "2025-02-12T22:36:20.339Z",
+	"updated": "2025-05-04T18:45:42.019Z",
 	"tags": ["ui"],
-	"runes": true,
 	"github_stars": 7,
 	"typescript": true,
-	"version": "4.12.1",
-	"svelte_range": "^5.16.2",
-	"last_rune_check_version": "4.12.1",
-	"downloads_history": [
-		[3994, 54],
-		[4001, 11],
-		[4008, 1],
-		[4015, 4],
-		[4022, 5],
-		[4029, 2],
-		[4036, 69],
-		[4043, 13],
-		[4050, 4],
-		[4057, 127],
-		[4064, 12],
-		[4071, 4],
-		[4078, 3],
-		[4085, 4],
-		[4092, 4],
-		[4113, 6]
-	],
+	"version": "4.12.2",
+	"svelte_range": "^5.28.2",
+	"last_rune_check_version": "4.12.2",
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
 			{
 				"name": "@proicons/svelte",
-				"version": "4.12.1",
-				"size": 1437615
+				"version": "4.12.2",
+				"size": 1497721
 			}
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# ProIcons for Svelte\n\n<p>\n    <a href=\"https://github.com/ProCode-Software/proicons/releases\">\n        <img src=\"https://img.shields.io/github/v/release/ProCode-Software/proicons?style=for-the-badge\"\n            alt=\"Version\">\n    </a>\n    <a href=\"https://github.com/ProCode-Software/proicons\">\n        <img src=\"https://img.shields.io/github/stars/ProCode-Software/proicons?style=for-the-badge\"\n            alt=\"Stars\">\n    </a>\n    <a href=\"https://www.npmjs.com/package/@proicons/svelte\">\n        <img src=\"https://img.shields.io/npm/dm/@proicons/svelte?label=downloads&style=for-the-badge\"\n            alt=\"NPM Package\">\n    </a>\n    <a href=\"https://github.com/ProCode-Software/proicons/blob/main/LICENSE\">\n        <img src=\"https://img.shields.io/github/license/ProCode-Software/proicons?style=for-the-badge\"\n            alt=\"License\">\n    </a>\n</p>\n\n<img src=\"https://raw.githubusercontent.com/ProCode-Software/proicons/main/.github/images/github-cover-svelte_light.png#gh-light-mode-only\">\n<img src=\"https://raw.githubusercontent.com/ProCode-Software/proicons/main/.github/images/github-cover-svelte_dark.png#gh-dark-mode-only\">\n\n<p align=\"center\">\n<br>\nAn implementation of the <a href=\"https://github.com/ProCode-Software/proicons\" target=\"_blank\">ProIcons</a> icon library for Svelte applications.\n<br>\n<a href=\"https://procode-software.github.io/proicons/icons\">Browse icons</a> | \n<a href=\"https://procode-software.github.io/proicons/docs/svelte\">Documentation</a> | \n<a href=\"https://github.com/ProCode-Software/proicons/tree/main/packages/proicons-svelte\">GitHub</a> | \n<a href=\"https://www.npmjs.com/package/@proicons/svelte\">NPM</a>\n</p>\n\n## Features\n\n- All icons are available as customizable Svelte components\n- Supports ESM tree-shaking\n\n**[Read the full documentation here](https://procode-software.github.io/proicons/docs/svelte)**\n\n## Installation\n\nInstall via [NPM](https://npmjs.com/package/@proicons/svelte):\n\n```shell\nnpm install @proicons/svelte\n```\n\n## Usage\n\nAll icons are available as Svelte components named in PascalCase and may end in `Icon`.\n\nTo import the Add Square icon:\n\n```svelte\n<script>\nimport { SearchIcon } from '@proicons/svelte'\n\n</script>\n\n<SearchIcon color=\"red\" size={32} />\n```\n\nThere are several ways to import an icon into your Svelte component. These are all the same:\n\n```javascript\nimport { AddIcon } from '@proicons/svelte'\nimport { AddIcon } from '@proicons/svelte/icons'\nimport AddIcon from '@proicons/svelte/AddIcon'\n```\n\n## Contributing\n\nFor more info on how to contribute, please see our [contributing guide](https://github.com/ProCode-Software/proicons/blob/main/CONTRIBUTING.md).\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3995, 54],
+		[4002, 11],
+		[4009, 1],
+		[4016, 4],
+		[4023, 5],
+		[4030, 2],
+		[4037, 69],
+		[4044, 13],
+		[4051, 4],
+		[4058, 127],
+		[4065, 12],
+		[4072, 4],
+		[4079, 3],
+		[4086, 4],
+		[4093, 4],
+		[4114, 6],
+		[4121, 6],
+		[4128, 8]
+	]
 }

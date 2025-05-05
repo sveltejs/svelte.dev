@@ -7,40 +7,11 @@
 	"downloads": 4,
 	"updated": "2024-11-27T11:37:02.763Z",
 	"tags": ["tooling"],
-	"runes": false,
 	"github_stars": 35,
 	"typescript": true,
 	"version": "0.0.5",
 	"svelte_range": "4.2.18",
 	"last_rune_check_version": "0.0.5",
-	"downloads_history": [
-		[3889, 56],
-		[3896, 12],
-		[3903, 79],
-		[3910, 5],
-		[3924, 2],
-		[3938, 3],
-		[3945, 2],
-		[3952, 2],
-		[3959, 4],
-		[3966, 4],
-		[3973, 2],
-		[3980, 78],
-		[3987, 7],
-		[3994, 1],
-		[4001, 2],
-		[4008, 2],
-		[4015, 2],
-		[4022, 3],
-		[4029, 5],
-		[4036, 11],
-		[4043, 7],
-		[4050, 3],
-		[4064, 1],
-		[4099, 3],
-		[4106, 7],
-		[4113, 4]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -51,22 +22,22 @@
 			},
 			{
 				"name": "@babel/parser",
-				"version": "7.27.0",
-				"size": 1924962
+				"version": "7.27.1",
+				"size": 1859876
 			},
 			{
 				"name": "@babel/types",
-				"version": "7.27.0",
-				"size": 2583295
+				"version": "7.27.1",
+				"size": 2597469
 			},
 			{
 				"name": "@babel/helper-string-parser",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 31816
 			},
 			{
 				"name": "@babel/helper-validator-identifier",
-				"version": "7.25.9",
+				"version": "7.27.1",
 				"size": 48330
 			},
 			{
@@ -267,5 +238,38 @@
 			[15, 18]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# svelte-vapor-template-compiler\n\n> svelte template compiler for vapor\n\n## ©️ License\n\n[MIT](http://opensource.org/licenses/MIT)\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3890, 56],
+		[3897, 12],
+		[3904, 79],
+		[3911, 5],
+		[3925, 2],
+		[3939, 3],
+		[3946, 2],
+		[3953, 2],
+		[3960, 4],
+		[3967, 4],
+		[3974, 2],
+		[3981, 78],
+		[3988, 7],
+		[3995, 1],
+		[4002, 2],
+		[4009, 2],
+		[4016, 2],
+		[4023, 3],
+		[4030, 5],
+		[4037, 11],
+		[4044, 7],
+		[4051, 3],
+		[4065, 1],
+		[4100, 3],
+		[4107, 7],
+		[4114, 4],
+		[4121, 5],
+		[4128, 1],
+		[4135, 7]
+	]
 }

@@ -7,35 +7,11 @@
 	"downloads": 248,
 	"updated": "2025-03-12T00:38:04.141Z",
 	"tags": ["tooling"],
-	"runes": false,
 	"github_stars": 63,
 	"typescript": true,
 	"version": "2.1.1",
 	"svelte_range": "^5.20.1",
 	"last_rune_check_version": "2.1.1",
-	"downloads_history": [
-		[3973, 527],
-		[3980, 2134],
-		[3987, 695],
-		[3994, 22],
-		[4001, 1309],
-		[4008, 1474],
-		[4015, 3006],
-		[4022, 555],
-		[4029, 1458],
-		[4036, 994],
-		[4043, 155],
-		[4050, 368],
-		[4057, 551],
-		[4064, 94],
-		[4071, 69],
-		[4078, 110],
-		[4085, 393],
-		[4092, 21],
-		[4099, 231],
-		[4106, 42],
-		[4113, 248]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -61,8 +37,8 @@
 			},
 			{
 				"name": "glob",
-				"version": "11.0.1",
-				"size": 474698
+				"version": "11.0.2",
+				"size": 475202
 			},
 			{
 				"name": "foreground-child",
@@ -273,8 +249,8 @@
 			},
 			{
 				"name": "@inquirer/prompts",
-				"version": "7.4.1",
-				"size": 24022
+				"version": "7.5.0",
+				"size": 24021
 			},
 			{
 				"name": "@inquirer/checkbox",
@@ -386,8 +362,8 @@
 			},
 			{
 				"name": "@inquirer/rawlist",
-				"version": "4.0.12",
-				"size": 14385
+				"version": "4.1.0",
+				"size": 18191
 			},
 			{
 				"name": "@inquirer/search",
@@ -396,8 +372,8 @@
 			},
 			{
 				"name": "@inquirer/select",
-				"version": "4.1.1",
-				"size": 24056
+				"version": "4.2.0",
+				"size": 24769
 			},
 			{
 				"name": "@rollup/plugin-node-resolve",
@@ -564,18 +540,18 @@
 			},
 			{
 				"name": "@tailwindcss/vite",
-				"version": "4.1.4",
+				"version": "4.1.5",
 				"size": 9343
 			},
 			{
 				"name": "tailwindcss",
-				"version": "4.1.4",
-				"size": 657224
+				"version": "4.1.5",
+				"size": 658207
 			},
 			{
 				"name": "@tailwindcss/node",
-				"version": "4.1.4",
-				"size": 102619
+				"version": "4.1.5",
+				"size": 102645
 			},
 			{
 				"name": "jiti",
@@ -609,7 +585,7 @@
 			},
 			{
 				"name": "@tailwindcss/oxide",
-				"version": "4.1.4",
+				"version": "4.1.5",
 				"size": 14125
 			},
 			{
@@ -629,18 +605,18 @@
 			},
 			{
 				"name": "browserslist",
-				"version": "4.24.4",
-				"size": 64926
+				"version": "4.24.5",
+				"size": 65174
 			},
 			{
 				"name": "caniuse-lite",
-				"version": "1.0.30001715",
-				"size": 2211246
+				"version": "1.0.30001716",
+				"size": 2214832
 			},
 			{
 				"name": "electron-to-chromium",
-				"version": "1.5.140",
-				"size": 162065
+				"version": "1.5.149",
+				"size": 163189
 			},
 			{
 				"name": "node-releases",
@@ -981,8 +957,8 @@
 			},
 			{
 				"name": "@types/node",
-				"version": "22.14.1",
-				"size": 2331510
+				"version": "22.15.3",
+				"size": 2350386
 			},
 			{
 				"name": "undici-types",
@@ -1973,5 +1949,33 @@
 			[295, 42]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# Svelte Standalone\n\n**Svelte Standalone** is a CLI tool that simplifies bundling Svelte components into standalone JavaScript files. It has _opt-in_ support for **Tailwind**, **TypeScript**, and **Storybook**, making it simple to integrate to your workflow.\n\n[Start Bundling Svelte Right Now!](https://standalone.brenoliradev.com/)\n\n![image](https://github.com/user-attachments/assets/88123f50-28a1-4ee9-8db9-4633dff6abbe)\n\n---\n\n## License\n\nMIT © 2024 Breno Lira\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3974, 527],
+		[3981, 2134],
+		[3988, 695],
+		[3995, 22],
+		[4002, 1309],
+		[4009, 1474],
+		[4016, 3006],
+		[4023, 555],
+		[4030, 1458],
+		[4037, 994],
+		[4044, 155],
+		[4051, 368],
+		[4058, 551],
+		[4065, 94],
+		[4072, 69],
+		[4079, 110],
+		[4086, 393],
+		[4093, 21],
+		[4100, 231],
+		[4107, 42],
+		[4114, 248],
+		[4121, 112],
+		[4128, 104],
+		[4135, 113]
+	]
 }

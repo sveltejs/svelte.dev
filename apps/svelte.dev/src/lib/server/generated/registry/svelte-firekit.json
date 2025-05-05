@@ -7,37 +7,12 @@
 	"downloads": 30,
 	"updated": "2025-02-18T00:01:45.506Z",
 	"tags": ["integration", "auth", "server"],
-	"runes": true,
-	"github_stars": 16,
+	"github_stars": 17,
 	"typescript": true,
 	"version": "0.0.25",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.9.0",
 	"last_rune_check_version": "0.0.25",
-	"downloads_history": [
-		[3966, 271],
-		[3973, 369],
-		[3980, 194],
-		[3987, 254],
-		[3994, 114],
-		[4001, 111],
-		[4008, 15],
-		[4015, 53],
-		[4022, 117],
-		[4029, 135],
-		[4036, 30],
-		[4043, 51],
-		[4050, 29],
-		[4057, 35],
-		[4064, 157],
-		[4071, 14],
-		[4078, 19],
-		[4085, 56],
-		[4092, 21],
-		[4099, 56],
-		[4106, 22],
-		[4113, 30]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -48,12 +23,12 @@
 			},
 			{
 				"name": "firebase",
-				"version": "11.6.0",
-				"size": 25171020
+				"version": "11.6.1",
+				"size": 25217463
 			},
 			{
 				"name": "@firebase/app",
-				"version": "0.11.4",
+				"version": "0.11.5",
 				"size": 387452
 			},
 			{
@@ -83,8 +58,8 @@
 			},
 			{
 				"name": "@firebase/auth",
-				"version": "1.10.0",
-				"size": 15541898
+				"version": "1.10.1",
+				"size": 15541754
 			},
 			{
 				"name": "@firebase/storage",
@@ -158,8 +133,8 @@
 			},
 			{
 				"name": "@firebase/firestore",
-				"version": "4.7.10",
-				"size": 27392206
+				"version": "4.7.11",
+				"size": 27523990
 			},
 			{
 				"name": "@grpc/grpc-js",
@@ -168,8 +143,8 @@
 			},
 			{
 				"name": "@types/node",
-				"version": "22.14.1",
-				"size": 2331510
+				"version": "22.15.3",
+				"size": 2350386
 			},
 			{
 				"name": "undici-types",
@@ -336,13 +311,13 @@
 			},
 			{
 				"name": "@firebase/app-compat",
-				"version": "0.2.53",
+				"version": "0.2.54",
 				"size": 175655
 			},
 			{
 				"name": "@firebase/auth-compat",
-				"version": "0.5.20",
-				"size": 1497727
+				"version": "0.5.21",
+				"size": 1497711
 			},
 			{
 				"name": "@firebase/auth-types",
@@ -361,8 +336,8 @@
 			},
 			{
 				"name": "@firebase/data-connect",
-				"version": "0.3.3",
-				"size": 662284
+				"version": "0.3.4",
+				"size": 662461
 			},
 			{
 				"name": "@firebase/remote-config",
@@ -411,7 +386,7 @@
 			},
 			{
 				"name": "@firebase/firestore-compat",
-				"version": "0.3.45",
+				"version": "0.3.46",
 				"size": 689607
 			},
 			{
@@ -682,5 +657,33 @@
 			[85, 86]
 		],
 		"circular": []
-	}
+	},
+	"readme": "Svelte Firekit is a powerful Firebase toolkit for SvelteKit applications, providing a comprehensive set of utilities, stores, and components for seamless Firebase integration. Whether you're building a micro SaaS, web application, or any Firebase-powered project, Svelte Firekit streamlines your development process.\r\n \r\n## Installation\r\n \r\n```bash\r\nnpm install firebase svelte-firekit\r\n```\r\n \r\n## Configuration\r\n \r\nSvelte Firekit automatically manages your Firebase configuration through environment variables. Create a `.env` file in your project root with the following variables:\r\n \r\n```env\r\nPUBLIC_FIREBASE_API_KEY=your_api_key\r\nPUBLIC_FIREBASE_AUTH_DOMAIN=your_auth_domain\r\nPUBLIC_FIREBASE_PROJECT_ID=your_project_id\r\nPUBLIC_FIREBASE_STORAGE_BUCKET=your_storage_bucket\r\nPUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id\r\nPUBLIC_FIREBASE_APP_ID=your_app_id\r\nPUBLIC_FIREBASE_MEASUREMENT_ID=your_measurement_id\r\n```\r\n \r\nThe configuration is automatically handled by Firekit - no manual setup required. If any required environment variables are missing, Firekit will throw a helpful error indicating which variables need to be set.\r\n \r\n## Usage Example\r\n \r\nHere's a simple example showing how to display the current user's name:\r\n \r\n```svelte\r\n<script>\r\n  import { firekitUser } from 'svelte-firekit';\r\n</script>\r\n \r\nHello {firekitUser.displayName}\r\n```\r\n \r\nThe `firekitUser` store provides access to the current user's information and authentication state.\r\n \r\n## Core Features\r\n \r\n### 🔥 Firebase Integration\r\n- Zero-config Firebase setup through environment variables\r\n- Automatic initialization and app management\r\n- Built-in error handling and connection state management\r\n- Type-safe configuration management\r\n \r\n### 🔐 Authentication\r\n- Complete authentication system with built-in components\r\n- Support for multiple authentication providers:\r\n  - Email/Password\r\n  - Google\r\n  - GitHub\r\n  - Custom providers\r\n- User state management and persistence through `firekitUser` store\r\n \r\n### 📚 Firestore Integration\r\n- Reactive data stores for real-time updates\r\n- Simplified CRUD operations\r\n- Batch operations and transactions\r\n- Type-safe document references\r\n- Automatic data serialization/deserialization\r\n \r\n### 📦 Storage Management\r\n- File upload and download utilities\r\n- Progress tracking and status updates\r\n- Storage security rules helpers\r\n- Image optimization utilities\r\n \r\n### ⚡ Server-Side Rendering\r\n- Full SSR compatibility\r\n- Hydration support\r\n- Server-side data fetching\r\n- SEO-friendly rendering\r\n \r\n### 🎯 Type Safety\r\n- Built with TypeScript\r\n- Complete type definitions\r\n- Intelligent autocomplete\r\n- Runtime type checking\r\n- Type-safe Firestore operations\r\n \r\n## Why Svelte Firekit?\r\n \r\n- **Zero Configuration**: Automatic Firebase setup through environment variables\r\n- **Type Safety**: Full TypeScript support with built-in type checking\r\n- **Rapid Development**: Get your Firebase-powered SvelteKit application up and running in minutes\r\n- **Best Practices**: Built following Firebase and SvelteKit best practices\r\n- **Production Ready**: Battle-tested in production environments\r\n- **Active Community**: Regular updates and active community support\r\n- **Extensible**: Easy to customize and extend for your specific needs\r\n \r\n## Next Steps\r\n \r\n- Check out our [Getting Started](/getting-started) guide\r\n- Explore the [API Reference](/api)\r\n- View [Examples](/examples)\r\n- Join our [Community](/community)\r\n \r\n## Contributing\r\n \r\nWe welcome contributions! Please see our [Contributing Guide](/contributing) for more details.\r\n \r\n## License\r\n \r\nSvelte Firekit is released under the MIT License. See the [LICENSE](/license) file for more details.\r\n \r\n# Authentication\r\n \r\nSvelte Firekit provides a comprehensive authentication system through the `firekitAuth` singleton, offering various authentication methods and user management features.\r\n \r\n## Basic Usage\r\n \r\n```typescript\r\nimport { firekitAuth } from 'svelte-firekit';\r\n```\r\n \r\n## Authentication Methods\r\n \r\n### Google Authentication\r\n \r\n```typescript\r\nawait firekitAuth.signInWithGoogle();\r\n```\r\n \r\n### Email/Password Authentication\r\n \r\n```typescript\r\n// Sign in\r\nawait firekitAuth.signInWithEmail(email, password);\r\n \r\n// Register\r\nawait firekitAuth.registerWithEmail(email, password, displayName);\r\n \r\n// Sign out\r\nawait firekitAuth.logOut();\r\n```\r\n \r\n## User Management\r\n \r\n### Password Management\r\n \r\n```typescript\r\n// Send password reset email\r\nawait firekitAuth.sendPasswordReset(email);\r\n \r\n// Update password (requires reauthentication)\r\nawait firekitAuth.updateUserPassword(newPassword, currentPassword);\r\n```\r\n \r\n### Profile Management\r\n \r\n```typescript\r\n// Update user profile\r\nawait firekitAuth.updateUserProfile({\r\n  displayName: \"New Name\",\r\n  photoURL: \"https://example.com/photo.jpg\"\r\n});\r\n```\r\n \r\n### Email Verification\r\n \r\n```typescript\r\n// Send verification email\r\nawait firekitAuth.sendEmailVerificationToUser();\r\n```\r\n \r\n### Account Deletion\r\n \r\n```typescript\r\n// Delete user account\r\nawait firekitAuth.deleteUserAccount();\r\n```\r\n \r\n## Automatic Firestore Integration\r\n \r\nThe authentication system automatically maintains a user document in Firestore with the following information:\r\n- User ID\r\n- Email\r\n- Email verification status\r\n- Display name\r\n- Photo URL\r\n- Authentication provider information\r\n- Anonymous status\r\n \r\n## Error Handling\r\n \r\nAll methods include proper error handling and return appropriate error messages. For example, password updates will return:\r\n \r\n```typescript\r\n{\r\n  success: boolean;\r\n  message: string;\r\n  code?: string; // In case of errors\r\n}\r\n```\r\n \r\n## Features\r\n \r\n- 🔐 Multiple authentication providers\r\n- 📝 Automatic user profile management\r\n- 🔄 Password reset and update functionality\r\n- ✉️ Email verification\r\n- 🗑️ Account deletion\r\n- 🔄 Reauthentication support\r\n- 📚 Automatic Firestore user document management\r\n- ⚡ Type-safe operations\r\n \r\n## Important Notes\r\n \r\n1. User data is automatically synchronized with Firestore\r\n2. Password updates require current password verification\r\n3. Account deletion removes both authentication and Firestore data\r\n4. All operations are fully typed for TypeScript support ",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3967, 271],
+		[3974, 369],
+		[3981, 194],
+		[3988, 254],
+		[3995, 114],
+		[4002, 111],
+		[4009, 15],
+		[4016, 53],
+		[4023, 117],
+		[4030, 135],
+		[4037, 30],
+		[4044, 51],
+		[4051, 29],
+		[4058, 35],
+		[4065, 157],
+		[4072, 14],
+		[4079, 19],
+		[4086, 56],
+		[4093, 21],
+		[4100, 56],
+		[4107, 22],
+		[4114, 30],
+		[4121, 28],
+		[4128, 20]
+	]
 }

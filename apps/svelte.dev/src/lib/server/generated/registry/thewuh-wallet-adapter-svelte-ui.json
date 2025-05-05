@@ -7,32 +7,12 @@
 	"downloads": 10,
 	"updated": "2024-07-24T17:32:07.293Z",
 	"tags": ["integration"],
-	"runes": false,
 	"github_stars": 1,
 	"typescript": true,
 	"version": "0.1.1",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.1.1",
-	"downloads_history": [
-		[3889, 1],
-		[3896, 5],
-		[3903, 1],
-		[3924, 3],
-		[3931, 3],
-		[3952, 1],
-		[3959, 2],
-		[3980, 1],
-		[3994, 1],
-		[4022, 1],
-		[4029, 4],
-		[4036, 2],
-		[4043, 1],
-		[4071, 1],
-		[4099, 65],
-		[4106, 7],
-		[4113, 10]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -49,5 +29,29 @@
 		],
 		"dependencies": [[0, 1]],
 		"circular": []
-	}
+	},
+	"readme": "# `@thewuh/wallet-adapter-svelte-ui`\n\nPre-built components for integrating with Solana wallets using Svelte\n\n## Getting Started\n\nThe UI components need to be installed into a project that is already set up with `@solana/web3.js` and the base wallet adapters. Therefore, it cannot work standalone.\n\nDuring this process, you will:\n\n-   📦 Install the base wallet adapters\n-   📦 Install the svelte adapter and svelte UI\n-   🔨 Add the `ConnectionProvider` ([`AnchorConnectionProvider`](https://github.com/thewuhxyz/wallet-adapter-svelte/blob/main/packages/anchor/README.md) if you're using Anchor)\n-   🔨 Add the `WalletProvider` component\n-   🔨 Add the `WalletMultiButton` component\n\n## Installing\n\nYou have already installed the core package to run the wallet Svelte Store [@thewuh/wallet-adapter-core](github.com/thewuhxyz/wallet-adapter-svelte/blob/main/packages/core/README.md). Then install the UI components contained in this package\n\n```shell\nnpm i @thewuh/wallet-adapter-svelte-ui\n```\n\n## Set Up\n\nThere are three components that you need to get set up:\n\n-   `WalletProvider`\n-   `ConnectionProvider` (`[AnchorConnectionProvider](https://github.com/thewuhxyz/wallet-adapter-svelte/blob/main/packages/anchor/README.md)` if you're using Anchor)\n-   `WalletMultiButton`\n\n`WalletProvider` is a component used to initialize the wallet stores and add event listeners\n\n| prop             | type        | default           |\n| ---------------- | ----------- | ----------------- |\n| localStorageKey? | `string`    | `'walletAdapter'` |\n| wallets          | `Wallets[]` |                   |\n| autoConnect?     | `boolean`   | `false`           |\n\n`ConnectionProvider` is a component used to establish a connection with the network.\n\n| prop    | type     | default |\n| ------- | -------- | ------- |\n| network | `string` |         |\n\nAlternatively you can use `AnchorConnectionProvider` for Anchor Dapps.\n\n| prop    | type     | default |\n| ------- | -------- | ------- |\n| network | `string` |         |\n| idl     | `Idl`    |         |\n\n`WalletMultiButton` is a component used as the entry point to connect/disconnect a wallet.\n\n| prop               | type     | default |\n| ------------------ | -------- | ------- |\n| maxNumberOfWallets | `number` | `3`     |\n\n## Usage\n\n> Install a few plugins to take care about JSON imports and built-on Node.js modules not available in the browser.\n\n```shell\nnpm install -D vite-plugin-node-polyfills\n```\n\nThen you have to adjust the **vite.config.ts** file to prepare the project for all the Solana packages previously installed.\n\n```typescript\nimport { sveltekit } from '@sveltejs/kit/vite';\nimport { defineConfig } from 'vite';\nimport { nodePolyfills } from 'vite-plugin-node-polyfills';\n\nexport default defineConfig({\n\tplugins: [nodePolyfills(), sveltekit()]\n});\n```\n\nAnd then in the **+layout.svelte** component you can import the wallets and setup the UI components.\n\n```svelte\n<script lang=\"ts\">\n\timport { clusterApiUrl } from '@solana/web3.js';\n\timport {\n\t\tworkSpace,\n\t\tWalletProvider,\n\t\tWalletMultiButton,\n\t\tConnectionProvider\n\t} from '@thewuh/wallet-adapter-svelte-ui';\n\n\tconst localStorageKey = 'walletAdapter';\n\tconst network = clusterApiUrl('devnet'); // localhost or mainnet\n\n  // May not be necessary. Most wallet support wallet standard\n  let wallets = [new PhantomWalletAdapter(), new SolflareWalletAdapter()];\n</script>\n\n<WalletProvider {localStorageKey} {wallets} autoConnect />\n<ConnectionProvider {network} />\n<div>\n\t<slot />\n</div>\n<WalletMultiButton />\n```\n\n\n## Working with Anchor\n\nIf you work with Anchor you will need the `AnchorConnectionProvider` component and its workSpace [@thewuh/wallet-adapter-svelte-anchor](https://github.com/thewuhxyz/wallet-adapter-svelte/blob/main/packages/anchor/README.md)\n\n## Example Implementation\nSee example implementations of the `@thewuh/wallet-adapter-svelte-ui` library.\n\n-   [Source code](https://github.com/thewuhxyz/wallet-adapter-svelte/blob/main/packages/example)\n-   [Demo site][1]\n\n[1]: https://wallet-adapter-svelte.thewuh.xyz/",
+	"legacy_svelte": true,
+	"downloads_history": [
+		[3890, 1],
+		[3897, 5],
+		[3904, 1],
+		[3925, 3],
+		[3932, 3],
+		[3953, 1],
+		[3960, 2],
+		[3981, 1],
+		[3995, 1],
+		[4023, 1],
+		[4030, 4],
+		[4037, 2],
+		[4044, 1],
+		[4072, 1],
+		[4100, 65],
+		[4107, 7],
+		[4114, 10],
+		[4121, 3],
+		[4128, 7],
+		[4135, 7]
+	]
 }

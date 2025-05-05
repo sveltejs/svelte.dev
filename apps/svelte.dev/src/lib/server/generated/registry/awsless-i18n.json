@@ -7,47 +7,11 @@
 	"downloads": 8,
 	"updated": "2024-09-17T10:16:34.129Z",
 	"tags": ["tooling"],
-	"runes": false,
-	"github_stars": 1,
+	"github_stars": 2,
 	"typescript": true,
 	"version": "0.0.5",
 	"svelte_range": "^4.2.19",
 	"last_rune_check_version": "0.0.5",
-	"downloads_history": [
-		[3889, 161],
-		[3896, 66],
-		[3903, 19],
-		[3910, 97],
-		[3917, 32],
-		[3924, 6],
-		[3931, 11],
-		[3938, 3],
-		[3945, 33],
-		[3952, 1],
-		[3959, 4],
-		[3966, 17],
-		[3973, 20],
-		[3980, 9],
-		[3987, 5],
-		[3994, 9],
-		[4001, 12],
-		[4008, 8],
-		[4015, 9],
-		[4022, 12],
-		[4029, 28],
-		[4036, 14],
-		[4043, 14],
-		[4050, 10],
-		[4057, 3],
-		[4064, 3],
-		[4071, 1],
-		[4078, 2],
-		[4085, 24],
-		[4092, 1],
-		[4099, 29],
-		[4106, 6],
-		[4113, 8]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -241,13 +205,13 @@
 			},
 			{
 				"name": "openai",
-				"version": "4.95.1",
-				"size": 3832047
+				"version": "4.97.0",
+				"size": 3976309
 			},
 			{
 				"name": "@types/node",
-				"version": "18.19.86",
-				"size": 2064617
+				"version": "18.19.87",
+				"size": 2064812
 			},
 			{
 				"name": "undici-types",
@@ -359,8 +323,8 @@
 			},
 			{
 				"name": "@types/node",
-				"version": "22.14.1",
-				"size": 2331510
+				"version": "22.15.3",
+				"size": 2350386
 			},
 			{
 				"name": "undici-types",
@@ -445,8 +409,8 @@
 			},
 			{
 				"name": "@swc/core",
-				"version": "1.11.21",
-				"size": 119282
+				"version": "1.11.24",
+				"size": 123413
 			},
 			{
 				"name": "@swc/counter",
@@ -599,5 +563,44 @@
 			[0, 88]
 		],
 		"circular": []
-	}
+	},
+	"legacy_svelte": false,
+	"readme": "# AI-generated internationalization made easy\n\nThe `@awsless/i18n` package is a Vite plugin that automatically translates your text in build time using AI or any other tool you prefer. The plugin will inline the translations so you don't have to worry about loading the translations at the right time.\n\n## Features\n\n- Automatic text translation\n- Inlines translations\n- Extremely lightweight (373 bytes uncompressed 🔥)\n- Svelte support\n\n## Setup\n\nInstall with (NPM):\n\n```\nnpm i @awsless/i18n\n```\n\n## Vite installation\n\n```ts\nimport { i18n, chatgpt } from '@awsless/i18n'\n\nexport defineConfig({\n  plugins: [\n    i18n({\n      default: 'en',\n      locales: ['es', 'jp'],\n      translate: chatgpt({\n        apiKey: '...',\n      })\n    })\n  ]\n})\n```\n\n## Svelte example\n\n```ts\nimport { t } from '@awsless/i18n/svelte'\n\nconst count = 1\n\n$t`${count} count`\n```\n\nThe plugin will find all instances where you want text to be translated.\nThe text is translated automatically during build time to produce\na bundled output something like this:\n\n```ts\nimport { t } from '@awsless/i18n/svelte'\n\nconst count = 1\n\n$t.get({\n  en: `${count} count`,\n  es: `${count} contar`,\n  jp: `${count} カウント`,\n})\n```\n\nTo change the locale that is being rendered simply call the `locale.set` function.\n\n```ts\nimport { locale } from '@awsless/i18n/svelte'\n\nlocale.set('jp')\n```\n\n## Changing the AI-generated text\n\nA `i18n.json` file with all the translations will be generated in the root of your project the first time you run a build. We use this file as a cache to not translate any text that has already been translated before.\n\nIf you don't like the auto-generated translations by AI, you can safely change any of the ai generated translations here.\n\n```json\n{\n  \"${count} count\": {\n    \"es\": \"${count} contar\",\n    \"jp\": \"${count} カウント\"\n  }\n}\n```\n",
+	"downloads_history": [
+		[3890, 161],
+		[3897, 66],
+		[3904, 19],
+		[3911, 97],
+		[3918, 32],
+		[3925, 6],
+		[3932, 11],
+		[3939, 3],
+		[3946, 33],
+		[3953, 1],
+		[3960, 4],
+		[3967, 17],
+		[3974, 20],
+		[3981, 9],
+		[3988, 5],
+		[3995, 9],
+		[4002, 12],
+		[4009, 8],
+		[4016, 9],
+		[4023, 12],
+		[4030, 28],
+		[4037, 14],
+		[4044, 14],
+		[4051, 10],
+		[4058, 3],
+		[4065, 3],
+		[4072, 1],
+		[4079, 2],
+		[4086, 24],
+		[4093, 1],
+		[4100, 29],
+		[4107, 6],
+		[4114, 8],
+		[4121, 16],
+		[4128, 7]
+	]
 }

@@ -5,48 +5,21 @@
 	"authors": ["humanspeakadmin"],
 	"homepage": "https://markdown.svelte.page",
 	"downloads": 2804,
-	"updated": "2025-04-18T16:19:35.618Z",
+	"updated": "2025-04-22T14:41:37.237Z",
 	"tags": ["content"],
-	"runes": true,
-	"github_stars": 25,
+	"github_stars": 26,
 	"typescript": true,
-	"version": "0.8.2",
+	"version": "0.8.3",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.20.7",
-	"last_rune_check_version": "0.8.2",
-	"downloads_history": [
-		[3952, 127],
-		[3959, 83],
-		[3966, 122],
-		[3973, 25],
-		[3980, 5],
-		[3987, 10],
-		[3994, 44],
-		[4001, 56],
-		[4008, 10],
-		[4015, 553],
-		[4022, 425],
-		[4029, 263],
-		[4036, 692],
-		[4043, 894],
-		[4050, 3591],
-		[4057, 3627],
-		[4064, 756],
-		[4071, 566],
-		[4078, 2187],
-		[4085, 3549],
-		[4092, 1129],
-		[4099, 2407],
-		[4106, 2837],
-		[4113, 2804]
-	],
+	"last_rune_check_version": "0.8.3",
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
 			{
 				"name": "@humanspeak/svelte-markdown",
-				"version": "0.8.2",
-				"size": 117227
+				"version": "0.8.3",
+				"size": 117412
 			},
 			{
 				"name": "github-slugger",
@@ -90,8 +63,8 @@
 			},
 			{
 				"name": "marked",
-				"version": "15.0.9",
-				"size": 969440
+				"version": "15.0.11",
+				"size": 969492
 			}
 		],
 		"dependencies": [
@@ -111,5 +84,35 @@
 			[0, 9]
 		],
 		"circular": []
-	}
+	},
+	"readme": "# @humanspeak/svelte-markdown\n\nA powerful, customizable markdown renderer for Svelte with TypeScript support. Built as a successor to the original svelte-markdown package by Pablo Berganza, now maintained and enhanced by Humanspeak, Inc.\n\n[![NPM version](https://img.shields.io/npm/v/@humanspeak/svelte-markdown.svg)](https://www.npmjs.com/package/@humanspeak/svelte-markdown)\n[![Build Status](https://github.com/humanspeak/svelte-markdown/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/humanspeak/svelte-markdown/actions/workflows/npm-publish.yml)\n[![Coverage Status](https://coveralls.io/repos/github/humanspeak/svelte-markdown/badge.svg?branch=main)](https://coveralls.io/github/humanspeak/svelte-markdown?branch=main)\n[![License](https://img.shields.io/npm/l/@humanspeak/svelte-markdown.svg)](https://github.com/humanspeak/svelte-markdown/blob/main/LICENSE)\n[![Downloads](https://img.shields.io/npm/dm/@humanspeak/svelte-markdown.svg)](https://www.npmjs.com/package/@humanspeak/svelte-markdown)\n[![CodeQL](https://github.com/humanspeak/svelte-markdown/actions/workflows/codeql.yml/badge.svg)](https://github.com/humanspeak/svelte-markdown/actions/workflows/codeql.yml)\n[![Install size](https://packagephobia.com/badge?p=@humanspeak/svelte-markdown)](https://packagephobia.com/result?p=@humanspeak/svelte-markdown)\n[![Code Style: Trunk](https://img.shields.io/badge/code%20style-trunk-blue.svg)](https://trunk.io)\n[![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-%230074c1.svg)](http://www.typescriptlang.org/)\n[![Types](https://img.shields.io/npm/types/@humanspeak/svelte-markdown.svg)](https://www.npmjs.com/package/@humanspeak/svelte-markdown)\n[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/humanspeak/svelte-markdown/graphs/commit-activity)\n\n## Features\n\n- 🚀 Full markdown syntax support through Marked\n- 💪 Complete TypeScript support with strict typing\n- 🎨 Customizable component rendering system\n- 🔒 Secure HTML parsing via HTMLParser2\n- 🎯 GitHub-style slug generation for headers\n- ♿ WCAG 2.1 accessibility compliance\n- 🧪 Comprehensive test coverage (vitest and playwright)\n- 🔄 Svelte 5 runes compatibility\n- 🛡️ XSS protection and sanitization\n- 🎨 Custom Marked extensions support (e.g., GitHub-style alerts)\n- 🔍 Improved attribute handling and component isolation\n- 📦 Enhanced token cleanup and nested content support\n\n## Recent Updates\n\n### New Features\n\n- Improved HTML attribute isolation for nested components\n- Enhanced token cleanup for better nested content handling\n- Added proper attribute inheritance control\n- Implemented strict debugging checks in CI/CD pipeline\n\n### Testing Improvements\n\n- Enhanced Playwright E2E test coverage\n- Added comprehensive tests for custom extensions\n- Improved test reliability with proper component mounting checks\n- Added specific test cases for nested component scenarios\n\n### CI/CD Enhancements\n\n- Added automated debugging statement detection\n- Improved release workflow with GPG signing\n- Enhanced PR validation and automated version bumping\n- Added manual workflow triggers for better release control\n- Implemented monthly cache cleanup\n\n## Installation\n\n```bash\nnpm i -S @humanspeak/svelte-markdown\n```\n\nOr with your preferred package manager:\n\n```bash\npnpm add @humanspeak/svelte-markdown\nyarn add @humanspeak/svelte-markdown\n```\n\n## External Dependencies\n\nThis package carefully selects its dependencies to provide a robust and maintainable solution:\n\n### Core Dependencies\n\n- **marked**\n\n    - Industry-standard markdown parser\n    - Battle-tested in production\n    - Extensive security features\n\n- **github-slugger**\n\n    - GitHub-style heading ID generation\n    - Unicode support\n    - Collision handling\n\n- **htmlparser2**\n\n    - High-performance HTML parsing\n    - Streaming capabilities\n    - Security-focused design\n\n## Basic Usage\n\n```svelte\n<script lang=\"ts\">\n    import SvelteMarkdown from '@humanspeak/svelte-markdown'\n\n    const source = `\n# This is a header\n\nThis is a paragraph with **bold** and <em>mixed HTML</em>.\n\n* List item with \\`inline code\\`\n* And a [link](https://svelte.dev)\n  * With nested items\n  * Supporting full markdown\n`\n</script>\n\n<SvelteMarkdown {source} />\n```\n\n## TypeScript Support\n\nThe package is written in TypeScript and includes full type definitions:\n\n```typescript\nimport type {\n    Renderers,\n    Token,\n    TokensList,\n    SvelteMarkdownOptions\n} from '@humanspeak/svelte-markdown'\n```\n\n## Custom Renderer Example\n\nHere's a complete example of a custom renderer with TypeScript support:\n\n```svelte\n<script lang=\"ts\">\n    import type { Snippet } from 'svelte'\n\n    interface Props {\n        children?: Snippet\n        href?: string\n        title?: string\n    }\n\n    const { href = '', title = '', children }: Props = $props()\n</script>\n\n<a {href} {title} class=\"custom-link\">\n    {@render children?.()}\n</a>\n```\n\nIf you would like to extend other renderers please take a look inside the [renderers folder](https://github.com/humanspeak/svelte-markdown/tree/main/src/lib/renderers) for the default implentation of them. If you would like feature additions please feel free to open an issue!\n\n## Advanced Features\n\n### Table Support with Mixed Content\n\nThe package excels at handling complex nested structures and mixed content:\n\n```markdown\n| Type       | Content                                 |\n| ---------- | --------------------------------------- |\n| Nested     | <div>**bold** and _italic_</div>        |\n| Mixed List | <ul><li>Item 1</li><li>Item 2</li></ul> |\n| Code       | <code>`inline code`</code>              |\n```\n\n### HTML in Markdown\n\nSeamlessly mix HTML and Markdown:\n\n```markdown\n<div style=\"color: blue\">\n  ### This is a Markdown heading inside HTML\n  And here's some **bold** text too!\n</div>\n\n<details>\n<summary>Click to expand</summary>\n\n- This is a markdown list\n- Inside an HTML details element\n- Supporting **bold** and _italic_ text\n\n</details>\n```\n\n## Available Renderers\n\n- `text` - Text within other elements\n- `paragraph` - Paragraph (`<p>`)\n- `em` - Emphasis (`<em>`)\n- `strong` - Strong/bold (`<strong>`)\n- `hr` - Horizontal rule (`<hr>`)\n- `blockquote` - Block quote (`<blockquote>`)\n- `del` - Deleted/strike-through (`<del>`)\n- `link` - Link (`<a>`)\n- `image` - Image (`<img>`)\n- `table` - Table (`<table>`)\n- `tablehead` - Table head (`<thead>`)\n- `tablebody` - Table body (`<tbody>`)\n- `tablerow` - Table row (`<tr>`)\n- `tablecell` - Table cell (`<td>`/`<th>`)\n- `list` - List (`<ul>`/`<ol>`)\n- `listitem` - List item (`<li>`)\n- `heading` - Heading (`<h1>`-`<h6>`)\n- `codespan` - Inline code (`<code>`)\n- `code` - Block of code (`<pre><code>`)\n- `html` - HTML node\n- `rawtext` - All other text that is going to be included in an object above\n\n### Optional List Renderers\n\nFor fine-grained styling:\n\n- `orderedlistitem` - Items in ordered lists\n- `unorderedlistitem` - Items in unordered lists\n\n### HTML Renderers\n\nThe `html` renderer is special and can be configured separately to handle HTML elements:\n\n| Element  | Description          |\n| -------- | -------------------- |\n| `div`    | Division element     |\n| `span`   | Inline container     |\n| `table`  | HTML table structure |\n| `thead`  | Table header group   |\n| `tbody`  | Table body group     |\n| `tr`     | Table row            |\n| `td`     | Table data cell      |\n| `th`     | Table header cell    |\n| `ul`     | Unordered list       |\n| `ol`     | Ordered list         |\n| `li`     | List item            |\n| `code`   | Code block           |\n| `em`     | Emphasized text      |\n| `strong` | Strong text          |\n| `a`      | Anchor/link          |\n| `img`    | Image                |\n\nYou can customize HTML rendering by providing your own components:\n\n```typescript\nimport type { HtmlRenderers } from '@humanspeak/svelte-markdown'\n\nconst customHtmlRenderers: Partial<HtmlRenderers> = {\n    div: YourCustomDivComponent,\n    span: YourCustomSpanComponent\n}\n```\n\n## Events\n\nThe component emits a `parsed` event when tokens are calculated:\n\n```svelte\n<script lang=\"ts\">\n    import SvelteMarkdown from '@humanspeak/svelte-markdown'\n\n    const handleParsed = (tokens: Token[] | TokensList) => {\n        console.log('Parsed tokens:', tokens)\n    }\n</script>\n\n<SvelteMarkdown {source} parsed={handleParsed} />\n```\n\n## Props\n\n| Prop      | Type                    | Description                           |\n| --------- | ----------------------- | ------------------------------------- |\n| source    | `string \\| Token[]`     | Markdown content or pre-parsed tokens |\n| renderers | `Partial<Renderers>`    | Custom component overrides            |\n| options   | `SvelteMarkdownOptions` | Marked parser configuration           |\n| isInline  | `boolean`               | Toggle inline parsing mode            |\n\n## Security\n\nThe package includes several security features:\n\n- XSS protection through HTML sanitization\n- Secure HTML parsing with HTMLParser2\n- Safe handling of HTML entities\n- Protection against malicious markdown injection\n\n## License\n\nMIT © [Humanspeak, Inc.](LICENSE)\n\n## Credits\n\nMade with ♥ by [Humanspeak](https://humanspeak.com)\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[3953, 127],
+		[3960, 83],
+		[3967, 122],
+		[3974, 25],
+		[3981, 5],
+		[3988, 10],
+		[3995, 44],
+		[4002, 56],
+		[4009, 10],
+		[4016, 553],
+		[4023, 425],
+		[4030, 263],
+		[4037, 692],
+		[4044, 894],
+		[4051, 3591],
+		[4058, 3627],
+		[4065, 756],
+		[4072, 566],
+		[4079, 2187],
+		[4086, 3549],
+		[4093, 1129],
+		[4100, 2407],
+		[4107, 2837],
+		[4114, 2804],
+		[4121, 2373],
+		[4128, 5671]
+	]
 }

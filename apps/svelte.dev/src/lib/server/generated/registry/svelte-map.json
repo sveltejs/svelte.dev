@@ -7,25 +7,12 @@
 	"downloads": 3,
 	"updated": "2025-01-15T04:09:52.598Z",
 	"tags": ["ui", "integration"],
-	"runes": true,
 	"github_stars": 0,
 	"typescript": true,
 	"version": "0.0.11",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
 	"last_rune_check_version": "0.0.11",
-	"downloads_history": [
-		[4029, 115],
-		[4036, 8],
-		[4043, 7],
-		[4050, 5],
-		[4057, 6],
-		[4064, 7],
-		[4085, 4],
-		[4099, 4],
-		[4106, 1],
-		[4113, 3]
-	],
 	"dependency_tree": {
 		"rootIndex": 0,
 		"packages": [
@@ -37,5 +24,21 @@
 		],
 		"dependencies": [],
 		"circular": []
-	}
+	},
+	"readme": "# Svelte Maps\n\nA small library made with [leaflet.js](https://leafletjs.com/)\n\n## Exemple usage\n\n```svelte\n<script lang=\"ts\">\n\timport Map from '$lib/Map.svelte';\n\timport Marker from '$lib/Marker.svelte';\n\timport Popup from './Popup.svelte';\n\n\tlet markers: L.LatLngExpression[] = [\n\t\t[-19.96811611070914, -43.95033258481795],\n\t\t[-19.95811611070914, -43.97033258481795],\n\t\t[-19.97811611070914, -43.95033258681795],\n\t\t[-19.96815611070914, -43.97033258481795],\n\t\t[-19.96811611070914, -43.96043258481795],\n\t\t[-19.96811611070914, -43.96033258481795]\n\t];\n</script>\n\n<div>\n\t<Map options={{ center: [-19.96811611070914, -43.96033258481795], zoom: 13 }}>\n\t\t{#each markers as m}\n\t\t\t<Marker\n\t\t\t\tlatLng={m}\n\t\t\t\tpopup={{\n\t\t\t\t\tcomponent: Popup\n\t\t\t\t}}\n\t\t\t/>\n\t\t{/each}\n\t</Map>\n</div>\n\n<style>\n\tdiv {\n\t\twidth: 100%;\n\t\theight: 100vh;\n\t}\n</style>\n```\n\n## Docs\n\n### Map\n\n```ts\ntype Props = {\n\tchildren?: Snippet;\n\toptions: L.MapOptions;\n\ttileLayer?: L.TileLayer;\n};\n```\n\n### Marker\n\n```ts\ntype Props<C extends Component> = {\n\tlatLng: L.LatLngExpression;\n\toptions?: L.MarkerOptions | undefined;\n\t// popup can be any svelte component\n\tpopup?: {\n\t\tcomponent: C;\n\t\tprops?: ComponentProps<C> | undefined;\n\t};\n};\n```\n\n## Contribuiting\n\nIf you encounter any bugs, have feature requests, or would like to provide feedback, please feel free to open an issue or submit a pull request.\n",
+	"legacy_svelte": false,
+	"downloads_history": [
+		[4030, 115],
+		[4037, 8],
+		[4044, 7],
+		[4051, 5],
+		[4058, 6],
+		[4065, 7],
+		[4086, 4],
+		[4100, 4],
+		[4107, 1],
+		[4114, 3],
+		[4121, 4],
+		[4128, 3]
+	]
 }
