@@ -2,7 +2,6 @@ import { read } from '$app/server';
 import { PACKAGES_META } from '$lib/packages-meta';
 import type { Document, DocumentSummary } from '@sveltejs/site-kit';
 import { create_index } from '@sveltejs/site-kit/server/content';
-import { render_content } from './renderer';
 
 const documents = import.meta.glob<string>('../../../content/**/*.md', {
 	eager: true,

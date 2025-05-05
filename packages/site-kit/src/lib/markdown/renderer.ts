@@ -226,7 +226,7 @@ export async function render_content_markdown(
 			if (token.type === 'code') {
 				if (snippets.get(token.text)) return;
 
-				if (token.lang === 'diff' && !allow_diffs) {
+				if (token.lang === 'diff') {
 					throw new Error('Use +++ and --- annotations instead of diff blocks');
 				}
 
