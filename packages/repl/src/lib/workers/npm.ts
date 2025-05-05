@@ -2,7 +2,7 @@ import * as resolve from 'resolve.exports';
 import { parseTar, type FileDescription } from 'tarparser';
 import { NPM } from './constants';
 
-interface Package {
+export interface Package {
 	meta: any; // package.json contents
 	contents: Record<string, FileDescription>;
 }
@@ -126,6 +126,21 @@ export function resolve_subpath(pkg: Package, subpath: string): string {
 		return `./${pkg.meta.svelte.replace('./', '')}`;
 	}
 
+	if (subpath[0] === '#') {
+		try {
+			const resolved = resolve.imports(pkg.meta, subpath, {
+				browser: true,
+				conditions: ['svelte', 'module', 'browser', 'development']
+			});
+
+			return resolved?.[0] as string;
+		} catch {
+			throw new Error(
+				`No matched import path was found for "${subpath}" in "${pkg.meta.name}/package.json"`
+			);
+		}
+	}
+
 	// modern
 	if (pkg.meta.exports) {
 		try {
@@ -204,9 +219,14 @@ let local_svelte_pkg: Promise<any>;
 export async function resolve_local(specifier: string) {
 	const pkg = await (local_svelte_pkg ??= fetch(LOCAL_PKG_URL).then((r) => r.json()));
 
-	const subpath = resolve.exports(pkg, specifier.replace('svelte', '.'), {
-		browser: true
-	})![0] as string;
+	const subpath =
+		specifier[0] === '#'
+			? (resolve.imports(pkg, specifier, {
+					browser: true
+				})![0] as string)
+			: (resolve.exports(pkg, specifier.replace('svelte', '.'), {
+					browser: true
+				})![0] as string);
 
 	return new URL(subpath, LOCAL_PKG_URL).href;
 }

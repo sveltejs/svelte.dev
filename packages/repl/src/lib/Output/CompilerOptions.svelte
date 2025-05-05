@@ -27,7 +27,7 @@
 	<!-- svelte-ignore a11y_label_has_associated_control (TODO this warning should probably be disabled if there's a component)-->
 	<label class="option">
 		<span class="key">dev:</span>
-		<span style="font-size: 1.2rem">
+		<span style="position: relative; font-size: 1.2rem; top: 0.2em">
 			<Checkbox
 				checked={workspace.compiler_options.dev!}
 				onchange={(dev) => {
@@ -68,10 +68,6 @@
 
 	label[for] {
 		color: var(--shiki-token-string);
-	}
-
-	label :global(input[type='checkbox']) {
-		top: -1px;
 	}
 
 	input[type='radio'] {
