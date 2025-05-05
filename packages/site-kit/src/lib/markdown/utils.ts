@@ -11,6 +11,7 @@ export const SHIKI_LANGUAGE_MAP = {
 	dts: 'typescript',
 	css: 'css',
 	ts: 'typescript',
+	diff: 'diff',
 	'': ''
 };
 
