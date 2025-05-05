@@ -746,10 +746,6 @@ async function update_cache(update: { stats?: boolean; composite?: boolean; grap
 		// @ts-expect-error
 		delete data.runes;
 
-		// TODO REMOVE
-		// @ts-expect-error
-		delete data.downloads_history;
-
 		let dep_tree_promise: ReturnType<typeof build_flat_graph_from_package_json> =
 			Promise.resolve() as any;
 		if (update.graph) {
