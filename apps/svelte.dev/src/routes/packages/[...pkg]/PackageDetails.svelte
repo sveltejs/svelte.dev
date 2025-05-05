@@ -7,6 +7,8 @@
 		pkg: Package;
 	};
 
+	
+
 	const { pkg }: Props = $props();
 
 	const encoded_pkg = $derived(encodeURIComponent(pkg.name));
