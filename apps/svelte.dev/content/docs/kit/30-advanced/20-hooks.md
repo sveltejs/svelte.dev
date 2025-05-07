@@ -113,7 +113,7 @@ The following can be added to `src/hooks.server.js` _and_ `src/hooks.client.js`:
 
 #### on the server
 
-This function allows you to modify (or replace) a `fetch` request that happens inside a `load`, `action` or `handle` function that runs on the server (or during prerendering).
+This function allows you to modify (or replace) a `fetch` request that happens inside a `load`, `action` or `handle` function that runs on the server (or during pre-rendering).
 
 For example, your `load` function might make a request to a public URL like `https://api.yourapp.com` when the user performs a client-side navigation to the respective page, but during SSR it might make sense to hit the API directly (bypassing whatever proxies and load balancers sit between it and the public internet).
 

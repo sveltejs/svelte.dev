@@ -1125,7 +1125,7 @@ type HandleClientFetch = (input: {
 
 ## HandleFetch
 
-The [`handleFetch`](/docs/kit/hooks#Shared-hooks-handleFetch) hook allows you to modify (or replace) a `fetch` request that happens inside a `load` function that runs on the server (or during prerendering).
+The [`handleFetch`](/docs/kit/hooks#Shared-hooks-handleFetch) hook allows you to modify (or replace) a `fetch` request that happens inside a `load` function that runs on the server (or during pre-rendering).
 
 <div class="ts-block">
 
