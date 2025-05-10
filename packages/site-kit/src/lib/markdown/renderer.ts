@@ -775,6 +775,14 @@ async function syntax_highlight({
 
 			html = html.replace(/ {27,}/g, () => redactions.shift()!);
 
+			/**
+			 * @shikijs/twoslash (as of v3.2.1) returns `<` in code blocks
+			 * inside of type tooltip-popups as `&#x3C;`.
+			 *
+			 * See {@link https://github.com/sveltejs/svelte.dev/issues/1283}.
+			 */
+			html = html.replaceAll('&#x3C;', '<');
+
 			if (check) {
 				// munge the twoslash output so that it renders sensibly. the order of operations
 				// here is important — we need to work backwards, to avoid corrupting the offsets
