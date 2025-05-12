@@ -279,7 +279,7 @@ function text(
 
 ## Action
 
-Shape of a form action method that is part of `export const actions = {..}` in `+page.server.js`.
+Shape of a form action method that is part of `export const actions = {...}` in `+page.server.js`.
 See [form actions](/docs/kit/form-actions) for more information.
 
 <div class="ts-block">
@@ -370,7 +370,7 @@ type ActionResult<
 
 ## Actions
 
-Shape of the `export const actions = {..}` object in `+page.server.js`.
+Shape of the `export const actions = {...}` object in `+page.server.js`.
 See [form actions](/docs/kit/form-actions) for more information.
 
 <div class="ts-block">
@@ -440,7 +440,7 @@ supports?: {/*…*/}
 
 <div class="ts-block-property-details">
 
-Checks called during dev and build to determine whether specific features will work in production with this adapter
+Checks called during dev and build to determine whether specific features will work in production with this adapter.
 
 <div class="ts-block-property-children"><div class="ts-block-property">
 
@@ -452,11 +452,11 @@ read?: (details: { config: any; route: { id: string } }) => boolean;
 
 <div class="ts-block-property-bullets">
 
-- `config` The merged route config
+- `details.config` The merged route config
 
 </div>
 
-Test support for `read` from `$app/server`
+Test support for `read` from `$app/server`.
 
 </div>
 </div></div>
@@ -473,7 +473,7 @@ emulate?: () => MaybePromise<Emulator>;
 <div class="ts-block-property-details">
 
 Creates an `Emulator`, which allows the adapter to influence the environment
-during dev, build and prerendering
+during dev, build and prerendering.
 
 </div>
 </div></div>
@@ -1110,7 +1110,7 @@ type HandleClientError = (input: {
 
 ## HandleFetch
 
-The [`handleFetch`](/docs/kit/hooks#Server-hooks-handleFetch) hook allows you to modify (or replace) a `fetch` request that happens inside a `load` function that runs on the server (or during pre-rendering)
+The [`handleFetch`](/docs/kit/hooks#Server-hooks-handleFetch) hook allows you to modify (or replace) a `fetch` request that happens inside a `load` function that runs on the server (or during prerendering).
 
 <div class="ts-block">
 
