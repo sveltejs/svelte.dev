@@ -105,7 +105,7 @@ function error(
 
 ## fail
 
-Create an `ActionFailure` object.
+Create an `ActionFailure` object. Call when form submission fails.
 
 <div class="ts-block">
 
