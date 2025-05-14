@@ -586,11 +586,7 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 		);
 
 		if (last_import) {
-			let i = last_import.getEnd();
-			while (js_code[i] !== '\n') i += 1;
-			i += 1;
-
-			code.appendLeft(i, '\n' + import_statements + '\n');
+			code.appendLeft(last_import.getEnd(), '\n' + import_statements);
 		} else {
 			code.prependLeft(0, offset + import_statements + '\n');
 		}
