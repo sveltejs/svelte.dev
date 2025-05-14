@@ -1110,7 +1110,7 @@ type HandleClientError = (input: {
 
 ## HandleFetch
 
-The [`handleFetch`](/docs/kit/hooks#Server-hooks-handleFetch) hook allows you to modify (or replace) a `fetch` request that happens inside a `load` function that runs on the server (or during prerendering).
+The [`handleFetch`](/docs/kit/hooks#Server-hooks-handleFetch) hook allows you to modify (or replace) the result of the `fetch` function provided to an endpoint, `load`, `action`, `handle`, `handleError` or `reroute` function that runs on the server (or during prerendering).
 
 <div class="ts-block">
 
