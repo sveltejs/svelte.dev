@@ -169,6 +169,7 @@ const FEATURED: { title: string; packages: string[]; weights?: Record<string, nu
 		packages: [
 			'mdsvex',
 			'svelte-markdown',
+			'@content-collections/core',
 			'carta-md',
 			'typewriter-editor',
 			'@svelte-put/toc',
