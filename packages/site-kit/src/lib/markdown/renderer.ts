@@ -563,7 +563,10 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 				while (start > 0 && code.original[start - 1] === '\t') start -= 1;
 				while (start > 0 && code.original[start - 1] === '\n') start -= 1;
 
-				code.overwrite(start, end, '');
+				const slice = code.original.slice(node.getStart(), node.getEnd());
+				const is_multiline = slice.includes('\n');
+
+				code.overwrite(start, end, is_multiline ? '\n' : '');
 			}
 		}
 
