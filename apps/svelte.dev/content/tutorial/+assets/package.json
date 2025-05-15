@@ -11,7 +11,7 @@
 		"@sveltejs/kit": "^2.20.0",
 		"esbuild-wasm": "^0.21.5",
 		"svelte": "^5.0.0",
-		"vite": "^5.4"
+		"vite": "^6"
 	},
 	"type": "module"
 }

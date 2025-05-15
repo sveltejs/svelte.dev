@@ -150,13 +150,24 @@
 		}
 
 		h2 {
+			position: relative;
 			padding-right: 4rem;
-			background: url(./arrow-right.svg) no-repeat 100% 50%;
-			background-size: 3rem;
 
-			.external & {
-				background-image: url(./external-link.svg);
-				background-size: 3rem;
+			&::after {
+				content: '';
+				position: absolute;
+				width: 3rem;
+				height: 3rem;
+				top: 0.2rem;
+				right: 0;
+
+				background: var(--sk-fg-accent);
+				mask: url(icons/arrow-right) no-repeat 100% 50%;
+				mask-size: 100%;
+			}
+
+			.external &::after {
+				mask-image: url(icons/external-link);
 			}
 		}
 

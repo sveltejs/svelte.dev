@@ -2,7 +2,7 @@ import * as resolve from 'resolve.exports';
 import { parseTar, type FileDescription } from 'tarparser';
 import { NPM } from './constants';
 
-interface Package {
+export interface Package {
 	meta: any; // package.json contents
 	contents: Record<string, FileDescription>;
 }
@@ -126,6 +126,21 @@ export function resolve_subpath(pkg: Package, subpath: string): string {
 		return `./${pkg.meta.svelte.replace('./', '')}`;
 	}
 
+	if (subpath[0] === '#') {
+		try {
+			const resolved = resolve.imports(pkg.meta, subpath, {
+				browser: true,
+				conditions: ['svelte', 'module', 'browser', 'development']
+			});
+
+			return resolved?.[0] as string;
+		} catch {
+			throw new Error(
+				`No matched import path was found for "${subpath}" in "${pkg.meta.name}/package.json"`
+			);
+		}
+	}
+
 	// modern
 	if (pkg.meta.exports) {
 		try {
@@ -172,7 +187,7 @@ export function resolve_subpath(pkg: Package, subpath: string): string {
 
 	if (typeof pkg.meta.browser === 'object') {
 		// this will either return `pkg.browser[subpath]` or `subpath`
-		return resolve.legacy(pkg, {
+		return resolve.legacy(pkg.meta, {
 			browser: subpath
 		}) as string;
 	}
@@ -180,9 +195,14 @@ export function resolve_subpath(pkg: Package, subpath: string): string {
 	return subpath;
 }
 
-export function add_suffix(pkg: Package, path: string) {
+export function normalize_path(pkg: Package, path: string) {
 	for (const suffix of ['', '.js', '.mjs', '.cjs', '/index.js', '/index.mjs', '/index.cjs']) {
-		const with_suffix = path + suffix;
+		let with_suffix = path + suffix;
+
+		if (pkg.meta.browser) {
+			with_suffix = pkg.meta.browser[`./${with_suffix}`]?.replace('./', '') ?? with_suffix;
+		}
+
 		const file = pkg.contents[with_suffix];
 
 		if (file && file.type === 'file') {
@@ -199,9 +219,14 @@ let local_svelte_pkg: Promise<any>;
 export async function resolve_local(specifier: string) {
 	const pkg = await (local_svelte_pkg ??= fetch(LOCAL_PKG_URL).then((r) => r.json()));
 
-	const subpath = resolve.exports(pkg, specifier.replace('svelte', '.'), {
-		browser: true
-	})![0] as string;
+	const subpath =
+		specifier[0] === '#'
+			? (resolve.imports(pkg, specifier, {
+					browser: true
+				})![0] as string)
+			: (resolve.exports(pkg, specifier.replace('svelte', '.'), {
+					browser: true
+				})![0] as string);
 
 	return new URL(subpath, LOCAL_PKG_URL).href;
 }

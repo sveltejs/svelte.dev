@@ -1,7 +1,7 @@
 <script lang="ts">
 	import JSONNode from '@sveltejs/svelte-json-tree';
 	import ConsoleTable from './ConsoleTable.svelte';
-	import type { Log } from './Console.svelte';
+	import type { Log } from './Log.svelte';
 
 	export let log: Log;
 	export let depth = 0;

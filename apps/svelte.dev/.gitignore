@@ -14,3 +14,5 @@
 
 # TODO remove this after https://github.com/sveltejs/kit/pull/12718 is merged
 /content/docs/kit/50-reference
+.vercel
+.env*.local

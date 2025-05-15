@@ -1,5 +1,6 @@
 import '@sveltejs/site-kit/polyfills';
 import type { CompileResult } from 'svelte/compiler';
+import tsBlankSpace from 'ts-blank-space';
 import type { ExposedCompilerOptions, File } from '../../Workspace.svelte';
 import { load_svelte } from '../npm';
 
@@ -81,7 +82,8 @@ addEventListener('message', async (event) => {
 				compilerOptions.experimental = { async: true };
 			}
 
-			result = svelte.compileModule(file.contents, compilerOptions);
+			const content = tsBlankSpace(file.contents);
+			result = svelte.compileModule(content, compilerOptions);
 		}
 
 		postMessage({
@@ -101,6 +103,13 @@ addEventListener('message', async (event) => {
 			}
 		});
 	} catch (e) {
+		if (!e.position && e.loc) {
+			// this came from tsBlankSpace. Workspace expects a
+			// `position` property from a Svelte compile error;
+			// this is a hacky but pragmatic way to solve it
+			e.position = [e.pos, e.raisedAt];
+		}
+
 		postMessage({
 			id,
 			filename: file.name,

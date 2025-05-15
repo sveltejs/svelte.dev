@@ -28,7 +28,7 @@ A component is attempting to bind to a non-bindable property `%key%` belonging t
 ### component_api_changed
 
 ```
-%parent% called `%method%` on an instance of %component%, which is no longer valid in Svelte 5
+Calling `%method%` on a component instance (of %component%) is no longer valid in Svelte 5
 ```
 
 See the [migration guide](/docs/svelte/v5-migration-guide#Components-are-no-longer-classes) for more information.
@@ -214,6 +214,12 @@ This error would be thrown in a setup like this:
 
 Here, `List.svelte` is using `{@render children(item)` which means it expects `Parent.svelte` to use snippets. Instead, `Parent.svelte` uses the deprecated `let:` directive. This combination of APIs is incompatible, hence the error.
 
+### invalid_snippet_arguments
+
+```
+A snippet function was passed invalid arguments. Snippets should only be instantiated via `{@render ...}`
+```
+
 ### lifecycle_outside_component
 
 ```
@@ -236,6 +242,43 @@ Certain lifecycle methods can only be used during component initialisation. To f
 </script>
 
 <button onclick={handleClick}>click me</button>
+```
+
+### snippet_without_render_tag
+
+```
+Attempted to render a snippet without a `{@render}` block. This would cause the snippet code to be stringified instead of its content being rendered to the DOM. To fix this, change `{snippet}` to `{@render snippet()}`.
+```
+
+A component throwing this error will look something like this (`children` is not being rendered):
+
+```svelte
+<script>
+    let { children } = $props();
+</script>
+
+{children}
+```
+
+...or like this (a parent component is passing a snippet where a non-snippet value is expected):
+
+```svelte
+<!--- file: Parent.svelte --->
+<ChildComponent>
+  {#snippet label()}
+    <span>Hi!</span>
+  {/snippet}
+</ChildComponent>
+```
+
+```svelte
+<!--- file: Child.svelte --->
+<script>
+  let { label } = $props();
+</script>
+
+<!-- This component doesn't expect a snippet, but the parent provided one -->
+<p>{label}</p>
 ```
 
 ### store_invalid_shape

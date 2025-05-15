@@ -1,4 +1,5 @@
 import type { BundleResult } from './public';
+import type { BundleOptions } from './workers/workers';
 import type { File } from './Workspace.svelte';
 
 let uid = 1;
@@ -46,7 +47,7 @@ export default class Bundler {
 		this.#worker.postMessage({ type: 'init', svelte_version });
 	}
 
-	bundle(files: File[], options: { tailwind?: boolean }) {
+	bundle(files: File[], options: BundleOptions) {
 		this.#worker.postMessage({
 			uid,
 			type: 'bundle',

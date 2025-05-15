@@ -3,6 +3,7 @@ import { walk } from 'zimmerframe';
 import '../patch_window';
 import { rollup } from '@rollup/browser';
 import { DEV } from 'esm-env';
+import typescript_strip_types from './plugins/typescript-strip-types';
 import commonjs from './plugins/commonjs';
 import glsl from './plugins/glsl';
 import json from './plugins/json';
@@ -20,13 +21,14 @@ import type { Node } from 'estree';
 import { max } from './semver';
 import { NPM, VIRTUAL } from '../constants';
 import {
-	add_suffix,
+	normalize_path,
 	fetch_package,
 	load_svelte,
 	parse_npm_url,
 	resolve_local,
 	resolve_subpath,
-	resolve_version
+	resolve_version,
+	type Package
 } from '../npm';
 import type { BundleResult } from '$lib/public';
 
@@ -179,13 +181,21 @@ async function get_bundle(
 			// importing from a URL
 			if (/^[a-z]+:/.test(importee)) return importee;
 
+			/** The npm package we're importing from, if any */
+			let current: null | Package;
+
+			if (importer.startsWith(NPM)) {
+				const { name, version } = parse_npm_url(importer);
+				current = await fetch_package(name, name === 'svelte' ? svelte_version : version);
+			}
+
 			// importing a relative file
 			if (importee[0] === '.') {
 				if (importer.startsWith(VIRTUAL)) {
 					const url = new URL(importee, importer);
 
-					for (const suffix of ['', '.js', '.json']) {
-						const with_suffix = `${url.pathname.slice(1)}${suffix}`;
+					for (const suffix of ['', '.js', '.json', '.ts']) {
+						const with_suffix = `${url.href.slice(VIRTUAL.length + 1)}${suffix}`;
 						const file = virtual.get(with_suffix);
 
 						if (file) {
@@ -198,16 +208,23 @@ async function get_bundle(
 					);
 				}
 
-				if (importer.startsWith(NPM)) {
-					const { name, version } = parse_npm_url(importer);
+				if (current) {
+					const { name, version } = current.meta;
+					const path = new URL(importee, importer).href.replace(`${NPM}/${name}@${version}/`, '');
 
-					const pkg = await fetch_package(name, name === 'svelte' ? svelte_version : version);
-					const path = new URL(importee, importer).pathname.replace(`/${name}@${version}/`, '');
-
-					return add_suffix(pkg, path);
+					return normalize_path(current, path);
 				}
 
 				return new URL(importee, importer).href;
+			}
+
+			// importing a file from the same package via pkg.imports
+			if (importee[0] === '#') {
+				if (current) {
+					const subpath = resolve_subpath(current, importee);
+					return normalize_path(current, subpath.slice(2));
+				}
+				return await resolve_local(importee);
 			}
 
 			// importing an external package -> `npm://$/<name>@<version>/<path>`
@@ -222,11 +239,9 @@ async function get_bundle(
 
 			let default_version = 'latest';
 
-			if (importer.startsWith(NPM)) {
+			if (current) {
 				// use the version specified in importer's package.json, not `latest`
-				const { name, version } = parse_npm_url(importer);
-
-				const { meta } = await fetch_package(name, name === 'svelte' ? svelte_version : version);
+				const { meta } = current;
 
 				if (meta.name === pkg_name) {
 					default_version = meta.version;
@@ -248,7 +263,7 @@ async function get_bundle(
 			const pkg = await fetch_package(pkg_name, pkg_name === 'svelte' ? svelte_version : v);
 			const subpath = resolve_subpath(pkg, '.' + (match[3] ?? ''));
 
-			return add_suffix(pkg, subpath.slice(2));
+			return normalize_path(pkg, subpath.slice(2));
 		},
 		async load(resolved) {
 			if (uid !== current_id) throw ABORT;
@@ -280,20 +295,26 @@ async function get_bundle(
 			const message = `bundling ${id.replace(VIRTUAL + '/', '').replace(NPM + '/', '')}`;
 			self.postMessage({ type: 'status', message });
 
-			if (!/\.(svelte|js)$/.test(id)) return null;
+			if (!/\.(svelte|js|ts)$/.test(id)) return null;
 
 			const name = id.split('/').pop()?.split('.')[0];
 
 			let result: CompileResult;
 
 			if (id.endsWith('.svelte')) {
+				const is_gt_5 = Number(svelte.VERSION.split('.')[0]) >= 5;
+
 				const compilerOptions: any = {
 					filename: name + '.svelte',
-					generate: Number(svelte.VERSION.split('.')[0]) >= 5 ? 'client' : 'dom',
+					generate: is_gt_5 ? 'client' : 'dom',
 					dev: true,
 					// @ts-expect-error
 					templatingMode: options.templatingMode
 				};
+
+				if (is_gt_5) {
+					compilerOptions.runes = options.runes;
+				}
 
 				if (can_use_experimental_async) {
 					compilerOptions.experimental = { async: true };
@@ -344,7 +365,7 @@ async function get_bundle(
 					$$_styles.push($$__style);
 				`.replace(/\t/g, '');
 				}
-			} else if (id.endsWith('.svelte.js')) {
+			} else if (/\.svelte\.(js|ts)$/.test(id)) {
 				const compilerOptions: any = {
 					filename: name + '.js',
 					generate: 'client',
@@ -389,6 +410,7 @@ async function get_bundle(
 		input: './__entry.js',
 		cache: previous?.key === key && previous.cache,
 		plugins: [
+			typescript_strip_types,
 			repl_plugin,
 			commonjs,
 			json,
