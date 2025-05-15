@@ -307,7 +307,9 @@ async function get_bundle(
 				const compilerOptions: any = {
 					filename: name + '.svelte',
 					generate: is_gt_5 ? 'client' : 'dom',
-					dev: true
+					dev: true,
+					// @ts-expect-error
+					templatingMode: options.templatingMode
 				};
 
 				if (is_gt_5) {
