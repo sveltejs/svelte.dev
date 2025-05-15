@@ -526,6 +526,7 @@ namespace AST {
 		type: 'SnippetBlock';
 		expression: Identifier;
 		parameters: Pattern[];
+		typeParams?: string;
 		body: Fragment;
 	}
 
