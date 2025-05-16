@@ -7,7 +7,7 @@ title: svelte/attachments
 
 ```js
 // @noErrors
-import { createAttachmentKey } from 'svelte/attachments';
+import { createAttachmentKey, fromAction } from 'svelte/attachments';
 ```
 
 ## createAttachmentKey
@@ -48,6 +48,43 @@ function createAttachmentKey(): symbol;
 
 
 
+## fromAction
+
+<div class="ts-block">
+
+```dts
+function fromAction<
+	Node extends HTMLElement,
+	Parameter extends any
+>(
+	...args: undefined extends NoInfer<Parameter>
+		? [
+				action: (
+					node: Node,
+					parameter?: never
+				) => void | ActionReturn<
+					Parameter,
+					Record<never, any>
+				>,
+				parameter?: (() => NoInfer<Parameter>) | undefined
+			]
+		: [
+				action: (
+					node: Node,
+					parameter: Parameter
+				) => void | ActionReturn<
+					Parameter,
+					Record<never, any>
+				>,
+				parameter: () => NoInfer<Parameter>
+			]
+): Attachment<Node>;
+```
+
+</div>
+
+
+
 ## Attachment
 
 An [attachment](/docs/svelte/@attach) is a function that runs when an element is mounted
@@ -66,6 +103,36 @@ interface Attachment<T extends EventTarget = Element> {/*…*/}
 
 ```dts
 (element: T): void | (() => void);
+```
+
+<div class="ts-block-property-details"></div>
+</div></div>
+
+## FromAction
+
+<div class="ts-block">
+
+```dts
+interface FromAction<
+	Element extends EventTarget = HTMLElement,
+	Par = unknown
+> {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+<Node extends Element, Parameter extends Par>(
+	...args: undefined extends NoInfer<Parameter>
+		? [
+				action: (node: Node, parameter?: never) => void | ActionReturn<Parameter>,
+				parameter?: () => NoInfer<Parameter>
+			]
+		: [
+				action: (node: Node, parameter: Parameter) => void | ActionReturn<Parameter>,
+				parameter: () => NoInfer<Parameter>
+			]
+): Attachment<Node>;
 ```
 
 <div class="ts-block-property-details"></div>
