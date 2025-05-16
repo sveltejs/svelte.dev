@@ -25,7 +25,7 @@ In environments without [`AsyncLocalStorage`](https://nodejs.org/api/async_conte
 <div class="ts-block">
 
 ```dts
-function getRequestEvent(): RequestEvent<
+function getRequestEvent(): SWRequestEvent<
 	Partial<Record<string, string>>,
 	string | null
 >;
