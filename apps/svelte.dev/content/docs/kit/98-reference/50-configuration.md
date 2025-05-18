@@ -484,6 +484,25 @@ The location of your client [hooks](/docs/kit/hooks).
 
 ```ts
 // @noErrors
+serviceWorker?: string;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `"src/hooks.worker"`
+
+</div>
+
+The location of the your service worker [hooks](/docs/kit/hooks).
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```ts
+// @noErrors
 server?: string;
 ```
 

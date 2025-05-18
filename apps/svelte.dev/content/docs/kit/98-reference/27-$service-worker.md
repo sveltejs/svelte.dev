@@ -7,7 +7,14 @@ title: $service-worker
 
 ```js
 // @noErrors
-import { base, build, files, prerendered, version } from '$service-worker';
+import {
+	base,
+	build,
+	files,
+	prerendered,
+	respond,
+	version
+} from '$service-worker';
 ```
 
 This module is only available to [service workers](/docs/kit/service-workers).
@@ -65,6 +72,18 @@ During development, this is an empty array.
 
 ```dts
 const prerendered: string[];
+```
+
+</div>
+
+
+
+## respond
+
+<div class="ts-block">
+
+```dts
+const respond: (event: Request) => Promise<Response>;
 ```
 
 </div>

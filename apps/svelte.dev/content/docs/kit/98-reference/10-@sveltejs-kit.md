@@ -1144,6 +1144,21 @@ type HandleServerError = (input: {
 
 </div>
 
+## HandleServiceWorkerError
+
+<div class="ts-block">
+
+```dts
+type HandleServiceWorkerError = (input: {
+	error: unknown;
+	event: SWRequestEvent;
+	status: number;
+	message: string;
+}) => MaybePromise<void | App.Error>;
+```
+
+</div>
+
 ## HttpError
 
 The object returned by the [`error`](/docs/kit/@sveltejs-kit#error) function.
