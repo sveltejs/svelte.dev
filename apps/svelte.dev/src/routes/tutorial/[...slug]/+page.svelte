@@ -16,9 +16,8 @@
 	import Controls from './Controls.svelte';
 	import Editor from '@sveltejs/repl/editor';
 	import type { Snapshot } from './$types.js';
-	import type { PageProps } from './$types';
 
-	let { data }: PageProps = $props();
+	let { data } = $props();
 
 	let path = data.exercise.path;
 	let show_editor = $state(false);
