@@ -21,7 +21,6 @@
 	let modified = $state(false);
 	let setting_hash: any = null;
 
-	// svelte-ignore non_reactive_update
 	let version = $derived(page.url.searchParams.get('version') || 'latest');
 
 	// Hashed URLs are less safe (we can't delete malicious REPLs), therefore
