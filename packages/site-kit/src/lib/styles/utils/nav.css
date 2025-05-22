@@ -24,13 +24,13 @@
 				left: -2rem;
 				width: 1.8rem;
 				height: 1.8rem;
-				background: url($lib/icons/chevron.svg) no-repeat 50% 50%;
+				background: url(icons/chevron) no-repeat 50% 50%;
 				background-size: 100%;
 				rotate: -90deg;
 			}
 
 			[open] > &::before {
-				rotate: none;
+				rotate: 180deg;
 			}
 		}
 

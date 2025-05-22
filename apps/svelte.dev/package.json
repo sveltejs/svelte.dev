@@ -39,6 +39,7 @@
 		"do-not-zip": "^1.0.0",
 		"flexsearch": "^0.7.43",
 		"flru": "^1.0.2",
+		"icons": "workspace:*",
 		"port-authority": "^2.0.1",
 		"topojson-client": "^3.1.0",
 		"vitest": "^2.1.9",

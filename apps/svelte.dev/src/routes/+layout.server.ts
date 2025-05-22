@@ -51,21 +51,21 @@ const nav_links: NavigationLink[] = [
 	}
 ];
 
-// const banner: BannerData = {
-// 	id: 'adventofsvelte2024',
-// 	start: new Date('1 December, 2024 00:00:00 UTC'),
-// 	end: new Date('25 December, 2024 23:59:59 UTC'),
-// 	arrow: true,
-// 	content: {
-// 		lg: 'Twenty-four days, twenty-four features: Advent of Svelte 2024',
-// 		sm: 'Advent of Svelte 2024'
-// 	},
-// 	href: '/blog/advent-of-svelte'
-// };
+const banner: BannerData = {
+	id: 'barcelona-2025-tickets',
+	start: new Date('21 April, 2025 00:00:00 UTC'),
+	end: new Date('6 May, 2025 23:59:59 UTC'),
+	arrow: true,
+	content: {
+		lg: 'Svelte Summit Barcelona and online, May 8-9: Last few days to get tickets!',
+		sm: 'Svelte Summit May 8-9'
+	},
+	href: 'https://www.sveltesummit.com/'
+};
 
 export const load = async () => {
 	return {
 		nav_links,
-		banner: undefined
+		banner
 	};
 };

@@ -99,7 +99,7 @@
 				position: relative;
 				display: flex;
 				align-items: center;
-				background: url($lib/icons/contents.svg) 0 50% no-repeat;
+				background: url(icons/contents) 0 50% no-repeat;
 				background-size: 2rem 2rem;
 				padding: 0.2rem 0 0 3rem;
 				height: 3rem;
@@ -133,11 +133,12 @@
 				}
 
 				&::after {
-					background: url($lib/icons/chevron.svg) 50% 50% no-repeat;
-					background-size: 2rem;
+					background: currentColor;
+					mask: url(icons/chevron) 50% 50% no-repeat;
+					mask-size: 2rem;
 					top: 0.4rem;
 					right: 0.2rem;
-					rotate: 0deg;
+					rotate: -90deg;
 					transition: rotate 0.2s;
 					transition: rotate 0.2s;
 				}
@@ -161,7 +162,7 @@
 
 			label:has(:checked) {
 				&::after {
-					rotate: 180deg;
+					rotate: 90deg;
 				}
 
 				/* TODO remove :global once https://github.com/sveltejs/svelte/issues/13779 is fixed */

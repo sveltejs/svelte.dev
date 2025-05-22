@@ -417,7 +417,7 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 	const code = new MagicString(js_code);
 	const imports = new Map();
 
-	async function walk(node: ts.Node) {
+	async function walk(node: ts.Node, prev: ts.Node | null) {
 		const jsdoc = get_jsdoc(node);
 
 		if (jsdoc) {
@@ -563,16 +563,30 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 				while (start > 0 && code.original[start - 1] === '\t') start -= 1;
 				while (start > 0 && code.original[start - 1] === '\n') start -= 1;
 
-				code.overwrite(start, end, '');
+				let is_multiline = false;
+
+				if (prev) {
+					is_multiline =
+						code.original.slice(prev.getStart(), prev.getEnd()).includes('\n') ||
+						code.original.slice(node.getStart(), node.getEnd()).includes('\n');
+				}
+
+				code.overwrite(start, end, is_multiline ? '\n' : '');
 			}
 		}
 
+		// the TypeScript API is such a hot mess, AFAICT there is no non-stupid way
+		// to get the previous sibling within the visitor, so since we need it we
+		// have to pass it in from the parent visitor
+		let child_prev: ts.Node | null = null;
+
 		for (const child_node of node.getChildren()) {
-			await walk(child_node);
+			await walk(child_node, child_prev);
+			child_prev = child_node;
 		}
 	}
 
-	await walk(ast);
+	await walk(ast, null);
 
 	if (imports.size) {
 		const import_statements = Array.from(imports.entries())
@@ -586,11 +600,7 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 		);
 
 		if (last_import) {
-			let i = last_import.getEnd();
-			while (js_code[i] !== '\n') i += 1;
-			i += 1;
-
-			code.appendLeft(i, '\n' + import_statements + '\n');
+			code.appendLeft(last_import.getEnd(), '\n' + import_statements);
 		} else {
 			code.prependLeft(0, offset + import_statements + '\n');
 		}
@@ -857,9 +867,15 @@ async function syntax_highlight({
 		html = replace_blank_lines(highlighted);
 	}
 
-	// munge shiki output: put whitespace outside `<span>` elements, so that
-	// highlight delimiters fall outside tokens
-	html = html.replace(/(<span[^>]+?>)(\s+)/g, '$2$1').replace(/(\s+)(<\/span>)/g, '$2$1');
+	// munge shiki output
+	html = html
+		// put whitespace outside `<span>` elements, so that
+		// highlight delimiters fall outside tokens
+		.replace(/(<span[^>]+?>)(\s+)/g, '$2$1')
+		.replace(/(\s+)(<\/span>)/g, '$2$1')
+
+		// remove tabindex
+		.replace(' tabindex="0"', '');
 
 	html = html
 		.replace(/ {13}([^ ][^]+?) {13}/g, (_, content) => {
