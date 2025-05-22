@@ -44,7 +44,7 @@
 				<input
 					id={templating_mode}
 					type="radio"
-					checked={workspace.compiler_options.fragments === templating_mode}
+					checked={(workspace.compiler_options.fragments ?? 'html') === templating_mode}
 					value={templating_mode}
 					onchange={() => {
 						workspace.update_compiler_options({ fragments: templating_mode });
