@@ -526,6 +526,7 @@ namespace AST {
 		type: 'SnippetBlock';
 		expression: Identifier;
 		parameters: Pattern[];
+		typeParams?: string;
 		body: Fragment;
 	}
 
@@ -593,10 +594,11 @@ namespace AST {
 		| AST.SvelteBoundary;
 
 	export type Tag =
-		| AST.ExpressionTag
-		| AST.HtmlTag
+		| AST.AttachTag
 		| AST.ConstTag
 		| AST.DebugTag
+		| AST.ExpressionTag
+		| AST.HtmlTag
 		| AST.RenderTag;
 
 	export type TemplateNode =
