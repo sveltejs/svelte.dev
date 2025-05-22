@@ -52,6 +52,7 @@ export interface MigrateOutput {
 export interface BundleOptions {
 	tailwind?: boolean;
 	runes?: boolean;
+	fragments?: 'html' | 'tree';
 }
 
 export type BundleMessageData = {

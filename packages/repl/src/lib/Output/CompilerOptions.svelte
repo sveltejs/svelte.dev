@@ -1,6 +1,19 @@
 <script lang="ts">
 	import { Checkbox } from '@sveltejs/site-kit/components';
 	import type { Workspace } from '../Workspace.svelte';
+	import { get_repl_context } from '../../lib/context.js';
+
+	const { svelteVersion } = $derived(get_repl_context());
+
+	const is_fragments_available = $derived.by(() => {
+		const [major, minor] = svelteVersion.split('.');
+		// if the version is 5.33.0 or greater, fragments are available
+		if (+major >= 5 && +minor >= 33) {
+			return true;
+		}
+		// we assume they are available if work with local
+		return svelteVersion === 'local';
+	});
 
 	let { workspace }: { workspace: Workspace } = $props();
 </script>
@@ -23,23 +36,24 @@
 			<label for={generate}><span class="string">"{generate}"</span></label>
 		{/each},
 	</div>
+	{#if is_fragments_available}
+		<div class="option">
+			<span class="key">fragments:</span>
 
-	<div class="option">
-		<span class="key">templatingMode:</span>
-
-		{#each ['string', 'functional'] as const as templating_mode}
-			<input
-				id={templating_mode}
-				type="radio"
-				checked={workspace.compiler_options.templatingMode === templating_mode}
-				value={templating_mode}
-				onchange={() => {
-					workspace.update_compiler_options({ templatingMode: templating_mode });
-				}}
-			/>
-			<label for={templating_mode}><span class="string">"{templating_mode}"</span></label>
-		{/each},
-	</div>
+			{#each ['html', 'tree'] as const as templating_mode}
+				<input
+					id={templating_mode}
+					type="radio"
+					checked={workspace.compiler_options.fragments === templating_mode}
+					value={templating_mode}
+					onchange={() => {
+						workspace.update_compiler_options({ fragments: templating_mode });
+					}}
+				/>
+				<label for={templating_mode}><span class="string">"{templating_mode}"</span></label>
+			{/each},
+		</div>
+	{/if}
 
 	<!-- svelte-ignore a11y_label_has_associated_control (TODO this warning should probably be disabled if there's a component)-->
 	<label class="option">

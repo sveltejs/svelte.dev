@@ -94,7 +94,7 @@ export interface ExposedCompilerOptions {
 	generate: 'client' | 'server';
 	dev: boolean;
 	modernAst: boolean;
-	templatingMode: 'string' | 'functional';
+	fragments: 'html' | 'tree' | undefined;
 }
 
 export class Workspace {
@@ -106,7 +106,9 @@ export class Workspace {
 		generate: 'client',
 		dev: false,
 		modernAst: true,
-		templatingMode: 'string'
+		// default to undefined so it's removed if the current version
+		// doesn't support it
+		fragments: undefined
 	});
 	compiled = $state<Record<string, Compiled>>({});
 
