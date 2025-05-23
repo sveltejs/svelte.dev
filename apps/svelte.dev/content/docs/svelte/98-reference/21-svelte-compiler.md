@@ -820,6 +820,7 @@ fragments?: 'html' | 'tree';
 <div class="ts-block-property-bullets">
 
 - <span class="tag">default</span> `'html'`
+- <span class="tag since">available since</span> v5.33
 
 </div>
 
