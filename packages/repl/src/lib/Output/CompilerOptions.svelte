@@ -11,8 +11,8 @@
 		if (+major >= 5 && +minor >= 33) {
 			return true;
 		}
-		// we assume they are available if work with local
-		return svelteVersion === 'local';
+		// we assume they are available if work with local or latest
+		return svelteVersion === 'local' || svelteVersion === 'latest';
 	});
 
 	let { workspace }: { workspace: Workspace } = $props();
