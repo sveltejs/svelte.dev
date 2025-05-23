@@ -36,21 +36,22 @@
 			<label for={generate}><span class="string">"{generate}"</span></label>
 		{/each},
 	</div>
+
 	{#if is_fragments_available}
 		<div class="option">
 			<span class="key">fragments:</span>
 
-			{#each ['html', 'tree'] as const as templating_mode}
+			{#each ['html', 'tree'] as const as fragments}
 				<input
-					id={templating_mode}
+					id={fragments}
 					type="radio"
-					checked={(workspace.compiler_options.fragments ?? 'html') === templating_mode}
-					value={templating_mode}
+					checked={(workspace.compiler_options.fragments ?? 'html') === fragments}
+					value={fragments}
 					onchange={() => {
-						workspace.update_compiler_options({ fragments: templating_mode });
+						workspace.update_compiler_options({ fragments });
 					}}
 				/>
-				<label for={templating_mode}><span class="string">"{templating_mode}"</span></label>
+				<label for={fragments}><span class="string">"{fragments}"</span></label>
 			{/each},
 		</div>
 	{/if}
