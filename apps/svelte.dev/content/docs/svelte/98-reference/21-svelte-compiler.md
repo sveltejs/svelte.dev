@@ -812,6 +812,28 @@ If `true`, whitespace inside and between elements is kept as you typed it, rathe
 <div class="ts-block-property">
 
 ```dts
+fragments?: 'html' | 'tree';
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `'html'`
+
+</div>
+
+Which strategy to use when cloning DOM fragments:
+
+- `html` populates a `<template>` with `innerHTML` and clones it. This is faster, but cannot be used if your app's [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP) includes [`require-trusted-types-for 'script'`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for)
+- `tree` creates the fragment one element at a time and _then_ clones it. This is slower, but works everywhere
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
 runes?: boolean | undefined;
 ```
 
