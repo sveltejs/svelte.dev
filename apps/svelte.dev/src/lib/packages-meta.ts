@@ -85,7 +85,9 @@ const FEATURED: { title: string; packages: string[]; weights?: Record<string, nu
 			'flowbite-svelte',
 			'svelte-material-ui',
 			'carbon-components-svelte',
-			'@sveltestrap/sveltestrap'
+			'@sveltestrap/sveltestrap',
+			'daisyui',
+			'basecoat-css'
 		],
 		weights: {
 			'shadcn-svelte': 2
