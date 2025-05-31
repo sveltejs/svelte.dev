@@ -94,6 +94,7 @@ export interface ExposedCompilerOptions {
 	generate: 'client' | 'server';
 	dev: boolean;
 	modernAst: boolean;
+	fragments: 'html' | 'tree' | undefined;
 }
 
 export class Workspace {
@@ -104,7 +105,10 @@ export class Workspace {
 	#compiler_options = $state.raw<ExposedCompilerOptions>({
 		generate: 'client',
 		dev: false,
-		modernAst: true
+		modernAst: true,
+		// default to undefined so it's removed if the current version
+		// doesn't support it
+		fragments: undefined
 	});
 	compiled = $state<Record<string, Compiled>>({});
 
@@ -425,13 +429,9 @@ export class Workspace {
 			throw new Error('Workspace must have at least one file');
 		}
 
-		if (selected) {
-			const file = files.find((file) => is_file(file) && file.name === selected);
-
-			if (!file) {
-				throw new Error(`Invalid selection ${selected}`);
-			}
-			this.#select(file as File);
+		const matching_file = selected && files.find((file) => is_file(file) && file.name === selected);
+		if (matching_file) {
+			this.#select(matching_file as File);
 		} else {
 			this.#select(first);
 		}
@@ -459,6 +459,11 @@ export class Workspace {
 	update_compiler_options(options: Partial<ExposedCompilerOptions>) {
 		this.#compiler_options = { ...this.#compiler_options, ...options };
 		this.#reset_diagnostics();
+		for (let file of this.#files) {
+			if (is_file(file)) {
+				this.#onupdate(file);
+			}
+		}
 	}
 
 	update_file(file: File) {

@@ -87,7 +87,8 @@
 
 	async function rebundle() {
 		bundler!.bundle(workspace.files as File[], {
-			tailwind: workspace.tailwind
+			tailwind: workspace.tailwind,
+			fragments: workspace.compiler_options.fragments
 		});
 	}
 
@@ -139,7 +140,11 @@
 		bundler,
 		toggleable,
 		workspace,
-		svelteVersion
+		get svelteVersion() {
+			// we want this to be reactive since we are checking in
+			// the compiler options
+			return svelteVersion;
+		}
 	});
 
 	function before_unload(event: BeforeUnloadEvent) {

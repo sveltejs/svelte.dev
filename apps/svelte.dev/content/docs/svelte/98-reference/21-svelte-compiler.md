@@ -306,6 +306,12 @@ namespace AST {
 			  });
 	}
 
+	/** A `{@attach foo(...)} tag */
+	export interface AttachTag extends BaseNode {
+		type: 'AttachTag';
+		expression: Expression;
+	}
+
 	/** An `animate:` directive */
 	export interface AnimateDirective extends BaseNode {
 		type: 'AnimateDirective';
@@ -399,7 +405,7 @@ namespace AST {
 	interface BaseElement extends BaseNode {
 		name: string;
 		attributes: Array<
-			Attribute | SpreadAttribute | Directive
+			Attribute | SpreadAttribute | Directive | AttachTag
 		>;
 		fragment: Fragment;
 	}
@@ -520,6 +526,7 @@ namespace AST {
 		type: 'SnippetBlock';
 		expression: Identifier;
 		parameters: Pattern[];
+		typeParams?: string;
 		body: Fragment;
 	}
 
@@ -587,10 +594,11 @@ namespace AST {
 		| AST.SvelteBoundary;
 
 	export type Tag =
-		| AST.ExpressionTag
-		| AST.HtmlTag
+		| AST.AttachTag
 		| AST.ConstTag
 		| AST.DebugTag
+		| AST.ExpressionTag
+		| AST.HtmlTag
 		| AST.RenderTag;
 
 	export type TemplateNode =
@@ -601,6 +609,7 @@ namespace AST {
 		| AST.Attribute
 		| AST.SpreadAttribute
 		| Directive
+		| AST.AttachTag
 		| AST.Comment
 		| Block;
 
@@ -796,6 +805,29 @@ preserveWhitespace?: boolean;
 </div>
 
 If `true`, whitespace inside and between elements is kept as you typed it, rather than removed or collapsed to a single space where possible.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+fragments?: 'html' | 'tree';
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `'html'`
+- <span class="tag since">available since</span> v5.33
+
+</div>
+
+Which strategy to use when cloning DOM fragments:
+
+- `html` populates a `<template>` with `innerHTML` and clones it. This is faster, but cannot be used if your app's [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP) includes [`require-trusted-types-for 'script'`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for)
+- `tree` creates the fragment one element at a time and _then_ clones it. This is slower, but works everywhere
 
 </div>
 </div>

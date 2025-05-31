@@ -23,5 +23,5 @@ npx sv add lucia
 Whether to include demo registration and login pages.
 
 ```bash
-npx sv add --lucia=demo
+npx sv add lucia=demo:yes
 ```
