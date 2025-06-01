@@ -43,7 +43,7 @@ For a full list of bug fixes in Svelte, SvelteKit and its adapters, check out th
 
 _Featuring Svelte Contributors and Ambassadors_
 
-- In case you missed it, [all the videos from Svelte Summit](https://www.youtube.com/playlist?list=PL8bMgX1kyZThKy_B41FQHk_xsHMQouV1Z) are on the Svelte Society YouTube. More on how that happened in last month's [blog post](https://svelte.dev/blog/svelte-summit-videos)
+- In case you missed it, [all the videos from Svelte Summit](https://www.youtube.com/playlist?list=PL8bMgX1kyZThKy_B41FQHk_xsHMQouV1Z) are released over the course of the next few days on Svelte Society YouTube. More on how that happened in last month's [blog post](https://svelte.dev/blog/svelte-summit-videos)
 - [Svelte Attachments Are Here And They're Awesome](https://www.youtube.com/watch?v=9PREEREiPAE) by Joy of Code
 - [SvelteBench](https://khromov.github.io/svelte-bench/benchmark-results-merged.html) (from Stanislav Khromov) shows how different AI models perform out of the box on Svelte 5 syntax - now updated with Anthropic's new Claude 4 models
 - [First look at GitHub Copilot Coding Agent - The $40/month AI developer that actually works!](https://www.youtube.com/watch?v=FRcOen6JuJc) by Stanislav Khromov (video)
