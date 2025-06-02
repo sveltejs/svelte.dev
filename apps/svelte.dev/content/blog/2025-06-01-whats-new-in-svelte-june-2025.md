@@ -49,7 +49,6 @@ _Featuring Svelte Contributors and Ambassadors_
 - [First look at GitHub Copilot Coding Agent - The $40/month AI developer that actually works!](https://www.youtube.com/watch?v=FRcOen6JuJc) by Stanislav Khromov (video)
 - [Truly Native Apps with Svelte?](https://mainmatter.com/blog/2025/05/22/native-apps-with-svelte/) by Paolo Ricciuti
 
-
 _This Week in Svelte_
 
 - [Ep. 102](https://www.youtube.com/watch?v=frp8BXlBAZY) — Svelte+Lynx and Async Svelte
@@ -65,7 +64,7 @@ _To Watch/Read_
 
 ### Libraries, Tools & Components
 
-- [Bits UI v2 released](https://www.bits-ui.com)  - with support for attachments, `$props.id()`, Shadow DOM, and more
+- [Bits UI v2 released](https://www.bits-ui.com) - with support for attachments, `$props.id()`, Shadow DOM, and more
 - [Composably](https://github.com/kompismoln/composably) is a content processing plugin for Vite and SvelteKit with typed content + dynamic Svelte components at build time
 - [Svelte Flow is now 1.0](https://svelteflow.dev/) - with Svelte 5 support, TSDoc and a bunch of new features to make interactive flow charts even better
 - [fox ui](https://flo-bit.dev/ui-kit/) is a collection UI components built with Tailwind 4 and Svelte 5 - now with a [rich text editor](https://www.reddit.com/r/sveltejs/comments/1kjwuci/currently_building_a_svelte_rich_text_editor_on/)
