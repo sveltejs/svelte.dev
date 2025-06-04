@@ -711,14 +711,20 @@ Generate a module exposing build-time environment variables as `$env/dynamic/pub
 <div class="ts-block-property">
 
 ```dts
-generateManifest: (opts: { relativePath: string; routes?: RouteDefinition[] }) => string;
+generateManifest: (opts: {
+	relativePath: string;
+	routes?: RouteDefinition[];
+	rerouteMiddleware?: boolean;
+}) => string;
 ```
 
 <div class="ts-block-property-details">
 
 <div class="ts-block-property-bullets">
 
-- `opts` a relative path to the base directory of the app and optionally in which format (esm or cjs) the manifest should be generated
+- `opts.relativePath` a relative path to the base directory of the app
+- `opts.routes` optional. In which format (esm or cjs) the manifest should be generated
+- `opts.rerouteMiddleware` optional. True if the `reroute` hook will run in a middleware before the main handler using the [`applyReroute`](https://svelte.dev/docs/kit/@sveltejs-kit-adapter#applyReroute) function
 
 </div>
 
@@ -781,6 +787,25 @@ getAppPath: () => string;
 <div class="ts-block-property-details">
 
 Get the application path including any configured `base` path, e.g. `my-base-path/_app`.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+getReroutePath: () => Promise<string | void>;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag since">available since</span> v2.21.0
+
+</div>
+
+Get the fully resolved path to the file containing the `reroute` hook if it exists.
 
 </div>
 </div>
@@ -2429,6 +2454,18 @@ server_assets: Record<string, number>;
 <div class="ts-block-property-details">
 
 A `[file]: size` map of all assets imported by server code.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+reroute_middleware: boolean;
+```
+
+<div class="ts-block-property-details">
+
+True if the `reroute` hook will run in a middleware before the main handler
 
 </div>
 </div></div>
