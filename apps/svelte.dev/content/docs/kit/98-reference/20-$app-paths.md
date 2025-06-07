@@ -66,9 +66,8 @@ resolveRoute(
 <div class="ts-block">
 
 ```dts
-function resolveRoute(
-	id: string,
-	params: Record<string, string | undefined>
+function resolveRoute<T extends RouteId>(
+	...args: ResolveRouteArgs<T>
 ): string;
 ```
 
