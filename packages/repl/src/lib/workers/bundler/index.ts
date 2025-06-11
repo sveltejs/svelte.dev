@@ -3,7 +3,7 @@ import { walk } from 'zimmerframe';
 import '../patch_window';
 import { rollup } from '@rollup/browser';
 import { DEV } from 'esm-env';
-import typescript_strip_types from './plugins/typescript-strip-types';
+import typescript_strip_types from './plugins/typescript';
 import commonjs from './plugins/commonjs';
 import glsl from './plugins/glsl';
 import json from './plugins/json';

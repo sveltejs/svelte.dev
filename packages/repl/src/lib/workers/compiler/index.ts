@@ -1,8 +1,8 @@
 import '@sveltejs/site-kit/polyfills';
 import type { CompileResult } from 'svelte/compiler';
-import tsBlankSpace from 'ts-blank-space';
 import type { ExposedCompilerOptions, File } from '../../Workspace.svelte';
 import { load_svelte } from '../npm';
+import { strip_types } from '../typescript-strip-types';
 
 // hack for magic-string and Svelte 4 compiler
 // do not put this into a separate module and import it, would be treeshaken in prod
@@ -88,7 +88,7 @@ addEventListener('message', async (event) => {
 				compilerOptions.experimental = { async: true };
 			}
 
-			const content = tsBlankSpace(file.contents);
+			const content = file.basename.endsWith('.ts') ? strip_types(file.contents) : file.contents;
 			result = svelte.compileModule(content, compilerOptions);
 		}
 

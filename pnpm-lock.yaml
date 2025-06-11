@@ -257,6 +257,9 @@ importers:
       '@rollup/browser':
         specifier: ^4.17.2
         version: 4.17.2
+      '@sveltejs/acorn-typescript':
+        specifier: ^1.0.0
+        version: 1.0.5(acorn@8.14.1)
       '@sveltejs/site-kit':
         specifier: workspace:*
         version: link:../site-kit
@@ -281,6 +284,9 @@ importers:
       locate-character:
         specifier: ^3.0.0
         version: 3.0.0
+      magic-string:
+        specifier: ^0.30.0
+        version: 0.30.12
       marked:
         specifier: ^14.1.2
         version: 14.1.2
@@ -296,9 +302,6 @@ importers:
       tarparser:
         specifier: ^0.0.4
         version: 0.0.4
-      ts-blank-space:
-        specifier: ^0.6.1
-        version: 0.6.1
       zimmerframe:
         specifier: ^1.1.2
         version: 1.1.2
@@ -3066,10 +3069,6 @@ packages:
 
   trim-lines@3.0.1:
     resolution: {integrity: sha512-kRj8B+YHZCc9kQYdWfJB2/oUl9rA99qbowYYBtr4ui4mZyAQ2JpvVBd/6U2YloATfqBhBTSMhTpgBHtU0Mf3Rg==}
-
-  ts-blank-space@0.6.1:
-    resolution: {integrity: sha512-LcM3W5HEyzTaXUeQITV8ploUOGe+zuuoFYsCfPscFLhx3bZn2sSfHMKxsULVG/zA7an9UhReiHv4Kk/6QzlpXQ==}
-    engines: {node: '>=18.0.0'}
 
   tslib@2.6.3:
     resolution: {integrity: sha512-xNvxJEOUiWPGhUuUdQgAJPKOOJfGnIyKySOc09XkKsgdUV/3E2zvwZYdejjmRgPCgcym1juLH3226yA7sEFJKQ==}
@@ -5932,10 +5931,6 @@ snapshots:
   tr46@0.0.3: {}
 
   trim-lines@3.0.1: {}
-
-  ts-blank-space@0.6.1:
-    dependencies:
-      typescript: 5.8.2
 
   tslib@2.6.3: {}
 
