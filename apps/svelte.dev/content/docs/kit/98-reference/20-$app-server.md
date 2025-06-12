@@ -26,8 +26,8 @@ In environments without [`AsyncLocalStorage`](https://nodejs.org/api/async_conte
 
 ```dts
 function getRequestEvent(): RequestEvent<
-	Partial<Record<string, string>>,
-	string | null
+	AppLayoutParams<'/'>,
+	any
 >;
 ```
 
