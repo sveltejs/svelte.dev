@@ -58,6 +58,21 @@ function ts_blank_space(context: Context<any, { ms: MagicString }>, node: any): 
 	}
 }
 
+function specifier_end(node: any, i: number, s: any, context: Context<any, { ms: MagicString }>) {
+	let end = node.specifiers[i + 1]?.start;
+	if (end === undefined) {
+		end = s.end;
+		// Look for a comma after s.end, skipping whitespace
+		let j = end;
+		const original = context.state.ms.original;
+		while (j < original.length && /\s/.test(original[j])) j++;
+		if (original[j] === ',') {
+			end = j + 1;
+		}
+	}
+	return end;
+}
+
 const visitors: Visitors<any, { ms: MagicString }> = {
 	_(node, context) {
 		if (node.typeAnnotation) ts_blank_space(context, node.typeAnnotation);
@@ -85,7 +100,7 @@ const visitors: Visitors<any, { ms: MagicString }> = {
 
 				ts_blank_space(context, {
 					start: s.start,
-					end: node.specifiers[i + 1]?.start || s.end
+					end: specifier_end(node, i, s, context)
 				});
 			});
 
@@ -115,7 +130,7 @@ const visitors: Visitors<any, { ms: MagicString }> = {
 
 				ts_blank_space(context, {
 					start: s.start,
-					end: node.specifiers[i + 1]?.start || s.end
+					end: specifier_end(node, i, s, context)
 				});
 			});
 
