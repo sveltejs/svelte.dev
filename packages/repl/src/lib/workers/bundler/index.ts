@@ -76,6 +76,8 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 						can_use_experimental_async
 					);
 
+					console.log('[bundle worker result]', result);
+
 					if (JSON.stringify(result.error) === JSON.stringify(ABORT)) return;
 					if (result && uid === current_id) postMessage(result);
 				});
