@@ -5,7 +5,7 @@ export interface BundleResult {
 	error: (RollupError & CompileError) | null;
 	client: OutputChunk | null;
 	server: OutputChunk | null;
-	tailwind: string | null;
+	css: string | null;
 	imports: string[];
 }
 
