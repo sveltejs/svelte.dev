@@ -415,7 +415,7 @@ async function get_bundle(
 	};
 
 	const key = JSON.stringify(options);
-
+	const handled_css_ids = new Set<string>();
 	let user_css = '';
 
 	bundle = await rollup({
@@ -438,7 +438,10 @@ async function get_bundle(
 				name: 'css',
 				transform(code, id) {
 					if (id.endsWith('.css')) {
-						user_css += '\n' + code;
+						if (!handled_css_ids.has(id)) {
+							handled_css_ids.add(id);
+							user_css += '\n' + code;
+						}
 						return {
 							code: '',
 							map: null
