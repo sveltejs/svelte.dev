@@ -121,9 +121,7 @@ async function init_tailwind(user_css = '') {
 		`@import "tailwindcss/theme.css" layer(theme);`,
 		`@import "tailwindcss/preflight.css" layer(base);`,
 		`@import "tailwindcss/utilities.css" layer(utilities);`,
-		// We don't handle imports in the user CSS right now, so we remove them
-		// to avoid errors in the Tailwind compiler
-		user_css.replace(/@import\s+["'][^"']+["'][^;]*;/g, '')
+		user_css
 	].join('\n');
 
 	return await tailwindcss.compile(tailwind_base, {
@@ -440,7 +438,9 @@ async function get_bundle(
 					if (id.endsWith('.css')) {
 						if (!handled_css_ids.has(id)) {
 							handled_css_ids.add(id);
-							user_css += '\n' + code;
+							// We don't handle imports in the user CSS right now, so we remove them
+							// to avoid errors in e.g. the Tailwind compiler
+							user_css += '\n' + code.replace(/@import\s+["'][^"']+["'][^;]*;/g, '');
 						}
 						return {
 							code: '',
