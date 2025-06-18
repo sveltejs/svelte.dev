@@ -215,7 +215,7 @@ async function get_bundle(
 					const { name, version } = current.meta;
 					const path = new URL(importee, importer).href.replace(`${NPM}/${name}@${version}/`, '');
 
-					return normalize_path(current, path);
+					return normalize_path(current, path, importee, importer);
 				}
 
 				return new URL(importee, importer).href;
@@ -225,7 +225,7 @@ async function get_bundle(
 			if (importee[0] === '#') {
 				if (current) {
 					const subpath = resolve_subpath(current, importee);
-					return normalize_path(current, subpath.slice(2));
+					return normalize_path(current, subpath.slice(2), importee, importer);
 				}
 				return await resolve_local(importee);
 			}
@@ -266,7 +266,7 @@ async function get_bundle(
 			const pkg = await fetch_package(pkg_name, pkg_name === 'svelte' ? svelte_version : v);
 			const subpath = resolve_subpath(pkg, '.' + (match[3] ?? ''));
 
-			return normalize_path(pkg, subpath.slice(2));
+			return normalize_path(pkg, subpath.slice(2), importee, importer);
 		},
 		async load(resolved) {
 			if (uid !== current_id) throw ABORT;
