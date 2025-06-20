@@ -91,6 +91,7 @@ button > span.icon {
 
 button:where(.tooltip, .tooltip-left)[aria-label]:where(:hover, :focus) {
 	--arrow-size: 1rem;
+	--pseudo-index: 2;
 
 	&::before {
 		content: '';
@@ -101,6 +102,7 @@ button:where(.tooltip, .tooltip-left)[aria-label]:where(:hover, :focus) {
 		top: calc(100% + var(--arrow-size) * 0.5);
 		left: calc(50% - var(--arrow-size) * 0.5);
 		rotate: 45deg;
+		z-index: var(--pseudo-index);
 	}
 
 	&::after {
@@ -116,6 +118,7 @@ button:where(.tooltip, .tooltip-left)[aria-label]:where(:hover, :focus) {
 		font: var(--sk-font-ui-small);
 		text-transform: none;
 		white-space: pre;
+		z-index: var(--pseudo-index);
 	}
 
 	&.tooltip-left::after {
