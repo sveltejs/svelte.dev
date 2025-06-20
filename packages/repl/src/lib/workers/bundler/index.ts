@@ -3,7 +3,7 @@ import { walk } from 'zimmerframe';
 import '../patch_window';
 import { rollup } from '@rollup/browser';
 import { DEV } from 'esm-env';
-import typescript_strip_types from './plugins/typescript-strip-types';
+import typescript_strip_types from './plugins/typescript';
 import commonjs from './plugins/commonjs';
 import glsl from './plugins/glsl';
 import json from './plugins/json';
@@ -76,6 +76,8 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 						can_use_experimental_async
 					);
 
+					console.log('[bundle worker result]', result);
+
 					if (JSON.stringify(result.error) === JSON.stringify(ABORT)) return;
 					if (result && uid === current_id) postMessage(result);
 				});
@@ -101,7 +103,7 @@ let previous: {
 
 let tailwind: Awaited<ReturnType<typeof init_tailwind>>;
 
-async function init_tailwind() {
+async function init_tailwind(user_css = '') {
 	const tailwindcss = await import('tailwindcss');
 
 	const { default: tailwind_preflight } = await import('tailwindcss/preflight.css?raw');
@@ -118,7 +120,8 @@ async function init_tailwind() {
 		`@layer theme, base, components, utilities;`,
 		`@import "tailwindcss/theme.css" layer(theme);`,
 		`@import "tailwindcss/preflight.css" layer(base);`,
-		`@import "tailwindcss/utilities.css" layer(utilities);`
+		`@import "tailwindcss/utilities.css" layer(utilities);`,
+		user_css
 	].join('\n');
 
 	return await tailwindcss.compile(tailwind_base, {
@@ -212,7 +215,7 @@ async function get_bundle(
 					const { name, version } = current.meta;
 					const path = new URL(importee, importer).href.replace(`${NPM}/${name}@${version}/`, '');
 
-					return normalize_path(current, path);
+					return normalize_path(current, path, importee, importer);
 				}
 
 				return new URL(importee, importer).href;
@@ -222,7 +225,7 @@ async function get_bundle(
 			if (importee[0] === '#') {
 				if (current) {
 					const subpath = resolve_subpath(current, importee);
-					return normalize_path(current, subpath.slice(2));
+					return normalize_path(current, subpath.slice(2), importee, importer);
 				}
 				return await resolve_local(importee);
 			}
@@ -263,7 +266,7 @@ async function get_bundle(
 			const pkg = await fetch_package(pkg_name, pkg_name === 'svelte' ? svelte_version : v);
 			const subpath = resolve_subpath(pkg, '.' + (match[3] ?? ''));
 
-			return normalize_path(pkg, subpath.slice(2));
+			return normalize_path(pkg, subpath.slice(2), importee, importer);
 		},
 		async load(resolved) {
 			if (uid !== current_id) throw ABORT;
@@ -410,6 +413,8 @@ async function get_bundle(
 	};
 
 	const key = JSON.stringify(options);
+	const handled_css_ids = new Set<string>();
+	let user_css = '';
 
 	bundle = await rollup({
 		input: './__entry.js',
@@ -427,6 +432,23 @@ async function get_bundle(
 			replace({
 				'process.env.NODE_ENV': JSON.stringify('production')
 			}),
+			{
+				name: 'css',
+				transform(code, id) {
+					if (id.endsWith('.css')) {
+						if (!handled_css_ids.has(id)) {
+							handled_css_ids.add(id);
+							// We don't handle imports in the user CSS right now, so we remove them
+							// to avoid errors in e.g. the Tailwind compiler
+							user_css += '\n' + code.replace(/@import\s+["'][^"']+["'][^;]*;/g, '');
+						}
+						return {
+							code: '',
+							map: null
+						};
+					}
+				}
+			},
 			options.tailwind && {
 				name: 'tailwind-extract',
 				transform(code, id) {
@@ -453,9 +475,11 @@ async function get_bundle(
 
 	return {
 		bundle,
-		tailwind: options.tailwind
-			? (tailwind ?? (await init_tailwind())).build(tailwind_candidates)
-			: undefined,
+		css: options.tailwind
+			? (tailwind ?? (await init_tailwind(user_css))).build(tailwind_candidates)
+			: user_css
+				? user_css
+				: null,
 		imports: Array.from(imports),
 		error: null,
 		warnings,
@@ -583,7 +607,7 @@ async function bundle(
 			error: null,
 			client: client_result,
 			server: server_result,
-			tailwind: client.tailwind,
+			css: client.css,
 			imports: client.imports
 		};
 	} catch (err) {
@@ -596,7 +620,7 @@ async function bundle(
 			error: { ...e, message: e.message }, // not all Svelte versions return an enumerable message property
 			client: null,
 			server: null,
-			tailwind: null,
+			css: null,
 			imports: null
 		};
 	}

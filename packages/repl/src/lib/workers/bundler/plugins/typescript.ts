@@ -1,5 +1,5 @@
+import { strip_types } from '../../typescript-strip-types';
 import type { Plugin } from '@rollup/browser';
-import tsBlankSpace from 'ts-blank-space';
 
 const plugin: Plugin = {
 	name: 'typescript-strip-types',
@@ -8,7 +8,7 @@ const plugin: Plugin = {
 		if (!match) return;
 
 		return {
-			code: tsBlankSpace(code)
+			code: strip_types(code)
 		};
 	}
 };
