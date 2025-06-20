@@ -98,7 +98,7 @@ export type PageData = Kit.ReturnType<
 >;
 ```
 
-We don't actually write `$types.d.ts` into your `src` directory — that would be messy, and no-one likes messy code. Instead, we use a TypeScript feature called [`rootDirs`](https://www.typescriptlang.org/tsconfig#rootDirs), which lets us map ‘virtual’ directories to real ones. By setting `rootDirs` to the project root (the default) and additionally to `.svelte-kit/types` (the output folder of all the generated types) and then mirroring the route structure inside it we get the desired behavior:
+We don't actually write `$types.d.ts` into your `src` directory — that would be messy, and no one likes messy code. Instead, we use a TypeScript feature called [`rootDirs`](https://www.typescriptlang.org/tsconfig#rootDirs), which lets us map ‘virtual’ directories to real ones. By setting `rootDirs` to the project root (the default) and additionally to `.svelte-kit/types` (the output folder of all the generated types) and then mirroring the route structure inside it we get the desired behavior:
 
 ```tree
 // on disk:
