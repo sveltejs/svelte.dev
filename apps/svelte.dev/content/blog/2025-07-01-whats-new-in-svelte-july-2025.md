@@ -30,7 +30,7 @@ For a full list of bug fixes in Svelte, SvelteKit and its adapters, check out th
 ### Apps & Sites built with Svelte
 
 - [Planet Poster](https://planet-poster.vercel.app/) is an interactive art work inspired by a poster of, you guessed it, planets
-- [roomy-worlds](https://github.com/flo-bit/roomy-worlds) lets you create small 3d worlds and share/edit with your community
+- [roomy-worlds](https://flo-bit.dev/roomy-worlds/) lets you create small 3d worlds and share/edit with your community
 - [Prodcast](https://www.prodcastapp.com/) lets you discover products curated from your favorite podcasts
 - [Distill](https://www.distillintelligence.com/) automates company and industry monitoring with all news, updates, and summarized insights in one place
 
