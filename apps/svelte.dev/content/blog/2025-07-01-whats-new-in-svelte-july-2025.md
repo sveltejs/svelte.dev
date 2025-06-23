@@ -13,7 +13,7 @@ Let's dive in!
 
 ## What's new in Svelte and SvelteKit
 
-- `$inspect.trace` now includes source name logging to make it easy to find which file the log came from (**svelte@5.34.0**, [Docs](<https://svelte.dev/docs/svelte/inspect#inspect.trace()>), #[16060](https://github.com/sveltejs/svelte/pull/16060))
+- `$inspect.trace` now includes source name logging to make it easy to find which file the log came from (**svelte@5.34.0**, [Docs](<https://svelte.dev/docs/svelte/inspect#$inspect.trace()>), #[16060](https://github.com/sveltejs/svelte/pull/16060))
 - The latest version of SvelteKit now supports Vite 7 and Rolldown. Compilation should be faster using Rolldown, but with larger bundle sizes until additional tree-shaking is implemented in Rolldown (**kit@2.22.0**, [Docs](https://vite.dev/guide/rolldown.html#how-to-try-rolldown), [#13747](https://github.com/sveltejs/kit/pull/13747))
 
 For a full list of bug fixes in Svelte, SvelteKit and its adapters, check out their CHANGELOGs [here](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md) and [here](https://github.com/sveltejs/kit/tree/main/packages).
