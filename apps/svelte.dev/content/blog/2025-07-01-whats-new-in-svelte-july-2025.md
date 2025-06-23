@@ -21,7 +21,7 @@ For a full list of bug fixes in Svelte, SvelteKit and its adapters, check out th
 ## What's new in the CLI and Language Tools
 
 - The `sv` CLI now supports Vite's browser mode in `vitest` - allowing you to run your tests in the browser natively (**cli@0.8.12**, [Docs](https://vitest.dev/guide/browser/), [#588](https://github.com/sveltejs/cli/pull/588))
-- The language server now makes it easier to search for symbol names (`Ctrl + T` in VSCode). Some of the handling is also synced to the typescript-plugin so that it's more consistent, which also means vscode can better deduplicate the results from both tsserver and Svelte language server (**extensions@109.9.0**, [#2769](https://github.com/sveltejs/language-tools/pull/2769))
+- The language server now makes it easier to search for symbol names (`Ctrl + T` in VSCode). Some of the handling is also synced to the Svelte TypeScript plugin so that it's more consistent, which also means vscode can better deduplicate the results from both tsserver and Svelte language server (**extensions@109.9.0**, [#2769](https://github.com/sveltejs/language-tools/pull/2769))
 
 ---
 
