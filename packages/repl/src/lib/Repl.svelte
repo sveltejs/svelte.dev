@@ -69,13 +69,22 @@
 		return {
 			imports: bundler!.result?.imports ?? [],
 			files: workspace.files,
-			tailwind: workspace.tailwind
+			tailwind: workspace.tailwind,
+			aliases: workspace.aliases
 		};
 	}
 
 	// TODO get rid
-	export async function set(data: { files: File[]; tailwind?: boolean }) {
-		workspace.reset(data.files, { tailwind: data.tailwind ?? false }, 'App.svelte');
+	export async function set(data: {
+		files: File[];
+		tailwind?: boolean;
+		aliases?: Record<string, string>;
+	}) {
+		workspace.reset(
+			data.files,
+			{ tailwind: data.tailwind ?? false, aliases: data.aliases },
+			'App.svelte'
+		);
 	}
 
 	// TODO get rid
@@ -88,7 +97,8 @@
 	async function rebundle() {
 		bundler!.bundle(workspace.files as File[], {
 			tailwind: workspace.tailwind,
-			fragments: workspace.compiler_options.fragments
+			fragments: workspace.compiler_options.fragments,
+			aliases: workspace.aliases
 		});
 	}
 

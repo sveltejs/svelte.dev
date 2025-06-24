@@ -117,6 +117,7 @@ export class Workspace {
 	#files = $state.raw<Item[]>([]);
 	#current = $state.raw() as File;
 	#vim = $state(false);
+	#aliases = $state.raw(undefined) as undefined | Record<string, string>;
 	#tailwind = $state(false);
 
 	#handlers = {
@@ -400,13 +401,18 @@ export class Workspace {
 		this.#onreset?.(this.#files);
 	}
 
-	reset(new_files: Item[], options: { tailwind: boolean }, selected?: string) {
+	reset(
+		new_files: Item[],
+		options: { tailwind: boolean; aliases?: Record<string, string> },
+		selected?: string
+	) {
 		this.states.clear();
 		this.set(new_files, selected);
 
 		this.mark_saved();
 
 		this.#tailwind = options.tailwind;
+		this.#aliases = options.aliases;
 
 		this.#onreset(new_files);
 		this.#reset_diagnostics();
@@ -473,6 +479,15 @@ export class Workspace {
 		if (state) {
 			this.#update_state(file, state);
 		}
+	}
+
+	get aliases() {
+		return this.#aliases;
+	}
+
+	set aliases(value) {
+		this.#aliases = value;
+		this.#onupdate(this.#current);
 	}
 
 	get tailwind() {

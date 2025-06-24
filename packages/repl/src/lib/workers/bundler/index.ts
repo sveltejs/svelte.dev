@@ -12,6 +12,7 @@ import image from './plugins/image';
 import svg from './plugins/svg';
 import replace from './plugins/replace';
 import loop_protect from './plugins/loop-protect';
+import alias_plugin, { resolve } from './plugins/alias';
 import type { Plugin, RollupCache, TransformResult } from '@rollup/browser';
 import type { BundleMessageData, BundleOptions } from '../workers';
 import type { Warning } from '../../types';
@@ -195,20 +196,7 @@ async function get_bundle(
 			// importing a relative file
 			if (importee[0] === '.') {
 				if (importer.startsWith(VIRTUAL)) {
-					const url = new URL(importee, importer);
-
-					for (const suffix of ['', '.js', '.json', '.ts']) {
-						const with_suffix = `${url.href.slice(VIRTUAL.length + 1)}${suffix}`;
-						const file = virtual.get(with_suffix);
-
-						if (file) {
-							return url.href + suffix;
-						}
-					}
-
-					throw new Error(
-						`'${importee}' (imported by ${importer.replace(VIRTUAL + '/', '')}) does not exist`
-					);
+					return resolve(virtual, importee, importer);
 				}
 
 				if (current) {
@@ -420,6 +408,7 @@ async function get_bundle(
 		input: './__entry.js',
 		cache: previous?.key === key && previous.cache,
 		plugins: [
+			alias_plugin(options.aliases, virtual),
 			typescript_strip_types,
 			repl_plugin,
 			commonjs,
