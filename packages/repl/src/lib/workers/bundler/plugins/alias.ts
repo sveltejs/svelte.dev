@@ -1,4 +1,4 @@
-import { VIRTUAL } from '$lib/workers/constants';
+import { VIRTUAL } from '../../constants';
 import type { File } from '$lib/Workspace.svelte';
 import type { Plugin } from '@rollup/browser';
 
