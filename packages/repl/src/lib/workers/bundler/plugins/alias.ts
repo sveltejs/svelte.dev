@@ -56,6 +56,17 @@ export function resolve(virtual: Map<string, File>, importee: string, importer: 
 		}
 	}
 
+	if (url.href.endsWith('.ts') || url.href.endsWith('.js')) {
+		// One can mean the other (TS encourages you to import .ts files with .js suffixes, and bundlers handle these cases)
+		const other_suffix = url.href.endsWith('.ts') ? '.js' : '.ts';
+		const with_other_suffix = `${url.href.slice(VIRTUAL.length + 1, -3)}${other_suffix}`;
+		const file = virtual.get(with_other_suffix);
+
+		if (file) {
+			return url.href.slice(0, -3) + other_suffix;
+		}
+	}
+
 	throw new Error(
 		`'${importee}' (imported by ${importer.replace(VIRTUAL + '/', '')}) does not exist`
 	);
