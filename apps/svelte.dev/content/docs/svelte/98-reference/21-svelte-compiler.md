@@ -14,6 +14,7 @@ import {
 	migrate,
 	parse,
 	preprocess,
+	print,
 	walk
 } from 'svelte/compiler';
 ```
@@ -158,6 +159,21 @@ function preprocess(
 
 
 
+## print
+
+<div class="ts-block">
+
+```dts
+function print(ast: AST.SvelteNode): {
+	code: string;
+	map: any;
+};
+```
+
+</div>
+
+
+
 ## walk
 
 <blockquote class="tag deprecated note">
@@ -208,6 +224,8 @@ namespace AST {
 		instance: Script | null;
 		/** The parsed `<script module>` element, if exists */
 		module: Script | null;
+		/** Comments found in <script> and {expressions} */
+		comments: JSComment[];
 	}
 
 	export interface SvelteOptions {
@@ -554,6 +572,17 @@ namespace AST {
 		attributes: Attribute[];
 	}
 
+	export interface JSComment {
+		type: 'Line' | 'Block';
+		value: string;
+		start: number;
+		end: number;
+		loc: {
+			start: { line: number; column: number };
+			end: { line: number; column: number };
+		};
+	}
+
 	export type AttributeLike =
 		| Attribute
 		| SpreadAttribute
@@ -617,7 +646,8 @@ namespace AST {
 		| Node
 		| TemplateNode
 		| AST.Fragment
-		| _CSS.Node;
+		| _CSS.Node
+		| Script;
 
 	export type { _CSS as CSS };
 }
