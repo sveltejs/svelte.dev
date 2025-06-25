@@ -52,7 +52,7 @@
 		text: true
 	};
 
-	const workspace = new Workspace([dummy], {
+	const workspace: Workspace = new Workspace([dummy], {
 		initial: 'App.svelte',
 		svelte_version: svelteVersion,
 		onupdate() {
@@ -60,7 +60,8 @@
 			onchange?.();
 		},
 		onreset() {
-			rebundle();
+			// Return promise so we can await it in the workspace
+			return rebundle();
 		}
 	});
 
@@ -74,16 +75,27 @@
 		};
 	}
 
-	// TODO get rid
+	// Our own playground / v0 need this
 	export async function set(data: {
 		files: File[];
 		tailwind?: boolean;
 		aliases?: Record<string, string>;
 	}) {
-		workspace.reset(
+		// Await promise so that users (v0 in this case) can know when the bundling is done
+		await workspace.reset(
 			data.files,
 			{ tailwind: data.tailwind ?? false, aliases: data.aliases },
 			'App.svelte'
+		);
+	}
+
+	// v0 needs this
+	export function get_asts() {
+		return Object.fromEntries(
+			Object.entries(workspace.compiled).map(([name, compiled]) => [
+				name,
+				compiled.result?.ast ?? null
+			])
 		);
 	}
 
@@ -94,8 +106,8 @@
 
 	const toggleable: ReplContext['toggleable'] = writable(false);
 
-	async function rebundle() {
-		bundler!.bundle(workspace.files as File[], {
+	function rebundle() {
+		return bundler!.bundle(workspace.files as File[], {
 			tailwind: workspace.tailwind,
 			fragments: workspace.compiler_options.fragments,
 			aliases: workspace.aliases
