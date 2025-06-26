@@ -50,23 +50,33 @@ export function smart_quotes(
 	// wouldn't correctly handle `That '70s show` or `My country 'tis of thee`
 	// but a) it's very unlikely they'll occur in our docs, and
 	// b) they can be dealt with manually
-	return str.replace(
-		html ? /(.|^)(&#39;|&quot;)(.|$)/g : /(.|^)('|")(.|$)/g,
-		(m, before, quote, after) => {
-			const left = (first && before === '') || [' ', '\n', '('].includes(before);
-			let replacement = '';
-
-			if (html) {
-				const double = quote === '&quot;';
-				replacement = `&${left ? 'l' : 'r'}${double ? 'd' : 's'}quo;`;
-			} else {
-				const double = quote === '"';
-				replacement = double ? (left ? '“' : '”') : left ? '‘' : '’';
+	let open_quote = false;
+	let res = '';
+	const len = str.length;
+	for (let index = 0; index < len; index++) {
+		let char = str.charAt(index);
+		if (html && char === '&') {
+			if (str.slice(index, index + 5) === '&#39;') {
+				let left: boolean = first && !open_quote;
+				open_quote = left;
+				res += `&${left ? 'l' : 'r'}squo;`;
+				index += 4;
+			} else if (str.slice(index, index + 6) === '&quot;') {
+				let left: boolean = first && !open_quote;
+				open_quote = left;
+				res += `&${left ? 'l' : 'r'}dquo`;
+				index += 5;
 			}
-
-			return (before ?? '') + replacement + (after ?? '');
+		} else if (!html && (char === '"' || char === "'")) {
+			let left: boolean = first && !open_quote;
+			open_quote = left;
+			let double = char === '"';
+			res += double ? (left ? '“' : '”') : left ? '‘' : '’';
+		} else {
+			res += char;
 		}
-	);
+	}
+	return res;
 }
 
 const tokenizer: TokenizerObject = {
