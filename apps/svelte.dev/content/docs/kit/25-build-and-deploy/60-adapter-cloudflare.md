@@ -21,8 +21,7 @@ Install with `npm i -D @sveltejs/adapter-cloudflare`, then add the adapter to yo
 /// file: svelte.config.js
 import adapter from '@sveltejs/adapter-cloudflare';
 
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
+export default {
 	kit: {
 		adapter: adapter({
 			// See below for an explanation of these options
@@ -40,8 +39,6 @@ const config = {
 		})
 	}
 };
-
-export default config;
 ```
 
 ## Options
@@ -129,25 +126,9 @@ Functions contained in the [`/functions` directory](https://developers.cloudflar
 The [`env`](https://developers.cloudflare.com/workers/runtime-apis/fetch-event#parameters) object contains your project's [bindings](https://developers.cloudflare.com/workers/runtime-apis/bindings/), which consist of KV/DO namespaces, etc. It is passed to SvelteKit via the `platform` property, along with [`context`](https://developers.cloudflare.com/workers/runtime-apis/context/), [`caches`](https://developers.cloudflare.com/workers/runtime-apis/cache/), and [`cf`](https://developers.cloudflare.com/workers/runtime-apis/request/#incomingrequestcfproperties), meaning that you can access it in hooks and endpoints:
 
 ```js
-// @filename: ambient.d.ts
-import { DurableObjectNamespace } from '@cloudflare/workers-types';
-
-declare global {
-	namespace App {
-		interface Platform {
-			env: {
-				YOUR_DURABLE_OBJECT_NAMESPACE: DurableObjectNamespace;
-			};
-		}
-	}
-}
-// @filename: +server.js
-// ---cut---
-// @errors: 2355 2322
-/// file: +server.js
-/** @type {import('./$types').RequestHandler} */
+// @errors: 7031
 export async function POST({ request, platform }) {
-	const x = platform?.env.YOUR_DURABLE_OBJECT_NAMESPACE.idFromName('x');
+	const x = platform.env.YOUR_DURABLE_OBJECT_NAMESPACE.idFromName('x');
 }
 ```
 
@@ -162,7 +143,7 @@ To make these types available to your app, install [`@cloudflare/workers-types`]
 declare global {
 	namespace App {
 		interface Platform {
-+++			env: {
++++			env?: {
 				YOUR_KV_NAMESPACE: KVNamespace;
 				YOUR_DURABLE_OBJECT_NAMESPACE: DurableObjectNamespace;
 			};+++
@@ -213,19 +194,15 @@ Cloudflare no longer recommends using [Workers Sites](https://developers.cloudfl
 ### svelte.config.js
 
 ```js
-// @errors: 2307
 /// file: svelte.config.js
 ---import adapter from '@sveltejs/adapter-cloudflare-workers';---
 +++import adapter from '@sveltejs/adapter-cloudflare';+++
 
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
+export default {
 	kit: {
 		adapter: adapter()
 	}
 };
-
-export default config;
 ```
 
 ### wrangler.toml
