@@ -861,7 +861,10 @@ async function syntax_highlight({
 		html = replace_blank_lines(html);
 	} else {
 		const highlighted = highlighter.codeToHtml(source, {
-			lang: SHIKI_LANGUAGE_MAP[language as keyof typeof SHIKI_LANGUAGE_MAP],
+			// fallback to the passing the language as is if it doesn't exist in our map
+			// this ensures we get an error if we're using an unsupported language
+			// rather than silently not highlighting the code block as expected
+			lang: SHIKI_LANGUAGE_MAP[language as keyof typeof SHIKI_LANGUAGE_MAP] ?? language,
 			theme
 		});
 
