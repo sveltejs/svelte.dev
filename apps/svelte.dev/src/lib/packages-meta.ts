@@ -82,6 +82,7 @@ const FEATURED: { title: string; packages: string[]; weights?: Record<string, nu
 			'bits-ui',
 			'@melt-ui/svelte',
 			'@skeletonlabs/skeleton',
+			'@ark-ui/svelte',
 			'flowbite-svelte',
 			'svelte-material-ui',
 			'carbon-components-svelte',
