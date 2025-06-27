@@ -7,11 +7,7 @@ export const render_content = (
 ) => {
 	return render_content_markdown(filename, body, options, (filename, source) => {
 		// TODO these are copied from Svelte and SvelteKit - adjust for new filenames
-		const injected = [];
-
-		if (/(svelte)/.test(source) || filename.includes('typescript')) {
-			injected.push(`// @filename: ambient.d.ts`, `/// <reference types="svelte" />`);
-		}
+		const injected: string[] = [];
 
 		if (filename.includes('svelte-compiler')) {
 			injected.push('// @esModuleInterop');
@@ -22,7 +18,7 @@ export const render_content = (
 		}
 
 		// Actions JSDoc examples are invalid. Too many errors, edge cases
-		// d.ts files are not properly supported right now, fix this later
+		// TODO: d.ts files are not properly supported right now, fix this later
 		if (filename.includes('svelte-action') || source.includes(' declare const ')) {
 			injected.push('// @noErrors');
 		}
@@ -31,10 +27,11 @@ export const render_content = (
 			injected.push('// @errors: 2304');
 		}
 
+		// twoslash doesn't recognise these as SvelteKit imports, so we need to
+		// explicitly reference the types in these instances
 		if (
 			source.includes('$app/') ||
-			source.includes('$service-worker') ||
-			source.includes('@sveltejs/kit/')
+			source.includes('$service-worker')
 		) {
 			injected.push(`// @filename: ambient-kit.d.ts`, `/// <reference types="@sveltejs/kit" />`);
 		}
@@ -43,10 +40,11 @@ export const render_content = (
 			// TODO we're hardcoding static env vars that are used in code examples
 			// in the types, which isn't... totally ideal, but will do for now
 			injected.push(
-				`declare module '$env/dynamic/private' { export const env: Record<string, string> }`,
-				`declare module '$env/dynamic/public' { export const env: Record<string, string> }`,
-				`declare module '$env/static/private' { export const API_KEY: string }`,
-				`declare module '$env/static/public' { export const PUBLIC_BASE_URL: string }`
+				`declare module '$env/dynamic/private' { export const env: Record<string, string>; }`,
+				`declare module '$env/dynamic/public' { export const env: Record<string, string>; }`,
+				// TODO: detect when a snippet imports from $env/static then generate the types on the fly
+				`declare module '$env/static/private' { export const API_KEY: string; export const BYPASS_TOKEN: string; export const VERCEL_COMMIT_REF: string; }`,
+				`declare module '$env/static/public' { export const PUBLIC_BASE_URL: string; }`
 			);
 		}
 
@@ -69,10 +67,6 @@ export const render_content = (
 		// from e.g. ambient.d.ts
 		if (filename.endsWith('$env-all.md') || filename.endsWith('$app-forms.md')) {
 			injected.push('// @errors: 7006 7031');
-		}
-
-		if (filename.endsWith('10-configuration.md')) {
-			injected.push('// @errors: 2307');
 		}
 
 		// another special case
