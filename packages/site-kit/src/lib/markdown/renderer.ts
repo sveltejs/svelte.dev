@@ -54,6 +54,7 @@ const highlighter = await createHighlighterCore({
 		import('@shikijs/langs/css'),
 		import('@shikijs/langs/bash'),
 		import('@shikijs/langs/yaml'),
+		import('@shikijs/langs/toml'),
 		import('@shikijs/langs/svelte')
 	],
 	engine: createOnigurumaEngine(import('shiki/wasm'))
@@ -884,6 +885,7 @@ async function syntax_highlight({
 		.replace(/ {11}([^ ][^]+?) {11}/g, (_, content) => {
 			return highlight_spans(content, 'highlight add');
 		})
+		// TODO: make this not highlight the static adapter's github yaml deploy file
 		.replace(/ {9}([^ ][^]+?) {9}/g, (_, content) => {
 			return highlight_spans(content, 'highlight');
 		});
