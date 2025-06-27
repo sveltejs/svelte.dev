@@ -869,7 +869,7 @@ async function syntax_highlight({
 		html = replace_blank_lines(html);
 	} else {
 		const highlighted = highlighter.codeToHtml(source, {
-			lang: SHIKI_LANGUAGE_MAP[language as keyof typeof SHIKI_LANGUAGE_MAP] ?? language,
+			lang: SHIKI_LANGUAGE_MAP[language as keyof typeof SHIKI_LANGUAGE_MAP],
 			theme
 		});
 
