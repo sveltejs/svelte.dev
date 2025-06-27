@@ -54,7 +54,6 @@ const highlighter = await createHighlighterCore({
 		import('@shikijs/langs/css'),
 		import('@shikijs/langs/bash'),
 		import('@shikijs/langs/yaml'),
-		import('@shikijs/langs/toml'),
 		import('@shikijs/langs/svelte')
 	],
 	engine: createOnigurumaEngine(import('shiki/wasm'))
@@ -235,14 +234,7 @@ export async function render_content_markdown(
 
 				if ((token.lang === 'js' || token.lang === 'ts') && check) {
 					const match = /((?:[\s\S]+)\/\/ ---cut---\n)?([\s\S]+)/.exec(source)!;
-					// we need to ensure that the source content is separated from the
-					// injected content by a '// @filename: ...' otherwise it will be
-					// interpreted as the same file and prevent types from working
-					[
-						,
-						prelude = `${source.includes('// @filename:') ? '' : '// @filename: dummy.' + token.lang}\n// ---cut---\n`,
-						source
-					] = match;
+					[, prelude = '// ---cut---\n', source] = match;
 
 					const banner = twoslashBanner?.(filename, source);
 					if (banner) prelude = '// @filename: injected.d.ts\n' + banner + '\n' + prelude;
@@ -765,7 +757,7 @@ async function syntax_highlight({
 		/** We need to stash code wrapped in `---` highlights, because otherwise TS will error on e.g. bad syntax, duplicate declarations */
 		const redactions: string[] = [];
 
-		let redacted = source.replace(/( {13}(?:[^ ][^]+?) {13})/g, (_, content) => {
+		const redacted = source.replace(/( {13}(?:[^ ][^]+?) {13})/g, (_, content) => {
 			redactions.push(content);
 			return ' '.repeat(content.length);
 		});
@@ -781,9 +773,7 @@ async function syntax_highlight({
 									compilerOptions: {
 										allowJs: true,
 										checkJs: true,
-										// we always include the Svelte types because it's easier
-										// than adding a reference when we detect a rune being used
-										types: ['node', 'svelte']
+										types: ['svelte', '@sveltejs/kit']
 									}
 								},
 								// by default, twoslash does not run on .js files, change that through this option
@@ -870,7 +860,7 @@ async function syntax_highlight({
 		html = replace_blank_lines(html);
 	} else {
 		const highlighted = highlighter.codeToHtml(source, {
-			lang: SHIKI_LANGUAGE_MAP[language as keyof typeof SHIKI_LANGUAGE_MAP] ?? language,
+			lang: SHIKI_LANGUAGE_MAP[language as keyof typeof SHIKI_LANGUAGE_MAP],
 			theme
 		});
 
@@ -894,7 +884,6 @@ async function syntax_highlight({
 		.replace(/ {11}([^ ][^]+?) {11}/g, (_, content) => {
 			return highlight_spans(content, 'highlight add');
 		})
-		// TODO: make this not highlight the static adapter's github yaml deploy file
 		.replace(/ {9}([^ ][^]+?) {9}/g, (_, content) => {
 			return highlight_spans(content, 'highlight');
 		});
