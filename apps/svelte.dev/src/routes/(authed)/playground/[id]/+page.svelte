@@ -21,8 +21,7 @@
 	let modified = $state(false);
 	let setting_hash: any = null;
 
-	// svelte-ignore non_reactive_update
-	let version = page.url.searchParams.get('version') || 'latest';
+	let version = $derived(page.url.searchParams.get('version') || 'latest');
 
 	// Hashed URLs are less safe (we can't delete malicious REPLs), therefore
 	// don't allow links to escape the sandbox restrictions
@@ -74,7 +73,7 @@
 				name = recovered.name;
 			}
 
-			repl.set({ files, tailwind: recovered.tailwind ?? false });
+			repl.set({ files, tailwind: recovered.tailwind ?? false, aliases: recovered.aliases });
 		} catch {
 			alert(`Couldn't load the code from the URL. Make sure you copied the link correctly.`);
 		}

@@ -53,6 +53,8 @@ export interface BundleOptions {
 	svelte_version: string;
 	tailwind?: boolean;
 	runes?: boolean;
+	fragments?: 'html' | 'tree';
+	aliases?: Record<string, string>;
 }
 
 export type BundleMessageData = {

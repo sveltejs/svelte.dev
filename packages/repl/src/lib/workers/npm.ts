@@ -199,7 +199,7 @@ export function resolve_subpath(pkg: Package, subpath: string): string {
 	return subpath;
 }
 
-export function normalize_path(pkg: Package, path: string) {
+export function normalize_path(pkg: Package, path: string, importee: string, importer: string) {
 	for (const suffix of ['', '.js', '.mjs', '.cjs', '/index.js', '/index.mjs', '/index.cjs']) {
 		let with_suffix = path + suffix;
 
@@ -214,7 +214,9 @@ export function normalize_path(pkg: Package, path: string) {
 		}
 	}
 
-	throw new Error(`Could not find ${path} in ${pkg.meta.name}@${pkg.meta.version}`);
+	throw new Error(
+		`Could not find ${path} in ${pkg.meta.name}@${pkg.meta.version} (error occurred while trying to resolve ${importee} within ${importer})`
+	);
 }
 
 const LOCAL_PKG_URL = `${location.origin}/svelte/package.json`;

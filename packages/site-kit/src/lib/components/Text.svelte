@@ -415,6 +415,7 @@
 					top: 0.05em;
 					background: var(--sk-fg-accent);
 					mask: url(icons/lightbulb) no-repeat 0.5rem 0 / 2.6rem;
+					pointer-events: none;
 				}
 			}
 

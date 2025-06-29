@@ -56,5 +56,22 @@ export default class Bundler {
 		});
 
 		uid += 1;
+
+		return new Promise<void>((resolve) => {
+			const destroy = $effect.root(() => {
+				let first = true;
+				$effect.pre(() => {
+					this.result;
+					if (first) {
+						first = false;
+					} else {
+						destroy();
+						// This isn't necessarily the result of this bundle call, as it could be
+						// superseeded by another call to `bundle` before the result is set.
+						resolve();
+					}
+				});
+			});
+		});
 	}
 }

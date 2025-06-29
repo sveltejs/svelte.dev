@@ -15,13 +15,9 @@
 	import { page } from '$app/state';
 	import Controls from './Controls.svelte';
 	import Editor from '@sveltejs/repl/editor';
-	import type { Snapshot } from './$types.js';
+	import type { Snapshot, PageProps } from './$types.js';
 
-	interface Props {
-		data: any;
-	}
-
-	let { data }: Props = $props();
+	let { data }: PageProps = $props();
 
 	let path = data.exercise.path;
 	let show_editor = $state(false);
@@ -204,7 +200,7 @@
 			sidebar.scrollTop = 0;
 		}
 
-		workspace.reset(Object.values(a), data.exercise.focus);
+		workspace.reset(Object.values(a), { tailwind: false }, data.exercise.focus);
 
 		const will_delete = previous_files.some((file) => !(file.name in a));
 
