@@ -533,7 +533,7 @@ const is_statement = (node) => {
  * @type {import("./types").Test}
  */
 const is_props = (node, _, selected) => {
-	if (selected.type !== 'svelte') return false;
+	if (!selected.endsWith('.svelte')) return false;
 
 	return (
 		node.name === 'VariableName' &&
@@ -576,19 +576,18 @@ const is_bindable = (node, context) => {
 /**
  * @type {import("./types").Test}
  */
-const is_props_id = (node) => {
-	if (node.parent?.name !== 'VariableDeclaration') return false;
-	if (node.parent?.parent?.name !== 'VariableDeclarator') return false;
-	if (node.parent?.parent?.parent?.name !== 'Program') return false;
-	if (node.parent?.firstChild?.name !== 'Identifier') return false;
-	return true;
+const is_props_id_call = (node, context, selected) => {
+	return (
+		is_state_call(node, context, selected) && node.parent?.parent?.parent?.parent?.name === 'Script'
+	);
 };
 
 export const runes = [
 	{ snippet: '$state(${})', test: is_state },
 	{ snippet: '$state', test: is_state_call },
 	{ snippet: '$props()', test: is_props },
-	{ snippet: '$props.id()', test: is_props_id },
+	{ snippet: '$props.id', test: is_props_id_call },
+	{ snippet: '$props.id()', test: is_props },
 	{ snippet: '$derived(${});', test: is_state },
 	{ snippet: '$derived', test: is_state_call },
 	{ snippet: '$derived.by(() => {\n\t${}\n});', test: is_state },

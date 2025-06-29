@@ -274,6 +274,12 @@ A `:global` selector cannot modify an existing selector
 A `:global` selector can only be modified if it is a descendant of other selectors
 ```
 
+### css_global_block_invalid_placement
+
+```
+A `:global` selector cannot be inside a pseudoclass
+```
+
 ### css_global_invalid_placement
 
 ```
@@ -840,6 +846,38 @@ Cannot reassign or bind to snippet parameter
 This snippet is shadowing the prop `%prop%` with the same name
 ```
 
+### state_field_duplicate
+
+```
+`%name%` has already been declared on this class
+```
+
+An assignment to a class field that uses a `$state` or `$derived` rune is considered a _state field declaration_. The declaration can happen in the class body...
+
+```js
+class Counter {
+	count = $state(0);
+}
+```
+
+...or inside the constructor...
+
+```js
+class Counter {
+	constructor() {
+		this.count = $state(0);
+	}
+}
+```
+
+...but it can only happen once.
+
+### state_field_invalid_assignment
+
+```
+Cannot assign to a state field before its declaration
+```
+
 ### state_invalid_export
 
 ```
@@ -849,7 +887,7 @@ Cannot export state from a module if it is reassigned. Either export a function 
 ### state_invalid_placement
 
 ```
-`%rune%(...)` can only be used as a variable declaration initializer or a class field
+`%rune%(...)` can only be used as a variable declaration initializer, a class field declaration, or the first assignment to a class field at the top level of the constructor.
 ```
 
 ### store_invalid_scoped_subscription

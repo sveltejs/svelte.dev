@@ -39,6 +39,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           token: ${{ secrets.GH_TOKEN }}
+          ref: main # Explicitly checkout main branch first
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
@@ -46,8 +47,10 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
 
-      - name: Checkout
-        run: git fetch origin ${{ env.BRANCH }} && git checkout ${{ env.BRANCH }} || git checkout -b ${{ env.BRANCH }}
+      - name: Create or reset branch from main
+        run: |
+          git fetch origin
+          git checkout -B ${{ env.BRANCH }} # Force create/reset branch based on current main
 
       - name: Sync
         run: cd apps/svelte.dev && pnpm sync-docs --owner="${{ inputs.owner }}" -p "${{ inputs.repo }}#${{ inputs.branch }}"
@@ -59,7 +62,7 @@ jobs:
 
       - name: Push
         id: push
-        run: git add -A && git commit -m "sync docs" && git push -u origin ${{ env.BRANCH }}
+        run: git add -A && git commit -m "sync docs" && git push -u origin ${{ env.BRANCH }} --force
 
       - name: Request preview comment
         uses: peter-evans/repository-dispatch@v3

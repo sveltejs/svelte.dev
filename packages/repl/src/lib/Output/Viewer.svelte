@@ -208,7 +208,7 @@
 					}
 					//# sourceURL=playground:output
 				`,
-					bundle?.tailwind ?? srcdoc_styles
+					bundle?.css ?? srcdoc_styles
 				);
 				error = null;
 			}

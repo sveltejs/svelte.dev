@@ -1,32 +1,46 @@
 import { error } from '@sveltejs/kit';
-import { generate_llm_content, get_documentation_title, sections } from '$lib/server/llms';
+import { docs } from '$lib/server/content.js';
+import { generate_llm_content, get_documentation_title, topics } from '$lib/server/llms';
 
 export const prerender = true;
 
 export function entries() {
-	return sections.map((section) => {
-		const [topic, ...rest] = section.slug.split('/');
-		return { topic, path: rest.join('/') };
+	return topics.map((topic) => {
+		return { topic: topic.slug, path: '' };
 	});
 }
 
 export function GET({ params }) {
-	const pkg = params.path ? `${params.topic}/${params.path}` : params.topic;
+	if (params.path) {
+		const page = docs.pages[`docs/${params.topic}/${params.path}`];
 
-	const section = sections.find((s) => s.slug === pkg);
-
-	if (!section) {
-		error(404, 'Not Found');
-	}
-
-	const prefix = `<SYSTEM>${get_documentation_title(section)}</SYSTEM>`;
-	const content = `${prefix}\n\n${generate_llm_content({ sections: [section] })}`;
-
-	return new Response(content, {
-		status: 200,
-		headers: {
-			'Content-Type': 'text/plain; charset=utf-8',
-			'Cache-Control': 'public, max-age=3600'
+		if (!page) {
+			error(404, 'Not Found');
 		}
-	});
+
+		return new Response(page.body, {
+			status: 200,
+			headers: {
+				'Content-Type': 'text/plain; charset=utf-8',
+				'Cache-Control': 'public, max-age=3600'
+			}
+		});
+	} else {
+		const topic = topics.find((s) => s.slug === params.topic);
+
+		if (!topic) {
+			error(404, 'Not Found');
+		}
+
+		const prefix = `<SYSTEM>${get_documentation_title(topic)}</SYSTEM>`;
+		const content = `${prefix}\n\n${generate_llm_content({ topics: [topic] })}`;
+
+		return new Response(content, {
+			status: 200,
+			headers: {
+				'Content-Type': 'text/plain; charset=utf-8',
+				'Cache-Control': 'public, max-age=3600'
+			}
+		});
+	}
 }
