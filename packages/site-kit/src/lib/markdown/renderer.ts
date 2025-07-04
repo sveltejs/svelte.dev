@@ -234,7 +234,14 @@ export async function render_content_markdown(
 
 				if ((token.lang === 'js' || token.lang === 'ts') && check) {
 					const match = /((?:[\s\S]+)\/\/ ---cut---\n)?([\s\S]+)/.exec(source)!;
-					[, prelude = '// ---cut---\n', source] = match;
+					// we need to ensure that the source content is separated from the
+					// injected content by a '// @filename: ...' otherwise it will be
+					// interpreted as the same file and prevent types from working
+					[
+						,
+						prelude = `${source.includes('// @filename:') ? '' : '// @filename: dummy.' + token.lang}\n// ---cut---\n`,
+						source
+					] = match;
 
 					const banner = twoslashBanner?.(filename, source);
 					if (banner) prelude = '// @filename: injected.d.ts\n' + banner + '\n' + prelude;
@@ -757,7 +764,7 @@ async function syntax_highlight({
 		/** We need to stash code wrapped in `---` highlights, because otherwise TS will error on e.g. bad syntax, duplicate declarations */
 		const redactions: string[] = [];
 
-		const redacted = source.replace(/( {13}(?:[^ ][^]+?) {13})/g, (_, content) => {
+		let redacted = source.replace(/( {13}(?:[^ ][^]+?) {13})/g, (_, content) => {
 			redactions.push(content);
 			return ' '.repeat(content.length);
 		});
@@ -773,7 +780,9 @@ async function syntax_highlight({
 									compilerOptions: {
 										allowJs: true,
 										checkJs: true,
-										types: ['svelte', '@sveltejs/kit']
+										// we always include the Svelte types because it's easier
+										// than adding a reference when we detect a rune being used
+										types: ['node', 'svelte']
 									}
 								},
 								// by default, twoslash does not run on .js files, change that through this option
