@@ -34,9 +34,8 @@
 
 			const ts = !!parent.querySelector('.ts-toggle:checked');
 			const code = parent.querySelector(
-				`pre[data-language]:${ts ? 'last' : 'first'}-of-type code`
+				`pre[data-language="${ts ? 'ts' : 'js'}"] code`
 			) as HTMLElement;
-
 			navigator.clipboard.writeText(get_text(code));
 		}
 	}
