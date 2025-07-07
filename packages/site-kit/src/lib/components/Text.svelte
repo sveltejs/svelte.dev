@@ -33,9 +33,8 @@
 				.find((node) => (node as HTMLElement).classList.contains('code-block')) as HTMLElement;
 
 			const ts = !!parent.querySelector('.ts-toggle:checked');
-			const code = parent.querySelector(
-				`pre[data-language="${ts ? 'ts' : 'js'}"] code`
-			) as HTMLElement;
+			const query = ts ? `pre[data-language="ts"] code` : "pre code"
+			const code = parent.querySelector(query) as HTMLElement;
 			navigator.clipboard.writeText(get_text(code));
 		}
 	}
