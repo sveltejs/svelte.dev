@@ -457,7 +457,11 @@ async function get_bundle(
 					if (id === `${VIRTUAL}/${ESM_ENV}`) return;
 					if (id.endsWith('.svelte')) return;
 
-					add_tailwind_candidates(this.parse(code));
+					try {
+						// Don't let a parser/tailwind error crash the bundler
+						// Can happen for files that begin with a bash shebang
+						add_tailwind_candidates(this.parse(code));
+					} catch {}
 				}
 			}
 		],

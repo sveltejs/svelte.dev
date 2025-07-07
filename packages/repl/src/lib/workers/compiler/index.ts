@@ -10,7 +10,7 @@ self.window = self;
 
 declare var self: Window & typeof globalThis & { svelte: typeof import('svelte/compiler') };
 
-const cache: Record<string, any> = {};
+const cache: Record<string, Promise<any>> = {};
 
 addEventListener('message', async (event) => {
 	const { id, file, version, options } = event.data as {
@@ -20,7 +20,11 @@ addEventListener('message', async (event) => {
 		options: ExposedCompilerOptions;
 	};
 
-	const { can_use_experimental_async, svelte } = (cache[version] ??= await load_svelte(version));
+	cache[version] ??= load_svelte(version);
+	cache[version].catch(() => {
+		delete cache[version];
+	});
+	const { can_use_experimental_async, svelte } = await cache[version];
 
 	if (!file.name.endsWith('.svelte') && !svelte.compileModule) {
 		// .svelte.js file compiled with Svelte 3/4 compiler
