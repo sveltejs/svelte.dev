@@ -2,7 +2,7 @@
 title: Keyed each blocks
 ---
 
-By default, updating the value of an `each` block will add or remove DOM nodes at the _end_ of the block if the size changes, and update the remaining DOM. That might not be what you want.
+By default, updating the value of an `each` block will add or remove DOM nodes at the _end_ of the block if the size changes, and updates the remaining DOM. That might not be what you want.
 
 It's easier to show why than to explain. Inside `Thing.svelte`, `name` is a dynamic prop but `emoji` is a constant.
 
