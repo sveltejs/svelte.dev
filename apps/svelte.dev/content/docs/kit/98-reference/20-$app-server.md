@@ -7,8 +7,145 @@ title: $app/server
 
 ```js
 // @noErrors
-import { getRequestEvent, read } from '$app/server';
+import {
+	command,
+	form,
+	getRequestEvent,
+	prerender,
+	query,
+	read
+} from '$app/server';
 ```
+
+## command
+
+Creates a remote command. The given function is invoked directly on the server and via a fetch call on the client.
+
+```ts
+import { blogPosts } from '$lib/server/db';
+
+export interface BlogPost {
+	id: string;
+	title: string;
+	content: string;
+}
+
+export const like = command((postId: string) => {
+	blogPosts.get(postId).like();
+});
+```
+
+```svelte
+<script lang="ts">
+	import { like } from './blog.remote.js';
+
+	let post: BlogPost = $props();
+</script>
+
+<h1>{post.title}</h1>
+<p>{post.content}</p>
+<button onclick={() => like(post.id)}>♡</button>
+```
+
+<div class="ts-block">
+
+```dts
+function command<Output>(fn: () => Output): () => Promise<
+	Awaited<Output>
+> & {
+	updates: (
+		...queries: Array<
+			| ReturnType<RemoteQuery<any, any>>
+			| ReturnType<
+					ReturnType<RemoteQuery<any, any>>['withOverride']
+			  >
+		>
+	) => Promise<Awaited<Output>>;
+};
+```
+
+</div>
+
+<div class="ts-block">
+
+```dts
+function command<Input, Output>(
+	validate: 'unchecked',
+	fn: (arg: Input) => Output
+): (arg: Input) => Promise<Awaited<Output>> & {
+	updates: (
+		...queries: Array<
+			| ReturnType<RemoteQuery<any, any>>
+			| ReturnType<
+					ReturnType<RemoteQuery<any, any>>['withOverride']
+			  >
+		>
+	) => Promise<Awaited<Output>>;
+};
+```
+
+</div>
+
+<div class="ts-block">
+
+```dts
+function command<Schema extends StandardSchemaV1, Output>(
+	validate: Schema,
+	fn: (arg: StandardSchemaV1.InferOutput<Schema>) => Output
+): (arg: StandardSchemaV1.InferOutput<Schema>) => Promise<
+	Awaited<Output>
+> & {
+	updates: (
+		...queries: Array<
+			| ReturnType<RemoteQuery<any, any>>
+			| ReturnType<
+					ReturnType<RemoteQuery<any, any>>['withOverride']
+			  >
+		>
+	) => Promise<Awaited<Output>>;
+};
+```
+
+</div>
+
+
+
+## form
+
+Creates a form action. The passed function will be called when the form is submitted.
+Returns an object that can be spread onto a form element to connect it to the function.
+```ts
+import { createPost } from '$lib/server/db';
+
+export const createPost = form((formData) => {
+	const title = formData.get('title');
+	const content = formData.get('content');
+	return createPost({ title, content });
+});
+```
+```svelte
+<script>
+	import { createPost } from './blog.remote.js';
+</script>
+
+<form {...createPost}>
+	<input type="text" name="title" />
+	<textarea name="content" />
+	<button type="submit">Create</button>
+</form>
+```
+
+<div class="ts-block">
+
+```dts
+function form<T, U = never>(
+	fn: (formData: FormData) => T | IActionFailure<U>
+): RemoteFormAction<T, U>;
+```
+
+</div>
+
+
 
 ## getRequestEvent
 
@@ -28,6 +165,138 @@ In environments without [`AsyncLocalStorage`](https://nodejs.org/api/async_conte
 function getRequestEvent(): RequestEvent<
 	Partial<Record<string, string>>,
 	string | null
+>;
+```
+
+</div>
+
+
+
+## prerender
+
+Creates a prerendered remote function. The given function is invoked at build time and the result is stored to disk.
+```ts
+import { blogPosts } from '$lib/server/db';
+
+export const blogPosts = prerender(() => blogPosts.getAll());
+```
+
+In case your function has arguments, you need to provide an `entries` function that returns a list of arrays representing the arguments to be used for prerendering.
+```ts
+import { blogPosts } from '$lib/server/db';
+
+export const blogPost = prerender(
+	(id: string) => blogPosts.get(id),
+	{ entries: () => blogPosts.getAll().map((post) => ([post.id])) }
+);
+```
+
+<div class="ts-block">
+
+```dts
+function prerender<Output>(
+	fn: () => Output,
+	options?:
+		| {
+				entries?: RemotePrerenderEntryGenerator<void>;
+				dynamic?: boolean;
+		  }
+		| undefined
+): RemoteQuery<void, Output>;
+```
+
+</div>
+
+<div class="ts-block">
+
+```dts
+function prerender<Input, Output>(
+	validate: 'unchecked',
+	fn: (arg: Input) => Output,
+	options?:
+		| {
+				entries?: RemotePrerenderEntryGenerator<Input>;
+				dynamic?: boolean;
+		  }
+		| undefined
+): RemoteQuery<Input, Output>;
+```
+
+</div>
+
+<div class="ts-block">
+
+```dts
+function prerender<Schema extends StandardSchemaV1, Output>(
+	schema: Schema,
+	fn: (arg: StandardSchemaV1.InferOutput<Schema>) => Output,
+	options?:
+		| {
+				entries?: RemotePrerenderEntryGenerator<
+					StandardSchemaV1.InferOutput<Schema>
+				>;
+				dynamic?: boolean;
+		  }
+		| undefined
+): RemoteQuery<
+	StandardSchemaV1.InferOutput<Schema>,
+	Output
+>;
+```
+
+</div>
+
+
+
+## query
+
+Creates a remote function that can be invoked like a regular function within components.
+The given function is invoked directly on the backend and via a fetch call on the client.
+```ts
+import { blogPosts } from '$lib/server/db';
+
+export const blogPosts = query(() => blogPosts.getAll());
+```
+```svelte
+<script>
+	import { blogPosts } from './blog.remote.js';
+</script>
+
+{#await blogPosts() then posts}
+	<!-- ... -->
+{/await}
+```
+
+<div class="ts-block">
+
+```dts
+function query<Output>(
+	fn: () => Output
+): RemoteQuery<void, Output>;
+```
+
+</div>
+
+<div class="ts-block">
+
+```dts
+function query<Input, Output>(
+	validate: 'unchecked',
+	fn: (arg: Input) => Output
+): RemoteQuery<Input, Output>;
+```
+
+</div>
+
+<div class="ts-block">
+
+```dts
+function query<Schema extends StandardSchemaV1, Output>(
+	schema: Schema,
+	fn: (arg: StandardSchemaV1.InferOutput<Schema>) => Output
+): RemoteQuery<
+	StandardSchemaV1.InferOutput<Schema>,
+	Output
 >;
 ```
 
