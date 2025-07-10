@@ -42,7 +42,7 @@
 		"icons": "workspace:*",
 		"port-authority": "^2.0.1",
 		"topojson-client": "^3.1.0",
-		"vitest": "^2.1.9",
+		"vitest": "^3.2.4",
 		"ws": "^8.18.0",
 		"yootils": "^0.3.1"
 	},
@@ -52,11 +52,11 @@
 		"@supabase/supabase-js": "^2.43.4",
 		"@sveltejs/adapter-vercel": "^5.7.0",
 		"@sveltejs/enhanced-img": "^0.4.3",
-		"@sveltejs/kit": "^2.20.0",
+		"@sveltejs/kit": "^2.22.5",
 		"@sveltejs/site-kit": "workspace:*",
-		"@sveltejs/vite-plugin-svelte": "4.0.3",
+		"@sveltejs/vite-plugin-svelte": "6.0.0-next.3",
 		"@types/cookie": "^0.6.0",
-		"@types/node": "^20.14.2",
+		"@types/node": "^20.19.0",
 		"browserslist": "^4.24.2",
 		"chokidar": "^4.0.1",
 		"degit": "^2.8.4",
@@ -78,7 +78,7 @@
 		"tiny-glob": "^0.2.9",
 		"tsx": "^4.19.0",
 		"typescript": "^5.5.4",
-		"vite": "^5.4.11",
+		"vite": "^7.0.4",
 		"vite-imagetools": "^7.0.4"
 	}
 }
