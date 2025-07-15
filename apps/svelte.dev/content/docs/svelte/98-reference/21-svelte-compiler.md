@@ -1262,6 +1262,44 @@ A function that gets a `Warning` as an argument and returns a boolean.
 Use this to filter out warnings. Return `true` to keep the warning, `false` to discard it.
 
 </div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+experimental?: {/*…*/}
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag since">available since</span> v5.36
+
+</div>
+
+Experimental options
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+async?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag since">available since</span> v5.36
+
+</div>
+
+Allow `await` keyword in deriveds, template expressions, and the top level of components
+
+</div>
+</div></div>
+
+</div>
 </div></div>
 
 ## Preprocessor
