@@ -24,6 +24,7 @@ import {
 	onDestroy,
 	onMount,
 	setContext,
+	settled,
 	tick,
 	unmount,
 	untrack
@@ -490,6 +491,27 @@ Like lifecycle functions, this must be called during component initialisation.
 
 ```dts
 function setContext<T>(key: any, context: T): T;
+```
+
+</div>
+
+
+
+## settled
+
+<blockquote class="since note">
+
+Available since 5.36
+
+</blockquote>
+
+Returns a promise that resolves once any state changes, and asynchronous work resulting from them,
+have resolved and the DOM has been updated
+
+<div class="ts-block">
+
+```dts
+function settled(): Promise<void>;
 ```
 
 </div>
