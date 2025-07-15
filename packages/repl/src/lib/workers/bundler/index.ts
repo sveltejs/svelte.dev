@@ -38,6 +38,7 @@ import type { BundleResult } from '$lib/public';
 self.window = self;
 
 const ENTRYPOINT = '__entry.js';
+const WRAPPER = '__wrapper.svelte';
 const STYLES = '__styles.js';
 const ESM_ENV = '__esm-env.js';
 
@@ -512,7 +513,7 @@ async function bundle(
 			import { unmount as u } from 'svelte';
 			import { styles } from '${VIRTUAL}/${STYLES}';
 			export { mount, untrack } from 'svelte';
-			export {default as App} from './App.svelte';
+			export { default as App } from '${VIRTUAL}/${WRAPPER}';
 			export function unmount(component) {
 				u(component);
 				styles.forEach(style => style.remove());
@@ -520,7 +521,7 @@ async function bundle(
 		`
 				: `
 			import { styles } from '${VIRTUAL}/${STYLES}';
-			export {default as App} from './App.svelte';
+			export { default as App } from './App.svelte';
 			export function mount(component, options) {
 				return new component(options);
 			}
@@ -532,6 +533,30 @@ async function bundle(
 				return fn();
 			}
 		`,
+		text: true
+	});
+
+	const wrapper = can_use_experimental_async
+		? `
+		<script>
+			import App from './App.svelte';
+		</script>
+
+		<svelte:boundary>
+			<App />
+
+			{#snippet pending()}{/snippet}
+		</svelte:boundary>
+	`
+		: `
+		export { default } from './App.svelte';
+	`;
+
+	lookup.set(WRAPPER, {
+		type: 'file',
+		name: WRAPPER,
+		basename: WRAPPER,
+		contents: wrapper,
 		text: true
 	});
 
