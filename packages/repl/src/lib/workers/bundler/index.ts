@@ -549,7 +549,11 @@ async function bundle(
 		</svelte:boundary>
 	`
 		: `
-		export { default } from './App.svelte';
+		<script>
+			import App from './App.svelte';
+		</script>
+
+		<App />
 	`;
 
 	lookup.set(WRAPPER, {
