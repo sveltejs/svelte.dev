@@ -7,7 +7,7 @@ title: storybook
 
 ## Usage
 
-```bash
+```sh
 npx sv add storybook
 ```
 
