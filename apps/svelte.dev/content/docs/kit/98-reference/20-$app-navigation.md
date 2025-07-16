@@ -95,18 +95,16 @@ For external URLs, use `window.location = url` instead of calling `goto(url)`.
 ```dts
 function goto(
 	url: string | URL,
-	opts?:
-		| {
-				replaceState?: boolean | undefined;
-				noScroll?: boolean | undefined;
-				keepFocus?: boolean | undefined;
-				invalidateAll?: boolean | undefined;
-				invalidate?:
-					| (string | URL | ((url: URL) => boolean))[]
-					| undefined;
-				state?: App.PageState | undefined;
-		  }
-		| undefined
+	opts?: {
+		replaceState?: boolean | undefined;
+		noScroll?: boolean | undefined;
+		keepFocus?: boolean | undefined;
+		invalidateAll?: boolean | undefined;
+		invalidate?:
+			| (string | URL | ((url: URL) => boolean))[]
+			| undefined;
+		state?: App.PageState | undefined;
+	}
 ): Promise<void>;
 ```
 
