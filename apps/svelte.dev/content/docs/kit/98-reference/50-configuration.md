@@ -266,6 +266,30 @@ To allow people to make `POST`, `PUT`, `PATCH`, or `DELETE` requests with a `Con
 
 </div>
 </div>
+<div class="ts-block-property">
+
+```ts
+// @noErrors
+allowedOrigins?: string[];
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `[]`
+
+</div>
+
+An array of origins that are allowed to make cross-origin form submissions to your app, even when `checkOrigin` is `true`.
+
+Each origin should be a complete origin including protocol (e.g., `https://payment-gateway.com`).
+This is useful for allowing trusted third-party services like payment gateways or authentication providers to submit forms to your app.
+
+**Warning**: Only add origins you completely trust, as this bypasses CSRF protection for those origins.
+
+</div>
+</div>
 
 </div>
 
