@@ -1406,6 +1406,62 @@ export async function load({ untrack, url }) {
 ```
 
 </div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+tracing: {/*…*/}
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag since">available since</span> v2.26.0 // TODO: update this before publishing
+
+</div>
+
+Access to spans for tracing. If tracing is not enabled or the function is being run in the browser, these spans will do nothing.
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+enabled: boolean;
+```
+
+<div class="ts-block-property-details">
+
+Whether tracing is enabled.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+root: Span;
+```
+
+<div class="ts-block-property-details">
+
+The root span for the request. This span is named `sveltekit.handle.root`.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+current: Span;
+```
+
+<div class="ts-block-property-details">
+
+The span associated with the current `load` function.
+
+</div>
+</div></div>
+
+</div>
 </div></div>
 
 ## LoadProperties
@@ -2116,6 +2172,62 @@ isSubRequest: boolean;
 `true` for `+server.js` calls coming from SvelteKit without the overhead of actually making an HTTP request. This happens when you make same-origin `fetch` requests on the server.
 
 </div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+tracing: {/*…*/}
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag since">available since</span> v2.26.0 // TODO: update this before publishing
+
+</div>
+
+Access to spans for tracing. If tracing is not enabled, these spans will do nothing.
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+enabled: boolean;
+```
+
+<div class="ts-block-property-details">
+
+Whether tracing is enabled.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+root: Span;
+```
+
+<div class="ts-block-property-details">
+
+The root span for the request. This span is named `sveltekit.handle.root`.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+current: Span;
+```
+
+<div class="ts-block-property-details">
+
+The span associated with the current `handle` hook, `load` function, or form action.
+
+</div>
+</div></div>
+
+</div>
 </div></div>
 
 ## RequestHandler
@@ -2605,6 +2717,62 @@ export async function load({ untrack, url }) {
 	}
 }
 ```
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+tracing: {/*…*/}
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag since">available since</span> v2.26.0 // TODO: update this before publishing
+
+</div>
+
+Access to spans for tracing. If tracing is not enabled, these spans will do nothing.
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+enabled: boolean;
+```
+
+<div class="ts-block-property-details">
+
+Whether tracing is enabled.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+root: Span;
+```
+
+<div class="ts-block-property-details">
+
+The root span for the request. This span is named `sveltekit.handle.root`.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+current: Span;
+```
+
+<div class="ts-block-property-details">
+
+The span associated with the current server `load` function.
+
+</div>
+</div></div>
 
 </div>
 </div></div>

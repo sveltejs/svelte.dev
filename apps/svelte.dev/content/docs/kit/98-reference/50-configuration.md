@@ -359,6 +359,43 @@ A prefix that signals that an environment variable is unsafe to expose to client
 
 </div>
 
+## experimental
+
+<div class="ts-block-property-bullets">
+
+
+
+</div>
+
+Experimental features. Here be dragons. Breaking changes may occur in minor releases.
+
+<div class="ts-block-property-children">
+
+<div class="ts-block-property">
+
+```ts
+// @noErrors
+tracing?: {
+	server?: boolean;
+};
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `{ server: false }`
+- <span class="tag since">available since</span> v2.26.0 // TODO: update this before publishing
+
+</div>
+
+Whether to enable server-side [OpenTelemetry](https://opentelemetry.io/) tracing for SvelteKit operations including the [`handle` hook](/docs/kit/hooks#Server-hooks-handle), [`load` functions](/docs/kit/load), and [form actions](/docs/kit/form-actions).
+
+</div>
+</div>
+
+</div>
+
 ## files
 
 <div class="ts-block-property-bullets">
