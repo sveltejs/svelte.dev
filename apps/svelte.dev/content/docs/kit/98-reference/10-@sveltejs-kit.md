@@ -118,9 +118,10 @@ function fail(status: number): ActionFailure<undefined>;
 <div class="ts-block">
 
 ```dts
-function fail<
-	T extends Record<string, unknown> | undefined = undefined
->(status: number, data: T): ActionFailure<T>;
+function fail<T = undefined>(
+	status: number,
+	data: T
+): ActionFailure<T>;
 ```
 
 </div>
@@ -305,9 +306,7 @@ type Action<
 <div class="ts-block">
 
 ```dts
-interface ActionFailure<
-	T extends Record<string, unknown> | undefined = undefined
-> {/*…*/}
+interface ActionFailure<T = undefined> {/*…*/}
 ```
 
 <div class="ts-block-property">
@@ -1142,6 +1141,26 @@ type HandleServerError = (input: {
 
 </div>
 
+## HandleValidationError
+
+The [`handleValidationError`](/docs/kit/hooks#Server-hooks-handleValidationError) hook runs when the argument to a remote function fails validation.
+
+It will be called with the validation issues and the event, and must return an object shape that matches `App.Error`.
+
+<div class="ts-block">
+
+```dts
+type HandleValidationError<
+	Issue extends
+		StandardSchemaV1.Issue = StandardSchemaV1.Issue
+> = (input: {
+	issues: Issue[];
+	event: RequestEvent;
+}) => MaybePromise<App.Error>;
+```
+
+</div>
+
 ## HttpError
 
 The object returned by the [`error`](/docs/kit/@sveltejs-kit#error) function.
@@ -1908,6 +1927,295 @@ The location to redirect to.
 </div>
 </div></div>
 
+## RemoteCommand
+
+The return value of a remote `command` function.
+Call it with the input arguments to execute the command.
+
+Note: Prefer remote `form` functions when possible, as they
+work without JavaScript enabled.
+
+```svelte
+<script>
+	import { createTodo } from './todos.remote.js';
+
+	let text = $state('');
+</script>
+
+<input bind:value={text} />
+<button onclick={async () => {
+	await createTodo({ text });
+}}>
+	Create Todo
+</button>
+```
+Use the `updates` method to specify which queries to update in response to the command.
+```svelte
+<script>
+	import { getTodos, createTodo } from './todos.remote.js';
+
+	let text = $state('');
+</script>
+
+<input bind:value={text} />
+<button onclick={async () => {
+	await createTodo({ text }).updates(
+		getTodos.withOverride((todos) => [...todos, { text, done: false }])
+	);
+}}>
+	Create Todo
+</button>
+
+<ul>
+	{#each await getTodos() as todo}
+		<li>{todo.text}</li>
+	{/each}
+</ul>
+```
+
+<div class="ts-block">
+
+```dts
+type RemoteCommand<Input, Output> = (arg: Input) => Promise<
+	Awaited<Output>
+> & {
+	updates: (
+		...queries: Array<
+			| RemoteQuery<any>
+			| ReturnType<RemoteQuery<any>['withOverride']>
+		>
+	) => Promise<Awaited<Output>>;
+};
+```
+
+</div>
+
+## RemoteForm
+
+The return value of a remote `form` function.
+Spread it onto a `<form>` element to connect the element to the remote function.
+
+```svelte
+<script>
+	import { createTodo } from './todos.remote.js';
+</script>
+
+<form {...createTodo}>
+	<input name="text" />
+	<!-- ... -->
+</form>
+```
+Use the `enhance` method to influence what happens when the form is submitted.
+```svelte
+<script>
+	import { getTodos, createTodo } from './todos.remote.js';
+</script>
+
+<form {...myFormAction.enhance(async ({ data, submit }) => {
+	// `data` is an instance of FormData (https://developer.mozilla.org/en-US/docs/Web/API/FormData)
+	const text = data.get('text');
+	const todo = { text, done: false };
+
+	// `updates` and `withOverride` enable optimistic UI updates
+	await submit().updates(
+		getTodos().withOverride((todos) => [...todos, todo])
+	);
+})}>
+	<input name="text" />
+	<!-- ... -->
+</form>
+
+<ul>
+	{#each await getTodos() as todo}
+		<li>{todo.text}</li>
+	{/each}
+</ul>
+```
+
+<div class="ts-block">
+
+```dts
+type RemoteForm<Result> = {
+	method: 'POST';
+	/** The URL to send the form to. */
+	action: string;
+	/** Event handler that intercepts the form submission on the client to prevent a full page reload */
+	onsubmit: (event: SubmitEvent) => void;
+	/** Use the `enhance` method to influence what happens when the form is submitted. */
+	enhance: (
+		callback: (opts: {
+			form: HTMLFormElement;
+			data: FormData;
+			submit: () => Promise<void> & {
+				updates: (
+					...queries: Array<
+						| RemoteQuery<any>
+						| ReturnType<RemoteQuery<any>['withOverride']>
+					>
+				) => Promise<void>;
+			};
+		}) => void
+	) => {
+		method: 'POST';
+		action: string;
+		onsubmit: (event: SubmitEvent) => void;
+	};
+	/**
+	 * Create an instance of the form for the given key.
+	 * The key is stringified and used for deduplication to potentially reuse existing instances.
+	 * Useful when you have multiple forms that use the same remote form action, for example in a loop.
+	 * ```svelte
+	 * {#each todos as todo}
+	 *	{@const todoForm = updateTodo.for(todo.id)}
+	 *	<form {...todoForm}>
+	 *		{#if todoForm.result?.invalid}<p>Invalid data</p>{/if}
+	 *		...
+	 *	</form>
+	 *	{/each}
+	 * ```
+	 */
+	for: (
+		key: string | number | boolean
+	) => Omit<RemoteForm<Result>, 'for'>;
+	/** The result of the form submission */
+	get result(): Result | undefined;
+	/** When there's an error during form submission, it appears on this property */
+	get error(): App.Error | undefined;
+	/** Spread this onto a `<button>` or `<input type="submit">` */
+	formAction: {
+		type: 'submit';
+		formaction: string;
+		onclick: (event: Event) => void;
+		/** Use the `enhance` method to influence what happens when the form is submitted. */
+		enhance: (
+			callback: (opts: {
+				form: HTMLFormElement;
+				data: FormData;
+				submit: () => Promise<void> & {
+					updates: (
+						...queries: Array<
+							| RemoteQuery<any>
+							| ReturnType<RemoteQuery<any>['withOverride']>
+						>
+					) => Promise<void>;
+				};
+			}) => void
+		) => {
+			type: 'submit';
+			formaction: string;
+			onclick: (event: Event) => void;
+		};
+	};
+};
+```
+
+</div>
+
+## RemotePrerenderFunction
+
+The return value of a remote `prerender` function.
+Call it with the input arguments to retrieve the value.
+On the server, this will directly call the underlying function.
+On the client, this will `fetch` data from the server.
+
+<div class="ts-block">
+
+```dts
+type RemotePrerenderFunction<Input, Output> = (
+	arg: Input
+) => RemoteResource<Output>;
+```
+
+</div>
+
+## RemoteQuery
+
+<div class="ts-block">
+
+```dts
+type RemoteQuery<T> = RemoteResource<T> & {
+	/**
+	 * On the client, this function will re-fetch the query from the server.
+	 *
+	 * On the server, this can be called in the context of a `command` or `form` remote function. It will then
+	 * transport the updated data to the client along with the response, if the action was successful.
+	 */
+	refresh: () => Promise<void>;
+	/**
+	 * Temporarily override the value of a query. Useful for optimistic UI updates.
+	 * `withOverride` expects a function that takes the current value and returns the new value.
+	 * In other words this works like `override`, but is specifically for use as part of the `updates` method of a remote `command` or `form` submit
+	 * in order to coordinate query refreshes and override releases at once, without causing e.g. flickering in the UI.
+	 *
+	 * ```svelte
+	 * <script>
+	 *   import { getTodos, addTodo } from './todos.remote.js';
+	 *   const todos = getTodos();
+	 * </script>
+	 *
+	 * <form {...addTodo.enhance(async ({ data, submit }) => {
+	 *   await submit().updates(todos.withOverride((todos) => [...todos, { text: data.get('text') }]));
+	 * }}>
+	 *   <input type="text" name="text" />
+	 *   <button type="submit">Add Todo</button>
+	 * </form>
+	 * ```
+	 */
+	withOverride: (
+		update: (current: Awaited<T>) => Awaited<T>
+	) => {
+		_key: string;
+		release: () => void;
+	};
+};
+```
+
+</div>
+
+## RemoteQueryFunction
+
+The return value of a remote `query` function.
+Call it with the input arguments to retrieve the value.
+On the server, this will directly call the underlying function.
+On the client, this will `fetch` data from the server.
+When the query is called in a reactive context on the client, it will update its dependencies with a new value whenever `refresh()` or `override()` are called.
+
+<div class="ts-block">
+
+```dts
+type RemoteQueryFunction<Input, Output> = (
+	arg: Input
+) => RemoteQuery<Output>;
+```
+
+</div>
+
+## RemoteResource
+
+<div class="ts-block">
+
+```dts
+type RemoteResource<T> = Promise<Awaited<T>> & {
+	/** The error in case the query fails. Most often this is a [`HttpError`](https://svelte.dev/docs/kit/@sveltejs-kit#HttpError) but it isn't guaranteed to be. */
+	get error(): any;
+	/** `true` before the first result is available and during refreshes */
+	get loading(): boolean;
+} & (
+		| {
+				/** The current value of the query. Undefined as long as there's no value yet */
+				get current(): undefined;
+				ready: false;
+		  }
+		| {
+				/** The current value of the query. Undefined as long as there's no value yet */
+				get current(): Awaited<T>;
+				ready: true;
+		  }
+	);
+```
+
+</div>
+
 ## RequestEvent
 
 <div class="ts-block">
@@ -2114,6 +2422,20 @@ isSubRequest: boolean;
 <div class="ts-block-property-details">
 
 `true` for `+server.js` calls coming from SvelteKit without the overhead of actually making an HTTP request. This happens when you make same-origin `fetch` requests on the server.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+isRemoteRequest: boolean;
+```
+
+<div class="ts-block-property-details">
+
+`true` if the request comes from the client via a remote function. The `url` property will be stripped of the internal information
+related to the data request in this case. Use this property instead if the distinction is important to you.
 
 </div>
 </div></div>
@@ -2386,6 +2708,18 @@ nodes: SSRNodeLoader[];
 ```
 
 <div class="ts-block-property-details"></div>
+</div>
+<div class="ts-block-property">
+
+```dts
+remotes: Record<string, () => Promise<any>>;
+```
+
+<div class="ts-block-property-details">
+
+hashed filename -> import to that file
+
+</div>
 </div>
 <div class="ts-block-property">
 
