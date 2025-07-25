@@ -4,13 +4,19 @@ import json5 from 'json5';
 export const SHIKI_LANGUAGE_MAP = {
 	bash: 'bash',
 	env: 'bash',
+	yaml: 'yaml',
+	toml: 'toml',
 	html: 'svelte',
 	svelte: 'svelte',
 	sv: 'svelte',
-	js: 'javascript',
-	dts: 'typescript',
 	css: 'css',
+	js: 'javascript',
+	json: 'javascript',
+	jsonc: 'javascript',
+	dts: 'typescript',
 	ts: 'typescript',
+	// TODO: find a highlighter for tree syntax
+	tree: '',
 	'': ''
 };
 
