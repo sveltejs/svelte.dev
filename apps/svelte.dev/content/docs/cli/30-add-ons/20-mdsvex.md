@@ -7,7 +7,7 @@ title: mdsvex
 
 ## Usage
 
-```bash
+```sh
 npx sv add mdsvex
 ```
 
