@@ -925,7 +925,11 @@ interface Cookies {/*…*/}
 <div class="ts-block-property">
 
 ```dts
-get: (name: string, opts?: import('cookie').CookieParseOptions) => string | undefined;
+get: (
+	name: string,
+	opts?: import('cookie').CookieParseOptions,
+	target?: { domain?: string; path?: string }
+) => string | undefined;
 ```
 
 <div class="ts-block-property-details">
@@ -934,6 +938,7 @@ get: (name: string, opts?: import('cookie').CookieParseOptions) => string | unde
 
 - `name` the name of the cookie
 - `opts` the options, passed directly to `cookie.parse`. See documentation [here](https://github.com/jshttp/cookie#cookieparsestr-options)
+- `target` the target, used to determine the domain and path of the cookie.
 
 </div>
 
