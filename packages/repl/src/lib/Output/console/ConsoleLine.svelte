@@ -9,7 +9,7 @@
 		depth?: number;
 	}
 
-	let { log = $bindable(), depth = 0 }: Props = $props();
+	let { log, depth = 0 }: Props = $props();
 
 	function toggle_group_collapse() {
 		log.collapsed = !log.collapsed;
