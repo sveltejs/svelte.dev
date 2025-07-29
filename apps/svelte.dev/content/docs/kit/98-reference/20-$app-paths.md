@@ -116,9 +116,9 @@ const resolved = resolve('/blog/[slug]', {
 <div class="ts-block">
 
 ```dts
-function resolve<T extends RouteId | Pathname>(
-	...args: ResolveArgs<T>
-): ResolvedPathname;
+function resolve<
+	T extends RouteId | Pathname | keyof DynamicRoutes
+>(...args: ResolveArgs<T>): ResolvedPathname;
 ```
 
 </div>
