@@ -208,6 +208,8 @@ namespace AST {
 		instance: Script | null;
 		/** The parsed `<script module>` element, if exists */
 		module: Script | null;
+		/** Comments found in <script> and {expressions} */
+		comments: JSComment[];
 	}
 
 	export interface SvelteOptions {
@@ -554,6 +556,17 @@ namespace AST {
 		attributes: Attribute[];
 	}
 
+	export interface JSComment {
+		type: 'Line' | 'Block';
+		value: string;
+		start: number;
+		end: number;
+		loc: {
+			start: { line: number; column: number };
+			end: { line: number; column: number };
+		};
+	}
+
 	export type AttributeLike =
 		| Attribute
 		| SpreadAttribute
@@ -617,7 +630,8 @@ namespace AST {
 		| Node
 		| TemplateNode
 		| AST.Fragment
-		| _CSS.Node;
+		| _CSS.Node
+		| Script;
 
 	export type { _CSS as CSS };
 }
@@ -1246,6 +1260,44 @@ warningFilter?: (warning: Warning) => boolean;
 
 A function that gets a `Warning` as an argument and returns a boolean.
 Use this to filter out warnings. Return `true` to keep the warning, `false` to discard it.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+experimental?: {/*…*/}
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag since">available since</span> v5.36
+
+</div>
+
+Experimental options
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+async?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag since">available since</span> v5.36
+
+</div>
+
+Allow `await` keyword in deriveds, template expressions, and the top level of components
+
+</div>
+</div></div>
 
 </div>
 </div></div>

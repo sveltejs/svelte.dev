@@ -250,7 +250,7 @@ You can create so-called declaration maps (`d.ts.map` files) by setting `"declar
 
 To publish the generated package:
 
-```sh
+```bash
 npm publish
 ```
 
