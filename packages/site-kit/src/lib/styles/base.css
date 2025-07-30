@@ -157,12 +157,10 @@ button {
 	background-color: transparent;
 	border: none;
 	color: currentColor;
-	cursor: pointer;
 }
 
 button[disabled] {
 	color: var(--sk-fg-4);
-	cursor: not-allowed;
 }
 
 /*  links ------------------------------------- */
