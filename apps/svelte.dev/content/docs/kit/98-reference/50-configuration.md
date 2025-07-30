@@ -29,49 +29,13 @@ export default config;
 
 ## Config
 
+An extension of [`vite-plugin-svelte`'s options](https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/config.md#svelte-options).
+
 <div class="ts-block">
 
 ```dts
-interface Config {/*…*/}
+interface Config extends SvelteConfig {/*…*/}
 ```
-
-<div class="ts-block-property">
-
-```dts
-compilerOptions?: CompileOptions;
-```
-
-<div class="ts-block-property-details">
-
-<div class="ts-block-property-bullets">
-
-- <span class="tag">default</span> `{}`
-
-</div>
-
-Options passed to [`svelte.compile`](/docs/svelte/svelte-compiler#CompileOptions).
-
-</div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-extensions?: string[];
-```
-
-<div class="ts-block-property-details">
-
-<div class="ts-block-property-bullets">
-
-- <span class="tag">default</span> `[".svelte"]`
-
-</div>
-
-List of file extensions that should be treated as Svelte files.
-
-</div>
-</div>
 
 <div class="ts-block-property">
 
@@ -81,33 +45,7 @@ kit?: KitConfig;
 
 <div class="ts-block-property-details">
 
-SvelteKit options
-
-</div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-preprocess?: any;
-```
-
-<div class="ts-block-property-details">
-
-Preprocessor options, if any. Preprocessing can alternatively also be done through Vite's preprocessor capabilities.
-
-</div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-vitePlugin?: PluginOptions;
-```
-
-<div class="ts-block-property-details">
-
-`vite-plugin-svelte` plugin options.
+SvelteKit options.
 
 </div>
 </div>

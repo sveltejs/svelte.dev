@@ -46,17 +46,17 @@
 		"shiki": "^3.2.1"
 	},
 	"devDependencies": {
-		"@sveltejs/kit": "^2.20.0",
-		"@types/node": "^20.12.11",
+		"@sveltejs/kit": "^2.22.5",
+		"@types/node": "^20.19.0",
 		"flexsearch": "^0.7.43",
 		"magic-string": "^0.30.11",
 		"marked": "^14.1.2",
 		"prettier": "^3.3.2",
 		"prettier-plugin-svelte": "^3.3.2",
-		"svelte": "5.33.0",
+		"svelte": "^5.35.5",
 		"svelte-check": "^4.1.1",
 		"typescript": "^5.5.4",
-		"vite": "^5.4.3"
+		"vite": "^7.0.4"
 	},
 	"publishConfig": {
 		"access": "public"
