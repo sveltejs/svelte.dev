@@ -52,7 +52,7 @@
 		"@supabase/supabase-js": "^2.43.4",
 		"@sveltejs/adapter-vercel": "^5.7.2",
 		"@sveltejs/enhanced-img": "^0.4.3",
-		"@sveltejs/kit": "^2.22.5",
+		"@sveltejs/kit": "https://pkg.pr.new/sveltejs/kit/@sveltejs/kit@e19e9be",
 		"@sveltejs/site-kit": "workspace:*",
 		"@sveltejs/vite-plugin-svelte": "^6.0.0",
 		"@types/cookie": "^0.6.0",
