@@ -7,7 +7,7 @@ title: paraglide
 
 ## Usage
 
-```bash
+```sh
 npx sv add paraglide
 ```
 
@@ -26,7 +26,7 @@ npx sv add paraglide
 
 The languages you'd like to support specified as IETF BCP 47 language tags.
 
-```bash
+```sh
 npx sv add paraglide="languageTags:en,es"
 ```
 
@@ -34,6 +34,6 @@ npx sv add paraglide="languageTags:en,es"
 
 Whether to generate an optional demo page showing how to use paraglide.
 
-```bash
+```sh
 npx sv add paraglide="demo:yes"
 ```
