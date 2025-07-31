@@ -73,7 +73,7 @@
 				name = recovered.name;
 			}
 
-			repl.set({ files, tailwind: recovered.tailwind ?? false });
+			repl.set({ files, tailwind: recovered.tailwind ?? false, aliases: recovered.aliases });
 		} catch {
 			alert(`Couldn't load the code from the URL. Make sure you copied the link correctly.`);
 		}
