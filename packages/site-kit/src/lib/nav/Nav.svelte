@@ -321,7 +321,8 @@ Top navigation bar for the application. It provides a slot for the left side, th
 			top: unset;
 			bottom: 0;
 
-			&.visible, &:focus-within {
+			&.visible,
+			&:focus-within {
 				padding-bottom: env(safe-area-inset-bottom);
 				height: calc(var(--sk-nav-height) + env(safe-area-inset-bottom));
 			}
