@@ -15,6 +15,7 @@ import {
 	createEventDispatcher,
 	createRawSnippet,
 	flushSync,
+	getAbortSignal,
 	getAllContexts,
 	getContext,
 	hasContext,
@@ -23,6 +24,7 @@ import {
 	onDestroy,
 	onMount,
 	setContext,
+	settled,
 	tick,
 	unmount,
 	untrack
@@ -239,7 +241,7 @@ property and can contain any type of data.
 The event dispatcher can be typed to narrow the allowed event names and the type of the `detail` argument:
 ```ts
 const dispatch = createEventDispatcher<{
- loaded: never; // does not take a detail argument
+ loaded: null; // does not take a detail argument
  change: string; // takes a detail argument of type string, which is required
  optional: number | null; // takes an optional detail argument of type number
 }>();
@@ -278,12 +280,47 @@ function createRawSnippet<Params extends unknown[]>(
 
 ## flushSync
 
-Synchronously flushes any pending state changes and those that result from it.
+Synchronously flush any pending updates.
+Returns void if no callback is provided, otherwise returns the result of calling the callback.
 
 <div class="ts-block">
 
 ```dts
-function flushSync(fn?: (() => void) | undefined): void;
+function flushSync<T = void>(fn?: (() => T) | undefined): T;
+```
+
+</div>
+
+
+
+## getAbortSignal
+
+Returns an [`AbortSignal`](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal) that aborts when the current [derived](/docs/svelte/$derived) or [effect](/docs/svelte/$effect) re-runs or is destroyed.
+
+Must be called while a derived or effect is running.
+
+```svelte
+<script>
+	import { getAbortSignal } from 'svelte';
+
+	let { id } = $props();
+
+	async function getData(id) {
+		const response = await fetch(`/items/${id}`, {
+			signal: getAbortSignal()
+		});
+
+		return await response.json();
+	}
+
+	const data = $derived(await getData(id));
+</script>
+```
+
+<div class="ts-block">
+
+```dts
+function getAbortSignal(): AbortSignal;
 ```
 
 </div>
@@ -418,13 +455,14 @@ function onDestroy(fn: () => any): void;
 
 ## onMount
 
-The `onMount` function schedules a callback to run as soon as the component has been mounted to the DOM.
-It must be called during the component's initialisation (but doesn't need to live *inside* the component;
-it can be called from an external module).
+`onMount`, like [`$effect`](/docs/svelte/$effect), schedules a function to run as soon as the component has been mounted to the DOM.
+Unlike `$effect`, the provided function only runs once.
 
-If a function is returned _synchronously_ from `onMount`, it will be called when the component is unmounted.
+It must be called during the component's initialisation (but doesn't need to live _inside_ the component;
+it can be called from an external module). If a function is returned _synchronously_ from `onMount`,
+it will be called when the component is unmounted.
 
-`onMount` does not run inside [server-side components](/docs/svelte/svelte-server#render).
+`onMount` functions do not run during [server-side rendering](/docs/svelte/svelte-server#render).
 
 <div class="ts-block">
 
@@ -453,6 +491,27 @@ Like lifecycle functions, this must be called during component initialisation.
 
 ```dts
 function setContext<T>(key: any, context: T): T;
+```
+
+</div>
+
+
+
+## settled
+
+<blockquote class="since note">
+
+Available since 5.36
+
+</blockquote>
+
+Returns a promise that resolves once any state changes, and asynchronous work resulting from them,
+have resolved and the DOM has been updated
+
+<div class="ts-block">
+
+```dts
+function settled(): Promise<void>;
 ```
 
 </div>
@@ -708,6 +767,15 @@ sync?: boolean;
 <div class="ts-block-property">
 
 ```dts
+idPrefix?: string;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
 $$inline?: boolean;
 ```
 
@@ -900,7 +968,7 @@ let { banner }: { banner: Snippet<[{ text: string }]> } = $props();
 ```
 You can only call a snippet through the `{@render ...}` tag.
 
-/docs/svelte/snippet
+See the [snippet documentation](/docs/svelte/snippet) for more info.
 
 <div class="ts-block">
 

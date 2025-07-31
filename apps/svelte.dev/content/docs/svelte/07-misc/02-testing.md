@@ -7,11 +7,11 @@ Testing helps you write and maintain your code and guard against regressions. Te
 
 ## Unit and integration testing using Vitest
 
-Unit tests allow you to test small isolated parts of your code. Integration tests allow you to test parts of your application to see if they work together. If you're using Vite (including via SvelteKit), we recommend using [Vitest](https://vitest.dev/).
+Unit tests allow you to test small isolated parts of your code. Integration tests allow you to test parts of your application to see if they work together. If you're using Vite (including via SvelteKit), we recommend using [Vitest](https://vitest.dev/). You can use the Svelte CLI to [setup Vitest](/docs/cli/vitest) either during project creation or later on.
 
-To get started, install Vitest:
+To setup Vitest manually, first install it:
 
-```bash
+```sh
 npm install -D vitest
 ```
 
@@ -41,7 +41,7 @@ You can now write unit tests for code inside your `.js/.ts` files:
 /// file: multiplier.svelte.test.js
 import { flushSync } from 'svelte';
 import { expect, test } from 'vitest';
-import { multiplier } from './multiplier.js';
+import { multiplier } from './multiplier.svelte.js';
 
 test('Multiplier', () => {
 	let double = multiplier(0, 2);
@@ -54,9 +54,30 @@ test('Multiplier', () => {
 });
 ```
 
+```js
+/// file: multiplier.svelte.js
+/**
+ * @param {number} initial
+ * @param {number} k
+ */
+export function multiplier(initial, k) {
+	let count = $state(initial);
+
+	return {
+		get value() {
+			return count * k;
+		},
+		/** @param {number} c */
+		set: (c) => {
+			count = c;
+		}
+	};
+}
+```
+
 ### Using runes inside your test files
 
-It is possible to use runes inside your test files. First ensure your bundler knows to route the file through the Svelte compiler before running the test by adding `.svelte` to the filename (e.g `multiplier.svelte.test.js`). After that, you can use runes inside your tests.
+Since Vitest processes your test files the same way as your source files, you can use runes inside your tests as long as the filename includes `.svelte`:
 
 ```js
 /// file: multiplier.svelte.test.js
@@ -74,6 +95,21 @@ test('Multiplier', () => {
 
 	expect(double.value).toEqual(10);
 });
+```
+
+```js
+/// file: multiplier.svelte.js
+/**
+ * @param {() => number} getCount
+ * @param {number} k
+ */
+export function multiplier(getCount, k) {
+	return {
+		get value() {
+			return getCount() * k;
+		}
+	};
+}
 ```
 
 If the code being tested uses effects, you need to wrap the test inside `$effect.root`:
@@ -94,16 +130,33 @@ test('Effect', () => {
 		// effects normally run after a microtask,
 		// use flushSync to execute all pending effects synchronously
 		flushSync();
-		expect(log.value).toEqual([0]);
+		expect(log).toEqual([0]);
 
 		count = 1;
 		flushSync();
 
-		expect(log.value).toEqual([0, 1]);
+		expect(log).toEqual([0, 1]);
 	});
 
 	cleanup();
 });
+```
+
+```js
+/// file: logger.svelte.js
+/**
+ * @param {() => any} getValue
+ */
+export function logger(getValue) {
+	/** @type {any[]} */
+	let log = [];
+
+	$effect(() => {
+		log.push(getValue());
+	});
+
+	return log;
+}
 ```
 
 ### Component testing
@@ -114,7 +167,7 @@ It is possible to test your components in isolation using Vitest.
 
 To get started, install jsdom (a library that shims DOM APIs):
 
-```bash
+```sh
 npm install -D jsdom
 ```
 
@@ -198,9 +251,9 @@ When writing component tests that involve two-way bindings, context or snippet p
 
 E2E (short for 'end to end') tests allow you to test your full application through the eyes of the user. This section uses [Playwright](https://playwright.dev/) as an example, but you can also use other solutions like [Cypress](https://www.cypress.io/) or [NightwatchJS](https://nightwatchjs.org/).
 
-To get started with Playwright, either install it via [the VS Code extension](https://playwright.dev/docs/getting-started-vscode), or install it from the command line using `npm init playwright`. It is also part of the setup CLI when you run `npx sv create`.
+You can use the Svelte CLI to [setup Playwright](/docs/cli/playwright) either during project creation or later on. You can also [set it up with `npm init playwright`](https://playwright.dev/docs/intro). Additionally, you may also want to install an IDE plugin such as [the VS Code extension](https://playwright.dev/docs/getting-started-vscode) to be able to execute tests from inside your IDE.
 
-After you've done that, you should have a `tests` folder and a Playwright config. You may need to adjust that config to tell Playwright what to do before running the tests - mainly starting your application at a certain port:
+If you've run `npm init playwright` or are not using Vite, you may need to adjust the Playwright config to tell Playwright what to do before running the tests - mainly starting your application at a certain port. For example:
 
 ```js
 /// file: playwright.config.js

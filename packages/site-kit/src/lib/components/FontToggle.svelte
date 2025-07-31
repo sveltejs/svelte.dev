@@ -18,30 +18,21 @@
 
 <button
 	onclick={toggle}
-	class="raised icon"
+	class="raised"
 	type="button"
 	aria-pressed={font === 'boring'}
 	aria-label="Toggle font"
-></button>
+>
+	<span class="icon"></span>
+</button>
 
 <style>
-	button {
-		background-size: 2rem;
+	.icon {
+		mask-size: 2rem;
+		mask-image: url(icons/font-elegant);
 	}
 
-	button[aria-pressed='true'] {
-		background-image: url(../icons/font-elegant-light.svg);
-
-		:global(.dark) & {
-			background-image: url(../icons/font-elegant-dark.svg);
-		}
-	}
-
-	button[aria-pressed='false'] {
-		background-image: url(../icons/font-boring-light.svg);
-
-		:global(.dark) & {
-			background-image: url(../icons/font-boring-dark.svg);
-		}
+	button[aria-pressed='false'] .icon {
+		mask-image: url(icons/font-boring);
 	}
 </style>

@@ -2,7 +2,7 @@
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
 	import { SplitPane } from '@rich_harris/svelte-split-pane';
 	import * as adapter from './adapter.svelte';
-	import { Editor, Workspace } from 'editor';
+	import { Workspace, type Item } from '@sveltejs/repl/workspace';
 	import ContextMenu from './filetree/ContextMenu.svelte';
 	import Filetree from './filetree/Filetree.svelte';
 	import ImageViewer from './ImageViewer.svelte';
@@ -14,14 +14,10 @@
 	import OutputRollup from './OutputRollup.svelte';
 	import { page } from '$app/state';
 	import Controls from './Controls.svelte';
-	import type { Item } from 'editor';
-	import type { Snapshot } from './$types.js';
+	import Editor from '@sveltejs/repl/editor';
+	import type { Snapshot, PageProps } from './$types.js';
 
-	interface Props {
-		data: any;
-	}
-
-	let { data }: Props = $props();
+	let { data }: PageProps = $props();
 
 	let path = data.exercise.path;
 	let show_editor = $state(false);
@@ -170,6 +166,7 @@
 	let a = $derived(create_files(data.exercise.a));
 	let b = $derived(create_files({ ...data.exercise.a, ...data.exercise.b }));
 
+	// svelte-ignore state_referenced_locally
 	const workspace = new Workspace(Object.values(a), {
 		initial: data.exercise.focus,
 		onupdate(file) {
@@ -180,6 +177,7 @@
 		}
 	});
 
+	// svelte-ignore state_referenced_locally
 	solution.set(b);
 
 	// for the things we can't do with media queries
@@ -202,7 +200,7 @@
 			sidebar.scrollTop = 0;
 		}
 
-		workspace.reset(Object.values(a), data.exercise.focus);
+		workspace.reset(Object.values(a), { tailwind: false }, data.exercise.focus);
 
 		const will_delete = previous_files.some((file) => !(file.name in a));
 
@@ -258,6 +256,7 @@
 		toggle={() => {
 			workspace.set(Object.values(completed ? a : b));
 		}}
+		{workspace}
 	/>
 
 	<div class="top" class:offset={show_editor}>

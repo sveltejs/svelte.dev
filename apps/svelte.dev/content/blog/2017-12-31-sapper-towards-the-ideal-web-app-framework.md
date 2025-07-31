@@ -2,7 +2,7 @@
 title: 'Sapper: Towards the ideal web app framework'
 description: Taking the next-plus-one step
 author: Rich Harris
-authorURL: https://twitter.com/Rich_Harris
+authorURL: https://bsky.app/profile/rich-harris.dev
 ---
 
 > Quickstart for the impatient: [the Sapper docs](https://sapper.svelte.dev), and the [starter template](https://github.com/sveltejs/sapper-template)

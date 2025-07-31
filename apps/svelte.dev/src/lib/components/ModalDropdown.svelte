@@ -45,9 +45,7 @@
 		}
 
 		// except parents of the current one
-		const current = details.querySelector(
-			`[href="${page.url.pathname}"]`
-		) as HTMLAnchorElement | null;
+		const current = details.querySelector(`[aria-current="page"]`) as HTMLAnchorElement | null;
 		if (!current) return;
 
 		let node = current as Element;
@@ -94,10 +92,6 @@
 		&:has(:focus-visible) .raised.icon {
 			outline: 2px solid var(--sk-fg-accent);
 			border-radius: var(--sk-border-radius);
-		}
-
-		span {
-			pointer-events: none;
 		}
 	}
 

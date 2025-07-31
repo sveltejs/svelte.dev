@@ -15,13 +15,13 @@ Requires Node 16 or later.
 
 You will need to have the `svelte-check` package installed in your project:
 
-```bash
+```sh
 npm i -D svelte-check
 ```
 
 ## Usage
 
-```bash
+```sh
 npx sv check
 ```
 
@@ -60,7 +60,7 @@ Use this if you only want to check the Svelte files found in the current directo
 
 Files/folders to ignore, relative to workspace root. Paths should be comma-separated and quoted. Example:
 
-```bash
+```sh
 npx sv check --ignore "dist,build"
 ```
 
@@ -76,7 +76,7 @@ If provided, warnings will cause `sv check` to exit with an error code.
 
 A quoted, comma-separated list of `code:behaviour` pairs where `code` is a [compiler warning code](../svelte/compiler-warnings) and `behaviour` is either `ignore` or `error`:
 
-```bash
+```sh
 npx sv check --compiler-warnings "css_unused_selector:ignore,a11y_missing_attribute:error"
 ```
 
@@ -91,7 +91,7 @@ A quoted, comma-separated list of sources that should run diagnostics on your co
 
 Example:
 
-```bash
+```sh
 npx sv check --diagnostic-sources "js,svelte"
 ```
 
@@ -122,7 +122,7 @@ The first row is of type `START` and contains the workspace folder (wrapped in q
 1590680325583 START "/home/user/language-tools/packages/language-server/test/plugins/typescript/testfiles"
 ```
 
-Any number of `ERROR` or `WARNING` records may follow. Their structure is identical and depends on the output argoument.
+Any number of `ERROR` or `WARNING` records may follow. Their structure is identical and depends on the output argument.
 
 If the argument is `machine` it will tell us the filename, the starting line and column numbers, and the error message. The filename is relative to the workspace directory. The filename and the message are both wrapped in quotes. Example:
 

@@ -81,7 +81,7 @@ When Svelte emits a warning or error (whether at build time, when the compiler i
 
 A lot of you wanted a place to put asynchronous setup work that happens before your SvelteKit app starts up. You can now export an `init` function from `hooks.server.js` and `hooks.client.js` that will be awaited before any other stuff happens.
 
-- [docs](https://svelte.dev/docs/kit/hooks#Shared-hooks-init)
+- [docs](/docs/kit/hooks#Shared-hooks-init)
 
 ## Day 11: `svelte/reactivity/window`
 
@@ -103,7 +103,7 @@ As of today, you can also return things that _aren't_ built in to the language, 
 
 For those of you using LLMs to help you write code — via Cursor or Copilot or Claude or Bolt or v0 or some other interface — we now publish the documentation in a selection of robot-friendly `llms.txt` files. This is experimental and will evolve over time, but by way of example here's a [snake game](/playground/0de3c1c1a31d47bdbb7c4aa3477a6b46) built by Sonnet 3.5 with no additional prompting.
 
-Thanks to [Didier Catz](https://x.com/didiercatz) and [Stanislav Khromov](https://bsky.app/profile/khromov.se) for building this!
+Thanks to [Didier Catz](https://bsky.app/profile/didiercatz.com) and [Stanislav Khromov](https://bsky.app/profile/khromov.se) for building this!
 
 - [docs](/docs/llms)
 
@@ -151,26 +151,53 @@ The JS and CSS output tabs have also been upgraded — they now use sourcemaps t
 - [playground](/playground)
 - [demo video](https://bsky.app/profile/svelte.dev/post/3ldlkmce6oc2j)
 
-## Day 19
+## Day 19: single-file SvelteKit bundles
 
-Coming soon!
+By default, SvelteKit uses a technique called _code-splitting_ so that you only load the JavaScript and CSS you need for the page you're currently on. This helps make sure your app loads fast even if it grows very large.
 
-## Day 20
+In [some situations](https://github.com/sveltejs/kit/issues/3882), code-splitting is unhelpful — what you really want is a single .js file and a single .css file for your entire app. SvelteKit now supports this with the `output.bundleStrategy` option.
 
-Coming soon!
+- [docs](/docs/kit/configuration#output)
+- [example](https://bsky.app/profile/svelte.dev/post/3ldo633ht222p)
 
-## Day 21
+## Day 20: Vim mode
 
-Coming soon!
+The [playground](/playground) had a secret Vim mode that you could activate by appending `?vim=true` to the URL, but it was buggy. We've fixed it, and added a toggle to the playground and the tutorial that remembers your preference between visits. But don't worry: unlike normal Vim, you can quit by turning it off again (or closing the tab).
 
-## Day 22
+- [playground](/playground)
+- [tutorial](/tutorial)
+- [demo video](https://bsky.app/profile/svelte.dev/post/3ldqli3lk4k2g)
 
-Coming soon!
+## Day 21: hash-based routing
 
-## Day 23
+SvelteKit now supports hash-based routing, in addition to the default pathname-based routing. This can be useful for purely client-side apps (including those you might build with Electron or Tauri), or situations where you don't control the webserver and need to put everything on a single page.
 
-Coming soon!
+It comes with caveats — you can't use server-rendering (or any server logic), and you need to make sure all your internal links start with `/#/` or they won't work. Other than, it's just like any other SvelteKit app.
 
-## Day 24
+- [docs](/docs/kit/configuration#router)
+- [demo](https://hash-based-routing.vercel.app/)
 
-Coming soon!
+## Day 22: self-contained apps
+
+Following the introduction of the `bundleStrategy` option on day 19, and hash-based routing yesterday, we now have the ability to generate fully self-contained apps with the `bundleStrategy: 'inline'` option. Together with Vite's `assetsInlineLimit` option, it's possible to put an entire SvelteKit app — code, styles, fonts, images, audio and everything else — inside a single .html file that you can share with people on a floppy disk.
+
+- [docs](/docs/kit/configuration#output)
+- [example downloadable Snake game](https://svelte-snek.vercel.app/)
+
+## Day 23: download from playground
+
+We've added a 'download app' option to the toolbox in the playground — selecting it will zip up the app, along with any packages you've imported, and download it to your machine so you can continue working on it in your editor of choice.
+
+- [playground](/playground)
+
+## Day 24: clsx built in
+
+Svelte now uses [clsx](https://github.com/lukeed/clsx) to parse `class` attributes, meaning you can use objects and arrays to conditionally add and remove classes. It's much more powerful and flexible than the `class:` directive, and — since this is Svelte — you still get dead code elimination of unused CSS. This feature is particularly useful for all you Tailwind-heads.
+
+- [docs](/docs/svelte/class)
+- [tutorial](/tutorial/svelte/classes)
+- [demo](/playground/61450f09983046efb18273d5c94db7b4?version=5.16.0)
+
+---
+
+And that's a wrap! Thanks for following along, everyone, and Merry Christmas to all who celebrate.

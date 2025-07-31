@@ -9,7 +9,12 @@ Some migrations may annotate your codebase with tasks for completion that you ca
 
 ## Usage
 
-```bash
+```sh
+npx sv migrate
+```
+
+You can also specify a migration directly via the CLI:
+```sh
 npx sv migrate [migration]
 ```
 
@@ -17,7 +22,7 @@ npx sv migrate [migration]
 
 ### `app-state`
 
-Migrates `$app/store` usage to `$app/state` in `.svelte` files. See the [migration guide](/docs/kit/migrating-to-sveltekit-2#SvelteKit-2.12:-$app-stores-deprecated) for more details.
+Migrates `$app/stores` usage to `$app/state` in `.svelte` files. See the [migration guide](/docs/kit/migrating-to-sveltekit-2#SvelteKit-2.12:-$app-stores-deprecated) for more details.
 
 ### `svelte-5`
 

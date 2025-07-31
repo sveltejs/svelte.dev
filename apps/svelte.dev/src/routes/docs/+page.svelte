@@ -58,6 +58,10 @@
 	});
 </script>
 
+<svelte:head>
+	<title>Docs • Svelte</title>
+</svelte:head>
+
 <div class="page">
 	<h1>Documentation</h1>
 	<p>
@@ -91,18 +95,26 @@
 		</a>
 
 		<a href="/docs/llms">
-			<h2>I'm a Large Language Model (LLM)</h2>
+			<h2>I&rsquo;m a Large Language Model (LLM)</h2>
 			<p>
-				If you're an artificial intelligence, or trying to teach one how to use Svelte, we offer the
-				documentation in plaintext format. Beep boop.
+				If you&rsquo;re an artificial intelligence, or trying to teach one how to use Svelte, we
+				offer the documentation in plaintext format. Beep boop.
+			</p>
+		</a>
+
+		<a href="https://v4.svelte.dev">
+			<h2>I&rsquo;m looking for the old docs</h2>
+			<p>
+				If you&rsquo;re developing a site using only Svelte 3 or Svelte 4, the old site may be a
+				helpful reference until you upgrade.
 			</p>
 		</a>
 
 		<a href="/chat" class="external">
-			<h2>Help! I'm stuck</h2>
+			<h2>Help! I&rsquo;m stuck</h2>
 			<p>
 				Join our Discord server where you can hang out with fellow Svelte users and ask them
-				questions. It's like an LLM but with people.
+				questions. It&rsquo;s like an LLM but with people.
 			</p>
 		</a>
 	</div>
@@ -129,20 +141,33 @@
 			background-color: var(--sk-bg-2);
 			filter: drop-shadow(1px 2px 4px rgb(0 0 0 / 0.1));
 			text-decoration: none;
+			transform: var(--safari-fix);
 			-webkit-transform: var(--safari-fix);
+
 			h2 {
 				text-decoration: underline;
 			}
 		}
 
 		h2 {
+			position: relative;
 			padding-right: 4rem;
-			background: url(./arrow-right.svg) no-repeat 100% 50%;
-			background-size: 3rem;
 
-			.external & {
-				background-image: url(./external-link.svg);
-				background-size: 3rem;
+			&::after {
+				content: '';
+				position: absolute;
+				width: 3rem;
+				height: 3rem;
+				top: 0.2rem;
+				right: 0;
+
+				background: var(--sk-fg-accent);
+				mask: url(icons/arrow-right) no-repeat 100% 50%;
+				mask-size: 100%;
+			}
+
+			.external &::after {
+				mask-image: url(icons/external-link);
 			}
 		}
 

@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { afterNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
-	import type { Document } from '../types';
+	import type { Document, DocumentSummary } from '../types';
 
 	interface Props {
-		contents: Document[];
+		contents: DocumentSummary[];
 		show_ts_toggle?: boolean;
 	}
 
@@ -72,9 +72,11 @@
 	}
 
 	li {
+		position: relative;
 		display: block;
 		margin: 0;
 		margin-bottom: 4rem;
+		padding-right: 0.5rem; /* leave space for focus ring */
 	}
 
 	li:last-child {
@@ -125,14 +127,14 @@
 			overflow-y: auto;
 		}
 
-		:global(.scrollbars-invisible) [aria-current='page']::after {
+		:global(.scrollbars-invisible) li:has(> [aria-current='page'])::after {
 			--size: 1.8rem;
 			content: '';
 			position: absolute;
 			width: var(--size);
 			height: var(--size);
 			top: calc(1.4rem - var(--size) * 0.5);
-			right: calc(-0.5 * var(--size));
+			right: calc(-0.5rem - 0.5 * var(--size));
 			background-color: var(--sk-bg-1);
 			z-index: 2;
 			position: absolute;

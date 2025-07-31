@@ -17,4 +17,4 @@ We can now use this in our markup:
 <p>{numbers.join(' + ')} = +++{total}+++</p>
 ```
 
-The expression inside the `$derived` declaration will be re-evaluated whenever its dependencies (in this case, just `numbers`) are updated. Unlike normal state, derived state is read-only.
+The expression inside the `$derived` declaration will be re-evaluated whenever its dependencies (in this case, just `numbers`) are updated.

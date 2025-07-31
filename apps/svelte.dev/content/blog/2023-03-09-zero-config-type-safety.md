@@ -2,7 +2,7 @@
 title: Zero-effort type safety
 description: More convenience and correctness, less boilerplate
 author: Simon Holthausen
-authorURL: https://twitter.com/dummdidumm_
+authorURL: https://bsky.app/profile/dummdidumm.bsky.social
 ---
 
 By sprinkling type annotations into your SvelteKit apps, you can get full type safety across the network — the `data` in your page has a type that's inferred from the return values of the `load` functions that generated that data, without you having to explicitly declare anything. It's one of those things that you come to wonder how you ever lived without.
@@ -98,7 +98,7 @@ export type PageData = Kit.ReturnType<
 >;
 ```
 
-We don't actually write `$types.d.ts` into your `src` directory — that would be messy, and no-one likes messy code. Instead, we use a TypeScript feature called [`rootDirs`](https://www.typescriptlang.org/tsconfig#rootDirs), which lets us map ‘virtual’ directories to real ones. By setting `rootDirs` to the project root (the default) and additionally to `.svelte-kit/types` (the output folder of all the generated types) and then mirroring the route structure inside it we get the desired behavior:
+We don't actually write `$types.d.ts` into your `src` directory — that would be messy, and no one likes messy code. Instead, we use a TypeScript feature called [`rootDirs`](https://www.typescriptlang.org/tsconfig#rootDirs), which lets us map ‘virtual’ directories to real ones. By setting `rootDirs` to the project root (the default) and additionally to `.svelte-kit/types` (the output folder of all the generated types) and then mirroring the route structure inside it we get the desired behavior:
 
 ```tree
 // on disk:

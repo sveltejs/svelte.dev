@@ -1,18 +1,19 @@
 <script lang="ts">
 	import { quintOut } from 'svelte/easing';
 	import { fade } from 'svelte/transition';
-	import { persisted } from 'svelte-persisted-store';
 	import Icon from './Icon.svelte';
 	import type { BannerData } from '../types';
 	import { browser } from '$app/environment';
+	import { Persisted } from '../state';
 
 	let { banner }: { banner: BannerData } = $props();
 
-	const hidden = persisted<Record<string, boolean>>('svelte:hidden-banners', {});
+	const persisted = new Persisted<string>('sv:hidden-banners', '{}');
+	const hidden = $derived(JSON.parse(persisted.current));
 	const time = +new Date();
 
 	let visible = $derived(
-		browser && !$hidden[banner.id] && time > +banner.start && time < +banner.end
+		browser && !hidden[banner.id] && time > +banner.start && time < +banner.end
 	);
 
 	$effect(() => {
@@ -40,7 +41,10 @@
 			aria-label="Dismiss"
 			class="raised primary"
 			onclick={() => {
-				$hidden[banner.id] = true;
+				persisted.current = JSON.stringify({
+					...hidden,
+					[banner.id]: true
+				});
 			}}
 		>
 			<Icon name="close" />

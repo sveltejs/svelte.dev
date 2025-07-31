@@ -5,14 +5,15 @@
 	import CompilerOptions from './CompilerOptions.svelte';
 	import PaneWithPanel from './PaneWithPanel.svelte';
 	import Viewer from './Viewer.svelte';
-	import { Editor, Workspace, type File } from 'editor';
-	import { tick, untrack } from 'svelte';
+	import { Workspace, type File } from '../Workspace.svelte';
+	import Editor from '../Editor/Editor.svelte';
+	import { untrack } from 'svelte';
 	import { decode, type SourceMapSegment } from '@jridgewell/sourcemap-codec';
 
 	interface Props {
 		status: string | null;
 		runtimeError?: Error | null;
-		embedded?: boolean;
+		embedded?: boolean | 'output-only';
 		relaxed?: boolean;
 		can_escape?: boolean;
 		injectedJS: string;
@@ -182,16 +183,18 @@
 	});
 </script>
 
-<div class="view-toggle">
-	{#if workspace.current.name.endsWith('.md')}
-		<button class="active">Markdown</button>
-	{:else}
-		<button aria-current={view === 'result'} onclick={() => (view = 'result')}>Result</button>
-		<button aria-current={view === 'js'} onclick={() => (view = 'js')}>JS output</button>
-		<button aria-current={view === 'css'} onclick={() => (view = 'css')}>CSS output</button>
-		<button aria-current={view === 'ast'} onclick={() => (view = 'ast')}>AST output</button>
-	{/if}
-</div>
+{#if embedded !== 'output-only'}
+	<div class="view-toggle">
+		{#if workspace.current.name.endsWith('.md')}
+			<button class="active">Markdown</button>
+		{:else}
+			<button aria-current={view === 'result'} onclick={() => (view = 'result')}>Result</button>
+			<button aria-current={view === 'js'} onclick={() => (view = 'js')}>JS output</button>
+			<button aria-current={view === 'css'} onclick={() => (view = 'css')}>CSS output</button>
+			<button aria-current={view === 'ast'} onclick={() => (view = 'ast')}>AST output</button>
+		{/if}
+	</div>
+{/if}
 
 <!-- component viewer -->
 <div class="tab-content" class:visible={!is_markdown && view === 'result'}>
@@ -202,6 +205,7 @@
 		{can_escape}
 		{injectedJS}
 		{injectedCSS}
+		onLog={embedded === 'output-only' ? () => {} : undefined}
 		theme={previewTheme}
 	/>
 </div>
@@ -211,7 +215,7 @@
 	{#if embedded}
 		<Editor workspace={js_workspace} />
 	{:else}
-		<PaneWithPanel min="-18rem" pos="-18rem" panel="Compiler options">
+		<PaneWithPanel min="-27rem" pos="-27rem" panel="Compiler options">
 			{#snippet main()}
 				<Editor workspace={js_workspace} />
 			{/snippet}
@@ -274,10 +278,6 @@
 		&[aria-current='true'] {
 			border-bottom: 1px solid var(--sk-fg-accent);
 		}
-	}
-
-	div[slot] {
-		height: 100%;
 	}
 
 	.tab-content {

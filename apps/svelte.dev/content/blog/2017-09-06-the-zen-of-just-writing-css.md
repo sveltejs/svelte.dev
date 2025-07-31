@@ -2,7 +2,7 @@
 title: The zen of Just Writing CSS
 description: I would say this is the future, but we're already doing it.
 author: Rich Harris
-authorURL: https://twitter.com/Rich_Harris
+authorURL: https://bsky.app/profile/rich-harris.dev
 ---
 
 It's fashionable to dislike CSS. There are lots of reasons why that's the case, but it boils down to this: CSS is _unpredictable_. If you've never had the experience of tweaking a style rule and accidentally breaking some layout that you thought was completely unrelated — usually when you're trying to ship — then you're either new at this or you're a much better programmer than the rest of us.
@@ -17,7 +17,7 @@ This article isn't in any way intended as criticism of the hard work the CSS-in-
 
 Everything in CSS is global. Because of that, styles intended for one bit of markup often end up affecting another. Because of _that_, developers often resort to wild namespacing conventions (not 'rules', since they're very difficult to enforce) that mostly just increase your risk of RSI.
 
-It gets worse when you're working on a team. No-one dares touch styles authored by someone else, because it's often unclear what they're doing, what markup they apply to, and what disasters will unfold if you remove them.
+It gets worse when you're working on a team. No one dares touch styles authored by someone else, because it's often unclear what they're doing, what markup they apply to, and what disasters will unfold if you remove them.
 
 The consequence of all this is the **append-only stylesheet**. There's no way of knowing which code can safely be removed, so it's common to undo some existing style with another, more specific style — even on relatively small projects.
 

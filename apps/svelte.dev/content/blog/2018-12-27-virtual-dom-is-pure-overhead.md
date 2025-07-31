@@ -2,7 +2,7 @@
 title: Virtual DOM is pure overhead
 description: Let's retire the 'virtual DOM is fast' myth once and for all
 author: Rich Harris
-authorURL: https://twitter.com/Rich_Harris
+authorURL: https://bsky.app/profile/rich-harris.dev
 ---
 
 If you've used JavaScript frameworks in the last few years, you've probably heard the phrase 'the virtual DOM is fast', often said to mean that it's faster than the _real_ DOM. It's a surprisingly resilient meme — for example people have asked how Svelte can be fast when it doesn't use a virtual DOM.
@@ -42,7 +42,7 @@ Misunderstood claims about virtual DOM performance date back to the launch of Re
 	<figcaption>Screenshot from <a href="https://www.youtube.com/watch?v=x7cQ3mrcKaY">Rethinking Best Practices</a> at JSConfEU 2013</figcaption>
 </figure>
 
-But hang on a minute! The virtual DOM operations are _in addition to_ the eventual operations on the real DOM. The only way it could be faster is if we were comparing it to a less efficient framework (there were plenty to go around back in 2013!), or arguing against a straw man — that the alternative is to do something no-one actually does:
+But hang on a minute! The virtual DOM operations are _in addition to_ the eventual operations on the real DOM. The only way it could be faster is if we were comparing it to a less efficient framework (there were plenty to go around back in 2013!), or arguing against a straw man — that the alternative is to do something no one actually does:
 
 ```js
 // @noErrors
