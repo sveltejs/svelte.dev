@@ -33,10 +33,8 @@
 				.find((node) => (node as HTMLElement).classList.contains('code-block')) as HTMLElement;
 
 			const ts = !!parent.querySelector('.ts-toggle:checked');
-			const code = parent.querySelector(
-				`pre[data-language]:${ts ? 'last' : 'first'}-of-type code`
-			) as HTMLElement;
-
+			const query = ts ? `pre[data-language="ts"] code` : 'pre code';
+			const code = parent.querySelector(query) as HTMLElement;
 			navigator.clipboard.writeText(get_text(code));
 		}
 	}
@@ -415,6 +413,7 @@
 					top: 0.05em;
 					background: var(--sk-fg-accent);
 					mask: url(icons/lightbulb) no-repeat 0.5rem 0 / 2.6rem;
+					pointer-events: none;
 				}
 			}
 
