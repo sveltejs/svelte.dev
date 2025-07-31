@@ -117,6 +117,7 @@ export class Workspace {
 	#files = $state.raw<Item[]>([]);
 	#current = $state.raw() as File;
 	#vim = $state(false);
+	#aliases = $state.raw(undefined) as undefined | Record<string, string>;
 	#tailwind = $state(false);
 
 	#handlers = {
@@ -125,7 +126,7 @@ export class Workspace {
 	};
 
 	#onupdate: (file: File) => void;
-	#onreset: (items: Item[]) => void;
+	#onreset: (items: Item[]) => void | Promise<void>;
 
 	// CodeMirror stuff
 	states = new Map<string, EditorState>();
@@ -198,7 +199,7 @@ export class Workspace {
 			initial?: string;
 			readonly?: boolean;
 			onupdate?: (file: File) => void;
-			onreset?: (items: Item[]) => void;
+			onreset?: (items: Item[]) => void | Promise<void>;
 		} = {}
 	) {
 		this.#svelte_version = svelte_version;
@@ -400,16 +401,25 @@ export class Workspace {
 		this.#onreset?.(this.#files);
 	}
 
-	reset(new_files: Item[], options: { tailwind: boolean }, selected?: string) {
+	reset(
+		new_files: Item[],
+		options: { tailwind: boolean; aliases?: Record<string, string> },
+		selected?: string
+	) {
 		this.states.clear();
 		this.set(new_files, selected);
 
 		this.mark_saved();
 
 		this.#tailwind = options.tailwind;
+		this.#aliases = options.aliases;
 
-		this.#onreset(new_files);
-		this.#reset_diagnostics();
+		const bundle = this.#onreset(new_files);
+		const diagnostics = this.#reset_diagnostics();
+
+		return Promise.all([bundle, diagnostics])
+			.then(() => {})
+			.catch(() => {});
 	}
 
 	select(name: string) {
@@ -473,6 +483,15 @@ export class Workspace {
 		if (state) {
 			this.#update_state(file, state);
 		}
+	}
+
+	get aliases() {
+		return this.#aliases;
+	}
+
+	set aliases(value) {
+		this.#aliases = value;
+		this.#onupdate(this.#current);
 	}
 
 	get tailwind() {
@@ -648,22 +667,26 @@ export class Workspace {
 			files = [this.current, ...this.#files.slice(0, i), ...this.#files.slice(i + 1)];
 		}
 
-		for (const file of files) {
-			if (file.type !== 'file') continue;
-			if (!is_svelte_file(file)) continue;
+		const done = files.map((file) => {
+			if (file.type !== 'file') return;
+			if (!is_svelte_file(file)) return;
 
 			seen.push(file.name);
 
-			compile_file(file, this.#svelte_version, this.compiler_options).then((compiled) => {
+			return compile_file(file, this.#svelte_version, this.compiler_options).then((compiled) => {
 				this.compiled[file.name] = compiled;
 			});
-		}
+		});
 
 		for (const key of keys) {
 			if (!seen.includes(key)) {
 				delete this.compiled[key];
 			}
 		}
+
+		return Promise.all(done)
+			.then(() => {})
+			.catch(() => {});
 	}
 
 	#select(file: File) {
