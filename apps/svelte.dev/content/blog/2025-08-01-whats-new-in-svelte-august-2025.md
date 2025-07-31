@@ -16,8 +16,8 @@ Let's dive into the highlights...
 - `getAbortSignal` returns an `AbortSignal` that aborts when the current derived or effect re-runs or is destroyed (**svelte@5.35.0**, [Docs](https://svelte.dev/docs/svelte/svelte#getAbortSignal), [#16266](https://github.com/sveltejs/svelte/pull/16266))
 - A new `parent` property has been added to the `__svelte_meta` properties that are added to elements at dev time - useful for debugging nested hierarchies (**svelte@5.35.1**, Docs, [#16255](https://github.com/sveltejs/svelte/pull/16255))
 - `await` is now supported in components when using the `experimental.async` compiler option (**svelte@5.36.0/extensions@109.10.0**, [Docs](https://svelte.dev/docs/svelte/await-expressions) [#15844](https://github.com/sveltejs/svelte/pull/15844))
-- There are now types for the `params` prop in page/layout components (**kit@2.24.0/extensions@109.10.0**, [#13999](https://github.com/sveltejs/kit/pull/13999))
-- Asynchronous read implementations from adapters are now supported (**kit@2.25.0**, [#13859](https://github.com/sveltejs/kit/pull/13859))
+- There are now types for the `params` prop and `page` attributes in page/layout components (**kit@2.24.0, kit@2.26.0 & extensions@109.10.0**, [#13999](https://github.com/sveltejs/kit/pull/13999) / [#13864](https://github.com/sveltejs/kit/pull/13864))
+- SvelteKit's `read` now works in edge environments where `fs.readFile` isn't available such as in Cloudflare's workers, Netlify, and Vercel's edge functions (**kit@2.25.0**, [#13859](https://github.com/sveltejs/kit/pull/13859))
 - The `resolve(...)` and `asset(...)` helpers have been added for resolving paths (**kit@2.26.0**, #13864)
 - Support for modern SvelteKit prop typings has been added to VS Code snippets (**extensions-109.10.0**, [#2796](https://github.com/sveltejs/language-tools/pull/2796))
 - The new `vite.addPlugin` simplifies adding a plugin on various vite config styles (**sv@0.8.20**, [#633](https://github.com/sveltejs/cli/pull/633))
@@ -44,6 +44,7 @@ For a full list of bug fixes in Svelte, SvelteKit and its adapters, check out th
 _Featuring Svelte Contributors and Ambassadors_
 
 - [promise.then(...)](https://www.youtube.com/watch?v=e-1pVKUWlOQ) by Rich Harris - what's next now that Svelte is Async
+- [Asynchronous Svelte](https://www.youtube.com/live/kL4Tp8RmJwo) with Rich Harris by CodeTV (Jason Lengstorf)
 - [Remote Functions are coming to SvelteKit - and they are amazing!](https://www.youtube.com/watch?v=BID8r5LObvI) by Code with Stanislav
 - [Svelte London - June 2025](https://www.youtube.com/watch?v=LKSmlp2S-jQ) feat. "Svelte, svelte everywhere" by Paolo Ricciuti and "Testing your Svelte app in an actual browser" by Willow / Scott
 
