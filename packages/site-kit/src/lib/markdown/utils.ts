@@ -3,6 +3,7 @@ import json5 from 'json5';
 
 export const SHIKI_LANGUAGE_MAP = {
 	bash: 'bash',
+	sh: 'bash',
 	env: 'bash',
 	yaml: 'yaml',
 	toml: 'toml',
