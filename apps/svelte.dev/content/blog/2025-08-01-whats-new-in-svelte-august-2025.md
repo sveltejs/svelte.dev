@@ -5,7 +5,7 @@ author: Dani Sandoval
 authorURL: https://dreamindani.com
 ---
 
-With [Async Svelte](https://github.com/sveltejs/svelte/discussions/15845) officially out in the world, there's a lot of updates to share!
+With [Async Svelte](https://github.com/sveltejs/svelte/discussions/15845) officially out in the world and its companion [Remote Functions](https://github.com/sveltejs/kit/discussions/13897) already ligned up, there's a lot of updates to share!
 
 Be sure to check out the showcase for videos from X, Y and Z about all the brand new features in Svelte.
 
@@ -13,10 +13,9 @@ Let's dive into the highlights...
 
 ## What's new in Svelte, SvelteKit, Language Tools and CLI (sv)
 
-- getAbortSignal returns an AbortSignal that aborts when the current derived or effect re-runs or is destroyed (**svelte@5.35.0**, [Docs](https://svelte.dev/docs/svelte/svelte#getAbortSignal), [#16266](https://github.com/sveltejs/svelte/pull/16266))
-- A new parent property has been added to the `__svelte_meta` properties that are added to elements at dev time - useful for debugging nested hierarchies (**svelte@5.35.1**, Docs, [#16255](https://github.com/sveltejs/svelte/pull/16255))
+- `getAbortSignal` returns an `AbortSignal` that aborts when the current derived or effect re-runs or is destroyed (**svelte@5.35.0**, [Docs](https://svelte.dev/docs/svelte/svelte#getAbortSignal), [#16266](https://github.com/sveltejs/svelte/pull/16266))
+- A new `parent` property has been added to the `__svelte_meta` properties that are added to elements at dev time - useful for debugging nested hierarchies (**svelte@5.35.1**, Docs, [#16255](https://github.com/sveltejs/svelte/pull/16255))
 - `await` is now supported in components when using the `experimental.async` compiler option (**svelte@5.36.0/extensions@109.10.0**, [Docs](https://svelte.dev/docs/svelte/await-expressions) [#15844](https://github.com/sveltejs/svelte/pull/15844))
-- `svelte.config.ts` can now be loaded in runtimes that support importing TypeScript files (**kit@2.23.0**, [#13935](https://github.com/sveltejs/kit/pull/13935))
 - There are now types for the `params` prop in page/layout components (**kit@2.24.0/extensions@109.10.0**, [#13999](https://github.com/sveltejs/kit/pull/13999))
 - Asynchronous read implementations from adapters are now supported (**kit@2.25.0**, [#13859](https://github.com/sveltejs/kit/pull/13859))
 - The `resolve(...)` and `asset(...)` helpers have been added for resolving paths (**kit@2.26.0**, #13864)
