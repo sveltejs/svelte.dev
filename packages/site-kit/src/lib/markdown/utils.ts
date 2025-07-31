@@ -11,7 +11,7 @@ export const SHIKI_LANGUAGE_MAP = {
 	jsonc: 'javascript',
 	dts: 'typescript',
 	// TODO: find a highlighter for tree syntax
-	tree: '',
+	tree: ''
 };
 
 /**
