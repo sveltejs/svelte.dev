@@ -5,7 +5,7 @@
 	import Message from '../Message.svelte';
 	import PaneWithPanel from './PaneWithPanel.svelte';
 	import ReplProxy from './ReplProxy.js';
-	import Console, { type Log } from './console/Console.svelte';
+	import Console from './console/Console.svelte';
 	import getLocationFromStack from './get-location-from-stack';
 	import srcdoc from './srcdoc/index.html?raw';
 	import srcdoc_styles from './srcdoc/styles.css?raw';
@@ -13,6 +13,7 @@
 	import type { CompileError } from 'svelte/compiler';
 	import type Bundler from '../Bundler.svelte';
 	import type { BundleResult } from '../public';
+	import { Log } from './console/Log.svelte';
 
 	interface Props {
 		error: Error | null;
@@ -48,11 +49,11 @@
 	let context = get_repl_context();
 	let bundle = $derived((bundler ?? context?.bundler)?.result);
 
-	let logs: Log[] = $state.raw([]); // we don't want to proxify the logged values
+	let logs: Log[] = $state([]);
 	let log_group_stack: Log[][] = [];
-
 	// svelte-ignore state_referenced_locally
 	let current_log_group = logs;
+	let last_console_event: Log;
 
 	let iframe = $state.raw<HTMLIFrameElement>();
 	let pending_imports = $state(0);
@@ -61,10 +62,6 @@
 	let proxy: ReplProxy | null = $state.raw(null);
 	let ready = $state(false);
 	let inited = $state(false);
-
-	let log_height = 90;
-	let prev_height: number;
-	let last_console_event: Log;
 
 	onMount(() => {
 		proxy = new ReplProxy(iframe!, {
@@ -79,6 +76,9 @@
 				if (typeof error === 'string') error = { message: error };
 				error.message = 'Uncaught (in promise): ' + error.message;
 				push_logs({ command: 'error', args: [error] });
+			},
+			on_iframe_reload: () => {
+				ready = false;
 			},
 			on_console: (log) => {
 				switch (log.command) {
@@ -172,9 +172,63 @@
 								console.error(err);
 							}
 						}
+						window.__reset_custom_elements?.();
 
 						document.body.innerHTML = '';
 						window._svelteTransitionManager = null;
+					}
+
+					if (!window.__reset_custom_elements) {
+						const registered = new Map();
+						const define = CustomElementRegistry.prototype.define;
+						CustomElementRegistry.prototype.define = function(name, el, options) {
+							let ce = registered.get(name);
+							if (ce) {
+								if (ce.registered) {
+									// trigger error of re-registering
+									define.call(this, name, ce.el, options);
+								}
+								if (ce.options?.extends != options?.extends) {
+									parent.postMessage({ action: 'iframe_reload' }, '*');
+									location.reload();
+								}
+								ce.el = el;
+								ce.registered = true;
+							} else {
+								ce = { el, options, registered: true };
+								registered.set(name, ce);
+								const Wrapper = class extends el {
+									connectedCallback() {
+										ce.el.prototype.connectedCallback?.apply(this, arguments);
+									}
+									disconnectedCallback() {
+										ce.el.prototype.disconnectedCallback?.apply(this, arguments);
+									}
+									adoptedCallback() {
+										ce.el.prototype.adoptedCallback?.apply(this, arguments);
+									}
+								};
+								const DynamicWrapper = new Proxy(Wrapper, {
+									construct: function (_, args, newTarget) {
+										return Reflect.construct(ce.el, args, newTarget);
+									}
+								});
+								try {
+									define.call(this, name, DynamicWrapper, options);
+								} catch (error) {
+									console.error(error);
+									throw new Error('Failed to define a custom element '+name);
+								}
+							}
+						};
+						window.__reset_custom_elements = () => {
+							for (const ce of registered.values()) {
+								if (ce.registered) {
+									ce.el = HTMLElement;
+									ce.registered = false;
+								}
+							}
+						}
 					}
 
 					const __repl_exports = ${bundle.client?.code};
@@ -196,17 +250,22 @@
 								return untrack(() => original[method].apply(this, v));
 							}
 						}
-						const component = mount(App, { target: document.body });
-						window.__unmount_previous = () => {
-							for (const method of console_methods) {
-								console[method] = original[method];
+						let component;
+						try {
+							component = mount(App, { target: document.body });
+						} finally {
+							window.__unmount_previous = () => {
+								for (const method of console_methods) {
+									console[method] = original[method];
+								}
+								if (component) unmount(component);
+								window.__unmount_previous = null;
 							}
-							unmount(component);
 						}
 					}
 					//# sourceURL=playground:output
 				`,
-					bundle?.tailwind ?? srcdoc_styles
+					bundle?.css ?? srcdoc_styles
 				);
 				error = null;
 			}
@@ -255,19 +314,18 @@
 		error = e;
 	}
 
-	function push_logs(log: Log) {
+	function push_logs(data: any) {
+		const log = new Log(data);
 		current_log_group.push((last_console_event = log));
-		logs = [...logs, log];
 		onLog?.(logs);
 	}
 
-	function group_logs(log: Log) {
-		log.logs = [];
+	function group_logs(data: any) {
+		const log = new Log(data);
 		current_log_group.push(log);
 		// TODO: Investigate
 		log_group_stack.push(current_log_group);
 		current_log_group = log.logs;
-		logs = [...logs];
 		onLog?.(logs);
 	}
 
@@ -278,24 +336,13 @@
 	}
 
 	function increment_duplicate_log() {
-		const last_log = current_log_group[current_log_group.length - 1];
+		last_console_event.count += 1;
 
-		if (last_log) {
-			last_log.count = (last_log.count || 1) + 1;
-			logs = [...logs];
+		if (current_log_group.includes(last_console_event)) {
 			onLog?.(logs);
 		} else {
-			last_console_event.count = 1;
+			// console was cleared
 			push_logs(last_console_event);
-		}
-	}
-
-	function on_toggle_console() {
-		if (log_height < 90) {
-			prev_height = log_height;
-			log_height = 90;
-		} else {
-			log_height = prev_height || 45;
 		}
 	}
 

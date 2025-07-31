@@ -1,11 +1,13 @@
 import MagicString from 'magic-string';
-import { createHash, Hash } from 'node:crypto';
+import { createHash, type Hash } from 'node:crypto';
 import fs from 'node:fs';
 import process from 'node:process';
 import path from 'node:path';
 import ts from 'typescript';
 import * as marked from 'marked';
-import { codeToHtml, createCssVariablesTheme } from 'shiki';
+import { createHighlighterCore } from 'shiki/core';
+import { createOnigurumaEngine } from 'shiki/engine/oniguruma';
+import { createCssVariablesTheme } from 'shiki';
 import { transformerTwoslash } from '@shikijs/twoslash';
 import { SHIKI_LANGUAGE_MAP, slugify, smart_quotes, transform } from './utils';
 
@@ -42,6 +44,20 @@ if (!fs.existsSync(original_file)) {
 }
 hash_graph(hash, original_file);
 const digest = hash.digest().toString('base64').replace(/\//g, '-');
+
+const highlighter = await createHighlighterCore({
+	themes: [],
+	langs: [
+		import('@shikijs/langs/javascript'),
+		import('@shikijs/langs/typescript'),
+		import('@shikijs/langs/html'),
+		import('@shikijs/langs/css'),
+		import('@shikijs/langs/bash'),
+		import('@shikijs/langs/yaml'),
+		import('@shikijs/langs/svelte')
+	],
+	engine: createOnigurumaEngine(import('shiki/wasm'))
+});
 
 /**
  * Utility function to work with code snippet caching.
@@ -401,7 +417,7 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 	const code = new MagicString(js_code);
 	const imports = new Map();
 
-	async function walk(node: ts.Node) {
+	async function walk(node: ts.Node, prev: ts.Node | null) {
 		const jsdoc = get_jsdoc(node);
 
 		if (jsdoc) {
@@ -547,16 +563,30 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 				while (start > 0 && code.original[start - 1] === '\t') start -= 1;
 				while (start > 0 && code.original[start - 1] === '\n') start -= 1;
 
-				code.overwrite(start, end, '');
+				let is_multiline = false;
+
+				if (prev) {
+					is_multiline =
+						code.original.slice(prev.getStart(), prev.getEnd()).includes('\n') ||
+						code.original.slice(node.getStart(), node.getEnd()).includes('\n');
+				}
+
+				code.overwrite(start, end, is_multiline ? '\n' : '');
 			}
 		}
 
+		// the TypeScript API is such a hot mess, AFAICT there is no non-stupid way
+		// to get the previous sibling within the visitor, so since we need it we
+		// have to pass it in from the parent visitor
+		let child_prev: ts.Node | null = null;
+
 		for (const child_node of node.getChildren()) {
-			await walk(child_node);
+			await walk(child_node, child_prev);
+			child_prev = child_node;
 		}
 	}
 
-	await walk(ast);
+	await walk(ast, null);
 
 	if (imports.size) {
 		const import_statements = Array.from(imports.entries())
@@ -570,11 +600,7 @@ async function convert_to_ts(js_code: string, indent = '', offset = '') {
 		);
 
 		if (last_import) {
-			let i = last_import.getEnd();
-			while (js_code[i] !== '\n') i += 1;
-			i += 1;
-
-			code.appendLeft(i, '\n' + import_statements + '\n');
+			code.appendLeft(last_import.getEnd(), '\n' + import_statements);
 		} else {
 			code.prependLeft(0, offset + import_statements + '\n');
 		}
@@ -722,7 +748,7 @@ async function syntax_highlight({
 
 	if (/^(dts|yaml|yml)/.test(language)) {
 		html = replace_blank_lines(
-			await codeToHtml(source, {
+			highlighter.codeToHtml(source, {
 				lang: language === 'dts' ? 'ts' : language,
 				theme
 			})
@@ -737,7 +763,7 @@ async function syntax_highlight({
 		});
 
 		try {
-			html = await codeToHtml(prelude + redacted, {
+			html = highlighter.codeToHtml(prelude + redacted, {
 				lang: language,
 				theme,
 				transformers: check
@@ -833,7 +859,7 @@ async function syntax_highlight({
 
 		html = replace_blank_lines(html);
 	} else {
-		const highlighted = await codeToHtml(source, {
+		const highlighted = highlighter.codeToHtml(source, {
 			lang: SHIKI_LANGUAGE_MAP[language as keyof typeof SHIKI_LANGUAGE_MAP],
 			theme
 		});
@@ -841,9 +867,15 @@ async function syntax_highlight({
 		html = replace_blank_lines(highlighted);
 	}
 
-	// munge shiki output: put whitespace outside `<span>` elements, so that
-	// highlight delimiters fall outside tokens
-	html = html.replace(/(<span[^>]+?>)(\s+)/g, '$2$1').replace(/(\s+)(<\/span>)/g, '$2$1');
+	// munge shiki output
+	html = html
+		// put whitespace outside `<span>` elements, so that
+		// highlight delimiters fall outside tokens
+		.replace(/(<span[^>]+?>)(\s+)/g, '$2$1')
+		.replace(/(\s+)(<\/span>)/g, '$2$1')
+
+		// remove tabindex
+		.replace(' tabindex="0"', '');
 
 	html = html
 		.replace(/ {13}([^ ][^]+?) {13}/g, (_, content) => {

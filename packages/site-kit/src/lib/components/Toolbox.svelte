@@ -35,15 +35,10 @@
 	}
 
 	span.wrench {
-		--icon-size: 1.8rem;
 		width: 1.8rem;
 		height: 1.8rem;
 		z-index: 9999;
-		background: url(../icons/wrench-light.svg) no-repeat 50% 50%;
-		background-size: contain;
-
-		:root.dark & {
-			background-image: url(../icons/wrench-dark.svg);
-		}
+		background: currentColor;
+		mask: url(icons/wrench) no-repeat 50% 50% / contain;
 	}
 </style>

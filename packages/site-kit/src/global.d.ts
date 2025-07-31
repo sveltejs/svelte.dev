@@ -2,9 +2,7 @@
 
 declare global {
 	namespace App {
-		interface PageData {
-			nav_title: string;
-		}
+		interface PageData {}
 	}
 }
 

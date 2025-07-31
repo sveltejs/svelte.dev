@@ -1,7 +1,7 @@
 <script lang="ts">
 	import * as context from './context.js';
 	import Item from './Item.svelte';
-	import file_icon from '$lib/icons/file.svg';
+	import file_icon from 'icons/file';
 	import { solution } from '../state.svelte';
 	import type { MenuItem } from '$lib/tutorial';
 	import type { File } from '@sveltejs/repl/workspace';

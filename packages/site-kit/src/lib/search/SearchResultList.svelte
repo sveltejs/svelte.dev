@@ -98,14 +98,15 @@
 				top: calc(50% - 1rem);
 				width: 2rem;
 				height: 2rem;
-				background: url($lib/icons/chevron.svg);
-				background-size: contain;
-				rotate: 0deg;
+				background: currentColor;
+				mask: url(icons/chevron);
+				mask-size: contain;
+				rotate: -90deg;
 				transition: rotate 0.2s;
 			}
 
 			[open] &::after {
-				rotate: 180deg;
+				rotate: 90deg;
 			}
 
 			span:not(:last-child)::after {
@@ -135,22 +136,13 @@
 			top: 0;
 			left: 0;
 			height: 100%;
-			background: url(../icons/document-light.svg) no-repeat 50% 50%;
-			background-size: 2rem;
+			background: currentColor;
+			mask: url(icons/document) no-repeat 50% 50%;
+			mask-size: 2rem;
 		}
 
 		&.fragment::before {
-			background-image: url(../icons/hash-light.svg);
-		}
-
-		:root.dark & {
-			&::before {
-				background-image: url(../icons/document-dark.svg);
-			}
-
-			&.fragment::before {
-				background-image: url(../icons/hash-dark.svg);
-			}
+			mask-image: url(icons/hash);
 		}
 
 		&:hover {

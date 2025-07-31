@@ -32,8 +32,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background: white
-			url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20 20" height="20px" width="20px"><g><rect fill="hsl(240, 8%, 95%)" width="10" height="10"></rect><rect fill="hsl(240, 8%, 95%)" x="10" y="10" width="10" height="10"></rect></g></svg>');
+		background: white url(./image-viewer-background.svg);
 	}
 
 	img {

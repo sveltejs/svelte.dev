@@ -38,23 +38,25 @@
 		"@fontsource/fira-sans": "^5.1.0",
 		"@lezer/common": "^1.0.4",
 		"@replit/codemirror-lang-svelte": "^6.0.0",
+		"@shikijs/langs": "^3.2.1",
 		"@shikijs/twoslash": "^3.2.1",
 		"esm-env": "^1.0.0",
+		"icons": "workspace:*",
 		"json5": "^2.2.3",
 		"shiki": "^3.2.1"
 	},
 	"devDependencies": {
-		"@sveltejs/kit": "^2.20.0",
-		"@types/node": "^20.12.11",
+		"@sveltejs/kit": "^2.22.5",
+		"@types/node": "^20.19.0",
 		"flexsearch": "^0.7.43",
 		"magic-string": "^0.30.11",
 		"marked": "^14.1.2",
 		"prettier": "^3.3.2",
 		"prettier-plugin-svelte": "^3.3.2",
-		"svelte": "5.23.0",
+		"svelte": "^5.35.5",
 		"svelte-check": "^4.1.1",
 		"typescript": "^5.5.4",
-		"vite": "^5.4.3"
+		"vite": "^7.0.4"
 	},
 	"publishConfig": {
 		"access": "public"
@@ -102,8 +104,6 @@
 		"./polyfills": {
 			"default": "./src/lib/polyfills/index.ts"
 		},
-		"./icons/link.svg": "./src/lib/icons/link.svg",
-		"./icons/search.svg": "./src/lib/icons/search.svg",
 		"./search": {
 			"default": "./src/lib/search/index.ts",
 			"svelte": "./src/lib/search/index.ts"

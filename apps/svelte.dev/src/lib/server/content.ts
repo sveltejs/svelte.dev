@@ -1,5 +1,5 @@
 import { read } from '$app/server';
-import type { Document } from '@sveltejs/site-kit';
+import type { Document, DocumentSummary } from '@sveltejs/site-kit';
 import { create_index } from '@sveltejs/site-kit/server/content';
 
 const documents = import.meta.glob<string>('../../../content/**/*.md', {
@@ -121,6 +121,14 @@ function create_docs() {
 	}
 
 	return docs;
+}
+
+export function create_summary(document: Document): DocumentSummary {
+	return {
+		slug: document.slug,
+		metadata: document.metadata,
+		children: document.children.map(create_summary)
+	};
 }
 
 export const docs = create_docs();

@@ -95,7 +95,7 @@ interface User {}
 // ---cut---
 import { getContext, setContext } from 'svelte';
 
-let key = {};
+const key = {};
 
 /** @param {User} user */
 export function setUserContext(user) {
@@ -126,7 +126,7 @@ In many cases this is perfectly fine, but there is a risk: if you mutate the sta
 ```svelte
 <!--- file: App.svelte ---->
 <script>
-	import { myGlobalState } from 'svelte';
+	import { myGlobalState } from './state.svelte.js';
 
 	let { data } = $props();
 
