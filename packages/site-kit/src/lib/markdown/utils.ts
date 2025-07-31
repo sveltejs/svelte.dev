@@ -19,6 +19,7 @@ export const SHIKI_LANGUAGE_MAP = {
 	toml: 'toml',
 	yaml: 'yaml',
 	yml: 'yaml',
+	cson: '',
 	// TODO: find a highlighter for tree syntax
 	tree: '',
 	'': ''
