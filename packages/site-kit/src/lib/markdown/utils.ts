@@ -7,8 +7,6 @@ export const SHIKI_LANGUAGE_MAP = {
 	env: 'bash',
 	html: 'svelte',
 	sv: 'svelte',
-	css: 'css',
-	js: 'javascript',
 	json: 'javascript',
 	jsonc: 'javascript',
 	dts: 'typescript',
