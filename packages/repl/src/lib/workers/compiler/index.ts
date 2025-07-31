@@ -1,8 +1,8 @@
 import '@sveltejs/site-kit/polyfills';
 import type { CompileResult } from 'svelte/compiler';
-import tsBlankSpace from 'ts-blank-space';
 import type { ExposedCompilerOptions, File } from '../../Workspace.svelte';
 import { load_svelte } from '../npm';
+import { strip_types } from '../typescript-strip-types';
 
 // hack for magic-string and Svelte 4 compiler
 // do not put this into a separate module and import it, would be treeshaken in prod
@@ -10,7 +10,7 @@ self.window = self;
 
 declare var self: Window & typeof globalThis & { svelte: typeof import('svelte/compiler') };
 
-const cache: Record<string, any> = {};
+const cache: Record<string, Promise<any>> = {};
 
 addEventListener('message', async (event) => {
 	const { id, file, version, options } = event.data as {
@@ -20,7 +20,11 @@ addEventListener('message', async (event) => {
 		options: ExposedCompilerOptions;
 	};
 
-	const { can_use_experimental_async, svelte } = (cache[version] ??= await load_svelte(version));
+	cache[version] ??= load_svelte(version);
+	cache[version].catch(() => {
+		delete cache[version];
+	});
+	const { can_use_experimental_async, svelte } = await cache[version];
 
 	if (!file.name.endsWith('.svelte') && !svelte.compileModule) {
 		// .svelte.js file compiled with Svelte 3/4 compiler
@@ -58,7 +62,8 @@ addEventListener('message', async (event) => {
 						: 'ssr'
 					: options.generate,
 				dev: options.dev,
-				filename: file.name
+				filename: file.name,
+				fragments: options.fragments
 			};
 
 			if (!is_svelte_3_or_4) {
@@ -67,6 +72,12 @@ addEventListener('message', async (event) => {
 
 			if (can_use_experimental_async) {
 				compilerOptions.experimental = { async: true };
+			}
+
+			if (compilerOptions.fragments == null) {
+				// if fragments is not set it probably means we are using
+				// a version that doesn't support it, so we need to remove it
+				delete compilerOptions.fragments;
 			}
 
 			result = svelte.compile(file.contents, compilerOptions);
@@ -81,7 +92,7 @@ addEventListener('message', async (event) => {
 				compilerOptions.experimental = { async: true };
 			}
 
-			const content = tsBlankSpace(file.contents);
+			const content = file.basename.endsWith('.ts') ? strip_types(file.contents) : file.contents;
 			result = svelte.compileModule(content, compilerOptions);
 		}
 

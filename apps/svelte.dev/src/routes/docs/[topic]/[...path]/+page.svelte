@@ -83,6 +83,7 @@
 	</div>
 
 	<PageControls
+		llms
 		{repo}
 		prev={data.document.prev && {
 			title: data.document.prev.title,

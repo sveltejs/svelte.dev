@@ -1,6 +1,19 @@
 <script lang="ts">
 	import { Checkbox } from '@sveltejs/site-kit/components';
 	import type { Workspace } from '../Workspace.svelte';
+	import { get_repl_context } from '../../lib/context.js';
+
+	const { svelteVersion } = $derived(get_repl_context());
+
+	const is_fragments_available = $derived.by(() => {
+		const [major, minor] = svelteVersion.split('.');
+		// if the version is 5.33.0 or greater, fragments are available
+		if (+major >= 5 && +minor >= 33) {
+			return true;
+		}
+		// we assume they are available if work with local or latest
+		return svelteVersion === 'local' || svelteVersion === 'latest';
+	});
 
 	let { workspace }: { workspace: Workspace } = $props();
 </script>
@@ -23,6 +36,25 @@
 			<label for={generate}><span class="string">"{generate}"</span></label>
 		{/each},
 	</div>
+
+	{#if is_fragments_available}
+		<div class="option">
+			<span class="key">fragments:</span>
+
+			{#each ['html', 'tree'] as const as fragments}
+				<input
+					id={fragments}
+					type="radio"
+					checked={(workspace.compiler_options.fragments ?? 'html') === fragments}
+					value={fragments}
+					onchange={() => {
+						workspace.update_compiler_options({ fragments });
+					}}
+				/>
+				<label for={fragments}><span class="string">"{fragments}"</span></label>
+			{/each},
+		</div>
+	{/if}
 
 	<!-- svelte-ignore a11y_label_has_associated_control (TODO this warning should probably be disabled if there's a component)-->
 	<label class="option">
@@ -55,7 +87,7 @@
 
 	.key {
 		display: inline-block;
-		width: 6em;
+		width: 10em;
 	}
 
 	.string {

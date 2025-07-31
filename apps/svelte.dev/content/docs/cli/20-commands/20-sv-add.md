@@ -7,11 +7,11 @@ title: sv add
 
 ## Usage
 
-```bash
+```sh
 npx sv add
 ```
 
-```bash
+```sh
 npx sv add [add-ons]
 ```
 
@@ -26,16 +26,17 @@ You can select multiple space-separated add-ons from [the list below](#Official-
 
 ## Official add-ons
 
-<!-- TODO this should be a separate section, each of these should have their own page -->
+<!-- TODO: it'd be nice for this to live on the "add-ons" page, but we first need svelte.dev to support making pages from headings -->
 
-- `drizzle`
-- `eslint`
-- `sveltekit-adapter`
-- `lucia`
-- `mdsvex`
-- `paraglide`
-- `playwright`
-- `prettier`
-- `storybook`
-- `tailwindcss`
-- `vitest`
+- [`drizzle`](drizzle)
+- [`eslint`](eslint)
+- [`lucia`](lucia)
+- [`mdsvex`](mdsvex)
+- [`paraglide`](paraglide)
+- [`playwright`](playwright)
+- [`prettier`](prettier)
+- [`storybook`](storybook)
+- [`sveltekit-adapter`](sveltekit-adapter)
+- [`tailwindcss`](tailwind)
+- [`vitest`](vitest)
+- [`devtools-json`](devtools-json)

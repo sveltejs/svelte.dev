@@ -12,7 +12,7 @@
 
 	let repl = $state() as ReturnType<typeof Repl>;
 
-	let version = page.url.searchParams.get('version') || 'latest';
+	let version = $derived(page.url.searchParams.get('version') || 'latest');
 
 	// TODO make this munging unnecessary
 	function munge(data: any): File {
