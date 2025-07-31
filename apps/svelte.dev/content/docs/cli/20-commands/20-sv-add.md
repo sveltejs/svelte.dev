@@ -7,11 +7,11 @@ title: sv add
 
 ## Usage
 
-```bash
+```sh
 npx sv add
 ```
 
-```bash
+```sh
 npx sv add [add-ons]
 ```
 
@@ -39,3 +39,4 @@ You can select multiple space-separated add-ons from [the list below](#Official-
 - [`sveltekit-adapter`](sveltekit-adapter)
 - [`tailwindcss`](tailwind)
 - [`vitest`](vitest)
+- [`devtools-json`](devtools-json)

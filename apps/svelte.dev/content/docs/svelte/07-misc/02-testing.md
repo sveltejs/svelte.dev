@@ -11,7 +11,7 @@ Unit tests allow you to test small isolated parts of your code. Integration test
 
 To setup Vitest manually, first install it:
 
-```bash
+```sh
 npm install -D vitest
 ```
 
@@ -130,12 +130,12 @@ test('Effect', () => {
 		// effects normally run after a microtask,
 		// use flushSync to execute all pending effects synchronously
 		flushSync();
-		expect(log.value).toEqual([0]);
+		expect(log).toEqual([0]);
 
 		count = 1;
 		flushSync();
 
-		expect(log.value).toEqual([0, 1]);
+		expect(log).toEqual([0, 1]);
 	});
 
 	cleanup();
@@ -149,17 +149,13 @@ test('Effect', () => {
  */
 export function logger(getValue) {
 	/** @type {any[]} */
-	let log = $state([]);
+	let log = [];
 
 	$effect(() => {
 		log.push(getValue());
 	});
 
-	return {
-		get value() {
-			return log;
-		}
-	};
+	return log;
 }
 ```
 
@@ -171,7 +167,7 @@ It is possible to test your components in isolation using Vitest.
 
 To get started, install jsdom (a library that shims DOM APIs):
 
-```bash
+```sh
 npm install -D jsdom
 ```
 
