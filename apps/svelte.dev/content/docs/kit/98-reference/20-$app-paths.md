@@ -7,10 +7,46 @@ title: $app/paths
 
 ```js
 // @noErrors
-import { assets, base, resolveRoute } from '$app/paths';
+import { asset, assets, base, resolve, resolveRoute } from '$app/paths';
 ```
 
+## asset
+
+<blockquote class="since note">
+
+Available since 2.26
+
+</blockquote>
+
+Resolve the URL of an asset in your `static` directory, by prefixing it with [`config.kit.paths.assets`](/docs/kit/configuration#paths) if configured, or otherwise by prefixing it with the base path.
+
+During server rendering, the base path is relative and depends on the page currently being rendered.
+
+```svelte
+<script>
+	import { asset } from '$app/paths';
+</script>
+
+<img alt="a potato" src={asset('potato.jpg')} />
+```
+
+<div class="ts-block">
+
+```dts
+function asset(file: Asset): string;
+```
+
+</div>
+
+
+
 ## assets
+
+<blockquote class="tag deprecated note">
+
+Use [`asset(...)`](/docs/kit/$app-paths#asset) instead
+
+</blockquote>
 
 An absolute path that matches [`config.kit.paths.assets`](/docs/kit/configuration#paths).
 
@@ -32,6 +68,12 @@ let assets:
 
 ## base
 
+<blockquote class="tag deprecated note">
+
+Use [`resolve(...)`](/docs/kit/$app-paths#resolve) instead
+
+</blockquote>
+
 A string that matches [`config.kit.paths.base`](/docs/kit/configuration#paths).
 
 Example usage: `<a href="{base}/your-page">Link</a>`
@@ -46,30 +88,57 @@ let base: '' | `/${string}`;
 
 
 
-## resolveRoute
+## resolve
 
-Populate a route ID with params to resolve a pathname.
+<blockquote class="since note">
+
+Available since 2.26
+
+</blockquote>
+
+Resolve a pathname by prefixing it with the base path, if any, or resolve a route ID by populating dynamic segments with parameters.
+
+During server rendering, the base path is relative and depends on the page currently being rendered.
 
 ```js
 // @errors: 7031
-import { resolveRoute } from '$app/paths';
+import { resolve } from '$app/paths';
 
-resolveRoute(
-	`/blog/[slug]/[...somethingElse]`,
-	{
-		slug: 'hello-world',
-		somethingElse: 'something/else'
-	}
-); // `/blog/hello-world/something/else`
+// using a pathname
+const resolved = resolve(`/blog/hello-world`);
+
+// using a route ID plus parameters
+const resolved = resolve('/blog/[slug]', {
+	slug: 'hello-world'
+});
 ```
 
 <div class="ts-block">
 
 ```dts
-function resolveRoute(
-	id: string,
-	params: Record<string, string | undefined>
-): string;
+function resolve<T extends RouteId | Pathname>(
+	...args: ResolveArgs<T>
+): ResolvedPathname;
+```
+
+</div>
+
+
+
+## resolveRoute
+
+<blockquote class="tag deprecated note">
+
+Use [`resolve(...)`](/docs/kit/$app-paths#resolve) instead
+
+</blockquote>
+
+<div class="ts-block">
+
+```dts
+function resolveRoute<T extends RouteId | Pathname>(
+	...args: ResolveArgs<T>
+): ResolvedPathname;
 ```
 
 </div>

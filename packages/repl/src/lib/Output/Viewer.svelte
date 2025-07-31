@@ -77,6 +77,9 @@
 				error.message = 'Uncaught (in promise): ' + error.message;
 				push_logs({ command: 'error', args: [error] });
 			},
+			on_iframe_reload: () => {
+				ready = false;
+			},
 			on_console: (log) => {
 				switch (log.command) {
 					case 'clear':
@@ -169,9 +172,63 @@
 								console.error(err);
 							}
 						}
+						window.__reset_custom_elements?.();
 
 						document.body.innerHTML = '';
 						window._svelteTransitionManager = null;
+					}
+
+					if (!window.__reset_custom_elements) {
+						const registered = new Map();
+						const define = CustomElementRegistry.prototype.define;
+						CustomElementRegistry.prototype.define = function(name, el, options) {
+							let ce = registered.get(name);
+							if (ce) {
+								if (ce.registered) {
+									// trigger error of re-registering
+									define.call(this, name, ce.el, options);
+								}
+								if (ce.options?.extends != options?.extends) {
+									parent.postMessage({ action: 'iframe_reload' }, '*');
+									location.reload();
+								}
+								ce.el = el;
+								ce.registered = true;
+							} else {
+								ce = { el, options, registered: true };
+								registered.set(name, ce);
+								const Wrapper = class extends el {
+									connectedCallback() {
+										ce.el.prototype.connectedCallback?.apply(this, arguments);
+									}
+									disconnectedCallback() {
+										ce.el.prototype.disconnectedCallback?.apply(this, arguments);
+									}
+									adoptedCallback() {
+										ce.el.prototype.adoptedCallback?.apply(this, arguments);
+									}
+								};
+								const DynamicWrapper = new Proxy(Wrapper, {
+									construct: function (_, args, newTarget) {
+										return Reflect.construct(ce.el, args, newTarget);
+									}
+								});
+								try {
+									define.call(this, name, DynamicWrapper, options);
+								} catch (error) {
+									console.error(error);
+									throw new Error('Failed to define a custom element '+name);
+								}
+							}
+						};
+						window.__reset_custom_elements = () => {
+							for (const ce of registered.values()) {
+								if (ce.registered) {
+									ce.el = HTMLElement;
+									ce.registered = false;
+								}
+							}
+						}
 					}
 
 					const __repl_exports = ${bundle.client?.code};
