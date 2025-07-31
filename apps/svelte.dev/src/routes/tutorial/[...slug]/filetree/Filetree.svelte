@@ -6,7 +6,7 @@
 	import { solution } from '../state.svelte';
 	import { afterNavigate } from '$app/navigation';
 	import type { Exercise } from '$lib/tutorial';
-	import type { Workspace, Item } from 'editor';
+	import type { Workspace, Item } from '@sveltejs/repl/workspace';
 
 	interface Props {
 		exercise: Exercise;
@@ -120,7 +120,7 @@
 		if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
 			e.preventDefault();
 			const lis = Array.from(e.currentTarget.querySelectorAll('li'));
-			const focused = lis.findIndex((li) => li.contains( (e.target as HTMLElement)));
+			const focused = lis.findIndex((li) => li.contains(e.target as HTMLElement));
 
 			const d = e.key === 'ArrowUp' ? -1 : +1;
 

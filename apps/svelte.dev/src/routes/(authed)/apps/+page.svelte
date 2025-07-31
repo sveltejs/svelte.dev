@@ -82,7 +82,7 @@
 			{:else}
 				<form
 					onsubmit={(e) => {
-						e.preventDefault()
+						e.preventDefault();
 						const search = new FormData(e.target as HTMLFormElement).get('search');
 						goto(search ? `/apps?search=${encodeURIComponent(search.toString())}` : '/apps');
 					}}
@@ -197,10 +197,6 @@
 		height: 100%;
 	}
 
-	.controls input,
-	.controls button {
-	}
-
 	.controls input[type='search'] {
 		position: relative;
 		width: 100%;
@@ -283,6 +279,7 @@
 
 	li.selected {
 		filter: drop-shadow(1px 2px 4px hsla(205.7, 63.6%, 30.8%, 0.1));
+		transform: var(--safari-fix);
 		-webkit-transform: var(--safari-fix);
 	}
 

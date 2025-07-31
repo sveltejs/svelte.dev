@@ -2,7 +2,7 @@
 title: The Omnisite
 description: Your one-stop-shop for everything Svelte
 author: Rich Harris
-authorURL: https://twitter.com/rich_harris
+authorURL: https://bsky.app/profile/rich-harris.dev
 ---
 
 Launching [Svelte 5](svelte-5-is-alive) and [the brand new `sv` CLI](https://www.youtube.com/watch?v=fAPFsRP-mbc#t=3h15m40s) wasn't enough: we've also released a brand new website. You're looking at it.

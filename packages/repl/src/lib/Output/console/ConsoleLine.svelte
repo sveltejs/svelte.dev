@@ -1,10 +1,15 @@
 <script lang="ts">
+	import ConsoleLine from './ConsoleLine.svelte';
 	import JSONNode from '@sveltejs/svelte-json-tree';
 	import ConsoleTable from './ConsoleTable.svelte';
-	import type { Log } from './Console.svelte';
+	import type { Log } from './Log.svelte';
 
-	export let log: Log;
-	export let depth = 0;
+	interface Props {
+		log: Log;
+		depth?: number;
+	}
+
+	let { log, depth = 0 }: Props = $props();
 
 	function toggle_group_collapse() {
 		log.collapsed = !log.collapsed;
@@ -150,7 +155,11 @@
 					{#if !part.formatted}
 						{' '}
 					{/if}{#if part.type === 'value'}
-						<JSONNode value={part.value} defaultExpandedLevel={log.expanded ? 1 : 0} />
+						{#if part.value instanceof Error}
+							<pre>{part.value.name + '\n' + part.value.stack.replace(/^\n+/, '')}</pre>
+						{:else}
+							<JSONNode value={part.value} defaultExpandedLevel={log.expanded ? 1 : 0} />
+						{/if}
 					{:else}
 						<!-- svelte-ignore a11y_no_static_element_interactions -->
 						<span class="styled" style={part.style} onclick={(e) => e.stopPropagation()}>
@@ -178,7 +187,7 @@
 
 {#if log.command === 'group' && !log.collapsed}
 	{#each log.logs ?? [] as childLog}
-		<svelte:self log={childLog} depth={depth + 1} />
+		<ConsoleLine log={childLog} depth={depth + 1} />
 	{/each}
 {/if}
 

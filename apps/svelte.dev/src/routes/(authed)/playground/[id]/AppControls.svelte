@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import UserMenu from './UserMenu.svelte';
 	import { Icon } from '@sveltejs/site-kit/components';
 	import { isMac } from '$lib/utils/compat.js';
@@ -7,9 +7,8 @@
 	import type { Gist, User } from '$lib/db/types';
 	import { browser } from '$app/environment';
 	import ModalDropdown from '$lib/components/ModalDropdown.svelte';
-	import { untrack } from 'svelte';
 	import SecondaryNav from '$lib/components/SecondaryNav.svelte';
-	import type { File } from 'editor';
+	import type { File } from '@sveltejs/repl/workspace';
 	import type { Repl } from '@sveltejs/repl';
 
 	interface Props {
@@ -161,20 +160,6 @@
 
 		saving = false;
 	}
-
-	// modifying an app should reset the `<select>`, so that
-	// the example can be reselected
-	$effect(() => {
-		if (modified) {
-			// this is a little tricky, but: we need to wrap this in untrack
-			// because otherwise we'll read `select.value` and re-run this
-			// when we navigate, which we don't want
-			untrack(() => {
-				// @ts-ignore not sure why this is erroring
-				select.value = '';
-			});
-		}
-	});
 </script>
 
 <svelte:window on:keydown={handleKeydown} />
@@ -193,7 +178,7 @@
 							<li>
 								<a
 									href="/playground/{example.slug}"
-									aria-current={$page.params.id === example.slug ? 'page' : undefined}
+									aria-current={page.params.id === example.slug && !modified ? 'page' : undefined}
 								>
 									{example.title}
 								</a>
@@ -286,20 +271,15 @@
 
 		&.login {
 			width: auto;
-			background-image: url($lib/icons/user-light.svg);
-			background-position: 0.4rem 50%;
-			padding: 0 0.4rem 0 2.8rem;
+			padding: 0 0.4rem;
 
-			:root.dark & {
-				background-image: url($lib/icons/user-dark.svg);
-			}
-		}
-
-		&.download {
-			background-image: url($lib/icons/download-light.svg);
-
-			:root.dark & {
-				background-image: url($lib/icons/download-dark.svg);
+			&::before {
+				content: '';
+				width: 1.8rem;
+				height: 1.8rem;
+				margin: 0 0.5rem 0 0;
+				background: currentColor;
+				mask: url(icons/user) no-repeat 50% 50%;
 			}
 		}
 	}

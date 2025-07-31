@@ -1,5 +1,5 @@
 <script>
-	let { data = $bindable() } = $props();
+	let { data } = $props();
 </script>
 
 <div class="centered">
@@ -26,10 +26,12 @@
 
 				const { id } = await response.json();
 
-				data.todos = [...data.todos, {
+				const todos = [...data.todos, {
 					id,
 					description
 				}];
+
+				data = { ...data, todos };
 
 				input.value = '';
 			}}
@@ -63,7 +65,9 @@
 								method: 'DELETE'
 							});
 
-							data.todos = data.todos.filter((t) => t !== todo);
+							const todos = data.todos.filter((t) => t !== todo);
+
+							data = { ...data, todos };
 						}}
 					></button>
 				</label>

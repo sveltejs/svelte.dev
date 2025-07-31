@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { afterNavigate } from '$app/navigation';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import { focusable_children, trap } from '@sveltejs/site-kit/actions';
 	import { Icon } from '@sveltejs/site-kit/components';
 	import type { Snippet } from 'svelte';
@@ -45,12 +45,12 @@
 		}
 
 		// except parents of the current one
-		const current = details.querySelector(`[href="${$page.url.pathname}"]`) as HTMLAnchorElement | null;
+		const current = details.querySelector(`[aria-current="page"]`) as HTMLAnchorElement | null;
 		if (!current) return;
 
 		let node = current as Element;
 
-		while ((node = (node.parentNode) as Element) && node !== details) {
+		while ((node = node.parentNode as Element) && node !== details) {
 			if (node.nodeName === 'DETAILS') {
 				(node as HTMLDetailsElement).open = true;
 			}
@@ -70,7 +70,10 @@
 			}
 		}
 
-		if (document.activeElement?.nodeName === 'SUMMARY' && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) {
+		if (
+			document.activeElement?.nodeName === 'SUMMARY' &&
+			(e.key === 'ArrowLeft' || e.key === 'ArrowRight')
+		) {
 			(document.activeElement.parentNode as HTMLDetailsElement).open = e.key === 'ArrowRight';
 		}
 	}}
@@ -89,10 +92,6 @@
 		&:has(:focus-visible) .raised.icon {
 			outline: 2px solid var(--sk-fg-accent);
 			border-radius: var(--sk-border-radius);
-		}
-
-		span {
-			pointer-events: none;
 		}
 	}
 

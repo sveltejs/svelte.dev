@@ -122,24 +122,19 @@
 			[data-file],
 			.filename {
 				cursor: pointer;
-				background-image: url($lib/icons/file.svg);
-				background-repeat: no-repeat;
 
-				:root.dark & {
-					background-image: url($lib/icons/file-dark.svg);
+				&::before {
+					position: relative;
+					content: '';
+					display: inline-block;
+					width: 1rem;
+					height: 1rem;
+					top: 0.1rem;
+					margin-right: 0.5rem;
+					background: currentColor;
+					mask: url(icons/file) 50% 50% no-repeat;
+					mask-size: 100%;
 				}
-			}
-
-			[data-file] {
-				background-position: 0.5rem 50%;
-				background-size: 1rem 1rem;
-				padding-left: 2rem;
-			}
-
-			.filename {
-				background-position: 0 54%;
-				background-size: 1rem 1rem;
-				padding-left: 1.5rem !important;
 			}
 
 			.desktop {

@@ -17,6 +17,7 @@ import { error, redirect } from '@sveltejs/kit';
 // 		[...page.body.matchAll(/(^|\n)### (\w+)/g)].map(([, , code]) => ({ code }))
 // 	);
 // }
+export const prerender = false;
 
 export async function load({ params, fetch }) {
 	const codes: Record<string, Record<string, string[]>> = await fetch('/e/tmp/codes.json').then(

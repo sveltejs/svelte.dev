@@ -9,15 +9,28 @@ Some migrations may annotate your codebase with tasks for completion that you ca
 
 ## Usage
 
-```bash
+```sh
+npx sv migrate
+```
+
+You can also specify a migration directly via the CLI:
+```sh
 npx sv migrate [migration]
 ```
 
 ## Migrations
 
+### `app-state`
+
+Migrates `$app/stores` usage to `$app/state` in `.svelte` files. See the [migration guide](/docs/kit/migrating-to-sveltekit-2#SvelteKit-2.12:-$app-stores-deprecated) for more details.
+
 ### `svelte-5`
 
 Upgrades a Svelte 4 app to use Svelte 5, and updates individual components to use [runes](../svelte/what-are-runes) and other Svelte 5 syntax ([see migration guide](../svelte/v5-migration-guide)).
+
+### `self-closing-tags`
+
+Replaces all the self-closing non-void elements in your `.svelte` files. See the [pull request](https://github.com/sveltejs/kit/pull/12128) for more details.
 
 ### `svelte-4`
 

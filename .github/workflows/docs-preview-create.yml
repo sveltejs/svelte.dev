@@ -1,19 +1,45 @@
 name: Docs preview create
 
 on:
-  repository_dispatch:
-    types: [docs-preview-create]
+  workflow_dispatch:
+    inputs:
+      repo:
+        description: 'Repository name (not fully-qualified, eg. `svelte` or `kit`)'
+        required: true
+        type: string
+      pr:
+        description: 'PR number'
+        required: true
+        type: string
+      owner:
+        description: 'Owner (eg. sveltejs)'
+        required: true
+        type: string
+      branch:
+        description: 'Branch (eg. my-feature-branch)'
+        required: true
+        type: string
+
+permissions:
+  contents: write
 
 env:
-  BRANCH: preview-${{ github.event.client_payload.package }}-${{ github.event.client_payload.pr }}
+  BRANCH: preview-${{ inputs.repo }}-${{ inputs.pr }}
 
 jobs:
   Sync:
+    name: Sync
     runs-on: ubuntu-latest
+
+    concurrency:
+      group: preview-${{ inputs.repo }}-${{ inputs.pr }} # can't reference env here
+      cancel-in-progress: true
+
     steps:
       - uses: actions/checkout@v4
         with:
           token: ${{ secrets.GH_TOKEN }}
+          ref: main # Explicitly checkout main branch first
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
@@ -21,11 +47,13 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
 
-      - name: Checkout
-        run: git fetch origin ${{ env.BRANCH }} && git checkout ${{ env.BRANCH }} || git checkout -b ${{ env.BRANCH }}
+      - name: Create or reset branch from main
+        run: |
+          git fetch origin
+          git checkout -B ${{ env.BRANCH }} # Force create/reset branch based on current main
 
       - name: Sync
-        run: cd apps/svelte.dev && pnpm sync-docs --owner="${{ github.event.client_payload.owner }}" -p "${{ github.event.client_payload.package }}#${{ github.event.client_payload.branch }}"
+        run: cd apps/svelte.dev && pnpm sync-docs --owner="${{ inputs.owner }}" -p "${{ inputs.repo }}#${{ inputs.branch }}"
 
       - name: Configure Git
         run: |
@@ -34,27 +62,14 @@ jobs:
 
       - name: Push
         id: push
-        run: git add -A && git commit -m "sync docs" && git push -u origin ${{ env.BRANCH }}
+        run: git add -A && git commit -m "sync docs" && git push -u origin ${{ env.BRANCH }} --force
 
-      - name: Find comment
-        id: fc
-        uses: peter-evans/find-comment@v3
+      - name: Request preview comment
+        uses: peter-evans/repository-dispatch@v3
         with:
-          token: ${{ secrets.COMMENTER_TOKEN }}
-          repository: ${{ github.event.client_payload.repo }}
-          issue-number: ${{ github.event.client_payload.pr }}
-          comment-author: 'Rich-Harris' # it's using my personal access token, not sure if there's a way to comment as a bot instead
-          body-includes: _this is an automated message_
-
-      - name: Create comment
-        if: steps.fc.outputs.comment-id == ''
-        uses: peter-evans/create-or-update-comment@v4
-        with:
-          token: ${{ secrets.COMMENTER_TOKEN }}
-          repository: ${{ github.event.client_payload.repo }}
-          issue-number: ${{ github.event.client_payload.pr }}
-          body: |
-            preview: https://svelte-dev-git-${{ env.BRANCH }}-svelte.vercel.app/
-
-            _this is an automated message_
-          edit-mode: replace
+          event-type: 'request-preview-comment'
+          client-payload: |-
+            {
+              "repo": "${{ inputs.repo }}",
+              "pr": "${{ inputs.pr }}"
+            }

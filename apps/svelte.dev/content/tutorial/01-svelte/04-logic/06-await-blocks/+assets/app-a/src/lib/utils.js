@@ -9,7 +9,7 @@ export async function roll() {
 				return;
 			}
 
-			fulfil(Math.ceil(Math.random() * 6));
+			fulfil(Math.floor(Math.random() * 6) + 1);
 		}, 1000);
 	});
 }

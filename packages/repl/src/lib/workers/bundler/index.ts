@@ -1,9 +1,9 @@
 import '@sveltejs/site-kit/polyfills';
+import { walk } from 'zimmerframe';
 import '../patch_window';
-import { sleep } from '../../utils';
 import { rollup } from '@rollup/browser';
 import { DEV } from 'esm-env';
-import * as resolve from 'resolve.exports';
+import typescript_strip_types from './plugins/typescript';
 import commonjs from './plugins/commonjs';
 import glsl from './plugins/glsl';
 import json from './plugins/json';
@@ -12,85 +12,77 @@ import image from './plugins/image';
 import svg from './plugins/svg';
 import replace from './plugins/replace';
 import loop_protect from './plugins/loop-protect';
-import type { Plugin, TransformResult } from '@rollup/browser';
-import type { BundleMessageData } from '../workers';
+import alias_plugin, { resolve } from './plugins/alias';
+import type { Plugin, RollupCache, TransformResult } from '@rollup/browser';
+import type { BundleMessageData, BundleOptions } from '../workers';
 import type { Warning } from '../../types';
-import type { CompileError, CompileOptions, CompileResult } from 'svelte/compiler';
-import type { File } from 'editor';
-import { parseTar, type FileDescription } from 'tarparser';
+import type { CompileError, CompileResult } from 'svelte/compiler';
+import type { File } from '../../Workspace.svelte';
+import type { Node } from 'estree';
 import { max } from './semver';
+import { NPM, VIRTUAL } from '../constants';
+import {
+	normalize_path,
+	fetch_package,
+	load_svelte,
+	parse_npm_url,
+	resolve_local,
+	resolve_subpath,
+	resolve_version,
+	type Package
+} from '../npm';
+import type { BundleResult } from '$lib/public';
 
 // hack for magic-string and rollup inline sourcemaps
 // do not put this into a separate module and import it, would be treeshaken in prod
 self.window = self;
 
-let packages_url: string;
-let svelte_url: string;
-let version: string;
+const ENTRYPOINT = '__entry.js';
+const WRAPPER = '__wrapper.svelte';
+const STYLES = '__styles.js';
+const ESM_ENV = '__esm-env.js';
+
 let current_id: number;
 
-let inited = Promise.withResolvers<typeof svelte>();
-
-async function init(v: string, packages_url: string) {
-	const match = /^(pr|commit)-(.+)/.exec(v);
-
-	let tarball: FileDescription[] | undefined;
-
-	if (match) {
-		const response = await fetch(`https://pkg.pr.new/svelte@${match[2]}`);
-
-		if (!response.ok) {
-			throw new Error(
-				`impossible to fetch the compiler from this ${match[1] === 'pr' ? 'PR' : 'commit'}`
-			);
-		}
-
-		tarball = await parseTar(await response.arrayBuffer());
-
-		const json = tarball.find((file) => file.name === 'package/package.json')!.text;
-		version = JSON.parse(json).version;
-
-		svelte_url = `svelte://svelte@${version}`;
-
-		for (const file of tarball) {
-			const url = `${svelte_url}/${file.name.slice('package/'.length)}`;
-			FETCH_CACHE.set(url, Promise.resolve({ url, body: file.text }));
-		}
-	} else {
-		const response = await fetch(`${packages_url}/svelte@${v}/package.json`);
-		const pkg = await response.json();
-		version = pkg.version;
-		svelte_url = `${packages_url}/svelte@${version}`;
-	}
-
-	console.log(`Using Svelte compiler version ${version}`);
-
-	const entry = version.startsWith('3.')
-		? 'compiler.js'
-		: version.startsWith('4.')
-			? 'compiler.cjs'
-			: 'compiler/index.js';
-
-	const compiler = tarball
-		? tarball.find((file) => file.name === `package/${entry}`)!.text
-		: await fetch(`${svelte_url}/${entry}`).then((r) => r.text());
-
-	(0, eval)(compiler + `\n//# sourceURL=${entry}@` + version);
-
-	return svelte;
-}
+let ready: ReturnType<typeof load_svelte>;
 
 self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) => {
 	switch (event.data.type) {
 		case 'init': {
-			packages_url = event.data.packages_url;
-			init(event.data.svelte_version, packages_url).then(inited.resolve, inited.reject);
+			ready = load_svelte(event.data.svelte_version, (version) => {
+				self.postMessage({
+					type: 'version',
+					message: version
+				});
+			});
+
 			break;
 		}
 
 		case 'bundle': {
 			try {
-				await inited.promise;
+				const { svelte, version: svelte_version, can_use_experimental_async } = await ready;
+				const { uid, files, options } = event.data;
+
+				current_id = uid;
+
+				setTimeout(async () => {
+					if (current_id !== uid) return;
+
+					const result = await bundle(
+						svelte,
+						svelte_version,
+						uid,
+						files,
+						options,
+						can_use_experimental_async
+					);
+
+					console.log('[bundle worker result]', result);
+
+					if (JSON.stringify(result.error) === JSON.stringify(ABORT)) return;
+					if (result && uid === current_id) postMessage(result);
+				});
 			} catch (e) {
 				self.postMessage({
 					type: 'error',
@@ -98,328 +90,270 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 					message: `Error loading the compiler: ${(e as Error).message}`
 				});
 			}
-			const { uid, files, options } = event.data;
-
-			if (files.length === 0) return;
-
-			current_id = uid;
-
-			setTimeout(async () => {
-				if (current_id !== uid) return;
-
-				const result = await bundle({ uid, files, options });
-
-				if (JSON.stringify(result.error) === JSON.stringify(ABORT)) return;
-				if (result && uid === current_id) postMessage(result);
-			});
 
 			break;
 		}
 	}
 });
 
-let cached: Record<
-	'client' | 'server',
-	Map<string, { code: string; result: ReturnType<typeof svelte.compile> }>
-> = {
-	client: new Map(),
-	server: new Map()
-};
-
 const ABORT = { aborted: true };
 
-const FETCH_CACHE: Map<string, Promise<{ url: string; body: string }>> = new Map();
+let previous: {
+	key: string;
+	cache: RollupCache | undefined;
+	/** Needed because if rollup cache hits then we won't be able to pick up all candidates in subsequent runs */
+	tailwind_candidates: Set<string>;
+};
 
-async function fetch_if_uncached(url: string, uid: number) {
-	if (FETCH_CACHE.has(url)) {
-		return FETCH_CACHE.get(url);
-	}
+let tailwind: Awaited<ReturnType<typeof init_tailwind>>;
 
-	// TODO: investigate whether this is necessary
-	await sleep(50);
-	if (uid !== current_id) throw ABORT;
+async function init_tailwind(user_css = '') {
+	const tailwindcss = await import('tailwindcss');
 
-	const promise = fetch(url)
-		.then(async (r) => {
-			if (!r.ok) throw new Error(await r.text());
+	const { default: tailwind_preflight } = await import('tailwindcss/preflight.css?raw');
+	const { default: tailwind_theme } = await import('tailwindcss/theme.css?raw');
+	const { default: tailwind_utilities } = await import('tailwindcss/utilities.css?raw');
 
-			return {
-				url: r.url,
-				body: await r.text()
-			};
-		})
-		.catch((err) => {
-			FETCH_CACHE.delete(url);
-			throw err;
-		});
+	const tailwind_files: Record<string, string> = {
+		'tailwindcss/theme.css': tailwind_theme,
+		'tailwindcss/preflight.css': tailwind_preflight,
+		'tailwindcss/utilities.css': tailwind_utilities
+	};
 
-	FETCH_CACHE.set(url, promise);
-	return promise;
-}
+	const tailwind_base = [
+		`@layer theme, base, components, utilities;`,
+		`@import "tailwindcss/theme.css" layer(theme);`,
+		`@import "tailwindcss/preflight.css" layer(base);`,
+		`@import "tailwindcss/utilities.css" layer(utilities);`,
+		user_css
+	].join('\n');
 
-async function follow_redirects(url: string, uid: number) {
-	const res = await fetch_if_uncached(url, uid);
-	return res?.url;
-}
-
-async function resolve_from_pkg(
-	pkg: Record<string, unknown>,
-	subpath: string,
-	uid: number,
-	pkg_url_base: string
-) {
-	// match legacy Rollup logic — pkg.svelte takes priority over pkg.exports
-	if (typeof pkg.svelte === 'string' && subpath === '.') {
-		return pkg.svelte;
-	}
-
-	// modern
-	if (pkg.exports) {
-		try {
-			const resolved = resolve.exports(pkg, subpath, {
-				browser: true,
-				conditions: ['svelte', 'module', 'browser', 'development']
-			});
-
-			return resolved?.[0];
-		} catch {
-			throw `no matched export path was found in "${pkg.name}/package.json"`;
+	return await tailwindcss.compile(tailwind_base, {
+		loadStylesheet: async (id, base) => {
+			return { content: tailwind_files[id], base };
 		}
-	}
-
-	// legacy
-	if (subpath === '.') {
-		let resolved_id = resolve.legacy(pkg, {
-			fields: ['browser', 'module', 'main']
-		});
-
-		if (typeof resolved_id === 'object' && !Array.isArray(resolved_id)) {
-			const subpath = resolved_id['.'];
-			if (subpath === false) return 'data:text/javascript,export {}';
-
-			resolved_id =
-				subpath ??
-				resolve.legacy(pkg, {
-					fields: ['module', 'main']
-				});
-		}
-
-		if (!resolved_id) {
-			// last ditch — try to match index.js/index.mjs
-			for (const index_file of ['index.mjs', 'index.js']) {
-				try {
-					const indexUrl = new URL(index_file, `${pkg_url_base}/`).href;
-					return (await follow_redirects(indexUrl, uid)) ?? '';
-				} catch {
-					// maybe the next option will be successful
-				}
-			}
-
-			throw `could not find entry point in "${pkg.name}/package.json"`;
-		}
-
-		return resolved_id;
-	}
-
-	if (typeof pkg.browser === 'object') {
-		// this will either return `pkg.browser[subpath]` or `subpath`
-		return resolve.legacy(pkg, {
-			browser: subpath
-		});
-	}
-
-	return subpath;
+	});
 }
-
-const versions = Object.create(null);
 
 async function get_bundle(
+	svelte: typeof import('svelte/compiler'),
+	svelte_version: string,
 	uid: number,
 	mode: 'client' | 'server',
-	cache: (typeof cached)['client'],
-	local_files_lookup: Map<string, File>,
-	options: CompileOptions
+	virtual: Map<string, File>,
+	options: BundleOptions,
+	can_use_experimental_async: boolean
 ) {
 	let bundle;
 
+	const key = JSON.stringify(options);
 	/** A set of package names (without subpaths) to include in pkg.devDependencies when downloading an app */
 	const imports: Set<string> = new Set();
 	const warnings: Warning[] = [];
 	const all_warnings: Array<{ message: string }> = [];
-	const new_cache: typeof cache = new Map();
+
+	const tailwind_candidates =
+		previous?.key === key ? previous.tailwind_candidates : new Set<string>();
+
+	function add_tailwind_candidates(ast: Node | undefined) {
+		if (!ast) return;
+
+		walk(ast, null, {
+			ImportDeclaration() {
+				// don't descend into these nodes, so that we don't
+				// pick up import sources
+			},
+			Literal(node) {
+				if (typeof node.value === 'string' && node.value) {
+					for (const candidate of node.value.split(' ')) {
+						if (candidate) tailwind_candidates.add(candidate);
+					}
+				}
+			},
+			TemplateElement(node) {
+				if (node.value.raw) {
+					for (const candidate of node.value.raw.split(' ')) {
+						if (candidate) tailwind_candidates.add(candidate);
+					}
+				}
+			}
+		});
+	}
 
 	const repl_plugin: Plugin = {
 		name: 'svelte-repl',
 		async resolveId(importee, importer) {
 			if (uid !== current_id) throw ABORT;
 
-			if (importee === 'esm-env') return importee;
+			// entrypoint
+			if (!importer) return `${VIRTUAL}/${ENTRYPOINT}`;
 
-			if (importee === shared_file) return importee;
-
-			// importing from another file in REPL
-			if (local_files_lookup.has(importee) && (!importer || local_files_lookup.has(importer)))
-				return importee;
-			if (local_files_lookup.has(importee + '.js')) return importee + '.js';
-			if (local_files_lookup.has(importee + '.json')) return importee + '.json';
-
-			// remove trailing slash
-			if (importee.endsWith('/')) importee = importee.slice(0, -1);
+			// special case
+			if (importee === 'esm-env') return `${VIRTUAL}/${ESM_ENV}`;
 
 			// importing from a URL
-			if (/^https?:/.test(importee)) return importee;
+			if (/^[a-z]+:/.test(importee)) return importee;
 
-			if (importee.startsWith('.')) {
-				if (importer && local_files_lookup.has(importer)) {
-					// relative import in a REPL file
-					// should've matched above otherwise importee doesn't exist
-					console.error(`Cannot find file "${importee}" imported by "${importer}" in the REPL`);
-					return;
+			/** The npm package we're importing from, if any */
+			let current: null | Package;
+
+			if (importer.startsWith(NPM)) {
+				const { name, version } = parse_npm_url(importer);
+				current = await fetch_package(name, name === 'svelte' ? svelte_version : version);
+			}
+
+			// importing a relative file
+			if (importee[0] === '.') {
+				if (importer.startsWith(VIRTUAL)) {
+					return resolve(virtual, importee, importer);
+				}
+
+				if (current) {
+					const { name, version } = current.meta;
+					const path = new URL(importee, importer).href.replace(`${NPM}/${name}@${version}/`, '');
+
+					return normalize_path(current, path, importee, importer);
+				}
+
+				return new URL(importee, importer).href;
+			}
+
+			// importing a file from the same package via pkg.imports
+			if (importee[0] === '#') {
+				if (current) {
+					const subpath = resolve_subpath(current, importee);
+					return normalize_path(current, subpath.slice(2), importee, importer);
+				}
+				return await resolve_local(importee);
+			}
+
+			// importing an external package -> `npm://$/<name>@<version>/<path>`
+			const match = /^((?:@[^/]+\/)?[^/@]+)(?:@([^/]+))?(\/.+)?$/.exec(importee);
+			if (!match) throw new Error(`Invalid import "${importee}"`);
+
+			const pkg_name = match[1];
+
+			if (pkg_name === 'svelte' && svelte_version === 'local') {
+				return await resolve_local(importee);
+			}
+
+			let default_version = 'latest';
+
+			if (current) {
+				// use the version specified in importer's package.json, not `latest`
+				const { meta } = current;
+
+				if (meta.name === pkg_name) {
+					default_version = meta.version;
 				} else {
-					// relative import in an external file
-					const url = new URL(importee, importer).href;
-					self.postMessage({ type: 'status', uid, message: `resolving ${url}` });
-					return await follow_redirects(url, uid);
-				}
-			} else {
-				// fetch from unpkg
-				self.postMessage({ type: 'status', uid, message: `resolving ${importee}` });
-
-				const match = /^((?:@[^/]+\/)?[^/@]+)(?:@([^/]+))?(\/.+)?$/.exec(importee);
-				if (!match) {
-					return console.error(`Invalid import "${importee}"`);
-				}
-
-				const pkg_name = match[1];
-
-				let default_version = 'latest';
-
-				if (importer?.startsWith(packages_url)) {
-					const path = importer.slice(packages_url.length + 1);
-					const parts = path.split('/').slice(0, 2);
-					if (!parts[0].startsWith('@')) parts.pop();
-
-					const importer_name_and_version = parts.join('/');
-					const importer_name = importer_name_and_version.slice(
-						0,
-						importer_name_and_version.indexOf('@', 1)
+					default_version = max(
+						meta.devDependencies?.[pkg_name] ??
+							meta.peerDependencies?.[pkg_name] ??
+							meta.dependencies?.[pkg_name]
 					);
-
-					const default_versions = (versions[importer_name_and_version] ??= Object.create(null));
-
-					if (!default_versions[pkg_name]) {
-						const pkg_json_url = `${packages_url}/${importer_name_and_version}/package.json`;
-						const pkg_json = (await fetch_if_uncached(pkg_json_url, uid))?.body;
-						const pkg = JSON.parse(pkg_json ?? '""');
-
-						if (importer_name === pkg_name) {
-							default_versions[pkg_name] = pkg.version;
-						} else {
-							const version =
-								pkg.devDependencies?.[pkg_name] ??
-								pkg.peerDependencies?.[pkg_name] ??
-								pkg.dependencies?.[pkg_name];
-
-							default_versions[pkg_name] = max(version);
-						}
-					}
-
-					default_version = default_versions[pkg_name];
-				}
-
-				const pkg_url =
-					pkg_name === 'svelte'
-						? `${svelte_url}/package.json`
-						: `${packages_url}/${pkg_name}@${match[2] ?? default_version}/package.json`;
-				const subpath = `.${match[3] ?? ''}`;
-
-				// if this was imported by one of our files, add it to the `imports` set
-				if (importer && local_files_lookup.has(importer)) {
-					imports.add(pkg_name);
-				}
-
-				const fetch_package_info = async (pkg_url: string) => {
-					try {
-						const redirected = await follow_redirects(pkg_url, uid);
-
-						if (!redirected) throw new Error();
-
-						const pkg_json = (await fetch_if_uncached(redirected, uid))?.body;
-						const pkg = JSON.parse(pkg_json ?? '""');
-
-						const pkg_url_base = redirected.replace(/\/package\.json$/, '');
-
-						return {
-							pkg,
-							pkg_url_base
-						};
-					} catch (_e) {
-						throw new Error(`Error fetching "${pkg_name}" from unpkg. Does the package exist?`);
-					}
-				};
-
-				const { pkg, pkg_url_base } = await fetch_package_info(pkg_url);
-
-				try {
-					const resolved_id = await resolve_from_pkg(pkg, subpath, uid, pkg_url_base);
-					return new URL(resolved_id + '', `${pkg_url_base}/`).href;
-				} catch (reason) {
-					throw new Error(`Cannot import "${importee}": ${reason}.`);
 				}
 			}
+
+			if (importer.startsWith(VIRTUAL)) {
+				// if this was imported by one of our files, add it to the `imports` set
+				imports.add(pkg_name);
+			}
+
+			const v = await resolve_version(match[1], match[2] ?? default_version);
+			const pkg = await fetch_package(pkg_name, pkg_name === 'svelte' ? svelte_version : v);
+			const subpath = resolve_subpath(pkg, '.' + (match[3] ?? ''));
+
+			return normalize_path(pkg, subpath.slice(2), importee, importer);
 		},
 		async load(resolved) {
 			if (uid !== current_id) throw ABORT;
 
-			if (resolved === 'esm-env') {
-				return `export const BROWSER = true; export const DEV = true`;
+			if (resolved.startsWith(VIRTUAL)) {
+				const file = virtual.get(resolved.slice(VIRTUAL.length + 1))!;
+				return file.contents;
 			}
 
-			const cached_file = local_files_lookup.get(resolved);
-			if (cached_file) {
-				return cached_file.contents;
+			if (resolved.startsWith(NPM)) {
+				let [, name, v, subpath] = /^npm:\/\/\$\/((?:@[^/]+\/)?[^/@]+)(?:@([^/]+))?\/(.+)$/.exec(
+					resolved
+				)!;
+
+				const pkg = await fetch_package(name, name === 'svelte' ? svelte_version : v);
+
+				const file = pkg.contents[subpath];
+				if (file) return file.text;
 			}
 
-			if (!FETCH_CACHE.has(resolved)) {
-				self.postMessage({ type: 'status', uid, message: `fetching ${resolved}` });
-			}
+			const response = await fetch(resolved);
+			if (response.ok) return response.text();
 
-			const res = await fetch_if_uncached(resolved, uid);
-			return res?.body;
+			throw new Error(`Could not load ${resolved}`);
 		},
 		transform(code, id) {
 			if (uid !== current_id) throw ABORT;
 
-			self.postMessage({ type: 'status', uid, message: `bundling ${id}` });
+			const name = id.replace(VIRTUAL + '/', '').replace(NPM + '/', '');
 
-			if (!/\.(svelte|js)$/.test(id)) return null;
+			self.postMessage({ type: 'status', message: `bundling ${name}` });
 
-			const name = id.split('/').pop()?.split('.')[0];
+			if (!/\.(svelte|js|ts)$/.test(id)) return null;
 
-			const cached_id = cache.get(id);
 			let result: CompileResult;
 
-			if (cached_id && cached_id.code === code) {
-				result = cached_id.result;
-			} else if (id.endsWith('.svelte')) {
-				result = svelte.compile(code, {
-					...options,
-					filename: name + '.svelte',
-					// @ts-expect-error
-					generate: Number(svelte.VERSION.split('.')[0]) >= 5 ? 'client' : 'dom',
-					dev: true
+			if (id.endsWith('.svelte')) {
+				const is_gt_5 = Number(svelte.VERSION.split('.')[0]) >= 5;
+
+				const compilerOptions: any = {
+					filename: name,
+					generate: is_gt_5 ? 'client' : 'dom',
+					dev: true,
+					fragments: options.fragments
+				};
+
+				if (is_gt_5) {
+					compilerOptions.runes = options.runes;
+				}
+
+				if (can_use_experimental_async) {
+					compilerOptions.experimental = { async: true };
+				}
+
+				if (compilerOptions.fragments == null) {
+					// if fragments is not set it probably means we are using
+					// a version that doesn't support it, so we need to remove it
+					delete compilerOptions.fragments;
+				}
+
+				result = svelte.compile(code, compilerOptions);
+
+				walk(result.ast.html as import('svelte/compiler').AST.TemplateNode, null, {
+					Attribute(node) {
+						if (Array.isArray(node.value)) {
+							for (const chunk of node.value) {
+								if (chunk.type === 'Text') {
+									for (const candidate of chunk.data.split(' ')) {
+										if (candidate) tailwind_candidates.add(candidate);
+									}
+								}
+							}
+						}
+					}
 				});
+
+				add_tailwind_candidates(result.ast.module);
+				add_tailwind_candidates(result.ast.instance);
+				add_tailwind_candidates(result.ast.html);
 
 				if (result.css?.code) {
 					// resolve local files by inlining them
 					result.css.code = result.css.code.replace(
-						/url\(['"]?(\..+?\.(svg|webp|png))['"]?\)/g,
+						/url\(['"]?\.\/(.+?\.(svg|webp|png))['"]?\)/g,
 						(match, $1, $2) => {
-							if (local_files_lookup.has($1)) {
+							if (virtual.has($1)) {
 								if ($2 === 'svg') {
-									return `url('data:image/svg+xml;base64,${btoa(local_files_lookup.get($1)!.contents)}')`;
+									return `url('data:image/svg+xml;base64,${btoa(virtual.get($1)!.contents)}')`;
 								} else {
-									return `url('data:image/${$2};base64,${local_files_lookup.get($1)!.contents}')`;
+									return `url('data:image/${$2};base64,${virtual.get($1)!.contents}')`;
 								}
 							} else {
 								return match;
@@ -430,27 +364,32 @@ async function get_bundle(
 					result.js.code +=
 						'\n\n' +
 						`
-					import { styles as $$_styles } from '${shared_file}';
+					import { styles as $$_styles } from '${VIRTUAL}/${STYLES}';
 					const $$__style = document.createElement('style');
 					$$__style.textContent = ${JSON.stringify(result.css.code)};
 					document.head.append($$__style);
 					$$_styles.push($$__style);
 				`.replace(/\t/g, '');
 				}
-			} else if (id.endsWith('.svelte.js')) {
-				result = svelte.compileModule?.(code, {
-					filename: name + '.js',
+			} else if (/\.svelte\.(js|ts)$/.test(id)) {
+				const compilerOptions: any = {
+					filename: name,
 					generate: 'client',
 					dev: true
-				});
+				};
+
+				if (can_use_experimental_async) {
+					compilerOptions.experimental = { async: true };
+				}
+
+				result = svelte.compileModule?.(code, compilerOptions);
+
 				if (!result) {
 					return null;
 				}
 			} else {
 				return null;
 			}
-
-			new_cache.set(id, { code, result });
 
 			// @ts-expect-error
 			(result.warnings || result.stats?.warnings)?.forEach((warning) => {
@@ -471,84 +410,118 @@ async function get_bundle(
 		}
 	};
 
-	try {
-		bundle = await rollup({
-			input: './__entry.js',
-			plugins: [
-				repl_plugin,
-				commonjs,
-				json,
-				svg,
-				mp3,
-				image,
-				glsl,
-				loop_protect,
-				replace({
-					'process.env.NODE_ENV': JSON.stringify('production')
-				})
-			],
-			output: {
-				inlineDynamicImports: true
-			},
-			onwarn(warning) {
-				all_warnings.push({
-					message: warning.message
-				});
-			}
-		});
+	const handled_css_ids = new Set<string>();
+	let user_css = '';
 
-		return {
-			bundle,
-			imports: Array.from(imports),
-			cache: new_cache,
-			error: null,
-			warnings,
-			all_warnings
-		};
-	} catch (error) {
-		return { error, imports: null, bundle: null, cache: new_cache, warnings, all_warnings };
-	}
+	bundle = await rollup({
+		input: './__entry.js',
+		cache: previous?.key === key ? previous.cache : true,
+		plugins: [
+			alias_plugin(options.aliases, virtual),
+			typescript_strip_types,
+			repl_plugin,
+			commonjs,
+			json,
+			svg,
+			mp3,
+			image,
+			glsl,
+			loop_protect,
+			replace({
+				'process.env.NODE_ENV': JSON.stringify('production')
+			}),
+			{
+				name: 'css',
+				transform(code, id) {
+					if (id.endsWith('.css')) {
+						if (!handled_css_ids.has(id)) {
+							handled_css_ids.add(id);
+							// We don't handle imports in the user CSS right now, so we remove them
+							// to avoid errors in e.g. the Tailwind compiler
+							user_css += '\n' + code.replace(/@import\s+["'][^"']+["'][^;]*;/g, '');
+						}
+						return {
+							code: '',
+							map: null
+						};
+					}
+				}
+			},
+			options.tailwind && {
+				name: 'tailwind-extract',
+				transform(code, id) {
+					// TODO tidy this up
+					if (id.startsWith(`${NPM}/svelte@`)) return;
+					if (id.startsWith(`${NPM}/clsx@`)) return;
+					if (id === `${VIRTUAL}/${ENTRYPOINT}`) return;
+					if (id === `${VIRTUAL}/${STYLES}`) return;
+					if (id === `${VIRTUAL}/${ESM_ENV}`) return;
+					if (id.endsWith('.svelte')) return;
+
+					try {
+						// Don't let a parser/tailwind error crash the bundler
+						// Can happen for files that begin with a bash shebang
+						add_tailwind_candidates(this.parse(code));
+					} catch {}
+				}
+			}
+		],
+		onwarn(warning) {
+			all_warnings.push({
+				message: warning.message
+			});
+		}
+	});
+
+	previous = { key, cache: bundle.cache, tailwind_candidates };
+
+	return {
+		bundle,
+		css: options.tailwind
+			? (tailwind ?? (await init_tailwind(user_css))).build([...tailwind_candidates])
+			: user_css
+				? user_css
+				: null,
+		imports: Array.from(imports),
+		error: null,
+		warnings,
+		all_warnings
+	};
 }
 
-export type BundleResult = ReturnType<typeof bundle>;
-
-const shared_file = '$$__shared__.js';
-
-async function bundle({
-	uid,
-	files,
-	options
-}: {
-	uid: number;
-	files: File[];
-	options: CompileOptions;
-}) {
+async function bundle(
+	svelte: typeof import('svelte/compiler'),
+	svelte_version: string,
+	uid: number,
+	files: File[],
+	options: BundleOptions,
+	can_use_experimental_async: boolean
+): Promise<BundleResult> {
 	if (!DEV) {
-		console.clear();
 		console.log(`running Svelte compiler version %c${svelte.VERSION}`, 'font-weight: bold');
 	}
 
 	const lookup: Map<string, File> = new Map();
 
-	lookup.set('./__entry.js', {
+	lookup.set(ENTRYPOINT, {
 		type: 'file',
-		name: '__entry.js',
-		basename: '__entry.js',
+		name: ENTRYPOINT,
+		basename: ENTRYPOINT,
 		contents:
-			version.split('.')[0] >= '5'
+			svelte.VERSION.split('.')[0] >= '5'
 				? `
 			import { unmount as u } from 'svelte';
-			import { styles } from '${shared_file}';
+			import { styles } from '${VIRTUAL}/${STYLES}';
 			export { mount, untrack } from 'svelte';
-			export {default as App} from './App.svelte';
+			export { default as App } from '${VIRTUAL}/${WRAPPER}';
 			export function unmount(component) {
 				u(component);
 				styles.forEach(style => style.remove());
 			}
 		`
 				: `
-			import { styles } from '${shared_file}';
-			export {default as App} from './App.svelte';
+			import { styles } from '${VIRTUAL}/${STYLES}';
+			export { default as App } from './App.svelte';
 			export function mount(component, options) {
 				return new component(options);
 			}
@@ -563,54 +536,90 @@ async function bundle({
 		text: true
 	});
 
-	lookup.set(shared_file, {
+	const wrapper = can_use_experimental_async
+		? `
+		<script>
+			import App from './App.svelte';
+		</script>
+
+		<svelte:boundary>
+			<App />
+
+			{#snippet pending()}{/snippet}
+		</svelte:boundary>
+	`
+		: `
+		<script>
+			import App from './App.svelte';
+		</script>
+
+		<App />
+	`;
+
+	lookup.set(WRAPPER, {
 		type: 'file',
-		name: shared_file,
-		basename: shared_file,
+		name: WRAPPER,
+		basename: WRAPPER,
+		contents: wrapper,
+		text: true
+	});
+
+	lookup.set(STYLES, {
+		type: 'file',
+		name: STYLES,
+		basename: STYLES,
 		contents: `
 			export let styles = [];
 		`,
 		text: true
 	});
 
-	files.forEach((file) => {
-		const path = `./${file.name}`;
-		lookup.set(path, file);
+	lookup.set(ESM_ENV, {
+		type: 'file',
+		name: STYLES,
+		basename: STYLES,
+		contents: `
+			export const BROWSER = true;
+			export const DEV = true;
+		`,
+		text: true
 	});
 
-	let client: Awaited<ReturnType<typeof get_bundle>> = await get_bundle(
-		uid,
-		'client',
-		cached.client,
-		lookup,
-		options
-	);
+	files.forEach((file) => {
+		lookup.set(file.name, file);
+	});
 
 	try {
-		if (client.error) {
-			throw client.error;
-		}
-
-		cached.client = client.cache;
+		let client: Awaited<ReturnType<typeof get_bundle>> = await get_bundle(
+			svelte,
+			svelte_version,
+			uid,
+			'client',
+			lookup,
+			options,
+			can_use_experimental_async
+		);
 
 		const client_result = (
 			await client.bundle?.generate({
 				format: 'iife',
-				exports: 'named'
+				exports: 'named',
+				inlineDynamicImports: true
 				// sourcemap: 'inline'
 			})
 		)?.output[0];
 
 		const server = false // TODO how can we do SSR?
-			? await get_bundle(uid, 'server', cached.server, lookup, options)
+			? await get_bundle(
+					svelte,
+					svelte_version,
+					uid,
+					'server',
+					lookup,
+					options,
+					can_use_experimental_async
+				)
 			: null;
-
-		if (server) {
-			cached.server = server.cache;
-			if (server.error) {
-				throw server.error;
-			}
-		}
 
 		const server_result = server
 			? (
@@ -625,25 +634,24 @@ async function bundle({
 
 		return {
 			uid,
+			error: null,
 			client: client_result,
 			server: server_result,
-			imports: client.imports,
-			// Svelte 5 returns warnings as error objects with a toJSON method, prior versions return a POJO
-			warnings: client.warnings.map((w: any) => w.toJSON?.() ?? w),
-			error: null
+			css: client.css,
+			imports: client.imports
 		};
 	} catch (err) {
 		console.error(err);
 
-		const e = err as CompileError;
+		const e = err as CompileError; // TODO could be a non-Svelte error?
 
 		return {
 			uid,
+			error: { ...e, message: e.message }, // not all Svelte versions return an enumerable message property
 			client: null,
 			server: null,
-			imports: null,
-			warnings: client.warnings,
-			error: { ...e, message: e.message } // not all Svelte versions return an enumerable message property
+			css: null,
+			imports: null
 		};
 	}
 }

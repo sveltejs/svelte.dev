@@ -24,7 +24,7 @@ import {
 
 ## afterNavigate
 
-A lifecycle function that runs the supplied `callback` when the current component mounts, and also whenever we navigate to a new URL.
+A lifecycle function that runs the supplied `callback` when the current component mounts, and also whenever we navigate to a URL.
 
 `afterNavigate` must be called during a component initialization. It remains active as long as the component is mounted.
 
@@ -85,7 +85,9 @@ function disableScrollHandling(): void;
 
 ## goto
 
+Allows you to navigate programmatically to a given route, with options such as keeping the current element focused.
 Returns a Promise that resolves when SvelteKit navigates (or fails to navigate, in which case the promise rejects) to the specified `url`.
+
 For external URLs, use `window.location = url` instead of calling `goto(url)`.
 
 <div class="ts-block">
@@ -99,6 +101,9 @@ function goto(
 				noScroll?: boolean | undefined;
 				keepFocus?: boolean | undefined;
 				invalidateAll?: boolean | undefined;
+				invalidate?:
+					| (string | URL | ((url: URL) => boolean))[]
+					| undefined;
 				state?: App.PageState | undefined;
 		  }
 		| undefined
@@ -228,7 +233,7 @@ function preloadData(href: string): Promise<
 
 ## pushState
 
-Programmatically create a new history entry with the given `$page.state`. To use the current URL, you can pass `''` as the first argument. Used for [shallow routing](/docs/kit/shallow-routing).
+Programmatically create a new history entry with the given `page.state`. To use the current URL, you can pass `''` as the first argument. Used for [shallow routing](/docs/kit/shallow-routing).
 
 <div class="ts-block">
 
@@ -245,7 +250,7 @@ function pushState(
 
 ## replaceState
 
-Programmatically replace the current history entry with the given `$page.state`. To use the current URL, you can pass `''` as the first argument. Used for [shallow routing](/docs/kit/shallow-routing).
+Programmatically replace the current history entry with the given `page.state`. To use the current URL, you can pass `''` as the first argument. Used for [shallow routing](/docs/kit/shallow-routing).
 
 <div class="ts-block">
 

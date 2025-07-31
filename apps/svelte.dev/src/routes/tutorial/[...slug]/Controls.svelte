@@ -1,18 +1,20 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import SecondaryNav from '$lib/components/SecondaryNav.svelte';
 	import ModalDropdown from '$lib/components/ModalDropdown.svelte';
 	import type { Exercise, PartStub } from '$lib/tutorial';
-	import { Icon } from '@sveltejs/site-kit/components';
+	import { Checkbox, Icon, Toolbox } from '@sveltejs/site-kit/components';
+	import type { Workspace } from '@sveltejs/repl/workspace';
 
 	interface Props {
 		index: PartStub[];
 		exercise: Exercise;
 		completed: boolean;
 		toggle: () => void;
+		workspace: Workspace;
 	}
 
-	let { index, exercise, completed, toggle }: Props = $props();
+	let { index, exercise, completed, toggle, workspace }: Props = $props();
 </script>
 
 <SecondaryNav>
@@ -30,7 +32,7 @@
 								{#each chapter.exercises as exercise}
 									<li value={exercise.slug}>
 										<a
-											aria-current={$page.url.pathname === `/tutorial/${exercise.slug}`
+											aria-current={page.url.pathname === `/tutorial/${exercise.slug}`
 												? 'page'
 												: undefined}
 											href="/tutorial/{exercise.slug}">{exercise.title}</a
@@ -71,6 +73,13 @@
 			solve
 		{/if}
 	</button>
+
+	<Toolbox>
+		<label class="option">
+			<span>Toggle Vim mode</span>
+			<Checkbox bind:checked={workspace.vim}></Checkbox>
+		</label>
+	</Toolbox>
 </SecondaryNav>
 
 <style>

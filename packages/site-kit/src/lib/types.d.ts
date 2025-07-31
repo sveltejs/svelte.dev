@@ -32,6 +32,15 @@ export interface Document {
 	prev: null | { slug: string; title: string };
 }
 
+export interface DocumentSummary {
+	slug: string;
+	metadata: {
+		title: string;
+		[key: string]: any;
+	};
+	children: DocumentSummary[];
+}
+
 export interface Section {
 	slug: string;
 	title: string;
