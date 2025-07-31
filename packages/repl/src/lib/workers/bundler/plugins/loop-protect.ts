@@ -1,6 +1,7 @@
 import type { Plugin } from '@rollup/browser';
 import { parse } from 'acorn';
 import { print } from 'esrap';
+import ts from 'esrap/languages/ts';
 import type {
 	ArrowFunctionExpression,
 	BlockStatement,
@@ -105,7 +106,7 @@ const plugin: Plugin = {
 		// nothing changed
 		if (ast === transformed) return null;
 
-		return print(transformed);
+		return print(transformed, ts());
 	}
 };
 

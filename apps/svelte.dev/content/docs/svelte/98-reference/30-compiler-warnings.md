@@ -607,6 +607,14 @@ Attributes should not contain ':' characters to prevent ambiguity with Svelte di
 Quoted attributes on components and custom elements will be stringified in a future version of Svelte. If this isn't what you want, remove the quotes
 ```
 
+### bidirectional_control_characters
+
+```
+A bidirectional control character was detected in your code. These characters can be used to alter the visual direction of your code and could have unintended consequences
+```
+
+Bidirectional control characters can alter the direction in which text appears to be in. For example, via control characters, you can make `defabc` look like `abcdef`. As a result, if you were to unknowingly copy and paste some code that has these control characters, they may alter the behavior of your code in ways you did not intend. See [trojansource.codes](https://trojansource.codes/) for more information.
+
 ### bind_invalid_each_rest
 
 ```
@@ -645,6 +653,31 @@ In some situations a selector may target an element that is not 'visible' to the
 </style>
 ```
 
+### custom_element_props_identifier
+
+```
+Using a rest element or a non-destructured declaration with `$props()` means that Svelte can't infer what properties to expose when creating a custom element. Consider destructuring all the props or explicitly specifying the `customElement.props` option.
+```
+
+### element_implicitly_closed
+
+```
+This element is implicitly closed by the following `%tag%`, which can cause an unexpected DOM structure. Add an explicit `%closing%` to avoid surprises.
+```
+
+In HTML, some elements are implicitly closed by another element. For example, you cannot nest a `<p>` inside another `<p>`:
+
+```html
+<!-- this HTML... -->
+<p><p>hello</p>
+
+<!-- results in this DOM structure -->
+<p></p>
+<p>hello</p>
+```
+
+Similarly, a parent element's closing tag will implicitly close all child elements, even if the `</` was a typo and you meant to create a _new_ element. To avoid ambiguity, it's always a good idea to have an explicit closing tag.
+
 ### element_invalid_self_closing_tag
 
 ```
@@ -671,7 +704,7 @@ Some templating languages (including Svelte) will 'fix' HTML by turning `<span /
 
 To automate this, run the dedicated migration:
 
-```bash
+```sh
 npx sv migrate self-closing-tags
 ```
 
@@ -844,15 +877,16 @@ See [the migration guide](v5-migration-guide#Snippets-instead-of-slots) for more
 ### state_referenced_locally
 
 ```
-State referenced in its own scope will never update. Did you mean to reference it inside a closure?
+This reference only captures the initial value of `%name%`. Did you mean to reference it inside a %type% instead?
 ```
 
 This warning is thrown when the compiler detects the following:
-- A reactive variable is declared
-- the variable is reassigned
-- the variable is referenced inside the same scope it is declared and it is a non-reactive context
 
-In this case, the state reassignment will not be noticed by whatever you passed it to. For example, if you pass the state to a function, that function will not notice the updates:
+- A reactive variable is declared
+- ...and later reassigned...
+- ...and referenced in the same scope
+
+This 'breaks the link' to the original state declaration. For example, if you pass the state to a function, the function loses access to the state once it is reassigned:
 
 ```svelte
 <!--- file: Parent.svelte --->

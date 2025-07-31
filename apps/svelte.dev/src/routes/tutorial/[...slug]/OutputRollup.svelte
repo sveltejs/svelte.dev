@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import Viewer from '@sveltejs/repl/viewer';
-	import Console, { type Log } from '@sveltejs/repl/console';
+	import { Console, type Log } from '@sveltejs/repl/console';
 	import { theme } from '@sveltejs/site-kit/state';
 	import Chrome from './Chrome.svelte';
 	import Loading from './Loading.svelte';
@@ -71,7 +71,6 @@
 		width: 100%;
 		height: 80%;
 		font: var(--sk-font-mono);
-		padding: 1rem;
 		background: var(--sk-bg-1);
 		border-top: 1px solid var(--sk-border);
 		transform: translate(0, 100%);

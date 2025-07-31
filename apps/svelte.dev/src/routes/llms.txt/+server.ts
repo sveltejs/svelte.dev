@@ -1,4 +1,4 @@
-import { get_documentation_title, sections } from '$lib/server/llms';
+import { get_documentation_title, topics } from '$lib/server/llms';
 import template from './template.md?raw';
 
 const DOMAIN = `https://svelte.dev`;
@@ -6,9 +6,9 @@ const DOMAIN = `https://svelte.dev`;
 export const prerender = true;
 
 export function GET() {
-	const package_docs = sections.map(
-		(section) =>
-			`- [${section.title} documentation](${DOMAIN}/docs/${section.slug}/llms.txt): ${get_documentation_title(section)}`
+	const package_docs = topics.map(
+		(topic) =>
+			`- [${topic.title} documentation](${DOMAIN}/docs/${topic.slug}/llms.txt): ${get_documentation_title(topic)}`
 	);
 
 	const content = template.replace('%PACKAGE_DOCS%', package_docs.join('\n'));

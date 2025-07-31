@@ -1,8 +1,10 @@
 <script lang="ts">
+	import { page } from '$app/state';
 	import { Icon } from '@sveltejs/site-kit/components';
 
 	interface Props {
 		repo: string;
+		llms?: boolean;
 		prev: null | {
 			path: string;
 			title: string;
@@ -13,13 +15,18 @@
 		};
 	}
 
-	let { repo, prev, next }: Props = $props();
+	let { repo, prev, next, llms }: Props = $props();
 </script>
 
 <p class="edit">
 	<a href={repo}>
 		<Icon name="edit" /> Edit this page on GitHub
 	</a>
+	{#if llms}
+		<a href={page.url.pathname.replace(/\/$/, '') + '/llms.txt'}>
+			<Icon name="contents" /> llms.txt
+		</a>
+	{/if}
 </p>
 
 <div class="controls">
@@ -44,9 +51,13 @@
 		position: relative;
 		margin: 6rem 0 2rem 0;
 		font: var(--sk-font-ui-small);
+		display: flex;
 
 		a {
 			text-decoration: none;
+			&:first-of-type {
+				margin-right: 5rem;
+			}
 		}
 
 		:global(svg) {

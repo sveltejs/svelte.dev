@@ -12,7 +12,14 @@ const plugin: Plugin = {
 	name: 'commonjs',
 
 	transform: (code, id) => {
-		if (!/\b(require|module|exports)\b/.test(code)) return;
+		if (
+			id.endsWith('.mjs') ||
+			id.endsWith('.esm.js') ||
+			code.startsWith('import ') ||
+			!/\b(require|module|exports)\b/.test(code)
+		) {
+			return;
+		}
 
 		try {
 			const ast = parse(code, {
@@ -40,9 +47,12 @@ const plugin: Plugin = {
 					if (node.left.object.type !== 'Identifier' || node.left.object.name !== 'exports') return;
 					if (node.left.computed || node.left.property.type !== 'Identifier') return;
 
-					exports.push(
-						`export const ${node.left.property.name} = module.exports.${node.left.property.name};`
-					);
+					// Default is a special case (and would result in invalid syntax) and kinda fucked up: https://github.com/evanw/esbuild/issues/1719#issuecomment-953470495
+					if (node.left.property.name !== 'default') {
+						exports.push(
+							`export const ${node.left.property.name} = module.exports.${node.left.property.name};`
+						);
+					}
 
 					context.next();
 				}
@@ -52,6 +62,11 @@ const plugin: Plugin = {
 			const lookup = `const __repl_lookup = { ${requires
 				.map((id, i) => `'${id}': __repl_${i}`)
 				.join(', ')} };`;
+
+			// Special case https://github.com/mathiasbynens/CSS.escape/issues/12
+			if (id.includes('css.escape')) {
+				code = code.replace("typeof global != 'undefined' ? global : this", 'globalThis');
+			}
 
 			const transformed = [
 				imports,

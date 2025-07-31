@@ -73,32 +73,29 @@
 	}
 
 	span.lightning {
-		--icon-size: 1.8rem;
 		width: 1.8rem;
 		height: 1.8rem;
 		z-index: 9999;
-		background: url(./runes-off-light.svg) no-repeat 50% 50%;
-		background-size: contain;
-
-		:root.dark &:not(.active) {
-			background-image: url(./runes-off-dark.svg);
-		}
+		background: var(--sk-fg-4);
+		mask: url(icons/runes-off) no-repeat 50% 50%;
+		mask-size: contain;
 
 		&.active {
-			background-image: url(./runes-on-light.svg);
+			background: var(--sk-fg-accent);
+			mask-image: url(icons/runes-on);
 			animation: bump 0.4s;
 		}
 	}
 
 	@keyframes bump {
 		0% {
-			background-size: var(--icon-size);
+			scale: 1;
 		}
 		50% {
-			background-size: calc(1.3 * var(--icon-size));
+			scale: 1.3;
 		}
 		100% {
-			background-size: var(--icon-size);
+			scale: 1;
 		}
 	}
 

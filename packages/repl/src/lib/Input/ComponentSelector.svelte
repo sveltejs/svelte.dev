@@ -159,8 +159,8 @@
 		class="raised add-new"
 		onclick={add_new}
 		aria-label="add new component"
-		title="add new component"
-	></button>
+		title="add new component"><span class="icon"></span></button
+	>
 
 	<div class="runes">
 		<RunesInfo {runes} />
@@ -241,7 +241,7 @@
 			position: absolute;
 			left: 0em;
 			top: 0;
-			background: url(./file.svg) 50% 50% no-repeat;
+			background: url(icons/file) 50% 50% no-repeat;
 			background-size: 1em;
 		}
 
@@ -303,8 +303,12 @@
 	.add-new {
 		height: 3.2rem;
 		aspect-ratio: 1;
-		background: url(./file-new.svg) 50% 50% no-repeat;
-		background-size: 1em;
+
+		.icon {
+			background: currentColor;
+			mask: url(icons/file-new) 50% 50% no-repeat;
+			mask-size: 1.2em;
+		}
 	}
 
 	.runes {

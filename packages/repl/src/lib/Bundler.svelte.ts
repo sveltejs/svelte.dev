@@ -1,4 +1,5 @@
 import type { BundleResult } from './public';
+import type { BundleOptions } from './workers/workers';
 import type { File } from './Workspace.svelte';
 
 let uid = 1;
@@ -46,7 +47,7 @@ export default class Bundler {
 		this.#worker.postMessage({ type: 'init', svelte_version });
 	}
 
-	bundle(files: File[], options: { tailwind?: boolean }) {
+	bundle(files: File[], options: BundleOptions) {
 		this.#worker.postMessage({
 			uid,
 			type: 'bundle',
@@ -55,5 +56,22 @@ export default class Bundler {
 		});
 
 		uid += 1;
+
+		return new Promise<void>((resolve) => {
+			const destroy = $effect.root(() => {
+				let first = true;
+				$effect.pre(() => {
+					this.result;
+					if (first) {
+						first = false;
+					} else {
+						destroy();
+						// This isn't necessarily the result of this bundle call, as it could be
+						// superseeded by another call to `bundle` before the result is set.
+						resolve();
+					}
+				});
+			});
+		});
 	}
 }

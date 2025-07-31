@@ -125,14 +125,17 @@ Top navigation bar for the application. It provides a slot for the left side, th
 			<Search />
 
 			<div class="external-links">
-				<a href="/chat" data-icon="discord" aria-label="Discord Chat"></a>
-				<a
-					href="https://bsky.app/profile/sveltesociety.dev"
-					data-icon="bluesky"
-					aria-label="Svelte Society on Bluesky"
-				></a>
-				<a href="https://github.com/sveltejs/svelte" data-icon="github" aria-label="GitHub Repo"
-				></a>
+				<a href="/chat" aria-label="Discord Chat">
+					<span data-icon="discord"></span>
+				</a>
+
+				<a href="https://bsky.app/profile/sveltesociety.dev" aria-label="Svelte Society on Bluesky">
+					<span data-icon="bluesky"></span>
+				</a>
+
+				<a href="https://github.com/sveltejs/svelte" aria-label="GitHub Repo">
+					<span data-icon="github"></span>
+				</a>
 			</div>
 
 			<FontToggle />
@@ -281,6 +284,10 @@ Top navigation bar for the application. It provides a slot for the left side, th
 			display: flex;
 			height: 100%;
 			margin: 0 0.5rem;
+
+			a {
+				outline-offset: -2px;
+			}
 		}
 	}
 
@@ -377,37 +384,28 @@ Top navigation bar for the application. It provides a slot for the left side, th
 			display: contents;
 
 			[data-icon] {
-				background: no-repeat 50% 50%;
-				background-size: calc(100% - 1rem) auto;
+				display: flex;
+				background: var(--sk-fg-3);
 				padding: 0 0.5rem;
 				height: 100%;
+				aspect-ratio: 1;
+				mask: no-repeat 50% 50%;
+				mask-size: calc(100% - 1rem) auto;
 			}
 
 			[data-icon='discord'] {
 				width: 3.4rem;
-				background-image: url($lib/icons/discord-light.svg);
-
-				:global(.dark) & {
-					background-image: url($lib/icons/discord-dark.svg);
-				}
+				mask-image: url(icons/discord);
 			}
 
 			[data-icon='bluesky'] {
 				width: 3rem;
-				background-image: url($lib/icons/bluesky-light.svg);
-
-				:global(.dark) & {
-					background-image: url($lib/icons/bluesky-dark.svg);
-				}
+				mask-image: url(icons/bluesky);
 			}
 
 			[data-icon='github'] {
 				width: 3rem;
-				background-image: url($lib/icons/github-light.svg);
-
-				:global(.dark) & {
-					background-image: url($lib/icons/github-dark.svg);
-				}
+				mask-image: url(icons/github);
 			}
 		}
 
