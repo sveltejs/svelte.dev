@@ -54,6 +54,8 @@ const highlighter = await createHighlighterCore({
 		import('@shikijs/langs/css'),
 		import('@shikijs/langs/bash'),
 		import('@shikijs/langs/yaml'),
+		import('@shikijs/langs/toml'),
+		import('@shikijs/langs/ini'),
 		import('@shikijs/langs/svelte')
 	],
 	engine: createOnigurumaEngine(import('shiki/wasm'))
