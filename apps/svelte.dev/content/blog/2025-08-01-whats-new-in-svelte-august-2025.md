@@ -5,9 +5,9 @@ author: Dani Sandoval
 authorURL: https://dreamindani.com
 ---
 
-With [Async Svelte](https://github.com/sveltejs/svelte/discussions/15845) officially out in the world and its companion [Remote Functions](https://github.com/sveltejs/kit/discussions/13897) already ligned up, there's a lot of updates to share!
+With [Async Svelte](https://github.com/sveltejs/svelte/discussions/15845) and its companion [Remote Functions](https://github.com/sveltejs/kit/discussions/13897) officially out in the world, there's a lot of updates to share!
 
-Be sure to check out the showcase for videos from X, Y and Z about all the brand new features in Svelte.
+Be sure to check out the showcase for videos from Rich, Paolo, and Stanislav about all the brand new features in Svelte.
 
 Let's dive into the highlights...
 
@@ -21,6 +21,7 @@ Let's dive into the highlights...
 - The `resolve(...)` and `asset(...)` helpers have been added for resolving paths (**kit@2.26.0**, [#13864](https://github.com/sveltejs/kit/pull/13864))
 - Support for modern SvelteKit prop typings has been added to VS Code snippets (**extensions-109.10.0**, [#2796](https://github.com/sveltejs/language-tools/pull/2796))
 - The new `vite.addPlugin` simplifies adding a plugin on various vite config styles (**sv@0.8.20**, [#633](https://github.com/sveltejs/cli/pull/633))
+-  vite-plugin-svelte is out with support for vite7, rolldown-vite and [more](https://github.com/sveltejs/vite-plugin-svelte/blob/main/packages/vite-plugin-svelte/CHANGELOG.md)
 
 For a full list of bug fixes in Svelte, SvelteKit and its adapters, check out their CHANGELOGs [here](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md) and [here](https://github.com/sveltejs/kit/tree/main/packages).
 
