@@ -18,6 +18,7 @@ import {
 	preloadCode,
 	preloadData,
 	pushState,
+	refreshAll,
 	replaceState
 } from '$app/navigation';
 ```
@@ -242,6 +243,27 @@ function pushState(
 	url: string | URL,
 	state: App.PageState
 ): void;
+```
+
+</div>
+
+
+
+## refreshAll
+
+Causes all currently active remote functions to refresh, and all `load` functions belonging to the currently active page to re-run (unless disabled via the option argument).
+Returns a `Promise` that resolves when the page is subsequently updated.
+
+<div class="ts-block">
+
+```dts
+function refreshAll({
+	includeLoadFunctions
+}?:
+	| {
+			includeLoadFunctions?: boolean;
+	  }
+	| undefined): Promise<void>;
 ```
 
 </div>
