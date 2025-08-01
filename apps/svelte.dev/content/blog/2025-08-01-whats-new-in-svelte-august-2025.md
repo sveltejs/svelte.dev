@@ -61,7 +61,7 @@ _Svienna (Svelte Society Vienna)_
 - [Using SvelteKit and MIT appinventor to inspire young girls for tech](https://www.youtube.com/watch?v=pDx1a078in8) by Domenik Reitzner
 - [Adding full to your full stack SvelteKit app](https://www.youtube.com/watch?v=A3cqzv-zRe8) by Jean Yves Couet
 - [ZeeltePHP (Svelte + PHP)](https://www.youtube.com/watch?v=0sm4oPwvPVU) by derharry
-- [Svelte at Geizhals](https://www.youtube.com/watch?v=aJVdfPk9WmI) by Martin Grubinger 
+- [Svelte at Geizhals](https://www.youtube.com/watch?v=aJVdfPk9WmI) by Martin Grubinger
 
 _To Watch/Read_
 
@@ -69,7 +69,6 @@ _To Watch/Read_
 - [Master Svelte in 15 Minutes: From React Dev to Svelte Pro](https://www.youtube.com/watch?v=Vhfcgnt5nO8) by Neuronfire
 - [Simple but Effective Skeleton Loaders](https://www.matsimon.dev/blog/simple-skeleton-loaders) by Mat Simon
 - [Building Smart Intervals with Svelte 5](https://www.puruvj.dev/blog/svelte-5-interval-rune) by Puru VJ
-
 
 ### Libraries, Tools & Components
 
