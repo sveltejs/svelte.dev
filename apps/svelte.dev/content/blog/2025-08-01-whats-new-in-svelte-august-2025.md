@@ -13,6 +13,7 @@ Let's dive into the highlights...
 
 ## What's new in Svelte, SvelteKit, Language Tools and CLI (sv)
 
+- Remote functions can be called anywhere in your app, but always run on the server, and as such can safely access server-only modules containing things like environment variables and database clients (**kit@2.27.0**, [Docs](https://svelte.dev/docs/kit/remote-functions), [#13986](https://github.com/sveltejs/kit/pull/13986))
 - `getAbortSignal` returns an `AbortSignal` that aborts when the current derived or effect re-runs or is destroyed (**svelte@5.35.0**, [Docs](https://svelte.dev/docs/svelte/svelte#getAbortSignal), [#16266](https://github.com/sveltejs/svelte/pull/16266))
 - A new `parent` property has been added to the `__svelte_meta` properties that are added to elements at dev time - useful for debugging nested hierarchies (**svelte@5.35.1**, [#16255](https://github.com/sveltejs/svelte/pull/16255))
 - `await` is now supported in components when using the `experimental.async` compiler option (**svelte@5.36.0/extensions@109.10.0**, [Docs](https://svelte.dev/docs/svelte/await-expressions), [#15844](https://github.com/sveltejs/svelte/pull/15844))
