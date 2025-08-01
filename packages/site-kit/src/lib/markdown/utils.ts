@@ -66,6 +66,8 @@ export function smart_quotes(
 				open_quote = left;
 				res += `&${left ? 'l' : 'r'}dquo`;
 				index += 5;
+			} else {
+				res += '&';
 			}
 		} else if (!html && (char === '"' || char === "'")) {
 			let left: boolean = first && !open_quote;
