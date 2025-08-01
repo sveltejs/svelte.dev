@@ -57,12 +57,12 @@ export function smart_quotes(
 		let char = str.charAt(index);
 		if (html && char === '&') {
 			if (str.slice(index, index + 5) === '&#39;') {
-				let left: boolean = first && !open_quote;
+				let left: boolean = (first && !open_quote) || (index > 1 && str.charAt(index - 1) === '=');
 				open_quote = left;
 				res += `&${left ? 'l' : 'r'}squo;`;
 				index += 4;
 			} else if (str.slice(index, index + 6) === '&quot;') {
-				let left: boolean = first && !open_quote;
+				let left: boolean = (first && !open_quote) || (index > 1 && str.charAt(index - 1) === '=');
 				open_quote = left;
 				res += `&${left ? 'l' : 'r'}dquo`;
 				index += 5;
@@ -70,7 +70,7 @@ export function smart_quotes(
 				res += '&';
 			}
 		} else if (!html && (char === '"' || char === "'")) {
-			let left: boolean = first && !open_quote;
+			let left: boolean = (first && !open_quote) || (index > 1 && str.charAt(index - 1) === '=');
 			open_quote = left;
 			let double = char === '"';
 			res += double ? (left ? '“' : '”') : left ? '‘' : '’';
