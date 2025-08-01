@@ -7,7 +7,7 @@ import { html as toReactNode } from 'satori-html';
 import Card from './Card.svelte';
 import DMSerifDisplay from '$lib/fonts/DMSerifDisplay-Regular.ttf?url';
 import FiraSans from '$lib/fonts/FiraSans-Regular.ttf?url';
-import { blog_posts } from '$lib/server/content';
+import { docs } from '$lib/server/content';
 import type { ServerlessConfig } from '@sveltejs/adapter-vercel';
 
 export const config: ServerlessConfig = {
@@ -17,9 +17,14 @@ export const config: ServerlessConfig = {
 };
 
 export function entries() {
-	return blog_posts.map((post) => ({
-		slug: post.slug.slice(5) // remove 'blog/' prefix
-	}));
+	return Object.keys(docs.pages).map((doc) => {
+		const full = doc.slice(5); // removes 'docs/' prefix
+		const [topic, ...path] = full.split('/');
+		return {
+			topic,
+			path: path.join('/')
+		};
+	});
 }
 
 const height = 630;
@@ -28,11 +33,13 @@ const dm_serif_display = await read(DMSerifDisplay).arrayBuffer();
 const fira_sans = await read(FiraSans).arrayBuffer();
 
 export async function GET({ params }) {
-	const post = blog_posts.find((post) => post.slug === `blog/${params.slug}`);
+	const document = docs.pages[`docs/${params.topic}/${params.path}`];
 
-	if (!post) error(404);
+	if (!document) error(404);
 
-	const result = render(Card, { props: { title: post.metadata.title, date: post.date_formatted } });
+	const result = render(Card, {
+		props: { title: document.metadata.title, breadcrumbs: document.breadcrumbs.slice(1) }
+	});
 	const element = toReactNode(`<head>${result.head}</head>${result.body}`);
 
 	const svg = await satori(element, {

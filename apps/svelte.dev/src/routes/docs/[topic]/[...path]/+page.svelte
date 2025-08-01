@@ -8,6 +8,7 @@
 	import PageControls from '$lib/components/PageControls.svelte';
 	import { goto } from '$app/navigation';
 	import { escape_html } from '$lib/utils/escape';
+	import { page } from '$app/state';
 
 	let { data } = $props();
 
@@ -64,7 +65,16 @@
 		name="twitter:description"
 		content="{data.document.metadata.title} • Svelte documentation"
 	/>
+	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="Description" content="{data.document.metadata.title} • Svelte documentation" />
+	<meta
+		name="twitter:image"
+		content="https://svelte.dev/docs/{page.params.topic}/{page.params.path}/card.png"
+	/>
+	<meta
+		name="og:image"
+		content="https://svelte.dev/docs/{page.params.topic}/{page.params.path}/card.png"
+	/>
 </svelte:head>
 
 <div id="docs-content" use:legacy_details>
