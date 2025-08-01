@@ -370,9 +370,15 @@
 		srcdoc={BROWSER ? srcdoc : ''}
 	></iframe>
 
-	{#if bundle?.error}
-		<ErrorOverlay error={bundle.error} />
-	{/if}
+	<div class="overlay">
+		{#if bundle?.error}
+			<ErrorOverlay error={bundle.error} />
+		{:else if error}
+			<Message kind="error" details={error} />
+		{:else if status || !bundle}
+			<Message kind="info" truncate>{status || 'loading Svelte compiler...'}</Message>
+		{/if}
+	</div>
 {/snippet}
 
 <div class="iframe-container">
@@ -401,14 +407,6 @@
 	{:else}
 		{@render main()}
 	{/if}
-
-	<div class="overlay">
-		{#if error}
-			<Message kind="error" details={error} />
-		{:else if status || !bundle}
-			<Message kind="info" truncate>{status || 'loading Svelte compiler...'}</Message>
-		{/if}
-	</div>
 </div>
 
 <style>

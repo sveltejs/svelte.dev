@@ -359,6 +359,40 @@ A prefix that signals that an environment variable is unsafe to expose to client
 
 </div>
 
+## experimental
+
+<div class="ts-block-property-bullets">
+
+
+
+</div>
+
+Experimental features which are exempt from semantic versioning. These features may be changed or removed at any time.
+
+<div class="ts-block-property-children">
+
+<div class="ts-block-property">
+
+```ts
+// @noErrors
+remoteFunctions?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `false`
+
+</div>
+
+Whether to enable the experimental remote functions feature. This feature is not yet stable and may be changed or removed at any time.
+
+</div>
+</div>
+
+</div>
+
 ## files
 
 <div class="ts-block-property-bullets">

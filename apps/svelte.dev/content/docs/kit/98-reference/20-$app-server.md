@@ -7,8 +7,88 @@ title: $app/server
 
 ```js
 // @noErrors
-import { getRequestEvent, read } from '$app/server';
+import {
+	command,
+	form,
+	getRequestEvent,
+	prerender,
+	query,
+	read
+} from '$app/server';
 ```
+
+## command
+
+<blockquote class="since note">
+
+Available since 2.27
+
+</blockquote>
+
+Creates a remote command. When called from the browser, the function will be invoked on the server via a `fetch` call.
+
+See [Remote functions](/docs/kit/remote-functions#command) for full documentation.
+
+<div class="ts-block">
+
+```dts
+function command<Output>(
+	fn: () => Output
+): RemoteCommand<void, Output>;
+```
+
+</div>
+
+<div class="ts-block">
+
+```dts
+function command<Input, Output>(
+	validate: 'unchecked',
+	fn: (arg: Input) => Output
+): RemoteCommand<Input, Output>;
+```
+
+</div>
+
+<div class="ts-block">
+
+```dts
+function command<Schema extends StandardSchemaV1, Output>(
+	validate: Schema,
+	fn: (arg: StandardSchemaV1.InferOutput<Schema>) => Output
+): RemoteCommand<
+	StandardSchemaV1.InferOutput<Schema>,
+	Output
+>;
+```
+
+</div>
+
+
+
+## form
+
+<blockquote class="since note">
+
+Available since 2.27
+
+</blockquote>
+
+Creates a form object that can be spread onto a `<form>` element.
+
+See [Remote functions](/docs/kit/remote-functions#form) for full documentation.
+
+<div class="ts-block">
+
+```dts
+function form<T>(
+	fn: (data: FormData) => MaybePromise<T>
+): RemoteForm<T>;
+```
+
+</div>
+
+
 
 ## getRequestEvent
 
@@ -28,6 +108,128 @@ In environments without [`AsyncLocalStorage`](https://nodejs.org/api/async_conte
 function getRequestEvent(): RequestEvent<
 	AppLayoutParams<'/'>,
 	any
+>;
+```
+
+</div>
+
+
+
+## prerender
+
+<blockquote class="since note">
+
+Available since 2.27
+
+</blockquote>
+
+Creates a remote prerender function. When called from the browser, the function will be invoked on the server via a `fetch` call.
+
+See [Remote functions](/docs/kit/remote-functions#prerender) for full documentation.
+
+<div class="ts-block">
+
+```dts
+function prerender<Output>(
+	fn: () => MaybePromise<Output>,
+	options?:
+		| {
+				inputs?: RemotePrerenderInputsGenerator<void>;
+				dynamic?: boolean;
+		  }
+		| undefined
+): RemotePrerenderFunction<void, Output>;
+```
+
+</div>
+
+<div class="ts-block">
+
+```dts
+function prerender<Input, Output>(
+	validate: 'unchecked',
+	fn: (arg: Input) => MaybePromise<Output>,
+	options?:
+		| {
+				inputs?: RemotePrerenderInputsGenerator<Input>;
+				dynamic?: boolean;
+		  }
+		| undefined
+): RemotePrerenderFunction<Input, Output>;
+```
+
+</div>
+
+<div class="ts-block">
+
+```dts
+function prerender<Schema extends StandardSchemaV1, Output>(
+	schema: Schema,
+	fn: (
+		arg: StandardSchemaV1.InferOutput<Schema>
+	) => MaybePromise<Output>,
+	options?:
+		| {
+				inputs?: RemotePrerenderInputsGenerator<
+					StandardSchemaV1.InferOutput<Schema>
+				>;
+				dynamic?: boolean;
+		  }
+		| undefined
+): RemotePrerenderFunction<
+	StandardSchemaV1.InferOutput<Schema>,
+	Output
+>;
+```
+
+</div>
+
+
+
+## query
+
+<blockquote class="since note">
+
+Available since 2.27
+
+</blockquote>
+
+Creates a remote query. When called from the browser, the function will be invoked on the server via a `fetch` call.
+
+See [Remote functions](/docs/kit/remote-functions#query) for full documentation.
+
+<div class="ts-block">
+
+```dts
+function query<Output>(
+	fn: () => MaybePromise<Output>
+): RemoteQueryFunction<void, Output>;
+```
+
+</div>
+
+<div class="ts-block">
+
+```dts
+function query<Input, Output>(
+	validate: 'unchecked',
+	fn: (arg: Input) => MaybePromise<Output>
+): RemoteQueryFunction<Input, Output>;
+```
+
+</div>
+
+<div class="ts-block">
+
+```dts
+function query<Schema extends StandardSchemaV1, Output>(
+	schema: Schema,
+	fn: (
+		arg: StandardSchemaV1.InferOutput<Schema>
+	) => MaybePromise<Output>
+): RemoteQueryFunction<
+	StandardSchemaV1.InferOutput<Schema>,
+	Output
 >;
 ```
 
