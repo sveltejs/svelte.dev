@@ -42,14 +42,24 @@ export const slugify = (str: string) => {
 		.replace(/-$/, '');
 };
 
+/**
+ * Replace dumb quotes with smart quotes. This isn't a perfect algorithm — it
+ * wouldn't correctly handle `That '70s show` or `My country 'tis of thee` but
+ * a) it's very unlikely they'll occur in our docs, and
+ * b) they can be dealt with manually
+ */
 export function smart_quotes(
 	str: string,
-	{ first = true, html = false }: { first?: boolean; html?: boolean } = {}
+	{
+		first = true,
+		html = false
+	}: {
+		/** True if the string is the entire sentence or false if it's a substring. @default true */
+		first?: boolean;
+		/** True if the string has HTML entities. @default false */
+		html?: boolean;
+	} = {}
 ) {
-	// replace dumb quotes with smart quotes. This isn't a perfect algorithm — it
-	// wouldn't correctly handle `That '70s show` or `My country 'tis of thee`
-	// but a) it's very unlikely they'll occur in our docs, and
-	// b) they can be dealt with manually
 	let open_quote = false;
 	let res = '';
 	const len = str.length;
