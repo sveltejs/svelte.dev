@@ -1,6 +1,6 @@
 <script>
 	let numbers = $state([1, 2, 3, 4]);
-	let total = $derived(numbers.reduce((t, n) => t + n, 0));
+	let total = $derived(numbers.length * (numbers.length + 1) / 2);
 
 	function addNumber() {
 		numbers.push(numbers.length + 1);

@@ -7,7 +7,7 @@ Often, you will need to _derive_ state from other state. For this, we have the `
 ```js
 /// file: App.svelte
 let numbers = $state([1, 2, 3, 4]);
-+++let total = $derived(numbers.reduce((t, n) => t + n, 0));+++
++++let total = $derived(numbers.length * (numbers.length + 1) / 2);+++
 ```
 
 We can now use this in our markup:
