@@ -1928,14 +1928,16 @@ The return value of a remote `command` function. See [Remote functions](/docs/ki
 <div class="ts-block">
 
 ```dts
-type RemoteCommand<Input, Output> = (arg: Input) => Promise<
-	Awaited<Output>
-> & {
-	updates(
-		...queries: Array<
-			RemoteQuery<any> | RemoteQueryOverride
-		>
-	): Promise<Awaited<Output>>;
+type RemoteCommand<Input, Output> = {
+	(arg: Input): Promise<Awaited<Output>> & {
+		updates(
+			...queries: Array<
+				RemoteQuery<any> | RemoteQueryOverride
+			>
+		): Promise<Awaited<Output>>;
+	};
+	/** The number of pending command executions */
+	get pending(): number;
 };
 ```
 
@@ -1991,6 +1993,8 @@ type RemoteForm<Result> = {
 	): Omit<RemoteForm<Result>, 'for'>;
 	/** The result of the form submission */
 	get result(): Result | undefined;
+	/** The number of pending submissions */
+	get pending(): number;
 	/** Spread this onto a `<button>` or `<input type="submit">` */
 	buttonProps: {
 		type: 'submit';
@@ -2016,6 +2020,8 @@ type RemoteForm<Result> = {
 			formaction: string;
 			onclick: (event: Event) => void;
 		};
+		/** The number of pending submissions */
+		get pending(): number;
 	};
 };
 ```
