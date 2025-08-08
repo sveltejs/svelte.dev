@@ -367,10 +367,32 @@ A prefix that signals that an environment variable is unsafe to expose to client
 
 </div>
 
-Experimental features which are exempt from semantic versioning. These features may be changed or removed at any time.
+Experimental features. Here be dragons. Breaking changes may occur in minor releases.
 
 <div class="ts-block-property-children">
 
+<div class="ts-block-property">
+
+```ts
+// @noErrors
+tracing?: {
+	server?: boolean;
+};
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `{ server: false }`
+- <span class="tag since">available since</span> v2.26.0 // TODO: update this before publishing
+
+</div>
+
+Whether to enable server-side [OpenTelemetry](https://opentelemetry.io/) tracing for SvelteKit operations including the [`handle` hook](/docs/kit/hooks#Server-hooks-handle), [`load` functions](/docs/kit/load), and [form actions](/docs/kit/form-actions).
+
+</div>
+</div>
 <div class="ts-block-property">
 
 ```ts
@@ -491,6 +513,27 @@ The location of your universal [hooks](/docs/kit/hooks).
 
 </div>
 </div></div>
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```ts
+// @noErrors
+tracing?: {
+	server?: string;
+};
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `"src/tracing.server"`
+
+</div>
+
+the location of your server tracing file
 
 </div>
 </div>
