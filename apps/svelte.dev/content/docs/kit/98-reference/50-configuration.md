@@ -409,6 +409,26 @@ Where to find various files within your project.
 
 ```ts
 // @noErrors
+src?: string;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `"src"`
+- <span class="tag since">available since</span> v2.28
+
+</div>
+
+the location of your source code
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```ts
+// @noErrors
 assets?: string;
 ```
 
