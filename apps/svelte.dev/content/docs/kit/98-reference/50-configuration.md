@@ -397,7 +397,7 @@ Whether to enable the experimental remote functions feature. This feature is not
 
 <div class="ts-block-property-bullets">
 
-
+- <span class="tag deprecated">deprecated</span> 
 
 </div>
 
@@ -409,6 +409,27 @@ Where to find various files within your project.
 
 ```ts
 // @noErrors
+src?: string;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag deprecated">deprecated</span> 
+- <span class="tag">default</span> `"src"`
+- <span class="tag since">available since</span> v2.28
+
+</div>
+
+the location of your source code
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```ts
+// @noErrors
 assets?: string;
 ```
 
@@ -416,6 +437,7 @@ assets?: string;
 
 <div class="ts-block-property-bullets">
 
+- <span class="tag deprecated">deprecated</span> 
 - <span class="tag">default</span> `"static"`
 
 </div>
@@ -444,6 +466,7 @@ client?: string;
 
 <div class="ts-block-property-bullets">
 
+- <span class="tag deprecated">deprecated</span> 
 - <span class="tag">default</span> `"src/hooks.client"`
 
 </div>
@@ -463,6 +486,7 @@ server?: string;
 
 <div class="ts-block-property-bullets">
 
+- <span class="tag deprecated">deprecated</span> 
 - <span class="tag">default</span> `"src/hooks.server"`
 
 </div>
@@ -482,6 +506,7 @@ universal?: string;
 
 <div class="ts-block-property-bullets">
 
+- <span class="tag deprecated">deprecated</span> 
 - <span class="tag">default</span> `"src/hooks"`
 - <span class="tag since">available since</span> v2.3.0
 
@@ -505,6 +530,7 @@ lib?: string;
 
 <div class="ts-block-property-bullets">
 
+- <span class="tag deprecated">deprecated</span> 
 - <span class="tag">default</span> `"src/lib"`
 
 </div>
@@ -524,6 +550,7 @@ params?: string;
 
 <div class="ts-block-property-bullets">
 
+- <span class="tag deprecated">deprecated</span> 
 - <span class="tag">default</span> `"src/params"`
 
 </div>
@@ -543,6 +570,7 @@ routes?: string;
 
 <div class="ts-block-property-bullets">
 
+- <span class="tag deprecated">deprecated</span> 
 - <span class="tag">default</span> `"src/routes"`
 
 </div>
@@ -562,6 +590,7 @@ serviceWorker?: string;
 
 <div class="ts-block-property-bullets">
 
+- <span class="tag deprecated">deprecated</span> 
 - <span class="tag">default</span> `"src/service-worker"`
 
 </div>
@@ -581,6 +610,7 @@ appTemplate?: string;
 
 <div class="ts-block-property-bullets">
 
+- <span class="tag deprecated">deprecated</span> 
 - <span class="tag">default</span> `"src/app.html"`
 
 </div>
@@ -600,6 +630,7 @@ errorTemplate?: string;
 
 <div class="ts-block-property-bullets">
 
+- <span class="tag deprecated">deprecated</span> 
 - <span class="tag">default</span> `"src/error.html"`
 
 </div>
