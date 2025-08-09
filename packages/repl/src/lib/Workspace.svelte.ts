@@ -112,7 +112,7 @@ export class Workspace {
 	});
 	compiled = $state<Record<string, Compiled>>({});
 
-	#svelte_version: string;
+	#svelte_version = $state('');
 	#readonly = false; // TODO do we need workspaces for readonly stuff?
 	#files = $state.raw<Item[]>([]);
 	#current = $state.raw() as File;
@@ -501,6 +501,16 @@ export class Workspace {
 	set tailwind(value) {
 		this.#tailwind = value;
 		this.#onupdate(this.#current);
+	}
+
+	get svelte_version() {
+		return this.#svelte_version;
+	}
+
+	set svelte_version(value) {
+		this.#svelte_version = value;
+		this.#update_file(this.#current);
+		this.#reset_diagnostics();
 	}
 
 	get vim() {
