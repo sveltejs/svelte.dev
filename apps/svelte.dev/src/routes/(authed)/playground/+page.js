@@ -6,12 +6,6 @@ export function load({ url }) {
 	const example = query.get('example');
 	const version = query.get('version');
 	const vim = query.get('vim');
-
-	// redirect to v2 REPL if appropriate
-	if (version && /^[^>]?[12]/.test(version)) {
-		redirect(302, `https://v2.svelte.dev/repl?${query}`);
-	}
-
 	const id = gist || example || 'hello-world';
 	// we need to filter out null values
 	const q = new URLSearchParams();

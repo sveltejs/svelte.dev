@@ -28,7 +28,11 @@ export async function load_svelte(version: string, onresolve?: (resolved: string
 			? 'compiler.js'
 			: version.startsWith('4.')
 				? 'compiler.cjs'
-				: 'compiler/index.js';
+				: version.startsWith('1.0') || version.startsWith('1.1')
+					? 'dist/svelte.js'
+					: version.startsWith('2.')
+						? 'compiler/svelte.js'
+						: 'compiler/index.js';
 
 		const compiler = pkg.contents[entry].text;
 
