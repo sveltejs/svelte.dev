@@ -7,11 +7,11 @@ title: sv add
 
 ## Usage
 
-```bash
+```sh
 npx sv add
 ```
 
-```bash
+```sh
 npx sv add [add-ons]
 ```
 
@@ -20,7 +20,7 @@ You can select multiple space-separated add-ons from [the list below](#Official-
 ## Options
 
 - `-C`, `--cwd` — path to the root of your Svelte(Kit) project
-- `--no-preconditions` — skip checking preconditions <!-- TODO what does this mean? -->
+- `--no-git-check` — even if some files are dirty, no prompt will be shown
 - `--install` — installs dependencies with a specified package manager
 - `--no-install` — prevents installing dependencies
 
