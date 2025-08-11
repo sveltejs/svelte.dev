@@ -907,6 +907,26 @@ type ClientInit = () => MaybePromise<void>;
 
 See the [configuration reference](/docs/kit/configuration) for details.
 
+## CookieSerializeOptions
+
+The same as `CookieSerializeOptions` from the `cookie` package, but with a required `path` property
+
+<div class="ts-block">
+
+```dts
+interface CookieSerializeOptions
+	extends cookie.CookieSerializeOptions {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+path: string;
+```
+
+<div class="ts-block-property-details"></div>
+</div></div>
+
 ## Cookies
 
 <div class="ts-block">
@@ -957,11 +977,7 @@ Gets all cookies that were previously set with `cookies.set`, or from the reques
 <div class="ts-block-property">
 
 ```dts
-set: (
-	name: string,
-	value: string,
-	opts: import('cookie').CookieSerializeOptions & { path: string }
-) => void;
+set: (name: string, value: string, opts: CookieSerializeOptions) => void;
 ```
 
 <div class="ts-block-property-details">
@@ -986,7 +1002,7 @@ You must specify a `path` for the cookie. In most cases you should explicitly se
 <div class="ts-block-property">
 
 ```dts
-delete: (name: string, opts: import('cookie').CookieSerializeOptions & { path: string }) => void;
+delete: (name: string, opts: CookieSerializeOptions) => void;
 ```
 
 <div class="ts-block-property-details">
@@ -1008,11 +1024,7 @@ You must specify a `path` for the cookie. In most cases you should explicitly se
 <div class="ts-block-property">
 
 ```dts
-serialize: (
-	name: string,
-	value: string,
-	opts: import('cookie').CookieSerializeOptions & { path: string }
-) => string;
+serialize: (name: string, value: string, opts: CookieSerializeOptions) => string;
 ```
 
 <div class="ts-block-property-details">
@@ -1600,13 +1612,17 @@ Information about the target of a specific navigation.
 <div class="ts-block">
 
 ```dts
-interface NavigationTarget {/*…*/}
+interface NavigationTarget<
+	Params extends
+		AppLayoutParams<'/'> = AppLayoutParams<'/'>,
+	RouteId extends AppRouteId | null = AppRouteId | null
+> {/*…*/}
 ```
 
 <div class="ts-block-property">
 
 ```dts
-params: Record<string, string> | null;
+params: Params | null;
 ```
 
 <div class="ts-block-property-details">
@@ -1630,7 +1646,7 @@ Info about the target route
 <div class="ts-block-property-children"><div class="ts-block-property">
 
 ```dts
-id: string | null;
+id: RouteId | null;
 ```
 
 <div class="ts-block-property-details">
@@ -1928,14 +1944,16 @@ The return value of a remote `command` function. See [Remote functions](/docs/ki
 <div class="ts-block">
 
 ```dts
-type RemoteCommand<Input, Output> = (arg: Input) => Promise<
-	Awaited<Output>
-> & {
-	updates(
-		...queries: Array<
-			RemoteQuery<any> | RemoteQueryOverride
-		>
-	): Promise<Awaited<Output>>;
+type RemoteCommand<Input, Output> = {
+	(arg: Input): Promise<Awaited<Output>> & {
+		updates(
+			...queries: Array<
+				RemoteQuery<any> | RemoteQueryOverride
+			>
+		): Promise<Awaited<Output>>;
+	};
+	/** The number of pending command executions */
+	get pending(): number;
 };
 ```
 
@@ -1991,6 +2009,8 @@ type RemoteForm<Result> = {
 	): Omit<RemoteForm<Result>, 'for'>;
 	/** The result of the form submission */
 	get result(): Result | undefined;
+	/** The number of pending submissions */
+	get pending(): number;
 	/** Spread this onto a `<button>` or `<input type="submit">` */
 	buttonProps: {
 		type: 'submit';
@@ -2016,6 +2036,8 @@ type RemoteForm<Result> = {
 			formaction: string;
 			onclick: (event: Event) => void;
 		};
+		/** The number of pending submissions */
+		get pending(): number;
 	};
 };
 ```
@@ -2050,7 +2072,7 @@ type RemoteQuery<T> = RemoteResource<T> & {
 	 */
 	refresh(): Promise<void>;
 	/**
-	 * Temporarily override the value of a query. This is used with the `updates` method of a [command](https://svelte.dev/docs/kit/remote-functions#command-Single-flight-mutations) or [enhanced form submission](https://svelte.dev/docs/kit/remote-functions#form-enhance) to provide optimistic updates.
+	 * Temporarily override the value of a query. This is used with the `updates` method of a [command](https://svelte.dev/docs/kit/remote-functions#command-Updating-queries) or [enhanced form submission](https://svelte.dev/docs/kit/remote-functions#form-enhance) to provide optimistic updates.
 	 *
 	 * ```svelte
 	 * <script>
