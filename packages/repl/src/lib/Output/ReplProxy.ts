@@ -23,6 +23,8 @@ export default class ReplProxy {
 				return this.handlers.on_error(event.data);
 			case 'unhandledrejection':
 				return this.handlers.on_unhandled_rejection(event.data);
+			case 'iframe_reload':
+				return this.handlers.on_iframe_reload(event.data);
 			case 'console':
 				if (event.data.command === 'info' && event.data.args[0]?.type === '__error') {
 					const data = event.data.args[0];

@@ -108,6 +108,7 @@
 
 	function rebundle() {
 		return bundler!.bundle(workspace.files as File[], {
+			svelte_version: workspace.svelte_version,
 			tailwind: workspace.tailwind,
 			fragments: workspace.compiler_options.fragments,
 			aliases: workspace.aliases
@@ -137,7 +138,10 @@
 	const bundler = BROWSER
 		? new Bundler({
 				svelte_version: svelteVersion,
-				onversion,
+				onversion: (version) => {
+					workspace.svelte_version = version;
+					onversion?.(version);
+				},
 				onstatus: (message) => {
 					if (message) {
 						// show bundler status, but only after time has elapsed, to
@@ -233,7 +237,7 @@
 						{injectedCSS}
 						{previewTheme}
 						{workspace}
-						runtimeError={status_visible ? runtime_error : null}
+						runtimeError={runtime_error}
 					/>
 				</section>
 			{/snippet}
@@ -258,13 +262,13 @@
 			height: 100%;
 		}
 
-		:global {
-			section {
-				position: relative;
-				padding: var(--sk-pane-controls-height) 0 0 0;
-				height: 100%;
-				box-sizing: border-box;
+		section {
+			position: relative;
+			padding: var(--sk-pane-controls-height) 0 0 0;
+			height: 100%;
+			box-sizing: border-box;
 
+			:global {
 				& > :first-child {
 					position: absolute;
 					top: 0;
@@ -279,11 +283,11 @@
 					height: 100%;
 				}
 			}
+		}
 
-			[data-pane='main'] > svelte-split-pane-divider::after {
-				height: calc(100% - var(--sk-pane-controls-height));
-				top: var(--sk-pane-controls-height);
-			}
+		:global [data-pane='main'] > svelte-split-pane-divider::after {
+			height: calc(100% - var(--sk-pane-controls-height));
+			top: var(--sk-pane-controls-height);
 		}
 	}
 

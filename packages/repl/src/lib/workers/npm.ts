@@ -13,13 +13,17 @@ const packages = new Map<string, Promise<Package>>();
 
 const pkg_pr_new_regex = /^(pr|commit|branch)-(.+)/;
 
-export async function load_svelte(version: string, onresolve?: (resolved: string) => void) {
+export async function load_svelte(version: string) {
 	if (version === 'local') {
 		await import(/* @vite-ignore */ `${location.origin}/svelte/compiler/index.js`);
 	} else {
 		if (!pkg_pr_new_regex.test(version)) {
-			version = await resolve_version('svelte', version);
-			onresolve?.(version);
+			const resolved_version = await resolve_version('svelte', version);
+			if (resolved_version) {
+				version = resolved_version;
+			} else {
+				throw new Error(`Failed to resolve svelte@${version}`);
+			}
 		}
 
 		const pkg = await fetch_package('svelte', version);
