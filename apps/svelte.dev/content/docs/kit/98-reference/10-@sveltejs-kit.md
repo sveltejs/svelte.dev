@@ -489,7 +489,7 @@ type: Exclude<NavigationType, 'leave'>;
 
 The type of navigation:
 - `enter`: The app has hydrated/started
-- `form`: The user submitted a `<form>`
+- `form`: The user submitted a `<form method="GET">`
 - `link`: Navigation was triggered by a link click
 - `goto`: Navigation was triggered by a `goto(...)` call or a redirect
 - `popstate`: Navigation was triggered by back/forward navigation
@@ -1480,7 +1480,7 @@ type: Exclude<NavigationType, 'enter'>;
 <div class="ts-block-property-details">
 
 The type of navigation:
-- `form`: The user submitted a `<form>`
+- `form`: The user submitted a `<form method="GET">`
 - `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
 - `link`: Navigation was triggered by a link click
 - `goto`: Navigation was triggered by a `goto(...)` call or a redirect
@@ -1663,8 +1663,8 @@ The URL that is navigated to
 ## NavigationType
 
 - `enter`: The app has hydrated/started
-- `form`: The user submitted a `<form>` with a GET method
-- `leave`: The user is leaving the app by closing the tab or using the back/forward buttons to go to a different document
+- `form`: The user submitted a `<form method="GET">`
+- `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
 - `link`: Navigation was triggered by a link click
 - `goto`: Navigation was triggered by a `goto(...)` call or a redirect
 - `popstate`: Navigation was triggered by back/forward navigation
@@ -1715,7 +1715,7 @@ type: Exclude<NavigationType, 'enter' | 'leave'>;
 <div class="ts-block-property-details">
 
 The type of navigation:
-- `form`: The user submitted a `<form>`
+- `form`: The user submitted a `<form method="GET">`
 - `link`: Navigation was triggered by a link click
 - `goto`: Navigation was triggered by a `goto(...)` call or a redirect
 - `popstate`: Navigation was triggered by back/forward navigation
