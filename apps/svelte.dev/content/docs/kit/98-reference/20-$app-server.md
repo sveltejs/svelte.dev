@@ -105,10 +105,7 @@ In environments without [`AsyncLocalStorage`](https://nodejs.org/api/async_conte
 <div class="ts-block">
 
 ```dts
-function getRequestEvent(): RequestEvent<
-	AppLayoutParams<'/'>,
-	any
->;
+function getRequestEvent(): RequestEvent;
 ```
 
 </div>
