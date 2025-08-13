@@ -14,11 +14,14 @@ Install with `npm i -D @sveltejs/adapter-node`, then add the adapter to your `sv
 /// file: svelte.config.js
 import adapter from '@sveltejs/adapter-node';
 
-export default {
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
 	kit: {
 		adapter: adapter()
 	}
 };
+
+export default config;
 ```
 
 ## Deploying
@@ -147,7 +150,8 @@ The adapter can be configured with various options:
 /// file: svelte.config.js
 import adapter from '@sveltejs/adapter-node';
 
-export default {
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
 	kit: {
 		adapter: adapter({
 			// default options are shown
@@ -157,6 +161,8 @@ export default {
 		})
 	}
 };
+
+export default config;
 ```
 
 ### out
