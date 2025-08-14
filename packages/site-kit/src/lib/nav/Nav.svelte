@@ -129,7 +129,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 					<span data-icon="discord"></span>
 				</a>
 
-				<a href="https://bsky.app/profile/sveltesociety.dev" aria-label="Svelte Society on Bluesky">
+				<a href="https://bsky.app/profile/svelte.dev" aria-label="Svelte on Bluesky">
 					<span data-icon="bluesky"></span>
 				</a>
 
