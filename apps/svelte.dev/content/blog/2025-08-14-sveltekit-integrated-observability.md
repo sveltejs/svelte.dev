@@ -15,7 +15,7 @@ SvelteKit can now emit [OpenTelemetry](https://opentelemetry.io) traces for the 
 
 - [`handle`](/docs/kit/hooks#Server-hooks-handle) hook (`handle` functions running in a [`sequence`](/docs/kit/@sveltejs-kit-hooks#sequence) will show up as children of each other and the root handle hook)
 - [`load`](/docs/kit/load) functions (includes universal `load` functions when they're run on the server)
-- [Form actions](docs/kit/form-actions)
+- [Form actions](/docs/kit/form-actions)
 - [Remote functions](/docs/kit/remote-functions)
 
 To enable trace emission, add the following to `svelte.config.js`:
