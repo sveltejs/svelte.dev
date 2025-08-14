@@ -94,6 +94,7 @@ export interface ExposedCompilerOptions {
 	generate: 'client' | 'server';
 	dev: boolean;
 	modernAst: boolean;
+	fragments: 'html' | 'tree' | undefined;
 }
 
 export class Workspace {
@@ -104,15 +105,19 @@ export class Workspace {
 	#compiler_options = $state.raw<ExposedCompilerOptions>({
 		generate: 'client',
 		dev: false,
-		modernAst: true
+		modernAst: true,
+		// default to undefined so it's removed if the current version
+		// doesn't support it
+		fragments: undefined
 	});
 	compiled = $state<Record<string, Compiled>>({});
 
-	#svelte_version: string;
+	#svelte_version = $state('');
 	#readonly = false; // TODO do we need workspaces for readonly stuff?
 	#files = $state.raw<Item[]>([]);
 	#current = $state.raw() as File;
 	#vim = $state(false);
+	#aliases = $state.raw(undefined) as undefined | Record<string, string>;
 	#tailwind = $state(false);
 
 	#handlers = {
@@ -121,7 +126,7 @@ export class Workspace {
 	};
 
 	#onupdate: (file: File) => void;
-	#onreset: (items: Item[]) => void;
+	#onreset: (items: Item[]) => void | Promise<void>;
 
 	// CodeMirror stuff
 	states = new Map<string, EditorState>();
@@ -194,7 +199,7 @@ export class Workspace {
 			initial?: string;
 			readonly?: boolean;
 			onupdate?: (file: File) => void;
-			onreset?: (items: Item[]) => void;
+			onreset?: (items: Item[]) => void | Promise<void>;
 		} = {}
 	) {
 		this.#svelte_version = svelte_version;
@@ -396,16 +401,25 @@ export class Workspace {
 		this.#onreset?.(this.#files);
 	}
 
-	reset(new_files: Item[], options: { tailwind: boolean }, selected?: string) {
+	reset(
+		new_files: Item[],
+		options: { tailwind: boolean; aliases?: Record<string, string> },
+		selected?: string
+	) {
 		this.states.clear();
 		this.set(new_files, selected);
 
 		this.mark_saved();
 
 		this.#tailwind = options.tailwind;
+		this.#aliases = options.aliases;
 
-		this.#onreset(new_files);
-		this.#reset_diagnostics();
+		const bundle = this.#onreset(new_files);
+		const diagnostics = this.#reset_diagnostics();
+
+		return Promise.all([bundle, diagnostics])
+			.then(() => {})
+			.catch(() => {});
 	}
 
 	select(name: string) {
@@ -425,13 +439,9 @@ export class Workspace {
 			throw new Error('Workspace must have at least one file');
 		}
 
-		if (selected) {
-			const file = files.find((file) => is_file(file) && file.name === selected);
-
-			if (!file) {
-				throw new Error(`Invalid selection ${selected}`);
-			}
-			this.#select(file as File);
+		const matching_file = selected && files.find((file) => is_file(file) && file.name === selected);
+		if (matching_file) {
+			this.#select(matching_file as File);
 		} else {
 			this.#select(first);
 		}
@@ -459,6 +469,11 @@ export class Workspace {
 	update_compiler_options(options: Partial<ExposedCompilerOptions>) {
 		this.#compiler_options = { ...this.#compiler_options, ...options };
 		this.#reset_diagnostics();
+		for (let file of this.#files) {
+			if (is_file(file)) {
+				this.#onupdate(file);
+			}
+		}
 	}
 
 	update_file(file: File) {
@@ -470,6 +485,15 @@ export class Workspace {
 		}
 	}
 
+	get aliases() {
+		return this.#aliases;
+	}
+
+	set aliases(value) {
+		this.#aliases = value;
+		this.#onupdate(this.#current);
+	}
+
 	get tailwind() {
 		return this.#tailwind;
 	}
@@ -477,6 +501,16 @@ export class Workspace {
 	set tailwind(value) {
 		this.#tailwind = value;
 		this.#onupdate(this.#current);
+	}
+
+	get svelte_version() {
+		return this.#svelte_version;
+	}
+
+	set svelte_version(value) {
+		this.#svelte_version = value;
+		this.#update_file(this.#current);
+		this.#reset_diagnostics();
 	}
 
 	get vim() {
@@ -643,22 +677,26 @@ export class Workspace {
 			files = [this.current, ...this.#files.slice(0, i), ...this.#files.slice(i + 1)];
 		}
 
-		for (const file of files) {
-			if (file.type !== 'file') continue;
-			if (!is_svelte_file(file)) continue;
+		const done = files.map((file) => {
+			if (file.type !== 'file') return;
+			if (!is_svelte_file(file)) return;
 
 			seen.push(file.name);
 
-			compile_file(file, this.#svelte_version, this.compiler_options).then((compiled) => {
+			return compile_file(file, this.#svelte_version, this.compiler_options).then((compiled) => {
 				this.compiled[file.name] = compiled;
 			});
-		}
+		});
 
 		for (const key of keys) {
 			if (!seen.includes(key)) {
 				delete this.compiled[key];
 			}
 		}
+
+		return Promise.all(done)
+			.then(() => {})
+			.catch(() => {});
 	}
 
 	#select(file: File) {

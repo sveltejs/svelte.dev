@@ -12,7 +12,7 @@
 
 	let repl = $state() as ReturnType<typeof Repl>;
 
-	let version = page.url.searchParams.get('version') || 'latest';
+	let version = $derived(page.url.searchParams.get('version') || 'latest');
 
 	// TODO make this munging unnecessary
 	function munge(data: any): File {
@@ -59,7 +59,7 @@
 
 	<meta name="twitter:title" content="{data.gist.name} • Playground • Svelte" />
 	<meta name="twitter:description" content="Web development for the rest of us" />
-	<meta name="Description" content="Interactive Svelte playground" />
+	<meta name="description" content="Interactive Svelte playground" />
 </svelte:head>
 
 <div class="repl-outer">

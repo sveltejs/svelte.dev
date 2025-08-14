@@ -3,7 +3,7 @@ import { walk } from 'zimmerframe';
 import '../patch_window';
 import { rollup } from '@rollup/browser';
 import { DEV } from 'esm-env';
-import typescript_strip_types from './plugins/typescript-strip-types';
+import typescript_strip_types from './plugins/typescript';
 import commonjs from './plugins/commonjs';
 import glsl from './plugins/glsl';
 import json from './plugins/json';
@@ -12,6 +12,7 @@ import image from './plugins/image';
 import svg from './plugins/svg';
 import replace from './plugins/replace';
 import loop_protect from './plugins/loop-protect';
+import alias_plugin, { resolve } from './plugins/alias';
 import type { Plugin, RollupCache, TransformResult } from '@rollup/browser';
 import type { BundleMessageData, BundleOptions } from '../workers';
 import type { Warning } from '../../types';
@@ -37,30 +38,27 @@ import type { BundleResult } from '$lib/public';
 self.window = self;
 
 const ENTRYPOINT = '__entry.js';
+const WRAPPER = '__wrapper.svelte';
 const STYLES = '__styles.js';
 const ESM_ENV = '__esm-env.js';
 
 let current_id: number;
 
-let ready: ReturnType<typeof load_svelte>;
-
 self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) => {
 	switch (event.data.type) {
 		case 'init': {
-			ready = load_svelte(event.data.svelte_version, (version) => {
-				self.postMessage({
-					type: 'version',
-					message: version
-				});
-			});
-
+			get_svelte(event.data.svelte_version);
 			break;
 		}
 
 		case 'bundle': {
 			try {
-				const { svelte, version: svelte_version, can_use_experimental_async } = await ready;
 				const { uid, files, options } = event.data;
+				const {
+					svelte,
+					version: svelte_version,
+					can_use_experimental_async
+				} = await get_svelte(options.svelte_version);
 
 				current_id = uid;
 
@@ -75,6 +73,8 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 						options,
 						can_use_experimental_async
 					);
+
+					console.log('[bundle worker result]', result);
 
 					if (JSON.stringify(result.error) === JSON.stringify(ABORT)) return;
 					if (result && uid === current_id) postMessage(result);
@@ -92,16 +92,37 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 	}
 });
 
+let ready: ReturnType<typeof load_svelte>;
+let ready_version: string;
+
+function get_svelte(svelte_version: string) {
+	if (ready_version === svelte_version) return ready;
+
+	self.postMessage({ type: 'status', message: `fetching svelte@${svelte_version}` });
+	ready_version = svelte_version;
+	ready = load_svelte(svelte_version || 'latest');
+	ready.then(({ version }) => {
+		ready_version = version;
+		self.postMessage({
+			type: 'version',
+			message: version
+		});
+	});
+	return ready;
+}
+
 const ABORT = { aborted: true };
 
 let previous: {
 	key: string;
 	cache: RollupCache | undefined;
+	/** Needed because if rollup cache hits then we won't be able to pick up all candidates in subsequent runs */
+	tailwind_candidates: Set<string>;
 };
 
 let tailwind: Awaited<ReturnType<typeof init_tailwind>>;
 
-async function init_tailwind() {
+async function init_tailwind(user_css = '') {
 	const tailwindcss = await import('tailwindcss');
 
 	const { default: tailwind_preflight } = await import('tailwindcss/preflight.css?raw');
@@ -118,7 +139,8 @@ async function init_tailwind() {
 		`@layer theme, base, components, utilities;`,
 		`@import "tailwindcss/theme.css" layer(theme);`,
 		`@import "tailwindcss/preflight.css" layer(base);`,
-		`@import "tailwindcss/utilities.css" layer(utilities);`
+		`@import "tailwindcss/utilities.css" layer(utilities);`,
+		user_css
 	].join('\n');
 
 	return await tailwindcss.compile(tailwind_base, {
@@ -139,12 +161,14 @@ async function get_bundle(
 ) {
 	let bundle;
 
+	const key = JSON.stringify(options);
 	/** A set of package names (without subpaths) to include in pkg.devDependencies when downloading an app */
 	const imports: Set<string> = new Set();
 	const warnings: Warning[] = [];
 	const all_warnings: Array<{ message: string }> = [];
 
-	const tailwind_candidates: string[] = [];
+	const tailwind_candidates =
+		previous?.key === key ? previous.tailwind_candidates : new Set<string>();
 
 	function add_tailwind_candidates(ast: Node | undefined) {
 		if (!ast) return;
@@ -156,12 +180,16 @@ async function get_bundle(
 			},
 			Literal(node) {
 				if (typeof node.value === 'string' && node.value) {
-					tailwind_candidates.push(...node.value.split(' '));
+					for (const candidate of node.value.split(' ')) {
+						if (candidate) tailwind_candidates.add(candidate);
+					}
 				}
 			},
 			TemplateElement(node) {
 				if (node.value.raw) {
-					tailwind_candidates.push(...node.value.raw.split(' '));
+					for (const candidate of node.value.raw.split(' ')) {
+						if (candidate) tailwind_candidates.add(candidate);
+					}
 				}
 			}
 		});
@@ -192,27 +220,14 @@ async function get_bundle(
 			// importing a relative file
 			if (importee[0] === '.') {
 				if (importer.startsWith(VIRTUAL)) {
-					const url = new URL(importee, importer);
-
-					for (const suffix of ['', '.js', '.json', '.ts']) {
-						const with_suffix = `${url.href.slice(VIRTUAL.length + 1)}${suffix}`;
-						const file = virtual.get(with_suffix);
-
-						if (file) {
-							return url.href + suffix;
-						}
-					}
-
-					throw new Error(
-						`'${importee}' (imported by ${importer.replace(VIRTUAL + '/', '')}) does not exist`
-					);
+					return resolve(virtual, importee, importer);
 				}
 
 				if (current) {
 					const { name, version } = current.meta;
 					const path = new URL(importee, importer).href.replace(`${NPM}/${name}@${version}/`, '');
 
-					return normalize_path(current, path);
+					return normalize_path(current, path, importee, importer);
 				}
 
 				return new URL(importee, importer).href;
@@ -222,7 +237,7 @@ async function get_bundle(
 			if (importee[0] === '#') {
 				if (current) {
 					const subpath = resolve_subpath(current, importee);
-					return normalize_path(current, subpath.slice(2));
+					return normalize_path(current, subpath.slice(2), importee, importer);
 				}
 				return await resolve_local(importee);
 			}
@@ -263,7 +278,7 @@ async function get_bundle(
 			const pkg = await fetch_package(pkg_name, pkg_name === 'svelte' ? svelte_version : v);
 			const subpath = resolve_subpath(pkg, '.' + (match[3] ?? ''));
 
-			return normalize_path(pkg, subpath.slice(2));
+			return normalize_path(pkg, subpath.slice(2), importee, importer);
 		},
 		async load(resolved) {
 			if (uid !== current_id) throw ABORT;
@@ -292,12 +307,11 @@ async function get_bundle(
 		transform(code, id) {
 			if (uid !== current_id) throw ABORT;
 
-			const message = `bundling ${id.replace(VIRTUAL + '/', '').replace(NPM + '/', '')}`;
-			self.postMessage({ type: 'status', message });
+			const name = id.replace(VIRTUAL + '/', '').replace(NPM + '/', '');
+
+			self.postMessage({ type: 'status', message: `bundling ${name}` });
 
 			if (!/\.(svelte|js|ts)$/.test(id)) return null;
-
-			const name = id.split('/').pop()?.split('.')[0];
 
 			let result: CompileResult;
 
@@ -305,9 +319,10 @@ async function get_bundle(
 				const is_gt_5 = Number(svelte.VERSION.split('.')[0]) >= 5;
 
 				const compilerOptions: any = {
-					filename: name + '.svelte',
+					filename: name,
 					generate: is_gt_5 ? 'client' : 'dom',
-					dev: true
+					dev: true,
+					fragments: options.fragments
 				};
 
 				if (is_gt_5) {
@@ -318,6 +333,12 @@ async function get_bundle(
 					compilerOptions.experimental = { async: true };
 				}
 
+				if (compilerOptions.fragments == null) {
+					// if fragments is not set it probably means we are using
+					// a version that doesn't support it, so we need to remove it
+					delete compilerOptions.fragments;
+				}
+
 				result = svelte.compile(code, compilerOptions);
 
 				walk(result.ast.html as import('svelte/compiler').AST.TemplateNode, null, {
@@ -325,7 +346,9 @@ async function get_bundle(
 						if (Array.isArray(node.value)) {
 							for (const chunk of node.value) {
 								if (chunk.type === 'Text') {
-									tailwind_candidates.push(...chunk.data.split(' '));
+									for (const candidate of chunk.data.split(' ')) {
+										if (candidate) tailwind_candidates.add(candidate);
+									}
 								}
 							}
 						}
@@ -365,7 +388,7 @@ async function get_bundle(
 				}
 			} else if (/\.svelte\.(js|ts)$/.test(id)) {
 				const compilerOptions: any = {
-					filename: name + '.js',
+					filename: name,
 					generate: 'client',
 					dev: true
 				};
@@ -402,12 +425,14 @@ async function get_bundle(
 		}
 	};
 
-	const key = JSON.stringify(options);
+	const handled_css_ids = new Set<string>();
+	let user_css = '';
 
 	bundle = await rollup({
 		input: './__entry.js',
-		cache: previous?.key === key && previous.cache,
+		cache: previous?.key === key ? previous.cache : true,
 		plugins: [
+			alias_plugin(options.aliases, virtual),
 			typescript_strip_types,
 			repl_plugin,
 			commonjs,
@@ -420,6 +445,23 @@ async function get_bundle(
 			replace({
 				'process.env.NODE_ENV': JSON.stringify('production')
 			}),
+			{
+				name: 'css',
+				transform(code, id) {
+					if (id.endsWith('.css')) {
+						if (!handled_css_ids.has(id)) {
+							handled_css_ids.add(id);
+							// We don't handle imports in the user CSS right now, so we remove them
+							// to avoid errors in e.g. the Tailwind compiler
+							user_css += '\n' + code.replace(/@import\s+["'][^"']+["'][^;]*;/g, '');
+						}
+						return {
+							code: '',
+							map: null
+						};
+					}
+				}
+			},
 			options.tailwind && {
 				name: 'tailwind-extract',
 				transform(code, id) {
@@ -431,7 +473,11 @@ async function get_bundle(
 					if (id === `${VIRTUAL}/${ESM_ENV}`) return;
 					if (id.endsWith('.svelte')) return;
 
-					add_tailwind_candidates(this.parse(code));
+					try {
+						// Don't let a parser/tailwind error crash the bundler
+						// Can happen for files that begin with a bash shebang
+						add_tailwind_candidates(this.parse(code));
+					} catch {}
 				}
 			}
 		],
@@ -442,13 +488,15 @@ async function get_bundle(
 		}
 	});
 
-	previous = { key, cache: bundle.cache };
+	previous = { key, cache: bundle.cache, tailwind_candidates };
 
 	return {
 		bundle,
-		tailwind: options.tailwind
-			? (tailwind ?? (await init_tailwind())).build(tailwind_candidates)
-			: undefined,
+		css: options.tailwind
+			? (tailwind ?? (await init_tailwind(user_css))).build([...tailwind_candidates])
+			: user_css
+				? user_css
+				: null,
 		imports: Array.from(imports),
 		error: null,
 		warnings,
@@ -480,7 +528,7 @@ async function bundle(
 			import { unmount as u } from 'svelte';
 			import { styles } from '${VIRTUAL}/${STYLES}';
 			export { mount, untrack } from 'svelte';
-			export {default as App} from './App.svelte';
+			export { default as App } from '${VIRTUAL}/${WRAPPER}';
 			export function unmount(component) {
 				u(component);
 				styles.forEach(style => style.remove());
@@ -488,7 +536,7 @@ async function bundle(
 		`
 				: `
 			import { styles } from '${VIRTUAL}/${STYLES}';
-			export {default as App} from './App.svelte';
+			export { default as App } from './App.svelte';
 			export function mount(component, options) {
 				return new component(options);
 			}
@@ -500,6 +548,34 @@ async function bundle(
 				return fn();
 			}
 		`,
+		text: true
+	});
+
+	const wrapper = can_use_experimental_async
+		? `
+		<script>
+			import App from './App.svelte';
+		</script>
+
+		<svelte:boundary>
+			<App />
+
+			{#snippet pending()}{/snippet}
+		</svelte:boundary>
+	`
+		: `
+		<script>
+			import App from './App.svelte';
+		</script>
+
+		<App />
+	`;
+
+	lookup.set(WRAPPER, {
+		type: 'file',
+		name: WRAPPER,
+		basename: WRAPPER,
+		contents: wrapper,
 		text: true
 	});
 
@@ -576,7 +652,7 @@ async function bundle(
 			error: null,
 			client: client_result,
 			server: server_result,
-			tailwind: client.tailwind,
+			css: client.css,
 			imports: client.imports
 		};
 	} catch (err) {
@@ -589,7 +665,7 @@ async function bundle(
 			error: { ...e, message: e.message }, // not all Svelte versions return an enumerable message property
 			client: null,
 			server: null,
-			tailwind: null,
+			css: null,
 			imports: null
 		};
 	}

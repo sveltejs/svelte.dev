@@ -5,7 +5,7 @@ import { index } from './content';
 interface GenerateLlmContentOptions {
 	ignore?: string[];
 	minimize?: Partial<MinimizeOptions>;
-	sections: Section[];
+	topics: Topic[];
 }
 
 interface MinimizeOptions {
@@ -17,7 +17,7 @@ interface MinimizeOptions {
 	normalize_whitespace: boolean;
 }
 
-interface Section {
+interface Topic {
 	slug: string;
 	title: string;
 }
@@ -34,13 +34,13 @@ const defaults: MinimizeOptions = {
 export function generate_llm_content(options: GenerateLlmContentOptions): string {
 	let content = '';
 
-	for (const section of options.sections) {
-		if (options.sections.length > 1) {
-			content += `# Start of ${section.title} documentation\n\n`;
+	for (const topic of options.topics) {
+		if (options.topics.length > 1) {
+			content += `# Start of ${topic.title} documentation\n\n`;
 		}
 
 		for (const [path, document] of Object.entries(index)) {
-			if (!path.startsWith(`docs/${section.slug}`)) continue;
+			if (!path.startsWith(`docs/${topic.slug}`)) continue;
 
 			if (options.ignore?.some((pattern) => minimatch(path, pattern))) {
 				if (dev) console.log(`❌ Ignored by pattern: ${path}`);
@@ -51,8 +51,12 @@ export function generate_llm_content(options: GenerateLlmContentOptions): string
 				? minimize_content(document.body, options.minimize)
 				: document.body;
 			if (doc_content.trim() === '') continue;
-
-			content += `\n# ${document.metadata.title}\n\n`;
+			// replaces <tags> with `<tags>`
+			const doc_title = document.metadata.title.replace(
+				/(?!`)<[a-zA-Z0-9:]+>(?!`)/g,
+				(m) => `\`${m}\``
+			);
+			content += `\n# ${doc_title}\n\n`;
 			content += doc_content;
 			content += '\n';
 		}
@@ -61,14 +65,14 @@ export function generate_llm_content(options: GenerateLlmContentOptions): string
 	return content;
 }
 
-export const sections: Section[] = [
+export const topics: Topic[] = [
 	{ slug: 'svelte', title: 'Svelte' },
 	{ slug: 'kit', title: 'SvelteKit' },
 	{ slug: 'cli', title: 'the Svelte CLI' }
 ];
 
-export function get_documentation_title(section: Section): string {
-	return `This is the developer documentation for ${section.title}.`;
+export function get_documentation_title(topic: Topic): string {
+	return `This is the developer documentation for ${topic.title}.`;
 }
 
 function minimize_content(content: string, options?: Partial<MinimizeOptions>): string {

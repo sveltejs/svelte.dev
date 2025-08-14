@@ -29,49 +29,13 @@ export default config;
 
 ## Config
 
+An extension of [`vite-plugin-svelte`'s options](https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/config.md#svelte-options).
+
 <div class="ts-block">
 
 ```dts
-interface Config {/*…*/}
+interface Config extends SvelteConfig {/*…*/}
 ```
-
-<div class="ts-block-property">
-
-```dts
-compilerOptions?: CompileOptions;
-```
-
-<div class="ts-block-property-details">
-
-<div class="ts-block-property-bullets">
-
-- <span class="tag">default</span> `{}`
-
-</div>
-
-Options passed to [`svelte.compile`](/docs/svelte/svelte-compiler#CompileOptions).
-
-</div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-extensions?: string[];
-```
-
-<div class="ts-block-property-details">
-
-<div class="ts-block-property-bullets">
-
-- <span class="tag">default</span> `[".svelte"]`
-
-</div>
-
-List of file extensions that should be treated as Svelte files.
-
-</div>
-</div>
 
 <div class="ts-block-property">
 
@@ -81,33 +45,7 @@ kit?: KitConfig;
 
 <div class="ts-block-property-details">
 
-SvelteKit options
-
-</div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-preprocess?: any;
-```
-
-<div class="ts-block-property-details">
-
-Preprocessor options, if any. Preprocessing can alternatively also be done through Vite's preprocessor capabilities.
-
-</div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-vitePlugin?: PluginOptions;
-```
-
-<div class="ts-block-property-details">
-
-`vite-plugin-svelte` plugin options.
+SvelteKit options.
 
 </div>
 </div>
@@ -421,11 +359,45 @@ A prefix that signals that an environment variable is unsafe to expose to client
 
 </div>
 
-## files
+## experimental
 
 <div class="ts-block-property-bullets">
 
 
+
+</div>
+
+Experimental features which are exempt from semantic versioning. These features may be changed or removed at any time.
+
+<div class="ts-block-property-children">
+
+<div class="ts-block-property">
+
+```ts
+// @noErrors
+remoteFunctions?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `false`
+
+</div>
+
+Whether to enable the experimental remote functions feature. This feature is not yet stable and may be changed or removed at any time.
+
+</div>
+</div>
+
+</div>
+
+## files
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag deprecated">deprecated</span> 
 
 </div>
 
@@ -437,6 +409,27 @@ Where to find various files within your project.
 
 ```ts
 // @noErrors
+src?: string;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag deprecated">deprecated</span> 
+- <span class="tag">default</span> `"src"`
+- <span class="tag since">available since</span> v2.28
+
+</div>
+
+the location of your source code
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```ts
+// @noErrors
 assets?: string;
 ```
 
@@ -444,6 +437,7 @@ assets?: string;
 
 <div class="ts-block-property-bullets">
 
+- <span class="tag deprecated">deprecated</span> 
 - <span class="tag">default</span> `"static"`
 
 </div>
@@ -472,6 +466,7 @@ client?: string;
 
 <div class="ts-block-property-bullets">
 
+- <span class="tag deprecated">deprecated</span> 
 - <span class="tag">default</span> `"src/hooks.client"`
 
 </div>
@@ -491,6 +486,7 @@ server?: string;
 
 <div class="ts-block-property-bullets">
 
+- <span class="tag deprecated">deprecated</span> 
 - <span class="tag">default</span> `"src/hooks.server"`
 
 </div>
@@ -510,6 +506,7 @@ universal?: string;
 
 <div class="ts-block-property-bullets">
 
+- <span class="tag deprecated">deprecated</span> 
 - <span class="tag">default</span> `"src/hooks"`
 - <span class="tag since">available since</span> v2.3.0
 
@@ -533,6 +530,7 @@ lib?: string;
 
 <div class="ts-block-property-bullets">
 
+- <span class="tag deprecated">deprecated</span> 
 - <span class="tag">default</span> `"src/lib"`
 
 </div>
@@ -552,6 +550,7 @@ params?: string;
 
 <div class="ts-block-property-bullets">
 
+- <span class="tag deprecated">deprecated</span> 
 - <span class="tag">default</span> `"src/params"`
 
 </div>
@@ -571,6 +570,7 @@ routes?: string;
 
 <div class="ts-block-property-bullets">
 
+- <span class="tag deprecated">deprecated</span> 
 - <span class="tag">default</span> `"src/routes"`
 
 </div>
@@ -590,6 +590,7 @@ serviceWorker?: string;
 
 <div class="ts-block-property-bullets">
 
+- <span class="tag deprecated">deprecated</span> 
 - <span class="tag">default</span> `"src/service-worker"`
 
 </div>
@@ -609,6 +610,7 @@ appTemplate?: string;
 
 <div class="ts-block-property-bullets">
 
+- <span class="tag deprecated">deprecated</span> 
 - <span class="tag">default</span> `"src/app.html"`
 
 </div>
@@ -628,6 +630,7 @@ errorTemplate?: string;
 
 <div class="ts-block-property-bullets">
 
+- <span class="tag deprecated">deprecated</span> 
 - <span class="tag">default</span> `"src/error.html"`
 
 </div>
@@ -647,7 +650,7 @@ the location of the template for fallback error responses
 
 </div>
 
-Inline CSS inside a `<style>` block at the head of the HTML. This option is a number that specifies the maximum length of a CSS file in UTF-16 code units, as specified by the [String.length](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length) property, to be inlined. All CSS files needed for the page and smaller than this value are merged and inlined in a `<style>` block.
+Inline CSS inside a `<style>` block at the head of the HTML. This option is a number that specifies the maximum length of a CSS file in UTF-16 code units, as specified by the [String.length](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length) property, to be inlined. All CSS files needed for the page that are smaller than this value are merged and inlined in a `<style>` block.
 
 > [!NOTE] This results in fewer initial requests and can improve your [First Contentful Paint](https://web.dev/first-contentful-paint) score. However, it generates larger HTML output and reduces the effectiveness of browser caches. Use it advisedly.
 
@@ -1137,44 +1140,7 @@ The drawback is that for unvisited paths, resolution will take slightly longer (
 
 <div class="ts-block-property-children">
 
-<div class="ts-block-property">
 
-```ts
-// @noErrors
-register?: boolean;
-```
-
-<div class="ts-block-property-details">
-
-<div class="ts-block-property-bullets">
-
-- <span class="tag">default</span> `true`
-
-</div>
-
-Whether to automatically register the service worker, if it exists.
-
-</div>
-</div>
-<div class="ts-block-property">
-
-```ts
-// @noErrors
-files?(filepath: string): boolean;
-```
-
-<div class="ts-block-property-details">
-
-<div class="ts-block-property-bullets">
-
-- <span class="tag">default</span> `(filename) => !/\.DS_Store/.test(filename)`
-
-</div>
-
-Determine which files in your `static` directory will be available in `$service-worker.files`.
-
-</div>
-</div>
 
 </div>
 
@@ -1208,6 +1174,8 @@ config?: (config: Record<string, any>) => Record<string, any> | void;
 
 A function that allows you to edit the generated `tsconfig.json`. You can mutate the config (recommended) or return a new one.
 This is useful for extending a shared `tsconfig.json` in a monorepo root, for example.
+
+Note that any paths configured here should be relative to the generated config file, which is written to `.svelte-kit/tsconfig.json`.
 
 </div>
 </div>

@@ -52,7 +52,7 @@
 		text: true
 	};
 
-	const workspace = new Workspace([dummy], {
+	const workspace: Workspace = new Workspace([dummy], {
 		initial: 'App.svelte',
 		svelte_version: svelteVersion,
 		onupdate() {
@@ -60,7 +60,8 @@
 			onchange?.();
 		},
 		onreset() {
-			rebundle();
+			// Return promise so we can await it in the workspace
+			return rebundle();
 		}
 	});
 
@@ -69,13 +70,33 @@
 		return {
 			imports: bundler!.result?.imports ?? [],
 			files: workspace.files,
-			tailwind: workspace.tailwind
+			tailwind: workspace.tailwind,
+			aliases: workspace.aliases
 		};
 	}
 
-	// TODO get rid
-	export async function set(data: { files: File[]; tailwind?: boolean }) {
-		workspace.reset(data.files, { tailwind: data.tailwind ?? false }, 'App.svelte');
+	// Our own playground / v0 need this
+	export async function set(data: {
+		files: File[];
+		tailwind?: boolean;
+		aliases?: Record<string, string>;
+	}) {
+		// Await promise so that users (v0 in this case) can know when the bundling is done
+		await workspace.reset(
+			data.files,
+			{ tailwind: data.tailwind ?? false, aliases: data.aliases },
+			'App.svelte'
+		);
+	}
+
+	// v0 needs this
+	export function get_asts() {
+		return Object.fromEntries(
+			Object.entries(workspace.compiled).map(([name, compiled]) => [
+				name,
+				compiled.result?.ast ?? null
+			])
+		);
 	}
 
 	// TODO get rid
@@ -85,9 +106,12 @@
 
 	const toggleable: ReplContext['toggleable'] = writable(false);
 
-	async function rebundle() {
-		bundler!.bundle(workspace.files as File[], {
-			tailwind: workspace.tailwind
+	function rebundle() {
+		return bundler!.bundle(workspace.files as File[], {
+			svelte_version: workspace.svelte_version,
+			tailwind: workspace.tailwind,
+			fragments: workspace.compiler_options.fragments,
+			aliases: workspace.aliases
 		});
 	}
 
@@ -112,7 +136,10 @@
 	const bundler = BROWSER
 		? new Bundler({
 				svelte_version: svelteVersion,
-				onversion,
+				onversion: (version) => {
+					workspace.svelte_version = version;
+					onversion?.(version);
+				},
 				onstatus: (message) => {
 					if (message) {
 						// show bundler status, but only after time has elapsed, to
@@ -139,7 +166,11 @@
 		bundler,
 		toggleable,
 		workspace,
-		svelteVersion
+		get svelteVersion() {
+			// we want this to be reactive since we are checking in
+			// the compiler options
+			return svelteVersion;
+		}
 	});
 
 	function before_unload(event: BeforeUnloadEvent) {
@@ -204,7 +235,7 @@
 						{injectedCSS}
 						{previewTheme}
 						{workspace}
-						runtimeError={status_visible ? runtime_error : null}
+						runtimeError={runtime_error}
 					/>
 				</section>
 			{/snippet}
@@ -229,13 +260,13 @@
 			height: 100%;
 		}
 
-		:global {
-			section {
-				position: relative;
-				padding: var(--sk-pane-controls-height) 0 0 0;
-				height: 100%;
-				box-sizing: border-box;
+		section {
+			position: relative;
+			padding: var(--sk-pane-controls-height) 0 0 0;
+			height: 100%;
+			box-sizing: border-box;
 
+			:global {
 				& > :first-child {
 					position: absolute;
 					top: 0;
@@ -250,11 +281,11 @@
 					height: 100%;
 				}
 			}
+		}
 
-			[data-pane='main'] > svelte-split-pane-divider::after {
-				height: calc(100% - var(--sk-pane-controls-height));
-				top: var(--sk-pane-controls-height);
-			}
+		:global [data-pane='main'] > svelte-split-pane-divider::after {
+			height: calc(100% - var(--sk-pane-controls-height));
+			top: var(--sk-pane-controls-height);
 		}
 	}
 
