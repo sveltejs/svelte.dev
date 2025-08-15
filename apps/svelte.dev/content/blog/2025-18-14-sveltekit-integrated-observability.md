@@ -31,7 +31,7 @@ export default {
 };
 ```
 
-If there are additional attributes you think might be useful, please file an issue on the [SvelteKit Github issue tracker](https://github.com/sveltejs/kit/issues).
+If there are additional attributes you think might be useful, please file an issue on the [SvelteKit GitHub issue tracker](https://github.com/sveltejs/kit/issues).
 
 ## A convenient home for all of your instrumentation
 
