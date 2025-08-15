@@ -5,9 +5,7 @@ author: Elliott Johnson
 authorURL: https://bsky.app/profile/gruntled.bsky.social
 ---
 
-"Observability" is one of those buzzwords that is commonly thrown around as something essential to all good apps
-
-SvelteKit is proud to announce two new experimental features geared towards making observing and debugging your app as easy as possible.
+Understanding how your SvelteKit application behaves in production -- from request flows to performance bottlenecks -- is crucial for building reliable user experiences. We're excited to introduce two new experimental features that bring integrated observability directly into SvelteKit: built-in OpenTelemetry tracing and a dedicated instrumentation setup file that ensures your monitoring tools work seamlessly from day one.
 
 ## First-party OpenTelemetry traces
 
