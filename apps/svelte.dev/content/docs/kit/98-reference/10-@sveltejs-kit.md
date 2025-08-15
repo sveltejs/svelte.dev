@@ -450,6 +450,24 @@ read?: (details: { config: any; route: { id: string } }) => boolean;
 Test support for `read` from `$app/server`.
 
 </div>
+</div>
+<div class="ts-block-property">
+
+```dts
+instrumentation?: () => boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag since">available since</span> v2.31.0
+
+</div>
+
+Test support for `instrumentation.server.js`. To pass, the adapter must support running `instrumentation.server.js` prior to the application code.
+
+</div>
 </div></div>
 
 </div>
@@ -862,6 +880,71 @@ copy: (
 </div>
 
 Copy a file or directory.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+hasServerInstrumentationFile: () => boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">returns</span> true if the server instrumentation file exists, false otherwise
+- <span class="tag since">available since</span> v2.31.0
+
+</div>
+
+Check if the server instrumentation file exists.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+instrument: (args: {
+	entrypoint: string;
+	instrumentation: string;
+	start?: string;
+	module?:
+		| {
+				exports: string[];
+		  }
+		| {
+				generateText: (args: { instrumentation: string; start: string }) => string;
+		  };
+}) => void;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- `options` an object containing the following properties:
+- `options.entrypoint` the path to the entrypoint to trace.
+- `options.instrumentation` the path to the instrumentation file.
+- `options.start` the name of the start file. This is what `entrypoint` will be renamed to.
+- `options.module` configuration for the resulting entrypoint module.
+- `options.module.generateText` a function that receives the relative paths to the instrumentation and start files, and generates the text of the module to be traced. If not provided, the default implementation will be used, which uses top-level await.
+- <span class="tag since">available since</span> v2.31.0
+
+</div>
+
+Instrument `entrypoint` with `instrumentation`.
+
+Renames `entrypoint` to `start` and creates a new module at
+`entrypoint` which imports `instrumentation` and then dynamically imports `start`. This allows
+the module hooks necessary for instrumentation libraries to be loaded prior to any application code.
+
+Caveats:
+- "Live exports" will not work. If your adapter uses live exports, your users will need to manually import the server instrumentation on startup.
+- If `tla` is `false`, OTEL auto-instrumentation may not work properly. Use it if your environment supports it.
+- Use `hasServerInstrumentationFile` to check if the user has a server instrumentation file; if they don't, you shouldn't do this.
 
 </div>
 </div>
@@ -1417,6 +1500,62 @@ export async function load({ untrack, url }) {
 	}
 }
 ```
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+tracing: {/*…*/}
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag since">available since</span> v2.31.0
+
+</div>
+
+Access to spans for tracing. If tracing is not enabled or the function is being run in the browser, these spans will do nothing.
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+enabled: boolean;
+```
+
+<div class="ts-block-property-details">
+
+Whether tracing is enabled.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+root: Span;
+```
+
+<div class="ts-block-property-details">
+
+The root span for the request. This span is named `sveltekit.handle.root`.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+current: Span;
+```
+
+<div class="ts-block-property-details">
+
+The span associated with the current `load` function.
+
+</div>
+</div></div>
 
 </div>
 </div></div>
@@ -2365,6 +2504,62 @@ isSubRequest: boolean;
 <div class="ts-block-property">
 
 ```dts
+tracing: {/*…*/}
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag since">available since</span> v2.31.0
+
+</div>
+
+Access to spans for tracing. If tracing is not enabled, these spans will do nothing.
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+enabled: boolean;
+```
+
+<div class="ts-block-property-details">
+
+Whether tracing is enabled.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+root: Span;
+```
+
+<div class="ts-block-property-details">
+
+The root span for the request. This span is named `sveltekit.handle.root`.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+current: Span;
+```
+
+<div class="ts-block-property-details">
+
+The span associated with the current `handle` hook, `load` function, or form action.
+
+</div>
+</div></div>
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
 isRemoteRequest: boolean;
 ```
 
@@ -2875,6 +3070,62 @@ export async function load({ untrack, url }) {
 	}
 }
 ```
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+tracing: {/*…*/}
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag since">available since</span> v2.31.0
+
+</div>
+
+Access to spans for tracing. If tracing is not enabled, these spans will do nothing.
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+enabled: boolean;
+```
+
+<div class="ts-block-property-details">
+
+Whether tracing is enabled.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+root: Span;
+```
+
+<div class="ts-block-property-details">
+
+The root span for the request. This span is named `sveltekit.handle.root`.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+current: Span;
+```
+
+<div class="ts-block-property-details">
+
+The span associated with the current server `load` function.
+
+</div>
+</div></div>
 
 </div>
 </div></div>
