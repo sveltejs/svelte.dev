@@ -37,7 +37,24 @@ If there are additional attributes you think might be useful, please file an iss
 
 ## A convenient home for all of your instrumentation
 
-Emitting traces alone is not enough: You also need to collect them and send them somewhere. Under normal circumstances, this can be a bit challenging. Because of the nature of observability instrumentation, it needs to be loaded prior to loading any of the code from your app. To aid in this, SvelteKit now supports a `src/instrumentation.server.ts` file which, assuming your adapter supports it, is guaranteed to be loaded prior to your application code. In Node, your instrumentation might look something like this:
+Emitting traces alone is not enough: You also need to collect them and send them somewhere. Under normal circumstances, this can be a bit challenging. Because of the nature of observability instrumentation, it needs to be loaded prior to loading any of the code from your app. To aid in this, SvelteKit now supports a `src/instrumentation.server.ts` file which, assuming your adapter supports it, is guaranteed to be loaded prior to your application code.
+
+To enable `instrumentation.server.ts`, add the following to your `svelte.config.js`:
+
+```js
+/// file: svelte.config.js
+export default {
+	kit: {
+		+++experimental: {
+			instrumentation: {
+				server: true
+			}
+		}+++
+	}
+};
+```
+
+In Node, your instrumentation might look something like this:
 
 ```ts
 import { NodeSDK } from '@opentelemetry/sdk-node';
