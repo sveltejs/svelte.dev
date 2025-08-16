@@ -13,6 +13,7 @@
 
 <style>
 	.container {
+		overflow: scroll;
 		--error-fg: #da106e;
 		--error-bg: #fff0f0;
 		--error-border: rgb(242, 214, 219);
