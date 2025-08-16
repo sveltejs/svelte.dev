@@ -367,10 +367,89 @@ A prefix that signals that an environment variable is unsafe to expose to client
 
 </div>
 
-Experimental features which are exempt from semantic versioning. These features may be changed or removed at any time.
+Experimental features. Here be dragons. These are not subject to semantic versioning, so breaking changes or removal can happen in any release.
 
 <div class="ts-block-property-children">
 
+<div class="ts-block-property">
+
+```ts
+// @noErrors
+tracing?: {/*…*/}
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `{ server: false, serverFile: false }`
+- <span class="tag since">available since</span> v2.31.0
+
+</div>
+
+Options for enabling server-side [OpenTelemetry](https://opentelemetry.io/) tracing for SvelteKit operations including the [`handle` hook](/docs/kit/hooks#Server-hooks-handle), [`load` functions](/docs/kit/load), [form actions](/docs/kit/form-actions), and [remote functions](/docs/kit/remote-functions).
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```ts
+// @noErrors
+server?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `false`
+- <span class="tag since">available since</span> v2.31.0
+
+</div>
+
+Enables server-side [OpenTelemetry](https://opentelemetry.io/) span emission for SvelteKit operations including the [`handle` hook](/docs/kit/hooks#Server-hooks-handle), [`load` functions](/docs/kit/load), [form actions](/docs/kit/form-actions), and [remote functions](/docs/kit/remote-functions).
+
+</div>
+</div></div>
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```ts
+// @noErrors
+instrumentation?: {/*…*/}
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag since">available since</span> v2.31.0
+
+</div>
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```ts
+// @noErrors
+server?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `false`
+- <span class="tag since">available since</span> v2.31.0
+
+</div>
+
+Enables `instrumentation.server.js` for tracing and observability instrumentation.
+
+</div>
+</div></div>
+
+</div>
+</div>
 <div class="ts-block-property">
 
 ```ts
