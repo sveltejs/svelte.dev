@@ -138,6 +138,5 @@
 
 	section {
 		position: relative;
-		overflow: scroll;
 	}
 </style>
