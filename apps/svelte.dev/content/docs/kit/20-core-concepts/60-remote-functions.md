@@ -11,17 +11,25 @@ Remote functions are a tool for type-safe communication between client and serve
 
 Combined with Svelte's experimental support for [`await`](/docs/svelte/await-expressions), it allows you to load and manipulate data directly inside your components.
 
-This feature is currently experimental, meaning it is likely to contain bugs and is subject to change without notice. You must opt in by adding the `kit.experimental.remoteFunctions` option in your `svelte.config.js`:
+This feature is currently experimental, meaning it is likely to contain bugs and is subject to change without notice. You must opt in by adding the `kit.experimental.remoteFunctions` option in your `svelte.config.js` and optionally, the `compilerOptions.experimental.async` option to use `await` in components:
 
 ```js
 /// file: svelte.config.js
-export default {
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
 	kit: {
 		experimental: {
 			+++remoteFunctions: true+++
 		}
+	},
+	compilerOptions: {
+		experimental: {
+			+++async: true+++
+		}
 	}
 };
+
+export default config;
 ```
 
 ## Overview
@@ -87,6 +95,8 @@ While using `await` is recommended, as an alternative the query also has `loadin
 
 	const query = getPosts();
 </script>
+
+<h1>Recent posts</h1>
 
 {#if query.error}
 	<p>oops!</p>
