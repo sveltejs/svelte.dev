@@ -212,7 +212,7 @@ Alternatively, you can [prerender](page-options#prerender) the routes in questio
 
 ## Migrating from Workers Sites
 
-Cloudflare no longer recommends using [Workers Sites](https://developers.cloudflare.com/workers/configuration/sites/configuration/) and instead recommends using [Workers Static Assets](https://developers.cloudflare.com/workers/static-assets/). To migrate, replace `@sveltejs/adapter-cloudflare-workers` with `@sveltejs/adapter-cloudflare` and remove all `site` configuration settings from your Wrangler configuration file, then add the `assets.directory` and `assets.binding` configuration settings:
+Cloudflare no longer recommends using [Workers Sites](https://developers.cloudflare.com/workers/configuration/sites/configuration/) and instead recommends using [Workers Static Assets](https://developers.cloudflare.com/workers/static-assets/). To migrate, replace `@sveltejs/adapter-cloudflare-workers` with `@sveltejs/adapter-cloudflare` and remove all `site` configuration settings from your Wrangler configuration file, then add the `assets.directory` configuration setting:
 
 ### svelte.config.js
 
@@ -237,8 +237,7 @@ export default config;
 ```toml
 /// file: wrangler.toml
 ---site.bucket = ".cloudflare/public"---
-+++assets.directory = ".cloudflare/public"
-assets.binding = "ASSETS"+++
++++assets.directory = ".cloudflare/public"+++
 ```
 
 ### wrangler.jsonc
@@ -250,8 +249,7 @@ assets.binding = "ASSETS"+++
 		"bucket": ".cloudflare/public"
 	},---
 +++	"assets": {
-		"directory": ".cloudflare/public",
-		"binding": "ASSETS"
+		"directory": ".cloudflare/public"
 	}+++
 }
 ```
