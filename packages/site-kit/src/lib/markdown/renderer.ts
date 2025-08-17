@@ -719,10 +719,17 @@ function replace_blank_lines(html: string) {
 }
 
 const delimiter_substitutes = {
-	'---': '             ',
-	'+++': '           ',
-	':::': '         '
+	'---': '                                           ',
+	'+++': '                                         ',
+	':::': '                                       '
 };
+
+const delimiter_patterns = Object.fromEntries(
+	Object.entries(delimiter_substitutes).map(([key, substitute]) => [
+		key,
+		new RegExp(`${substitute}([^ ][^]+?)${substitute}`, 'g')
+	])
+);
 
 function highlight_spans(content: string, classname: string) {
 	return content
@@ -878,13 +885,13 @@ async function syntax_highlight({
 		.replace(' tabindex="0"', '');
 
 	html = html
-		.replace(/ {13}([^ ][^]+?) {13}/g, (_, content) => {
+		.replace(delimiter_patterns['---'], (_, content) => {
 			return highlight_spans(content, 'highlight remove');
 		})
-		.replace(/ {11}([^ ][^]+?) {11}/g, (_, content) => {
+		.replace(delimiter_patterns['+++'], (_, content) => {
 			return highlight_spans(content, 'highlight add');
 		})
-		.replace(/ {9}([^ ][^]+?) {9}/g, (_, content) => {
+		.replace(delimiter_patterns[':::'], (_, content) => {
 			return highlight_spans(content, 'highlight');
 		});
 
