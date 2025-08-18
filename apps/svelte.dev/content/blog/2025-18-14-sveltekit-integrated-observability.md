@@ -5,14 +5,14 @@ author: Elliott Johnson
 authorURL: https://bsky.app/profile/gruntled.bsky.social
 ---
 
-Understanding how your SvelteKit application behaves in production — from request flows to performance bottlenecks — is crucial for building reliable user experiences. We're excited to introduce two new experimental features that bring integrated observability directly into SvelteKit: built-in OpenTelemetry tracing and a dedicated instrumentation setup file that ensures your monitoring tools work seamlessly from day one.
+Understanding how your SvelteKit application behaves in production — from request flows to performance bottlenecks — is crucial for building reliable user experiences. SvelteKit now has first-class support for observability: built-in [OpenTelemetry](https://opentelemetry.io/) tracing, and a dedicated instrumentation setup file that ensures your monitoring tools work seamlessly.
 
 ## First-party OpenTelemetry traces
 
 SvelteKit can now emit [OpenTelemetry](https://opentelemetry.io) traces for the following:
 
 - [`handle`](/docs/kit/hooks#Server-hooks-handle) hook (`handle` functions running in a [`sequence`](/docs/kit/@sveltejs-kit-hooks#sequence) will show up as children of each other and the root handle hook)
-- [`load`](/docs/kit/load) functions (includes universal `load` functions when they're run on the server)
+- [`load`](/docs/kit/load) functions (includes universal `load` functions when they run on the server)
 - [Form actions](/docs/kit/form-actions)
 - [Remote functions](/docs/kit/remote-functions)
 
