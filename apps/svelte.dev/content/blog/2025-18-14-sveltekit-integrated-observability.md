@@ -7,6 +7,24 @@ authorURL: https://bsky.app/profile/gruntled.bsky.social
 
 Understanding how your SvelteKit application behaves in production — from request flows to performance bottlenecks — is crucial for building reliable user experiences. SvelteKit now has first-class support for observability: built-in [OpenTelemetry](https://opentelemetry.io/) tracing, and a dedicated instrumentation setup file that ensures your monitoring tools work seamlessly.
 
+To opt in, upgrade SvelteKit and your adapter and add the following to your `svelte.config.js`:
+
+```js
+/// file: svelte.config.js
+export default {
+	kit: {
+		experimental: {
+			tracing: {
+				server: true
+			},
+			instrumentation: {
+				server: true
+			}
+		}
+	}
+};
+```
+
 ## First-party OpenTelemetry traces
 
 SvelteKit can now emit [OpenTelemetry](https://opentelemetry.io) traces for the following:
@@ -16,41 +34,11 @@ SvelteKit can now emit [OpenTelemetry](https://opentelemetry.io) traces for the 
 - [Form actions](/docs/kit/form-actions)
 - [Remote functions](/docs/kit/remote-functions)
 
-To enable trace emission, add the following to `svelte.config.js`:
-
-```js
-/// file: svelte.config.js
-export default {
-	kit: {
-		+++experimental: {
-			tracing: {
-				server: true
-			}
-		}+++
-	}
-};
-```
-
-If there are additional attributes you think might be useful, please file an issue on the [SvelteKit GitHub issue tracker](https://github.com/sveltejs/kit/issues).
+The emitted spans include attributes describing the current request, such as `http.route`, and surrounding context, such as the `+page` or `+layout` file associated with a `load` function. If there are additional attributes you think might be useful, please file an issue on the [SvelteKit GitHub issue tracker](https://github.com/sveltejs/kit/issues).
 
 ## A convenient home for all of your instrumentation
 
 Emitting traces alone is not enough: You also need to collect them and send them somewhere. Under normal circumstances, this can be a bit challenging. Because of the nature of observability instrumentation, it needs to be loaded prior to loading any of the code from your app. To aid in this, SvelteKit now supports a `src/instrumentation.server.ts` file which, assuming your adapter supports it, is guaranteed to be loaded prior to your application code.
-
-To enable `instrumentation.server.ts`, add the following to your `svelte.config.js`:
-
-```js
-/// file: svelte.config.js
-export default {
-	kit: {
-		+++experimental: {
-			instrumentation: {
-				server: true
-			}
-		}+++
-	}
-};
-```
 
 In Node, your instrumentation might look something like this:
 
@@ -65,7 +53,7 @@ const { registerOptions } = createAddHookMessageChannel();
 register('import-in-the-middle/hook.mjs', import.meta.url, registerOptions);
 
 const sdk = new NodeSDK({
-	serviceName: 'test-sveltekit-tracing',
+	serviceName: 'my-sveltekit-app',
 	traceExporter: new OTLPTraceExporter(),
 	instrumentations: [getNodeAutoInstrumentations()]
 });
