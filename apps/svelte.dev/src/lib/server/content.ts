@@ -24,6 +24,10 @@ const months = 'Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split(' ');
 
 function format_date(date: string) {
 	const [y, m, d] = date.split('-');
+	const month = months[+m - 1];
+	if (month === undefined) {
+		throw new Error(`Invalid blog post month for date ${date}`);
+	}
 	return `${months[+m - 1]} ${+d} ${y}`;
 }
 
