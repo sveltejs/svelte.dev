@@ -73,13 +73,13 @@ const sdk = new NodeSDK({
 sdk.start();
 ```
 
-...and on Vercel, it would look something like this:
+If you're deploying to Vercel, it would look something like this:
 
 ```ts
 import { registerOTel } from '@vercel/otel';
 
 registerOTel({
-	serviceName: 'test-sveltekit-tracing'
+	serviceName: 'my-sveltekit-app'
 });
 ```
 
