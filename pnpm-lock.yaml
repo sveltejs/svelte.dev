@@ -112,8 +112,8 @@ importers:
         specifier: ^2.43.4
         version: 2.43.4
       '@sveltejs/adapter-vercel':
-        specifier: ^5.7.2
-        version: 5.7.2(@sveltejs/kit@2.31.0(@sveltejs/vite-plugin-svelte@6.0.0(svelte@5.35.5)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.25.1)(tsx@4.19.0)))(svelte@5.35.5)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.25.1)(tsx@4.19.0)))(rollup@4.44.2)
+        specifier: ^5.10.0
+        version: 5.10.0(@sveltejs/kit@2.31.0(@sveltejs/vite-plugin-svelte@6.0.0(svelte@5.35.5)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.25.1)(tsx@4.19.0)))(svelte@5.35.5)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.25.1)(tsx@4.19.0)))(rollup@4.44.2)
       '@sveltejs/enhanced-img':
         specifier: ^0.4.3
         version: 0.4.3(rollup@4.44.2)(svelte@5.35.5)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.25.1)(tsx@4.19.0))
@@ -1446,8 +1446,8 @@ packages:
     peerDependencies:
       '@sveltejs/kit': ^2.0.0
 
-  '@sveltejs/adapter-vercel@5.7.2':
-    resolution: {integrity: sha512-YuFi8qgetcmvlXLqMPDKrloH/bLq31DYHSQHS2oLujES+PomJIeE7/JxYhxFStauL9QDqQ8PwOFwcZrdU/vVtg==}
+  '@sveltejs/adapter-vercel@5.10.0':
+    resolution: {integrity: sha512-SolaFGPtGxXw4TMtZrwY8zHgIfSSZGk9Am9lUxdfoI+rF0RG4ws3VaaFGREOx7idSawrxfAG1gjhoBNevSm7Tg==}
     peerDependencies:
       '@sveltejs/kit': ^2.4.0
 
@@ -1602,8 +1602,8 @@ packages:
       react:
         optional: true
 
-  '@vercel/nft@0.29.2':
-    resolution: {integrity: sha512-A/Si4mrTkQqJ6EXJKv5EYCDQ3NL6nJXxG8VGXePsaiQigsomHYQC9xSpX8qGk7AEZk4b1ssbYIqJ0ISQQ7bfcA==}
+  '@vercel/nft@0.30.0':
+    resolution: {integrity: sha512-xVye7Z0riD9czsMuEJYpFqm2FR33r3euYaFzuEPCoUtYuDwmus3rJfKtcFU7Df+pgj8p4zs78x5lOWYoLNr+7Q==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -4270,10 +4270,10 @@ snapshots:
       '@sveltejs/kit': 2.22.5(@sveltejs/vite-plugin-svelte@6.0.0(svelte@5.35.5)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.25.1)(tsx@4.19.0)))(svelte@5.35.5)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.25.1)(tsx@4.19.0))
       import-meta-resolve: 4.1.0
 
-  '@sveltejs/adapter-vercel@5.7.2(@sveltejs/kit@2.31.0(@sveltejs/vite-plugin-svelte@6.0.0(svelte@5.35.5)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.25.1)(tsx@4.19.0)))(svelte@5.35.5)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.25.1)(tsx@4.19.0)))(rollup@4.44.2)':
+  '@sveltejs/adapter-vercel@5.10.0(@sveltejs/kit@2.31.0(@sveltejs/vite-plugin-svelte@6.0.0(svelte@5.35.5)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.25.1)(tsx@4.19.0)))(svelte@5.35.5)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.25.1)(tsx@4.19.0)))(rollup@4.44.2)':
     dependencies:
       '@sveltejs/kit': 2.31.0(@sveltejs/vite-plugin-svelte@6.0.0(svelte@5.35.5)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.25.1)(tsx@4.19.0)))(svelte@5.35.5)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.25.1)(tsx@4.19.0))
-      '@vercel/nft': 0.29.2(rollup@4.44.2)
+      '@vercel/nft': 0.30.0(rollup@4.44.2)
       esbuild: 0.25.6
     transitivePeerDependencies:
       - encoding
@@ -4450,7 +4450,7 @@ snapshots:
     dependencies:
       server-only: 0.0.1
 
-  '@vercel/nft@0.29.2(rollup@4.44.2)':
+  '@vercel/nft@0.30.0(rollup@4.44.2)':
     dependencies:
       '@mapbox/node-pre-gyp': 2.0.0
       '@rollup/pluginutils': 5.1.3(rollup@4.44.2)
