@@ -65,7 +65,7 @@ try {
 
 	// add CSS styles from playground to the project
 	const html = readFileSync(
-		join(output_dir, '../../../../packages/repl/src/lib/Output/srcdoc/index.html'),
+		path.join(output_dir, '../../../../packages/repl/src/lib/Output/srcdoc/index.html'),
 		{ encoding: 'utf-8' }
 	);
 	const css = html
