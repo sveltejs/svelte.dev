@@ -9,6 +9,7 @@ If you're creating a documentation PR, make sure you're targeting the right repo
 - `docs/svelte` -> https://github.com/sveltejs/svelte
 - `docs/kit` -> https://github.com/sveltejs/kit
 - `docs/cli` -> https://github.com/sveltejs/cli
+- `docs/vite-plugin-svelte` -> https://github.com/sveltejs/vite-plugin-svelte
 
 The tutorial, blog and examples are maintained within this repository.
 
@@ -17,6 +18,6 @@ The tutorial, blog and examples are maintained within this repository.
 ```
 pnpm install
 cd apps/svelte.dev
-USE_GIT=true pnpm sync-docs
+pnpm sync-docs -p
 pnpm run dev
 ```

@@ -9,7 +9,7 @@ const nav_links: NavigationLink[] = [
 	{
 		title: 'Docs',
 		slug: 'docs',
-		sections: [docs.topics['docs/svelte'], docs.topics['docs/kit'], docs.topics['docs/cli']].map(
+		sections: [docs.topics['docs/svelte'], docs.topics['docs/kit'], docs.topics['docs/cli'], docs.topics['docs/vite-plugin-svelte']].map(
 			(topic) => ({
 				title: topic.metadata.title,
 				path: '/' + topic.slug, // this will make the UI show a flyout menu for the docs nav entry
