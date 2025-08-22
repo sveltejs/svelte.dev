@@ -21,7 +21,7 @@ on:
         type: string
       check_id:
         description: 'The ID of the check that triggered this workflow'
-        required: true
+        required: false
         type: string
 
 permissions:
