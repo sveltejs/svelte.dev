@@ -27,7 +27,7 @@ During server rendering, the base path is relative and depends on the page curre
 	import { asset } from '$app/paths';
 </script>
 
-<img alt="a potato" src={asset('potato.jpg')} />
+<img alt="a potato" src={asset('/potato.jpg')} />
 ```
 
 <div class="ts-block">
