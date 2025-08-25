@@ -1666,6 +1666,20 @@ A promise that resolves once the navigation is complete, and rejects if the navi
 fails or is aborted. In the case of a `willUnload` navigation, the promise will never resolve
 
 </div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+hasUAVisualTransition?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+Represents value of hasUAVisualTransition of PopStateEvent if navigation type is popstate,
+otherwise undefined
+
+</div>
 </div></div>
 
 ## NavigationEvent
