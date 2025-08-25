@@ -238,7 +238,7 @@ export default config;
 /// file: wrangler.toml
 ---site.bucket = ".cloudflare/public"---
 +++assets.directory = ".cloudflare/public"
-assets.binding = "ASSETS" # Exclude this if you don't have a `main` key configured.+++
+assets.binding = "ASSETS"+++
 ```
 
 ### wrangler.jsonc
@@ -251,7 +251,7 @@ assets.binding = "ASSETS" # Exclude this if you don't have a `main` key configur
 	},---
 +++	"assets": {
 		"directory": ".cloudflare/public",
-		"binding": "ASSETS" // Exclude this if you don't have a `main` key configured.
+		"binding": "ASSETS"
 	}+++
 }
 ```
