@@ -2,23 +2,21 @@ import { read } from '$app/server';
 import type { Document, DocumentSummary } from '@sveltejs/site-kit';
 import { create_index } from '@sveltejs/site-kit/server/content';
 
-const documents = import.meta.glob<string>('../../../content/**/*.md', {
+const documents = import.meta.glob<string>('**/*.md', {
+	base: '../../../content',
 	eager: true,
 	query: '?url',
 	import: 'default'
 });
 
-const assets = import.meta.glob<string>(
-	['../../../content/**/+assets/**', '../../../content/**/+assets/**/.env'],
-	{
-		eager: true,
-		query: '?url',
-		import: 'default'
-	}
-);
+const assets = import.meta.glob<string>(['**/+assets/**', '**/+assets/**/.env'], {
+	base: '../../../content',
+	eager: true,
+	query: '?url',
+	import: 'default'
+});
 
-// https://github.com/vitejs/vite/issues/17453
-export const index = await create_index(documents, assets, '../../../content', read);
+export const index = await create_index(documents, assets, read);
 
 const months = 'Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split(' ');
 
