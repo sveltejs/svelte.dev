@@ -450,6 +450,24 @@ read?: (details: { config: any; route: { id: string } }) => boolean;
 Test support for `read` from `$app/server`.
 
 </div>
+</div>
+<div class="ts-block-property">
+
+```dts
+instrumentation?: () => boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag since">available since</span> v2.31.0
+
+</div>
+
+Test support for `instrumentation.server.js`. To pass, the adapter must support running `instrumentation.server.js` prior to the application code.
+
+</div>
 </div></div>
 
 </div>
@@ -489,7 +507,7 @@ type: Exclude<NavigationType, 'leave'>;
 
 The type of navigation:
 - `enter`: The app has hydrated/started
-- `form`: The user submitted a `<form>`
+- `form`: The user submitted a `<form method="GET">`
 - `link`: Navigation was triggered by a link click
 - `goto`: Navigation was triggered by a `goto(...)` call or a redirect
 - `popstate`: Navigation was triggered by back/forward navigation
@@ -862,6 +880,71 @@ copy: (
 </div>
 
 Copy a file or directory.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+hasServerInstrumentationFile: () => boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">returns</span> true if the server instrumentation file exists, false otherwise
+- <span class="tag since">available since</span> v2.31.0
+
+</div>
+
+Check if the server instrumentation file exists.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+instrument: (args: {
+	entrypoint: string;
+	instrumentation: string;
+	start?: string;
+	module?:
+		| {
+				exports: string[];
+		  }
+		| {
+				generateText: (args: { instrumentation: string; start: string }) => string;
+		  };
+}) => void;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- `options` an object containing the following properties:
+- `options.entrypoint` the path to the entrypoint to trace.
+- `options.instrumentation` the path to the instrumentation file.
+- `options.start` the name of the start file. This is what `entrypoint` will be renamed to.
+- `options.module` configuration for the resulting entrypoint module.
+- `options.module.generateText` a function that receives the relative paths to the instrumentation and start files, and generates the text of the module to be traced. If not provided, the default implementation will be used, which uses top-level await.
+- <span class="tag since">available since</span> v2.31.0
+
+</div>
+
+Instrument `entrypoint` with `instrumentation`.
+
+Renames `entrypoint` to `start` and creates a new module at
+`entrypoint` which imports `instrumentation` and then dynamically imports `start`. This allows
+the module hooks necessary for instrumentation libraries to be loaded prior to any application code.
+
+Caveats:
+- "Live exports" will not work. If your adapter uses live exports, your users will need to manually import the server instrumentation on startup.
+- If `tla` is `false`, OTEL auto-instrumentation may not work properly. Use it if your environment supports it.
+- Use `hasServerInstrumentationFile` to check if the user has a server instrumentation file; if they don't, you shouldn't do this.
 
 </div>
 </div>
@@ -1419,6 +1502,62 @@ export async function load({ untrack, url }) {
 ```
 
 </div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+tracing: {/*…*/}
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag since">available since</span> v2.31.0
+
+</div>
+
+Access to spans for tracing. If tracing is not enabled or the function is being run in the browser, these spans will do nothing.
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+enabled: boolean;
+```
+
+<div class="ts-block-property-details">
+
+Whether tracing is enabled.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+root: Span;
+```
+
+<div class="ts-block-property-details">
+
+The root span for the request. This span is named `sveltekit.handle.root`.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+current: Span;
+```
+
+<div class="ts-block-property-details">
+
+The span associated with the current `load` function.
+
+</div>
+</div></div>
+
+</div>
 </div></div>
 
 ## LoadProperties
@@ -1480,7 +1619,7 @@ type: Exclude<NavigationType, 'enter'>;
 <div class="ts-block-property-details">
 
 The type of navigation:
-- `form`: The user submitted a `<form>`
+- `form`: The user submitted a `<form method="GET">`
 - `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
 - `link`: Navigation was triggered by a link click
 - `goto`: Navigation was triggered by a `goto(...)` call or a redirect
@@ -1600,13 +1739,17 @@ Information about the target of a specific navigation.
 <div class="ts-block">
 
 ```dts
-interface NavigationTarget {/*…*/}
+interface NavigationTarget<
+	Params extends
+		AppLayoutParams<'/'> = AppLayoutParams<'/'>,
+	RouteId extends AppRouteId | null = AppRouteId | null
+> {/*…*/}
 ```
 
 <div class="ts-block-property">
 
 ```dts
-params: Record<string, string> | null;
+params: Params | null;
 ```
 
 <div class="ts-block-property-details">
@@ -1630,7 +1773,7 @@ Info about the target route
 <div class="ts-block-property-children"><div class="ts-block-property">
 
 ```dts
-id: string | null;
+id: RouteId | null;
 ```
 
 <div class="ts-block-property-details">
@@ -1659,8 +1802,8 @@ The URL that is navigated to
 ## NavigationType
 
 - `enter`: The app has hydrated/started
-- `form`: The user submitted a `<form>` with a GET method
-- `leave`: The user is leaving the app by closing the tab or using the back/forward buttons to go to a different document
+- `form`: The user submitted a `<form method="GET">`
+- `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
 - `link`: Navigation was triggered by a link click
 - `goto`: Navigation was triggered by a `goto(...)` call or a redirect
 - `popstate`: Navigation was triggered by back/forward navigation
@@ -1711,7 +1854,7 @@ type: Exclude<NavigationType, 'enter' | 'leave'>;
 <div class="ts-block-property-details">
 
 The type of navigation:
-- `form`: The user submitted a `<form>`
+- `form`: The user submitted a `<form method="GET">`
 - `link`: Navigation was triggered by a link click
 - `goto`: Navigation was triggered by a `goto(...)` call or a redirect
 - `popstate`: Navigation was triggered by back/forward navigation
@@ -1928,14 +2071,16 @@ The return value of a remote `command` function. See [Remote functions](/docs/ki
 <div class="ts-block">
 
 ```dts
-type RemoteCommand<Input, Output> = (arg: Input) => Promise<
-	Awaited<Output>
-> & {
-	updates(
-		...queries: Array<
-			RemoteQuery<any> | RemoteQueryOverride
-		>
-	): Promise<Awaited<Output>>;
+type RemoteCommand<Input, Output> = {
+	(arg: Input): Promise<Awaited<Output>> & {
+		updates(
+			...queries: Array<
+				RemoteQuery<any> | RemoteQueryOverride
+			>
+		): Promise<Awaited<Output>>;
+	};
+	/** The number of pending command executions */
+	get pending(): number;
 };
 ```
 
@@ -1991,6 +2136,8 @@ type RemoteForm<Result> = {
 	): Omit<RemoteForm<Result>, 'for'>;
 	/** The result of the form submission */
 	get result(): Result | undefined;
+	/** The number of pending submissions */
+	get pending(): number;
 	/** Spread this onto a `<button>` or `<input type="submit">` */
 	buttonProps: {
 		type: 'submit';
@@ -2016,6 +2163,8 @@ type RemoteForm<Result> = {
 			formaction: string;
 			onclick: (event: Event) => void;
 		};
+		/** The number of pending submissions */
+		get pending(): number;
 	};
 };
 ```
@@ -2050,7 +2199,7 @@ type RemoteQuery<T> = RemoteResource<T> & {
 	 */
 	refresh(): Promise<void>;
 	/**
-	 * Temporarily override the value of a query. This is used with the `updates` method of a [command](https://svelte.dev/docs/kit/remote-functions#command-Single-flight-mutations) or [enhanced form submission](https://svelte.dev/docs/kit/remote-functions#form-enhance) to provide optimistic updates.
+	 * Temporarily override the value of a query. This is used with the `updates` method of a [command](https://svelte.dev/docs/kit/remote-functions#command-Updating-queries) or [enhanced form submission](https://svelte.dev/docs/kit/remote-functions#form-enhance) to provide optimistic updates.
 	 *
 	 * ```svelte
 	 * <script>
@@ -2062,7 +2211,7 @@ type RemoteQuery<T> = RemoteResource<T> & {
 	 *   await submit().updates(
 	 *     todos.withOverride((todos) => [...todos, { text: data.get('text') }])
 	 *   );
-	 * }}>
+	 * })}>
 	 *   <input type="text" name="text" />
 	 *   <button type="submit">Add Todo</button>
 	 * </form>
@@ -2348,6 +2497,62 @@ isSubRequest: boolean;
 <div class="ts-block-property-details">
 
 `true` for `+server.js` calls coming from SvelteKit without the overhead of actually making an HTTP request. This happens when you make same-origin `fetch` requests on the server.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+tracing: {/*…*/}
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag since">available since</span> v2.31.0
+
+</div>
+
+Access to spans for tracing. If tracing is not enabled, these spans will do nothing.
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+enabled: boolean;
+```
+
+<div class="ts-block-property-details">
+
+Whether tracing is enabled.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+root: Span;
+```
+
+<div class="ts-block-property-details">
+
+The root span for the request. This span is named `sveltekit.handle.root`.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+current: Span;
+```
+
+<div class="ts-block-property-details">
+
+The span associated with the current `handle` hook, `load` function, or form action.
+
+</div>
+</div></div>
 
 </div>
 </div>
@@ -2865,6 +3070,62 @@ export async function load({ untrack, url }) {
 	}
 }
 ```
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+tracing: {/*…*/}
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag since">available since</span> v2.31.0
+
+</div>
+
+Access to spans for tracing. If tracing is not enabled, these spans will do nothing.
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+enabled: boolean;
+```
+
+<div class="ts-block-property-details">
+
+Whether tracing is enabled.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+root: Span;
+```
+
+<div class="ts-block-property-details">
+
+The root span for the request. This span is named `sveltekit.handle.root`.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+current: Span;
+```
+
+<div class="ts-block-property-details">
+
+The span associated with the current server `load` function.
+
+</div>
+</div></div>
 
 </div>
 </div></div>
@@ -3663,6 +3924,37 @@ type PrerenderMissingIdHandlerValue =
 
 ```dts
 type PrerenderOption = boolean | 'auto';
+```
+
+</div>
+
+## PrerenderUnseenRoutesHandler
+
+<div class="ts-block">
+
+```dts
+interface PrerenderUnseenRoutesHandler {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+(details: { routes: string[]; message: string }): void;
+```
+
+<div class="ts-block-property-details"></div>
+</div></div>
+
+## PrerenderUnseenRoutesHandlerValue
+
+<div class="ts-block">
+
+```dts
+type PrerenderUnseenRoutesHandlerValue =
+	| 'fail'
+	| 'warn'
+	| 'ignore'
+	| PrerenderUnseenRoutesHandler;
 ```
 
 </div>
