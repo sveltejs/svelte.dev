@@ -123,7 +123,7 @@
 
 	$effect(() => {
 		console.log('error', error);
-	})
+	});
 
 	async function apply_bundle(bundle: BundleResult | null) {
 		if (!bundle) return;
