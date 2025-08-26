@@ -121,7 +121,7 @@
 	}
 
 	.panel-body {
-		overflow: scroll;
+		overflow: auto;
 		max-height: 100%;
 	}
 
