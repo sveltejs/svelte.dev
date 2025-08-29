@@ -35,7 +35,7 @@ The `Tween` class has a writable `target` property and a readonly `current` prop
 ...and each of the event handlers:
 
 ```svelte
-<button onclick={() => (progress.+++target+++ = 0)}>
+<button onclick={() => (progress.+++set(0)+++)}>
 	0%
 </button>
 ```
