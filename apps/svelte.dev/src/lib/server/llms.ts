@@ -51,8 +51,12 @@ export function generate_llm_content(options: GenerateLlmContentOptions): string
 				? minimize_content(document.body, options.minimize)
 				: document.body;
 			if (doc_content.trim() === '') continue;
-
-			content += `\n# ${document.metadata.title}\n\n`;
+			// replaces <tags> with `<tags>`
+			const doc_title = document.metadata.title.replace(
+				/(?!`)<[a-zA-Z0-9:]+>(?!`)/g,
+				(m) => `\`${m}\``
+			);
+			content += `\n# ${doc_title}\n\n`;
 			content += doc_content;
 			content += '\n';
 		}
