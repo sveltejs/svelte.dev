@@ -289,7 +289,9 @@ This is useful for allowing trusted third-party services like payment gateways o
 
 If the array contains `'*'`, all origins will be trusted. This is generally not recommended!
 
-**Warning**: Only add origins you completely trust, as this bypasses CSRF protection for those origins.
+> [!NOTE] Only add origins you completely trust, as this bypasses CSRF protection for those origins.
+
+CSRF checks only apply in production, not in local development.
 
 </div>
 </div>
