@@ -19,6 +19,10 @@ on:
         description: 'Branch (eg. my-feature-branch)'
         required: true
         type: string
+      sha:
+        description: 'The commit SHA responsible for triggering this workflow'
+        required: false
+        type: string
 
 permissions:
   contents: write
@@ -62,9 +66,11 @@ jobs:
 
       - name: Push
         id: push
-        run: git add -A && git commit -m "sync docs" && git push -u origin ${{ env.BRANCH }} --force
+        continue-on-error: true
+        run: git add -A && git commit -m "sync docs for repo ${{ inputs.repo }}, pr ${{ inputs.pr }}, commit ${{ inputs.sha }}" && git push -u origin ${{ env.BRANCH }} --force
 
       - name: Request preview comment
+        if: ${{ steps.push.outcome == 'success' }}
         uses: peter-evans/repository-dispatch@v3
         with:
           event-type: 'request-preview-comment'
@@ -72,4 +78,16 @@ jobs:
             {
               "repo": "${{ inputs.repo }}",
               "pr": "${{ inputs.pr }}"
+            }
+
+      - name: Dispatch docs-unaffected
+        if: ${{ steps.push.outcome != 'success' }}
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          event-type: 'docs-unaffected'
+          client-payload: |-
+            {
+              "repo": "${{ inputs.repo }}",
+              "pr": "${{ inputs.pr }}",
+              "sha": "${{ inputs.sha }}"
             }

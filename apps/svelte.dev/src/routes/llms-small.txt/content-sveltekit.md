@@ -441,6 +441,236 @@ Use it with a simple form:
 </form>
 ```
 
+## Remote functions (experimental)
+
+- **What they are**: Type-safe server-only functions you call from the client. They always execute on the server, so they can access server-only modules (env, DB).
+- If you choose to use them you can replace load functions and form actions with them.
+- Works best in combination with asynchronous Svelte, i.e. using `await` expressions in `$derived` and template
+- **Opt-in**: Enable in `svelte.config.js`:
+
+```js
+export default {
+	kit: {
+		experimental: {
+			remoteFunctions: true
+		}
+	}
+};
+```
+
+- **Where and how**:
+  - Place `.remote.js`/`.remote.ts` files in `src/lib` or `src/routes`.
+  - Export functions using one of: `query`, `form`, `command`, `prerender` from `$app/server`.
+  - Client imports become fetch-wrappers to generated HTTP endpoints.
+  - Arguments/returns are serialized with devalue (supports Date, Map, custom transport).
+
+### query: read dynamic data
+
+Define:
+
+```js
+// src/routes/blog/data.remote.js
+import { query } from '$app/server';
+import * as db from '$lib/server/database';
+
+export const getPosts = query(async () => {
+	return db.posts();
+});
+```
+
+Use in component (recommended with await):
+
+```svelte
+<script>
+	import { getPosts } from './data.remote';
+</script>
+
+<ul>
+	{#each await getPosts() as { title, slug }}
+		<li><a href="/blog/{slug}">{title}</a></li>
+	{/each}
+</ul>
+```
+
+- **Args + validation**: Pass a Standard Schema (e.g. Valibot/Zod) as first param.
+
+```js
+import * as v from 'valibot';
+export const getPost = query(v.string(), async (slug) => {
+	/* ... */
+});
+```
+
+- **Refresh/caching**: Calls are cached on page (`getPosts() === getPosts()`). Refresh via:
+
+```svelte
+<button onclick={() => getPosts().refresh()}>Check for new posts</button>
+```
+
+- Alternative props exist (`loading`, `error`, `current`) if you don’t use `await`.
+
+### form: mutation via forms
+
+Define:
+
+```js
+import { form } from '$app/server';
+import * as db from '$lib/server/database';
+import * as auth from '$lib/server/auth';
+import { error, redirect } from '@sveltejs/kit';
+
+export const createPost = form(async (data) => {
+	const user = await auth.getUser();
+	if (!user) error(401, 'Unauthorized');
+
+	const title = data.get('title');
+	const content = data.get('content');
+	db.insertPost(title, content);
+
+	redirect(303, `/blog/${title}`);
+});
+```
+
+Use:
+
+```svelte
+<script>
+	import { createPost } from '../data.remote';
+</script>
+
+<form {...createPost}>
+	<input name="title" />
+	<textarea name="content" />
+	<button>Publish</button>
+</form>
+```
+
+- **Progressive enhancement**: Works without JS via `method`/`action`; with JS it submits without full reload.
+- **Single-flight mutations**:
+  - Server-driven: call refresh inside the handler:
+  ```js
+  await getPosts().refresh();
+  ```
+  - Client-driven: customize with `enhance` and `submit().updates(...)`:
+  ```svelte
+  <form {...createPost.enhance(async ({ submit }) => {
+  	await submit().updates(getPosts());
+  })}>
+  ```
+  - Optimistic UI: use `withOverride`:
+  ```js
+  await submit().updates(getPosts().withOverride((posts) => [newPost, ...posts]));
+  ```
+- **Returns**: Instead of redirect, return data; read at `createPost.result`.
+- **buttonProps**: For per-button `formaction`:
+
+```svelte
+<button>login</button>
+<button {...register.buttonProps}>register</button>
+```
+
+### command: programmatic writes
+
+Define:
+
+```js
+import { command, query } from '$app/server';
+import * as v from 'valibot';
+import * as db from '$lib/server/database';
+
+export const getLikes = query(v.string(), async (id) => {
+	return db.likes.get(id);
+});
+
+export const addLike = command(v.string(), async (id) => {
+	await db.likes.add(id);
+});
+```
+
+Use:
+
+```svelte
+<script>
+	import { getLikes, addLike } from './likes.remote';
+	let { item } = $props();
+</script>
+
+<button onclick={() => addLike(item.id)}>add like</button>
+<p>likes: {await getLikes(item.id)}</p>
+```
+
+- **Update queries**:
+  - In the command: `getLikes(id).refresh()`
+  - From client: `await addLike(item.id).updates(getLikes(item.id))`
+  - Optimistic: `updates(getLikes(item.id).withOverride((n) => n + 1))`
+- **Note**: Cannot be called during render.
+
+### prerender: build-time reads for static-ish data
+
+Define:
+
+```js
+import { prerender } from '$app/server';
+import * as db from '$lib/server/database';
+
+export const getPosts = prerender(async () => {
+	return db.sql`SELECT title, slug FROM post ORDER BY published_at DESC`;
+});
+```
+
+- **Use anywhere** (including dynamic pages) to partially prerender data.
+- **Args + validation**: Same schema approach as `query`.
+- **Seed inputs**: Enumerate values for crawling during prerender:
+
+```js
+export const getPost = prerender(
+	v.string(),
+	async (slug) => {
+		/* ... */
+	},
+	{
+		inputs: () => ['first-post', 'second-post']
+	}
+);
+```
+
+- **Dynamic**: By default excluded from server bundle; set `{ dynamic: true }` if you must call with non-prerendered args.
+- **Note**: If a page has `export const prerender = true` page option, you cannot use dynamic `query`s.
+
+### Validation and security
+
+- Use Standard Schema for `query`, `command`, `prerender` args to protect endpoints.
+- Failures return 400; customize with `handleValidationError`:
+
+```ts
+// src/hooks.server.ts
+export function handleValidationError() {
+	return { message: 'Nice try, hacker!' };
+}
+```
+
+- `form` doesn’t take a schema (you validate `FormData` yourself).
+
+### getRequestEvent inside remote functions
+
+- Access the current `RequestEvent`:
+
+```ts
+import { getRequestEvent, query } from '$app/server';
+
+export const getProfile = query(async () => {
+	const { cookies, locals } = getRequestEvent();
+	// read cookies, reuse per-request work via locals, etc.
+});
+```
+
+- Differences: no `params`/`route.id`, cannot set headers (except cookies, only in `form`/`command`), `url.pathname` is `/`.
+
+### Redirects
+
+- Allowed in `query`, `form`, `prerender` via `redirect(...)`.
+- Not allowed in `command` (return `{ redirect }` and handle on client if absolutely necessary).
+
 ## Page options
 
 #### prerender
