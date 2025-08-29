@@ -44,7 +44,7 @@ const build: string[];
 
 ## files
 
-An array of URL strings representing the files in your static directory, or whatever directory is specified by `config.kit.files.assets`. You can customize which files are included from `static` directory using [`config.kit.serviceWorker.files`](/docs/kit/configuration#serviceWorker)
+An array of URL strings representing the files in your static directory, or whatever directory is specified by `config.kit.files.assets`. You can customize which files are included from `static` directory using [`config.kit.serviceWorker.files`](/docs/kit/configuration)
 
 <div class="ts-block">
 
