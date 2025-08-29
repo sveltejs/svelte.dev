@@ -4,7 +4,7 @@ title: Universal reactivity
 
 In the preceding exercises, we used runes to add reactivity inside components. But we can also use runes _outside_ components, for example to share some global state.
 
-The `<Counter>` components in this exercise are all importing the `counter` object from `shared.js`. But it's a normal object, and as such nothing happens when you click the buttons. Wrap the object in `$state(...)`:
+The `<Counter>` components in this exercise are all importing the `counter` object from `shared.js`. But it's a normal object, and so nothing happens when you click the buttons. Wrap the object in `$state(...)`:
 
 ```js
 /// file: shared.js
