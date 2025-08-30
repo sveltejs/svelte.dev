@@ -10,16 +10,15 @@ In case you missed it, the main Svelte blog covered how to use [SvelteKit's new 
 Plenty in the showcase, as well, so let's dive in!
 
 ## What's new in Svelte and Svelte CLI (sv)
+
 - `await` is now allowed inside `@const` declarations (**svelte@5.38.0**, [Docs](https://svelte.dev/docs/svelte/await), [#16542](https://github.com/sveltejs/svelte/pull/16542))
 - The `sv add` command has been updated to remove the `--no-preconditions` and add `--no-git-check`. With this new flag, even if some files are dirty, no prompt will be shown (**sv@0.9.0**, [Docs](https://svelte.dev/docs/cli/sv-add), [#650](https://github.com/sveltejs/cli/pull/650))
-
 
 ## What's new in SvelteKit and its adapters
 
 - Deno is now supported as a supported package manager (**sveltejs/adapter-auto@6.1.0**, [#14163](https://github.com/sveltejs/kit/pull/14163))
 - A new `instrumentation.server.ts` adds tracing and observability setup (**sveltejs/adapter-node@5.3.0**, [Docs](https://svelte.dev/docs/kit/observability), [#13899](https://github.com/sveltejs/kit/pull/13899))
 - The `--preserve-output` flag prevents deletion of the output directory before packaging (**sveltejs/package@2.5.0**, [Docs](https://svelte.dev/docs/kit/packaging), [#13055](https://github.com/sveltejs/kit/pull/13055))
-
 
 For a full list of bug fixes in Svelte, SvelteKit and its adapters, check out their CHANGELOGs [here](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md) and [here](https://github.com/sveltejs/kit/tree/main/packages).
 
@@ -49,7 +48,7 @@ For a full list of bug fixes in Svelte, SvelteKit and its adapters, check out th
 _Featuring Svelte Contributors and Ambassadors_
 
 - [Compile Svelte 5 in your head](https://lihautan.com/compile-svelte-5-in-your-head) by Tan Li Hau
-- [The Svelte MCP server](https://www.reddit.com/r/sveltejs/comments/1mju9yj/new_features_in_the_svelte_mcp_server_directly/) now allows you to directly reference documentation sections, and prompt templates 
+- [The Svelte MCP server](https://www.reddit.com/r/sveltejs/comments/1mju9yj/new_features_in_the_svelte_mcp_server_directly/) now allows you to directly reference documentation sections, and prompt templates
 
 _This Week in Svelte_
 
@@ -69,7 +68,6 @@ _To Watch_
 
 - [SvelteKit Remote Functions are INSANE! Type-Safe Full Stack in Minutes](https://www.youtube.com/watch?v=Xbdiwq_88iE) by Tyler Codes
 - [Deploy a SvelteKit Application to Cloudflare Workers with Drizzle & D1](https://www.youtube.com/watch?v=ZZaExhqW5II) by Jilles Soeters
-
 
 ### Libraries, Tools & Components
 
