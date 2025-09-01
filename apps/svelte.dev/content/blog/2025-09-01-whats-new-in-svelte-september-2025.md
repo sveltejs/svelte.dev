@@ -48,6 +48,7 @@ For a full list of bug fixes in Svelte, SvelteKit and its adapters, check out th
 _Featuring Svelte Contributors and Ambassadors_
 
 - [Compile Svelte 5 in your head](https://lihautan.com/compile-svelte-5-in-your-head) by Tan Li Hau
+- [Introducing SvelteKit Remote Functions](https://www.youtube.com/watch?v=0hy7PCbXyqs) by Simon Holthausen
 - [The Svelte MCP server](https://www.reddit.com/r/sveltejs/comments/1mju9yj/new_features_in_the_svelte_mcp_server_directly/) now allows you to directly reference documentation sections, and prompt templates
 
 _This Week in Svelte_
