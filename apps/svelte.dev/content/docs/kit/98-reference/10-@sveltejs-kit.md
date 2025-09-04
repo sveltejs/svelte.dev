@@ -55,6 +55,18 @@ respond(request: Request, options: RequestOptions): Promise<Response>;
 ```
 
 <div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+resolveWebSocketHooks(
+	request: Request,
+	options: RequestOptions
+): Promise<Partial<import('crossws').Hooks>>;
+```
+
+<div class="ts-block-property-details"></div>
 </div></div>
 
 
@@ -448,6 +460,53 @@ read?: (details: { config: any; route: { id: string } }) => boolean;
 </div>
 
 Test support for `read` from `$app/server`.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+webSockets?: {/*…*/}
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+socket: () => boolean;
+```
+
+<div class="ts-block-property-details">
+
+Test support for the `socket` export from a `+server.js` file.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+getPeers: (details: { route: { id: string } }) => boolean;
+```
+
+<div class="ts-block-property-details">
+
+Test support for `getPeers` from `$app/server`.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+publish: (details: { route: { id: string } }) => boolean;
+```
+
+<div class="ts-block-property-details">
+
+Test support for `publish` from `$app/server`.
+
+</div>
+</div></div>
 
 </div>
 </div>
@@ -1576,6 +1635,34 @@ type LoadProperties<
 
 </div>
 
+## Message
+
+<blockquote class="since note">
+
+Available since 2.21.0
+
+</blockquote>
+
+During a WebSocket [`message`](/docs/kit/websockets#Hooks-message)
+hook, you'll receive a [`Message`](https://crossws.unjs.io/guide/message)
+object containing data from the client.
+
+<div class="ts-block">
+
+```dts
+type Message<
+	Params extends Partial<Record<string, string>> = Partial<
+		Record<string, string>
+	>,
+	RouteId extends string | null = string | null
+> = import('crossws').Message & {
+	/** Access to the `Peer` that emitted the message. */
+	peer: Peer<Params, RouteId>;
+};
+```
+
+</div>
+
 ## Navigation
 
 <div class="ts-block">
@@ -2014,6 +2101,36 @@ The shape of a param matcher. See [matching](/docs/kit/advanced-routing#Matching
 
 ```dts
 type ParamMatcher = (param: string) => boolean;
+```
+
+</div>
+
+## Peer
+
+<blockquote class="since note">
+
+Available since 2.21.0
+
+</blockquote>
+
+When a new [WebSocket](/docs/kit/websockets) client connects
+to the server, `crossws` creates a [`Peer`](https://crossws.unjs.io/guide/peer)
+object that allows interacting with the connected client.
+
+<div class="ts-block">
+
+```dts
+type Peer<
+	Params extends Partial<Record<string, string>> = Partial<
+		Record<string, string>
+	>,
+	RouteId extends string | null = string | null
+> = import('crossws').Peer & {
+	/** The original request object before upgrading to a WebSocket connection. */
+	request: Request;
+	/** Represents the initial request before upgrading to a WebSocket connection. */
+	event: RequestEvent<Params, RouteId>;
+};
 ```
 
 </div>
@@ -2941,7 +3058,7 @@ A map of environment variables.
 <div class="ts-block-property">
 
 ```dts
-read?: (file: string) => MaybePromise<ReadableStream | null>;
+peers?: import('crossws').AdapterInstance['peers'];
 ```
 
 <div class="ts-block-property-details">
@@ -2949,6 +3066,28 @@ read?: (file: string) => MaybePromise<ReadableStream | null>;
 A function that turns an asset filename into a `ReadableStream`. Required for the `read` export from `$app/server` to work.
 
 </div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+publish?: import('crossws').AdapterInstance['publish'];
+```
+
+<div class="ts-block-property-details">
+
+A function that publishes a message to WebSocket subscribers of a topic. Required for the `publish` export from `$app/server` to work.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+read?: (file: string) => MaybePromise<ReadableStream | null>;
+```
+
+<div class="ts-block-property-details"></div>
 </div></div>
 
 ## ServerLoad
@@ -3139,7 +3278,16 @@ The span associated with the current server `load` function.
 
 ## Snapshot
 
-The type of `export const snapshot` exported from a page or layout component.
+<blockquote class="since note">
+
+Available since 1.5.0
+
+</blockquote>
+
+Shape of the `export const snapshot = {...}` object in a page or layout component.
+You should import these from `./$types` (see [generated types](/docs/kit/types#Generated-types))
+rather than using `Snapshot` directly.
+See [snapshots](/docs/kit/snapshots) for more information.
 
 <div class="ts-block">
 
@@ -3163,6 +3311,103 @@ restore: (snapshot: T) => void;
 ```
 
 <div class="ts-block-property-details"></div>
+</div></div>
+
+## Socket
+
+<blockquote class="since note">
+
+Available since 2.21.0
+
+</blockquote>
+
+Shape of the `export const socket = {...}` object in `+server.js`.
+See [WebSockets](/docs/kit/websockets) for more information.
+
+<div class="ts-block">
+
+```dts
+interface Socket<
+	Params extends Partial<Record<string, string>> = Partial<
+		Record<string, string>
+	>,
+	RouteId extends string | null = string | null
+> {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+upgrade?: (
+	event: RequestEvent<Params, RouteId> & { context: import('crossws').Peer['context'] }
+) => MaybePromise<Response | ResponseInit | void>;
+```
+
+<div class="ts-block-property-details">
+
+The [upgrade](/docs/kit/websockets#Hooks-upgrade) hook runs
+every time a request is attempting to upgrade to a WebSocket connection.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+open?: (peer: Peer<Params, RouteId>) => MaybePromise<void>;
+```
+
+<div class="ts-block-property-details">
+
+The [open](/docs/kit/websockets#Hooks-open) hook runs
+every time a WebSocket connection is opened.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+message?: (peer: Peer<Params, RouteId>, message: Message<Params, RouteId>) => MaybePromise<void>;
+```
+
+<div class="ts-block-property-details">
+
+The [message](/docs/kit/websockets#Hooks-message) hook
+runs every time a message is received from a WebSocket client.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+close?: (
+	peer: Peer<Params, RouteId>,
+	details: { code?: number; reason?: string }
+) => MaybePromise<void>;
+```
+
+<div class="ts-block-property-details">
+
+The [close](/docs/kit/websockets#Hooks-close) hook runs
+every time a WebSocket connection is closed.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+error?: (peer: Peer<Params, RouteId>, error: import('crossws').WSError) => MaybePromise<void>;
+```
+
+<div class="ts-block-property-details">
+
+The [error](/docs/kit/websockets#Hooks-error) hook runs
+every time a WebSocket error occurs.
+
+</div>
 </div></div>
 
 ## SubmitFunction
