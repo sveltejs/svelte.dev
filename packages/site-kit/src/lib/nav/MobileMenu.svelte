@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { afterNavigate } from '$app/navigation';
+	import { page } from '$app/state';
 	import { trap } from '../actions';
 	import { reduced_motion } from '../stores';
 	import { tick } from 'svelte';
@@ -147,7 +148,15 @@
 						<ul>
 							<li><a href="/chat">Discord</a></li>
 							<li><a href="https://bsky.app/profile/svelte.dev">Bluesky</a></li>
-							<li><a href="https://github.com/sveltejs/svelte">GitHub</a></li>
+							<li>
+								<a
+									href="https://github.com/sveltejs/{page.url.pathname.startsWith('/docs/kit')
+										? 'kit'
+										: page.url.pathname.startsWith('/docs/cli')
+											? 'cli'
+											: 'svelte'}">GitHub</a
+								>
+							</li>
 						</ul>
 					</div>
 				</div>
