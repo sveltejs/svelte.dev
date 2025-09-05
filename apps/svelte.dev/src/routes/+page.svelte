@@ -14,7 +14,7 @@
 
 	<meta name="twitter:title" content="Svelte" />
 	<meta name="twitter:description" content="Web development for the rest of us" />
-	<meta name="Description" content="Web development for the rest of us" />
+	<meta name="description" content="Web development for the rest of us" />
 </svelte:head>
 
 <div class="home">

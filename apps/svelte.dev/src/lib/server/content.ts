@@ -23,7 +23,15 @@ export const index = await create_index(documents, assets, '../../../content', r
 const months = 'Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split(' ');
 
 function format_date(date: string) {
+	if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+		throw new Error(`Invalid blog post date for date ${date}, should be in the format YYYY-MM-DD`);
+	}
+
 	const [y, m, d] = date.split('-');
+	const month = months[+m - 1];
+	if (month === undefined) {
+		throw new Error(`Invalid blog post month for date ${date}`);
+	}
 	return `${months[+m - 1]} ${+d} ${y}`;
 }
 

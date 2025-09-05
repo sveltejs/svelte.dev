@@ -137,6 +137,7 @@
 	}
 
 	section {
+		position: relative;
 		overflow: hidden;
 	}
 </style>
