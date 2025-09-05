@@ -66,7 +66,7 @@
 		content="{data.document.metadata.title} • Svelte documentation"
 	/>
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="Description" content="{data.document.metadata.title} • Svelte documentation" />
+	<meta name="description" content="{data.document.metadata.title} • Svelte documentation" />
 	<meta
 		name="twitter:image"
 		content="https://svelte.dev/docs/{page.params.topic}/{page.params.path}/card.png"

@@ -25,6 +25,10 @@
 		onversion?: (version: string) => void;
 		onchange?: () => void;
 		download?: () => void;
+		/**
+		 * Invoked whenever there's a bundler or runtime error
+		 */
+		onerror?: (error: Error) => void;
 	}
 
 	let {
@@ -40,7 +44,8 @@
 		previewTheme = 'light',
 		onversion,
 		onchange = () => {},
-		download
+		download,
+		onerror
 	}: Props = $props();
 
 	// TODO pass in real data
@@ -185,6 +190,18 @@
 		$toggleable = mobile && orientation === 'columns' && embedded !== 'output-only';
 	});
 
+	$effect(() => {
+		if (runtime_error) {
+			onerror?.(runtime_error);
+		}
+	});
+
+	$effect(() => {
+		if (bundler?.result?.error) {
+			onerror?.(bundler.result.error as Error);
+		}
+	});
+
 	let runes = $derived(
 		workspace.current.name.endsWith('.svelte.js') ||
 			(workspace.current_compiled?.result?.metadata.runes ?? false)
@@ -235,7 +252,7 @@
 						{injectedCSS}
 						{previewTheme}
 						{workspace}
-						runtimeError={runtime_error}
+						bind:runtimeError={runtime_error}
 					/>
 				</section>
 			{/snippet}
