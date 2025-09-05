@@ -1,0 +1,16 @@
+{
+	"name": "@orpc/svelte-query",
+	"description": "Fetch and manage data in Svelte with orpc.",
+	"repo_url": "https://github.com/unnoq/orpc",
+	"authors": ["unnoq"],
+	"homepage": "https://orpc.unnoq.com",
+	"downloads": 2183,
+	"updated": "2025-04-12T13:39:09.903Z",
+	"tags": ["server"],
+	"runes": false,
+	"github_stars": 1023,
+	"typescript": true,
+	"version": "0.54.0",
+	"svelte_range": ">=4.2.0",
+	"last_rune_check_version": "0.54.0"
+}

@@ -1,0 +1,15 @@
+{
+	"name": "@skeletonlabs/skeleton",
+	"description": "Comprehensive UI component library for Svelte with themes and utilities.",
+	"repo_url": "https://github.com/skeletonlabs/skeleton",
+	"authors": ["skeletonadmin", "endigo9740", "teknikal", "cokakoala"],
+	"homepage": "https://github.com/skeletonlabs/skeleton#readme",
+	"downloads": 26004,
+	"updated": "2025-04-03T19:25:14.810Z",
+	"tags": ["design-system", "ui"],
+	"runes": false,
+	"github_stars": 5453,
+	"typescript": false,
+	"version": "3.1.2",
+	"last_rune_check_version": "3.1.2"
+}

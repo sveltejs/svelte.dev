@@ -1,0 +1,16 @@
+{
+	"name": "mdsvex",
+	"description": "Process Markdown for Svelte components.",
+	"repo_url": "https://github.com/pngwn/MDsveX",
+	"authors": ["evilpingwin"],
+	"homepage": "https://github.com/pngwn/MDsveX#readme",
+	"downloads": 37885,
+	"updated": "2024-08-17T01:30:39.693Z",
+	"tags": ["content"],
+	"runes": false,
+	"github_stars": 2634,
+	"typescript": true,
+	"version": "0.12.3",
+	"svelte_range": "^3.56.0 || ^4.0.0 || ^5.0.0-next.120",
+	"last_rune_check_version": "0.12.3"
+}

@@ -1,0 +1,17 @@
+{
+	"name": "sveltekit-superforms",
+	"description": "Simplify SvelteKit form handling and validation.",
+	"repo_url": "https://github.com/ciscoheat/sveltekit-superforms",
+	"authors": ["ciscoheat"],
+	"homepage": "https://superforms.rocks",
+	"downloads": 59739,
+	"updated": "2025-04-06T14:18:50.450Z",
+	"tags": ["miscellaneous"],
+	"runes": false,
+	"github_stars": 2468,
+	"typescript": true,
+	"version": "2.24.1",
+	"svelte_range": "3.x || 4.x || >=5.0.0-next.51",
+	"kit_range": "1.x || 2.x",
+	"last_rune_check_version": "2.24.1"
+}

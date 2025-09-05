@@ -1,0 +1,16 @@
+{
+	"name": "@lottiefiles/svelte-lottie-player",
+	"description": "Play Lottie animations within Svelte applications.",
+	"repo_url": "https://github.com/LottieFiles/svelte-lottie-player",
+	"authors": ["jawish"],
+	"homepage": "https://github.com/LottieFiles/svelte-lottie-player",
+	"downloads": 4586,
+	"updated": "2024-01-16T08:16:28.170Z",
+	"tags": ["media"],
+	"runes": false,
+	"github_stars": 138,
+	"typescript": false,
+	"version": "0.3.1",
+	"svelte_range": "^3.21.0",
+	"last_rune_check_version": "0.3.1"
+}

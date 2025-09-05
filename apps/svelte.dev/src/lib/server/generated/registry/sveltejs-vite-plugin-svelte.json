@@ -1,0 +1,16 @@
+{
+	"name": "@sveltejs/vite-plugin-svelte",
+	"description": "Integrate Svelte components into Vite projects.",
+	"repo_url": "https://github.com/sveltejs/vite-plugin-svelte",
+	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
+	"homepage": "https://github.com/sveltejs/vite-plugin-svelte#readme",
+	"downloads": 681273,
+	"updated": "2024-12-18T10:03:00.518Z",
+	"tags": ["tooling"],
+	"runes": false,
+	"github_stars": 907,
+	"typescript": true,
+	"version": "5.0.3",
+	"svelte_range": "^5.0.0",
+	"last_rune_check_version": "5.0.3"
+}

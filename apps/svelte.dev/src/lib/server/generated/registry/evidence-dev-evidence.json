@@ -1,0 +1,16 @@
+{
+	"name": "@evidence-dev/evidence",
+	"description": "Build data apps with Svelte and Evidence.",
+	"repo_url": "",
+	"authors": ["archiewood", "mcrascal", "hughess", "charles-evidence", "brian-evidence"],
+	"downloads": 9586,
+	"updated": "2025-04-11T20:02:23.417Z",
+	"tags": ["content"],
+	"runes": false,
+	"typescript": true,
+	"version": "40.1.2",
+	"svelte_range": "4.2.19",
+	"kit_range": "2.8.4",
+	"last_rune_check_version": "40.1.2",
+	"github_stars": 0
+}

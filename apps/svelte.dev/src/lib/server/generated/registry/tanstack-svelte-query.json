@@ -1,0 +1,16 @@
+{
+	"name": "@tanstack/svelte-query",
+	"description": "Manages, caches, and syncs asynchronous data in Svelte.",
+	"repo_url": "https://github.com/TanStack/query",
+	"authors": ["tannerlinsley", "nksaraf"],
+	"homepage": "https://tanstack.com/query",
+	"downloads": 29542,
+	"updated": "2025-04-14T12:56:45.954Z",
+	"tags": ["miscellaneous"],
+	"runes": false,
+	"github_stars": 44706,
+	"typescript": true,
+	"version": "5.74.3",
+	"svelte_range": "^3.54.0 || ^4.0.0 || ^5.0.0",
+	"last_rune_check_version": "5.74.3"
+}

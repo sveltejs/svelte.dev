@@ -1,0 +1,16 @@
+{
+	"name": "@vime/svelte",
+	"description": "Svelte bindings for the Vime media player.",
+	"repo_url": "https://github.com/vime-js/vime",
+	"authors": ["mihar-22"],
+	"downloads": 351,
+	"updated": "2023-07-17T00:15:50.338Z",
+	"tags": ["media"],
+	"runes": false,
+	"github_stars": 2800,
+	"homepage": "https://vimejs.com",
+	"typescript": true,
+	"version": "5.4.1",
+	"svelte_range": "^3.0.0 || ^4.0.0",
+	"last_rune_check_version": "5.4.1"
+}

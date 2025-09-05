@@ -1,0 +1,16 @@
+{
+	"name": "svelte-pathfinder",
+	"description": "Create state-based, advanced router for SvelteJS.",
+	"repo_url": "https://github.com/sveltetools/svelte-pathfinder",
+	"authors": ["paulmaly"],
+	"homepage": "https://github.com/sveltetools/svelte-pathfinder#readme",
+	"downloads": 817,
+	"updated": "2024-07-04T09:03:48.158Z",
+	"tags": ["router"],
+	"runes": false,
+	"github_stars": 131,
+	"typescript": true,
+	"version": "4.8.1",
+	"svelte_range": ">=3 <5",
+	"last_rune_check_version": "4.8.1"
+}

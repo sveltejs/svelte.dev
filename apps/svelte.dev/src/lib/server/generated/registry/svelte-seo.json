@@ -1,0 +1,17 @@
+{
+	"name": "svelte-seo",
+	"description": "Optimize Svelte apps for search engines, social media.",
+	"repo_url": "https://github.com/artiebits/svelte-seo",
+	"authors": ["artiebits"],
+	"homepage": "https://github.com/artiebits/svelte-seo#readme",
+	"downloads": 2596,
+	"updated": "2024-05-07T18:25:38.747Z",
+	"tags": ["seo"],
+	"runes": false,
+	"github_stars": 469,
+	"typescript": true,
+	"version": "1.6.1",
+	"svelte_range": "^3.55.0",
+	"kit_range": "^1.30.4",
+	"last_rune_check_version": "1.6.1"
+}
