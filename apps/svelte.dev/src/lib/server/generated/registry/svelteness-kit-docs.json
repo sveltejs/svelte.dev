@@ -1,0 +1,17 @@
+{
+	"name": "@svelteness/kit-docs",
+	"description": "Integrate documentation for SvelteKit.",
+	"repo_url": "https://github.com/svelteness/kit-docs",
+	"authors": ["mihar-22"],
+	"downloads": 118,
+	"updated": "2023-09-16T01:27:25.411Z",
+	"tags": ["tooling", "content"],
+	"runes": false,
+	"github_stars": 492,
+	"homepage": "https://kitdocs.vercel.app",
+	"typescript": true,
+	"version": "1.1.5",
+	"svelte_range": "^4.2.0",
+	"kit_range": "^1.25.0",
+	"last_rune_check_version": "1.1.5"
+}

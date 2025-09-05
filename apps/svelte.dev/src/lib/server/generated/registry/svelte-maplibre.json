@@ -1,0 +1,17 @@
+{
+	"name": "svelte-maplibre",
+	"description": "Create interactive maps using MapLibre in Svelte.",
+	"repo_url": "https://github.com/dimfeld/svelte-maplibre",
+	"authors": ["dimfeld"],
+	"homepage": "https://svelte-maplibre.imfeld.dev",
+	"downloads": 5396,
+	"updated": "2025-03-20T19:32:58.345Z",
+	"tags": ["ui"],
+	"runes": true,
+	"github_stars": 418,
+	"typescript": true,
+	"version": "1.0.0",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.8.1",
+	"last_rune_check_version": "1.0.0"
+}

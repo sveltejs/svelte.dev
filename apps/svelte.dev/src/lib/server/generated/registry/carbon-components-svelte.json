@@ -1,0 +1,15 @@
+{
+	"name": "carbon-components-svelte",
+	"description": "Implement Carbon Design System components in Svelte apps.",
+	"repo_url": "https://github.com/carbon-design-system/carbon-components-svelte",
+	"authors": ["metonym"],
+	"homepage": "https://svelte.carbondesignsystem.com/",
+	"downloads": 9338,
+	"updated": "2025-03-24T16:33:34.914Z",
+	"tags": ["design-system"],
+	"runes": false,
+	"github_stars": 2777,
+	"typescript": true,
+	"version": "0.88.4",
+	"last_rune_check_version": "0.88.4"
+}

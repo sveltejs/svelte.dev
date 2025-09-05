@@ -1,0 +1,31 @@
+{
+	"name": "@slicemachine/adapter-sveltekit",
+	"description": "Adapts SvelteKit for use with Prismic Slice Machine.",
+	"repo_url": "https://github.com/prismicio/slice-machine",
+	"authors": [
+		"lihbr",
+		"angeloashmore",
+		"amaurycahuet",
+		"odim",
+		"levimykel",
+		"danielbg",
+		"nvld",
+		"prismic-ci",
+		"jomifepe",
+		"srflp",
+		"bohdan-one",
+		"xrutayisire",
+		"bapmrl"
+	],
+	"downloads": 2861,
+	"updated": "2025-04-11T15:35:37.427Z",
+	"tags": ["adapter", "tooling"],
+	"runes": false,
+	"github_stars": 293,
+	"homepage": "https://prismic.io/docs",
+	"typescript": true,
+	"version": "0.3.74",
+	"svelte_range": "^3.54.0 || ^4.0.0-next.0 || ^5.0.0-next.1",
+	"kit_range": "^1 || ^2",
+	"last_rune_check_version": "0.3.74"
+}
