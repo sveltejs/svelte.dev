@@ -197,7 +197,7 @@
 	});
 
 	$effect(() => {
-		if (bundler.result?.error) {
+		if (bundler?.result?.error) {
 			onerror?.(bundler.result.error as Error);
 		}
 	});
