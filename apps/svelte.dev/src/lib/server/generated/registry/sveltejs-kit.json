@@ -1,0 +1,16 @@
+{
+	"name": "@sveltejs/kit",
+	"description": "Build web applications with Svelte and SvelteKit.",
+	"repo_url": "https://github.com/sveltejs/kit",
+	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
+	"homepage": "https://svelte.dev",
+	"downloads": 524388,
+	"updated": "2025-04-09T17:29:52.824Z",
+	"tags": ["adapter", "tooling"],
+	"runes": true,
+	"github_stars": 19201,
+	"typescript": true,
+	"version": "2.20.5",
+	"svelte_range": "^4.0.0 || ^5.0.0-next.0",
+	"last_rune_check_version": "2.20.5"
+}

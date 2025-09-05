@@ -1,0 +1,16 @@
+{
+	"name": "svelte-chartjs",
+	"description": "Create charts using Chart.js in Svelte apps.",
+	"repo_url": "https://github.com/SauravKanchan/svelte-chartjs",
+	"authors": ["sauravnk30"],
+	"homepage": "https://saurav.tech/mdbsvelte/?path=/story/charts--examples",
+	"downloads": 45971,
+	"updated": "2024-02-06T14:40:40.928Z",
+	"tags": ["ui"],
+	"runes": false,
+	"github_stars": 319,
+	"typescript": true,
+	"version": "3.1.5",
+	"svelte_range": "^4.0.0",
+	"last_rune_check_version": "3.1.5"
+}

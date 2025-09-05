@@ -1,0 +1,16 @@
+{
+	"name": "@sveltejs/adapter-auto",
+	"description": "Automatically choose SvelteKit adapter.",
+	"repo_url": "https://github.com/sveltejs/kit",
+	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
+	"homepage": "https://svelte.dev",
+	"downloads": 244119,
+	"updated": "2025-04-02T04:24:41.948Z",
+	"tags": ["adapter"],
+	"runes": false,
+	"github_stars": 19201,
+	"typescript": true,
+	"version": "6.0.0",
+	"kit_range": "^2.0.0",
+	"last_rune_check_version": "6.0.0"
+}
