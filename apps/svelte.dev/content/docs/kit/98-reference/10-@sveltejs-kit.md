@@ -2093,7 +2093,7 @@ The return value of a remote `form` function. See [Remote functions](/docs/kit/r
 <div class="ts-block">
 
 ```dts
-type RemoteForm<Result> = {
+type RemoteForm<Input, Output> = {
 	method: 'POST';
 	/** The URL to send the form to. */
 	action: string;
@@ -2133,11 +2133,15 @@ type RemoteForm<Result> = {
 	 */
 	for(
 		key: string | number | boolean
-	): Omit<RemoteForm<Result>, 'for'>;
+	): Omit<RemoteForm<Input, Output>, 'for'>;
 	/** The result of the form submission */
-	get result(): Result | undefined;
+	get result(): Output | undefined;
 	/** The number of pending submissions */
 	get pending(): number;
+	/** The submitted values (TODO values should be string | File | null) */
+	input?: Flatten<Input>;
+	/** Validation issues (TODO values should be Issue[]) */
+	issues?: Flatten<Input>;
 	/** Spread this onto a `<button>` or `<input type="submit">` */
 	buttonProps: {
 		type: 'submit';
