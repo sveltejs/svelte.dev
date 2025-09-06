@@ -6,6 +6,7 @@ export async function compress_and_encode_text(input) {
 		const { done, value } = await reader.read();
 		if (done) {
 			reader.releaseLock();
+			// Some sites like discord don't like it when links end with =
 			return btoa(buffer).replaceAll('+', '-').replaceAll('/', '_').replace(/=+$/, '');
 		} else {
 			for (let i = 0; i < value.length; i++) {
