@@ -122,6 +122,7 @@
 
 	.panel-body {
 		overflow: auto;
+		max-height: 100%;
 	}
 
 	.panel-heading {
