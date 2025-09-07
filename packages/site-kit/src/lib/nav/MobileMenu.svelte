@@ -10,6 +10,7 @@
 	import MobileSubMenu from './MobileSubMenu.svelte';
 	import type { NavigationLink } from '../types';
 	import ModalOverlay from '../components/ModalOverlay.svelte';
+	import { github_link } from './Nav.svelte';
 
 	interface Props {
 		links: NavigationLink[];
@@ -150,11 +151,7 @@
 							<li><a href="https://bsky.app/profile/svelte.dev">Bluesky</a></li>
 							<li>
 								<a
-									href="https://github.com/sveltejs/{page.url.pathname.startsWith('/docs/kit')
-										? 'kit'
-										: page.url.pathname.startsWith('/docs/cli')
-											? 'cli'
-											: 'svelte'}">GitHub</a
+									href={github_link(page)}>GitHub</a
 								>
 							</li>
 						</ul>
