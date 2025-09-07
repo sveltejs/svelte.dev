@@ -6,10 +6,10 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	import type { Page } from '@sveltejs/kit';
 	export function github_link(page: Page) {
 		if (page.url.pathname.startsWith('/tutorial')) {
-			return `https://github.com/sveltejs/${page.params.slug.split('/')[0]}`;
+			return `https://github.com/sveltejs/${page.params.slug!.split('/')[0]}`;
 		}
 		if (page.url.pathname.startsWith('/docs')) {
-			return `https://github.com/sveltejs/${page.params.topic}`;
+			return `https://github.com/sveltejs/${page.params.topic!}`;
 		}
 		return 'https://github.com/sveltejs/svelte';
 	}
