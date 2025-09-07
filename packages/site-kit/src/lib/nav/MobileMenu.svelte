@@ -150,9 +150,7 @@
 							<li><a href="/chat">Discord</a></li>
 							<li><a href="https://bsky.app/profile/svelte.dev">Bluesky</a></li>
 							<li>
-								<a
-									href={github_link(page)}>GitHub</a
-								>
+								<a href={github_link(page)}>GitHub</a>
 							</li>
 						</ul>
 					</div>
