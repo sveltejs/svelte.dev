@@ -94,8 +94,8 @@ export function smart_quotes(
 			}
 		} else if (!html && (char === '"' || char === "'")) {
 			let left: boolean =
-				(first && stack.at(-1) !== char) ||
-				(index > 1 && before === '=' && !(char === "'" && opening_squo_chars.test(before)));
+				((first && stack.at(-1) !== char) || (index > 1 && before === '=')) &&
+				!(char === "'" && !opening_squo_chars.test(before));
 			let double = char === '"';
 			res += double ? (left ? '“' : '”') : left ? '‘' : '’';
 			if (!left) {
