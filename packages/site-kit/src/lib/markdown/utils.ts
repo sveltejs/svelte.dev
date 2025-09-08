@@ -60,30 +60,45 @@ export function smart_quotes(
 		html?: boolean;
 	} = {}
 ) {
-	let open_quote = false;
+	const stack: Array<"'" | '"'> = [];
 	let res = '';
 	const len = str.length;
 	for (let index = 0; index < len; index++) {
-		let char = str.charAt(index);
+		const char = str.charAt(index);
 		if (html && char === '&') {
 			if (str.slice(index, index + 5) === '&#39;') {
-				let left: boolean = (first && !open_quote) || (index > 1 && str.charAt(index - 1) === '=');
-				open_quote = left;
+				const left: boolean =
+					(first && stack.at(-1) !== "'") || (index > 1 && str.charAt(index - 1) === '=');
 				res += `&${left ? 'l' : 'r'}squo;`;
 				index += 4;
+				if (!left) {
+					stack.pop();
+				} else {
+					stack.push("'");
+				}
 			} else if (str.slice(index, index + 6) === '&quot;') {
-				let left: boolean = (first && !open_quote) || (index > 1 && str.charAt(index - 1) === '=');
-				open_quote = left;
+				const left: boolean =
+					(first && stack.at(-1) !== '"') || (index > 1 && str.charAt(index - 1) === '=');
 				res += `&${left ? 'l' : 'r'}dquo`;
 				index += 5;
+				if (!left) {
+					stack.pop();
+				} else {
+					stack.push('"');
+				}
 			} else {
 				res += '&';
 			}
 		} else if (!html && (char === '"' || char === "'")) {
-			let left: boolean = (first && !open_quote) || (index > 1 && str.charAt(index - 1) === '=');
-			open_quote = left;
+			let left: boolean =
+				(first && stack.at(-1) !== char) || (index > 1 && str.charAt(index - 1) === '=');
 			let double = char === '"';
 			res += double ? (left ? '“' : '”') : left ? '‘' : '’';
+			if (!left) {
+				stack.pop();
+			} else {
+				stack.push(char);
+			}
 		} else {
 			res += char;
 		}
