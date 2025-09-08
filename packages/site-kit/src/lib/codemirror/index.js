@@ -25,13 +25,18 @@ const logic_block_snippets = [
 		label: '#await :then',
 		type: 'keyword'
 	}),
-	snippetCompletion('#key ${}}\n\n{/key', { label: '#key', type: 'keyword' })
+	snippetCompletion('#key ${}}\n\n{/key', { label: '#key', type: 'keyword' }),
+	snippetCompletion('#snippet ${}()}\n\n{/snippet', {
+		label: '#snippet',
+		type: 'keyword'
+	})
 ];
 
 const special_tag_snippets = [
 	snippetCompletion('@html ${}', { label: '@html', type: 'keyword' }),
 	snippetCompletion('@debug ${}', { label: '@debug', type: 'keyword' }),
-	snippetCompletion('@const ${}', { label: '@const', type: 'keyword' })
+	snippetCompletion('@const ${}', { label: '@const', type: 'keyword' }),
+	snippetCompletion('@render ${}()', { label: '@render', type: 'keyword' })
 ];
 
 /**
