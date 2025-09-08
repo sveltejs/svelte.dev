@@ -63,12 +63,15 @@ export function smart_quotes(
 	const stack: Array<"'" | '"'> = [];
 	let res = '';
 	const len = str.length;
+	const opening_squo_chars = /[\s\n\(]/;
 	for (let index = 0; index < len; index++) {
 		const char = str.charAt(index);
+		const before = str.charAt(index - 1);
 		if (html && char === '&') {
 			if (str.slice(index, index + 5) === '&#39;') {
 				const left: boolean =
-					(first && stack.at(-1) !== "'") || (index > 1 && str.charAt(index - 1) === '=');
+					((first && stack.at(-1) !== "'") || (index > 1 && before === '=')) &&
+					!opening_squo_chars.test(before);
 				res += `&${left ? 'l' : 'r'}squo;`;
 				index += 4;
 				if (!left) {
@@ -91,7 +94,8 @@ export function smart_quotes(
 			}
 		} else if (!html && (char === '"' || char === "'")) {
 			let left: boolean =
-				(first && stack.at(-1) !== char) || (index > 1 && str.charAt(index - 1) === '=');
+				(first && stack.at(-1) !== char) ||
+				(index > 1 && before === '=' && !(char === "'" && opening_squo_chars.test(before)));
 			let double = char === '"';
 			res += double ? (left ? '“' : '”') : left ? '‘' : '’';
 			if (!left) {
