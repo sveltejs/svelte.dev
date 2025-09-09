@@ -122,7 +122,7 @@
 
 	.panel-body {
 		overflow: auto;
-		max-height: 100%;
+		max-height: calc(100% - var(--sk-pane-controls-height));
 	}
 
 	.panel-heading {
