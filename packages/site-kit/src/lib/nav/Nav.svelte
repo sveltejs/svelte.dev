@@ -2,19 +2,6 @@
 Top navigation bar for the application. It provides a slot for the left side, the right side, and the center.
 -->
 
-<script lang="ts" module>
-	import type { Page } from '@sveltejs/kit';
-	export function github_link(page: Page) {
-		if (page.url.pathname.startsWith('/tutorial')) {
-			return `https://github.com/sveltejs/${page.params.slug!.split('/')[0]}`;
-		}
-		if (page.url.pathname.startsWith('/docs')) {
-			return `https://github.com/sveltejs/${page.params.topic!}`;
-		}
-		return 'https://github.com/sveltejs/svelte';
-	}
-</script>
-
 <script lang="ts">
 	import { overlay_open, on_this_page_open } from '../stores';
 	import { search } from '../state/search.svelte';
@@ -146,7 +133,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 					<span data-icon="bluesky"></span>
 				</a>
 
-				<a href={github_link(page)} aria-label="GitHub Repo">
+				<a href="https://github.com/sveltejs" aria-label="GitHub Organization">
 					<span data-icon="github"></span>
 				</a>
 			</div>

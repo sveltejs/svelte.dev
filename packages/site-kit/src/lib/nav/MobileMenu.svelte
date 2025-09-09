@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { afterNavigate } from '$app/navigation';
-	import { page } from '$app/state';
 	import { trap } from '../actions';
 	import { reduced_motion } from '../stores';
 	import { tick } from 'svelte';
@@ -10,7 +9,6 @@
 	import MobileSubMenu from './MobileSubMenu.svelte';
 	import type { NavigationLink } from '../types';
 	import ModalOverlay from '../components/ModalOverlay.svelte';
-	import { github_link } from './Nav.svelte';
 
 	interface Props {
 		links: NavigationLink[];
@@ -150,7 +148,7 @@
 							<li><a href="/chat">Discord</a></li>
 							<li><a href="https://bsky.app/profile/svelte.dev">Bluesky</a></li>
 							<li>
-								<a href={github_link(page)}>GitHub</a>
+								<a href="https://github.com/sveltejs">GitHub</a>
 							</li>
 						</ul>
 					</div>
