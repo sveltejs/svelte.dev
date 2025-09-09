@@ -147,7 +147,9 @@
 						<ul>
 							<li><a href="/chat">Discord</a></li>
 							<li><a href="https://bsky.app/profile/svelte.dev">Bluesky</a></li>
-							<li><a href="https://github.com/sveltejs/svelte">GitHub</a></li>
+							<li>
+								<a href="https://github.com/sveltejs">GitHub</a>
+							</li>
 						</ul>
 					</div>
 				</div>
