@@ -70,8 +70,7 @@ export function smart_quotes(
 		if (html && char === '&') {
 			if (str.slice(index, index + 5) === '&#39;') {
 				const left: boolean =
-					((first && before === '') || stack.at(-1) !== "'" || (index > 1 && before === '=')) &&
-					!opening_squo_chars.test(before);
+					stack.at(-1) !== "'" && (opening_squo_chars.test(before) || (first && before === ''));
 				res += `&${left ? 'l' : 'r'}squo;`;
 				index += 4;
 				if (!left) {
@@ -80,10 +79,7 @@ export function smart_quotes(
 					stack.push("'");
 				}
 			} else if (str.slice(index, index + 6) === '&quot;') {
-				const left: boolean =
-					(first && before === '') ||
-					stack.at(-1) !== '"' ||
-					(index > 1 && str.charAt(index - 1) === '=');
+				const left: boolean = stack.at(-1) !== '"';
 				res += `&${left ? 'l' : 'r'}dquo`;
 				index += 5;
 				if (!left) {
@@ -95,10 +91,10 @@ export function smart_quotes(
 				res += '&';
 			}
 		} else if (!html && (char === '"' || char === "'")) {
-			let left: boolean =
-				((first && before === '') || stack.at(-1) !== char || (index > 1 && before === '=')) &&
-				!(char === "'" && !opening_squo_chars.test(before));
-			let double = char === '"';
+			const left: boolean =
+				stack.at(-1) !== char &&
+				(opening_squo_chars.test(char) || (first && before === '') || char === '"');
+			const double = char === '"';
 			res += double ? (left ? '“' : '”') : left ? '‘' : '’';
 			if (!left) {
 				stack.pop();
