@@ -106,7 +106,7 @@ function minimize_content(content: string, options?: Partial<MinimizeOptions>): 
 	}
 
 	if (settings.normalize_whitespace) {
-		minimized = minimized.replace(/\s+/g, ' ');
+		minimized = minimized.replace(/[^\S\n\t]+/g, ' ');
 	}
 
 	minimized = minimized.trim();
