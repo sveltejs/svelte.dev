@@ -14,7 +14,6 @@ interface MinimizeOptions {
 	remove_details_blocks: boolean;
 	remove_playground_links: boolean;
 	remove_prettier_ignore: boolean;
-	normalize_whitespace: boolean;
 }
 
 interface Topic {
@@ -27,8 +26,7 @@ const defaults: MinimizeOptions = {
 	remove_note_blocks: false,
 	remove_details_blocks: false,
 	remove_playground_links: false,
-	remove_prettier_ignore: false,
-	normalize_whitespace: false
+	remove_prettier_ignore: false
 };
 
 export function generate_llm_content(options: GenerateLlmContentOptions): string {
@@ -103,10 +101,6 @@ function minimize_content(content: string, options?: Partial<MinimizeOptions>): 
 			.split('\n')
 			.filter((line) => line.trim() !== '<!-- prettier-ignore -->')
 			.join('\n');
-	}
-
-	if (settings.normalize_whitespace) {
-		minimized = minimized.replace(/[^\S\n\t]+/g, ' ');
 	}
 
 	minimized = minimized.trim();
