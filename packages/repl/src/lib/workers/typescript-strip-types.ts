@@ -83,6 +83,12 @@ const visitors: Visitors<any, { ms: MagicString }> = {
 			ts_blank_space(context, { start: node.start, end: node.start + node.accessibility.length });
 		}
 
+		delete node.typeAnnotation;
+		delete node.typeParameters;
+		delete node.typeArguments;
+		delete node.returnType;
+		delete node.accessibility;
+
 		context.next();
 	},
 	Decorator(node, context) {
