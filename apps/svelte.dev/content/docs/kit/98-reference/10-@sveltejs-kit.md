@@ -1141,6 +1141,23 @@ and returns an `App.Platform` object
 </div>
 </div></div>
 
+## FormInput
+
+<div class="ts-block">
+
+```dts
+interface FormInput {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+[key: string]: FormDataEntryValue | FormDataEntryValue[] | FormInput | FormInput[];
+```
+
+<div class="ts-block-property-details"></div>
+</div></div>
+
 ## Handle
 
 The [`handle`](/docs/kit/hooks#Server-hooks-handle) hook runs every time the SvelteKit server receives a [request](/docs/kit/web-standards#Fetch-APIs-Request) and
@@ -2093,17 +2110,17 @@ The return value of a remote `form` function. See [Remote functions](/docs/kit/r
 <div class="ts-block">
 
 ```dts
-type RemoteForm<Result> = {
+type RemoteForm<Input extends FormInput | void, Output> = {
+	/** Attachment that sets up an event handler that intercepts the form submission on the client to prevent a full page reload */
+	[attachment: symbol]: (node: HTMLFormElement) => void;
 	method: 'POST';
 	/** The URL to send the form to. */
 	action: string;
-	/** Event handler that intercepts the form submission on the client to prevent a full page reload */
-	onsubmit: (event: SubmitEvent) => void;
 	/** Use the `enhance` method to influence what happens when the form is submitted. */
 	enhance(
 		callback: (opts: {
 			form: HTMLFormElement;
-			data: FormData;
+			data: Input;
 			submit: () => Promise<void> & {
 				updates: (
 					...queries: Array<
@@ -2111,11 +2128,11 @@ type RemoteForm<Result> = {
 					>
 				) => Promise<void>;
 			};
-		}) => void
+		}) => void | Promise<void>
 	): {
 		method: 'POST';
 		action: string;
-		onsubmit: (event: SubmitEvent) => void;
+		[attachment: symbol]: (node: HTMLFormElement) => void;
 	};
 	/**
 	 * Create an instance of the form for the given key.
@@ -2133,11 +2150,41 @@ type RemoteForm<Result> = {
 	 */
 	for(
 		key: string | number | boolean
-	): Omit<RemoteForm<Result>, 'for'>;
+	): Omit<RemoteForm<Input, Output>, 'for'>;
+	/**
+	 * This method exists to allow you to typecheck `name` attributes. It returns its argument
+	 * @example
+	 * ```svelte
+	 * <input name={login.field('username')} />
+	 * ```
+	 **/
+	field<
+		Name extends keyof UnionToIntersection<
+			FlattenKeys<Input, ''>
+		>
+	>(
+		string: Name
+	): Name;
+	/** Preflight checks */
+	preflight(
+		schema: StandardSchemaV1<Input, any>
+	): RemoteForm<Input, Output>;
+	/** Validate the form contents programmatically */
+	validate(options?: {
+		includeUntouched?: boolean;
+	}): Promise<void>;
 	/** The result of the form submission */
-	get result(): Result | undefined;
+	get result(): Output | undefined;
 	/** The number of pending submissions */
 	get pending(): number;
+	/** The submitted values */
+	input: null | UnionToIntersection<
+		FlattenInput<Input, ''>
+	>;
+	/** Validation issues */
+	issues: null | UnionToIntersection<
+		FlattenIssues<Input, ''>
+	>;
 	/** Spread this onto a `<button>` or `<input type="submit">` */
 	buttonProps: {
 		type: 'submit';
@@ -2148,7 +2195,7 @@ type RemoteForm<Result> = {
 		enhance(
 			callback: (opts: {
 				form: HTMLFormElement;
-				data: FormData;
+				data: Input;
 				submit: () => Promise<void> & {
 					updates: (
 						...queries: Array<
@@ -2156,7 +2203,7 @@ type RemoteForm<Result> = {
 						>
 					) => Promise<void>;
 				};
-			}) => void
+			}) => void | Promise<void>
 		): {
 			type: 'submit';
 			formmethod: 'POST';
