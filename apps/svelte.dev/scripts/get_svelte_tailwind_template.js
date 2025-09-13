@@ -1,22 +1,24 @@
 // @ts-check
 import { readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
-import path from 'node:path';
+import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { create } from 'sv';
 
 // This download the currente Vite template from Github, adjusts it to our needs, and saves it to static/svelte-template.json
 // This is used by the Svelte REPL as part of the "download project" feature
 
-const force = process.env.FORCE_UPDATE === 'true';
+const viteConfigTailwind =
+	"import { sveltekit } from '@sveltejs/kit/vite';\nimport { defineConfig } from 'vite';\nimport tailwindcss from '@tailwindcss/vite'\nexport default defineConfig({\n\tplugins: [sveltekit(),tailwindcss()]\n});\n";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const output_file = path.resolve(__dirname, '../static/svelte-template.json');
-const output_dir = path.resolve(__dirname, './svelte-template');
+const force = process.env.FORCE_UPDATE === 'true';
+const output_file = fileURLToPath(
+	new URL('../static/svelte-tailwind-template.json', import.meta.url)
+);
+const output_dir = fileURLToPath(new URL('./svelte-tailwind-template', import.meta.url));
 
 try {
 	if (!force && statSync(output_file)) {
-		const relative = path.relative(process.cwd(), output_file);
-		console.info(`[update/template] ${relative} exists. Skipping`);
+		console.info(`[update/template] ${output_file} exists. Skipping`);
 		process.exit(0);
 	}
 } catch {
@@ -28,7 +30,7 @@ try {
 		const items = readdirSync(dir, { withFileTypes: true });
 
 		for (const item of items) {
-			const full_path = path.join(dir, item.name);
+			const full_path = join(dir, item.name);
 			if (item.isDirectory()) {
 				files.push(...get_all_files(full_path));
 			} else {
@@ -47,6 +49,29 @@ try {
 		const string = bytes.toString();
 		let data = bytes.compare(Buffer.from(string)) === 0 ? string : [...bytes];
 
+		// vite config to use along with Tailwind CSS
+		if (path.endsWith('vite.config.ts')) {
+			files.push({
+				path: 'vite.config.ts',
+				data: viteConfigTailwind
+			});
+		}
+
+		// add Tailwind CSS as devDependencies
+		if (path.endsWith('package.json')) {
+			try {
+				const pkg = JSON.parse(string);
+
+				pkg.devDependencies ||= {};
+				pkg.devDependencies['tailwindcss'] = '^4.1.8';
+				pkg.devDependencies['@tailwindcss/vite'] = '^4.1.8';
+
+				data = JSON.stringify(pkg, null, 2); // Pretty-print with 2 spaces
+			} catch (err) {
+				console.error('Failed to parse package.json:', err);
+			}
+		}
+
 		if (path.endsWith('routes/+page.svelte')) {
 			data = `<script>\n\timport '../app.css';\n\timport App from './App.svelte';\n</script>\n\n<App />\n`;
 		}
@@ -64,22 +89,10 @@ try {
 	});
 
 	// add CSS styles from playground to the project
-	const html = readFileSync(
-		path.join(output_dir, '../../../../packages/repl/src/lib/Output/srcdoc/index.html'),
-		{ encoding: 'utf-8' }
-	);
-	const css = html
-		.slice(html.indexOf('<style id="injected">') + 19, html.indexOf('</style>'))
-		.split('\n')
-		.map((line) =>
-			// remove leading \t
-			line.slice(3)
-		)
-		.join('\n')
-		.trimStart();
+
 	files.push({
 		path: 'src/app.css',
-		data: css
+		data: '@import "tailwindcss";'
 	});
 
 	writeFileSync(output_file, JSON.stringify(files));
