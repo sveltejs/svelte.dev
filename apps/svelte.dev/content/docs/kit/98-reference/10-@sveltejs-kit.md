@@ -494,39 +494,24 @@ The argument passed to [`afterNavigate`](/docs/kit/$app-navigation#afterNavigate
 <div class="ts-block">
 
 ```dts
-interface AfterNavigate extends Omit<Navigation, 'type'> {/*…*/}
+type AfterNavigate = (Navigation | NavigationEnter) & {
+	/**
+	 * The type of navigation:
+	 * - `enter`: The app has hydrated/started
+	 * - `form`: The user submitted a `<form method="GET">`
+	 * - `link`: Navigation was triggered by a link click
+	 * - `goto`: Navigation was triggered by a `goto(...)` call or a redirect
+	 * - `popstate`: Navigation was triggered by back/forward navigation
+	 */
+	type: Exclude<NavigationType, 'leave'>;
+	/**
+	 * Since `afterNavigate` callbacks are called after a navigation completes, they will never be called with a navigation that unloads the page.
+	 */
+	willUnload: false;
+};
 ```
 
-<div class="ts-block-property">
-
-```dts
-type: Exclude<NavigationType, 'leave'>;
-```
-
-<div class="ts-block-property-details">
-
-The type of navigation:
-- `enter`: The app has hydrated/started
-- `form`: The user submitted a `<form method="GET">`
-- `link`: Navigation was triggered by a link click
-- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
-- `popstate`: Navigation was triggered by back/forward navigation
-
 </div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-willUnload: false;
-```
-
-<div class="ts-block-property-details">
-
-Since `afterNavigate` callbacks are called after a navigation completes, they will never be called with a navigation that unloads the page.
-
-</div>
-</div></div>
 
 ## AwaitedActions
 
@@ -553,21 +538,15 @@ The argument passed to [`beforeNavigate`](/docs/kit/$app-navigation#beforeNaviga
 <div class="ts-block">
 
 ```dts
-interface BeforeNavigate extends Navigation {/*…*/}
+type BeforeNavigate = Navigation & {
+	/**
+	 * Call this to prevent the navigation from starting.
+	 */
+	cancel: () => void;
+};
 ```
-
-<div class="ts-block-property">
-
-```dts
-cancel: () => void;
-```
-
-<div class="ts-block-property-details">
-
-Call this to prevent the navigation from starting.
 
 </div>
-</div></div>
 
 ## Builder
 
@@ -1581,7 +1560,21 @@ type LoadProperties<
 <div class="ts-block">
 
 ```dts
-interface Navigation {/*…*/}
+type Navigation =
+	| NavigationExternal
+	| NavigationFormSubmit
+	| NavigationPopState
+	| NavigationLink;
+```
+
+</div>
+
+## NavigationBase
+
+<div class="ts-block">
+
+```dts
+interface NavigationBase {/*…*/}
 ```
 
 <div class="ts-block-property">
@@ -1613,7 +1606,42 @@ Where navigation is going to/has gone to
 <div class="ts-block-property">
 
 ```dts
-type: Exclude<NavigationType, 'enter'>;
+willUnload: boolean;
+```
+
+<div class="ts-block-property-details">
+
+Whether or not the navigation will result in the page being unloaded (i.e. not a client-side navigation)
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+complete: Promise<void>;
+```
+
+<div class="ts-block-property-details">
+
+A promise that resolves once the navigation is complete, and rejects if the navigation
+fails or is aborted. In the case of a `willUnload` navigation, the promise will never resolve
+
+</div>
+</div></div>
+
+## NavigationEnter
+
+<div class="ts-block">
+
+```dts
+interface NavigationEnter extends NavigationBase {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+type: 'enter';
 ```
 
 <div class="ts-block-property-details">
@@ -1631,20 +1659,7 @@ The type of navigation:
 <div class="ts-block-property">
 
 ```dts
-willUnload: boolean;
-```
-
-<div class="ts-block-property-details">
-
-Whether or not the navigation will result in the page being unloaded (i.e. not a client-side navigation)
-
-</div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-delta?: number;
+delta?: undefined;
 ```
 
 <div class="ts-block-property-details">
@@ -1657,13 +1672,12 @@ In case of a history back/forward navigation, the number of steps to go back/for
 <div class="ts-block-property">
 
 ```dts
-complete: Promise<void>;
+event?: undefined;
 ```
 
 <div class="ts-block-property-details">
 
-A promise that resolves once the navigation is complete, and rejects if the navigation
-fails or is aborted. In the case of a `willUnload` navigation, the promise will never resolve
+Dispatched `Event` object when navigation occured by `popstate` or `link`.
 
 </div>
 </div></div>
@@ -1728,6 +1742,201 @@ url: URL;
 <div class="ts-block-property-details">
 
 The URL of the current page
+
+</div>
+</div></div>
+
+## NavigationExternal
+
+<div class="ts-block">
+
+```dts
+interface NavigationExternal extends NavigationBase {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+type: Exclude<NavigationType, 'enter' | 'popstate' | 'link' | 'form'>;
+```
+
+<div class="ts-block-property-details">
+
+The type of navigation:
+- `form`: The user submitted a `<form method="GET">`
+- `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
+- `link`: Navigation was triggered by a link click
+- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
+- `popstate`: Navigation was triggered by back/forward navigation
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+delta?: undefined;
+```
+
+<div class="ts-block-property-details">
+
+In case of a history back/forward navigation, the number of steps to go back/forward
+
+</div>
+</div></div>
+
+## NavigationFormSubmit
+
+<div class="ts-block">
+
+```dts
+interface NavigationFormSubmit extends NavigationBase {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+type: 'form';
+```
+
+<div class="ts-block-property-details">
+
+The type of navigation:
+- `form`: The user submitted a `<form method="GET">`
+- `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
+- `link`: Navigation was triggered by a link click
+- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
+- `popstate`: Navigation was triggered by back/forward navigation
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+event: SubmitEvent;
+```
+
+<div class="ts-block-property-details">
+
+The `SubmitEvent` that caused the navigation
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+delta?: undefined;
+```
+
+<div class="ts-block-property-details">
+
+In case of a history back/forward navigation, the number of steps to go back/forward
+
+</div>
+</div></div>
+
+## NavigationLink
+
+<div class="ts-block">
+
+```dts
+interface NavigationLink extends NavigationBase {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+type: 'link';
+```
+
+<div class="ts-block-property-details">
+
+The type of navigation:
+- `form`: The user submitted a `<form method="GET">`
+- `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
+- `link`: Navigation was triggered by a link click
+- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
+- `popstate`: Navigation was triggered by back/forward navigation
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+event: PointerEvent;
+```
+
+<div class="ts-block-property-details">
+
+The `PointerEvent` that caused the navigation
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+delta?: undefined;
+```
+
+<div class="ts-block-property-details">
+
+In case of a history back/forward navigation, the number of steps to go back/forward
+
+</div>
+</div></div>
+
+## NavigationPopState
+
+<div class="ts-block">
+
+```dts
+interface NavigationPopState extends NavigationBase {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+type: 'popstate';
+```
+
+<div class="ts-block-property-details">
+
+The type of navigation:
+- `form`: The user submitted a `<form method="GET">`
+- `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
+- `link`: Navigation was triggered by a link click
+- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
+- `popstate`: Navigation was triggered by back/forward navigation
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+delta: number;
+```
+
+<div class="ts-block-property-details">
+
+In case of a history back/forward navigation, the number of steps to go back/forward
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+event: PopStateEvent;
+```
+
+<div class="ts-block-property-details">
+
+The `PopStateEvent` that caused the navigation
 
 </div>
 </div></div>
@@ -1842,38 +2051,23 @@ The argument passed to [`onNavigate`](/docs/kit/$app-navigation#onNavigate) call
 <div class="ts-block">
 
 ```dts
-interface OnNavigate extends Navigation {/*…*/}
+type OnNavigate = Navigation & {
+	/**
+	 * The type of navigation:
+	 * - `form`: The user submitted a `<form method="GET">`
+	 * - `link`: Navigation was triggered by a link click
+	 * - `goto`: Navigation was triggered by a `goto(...)` call or a redirect
+	 * - `popstate`: Navigation was triggered by back/forward navigation
+	 */
+	type: Exclude<NavigationType, 'enter' | 'leave'>;
+	/**
+	 * Since `onNavigate` callbacks are called immediately before a client-side navigation, they will never be called with a navigation that unloads the page.
+	 */
+	willUnload: false;
+};
 ```
 
-<div class="ts-block-property">
-
-```dts
-type: Exclude<NavigationType, 'enter' | 'leave'>;
-```
-
-<div class="ts-block-property-details">
-
-The type of navigation:
-- `form`: The user submitted a `<form method="GET">`
-- `link`: Navigation was triggered by a link click
-- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
-- `popstate`: Navigation was triggered by back/forward navigation
-
 </div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-willUnload: false;
-```
-
-<div class="ts-block-property-details">
-
-Since `onNavigate` callbacks are called immediately before a client-side navigation, they will never be called with a navigation that unloads the page.
-
-</div>
-</div></div>
 
 ## Page
 
