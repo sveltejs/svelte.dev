@@ -182,7 +182,7 @@
 				<input
 					value={workspace.svelte_version}
 					placeholder="latest"
-					onchange={(ev) => (workspace.svelte_version = ev.currentTarget.value || 'latest')}
+					onchange={(ev) => workspace.set_svelte_version(ev.currentTarget.value || 'latest', true)}
 				/>
 			</label>
 
