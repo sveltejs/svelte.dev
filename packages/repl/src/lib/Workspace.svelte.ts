@@ -506,7 +506,7 @@ export class Workspace {
 		return this.#svelte_version;
 	}
 
-	set_svelte_version(value, notify = false) {
+	set_svelte_version(value: string, notify = false) {
 		this.#svelte_version = value;
 		if (notify) {
 			this.#update_file(this.#current);
