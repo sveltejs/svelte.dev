@@ -407,12 +407,12 @@ export class Workspace {
 		selected?: string
 	) {
 		this.states.clear();
+		this.#tailwind = options.tailwind;
+		this.#aliases = options.aliases;
+
 		const bundle = this.set(new_files, selected);
 
 		this.mark_saved();
-
-		this.#tailwind = options.tailwind;
-		this.#aliases = options.aliases;
 
 		const diagnostics = this.#reset_diagnostics();
 
