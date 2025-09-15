@@ -443,8 +443,7 @@ async function get_bundle(
 			glsl,
 			loop_protect,
 			replace({
-				'process.env.NODE_ENV': JSON.stringify('production'),
-				'import.meta.env.MODE': JSON.stringify('development'),
+				'process.env.NODE_ENV': JSON.stringify('production')
 			}),
 			{
 				name: 'css',

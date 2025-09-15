@@ -200,7 +200,7 @@ export function resolve_subpath(pkg: Package, subpath: string): string {
 
 export function normalize_path(pkg: Package, path: string, importee: string, importer: string) {
 	for (const suffix of ['', '.js', '.mjs', '.cjs', '/index.js', '/index.mjs', '/index.cjs']) {
-		let with_suffix = (path + suffix).replace(/\/+/g, '/');
+		let with_suffix = path + suffix;
 
 		if (pkg.meta.browser) {
 			with_suffix = pkg.meta.browser[`./${with_suffix}`]?.replace('./', '') ?? with_suffix;
