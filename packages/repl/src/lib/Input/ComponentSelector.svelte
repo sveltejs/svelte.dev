@@ -3,8 +3,6 @@
 	import type { Workspace, File } from '../Workspace.svelte';
 	import { tick } from 'svelte';
 	import { Checkbox, Toolbox } from '@sveltejs/site-kit/components';
-	import { page } from '$app/state';
-	import { SvelteURL, SvelteURLSearchParams } from 'svelte/reactivity';
 
 	interface Props {
 		runes: boolean;
@@ -193,11 +191,13 @@
 			{/if}
 
 			<button
+				class="copy-button"
+				title="Copy to clipboard"
+				aria-label="Copy to clipboard"
 				onclick={() => {
 					navigator.clipboard.writeText(
 						`npx sv create --from-playground="${window.location.href}"`
 					);
-					alert('Copied to clipboard! You can now paste it into your terminal.');
 				}}
 			>
 				Copy <code>sv create --from-playground</code>
@@ -372,5 +372,45 @@
 		stroke-linecap: round;
 		stroke-linejoin: round;
 		fill: none;
+	}
+
+	.copy-button {
+		position: relative;
+		height: 3.6rem;
+		margin-right: 2rem;
+
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			right: 1.1rem;
+			top: 1.1rem;
+			background: currentColor;
+			mask: no-repeat 100% 0% / 1.6rem 1.6rem;
+			transition: opacity 0.2s;
+			transition-delay: 0.6s;
+		}
+
+		&::before {
+			mask-image: url(icons/copy-to-clipboard);
+		}
+
+		&::after {
+			mask-image: url(icons/check);
+			opacity: 0;
+		}
+
+		&:active::before {
+			opacity: 0;
+			transition: none;
+		}
+
+		&:active::after {
+			opacity: 1;
+			transition: none;
+		}
 	}
 </style>
