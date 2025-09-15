@@ -199,7 +199,10 @@ export function resolve_subpath(pkg: Package, subpath: string): string {
 }
 
 export function normalize_path(pkg: Package, path: string, importee: string, importer: string) {
-	for (const suffix of ['', '.js', '.mjs', '.cjs', '/index.js', '/index.mjs', '/index.cjs']) {
+	const suffixes = path.endsWith('/')
+		? ['index.js', 'index.mjs', 'index.cjs']
+		: ['', '.js', '.mjs', '.cjs', '/index.js', '/index.mjs', '/index.cjs'];
+	for (const suffix of suffixes) {
 		let with_suffix = (path + suffix).replace(/\/+/g, '/');
 
 		if (pkg.meta.browser) {
