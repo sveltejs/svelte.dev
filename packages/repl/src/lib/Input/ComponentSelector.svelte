@@ -3,6 +3,8 @@
 	import type { Workspace, File } from '../Workspace.svelte';
 	import { tick } from 'svelte';
 	import { Checkbox, Toolbox } from '@sveltejs/site-kit/components';
+	import { page } from '$app/state';
+	import { SvelteURL, SvelteURLSearchParams } from 'svelte/reactivity';
 
 	interface Props {
 		runes: boolean;
@@ -189,6 +191,17 @@
 			{#if download}
 				<button onclick={download}>Download app</button>
 			{/if}
+
+			<button
+				onclick={() => {
+					navigator.clipboard.writeText(
+						`npx sv create --from-playground="${window.location.href}"`
+					);
+					alert('Copied to clipboard! You can now paste it into your terminal.');
+				}}
+			>
+				Copy <code>sv create --from-playground</code>
+			</button>
 		</Toolbox>
 	</div>
 </div>
