@@ -203,7 +203,7 @@ export function normalize_path(pkg: Package, path: string, importee: string, imp
 		? ['index.js', 'index.mjs', 'index.cjs']
 		: ['', '.js', '.mjs', '.cjs', '/index.js', '/index.mjs', '/index.cjs'];
 	for (const suffix of suffixes) {
-		let with_suffix = (path + suffix).replace(/\/+/g, '/');
+		let with_suffix = path + suffix;
 
 		if (pkg.meta.browser) {
 			with_suffix = pkg.meta.browser[`./${with_suffix}`]?.replace('./', '') ?? with_suffix;
