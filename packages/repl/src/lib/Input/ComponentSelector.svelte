@@ -376,8 +376,6 @@
 
 	.copy-button {
 		position: relative;
-		height: 3.6rem;
-		margin-right: 2rem;
 
 		&::before,
 		&::after {
