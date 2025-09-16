@@ -200,7 +200,7 @@
 					);
 				}}
 			>
-				Copy <code>sv create --from-playground</code>
+				Set up locally
 			</button>
 		</Toolbox>
 	</div>
