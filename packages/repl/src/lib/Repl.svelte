@@ -127,8 +127,6 @@
 			...workspace.current!,
 			contents: migration!.code
 		});
-
-		rebundle();
 	}
 
 	let width = $state(0);
@@ -142,7 +140,7 @@
 		? new Bundler({
 				svelte_version: svelteVersion,
 				onversion: (version) => {
-					workspace.svelte_version = version;
+					workspace.set_svelte_version(version);
 					onversion?.(version);
 				},
 				onstatus: (message) => {
