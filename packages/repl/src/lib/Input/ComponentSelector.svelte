@@ -192,15 +192,15 @@
 
 			<button
 				class="copy-button"
-				title="Copy to clipboard"
-				aria-label="Copy to clipboard"
+				title="Copy `npx sv create --from-playground=&quot;...&quot;` to clipboard"
+				aria-label="Copy `npx sv create --from-playground=&quot;...&quot;` to clipboard"
 				onclick={() => {
 					navigator.clipboard.writeText(
 						`npx sv create --from-playground="${window.location.href}"`
 					);
 				}}
 			>
-				Copy <code>sv create --from-playground</code>
+				Set up locally
 			</button>
 		</Toolbox>
 	</div>
@@ -376,8 +376,6 @@
 
 	.copy-button {
 		position: relative;
-		height: 3.6rem;
-		margin-right: 2rem;
 
 		&::before,
 		&::after {
@@ -386,10 +384,10 @@
 			position: absolute;
 			width: 100%;
 			height: 100%;
-			right: 1.1rem;
-			top: 1.1rem;
+			right: 0;
+			top: 0;
 			background: currentColor;
-			mask: no-repeat 100% 0% / 1.6rem 1.6rem;
+			mask: no-repeat calc(100% - 1rem) 50% / 1.6rem 1.6rem;
 			transition: opacity 0.2s;
 			transition-delay: 0.6s;
 		}
