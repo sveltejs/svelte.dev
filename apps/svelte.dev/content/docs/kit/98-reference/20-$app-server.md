@@ -81,9 +81,39 @@ See [Remote functions](/docs/kit/remote-functions#form) for full documentation.
 <div class="ts-block">
 
 ```dts
-function form<T>(
-	fn: (data: FormData) => MaybePromise<T>
-): RemoteForm<T>;
+function form<Output>(
+	fn: () => Output
+): RemoteForm<void, Output>;
+```
+
+</div>
+
+<div class="ts-block">
+
+```dts
+function form<Input extends RemoteFormInput, Output>(
+	validate: 'unchecked',
+	fn: (data: Input) => MaybePromise<Output>
+): RemoteForm<Input, Output>;
+```
+
+</div>
+
+<div class="ts-block">
+
+```dts
+function form<
+	Schema extends StandardSchemaV1<
+		RemoteFormInput,
+		Record<string, any>
+	>,
+	Output
+>(
+	validate: Schema,
+	fn: (
+		data: StandardSchemaV1.InferOutput<Schema>
+	) => MaybePromise<Output>
+): RemoteForm<StandardSchemaV1.InferInput<Schema>, Output>;
 ```
 
 </div>
