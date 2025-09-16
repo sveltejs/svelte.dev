@@ -384,10 +384,10 @@
 			position: absolute;
 			width: 100%;
 			height: 100%;
-			right: 1.1rem;
-			top: 1.1rem;
+			right: 0;
+			top: 0;
 			background: currentColor;
-			mask: no-repeat 100% 0% / 1.6rem 1.6rem;
+			mask: no-repeat calc(100% - 1rem) 50% / 1.6rem 1.6rem;
 			transition: opacity 0.2s;
 			transition-delay: 0.6s;
 		}
