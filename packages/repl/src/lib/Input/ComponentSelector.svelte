@@ -192,8 +192,8 @@
 
 			<button
 				class="copy-button"
-				title="Copy to clipboard"
-				aria-label="Copy to clipboard"
+				title="Copy `npx sv create --from-playground=&quot;...&quot;` to clipboard"
+				aria-label="Copy `npx sv create --from-playground=&quot;...&quot;` to clipboard"
 				onclick={() => {
 					navigator.clipboard.writeText(
 						`npx sv create --from-playground="${window.location.href}"`
