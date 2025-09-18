@@ -9,4 +9,5 @@ const env = {
 
 fork(`${dir}/get_contributors.js`, { env });
 fork(`${dir}/get_donors.js`, { env });
+fork(`${dir}/get_svelte_tailwind_template.js`, { env });
 fork(`${dir}/get_svelte_template.js`, { env });
