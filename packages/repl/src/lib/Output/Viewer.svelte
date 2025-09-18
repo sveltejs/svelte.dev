@@ -56,6 +56,7 @@
 	let last_console_event: Log;
 
 	let iframe = $state.raw<HTMLIFrameElement>();
+	let iframe_key = $state(1);
 	let pending_imports = $state(0);
 	let pending = false;
 
@@ -105,14 +106,17 @@
 			}
 		});
 
+		return () => {
+			proxy?.destroy();
+		};
+	});
+
+	$effect(() => {
+		proxy.iframe = iframe;
 		iframe!.addEventListener('load', () => {
 			proxy?.handle_links();
 			ready = true;
 		});
-
-		return () => {
-			proxy?.destroy();
-		};
 	});
 
 	$effect(() => {
@@ -290,7 +294,9 @@
 	});
 
 	export const reset = () => {
-		if (ready) apply_bundle(bundle);
+		if (!ready || !bundle || bundle.error || error || status) return;
+		ready = false;
+		iframe_key += 1;
 	};
 
 	$effect(() => {
@@ -355,25 +361,35 @@
 		current_log_group = logs = [];
 		onLog?.(logs);
 	}
+
+	function no_blink(_params: object) {
+		return {
+			duration: 50,
+			css: () => `position: absolute; top: 0; left: 0;`
+		};
+	}
 </script>
 
 {#snippet main()}
-	<iframe
-		title="Result"
-		class:inited
-		bind:this={iframe}
-		sandbox={[
-			'allow-scripts',
-			'allow-popups',
-			'allow-forms',
-			'allow-pointer-lock',
-			'allow-modals',
-			can_escape ? 'allow-popups-to-escape-sandbox' : '',
-			relaxed ? 'allow-same-origin' : ''
-		].join(' ')}
-		class={error || pending || pending_imports ? 'greyed-out' : ''}
-		srcdoc={BROWSER ? srcdoc : ''}
-	></iframe>
+	{#key iframe_key}
+		<iframe
+			title="Result"
+			class:inited
+			bind:this={iframe}
+			sandbox={[
+				'allow-scripts',
+				'allow-popups',
+				'allow-forms',
+				'allow-pointer-lock',
+				'allow-modals',
+				can_escape ? 'allow-popups-to-escape-sandbox' : '',
+				relaxed ? 'allow-same-origin' : ''
+			].join(' ')}
+			class={error || pending || pending_imports ? 'greyed-out' : ''}
+			srcdoc={BROWSER ? srcdoc : ''}
+			out:no_blink
+		></iframe>
+	{/key}
 
 	<div class="overlay">
 		{#if bundle?.error}
