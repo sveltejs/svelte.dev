@@ -66,6 +66,8 @@
 
 	let current = $derived(workspace.current_compiled);
 
+	let resultTab: Viewer;
+
 	// TODO this effect is a bit of a code smell
 	$effect(() => {
 		if (current?.error) {
@@ -189,6 +191,15 @@
 			<button class="active">Markdown</button>
 		{:else}
 			<button aria-current={view === 'result'} onclick={() => (view = 'result')}>Result</button>
+			<button
+				aria-current={view === 'result'}
+				aria-label="Reset result"
+				class="reset-result"
+				onclick={() => {
+					view = 'result';
+					resultTab.reset();
+				}}><span class="icon"></span></button
+			>
 			<button aria-current={view === 'js'} onclick={() => (view = 'js')}>JS output</button>
 			<button aria-current={view === 'css'} onclick={() => (view = 'css')}>CSS output</button>
 			<button aria-current={view === 'ast'} onclick={() => (view = 'ast')}>AST output</button>
@@ -199,6 +210,7 @@
 <!-- component viewer -->
 <div class="tab-content" class:visible={!is_markdown && view === 'result'}>
 	<Viewer
+		bind:this={resultTab}
 		bind:error={runtimeError}
 		{status}
 		{relaxed}
@@ -277,6 +289,18 @@
 
 		&[aria-current='true'] {
 			border-bottom: 1px solid var(--sk-fg-accent);
+		}
+
+		&.reset-result {
+			height: 100%;
+			vertical-align: bottom;
+			margin-left: -1em;
+			cursor: pointer;
+
+			.icon {
+				background: currentColor;
+				mask: url(icons/refresh) 50% / 1.2em no-repeat;
+			}
 		}
 	}
 
