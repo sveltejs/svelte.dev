@@ -112,7 +112,7 @@
 	});
 
 	$effect(() => {
-		proxy!.iframe = iframe;
+		proxy!.iframe = iframe!;
 		iframe!.addEventListener('load', () => {
 			proxy?.handle_links();
 			ready = true;
