@@ -13,7 +13,12 @@ const SV_ADD = {
 		'tailwindcss',
 		'vite-plugin-devtools-json',
 		'vitest'
-	]
+	],
+	alias: {
+		'@inlang/paraglide-js': 'paraglidejs',
+		'drizzle-orm': 'drizzle',
+		'vite-plugin-devtools-json': 'devtools-json'
+	}
 };
 
 const FEATURED: { title: string; packages: string[]; weights?: Record<string, number> }[] = [
