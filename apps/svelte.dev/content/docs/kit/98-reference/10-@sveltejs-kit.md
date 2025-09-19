@@ -2331,20 +2331,6 @@ type RemoteForm<
 	for(
 		key: string | number | boolean
 	): Omit<RemoteForm<Input, Output>, 'for'>;
-	/**
-	 * This method exists to allow you to typecheck `name` attributes. It returns its argument
-	 * @example
-	 * ```svelte
-	 * <input name={login.field('username')} />
-	 * ```
-	 **/
-	field<
-		Name extends keyof UnionToIntersection<
-			FlattenKeys<Input, ''>
-		>
-	>(
-		string: Name
-	): Name;
 	/** Preflight checks */
 	preflight(
 		schema: StandardSchemaV1<Input, any>
@@ -2357,14 +2343,13 @@ type RemoteForm<
 	get result(): Output | undefined;
 	/** The number of pending submissions */
 	get pending(): number;
-	/** The submitted values */
-	input: null | UnionToIntersection<
-		FlattenInput<Input, ''>
-	>;
-	/** Validation issues */
-	issues: null | UnionToIntersection<
-		FlattenIssues<Input, ''>
-	>;
+	/** Access form fields using object notation */
+	fields: Input extends void
+		? never
+		: { [K in keyof Input]-?: FormFields<Input[K]> } & Pick<
+				FormField<Input, false>,
+				'value' | 'issues'
+			>;
 	/** Spread this onto a `<button>` or `<input type="submit">` */
 	buttonProps: {
 		type: 'submit';
