@@ -11,6 +11,7 @@ const SV_ADD = {
 		'prettier',
 		'storybook',
 		'tailwindcss',
+		'vite-plugin-devtools-json',
 		'vitest'
 	]
 };
