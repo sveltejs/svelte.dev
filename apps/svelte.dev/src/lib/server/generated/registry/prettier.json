@@ -1,0 +1,27 @@
+{
+	"name": "prettier",
+	"description": "Formats code with opinionated style.",
+	"repo_url": "https://github.com/prettier/prettier",
+	"authors": [
+		"jlongster",
+		"lydell",
+		"thorn0",
+		"vjeux",
+		"fisker",
+		"suchipi",
+		"duailibe",
+		"ikatyang",
+		"azz",
+		"sosukesuzuki",
+		"prettier-bot"
+	],
+	"homepage": "https://prettier.io",
+	"downloads": 49716466,
+	"updated": "2025-03-03T01:18:57.493Z",
+	"tags": ["tooling"],
+	"runes": false,
+	"github_stars": 50258,
+	"typescript": true,
+	"version": "3.5.3",
+	"last_rune_check_version": "3.5.3"
+}
