@@ -1,60 +1,5 @@
 import type { Package } from '$lib/server/content';
 
-const TAGS = {
-	'design-system': {
-		prompt:
-			'MUST contain 2+ reusable Svelte components designed as a cohesive set with shared design principles. Examples: complete UI kits, design systems, form libraries, widget collections, component libraries. Key indicator: components are intentionally built to work together, share styling patterns, and serve a unified purpose. NOT a single component or unrelated components bundled together.'
-	},
-	ui: {
-		prompt:
-			'Individual visual Svelte components or styling tools focused on appearance. Examples: standalone UI elements (buttons, modals, dropdowns), animation libraries, transition effects, tooltips. Key indicator: primary purpose is enhancing visual presentation. NOT state management tools or multi-component systems that would qualify as design systems.'
-	},
-	router: {
-		prompt:
-			'Manages navigation and URL handling in Svelte apps. Examples: client-side routers, path matching utilities, navigation guards, route parameter parsers. Key indicator: primary purpose is handling application navigation flow and URL state. NOT page transition animations (ui tag) or general application state management.'
-	},
-	content: {
-		prompt:
-			'Tools for creating, processing, and rendering structured content in Svelte. Examples: Markdown/MDX processors, CMS connectors, blog frameworks, documentation generators. Key indicator: focused on content authoring, organization, or display. NOT general data fetching (server tag) or UI components (ui tag) unless specifically content-oriented.'
-	},
-	media: {
-		prompt:
-			'Tools specifically for handling images, video, audio or file assets in Svelte. Examples: media players, image galleries, file uploaders, lazy-loading media components. Key indicator: primarily works with media files or streams. NOT general UI components or data fetching utilities unless media-specific.'
-	},
-	server: {
-		prompt:
-			'Tools for server-side operations and client-server communication in Svelte. Examples: SSR utilities, API clients, data fetching libraries, server action wrappers. Key indicator: facilitates interaction between frontend and backend. NOT client-side state management or deployment tools (adapter tag).'
-	},
-	adapter: {
-		prompt:
-			'SvelteKit-specific deployment adapters or hosting integration tools. Examples: platform adapters (Vercel, Netlify, etc.), serverless deployment helpers, hosting configuration utilities. Key indicator: primary purpose is facilitating deployment to specific environments. NOT general server utilities or build tools.'
-	},
-	tooling: {
-		prompt:
-			'Development tools for Svelte that operate outside runtime code. Examples: build plugins, code generators, debugging utilities, CLI tools, linters. Key indicator: used during development process but not part of runtime application code. NOT runtime libraries, components, or server integrations.'
-	},
-	seo: {
-		prompt:
-			'Tools for improving search engine optimization in Svelte applications. Examples: meta tag managers, structured data generators, sitemap creators, link analyzers. Key indicator: primarily concerned with search engine visibility. NOT general head management or routing unless specifically SEO-focused.'
-	},
-	auth: {
-		prompt:
-			'User authentication and authorization solutions for Svelte. Examples: login systems, OAuth implementations, JWT handlers, permission managers. Key indicator: primarily concerned with user identity and access control. NOT general API clients or state management unless specifically auth-focused.'
-	},
-	integration: {
-		prompt:
-			'Connectors between Svelte and external services or systems. Examples: database clients, third-party API wrappers, payment processor integrations. Key indicator: primary purpose is connecting Svelte apps with external platforms. NOT general UI components or utilities unless they specifically bridge to external services.'
-	},
-	testing: {
-		prompt:
-			"Specialized testing tools designed for Svelte applications. Examples: component testing libraries, Svelte-aware test runners, store mocking utilities. Key indicator: explicitly built for testing Svelte code with awareness of Svelte's features. NOT general JavaScript testing tools that aren't Svelte-specific."
-	},
-	miscellaneous: {
-		prompt:
-			"Svelte utilities, helpers, and tools that don't fit cleanly into other categories. Examples: state management solutions, custom stores, actions, directives, form validation, performance optimizers, DOM manipulation utilities, scroll utilities, focus managers. Key indicator: provides functionality that enhances Svelte development but doesn't align with existing categories."
-	}
-} satisfies Record<string, { prompt: string }>;
-
 const SV_ADD = {
 	packages: [
 		'drizzle-orm',
@@ -67,11 +12,7 @@ const SV_ADD = {
 		'storybook',
 		'tailwindcss',
 		'vitest'
-	],
-	alias: {
-		'@inlang/paraglide-js': 'paraglidejs',
-		'drizzle-orm': 'drizzle'
-	}
+	]
 };
 
 const FEATURED: { title: string; packages: string[]; weights?: Record<string, number> }[] = [
@@ -260,26 +201,6 @@ const FEATURED: { title: string; packages: string[]; weights?: Record<string, nu
 	}
 ];
 
-const OVERRIDES = new Map<string | RegExp, boolean | number | Partial<Package>>([
-	['vaul-svelte', true],
-	['@formkit/auto-animate', -10],
-	['lucide-svelte', -5],
-	['sveltekit-flash-message', true],
-	['sveltekit-rate-limiter', true],
-	['@astrojs/starlight', true],
-	['playwright', true],
-	['vitest', true],
-	['@inlang/paraglide-js', true],
-	['phosphor-svelte', true],
-	['@iconify/tailwind4', true],
-	['@unocss/preset-icons', true],
-	['drizzle-orm', true],
-	['prettier', true],
-	['storybook', true],
-	['tailwindcss', true]
-	// [/@smui\//, true] TODO: This kind of pattern complicates things, not supported yet. Instead focusing on getting smui to add svelte to their deps/peerDeps
-]);
-
 const OFFICIAL = [
 	/^@sveltejs\//,
 	'prettier-plugin-svelte',
@@ -304,8 +225,6 @@ function is_official(pkg: string): boolean {
 }
 
 export const PACKAGES_META = {
-	TAGS,
-	OVERRIDES,
 	is_official,
 	FEATURED,
 	SV_ADD
