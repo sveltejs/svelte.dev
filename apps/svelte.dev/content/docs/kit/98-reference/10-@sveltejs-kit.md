@@ -1537,6 +1537,22 @@ The span associated with the current `load` function.
 </div></div>
 
 </div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+server?: Omit<
+	ServerLoadEvent<Params, ParentData, RouteId>,
+	keyof LoadEvent<Params, Data, ParentData, RouteId>
+>;
+```
+
+<div class="ts-block-property-details">
+
+Server only properties when `LoadEvent` executed on server.
+
+</div>
 </div></div>
 
 ## LoadProperties
