@@ -7,8 +7,14 @@ const arrToPackages = (arr: string[]) => {
 	return arr
 		.map((name) => {
 			const pkg = registry.find((pkg) => pkg.name === name) ?? null;
-			if (pkg)
-				pkg.svCmd = PACKAGES_META.SV_ADD_CMD[pkg.name as keyof typeof PACKAGES_META.SV_ADD_CMD];
+			if (pkg) {
+				pkg.main_url = pkg.homepage;
+				const cmd = PACKAGES_META.SV_ADD_CMD[pkg.name];
+				if (cmd) {
+					pkg.svCmd = `npx sv add ${cmd.alias}${cmd.options ? `=${cmd.options}` : ''}`;
+					pkg.main_url = `/docs/cli/${cmd.alias}`;
+				}
+			}
 
 			return pkg;
 		})
@@ -18,7 +24,7 @@ const arrToPackages = (arr: string[]) => {
 // Netflix style page. Send pre-done cards with categories
 const homepage_data: { title: string; packages: Package[] }[] = [
 	{
-		title: 'sv add',
+		title: 'sv add-ons',
 		packages: arrToPackages(PACKAGES_META.SV_ADD.packages)
 	}
 ];

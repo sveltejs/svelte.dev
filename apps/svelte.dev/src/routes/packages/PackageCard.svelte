@@ -24,9 +24,9 @@
 			</h3>
 		{/snippet}
 
-		{#if pkg.homepage}
+		{#if pkg.main_url}
 			<a
-				href={pkg.homepage}
+				href={pkg.main_url}
 				target="_blank"
 				rel="noreferrer"
 				aria-label="View project homepage"

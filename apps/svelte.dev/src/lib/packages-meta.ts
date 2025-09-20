@@ -16,24 +16,24 @@ const SV_ADD = {
 	]
 };
 
-const SV_ADD_CMD = {
-	prettier: 'npx sv add prettier',
-	eslint: 'npx sv add eslint',
-	vitest: 'npx sv add vitest',
-	playwright: 'npx sv add playwright',
-	tailwindcss: 'npx sv add tailwindcss',
-	'vite-plugin-devtools-json': 'npx sv add devtools-json',
-	'drizzle-orm': 'npx sv add drizzle',
-	lucia: 'npx sv add lucia',
-	mdsvex: 'npx sv add mdsvex',
-	'@inlang/paraglide-js': 'npx sv add paraglide',
-	storybook: 'npx sv add storybook',
+const SV_ADD_CMD: Record<string, { alias: string; options?: string }> = {
+	prettier: { alias: 'prettier' },
+	eslint: { alias: 'eslint' },
+	vitest: { alias: 'vitest' },
+	playwright: { alias: 'playwright' },
+	tailwindcss: { alias: 'tailwindcss' },
+	'vite-plugin-devtools-json': { alias: 'devtools-json' },
+	'drizzle-orm': { alias: 'drizzle' },
+	lucia: { alias: 'lucia' },
+	mdsvex: { alias: 'mdsvex' },
+	'@inlang/paraglide-js': { alias: 'paraglide' },
+	storybook: { alias: 'storybook' },
 
-	'@sveltejs/adapter-node': 'npx sv add sveltekit-adapter=adapter:node',
-	'@sveltejs/adapter-vercel': 'npx sv add sveltekit-adapter=adapter:vercel',
-	'@sveltejs/adapter-auto': 'npx sv add sveltekit-adapter=adapter:auto',
-	'@sveltejs/adapter-cloudflare': 'npx sv add sveltekit-adapter=adapter:cloudflare',
-	'@sveltejs/adapter-netlify': 'npx sv add sveltekit-adapter=adapter:netlify'
+	'@sveltejs/adapter-node': { alias: 'sveltekit-adapter', options: 'adapter:node' },
+	'@sveltejs/adapter-vercel': { alias: 'sveltekit-adapter', options: 'adapter:vercel' },
+	'@sveltejs/adapter-auto': { alias: 'sveltekit-adapter', options: 'adapter:auto' },
+	'@sveltejs/adapter-cloudflare': { alias: 'sveltekit-adapter', options: 'adapter:cloudflare' },
+	'@sveltejs/adapter-netlify': { alias: 'sveltekit-adapter', options: 'adapter:netlify' }
 };
 
 const FEATURED: { title: string; packages: string[]; weights?: Record<string, number> }[] = [
