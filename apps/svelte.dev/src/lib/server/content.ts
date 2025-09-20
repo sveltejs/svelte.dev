@@ -209,8 +209,8 @@ export interface Package {
 
 	typescript: boolean;
 
-	svCmd?: string;
-	main_url?: string;
+	svCmdAlias?: string;
+	svCmdOptions?: string;
 }
 
 /**

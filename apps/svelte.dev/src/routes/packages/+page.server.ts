@@ -8,11 +8,10 @@ const arrToPackages = (arr: string[]) => {
 		.map((name) => {
 			const pkg = registry.find((pkg) => pkg.name === name) ?? null;
 			if (pkg) {
-				pkg.main_url = pkg.homepage;
 				const cmd = PACKAGES_META.SV_ADD_CMD[pkg.name];
 				if (cmd) {
-					pkg.svCmd = `npx sv add ${cmd.alias}${cmd.options ? `=${cmd.options}` : ''}`;
-					pkg.main_url = `/docs/cli/${cmd.alias}`;
+					pkg.svCmdAlias = cmd.alias;
+					pkg.svCmdOptions = cmd.options;
 				}
 			}
 

@@ -24,9 +24,9 @@
 			</h3>
 		{/snippet}
 
-		{#if pkg.main_url}
+		{#if pkg.homepage}
 			<a
-				href={pkg.main_url}
+				href={pkg.homepage}
 				target="_blank"
 				rel="noreferrer"
 				aria-label="View project homepage"
@@ -45,9 +45,16 @@
 
 	<p class="description">{pkg.description}</p>
 
-	{#if pkg.svCmd}
+	{#if pkg.svCmdAlias}
 		<span class="sv-cmd">
-			{pkg.svCmd}
+			npx sv add {pkg.svCmdAlias}{pkg.svCmdOptions ? `=${pkg.svCmdOptions}` : ''}
+			<a
+				href={`/docs/cli/${pkg.svCmdAlias}`}
+				target="_blank"
+				rel="noreferrer"
+				aria-label="View Svelte CLI docs"
+				data-icon="external-link"
+			></a>
 		</span>
 	{/if}
 	<p class="stats">
@@ -221,7 +228,10 @@
 		}
 
 		.sv-cmd {
-			display: inline-block;
+			display: inline-flex;
+			gap: 0.4rem;
+			align-items: center;
+			justify-content: space-between;
 			font: var(--sk-font-ui-small);
 			color: var(--sk-fg-3);
 			background: var(--sk-bg-3);
