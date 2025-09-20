@@ -208,6 +208,8 @@ export interface Package {
 	official?: boolean;
 
 	typescript: boolean;
+
+	svCmd?: string;
 }
 
 /**

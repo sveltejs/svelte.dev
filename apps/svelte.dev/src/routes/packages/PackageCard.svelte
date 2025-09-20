@@ -30,6 +30,12 @@
 
 	<p class="description">{pkg.description}</p>
 
+	{#if pkg.svCmd}
+		<div class="sv-cmd">
+			<span data-icon="svelte"></span>
+			<span>{pkg.svCmd}</span>
+		</div>
+	{/if}
 	<p class="stats">
 		{#if pkg.downloads}
 			<span title="{pkg.downloads} downloads">
@@ -198,6 +204,14 @@
 			overflow: hidden;
 			text-overflow: ellipsis;
 			max-height: 2lh;
+		}
+
+		.sv-cmd {
+			font: var(--sk-font-ui-small);
+			color: var(--sk-fg-3);
+			background: var(--sk-bg-3);
+			padding: 0.5rem;
+			display: inline-block;
 		}
 	}
 </style>

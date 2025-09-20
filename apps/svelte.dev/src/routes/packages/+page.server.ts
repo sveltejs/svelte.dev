@@ -1,24 +1,32 @@
-import { PACKAGES_META } from './packages-meta';
+import { PACKAGES_META } from '$lib/packages-meta';
 import { registry, type Package } from '$lib/server/content';
 
 export const prerender = false;
+
+const arrToPackages = (arr: string[]) => {
+	return arr
+		.map((name) => {
+			const pkg = registry.find((pkg) => pkg.name === name) ?? null;
+			if (pkg)
+				pkg.svCmd = PACKAGES_META.SV_ADD_CMD[pkg.name as keyof typeof PACKAGES_META.SV_ADD_CMD];
+
+			return pkg;
+		})
+		.filter((v) => Boolean(v)) as Package[];
+};
 
 // Netflix style page. Send pre-done cards with categories
 const homepage_data: { title: string; packages: Package[] }[] = [
 	{
 		title: 'sv add',
-		packages: PACKAGES_META.SV_ADD.packages
-			.map((name) => registry.find((pkg) => pkg.name === name) ?? null)
-			.filter((v) => Boolean(v)) as Package[]
+		packages: arrToPackages(PACKAGES_META.SV_ADD.packages)
 	}
 ];
 
 for (const { packages, title } of PACKAGES_META.FEATURED) {
 	homepage_data.push({
 		title,
-		packages: packages
-			.map((name) => registry.find((pkg) => pkg.name === name) ?? null)
-			.filter((v) => Boolean(v)) as Package[]
+		packages: arrToPackages(packages)
 	});
 }
 
