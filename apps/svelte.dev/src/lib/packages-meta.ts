@@ -1,3 +1,227 @@
+const SV_ADD = {
+	// Keeping the same order as in sv
+	// https://github.com/jycouet/cli/blob/main/packages/addons/_config/official.ts#L16-L17
+	packages: [
+		'prettier',
+		'eslint',
+		'vitest',
+		'playwright',
+		'tailwindcss',
+		'vite-plugin-devtools-json',
+		'drizzle-orm',
+		'lucia',
+		'mdsvex',
+		'@inlang/paraglide-js',
+		'storybook'
+	]
+};
+
+const SV_ADD_CMD = {
+	prettier: 'npx sv add prettier',
+	eslint: 'npx sv add eslint',
+	vitest: 'npx sv add vitest',
+	playwright: 'npx sv add playwright',
+	tailwindcss: 'npx sv add tailwindcss',
+	'vite-plugin-devtools-json': 'npx sv add devtools-json',
+	'drizzle-orm': 'npx sv add drizzle',
+	lucia: 'npx sv add lucia',
+	mdsvex: 'npx sv add mdsvex',
+	'@inlang/paraglide-js': 'npx sv add paraglide',
+	storybook: 'npx sv add storybook',
+
+	'@sveltejs/adapter-node': 'npx sv add sveltekit-adapter=adapter:node',
+	'@sveltejs/adapter-vercel': 'npx sv add sveltekit-adapter=adapter:vercel',
+	'@sveltejs/adapter-auto': 'npx sv add sveltekit-adapter=adapter:auto',
+	'@sveltejs/adapter-cloudflare': 'npx sv add sveltekit-adapter=adapter:cloudflare',
+	'@sveltejs/adapter-netlify': 'npx sv add sveltekit-adapter=adapter:netlify'
+};
+
+const FEATURED: { title: string; packages: string[]; weights?: Record<string, number> }[] = [
+	{
+		title: 'Component libraries',
+		packages: [
+			'shadcn-svelte',
+			'bits-ui',
+			'@melt-ui/svelte',
+			'@skeletonlabs/skeleton',
+			'@ark-ui/svelte',
+			'flowbite-svelte',
+			'svelte-material-ui',
+			'carbon-components-svelte',
+			'@sveltestrap/sveltestrap',
+			'daisyui'
+		],
+		weights: {
+			'shadcn-svelte': 2
+		}
+	},
+	{
+		title: 'Individual components',
+		packages: [
+			'@tanstack/svelte-table',
+			'@ai-sdk/svelte',
+			'svelte-moveable',
+			'@tanstack/svelte-virtual',
+			'virtua',
+			'@event-calendar/core',
+			'svelte-chartjs'
+		]
+	},
+	{
+		title: 'SvelteKit adapters',
+		packages: [
+			'@sveltejs/adapter-node',
+			'@sveltejs/adapter-vercel',
+			'@sveltejs/adapter-auto',
+			'@sveltejs/adapter-cloudflare',
+			'@sveltejs/adapter-netlify',
+			'svelte-kit-sst',
+			'svelte-adapter-bun',
+			'@slicemachine/adapter-sveltekit',
+			'amplify-adapter',
+			'svelte-adapter-deno',
+			'svelte-adapter-appengine',
+			'sveltekit-adapter-browser-extension',
+			'svelte-adapter-azure-swa'
+		]
+	},
+	{
+		title: 'Icons',
+		packages: [
+			'@iconify/tailwind4',
+			'@unocss/preset-icons',
+			'lucide-svelte',
+			'svelte-awesome',
+			'phosphor-svelte'
+		]
+	},
+	{
+		title: 'Router',
+		packages: [
+			'@sveltejs/kit',
+			'svelte-routing',
+			'svelte-micro',
+			'@roxi/routify',
+			'svelte-qparam',
+			'@easyroute/svelte',
+			'svelte5-router',
+			'svelte-guard',
+			'svelte-guard-history-router',
+			'svelte-pathfinder',
+			'elegua'
+		]
+	},
+	{
+		title: 'Data Visualization',
+		packages: ['layercake', 'layerchart', 'svelte-maplibre', '@xyflow/svelte', 'svelte-maplibre-gl']
+	},
+	{
+		title: '3D Rendering',
+		packages: ['@threlte/core', 'svelte-zdog']
+	},
+	{
+		title: 'Animations',
+		packages: [
+			'@neoconfetti/svelte',
+			'svelte-motion',
+			'@lottiefiles/svelte-lottie-player',
+			'@tsparticles/svelte'
+		]
+	},
+	{
+		title: 'Content',
+		packages: [
+			'mdsvex',
+			'svelte-markdown',
+			'@content-collections/core',
+			'carta-md',
+			'typewriter-editor',
+			'@svelte-put/toc',
+			'@prismicio/svelte',
+			'@svelteness/kit-docs',
+			'@evidence-dev/evidence',
+			'@magidoc/plugin-svelte-marked',
+			'svelte-exmarkdown',
+			'svelte-pdf'
+		]
+	},
+	{
+		title: 'Bundler plugins',
+		packages: [
+			'@sveltejs/vite-plugin-svelte',
+			'rollup-plugin-svelte',
+			'svelte-loader',
+			'esbuild-svelte'
+		]
+	},
+	{
+		title: 'Media',
+		packages: [
+			'@sveltejs/enhanced-img',
+			'@vime/svelte',
+			'@uppy/svelte',
+			'@unpic/svelte',
+			'unlazy-svelte',
+			'scrolly-video',
+			'@zerodevx/svelte-img',
+			'svelte-easy-crop'
+		]
+	},
+	{
+		title: 'Data fetching',
+		packages: [
+			'@urql/svelte',
+			'trpc-sveltekit',
+			'sswr',
+			'@tanstack/svelte-query',
+			'@orpc/svelte-query',
+			'houdini'
+		]
+	},
+	{
+		title: 'SEO',
+		packages: ['svelte-meta-tags', '@sveltejs/amp', 'svelte-seo', 'super-sitemap', 'svead']
+	},
+	{
+		title: 'Auth',
+		packages: [
+			'lucia',
+			'@auth/sveltekit',
+			'altcha',
+			'svelte-session-manager',
+			'clerk-sveltekit',
+			'svelte-kit-sessions',
+			'@supabase/auth-helpers-sveltekit',
+			'@passlock/sveltekit'
+		]
+	},
+	{
+		title: 'Third party services',
+		packages: [
+			'@sentry/svelte',
+			'@sentry/sveltekit',
+			'svelte-stripe',
+			'clerk-sveltekit',
+			'@storyblok/svelte',
+			'@inlang/paraglide-js'
+		]
+	},
+	// {
+	// 	title: 'Testing',
+	// 	packages: [
+	// 		'@testing-library/svelte',
+	// 		'svelte-jester',
+	// 		'@cypress/svelte',
+	// 		'playwright',
+	// 		'vitest'
+	// 	]
+	// },
+	{
+		title: 'Forms',
+		packages: ['sveltekit-superforms', '@tanstack/svelte-form', 'formsnap', 'felte']
+	}
+];
+
 const OFFICIAL = [
 	/^@sveltejs\//,
 	'prettier-plugin-svelte',
@@ -22,5 +246,8 @@ function is_official(pkg: string): boolean {
 }
 
 export const PACKAGES_META = {
-	is_official
+	is_official,
+	FEATURED,
+	SV_ADD,
+	SV_ADD_CMD
 };
