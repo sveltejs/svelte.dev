@@ -42,6 +42,10 @@ const nav_links: NavigationLink[] = [
 		}))
 	},
 	{
+		title: 'Packages',
+		slug: 'packages'
+	},
+	{
 		title: 'Playground',
 		slug: 'playground'
 	},
