@@ -46,10 +46,9 @@
 	<p class="description">{pkg.description}</p>
 
 	{#if pkg.svCmd}
-		<div class="sv-cmd">
-			<span data-icon="svelte"></span>
-			<span>{pkg.svCmd}</span>
-		</div>
+		<span class="sv-cmd">
+			{pkg.svCmd}
+		</span>
 	{/if}
 	<p class="stats">
 		{#if pkg.downloads}
@@ -222,11 +221,12 @@
 		}
 
 		.sv-cmd {
+			display: inline-block;
 			font: var(--sk-font-ui-small);
 			color: var(--sk-fg-3);
 			background: var(--sk-bg-3);
-			padding: 0.5rem;
-			display: inline-block;
+			padding: 0.3rem 0.7rem;
+			border-left: 0.3rem solid var(--sk-bg-accent);
 		}
 	}
 </style>
