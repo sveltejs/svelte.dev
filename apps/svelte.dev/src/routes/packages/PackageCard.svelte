@@ -12,16 +12,31 @@
 
 <article data-pubdate={pkg.updated}>
 	<header>
-		<h3>
-			{#if pkg.official}
-				<!-- TODO use svelte logo -->
-				<span data-icon="svelte"></span>
-				<!-- <span class="pill official">official</span> -->
-			{/if}
+		{#snippet title()}
+			<h3>
+				{#if pkg.official}
+					<!-- TODO use svelte logo -->
+					<span data-icon="svelte"></span>
+					<!-- <span class="pill official">official</span> -->
+				{/if}
 
-			<span>{pkg.name}</span>
-		</h3>
+				<span>{pkg.name}</span>
+			</h3>
+		{/snippet}
 
+		{#if pkg.homepage}
+			<a
+				href={pkg.homepage}
+				target="_blank"
+				rel="noreferrer"
+				aria-label="View project homepage"
+				onclick={(e) => e.stopPropagation()}
+			>
+				{@render title()}
+			</a>
+		{:else}
+			{@render title()}
+		{/if}
 		<span class="updated">
 			{pkg.version}
 			<strong title={pkg.updated}>{ago(new Date(pkg.updated), true)}</strong>
@@ -94,7 +109,7 @@
 		align-items: center;
 		margin-bottom: 1rem;
 		justify-content: space-between;
-		gap: 2rem;
+		gap: 1.5rem;
 
 		.updated {
 			display: flex;
