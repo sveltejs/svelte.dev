@@ -8,6 +8,7 @@
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import { inject } from '@vercel/analytics';
 	import { beforeNavigate } from '$app/navigation';
+	import { get_banner, get_nav_links } from './data.remote.js';
 
 	injectSpeedInsights();
 	inject({ mode: dev ? 'development' : 'production' });
@@ -36,6 +37,8 @@
 		tutorial: 'Tutorial',
 		search: 'Search'
 	};
+
+	const banner_data = await get_banner();
 </script>
 
 <svelte:head>
@@ -48,7 +51,8 @@
 
 <Shell nav_visible={page.route.id !== '/(authed)/playground/[id]/embed'}>
 	{#snippet top_nav()}
-		<Nav title={sections[page.url.pathname.split('/')[1]!] ?? ''} links={data.nav_links} />
+		<!-- TODO can we only load nav links on mobile? -->
+		<Nav title={sections[page.url.pathname.split('/')[1]!] ?? ''} links={await get_nav_links()} />
 	{/snippet}
 
 	{#snippet children()}
@@ -56,8 +60,8 @@
 	{/snippet}
 
 	{#snippet banner()}
-		{#if data.banner}
-			<Banner banner={data.banner} />
+		{#if banner_data}
+			<Banner banner={banner_data} />
 		{/if}
 	{/snippet}
 </Shell>

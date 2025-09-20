@@ -9,16 +9,19 @@
 	import { goto } from '$app/navigation';
 	import { escape_html } from '$lib/utils/escape';
 	import { page } from '$app/state';
+	import { get_document } from './data.remote';
 
-	let { data } = $props();
+	let { params } = $props();
+
+	let document = $derived(await get_document(params));
 
 	setupDocsHovers();
 
 	let content = $state() as HTMLElement;
 
 	const repo = $derived.by(() => {
-		const name = data.document.slug.split('/')[1];
-		const link = 'docs/' + data.document.file.split('/').slice(2).join('/');
+		const name = document.slug.split('/')[1];
+		const link = 'docs/' + document.file.split('/').slice(2).join('/');
 		return `https://github.com/sveltejs/${name}/edit/main/documentation/${link}`;
 	});
 
@@ -58,15 +61,12 @@
 </script>
 
 <svelte:head>
-	<title>{data.document.metadata.title} • Docs • Svelte</title>
+	<title>{document.metadata.title} • Docs • Svelte</title>
 
-	<meta name="twitter:title" content="{data.document.metadata.title} • Docs • Svelte" />
-	<meta
-		name="twitter:description"
-		content="{data.document.metadata.title} • Svelte documentation"
-	/>
+	<meta name="twitter:title" content="{document.metadata.title} • Docs • Svelte" />
+	<meta name="twitter:description" content="{document.metadata.title} • Svelte documentation" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="description" content="{data.document.metadata.title} • Svelte documentation" />
+	<meta name="description" content="{document.metadata.title} • Svelte documentation" />
 	<meta
 		name="twitter:image"
 		content="https://svelte.dev/docs/{page.params.topic}/{page.params.path}/card.png"
@@ -79,29 +79,29 @@
 
 <div id="docs-content" use:legacy_details>
 	<header>
-		<Breadcrumbs breadcrumbs={data.document.breadcrumbs.slice(1)} />
-		<h1>{@html escape_html(data.document.metadata.title).replaceAll('/', '/<wbr>')}</h1>
+		<Breadcrumbs breadcrumbs={document.breadcrumbs.slice(1)} />
+		<h1>{@html escape_html(document.metadata.title).replaceAll('/', '/<wbr>')}</h1>
 	</header>
 
-	<OnThisPage {content} document={data.document} />
+	<OnThisPage {content} {document} />
 
 	<!-- TODO emit scroll events from <Text> so we don't need the `bind:this` and can ditch the wrapper element -->
 	<div class="text content" bind:this={content}>
 		<Text>
-			{@html data.document.body}
+			{@html document.body}
 		</Text>
 	</div>
 
 	<PageControls
 		llms
 		{repo}
-		prev={data.document.prev && {
-			title: data.document.prev.title,
-			path: `/${data.document.prev.slug}`
+		prev={document.prev && {
+			title: document.prev.title,
+			path: `/${document.prev.slug}`
 		}}
-		next={data.document.next && {
-			title: data.document.next.title,
-			path: `/${data.document.next.slug}`
+		next={document.next && {
+			title: document.next.title,
+			path: `/${document.next.slug}`
 		}}
 	/>
 </div>

@@ -1,12 +1,13 @@
 <script>
 	import { DocsContents } from '@sveltejs/site-kit/docs';
+	import { get_sections } from './data.remote.js';
 
-	let { data, children } = $props();
+	let { params, children } = $props();
 </script>
 
 <div class="container">
 	<div class="toc-container" style="order: 1">
-		<DocsContents contents={data.sections} />
+		<DocsContents contents={await get_sections(params)} />
 	</div>
 
 	<div class="page content">
