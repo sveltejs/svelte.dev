@@ -16,10 +16,13 @@
 	import Controls from './Controls.svelte';
 	import Editor from '@sveltejs/repl/editor';
 	import type { Snapshot, PageProps } from './$types.js';
+	import { get_exercise, get_index } from './data.remote';
 
-	let { data }: PageProps = $props();
+	let { params }: PageProps = $props();
 
-	let path = data.exercise.path;
+	const exercise = $derived(await get_exercise(params.slug));
+
+	let path = exercise.path;
 	let show_editor = $state(false);
 	let show_filetree = $state(false);
 	let paused = $state(false);
@@ -163,12 +166,12 @@
 		}
 	};
 
-	let a = $derived(create_files(data.exercise.a));
-	let b = $derived(create_files({ ...data.exercise.a, ...data.exercise.b }));
+	let a = $derived(create_files(exercise.a));
+	let b = $derived(create_files({ ...exercise.a, ...exercise.b }));
 
 	// svelte-ignore state_referenced_locally
 	const workspace = new Workspace(Object.values(a), {
-		initial: data.exercise.focus,
+		initial: exercise.focus,
 		onupdate(file) {
 			adapter.update(file);
 		},
@@ -200,14 +203,14 @@
 			sidebar.scrollTop = 0;
 		}
 
-		workspace.reset(Object.values(a), { tailwind: false }, data.exercise.focus);
+		workspace.reset(Object.values(a), { tailwind: false }, exercise.focus);
 
 		const will_delete = previous_files.some((file) => !(file.name in a));
 
-		if (data.exercise.path !== path || will_delete) paused = true;
+		if (exercise.path !== path || will_delete) paused = true;
 		await adapter.reset(workspace.files);
 
-		path = data.exercise.path;
+		path = exercise.path;
 		paused = false;
 	});
 
@@ -215,9 +218,9 @@
 </script>
 
 <svelte:head>
-	<title>{data.exercise.chapter.title} / {data.exercise.title} • Svelte Tutorial</title>
+	<title>{exercise.chapter.title} / {exercise.title} • Svelte Tutorial</title>
 
-	<meta name="twitter:title" content="{data.exercise.title} • Svelte Tutorial" />
+	<meta name="twitter:title" content="{exercise.title} • Svelte Tutorial" />
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:site" content="@sveltejs" />
 	<meta name="twitter:creator" content="@sveltejs" />
@@ -225,7 +228,7 @@
 	<meta property="twitter:domain" content="https://svelte.dev" />
 	<meta property="twitter:url" content="https://svelte.dev/tutorial" />
 
-	<meta property="og:title" content="{data.exercise.title} • Svelte Tutorial" />
+	<meta property="og:title" content="{exercise.title} • Svelte Tutorial" />
 	<meta property="og:url" content="https://svelte.dev/tutorial" />
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="https://svelte.dev/images/twitter-thumbnail.jpg" />
@@ -250,8 +253,8 @@
 
 <div class="container" class:mobile>
 	<Controls
-		index={data.index}
-		exercise={data.exercise}
+		index={await get_index()}
+		{exercise}
 		{completed}
 		toggle={() => {
 			workspace.set(Object.values(completed ? a : b));
@@ -265,7 +268,7 @@
 				<section class="content">
 					<Sidebar
 						bind:sidebar
-						exercise={data.exercise}
+						{exercise}
 						on:select={(e) => {
 							navigate_to_file(e.detail.file);
 						}}
@@ -288,12 +291,12 @@
 									{#if mobile}
 										<button class="file" onclick={() => (show_filetree = !show_filetree)}>
 											{workspace.current.name.replace(
-												data.exercise.scope.prefix,
-												data.exercise.scope.name + '/'
+												exercise.scope.prefix,
+												exercise.scope.name + '/'
 											) ?? 'Files'}
 										</button>
 									{:else}
-										<Filetree exercise={data.exercise} {workspace} />
+										<Filetree {exercise} {workspace} />
 									{/if}
 								</section>
 							{/snippet}
@@ -305,7 +308,7 @@
 										autocomplete_filter={(file) => {
 											return (
 												file.name.startsWith('/src') &&
-												file.name.startsWith(data.exercise.scope.prefix) &&
+												file.name.startsWith(exercise.scope.prefix) &&
 												file.name !== '/src/__client.js' &&
 												file.name !== '/src/app.html'
 											);
@@ -315,7 +318,7 @@
 
 									{#if mobile && show_filetree}
 										<div class="mobile-filetree">
-											<Filetree mobile exercise={data.exercise} {workspace} />
+											<Filetree mobile {exercise} {workspace} />
 										</div>
 									{/if}
 								</section>
@@ -325,8 +328,8 @@
 
 					{#snippet b()}
 						<section class="preview">
-							{#if needs_webcontainers(page.data.exercise)}
-								<Output exercise={data.exercise} {paused} {workspace} />
+							{#if needs_webcontainers(page.exercise)}
+								<Output {exercise} {paused} {workspace} />
 							{:else}
 								<OutputRollup />
 							{/if}

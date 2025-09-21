@@ -11,13 +11,18 @@
 	import { compress_and_encode_text, decode_and_decompress_text } from './gzip.js';
 	import { page } from '$app/state';
 	import type { File } from '@sveltejs/repl/workspace';
+	import { get_example_index, get_gist } from '../data.remote.js';
 
-	let { data } = $props();
+	let { data, params } = $props();
+
+	// TODO dewaterfall
+	const examples = await get_example_index();
+	const gist = $derived(await get_gist(params.id));
 
 	const STORAGE_KEY = 'svelte:playground';
 
 	let repl = $state() as ReturnType<typeof Repl>;
-	let name = $state(data.gist.name);
+	let name = $state(gist.name);
 	let modified = $state(false);
 	let setting_hash: any = null;
 
@@ -28,7 +33,7 @@
 	const can_escape = browser && !page.url.hash;
 
 	afterNavigate(() => {
-		name = data.gist.name;
+		name = gist.name;
 		set_files();
 	});
 
@@ -52,7 +57,7 @@
 		if (!hash && !saved) {
 			repl?.set({
 				// TODO make this munging unnecessary (using JSON instead of structuredClone for better browser compat)
-				files: JSON.parse(JSON.stringify(data.gist.components)).map(munge),
+				files: JSON.parse(JSON.stringify(gist.components)).map(munge),
 				tailwind: false // TODO
 			});
 
@@ -162,22 +167,20 @@
 		if (
 			!was_modified &&
 			modified &&
-			name === data.gist.name &&
-			data.examples.some((section) =>
-				section.examples.some((example) => example.slug === data.gist.id)
-			)
+			name === gist.name &&
+			examples.some((section) => section.examples.some((example) => example.slug === gist.id))
 		) {
 			name = `${name} (edited)`;
 		}
 	}
 
-	const relaxed = $derived(data.gist.relaxed || (data.user && data.user.id === data.gist.owner));
+	const relaxed = $derived(gist.relaxed || (data.user && data.user.id === gist.owner));
 </script>
 
 <svelte:head>
 	<title>{name} • Playground • Svelte</title>
 
-	<meta name="twitter:title" content="{data.gist.name} • Playground • Svelte" />
+	<meta name="twitter:title" content="{gist.name} • Playground • Svelte" />
 	<meta name="twitter:description" content="Web development for the rest of us" />
 	<meta name="description" content="Interactive Svelte playground" />
 </svelte:head>
@@ -203,9 +206,9 @@
 
 <div class="repl-outer">
 	<AppControls
-		examples={data.examples}
+		{examples}
 		user={data.user}
-		gist={data.gist}
+		{gist}
 		forked={handle_fork}
 		saved={handle_save}
 		{repl}
