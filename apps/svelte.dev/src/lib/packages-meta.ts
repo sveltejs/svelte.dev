@@ -102,7 +102,8 @@ const FEATURED: { title: string; packages: string[]; weights?: Record<string, nu
 			'svelte-routing',
 			'@roxi/routify',
 			'svelte5-router',
-			'svelte-pathfinder'
+			'svelte-pathfinder',
+			'universal-router'
 		]
 	},
 	{
