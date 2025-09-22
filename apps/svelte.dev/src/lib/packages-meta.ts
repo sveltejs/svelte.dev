@@ -100,15 +100,9 @@ const FEATURED: { title: string; packages: string[]; weights?: Record<string, nu
 		packages: [
 			'@sveltejs/kit',
 			'svelte-routing',
-			'svelte-micro',
 			'@roxi/routify',
-			'svelte-qparam',
-			'@easyroute/svelte',
 			'svelte5-router',
-			'svelte-guard',
-			'svelte-guard-history-router',
-			'svelte-pathfinder',
-			'elegua'
+			'svelte-pathfinder'
 		]
 	},
 	{
