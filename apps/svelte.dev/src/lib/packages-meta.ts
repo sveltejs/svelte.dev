@@ -63,8 +63,7 @@ const FEATURED: { title: string; packages: string[]; weights?: Record<string, nu
 			'svelte-moveable',
 			'@tanstack/svelte-virtual',
 			'virtua',
-			'@event-calendar/core',
-			'svelte-chartjs'
+			'@event-calendar/core'
 		]
 	},
 	{
@@ -107,11 +106,18 @@ const FEATURED: { title: string; packages: string[]; weights?: Record<string, nu
 		]
 	},
 	{
-		title: 'Data Visualization',
-		packages: ['layercake', 'layerchart', 'svelte-maplibre', '@xyflow/svelte', 'svelte-maplibre-gl']
+		title: 'Data visualization',
+		packages: [
+			'layercake',
+			'layerchart',
+			'svelte-maplibre',
+			'svelte-chartjs',
+			'@xyflow/svelte',
+			'svelte-maplibre-gl'
+		]
 	},
 	{
-		title: '3D Rendering',
+		title: '3D rendering',
 		packages: ['@threlte/core', 'svelte-zdog']
 	},
 	{
