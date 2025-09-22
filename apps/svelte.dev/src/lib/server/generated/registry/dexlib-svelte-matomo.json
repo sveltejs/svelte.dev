@@ -6,7 +6,6 @@
 	"homepage": "https://gitlab.com/dexterlabs/dexlib/-/tree/master/packages/svelte-matomo",
 	"downloads": 11,
 	"updated": "2020-05-19T08:26:34.526Z",
-	"tags": ["integration"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.1.4",

@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/jthegedus/svelte-adapter-firebase#readme",
 	"downloads": 90,
 	"updated": "2023-01-17T02:32:22.230Z",
-	"tags": ["adapter"],
 	"runes": false,
 	"github_stars": 288,
 	"typescript": true,

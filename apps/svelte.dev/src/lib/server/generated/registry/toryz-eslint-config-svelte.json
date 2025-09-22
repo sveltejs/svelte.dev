@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/zhou-tao/eslint-config",
 	"downloads": 13,
 	"updated": "2023-08-11T12:36:52.780Z",
-	"tags": ["tooling"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.1.4",

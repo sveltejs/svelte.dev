@@ -6,7 +6,6 @@
 	"homepage": "https://sveltekit.authjs.dev",
 	"downloads": 15867,
 	"updated": "2025-02-27T10:08:09.107Z",
-	"tags": ["auth", "server"],
 	"runes": false,
 	"github_stars": 26525,
 	"typescript": true,

@@ -5,7 +5,6 @@
 	"homepage": "https://github.com/aknakos/sveltekit-plotly#readme",
 	"downloads": 8,
 	"updated": "2022-09-06T17:58:00.244Z",
-	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.0.9",

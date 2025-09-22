@@ -5,7 +5,6 @@
 	"authors": ["jshsj", "lukas-koeller"],
 	"downloads": 3,
 	"updated": "2024-12-14T16:00:33.931Z",
-	"tags": ["ui"],
 	"runes": true,
 	"typescript": true,
 	"version": "1.0.2",

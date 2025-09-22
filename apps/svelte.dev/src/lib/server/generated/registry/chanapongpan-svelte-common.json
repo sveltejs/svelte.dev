@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/chanapongpan/svelte-common#readme",
 	"downloads": 5,
 	"updated": "2023-12-30T18:30:32.983Z",
-	"tags": ["tooling"],
 	"runes": false,
 	"typescript": true,
 	"version": "1.0.4",

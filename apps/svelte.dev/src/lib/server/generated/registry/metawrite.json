@@ -6,7 +6,6 @@
 	"homepage": "https://increas.io/metawrite",
 	"downloads": 72,
 	"updated": "2022-06-12T19:33:50.028Z",
-	"tags": ["integration", "auth", "database"],
 	"runes": false,
 	"github_stars": 26,
 	"typescript": true,

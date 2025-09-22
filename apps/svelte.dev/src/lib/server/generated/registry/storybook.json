@@ -15,7 +15,6 @@
 	"homepage": "https://github.com/storybookjs/storybook/tree/next/code/lib/cli",
 	"downloads": 6189667,
 	"updated": "2025-04-02T17:03:02.202Z",
-	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 86367,
 	"typescript": true,

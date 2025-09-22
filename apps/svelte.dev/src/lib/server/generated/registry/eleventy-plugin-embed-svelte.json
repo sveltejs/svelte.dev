@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/shalomscott/eleventy-plugin-embed-svelte#readme",
 	"downloads": 8,
 	"updated": "2021-05-18T17:40:16.186Z",
-	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 40,
 	"typescript": true,

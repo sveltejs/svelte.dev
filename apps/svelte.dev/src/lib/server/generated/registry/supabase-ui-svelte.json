@@ -5,7 +5,6 @@
 	"authors": ["joshnuss"],
 	"downloads": 10,
 	"updated": "2021-05-12T08:08:41.756Z",
-	"tags": ["auth"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.1.1",

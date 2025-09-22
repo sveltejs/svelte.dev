@@ -19,7 +19,6 @@
 	"homepage": "https://github.com/storybookjs/storybook/tree/next/code/renderers/svelte",
 	"downloads": 89961,
 	"updated": "2025-04-02T17:03:39.796Z",
-	"tags": ["tooling"],
 	"runes": true,
 	"github_stars": 86367,
 	"typescript": true,

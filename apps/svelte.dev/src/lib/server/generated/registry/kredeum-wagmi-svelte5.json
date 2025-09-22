@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/kredeum/wagmi-svelte5",
 	"downloads": 6,
 	"updated": "2024-12-29T10:29:59.710Z",
-	"tags": ["integration"],
 	"runes": true,
 	"typescript": true,
 	"version": "0.1.7",

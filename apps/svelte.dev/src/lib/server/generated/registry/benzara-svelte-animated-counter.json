@@ -6,7 +6,6 @@
 	"homepage": "https://svelte-animated-counter.vercel.app",
 	"downloads": 53,
 	"updated": "2022-08-21T20:01:42.817Z",
-	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 15,
 	"typescript": true,

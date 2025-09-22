@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/antfu/vite-plugin-pwa",
 	"downloads": 7,
 	"updated": "2022-10-25T04:46:11.921Z",
-	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 3491,
 	"typescript": true,

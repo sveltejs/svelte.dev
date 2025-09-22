@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/code-gio/svelte-firekit#readme",
 	"downloads": 30,
 	"updated": "2025-02-18T00:01:45.506Z",
-	"tags": ["integration", "auth", "server"],
 	"runes": true,
 	"github_stars": 16,
 	"typescript": true,

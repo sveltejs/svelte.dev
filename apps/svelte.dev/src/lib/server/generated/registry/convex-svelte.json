@@ -21,7 +21,6 @@
 	"homepage": "https://convex.dev",
 	"downloads": 35,
 	"updated": "2025-01-20T21:45:20.095Z",
-	"tags": ["integration"],
 	"runes": true,
 	"github_stars": 29,
 	"typescript": true,

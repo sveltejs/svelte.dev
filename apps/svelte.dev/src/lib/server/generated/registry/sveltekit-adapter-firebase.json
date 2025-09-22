@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/simonnepomuk/monorepo#readme",
 	"downloads": 14,
 	"updated": "2022-12-03T17:35:40.369Z",
-	"tags": ["adapter", "server"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.1.13",

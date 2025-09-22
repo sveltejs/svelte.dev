@@ -5,7 +5,6 @@
 	"authors": ["leelaing"],
 	"downloads": 9,
 	"updated": "2022-06-06T17:38:04.582Z",
-	"tags": ["auth", "integration"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.0.17",

@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/basileraiwet/rollup-plugin-svelte-static-html#readme",
 	"downloads": 5,
 	"updated": "2022-01-05T13:14:15.163Z",
-	"tags": ["tooling"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.1.4",

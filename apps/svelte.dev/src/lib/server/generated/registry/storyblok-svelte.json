@@ -15,7 +15,6 @@
 	"homepage": "https://github.com/storyblok/storyblok-svelte",
 	"downloads": 725,
 	"updated": "2025-03-31T09:03:12.639Z",
-	"tags": ["integration"],
 	"runes": true,
 	"github_stars": 84,
 	"typescript": true,

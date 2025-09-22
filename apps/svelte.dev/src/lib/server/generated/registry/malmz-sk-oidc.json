@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/Malmz/sk-oidc",
 	"downloads": 6,
 	"updated": "2023-06-13T01:24:44.666Z",
-	"tags": ["auth", "integration"],
 	"runes": false,
 	"github_stars": 0,
 	"typescript": true,

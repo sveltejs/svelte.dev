@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/ptkdev/sveltekit-electron-adapter",
 	"downloads": 45,
 	"updated": "2023-02-11T20:20:42.101Z",
-	"tags": ["adapter"],
 	"runes": false,
 	"github_stars": 79,
 	"typescript": true,

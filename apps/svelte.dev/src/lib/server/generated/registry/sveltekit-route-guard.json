@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/rkanik/sveltekit-route-guard",
 	"downloads": 5,
 	"updated": "2023-01-30T17:52:27.964Z",
-	"tags": ["router"],
 	"runes": false,
 	"github_stars": 2,
 	"typescript": true,

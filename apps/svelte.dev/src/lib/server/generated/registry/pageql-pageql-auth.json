@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/pageql/pageql-auth#readme",
 	"downloads": 5,
 	"updated": "2020-08-06T05:26:33.669Z",
-	"tags": ["auth"],
 	"runes": false,
 	"github_stars": 2,
 	"typescript": false,

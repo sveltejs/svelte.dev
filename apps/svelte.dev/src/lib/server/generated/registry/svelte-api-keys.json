@@ -6,7 +6,6 @@
 	"homepage": "https://captaincodeman.github.io/svelte-api-keys/",
 	"downloads": 5,
 	"updated": "2024-04-29T20:32:00.462Z",
-	"tags": ["server", "auth"],
 	"runes": false,
 	"github_stars": 38,
 	"typescript": true,

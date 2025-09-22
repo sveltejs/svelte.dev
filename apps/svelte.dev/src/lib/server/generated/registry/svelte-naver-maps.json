@@ -6,7 +6,6 @@
 	"homepage": "https://svelte-naver-maps.vercel.app/",
 	"downloads": 13,
 	"updated": "2024-04-15T14:48:52.041Z",
-	"tags": ["integration"],
 	"runes": false,
 	"github_stars": 2,
 	"typescript": true,

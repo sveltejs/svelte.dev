@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/colbymchenry/svelte-widgets",
 	"downloads": 5,
 	"updated": "2023-05-16T04:26:11.118Z",
-	"tags": ["integration"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.0.5",

@@ -6,7 +6,6 @@
 	"homepage": "https://sveltekit-notion-blog.netlify.app/",
 	"downloads": 42,
 	"updated": "2025-03-29T12:00:36.001Z",
-	"tags": ["content"],
 	"runes": true,
 	"github_stars": 41,
 	"typescript": true,

@@ -6,7 +6,6 @@
 	"homepage": "https://satohshi.github.io/svelte-typewriter",
 	"downloads": 16,
 	"updated": "2025-03-21T14:31:58.002Z",
-	"tags": ["ui"],
 	"runes": true,
 	"github_stars": 3,
 	"typescript": true,

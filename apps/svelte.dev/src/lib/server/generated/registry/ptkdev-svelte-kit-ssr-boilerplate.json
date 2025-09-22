@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/ptkdev-boilerplate/svelte-kit-ssr-boilerplate",
 	"downloads": 5,
 	"updated": "2021-05-16T11:31:54.460Z",
-	"tags": ["server", "tooling"],
 	"runes": false,
 	"github_stars": 37,
 	"typescript": false,

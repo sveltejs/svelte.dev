@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/ddon/SvelteWP",
 	"downloads": 3,
 	"updated": "2019-10-02T17:58:30.732Z",
-	"tags": ["integration"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.0.2",

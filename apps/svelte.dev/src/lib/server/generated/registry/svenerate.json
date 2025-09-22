@@ -5,7 +5,6 @@
 	"authors": ["wulfmann"],
 	"downloads": 7,
 	"updated": "2020-10-20T13:48:48.021Z",
-	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 4,
 	"homepage": "https://www.npmjs.com/package/rollup-config-sven",

@@ -6,7 +6,6 @@
 	"homepage": "https://passlock.dev",
 	"downloads": 12,
 	"updated": "2024-11-27T14:09:44.610Z",
-	"tags": ["auth"],
 	"runes": false,
 	"github_stars": 172,
 	"typescript": true,

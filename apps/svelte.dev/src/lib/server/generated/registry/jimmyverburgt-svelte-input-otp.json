@@ -6,7 +6,6 @@
 	"homepage": "http://svelte-input-otp.jimmyverburgt.com",
 	"downloads": 240,
 	"updated": "2024-08-30T18:19:35.962Z",
-	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 11,
 	"typescript": true,

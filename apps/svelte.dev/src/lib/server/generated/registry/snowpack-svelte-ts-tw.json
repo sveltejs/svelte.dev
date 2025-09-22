@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/GarrettCannon/snowpack-svelte-ts-tw",
 	"downloads": 10,
 	"updated": "2021-02-04T20:04:55.383Z",
-	"tags": ["tooling"],
 	"runes": false,
 	"typescript": true,
 	"version": "1.3.0",

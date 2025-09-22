@@ -6,7 +6,6 @@
 	"homepage": "https://xterm-svelte.pages.dev",
 	"downloads": 185,
 	"updated": "2024-11-17T19:32:11.708Z",
-	"tags": ["ui"],
 	"runes": true,
 	"github_stars": 31,
 	"typescript": true,

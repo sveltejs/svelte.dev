@@ -6,7 +6,6 @@
 	"homepage": "https://docs.soleil.se/packages/config-mediaflow-svelte",
 	"downloads": 8,
 	"updated": "2025-03-11T14:16:10.086Z",
-	"tags": ["integration"],
 	"runes": false,
 	"typescript": false,
 	"version": "1.2.4",

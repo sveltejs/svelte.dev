@@ -7,7 +7,6 @@
 	"homepage": "https://github.com/enchart/openapi-svelte-query",
 	"downloads": 59,
 	"updated": "2025-04-04T18:06:29.293Z",
-	"tags": ["server", "tooling"],
 	"svelte_range": "^5.25.3",
 	"runes": false,
 	"last_rune_check_version": "0.1.3",

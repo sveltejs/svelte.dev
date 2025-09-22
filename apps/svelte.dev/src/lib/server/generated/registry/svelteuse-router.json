@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/svelteuse/router#readme",
 	"downloads": 15,
 	"updated": "2022-03-02T08:53:48.879Z",
-	"tags": ["router"],
 	"runes": false,
 	"github_stars": 1,
 	"typescript": true,

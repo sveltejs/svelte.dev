@@ -6,7 +6,6 @@
 	"homepage": "https://onlook.dev",
 	"downloads": 20,
 	"updated": "2024-06-03T14:25:51.544Z",
-	"tags": ["tooling"],
 	"runes": false,
 	"typescript": false,
 	"version": "2.0.3",

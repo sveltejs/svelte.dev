@@ -7,7 +7,6 @@
 	"homepage": "https://github.com/Casterlabs/heroicons-svelte#readme",
 	"downloads": 15,
 	"updated": "2025-04-03T00:30:17.325Z",
-	"tags": ["ui"],
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.16.0",
 	"runes": true,

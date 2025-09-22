@@ -6,7 +6,6 @@
 	"homepage": "https://svelte-geo.vercel.app/",
 	"downloads": 11,
 	"updated": "2022-01-17T20:45:53.278Z",
-	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 9,
 	"typescript": true,

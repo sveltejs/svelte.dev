@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/webcomponents-dev/svelte-console#readme",
 	"downloads": 4,
 	"updated": "2019-11-20T15:34:32.682Z",
-	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.1.2",

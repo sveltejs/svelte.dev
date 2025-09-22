@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/boxyhq/ui",
 	"downloads": 23,
 	"updated": "2025-02-28T16:24:58.185Z",
-	"tags": ["ui", "auth"],
 	"runes": false,
 	"typescript": true,
 	"version": "3.4.0",

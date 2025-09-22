@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/crypto-pepe/pepekit#readme",
 	"downloads": 16,
 	"updated": "2022-01-11T20:04:31.903Z",
-	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.0.38",

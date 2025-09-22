@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/svelte-on-solana/wallet-adapter#readme",
 	"downloads": 12,
 	"updated": "2022-08-25T09:29:01.458Z",
-	"tags": ["integration", "miscellaneous"],
 	"runes": false,
 	"github_stars": 65,
 	"typescript": true,

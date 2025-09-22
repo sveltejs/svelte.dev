@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/medica-im/clinic-cms",
 	"downloads": 41,
 	"updated": "2025-03-14T14:36:14.866Z",
-	"tags": ["content", "ui"],
 	"runes": true,
 	"typescript": true,
 	"version": "1.6.0",

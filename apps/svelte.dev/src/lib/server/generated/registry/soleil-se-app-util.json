@@ -6,7 +6,6 @@
 	"homepage": "https://docs.soleil.se/packages/app-util",
 	"downloads": 47,
 	"updated": "2025-03-27T13:21:33.177Z",
-	"tags": ["miscellaneous"],
 	"runes": false,
 	"typescript": true,
 	"version": "5.9.1",

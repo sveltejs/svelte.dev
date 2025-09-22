@@ -5,7 +5,6 @@
 	"authors": ["antony", "adampond", "alex.dilley", "jedwoodcock", "leandro.silva", "tomlewis0"],
 	"downloads": 13,
 	"updated": "2019-05-25T17:04:33.458Z",
-	"tags": ["integration"],
 	"runes": false,
 	"typescript": false,
 	"version": "1.0.0",

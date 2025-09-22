@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/kiho/svelte-adapter-aspcore#readme",
 	"downloads": 5,
 	"updated": "2022-12-20T05:58:32.924Z",
-	"tags": ["adapter"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.4.0",

@@ -6,7 +6,6 @@
 	"authors": ["marko.smilja"],
 	"downloads": 498,
 	"updated": "2025-04-07T08:29:51.825Z",
-	"tags": ["ui", "integration"],
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.20.4",
 	"runes": false,

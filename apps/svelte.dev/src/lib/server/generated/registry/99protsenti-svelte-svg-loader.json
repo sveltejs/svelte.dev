@@ -6,7 +6,6 @@
 	"homepage": "https://gitlab.com/99protsenti/svelte-svg-loader",
 	"downloads": 8,
 	"updated": "2024-01-24T11:00:21.008Z",
-	"tags": ["tooling"],
 	"runes": false,
 	"typescript": false,
 	"version": "1.0.1",

@@ -5,7 +5,6 @@
 	"authors": ["antony", "adampond", "alex.dilley", "jedwoodcock", "leandro.silva", "tomlewis0"],
 	"downloads": 457,
 	"updated": "2025-02-26T10:40:01.628Z",
-	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "4.3.0",

@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/themarquisdesheric/simply-svelte-autocomplete",
 	"downloads": 9,
 	"updated": "2021-01-31T00:03:52.797Z",
-	"tags": ["ui"],
 	"runes": true,
 	"typescript": false,
 	"version": "1.4.0",

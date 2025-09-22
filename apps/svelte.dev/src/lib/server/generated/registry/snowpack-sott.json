@@ -6,7 +6,6 @@
 	"homepage": "https://git.kyleschwartz.ca/kyle/snowpack-sott",
 	"downloads": 5,
 	"updated": "2021-01-03T17:15:23.095Z",
-	"tags": ["tooling"],
 	"runes": false,
 	"typescript": true,
 	"version": "1.0.3",

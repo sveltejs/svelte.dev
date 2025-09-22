@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/i18n-fork/prettier-plugin-svelte/tree/tmp",
 	"downloads": 16,
 	"updated": "2025-02-05T07:26:58.910Z",
-	"tags": ["tooling"],
 	"runes": false,
 	"typescript": true,
 	"version": "3.2.8",

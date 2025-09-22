@@ -5,7 +5,6 @@
 	"authors": ["mattyhogan", "coachjackferg"],
 	"downloads": 6,
 	"updated": "2025-03-11T19:59:08.053Z",
-	"tags": ["integration"],
 	"runes": true,
 	"typescript": true,
 	"version": "0.0.5",

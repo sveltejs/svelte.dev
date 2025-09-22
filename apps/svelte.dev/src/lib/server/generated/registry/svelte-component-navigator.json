@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/russellraimundo/svelte-abstract-router#readme",
 	"downloads": 10,
 	"updated": "2021-09-11T03:13:28.331Z",
-	"tags": ["router"],
 	"runes": false,
 	"typescript": true,
 	"version": "1.1.1",

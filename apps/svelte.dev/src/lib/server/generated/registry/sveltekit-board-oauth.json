@@ -5,7 +5,6 @@
 	"authors": ["hotsixman"],
 	"downloads": 55,
 	"updated": "2024-11-24T15:48:24.567Z",
-	"tags": ["auth"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.7.3",

@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/SvelteStack/svelte-query",
 	"downloads": 2874,
 	"updated": "2022-01-22T21:30:04.205Z",
-	"tags": ["server"],
 	"runes": false,
 	"typescript": true,
 	"version": "1.6.0",

@@ -6,7 +6,6 @@
 	"homepage": "https://enzineer.github.io/svelte-loaders/",
 	"downloads": 7,
 	"updated": "2022-07-28T06:05:00.747Z",
-	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.1.3",

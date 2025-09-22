@@ -6,7 +6,6 @@
 	"homepage": "https://ai.khulnasoft.com/docs",
 	"downloads": 5,
 	"updated": "2023-12-13T03:45:51.798Z",
-	"tags": ["integration"],
 	"runes": false,
 	"typescript": true,
 	"version": "2.2.29",

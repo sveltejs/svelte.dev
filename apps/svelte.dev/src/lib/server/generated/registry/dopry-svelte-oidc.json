@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/dopry/svelte-oidc#readme",
 	"downloads": 106,
 	"updated": "2023-01-24T16:47:18.807Z",
-	"tags": ["auth"],
 	"runes": false,
 	"github_stars": 42,
 	"typescript": false,

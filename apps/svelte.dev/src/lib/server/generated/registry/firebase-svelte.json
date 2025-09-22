@@ -6,7 +6,6 @@
 	"homepage": "https://firebase-svelte.vercel.app",
 	"downloads": 12,
 	"updated": "2023-10-11T16:45:55.782Z",
-	"tags": ["integration"],
 	"runes": false,
 	"github_stars": 3,
 	"typescript": true,

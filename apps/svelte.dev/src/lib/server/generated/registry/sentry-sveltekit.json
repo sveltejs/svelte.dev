@@ -17,7 +17,6 @@
 	"homepage": "https://github.com/getsentry/sentry-javascript/tree/master/packages/sveltekit",
 	"downloads": 45770,
 	"updated": "2025-04-08T14:19:24.031Z",
-	"tags": ["integration", "server"],
 	"runes": false,
 	"github_stars": 8196,
 	"typescript": true,

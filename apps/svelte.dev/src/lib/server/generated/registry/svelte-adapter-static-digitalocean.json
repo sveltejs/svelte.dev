@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/TorstenDittmann/svelte-adapter-static-digitalocean#readme",
 	"downloads": 90,
 	"updated": "2025-04-09T14:16:47.349Z",
-	"tags": ["adapter"],
 	"runes": false,
 	"github_stars": 13,
 	"typescript": true,

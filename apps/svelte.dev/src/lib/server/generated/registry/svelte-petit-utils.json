@@ -7,7 +7,6 @@
 	"homepage": "https://github.com/7korobi/svelte-petit-utils/blob/main/src/lib/",
 	"downloads": 6,
 	"updated": "2022-11-23T15:21:05.899Z",
-	"tags": ["miscellaneous"],
 	"svelte_range": "^3.53.1",
 	"kit_range": "1.0.0-next.557",
 	"runes": false,

@@ -6,7 +6,6 @@
 	"homepage": "https://lastfm-viewer.vercel.app/",
 	"downloads": 11,
 	"updated": "2024-09-08T19:58:32.917Z",
-	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "2.0.4",

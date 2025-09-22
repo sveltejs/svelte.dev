@@ -6,7 +6,6 @@
 	"homepage": "https://svelte-editor.neelp.tech",
 	"downloads": 12,
 	"updated": "2024-06-20T17:12:00.234Z",
-	"tags": ["ui", "tooling"],
 	"runes": false,
 	"github_stars": 1,
 	"typescript": true,

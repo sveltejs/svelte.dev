@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/geoffrich/svelte-adapter-azure-swa#readme",
 	"downloads": 69,
 	"updated": "2025-04-04T22:03:00.541Z",
-	"tags": ["adapter"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.21.12",

@@ -5,7 +5,6 @@
 	"authors": ["webjose"],
 	"downloads": 11,
 	"updated": "2025-03-07T02:31:45.548Z",
-	"tags": ["router"],
 	"runes": true,
 	"typescript": true,
 	"version": "0.3.0",

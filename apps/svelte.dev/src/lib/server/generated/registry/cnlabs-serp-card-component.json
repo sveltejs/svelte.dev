@@ -5,7 +5,6 @@
 	"authors": ["migger", "kammif", "fmckey", "barakuda"],
 	"downloads": 14,
 	"updated": "2022-05-06T15:32:15.588Z",
-	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "1.0.47",

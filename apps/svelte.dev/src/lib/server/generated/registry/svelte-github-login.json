@@ -6,7 +6,6 @@
 	"homepage": "https://svelte-github-login.netlify.com/",
 	"downloads": 10,
 	"updated": "2022-04-30T15:10:51.732Z",
-	"tags": ["auth"],
 	"runes": false,
 	"github_stars": 12,
 	"typescript": true,

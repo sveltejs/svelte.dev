@@ -6,7 +6,6 @@
 	"homepage": "https://docs.soleil.se/build/app",
 	"downloads": 132,
 	"updated": "2025-04-09T10:39:08.578Z",
-	"tags": ["tooling"],
 	"runes": false,
 	"typescript": false,
 	"version": "2.2.1",

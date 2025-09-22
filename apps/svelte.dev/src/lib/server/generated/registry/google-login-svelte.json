@@ -5,7 +5,6 @@
 	"authors": ["jorge-pereira"],
 	"downloads": 95,
 	"updated": "2022-01-08T01:36:00.174Z",
-	"tags": ["auth"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.0.1",

@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/gtim/svelte-chessground#readme",
 	"downloads": 7,
 	"updated": "2024-12-21T23:30:38.449Z",
-	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.2.0",

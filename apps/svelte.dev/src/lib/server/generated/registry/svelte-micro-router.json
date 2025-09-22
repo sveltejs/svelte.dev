@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/davidrot/svelte-micro-router#readme",
 	"downloads": 9,
 	"updated": "2022-09-15T13:22:52.240Z",
-	"tags": ["router"],
 	"runes": false,
 	"github_stars": 3,
 	"typescript": true,

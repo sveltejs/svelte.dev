@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/paulixta-oss/svelte-checklist",
 	"downloads": 11,
 	"updated": "2021-05-17T15:11:11.888Z",
-	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.9.1",

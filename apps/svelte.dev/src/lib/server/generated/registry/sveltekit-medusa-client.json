@@ -6,7 +6,6 @@
 	"homepage": "https://pevey.com/sveltekit-medusa-client",
 	"downloads": 175,
 	"updated": "2023-09-02T15:49:08.051Z",
-	"tags": ["server"],
 	"runes": false,
 	"github_stars": 60,
 	"typescript": true,

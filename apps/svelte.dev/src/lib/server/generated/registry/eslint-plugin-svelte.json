@@ -6,7 +6,6 @@
 	"homepage": "https://sveltejs.github.io/eslint-plugin-svelte",
 	"downloads": 481459,
 	"updated": "2025-04-04T00:17:55.069Z",
-	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 326,
 	"typescript": true,

@@ -5,7 +5,6 @@
 	"authors": ["brianleroux", "dam", "kborchers", "ryanblock", "architectci", "filmaj"],
 	"downloads": 6,
 	"updated": "2021-10-11T15:40:39.994Z",
-	"tags": ["adapter"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.0.4",

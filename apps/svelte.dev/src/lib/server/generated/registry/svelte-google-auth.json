@@ -5,7 +5,6 @@
 	"authors": ["halfdanj"],
 	"downloads": 65,
 	"updated": "2023-01-17T21:18:10.634Z",
-	"tags": ["auth"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.7.2",

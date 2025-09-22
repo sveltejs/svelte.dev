@@ -6,7 +6,6 @@
 	"homepage": "https://selenite-geos.github.io/docs/developper/components/#graph-editor",
 	"downloads": 69,
 	"updated": "2024-11-15T17:08:55.955Z",
-	"tags": ["ui", "tooling"],
 	"runes": true,
 	"typescript": true,
 	"version": "0.1.20",

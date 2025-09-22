@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/richhost/svelte-compare-slider",
 	"downloads": 5,
 	"updated": "2024-12-19T09:28:16.015Z",
-	"tags": ["ui"],
 	"runes": true,
 	"typescript": true,
 	"version": "0.2.0",

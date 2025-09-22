@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/neo4j/cypher-editor#readme",
 	"downloads": 26,
 	"updated": "2024-04-02T12:27:23.937Z",
-	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 46,
 	"typescript": true,

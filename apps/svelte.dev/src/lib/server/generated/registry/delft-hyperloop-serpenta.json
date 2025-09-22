@@ -6,7 +6,6 @@
 	"homepage": "https://delft-hyperloop.github.io/serpenta",
 	"downloads": 8,
 	"updated": "2025-02-04T13:41:33.113Z",
-	"tags": ["design-system", "ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.4.2",

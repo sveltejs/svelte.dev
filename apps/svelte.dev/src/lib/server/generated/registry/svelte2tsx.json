@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/sveltejs/language-tools/tree/master/packages/svelte2tsx",
 	"downloads": 232907,
 	"updated": "2025-04-13T06:24:23.953Z",
-	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 1298,
 	"typescript": true,

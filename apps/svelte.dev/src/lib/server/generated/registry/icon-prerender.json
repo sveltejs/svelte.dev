@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/Ernxst/icon-prerender/packages/core",
 	"downloads": 8,
 	"updated": "2022-09-11T22:19:25.259Z",
-	"tags": ["tooling"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.1.2",

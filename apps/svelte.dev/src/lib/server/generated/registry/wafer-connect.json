@@ -6,7 +6,6 @@
 	"homepage": "https://wafer.vercel.app",
 	"downloads": 5,
 	"updated": "2023-06-16T07:47:20.582Z",
-	"tags": ["integration"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.2.1",

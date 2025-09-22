@@ -6,7 +6,6 @@
 	"homepage": "https://pevey.com/sveltekit-turnstile",
 	"downloads": 324,
 	"updated": "2025-04-03T19:46:21.364Z",
-	"tags": ["auth"],
 	"runes": false,
 	"github_stars": 11,
 	"typescript": true,

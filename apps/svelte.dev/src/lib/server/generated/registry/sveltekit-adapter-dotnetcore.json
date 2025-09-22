@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/samlam/sveltekit-adapter-dotnetcore#readme",
 	"downloads": 5,
 	"updated": "2023-06-01T00:22:28.234Z",
-	"tags": ["adapter"],
 	"runes": false,
 	"github_stars": 18,
 	"typescript": false,

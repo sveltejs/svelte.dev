@@ -6,7 +6,6 @@
 	"homepage": "https://headless-audioplayer.vercel.app",
 	"downloads": 4,
 	"updated": "2023-04-30T03:07:29.487Z",
-	"tags": ["ui", "media"],
 	"runes": false,
 	"github_stars": 6,
 	"typescript": true,

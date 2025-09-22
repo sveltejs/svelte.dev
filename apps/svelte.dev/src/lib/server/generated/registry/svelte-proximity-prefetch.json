@@ -7,7 +7,6 @@
 	"homepage": "https://github.com/itsmingjie/svelte-proximity-prefetch#readme",
 	"downloads": 33,
 	"updated": "2025-04-06T21:43:37.437Z",
-	"tags": ["router"],
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.0.0",
 	"runes": true,

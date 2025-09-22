@@ -5,7 +5,6 @@
 	"authors": ["joshnuss"],
 	"downloads": 21,
 	"updated": "2024-07-05T17:27:29.883Z",
-	"tags": ["integration", "server"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.0.11",

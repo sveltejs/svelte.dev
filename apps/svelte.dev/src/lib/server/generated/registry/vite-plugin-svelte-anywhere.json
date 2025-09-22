@@ -6,7 +6,6 @@
 	"homepage": "https://svelte-anywhere.dev",
 	"downloads": 13,
 	"updated": "2025-02-14T20:01:21.281Z",
-	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 16,
 	"typescript": true,

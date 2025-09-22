@@ -6,7 +6,6 @@
 	"homepage": "https://svelte-tailwind-table-demo.vercel.app/",
 	"downloads": 16,
 	"updated": "2022-01-21T18:12:20.357Z",
-	"tags": ["ui"],
 	"runes": false,
 	"typescript": false,
 	"version": "0.10.0",

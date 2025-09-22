@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/lagden/svelte-notification#readme",
 	"downloads": 5,
 	"updated": "2025-03-12T03:32:39.043Z",
-	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "1.4.0",

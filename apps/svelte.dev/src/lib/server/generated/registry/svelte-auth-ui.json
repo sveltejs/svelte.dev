@@ -5,7 +5,6 @@
 	"authors": ["chrisjayden"],
 	"downloads": 12,
 	"updated": "2023-05-25T16:04:34.132Z",
-	"tags": ["auth", "ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.2.0",

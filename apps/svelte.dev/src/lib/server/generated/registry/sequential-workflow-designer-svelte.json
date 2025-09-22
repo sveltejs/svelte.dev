@@ -5,7 +5,6 @@
 	"authors": ["b4rtaz"],
 	"downloads": 260,
 	"updated": "2025-03-20T17:36:55.045Z",
-	"tags": ["ui", "tooling"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.28.0",

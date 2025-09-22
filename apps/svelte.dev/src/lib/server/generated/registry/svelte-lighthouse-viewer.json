@@ -5,7 +5,6 @@
 	"homepage": "https://dvelasquez.github.io/lighthouse-viewer/packages/svelte-lighthouse-viewer/demo/index.html",
 	"downloads": 271,
 	"updated": "2025-04-14T06:54:36.524Z",
-	"tags": ["tooling"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.2.62",

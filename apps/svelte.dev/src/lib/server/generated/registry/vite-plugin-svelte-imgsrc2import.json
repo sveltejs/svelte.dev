@@ -6,7 +6,6 @@
 	"authors": ["main2017"],
 	"downloads": 337,
 	"updated": "2025-04-11T06:32:51.785Z",
-	"tags": ["tooling"],
 	"svelte_range": ">=3.0.0",
 	"runes": false,
 	"last_rune_check_version": "0.1.2",

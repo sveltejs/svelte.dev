@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/starbasehq/sveltekit-openid-connect#readme",
 	"downloads": 18,
 	"updated": "2024-04-10T20:25:43.055Z",
-	"tags": ["auth"],
 	"runes": false,
 	"github_stars": 16,
 	"typescript": false,

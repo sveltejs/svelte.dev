@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/sshkeda/svauth",
 	"downloads": 5,
 	"updated": "2023-04-18T00:56:09.353Z",
-	"tags": ["auth"],
 	"runes": false,
 	"github_stars": 3,
 	"typescript": true,

@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/radiium/svxui",
 	"downloads": 5,
 	"updated": "2024-12-23T11:55:03.593Z",
-	"tags": ["ui"],
 	"runes": true,
 	"typescript": true,
 	"version": "0.0.12",

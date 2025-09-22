@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/nstuyvesant/sveltekit-auth-example#readme",
 	"downloads": 29,
 	"updated": "2025-04-04T17:04:36.175Z",
-	"tags": ["auth", "server"],
 	"runes": true,
 	"github_stars": 340,
 	"typescript": true,

@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/rubus-ui/rubus#readme",
 	"downloads": 15,
 	"updated": "2020-10-29T17:40:21.201Z",
-	"tags": ["design-system"],
 	"runes": true,
 	"typescript": true,
 	"version": "0.0.74",

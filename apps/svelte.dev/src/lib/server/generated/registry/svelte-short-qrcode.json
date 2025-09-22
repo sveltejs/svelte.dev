@@ -6,7 +6,6 @@
 	"homepage": "https://captaincodeman.github.io/svelte-short-qrcode/",
 	"downloads": 5,
 	"updated": "2024-04-29T20:40:57.231Z",
-	"tags": ["tooling", "server"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.0.4",

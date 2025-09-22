@@ -5,7 +5,6 @@
 	"authors": ["paul-krisada", "cosmo-parker"],
 	"downloads": 4,
 	"updated": "2022-07-24T12:02:18.229Z",
-	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.0.5",

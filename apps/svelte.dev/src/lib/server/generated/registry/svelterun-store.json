@@ -6,7 +6,6 @@
 	"homepage": "https://svelterun.com/pkg/store",
 	"downloads": 3,
 	"updated": "2022-01-14T19:42:07.446Z",
-	"tags": ["miscellaneous"],
 	"runes": false,
 	"github_stars": 1,
 	"typescript": true,

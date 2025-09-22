@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/mashiachy/svelte-apollo-wrappers",
 	"downloads": 4,
 	"updated": "2022-12-05T21:34:20.894Z",
-	"tags": ["integration"],
 	"runes": false,
 	"typescript": true,
 	"version": "1.0.1",

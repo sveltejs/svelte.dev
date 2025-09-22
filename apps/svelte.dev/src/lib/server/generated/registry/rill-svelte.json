@@ -7,7 +7,6 @@
 	"homepage": "https://github.com/rill-js/svelte",
 	"downloads": 3,
 	"updated": "2017-11-18T04:20:22.359Z",
-	"tags": ["server"],
 	"svelte_range": "^1.41.3",
 	"runes": false,
 	"last_rune_check_version": "1.0.0",

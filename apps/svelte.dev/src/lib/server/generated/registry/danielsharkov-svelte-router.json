@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/DanielSharkov/svelte-router",
 	"downloads": 15,
 	"updated": "2023-04-09T12:06:58.408Z",
-	"tags": ["router"],
 	"runes": false,
 	"github_stars": 13,
 	"typescript": true,

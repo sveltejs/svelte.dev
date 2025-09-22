@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/craftweg/svelte-obfuscate#readme",
 	"downloads": 5,
 	"updated": "2021-12-30T11:23:10.442Z",
-	"tags": ["miscellaneous"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.3.0",

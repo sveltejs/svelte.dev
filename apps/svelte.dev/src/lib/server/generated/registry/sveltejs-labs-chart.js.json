@@ -6,7 +6,6 @@
 	"homepage": "https://www.npmjs.com/package/@sveltejs-labs/chart.js",
 	"downloads": 20,
 	"updated": "2025-03-26T17:15:59.314Z",
-	"tags": ["ui"],
 	"runes": true,
 	"github_stars": 0,
 	"typescript": true,

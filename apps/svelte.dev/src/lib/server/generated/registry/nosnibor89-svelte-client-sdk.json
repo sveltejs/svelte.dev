@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/launchdarkly/js-core/tree/main/packages/sdk/svelte",
 	"downloads": 11,
 	"updated": "2025-03-07T16:56:47.917Z",
-	"tags": ["integration"],
 	"runes": true,
 	"github_stars": 17,
 	"typescript": true,

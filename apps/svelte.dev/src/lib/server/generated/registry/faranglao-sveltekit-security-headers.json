@@ -6,7 +6,6 @@
 	"homepage": "https://sveltekit-security-headers.vercel.app/",
 	"downloads": 176,
 	"updated": "2024-02-26T12:08:11.041Z",
-	"tags": ["server"],
 	"runes": false,
 	"github_stars": 5,
 	"typescript": true,

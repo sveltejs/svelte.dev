@@ -4,7 +4,6 @@
 	"authors": ["timhall"],
 	"downloads": 1234,
 	"updated": "2022-02-21T22:26:28.006Z",
-	"tags": ["integration"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.5.0",

@@ -5,7 +5,6 @@
 	"authors": ["dylanblokhuis"],
 	"downloads": 307,
 	"updated": "2019-10-29T17:41:25.410Z",
-	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 10,
 	"homepage": "https://www.npmjs.com/package/svelte-loading-skeleton",

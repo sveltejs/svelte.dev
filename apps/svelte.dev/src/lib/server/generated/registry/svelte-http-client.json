@@ -6,7 +6,6 @@
 	"homepage": "https://bibizio.github.io/svelte-http-client/",
 	"downloads": 6,
 	"updated": "2023-01-24T19:32:15.485Z",
-	"tags": ["server"],
 	"runes": false,
 	"github_stars": 0,
 	"typescript": true,

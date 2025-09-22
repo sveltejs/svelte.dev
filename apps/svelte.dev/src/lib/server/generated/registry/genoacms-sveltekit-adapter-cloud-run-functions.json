@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/GenoaCMS/sveltekit-adapter-cloud-run-functions#readme",
 	"downloads": 8,
 	"updated": "2024-11-23T10:52:34.927Z",
-	"tags": ["adapter"],
 	"runes": false,
 	"github_stars": 0,
 	"typescript": true,

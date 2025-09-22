@@ -6,7 +6,6 @@
 	"homepage": "https://kit.svelte.dev",
 	"downloads": 5,
 	"updated": "2024-08-22T02:40:44.001Z",
-	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 4,
 	"typescript": true,

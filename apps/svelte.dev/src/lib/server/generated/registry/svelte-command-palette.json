@@ -6,7 +6,6 @@
 	"homepage": "https://svelte-command-palette.vercel.app/",
 	"downloads": 1608,
 	"updated": "2022-10-24T21:09:40.123Z",
-	"tags": ["ui"],
 	"runes": false,
 	"github_stars": 185,
 	"typescript": true,

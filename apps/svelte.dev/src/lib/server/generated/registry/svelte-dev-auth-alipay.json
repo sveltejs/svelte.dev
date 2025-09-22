@@ -6,7 +6,6 @@
 	"homepage": "https://svelte.js.cool",
 	"downloads": 9,
 	"updated": "2023-12-11T08:15:03.660Z",
-	"tags": ["auth"],
 	"runes": false,
 	"github_stars": 5,
 	"typescript": true,

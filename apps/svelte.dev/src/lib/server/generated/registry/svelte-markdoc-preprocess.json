@@ -6,7 +6,6 @@
 	"homepage": "https://svelte-markdoc-preprocess.pages.dev",
 	"downloads": 460,
 	"updated": "2025-03-31T19:55:25.803Z",
-	"tags": ["tooling", "content"],
 	"runes": false,
 	"github_stars": 67,
 	"typescript": true,

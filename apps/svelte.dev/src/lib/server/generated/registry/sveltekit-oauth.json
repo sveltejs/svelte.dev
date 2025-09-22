@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/vhsdev/sveltekit-oauth#readme",
 	"downloads": 10,
 	"updated": "2022-08-01T03:03:52.356Z",
-	"tags": ["auth", "server"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.1.5",

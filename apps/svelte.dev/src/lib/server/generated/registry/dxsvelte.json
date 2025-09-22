@@ -6,7 +6,6 @@
 	"homepage": "https://dxsvelte.com/",
 	"downloads": 13,
 	"updated": "2023-10-29T00:13:10.144Z",
-	"tags": ["tooling"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.2.0-alpha.21",

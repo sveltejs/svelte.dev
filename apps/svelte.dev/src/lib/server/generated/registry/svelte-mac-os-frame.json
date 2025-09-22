@@ -6,7 +6,6 @@
 	"authors": ["nergel"],
 	"downloads": 3,
 	"updated": "2020-01-24T15:36:18.159Z",
-	"tags": ["ui"],
 	"svelte_range": "^3.0.0",
 	"runes": false,
 	"last_rune_check_version": "0.1.0",

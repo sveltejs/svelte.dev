@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/axdraft/prosemirror-dev-toolkit",
 	"downloads": 12,
 	"updated": "2022-09-14T16:03:22.140Z",
-	"tags": ["tooling"],
 	"runes": true,
 	"github_stars": 0,
 	"typescript": true,

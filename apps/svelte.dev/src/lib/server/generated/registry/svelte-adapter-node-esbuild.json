@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/JadedBlueEyes/svelte-adapter-node-esbuild#readme",
 	"downloads": 22,
 	"updated": "2025-03-19T02:18:13.792Z",
-	"tags": ["adapter"],
 	"runes": false,
 	"github_stars": 0,
 	"typescript": true,

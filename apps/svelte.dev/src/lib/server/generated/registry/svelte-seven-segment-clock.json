@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/mmjmanders/seven-segment-clock",
 	"downloads": 4,
 	"updated": "2024-11-14T09:38:26.723Z",
-	"tags": ["ui"],
 	"runes": true,
 	"typescript": true,
 	"version": "2.0.0",

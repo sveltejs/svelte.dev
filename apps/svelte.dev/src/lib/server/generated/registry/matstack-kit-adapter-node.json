@@ -6,7 +6,6 @@
 	"homepage": "https://matstack.dev",
 	"downloads": 8,
 	"updated": "2024-09-17T18:18:17.139Z",
-	"tags": ["adapter"],
 	"runes": false,
 	"github_stars": 3,
 	"typescript": true,

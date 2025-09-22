@@ -6,7 +6,6 @@
 	"homepage": "https://www.npmjs.com/package/svelte-event-router",
 	"downloads": 12,
 	"updated": "2020-06-23T18:11:23.467Z",
-	"tags": ["router"],
 	"runes": false,
 	"typescript": false,
 	"version": "2.0.1",

@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/huggingface/huggingface_hub/tree/main/widgets",
 	"downloads": 11,
 	"updated": "2021-09-09T08:45:53.317Z",
-	"tags": ["ui", "integration"],
 	"runes": true,
 	"github_stars": 2513,
 	"typescript": true,

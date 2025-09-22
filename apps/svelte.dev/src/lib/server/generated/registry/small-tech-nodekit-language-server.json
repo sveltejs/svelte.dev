@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/sveltejs/language-tools#readme",
 	"downloads": 4,
 	"updated": "2022-02-14T17:46:02.855Z",
-	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 3,
 	"typescript": true,

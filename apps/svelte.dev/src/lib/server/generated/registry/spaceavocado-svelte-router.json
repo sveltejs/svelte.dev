@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/spaceavocado/svelte-router",
 	"downloads": 11,
 	"updated": "2019-09-30T03:07:07.713Z",
-	"tags": ["router"],
 	"runes": false,
 	"github_stars": 61,
 	"typescript": true,

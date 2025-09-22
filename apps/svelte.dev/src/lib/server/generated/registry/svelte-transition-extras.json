@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/boatilus/svelte-transition-extras",
 	"downloads": 5,
 	"updated": "2022-01-11T00:54:54.782Z",
-	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.1.5",

@@ -6,7 +6,6 @@
 	"homepage": "https://svelte-float.pages.dev",
 	"downloads": 9,
 	"updated": "2022-07-16T07:19:57.934Z",
-	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.1.3",

@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/JonasBuerger/svelte-adapter-bun#readme",
 	"downloads": 47,
 	"updated": "2024-07-15T12:37:49.773Z",
-	"tags": ["adapter"],
 	"runes": false,
 	"github_stars": 4,
 	"typescript": true,

@@ -6,7 +6,6 @@
 	"homepage": "https://svelte-typeform-embed.netlify.app/",
 	"downloads": 6,
 	"updated": "2020-09-29T20:19:56.157Z",
-	"tags": ["integration"],
 	"runes": false,
 	"github_stars": 10,
 	"typescript": false,

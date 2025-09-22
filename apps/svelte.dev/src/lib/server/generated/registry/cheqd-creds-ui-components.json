@@ -6,7 +6,6 @@
 	"homepage": "http://git@github.com:cheqd/creds-libs/tree/main/packages/components",
 	"downloads": 139,
 	"updated": "2025-02-03T11:51:07.627Z",
-	"tags": ["ui", "design-system"],
 	"runes": false,
 	"typescript": true,
 	"version": "2.5.3",

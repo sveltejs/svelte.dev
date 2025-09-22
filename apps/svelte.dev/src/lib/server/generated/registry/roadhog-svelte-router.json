@@ -5,7 +5,6 @@
 	"authors": ["roadhog"],
 	"downloads": 5,
 	"updated": "2022-11-02T02:13:30.547Z",
-	"tags": ["router"],
 	"runes": false,
 	"typescript": true,
 	"version": "1.0.1",

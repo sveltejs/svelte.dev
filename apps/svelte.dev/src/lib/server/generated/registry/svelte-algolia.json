@@ -6,7 +6,6 @@
 	"homepage": "https://svelte-algolia.netlify.app",
 	"downloads": 25,
 	"updated": "2022-10-24T21:39:10.581Z",
-	"tags": ["integration"],
 	"runes": false,
 	"github_stars": 36,
 	"typescript": true,

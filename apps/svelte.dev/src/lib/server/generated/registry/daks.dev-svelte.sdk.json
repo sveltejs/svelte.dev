@@ -6,7 +6,6 @@
 	"homepage": "https://svelte.daks.dev",
 	"downloads": 17,
 	"updated": "2025-03-22T18:36:24.217Z",
-	"tags": ["tooling"],
 	"runes": true,
 	"typescript": true,
 	"version": "0.3.2",

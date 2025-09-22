@@ -6,7 +6,6 @@
 	"homepage": "https://docs.astro.build/en/guides/integrations-guide/svelte/",
 	"downloads": 29235,
 	"updated": "2025-04-14T08:43:48.078Z",
-	"tags": ["integration"],
 	"runes": true,
 	"github_stars": 50476,
 	"typescript": true,

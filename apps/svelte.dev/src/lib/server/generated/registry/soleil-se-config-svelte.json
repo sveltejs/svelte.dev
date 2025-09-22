@@ -6,7 +6,6 @@
 	"homepage": "https://docs.soleil.se/packages/config-svelte",
 	"downloads": 33,
 	"updated": "2025-03-11T14:11:59.784Z",
-	"tags": ["miscellaneous"],
 	"runes": false,
 	"typescript": true,
 	"version": "1.27.17",

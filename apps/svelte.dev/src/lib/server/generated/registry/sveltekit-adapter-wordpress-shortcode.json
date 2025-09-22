@@ -5,7 +5,6 @@
 	"authors": ["tomatrow"],
 	"downloads": 7,
 	"updated": "2022-10-02T19:46:20.484Z",
-	"tags": ["adapter"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.4.3",

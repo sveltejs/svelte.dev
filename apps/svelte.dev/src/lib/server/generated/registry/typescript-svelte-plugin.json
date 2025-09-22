@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/sveltejs/language-tools/tree/master/packages/typescript-plugin",
 	"downloads": 12015,
 	"updated": "2025-03-06T14:09:32.286Z",
-	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 1298,
 	"typescript": true,

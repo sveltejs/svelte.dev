@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/lagonapp/lagon/tree/main/packages/integrations/sveltekit",
 	"downloads": 7,
 	"updated": "2023-06-29T17:37:54.721Z",
-	"tags": ["adapter"],
 	"runes": false,
 	"github_stars": 1343,
 	"typescript": true,

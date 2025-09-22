@@ -6,7 +6,6 @@
 	"homepage": "https://svelte-material-symbols.vercel.app/",
 	"downloads": 12,
 	"updated": "2023-09-13T20:25:25.605Z",
-	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.1.2",

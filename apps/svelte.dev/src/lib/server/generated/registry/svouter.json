@@ -5,7 +5,6 @@
 	"authors": ["pixelmund"],
 	"downloads": 4,
 	"updated": "2023-11-23T15:28:51.780Z",
-	"tags": ["router"],
 	"runes": true,
 	"typescript": true,
 	"version": "0.2.3",

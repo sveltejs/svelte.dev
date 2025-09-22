@@ -5,7 +5,6 @@
 	"authors": ["easterthebunny"],
 	"downloads": 15,
 	"updated": "2021-01-11T22:00:15.546Z",
-	"tags": ["auth"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.0.3",

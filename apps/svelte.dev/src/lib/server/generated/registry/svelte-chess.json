@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/gtim/svelte-chess#readme",
 	"downloads": 25,
 	"updated": "2023-08-13T12:54:50.425Z",
-	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.11.1",

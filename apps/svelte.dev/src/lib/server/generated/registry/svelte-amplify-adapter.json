@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/mpadrutt/svelte-amplify-adapter#readme",
 	"downloads": 7,
 	"updated": "2024-01-14T22:02:04.993Z",
-	"tags": ["adapter", "server"],
 	"runes": false,
 	"github_stars": 3,
 	"typescript": true,

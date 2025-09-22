@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/wobsoriano/svelte-clerk#readme",
 	"downloads": 1002,
 	"updated": "2025-04-13T15:35:55.187Z",
-	"tags": ["auth"],
 	"runes": true,
 	"github_stars": 108,
 	"typescript": true,

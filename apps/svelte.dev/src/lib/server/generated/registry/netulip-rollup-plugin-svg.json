@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/netulip/rollup-plugin-svg#readme",
 	"downloads": 6,
 	"updated": "2021-04-22T15:04:12.548Z",
-	"tags": ["tooling"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.0.3",

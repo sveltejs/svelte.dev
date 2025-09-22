@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/shinokada/svelte-auth",
 	"downloads": 5,
 	"updated": "2022-03-15T23:14:50.203Z",
-	"tags": ["auth"],
 	"runes": false,
 	"github_stars": 7,
 	"typescript": true,

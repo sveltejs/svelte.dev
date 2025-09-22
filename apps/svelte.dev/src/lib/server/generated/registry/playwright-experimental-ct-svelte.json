@@ -6,7 +6,6 @@
 	"homepage": "https://playwright.dev",
 	"downloads": 11252,
 	"updated": "2025-03-17T17:03:45.100Z",
-	"tags": ["testing"],
 	"runes": false,
 	"github_stars": 71643,
 	"typescript": true,

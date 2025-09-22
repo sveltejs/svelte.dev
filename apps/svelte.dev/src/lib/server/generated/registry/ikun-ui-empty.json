@@ -6,7 +6,6 @@
 	"authors": ["baiwusanyu"],
 	"downloads": 27,
 	"updated": "2025-01-24T03:48:52.936Z",
-	"tags": ["ui"],
 	"svelte_range": "^4.2.12",
 	"runes": false,
 	"last_rune_check_version": "0.2.8",

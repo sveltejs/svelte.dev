@@ -6,7 +6,6 @@
 	"homepage": "https://svault.dev",
 	"downloads": 5,
 	"updated": "2023-07-23T00:08:53.291Z",
-	"tags": ["auth"],
 	"runes": false,
 	"github_stars": 65,
 	"typescript": true,

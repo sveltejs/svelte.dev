@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/lgirma/vdtree-plugins/tree/master/svelte",
 	"downloads": 4,
 	"updated": "2021-07-09T06:45:48.364Z",
-	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.6.0",

@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/astralyazilim/svelte_kit_jwt_session#readme",
 	"downloads": 18,
 	"updated": "2022-11-19T23:30:12.979Z",
-	"tags": ["auth", "server"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.0.22",

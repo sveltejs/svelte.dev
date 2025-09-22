@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/rixo/rollup-plugin-svelte",
 	"downloads": 385,
 	"updated": "2021-05-13T15:25:18.197Z",
-	"tags": ["tooling"],
 	"runes": false,
 	"typescript": true,
 	"version": "1.0.0-8",

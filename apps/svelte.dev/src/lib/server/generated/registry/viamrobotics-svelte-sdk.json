@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/viamrobotics/viam-svelte-sdk#readme",
 	"downloads": 30,
 	"updated": "2025-03-24T18:25:50.465Z",
-	"tags": ["integration"],
 	"runes": true,
 	"github_stars": 0,
 	"typescript": true,

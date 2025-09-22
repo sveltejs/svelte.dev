@@ -5,7 +5,6 @@
 	"authors": ["justboereh"],
 	"downloads": 3,
 	"updated": "2024-07-04T15:19:03.568Z",
-	"tags": ["tooling"],
 	"runes": true,
 	"typescript": true,
 	"version": "0.0.2",

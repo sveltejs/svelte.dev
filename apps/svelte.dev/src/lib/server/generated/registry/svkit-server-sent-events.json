@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/Ionmi/sveltekit-server-sent-events.git",
 	"downloads": 5,
 	"updated": "2025-02-07T11:35:05.537Z",
-	"tags": ["server"],
 	"runes": true,
 	"github_stars": 0,
 	"typescript": true,

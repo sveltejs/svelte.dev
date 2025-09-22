@@ -6,7 +6,6 @@
 	"homepage": "https://svelte-standalone.vercel.app/",
 	"downloads": 248,
 	"updated": "2025-03-12T00:38:04.141Z",
-	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 63,
 	"typescript": true,

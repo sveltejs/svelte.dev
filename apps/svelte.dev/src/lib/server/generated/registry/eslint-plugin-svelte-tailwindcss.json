@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/mikededo/eslint-plugin-svelte-tailwindcss",
 	"downloads": 16,
 	"updated": "2024-11-19T17:09:31.103Z",
-	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 4,
 	"typescript": true,

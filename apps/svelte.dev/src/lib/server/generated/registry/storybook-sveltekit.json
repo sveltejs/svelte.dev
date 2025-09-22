@@ -19,7 +19,6 @@
 	"homepage": "https://github.com/storybookjs/storybook/tree/next/code/frameworks/sveltekit",
 	"downloads": 63397,
 	"updated": "2025-04-02T17:02:52.740Z",
-	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 86367,
 	"typescript": true,

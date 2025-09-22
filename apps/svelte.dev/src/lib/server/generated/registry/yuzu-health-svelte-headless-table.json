@@ -6,7 +6,6 @@
 	"homepage": "https://svelte-headless-table.bryanmylee.com",
 	"downloads": 15,
 	"updated": "2023-12-18T20:19:36.758Z",
-	"tags": ["ui"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.18.5",

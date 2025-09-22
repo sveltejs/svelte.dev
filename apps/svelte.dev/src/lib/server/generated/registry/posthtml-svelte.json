@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/metonym/posthtml-svelte",
 	"downloads": 43,
 	"updated": "2020-05-03T22:43:57.661Z",
-	"tags": ["tooling"],
 	"runes": false,
 	"github_stars": 3,
 	"typescript": true,
