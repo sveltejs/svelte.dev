@@ -5,7 +5,6 @@
 	"authors": ["antony"],
 	"downloads": 6,
 	"updated": "2023-05-25T13:15:47.831Z",
-	"tags": ["adapter", "tooling"],
 	"runes": false,
 	"typescript": true,
 	"version": "0.4.0",

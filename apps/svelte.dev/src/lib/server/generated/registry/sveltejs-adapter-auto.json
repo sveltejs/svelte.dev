@@ -6,7 +6,6 @@
 	"homepage": "https://svelte.dev",
 	"downloads": 244119,
 	"updated": "2025-04-02T04:24:41.948Z",
-	"tags": ["adapter"],
 	"runes": false,
 	"github_stars": 19201,
 	"typescript": true,
