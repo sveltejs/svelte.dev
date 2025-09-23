@@ -21,7 +21,7 @@ const arrToPackages = (arr: string[]) => {
 };
 
 // Netflix style page. Send pre-done cards with categories
-const homepage: { title: string; href?: string; packages: Package[] }[] = [
+const homepage: { title: string; href?: string; alternative?: string; packages: Package[] }[] = [
 	{
 		title: 'Svelte CLI add-ons',
 		href: '/docs/cli',
@@ -29,9 +29,10 @@ const homepage: { title: string; href?: string; packages: Package[] }[] = [
 	}
 ];
 
-for (const { packages, title } of PACKAGES_META.FEATURED) {
+for (const { packages, title, alternative } of PACKAGES_META.FEATURED) {
 	homepage.push({
 		title,
+		alternative,
 		packages: arrToPackages(packages)
 	});
 }

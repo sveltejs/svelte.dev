@@ -8,7 +8,7 @@
 		packages: Package[];
 	}
 
-	let { title, href, packages }: Props = $props();
+	let { title, alternative, href, packages }: Props = $props();
 
 	let content: HTMLElement;
 	let scroller: HTMLElement;
@@ -41,6 +41,9 @@
 			{title}
 			{#if href}
 				(<a {href}>docs</a>)
+			{/if}
+			{#if alternative}
+				(if not using {alternative})
 			{/if}
 		</h2>
 

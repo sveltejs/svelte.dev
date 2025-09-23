@@ -36,7 +36,7 @@ const SV_ADD_CMD: Record<string, { alias: string; options?: string }> = {
 	'@sveltejs/adapter-netlify': { alias: 'sveltekit-adapter', options: 'adapter:netlify' }
 };
 
-const FEATURED: { title: string; packages: string[]; weights?: Record<string, number> }[] = [
+const FEATURED: { title: string; alternative?: string; packages: string[]; weights?: Record<string, number> }[] = [
 	{
 		title: 'Component libraries',
 		packages: [
@@ -92,17 +92,6 @@ const FEATURED: { title: string; packages: string[]; weights?: Record<string, nu
 			'lucide-svelte',
 			'svelte-awesome',
 			'phosphor-svelte'
-		]
-	},
-	{
-		title: 'Router',
-		packages: [
-			'@sveltejs/kit',
-			'svelte-routing',
-			'@roxi/routify',
-			'svelte5-router',
-			'svelte-pathfinder',
-			'universal-router'
 		]
 	},
 	{
@@ -169,17 +158,6 @@ const FEATURED: { title: string; packages: string[]; weights?: Record<string, nu
 		]
 	},
 	{
-		title: 'Data fetching',
-		packages: [
-			'@urql/svelte',
-			'trpc-sveltekit',
-			'sswr',
-			'@tanstack/svelte-query',
-			'@orpc/svelte-query',
-			'houdini'
-		]
-	},
-	{
 		title: 'SEO',
 		packages: ['svelte-meta-tags', '@sveltejs/amp', 'svelte-seo', 'super-sitemap', 'svead']
 	},
@@ -218,7 +196,32 @@ const FEATURED: { title: string; packages: string[]; weights?: Record<string, nu
 	// 	]
 	// },
 	{
+		title: 'Router',
+		alternative: 'SvelteKit',
+		packages: [
+			'@sveltejs/kit',
+			'svelte-routing',
+			'@roxi/routify',
+			'svelte5-router',
+			'svelte-pathfinder',
+			'universal-router'
+		]
+	},
+	{
+		title: 'Data fetching',
+		alternative: 'SvelteKit remote functions',
+		packages: [
+			'@urql/svelte',
+			'trpc-sveltekit',
+			'sswr',
+			'@tanstack/svelte-query',
+			'@orpc/svelte-query',
+			'houdini'
+		]
+	},
+	{
 		title: 'Forms',
+		alternative: 'SvelteKit forms',
 		packages: ['sveltekit-superforms', '@tanstack/svelte-form', 'formsnap', 'felte']
 	}
 ];
