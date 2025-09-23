@@ -1,6 +1,6 @@
 {
 	"name": "lucia",
-	"description": "Simple and flexible authentication library.",
+	"description": "A guide for implementing authentication in JavaScript with examples for SvelteKit.",
 	"repo_url": "https://github.com/pilcrowOnPaper/lucia",
 	"authors": ["pilcrowonpaper"],
 	"homepage": "https://github.com/pilcrowOnPaper/lucia#readme",

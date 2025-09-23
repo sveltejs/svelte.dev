@@ -45,18 +45,6 @@
 
 	<p class="description">{pkg.description}</p>
 
-	{#if pkg.svCmdAlias}
-		<span class="sv-cmd">
-			npx sv add {pkg.svCmdAlias}{pkg.svCmdOptions ? `=${pkg.svCmdOptions}` : ''}
-			<a
-				href={`/docs/cli/${pkg.svCmdAlias}`}
-				target="_blank"
-				rel="noreferrer"
-				aria-label="View Svelte CLI docs"
-				data-icon="external-link"
-			></a>
-		</span>
-	{/if}
 	<p class="stats">
 		{#if pkg.downloads}
 			<span title="{pkg.downloads} downloads">
@@ -75,14 +63,16 @@
 		<span style="flex: 1 1 auto"></span>
 
 		<span style="display: flex; gap: 0.75rem">
-			<a
-				href="https://npmjs.org/package/{pkg.name}"
-				target="_blank"
-				rel="noreferrer"
-				data-icon="npm"
-				aria-label="View on npm"
-				onclick={(e) => e.stopPropagation()}
-			></a>
+			{#if !pkg.svCmdAlias}
+				<a
+					href="https://npmjs.org/package/{pkg.name}"
+					target="_blank"
+					rel="noreferrer"
+					data-icon="npm"
+					aria-label="View on npm"
+					onclick={(e) => e.stopPropagation()}
+				></a>
+			{/if}
 
 			{#if pkg.repo_url}
 				<a
