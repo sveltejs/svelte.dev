@@ -38,7 +38,7 @@ const SV_ADD_CMD: Record<string, { alias: string; options?: string }> = {
 
 const FEATURED: {
 	title: string;
-	alternative?: string;
+	description?: string;
 	packages: string[];
 	weights?: Record<string, number>;
 }[] = [
@@ -202,7 +202,7 @@ const FEATURED: {
 	// },
 	{
 		title: 'Router',
-		alternative: 'SvelteKit',
+		description: 'SvelteKit is recommended, but here are some alternatives.',
 		packages: [
 			'@sveltejs/kit',
 			'svelte-routing',
@@ -214,7 +214,7 @@ const FEATURED: {
 	},
 	{
 		title: 'Data fetching',
-		alternative: 'SvelteKit remote functions',
+		description: 'SvelteKit remote functions are recommended, but here are some alternatives.',
 		packages: [
 			'@urql/svelte',
 			'trpc-sveltekit',
@@ -226,7 +226,7 @@ const FEATURED: {
 	},
 	{
 		title: 'Forms',
-		alternative: 'SvelteKit forms',
+		description: 'SvelteKit forms are recommended, but here are some alternatives.',
 		packages: ['sveltekit-superforms', '@tanstack/svelte-form', 'formsnap', 'felte']
 	}
 ];

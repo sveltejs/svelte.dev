@@ -21,10 +21,10 @@ const arrToPackages = (arr: string[]) => {
 };
 
 // Netflix style page. Send pre-done cards with categories
-const addons: { title: string; href?: string; alternative?: string; packages: Package[] }[] = [
+const addons: { title: string; href?: string; description?: string; packages: Package[] }[] = [
 	{
 		title: 'Svelte CLI add-ons',
-		href: '/docs/cli',
+		description: 'sv, the Svelte CLI, lets you instantly add functionality to a new or existing project.',
 		packages: arrToPackages(PACKAGES_META.SV_ADD.packages).map((pkg) => {
 			pkg.name = pkg.svCmdAlias ?? pkg.name;
 			pkg.homepage = `/docs/cli/${pkg.svCmdAlias}`;
@@ -34,12 +34,12 @@ const addons: { title: string; href?: string; alternative?: string; packages: Pa
 	}
 ];
 
-const homepage: { title: string; href?: string; alternative?: string; packages: Package[] }[] = [];
+const homepage: { title: string; href?: string; description?: string; packages: Package[] }[] = [];
 
-for (const { packages, title, alternative } of PACKAGES_META.FEATURED) {
+for (const { packages, title, description } of PACKAGES_META.FEATURED) {
 	homepage.push({
 		title,
-		alternative,
+		description,
 		packages: arrToPackages(packages)
 	});
 }

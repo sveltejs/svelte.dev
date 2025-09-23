@@ -6,11 +6,10 @@
 	interface Props {
 		title: string;
 		packages: Package[];
-		alternative?: string;
-		href?: string;
+		description?: string;
 	}
 
-	let { title, alternative, href, packages }: Props = $props();
+	let { title, description, packages }: Props = $props();
 
 	let content: HTMLElement;
 	let scroller: HTMLElement;
@@ -41,12 +40,6 @@
 	<header>
 		<h2>
 			{title}
-			{#if href}
-				(<a {href}>docs</a>)
-			{/if}
-			{#if alternative}
-				(if not using {alternative})
-			{/if}
 		</h2>
 
 		{#if !at_start || !at_end}
@@ -59,6 +52,9 @@
 			</div>
 		{/if}
 	</header>
+	{#if description}
+		<h3>{description}</h3>
+	{/if}
 
 	<div class="wrapper">
 		<!-- we duplicate the DOM for the sake of the gradient effect -
@@ -138,6 +134,11 @@
 				background: none;
 			}
 		}
+	}
+
+	h3 {
+		font: var(--sk-font-ui-medium);
+		font-size: 1.5rem;
 	}
 
 	.wrapper {
