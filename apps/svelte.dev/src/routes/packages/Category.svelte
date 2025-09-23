@@ -146,7 +146,8 @@
 	}
 
 	.viewport {
-		overscroll-behavior: contain;
+		overscroll-behavior-x: contain;
+		overscroll-behavior-y: auto;
 		scroll-snap-type: x mandatory;
 
 		&[inert] {
@@ -174,6 +175,7 @@
 			width: 100%;
 			height: 100%;
 			overflow-x: auto;
+			overflow-y: visible;
 			margin: 1rem 0;
 		}
 	}
