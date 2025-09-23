@@ -6,6 +6,8 @@
 	interface Props {
 		title: string;
 		packages: Package[];
+		alternative?: string;
+		href?: string;
 	}
 
 	let { title, alternative, href, packages }: Props = $props();

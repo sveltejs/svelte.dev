@@ -216,17 +216,5 @@
 			text-overflow: ellipsis;
 			max-height: 2lh;
 		}
-
-		.sv-cmd {
-			display: inline-flex;
-			gap: 0.4rem;
-			align-items: center;
-			justify-content: space-between;
-			font: var(--sk-font-ui-small);
-			color: var(--sk-fg-3);
-			background: var(--sk-bg-3);
-			padding: 0.3rem 0.7rem;
-			border-left: 0.3rem solid var(--sk-bg-accent);
-		}
 	}
 </style>
