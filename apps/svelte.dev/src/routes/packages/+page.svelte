@@ -22,11 +22,11 @@
 
 <div class="page content">
 	<div in:fly={{ y: 20 }}>
-		{#each data.addons as { title, description, href, packages }}
-			<Category {title} {description} {href} {packages} />
+		{#each data.addons as { title, description, packages }}
+			<Category {title} {description} {packages} />
 		{/each}
-		{#each data.homepage as { title, description, href, packages }}
-			<Category {title} {description} {href} {packages} />
+		{#each data.homepage as { title, description, packages }}
+			<Category {title} {description} {packages} />
 		{/each}
 	</div>
 </div>
