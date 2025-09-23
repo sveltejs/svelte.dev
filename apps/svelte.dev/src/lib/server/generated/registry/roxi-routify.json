@@ -1,6 +1,7 @@
 {
 	"name": "@roxi/routify",
 	"description": "Automate Svelte routes based on file structure.",
+	"repo_url": "",
 	"authors": ["jakobrosenberg"],
 	"downloads": 3814,
 	"updated": "2025-09-16T10:15:55.135Z",
