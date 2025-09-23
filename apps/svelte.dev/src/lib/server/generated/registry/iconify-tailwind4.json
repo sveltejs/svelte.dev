@@ -4,10 +4,10 @@
 	"repo_url": "https://github.com/iconify/iconify-tailwind",
 	"authors": ["cyberalien"],
 	"homepage": "https://iconify.design/",
-	"downloads": 3889,
+	"downloads": 11128,
 	"updated": "2025-02-28T13:34:23.013Z",
 	"runes": false,
-	"github_stars": 4,
+	"github_stars": 9,
 	"typescript": true,
 	"version": "1.0.6",
 	"last_rune_check_version": "1.0.6"

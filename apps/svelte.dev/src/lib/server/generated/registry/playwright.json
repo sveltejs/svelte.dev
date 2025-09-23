@@ -4,11 +4,11 @@
 	"repo_url": "https://github.com/microsoft/playwright",
 	"authors": ["pavelfeldman", "yurys", "dgozman-ms", "playwright-bot"],
 	"homepage": "https://playwright.dev",
-	"downloads": 13453465,
-	"updated": "2025-03-17T17:02:50.323Z",
+	"downloads": 20565909,
+	"updated": "2025-09-23T09:57:04.991Z",
 	"runes": false,
-	"github_stars": 71643,
+	"github_stars": 77382,
 	"typescript": true,
-	"version": "1.51.1",
+	"version": "1.55.1",
 	"last_rune_check_version": "1.51.1"
 }

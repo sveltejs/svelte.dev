@@ -1,7 +1,7 @@
 {
 	"name": "@storyblok/svelte",
 	"description": "Connect Svelte apps to Storyblok CMS.",
-	"repo_url": "https://github.com/storyblok/storyblok-svelte",
+	"repo_url": "https://github.com/storyblok/monoblok",
 	"authors": [
 		"delooks",
 		"dominikangerer",
@@ -10,15 +10,16 @@
 		"samuells",
 		"jpcfreire",
 		"christianzoppisb",
-		"alvarosaburido"
+		"alvarosaburido",
+		"storyblok-dx"
 	],
-	"homepage": "https://github.com/storyblok/storyblok-svelte",
-	"downloads": 725,
-	"updated": "2025-03-31T09:03:12.639Z",
+	"homepage": "https://github.com/storyblok/monoblok/tree/main/packages/svelte#readme",
+	"downloads": 884,
+	"updated": "2025-09-15T13:02:29.863Z",
 	"runes": true,
-	"github_stars": 84,
+	"github_stars": 20,
 	"typescript": true,
-	"version": "5.0.1",
+	"version": "5.2.9",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.20.2",
 	"last_rune_check_version": "5.0.1"

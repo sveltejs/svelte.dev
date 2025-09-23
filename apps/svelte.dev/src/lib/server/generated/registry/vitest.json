@@ -2,13 +2,12 @@
 	"name": "vitest",
 	"description": "Next generation testing framework powered by Vite.",
 	"repo_url": "https://github.com/vitest-dev/vitest",
-	"authors": ["antfu", "patak", "oreanno", "vitestbot"],
+	"authors": ["antfu", "patak", "oreanno", "yyx990803"],
 	"homepage": "https://github.com/vitest-dev/vitest#readme",
-	"downloads": 10222892,
-	"updated": "2025-03-31T10:19:23.023Z",
+	"downloads": 15660081,
+	"updated": "2025-06-17T17:54:25.895Z",
 	"runes": false,
-	"github_stars": 14143,
 	"typescript": true,
-	"version": "3.1.1",
+	"version": "3.2.4",
 	"last_rune_check_version": "3.1.1"
 }

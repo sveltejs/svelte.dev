@@ -2,13 +2,13 @@
 	"name": "@skeletonlabs/skeleton",
 	"description": "Comprehensive UI component library for Svelte with themes and utilities powered by Tailwind CSS.",
 	"repo_url": "https://github.com/skeletonlabs/skeleton",
-	"authors": ["skeletonadmin", "endigo9740", "teknikal", "cokakoala"],
+	"authors": ["skeletonadmin", "endigo9740", "cokakoala", "hugoskokos"],
 	"homepage": "https://github.com/skeletonlabs/skeleton#readme",
-	"downloads": 26004,
-	"updated": "2025-04-03T19:25:14.810Z",
+	"downloads": 20086,
+	"updated": "2025-09-23T18:47:51.489Z",
 	"runes": false,
-	"github_stars": 5453,
+	"github_stars": 5668,
 	"typescript": false,
-	"version": "3.1.2",
+	"version": "3.2.1",
 	"last_rune_check_version": "3.1.2"
 }

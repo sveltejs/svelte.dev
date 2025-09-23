@@ -4,12 +4,12 @@
 	"repo_url": "https://github.com/pngwn/MDsveX",
 	"authors": ["evilpingwin"],
 	"homepage": "https://github.com/pngwn/MDsveX#readme",
-	"downloads": 37885,
-	"updated": "2024-08-17T01:30:39.693Z",
+	"downloads": 49614,
+	"updated": "2025-05-08T23:01:30.005Z",
 	"runes": false,
-	"github_stars": 2634,
+	"github_stars": 2815,
 	"typescript": true,
-	"version": "0.12.3",
+	"version": "0.12.6",
 	"svelte_range": "^3.56.0 || ^4.0.0 || ^5.0.0-next.120",
 	"last_rune_check_version": "0.12.3"
 }

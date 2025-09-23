@@ -4,12 +4,11 @@
 	"repo_url": "https://github.com/inokawa/virtua",
 	"authors": ["inokawa"],
 	"homepage": "https://github.com/inokawa/virtua#readme",
-	"downloads": 90400,
-	"updated": "2025-03-08T01:58:08.375Z",
+	"downloads": 143893,
+	"updated": "2025-09-23T08:28:40.234Z",
 	"runes": true,
-	"github_stars": 2680,
 	"typescript": true,
-	"version": "0.40.3",
+	"version": "0.43.4",
 	"svelte_range": ">=5.0",
 	"last_rune_check_version": "0.40.3"
 }

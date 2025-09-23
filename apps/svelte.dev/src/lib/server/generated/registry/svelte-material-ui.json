@@ -3,12 +3,10 @@
 	"description": "Build Material Design UI components for Svelte applications.",
 	"repo_url": "https://github.com/hperrin/svelte-material-ui",
 	"authors": ["hperrin"],
-	"downloads": 3002,
-	"updated": "2024-12-22T22:58:40.767Z",
+	"downloads": 3498,
+	"updated": "2025-08-13T00:55:30.427Z",
 	"runes": false,
-	"github_stars": 3364,
-	"homepage": "https://sveltematerialui.com/",
 	"typescript": false,
-	"version": "8.0.0-beta.3",
+	"version": "8.0.3",
 	"last_rune_check_version": "8.0.0-beta.3"
 }

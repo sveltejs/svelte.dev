@@ -1,7 +1,7 @@
 {
 	"name": "@prismicio/svelte",
 	"description": "Displays Prismic content within Svelte applications.",
-	"repo_url": "https://github.com/prismicio/prismic-svelte",
+	"repo_url": "ssh://git@github.com/prismicio/prismic-svelte",
 	"authors": [
 		"chrrrs",
 		"samuelhorn",
@@ -30,12 +30,12 @@
 		"greenwalker90"
 	],
 	"homepage": "https://github.com/prismicio/prismic-svelte#readme",
-	"downloads": 664,
-	"updated": "2025-03-19T20:06:48.540Z",
+	"downloads": 3111,
+	"updated": "2025-06-04T23:46:10.656Z",
 	"runes": false,
-	"github_stars": 24,
+	"github_stars": 26,
 	"typescript": true,
-	"version": "1.5.0",
+	"version": "2.0.0",
 	"svelte_range": ">=4 || ^5.0.0-next.1",
 	"kit_range": ">=1",
 	"last_rune_check_version": "1.5.0"

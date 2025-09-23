@@ -4,12 +4,11 @@
 	"repo_url": "https://github.com/sveltejs/kit",
 	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
 	"homepage": "https://svelte.dev",
-	"downloads": 19638,
-	"updated": "2024-12-12T22:34:24.780Z",
+	"downloads": 28204,
+	"updated": "2025-08-18T18:58:54.728Z",
 	"runes": false,
-	"github_stars": 19201,
 	"typescript": true,
-	"version": "0.4.4",
+	"version": "0.8.1",
 	"svelte_range": "^5.0.0",
 	"last_rune_check_version": "0.4.4"
 }

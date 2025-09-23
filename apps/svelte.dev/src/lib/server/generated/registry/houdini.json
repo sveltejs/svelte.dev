@@ -4,11 +4,11 @@
 	"repo_url": "https://github.com/HoudiniGraphql/houdini",
 	"authors": ["aaivazis", "jycouet"],
 	"homepage": "https://github.com/HoudiniGraphql/houdini",
-	"downloads": 5214,
-	"updated": "2025-03-20T16:24:18.105Z",
+	"downloads": 7000,
+	"updated": "2025-08-02T15:47:14.762Z",
 	"runes": false,
-	"github_stars": 946,
+	"github_stars": 963,
 	"typescript": true,
-	"version": "1.5.4",
+	"version": "1.5.10",
 	"last_rune_check_version": "1.5.4"
 }
