@@ -1,6 +1,6 @@
 {
 	"name": "flowbite-svelte",
-	"description": "Flowbite component library for Svelte.",
+	"description": "Official Svelte components built for Flowbite and Tailwind CSS.",
 	"repo_url": "https://github.com/themesberg/flowbite-svelte",
 	"authors": ["jjagielka", "zoliszogyenyi", "shinichiokada"],
 	"homepage": "https://flowbite-svelte.com/",
