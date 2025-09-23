@@ -1,6 +1,6 @@
 {
 	"name": "shadcn-svelte",
-	"description": "Add components to Svelte apps with Tailwind CSS.",
+	"description": "shadcn/ui, but for Svelte.",
 	"repo_url": "https://github.com/huntabyte/shadcn-svelte",
 	"authors": ["huntabyte"],
 	"homepage": "https://github.com/huntabyte/shadcn-svelte#readme",

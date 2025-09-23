@@ -1,6 +1,6 @@
 {
 	"name": "layercake",
-	"description": "Build reusable graphics with Svelte, compatible with Svelte 3 through 5.",
+	"description": "Build reusable graphics with Svelte.",
 	"repo_url": "https://github.com/mhkeller/layercake",
 	"authors": ["mhkeller0"],
 	"homepage": "https://layercake.graphics/",

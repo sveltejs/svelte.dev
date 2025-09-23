@@ -1,6 +1,6 @@
 {
 	"name": "sswr",
-	"description": "Fetch data with SWR strategy for Svelte, improving performance.",
+	"description": "Svelte stale while revalidate (SWR) data fetching strategy.",
 	"repo_url": "https://github.com/ConsoleTVs/sswr",
 	"authors": ["consoletvs"],
 	"downloads": 403164,

@@ -1,6 +1,6 @@
 {
 	"name": "playwright",
-	"description": "A high-level API to automate web browsers, testing.",
+	"description": "A high-level API to automate web browsers for testing.",
 	"repo_url": "https://github.com/microsoft/playwright",
 	"authors": ["pavelfeldman", "yurys", "dgozman-ms", "playwright-bot"],
 	"homepage": "https://playwright.dev",

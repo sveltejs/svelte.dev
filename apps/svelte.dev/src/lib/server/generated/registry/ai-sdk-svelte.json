@@ -1,6 +1,6 @@
 {
 	"name": "@ai-sdk/svelte",
-	"description": "Provide Svelte UI components for AI SDK.",
+	"description": "Svelte UI components for the AI SDK.",
 	"repo_url": "https://github.com/vercel/ai",
 	"authors": ["jaredpalmer", "vercel-release-bot"],
 	"homepage": "https://sdk.vercel.ai/docs",

@@ -1,8 +1,9 @@
 {
 	"name": "formsnap",
 	"description": "Wraps sveltekit-superforms with accessible form components.",
-	"repo_url": "",
+	"repo_url": "https://github.com/svecosystem/formsnap",
 	"authors": ["huntabyte"],
+	"homepage": "https://formsnap.dev",
 	"downloads": 35777,
 	"updated": "2025-04-09T02:30:42.332Z",
 	"runes": true,

@@ -1,6 +1,6 @@
 {
 	"name": "flowbite-svelte",
-	"description": "Build UI with Flowbite components for Svelte.",
+	"description": "Flowbite component library for Svelte.",
 	"repo_url": "https://github.com/themesberg/flowbite-svelte",
 	"authors": ["jjagielka", "zoliszogyenyi", "shinichiokada"],
 	"homepage": "https://flowbite-svelte.com/",

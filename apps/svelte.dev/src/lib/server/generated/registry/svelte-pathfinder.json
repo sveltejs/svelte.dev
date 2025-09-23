@@ -1,6 +1,6 @@
 {
 	"name": "svelte-pathfinder",
-	"description": "Create state-based, advanced router for SvelteJS.",
+	"description": "Tiny, state-based, advanced router for SvelteJS.",
 	"repo_url": "https://github.com/sveltetools/svelte-pathfinder",
 	"authors": ["paulmaly"],
 	"homepage": "https://github.com/sveltetools/svelte-pathfinder#readme",

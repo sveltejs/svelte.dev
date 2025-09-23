@@ -164,7 +164,7 @@ const FEATURED: { title: string; alternative?: string; packages: string[]; weigh
 	{
 		title: 'Auth',
 		packages: [
-			'lucia',
+			'better-auth',
 			'@auth/sveltekit',
 			'altcha',
 			'svelte-session-manager',

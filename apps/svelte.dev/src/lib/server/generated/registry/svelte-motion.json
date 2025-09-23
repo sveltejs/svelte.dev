@@ -1,6 +1,6 @@
 {
 	"name": "svelte-motion",
-	"description": "Animate Svelte components with framer-motion.",
+	"description": "An animation library for Svelte based on framer-motion.",
 	"repo_url": "https://github.com/micha-lmxt/svelte-motion",
 	"authors": ["micha-lmxt"],
 	"homepage": "https://github.com/micha-lmxt/svelte-motion#readme",
