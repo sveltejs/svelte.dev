@@ -22,8 +22,8 @@
 
 <div class="page content">
 	<div in:fly={{ y: 20 }}>
-		{#each data.homepage as { title, packages }}
-			<Category {title} {packages} />
+		{#each data.homepage as { title, href, packages }}
+			<Category {title} {href} {packages} />
 		{/each}
 	</div>
 </div>

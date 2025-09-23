@@ -8,7 +8,7 @@
 		packages: Package[];
 	}
 
-	let { title, packages }: Props = $props();
+	let { title, href, packages }: Props = $props();
 
 	let content: HTMLElement;
 	let scroller: HTMLElement;
@@ -37,7 +37,12 @@
 
 <section class="category">
 	<header>
-		<h2>{title}</h2>
+		<h2>
+			{title}
+			{#if href}
+				(<a {href}>docs</a>)
+			{/if}
+		</h2>
 
 		{#if !at_start || !at_end}
 			<div class="controls">
