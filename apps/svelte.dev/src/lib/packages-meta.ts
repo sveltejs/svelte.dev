@@ -1,6 +1,6 @@
 const SV_ADD = {
 	// Keeping the same order as in sv
-	// https://github.com/jycouet/cli/blob/main/packages/addons/_config/official.ts#L16-L17
+	// https://github.com/sveltejs/cli/blob/main/packages/addons/_config/official.ts#L16-L17
 	packages: [
 		'prettier',
 		'eslint',
@@ -40,7 +40,6 @@ const FEATURED: {
 	title: string;
 	description?: string;
 	packages: string[];
-	weights?: Record<string, number>;
 }[] = [
 	{
 		title: 'Component libraries',
@@ -55,10 +54,7 @@ const FEATURED: {
 			'carbon-components-svelte',
 			'@sveltestrap/sveltestrap',
 			'daisyui'
-		],
-		weights: {
-			'shadcn-svelte': 2
-		}
+		]
 	},
 	{
 		title: 'Individual components',
