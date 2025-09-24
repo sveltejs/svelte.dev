@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/MIERUNE/svelte-maplibre-gl",
 	"authors": ["mierune_iguchi", "ciscorn"],
 	"homepage": "https://svelte-maplibre-gl.mierune.dev/",
-	"downloads": 767,
+	"downloads": 728,
 	"updated": "2025-07-09T13:47:31.490Z",
 	"runes": true,
 	"typescript": true,

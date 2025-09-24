@@ -4,12 +4,12 @@
 	"repo_url": "https://github.com/vercel/ai",
 	"authors": ["jaredpalmer", "vercel-release-bot", "matheuss", "matt.straka"],
 	"homepage": "https://ai-sdk.dev/docs",
-	"downloads": 330039,
-	"updated": "2025-09-23T18:41:06.766Z",
+	"downloads": 329451,
+	"updated": "2025-09-23T23:30:22.034Z",
 	"runes": true,
-	"github_stars": 17950,
+	"github_stars": 17984,
 	"typescript": true,
-	"version": "3.0.50",
+	"version": "3.0.51",
 	"svelte_range": "^5.0.0",
 	"last_rune_check_version": "2.1.9"
 }

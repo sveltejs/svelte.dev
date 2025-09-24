@@ -4,12 +4,13 @@
 	"repo_url": "https://github.com/RobBrazier/svelte-awesome",
 	"authors": ["robbrazier"],
 	"homepage": "https://github.com/RobBrazier/svelte-awesome#readme",
-	"downloads": 9063,
+	"downloads": 8495,
 	"updated": "2024-10-22T12:51:36.311Z",
 	"runes": false,
 	"typescript": true,
 	"version": "3.3.5",
 	"svelte_range": ">= 3.43.1 < 6",
 	"kit_range": "^2.7.2",
-	"last_rune_check_version": "3.3.5"
+	"last_rune_check_version": "3.3.5",
+	"github_stars": 502
 }

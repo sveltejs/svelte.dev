@@ -4,7 +4,7 @@
 	"repo_url": "ssh://git@github.com/sveltejs/svelte-loader",
 	"authors": ["nikku", "rich_harris", "conduitry", "svelte-admin", "dummdidumm"],
 	"homepage": "https://github.com/sveltejs/svelte-loader#readme",
-	"downloads": 45541,
+	"downloads": 45488,
 	"updated": "2024-10-09T21:13:47.738Z",
 	"runes": false,
 	"typescript": false,

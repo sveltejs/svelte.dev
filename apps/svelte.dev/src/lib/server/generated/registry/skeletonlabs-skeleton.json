@@ -4,11 +4,11 @@
 	"repo_url": "https://github.com/skeletonlabs/skeleton",
 	"authors": ["skeletonadmin", "endigo9740", "cokakoala", "hugoskokos"],
 	"homepage": "https://github.com/skeletonlabs/skeleton#readme",
-	"downloads": 20086,
-	"updated": "2025-09-23T18:47:51.489Z",
+	"downloads": 20602,
+	"updated": "2025-09-23T23:06:44.900Z",
 	"runes": false,
-	"github_stars": 5668,
+	"github_stars": 5667,
 	"typescript": false,
-	"version": "3.2.1",
+	"version": "3.2.2",
 	"last_rune_check_version": "3.1.2"
 }

@@ -4,7 +4,7 @@
 	"repo_url": "ssh://git@github.com/artiebits/svelte-seo",
 	"authors": ["artiebits"],
 	"homepage": "https://github.com/artiebits/svelte-seo#readme",
-	"downloads": 1105,
+	"downloads": 1049,
 	"updated": "2024-05-07T18:25:38.747Z",
 	"runes": false,
 	"typescript": true,

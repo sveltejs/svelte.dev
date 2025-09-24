@@ -4,12 +4,12 @@
 	"repo_url": "https://github.com/saadeghi/daisyui",
 	"authors": ["saadeghi"],
 	"homepage": "https://daisyui.com",
-	"downloads": 473434,
-	"updated": "2025-09-22T08:15:28.788Z",
+	"downloads": 473626,
+	"updated": "2025-09-24T16:58:14.742Z",
 	"runes": false,
-	"github_stars": 38755,
+	"github_stars": 38765,
 	"typescript": false,
-	"version": "5.1.14",
+	"version": "5.1.18",
 	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
 	"last_rune_check_version": "1.3.0"
 }

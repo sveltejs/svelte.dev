@@ -15,12 +15,12 @@
 		"zeeg"
 	],
 	"homepage": "https://github.com/getsentry/sentry-javascript/tree/master/packages/svelte",
-	"downloads": 84123,
-	"updated": "2025-09-23T09:20:22.065Z",
+	"downloads": 85570,
+	"updated": "2025-09-24T15:56:45.729Z",
 	"runes": false,
-	"github_stars": 8422,
+	"github_stars": 8421,
 	"typescript": true,
-	"version": "10.14.0",
+	"version": "10.15.0",
 	"svelte_range": "3.x || 4.x || 5.x",
 	"last_rune_check_version": "9.12.0"
 }

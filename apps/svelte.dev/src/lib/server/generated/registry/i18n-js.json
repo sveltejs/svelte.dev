@@ -1,14 +1,14 @@
 {
 	"name": "i18n-js",
 	"description": "A small library to provide i18n translations in JavaScript.",
-	"repo_url": "https://github.com/themesberg/flowbite-svelte",
-	"authors": ["jjagielka", "zoliszogyenyi", "shinichiokada"],
-	"homepage": "https://flowbite-svelte.com/",
-	"downloads": 41138,
-	"updated": "2025-09-23T06:12:38.140Z",
+	"repo_url": "https://github.com/fnando/i18n",
+	"authors": ["fnando"],
+	"homepage": "https://github.com/fnando/i18n#readme",
+	"downloads": 353141,
+	"updated": "2024-12-14T00:45:20.293Z",
 	"runes": false,
-	"github_stars": 2616,
+	"github_stars": 210,
 	"typescript": true,
-	"version": "1.13.16",
+	"version": "4.5.1",
 	"last_rune_check_version": "4.5.0"
 }

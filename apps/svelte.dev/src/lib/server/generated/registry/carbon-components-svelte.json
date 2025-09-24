@@ -4,10 +4,10 @@
 	"repo_url": "https://github.com/carbon-design-system/carbon-components-svelte",
 	"authors": ["metonym"],
 	"homepage": "https://svelte.carbondesignsystem.com/",
-	"downloads": 14752,
+	"downloads": 14886,
 	"updated": "2025-09-05T16:18:10.948Z",
 	"runes": false,
-	"github_stars": 2824,
+	"github_stars": 2825,
 	"typescript": true,
 	"version": "0.89.7",
 	"last_rune_check_version": "0.88.4"

@@ -4,10 +4,10 @@
 	"repo_url": "https://github.com/huntabyte/shadcn-svelte",
 	"authors": ["huntabyte"],
 	"homepage": "https://github.com/huntabyte/shadcn-svelte#readme",
-	"downloads": 4921,
+	"downloads": 4907,
 	"updated": "2025-08-15T15:16:29.387Z",
 	"runes": false,
-	"github_stars": 7436,
+	"github_stars": 7437,
 	"typescript": false,
 	"version": "1.0.7",
 	"last_rune_check_version": "0.14.0"

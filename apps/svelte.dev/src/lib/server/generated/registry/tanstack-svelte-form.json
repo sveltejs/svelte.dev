@@ -4,11 +4,11 @@
 	"repo_url": "https://github.com/TanStack/form",
 	"authors": ["tannerlinsley", "kylemathews"],
 	"homepage": "https://tanstack.com/form",
-	"downloads": 1426,
-	"updated": "2025-09-19T14:43:39.868Z",
+	"downloads": 1481,
+	"updated": "2025-09-24T14:31:06.836Z",
 	"runes": false,
 	"typescript": false,
-	"version": "1.23.0",
+	"version": "1.23.2",
 	"svelte_range": "^5.0.0",
 	"last_rune_check_version": "1.3.0"
 }

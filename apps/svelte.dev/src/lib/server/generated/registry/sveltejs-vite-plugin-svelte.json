@@ -4,11 +4,11 @@
 	"repo_url": "https://github.com/sveltejs/vite-plugin-svelte",
 	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
 	"homepage": "https://github.com/sveltejs/vite-plugin-svelte#readme",
-	"downloads": 856674,
-	"updated": "2025-09-09T15:08:00.037Z",
+	"downloads": 854258,
+	"updated": "2025-09-24T13:16:28.132Z",
 	"runes": false,
 	"typescript": true,
-	"version": "6.2.0",
+	"version": "6.2.1",
 	"svelte_range": "^5.0.0",
 	"last_rune_check_version": "5.0.3"
 }

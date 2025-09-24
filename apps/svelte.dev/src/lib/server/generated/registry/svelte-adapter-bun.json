@@ -4,11 +4,12 @@
 	"repo_url": "https://github.com/gornostay25/svelte-adapter-bun",
 	"authors": ["gornostay25"],
 	"homepage": "https://github.com/gornostay25/svelte-adapter-bun#readme",
-	"downloads": 4343,
+	"downloads": 4159,
 	"updated": "2025-09-22T00:29:46.241Z",
 	"runes": false,
 	"typescript": true,
 	"version": "1.0.0",
 	"kit_range": "^1.30.4",
-	"last_rune_check_version": "0.5.2"
+	"last_rune_check_version": "0.5.2",
+	"github_stars": 585
 }

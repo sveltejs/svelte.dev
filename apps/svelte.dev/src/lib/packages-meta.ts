@@ -194,7 +194,7 @@ const FEATURED: {
 			'@testing-library/svelte',
 			'playwright',
 			'vitest',
-			'svelte-inspect',
+			'svelte-inspect-value',
 			'svelte-render-scan'
 		]
 	},
