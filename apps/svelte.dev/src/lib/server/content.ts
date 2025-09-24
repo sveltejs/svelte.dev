@@ -213,6 +213,12 @@ export interface Package {
 	svCmdOptions?: string;
 }
 
+export interface Category {
+	title: string;
+	description?: string;
+	packages: Package[];
+}
+
 /**
  * Checks if a semver range supports Svelte versions 3.x, 4.x, and 5.x
  */

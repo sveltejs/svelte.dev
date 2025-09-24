@@ -1,5 +1,5 @@
 import { PACKAGES_META } from '$lib/packages-meta';
-import { registry, type Package } from '$lib/server/content';
+import { registry, type Category, type Package } from '$lib/server/content';
 
 export const prerender = false;
 
@@ -21,7 +21,7 @@ const arrToPackages = (arr: string[]) => {
 };
 
 // Netflix style page. Send pre-done cards with categories
-const addons: { title: string; href?: string; description?: string; packages: Package[] }[] = [
+const addons: Category[] = [
 	{
 		title: 'Svelte CLI add-ons',
 		description:
@@ -35,7 +35,7 @@ const addons: { title: string; href?: string; description?: string; packages: Pa
 	}
 ];
 
-const homepage: { title: string; href?: string; description?: string; packages: Package[] }[] = [];
+const homepage: Category[] = [];
 
 for (const { packages, title, description } of PACKAGES_META.FEATURED) {
 	homepage.push({
@@ -47,7 +47,6 @@ for (const { packages, title, description } of PACKAGES_META.FEATURED) {
 
 export async function load() {
 	return {
-		packages: registry,
 		addons,
 		homepage
 	};
