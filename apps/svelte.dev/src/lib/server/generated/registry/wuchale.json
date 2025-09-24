@@ -1,0 +1,14 @@
+{
+	"name": "wuchale",
+	"description": "wuchale is a compile-time internationalization (i18n) toolkit that requires zero code changes.",
+	"repo_url": "https://github.com/themesberg/flowbite-svelte",
+	"authors": ["jjagielka", "zoliszogyenyi", "shinichiokada"],
+	"homepage": "https://flowbite-svelte.com/",
+	"downloads": 41138,
+	"updated": "2025-09-23T06:12:38.140Z",
+	"runes": false,
+	"github_stars": 2616,
+	"typescript": true,
+	"version": "0.16.4",
+	"last_rune_check_version": "0.16.3"
+}
