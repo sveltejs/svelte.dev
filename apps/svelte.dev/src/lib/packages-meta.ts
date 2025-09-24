@@ -46,7 +46,7 @@ const FEATURED: {
 		packages: [
 			'shadcn-svelte',
 			'bits-ui',
-			'@melt-ui/svelte',
+			'melt',
 			'@skeletonlabs/skeleton',
 			'@ark-ui/svelte',
 			'flowbite-svelte',

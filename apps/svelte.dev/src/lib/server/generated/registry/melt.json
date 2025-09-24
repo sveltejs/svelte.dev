@@ -1,0 +1,16 @@
+{
+	"name": "melt",
+	"description": "Build accessible UI components for Svelte.",
+	"repo_url": "https://github.com/melt-ui/next-gen",
+	"authors": ["tglide_personal"],
+	"homepage": "https://next.melt-ui.com/",
+	"downloads": 3650,
+	"updated": "2025-03-28T21:05:57.124Z",
+	"runes": true,
+	"github_stars": 239,
+	"typescript": true,
+	"version": "0.40.2",
+	"svelte_range": "^5.30.1",
+	"kit_range": "^2.0.0",
+	"last_rune_check_version": "0.40.0"
+}
