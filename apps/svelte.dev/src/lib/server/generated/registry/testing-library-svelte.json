@@ -1,6 +1,6 @@
 {
-	"name": "vitest",
-	"description": "Next generation testing framework powered by Vite.",
+	"name": "@testing-library/svelte",
+	"description": "Simple Svelte testing utilities.",
 	"repo_url": "https://github.com/saadeghi/daisyui",
 	"authors": ["saadeghi"],
 	"homepage": "https://daisyui.com",
@@ -9,7 +9,7 @@
 	"runes": false,
 	"github_stars": 38755,
 	"typescript": true,
-	"version": "3.2.4",
+	"version": "5.2.8",
 	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
-	"last_rune_check_version": "3.2.3"
+	"last_rune_check_version": "5.2.7"
 }

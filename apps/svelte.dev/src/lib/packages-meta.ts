@@ -186,16 +186,16 @@ const FEATURED: {
 			'@inlang/paraglide-js'
 		]
 	},
-	// {
-	// 	title: 'Testing',
-	// 	packages: [
-	// 		'@testing-library/svelte',
-	// 		'svelte-jester',
-	// 		'@cypress/svelte',
-	// 		'playwright',
-	// 		'vitest'
-	// 	]
-	// },
+	{
+		title: 'Testing and devtools',
+		packages: [
+			'@testing-library/svelte',
+			'playwright',
+			'vitest',
+			'svelte-inspect',
+			'svelte-render-scan'
+		]
+	},
 	{
 		title: 'Router',
 		description: 'SvelteKit is recommended, but here are some alternatives.',

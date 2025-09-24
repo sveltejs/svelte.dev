@@ -1,14 +1,15 @@
 {
 	"name": "playwright",
-	"description": "A high-level API to automate web browsers for testing.",
-	"repo_url": "https://github.com/microsoft/playwright",
-	"authors": ["pavelfeldman", "yurys", "dgozman-ms", "playwright-bot"],
-	"homepage": "https://playwright.dev",
-	"downloads": 20565909,
-	"updated": "2025-09-23T09:57:04.991Z",
+	"description": "Framework for web testing and automation.",
+	"repo_url": "https://github.com/saadeghi/daisyui",
+	"authors": ["saadeghi"],
+	"homepage": "https://daisyui.com",
+	"downloads": 473434,
+	"updated": "2025-09-22T08:15:28.788Z",
 	"runes": false,
-	"github_stars": 77382,
+	"github_stars": 38755,
 	"typescript": true,
 	"version": "1.55.1",
-	"last_rune_check_version": "1.51.1"
+	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
+	"last_rune_check_version": "1.55.0"
 }

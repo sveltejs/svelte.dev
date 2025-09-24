@@ -1,15 +1,15 @@
 {
-	"name": "vitest",
-	"description": "Next generation testing framework powered by Vite.",
+	"name": "svelte-render-scan",
+	"description": "Visual debugging tool for Svelte applications.",
 	"repo_url": "https://github.com/saadeghi/daisyui",
 	"authors": ["saadeghi"],
 	"homepage": "https://daisyui.com",
 	"downloads": 473434,
 	"updated": "2025-09-22T08:15:28.788Z",
-	"runes": false,
+	"runes": true,
 	"github_stars": 38755,
 	"typescript": true,
-	"version": "3.2.4",
-	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
-	"last_rune_check_version": "3.2.3"
+	"version": "1.1.0",
+	"svelte_range": "^5.0.0",
+	"last_rune_check_version": "1.1.0"
 }
