@@ -1,0 +1,15 @@
+{
+	"name": "@poppanator/sveltekit-svg",
+	"description": "SvelteKit plugin that makes it possible to import SVG files as Svelte components, inline SVG code or urls.",
+	"repo_url": "https://github.com/zerodevx/svelte-img",
+	"authors": ["zerodevx"],
+	"homepage": "https://github.com/zerodevx/svelte-img#readme",
+	"downloads": 577,
+	"updated": "2024-09-27T10:18:26.563Z",
+	"runes": false,
+	"typescript": true,
+	"version": "6.0.0",
+	"svelte_range": ">=5.x",
+	"kit_range": "^6.0.0",
+	"last_rune_check_version": "4.0.0"
+}

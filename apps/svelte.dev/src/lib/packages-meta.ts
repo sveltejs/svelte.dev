@@ -149,12 +149,10 @@ const FEATURED: {
 		title: 'Media',
 		packages: [
 			'@sveltejs/enhanced-img',
-			'@vime/svelte',
-			'@uppy/svelte',
 			'@unpic/svelte',
-			'unlazy-svelte',
+			'@poppanator/sveltekit-svg',
+			'@uppy/svelte',
 			'scrolly-video',
-			'@zerodevx/svelte-img',
 			'svelte-easy-crop'
 		]
 	},
@@ -177,11 +175,7 @@ const FEATURED: {
 	},
 	{
 		title: 'Internationalization (i18n)',
-		packages: [
-			'@inlang/paraglide-js',
-			'wuchale',
-			'i18n-js'
-		]
+		packages: ['@inlang/paraglide-js', 'wuchale', 'i18n-js']
 	},
 	{
 		title: 'Third party services',
