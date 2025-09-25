@@ -25,7 +25,7 @@ const addons: { title: string; href?: string; description?: string; packages: Pa
 	{
 		title: 'Svelte CLI add-ons',
 		description:
-			'sv, the Svelte CLI, lets you instantly add functionality to a new or existing project.',
+			'<a href="/docs/cli">sv, the Svelte CLI</a>, lets you instantly add functionality to a new or existing project.',
 		packages: arrToPackages(PACKAGES_META.SV_ADD.packages).map((pkg) => {
 			pkg.name = pkg.svCmdAlias ?? pkg.name;
 			pkg.homepage = `/docs/cli/${pkg.svCmdAlias}`;

@@ -53,7 +53,7 @@
 		{/if}
 	</header>
 	{#if description}
-		<h3>{description}</h3>
+		<h3>{@html description}</h3>
 	{/if}
 
 	<div class="wrapper">
