@@ -81,7 +81,7 @@ const FEATURED: {
 			'amplify-adapter',
 			'svelte-adapter-deno',
 			'svelte-adapter-appengine',
-			'sveltekit-adapter-browser-extension',
+			'sveltekit-adapter-chrome-extension',
 			'svelte-adapter-azure-swa'
 		]
 	},
