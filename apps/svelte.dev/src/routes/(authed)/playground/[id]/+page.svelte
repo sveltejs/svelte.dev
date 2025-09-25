@@ -97,10 +97,12 @@
 	}
 
 	async function download() {
-		const { files: components, imports } = repl.toJSON();
+		const { files: components, imports, tailwind } = repl.toJSON();
 
 		const files: Array<{ path: string; data: string }> = await (
-			await fetch('/svelte-template.json')
+			tailwind
+				? await fetch('/svelte-tailwind-template.json')
+				: await fetch('/svelte-template.json')
 		).json();
 
 		if (imports.length > 0) {
