@@ -175,7 +175,7 @@ const FEATURED: {
 	},
 	{
 		title: 'Internationalization (i18n)',
-		packages: ['@inlang/paraglide-js', 'wuchale', 'i18n-js']
+		packages: ['@inlang/paraglide-js', '@wuchale/svelte', 'i18n-js']
 	},
 	{
 		title: 'Third party services',
