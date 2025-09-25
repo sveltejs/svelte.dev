@@ -61,7 +61,6 @@ const FEATURED: {
 		packages: [
 			'@tanstack/svelte-table',
 			'@ai-sdk/svelte',
-			'svelte-moveable',
 			'@tanstack/svelte-virtual',
 			'virtua',
 			'@event-calendar/core'
@@ -123,7 +122,6 @@ const FEATURED: {
 		title: 'Content',
 		packages: [
 			'mdsvex',
-			'svelte-markdown',
 			'@content-collections/core',
 			'carta-md',
 			'typewriter-editor',
