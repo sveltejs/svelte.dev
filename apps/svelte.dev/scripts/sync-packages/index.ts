@@ -108,8 +108,8 @@ function theEnd(val: number) {
 
 async function getNpmAndGitHubData(pkg: string): Promise<PackageKey & PackageNpm & PackageGithub> {
 	const [npmInfo, npmDlInfo] = await Promise.all([
-		fetch(`https://registry.npmjs.org/${pkg}`).then((r) => r.json()),
-		fetch(`https://api.npmjs.org/downloads/point/last-week/${pkg}`).then((r) => r.json())
+		fetchJson(`https://registry.npmjs.org/${pkg}`),
+		fetchJson(`https://api.npmjs.org/downloads/point/last-week/${pkg}`)
 	]);
 	// delete npmInfo.readme;
 	// delete npmInfo.versions;
@@ -148,12 +148,11 @@ async function getNpmAndGitHubData(pkg: string): Promise<PackageKey & PackageNpm
 	if (git_org && git_repo && !skipGithubStars) {
 		const token = process.env.GITHUB_TOKEN;
 		const headers = token ? new Headers({ authorization: 'Bearer ' + token }) : {};
-		const res = await fetch(`https://api.github.com/repos/${git_org}/${git_repo}`, { headers });
-		const resJson = await res.json();
-		if (resJson.message && resJson.message.startsWith('API rate limit exceeded')) {
+		const res = await fetchJson(`https://api.github.com/repos/${git_org}/${git_repo}`, { headers });
+		if (res.message && res.message.startsWith('API rate limit exceeded')) {
 			skipGithubStars = true;
 		} else {
-			github_stars = resJson.stargazers_count;
+			github_stars = res.stargazers_count;
 		}
 	}
 
@@ -252,4 +251,19 @@ function writeJsonData(path: string, data: any) {
 
 	fs.writeFileSync(path, JSON.stringify(sortedData, null, 2));
 	execSync(`prettier --write ${path}`);
+}
+
+async function fetchJson(url: string, options: RequestInit = {}): Promise<any> {
+	const headers = new Headers({ ...options.headers, 'User-Agent': 'svelte.dev/packages_v0.0.1' });
+
+	for (let i = 0; i < 5; i++) {
+		try {
+			const res = await fetch(url, { ...options, headers });
+			return await res.json();
+		} catch (e) {
+			console.error(`Failed to fetch ${url} after ${i + 1} retries`, e);
+		}
+
+		await new Promise((resolve) => setTimeout(resolve, 1000 * Math.pow(2, i + 1)));
+	}
 }
