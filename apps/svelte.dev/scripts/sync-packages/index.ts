@@ -1,4 +1,5 @@
 import { PACKAGES_META } from '../../src/lib/packages-meta';
+import type { PackageKey, PackageNpm, PackageGithub } from '../../src/lib/server/content';
 import { execSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -15,7 +16,9 @@ let logsAtTheEnd: {
 		| 'low_downloads'
 		| 'low_github_stars'
 		| 'new_json_file'
-		| 'deleted_unused_json_file';
+		| 'deleted_unused_json_file'
+		| 'outdated'
+		| 'deprecated';
 	pkg: string;
 	extra: string;
 }[] = [];
@@ -92,7 +95,9 @@ function theEnd(val: number) {
 			low_downloads: 'Low Downloads',
 			low_github_stars: 'Low Stars',
 			new_json_file: 'NEW JSON',
-			deleted_unused_json_file: 'DEL JSON'
+			deleted_unused_json_file: 'DEL JSON',
+			outdated: 'Outdated',
+			deprecated: 'Deprecated'
 		};
 		console.log(
 			`  - ${logsAtTheEnd.map((l) => `${typePrints[l.type].padEnd(15)} | ${l.pkg.padEnd(35)} | ${l.extra}`).join('\n  - ')}`
@@ -101,13 +106,15 @@ function theEnd(val: number) {
 	process.exit(val);
 }
 
-async function fetchData(pkg: string) {
+async function fetchData(pkg: string): Promise<PackageKey & PackageNpm & PackageGithub> {
 	const [npmInfo, npmDlInfo] = await Promise.all([
 		fetch(`https://registry.npmjs.org/${pkg}`).then((r) => r.json()),
 		fetch(`https://api.npmjs.org/downloads/point/last-week/${pkg}`).then((r) => r.json())
 	]);
 	// delete npmInfo.readme;
 	// delete npmInfo.versions;
+	// console.log(`npmInfo`, npmInfo);
+
 	const description = npmInfo.description;
 	const raw_repo_url = npmInfo.repository?.url ?? '';
 	const repo_url = raw_repo_url?.replace(/^git\+/, '').replace(/\.git$/, '');
@@ -123,6 +130,7 @@ async function fetchData(pkg: string) {
 	const downloads = npmDlInfo.downloads;
 	const version = npmInfo['dist-tags'].latest;
 	const updated = npmInfo.time[version];
+	const deprecated_reason = npmInfo.versions[version].deprecated;
 
 	let github_stars: number | undefined = undefined;
 	if (git_org && git_repo && !skipGithubStars) {
@@ -143,8 +151,9 @@ async function fetchData(pkg: string) {
 		repo_url,
 		authors,
 		homepage,
-		downloads,
 		version,
+		deprecated_reason,
+		downloads,
 		updated,
 		// runes: false,
 		github_stars
@@ -185,6 +194,14 @@ async function refreshJson(fullPath: string) {
 			pkg: data.name,
 			extra: `${data.github_stars}`
 		});
+	}
+
+	if (data.updated && PACKAGES_META.is_outdated(data.updated)) {
+		logsAtTheEnd.push({ type: 'outdated', pkg: data.name, extra: `${data.updated}` });
+	}
+
+	if (data.deprecated_reason) {
+		logsAtTheEnd.push({ type: 'deprecated', pkg: data.name, extra: `${data.deprecated_reason}` });
 	}
 
 	writeButPretty(fullPath, JSON.stringify(data, null, 2));

@@ -15,9 +15,7 @@
 		{#snippet title()}
 			<h3>
 				{#if pkg.official}
-					<!-- TODO use svelte logo -->
 					<span data-icon="svelte"></span>
-					<!-- <span class="pill official">official</span> -->
 				{/if}
 
 				<span>{pkg.name}</span>
