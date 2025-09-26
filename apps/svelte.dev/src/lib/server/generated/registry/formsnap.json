@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/svecosystem/formsnap",
 	"authors": ["huntabyte"],
 	"homepage": "https://github.com/svecosystem/formsnap#readme",
-	"downloads": 44865,
+	"downloads": 45749,
 	"updated": "2025-04-09T02:30:42.332Z",
 	"runes": true,
 	"typescript": true,
@@ -12,5 +12,5 @@
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.5.28",
 	"last_rune_check_version": "2.0.1",
-	"github_stars": 752
+	"github_stars": 753
 }

@@ -4,7 +4,7 @@
 	"repo_url": "https://github.com/sveltejs/kit",
 	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
 	"homepage": "https://svelte.dev",
-	"downloads": 122,
+	"downloads": 117,
 	"updated": "2025-08-07T19:26:47.266Z",
 	"runes": false,
 	"typescript": true,
