@@ -61,7 +61,6 @@ const FEATURED: {
 		packages: [
 			'@tanstack/svelte-table',
 			'@ai-sdk/svelte',
-			'svelte-moveable',
 			'@tanstack/svelte-virtual',
 			'virtua',
 			'@event-calendar/core'
@@ -81,7 +80,7 @@ const FEATURED: {
 			'amplify-adapter',
 			'svelte-adapter-deno',
 			'svelte-adapter-appengine',
-			'sveltekit-adapter-browser-extension',
+			'sveltekit-adapter-chrome-extension',
 			'svelte-adapter-azure-swa'
 		]
 	},
@@ -123,7 +122,6 @@ const FEATURED: {
 		title: 'Content',
 		packages: [
 			'mdsvex',
-			'svelte-markdown',
 			'@content-collections/core',
 			'carta-md',
 			'typewriter-editor',
@@ -175,7 +173,7 @@ const FEATURED: {
 	},
 	{
 		title: 'Internationalization (i18n)',
-		packages: ['@inlang/paraglide-js', 'wuchale', 'i18n-js']
+		packages: ['@inlang/paraglide-js', '@wuchale/svelte', 'i18n-js']
 	},
 	{
 		title: 'Third party services',
@@ -200,7 +198,8 @@ const FEATURED: {
 	},
 	{
 		title: 'Router',
-		description: 'SvelteKit is recommended, but here are some alternatives.',
+		description:
+			'<a href="/docs/kit">SvelteKit</a> is recommended, but here are some alternatives.',
 		packages: [
 			'@sveltejs/kit',
 			'svelte-routing',
@@ -212,7 +211,8 @@ const FEATURED: {
 	},
 	{
 		title: 'Data fetching',
-		description: 'SvelteKit remote functions are recommended, but here are some alternatives.',
+		description:
+			'<a href="/docs/kit/remote-functions">SvelteKit remote functions</a> are recommended, but here are some alternatives.',
 		packages: [
 			'@urql/svelte',
 			'trpc-sveltekit',
@@ -224,7 +224,8 @@ const FEATURED: {
 	},
 	{
 		title: 'Forms',
-		description: 'SvelteKit forms are recommended, but here are some alternatives.',
+		description:
+			'<a href="/docs/kit/remote-functions#form">SvelteKit forms</a> are recommended, but here are some alternatives.',
 		packages: ['sveltekit-superforms', '@tanstack/svelte-form', 'formsnap', 'felte']
 	}
 ];
