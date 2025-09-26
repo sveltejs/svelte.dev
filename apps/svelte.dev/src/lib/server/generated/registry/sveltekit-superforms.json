@@ -4,13 +4,13 @@
 	"repo_url": "https://github.com/ciscoheat/sveltekit-superforms",
 	"authors": ["ciscoheat"],
 	"homepage": "https://superforms.rocks",
-	"downloads": 74200,
-	"updated": "2025-06-27T13:15:22.597Z",
-	"runes": false,
-	"typescript": true,
 	"version": "2.27.1",
+	"downloads": 74200,
+	"github_stars": 2628,
+	"updated": "2025-06-27T13:15:22.597Z",
 	"svelte_range": "3.x || 4.x || >=5.0.0-next.51",
 	"kit_range": "1.x || 2.x",
-	"last_rune_check_version": "2.24.1",
-	"github_stars": 2628
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "2.24.1"
 }

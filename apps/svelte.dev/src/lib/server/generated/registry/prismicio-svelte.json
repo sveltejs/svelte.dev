@@ -30,13 +30,13 @@
 		"greenwalker90"
 	],
 	"homepage": "https://github.com/prismicio/prismic-svelte#readme",
-	"downloads": 3776,
-	"updated": "2025-06-04T23:46:10.656Z",
-	"runes": false,
-	"github_stars": 26,
-	"typescript": true,
 	"version": "2.0.0",
+	"downloads": 3776,
+	"github_stars": 26,
+	"updated": "2025-06-04T23:46:10.656Z",
 	"svelte_range": "^5",
 	"kit_range": "^2",
+	"typescript": true,
+	"runes": false,
 	"last_rune_check_version": "1.5.0"
 }

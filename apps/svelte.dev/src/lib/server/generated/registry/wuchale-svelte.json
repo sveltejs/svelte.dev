@@ -4,12 +4,12 @@
 	"repo_url": "https://github.com/wuchalejs/wuchale",
 	"authors": ["k1dv5"],
 	"homepage": "https://wuchale.dev",
-	"downloads": 342,
-	"updated": "2025-09-21T10:54:55.355Z",
-	"runes": false,
-	"github_stars": 185,
-	"typescript": true,
 	"version": "0.15.1",
-	"last_rune_check_version": "0.15.0",
-	"svelte_range": "^5.37.0"
+	"downloads": 342,
+	"github_stars": 187,
+	"updated": "2025-09-21T10:54:55.355Z",
+	"svelte_range": "^5.37.0",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "0.15.0"
 }

@@ -4,11 +4,11 @@
 	"repo_url": "https://github.com/tailwindlabs/tailwindcss",
 	"authors": ["malfaitrobin", "adamwathan", "reinink"],
 	"homepage": "https://tailwindcss.com",
-	"downloads": 23194284,
-	"updated": "2025-09-04T17:48:11.182Z",
-	"runes": false,
-	"typescript": true,
 	"version": "4.1.13",
-	"last_rune_check_version": "4.1.3",
-	"github_stars": 90335
+	"downloads": 23194284,
+	"github_stars": 90339,
+	"updated": "2025-09-04T17:48:11.182Z",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "4.1.3"
 }

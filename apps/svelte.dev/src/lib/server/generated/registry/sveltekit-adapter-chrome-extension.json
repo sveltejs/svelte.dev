@@ -1,12 +1,12 @@
 {
 	"name": "sveltekit-adapter-chrome-extension",
-	"repo_url": "https://github.com/michmich112/sveltekit-adapter-chrome-extension",
 	"description": "An adapter that renders app in compliance with content source policies of Chrome extensions using manifest v3.",
+	"repo_url": "https://github.com/michmich112/sveltekit-adapter-chrome-extension",
 	"authors": ["michmich112"],
-	"downloads": 160,
+	"homepage": "https://github.com/michmich112/sveltekit-adapter-chrome-extension#readme",
 	"version": "2.0.1",
-	"updated": "2024-03-25T03:02:40.181Z",
-	"typescript": true,
+	"downloads": 160,
 	"github_stars": 143,
-	"homepage": "https://github.com/michmich112/sveltekit-adapter-chrome-extension#readme"
+	"updated": "2024-03-25T03:02:40.181Z",
+	"typescript": true
 }

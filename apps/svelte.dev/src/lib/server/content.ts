@@ -156,7 +156,14 @@ export const examples = index.examples.children;
 /**
  * Represents a Svelte package in the registry
  */
-export interface Package extends PackageNpm, PackageGithub, PackageCalculated, PackageSv {
+export interface Package
+	extends PackageKey,
+		PackageNpm,
+		PackageGithub,
+		PackageCalculated,
+		PackageSv {}
+
+export interface PackageKey {
 	/** Package name */
 	name: string;
 }
@@ -194,10 +201,10 @@ export interface PackageNpm {
 
 	// SHOULD BE CALCULATED WHEN GET FROM NPM
 	/** @deprecated */
-	typescript: boolean;
+	typescript?: boolean;
 	// SHOULD BE CALCULATED WHEN GET FROM NPM
 	/** @deprecated */
-	runes: boolean;
+	runes?: boolean;
 	// SHOULD BE DELETED (in *.json files as well)
 	/** @deprecated */
 	last_rune_check_version?: string;

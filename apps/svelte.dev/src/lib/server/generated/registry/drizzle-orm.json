@@ -4,11 +4,11 @@
 	"repo_url": "https://github.com/drizzle-team/drizzle-orm",
 	"authors": ["dankochetov", "sheriman", "alexblokh", "kyrylo_usichenko"],
 	"homepage": "https://orm.drizzle.team",
-	"downloads": 2051067,
-	"updated": "2025-08-25T14:30:27.013Z",
-	"runes": false,
-	"github_stars": 30475,
-	"typescript": true,
 	"version": "0.44.5",
+	"downloads": 2051067,
+	"github_stars": 30475,
+	"updated": "2025-08-25T14:30:27.013Z",
+	"typescript": true,
+	"runes": false,
 	"last_rune_check_version": "0.41.0"
 }

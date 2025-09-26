@@ -4,13 +4,13 @@
 	"repo_url": "https://github.com/tsparticles/svelte",
 	"authors": ["matteobruni", "ar3s"],
 	"homepage": "https://github.com/tsparticles/svelte#readme",
-	"downloads": 2186,
-	"updated": "2024-05-26T10:58:39.331Z",
-	"runes": false,
-	"typescript": true,
 	"version": "3.1.1",
+	"downloads": 2186,
+	"github_stars": 60,
+	"updated": "2024-05-26T10:58:39.331Z",
 	"svelte_range": "^4.2.17",
 	"kit_range": "^2.5.10",
-	"last_rune_check_version": "3.1.1",
-	"github_stars": 60
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "3.1.1"
 }

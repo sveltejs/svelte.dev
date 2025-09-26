@@ -4,12 +4,12 @@
 	"repo_url": "https://github.com/vitest-dev/vitest",
 	"authors": ["antfu", "patak", "oreanno", "yyx990803"],
 	"homepage": "https://github.com/vitest-dev/vitest#readme",
-	"downloads": 15641850,
-	"updated": "2025-06-17T17:54:25.895Z",
-	"runes": false,
-	"github_stars": 15011,
-	"typescript": true,
 	"version": "3.2.4",
+	"downloads": 15641850,
+	"github_stars": 15012,
+	"updated": "2025-06-17T17:54:25.895Z",
 	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
+	"typescript": true,
+	"runes": false,
 	"last_rune_check_version": "3.2.3"
 }

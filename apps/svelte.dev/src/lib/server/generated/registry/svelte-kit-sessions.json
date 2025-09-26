@@ -4,13 +4,13 @@
 	"repo_url": "ssh://git@github.com/yutak23/svelte-kit-sessions",
 	"authors": ["yutak23"],
 	"homepage": "https://github.com/yutak23/svelte-kit-sessions#readme",
-	"downloads": 411,
-	"updated": "2024-11-13T04:51:52.547Z",
-	"runes": false,
-	"typescript": true,
 	"version": "0.4.0",
+	"downloads": 411,
+	"github_stars": 18,
+	"updated": "2024-11-13T04:51:52.547Z",
 	"svelte_range": "^5.1.13",
 	"kit_range": "^1.0.0 || ^2.0.0",
-	"last_rune_check_version": "0.4.0",
-	"github_stars": 18
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "0.4.0"
 }

@@ -4,12 +4,12 @@
 	"repo_url": "https://github.com/dkaoster/scrolly-video",
 	"authors": ["dkao"],
 	"homepage": "https://github.com/dkaoster/scrolly-video#readme",
-	"downloads": 574,
-	"updated": "2025-03-07T04:16:43.669Z",
-	"runes": false,
-	"github_stars": 1061,
-	"typescript": true,
 	"version": "0.0.24",
+	"downloads": 574,
+	"github_stars": 1061,
+	"updated": "2025-03-07T04:16:43.669Z",
 	"svelte_range": "^4.2.19",
+	"typescript": true,
+	"runes": false,
 	"last_rune_check_version": "0.0.24"
 }

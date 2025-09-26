@@ -4,13 +4,13 @@
 	"repo_url": "https://github.com/wh0am1-dev/svelte-zdog",
 	"authors": ["wh0am1-dev"],
 	"homepage": "https://carlos-aguilar.com/svelte-zdog",
-	"downloads": 1,
-	"updated": "2023-08-21T02:15:43.393Z",
-	"runes": false,
-	"typescript": true,
 	"version": "0.4.0",
+	"downloads": 1,
+	"github_stars": 44,
+	"updated": "2023-08-21T02:15:43.393Z",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^1.20.5",
-	"last_rune_check_version": "0.4.0",
-	"github_stars": 44
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "0.4.0"
 }

@@ -4,12 +4,12 @@
 	"repo_url": "https://github.com/sst/sst",
 	"authors": ["thdxr", "fanjie", "sst-publisher"],
 	"homepage": "https://github.com/sst/sst#readme",
-	"downloads": 6247,
-	"updated": "2024-08-16T19:15:54.792Z",
-	"runes": false,
-	"typescript": true,
 	"version": "2.43.5",
+	"downloads": 6247,
+	"github_stars": 24576,
+	"updated": "2024-08-16T19:15:54.792Z",
 	"kit_range": "^1.5.0",
-	"last_rune_check_version": "2.43.5",
-	"github_stars": 24575
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "2.43.5"
 }

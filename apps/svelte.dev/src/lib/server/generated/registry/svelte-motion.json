@@ -4,12 +4,12 @@
 	"repo_url": "https://github.com/micha-lmxt/svelte-motion",
 	"authors": ["micha-lmxt"],
 	"homepage": "https://github.com/micha-lmxt/svelte-motion#readme",
-	"downloads": 6208,
-	"updated": "2024-02-27T20:12:47.917Z",
-	"runes": true,
-	"typescript": true,
 	"version": "0.12.2",
+	"downloads": 6208,
+	"github_stars": 636,
+	"updated": "2024-02-27T20:12:47.917Z",
 	"svelte_range": ">=3.35.0 || ^4.0.0 || ^5.0.0 || ^5.0.0-next.0",
-	"last_rune_check_version": "0.12.2",
-	"github_stars": 636
+	"typescript": true,
+	"runes": true,
+	"last_rune_check_version": "0.12.2"
 }

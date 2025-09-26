@@ -4,12 +4,12 @@
 	"repo_url": "https://github.com/microsoft/playwright",
 	"authors": ["pavelfeldman", "yurys", "dgozman-ms", "playwright-bot"],
 	"homepage": "https://playwright.dev",
-	"downloads": 21058042,
-	"updated": "2025-09-23T09:57:04.991Z",
-	"runes": false,
-	"github_stars": 77532,
-	"typescript": true,
 	"version": "1.55.1",
+	"downloads": 21058042,
+	"github_stars": 77532,
+	"updated": "2025-09-23T09:57:04.991Z",
 	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
+	"typescript": true,
+	"runes": false,
 	"last_rune_check_version": "1.55.0"
 }

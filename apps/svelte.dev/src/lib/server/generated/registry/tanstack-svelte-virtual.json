@@ -4,12 +4,12 @@
 	"repo_url": "https://github.com/TanStack/virtual",
 	"authors": ["tannerlinsley", "kylemathews"],
 	"homepage": "https://tanstack.com/virtual",
-	"downloads": 7311,
-	"updated": "2025-06-27T12:47:07.412Z",
-	"runes": false,
-	"typescript": true,
 	"version": "3.13.12",
+	"downloads": 7311,
+	"github_stars": 6353,
+	"updated": "2025-06-27T12:47:07.412Z",
 	"svelte_range": "^3.48.0 || ^4.0.0 || ^5.0.0",
-	"last_rune_check_version": "3.13.6",
-	"github_stars": 6353
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "3.13.6"
 }

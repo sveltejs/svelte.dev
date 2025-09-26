@@ -4,13 +4,13 @@
 	"repo_url": "https://github.com/ssssota/svelte-exmarkdown",
 	"authors": ["ssssota"],
 	"homepage": "https://ssssota.github.io/svelte-exmarkdown",
-	"downloads": 25026,
-	"updated": "2025-08-09T15:03:03.704Z",
-	"runes": true,
-	"typescript": true,
 	"version": "5.0.2",
+	"downloads": 25026,
+	"github_stars": 300,
+	"updated": "2025-08-09T15:03:03.704Z",
 	"svelte_range": "^5.1.3",
 	"kit_range": "^2.27.3",
-	"last_rune_check_version": "5.0.0",
-	"github_stars": 300
+	"typescript": true,
+	"runes": true,
+	"last_rune_check_version": "5.0.0"
 }

@@ -4,13 +4,13 @@
 	"repo_url": "https://github.com/ascorbic/unpic-img",
 	"authors": ["ascorbic"],
 	"homepage": "https://unpic.pics/img/svelte",
-	"downloads": 7865,
-	"updated": "2025-01-19T16:47:12.413Z",
-	"runes": true,
-	"typescript": true,
 	"version": "1.0.0",
+	"downloads": 7865,
+	"github_stars": 1825,
+	"updated": "2025-01-19T16:47:12.413Z",
 	"svelte_range": "^5",
 	"kit_range": "^2.9.0",
-	"last_rune_check_version": "1.0.0",
-	"github_stars": 1825
+	"typescript": true,
+	"runes": true,
+	"last_rune_check_version": "1.0.0"
 }

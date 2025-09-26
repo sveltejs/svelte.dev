@@ -4,12 +4,12 @@
 	"repo_url": "https://github.com/EMH333/esbuild-svelte",
 	"authors": ["emh333"],
 	"homepage": "https://github.com/EMH333/esbuild-svelte#readme",
-	"downloads": 23915,
-	"updated": "2025-05-24T15:51:24.773Z",
-	"runes": false,
-	"github_stars": 256,
-	"typescript": true,
 	"version": "0.9.3",
+	"downloads": 23915,
+	"github_stars": 256,
+	"updated": "2025-05-24T15:51:24.773Z",
 	"svelte_range": ">=4.2.1 <6",
+	"typescript": true,
+	"runes": false,
 	"last_rune_check_version": "0.9.2"
 }

@@ -4,13 +4,13 @@
 	"repo_url": "https://github.com/MIERUNE/svelte-maplibre-gl",
 	"authors": ["mierune_iguchi", "ciscorn"],
 	"homepage": "https://svelte-maplibre-gl.mierune.dev/",
-	"downloads": 728,
-	"updated": "2025-07-09T13:47:31.490Z",
-	"runes": true,
-	"typescript": true,
 	"version": "1.0.1",
+	"downloads": 728,
+	"github_stars": 215,
+	"updated": "2025-07-09T13:47:31.490Z",
 	"svelte_range": ">=5.0.0",
 	"kit_range": "^2.22.2",
-	"last_rune_check_version": "0.1.6",
-	"github_stars": 215
+	"typescript": true,
+	"runes": true,
+	"last_rune_check_version": "0.1.6"
 }

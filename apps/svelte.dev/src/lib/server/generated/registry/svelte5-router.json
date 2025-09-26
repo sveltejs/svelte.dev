@@ -4,12 +4,12 @@
 	"repo_url": "https://github.com/jpcutshall/svelte5-router",
 	"authors": ["jpcutshall"],
 	"homepage": "https://github.com/jpcutshall/svelte5-router",
-	"downloads": 1929,
-	"updated": "2025-01-22T23:26:57.572Z",
-	"runes": true,
-	"typescript": true,
 	"version": "3.0.2",
+	"downloads": 1929,
+	"github_stars": 14,
+	"updated": "2025-01-22T23:26:57.572Z",
 	"svelte_range": "^5.0.0",
-	"last_rune_check_version": "3.0.2",
-	"github_stars": 14
+	"typescript": true,
+	"runes": true,
+	"last_rune_check_version": "3.0.2"
 }

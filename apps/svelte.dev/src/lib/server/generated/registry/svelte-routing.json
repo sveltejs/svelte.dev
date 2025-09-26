@@ -4,12 +4,12 @@
 	"repo_url": "https://github.com/EmilTholin/svelte-routing",
 	"authors": ["tholle", "krishnatorque"],
 	"homepage": "https://github.com/EmilTholin/svelte-routing#readme",
-	"downloads": 14275,
-	"updated": "2024-05-05T16:56:57.134Z",
-	"runes": false,
-	"typescript": true,
 	"version": "2.13.0",
+	"downloads": 14275,
+	"github_stars": 2066,
+	"updated": "2024-05-05T16:56:57.134Z",
 	"svelte_range": "^4.2.15",
-	"last_rune_check_version": "2.13.0",
-	"github_stars": 2066
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "2.13.0"
 }

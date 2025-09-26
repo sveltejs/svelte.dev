@@ -4,12 +4,12 @@
 	"repo_url": "https://github.com/LottieFiles/svelte-lottie-player",
 	"authors": ["jawish"],
 	"homepage": "https://github.com/LottieFiles/svelte-lottie-player",
-	"downloads": 4021,
-	"updated": "2024-01-16T08:16:28.170Z",
-	"runes": false,
-	"github_stars": 136,
-	"typescript": false,
 	"version": "0.3.1",
+	"downloads": 4021,
+	"github_stars": 136,
+	"updated": "2024-01-16T08:16:28.170Z",
 	"svelte_range": "^3.21.0",
+	"typescript": false,
+	"runes": false,
 	"last_rune_check_version": "0.3.1"
 }

@@ -3,13 +3,13 @@
 	"description": "Documentation integration for SvelteKit.",
 	"repo_url": "https://github.com/svelteness/kit-docs",
 	"authors": ["mihar-22"],
-	"downloads": 2528,
-	"updated": "2023-09-16T01:27:25.411Z",
-	"runes": false,
-	"typescript": true,
 	"version": "1.1.5",
+	"downloads": 2528,
+	"github_stars": 499,
+	"updated": "2023-09-16T01:27:25.411Z",
 	"svelte_range": "^4.2.0",
 	"kit_range": "^1.25.0",
-	"last_rune_check_version": "1.1.5",
-	"github_stars": 498
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "1.1.5"
 }

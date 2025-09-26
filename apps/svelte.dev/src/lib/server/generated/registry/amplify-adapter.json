@@ -4,12 +4,12 @@
 	"repo_url": "https://github.com/gzimbron/amplify-adapter",
 	"authors": ["zimbronapps"],
 	"homepage": "https://github.com/gzimbron/amplify-adapter#readme",
-	"downloads": 1780,
-	"updated": "2025-09-11T19:17:42.448Z",
-	"runes": false,
-	"github_stars": 32,
-	"typescript": true,
 	"version": "1.2.3",
+	"downloads": 1780,
+	"github_stars": 32,
+	"updated": "2025-09-11T19:17:42.448Z",
 	"kit_range": "^2.4.0",
+	"typescript": true,
+	"runes": false,
 	"last_rune_check_version": "0.2.0"
 }

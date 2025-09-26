@@ -4,12 +4,12 @@
 	"repo_url": "https://github.com/pilcrowOnPaper/lucia",
 	"authors": ["pilcrowonpaper"],
 	"homepage": "https://github.com/pilcrowOnPaper/lucia#readme",
-	"downloads": 61042,
-	"updated": "2024-10-20T12:40:32.030Z",
-	"runes": false,
-	"github_stars": 10336,
-	"typescript": true,
 	"version": "3.2.2",
-	"last_rune_check_version": "3.2.2",
-	"deprecated_reason": "This package has been deprecated. Please see https://lucia-auth.com/lucia-v3/migrate."
+	"deprecated_reason": "This package has been deprecated. Please see https://lucia-auth.com/lucia-v3/migrate.",
+	"downloads": 61042,
+	"github_stars": 10336,
+	"updated": "2024-10-20T12:40:32.030Z",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "3.2.2"
 }

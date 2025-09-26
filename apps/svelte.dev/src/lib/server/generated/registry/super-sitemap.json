@@ -4,13 +4,13 @@
 	"repo_url": "https://github.com/jasongitmail/super-sitemap",
 	"authors": ["jasongitmail"],
 	"homepage": "https://github.com/jasongitmail/super-sitemap#readme",
-	"downloads": 5572,
-	"updated": "2025-07-22T17:39:14.601Z",
-	"runes": false,
-	"github_stars": 222,
-	"typescript": true,
 	"version": "1.0.5",
+	"downloads": 5572,
+	"github_stars": 222,
+	"updated": "2025-07-22T17:39:14.601Z",
 	"svelte_range": ">=4.0.0 <6.0.0",
 	"kit_range": "^1.27.2",
+	"typescript": true,
+	"runes": false,
 	"last_rune_check_version": "1.0.3"
 }

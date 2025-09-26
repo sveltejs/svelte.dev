@@ -4,12 +4,12 @@
 	"repo_url": "https://github.com/sveltestrap/sveltestrap",
 	"authors": ["dysfunc"],
 	"homepage": "https://sveltestrap.js.org",
-	"downloads": 6072,
-	"updated": "2025-02-04T15:33:33.979Z",
-	"runes": false,
-	"typescript": true,
 	"version": "7.1.0",
+	"downloads": 6072,
+	"github_stars": 191,
+	"updated": "2025-02-04T15:33:33.979Z",
 	"svelte_range": "^4.0.0 || ^5.0.0 || ^5.0.0-next.0",
-	"last_rune_check_version": "7.1.0",
-	"github_stars": 191
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "7.1.0"
 }

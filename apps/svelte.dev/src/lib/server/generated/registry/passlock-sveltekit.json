@@ -4,13 +4,13 @@
 	"repo_url": "https://github.com/passlock-dev/passlock",
 	"authors": ["toby.hobson"],
 	"homepage": "https://passlock.dev",
-	"downloads": 21,
-	"updated": "2024-11-27T14:09:44.610Z",
-	"runes": false,
-	"github_stars": 179,
-	"typescript": true,
 	"version": "0.9.31",
+	"downloads": 21,
+	"github_stars": 179,
+	"updated": "2024-11-27T14:09:44.610Z",
 	"svelte_range": "^4.0.0",
 	"kit_range": "^2.6.2",
+	"typescript": true,
+	"runes": false,
 	"last_rune_check_version": "0.9.31"
 }

@@ -4,12 +4,12 @@
 	"repo_url": "https://github.com/SauravKanchan/svelte-chartjs",
 	"authors": ["sauravnk30"],
 	"homepage": "https://saurav.tech/mdbsvelte/?path=/story/charts--examples",
-	"downloads": 40036,
-	"updated": "2024-02-06T14:40:40.928Z",
-	"runes": false,
-	"typescript": true,
 	"version": "3.1.5",
+	"downloads": 40036,
+	"github_stars": 324,
+	"updated": "2024-02-06T14:40:40.928Z",
 	"svelte_range": "^4.0.0",
-	"last_rune_check_version": "3.1.5",
-	"github_stars": 324
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "3.1.5"
 }

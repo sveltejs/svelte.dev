@@ -4,12 +4,12 @@
 	"repo_url": "https://github.com/TanStack/query",
 	"authors": ["tannerlinsley", "kylemathews"],
 	"homepage": "https://tanstack.com/query",
-	"downloads": 42519,
-	"updated": "2025-09-23T07:39:01.467Z",
-	"runes": false,
-	"typescript": true,
 	"version": "5.90.2",
+	"downloads": 42519,
+	"github_stars": 46767,
+	"updated": "2025-09-23T07:39:01.467Z",
 	"svelte_range": "^3.54.0 || ^4.0.0 || ^5.0.0",
-	"last_rune_check_version": "5.74.3",
-	"github_stars": 46767
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "5.74.3"
 }

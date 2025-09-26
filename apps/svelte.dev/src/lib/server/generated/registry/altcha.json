@@ -4,12 +4,12 @@
 	"repo_url": "https://github.com/altcha-org/altcha",
 	"authors": ["ovx"],
 	"homepage": "https://altcha.org",
-	"downloads": 17457,
-	"updated": "2025-09-09T04:16:51.418Z",
-	"runes": false,
-	"github_stars": 1544,
-	"typescript": true,
 	"version": "2.2.3",
+	"downloads": 17457,
+	"github_stars": 1544,
+	"updated": "2025-09-09T04:16:51.418Z",
 	"svelte_range": "^5.28.6",
+	"typescript": true,
+	"runes": false,
 	"last_rune_check_version": "1.4.2"
 }

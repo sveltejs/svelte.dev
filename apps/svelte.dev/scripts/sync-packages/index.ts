@@ -35,8 +35,8 @@ for (const pkg of packages) {
 	const cleanPkg = pkg.replace('@', '').replace('/', '-');
 	const jsonPath = path.join(registryFolder, `${cleanPkg}.json`);
 	if (!fs.existsSync(jsonPath)) {
-		const p = await fetchData(pkg);
-		writeButPretty(jsonPath, JSON.stringify(p, null, 2));
+		const p = await getNpmAndGitHubData(pkg);
+		writeJsonData(jsonPath, p);
 		logsAtTheEnd.push({ type: 'new_json_file', pkg, extra: `created -> ${jsonPath}` });
 	}
 }
@@ -72,7 +72,7 @@ for (let i = 0; i < registryJsonFiles.length; i += batch) {
 	const batchFiles = registryJsonFiles.slice(i, i + batch);
 	await Promise.all(
 		batchFiles.map(async (pkg) => {
-			await refreshJson(path.join(registryFolder, pkg));
+			await refreshJsonFile(path.join(registryFolder, pkg));
 		})
 	);
 }
@@ -106,7 +106,7 @@ function theEnd(val: number) {
 	process.exit(val);
 }
 
-async function fetchData(pkg: string): Promise<PackageKey & PackageNpm & PackageGithub> {
+async function getNpmAndGitHubData(pkg: string): Promise<PackageKey & PackageNpm & PackageGithub> {
 	const [npmInfo, npmDlInfo] = await Promise.all([
 		fetch(`https://registry.npmjs.org/${pkg}`).then((r) => r.json()),
 		fetch(`https://api.npmjs.org/downloads/point/last-week/${pkg}`).then((r) => r.json())
@@ -174,11 +174,11 @@ async function fetchData(pkg: string): Promise<PackageKey & PackageNpm & Package
 	};
 }
 
-async function refreshJson(fullPath: string) {
+async function refreshJsonFile(fullPath: string) {
 	console.log(`Refreshing:`, fullPath);
 
 	const currentJson = JSON.parse(fs.readFileSync(fullPath, 'utf-8'));
-	const newData = await fetchData(currentJson.name);
+	const newData = await getNpmAndGitHubData(currentJson.name);
 
 	// remove all undefined values
 	for (const key in newData) {
@@ -215,10 +215,41 @@ async function refreshJson(fullPath: string) {
 		logsAtTheEnd.push({ type: 'deprecated', pkg: data.name, extra: `${data.deprecated_reason}` });
 	}
 
-	writeButPretty(fullPath, JSON.stringify(data, null, 2));
+	writeJsonData(fullPath, data);
 }
 
-function writeButPretty(path: string, data: any) {
-	fs.writeFileSync(path, data);
+function writeJsonData(path: string, data: any) {
+	const keysOrder: (keyof PackageKey | keyof PackageNpm | keyof PackageGithub)[] = [
+		'name',
+		'description',
+		'repo_url',
+		'authors',
+		'homepage',
+		'version',
+		'deprecated_reason',
+		'downloads',
+		'github_stars',
+		'updated',
+		'svelte_range',
+		'kit_range',
+		'typescript',
+		'runes',
+		'last_rune_check_version'
+	];
+
+	const sortedData: Record<string, any> = {};
+	for (const key of keysOrder) {
+		if (data[key] !== undefined) {
+			sortedData[key] = data[key];
+		}
+	}
+	// all all the remaining keys
+	for (const key in data) {
+		if (!keysOrder.includes(key as keyof PackageKey | keyof PackageNpm | keyof PackageGithub)) {
+			sortedData[key] = data[key];
+		}
+	}
+
+	fs.writeFileSync(path, JSON.stringify(sortedData, null, 2));
 	execSync(`prettier --write ${path}`);
 }

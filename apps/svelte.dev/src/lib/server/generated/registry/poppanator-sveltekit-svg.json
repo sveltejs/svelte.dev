@@ -4,13 +4,13 @@
 	"repo_url": "https://github.com/poppa/sveltekit-svg",
 	"authors": ["poppanator_"],
 	"homepage": "https://github.com/poppa/sveltekit-svg#readme",
-	"downloads": 19745,
-	"updated": "2025-09-01T05:39:43.829Z",
-	"runes": false,
-	"typescript": true,
 	"version": "6.0.0",
+	"downloads": 19745,
+	"github_stars": 262,
+	"updated": "2025-09-01T05:39:43.829Z",
 	"svelte_range": ">=5.x",
 	"kit_range": "^6.0.0",
-	"last_rune_check_version": "4.0.0",
-	"github_stars": 262
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "4.0.0"
 }

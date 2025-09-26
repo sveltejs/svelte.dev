@@ -14,13 +14,13 @@
 		"storyblok-dx"
 	],
 	"homepage": "https://github.com/storyblok/monoblok/tree/main/packages/svelte#readme",
-	"downloads": 1044,
-	"updated": "2025-09-15T13:02:29.863Z",
-	"runes": true,
-	"github_stars": 20,
-	"typescript": true,
 	"version": "5.2.9",
+	"downloads": 1044,
+	"github_stars": 20,
+	"updated": "2025-09-15T13:02:29.863Z",
 	"svelte_range": "^5.0.0",
 	"kit_range": "^2.20.2",
+	"typescript": true,
+	"runes": true,
 	"last_rune_check_version": "5.0.1"
 }
