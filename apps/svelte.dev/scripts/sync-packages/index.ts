@@ -4,11 +4,21 @@ import fs from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
 
+let skipGithubStars = false;
+
 const start = performance.now();
 console.log('[sync-packages] start');
 
-let skipGithubStars = false;
-let logsAtTheEnd: String[] = [];
+let logsAtTheEnd: {
+	type:
+		| 'no_repo_url'
+		| 'low_downloads'
+		| 'low_github_stars'
+		| 'new_json_file'
+		| 'deleted_unused_json_file';
+	pkg: string;
+	extra: string;
+}[] = [];
 
 const packages = [
 	...PACKAGES_META.FEATURED.flatMap((pkg) => pkg.packages),
@@ -22,13 +32,13 @@ for (const pkg of packages) {
 	const cleanPkg = pkg.replace('@', '').replace('/', '-');
 	const jsonPath = path.join(registryFolder, `${cleanPkg}.json`);
 	if (!fs.existsSync(jsonPath)) {
-		console.warn(`  "${pkg}" -> "${jsonPath}" not found, we will create it!`);
 		const p = await fetchData(pkg);
 		writeButPretty(jsonPath, JSON.stringify(p, null, 2));
+		logsAtTheEnd.push({ type: 'new_json_file', pkg, extra: `created -> ${jsonPath}` });
 	}
 }
 
-// PART 2: check if all json files are needed
+// PART 2: delete unused json files
 let registryJsonFiles = fs.readdirSync(registryFolder);
 const jsonUsed: string[] = [];
 for (const pkg of packages) {
@@ -41,21 +51,18 @@ for (const pkg of packages) {
 }
 const jsonNotNeeded = registryJsonFiles.filter((pkg) => !jsonUsed.includes(pkg));
 if (jsonNotNeeded.length > 0) {
-	console.error(jsonNotNeeded.join('\n'));
-	console.error(
-		`ERROR: ${jsonNotNeeded.length} json files are not needed as they are not in the packages array`
-	);
-
 	// delete json files
-	// for (const pkg of jsonNotNeeded) {
-	// 	fs.unlinkSync(path.join(registryFolder, pkg));
-	// }
+	for (const pkg of jsonNotNeeded) {
+		const jsonPath = path.join(registryFolder, pkg);
+		fs.unlinkSync(jsonPath);
+		logsAtTheEnd.push({ type: 'deleted_unused_json_file', pkg, extra: `deleted -> ${jsonPath}` });
+	}
 
 	theEnd(1);
 }
 
 // PART 3: refresh data
-registryJsonFiles = fs.readdirSync(registryFolder); //.slice(0, 1);
+registryJsonFiles = fs.readdirSync(registryFolder); //.slice(0, 20);
 
 const batch = 10;
 for (let i = 0; i < registryJsonFiles.length; i += batch) {
@@ -79,11 +86,21 @@ function theEnd(val: number) {
 	msg.push(`took: ${(performance.now() - start).toFixed(0)}ms`);
 	console.log(msg.join(' '));
 	if (logsAtTheEnd.length > 0) {
-		console.log('[sync-packages] Report:');
-		console.log(`  - ${logsAtTheEnd.join('\n  - ')}`);
+		console.log('[sync-packages] report:');
+		const typePrints: Record<(typeof logsAtTheEnd)[number]['type'], string> = {
+			no_repo_url: 'No GitHub URL',
+			low_downloads: 'Low Downloads',
+			low_github_stars: 'Low Stars',
+			new_json_file: 'NEW JSON',
+			deleted_unused_json_file: 'DEL JSON'
+		};
+		console.log(
+			`  - ${logsAtTheEnd.map((l) => `${typePrints[l.type].padEnd(15)} | ${l.pkg.padEnd(35)} | ${l.extra}`).join('\n  - ')}`
+		);
 	}
 	process.exit(val);
 }
+
 async function fetchData(pkg: string) {
 	const [npmInfo, npmDlInfo] = await Promise.all([
 		fetch(`https://registry.npmjs.org/${pkg}`).then((r) => r.json()),
@@ -96,7 +113,7 @@ async function fetchData(pkg: string) {
 	const repo_url = raw_repo_url?.replace(/^git\+/, '').replace(/\.git$/, '');
 	if (!repo_url) {
 		// console.error(`repo_url not found for ${pkg}`);
-		logsAtTheEnd.push(`repo_url not found for ${pkg}`);
+		logsAtTheEnd.push({ type: 'no_repo_url', pkg, extra: `not found` });
 	}
 	const git_org = repo_url?.split('/')[3];
 	const git_repo = repo_url?.split('/')[4];
@@ -122,7 +139,7 @@ async function fetchData(pkg: string) {
 
 	return {
 		name: pkg,
-		// description, // let's not overwrite the description for now.
+		description,
 		repo_url,
 		authors,
 		homepage,
@@ -150,7 +167,27 @@ async function refreshJson(fullPath: string) {
 		}
 	}
 
-	writeButPretty(fullPath, JSON.stringify({ ...currentJson, ...newData }, null, 2));
+	// don't overwrite the description if it exists
+	if (currentJson.description) {
+		delete newData.description;
+	}
+
+	const data = { ...currentJson, ...newData };
+
+	// Some stats infos to log
+	if (data.downloads && data.downloads < 255) {
+		logsAtTheEnd.push({ type: 'low_downloads', pkg: data.name, extra: `${data.downloads}` });
+	}
+
+	if (data.github_stars && data.github_stars < 42) {
+		logsAtTheEnd.push({
+			type: 'low_github_stars',
+			pkg: data.name,
+			extra: `${data.github_stars}`
+		});
+	}
+
+	writeButPretty(fullPath, JSON.stringify(data, null, 2));
 }
 
 function writeButPretty(path: string, data: any) {
