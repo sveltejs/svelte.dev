@@ -36,11 +36,7 @@ const SV_ADD_CMD: Record<string, { alias: string; options?: string }> = {
 	'@sveltejs/adapter-netlify': { alias: 'sveltekit-adapter', options: 'adapter:netlify' }
 };
 
-const FEATURED: {
-	title: string;
-	description?: string;
-	packages: string[];
-}[] = [
+const FEATURED: { title: string; description?: string; packages: string[] }[] = [
 	{
 		title: 'Component libraries',
 		packages: [
