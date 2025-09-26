@@ -10,12 +10,19 @@
 	afterNavigate(() => {
 		current = location.hash.slice(1);
 		headings = content.querySelectorAll('h2');
-		update(); // Ensure active link is set correctly on navigation
+		setTimeout(() => update(), 0); // Delay to allow layout to settle
 	});
 
 	// Update function to activate the correct section link
 	function update() {
 		const threshold = (innerHeight * 1) / 3;
+
+		// If scrolled less than threshold, activate the page title
+		if (scrollY < threshold) {
+			current = '';
+			return;
+		}
+
 		let found = false;
 
 		for (let i = 0; i < headings.length; i++) {
@@ -33,10 +40,7 @@
 			}
 		}
 
-		// Handle case when scrolled to the top of the page
-		if (!found && scrollY === 0) {
-			current = '';
-		}
+		// If no heading found, keep current as is
 	}
 </script>
 
