@@ -109,7 +109,9 @@ async function fetchData(pkg: string) {
 
 	let github_stars: number | undefined = undefined;
 	if (git_org && git_repo && !skipGithubStars) {
-		const res = await fetch(`https://api.github.com/repos/${git_org}/${git_repo}`);
+		const token = process.env.GITHUB_TOKEN;
+		const headers = token ? new Headers({ authorization: 'Bearer ' + token }) : {};
+		const res = await fetch(`https://api.github.com/repos/${git_org}/${git_repo}`, { headers });
 		const resJson = await res.json();
 		if (resJson.message && resJson.message.startsWith('API rate limit exceeded')) {
 			skipGithubStars = true;

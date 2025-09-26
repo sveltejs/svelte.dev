@@ -10,5 +10,6 @@
 	"typescript": true,
 	"version": "6.2.1",
 	"svelte_range": "^5.0.0",
-	"last_rune_check_version": "5.0.3"
+	"last_rune_check_version": "5.0.3",
+	"github_stars": 952
 }

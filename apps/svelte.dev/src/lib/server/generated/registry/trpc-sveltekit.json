@@ -10,5 +10,6 @@
 	"typescript": true,
 	"version": "3.6.3",
 	"kit_range": "^1.27.0",
-	"last_rune_check_version": "3.6.3"
+	"last_rune_check_version": "3.6.3",
+	"github_stars": 840
 }
