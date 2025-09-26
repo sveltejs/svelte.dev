@@ -7,9 +7,9 @@
 	"downloads": 17457,
 	"updated": "2025-09-09T04:16:51.418Z",
 	"runes": false,
-	"github_stars": 1543,
+	"github_stars": 1544,
 	"typescript": true,
 	"version": "2.2.3",
-	"svelte_range": "^5.22.6",
+	"svelte_range": "^5.28.6",
 	"last_rune_check_version": "1.4.2"
 }

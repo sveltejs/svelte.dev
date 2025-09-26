@@ -159,17 +159,6 @@ export const examples = index.examples.children;
 export interface Package extends PackageNpm, PackageGithub, PackageCalculated, PackageSv {
 	/** Package name */
 	name: string;
-
-	/** @deprecated DO NOT USE ON FRONTEND */
-	svelte_range?: string;
-	/** @deprecated DO NOT USE ON FRONTEND */
-	kit_range?: string;
-	/** @deprecated DO NOT USE ON FRONTEND */
-	last_rune_check_version?: string;
-
-	runes: boolean;
-
-	typescript: boolean;
 }
 
 export interface PackageNpm {
@@ -196,6 +185,22 @@ export interface PackageNpm {
 
 	/** Last update timestamp */
 	updated: string;
+
+	/** Svelte version range */
+	svelte_range?: string;
+
+	/** SvelteKit version range */
+	kit_range?: string;
+
+	// SHOULD BE CALCULATED WHEN GET FROM NPM
+	/** @deprecated */
+	typescript: boolean;
+	// SHOULD BE CALCULATED WHEN GET FROM NPM
+	/** @deprecated */
+	runes: boolean;
+	// SHOULD BE DELETED (in *.json files as well)
+	/** @deprecated */
+	last_rune_check_version?: string;
 }
 
 export interface PackageGithub {

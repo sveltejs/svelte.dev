@@ -130,8 +130,20 @@ async function fetchData(pkg: string): Promise<PackageKey & PackageNpm & Package
 	const downloads = npmDlInfo.downloads;
 	const version = npmInfo['dist-tags'].latest;
 	const updated = npmInfo.time[version];
-	const deprecated_reason = npmInfo.versions[version].deprecated;
+	const pkgInfo = npmInfo.versions[version];
+	const deprecated_reason = pkgInfo.deprecated;
 
+	const svelte_range =
+		pkgInfo.peerDependencies?.svelte ??
+		pkgInfo.dependencies?.svelte ??
+		pkgInfo.devDependencies?.svelte;
+
+	const kit_range =
+		pkgInfo.peerDependencies?.['@sveltejs/kit'] ??
+		pkgInfo.dependencies?.['@sveltejs/kit'] ??
+		pkgInfo.devDependencies?.['@sveltejs/kit'];
+
+	// GitHub
 	let github_stars: number | undefined = undefined;
 	if (git_org && git_repo && !skipGithubStars) {
 		const token = process.env.GITHUB_TOKEN;
@@ -155,11 +167,10 @@ async function fetchData(pkg: string): Promise<PackageKey & PackageNpm & Package
 		deprecated_reason,
 		downloads,
 		updated,
-		// runes: false,
+		svelte_range,
+		kit_range,
+		// GitHub
 		github_stars
-		// typescript: false,
-		// kit_range: '',
-		// last_rune_check_version: ''
 	};
 }
 

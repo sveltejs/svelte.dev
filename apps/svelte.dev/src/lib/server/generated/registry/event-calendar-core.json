@@ -10,6 +10,6 @@
 	"github_stars": 1931,
 	"typescript": false,
 	"version": "4.6.0",
-	"svelte_range": "^4.2.19",
+	"svelte_range": "^5.34.8",
 	"last_rune_check_version": "3.12.0"
 }
