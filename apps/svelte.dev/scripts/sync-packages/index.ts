@@ -7,6 +7,9 @@ import process from 'node:process';
 const start = performance.now();
 console.log('[sync-packages] start');
 
+let skipGithubStars = false;
+let logsAtTheEnd: String[] = [];
+
 const packages = [
 	...PACKAGES_META.FEATURED.flatMap((pkg) => pkg.packages),
 	...PACKAGES_META.SV_ADD.packages
@@ -52,7 +55,7 @@ if (jsonNotNeeded.length > 0) {
 }
 
 // PART 3: refresh data
-registryJsonFiles = fs.readdirSync(registryFolder); // .slice(0, 1);
+registryJsonFiles = fs.readdirSync(registryFolder); //.slice(0, 1);
 
 const batch = 10;
 for (let i = 0; i < registryJsonFiles.length; i += batch) {
@@ -69,10 +72,18 @@ theEnd(0);
 // HELPERS
 
 function theEnd(val: number) {
-	console.log(`[sync-packages] exit(${val}) - took: ${(performance.now() - start).toFixed(0)}ms`);
+	const msg = ['[sync-packages]'];
+	if (val > 0) {
+		msg.push(`exit(${val}) - `);
+	}
+	msg.push(`took: ${(performance.now() - start).toFixed(0)}ms`);
+	console.log(msg.join(' '));
+	if (logsAtTheEnd.length > 0) {
+		console.log('[sync-packages] Report:');
+		console.log(`  - ${logsAtTheEnd.join('\n  - ')}`);
+	}
 	process.exit(val);
 }
-
 async function fetchData(pkg: string) {
 	const [npmInfo, npmDlInfo] = await Promise.all([
 		fetch(`https://registry.npmjs.org/${pkg}`).then((r) => r.json()),
@@ -84,7 +95,8 @@ async function fetchData(pkg: string) {
 	const raw_repo_url = npmInfo.repository?.url ?? '';
 	const repo_url = raw_repo_url?.replace(/^git\+/, '').replace(/\.git$/, '');
 	if (!repo_url) {
-		console.error(`repo_url not found for ${pkg}`);
+		// console.error(`repo_url not found for ${pkg}`);
+		logsAtTheEnd.push(`repo_url not found for ${pkg}`);
 	}
 	const git_org = repo_url?.split('/')[3];
 	const git_repo = repo_url?.split('/')[4];
@@ -95,12 +107,15 @@ async function fetchData(pkg: string) {
 	const version = npmInfo['dist-tags'].latest;
 	const updated = npmInfo.time[version];
 
-	let github_stars = 0;
-	if (git_org && git_repo) {
-		const githubInfo = await fetch(`https://api.github.com/repos/${git_org}/${git_repo}`).then(
-			(r) => r.json()
-		);
-		github_stars = githubInfo.stargazers_count;
+	let github_stars: number | undefined = undefined;
+	if (git_org && git_repo && !skipGithubStars) {
+		const res = await fetch(`https://api.github.com/repos/${git_org}/${git_repo}`);
+		const resJson = await res.json();
+		if (resJson.message && resJson.message.startsWith('API rate limit exceeded')) {
+			skipGithubStars = true;
+		} else {
+			github_stars = resJson.stargazers_count;
+		}
 	}
 
 	return {
@@ -121,7 +136,7 @@ async function fetchData(pkg: string) {
 }
 
 async function refreshJson(fullPath: string) {
-	console.log(`Working on:`, fullPath);
+	console.log(`Refreshing:`, fullPath);
 
 	const currentJson = JSON.parse(fs.readFileSync(fullPath, 'utf-8'));
 	const newData = await fetchData(currentJson.name);
