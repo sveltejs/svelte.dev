@@ -161,9 +161,9 @@ const FEATURED: { title: string; description?: string; packages: string[] }[] = 
 			'@auth/sveltekit',
 			'altcha',
 			'svelte-session-manager',
-			'clerk-sveltekit',
+			'svelte-clerk',
 			'svelte-kit-sessions',
-			'@supabase/auth-helpers-sveltekit',
+			'@supabase/ssr',
 			'@passlock/sveltekit'
 		]
 	},
@@ -177,7 +177,7 @@ const FEATURED: { title: string; description?: string; packages: string[] }[] = 
 			'@sentry/svelte',
 			'@sentry/sveltekit',
 			'svelte-stripe',
-			'clerk-sveltekit',
+			'svelte-clerk',
 			'@storyblok/svelte',
 			'@inlang/paraglide-js'
 		]

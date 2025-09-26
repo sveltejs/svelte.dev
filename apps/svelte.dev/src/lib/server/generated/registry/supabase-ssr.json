@@ -1,0 +1,29 @@
+{
+	"name": "@supabase/ssr",
+	"description": "Provides auth helpers for Supabase in SvelteKit.",
+	"repo_url": "https://github.com/supabase/ssr",
+	"authors": [
+		"etienne_supa",
+		"kiwicopple",
+		"ange1ico",
+		"awalias",
+		"gregnr",
+		"phamhieu1998",
+		"inian",
+		"stdim",
+		"ziinc_supabase",
+		"kamilogorek",
+		"lakshan-supabase",
+		"ceeteelam",
+		"kevin-supabase",
+		"mattrossman"
+	],
+	"homepage": "https://github.com/supabase/ssr#readme",
+	"version": "0.7.0",
+	"downloads": 607906,
+	"github_stars": 159,
+	"updated": "2024-04-09T10:33:33.451Z",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "0.6.0"
+}
