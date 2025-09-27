@@ -2,6 +2,7 @@ name: Sync packages
 
 on:
   pull_request:
+    branches: '**'
   schedule:
     - cron: '0 0 * * 0' # At 00:00 on Sunday.
 
@@ -34,5 +35,6 @@ jobs:
           commit-message: '(AUTO) Update packages data'
           title: '🤖 Update packages data'
           body: Automatically fetch latest packages data from NPM & GitHub.
+          base: main
           branch: ci/update-packages-data
           delete-branch: true
