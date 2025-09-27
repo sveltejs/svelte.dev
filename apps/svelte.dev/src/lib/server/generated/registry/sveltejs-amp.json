@@ -5,7 +5,7 @@
 	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
 	"homepage": "https://svelte.dev",
 	"version": "1.1.5",
-	"downloads": 117,
+	"downloads": 115,
 	"github_stars": 19739,
 	"updated": "2025-08-07T19:26:47.266Z",
 	"kit_range": "^1.0.0 || ^2.0.0",

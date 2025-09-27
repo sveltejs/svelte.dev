@@ -20,9 +20,9 @@
 	],
 	"homepage": "https://github.com/supabase/ssr#readme",
 	"version": "0.7.0",
-	"downloads": 607906,
+	"downloads": 608422,
 	"github_stars": 159,
-	"updated": "2024-04-09T10:33:33.451Z",
+	"updated": "2025-08-22T06:08:37.734Z",
 	"typescript": true,
 	"runes": false,
 	"last_rune_check_version": "0.6.0"

@@ -5,7 +5,7 @@
 	"authors": ["toby.hobson"],
 	"homepage": "https://passlock.dev",
 	"version": "0.9.31",
-	"downloads": 21,
+	"downloads": 23,
 	"github_stars": 179,
 	"updated": "2024-11-27T14:09:44.610Z",
 	"svelte_range": "^4.0.0",

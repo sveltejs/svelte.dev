@@ -16,7 +16,7 @@
 	],
 	"homepage": "https://github.com/getsentry/sentry-javascript/tree/master/packages/sveltekit",
 	"version": "10.15.0",
-	"downloads": 60789,
+	"downloads": 58498,
 	"github_stars": 8420,
 	"updated": "2025-09-24T15:57:18.820Z",
 	"svelte_range": "^4.2.8",
