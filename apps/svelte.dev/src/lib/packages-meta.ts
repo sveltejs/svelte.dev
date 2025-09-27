@@ -124,6 +124,7 @@ const FEATURED: { title: string; description?: string; packages: string[] }[] = 
 			'@svelte-put/toc',
 			'@prismicio/svelte',
 			'@svelteness/kit-docs',
+			'@sveltepress/vite',
 			'@evidence-dev/evidence',
 			'@magidoc/plugin-svelte-marked',
 			'svelte-exmarkdown',

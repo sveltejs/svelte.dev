@@ -1,0 +1,15 @@
+{
+	"name": "@sveltepress/vite",
+	"description": "Content centered site build tool with the full power of SvelteKit.",
+	"repo_url": "https://github.com/svelteness/kit-docs",
+	"authors": ["philadelphia"],
+	"version": "1.2.2",
+	"downloads": 2528,
+	"github_stars": 499,
+	"updated": "2023-09-16T01:27:25.411Z",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^1.20.4 || ^2.0.0",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "1.1.5"
+}
