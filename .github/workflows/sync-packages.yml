@@ -31,9 +31,8 @@ jobs:
       - name: Create or update pull request
         uses: peter-evans/create-pull-request@v7
         with:
-          commit-message: '(AUTO) Update packages data'
-          title: '🤖 Update packages data'
-          body: Automatically fetch latest packages data from NPM & GitHub.
-          base: main
-          branch: ci/update-packages-data
+          commit-message: 'chore(packages): Update metadata'
+          title: 'chore(packages): Update metadata'
+          body: Automatically fetch latest packages metadata from NPM & GitHub.
+          branch: ci/update-packages-metadata
           delete-branch: true
