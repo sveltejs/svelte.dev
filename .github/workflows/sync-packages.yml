@@ -1,12 +1,9 @@
 name: Sync packages
 
 on:
-  push:
-    branches: [main]
   pull_request:
   schedule:
     - cron: '0 0 * * 0' # At 00:00 on Sunday.
-  workflow_dispatch:
 
 jobs:
   update:
@@ -31,6 +28,7 @@ jobs:
           commit-message: '(AUTO) Update packages data'
           title: '🤖 Update packages data'
           body: Automatically fetch latest packages data from NPM & GitHub.
+          base: main
           branch: ci/update-packages-data
           add-paths: apps/svelte.dev/src/lib/server/generated/registry/**
           delete-branch: true
