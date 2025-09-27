@@ -1,0 +1,36 @@
+name: Sync packages
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 0 * * 0' # At 00:00 on Sunday.
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install
+
+      - name: Sync packages
+        run: cd apps/svelte.dev && pnpm sync-packages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          commit-message: '(AUTO) Update packages data'
+          title: '🤖 Update packages data'
+          body: Automatically fetch latest packages data from NPM & GitHub.
+          branch: ci/update-packages-data
+          add-paths: apps/svelte.dev/src/lib/server/generated/registry/**
+          delete-branch: true
+          token: ${{ secrets.GITHUB_TOKEN }}
