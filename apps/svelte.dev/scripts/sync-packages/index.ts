@@ -18,7 +18,8 @@ let logsAtTheEnd: {
 		| 'new_json_file'
 		| 'deleted_unused_json_file'
 		| 'outdated'
-		| 'deprecated';
+		| 'deprecated'
+		| 'npm_error';
 	pkg: string;
 	extra: string;
 }[] = [];
@@ -58,7 +59,8 @@ if (jsonNotNeeded.length > 0) {
 		logsAtTheEnd.push({ type: 'deleted_unused_json_file', pkg, extra: `deleted -> ${jsonPath}` });
 	}
 
-	theEnd(1);
+	// Let's continue
+	// theEnd(1);
 }
 
 // PART 3: refresh data
@@ -94,7 +96,8 @@ function theEnd(val: number) {
 			new_json_file: 'NEW JSON',
 			deleted_unused_json_file: 'DEL JSON',
 			outdated: 'Outdated',
-			deprecated: 'Deprecated'
+			deprecated: 'Deprecated',
+			npm_error: 'NPM Error'
 		};
 		console.log(
 			`  - ${logsAtTheEnd.map((l) => `${typePrints[l.type].padEnd(15)} | ${l.pkg.padEnd(35)} | ${l.extra}`).join('\n  - ')}`
@@ -108,6 +111,12 @@ async function getNpmAndGitHubData(pkg: string): Promise<PackageKey & PackageNpm
 		fetchJson(`https://registry.npmjs.org/${pkg}`),
 		fetchJson(`https://api.npmjs.org/downloads/point/last-week/${pkg}`)
 	]);
+
+	if (npmInfo.error) {
+		logsAtTheEnd.push({ type: 'npm_error', pkg, extra: npmInfo.error });
+		theEnd(1);
+	}
+
 	// delete npmInfo.readme;
 	// delete npmInfo.versions;
 	// console.log(`npmInfo`, npmInfo);
