@@ -1,6 +1,6 @@
 {
 	"name": "typewriter-editor",
-	"description": "A rich text editor based off of Quill.js and Ultradom, and using Svelte for UI.",
+	"npm_description": "A rich text editor using the Delta format with decorations and rendered with a tiny virtual dom",
 	"repo_url": "https://github.com/typewriter-editor/typewriter",
 	"authors": ["jacwright"],
 	"homepage": "https://github.com/typewriter-editor/typewriter#readme",

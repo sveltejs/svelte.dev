@@ -1,6 +1,6 @@
 {
 	"name": "vite-plugin-devtools-json",
-	"description": "Vite plugin for generating `com.chrome.devtools.json` on the fly in the devserver.",
+	"npm_description": "Vite plugin for generating `com.chrome.devtools.json` on the fly in the devserver.",
 	"repo_url": "https://github.com/ChromeDevTools/vite-plugin-devtools-json",
 	"authors": ["google-wombot"],
 	"homepage": "https://github.com/ChromeDevTools/vite-plugin-devtools-json#readme",

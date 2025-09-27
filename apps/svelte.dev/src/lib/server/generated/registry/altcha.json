@@ -1,6 +1,6 @@
 {
 	"name": "altcha",
-	"description": "Provides a GDPR-compliant CAPTCHA alternative for Svelte.",
+	"npm_description": "Privacy-first CAPTCHA widget, compliant with global regulations (GDPR/HIPAA/CCPA/LGDP/DPDPA/PIPL) and WCAG accessible. No tracking, self-verifying.",
 	"repo_url": "https://github.com/altcha-org/altcha",
 	"authors": ["ovx"],
 	"homepage": "https://altcha.org",

@@ -1,6 +1,6 @@
 {
 	"name": "svelte-awesome",
-	"description": "Use Font Awesome icons in Svelte applications.",
+	"npm_description": "Font Awesome component for Svelte JS, using inline SVG",
 	"repo_url": "https://github.com/RobBrazier/svelte-awesome",
 	"authors": ["robbrazier"],
 	"homepage": "https://github.com/RobBrazier/svelte-awesome#readme",

@@ -1,6 +1,6 @@
 {
 	"name": "@lottiefiles/svelte-lottie-player",
-	"description": "Play Lottie animations within Svelte applications.",
+	"npm_description": "Lottie animation player component for Svelte",
 	"repo_url": "https://github.com/LottieFiles/svelte-lottie-player",
 	"authors": ["jawish"],
 	"homepage": "https://github.com/LottieFiles/svelte-lottie-player",

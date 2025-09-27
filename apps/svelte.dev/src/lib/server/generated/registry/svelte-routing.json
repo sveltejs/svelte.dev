@@ -1,6 +1,6 @@
 {
 	"name": "svelte-routing",
-	"description": "Declarative Svelte routing library with SSR support.",
+	"npm_description": "A declarative Svelte routing library with SSR support",
 	"repo_url": "https://github.com/EmilTholin/svelte-routing",
 	"authors": ["tholle", "krishnatorque"],
 	"homepage": "https://github.com/EmilTholin/svelte-routing#readme",

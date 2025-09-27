@@ -1,6 +1,6 @@
 {
 	"name": "@neoconfetti/svelte",
-	"description": "Create confetti explosions in Svelte apps.",
+	"npm_description": "Confetti explosion in Svelte 🎉🎊",
 	"repo_url": "https://github.com/puruvj/neoconfetti",
 	"authors": ["puruvj"],
 	"homepage": "https://github.com/puruvj/neoconfetti/tree/main/packages/svelte#readme",

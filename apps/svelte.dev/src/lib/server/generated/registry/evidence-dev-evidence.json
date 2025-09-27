@@ -1,6 +1,6 @@
 {
 	"name": "@evidence-dev/evidence",
-	"description": "Build data apps with Svelte and Evidence.",
+	"npm_description": "dependencies for evidence projects",
 	"repo_url": "",
 	"authors": ["archiewood", "mcrascal", "hughess", "charles-evidence"],
 	"version": "40.1.2",

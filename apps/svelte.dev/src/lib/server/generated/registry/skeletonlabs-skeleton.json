@@ -1,6 +1,6 @@
 {
 	"name": "@skeletonlabs/skeleton",
-	"description": "Comprehensive UI component library for Svelte with themes and utilities powered by Tailwind CSS.",
+	"npm_description": "This repository contains all the stylesheets for the Skeleton package.",
 	"repo_url": "https://github.com/skeletonlabs/skeleton",
 	"authors": ["skeletonadmin", "endigo9740", "cokakoala", "hugoskokos"],
 	"homepage": "https://github.com/skeletonlabs/skeleton#readme",

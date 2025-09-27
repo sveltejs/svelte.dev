@@ -1,6 +1,6 @@
 {
 	"name": "mdsvex",
-	"description": "Markdown in Svelte. Svelte in markdown.",
+	"npm_description": "Markdown preprocessor for Svelte",
 	"repo_url": "https://github.com/pngwn/MDsveX",
 	"authors": ["evilpingwin"],
 	"homepage": "https://github.com/pngwn/MDsveX#readme",

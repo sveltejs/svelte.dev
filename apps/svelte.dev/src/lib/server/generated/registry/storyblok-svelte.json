@@ -1,6 +1,6 @@
 {
 	"name": "@storyblok/svelte",
-	"description": "Connect Svelte apps to Storyblok CMS.",
+	"npm_description": "SDK to integrate Storyblok into your project using Svelte.",
 	"repo_url": "https://github.com/storyblok/monoblok",
 	"authors": [
 		"delooks",

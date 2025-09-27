@@ -1,6 +1,6 @@
 {
 	"name": "vitest",
-	"description": "Next generation testing framework powered by Vite.",
+	"npm_description": "Next generation testing framework powered by Vite",
 	"repo_url": "https://github.com/vitest-dev/vitest",
 	"authors": ["antfu", "patak", "oreanno", "yyx990803"],
 	"homepage": "https://github.com/vitest-dev/vitest#readme",

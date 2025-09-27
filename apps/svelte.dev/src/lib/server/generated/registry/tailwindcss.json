@@ -1,6 +1,6 @@
 {
 	"name": "tailwindcss",
-	"description": "Rapidly build custom user interfaces with utility-first CSS.",
+	"npm_description": "A utility-first CSS framework for rapidly building custom user interfaces.",
 	"repo_url": "https://github.com/tailwindlabs/tailwindcss",
 	"authors": ["malfaitrobin", "adamwathan", "reinink"],
 	"homepage": "https://tailwindcss.com",

@@ -1,6 +1,6 @@
 {
 	"name": "svead",
-	"description": "Svelte component for managing meta tags and SEO.",
+	"npm_description": "[docs](../../README.md)",
 	"repo_url": "https://github.com/spences10/svead",
 	"authors": ["spences10"],
 	"homepage": "https://github.com/spences10/svead#readme",

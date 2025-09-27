@@ -1,6 +1,6 @@
 {
 	"name": "svelte-inspect-value",
-	"description": "A pleasant value inspector component for svelte.",
+	"npm_description": "Svelte value inspector component",
 	"repo_url": "https://github.com/ampled/svelte-inspect-value",
 	"authors": ["eirikk"],
 	"homepage": "https://inspect.eirik.space",

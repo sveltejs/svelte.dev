@@ -1,6 +1,6 @@
 {
 	"name": "svelte-chartjs",
-	"description": "Create charts using Chart.js in Svelte apps.",
+	"npm_description": "<img align=\"right\" width=\"150\" height=\"150\" alt=\"svelte-chartjs logo\" src=\"https://raw.githubusercontent.com/SauravKanchan/svelte-chartjs/master/assets/svelte-chartjs.png\">",
 	"repo_url": "https://github.com/SauravKanchan/svelte-chartjs",
 	"authors": ["sauravnk30"],
 	"homepage": "https://saurav.tech/mdbsvelte/?path=/story/charts--examples",

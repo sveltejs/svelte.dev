@@ -1,6 +1,6 @@
 {
 	"name": "amplify-adapter",
-	"description": "Adapts SvelteKit for Amplify Hosting CI/CD.",
+	"npm_description": "Adapter for SvelteKit v1/v2 + Amplify SSR CI/CD",
 	"repo_url": "https://github.com/gzimbron/amplify-adapter",
 	"authors": ["zimbronapps"],
 	"homepage": "https://github.com/gzimbron/amplify-adapter#readme",

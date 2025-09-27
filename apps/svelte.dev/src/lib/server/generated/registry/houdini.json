@@ -1,6 +1,6 @@
 {
 	"name": "houdini",
-	"description": "Generate GraphQL clients for Svelte applications.",
+	"npm_description": "The disappearing GraphQL clients",
 	"repo_url": "https://github.com/HoudiniGraphql/houdini",
 	"authors": ["aaivazis", "jycouet"],
 	"homepage": "https://github.com/HoudiniGraphql/houdini",

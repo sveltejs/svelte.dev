@@ -1,6 +1,6 @@
 {
 	"name": "@sveltejs/adapter-auto",
-	"description": "Automatically choose SvelteKit adapter.",
+	"npm_description": "Automatically chooses the SvelteKit adapter for your current environment, if possible.",
 	"repo_url": "https://github.com/sveltejs/kit",
 	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
 	"homepage": "https://svelte.dev",

@@ -1,6 +1,6 @@
 {
 	"name": "@slicemachine/adapter-sveltekit",
-	"description": "Adapts SvelteKit for use with Prismic Slice Machine.",
+	"npm_description": "Slice Machine adapter for SvelteKit.",
 	"repo_url": "ssh://git@github.com/prismicio/slice-machine",
 	"authors": [
 		"lihbr",

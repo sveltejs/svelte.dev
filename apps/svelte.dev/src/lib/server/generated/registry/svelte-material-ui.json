@@ -1,6 +1,6 @@
 {
 	"name": "svelte-material-ui",
-	"description": "Build Material Design UI components for Svelte applications.",
+	"npm_description": "Svelte Material UI Components",
 	"repo_url": "https://github.com/hperrin/svelte-material-ui",
 	"authors": ["hperrin"],
 	"version": "8.0.3",

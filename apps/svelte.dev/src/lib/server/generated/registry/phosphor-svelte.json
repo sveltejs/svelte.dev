@@ -1,6 +1,6 @@
 {
 	"name": "phosphor-svelte",
-	"description": "Render Phosphor icons in Svelte applications.",
+	"npm_description": "A clean and friendly icon family for Svelte",
 	"repo_url": "https://github.com/haruaki07/phosphor-svelte",
 	"authors": ["haruaki07"],
 	"homepage": "https://phosphoricons.com",

@@ -1,6 +1,6 @@
 {
 	"name": "layerchart",
-	"description": "Build a wide range of data visualizations with composable components.",
+	"npm_description": "Composable Svelte chart components to build a wide range of visualizations",
 	"repo_url": "https://github.com/techniq/layerchart",
 	"authors": ["techniq"],
 	"homepage": "https://github.com/techniq/layerchart#readme",

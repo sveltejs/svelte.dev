@@ -1,6 +1,6 @@
 {
 	"name": "@supabase/ssr",
-	"description": "Provides auth helpers for Supabase in SvelteKit.",
+	"npm_description": "Use the Supabase JavaScript library in popular server-side rendering (SSR) frameworks.",
 	"repo_url": "https://github.com/supabase/ssr",
 	"authors": [
 		"etienne_supa",

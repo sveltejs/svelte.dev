@@ -1,6 +1,6 @@
 {
 	"name": "@prismicio/svelte",
-	"description": "Displays Prismic content within Svelte applications.",
+	"npm_description": "Svelte components to present Prismic content.",
 	"repo_url": "ssh://git@github.com/prismicio/prismic-svelte",
 	"authors": [
 		"chrrrs",

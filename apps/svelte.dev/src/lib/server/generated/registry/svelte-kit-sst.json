@@ -1,6 +1,6 @@
 {
 	"name": "svelte-kit-sst",
-	"description": "Adapter for SvelteKit apps to work on AWS Lambda.",
+	"npm_description": "Adapter for SvelteKit apps to work on AWS Lambda and AWS Lambda@Edge.",
 	"repo_url": "https://github.com/sst/sst",
 	"authors": ["thdxr", "fanjie", "sst-publisher"],
 	"homepage": "https://github.com/sst/sst#readme",

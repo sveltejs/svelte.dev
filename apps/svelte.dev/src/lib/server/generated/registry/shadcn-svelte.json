@@ -1,6 +1,6 @@
 {
 	"name": "shadcn-svelte",
-	"description": "shadcn/ui, but for Svelte. Built with Bits UI and Tailwind CSS.",
+	"npm_description": "Add components to your apps.",
 	"repo_url": "https://github.com/huntabyte/shadcn-svelte",
 	"authors": ["huntabyte"],
 	"homepage": "https://github.com/huntabyte/shadcn-svelte#readme",

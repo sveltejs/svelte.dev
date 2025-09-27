@@ -1,6 +1,6 @@
 {
 	"name": "melt",
-	"description": "Build accessible UI components for Svelte.",
+	"npm_description": "The next generation of Melt UI. Built for Svelte 5.",
 	"repo_url": "https://github.com/melt-ui/next-gen",
 	"authors": ["tglide_personal"],
 	"homepage": "https://next.melt-ui.com/",

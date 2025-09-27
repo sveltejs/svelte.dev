@@ -1,6 +1,6 @@
 {
 	"name": "virtua",
-	"description": "Virtualize lists and grids for Svelte.",
+	"npm_description": "A zero-config, fast and small (~3kB) virtual list (and grid) component for React, Vue, Solid and Svelte.",
 	"repo_url": "https://github.com/inokawa/virtua",
 	"authors": ["inokawa"],
 	"homepage": "https://github.com/inokawa/virtua#readme",

@@ -1,6 +1,6 @@
 {
 	"name": "carbon-components-svelte",
-	"description": "Svelte implementation of the Carbon Design System",
+	"npm_description": "Svelte implementation of the Carbon Design System",
 	"repo_url": "https://github.com/carbon-design-system/carbon-components-svelte",
 	"authors": ["metonym"],
 	"homepage": "https://svelte.carbondesignsystem.com/",

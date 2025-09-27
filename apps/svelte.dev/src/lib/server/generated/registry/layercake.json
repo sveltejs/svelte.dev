@@ -1,6 +1,6 @@
 {
 	"name": "layercake",
-	"description": "Build reusable graphics with Svelte.",
+	"npm_description": "graphics framework for sveltejs",
 	"repo_url": "https://github.com/mhkeller/layercake",
 	"authors": ["mhkeller0"],
 	"homepage": "https://layercake.graphics/",

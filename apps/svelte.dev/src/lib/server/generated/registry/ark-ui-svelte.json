@@ -1,6 +1,6 @@
 {
 	"name": "@ark-ui/svelte",
-	"description": "Provide unstyled, accessible UI components for Svelte.",
+	"npm_description": "A collection of unstyled, accessible UI components for Svelte",
 	"repo_url": "https://github.com/chakra-ui/ark",
 	"authors": ["segunadebayo", "schroetier"],
 	"homepage": "https://ark-ui.com",

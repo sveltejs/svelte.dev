@@ -1,6 +1,6 @@
 {
 	"name": "@sveltejs/adapter-cloudflare",
-	"description": "Deploy SvelteKit apps to Cloudflare Pages.",
+	"npm_description": "Adapter for building SvelteKit applications on Cloudflare Pages with Workers integration",
 	"repo_url": "https://github.com/sveltejs/kit",
 	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
 	"homepage": "https://svelte.dev",

@@ -1,6 +1,6 @@
 {
 	"name": "svelte-easy-crop",
-	"description": "Crop images with easy drag and zoom interactions in Svelte.",
+	"npm_description": "A Svelte component to crop images with easy interactions",
 	"repo_url": "https://github.com/ValentinH/svelte-easy-crop",
 	"authors": ["valentinhervieu"],
 	"homepage": "https://github.com/ValentinH/svelte-easy-crop",

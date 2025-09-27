@@ -1,6 +1,6 @@
 {
 	"name": "lucide-svelte",
-	"description": "The Lucide icon library for Svelte.",
+	"npm_description": "A Lucide icon library package for Svelte applications.",
 	"repo_url": "https://github.com/lucide-icons/lucide",
 	"authors": ["ericfennis"],
 	"homepage": "https://lucide.dev",

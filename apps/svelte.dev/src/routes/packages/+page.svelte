@@ -1,13 +1,8 @@
 <script lang="ts">
-	import { forcefocus } from '@sveltejs/site-kit/actions';
-	import { Icon } from '@sveltejs/site-kit/components';
-	import PackageCard from './PackageCard.svelte';
 	import Category from './Category.svelte';
 	import { fly } from 'svelte/transition';
 
 	const { data } = $props();
-
-	const formatter = new Intl.NumberFormat();
 </script>
 
 <svelte:head>
@@ -22,9 +17,6 @@
 
 <div class="page content">
 	<div in:fly={{ y: 20 }}>
-		{#each data.addons as { title, description, packages }}
-			<Category {title} {description} {packages} />
-		{/each}
 		{#each data.homepage as { title, description, packages }}
 			<Category {title} {description} {packages} />
 		{/each}

@@ -23,10 +23,7 @@ let logsAtTheEnd: {
 	extra: string;
 }[] = [];
 
-const packages = [
-	...PACKAGES_META.FEATURED.flatMap((pkg) => pkg.packages),
-	...PACKAGES_META.SV_ADD.packages
-];
+const packages = PACKAGES_META.FEATURED.flatMap((pkg) => pkg.packages).map((pkg) => pkg.name);
 
 const registryFolder = 'src/lib/server/generated/registry';
 
@@ -115,7 +112,7 @@ async function getNpmAndGitHubData(pkg: string): Promise<PackageKey & PackageNpm
 	// delete npmInfo.versions;
 	// console.log(`npmInfo`, npmInfo);
 
-	const description = npmInfo.description;
+	const npm_description = npmInfo.description;
 	const raw_repo_url = npmInfo.repository?.url ?? '';
 	const repo_url = raw_repo_url?.replace(/^git\+/, '').replace(/\.git$/, '');
 	if (!repo_url) {
@@ -158,7 +155,7 @@ async function getNpmAndGitHubData(pkg: string): Promise<PackageKey & PackageNpm
 
 	return {
 		name: pkg,
-		description,
+		npm_description,
 		repo_url,
 		authors,
 		homepage,
@@ -168,6 +165,7 @@ async function getNpmAndGitHubData(pkg: string): Promise<PackageKey & PackageNpm
 		updated,
 		svelte_range,
 		kit_range,
+
 		// GitHub
 		github_stars
 	};
@@ -184,11 +182,6 @@ async function refreshJsonFile(fullPath: string) {
 		if (newData[key] === undefined) {
 			delete newData[key];
 		}
-	}
-
-	// don't overwrite the description if it exists
-	if (currentJson.description) {
-		delete newData.description;
 	}
 
 	// Let's not filter npm downloads changes
@@ -229,7 +222,7 @@ async function refreshJsonFile(fullPath: string) {
 function writeJsonData(path: string, data: any) {
 	const keysOrder: (keyof PackageKey | keyof PackageNpm | keyof PackageGithub)[] = [
 		'name',
-		'description',
+		'npm_description',
 		'repo_url',
 		'authors',
 		'homepage',

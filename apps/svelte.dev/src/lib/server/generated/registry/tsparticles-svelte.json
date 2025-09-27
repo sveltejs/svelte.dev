@@ -1,6 +1,6 @@
 {
 	"name": "@tsparticles/svelte",
-	"description": "Create particle, confetti, and fireworks animations.",
+	"npm_description": "Official tsParticles Svelte Component - Easily create highly customizable particle, confetti and fireworks animations and use them as animated backgrounds for your website. Ready to use components available also for Web Components, React, Vue.js (2.x and ",
 	"repo_url": "https://github.com/tsparticles/svelte",
 	"authors": ["matteobruni", "ar3s"],
 	"homepage": "https://github.com/tsparticles/svelte#readme",

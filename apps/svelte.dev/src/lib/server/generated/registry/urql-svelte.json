@@ -1,6 +1,6 @@
 {
 	"name": "@urql/svelte",
-	"description": "GraphQL client for Svelte applications.",
+	"npm_description": "A highly customizable and versatile GraphQL client for Svelte",
 	"repo_url": "https://github.com/urql-graphql/urql",
 	"authors": [
 		"michaelmerrill",

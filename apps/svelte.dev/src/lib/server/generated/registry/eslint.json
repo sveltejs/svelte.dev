@@ -1,6 +1,6 @@
 {
 	"name": "eslint",
-	"description": "Find and fix problems in your JavaScript code.",
+	"npm_description": "An AST-based pattern checker for JavaScript.",
 	"repo_url": "https://github.com/eslint/eslint",
 	"authors": ["openjsfoundation", "eslintbot"],
 	"homepage": "https://eslint.org",

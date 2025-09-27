@@ -1,6 +1,6 @@
 {
 	"name": "svelte-adapter-azure-swa",
-	"description": "Deploy SvelteKit apps to Azure Static Web Apps.",
+	"npm_description": "SvelteKit adapter for Azure Static Web Apps.",
 	"repo_url": "",
 	"authors": ["geoffrich"],
 	"homepage": "https://github.com/geoffrich/svelte-adapter-azure-swa#readme",

@@ -1,6 +1,6 @@
 {
 	"name": "scrolly-video",
-	"description": "Create scroll-based video playback in Svelte apps.",
+	"npm_description": "A component for scroll-based (or other externally controlled) playback.",
 	"repo_url": "https://github.com/dkaoster/scrolly-video",
 	"authors": ["dkao"],
 	"homepage": "https://github.com/dkaoster/scrolly-video#readme",

@@ -1,6 +1,6 @@
 {
 	"name": "svelte-meta-tags",
-	"description": "Manage SEO for Svelte projects with meta tags.",
+	"npm_description": "Svelte Meta Tags provides components designed to help you manage SEO for Svelte projects",
 	"repo_url": "https://github.com/oekazuma/svelte-meta-tags",
 	"authors": ["oe.kazuma"],
 	"homepage": "https://github.com/oekazuma/svelte-meta-tags#readme",

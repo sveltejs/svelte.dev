@@ -1,6 +1,6 @@
 {
 	"name": "@unpic/svelte",
-	"description": "Create responsive, high-performance images in Svelte.",
+	"npm_description": "Svelte component for responsive, high-performance images.",
 	"repo_url": "https://github.com/ascorbic/unpic-img",
 	"authors": ["ascorbic"],
 	"homepage": "https://unpic.pics/img/svelte",

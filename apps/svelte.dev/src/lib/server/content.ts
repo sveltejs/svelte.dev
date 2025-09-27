@@ -158,19 +158,29 @@ export const examples = index.examples.children;
  */
 export interface Package
 	extends PackageKey,
+		PackageManual,
 		PackageNpm,
 		PackageGithub,
-		PackageCalculated,
-		PackageSv {}
+		PackageCalculated {}
 
 export interface PackageKey {
 	/** Package name */
 	name: string;
 }
 
+export interface PackageManual {
+	description?: string;
+
+	/** sv info */
+	svAlias?: string;
+	svOptions?: string;
+}
+
+export interface PackageDefinition extends PackageKey, PackageManual {}
+
 export interface PackageNpm {
 	/** Package description (HTML formatted) */
-	description?: string;
+	npm_description?: string;
 
 	/** Repository URL (typically GitHub) */
 	repo_url?: string;
@@ -216,6 +226,7 @@ export interface PackageGithub {
 }
 
 export interface PackageCalculated {
+	description?: string;
 	official?: boolean;
 	outdated?: boolean;
 	svelte: {
@@ -223,11 +234,6 @@ export interface PackageCalculated {
 		4: boolean;
 		5: boolean;
 	};
-}
-
-export interface PackageSv {
-	svCmdAlias?: string;
-	svCmdOptions?: string;
 }
 
 export interface Category {
@@ -242,6 +248,7 @@ function create_registry() {
 	for (const frontmatter of Object.values(registry_docs)) {
 		const json = JSON.parse(frontmatter);
 
+		json.description = PACKAGES_META.calculate_description(json);
 		json.official = PACKAGES_META.is_official(json.name);
 		json.outdated = PACKAGES_META.is_outdated(json.updated);
 		json.svelte = PACKAGES_META.supports_svelte_versions(json.svelte_range);

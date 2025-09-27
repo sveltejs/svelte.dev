@@ -1,6 +1,6 @@
 {
 	"name": "@magidoc/plugin-svelte-marked",
-	"description": "Parse Markdown to Svelte components for Magidoc.",
+	"npm_description": "A markdown parser library that renders to svelte components.",
 	"repo_url": "https://github.com/magidoc-org/magidoc",
 	"authors": ["pelletier197"],
 	"homepage": "https://github.com/magidoc-org/magidoc#readme",

@@ -1,6 +1,6 @@
 {
 	"name": "@sveltejs/enhanced-img",
-	"description": "Optimize images in Svelte apps.",
+	"npm_description": "Image optimization for your Svelte apps",
 	"repo_url": "https://github.com/sveltejs/kit",
 	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
 	"homepage": "https://svelte.dev",

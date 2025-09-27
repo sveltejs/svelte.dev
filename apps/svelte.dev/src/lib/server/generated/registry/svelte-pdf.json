@@ -1,6 +1,6 @@
 {
 	"name": "svelte-pdf",
-	"description": "Render PDF documents within Svelte applications.",
+	"npm_description": "svelte-pdf provides a component for rendering PDF documents using PDF.js",
 	"repo_url": "https://github.com/vinodnimbalkar/svelte-pdf",
 	"authors": ["vinodnimbalkar"],
 	"homepage": "https://github.com/vinodnimbalkar/svelte-pdf#readme",

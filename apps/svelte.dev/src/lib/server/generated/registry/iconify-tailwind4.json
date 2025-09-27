@@ -1,6 +1,6 @@
 {
 	"name": "@iconify/tailwind4",
-	"description": "Integrate Iconify icons into Tailwind CSS projects.",
+	"npm_description": "Iconify plugin for Tailwind CSS",
 	"repo_url": "https://github.com/iconify/iconify-tailwind",
 	"authors": ["cyberalien"],
 	"homepage": "https://iconify.design/",

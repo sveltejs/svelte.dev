@@ -1,6 +1,6 @@
 {
 	"name": "@sentry/sveltekit",
-	"description": "Integrate Sentry error tracking into SvelteKit applications.",
+	"npm_description": "Official Sentry SDK for SvelteKit",
 	"repo_url": "git://github.com/getsentry/sentry-javascript",
 	"authors": [
 		"billyvg",

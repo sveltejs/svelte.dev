@@ -1,6 +1,6 @@
 {
 	"name": "@sveltejs/amp",
-	"description": "Integrate AMP with SvelteKit.",
+	"npm_description": "AMP integration for SvelteKit",
 	"repo_url": "https://github.com/sveltejs/kit",
 	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
 	"homepage": "https://svelte.dev",

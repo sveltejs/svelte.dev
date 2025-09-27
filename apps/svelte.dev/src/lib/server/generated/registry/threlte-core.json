@@ -1,6 +1,6 @@
 {
 	"name": "@threlte/core",
-	"description": "3D framework for web, built on Svelte and Three.js.",
+	"npm_description": "A 3D framework for the web, built on top of Svelte and Three.js",
 	"repo_url": "https://github.com/threlte/threlte",
 	"authors": ["grischaerbe"],
 	"homepage": "https://threlte.xyz",

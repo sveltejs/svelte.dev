@@ -1,6 +1,6 @@
 {
 	"name": "svelte-maplibre-gl",
-	"description": "Build interactive web maps with MapLibre GL JS and Svelte.",
+	"npm_description": "Build interactive web maps effortlessly with MapLibre GL JS and Svelte",
 	"repo_url": "https://github.com/MIERUNE/svelte-maplibre-gl",
 	"authors": ["mierune_iguchi", "ciscorn"],
 	"homepage": "https://svelte-maplibre-gl.mierune.dev/",

@@ -1,6 +1,6 @@
 {
 	"name": "svelte-seo",
-	"description": "Optimize Svelte apps for search engines, social media.",
+	"npm_description": "Optimize your Svelte app for search engines and social media with meta tags, Open Graph, and JSON-LD.",
 	"repo_url": "ssh://git@github.com/artiebits/svelte-seo",
 	"authors": ["artiebits"],
 	"homepage": "https://github.com/artiebits/svelte-seo#readme",

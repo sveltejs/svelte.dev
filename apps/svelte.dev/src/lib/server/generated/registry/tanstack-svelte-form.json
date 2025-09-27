@@ -1,6 +1,6 @@
 {
 	"name": "@tanstack/svelte-form",
-	"description": "Headless, performant, and type-safe form state management.",
+	"npm_description": "Powerful, type-safe forms for Svelte.",
 	"repo_url": "https://github.com/TanStack/form",
 	"authors": ["tannerlinsley", "kylemathews"],
 	"homepage": "https://tanstack.com/form",

@@ -1,6 +1,6 @@
 {
 	"name": "@passlock/sveltekit",
-	"description": "Enables passkey authentication and social login in SvelteKit apps.",
+	"npm_description": "Passkey authentication and social login for SvelteKit apps",
 	"repo_url": "https://github.com/passlock-dev/passlock",
 	"authors": ["toby.hobson"],
 	"homepage": "https://passlock.dev",

@@ -1,6 +1,6 @@
 {
 	"name": "svelte-session-manager",
-	"description": "Manages JWT session data for Svelte apps, stores tokens.",
+	"npm_description": "Session store for svelte (currently only for JWT)",
 	"repo_url": "https://github.com/arlac77/svelte-session-manager",
 	"authors": ["arlac77"],
 	"homepage": "https://github.com/arlac77/svelte-session-manager#readme",

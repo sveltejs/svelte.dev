@@ -1,6 +1,6 @@
 {
 	"name": "@event-calendar/core",
-	"description": "Create full-sized drag & drop event calendars.",
+	"npm_description": "Full-sized drag & drop event calendar with resource & timeline views",
 	"repo_url": "https://github.com/vkurko/calendar",
 	"authors": ["vkurko"],
 	"homepage": "https://vkurko.github.io/calendar/",

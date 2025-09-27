@@ -1,6 +1,6 @@
 {
 	"name": "@content-collections/core",
-	"description": "Transform your content into type-safe data collections.",
+	"npm_description": "Core of Content Collections",
 	"repo_url": "https://github.com/sdorra/content-collections",
 	"authors": ["sdorra"],
 	"homepage": "https://content-collections.dev",

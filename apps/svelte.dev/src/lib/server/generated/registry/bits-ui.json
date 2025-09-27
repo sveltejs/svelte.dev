@@ -1,6 +1,6 @@
 {
 	"name": "bits-ui",
-	"description": "Headless components for Svelte.",
+	"npm_description": "The headless components for Svelte.",
 	"repo_url": "https://github.com/huntabyte/bits-ui",
 	"authors": ["huntabyte"],
 	"homepage": "https://github.com/huntabyte/bits-ui#readme",

@@ -1,6 +1,6 @@
 {
 	"name": "svelte-loader",
-	"description": "Compile Svelte components with Webpack.",
+	"npm_description": "A webpack loader for svelte",
 	"repo_url": "ssh://git@github.com/sveltejs/svelte-loader",
 	"authors": ["nikku", "rich_harris", "conduitry", "svelte-admin", "dummdidumm"],
 	"homepage": "https://github.com/sveltejs/svelte-loader#readme",

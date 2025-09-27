@@ -1,6 +1,6 @@
 {
 	"name": "universal-router",
-	"description": "A simple middleware-style router for isomorphic JavaScript web apps.",
+	"npm_description": "Isomorphic router for JavaScript web applications",
 	"repo_url": "https://github.com/kriasoft/universal-router",
 	"authors": ["koistya", "frenzzy"],
 	"homepage": "https://www.kriasoft.com/universal-router/",

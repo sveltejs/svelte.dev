@@ -1,6 +1,6 @@
 {
 	"name": "@sveltepress/vite",
-	"description": "Content centered site build tool with the full power of SvelteKit.",
+	"npm_description": "Sveltepress plugin for vite",
 	"repo_url": "https://github.com/Blackman99/sveltepress",
 	"authors": ["philadelphia"],
 	"homepage": "https://sveltepress.site/",

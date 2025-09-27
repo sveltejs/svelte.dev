@@ -1,6 +1,6 @@
 {
 	"name": "@sveltejs/kit",
-	"description": "Build web applications with Svelte and SvelteKit.",
+	"npm_description": "SvelteKit is the fastest way to build Svelte apps",
 	"repo_url": "https://github.com/sveltejs/kit",
 	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
 	"homepage": "https://svelte.dev",

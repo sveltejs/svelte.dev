@@ -1,6 +1,6 @@
 {
 	"name": "sveltekit-superforms",
-	"description": "Simplify SvelteKit form handling and validation.",
+	"npm_description": "Making SvelteKit forms a pleasure to use!",
 	"repo_url": "https://github.com/ciscoheat/sveltekit-superforms",
 	"authors": ["ciscoheat"],
 	"homepage": "https://superforms.rocks",
