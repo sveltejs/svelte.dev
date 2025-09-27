@@ -191,6 +191,15 @@ async function refreshJsonFile(fullPath: string) {
 		delete newData.description;
 	}
 
+	// Let's not filter npm downloads changes
+	// // filter changes of downloads
+	// if (newData.downloads && currentJson.downloads) {
+	// 	const dlDelta = Math.abs(
+	// 		((newData.downloads - currentJson.downloads) / currentJson.downloads) * 100
+	// 	);
+	// 	if (dlDelta < 2.5) delete newData.downloads;
+	// }
+
 	const data = { ...currentJson, ...newData };
 
 	// Some stats infos to log
@@ -261,7 +270,7 @@ async function fetchJson(url: string, options: RequestInit = {}): Promise<any> {
 			const res = await fetch(url, { ...options, headers });
 			return await res.json();
 		} catch (e) {
-			console.error(`Failed to fetch ${url} after ${i + 1} retries`, e);
+			console.error(`Failed to fetch ${url} after ${i + 1} retries`);
 		}
 
 		await new Promise((resolve) => setTimeout(resolve, 1000 * Math.pow(2, i + 1)));
