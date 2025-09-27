@@ -25,11 +25,10 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
-          commit-message: '(AUTO) Update packages data'
           title: '🤖 Update packages data'
           body: Automatically fetch latest packages data from NPM & GitHub.
           base: main
           branch: ci/update-packages-data
-          add-paths: apps/svelte.dev/src/lib/server/generated/registry/**
           delete-branch: true
+          commit-message: '(AUTO) Update packages data'
           token: ${{ secrets.GITHUB_TOKEN }}
