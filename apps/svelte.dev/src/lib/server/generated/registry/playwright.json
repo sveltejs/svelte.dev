@@ -6,7 +6,7 @@
 	"homepage": "https://playwright.dev",
 	"version": "1.55.1",
 	"downloads": 21094443,
-	"github_stars": 77542,
+	"github_stars": 77558,
 	"updated": "2025-09-23T09:57:04.991Z",
 	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
 	"typescript": true,
