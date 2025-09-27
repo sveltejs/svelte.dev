@@ -1,0 +1,15 @@
+{
+	"name": "@wuchale/svelte",
+	"description": "wuchale is a compile-time internationalization (i18n) toolkit that requires zero code changes.",
+	"repo_url": "https://github.com/wuchalejs/wuchale",
+	"authors": ["k1dv5"],
+	"homepage": "https://wuchale.dev",
+	"version": "0.15.1",
+	"downloads": 320,
+	"github_stars": 187,
+	"updated": "2025-09-21T10:54:55.355Z",
+	"svelte_range": "^5.37.0",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "0.15.0"
+}

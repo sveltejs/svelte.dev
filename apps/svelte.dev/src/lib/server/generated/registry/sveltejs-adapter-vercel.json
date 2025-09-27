@@ -1,0 +1,15 @@
+{
+	"name": "@sveltejs/adapter-vercel",
+	"description": "Deploy SvelteKit apps to Vercel.",
+	"repo_url": "https://github.com/sveltejs/kit",
+	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
+	"homepage": "https://svelte.dev",
+	"version": "5.10.2",
+	"downloads": 85855,
+	"github_stars": 19739,
+	"updated": "2025-08-19T14:58:41.874Z",
+	"kit_range": "^2.4.0",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "5.7.0"
+}

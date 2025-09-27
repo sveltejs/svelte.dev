@@ -1,0 +1,14 @@
+{
+	"name": "eslint",
+	"description": "Find and fix problems in your JavaScript code.",
+	"repo_url": "https://github.com/eslint/eslint",
+	"authors": ["openjsfoundation", "eslintbot"],
+	"homepage": "https://eslint.org",
+	"version": "9.36.0",
+	"downloads": 60977984,
+	"github_stars": 26512,
+	"updated": "2025-09-19T14:32:08.465Z",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "9.35.0"
+}

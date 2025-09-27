@@ -1,0 +1,15 @@
+{
+	"name": "daisyui",
+	"description": "Free and open-source Tailwind CSS component library.",
+	"repo_url": "https://github.com/saadeghi/daisyui",
+	"authors": ["saadeghi"],
+	"homepage": "https://daisyui.com",
+	"version": "5.1.24",
+	"downloads": 494376,
+	"github_stars": 38787,
+	"updated": "2025-09-26T20:52:10.427Z",
+	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
+	"typescript": false,
+	"runes": false,
+	"last_rune_check_version": "1.3.0"
+}

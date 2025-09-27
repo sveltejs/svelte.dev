@@ -1,0 +1,15 @@
+{
+	"name": "playwright",
+	"description": "Framework for web testing and automation.",
+	"repo_url": "https://github.com/microsoft/playwright",
+	"authors": ["pavelfeldman", "yurys", "dgozman-ms", "playwright-bot"],
+	"homepage": "https://playwright.dev",
+	"version": "1.55.1",
+	"downloads": 21094443,
+	"github_stars": 77542,
+	"updated": "2025-09-23T09:57:04.991Z",
+	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "1.55.0"
+}

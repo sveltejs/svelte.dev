@@ -31,6 +31,7 @@
 
 	const sections: Record<string, string> = {
 		docs: 'Docs',
+		packages: 'Packages',
 		playground: 'Playground',
 		blog: 'Blog',
 		tutorial: 'Tutorial',

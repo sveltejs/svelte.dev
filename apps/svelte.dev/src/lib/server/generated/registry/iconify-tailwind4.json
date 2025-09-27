@@ -1,0 +1,14 @@
+{
+	"name": "@iconify/tailwind4",
+	"description": "Integrate Iconify icons into Tailwind CSS projects.",
+	"repo_url": "https://github.com/iconify/iconify-tailwind",
+	"authors": ["cyberalien"],
+	"homepage": "https://iconify.design/",
+	"version": "1.0.6",
+	"downloads": 11202,
+	"github_stars": 9,
+	"updated": "2025-02-28T13:34:23.013Z",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "1.0.6"
+}
