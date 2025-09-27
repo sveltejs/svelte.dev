@@ -1,10 +1,6 @@
 name: Sync packages
 
 on:
-  pull_request:
-    branches:
-      - main
-      - packages-launch
   schedule:
     - cron: '0 0 * * 0' # At 00:00 on Sunday.
   workflow_dispatch: # Allow manual triggering
@@ -32,14 +28,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Check for changes
-        run: |
-          echo "Checking for changes in registry files..."
-          git status --porcelain apps/svelte.dev/src/lib/server/generated/registry/
-          echo "Git status exit code: $?"
-
       - name: Create or update pull request
-        id: cpr
         uses: peter-evans/create-pull-request@v7
         with:
           commit-message: '(AUTO) Update packages data'
@@ -48,10 +37,3 @@ jobs:
           base: main
           branch: ci/update-packages-data
           delete-branch: true
-          add-paths: |
-            apps/svelte.dev/src/lib/server/generated/registry/*.json
-
-      - name: Check outputs
-        run: |
-          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
-          echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
