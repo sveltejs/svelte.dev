@@ -208,7 +208,7 @@ const FEATURED: {
 		packages: [
 			{ name: '@sveltejs/kit' },
 			{ name: 'svelte-routing' },
-			{ name: '@roxi/routify' },
+			{ name: '@roxi/routify', description: 'Automate Svelte routes based on file structure.' },
 			{ name: 'svelte5-router' },
 			{ name: 'svelte-pathfinder' },
 			{ name: 'universal-router' }
@@ -527,7 +527,16 @@ function supports_svelte_versions(version_range: string): {
 function calculate_description(pkg: PackageKey & PackageNpm): string {
 	const found = FEATURED.flatMap((f) => f.packages).find((p) => p.name === pkg.name);
 	if (found && found.description) return found.description;
-	return pkg.npm_description ?? 'NO DESCRIPTION!';
+
+	let desc = pkg.npm_description ?? 'NO DESCRIPTION!';
+	const replaces = [
+		// strip out markdown links
+		{ key: /\[(.*?)\]\((.*?)\)/g, value: '$1' }
+	];
+	for (const { key, value } of replaces) {
+		desc = desc.replace(key, value);
+	}
+	return desc;
 }
 
 export const PACKAGES_META = {

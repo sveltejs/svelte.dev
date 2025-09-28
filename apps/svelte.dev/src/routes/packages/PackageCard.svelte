@@ -8,14 +8,6 @@
 	};
 
 	let { pkg }: Props = $props();
-
-	// transform [text](https://url) to <a href="url" target="_blank" rel="noreferrer">text</a>
-	const htmlDescription = $derived(
-		pkg.description?.replace(
-			/\[(.*?)\]\((.*?)\)/g,
-			'<a href="$2" target="_blank" rel="noreferrer">$1</a>'
-		)
-	);
 </script>
 
 <article data-pubdate={pkg.updated}>
@@ -49,7 +41,7 @@
 		</span>
 	</header>
 
-	<p class="description">{@html htmlDescription}</p>
+	<p class="description">{pkg.description}</p>
 
 	<p class="stats">
 		{#if pkg.downloads}
