@@ -8,7 +8,11 @@ export function GET() {
 		Object.fromEntries(
 			Object.entries(docs.pages).map(([key, page]) => [
 				key,
-				{ metadata: { title: page.metadata.title }, slug: page.slug, file: page.file }
+				{
+					metadata: { title: page.metadata.title, use_cases: page.metadata.use_cases },
+					slug: page.slug,
+					file: page.file
+				}
 			])
 		)
 	);
