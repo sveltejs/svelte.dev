@@ -34,6 +34,7 @@ For a full list of bug fixes in Svelte, SvelteKit and its adapters, check out th
 - [Windframe](https://windframe.dev/) generates designs with AI or prebuilt templates to export as Tailwind CSS code for React, Vue, Svelte or HTML.
 - [pgpad](https://github.com/vrmiguel/pgpad) is a straightforward cross-platform database client
 - [Zippywords](https://www.zippywords.com/words/en) is a burst-typing game that's configurable with different languages (including the [Svelte 5 syntax](https://www.zippywords.com/code/Svelte%205)!)
+- [CBFC Watch](https://cbfc.watch/) is a data visualisation project with a searchable database of over 100K film censorship records in India ([GitHub](https://github.com/diagram-chasing/cbfc-watch))
 
 _Spotted in the Wild_
 
@@ -91,6 +92,8 @@ _Frameworks and Data Tools_
 - [Apollo Runes](https://apollo-runes-docs.vercel.app/) is an Apollo Client for Svelte 5
 - [Formisch](https://github.com/fabian-hiller/formisch) is a schema-based, headless form library for JS frameworks
 - [Conformal](https://github.com/marcomuser/conformal) helps you work with native FormData by providing type-safe form submissions for the modern web
+- [Astro](https://astro.build), already supporting async Svelte out of the box, added support for server-rendered async Svelte in the [5.14 release](https://astro.build/blog/astro-5140/#async-rendering-support-for-svelte)
+- [LayerChart](https://github.com/techniq/layerchart/releases/tag/layerchart%402.0.0-next.39) had a packed update and introduced (among other things) a "vanilla CSS" (Tailwind opt-in) mode and support for other UI frameworks, and now also works in the [Svelte REPL / playground](https://svelte.dev/playground/c5e73cb55a0045cca83e74b5cdfa3b65?version=5.39.6)
 
 _Dev Tools and Vite Plugins_
 - [wuchale](https://github.com/wuchalejs/wuchale) is a compile-time internationalization (i18n) toolkit that requires zero code changes
