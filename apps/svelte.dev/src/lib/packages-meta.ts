@@ -12,43 +12,49 @@ const FEATURED: {
 		// Keeping the same order as in sv
 		// https://github.com/sveltejs/cli/blob/main/packages/addons/_config/official.ts#L16-L17
 		packages: [
+			{ name: 'tailwindcss', svAlias: 'tailwind' },
+			{ name: 'drizzle-orm', svAlias: 'drizzle' },
+			{ name: 'mdsvex', svAlias: 'mdsvex' },
+			{ name: 'lucia', svAlias: 'lucia', description: 'A guide to implementing auth in your app.' },
+			{ name: 'storybook', svAlias: 'storybook' },
 			{ name: 'prettier', svAlias: 'prettier' },
 			{ name: 'eslint', svAlias: 'eslint' },
 			{ name: 'vitest', svAlias: 'vitest' },
 			{ name: 'playwright', svAlias: 'playwright' },
-			{ name: 'tailwindcss', svAlias: 'tailwind' },
-			{ name: 'vite-plugin-devtools-json', svAlias: 'devtools-json' },
-			{ name: 'drizzle-orm', svAlias: 'drizzle' },
-			{ name: 'lucia', svAlias: 'lucia' },
-			{ name: 'mdsvex', svAlias: 'mdsvex' },
 			{
 				name: '@inlang/paraglide-js',
 				svAlias: 'paraglide',
 				description: 'A compiler-based i18n library that emits tree-shakable message functions.'
 			},
-			{ name: 'storybook', svAlias: 'storybook' }
+			{ name: 'vite-plugin-devtools-json', svAlias: 'devtools-json' }
 		]
 	},
 	{
 		title: 'Component libraries',
 		packages: [
 			{ name: 'shadcn-svelte' },
-			{ name: 'bits-ui' },
-			{ name: 'melt' },
-			{ name: '@skeletonlabs/skeleton' },
+			{ name: 'bits-ui', description: 'Headless components for Svelte.' },
 			{ name: '@ark-ui/svelte' },
-			{ name: 'flowbite-svelte' },
+			{
+				name: '@skeletonlabs/skeleton',
+				description: 'Skeleton is an adaptive design system powered by Tailwind CSS.'
+			},
+			{
+				name: 'flowbite-svelte',
+				description: 'Official Svelte components built for Flowbite and Tailwind CSS'
+			},
+			{ name: 'daisyui' },
 			{ name: 'svelte-material-ui' },
 			{ name: 'carbon-components-svelte' },
-			{ name: '@sveltestrap/sveltestrap' },
-			{ name: 'daisyui' }
+			{ name: 'melt' },
+			{ name: '@sveltestrap/sveltestrap' }
 		]
 	},
 	{
 		title: 'Individual components',
 		packages: [
 			{ name: '@tanstack/svelte-table' },
-			{ name: '@ai-sdk/svelte' },
+			{ name: '@ai-sdk/svelte', description: 'Svelte UI components for the AI SDK' },
 			{ name: '@tanstack/svelte-virtual' },
 			{ name: 'virtua' },
 			{ name: '@event-calendar/core' }
@@ -57,19 +63,17 @@ const FEATURED: {
 	{
 		title: 'SvelteKit adapters',
 		packages: [
+			{ name: '@sveltejs/adapter-auto' },
 			{ name: '@sveltejs/adapter-node' },
 			{ name: '@sveltejs/adapter-vercel' },
-			{ name: '@sveltejs/adapter-auto' },
 			{ name: '@sveltejs/adapter-cloudflare' },
 			{ name: '@sveltejs/adapter-netlify' },
+			{ name: 'amplify-adapter' },
 			{ name: 'svelte-kit-sst' },
 			{ name: 'svelte-adapter-bun' },
-			{ name: '@slicemachine/adapter-sveltekit' },
-			{ name: 'amplify-adapter' },
-			{ name: 'svelte-adapter-deno' },
 			{ name: 'svelte-adapter-appengine' },
 			{ name: 'sveltekit-adapter-chrome-extension' },
-			{ name: 'svelte-adapter-azure-swa' }
+			{ name: '@slicemachine/adapter-sveltekit' }
 		]
 	},
 	{
@@ -85,21 +89,21 @@ const FEATURED: {
 	{
 		title: 'Data visualization',
 		packages: [
-			{ name: 'layercake' },
 			{ name: 'layerchart' },
+			{ name: 'layercake' },
 			{ name: 'svelte-maplibre' },
 			{ name: 'svelte-chartjs', description: 'Create charts using Chart.js in Svelte apps.' },
-			{ name: '@xyflow/svelte' },
+			{
+				name: '@xyflow/svelte',
+				description: 'Powerful libraries for building node-based UIs with Svelte.'
+			},
 			{ name: 'svelte-maplibre-gl' }
 		]
 	},
 	{
-		title: '3D rendering',
-		packages: [{ name: '@threlte/core' }, { name: 'svelte-zdog' }]
-	},
-	{
 		title: 'Animations',
 		packages: [
+			{ name: '@threlte/core' },
 			{ name: '@neoconfetti/svelte' },
 			{ name: 'svelte-motion' },
 			{ name: '@lottiefiles/svelte-lottie-player' },
@@ -111,16 +115,16 @@ const FEATURED: {
 		packages: [
 			{ name: 'mdsvex' },
 			{ name: '@content-collections/core' },
-			{ name: 'carta-md' },
-			{ name: 'typewriter-editor' },
-			{ name: '@svelte-put/toc' },
+			{ name: 'svelte-exmarkdown' },
+			{ name: '@magidoc/plugin-svelte-marked' },
 			{ name: '@prismicio/svelte' },
+			{ name: 'carta-md' },
 			{ name: '@svelteness/kit-docs' },
 			{ name: '@sveltepress/vite' },
 			{ name: '@evidence-dev/evidence' },
-			{ name: '@magidoc/plugin-svelte-marked' },
-			{ name: 'svelte-exmarkdown' },
-			{ name: 'svelte-pdf' }
+			{ name: 'svelte-pdf' },
+			{ name: 'typewriter-editor' },
+			{ name: '@svelte-put/toc' }
 		]
 	},
 	{
@@ -138,18 +142,18 @@ const FEATURED: {
 			{ name: '@sveltejs/enhanced-img' },
 			{ name: '@unpic/svelte' },
 			{ name: '@poppanator/sveltekit-svg' },
+			{ name: 'svelte-easy-crop' },
 			{ name: '@uppy/svelte' },
-			{ name: 'scrolly-video' },
-			{ name: 'svelte-easy-crop' }
+			{ name: 'scrolly-video' }
 		]
 	},
 	{
 		title: 'SEO',
 		packages: [
 			{ name: 'svelte-meta-tags' },
-			{ name: '@sveltejs/amp' },
-			{ name: 'svelte-seo' },
 			{ name: 'super-sitemap' },
+			{ name: 'svelte-seo' },
+			{ name: '@sveltejs/amp' },
 			{ name: 'svead', description: 'Svelte component for managing meta tags and SEO.' }
 		]
 	},
@@ -158,11 +162,11 @@ const FEATURED: {
 		packages: [
 			{ name: 'better-auth' },
 			{ name: '@auth/sveltekit' },
-			{ name: 'altcha' },
-			{ name: 'svelte-session-manager' },
-			{ name: 'svelte-clerk' },
-			{ name: 'svelte-kit-sessions' },
 			{ name: '@supabase/ssr' },
+			{ name: 'altcha' },
+			{ name: 'svelte-clerk' },
+			{ name: 'svelte-session-manager' },
+			{ name: 'svelte-kit-sessions' },
 			{ name: '@passlock/sveltekit' }
 		]
 	},
@@ -197,8 +201,8 @@ const FEATURED: {
 			{ name: '@testing-library/svelte' },
 			{ name: 'playwright' },
 			{ name: 'vitest' },
-			{ name: 'svelte-inspect-value' },
-			{ name: 'svelte-render-scan' }
+			{ name: 'svelte-render-scan' },
+			{ name: 'svelte-inspect-value' }
 		]
 	},
 	{
@@ -219,12 +223,12 @@ const FEATURED: {
 		description:
 			'<a href="/docs/kit/remote-functions">SvelteKit remote functions</a> are recommended, but here are some alternatives.',
 		packages: [
-			{ name: '@urql/svelte' },
-			{ name: 'trpc-sveltekit' },
-			{ name: 'sswr' },
 			{ name: '@tanstack/svelte-query' },
+			{ name: '@urql/svelte' },
+			{ name: 'houdini' },
+			{ name: 'trpc-sveltekit' },
 			{ name: '@orpc/svelte-query', description: 'Fetch and manage data in Svelte with orpc.' },
-			{ name: 'houdini' }
+			{ name: 'sswr' }
 		]
 	},
 	{
@@ -233,12 +237,12 @@ const FEATURED: {
 			'<a href="/docs/kit/remote-functions#form">SvelteKit forms</a> are recommended, but here are some alternatives.',
 		packages: [
 			{ name: 'sveltekit-superforms' },
-			{ name: '@tanstack/svelte-form' },
 			{
 				name: 'formsnap',
 				description: 'Wraps sveltekit-superforms with accessible form components.'
 			},
-			{ name: 'felte' }
+			{ name: 'felte' },
+			{ name: '@tanstack/svelte-form' }
 		]
 	}
 ];
