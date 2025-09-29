@@ -9,8 +9,6 @@ const FEATURED: {
 		title: 'Svelte CLI add-ons',
 		description:
 			'<a href="/docs/cli">sv, the Svelte CLI</a>, lets you instantly add functionality to a new or existing project.',
-		// Keeping the same order as in sv
-		// https://github.com/sveltejs/cli/blob/main/packages/addons/_config/official.ts#L16-L17
 		packages: [
 			{ name: 'tailwindcss', svAlias: 'tailwind' },
 			{ name: 'drizzle-orm', svAlias: 'drizzle' },
