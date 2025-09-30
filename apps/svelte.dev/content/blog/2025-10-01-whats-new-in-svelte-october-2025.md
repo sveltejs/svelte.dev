@@ -18,7 +18,7 @@ We've got a hefty showcase this month too, so let's dive in!
 
 ### Remote Functions
 
-- The remote function `query.set()` can now be called on the server and `query.refresh()` promises will now be automatically resolved on the server (**kit@2.37.0**, [Docs](https://svelte.dev/docs/kit/remote-functions), [#14304](https://github.com/sveltejs/kit/pull/14304), [#14332](https://github.com/sveltejs/kit/pull/14332))
+- The remote `set()` function can now be called on server queries and `query.refresh()` promises will now be automatically resolved on the server (**kit@2.37.0**, [Docs](https://svelte.dev/docs/kit/remote-functions), [#14304](https://github.com/sveltejs/kit/pull/14304), [#14332](https://github.com/sveltejs/kit/pull/14332))
 - The new `query.batch` remote function lets you batch requests that happen within the same macrotask (**kit@2.38.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#query.batch), [#14272](https://github.com/sveltejs/kit/pull/14272))
 - Lazy discovery of remote functions improves detection and tree shaking for functions defined in `node_modules` (**kit@2.39.0**, [#14293](https://github.com/sveltejs/kit/pull/14293))
 - The `form` remote function has been enhanced with schema support, `input` and `issues` properties (**kit@2.42.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#form), [#14383](https://github.com/sveltejs/kit/pull/14383))
