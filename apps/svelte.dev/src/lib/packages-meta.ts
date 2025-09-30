@@ -32,7 +32,6 @@ const FEATURED: {
 		packages: [
 			{ name: 'shadcn-svelte' },
 			{ name: 'bits-ui', description: 'Headless components for Svelte.' },
-			{ name: '@ark-ui/svelte' },
 			{
 				name: '@skeletonlabs/skeleton',
 				description: 'Skeleton is an adaptive design system powered by Tailwind CSS.'
@@ -41,6 +40,7 @@ const FEATURED: {
 				name: 'flowbite-svelte',
 				description: 'Official Svelte components built for Flowbite and Tailwind CSS'
 			},
+			{ name: '@ark-ui/svelte' },
 			{ name: 'daisyui' },
 			{ name: 'svelte-material-ui' },
 			{ name: 'carbon-components-svelte' },
