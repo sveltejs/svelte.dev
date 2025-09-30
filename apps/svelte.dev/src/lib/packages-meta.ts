@@ -66,6 +66,7 @@ const FEATURED: {
 			{ name: '@sveltejs/adapter-vercel' },
 			{ name: '@sveltejs/adapter-cloudflare' },
 			{ name: '@sveltejs/adapter-netlify' },
+			{ name: '@deno/svelte-adapter' },
 			{ name: 'amplify-adapter' },
 			{ name: 'svelte-kit-sst' },
 			{ name: 'svelte-adapter-bun' },
