@@ -13,7 +13,7 @@ We've got a hefty showcase this month too, so let's dive in!
 
 - The `event` property is now included on popstate, link and form navigation (**kit@2.40.0**, [#14307](https://github.com/sveltejs/kit/pull/14307))
 - The `%sveltekit.version%` placeholder can now be used in `app.html` to easily include the current SvelteKit version in the output (**kit@2.41.0**, [Docs](https://svelte.dev/docs/kit/project-structure#Project-files-src), [#12132](https://github.com/sveltejs/kit/pull/12132))
-- You can now create projects from the from the Svelte playground with `npx sv create --from-playground <url>` (**sv@0.9.5**, [#662](https://github.com/sveltejs/cli/pull/662))
+- You can now create projects from the Svelte playground with `npx sv create --from-playground <url>` (**sv@0.9.5**, [#662](https://github.com/sveltejs/cli/pull/662))
 - Experimental async SSR is available in Svelte v5.39.3 and SvelteKit v2.43.0 or higher. You can opt-in via the `experimental.async` option. When this is enabled, it's possible to use `await` anywhere in your app, without wrapping it in a boundary with a pending snippet. You can find more information in the SvelteKit PR ([#14447](https://github.com/sveltejs/kit/pull/14447), Svelte PR is [#16748](https://github.com/sveltejs/svelte/pull/16748))
 
 ### Remote Functions
