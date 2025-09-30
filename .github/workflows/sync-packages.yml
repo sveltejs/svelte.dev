@@ -29,7 +29,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create or update pull request
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@599a7e63a6240886b1b61fe984db1de9e0b05bc4 # v7.0.8
         with:
           commit-message: 'chore(packages): Update metadata'
           title: 'chore(packages): Update metadata'
