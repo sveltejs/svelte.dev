@@ -49,16 +49,6 @@ const FEATURED: {
 		]
 	},
 	{
-		title: 'Individual components',
-		packages: [
-			{ name: '@tanstack/svelte-table' },
-			{ name: '@ai-sdk/svelte', description: 'Svelte UI components for the AI SDK' },
-			{ name: '@tanstack/svelte-virtual' },
-			{ name: 'virtua' },
-			{ name: '@event-calendar/core' }
-		]
-	},
-	{
 		title: 'SvelteKit adapters',
 		packages: [
 			{ name: '@sveltejs/adapter-auto' },
@@ -73,6 +63,23 @@ const FEATURED: {
 			{ name: 'svelte-adapter-appengine' },
 			{ name: 'sveltekit-adapter-chrome-extension' },
 			{ name: '@slicemachine/adapter-sveltekit' }
+		]
+	},
+	{
+		title: 'Content',
+		packages: [
+			{ name: 'mdsvex' },
+			{ name: '@content-collections/core' },
+			{ name: 'svelte-exmarkdown' },
+			{ name: '@magidoc/plugin-svelte-marked' },
+			{ name: '@prismicio/svelte' },
+			{ name: 'carta-md' },
+			{ name: '@svelteness/kit-docs' },
+			{ name: '@sveltepress/vite' },
+			{ name: '@evidence-dev/evidence' },
+			{ name: 'svelte-pdf' },
+			{ name: 'typewriter-editor' },
+			{ name: '@svelte-put/toc' }
 		]
 	},
 	{
@@ -100,63 +107,6 @@ const FEATURED: {
 		]
 	},
 	{
-		title: 'Animations',
-		packages: [
-			{ name: '@threlte/core' },
-			{ name: '@neoconfetti/svelte' },
-			{ name: 'svelte-motion' },
-			{ name: '@lottiefiles/svelte-lottie-player' },
-			{ name: '@tsparticles/svelte' }
-		]
-	},
-	{
-		title: 'Content',
-		packages: [
-			{ name: 'mdsvex' },
-			{ name: '@content-collections/core' },
-			{ name: 'svelte-exmarkdown' },
-			{ name: '@magidoc/plugin-svelte-marked' },
-			{ name: '@prismicio/svelte' },
-			{ name: 'carta-md' },
-			{ name: '@svelteness/kit-docs' },
-			{ name: '@sveltepress/vite' },
-			{ name: '@evidence-dev/evidence' },
-			{ name: 'svelte-pdf' },
-			{ name: 'typewriter-editor' },
-			{ name: '@svelte-put/toc' }
-		]
-	},
-	{
-		title: 'Bundler plugins',
-		packages: [
-			{ name: '@sveltejs/vite-plugin-svelte' },
-			{ name: 'rollup-plugin-svelte' },
-			{ name: 'svelte-loader' },
-			{ name: 'esbuild-svelte' }
-		]
-	},
-	{
-		title: 'Media',
-		packages: [
-			{ name: '@sveltejs/enhanced-img' },
-			{ name: '@unpic/svelte' },
-			{ name: '@poppanator/sveltekit-svg' },
-			{ name: 'svelte-easy-crop' },
-			{ name: '@uppy/svelte' },
-			{ name: 'scrolly-video' }
-		]
-	},
-	{
-		title: 'SEO',
-		packages: [
-			{ name: 'svelte-meta-tags' },
-			{ name: 'super-sitemap' },
-			{ name: 'svelte-seo' },
-			{ name: '@sveltejs/amp' },
-			{ name: 'svead', description: 'Svelte component for managing meta tags and SEO.' }
-		]
-	},
-	{
 		title: 'Auth',
 		packages: [
 			{ name: 'better-auth' },
@@ -167,17 +117,6 @@ const FEATURED: {
 			{ name: 'svelte-session-manager' },
 			{ name: 'svelte-kit-sessions' },
 			{ name: '@passlock/sveltekit' }
-		]
-	},
-	{
-		title: 'Internationalization (i18n)',
-		packages: [
-			{
-				name: '@inlang/paraglide-js',
-				description: 'A compiler-based i18n library that emits tree-shakable message functions.'
-			},
-			{ name: '@wuchale/svelte' },
-			{ name: 'i18n-js' }
 		]
 	},
 	{
@@ -205,7 +144,68 @@ const FEATURED: {
 		]
 	},
 	{
-		title: 'Router',
+		title: 'Internationalization (i18n)',
+		packages: [
+			{
+				name: '@inlang/paraglide-js',
+				description: 'A compiler-based i18n library that emits tree-shakable message functions.'
+			},
+			{ name: '@wuchale/svelte' },
+			{ name: 'i18n-js' }
+		]
+	},
+	{
+		title: 'Bundler plugins',
+		packages: [
+			{ name: '@sveltejs/vite-plugin-svelte' },
+			{ name: 'rollup-plugin-svelte' },
+			{ name: 'svelte-loader' },
+			{ name: 'esbuild-svelte' }
+		]
+	},
+	{
+		title: 'Media',
+		packages: [
+			{ name: '@sveltejs/enhanced-img' },
+			{ name: '@unpic/svelte' },
+			{ name: '@poppanator/sveltekit-svg' },
+			{ name: 'svelte-easy-crop' },
+			{ name: '@uppy/svelte' },
+			{ name: 'scrolly-video' }
+		]
+	},
+	{
+		title: 'Individual components',
+		packages: [
+			{ name: '@tanstack/svelte-table' },
+			{ name: '@ai-sdk/svelte', description: 'Svelte UI components for the AI SDK' },
+			{ name: '@tanstack/svelte-virtual' },
+			{ name: 'virtua' },
+			{ name: '@event-calendar/core' }
+		]
+	},
+	{
+		title: 'Animations',
+		packages: [
+			{ name: '@threlte/core' },
+			{ name: '@neoconfetti/svelte' },
+			{ name: 'svelte-motion' },
+			{ name: '@lottiefiles/svelte-lottie-player' },
+			{ name: '@tsparticles/svelte' }
+		]
+	},
+	{
+		title: 'SEO',
+		packages: [
+			{ name: 'svelte-meta-tags' },
+			{ name: 'super-sitemap' },
+			{ name: 'svelte-seo' },
+			{ name: '@sveltejs/amp' },
+			{ name: 'svead', description: 'Svelte component for managing meta tags and SEO.' }
+		]
+	},
+	{
+		title: 'Routing',
 		description:
 			'<a href="/docs/kit">SvelteKit</a> is recommended, but here are some alternatives.',
 		packages: [
