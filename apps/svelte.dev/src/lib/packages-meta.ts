@@ -243,6 +243,11 @@ const FEATURED: {
 			{ name: 'felte' },
 			{ name: '@tanstack/svelte-form' }
 		]
+	},
+	{
+		title: 'More',
+		description: 'These are just a few highlights. See a larger <a href="https://www.sveltesociety.dev/packages">directory of packages at sveltesociety.dev</a>.',
+		packages: []
 	}
 ];
 
