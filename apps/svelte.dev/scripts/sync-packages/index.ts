@@ -1,5 +1,5 @@
-import { PACKAGES_META } from '../../src/lib/packages-meta';
-import type { PackageKey, PackageNpm, PackageGithub } from '../../src/lib/server/content';
+import { PACKAGES_META } from '../../src/lib/packages-meta.ts';
+import type { PackageKey, PackageNpm, PackageGithub } from '../../src/lib/server/content.ts';
 import { execSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';

@@ -14,7 +14,7 @@
 		"format": "prettier --write .",
 		"lint": "prettier --check .",
 		"sync-docs": "tsx scripts/sync-docs/index.ts",
-		"sync-packages": "tsx scripts/sync-packages/index.ts"
+		"sync-packages": "node scripts/sync-packages/index.ts"
 	},
 	"dependencies": {
 		"@jridgewell/sourcemap-codec": "^1.4.15",
