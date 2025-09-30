@@ -65,7 +65,6 @@ You can [watch the full video on YouTube](https://www.youtube.com/watch?v=odCWAA
 - [Svelte on Cloudflare: Tips and guide](https://www.youtube.com/live/odCWAAaTNSQ?si=2Eej24zu2ZXUEljs&t=412) by Mark Ridge and Connor Adams
 - [Ultra-low Latency in SvelteKit](https://www.youtube.com/live/odCWAAaTNSQ?si=4Eyh2SUwA26waECz&t=2563) by Scott Phillips
 
-
 _To Read_
 
 - [Sharing some custom components that handle async state with less boilerplate in Svelte 5](https://www.reddit.com/r/sveltejs/comments/1niyflq/sharing_some_custom_components_that_handle_async/) by u/geokidev
@@ -75,31 +74,32 @@ _To Watch_
 
 - [Svelte Under The Hood](https://www.youtube.com/watch?v=GsjfEmTS4x8) by ~/in-depth
 
-
 ### Libraries, Tools & Components
 
 _UI / UX_
+
 - [SVAR Svelte v2.3](https://github.com/svar-widgets) now has TypeScript definitions to all its open-source Svelte UI components
 - [@dnd-kit](https://www.npmjs.com/package/@dnd-kit-svelte/svelte) is a lightweight React-like library for building performant and accessible drag and drop experiences
-- svelte-overflow-fade is a Svelte action and attachment for adding beautiful fade effects to overflowing content 
+- svelte-overflow-fade is a Svelte action and attachment for adding beautiful fade effects to overflowing content
 - [scratch-to-reveal-svelte](https://github.com/dellamora/scratch-to-reveal-svelte) is a simple and customizable scratch-to-reveal component for Svelte
 - [Svelte Streamdown](https://svelte-streamdown.beynar.workers.dev/) is a Svelte port of Streamdown by Vercel - an all in one markdown renderer, designed specifically for AI-powered streaming applications
 - [USAL JS](https://usal.dev/) is the "Ultimate Scroll Animation Library"
 
 _Frameworks and Data Tools_
+
 - [PrevelteKit](https://github.com/tbocek/preveltekit) is a lightweight, high-performance web application framework built on Svelte 5, featuring Server-Side Pre Rendering (SSPR) using Rsbuild and jsdom
 - [Apollo Runes](https://apollo-runes-docs.vercel.app/) is an Apollo Client for Svelte 5
 - [Formisch](https://github.com/fabian-hiller/formisch) is a schema-based, headless form library for JS frameworks
 - [Conformal](https://github.com/marcomuser/conformal) helps you work with native FormData by providing type-safe form submissions for the modern web
 
 _Dev Tools and Vite Plugins_
+
 - [wuchale](https://github.com/wuchalejs/wuchale) is a compile-time internationalization (i18n) toolkit that requires zero code changes
 - [SV Floating Console](https://www.npmjs.com/package/sv-console) is a floating console for Svelte applications that only appears in development mode
 - [magicons](https://github.com/propolies/magicons) is a fast, typesafe Icon wrapper that fixes bundling issues with large barrel exports in icon libraries
 - [Svelte-pops](https://svelte-pops.vercel.app/docs/overview) is a performant and easy to use popover manager for creating dialog and tooltips
 - [vite-plugin-svelte-inline-component](https://github.com/hanielu/vite-plugin-svelte-inline-component) lets you write tiny Svelte components straight inside your JavaScript / TypeScript tests using tagged‑template literals
 - [vite-plugin-sveltekit-decorators](https://github.com/KiraPC/vite-plugin-sveltekit-decorators) is a powerful Vite plugin that automatically decorates SvelteKit functions with customizable wrappers for logging, analytics, error handling, and more
-
 
 That's it for this month! Let us know if we missed anything on [Reddit](https://www.reddit.com/r/sveltejs/) or [Discord](https://discord.gg/svelte).
 
