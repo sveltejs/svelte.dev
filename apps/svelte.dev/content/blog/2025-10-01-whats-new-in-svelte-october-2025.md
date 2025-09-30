@@ -5,7 +5,7 @@ author: Dani Sandoval
 authorURL: https://dreamindani.com
 ---
 
-There were lots of improvements to remote functions this month - including new batching tools and improved performance via lazy discovery. For more info, check out the Docs and PR links in each bullet. Async SSR also has a new config flag for those who would like to try it out while it's still experimental.
+There were lots of improvements to remote functions this month - including new batching tools and improved performance via lazy discovery. For more info, check out the Docs and PR links in each bullet. Async SSR is also available for those who would like to try it out while it's still experimental. It's included when the `config.experimental.async` setting is enabled.
 
 We've got a hefty showcase this month too, so let's dive in!
 
@@ -19,9 +19,9 @@ We've got a hefty showcase this month too, so let's dive in!
 ### Remote Functions
 
 - The remote function `query.set()` can now be called on the server and `query.refresh()` promises will now be automatically resolved on the server (**kit@2.37.0**, [Docs](https://svelte.dev/docs/kit/remote-functions), [#14304](https://github.com/sveltejs/kit/pull/14304), [#14332](https://github.com/sveltejs/kit/pull/14332))
-- `query.batch` has been added to remote functions - letting you batch requests that happen within the same macrotask (**kit@2.38.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#query.batch), [#14272](https://github.com/sveltejs/kit/pull/14272))
+- The new `query.batch` remote function lets you batch requests that happen within the same macrotask (**kit@2.38.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#query.batch), [#14272](https://github.com/sveltejs/kit/pull/14272))
 - Lazy discovery of remote functions improves detection and tree shaking for functions defined in `node_modules` (**kit@2.39.0**, [#14293](https://github.com/sveltejs/kit/pull/14293))
-- Remote form functions have been enhanced with schema support, `input` and `issues` properties (**kit@2.42.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#form), [#14383](https://github.com/sveltejs/kit/pull/14383))
+- The `form` remote function has been enhanced with schema support, `input` and `issues` properties (**kit@2.42.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#form), [#14383](https://github.com/sveltejs/kit/pull/14383))
 
 For a full list of bug fixes in Svelte, SvelteKit and its adapters, check out their CHANGELOGs [here](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md) and [here](https://github.com/sveltejs/kit/tree/main/packages).
 
