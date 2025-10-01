@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { Package } from '$lib/server/content';
-	import { fix_position } from '../../../../../packages/site-kit/src/lib/actions/utils';
 	import PackageCard from './PackageCard.svelte';
 
 	interface Props {
@@ -11,26 +10,21 @@
 
 	let { title, description, packages }: Props = $props();
 
-	let header: HTMLElement;
-
 	const INITIAL_ITEMS = 3;
 	let showAll = $state(false);
-	let visiblePackages = $derived(showAll ? packages : packages.slice(0, INITIAL_ITEMS));
 </script>
 
 <section class="category">
 	<header>
-		<h2 bind:this={header}>
-			{title}
-		</h2>
+		<h2>{title}</h2>
 
 		{#if description}
 			<p>{@html description}</p>
 		{/if}
 	</header>
 
-	<div class="content">
-		{#each visiblePackages as pkg}
+	<div class="grid">
+		{#each packages.slice(0, INITIAL_ITEMS) as pkg}
 			<div class="item">
 				<PackageCard {pkg} />
 			</div>
@@ -38,31 +32,25 @@
 	</div>
 
 	{#if packages.length > INITIAL_ITEMS}
-		<div class="show-more-container">
-			<label>
-				<button
-					class="raised"
-					aria-label="Show more"
-					aria-pressed={showAll}
-					onclick={(e) => {
-						const { bottom } = header.getBoundingClientRect();
+		<details>
+			<summary>
+				<span class="raised button" aria-label="Toggle">
+					<span class="icon"></span>
+				</span>
 
-						// if the current section is wholly visible, don't muck about with the scroll position
-						if (!showAll || bottom > 0) {
-							showAll = !showAll;
-							return;
-						}
+				<span>
+					{showAll ? 'show less' : `show all (${packages.length})`}
+				</span>
+			</summary>
 
-						// otherwise, keep the button in the same position
-						fix_position(e.currentTarget, () => {
-							showAll = !showAll;
-						});
-					}}><span class="icon"></span></button
-				>
-
-				{showAll ? 'show less' : `show all (${packages.length})`}
-			</label>
-		</div>
+			<div class="grid">
+				{#each packages.slice(INITIAL_ITEMS) as pkg}
+					<div class="item">
+						<PackageCard {pkg} />
+					</div>
+				{/each}
+			</div>
+		</details>
 	{/if}
 </section>
 
@@ -83,14 +71,40 @@
 		}
 	}
 
-	.content {
+	.grid {
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: 2rem;
-		margin-top: 1rem;
 
 		@media (min-width: 1024px) {
 			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	details {
+		position: relative;
+		margin-bottom: 9rem;
+
+		.grid {
+			margin-top: 2rem;
+		}
+	}
+
+	summary {
+		position: absolute;
+		bottom: -6rem;
+		font: var(--sk-font-ui-small);
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+
+		.icon {
+			mask-size: 2rem;
+			mask-image: url(icons/plus);
+
+			[open] & {
+				mask-image: url(icons/minus);
+			}
 		}
 	}
 
