@@ -56,7 +56,7 @@
 
 <style>
 	.category {
-		margin-bottom: 3rem;
+		margin-bottom: 12rem;
 	}
 
 	header {
