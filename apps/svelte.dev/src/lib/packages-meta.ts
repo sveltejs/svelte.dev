@@ -113,13 +113,11 @@ const FEATURED: {
 		packages: [
 			{
 				name: 'mdsvex',
-				description:
-					'A Markdown preprocessor that lets you put Markdown in your Svelte and Svelte in your Markdown'
+				description: 'Put Markdown in your Svelte and Svelte in your Markdown'
 			},
 			{
 				name: '@content-collections/core',
-				description:
-					'Transform your content into type-safe data collections and say goodbye to manual data fetching and parsing'
+				description: 'Transform your content into type-safe data collections'
 			},
 			{ name: 'svelte-exmarkdown', description: 'Extensible component for Markdown rendering' },
 			{
@@ -128,7 +126,7 @@ const FEATURED: {
 			},
 			{
 				name: '@prismicio/svelte',
-				description: 'Present content from Prismic - a headless page builder'
+				description: 'Components and helpers to fetch and present Prismic content'
 			},
 			{ name: 'carta-md' },
 			{
@@ -139,11 +137,10 @@ const FEATURED: {
 			{
 				name: '@evidence-dev/evidence',
 				description:
-					'A powerful framework for building and publishing data products using SQL, Markdown, and AI'
+					'A framework for building and publishing data products using SQL, Markdown, and AI'
 			},
 			{ name: 'svelte-pdf', description: 'Render PDF documents using PDF.js' },
-			{ name: 'typewriter-editor' },
-			{ name: '@svelte-put/toc' }
+			{ name: 'typewriter-editor' }
 		]
 	},
 	{
