@@ -86,22 +86,21 @@ const FEATURED: {
 		title: 'SvelteKit adapters',
 		packages: [
 			{ name: '@sveltejs/adapter-auto' },
-			{ name: '@sveltejs/adapter-node', description: 'Generates a standalone Node server' },
-			{ name: '@sveltejs/adapter-vercel', description: 'Creates a Vercel app' },
-			{ name: '@sveltejs/adapter-cloudflare', description: 'Creates a Cloudflare app' },
-			{ name: '@sveltejs/adapter-netlify', description: 'Creates a Netlify app' },
+			{ name: '@sveltejs/adapter-node', description: 'Builds a standalone Node server' },
+			{ name: '@sveltejs/adapter-vercel', description: 'Builds your app for Vercel' },
+			{ name: '@sveltejs/adapter-cloudflare', description: 'Builds your app for Cloudflare' },
+			{ name: '@sveltejs/adapter-netlify', description: 'Builds your app for Netlify' },
 			{ name: '@deno/svelte-adapter', description: 'Builds your app for Deno Deploy' },
 			{ name: 'amplify-adapter', description: 'Builds your app for AWS Amplify' },
 			{ name: 'svelte-kit-sst', description: 'Builds your app for AWS Lambda and AWS Lamda@Edge' },
-			{ name: 'svelte-adapter-bun', description: 'Generates a standalone Bun.js server' },
+			{ name: 'svelte-adapter-bun', description: 'Builds your app for Bun' },
 			{
 				name: 'svelte-adapter-appengine',
 				description: 'Builds your app for Google Cloud App Engine'
 			},
 			{
 				name: 'sveltekit-adapter-chrome-extension',
-				description:
-					'Builds your app complying with content source policies of Chrome extensions using manifest v3'
+				description: 'Builds your app as a Chrome extension using manifest v3'
 			},
 			{
 				name: '@slicemachine/adapter-sveltekit',
