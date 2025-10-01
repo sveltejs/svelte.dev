@@ -218,6 +218,11 @@
 		.logo {
 			width: 3rem;
 			height: 3rem;
+
+			:root.dark &[alt='drizzle logo'],
+			:root.dark &[alt='paraglide logo'] {
+				filter: invert(1);
+			}
 		}
 
 		.description {
