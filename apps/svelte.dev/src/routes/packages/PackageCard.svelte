@@ -50,23 +50,25 @@
 
 		<p class="description">{pkg.description}</p>
 
-		<p class="stats">
-			{#if pkg.downloads}
-				<span title="{pkg.downloads} downloads">
-					<span data-icon="download"></span>
-					{format_number(+pkg.downloads)}
-				</span>
-			{/if}
+		{#if !pkg.svAlias}
+			<p class="stats">
+				{#if pkg.downloads}
+					<span title="{pkg.downloads} downloads">
+						<span data-icon="download"></span>
+						{format_number(+pkg.downloads)}
+					</span>
+				{/if}
 
-			{#if pkg.github_stars}
-				<span title="{pkg.github_stars} Github Stars">
-					<span data-icon="star"></span>
-					{format_number(pkg.github_stars)}
-				</span>
-			{/if}
+				{#if pkg.github_stars}
+					<span title="{pkg.github_stars} Github Stars">
+						<span data-icon="star"></span>
+						{format_number(pkg.github_stars)}
+					</span>
+				{/if}
 
-			<span style="flex: 1 1 auto"></span>
-		</p>
+				<span style="flex: 1 1 auto"></span>
+			</p>
+		{/if}
 	</a>
 
 	<!-- this is a sibling element so that we don't have links inside links -->
