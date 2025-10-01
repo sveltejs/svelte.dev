@@ -70,9 +70,9 @@
 	</a>
 
 	<!-- this is a sibling element so that we don't have links inside links -->
-	<div class="links">
-		<span style="display: flex; gap: 0.75rem">
-			{#if !pkg.svAlias}
+	{#if !pkg.svAlias}
+		<div class="links">
+			<span style="display: flex; gap: 0.75rem">
 				<a
 					href="https://npmjs.org/package/{pkg.name}"
 					target="_blank"
@@ -81,20 +81,20 @@
 					aria-label="View on npm"
 					onclick={(e) => e.stopPropagation()}
 				></a>
-			{/if}
 
-			{#if pkg.repo_url}
-				<a
-					href={pkg.repo_url}
-					target="_blank"
-					rel="noreferrer"
-					data-icon="github"
-					aria-label="View on GitHub"
-					onclick={(e) => e.stopPropagation()}
-				></a>
-			{/if}
-		</span>
-	</div>
+				{#if pkg.repo_url}
+					<a
+						href={pkg.repo_url}
+						target="_blank"
+						rel="noreferrer"
+						data-icon="github"
+						aria-label="View on GitHub"
+						onclick={(e) => e.stopPropagation()}
+					></a>
+				{/if}
+			</span>
+		</div>
+	{/if}
 </article>
 
 <style>
