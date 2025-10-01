@@ -199,11 +199,6 @@
 				mask-image: url(icons/npm);
 			}
 
-			&[data-icon='external-link'] {
-				mask-image: url(icons/external-link);
-				mask-size: 1.7rem;
-			}
-
 			&[data-icon='svelte'] {
 				background: #ff3e00;
 				mask-image: url(icons/svelte-cutout);
