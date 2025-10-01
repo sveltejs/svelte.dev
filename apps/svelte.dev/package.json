@@ -41,6 +41,7 @@
 		"flexsearch": "^0.7.43",
 		"flru": "^1.0.2",
 		"icons": "workspace:*",
+		"logos": "workspace:*",
 		"port-authority": "^2.0.1",
 		"topojson-client": "^3.1.0",
 		"vitest": "^3.2.4",

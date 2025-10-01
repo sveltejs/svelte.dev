@@ -2,6 +2,7 @@
 	import type { Package } from '$lib/server/content';
 	import { ago } from '$lib/time';
 	import { format_number } from './utils';
+	import { logos } from 'logos';
 
 	type Props = {
 		pkg: Package;
@@ -50,7 +51,9 @@
 
 		<p class="description">{pkg.description}</p>
 
-		{#if !pkg.svAlias}
+		{#if pkg.svAlias}
+			<img class="logo" alt="{pkg.name} logo" src={logos[pkg.svAlias]} />
+		{:else}
 			<p class="stats">
 				{#if pkg.downloads}
 					<span title="{pkg.downloads} downloads">
@@ -209,6 +212,16 @@
 				display: flex;
 				gap: 0.4rem;
 				align-items: center;
+			}
+		}
+
+		.logo {
+			width: 3rem;
+			height: 3rem;
+
+			:root.dark &[alt='drizzle logo'],
+			:root.dark &[alt='paraglide logo'] {
+				filter: invert(1);
 			}
 		}
 
