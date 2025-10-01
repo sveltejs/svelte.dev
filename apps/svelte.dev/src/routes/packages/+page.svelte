@@ -17,7 +17,6 @@
 		<h1>Packages</h1>
 		<p>
 			We've collected a few of our favourite packages that work well with Svelte and SvelteKit apps.
-			Discover more at <a href="https://www.sveltesociety.dev/packages">sveltesociety.dev</a>.
 		</p>
 	</header>
 
