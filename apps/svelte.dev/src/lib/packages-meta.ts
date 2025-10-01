@@ -10,12 +10,12 @@ const FEATURED: {
 		description:
 			'The <a href="/docs/cli">Svelte CLI</a> lets you instantly add functionality to a new or existing project with <code>npx sv add</code>',
 		packages: [
-			{ name: 'tailwindcss', svAlias: 'tailwind' },
+			{ name: 'tailwindcss', svAlias: 'tailwind', description: 'A utility-first CSS framework' },
 			{
 				name: 'drizzle-orm',
 				svAlias: 'drizzle',
 				description:
-					'TypeScript ORM offering both relational and SQL-like query APIs. Serverless-ready by design'
+					'Serverless-ready TypeScript ORM offering both relational and SQL-like query APIs'
 			},
 			{
 				name: 'mdsvex',
@@ -29,24 +29,23 @@ const FEATURED: {
 				svAlias: 'storybook',
 				description: 'Develop, document, and test UI components in isolation'
 			},
-			{ name: 'prettier', svAlias: 'prettier' },
+			{ name: 'prettier', svAlias: 'prettier', description: 'An opinionated code formatter' },
 			{ name: 'eslint', svAlias: 'eslint', description: 'Find and fix problems in your code' },
-			{ name: 'vitest', svAlias: 'vitest' },
+			{ name: 'vitest', svAlias: 'vitest', description: 'Vite-powered testing framework' },
 			{
 				name: 'playwright',
 				svAlias: 'playwright',
-				description: 'Automate web browsers for end-to-end testing'
+				description: 'Browser automation for end-to-end testing'
 			},
 			{
 				name: '@inlang/paraglide-js',
 				svAlias: 'paraglide',
-				description: 'A compiler-based i18n library that emits tree-shakable message functions'
+				description: 'A compiler-based i18n library that emits tree-shakeable message functions'
 			},
 			{
 				name: 'vite-plugin-devtools-json',
 				svAlias: 'devtools-json',
-				description:
-					'Installs vite-plugin-devtools-json to generate a Chromium DevTools project settings file on-the-fly in the development server'
+				description: 'Generates Chromium DevTools project settings during development'
 			}
 		]
 	},
