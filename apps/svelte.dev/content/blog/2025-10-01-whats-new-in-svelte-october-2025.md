@@ -70,6 +70,7 @@ _To Read_
 
 - [Sharing some custom components that handle async state with less boilerplate in Svelte 5](https://www.reddit.com/r/sveltejs/comments/1niyflq/sharing_some_custom_components_that_handle_async/) by u/geokidev
 - [Rendering emails with Svelte](https://github.com/GauBen/svelte-emails) by Gautier Ben Aïm
+- [Integrate Keystatic CMS with SvelteKit to render Markdoc Content with Interactive Svelte Components](https://samuelplumppu.se/blog/keystatic-sveltekit-markdoc) by Samuel Plumppu
 
 _To Watch_
 
