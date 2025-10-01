@@ -19,13 +19,15 @@
 </script>
 
 <section class="category">
-	<h2 bind:this={header}>
-		{title}
-	</h2>
+	<header>
+		<h2 bind:this={header}>
+			{title}
+		</h2>
 
-	{#if description}
-		<p>{@html description}</p>
-	{/if}
+		{#if description}
+			<p>{@html description}</p>
+		{/if}
+	</header>
 
 	<div class="content">
 		{#each visiblePackages as pkg}
@@ -67,6 +69,18 @@
 <style>
 	.category {
 		margin-bottom: 3rem;
+	}
+
+	header {
+		margin: 0 0 2rem 0;
+
+		h2 {
+			margin: 0 0 1rem 0;
+		}
+
+		p {
+			margin: 0;
+		}
 	}
 
 	h2 {
