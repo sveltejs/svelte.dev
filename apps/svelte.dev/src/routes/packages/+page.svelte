@@ -17,6 +17,7 @@
 		<h1>Packages</h1>
 		<p>
 			We've collected a few of our favourite packages that work well with Svelte and SvelteKit apps.
+			Official packages are marked with the <span class="svelte-logo" aria-label="Svelte"></span> logo.
 		</p>
 	</header>
 
@@ -43,5 +44,18 @@
 
 	h1 {
 		margin: 0 0 2rem 0;
+	}
+
+	.svelte-logo {
+		position: relative;
+		top: 0.15em;
+		display: inline-block;
+		width: 1em;
+		aspect-ratio: 1;
+		background: #ff3e00;
+		mask-size: contain;
+		mask-image: url(icons/svelte-cutout);
+		mask-repeat: no-repeat;
+		mask-position: 50% 50%;
 	}
 </style>
