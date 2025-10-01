@@ -184,16 +184,16 @@ const FEATURED: {
 			{ name: 'better-auth', description: 'Comprehensive authentication library' },
 			{
 				name: '@supabase/ssr',
-				description: 'Server-side auth to use cookie-based authentication with SvelteKit'
+				description: 'Server-side library for cookie-based authentication with SvelteKit'
 			},
 			{
 				name: 'altcha',
 				description:
-					'Privacy-first CAPTCHA widget, compliant with global regulations (GDPR/HIPAA/CCPA/LGDP/DPDPA/PIPL) and WCAG accessible'
+					'Privacy-first CAPTCHA widget, compliant with global regulations and WCAG accessible'
 			},
 			{
 				name: 'svelte-clerk',
-				description: 'Easily add authentication and user management to your app'
+				description: 'Unofficial implementation of Clerk'
 			},
 			{ name: 'svelte-session-manager', description: 'JWT session store' },
 			{
