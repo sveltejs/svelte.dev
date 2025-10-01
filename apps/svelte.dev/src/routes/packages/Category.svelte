@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Package } from '$lib/server/content';
+	import { fix_position } from '../../../../../packages/site-kit/src/lib/actions/utils';
 	import PackageCard from './PackageCard.svelte';
 
 	interface Props {
@@ -10,13 +11,15 @@
 
 	let { title, description, packages }: Props = $props();
 
+	let header: HTMLElement;
+
 	const INITIAL_ITEMS = 3;
 	let showAll = $state(false);
 	let visiblePackages = $derived(showAll ? packages : packages.slice(0, INITIAL_ITEMS));
 </script>
 
 <section class="category">
-	<header>
+	<header bind:this={header}>
 		<h2>
 			{title}
 		</h2>
@@ -40,7 +43,20 @@
 					class="raised"
 					aria-label="Show more"
 					aria-pressed={showAll}
-					onclick={() => (showAll = !showAll)}><span class="icon"></span></button
+					onclick={(e) => {
+						const { bottom } = header.getBoundingClientRect();
+
+						// if the current section is wholly visible, don't muck about with the scroll position
+						if (bottom > 0) {
+							showAll = !showAll;
+							return;
+						}
+
+						// otherwise, keep the button in the same position
+						fix_position(e.currentTarget, () => {
+							showAll = !showAll;
+						});
+					}}><span class="icon"></span></button
 				>
 
 				{showAll ? 'show less' : `show all (${packages.length})`}
