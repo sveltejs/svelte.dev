@@ -138,6 +138,10 @@
 
 		min-height: 16em;
 
+		:root.dark & {
+			background-color: var(--sk-bg-3);
+		}
+
 		&:hover {
 			filter: drop-shadow(0.3rem 0.5rem 0.7rem rgb(0 0 0 / 0.1));
 		}
