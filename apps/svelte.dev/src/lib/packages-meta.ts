@@ -336,7 +336,8 @@ const FEATURED: {
 	},
 	{
 		title: 'Routing',
-		description: '<a href="/docs/kit">SvelteKit</a> is recommended, but here are some alternatives',
+		description:
+			'The official router is <a href="/docs/kit">SvelteKit</a>, but here are some alternatives',
 		packages: [
 			{ name: 'svelte5-router' },
 			{ name: '@roxi/routify', description: 'Routes based on file structure' },
@@ -347,7 +348,7 @@ const FEATURED: {
 	{
 		title: 'Data fetching',
 		description:
-			'<a href="/docs/kit/remote-functions">SvelteKit remote functions</a> are recommended, but here are some alternatives',
+			'We recommend using SvelteKit’s <a href="/docs/kit/remote-functions">remote functions</a>, but for specific needs you can use these alternatives',
 		packages: [
 			{
 				name: '@tanstack/svelte-query',
@@ -366,7 +367,7 @@ const FEATURED: {
 	{
 		title: 'Forms',
 		description:
-			'<a href="/docs/kit/remote-functions#form">SvelteKit forms</a> are recommended, but here are some alternatives',
+			'SvelteKit has built-in <a href="/docs/kit/remote-functions#form">forms</a>, but you can also use these packages',
 		packages: [
 			{ name: 'sveltekit-superforms' },
 			{

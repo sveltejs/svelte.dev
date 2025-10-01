@@ -16,7 +16,7 @@
 	<header>
 		<h1>Packages</h1>
 		<p>
-			We've collected a few of our favourite packages that work well with Svelte and SvelteKit apps.
+			We’ve collected a few of our favourite packages that work well with Svelte and SvelteKit apps.
 			Official packages are marked with the <span class="svelte-logo" aria-label="Svelte"></span> logo.
 		</p>
 	</header>
