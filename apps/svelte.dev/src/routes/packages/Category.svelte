@@ -83,15 +83,6 @@
 		}
 	}
 
-	h2 {
-		margin: 0 0 1rem 0;
-	}
-
-	h3 {
-		font: var(--sk-font-ui-medium);
-		font-size: 1.5rem;
-	}
-
 	.content {
 		display: grid;
 		grid-template-columns: 1fr;
