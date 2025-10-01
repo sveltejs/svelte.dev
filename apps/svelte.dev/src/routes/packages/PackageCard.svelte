@@ -8,11 +8,20 @@
 	};
 
 	let { pkg }: Props = $props();
+
+	const formatter = new Intl.DateTimeFormat(undefined, {
+		weekday: 'short',
+		year: 'numeric',
+		month: 'short',
+		day: 'numeric',
+		hour: 'numeric',
+		minute: 'numeric'
+	});
 </script>
 
-<article data-pubdate={pkg.updated}>
-	<header>
-		{#snippet title()}
+<article>
+	{#snippet contents()}
+		<header>
 			<h3>
 				{#if pkg.official}
 					<span data-icon="svelte"></span>
@@ -20,46 +29,56 @@
 
 				<span>{pkg.name}</span>
 			</h3>
-		{/snippet}
 
-		{#if pkg.homepage}
-			<a
-				href={pkg.homepage}
-				target="_blank"
-				rel="noreferrer"
-				aria-label="View project homepage"
-				onclick={(e) => e.stopPropagation()}
-			>
-				{@render title()}
-			</a>
-		{:else}
-			{@render title()}
-		{/if}
-		<span class="updated">
-			{pkg.version}
-			<strong title={pkg.updated}>{ago(new Date(pkg.updated), true)}</strong>
-		</span>
-	</header>
+			<span class="updated">
+				{pkg.version}
 
-	<p class="description">{pkg.description}</p>
-
-	<p class="stats">
-		{#if pkg.downloads}
-			<span title="{pkg.downloads} downloads">
-				<span data-icon="download"></span>
-				{format_number(+pkg.downloads)}
+				<strong title={formatter.format(new Date(pkg.updated))}>
+					{ago(new Date(pkg.updated), true)}
+				</strong>
 			</span>
-		{/if}
+		</header>
 
-		{#if pkg.github_stars}
-			<span title="{pkg.github_stars} Github Stars">
-				<span data-icon="star"></span>
-				{format_number(pkg.github_stars)}
-			</span>
-		{/if}
+		<p class="description">{pkg.description}</p>
 
-		<span style="flex: 1 1 auto"></span>
+		<p class="stats">
+			{#if pkg.downloads}
+				<span title="{pkg.downloads} downloads">
+					<span data-icon="download"></span>
+					{format_number(+pkg.downloads)}
+				</span>
+			{/if}
 
+			{#if pkg.github_stars}
+				<span title="{pkg.github_stars} Github Stars">
+					<span data-icon="star"></span>
+					{format_number(pkg.github_stars)}
+				</span>
+			{/if}
+
+			<span style="flex: 1 1 auto"></span>
+		</p>
+	{/snippet}
+
+	{#if pkg.homepage}
+		<a
+			class="contents"
+			href={pkg.homepage}
+			target={pkg.homepage.startsWith('/') ? null : '_blank'}
+			rel="noreferrer"
+			aria-label="View project homepage"
+			onclick={(e) => e.stopPropagation()}
+		>
+			{@render contents()}
+		</a>
+	{:else}
+		<div class="contents">
+			{@render contents()}
+		</div>
+	{/if}
+
+	<!-- this is a sibling element so that we don't have links inside links -->
+	<div class="links">
 		<span style="display: flex; gap: 0.75rem">
 			{#if !pkg.svAlias}
 				<a
@@ -82,19 +101,8 @@
 					onclick={(e) => e.stopPropagation()}
 				></a>
 			{/if}
-
-			{#if pkg.homepage}
-				<a
-					href={pkg.homepage}
-					target="_blank"
-					rel="noreferrer"
-					data-icon="external-link"
-					aria-label="View project homepage"
-					onclick={(e) => e.stopPropagation()}
-				></a>
-			{/if}
 		</span>
-	</p>
+	</div>
 </article>
 
 <style>
@@ -124,22 +132,35 @@
 
 	article {
 		display: grid;
-		grid-template-rows: auto 1fr auto;
-		box-sizing: border-box;
+		background-color: var(--sk-bg-1);
 
-		height: 100%;
-		min-height: 0;
-
-		background-color: var(--sk-bg-2);
-
-		border: 1px solid var(--sk-bg-4);
 		border-radius: var(--sk-border-radius);
-		padding: 1rem;
+		filter: drop-shadow(0.2rem 0.4rem 0.6rem rgb(0 0 0 / 0.07));
 
 		min-height: 16em;
 
+		:root.dark & {
+			background-color: var(--sk-bg-3);
+		}
+
 		&:hover {
-			filter: drop-shadow(0.2rem, 0.4rem, 1rem rgb(0 0 0 / 0.1));
+			filter: drop-shadow(0.3rem 0.5rem 0.7rem rgb(0 0 0 / 0.1));
+		}
+
+		.contents {
+			display: grid;
+			grid-template-rows: auto 1fr auto;
+			box-sizing: border-box;
+			padding: 1rem;
+
+			height: 100%;
+			min-height: 0;
+		}
+
+		.links {
+			position: absolute;
+			right: 1rem;
+			bottom: 1rem;
 		}
 
 		a {

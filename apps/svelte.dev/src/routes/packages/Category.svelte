@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Package } from '$lib/server/content';
-	import { prefersReducedMotion } from 'svelte/motion';
+	import { fix_position } from '../../../../../packages/site-kit/src/lib/actions/utils';
 	import PackageCard from './PackageCard.svelte';
 
 	interface Props {
@@ -11,129 +11,66 @@
 
 	let { title, description, packages }: Props = $props();
 
-	let content: HTMLElement;
-	let scroller: HTMLElement;
+	let header: HTMLElement;
 
-	let behavior = $derived<ScrollBehavior>(prefersReducedMotion.current ? 'instant' : 'smooth');
-
-	let at_start = $state(true);
-	let at_end = $state(true);
-
-	function update() {
-		at_start = scroller.scrollLeft === 0;
-		at_end = scroller.scrollLeft + scroller.offsetWidth >= scroller.scrollWidth;
-	}
-
-	function go(d: number) {
-		const [a, b] = scroller.querySelectorAll('.item') as NodeListOf<HTMLElement>;
-		const left = scroller.scrollLeft + d * (b.offsetLeft - a.offsetLeft);
-
-		scroller.scrollTo({ left, behavior });
-	}
-
-	$effect(update);
+	const INITIAL_ITEMS = 3;
+	let showAll = $state(false);
+	let visiblePackages = $derived(showAll ? packages : packages.slice(0, INITIAL_ITEMS));
 </script>
 
-<svelte:window onresize={update} />
-
 <section class="category">
-	<header>
-		<h2>
-			{title}
-		</h2>
+	<h2 bind:this={header}>
+		{title}
+	</h2>
 
-		{#if !at_start || !at_end}
-			<div class="controls">
-				<button disabled={at_start} aria-label="Previous" class="raised icon" onclick={() => go(-1)}
-				></button>
-
-				<button disabled={at_end} aria-label="Next" class="raised icon" onclick={() => go(1)}
-				></button>
-			</div>
-		{/if}
-	</header>
 	{#if description}
-		<h3>{@html description}</h3>
+		<p>{@html description}</p>
 	{/if}
 
-	<div class="wrapper">
-		<!-- we duplicate the DOM for the sake of the gradient effect -
-		     without this, the scrollbar extends beyond the content area -->
-		<div inert class="viewport">
-			<div bind:this={content} class="content">
-				{#each packages as pkg}
-					<div class="item">
-						<PackageCard {pkg} />
-					</div>
-				{/each}
+	<div class="content">
+		{#each visiblePackages as pkg}
+			<div class="item">
+				<PackageCard {pkg} />
 			</div>
-		</div>
-
-		<div
-			bind:this={scroller}
-			class="viewport"
-			onscroll={(e) => {
-				const left = e.currentTarget.scrollLeft;
-				content.style.translate = `-${left}px`;
-
-				update();
-			}}
-		>
-			<div class="content">
-				{#each packages as pkg}
-					<div class="item">
-						<PackageCard {pkg} />
-					</div>
-				{/each}
-			</div>
-		</div>
+		{/each}
 	</div>
+
+	{#if packages.length > INITIAL_ITEMS}
+		<div class="show-more-container">
+			<label>
+				<button
+					class="raised"
+					aria-label="Show more"
+					aria-pressed={showAll}
+					onclick={(e) => {
+						const { bottom } = header.getBoundingClientRect();
+
+						// if the current section is wholly visible, don't muck about with the scroll position
+						if (!showAll || bottom > 0) {
+							showAll = !showAll;
+							return;
+						}
+
+						// otherwise, keep the button in the same position
+						fix_position(e.currentTarget, () => {
+							showAll = !showAll;
+						});
+					}}><span class="icon"></span></button
+				>
+
+				{showAll ? 'show less' : `show all (${packages.length})`}
+			</label>
+		</div>
+	{/if}
 </section>
 
 <style>
 	.category {
-		--bleed: var(--sk-page-padding-side);
-		margin-bottom: 4rem;
+		margin-bottom: 3rem;
 	}
 
-	header {
-		display: flex;
-		margin-bottom: 1rem;
-		align-items: center;
-		gap: 2rem;
-
-		h2 {
-			flex: 1;
-		}
-
-		.controls {
-			display: flex;
-			gap: 0.5rem;
-		}
-
-		button {
-			background: var(--sk-bg-3);
-
-			&::after {
-				content: '';
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				top: 0;
-				left: 0;
-				background: currentColor;
-				mask: url(icons/chevron) 50% 50% no-repeat;
-				mask-size: 2rem 2rem;
-			}
-
-			&[aria-label='Next']::after {
-				rotate: 180deg;
-			}
-
-			&:disabled {
-				background: none;
-			}
-		}
+	h2 {
+		margin: 0 0 1rem 0;
 	}
 
 	h3 {
@@ -141,55 +78,53 @@
 		font-size: 1.5rem;
 	}
 
-	.wrapper {
-		position: relative;
-	}
-
-	.viewport {
-		overscroll-behavior-x: contain;
-		overscroll-behavior-y: auto;
-		scroll-snap-type: x mandatory;
-
-		&[inert] {
-			position: relative;
-			margin: 0 calc(-1 * var(--bleed));
-			padding: 1rem var(--bleed);
-			scroll-padding: 0 var(--bleed);
-			overflow: hidden;
-			filter: blur(0.5px);
-			mask-image: linear-gradient(
-				to right,
-				rgb(0 0 0 / 0) 0%,
-				rgb(0 0 0 / 0.5) var(--bleed),
-				rgb(0 0 0 / 0) var(--bleed),
-				rgb(0 0 0 / 0) calc(100% - var(--bleed)),
-				rgb(0 0 0 / 0.5) calc(100% - var(--bleed)),
-				rgb(0 0 0 / 0) 100%
-			);
-		}
-
-		&:not([inert]) {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			overflow-x: auto;
-			overflow-y: visible;
-			margin: 1rem 0;
-		}
-	}
-
 	.content {
 		display: grid;
-		grid-auto-columns: 34rem;
-		grid-auto-flow: column;
+		grid-template-columns: 1fr;
 		gap: 2rem;
-		width: fit-content;
+		margin-top: 1rem;
+
+		@media (min-width: 1024px) {
+			grid-template-columns: repeat(3, 1fr);
+		}
 	}
 
 	.item {
 		height: 16rem;
-		scroll-snap-align: start;
+		min-width: 0; /* Prevents grid items from overflowing */
+	}
+
+	.show-more-container {
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 2rem;
+
+		label {
+			font: var(--sk-font-ui-small);
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+
+			.icon {
+				mask-size: 2rem;
+				mask-image: url(icons/minus);
+			}
+
+			button[aria-pressed='false'] .icon {
+				mask-image: url(icons/plus);
+			}
+		}
+
+		button {
+			order: 1;
+		}
+
+		@media (min-width: 1024px) {
+			justify-content: flex-start;
+
+			button {
+				order: 0;
+			}
+		}
 	}
 </style>

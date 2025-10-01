@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Category from './Category.svelte';
-	import { fly } from 'svelte/transition';
 
 	const { data } = $props();
 </script>
@@ -13,10 +12,16 @@
 	<meta name="Description" content="Packages for your Svelte and SvelteKit apps" />
 </svelte:head>
 
-<h1 class="visually-hidden">Packages</h1>
-
 <div class="page content">
-	<div in:fly={{ y: 20 }}>
+	<header>
+		<h1>Packages</h1>
+		<p>
+			We've collected a few of our favourite packages that work well with Svelte and SvelteKit apps.
+			Official packages are marked with the <span class="svelte-logo" aria-label="Svelte"></span> logo.
+		</p>
+	</header>
+
+	<div>
 		{#each data.homepage as { title, description, packages }}
 			<Category {title} {description} {packages} />
 		{/each}
@@ -33,7 +38,24 @@
 		text-wrap: balance;
 	}
 
-	.page :global(:where(h2, h3) code) {
-		all: unset;
+	header {
+		margin: 0 0 4rem 0;
+	}
+
+	h1 {
+		margin: 0 0 2rem 0;
+	}
+
+	.svelte-logo {
+		position: relative;
+		top: 0.15em;
+		display: inline-block;
+		width: 1em;
+		aspect-ratio: 1;
+		background: #ff3e00;
+		mask-size: contain;
+		mask-image: url(icons/svelte-cutout);
+		mask-repeat: no-repeat;
+		mask-position: 50% 50%;
 	}
 </style>

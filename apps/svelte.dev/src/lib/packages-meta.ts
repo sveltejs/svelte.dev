@@ -8,7 +8,7 @@ const FEATURED: {
 	{
 		title: 'Svelte CLI add-ons',
 		description:
-			'<a href="/docs/cli">sv, the Svelte CLI</a>, lets you instantly add functionality to a new or existing project.',
+			'The <a href="/docs/cli">Svelte CLI</a> lets you instantly add functionality to a new or existing project with <code>npx sv add</code>.',
 		packages: [
 			{ name: 'tailwindcss', svAlias: 'tailwind' },
 			{ name: 'drizzle-orm', svAlias: 'drizzle' },
@@ -243,12 +243,6 @@ const FEATURED: {
 			{ name: 'felte' },
 			{ name: '@tanstack/svelte-form' }
 		]
-	},
-	{
-		title: 'More',
-		description:
-			'These are just a few highlights. See a larger <a href="https://www.sveltesociety.dev/packages">directory of packages at sveltesociety.dev</a>.',
-		packages: []
 	}
 ];
 
