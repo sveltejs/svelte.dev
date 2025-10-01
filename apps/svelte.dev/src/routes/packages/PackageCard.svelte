@@ -133,13 +133,13 @@
 		background-color: var(--sk-bg-1);
 
 		border-radius: var(--sk-border-radius);
-		filter: drop-shadow(0.2rem 0.4rem 0.6rem rgb(0 0 0 / 0.1));
+		filter: drop-shadow(0.2rem 0.4rem 0.6rem rgb(0 0 0 / 0.07));
 		padding: 1rem;
 
 		min-height: 16em;
 
 		&:hover {
-			filter: drop-shadow(0.2rem, 0.4rem, 1rem rgb(0 0 0 / 0.1));
+			filter: drop-shadow(0.3rem 0.5rem 0.7rem rgb(0 0 0 / 0.1));
 		}
 
 		a {
