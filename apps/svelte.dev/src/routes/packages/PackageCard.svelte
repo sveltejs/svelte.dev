@@ -8,6 +8,15 @@
 	};
 
 	let { pkg }: Props = $props();
+
+	const formatter = new Intl.DateTimeFormat(undefined, {
+		weekday: 'short',
+		year: 'numeric',
+		month: 'short',
+		day: 'numeric',
+		hour: 'numeric',
+		minute: 'numeric'
+	});
 </script>
 
 <article data-pubdate={pkg.updated}>
@@ -37,7 +46,10 @@
 		{/if}
 		<span class="updated">
 			{pkg.version}
-			<strong title={pkg.updated}>{ago(new Date(pkg.updated), true)}</strong>
+
+			<strong title={formatter.format(new Date(pkg.updated))}>
+				{ago(new Date(pkg.updated), true)}
+			</strong>
 		</span>
 	</header>
 
