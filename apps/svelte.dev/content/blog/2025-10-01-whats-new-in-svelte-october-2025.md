@@ -95,6 +95,7 @@ _Frameworks and Data Tools_
 - [Conformal](https://github.com/marcomuser/conformal) helps you work with native FormData by providing type-safe form submissions for the modern web
 - [Astro](https://astro.build), already supporting async Svelte out of the box, added support for server-rendered async Svelte in the [5.14 release](https://astro.build/blog/astro-5140/#async-rendering-support-for-svelte)
 - [LayerChart](https://github.com/techniq/layerchart/releases/tag/layerchart%402.0.0-next.39) had a packed update and introduced (among other things) a "vanilla CSS" (Tailwind opt-in) mode and support for other UI frameworks, and now also works in the [Svelte REPL / playground](https://svelte.dev/playground/c5e73cb55a0045cca83e74b5cdfa3b65?version=5.39.6)
+- [keystatic-sveltekit](https://github.com/Greenheart/keystatic-sveltekit) is a convenient way to integrate the open source Git-based Keystatic CMS with SvelteKit, featuring Markdoc content with interactive Svelte components and a modern editing UX
 
 _Dev Tools and Vite Plugins_
 
