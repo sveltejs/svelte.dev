@@ -69,9 +69,13 @@
 
 	.content {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: 1fr;
 		gap: 2rem;
 		margin-top: 1rem;
+
+		@media (min-width: 1024px) {
+			grid-template-columns: repeat(3, 1fr);
+		}
 	}
 
 	.item {
@@ -81,7 +85,7 @@
 
 	.show-more-container {
 		display: flex;
-		justify-content: flex-start;
+		justify-content: flex-end;
 		margin-top: 2rem;
 
 		label {
@@ -101,13 +105,15 @@
 		}
 
 		button {
-			/* width: 10rem; */
+			order: 1;
 		}
-	}
 
-	@media (max-width: 1024px) {
-		.content {
-			grid-template-columns: 1fr;
+		@media (min-width: 1024px) {
+			justify-content: flex-start;
+
+			button {
+				order: 0;
+			}
 		}
 	}
 </style>
