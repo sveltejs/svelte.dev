@@ -100,7 +100,6 @@
 <style>
 	header {
 		display: flex;
-		align-items: center;
 		margin-bottom: 1rem;
 		justify-content: space-between;
 		gap: 1.5rem;
@@ -110,6 +109,8 @@
 			gap: 0.8rem;
 			font: var(--sk-font-ui-small);
 			color: var(--sk-fg-3);
+			white-space: nowrap;
+			margin-top: 0.2rem;
 
 			strong {
 				color: var(--sk-fg-1);
@@ -136,7 +137,7 @@
 		border-radius: var(--sk-border-radius);
 		padding: 1rem;
 
-		min-height: 16em;
+		min-height: 14em;
 
 		&:hover {
 			filter: drop-shadow(0.2rem, 0.4rem, 1rem rgb(0 0 0 / 0.1));
