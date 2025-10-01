@@ -97,6 +97,7 @@
 		display: flex;
 		align-items: center;
 		gap: 1rem;
+		cursor: pointer;
 
 		.icon {
 			mask-size: 2rem;
@@ -111,39 +112,5 @@
 	.item {
 		height: 16rem;
 		min-width: 0; /* Prevents grid items from overflowing */
-	}
-
-	.show-more-container {
-		display: flex;
-		justify-content: flex-end;
-		margin-top: 2rem;
-
-		label {
-			font: var(--sk-font-ui-small);
-			display: flex;
-			align-items: center;
-			gap: 1rem;
-
-			.icon {
-				mask-size: 2rem;
-				mask-image: url(icons/minus);
-			}
-
-			button[aria-pressed='false'] .icon {
-				mask-image: url(icons/plus);
-			}
-		}
-
-		button {
-			order: 1;
-		}
-
-		@media (min-width: 1024px) {
-			justify-content: flex-start;
-
-			button {
-				order: 0;
-			}
-		}
 	}
 </style>
