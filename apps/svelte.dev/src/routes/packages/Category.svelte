@@ -19,13 +19,12 @@
 </script>
 
 <section class="category">
-	<header bind:this={header}>
-		<h2>
-			{title}
-		</h2>
-	</header>
+	<h2 bind:this={header}>
+		{title}
+	</h2>
+
 	{#if description}
-		<h3>{@html description}</h3>
+		<p>{@html description}</p>
 	{/if}
 
 	<div class="content">
@@ -47,7 +46,7 @@
 						const { bottom } = header.getBoundingClientRect();
 
 						// if the current section is wholly visible, don't muck about with the scroll position
-						if (bottom > 0) {
+						if (!showAll || bottom > 0) {
 							showAll = !showAll;
 							return;
 						}
@@ -70,12 +69,8 @@
 		margin-bottom: 3rem;
 	}
 
-	header {
-		margin-bottom: 1rem;
-
-		h2 {
-			margin: 0;
-		}
+	h2 {
+		margin: 0 0 1rem 0;
 	}
 
 	h3 {
