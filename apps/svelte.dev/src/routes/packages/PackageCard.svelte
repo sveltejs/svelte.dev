@@ -130,10 +130,10 @@
 		height: 100%;
 		min-height: 0;
 
-		background-color: var(--sk-bg-2);
+		background-color: var(--sk-bg-1);
 
-		border: 1px solid var(--sk-bg-4);
 		border-radius: var(--sk-border-radius);
+		filter: drop-shadow(0.2rem 0.4rem 0.6rem rgb(0 0 0 / 0.1));
 		padding: 1rem;
 
 		min-height: 16em;

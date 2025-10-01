@@ -35,9 +35,16 @@
 
 	{#if packages.length > INITIAL_ITEMS}
 		<div class="show-more-container">
-			<button class="show-more-btn" onclick={() => (showAll = !showAll)}>
-				{showAll ? 'Show Less' : `Show More (${packages.length - INITIAL_ITEMS})`}
-			</button>
+			<label>
+				<button
+					class="raised"
+					aria-label="Show more"
+					aria-pressed={showAll}
+					onclick={() => (showAll = !showAll)}><span class="icon"></span></button
+				>
+
+				{showAll ? 'show less' : `show all (${packages.length})`}
+			</label>
 		</div>
 	{/if}
 </section>
@@ -74,28 +81,27 @@
 
 	.show-more-container {
 		display: flex;
-		justify-content: flex-end;
-		margin-top: 1rem;
-	}
+		justify-content: flex-start;
+		margin-top: 2rem;
 
-	.show-more-btn {
-		background: var(--sk-bg-3);
-		border: 1px solid var(--sk-border);
-		border-radius: var(--sk-border-radius);
-		padding: 0.75rem 1.5rem;
-		font: var(--sk-font-ui-medium);
-		font-size: 1.2rem;
-		color: var(--sk-text-1);
-		cursor: pointer;
-		transition: all 0.2s ease;
+		label {
+			font: var(--sk-font-ui-small);
+			display: flex;
+			align-items: center;
+			gap: 1rem;
 
-		&:hover {
-			background: var(--sk-bg-4);
-			border-color: var(--sk-text-3);
+			.icon {
+				mask-size: 2rem;
+				mask-image: url(icons/minus);
+			}
+
+			button[aria-pressed='false'] .icon {
+				mask-image: url(icons/plus);
+			}
 		}
 
-		&:active {
-			transform: translateY(1px);
+		button {
+			/* width: 10rem; */
 		}
 	}
 
