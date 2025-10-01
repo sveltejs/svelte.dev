@@ -11,27 +11,52 @@ const FEATURED: {
 			'The <a href="/docs/cli">Svelte CLI</a> lets you instantly add functionality to a new or existing project with <code>npx sv add</code>.',
 		packages: [
 			{ name: 'tailwindcss', svAlias: 'tailwind' },
-			{ name: 'drizzle-orm', svAlias: 'drizzle' },
+			{
+				name: 'drizzle-orm',
+				svAlias: 'drizzle',
+				description:
+					'TypeScript ORM offering both relational and SQL-like query APIs. Serverless-ready by design.'
+			},
 			{ name: 'mdsvex', svAlias: 'mdsvex' },
 			{ name: 'lucia', svAlias: 'lucia', description: 'A guide to implementing auth in your app.' },
-			{ name: 'storybook', svAlias: 'storybook' },
+			{
+				name: 'storybook',
+				svAlias: 'storybook',
+				description: 'Develop, document, and test UI components in isolation.'
+			},
 			{ name: 'prettier', svAlias: 'prettier' },
-			{ name: 'eslint', svAlias: 'eslint' },
+			{ name: 'eslint', svAlias: 'eslint', description: 'Find and fix problems in your code.' },
 			{ name: 'vitest', svAlias: 'vitest' },
-			{ name: 'playwright', svAlias: 'playwright' },
+			{
+				name: 'playwright',
+				svAlias: 'playwright',
+				description: 'Automate web browsers for end-to-end testing.'
+			},
 			{
 				name: '@inlang/paraglide-js',
 				svAlias: 'paraglide',
 				description: 'A compiler-based i18n library that emits tree-shakable message functions.'
 			},
-			{ name: 'vite-plugin-devtools-json', svAlias: 'devtools-json' }
+			{
+				name: 'vite-plugin-devtools-json',
+				svAlias: 'devtools-json',
+				description:
+					'Installs vite-plugin-devtools-json to generate a Chromium DevTools project settings file on-the-fly in the development server.'
+			}
 		]
 	},
 	{
 		title: 'Component libraries',
 		packages: [
-			{ name: 'shadcn-svelte' },
-			{ name: 'bits-ui', description: 'Headless components for Svelte.' },
+			{
+				name: 'shadcn-svelte',
+				description:
+					'Beautifully designed components built with Tailwind that you can customize and extend.'
+			},
+			{
+				name: 'bits-ui',
+				description: 'Headless components for Svelte. Powers shadcn-svelte or use standalone.'
+			},
 			{
 				name: '@skeletonlabs/skeleton',
 				description: 'Skeleton is an adaptive design system powered by Tailwind CSS.'
@@ -44,7 +69,11 @@ const FEATURED: {
 			{ name: 'daisyui' },
 			{ name: 'svelte-material-ui' },
 			{ name: 'carbon-components-svelte' },
-			{ name: 'melt' },
+			{
+				name: 'melt',
+				description:
+					'An open-source Svelte component library for building high-quality, accessible design systems and web apps.'
+			},
 			{ name: '@sveltestrap/sveltestrap' }
 		]
 	},
@@ -61,7 +90,11 @@ const FEATURED: {
 			{ name: 'svelte-kit-sst' },
 			{ name: 'svelte-adapter-bun' },
 			{ name: 'svelte-adapter-appengine' },
-			{ name: 'sveltekit-adapter-chrome-extension' },
+			{
+				name: 'sveltekit-adapter-chrome-extension',
+				description:
+					'Adapter that builds your app complying with content source policies of Chrome extensions using manifest v3.'
+			},
 			{ name: '@slicemachine/adapter-sveltekit' }
 		]
 	},
@@ -69,14 +102,22 @@ const FEATURED: {
 		title: 'Content',
 		packages: [
 			{ name: 'mdsvex' },
-			{ name: '@content-collections/core' },
+			{
+				name: '@content-collections/core',
+				description:
+					'Transform your content into type-safe data collections and say goodbye to manual data fetching and parsing.'
+			},
 			{ name: 'svelte-exmarkdown' },
 			{ name: '@magidoc/plugin-svelte-marked' },
 			{ name: '@prismicio/svelte' },
 			{ name: 'carta-md' },
 			{ name: '@svelteness/kit-docs' },
 			{ name: '@sveltepress/vite' },
-			{ name: '@evidence-dev/evidence' },
+			{
+				name: '@evidence-dev/evidence',
+				description:
+					'A powerful framework for building and publishing data products using SQL, markdown, and AI.'
+			},
 			{ name: 'svelte-pdf' },
 			{ name: 'typewriter-editor' },
 			{ name: '@svelte-put/toc' }
@@ -110,12 +151,22 @@ const FEATURED: {
 		title: 'Auth',
 		packages: [
 			{ name: 'better-auth' },
-			{ name: '@auth/sveltekit' },
-			{ name: '@supabase/ssr' },
+			{
+				name: '@supabase/ssr',
+				description: 'Server-side auth to use cookie-based authentication with SvelteKit.'
+			},
 			{ name: 'altcha' },
-			{ name: 'svelte-clerk' },
+			{
+				name: 'svelte-clerk',
+				description:
+					'Svelte Clerk is the easiest way to add authentication and user management to your Svelte and SvelteKit applications.'
+			},
 			{ name: 'svelte-session-manager' },
-			{ name: 'svelte-kit-sessions' },
+			{
+				name: 'svelte-kit-sessions',
+				description:
+					'User-friendly session management module for SvelteKit. Effortlessly integrate efficient session handling into your projects.'
+			},
 			{ name: '@passlock/sveltekit' }
 		]
 	},
@@ -125,7 +176,11 @@ const FEATURED: {
 			{ name: '@sentry/svelte' },
 			{ name: '@sentry/sveltekit' },
 			{ name: 'svelte-stripe' },
-			{ name: 'svelte-clerk' },
+			{
+				name: 'svelte-clerk',
+				description:
+					'Svelte Clerk is the easiest way to add authentication and user management to your Svelte and SvelteKit applications.'
+			},
 			{ name: '@storyblok/svelte' },
 			{
 				name: '@inlang/paraglide-js',
@@ -137,7 +192,7 @@ const FEATURED: {
 		title: 'Testing and devtools',
 		packages: [
 			{ name: '@testing-library/svelte' },
-			{ name: 'playwright' },
+			{ name: 'playwright', description: 'Automate web browsers for end-to-end testing.' },
 			{ name: 'vitest' },
 			{ name: 'svelte-render-scan' },
 			{ name: 'svelte-inspect-value' }
@@ -178,7 +233,10 @@ const FEATURED: {
 		title: 'Individual components',
 		packages: [
 			{ name: '@tanstack/svelte-table' },
-			{ name: '@ai-sdk/svelte', description: 'Svelte UI components for the AI SDK' },
+			{
+				name: '@ai-sdk/svelte',
+				description: 'Library for building AI-powered applications and agents.'
+			},
 			{ name: '@tanstack/svelte-virtual' },
 			{ name: 'virtua' },
 			{ name: '@event-calendar/core' }
