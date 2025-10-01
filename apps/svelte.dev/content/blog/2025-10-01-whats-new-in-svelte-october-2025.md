@@ -5,7 +5,7 @@ author: Dani Sandoval
 authorURL: https://dreamindani.com
 ---
 
-There were lots of improvements to remote functions this month - including new batching tools and improved performance via lazy discovery. For more info, check out the Docs and PR links in each bullet. Async SSR is also available for those who would like to try it out while it's still experimental. It's included when the `config.experimental.async` setting is enabled.
+There were lots of improvements to remote functions this month - including new batching tools and improved performance via lazy discovery. For more info, check out the Docs and PR links in each bullet. Async SSR is also available for those who would like to try it out while it's still experimental. It's included when the config option in `svelte.config.js` has the `compilerOptions.experimental.async` setting enabled.
 
 We've got a hefty showcase this month too, so let's dive in!
 
