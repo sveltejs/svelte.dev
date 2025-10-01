@@ -148,7 +148,7 @@ const FEATURED: {
 		packages: [
 			{ name: '@iconify/tailwind4' },
 			{ name: '@unocss/preset-icons' },
-			{ name: 'lucide-svelte', description: 'Beautiful and consistent icons' },
+			{ name: '@lucide/svelte', description: 'Beautiful and consistent icons' },
 			{ name: 'svelte-awesome', description: 'Font Awesome icons for Svelte' },
 			{ name: 'phosphor-svelte', description: 'A clean and friendly icon family' }
 		]
