@@ -54,33 +54,30 @@ const FEATURED: {
 		packages: [
 			{
 				name: 'shadcn-svelte',
-				description:
-					'Beautifully designed components built with Tailwind that you can customize and extend'
+				description: 'A port of shadcn/ui, built with Bits UI and Tailwind CSS'
 			},
 			{
 				name: 'bits-ui',
-				description: 'Headless components powering shadcn-svelte that can also be used standalone'
+				description: 'Headless component primitives — bring your own styles'
 			},
 			{
 				name: '@skeletonlabs/skeleton',
-				description: 'Skeleton is an adaptive design system powered by Tailwind CSS'
+				description: 'An adaptive design system powered by Tailwind CSS'
 			},
 			{
 				name: 'flowbite-svelte',
-				description: 'Official Svelte components built for Flowbite and Tailwind CSS'
+				description: 'Official Svelte port of Flowbite, a UI library powered by Tailwind CSS'
 			},
-			{ name: '@ark-ui/svelte', description: 'A collection of unstyled, accessible UI components' },
+			{ name: '@ark-ui/svelte', description: 'Headless component library built on top of Zag.js' },
 			{
 				name: 'daisyui',
-				description:
-					'Tailwind CSS component library that provides useful component class names to speed development'
+				description: 'A set of classnames encapsulating Tailwind CSS styles'
 			},
-			{ name: 'svelte-material-ui' },
+			{ name: 'svelte-material-ui', description: 'An implementation of Google’s Material UI' },
 			{ name: 'carbon-components-svelte' },
 			{
 				name: 'melt',
-				description:
-					'An open-source Svelte component library for building high-quality, accessible design systems and web apps'
+				description: 'A low-level headless UI library'
 			},
 			{ name: '@sveltestrap/sveltestrap' }
 		]
