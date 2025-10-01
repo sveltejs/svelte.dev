@@ -10,8 +10,7 @@ export function GET() {
 				key,
 				{
 					metadata: { title: page.metadata.title, use_cases: page.metadata.use_cases },
-					slug: page.slug,
-					file: page.file
+					slug: page.slug
 				}
 			])
 		)
