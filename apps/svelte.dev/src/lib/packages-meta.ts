@@ -149,7 +149,7 @@ const FEATURED: {
 			{ name: '@iconify/tailwind4' },
 			{ name: '@unocss/preset-icons' },
 			{ name: 'lucide-svelte', description: 'Beautiful and consistent icons' },
-			{ name: 'svelte-awesome' },
+			{ name: 'svelte-awesome', description: 'Font Awesome icons for Svelte' },
 			{ name: 'phosphor-svelte', description: 'A clean and friendly icon family' }
 		]
 	},
@@ -158,11 +158,11 @@ const FEATURED: {
 		packages: [
 			{
 				name: 'layerchart',
-				description: 'Composable chart components to build a wide range of visualizations'
+				description: 'Composable chart components for building a wide range of visualizations'
 			},
 			{
 				name: 'layercake',
-				description: 'Easily create responsive graphics server-side that work without JavaScript'
+				description: 'Create responsive graphics that can work without JavaScript'
 			},
 			{
 				name: 'svelte-maplibre',
@@ -170,11 +170,11 @@ const FEATURED: {
 			},
 			{
 				name: '@xyflow/svelte',
-				description: 'Powerful libraries for building node-based UIs with Svelte'
+				description: 'Customizable component for building node-based UIs and diagrams'
 			},
 			{
 				name: 'svelte-maplibre-gl',
-				description: 'Build interactive web maps effortlessly with MapLibre GL'
+				description: 'Build interactive web maps with MapLibre GL'
 			}
 		]
 	},
