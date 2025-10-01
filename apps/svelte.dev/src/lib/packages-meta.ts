@@ -211,7 +211,7 @@ const FEATURED: {
 			{ name: 'svelte-stripe', description: 'Add Stripe Elements to your project' },
 			{
 				name: 'svelte-clerk',
-				description: 'Easily add authentication and user management to your app'
+				description: 'Unofficial implementation of Clerk'
 			},
 			{
 				name: '@storyblok/svelte',
@@ -227,7 +227,7 @@ const FEATURED: {
 		title: 'Testing and devtools',
 		packages: [
 			{ name: '@testing-library/svelte', description: 'Testing utilities for DOM interaction' },
-			{ name: 'playwright', description: 'Automate web browsers for end-to-end testing' },
+			{ name: 'playwright', description: 'Browser automation for end-to-end testing' },
 			{ name: 'vitest' },
 			{ name: 'svelte-render-scan', description: 'Visual debugging tool' },
 			{ name: 'svelte-inspect-value', description: 'Value inspector component' }
@@ -249,8 +249,8 @@ const FEATURED: {
 		packages: [
 			{ name: '@sveltejs/vite-plugin-svelte' },
 			{ name: 'rollup-plugin-svelte' },
-			{ name: 'svelte-loader' },
-			{ name: 'esbuild-svelte' }
+			{ name: 'svelte-loader', description: 'Compile Svelte components with webpack' },
+			{ name: 'esbuild-svelte', description: 'Compile Svelte components with esbuild' }
 		]
 	},
 	{
@@ -347,8 +347,11 @@ const FEATURED: {
 				description: 'Primitives for managing, caching and syncing asynchronous and remote data'
 			},
 			{ name: '@urql/svelte', description: 'Customizable GraphQL client' },
-			{ name: 'houdini' },
-			{ name: 'trpc-sveltekit' },
+			{ name: 'houdini', description: 'The disappearing GraphQL framework' },
+			{
+				name: 'trpc-sveltekit',
+				description: 'SvelteKit adapter for tRPC.io that supports Node, Vercel and Netlify'
+			},
 			{
 				name: '@orpc/svelte-query',
 				description: 'APIs that are end-to-end type-safe and adhere to OpenAPI standards'
@@ -361,10 +364,13 @@ const FEATURED: {
 		description:
 			'SvelteKit has built-in <a href="/docs/kit/remote-functions#form">forms</a>, but you can also use these packages',
 		packages: [
-			{ name: 'sveltekit-superforms' },
+			{
+				name: 'sveltekit-superforms',
+				description: 'Server-side and client-side form validation library'
+			},
 			{
 				name: 'formsnap',
-				description: 'Wraps sveltekit-superforms with accessible form components'
+				description: 'Accessible form components built on top of sveltekit-superforms'
 			},
 			{ name: 'felte', description: 'An extensible form library' },
 			{ name: '@tanstack/svelte-form', description: 'Powerful, type-safe forms' }
