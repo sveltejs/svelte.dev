@@ -17,10 +17,19 @@
 		hour: 'numeric',
 		minute: 'numeric'
 	});
+
+	const href = $derived(pkg.homepage || pkg.repo_url || `https://npmjs.org/package/${pkg.name}`);
 </script>
 
 <article>
-	{#snippet contents()}
+	<a
+		class="contents"
+		{href}
+		target={href.startsWith('/') ? null : '_blank'}
+		rel="noreferrer"
+		aria-label="View project homepage"
+		onclick={(e) => e.stopPropagation()}
+	>
 		<header>
 			<h3>
 				{#if pkg.official}
@@ -58,24 +67,7 @@
 
 			<span style="flex: 1 1 auto"></span>
 		</p>
-	{/snippet}
-
-	{#if pkg.homepage}
-		<a
-			class="contents"
-			href={pkg.homepage}
-			target={pkg.homepage.startsWith('/') ? null : '_blank'}
-			rel="noreferrer"
-			aria-label="View project homepage"
-			onclick={(e) => e.stopPropagation()}
-		>
-			{@render contents()}
-		</a>
-	{:else}
-		<div class="contents">
-			{@render contents()}
-		</div>
-	{/if}
+	</a>
 
 	<!-- this is a sibling element so that we don't have links inside links -->
 	<div class="links">
