@@ -249,6 +249,7 @@ function create_registry() {
 		const json = JSON.parse(frontmatter);
 
 		json.description = PACKAGES_META.calculate_description(json);
+		json.homepage = PACKAGES_META.calculate_homepage(json);
 		json.official = PACKAGES_META.is_official(json.name);
 		json.outdated = PACKAGES_META.is_outdated(json.updated);
 		json.svelte = PACKAGES_META.supports_svelte_versions(json.svelte_range);

@@ -585,10 +585,10 @@ function supports_svelte_versions(version_range: string): {
 	return result;
 }
 
-function dont_end_by(str: string, not_all_allowed: string[]): string {
-	for (const nope of not_all_allowed) {
-		if (str.endsWith(nope)) {
-			return str.slice(0, -nope.length);
+function remove_ending_by(str: string, endings: string[]): string {
+	for (const ending of endings) {
+		if (str.endsWith(ending)) {
+			return str.slice(0, -ending.length);
 		}
 	}
 	return str;
@@ -596,7 +596,7 @@ function dont_end_by(str: string, not_all_allowed: string[]): string {
 
 function calculate_description(pkg: PackageKey & PackageNpm): string {
 	const found = FEATURED.flatMap((f) => f.packages).find((p) => p.name === pkg.name);
-	if (found && found.description) return dont_end_by(found.description, ['.']);
+	if (found && found.description) return remove_ending_by(found.description, ['.']);
 
 	let desc = pkg.npm_description ?? 'NO DESCRIPTION!';
 	const replaces = [
@@ -606,14 +606,20 @@ function calculate_description(pkg: PackageKey & PackageNpm): string {
 	for (const { key, value } of replaces) {
 		desc = desc.replace(key, value);
 	}
-	return dont_end_by(desc, ['.']);
+	return remove_ending_by(desc, ['.']);
+}
+
+function calculate_homepage(pkg: PackageKey & PackageNpm): string {
+	return remove_ending_by(pkg.homepage ?? '', ['#readme']);
 }
 
 export const PACKAGES_META = {
 	FEATURED,
 
+	calculate_description,
+	calculate_homepage,
+
 	is_official,
 	is_outdated,
-	supports_svelte_versions,
-	calculate_description
+	supports_svelte_versions
 };
