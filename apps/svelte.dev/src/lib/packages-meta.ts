@@ -90,21 +90,27 @@ const FEATURED: {
 		title: 'SvelteKit adapters',
 		packages: [
 			{ name: '@sveltejs/adapter-auto' },
-			{ name: '@sveltejs/adapter-node' },
-			{ name: '@sveltejs/adapter-vercel' },
-			{ name: '@sveltejs/adapter-cloudflare' },
-			{ name: '@sveltejs/adapter-netlify' },
-			{ name: '@deno/svelte-adapter' },
-			{ name: 'amplify-adapter' },
-			{ name: 'svelte-kit-sst' },
-			{ name: 'svelte-adapter-bun' },
-			{ name: 'svelte-adapter-appengine' },
+			{ name: '@sveltejs/adapter-node', description: 'Generates a standalone Node server' },
+			{ name: '@sveltejs/adapter-vercel', description: 'Creates a Vercel app' },
+			{ name: '@sveltejs/adapter-cloudflare', description: 'Creates a Cloudflare app' },
+			{ name: '@sveltejs/adapter-netlify', description: 'Creates a Netlify app' },
+			{ name: '@deno/svelte-adapter', description: 'Builds your app for Deno Deploy' },
+			{ name: 'amplify-adapter', description: 'Builds your app for AWS Amplify' },
+			{ name: 'svelte-kit-sst', description: 'Builds your app for AWS Lambda and AWS Lamda@Edge' },
+			{ name: 'svelte-adapter-bun', description: 'Generates a standalone Bun.js server' },
+			{
+				name: 'svelte-adapter-appengine',
+				description: 'Builds your app for Google Cloud App Engine'
+			},
 			{
 				name: 'sveltekit-adapter-chrome-extension',
 				description:
-					'Adapter that builds your app complying with content source policies of Chrome extensions using manifest v3'
+					'Builds your app complying with content source policies of Chrome extensions using manifest v3'
 			},
-			{ name: '@slicemachine/adapter-sveltekit' }
+			{
+				name: '@slicemachine/adapter-sveltekit',
+				description: "Integrate with Prismic's Slice Machine"
+			}
 		]
 	},
 	{
