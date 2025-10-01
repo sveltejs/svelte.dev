@@ -155,7 +155,7 @@ async function getNpmAndGitHubData(pkg: string): Promise<PackageKey & PackageNpm
 		const token = process.env.GITHUB_TOKEN;
 		const headers = token ? new Headers({ authorization: 'Bearer ' + token }) : {};
 		const res = await fetchJson(`https://api.github.com/repos/${git_org}/${git_repo}`, { headers });
-		if (res.message && res.message.startsWith('API rate limit exceeded')) {
+		if (res?.message && res?.message.startsWith('API rate limit exceeded')) {
 			skipGithubStars = true;
 		} else {
 			github_stars = res.stargazers_count;
