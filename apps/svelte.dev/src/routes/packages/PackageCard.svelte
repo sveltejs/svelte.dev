@@ -19,7 +19,7 @@
 	});
 </script>
 
-<article data-pubdate={pkg.updated}>
+<article>
 	{#snippet contents()}
 		<header>
 			<h3>
