@@ -158,8 +158,8 @@
 
 		.links {
 			position: absolute;
-			right: 1rem;
-			bottom: 1rem;
+			right: 1.3rem;
+			bottom: 1.3rem;
 
 			a {
 				width: 1.4rem;
