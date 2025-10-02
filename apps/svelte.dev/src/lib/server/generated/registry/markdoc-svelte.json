@@ -1,0 +1,12 @@
+{
+	"name": "markdoc-svelte",
+	"npm_description": "A preprocessor to render Markdoc in Svelte",
+	"repo_url": "https://github.com/CollierCZ/markdoc-svelte",
+	"authors": ["colliercz"],
+	"homepage": "https://github.com/CollierCZ/markdoc-svelte#readme",
+	"version": "3.0.0",
+	"downloads": 4,
+	"github_stars": 15,
+	"updated": "2025-06-23T20:22:55.577Z",
+	"svelte_range": "4.x || 5.x"
+}
