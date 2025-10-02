@@ -127,6 +127,10 @@
 	h3 {
 		display: inline-block;
 		font: var(--sk-font-ui-medium);
+
+		a:hover & span:not([data-icon]) {
+			text-decoration: underline;
+		}
 	}
 
 	article {
