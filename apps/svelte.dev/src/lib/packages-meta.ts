@@ -314,7 +314,7 @@ const FEATURED: {
 	{
 		title: 'Testing',
 		description:
-			'You might find the <a href="/docs/cli">Svelte CLI</a> and <a href="/docs/svelte/testing">documentation about testing</a> to be helpful during setup',
+			'You might find the <a href="/docs/svelte/testing">documentation about testing</a> to be helpful during setup',
 		packages: [
 			{ name: '@testing-library/svelte', description: 'Testing utilities for DOM interaction' },
 			{ name: 'playwright', description: 'Browser automation for end-to-end testing' },
