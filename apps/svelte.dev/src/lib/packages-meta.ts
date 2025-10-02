@@ -302,7 +302,7 @@ const FEATURED: {
 	{
 		title: 'Icons',
 		description:
-			'See the <a href="/docs/kit/icons">icons documentation</a> for best practices when using an icon library,
+			'See the <a href="/docs/kit/icons">icons documentation</a> for best practices when using an icon library',
 		packages: [
 			{ name: '@iconify/tailwind4' },
 			{ name: '@unocss/preset-icons' },
