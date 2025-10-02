@@ -302,7 +302,7 @@ const FEATURED: {
 	{
 		title: 'Icons',
 		description:
-			'The <a href="/docs/kit/icons">documentation about icons</a> may be helpful when choosing how to handle icons in Svelte',
+			'See the <a href="/docs/kit/icons">icons documentation</a> for best practices when using an icon library,
 		packages: [
 			{ name: '@iconify/tailwind4' },
 			{ name: '@unocss/preset-icons' },
