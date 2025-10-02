@@ -9,13 +9,17 @@
 	}
 
 	let { title, description, packages }: Props = $props();
+	const slug = $derived(`${title.toLowerCase().replace(/ /g, '-')}`);
 
 	const INITIAL_ITEMS = 3;
 </script>
 
 <section class="category">
 	<header>
-		<h2>{title}</h2>
+		<h2 id={slug}>
+			<span>{title}</span>
+			<a href="#{slug}" class="permalink" aria-label="permalink">aa</a>
+		</h2>
 
 		{#if description}
 			<p>{@html description}</p>
@@ -59,9 +63,11 @@
 
 	header {
 		margin: 0 0 2rem 0;
+		position: relative;
 
 		h2 {
 			margin: 0 0 1rem 0;
+			position: relative;
 		}
 
 		p {
@@ -144,5 +150,38 @@
 	.item {
 		height: 16rem;
 		min-width: 0; /* Prevents grid items from overflowing */
+	}
+
+	/* permalink */
+	[id] {
+		scroll-margin-top: calc(var(--sk-nav-height)) !important;
+	}
+
+	a.permalink {
+		position: absolute !important;
+		display: block;
+		background: var(--sk-fg-1);
+		color: var(--sk-fg-1) !important;
+		mask: url(icons/hash) 50% 50% no-repeat;
+		mask-size: 2.4rem 2.4rem;
+		width: 2.6rem;
+		height: 2.2rem;
+		top: calc(50% - 1rem);
+
+		@media (max-width: 767px) {
+			right: 0;
+			scale: 0.8;
+		}
+
+		@media (min-width: 768px) {
+			left: -3rem;
+			opacity: 0;
+			transition: opacity 0.2s;
+
+			h2:hover &,
+			&:focus {
+				opacity: 1;
+			}
+		}
 	}
 </style>
