@@ -324,7 +324,7 @@ const FEATURED: {
 	{
 		title: 'Bundler plugins',
 		description:
-			'<a href="https://svelte.dev/docs/kit">SvelteKit</a> comes with <a href="https://www.npmjs.com/package/@sveltejs/vite-plugin-svelte>@sveltejs/vite-plugin-svelte</a>, but you can also <a href="/docs/svelte/getting-started#Alternatives-to-SvelteKit">set things up on your own</a>',
+			'If you’re using SvelteKit or a similar framework, this part is taken care of. If you’re <a href="/docs/svelte/getting-started#Alternatives-to-SvelteKit">setting things up on your own</a>, you will need a plugin to tell your bundler how to compile Svelte files',
 		packages: [
 			{ name: '@sveltejs/vite-plugin-svelte' },
 			{ name: 'rollup-plugin-svelte' },
