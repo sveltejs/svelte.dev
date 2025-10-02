@@ -5,7 +5,7 @@
 
 	type Props = {
 		open: boolean;
-	} & Category
+	} & Category;
 
 	let { title, description, packages, hash, open }: Props = $props();
 
