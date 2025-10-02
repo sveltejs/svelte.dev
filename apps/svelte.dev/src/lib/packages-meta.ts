@@ -85,11 +85,11 @@ const FEATURED: {
 	{
 		title: 'SvelteKit adapters',
 		packages: [
-			{ name: '@sveltejs/adapter-auto' },
 			{ name: '@sveltejs/adapter-node', description: 'Builds a standalone Node server' },
-			{ name: '@sveltejs/adapter-vercel', description: 'Builds your app for Vercel' },
 			{ name: '@sveltejs/adapter-cloudflare', description: 'Builds your app for Cloudflare' },
 			{ name: '@sveltejs/adapter-netlify', description: 'Builds your app for Netlify' },
+			{ name: '@sveltejs/adapter-vercel', description: 'Builds your app for Vercel' },
+			{ name: '@sveltejs/adapter-static', description: 'Builds your static site' },
 			{ name: '@deno/svelte-adapter', description: 'Builds your app for Deno Deploy' },
 			{ name: 'amplify-adapter', description: 'Builds your app for AWS Amplify' },
 			{ name: 'svelte-kit-sst', description: 'Builds your app for AWS Lambda and AWS Lamda@Edge' },
