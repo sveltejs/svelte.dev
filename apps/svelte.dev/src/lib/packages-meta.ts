@@ -129,10 +129,6 @@ const FEATURED: {
 				description: 'Components and helpers to fetch and present Prismic content'
 			},
 			{ name: 'carta-md' },
-			{
-				name: '@svelteness/kit-docs',
-				description: 'Build a docs site using SvelteKit. A VitePress alternative for Svelte'
-			},
 			{ name: '@sveltepress/vite', description: 'A content centered site build tool' },
 			{
 				name: '@evidence-dev/evidence',
@@ -318,7 +314,6 @@ const FEATURED: {
 					'A SvelteKit sitemap generator that makes it impossible to forget to add your paths'
 			},
 			{ name: 'svelte-seo', description: 'Add meta tags, Open Graph, and JSON-LD to your site' },
-			{ name: '@sveltejs/amp' },
 			{
 				name: 'svead',
 				description:
