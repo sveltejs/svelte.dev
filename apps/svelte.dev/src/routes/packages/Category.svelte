@@ -126,6 +126,10 @@
 
 		.button {
 			order: 1;
+
+			summary:hover & {
+				border-color: var(--sk-raised-hover-color);
+			}
 		}
 
 		@media (min-width: 1024px) {
