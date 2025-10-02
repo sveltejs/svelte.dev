@@ -140,16 +140,6 @@ const FEATURED: {
 		]
 	},
 	{
-		title: 'Icons',
-		packages: [
-			{ name: '@iconify/tailwind4' },
-			{ name: '@unocss/preset-icons' },
-			{ name: '@lucide/svelte', description: 'Beautiful and consistent icons' },
-			{ name: 'svelte-awesome', description: 'Font Awesome icons for Svelte' },
-			{ name: 'phosphor-svelte', description: 'A clean and friendly icon family' }
-		]
-	},
-	{
 		title: 'Data visualization',
 		packages: [
 			{
@@ -220,16 +210,6 @@ const FEATURED: {
 		]
 	},
 	{
-		title: 'Testing and devtools',
-		packages: [
-			{ name: '@testing-library/svelte', description: 'Testing utilities for DOM interaction' },
-			{ name: 'playwright', description: 'Browser automation for end-to-end testing' },
-			{ name: 'vitest' },
-			{ name: 'svelte-render-scan', description: 'Visual debugging tool' },
-			{ name: 'svelte-inspect-value', description: 'Value inspector component' }
-		]
-	},
-	{
 		title: 'Internationalization (i18n)',
 		packages: [
 			{
@@ -238,15 +218,6 @@ const FEATURED: {
 			},
 			{ name: '@wuchale/svelte', description: 'Protobuf-like i18n from plain code' },
 			{ name: 'i18n-js' }
-		]
-	},
-	{
-		title: 'Bundler plugins',
-		packages: [
-			{ name: '@sveltejs/vite-plugin-svelte' },
-			{ name: 'rollup-plugin-svelte' },
-			{ name: 'svelte-loader', description: 'Compile Svelte components with webpack' },
-			{ name: 'esbuild-svelte', description: 'Compile Svelte components with esbuild' }
 		]
 	},
 	{
@@ -319,6 +290,46 @@ const FEATURED: {
 				description:
 					'Set head meta information, canonical, title, Twitter and Facebook Open Graph tags, and schema.org data'
 			}
+		]
+	},
+	{
+		title: 'Devtools',
+		packages: [
+			{ name: 'svelte-render-scan', description: 'Visual debugging tool' },
+			{ name: 'svelte-inspect-value', description: 'Value inspector component' }
+		]
+	},
+	{
+		title: 'Icons',
+		description:
+			'The <a href="/docs/kit/icons">documentation about icons</a> may be helpful when choosing how to handle icons in Svelte',
+		packages: [
+			{ name: '@iconify/tailwind4' },
+			{ name: '@unocss/preset-icons' },
+			{ name: '@lucide/svelte', description: 'Beautiful and consistent icons' },
+			{ name: 'svelte-awesome', description: 'Font Awesome icons for Svelte' },
+			{ name: 'phosphor-svelte', description: 'A clean and friendly icon family' }
+		]
+	},
+	{
+		title: 'Testing',
+		description:
+			'You might find the <a href="/docs/cli">Svelte CLI</a> and <a href="/docs/svelte/testing">documentation about testing</a> to be helpful during setup',
+		packages: [
+			{ name: '@testing-library/svelte', description: 'Testing utilities for DOM interaction' },
+			{ name: 'playwright', description: 'Browser automation for end-to-end testing' },
+			{ name: 'vitest' }
+		]
+	},
+	{
+		title: 'Bundler plugins',
+		description:
+			'<a href="https://svelte.dev/docs/kit">SvelteKit</a> comes with <a href="https://www.npmjs.com/package/@sveltejs/vite-plugin-svelte>@sveltejs/vite-plugin-svelte</a>, but you can also <a href="/docs/svelte/getting-started#Alternatives-to-SvelteKit">set things up on your own</a>',
+		packages: [
+			{ name: '@sveltejs/vite-plugin-svelte' },
+			{ name: 'rollup-plugin-svelte' },
+			{ name: 'svelte-loader', description: 'Compile Svelte components with webpack' },
+			{ name: 'esbuild-svelte', description: 'Compile Svelte components with esbuild' }
 		]
 	},
 	{
