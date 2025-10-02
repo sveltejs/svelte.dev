@@ -11,7 +11,6 @@
 	let { title, description, packages }: Props = $props();
 
 	const INITIAL_ITEMS = 3;
-	let showAll = $state(false);
 </script>
 
 <section class="category">
@@ -38,9 +37,8 @@
 					<span class="icon"></span>
 				</span>
 
-				<span>
-					{showAll ? 'show less' : `show all (${packages.length})`}
-				</span>
+				<span class="show-more">show all ({packages.length})</span>
+				<span class="show-less">show less</span>
 			</summary>
 
 			<div class="grid">
@@ -100,6 +98,22 @@
 		cursor: pointer;
 		width: 100%;
 		justify-content: flex-end;
+
+		.show-more {
+			display: block;
+
+			[open] & {
+				display: none;
+			}
+		}
+
+		.show-less {
+			display: none;
+
+			[open] & {
+				display: block;
+			}
+		}
 
 		.icon {
 			mask-size: 2rem;
