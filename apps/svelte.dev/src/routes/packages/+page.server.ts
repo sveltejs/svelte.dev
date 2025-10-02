@@ -26,6 +26,7 @@ const homepage: Category[] = [];
 for (const { packages, title, description } of PACKAGES_META.FEATURED) {
 	homepage.push({
 		title,
+		hash: title.toLowerCase().replace(/ /g, '-'),
 		description,
 		packages: arrToPackages(packages)
 	});

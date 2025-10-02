@@ -238,6 +238,7 @@ export interface PackageCalculated {
 
 export interface Category {
 	title: string;
+	hash: string;
 	description?: string;
 	packages: Package[];
 }

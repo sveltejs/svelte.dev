@@ -1,24 +1,22 @@
 <script lang="ts">
 	import type { Package } from '$lib/server/content';
 	import PackageCard from './PackageCard.svelte';
+	import type { Category } from '$lib/server/content';
 
-	interface Props {
-		title: string;
-		packages: Package[];
-		description?: string;
-	}
+	type Props = {
+		open: boolean;
+	} & Category
 
-	let { title, description, packages }: Props = $props();
-	const slug = $derived(`${title.toLowerCase().replace(/ /g, '-')}`);
+	let { title, description, packages, hash, open }: Props = $props();
 
 	const INITIAL_ITEMS = 3;
 </script>
 
 <section class="category">
 	<header>
-		<h2 id={slug}>
+		<h2 id={hash}>
 			<span>{title}</span>
-			<a href="#{slug}" class="permalink" aria-label="permalink">aa</a>
+			<a href="#{hash}" class="permalink" aria-label="permalink">aa</a>
 		</h2>
 
 		{#if description}
@@ -35,7 +33,7 @@
 	</div>
 
 	{#if packages.length > INITIAL_ITEMS}
-		<details>
+		<details {open}>
 			<summary>
 				<span class="raised button" aria-label="Toggle">
 					<span class="icon"></span>
@@ -154,7 +152,7 @@
 
 	/* permalink */
 	[id] {
-		scroll-margin-top: calc(var(--sk-nav-height)) !important;
+		scroll-margin-top: calc(var(--sk-nav-height) + 2rem) !important;
 	}
 
 	a.permalink {

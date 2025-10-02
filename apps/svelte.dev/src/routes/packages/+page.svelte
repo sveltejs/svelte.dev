@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Category from './Category.svelte';
+	import { page } from '$app/state';
 
 	const { data } = $props();
 </script>
@@ -22,8 +23,8 @@
 	</header>
 
 	<div>
-		{#each data.homepage as { title, description, packages }}
-			<Category {title} {description} {packages} />
+		{#each data.homepage as category}
+			<Category {...category} open={page.url.hash === `#${category.hash}`} />
 		{/each}
 	</div>
 </div>
