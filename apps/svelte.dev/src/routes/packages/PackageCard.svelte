@@ -19,7 +19,11 @@
 		minute: 'numeric'
 	});
 
-	const href = $derived(pkg.homepage || pkg.repo_url || `https://npmjs.org/package/${pkg.name}`);
+	const href = $derived(
+		pkg.homepage?.replace('https://svelte.dev', '') ||
+			pkg.repo_url ||
+			`https://npmjs.org/package/${pkg.name}`
+	);
 </script>
 
 <article>
