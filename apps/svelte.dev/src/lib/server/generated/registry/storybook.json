@@ -1,0 +1,23 @@
+{
+	"name": "storybook",
+	"npm_description": "Storybook: Develop, document, and test UI components in isolation",
+	"repo_url": "https://github.com/storybookjs/storybook",
+	"authors": [
+		"ndelangen",
+		"tmeasday",
+		"ghengeveld",
+		"kasperpeulen",
+		"shilman",
+		"jreinhold",
+		"valentinpalkovic",
+		"storybook-bot"
+	],
+	"homepage": "https://storybook.js.org",
+	"version": "9.1.10",
+	"downloads": 8081990,
+	"github_stars": 87873,
+	"updated": "2025-10-01T10:17:55.420Z",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "8.6.12"
+}

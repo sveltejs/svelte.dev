@@ -1,0 +1,15 @@
+{
+	"name": "@sveltejs/enhanced-img",
+	"npm_description": "Image optimization for your Svelte apps",
+	"repo_url": "https://github.com/sveltejs/kit",
+	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
+	"homepage": "https://svelte.dev/docs/kit/images#sveltejs-enhanced-img",
+	"version": "0.8.3",
+	"downloads": 23697,
+	"github_stars": 19739,
+	"updated": "2025-10-02T14:22:08.609Z",
+	"svelte_range": "^5.0.0",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "0.4.4"
+}

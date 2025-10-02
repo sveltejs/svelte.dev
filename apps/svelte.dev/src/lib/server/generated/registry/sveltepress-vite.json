@@ -1,0 +1,16 @@
+{
+	"name": "@sveltepress/vite",
+	"npm_description": "Sveltepress plugin for vite",
+	"repo_url": "https://github.com/Blackman99/sveltepress",
+	"authors": ["philadelphia"],
+	"homepage": "https://sveltepress.site/",
+	"version": "1.2.2",
+	"downloads": 1409,
+	"github_stars": 499,
+	"updated": "2025-05-06T02:33:47.201Z",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^1.20.4 || ^2.0.0",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "1.1.5"
+}
