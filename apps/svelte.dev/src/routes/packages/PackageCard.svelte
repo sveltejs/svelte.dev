@@ -82,20 +82,22 @@
 					href="https://npmjs.org/package/{pkg.name}"
 					target="_blank"
 					rel="noreferrer"
-					data-icon="npm"
 					aria-label="View on npm"
 					onclick={(e) => e.stopPropagation()}
-				></a>
+				>
+					<span data-icon="npm"></span>
+				</a>
 
 				{#if pkg.repo_url}
 					<a
 						href={pkg.repo_url}
 						target="_blank"
 						rel="noreferrer"
-						data-icon="github"
 						aria-label="View on GitHub"
 						onclick={(e) => e.stopPropagation()}
-					></a>
+					>
+						<span data-icon="github"></span>
+					</a>
 				{/if}
 			</span>
 		</div>
@@ -158,6 +160,15 @@
 			position: absolute;
 			right: 1rem;
 			bottom: 1rem;
+
+			a {
+				width: 1.4rem;
+				height: 1.4rem;
+			}
+
+			a:focus-visible {
+				outline: 2px solid var(--sk-fg-accent);
+			}
 		}
 
 		a {
@@ -174,11 +185,6 @@
 			background: currentColor;
 			mask: no-repeat 50% 50%;
 			mask-size: contain;
-
-			&:focus {
-				/* TODO use a focus ring instead (right now the mask breaks it) */
-				background: var(--sk-fg-accent);
-			}
 
 			&[data-icon='star'] {
 				mask-image: url(icons/star);
