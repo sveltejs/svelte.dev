@@ -129,10 +129,6 @@ const FEATURED: {
 				description: 'Components and helpers to fetch and present Prismic content'
 			},
 			{ name: 'carta-md' },
-			{
-				name: '@svelteness/kit-docs',
-				description: 'Build a docs site using SvelteKit. A VitePress alternative for Svelte'
-			},
 			{ name: '@sveltepress/vite', description: 'A content centered site build tool' },
 			{
 				name: '@evidence-dev/evidence',
