@@ -1,0 +1,16 @@
+{
+	"name": "svelte-seo",
+	"npm_description": "Optimize your Svelte app for search engines and social media with meta tags, Open Graph, and JSON-LD.",
+	"repo_url": "ssh://git@github.com/artiebits/svelte-seo",
+	"authors": ["artiebits"],
+	"homepage": "https://github.com/artiebits/svelte-seo#readme",
+	"version": "1.7.1",
+	"downloads": 1994,
+	"github_stars": 490,
+	"updated": "2025-09-27T09:40:12.755Z",
+	"svelte_range": "^5.38.2",
+	"kit_range": "^2.36.1",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "1.6.1"
+}

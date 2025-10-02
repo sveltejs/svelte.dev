@@ -13,7 +13,8 @@
 		"check": "node scripts/update.js && svelte-kit sync && svelte-check",
 		"format": "prettier --write .",
 		"lint": "prettier --check .",
-		"sync-docs": "tsx scripts/sync-docs/index.ts"
+		"sync-docs": "tsx scripts/sync-docs/index.ts",
+		"sync-packages": "node scripts/sync-packages/index.ts"
 	},
 	"dependencies": {
 		"@jridgewell/sourcemap-codec": "^1.4.15",
@@ -40,6 +41,7 @@
 		"flexsearch": "^0.7.43",
 		"flru": "^1.0.2",
 		"icons": "workspace:*",
+		"logos": "workspace:*",
 		"port-authority": "^2.0.1",
 		"topojson-client": "^3.1.0",
 		"vitest": "^3.2.4",
