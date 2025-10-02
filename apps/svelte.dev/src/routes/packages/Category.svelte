@@ -98,6 +98,8 @@
 		align-items: center;
 		gap: 1rem;
 		cursor: pointer;
+		width: 100%;
+		justify-content: flex-end;
 
 		.icon {
 			mask-size: 2rem;
@@ -105,6 +107,18 @@
 
 			[open] & {
 				mask-image: url(icons/minus);
+			}
+		}
+
+		.button {
+			order: 1;
+		}
+
+		@media (min-width: 1024px) {
+			justify-content: flex-start;
+
+			.button {
+				order: 0;
 			}
 		}
 	}
