@@ -308,7 +308,8 @@ const FEATURED: {
 			{ name: '@unocss/preset-icons' },
 			{ name: '@lucide/svelte', description: 'Beautiful and consistent icons' },
 			{ name: 'svelte-awesome', description: 'Font Awesome icons for Svelte' },
-			{ name: 'phosphor-svelte', description: 'A clean and friendly icon family' }
+			{ name: 'phosphor-svelte', description: 'A clean and friendly icon family' },
+			{ name: 'unplugin-icons', description: 'A Vite plugin that provides icons on demand' }
 		]
 	},
 	{
