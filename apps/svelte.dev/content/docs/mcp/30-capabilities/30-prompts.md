@@ -7,21 +7,4 @@ This is the list of available prompts provided by the MCP server. Prompts are se
 
 ## svelte-task
 
-This prompt should be used whenever you are asking the model to work on some Svelte-related task. It will instruct the LLM on which documentation sections are available, which tool to invoke, when to invoke it, and how to interpret the result. It will ask you for the description of the task and the returned value will look like this:
-
-```
-You are a Svelte expert tasked to build components and utilities for Svelte developers. If you need documentation for anything related to Svelte you can invoke the tool \`get-documentation\` with one of the following paths:
-<available-docs-paths>
-[all available docs]
-</available-docs-paths>
-
-Every time you write a Svelte component or a Svelte module you MUST invoke the \`svelte-autofixer\` tool providing the code. The tool will return a list of issues or suggestions. If there are any issues or suggestions you MUST fix them and call the tool again with the updated code. You MUST keep doing this until the tool returns no issues or suggestions. Only then you can return the code to the user.
-
-This is the task you will work on:
-
-<task>
-[your task here]
-</task>
-
-If you are not writing the code into a file, once you have the final version of the code ask the user if they want to generate a playground link to quickly check the code in it and if they answer yes call the \`playground-link\` tool and return the url to the user nicely formatted. The playground link MUST be generated only once you have the final version of the code and you are ready to share it, it MUST include an entry point file called \`App.svelte\` where the main component should live. If you have multiple files to include in the playground link you can include them all at the root.
-```
+This prompt should be used whenever you are asking the model to work on a Svelte-related task. It will instruct the LLM which documentation sections are available, which tools to invoke, when to invoke them, and how to interpret the results.
