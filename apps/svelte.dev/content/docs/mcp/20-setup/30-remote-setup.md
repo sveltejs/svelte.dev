@@ -12,42 +12,40 @@ Here's how to set it up in some common MCP clients:
 To include the remote MCP version in Claude Code, simply run the following command:
 
 ```bash
-claude mcp add -t http -s [scope] [name] https://mcp.svelte.dev/mcp
+claude mcp add -t http -s [scope] svelte https://mcp.svelte.dev/mcp
 ```
 
 You can choose your preferred `scope` (it must be `user`, `project` or `local`) and `name`.
 
 ## Claude Desktop
 
-- Open `Settings > Connectors`
-- Click on `Add Custom Connector`
-- Insert the name you prefer most
-- Insert `https://mcp.svelte.dev/mcp` as the `Remote MCP server URL`
-- Click `Add`
+- Open Settings > Connectors
+- Click on Add Custom Connector
+- When prompted for a name, enter `svelte`
+- Under the Remote MCP server URL input, use `https://mcp.svelte.dev/mcp`
+- Click Add
 
 ## Codex CLI
 
-Add the following to your `config.toml` (defaults to `~/.codex/config.toml`... refer to [the configuration documentation](https://github.com/openai/codex/blob/69cb72f8422f2aa7222bea3a6ce48fd130fa76c4/docs/config.md) for more advanced setups):
+Add the following to your `config.toml` (which defaults to `~/.codex/config.toml`, but refer to [the configuration documentation](https://github.com/openai/codex/blob/main/docs/config.md) for more advanced setups):
 
 ```toml
 experimental_use_rmcp_client = true
-[mcp_servers.name]
+[mcp_servers.svelte]
 url = "https://mcp.svelte.dev/mcp"
 ```
 
-To use HTTP servers in Codex you need to enable `experimental_use_rmcp_client` and the top level must be `mcp_server` but you can choose your preferred `name`.
-
 ## Gemini CLI
 
-To include the remote MCP version in Gemini CLI, simply run the following command:
+To use the remote MCP server with Gemini CLI, simply run the following command:
 
 ```bash
-gemini mcp add -t http -s [scope] [name] https://mcp.svelte.dev/mcp
+gemini mcp add -t http -s [scope] svelte https://mcp.svelte.dev/mcp
 ```
 
-You can choose your preferred `scope` (it must be `user`, `project` or `local`) and `name`.
+The `[scope]` must be `user`, `project` or `local`.
 
-## Opencode
+## OpenCode
 
 Run the command:
 
@@ -55,7 +53,7 @@ Run the command:
 opencode mcp add
 ```
 
-and follow the instructions, selecting Remote when asked for "Select MCP server type":
+and follow the instructions, selecting 'Remote' under the 'Select MCP server type' prompt:
 
 ```bash
 opencode mcp add
@@ -63,7 +61,7 @@ opencode mcp add
 ┌  Add MCP server
 │
 ◇  Enter MCP server name
-│  [name]
+│  svelte
 │
 ◇  Select MCP server type
 │  Remote
@@ -72,11 +70,9 @@ opencode mcp add
 │  https://mcp.svelte.dev/mcp
 ```
 
-You can choose your preferred `name`.
+## VS Code
 
-## VSCode
-
-- Open the command Palette
+- Open the command palette
 - Select "MCP: Add Server..."
 - Select "HTTP (HTTP or Server-Sent-Events)"
 - Insert `https://mcp.svelte.dev/mcp` in the input and press `Enter`
@@ -85,7 +81,7 @@ You can choose your preferred `name`.
 
 ## Cursor
 
-- Open the command Palette
+- Open the command palette
 - Select "View: Open MCP Settings"
 - Click on "Add custom MCP"
 
@@ -94,14 +90,12 @@ It will open a file with your MCP servers where you can add the following config
 ```json
 {
 	"mcpServers": {
-		"[name]": {
+		"svelte": {
 			"url": "https://mcp.svelte.dev/mcp"
 		}
 	}
 }
 ```
-
-The top level must be `mcpServers` but you can choose your preferred `name`.
 
 ## Other clients
 
