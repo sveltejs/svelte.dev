@@ -1,0 +1,16 @@
+{
+	"name": "flowbite-svelte",
+	"npm_description": "Flowbite components for Svelte",
+	"repo_url": "https://github.com/themesberg/flowbite-svelte",
+	"authors": ["jjagielka", "zoliszogyenyi", "shinichiokada"],
+	"homepage": "https://flowbite-svelte.com/",
+	"version": "1.16.0",
+	"downloads": 50973,
+	"github_stars": 2620,
+	"updated": "2025-09-28T10:37:43.647Z",
+	"svelte_range": "^5.29.0",
+	"kit_range": "^2.43.2",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "0.48.6"
+}

@@ -1,0 +1,16 @@
+{
+	"name": "@poppanator/sveltekit-svg",
+	"npm_description": "Import SVG files as Svelte components",
+	"repo_url": "https://github.com/poppa/sveltekit-svg",
+	"authors": ["poppanator_"],
+	"homepage": "https://github.com/poppa/sveltekit-svg#readme",
+	"version": "6.0.0",
+	"downloads": 16731,
+	"github_stars": 263,
+	"updated": "2025-09-01T05:39:43.829Z",
+	"svelte_range": ">=5.x",
+	"kit_range": "^6.0.0",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "4.0.0"
+}

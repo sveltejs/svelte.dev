@@ -1,6 +1,6 @@
 import { execSync, spawn, type SpawnOptions } from 'node:child_process';
 import fs from 'node:fs';
-import glob from 'tiny-glob/sync';
+import glob from 'tiny-glob/sync.js';
 
 export async function clone_repo(repo: string, name: string, branch: string, cwd: string) {
 	const dir = `${cwd}/${name}`;

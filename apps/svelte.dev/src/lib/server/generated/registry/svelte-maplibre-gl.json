@@ -1,0 +1,16 @@
+{
+	"name": "svelte-maplibre-gl",
+	"npm_description": "Build interactive web maps effortlessly with MapLibre GL JS and Svelte",
+	"repo_url": "https://github.com/MIERUNE/svelte-maplibre-gl",
+	"authors": ["mierune_iguchi", "ciscorn"],
+	"homepage": "https://svelte-maplibre-gl.mierune.dev/",
+	"version": "1.0.1",
+	"downloads": 1026,
+	"github_stars": 215,
+	"updated": "2025-07-09T13:47:31.490Z",
+	"svelte_range": ">=5.0.0",
+	"kit_range": "^2.22.2",
+	"typescript": true,
+	"runes": true,
+	"last_rune_check_version": "0.1.6"
+}
