@@ -23,4 +23,4 @@ Add a `<script>` tag to the top of `App.svelte` that imports `Nested.svelte`...
 
 Notice that even though `Nested.svelte` has a `<p>` element, the styles from `App.svelte` don't leak in.
 
-> [!NOTE] Component names' first initial are capitalized, to distinguish them from HTML elements.
+> [!NOTE] Component names' first initial are capitalized in order to distinguish them from HTML elements.
