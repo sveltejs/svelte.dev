@@ -7,7 +7,7 @@ This is the list of available prompts provided by the MCP server. Prompts are se
 
 ## svelte-task
 
-This prompt should be used whenever you are asking the LLM to work on some Svelte-related task. It will instruct the LLM on which documentation sections are available, which tool to invoke, when to invoke it, and how to interpret the result. It will ask you for the description of the task and the returned value will look like this:
+This prompt should be used whenever you are asking the model to work on some Svelte-related task. It will instruct the LLM on which documentation sections are available, which tool to invoke, when to invoke it, and how to interpret the result. It will ask you for the description of the task and the returned value will look like this:
 
 ```
 You are a Svelte expert tasked to build components and utilities for Svelte developers. If you need documentation for anything related to Svelte you can invoke the tool \`get-documentation\` with one of the following paths:
