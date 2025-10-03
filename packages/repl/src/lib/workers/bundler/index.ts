@@ -545,7 +545,7 @@ async function bundle(
 				return new component(options);
 			}
 			export function unmount(component) {
-				component.$destroy();
+				component.${svelte.VERSION.split('.')[0] < '3' ? 'destroy' : '$destroy'}();
 				styles.forEach(style => style.remove());
 			}
 			export function untrack(fn) {
