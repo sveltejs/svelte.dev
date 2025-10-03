@@ -1,0 +1,26 @@
+{
+	"name": "prettier",
+	"npm_description": "Prettier is an opinionated code formatter",
+	"repo_url": "https://github.com/prettier/prettier",
+	"authors": [
+		"jlongster",
+		"lydell",
+		"thorn0",
+		"vjeux",
+		"fisker",
+		"suchipi",
+		"duailibe",
+		"ikatyang",
+		"azz",
+		"sosukesuzuki",
+		"prettier-bot"
+	],
+	"homepage": "https://prettier.io",
+	"version": "3.6.2",
+	"downloads": 56965427,
+	"github_stars": 51036,
+	"updated": "2025-06-27T02:53:53.185Z",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "3.5.3"
+}

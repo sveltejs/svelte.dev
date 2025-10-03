@@ -1,0 +1,16 @@
+{
+	"name": "sveltekit-superforms",
+	"npm_description": "Making SvelteKit forms a pleasure to use!",
+	"repo_url": "https://github.com/ciscoheat/sveltekit-superforms",
+	"authors": ["ciscoheat"],
+	"homepage": "https://superforms.rocks",
+	"version": "2.27.1",
+	"downloads": 75369,
+	"github_stars": 2628,
+	"updated": "2025-06-27T13:15:22.597Z",
+	"svelte_range": "3.x || 4.x || >=5.0.0-next.51",
+	"kit_range": "1.x || 2.x",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "2.24.1"
+}

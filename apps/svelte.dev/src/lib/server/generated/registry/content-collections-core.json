@@ -1,0 +1,15 @@
+{
+	"name": "@content-collections/core",
+	"npm_description": "Core of Content Collections",
+	"repo_url": "https://github.com/sdorra/content-collections",
+	"authors": ["sdorra"],
+	"homepage": "https://content-collections.dev",
+	"version": "0.11.1",
+	"downloads": 29026,
+	"github_stars": 913,
+	"updated": "2025-08-30T07:41:29.913Z",
+	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "0.11.0"
+}
