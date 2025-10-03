@@ -149,6 +149,14 @@ const packages: Package[] = [
 		pkg: 'packages/cli',
 		docs: 'documentation/docs',
 		types: null
+	},
+	{
+		name: 'mcp',
+		repo: `${parsed.values.owner}/mcp`,
+		branch: branches['mcp'] ?? 'main',
+		pkg: 'packages/mcp-stdio',
+		docs: 'documentation/docs',
+		types: null
 	}
 ];
 
