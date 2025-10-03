@@ -1,16 +1,28 @@
 import { Marked, type Renderer, type TokenizerObject, type MarkedExtension } from 'marked';
 import json5 from 'json5';
 
+// also includes languages not recognised or aliased by Shiki
+// see https://shiki.style/languages
 export const SHIKI_LANGUAGE_MAP = {
 	bash: 'bash',
+	sh: 'bash',
 	env: 'bash',
 	html: 'svelte',
 	svelte: 'svelte',
 	sv: 'svelte',
-	js: 'javascript',
-	dts: 'typescript',
 	css: 'css',
+	js: 'js',
+	json: 'javascript',
+	jsonc: 'javascript',
 	ts: 'typescript',
+	dts: 'typescript',
+	toml: 'toml',
+	yaml: 'yaml',
+	yml: 'yaml',
+	ini: 'ini',
+	cson: '',
+	// TODO: find a highlighter for tree syntax
+	tree: '',
 	'': ''
 };
 
