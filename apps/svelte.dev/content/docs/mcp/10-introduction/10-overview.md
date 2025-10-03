@@ -10,7 +10,7 @@ The Svelte MCP ([Model Context Protocol](https://modelcontextprotocol.io/docs/ge
 The setup varies based on the version of the MCP you prefer — remote or local — and your chosen MCP client (e.g. Claude Code, Codex CLI or GitHub Copilot):
 
 - [local setup](local-setup) using `@sveltejs/mcp`
-- [remote setup](remote-setup) using [mcp.svelte.dev/mcp](https://mcp.svelte.dev/mcp)
+- [remote setup](remote-setup) using `https://mcp.svelte.dev/mcp`
 
 ## Usage
 
