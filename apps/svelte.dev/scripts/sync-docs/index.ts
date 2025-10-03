@@ -149,6 +149,14 @@ const packages: Package[] = [
 		pkg: 'packages/cli',
 		docs: 'documentation/docs',
 		types: null
+	},
+	{
+		name: 'vite-plugin-svelte',
+		repo: `${parsed.values.owner}/vite-plugin-svelte`,
+		branch: branches['vite-plugin-svelte'] ?? 'docs/omni-site-reformat',
+		pkg: 'packages/vite-plugin-svelte',
+		docs: 'documentation/docs',
+		types: null
 	}
 ];
 
