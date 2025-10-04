@@ -2553,6 +2553,33 @@ release(): void;
 <div class="ts-block-property-details"></div>
 </div></div>
 
+## RemoteQueryStream
+
+The return value of a remote `query.stream` function. See [Remote functions](/docs/kit/remote-functions#query-stream) for full documentation.
+
+<div class="ts-block">
+
+```dts
+type RemoteQueryStream<T> = RemoteResource<T> &
+	AsyncIterable<Awaited<T>>;
+```
+
+</div>
+
+## RemoteQueryStreamFunction
+
+The return value of a remote `query.stream` function. See [Remote functions](/docs/kit/remote-functions#query-stream) for full documentation.
+
+<div class="ts-block">
+
+```dts
+type RemoteQueryStreamFunction<Input, Output> = (
+	arg: Input
+) => RemoteQueryStream<Output>;
+```
+
+</div>
+
 ## RemoteResource
 
 <div class="ts-block">
