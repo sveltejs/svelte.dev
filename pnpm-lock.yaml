@@ -31,7 +31,7 @@ importers:
         version: 2.0.0(svelte@5.38.2)
       '@sveltejs/amp':
         specifier: ^1.1.5
-        version: 1.1.5(@sveltejs/kit@2.42.0(@sveltejs/vite-plugin-svelte@6.1.3(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))
+        version: 1.1.5(@sveltejs/kit@2.44.0(@sveltejs/vite-plugin-svelte@6.1.3(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))
       '@sveltejs/repl':
         specifier: workspace:*
         version: link:../../packages/repl
@@ -52,7 +52,7 @@ importers:
         version: 1.3.2
       '@vercel/speed-insights':
         specifier: ^1.1.0
-        version: 1.1.0(@sveltejs/kit@2.42.0(@sveltejs/vite-plugin-svelte@6.1.3(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(svelte@5.38.2)
+        version: 1.1.0(@sveltejs/kit@2.44.0(@sveltejs/vite-plugin-svelte@6.1.3(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(svelte@5.38.2)
       '@webcontainer/api':
         specifier: ^1.1.5
         version: 1.1.9
@@ -116,13 +116,13 @@ importers:
         version: 2.43.4
       '@sveltejs/adapter-vercel':
         specifier: ^5.10.2
-        version: 5.10.2(@sveltejs/kit@2.42.0(@sveltejs/vite-plugin-svelte@6.1.3(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(rollup@4.46.4)
+        version: 5.10.2(@sveltejs/kit@2.44.0(@sveltejs/vite-plugin-svelte@6.1.3(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(rollup@4.46.4)
       '@sveltejs/enhanced-img':
         specifier: ^0.8.1
         version: 0.8.1(@sveltejs/vite-plugin-svelte@6.1.3(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(rollup@4.46.4)(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4))
       '@sveltejs/kit':
-        specifier: ^2.42.0
-        version: 2.42.0(@sveltejs/vite-plugin-svelte@6.1.3(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4))
+        specifier: ^2.44.0
+        version: 2.44.0(@sveltejs/vite-plugin-svelte@6.1.3(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4))
       '@sveltejs/site-kit':
         specifier: workspace:*
         version: link:../../packages/site-kit
@@ -1348,8 +1348,8 @@ packages:
       '@opentelemetry/api':
         optional: true
 
-  '@sveltejs/kit@2.42.0':
-    resolution: {integrity: sha512-ujAqGi88jAHL0eC5OAuH/w9X8uyPEJnFM4Pq6hjO0QARtlVPMKRd5yL5tQ4V9Ts+EHE5JH60CIUAhuUGUxwBUQ==}
+  '@sveltejs/kit@2.44.0':
+    resolution: {integrity: sha512-xU5qP7PiYmrSH70Whm/I+nf0j4xBnHyRQNkC1SEfaBOwCCkkeuL6WNxSb8q4Ib7+Z+sZ4JUTDYHfoyVm02EXVQ==}
     engines: {node: '>=18.13'}
     hasBin: true
     peerDependencies:
@@ -4057,9 +4057,9 @@ snapshots:
     dependencies:
       '@sveltejs/kit': 2.34.0(@sveltejs/vite-plugin-svelte@6.1.3(svelte@5.38.2)(vite@7.0.4(@types/node@24.3.0)(lightningcss@1.30.1)(tsx@4.20.4)))(svelte@5.38.2)(vite@7.0.4(@types/node@24.3.0)(lightningcss@1.30.1)(tsx@4.20.4))
 
-  '@sveltejs/adapter-vercel@5.10.2(@sveltejs/kit@2.42.0(@sveltejs/vite-plugin-svelte@6.1.3(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(rollup@4.46.4)':
+  '@sveltejs/adapter-vercel@5.10.2(@sveltejs/kit@2.44.0(@sveltejs/vite-plugin-svelte@6.1.3(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(rollup@4.46.4)':
     dependencies:
-      '@sveltejs/kit': 2.42.0(@sveltejs/vite-plugin-svelte@6.1.3(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4))
+      '@sveltejs/kit': 2.44.0(@sveltejs/vite-plugin-svelte@6.1.3(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4))
       '@vercel/nft': 0.30.0(rollup@4.46.4)
       esbuild: 0.25.9
     transitivePeerDependencies:
@@ -4067,9 +4067,9 @@ snapshots:
       - rollup
       - supports-color
 
-  '@sveltejs/amp@1.1.5(@sveltejs/kit@2.42.0(@sveltejs/vite-plugin-svelte@6.1.3(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))':
+  '@sveltejs/amp@1.1.5(@sveltejs/kit@2.44.0(@sveltejs/vite-plugin-svelte@6.1.3(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))':
     dependencies:
-      '@sveltejs/kit': 2.42.0(@sveltejs/vite-plugin-svelte@6.1.3(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4))
+      '@sveltejs/kit': 2.44.0(@sveltejs/vite-plugin-svelte@6.1.3(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4))
 
   '@sveltejs/enhanced-img@0.8.1(@sveltejs/vite-plugin-svelte@6.1.3(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(rollup@4.46.4)(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4))':
     dependencies:
@@ -4122,7 +4122,7 @@ snapshots:
       svelte: 5.38.2
       vite: 7.0.4(@types/node@24.3.0)(lightningcss@1.30.1)(tsx@4.20.4)
 
-  '@sveltejs/kit@2.42.0(@sveltejs/vite-plugin-svelte@6.1.3(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4))':
+  '@sveltejs/kit@2.44.0(@sveltejs/vite-plugin-svelte@6.1.3(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4))':
     dependencies:
       '@standard-schema/spec': 1.0.0
       '@sveltejs/acorn-typescript': 1.0.5(acorn@8.15.0)
@@ -4304,9 +4304,9 @@ snapshots:
       - rollup
       - supports-color
 
-  '@vercel/speed-insights@1.1.0(@sveltejs/kit@2.42.0(@sveltejs/vite-plugin-svelte@6.1.3(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(svelte@5.38.2)':
+  '@vercel/speed-insights@1.1.0(@sveltejs/kit@2.44.0(@sveltejs/vite-plugin-svelte@6.1.3(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(svelte@5.38.2)':
     optionalDependencies:
-      '@sveltejs/kit': 2.42.0(@sveltejs/vite-plugin-svelte@6.1.3(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4))
+      '@sveltejs/kit': 2.44.0(@sveltejs/vite-plugin-svelte@6.1.3(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4)))(svelte@5.38.2)(vite@7.0.4(@types/node@20.19.6)(lightningcss@1.30.1)(tsx@4.20.4))
       svelte: 5.38.2
 
   '@vitest/expect@3.2.4':
