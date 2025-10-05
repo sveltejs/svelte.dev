@@ -2331,20 +2331,6 @@ type RemoteForm<
 	for(
 		key: string | number | boolean
 	): Omit<RemoteForm<Input, Output>, 'for'>;
-	/**
-	 * This method exists to allow you to typecheck `name` attributes. It returns its argument
-	 * @example
-	 * ```svelte
-	 * <input name={login.field('username')} />
-	 * ```
-	 **/
-	field<
-		Name extends keyof UnionToIntersection<
-			FlattenKeys<Input, ''>
-		>
-	>(
-		string: Name
-	): Name;
 	/** Preflight checks */
 	preflight(
 		schema: StandardSchemaV1<Input, any>
@@ -2359,14 +2345,10 @@ type RemoteForm<
 	get result(): Output | undefined;
 	/** The number of pending submissions */
 	get pending(): number;
-	/** The submitted values */
-	input: null | UnionToIntersection<
-		FlattenInput<Input, ''>
-	>;
-	/** Validation issues */
-	issues: null | UnionToIntersection<
-		FlattenIssues<Input, ''>
-	>;
+	/** Access form fields using object notation */
+	fields: Input extends void
+		? never
+		: RemoteFormFields<Input>;
 	/** Spread this onto a `<button>` or `<input type="submit">` */
 	buttonProps: {
 		type: 'submit';
@@ -2400,6 +2382,63 @@ type RemoteForm<
 
 </div>
 
+## RemoteFormField
+
+Form field accessor type that provides name(), value(), and issues() methods
+
+<div class="ts-block">
+
+```dts
+type RemoteFormField<Value extends RemoteFormFieldValue> =
+	RemoteFormFieldMethods<Value> & {
+		/**
+		 * Returns an object that can be spread onto an input element with the correct type attribute,
+		 * aria-invalid attribute if the field is invalid, and appropriate value/checked property getters/setters.
+		 * @example
+		 * ```svelte
+		 * <input {...myForm.fields.myString.as('text')} />
+		 * <input {...myForm.fields.myNumber.as('number')} />
+		 * <input {...myForm.fields.myBoolean.as('checkbox')} />
+		 * ```
+		 */
+		as<T extends RemoteFormFieldType<Value>>(
+			...args: AsArgs<T, Value>
+		): InputElementProps<T>;
+	};
+```
+
+</div>
+
+## RemoteFormFieldType
+
+<div class="ts-block">
+
+```dts
+type RemoteFormFieldType<T> = {
+	[K in keyof InputTypeMap]: T extends InputTypeMap[K]
+		? K
+		: never;
+}[keyof InputTypeMap];
+```
+
+</div>
+
+## RemoteFormFieldValue
+
+<div class="ts-block">
+
+```dts
+type RemoteFormFieldValue =
+	| string
+	| string[]
+	| number
+	| boolean
+	| File
+	| File[];
+```
+
+</div>
+
 ## RemoteFormInput
 
 <div class="ts-block">
@@ -2411,7 +2450,7 @@ interface RemoteFormInput {/*…*/}
 <div class="ts-block-property">
 
 ```dts
-[key: string]: FormDataEntryValue | FormDataEntryValue[] | RemoteFormInput | RemoteFormInput[];
+[key: string]: MaybeArray<string | number | boolean | File | RemoteFormInput>;
 ```
 
 <div class="ts-block-property-details"></div>
@@ -2424,24 +2463,6 @@ interface RemoteFormInput {/*…*/}
 ```dts
 interface RemoteFormIssue {/*…*/}
 ```
-
-<div class="ts-block-property">
-
-```dts
-name: string;
-```
-
-<div class="ts-block-property-details"></div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-path: Array<string | number>;
-```
-
-<div class="ts-block-property-details"></div>
-</div>
 
 <div class="ts-block-property">
 
