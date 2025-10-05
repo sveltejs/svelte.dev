@@ -5,7 +5,7 @@
 	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
 	"homepage": "https://svelte.dev/docs/kit/adapter-netlify",
 	"version": "5.2.4",
-	"downloads": 14048,
+	"downloads": 14119,
 	"github_stars": 19739,
 	"updated": "2025-10-02T14:22:09.602Z",
 	"kit_range": "^2.4.0",

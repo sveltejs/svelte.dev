@@ -5,7 +5,7 @@
 	"authors": ["tannerlinsley", "kylemathews"],
 	"homepage": "https://tanstack.com/virtual",
 	"version": "3.13.12",
-	"downloads": 6519,
+	"downloads": 6448,
 	"github_stars": 6353,
 	"updated": "2025-06-27T12:47:07.412Z",
 	"svelte_range": "^3.48.0 || ^4.0.0 || ^5.0.0",
