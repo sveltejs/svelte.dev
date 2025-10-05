@@ -5,7 +5,7 @@
 	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
 	"homepage": "https://svelte.dev/docs/kit/adapter-static",
 	"version": "3.0.10",
-	"downloads": 219928,
+	"downloads": 215154,
 	"github_stars": 19772,
 	"updated": "2025-10-02T14:22:08.571Z",
 	"svelte_range": "^5.39.3",

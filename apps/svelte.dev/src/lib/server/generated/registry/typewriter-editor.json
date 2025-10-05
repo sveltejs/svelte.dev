@@ -5,7 +5,7 @@
 	"authors": ["jacwright"],
 	"homepage": "https://github.com/typewriter-editor/typewriter#readme",
 	"version": "0.12.9",
-	"downloads": 823,
+	"downloads": 880,
 	"github_stars": 428,
 	"updated": "2025-02-12T18:30:38.430Z",
 	"svelte_range": ">=3.43.0 <6",

@@ -5,7 +5,7 @@
 	"authors": ["eirikk"],
 	"homepage": "https://inspect.eirik.space",
 	"version": "0.9.2",
-	"downloads": 544,
+	"downloads": 503,
 	"github_stars": 133,
 	"updated": "2025-09-05T08:26:42.834Z",
 	"svelte_range": "^5.29.0",

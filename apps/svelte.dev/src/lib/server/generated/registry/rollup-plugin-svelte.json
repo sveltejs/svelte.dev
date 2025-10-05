@@ -5,7 +5,7 @@
 	"authors": ["lukeed", "rich_harris", "lukastaegert", "shellscape", "conduitry", "dummdidumm"],
 	"homepage": "https://github.com/sveltejs/rollup-plugin-svelte#readme",
 	"version": "7.2.3",
-	"downloads": 97709,
+	"downloads": 93901,
 	"github_stars": 511,
 	"updated": "2025-08-23T20:57:08.931Z",
 	"svelte_range": ">=3.5.0",
