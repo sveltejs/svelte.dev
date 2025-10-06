@@ -1,0 +1,14 @@
+{
+	"name": "m3-svelte",
+	"npm_description": "M3 Svelte implements the Material 3 design system in Svelte. See the [website](https://ktibow.github.io/m3-svelte/) for demos and usage instructions.",
+	"repo_url": "https://github.com/KTibow/m3-svelte",
+	"authors": ["ktibow"],
+	"homepage": "https://github.com/KTibow/m3-svelte",
+	"version": "5.9.0",
+	"downloads": 420,
+	"github_stars": 354,
+	"updated": "2025-09-29T02:21:29.129Z",
+	"typescript": true,
+	"runes": true,
+	"last_rune_check_version": "5.8.0"
+}
