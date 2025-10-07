@@ -1253,6 +1253,26 @@ The content of the error.
 </div>
 </div></div>
 
+## Invalid
+
+A function and proxy object used to imperatively create validation errors in form handlers.
+
+Call `invalid(issue1, issue2, ...issueN)` to throw a validation error.
+If an issue is a `string`, it applies to the form as a whole (and will show up in `fields.allIssues()`)
+Access properties to create field-specific issues: `invalid.fieldName('message')`.
+The type structure mirrors the input data structure for type-safe field access.
+
+<div class="ts-block">
+
+```dts
+type Invalid<Input = any> = ((
+	...issues: Array<string | StandardSchemaV1.Issue>
+) => never) &
+	InvalidField<Input>;
+```
+
+</div>
+
 ## KitConfig
 
 See the [configuration reference](/docs/kit/configuration) for details.
@@ -2315,8 +2335,8 @@ type RemoteForm<
 		[attachment: symbol]: (node: HTMLFormElement) => void;
 	};
 	/**
-	 * Create an instance of the form for the given key.
-	 * The key is stringified and used for deduplication to potentially reuse existing instances.
+	 * Create an instance of the form for the given `id`.
+	 * The `id` is stringified and used for deduplication to potentially reuse existing instances.
 	 * Useful when you have multiple forms that use the same remote form action, for example in a loop.
 	 * ```svelte
 	 * {#each todos as todo}
@@ -2329,7 +2349,7 @@ type RemoteForm<
 	 * ```
 	 */
 	for(
-		key: string | number | boolean
+		id: ExtractId<Input>
 	): Omit<RemoteForm<Input, Output>, 'for'>;
 	/** Preflight checks */
 	preflight(
