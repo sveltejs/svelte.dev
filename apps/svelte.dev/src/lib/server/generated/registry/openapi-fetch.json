@@ -1,0 +1,11 @@
+{
+	"name": "openapi-fetch",
+	"npm_description": "Fast, type-safe fetch client for your OpenAPI schema. Only 6 kb (min). Works with React, Vue, Svelte, or vanilla JS.",
+	"repo_url": "https://github.com/openapi-ts/openapi-typescript",
+	"authors": ["drewpowers", "mpaucot", "gzm0"],
+	"homepage": "https://openapi-ts.dev",
+	"version": "0.14.1",
+	"downloads": 1493793,
+	"github_stars": 7429,
+	"updated": "2025-10-02T06:27:46.009Z"
+}

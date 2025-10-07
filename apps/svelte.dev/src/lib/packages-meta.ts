@@ -363,7 +363,12 @@ const FEATURED: {
 				name: '@orpc/svelte-query',
 				description: 'APIs that are end-to-end type-safe and adhere to OpenAPI standards'
 			},
-			{ name: 'sswr' }
+			{ name: 'sswr' },
+			{
+				name: 'openapi-fetch',
+				description:
+					'Fast, type-safe fetch client for your OpenAPI schema. Only 6 kb (min). Works with React, Vue, Svelte, or vanilla JS.'
+			}
 		]
 	},
 	{
