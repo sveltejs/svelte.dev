@@ -12,8 +12,8 @@
 		}
 
 		embiggen(amount) {
-			this.width += amount;
-			this.height += amount;
+			this.width = Math.min(MAX_SIZE, this.width + amount);
+			this.height = Math.min(MAX_SIZE, this.height + amount);
 		}
 	}
 
