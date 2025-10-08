@@ -319,6 +319,7 @@ const FEATURED: {
 		packages: [
 			{ name: '@testing-library/svelte', description: 'Testing utilities for DOM interaction' },
 			{ name: 'playwright', description: 'Browser automation for end-to-end testing' },
+			{ name: 'storybook' },
 			{ name: 'vitest' }
 		]
 	},
