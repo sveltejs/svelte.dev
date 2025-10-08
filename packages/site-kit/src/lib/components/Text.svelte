@@ -91,6 +91,11 @@
 			}
 		}
 
+		img {
+			max-width: 100%;
+			object-fit: contain;
+		}
+
 		h2 {
 			margin-top: 7rem;
 		}
