@@ -1,6 +1,7 @@
 import { minimatch } from 'minimatch';
 import { dev } from '$app/environment';
 import { index } from './content';
+import type { Topic } from '$lib/utils/topics';
 
 interface GenerateLlmContentOptions {
 	ignore?: string[];
@@ -14,11 +15,6 @@ interface MinimizeOptions {
 	remove_details_blocks: boolean;
 	remove_playground_links: boolean;
 	remove_prettier_ignore: boolean;
-}
-
-interface Topic {
-	slug: string;
-	title: string;
 }
 
 const defaults: MinimizeOptions = {
@@ -63,17 +59,8 @@ export function generate_llm_content(options: GenerateLlmContentOptions): string
 	return content;
 }
 
-export const topics: Topic[] = [
-	{ slug: 'svelte', title: 'Svelte' },
-	{ slug: 'kit', title: 'SvelteKit' },
-	{ slug: 'cli', title: 'Svelte CLI' },
-	{ slug: 'mcp', title: 'Svelte MCP' }
-];
-
-export function get_topic_title(slug: string): string {
-	const topic = topics.find((t) => t.slug === slug);
-	return topic?.title ?? 'Svelte';
-}
+// Re-export from shared location for backward compatibility
+export { topics, get_topic_title } from '$lib/utils/topics';
 
 export function get_documentation_title(topic: Topic): string {
 	return `This is the developer documentation for ${topic.title}.`;
