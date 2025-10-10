@@ -26,4 +26,20 @@ We can make it nicer though. Adding or removing a class based on some condition 
 
 This means 'always add the `card` class, and add the `flipped` class whenever `flipped` is truthy'.
 
+> **Note:** When using multiple expressions inside a `class={}` attribute, make sure to combine them within a single array or object.
+> Avoid separating expressions with commas at the top level (for example: `class={['foo'], 'bar'}`), as this creates a JavaScript sequence expression, which can cause errors in Runes mode and result in unintended behavior.
+>
+> ✅ Correct:
+>
+> ```svelte
+> <div class={["foo", condition && "bar", "baz"]}></div>
+> ```
+>
+> ❌ Avoid:
+>
+> ```svelte
+> <div class={["foo"], "bar"}></div>
+> ```
+>
+
 For more examples of how to combine conditional classes, [consult the `class` documentation](/docs/svelte/class).
