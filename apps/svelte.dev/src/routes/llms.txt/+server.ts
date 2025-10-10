@@ -1,4 +1,5 @@
-import { get_documentation_title, topics } from '$lib/server/llms';
+import { get_documentation_title } from '$lib/server/llms';
+import { topics } from '$lib/topics';
 import template from './template.md?raw';
 
 const DOMAIN = `https://svelte.dev`;
