@@ -1,7 +1,7 @@
 import { minimatch } from 'minimatch';
 import { dev } from '$app/environment';
 import { index } from './content';
-import type { Topic } from '$lib/utils/topics';
+import type { Topic } from '$lib/topics';
 
 interface GenerateLlmContentOptions {
 	ignore?: string[];
@@ -58,9 +58,6 @@ export function generate_llm_content(options: GenerateLlmContentOptions): string
 
 	return content;
 }
-
-// Re-export from shared location for backward compatibility
-export { topics, get_topic_title } from '$lib/utils/topics';
 
 export function get_documentation_title(topic: Topic): string {
 	return `This is the developer documentation for ${topic.title}.`;
