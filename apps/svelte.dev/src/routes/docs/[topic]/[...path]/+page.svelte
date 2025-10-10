@@ -9,6 +9,7 @@
 	import { goto } from '$app/navigation';
 	import { escape_html } from '$lib/utils/escape';
 	import { page } from '$app/state';
+	import { get_topic_title } from '$lib/server/llms';
 
 	let { data } = $props();
 
@@ -22,15 +23,7 @@
 		return `https://github.com/sveltejs/${name}/edit/main/documentation/${link}`;
 	});
 
-	// Map topic slug to readable title
-	const topicTitles: Record<string, string> = {
-		svelte: 'Svelte',
-		kit: 'SvelteKit',
-		cli: 'Svelte CLI',
-		mcp: 'Svelte MCP'
-	};
-
-	const topicTitle = $derived(topicTitles[page.params.topic] || 'Svelte');
+	const topicTitle = $derived(get_topic_title(page.params.topic));
 
 	onMount(() => {
 		// hash was lowercase in v4 docs and varying case in v5 docs
