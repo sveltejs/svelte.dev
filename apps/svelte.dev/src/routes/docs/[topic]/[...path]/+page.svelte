@@ -22,6 +22,16 @@
 		return `https://github.com/sveltejs/${name}/edit/main/documentation/${link}`;
 	});
 
+	// Map topic slug to readable title
+	const topicTitles: Record<string, string> = {
+		svelte: 'Svelte',
+		kit: 'SvelteKit',
+		cli: 'Svelte CLI',
+		mcp: 'Svelte MCP'
+	};
+
+	const topicTitle = $derived(topicTitles[page.params.topic] || 'Svelte');
+
 	onMount(() => {
 		// hash was lowercase in v4 docs and varying case in v5 docs
 		const hash = location.hash.slice(1);
@@ -58,15 +68,15 @@
 </script>
 
 <svelte:head>
-	<title>{data.document.metadata.title} • Docs • Svelte</title>
+	<title>{data.document.metadata.title} - {topicTitle}</title>
 
-	<meta name="twitter:title" content="{data.document.metadata.title} • Docs • Svelte" />
+	<meta name="twitter:title" content="{data.document.metadata.title} - {topicTitle}" />
 	<meta
 		name="twitter:description"
-		content="{data.document.metadata.title} • Svelte documentation"
+		content="{data.document.metadata.title} • {topicTitle} documentation"
 	/>
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="description" content="{data.document.metadata.title} • Svelte documentation" />
+	<meta name="description" content="{data.document.metadata.title} • {topicTitle} documentation" />
 	<meta
 		name="twitter:image"
 		content="https://svelte.dev/docs/{page.params.topic}/{page.params.path}/card.png"

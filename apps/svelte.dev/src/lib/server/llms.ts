@@ -66,8 +66,14 @@ export function generate_llm_content(options: GenerateLlmContentOptions): string
 export const topics: Topic[] = [
 	{ slug: 'svelte', title: 'Svelte' },
 	{ slug: 'kit', title: 'SvelteKit' },
-	{ slug: 'cli', title: 'the Svelte CLI' }
+	{ slug: 'cli', title: 'Svelte CLI' },
+	{ slug: 'mcp', title: 'Svelte MCP' }
 ];
+
+export function get_topic_title(slug: string): string {
+	const topic = topics.find((t) => t.slug === slug);
+	return topic?.title ?? 'Svelte';
+}
 
 export function get_documentation_title(topic: Topic): string {
 	return `This is the developer documentation for ${topic.title}.`;
