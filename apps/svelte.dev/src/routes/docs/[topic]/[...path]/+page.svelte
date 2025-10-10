@@ -61,9 +61,9 @@
 </script>
 
 <svelte:head>
-	<title>{data.document.metadata.title} - {topic_title} Docs</title>
+	<title>{data.document.metadata.title} • {topic_title} Docs</title>
 
-	<meta name="twitter:title" content="{data.document.metadata.title} - {topic_title} Docs" />
+	<meta name="twitter:title" content="{data.document.metadata.title} • {topic_title} Docs" />
 	<meta
 		name="twitter:description"
 		content="{data.document.metadata.title} • {topic_title} documentation"
