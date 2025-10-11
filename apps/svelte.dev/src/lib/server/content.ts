@@ -17,6 +17,11 @@ const assets = import.meta.glob<string>(
 		import: 'default'
 	}
 );
+// we need a separate glob import for document assets because we need to use `read` so it needs the actual import, not `?url`
+const documents_assets = import.meta.glob<string>(['../../../content/docs/**/+assets/**'], {
+	eager: true,
+	import: 'default'
+});
 
 const registry_docs = import.meta.glob<string>(
 	'../../../src/lib/server/generated/registry/*.json',
@@ -28,7 +33,13 @@ const registry_docs = import.meta.glob<string>(
 );
 
 // https://github.com/vitejs/vite/issues/17453
-export const index = await create_index(documents, assets, '../../../content', read);
+export const index = await create_index(
+	documents,
+	assets,
+	documents_assets,
+	'../../../content',
+	read
+);
 
 const months = 'Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split(' ');
 
