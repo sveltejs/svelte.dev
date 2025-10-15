@@ -11,12 +11,14 @@ Svelte provides reactive versions of various built-ins like [`Map`](https://deve
 // @noErrors
 import {
 	MediaQuery,
+	Resource,
 	SvelteDate,
 	SvelteMap,
 	SvelteSet,
 	SvelteURL,
 	SvelteURLSearchParams,
-	createSubscriber
+	createSubscriber,
+	defineResource
 } from 'svelte/reactivity';
 ```
 
@@ -65,6 +67,114 @@ constructor(query: string, fallback?: boolean | undefined);
 </div>
 
 </div>
+</div></div>
+
+
+
+## Resource
+
+<div class="ts-block">
+
+```dts
+class Resource<T> implements Partial<Promise<T>> {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+constructor(fn: () => Promise<T>);
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+get then(): <TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | null | undefined, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | null | undefined) => Promise<TResult1 | TResult2>;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+get catch(): (reject: any) => Promise<T>;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+get finally(): (fn: any) => Promise<any>;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+get current(): T | undefined;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+get error(): undefined;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+get loading(): boolean;
+```
+
+<div class="ts-block-property-details">
+
+Returns true if the resource is loading or reloading.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+get ready(): boolean;
+```
+
+<div class="ts-block-property-details">
+
+Returns true once the resource has been loaded for the first time.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+refresh: () => Promise<void>;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+set: (value: T) => void;
+```
+
+<div class="ts-block-property-details"></div>
 </div></div>
 
 
@@ -394,6 +504,31 @@ export class MediaQuery {
 function createSubscriber(
 	start: (update: () => void) => (() => void) | void
 ): () => void;
+```
+
+</div>
+
+
+
+## defineResource
+
+<div class="ts-block">
+
+```dts
+function defineResource<
+	TReturn,
+	TArgs extends unknown[] = [],
+	TResource extends typeof Resource = typeof Resource
+>(
+	name: string,
+	fn: (...args: TArgs) => TReturn,
+	options?:
+		| {
+				Resource?: TResource;
+				transport?: Transport;
+		  }
+		| undefined
+): (...args: TArgs) => Resource<TReturn>;
 ```
 
 </div>
