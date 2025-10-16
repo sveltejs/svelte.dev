@@ -14,9 +14,4 @@ The tutorial, blog and examples are maintained within this repository.
 
 ## Setup
 
-```
-pnpm install
-cd apps/svelte.dev
-USE_GIT=true pnpm sync-docs
-pnpm run dev
-```
+See [CONTRIBUTING.md](CONTRIBUTING.md)
