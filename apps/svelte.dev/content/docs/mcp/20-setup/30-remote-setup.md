@@ -97,6 +97,27 @@ It will open a file with your MCP servers where you can add the following config
 }
 ```
 
+## GitHub Coding Agent
+
+- Open your repository in GitHub
+- Go to Settings
+- Open Copilot > Coding agent
+- Edit the MCP configuration
+
+```json
+{
+   "mcpServers" {
+      "svelte": {
+         "type": "http",
+         "url": "https://mcp.svelte.dev/mcp",
+         "tools": ["*"]
+      }
+   }
+}
+```
+
+- Click _Save MCP configuration_
+
 ## Other clients
 
 If we didn't include the MCP client you are using, refer to their documentation for `remote` servers and use `https://mcp.svelte.dev/mcp` as the URL.
