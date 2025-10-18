@@ -2459,6 +2459,47 @@ type RemoteFormFieldValue =
 
 </div>
 
+## RemoteFormFields
+
+Recursive type to build form fields structure with proxy access
+
+<div class="ts-block">
+
+```dts
+type RemoteFormFields<T, Leaf extends boolean = false> =
+	WillRecurseIndefinitely<T> extends true
+		? RecursiveFormFields<Leaf>
+		: NonNullable<T> extends
+					| string
+					| number
+					| boolean
+					| File
+			? RemoteFormField<NonNullable<T>>
+			: T extends string[] | File[]
+				? RemoteFormField<T> & {
+						[K in number]: RemoteFormField<T[number]>;
+					}
+				: T extends Array<infer U>
+					? RemoteFormFieldContainer<T> & {
+							[K in number]: RemoteFormFields<
+								U,
+								U extends RemoteFormFieldValue | unknown
+									? true
+									: false
+							>;
+						}
+					: RemoteFormFieldContainer<T> & {
+							[K in keyof T]-?: RemoteFormFields<
+								T[K],
+								T[K] extends RemoteFormFieldValue | unknown
+									? true
+									: false
+							>;
+						};
+```
+
+</div>
+
 ## RemoteFormInput
 
 <div class="ts-block">
