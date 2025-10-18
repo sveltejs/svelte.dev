@@ -2410,21 +2410,22 @@ Form field accessor type that provides name(), value(), and issues() methods
 
 ```dts
 type RemoteFormField<Value extends RemoteFormFieldValue> =
-	RemoteFormFieldMethods<Value> & {
-		/**
-		 * Returns an object that can be spread onto an input element with the correct type attribute,
-		 * aria-invalid attribute if the field is invalid, and appropriate value/checked property getters/setters.
-		 * @example
-		 * ```svelte
-		 * <input {...myForm.fields.myString.as('text')} />
-		 * <input {...myForm.fields.myNumber.as('number')} />
-		 * <input {...myForm.fields.myBoolean.as('checkbox')} />
-		 * ```
-		 */
-		as<T extends RemoteFormFieldType<Value>>(
-			...args: AsArgs<T, Value>
-		): InputElementProps<T>;
-	};
+	RemoteFormFieldMethods<Value> &
+		RemoteFormArrayFieldMethods<Value> & {
+			/**
+			 * Returns an object that can be spread onto an input element with the correct type attribute,
+			 * aria-invalid attribute if the field is invalid, and appropriate value/checked property getters/setters.
+			 * @example
+			 * ```svelte
+			 * <input {...myForm.fields.myString.as('text')} />
+			 * <input {...myForm.fields.myNumber.as('number')} />
+			 * <input {...myForm.fields.myBoolean.as('checkbox')} />
+			 * ```
+			 */
+			as<T extends RemoteFormFieldType<Value>>(
+				...args: AsArgs<T, Value>
+			): InputElementProps<T>;
+		};
 ```
 
 </div>
@@ -2455,6 +2456,37 @@ type RemoteFormFieldValue =
 	| boolean
 	| File
 	| File[];
+```
+
+</div>
+
+## RemoteFormFields
+
+Recursive type to build form fields structure with proxy access
+
+<div class="ts-block">
+
+```dts
+type RemoteFormFields<T> =
+	WillRecurseIndefinitely<T> extends true
+		? RecursiveFormFields
+		: NonNullable<T> extends
+					| string
+					| number
+					| boolean
+					| File
+			? RemoteFormField<NonNullable<T>>
+			: T extends string[] | File[]
+				? RemoteFormField<T> & {
+						[K in number]: RemoteFormField<T[number]>;
+					}
+				: T extends Array<infer U>
+					? RemoteFormFieldContainer<T> & {
+							[K in number]: RemoteFormFields<U>;
+						}
+					: RemoteFormFieldContainer<T> & {
+							[K in keyof T]-?: RemoteFormFields<T[K]>;
+						};
 ```
 
 </div>
