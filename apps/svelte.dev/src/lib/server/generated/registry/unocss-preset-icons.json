@@ -4,10 +4,10 @@
 	"repo_url": "https://github.com/unocss/unocss",
 	"authors": ["antfu", "unocss-bot"],
 	"homepage": "https://unocss.dev",
-	"version": "66.5.3",
-	"downloads": 388751,
+	"version": "66.5.4",
+	"downloads": 392102,
 	"github_stars": 18138,
-	"updated": "2025-10-10T09:01:08.240Z",
+	"updated": "2025-10-15T03:29:15.430Z",
 	"typescript": true,
 	"runes": false,
 	"last_rune_check_version": "66.1.0-beta.11"
