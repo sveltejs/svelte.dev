@@ -7,7 +7,7 @@ As we've briefly seen already, you can listen to any DOM event on an element (su
 ```svelte
 /// file: App.svelte
 <div +++onpointermove={onpointermove}+++>
-	The pointer is at {Math.round(m.x)} x {Math.round(m.y)}
+	The pointer is at {Math.round(m.x)} x {Math.round(m.y)} y
 </div>
 ```
 
@@ -16,6 +16,6 @@ Like with any other property where the name matches the value, we can use the sh
 ```svelte
 /// file: App.svelte
 <div +++{onpointermove}+++>
-	The pointer is at {Math.round(m.x)} x {Math.round(m.y)}
+	The pointer is at {Math.round(m.x)} x {Math.round(m.y)} y
 </div>
 ```
