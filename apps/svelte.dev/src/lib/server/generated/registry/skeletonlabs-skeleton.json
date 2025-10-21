@@ -1,13 +1,13 @@
 {
 	"name": "@skeletonlabs/skeleton",
-	"npm_description": "This repository contains all the stylesheets for the Skeleton package.",
+	"npm_description": "The TailwindCSS package for Skeleton.",
 	"repo_url": "https://github.com/skeletonlabs/skeleton",
 	"authors": ["skeletonadmin", "endigo9740", "cokakoala", "hugoskokos"],
 	"homepage": "https://github.com/skeletonlabs/skeleton#readme",
-	"version": "3.2.2",
-	"downloads": 21161,
-	"github_stars": 5679,
-	"updated": "2025-09-23T23:06:44.900Z",
+	"version": "4.1.0",
+	"downloads": 23650,
+	"github_stars": 5724,
+	"updated": "2025-10-16T17:14:51.748Z",
 	"typescript": false,
 	"runes": false,
 	"last_rune_check_version": "3.1.2"

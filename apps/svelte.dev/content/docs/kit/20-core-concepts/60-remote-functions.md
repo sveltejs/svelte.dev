@@ -758,6 +758,8 @@ We can customize what happens when the form is submitted with the `enhance` meth
 </form>
 ```
 
+> When using `enhance`, the `<form>` is not automatically reset — you must call `form.reset()` if you want to clear the inputs.
+
 The callback receives the `form` element, the `data` it contains, and a `submit` function.
 
 To enable client-driven [single-flight mutations](#form-Single-flight-mutations), use `submit().updates(...)`. For example, if the `getPosts()` query was used on this page, we could refresh it like so:
@@ -1146,7 +1148,7 @@ export const getProfile = query(async () => {
 
 // this query could be called from multiple places, but
 // the function will only run once per request
-const getUser = query(() => {
+const getUser = query(async () => {
 	const { cookies } = getRequestEvent();
 
 	return await findUser(cookies.get('session_id'));
