@@ -1,6 +1,15 @@
 <script>
 	let a = $state(1);
 	let b = $state(2);
+
+	function clamp(value){
+		return Math.min(10, Math.max(0,Number(value)));
+	}
+
+	$effect(()=> a = clamp(a));
+
+	$effect(() => b = clamp(b));
+
 </script>
 
 <label>
