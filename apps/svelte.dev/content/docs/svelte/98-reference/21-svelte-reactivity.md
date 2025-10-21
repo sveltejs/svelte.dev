@@ -16,7 +16,11 @@ import {
 	SvelteSet,
 	SvelteURL,
 	SvelteURLSearchParams,
-	createSubscriber
+	cache,
+	createSubscriber,
+	fetcher,
+	getCache,
+	resource
 } from 'svelte/reactivity';
 ```
 
@@ -336,6 +340,21 @@ class SvelteURLSearchParams extends URLSearchParams {/*…*/}
 
 
 
+## cache
+
+<div class="ts-block">
+
+```dts
+function cache<TFn extends (...args: any[]) => any>(
+	key: string,
+	fn: TFn
+): ReturnType<TFn>;
+```
+
+</div>
+
+
+
 ## createSubscriber
 
 <blockquote class="since note">
@@ -394,6 +413,45 @@ export class MediaQuery {
 function createSubscriber(
 	start: (update: () => void) => (() => void) | void
 ): () => void;
+```
+
+</div>
+
+
+
+## fetcher
+
+<div class="ts-block">
+
+```dts
+function fetcher<TReturn>(
+	url: string | URL,
+	init?: GetRequestInit | undefined
+): Resource<TReturn>;
+```
+
+</div>
+
+
+
+## getCache
+
+<div class="ts-block">
+
+```dts
+function getCache(): ReadonlyMap<string, any>;
+```
+
+</div>
+
+
+
+## resource
+
+<div class="ts-block">
+
+```dts
+function resource<T>(fn: () => Promise<T>): Resource<T>;
 ```
 
 </div>
