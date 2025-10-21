@@ -76,7 +76,11 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 
 					console.log('[bundle worker result]', result);
 
-					if (JSON.stringify(result.error) === JSON.stringify(ABORT)) return;
+					// error object might be augmented, see https://github.com/rollup/rollup/blob/76a3b8ede4729a71eb522fc29f7d550a4358827b/docs/plugin-development/index.md#thiserror,
+					// hence only check that the specific abort property we set is there
+					if ((result.error as any)?.svelte_bundler_aborted === ABORT.svelte_bundler_aborted) {
+						return;
+					}
 					if (result && uid === current_id) postMessage(result);
 				});
 			} catch (e) {
@@ -111,7 +115,7 @@ function get_svelte(svelte_version: string) {
 	return ready;
 }
 
-const ABORT = { aborted: true };
+const ABORT = { svelte_bundler_aborted: true };
 
 let previous: {
 	key: string;

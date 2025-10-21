@@ -68,7 +68,8 @@
 
 button.icon,
 summary.icon,
-button:has(> span.icon) {
+button:has(> span.icon),
+.button:has(> span.icon) {
 	position: relative;
 	width: 3.2rem;
 	height: 3.2rem;
@@ -77,6 +78,7 @@ button:has(> span.icon) {
 	background-size: 2.3rem 2.3rem;
 }
 
+.button > span.icon,
 button > span.icon {
 	position: absolute;
 	left: 0;

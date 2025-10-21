@@ -1,4 +1,5 @@
-import { generate_llm_content, topics } from '$lib/server/llms';
+import { generate_llm_content } from '$lib/server/llms';
+import { topics } from '$lib/topics';
 
 export const prerender = true;
 

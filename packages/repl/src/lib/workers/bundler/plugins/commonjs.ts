@@ -42,6 +42,9 @@ const plugin: Plugin = {
 					context.next();
 				},
 				AssignmentExpression: (node, context) => {
+					// walk children to find nested requires
+					context.next();
+
 					if (node.operator !== '=') return;
 					if (node.left.type !== 'MemberExpression') return;
 					if (node.left.object.type !== 'Identifier' || node.left.object.name !== 'exports') return;
@@ -53,8 +56,6 @@ const plugin: Plugin = {
 							`export const ${node.left.property.name} = module.exports.${node.left.property.name};`
 						);
 					}
-
-					context.next();
 				}
 			});
 

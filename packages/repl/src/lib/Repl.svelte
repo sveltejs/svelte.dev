@@ -25,6 +25,10 @@
 		onversion?: (version: string) => void;
 		onchange?: () => void;
 		download?: () => void;
+		/**
+		 * Invoked whenever there's a bundler or runtime error
+		 */
+		onerror?: (error: Error) => void;
 	}
 
 	let {
@@ -40,7 +44,8 @@
 		previewTheme = 'light',
 		onversion,
 		onchange = () => {},
-		download
+		download,
+		onerror
 	}: Props = $props();
 
 	// TODO pass in real data
@@ -122,8 +127,6 @@
 			...workspace.current!,
 			contents: migration!.code
 		});
-
-		rebundle();
 	}
 
 	let width = $state(0);
@@ -139,7 +142,7 @@
 		? new Bundler({
 				svelte_version: svelteVersion,
 				onversion: (version) => {
-					workspace.svelte_version = version;
+					workspace.set_svelte_version(version);
 					onversion?.(version);
 				},
 				onstatus: (message) => {
@@ -185,6 +188,18 @@
 
 	$effect(() => {
 		$toggleable = mobile && orientation === 'columns' && embedded !== 'output-only';
+	});
+
+	$effect(() => {
+		if (runtime_error) {
+			onerror?.(runtime_error);
+		}
+	});
+
+	$effect(() => {
+		if (bundler?.result?.error) {
+			onerror?.(bundler.result.error as Error);
+		}
 	});
 
 	let runes = $derived(
@@ -237,7 +252,7 @@
 						{injectedCSS}
 						{previewTheme}
 						{workspace}
-						runtimeError={runtime_error}
+						bind:runtimeError={runtime_error}
 					/>
 				</section>
 			{/snippet}

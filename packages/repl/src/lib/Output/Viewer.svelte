@@ -274,6 +274,7 @@
 				error = null;
 			}
 		} catch (e) {
+			console.error(e); // make it show up in the console, too, not just the UI
 			// @ts-ignore
 			show_error(e);
 		}

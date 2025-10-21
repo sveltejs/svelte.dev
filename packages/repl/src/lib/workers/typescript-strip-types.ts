@@ -9,24 +9,32 @@ const ParserWithTS = acorn.Parser.extend(tsPlugin());
  * @param {FunctionExpression | FunctionDeclaration} node
  * @param {Context<any, any>} context
  */
-function remove_this_param(
+function remove_this_param_and_optional(
 	node: acorn.FunctionExpression | acorn.FunctionDeclaration,
 	context: Context<any, any>
 ) {
-	const param = node.params[0] as any;
-	if (param?.type === 'Identifier' && param.name === 'this') {
-		if (param.typeAnnotation) {
-			// the type annotation is blanked by another visitor, do it in two parts to prevent an overwrite error
-			ts_blank_space(context, { start: param.start, end: param.typeAnnotation.start });
-			ts_blank_space(context, {
-				start: param.typeAnnotation.end,
-				end: node.params[1]?.start || param.end
-			});
-		} else {
-			ts_blank_space(context, {
-				start: param.start,
-				end: node.params[1]?.start || param.end
-			});
+	for (const param of node.params as Array<acorn.Pattern & Record<string, any>>) {
+		if (param?.type === 'Identifier') {
+			if (param.name === 'this') {
+				if (param.typeAnnotation) {
+					// the type annotation is blanked by another visitor, do it in two parts to prevent an overwrite error
+					ts_blank_space(context, { start: param.start, end: param.typeAnnotation.start });
+					ts_blank_space(context, {
+						start: param.typeAnnotation.end,
+						end: node.params[1]?.start || param.end
+					});
+				} else {
+					ts_blank_space(context, {
+						start: param.start,
+						end: node.params[1]?.start || param.end
+					});
+				}
+			} else if (param.optional) {
+				const question_start = context.state.ms.original.indexOf('?', param.start);
+				if (question_start !== -1 && question_start < param.end) {
+					ts_blank_space(context, { start: question_start, end: question_start + 1 });
+				}
+			}
 		}
 	}
 	return context.next();
@@ -82,6 +90,12 @@ const visitors: Visitors<any, { ms: MagicString }> = {
 		if (node.accessibility) {
 			ts_blank_space(context, { start: node.start, end: node.start + node.accessibility.length });
 		}
+
+		delete node.typeAnnotation;
+		delete node.typeParameters;
+		delete node.typeArguments;
+		delete node.returnType;
+		delete node.accessibility;
 
 		context.next();
 	},
@@ -201,8 +215,8 @@ const visitors: Visitors<any, { ms: MagicString }> = {
 		ts_blank_space(context, { start: node.start, end: node.expression.start });
 		context.visit(node.expression);
 	},
-	FunctionExpression: remove_this_param,
-	FunctionDeclaration: remove_this_param,
+	FunctionExpression: remove_this_param_and_optional,
+	FunctionDeclaration: remove_this_param_and_optional,
 	TSDeclareFunction(node, context) {
 		ts_blank_space(context, node);
 		return empty;
@@ -236,6 +250,16 @@ const visitors: Visitors<any, { ms: MagicString }> = {
 		if (node.declare) {
 			ts_blank_space(context, node);
 			return empty;
+		}
+		context.next();
+	},
+	VariableDeclarator(node, context) {
+		if (node.definite && node.id.type === 'Identifier') {
+			const definite_start = context.state.ms.original.indexOf(
+				'!',
+				node.id.start + node.id.name.length
+			);
+			ts_blank_space(context, { start: definite_start, end: definite_start + 1 });
 		}
 		context.next();
 	},

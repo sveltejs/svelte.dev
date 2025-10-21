@@ -12,6 +12,7 @@ import {
 	SvelteComponentTyped,
 	afterUpdate,
 	beforeUpdate,
+	createContext,
 	createEventDispatcher,
 	createRawSnippet,
 	flushSync,
@@ -221,6 +222,28 @@ function beforeUpdate(fn: () => void): void;
 
 
 
+## createContext
+
+<blockquote class="since note">
+
+Available since 5.40.0
+
+</blockquote>
+
+Returns a `[get, set]` pair of functions for working with context in a type-safe way.
+
+`get` will throw an error if no parent component called `set`.
+
+<div class="ts-block">
+
+```dts
+function createContext<T>(): [() => T, (context: T) => T];
+```
+
+</div>
+
+
+
 ## createEventDispatcher
 
 <blockquote class="tag deprecated note">
@@ -349,6 +372,8 @@ function getAllContexts<
 
 Retrieves the context that belongs to the closest parent component with the specified `key`.
 Must be called during component initialisation.
+
+[`createContext`](/docs/svelte/svelte#createContext) is a type-safe alternative.
 
 <div class="ts-block">
 
@@ -486,6 +511,8 @@ and returns that object. The context is then available to children of the compon
 (including slotted content) with `getContext`.
 
 Like lifecycle functions, this must be called during component initialisation.
+
+[`createContext`](/docs/svelte/svelte#createContext) is a type-safe alternative.
 
 <div class="ts-block">
 
