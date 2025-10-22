@@ -13,6 +13,21 @@
 	--sk-raised-width: 1px 2px 2px 1px;
 	--sk-raised-active-width: 2px 1px 1px 2px;
 
+	&:not(.light) {
+		@media (prefers-color-scheme: dark) {
+			--sk-raised-highlight: hsl(var(--sk-bg-hue), 15%, 32%);
+			--sk-raised-shadow: var(--sk-bg-3);
+
+			/* raised buttons */
+			--sk-raised-color: var(--sk-raised-border) var(--sk-raised-shadow) var(--sk-raised-shadow)
+				var(--sk-raised-border);
+			--sk-raised-hover-color: var(--sk-raised-highlight) var(--sk-raised-shadow)
+				var(--sk-raised-shadow) var(--sk-raised-highlight);
+			--sk-raised-active-color: var(--sk-raised-shadow) var(--sk-raised-highlight)
+				var(--sk-raised-highlight) var(--sk-raised-shadow);
+		}
+	}
+
 	&.dark {
 		--sk-raised-highlight: hsl(var(--sk-bg-hue), 15%, 32%);
 		--sk-raised-shadow: var(--sk-bg-3);
@@ -41,6 +56,17 @@
 			hsla(12, 93%, 30%);
 		background: var(--sk-bg-accent);
 		color: white;
+
+		:root:not(.light) & {
+			@media (prefers-color-scheme: dark) {
+				--sk-raised-color: hsla(12, 93%, 60%) hsla(12, 93%, 30%) hsla(12, 93%, 30%)
+					hsla(12, 93%, 60%);
+				--sk-raised-hover-color: hsla(12, 93%, 65%) hsla(12, 93%, 27%) hsla(12, 93%, 27%)
+					hsla(12, 93%, 65%);
+				--sk-raised-active-color: hsla(12, 93%, 25%) hsla(12, 93%, 70%) hsla(12, 93%, 70%)
+					hsla(12, 93%, 25%);
+			}
+		}
 
 		:root.dark & {
 			--sk-raised-color: hsla(12, 93%, 60%) hsla(12, 93%, 30%) hsla(12, 93%, 30%) hsla(12, 93%, 60%);

@@ -146,6 +146,12 @@
 
 		min-height: 16em;
 
+		:root:not(.light) & {
+			@media (prefers-color-scheme: dark) {
+				background-color: var(--sk-bg-3);
+			}
+		}
+
 		:root.dark & {
 			background-color: var(--sk-bg-3);
 		}
@@ -232,6 +238,13 @@
 		.logo {
 			width: 3rem;
 			height: 3rem;
+
+			:root:not(.light) &[alt='drizzle logo'],
+			:root:not(.light) &[alt='paraglide logo'] {
+				@media (prefers-color-scheme: dark) {
+					filter: invert(1);
+				}
+			}
 
 			:root.dark &[alt='drizzle logo'],
 			:root.dark &[alt='paraglide logo'] {

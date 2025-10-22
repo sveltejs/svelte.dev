@@ -49,6 +49,12 @@
 		}
 	}
 
+	&:not(.light) {
+		@media (prefers-color-scheme: dark) {
+			-webkit-font-smoothing: antialiased;
+		}
+	}
+
 	&.dark {
 		-webkit-font-smoothing: antialiased;
 	}

@@ -211,6 +211,11 @@ Top navigation bar for the application. It provides a slot for the left side, th
 			background: linear-gradient(to top, rgba(0, 0, 0, 0.05), transparent);
 		}
 
+		:root:not(.light) & {
+			@media (prefers-color-scheme: dark) {
+				background-color: var(--sk-bg-3);
+			}
+		}
 		:root.dark & {
 			background-color: var(--sk-bg-3);
 		}
@@ -341,6 +346,12 @@ Top navigation bar for the application. It provides a slot for the left side, th
 			background: url(../branding/svelte.svg) no-repeat 0 50% / calc(100% - var(--padding-right))
 				auto;
 			padding: 0 var(--padding-right) 0 calc(var(--sk-page-padding-side) + 0rem);
+
+			:root:not(.light) & {
+				@media (prefers-color-scheme: dark) {
+					background-image: url(../branding/svelte-dark.svg);
+				}
+			}
 
 			:root.dark & {
 				background-image: url(../branding/svelte-dark.svg);
