@@ -294,6 +294,12 @@
 	.icon:disabled {
 		color: #ccc;
 
+		:root:not(.light) & {
+			@media (prefers-color-scheme: dark) {
+				color: #555;
+			}
+		}
+
 		:root.dark & {
 			color: #555;
 		}

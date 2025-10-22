@@ -42,6 +42,11 @@
 	.toc-container {
 		background: var(--sk-bg-2);
 		display: none;
+		:root:not(.light) & {
+			@media (prefers-color-scheme: dark) {
+				background: var(--sk-bg-0);
+			}
+		}
 
 		:root.dark & {
 			background: var(--sk-bg-0);
