@@ -89,7 +89,7 @@
 			"name": "Svelte CLI",
 			"description": "A command line interface for creating and maintaining Svelte applications",
 			"webpageUrl": {
-				"url": "https://svelte.dev/docs/cli/overview"
+				"url": "https://svelte.dev/docs/cli"
 			},
 			"repositoryUrl": {
 				"url": "https://github.com/sveltejs/cli",
