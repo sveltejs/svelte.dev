@@ -31,7 +31,7 @@
 			"name": "SvelteKit",
 			"description": "SvelteKit is a framework for rapidly developing robust, performant web applications using Svelte. If you’re coming from React, SvelteKit is similar to Next. If you’re coming from Vue, SvelteKit is similar to Nuxt.",
 			"webpageUrl": {
-				"url": "https://svelte.dev/docs/kit/introduction"
+				"url": "https://svelte.dev/docs/kit"
 			},
 			"repositoryUrl": {
 				"url": "https://github.com/sveltejs/kit",
