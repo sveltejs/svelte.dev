@@ -141,20 +141,20 @@
 			"licenses": ["MIT"],
 			"tags": ["developer-tools", "web-development"]
 		},
-    {
-      "guid": "sveltejs-mcp",
-      "name": "Svelte MCP",
-      "description": "The Svelte MCP (Model Context Protocol) server can help your LLM or agent of choice write better Svelte code. It works by providing documentation relevant to the task at hand, and statically analysing generated code so that it can suggest fixes and best practices.",
-      "webpageUrl": {
-        "url": "https://svelte.dev/docs/mcp/overview"
-      },
-      "repositoryUrl": {
-        "url": "https://github.com/sveltejs/mcp",
-        "wellKnown": "https://github.com/sveltejs/mcp/blob/main/.well-known/funding-manifest-urls"
-      },
-      "licenses": ["MIT"],
-      "tags": ["developer-tools", "web-development", "artificial-intelligence"]
-    }
+		{
+			"guid": "sveltejs-mcp",
+			"name": "Svelte MCP",
+			"description": "The Svelte MCP (Model Context Protocol) server can help your LLM or agent of choice write better Svelte code. It works by providing documentation relevant to the task at hand, and statically analysing generated code so that it can suggest fixes and best practices.",
+			"webpageUrl": {
+				"url": "https://svelte.dev/docs/mcp/overview"
+			},
+			"repositoryUrl": {
+				"url": "https://github.com/sveltejs/mcp",
+				"wellKnown": "https://github.com/sveltejs/mcp/blob/main/.well-known/funding-manifest-urls"
+			},
+			"licenses": ["MIT"],
+			"tags": ["developer-tools", "web-development", "artificial-intelligence"]
+		}
 	],
 	"funding": {
 		"channels": [
