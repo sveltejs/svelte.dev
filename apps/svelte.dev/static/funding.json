@@ -3,7 +3,7 @@
 	"version": "v1.0.0",
 	"entity": {
 		"type": "organisation",
-		"role": "owner",
+		"role": "steward",
 		"name": "Svelte",
 		"description": "Web development for the rest of us",
 		"email": "",
@@ -31,7 +31,7 @@
 			"name": "SvelteKit",
 			"description": "SvelteKit is a framework for rapidly developing robust, performant web applications using Svelte. If you’re coming from React, SvelteKit is similar to Next. If you’re coming from Vue, SvelteKit is similar to Nuxt.",
 			"webpageUrl": {
-				"url": "https://svelte.dev/docs/kit"
+				"url": "https://svelte.dev/docs/kit/introduction"
 			},
 			"repositoryUrl": {
 				"url": "https://github.com/sveltejs/kit",
@@ -89,7 +89,7 @@
 			"name": "Svelte CLI",
 			"description": "A command line interface for creating and maintaining Svelte applications",
 			"webpageUrl": {
-				"url": "https://svelte.dev/docs/cli"
+				"url": "https://svelte.dev/docs/cli/overview"
 			},
 			"repositoryUrl": {
 				"url": "https://github.com/sveltejs/cli",
@@ -140,7 +140,21 @@
 			},
 			"licenses": ["MIT"],
 			"tags": ["developer-tools", "web-development"]
-		}
+		},
+    {
+      "guid": "sveltejs-mcp",
+      "name": "Svelte MCP",
+      "description": "The Svelte MCP (Model Context Protocol) server can help your LLM or agent of choice write better Svelte code. It works by providing documentation relevant to the task at hand, and statically analysing generated code so that it can suggest fixes and best practices.",
+      "webpageUrl": {
+        "url": "https://svelte.dev/docs/mcp/overview"
+      },
+      "repositoryUrl": {
+        "url": "https://github.com/sveltejs/mcp",
+        "wellKnown": "https://github.com/sveltejs/mcp/blob/main/.well-known/funding-manifest-urls"
+      },
+      "licenses": ["MIT"],
+      "tags": ["developer-tools", "web-development", "artificial-intelligence"]
+    }
 	],
 	"funding": {
 		"channels": [
