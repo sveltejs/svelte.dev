@@ -23,7 +23,7 @@
 				"url": "https://github.com/sveltejs/svelte",
 				"wellKnown": "https://github.com/sveltejs/svelte/blob/main/.well-known/funding-manifest-urls"
 			},
-			"licenses": ["MIT"],
+			"licenses": ["spdx:MIT"],
 			"tags": ["web-development"]
 		},
 		{
@@ -37,7 +37,7 @@
 				"url": "https://github.com/sveltejs/kit",
 				"wellKnown": "https://github.com/sveltejs/kit/blob/main/.well-known/funding-manifest-urls"
 			},
-			"licenses": ["MIT"],
+			"licenses": ["spdx:MIT"],
 			"tags": ["web-development"]
 		},
 		{
@@ -52,7 +52,7 @@
 				"url": "https://github.com/sveltejs/language-tools",
 				"wellKnown": "https://github.com/sveltejs/language-tools/blob/master/.well-known/funding-manifest-urls"
 			},
-			"licenses": ["MIT"],
+			"licenses": ["spdx:MIT"],
 			"tags": ["developer-tools", "web-development"]
 		},
 		{
@@ -66,7 +66,7 @@
 				"url": "https://github.com/sveltejs/vite-plugin-svelte",
 				"wellKnown": "https://github.com/sveltejs/vite-plugin-svelte/blob/main/.well-known/funding-manifest-urls"
 			},
-			"licenses": ["MIT"],
+			"licenses": ["spdx:MIT"],
 			"tags": ["web-development"]
 		},
 		{
@@ -81,7 +81,7 @@
 				"url": "https://github.com/sveltejs/rollup-plugin-svelte",
 				"wellKnown": "https://github.com/sveltejs/rollup-plugin-svelte/blob/master/.well-known/funding-manifest-urls"
 			},
-			"licenses": ["MIT"],
+			"licenses": ["spdx:MIT"],
 			"tags": ["web-development"]
 		},
 		{
@@ -95,7 +95,7 @@
 				"url": "https://github.com/sveltejs/cli",
 				"wellKnown": "https://github.com/sveltejs/cli/blob/main/.well-known/funding-manifest-urls"
 			},
-			"licenses": ["MIT"],
+			"licenses": ["spdx:MIT"],
 			"tags": ["developer-tools", "web-development"]
 		},
 		{
@@ -109,7 +109,7 @@
 				"url": "https://github.com/sveltejs/svelte.dev",
 				"wellKnown": "https://github.com/sveltejs/svelte.dev/blob/main/.well-known/funding-manifest-urls"
 			},
-			"licenses": ["MIT"],
+			"licenses": ["spdx:MIT"],
 			"tags": ["documentation", "education", "web-development"]
 		},
 		{
@@ -124,7 +124,7 @@
 				"url": "https://github.com/sveltejs/eslint-plugin-svelte",
 				"wellKnown": "https://github.com/sveltejs/eslint-plugin-svelte/blob/main/.well-known/funding-manifest-urls"
 			},
-			"licenses": ["MIT"],
+			"licenses": ["spdx:MIT"],
 			"tags": ["developer-tools", "web-development"]
 		},
 		{
@@ -138,7 +138,7 @@
 				"url": "https://github.com/sveltejs/svelte-eslint-parser",
 				"wellKnown": "https://github.com/sveltejs/svelte-eslint-parser/blob/main/.well-known/funding-manifest-urls"
 			},
-			"licenses": ["MIT"],
+			"licenses": ["spdx:MIT"],
 			"tags": ["developer-tools", "web-development"]
 		},
 		{
@@ -152,7 +152,7 @@
 				"url": "https://github.com/sveltejs/mcp",
 				"wellKnown": "https://github.com/sveltejs/mcp/blob/main/.well-known/funding-manifest-urls"
 			},
-			"licenses": ["MIT"],
+			"licenses": ["spdx:MIT"],
 			"tags": ["developer-tools", "web-development", "artificial-intelligence"]
 		}
 	],
