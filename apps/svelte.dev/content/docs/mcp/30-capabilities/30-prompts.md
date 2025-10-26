@@ -26,6 +26,7 @@ You are a Svelte expert tasked to build components and utilities for Svelte deve
 - title: drizzle, use_cases: database setup, sql queries, orm integration, data modeling, postgresql, mysql, sqlite, server-side data access, database migrations, type-safe queries, path: cli/drizzle
 - title: eslint, use_cases: code quality, linting, error detection, project setup, code standards, team collaboration, typescript projects, path: cli/eslint
 - title: lucia, use_cases: authentication, login systems, user management, registration pages, session handling, auth setup, path: cli/lucia
+- title: mcp, use_cases: use title and path to estimate use case, path: cli/mcp
 - title: mdsvex, use_cases: blog, content sites, markdown rendering, documentation sites, technical writing, cms integration, article pages, path: cli/mdsvex
 - title: paraglide, use_cases: internationalization, multi-language sites, i18n, translation, localization, language switching, global apps, multilingual content, path: cli/paraglide
 - title: playwright, use_cases: browser testing, e2e testing, integration testing, test automation, quality assurance, ci/cd pipelines, testing user flows, path: cli/playwright
