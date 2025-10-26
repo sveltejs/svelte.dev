@@ -4,11 +4,11 @@ import path from 'node:path';
 import fs from 'node:fs';
 import { parseArgs } from 'node:util';
 import ts from 'typescript';
-import glob from 'tiny-glob/sync';
+import glob from 'tiny-glob/sync.js';
 import chokidar from 'chokidar';
 import { fileURLToPath } from 'node:url';
-import { clone_repo, migrate_meta_json } from './utils';
-import { get_types, read_d_ts_file, read_types } from './types';
+import { clone_repo, migrate_meta_json } from './utils.ts';
+import { get_types, read_d_ts_file, read_types } from './types.ts';
 import type { Modules } from '@sveltejs/site-kit/markdown';
 
 interface Package {
@@ -147,6 +147,14 @@ const packages: Package[] = [
 		repo: `${parsed.values.owner}/cli`,
 		branch: branches['cli'] ?? 'main',
 		pkg: 'packages/cli',
+		docs: 'documentation/docs',
+		types: null
+	},
+	{
+		name: 'mcp',
+		repo: `${parsed.values.owner}/mcp`,
+		branch: branches['mcp'] ?? 'main',
+		pkg: 'packages/mcp-stdio',
 		docs: 'documentation/docs',
 		types: null
 	}

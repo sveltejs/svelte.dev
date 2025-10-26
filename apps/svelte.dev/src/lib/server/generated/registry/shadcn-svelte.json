@@ -1,0 +1,14 @@
+{
+	"name": "shadcn-svelte",
+	"npm_description": "Add components to your apps.",
+	"repo_url": "https://github.com/huntabyte/shadcn-svelte",
+	"authors": ["huntabyte"],
+	"homepage": "https://github.com/huntabyte/shadcn-svelte#readme",
+	"version": "1.0.10",
+	"downloads": 8168,
+	"github_stars": 7638,
+	"updated": "2025-10-24T23:36:37.284Z",
+	"typescript": false,
+	"runes": false,
+	"last_rune_check_version": "0.14.0"
+}

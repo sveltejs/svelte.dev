@@ -10,6 +10,7 @@
 	import { escape_html } from '$lib/utils/escape';
 	import { page } from '$app/state';
 	import { get_document } from './data.remote';
+	import { get_topic_title } from '$lib/topics';
 
 	let { params } = $props();
 
@@ -24,6 +25,8 @@
 		const link = 'docs/' + document.file.split('/').slice(2).join('/');
 		return `https://github.com/sveltejs/${name}/edit/main/documentation/${link}`;
 	});
+
+	const topic_title = $derived(get_topic_title(page.params.topic));
 
 	onMount(() => {
 		// hash was lowercase in v4 docs and varying case in v5 docs
@@ -63,10 +66,13 @@
 <svelte:head>
 	<title>{document.metadata.title} • Docs • Svelte</title>
 
-	<meta name="twitter:title" content="{document.metadata.title} • Docs • Svelte" />
-	<meta name="twitter:description" content="{document.metadata.title} • Svelte documentation" />
+	<meta name="twitter:title" content="{document.metadata.title} • {topic_title} Docs" />
+	<meta
+		name="twitter:description"
+		content="{document.metadata.title} • {topic_title} documentation"
+	/>
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="description" content="{document.metadata.title} • Svelte documentation" />
+	<meta name="description" content="{document.metadata.title} • {topic_title} documentation" />
 	<meta
 		name="twitter:image"
 		content="https://svelte.dev/docs/{page.params.topic}/{page.params.path}/card.png"

@@ -1,0 +1,14 @@
+{
+	"name": "@skeletonlabs/skeleton",
+	"npm_description": "The TailwindCSS package for Skeleton.",
+	"repo_url": "https://github.com/skeletonlabs/skeleton",
+	"authors": ["skeletonadmin", "endigo9740", "cokakoala", "hugoskokos"],
+	"homepage": "https://github.com/skeletonlabs/skeleton#readme",
+	"version": "4.1.4",
+	"downloads": 25524,
+	"github_stars": 5755,
+	"updated": "2025-10-23T22:46:53.618Z",
+	"typescript": false,
+	"runes": false,
+	"last_rune_check_version": "3.1.2"
+}

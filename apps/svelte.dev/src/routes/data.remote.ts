@@ -42,6 +42,10 @@ export const get_nav_links = prerender<NavigationLink[]>(() => {
 			}))
 		},
 		{
+			title: 'Packages',
+			slug: 'packages'
+		},
+		{
 			title: 'Playground',
 			slug: 'playground'
 		},

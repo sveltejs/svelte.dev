@@ -1,0 +1,15 @@
+{
+	"name": "@event-calendar/core",
+	"npm_description": "Full-sized drag & drop event calendar with resource & timeline views",
+	"repo_url": "https://github.com/vkurko/calendar",
+	"authors": ["vkurko"],
+	"homepage": "https://vkurko.github.io/calendar/",
+	"version": "4.7.1",
+	"downloads": 9222,
+	"github_stars": 1978,
+	"updated": "2025-10-23T15:44:19.728Z",
+	"svelte_range": "^5.41.2",
+	"typescript": false,
+	"runes": false,
+	"last_rune_check_version": "3.12.0"
+}

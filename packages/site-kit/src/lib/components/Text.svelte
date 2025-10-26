@@ -91,6 +91,11 @@
 			}
 		}
 
+		img {
+			max-width: 100%;
+			object-fit: contain;
+		}
+
 		h2 {
 			margin-top: 7rem;
 		}
@@ -299,6 +304,11 @@
 					&.remove {
 						--color: rgba(255, 0, 0, 0.1);
 
+						:root:not(.light) & {
+							@media (prefers-color-scheme: dark) {
+								--color: rgba(255, 0, 0, 0.27);
+							}
+						}
 						:root.dark & {
 							--color: rgba(255, 0, 0, 0.27);
 						}

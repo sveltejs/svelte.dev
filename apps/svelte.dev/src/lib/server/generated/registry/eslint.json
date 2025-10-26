@@ -1,0 +1,14 @@
+{
+	"name": "eslint",
+	"npm_description": "An AST-based pattern checker for JavaScript.",
+	"repo_url": "https://github.com/eslint/eslint",
+	"authors": ["openjsfoundation", "eslintbot"],
+	"homepage": "https://eslint.org",
+	"version": "9.38.0",
+	"downloads": 70992100,
+	"github_stars": 26600,
+	"updated": "2025-10-17T18:49:42.516Z",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "9.35.0"
+}
