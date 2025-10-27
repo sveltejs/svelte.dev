@@ -1253,26 +1253,6 @@ The content of the error.
 </div>
 </div></div>
 
-## Invalid
-
-A function and proxy object used to imperatively create validation errors in form handlers.
-
-Call `invalid(issue1, issue2, ...issueN)` to throw a validation error.
-If an issue is a `string`, it applies to the form as a whole (and will show up in `fields.allIssues()`)
-Access properties to create field-specific issues: `invalid.fieldName('message')`.
-The type structure mirrors the input data structure for type-safe field access.
-
-<div class="ts-block">
-
-```dts
-type Invalid<Input = any> = ((
-	...issues: Array<string | StandardSchemaV1.Issue>
-) => never) &
-	InvalidField<Input>;
-```
-
-</div>
-
 ## KitConfig
 
 See the [configuration reference](/docs/kit/configuration) for details.
@@ -2335,8 +2315,8 @@ type RemoteForm<
 		[attachment: symbol]: (node: HTMLFormElement) => void;
 	};
 	/**
-	 * Create an instance of the form for the given `id`.
-	 * The `id` is stringified and used for deduplication to potentially reuse existing instances.
+	 * Create an instance of the form for the given key.
+	 * The key is stringified and used for deduplication to potentially reuse existing instances.
 	 * Useful when you have multiple forms that use the same remote form action, for example in a loop.
 	 * ```svelte
 	 * {#each todos as todo}
@@ -2349,29 +2329,42 @@ type RemoteForm<
 	 * ```
 	 */
 	for(
-		id: ExtractId<Input>
+		key: string | number | boolean
 	): Omit<RemoteForm<Input, Output>, 'for'>;
+	/**
+	 * This method exists to allow you to typecheck `name` attributes. It returns its argument
+	 * @example
+	 * ```svelte
+	 * <input name={login.field('username')} />
+	 * ```
+	 **/
+	field<
+		Name extends keyof UnionToIntersection<
+			FlattenKeys<Input, ''>
+		>
+	>(
+		string: Name
+	): Name;
 	/** Preflight checks */
 	preflight(
 		schema: StandardSchemaV1<Input, any>
 	): RemoteForm<Input, Output>;
 	/** Validate the form contents programmatically */
 	validate(options?: {
-		/** Set this to `true` to also show validation issues of fields that haven't been touched yet. */
 		includeUntouched?: boolean;
-		/** Set this to `true` to only run the `preflight` validation. */
-		preflightOnly?: boolean;
-		/** Perform validation as if the form was submitted by the given button. */
-		submitter?: HTMLButtonElement | HTMLInputElement;
 	}): Promise<void>;
 	/** The result of the form submission */
 	get result(): Output | undefined;
 	/** The number of pending submissions */
 	get pending(): number;
-	/** Access form fields using object notation */
-	fields: Input extends void
-		? never
-		: RemoteFormFields<Input>;
+	/** The submitted values */
+	input: null | UnionToIntersection<
+		FlattenInput<Input, ''>
+	>;
+	/** Validation issues */
+	issues: null | UnionToIntersection<
+		FlattenIssues<Input, ''>
+	>;
 	/** Spread this onto a `<button>` or `<input type="submit">` */
 	buttonProps: {
 		type: 'submit';
@@ -2405,94 +2398,6 @@ type RemoteForm<
 
 </div>
 
-## RemoteFormField
-
-Form field accessor type that provides name(), value(), and issues() methods
-
-<div class="ts-block">
-
-```dts
-type RemoteFormField<Value extends RemoteFormFieldValue> =
-	RemoteFormFieldMethods<Value> & {
-		/**
-		 * Returns an object that can be spread onto an input element with the correct type attribute,
-		 * aria-invalid attribute if the field is invalid, and appropriate value/checked property getters/setters.
-		 * @example
-		 * ```svelte
-		 * <input {...myForm.fields.myString.as('text')} />
-		 * <input {...myForm.fields.myNumber.as('number')} />
-		 * <input {...myForm.fields.myBoolean.as('checkbox')} />
-		 * ```
-		 */
-		as<T extends RemoteFormFieldType<Value>>(
-			...args: AsArgs<T, Value>
-		): InputElementProps<T>;
-	};
-```
-
-</div>
-
-## RemoteFormFieldType
-
-<div class="ts-block">
-
-```dts
-type RemoteFormFieldType<T> = {
-	[K in keyof InputTypeMap]: T extends InputTypeMap[K]
-		? K
-		: never;
-}[keyof InputTypeMap];
-```
-
-</div>
-
-## RemoteFormFieldValue
-
-<div class="ts-block">
-
-```dts
-type RemoteFormFieldValue =
-	| string
-	| string[]
-	| number
-	| boolean
-	| File
-	| File[];
-```
-
-</div>
-
-## RemoteFormFields
-
-Recursive type to build form fields structure with proxy access
-
-<div class="ts-block">
-
-```dts
-type RemoteFormFields<T> =
-	WillRecurseIndefinitely<T> extends true
-		? RecursiveFormFields
-		: NonNullable<T> extends
-					| string
-					| number
-					| boolean
-					| File
-			? RemoteFormField<NonNullable<T>>
-			: T extends string[] | File[]
-				? RemoteFormField<T> & {
-						[K in number]: RemoteFormField<T[number]>;
-					}
-				: T extends Array<infer U>
-					? RemoteFormFieldContainer<T> & {
-							[K in number]: RemoteFormFields<U>;
-						}
-					: RemoteFormFieldContainer<T> & {
-							[K in keyof T]-?: RemoteFormFields<T[K]>;
-						};
-```
-
-</div>
-
 ## RemoteFormInput
 
 <div class="ts-block">
@@ -2504,7 +2409,7 @@ interface RemoteFormInput {/*…*/}
 <div class="ts-block-property">
 
 ```dts
-[key: string]: MaybeArray<string | number | boolean | File | RemoteFormInput>;
+[key: string]: FormDataEntryValue | FormDataEntryValue[] | RemoteFormInput | RemoteFormInput[];
 ```
 
 <div class="ts-block-property-details"></div>
@@ -2517,6 +2422,24 @@ interface RemoteFormInput {/*…*/}
 ```dts
 interface RemoteFormIssue {/*…*/}
 ```
+
+<div class="ts-block-property">
+
+```dts
+name: string;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+path: Array<string | number>;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
 
 <div class="ts-block-property">
 
