@@ -81,7 +81,8 @@ const config: UserConfig = {
 			'cross-origin-opener-policy': 'same-origin',
 			'cross-origin-embedder-policy': 'require-corp',
 			'cross-origin-resource-policy': 'cross-origin'
-		}
+		},
+		port: 4567
 	},
 	optimizeDeps: {
 		exclude: ['@sveltejs/site-kit', '@sveltejs/repl', '@rollup/browser', 'svelte']
