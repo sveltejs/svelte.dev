@@ -84,7 +84,7 @@ const config: UserConfig = {
 		}
 	},
 	optimizeDeps: {
-		exclude: ['@sveltejs/site-kit', '@sveltejs/repl', '@rollup/browser']
+		exclude: ['@sveltejs/site-kit', '@sveltejs/repl', '@rollup/browser', 'svelte']
 	},
 	ssr: {
 		noExternal: ['@sveltejs/site-kit', '@sveltejs/repl']
