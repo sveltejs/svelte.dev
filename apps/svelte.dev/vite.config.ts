@@ -85,7 +85,7 @@ const config: UserConfig = {
 		port: 4567
 	},
 	optimizeDeps: {
-		exclude: ['@sveltejs/site-kit', '@sveltejs/repl', '@rollup/browser', 'svelte']
+		exclude: ['@sveltejs/site-kit', '@sveltejs/repl', '@rollup/browser', 'svelte', '@sveltejs/kit']
 	},
 	ssr: {
 		noExternal: ['@sveltejs/site-kit', '@sveltejs/repl']
