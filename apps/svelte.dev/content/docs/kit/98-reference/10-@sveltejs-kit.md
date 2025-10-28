@@ -2334,23 +2334,6 @@ type RemoteForm<
 		action: string;
 		[attachment: symbol]: (node: HTMLFormElement) => void;
 	};
-	/**
-	 * Create an instance of the form for the given `id`.
-	 * The `id` is stringified and used for deduplication to potentially reuse existing instances.
-	 * Useful when you have multiple forms that use the same remote form action, for example in a loop.
-	 * ```svelte
-	 * {#each todos as todo}
-	 *	{@const todoForm = updateTodo.for(todo.id)}
-	 *	<form {...todoForm}>
-	 *		{#if todoForm.result?.invalid}<p>Invalid data</p>{/if}
-	 *		...
-	 *	</form>
-	 *	{/each}
-	 * ```
-	 */
-	for(
-		id: ExtractId<Input>
-	): Omit<RemoteForm<Input, Output>, 'for'>;
 	/** Preflight checks */
 	preflight(
 		schema: StandardSchemaV1<Input, any>
@@ -2401,6 +2384,36 @@ type RemoteForm<
 		get pending(): number;
 	};
 };
+```
+
+</div>
+
+## RemoteFormAllIssue
+
+<div class="ts-block">
+
+```dts
+interface RemoteFormAllIssue extends RemoteFormIssue {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+path: Array<string | number>;
+```
+
+<div class="ts-block-property-details"></div>
+</div></div>
+
+## RemoteFormFactory
+
+<div class="ts-block">
+
+```dts
+type RemoteFormFactory<
+	Input extends RemoteFormInput | void,
+	Output
+> = (key?: ExtractId<Input>) => RemoteForm<Input, Output>;
 ```
 
 </div>
