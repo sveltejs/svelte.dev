@@ -1,7 +1,7 @@
 {
 	"name": "@prismicio/svelte",
 	"npm_description": "Svelte components to present Prismic content.",
-	"repo_url": "ssh://git@github.com/prismicio/prismic-svelte",
+	"repo_url": "https://github.com/ssh://git@github.com/prismicio/prismic-svelte",
 	"authors": [
 		"chrrrs",
 		"samuelhorn",
@@ -31,7 +31,7 @@
 	],
 	"homepage": "https://github.com/prismicio/prismic-svelte#readme",
 	"version": "2.0.0",
-	"downloads": 1298,
+	"downloads": 1371,
 	"github_stars": 26,
 	"updated": "2025-06-04T23:46:10.656Z",
 	"svelte_range": "^5",
