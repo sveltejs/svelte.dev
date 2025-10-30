@@ -24,11 +24,5 @@
 	},
 	"devDependencies": {
 		"@changesets/cli": "^2.27.10"
-	},
-	"pnpm": {
-		"overrides": {
-			"@sveltejs/kit": "file:../KIT/kit/packages/kit",
-			"svelte": "file:../svelte/packages/svelte"
-		}
 	}
 }
