@@ -123,11 +123,20 @@ async function getNpmAndGitHubData(pkg: string): Promise<PackageKey & PackageNpm
 
 	const npm_description = npmInfo.description;
 	const raw_repo_url = npmInfo.repository?.url ?? '';
-	const repo_url = raw_repo_url?.replace(/^git\+/, '').replace(/\.git$/, '');
+	let repo_url = raw_repo_url
+		?.replace(/^git\+/, '')
+		.replace(/\.git$/, '')
+		.replace(/ssh:\/\/git@github.com\/(.+)/, (m) => `https://github.com/${m}`);
+
 	if (!repo_url) {
 		// console.error(`repo_url not found for ${pkg}`);
 		logsAtTheEnd.push({ type: 'no_repo_url', pkg, extra: `not found` });
 	}
+
+	if (repo_url.startsWith('github.com')) {
+		repo_url = 'https://' + repo_url;
+	}
+
 	const git_org = repo_url?.split('/')[3];
 	const git_repo = repo_url?.split('/')[4];
 
