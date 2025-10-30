@@ -1,7 +1,7 @@
 {
 	"name": "@prismicio/svelte",
 	"npm_description": "Svelte components to present Prismic content.",
-	"repo_url": "https://github.com/ssh://git@github.com/prismicio/prismic-svelte",
+	"repo_url": "https://github.com/prismicio/prismic-svelte",
 	"authors": [
 		"chrrrs",
 		"samuelhorn",

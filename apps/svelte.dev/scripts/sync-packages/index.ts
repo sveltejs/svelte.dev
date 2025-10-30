@@ -126,7 +126,7 @@ async function getNpmAndGitHubData(pkg: string): Promise<PackageKey & PackageNpm
 	let repo_url = raw_repo_url
 		?.replace(/^git\+/, '')
 		.replace(/\.git$/, '')
-		.replace(/ssh:\/\/git@github.com\/(.+)/, (m) => `https://github.com/${m}`);
+		.replace(/ssh:\/\/git@github.com\/(.+)/, (_, m) => `https://github.com/${m}`);
 
 	if (!repo_url) {
 		// console.error(`repo_url not found for ${pkg}`);

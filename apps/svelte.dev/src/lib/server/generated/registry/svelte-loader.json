@@ -1,7 +1,7 @@
 {
 	"name": "svelte-loader",
 	"npm_description": "A webpack loader for svelte",
-	"repo_url": "https://github.com/ssh://git@github.com/sveltejs/svelte-loader",
+	"repo_url": "https://github.com/sveltejs/svelte-loader",
 	"authors": ["nikku", "rich_harris", "conduitry", "svelte-admin", "dummdidumm"],
 	"homepage": "https://github.com/sveltejs/svelte-loader#readme",
 	"version": "3.2.4",
