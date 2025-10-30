@@ -7,7 +7,7 @@
 
 <div class="container">
 	<div class="toc-container" style="order: 1">
-		<DocsContents contents={await get_sections(params)} />
+		<DocsContents contents={await get_sections(params.topic)} />
 	</div>
 
 	<div class="page content">

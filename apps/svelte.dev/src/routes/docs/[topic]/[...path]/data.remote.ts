@@ -10,18 +10,9 @@ const schema = v.object({
 	topic: v.string()
 });
 
-export const get_sections = prerender(schema, (params) => {
-	const document = docs.topics[`docs/${params.topic}`];
-
-	// TODO does the dependency on params.path mean this gets regenerated unnecessarily?
-	if (!document) {
-		// in many cases, https://svelte.dev/docs/foo is now https://svelte.dev/docs/svelte/foo
-		if (docs.pages[`docs/svelte/${params.path}`]) {
-			redirect(308, `/docs/svelte/${params.path}`);
-		}
-
-		error(404, 'Not found');
-	}
+export const get_sections = prerender(v.string(), (topic) => {
+	const document = docs.topics[`docs/${topic}`];
+	if (!document) error(404, 'Not found');
 
 	return document.children.map(create_summary);
 });
