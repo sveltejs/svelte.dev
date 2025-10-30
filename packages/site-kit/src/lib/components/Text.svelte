@@ -33,7 +33,8 @@
 				.find((node) => (node as HTMLElement).classList.contains('code-block')) as HTMLElement;
 
 			const ts = !!parent.querySelector('.ts-toggle:checked');
-			const dataLanguage = parent.querySelector('pre')?.getAttribute('data-language')?.toLowerCase() ?? '';
+			const dataLanguage =
+				parent.querySelector('pre')?.getAttribute('data-language')?.toLowerCase() ?? '';
 			const query = ts
 				? dataLanguage === 'svelte'
 					? `pre:last-of-type code`
