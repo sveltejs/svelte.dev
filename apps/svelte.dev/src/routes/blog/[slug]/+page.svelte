@@ -6,7 +6,7 @@
 
 	let { params } = $props();
 
-	const data = await get_post(params.slug);
+	const data = $derived(await get_post(params.slug));
 
 	setupDocsHovers();
 </script>
