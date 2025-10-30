@@ -12,6 +12,7 @@
 	import { page } from '$app/state';
 	import type { File } from '@sveltejs/repl/workspace';
 	import { get_example, get_example_index, get_gist } from '../data.remote.js';
+	import { get_user } from '$lib/remote/auth.remote.js';
 
 	let { data, params } = $props();
 
@@ -181,7 +182,9 @@
 		}
 	}
 
-	const relaxed = $derived(gist.relaxed || (data.user && data.user.id === gist.owner));
+	const user = $derived(await get_user());
+
+	const relaxed = $derived(gist.relaxed || (user && user.id === gist.owner));
 </script>
 
 <svelte:head>
@@ -214,7 +217,7 @@
 <div class="repl-outer">
 	<AppControls
 		{examples}
-		user={data.user}
+		{user}
 		{gist}
 		forked={handle_fork}
 		saved={handle_save}

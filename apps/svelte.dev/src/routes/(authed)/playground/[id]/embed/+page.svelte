@@ -7,6 +7,7 @@
 	import { page } from '$app/state';
 	import { decode_and_decompress_text } from '../gzip.js';
 	import type { File } from '@sveltejs/repl/workspace';
+	import { get_user } from '$lib/remote/auth.remote.js';
 
 	let { data } = $props();
 
@@ -51,7 +52,9 @@
 		set_files();
 	});
 
-	const relaxed = $derived(data.gist.relaxed || (data.user && data.user.id === data.gist.owner));
+	const user = $derived(await get_user());
+
+	const relaxed = $derived(data.gist.relaxed || (user && user.id === data.gist.owner));
 </script>
 
 <svelte:head>

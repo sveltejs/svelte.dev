@@ -10,10 +10,10 @@
 	import SecondaryNav from '$lib/components/SecondaryNav.svelte';
 	import type { File } from '@sveltejs/repl/workspace';
 	import type { Repl } from '@sveltejs/repl';
+	import { get_user } from '$lib/remote/auth.remote';
 
 	interface Props {
 		examples: Array<{ title: string; examples: any[] }>;
-		user: User | null;
 		repl: ReturnType<typeof Repl>;
 		gist: Gist;
 		name: string;
@@ -25,7 +25,6 @@
 	let {
 		name = $bindable(),
 		modified = $bindable(),
-		user,
 		repl,
 		gist,
 		examples,
@@ -43,6 +42,8 @@
 	function wait(ms: number) {
 		return new Promise((f) => setTimeout(f, ms));
 	}
+
+	const user = $derived(await get_user());
 
 	const canSave = $derived(user && gist && gist.owner === user.id);
 
