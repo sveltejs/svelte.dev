@@ -1,7 +1,6 @@
+import { prerender } from '$app/server';
 import { PACKAGES_META } from '$lib/packages-meta';
 import { registry, type Category, type Package, type PackageDefinition } from '$lib/server/content';
-
-export const prerender = false;
 
 const arrToPackages = (arr: PackageDefinition[]) => {
 	return arr
@@ -22,9 +21,10 @@ const arrToPackages = (arr: PackageDefinition[]) => {
 };
 
 // Netflix style page. Send pre-done cards with categories
-const homepage: Category[] = [];
+const categories: Category[] = [];
+
 for (const { packages, title, description } of PACKAGES_META.FEATURED) {
-	homepage.push({
+	categories.push({
 		title,
 		hash: title.toLowerCase().replace(/ /g, '-'),
 		description,
@@ -32,6 +32,6 @@ for (const { packages, title, description } of PACKAGES_META.FEATURED) {
 	});
 }
 
-export async function load() {
-	return { homepage };
-}
+export const get_packages = prerender(() => {
+	return categories;
+});
