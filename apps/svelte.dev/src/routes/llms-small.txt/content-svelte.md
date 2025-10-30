@@ -297,7 +297,6 @@ let { a, b, ...others } = $props();
 ### Using await in Svelte
 
 - **Where you can use await**
-
   - **Top-level `<script>`**: `await` directly in component script.
   - **Inside `$derived(...)`**.
   - **Inside markup**: inline `await` expressions.
