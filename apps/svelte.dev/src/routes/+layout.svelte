@@ -10,8 +10,10 @@
 	import { beforeNavigate } from '$app/navigation';
 	import { get_banner, get_nav_links } from './data.remote.js';
 
-	// injectSpeedInsights();
-	// inject({ mode: dev ? 'development' : 'production' });
+	if (!dev) {
+		injectSpeedInsights();
+		inject({ mode: 'production' });
+	}
 
 	// Make all navigations between SvelteKit-tutorial and non-SvelteKit-tutorial pages (and vice versa)
 	// a full page navigation to ensure webcontainers get the correct origin restriction headers while
