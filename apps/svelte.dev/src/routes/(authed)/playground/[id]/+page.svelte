@@ -11,13 +11,20 @@
 	import { compress_and_encode_text, decode_and_decompress_text } from './gzip.js';
 	import { page } from '$app/state';
 	import type { File } from '@sveltejs/repl/workspace';
-	import { get_example_index, get_gist } from '../data.remote.js';
+	import { get_example, get_example_index, get_gist } from '../data.remote.js';
 
 	let { data, params } = $props();
 
 	// TODO dewaterfall
 	const examples = await get_example_index();
-	const gist = $derived(await get_gist(params.id));
+	const slugs = examples
+		.map((section) => section.examples)
+		.flat()
+		.map((example) => example.slug);
+
+	const gist = $derived(
+		slugs.includes(params.id) ? await get_example(params.id) : await get_gist(params.id)
+	);
 
 	const STORAGE_KEY = 'svelte:playground';
 

@@ -71,6 +71,24 @@ export const get_all_examples = prerender(async () => {
 	)) as Examples;
 });
 
+export const get_example = prerender(v.string(), async (id) => {
+	const example = (await get_all_examples())
+		.flatMap((section) => section.examples)
+		.find((example) => example.slug.split('/').pop() === id);
+
+	if (!example) {
+		error(404);
+	}
+
+	return {
+		id,
+		name: example.title,
+		owner: null,
+		relaxed: false, // TODO is this right? EDIT: It was example.relaxed before, which no example return to my knowledge. By @PuruVJ
+		components: example.components
+	};
+});
+
 interface PlaygroundApp {
 	id: string;
 	name: string;
@@ -82,20 +100,6 @@ interface PlaygroundApp {
 }
 
 export const get_gist = query(v.string(), async (id) => {
-	const example = (await get_all_examples())
-		.flatMap((section) => section.examples)
-		.find((example) => example.slug.split('/').pop() === id);
-
-	if (example) {
-		return {
-			id,
-			name: example.title,
-			owner: null,
-			relaxed: false, // TODO is this right? EDIT: It was example.relaxed before, which no example return to my knowledge. By @PuruVJ
-			components: example.components
-		};
-	}
-
 	if (dev && !client) {
 		// in dev with no local Supabase configured, proxy to production
 		// this lets us at least load saved REPLs
