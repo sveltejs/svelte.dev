@@ -10,15 +10,38 @@ Svelte provides reactive versions of various built-ins like [`Map`](https://deve
 ```js
 // @noErrors
 import {
+	CacheObserver,
 	MediaQuery,
 	SvelteDate,
 	SvelteMap,
 	SvelteSet,
 	SvelteURL,
 	SvelteURLSearchParams,
-	createSubscriber
+	cache,
+	createSubscriber,
+	fetcher,
+	resource
 } from 'svelte/reactivity';
 ```
+
+## CacheObserver
+
+<div class="ts-block">
+
+```dts
+class CacheObserver<T> extends BaseCacheObserver<T> {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+constructor(prefix?: string);
+```
+
+<div class="ts-block-property-details"></div>
+</div></div>
+
+
 
 ## MediaQuery
 
@@ -336,6 +359,21 @@ class SvelteURLSearchParams extends URLSearchParams {/*…*/}
 
 
 
+## cache
+
+<div class="ts-block">
+
+```dts
+function cache<TFn extends (...args: any[]) => any>(
+	key: string,
+	fn: TFn
+): ReturnType<TFn>;
+```
+
+</div>
+
+
+
 ## createSubscriber
 
 <blockquote class="since note">
@@ -399,5 +437,42 @@ function createSubscriber(
 </div>
 
 
+
+## fetcher
+
+<div class="ts-block">
+
+```dts
+function fetcher<TReturn>(
+	url: string | URL,
+	init?: GetRequestInit | undefined
+): Resource_1<TReturn>;
+```
+
+</div>
+
+
+
+## resource
+
+<div class="ts-block">
+
+```dts
+function resource<T>(fn: () => T): Resource_1<Awaited<T>>;
+```
+
+</div>
+
+
+
+## Resource
+
+<div class="ts-block">
+
+```dts
+type Resource<T> = Resource_1<T>;
+```
+
+</div>
 
 
