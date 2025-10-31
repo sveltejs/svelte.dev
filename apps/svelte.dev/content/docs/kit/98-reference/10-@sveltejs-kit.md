@@ -2405,23 +2405,6 @@ type RemoteForm<
 
 </div>
 
-## RemoteFormAllIssue
-
-<div class="ts-block">
-
-```dts
-interface RemoteFormAllIssue extends RemoteFormIssue {/*…*/}
-```
-
-<div class="ts-block-property">
-
-```dts
-path: Array<string | number>;
-```
-
-<div class="ts-block-property-details"></div>
-</div></div>
-
 ## RemoteFormField
 
 Form field accessor type that provides name(), value(), and issues() methods
@@ -2539,6 +2522,15 @@ interface RemoteFormIssue {/*…*/}
 
 ```dts
 message: string;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+path: Array<string | number>;
 ```
 
 <div class="ts-block-property-details"></div>
