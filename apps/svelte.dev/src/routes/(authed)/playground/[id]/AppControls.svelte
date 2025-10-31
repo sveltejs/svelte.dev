@@ -268,7 +268,6 @@
 		color: var(--sk-fg-3);
 		line-height: 1;
 		background-size: 1.8rem;
-		z-index: 999;
 
 		&.login {
 			width: auto;
