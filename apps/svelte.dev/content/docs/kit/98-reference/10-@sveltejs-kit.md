@@ -2525,15 +2525,6 @@ message: string;
 ```
 
 <div class="ts-block-property-details"></div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-path: Array<string | number>;
-```
-
-<div class="ts-block-property-details"></div>
 </div></div>
 
 ## RemotePrerenderFunction
