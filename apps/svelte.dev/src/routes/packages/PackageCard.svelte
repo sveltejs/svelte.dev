@@ -189,18 +189,17 @@
 				outline: 2px solid var(--sk-fg-accent);
 			}
 
+			> span {
+				gap: 0.75rem;
+				@media screen and (max-width: 768px) {
+					gap: 1rem;
 
-		> span {
-			gap: 0.75rem;
-			@media screen and (max-width: 768px) {
-				gap: 1rem;
-
-				[data-icon] {
-					width: 2.4rem;
-					height: 2.4rem;
+					[data-icon] {
+						width: 2.4rem;
+						height: 2.4rem;
+					}
 				}
 			}
-		}
 		}
 
 		a {
@@ -240,7 +239,6 @@
 				top: 0.2rem;
 			}
 		}
-
 
 		.stats {
 			display: flex;
