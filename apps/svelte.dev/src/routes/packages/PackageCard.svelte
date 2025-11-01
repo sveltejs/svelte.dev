@@ -81,7 +81,7 @@
 	<!-- this is a sibling element so that we don't have links inside links -->
 	{#if !pkg.svAlias}
 		<div class="links">
-			<span style="display: flex;">
+			<span>
 				<a
 					href="https://npmjs.org/package/{pkg.name}"
 					target="_blank"
@@ -190,6 +190,7 @@
 			}
 
 			> span {
+				display: flex;
 				gap: 0.75rem;
 				@media screen and (max-width: 768px) {
 					gap: 1rem;
