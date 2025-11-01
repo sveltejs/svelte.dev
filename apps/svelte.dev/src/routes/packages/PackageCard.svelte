@@ -81,7 +81,7 @@
 	<!-- this is a sibling element so that we don't have links inside links -->
 	{#if !pkg.svAlias}
 		<div class="links">
-			<span style="display: flex; gap: 0.75rem">
+			<span>
 				<a
 					href="https://npmjs.org/package/{pkg.name}"
 					target="_blank"
@@ -178,10 +178,28 @@
 			a {
 				width: 1.4rem;
 				height: 1.4rem;
+
+				@media screen and (max-width: 768px) {
+					width: 2.4rem;
+					height: 2.4rem;
+				}
 			}
 
 			a:focus-visible {
 				outline: 2px solid var(--sk-fg-accent);
+			}
+
+			> span {
+				display: flex;
+				gap: 0.75rem;
+				@media screen and (max-width: 768px) {
+					gap: 1rem;
+
+					[data-icon] {
+						width: 2.4rem;
+						height: 2.4rem;
+					}
+				}
 			}
 		}
 
