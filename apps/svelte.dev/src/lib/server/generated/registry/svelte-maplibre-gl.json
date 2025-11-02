@@ -5,7 +5,7 @@
 	"authors": ["mierune_iguchi", "ciscorn", "sorami"],
 	"homepage": "https://svelte-maplibre-gl.mierune.dev/",
 	"version": "1.0.2",
-	"downloads": 1926,
+	"downloads": 1922,
 	"github_stars": 221,
 	"updated": "2025-10-23T06:43:31.401Z",
 	"svelte_range": ">=5.0.0",
