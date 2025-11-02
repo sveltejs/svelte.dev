@@ -1,8 +1,9 @@
-import * as session from '$lib/db/session';
 import * as gist from '$lib/db/gist';
+import { get_user } from '$lib/remote/auth.remote.js';
 
+// TODO this should be a `form` or `command`
 export async function POST({ request }) {
-	const user = await session.from_cookie(request.headers.get('cookie'));
+	const user = await get_user();
 	if (!user) return new Response(undefined, { status: 401 });
 
 	const body = await request.json();

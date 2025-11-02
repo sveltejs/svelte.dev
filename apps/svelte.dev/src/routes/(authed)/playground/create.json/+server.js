@@ -1,9 +1,9 @@
 import * as gist from '$lib/db/gist';
-import * as session from '$lib/db/session';
+import { get_user } from '$lib/remote/auth.remote.js';
 import { error, json } from '@sveltejs/kit';
 
 export async function POST({ request }) {
-	const user = await session.from_cookie(request.headers.get('cookie'));
+	const user = await get_user();
 	if (!user) error(401);
 
 	const body = await request.json();

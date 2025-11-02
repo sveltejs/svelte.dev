@@ -1,10 +1,10 @@
 import * as gist from '$lib/db/gist';
-import * as session from '$lib/db/session';
+import { get_user } from '$lib/remote/auth.remote.js';
 import { error } from '@sveltejs/kit';
 
 // TODO reimplement as an action
 export async function PUT({ params, request }) {
-	const user = await session.from_cookie(request.headers.get('cookie'));
+	const user = await get_user();
 	if (!user) error(401, 'Unauthorized');
 
 	const body = await request.json();

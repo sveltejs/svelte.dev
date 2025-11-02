@@ -8,6 +8,12 @@
 	let current = $state('');
 
 	afterNavigate(() => {
+		if (!content) {
+			// TODO bind:this is broken?
+			console.error('missing content');
+			return;
+		}
+
 		current = location.hash.slice(1);
 		headings = content.querySelectorAll('h2');
 		update(); // Ensure active link is set correctly on navigation
@@ -15,6 +21,11 @@
 
 	// Update function to activate the correct section link
 	function update() {
+		if (!headings) {
+			// TODO bind:this is broken?
+			return;
+		}
+
 		const threshold = (innerHeight * 1) / 3;
 		let found = false;
 

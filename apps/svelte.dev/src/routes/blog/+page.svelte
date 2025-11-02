@@ -1,11 +1,11 @@
 <script lang="ts">
 	import Byline from './Byline.svelte';
+	import { get_all_posts } from './data.remote';
 
-	let { data } = $props();
+	const posts = await get_all_posts();
 
-	const featured = data.posts.filter((post) => !post.metadata.title.startsWith('What’s new'));
-	const whats_new = data.posts.filter((post) => post.metadata.title.startsWith('What’s new'));
-	const top = data.posts[0];
+	const whats_new = posts.filter((post) => post.metadata.title.startsWith('What’s new'));
+	const top = posts[0];
 </script>
 
 <svelte:head>
@@ -36,7 +36,7 @@
 
 	<div class="grid">
 		<div class="featured posts">
-			{#each data.posts.slice(1) as post}
+			{#each posts.slice(1) as post}
 				<article
 					class:feature={!post.metadata.title.startsWith('What’s new')}
 					data-pubdate={post.date}

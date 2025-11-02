@@ -1,8 +1,7 @@
 <script lang="ts">
 	import Category from './Category.svelte';
 	import { page } from '$app/state';
-
-	const { data } = $props();
+	import { get_packages } from './data.remote';
 </script>
 
 <svelte:head>
@@ -23,7 +22,7 @@
 	</header>
 
 	<div>
-		{#each data.homepage as category}
+		{#each await get_packages() as category}
 			<Category {...category} open={page.url.hash === `#${category.hash}`} />
 		{/each}
 	</div>
