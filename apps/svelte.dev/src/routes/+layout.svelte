@@ -35,7 +35,8 @@
 		playground: 'Playground',
 		blog: 'Blog',
 		tutorial: 'Tutorial',
-		search: 'Search'
+		search: 'Search',
+		showcase: 'Showcase'
 	};
 </script>
 
