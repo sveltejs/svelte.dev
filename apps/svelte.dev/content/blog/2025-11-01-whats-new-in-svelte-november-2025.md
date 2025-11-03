@@ -66,7 +66,6 @@ _To Read / Watch_
 - [SvelteKit Remote Functions - Interactive Showcase](https://github.com/wiesson/svelte-async-remote-fn) by Arne Wiese
 - [BetterAuth and Google Login on Cloudflare Workers with SvelteKit](https://www.youtube.com/watch?v=zIvGs0FOMvA) by Jilles Soeters
 
-
 ### Libraries, Tools & Components
 
 - [aphex](https://github.com/IcelandicIcecream/aphex) is a modern, extensible headless CMS featuring a portable core package, database/storage agnostic adapters, and a Sanity-inspired admin interface
@@ -77,7 +76,6 @@ _To Read / Watch_
 - [RetroUI](https://retroui-svelte.netlify.app/) is a copy/pastable component library built for Svelte with `shadcn-svelte`
 - [Skeleton](https://github.com/skeletonlabs/skeleton/discussions/3920) - the Svelte-native component library - just released its v5 version with a ton of quality of life improvements
 - [Tanstack Query Svelte v6](https://tanstack.com/query/latest/docs/framework/svelte/migrate-from-v5-to-v6) is now based on the runes syntax
-
 
 That's it for this month! Let us know if we missed anything on [Reddit](https://www.reddit.com/r/sveltejs/) or [Discord](https://discord.gg/svelte).
 
