@@ -1,6 +1,11 @@
 <script>
 	const showcaseItems = [
 		{
+			title: 'Apple App Store',
+			image: '/showcase/apps.apple.png',
+			link: 'https://apps.apple.com/'
+		},
+		{
 			title: 'Apple Music',
 			image: '/showcase/music.apple.png',
 			link: 'https://music.apple.com/'
