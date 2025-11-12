@@ -27,7 +27,7 @@ const plugin: Plugin = {
 			});
 
 			const requires: string[] = [];
-			const exports: string[] = [];
+			const exports: Set<string> = new Set();
 
 			walk(ast as Node, null, {
 				CallExpression: (node, context) => {
@@ -52,9 +52,7 @@ const plugin: Plugin = {
 
 					// Default is a special case (and would result in invalid syntax) and kinda fucked up: https://github.com/evanw/esbuild/issues/1719#issuecomment-953470495
 					if (node.left.property.name !== 'default') {
-						exports.push(
-							`export const ${node.left.property.name} = module.exports.${node.left.property.name};`
-						);
+						exports.add(node.left.property.name);
 					}
 				}
 			});
@@ -76,7 +74,10 @@ const plugin: Plugin = {
 				`const exports = {}; const module = { exports };`,
 				code,
 				`export default module.exports;`,
-				exports.join('\n')
+				...Array.from(exports).map((name) => {
+					const alias = `$$module_exports_${name}`;
+					return `const ${alias} = module.exports.${name}; export { ${alias} as ${name} };`;
+				})
 			].join('\n\n');
 
 			return {
