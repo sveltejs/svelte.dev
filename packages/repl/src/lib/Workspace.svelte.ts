@@ -442,7 +442,23 @@ export class Workspace {
 		if (matching_file) {
 			this.#select(matching_file as File);
 		} else {
-			this.#select(first);
+			// Try to select the first file in the file selector thing.
+			// The file selector lists files in the root directory after all files in
+			// other directories.
+			const top_file = files.filter(is_file).sort((a, b) => {
+				const in_root_dir = x => x.basename === x.name
+
+				if (in_root_dir(a) != in_root_dir(b)) {
+					return in_root_dir(a) - in_root_dir(b)
+				} else if (a.name < b.name) {
+					return -1
+				} else if (a.name > b.name) {
+					return 1
+				else {
+					return 0
+				}
+			})[0]
+			this.#select(top_file);
 		}
 
 		this.#files = files;
