@@ -43,7 +43,7 @@ To use the remote MCP server with Gemini CLI, simply run the following command:
 gemini mcp add -t http -s [scope] svelte https://mcp.svelte.dev/mcp
 ```
 
-The `[scope]` must be `user`, `project` or `local`.
+The `[scope]` must be `user` or `project`.
 
 ## OpenCode
 
