@@ -42,7 +42,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GH_TOKEN }}
           ref: main # Explicitly checkout main branch first
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
