@@ -11,12 +11,16 @@ Svelte provides reactive versions of various built-ins like [`Map`](https://deve
 // @noErrors
 import {
 	MediaQuery,
+	ReactiveCache,
 	SvelteDate,
 	SvelteMap,
 	SvelteSet,
 	SvelteURL,
 	SvelteURLSearchParams,
-	createSubscriber
+	createSubscriber,
+	fetcher,
+	refreshAll,
+	resource
 } from 'svelte/reactivity';
 ```
 
@@ -65,6 +69,34 @@ constructor(query: string, fallback?: boolean | undefined);
 </div>
 
 </div>
+</div></div>
+
+
+
+## ReactiveCache
+
+<div class="ts-block">
+
+```dts
+class ReactiveCache<K = any, V = any> {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+register(key: K, fn: () => V): V;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+[Symbol.iterator](): Generator<V, void, unknown>;
+```
+
+<div class="ts-block-property-details"></div>
 </div></div>
 
 
@@ -399,5 +431,75 @@ function createSubscriber(
 </div>
 
 
+
+## fetcher
+
+<div class="ts-block">
+
+```dts
+function fetcher<TReturn>(
+	url: string | URL,
+	init?: GetRequestInit | undefined
+): Resource<TReturn>;
+```
+
+</div>
+
+
+
+## refreshAll
+
+<div class="ts-block">
+
+```dts
+function refreshAll(): Promise<void>;
+```
+
+</div>
+
+
+
+## resource
+
+<div class="ts-block">
+
+```dts
+function resource<T>(fn: () => T): Resource<T>;
+```
+
+</div>
+
+
+
+## Resource
+
+<div class="ts-block">
+
+```dts
+type Resource<T> = {
+	then: Promise<Awaited<T>>['then'];
+	catch: Promise<Awaited<T>>['catch'];
+	finally: Promise<Awaited<T>>['finally'];
+	refresh: () => Promise<void>;
+	set: (value: Awaited<T>) => void;
+	loading: boolean;
+	error: any;
+	withOverride(
+		fn: (oldValue: Awaited<T>) => Awaited<T>,
+		promise: Promise<Awaited<T>>
+	): void;
+} & (
+	| {
+			ready: false;
+			current: undefined;
+	  }
+	| {
+			ready: true;
+			current: Awaited<T>;
+	  }
+);
+```
+
+</div>
 
 
