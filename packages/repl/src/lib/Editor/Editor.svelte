@@ -55,6 +55,7 @@
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 <div
 	class="container"
+	style="--editor-font-size: {workspace.fontSize}px"
 	bind:this={container}
 	onpointerdown={() => {
 		workspace.enable_tab_indent();
@@ -120,5 +121,9 @@
 
 	.fake-content {
 		padding: 0 1rem;
+	}
+
+	.container :global(.cm-editor .cm-scroller) {
+		font-size: var(--editor-font-size, var(--sk-font-size-mono));
 	}
 </style>
