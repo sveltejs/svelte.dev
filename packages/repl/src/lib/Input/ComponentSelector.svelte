@@ -194,7 +194,7 @@
 					max="128"
 					value={workspace.fontSize}
 					onchange={(ev) => (workspace.fontSize = ev.currentTarget.valueAsNumber)}
-				/>
+				/>px
 			</label>
 
 			{#if download}
