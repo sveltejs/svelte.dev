@@ -72,7 +72,7 @@ _To Read / Watch_
 - [svelte-o-phone](https://github.com/kevwpl/svelte-o-phone) is a flexible, headless phone number input component powered by `libphonenumber-js`
 - [motion-svelte](https://github.com/hanielu/motion-svelte) is an attempt to bring a Motion (formerly known as Framer Motion) to Svelte
 - [better-captcha](https://github.com/LuggaPugga/better-captcha/) provides framework-agnostic wrappers for a bunch of captcha providers
-- [svelte-runtime-template](https://www.npmjs.com/package/svelte-runtime-template) is a lightweight Svelte component for handling tempolates at runtime with curly brace subsitutions in text content
+- [svelte-runtime-template](https://www.npmjs.com/package/svelte-runtime-template) is a lightweight Svelte component for handling templates at runtime with curly brace subsitutions in text content
 - [RetroUI](https://retroui-svelte.netlify.app/) is a copy/pastable component library built for Svelte with `shadcn-svelte`
 - [Skeleton](https://github.com/skeletonlabs/skeleton/discussions/3920) - the Svelte-native component library - just released its v5 version with a ton of quality of life improvements
 - [Tanstack Query Svelte v6](https://tanstack.com/query/latest/docs/framework/svelte/migrate-from-v5-to-v6) is now based on the runes syntax
