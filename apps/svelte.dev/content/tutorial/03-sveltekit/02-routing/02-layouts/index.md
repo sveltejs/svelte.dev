@@ -1,5 +1,6 @@
 ---
 title: Layouts
+editing_constraints: { 'create': ['/src/routes/+layout.svelte'] }
 ---
 
 Different routes of your app will often share common UI. Instead of repeating it in each `+page.svelte` component, we can use a `+layout.svelte` component that applies to all routes in the same directory.
