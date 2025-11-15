@@ -27,7 +27,7 @@ The main shell of the application. It provides a slot for the top navigation, th
 
 <Icons />
 
-{#if $navigating}
+{#if $navigating || $effect.pending()}
 	<PreloadingIndicator />
 {/if}
 

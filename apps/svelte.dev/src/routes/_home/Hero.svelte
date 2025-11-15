@@ -59,13 +59,15 @@
 			height: 200%;
 			left: 0;
 			top: -8rem; /* prevent cutoff on overscroll */
-			background: linear-gradient(to bottom, transparent, var(--sk-bg-1)),
+			background:
+				linear-gradient(to bottom, transparent, var(--sk-bg-1)),
 				radial-gradient(circle at 40% 30%, rgb(235, 243, 249), rgb(214, 222, 228));
 		}
 
 		:root:not(.light) &::before {
 			@media (prefers-color-scheme: dark) {
-				background: linear-gradient(to bottom, transparent, var(--sk-bg-1)),
+				background:
+					linear-gradient(to bottom, transparent, var(--sk-bg-1)),
 					radial-gradient(
 						64.14% 72.25% at 47.58% 31.75%,
 						hsl(209deg 6% 47% / 52%) 0%,
@@ -81,7 +83,8 @@
 			}
 		}
 		:root.dark &::before {
-			background: linear-gradient(to bottom, transparent, var(--sk-bg-1)),
+			background:
+				linear-gradient(to bottom, transparent, var(--sk-bg-1)),
 				radial-gradient(
 					64.14% 72.25% at 47.58% 31.75%,
 					hsl(209deg 6% 47% / 52%) 0%,

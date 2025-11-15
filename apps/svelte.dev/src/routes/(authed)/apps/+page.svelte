@@ -3,8 +3,9 @@
 	import { ago } from '$lib/time';
 	import { goto, invalidateAll } from '$app/navigation';
 	import { get_app_context } from '../app-context.js';
-
-	let { data } = $props();
+	import { get_user } from '$lib/remote/auth.remote.js';
+	import { get_gists } from './data.remote.js';
+	import { page } from '$app/state';
 
 	const { login, logout } = get_app_context();
 
@@ -13,6 +14,17 @@
 	let destroying = $state(false);
 	let selected: string[] = $state([]);
 	const selecting = $derived(selected.length > 0);
+
+	const user = $derived(await get_user());
+
+	const search = page.url.searchParams.get('search') ?? '';
+
+	const { gists, next } = $derived(
+		await get_gists({
+			search,
+			offset: parseInt(page.url.searchParams.get('offset') ?? '0')
+		})
+	);
 
 	async function destroy_selected() {
 		const confirmed = confirm(
@@ -54,17 +66,17 @@
 </svelte:head>
 
 <div class="apps">
-	{#if data.user}
+	{#if user}
 		<header>
 			<h1>Your apps</h1>
 			<div class="user">
 				<img
 					class="avatar"
-					alt="{data.user.github_name || data.user.github_login} avatar"
-					src={data.user.github_avatar_url}
+					alt="{user.github_name || user.github_login} avatar"
+					src={user.github_avatar_url}
 				/>
 				<span>
-					{data.user.github_name || data.user.github_login}
+					{user.github_name || user.github_login}
 					(<a onclick={(e) => (e.preventDefault(), logout())} href="/auth/logout">log out</a>)
 				</span>
 			</div>
@@ -92,15 +104,15 @@
 						placeholder="Search"
 						aria-label="Search"
 						name="search"
-						value={data.search}
+						value={page.url.searchParams.get('search')}
 					/>
 				</form>
 			{/if}
 		</div>
 
-		{#if data.gists.length > 0}
+		{#if gists.length > 0}
 			<ul class:selecting>
-				{#each data.gists as gist}
+				{#each gists as gist}
 					<li class:selected={selected.includes(gist.id)}>
 						<a href={selecting ? undefined : `/playground/${gist.id}`}>
 							<h2>{gist.name}</h2>
@@ -121,12 +133,10 @@
 
 			<div class="pagination">
 				<!-- TODO more sophisticated pagination -->
-				{#if data.next !== null && !selecting}
-					<a
-						href="/apps?offset={data.next}{data.search
-							? `&search=${encodeURIComponent(data.search)}`
-							: ''}">Next page...</a
-					>
+				{#if next !== null && !selecting}
+					<a href="/apps?offset={next}{search ? `&search=${encodeURIComponent(search)}` : ''}">
+						Next page...
+					</a>
 				{/if}
 			</div>
 		{:else}
