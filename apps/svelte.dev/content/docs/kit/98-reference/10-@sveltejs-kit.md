@@ -2836,6 +2836,36 @@ You cannot add a `set-cookie` header with `setHeaders` — use the [`cookies`](/
 <div class="ts-block-property">
 
 ```dts
+setStatusCode: (code: number) => void;
+```
+
+<div class="ts-block-property-details">
+
+Override the status code for error responses. This is useful when you want to customize the HTTP status code returned for an error, for example:
+
+```js
+// @errors: 7031
+/// file: src/hooks.server.js
+export async function handleError({ error, event, status, message }) {
+	// Return 503 Service Unavailable for database errors
+	if (error.message.includes('database')) {
+		event.setStatusCode(503);
+	}
+
+	return {
+		message: 'An error occurred'
+	};
+}
+```
+
+This method should only be called from the `handleError` hook and will only affect error responses.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
 url: URL;
 ```
 
