@@ -279,6 +279,13 @@ namespace AST {
 		data: string;
 	}
 
+	/** An Attribute comment `{/* ... *​/}` */
+	export interface CommentAttribute extends BaseNode {
+		type: 'CommentAttribute';
+		/** the contents of the comment */
+		data: string;
+	}
+
 	/** A `{@const ...}` tag */
 	export interface ConstTag extends BaseNode {
 		type: 'ConstTag';
@@ -634,6 +641,7 @@ namespace AST {
 		| Directive
 		| AST.AttachTag
 		| AST.Comment
+		| AST.CommentAttribute
 		| Block;
 
 	export type SvelteNode =
