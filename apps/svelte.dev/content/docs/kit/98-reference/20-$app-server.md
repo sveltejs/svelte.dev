@@ -74,7 +74,7 @@ Available since 2.27
 
 </blockquote>
 
-Creates a form object that can be spread onto a `<form>` element.
+Creates a factory function that returns form instances which can be spread onto a `<form>` element.
 
 See [Remote functions](/docs/kit/remote-functions#form) for full documentation.
 
@@ -82,10 +82,8 @@ See [Remote functions](/docs/kit/remote-functions#form) for full documentation.
 
 ```dts
 function form<Output>(
-	fn: (
-		invalid: import('@sveltejs/kit').Invalid<void>
-	) => MaybePromise<Output>
-): RemoteForm<void, Output>;
+	fn: () => MaybePromise<Output>
+): RemoteFormFactory<void, Output>;
 ```
 
 </div>
@@ -97,9 +95,9 @@ function form<Input extends RemoteFormInput, Output>(
 	validate: 'unchecked',
 	fn: (
 		data: Input,
-		invalid: import('@sveltejs/kit').Invalid<Input>
+		issue: InvalidField<Input>
 	) => MaybePromise<Output>
-): RemoteForm<Input, Output>;
+): RemoteFormFactory<Input, Output>;
 ```
 
 </div>
@@ -117,11 +115,12 @@ function form<
 	validate: Schema,
 	fn: (
 		data: StandardSchemaV1.InferOutput<Schema>,
-		invalid: import('@sveltejs/kit').Invalid<
-			StandardSchemaV1.InferInput<Schema>
-		>
+		issue: InvalidField<StandardSchemaV1.InferInput<Schema>>
 	) => MaybePromise<Output>
-): RemoteForm<StandardSchemaV1.InferInput<Schema>, Output>;
+): RemoteFormFactory<
+	StandardSchemaV1.InferInput<Schema>,
+	Output
+>;
 ```
 
 </div>

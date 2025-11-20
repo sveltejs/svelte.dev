@@ -12,9 +12,11 @@ import {
 	VERSION,
 	error,
 	fail,
+	invalid,
 	isActionFailure,
 	isHttpError,
 	isRedirect,
+	isValidationError,
 	json,
 	normalizeUrl,
 	redirect,
@@ -128,6 +130,48 @@ function fail<T = undefined>(
 
 
 
+## invalid
+
+<blockquote class="since note">
+
+Available since 2.47.3
+
+</blockquote>
+
+Use this to throw a validation error to imperatively fail form validation.
+Can be used in combination with `issue` passed to form actions to create field-specific issues.
+
+```ts
+import { invalid } from '@sveltejs/kit';
+import { form } from '$app/server';
+import { tryLogin } from '$lib/server/auth';
+import * as v from 'valibot';
+
+export const login = form(
+	v.object({ name: v.string(), _password: v.string() }),
+	async ({ name, _password }) => {
+		const success = tryLogin(name, _password);
+		if (!success) {
+			invalid('Incorrect username or password');
+		}
+
+		// ...
+	}
+);
+```
+
+<div class="ts-block">
+
+```dts
+function invalid(
+	...issues: (StandardSchemaV1.Issue | string)[]
+): never;
+```
+
+</div>
+
+
+
 ## isActionFailure
 
 Checks whether this is an action failure thrown by `fail`.
@@ -169,6 +213,26 @@ Checks whether this is a redirect thrown by `redirect`.
 
 ```dts
 function isRedirect(e: unknown): e is Redirect_1;
+```
+
+</div>
+
+
+
+## isValidationError
+
+<blockquote class="since note">
+
+Available since 2.47.3
+
+</blockquote>
+
+Checks whether this is an validation error thrown by `invalid`.
+
+<div class="ts-block">
+
+```dts
+function isValidationError(e: unknown): e is ActionFailure;
 ```
 
 </div>
@@ -1253,22 +1317,37 @@ The content of the error.
 </div>
 </div></div>
 
-## Invalid
+## InvalidField
 
 A function and proxy object used to imperatively create validation errors in form handlers.
 
-Call `invalid(issue1, issue2, ...issueN)` to throw a validation error.
-If an issue is a `string`, it applies to the form as a whole (and will show up in `fields.allIssues()`)
-Access properties to create field-specific issues: `invalid.fieldName('message')`.
+Access properties to create field-specific issues: `issue.fieldName('message')`.
 The type structure mirrors the input data structure for type-safe field access.
+Call `invalid(issue.foo(...), issue.nested.bar(...))` to throw a validation error.
 
 <div class="ts-block">
 
 ```dts
-type Invalid<Input = any> = ((
-	...issues: Array<string | StandardSchemaV1.Issue>
-) => never) &
-	InvalidField<Input>;
+type InvalidField<T> =
+	WillRecurseIndefinitely<T> extends true
+		? Record<string | number, any>
+		: NonNullable<T> extends
+					| string
+					| number
+					| boolean
+					| File
+			? (message: string) => StandardSchemaV1.Issue
+			: NonNullable<T> extends Array<infer U>
+				? {
+						[K in number]: InvalidField<U>;
+					} & ((message: string) => StandardSchemaV1.Issue)
+				: NonNullable<T> extends RemoteFormInput
+					? {
+							[K in keyof T]-?: InvalidField<T[K]>;
+						} & ((
+							message: string
+						) => StandardSchemaV1.Issue)
+					: Record<string, never>;
 ```
 
 </div>
@@ -2302,7 +2381,7 @@ type RemoteCommand<Input, Output> = {
 
 ## RemoteForm
 
-The return value of a remote `form` function. See [Remote functions](/docs/kit/remote-functions#form) for full documentation.
+The remote form instance created by the form factory function. See [Remote functions](/docs/kit/remote-functions#form) for full documentation.
 
 <div class="ts-block">
 
@@ -2334,35 +2413,12 @@ type RemoteForm<
 		action: string;
 		[attachment: symbol]: (node: HTMLFormElement) => void;
 	};
-	/**
-	 * Create an instance of the form for the given `id`.
-	 * The `id` is stringified and used for deduplication to potentially reuse existing instances.
-	 * Useful when you have multiple forms that use the same remote form action, for example in a loop.
-	 * ```svelte
-	 * {#each todos as todo}
-	 *	{@const todoForm = updateTodo.for(todo.id)}
-	 *	<form {...todoForm}>
-	 *		{#if todoForm.result?.invalid}<p>Invalid data</p>{/if}
-	 *		...
-	 *	</form>
-	 *	{/each}
-	 * ```
-	 */
-	for(
-		id: ExtractId<Input>
-	): Omit<RemoteForm<Input, Output>, 'for'>;
-	/** Preflight checks */
-	preflight(
-		schema: StandardSchemaV1<Input, any>
-	): RemoteForm<Input, Output>;
 	/** Validate the form contents programmatically */
 	validate(options?: {
 		/** Set this to `true` to also show validation issues of fields that haven't been touched yet. */
 		includeUntouched?: boolean;
 		/** Set this to `true` to only run the `preflight` validation. */
 		preflightOnly?: boolean;
-		/** Perform validation as if the form was submitted by the given button. */
-		submitter?: HTMLButtonElement | HTMLInputElement;
 	}): Promise<void>;
 	/** The result of the form submission */
 	get result(): Output | undefined;
@@ -2398,6 +2454,46 @@ type RemoteForm<
 		/** The number of pending submissions */
 		get pending(): number;
 	};
+};
+```
+
+</div>
+
+## RemoteFormFactory
+
+The return value of a remote `form` function. See [Remote functions](/docs/kit/remote-functions#form) for full documentation.
+
+<div class="ts-block">
+
+```dts
+type RemoteFormFactory<
+	Input extends RemoteFormInput | void,
+	Output
+> = (
+	keyOrOptions?:
+		| ExtractId<Input>
+		| RemoteFormFactoryOptions<Input>
+) => RemoteForm<Input, Output>;
+```
+
+</div>
+
+## RemoteFormFactoryOptions
+
+<div class="ts-block">
+
+```dts
+type RemoteFormFactoryOptions<
+	Input extends RemoteFormInput | void
+> = {
+	/** Optional key to create a scoped instance */
+	key?: ExtractId<Input>;
+	/** Client-side preflight schema for validation before submit */
+	preflight?: StandardSchemaV1<Input, any>;
+	/** Initial input values for the form fields */
+	initialData?: DeepPartial<Input>;
+	/** Reset the form values after successful submission, for non-enhanced forms (default: true) */
+	resetAfterSuccess?: boolean;
 };
 ```
 
@@ -3641,6 +3737,29 @@ decode: (data: U) => T;
 <div class="ts-block-property-details"></div>
 </div></div>
 
+## ValidationError
+
+A validation error thrown by `invalid`.
+
+<div class="ts-block">
+
+```dts
+interface ValidationError {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+issues: StandardSchemaV1.Issue[];
+```
+
+<div class="ts-block-property-details">
+
+The validation issues
+
+</div>
+</div></div>
+
 
 
 ## Private types
@@ -4089,6 +4208,40 @@ referrer?: Array<
 
 </div>
 </div></div>
+
+## DeepPartial
+
+<div class="ts-block">
+
+```dts
+type DeepPartial<T> = T extends
+	| Record<PropertyKey, unknown>
+	| unknown[]
+	? {
+			[K in keyof T]?: T[K] extends
+				| Record<PropertyKey, unknown>
+				| unknown[]
+				? DeepPartial<T[K]>
+				: T[K];
+		}
+	: T | undefined;
+```
+
+</div>
+
+## ExtractId
+
+<div class="ts-block">
+
+```dts
+type ExtractId<Input> = Input extends { id: infer Id }
+	? Id extends string | number
+		? Id
+		: string | number
+	: string | number;
+```
+
+</div>
 
 ## HttpMethod
 
