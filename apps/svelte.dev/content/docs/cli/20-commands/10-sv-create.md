@@ -49,7 +49,7 @@ Add add-ons to the project in the `create` command. Following the same format as
 Example:
 
 ```sh
-npx sv create --add eslint prettier
+npx sv create --add eslint prettier [path]
 ```
 
 ### `--no-add-ons`
