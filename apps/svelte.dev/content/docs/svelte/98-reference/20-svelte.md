@@ -1012,6 +1012,45 @@ discard(): void;
 Discard the fork
 
 </div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+isCommitted(): boolean;
+```
+
+<div class="ts-block-property-details">
+
+Whether the fork has been committed
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+isDiscarded(): boolean;
+```
+
+<div class="ts-block-property-details">
+
+Whether the fork has been discarded
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+run(fn: () => void): Promise<void>;
+```
+
+<div class="ts-block-property-details">
+
+Run a function within the forked context.
+
+</div>
 </div></div>
 
 ## MountOptions
