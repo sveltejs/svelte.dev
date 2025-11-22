@@ -14,6 +14,7 @@ import {
 	migrate,
 	parse,
 	preprocess,
+	print,
 	walk
 } from 'svelte/compiler';
 ```
@@ -152,6 +153,21 @@ function preprocess(
 		  }
 		| undefined
 ): Promise<Processed>;
+```
+
+</div>
+
+
+
+## print
+
+<div class="ts-block">
+
+```dts
+function print(ast: AST.SvelteNode): {
+	code: string;
+	map: any;
+};
 ```
 
 </div>
