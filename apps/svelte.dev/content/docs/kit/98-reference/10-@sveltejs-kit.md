@@ -2432,7 +2432,8 @@ type RemoteForm<
 	): Omit<RemoteForm<Input, Output>, 'for'>;
 	/** Preflight checks */
 	preflight(
-		schema: StandardSchemaV1<Input, any>
+		schema: StandardSchemaV1<Input, any>,
+		onError?: () => void
 	): RemoteForm<Input, Output>;
 	/** Validate the form contents programmatically */
 	validate(options?: {
