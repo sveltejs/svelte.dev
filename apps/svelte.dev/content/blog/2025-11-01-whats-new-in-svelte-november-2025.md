@@ -12,7 +12,7 @@ But it's not just AIs that have been writing code; our maintainers have too! Let
 ## What's new in Svelte
 
 - `createContext` passes types with a stored context - replacing the need to type every `getContext` return value (**5.40.0**, [Docs](https://svelte.dev/docs/svelte/svelte#createContext), [#16948](https://github.com/sveltejs/svelte/pull/16948))
-- The `$state.eager(value)` rune will update the UI immediately instead of waiting for the correspnding `await` to resolve (**5.41.0**, [Docs](https://svelte.dev/docs/svelte/$state#$state.eager), [#16849](https://github.com/sveltejs/svelte/pull/16849))
+- The `$state.eager(value)` rune will update the UI immediately instead of waiting for the corresponding `await` to resolve (**5.41.0**, [Docs](https://svelte.dev/docs/svelte/$state#$state.eager), [#16849](https://github.com/sveltejs/svelte/pull/16849))
 - The `fork` API lets you change some state 'offscreen' in such a way that you can discover any async work resulting from the state change without committing it to the screen. (**5.42.0**, [Docs](https://svelte.dev/docs/svelte/await-expressions#Forking), [#17004](https://github.com/sveltejs/svelte/pull/17004))
 
 For a full list of changes - including the dozens of valuable bugfixes that went into the releases this month - check out the Svelte compiler's [CHANGELOG](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md).
@@ -56,7 +56,7 @@ _This Week in Svelte_
 
 _Svelte London - October 2025_
 
-You can [watch the full video on YouTube](https://www.youtube.com/watch?v=fsWp3bvLA4cQ) or skip to the specific talks below:
+You can [watch the full video on YouTube](https://www.youtube.com/watch?v=fsWp3bvLA4c) or skip to the specific talks below:
 
 - [Precision vs Prediction: The Trouble with LLMs and Libraries](https://www.youtube.com/live/fsWp3bvLA4c?si=x0OR5XQVjIo64xjS&t=712) by Maria Gorinova (Tessl AI Research)
 - [Building a game level editor with SvelteKit](https://www.youtube.com/live/fsWp3bvLA4c?si=i_Sgf-kpwV7UVSex&t=3985) by Elliot Bentley
