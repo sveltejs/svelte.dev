@@ -18,7 +18,7 @@ There's a bunch of updates to SvelteKit and a showcase to cover, so lets dive in
   - `invalid` now must be imported from @sveltejs/kit ([#14768](https://github.com/sveltejs/kit/pull/14768))
   - The `submitter` option was removed from the experimental form `validate()` method. It will now always provide default submitter ([#14762](https://github.com/sveltejs/kit/pull/14762))
 - **Svelte CLI:**
-  - Links are now wrapped with `resolve()` to follow best practices (**sv@0.9.14**, [Docs](https://svelte.dev/docs/kit/app-paths#resolve), [#754](https://github.com/sveltejs/cli/pull/754))
+  - Links are now wrapped with `resolve()` to follow best practices (**sv@0.9.14**, [Docs](https://svelte.dev/docs/kit/$app-paths#resolve), [#754](https://github.com/sveltejs/cli/pull/754))
   - `npx sv create` now supports a new argument --add to add add-ons to the project in the same command (**sv@0.10.0**, [#695](https://github.com/sveltejs/cli/pull/695))
   - The new `--no-dir-check` option in sv create will, even if the folder is not empty, suppress all directory check prompts (**sv@0.9.15**, [#785](https://github.com/sveltejs/cli/pull/785))
 
