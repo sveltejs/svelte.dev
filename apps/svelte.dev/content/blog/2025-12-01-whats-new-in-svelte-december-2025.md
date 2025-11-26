@@ -20,7 +20,7 @@ There's a bunch of updates to SvelteKit and a showcase to cover, so lets dive in
 - **Svelte CLI:**
   - Links are now wrapped with `resolve()` to follow best practices (**sv@0.9.14**, [Docs](https://svelte.dev/docs/kit/app-paths#resolve), [#754](https://github.com/sveltejs/cli/pull/754))
   - `npx sv create` now supports a new argument --add to add add-ons to the project in the same command (**sv@0.10.0**, [#695](https://github.com/sveltejs/cli/pull/695))
-  - The new `--no-dir-check` option in sv create will, even if the folder is not empty, suppress all directory chek prompts (**sv@0.9.15**, [#785](https://github.com/sveltejs/cli/pull/785))
+  - The new `--no-dir-check` option in sv create will, even if the folder is not empty, suppress all directory check prompts (**sv@0.9.15**, [#785](https://github.com/sveltejs/cli/pull/785))
 
 For a full list of changes - including the all the important bugfixes that went into the releases this month - check out the Svelte compiler's [CHANGELOG](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md) and the Svelte Kit / Adapter [CHANGELOGs](https://github.com/sveltejs/kit/tree/main/packages).
 
