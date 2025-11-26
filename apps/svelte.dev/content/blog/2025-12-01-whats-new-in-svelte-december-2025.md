@@ -13,6 +13,7 @@ There's a bunch of updates to SvelteKit and a showcase to cover, so lets dive in
 
 ## What's new in Svelte & SvelteKit
 
+- `hydratable` API is a low-level API to coordinate hydration between the server and client (**svelte@5.44.0**, [Docs](https://svelte.dev/docs/svelte/hydratable), [#17154](https://github.com/sveltejs/svelte/pull/17154))
 - File uploads can now be streamed inside `form` remote functions allowing form data to be accessed before large files finish uploading (**kit@2.49.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#form), [#14775](https://github.com/sveltejs/kit/pull/14775))
 - (Minor) Breaking Changes in **kit@2.48.8**:
   - `invalid` now must be imported from @sveltejs/kit ([#14768](https://github.com/sveltejs/kit/pull/14768))
@@ -50,11 +51,11 @@ For a full list of changes - including the all the important bugfixes that went 
 
 ### Libraries, Tools & Components
 
-- [Functorial](https://github.com/fcrozatier/f-stack/blob/main/packages/functorial/README.md) is a proxy-based reactivity system where you not only map the data, but also the behaviors, in a structured, granular, reactive and declarative way
 - [better-svelte-email](https://github.com/Konixy/better-svelte-email) lets you render emails in Svelte with first-class Tailwind support
 - [svelte-number-format](https://www.npmjs.com/package/svelte-number-format) is a lightweight and reactive number input component that is now available as a stable v1.0 release
 - [chain-enhance](https://github.com/michaelcuneo/chain-enhance) lets you sequentially chain multiple SvelteKit form actions with deep-merged data propagation, type-safe results, reactive progress tracking, and automatic file-safety
 - [svelte-socket](https://www.npmjs.com/package/@hardingjam/svelte-socket) is a WebSocket wrapper for Svelte 5 using runes
+- [@edgeone/sveltekit](https://pages.edgeone.ai/document/framework-sveltekit) lets you deploy your SvelteKit app to Tencent Cloud EdgeOne Pages to provide lightning-fast speeds in China while maintaining excellent performance worldwide
 - [Davia](https://github.com/davialabs/davia) is an open-source tool designed for AI coding agents to generate interactive internal documentation for your codebase
 - [svelte-ui-kit](https://github.com/ChulkovDanila/svelte-ui-kit) provides an easy to use, customizable button component with smooth hover animations - inspired by shadcn/ui style
 - [Svelte AI Elements](https://github.com/SikandarJODD/ai-elements) is a component registry built on top of shadcn-svelte that provides production-ready components designed for building AI-powered applications
