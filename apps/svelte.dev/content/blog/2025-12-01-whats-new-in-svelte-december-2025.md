@@ -16,10 +16,10 @@ There's a bunch of updates to SvelteKit and a showcase to cover, so lets dive in
 - File uploads can now be streamed inside `form` remote functions allowing form data to be accessed before large files finish uploading (**kit@2.49.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#form), [#14775](https://github.com/sveltejs/kit/pull/14775))
 - (Minor) Breaking Changes in **kit@2.48.8**:
   - `invalid` now must be imported from @sveltejs/kit ([#14768](https://github.com/sveltejs/kit/pull/14768))
-  - The `submitter` option was removed from the experimental form `validate()` method. It will now always provide default submitter ([#14762](https://github.com/sveltejs/kit/pull/14762))
+  - The `submitter` option was removed from the experimental form `validate()` method. It will now always use the default submitter ([#14762](https://github.com/sveltejs/kit/pull/14762))
 - **Svelte CLI:**
   - Links are now wrapped with `resolve()` to follow best practices (**sv@0.9.14**, [Docs](https://svelte.dev/docs/kit/$app-paths#resolve), [#754](https://github.com/sveltejs/cli/pull/754))
-  - `npx sv create` now supports a new argument --add to add add-ons to the project in the same command (**sv@0.10.0**, [#695](https://github.com/sveltejs/cli/pull/695))
+  - `npx sv create` now supports a new argument `--add` to add add-ons to the project in the same command (**sv@0.10.0**, [#695](https://github.com/sveltejs/cli/pull/695))
   - The new `--no-dir-check` option in sv create will, even if the folder is not empty, suppress all directory check prompts (**sv@0.9.15**, [#785](https://github.com/sveltejs/cli/pull/785))
 
 For a full list of changes - including the all the important bugfixes that went into the releases this month - check out the Svelte compiler's [CHANGELOG](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md) and the Svelte Kit / Adapter [CHANGELOGs](https://github.com/sveltejs/kit/tree/main/packages).
@@ -35,7 +35,7 @@ For a full list of changes - including the all the important bugfixes that went 
 - [ShareNhac](https://www.sharenhac.com/) lets you and your friends watch videos and listen to music together in sync, without any ad interruptions
 - [starterindex](https://starterindex.com/) is a curated list of top boilerplates to help you start your next project (which is great because we stopped putting "starter" repos in the Svelte newsletter over a year ago)
 - [PGPlayground](https://pg.firoz.co/playground) helps any backend engineer quickly prototype and validate fixes or changes to their schema without leaving the browser
-- [Design Tokens App](https://github.com/TrySound/tools-for-web) is a web-based editor and converter to manage design tokens, visualize them in a tree structure, and export them as CSS variables or JSON format
+- [Design Tokens App](https://tools-for-web.netlify.app) is a web-based editor and converter to manage design tokens, visualize them in a tree structure, and export them as CSS variables or JSON format
 - [Multi](https://multi.dev/) is a coding agent for VS Code
 - [Gardenjs](https://gardenjs.org/) provides a centralized platform for developers to create, test, and present UI components and pages in isolation
 - [bookemoji](https://bookemoji.dev/) is a tool to showcase, collaborate, and develop the technical aspects of user interfaces - an alternative to StoryBook.js or Histoire in your favorite tech stack
@@ -53,7 +53,7 @@ For a full list of changes - including the all the important bugfixes that went 
 - [Functorial](https://github.com/fcrozatier/f-stack/blob/main/packages/functorial/README.md) is a proxy-based reactivity system where you not only map the data, but also the behaviors, in a structured, granular, reactive and declarative way
 - [better-svelte-email](https://github.com/Konixy/better-svelte-email) lets you render emails in Svelte with first-class Tailwind support
 - [svelte-number-format](https://www.npmjs.com/package/svelte-number-format) is a lightweight and reactive number input component that is now available as a stable v1.0 release
-- [chain-enhance](https://github.com/michaelcuneo/chain-enhance) lets you sequentially chain multiple SvelteKit 5 form actions with deep-merged data propagation, type-safe results, reactive progress tracking, and automatic file-safety
+- [chain-enhance](https://github.com/michaelcuneo/chain-enhance) lets you sequentially chain multiple SvelteKit form actions with deep-merged data propagation, type-safe results, reactive progress tracking, and automatic file-safety
 - [svelte-socket](https://www.npmjs.com/package/@hardingjam/svelte-socket) is a WebSocket wrapper for Svelte 5 using runes
 - [Davia](https://github.com/davialabs/davia) is an open-source tool designed for AI coding agents to generate interactive internal documentation for your codebase
 - [svelte-ui-kit](https://github.com/ChulkovDanila/svelte-ui-kit) provides an easy to use, customizable button component with smooth hover animations - inspired by shadcn/ui style
