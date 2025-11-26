@@ -37,7 +37,7 @@ For a full list of changes - including the all the important bugfixes that went 
 - [PGPlayground](https://pg.firoz.co/playground) helps any backend engineer quickly prototype and validate fixes or changes to their schema without leaving the browser
 - [Design Tokens App](https://github.com/TrySound/tools-for-web) is a web-based editor and converter to manage design tokens, visualize them in a tree structure, and export them as CSS variables or JSON format
 - [Multi](https://multi.dev/) is a coding agent for VS Code
-- [Gardenjs](https://gardenjs.org/) provides a centralized platform for developers to create, test and present UI components and pages in isolation
+- [Gardenjs](https://gardenjs.org/) provides a centralized platform for developers to create, test, and present UI components and pages in isolation
 - [bookemoji](https://bookemoji.dev/) is a tool to showcase, collaborate, and develop the technical aspects of user interfaces - an alternative to StoryBook.js or Histoire in your favorite tech stack
 
 ### Learning Resources
