@@ -30,7 +30,7 @@ For a full list of changes - including the all the important bugfixes that went 
 
 ### Apps & Sites built with Svelte
 
-- [Apple's new web-based App Store](https://apps.apple.com) is built with Svelte! This adds onto the other Apple products spotted using Svelte in the wild - including Apple Music and Apple Podcasts.
+- [Apple's new web-based App Store](https://apps.apple.com) is built with Svelte! This adds onto the other Apple products spotted using Svelte in the wild - including Apple Music and Apple Podcasts
 - [Aphex](https://getaphex.com/) is a modern, open source headless CMS built with SvelteKit
 - [ShareNhac](https://www.sharenhac.com/) lets you and your friends watch videos and listen to music together in sync, without any ad interruptions
 - [starterindex](https://starterindex.com/) is a curated list of top boilerplates to help you start your next project (which is great because we stopped putting "starter" repos in the Svelte newsletter over a year ago)
