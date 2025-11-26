@@ -5,7 +5,7 @@ author: Dani Sandoval
 authorURL: https://dreamindani.com
 ---
 
-Just in time for the end of the year, there's a new [Svelte Society Website](https://sveltesociety.dev/)!  It brings a whole new experience. Instead of just being a site with static resources, it now serves a dynamic feed of all the latest Svelte content out there. Videos, libraries, events, etc.
+Just in time for the end of the year, there's a new [Svelte Society Website](https://sveltesociety.dev/)! It brings a whole new experience. Instead of just being a site with static resources, it now serves a dynamic feed of all the latest Svelte content out there. Videos, libraries, events, etc.
 
 Instead of opening PRs to add libraries and packages you can now just submit them [on the website](https://sveltesociety.dev/submit). If you find an interesting package, head on over and submit it. Logged in users also have the ability to like and save content. So be sure to try it out and [share your feedback](https://www.reddit.com/r/sveltejs/comments/1ox9znh/announcing_the_new_svelte_society_website/)!
 
@@ -23,7 +23,6 @@ There's a bunch of updates to SvelteKit and a showcase to cover, so lets dive in
   - The new `--no-dir-check` option in sv create will, even if the folder is not empty, suppress all directory chek prompts (**sv@0.9.15**, [#785](https://github.com/sveltejs/cli/pull/785))
 
 For a full list of changes - including the all the important bugfixes that went into the releases this month - check out the Svelte compiler's [CHANGELOG](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md) and the Svelte Kit / Adapter [CHANGELOGs](https://github.com/sveltejs/kit/tree/main/packages).
-
 
 ---
 
@@ -47,13 +46,12 @@ For a full list of changes - including the all the important bugfixes that went 
 - [SvelteKit has solved data loading!](https://www.youtube.com/watch?v=U7ifCxAuuZE) from Syntax
 - [Paolo Ricciuti - Progressively enhanced apps with Svelte](https://www.youtube.com/watch?v=Ji4Y5vo-gOg) at FrontKon#25
 - [Adding Storybook to Svelte Society with Jeppe Reinhold](https://www.youtube.com/watch?v=3u-PXSbU5iA) from Svelte Society (Kev)
--  [How to Navigate Like a Pro in SvelteKit](https://www.youtube.com/watch?v=yRtyjOOAECY) by Thiago Temple
-
+- [How to Navigate Like a Pro in SvelteKit](https://www.youtube.com/watch?v=yRtyjOOAECY) by Thiago Temple
 
 ### Libraries, Tools & Components
 
 - [Functorial](https://github.com/fcrozatier/f-stack/blob/main/packages/functorial/README.md) is a proxy-based reactivity system where you not only map the data, but also the behaviors, in a structured, granular, reactive and declarative way
-- [better-svelte-email](https://github.com/Konixy/better-svelte-email) lets you render emails in Svelte with first-class Tailwind support 
+- [better-svelte-email](https://github.com/Konixy/better-svelte-email) lets you render emails in Svelte with first-class Tailwind support
 - [svelte-number-format](https://www.npmjs.com/package/svelte-number-format) is a lightweight and reactive number input component that is now available as a stable v1.0 release
 - [chain-enhance](https://github.com/michaelcuneo/chain-enhance) lets you sequentially chain multiple SvelteKit 5 form actions with deep-merged data propagation, type-safe results, reactive progress tracking, and automatic file-safety
 - [svelte-socket](https://www.npmjs.com/package/@hardingjam/svelte-socket) is a WebSocket wrapper for Svelte 5 using runes
@@ -64,7 +62,6 @@ For a full list of changes - including the all the important bugfixes that went 
 - [Rune Scroller](https://runescroller.lelab.dev/) provides "enchanting" scroll animations for Svelte 5, built with native performance and zero dependencies
 - [vite-plugin-sveltekit-decorators](https://github.com/KiraPC/vite-plugin-sveltekit-decorators/), a plugin that automatically decorates SvelteKit functions, now supports remote functions
 - [svelte-breakpoint-badge](https://github.com/AnakKucingTerbang/svelte-breakpoint-badge) is a lightweight Svelte component that displays the current Tailwind CSS breakpoint during development
-
 
 That's it for this month! Let us know if we missed anything on [Reddit](https://www.reddit.com/r/sveltejs/) or [Discord](https://discord.gg/svelte).
 
