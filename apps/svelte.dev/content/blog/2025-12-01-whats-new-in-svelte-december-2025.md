@@ -14,6 +14,7 @@ There's a bunch of updates to SvelteKit and a showcase to cover, so lets dive in
 ## What's new in Svelte & SvelteKit
 
 - `hydratable` API is a low-level API to coordinate hydration between the server and client (**svelte@5.44.0**, [Docs](https://svelte.dev/docs/svelte/hydratable), [#17154](https://github.com/sveltejs/svelte/pull/17154))
+- `print` converts a Svelte AST node back into Svelte source code. It is primarily intended for tools that parse and transform components using the compiler’s modern AST representation (**svelte@5.45.0**, [Docs](https://svelte.dev/docs/svelte/svelte-compiler#print), [#16188](https://github.com/sveltejs/svelte/pull/16188))
 - File uploads can now be streamed inside `form` remote functions allowing form data to be accessed before large files finish uploading (**kit@2.49.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#form), [#14775](https://github.com/sveltejs/kit/pull/14775))
 - (Minor) Breaking Changes in **kit@2.48.8**:
   - `invalid` now must be imported from @sveltejs/kit ([#14768](https://github.com/sveltejs/kit/pull/14768))
