@@ -5,7 +5,7 @@
 	"authors": ["tannerlinsley", "kylemathews"],
 	"homepage": "https://tanstack.com/table",
 	"version": "8.21.3",
-	"downloads": 13433,
+	"downloads": 11881,
 	"github_stars": 27295,
 	"updated": "2025-04-14T20:20:26.877Z",
 	"svelte_range": "^4.0.0 || ^3.49.0",

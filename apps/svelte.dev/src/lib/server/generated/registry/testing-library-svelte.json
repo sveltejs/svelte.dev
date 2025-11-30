@@ -22,7 +22,7 @@
 	],
 	"homepage": "https://github.com/testing-library/svelte-testing-library#readme",
 	"version": "5.2.9",
-	"downloads": 241966,
+	"downloads": 235569,
 	"github_stars": 651,
 	"updated": "2025-11-12T19:24:19.060Z",
 	"svelte_range": "^3 || ^4 || ^5 || ^5.0.0-next.0",
