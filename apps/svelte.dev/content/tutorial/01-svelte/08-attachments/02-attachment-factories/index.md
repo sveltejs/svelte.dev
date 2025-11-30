@@ -1,5 +1,5 @@
 ---
-title: Adding parameters
+title: Attachment factories
 ---
 
 Like transitions and animations, an action can take an argument, which the action function will be called with alongside the element it belongs to.
