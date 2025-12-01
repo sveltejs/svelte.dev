@@ -14,7 +14,7 @@ function tooltip(---node---) {
 +++	return (node) => {+++
 		const tooltip = tippy(node);
 		return tooltip.destroy;
-+++	}+++
++++	};+++
 }
 ```
 
@@ -26,7 +26,7 @@ function tooltip(+++content+++) {
 	return (node) => {
 		const tooltip = tippy(node+++, { content }+++);
 		return tooltip.destroy;
-	}
+	};
 }
 ```
 

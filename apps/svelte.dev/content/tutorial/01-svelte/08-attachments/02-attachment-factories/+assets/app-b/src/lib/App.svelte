@@ -7,7 +7,7 @@
 		return (node) => {
 			const tooltip = tippy(node, { content });
 			return tooltip.destroy;
-		}
+		};
 	}
 </script>
 
