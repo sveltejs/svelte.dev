@@ -2,7 +2,7 @@
 title: The attach tag
 ---
 
-Actions are essentially element-level lifecycle functions. They're useful for things like:
+Attachments are essentially element-level lifecycle functions. They're useful for things like:
 
 - interfacing with third-party libraries
 - lazy-loaded images
@@ -11,7 +11,7 @@ Actions are essentially element-level lifecycle functions. They're useful for th
 
 In this app, you can scribble on the `<canvas>`, and change colours and brush size via the menu. But if you open the menu and cycle through the options with the Tab key, you'll soon find that the focus isn't _trapped_ inside the modal.
 
-We can fix that with an action. Import `trapFocus` from `attachments.svelte.js`...
+We can fix that with an attachment. Import `trapFocus` from `attachments.svelte.js`...
 
 ```svelte
 /// file: App.svelte
@@ -27,14 +27,14 @@ We can fix that with an action. Import `trapFocus` from `attachments.svelte.js`.
 </script>
 ```
 
-...then add it to the menu with the `use:` directive:
+...then add it to the menu with the `{@attach}` tag:
 
 ```svelte
 /// file: App.svelte
-<div class="menu" +++use:trapFocus+++>
+<div class="menu" +++{@attach trapFocus}+++>
 ```
 
-Let's take a look at the `trapFocus` function in `attachments.svelte.js`. An action function is called with a `node` — the `<div class="menu">` in our case — when the node is mounted to the DOM. Inside the action, we have an [effect](effects).
+Let's take a look at the `trapFocus` function in `attachments.svelte.js`. An attachment function is called with a `node` — the `<div class="menu">` in our case — when the node is mounted to the DOM. Attachments run inside an [effect](effects), so they re-run whenever any state read inside the function changes.
 
 First, we need to add an event listener that intercepts Tab key presses:
 
@@ -42,20 +42,22 @@ First, we need to add an event listener that intercepts Tab key presses:
 /// file: attachments.svelte.js
 $effect(() => {
 	focusable()[0]?.focus();
-	+++node.addEventListener('keydown', handleKeydown);+++
+	+++const off = on(node, 'keydown', handleKeydown);+++
 });
 ```
 
-Second, we need to do some cleanup when the node is unmounted — removing the event listener, and restoring focus to where it was before the element mounted:
+> [!NOTE] [`on`](/docs/svelte/svelte-events#on) is a wrapper around `addEventListener` that uses <a href="https://javascript.info/event-delegation" target="_blank" rel="noreferrer">event delegation</a>. It returns a function that removes the handler.
+
+Second, we need to do some cleanup when the node is unmounted — removing the event listener, and restoring focus to where it was before the element mounted. As with effects, an attachment can return a teardown function, which runs immediately before the attachment re-runs or after the element is removed from the DOM:
 
 ```js
 /// file: attachments.svelte.js
 $effect(() => {
 	focusable()[0]?.focus();
-	node.addEventListener('keydown', handleKeydown);
+	const off = on(node, 'keydown', handleKeydown);
 
 +++	return () => {
-		node.removeEventListener('keydown', handleKeydown);
+		off();
 		previous?.focus();
 	};+++
 });

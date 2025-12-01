@@ -27,7 +27,7 @@
 				}
 			}}
 		>
-			<div class="menu" use:trapFocus>
+			<div class="menu" {@attach trapFocus}>
 				<div class="colors">
 					{#each colors as color}
 						<button
