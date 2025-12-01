@@ -40,10 +40,8 @@ First, we need to add an event listener that intercepts Tab key presses:
 
 ```js
 /// file: attachments.svelte.js
-$effect(() => {
-	focusable()[0]?.focus();
-	+++const off = on(node, 'keydown', handleKeydown);+++
-});
+focusable()[0]?.focus();
++++const off = on(node, 'keydown', handleKeydown);+++
 ```
 
 > [!NOTE] [`on`](/docs/svelte/svelte-events#on) is a wrapper around `addEventListener` that uses <a href="https://javascript.info/event-delegation" target="_blank" rel="noreferrer">event delegation</a>. It returns a function that removes the handler.
@@ -52,15 +50,13 @@ Second, we need to do some cleanup when the node is unmounted — removing the e
 
 ```js
 /// file: attachments.svelte.js
-$effect(() => {
-	focusable()[0]?.focus();
-	const off = on(node, 'keydown', handleKeydown);
+focusable()[0]?.focus();
+const off = on(node, 'keydown', handleKeydown);
 
-+++	return () => {
-		off();
-		previous?.focus();
-	};+++
-});
++++return () => {
+	off();
+	previous?.focus();
+};+++
 ```
 
 Now, when you open the menu, you can cycle through the options with the Tab key.
