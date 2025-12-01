@@ -2,32 +2,41 @@
 title: Attachment factories
 ---
 
-Like transitions and animations, an action can take an argument, which the action function will be called with alongside the element it belongs to.
+Often, you need an attachment to depend on some parameters or component state. In this scenario, you can use an [attachment factory](/docs/svelte/@attach#Attachment-factories) — a function that _returns_ an attachment.
 
-In this exercise, we want to add a tooltip to the `<button>` using the [`Tippy.js`](https://atomiks.github.io/tippyjs/) library. The action is already wired up with `use:tooltip`, but if you hover over the button (or focus it with the keyboard) the tooltip contains no content.
+In this exercise, we want to add a tooltip to the `<button>` using the [`Tippy.js`](https://atomiks.github.io/tippyjs/) library. The attachment is already wired up with `{@attach tooltip}`, but if you hover over the button (or focus it with the keyboard) the tooltip contains no content.
 
-First, the action needs to accept a function that returns some options to pass to Tippy:
+First, we need to convert our simple attachment into a _factory_ function that returns an attachment.
 
 ```js
 /// file: App.svelte
-function tooltip(node, +++fn+++) {
-	$effect(() => {
-		const tooltip = tippy(node, +++fn()+++);
-
+function tooltip(---node---) {
++++	return (node) => {+++
+		const tooltip = tippy(node);
 		return tooltip.destroy;
-	});
++++	}+++
 }
 ```
 
-> [!NOTE] We're passing in a function, rather than the options themselves, because the `tooltip` function does not re-run when the options change.
+Next, the factory needs to accept the options we want to pass to Tippy (in this case just `content`):
 
-Then, we need to pass the options into the action:
+```js
+/// file: App.svelte
+function tooltip(+++content+++) {
+	return (node) => {
+		const tooltip = tippy(node+++, { content }+++);
+		return tooltip.destroy;
+	}
+}
+```
+
+> [!NOTE] The `tooltip(content)` expression runs inside an effect, so the attachment is destroyed and recreated whenever content changes.
+
+Finally, we need to call the attachment factory and pass the `content` argument in our `{@attach}` tag:
 
 ```svelte
 /// file: App.svelte
-<button use:tooltip+++={() => ({ content })}+++>
+<button {@attach tooltip+++(content)+++}>
 	Hover me
 </button>
 ```
-
-> [!NOTE] In Svelte 4, actions returned an object with `update` and `destroy` methods. This still works but we recommend using `$effect` instead, as it provides more flexibility and granularity.
