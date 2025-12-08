@@ -14,7 +14,6 @@ import {
 	migrate,
 	parse,
 	preprocess,
-	print,
 	walk
 } from 'svelte/compiler';
 ```
@@ -153,31 +152,6 @@ function preprocess(
 		  }
 		| undefined
 ): Promise<Processed>;
-```
-
-</div>
-
-
-
-## print
-
-`print` converts a Svelte AST node back into Svelte source code.
-It is primarily intended for tools that parse and transform components using the compiler’s modern AST representation.
-
-`print(ast)` requires an AST node produced by parse with modern: true, or any sub-node within that modern AST.
-The result contains the generated source and a corresponding source map.
-The output is valid Svelte, but formatting details such as whitespace or quoting may differ from the original.
-
-<div class="ts-block">
-
-```dts
-function print(
-	ast: AST.SvelteNode,
-	options?: Options | undefined
-): {
-	code: string;
-	map: any;
-};
 ```
 
 </div>
@@ -341,7 +315,7 @@ namespace AST {
 	}
 
 	/** An `animate:` directive */
-	export interface AnimateDirective extends BaseAttribute {
+	export interface AnimateDirective extends BaseNode {
 		type: 'AnimateDirective';
 		/** The 'x' in `animate:x` */
 		name: string;
@@ -350,7 +324,7 @@ namespace AST {
 	}
 
 	/** A `bind:` directive */
-	export interface BindDirective extends BaseAttribute {
+	export interface BindDirective extends BaseNode {
 		type: 'BindDirective';
 		/** The 'x' in `bind:x` */
 		name: string;
@@ -362,7 +336,7 @@ namespace AST {
 	}
 
 	/** A `class:` directive */
-	export interface ClassDirective extends BaseAttribute {
+	export interface ClassDirective extends BaseNode {
 		type: 'ClassDirective';
 		/** The 'x' in `class:x` */
 		name: 'class';
@@ -371,7 +345,7 @@ namespace AST {
 	}
 
 	/** A `let:` directive */
-	export interface LetDirective extends BaseAttribute {
+	export interface LetDirective extends BaseNode {
 		type: 'LetDirective';
 		/** The 'x' in `let:x` */
 		name: string;
@@ -384,7 +358,7 @@ namespace AST {
 	}
 
 	/** An `on:` directive */
-	export interface OnDirective extends BaseAttribute {
+	export interface OnDirective extends BaseNode {
 		type: 'OnDirective';
 		/** The 'x' in `on:x` */
 		name: string;
@@ -404,7 +378,7 @@ namespace AST {
 	}
 
 	/** A `style:` directive */
-	export interface StyleDirective extends BaseAttribute {
+	export interface StyleDirective extends BaseNode {
 		type: 'StyleDirective';
 		/** The 'x' in `style:x` */
 		name: string;
@@ -418,8 +392,7 @@ namespace AST {
 
 	// TODO have separate in/out/transition directives
 	/** A `transition:`, `in:` or `out:` directive */
-	export interface TransitionDirective
-		extends BaseAttribute {
+	export interface TransitionDirective extends BaseNode {
 		type: 'TransitionDirective';
 		/** The 'x' in `transition:x` */
 		name: string;
@@ -433,7 +406,7 @@ namespace AST {
 	}
 
 	/** A `use:` directive */
-	export interface UseDirective extends BaseAttribute {
+	export interface UseDirective extends BaseNode {
 		type: 'UseDirective';
 		/** The 'x' in `use:x` */
 		name: string;
@@ -441,9 +414,8 @@ namespace AST {
 		expression: null | Expression;
 	}
 
-	export interface BaseElement extends BaseNode {
+	interface BaseElement extends BaseNode {
 		name: string;
-		name_loc: SourceLocation;
 		attributes: Array<
 			Attribute | SpreadAttribute | Directive | AttachTag
 		>;
@@ -570,13 +542,9 @@ namespace AST {
 		body: Fragment;
 	}
 
-	export interface BaseAttribute extends BaseNode {
-		name: string;
-		name_loc: SourceLocation | null;
-	}
-
-	export interface Attribute extends BaseAttribute {
+	export interface Attribute extends BaseNode {
 		type: 'Attribute';
+		name: string;
 		/**
 		 * Quoted/string values are represented by an array, even if they contain a single expression like `"{x}"`
 		 */
