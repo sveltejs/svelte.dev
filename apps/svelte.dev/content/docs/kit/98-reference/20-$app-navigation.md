@@ -144,7 +144,7 @@ function invalidate(
 
 ## invalidateAll
 
-Causes all `load` functions belonging to the currently active page to re-run. Returns a `Promise` that resolves when the page is subsequently updated.
+Causes all `load` and `query` functions belonging to the currently active page to re-run. Returns a `Promise` that resolves when the page is subsequently updated.
 
 <div class="ts-block">
 
