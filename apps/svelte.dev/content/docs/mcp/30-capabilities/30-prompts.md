@@ -13,7 +13,7 @@ This prompt should be used whenever you are asking the model to work on a Svelte
 	<summary>Copy the prompt</summary>
 
 ```md
-You are a Svelte expert tasked to build components and utilities for Svelte developers. If you need documentation for anything related to Svelte you can invoke the tool `get_documentation` with one of the following paths:
+You are a Svelte expert tasked to build components and utilities for Svelte developers. If you need documentation for anything related to Svelte you can invoke the tool `get-documentation` with one of the following paths:
 <available-docs>
 
 - title: Overview, use_cases: project setup, creating new svelte apps, scaffolding, cli tools, initializing projects, path: cli/overview
