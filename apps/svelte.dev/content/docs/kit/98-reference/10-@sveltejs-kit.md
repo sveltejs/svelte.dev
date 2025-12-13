@@ -2381,7 +2381,7 @@ type RemoteCommand<Input, Output> = {
 
 ## RemoteForm
 
-The return value of a remote `form` function. See [Remote functions](/docs/kit/remote-functions#form) for full documentation.
+The remote form instance created by the form factory function. See [Remote functions](/docs/kit/remote-functions#form) for full documentation.
 
 <div class="ts-block">
 
@@ -2413,27 +2413,6 @@ type RemoteForm<
 		action: string;
 		[attachment: symbol]: (node: HTMLFormElement) => void;
 	};
-	/**
-	 * Create an instance of the form for the given `id`.
-	 * The `id` is stringified and used for deduplication to potentially reuse existing instances.
-	 * Useful when you have multiple forms that use the same remote form action, for example in a loop.
-	 * ```svelte
-	 * {#each todos as todo}
-	 *	{@const todoForm = updateTodo.for(todo.id)}
-	 *	<form {...todoForm}>
-	 *		{#if todoForm.result?.invalid}<p>Invalid data</p>{/if}
-	 *		...
-	 *	</form>
-	 *	{/each}
-	 * ```
-	 */
-	for(
-		id: ExtractId<Input>
-	): Omit<RemoteForm<Input, Output>, 'for'>;
-	/** Preflight checks */
-	preflight(
-		schema: StandardSchemaV1<Input, any>
-	): RemoteForm<Input, Output>;
 	/** Validate the form contents programmatically */
 	validate(options?: {
 		/** Set this to `true` to also show validation issues of fields that haven't been touched yet. */
@@ -2475,6 +2454,46 @@ type RemoteForm<
 		/** The number of pending submissions */
 		get pending(): number;
 	};
+};
+```
+
+</div>
+
+## RemoteFormFactory
+
+The return value of a remote `form` function. See [Remote functions](/docs/kit/remote-functions#form) for full documentation.
+
+<div class="ts-block">
+
+```dts
+type RemoteFormFactory<
+	Input extends RemoteFormInput | void,
+	Output
+> = (
+	keyOrOptions?:
+		| ExtractId<Input>
+		| RemoteFormFactoryOptions<Input>
+) => RemoteForm<Input, Output>;
+```
+
+</div>
+
+## RemoteFormFactoryOptions
+
+<div class="ts-block">
+
+```dts
+type RemoteFormFactoryOptions<
+	Input extends RemoteFormInput | void
+> = {
+	/** Optional key to create a scoped instance */
+	key?: ExtractId<Input>;
+	/** Client-side preflight schema for validation before submit */
+	preflight?: StandardSchemaV1<Input, any>;
+	/** Initial input values for the form fields */
+	initialData?: DeepPartial<Input>;
+	/** Reset the form values after successful submission, for non-enhanced forms (default: true) */
+	resetAfterSuccess?: boolean;
 };
 ```
 
@@ -4189,6 +4208,40 @@ referrer?: Array<
 
 </div>
 </div></div>
+
+## DeepPartial
+
+<div class="ts-block">
+
+```dts
+type DeepPartial<T> = T extends
+	| Record<PropertyKey, unknown>
+	| unknown[]
+	? {
+			[K in keyof T]?: T[K] extends
+				| Record<PropertyKey, unknown>
+				| unknown[]
+				? DeepPartial<T[K]>
+				: T[K];
+		}
+	: T | undefined;
+```
+
+</div>
+
+## ExtractId
+
+<div class="ts-block">
+
+```dts
+type ExtractId<Input> = Input extends { id: infer Id }
+	? Id extends string | number
+		? Id
+		: string | number
+	: string | number;
+```
+
+</div>
 
 ## HttpMethod
 
