@@ -26,6 +26,7 @@
 	let terminal_visible = $state(false);
 
 	// reset `path` to `exercise.path` each time, but allow it to be controlled by the iframe
+	// svelte-ignore state_referenced_locally
 	let path = $state(exercise.path);
 
 	onMount(() => {

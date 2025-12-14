@@ -3,8 +3,10 @@
 
 	let { data } = $props();
 
-	const featured = data.posts.filter((post) => !post.metadata.title.startsWith('What’s new'));
+	// svelte-ignore state_referenced_locally
 	const whats_new = data.posts.filter((post) => post.metadata.title.startsWith('What’s new'));
+
+	// svelte-ignore state_referenced_locally
 	const top = data.posts[0];
 </script>
 
