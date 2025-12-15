@@ -44,6 +44,7 @@ export interface DocumentSummary {
 export interface Section {
 	slug: string;
 	title: string;
+	subsections: Omit<Section, 'subsections'>[];
 }
 
 export interface BannerData {
