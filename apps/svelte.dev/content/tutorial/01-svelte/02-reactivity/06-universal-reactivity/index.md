@@ -26,4 +26,4 @@ Then, update the import declaration in `Counter.svelte`:
 
 Now, when you click any button, all three update simultaneously.
 
-> [!NOTE] You cannot export a `$state` declaration from a module if the declaration is reassigned (rather than just mutated), because the importers would have no way to know about it.
+> [!NOTE] You cannot export a `$state` declaration from a module if the declaration is reassigned (rather than just mutated), because the importers would have no way to know about it and attempting to do so would cause a compilation error since imports cannot be reassigned in JavaScript modules.
