@@ -18,6 +18,7 @@
 
 	let { links, current, onclose }: Props = $props();
 
+	// svelte-ignore state_referenced_locally
 	let show_context_menu = $state(!!current?.sections);
 
 	let nav_context_instance: ReturnType<typeof MobileSubMenu> | undefined = $state();
@@ -28,6 +29,7 @@
 
 	let universal_menu: HTMLElement | undefined = $state();
 
+	// svelte-ignore state_referenced_locally
 	afterNavigate(onclose);
 
 	$effect(() => {
