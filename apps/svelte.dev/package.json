@@ -75,7 +75,7 @@
 		"satori": "^0.10.13",
 		"satori-html": "^0.3.2",
 		"sv": "^0.9.2",
-		"svelte": "^5.40.0",
+		"svelte": "^5.46.0",
 		"svelte-check": "^4.3.1",
 		"svelte-preprocess": "^6.0.3",
 		"tiny-glob": "^0.2.9",
