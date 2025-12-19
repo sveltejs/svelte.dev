@@ -59,6 +59,7 @@
 
 	const workspace: Workspace = new Workspace([dummy], {
 		initial: 'App.svelte',
+		// svelte-ignore state_referenced_locally
 		svelte_version: svelteVersion,
 		onupdate() {
 			rebundle();
@@ -138,6 +139,7 @@
 
 	const bundler = BROWSER
 		? new Bundler({
+				// svelte-ignore state_referenced_locally
 				svelte_version: svelteVersion,
 				onversion: (version) => {
 					workspace.set_svelte_version(version);
