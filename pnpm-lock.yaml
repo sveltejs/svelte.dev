@@ -195,9 +195,6 @@ importers:
       tiny-glob:
         specifier: ^0.2.9
         version: 0.2.9
-      tsx:
-        specifier: ^4.19.0
-        version: 4.20.4
       typescript:
         specifier: ^5.5.4
         version: 5.8.2
@@ -4713,6 +4710,7 @@ snapshots:
   get-tsconfig@4.10.1:
     dependencies:
       resolve-pkg-maps: 1.0.0
+    optional: true
 
   gifwrap@0.10.1:
     dependencies:
@@ -5231,7 +5229,8 @@ snapshots:
 
   resolve-from@5.0.0: {}
 
-  resolve-pkg-maps@1.0.0: {}
+  resolve-pkg-maps@1.0.0:
+    optional: true
 
   resolve.exports@2.0.2: {}
 
@@ -5549,6 +5548,7 @@ snapshots:
       get-tsconfig: 4.10.1
     optionalDependencies:
       fsevents: 2.3.3
+    optional: true
 
   twoslash-protocol@0.3.1: {}
 
