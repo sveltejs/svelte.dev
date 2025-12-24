@@ -97,50 +97,35 @@ export function remove_section(slug: string) {
 }
 
 /**
- * Build a map of all documented exports/types to their reference page URLs.
- * This allows dynamic linking in twoslash tooltips.
- * Prioritizes main API pages (@sveltejs-kit, svelte, $app/*) over type definition pages.
- * MUST be called after create_docs() to use the clean docs.pages slugs.
+ * Builds a map of documented exports/types to their reference page URLs.
+ * Prioritizes main API pages over type definition pages and legacy pages.
  */
 function buildReferenceMapFromDocs(docs: Record<string, Document>): Record<string, string> {
 	const map: Record<string, string> = {};
-	const typePages: Array<{ key: string; url: string }> = [];
+	const deferred: Array<{ key: string; url: string }> = [];
 
-	// Find all reference pages using the docs.pages structure which has clean URLs
 	for (const [slug, doc] of Object.entries(docs)) {
-		// Check if this is a reference page by looking at the file path
 		if (!doc.file.includes('/98-reference/')) continue;
 
-		// The slug is already clean (e.g., "docs/kit/@sveltejs-kit")
 		const baseUrl = `/${slug}`;
-
-		// Determine priority of this page
 		const isTypesPage =
 			slug.includes('/types') || doc.metadata.title?.toLowerCase().includes('types');
-
-		// $app-stores is legacy, $app-state is newer - prioritize state
 		const isLegacyStoresPage = slug.includes('/$app-stores');
+		const isLowPriority = isTypesPage || isLegacyStoresPage;
 
-		// Extract all ## sections (these are the exported functions/types)
 		for (const section of doc.sections) {
-			// section.slug is the anchor (e.g., "error")
-			// section.title is the display name (e.g., "error")
-			// Keep case-sensitive to distinguish between error (function) and Error (type)
-			const key = section.title;
 			const url = `${baseUrl}#${section.slug}`;
-
-			if (isTypesPage || isLegacyStoresPage) {
-				// Store lower priority pages separately to add them later
-				typePages.push({ key, url });
+			// Defer low-priority pages (types, legacy) so main API pages take precedence
+			if (isLowPriority) {
+				deferred.push({ key: section.title, url });
 			} else {
-				// Main API pages take priority - overwrite any existing entry
-				map[key] = url;
+				map[section.title] = url;
 			}
 		}
 	}
 
-	// Add type pages only if the key doesn't already exist (lower priority)
-	for (const { key, url } of typePages) {
+	// Fill in gaps with deferred pages only if not already present
+	for (const { key, url } of deferred) {
 		if (!map[key]) {
 			map[key] = url;
 		}
@@ -214,8 +199,6 @@ export function create_summary(document: Document): DocumentSummary {
 }
 
 export const docs = create_docs();
-
-// Build reference map AFTER docs are created, using the clean docs.pages slugs
 export const referenceMap = buildReferenceMapFromDocs(docs.pages);
 
 export const examples = index.examples.children;

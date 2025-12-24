@@ -8,7 +8,7 @@ import * as marked from 'marked';
 import { createHighlighterCore } from 'shiki/core';
 import { createOnigurumaEngine } from 'shiki/engine/oniguruma';
 import { createCssVariablesTheme } from 'shiki';
-import { transformerTwoslash } from '@shikijs/twoslash';
+import { transformerTwoslash, rendererRich } from '@shikijs/twoslash';
 import { SHIKI_LANGUAGE_MAP, slugify, smart_quotes, transform } from './utils.ts';
 
 interface SnippetOptions {
@@ -211,42 +211,27 @@ const snippets = await create_snippet_cache();
  * @param {Record<string, string>} [referenceMap] - Optional map of symbol names to their documentation URLs for dynamic reference links in twoslash tooltips.
  */
 /**
- * Extract all imported symbols from raw source code
- * Handles both JS/TS and Svelte files
+ * Extracts imported symbol names from source code (handles both JS/TS and Svelte files).
+ * Only tracks imports from documented modules to avoid linking to external symbols.
  */
 function extractImportedSymbols(source: string): Set<string> {
 	const imported = new Set<string>();
-
-	// For Svelte files, extract imports from <script> tags
-	let codeToScan = source;
 	const scriptMatch = source.match(/<script[^>]*>([\s\S]+?)<\/script>/);
-	if (scriptMatch) {
-		codeToScan = scriptMatch[1];
-	}
-
-	// Match import statements: import { a, b, c } from '...'
-	// Also handle: import type { ... }, import { type X, Y }
+	const codeToScan = scriptMatch ? scriptMatch[1] : source;
 	const importRegex = /import\s+(?:type\s+)?{([^}]+)}\s+from\s+['"]([^'"]+)['"]/g;
 
 	for (const match of codeToScan.matchAll(importRegex)) {
-		const imports = match[1];
-		const module = match[2];
+		const [, imports, module] = match;
+		const documentedModules = ['svelte', '@sveltejs/kit', '$app/', '$env/', '$service-worker'];
+		if (!documentedModules.some((prefix) => module.startsWith(prefix))) continue;
 
-		// Only track imports from documented modules
-		const isDocumentedModule =
-			module.startsWith('svelte') ||
-			module.startsWith('@sveltejs/kit') ||
-			module.startsWith('$app/') ||
-			module.startsWith('$env/') ||
-			module.startsWith('$service-worker');
-
-		if (!isDocumentedModule) continue;
-
-		// Parse the imported names, handling: { a, b as c, type d }
+		// Extract symbol names, handling: { a, b as c, type d }
 		for (const item of imports.split(',')) {
-			const cleaned = item.trim().replace(/^type\s+/, '');
-			// Handle: "name" or "name as alias"
-			const name = cleaned.split(/\s+as\s+/)[0].trim();
+			const name = item
+				.trim()
+				.replace(/^type\s+/, '')
+				.split(/\s+as\s+/)[0]
+				.trim();
 			if (name) imported.add(name);
 		}
 	}
@@ -255,33 +240,29 @@ function extractImportedSymbols(source: string): Set<string> {
 }
 
 /**
- * Helper function to inject reference links into twoslash popups
- * Only adds links for symbols that were actually imported
+ * Injects reference links into twoslash popup tooltips.
+ * Uses rendererRich structure: <span class="twoslash-hover"><span class="twoslash-popup-container">...</span>symbol</span>
+ * Only adds links for symbols that were actually imported in the code snippet.
  */
 function injectReferenceLinks(
 	html: string,
 	referenceMap?: Record<string, string>,
 	importedSymbols?: Set<string>
 ): string {
-	if (!referenceMap || !importedSymbols) return html;
+	if (!referenceMap || !importedSymbols || html.includes('twoslash-popup-reference')) {
+		return html;
+	}
 
-	// Quick check: if reference links already exist, don't process again
-	if (html.includes('twoslash-popup-reference')) return html;
+	const insertions: Array<{ index: number; div: string }> = [];
 
-	const positions: Array<{ index: number; referenceDiv: string }> = [];
-	let popupCount = 0;
-
-	// Find all popup containers
-	// The structure is: <span class="twoslash-hover"><span class="twoslash-popup-container">...</span>symbolName</span>
+	// Find all popup containers (rendererRich structure)
 	for (const match of html.matchAll(/<span class="twoslash-popup-container">/g)) {
-		popupCount++;
-		const popupStartIdx = match.index! + match[0].length;
-
-		// Find the matching closing </span> by counting depth
+		const startIdx = match.index! + match[0].length;
 		let depth = 1;
-		let pos = popupStartIdx;
+		let pos = startIdx;
 		let endIdx = -1;
 
+		// Track nested span depth to find the matching closing </span>
 		while (depth > 0 && pos < html.length) {
 			const openIdx = html.indexOf('<span', pos);
 			const closeIdx = html.indexOf('</span>', pos);
@@ -292,41 +273,34 @@ function injectReferenceLinks(
 				pos = openIdx + '<span'.length;
 			} else {
 				depth--;
-				if (depth === 0) {
-					endIdx = closeIdx;
-				}
+				if (depth === 0) endIdx = closeIdx;
 				pos = closeIdx + '</span>'.length;
 			}
 		}
 
 		if (endIdx === -1) continue;
 
-		// Now extract the symbol name - it's the text after the popup container closes
-		// and before the twoslash-hover closes
-		// Look for: </span>symbolName</span> where the first </span> is the popup container closing
+		// Symbol name appears after popup container closes, before twoslash-hover closes
 		const afterPopup = html.substring(endIdx + '</span>'.length, endIdx + '</span>'.length + 100);
 		const symbolMatch = afterPopup.match(/^([a-zA-Z_$][a-zA-Z0-9_$]*)</);
-
 		if (!symbolMatch) continue;
 
 		const symbolName = symbolMatch[1];
-
-		// Only add reference links for symbols that were actually imported
 		if (!importedSymbols.has(symbolName)) continue;
 
-		// Look up the symbol in the reference map (case-sensitive)
-		const referenceUrl = referenceMap[symbolName];
-
-		if (referenceUrl) {
-			const referenceDiv = `<div class="twoslash-popup-reference"><a href="${referenceUrl}">reference</a></div>`;
-			positions.push({ index: endIdx, referenceDiv });
+		const url = referenceMap[symbolName];
+		if (url) {
+			insertions.push({
+				index: endIdx,
+				div: `<div class="twoslash-popup-reference"><a href="${url}">reference</a></div>`
+			});
 		}
 	}
 
-	// Insert reference divs in reverse order to maintain correct positions
-	for (let i = positions.length - 1; i >= 0; i--) {
-		const { index, referenceDiv } = positions[i];
-		html = html.slice(0, index) + referenceDiv + html.slice(index);
+	// Insert in reverse order to maintain correct string indices
+	for (let i = insertions.length - 1; i >= 0; i--) {
+		const { index, div } = insertions[i];
+		html = html.slice(0, index) + div + html.slice(index);
 	}
 
 	return html;
@@ -476,10 +450,7 @@ export async function render_content_markdown(
 		code({ text }) {
 			const cached = snippets.get(text);
 			if (cached) {
-				// Extract imported symbols from the raw source
-				const importedSymbols = extractImportedSymbols(text);
-				// Post-process cached snippets to add dynamic reference links
-				return injectReferenceLinks(cached, referenceMap, importedSymbols);
+				return injectReferenceLinks(cached, referenceMap, extractImportedSymbols(text));
 			}
 			return cached;
 		},
@@ -916,6 +887,7 @@ async function syntax_highlight({
 				transformers: check
 					? [
 							transformerTwoslash({
+								renderer: rendererRich(),
 								twoslashOptions: {
 									compilerOptions: {
 										allowJs: true,
@@ -998,9 +970,7 @@ async function syntax_highlight({
 					html = html.slice(0, start) + content + html.slice(end);
 				}
 
-				// Extract imported symbols from the source code and add dynamic reference links
-				const importedSymbols = extractImportedSymbols(source);
-				html = injectReferenceLinks(html, referenceMap, importedSymbols);
+				html = injectReferenceLinks(html, referenceMap, extractImportedSymbols(source));
 			}
 		} catch (e) {
 			console.error((e as Error).message);
