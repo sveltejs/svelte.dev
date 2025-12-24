@@ -11,8 +11,10 @@ export async function load({ params }) {
 	// on the `runes` blog post
 	const markdown = document.body.replace(/(    )+/gm, (match) => '  '.repeat(match.length / 4));
 
+	const { references } = docs;
+
 	return {
 		...document,
-		body: await render_content(document.file, markdown, {}, docs.references)
+		body: await render_content(document.file, markdown, { references })
 	};
 }

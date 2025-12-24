@@ -134,6 +134,8 @@ export async function load_exercise(slug: string): Promise<Exercise> {
 
 	const filenames = new Set();
 
+	const { references } = docs;
+
 	return {
 		part: {
 			slug: part.slug,
@@ -153,7 +155,7 @@ export async function load_exercise(slug: string): Promise<Exercise> {
 		next,
 		markdown: exercise.body,
 		html: (
-			await render_content(exercise.file, exercise.body, { check: false }, docs.references)
+			await render_content(exercise.file, exercise.body, { check: false, references })
 		).replace(/<code>(.+?)<\/code>/g, (match, filename) => {
 			// TODO wire this up
 			return filenames.size > 1 && filenames.has(filename)

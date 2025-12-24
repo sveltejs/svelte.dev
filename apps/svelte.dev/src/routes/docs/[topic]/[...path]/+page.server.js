@@ -9,10 +9,12 @@ export async function load({ params }) {
 		error(404);
 	}
 
+	const { references } = docs;
+
 	return {
 		document: {
 			...document,
-			body: await render_content(document.file, document.body, {}, docs.references)
+			body: await render_content(document.file, document.body, { references })
 		}
 	};
 }

@@ -323,12 +323,11 @@ function decodeHtmlEntities(text: string): string {
 export async function render_content_markdown(
 	filename: string,
 	body: string,
-	options?: { check?: boolean },
-	twoslashBanner?: TwoslashBanner,
-	referenceMap?: Record<string, string>
+	options?: { check?: boolean; references?: Record<string, string> },
+	twoslashBanner?: TwoslashBanner
 ) {
 	const headings: string[] = [];
-	const { check = true } = options ?? {};
+	const { check = true, references } = options ?? {};
 
 	return await transform(body, {
 		async walkTokens(token) {
@@ -400,7 +399,7 @@ export async function render_content_markdown(
 					prelude,
 					source,
 					check,
-					referenceMap
+					references
 				});
 
 				if (converted) {
@@ -416,7 +415,7 @@ export async function render_content_markdown(
 						prelude,
 						source: converted,
 						check,
-						referenceMap
+						references
 					});
 				}
 
@@ -469,7 +468,7 @@ export async function render_content_markdown(
 			const decodedText = decodeHtmlEntities(text);
 			const cached = snippets.get(decodedText);
 			if (cached) {
-				return injectReferenceLinks(cached, referenceMap, extractImportedSymbols(decodedText));
+				return injectReferenceLinks(cached, references, extractImportedSymbols(decodedText));
 			}
 			return cached;
 		},
@@ -872,14 +871,14 @@ async function syntax_highlight({
 	filename,
 	language,
 	check,
-	referenceMap
+	references
 }: {
 	prelude: string;
 	source: string;
 	filename: string;
 	language: string;
 	check: boolean;
-	referenceMap?: Record<string, string>;
+	references?: Record<string, string>;
 }) {
 	let html = '';
 
@@ -989,7 +988,7 @@ async function syntax_highlight({
 					html = html.slice(0, start) + content + html.slice(end);
 				}
 
-				html = injectReferenceLinks(html, referenceMap, extractImportedSymbols(source));
+				html = injectReferenceLinks(html, references, extractImportedSymbols(source));
 			}
 		} catch (e) {
 			console.error((e as Error).message);
