@@ -208,10 +208,11 @@ const snippets = await create_snippet_cache();
  * @param {string} body
  * @param {object} options
  * @param {TwoslashBanner} [options.twoslashBanner] - A function that returns a string to be prepended to the code snippet before running the code with twoslash. Helps in adding imports from svelte or sveltekit or whichever modules are being globally referenced in all or most code snippets.
- * @param {Record<string, string>} [referenceMap] - Optional map of symbol names to their documentation URLs for dynamic reference links in twoslash tooltips.
+ * @param {Record<string, string>} [references] - Optional map of symbol names to their documentation URLs for dynamic reference links in twoslash tooltips.
  */
+
 /**
- * Extracts imported symbol names from source code (handles both JS/TS and Svelte files).
+ * Extracts imported symbol names from source code (handles JS/TS/Svelte files).
  * Only tracks imports from documented modules to avoid linking to external symbols.
  */
 function extractImportedSymbols(source: string): Set<string> {
@@ -246,16 +247,15 @@ function extractImportedSymbols(source: string): Set<string> {
  */
 function injectReferenceLinks(
 	html: string,
-	referenceMap?: Record<string, string>,
+	references?: Record<string, string>,
 	importedSymbols?: Set<string>
 ): string {
-	if (!referenceMap || !importedSymbols || html.includes('twoslash-popup-reference')) {
+	if (!references || !importedSymbols || html.includes('twoslash-popup-reference')) {
 		return html;
 	}
 
 	const insertions: Array<{ index: number; div: string }> = [];
 
-	// Find all popup containers (rendererRich structure)
 	for (const match of html.matchAll(/<span class="twoslash-popup-container">/g)) {
 		const startIdx = match.index! + match[0].length;
 		let depth = 1;
@@ -288,7 +288,7 @@ function injectReferenceLinks(
 		const symbolName = symbolMatch[1];
 		if (!importedSymbols.has(symbolName)) continue;
 
-		const url = referenceMap[symbolName];
+		const url = references[symbolName];
 		if (url) {
 			insertions.push({
 				index: endIdx,
@@ -332,7 +332,6 @@ export async function render_content_markdown(
 	return await transform(body, {
 		async walkTokens(token) {
 			if (token.type === 'code') {
-				// Decode HTML entities that marked may have encoded
 				const decodedText = decodeHtmlEntities(token.text);
 
 				if (snippets.get(decodedText)) return;
@@ -464,7 +463,6 @@ export async function render_content_markdown(
 			return `<h${depth} id="${slug}"><span>${html}</span><a href="#${slug}" class="permalink" aria-label="permalink"></a></h${depth}>`;
 		},
 		code({ text }) {
-			// Decode HTML entities that marked may have encoded
 			const decodedText = decodeHtmlEntities(text);
 			const cached = snippets.get(decodedText);
 			if (cached) {
