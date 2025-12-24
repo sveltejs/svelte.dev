@@ -147,7 +147,7 @@ const packages: Package[] = [
 		name: 'cli',
 		repo: `${parsed.values.owner}/cli`,
 		branch: branches['cli'] ?? 'main',
-		pkg: 'packages/cli',
+		pkg: 'packages/sv',
 		docs: 'documentation/docs',
 		types: null
 	},

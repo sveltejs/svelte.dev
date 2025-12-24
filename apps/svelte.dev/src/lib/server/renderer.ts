@@ -3,7 +3,7 @@ import { render_content_markdown } from '@sveltejs/site-kit/markdown';
 export const render_content = (
 	filename: string,
 	body: string,
-	options: { check?: boolean } = {}
+	options: { check?: boolean; references?: Record<string, string> } = {}
 ) => {
 	return render_content_markdown(filename, body, options, (filename, source) => {
 		// TODO these are copied from Svelte and SvelteKit - adjust for new filenames
