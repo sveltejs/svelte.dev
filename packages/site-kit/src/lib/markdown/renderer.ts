@@ -306,6 +306,20 @@ function injectReferenceLinks(
 	return html;
 }
 
+function decodeHtmlEntities(text: string): string {
+	return text
+		.replace(/&lt;/g, '<')
+		.replace(/&gt;/g, '>')
+		.replace(/&amp;/g, '&')
+		.replace(/&quot;/g, '"')
+		.replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => {
+			return String.fromCharCode(parseInt(hex, 16));
+		})
+		.replace(/&#(\d+);/g, (_, dec) => {
+			return String.fromCharCode(parseInt(dec, 10));
+		});
+}
+
 export async function render_content_markdown(
 	filename: string,
 	body: string,
@@ -319,13 +333,16 @@ export async function render_content_markdown(
 	return await transform(body, {
 		async walkTokens(token) {
 			if (token.type === 'code') {
-				if (snippets.get(token.text)) return;
+				// Decode HTML entities that marked may have encoded
+				const decodedText = decodeHtmlEntities(token.text);
+
+				if (snippets.get(decodedText)) return;
 
 				if (token.lang === 'diff') {
 					throw new Error('Use +++ and --- annotations instead of diff blocks');
 				}
 
-				let { source, options } = parse_options(token.text, token.lang);
+				let { source, options } = parse_options(decodedText, token.lang);
 				source = adjust_tab_indentation(source, token.lang);
 
 				let prelude = '';
@@ -406,7 +423,7 @@ export async function render_content_markdown(
 				html += '</div>';
 
 				// Save everything locally now
-				snippets.save(token.text, html);
+				snippets.save(decodedText, html);
 			}
 
 			const tokens = 'tokens' in token ? token.tokens : undefined;
@@ -448,9 +465,11 @@ export async function render_content_markdown(
 			return `<h${depth} id="${slug}"><span>${html}</span><a href="#${slug}" class="permalink" aria-label="permalink"></a></h${depth}>`;
 		},
 		code({ text }) {
-			const cached = snippets.get(text);
+			// Decode HTML entities that marked may have encoded
+			const decodedText = decodeHtmlEntities(text);
+			const cached = snippets.get(decodedText);
 			if (cached) {
-				return injectReferenceLinks(cached, referenceMap, extractImportedSymbols(text));
+				return injectReferenceLinks(cached, referenceMap, extractImportedSymbols(decodedText));
 			}
 			return cached;
 		},
