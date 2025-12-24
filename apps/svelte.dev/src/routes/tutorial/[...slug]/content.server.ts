@@ -1,5 +1,5 @@
 import { read } from '$app/server';
-import { index, referenceMap } from '$lib/server/content';
+import { index, docs } from '$lib/server/content';
 import type { Exercise, ExerciseStub, PartStub, Scope } from '$lib/tutorial';
 import { error } from '@sveltejs/kit';
 import { text_files } from './shared';
@@ -153,7 +153,7 @@ export async function load_exercise(slug: string): Promise<Exercise> {
 		next,
 		markdown: exercise.body,
 		html: (
-			await render_content(exercise.file, exercise.body, { check: false }, referenceMap)
+			await render_content(exercise.file, exercise.body, { check: false }, docs.references)
 		).replace(/<code>(.+?)<\/code>/g, (match, filename) => {
 			// TODO wire this up
 			return filenames.size > 1 && filenames.has(filename)

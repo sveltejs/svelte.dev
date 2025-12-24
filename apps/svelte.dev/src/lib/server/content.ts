@@ -97,44 +97,6 @@ export function remove_section(slug: string) {
 }
 
 /**
- * Builds a map of documented exports/types to their reference page URLs.
- * Prioritizes main API pages over type definition pages and legacy pages.
- */
-function buildReferenceMapFromDocs(docs: Record<string, Document>): Record<string, string> {
-	const map: Record<string, string> = {};
-	const deferred: Array<{ key: string; url: string }> = [];
-
-	for (const [slug, doc] of Object.entries(docs)) {
-		if (!doc.file.includes('/98-reference/')) continue;
-
-		const baseUrl = `/${slug}`;
-		const isTypesPage =
-			slug.includes('/types') || doc.metadata.title?.toLowerCase().includes('types');
-		const isLegacyStoresPage = slug.includes('/$app-stores');
-		const isLowPriority = isTypesPage || isLegacyStoresPage;
-
-		for (const section of doc.sections) {
-			const url = `${baseUrl}#${section.slug}`;
-			// Defer low-priority pages (types, legacy) so main API pages take precedence
-			if (isLowPriority) {
-				deferred.push({ key: section.title, url });
-			} else {
-				map[section.title] = url;
-			}
-		}
-	}
-
-	// Fill in gaps with deferred pages only if not already present
-	for (const { key, url } of deferred) {
-		if (!map[key]) {
-			map[key] = url;
-		}
-	}
-
-	return map;
-}
-
-/**
  * Create docs index, which is basically the same structure as the original index
  * but with adjusted slugs (the section part is omitted for cleaner URLs), separated
  * topics/pages and next/prev adjusted so that they don't point to different topics.
@@ -145,7 +107,9 @@ function create_docs() {
 		topics: Record<string, Document>;
 		/** The docs pages themselves. Key is the topic + page */
 		pages: Record<string, Document>;
-	} = { topics: {}, pages: {} };
+		/** Map of reference section titles to their URLs */
+		references: Record<string, string>;
+	} = { topics: {}, pages: {}, references: {} };
 
 	for (const topic of index.docs.children) {
 		const pkg = topic.slug.split('/')[1];
@@ -183,6 +147,13 @@ function create_docs() {
 				});
 
 				transformed_section.children.push(transformed_page);
+
+				// Build references map for reference pages
+				const baseUrl = `/${slug}`;
+				for (const section of page.sections) {
+					const url = `${baseUrl}#${section.slug}`;
+					docs.references[section.title] = url;
+				}
 			}
 		}
 	}
@@ -199,7 +170,6 @@ export function create_summary(document: Document): DocumentSummary {
 }
 
 export const docs = create_docs();
-export const referenceMap = buildReferenceMapFromDocs(docs.pages);
 
 export const examples = index.examples.children;
 
