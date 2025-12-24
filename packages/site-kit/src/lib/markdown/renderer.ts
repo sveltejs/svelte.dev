@@ -208,12 +208,136 @@ const snippets = await create_snippet_cache();
  * @param {string} body
  * @param {object} options
  * @param {TwoslashBanner} [options.twoslashBanner] - A function that returns a string to be prepended to the code snippet before running the code with twoslash. Helps in adding imports from svelte or sveltekit or whichever modules are being globally referenced in all or most code snippets.
+ * @param {Record<string, string>} [referenceMap] - Optional map of symbol names to their documentation URLs for dynamic reference links in twoslash tooltips.
  */
+/**
+ * Extract all imported symbols from raw source code
+ * Handles both JS/TS and Svelte files
+ */
+function extractImportedSymbols(source: string): Set<string> {
+	const imported = new Set<string>();
+
+	// For Svelte files, extract imports from <script> tags
+	let codeToScan = source;
+	const scriptMatch = source.match(/<script[^>]*>([\s\S]+?)<\/script>/);
+	if (scriptMatch) {
+		codeToScan = scriptMatch[1];
+	}
+
+	// Match import statements: import { a, b, c } from '...'
+	// Also handle: import type { ... }, import { type X, Y }
+	const importRegex = /import\s+(?:type\s+)?{([^}]+)}\s+from\s+['"]([^'"]+)['"]/g;
+
+	for (const match of codeToScan.matchAll(importRegex)) {
+		const imports = match[1];
+		const module = match[2];
+
+		// Only track imports from documented modules
+		const isDocumentedModule =
+			module.startsWith('svelte') ||
+			module.startsWith('@sveltejs/kit') ||
+			module.startsWith('$app/') ||
+			module.startsWith('$env/') ||
+			module.startsWith('$service-worker');
+
+		if (!isDocumentedModule) continue;
+
+		// Parse the imported names, handling: { a, b as c, type d }
+		for (const item of imports.split(',')) {
+			const cleaned = item.trim().replace(/^type\s+/, '');
+			// Handle: "name" or "name as alias"
+			const name = cleaned.split(/\s+as\s+/)[0].trim();
+			if (name) imported.add(name);
+		}
+	}
+
+	return imported;
+}
+
+/**
+ * Helper function to inject reference links into twoslash popups
+ * Only adds links for symbols that were actually imported
+ */
+function injectReferenceLinks(
+	html: string,
+	referenceMap?: Record<string, string>,
+	importedSymbols?: Set<string>
+): string {
+	if (!referenceMap || !importedSymbols) return html;
+
+	// Quick check: if reference links already exist, don't process again
+	if (html.includes('twoslash-popup-reference')) return html;
+
+	const positions: Array<{ index: number; referenceDiv: string }> = [];
+	let popupCount = 0;
+
+	// Find all popup containers
+	// The structure is: <span class="twoslash-hover"><span class="twoslash-popup-container">...</span>symbolName</span>
+	for (const match of html.matchAll(/<span class="twoslash-popup-container">/g)) {
+		popupCount++;
+		const popupStartIdx = match.index! + match[0].length;
+
+		// Find the matching closing </span> by counting depth
+		let depth = 1;
+		let pos = popupStartIdx;
+		let endIdx = -1;
+
+		while (depth > 0 && pos < html.length) {
+			const openIdx = html.indexOf('<span', pos);
+			const closeIdx = html.indexOf('</span>', pos);
+			if (closeIdx === -1) break;
+
+			if (openIdx !== -1 && openIdx < closeIdx) {
+				depth++;
+				pos = openIdx + '<span'.length;
+			} else {
+				depth--;
+				if (depth === 0) {
+					endIdx = closeIdx;
+				}
+				pos = closeIdx + '</span>'.length;
+			}
+		}
+
+		if (endIdx === -1) continue;
+
+		// Now extract the symbol name - it's the text after the popup container closes
+		// and before the twoslash-hover closes
+		// Look for: </span>symbolName</span> where the first </span> is the popup container closing
+		const afterPopup = html.substring(endIdx + '</span>'.length, endIdx + '</span>'.length + 100);
+		const symbolMatch = afterPopup.match(/^([a-zA-Z_$][a-zA-Z0-9_$]*)</);
+
+		if (!symbolMatch) continue;
+
+		const symbolName = symbolMatch[1];
+
+		// Only add reference links for symbols that were actually imported
+		if (!importedSymbols.has(symbolName)) continue;
+
+		// Look up the symbol in the reference map (case-sensitive)
+		const referenceUrl = referenceMap[symbolName];
+
+		if (referenceUrl) {
+			const referenceDiv = `<div class="twoslash-popup-reference"><a href="${referenceUrl}">reference</a></div>`;
+			positions.push({ index: endIdx, referenceDiv });
+		}
+	}
+
+	// Insert reference divs in reverse order to maintain correct positions
+	for (let i = positions.length - 1; i >= 0; i--) {
+		const { index, referenceDiv } = positions[i];
+		html = html.slice(0, index) + referenceDiv + html.slice(index);
+	}
+
+	return html;
+}
+
 export async function render_content_markdown(
 	filename: string,
 	body: string,
 	options?: { check?: boolean },
-	twoslashBanner?: TwoslashBanner
+	twoslashBanner?: TwoslashBanner,
+	referenceMap?: Record<string, string>
 ) {
 	const headings: string[] = [];
 	const { check = true } = options ?? {};
@@ -279,7 +403,14 @@ export async function render_content_markdown(
 					html += '</div>';
 				}
 
-				html += await syntax_highlight({ filename, language: token.lang, prelude, source, check });
+				html += await syntax_highlight({
+					filename,
+					language: token.lang,
+					prelude,
+					source,
+					check,
+					referenceMap
+				});
 
 				if (converted) {
 					const language = token.lang === 'js' ? 'ts' : token.lang;
@@ -288,7 +419,14 @@ export async function render_content_markdown(
 						prelude = prelude.replace(/(\/\/ @filename: .+)\.js$/gm, '$1.ts');
 					}
 
-					html += await syntax_highlight({ filename, language, prelude, source: converted, check });
+					html += await syntax_highlight({
+						filename,
+						language,
+						prelude,
+						source: converted,
+						check,
+						referenceMap
+					});
 				}
 
 				html += '</div>';
@@ -336,7 +474,14 @@ export async function render_content_markdown(
 			return `<h${depth} id="${slug}"><span>${html}</span><a href="#${slug}" class="permalink" aria-label="permalink"></a></h${depth}>`;
 		},
 		code({ text }) {
-			return snippets.get(text);
+			const cached = snippets.get(text);
+			if (cached) {
+				// Extract imported symbols from the raw source
+				const importedSymbols = extractImportedSymbols(text);
+				// Post-process cached snippets to add dynamic reference links
+				return injectReferenceLinks(cached, referenceMap, importedSymbols);
+			}
+			return cached;
 		},
 		blockquote(token) {
 			let content = this.parser?.parse(token.tokens) ?? '';
@@ -736,13 +881,15 @@ async function syntax_highlight({
 	source,
 	filename,
 	language,
-	check
+	check,
+	referenceMap
 }: {
 	prelude: string;
 	source: string;
 	filename: string;
 	language: string;
 	check: boolean;
+	referenceMap?: Record<string, string>;
 }) {
 	let html = '';
 
@@ -851,33 +998,9 @@ async function syntax_highlight({
 					html = html.slice(0, start) + content + html.slice(end);
 				}
 
-				// Add reference link at the end of each popup container
-				const referenceDiv = `<div class="twoslash-popup-reference"><a href="/docs/kit/@sveltejs-kit#error">reference</a></div>`;
-
-				const positions: number[] = [];
-				for (const match of html.matchAll(/<span class="twoslash-popup-container">/g)) {
-					let depth = 1;
-					let pos = match.index! + match[0].length;
-
-					while (depth > 0 && pos < html.length) {
-						const openIdx = html.indexOf('<span', pos);
-						const closeIdx = html.indexOf('</span>', pos);
-						if (closeIdx === -1) break;
-
-						if (openIdx !== -1 && openIdx < closeIdx) {
-							depth++;
-							pos = openIdx + '<span'.length;
-						} else {
-							depth--;
-							if (depth === 0) positions.push(closeIdx);
-							pos = closeIdx + '</span>'.length;
-						}
-					}
-				}
-
-				for (let i = positions.length - 1; i >= 0; i--) {
-					html = html.slice(0, positions[i]) + referenceDiv + html.slice(positions[i]);
-				}
+				// Extract imported symbols from the source code and add dynamic reference links
+				const importedSymbols = extractImportedSymbols(source);
+				html = injectReferenceLinks(html, referenceMap, importedSymbols);
 			}
 		} catch (e) {
 			console.error((e as Error).message);

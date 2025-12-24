@@ -1,4 +1,4 @@
-import { docs } from '$lib/server/content';
+import { docs, referenceMap } from '$lib/server/content';
 import { render_content } from '$lib/server/renderer';
 import { error } from '@sveltejs/kit';
 
@@ -12,7 +12,7 @@ export async function load({ params }) {
 	return {
 		document: {
 			...document,
-			body: await render_content(document.file, document.body)
+			body: await render_content(document.file, document.body, {}, referenceMap)
 		}
 	};
 }

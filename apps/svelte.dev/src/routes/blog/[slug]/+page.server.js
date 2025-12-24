@@ -1,5 +1,5 @@
 import { error } from '@sveltejs/kit';
-import { blog_posts } from '$lib/server/content';
+import { blog_posts, referenceMap } from '$lib/server/content';
 import { render_content } from '$lib/server/renderer';
 
 export async function load({ params }) {
@@ -13,6 +13,6 @@ export async function load({ params }) {
 
 	return {
 		...document,
-		body: await render_content(document.file, markdown)
+		body: await render_content(document.file, markdown, {}, referenceMap)
 	};
 }
