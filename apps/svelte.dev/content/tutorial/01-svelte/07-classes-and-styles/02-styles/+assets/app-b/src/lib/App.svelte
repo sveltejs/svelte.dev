@@ -10,6 +10,7 @@
 		style:--bg-1="palegoldenrod"
 		style:--bg-2="black"
 		style:--bg-3="goldenrod"
+		style:--fg-1="black"
 		onclick={() => flipped = !flipped}
 	>
 		<div class="front">
