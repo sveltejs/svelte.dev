@@ -850,6 +850,34 @@ async function syntax_highlight({
 					const { start, end, content } = replacements.pop()!;
 					html = html.slice(0, start) + content + html.slice(end);
 				}
+
+				// Add reference link at the end of each popup container
+				const referenceDiv = `<div class="twoslash-popup-reference"><a href="/docs/kit/@sveltejs-kit#error">reference</a></div>`;
+
+				const positions: number[] = [];
+				for (const match of html.matchAll(/<span class="twoslash-popup-container">/g)) {
+					let depth = 1;
+					let pos = match.index! + match[0].length;
+
+					while (depth > 0 && pos < html.length) {
+						const openIdx = html.indexOf('<span', pos);
+						const closeIdx = html.indexOf('</span>', pos);
+						if (closeIdx === -1) break;
+
+						if (openIdx !== -1 && openIdx < closeIdx) {
+							depth++;
+							pos = openIdx + '<span'.length;
+						} else {
+							depth--;
+							if (depth === 0) positions.push(closeIdx);
+							pos = closeIdx + '</span>'.length;
+						}
+					}
+				}
+
+				for (let i = positions.length - 1; i >= 0; i--) {
+					html = html.slice(0, positions[i]) + referenceDiv + html.slice(positions[i]);
+				}
 			}
 		} catch (e) {
 			console.error((e as Error).message);
