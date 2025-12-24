@@ -107,7 +107,7 @@ function create_docs() {
 		topics: Record<string, Document>;
 		/** The docs pages themselves. Key is the topic + page */
 		pages: Record<string, Document>;
-		/** Map of reference section titles to their URLs */
+		/** References map to their documentation URLs */
 		references: Record<string, string>;
 	} = { topics: {}, pages: {}, references: {} };
 
