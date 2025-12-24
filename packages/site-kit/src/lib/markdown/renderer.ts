@@ -773,7 +773,7 @@ async function syntax_highlight({
 									compilerOptions: {
 										allowJs: true,
 										checkJs: true,
-										types: ['svelte', '@sveltejs/kit']
+										types: ['svelte', '@sveltejs/kit', 'sv']
 									}
 								},
 								// by default, twoslash does not run on .js files, change that through this option
