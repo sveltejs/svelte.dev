@@ -14,7 +14,9 @@ The setup varies based on the version of the MCP you prefer — remote or local 
 
 ## Usage
 
-To get the most out of the MCP server we recommend including the following prompt in your [`AGENTS.md`](https://agents.md) (or [`CLAUDE.md`](https://docs.claude.com/en/docs/claude-code/memory#claude-md-imports), if using Claude Code). This will tell the LLM which tools are available and when it's appropriate to use them.
+To get the most out of the MCP server we recommend including the following prompt in your [`AGENTS.md`](https://agents.md) (or [`CLAUDE.md`](https://docs.claude.com/en/docs/claude-code/memory#claude-md-imports), if using Claude Code. Or [`GEMINI.md`](https://geminicli.com/docs/cli/gemini-md/), if using GEMINI). This will tell the LLM which tools are available and when it's appropriate to use them.
+
+> [!NOTE] This is already setup for you when using `npx sv add mcp`
 
 ```md
 You are able to use the Svelte MCP server, where you have access to comprehensive Svelte 5 and SvelteKit documentation. Here's how to use the available tools effectively:

@@ -3,6 +3,7 @@ import { preprocess } from '@sveltejs/site-kit/markdown/preprocess';
 import path from 'node:path';
 import fs from 'node:fs';
 import { parseArgs } from 'node:util';
+import process from 'node:process';
 import ts from 'typescript';
 import glob from 'tiny-glob/sync.js';
 import chokidar from 'chokidar';

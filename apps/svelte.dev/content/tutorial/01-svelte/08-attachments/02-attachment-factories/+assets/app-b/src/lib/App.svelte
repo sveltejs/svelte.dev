@@ -3,18 +3,17 @@
 
 	let content = $state('Hello!');
 
-	function tooltip(node, fn) {
-		$effect(() => {
-			const tooltip = tippy(node, fn());
-
+	function tooltip(content) {
+		return (node) => {
+			const tooltip = tippy(node, { content });
 			return tooltip.destroy;
-		});
+		};
 	}
 </script>
 
 <input bind:value={content} />
 
-<button use:tooltip={() => ({ content })}>
+<button {@attach tooltip(content)}>
 	Hover me
 </button>
 

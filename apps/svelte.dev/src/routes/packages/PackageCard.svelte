@@ -81,7 +81,7 @@
 	<!-- this is a sibling element so that we don't have links inside links -->
 	{#if !pkg.svAlias}
 		<div class="links">
-			<span style="display: flex; gap: 0.75rem">
+			<span>
 				<a
 					href="https://npmjs.org/package/{pkg.name}"
 					target="_blank"
@@ -146,6 +146,12 @@
 
 		min-height: 16em;
 
+		:root:not(.light) & {
+			@media (prefers-color-scheme: dark) {
+				background-color: var(--sk-bg-3);
+			}
+		}
+
 		:root.dark & {
 			background-color: var(--sk-bg-3);
 		}
@@ -172,10 +178,28 @@
 			a {
 				width: 1.4rem;
 				height: 1.4rem;
+
+				@media screen and (max-width: 768px) {
+					width: 2.4rem;
+					height: 2.4rem;
+				}
 			}
 
 			a:focus-visible {
 				outline: 2px solid var(--sk-fg-accent);
+			}
+
+			> span {
+				display: flex;
+				gap: 0.75rem;
+				@media screen and (max-width: 768px) {
+					gap: 1rem;
+
+					[data-icon] {
+						width: 2.4rem;
+						height: 2.4rem;
+					}
+				}
 			}
 		}
 
@@ -232,6 +256,13 @@
 		.logo {
 			width: 3rem;
 			height: 3rem;
+
+			:root:not(.light) &[alt='drizzle logo'],
+			:root:not(.light) &[alt='paraglide logo'] {
+				@media (prefers-color-scheme: dark) {
+					filter: invert(1);
+				}
+			}
 
 			:root.dark &[alt='drizzle logo'],
 			:root.dark &[alt='paraglide logo'] {

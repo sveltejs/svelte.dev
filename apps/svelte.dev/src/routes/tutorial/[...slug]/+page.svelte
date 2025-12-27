@@ -19,6 +19,7 @@
 
 	let { data }: PageProps = $props();
 
+	// svelte-ignore state_referenced_locally
 	let path = data.exercise.path;
 	let show_editor = $state(false);
 	let show_filetree = $state(false);
