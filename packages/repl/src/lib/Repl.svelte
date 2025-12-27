@@ -136,7 +136,9 @@
 	let runtime_error: Error | null = $state(null);
 	let status_visible = $state(false);
 	let status_timeout: NodeJS.Timeout | undefined = undefined;
-
+	$effect(() => {
+		console.log(runtime_error);
+	});
 	const bundler = BROWSER
 		? new Bundler({
 				// svelte-ignore state_referenced_locally
