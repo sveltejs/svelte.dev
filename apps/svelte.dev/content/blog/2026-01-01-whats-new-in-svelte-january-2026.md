@@ -28,7 +28,7 @@ For a full list of changes - including all the important bugfixes that went into
 - [GCal Wrapped](https://gcalwrapped.com/) lets students see how they spent their time this semester, wrapped up beautifully
 - [Text Processing Studio](https://text-studio.metasapiens.com/) is a comprehensive text processing web application that lets you process, compare, transform, and analyze text
 - [Flumio](https://flumio.io/) is a drag-and-drop workflow automation tool
-- [Statue](https://statue.dev/) is a markdown-based static site generator designed for performance, flexibility, and developer experience 
+- [Statue](https://statue.dev/) is a markdown-based static site generator designed for performance, flexibility, and developer experience
 - [sveltemark](https://sm.fana.my.id/) is a privacy-first, open-source, local-only markdown editor
 - [Lovely Docs](https://lovely-docs.github.io/) provides hierarchically optimized documentation for AI coding agents
 - [Ikaw bahala](https://kahit-saan.labais.life/) is a Manila-based food platform made for couples and friends who want to search for specific foods locally
@@ -41,7 +41,6 @@ _Featuring Svelte Contributors and Ambassadors_
 - [This AI model writes Svelte 5 code PERFECTLY](https://www.youtube.com/watch?v=nXIMQr12nqw) by Code with Stanislav
 - [Building Hydratable with Elliott Johnson](https://www.youtube.com/watch?v=bLqFT2kTK6w) by Svelte Society (Kev)
 - [SvelteKit and Effect with Dillon Mulroy](https://www.youtube.com/watch?v=8ByXE6dPkD4) by Svelte Society (Kev)
-
 
 _Svienna_
 
