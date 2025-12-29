@@ -1,3 +1,5 @@
+import { on } from 'svelte/events';
+
 export function trapFocus(node) {
 	const previous = document.activeElement;
 
@@ -25,13 +27,11 @@ export function trapFocus(node) {
 		}
 	}
 
-	$effect(() => {
-		focusable()[0]?.focus();
-		node.addEventListener('keydown', handleKeydown);
+	focusable()[0]?.focus();
+	const off = on(node, 'keydown', handleKeydown);
 
-		return () => {
-			node.removeEventListener('keydown', handleKeydown);
-			previous?.focus();
-		};
-	});
+	return () => {
+		off();
+		previous?.focus();
+	};
 }
