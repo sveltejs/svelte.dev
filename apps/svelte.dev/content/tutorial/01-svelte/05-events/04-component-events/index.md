@@ -15,8 +15,8 @@ You can pass event handlers to components like any other prop. In `Stepper.svelt
 
 ```svelte
 /// file: Stepper.svelte
-<button +++onclick={decrement}+++>-1</button>
-<button +++onclick={increment}+++>+1</button>
+<button +++onclick={decrement}+++ >-1</button>
+<button +++onclick={increment}+++ >+1</button>
 ```
 
 In `App.svelte`, define the handlers:
