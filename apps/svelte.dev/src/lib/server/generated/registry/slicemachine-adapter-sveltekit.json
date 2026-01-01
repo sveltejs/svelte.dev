@@ -1,7 +1,7 @@
 {
 	"name": "@slicemachine/adapter-sveltekit",
 	"npm_description": "Slice Machine adapter for SvelteKit.",
-	"repo_url": "ssh://git@github.com/prismicio/slice-machine",
+	"repo_url": "https://github.com/prismicio/slice-machine",
 	"authors": [
 		"lihbr",
 		"angeloashmore",
@@ -17,10 +17,10 @@
 		"xrutayisire",
 		"bapmrl"
 	],
-	"version": "0.3.85",
-	"downloads": 9984,
-	"github_stars": 298,
-	"updated": "2025-10-22T09:02:10.941Z",
+	"version": "0.3.91",
+	"downloads": 2646,
+	"github_stars": 300,
+	"updated": "2025-12-15T18:57:40.379Z",
 	"svelte_range": "^3.54.0 || ^4.0.0-next.0 || ^5.0.0-next.1",
 	"kit_range": "^1 || ^2",
 	"typescript": true,

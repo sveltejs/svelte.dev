@@ -4,17 +4,14 @@
 	let content = $state('Hello!');
 
 	function tooltip(node) {
-		$effect(() => {
-			const tooltip = tippy(node);
-
-			return tooltip.destroy;
-		});
+		const tooltip = tippy(node);
+		return tooltip.destroy;
 	}
 </script>
 
 <input bind:value={content} />
 
-<button use:tooltip>
+<button {@attach tooltip}>
 	Hover me
 </button>
 
