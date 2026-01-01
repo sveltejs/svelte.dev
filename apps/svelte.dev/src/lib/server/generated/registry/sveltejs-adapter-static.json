@@ -1,0 +1,13 @@
+{
+	"name": "@sveltejs/adapter-static",
+	"npm_description": "Adapter for SvelteKit apps that prerenders your entire site as a collection of static files",
+	"repo_url": "https://github.com/sveltejs/kit",
+	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
+	"homepage": "https://svelte.dev/docs/kit/adapter-static",
+	"version": "3.0.10",
+	"downloads": 236204,
+	"github_stars": 19989,
+	"updated": "2025-10-02T14:22:08.571Z",
+	"svelte_range": "^5.39.3",
+	"kit_range": "^2.0.0"
+}

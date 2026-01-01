@@ -1,0 +1,13 @@
+{
+	"name": "@roxi/routify",
+	"repo_url": "",
+	"authors": ["jakobrosenberg"],
+	"version": "3.6.4",
+	"downloads": 5142,
+	"github_stars": 0,
+	"updated": "2025-09-16T10:15:55.135Z",
+	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "2.18.18"
+}

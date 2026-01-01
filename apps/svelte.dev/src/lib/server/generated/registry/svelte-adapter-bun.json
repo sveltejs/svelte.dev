@@ -1,0 +1,15 @@
+{
+	"name": "svelte-adapter-bun",
+	"npm_description": "Adapter for SvelteKit apps that generates a standalone Bun.js server.",
+	"repo_url": "https://github.com/gornostay25/svelte-adapter-bun",
+	"authors": ["gornostay25"],
+	"homepage": "https://github.com/gornostay25/svelte-adapter-bun#readme",
+	"version": "1.0.1",
+	"downloads": 7003,
+	"github_stars": 632,
+	"updated": "2025-10-22T18:53:59.617Z",
+	"kit_range": "^2.4.0",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "0.5.2"
+}

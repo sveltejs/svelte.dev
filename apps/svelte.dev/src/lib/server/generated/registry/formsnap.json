@@ -1,0 +1,16 @@
+{
+	"name": "formsnap",
+	"npm_description": "The goal of this library is to make working with the already incredible [sveltekit-superforms](https://github.com/ciscoheat/sveltekit-superforms) even more pleasant, by wrapping it with accessible form components.",
+	"repo_url": "https://github.com/svecosystem/formsnap",
+	"authors": ["huntabyte"],
+	"homepage": "https://github.com/svecosystem/formsnap#readme",
+	"version": "2.0.1",
+	"downloads": 44791,
+	"github_stars": 777,
+	"updated": "2025-04-09T02:30:42.332Z",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.5.28",
+	"typescript": true,
+	"runes": true,
+	"last_rune_check_version": "2.0.1"
+}

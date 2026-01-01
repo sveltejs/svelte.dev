@@ -1,4 +1,5 @@
-import { generate_llm_content, topics } from '$lib/server/llms';
+import { generate_llm_content } from '$lib/server/llms';
+import { topics } from '$lib/topics';
 
 export function GET() {
 	const main_content = generate_llm_content({
@@ -29,8 +30,7 @@ export function GET() {
 			remove_note_blocks: true,
 			remove_details_blocks: true,
 			remove_playground_links: true,
-			remove_prettier_ignore: true,
-			normalize_whitespace: true
+			remove_prettier_ignore: true
 		}
 	});
 	const content = `<SYSTEM>This is the abridged developer documentation for Svelte and SvelteKit.</SYSTEM>\n\n${main_content}`;

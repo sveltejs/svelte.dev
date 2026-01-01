@@ -1,0 +1,26 @@
+{
+	"name": "@storyblok/svelte",
+	"npm_description": "SDK to integrate Storyblok into your project using Svelte.",
+	"repo_url": "https://github.com/storyblok/monoblok",
+	"authors": [
+		"delooks",
+		"dominikangerer",
+		"alexjoverm",
+		"emanuelgsouza",
+		"samuells",
+		"jpcfreire",
+		"christianzoppisb",
+		"alvarosaburido",
+		"storyblok-dx"
+	],
+	"homepage": "https://github.com/storyblok/monoblok/tree/main/packages/svelte#readme",
+	"version": "5.2.15",
+	"downloads": 1051,
+	"github_stars": 31,
+	"updated": "2025-12-04T12:40:03.833Z",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.20.2",
+	"typescript": true,
+	"runes": true,
+	"last_rune_check_version": "5.0.1"
+}

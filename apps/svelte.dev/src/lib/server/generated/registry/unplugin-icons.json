@@ -1,0 +1,15 @@
+{
+	"name": "unplugin-icons",
+	"npm_description": "Access thousands of icons as components on-demand universally",
+	"repo_url": "https://github.com/unplugin/unplugin-icons",
+	"authors": ["userquin", "antfu", "sxzz", "hannoeru"],
+	"homepage": "https://github.com/unplugin/unplugin-icons#readme",
+	"version": "22.5.0",
+	"downloads": 377110,
+	"github_stars": 38856,
+	"updated": "2025-10-19T22:11:04.083Z",
+	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
+	"typescript": true,
+	"runes": true,
+	"last_rune_check_version": "0.0.1"
+}

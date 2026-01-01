@@ -1,0 +1,15 @@
+{
+	"name": "daisyui",
+	"npm_description": "daisyUI 5 - The Tailwind CSS Component Library",
+	"repo_url": "https://github.com/saadeghi/daisyui",
+	"authors": ["saadeghi"],
+	"homepage": "https://daisyui.com",
+	"version": "5.5.14",
+	"downloads": 528682,
+	"github_stars": 39681,
+	"updated": "2025-12-14T03:31:38.161Z",
+	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
+	"typescript": false,
+	"runes": false,
+	"last_rune_check_version": "1.3.0"
+}

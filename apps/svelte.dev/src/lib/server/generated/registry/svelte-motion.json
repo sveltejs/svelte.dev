@@ -1,0 +1,15 @@
+{
+	"name": "svelte-motion",
+	"npm_description": "Svelte animation library based on the React library framer-motion.",
+	"repo_url": "https://github.com/micha-lmxt/svelte-motion",
+	"authors": ["micha-lmxt"],
+	"homepage": "https://github.com/micha-lmxt/svelte-motion#readme",
+	"version": "0.12.2",
+	"downloads": 5415,
+	"github_stars": 641,
+	"updated": "2024-02-27T20:12:47.917Z",
+	"svelte_range": ">=3.35.0 || ^4.0.0 || ^5.0.0 || ^5.0.0-next.0",
+	"typescript": true,
+	"runes": true,
+	"last_rune_check_version": "0.12.2"
+}

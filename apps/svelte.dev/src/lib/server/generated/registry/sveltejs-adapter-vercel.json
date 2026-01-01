@@ -1,0 +1,15 @@
+{
+	"name": "@sveltejs/adapter-vercel",
+	"npm_description": "A SvelteKit adapter that creates a Vercel app",
+	"repo_url": "https://github.com/sveltejs/kit",
+	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
+	"homepage": "https://svelte.dev/docs/kit/adapter-vercel",
+	"version": "6.2.0",
+	"downloads": 113494,
+	"github_stars": 19989,
+	"updated": "2025-11-26T18:44:47.766Z",
+	"kit_range": "^2.4.0",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "5.7.0"
+}

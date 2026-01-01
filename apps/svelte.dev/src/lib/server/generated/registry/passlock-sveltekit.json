@@ -1,0 +1,16 @@
+{
+	"name": "@passlock/sveltekit",
+	"npm_description": "Passkey authentication and social login for SvelteKit apps",
+	"repo_url": "https://github.com/passlock-dev/passlock",
+	"authors": ["toby.hobson"],
+	"homepage": "https://passlock.dev",
+	"version": "0.9.32",
+	"downloads": 10,
+	"github_stars": 183,
+	"updated": "2025-11-14T10:45:14.010Z",
+	"svelte_range": "^4.0.0",
+	"kit_range": "^2.6.2",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "0.9.31"
+}

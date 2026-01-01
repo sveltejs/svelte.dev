@@ -1,0 +1,15 @@
+{
+	"name": "@sentry/svelte",
+	"npm_description": "Official Sentry SDK for Svelte",
+	"repo_url": "git://github.com/getsentry/sentry-javascript",
+	"authors": ["sentry-bot"],
+	"homepage": "https://github.com/getsentry/sentry-javascript/tree/master/packages/svelte",
+	"version": "10.32.1",
+	"downloads": 105906,
+	"github_stars": 8516,
+	"updated": "2025-12-19T11:01:13.329Z",
+	"svelte_range": "3.x || 4.x || 5.x",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "9.12.0"
+}

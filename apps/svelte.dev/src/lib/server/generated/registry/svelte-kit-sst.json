@@ -1,0 +1,15 @@
+{
+	"name": "svelte-kit-sst",
+	"npm_description": "Adapter for SvelteKit apps to work on AWS Lambda and AWS Lambda@Edge.",
+	"repo_url": "https://github.com/sst/sst",
+	"authors": ["thdxr", "fanjie", "sst-publisher"],
+	"homepage": "https://github.com/sst/sst#readme",
+	"version": "2.43.5",
+	"downloads": 5334,
+	"github_stars": 24886,
+	"updated": "2024-08-16T19:15:54.792Z",
+	"kit_range": "^1.5.0",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "2.43.5"
+}

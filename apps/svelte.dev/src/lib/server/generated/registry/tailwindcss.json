@@ -1,0 +1,14 @@
+{
+	"name": "tailwindcss",
+	"npm_description": "A utility-first CSS framework for rapidly building custom user interfaces.",
+	"repo_url": "https://github.com/tailwindlabs/tailwindcss",
+	"authors": ["malfaitrobin", "adamwathan", "reinink"],
+	"homepage": "https://tailwindcss.com",
+	"version": "4.1.18",
+	"downloads": 30301260,
+	"github_stars": 91201,
+	"updated": "2025-12-11T16:40:50.445Z",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "4.1.3"
+}

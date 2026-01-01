@@ -81,9 +81,43 @@ See [Remote functions](/docs/kit/remote-functions#form) for full documentation.
 <div class="ts-block">
 
 ```dts
-function form<T>(
-	fn: (data: FormData) => MaybePromise<T>
-): RemoteForm<T>;
+function form<Output>(
+	fn: () => MaybePromise<Output>
+): RemoteForm<void, Output>;
+```
+
+</div>
+
+<div class="ts-block">
+
+```dts
+function form<Input extends RemoteFormInput, Output>(
+	validate: 'unchecked',
+	fn: (
+		data: Input,
+		issue: InvalidField<Input>
+	) => MaybePromise<Output>
+): RemoteForm<Input, Output>;
+```
+
+</div>
+
+<div class="ts-block">
+
+```dts
+function form<
+	Schema extends StandardSchemaV1<
+		RemoteFormInput,
+		Record<string, any>
+	>,
+	Output
+>(
+	validate: Schema,
+	fn: (
+		data: StandardSchemaV1.InferOutput<Schema>,
+		issue: InvalidField<StandardSchemaV1.InferInput<Schema>>
+	) => MaybePromise<Output>
+): RemoteForm<StandardSchemaV1.InferInput<Schema>, Output>;
 ```
 
 </div>
@@ -262,5 +296,50 @@ function read(asset: string): Response;
 </div>
 
 
+
+## query
+
+<div class="ts-block">
+
+```dts
+namespace query {
+	/**
+	 * Creates a batch query function that collects multiple calls and executes them in a single request
+	 *
+	 * See [Remote functions](https://svelte.dev/docs/kit/remote-functions#query.batch) for full documentation.
+	 *
+	 * @since 2.35
+	 */
+	function batch<Input, Output>(
+		validate: 'unchecked',
+		fn: (
+			args: Input[]
+		) => MaybePromise<(arg: Input, idx: number) => Output>
+	): RemoteQueryFunction<Input, Output>;
+	/**
+	 * Creates a batch query function that collects multiple calls and executes them in a single request
+	 *
+	 * See [Remote functions](https://svelte.dev/docs/kit/remote-functions#query.batch) for full documentation.
+	 *
+	 * @since 2.35
+	 */
+	function batch<Schema extends StandardSchemaV1, Output>(
+		schema: Schema,
+		fn: (
+			args: StandardSchemaV1.InferOutput<Schema>[]
+		) => MaybePromise<
+			(
+				arg: StandardSchemaV1.InferOutput<Schema>,
+				idx: number
+			) => Output
+		>
+	): RemoteQueryFunction<
+		StandardSchemaV1.InferInput<Schema>,
+		Output
+	>;
+}
+```
+
+</div>
 
 

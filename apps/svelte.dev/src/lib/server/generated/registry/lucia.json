@@ -1,0 +1,15 @@
+{
+	"name": "lucia",
+	"npm_description": "A simple and flexible authentication library",
+	"repo_url": "https://github.com/pilcrowOnPaper/lucia",
+	"authors": ["pilcrowonpaper"],
+	"homepage": "https://github.com/pilcrowOnPaper/lucia#readme",
+	"version": "3.2.2",
+	"deprecated_reason": "This package has been deprecated. Please see https://lucia-auth.com/lucia-v3/migrate.",
+	"downloads": 74980,
+	"github_stars": 10420,
+	"updated": "2024-10-20T12:40:32.030Z",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "3.2.2"
+}

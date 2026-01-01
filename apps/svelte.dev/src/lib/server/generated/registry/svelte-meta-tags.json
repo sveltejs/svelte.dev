@@ -1,0 +1,16 @@
+{
+	"name": "svelte-meta-tags",
+	"npm_description": "Svelte Meta Tags provides components designed to help you manage SEO for Svelte projects",
+	"repo_url": "https://github.com/oekazuma/svelte-meta-tags",
+	"authors": ["oe.kazuma"],
+	"homepage": "https://oekazuma.github.io/svelte-meta-tags/",
+	"version": "4.5.0",
+	"downloads": 9827,
+	"github_stars": 624,
+	"updated": "2025-10-23T01:39:18.379Z",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.47.2",
+	"typescript": true,
+	"runes": true,
+	"last_rune_check_version": "4.2.0"
+}

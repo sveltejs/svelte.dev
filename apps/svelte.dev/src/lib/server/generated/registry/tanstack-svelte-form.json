@@ -1,0 +1,15 @@
+{
+	"name": "@tanstack/svelte-form",
+	"npm_description": "Powerful, type-safe forms for Svelte.",
+	"repo_url": "https://github.com/TanStack/form",
+	"authors": ["tannerlinsley", "schiller-manuel", "lachlancollins", "kylemathews"],
+	"homepage": "https://tanstack.com/form",
+	"version": "1.27.5",
+	"downloads": 4295,
+	"github_stars": 6038,
+	"updated": "2025-12-18T10:28:22.954Z",
+	"svelte_range": "^5.0.0",
+	"typescript": false,
+	"runes": false,
+	"last_rune_check_version": "1.3.0"
+}

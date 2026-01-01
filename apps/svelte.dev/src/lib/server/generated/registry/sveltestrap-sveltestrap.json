@@ -1,0 +1,15 @@
+{
+	"name": "@sveltestrap/sveltestrap",
+	"npm_description": "Bootstrap components for Svelte",
+	"repo_url": "https://github.com/sveltestrap/sveltestrap",
+	"authors": ["dysfunc"],
+	"homepage": "https://sveltestrap.js.org",
+	"version": "7.1.0",
+	"downloads": 6330,
+	"github_stars": 198,
+	"updated": "2025-02-04T15:33:33.979Z",
+	"svelte_range": "^4.0.0 || ^5.0.0 || ^5.0.0-next.0",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "7.1.0"
+}

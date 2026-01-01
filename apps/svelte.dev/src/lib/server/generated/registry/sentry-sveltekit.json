@@ -1,0 +1,16 @@
+{
+	"name": "@sentry/sveltekit",
+	"npm_description": "Official Sentry SDK for SvelteKit",
+	"repo_url": "git://github.com/getsentry/sentry-javascript",
+	"authors": ["sentry-bot"],
+	"homepage": "https://github.com/getsentry/sentry-javascript/tree/master/packages/sveltekit",
+	"version": "10.32.1",
+	"downloads": 75619,
+	"github_stars": 8516,
+	"updated": "2025-12-19T11:01:44.038Z",
+	"svelte_range": "^4.2.8",
+	"kit_range": "2.x",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "9.12.0"
+}

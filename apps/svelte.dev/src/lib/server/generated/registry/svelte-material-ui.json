@@ -1,0 +1,13 @@
+{
+	"name": "svelte-material-ui",
+	"npm_description": "Svelte Material UI Components",
+	"repo_url": "https://github.com/hperrin/svelte-material-ui",
+	"authors": ["hperrin"],
+	"version": "8.0.3",
+	"downloads": 4768,
+	"github_stars": 3414,
+	"updated": "2025-08-13T00:55:30.427Z",
+	"typescript": false,
+	"runes": false,
+	"last_rune_check_version": "8.0.0-beta.3"
+}

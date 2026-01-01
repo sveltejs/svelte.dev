@@ -407,14 +407,13 @@ export class Workspace {
 		selected?: string
 	) {
 		this.states.clear();
-		this.set(new_files, selected);
-
-		this.mark_saved();
-
 		this.#tailwind = options.tailwind;
 		this.#aliases = options.aliases;
 
-		const bundle = this.#onreset(new_files);
+		const bundle = this.set(new_files, selected);
+
+		this.mark_saved();
+
 		const diagnostics = this.#reset_diagnostics();
 
 		return Promise.all([bundle, diagnostics])
@@ -458,7 +457,7 @@ export class Workspace {
 			}
 		}
 
-		this.#onreset?.(this.files);
+		return this.#onreset?.(this.files);
 	}
 
 	unlink(view: EditorView) {
@@ -507,10 +506,12 @@ export class Workspace {
 		return this.#svelte_version;
 	}
 
-	set svelte_version(value) {
+	set_svelte_version(value: string, notify = false) {
 		this.#svelte_version = value;
-		this.#update_file(this.#current);
-		this.#reset_diagnostics();
+		if (notify) {
+			this.#update_file(this.#current);
+			this.#reset_diagnostics();
+		}
 	}
 
 	get vim() {

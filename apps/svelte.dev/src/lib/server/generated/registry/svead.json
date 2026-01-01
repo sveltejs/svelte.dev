@@ -1,0 +1,16 @@
+{
+	"name": "svead",
+	"npm_description": "[docs](../../README.md)",
+	"repo_url": "https://github.com/spences10/svead",
+	"authors": ["spences10"],
+	"homepage": "https://github.com/spences10/svead#readme",
+	"version": "0.0.15",
+	"downloads": 562,
+	"github_stars": 107,
+	"updated": "2025-06-09T05:40:57.632Z",
+	"svelte_range": "^4.0.0 || ^5.0.0",
+	"kit_range": "^2.17.1",
+	"typescript": true,
+	"runes": true,
+	"last_rune_check_version": "0.0.13"
+}

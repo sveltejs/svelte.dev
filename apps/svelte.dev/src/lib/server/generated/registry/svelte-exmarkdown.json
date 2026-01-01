@@ -1,0 +1,16 @@
+{
+	"name": "svelte-exmarkdown",
+	"npm_description": "Svelte component to render markdown. Dynamic and Extensible.",
+	"repo_url": "https://github.com/ssssota/svelte-exmarkdown",
+	"authors": ["ssssota"],
+	"homepage": "https://ssssota.github.io/svelte-exmarkdown",
+	"version": "5.0.2",
+	"downloads": 28161,
+	"github_stars": 314,
+	"updated": "2025-08-09T15:03:03.704Z",
+	"svelte_range": "^5.1.3",
+	"kit_range": "^2.27.3",
+	"typescript": true,
+	"runes": true,
+	"last_rune_check_version": "5.0.0"
+}

@@ -1,0 +1,15 @@
+{
+	"name": "svelte-loader",
+	"npm_description": "A webpack loader for svelte",
+	"repo_url": "https://github.com/sveltejs/svelte-loader",
+	"authors": ["nikku", "rich_harris", "conduitry", "svelte-admin", "dummdidumm"],
+	"homepage": "https://github.com/sveltejs/svelte-loader#readme",
+	"version": "3.2.4",
+	"downloads": 47451,
+	"github_stars": 605,
+	"updated": "2024-10-09T21:13:47.738Z",
+	"svelte_range": "^3.0.0 || ^4.0.0-next.0 || ^5.0.0-next.1",
+	"typescript": false,
+	"runes": false,
+	"last_rune_check_version": "3.2.4"
+}

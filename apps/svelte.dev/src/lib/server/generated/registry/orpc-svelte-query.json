@@ -1,0 +1,15 @@
+{
+	"name": "@orpc/svelte-query",
+	"npm_description": "<div align=\"center\">   <image align=\"center\" src=\"https://orpc.dev/logo.webp\" width=280 alt=\"oRPC logo\" /> </div>",
+	"repo_url": "https://github.com/unnoq/orpc",
+	"authors": ["unnoq"],
+	"homepage": "https://orpc.dev",
+	"version": "1.13.0",
+	"downloads": 728,
+	"github_stars": 4489,
+	"updated": "2025-12-18T08:25:21.181Z",
+	"svelte_range": ">=4.2.0",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "0.54.0"
+}

@@ -1,0 +1,14 @@
+{
+	"name": "@iconify/tailwind4",
+	"npm_description": "Iconify plugin for Tailwind CSS",
+	"repo_url": "https://github.com/iconify/iconify-tailwind",
+	"authors": ["cyberalien"],
+	"homepage": "https://iconify.design/",
+	"version": "1.2.0",
+	"downloads": 17698,
+	"github_stars": 17,
+	"updated": "2025-11-27T20:01:46.673Z",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "1.0.6"
+}

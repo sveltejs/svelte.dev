@@ -1,0 +1,16 @@
+{
+	"name": "@magidoc/plugin-svelte-marked",
+	"npm_description": "A markdown parser library that renders to svelte components.",
+	"repo_url": "https://github.com/magidoc-org/magidoc",
+	"authors": ["pelletier197"],
+	"homepage": "https://github.com/magidoc-org/magidoc#readme",
+	"version": "6.3.0",
+	"downloads": 8297,
+	"github_stars": 279,
+	"updated": "2025-10-22T16:29:47.846Z",
+	"svelte_range": "5.41.2",
+	"kit_range": "2.47.2",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "6.2.0"
+}

@@ -59,6 +59,7 @@
 
 	const workspace: Workspace = new Workspace([dummy], {
 		initial: 'App.svelte',
+		// svelte-ignore state_referenced_locally
 		svelte_version: svelteVersion,
 		onupdate() {
 			rebundle();
@@ -127,8 +128,6 @@
 			...workspace.current!,
 			contents: migration!.code
 		});
-
-		rebundle();
 	}
 
 	let width = $state(0);
@@ -140,9 +139,10 @@
 
 	const bundler = BROWSER
 		? new Bundler({
+				// svelte-ignore state_referenced_locally
 				svelte_version: svelteVersion,
 				onversion: (version) => {
-					workspace.svelte_version = version;
+					workspace.set_svelte_version(version);
 					onversion?.(version);
 				},
 				onstatus: (message) => {

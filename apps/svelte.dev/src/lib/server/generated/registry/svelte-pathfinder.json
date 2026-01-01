@@ -1,0 +1,15 @@
+{
+	"name": "svelte-pathfinder",
+	"npm_description": "Tiny, state-based, advanced router for SvelteJS.",
+	"repo_url": "https://github.com/sveltetools/svelte-pathfinder",
+	"authors": ["paulmaly"],
+	"homepage": "https://github.com/sveltetools/svelte-pathfinder#readme",
+	"version": "4.8.1",
+	"downloads": 2279,
+	"github_stars": 136,
+	"updated": "2024-07-04T09:03:48.158Z",
+	"svelte_range": ">=3 <5",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "4.8.1"
+}

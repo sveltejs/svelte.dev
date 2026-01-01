@@ -13,6 +13,16 @@ npx sv create [options] [path]
 
 ## Options
 
+### `--from-playground <url>`
+
+Create a SvelteKit project from a [playground](/playground) URL. This downloads all playground files, detects external dependencies, and sets up a complete SvelteKit project structure with everything ready to go.
+
+Example:
+
+```sh
+npx sv create --from-playground="https://svelte.dev/playground/hello-world"
+```
+
 ### `--template <name>`
 
 Which project template to use:
@@ -32,6 +42,16 @@ Whether and how to add typechecking to the project:
 
 Prevent typechecking from being added. Not recommended!
 
+### `--add [add-ons...]`
+
+Add add-ons to the project in the `create` command. Following the same format as [sv add](sv-add#Usage).
+
+Example:
+
+```sh
+npx sv create --add eslint prettier [path]
+```
+
 ### `--no-add-ons`
 
 Run the command without the interactive add-ons prompt
@@ -49,6 +69,10 @@ Installs dependencies with a specified package manager:
 ### `--no-install`
 
 Prevents installing dependencies.
+
+### `--no-dir-check`
+
+Skip checking whether the target directory is empty.
 
 <!-- ## Programmatic interface
 

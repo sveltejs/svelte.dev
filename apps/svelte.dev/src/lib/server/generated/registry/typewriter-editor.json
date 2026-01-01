@@ -1,0 +1,16 @@
+{
+	"name": "typewriter-editor",
+	"npm_description": "A rich text editor using the Delta format with decorations and rendered with a tiny virtual dom",
+	"repo_url": "https://github.com/typewriter-editor/typewriter",
+	"authors": ["jacwright"],
+	"homepage": "https://github.com/typewriter-editor/typewriter#readme",
+	"version": "0.12.9",
+	"downloads": 102,
+	"github_stars": 431,
+	"updated": "2025-02-12T18:30:38.430Z",
+	"svelte_range": ">=3.43.0 <6",
+	"kit_range": "^2.5.25",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "0.12.9"
+}

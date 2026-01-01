@@ -1,9 +1,10 @@
-import { extract_frontmatter, slugify, smart_quotes } from '../../markdown/utils';
+import { extract_frontmatter, is_in_code_block, slugify, smart_quotes } from '../../markdown/utils';
 import type { Document } from '../../types';
 
 export async function create_index(
 	documents: Record<string, string>,
 	assets: Record<string, string>,
+	documents_assets: Record<string, string>,
 	base: string,
 	read: (asset: string) => Response
 ): Promise<Record<string, Document>> {
@@ -31,17 +32,24 @@ export async function create_index(
 				'<code>$1</code>'
 			);
 
-		const sections = Array.from(body.matchAll(/^##\s+(.*)$/gm)).map((match) => {
-			const title = smart_quotes(match[1])
-				// replace < and > inside code spans
-				.replace(/`(.+?)`/g, (_, contents) => contents.replace(/</g, '&lt;').replace(/>/g, '&gt;'))
-				// turn e.g. `class:_name_` into `class:<em>name</em>`
-				.replace(/_(.+)_/g, (_, contents) => `<em>${contents}</em>`);
+		const sections = Array.from(body.matchAll(/^##\s+(.*)$/gm)).reduce(
+			(arr, match) => {
+				if (is_in_code_block(body, match.index || 0)) return arr;
+				const title = smart_quotes(match[1])
+					// replace < and > inside code spans
+					.replace(/`(.+?)`/g, (_, contents) =>
+						contents.replace(/</g, '&lt;').replace(/>/g, '&gt;')
+					)
+					// turn e.g. `class:_name_` into `class:<em>name</em>`
+					.replace(/_(.+)_/g, (_, contents) => `<em>${contents}</em>`);
 
-			const slug = slugify(title);
+				const slug = slugify(title);
 
-			return { slug, title };
-		});
+				arr.push({ slug, title });
+				return arr;
+			},
+			[] as Array<{ slug: string; title: string }>
+		);
 
 		content[slug] = {
 			slug,
@@ -90,6 +98,15 @@ export async function create_index(
 		const document = content[slug];
 
 		(document.assets ??= {})[file] = assets[key];
+	}
+
+	for (const key in documents_assets) {
+		const path = key.slice(base.length + 1);
+		const slug = path.slice(0, path.indexOf('+assets') - 1).replace(/(^|\/)\d+-/g, '$1');
+		const file = path.slice(path.indexOf('+assets') + 8);
+		const document = content[slug];
+
+		(document.assets ??= {})[file] = documents_assets[key];
 	}
 
 	let prev: Document | null = null;

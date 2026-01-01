@@ -1,6 +1,7 @@
 import { error } from '@sveltejs/kit';
 import { docs } from '$lib/server/content.js';
-import { generate_llm_content, get_documentation_title, topics } from '$lib/server/llms';
+import { generate_llm_content, get_documentation_title } from '$lib/server/llms';
+import { topics } from '$lib/topics';
 
 export const prerender = true;
 

@@ -1,0 +1,15 @@
+{
+	"name": "scrolly-video",
+	"npm_description": "A component for scroll-based (or other externally controlled) playback.",
+	"repo_url": "https://github.com/dkaoster/scrolly-video",
+	"authors": ["dkao"],
+	"homepage": "https://github.com/dkaoster/scrolly-video#readme",
+	"version": "0.0.24",
+	"downloads": 1131,
+	"github_stars": 1067,
+	"updated": "2025-03-07T04:16:43.669Z",
+	"svelte_range": "^4.2.19",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "0.0.24"
+}

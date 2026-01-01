@@ -1,0 +1,14 @@
+{
+	"name": "sswr",
+	"npm_description": "Svelte stale while revalidate (SWR) data fetching strategy",
+	"repo_url": "https://github.com/ConsoleTVs/sswr",
+	"authors": ["consoletvs"],
+	"version": "2.2.0",
+	"downloads": 348391,
+	"github_stars": 287,
+	"updated": "2025-03-04T20:30:45.524Z",
+	"svelte_range": "^4.0.0 || ^5.0.0",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "2.2.0"
+}

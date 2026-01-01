@@ -1,4 +1,5 @@
 import { read } from '$app/server';
+import { PACKAGES_META } from '$lib/packages-meta';
 import type { Document, DocumentSummary } from '@sveltejs/site-kit';
 import { create_index } from '@sveltejs/site-kit/server/content';
 
@@ -16,9 +17,29 @@ const assets = import.meta.glob<string>(
 		import: 'default'
 	}
 );
+// we need a separate glob import for document assets because we need to use `read` so it needs the actual import, not `?url`
+const documents_assets = import.meta.glob<string>(['../../../content/docs/**/+assets/**'], {
+	eager: true,
+	import: 'default'
+});
+
+const registry_docs = import.meta.glob<string>(
+	'../../../src/lib/server/generated/registry/*.json',
+	{
+		eager: true,
+		query: '?raw',
+		import: 'default'
+	}
+);
 
 // https://github.com/vitejs/vite/issues/17453
-export const index = await create_index(documents, assets, '../../../content', read);
+export const index = await create_index(
+	documents,
+	assets,
+	documents_assets,
+	'../../../content',
+	read
+);
 
 const months = 'Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split(' ');
 
@@ -142,3 +163,113 @@ export function create_summary(document: Document): DocumentSummary {
 export const docs = create_docs();
 
 export const examples = index.examples.children;
+
+/**
+ * Represents a Svelte package in the registry
+ */
+export interface Package
+	extends PackageKey,
+		PackageManual,
+		PackageNpm,
+		PackageGithub,
+		PackageCalculated {}
+
+export interface PackageKey {
+	/** Package name */
+	name: string;
+}
+
+export interface PackageManual {
+	description?: string;
+
+	/** sv info */
+	svAlias?: string;
+	svOptions?: string;
+}
+
+export interface PackageDefinition extends PackageKey, PackageManual {}
+
+export interface PackageNpm {
+	/** Package description (HTML formatted) */
+	npm_description?: string;
+
+	/** Repository URL (typically GitHub) */
+	repo_url?: string;
+
+	/** Author username */
+	authors?: string[];
+
+	/** Homepage URL */
+	homepage?: string;
+
+	/** Latest version */
+	version: string;
+
+	/** Why the package is deprecated */
+	deprecated_reason: false | string;
+
+	/** Weekly download count */
+	downloads?: number;
+
+	/** Last update timestamp */
+	updated: string;
+
+	/** Svelte version range */
+	svelte_range?: string;
+
+	/** SvelteKit version range */
+	kit_range?: string;
+
+	// SHOULD BE CALCULATED WHEN GET FROM NPM
+	/** @deprecated */
+	typescript?: boolean;
+	// SHOULD BE CALCULATED WHEN GET FROM NPM
+	/** @deprecated */
+	runes?: boolean;
+	// SHOULD BE DELETED (in *.json files as well)
+	/** @deprecated */
+	last_rune_check_version?: string;
+}
+
+export interface PackageGithub {
+	/** Number of GitHub stars */
+	github_stars?: number;
+}
+
+export interface PackageCalculated {
+	description?: string;
+	official?: boolean;
+	outdated?: boolean;
+	svelte: {
+		3: boolean;
+		4: boolean;
+		5: boolean;
+	};
+}
+
+export interface Category {
+	title: string;
+	hash: string;
+	description?: string;
+	packages: Package[];
+}
+
+function create_registry() {
+	let output: Package[] = [];
+
+	for (const frontmatter of Object.values(registry_docs)) {
+		const json = JSON.parse(frontmatter);
+
+		json.description = PACKAGES_META.calculate_description(json);
+		json.homepage = PACKAGES_META.calculate_homepage(json);
+		json.official = PACKAGES_META.is_official(json.name);
+		json.outdated = PACKAGES_META.is_outdated(json.updated);
+		json.svelte = PACKAGES_META.supports_svelte_versions(json.svelte_range);
+
+		output.push(json as unknown as Package);
+	}
+
+	return output;
+}
+
+export const registry = create_registry();
