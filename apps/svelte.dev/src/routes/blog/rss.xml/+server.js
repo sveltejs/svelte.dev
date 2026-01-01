@@ -1,4 +1,4 @@
-import { index } from '$lib/server/content';
+import { index, docs } from '$lib/server/content';
 import { render_content } from '$lib/server/renderer';
 
 export const prerender = true;
@@ -19,6 +19,7 @@ function escapeHTML(html) {
 
 /** @param {import('@sveltejs/site-kit').Document[]} posts */
 const get_rss = async (posts) => {
+	const { references } = docs;
 	const renderedPosts = await Promise.all(
 		posts
 			.filter((post) => !post.metadata.draft)
@@ -29,7 +30,7 @@ const get_rss = async (posts) => {
 			<title>${escapeHTML(post.metadata.title)}</title>
 			<link>https://svelte.dev/${post.slug}</link>
 			<author>${escapeHTML(post.metadata.author)}</author>
-			<description>${escapeHTML(await render_content(post.file, post.body))}</description>
+			<description>${escapeHTML(await render_content(post.file, post.body, { references }))}</description>
 			<pubDate>${new Date(/** @type {string} */ (post.file.split('/').pop()).slice(0, 10)).toUTCString()}</pubDate>
 		</item>
 	`
