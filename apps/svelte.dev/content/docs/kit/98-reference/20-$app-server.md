@@ -82,7 +82,7 @@ See [Remote functions](/docs/kit/remote-functions#form) for full documentation.
 
 ```dts
 function form<Output>(
-	fn: () => Output
+	fn: () => MaybePromise<Output>
 ): RemoteForm<void, Output>;
 ```
 
@@ -93,7 +93,10 @@ function form<Output>(
 ```dts
 function form<Input extends RemoteFormInput, Output>(
 	validate: 'unchecked',
-	fn: (data: Input) => MaybePromise<Output>
+	fn: (
+		data: Input,
+		issue: InvalidField<Input>
+	) => MaybePromise<Output>
 ): RemoteForm<Input, Output>;
 ```
 
@@ -111,7 +114,8 @@ function form<
 >(
 	validate: Schema,
 	fn: (
-		data: StandardSchemaV1.InferOutput<Schema>
+		data: StandardSchemaV1.InferOutput<Schema>,
+		issue: InvalidField<StandardSchemaV1.InferInput<Schema>>
 	) => MaybePromise<Output>
 ): RemoteForm<StandardSchemaV1.InferInput<Schema>, Output>;
 ```

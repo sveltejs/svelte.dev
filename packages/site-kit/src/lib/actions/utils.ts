@@ -1,4 +1,6 @@
-export function fix_position(element: HTMLElement, fn: Function) {
+import { tick } from 'svelte';
+
+export async function fix_position(element: HTMLElement, fn: Function) {
 	let scroll_parent: HTMLElement | null = element;
 
 	while ((scroll_parent = scroll_parent.parentElement)) {
@@ -9,6 +11,7 @@ export function fix_position(element: HTMLElement, fn: Function) {
 
 	const top = element.getBoundingClientRect().top;
 	fn();
+	await tick();
 	const delta = element.getBoundingClientRect().top - top;
 
 	if (delta !== 0) {

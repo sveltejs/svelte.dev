@@ -33,8 +33,7 @@
 				.find((node) => (node as HTMLElement).classList.contains('code-block')) as HTMLElement;
 
 			const ts = !!parent.querySelector('.ts-toggle:checked');
-			const query = ts ? `pre[data-language="ts"] code` : 'pre code';
-			const code = parent.querySelector(query) as HTMLElement;
+			const code = parent.querySelectorAll(':scope > pre > code')[ts ? 1 : 0] as HTMLElement;
 			navigator.clipboard.writeText(get_text(code));
 		}
 	}
@@ -89,6 +88,11 @@
 				overflow: hidden;
 				text-overflow: ellipsis;
 			}
+		}
+
+		img {
+			max-width: 100%;
+			object-fit: contain;
 		}
 
 		h2 {
@@ -299,6 +303,11 @@
 					&.remove {
 						--color: rgba(255, 0, 0, 0.1);
 
+						:root:not(.light) & {
+							@media (prefers-color-scheme: dark) {
+								--color: rgba(255, 0, 0, 0.27);
+							}
+						}
 						:root.dark & {
 							--color: rgba(255, 0, 0, 0.27);
 						}

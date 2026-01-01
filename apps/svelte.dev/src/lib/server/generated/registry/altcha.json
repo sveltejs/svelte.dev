@@ -1,0 +1,15 @@
+{
+	"name": "altcha",
+	"npm_description": "Privacy-first CAPTCHA widget, compliant with global regulations (GDPR/HIPAA/CCPA/LGDP/DPDPA/PIPL) and WCAG accessible. No tracking, self-verifying.",
+	"repo_url": "https://github.com/altcha-org/altcha",
+	"authors": ["ovx"],
+	"homepage": "https://altcha.org",
+	"version": "2.3.0",
+	"downloads": 24180,
+	"github_stars": 1829,
+	"updated": "2025-12-18T05:42:03.679Z",
+	"svelte_range": "^5.28.6",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "1.4.2"
+}

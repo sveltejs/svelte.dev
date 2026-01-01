@@ -1,0 +1,15 @@
+{
+	"name": "@deno/svelte-adapter",
+	"npm_description": "Official Deno adapter for SvelteKit",
+	"repo_url": "https://github.com/denoland/svelte-adapter",
+	"authors": ["ry", "kt3k", "dsherret", "divy-work", "denobot"],
+	"homepage": "https://github.com/denoland/svelte-adapter#readme",
+	"version": "0.1.0",
+	"downloads": 1156,
+	"github_stars": 16,
+	"updated": "2025-05-19T16:20:54.327Z",
+	"kit_range": "2.x",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "0.0.1"
+}

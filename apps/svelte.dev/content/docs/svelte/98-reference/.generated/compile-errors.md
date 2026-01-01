@@ -199,7 +199,7 @@ Cyclical dependency detected: %cycle%
 ### const_tag_invalid_reference
 
 ```
-The `{@const %name% = ...}` declaration is not available in this snippet 
+The `{@const %name% = ...}` declaration is not available in this snippet
 ```
 
 The following is an error:
@@ -453,6 +453,12 @@ This turned out to be buggy and unpredictable, particularly when working with de
 {/each}
 ```
 
+### each_key_without_as
+
+```
+An `{#each ...}` block without an `as` clause cannot have a key
+```
+
 ### effect_invalid_placement
 
 ```
@@ -519,6 +525,12 @@ Expected an identifier
 Expected identifier or destructure pattern
 ```
 
+### expected_tag
+
+```
+Expected 'html', 'render', 'attach', 'const', or 'debug'
+```
+
 ### expected_token
 
 ```
@@ -553,6 +565,12 @@ Cannot use `await` in deriveds and template expressions, or at the top level of 
 
 ```
 `$host()` can only be used inside custom element component instances
+```
+
+### illegal_await_expression
+
+```
+`use:`, `transition:` and `animate:` directives, attachments and bindings do not support await expressions
 ```
 
 ### illegal_element_attribute

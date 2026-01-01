@@ -1,0 +1,16 @@
+{
+	"name": "layercake",
+	"npm_description": "graphics framework for sveltejs",
+	"repo_url": "https://github.com/mhkeller/layercake",
+	"authors": ["mhkeller0"],
+	"homepage": "https://layercake.graphics/",
+	"version": "10.0.2",
+	"downloads": 13722,
+	"github_stars": 1700,
+	"updated": "2025-09-23T18:49:20.036Z",
+	"svelte_range": ">=5",
+	"kit_range": "^2.22.5",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "8.4.3"
+}

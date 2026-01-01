@@ -1,0 +1,15 @@
+{
+	"name": "@sveltejs/adapter-node",
+	"npm_description": "Adapter for SvelteKit apps that generates a standalone Node server",
+	"repo_url": "https://github.com/sveltejs/kit",
+	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
+	"homepage": "https://svelte.dev/docs/kit/adapter-node",
+	"version": "5.4.0",
+	"downloads": 260023,
+	"github_stars": 19989,
+	"updated": "2025-10-15T16:42:35.084Z",
+	"kit_range": "^2.4.0",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "5.2.12"
+}

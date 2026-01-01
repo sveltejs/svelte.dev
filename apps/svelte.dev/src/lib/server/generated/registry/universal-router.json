@@ -1,0 +1,14 @@
+{
+	"name": "universal-router",
+	"npm_description": "Isomorphic router for JavaScript web applications",
+	"repo_url": "https://github.com/kriasoft/universal-router",
+	"authors": ["koistya", "frenzzy"],
+	"homepage": "https://www.kriasoft.com/universal-router/",
+	"version": "10.0.1",
+	"downloads": 22169,
+	"github_stars": 1754,
+	"updated": "2025-08-08T16:58:21.053Z",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "10.0.0"
+}

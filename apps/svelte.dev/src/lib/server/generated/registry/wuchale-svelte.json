@@ -1,0 +1,15 @@
+{
+	"name": "@wuchale/svelte",
+	"npm_description": "Protobuf-like i18n from plain code: Svelte adapter",
+	"repo_url": "https://github.com/wuchalejs/wuchale",
+	"authors": ["k1dv5"],
+	"homepage": "https://wuchale.dev",
+	"version": "0.17.9",
+	"downloads": 3533,
+	"github_stars": 187,
+	"updated": "2025-12-18T18:22:49.963Z",
+	"svelte_range": "^5.37.0",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "0.15.0"
+}

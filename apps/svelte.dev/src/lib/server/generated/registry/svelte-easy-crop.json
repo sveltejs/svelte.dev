@@ -1,0 +1,16 @@
+{
+	"name": "svelte-easy-crop",
+	"npm_description": "A Svelte component to crop images with easy interactions",
+	"repo_url": "https://github.com/ValentinH/svelte-easy-crop",
+	"authors": ["valentinhervieu"],
+	"homepage": "https://github.com/ValentinH/svelte-easy-crop",
+	"version": "5.0.0",
+	"downloads": 8177,
+	"github_stars": 235,
+	"updated": "2025-09-05T14:02:02.604Z",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.15.0",
+	"typescript": true,
+	"runes": true,
+	"last_rune_check_version": "4.0.1"
+}

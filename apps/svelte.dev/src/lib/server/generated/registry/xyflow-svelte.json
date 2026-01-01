@@ -1,0 +1,16 @@
+{
+	"name": "@xyflow/svelte",
+	"npm_description": "Svelte Flow - A highly customizable Svelte library for building node-based editors, workflow systems, diagrams and more.",
+	"repo_url": "https://github.com/xyflow/xyflow",
+	"authors": ["peterkogo", "webk1d"],
+	"homepage": "https://svelteflow.dev",
+	"version": "1.5.0",
+	"downloads": 42589,
+	"github_stars": 31718,
+	"updated": "2025-12-04T13:37:49.956Z",
+	"svelte_range": "^5.25.0",
+	"kit_range": "^2.49.1",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "0.1.36"
+}

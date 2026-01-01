@@ -1,0 +1,15 @@
+{
+	"name": "felte",
+	"npm_description": "An extensible form library for Svelte",
+	"repo_url": "https://github.com/pablo-abc/felte",
+	"authors": ["pberganza"],
+	"homepage": "https://felte.dev",
+	"version": "1.3.0",
+	"downloads": 14168,
+	"github_stars": 1084,
+	"updated": "2024-10-29T20:35:41.611Z",
+	"svelte_range": "^3.31.0 || ^4.0.0 || ^5.0.0",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "1.3.0"
+}

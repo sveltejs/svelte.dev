@@ -1,0 +1,12 @@
+{
+	"name": "sveltekit-adapter-chrome-extension",
+	"npm_description": "[Adapter](https://kit.svelte.dev/docs#adapters) for SvelteKit apps that prerenders your site as a collection of static files and removes inline scripts to comply with content source policies of Chrome extensions using manifest v3.",
+	"repo_url": "https://github.com/michmich112/sveltekit-adapter-chrome-extension",
+	"authors": ["michmich112"],
+	"homepage": "https://github.com/michmich112/sveltekit-adapter-chrome-extension#readme",
+	"version": "2.0.1",
+	"downloads": 187,
+	"github_stars": 146,
+	"updated": "2024-03-25T03:02:40.181Z",
+	"typescript": true
+}

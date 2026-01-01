@@ -1,0 +1,15 @@
+{
+	"name": "@sveltejs/adapter-cloudflare",
+	"npm_description": "Adapter for building SvelteKit applications on Cloudflare Pages with Workers integration",
+	"repo_url": "https://github.com/sveltejs/kit",
+	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
+	"homepage": "https://svelte.dev/docs/kit/adapter-cloudflare",
+	"version": "7.2.4",
+	"downloads": 64179,
+	"github_stars": 19989,
+	"updated": "2025-10-02T14:22:08.841Z",
+	"kit_range": "^2.0.0",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "7.0.1"
+}

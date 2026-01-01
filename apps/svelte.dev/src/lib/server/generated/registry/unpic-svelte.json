@@ -1,0 +1,16 @@
+{
+	"name": "@unpic/svelte",
+	"npm_description": "Svelte component for responsive, high-performance images.",
+	"repo_url": "https://github.com/ascorbic/unpic-img",
+	"authors": ["ascorbic"],
+	"homepage": "https://unpic.pics/img/svelte",
+	"version": "1.0.1",
+	"downloads": 14292,
+	"github_stars": 1825,
+	"updated": "2025-12-08T14:54:06.816Z",
+	"svelte_range": "^5",
+	"kit_range": "^2.16.0",
+	"typescript": true,
+	"runes": true,
+	"last_rune_check_version": "1.0.0"
+}

@@ -1,0 +1,15 @@
+{
+	"name": "@neoconfetti/svelte",
+	"npm_description": "Confetti explosion in Svelte 🎉🎊",
+	"repo_url": "https://github.com/puruvj/neoconfetti",
+	"authors": ["puruvj"],
+	"homepage": "https://github.com/puruvj/neoconfetti/tree/main/packages/svelte#readme",
+	"version": "2.2.2",
+	"downloads": 23176,
+	"github_stars": 311,
+	"updated": "2025-03-09T12:58:01.521Z",
+	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "2.2.2"
+}

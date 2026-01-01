@@ -1,3 +1,4 @@
+import type { Tokens } from 'marked';
 import { index, docs as _docs, examples } from '$lib/server/content';
 import { json } from '@sveltejs/kit';
 import { transform, slugify, clean } from '@sveltejs/site-kit/markdown';
@@ -97,7 +98,14 @@ async function content() {
 }
 
 async function plaintext(markdown: string) {
-	const block = ({ text }: any) => `${text}\n`;
+	const block = (token: Tokens.Blockquote | Tokens.ListItem | Tokens.TableRow) => {
+		if ('text' in token) {
+			return token.text;
+		}
+		// this should never happen, but abort loudly if it does
+		console.error(token);
+		throw new Error('Unexpected token while generating /content.json (see above)');
+	};
 
 	const inline = ({ text }: any) => text;
 
@@ -115,13 +123,21 @@ async function plaintext(markdown: string) {
 			html: () => '\n',
 			heading: ({ text }) => `${text}\n`,
 			hr: () => '',
-			list: block,
+			list({ items }) {
+				return items.map(this.listitem!).join('\n');
+			},
 			listitem: block,
-			checkbox: block,
+			checkbox: () => '',
 			paragraph({ tokens }) {
 				return this.parser!.parseInline(tokens);
 			},
-			table: block,
+			table({ header, rows }) {
+				const tHeader = this.tablerow!({ text: header.map(this.tablecell!).join() });
+				const tBody = rows
+					.map((row) => this.tablerow!({ text: row.map(this.tablecell!).join() }))
+					.join('\n');
+				return `${tHeader}\n${tBody}`;
+			},
 			tablerow: block,
 			tablecell: ({ text }) => {
 				return text + ' ';

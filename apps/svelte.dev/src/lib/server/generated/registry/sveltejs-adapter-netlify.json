@@ -1,0 +1,15 @@
+{
+	"name": "@sveltejs/adapter-netlify",
+	"npm_description": "A SvelteKit adapter that creates a Netlify app",
+	"repo_url": "https://github.com/sveltejs/kit",
+	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
+	"homepage": "https://svelte.dev/docs/kit/adapter-netlify",
+	"version": "5.2.4",
+	"downloads": 14030,
+	"github_stars": 19989,
+	"updated": "2025-10-02T14:22:09.602Z",
+	"kit_range": "^2.4.0",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "5.0.0"
+}

@@ -1,0 +1,16 @@
+{
+	"name": "carta-md",
+	"npm_description": "A lightweight, fully customizable, Markdown editor",
+	"repo_url": "https://github.com/BearToCode/carta",
+	"authors": ["astrobear"],
+	"homepage": "https://github.com/BearToCode/carta#readme",
+	"version": "4.11.1",
+	"downloads": 4550,
+	"github_stars": 703,
+	"updated": "2025-06-13T20:58:58.615Z",
+	"svelte_range": "^5.0.0",
+	"kit_range": "catalog:",
+	"typescript": true,
+	"runes": true,
+	"last_rune_check_version": "4.9.0"
+}

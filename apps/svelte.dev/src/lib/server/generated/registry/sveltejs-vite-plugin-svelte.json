@@ -1,0 +1,15 @@
+{
+	"name": "@sveltejs/vite-plugin-svelte",
+	"npm_description": "The official [Svelte](https://svelte.dev) plugin for [Vite](https://vitejs.dev).",
+	"repo_url": "https://github.com/sveltejs/vite-plugin-svelte",
+	"authors": ["rich_harris", "svelte-admin", "conduitry", "dominik_g"],
+	"homepage": "https://github.com/sveltejs/vite-plugin-svelte#readme",
+	"version": "6.2.1",
+	"downloads": 1007636,
+	"github_stars": 971,
+	"updated": "2025-09-24T13:16:28.132Z",
+	"svelte_range": "^5.0.0",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "5.0.3"
+}

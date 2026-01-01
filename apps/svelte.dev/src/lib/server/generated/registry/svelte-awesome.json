@@ -1,0 +1,16 @@
+{
+	"name": "svelte-awesome",
+	"npm_description": "Font Awesome component for Svelte JS, using inline SVG",
+	"repo_url": "https://github.com/RobBrazier/svelte-awesome",
+	"authors": ["robbrazier"],
+	"homepage": "https://github.com/RobBrazier/svelte-awesome#readme",
+	"version": "3.3.5",
+	"downloads": 11030,
+	"github_stars": 503,
+	"updated": "2024-10-22T12:51:36.311Z",
+	"svelte_range": ">= 3.43.1 < 6",
+	"kit_range": "^2.7.2",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "3.3.5"
+}

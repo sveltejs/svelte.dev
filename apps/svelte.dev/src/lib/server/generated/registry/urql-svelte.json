@@ -1,0 +1,29 @@
+{
+	"name": "@urql/svelte",
+	"npm_description": "A highly customizable and versatile GraphQL client for Svelte",
+	"repo_url": "https://github.com/urql-graphql/urql",
+	"authors": [
+		"sarmeyer",
+		"mariano-formidable",
+		"ryan.roemer",
+		"formidable-owner",
+		"formidablelabs",
+		"sarahformidable",
+		"ceceppa",
+		"keithluchtel",
+		"philpl",
+		"andyrichardson",
+		"jdecroock",
+		"parkerziegler",
+		"npm-urql"
+	],
+	"homepage": "https://formidable.com/open-source/urql/docs/",
+	"version": "5.0.0",
+	"downloads": 17223,
+	"github_stars": 8855,
+	"updated": "2025-08-09T12:31:03.971Z",
+	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "4.2.3"
+}

@@ -1,0 +1,16 @@
+{
+	"name": "svelte-pdf",
+	"npm_description": "svelte-pdf provides a component for rendering PDF documents using PDF.js",
+	"repo_url": "https://github.com/vinodnimbalkar/svelte-pdf",
+	"authors": ["vinodnimbalkar"],
+	"homepage": "https://github.com/vinodnimbalkar/svelte-pdf#readme",
+	"version": "2.0.2",
+	"downloads": 1871,
+	"github_stars": 242,
+	"updated": "2025-11-02T05:39:24.246Z",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.17.0",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "1.0.27"
+}

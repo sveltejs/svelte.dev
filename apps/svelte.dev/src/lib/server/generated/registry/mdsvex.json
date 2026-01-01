@@ -1,0 +1,15 @@
+{
+	"name": "mdsvex",
+	"npm_description": "Markdown preprocessor for Svelte",
+	"repo_url": "https://github.com/pngwn/MDsveX",
+	"authors": ["evilpingwin"],
+	"homepage": "https://github.com/pngwn/MDsveX#readme",
+	"version": "0.12.6",
+	"downloads": 52904,
+	"github_stars": 2883,
+	"updated": "2025-05-08T23:01:30.005Z",
+	"svelte_range": "^3.56.0 || ^4.0.0 || ^5.0.0-next.120",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "0.12.3"
+}

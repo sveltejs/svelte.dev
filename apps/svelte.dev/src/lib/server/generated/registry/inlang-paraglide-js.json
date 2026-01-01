@@ -1,0 +1,14 @@
+{
+	"name": "@inlang/paraglide-js",
+	"npm_description": "[![Inlang-ecosystem compatibility badge](https://cdn.jsdelivr.net/gh/opral/monorepo@main/inlang/assets/md-badges/inlang.svg)](https://inlang.com)",
+	"repo_url": "https://github.com/opral/inlang-paraglide-js",
+	"authors": ["samuelstroschein", "inlangbot"],
+	"homepage": "https://inlang.com/m/gerre34r/library-inlang-paraglideJs",
+	"version": "2.7.0",
+	"downloads": 89607,
+	"github_stars": 137,
+	"updated": "2025-12-11T15:29:36.648Z",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "2.0.11"
+}

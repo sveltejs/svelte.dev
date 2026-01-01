@@ -1,0 +1,16 @@
+{
+	"name": "svelte-maplibre",
+	"npm_description": "Svelte bindings for MapLibre",
+	"repo_url": "https://github.com/dimfeld/svelte-maplibre",
+	"authors": ["dimfeld"],
+	"homepage": "https://svelte-maplibre.imfeld.dev",
+	"version": "1.2.5",
+	"downloads": 10543,
+	"github_stars": 475,
+	"updated": "2025-11-04T23:09:13.463Z",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.48.0",
+	"typescript": true,
+	"runes": true,
+	"last_rune_check_version": "1.0.0"
+}

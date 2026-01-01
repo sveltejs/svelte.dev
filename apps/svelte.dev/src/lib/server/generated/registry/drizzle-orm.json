@@ -1,0 +1,14 @@
+{
+	"name": "drizzle-orm",
+	"npm_description": "Drizzle ORM package for SQL databases",
+	"repo_url": "https://github.com/drizzle-team/drizzle-orm",
+	"authors": ["dankochetov", "sheriman", "alexblokh", "kyrylo_usichenko"],
+	"homepage": "https://orm.drizzle.team",
+	"version": "0.45.1",
+	"downloads": 3011052,
+	"github_stars": 31924,
+	"updated": "2025-12-10T15:02:17.725Z",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "0.41.0"
+}

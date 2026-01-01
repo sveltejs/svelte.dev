@@ -101,6 +101,7 @@
 			workspace.select(name);
 		},
 
+		// svelte-ignore state_referenced_locally
 		workspace
 	});
 

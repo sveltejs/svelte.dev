@@ -1,0 +1,16 @@
+{
+	"name": "layerchart",
+	"npm_description": "Composable Svelte chart components to build a wide range of visualizations",
+	"repo_url": "https://github.com/techniq/layerchart",
+	"authors": ["techniq"],
+	"homepage": "https://github.com/techniq/layerchart#readme",
+	"version": "1.0.12",
+	"downloads": 36006,
+	"github_stars": 1079,
+	"updated": "2025-09-17T14:45:16.933Z",
+	"svelte_range": "^3.56.0 || ^4.0.0 || ^5.0.0",
+	"kit_range": "^2.21.0",
+	"typescript": true,
+	"runes": true,
+	"last_rune_check_version": "1.0.8"
+}

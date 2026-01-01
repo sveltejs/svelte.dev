@@ -19,6 +19,7 @@
 
 	let { data }: PageProps = $props();
 
+	// svelte-ignore state_referenced_locally
 	let path = data.exercise.path;
 	let show_editor = $state(false);
 	let show_filetree = $state(false);
@@ -279,9 +280,9 @@
 						<SplitPane
 							id="editor"
 							type={mobile ? 'vertical' : 'horizontal'}
-							min="120px"
-							max="300px"
-							pos="200px"
+							min={mobile ? '40px' : '120px'}
+							max={mobile ? '40px' : '300px'}
+							pos={mobile ? '40px' : '200px'}
 						>
 							{#snippet a()}
 								<section class="navigator">
@@ -415,16 +416,9 @@
 		background-color: var(--sk-bg-3);
 	}
 
-	.mobile .navigator {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		padding: 1rem;
-		gap: 1rem;
-	}
-
 	.mobile .navigator .file {
 		flex: 1;
+		padding: 1rem;
 		text-align: left;
 		white-space: nowrap;
 		overflow: hidden;

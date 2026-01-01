@@ -1,0 +1,16 @@
+{
+	"name": "svelte-render-scan",
+	"npm_description": "Visual debugging tool for Svelte applications.",
+	"repo_url": "https://github.com/khromov/svelte-render-scan",
+	"authors": ["stanislav-khromov"],
+	"homepage": "https://khromov.github.io/svelte-render-scan/",
+	"version": "1.1.0",
+	"downloads": 5141,
+	"github_stars": 165,
+	"updated": "2025-03-21T21:53:49.157Z",
+	"svelte_range": "^5.0.0",
+	"kit_range": "^2.16.0",
+	"typescript": true,
+	"runes": true,
+	"last_rune_check_version": "1.1.0"
+}

@@ -1,0 +1,16 @@
+{
+	"name": "super-sitemap",
+	"npm_description": "SvelteKit sitemap focused on ease of use and making it impossible to forget to add your paths.",
+	"repo_url": "https://github.com/jasongitmail/super-sitemap",
+	"authors": ["jasongitmail"],
+	"homepage": "https://github.com/jasongitmail/super-sitemap#readme",
+	"version": "1.0.5",
+	"downloads": 5426,
+	"github_stars": 235,
+	"updated": "2025-07-22T17:39:14.601Z",
+	"svelte_range": ">=4.0.0 <6.0.0",
+	"kit_range": "^1.27.2",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "1.0.3"
+}
