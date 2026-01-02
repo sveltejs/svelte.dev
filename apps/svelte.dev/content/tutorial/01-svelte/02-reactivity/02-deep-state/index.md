@@ -30,3 +30,15 @@ function addNumber() {
 ```
 
 > [!NOTE] Deep reactivity is implemented using [proxies](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy), and mutations to the proxy do not affect the original object.
+> 
+> **Example:**
+> ```js
+> let original = [1, 2, 3, 4];
+> let numbers = $state(original);
+> // Now you have TWO separate things:
+> // 1. `numbers` - the reactive proxy (triggers UI updates)
+> // 2. `original` - the non-reactive original array
+> 
+> numbers.push(5);  // ✅ UI updates! numbers is now [1,2,3,4,5]
+> console.log(original); // ❌ Still [1,2,3,4] - unchanged!
+> ```
