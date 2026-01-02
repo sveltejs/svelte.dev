@@ -96,7 +96,9 @@ Available since 2.26
 
 </blockquote>
 
-Resolve a pathname by prefixing it with the base path, if any, or resolve a route ID by populating dynamic segments with parameters.
+Resolve a pathname by prefixing it with the base path, if any,
+or resolve a route ID by populating dynamic segments with route parameters.
+Optionally accepts URL parameters and appends these to the resolved route.
 
 During server rendering, the base path is relative and depends on the page currently being rendered.
 
@@ -107,9 +109,25 @@ import { resolve } from '$app/paths';
 // using a pathname
 const resolved = resolve(`/blog/hello-world`);
 
-// using a route ID plus parameters
+// using a route ID plus route parameters
 const resolved = resolve('/blog/[slug]', {
 	slug: 'hello-world'
+});
+
+// using a route ID plus URL parameters as Record
+const resolved = resolve('/blog/search',
+	{ hash: 'results', searchParams: { author: 'John Doe', year: '2025' } }
+});
+
+// using a route ID plus URL parameters as URLSearchParams
+const resolved = resolve('/blog/search',
+	{ hash: 'results', searchParams: new URLSearchParams({ author: 'John Doe', year: '2025' }) }
+});
+
+// using a route ID plus route parameters and URL parameters
+const resolved = resolve('/blog/[slug]',
+	{ slug: 'hello-world' },
+	{ hash: 'introduction' }
 });
 ```
 
