@@ -736,7 +736,7 @@ If an error occurs during submission, the nearest `+error.svelte` page will be r
 
 ### enhance
 
-We can customize what happens when the form is submitted with the `enhance` method:
+We can customize what happens when the form is submitted with the `enhance` method, including accessing the result:
 
 ```svelte
 <!--- file: src/routes/blog/new/+page.svelte --->
@@ -750,9 +750,14 @@ We can customize what happens when the form is submitted with the `enhance` meth
 <form {...createPost.enhance(async ({ form, data, submit }) => {
 	try {
 		await submit();
-		form.reset();
-
-		showToast('Successfully published!');
+		if (!createPost.fields.allIssues()) {
+			// Access return data in createPost.results
+			showToast('Successfully published!');
+			form.reset();
+	  }
+	  else {
+			showToast('Oh no! Something went wrong');
+		}
 	} catch (error) {
 		showToast('Oh no! Something went wrong');
 	}
