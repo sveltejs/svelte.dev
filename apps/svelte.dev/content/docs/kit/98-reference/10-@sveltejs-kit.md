@@ -2445,6 +2445,8 @@ type RemoteForm<
 	get result(): Output | undefined;
 	/** The number of pending submissions */
 	get pending(): number;
+	/** Whether the form has been tried to be submitted at least once */
+	get submitted(): boolean;
 	/** Access form fields using object notation */
 	fields: RemoteFormFields<Input>;
 	/** Spread this onto a `<button>` or `<input type="submit">` */
