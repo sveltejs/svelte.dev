@@ -54,6 +54,8 @@ const highlighter = await createHighlighterCore({
 		import('@shikijs/langs/css'),
 		import('@shikijs/langs/bash'),
 		import('@shikijs/langs/yaml'),
+		import('@shikijs/langs/toml'),
+		import('@shikijs/langs/ini'),
 		import('@shikijs/langs/svelte')
 	],
 	engine: createOnigurumaEngine(import('shiki/wasm'))
@@ -860,7 +862,10 @@ async function syntax_highlight({
 		html = replace_blank_lines(html);
 	} else {
 		const highlighted = highlighter.codeToHtml(source, {
-			lang: SHIKI_LANGUAGE_MAP[language as keyof typeof SHIKI_LANGUAGE_MAP],
+			// fallback to passing the language as is if it doesn't exist in our map
+			// this ensures we get an error if we're using an unsupported language
+			// rather than silently not highlighting the code block as expected
+			lang: SHIKI_LANGUAGE_MAP[language as keyof typeof SHIKI_LANGUAGE_MAP] ?? language,
 			theme
 		});
 
