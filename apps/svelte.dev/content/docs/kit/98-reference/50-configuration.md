@@ -496,6 +496,25 @@ Whether to enable the experimental remote functions feature. This feature is not
 
 </div>
 </div>
+<div class="ts-block-property">
+
+```ts
+// @noErrors
+forkPreloads?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `false`
+
+</div>
+
+Whether to enable the experimental forked preloading feature using Svelte's fork API.
+
+</div>
+</div>
 
 </div>
 
