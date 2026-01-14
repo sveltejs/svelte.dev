@@ -40,3 +40,9 @@ We _could_ fix it by adding the prop...
 > ```js
 > console.log(stuff.name, stuff.version, stuff.description, stuff.website);
 > ```
+>
+> However, props may include special implicit values like [`children`](https://svelte.dev/tutorial/svelte/implicit-snippet-props). To support this, always prefer destructuring props to be explicit about your selection. This is important when the props are reused as-is for nested components.
+>
+> ```js
+> let { children, ...props } = $props();
+> ```
