@@ -32,7 +32,7 @@ If you think you have discovered a vulnerability in a package maintained by the 
 
 Full reports are available in the published CVEs, but we’ve included a brief summary of each below.
 
-## [CVE-2026-22775](https://www.cve.org/CVERecord?id=CVE-2026-22775): DoS in `devalue.parse` due to memory/CPU exhaustion
+## [CVE-2026-22775](https://github.com/sveltejs/devalue/security/advisories/GHSA-g2pg-6438-jwpf): DoS in `devalue.parse` due to memory/CPU exhaustion
 
 - Packages affected:
     - `devalue`
@@ -44,7 +44,7 @@ Full reports are available in the published CVEs, but we’ve included a brief s
 - Effects:
     - A malicious payload can cause arbitrarily large memory allocation, potentially crashing the process
 
-## [CVE-2026-22774](https://www.cve.org/CVERecord?id=CVE-2026-22774): DoS in `devalue.parse` due to memory exhaustion
+## [CVE-2026-22774](https://github.com/sveltejs/devalue/security/advisories/GHSA-vw5p-8cq8-m7mv): DoS in `devalue.parse` due to memory exhaustion
 
 (Yes, this is very similar to the previous CVE. No, it is not the same!)
 
@@ -58,7 +58,7 @@ Full reports are available in the published CVEs, but we’ve included a brief s
 - Effects:
     - A malicious payload can cause arbitrarily large memory allocation, potentially crashing the process
 
-## [CVE-2026-22803](https://www.cve.org/CVERecord?id=CVE-2026-22803): **Memory amplification DoS in Remote Functions binary form deserializer**
+## [CVE-2026-22803](https://github.com/sveltejs/kit/security/advisories/GHSA-j2f3-wq62-6q46): **Memory amplification DoS in Remote Functions binary form deserializer**
 
 - Packages affected:
     - `@sveltejs/kit`
@@ -69,7 +69,7 @@ Full reports are available in the published CVEs, but we’ve included a brief s
 - Effects:
     - Users can submit a malicious request that causes your application to hang and allocate arbitrarily-large amounts of memory
 
-## [CVE-2025-67647](https://www.cve.org/CVERecord?id=CVE-2025-67647): **Denial of service and possible SSRF when using prerendering**
+## [CVE-2025-67647](https://github.com/sveltejs/kit/security/advisories/GHSA-j62c-4x62-9r35): **Denial of service and possible SSRF when using prerendering**
 
 - Packages affected:
     - `@sveltejs/kit`
@@ -86,7 +86,7 @@ Full reports are available in the published CVEs, but we’ve included a brief s
     - SSRF allows access to internal resources that can be reached without authentication from SvelteKit’s server runtime
     - If the stars align, it’s possible to obtain SXSS via cache poisoning by forcing a potential CDN to cache an XSS returned by the attacker's server (the latter being able to specify the cache-control of their choice)
 
-## [CVE-2025-15265](https://www.cve.org/CVERecord?id=CVE-2025-15265): XSS via `hydratable`
+## [CVE-2025-15265](https://github.com/sveltejs/svelte/security/advisories/GHSA-6738-r8g5-qwp3): XSS via `hydratable`
 
 - Packages affected:
     - `svelte`
