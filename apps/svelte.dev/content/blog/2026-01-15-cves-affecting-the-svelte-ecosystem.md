@@ -76,7 +76,7 @@ Full reports are available in the published security advisories, but we’ve inc
     - `@sveltejs/adapter-node`
 - You’re vulnerable to DoS if:
     - You’re using `@sveltejs/kit` versions `2.44.0` through `2.49.4`, and
-    - Your app has at least one prerendered route, and
+    - Your app has at least one prerendered route
 - You’re vulnerable to DoS and SSRF if:
     - You’ve using `@sveltejs/kit` versions `2.19.0` through `2.49.4`, and
     - Your app has at least one prerendered route, and
