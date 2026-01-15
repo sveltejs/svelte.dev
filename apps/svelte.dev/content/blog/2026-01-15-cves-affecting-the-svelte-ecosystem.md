@@ -38,11 +38,11 @@ Full reports are available in the published security advisories, but we’ve inc
     - `devalue`
 - You’re affected if:
     - You’re using `devalue` versions `5.1.0` through `5.6.1`, and
-    - You’re parsing user-controlled input, and
-    - SvelteKit applications using remote functions are vulnerable, as the parameters are run through `devalue.parse`
-        - If you don’t have remote functions enabled, SvelteKit is not vulnerable
+    - You’re parsing user-controlled input
 - Effects:
     - A malicious payload can cause arbitrarily large memory allocation, potentially crashing the process
+    - SvelteKit applications using remote functions are vulnerable, as the parameters are run through `devalue.parse`
+        - If you don’t have remote functions enabled, SvelteKit is not vulnerable
 
 ## [CVE-2026-22774](https://github.com/sveltejs/devalue/security/advisories/GHSA-vw5p-8cq8-m7mv): DoS in `devalue.parse` due to memory exhaustion
 
@@ -52,11 +52,11 @@ Full reports are available in the published security advisories, but we’ve inc
     - `devalue`
 - You’re affected if:
     - You’re using `devalue` versions `5.3.0` through `5.6.1`, and
-    - You’re parsing user-controlled input, and
-    - SvelteKit applications using remote functions are vulnerable, as the parameters are run through `devalue.parse`
-        - If you don’t have remote functions enabled, SvelteKit is not vulnerable
+    - You’re parsing user-controlled input
 - Effects:
     - A malicious payload can cause arbitrarily large memory allocation, potentially crashing the process
+    - SvelteKit applications using remote functions are vulnerable, as the parameters are run through `devalue.parse`
+        - If you don’t have remote functions enabled, SvelteKit is not vulnerable
 
 ## [CVE-2026-22803](https://github.com/sveltejs/kit/security/advisories/GHSA-j2f3-wq62-6q46): **Memory amplification DoS in Remote Functions binary form deserializer**
 
