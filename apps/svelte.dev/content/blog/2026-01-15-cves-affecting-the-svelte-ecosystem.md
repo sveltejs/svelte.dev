@@ -64,7 +64,7 @@ Full reports are available in the published security advisories, but we’ve inc
     - `@sveltejs/kit`
 - You’re affected if:
     - You’re using SvelteKit versions `2.49.0` through `2.49.4`, and
-    - You’ve enabled the remote functions experimental flag, and
+    - You’ve enabled the `experimental.remoteFunctions` flag, and
     - You’re using `form`
 - Effects:
     - Users can submit a malicious request that causes your application to hang and allocate arbitrarily-large amounts of memory
