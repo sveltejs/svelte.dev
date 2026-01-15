@@ -5,8 +5,6 @@ author: Elliott Johnson
 authorURL: https://bsky.app/profile/ell.iott.dev
 ---
 
-# CVEs affecting the Svelte ecosystem
-
 We’ve released patches for 5 vulnerabilities across `devalue`, `svelte`,  `@sveltejs/kit`, and `@sveltejs/adapter-node`. Here’s what you need to know:
 
 # Upgrade now
