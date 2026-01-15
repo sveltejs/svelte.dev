@@ -15,7 +15,7 @@ If you’re using any of these packages, upgrade them to their corresponding non
 
 - `devalue`: `5.6.2`
 - `svelte`: `5.46.4`
-- `@sveltejs/kit`: `5.49.5`
+- `@sveltejs/kit`: `2.49.5`
 - `@sveltejs/adapter-node`: `5.5.1`
 
 For cross-dependent packages — `svelte` and `@sveltejs/kit` depend on `devalue` — patched versions already include upgraded dependencies.
