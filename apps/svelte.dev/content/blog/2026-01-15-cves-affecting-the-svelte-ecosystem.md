@@ -30,7 +30,7 @@ If you think you have discovered a vulnerability in a package maintained by the 
 
 # Details
 
-Full reports are available in the published CVEs, but we’ve included a brief summary of each below.
+Full reports are available in the published security advisories, but we’ve included a brief summary of each below.
 
 ## [CVE-2026-22775](https://github.com/sveltejs/devalue/security/advisories/GHSA-g2pg-6438-jwpf): DoS in `devalue.parse` due to memory/CPU exhaustion
 
