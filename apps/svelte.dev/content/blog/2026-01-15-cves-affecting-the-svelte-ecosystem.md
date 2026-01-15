@@ -89,7 +89,7 @@ Full reports are available in the published security advisories, but we’ve inc
 - Packages affected:
   - `svelte`
 - You’re vulnerable if:
-  - You’re using `svelte` versions `2.46.0` through `2.46.3`, and
+  - You’re using `svelte` versions `5.46.0` through `5.46.3`, and
   - You’re using [`hydratable`](https://svelte.dev/docs/svelte/hydratable), and you’re passing unsanitized, user-controlled strings in as keys
 - Effects:
   - Your users are vulnerable to XSS if an attacker can manage to get a controlled key into `hydratable` that is then returned to another user
