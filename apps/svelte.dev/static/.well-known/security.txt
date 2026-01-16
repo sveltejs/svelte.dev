@@ -1,0 +1,1 @@
+To report a security issue, please refer to our security policy: https://github.com/sveltejs/.github/blob/main/SECURITY.md
