@@ -29,39 +29,39 @@
 <div class="content">
 	<SplitPane
 		min="50px"
-	  type="vertical"
+		type="vertical"
 		max={terminal_visible ? '80%' : '100%'}
-		pos={terminal_visible ? '20%' : '100%' }
+		pos={terminal_visible ? '20%' : '100%'}
 	>
 		{#snippet a()}
-		{#if browser}
-		<Viewer
-			relaxed
-			can_escape
-			onLog={(l: Log[]) => (logs = l)}
-			bundler={adapter_state.bundler}
-			theme={theme.current}
-			injectedCSS="@import '/tutorial/shared.css';"
-			error={null}
-			status={null}
-		/>
-	{/if}
+			{#if browser}
+				<Viewer
+					relaxed
+					can_escape
+					onLog={(l: Log[]) => (logs = l)}
+					bundler={adapter_state.bundler}
+					theme={theme.current}
+					injectedCSS="@import '/tutorial/shared.css';"
+					error={null}
+					status={null}
+				/>
+			{/if}
 
-	{#if adapter_state.progress.value !== 1}
-		<Loading
-			initial={false}
-			progress={adapter_state.progress.value}
-			status={adapter_state.progress.text}
-		/>
-	{/if}
-	{/snippet}
+			{#if adapter_state.progress.value !== 1}
+				<Loading
+					initial={false}
+					progress={adapter_state.progress.value}
+					status={adapter_state.progress.text}
+				/>
+			{/if}
+		{/snippet}
 
-	{#snippet b()}
-		<div class="terminal" class:visible={terminal_visible}>
-			<Console {logs} />
-		</div>
-	{/snippet}
-</SplitPane>
+		{#snippet b()}
+			<div class="terminal" class:visible={terminal_visible}>
+				<Console {logs} />
+			</div>
+		{/snippet}
+	</SplitPane>
 </div>
 
 <style>
