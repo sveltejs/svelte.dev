@@ -7,6 +7,6 @@ The Svelte plugin includes a specialized subagent called `svelte-file-editor` de
 
 ## Benefits
 
-The subagent is executed in a separate "agent" that has access to it's own context window. This allows the agent to fetch the documentation, iterate with the `svelte-autofixer` tool and write to the file system without wasting context in the main agent.
+The subagent has access to its own context window, allowing it to fetch the documentation, iterate with the `svelte-autofixer` tool and write to the file system without wasting context in the main agent.
 
 The delegation should happen automatically when appropriate, but you can also explicitly request the subagent be used for Svelte-related tasks.
