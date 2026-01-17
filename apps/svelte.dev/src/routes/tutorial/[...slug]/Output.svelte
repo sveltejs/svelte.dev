@@ -140,6 +140,7 @@
 	<SplitPane
 		min="50px"
 		type="vertical"
+		disabled={!terminal_visible}
 		max={terminal_visible ? '80%' : '100%'}
 		pos={terminal_visible ? '20%' : '100%'}
 	>
@@ -181,6 +182,10 @@
 		max-height: 100%;
 		background: var(--sk-bg-2);
 		--menu-width: 5.4rem;
+	}
+
+	.content :global(svelte-split-pane-section) {
+		overflow: hidden;
 	}
 
 	iframe {

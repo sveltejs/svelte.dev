@@ -30,6 +30,7 @@
 	<SplitPane
 		min="50px"
 		type="vertical"
+		disabled={!terminal_visible}
 		max={terminal_visible ? '80%' : '100%'}
 		pos={terminal_visible ? '20%' : '100%'}
 	>
