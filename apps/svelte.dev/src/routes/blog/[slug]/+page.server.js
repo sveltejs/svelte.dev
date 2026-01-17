@@ -1,5 +1,5 @@
 import { error } from '@sveltejs/kit';
-import { blog_posts } from '$lib/server/content';
+import { blog_posts, docs } from '$lib/server/content';
 import { render_content } from '$lib/server/renderer';
 
 export async function load({ params }) {
@@ -11,8 +11,10 @@ export async function load({ params }) {
 	// on the `runes` blog post
 	const markdown = document.body.replace(/(    )+/gm, (match) => '  '.repeat(match.length / 4));
 
+	const { references } = docs;
+
 	return {
 		...document,
-		body: await render_content(document.file, markdown)
+		body: await render_content(document.file, markdown, { references })
 	};
 }
