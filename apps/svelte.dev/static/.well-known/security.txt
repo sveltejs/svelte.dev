@@ -1,0 +1,2 @@
+# Please report security issues via GitHub:
+Policy: https://github.com/sveltejs/.github/blob/main/SECURITY.md
