@@ -205,32 +205,9 @@
 		overflow-y: auto;
 	}
 
-	.terminal::after {
-		--thickness: 6px;
-		--shadow: transparent;
-		content: '';
-		display: block;
-		position: absolute;
-		width: 100%;
-		height: var(--thickness);
-		left: 0;
-		top: calc(-1 * var(--thickness));
-		background-image: linear-gradient(to bottom, transparent, var(--shadow));
-		pointer-events: none;
-	}
-
-	.terminal.visible {
-		transform: none;
-		-webkit-transform: none;
-	}
-
-	.terminal.visible::after {
-		--shadow: rgba(0, 0, 0, 0.05);
-	}
-
 	@media (prefers-color-scheme: dark) {
 		.terminal {
-			background: rgba(0, 0, 0, 0.5);
+			background: rgba(0, 0, 0, 0.1);
 		}
 	}
 </style>
