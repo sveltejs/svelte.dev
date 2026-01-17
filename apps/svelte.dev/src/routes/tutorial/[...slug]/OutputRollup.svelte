@@ -6,6 +6,7 @@
 	import Chrome from './Chrome.svelte';
 	import Loading from './Loading.svelte';
 	import { adapter_state, update } from './adapter.svelte';
+	import { SplitPane } from '@rich_harris/svelte-split-pane';
 
 	let terminal_visible = $state(false);
 	let logs = $state<Log[]>([]);
@@ -26,7 +27,10 @@
 />
 
 <div class="content">
-	{#if browser}
+	<SplitPane type="vertical" min="100px" max="-4.1rem" pos="50%">
+		{#snippet a()}
+	<div class="viewer-container">
+		{#if browser}
 		<Viewer
 			relaxed
 			can_escape
@@ -46,10 +50,17 @@
 			status={adapter_state.progress.text}
 		/>
 	{/if}
-
-	<div class="terminal" class:visible={terminal_visible}>
-		<Console {logs} />
 	</div>
+	{/snippet}
+
+	{#snippet b()}
+	<div class="terminal-container">
+		<div class="terminal" class:visible={terminal_visible}>
+			<Console {logs} />
+		</div>
+	</div>
+	{/snippet}
+</SplitPane>
 </div>
 
 <style>
@@ -64,12 +75,16 @@
 		--menu-width: 5.4rem;
 	}
 
+	.terminal-container {
+		position: relative;
+	}
+
 	.terminal {
 		position: absolute;
 		left: 0;
 		bottom: 0;
 		width: 100%;
-		height: 80%;
+		height: 100%;
 		font: var(--sk-font-mono);
 		background: var(--sk-bg-1);
 		border-top: 1px solid var(--sk-border);
