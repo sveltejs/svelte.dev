@@ -10,6 +10,7 @@
 	import Chrome from './Chrome.svelte';
 	import Loading from './Loading.svelte';
 	import { adapter_state, subscribe, reset } from './adapter.svelte';
+	import { SplitPane } from '@rich_harris/svelte-split-pane';
 	import type { Exercise } from '$lib/tutorial';
 	import type { Workspace } from '@sveltejs/repl/workspace';
 
@@ -136,27 +137,38 @@
 />
 
 <div class="content">
-	{#if browser}
-		<iframe bind:this={iframe} title="Output" onload={set_iframe_visible}></iframe>
-	{/if}
+	<SplitPane
+		min="50px"
+		type="vertical"
+		max={terminal_visible ? '80%' : '100%'}
+		pos={terminal_visible ? '20%' : '100%'}
+	>
+		{#snippet a()}
+			{#if browser}
+				<iframe bind:this={iframe} title="Output" onload={set_iframe_visible}></iframe>
+			{/if}
 
-	{#if paused || loading || adapter_state.error}
-		<Loading
-			{initial}
-			error={adapter_state.error}
-			progress={adapter_state.progress.value}
-			status={adapter_state.progress.text}
-			onreset={() => {
-				reset(workspace.files);
-			}}
-		/>
-	{/if}
+			{#if paused || loading || adapter_state.error}
+				<Loading
+					{initial}
+					error={adapter_state.error}
+					progress={adapter_state.progress.value}
+					status={adapter_state.progress.text}
+					onreset={() => {
+						reset(workspace.files);
+					}}
+				/>
+			{/if}
+		{/snippet}
 
-	<div class="terminal" class:visible={terminal_visible}>
-		{#each adapter_state.logs as log}
-			<div>{@html log}</div>
-		{/each}
-	</div>
+		{#snippet b()}
+			<div class="terminal" class:visible={terminal_visible}>
+				{#each adapter_state.logs as log}
+					<div>{@html log}</div>
+				{/each}
+			</div>
+		{/snippet}
+	</SplitPane>
 </div>
 
 <style>
@@ -182,18 +194,13 @@
 	}
 
 	.terminal {
-		position: absolute;
-		left: 0;
-		bottom: 0;
+		position: relative;
 		width: 100%;
-		height: 80%;
+		height: 100%;
 		font: var(--sk-font-mono);
 		padding: 1rem;
 		border-top: 1px solid var(--sk-border);
 		background: rgba(255, 255, 255, 0.5);
-		transform: translate(0, 100%);
-		-webkit-transform: translate3d(0, 100%, 0.01);
-		transition: transform 0.3s;
 		backdrop-filter: blur(3px);
 		overflow-y: auto;
 	}
