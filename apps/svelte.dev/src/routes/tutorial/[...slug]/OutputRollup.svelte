@@ -28,12 +28,12 @@
 
 <div class="content">
 	<SplitPane
+		min="50px"
 	  type="vertical"
-		max={terminal_visible ? '-4.1rem' : undefined}
+		max={terminal_visible ? '80%' : '100%'}
 		pos={terminal_visible ? '20%' : '100%' }
 	>
 		{#snippet a()}
-	<div class="viewer-container">
 		{#if browser}
 		<Viewer
 			relaxed
@@ -54,15 +54,12 @@
 			status={adapter_state.progress.text}
 		/>
 	{/if}
-	</div>
 	{/snippet}
 
 	{#snippet b()}
-	<div class="terminal-container">
 		<div class="terminal" class:visible={terminal_visible}>
 			<Console {logs} />
 		</div>
-	</div>
 	{/snippet}
 </SplitPane>
 </div>
@@ -79,14 +76,8 @@
 		--menu-width: 5.4rem;
 	}
 
-	.terminal-container {
-		position: relative;
-	}
-
 	.terminal {
-		position: absolute;
-		left: 0;
-		bottom: 0;
+		position: relative;
 		width: 100%;
 		height: 100%;
 		font: var(--sk-font-mono);
