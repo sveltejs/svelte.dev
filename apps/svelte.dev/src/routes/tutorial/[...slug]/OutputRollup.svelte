@@ -57,7 +57,7 @@
 		{/snippet}
 
 		{#snippet b()}
-			<div class="terminal" class:visible={terminal_visible}>
+			<div class="terminal">
 				<Console {logs} />
 			</div>
 		{/snippet}
@@ -84,29 +84,6 @@
 		background: var(--sk-bg-1);
 		border-top: 1px solid var(--sk-border);
 		overflow-y: auto;
-	}
-
-	.terminal::after {
-		--thickness: 6px;
-		--shadow: transparent;
-		content: '';
-		display: block;
-		position: absolute;
-		width: 100%;
-		height: var(--thickness);
-		left: 0;
-		top: calc(-1 * var(--thickness));
-		background-image: linear-gradient(to bottom, transparent, var(--shadow));
-		pointer-events: none;
-	}
-
-	.terminal.visible {
-		transform: none;
-		-webkit-transform: none;
-	}
-
-	.terminal.visible::after {
-		--shadow: rgba(0, 0, 0, 0.05);
 	}
 
 	@media (prefers-color-scheme: dark) {
