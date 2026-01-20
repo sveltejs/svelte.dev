@@ -525,12 +525,6 @@ Expected an identifier
 Expected identifier or destructure pattern
 ```
 
-### expected_tag
-
-```
-Expected 'html', 'render', 'attach', 'const', or 'debug'
-```
-
 ### expected_token
 
 ```
@@ -565,12 +559,6 @@ Cannot use `await` in deriveds and template expressions, or at the top level of 
 
 ```
 `$host()` can only be used inside custom element component instances
-```
-
-### illegal_await_expression
-
-```
-`use:`, `transition:` and `animate:` directives, attachments and bindings do not support await expressions
 ```
 
 ### illegal_element_attribute
