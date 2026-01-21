@@ -13,6 +13,7 @@ import {
 	compileModule,
 	migrate,
 	parse,
+	parseCss,
 	preprocess,
 	print,
 	walk
@@ -130,6 +131,22 @@ function parse(
 		  }
 		| undefined
 ): Record<string, any>;
+```
+
+</div>
+
+
+
+## parseCss
+
+The parseCss function parses a CSS stylesheet, returning its abstract syntax tree.
+
+<div class="ts-block">
+
+```dts
+function parseCss(
+	source: string
+): Omit<AST.CSS.StyleSheet, 'attributes' | 'content'>;
 ```
 
 </div>
