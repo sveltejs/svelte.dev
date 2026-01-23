@@ -78,7 +78,7 @@ const packages: Package[] = [
 	{
 		name: 'svelte',
 		repo: get_downstream_repo('svelte'),
-		branch: branches['svelte'].branch ?? 'main',
+		branch: branches['svelte']?.branch ?? 'main',
 		pkg: 'packages/svelte',
 		docs: 'documentation/docs',
 		types: 'types',
@@ -102,7 +102,7 @@ const packages: Package[] = [
 	{
 		name: 'kit',
 		repo: get_downstream_repo('kit'),
-		branch: branches['kit'].branch ?? 'main',
+		branch: branches['kit']?.branch ?? 'main',
 		pkg: 'packages/kit',
 		docs: 'documentation/docs',
 		types: 'types',
@@ -162,7 +162,7 @@ const packages: Package[] = [
 	{
 		name: 'cli',
 		repo: get_downstream_repo('cli'),
-		branch: branches['cli'].branch ?? 'main',
+		branch: branches['cli']?.branch ?? 'main',
 		pkg: 'packages/cli',
 		docs: 'documentation/docs',
 		types: null
@@ -170,7 +170,7 @@ const packages: Package[] = [
 	{
 		name: 'mcp',
 		repo: get_downstream_repo('mcp'),
-		branch: branches['mcp'].branch ?? 'main',
+		branch: branches['mcp']?.branch ?? 'main',
 		pkg: 'packages/mcp-stdio',
 		docs: 'documentation/docs',
 		types: null
