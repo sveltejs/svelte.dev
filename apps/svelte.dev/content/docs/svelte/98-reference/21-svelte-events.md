@@ -24,7 +24,7 @@ function on<Type extends keyof WindowEventMap>(
 	type: Type,
 	handler: (
 		this: Window,
-		event: WindowEventMap[Type] & { currentTarget: Window }
+		event: WindowEventMap[Type]
 	) => any,
 	options?: AddEventListenerOptions | undefined
 ): () => void;
@@ -40,9 +40,7 @@ function on<Type extends keyof DocumentEventMap>(
 	type: Type,
 	handler: (
 		this: Document,
-		event: DocumentEventMap[Type] & {
-			currentTarget: Document;
-		}
+		event: DocumentEventMap[Type]
 	) => any,
 	options?: AddEventListenerOptions | undefined
 ): () => void;
@@ -61,9 +59,7 @@ function on<
 	type: Type,
 	handler: (
 		this: Element,
-		event: HTMLElementEventMap[Type] & {
-			currentTarget: Element;
-		}
+		event: HTMLElementEventMap[Type]
 	) => any,
 	options?: AddEventListenerOptions | undefined
 ): () => void;
@@ -82,9 +78,7 @@ function on<
 	type: Type,
 	handler: (
 		this: Element,
-		event: MediaQueryListEventMap[Type] & {
-			currentTarget: Element;
-		}
+		event: MediaQueryListEventMap[Type]
 	) => any,
 	options?: AddEventListenerOptions | undefined
 ): () => void;
