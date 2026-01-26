@@ -5,7 +5,7 @@ author: Dani Sandoval
 authorURL: https://dreamindani.com
 ---
 
-This months brings a few new features to Svelte and SvelteKit and quite a few new libraries from around the community.
+This month brings a few new features to Svelte and SvelteKit and quite a few new libraries from around the community.
 
 Also, in case you missed it last month, the Svelte maintainers released patches for 5 vulnerabilities across the Svelte ecosystem. So be sure you're up to date by reading the blog post, [CVEs affecting the Svelte ecosystem](https://svelte.dev/blog/cves-affecting-the-svelte-ecosystem).
 
