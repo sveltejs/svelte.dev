@@ -43,7 +43,7 @@ For a full list of changes - including all the important bugfixes that went into
 _This Week in Svelte_
 
 - [Ep. 127](https://www.youtube.com/watch?v=eTchw_QU3aQ) — Changelog
-- [Ep. 128 — Changelog](https://www.youtube.com/watch?v=58Ol4FbMjz4)
+- [Ep. 128](https://www.youtube.com/watch?v=58Ol4FbMjz4) — Changelog
 
 _To Read_
 
