@@ -13,7 +13,7 @@ Now, without further ado, let's dive in...
 
 ## What's new in Svelte & SvelteKit
 
-- To support newer browsers that allow it, you can now customize `<select>` elements using CSS and and rich HTML content (**svelte@5.47.0**, [Docs](https://developer.chrome.com/blog/a-customizable-select), [#17429](https://github.com/sveltejs/svelte/pull/17429))
+- To support newer browsers that allow it, you can now customize `<select>` elements using CSS and rich HTML content (**svelte@5.47.0**, [Docs](https://developer.chrome.com/blog/a-customizable-select), [#17429](https://github.com/sveltejs/svelte/pull/17429))
 - Svelte's `parseCss` has been exported from `svelte/compiler` so that it can be used in SvelteKit (**svelte@5.48.0**, [#17496](https://github.com/sveltejs/svelte/pull/17496))
 - A breaking change in SvelteKit's remote functions removes `buttonProps` from experimental remote form functions. Use `<button {...myForm.fields.action.as('submit', 'register')}>Register</button>` when creating mutliple submit buttons instead (**kit@2.50.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#form-Multiple-submit-buttons), [#15144](https://github.com/sveltejs/kit/pull/15144))
 - Node: New env vars for `keepAliveTimeout` and `headersTimeout` (**sveltejs/adapter-node@5.5.0**, [Docs](https://svelte.dev/docs/kit/adapter-node#Environment-variables-KEEP_ALIVE_TIMEOUT-and-HEADERS_TIMEOUT), [#15125](https://github.com/sveltejs/kit/pull/15125))
