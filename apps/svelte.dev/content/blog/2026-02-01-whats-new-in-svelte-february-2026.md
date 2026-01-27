@@ -18,7 +18,6 @@ Now, without further ado, let's dive in...
 - A breaking change in SvelteKit's remote functions removes `buttonProps` from experimental remote form functions. Use `<button {...myForm.fields.action.as('submit', 'register')}>Register</button>` when creating mutliple submit buttons instead (**kit@2.50.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#form-Multiple-submit-buttons), [#15144](https://github.com/sveltejs/kit/pull/15144))
 - Node: New env vars for `keepAliveTimeout` and `headersTimeout` (**sveltejs/adapter-node@5.5.0**, [Docs](https://svelte.dev/docs/kit/adapter-node#Environment-variables-KEEP_ALIVE_TIMEOUT-and-HEADERS_TIMEOUT), [#15125](https://github.com/sveltejs/kit/pull/15125))
 - Vercel: Remote function calls can now be found under the /\_app/remote route in observability (**sveltejs/adapter-vercel@6.3.1**, [#15098](https://github.com/sveltejs/kit/pull/15098))
-- `adapter-auto` will now use version 6 of `adapter-vercel` (**sveltejs/adapter-auto@7.0.0**, [#14737](https://github.com/sveltejs/kit/pull/14737))
 
 For a full list of changes - including all the important bugfixes that went into the releases this month - check out the Svelte compiler's [CHANGELOG](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md) and the SvelteKit / Adapter [CHANGELOGs](https://github.com/sveltejs/kit/tree/main/packages).
 
