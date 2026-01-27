@@ -31,7 +31,7 @@ For a full list of changes - including all the important bugfixes that went into
 - [LogTide](https://logtide.dev/) is an open-source alternative to Datadog, Splunk, and ELK. Designed for developers and European SMBs who need GDPR compliance, data ownership, and simplicity without the complexity of managing an ElasticSearch cluster
 - [funcalling](https://www.funcalling.com/) is a P2P calling app with built in board games, word games, and motion capture games ([Reddit post](https://www.reddit.com/r/sveltejs/comments/1qgrq2c/i_built_a_p2p_calling_app_with_built_in_board/) includes a video demo)
 - [book by book](https://bookbybook.app/) lets you sync book data, covers, and pricing to a Square POS in seconds. You can import distributor orders from Ingram, Edelweiss & PubEasy—no spreadsheets or manual entry
-- [zsweep](https://github.com/oug-t/zsweep) is a minimalist, keyboard-driven Minesweeper game played with Vim motions
+- [zsweep](https://zsweep.com/) is a minimalist, keyboard-driven Minesweeper game played with Vim motions
 - [PulseKit](https://trypulsekit.com/) provides professional feedback management to collect and prioritize customer feedback
 - [Bitphase](https://bitphase.app/) is a modern web-based chiptune tracker designed for creating music on retro sound chips ([GitHub](https://github.com/paator/bitphase))
 - [CapCheck](https://capcheck.ai/) is a fact checker AI for images, videos, audio, text and URLs
