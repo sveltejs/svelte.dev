@@ -17,7 +17,7 @@ Now, without further ado, let's dive in...
 - Svelte's `parseCss` has been exported from `svelte/compiler` so that it can be used in SvelteKit (**svelte@5.48.0**, [#17496](https://github.com/sveltejs/svelte/pull/17496))
 - A breaking change in SvelteKit's remote functions removes `buttonProps` from experimental remote form functions. Use `<button {...myForm.fields.action.as('submit', 'register')}>Register</button>` when creating mutliple submit buttons instead (**kit@2.50.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#form-Multiple-submit-buttons), [#15144](https://github.com/sveltejs/kit/pull/15144))
 - Node: New env vars for `keepAliveTimeout` and `headersTimeout` (**sveltejs/adapter-node@5.5.0**, [Docs](https://svelte.dev/docs/kit/adapter-node#Environment-variables-KEEP_ALIVE_TIMEOUT-and-HEADERS_TIMEOUT), [#15125](https://github.com/sveltejs/kit/pull/15125))
-- Vercel: Remote function calls can now be found under the /_app/remote route in observability (**sveltejs/adapter-vercel@6.3.1**, [#15098](https://github.com/sveltejs/kit/pull/15098))
+- Vercel: Remote function calls can now be found under the /\_app/remote route in observability (**sveltejs/adapter-vercel@6.3.1**, [#15098](https://github.com/sveltejs/kit/pull/15098))
 - `adapter-auto` will now use version 6 of `adapter-vercel` (**sveltejs/adapter-auto@7.0.0**, [#14737](https://github.com/sveltejs/kit/pull/14737))
 
 For a full list of changes - including all the important bugfixes that went into the releases this month - check out the Svelte compiler's [CHANGELOG](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md) and the SvelteKit / Adapter [CHANGELOGs](https://github.com/sveltejs/kit/tree/main/packages).
@@ -59,11 +59,13 @@ _UI Components and Animations_
 - [Tilt Svelte](https://github.com/Savy011/tilt-svelte) is a smooth 3D tilt Svelte attachment based on vanilla-tilt.js
 
 _State Management_
+
 - [Reddo.js](https://github.com/eihabkhan/reddojs) is a tiny undo/redo utility package for JavaScript, React, Vue, and Svelte
 - [svstate](https://github.com/BCsabaEngine/svstate) provides deep reactive proxy with validation, snapshot/undo, and side effects — built for complex, real-world applications
 - [rune-sync](https://github.com/antepodeum/rune-sync) synchronizes reactive state across various storage backends
 
 _Plugins, Compilers and Runtimes_
+
 - [fastify-svelte-view](https://github.com/matths/fastify-svelte-view) is a Fastify plugin for rendering Svelte components with support for SSR (Server-Side Rendering), CSR (Client-Side Rendering), and SSR with hydration
 - [kit-on-lambda](https://github.com/beesolve/kit-on-lambda) is an adapter for running SvelteKit on AWS Lambda. It supports deployment to Node.js and Bun runtimes bundled with esbuild/Bun
 - [voca](https://github.com/treyorr/voca) is a self-hostable, stateless, and fast WebRTC signaling server written in Rust with frontend SDKs
