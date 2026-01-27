@@ -35,6 +35,7 @@ For a full list of changes - including all the important bugfixes that went into
 - [PulseKit](https://trypulsekit.com/) provides professional feedback management to collect and prioritize customer feedback
 - [Bitphase](https://bitphase.app/) is a modern web-based chiptune tracker designed for creating music on retro sound chips
 - [CapCheck](https://capcheck.ai/) is a fact checker AI for images, videos, audio, text and URLs
+- [Distill](https://www.distillintelligence.com/competitor-finder) (last mentioned in July) has been updated with a new competitor finder to make it easier to track direct and indirect competitors in a market
 - [Pelican](https://pelican.alexey.work/) lets you generate SVG vector graphics and ASCII art from text prompts. With multi-step refinement, AI sees its output and improves it iteratively
 
 ### Learning Resources
