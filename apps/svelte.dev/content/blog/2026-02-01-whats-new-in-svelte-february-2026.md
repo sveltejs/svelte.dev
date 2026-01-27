@@ -33,7 +33,7 @@ For a full list of changes - including all the important bugfixes that went into
 - [book by book](https://bookbybook.app/) lets you sync book data, covers, and pricing to a Square POS in seconds. You can import distributor orders from Ingram, Edelweiss & PubEasy—no spreadsheets or manual entry
 - [zsweep](https://zsweep.com/) is a minimalist, keyboard-driven Minesweeper game played with Vim motions
 - [PulseKit](https://trypulsekit.com/) provides professional feedback management to collect and prioritize customer feedback
-- [Bitphase](https://bitphase.app/) is a modern web-based chiptune tracker designed for creating music on retro sound chips ([GitHub](https://github.com/paator/bitphase))
+- [Bitphase](https://bitphase.app/) is a modern web-based chiptune tracker designed for creating music on retro sound chips
 - [CapCheck](https://capcheck.ai/) is a fact checker AI for images, videos, audio, text and URLs
 - [Pelican](https://github.com/xl0/pelican) lets you generate SVG vector graphics and ASCII art from text prompts. With multi-step refinement, AI sees its output and improves it iteratively
 
