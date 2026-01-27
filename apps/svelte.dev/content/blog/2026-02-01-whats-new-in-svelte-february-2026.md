@@ -35,7 +35,7 @@ For a full list of changes - including all the important bugfixes that went into
 - [PulseKit](https://trypulsekit.com/) provides professional feedback management to collect and prioritize customer feedback
 - [Bitphase](https://bitphase.app/) is a modern web-based chiptune tracker designed for creating music on retro sound chips
 - [CapCheck](https://capcheck.ai/) is a fact checker AI for images, videos, audio, text and URLs
-- [Pelican](https://github.com/xl0/pelican) lets you generate SVG vector graphics and ASCII art from text prompts. With multi-step refinement, AI sees its output and improves it iteratively
+- [Pelican](https://pelican.alexey.work/) lets you generate SVG vector graphics and ASCII art from text prompts. With multi-step refinement, AI sees its output and improves it iteratively
 
 ### Learning Resources
 
