@@ -38,13 +38,14 @@ export async function list(user, { offset, search }) {
 
 /**
  * @param {User} user
- * @param {Pick<Gist, 'name'|'files'>} gist
+ * @param {Pick<Gist, 'name'|'files'|'tailwind'>} gist
  * @returns {Promise<Gist>}
  */
 export async function create(user, gist) {
 	const { data, error } = await client.rpc('gist_create', {
 		name: gist.name,
 		files: gist.files,
+		tailwind: gist.tailwind ?? false,
 		userid: user.id
 	});
 
@@ -62,7 +63,7 @@ export async function create(user, gist) {
 export async function read(id) {
 	const { data, error } = await client
 		.from('gist')
-		.select('id,name,files,userid')
+		.select('id,name,files,tailwind,userid')
 		.eq('id', id)
 		.is('deleted_at', null);
 
@@ -73,7 +74,7 @@ export async function read(id) {
 /**
  * @param {User} user
  * @param {string} gistid
- * @param {Pick<Gist, 'name'|'files'>} gist
+ * @param {Pick<Gist, 'name'|'files'|'tailwind'>} gist
  * @returns {Promise<Gist>}
  */
 export async function update(user, gistid, gist) {
@@ -81,6 +82,7 @@ export async function update(user, gistid, gist) {
 		gist_id: gistid,
 		gist_name: gist.name,
 		gist_files: gist.files,
+		gist_tailwind: gist.tailwind ?? false,
 		gist_userid: user.id
 	});
 

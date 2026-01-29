@@ -33,7 +33,7 @@
 		if (!hash) {
 			repl?.set({
 				files: data.gist.components.map(munge),
-				tailwind: false // TODO
+				tailwind: data.gist.tailwind ?? false
 			});
 
 			return;

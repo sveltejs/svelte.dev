@@ -20,6 +20,7 @@ export async function GET({ fetch, params }) {
 			id: params.id,
 			name: example.title,
 			owner: null,
+			tailwind: false,
 			relaxed: false, // TODO is this right? EDIT: It was example.relaxed before, which no example return to my knowledge. By @PuruVJ
 			components: example.components
 		});
@@ -55,6 +56,7 @@ export async function GET({ fetch, params }) {
 		name: app.name,
 		// @ts-ignore
 		owner: app.userid,
+		tailwind: app.tailwind ?? false,
 		relaxed: false,
 		components: app.files!.map((file) => {
 			const dot = file.name.lastIndexOf('.');
