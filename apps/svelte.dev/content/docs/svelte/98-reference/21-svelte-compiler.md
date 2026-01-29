@@ -379,7 +379,8 @@ namespace AST {
 		expression:
 			| Identifier
 			| MemberExpression
-			| SequenceExpression;
+			| SequenceExpression
+			| SpreadElement;
 	}
 
 	/** A `class:` directive */
