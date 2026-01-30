@@ -37,6 +37,26 @@ experimental_use_rmcp_client = true
 url = "https://mcp.svelte.dev/mcp"
 ```
 
+## Copilot CLI
+
+Use the Copilot CLI to interactively add the MCP server:
+
+```bash
+/mcp add
+```
+
+Alternatively, create or edit `~/.copilot/mcp-config.json` and add the following configuration:
+
+```json
+{
+	"mcpServers": {
+		"svelte": {
+			"url": "https://mcp.svelte.dev/mcp"
+		}
+	}
+}
+```
+
 ## Gemini CLI
 
 To use the remote MCP server with Gemini CLI, simply run the following command:
@@ -49,7 +69,7 @@ The `[scope]` must be `user` or `project`.
 
 ## OpenCode
 
-Run the command:
+You can automatically configure the MCP server using the [OpenCode plugin](opencode-plugin) (recommended). If you prefer to configure the MCP server manually, run:
 
 ```bash
 opencode mcp add

@@ -2446,35 +2446,7 @@ type RemoteForm<
 	/** The number of pending submissions */
 	get pending(): number;
 	/** Access form fields using object notation */
-	fields: RemoteFormFields<Input>;
-	/** Spread this onto a `<button>` or `<input type="submit">` */
-	buttonProps: {
-		type: 'submit';
-		formmethod: 'POST';
-		formaction: string;
-		onclick: (event: Event) => void;
-		/** Use the `enhance` method to influence what happens when the form is submitted. */
-		enhance(
-			callback: (opts: {
-				form: HTMLFormElement;
-				data: Input;
-				submit: () => Promise<void> & {
-					updates: (
-						...queries: Array<
-							RemoteQuery<any> | RemoteQueryOverride
-						>
-					) => Promise<void>;
-				};
-			}) => void | Promise<void>
-		): {
-			type: 'submit';
-			formmethod: 'POST';
-			formaction: string;
-			onclick: (event: Event) => void;
-		};
-		/** The number of pending submissions */
-		get pending(): number;
-	};
+	fields: RemoteFormFieldsRoot<Input>;
 };
 ```
 
@@ -4203,6 +4175,16 @@ type HttpMethod =
 	| 'DELETE'
 	| 'PATCH'
 	| 'OPTIONS';
+```
+
+</div>
+
+## IsAny
+
+<div class="ts-block">
+
+```dts
+type IsAny<T> = 0 extends 1 & T ? true : false;
 ```
 
 </div>
