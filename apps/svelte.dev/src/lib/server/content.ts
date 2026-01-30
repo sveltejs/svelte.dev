@@ -3,24 +3,24 @@ import { PACKAGES_META } from '$lib/packages-meta';
 import type { Document, DocumentSummary } from '@sveltejs/site-kit';
 import { create_index } from '@sveltejs/site-kit/server/content';
 
-const documents = import.meta.glob<string>('../../../content/**/*.md', {
+const documents = import.meta.glob<string>('./**/*.md', {
 	eager: true,
 	query: '?url',
-	import: 'default'
+	import: 'default',
+	base: '../../../content'
 });
 
-const assets = import.meta.glob<string>(
-	['../../../content/**/+assets/**', '../../../content/**/+assets/**/.env'],
-	{
-		eager: true,
-		query: '?url',
-		import: 'default'
-	}
-);
-// we need a separate glob import for document assets because we need to use `read` so it needs the actual import, not `?url`
-const documents_assets = import.meta.glob<string>(['../../../content/docs/**/+assets/**'], {
+const assets = import.meta.glob<string>(['./**/+assets/**', './**/+assets/**/.env'], {
 	eager: true,
-	import: 'default'
+	query: '?url',
+	import: 'default',
+	base: '../../../content'
+});
+// we need a separate glob import for document assets because we need to use `read` so it needs the actual import, not `?url`
+const documents_assets = import.meta.glob<string>(['./docs/**/+assets/**'], {
+	eager: true,
+	import: 'default',
+	base: '../../../content'
 });
 
 const registry_docs = import.meta.glob<string>(
@@ -32,14 +32,7 @@ const registry_docs = import.meta.glob<string>(
 	}
 );
 
-// https://github.com/vitejs/vite/issues/17453
-export const index = await create_index(
-	documents,
-	assets,
-	documents_assets,
-	'../../../content',
-	read
-);
+export const index = await create_index(documents, assets, documents_assets, read);
 
 const months = 'Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split(' ');
 
