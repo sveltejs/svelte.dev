@@ -14,10 +14,10 @@ Now, without further ado, let's dive in...
 ## What's new in Svelte & SvelteKit
 
 - To support newer browsers that allow it, you can now customize `<select>` elements using CSS and rich HTML content (**svelte@5.47.0**, [Docs](https://developer.chrome.com/blog/a-customizable-select), [#17429](https://github.com/sveltejs/svelte/pull/17429))
-- Svelte's `parseCss` has been exported from `svelte/compiler` so that it can be used in SvelteKit (**svelte@5.48.0**, [#17496](https://github.com/sveltejs/svelte/pull/17496))
+- Svelte's CSS parser is now exported from `svelte/compiler` as `parseCss`. It's a partial but lightweight CSS AST parser that is currently being used in SvelteKit (**svelte@5.48.0**, [#17496](https://github.com/sveltejs/svelte/pull/17496))
 - A `ShadowRootInit` object can now be passed to `attachShadow()` when shadow root is created with a `customElement` (**svelte@5.49.0**, [Docs](https://svelte.dev/docs/svelte/custom-elements#Component-options), [#17088](https://github.com/sveltejs/svelte/pull/17088))
 - A breaking change in SvelteKit's remote functions removes `buttonProps` from experimental remote form functions. Use `<button {...myForm.fields.action.as('submit', 'register')}>Register</button>` when creating mutliple submit buttons instead (**kit@2.50.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#form-Multiple-submit-buttons), [#15144](https://github.com/sveltejs/kit/pull/15144))
-- Node: New env vars for `keepAliveTimeout` and `headersTimeout` (**sveltejs/adapter-node@5.5.0**, [Docs](https://svelte.dev/docs/kit/adapter-node#Environment-variables-KEEP_ALIVE_TIMEOUT-and-HEADERS_TIMEOUT), [#15125](https://github.com/sveltejs/kit/pull/15125))
+- Node: The server's `keepAliveTimeout` and `headersTimeout` options can now be configured by setting the corresponding environment variable (**sveltejs/adapter-node@5.5.0**, [Docs](https://svelte.dev/docs/kit/adapter-node#Environment-variables-KEEP_ALIVE_TIMEOUT-and-HEADERS_TIMEOUT), [#15125](https://github.com/sveltejs/kit/pull/15125))
 - Vercel: Remote function calls can now be found under the /\_app/remote route in observability (**sveltejs/adapter-vercel@6.3.1**, [#15098](https://github.com/sveltejs/kit/pull/15098))
 
 For a full list of changes - including all the important bugfixes that went into the releases this month - check out the Svelte compiler's [CHANGELOG](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md) and the SvelteKit / Adapter [CHANGELOGs](https://github.com/sveltejs/kit/tree/main/packages).
