@@ -801,6 +801,22 @@ An array of file extensions that SvelteKit will treat as modules. Files with ext
 
 </div>
 
+## testExtensions
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `[".test.js", ".test.ts", ".spec.js", ".spec.ts", ".stories.svelte"]`
+
+</div>
+
+An array of file extensions that SvelteKit will treat as test files and will ignore.
+
+<div class="ts-block-property-children">
+
+
+
+</div>
+
 ## outDir
 
 <div class="ts-block-property-bullets">
