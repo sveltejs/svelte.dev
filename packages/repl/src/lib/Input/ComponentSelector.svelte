@@ -16,6 +16,8 @@
 	let { runes, onchange, workspace, can_migrate, migrate, download }: Props = $props();
 
 	let input = $state() as HTMLInputElement;
+
+	// svelte-ignore state_referenced_locally
 	let input_value = $state(workspace.current.name);
 
 	async function close_edit(file: File) {

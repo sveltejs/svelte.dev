@@ -13,7 +13,9 @@ import {
 	compileModule,
 	migrate,
 	parse,
+	parseCss,
 	preprocess,
+	print,
 	walk
 } from 'svelte/compiler';
 ```
@@ -135,6 +137,22 @@ function parse(
 
 
 
+## parseCss
+
+The parseCss function parses a CSS stylesheet, returning its abstract syntax tree.
+
+<div class="ts-block">
+
+```dts
+function parseCss(
+	source: string
+): Omit<AST.CSS.StyleSheet, 'attributes' | 'content'>;
+```
+
+</div>
+
+
+
 ## preprocess
 
 The preprocess function provides convenient hooks for arbitrarily transforming component source code.
@@ -152,6 +170,31 @@ function preprocess(
 		  }
 		| undefined
 ): Promise<Processed>;
+```
+
+</div>
+
+
+
+## print
+
+`print` converts a Svelte AST node back into Svelte source code.
+It is primarily intended for tools that parse and transform components using the compiler’s modern AST representation.
+
+`print(ast)` requires an AST node produced by parse with modern: true, or any sub-node within that modern AST.
+The result contains the generated source and a corresponding source map.
+The output is valid Svelte, but formatting details such as whitespace or quoting may differ from the original.
+
+<div class="ts-block">
+
+```dts
+function print(
+	ast: AST.SvelteNode,
+	options?: Options | undefined
+): {
+	code: string;
+	map: any;
+};
 ```
 
 </div>
@@ -225,7 +268,11 @@ namespace AST {
 		css?: 'injected';
 		customElement?: {
 			tag?: string;
-			shadow?: 'open' | 'none';
+			shadow?:
+				| 'open'
+				| 'none'
+				| ObjectExpression
+				| undefined;
 			props?: Record<
 				string,
 				{
@@ -315,7 +362,7 @@ namespace AST {
 	}
 
 	/** An `animate:` directive */
-	export interface AnimateDirective extends BaseNode {
+	export interface AnimateDirective extends BaseAttribute {
 		type: 'AnimateDirective';
 		/** The 'x' in `animate:x` */
 		name: string;
@@ -324,7 +371,7 @@ namespace AST {
 	}
 
 	/** A `bind:` directive */
-	export interface BindDirective extends BaseNode {
+	export interface BindDirective extends BaseAttribute {
 		type: 'BindDirective';
 		/** The 'x' in `bind:x` */
 		name: string;
@@ -336,7 +383,7 @@ namespace AST {
 	}
 
 	/** A `class:` directive */
-	export interface ClassDirective extends BaseNode {
+	export interface ClassDirective extends BaseAttribute {
 		type: 'ClassDirective';
 		/** The 'x' in `class:x` */
 		name: 'class';
@@ -345,7 +392,7 @@ namespace AST {
 	}
 
 	/** A `let:` directive */
-	export interface LetDirective extends BaseNode {
+	export interface LetDirective extends BaseAttribute {
 		type: 'LetDirective';
 		/** The 'x' in `let:x` */
 		name: string;
@@ -358,7 +405,7 @@ namespace AST {
 	}
 
 	/** An `on:` directive */
-	export interface OnDirective extends BaseNode {
+	export interface OnDirective extends BaseAttribute {
 		type: 'OnDirective';
 		/** The 'x' in `on:x` */
 		name: string;
@@ -378,7 +425,7 @@ namespace AST {
 	}
 
 	/** A `style:` directive */
-	export interface StyleDirective extends BaseNode {
+	export interface StyleDirective extends BaseAttribute {
 		type: 'StyleDirective';
 		/** The 'x' in `style:x` */
 		name: string;
@@ -392,7 +439,8 @@ namespace AST {
 
 	// TODO have separate in/out/transition directives
 	/** A `transition:`, `in:` or `out:` directive */
-	export interface TransitionDirective extends BaseNode {
+	export interface TransitionDirective
+		extends BaseAttribute {
 		type: 'TransitionDirective';
 		/** The 'x' in `transition:x` */
 		name: string;
@@ -406,7 +454,7 @@ namespace AST {
 	}
 
 	/** A `use:` directive */
-	export interface UseDirective extends BaseNode {
+	export interface UseDirective extends BaseAttribute {
 		type: 'UseDirective';
 		/** The 'x' in `use:x` */
 		name: string;
@@ -414,8 +462,9 @@ namespace AST {
 		expression: null | Expression;
 	}
 
-	interface BaseElement extends BaseNode {
+	export interface BaseElement extends BaseNode {
 		name: string;
+		name_loc: SourceLocation;
 		attributes: Array<
 			Attribute | SpreadAttribute | Directive | AttachTag
 		>;
@@ -542,9 +591,13 @@ namespace AST {
 		body: Fragment;
 	}
 
-	export interface Attribute extends BaseNode {
-		type: 'Attribute';
+	export interface BaseAttribute extends BaseNode {
 		name: string;
+		name_loc: SourceLocation | null;
+	}
+
+	export interface Attribute extends BaseAttribute {
+		type: 'Attribute';
 		/**
 		 * Quoted/string values are represented by an array, even if they contain a single expression like `"{x}"`
 		 */

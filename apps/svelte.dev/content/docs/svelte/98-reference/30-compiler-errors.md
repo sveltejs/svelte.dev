@@ -198,7 +198,7 @@ Cyclical dependency detected: %cycle%
 ### const_tag_invalid_placement
 
 ```
-`{@const}` must be the immediate child of `{#snippet}`, `{#if}`, `{:else if}`, `{:else}`, `{#each}`, `{:then}`, `{:catch}`, `<svelte:fragment>`, `<svelte:boundary` or `<Component>`
+`{@const}` must be the immediate child of `{#snippet}`, `{#if}`, `{:else if}`, `{:else}`, `{#each}`, `{:then}`, `{:catch}`, `<svelte:fragment>`, `<svelte:boundary>` or `<Component>`
 ```
 
 ### const_tag_invalid_reference
@@ -530,6 +530,12 @@ Expected an identifier
 Expected identifier or destructure pattern
 ```
 
+### expected_tag
+
+```
+Expected 'html', 'render', 'attach', 'const', or 'debug'
+```
+
 ### expected_token
 
 ```
@@ -564,6 +570,12 @@ Cannot use `await` in deriveds and template expressions, or at the top level of 
 
 ```
 `$host()` can only be used inside custom element component instances
+```
+
+### illegal_await_expression
+
+```
+`use:`, `transition:` and `animate:` directives, attachments and bindings do not support await expressions
 ```
 
 ### illegal_element_attribute
@@ -1095,7 +1107,7 @@ Value must be %list%, if specified
 ### svelte_options_invalid_customelement
 
 ```
-"customElement" must be a string literal defining a valid custom element name or an object of the form { tag?: string; shadow?: "open" | "none"; props?: { [key: string]: { attribute?: string; reflect?: boolean; type: .. } } }
+"customElement" must be a string literal defining a valid custom element name or an object of the form { tag?: string; shadow?: "open" | "none" | `ShadowRootInit`; props?: { [key: string]: { attribute?: string; reflect?: boolean; type: .. } } }
 ```
 
 ### svelte_options_invalid_customelement_props
@@ -1107,8 +1119,10 @@ Value must be %list%, if specified
 ### svelte_options_invalid_customelement_shadow
 
 ```
-"shadow" must be either "open" or "none"
+"shadow" must be either "open", "none" or `ShadowRootInit` object.
 ```
+
+See https://developer.mozilla.org/en-US/docs/Web/API/Element/attachShadow#options for more information on valid shadow root constructor options
 
 ### svelte_options_invalid_tagname
 

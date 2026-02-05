@@ -31,6 +31,7 @@ function render<
 					props?: Omit<Props, '$$slots' | '$$events'>;
 					context?: Map<any, any>;
 					idPrefix?: string;
+					csp?: Csp;
 				}
 			]
 		: [
@@ -41,6 +42,7 @@ function render<
 					props: Omit<Props, '$$slots' | '$$events'>;
 					context?: Map<any, any>;
 					idPrefix?: string;
+					csp?: Csp;
 				}
 			]
 ): RenderOutput;

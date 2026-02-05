@@ -17,10 +17,10 @@
 		"mattrossman"
 	],
 	"homepage": "https://github.com/supabase/ssr#readme",
-	"version": "0.7.0",
-	"downloads": 697481,
-	"github_stars": 166,
-	"updated": "2025-08-22T06:08:37.734Z",
+	"version": "0.8.0",
+	"downloads": 899888,
+	"github_stars": 172,
+	"updated": "2025-11-26T13:54:00.934Z",
 	"typescript": true,
 	"runes": false,
 	"last_rune_check_version": "0.6.0"

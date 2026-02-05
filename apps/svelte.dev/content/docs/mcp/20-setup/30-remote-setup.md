@@ -17,6 +17,8 @@ claude mcp add -t http -s [scope] svelte https://mcp.svelte.dev/mcp
 
 You can choose your preferred `scope` (it must be `user`, `project` or `local`) and `name`.
 
+If you prefer you can also install the `svelte` plugin in [the Svelte Claude Code Marketplace](plugin) that will give you both the remote server and useful [skills](skills).
+
 ## Claude Desktop
 
 - Open Settings > Connectors
@@ -35,6 +37,26 @@ experimental_use_rmcp_client = true
 url = "https://mcp.svelte.dev/mcp"
 ```
 
+## Copilot CLI
+
+Use the Copilot CLI to interactively add the MCP server:
+
+```bash
+/mcp add
+```
+
+Alternatively, create or edit `~/.copilot/mcp-config.json` and add the following configuration:
+
+```json
+{
+	"mcpServers": {
+		"svelte": {
+			"url": "https://mcp.svelte.dev/mcp"
+		}
+	}
+}
+```
+
 ## Gemini CLI
 
 To use the remote MCP server with Gemini CLI, simply run the following command:
@@ -43,11 +65,11 @@ To use the remote MCP server with Gemini CLI, simply run the following command:
 gemini mcp add -t http -s [scope] svelte https://mcp.svelte.dev/mcp
 ```
 
-The `[scope]` must be `user`, `project` or `local`.
+The `[scope]` must be `user` or `project`.
 
 ## OpenCode
 
-Run the command:
+You can automatically configure the MCP server using the [OpenCode plugin](opencode-plugin) (recommended). If you prefer to configure the MCP server manually, run:
 
 ```bash
 opencode mcp add

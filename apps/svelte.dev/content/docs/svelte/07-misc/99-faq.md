@@ -19,7 +19,7 @@ There are online forums and chats which are a great place for discussion about b
 
 ## Are there any third-party resources?
 
-Svelte Society maintains a [list of books and videos](https://sveltesociety.dev/resources).
+Svelte Society maintains a [list of books and videos](https://sveltesociety.dev/collection/a-list-of-books-and-courses-ac01dd10363184fa).
 
 ## How can I get VS Code to syntax-highlight my .svelte files?
 
@@ -70,7 +70,7 @@ There are several [UI component libraries](/packages#component-libraries) as wel
 
 ## How do I test Svelte apps?
 
-How your application is structured and where logic is defined will determine the best way to ensure it is properly tested. It is important to note that not all logic belongs within a component - this includes concerns such as data transformation, cross-component state management, and logging, among others. Remember that the Svelte library has its own test suite, so you do not need to write tests to validate implementation details provided by Svelte.
+How your application is structured and where logic is defined will determine the best way to ensure it is properly tested. It is important to note that not all logic belongs within a component — this includes concerns such as data transformation, cross-component state management, and logging, among others. Remember that the Svelte library has its own test suite, so you do not need to write tests to validate implementation details provided by Svelte.
 
 A Svelte application will typically have three different types of tests: Unit, Component, and End-to-End (E2E).
 
@@ -92,7 +92,7 @@ Some resources for getting started with testing:
 
 ## Is there a router?
 
-The official routing library is [SvelteKit](/docs/kit). SvelteKit provides a filesystem router, server-side rendering (SSR), and hot module reloading (HMR) in one easy-to-use package. It shares similarities with Next.js for React and Nuxt.js for Vue.
+The official routing library is [SvelteKit](/docs/kit). SvelteKit provides a filesystem router, server-side rendering (SSR), and hot module reloading (HMR) in one easy-to-use package. It shares similarities with Next.js for React and Nuxt.js for Vue. SvelteKit also supports hash-based routing for client-side applications.
 
 However, you can use any router library. A sampling of available routers are highlighted [on the packages page](/packages#routing).
 

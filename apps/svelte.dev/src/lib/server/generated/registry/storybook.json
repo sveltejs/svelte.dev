@@ -13,10 +13,10 @@
 		"storybook-bot"
 	],
 	"homepage": "https://storybook.js.org",
-	"version": "10.0.2",
-	"downloads": 8517727,
-	"github_stars": 88515,
-	"updated": "2025-10-30T14:49:51.428Z",
+	"version": "10.1.10",
+	"downloads": 9334446,
+	"github_stars": 88865,
+	"updated": "2025-12-17T14:10:13.702Z",
 	"typescript": true,
 	"runes": false,
 	"last_rune_check_version": "8.6.12"

@@ -17,6 +17,7 @@
 	const STORAGE_KEY = 'svelte:playground';
 
 	let repl = $state() as ReturnType<typeof Repl>;
+	// svelte-ignore state_referenced_locally
 	let name = $state(data.gist.name);
 	let modified = $state(false);
 	let setting_hash: any = null;
