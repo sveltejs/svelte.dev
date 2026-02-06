@@ -12,6 +12,18 @@
 		]
 	},
 	{
+		"path": "/docs/svelte/svelte-transition",
+		"breadcrumbs": [
+			"Docs",
+			"Svelte",
+			"Reference",
+			"svelte/transition"
+		],
+		"tags": [
+			"transition"
+		]
+	},
+	{
 		"path": "/docs/svelte/transition",
 		"breadcrumbs": [
 			"Docs",
