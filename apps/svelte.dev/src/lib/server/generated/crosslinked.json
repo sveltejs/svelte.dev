@@ -8,7 +8,43 @@
 			"The transition directive"
 		],
 		"tags": [
-			"transition"
+			"transitions"
+		]
+	},
+	{
+		"path": "/tutorial/svelte/attach",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic Svelte",
+			"Attachments",
+			"The attach tag"
+		],
+		"tags": [
+			"attachments"
+		]
+	},
+	{
+		"path": "/docs/svelte/svelte-action",
+		"breadcrumbs": [
+			"Docs",
+			"Svelte",
+			"Reference",
+			"svelte/action"
+		],
+		"tags": [
+			"actions"
+		]
+	},
+	{
+		"path": "/docs/svelte/svelte-attachments",
+		"breadcrumbs": [
+			"Docs",
+			"Svelte",
+			"Reference",
+			"svelte/attachments"
+		],
+		"tags": [
+			"attachments"
 		]
 	},
 	{
@@ -20,7 +56,31 @@
 			"svelte/transition"
 		],
 		"tags": [
-			"transition"
+			"transitions"
+		]
+	},
+	{
+		"path": "/docs/svelte/@attach",
+		"breadcrumbs": [
+			"Docs",
+			"Svelte",
+			"Template syntax",
+			"{@attach ...}"
+		],
+		"tags": [
+			"attachments"
+		]
+	},
+	{
+		"path": "/docs/svelte/use",
+		"breadcrumbs": [
+			"Docs",
+			"Svelte",
+			"Template syntax",
+			"use:"
+		],
+		"tags": [
+			"actions"
 		]
 	},
 	{
@@ -32,7 +92,7 @@
 			"transition:"
 		],
 		"tags": [
-			"transition"
+			"transitions"
 		]
 	},
 	{
@@ -44,7 +104,7 @@
 			"in: and out:"
 		],
 		"tags": [
-			"transition"
+			"transitions"
 		]
 	}
 ]

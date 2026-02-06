@@ -1,6 +1,6 @@
 ---
 title: The transition directive
-tags: transition
+tags: transitions
 ---
 
 We can make more appealing user interfaces by gracefully transitioning elements into and out of the DOM. Svelte makes this very easy with the `transition` directive.
