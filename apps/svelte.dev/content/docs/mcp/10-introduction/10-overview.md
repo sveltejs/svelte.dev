@@ -18,7 +18,6 @@ To get the most out of the MCP server we recommend including the following promp
 
 > [!NOTE] This is already setup for you when using `npx sv add mcp`
 
-```md
 You are able to use the Svelte MCP server, where you have access to comprehensive Svelte 5 and SvelteKit documentation. Here's how to use the available tools effectively:
 
 ## Available MCP Tools:
@@ -42,6 +41,6 @@ You MUST use this tool whenever writing Svelte code before sending it to the use
 
 Generates a Svelte Playground link with the provided code.
 After completing the code, ask the user if they want a playground link. Only call this tool after user confirmation and NEVER if code was written to files in their project.
-```
+
 
 If your MCP client supports it, we also recommend using the [svelte-task](prompts#svelte-task) prompt to instruct the LLM on the best way to use the MCP server.
