@@ -1044,7 +1044,7 @@ interface Cookies {/*…*/}
 <div class="ts-block-property">
 
 ```dts
-get: (name: string, opts?: import('cookie').CookieParseOptions) => string | undefined;
+get: (name: string, opts?: import('cookie').ParseOptions) => string | undefined;
 ```
 
 <div class="ts-block-property-details">
@@ -1064,7 +1064,7 @@ Gets a cookie that was previously set with `cookies.set`, or from the request he
 <div class="ts-block-property">
 
 ```dts
-getAll: (opts?: import('cookie').CookieParseOptions) => Array<{ name: string; value: string }>;
+getAll: (opts?: import('cookie').ParseOptions) => Array<{ name: string; value: string }>;
 ```
 
 <div class="ts-block-property-details">
@@ -1086,7 +1086,7 @@ Gets all cookies that were previously set with `cookies.set`, or from the reques
 set: (
 	name: string,
 	value: string,
-	opts: import('cookie').CookieSerializeOptions & { path: string }
+	opts: import('cookie').SerializeOptions & { path: string }
 ) => void;
 ```
 
@@ -1112,7 +1112,7 @@ You must specify a `path` for the cookie. In most cases you should explicitly se
 <div class="ts-block-property">
 
 ```dts
-delete: (name: string, opts: import('cookie').CookieSerializeOptions & { path: string }) => void;
+delete: (name: string, opts: import('cookie').SerializeOptions & { path: string }) => void;
 ```
 
 <div class="ts-block-property-details">
@@ -1137,7 +1137,7 @@ You must specify a `path` for the cookie. In most cases you should explicitly se
 serialize: (
 	name: string,
 	value: string,
-	opts: import('cookie').CookieSerializeOptions & { path: string }
+	opts: import('cookie').SerializeOptions & { path: string }
 ) => string;
 ```
 
@@ -1776,7 +1776,7 @@ event?: undefined;
 
 <div class="ts-block-property-details">
 
-Dispatched `Event` object when navigation occurred by `popstate` or `link`.
+Dispatched `Event` object when navigation occured by `popstate` or `link`.
 
 </div>
 </div></div>
@@ -2103,28 +2103,6 @@ url: URL;
 <div class="ts-block-property-details">
 
 The URL that is navigated to
-
-</div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-scroll: { x: number; y: number } | null;
-```
-
-<div class="ts-block-property-details">
-
-The scroll position associated with this navigation.
-
-For the `from` target, this is the scroll position at the moment of navigation.
-
-For the `to` target, this represents the scroll position that will be or was restored:
-- In `beforeNavigate` and `onNavigate`, this is only available for `popstate` navigations (back/forward button)
-	and will be `null` for other navigation types, since the final scroll position isn't known
-	ahead of time.
-- In `afterNavigate`, this is always the scroll position that was applied after the navigation
-	completed.
 
 </div>
 </div></div>
