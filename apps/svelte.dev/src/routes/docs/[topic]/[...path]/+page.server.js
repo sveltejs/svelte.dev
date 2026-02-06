@@ -13,6 +13,12 @@ export async function load({ params }) {
 		document: {
 			...document,
 			body: await render_content(document.file, document.body)
-		}
+		},
+		related: [
+			{
+				breadcrumbs: ['Tutorial', 'Basic Svelte', 'The transition directive'],
+				path: '/tutorial/svelte/transition'
+			}
+		]
 	};
 }
