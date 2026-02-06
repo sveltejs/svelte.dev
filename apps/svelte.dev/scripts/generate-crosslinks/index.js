@@ -51,11 +51,13 @@ function get_path(filename) {
 function get_breadcrumbs(filename) {
 	const breadcrumbs = [get_frontmatter(filename).title];
 
-	let parts = filename.split('/').slice(0, -1);
+	let parts = filename.split('/');
 	while (parts.length > 1) {
 		parts.pop();
 
 		const index = [...parts, 'index.md'].join('/');
+		if (index === filename) continue;
+
 		if (fs.existsSync(index)) {
 			breadcrumbs.unshift(get_frontmatter(index).title);
 		}
