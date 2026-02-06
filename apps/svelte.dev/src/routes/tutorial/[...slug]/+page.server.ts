@@ -7,7 +7,13 @@ export async function load({ params }) {
 	if (!params.slug.includes('/')) redirect(307, `/tutorial/svelte/${params.slug}`);
 
 	return {
-		exercise: await load_exercise(params.slug)
+		exercise: await load_exercise(params.slug),
+		related: [
+			{
+				breadcrumbs: ['Documentation', 'Svelte', 'transition:'],
+				path: '/docs/svelte/transition'
+			}
+		]
 	};
 }
 
