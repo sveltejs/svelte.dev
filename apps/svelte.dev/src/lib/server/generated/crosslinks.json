@@ -1,0 +1,14 @@
+{
+	"transition": [
+		[
+			"tutorial",
+			"svelte",
+			"transition"
+		],
+		[
+			"docs",
+			"svelte",
+			"transition"
+		]
+	]
+}
