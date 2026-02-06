@@ -24,21 +24,25 @@
 
 <style>
 	div {
-		background: var(--sk-bg-2);
-		padding: 1rem;
-		margin: 2rem 0;
+		margin: 2rem 0 4rem 0;
 		overflow: hidden;
 	}
 
 	h2 {
-		font: var(--sk-font-ui-small);
+		font: var(--sk-font-ui-medium);
 		color: var(--sk-fg-1);
 		text-transform: uppercase;
+		margin: 0;
 	}
 
 	ul {
 		list-style: none;
-		font: var(--sk-font-ui-small);
+		font: var(--sk-font-ui-medium);
+		margin: 0;
+	}
+
+	li {
+		margin: 0.5rem 0;
 	}
 
 	a {
@@ -63,7 +67,7 @@
 		}
 
 		span:not(:last-child) {
-			text-transform: uppercase;
+			/* text-transform: uppercase; */
 
 			&::after {
 				content: ' • ';

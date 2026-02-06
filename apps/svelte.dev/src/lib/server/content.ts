@@ -2,6 +2,8 @@ import { read } from '$app/server';
 import { PACKAGES_META } from '$lib/packages-meta';
 import type { Document, DocumentSummary } from '@sveltejs/site-kit';
 import { create_index } from '@sveltejs/site-kit/server/content';
+import crosslinked from './generated/crosslinked.json';
+import type { RelatedLink } from '$lib/types';
 
 const documents = import.meta.glob<string>('./**/*.md', {
 	eager: true,
@@ -260,3 +262,39 @@ function create_registry() {
 }
 
 export const registry = create_registry();
+
+const crosslinks_by_path: Map<string, RelatedLink> = new Map();
+const crosslinks_by_tag: Map<string, RelatedLink[]> = new Map();
+
+for (const page of crosslinked) {
+	crosslinks_by_path.set(page.path, page);
+
+	for (const tag of page.tags) {
+		let by_tag = crosslinks_by_tag.get(tag);
+
+		if (by_tag === undefined) {
+			by_tag = [];
+			crosslinks_by_tag.set(tag, by_tag);
+		}
+
+		by_tag.push(page);
+	}
+}
+
+export function get_related_links(path: string) {
+	const page = crosslinks_by_path.get(path);
+	if (!page) return;
+
+	const result: RelatedLink[] = [];
+
+	for (const tag of page.tags) {
+		const related = crosslinks_by_tag.get(tag)!;
+
+		for (const p of related) {
+			if (p === page) continue;
+			result.push(p);
+		}
+	}
+
+	return result;
+}

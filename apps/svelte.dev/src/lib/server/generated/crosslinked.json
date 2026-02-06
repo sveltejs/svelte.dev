@@ -1,0 +1,36 @@
+[
+	{
+		"path": "/tutorial/svelte/transition",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic Svelte",
+			"Transitions",
+			"The transition directive"
+		],
+		"tags": [
+			"transition"
+		]
+	},
+	{
+		"path": "/docs/svelte/transition",
+		"breadcrumbs": [
+			"Docs",
+			"Svelte",
+			"transition:"
+		],
+		"tags": [
+			"transition"
+		]
+	},
+	{
+		"path": "/docs/svelte/in-and-out",
+		"breadcrumbs": [
+			"Docs",
+			"Svelte",
+			"in: and out:"
+		],
+		"tags": [
+			"transition"
+		]
+	}
+]
