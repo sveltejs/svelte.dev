@@ -1,5 +1,6 @@
 ---
 title: The attach tag
+tags: attachments
 ---
 
 Attachments are essentially element-level lifecycle functions. They're useful for things like:
