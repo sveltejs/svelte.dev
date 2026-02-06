@@ -13,7 +13,7 @@
 		"check": "node scripts/update.js && svelte-kit sync && svelte-check",
 		"format": "prettier --write .",
 		"lint": "prettier --check .",
-		"sync-docs": "node scripts/sync-docs/index.ts",
+		"sync-docs": "node scripts/sync-docs/index.ts && node scripts/generate-crosslinks",
 		"sync-packages": "node scripts/sync-packages/index.ts"
 	},
 	"dependencies": {
