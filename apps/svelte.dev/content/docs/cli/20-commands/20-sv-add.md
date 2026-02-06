@@ -50,10 +50,10 @@ Prevents installing dependencies
 
 ## Official add-ons
 
+- [`better-auth`](better-auth)
 - [`devtools-json`](devtools-json)
 - [`drizzle`](drizzle)
 - [`eslint`](eslint)
-- [`lucia`](lucia)
 - [`mcp`](mcp)
 - [`mdsvex`](mdsvex)
 - [`paraglide`](paraglide)
