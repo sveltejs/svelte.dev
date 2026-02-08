@@ -4,10 +4,10 @@
 	"repo_url": "https://github.com/kriasoft/universal-router",
 	"authors": ["koistya", "frenzzy"],
 	"homepage": "https://www.kriasoft.com/universal-router/",
-	"version": "10.0.1",
-	"downloads": 22169,
+	"version": "10.0.3",
+	"downloads": 27182,
 	"github_stars": 1754,
-	"updated": "2025-08-08T16:58:21.053Z",
+	"updated": "2026-01-16T09:45:27.764Z",
 	"typescript": true,
 	"runes": false,
 	"last_rune_check_version": "10.0.0"

@@ -5,7 +5,7 @@
 	"authors": ["ciscoheat"],
 	"homepage": "https://superforms.rocks",
 	"version": "2.29.1",
-	"downloads": 80560,
+	"downloads": 95166,
 	"github_stars": 2682,
 	"updated": "2025-12-16T08:28:22.437Z",
 	"svelte_range": "3.x || 4.x || >=5.0.0-next.51",
