@@ -1,5 +1,6 @@
 ---
 title: Each blocks
+tags: template-each
 ---
 
 When building user interfaces you'll often find yourself working with lists of data. In this exercise, we've repeated the `<button>` markup multiple times — changing the colour each time — but there's still more to add.
