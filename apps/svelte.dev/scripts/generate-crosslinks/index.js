@@ -66,6 +66,9 @@ function get_breadcrumbs(filename) {
 	return breadcrumbs;
 }
 
+/** @type {Record<string, RelatedLink[]>} */
+const by_tag = {};
+
 for (const filename of fs.globSync('content/**/*.md')) {
 	const metadata = get_frontmatter(filename);
 	if (!metadata.tags) continue;
@@ -74,7 +77,20 @@ for (const filename of fs.globSync('content/**/*.md')) {
 	const path = get_path(filename);
 	const breadcrumbs = get_breadcrumbs(filename);
 
-	crosslinked.push({ path, breadcrumbs, tags });
+	const page = { path, breadcrumbs, tags };
+	crosslinked.push(page);
+
+	for (const tag of tags) {
+		(by_tag[tag] ??= []).push(page);
+	}
+}
+
+const only_used_once = Object.keys(by_tag).filter((tag) => by_tag[tag].length === 1);
+
+if (only_used_once.length > 0) {
+	console.error(
+		`The following tags are only used once:${only_used_once.map((t) => `\n  - ${t}`).join('')}`
+	);
 }
 
 fs.writeFileSync(
