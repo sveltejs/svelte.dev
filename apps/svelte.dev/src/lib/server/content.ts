@@ -285,16 +285,16 @@ export function get_related_links(path: string) {
 	const page = crosslinks_by_path.get(path);
 	if (!page) return;
 
-	const result: RelatedLink[] = [];
+	const result: Set<RelatedLink> = new Set();
 
 	for (const tag of page.tags) {
 		const related = crosslinks_by_tag.get(tag)!;
 
 		for (const p of related) {
 			if (p === page) continue;
-			result.push(p);
+			result.add(p);
 		}
 	}
 
-	return result.length > 0 ? result : undefined;
+	return result.size > 0 ? Array.from(result) : undefined;
 }
