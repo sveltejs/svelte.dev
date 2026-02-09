@@ -12,6 +12,7 @@ import { fileURLToPath } from 'node:url';
 import { clone_repo, migrate_meta_json } from './utils.ts';
 import { get_types, read_d_ts_file, read_types } from './types.ts';
 import type { Modules } from '@sveltejs/site-kit/markdown';
+import { generate_crosslinks } from './crosslinks.ts';
 
 interface Package {
 	name: string;
@@ -239,12 +240,15 @@ for (const pkg of filtered) {
 	await sync(pkg);
 }
 
+generate_crosslinks();
+
 if (parsed.values.watch) {
 	for (const pkg of filtered) {
 		chokidar
 			.watch(`${REPOS}/${pkg.name}/${pkg.docs}`, { ignoreInitial: true })
 			.on('all', (event) => {
 				sync(pkg);
+				generate_crosslinks();
 			});
 	}
 
