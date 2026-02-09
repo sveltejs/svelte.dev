@@ -8,7 +8,7 @@ The `in:` and `out:` directives are identical to [`transition:`](transition), ex
 ```svelte
 <script>
   import { fade, fly } from 'svelte/transition';
-  
+
   let visible = $state(false);
 </script>
 

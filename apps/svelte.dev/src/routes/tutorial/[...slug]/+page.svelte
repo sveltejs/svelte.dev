@@ -267,6 +267,7 @@
 					<Sidebar
 						bind:sidebar
 						exercise={data.exercise}
+						related={data.related}
 						on:select={(e) => {
 							navigate_to_file(e.detail.file);
 						}}

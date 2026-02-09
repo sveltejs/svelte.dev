@@ -1,0 +1,74 @@
+[
+	{
+		"path": "/tutorial/svelte/transition",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic Svelte",
+			"Transitions",
+			"The transition directive"
+		],
+		"tags": [
+			"transitions"
+		]
+	},
+	{
+		"path": "/tutorial/svelte/attach",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic Svelte",
+			"Attachments",
+			"The attach tag"
+		],
+		"tags": [
+			"attachments"
+		]
+	},
+	{
+		"path": "/docs/svelte/svelte-action",
+		"breadcrumbs": [
+			"Docs",
+			"Svelte",
+			"Reference",
+			"svelte/action"
+		],
+		"tags": [
+			"actions"
+		]
+	},
+	{
+		"path": "/docs/svelte/svelte-attachments",
+		"breadcrumbs": [
+			"Docs",
+			"Svelte",
+			"Reference",
+			"svelte/attachments"
+		],
+		"tags": [
+			"attachments"
+		]
+	},
+	{
+		"path": "/docs/svelte/@attach",
+		"breadcrumbs": [
+			"Docs",
+			"Svelte",
+			"Template syntax",
+			"{@attach ...}"
+		],
+		"tags": [
+			"attachments"
+		]
+	},
+	{
+		"path": "/docs/svelte/use",
+		"breadcrumbs": [
+			"Docs",
+			"Svelte",
+			"Template syntax",
+			"use:"
+		],
+		"tags": [
+			"actions"
+		]
+	}
+]
