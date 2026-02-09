@@ -1,5 +1,17 @@
 [
 	{
+		"path": "/tutorial/svelte/key-blocks",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic Svelte",
+			"Transitions",
+			"Key blocks"
+		],
+		"tags": [
+			"template-key"
+		]
+	},
+	{
 		"path": "/tutorial/svelte/transition",
 		"breadcrumbs": [
 			"Tutorial",
@@ -21,6 +33,175 @@
 		],
 		"tags": [
 			"attachments"
+		]
+	},
+	{
+		"path": "/tutorial/svelte/component-styles",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic Svelte",
+			"Classes and styles",
+			"Component styles"
+		],
+		"tags": [
+			"styles-global",
+			"styles-custom-properties"
+		]
+	},
+	{
+		"path": "/tutorial/svelte/styles",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic Svelte",
+			"Classes and styles",
+			"The style directive"
+		],
+		"tags": [
+			"template-style"
+		]
+	},
+	{
+		"path": "/tutorial/svelte/classes",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic Svelte",
+			"Classes and styles",
+			"The class attribute"
+		],
+		"tags": [
+			"template-class"
+		]
+	},
+	{
+		"path": "/tutorial/svelte/text-inputs",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic Svelte",
+			"Bindings",
+			"Text inputs"
+		],
+		"tags": [
+			"template-bind"
+		]
+	},
+	{
+		"path": "/tutorial/svelte/await-blocks",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic Svelte",
+			"Logic",
+			"Await blocks"
+		],
+		"tags": [
+			"template-await"
+		]
+	},
+	{
+		"path": "/tutorial/svelte/each-blocks",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic Svelte",
+			"Logic",
+			"Each blocks"
+		],
+		"tags": [
+			"template-each"
+		]
+	},
+	{
+		"path": "/tutorial/svelte/if-blocks",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic Svelte",
+			"Logic",
+			"If blocks"
+		],
+		"tags": [
+			"template-if"
+		]
+	},
+	{
+		"path": "/tutorial/svelte/declaring-props",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic Svelte",
+			"Props",
+			"Declaring props"
+		],
+		"tags": [
+			"rune-props"
+		]
+	},
+	{
+		"path": "/tutorial/svelte/effects",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic Svelte",
+			"Reactivity",
+			"Effects"
+		],
+		"tags": [
+			"rune-effect"
+		]
+	},
+	{
+		"path": "/tutorial/svelte/inspecting-state",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic Svelte",
+			"Reactivity",
+			"Inspecting state"
+		],
+		"tags": [
+			"rune-inspect"
+		]
+	},
+	{
+		"path": "/tutorial/svelte/derived-state",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic Svelte",
+			"Reactivity",
+			"Derived state"
+		],
+		"tags": [
+			"rune-derived"
+		]
+	},
+	{
+		"path": "/tutorial/svelte/state",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic Svelte",
+			"Reactivity",
+			"State"
+		],
+		"tags": [
+			"rune-state"
+		]
+	},
+	{
+		"path": "/tutorial/svelte/html-tags",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic Svelte",
+			"Introduction",
+			"HTML tags"
+		],
+		"tags": [
+			"template-html"
+		]
+	},
+	{
+		"path": "/tutorial/svelte/styling",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic Svelte",
+			"Introduction",
+			"Styling"
+		],
+		"tags": [
+			"styles-scoped"
 		]
 	},
 	{
