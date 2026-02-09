@@ -296,5 +296,5 @@ export function get_related_links(path: string) {
 		}
 	}
 
-	return result;
+	return result.length > 0 ? result : undefined;
 }

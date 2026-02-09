@@ -48,18 +48,6 @@
 		]
 	},
 	{
-		"path": "/docs/svelte/svelte-transition",
-		"breadcrumbs": [
-			"Docs",
-			"Svelte",
-			"Reference",
-			"svelte/transition"
-		],
-		"tags": [
-			"transitions"
-		]
-	},
-	{
 		"path": "/docs/svelte/@attach",
 		"breadcrumbs": [
 			"Docs",
@@ -81,30 +69,6 @@
 		],
 		"tags": [
 			"actions"
-		]
-	},
-	{
-		"path": "/docs/svelte/transition",
-		"breadcrumbs": [
-			"Docs",
-			"Svelte",
-			"Template syntax",
-			"transition:"
-		],
-		"tags": [
-			"transitions"
-		]
-	},
-	{
-		"path": "/docs/svelte/in-and-out",
-		"breadcrumbs": [
-			"Docs",
-			"Svelte",
-			"Template syntax",
-			"in: and out:"
-		],
-		"tags": [
-			"transitions"
 		]
 	}
 ]
