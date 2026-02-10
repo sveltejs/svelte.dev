@@ -694,7 +694,10 @@ with TypeScript:
 interface Component<
 	Props extends Record<string, any> = {},
 	Exports extends Record<string, any> = {},
-	Bindings extends keyof Props | '' = string
+	Bindings extends
+		| keyof UnionToIntersection<Required<Props>>
+		| (string & {})
+		| '' = string
 > {/*…*/}
 ```
 

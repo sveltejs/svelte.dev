@@ -28,7 +28,7 @@ function render<
 					? ComponentType<Comp>
 					: Comp,
 				options?: {
-					props?: Omit<Props, '$$slots' | '$$events'>;
+					props?: Props;
 					context?: Map<any, any>;
 					idPrefix?: string;
 					csp?: Csp;
@@ -39,7 +39,7 @@ function render<
 					? ComponentType<Comp>
 					: Comp,
 				options: {
-					props: Omit<Props, '$$slots' | '$$events'>;
+					props: Props;
 					context?: Map<any, any>;
 					idPrefix?: string;
 					csp?: Csp;
