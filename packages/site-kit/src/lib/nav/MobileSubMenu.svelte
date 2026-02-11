@@ -74,7 +74,7 @@
 	}
 
 	ul {
-		--block-height: calc(1lh + var(--header-padding) * 2);
+		--block-height: calc(1lh + var(--header-padding));
 
 		/*
 		* Necessary values to match `scroll-margin-top`
@@ -103,10 +103,11 @@
 
 	h2 {
 		position: sticky;
-		top: calc(var(--index, 0) * (1lh + var(--header-padding) * 2));
-		bottom: calc(var(--reverse-index, 0) * (1lh + var(--header-padding) * 2));
+		top: calc(var(--index, 0) * calc(1lh + var(--header-padding)));
+		bottom: calc(var(--reverse-index, 0) * calc(1lh + var(--header-padding)));
 		z-index: calc(var(--index, 1) + 1);
-		padding: var(--header-padding) 0;
+		padding: calc(var(--header-padding) / 2) 0;
+		margin: calc(var(--header-padding) / 2) 0;
 		background-color: var(--sk-bg-2);
 	}
 
@@ -135,7 +136,7 @@
 	}
 
 	/* Hide stacked heading experience on very small screens */
-	@container (height < 500px) {
+	@container (height < 450px) {
 		ul {
 			scroll-margin-top: var(--block-height);
 		}
