@@ -32,6 +32,9 @@ function render<
 					context?: Map<any, any>;
 					idPrefix?: string;
 					csp?: Csp;
+					transformError?: (
+						error: unknown
+					) => unknown | Promise<unknown>;
 				}
 			]
 		: [
@@ -43,6 +46,9 @@ function render<
 					context?: Map<any, any>;
 					idPrefix?: string;
 					csp?: Csp;
+					transformError?: (
+						error: unknown
+					) => unknown | Promise<unknown>;
 				}
 			]
 ): RenderOutput;
