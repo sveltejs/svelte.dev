@@ -117,6 +117,8 @@ const config = {
 };
 ```
 
+> [!NOTE] The built-in `$lib` alias is controlled by `config.kit.files.lib` as it is used for packaging.
+
 > [!NOTE] You will need to run `npm run dev` to have SvelteKit automatically generate the required alias configuration in `jsconfig.json` or `tsconfig.json`.
 
 <div class="ts-block-property-children">
@@ -493,25 +495,6 @@ remoteFunctions?: boolean;
 </div>
 
 Whether to enable the experimental remote functions feature. This feature is not yet stable and may be changed or removed at any time.
-
-</div>
-</div>
-<div class="ts-block-property">
-
-```ts
-// @noErrors
-forkPreloads?: boolean;
-```
-
-<div class="ts-block-property-details">
-
-<div class="ts-block-property-bullets">
-
-- <span class="tag">default</span> `false`
-
-</div>
-
-Whether to enable the experimental forked preloading feature using Svelte's fork API.
 
 </div>
 </div>
