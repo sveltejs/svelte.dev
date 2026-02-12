@@ -93,6 +93,13 @@
 		display: block;
 	}
 
+	h2 + ul > li {
+		/* Margin + '#' character + border width */
+		padding-left: calc(0.25rem + 1ch + 1px);
+		margin-left: 0.25rem;
+		border-left: 1px solid var(--sk-border);
+	}
+
 	h2,
 	h3 {
 		display: block;
