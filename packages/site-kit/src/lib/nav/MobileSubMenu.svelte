@@ -94,8 +94,8 @@
 	}
 
 	h2 + ul > li {
-		/* Margin + '#' character + border width */
-		padding-left: calc(0.25rem + 1ch + 1px);
+		/* h2 anchor padding - margin-left - border width */
+		padding-left: calc(1.75rem - 1px);
 		margin-left: 0.25rem;
 		border-left: 1px solid var(--sk-border);
 	}
@@ -128,11 +128,12 @@
 	}
 
 	h2 a {
-		padding: 0 !important;
+		padding: 0 0 0 2rem !important;
 
 		&::before {
 			content: '#';
-			margin-right: 1ch;
+			position: absolute;
+			left: 0;
 			color: var(--sk-fg-3);
 		}
 
