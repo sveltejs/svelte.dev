@@ -515,6 +515,27 @@ Whether to enable the experimental forked preloading feature using Svelte's fork
 
 </div>
 </div>
+<div class="ts-block-property">
+
+```ts
+// @noErrors
+serverErrorBoundaries?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `false`
+
+</div>
+
+Whether to enable the experimental server error boundaries feature.
+When enabled, `<svelte:boundary>` is used to wrap components at each level
+where there's an `+error.svelte`, rendering the error page if the component fails.
+
+</div>
+</div>
 
 </div>
 
