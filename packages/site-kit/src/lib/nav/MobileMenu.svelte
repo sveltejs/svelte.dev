@@ -312,7 +312,7 @@
 		width: 50%;
 		height: 4.8rem;
 		padding: 0 var(--sk-page-padding-side);
-		z-index: 2;
+		z-index: 10;
 	}
 
 	.universal .contents,
