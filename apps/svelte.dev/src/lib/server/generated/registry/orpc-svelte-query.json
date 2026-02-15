@@ -1,15 +1,17 @@
 {
-	"name": "@orpc/svelte-query",
-	"npm_description": "<div align=\"center\">   <image align=\"center\" src=\"https://orpc.dev/logo.webp\" width=280 alt=\"oRPC logo\" /> </div>",
-	"repo_url": "https://github.com/middleapi/orpc",
-	"authors": ["unnoq"],
-	"homepage": "https://orpc.dev",
-	"version": "1.13.4",
-	"downloads": 508,
-	"github_stars": 4797,
-	"updated": "2026-01-13T09:09:28.363Z",
-	"svelte_range": ">=4.2.0",
-	"typescript": true,
-	"runes": false,
-	"last_rune_check_version": "0.54.0"
+  "name": "@orpc/svelte-query",
+  "npm_description": "<div align=\"center\">   <image align=\"center\" src=\"https://orpc.dev/logo.webp\" width=280 alt=\"oRPC logo\" /> </div>",
+  "repo_url": "https://github.com/middleapi/orpc",
+  "authors": [
+    "unnoq"
+  ],
+  "homepage": "https://orpc.dev",
+  "version": "1.13.5",
+  "downloads": 3169,
+  "github_stars": 4832,
+  "updated": "2026-02-11T12:56:40.712Z",
+  "svelte_range": ">=4.2.0",
+  "typescript": true,
+  "runes": false,
+  "last_rune_check_version": "0.54.0"
 }

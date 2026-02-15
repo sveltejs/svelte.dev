@@ -1,14 +1,16 @@
 {
-	"name": "carbon-components-svelte",
-	"npm_description": "Svelte implementation of the Carbon Design System",
-	"repo_url": "https://github.com/carbon-design-system/carbon-components-svelte",
-	"authors": ["metonym"],
-	"homepage": "https://svelte.carbondesignsystem.com/",
-	"version": "0.99.3",
-	"downloads": 18293,
-	"github_stars": 2863,
-	"updated": "2026-02-03T16:52:17.074Z",
-	"typescript": true,
-	"runes": false,
-	"last_rune_check_version": "0.88.4"
+  "name": "carbon-components-svelte",
+  "npm_description": "Svelte implementation of the Carbon Design System",
+  "repo_url": "https://github.com/carbon-design-system/carbon-components-svelte",
+  "authors": [
+    "metonym"
+  ],
+  "homepage": "https://svelte.carbondesignsystem.com/",
+  "version": "0.100.0",
+  "downloads": 17509,
+  "github_stars": 2864,
+  "updated": "2026-02-13T14:46:23.236Z",
+  "typescript": true,
+  "runes": false,
+  "last_rune_check_version": "0.88.4"
 }
