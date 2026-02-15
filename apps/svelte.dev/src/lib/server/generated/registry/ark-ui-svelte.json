@@ -1,16 +1,19 @@
 {
-	"name": "@ark-ui/svelte",
-	"npm_description": "A collection of unstyled, accessible UI components for Svelte",
-	"repo_url": "https://github.com/chakra-ui/ark",
-	"authors": ["segunadebayo", "schroetier"],
-	"homepage": "https://ark-ui.com",
-	"version": "5.16.0",
-	"downloads": 776,
-	"github_stars": 4981,
-	"updated": "2026-02-04T14:54:56.204Z",
-	"svelte_range": ">=5.20.0",
-	"kit_range": "2.49.0",
-	"typescript": true,
-	"runes": true,
-	"last_rune_check_version": "0.3.0"
+  "name": "@ark-ui/svelte",
+  "npm_description": "A collection of unstyled, accessible UI components for Svelte",
+  "repo_url": "https://github.com/chakra-ui/ark",
+  "authors": [
+    "segunadebayo",
+    "schroetier"
+  ],
+  "homepage": "https://ark-ui.com",
+  "version": "5.16.0",
+  "downloads": 923,
+  "github_stars": 4992,
+  "updated": "2026-02-04T14:54:56.204Z",
+  "svelte_range": ">=5.20.0",
+  "kit_range": "2.49.0",
+  "typescript": true,
+  "runes": true,
+  "last_rune_check_version": "0.3.0"
 }

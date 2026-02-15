@@ -1,16 +1,18 @@
 {
-	"name": "svelte-stripe",
-	"npm_description": "Everything you need to add Stripe Elements to your Svelte project. 100% [SvelteKit](https://kit.svelte.dev/) compatible.",
-	"repo_url": "https://github.com/joshnuss/svelte-stripe",
-	"authors": ["joshnuss"],
-	"homepage": "https://sveltestripe.com",
-	"version": "2.0.0",
-	"downloads": 6918,
-	"github_stars": 484,
-	"updated": "2026-01-22T01:10:19.330Z",
-	"svelte_range": "^5",
-	"kit_range": "^2.5.27",
-	"typescript": true,
-	"runes": false,
-	"last_rune_check_version": "1.3.0"
+  "name": "svelte-stripe",
+  "npm_description": "Everything you need to add Stripe Elements to your Svelte project. 100% [SvelteKit](https://kit.svelte.dev/) compatible.",
+  "repo_url": "https://github.com/joshnuss/svelte-stripe",
+  "authors": [
+    "joshnuss"
+  ],
+  "homepage": "https://sveltestripe.com",
+  "version": "2.0.0",
+  "downloads": 6044,
+  "github_stars": 490,
+  "updated": "2026-01-22T01:10:19.330Z",
+  "svelte_range": "^5",
+  "kit_range": "^2.5.27",
+  "typescript": true,
+  "runes": false,
+  "last_rune_check_version": "1.3.0"
 }

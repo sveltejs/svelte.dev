@@ -1,14 +1,17 @@
 {
-	"name": "@inlang/paraglide-js",
-	"npm_description": "[![NPM Downloads](https://img.shields.io/npm/dw/%40inlang%2Fparaglide-js?logo=npm&logoColor=red&label=npm%20downloads)](https://www.npmjs.com/package/@inlang/paraglide-js) [![GitHub Issues](https://img.shields.io/github/issues-closed/opral/paraglide-js?lo",
-	"repo_url": "https://github.com/opral/paraglide-js",
-	"authors": ["samuelstroschein", "inlangbot"],
-	"homepage": "https://inlang.com/m/gerre34r/library-inlang-paraglideJs",
-	"version": "2.10.0",
-	"downloads": 120509,
-	"github_stars": 212,
-	"updated": "2026-02-01T22:10:36.606Z",
-	"typescript": true,
-	"runes": false,
-	"last_rune_check_version": "2.0.11"
+  "name": "@inlang/paraglide-js",
+  "npm_description": "[![NPM Downloads](https://img.shields.io/npm/dw/%40inlang%2Fparaglide-js?logo=npm&logoColor=red&label=npm%20downloads)](https://www.npmjs.com/package/@inlang/paraglide-js) [![GitHub Issues](https://img.shields.io/github/issues-closed/opral/paraglide-js?lo",
+  "repo_url": "https://github.com/opral/paraglide-js",
+  "authors": [
+    "samuelstroschein",
+    "inlangbot"
+  ],
+  "homepage": "https://inlang.com/m/gerre34r/library-inlang-paraglideJs",
+  "version": "2.11.0",
+  "downloads": 143477,
+  "github_stars": 219,
+  "updated": "2026-02-11T01:11:01.987Z",
+  "typescript": true,
+  "runes": false,
+  "last_rune_check_version": "2.0.11"
 }

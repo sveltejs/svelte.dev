@@ -1,16 +1,18 @@
 {
-	"name": "melt",
-	"npm_description": "The next generation of Melt UI. Built for Svelte 5.",
-	"repo_url": "https://github.com/melt-ui/next-gen",
-	"authors": ["tglide_personal"],
-	"homepage": "https://next.melt-ui.com/",
-	"version": "0.44.0",
-	"downloads": 3134,
-	"github_stars": 295,
-	"updated": "2026-01-04T00:59:53.299Z",
-	"svelte_range": "^5.30.1",
-	"kit_range": "^2.15.2",
-	"typescript": true,
-	"runes": true,
-	"last_rune_check_version": "0.40.0"
+  "name": "melt",
+  "npm_description": "The next generation of Melt UI. Built for Svelte 5.",
+  "repo_url": "https://github.com/melt-ui/next-gen",
+  "authors": [
+    "tglide_personal"
+  ],
+  "homepage": "https://next.melt-ui.com/",
+  "version": "0.44.0",
+  "downloads": 3395,
+  "github_stars": 297,
+  "updated": "2026-01-04T00:59:53.299Z",
+  "svelte_range": "^5.30.1",
+  "kit_range": "^2.15.2",
+  "typescript": true,
+  "runes": true,
+  "last_rune_check_version": "0.40.0"
 }

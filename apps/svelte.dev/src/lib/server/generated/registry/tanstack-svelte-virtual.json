@@ -1,15 +1,22 @@
 {
-	"name": "@tanstack/svelte-virtual",
-	"npm_description": "Headless UI for virtualizing scrollable elements in Svelte",
-	"repo_url": "https://github.com/TanStack/virtual",
-	"authors": ["tannerlinsley", "schiller-manuel", "lachlancollins", "kylemathews"],
-	"homepage": "https://tanstack.com/virtual",
-	"version": "3.13.18",
-	"downloads": 17472,
-	"github_stars": 6495,
-	"updated": "2026-01-07T21:01:35.565Z",
-	"svelte_range": "^3.48.0 || ^4.0.0 || ^5.0.0",
-	"typescript": true,
-	"runes": false,
-	"last_rune_check_version": "3.13.6"
+  "name": "@tanstack/svelte-virtual",
+  "npm_description": "Headless UI for virtualizing scrollable elements in Svelte",
+  "repo_url": "https://github.com/TanStack/virtual",
+  "authors": [
+    "tannerlinsley",
+    "kevinvandy",
+    "tkdodo",
+    "schiller-manuel",
+    "lachlancollins",
+    "kylemathews"
+  ],
+  "homepage": "https://tanstack.com/virtual",
+  "version": "3.13.18",
+  "downloads": 16768,
+  "github_stars": 6695,
+  "updated": "2026-01-07T21:01:35.565Z",
+  "svelte_range": "^3.48.0 || ^4.0.0 || ^5.0.0",
+  "typescript": true,
+  "runes": false,
+  "last_rune_check_version": "3.13.6"
 }

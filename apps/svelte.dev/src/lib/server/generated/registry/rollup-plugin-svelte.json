@@ -1,15 +1,22 @@
 {
-	"name": "rollup-plugin-svelte",
-	"npm_description": "Compile Svelte components with Rollup",
-	"repo_url": "https://github.com/sveltejs/rollup-plugin-svelte",
-	"authors": ["lukeed", "rich_harris", "lukastaegert", "shellscape", "conduitry", "dummdidumm"],
-	"homepage": "https://github.com/sveltejs/rollup-plugin-svelte#readme",
-	"version": "7.2.3",
-	"downloads": 100519,
-	"github_stars": 512,
-	"updated": "2025-08-23T20:57:08.931Z",
-	"svelte_range": ">=3.5.0",
-	"typescript": true,
-	"runes": false,
-	"last_rune_check_version": "7.2.2"
+  "name": "rollup-plugin-svelte",
+  "npm_description": "Compile Svelte components with Rollup",
+  "repo_url": "https://github.com/sveltejs/rollup-plugin-svelte",
+  "authors": [
+    "lukeed",
+    "rich_harris",
+    "lukastaegert",
+    "shellscape",
+    "conduitry",
+    "dummdidumm"
+  ],
+  "homepage": "https://github.com/sveltejs/rollup-plugin-svelte#readme",
+  "version": "7.2.3",
+  "downloads": 98054,
+  "github_stars": 512,
+  "updated": "2025-08-23T20:57:08.931Z",
+  "svelte_range": ">=3.5.0",
+  "typescript": true,
+  "runes": false,
+  "last_rune_check_version": "7.2.2"
 }
