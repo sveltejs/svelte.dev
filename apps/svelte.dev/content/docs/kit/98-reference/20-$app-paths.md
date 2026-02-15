@@ -7,7 +7,7 @@ title: $app/paths
 
 ```js
 // @noErrors
-import { asset, assets, base, resolve, resolveRoute } from '$app/paths';
+import { asset, assets, base, match, resolve, resolveRoute } from '$app/paths';
 ```
 
 ## asset
@@ -82,6 +82,44 @@ Example usage: `<a href="{base}/your-page">Link</a>`
 
 ```dts
 let base: '' | `/${string}`;
+```
+
+</div>
+
+
+
+## match
+
+<blockquote class="since note">
+
+Available since 2.52.0
+
+</blockquote>
+
+Match a path or URL to a route ID and extracts any parameters.
+
+```js
+// @errors: 7031
+import { match } from '$app/paths';
+
+const route = await match('/blog/hello-world');
+
+if (route?.id === '/blog/[slug]') {
+	const slug = route.params.slug;
+	const response = await fetch(`/api/posts/${slug}`);
+	const post = await response.json();
+}
+```
+
+<div class="ts-block">
+
+```dts
+function match(
+	url: Pathname | URL | (string & {})
+): Promise<{
+	id: RouteId;
+	params: Record<string, string>;
+} | null>;
 ```
 
 </div>
