@@ -7,7 +7,7 @@ export function max(version: string) {
 	// strip any * parts, e.g. 1.2.x becomes 1.2
 	version = version.replace(/\.[x*].+/, '');
 
-	const match = /^([~^])?(\d+|[*x])(?:\.(\d+|[*x])(?:\.(\d+|[*x]))?)?(?:-.+)?$/.exec(version);
+	const match = /^([~^])?(\d+|[*x])(?:\.(\d+|[*x])(?:\.(\d+|[*x]))?)?(-.*)?$/.exec(version);
 
 	if (!match) {
 		// bail
@@ -15,7 +15,13 @@ export function max(version: string) {
 		return 'latest';
 	}
 
-	const [_, qualifier, major, minor] = match;
+	const [_, qualifier, major, minor, _patch, prerelease] = match;
+
+	// prerelease versions (e.g. ^2.0.0-next.18) should be returned as-is
+	// since the stable version they'd resolve to may not exist yet
+	if (prerelease) {
+		return qualifier ? version.slice(qualifier.length) : version;
+	}
 
 	// ^ means 'same major', unless 0.x
 	if (qualifier === '^') {
