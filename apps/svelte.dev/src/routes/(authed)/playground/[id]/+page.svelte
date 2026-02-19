@@ -54,7 +54,7 @@
 			repl?.set({
 				// TODO make this munging unnecessary (using JSON instead of structuredClone for better browser compat)
 				files: JSON.parse(JSON.stringify(data.gist.components)).map(munge),
-				tailwind: false // TODO
+				tailwind: data.gist.tailwind ?? false
 			});
 
 			modified = false;
