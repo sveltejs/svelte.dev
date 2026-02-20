@@ -1,6 +1,6 @@
 import { PACKAGES_META } from '../../src/lib/packages-meta.ts';
 import type { PackageKey, PackageNpm, PackageGithub } from '../../src/lib/server/content.ts';
-import { execSync } from 'node:child_process';
+import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
@@ -270,7 +270,7 @@ function writeJsonData(path: string, data: any) {
 	}
 
 	fs.writeFileSync(path, JSON.stringify(sortedData, null, 2));
-	execSync(`prettier --write ${path}`);
+	execFileSync('prettier', ['--write', path]);
 }
 
 async function fetchJson(url: string, options: RequestInit = {}): Promise<any> {

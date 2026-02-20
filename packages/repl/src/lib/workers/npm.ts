@@ -36,7 +36,9 @@ export async function load_svelte(version: string) {
 
 		const compiler = pkg.contents[entry].text;
 
-		(0, eval)(compiler + `\n//# sourceURL=${entry}@` + version);
+		const script = self.document.createElement('script');
+		script.textContent = compiler + `\n//# sourceURL=${entry}@` + version;
+		self.document.head.appendChild(script);
 	}
 
 	console.log(`Using Svelte compiler version ${version}`);

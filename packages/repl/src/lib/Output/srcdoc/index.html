@@ -8,6 +8,18 @@
 				const style = document.querySelector('style#injected');
 				let styles = '';
 
+				// Determine the trusted parent origin from the referrer, if available.
+				// This ensures that only the embedding page can send executable code.
+				let TRUSTED_PARENT_ORIGIN = '';
+				try {
+					if (document.referrer) {
+						const referrerUrl = new URL(document.referrer);
+						TRUSTED_PARENT_ORIGIN = referrerUrl.origin;
+					}
+				} catch (_) {
+					// If parsing fails, leave TRUSTED_PARENT_ORIGIN empty to reject all messages.
+				}
+
 				function send(payload, origin = '*') {
 					if (payload.command === 'info' && payload.args[0] instanceof Error) {
 						const error = payload.args[0];
@@ -28,6 +40,12 @@
 				}
 
 				window.addEventListener('message', ({ origin, data }) => {
+					// Only accept messages from the trusted parent origin.
+					// This prevents arbitrary other windows from injecting code via postMessage.
+					if (!TRUSTED_PARENT_ORIGIN || origin !== TRUSTED_PARENT_ORIGIN) {
+						return;
+					}
+
 					let { action, cmd_id } = data;
 
 					const reply = (payload) => send({ ...payload, cmd_id }, origin);
