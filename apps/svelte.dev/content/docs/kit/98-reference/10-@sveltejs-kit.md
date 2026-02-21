@@ -196,7 +196,7 @@ Checks whether this is an error thrown by `error`.
 function isHttpError<T extends number>(
 	e: unknown,
 	status?: T
-): e is HttpError_1 & {
+): e is HttpError & {
 	status: T extends undefined ? never : T;
 };
 ```
@@ -212,7 +212,7 @@ Checks whether this is a redirect thrown by `redirect`.
 <div class="ts-block">
 
 ```dts
-function isRedirect(e: unknown): e is Redirect_1;
+function isRedirect(e: unknown): e is Redirect;
 ```
 
 </div>
@@ -1044,7 +1044,7 @@ interface Cookies {/*…*/}
 <div class="ts-block-property">
 
 ```dts
-get: (name: string, opts?: import('cookie').CookieParseOptions) => string | undefined;
+get: (name: string, opts?: import('cookie').ParseOptions) => string | undefined;
 ```
 
 <div class="ts-block-property-details">
@@ -1064,7 +1064,7 @@ Gets a cookie that was previously set with `cookies.set`, or from the request he
 <div class="ts-block-property">
 
 ```dts
-getAll: (opts?: import('cookie').CookieParseOptions) => Array<{ name: string; value: string }>;
+getAll: (opts?: import('cookie').ParseOptions) => Array<{ name: string; value: string }>;
 ```
 
 <div class="ts-block-property-details">
@@ -1086,7 +1086,7 @@ Gets all cookies that were previously set with `cookies.set`, or from the reques
 set: (
 	name: string,
 	value: string,
-	opts: import('cookie').CookieSerializeOptions & { path: string }
+	opts: import('cookie').SerializeOptions & { path: string }
 ) => void;
 ```
 
@@ -1112,7 +1112,7 @@ You must specify a `path` for the cookie. In most cases you should explicitly se
 <div class="ts-block-property">
 
 ```dts
-delete: (name: string, opts: import('cookie').CookieSerializeOptions & { path: string }) => void;
+delete: (name: string, opts: import('cookie').SerializeOptions & { path: string }) => void;
 ```
 
 <div class="ts-block-property-details">
@@ -1137,7 +1137,7 @@ You must specify a `path` for the cookie. In most cases you should explicitly se
 serialize: (
 	name: string,
 	value: string,
-	opts: import('cookie').CookieSerializeOptions & { path: string }
+	opts: import('cookie').SerializeOptions & { path: string }
 ) => string;
 ```
 
