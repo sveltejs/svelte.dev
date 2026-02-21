@@ -31,61 +31,73 @@
 </script>
 
 <nav bind:this={nav}>
-	{#each contents as section}
-		<section>
-			<h2>{title} • {section.title}</h2>
+	{#each contents as section, i}
+		<h2 style="--index: {i}; --reverse-index: {contents.length - i - 1}">
+			<a href="#{section.title}">{section.title} <span class="visually-hidden">{title}</span></a>
+		</h2>
 
-			{#if section.sections.length !== 0}
-				<ul>
-					{#each section.sections as { title, sections: subsections }}
-						<li>
-							{#if title}
-								<h3>
-									{title}
-								</h3>
-							{/if}
+		{#if section.sections.length !== 0}
+			<ul id={section.title} style="--index: {i}">
+				{#each section.sections as { title, sections: subsections }}
+					<li>
+						{#if title}
+							<h3>
+								{title}
+							</h3>
+						{/if}
 
-							<ul>
-								{#each subsections as { path, title }}
-									<li>
-										<a href={path} aria-current={path === $page.url.pathname ? 'page' : undefined}>
-											{title}
-										</a>
-									</li>
-								{/each}
-							</ul>
-						</li>
-					{/each}
-				</ul>
-			{/if}
-		</section>
+						<ul>
+							{#each subsections as { path, title }}
+								<li>
+									<a href={path} aria-current={path === $page.url.pathname ? 'page' : undefined}>
+										{title}
+									</a>
+								</li>
+							{/each}
+						</ul>
+					</li>
+				{/each}
+			</ul>
+		{/if}
 	{/each}
 </nav>
 
 <style>
 	nav {
-		padding: 0 0 3rem 0;
+		--header-padding: 1rem;
+
+		container-type: size;
 		font-family: var(--sk-font-family-ui);
 		overflow-y: auto;
 		height: 100%;
+		padding: 0 var(--sk-page-padding-side) 3rem;
 	}
 
-	section {
-		padding: 1rem var(--sk-page-padding-side);
+	ul {
+		--block-height: calc(1lh + var(--header-padding));
 
-		& > ul {
-			margin-bottom: 0 0 2rem 0;
-		}
+		/*
+		* Necessary values to match `scroll-margin-top`
+		* with `h2` heights.
+		*/
+		font-size: 1.6rem;
+		line-height: 1.5;
 
-		ul {
-			list-style-type: none;
-			margin: 0;
-			margin-bottom: 2.5rem;
-		}
+		list-style-type: none;
+		margin: 0;
+		margin-bottom: 2.5rem;
+		scroll-margin-top: calc((var(--index, 1) + 1) * var(--block-height));
+	}
 
-		li {
-			display: block;
-		}
+	li {
+		display: block;
+	}
+
+	h2 + ul > li {
+		/* h2 anchor padding - margin-left - border width */
+		padding-left: calc(1.75rem - 1px);
+		margin-left: 0.25rem;
+		border-left: 1px solid var(--sk-border);
 	}
 
 	h2,
@@ -98,9 +110,11 @@
 
 	h2 {
 		position: sticky;
-		top: 0;
-		z-index: 1;
-		padding: 1rem 0;
+		top: calc(var(--index, 0) * calc(1lh + var(--header-padding)));
+		bottom: calc(var(--reverse-index, 0) * calc(1lh + var(--header-padding)));
+		z-index: calc(var(--index, 1) + 1);
+		padding: calc(var(--header-padding) / 2) 0;
+		margin: calc(var(--header-padding) / 2) 0;
 		background-color: var(--sk-bg-2);
 	}
 
@@ -110,6 +124,34 @@
 
 		&[aria-current='page'] {
 			color: var(--sk-fg-accent) !important;
+		}
+	}
+
+	h2 a {
+		padding: 0 0 0 2rem !important;
+
+		&::before {
+			content: '#';
+			position: absolute;
+			left: 0;
+			color: var(--sk-fg-3);
+		}
+
+		&:hover::before,
+		&:focus::before {
+			color: var(--sk-fg-1);
+		}
+	}
+
+	/* Hide stacked heading experience on very small screens */
+	@container (height < 450px) {
+		ul {
+			scroll-margin-top: var(--block-height);
+		}
+
+		h2 {
+			top: 0;
+			bottom: initial;
 		}
 	}
 </style>
