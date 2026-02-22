@@ -96,7 +96,9 @@ function create_docs() {
 		topics: Record<string, Document>;
 		/** The docs pages themselves. Key is the topic + page */
 		pages: Record<string, Document>;
-	} = { topics: {}, pages: {} };
+		/** References map to their documentation URLs */
+		references: Record<string, string>;
+	} = { topics: {}, pages: {}, references: {} };
 
 	for (const topic of index.docs.children) {
 		const pkg = topic.slug.split('/')[1];
@@ -134,6 +136,13 @@ function create_docs() {
 				});
 
 				transformed_section.children.push(transformed_page);
+
+				// Build references map for reference pages
+				const baseUrl = `/${slug}`;
+				for (const section of page.sections) {
+					const url = `${baseUrl}#${section.slug}`;
+					docs.references[section.title] = url;
+				}
 			}
 		}
 	}

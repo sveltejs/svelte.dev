@@ -164,7 +164,7 @@ const packages: Package[] = [
 		name: 'cli',
 		repo: get_downstream_repo('cli'),
 		branch: branches['cli']?.branch ?? 'main',
-		pkg: 'packages/cli',
+		pkg: 'packages/sv',
 		docs: 'documentation/docs',
 		types: null
 	},
