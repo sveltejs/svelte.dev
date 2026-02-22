@@ -6,10 +6,14 @@
 	import Chrome from './Chrome.svelte';
 	import Loading from './Loading.svelte';
 	import { adapter_state, update } from './adapter.svelte';
-	import { SplitPane } from '@rich_harris/svelte-split-pane';
+	import { SplitPane, type Length } from '@rich_harris/svelte-split-pane';
+	import { Spring } from 'svelte/motion';
 
 	let terminal_visible = $state(false);
 	let logs = $state<Log[]>([]);
+
+	let last_pos = 20;
+	let pos = Spring.of(() => (terminal_visible ? last_pos : 100));
 </script>
 
 <Chrome
@@ -23,7 +27,13 @@
 			contents: ''
 		});
 	}}
-	toggle_terminal={() => (terminal_visible = !terminal_visible)}
+	toggle_terminal={() => {
+		if (terminal_visible) {
+			last_pos = pos.current;
+		}
+
+		terminal_visible = !terminal_visible;
+	}}
 />
 
 <div class="content">
@@ -32,7 +42,7 @@
 		type="vertical"
 		disabled={!terminal_visible}
 		max={terminal_visible ? '80%' : '100%'}
-		pos={terminal_visible ? '20%' : '100%'}
+		bind:pos={() => (pos.current + '%') as Length, (v) => pos.set(parseFloat(v), { instant: true })}
 	>
 		{#snippet a()}
 			{#if browser}

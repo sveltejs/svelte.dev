@@ -10,9 +10,10 @@
 	import Chrome from './Chrome.svelte';
 	import Loading from './Loading.svelte';
 	import { adapter_state, subscribe, reset } from './adapter.svelte';
-	import { SplitPane } from '@rich_harris/svelte-split-pane';
+	import { SplitPane, type Length } from '@rich_harris/svelte-split-pane';
 	import type { Exercise } from '$lib/tutorial';
 	import type { Workspace } from '@sveltejs/repl/workspace';
+	import { Spring } from 'svelte/motion';
 
 	interface Props {
 		exercise: Exercise;
@@ -25,6 +26,9 @@
 	let iframe = $state() as HTMLIFrameElement;
 	let loading = $state(true);
 	let terminal_visible = $state(false);
+
+	let last_pos = 20;
+	let pos = Spring.of(() => (terminal_visible ? last_pos : 100));
 
 	// reset `path` to `exercise.path` each time, but allow it to be controlled by the iframe
 	// svelte-ignore state_referenced_locally
@@ -125,6 +129,10 @@
 		set_iframe_src(adapter_state.base + path);
 	}}
 	toggle_terminal={() => {
+		if (terminal_visible) {
+			last_pos = pos.current;
+		}
+
 		terminal_visible = !terminal_visible;
 	}}
 	change={(e) => {
@@ -142,7 +150,7 @@
 		type="vertical"
 		disabled={!terminal_visible}
 		max={terminal_visible ? '80%' : '100%'}
-		pos={terminal_visible ? '20%' : '100%'}
+		bind:pos={() => (pos.current + '%') as Length, (v) => pos.set(parseFloat(v), { instant: true })}
 	>
 		{#snippet a()}
 			{#if browser}
