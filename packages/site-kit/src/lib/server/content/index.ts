@@ -4,8 +4,6 @@ import type { Document } from '../../types';
 export async function create_index(
 	documents: Record<string, string>,
 	assets: Record<string, string>,
-	documents_assets: Record<string, string>,
-	base: string,
 	read: (asset: string) => Response
 ): Promise<Record<string, Document>> {
 	const content: Record<string, Document> = {};
@@ -15,7 +13,7 @@ export async function create_index(
 	for (const key in documents) {
 		if (key.includes('+assets')) continue;
 
-		const file = key.slice(base.length + 1);
+		const file = key.slice(2);
 		const slug = file.replace(/(^|\/)[\d-]+-/g, '$1').replace(/(\/index)?\.md$/, '');
 
 		const text = await read(documents[key]).text();
@@ -92,21 +90,12 @@ export async function create_index(
 	}
 
 	for (const key in assets) {
-		const path = key.slice(base.length + 1);
+		const path = key.slice(2);
 		const slug = path.slice(0, path.indexOf('+assets') - 1).replace(/(^|\/)\d+-/g, '$1');
 		const file = path.slice(path.indexOf('+assets') + 8);
 		const document = content[slug];
 
 		(document.assets ??= {})[file] = assets[key];
-	}
-
-	for (const key in documents_assets) {
-		const path = key.slice(base.length + 1);
-		const slug = path.slice(0, path.indexOf('+assets') - 1).replace(/(^|\/)\d+-/g, '$1');
-		const file = path.slice(path.indexOf('+assets') + 8);
-		const document = content[slug];
-
-		(document.assets ??= {})[file] = documents_assets[key];
 	}
 
 	let prev: Document | null = null;

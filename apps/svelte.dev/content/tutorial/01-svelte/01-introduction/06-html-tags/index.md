@@ -1,5 +1,6 @@
 ---
 title: HTML tags
+tags: template-html
 ---
 
 Ordinarily, strings are inserted as plain text, meaning that characters like `<` and `>` have no special meaning.

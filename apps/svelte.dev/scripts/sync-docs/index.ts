@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import { strip_origin } from '@sveltejs/site-kit/markdown';
 import { preprocess } from '@sveltejs/site-kit/markdown/preprocess';
 import path from 'node:path';
@@ -11,6 +12,7 @@ import { fileURLToPath } from 'node:url';
 import { clone_repo, migrate_meta_json } from './utils.ts';
 import { get_types, read_d_ts_file, read_types } from './types.ts';
 import type { Modules } from '@sveltejs/site-kit/markdown';
+import { generate_crosslinks } from './crosslinks.ts';
 
 interface Package {
 	name: string;
@@ -46,23 +48,38 @@ const dirname = fileURLToPath(new URL('.', import.meta.url));
 const REPOS = path.join(dirname, '../../repos');
 const DOCS = path.join(dirname, '../../content/docs');
 
-const branches = {};
+const branches: Record<string, { downstream: string; branch: string }> = {};
 
 for (const option of parsed.positionals) {
-	const [name, ...rest] = option.split('#');
+	const parts = option.split('#');
+	if (parts.filter(Boolean).length !== 3) {
+		throw new Error(
+			`Invalid positional argument. Received ${option}, but format should be {upstream_name}#{downstream_name}#{branch}`
+		);
+	}
+	const [upstream, downstream, branch] = parts;
 
-	if (branches[name]) {
-		throw new Error(`Duplicate branches for ${name}`);
+	if (branches[upstream]) {
+		throw new Error(`Duplicate branches for ${upstream}`);
 	}
 
-	branches[name] = rest.join('#') || 'main';
+	branches[upstream] = {
+		downstream: downstream || upstream,
+		branch: branch || 'main'
+	};
 }
+
+const get_downstream_repo = (name: string) => {
+	const owner = parsed.values.owner || 'sveltejs';
+	const downstream = branches[name]?.downstream || name;
+	return `${owner}/${downstream}`;
+};
 
 const packages: Package[] = [
 	{
 		name: 'svelte',
-		repo: `${parsed.values.owner}/svelte`,
-		branch: branches['svelte'] ?? 'main',
+		repo: get_downstream_repo('svelte'),
+		branch: branches['svelte']?.branch ?? 'main',
 		pkg: 'packages/svelte',
 		docs: 'documentation/docs',
 		types: 'types',
@@ -85,8 +102,8 @@ const packages: Package[] = [
 	},
 	{
 		name: 'kit',
-		repo: `${parsed.values.owner}/kit`,
-		branch: branches['kit'] ?? 'main',
+		repo: get_downstream_repo('kit'),
+		branch: branches['kit']?.branch ?? 'main',
 		pkg: 'packages/kit',
 		docs: 'documentation/docs',
 		types: 'types',
@@ -145,16 +162,16 @@ const packages: Package[] = [
 	},
 	{
 		name: 'cli',
-		repo: `${parsed.values.owner}/cli`,
-		branch: branches['cli'] ?? 'main',
+		repo: get_downstream_repo('cli'),
+		branch: branches['cli']?.branch ?? 'main',
 		pkg: 'packages/cli',
 		docs: 'documentation/docs',
 		types: null
 	},
 	{
 		name: 'mcp',
-		repo: `${parsed.values.owner}/mcp`,
-		branch: branches['mcp'] ?? 'main',
+		repo: get_downstream_repo('mcp'),
+		branch: branches['mcp']?.branch ?? 'main',
 		pkg: 'packages/mcp-stdio',
 		docs: 'documentation/docs',
 		types: null
@@ -223,12 +240,15 @@ for (const pkg of filtered) {
 	await sync(pkg);
 }
 
+generate_crosslinks();
+
 if (parsed.values.watch) {
 	for (const pkg of filtered) {
 		chokidar
 			.watch(`${REPOS}/${pkg.name}/${pkg.docs}`, { ignoreInitial: true })
 			.on('all', (event) => {
 				sync(pkg);
+				generate_crosslinks();
 			});
 	}
 

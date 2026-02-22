@@ -1,6 +1,10 @@
 import { error } from '@sveltejs/kit';
 import { docs } from '$lib/server/content.js';
-import { generate_llm_content, get_documentation_title } from '$lib/server/llms';
+import {
+	generate_llm_content,
+	get_documentation_title,
+	remove_playground_links
+} from '$lib/server/llms';
 import { topics } from '$lib/topics';
 
 export const prerender = true;
@@ -19,7 +23,7 @@ export function GET({ params }) {
 			error(404, 'Not Found');
 		}
 
-		return new Response(page.body, {
+		return new Response(remove_playground_links(page.body), {
 			status: 200,
 			headers: {
 				'Content-Type': 'text/plain; charset=utf-8',
@@ -34,7 +38,7 @@ export function GET({ params }) {
 		}
 
 		const prefix = `<SYSTEM>${get_documentation_title(topic)}</SYSTEM>`;
-		const content = `${prefix}\n\n${generate_llm_content({ topics: [topic] })}`;
+		const content = `${prefix}\n\n${remove_playground_links(generate_llm_content({ topics: [topic] }))}`;
 
 		return new Response(content, {
 			status: 200,

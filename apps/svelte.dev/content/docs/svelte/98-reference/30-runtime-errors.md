@@ -69,6 +69,14 @@ Keyed each block has duplicate key at indexes %a% and %b%
 Keyed each block has duplicate key `%value%` at indexes %a% and %b%
 ```
 
+### each_key_volatile
+
+```
+Keyed each block has key that is not idempotent — the key for item at index %index% was `%a%` but is now `%b%`. Keys must be the same each time for a given item
+```
+
+The key expression in a keyed each block must return the same value when called multiple times for the same item. Using expressions like `[item.a, item.b]` creates a new array each time, which will never be equal to itself. Instead, use a primitive value or create a stable key like `item.a + '-' + item.b`.
+
 ### effect_in_teardown
 
 ```
@@ -317,6 +325,14 @@ Encountered asynchronous work while rendering synchronously.
 ```
 
 You (or the framework you're using) called [`render(...)`](svelte-server#render) with a component containing an `await` expression. Either `await` the result of `render` or wrap the `await` (or the component containing it) in a [`<svelte:boundary>`](svelte-boundary) with a `pending` snippet.
+
+### dynamic_element_invalid_tag
+
+```
+`<svelte:element this="%tag%">` is not a valid element name — the element will not be rendered
+```
+
+The value passed to the `this` prop of `<svelte:element>` must be a valid HTML element, SVG element, MathML element, or custom element name. A value containing invalid characters (such as whitespace or special characters) was provided, which could be a security risk. Ensure only valid tag names are passed.
 
 ### html_deprecated
 
