@@ -10,6 +10,7 @@
 	import { escape_html } from '$lib/utils/escape';
 	import { page } from '$app/state';
 	import { get_topic_title } from '$lib/topics';
+	import RelatedLinks from '$lib/components/RelatedLinks.svelte';
 
 	let { data } = $props();
 
@@ -84,6 +85,10 @@
 	<header>
 		<Breadcrumbs breadcrumbs={data.document.breadcrumbs.slice(1)} />
 		<h1>{@html escape_html(data.document.metadata.title).replaceAll('/', '/<wbr>')}</h1>
+
+		{#if data.related}
+			<RelatedLinks links={data.related} />
+		{/if}
 	</header>
 
 	<OnThisPage {content} document={data.document} />

@@ -2,25 +2,21 @@ import { read } from '$app/server';
 import { PACKAGES_META } from '$lib/packages-meta';
 import type { Document, DocumentSummary } from '@sveltejs/site-kit';
 import { create_index } from '@sveltejs/site-kit/server/content';
+import crosslinked from './generated/crosslinked.json';
+import type { RelatedLink } from '$lib/types';
 
-const documents = import.meta.glob<string>('../../../content/**/*.md', {
+const documents = import.meta.glob<string>('./**/*.md', {
 	eager: true,
 	query: '?url',
-	import: 'default'
+	import: 'default',
+	base: '../../../content'
 });
 
-const assets = import.meta.glob<string>(
-	['../../../content/**/+assets/**', '../../../content/**/+assets/**/.env'],
-	{
-		eager: true,
-		query: '?url',
-		import: 'default'
-	}
-);
-// we need a separate glob import for document assets because we need to use `read` so it needs the actual import, not `?url`
-const documents_assets = import.meta.glob<string>(['../../../content/docs/**/+assets/**'], {
+const assets = import.meta.glob<string>(['./**/+assets/**', './**/+assets/**/.env'], {
 	eager: true,
-	import: 'default'
+	query: '?url',
+	import: 'default',
+	base: '../../../content'
 });
 
 const registry_docs = import.meta.glob<string>(
@@ -32,14 +28,7 @@ const registry_docs = import.meta.glob<string>(
 	}
 );
 
-// https://github.com/vitejs/vite/issues/17453
-export const index = await create_index(
-	documents,
-	assets,
-	documents_assets,
-	'../../../content',
-	read
-);
+export const index = await create_index(documents, assets, read);
 
 const months = 'Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split(' ');
 
@@ -282,3 +271,39 @@ function create_registry() {
 }
 
 export const registry = create_registry();
+
+const crosslinks_by_path: Map<string, RelatedLink> = new Map();
+const crosslinks_by_tag: Map<string, RelatedLink[]> = new Map();
+
+for (const page of crosslinked) {
+	crosslinks_by_path.set(page.path, page);
+
+	for (const tag of page.tags) {
+		let by_tag = crosslinks_by_tag.get(tag);
+
+		if (by_tag === undefined) {
+			by_tag = [];
+			crosslinks_by_tag.set(tag, by_tag);
+		}
+
+		by_tag.push(page);
+	}
+}
+
+export function get_related_links(path: string) {
+	const page = crosslinks_by_path.get(path);
+	if (!page) return;
+
+	const result: Set<RelatedLink> = new Set();
+
+	for (const tag of page.tags) {
+		const related = crosslinks_by_tag.get(tag)!;
+
+		for (const p of related) {
+			if (p === page) continue;
+			result.add(p);
+		}
+	}
+
+	return result.size > 0 ? Array.from(result) : undefined;
+}

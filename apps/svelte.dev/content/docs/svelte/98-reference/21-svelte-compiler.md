@@ -13,6 +13,7 @@ import {
 	compileModule,
 	migrate,
 	parse,
+	parseCss,
 	preprocess,
 	print,
 	walk
@@ -136,6 +137,20 @@ function parse(
 
 
 
+## parseCss
+
+The parseCss function parses a CSS stylesheet, returning its abstract syntax tree.
+
+<div class="ts-block">
+
+```dts
+function parseCss(source: string): AST.CSS.StyleSheetFile;
+```
+
+</div>
+
+
+
 ## preprocess
 
 The preprocess function provides convenient hooks for arbitrarily transforming component source code.
@@ -251,7 +266,11 @@ namespace AST {
 		css?: 'injected';
 		customElement?: {
 			tag?: string;
-			shadow?: 'open' | 'none';
+			shadow?:
+				| 'open'
+				| 'none'
+				| ObjectExpression
+				| undefined;
 			props?: Record<
 				string,
 				{

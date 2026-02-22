@@ -933,7 +933,14 @@ async function syntax_highlight({
 				const replacements: Array<{ start: number; end: number; content: string }> = [];
 
 				for (const match of html.matchAll(/<div class="twoslash-popup-docs">([^]+?)<\/div>/g)) {
-					const content = await render_content_markdown('<twoslash>', match[1], { check: false });
+					// decode HTML entities that shiki uses to escape the JSDoc content
+					const decoded = match[1]
+						.replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => String.fromCharCode(parseInt(hex, 16)))
+						.replace(/&#(\d+);/g, (_, dec) => String.fromCharCode(parseInt(dec, 10)))
+						.replace(/&lt;/g, '<')
+						.replace(/&gt;/g, '>')
+						.replace(/&amp;/g, '&');
+					const content = await render_content_markdown('<twoslash>', decoded, { check: false });
 
 					replacements.push({
 						start: match.index,

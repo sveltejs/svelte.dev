@@ -1,5 +1,6 @@
 ---
 title: Derived state
+tags: rune-derived
 ---
 
 Often, you will need to _derive_ state from other state. For this, we have the `$derived` rune:
