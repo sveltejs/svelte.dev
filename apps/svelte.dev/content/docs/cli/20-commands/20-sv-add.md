@@ -50,10 +50,10 @@ Prevents installing dependencies
 
 ## Official add-ons
 
+- [`better-auth`](better-auth)
 - [`devtools-json`](devtools-json)
 - [`drizzle`](drizzle)
 - [`eslint`](eslint)
-- [`lucia`](lucia)
 - [`mcp`](mcp)
 - [`mdsvex`](mdsvex)
 - [`paraglide`](paraglide)
@@ -117,4 +117,4 @@ npx sv create --template addon [path]
 
 In your new add-on directory, check out the `README.md` and `CONTRIBUTING.md` to get started.
 
-Then you can continue with the [API docs](/docs/cli/add-on) to start building your add-on. You can also have a look at the [official addons source code](https://github.com/sveltejs/cli/tree/main/packages/sv/lib/addons) to get some inspiration on what can be done.
+Then you can continue with the [API docs](/docs/cli/add-on) to start building your add-on. You can also have a look at the [official addons source code](https://github.com/sveltejs/cli/tree/main/packages/sv/src/addons) to get some inspiration on what can be done.

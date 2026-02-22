@@ -16,7 +16,7 @@ To install the plugin in OpenCode you can edit your [OpenCode config]() (either 
 }
 ```
 
-That's it! You now have the Svelte MCP server and the [file editor subagent](opencode-subagent) configured for you.
+That's it! You now have the Svelte MCP server, [skills](skills), and the [file editor subagent](opencode-subagent) configured for you.
 
 ## Configuration
 
@@ -31,10 +31,16 @@ The default configuration for the Svelte OpenCode plugin looks like this...
 	},
 	"subagent": {
 		"enabled": true
+	},
+	"skills": {
+		"enabled": true
+	},
+	"instructions": {
+		"enabled": true
 	}
 }
 ```
 
-...but if you prefer, you can enable only the subagent, only the MCP, or configure the kind of MCP server you want to use (`local` or `remote`).
+...but if you prefer, you can enable only the subagent, only the MCP, only the skills, or configure the kind of MCP server you want to use (`local` or `remote`).
 
-You can place this file in `~/.config/opencode/svelte.json` or, if you have an `OPENCODE_CONFIG_DIR` environment variable specified, at `$OPENCODE_CONFIG_DIR/svelte.json`.
+You can place this file in `./.opencode/svelte.json` (in your project), in `~/.config/opencode/svelte.json` or, if you have an `OPENCODE_CONFIG_DIR` environment variable specified, at `$OPENCODE_CONFIG_DIR/svelte.json`.
