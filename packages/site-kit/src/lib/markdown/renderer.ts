@@ -870,15 +870,15 @@ function highlight_spans(content: string, classname: string) {
 	return content
 		.split('\n')
 		.map((line) => {
-			let wrapped = `<span class="${classname}">${line}</span>`;
-
-			if (open_count < close_count) {
-				wrapped = '<span>' + wrapped;
-			} else if (open_count > close_count) {
-				wrapped = wrapped + '</span>';
+			if (open_count > close_count) {
+				return `<span class="${classname}">${line}</span></span>`;
 			}
 
-			return wrapped;
+			if (close_count > open_count) {
+				return `<span class="${classname}"><span>${line}</span>`;
+			}
+
+			return `<span class="${classname}">${line}</span>`;
 		})
 		.join('\n');
 }
