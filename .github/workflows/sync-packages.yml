@@ -1,0 +1,37 @@
+name: Sync packages
+
+on:
+  schedule:
+    - cron: '0 0 * * 0' # At 00:00 on Sunday.
+  workflow_dispatch: # Allow manual triggering
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+      - run: pnpm install --frozen-lockfile --ignore-scripts
+
+      - name: Sync packages
+        run: cd apps/svelte.dev && pnpm sync-packages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create or update pull request
+        uses: peter-evans/create-pull-request@599a7e63a6240886b1b61fe984db1de9e0b05bc4 # v7.0.8
+        with:
+          commit-message: 'chore(packages): Update metadata'
+          title: 'chore(packages): Update metadata'
+          body: Automatically fetch latest packages metadata from NPM & GitHub.
+          branch: ci/update-packages-metadata
+          delete-branch: true

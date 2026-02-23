@@ -6,9 +6,14 @@
 	import Chrome from './Chrome.svelte';
 	import Loading from './Loading.svelte';
 	import { adapter_state, update } from './adapter.svelte';
+	import { SplitPane, type Length } from '@rich_harris/svelte-split-pane';
+	import { Spring } from 'svelte/motion';
 
 	let terminal_visible = $state(false);
 	let logs = $state<Log[]>([]);
+
+	let last_pos = 20;
+	let pos = Spring.of(() => (terminal_visible ? last_pos : 100));
 </script>
 
 <Chrome
@@ -22,34 +27,52 @@
 			contents: ''
 		});
 	}}
-	toggle_terminal={() => (terminal_visible = !terminal_visible)}
+	toggle_terminal={() => {
+		if (terminal_visible) {
+			last_pos = pos.current;
+		}
+
+		terminal_visible = !terminal_visible;
+	}}
 />
 
 <div class="content">
-	{#if browser}
-		<Viewer
-			relaxed
-			can_escape
-			onLog={(l: Log[]) => (logs = l)}
-			bundler={adapter_state.bundler}
-			theme={theme.current}
-			injectedCSS="@import '/tutorial/shared.css';"
-			error={null}
-			status={null}
-		/>
-	{/if}
+	<SplitPane
+		min="50px"
+		type="vertical"
+		disabled={!terminal_visible}
+		max={terminal_visible ? '80%' : '100%'}
+		bind:pos={() => (pos.current + '%') as Length, (v) => pos.set(parseFloat(v), { instant: true })}
+	>
+		{#snippet a()}
+			{#if browser}
+				<Viewer
+					relaxed
+					can_escape
+					onLog={(l: Log[]) => (logs = l)}
+					bundler={adapter_state.bundler}
+					theme={theme.current}
+					injectedCSS="@import '/tutorial/shared.css';"
+					error={null}
+					status={null}
+				/>
+			{/if}
 
-	{#if adapter_state.progress.value !== 1}
-		<Loading
-			initial={false}
-			progress={adapter_state.progress.value}
-			status={adapter_state.progress.text}
-		/>
-	{/if}
+			{#if adapter_state.progress.value !== 1}
+				<Loading
+					initial={false}
+					progress={adapter_state.progress.value}
+					status={adapter_state.progress.text}
+				/>
+			{/if}
+		{/snippet}
 
-	<div class="terminal" class:visible={terminal_visible}>
-		<Console {logs} />
-	</div>
+		{#snippet b()}
+			<div class="terminal">
+				<Console {logs} />
+			</div>
+		{/snippet}
+	</SplitPane>
 </div>
 
 <style>
@@ -65,41 +88,13 @@
 	}
 
 	.terminal {
-		position: absolute;
-		left: 0;
-		bottom: 0;
+		position: relative;
 		width: 100%;
-		height: 80%;
+		height: 100%;
 		font: var(--sk-font-mono);
 		background: var(--sk-bg-1);
 		border-top: 1px solid var(--sk-border);
-		transform: translate(0, 100%);
-		-webkit-transform: translate3d(0, 100%, 0.01);
-		transition: transform 0.3s;
 		overflow-y: auto;
-	}
-
-	.terminal::after {
-		--thickness: 6px;
-		--shadow: transparent;
-		content: '';
-		display: block;
-		position: absolute;
-		width: 100%;
-		height: var(--thickness);
-		left: 0;
-		top: calc(-1 * var(--thickness));
-		background-image: linear-gradient(to bottom, transparent, var(--shadow));
-		pointer-events: none;
-	}
-
-	.terminal.visible {
-		transform: none;
-		-webkit-transform: none;
-	}
-
-	.terminal.visible::after {
-		--shadow: rgba(0, 0, 0, 0.05);
 	}
 
 	@media (prefers-color-scheme: dark) {

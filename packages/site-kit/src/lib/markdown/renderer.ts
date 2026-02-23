@@ -8,8 +8,8 @@ import * as marked from 'marked';
 import { createHighlighterCore } from 'shiki/core';
 import { createOnigurumaEngine } from 'shiki/engine/oniguruma';
 import { createCssVariablesTheme } from 'shiki';
-import { transformerTwoslash } from '@shikijs/twoslash';
-import { SHIKI_LANGUAGE_MAP, slugify, smart_quotes, transform } from './utils';
+import { transformerTwoslash, rendererRich } from '@shikijs/twoslash';
+import { SHIKI_LANGUAGE_MAP, slugify, smart_quotes, transform } from './utils.ts';
 
 interface SnippetOptions {
 	file: string | null;
@@ -208,26 +208,139 @@ const snippets = await create_snippet_cache();
  * @param {string} body
  * @param {object} options
  * @param {TwoslashBanner} [options.twoslashBanner] - A function that returns a string to be prepended to the code snippet before running the code with twoslash. Helps in adding imports from svelte or sveltekit or whichever modules are being globally referenced in all or most code snippets.
+ * @param {Record<string, string>} [references] - Optional map of symbol names to their documentation URLs for dynamic reference links in twoslash tooltips.
  */
+
+/**
+ * Extracts imported symbol names from source code (handles JS/TS/Svelte files).
+ * Only tracks imports from documented modules to avoid linking to external symbols.
+ */
+function extractImportedSymbols(source: string): Set<string> {
+	const imported = new Set<string>();
+	const scriptMatch = source.match(/<script[^>]*>([\s\S]+?)<\/script>/);
+	const codeToScan = scriptMatch ? scriptMatch[1] : source;
+	const importRegex = /import\s+(?:type\s+)?{([^}]+)}\s+from\s+['"]([^'"]+)['"]/g;
+
+	for (const match of codeToScan.matchAll(importRegex)) {
+		const [, imports, module] = match;
+		const documentedModules = ['svelte', '@sveltejs/kit', '$app/', '$env/', '$service-worker'];
+		if (!documentedModules.some((prefix) => module.startsWith(prefix))) continue;
+
+		// Extract symbol names, handling: { a, b as c, type d }
+		for (const item of imports.split(',')) {
+			const name = item
+				.trim()
+				.replace(/^type\s+/, '')
+				.split(/\s+as\s+/)[0]
+				.trim();
+			if (name) imported.add(name);
+		}
+	}
+
+	return imported;
+}
+
+/**
+ * Injects reference links into twoslash popup tooltips.
+ * Uses rendererRich structure: <span class="twoslash-hover"><span class="twoslash-popup-container">...</span>symbol</span>
+ * Only adds links for symbols that were actually imported in the code snippet.
+ */
+function injectReferenceLinks(
+	html: string,
+	references?: Record<string, string>,
+	importedSymbols?: Set<string>
+): string {
+	if (!references || !importedSymbols || html.includes('twoslash-popup-reference')) {
+		return html;
+	}
+
+	const insertions: Array<{ index: number; div: string }> = [];
+
+	for (const match of html.matchAll(/<span class="twoslash-popup-container">/g)) {
+		const startIdx = match.index! + match[0].length;
+		let depth = 1;
+		let pos = startIdx;
+		let endIdx = -1;
+
+		// Track nested span depth to find the matching closing </span>
+		while (depth > 0 && pos < html.length) {
+			const openIdx = html.indexOf('<span', pos);
+			const closeIdx = html.indexOf('</span>', pos);
+			if (closeIdx === -1) break;
+
+			if (openIdx !== -1 && openIdx < closeIdx) {
+				depth++;
+				pos = openIdx + '<span'.length;
+			} else {
+				depth--;
+				if (depth === 0) endIdx = closeIdx;
+				pos = closeIdx + '</span>'.length;
+			}
+		}
+
+		if (endIdx === -1) continue;
+
+		// Symbol name appears after popup container closes, before twoslash-hover closes
+		const afterPopup = html.substring(endIdx + '</span>'.length, endIdx + '</span>'.length + 100);
+		const symbolMatch = afterPopup.match(/^([a-zA-Z_$][a-zA-Z0-9_$]*)</);
+		if (!symbolMatch) continue;
+
+		const symbolName = symbolMatch[1];
+		if (!importedSymbols.has(symbolName)) continue;
+
+		const url = references[symbolName];
+		if (url) {
+			insertions.push({
+				index: endIdx,
+				div: `<div class="twoslash-popup-reference"><a href="${url}">reference</a></div>`
+			});
+		}
+	}
+
+	// Insert in reverse order to maintain correct string indices
+	for (let i = insertions.length - 1; i >= 0; i--) {
+		const { index, div } = insertions[i];
+		html = html.slice(0, index) + div + html.slice(index);
+	}
+
+	return html;
+}
+
+function decodeHtmlEntities(text: string): string {
+	return text
+		.replace(/&lt;/g, '<')
+		.replace(/&gt;/g, '>')
+		.replace(/&amp;/g, '&')
+		.replace(/&quot;/g, '"')
+		.replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => {
+			return String.fromCharCode(parseInt(hex, 16));
+		})
+		.replace(/&#(\d+);/g, (_, dec) => {
+			return String.fromCharCode(parseInt(dec, 10));
+		});
+}
+
 export async function render_content_markdown(
 	filename: string,
 	body: string,
-	options?: { check?: boolean },
+	options?: { check?: boolean; references?: Record<string, string> },
 	twoslashBanner?: TwoslashBanner
 ) {
 	const headings: string[] = [];
-	const { check = true } = options ?? {};
+	const { check = true, references } = options ?? {};
 
 	return await transform(body, {
 		async walkTokens(token) {
 			if (token.type === 'code') {
-				if (snippets.get(token.text)) return;
+				const decodedText = decodeHtmlEntities(token.text);
+
+				if (snippets.get(decodedText)) return;
 
 				if (token.lang === 'diff') {
 					throw new Error('Use +++ and --- annotations instead of diff blocks');
 				}
 
-				let { source, options } = parse_options(token.text, token.lang);
+				let { source, options } = parse_options(decodedText, token.lang);
 				source = adjust_tab_indentation(source, token.lang);
 
 				let prelude = '';
@@ -279,7 +392,14 @@ export async function render_content_markdown(
 					html += '</div>';
 				}
 
-				html += await syntax_highlight({ filename, language: token.lang, prelude, source, check });
+				html += await syntax_highlight({
+					filename,
+					language: token.lang,
+					prelude,
+					source,
+					check,
+					references
+				});
 
 				if (converted) {
 					const language = token.lang === 'js' ? 'ts' : token.lang;
@@ -288,13 +408,20 @@ export async function render_content_markdown(
 						prelude = prelude.replace(/(\/\/ @filename: .+)\.js$/gm, '$1.ts');
 					}
 
-					html += await syntax_highlight({ filename, language, prelude, source: converted, check });
+					html += await syntax_highlight({
+						filename,
+						language,
+						prelude,
+						source: converted,
+						check,
+						references
+					});
 				}
 
 				html += '</div>';
 
 				// Save everything locally now
-				snippets.save(token.text, html);
+				snippets.save(decodedText, html);
 			}
 
 			const tokens = 'tokens' in token ? token.tokens : undefined;
@@ -336,7 +463,12 @@ export async function render_content_markdown(
 			return `<h${depth} id="${slug}"><span>${html}</span><a href="#${slug}" class="permalink" aria-label="permalink"></a></h${depth}>`;
 		},
 		code({ text }) {
-			return snippets.get(text);
+			const decodedText = decodeHtmlEntities(text);
+			const cached = snippets.get(decodedText);
+			if (cached) {
+				return injectReferenceLinks(cached, references, extractImportedSymbols(decodedText));
+			}
+			return cached;
 		},
 		blockquote(token) {
 			let content = this.parser?.parse(token.tokens) ?? '';
@@ -743,13 +875,15 @@ async function syntax_highlight({
 	source,
 	filename,
 	language,
-	check
+	check,
+	references
 }: {
 	prelude: string;
 	source: string;
 	filename: string;
 	language: string;
 	check: boolean;
+	references?: Record<string, string>;
 }) {
 	let html = '';
 
@@ -776,11 +910,12 @@ async function syntax_highlight({
 				transformers: check
 					? [
 							transformerTwoslash({
+								renderer: rendererRich(),
 								twoslashOptions: {
 									compilerOptions: {
 										allowJs: true,
 										checkJs: true,
-										types: ['svelte', '@sveltejs/kit']
+										types: ['svelte', '@sveltejs/kit', 'sv']
 									}
 								},
 								// by default, twoslash does not run on .js files, change that through this option
@@ -805,7 +940,14 @@ async function syntax_highlight({
 				const replacements: Array<{ start: number; end: number; content: string }> = [];
 
 				for (const match of html.matchAll(/<div class="twoslash-popup-docs">([^]+?)<\/div>/g)) {
-					const content = await render_content_markdown('<twoslash>', match[1], { check: false });
+					// decode HTML entities that shiki uses to escape the JSDoc content
+					const decoded = match[1]
+						.replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => String.fromCharCode(parseInt(hex, 16)))
+						.replace(/&#(\d+);/g, (_, dec) => String.fromCharCode(parseInt(dec, 10)))
+						.replace(/&lt;/g, '<')
+						.replace(/&gt;/g, '>')
+						.replace(/&amp;/g, '&');
+					const content = await render_content_markdown('<twoslash>', decoded, { check: false });
 
 					replacements.push({
 						start: match.index,
@@ -857,6 +999,8 @@ async function syntax_highlight({
 					const { start, end, content } = replacements.pop()!;
 					html = html.slice(0, start) + content + html.slice(end);
 				}
+
+				html = injectReferenceLinks(html, references, extractImportedSymbols(source));
 			}
 		} catch (e) {
 			console.error((e as Error).message);

@@ -15,7 +15,7 @@ npx sv add drizzle
 
 - a setup that keeps your database access in SvelteKit's server files
 - an `.env` file to store your credentials
-- compatibility with the Lucia auth add-on
+- compatibility with the Better Auth add-on
 - an optional Docker configuration to help with running a local database
 
 ## Options
@@ -29,7 +29,7 @@ Which database variant to use:
 - `sqlite` — file-based database not requiring a database server
 
 ```sh
-npx sv add drizzle=database:postgresql
+npx sv add drizzle="database:postgresql"
 ```
 
 ### client
@@ -41,7 +41,7 @@ The SQL client to use, depends on `database`:
 - For `sqlite`: `better-sqlite3`, `libsql`, `turso`
 
 ```sh
-npx sv add drizzle=database:postgresql+client:postgres.js
+npx sv add drizzle="database:postgresql+client:postgres.js"
 ```
 
 Drizzle is compatible with well over a dozen database drivers. We just offer a few of the most common ones here for simplicity, but if you'd like to use another one you can choose one as a placeholder and swap it out for another after setup by choosing from [Drizzle's full list of compatible drivers](https://orm.drizzle.team/docs/connect-overview#next-steps).
@@ -51,5 +51,5 @@ Drizzle is compatible with well over a dozen database drivers. We just offer a f
 Whether to add Docker Compose configuration. Only available for [`database`](#Options-database) `postgresql` or `mysql`
 
 ```sh
-npx sv add drizzle=database:postgresql+client:postgres.js+docker:yes
+npx sv add drizzle="database:postgresql+client:postgres.js+docker:yes"
 ```

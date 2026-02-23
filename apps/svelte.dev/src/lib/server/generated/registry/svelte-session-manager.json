@@ -1,0 +1,17 @@
+{
+  "name": "svelte-session-manager",
+  "npm_description": "Session store for svelte (currently only for JWT)",
+  "repo_url": "https://github.com/arlac77/svelte-session-manager",
+  "authors": [
+    "arlac77"
+  ],
+  "homepage": "https://github.com/arlac77/svelte-session-manager#readme",
+  "version": "3.0.82",
+  "downloads": 1214,
+  "github_stars": 110,
+  "updated": "2026-02-14T13:55:22.079Z",
+  "svelte_range": "^5.51.0",
+  "typescript": false,
+  "runes": true,
+  "last_rune_check_version": "3.0.36"
+}

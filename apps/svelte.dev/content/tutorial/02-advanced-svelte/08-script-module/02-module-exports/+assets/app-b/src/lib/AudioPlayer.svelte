@@ -1,7 +1,7 @@
 <script module>
 	let current;
 
-	export function stopAll() {
+	export function pauseAll() {
 		current?.pause();
 	}
 </script>

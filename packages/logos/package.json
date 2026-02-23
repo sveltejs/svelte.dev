@@ -1,0 +1,13 @@
+{
+	"name": "logos",
+	"private": true,
+	"exports": {
+		".": {
+			"default": "./index.ts"
+		},
+		"./*": {
+			"types": "./types.d.ts",
+			"default": "./logos/*.svg"
+		}
+	}
+}

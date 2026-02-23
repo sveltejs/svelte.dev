@@ -12,13 +12,16 @@ import {
 	SvelteComponentTyped,
 	afterUpdate,
 	beforeUpdate,
+	createContext,
 	createEventDispatcher,
 	createRawSnippet,
 	flushSync,
+	fork,
 	getAbortSignal,
 	getAllContexts,
 	getContext,
 	hasContext,
+	hydratable,
 	hydrate,
 	mount,
 	onDestroy,
@@ -221,6 +224,28 @@ function beforeUpdate(fn: () => void): void;
 
 
 
+## createContext
+
+<blockquote class="since note">
+
+Available since 5.40.0
+
+</blockquote>
+
+Returns a `[get, set]` pair of functions for working with context in a type-safe way.
+
+`get` will throw an error if no parent component called `set`.
+
+<div class="ts-block">
+
+```dts
+function createContext<T>(): [() => T, (context: T) => T];
+```
+
+</div>
+
+
+
 ## createEventDispatcher
 
 <blockquote class="tag deprecated note">
@@ -293,6 +318,38 @@ function flushSync<T = void>(fn?: (() => T) | undefined): T;
 
 
 
+## fork
+
+<blockquote class="since note">
+
+Available since 5.42
+
+</blockquote>
+
+Creates a 'fork', in which state changes are evaluated but not applied to the DOM.
+This is useful for speculatively loading data (for example) when you suspect that
+the user is about to take some action.
+
+Frameworks like SvelteKit can use this to preload data when the user touches or
+hovers over a link, making any subsequent navigation feel instantaneous.
+
+The `fn` parameter is a synchronous function that modifies some state. The
+state changes will be reverted after the fork is initialised, then reapplied
+if and when the fork is eventually committed.
+
+When it becomes clear that a fork will _not_ be committed (e.g. because the
+user navigated elsewhere), it must be discarded to avoid leaking memory.
+
+<div class="ts-block">
+
+```dts
+function fork(fn: () => void): Fork;
+```
+
+</div>
+
+
+
 ## getAbortSignal
 
 Returns an [`AbortSignal`](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal) that aborts when the current [derived](/docs/svelte/$derived) or [effect](/docs/svelte/$effect) re-runs or is destroyed.
@@ -350,6 +407,8 @@ function getAllContexts<
 Retrieves the context that belongs to the closest parent component with the specified `key`.
 Must be called during component initialisation.
 
+[`createContext`](/docs/svelte/svelte#createContext) is a type-safe alternative.
+
 <div class="ts-block">
 
 ```dts
@@ -369,6 +428,18 @@ Must be called during component initialisation.
 
 ```dts
 function hasContext(key: any): boolean;
+```
+
+</div>
+
+
+
+## hydratable
+
+<div class="ts-block">
+
+```dts
+function hydratable<T>(key: string, fn: () => T): T;
 ```
 
 </div>
@@ -397,6 +468,7 @@ function hydrate<
 				context?: Map<any, any>;
 				intro?: boolean;
 				recover?: boolean;
+				transformError?: (error: unknown) => unknown;
 			}
 		: {
 				target: Document | Element | ShadowRoot;
@@ -405,6 +477,7 @@ function hydrate<
 				context?: Map<any, any>;
 				intro?: boolean;
 				recover?: boolean;
+				transformError?: (error: unknown) => unknown;
 			}
 ): Exports;
 ```
@@ -486,6 +559,8 @@ and returns that object. The context is then available to children of the compon
 (including slotted content) with `getContext`.
 
 Like lifecycle functions, this must be called during component initialisation.
+
+[`createContext`](/docs/svelte/svelte#createContext) is a type-safe alternative.
 
 <div class="ts-block">
 
@@ -780,6 +855,15 @@ $$inline?: boolean;
 ```
 
 <div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+transformError?: (error: unknown) => unknown;
+```
+
+<div class="ts-block-property-details"></div>
 </div></div>
 
 ## ComponentEvents
@@ -911,6 +995,49 @@ interface EventDispatcher<
 <div class="ts-block-property-details"></div>
 </div></div>
 
+## Fork
+
+<blockquote class="since note">
+
+Available since 5.42
+
+</blockquote>
+
+Represents work that is happening off-screen, such as data being preloaded
+in anticipation of the user navigating
+
+<div class="ts-block">
+
+```dts
+interface Fork {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+commit(): Promise<void>;
+```
+
+<div class="ts-block-property-details">
+
+Commit the fork. The promise will resolve once the state change has been applied
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+discard(): void;
+```
+
+<div class="ts-block-property-details">
+
+Discard the fork
+
+</div>
+</div></div>
+
 ## MountOptions
 
 Defines the options accepted by the `mount()` function.
@@ -943,6 +1070,13 @@ type MountOptions<
 	 * @default true
 	 */
 	intro?: boolean;
+	/**
+	 * A function that transforms errors caught by error boundaries before they are passed to the `failed` snippet.
+	 * Defaults to the identity function.
+	 */
+	transformError?: (
+		error: unknown
+	) => unknown | Promise<unknown>;
 } & ({} extends Props
 	? {
 			/**
