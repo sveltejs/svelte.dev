@@ -1,0 +1,15 @@
+{
+  "name": "svelte-lexical",
+  "npm_description": "Rich Text editor for Svelte based on lexical",
+  "repo_url": "https://github.com/umaranis/svelte-lexical",
+  "authors": [
+    "umaranis"
+  ],
+  "homepage": "https://github.com/umaranis/svelte-lexical#readme",
+  "version": "0.6.4",
+  "downloads": 1916,
+  "github_stars": 574,
+  "updated": "2026-02-09T10:57:46.762Z",
+  "svelte_range": "^5.0.0",
+  "kit_range": "^2.20.3"
+}
