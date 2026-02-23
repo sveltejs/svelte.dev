@@ -864,9 +864,22 @@ const delimiter_patterns = Object.fromEntries(
 );
 
 function highlight_spans(content: string, classname: string) {
+	const open_count = content.split('<span').length - 1;
+	const close_count = content.split('</span').length - 1;
+
 	return content
 		.split('\n')
-		.map((line) => `<span class="${classname}">${line}</span>`)
+		.map((line) => {
+			let wrapped = `<span class="${classname}">${line}</span>`;
+
+			if (open_count < close_count) {
+				wrapped = '<span>' + wrapped;
+			} else if (open_count > close_count) {
+				wrapped = wrapped + '</span>';
+			}
+
+			return wrapped;
+		})
 		.join('\n');
 }
 
