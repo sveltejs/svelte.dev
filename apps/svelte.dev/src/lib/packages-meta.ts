@@ -135,7 +135,10 @@ const FEATURED: {
 				description:
 					'A framework for building and publishing data products using SQL, Markdown, and AI'
 			},
-			{ name: '@embedpdf/svelte-pdf-viewer', description: 'Complete, production-ready PDF viewer and editor component.' },
+			{
+				name: '@embedpdf/svelte-pdf-viewer',
+				description: 'Complete, production-ready PDF viewer and editor component.'
+			},
 			{ name: 'svelte-pdf', description: 'Render PDF documents using PDF.js' }
 		]
 	},
