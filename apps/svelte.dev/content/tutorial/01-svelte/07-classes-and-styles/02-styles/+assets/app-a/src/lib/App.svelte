@@ -5,7 +5,7 @@
 <div class="container">
 	Flip the card
 	<button
-		class={["card", { flipped }]}
+		class="card"
 		onclick={() => flipped = !flipped}
 	>
 		<div class="front">
@@ -41,10 +41,6 @@
 		padding: 0;
 		user-select: none;
 		cursor: pointer;
-	}
-
-	.card.flipped {
-		transform: rotateY(0);
 	}
 
 	.front, .back {
