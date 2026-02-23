@@ -859,7 +859,7 @@ const delimiter_substitutes = {
 const delimiter_patterns = Object.fromEntries(
 	Object.entries(delimiter_substitutes).map(([key, substitute]) => [
 		key,
-		new RegExp(`${substitute}([^ ][^]+?)${substitute}`, 'g')
+		new RegExp(`${substitute}([^ ]|[^ ][^]+?[^ ])${substitute}`, 'g')
 	])
 );
 
