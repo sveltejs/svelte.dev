@@ -23,7 +23,11 @@ const FEATURED: {
 				description:
 					'A Markdown preprocessor that lets you put Markdown in your Svelte and Svelte in your Markdown'
 			},
-			{ name: 'lucia', svAlias: 'lucia', description: 'Session-based password auth using Drizzle' },
+			{
+				name: 'better-auth',
+				svAlias: 'better-auth',
+				description: 'Authentication and authorization framework'
+			},
 			{
 				name: 'storybook',
 				svAlias: 'storybook',
