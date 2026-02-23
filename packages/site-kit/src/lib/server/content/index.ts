@@ -36,7 +36,7 @@ export async function create_index(
 				// replace < and > inside code spans
 				.replace(/`(.+?)`/g, (_, contents) => contents.replace(/</g, '&lt;').replace(/>/g, '&gt;'))
 				// turn e.g. `class:_name_` into `class:<em>name</em>`
-				.replace(/:_(.+)_/g, (_, contents) => `<em>${contents}</em>`);
+				.replace(/:_(.+)_/g, (_, contents) => `:<em>${contents}</em>`);
 
 			const slug = slugify(title);
 
