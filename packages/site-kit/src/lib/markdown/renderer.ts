@@ -898,7 +898,10 @@ async function syntax_highlight({
 		/** We need to stash code wrapped in `---` highlights, because otherwise TS will error on e.g. bad syntax, duplicate declarations */
 		const redactions: string[] = [];
 
-		const redacted = source.replace(/( {13}(?:[^ ][^]+?) {13})/g, (_, content) => {
+		const sub = delimiter_substitutes['---'];
+		const pattern = new RegExp(`${sub}(?:[^ ]|[^ ][^]+?[^ ])${sub}`, 'g');
+
+		const redacted = source.replace(pattern, (_, content) => {
 			redactions.push(content);
 			return ' '.repeat(content.length);
 		});
@@ -925,7 +928,10 @@ async function syntax_highlight({
 					: []
 			});
 
-			html = html.replace(/ {27,}/g, () => redactions.shift()!);
+			html = html.replace(
+				new RegExp(` {${delimiter_substitutes['---'].length + 1},}`, 'g'),
+				() => redactions.shift()!
+			);
 
 			if (check) {
 				// munge the twoslash output so that it renders sensibly. the order of operations
