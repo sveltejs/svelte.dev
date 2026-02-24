@@ -13,4 +13,4 @@ Instead, we can use the `bind:value` directive:
 <input +++bind:+++value={name}>
 ```
 
-This means that changes to the value of `name` update the input, and changes to the input update `name`.
+This means that as well as changes to `name` updating the `<input>`, changes to the `<input>` will update `name`.
