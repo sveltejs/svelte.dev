@@ -9,7 +9,7 @@ import { createHighlighterCore } from 'shiki/core';
 import { createOnigurumaEngine } from 'shiki/engine/oniguruma';
 import { createCssVariablesTheme } from 'shiki';
 import { transformerTwoslash, rendererRich } from '@shikijs/twoslash';
-import { SHIKI_LANGUAGE_MAP, slugify, smart_quotes, transform } from './utils.ts';
+import { decode_html_entities, SHIKI_LANGUAGE_MAP, slugify, smart_quotes, transform } from './utils.ts';
 
 interface SnippetOptions {
 	file: string | null;
@@ -306,20 +306,6 @@ function injectReferenceLinks(
 	return html;
 }
 
-function decodeHtmlEntities(text: string): string {
-	return text
-		.replace(/&lt;/g, '<')
-		.replace(/&gt;/g, '>')
-		.replace(/&amp;/g, '&')
-		.replace(/&quot;/g, '"')
-		.replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => {
-			return String.fromCharCode(parseInt(hex, 16));
-		})
-		.replace(/&#(\d+);/g, (_, dec) => {
-			return String.fromCharCode(parseInt(dec, 10));
-		});
-}
-
 export async function render_content_markdown(
 	filename: string,
 	body: string,
@@ -332,7 +318,7 @@ export async function render_content_markdown(
 	return await transform(body, {
 		async walkTokens(token) {
 			if (token.type === 'code') {
-				const decodedText = decodeHtmlEntities(token.text);
+				const decodedText = decode_html_entities(token.text);
 
 				if (snippets.get(decodedText)) return;
 
@@ -463,7 +449,7 @@ export async function render_content_markdown(
 			return `<h${depth} id="${slug}"><span>${html}</span><a href="#${slug}" class="permalink" aria-label="permalink"></a></h${depth}>`;
 		},
 		code({ text }) {
-			const decodedText = decodeHtmlEntities(text);
+			const decodedText = decode_html_entities(text);
 			const cached = snippets.get(decodedText);
 			if (cached) {
 				return injectReferenceLinks(cached, references, extractImportedSymbols(decodedText));

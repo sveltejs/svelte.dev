@@ -41,11 +41,33 @@ export function clean(markdown: string) {
 		.trim();
 }
 
+export function decode_html_entities(text: string): string {
+	return text
+		.replace(/&lt;/g, '<')
+		.replace(/&gt;/g, '>')
+		.replace(/&amp;/g, '&')
+		.replace(/&quot;/g, '"')
+		.replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => {
+			return String.fromCharCode(parseInt(hex, 16));
+		})
+		.replace(/&#(\d+);/g, (_, dec) => {
+			return String.fromCharCode(parseInt(dec, 10));
+		});
+}
+
 export const slugify = (str: string) => {
-	return clean(str)
+	return decode_html_entities(clean(str)
 		.replace(/(’|&rsquo;)/g, "'")
 		.replace(/&.+?;/g, '')
-		.replace(/<\/?.+?>/g, '')
+		.replace(/<code>(.*)<\/code>/g, '$1'))
+		// <audio> should be converted to audio
+		// <details bind:open> should be converted to details-bind-open
+		// <script module> should be converted to script-module
+		// <script lang="ts"> should be converted to script-lang-ts
+		.replace(/[<>]/g, '')
+		// italicised words such as "bind:_property_ for components" should be converted to bind:property-for-components
+		// without affecting compiler error titles such as "animation_missing_key"
+		.replace(/:_(.*)_ /g, ':$1 ')
 		.replace(/\.\.\./g, '')
 		.replace(/[^a-zA-Z0-9-$(.):'_]/g, '-')
 		.replace(/-{2,}/g, '-')
