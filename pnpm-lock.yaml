@@ -202,6 +202,24 @@ importers:
         specifier: ^9.0.3
         version: 9.0.3(rollup@4.59.0)
 
+  apps/svelte.dev/scripts/create-tutorial-zip/common:
+    devDependencies:
+      '@rollup/wasm-node':
+        specifier: ^4.59.0
+        version: 4.59.0
+      '@sveltejs/kit':
+        specifier: ^2.53.0
+        version: 2.53.0(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.53.3)(vite@8.0.0-beta.15(@types/node@25.3.0)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.53.3)(typescript@5.9.3)(vite@8.0.0-beta.15(@types/node@25.3.0)(esbuild@0.27.3)(tsx@4.21.0))
+      esbuild-wasm:
+        specifier: ^0.27.3
+        version: 0.27.3
+      svelte:
+        specifier: ^5.53.3
+        version: 5.53.3
+      vite:
+        specifier: ^8.0.0-beta.15
+        version: 8.0.0-beta.15(@types/node@25.3.0)(esbuild@0.27.3)(tsx@4.21.0)
+
   packages/icons: {}
 
   packages/logos: {}
@@ -1562,6 +1580,11 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@rollup/wasm-node@4.59.0':
+    resolution: {integrity: sha512-cKB/Pe05aJWQYw3UFS79Id+KVXdExBxWful0+CSl24z3ukwOgBSy6l39XZNwfm3vCh/fpUrAAs+T7PsJ6dC8NA==}
+    engines: {node: '>=18.0.0', npm: '>=8.0.0'}
+    hasBin: true
+
   '@shikijs/core@3.22.0':
     resolution: {integrity: sha512-iAlTtSDDbJiRpvgL5ugKEATDtHdUVkqgHDm/gbD2ZS9c88mx7G1zSYjjOxp5Qa0eaW0MAQosFRmJSk354PRoQA==}
 
@@ -2156,6 +2179,11 @@ packages:
 
   es-module-lexer@1.7.0:
     resolution: {integrity: sha512-jEQoCwk8hyb2AZziIOLhDqpm5+2ww5uIE6lkO/6jcOCusfk6LhMHpXXfBLXTZ7Ydyt0j4VoUQv6uGNYbdW+kBA==}
+
+  esbuild-wasm@0.27.3:
+    resolution: {integrity: sha512-AUXuOxZ145/5Az+lIqk6TdJbxKTyDGkXMJpTExmBdbnHR6n6qAFx+F4oG9ORpVYJ9dQYeQAqzv51TO4DFKsbXw==}
+    engines: {node: '>=18'}
+    hasBin: true
 
   esbuild@0.25.12:
     resolution: {integrity: sha512-bbPBYYrtZbkt6Os6FiTLCTFxvq4tt3JKall1vRwshA3fdVztsLAatFaZobhkBC8/BrPetoa0oksYoKXoG4ryJg==}
@@ -4337,6 +4365,12 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.59.0':
     optional: true
 
+  '@rollup/wasm-node@4.59.0':
+    dependencies:
+      '@types/estree': 1.0.8
+    optionalDependencies:
+      fsevents: 2.3.3
+
   '@shikijs/core@3.22.0':
     dependencies:
       '@shikijs/types': 3.22.0
@@ -4914,6 +4948,8 @@ snapshots:
   entities@2.2.0: {}
 
   es-module-lexer@1.7.0: {}
+
+  esbuild-wasm@0.27.3: {}
 
   esbuild@0.25.12:
     optionalDependencies:
