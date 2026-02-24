@@ -83,7 +83,8 @@ const FEATURED: {
 				name: 'melt',
 				description: 'A low-level headless UI library'
 			},
-			{ name: '@sveltestrap/sveltestrap' }
+			{ name: '@sveltestrap/sveltestrap' },
+			{ name: 'm3-svelte', description: 'An implementation of the Material 3 design system' }
 		]
 	},
 	{
