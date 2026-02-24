@@ -29,19 +29,21 @@ export function is_in_code_block(body: string, index: number) {
  * Strip styling/links etc from markdown
  */
 export function clean(markdown: string) {
-	return markdown
-		.replace(/(?:^|b)\*\*(.+?)\*\*(?:\b|$)/g, '$1') // bold
-		.replace(/(?:^|b)_(.+?)_(?:\b|$)/g, '$1') // Italics
-		.replace(/(?:^|b)\*(.+?)\*(?:\b|$)/g, '$1') // Italics
-		// italic markdown notation such as "bind:_property_ for components"
-		// should be stripped without affecting compiler error titles such as "animation_missing_key"
-		.replace(/:_(.*)_ /g, ':$1 ')
-		.replace(/(?:^|b)`(.+?)`(?:\b|$)/g, '$1') // Inline code
-		.replace(/(?:^|b)~~(.+?)~~(?:\b|$)/g, '$1') // Strikethrough
-		.replace(/\[(.+?)\]\(.+?\)/g, '$1') // Link
-		.replace(/\n/g, ' ') // New line
-		.replace(/ {2,}/g, ' ')
-		.trim();
+	return (
+		markdown
+			.replace(/(?:^|b)\*\*(.+?)\*\*(?:\b|$)/g, '$1') // bold
+			.replace(/(?:^|b)_(.+?)_(?:\b|$)/g, '$1') // Italics
+			.replace(/(?:^|b)\*(.+?)\*(?:\b|$)/g, '$1') // Italics
+			// italic markdown notation such as "bind:_property_ for components"
+			// should be stripped without affecting compiler error titles such as "animation_missing_key"
+			.replace(/:_(.*)_ /g, ':$1 ')
+			.replace(/(?:^|b)`(.+?)`(?:\b|$)/g, '$1') // Inline code
+			.replace(/(?:^|b)~~(.+?)~~(?:\b|$)/g, '$1') // Strikethrough
+			.replace(/\[(.+?)\]\(.+?\)/g, '$1') // Link
+			.replace(/\n/g, ' ') // New line
+			.replace(/ {2,}/g, ' ')
+			.trim()
+	);
 }
 
 export function decode_html_entities(text: string): string {
