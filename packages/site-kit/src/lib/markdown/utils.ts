@@ -66,9 +66,9 @@ export const slugify = (str: string) => {
 			clean(str)
 				.replace(/(’|&rsquo;)/g, "'")
 				.replace(/&.+?;/g, '')
-				// removes <code>...</code> or <em>...</em> etc, but leaves the contents intact
-				.replace(/<([a-z\-]+)>(.*)<\/\1>/g, '$2')
 		)
+			// removes <code>...</code> or <em>...</em> etc, but leaves the contents intact
+			.replace(/<([a-z\-]+)>(.*)<\/\1>/g, '$2')
 			// <audio> should be converted to audio
 			// <details bind:open> should be converted to details-bind-open
 			// <script module> should be converted to script-module
