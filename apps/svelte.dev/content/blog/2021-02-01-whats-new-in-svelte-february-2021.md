@@ -61,7 +61,7 @@ New changes to the Svelte Society website include [a new cheat sheet](https://sv
 
 ### New Integrations & Starters
 
-- [svelte-derver-starter](https://github.com/AlexxNB/svelte-derver-starter) is a starter for baking fullstack application with the client based on Svelte and server side powered by Derver.
+- [svelte-derver-starter](https://github.com/AlexxNB/svelte-derver-starter) is a starter for creating full-stack applications with the client based on Svelte and the server powered by Derver.
 - [eleventy-plugin-embed-svelte](https://github.com/shalomscott/eleventy-plugin-embed-svelte) makes it easy to embed Svelte components into an 11ty site.
 - [svelte-tailwind-extension-boilerplate](https://github.com/kyrelldixon/svelte-tailwind-extension-boilerplate) is a good foundation for a Chrome extension using either JavaScript or TypeScript, Svelte for the frontend, Tailwind CSS for styling, Jest for testing, and Rollup as the build system.
 - [snowpack-ui](https://github.com/rajasegar/snowpack-ui) lets you run & manage Snowpack projects from the browser instead of the terminal

@@ -1,6 +1,7 @@
 import { minimatch } from 'minimatch';
 import { dev } from '$app/environment';
 import { index } from './content';
+import type { Topic } from '$lib/topics';
 
 interface GenerateLlmContentOptions {
 	ignore?: string[];
@@ -14,12 +15,6 @@ interface MinimizeOptions {
 	remove_details_blocks: boolean;
 	remove_playground_links: boolean;
 	remove_prettier_ignore: boolean;
-	normalize_whitespace: boolean;
-}
-
-interface Topic {
-	slug: string;
-	title: string;
 }
 
 const defaults: MinimizeOptions = {
@@ -27,9 +22,12 @@ const defaults: MinimizeOptions = {
 	remove_note_blocks: false,
 	remove_details_blocks: false,
 	remove_playground_links: false,
-	remove_prettier_ignore: false,
-	normalize_whitespace: false
+	remove_prettier_ignore: false
 };
+
+export function remove_playground_links(content: string): string {
+	return content.replaceAll(/\[([^\]]+)\]\((https:\/\/svelte\.dev)?\/playground.+\)/g, '$1');
+}
 
 export function generate_llm_content(options: GenerateLlmContentOptions): string {
 	let content = '';
@@ -51,8 +49,12 @@ export function generate_llm_content(options: GenerateLlmContentOptions): string
 				? minimize_content(document.body, options.minimize)
 				: document.body;
 			if (doc_content.trim() === '') continue;
-
-			content += `\n# ${document.metadata.title}\n\n`;
+			// replaces <tags> with `<tags>`
+			const doc_title = document.metadata.title.replace(
+				/(?!`)<[a-zA-Z0-9:]+>(?!`)/g,
+				(m) => `\`${m}\``
+			);
+			content += `\n# ${doc_title}\n\n`;
 			content += doc_content;
 			content += '\n';
 		}
@@ -60,12 +62,6 @@ export function generate_llm_content(options: GenerateLlmContentOptions): string
 
 	return content;
 }
-
-export const topics: Topic[] = [
-	{ slug: 'svelte', title: 'Svelte' },
-	{ slug: 'kit', title: 'SvelteKit' },
-	{ slug: 'cli', title: 'the Svelte CLI' }
-];
 
 export function get_documentation_title(topic: Topic): string {
 	return `This is the developer documentation for ${topic.title}.`;
@@ -99,10 +95,6 @@ function minimize_content(content: string, options?: Partial<MinimizeOptions>): 
 			.split('\n')
 			.filter((line) => line.trim() !== '<!-- prettier-ignore -->')
 			.join('\n');
-	}
-
-	if (settings.normalize_whitespace) {
-		minimized = minimized.replace(/\s+/g, ' ');
 	}
 
 	minimized = minimized.trim();

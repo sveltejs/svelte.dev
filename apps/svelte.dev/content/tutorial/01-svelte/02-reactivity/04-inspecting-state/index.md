@@ -1,5 +1,6 @@
 ---
 title: Inspecting state
+tags: rune-inspect
 ---
 
 It's often useful to be able to track the value of a piece of state as it changes over time.

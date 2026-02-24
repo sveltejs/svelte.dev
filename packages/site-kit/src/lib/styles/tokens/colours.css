@@ -43,6 +43,44 @@
 	/* Misc */
 	--sk-scrollbar: rgba(0, 0, 0, 0.3);
 	--sk-shadow: drop-shadow(0px 0px 14px rgba(0, 0, 0, 0.1));
+
+	&:not(.light) {
+		@media (prefers-color-scheme: dark) {
+			color-scheme: dark;
+
+			--sk-bg-hue: 220;
+
+			/* Foreground colours */
+			--sk-fg-1: hsl(var(--sk-bg-hue), 2%, 90%);
+			--sk-fg-2: hsl(var(--sk-bg-hue), 3%, 80%);
+			--sk-fg-3: hsl(var(--sk-bg-hue), 5%, 65%);
+			--sk-fg-4: hsl(var(--sk-bg-hue), 5%, 55%);
+			--sk-fg-accent: hsl(12, 94%, 62%);
+
+			/* Background colours */
+			--sk-bg-0: hsl(var(--sk-bg-hue), 8%, 10%); /* docs sidebar (dark mode only) */
+			--sk-bg-1: hsl(var(--sk-bg-hue), 10%, 12%);
+			--sk-bg-2: hsl(var(--sk-bg-hue), 12%, 14%);
+			--sk-bg-3: hsl(var(--sk-bg-hue), 14%, 16%);
+			--sk-bg-4: hsl(var(--sk-bg-hue), 15%, 21%);
+			--sk-bg-accent: hsl(15, 100%, 35%);
+			--sk-bg-highlight: hsl(60, 100%, 15%);
+
+			/* Border colour */
+			--sk-border: hsl(var(--sk-bg-hue), 15%, 22%);
+
+			/* Syntax highlighting */
+			--shiki-color-text: hsl(45, 7%, 75%);
+			--shiki-token-comment: hsl(0, 0%, 55%);
+			--shiki-token-keyword: hsl(204, 88%, 65%);
+			--shiki-token-function: hsl(19, 67%, 75%);
+			--shiki-token-string: hsl(41, 37%, 68%);
+
+			/* Misc */
+			--sk-scrollbar: rgba(255, 255, 255, 0.3);
+			--sk-shadow: drop-shadow(1px 2px 16px rgba(0, 0, 0, 0.5));
+		}
+	}
 }
 
 :root.dark {

@@ -127,7 +127,11 @@ It appears when the user clicks on the `Search` component or presses the corresp
 
 <svelte:window
 	onkeydown={(e) => {
-		if (e.key === 'k' && (navigator.platform === 'MacIntel' ? e.metaKey : e.ctrlKey)) {
+		if (
+			e.key === 'k' &&
+			!e.shiftKey &&
+			(navigator.platform === 'MacIntel' ? e.metaKey : e.ctrlKey)
+		) {
 			e.preventDefault();
 			search.query = '';
 
@@ -404,6 +408,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	.results {
 		overflow: auto;
 		overscroll-behavior-y: none;
+		scrollbar-color: var(--sk-scrollbar) var(--sk-bg-2);
 	}
 
 	.results-container {

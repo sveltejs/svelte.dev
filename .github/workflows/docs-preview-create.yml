@@ -3,8 +3,17 @@ name: Docs preview create
 on:
   workflow_dispatch:
     inputs:
-      repo:
-        description: 'Repository name (not fully-qualified, eg. `svelte` or `kit`)'
+      upstream:
+        description: 'Upstream repository (eg. `svelte` or `kit`)'
+        required: true
+        type: choice
+        options:
+          - svelte
+          - kit
+          - cli
+          - mcp
+      downstream:
+        description: 'Downstream repository (eg. `svelte` or `kit`)'
         required: true
         type: string
       pr:
@@ -19,12 +28,16 @@ on:
         description: 'Branch (eg. my-feature-branch)'
         required: true
         type: string
+      sha:
+        description: 'The commit SHA responsible for triggering this workflow'
+        required: false
+        type: string
 
 permissions:
   contents: write
 
 env:
-  BRANCH: preview-${{ inputs.repo }}-${{ inputs.pr }}
+  BRANCH: preview-${{ inputs.upstream }}-${{ inputs.pr }}
 
 jobs:
   Sync:
@@ -32,18 +45,18 @@ jobs:
     runs-on: ubuntu-latest
 
     concurrency:
-      group: preview-${{ inputs.repo }}-${{ inputs.pr }} # can't reference env here
+      group: preview-${{ inputs.upstream }}-${{ inputs.pr }} # can't reference env here
       cancel-in-progress: true
 
     steps:
       - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           ref: main # Explicitly checkout main branch first
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
           cache: pnpm
       - run: pnpm install --frozen-lockfile
 
@@ -53,7 +66,7 @@ jobs:
           git checkout -B ${{ env.BRANCH }} # Force create/reset branch based on current main
 
       - name: Sync
-        run: cd apps/svelte.dev && pnpm sync-docs --owner="${{ inputs.owner }}" -p "${{ inputs.repo }}#${{ inputs.branch }}"
+        run: cd apps/svelte.dev && pnpm sync-docs --owner="${{ inputs.owner }}" -p "${{ format('{0}#{1}#{2}', inputs.upstream, inputs.downstream, inputs.branch) }}"
 
       - name: Configure Git
         run: |
@@ -62,14 +75,28 @@ jobs:
 
       - name: Push
         id: push
-        run: git add -A && git commit -m "sync docs" && git push -u origin ${{ env.BRANCH }} --force
+        continue-on-error: true
+        run: git add -A && git commit -m "sync docs for repo ${{ inputs.upstream }}, pr ${{ inputs.pr }}, commit ${{ inputs.sha }}" && git push -u origin ${{ env.BRANCH }} --force
 
       - name: Request preview comment
+        if: ${{ steps.push.outcome == 'success' }}
         uses: peter-evans/repository-dispatch@v3
         with:
           event-type: 'request-preview-comment'
           client-payload: |-
             {
-              "repo": "${{ inputs.repo }}",
+              "repo": "${{ inputs.upstream }}",
               "pr": "${{ inputs.pr }}"
+            }
+
+      - name: Dispatch docs-unaffected
+        if: ${{ steps.push.outcome != 'success' }}
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          event-type: 'docs-unaffected'
+          client-payload: |-
+            {
+              "repo": "${{ inputs.upstream }}",
+              "pr": "${{ inputs.pr }}",
+              "sha": "${{ inputs.sha }}"
             }

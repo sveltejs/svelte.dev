@@ -13,7 +13,14 @@
 </script>
 
 <main>
-	<Repl bind:this={repl} embedded="output-only" />
+	<Repl
+		bind:this={repl}
+		embedded="output-only"
+		onerror={(error) => {
+			// @ts-expect-error so that v0 can react to REPL errors
+			window.__svelte_repl_onerror?.(error);
+		}}
+	/>
 </main>
 
 <style>

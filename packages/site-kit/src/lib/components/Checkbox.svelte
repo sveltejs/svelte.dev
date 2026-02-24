@@ -19,7 +19,6 @@
 		-webkit-appearance: none;
 		appearance: none;
 		border: transparent;
-		margin: 0 0.6em 0 0;
 	}
 
 	input[type='checkbox']::before {

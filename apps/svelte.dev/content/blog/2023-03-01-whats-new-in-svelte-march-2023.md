@@ -81,7 +81,7 @@ _To Read_
 - [How to type Events, Slots, and Props in Svelte](https://raqueebuddinaziz.com/blog/svelte-type-events-slots-and-props/) by Raqueebuddin Aziz
 - [Use TypeScript with SvelteKit and Supabase](https://blog.robino.dev/posts/supabase-sveltekit) by Ross Robino
 - [Invoking Svelte components from your Ember apps](https://dev.to/rajasegar/invoking-svelte-components-from-your-ember-apps-58h5) by Rajasegar Chandran
-- [Add a sitemap to your server side rendered SvelteKit website](https://www.okupter.com/blog/sitemap-server-side-rendered-sveltekit-website) and [State in URL: the SvelteKit approach](https://www.okupter.com/blog/state-in-url-the-sveltekit-approach) by Justin Ahinon
+- [Add a sitemap to your server-rendered SvelteKit website](https://www.okupter.com/blog/sitemap-server-side-rendered-sveltekit-website) and [State in URL: the SvelteKit approach](https://www.okupter.com/blog/state-in-url-the-sveltekit-approach) by Justin Ahinon
 - [Display crypto data real-time in a chart using Sveltekit, Chart.js & coincap.io](https://medium.com/@Heesel/display-crypto-data-real-time-in-a-chart-using-sveltekit-chart-js-coincap-io-70b90d3aac90) by Hessel
 
 ### Libraries, Tools & Components

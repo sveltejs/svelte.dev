@@ -14,11 +14,14 @@ Install with `npm i -D @sveltejs/adapter-node`, then add the adapter to your `sv
 /// file: svelte.config.js
 import adapter from '@sveltejs/adapter-node';
 
-export default {
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
 	kit: {
 		adapter: adapter()
 	}
 };
+
+export default config;
 ```
 
 ## Deploying
@@ -138,6 +141,10 @@ The number of seconds to wait before forcefully closing any remaining connection
 
 When using systemd socket activation, `IDLE_TIMEOUT` specifies the number of seconds after which the app is automatically put to sleep when receiving no requests. If not set, the app runs continuously. See [Socket activation](#Socket-activation) for more details.
 
+### `KEEP_ALIVE_TIMEOUT` and `HEADERS_TIMEOUT`
+
+The number of seconds for [`keepAliveTimeout`](https://nodejs.org/api/http.html#serverkeepalivetimeout) and [`headersTimeout`](https://nodejs.org/api/http.html#serverheaderstimeout).
+
 ## Options
 
 The adapter can be configured with various options:
@@ -147,7 +154,8 @@ The adapter can be configured with various options:
 /// file: svelte.config.js
 import adapter from '@sveltejs/adapter-node';
 
-export default {
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
 	kit: {
 		adapter: adapter({
 			// default options are shown
@@ -157,6 +165,8 @@ export default {
 		})
 	}
 };
+
+export default config;
 ```
 
 ### out
@@ -210,7 +220,7 @@ The parameter `reason` has one of the following values:
 
 ## Socket activation
 
-Most Linux operating systems today use a modern process manager called systemd to start the server and run and manage services. You can configure your server to allocate a socket and start and scale your app on demand. This is called [socket activation](http://0pointer.de/blog/projects/socket-activated-containers.html). In this case, the OS will pass two environment variables to your app — `LISTEN_PID` and `LISTEN_FDS`. The adapter will then listen on file descriptor 3 which refers to a systemd socket unit that you will have to create.
+Most Linux operating systems today use a modern process manager called systemd to start the server and run and manage services. You can configure your server to allocate a socket and start and scale your app on demand. This is called [socket activation](https://0pointer.de/blog/projects/socket-activated-containers.html). In this case, the OS will pass two environment variables to your app — `LISTEN_PID` and `LISTEN_FDS`. The adapter will then listen on file descriptor 3 which refers to a systemd socket unit that you will have to create.
 
 > [!NOTE] You can still use [`envPrefix`](#Options-envPrefix) with systemd socket activation. `LISTEN_PID` and `LISTEN_FDS` are always read without a prefix.
 

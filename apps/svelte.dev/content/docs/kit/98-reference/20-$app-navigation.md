@@ -18,6 +18,7 @@ import {
 	preloadCode,
 	preloadData,
 	pushState,
+	refreshAll,
 	replaceState
 } from '$app/navigation';
 ```
@@ -95,18 +96,16 @@ For external URLs, use `window.location = url` instead of calling `goto(url)`.
 ```dts
 function goto(
 	url: string | URL,
-	opts?:
-		| {
-				replaceState?: boolean | undefined;
-				noScroll?: boolean | undefined;
-				keepFocus?: boolean | undefined;
-				invalidateAll?: boolean | undefined;
-				invalidate?:
-					| (string | URL | ((url: URL) => boolean))[]
-					| undefined;
-				state?: App.PageState | undefined;
-		  }
-		| undefined
+	opts?: {
+		replaceState?: boolean | undefined;
+		noScroll?: boolean | undefined;
+		keepFocus?: boolean | undefined;
+		invalidateAll?: boolean | undefined;
+		invalidate?:
+			| (string | URL | ((url: URL) => boolean))[]
+			| undefined;
+		state?: App.PageState | undefined;
+	}
 ): Promise<void>;
 ```
 
@@ -145,7 +144,7 @@ function invalidate(
 
 ## invalidateAll
 
-Causes all `load` functions belonging to the currently active page to re-run. Returns a `Promise` that resolves when the page is subsequently updated.
+Causes all `load` and `query` functions belonging to the currently active page to re-run. Returns a `Promise` that resolves when the page is subsequently updated.
 
 <div class="ts-block">
 
@@ -242,6 +241,25 @@ function pushState(
 	url: string | URL,
 	state: App.PageState
 ): void;
+```
+
+</div>
+
+
+
+## refreshAll
+
+Causes all currently active remote functions to refresh, and all `load` functions belonging to the currently active page to re-run (unless disabled via the option argument).
+Returns a `Promise` that resolves when the page is subsequently updated.
+
+<div class="ts-block">
+
+```dts
+function refreshAll({
+	includeLoadFunctions
+}?: {
+	includeLoadFunctions?: boolean;
+}): Promise<void>;
 ```
 
 </div>
