@@ -2,20 +2,18 @@
 import 'dotenv/config';
 import { Jimp } from 'jimp';
 import { stat, writeFile } from 'node:fs/promises';
-import { dirname } from 'node:path';
+import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const force = process.env.FORCE_UPDATE === 'true';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-process.chdir(__dirname);
-
-// ../src/routes/_home/Supporters/contributors.js
-const outputFile = new URL(`../src/routes/_home/Supporters/contributors.js`, import.meta.url);
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const out = path.resolve(__dirname, '../src/routes/_home/Supporters/contributors.js');
 
 try {
-	if (!force && (await stat(outputFile))) {
-		console.info(`[update/contributors] ${outputFile} exists. Skipping`);
+	if (!force && (await stat(out))) {
+		const relative = path.relative(process.cwd(), out);
+		console.info(`[update/contributors] ${relative} exists. Skipping`);
 		process.exit(0);
 	}
 } catch {
@@ -69,5 +67,5 @@ try {
 
 	const str = `[\n\t${authors.map((a) => `'${a.login}'`).join(',\n\t')}\n]`;
 
-	writeFile(outputFile, `export default ${str};`);
+	writeFile(out, `export default ${str};`);
 }

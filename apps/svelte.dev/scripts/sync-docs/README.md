@@ -1,6 +1,6 @@
 # sync-docs
 
-Documentation lives in external repos (at the time of writing, [`sveltejs/svelte`](https://github.com/sveltejs/svelte), [`sveltejs/kit`](https://github.com/sveltejs/kit) and [`sveltejs/cli`](https://github.com/sveltejs/cli), though the plan is to add others) and synced into this repo.
+Documentation lives in external repos (at the time of writing, [`sveltejs/svelte`](https://github.com/sveltejs/svelte), [`sveltejs/kit`](https://github.com/sveltejs/kit), [`sveltejs/cli`](https://github.com/sveltejs/cli) and [`sveltejs/mcp`](https://github.com/sveltejs/mcp), though the plan is to add others) and synced into this repo.
 
 The repos must be cloned (or linked — see [next section](#setup)) into the `apps/svelte.dev/repos` directory.
 
@@ -23,6 +23,8 @@ New-Item -Path .\repos\svelte -ItemType SymbolicLink -Value /path/to/wherever/yo
 New-Item -Path .\repos\kit -ItemType SymbolicLink -Value /path/to/wherever/you/cloned/sveltejs/kit
 New-Item -Path .\repos\cli -ItemType SymbolicLink -Value /path/to/wherever/you/cloned/sveltejs/cli
 ```
+
+The path needs to be absolute to work properly.
 
 ## Syncing
 

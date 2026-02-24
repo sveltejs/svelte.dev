@@ -12,9 +12,11 @@ import {
 	VERSION,
 	error,
 	fail,
+	invalid,
 	isActionFailure,
 	isHttpError,
 	isRedirect,
+	isValidationError,
 	json,
 	normalizeUrl,
 	redirect,
@@ -128,6 +130,48 @@ function fail<T = undefined>(
 
 
 
+## invalid
+
+<blockquote class="since note">
+
+Available since 2.47.3
+
+</blockquote>
+
+Use this to throw a validation error to imperatively fail form validation.
+Can be used in combination with `issue` passed to form actions to create field-specific issues.
+
+```ts
+import { invalid } from '@sveltejs/kit';
+import { form } from '$app/server';
+import { tryLogin } from '$lib/server/auth';
+import * as v from 'valibot';
+
+export const login = form(
+	v.object({ name: v.string(), _password: v.string() }),
+	async ({ name, _password }) => {
+		const success = tryLogin(name, _password);
+		if (!success) {
+			invalid('Incorrect username or password');
+		}
+
+		// ...
+	}
+);
+```
+
+<div class="ts-block">
+
+```dts
+function invalid(
+	...issues: (StandardSchemaV1.Issue | string)[]
+): never;
+```
+
+</div>
+
+
+
 ## isActionFailure
 
 Checks whether this is an action failure thrown by `fail`.
@@ -169,6 +213,26 @@ Checks whether this is a redirect thrown by `redirect`.
 
 ```dts
 function isRedirect(e: unknown): e is Redirect_1;
+```
+
+</div>
+
+
+
+## isValidationError
+
+<blockquote class="since note">
+
+Available since 2.47.3
+
+</blockquote>
+
+Checks whether this is an validation error thrown by `invalid`.
+
+<div class="ts-block">
+
+```dts
+function isValidationError(e: unknown): e is ActionFailure;
 ```
 
 </div>
@@ -494,39 +558,24 @@ The argument passed to [`afterNavigate`](/docs/kit/$app-navigation#afterNavigate
 <div class="ts-block">
 
 ```dts
-interface AfterNavigate extends Omit<Navigation, 'type'> {/*…*/}
+type AfterNavigate = (Navigation | NavigationEnter) & {
+	/**
+	 * The type of navigation:
+	 * - `enter`: The app has hydrated/started
+	 * - `form`: The user submitted a `<form method="GET">`
+	 * - `link`: Navigation was triggered by a link click
+	 * - `goto`: Navigation was triggered by a `goto(...)` call or a redirect
+	 * - `popstate`: Navigation was triggered by back/forward navigation
+	 */
+	type: Exclude<NavigationType, 'leave'>;
+	/**
+	 * Since `afterNavigate` callbacks are called after a navigation completes, they will never be called with a navigation that unloads the page.
+	 */
+	willUnload: false;
+};
 ```
 
-<div class="ts-block-property">
-
-```dts
-type: Exclude<NavigationType, 'leave'>;
-```
-
-<div class="ts-block-property-details">
-
-The type of navigation:
-- `enter`: The app has hydrated/started
-- `form`: The user submitted a `<form method="GET">`
-- `link`: Navigation was triggered by a link click
-- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
-- `popstate`: Navigation was triggered by back/forward navigation
-
 </div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-willUnload: false;
-```
-
-<div class="ts-block-property-details">
-
-Since `afterNavigate` callbacks are called after a navigation completes, they will never be called with a navigation that unloads the page.
-
-</div>
-</div></div>
 
 ## AwaitedActions
 
@@ -553,21 +602,15 @@ The argument passed to [`beforeNavigate`](/docs/kit/$app-navigation#beforeNaviga
 <div class="ts-block">
 
 ```dts
-interface BeforeNavigate extends Navigation {/*…*/}
+type BeforeNavigate = Navigation & {
+	/**
+	 * Call this to prevent the navigation from starting.
+	 */
+	cancel: () => void;
+};
 ```
-
-<div class="ts-block-property">
-
-```dts
-cancel: () => void;
-```
-
-<div class="ts-block-property-details">
-
-Call this to prevent the navigation from starting.
 
 </div>
-</div></div>
 
 ## Builder
 
@@ -1274,6 +1317,41 @@ The content of the error.
 </div>
 </div></div>
 
+## InvalidField
+
+A function and proxy object used to imperatively create validation errors in form handlers.
+
+Access properties to create field-specific issues: `issue.fieldName('message')`.
+The type structure mirrors the input data structure for type-safe field access.
+Call `invalid(issue.foo(...), issue.nested.bar(...))` to throw a validation error.
+
+<div class="ts-block">
+
+```dts
+type InvalidField<T> =
+	WillRecurseIndefinitely<T> extends true
+		? Record<string | number, any>
+		: NonNullable<T> extends
+					| string
+					| number
+					| boolean
+					| File
+			? (message: string) => StandardSchemaV1.Issue
+			: NonNullable<T> extends Array<infer U>
+				? {
+						[K in number]: InvalidField<U>;
+					} & ((message: string) => StandardSchemaV1.Issue)
+				: NonNullable<T> extends RemoteFormInput
+					? {
+							[K in keyof T]-?: InvalidField<T[K]>;
+						} & ((
+							message: string
+						) => StandardSchemaV1.Issue)
+					: Record<string, never>;
+```
+
+</div>
+
 ## KitConfig
 
 See the [configuration reference](/docs/kit/configuration) for details.
@@ -1581,7 +1659,21 @@ type LoadProperties<
 <div class="ts-block">
 
 ```dts
-interface Navigation {/*…*/}
+type Navigation =
+	| NavigationExternal
+	| NavigationFormSubmit
+	| NavigationPopState
+	| NavigationLink;
+```
+
+</div>
+
+## NavigationBase
+
+<div class="ts-block">
+
+```dts
+interface NavigationBase {/*…*/}
 ```
 
 <div class="ts-block-property">
@@ -1613,7 +1705,42 @@ Where navigation is going to/has gone to
 <div class="ts-block-property">
 
 ```dts
-type: Exclude<NavigationType, 'enter'>;
+willUnload: boolean;
+```
+
+<div class="ts-block-property-details">
+
+Whether or not the navigation will result in the page being unloaded (i.e. not a client-side navigation)
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+complete: Promise<void>;
+```
+
+<div class="ts-block-property-details">
+
+A promise that resolves once the navigation is complete, and rejects if the navigation
+fails or is aborted. In the case of a `willUnload` navigation, the promise will never resolve
+
+</div>
+</div></div>
+
+## NavigationEnter
+
+<div class="ts-block">
+
+```dts
+interface NavigationEnter extends NavigationBase {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+type: 'enter';
 ```
 
 <div class="ts-block-property-details">
@@ -1631,20 +1758,7 @@ The type of navigation:
 <div class="ts-block-property">
 
 ```dts
-willUnload: boolean;
-```
-
-<div class="ts-block-property-details">
-
-Whether or not the navigation will result in the page being unloaded (i.e. not a client-side navigation)
-
-</div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-delta?: number;
+delta?: undefined;
 ```
 
 <div class="ts-block-property-details">
@@ -1657,13 +1771,12 @@ In case of a history back/forward navigation, the number of steps to go back/for
 <div class="ts-block-property">
 
 ```dts
-complete: Promise<void>;
+event?: undefined;
 ```
 
 <div class="ts-block-property-details">
 
-A promise that resolves once the navigation is complete, and rejects if the navigation
-fails or is aborted. In the case of a `willUnload` navigation, the promise will never resolve
+Dispatched `Event` object when navigation occurred by `popstate` or `link`.
 
 </div>
 </div></div>
@@ -1728,6 +1841,201 @@ url: URL;
 <div class="ts-block-property-details">
 
 The URL of the current page
+
+</div>
+</div></div>
+
+## NavigationExternal
+
+<div class="ts-block">
+
+```dts
+interface NavigationExternal extends NavigationBase {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+type: Exclude<NavigationType, 'enter' | 'popstate' | 'link' | 'form'>;
+```
+
+<div class="ts-block-property-details">
+
+The type of navigation:
+- `form`: The user submitted a `<form method="GET">`
+- `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
+- `link`: Navigation was triggered by a link click
+- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
+- `popstate`: Navigation was triggered by back/forward navigation
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+delta?: undefined;
+```
+
+<div class="ts-block-property-details">
+
+In case of a history back/forward navigation, the number of steps to go back/forward
+
+</div>
+</div></div>
+
+## NavigationFormSubmit
+
+<div class="ts-block">
+
+```dts
+interface NavigationFormSubmit extends NavigationBase {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+type: 'form';
+```
+
+<div class="ts-block-property-details">
+
+The type of navigation:
+- `form`: The user submitted a `<form method="GET">`
+- `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
+- `link`: Navigation was triggered by a link click
+- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
+- `popstate`: Navigation was triggered by back/forward navigation
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+event: SubmitEvent;
+```
+
+<div class="ts-block-property-details">
+
+The `SubmitEvent` that caused the navigation
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+delta?: undefined;
+```
+
+<div class="ts-block-property-details">
+
+In case of a history back/forward navigation, the number of steps to go back/forward
+
+</div>
+</div></div>
+
+## NavigationLink
+
+<div class="ts-block">
+
+```dts
+interface NavigationLink extends NavigationBase {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+type: 'link';
+```
+
+<div class="ts-block-property-details">
+
+The type of navigation:
+- `form`: The user submitted a `<form method="GET">`
+- `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
+- `link`: Navigation was triggered by a link click
+- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
+- `popstate`: Navigation was triggered by back/forward navigation
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+event: PointerEvent;
+```
+
+<div class="ts-block-property-details">
+
+The `PointerEvent` that caused the navigation
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+delta?: undefined;
+```
+
+<div class="ts-block-property-details">
+
+In case of a history back/forward navigation, the number of steps to go back/forward
+
+</div>
+</div></div>
+
+## NavigationPopState
+
+<div class="ts-block">
+
+```dts
+interface NavigationPopState extends NavigationBase {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+type: 'popstate';
+```
+
+<div class="ts-block-property-details">
+
+The type of navigation:
+- `form`: The user submitted a `<form method="GET">`
+- `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
+- `link`: Navigation was triggered by a link click
+- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
+- `popstate`: Navigation was triggered by back/forward navigation
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+delta: number;
+```
+
+<div class="ts-block-property-details">
+
+In case of a history back/forward navigation, the number of steps to go back/forward
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+event: PopStateEvent;
+```
+
+<div class="ts-block-property-details">
+
+The `PopStateEvent` that caused the navigation
 
 </div>
 </div></div>
@@ -1797,6 +2105,28 @@ url: URL;
 The URL that is navigated to
 
 </div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+scroll: { x: number; y: number } | null;
+```
+
+<div class="ts-block-property-details">
+
+The scroll position associated with this navigation.
+
+For the `from` target, this is the scroll position at the moment of navigation.
+
+For the `to` target, this represents the scroll position that will be or was restored:
+- In `beforeNavigate` and `onNavigate`, this is only available for `popstate` navigations (back/forward button)
+	and will be `null` for other navigation types, since the final scroll position isn't known
+	ahead of time.
+- In `afterNavigate`, this is always the scroll position that was applied after the navigation
+	completed.
+
+</div>
 </div></div>
 
 ## NavigationType
@@ -1842,38 +2172,23 @@ The argument passed to [`onNavigate`](/docs/kit/$app-navigation#onNavigate) call
 <div class="ts-block">
 
 ```dts
-interface OnNavigate extends Navigation {/*…*/}
+type OnNavigate = Navigation & {
+	/**
+	 * The type of navigation:
+	 * - `form`: The user submitted a `<form method="GET">`
+	 * - `link`: Navigation was triggered by a link click
+	 * - `goto`: Navigation was triggered by a `goto(...)` call or a redirect
+	 * - `popstate`: Navigation was triggered by back/forward navigation
+	 */
+	type: Exclude<NavigationType, 'enter' | 'leave'>;
+	/**
+	 * Since `onNavigate` callbacks are called immediately before a client-side navigation, they will never be called with a navigation that unloads the page.
+	 */
+	willUnload: false;
+};
 ```
 
-<div class="ts-block-property">
-
-```dts
-type: Exclude<NavigationType, 'enter' | 'leave'>;
-```
-
-<div class="ts-block-property-details">
-
-The type of navigation:
-- `form`: The user submitted a `<form method="GET">`
-- `link`: Navigation was triggered by a link click
-- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
-- `popstate`: Navigation was triggered by back/forward navigation
-
 </div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-willUnload: false;
-```
-
-<div class="ts-block-property-details">
-
-Since `onNavigate` callbacks are called immediately before a client-side navigation, they will never be called with a navigation that unloads the page.
-
-</div>
-</div></div>
 
 ## Page
 
@@ -2093,17 +2408,20 @@ The return value of a remote `form` function. See [Remote functions](/docs/kit/r
 <div class="ts-block">
 
 ```dts
-type RemoteForm<Result> = {
+type RemoteForm<
+	Input extends RemoteFormInput | void,
+	Output
+> = {
+	/** Attachment that sets up an event handler that intercepts the form submission on the client to prevent a full page reload */
+	[attachment: symbol]: (node: HTMLFormElement) => void;
 	method: 'POST';
 	/** The URL to send the form to. */
 	action: string;
-	/** Event handler that intercepts the form submission on the client to prevent a full page reload */
-	onsubmit: (event: SubmitEvent) => void;
 	/** Use the `enhance` method to influence what happens when the form is submitted. */
 	enhance(
 		callback: (opts: {
 			form: HTMLFormElement;
-			data: FormData;
+			data: Input;
 			submit: () => Promise<void> & {
 				updates: (
 					...queries: Array<
@@ -2111,15 +2429,15 @@ type RemoteForm<Result> = {
 					>
 				) => Promise<void>;
 			};
-		}) => void
+		}) => void | Promise<void>
 	): {
 		method: 'POST';
 		action: string;
-		onsubmit: (event: SubmitEvent) => void;
+		[attachment: symbol]: (node: HTMLFormElement) => void;
 	};
 	/**
-	 * Create an instance of the form for the given key.
-	 * The key is stringified and used for deduplication to potentially reuse existing instances.
+	 * Create an instance of the form for the given `id`.
+	 * The `id` is stringified and used for deduplication to potentially reuse existing instances.
 	 * Useful when you have multiple forms that use the same remote form action, for example in a loop.
 	 * ```svelte
 	 * {#each todos as todo}
@@ -2132,44 +2450,160 @@ type RemoteForm<Result> = {
 	 * ```
 	 */
 	for(
-		key: string | number | boolean
-	): Omit<RemoteForm<Result>, 'for'>;
+		id: ExtractId<Input>
+	): Omit<RemoteForm<Input, Output>, 'for'>;
+	/** Preflight checks */
+	preflight(
+		schema: StandardSchemaV1<Input, any>
+	): RemoteForm<Input, Output>;
+	/** Validate the form contents programmatically */
+	validate(options?: {
+		/** Set this to `true` to also show validation issues of fields that haven't been touched yet. */
+		includeUntouched?: boolean;
+		/** Set this to `true` to only run the `preflight` validation. */
+		preflightOnly?: boolean;
+	}): Promise<void>;
 	/** The result of the form submission */
-	get result(): Result | undefined;
+	get result(): Output | undefined;
 	/** The number of pending submissions */
 	get pending(): number;
-	/** Spread this onto a `<button>` or `<input type="submit">` */
-	buttonProps: {
-		type: 'submit';
-		formmethod: 'POST';
-		formaction: string;
-		onclick: (event: Event) => void;
-		/** Use the `enhance` method to influence what happens when the form is submitted. */
-		enhance(
-			callback: (opts: {
-				form: HTMLFormElement;
-				data: FormData;
-				submit: () => Promise<void> & {
-					updates: (
-						...queries: Array<
-							RemoteQuery<any> | RemoteQueryOverride
-						>
-					) => Promise<void>;
-				};
-			}) => void
-		): {
-			type: 'submit';
-			formmethod: 'POST';
-			formaction: string;
-			onclick: (event: Event) => void;
-		};
-		/** The number of pending submissions */
-		get pending(): number;
-	};
+	/** Access form fields using object notation */
+	fields: RemoteFormFieldsRoot<Input>;
 };
 ```
 
 </div>
+
+## RemoteFormField
+
+Form field accessor type that provides name(), value(), and issues() methods
+
+<div class="ts-block">
+
+```dts
+type RemoteFormField<Value extends RemoteFormFieldValue> =
+	RemoteFormFieldMethods<Value> & {
+		/**
+		 * Returns an object that can be spread onto an input element with the correct type attribute,
+		 * aria-invalid attribute if the field is invalid, and appropriate value/checked property getters/setters.
+		 * @example
+		 * ```svelte
+		 * <input {...myForm.fields.myString.as('text')} />
+		 * <input {...myForm.fields.myNumber.as('number')} />
+		 * <input {...myForm.fields.myBoolean.as('checkbox')} />
+		 * ```
+		 */
+		as<T extends RemoteFormFieldType<Value>>(
+			...args: AsArgs<T, Value>
+		): InputElementProps<T>;
+	};
+```
+
+</div>
+
+## RemoteFormFieldType
+
+<div class="ts-block">
+
+```dts
+type RemoteFormFieldType<T> = {
+	[K in keyof InputTypeMap]: T extends InputTypeMap[K]
+		? K
+		: never;
+}[keyof InputTypeMap];
+```
+
+</div>
+
+## RemoteFormFieldValue
+
+<div class="ts-block">
+
+```dts
+type RemoteFormFieldValue =
+	| string
+	| string[]
+	| number
+	| boolean
+	| File
+	| File[];
+```
+
+</div>
+
+## RemoteFormFields
+
+Recursive type to build form fields structure with proxy access
+
+<div class="ts-block">
+
+```dts
+type RemoteFormFields<T> =
+	WillRecurseIndefinitely<T> extends true
+		? RecursiveFormFields
+		: NonNullable<T> extends
+					| string
+					| number
+					| boolean
+					| File
+			? RemoteFormField<NonNullable<T>>
+			: T extends string[] | File[]
+				? RemoteFormField<T> & {
+						[K in number]: RemoteFormField<T[number]>;
+					}
+				: T extends Array<infer U>
+					? RemoteFormFieldContainer<T> & {
+							[K in number]: RemoteFormFields<U>;
+						}
+					: RemoteFormFieldContainer<T> & {
+							[K in keyof T]-?: RemoteFormFields<T[K]>;
+						};
+```
+
+</div>
+
+## RemoteFormInput
+
+<div class="ts-block">
+
+```dts
+interface RemoteFormInput {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+[key: string]: MaybeArray<string | number | boolean | File | RemoteFormInput>;
+```
+
+<div class="ts-block-property-details"></div>
+</div></div>
+
+## RemoteFormIssue
+
+<div class="ts-block">
+
+```dts
+interface RemoteFormIssue {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+message: string;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+path: Array<string | number>;
+```
+
+<div class="ts-block-property-details"></div>
+</div></div>
 
 ## RemotePrerenderFunction
 
@@ -2192,6 +2626,13 @@ type RemotePrerenderFunction<Input, Output> = (
 ```dts
 type RemoteQuery<T> = RemoteResource<T> & {
 	/**
+	 * On the client, this function will update the value of the query without re-fetching it.
+	 *
+	 * On the server, this can be called in the context of a `command` or `form` and the specified data will accompany the action response back to the client.
+	 * This prevents SvelteKit needing to refresh all queries on the page in a second server round-trip.
+	 */
+	set(value: T): void;
+	/**
 	 * On the client, this function will re-fetch the query from the server.
 	 *
 	 * On the server, this can be called in the context of a `command` or `form` and the refreshed data will accompany the action response back to the client.
@@ -2211,7 +2652,7 @@ type RemoteQuery<T> = RemoteResource<T> & {
 	 *   await submit().updates(
 	 *     todos.withOverride((todos) => [...todos, { text: data.get('text') }])
 	 *   );
-	 * }}>
+	 * })}>
 	 *   <input type="text" name="text" />
 	 *   <button type="submit">Add Todo</button>
 	 * </form>
@@ -3271,6 +3712,29 @@ decode: (data: U) => T;
 <div class="ts-block-property-details"></div>
 </div></div>
 
+## ValidationError
+
+A validation error thrown by `invalid`.
+
+<div class="ts-block">
+
+```dts
+interface ValidationError {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+issues: StandardSchemaV1.Issue[];
+```
+
+<div class="ts-block-property-details">
+
+The validation issues
+
+</div>
+</div></div>
+
 
 
 ## Private types
@@ -3737,6 +4201,16 @@ type HttpMethod =
 
 </div>
 
+## IsAny
+
+<div class="ts-block">
+
+```dts
+type IsAny<T> = 0 extends 1 & T ? true : false;
+```
+
+</div>
+
 ## Logger
 
 <div class="ts-block">
@@ -3924,6 +4398,37 @@ type PrerenderMissingIdHandlerValue =
 
 ```dts
 type PrerenderOption = boolean | 'auto';
+```
+
+</div>
+
+## PrerenderUnseenRoutesHandler
+
+<div class="ts-block">
+
+```dts
+interface PrerenderUnseenRoutesHandler {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+(details: { routes: string[]; message: string }): void;
+```
+
+<div class="ts-block-property-details"></div>
+</div></div>
+
+## PrerenderUnseenRoutesHandlerValue
+
+<div class="ts-block">
+
+```dts
+type PrerenderUnseenRoutesHandlerValue =
+	| 'fail'
+	| 'warn'
+	| 'ignore'
+	| PrerenderUnseenRoutesHandler;
 ```
 
 </div>

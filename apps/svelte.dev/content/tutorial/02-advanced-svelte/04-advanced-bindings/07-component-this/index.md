@@ -4,7 +4,7 @@ title: Binding to component instances
 
 Just as you can bind to DOM elements, you can bind to component instances themselves with `bind:this`.
 
-This is useful in the rare cases that you need to interact with a component programmatically (rather than by providing it with updated props). Revisiting our canvas app from [a few exercises ago](actions), it would be nice to add a button to clear the screen.
+This is useful in the rare cases that you need to interact with a component programmatically (rather than by providing it with updated props). Revisiting our canvas app from [a few exercises ago](attach), it would be nice to add a button to clear the screen.
 
 First, let's export a function from `Canvas.svelte`:
 

@@ -1,0 +1,33 @@
+{
+  "name": "@testing-library/svelte",
+  "npm_description": "Simple and complete Svelte testing utilities that encourage good testing practices.",
+  "repo_url": "https://github.com/testing-library/svelte-testing-library",
+  "authors": [
+    "testing-library-bot",
+    "kentcdodds",
+    "timdeschryver",
+    "patrickhulce",
+    "dfcook",
+    "gpx",
+    "mpeyper",
+    "mihar-22",
+    "pago",
+    "cmckinstry",
+    "thymikee",
+    "brrianalexis",
+    "jdecroock",
+    "mdjastrzebski",
+    "eps1lon",
+    "phryneas",
+    "matanbobi"
+  ],
+  "homepage": "https://github.com/testing-library/svelte-testing-library#readme",
+  "version": "5.3.1",
+  "downloads": 342119,
+  "github_stars": 654,
+  "updated": "2025-12-25T12:44:01.554Z",
+  "svelte_range": "^3 || ^4 || ^5 || ^5.0.0-next.0",
+  "typescript": true,
+  "runes": false,
+  "last_rune_check_version": "5.2.7"
+}

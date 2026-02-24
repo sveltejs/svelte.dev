@@ -1,4 +1,5 @@
 import type { OutputChunk, RollupError } from '@rollup/browser';
+import type { CompileError } from 'svelte/compiler';
 
 export interface BundleResult {
 	uid: number;

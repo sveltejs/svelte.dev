@@ -1,0 +1,14 @@
+{
+  "name": "@embedpdf/svelte-pdf-viewer",
+  "npm_description": "Svelte component for embedding PDF documents",
+  "repo_url": "https://github.com/embedpdf/embed-pdf-viewer",
+  "authors": [
+    "bobsingor"
+  ],
+  "homepage": "https://www.embedpdf.com/svelte-pdf-viewer",
+  "version": "2.6.2",
+  "downloads": 246,
+  "github_stars": 3354,
+  "updated": "2026-02-19T20:21:47.870Z",
+  "svelte_range": ">=4.0.0"
+}

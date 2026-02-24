@@ -19,6 +19,7 @@
 
 	const { workspace } = get_repl_context();
 
+	// svelte-ignore state_referenced_locally
 	let root = depth === 0;
 	let open = $state(root);
 

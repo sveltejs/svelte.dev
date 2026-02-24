@@ -46,7 +46,6 @@ export async function load_svelte(version: string) {
 	try {
 		svelte.compileModule('', {
 			generate: 'client',
-			// @ts-expect-error
 			experimental: {
 				async: true
 			}
