@@ -1,5 +1,5 @@
 <script>
-	let questions = $state([
+	let questions = [
 		{
 			id: 1,
 			text: `Where did you go to school?`
@@ -12,7 +12,7 @@
 			id: 3,
 			text: `What is another personal fact that an attacker could easily find with Google?`
 		}
-	]);
+	];
 
 	let selected = $state();
 

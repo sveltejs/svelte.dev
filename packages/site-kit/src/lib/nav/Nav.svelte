@@ -6,7 +6,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	import { overlay_open, on_this_page_open } from '../stores';
 	import { search } from '../state/search.svelte';
 	import Icon from '../components/Icon.svelte';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import ThemeToggle from '../components/ThemeToggle.svelte';
 	import MobileMenu from './MobileMenu.svelte';
 	import type { NavigationLink } from '../types';
@@ -86,7 +86,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 					<Dropdown>
 						<a
 							href="/{link.slug}"
-							aria-current={$page.url.pathname.startsWith(`/${link.slug}`) ? 'page' : undefined}
+							aria-current={page.url.pathname.startsWith(`/${link.slug}`) ? 'page' : undefined}
 						>
 							{link.title}
 
@@ -99,8 +99,8 @@ Top navigation bar for the application. It provides a slot for the left side, th
 									<a
 										class="secondary"
 										href={section.path}
-										aria-current={$page.url.pathname === section.path ||
-										$page.url.pathname.startsWith(section.path!)
+										aria-current={page.url.pathname === section.path ||
+										page.url.pathname.startsWith(section.path!)
 											? 'page'
 											: undefined}
 									>
@@ -113,7 +113,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 				{:else}
 					<a
 						href="/{link.slug}"
-						aria-current={$page.url.pathname.startsWith(`/${link.slug}`) ? 'page' : null}
+						aria-current={page.url.pathname.startsWith(`/${link.slug}`) ? 'page' : null}
 					>
 						{link.title}
 					</a>
@@ -133,7 +133,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 					<span data-icon="bluesky"></span>
 				</a>
 
-				<a href="https://github.com/sveltejs/svelte" aria-label="GitHub Repo">
+				<a href="https://github.com/sveltejs" aria-label="GitHub Organization">
 					<span data-icon="github"></span>
 				</a>
 			</div>
@@ -169,7 +169,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 				open = !open;
 
 				if (open) {
-					const segment = $page.url.pathname.split('/')[1];
+					const segment = page.url.pathname.split('/')[1];
 					current = links.find((link) => link.slug === segment);
 				}
 			}}
@@ -211,6 +211,11 @@ Top navigation bar for the application. It provides a slot for the left side, th
 			background: linear-gradient(to top, rgba(0, 0, 0, 0.05), transparent);
 		}
 
+		:root:not(.light) & {
+			@media (prefers-color-scheme: dark) {
+				background-color: var(--sk-bg-3);
+			}
+		}
 		:root.dark & {
 			background-color: var(--sk-bg-3);
 		}
@@ -347,6 +352,12 @@ Top navigation bar for the application. It provides a slot for the left side, th
 			background: url(../branding/svelte.svg) no-repeat 0 50% / calc(100% - var(--padding-right))
 				auto;
 			padding: 0 var(--padding-right) 0 calc(var(--sk-page-padding-side) + 0rem);
+
+			:root:not(.light) & {
+				@media (prefers-color-scheme: dark) {
+					background-image: url(../branding/svelte-dark.svg);
+				}
+			}
 
 			:root.dark & {
 				background-image: url(../branding/svelte-dark.svg);

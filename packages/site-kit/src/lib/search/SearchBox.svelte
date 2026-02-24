@@ -408,6 +408,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	.results {
 		overflow: auto;
 		overscroll-behavior-y: none;
+		scrollbar-color: var(--sk-scrollbar) var(--sk-bg-2);
 	}
 
 	.results-container {

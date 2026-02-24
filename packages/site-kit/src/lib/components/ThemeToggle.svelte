@@ -41,6 +41,11 @@
 	.icon {
 		mask-image: url(icons/theme-dark);
 		mask-size: 2rem;
+		:root:not(.light) & {
+			@media (prefers-color-scheme: dark) {
+				mask-image: url(icons/theme-light);
+			}
+		}
 
 		:root.dark & {
 			mask-image: url(icons/theme-light);

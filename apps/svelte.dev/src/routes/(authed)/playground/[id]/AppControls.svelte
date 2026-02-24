@@ -56,7 +56,7 @@
 	async function fork(intentWasSave: boolean) {
 		saving = true;
 
-		const { files } = repl.toJSON() as { files: File[] };
+		const { files, tailwind } = repl.toJSON() as { files: File[]; tailwind?: boolean };
 
 		try {
 			const r = await fetch(`/playground/create.json`, {
@@ -67,6 +67,7 @@
 				},
 				body: JSON.stringify({
 					name,
+					tailwind: tailwind ?? false,
 					files: files.map((file) => ({
 						name: file.name,
 						source: file.contents
@@ -122,7 +123,7 @@
 		try {
 			// Send all files back to API
 			// ~> Any missing files are considered deleted!
-			const { files } = repl.toJSON() as { files: File[] };
+			const { files, tailwind } = repl.toJSON() as { files: File[]; tailwind?: boolean };
 
 			const r = await fetch(`/playground/save/${gist.id}.json`, {
 				method: 'PUT',
@@ -132,6 +133,7 @@
 				},
 				body: JSON.stringify({
 					name,
+					tailwind: tailwind ?? false,
 					files: files.map((file) => ({
 						name: file.name,
 						source: file.contents
@@ -293,6 +295,12 @@
 	/* TODO use lucide-svelte, so we don't need all this customisation? */
 	.icon:disabled {
 		color: #ccc;
+
+		:root:not(.light) & {
+			@media (prefers-color-scheme: dark) {
+				color: #555;
+			}
+		}
 
 		:root.dark & {
 			color: #555;
