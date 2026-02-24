@@ -548,11 +548,13 @@ Use:
 - **Progressive enhancement**: Works without JS via `method`/`action`; with JS it submits without full reload.
 - **Single-flight mutations**:
   - Server-driven: call refresh inside the handler:
+
   ```js
   await getPosts().refresh();
   ```
 
   - Client-driven: customize with `enhance` and `submit().updates(...)`:
+
   ```svelte
   <form {...createPost.enhance(async ({ submit }) => {
   	await submit().updates(getPosts());
@@ -560,9 +562,11 @@ Use:
   ```
 
   - Optimistic UI: use `withOverride`:
+
   ```js
   await submit().updates(getPosts().withOverride((posts) => [newPost, ...posts]));
   ```
+
 - **Returns**: Instead of redirect, return data; read at `createPost.result`.
 - **buttonProps**: For per-button `formaction`:
 
