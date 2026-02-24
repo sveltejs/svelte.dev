@@ -19,6 +19,20 @@ const assets = import.meta.glob<string>(['./**/+assets/**', './**/+assets/**/.en
 	base: '../../../content'
 });
 
+// the embed examples are not meant to show up in the search results
+
+for (const path of Object.keys(documents)) {
+	if (path.startsWith('./examples/99-embeds')) {
+		delete documents[path];
+	}
+}
+
+for (const path of Object.keys(assets)) {
+	if (path.startsWith('./examples/99-embeds')) {
+		delete assets[path];
+	}
+}
+
 const registry_docs = import.meta.glob<string>(
 	'../../../src/lib/server/generated/registry/*.json',
 	{
