@@ -56,23 +56,27 @@ export function decode_html_entities(text: string): string {
 }
 
 export const slugify = (str: string) => {
-	return decode_html_entities(clean(str)
-		.replace(/(’|&rsquo;)/g, "'")
-		.replace(/&.+?;/g, '')
-		.replace(/<code>(.*)<\/code>/g, '$1'))
-		// <audio> should be converted to audio
-		// <details bind:open> should be converted to details-bind-open
-		// <script module> should be converted to script-module
-		// <script lang="ts"> should be converted to script-lang-ts
-		.replace(/[<>]/g, '')
-		// italicised words such as "bind:_property_ for components" should be converted to bind:property-for-components
-		// without affecting compiler error titles such as "animation_missing_key"
-		.replace(/:_(.*)_ /g, ':$1 ')
-		.replace(/\.\.\./g, '')
-		.replace(/[^a-zA-Z0-9-$(.):'_]/g, '-')
-		.replace(/-{2,}/g, '-')
-		.replace(/^-/, '')
-		.replace(/-$/, '');
+	return (
+		decode_html_entities(
+			clean(str)
+				.replace(/(’|&rsquo;)/g, "'")
+				.replace(/&.+?;/g, '')
+				.replace(/<code>(.*)<\/code>/g, '$1')
+		)
+			// <audio> should be converted to audio
+			// <details bind:open> should be converted to details-bind-open
+			// <script module> should be converted to script-module
+			// <script lang="ts"> should be converted to script-lang-ts
+			.replace(/[<>]/g, '')
+			// italicised words such as "bind:_property_ for components" should be converted to bind:property-for-components
+			// without affecting compiler error titles such as "animation_missing_key"
+			.replace(/:_(.*)_ /g, ':$1 ')
+			.replace(/\.\.\./g, '')
+			.replace(/[^a-zA-Z0-9-$(.):'_]/g, '-')
+			.replace(/-{2,}/g, '-')
+			.replace(/^-/, '')
+			.replace(/-$/, '')
+	);
 };
 
 export function smart_quotes(

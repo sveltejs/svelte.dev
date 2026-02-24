@@ -9,7 +9,13 @@ import { createHighlighterCore } from 'shiki/core';
 import { createOnigurumaEngine } from 'shiki/engine/oniguruma';
 import { createCssVariablesTheme } from 'shiki';
 import { transformerTwoslash, rendererRich } from '@shikijs/twoslash';
-import { decode_html_entities, SHIKI_LANGUAGE_MAP, slugify, smart_quotes, transform } from './utils.ts';
+import {
+	decode_html_entities,
+	SHIKI_LANGUAGE_MAP,
+	slugify,
+	smart_quotes,
+	transform
+} from './utils.ts';
 
 interface SnippetOptions {
 	file: string | null;
