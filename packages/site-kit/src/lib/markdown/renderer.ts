@@ -851,10 +851,17 @@ function replace_blank_lines(html: string) {
 }
 
 const delimiter_substitutes = {
-	'---': '             ',
-	'+++': '           ',
-	':::': '         '
+	'---': '                                           ',
+	'+++': '                                         ',
+	':::': '                                       '
 };
+
+const delimiter_patterns = Object.fromEntries(
+	Object.entries(delimiter_substitutes).map(([key, substitute]) => [
+		key,
+		new RegExp(`${substitute}([^ ][^]+?)${substitute}`, 'g')
+	])
+);
 
 function highlight_spans(content: string, classname: string) {
 	return content
@@ -891,7 +898,10 @@ async function syntax_highlight({
 		/** We need to stash code wrapped in `---` highlights, because otherwise TS will error on e.g. bad syntax, duplicate declarations */
 		const redactions: string[] = [];
 
-		const redacted = source.replace(/( {13}(?:[^ ][^]+?) {13})/g, (_, content) => {
+		const sub = delimiter_substitutes['---'];
+		const pattern = new RegExp(`${sub}(?:[^ ]|[^ ][^]+?[^ ])${sub}`, 'g');
+
+		const redacted = source.replace(pattern, (_, content) => {
 			redactions.push(content);
 			return ' '.repeat(content.length);
 		});
@@ -918,7 +928,10 @@ async function syntax_highlight({
 					: []
 			});
 
-			html = html.replace(/ {27,}/g, () => redactions.shift()!);
+			html = html.replace(
+				new RegExp(` {${delimiter_substitutes['---'].length + 1},}`, 'g'),
+				() => redactions.shift()!
+			);
 
 			if (check) {
 				// munge the twoslash output so that it renders sensibly. the order of operations
@@ -1022,13 +1035,13 @@ async function syntax_highlight({
 		.replace(' tabindex="0"', '');
 
 	html = html
-		.replace(/ {13}([^ ][^]+?) {13}/g, (_, content) => {
+		.replace(delimiter_patterns['---'], (_, content) => {
 			return highlight_spans(content, 'highlight remove');
 		})
-		.replace(/ {11}([^ ][^]+?) {11}/g, (_, content) => {
+		.replace(delimiter_patterns['+++'], (_, content) => {
 			return highlight_spans(content, 'highlight add');
 		})
-		.replace(/ {9}([^ ][^]+?) {9}/g, (_, content) => {
+		.replace(delimiter_patterns[':::'], (_, content) => {
 			return highlight_spans(content, 'highlight');
 		});
 

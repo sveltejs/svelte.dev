@@ -1,4 +1,8 @@
-<!-- If this is a documentation PR (i.e. changing content within `apps/svelte.dev/content/docs`), then this is the wrong repository to make those changes. The content in this folder is synced from other repositories. Therefore, these changes should be made in their respective repositories (at https://github.com/sveltejs/svelte or https://github.com/sveltejs/kit, or example). -->
+<!--
+If this is a documentation PR (i.e. changing content within `apps/svelte.dev/content/docs`), then this is the wrong repository to make those changes. The content in this folder is synced from other repositories. Therefore, these changes should be made in their respective repositories (at https://github.com/sveltejs/svelte or https://github.com/sveltejs/kit, or example).
+
+Note that we don't accept PRs to add packages to https://svelte.dev/packages as the list is maintained by the Svelte maintainers and ambassadors
+-->
 
 ### Before submitting the PR, please make sure you do the following
 
