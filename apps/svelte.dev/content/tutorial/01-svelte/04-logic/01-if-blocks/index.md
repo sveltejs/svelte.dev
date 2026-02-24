@@ -1,5 +1,6 @@
 ---
 title: If blocks
+tags: template-if
 ---
 
 HTML doesn't have a way of expressing _logic_, like conditionals and loops. Svelte does.

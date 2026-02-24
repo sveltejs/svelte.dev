@@ -267,6 +267,7 @@
 					<Sidebar
 						bind:sidebar
 						exercise={data.exercise}
+						related={data.related}
 						on:select={(e) => {
 							navigate_to_file(e.detail.file);
 						}}
@@ -440,6 +441,7 @@
 	/* on mobile, override the <SplitPane> controls */
 	@media (max-width: 799px) {
 		:global([data-pane='main']) {
+			--min: 0px !important;
 			--pos: 50% !important;
 		}
 

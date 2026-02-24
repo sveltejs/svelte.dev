@@ -3,12 +3,16 @@
 	import Modal from '$lib/components/Modal.svelte';
 	import { Text } from '@sveltejs/site-kit/components';
 	import PageControls from '$lib/components/PageControls.svelte';
+	import RelatedLinks from '$lib/components/RelatedLinks.svelte';
 
 	/** @type {import('$lib/tutorial').Exercise} */
 	export let exercise;
 
 	/** @type {HTMLElement} */
 	export let sidebar;
+
+	/** @type {Array<{ breadcrumbs: string[], path: string }> | undefined} */
+	export let related;
 
 	const dispatch = createEventDispatcher();
 
@@ -39,6 +43,10 @@
 			}
 		}}
 	>
+		{#if related}
+			<RelatedLinks links={related} />
+		{/if}
+
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<!-- svelte-ignore a11y-no-static-element-interactions -->
 		<div
