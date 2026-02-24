@@ -336,7 +336,7 @@
 
 									{#if mobile && show_filetree}
 										<div class="mobile-filetree">
-											<Filetree mobile exercise={data.exercise} {workspace} />
+											<Filetree mobile exercise={data.exercise} {workspace} {constraints} />
 										</div>
 									{/if}
 								</section>

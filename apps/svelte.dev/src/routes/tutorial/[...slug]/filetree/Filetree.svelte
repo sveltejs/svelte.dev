@@ -79,7 +79,7 @@
 				return;
 			}
 
-			if (!constraints.can_remove.has(to_rename.name)) {
+			if (exercise.a[to_rename.name] && !constraints.can_remove.has(to_rename.name)) {
 				modal_text =
 					'Only the following files and folders are allowed to be removed in this exercise:\n' +
 					Array.from(constraints.can_remove).join('\n');
@@ -91,7 +91,7 @@
 		},
 
 		remove: async (file) => {
-			if (!constraints.can_remove.has(file.name)) {
+			if (exercise.a[file.name] && !constraints.can_remove.has(file.name)) {
 				modal_text =
 					'Only the following files and folders are allowed to be deleted in this tutorial chapter:\n' +
 					Array.from(constraints.can_remove).join('\n');
