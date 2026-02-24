@@ -17,7 +17,7 @@ export const SHIKI_LANGUAGE_MAP = {
 	'': '',
 	// already recognised by Shiki but they're here to satisfy TypeScript
 	js: 'js',
-	ts: 'ts',
+	ts: 'ts'
 };
 
 export function is_in_code_block(body: string, index: number) {
