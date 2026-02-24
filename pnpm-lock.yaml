@@ -163,8 +163,8 @@ importers:
         specifier: ^0.30.11
         version: 0.30.21
       marked:
-        specifier: ^14.1.2
-        version: 14.1.2
+        specifier: ^17.0.3
+        version: 17.0.3
       minimatch:
         specifier: ^10.0.1
         version: 10.0.1
@@ -2232,6 +2232,11 @@ packages:
   marked@14.1.2:
     resolution: {integrity: sha512-f3r0yqpz31VXiDB/wj9GaOB0a2PRLQl6vJmXiFrniNwjkKdvakqJRULhjFKJpxOchlCRiG5fcacoUZY5Xa6PEQ==}
     engines: {node: '>= 18'}
+    hasBin: true
+
+  marked@17.0.3:
+    resolution: {integrity: sha512-jt1v2ObpyOKR8p4XaUJVk3YWRJ5n+i4+rjQopxvV32rSndTJXvIzuUdWWIy/1pFQMkQmvTXawzDNqOH/CUmx6A==}
+    engines: {node: '>= 20'}
     hasBin: true
 
   mdast-util-to-hast@13.2.0:
@@ -4981,6 +4986,8 @@ snapshots:
       '@jridgewell/sourcemap-codec': 1.5.5
 
   marked@14.1.2: {}
+
+  marked@17.0.3: {}
 
   mdast-util-to-hast@13.2.0:
     dependencies:
