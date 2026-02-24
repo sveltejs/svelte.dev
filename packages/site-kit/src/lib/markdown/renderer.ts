@@ -59,7 +59,7 @@ const highlighter = await createHighlighterCore({
 		import('@shikijs/langs/svelte'),
 		// used by markdown codeblocks from the express types
 		import('@shikijs/langs/shellsession'), // lang: 'console'
-		import('@shikijs/langs/http'),
+		import('@shikijs/langs/http')
 	],
 	engine: createOnigurumaEngine(import('shiki/wasm'))
 });
