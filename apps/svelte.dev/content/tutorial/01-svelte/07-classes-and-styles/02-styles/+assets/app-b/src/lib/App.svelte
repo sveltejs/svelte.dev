@@ -74,7 +74,7 @@
 
 	.symbol {
 		font-size: 30em;
-		color: var(--fg-1);
+		color: black;
 	}
 
 	.pattern {

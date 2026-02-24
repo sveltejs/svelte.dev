@@ -26,6 +26,17 @@ export const SHIKI_LANGUAGE_MAP = {
 	'': ''
 };
 
+export function is_in_code_block(body: string, index: number) {
+	const code_blocks = [...body.matchAll(/(`{3,}).*\n(.|\n)+?\1/gm)].map((match) => {
+		return [match.index ?? 0, match[0].length + (match.index ?? 0)] as const;
+	});
+
+	return code_blocks.some(([start, end]) => {
+		if (index >= start && index <= end) return true;
+		return false;
+	});
+}
+
 /**
  * Strip styling/links etc from markdown
  */

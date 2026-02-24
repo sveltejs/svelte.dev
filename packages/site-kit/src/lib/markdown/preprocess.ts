@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { SHIKI_LANGUAGE_MAP, strip_origin } from './utils';
-import type { Declaration, TypeElement, Modules } from './index';
+import { SHIKI_LANGUAGE_MAP, strip_origin } from './utils.ts';
+import type { Declaration, TypeElement, Modules } from './index.ts';
 
 /**
  * Replace module/export placeholders during `sync-docs`

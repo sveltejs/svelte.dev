@@ -294,6 +294,72 @@ let { a, b, ...others } = $props();
 
 - Do **NOT** use this unless you are explicitly tasked to create a custom element using Svelte components
 
+### Using await in Svelte
+
+- **Where you can use await**
+
+  - **Top-level `<script>`**: `await` directly in component script.
+  - **Inside `$derived(...)`**.
+  - **Inside markup**: inline `await` expressions.
+
+```svelte
+<script>
+  import { getNumber, isEven, makeDouble } from './number';
+
+  let count = $state(0);
+  let double = $derived(await makeDouble(double));
+</script>
+
+<button onclick={() => count++}>increment<button>
+
+<p>{await getNumber(count)} * 2 = {double}</p>
+{#if await isEven(id)}
+  <p>even</p>
+{/if}
+```
+
+- **Enable the feature**
+  - Add `experimental.async: true` to `svelte.config.js`:
+
+```js
+/// file: svelte.config.js
+export default {
+	compilerOptions: {
+		experimental: {
+			async: true
+		}
+	}
+};
+```
+
+- The flag is experimental in 5.36; it will be removed in Svelte 6.
+
+- **Boundary requirement**
+  - You can only use `await` inside a `<svelte:boundary>` that has a `pending` snippet:
+
+```svelte
+<svelte:boundary>
+	<MyApp />
+
+	{#snippet pending()}
+		<p>loading...</p>
+	{/snippet}
+</svelte:boundary>
+```
+
+- Restriction will lift when async SSR is supported.
+
+#### Behavior
+
+- If an `await` depends on state, Svelte defers UI updates that read that state until the async work finishes.
+- Fast updates can overtake slow ones; results reflect the latest completed work.
+- **Script awaits are normal JS**: sequential unless you parallelize them yourself.
+- **$derived awaits**: first run sequentially, then update independently.
+- Expect an `await_waterfall` warning if you accidentally serialize independent work.
+- Boundary's `pending` snippet shows a loading placeholder while boundary first loads.
+- Use `$effect.pending()` to detect ongoing async work.
+- Errors from `await` bubble to the nearest `<svelte:boundary>` (acts as an error boundary).
+
 ### {#snippet ...}
 
 - **Definition & Usage:**  

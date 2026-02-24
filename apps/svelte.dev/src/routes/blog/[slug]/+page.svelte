@@ -15,7 +15,7 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={data.metadata.title} />
 	<meta name="twitter:description" content={data.metadata.description} />
-	<meta name="Description" content={data.metadata.description} />
+	<meta name="description" content={data.metadata.description} />
 
 	<meta name="twitter:image" content="https://svelte.dev/blog/{$page.params.slug}/card.png" />
 	<meta name="og:image" content="https://svelte.dev/blog/{$page.params.slug}/card.png" />

@@ -10,8 +10,10 @@
 	import Chrome from './Chrome.svelte';
 	import Loading from './Loading.svelte';
 	import { adapter_state, subscribe, reset } from './adapter.svelte';
+	import { SplitPane, type Length } from '@rich_harris/svelte-split-pane';
 	import type { Exercise } from '$lib/tutorial';
 	import type { Workspace } from '@sveltejs/repl/workspace';
+	import { Spring } from 'svelte/motion';
 
 	interface Props {
 		exercise: Exercise;
@@ -25,7 +27,11 @@
 	let loading = $state(true);
 	let terminal_visible = $state(false);
 
+	let last_pos = 20;
+	let pos = Spring.of(() => (terminal_visible ? last_pos : 100));
+
 	// reset `path` to `exercise.path` each time, but allow it to be controlled by the iframe
+	// svelte-ignore state_referenced_locally
 	let path = $state(exercise.path);
 
 	onMount(() => {
@@ -123,6 +129,10 @@
 		set_iframe_src(adapter_state.base + path);
 	}}
 	toggle_terminal={() => {
+		if (terminal_visible) {
+			last_pos = pos.current;
+		}
+
 		terminal_visible = !terminal_visible;
 	}}
 	change={(e) => {
@@ -135,27 +145,39 @@
 />
 
 <div class="content">
-	{#if browser}
-		<iframe bind:this={iframe} title="Output" onload={set_iframe_visible}></iframe>
-	{/if}
+	<SplitPane
+		min="50px"
+		type="vertical"
+		disabled={!terminal_visible}
+		max={terminal_visible ? '80%' : '100%'}
+		bind:pos={() => (pos.current + '%') as Length, (v) => pos.set(parseFloat(v), { instant: true })}
+	>
+		{#snippet a()}
+			{#if browser}
+				<iframe bind:this={iframe} title="Output" onload={set_iframe_visible}></iframe>
+			{/if}
 
-	{#if paused || loading || adapter_state.error}
-		<Loading
-			{initial}
-			error={adapter_state.error}
-			progress={adapter_state.progress.value}
-			status={adapter_state.progress.text}
-			onreset={() => {
-				reset(workspace.files);
-			}}
-		/>
-	{/if}
+			{#if paused || loading || adapter_state.error}
+				<Loading
+					{initial}
+					error={adapter_state.error}
+					progress={adapter_state.progress.value}
+					status={adapter_state.progress.text}
+					onreset={() => {
+						reset(workspace.files);
+					}}
+				/>
+			{/if}
+		{/snippet}
 
-	<div class="terminal" class:visible={terminal_visible}>
-		{#each adapter_state.logs as log}
-			<div>{@html log}</div>
-		{/each}
-	</div>
+		{#snippet b()}
+			<div class="terminal" class:visible={terminal_visible}>
+				{#each adapter_state.logs as log}
+					<div>{@html log}</div>
+				{/each}
+			</div>
+		{/snippet}
+	</SplitPane>
 </div>
 
 <style>
@@ -170,6 +192,10 @@
 		--menu-width: 5.4rem;
 	}
 
+	.content :global(svelte-split-pane-section) {
+		overflow: hidden;
+	}
+
 	iframe {
 		width: 100%;
 		height: 100%;
@@ -181,48 +207,20 @@
 	}
 
 	.terminal {
-		position: absolute;
-		left: 0;
-		bottom: 0;
+		position: relative;
 		width: 100%;
-		height: 80%;
+		height: 100%;
 		font: var(--sk-font-mono);
 		padding: 1rem;
 		border-top: 1px solid var(--sk-border);
 		background: rgba(255, 255, 255, 0.5);
-		transform: translate(0, 100%);
-		-webkit-transform: translate3d(0, 100%, 0.01);
-		transition: transform 0.3s;
 		backdrop-filter: blur(3px);
 		overflow-y: auto;
 	}
 
-	.terminal::after {
-		--thickness: 6px;
-		--shadow: transparent;
-		content: '';
-		display: block;
-		position: absolute;
-		width: 100%;
-		height: var(--thickness);
-		left: 0;
-		top: calc(-1 * var(--thickness));
-		background-image: linear-gradient(to bottom, transparent, var(--shadow));
-		pointer-events: none;
-	}
-
-	.terminal.visible {
-		transform: none;
-		-webkit-transform: none;
-	}
-
-	.terminal.visible::after {
-		--shadow: rgba(0, 0, 0, 0.05);
-	}
-
 	@media (prefers-color-scheme: dark) {
 		.terminal {
-			background: rgba(0, 0, 0, 0.5);
+			background: rgba(0, 0, 0, 0.1);
 		}
 	}
 </style>

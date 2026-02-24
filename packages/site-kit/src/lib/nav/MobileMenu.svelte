@@ -18,6 +18,7 @@
 
 	let { links, current, onclose }: Props = $props();
 
+	// svelte-ignore state_referenced_locally
 	let show_context_menu = $state(!!current?.sections);
 
 	let nav_context_instance: ReturnType<typeof MobileSubMenu> | undefined = $state();
@@ -28,6 +29,7 @@
 
 	let universal_menu: HTMLElement | undefined = $state();
 
+	// svelte-ignore state_referenced_locally
 	afterNavigate(onclose);
 
 	$effect(() => {
@@ -146,8 +148,10 @@
 
 						<ul>
 							<li><a href="/chat">Discord</a></li>
-							<li><a href="https://bsky.app/profile/sveltesociety.dev">Bluesky</a></li>
-							<li><a href="https://github.com/sveltejs/svelte">GitHub</a></li>
+							<li><a href="https://bsky.app/profile/svelte.dev">Bluesky</a></li>
+							<li>
+								<a href="https://github.com/sveltejs">GitHub</a>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -308,6 +312,7 @@
 		width: 50%;
 		height: 4.8rem;
 		padding: 0 var(--sk-page-padding-side);
+		z-index: 10;
 	}
 
 	.universal .contents,

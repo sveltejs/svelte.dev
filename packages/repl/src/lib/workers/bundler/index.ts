@@ -44,25 +44,21 @@ const ESM_ENV = '__esm-env.js';
 
 let current_id: number;
 
-let ready: ReturnType<typeof load_svelte>;
-
 self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) => {
 	switch (event.data.type) {
 		case 'init': {
-			ready = load_svelte(event.data.svelte_version, (version) => {
-				self.postMessage({
-					type: 'version',
-					message: version
-				});
-			});
-
+			get_svelte(event.data.svelte_version);
 			break;
 		}
 
 		case 'bundle': {
 			try {
-				const { svelte, version: svelte_version, can_use_experimental_async } = await ready;
 				const { uid, files, options } = event.data;
+				const {
+					svelte,
+					version: svelte_version,
+					can_use_experimental_async
+				} = await get_svelte(options.svelte_version);
 
 				current_id = uid;
 
@@ -80,7 +76,11 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 
 					console.log('[bundle worker result]', result);
 
-					if (JSON.stringify(result.error) === JSON.stringify(ABORT)) return;
+					// error object might be augmented, see https://github.com/rollup/rollup/blob/76a3b8ede4729a71eb522fc29f7d550a4358827b/docs/plugin-development/index.md#thiserror,
+					// hence only check that the specific abort property we set is there
+					if ((result.error as any)?.svelte_bundler_aborted === ABORT.svelte_bundler_aborted) {
+						return;
+					}
 					if (result && uid === current_id) postMessage(result);
 				});
 			} catch (e) {
@@ -96,7 +96,26 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 	}
 });
 
-const ABORT = { aborted: true };
+let ready: ReturnType<typeof load_svelte>;
+let ready_version: string;
+
+function get_svelte(svelte_version: string) {
+	if (ready_version === svelte_version) return ready;
+
+	self.postMessage({ type: 'status', message: `fetching svelte@${svelte_version}` });
+	ready_version = svelte_version;
+	ready = load_svelte(svelte_version || 'latest');
+	ready.then(({ version }) => {
+		ready_version = version;
+		self.postMessage({
+			type: 'version',
+			message: version
+		});
+	});
+	return ready;
+}
+
+const ABORT = { svelte_bundler_aborted: true };
 
 let previous: {
 	key: string;

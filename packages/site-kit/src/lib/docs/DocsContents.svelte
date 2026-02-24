@@ -15,12 +15,13 @@
 	afterNavigate(({ from, to }) => {
 		// TODO the fact that we're referencing route IDs from the app indicates
 		// that this doesn't belong in site-kit, but that's a problem for another day
+		// @ts-ignore
 		if (from?.route.id !== '/docs/[...path]') {
 			return;
 		}
 
-		const from_package = from.params!.path.split('/')[0];
-		const to_package = to!.params!.path.split('/')[0];
+		const from_package = from.params!.path!.split('/')[0];
+		const to_package = to!.params!.path!.split('/')[0];
 
 		if (from_package !== to_package) {
 			nav.scrollTo(0, 0);

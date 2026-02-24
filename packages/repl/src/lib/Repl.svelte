@@ -25,6 +25,10 @@
 		onversion?: (version: string) => void;
 		onchange?: () => void;
 		download?: () => void;
+		/**
+		 * Invoked whenever there's a bundler or runtime error
+		 */
+		onerror?: (error: Error) => void;
 	}
 
 	let {
@@ -40,7 +44,8 @@
 		previewTheme = 'light',
 		onversion,
 		onchange = () => {},
-		download
+		download,
+		onerror
 	}: Props = $props();
 
 	// TODO pass in real data
@@ -54,6 +59,7 @@
 
 	const workspace: Workspace = new Workspace([dummy], {
 		initial: 'App.svelte',
+		// svelte-ignore state_referenced_locally
 		svelte_version: svelteVersion,
 		onupdate() {
 			rebundle();
@@ -108,6 +114,7 @@
 
 	function rebundle() {
 		return bundler!.bundle(workspace.files as File[], {
+			svelte_version: workspace.svelte_version,
 			tailwind: workspace.tailwind,
 			fragments: workspace.compiler_options.fragments,
 			aliases: workspace.aliases
@@ -121,8 +128,6 @@
 			...workspace.current!,
 			contents: migration!.code
 		});
-
-		rebundle();
 	}
 
 	let width = $state(0);
@@ -134,8 +139,12 @@
 
 	const bundler = BROWSER
 		? new Bundler({
+				// svelte-ignore state_referenced_locally
 				svelte_version: svelteVersion,
-				onversion,
+				onversion: (version) => {
+					workspace.set_svelte_version(version);
+					onversion?.(version);
+				},
 				onstatus: (message) => {
 					if (message) {
 						// show bundler status, but only after time has elapsed, to
@@ -179,6 +188,18 @@
 
 	$effect(() => {
 		$toggleable = mobile && orientation === 'columns' && embedded !== 'output-only';
+	});
+
+	$effect(() => {
+		if (runtime_error) {
+			onerror?.(runtime_error);
+		}
+	});
+
+	$effect(() => {
+		if (bundler?.result?.error) {
+			onerror?.(bundler.result.error as Error);
+		}
 	});
 
 	let runes = $derived(
@@ -231,7 +252,7 @@
 						{injectedCSS}
 						{previewTheme}
 						{workspace}
-						runtimeError={status_visible ? runtime_error : null}
+						bind:runtimeError={runtime_error}
 					/>
 				</section>
 			{/snippet}
@@ -256,13 +277,13 @@
 			height: 100%;
 		}
 
-		:global {
-			section {
-				position: relative;
-				padding: var(--sk-pane-controls-height) 0 0 0;
-				height: 100%;
-				box-sizing: border-box;
+		section {
+			position: relative;
+			padding: var(--sk-pane-controls-height) 0 0 0;
+			height: 100%;
+			box-sizing: border-box;
 
+			:global {
 				& > :first-child {
 					position: absolute;
 					top: 0;
@@ -277,11 +298,11 @@
 					height: 100%;
 				}
 			}
+		}
 
-			[data-pane='main'] > svelte-split-pane-divider::after {
-				height: calc(100% - var(--sk-pane-controls-height));
-				top: var(--sk-pane-controls-height);
-			}
+		:global [data-pane='main'] > svelte-split-pane-divider::after {
+			height: calc(100% - var(--sk-pane-controls-height));
+			top: var(--sk-pane-controls-height);
 		}
 	}
 

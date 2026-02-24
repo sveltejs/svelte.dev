@@ -17,7 +17,7 @@ This article isn't in any way intended as criticism of the hard work the CSS-in-
 
 Everything in CSS is global. Because of that, styles intended for one bit of markup often end up affecting another. Because of _that_, developers often resort to wild namespacing conventions (not 'rules', since they're very difficult to enforce) that mostly just increase your risk of RSI.
 
-It gets worse when you're working on a team. No-one dares touch styles authored by someone else, because it's often unclear what they're doing, what markup they apply to, and what disasters will unfold if you remove them.
+It gets worse when you're working on a team. No one dares touch styles authored by someone else, because it's often unclear what they're doing, what markup they apply to, and what disasters will unfold if you remove them.
 
 The consequence of all this is the **append-only stylesheet**. There's no way of knowing which code can safely be removed, so it's common to undo some existing style with another, more specific style — even on relatively small projects.
 

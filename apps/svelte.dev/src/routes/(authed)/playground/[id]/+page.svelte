@@ -17,6 +17,7 @@
 	const STORAGE_KEY = 'svelte:playground';
 
 	let repl = $state() as ReturnType<typeof Repl>;
+	// svelte-ignore state_referenced_locally
 	let name = $state(data.gist.name);
 	let modified = $state(false);
 	let setting_hash: any = null;
@@ -53,7 +54,7 @@
 			repl?.set({
 				// TODO make this munging unnecessary (using JSON instead of structuredClone for better browser compat)
 				files: JSON.parse(JSON.stringify(data.gist.components)).map(munge),
-				tailwind: false // TODO
+				tailwind: data.gist.tailwind ?? false
 			});
 
 			modified = false;
@@ -179,7 +180,7 @@
 
 	<meta name="twitter:title" content="{data.gist.name} • Playground • Svelte" />
 	<meta name="twitter:description" content="Web development for the rest of us" />
-	<meta name="Description" content="Interactive Svelte playground" />
+	<meta name="description" content="Interactive Svelte playground" />
 </svelte:head>
 
 <svelte:window

@@ -1,0 +1,20 @@
+{
+  "name": "@evidence-dev/evidence",
+  "npm_description": "dependencies for evidence projects",
+  "repo_url": "",
+  "authors": [
+    "archiewood",
+    "mcrascal",
+    "hughess",
+    "charles-evidence"
+  ],
+  "version": "40.1.8",
+  "downloads": 20422,
+  "github_stars": 0,
+  "updated": "2026-02-06T16:07:30.925Z",
+  "svelte_range": "4.2.19",
+  "kit_range": "2.8.4",
+  "typescript": true,
+  "runes": false,
+  "last_rune_check_version": "40.1.2"
+}
