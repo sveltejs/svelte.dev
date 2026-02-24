@@ -551,12 +551,14 @@ Use:
   ```js
   await getPosts().refresh();
   ```
+
   - Client-driven: customize with `enhance` and `submit().updates(...)`:
   ```svelte
   <form {...createPost.enhance(async ({ submit }) => {
   	await submit().updates(getPosts());
   })}>
   ```
+
   - Optimistic UI: use `withOverride`:
   ```js
   await submit().updates(getPosts().withOverride((posts) => [newPost, ...posts]));

@@ -39,7 +39,7 @@
 <div class="content">
 	<SplitPane
 		min="50px"
-		type="vertical"
+		type="columns"
 		disabled={!terminal_visible}
 		max={terminal_visible ? '80%' : '100%'}
 		bind:pos={() => (pos.current + '%') as Length, (v) => pos.set(parseFloat(v), { instant: true })}
