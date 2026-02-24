@@ -167,6 +167,25 @@
 	let a = $derived(create_files(data.exercise.a));
 	let b = $derived(create_files({ ...data.exercise.a, ...data.exercise.b }));
 
+	let constraints = $derived.by(() => {
+		const can_create = new Set(data.exercise.editing_constraints.create ?? []);
+		const can_remove = new Set(data.exercise.editing_constraints.remove ?? []);
+
+		for (const key of Object.keys(a)) {
+			if (!Object.hasOwn(b, key)) {
+				can_remove.add(key);
+			}
+		}
+
+		for (const key of Object.keys(b)) {
+			if (!Object.hasOwn(a, key)) {
+				can_create.add(key);
+			}
+		}
+
+		return { can_create, can_remove };
+	});
+
 	// svelte-ignore state_referenced_locally
 	const workspace = new Workspace(Object.values(a), {
 		initial: data.exercise.focus,
@@ -295,7 +314,7 @@
 											) ?? 'Files'}
 										</button>
 									{:else}
-										<Filetree exercise={data.exercise} {workspace} />
+										<Filetree exercise={data.exercise} {workspace} {constraints} />
 									{/if}
 								</section>
 							{/snippet}
