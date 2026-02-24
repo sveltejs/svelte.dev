@@ -62,17 +62,14 @@ export function decode_html_entities(text: string): string {
 
 export const slugify = (str: string) => {
 	return (
-		decode_html_entities(
-			clean(str)
-				.replace(/(’|&rsquo;)/g, "'")
-				.replace(/&.+?;/g, '')
-		)
+		decode_html_entities(clean(str).replace(/(’|&rsquo;)/g, "'"))
 			// removes <code>...</code> or <em>...</em> etc, but leaves the contents intact
-			.replace(/<([a-z\-]+)>(.*)<\/\1>/g, '$2')
+			.replace(/<([a-z\-]+)>(.*?)<\/\1>/g, '$2')
 			// <audio> should be converted to audio
 			// <details bind:open> should be converted to details-bind-open
 			// <script module> should be converted to script-module
 			// <script lang="ts"> should be converted to script-lang-ts
+
 			.replace(/[<>]/g, '')
 			.replace(/\.\.\./g, '')
 			.replace(/[^a-zA-Z0-9-$(.):'_]/g, '-')
