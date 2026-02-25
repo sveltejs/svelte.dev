@@ -1112,6 +1112,30 @@ You must specify a `path` for the cookie. In most cases you should explicitly se
 <div class="ts-block-property">
 
 ```dts
+setSerialized: (cookie: string) => void;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- `cookie` the serialized cookie
+- <span class="tag since">available since</span> v2.21.0
+
+</div>
+
+Sets a cookie from a string representing the value of the `set-cookie` header. This will add the `set-cookie` header to the response, and also make the cookie available via `cookies.get` or `cookies.getAll` during the current request.
+
+No default values. It will set only properties you specified in a cookie.
+
+If you do not specify name, value and path, it will throw an error.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
 delete: (name: string, opts: import('cookie').CookieSerializeOptions & { path: string }) => void;
 ```
 
