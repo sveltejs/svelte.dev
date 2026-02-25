@@ -163,8 +163,8 @@ importers:
         specifier: ^0.30.11
         version: 0.30.21
       marked:
-        specifier: ^14.1.2
-        version: 14.1.2
+        specifier: ^17.0.3
+        version: 17.0.3
       minimatch:
         specifier: ^10.0.1
         version: 10.0.1
@@ -296,8 +296,8 @@ importers:
         specifier: ^0.30.0
         version: 0.30.21
       marked:
-        specifier: ^14.1.2
-        version: 14.1.2
+        specifier: ^17.0.3
+        version: 17.0.3
       resolve.exports:
         specifier: ^2.0.2
         version: 2.0.2
@@ -436,8 +436,8 @@ importers:
         specifier: ^0.30.11
         version: 0.30.21
       marked:
-        specifier: ^14.1.2
-        version: 14.1.2
+        specifier: ^17.0.3
+        version: 17.0.3
       prettier:
         specifier: ^3.3.2
         version: 3.3.2
@@ -2229,9 +2229,9 @@ packages:
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
 
-  marked@14.1.2:
-    resolution: {integrity: sha512-f3r0yqpz31VXiDB/wj9GaOB0a2PRLQl6vJmXiFrniNwjkKdvakqJRULhjFKJpxOchlCRiG5fcacoUZY5Xa6PEQ==}
-    engines: {node: '>= 18'}
+  marked@17.0.3:
+    resolution: {integrity: sha512-jt1v2ObpyOKR8p4XaUJVk3YWRJ5n+i4+rjQopxvV32rSndTJXvIzuUdWWIy/1pFQMkQmvTXawzDNqOH/CUmx6A==}
+    engines: {node: '>= 20'}
     hasBin: true
 
   mdast-util-to-hast@13.2.0:
@@ -4980,7 +4980,7 @@ snapshots:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  marked@14.1.2: {}
+  marked@17.0.3: {}
 
   mdast-util-to-hast@13.2.0:
     dependencies:

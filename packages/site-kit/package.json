@@ -50,7 +50,7 @@
 		"@types/node": "^20.19.0",
 		"flexsearch": "^0.7.43",
 		"magic-string": "^0.30.11",
-		"marked": "^14.1.2",
+		"marked": "^17.0.3",
 		"prettier": "^3.3.2",
 		"prettier-plugin-svelte": "^3.3.2",
 		"svelte": "^5.38.2",
