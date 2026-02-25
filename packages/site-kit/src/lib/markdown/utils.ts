@@ -1,17 +1,23 @@
 import { Marked, type Renderer, type TokenizerObject, type MarkedExtension } from 'marked';
 import json5 from 'json5';
 
+// helps map a highlighter for languages not recognised or aliased by Shiki
+// see https://shiki.style/languages for a full list of official languages
 export const SHIKI_LANGUAGE_MAP = {
-	bash: 'bash',
-	env: 'bash',
+	env: 'dotenv',
 	html: 'svelte',
-	svelte: 'svelte',
 	sv: 'svelte',
-	js: 'javascript',
 	dts: 'typescript',
-	css: 'css',
-	ts: 'typescript',
-	'': ''
+	json: 'jsonc',
+	// we don't need the coffeescript highlighter because it's only used once
+	// in a blog post from 2019
+	cson: '',
+	// there's no syntax highlighter for tree syntax
+	tree: '',
+	'': '',
+	// already recognised by Shiki but they're here to satisfy TypeScript
+	js: 'js',
+	ts: 'ts'
 };
 
 export function is_in_code_block(body: string, index: number) {
