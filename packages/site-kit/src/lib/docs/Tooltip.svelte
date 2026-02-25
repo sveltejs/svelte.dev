@@ -105,6 +105,16 @@
 					font: var(--sk-font-mono);
 				}
 			}
+
+			/* Disable highlight styles inside tooltips (popup content) */
+			.highlight,
+			.highlight.add,
+			.highlight.remove {
+				--color: transparent !important;
+				background: transparent !important;
+				outline: none !important;
+				border-radius: 0 !important;
+			}
 		}
 	}
 

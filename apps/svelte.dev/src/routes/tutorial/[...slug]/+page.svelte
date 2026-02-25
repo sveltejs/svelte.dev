@@ -19,6 +19,7 @@
 
 	let { data }: PageProps = $props();
 
+	// svelte-ignore state_referenced_locally
 	let path = data.exercise.path;
 	let show_editor = $state(false);
 	let show_filetree = $state(false);
@@ -166,6 +167,25 @@
 	let a = $derived(create_files(data.exercise.a));
 	let b = $derived(create_files({ ...data.exercise.a, ...data.exercise.b }));
 
+	let constraints = $derived.by(() => {
+		const can_create = new Set(data.exercise.editing_constraints.create ?? []);
+		const can_remove = new Set(data.exercise.editing_constraints.remove ?? []);
+
+		for (const key of Object.keys(a)) {
+			if (!Object.hasOwn(b, key)) {
+				can_remove.add(key);
+			}
+		}
+
+		for (const key of Object.keys(b)) {
+			if (!Object.hasOwn(a, key)) {
+				can_create.add(key);
+			}
+		}
+
+		return { can_create, can_remove };
+	});
+
 	// svelte-ignore state_referenced_locally
 	const workspace = new Workspace(Object.values(a), {
 		initial: data.exercise.focus,
@@ -266,6 +286,7 @@
 					<Sidebar
 						bind:sidebar
 						exercise={data.exercise}
+						related={data.related}
 						on:select={(e) => {
 							navigate_to_file(e.detail.file);
 						}}
@@ -279,9 +300,9 @@
 						<SplitPane
 							id="editor"
 							type={mobile ? 'vertical' : 'horizontal'}
-							min="120px"
-							max="300px"
-							pos="200px"
+							min={mobile ? '40px' : '120px'}
+							max={mobile ? '40px' : '300px'}
+							pos={mobile ? '40px' : '200px'}
 						>
 							{#snippet a()}
 								<section class="navigator">
@@ -293,7 +314,7 @@
 											) ?? 'Files'}
 										</button>
 									{:else}
-										<Filetree exercise={data.exercise} {workspace} />
+										<Filetree exercise={data.exercise} {workspace} {constraints} />
 									{/if}
 								</section>
 							{/snippet}
@@ -315,7 +336,7 @@
 
 									{#if mobile && show_filetree}
 										<div class="mobile-filetree">
-											<Filetree mobile exercise={data.exercise} {workspace} />
+											<Filetree mobile exercise={data.exercise} {workspace} {constraints} />
 										</div>
 									{/if}
 								</section>
@@ -415,16 +436,9 @@
 		background-color: var(--sk-bg-3);
 	}
 
-	.mobile .navigator {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		padding: 1rem;
-		gap: 1rem;
-	}
-
 	.mobile .navigator .file {
 		flex: 1;
+		padding: 1rem;
 		text-align: left;
 		white-space: nowrap;
 		overflow: hidden;
@@ -446,6 +460,7 @@
 	/* on mobile, override the <SplitPane> controls */
 	@media (max-width: 799px) {
 		:global([data-pane='main']) {
+			--min: 0px !important;
 			--pos: 50% !important;
 		}
 

@@ -1,24 +1,34 @@
 import { read } from '$app/server';
+import { PACKAGES_META } from '$lib/packages-meta';
 import type { Document, DocumentSummary } from '@sveltejs/site-kit';
 import { create_index } from '@sveltejs/site-kit/server/content';
+import crosslinked from './generated/crosslinked.json';
+import type { RelatedLink } from '$lib/types';
 
-const documents = import.meta.glob<string>('../../../content/**/*.md', {
+const documents = import.meta.glob<string>('./**/*.md', {
 	eager: true,
 	query: '?url',
-	import: 'default'
+	import: 'default',
+	base: '../../../content'
 });
 
-const assets = import.meta.glob<string>(
-	['../../../content/**/+assets/**', '../../../content/**/+assets/**/.env'],
+const assets = import.meta.glob<string>(['./**/+assets/**', './**/+assets/**/.env'], {
+	eager: true,
+	query: '?url',
+	import: 'default',
+	base: '../../../content'
+});
+
+const registry_docs = import.meta.glob<string>(
+	'../../../src/lib/server/generated/registry/*.json',
 	{
 		eager: true,
-		query: '?url',
+		query: '?raw',
 		import: 'default'
 	}
 );
 
-// https://github.com/vitejs/vite/issues/17453
-export const index = await create_index(documents, assets, '../../../content', read);
+export const index = await create_index(documents, assets, read);
 
 const months = 'Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split(' ');
 
@@ -86,7 +96,9 @@ function create_docs() {
 		topics: Record<string, Document>;
 		/** The docs pages themselves. Key is the topic + page */
 		pages: Record<string, Document>;
-	} = { topics: {}, pages: {} };
+		/** References map to their documentation URLs */
+		references: Record<string, string>;
+	} = { topics: {}, pages: {}, references: {} };
 
 	for (const topic of index.docs.children) {
 		const pkg = topic.slug.split('/')[1];
@@ -124,6 +136,13 @@ function create_docs() {
 				});
 
 				transformed_section.children.push(transformed_page);
+
+				// Build references map for reference pages
+				const baseUrl = `/${slug}`;
+				for (const section of page.sections) {
+					const url = `${baseUrl}#${section.slug}`;
+					docs.references[section.title] = url;
+				}
 			}
 		}
 	}
@@ -142,3 +161,149 @@ export function create_summary(document: Document): DocumentSummary {
 export const docs = create_docs();
 
 export const examples = index.examples.children;
+
+/**
+ * Represents a Svelte package in the registry
+ */
+export interface Package
+	extends PackageKey,
+		PackageManual,
+		PackageNpm,
+		PackageGithub,
+		PackageCalculated {}
+
+export interface PackageKey {
+	/** Package name */
+	name: string;
+}
+
+export interface PackageManual {
+	description?: string;
+
+	/** sv info */
+	svAlias?: string;
+	svOptions?: string;
+}
+
+export interface PackageDefinition extends PackageKey, PackageManual {}
+
+export interface PackageNpm {
+	/** Package description (HTML formatted) */
+	npm_description?: string;
+
+	/** Repository URL (typically GitHub) */
+	repo_url?: string;
+
+	/** Author username */
+	authors?: string[];
+
+	/** Homepage URL */
+	homepage?: string;
+
+	/** Latest version */
+	version: string;
+
+	/** Why the package is deprecated */
+	deprecated_reason: false | string;
+
+	/** Weekly download count */
+	downloads?: number;
+
+	/** Last update timestamp */
+	updated: string;
+
+	/** Svelte version range */
+	svelte_range?: string;
+
+	/** SvelteKit version range */
+	kit_range?: string;
+
+	// SHOULD BE CALCULATED WHEN GET FROM NPM
+	/** @deprecated */
+	typescript?: boolean;
+	// SHOULD BE CALCULATED WHEN GET FROM NPM
+	/** @deprecated */
+	runes?: boolean;
+	// SHOULD BE DELETED (in *.json files as well)
+	/** @deprecated */
+	last_rune_check_version?: string;
+}
+
+export interface PackageGithub {
+	/** Number of GitHub stars */
+	github_stars?: number;
+}
+
+export interface PackageCalculated {
+	description?: string;
+	official?: boolean;
+	outdated?: boolean;
+	svelte: {
+		3: boolean;
+		4: boolean;
+		5: boolean;
+	};
+}
+
+export interface Category {
+	title: string;
+	hash: string;
+	description?: string;
+	packages: Package[];
+}
+
+function create_registry() {
+	let output: Package[] = [];
+
+	for (const frontmatter of Object.values(registry_docs)) {
+		const json = JSON.parse(frontmatter);
+
+		json.description = PACKAGES_META.calculate_description(json);
+		json.homepage = PACKAGES_META.calculate_homepage(json);
+		json.official = PACKAGES_META.is_official(json.name);
+		json.outdated = PACKAGES_META.is_outdated(json.updated);
+		json.svelte = PACKAGES_META.supports_svelte_versions(json.svelte_range);
+
+		output.push(json as unknown as Package);
+	}
+
+	return output;
+}
+
+export const registry = create_registry();
+
+const crosslinks_by_path: Map<string, RelatedLink> = new Map();
+const crosslinks_by_tag: Map<string, RelatedLink[]> = new Map();
+
+for (const page of crosslinked) {
+	crosslinks_by_path.set(page.path, page);
+
+	for (const tag of page.tags) {
+		let by_tag = crosslinks_by_tag.get(tag);
+
+		if (by_tag === undefined) {
+			by_tag = [];
+			crosslinks_by_tag.set(tag, by_tag);
+		}
+
+		by_tag.push(page);
+	}
+}
+
+export function get_related_links(path: string) {
+	const page = crosslinks_by_path.get(path);
+	if (!page) return;
+
+	const result: Set<RelatedLink> = new Set();
+
+	for (const tag of page.tags) {
+		const related = crosslinks_by_tag.get(tag)!;
+
+		for (const p of related) {
+			if (p === page) continue;
+			result.add(p);
+		}
+	}
+
+	return result.size > 0 ? Array.from(result) : undefined;
+}

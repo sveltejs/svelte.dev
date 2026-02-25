@@ -9,19 +9,22 @@ const nav_links: NavigationLink[] = [
 	{
 		title: 'Docs',
 		slug: 'docs',
-		sections: [docs.topics['docs/svelte'], docs.topics['docs/kit'], docs.topics['docs/cli']].map(
-			(topic) => ({
-				title: topic.metadata.title,
-				path: '/' + topic.slug, // this will make the UI show a flyout menu for the docs nav entry
-				sections: topic.children.map((section) => ({
-					title: section.metadata.title,
-					sections: section.children.map((page) => ({
-						title: page.metadata.title,
-						path: '/' + page.slug
-					}))
+		sections: [
+			docs.topics['docs/svelte'],
+			docs.topics['docs/kit'],
+			docs.topics['docs/cli'],
+			docs.topics['docs/mcp']
+		].map((topic) => ({
+			title: topic.metadata.title,
+			path: '/' + topic.slug, // this will make the UI show a flyout menu for the docs nav entry
+			sections: topic.children.map((section) => ({
+				title: section.metadata.title,
+				sections: section.children.map((page) => ({
+					title: page.metadata.title,
+					path: '/' + page.slug
 				}))
-			})
-		)
+			}))
+		}))
 	},
 	{
 		title: 'Tutorial',
@@ -40,6 +43,10 @@ const nav_links: NavigationLink[] = [
 				}))
 			}))
 		}))
+	},
+	{
+		title: 'Packages',
+		slug: 'packages'
 	},
 	{
 		title: 'Playground',

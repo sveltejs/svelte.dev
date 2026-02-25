@@ -31,6 +31,10 @@ function render<
 					props?: Omit<Props, '$$slots' | '$$events'>;
 					context?: Map<any, any>;
 					idPrefix?: string;
+					csp?: Csp;
+					transformError?: (
+						error: unknown
+					) => unknown | Promise<unknown>;
 				}
 			]
 		: [
@@ -41,6 +45,10 @@ function render<
 					props: Omit<Props, '$$slots' | '$$events'>;
 					context?: Map<any, any>;
 					idPrefix?: string;
+					csp?: Csp;
+					transformError?: (
+						error: unknown
+					) => unknown | Promise<unknown>;
 				}
 			]
 ): RenderOutput;

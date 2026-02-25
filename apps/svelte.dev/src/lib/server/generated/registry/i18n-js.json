@@ -1,0 +1,16 @@
+{
+  "name": "i18n-js",
+  "npm_description": "A small library to provide I18n on JavaScript.",
+  "repo_url": "https://github.com/fnando/i18n",
+  "authors": [
+    "fnando"
+  ],
+  "homepage": "https://github.com/fnando/i18n#readme",
+  "version": "4.5.2",
+  "downloads": 421240,
+  "github_stars": 226,
+  "updated": "2026-02-05T15:36:14.060Z",
+  "typescript": true,
+  "runes": false,
+  "last_rune_check_version": "4.5.0"
+}

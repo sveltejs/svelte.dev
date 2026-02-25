@@ -12,9 +12,13 @@
 		exercise: Exercise;
 		mobile?: boolean;
 		workspace: Workspace;
+		constraints: {
+			can_create: Set<string>;
+			can_remove: Set<string>;
+		};
 	}
 
-	let { exercise, mobile = false, workspace }: Props = $props();
+	let { exercise, mobile = false, workspace, constraints }: Props = $props();
 
 	const hidden = new Set(['__client.js', 'node_modules', '__delete']);
 
@@ -37,10 +41,10 @@
 				return;
 			}
 
-			if (!expected && !exercise.editing_constraints.create.has(name)) {
+			if (!constraints.can_create.has(name)) {
 				modal_text =
 					'Only the following files and folders are allowed to be created in this exercise:\n' +
-					Array.from(exercise.editing_constraints.create).join('\n');
+					Array.from(constraints.can_create).join('\n');
 				return;
 			}
 
@@ -68,17 +72,17 @@
 				return;
 			}
 
-			if (!$solution[new_full_name] && !exercise.editing_constraints.create.has(new_full_name)) {
+			if (!constraints.can_create.has(new_full_name)) {
 				modal_text =
 					'Only the following files and folders are allowed to be created in this exercise:\n' +
-					Array.from(exercise.editing_constraints.create).join('\n');
+					Array.from(constraints.can_create).join('\n');
 				return;
 			}
 
-			if ($solution[to_rename.name] && !exercise.editing_constraints.remove.has(to_rename.name)) {
+			if (exercise.a[to_rename.name] && !constraints.can_remove.has(to_rename.name)) {
 				modal_text =
 					'Only the following files and folders are allowed to be removed in this exercise:\n' +
-					Array.from(exercise.editing_constraints.remove).join('\n');
+					Array.from(constraints.can_remove).join('\n');
 				return;
 			}
 
@@ -87,10 +91,10 @@
 		},
 
 		remove: async (file) => {
-			if ($solution[file.name] && !exercise.editing_constraints.remove.has(file.name)) {
+			if (exercise.a[file.name] && !constraints.can_remove.has(file.name)) {
 				modal_text =
 					'Only the following files and folders are allowed to be deleted in this tutorial chapter:\n' +
-					Array.from(exercise.editing_constraints.remove).join('\n');
+					Array.from(constraints.can_remove).join('\n');
 				return;
 			}
 
@@ -101,6 +105,7 @@
 			workspace.select(name);
 		},
 
+		// svelte-ignore state_referenced_locally
 		workspace
 	});
 
