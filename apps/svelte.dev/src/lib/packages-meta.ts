@@ -23,7 +23,11 @@ const FEATURED: {
 				description:
 					'A Markdown preprocessor that lets you put Markdown in your Svelte and Svelte in your Markdown'
 			},
-			{ name: 'lucia', svAlias: 'lucia', description: 'Session-based password auth using Drizzle' },
+			{
+				name: 'better-auth',
+				svAlias: 'better-auth',
+				description: 'Authentication and authorization framework'
+			},
 			{
 				name: 'storybook',
 				svAlias: 'storybook',
@@ -79,7 +83,8 @@ const FEATURED: {
 				name: 'melt',
 				description: 'A low-level headless UI library'
 			},
-			{ name: '@sveltestrap/sveltestrap' }
+			{ name: '@sveltestrap/sveltestrap' },
+			{ name: 'm3-svelte', description: 'An implementation of the Material 3 design system' }
 		]
 	},
 	{
@@ -135,7 +140,18 @@ const FEATURED: {
 				description:
 					'A framework for building and publishing data products using SQL, Markdown, and AI'
 			},
-			{ name: 'svelte-pdf', description: 'Render PDF documents using PDF.js' },
+			{
+				name: '@embedpdf/svelte-pdf-viewer',
+				description: 'Complete, production-ready PDF viewer and editor component.'
+			},
+			{ name: 'svelte-pdf', description: 'Render PDF documents using PDF.js' }
+		]
+	},
+	{
+		title: 'Rich text editing',
+		packages: [
+			{ name: 'prosekit', description: 'Framework agnostic and headless rich text editor' },
+			{ name: 'svelte-lexical', description: 'Rich text editor for Svelte based on lexical' },
 			{ name: 'typewriter-editor' }
 		]
 	},

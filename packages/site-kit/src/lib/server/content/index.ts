@@ -1,11 +1,9 @@
 import { extract_frontmatter, is_in_code_block, slugify, smart_quotes } from '../../markdown/utils';
-import type { Document } from '../../types';
+import type { Document, Section } from '../../types';
 
 export async function create_index(
 	documents: Record<string, string>,
 	assets: Record<string, string>,
-	documents_assets: Record<string, string>,
-	base: string,
 	read: (asset: string) => Response
 ): Promise<Record<string, Document>> {
 	const content: Record<string, Document> = {};
@@ -15,7 +13,7 @@ export async function create_index(
 	for (const key in documents) {
 		if (key.includes('+assets')) continue;
 
-		const file = key.slice(base.length + 1);
+		const file = key.slice(2);
 		const slug = file.replace(/(^|\/)[\d-]+-/g, '$1').replace(/(\/index)?\.md$/, '');
 
 		const text = await read(documents[key]).text();
@@ -32,24 +30,27 @@ export async function create_index(
 				'<code>$1</code>'
 			);
 
-		const sections = Array.from(body.matchAll(/^##\s+(.*)$/gm)).reduce(
-			(arr, match) => {
-				if (is_in_code_block(body, match.index || 0)) return arr;
-				const title = smart_quotes(match[1])
-					// replace < and > inside code spans
-					.replace(/`(.+?)`/g, (_, contents) =>
-						contents.replace(/</g, '&lt;').replace(/>/g, '&gt;')
-					)
-					// turn e.g. `class:_name_` into `class:<em>name</em>`
-					.replace(/_(.+)_/g, (_, contents) => `<em>${contents}</em>`);
+		const sections = Array.from(body.matchAll(/^#{2,3}\s+(.*)$/gm)).reduce((arr, match) => {
+			if (is_in_code_block(body, match.index || 0)) return arr;
+			const title = smart_quotes(match[1])
+				// replace < and > inside code spans
+				.replace(/`(.+?)`/g, (_, contents) => contents.replace(/</g, '&lt;').replace(/>/g, '&gt;'))
+				// turn e.g. `class:_name_` into `class:<em>name</em>`
+				.replace(/:_(.+)_/g, (_, contents) => `:<em>${contents}</em>`);
 
-				const slug = slugify(title);
+			const slug = slugify(title);
 
-				arr.push({ slug, title });
-				return arr;
-			},
-			[] as Array<{ slug: string; title: string }>
-		);
+			if (match[0].startsWith('###')) {
+				const section = arr.at(-1);
+				if (section) {
+					section.subsections.push({ slug: `${section.slug}-${slug}`, title });
+				}
+			} else {
+				arr.push({ slug, title, subsections: [] });
+			}
+
+			return arr;
+		}, [] as Array<Section>);
 
 		content[slug] = {
 			slug,
@@ -92,21 +93,12 @@ export async function create_index(
 	}
 
 	for (const key in assets) {
-		const path = key.slice(base.length + 1);
+		const path = key.slice(2);
 		const slug = path.slice(0, path.indexOf('+assets') - 1).replace(/(^|\/)\d+-/g, '$1');
 		const file = path.slice(path.indexOf('+assets') + 8);
 		const document = content[slug];
 
 		(document.assets ??= {})[file] = assets[key];
-	}
-
-	for (const key in documents_assets) {
-		const path = key.slice(base.length + 1);
-		const slug = path.slice(0, path.indexOf('+assets') - 1).replace(/(^|\/)\d+-/g, '$1');
-		const file = path.slice(path.indexOf('+assets') + 8);
-		const document = content[slug];
-
-		(document.assets ??= {})[file] = documents_assets[key];
 	}
 
 	let prev: Document | null = null;
