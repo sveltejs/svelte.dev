@@ -2387,7 +2387,9 @@ The return value of a remote `command` function. See [Remote functions](/docs/ki
 
 ```dts
 type RemoteCommand<Input, Output> = {
-	(arg: Input): Promise<Awaited<Output>> & {
+	(
+		arg: undefined extends Input ? Input | void : Input
+	): Promise<Awaited<Output>> & {
 		updates(
 			...queries: Array<
 				RemoteQuery<any> | RemoteQueryOverride
@@ -2613,7 +2615,7 @@ The return value of a remote `prerender` function. See [Remote functions](/docs/
 
 ```dts
 type RemotePrerenderFunction<Input, Output> = (
-	arg: Input
+	arg: undefined extends Input ? Input | void : Input
 ) => RemoteResource<Output>;
 ```
 
@@ -2674,7 +2676,7 @@ The return value of a remote `query` function. See [Remote functions](/docs/kit/
 
 ```dts
 type RemoteQueryFunction<Input, Output> = (
-	arg: Input
+	arg: undefined extends Input ? Input | void : Input
 ) => RemoteQuery<Output>;
 ```
 
