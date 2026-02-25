@@ -191,14 +191,14 @@ import * as v from 'valibot';
 import { query } from '$app/server';
 import * as db from '$lib/server/database';
 
-export const getWeather = query.batch(v.string(), async (cityIds) => {
+export const getWeather = query.batch(v.string(), async (cities) => {
 	const weather = await db.sql`
 		SELECT * FROM weather
-		WHERE city_id = ANY(${cityIds})
+		WHERE city = ANY(${cities})
 	`;
-	const lookup = new Map(weather.map(w => [w.city_id, w]));
+	const lookup = new Map(weather.map(w => [w.city, w]));
 
-	return (cityId) => lookup.get(cityId);
+	return (city) => lookup.get(city);
 });
 ```
 
@@ -206,7 +206,7 @@ export const getWeather = query.batch(v.string(), async (cityIds) => {
 <!--- file: Weather.svelte --->
 <script>
 	import CityWeather from './CityWeather.svelte';
-	import { getWeather } from './weather.remote';
+	import { getWeather } from './weather.remote.js';
 
 	let { cities } = $props();
 	let limit = $state(5);
@@ -394,15 +394,12 @@ In the case of `radio` and `checkbox` inputs that all belong to the same field, 
 import * as v from 'valibot';
 import { form } from '$app/server';
 // ---cut---
-export const operatingSystems = /** @type {const} */ (['windows', 'mac', 'linux']);
-export const languages = /** @type {const} */ (['html', 'css', 'js']);
-
 export const survey = form(
 	v.object({
-		operatingSystem: v.picklist(operatingSystems),
-		languages: v.optional(v.array(v.picklist(languages)), []),
+		operatingSystem: v.picklist(['windows', 'mac', 'linux']),
+		languages: v.optional(v.array(v.picklist(['html', 'css', 'js'])), [])
 	}),
-	(data) => { /* ... */ },
+	(data) => { /* ... */ }
 );
 ```
 
@@ -410,7 +407,7 @@ export const survey = form(
 <form {...survey}>
 	<h2>Which operating system do you use?</h2>
 
-	{#each operatingSystems as os}
+	{#each ['windows', 'mac', 'linux'] as os}
 		<label>
 			<input {...survey.fields.operatingSystem.as('radio', os)}>
 			{os}
@@ -419,7 +416,7 @@ export const survey = form(
 
 	<h2>Which languages do you write code in?</h2>
 
-	{#each languages as language}
+	{#each ['html', 'css', 'js'] as language}
 		<label>
 			<input {...survey.fields.languages.as('checkbox', language)}>
 			{language}
@@ -437,17 +434,17 @@ Alternatively, you could use `select` and `select multiple`:
 	<h2>Which operating system do you use?</h2>
 
 	<select {...survey.fields.operatingSystem.as('select')}>
-		{#each operatingSystems as os}
-			<option>{os}</option>
-		{/each}
+		<option>windows</option>
+		<option>mac</option>
+		<option>linux</option>
 	</select>
 
 	<h2>Which languages do you write code in?</h2>
 
 	<select {...survey.fields.languages.as('select multiple')}>
-		{#each languages as language}
-			<option>{language}</option>
-		{/each}
+		<option>html</option>
+		<option>css</option>
+		<option>js</option>
 	</select>
 
 	<button>submit</button>
@@ -458,10 +455,7 @@ Alternatively, you could use `select` and `select multiple`:
 
 ### Programmatic validation
 
-In addition to declarative schema validation, you can programmatically mark fields as invalid inside the form handler using the `invalid` helper from `@sveltejs/kit`. This is useful for cases where you can't know if something is valid until you try to perform some action.
-
-- It throws just like `redirect` or `error`
-- It accepts multiple arguments that can be strings (for issues relating to the form as a whole — these will only show up in `fields.allIssues()`) or standard-schema-compliant issues (for those relating to a specific field). Use the `issue` parameter for type-safe creation of such issues:
+In addition to declarative schema validation, you can programmatically mark fields as invalid inside the form handler using the `invalid` function. This is useful for cases where you can't know if something is valid until you try to perform some action. Just like `redirect` or `error`, `invalid` throws. It expects a list of strings (for issues relating to the form as a whole) or standard-schema-compliant issues (for those relating to a specific field). Use the `issue` parameter for type-safe creation of such issues:
 
 ```js
 /// file: src/routes/shop/data.remote.js
@@ -490,6 +484,12 @@ export const buyHotcakes = form(
 	}
 );
 ```
+
+The `invalid` function works as both a function and a proxy:
+
+- Call `invalid(issue1, issue2, ...issueN)` to throw a validation error
+- If an issue is a `string`, it applies to the form as a whole (and will show up in `fields.allIssues()`)
+- Use `invalid.fieldName(message)` to create an issue for a specific field. Like `fields` this is type-safe and you can use regular property access syntax to create issues for deeply nested objects (e.g. `invalid.profile.email('Email already exists')` or `invalid.items[0].qty('Insufficient stock')`)
 
 ### Validation
 
@@ -819,56 +819,37 @@ Some forms may be repeated as part of a list. In this case you can create separa
 {/each}
 ```
 
-### Multiple submit buttons
+### buttonProps
 
-It's possible for a `<form>` to have multiple submit buttons. For example, you might have a single form that allows you to log in or register depending on which button was clicked.
+By default, submitting a form will send a request to the URL indicated by the `<form>` element's [`action`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/form#attributes_for_form_submission) attribute, which in the case of a remote function is a property on the form object generated by SvelteKit.
 
-To accomplish this, add a field to your schema for the button value, and use `as('submit', value)` to bind it:
+It's possible for a `<button>` inside the `<form>` to send the request to a _different_ URL, using the [`formaction`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button#formaction) attribute. For example, you might have a single form that allows you to log in or register depending on which button was clicked.
+
+This attribute exists on the `buttonProps` property of a form object:
 
 ```svelte
 <!--- file: src/routes/login/+page.svelte --->
 <script>
-	import { loginOrRegister } from '$lib/auth';
+	import { login, register } from '$lib/auth.remote';
 </script>
 
-<form {...loginOrRegister}>
+<form {...login}>
 	<label>
 		Your username
-		<input {...loginOrRegister.fields.username.as('text')} />
+		<input {...login.fields.username.as('text')} />
 	</label>
 
 	<label>
 		Your password
-		<input {...loginOrRegister.fields._password.as('password')} />
+		<input {...login.fields._password.as('password')} />
 	</label>
 
-	<button {...loginOrRegister.fields.action.as('submit', 'login')}>login</button>
-	<button {...loginOrRegister.fields.action.as('submit', 'register')}>register</button>
+	<button>login</button>
+	<button {...register.buttonProps}>register</button>
 </form>
 ```
 
-In your form handler, you can check which button was clicked:
-
-```js
-/// file: $lib/auth.js
-import * as v from 'valibot';
-import { form } from '$app/server';
-
-export const loginOrRegister = form(
-	v.object({
-		username: v.string(),
-		_password: v.string(),
-		action: v.picklist(['login', 'register'])
-	}),
-	async ({ username, _password, action }) => {
-		if (action === 'login') {
-			// handle login
-		} else {
-			// handle registration
-		}
-	}
-);
-```
+Like the form object itself, `buttonProps` has an `enhance` method for customizing submission behaviour.
 
 ## command
 
