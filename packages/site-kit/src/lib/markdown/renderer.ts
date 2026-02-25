@@ -56,11 +56,18 @@ const highlighter = await createHighlighterCore({
 	langs: [
 		import('@shikijs/langs/javascript'),
 		import('@shikijs/langs/typescript'),
-		import('@shikijs/langs/html'),
+		import('@shikijs/langs/svelte'),
 		import('@shikijs/langs/css'),
 		import('@shikijs/langs/bash'),
 		import('@shikijs/langs/yaml'),
-		import('@shikijs/langs/svelte')
+		import('@shikijs/langs/toml'),
+		import('@shikijs/langs/ini'),
+		import('@shikijs/langs/dotenv'),
+		import('@shikijs/langs/markdown'),
+		import('@shikijs/langs/jsonc'),
+		// used by markdown codeblocks from the express types
+		import('@shikijs/langs/shellsession'), // lang: 'console'
+		import('@shikijs/langs/http')
 	],
 	engine: createOnigurumaEngine(import('shiki/wasm'))
 });
@@ -1034,7 +1041,10 @@ async function syntax_highlight({
 		html = replace_blank_lines(html);
 	} else {
 		const highlighted = highlighter.codeToHtml(source, {
-			lang: SHIKI_LANGUAGE_MAP[language as keyof typeof SHIKI_LANGUAGE_MAP],
+			// fallback to passing the language as is if it doesn't exist in our map
+			// this ensures we get an error if we're using an unsupported language
+			// rather than silently not highlighting the code block as expected
+			lang: SHIKI_LANGUAGE_MAP[language as keyof typeof SHIKI_LANGUAGE_MAP] ?? language,
 			theme
 		});
 
