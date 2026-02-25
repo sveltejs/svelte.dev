@@ -21,6 +21,7 @@ export interface Document {
 	file: string;
 	metadata: {
 		title: string;
+		private?: boolean;
 		[key: string]: any;
 	};
 	breadcrumbs: Array<{ title: string }>;

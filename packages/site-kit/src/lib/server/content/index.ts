@@ -55,7 +55,7 @@ export async function create_index(
 		content[slug] = {
 			slug,
 			file,
-			metadata: metadata as { title: string; [key: string]: any },
+			metadata: metadata as { title: string },
 			breadcrumbs: [],
 			body,
 			sections,

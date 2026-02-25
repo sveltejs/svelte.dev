@@ -84,7 +84,9 @@ async function content() {
 	}
 
 	for (const section of examples) {
+		if (section.metadata.private) continue;
 		for (const example of section.children) {
+			if (example.metadata.private) continue;
 			blocks.push({
 				breadcrumbs: ['Examples', section.metadata.title, example.metadata.title],
 				href: `/playground/${example.slug.split('/').pop()}`,
