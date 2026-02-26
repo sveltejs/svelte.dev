@@ -110,13 +110,6 @@
 			['`@sveltejs/kit/node#setResponse`', '/docs/kit/@sveltejs-kit-node#setResponse']
 		],
 		[
-			'sveltejs-kit-node-polyfills-installpolyfills',
-			[
-				'`@sveltejs/kit/node/polyfills#installPolyfills`',
-				'/docs/kit/@sveltejs-kit-node-polyfills#installPolyfills'
-			]
-		],
-		[
 			'sveltejs-kit-vite-sveltekit',
 			['`@sveltejs/kit/vite#sveltekit`', '/docs/kit/@sveltejs-kit-vite#sveltekit']
 		]
