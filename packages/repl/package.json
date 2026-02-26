@@ -60,7 +60,7 @@
 	"devDependencies": {
 		"@lezer/common": "^1.5.1",
 		"@sveltejs/adapter-auto": "^7.0.1",
-		"@sveltejs/kit": "^2.53.0",
+		"@sveltejs/kit": "^2.53.2",
 		"@sveltejs/package": "^2.5.7",
 		"@sveltejs/vite-plugin-svelte": "^7.0.0",
 		"@types/estree": "^1.0.8",

@@ -1,4 +1,3 @@
 packages:
   - 'apps/*'
-  - 'apps/svelte.dev/scripts/create-tutorial-zip/common'
   - 'packages/*'
