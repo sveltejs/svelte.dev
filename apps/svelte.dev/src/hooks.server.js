@@ -66,6 +66,11 @@ export async function handle({ event, resolve }) {
 		redirect(307, event.url.pathname.replace('/examples', '/playground'));
 	}
 
+	// Redirect from old /docs/mcp/* to /docs/ai/*
+	if (event.url.pathname.startsWith('/docs/mcp')) {
+		redirect(308, event.url.pathname.replace('/docs/mcp', '/docs/ai'));
+	}
+
 	// Best effort to redirect from Svelte 3 tutorial to new tutorial
 	if (event.url.pathname.startsWith('/tutorial/') && event.url.pathname.split('/').length === 2) {
 		redirect(307, event.url.pathname.replace('/tutorial/', '/tutorial/svelte/'));

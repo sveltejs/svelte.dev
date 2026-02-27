@@ -7,13 +7,13 @@ This is the list of available skills provided by the Svelte MCP package. Skills 
 
 Skills are available in both the Claude Code plugin (installed via the marketplace) and the OpenCode plugin (`@sveltejs/opencode`). They can also be manually installed in your `.claude/skills/` or `.opencode/skills/` folder.
 
-You can download the latest skills from the [releases page](https://github.com/sveltejs/mcp/releases) or find them in the [`plugins/svelte/skills`](https://github.com/sveltejs/mcp/tree/main/plugins/svelte/skills) folder.
+You can download the latest skills from the [releases page](https://github.com/sveltejs/ai-tools/releases) or find them in the [`plugins/svelte/skills`](https://github.com/sveltejs/ai-tools/tree/main/plugins/svelte/skills) folder.
 
 ## `svelte-code-writer`
 
 CLI tools for Svelte 5 documentation lookup and code analysis. MUST be used whenever creating, editing or analyzing any Svelte component (.svelte) or Svelte module (.svelte.ts/.svelte.js). If possible, this skill should be executed within the svelte-file-editor agent for optimal results.
 
-<a href="https://github.com/sveltejs/mcp/releases?q=svelte-code-writer" target="_blank" rel="noopener noreferrer">Open Releases page</a>
+<a href="https://github.com/sveltejs/ai-tools/releases?q=svelte-code-writer" target="_blank" rel="noopener noreferrer">Open Releases page</a>
 
 <details>
 	<summary>View skill content</summary>
