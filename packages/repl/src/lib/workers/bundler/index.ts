@@ -149,7 +149,7 @@ async function init_tailwind(user_css = '') {
 
 	return await tailwindcss.compile(tailwind_base, {
 		loadStylesheet: async (id, base) => {
-			return { content: tailwind_files[id], base };
+			return { content: tailwind_files[id], base, path: '' };
 		}
 	});
 }
