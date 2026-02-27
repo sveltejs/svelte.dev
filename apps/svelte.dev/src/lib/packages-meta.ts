@@ -130,6 +130,10 @@ const FEATURED: {
 				description: 'Markdown parser that supports Github Flavored Markdown'
 			},
 			{
+				name: 'markdoc-svelte',
+				description: 'Preprocess Markdown and Markdoc files into Svelte components using Markdoc'
+			},
+			{
 				name: '@prismicio/svelte',
 				description: 'Components and helpers to fetch and present Prismic content'
 			},
