@@ -63,8 +63,28 @@ Event attribute must be a JavaScript expression, not a string
 ### attribute_invalid_sequence_expression
 
 ```
-Sequence expressions are not allowed as attribute/directive values in runes mode, unless wrapped in parentheses
+Comma-separated expressions are not allowed as attribute/directive values in runes mode, unless wrapped in parentheses
 ```
+
+An attribute value cannot be a comma-separated sequence of expressions — in other words this is disallowed:
+
+```svelte
+<div class={size, color}>...</div>
+```
+
+Instead, make sure that the attribute value contains a single expression. In the example above it's likely that this was intended (see the [class documentation](class) for more details):
+
+```svelte
+<div class={[size, color]}>...</div>
+```
+
+If you _do_ need to use the comma operator for some reason, wrap the sequence in parentheses:
+
+```svelte
+<div class={(size, color)}>...</div>
+```
+
+Note that this will evaluate to `color`, ignoring `size`.
 
 ### attribute_invalid_type
 
@@ -193,7 +213,7 @@ Cyclical dependency detected: %cycle%
 ### const_tag_invalid_placement
 
 ```
-`{@const}` must be the immediate child of `{#snippet}`, `{#if}`, `{:else if}`, `{:else}`, `{#each}`, `{:then}`, `{:catch}`, `<svelte:fragment>`, `<svelte:boundary` or `<Component>`
+`{@const}` must be the immediate child of `{#snippet}`, `{#if}`, `{:else if}`, `{:else}`, `{#each}`, `{:then}`, `{:catch}`, `<svelte:fragment>`, `<svelte:boundary>` or `<Component>`
 ```
 
 ### const_tag_invalid_reference
@@ -1102,7 +1122,7 @@ Value must be %list%, if specified
 ### svelte_options_invalid_customelement
 
 ```
-"customElement" must be a string literal defining a valid custom element name or an object of the form { tag?: string; shadow?: "open" | "none"; props?: { [key: string]: { attribute?: string; reflect?: boolean; type: .. } } }
+"customElement" must be a string literal defining a valid custom element name or an object of the form { tag?: string; shadow?: "open" | "none" | `ShadowRootInit`; props?: { [key: string]: { attribute?: string; reflect?: boolean; type: .. } } }
 ```
 
 ### svelte_options_invalid_customelement_props
@@ -1114,8 +1134,10 @@ Value must be %list%, if specified
 ### svelte_options_invalid_customelement_shadow
 
 ```
-"shadow" must be either "open" or "none"
+"shadow" must be either "open", "none" or `ShadowRootInit` object.
 ```
+
+See https://developer.mozilla.org/en-US/docs/Web/API/Element/attachShadow#options for more information on valid shadow root constructor options
 
 ### svelte_options_invalid_tagname
 

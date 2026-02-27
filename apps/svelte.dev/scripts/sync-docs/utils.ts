@@ -22,7 +22,7 @@ export async function clone_repo(repo: string, name: string, branch: string, cwd
 		return;
 	}
 
-	await invoke('git', ['clone', '--depth', '1', '--branch', branch, repo], {
+	await invoke('git', ['clone', '--depth', '1', '--branch', branch, repo, name], {
 		cwd
 	});
 }

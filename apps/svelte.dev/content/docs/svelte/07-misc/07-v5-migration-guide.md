@@ -683,6 +683,24 @@ Previously, Svelte employed a very complicated algorithm to determine if whitesp
 
 - Whitespace between nodes is collapsed to one whitespace
 - Whitespace at the start and end of a tag is removed completely
+
+  This new behavior is slightly different from native HTML rendering. For example, `<p>foo<span> - bar</span></p>` will render:
+
+  - `foo - bar` in HTML
+  - `foo- bar` in Svelte 5
+
+  You can reintroduce the missing space by moving it outside the `<span>`...
+
+  ```svelte
+  <p>foo <span>- bar</span></p>
+  ```
+
+  ...or, if necessary for styling reasons, including it as an expression:
+
+  ```svelte
+  <p>foo<span>{' '}- bar</span></p>
+  ```
+
 - Certain exceptions apply such as keeping whitespace inside `pre` tags
 
 As before, you can disable whitespace trimming by setting the `preserveWhitespace` option in your compiler settings or on a per-component basis in `<svelte:options>`.
@@ -779,9 +797,9 @@ In Svelte 4, doing the following triggered reactivity:
 
 This is because the Svelte compiler treated the assignment to `foo.value` as an instruction to update anything that referenced `foo`. In Svelte 5, reactivity is determined at runtime rather than compile time, so you should define `value` as a reactive `$state` field on the `Foo` class. Wrapping `new Foo()` with `$state(...)` will have no effect — only vanilla objects and arrays are made deeply reactive.
 
-### Touch and wheel events are passive
+### Touch events are passive
 
-When using `onwheel`, `onmousewheel`, `ontouchstart` and `ontouchmove` event attributes, the handlers are [passive](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#using_passive_listeners) to align with browser defaults. This greatly improves responsiveness by allowing the browser to scroll the document immediately, rather than waiting to see if the event handler calls `event.preventDefault()`.
+When using `ontouchstart` and `ontouchmove` event attributes, the handlers are [passive](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#using_passive_listeners) to align with browser defaults. This greatly improves responsiveness by allowing the browser to scroll the document immediately, rather than waiting to see if the event handler calls `event.preventDefault()`.
 
 In the very rare cases that you need to prevent these event defaults, you should use [`on`](/docs/svelte/svelte-events#on) instead (for example inside an action).
 

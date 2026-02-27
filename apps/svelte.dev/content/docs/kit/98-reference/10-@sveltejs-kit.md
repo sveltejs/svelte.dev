@@ -1776,7 +1776,7 @@ event?: undefined;
 
 <div class="ts-block-property-details">
 
-Dispatched `Event` object when navigation occured by `popstate` or `link`.
+Dispatched `Event` object when navigation occurred by `popstate` or `link`.
 
 </div>
 </div></div>
@@ -2105,6 +2105,28 @@ url: URL;
 The URL that is navigated to
 
 </div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+scroll: { x: number; y: number } | null;
+```
+
+<div class="ts-block-property-details">
+
+The scroll position associated with this navigation.
+
+For the `from` target, this is the scroll position at the moment of navigation.
+
+For the `to` target, this represents the scroll position that will be or was restored:
+- In `beforeNavigate` and `onNavigate`, this is only available for `popstate` navigations (back/forward button)
+	and will be `null` for other navigation types, since the final scroll position isn't known
+	ahead of time.
+- In `afterNavigate`, this is always the scroll position that was applied after the navigation
+	completed.
+
+</div>
 </div></div>
 
 ## NavigationType
@@ -2365,7 +2387,9 @@ The return value of a remote `command` function. See [Remote functions](/docs/ki
 
 ```dts
 type RemoteCommand<Input, Output> = {
-	(arg: Input): Promise<Awaited<Output>> & {
+	(
+		arg: undefined extends Input ? Input | void : Input
+	): Promise<Awaited<Output>> & {
 		updates(
 			...queries: Array<
 				RemoteQuery<any> | RemoteQueryOverride
@@ -2446,35 +2470,7 @@ type RemoteForm<
 	/** The number of pending submissions */
 	get pending(): number;
 	/** Access form fields using object notation */
-	fields: RemoteFormFields<Input>;
-	/** Spread this onto a `<button>` or `<input type="submit">` */
-	buttonProps: {
-		type: 'submit';
-		formmethod: 'POST';
-		formaction: string;
-		onclick: (event: Event) => void;
-		/** Use the `enhance` method to influence what happens when the form is submitted. */
-		enhance(
-			callback: (opts: {
-				form: HTMLFormElement;
-				data: Input;
-				submit: () => Promise<void> & {
-					updates: (
-						...queries: Array<
-							RemoteQuery<any> | RemoteQueryOverride
-						>
-					) => Promise<void>;
-				};
-			}) => void | Promise<void>
-		): {
-			type: 'submit';
-			formmethod: 'POST';
-			formaction: string;
-			onclick: (event: Event) => void;
-		};
-		/** The number of pending submissions */
-		get pending(): number;
-	};
+	fields: RemoteFormFieldsRoot<Input>;
 };
 ```
 
@@ -2619,7 +2615,7 @@ The return value of a remote `prerender` function. See [Remote functions](/docs/
 
 ```dts
 type RemotePrerenderFunction<Input, Output> = (
-	arg: Input
+	arg: undefined extends Input ? Input | void : Input
 ) => RemoteResource<Output>;
 ```
 
@@ -2680,7 +2676,7 @@ The return value of a remote `query` function. See [Remote functions](/docs/kit/
 
 ```dts
 type RemoteQueryFunction<Input, Output> = (
-	arg: Input
+	arg: undefined extends Input ? Input | void : Input
 ) => RemoteQuery<Output>;
 ```
 
@@ -4190,6 +4186,26 @@ referrer?: Array<
 </div>
 </div></div>
 
+## DeepPartial
+
+<div class="ts-block">
+
+```dts
+type DeepPartial<T> = T extends
+	| Record<PropertyKey, unknown>
+	| unknown[]
+	? {
+			[K in keyof T]?: T[K] extends
+				| Record<PropertyKey, unknown>
+				| unknown[]
+				? DeepPartial<T[K]>
+				: T[K];
+		}
+	: T | undefined;
+```
+
+</div>
+
 ## HttpMethod
 
 <div class="ts-block">
@@ -4203,6 +4219,16 @@ type HttpMethod =
 	| 'DELETE'
 	| 'PATCH'
 	| 'OPTIONS';
+```
+
+</div>
+
+## IsAny
+
+<div class="ts-block">
+
+```dts
+type IsAny<T> = 0 extends 1 & T ? true : false;
 ```
 
 </div>
