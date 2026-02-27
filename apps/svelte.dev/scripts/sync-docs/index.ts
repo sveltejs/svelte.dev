@@ -169,9 +169,9 @@ const packages: Package[] = [
 		types: null
 	},
 	{
-		name: 'mcp',
-		repo: get_downstream_repo('mcp'),
-		branch: branches['mcp']?.branch ?? 'main',
+		name: 'ai',
+		repo: get_downstream_repo('ai-tools'),
+		branch: branches['ai']?.branch ?? 'main',
 		pkg: 'packages/mcp-stdio',
 		docs: 'documentation/docs',
 		types: null

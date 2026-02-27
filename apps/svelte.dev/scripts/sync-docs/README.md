@@ -1,6 +1,6 @@
 # sync-docs
 
-Documentation lives in external repos (at the time of writing, [`sveltejs/svelte`](https://github.com/sveltejs/svelte), [`sveltejs/kit`](https://github.com/sveltejs/kit), [`sveltejs/cli`](https://github.com/sveltejs/cli) and [`sveltejs/mcp`](https://github.com/sveltejs/mcp), though the plan is to add others) and synced into this repo.
+Documentation lives in external repos (at the time of writing, [`sveltejs/svelte`](https://github.com/sveltejs/svelte), [`sveltejs/kit`](https://github.com/sveltejs/kit), [`sveltejs/cli`](https://github.com/sveltejs/cli) and [`sveltejs/ai-tools`](https://github.com/sveltejs/ai-tools), though the plan is to add others) and synced into this repo.
 
 The repos must be cloned (or linked — see [next section](#setup)) into the `apps/svelte.dev/repos` directory.
 
