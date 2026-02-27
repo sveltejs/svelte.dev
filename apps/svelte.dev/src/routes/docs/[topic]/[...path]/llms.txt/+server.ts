@@ -3,6 +3,7 @@ import { docs } from '$lib/server/content.js';
 import {
 	generate_llm_content,
 	get_documentation_title,
+	remove_llm_ignore_blocks,
 	remove_playground_links
 } from '$lib/server/llms';
 import { topics } from '$lib/topics';
@@ -23,7 +24,7 @@ export function GET({ params }) {
 			error(404, 'Not Found');
 		}
 
-		return new Response(remove_playground_links(page.body), {
+		return new Response(remove_playground_links(remove_llm_ignore_blocks(page.body)), {
 			status: 200,
 			headers: {
 				'Content-Type': 'text/plain; charset=utf-8',
@@ -38,7 +39,7 @@ export function GET({ params }) {
 		}
 
 		const prefix = `<SYSTEM>${get_documentation_title(topic)}</SYSTEM>`;
-		const content = `${prefix}\n\n${remove_playground_links(generate_llm_content({ topics: [topic] }))}`;
+		const content = `${prefix}\n\n${remove_playground_links(remove_llm_ignore_blocks(generate_llm_content({ topics: [topic] })))}`;
 
 		return new Response(content, {
 			status: 200,
