@@ -437,8 +437,7 @@ namespace AST {
 
 	// TODO have separate in/out/transition directives
 	/** A `transition:`, `in:` or `out:` directive */
-	export interface TransitionDirective
-		extends BaseAttribute {
+	export interface TransitionDirective extends BaseAttribute {
 		type: 'TransitionDirective';
 		/** The 'x' in `transition:x` */
 		name: string;
