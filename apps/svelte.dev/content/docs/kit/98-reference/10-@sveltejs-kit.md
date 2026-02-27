@@ -345,8 +345,8 @@ See [form actions](/docs/kit/form-actions) for more information.
 
 ```dts
 type Action<
-	Params extends
-		AppLayoutParams<'/'> = AppLayoutParams<'/'>,
+	Params extends AppLayoutParams<'/'> =
+		AppLayoutParams<'/'>,
 	OutputData extends Record<string, any> | void = Record<
 		string,
 		any
@@ -409,12 +409,10 @@ When calling a form action via fetch, the response will be one of these shapes.
 
 ```dts
 type ActionResult<
-	Success extends
-		| Record<string, unknown>
-		| undefined = Record<string, any>,
-	Failure extends
-		| Record<string, unknown>
-		| undefined = Record<string, any>
+	Success extends Record<string, unknown> | undefined =
+		Record<string, any>,
+	Failure extends Record<string, unknown> | undefined =
+		Record<string, any>
 > =
 	| { type: 'success'; status: number; data?: Success }
 	| { type: 'failure'; status: number; data?: Failure }
@@ -433,8 +431,8 @@ See [form actions](/docs/kit/form-actions) for more information.
 
 ```dts
 type Actions<
-	Params extends
-		AppLayoutParams<'/'> = AppLayoutParams<'/'>,
+	Params extends AppLayoutParams<'/'> =
+		AppLayoutParams<'/'>,
 	OutputData extends Record<string, any> | void = Record<
 		string,
 		any
@@ -1271,8 +1269,8 @@ It will be called with the validation issues and the event, and must return an o
 
 ```dts
 type HandleValidationError<
-	Issue extends
-		StandardSchemaV1.Issue = StandardSchemaV1.Issue
+	Issue extends StandardSchemaV1.Issue =
+		StandardSchemaV1.Issue
 > = (input: {
 	issues: Issue[];
 	event: RequestEvent;
@@ -1380,8 +1378,8 @@ rather than using `Load` directly.
 
 ```dts
 type Load<
-	Params extends
-		AppLayoutParams<'/'> = AppLayoutParams<'/'>,
+	Params extends AppLayoutParams<'/'> =
+		AppLayoutParams<'/'>,
 	InputData extends Record<string, unknown> | null = Record<
 		string,
 		any
@@ -1390,10 +1388,8 @@ type Load<
 		string,
 		any
 	>,
-	OutputData extends Record<
-		string,
-		unknown
-	> | void = Record<string, any> | void,
+	OutputData extends Record<string, unknown> | void =
+		Record<string, any> | void,
 	RouteId extends AppRouteId | null = AppRouteId | null
 > = (
 	event: LoadEvent<Params, InputData, ParentData, RouteId>
@@ -1411,8 +1407,8 @@ rather than using `LoadEvent` directly.
 
 ```dts
 interface LoadEvent<
-	Params extends
-		AppLayoutParams<'/'> = AppLayoutParams<'/'>,
+	Params extends AppLayoutParams<'/'> =
+		AppLayoutParams<'/'>,
 	Data extends Record<string, unknown> | null = Record<
 		string,
 		any
@@ -1787,8 +1783,8 @@ Dispatched `Event` object when navigation occurred by `popstate` or `link`.
 
 ```dts
 interface NavigationEvent<
-	Params extends
-		AppLayoutParams<'/'> = AppLayoutParams<'/'>,
+	Params extends AppLayoutParams<'/'> =
+		AppLayoutParams<'/'>,
 	RouteId extends AppRouteId | null = AppRouteId | null
 > {/*…*/}
 ```
@@ -2048,8 +2044,8 @@ Information about the target of a specific navigation.
 
 ```dts
 interface NavigationTarget<
-	Params extends
-		AppLayoutParams<'/'> = AppLayoutParams<'/'>,
+	Params extends AppLayoutParams<'/'> =
+		AppLayoutParams<'/'>,
 	RouteId extends AppRouteId | null = AppRouteId | null
 > {/*…*/}
 ```
@@ -2198,8 +2194,8 @@ The shape of the [`page`](/docs/kit/$app-state#page) reactive object and the [`$
 
 ```dts
 interface Page<
-	Params extends
-		AppLayoutParams<'/'> = AppLayoutParams<'/'>,
+	Params extends AppLayoutParams<'/'> =
+		AppLayoutParams<'/'>,
 	RouteId extends AppRouteId | null = AppRouteId | null
 > {/*…*/}
 ```
@@ -2740,8 +2736,8 @@ type RemoteResource<T> = Promise<Awaited<T>> & {
 
 ```dts
 interface RequestEvent<
-	Params extends
-		AppLayoutParams<'/'> = AppLayoutParams<'/'>,
+	Params extends AppLayoutParams<'/'> =
+		AppLayoutParams<'/'>,
 	RouteId extends AppRouteId | null = AppRouteId | null
 > {/*…*/}
 ```
@@ -3024,8 +3020,8 @@ It receives `Params` as the first generic argument, which you can skip by using 
 
 ```dts
 type RequestHandler<
-	Params extends
-		AppLayoutParams<'/'> = AppLayoutParams<'/'>,
+	Params extends AppLayoutParams<'/'> =
+		AppLayoutParams<'/'>,
 	RouteId extends AppRouteId | null = AppRouteId | null
 > = (
 	event: RequestEvent<Params, RouteId>
@@ -3396,8 +3392,8 @@ rather than using `ServerLoad` directly.
 
 ```dts
 type ServerLoad<
-	Params extends
-		AppLayoutParams<'/'> = AppLayoutParams<'/'>,
+	Params extends AppLayoutParams<'/'> =
+		AppLayoutParams<'/'>,
 	ParentData extends Record<string, any> = Record<
 		string,
 		any
@@ -3420,8 +3416,8 @@ type ServerLoad<
 
 ```dts
 interface ServerLoadEvent<
-	Params extends
-		AppLayoutParams<'/'> = AppLayoutParams<'/'>,
+	Params extends AppLayoutParams<'/'> =
+		AppLayoutParams<'/'>,
 	ParentData extends Record<string, any> = Record<
 		string,
 		any
@@ -3607,12 +3603,10 @@ restore: (snapshot: T) => void;
 
 ```dts
 type SubmitFunction<
-	Success extends
-		| Record<string, unknown>
-		| undefined = Record<string, any>,
-	Failure extends
-		| Record<string, unknown>
-		| undefined = Record<string, any>
+	Success extends Record<string, unknown> | undefined =
+		Record<string, any>,
+	Failure extends Record<string, unknown> | undefined =
+		Record<string, any>
 > = (input: {
 	action: URL;
 	formData: FormData;
