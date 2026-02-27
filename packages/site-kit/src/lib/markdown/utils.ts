@@ -85,31 +85,70 @@ export const slugify = (str: string) => {
 	);
 };
 
+/**
+ * Replace dumb quotes with smart quotes. This isn't a perfect algorithm — it
+ * wouldn't correctly handle `That '70s show` or `My country 'tis of thee` but
+ * a) it's very unlikely they'll occur in our docs, and
+ * b) they can be dealt with manually
+ */
 export function smart_quotes(
 	str: string,
-	{ first = true, html = false }: { first?: boolean; html?: boolean } = {}
+	{
+		first = true,
+		html = false
+	}: {
+		/** True if the string is the entire sentence or false if it's a substring. @default true */
+		first?: boolean;
+		/** True if the string has HTML entities. @default false */
+		html?: boolean;
+	} = {}
 ) {
-	// replace dumb quotes with smart quotes. This isn't a perfect algorithm — it
-	// wouldn't correctly handle `That '70s show` or `My country 'tis of thee`
-	// but a) it's very unlikely they'll occur in our docs, and
-	// b) they can be dealt with manually
-	return str.replace(
-		html ? /(.|^)(&#39;|&quot;)(.|$)/g : /(.|^)('|")(.|$)/g,
-		(m, before, quote, after) => {
-			const left = (first && before === '') || [' ', '\n', '('].includes(before);
-			let replacement = '';
-
-			if (html) {
-				const double = quote === '&quot;';
-				replacement = `&${left ? 'l' : 'r'}${double ? 'd' : 's'}quo;`;
+	const stack: Array<"'" | '"'> = [];
+	let res = '';
+	const len = str.length;
+	const opening_squo_chars = /[\s\n\(]/;
+	for (let index = 0; index < len; index++) {
+		const char = str.charAt(index);
+		const before = str.charAt(index - 1);
+		if (html && char === '&') {
+			if (str.slice(index, index + 5) === '&#39;') {
+				const left: boolean =
+					stack.at(-1) !== "'" && (opening_squo_chars.test(before) || (first && before === ''));
+				res += `&${left ? 'l' : 'r'}squo;`;
+				index += 4;
+				if (!left) {
+					stack.pop();
+				} else {
+					stack.push("'");
+				}
+			} else if (str.slice(index, index + 6) === '&quot;') {
+				const left: boolean = stack.at(-1) !== '"';
+				res += `&${left ? 'l' : 'r'}dquo`;
+				index += 5;
+				if (!left) {
+					stack.pop();
+				} else {
+					stack.push('"');
+				}
 			} else {
-				const double = quote === '"';
-				replacement = double ? (left ? '“' : '”') : left ? '‘' : '’';
+				res += '&';
 			}
-
-			return (before ?? '') + replacement + (after ?? '');
+		} else if (!html && (char === '"' || char === "'")) {
+			const left: boolean =
+				stack.at(-1) !== char &&
+				(opening_squo_chars.test(char) || (first && before === '') || char === '"');
+			const double = char === '"';
+			res += double ? (left ? '“' : '”') : left ? '‘' : '’';
+			if (!left) {
+				stack.pop();
+			} else {
+				stack.push(char);
+			}
+		} else {
+			res += char;
 		}
-	);
+	}
+	return res;
 }
 
 const tokenizer: TokenizerObject = {
