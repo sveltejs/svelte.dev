@@ -188,6 +188,17 @@
 				/>
 			</label>
 
+			<label class="option">
+				<span>Font Size</span>
+				<input
+					type="number"
+					min="10"
+					max="128"
+					value={workspace.fontSize}
+					onchange={(ev) => (workspace.fontSize = ev.currentTarget.valueAsNumber)}
+				/>px
+			</label>
+
 			{#if download}
 				<button onclick={download}>Download app</button>
 			{/if}
