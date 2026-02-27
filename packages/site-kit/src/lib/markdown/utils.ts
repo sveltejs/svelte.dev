@@ -1,17 +1,23 @@
 import { Marked, type Renderer, type TokenizerObject, type MarkedExtension } from 'marked';
 import json5 from 'json5';
 
+// helps map a highlighter for languages not recognised or aliased by Shiki
+// see https://shiki.style/languages for a full list of official languages
 export const SHIKI_LANGUAGE_MAP = {
-	bash: 'bash',
-	env: 'bash',
+	env: 'dotenv',
 	html: 'svelte',
-	svelte: 'svelte',
 	sv: 'svelte',
-	js: 'javascript',
 	dts: 'typescript',
-	css: 'css',
-	ts: 'typescript',
-	'': ''
+	json: 'jsonc',
+	// we don't need the coffeescript highlighter because it's only used once
+	// in a blog post from 2019
+	cson: '',
+	// there's no syntax highlighter for tree syntax
+	tree: '',
+	'': '',
+	// already recognised by Shiki but they're here to satisfy TypeScript
+	js: 'js',
+	ts: 'ts'
 };
 
 export function is_in_code_block(body: string, index: number) {
@@ -29,28 +35,54 @@ export function is_in_code_block(body: string, index: number) {
  * Strip styling/links etc from markdown
  */
 export function clean(markdown: string) {
-	return markdown
-		.replace(/(?:^|b)\*\*(.+?)\*\*(?:\b|$)/g, '$1') // bold
-		.replace(/(?:^|b)_(.+?)_(?:\b|$)/g, '$1') // Italics
-		.replace(/(?:^|b)\*(.+?)\*(?:\b|$)/g, '$1') // Italics
-		.replace(/(?:^|b)`(.+?)`(?:\b|$)/g, '$1') // Inline code
-		.replace(/(?:^|b)~~(.+?)~~(?:\b|$)/g, '$1') // Strikethrough
-		.replace(/\[(.+?)\]\(.+?\)/g, '$1') // Link
-		.replace(/\n/g, ' ') // New line
-		.replace(/ {2,}/g, ' ')
-		.trim();
+	return (
+		markdown
+			.replace(/(?:^|b)\*\*(.+?)\*\*(?:\b|$)/g, '$1') // bold
+			.replace(/(?:^|b)_(.+?)_(?:\b|$)/g, '$1') // Italics
+			.replace(/(?:^|b)\*(.+?)\*(?:\b|$)/g, '$1') // Italics
+			// italic markdown notation such as "bind:_property_ for components"
+			// should be stripped without affecting compiler error titles such as "animation_missing_key"
+			.replace(/:_(.*)_ /g, ':$1 ')
+			.replace(/(?:^|b)`(.+?)`(?:\b|$)/g, '$1') // Inline code
+			.replace(/(?:^|b)~~(.+?)~~(?:\b|$)/g, '$1') // Strikethrough
+			.replace(/\[(.+?)\]\(.+?\)/g, '$1') // Link
+			.replace(/\n/g, ' ') // New line
+			.replace(/ {2,}/g, ' ')
+			.trim()
+	);
+}
+
+export function decode_html_entities(text: string): string {
+	return text
+		.replace(/&lt;/g, '<')
+		.replace(/&gt;/g, '>')
+		.replace(/&amp;/g, '&')
+		.replace(/&quot;/g, '"')
+		.replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => {
+			return String.fromCharCode(parseInt(hex, 16));
+		})
+		.replace(/&#(\d+);/g, (_, dec) => {
+			return String.fromCharCode(parseInt(dec, 10));
+		});
 }
 
 export const slugify = (str: string) => {
-	return clean(str)
-		.replace(/(’|&rsquo;)/g, "'")
-		.replace(/&.+?;/g, '')
-		.replace(/<\/?.+?>/g, '')
-		.replace(/\.\.\./g, '')
-		.replace(/[^a-zA-Z0-9-$(.):'_]/g, '-')
-		.replace(/-{2,}/g, '-')
-		.replace(/^-/, '')
-		.replace(/-$/, '');
+	return (
+		decode_html_entities(clean(str).replace(/(’|&rsquo;)/g, "'"))
+			// removes <code>...</code> or <em>...</em> etc, but leaves the contents intact
+			.replace(/<([a-z\-]+)>(.*?)<\/\1>/g, '$2')
+			// <audio> should be converted to audio
+			// <details bind:open> should be converted to details-bind-open
+			// <script module> should be converted to script-module
+			// <script lang="ts"> should be converted to script-lang-ts
+
+			.replace(/[<>]/g, '')
+			.replace(/\.\.\./g, '')
+			.replace(/[^a-zA-Z0-9-$(.):'_]/g, '-')
+			.replace(/-{2,}/g, '-')
+			.replace(/^-/, '')
+			.replace(/-$/, '')
+	);
 };
 
 export function smart_quotes(

@@ -1,5 +1,4 @@
 // @ts-check
-import 'dotenv/config';
 import { Jimp } from 'jimp';
 import { stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';

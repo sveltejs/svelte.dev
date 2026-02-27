@@ -9,7 +9,13 @@ import { createHighlighterCore } from 'shiki/core';
 import { createOnigurumaEngine } from 'shiki/engine/oniguruma';
 import { createCssVariablesTheme } from 'shiki';
 import { transformerTwoslash, rendererRich } from '@shikijs/twoslash';
-import { SHIKI_LANGUAGE_MAP, slugify, smart_quotes, transform } from './utils.ts';
+import {
+	decode_html_entities,
+	SHIKI_LANGUAGE_MAP,
+	slugify,
+	smart_quotes,
+	transform
+} from './utils.ts';
 
 interface SnippetOptions {
 	file: string | null;
@@ -50,11 +56,18 @@ const highlighter = await createHighlighterCore({
 	langs: [
 		import('@shikijs/langs/javascript'),
 		import('@shikijs/langs/typescript'),
-		import('@shikijs/langs/html'),
+		import('@shikijs/langs/svelte'),
 		import('@shikijs/langs/css'),
 		import('@shikijs/langs/bash'),
 		import('@shikijs/langs/yaml'),
-		import('@shikijs/langs/svelte')
+		import('@shikijs/langs/toml'),
+		import('@shikijs/langs/ini'),
+		import('@shikijs/langs/dotenv'),
+		import('@shikijs/langs/markdown'),
+		import('@shikijs/langs/jsonc'),
+		// used by markdown codeblocks from the express types
+		import('@shikijs/langs/shellsession'), // lang: 'console'
+		import('@shikijs/langs/http')
 	],
 	engine: createOnigurumaEngine(import('shiki/wasm'))
 });
@@ -306,20 +319,6 @@ function injectReferenceLinks(
 	return html;
 }
 
-function decodeHtmlEntities(text: string): string {
-	return text
-		.replace(/&lt;/g, '<')
-		.replace(/&gt;/g, '>')
-		.replace(/&amp;/g, '&')
-		.replace(/&quot;/g, '"')
-		.replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => {
-			return String.fromCharCode(parseInt(hex, 16));
-		})
-		.replace(/&#(\d+);/g, (_, dec) => {
-			return String.fromCharCode(parseInt(dec, 10));
-		});
-}
-
 export async function render_content_markdown(
 	filename: string,
 	body: string,
@@ -332,7 +331,7 @@ export async function render_content_markdown(
 	return await transform(body, {
 		async walkTokens(token) {
 			if (token.type === 'code') {
-				const decodedText = decodeHtmlEntities(token.text);
+				const decodedText = decode_html_entities(token.text);
 
 				if (snippets.get(decodedText)) return;
 
@@ -463,7 +462,7 @@ export async function render_content_markdown(
 			return `<h${depth} id="${slug}"><span>${html}</span><a href="#${slug}" class="permalink" aria-label="permalink"></a></h${depth}>`;
 		},
 		code({ text }) {
-			const decodedText = decodeHtmlEntities(text);
+			const decodedText = decode_html_entities(text);
 			const cached = snippets.get(decodedText);
 			if (cached) {
 				return injectReferenceLinks(cached, references, extractImportedSymbols(decodedText));
@@ -859,15 +858,40 @@ const delimiter_substitutes = {
 const delimiter_patterns = Object.fromEntries(
 	Object.entries(delimiter_substitutes).map(([key, substitute]) => [
 		key,
-		new RegExp(`${substitute}([^ ][^]+?)${substitute}`, 'g')
+		new RegExp(`${substitute}([^ ]|[^ ][^]+?[^ ])${substitute}`, 'g')
 	])
 );
 
-function highlight_spans(content: string, classname: string) {
-	return content
-		.split('\n')
-		.map((line) => `<span class="${classname}">${line}</span>`)
-		.join('\n');
+function highlight_all_spans(html: string, pattern: RegExp, classname: string) {
+	const open = `<span class="${classname}">`;
+
+	return html.replace(pattern, (_, content, index) => {
+		let a = content.indexOf('<span');
+		let b = content.indexOf('</span');
+		let c = content.lastIndexOf('<span');
+		let d = content.lastIndexOf('</span');
+
+		let adjusted: string = content;
+
+		if (b !== -1 && (a === -1 || b < a)) {
+			// starts inside a <span>
+			const tag_start = html.lastIndexOf('<span', index);
+			const tag = html.slice(tag_start, html.indexOf('>', tag_start) + 1);
+			adjusted = `</span>${open}${tag}${adjusted}`;
+		} else {
+			adjusted = `${open}${adjusted}`;
+		}
+
+		if (c !== -1 && (d === -1 || c > d)) {
+			// ends inside a <span>
+			const tag = content.slice(c, content.indexOf('>', c) + 1);
+			adjusted = `${adjusted}</span></span>${tag}`;
+		} else {
+			adjusted = `${adjusted}</span>`;
+		}
+
+		return adjusted.replace(/\n/g, `</span>\n${open}`);
+	});
 }
 
 async function syntax_highlight({
@@ -1017,7 +1041,10 @@ async function syntax_highlight({
 		html = replace_blank_lines(html);
 	} else {
 		const highlighted = highlighter.codeToHtml(source, {
-			lang: SHIKI_LANGUAGE_MAP[language as keyof typeof SHIKI_LANGUAGE_MAP],
+			// fallback to passing the language as is if it doesn't exist in our map
+			// this ensures we get an error if we're using an unsupported language
+			// rather than silently not highlighting the code block as expected
+			lang: SHIKI_LANGUAGE_MAP[language as keyof typeof SHIKI_LANGUAGE_MAP] ?? language,
 			theme
 		});
 
@@ -1034,16 +1061,9 @@ async function syntax_highlight({
 		// remove tabindex
 		.replace(' tabindex="0"', '');
 
-	html = html
-		.replace(delimiter_patterns['---'], (_, content) => {
-			return highlight_spans(content, 'highlight remove');
-		})
-		.replace(delimiter_patterns['+++'], (_, content) => {
-			return highlight_spans(content, 'highlight add');
-		})
-		.replace(delimiter_patterns[':::'], (_, content) => {
-			return highlight_spans(content, 'highlight');
-		});
+	html = highlight_all_spans(html, delimiter_patterns['---'], 'highlight remove');
+	html = highlight_all_spans(html, delimiter_patterns['+++'], 'highlight add');
+	html = highlight_all_spans(html, delimiter_patterns[':::'], 'highlight');
 
 	return indent_multiline_comments(html)
 		.replace(/\/\*…\*\//g, '…')

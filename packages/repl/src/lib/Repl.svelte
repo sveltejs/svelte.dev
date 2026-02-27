@@ -222,7 +222,7 @@
 	<div class="viewport" class:output={show_output}>
 		<SplitPane
 			id="main"
-			type={orientation === 'rows' ? 'vertical' : 'horizontal'}
+			type={orientation}
 			pos="{embedded === 'output-only'
 				? 0
 				: mobile || fixed

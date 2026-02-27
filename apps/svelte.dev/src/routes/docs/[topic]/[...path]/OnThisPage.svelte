@@ -9,7 +9,7 @@
 
 	afterNavigate(() => {
 		current = location.hash.slice(1);
-		headings = content.querySelectorAll('h2');
+		headings = content.querySelectorAll('h2, h3');
 		update(); // Ensure active link is set correctly on navigation
 	});
 
@@ -58,8 +58,24 @@
 
 			{#each document.sections as section}
 				<li>
-					<a href="#{section.slug}" class:active={current === section.slug}>{@html section.title}</a
-					>
+					<a href="#{section.slug}" class:active={current === section.slug}>
+						{@html section.title}
+					</a>
+
+					{#if section.subsections.length > 0}
+						<ul
+							data-active={current === section.slug ||
+								section.subsections.some((subsection) => subsection.slug === current)}
+						>
+							{#each section.subsections as subsection}
+								<li>
+									<a href="#{subsection.slug}" class:active={current === subsection.slug}>
+										{@html subsection.title}
+									</a>
+								</li>
+							{/each}
+						</ul>
+					{/if}
 				</li>
 			{/each}
 		</ul>
@@ -74,6 +90,10 @@
 			ul {
 				list-style: none;
 				font: var(--sk-font-body-small);
+			}
+
+			li ul {
+				margin: 0 0 0 1.6rem;
 			}
 
 			/* Only show the title link if it's in the sidebar */
@@ -226,6 +246,14 @@
 
 				li:first-child {
 					display: list-item;
+				}
+
+				li ul {
+					display: none;
+				}
+
+				li ul[data-active='true'] {
+					display: block;
 				}
 
 				a.active {
