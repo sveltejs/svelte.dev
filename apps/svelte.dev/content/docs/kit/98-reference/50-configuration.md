@@ -1297,6 +1297,22 @@ The drawback is that for unvisited paths, resolution will take slightly longer (
 
 </div>
 
+## subresourceIntegrity
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `false`
+
+</div>
+
+Enable [Subresource Integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity) (SRI) hash generation for scripts and stylesheets. When set to a hash algorithm, SvelteKit will compute integrity hashes for all client assets at build time and add `integrity` and `crossorigin` attributes to `<link>` and `<script>` tags.
+
+<div class="ts-block-property-children">
+
+
+
+</div>
+
 ## typescript
 
 <div class="ts-block-property-bullets">
