@@ -196,7 +196,7 @@ Checks whether this is an error thrown by `error`.
 function isHttpError<T extends number>(
 	e: unknown,
 	status?: T
-): e is HttpError_1 & {
+): e is HttpError & {
 	status: T extends undefined ? never : T;
 };
 ```
@@ -212,7 +212,7 @@ Checks whether this is a redirect thrown by `redirect`.
 <div class="ts-block">
 
 ```dts
-function isRedirect(e: unknown): e is Redirect_1;
+function isRedirect(e: unknown): e is Redirect;
 ```
 
 </div>
@@ -240,6 +240,12 @@ function isValidationError(e: unknown): e is ActionFailure;
 
 
 ## json
+
+<blockquote class="tag deprecated note">
+
+use `Response.json`
+
+</blockquote>
 
 Create a JSON `Response` object from the supplied data.
 
@@ -324,6 +330,12 @@ function redirect(
 
 ## text
 
+<blockquote class="tag deprecated note">
+
+use `new Response`
+
+</blockquote>
+
 Create a `Response` object from the supplied body.
 
 <div class="ts-block">
@@ -345,8 +357,8 @@ See [form actions](/docs/kit/form-actions) for more information.
 
 ```dts
 type Action<
-	Params extends
-		AppLayoutParams<'/'> = AppLayoutParams<'/'>,
+	Params extends AppLayoutParams<'/'> =
+		AppLayoutParams<'/'>,
 	OutputData extends Record<string, any> | void = Record<
 		string,
 		any
@@ -409,12 +421,10 @@ When calling a form action via fetch, the response will be one of these shapes.
 
 ```dts
 type ActionResult<
-	Success extends
-		| Record<string, unknown>
-		| undefined = Record<string, any>,
-	Failure extends
-		| Record<string, unknown>
-		| undefined = Record<string, any>
+	Success extends Record<string, unknown> | undefined =
+		Record<string, any>,
+	Failure extends Record<string, unknown> | undefined =
+		Record<string, any>
 > =
 	| { type: 'success'; status: number; data?: Success }
 	| { type: 'failure'; status: number; data?: Failure }
@@ -433,8 +443,8 @@ See [form actions](/docs/kit/form-actions) for more information.
 
 ```dts
 type Actions<
-	Params extends
-		AppLayoutParams<'/'> = AppLayoutParams<'/'>,
+	Params extends AppLayoutParams<'/'> =
+		AppLayoutParams<'/'>,
 	OutputData extends Record<string, any> | void = Record<
 		string,
 		any
@@ -1044,7 +1054,7 @@ interface Cookies {/*…*/}
 <div class="ts-block-property">
 
 ```dts
-get: (name: string, opts?: import('cookie').CookieParseOptions) => string | undefined;
+get: (name: string, opts?: import('cookie').ParseOptions) => string | undefined;
 ```
 
 <div class="ts-block-property-details">
@@ -1052,7 +1062,7 @@ get: (name: string, opts?: import('cookie').CookieParseOptions) => string | unde
 <div class="ts-block-property-bullets">
 
 - `name` the name of the cookie
-- `opts` the options, passed directly to `cookie.parse`. See documentation [here](https://github.com/jshttp/cookie#cookieparsestr-options)
+- `opts` the options, passed directly to `cookie.parse`. See documentation [here](https://github.com/jshttp/cookie?tab=readme-ov-file#cookieparsecookiestr-options)
 
 </div>
 
@@ -1064,14 +1074,14 @@ Gets a cookie that was previously set with `cookies.set`, or from the request he
 <div class="ts-block-property">
 
 ```dts
-getAll: (opts?: import('cookie').CookieParseOptions) => Array<{ name: string; value: string }>;
+getAll: (opts?: import('cookie').ParseOptions) => Array<{ name: string; value: string }>;
 ```
 
 <div class="ts-block-property-details">
 
 <div class="ts-block-property-bullets">
 
-- `opts` the options, passed directly to `cookie.parse`. See documentation [here](https://github.com/jshttp/cookie#cookieparsestr-options)
+- `opts` the options, passed directly to `cookie.parse`. See documentation [here](https://github.com/jshttp/cookie?tab=readme-ov-file#cookieparsecookiestr-options)
 
 </div>
 
@@ -1083,11 +1093,7 @@ Gets all cookies that were previously set with `cookies.set`, or from the reques
 <div class="ts-block-property">
 
 ```dts
-set: (
-	name: string,
-	value: string,
-	opts: import('cookie').CookieSerializeOptions & { path: string }
-) => void;
+set: (name: string, value: string, opts: import('cookie').SerializeOptions) => void;
 ```
 
 <div class="ts-block-property-details">
@@ -1096,15 +1102,15 @@ set: (
 
 - `name` the name of the cookie
 - `value` the cookie value
-- `opts` the options, passed directly to `cookie.serialize`. See documentation [here](https://github.com/jshttp/cookie#cookieserializename-value-options)
+- `opts` the options passed to `cookie.serialize` with the SvelteKit defaults described above. See documentation [here](https://github.com/jshttp/cookie?tab=readme-ov-file#cookiestringifysetcookiesetcookieobj-options)
 
 </div>
 
 Sets a cookie. This will add a `set-cookie` header to the response, but also make the cookie available via `cookies.get` or `cookies.getAll` during the current request.
 
-The `httpOnly` and `secure` options are `true` by default (except on http://localhost, where `secure` is `false`), and must be explicitly disabled if you want cookies to be readable by client-side JavaScript and/or transmitted over HTTP. The `sameSite` option defaults to `lax`.
+The `httpOnly` and `secure` options are `true` by default (except on http://localhost, where `secure` is `false`), and must be explicitly disabled if you want cookies to be readable by client-side JavaScript and/or transmitted over HTTP.
 
-You must specify a `path` for the cookie. In most cases you should explicitly set `path: '/'` to make the cookie available throughout your app. You can use relative paths, or set `path: ''` to make the cookie only available on the current path and its children
+The `path` option is `'/'` by default. You can use relative paths, or set `path: ''` to make the cookie only available on the current path and its children.
 
 </div>
 </div>
@@ -1112,7 +1118,7 @@ You must specify a `path` for the cookie. In most cases you should explicitly se
 <div class="ts-block-property">
 
 ```dts
-delete: (name: string, opts: import('cookie').CookieSerializeOptions & { path: string }) => void;
+delete: (name: string, opts: import('cookie').SerializeOptions) => void;
 ```
 
 <div class="ts-block-property-details">
@@ -1120,13 +1126,15 @@ delete: (name: string, opts: import('cookie').CookieSerializeOptions & { path: s
 <div class="ts-block-property-bullets">
 
 - `name` the name of the cookie
-- `opts` the options, passed directly to `cookie.serialize`. The `path` must match the path of the cookie you want to delete. See documentation [here](https://github.com/jshttp/cookie#cookieserializename-value-options)
+- `opts` the options passed to `cookie.serialize` with the SvelteKit defaults described above. See documentation [here](https://github.com/jshttp/cookie?tab=readme-ov-file#cookiestringifysetcookiesetcookieobj-options)
 
 </div>
 
 Deletes a cookie by setting its value to an empty string and setting the expiry date in the past.
 
-You must specify a `path` for the cookie. In most cases you should explicitly set `path: '/'` to make the cookie available throughout your app. You can use relative paths, or set `path: ''` to make the cookie only available on the current path and its children
+The `httpOnly` and `secure` options are `true` by default (except on http://localhost, where `secure` is `false`), and must be explicitly disabled if you want cookies to be readable by client-side JavaScript and/or transmitted over HTTP.
+
+The `path` option is `'/'` by default. You can use relative paths, or set `path: ''` to make the cookie only available on the current path and its children.
 
 </div>
 </div>
@@ -1134,11 +1142,7 @@ You must specify a `path` for the cookie. In most cases you should explicitly se
 <div class="ts-block-property">
 
 ```dts
-serialize: (
-	name: string,
-	value: string,
-	opts: import('cookie').CookieSerializeOptions & { path: string }
-) => string;
+serialize: (name: string, value: string, opts: import('cookie').SerializeOptions) => string;
 ```
 
 <div class="ts-block-property-details">
@@ -1147,15 +1151,15 @@ serialize: (
 
 - `name` the name of the cookie
 - `value` the cookie value
-- `opts` the options, passed directly to `cookie.serialize`. See documentation [here](https://github.com/jshttp/cookie#cookieserializename-value-options)
+- `opts` the options passed to `cookie.serialize` with the SvelteKit defaults described above. See documentation [here](https://github.com/jshttp/cookie?tab=readme-ov-file#cookiestringifysetcookiesetcookieobj-options)
 
 </div>
 
 Serialize a cookie name-value pair into a `Set-Cookie` header string, but don't apply it to the response.
 
-The `httpOnly` and `secure` options are `true` by default (except on http://localhost, where `secure` is `false`), and must be explicitly disabled if you want cookies to be readable by client-side JavaScript and/or transmitted over HTTP. The `sameSite` option defaults to `lax`.
+The `httpOnly` and `secure` options are `true` by default (except on http://localhost, where `secure` is `false`), and must be explicitly disabled if you want cookies to be readable by client-side JavaScript and/or transmitted over HTTP.
 
-You must specify a `path` for the cookie. In most cases you should explicitly set `path: '/'` to make the cookie available throughout your app. You can use relative paths, or set `path: ''` to make the cookie only available on the current path and its children
+The `path` option is `'/'` by default. You can use relative paths, or set `path: ''` to make the cookie only available on the current path and its children.
 
 </div>
 </div></div>
@@ -1271,8 +1275,8 @@ It will be called with the validation issues and the event, and must return an o
 
 ```dts
 type HandleValidationError<
-	Issue extends
-		StandardSchemaV1.Issue = StandardSchemaV1.Issue
+	Issue extends StandardSchemaV1.Issue =
+		StandardSchemaV1.Issue
 > = (input: {
 	issues: Issue[];
 	event: RequestEvent;
@@ -1380,8 +1384,8 @@ rather than using `Load` directly.
 
 ```dts
 type Load<
-	Params extends
-		AppLayoutParams<'/'> = AppLayoutParams<'/'>,
+	Params extends AppLayoutParams<'/'> =
+		AppLayoutParams<'/'>,
 	InputData extends Record<string, unknown> | null = Record<
 		string,
 		any
@@ -1390,10 +1394,8 @@ type Load<
 		string,
 		any
 	>,
-	OutputData extends Record<
-		string,
-		unknown
-	> | void = Record<string, any> | void,
+	OutputData extends Record<string, unknown> | void =
+		Record<string, any> | void,
 	RouteId extends AppRouteId | null = AppRouteId | null
 > = (
 	event: LoadEvent<Params, InputData, ParentData, RouteId>
@@ -1411,8 +1413,8 @@ rather than using `LoadEvent` directly.
 
 ```dts
 interface LoadEvent<
-	Params extends
-		AppLayoutParams<'/'> = AppLayoutParams<'/'>,
+	Params extends AppLayoutParams<'/'> =
+		AppLayoutParams<'/'>,
 	Data extends Record<string, unknown> | null = Record<
 		string,
 		any
@@ -1787,8 +1789,8 @@ Dispatched `Event` object when navigation occurred by `popstate` or `link`.
 
 ```dts
 interface NavigationEvent<
-	Params extends
-		AppLayoutParams<'/'> = AppLayoutParams<'/'>,
+	Params extends AppLayoutParams<'/'> =
+		AppLayoutParams<'/'>,
 	RouteId extends AppRouteId | null = AppRouteId | null
 > {/*…*/}
 ```
@@ -2048,8 +2050,8 @@ Information about the target of a specific navigation.
 
 ```dts
 interface NavigationTarget<
-	Params extends
-		AppLayoutParams<'/'> = AppLayoutParams<'/'>,
+	Params extends AppLayoutParams<'/'> =
+		AppLayoutParams<'/'>,
 	RouteId extends AppRouteId | null = AppRouteId | null
 > {/*…*/}
 ```
@@ -2198,8 +2200,8 @@ The shape of the [`page`](/docs/kit/$app-state#page) reactive object and the [`$
 
 ```dts
 interface Page<
-	Params extends
-		AppLayoutParams<'/'> = AppLayoutParams<'/'>,
+	Params extends AppLayoutParams<'/'> =
+		AppLayoutParams<'/'>,
 	RouteId extends AppRouteId | null = AppRouteId | null
 > {/*…*/}
 ```
@@ -2740,8 +2742,8 @@ type RemoteResource<T> = Promise<Awaited<T>> & {
 
 ```dts
 interface RequestEvent<
-	Params extends
-		AppLayoutParams<'/'> = AppLayoutParams<'/'>,
+	Params extends AppLayoutParams<'/'> =
+		AppLayoutParams<'/'>,
 	RouteId extends AppRouteId | null = AppRouteId | null
 > {/*…*/}
 ```
@@ -3024,8 +3026,8 @@ It receives `Params` as the first generic argument, which you can skip by using 
 
 ```dts
 type RequestHandler<
-	Params extends
-		AppLayoutParams<'/'> = AppLayoutParams<'/'>,
+	Params extends AppLayoutParams<'/'> =
+		AppLayoutParams<'/'>,
 	RouteId extends AppRouteId | null = AppRouteId | null
 > = (
 	event: RequestEvent<Params, RouteId>
@@ -3396,8 +3398,8 @@ rather than using `ServerLoad` directly.
 
 ```dts
 type ServerLoad<
-	Params extends
-		AppLayoutParams<'/'> = AppLayoutParams<'/'>,
+	Params extends AppLayoutParams<'/'> =
+		AppLayoutParams<'/'>,
 	ParentData extends Record<string, any> = Record<
 		string,
 		any
@@ -3420,8 +3422,8 @@ type ServerLoad<
 
 ```dts
 interface ServerLoadEvent<
-	Params extends
-		AppLayoutParams<'/'> = AppLayoutParams<'/'>,
+	Params extends AppLayoutParams<'/'> =
+		AppLayoutParams<'/'>,
 	ParentData extends Record<string, any> = Record<
 		string,
 		any
@@ -3607,12 +3609,10 @@ restore: (snapshot: T) => void;
 
 ```dts
 type SubmitFunction<
-	Success extends
-		| Record<string, unknown>
-		| undefined = Record<string, any>,
-	Failure extends
-		| Record<string, unknown>
-		| undefined = Record<string, any>
+	Success extends Record<string, unknown> | undefined =
+		Record<string, any>,
+	Failure extends Record<string, unknown> | undefined =
+		Record<string, any>
 > = (input: {
 	action: URL;
 	formData: FormData;
