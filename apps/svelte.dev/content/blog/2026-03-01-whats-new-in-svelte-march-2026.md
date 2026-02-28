@@ -42,7 +42,6 @@ Looking for more details on the many bug fixes and performance optimizations fro
 - [Synth Town](https://synth.town/) is a generative music city builder using Threlte + Tone.js
 - [Beatjie](https://dindles.net/beatjie/) is a little audio groovebox that lets you make beats and share them with a URL ([GitHub](https://github.com/dindles/beatjie/))
 - [Mistral AI's Worldwide Hackathon](https://worldwide-hackathon.mistral.ai/) site was built with Svelte ([Reddit](https://www.reddit.com/r/sveltejs/comments/1r25ezg/just_launched_our_first_svelte_project_at_mistral/))
-- [Frame](https://github.com/66HEX/frame) is a high-performance media conversion utility that provides a native interface for FFmpeg operations, allowing for granular control over video and audio transcoding parameters
 - [Fretwise](https://fretwise.ai/) is an AI-Powered guitar practice platform that generates tabs and isolated stems
 - [Tailsync](https://apps.apple.com/us/app/tailsync/id6758315448) is a reverb calculator for music production for iOS
 - [Otterly](https://github.com/ajkdrag/otterly) is a local-first, privacy-focused WYSIWYG Markdown vault with full-text search, wiki-links, and a rich editor
