@@ -154,7 +154,7 @@ const resolved = resolve('/blog/[slug]', {
 <div class="ts-block">
 
 ```dts
-function resolve<T extends RouteId | Pathname>(
+function resolve<T extends RouteId | ResolvablePath>(
 	...args: ResolveArgs<T>
 ): ResolvedPathname;
 ```
@@ -174,7 +174,7 @@ Use [`resolve(...)`](/docs/kit/$app-paths#resolve) instead
 <div class="ts-block">
 
 ```dts
-function resolveRoute<T extends RouteId | Pathname>(
+function resolveRoute<T extends RouteId | ResolvablePath>(
 	...args: ResolveArgs<T>
 ): ResolvedPathname;
 ```
