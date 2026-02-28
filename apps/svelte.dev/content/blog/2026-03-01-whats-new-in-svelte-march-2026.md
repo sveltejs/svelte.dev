@@ -5,7 +5,7 @@ author: Dani Sandoval
 authorURL: https://dreamindani.com
 ---
 
-This month, we got a ton of new features across Svelte, SvelteKit and even the Svelte CLI. Plus, the [State of JS 2025](https://2025.stateofjs.com/en-US) is out and Svelte continues to hold the top spot among reactive frameworks.
+This month, we got a ton of new features across Svelte, SvelteKit and even the Svelte CLI. Plus, the [State of JS 2025](https://2025.stateofjs.com/en-US) is out and Svelte continues to hold the top spot among reactive frameworks in terms of positive sentiment.
 
 So, without further ado, let's dive in!
 
