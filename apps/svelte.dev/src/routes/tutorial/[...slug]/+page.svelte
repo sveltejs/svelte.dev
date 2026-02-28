@@ -280,7 +280,7 @@
 	/>
 
 	<div class="top" class:offset={show_editor}>
-		<SplitPane id="main" type="horizontal" min="360px" max="50%" pos="33%">
+		<SplitPane id="main" type="columns" min="360px" max="50%" pos="33%">
 			{#snippet a()}
 				<section class="content">
 					<Sidebar
@@ -295,11 +295,11 @@
 			{/snippet}
 
 			{#snippet b()}
-				<SplitPane type="vertical" min="100px" max="-4.1rem" pos="50%">
+				<SplitPane type="rows" min="100px" max="-4.1rem" pos="50%">
 					{#snippet a()}
 						<SplitPane
 							id="editor"
-							type={mobile ? 'vertical' : 'horizontal'}
+							type={mobile ? 'rows' : 'columns'}
 							min={mobile ? '40px' : '120px'}
 							max={mobile ? '40px' : '300px'}
 							pos={mobile ? '40px' : '200px'}

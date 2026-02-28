@@ -5,7 +5,7 @@ author: Dani Sandoval
 authorURL: https://dreamindani.com
 ---
 
-The official Svelte MCP server (for all your agentic needs) is now available with its own [section of the docs site](https://svelte.dev/docs/mcp/overview) and [GitHub repo](https://github.com/sveltejs/mcp). If you haven't gotten a chance to try it out with the AI of your choice, definitely take it for a spin. It should replace the copy/pasting of the Svelte docs that's often required to get LLMs to write valid Svelte 5 code and can provide suggestions on the generated code with static analysis.
+The official Svelte MCP server (for all your agentic needs) is now available with its own [section of the docs site](https://svelte.dev/docs/ai/overview) and [GitHub repo](https://github.com/sveltejs/ai-tools). If you haven't gotten a chance to try it out with the AI of your choice, definitely take it for a spin. It should replace the copy/pasting of the Svelte docs that's often required to get LLMs to write valid Svelte 5 code and can provide suggestions on the generated code with static analysis.
 
 But it's not just AIs that have been writing code; our maintainers have too! Let's take a look at what they've been up to in Svelte/Kit before diving into our community showcase...
 

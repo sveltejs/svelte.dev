@@ -11,7 +11,7 @@ on:
           - svelte
           - kit
           - cli
-          - mcp
+          - ai
 
 permissions:
   contents: write
