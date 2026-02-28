@@ -19,12 +19,13 @@ So, without further ado, let's dive in!
 For a full list of changes - including all the important bugfixes that went into the releases this month - check out the Svelte compiler's [CHANGELOG](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md)
 
 ## What's new in SvelteKit
+
 - `hydratable`'s injected script now works with CSP (**kit@2.51.0**, [#15048](https://github.com/sveltejs/kit/pull/15048))
 - Navigation callbacks (beforeNavigate, onNavigate, and afterNavigate) now include scroll position information via the scroll property on from and to targets. This enables use cases like animating transitions based on the target scroll position when using browser back/forward navigation (**kit@2.51.0**, [Docs](https://svelte.dev/docs/kit/@sveltejs-kit#NavigationTarget), [#15248](https://github.com/sveltejs/kit/pull/15248))
 - Vite 8 is now supported (**kit@2.53.0**, [#15024](https://github.com/sveltejs/kit/pull/15024))
 - The `match` function can map a path back to a route id and params (**kit@2.52.0**, [Docs](https://svelte.dev/docs/kit/app-paths#match), [#14997](https://github.com/sveltejs/kit/pull/14997))
 - Breaking (Netlify Adapter): `platform.context` now uses modern Netlify Functions - previously this was the AWS Lambda-style
-context. If you were using this in your app (unlikely), you will need to update your code to read from new fields. (**adapter-netlify@6.0.0**, [More details](https://docs.netlify.com/build/functions/api/#netlify-specific-context-object), [Docs](https://developers.netlify.com/guides/migrating-to-the-modern-netlify-functions/), [#15241](https://github.com/sveltejs/kit/pull/15241))
+  context. If you were using this in your app (unlikely), you will need to update your code to read from new fields. (**adapter-netlify@6.0.0**, [More details](https://docs.netlify.com/build/functions/api/#netlify-specific-context-object), [Docs](https://developers.netlify.com/guides/migrating-to-the-modern-netlify-functions/), [#15241](https://github.com/sveltejs/kit/pull/15241))
 - redirects can now be configured in `netlify.toml` - removing the limitation of only being able to configure redirects via the `_redirects` file (**adapter-netlify@6.0.0**, [#15203](https://github.com/sveltejs/kit/pull/15203))
 - `better-auth` is now an official addon in the Svelte CLI (**sv@0.12.0**, [#898](https://github.com/sveltejs/cli/pull/898))
 
@@ -45,7 +46,7 @@ Looking for more details on the many bug fixes and performance optimizations fro
 - [Fretwise](https://fretwise.ai/) is an AI-Powered guitar practice platform that generates tabs and isolated stems
 - [Tailsync](https://apps.apple.com/us/app/tailsync/id6758315448) is a reverb calculator for music production for iOS
 - [Otterly](https://github.com/ajkdrag/otterly) is a local-first, privacy-focused WYSIWYG Markdown vault with full-text search, wiki-links, and a rich editor
-- [SoundTime](https://github.com/CICCADA-CORP/SoundTime) is a self-hosted music streaming platform with peer-to-peer sharing using Rust & Svelte 
+- [SoundTime](https://github.com/CICCADA-CORP/SoundTime) is a self-hosted music streaming platform with peer-to-peer sharing using Rust & Svelte
 - [ATS Screener](https://ats-screener.vercel.app/) lets you see how popular applicant tracking systems parse, filter, and score your resume
 - [Heavy Duty Inc.](https://heavydutyinc.itch.io/heavy-duty-inc) is a turn-based tactics game built with Threlte where you solve jobs for the different space station factions, navigate their strained political environment, die, and do it all over again
 - [Quest Mate](https://quest-mate.com/) is a universal GM space for all your campaigns, lore, sheets, notes and summaries
