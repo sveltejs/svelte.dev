@@ -255,7 +255,7 @@ checkOrigin?: boolean;
 <div class="ts-block-property-bullets">
 
 - <span class="tag">default</span> `true`
-- <span class="tag deprecated">deprecated</span> Use `trustedOrigins: ['*']` instead
+- <span class="tag deprecated">deprecated</span> removed in 3.0. Use `trustedOrigins: ['*']` instead
 
 </div>
 
@@ -842,6 +842,7 @@ preloadStrategy?: 'modulepreload' | 'preload-js' | 'preload-mjs';
 
 - <span class="tag">default</span> `"modulepreload"`
 - <span class="tag since">available since</span> v1.8.4
+- <span class="tag deprecated">deprecated</span> removed in 3.0.0
 
 </div>
 
