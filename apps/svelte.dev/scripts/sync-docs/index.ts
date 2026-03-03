@@ -16,6 +16,8 @@ import { generate_crosslinks } from './crosslinks.ts';
 
 interface Package {
 	name: string;
+	/** The identifier used to trigger syncing (defaults to `name` if omitted) */
+	trigger?: string;
 	repo: string;
 	branch: string;
 	pkg: string;
@@ -23,6 +25,8 @@ interface Package {
 	types: string | null;
 	process_modules?: (modules: Modules, pkg: Package) => Promise<Modules>;
 }
+
+const get_trigger = (pkg: Package) => pkg.trigger ?? pkg.name;
 
 const parsed = parseArgs({
 	args: process.argv.slice(2),
@@ -170,24 +174,29 @@ const packages: Package[] = [
 	},
 	{
 		name: 'ai',
+		trigger: 'ai-tools',
 		repo: get_downstream_repo('ai-tools'),
-		branch: branches['ai']?.branch ?? 'main',
+		branch: branches['ai-tools']?.branch ?? 'main',
 		pkg: 'packages/mcp-stdio',
 		docs: 'documentation/docs',
 		types: null
 	}
 ];
 
-const unknown = Object.keys(branches).filter((name) => !packages.some((pkg) => pkg.name === name));
+const unknown = Object.keys(branches).filter(
+	(trigger) => !packages.some((pkg) => get_trigger(pkg) === trigger)
+);
 
 if (unknown.length > 0) {
 	throw new Error(
-		`Valid repos are ${packages.map((pkg) => pkg.name).join(', ')} (saw ${unknown.join(', ')})`
+		`Valid repos are ${packages.map((pkg) => get_trigger(pkg)).join(', ')} (saw ${unknown.join(', ')})`
 	);
 }
 
 const filtered =
-	parsed.positionals.length === 0 ? packages : packages.filter((pkg) => !!branches[pkg.name]);
+	parsed.positionals.length === 0
+		? packages
+		: packages.filter((pkg) => !!branches[get_trigger(pkg)]);
 
 /**
  * Depending on your setup, this will either clone the Svelte and SvelteKit repositories

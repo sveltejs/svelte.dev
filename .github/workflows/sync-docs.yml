@@ -11,7 +11,7 @@ on:
           - svelte
           - kit
           - cli
-          - ai
+          - ai-tools
 
 permissions:
   contents: write

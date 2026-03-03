@@ -11,7 +11,7 @@ on:
           - svelte
           - kit
           - cli
-          - ai
+          - ai-tools
       downstream:
         description: 'Downstream repository (eg. `svelte` or `kit`)'
         required: true
