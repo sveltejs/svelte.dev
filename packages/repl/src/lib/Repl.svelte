@@ -133,6 +133,7 @@
 	}
 
 	let width = $state(0);
+	let toggled = $state(false);
 	let status: string | null = $state(null);
 	let runtime_error: Error | null = $state(null);
 	let status_visible = $state(false);
@@ -220,7 +221,7 @@
 	class:toggleable={$toggleable}
 	bind:clientWidth={width}
 >
-	<div class="viewport" class:output={showOutput}>
+	<div class="viewport" class:output={showOutput} class:transition={toggled}>
 		<SplitPane
 			id="main"
 			type={orientation}
@@ -261,7 +262,15 @@
 	</div>
 
 	{#if $toggleable}
-		<ScreenToggle bind:checked={showOutput} />
+		<ScreenToggle
+			bind:checked={
+				() => showOutput,
+				(v) => {
+					toggled ||= true;
+					showOutput = v;
+				}
+			}
+		/>
 	{/if}
 </div>
 
@@ -314,11 +323,14 @@
 	.toggleable .viewport {
 		width: 200%;
 		height: calc(100% - var(--sk-pane-controls-height));
-		transition: transform 0.3s;
 	}
 
 	.toggleable .viewport.output {
 		transform: translate(-50%);
+	}
+
+	.toggleable .viewport.transition {
+		transition: transform 0.3s;
 	}
 
 	/* on mobile, override the <SplitPane> controls */
