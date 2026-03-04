@@ -95,6 +95,7 @@ export interface ExposedCompilerOptions {
 	dev: boolean;
 	modernAst: boolean;
 	fragments: 'html' | 'tree' | undefined;
+	async: boolean;
 }
 
 export class Workspace {
@@ -108,7 +109,8 @@ export class Workspace {
 		modernAst: true,
 		// default to undefined so it's removed if the current version
 		// doesn't support it
-		fragments: undefined
+		fragments: undefined,
+		async: true
 	});
 	compiled = $state<Record<string, Compiled>>({});
 
@@ -119,6 +121,7 @@ export class Workspace {
 	#vim = $state(false);
 	#aliases = $state.raw(undefined) as undefined | Record<string, string>;
 	#tailwind = $state(false);
+	supports_async = $state(true);
 
 	#handlers = {
 		hover: new Set<(pos: number | null) => void>(),

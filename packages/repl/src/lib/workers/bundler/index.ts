@@ -65,14 +65,9 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 				setTimeout(async () => {
 					if (current_id !== uid) return;
 
-					const result = await bundle(
-						svelte,
-						svelte_version,
-						uid,
-						files,
-						options,
-						can_use_experimental_async
-					);
+					const use_async = can_use_experimental_async && options.async;
+
+					const result = await bundle(svelte, svelte_version, uid, files, options, use_async);
 
 					console.log('[bundle worker result]', result);
 
@@ -105,11 +100,12 @@ function get_svelte(svelte_version: string) {
 	self.postMessage({ type: 'status', message: `fetching svelte@${svelte_version}` });
 	ready_version = svelte_version;
 	ready = load_svelte(svelte_version || 'latest');
-	ready.then(({ version }) => {
+	ready.then(({ version, can_use_experimental_async }) => {
 		ready_version = version;
 		self.postMessage({
 			type: 'version',
-			message: version
+			version,
+			supports_async: can_use_experimental_async
 		});
 	});
 	return ready;

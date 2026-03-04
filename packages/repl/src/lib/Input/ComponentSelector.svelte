@@ -177,6 +177,16 @@
 				<Checkbox bind:checked={workspace.tailwind}></Checkbox>
 			</label>
 
+			<label class="option" aria-disabled={!workspace.supports_async}>
+				<span>Async mode</span>
+				<Checkbox
+					disabled={!workspace.supports_async}
+					checked={workspace.compiler_options.async}
+					onchange={() =>
+						workspace.update_compiler_options({ async: !workspace.compiler_options.async })}
+				></Checkbox>
+			</label>
+
 			<button disabled={!can_migrate} onclick={migrate}>Migrate to Svelte 5, if possible</button>
 
 			<label class="option">
@@ -344,6 +354,10 @@
 
 	.option {
 		height: 3.6rem;
+
+		&[aria-disabled='true'] {
+			color: var(--sk-fg-4);
+		}
 
 		input {
 			background: transparent;
