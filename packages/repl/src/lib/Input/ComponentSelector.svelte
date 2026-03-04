@@ -181,7 +181,8 @@
 				<span>Async mode</span>
 				<Checkbox
 					checked={workspace.compiler_options.async}
-					onchange={() => workspace.update_compiler_options({ async: !workspace.compiler_options.async })}
+					onchange={() =>
+						workspace.update_compiler_options({ async: !workspace.compiler_options.async })}
 				></Checkbox>
 			</label>
 

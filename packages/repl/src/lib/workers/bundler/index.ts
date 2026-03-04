@@ -65,16 +65,9 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 				setTimeout(async () => {
 					if (current_id !== uid) return;
 
-				const use_async = can_use_experimental_async && options.async;
+					const use_async = can_use_experimental_async && options.async;
 
-				const result = await bundle(
-					svelte,
-					svelte_version,
-					uid,
-					files,
-					options,
-					use_async
-				);
+					const result = await bundle(svelte, svelte_version, uid, files, options, use_async);
 
 					console.log('[bundle worker result]', result);
 
