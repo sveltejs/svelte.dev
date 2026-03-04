@@ -9,6 +9,7 @@ import { createHighlighterCore } from 'shiki/core';
 import { createOnigurumaEngine } from 'shiki/engine/oniguruma';
 import { createCssVariablesTheme } from 'shiki';
 import { transformerTwoslash, rendererRich } from '@shikijs/twoslash';
+import { createFileSystemTypesCache } from '@shikijs/vitepress-twoslash/cache-fs';
 import {
 	decode_html_entities,
 	SHIKI_LANGUAGE_MAP,
@@ -946,7 +947,10 @@ async function syntax_highlight({
 									}
 								},
 								// by default, twoslash does not run on .js files, change that through this option
-								filter: () => true
+								filter: () => true,
+								typesCache: createFileSystemTypesCache({
+									dir: 'node_modules/.cache/twoslash'
+								})
 							})
 						]
 					: []
