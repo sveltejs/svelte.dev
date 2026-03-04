@@ -144,6 +144,7 @@
 				svelte_version: svelteVersion,
 				onversion: (version, supports_async) => {
 					workspace.set_svelte_version(version);
+					workspace.supports_async = supports_async;
 					if (!supports_async && workspace.compiler_options.async) {
 						workspace.update_compiler_options({ async: false });
 					}

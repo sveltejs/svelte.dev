@@ -177,9 +177,10 @@
 				<Checkbox bind:checked={workspace.tailwind}></Checkbox>
 			</label>
 
-			<label class="option">
+			<label class="option" aria-disabled={!workspace.supports_async}>
 				<span>Async mode</span>
 				<Checkbox
+					disabled={!workspace.supports_async}
 					checked={workspace.compiler_options.async}
 					onchange={() =>
 						workspace.update_compiler_options({ async: !workspace.compiler_options.async })}
@@ -353,6 +354,10 @@
 
 	.option {
 		height: 3.6rem;
+
+		&[aria-disabled='true'] {
+			color: var(--sk-fg-4);
+		}
 
 		input {
 			background: transparent;

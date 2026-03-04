@@ -121,6 +121,7 @@ export class Workspace {
 	#vim = $state(false);
 	#aliases = $state.raw(undefined) as undefined | Record<string, string>;
 	#tailwind = $state(false);
+	supports_async = $state(true);
 
 	#handlers = {
 		hover: new Set<(pos: number | null) => void>(),
