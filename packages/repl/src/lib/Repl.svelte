@@ -22,6 +22,7 @@
 		injectedJS?: string;
 		injectedCSS?: string;
 		previewTheme?: 'light' | 'dark';
+		showOutput?: boolean;
 		onversion?: (version: string) => void;
 		onchange?: () => void;
 		download?: () => void;
@@ -42,6 +43,7 @@
 		injectedJS = '',
 		injectedCSS = '',
 		previewTheme = 'light',
+		showOutput = true,
 		onversion,
 		onchange = () => {},
 		download,
@@ -131,7 +133,6 @@
 	}
 
 	let width = $state(0);
-	let show_output = $state(true);
 	let status: string | null = $state(null);
 	let runtime_error: Error | null = $state(null);
 	let status_visible = $state(false);
@@ -219,7 +220,7 @@
 	class:toggleable={$toggleable}
 	bind:clientWidth={width}
 >
-	<div class="viewport" class:output={show_output}>
+	<div class="viewport" class:output={showOutput}>
 		<SplitPane
 			id="main"
 			type={orientation}
@@ -260,7 +261,7 @@
 	</div>
 
 	{#if $toggleable}
-		<ScreenToggle bind:checked={show_output} />
+		<ScreenToggle bind:checked={showOutput} />
 	{/if}
 </div>
 
