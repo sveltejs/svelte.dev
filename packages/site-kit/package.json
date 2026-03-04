@@ -46,6 +46,7 @@
 		"shiki": "^3.23.0"
 	},
 	"devDependencies": {
+		"@shikijs/vitepress-twoslash": "^4.0.1",
 		"@sveltejs/kit": "^2.53.2",
 		"@types/node": "^20.19.33",
 		"flexsearch": "^0.8.212",
