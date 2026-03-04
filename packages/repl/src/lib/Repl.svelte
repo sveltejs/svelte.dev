@@ -131,7 +131,7 @@
 	}
 
 	let width = $state(0);
-	let show_output = $state(false);
+	let show_output = $state(true);
 	let status: string | null = $state(null);
 	let runtime_error: Error | null = $state(null);
 	let status_visible = $state(false);
