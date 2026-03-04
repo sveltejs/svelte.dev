@@ -8,7 +8,6 @@ export default class Bundler {
 	#worker: Worker;
 
 	result = $state.raw<BundleResult | null>(null);
-	supports_async = $state(false);
 
 	constructor({
 		svelte_version,
@@ -32,7 +31,6 @@ export default class Bundler {
 			}
 
 			if (event.data.type === 'version') {
-				this.supports_async = event.data.supports_async;
 				onversion?.(event.data.version, event.data.supports_async);
 				return;
 			}
