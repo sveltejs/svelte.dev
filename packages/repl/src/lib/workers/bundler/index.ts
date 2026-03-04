@@ -107,11 +107,12 @@ function get_svelte(svelte_version: string) {
 	self.postMessage({ type: 'status', message: `fetching svelte@${svelte_version}` });
 	ready_version = svelte_version;
 	ready = load_svelte(svelte_version || 'latest');
-	ready.then(({ version }) => {
+	ready.then(({ version, can_use_experimental_async }) => {
 		ready_version = version;
 		self.postMessage({
 			type: 'version',
-			message: version
+			version,
+			supports_async: can_use_experimental_async
 		});
 	});
 	return ready;

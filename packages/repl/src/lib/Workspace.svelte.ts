@@ -110,7 +110,7 @@ export class Workspace {
 		// default to undefined so it's removed if the current version
 		// doesn't support it
 		fragments: undefined,
-		async: false
+		async: true
 	});
 	compiled = $state<Record<string, Compiled>>({});
 

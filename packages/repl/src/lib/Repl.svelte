@@ -142,8 +142,11 @@
 		? new Bundler({
 				// svelte-ignore state_referenced_locally
 				svelte_version: svelteVersion,
-				onversion: (version) => {
+				onversion: (version, supports_async) => {
 					workspace.set_svelte_version(version);
+					if (!supports_async) {
+						workspace.update_compiler_options({ async: false });
+					}
 					onversion?.(version);
 				},
 				onstatus: (message) => {
