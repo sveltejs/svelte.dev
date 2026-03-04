@@ -95,6 +95,7 @@ export interface ExposedCompilerOptions {
 	dev: boolean;
 	modernAst: boolean;
 	fragments: 'html' | 'tree' | undefined;
+	async: boolean;
 }
 
 export class Workspace {
@@ -108,7 +109,8 @@ export class Workspace {
 		modernAst: true,
 		// default to undefined so it's removed if the current version
 		// doesn't support it
-		fragments: undefined
+		fragments: undefined,
+		async: false
 	});
 	compiled = $state<Record<string, Compiled>>({});
 

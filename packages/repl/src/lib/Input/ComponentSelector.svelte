@@ -177,6 +177,14 @@
 				<Checkbox bind:checked={workspace.tailwind}></Checkbox>
 			</label>
 
+			<label class="option">
+				<span>Async mode</span>
+				<Checkbox
+					checked={workspace.compiler_options.async}
+					onchange={() => workspace.update_compiler_options({ async: !workspace.compiler_options.async })}
+				></Checkbox>
+			</label>
+
 			<button disabled={!can_migrate} onclick={migrate}>Migrate to Svelte 5, if possible</button>
 
 			<label class="option">

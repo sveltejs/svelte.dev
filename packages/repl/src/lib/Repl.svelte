@@ -117,6 +117,7 @@
 			svelte_version: workspace.svelte_version,
 			tailwind: workspace.tailwind,
 			fragments: workspace.compiler_options.fragments,
+			async: workspace.compiler_options.async,
 			aliases: workspace.aliases
 		});
 	}
