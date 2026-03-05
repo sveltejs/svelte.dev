@@ -196,7 +196,7 @@ Checks whether this is an error thrown by `error`.
 function isHttpError<T extends number>(
 	e: unknown,
 	status?: T
-): e is HttpError_1 & {
+): e is HttpError & {
 	status: T extends undefined ? never : T;
 };
 ```
@@ -212,7 +212,7 @@ Checks whether this is a redirect thrown by `redirect`.
 <div class="ts-block">
 
 ```dts
-function isRedirect(e: unknown): e is Redirect_1;
+function isRedirect(e: unknown): e is Redirect;
 ```
 
 </div>
@@ -240,6 +240,12 @@ function isValidationError(e: unknown): e is ActionFailure;
 
 
 ## json
+
+<blockquote class="tag deprecated note">
+
+use `Response.json`
+
+</blockquote>
 
 Create a JSON `Response` object from the supplied data.
 
@@ -323,6 +329,12 @@ function redirect(
 
 
 ## text
+
+<blockquote class="tag deprecated note">
+
+use `new Response`
+
+</blockquote>
 
 Create a `Response` object from the supplied body.
 
@@ -557,6 +569,14 @@ The argument passed to [`afterNavigate`](/docs/kit/$app-navigation#afterNavigate
 
 ```dts
 type AfterNavigate = (Navigation | NavigationEnter) & {
+	/**
+	 * The type of navigation:
+	 * - `enter`: The app has hydrated/started
+	 * - `form`: The user submitted a `<form method="GET">`
+	 * - `link`: Navigation was triggered by a link click
+	 * - `goto`: Navigation was triggered by a `goto(...)` call or a redirect
+	 * - `popstate`: Navigation was triggered by back/forward navigation
+	 */
 	type: Exclude<NavigationType, 'leave'>;
 	/**
 	 * Since `afterNavigate` callbacks are called after a navigation completes, they will never be called with a navigation that unloads the page.
@@ -1034,7 +1054,7 @@ interface Cookies {/*…*/}
 <div class="ts-block-property">
 
 ```dts
-get: (name: string, opts?: import('cookie').CookieParseOptions) => string | undefined;
+get: (name: string, opts?: import('cookie').ParseOptions) => string | undefined;
 ```
 
 <div class="ts-block-property-details">
@@ -1042,7 +1062,7 @@ get: (name: string, opts?: import('cookie').CookieParseOptions) => string | unde
 <div class="ts-block-property-bullets">
 
 - `name` the name of the cookie
-- `opts` the options, passed directly to `cookie.parse`. See documentation [here](https://github.com/jshttp/cookie#cookieparsestr-options)
+- `opts` the options, passed directly to `cookie.parse`. See documentation [here](https://github.com/jshttp/cookie?tab=readme-ov-file#cookieparsecookiestr-options)
 
 </div>
 
@@ -1054,14 +1074,14 @@ Gets a cookie that was previously set with `cookies.set`, or from the request he
 <div class="ts-block-property">
 
 ```dts
-getAll: (opts?: import('cookie').CookieParseOptions) => Array<{ name: string; value: string }>;
+getAll: (opts?: import('cookie').ParseOptions) => Array<{ name: string; value: string }>;
 ```
 
 <div class="ts-block-property-details">
 
 <div class="ts-block-property-bullets">
 
-- `opts` the options, passed directly to `cookie.parse`. See documentation [here](https://github.com/jshttp/cookie#cookieparsestr-options)
+- `opts` the options, passed directly to `cookie.parse`. See documentation [here](https://github.com/jshttp/cookie?tab=readme-ov-file#cookieparsecookiestr-options)
 
 </div>
 
@@ -1073,11 +1093,7 @@ Gets all cookies that were previously set with `cookies.set`, or from the reques
 <div class="ts-block-property">
 
 ```dts
-set: (
-	name: string,
-	value: string,
-	opts: import('cookie').CookieSerializeOptions & { path: string }
-) => void;
+set: (name: string, value: string, opts: import('cookie').SerializeOptions) => void;
 ```
 
 <div class="ts-block-property-details">
@@ -1086,15 +1102,15 @@ set: (
 
 - `name` the name of the cookie
 - `value` the cookie value
-- `opts` the options, passed directly to `cookie.serialize`. See documentation [here](https://github.com/jshttp/cookie#cookieserializename-value-options)
+- `opts` the options passed to `cookie.serialize` with the SvelteKit defaults described above. See documentation [here](https://github.com/jshttp/cookie?tab=readme-ov-file#cookiestringifysetcookiesetcookieobj-options)
 
 </div>
 
 Sets a cookie. This will add a `set-cookie` header to the response, but also make the cookie available via `cookies.get` or `cookies.getAll` during the current request.
 
-The `httpOnly` and `secure` options are `true` by default (except on http://localhost, where `secure` is `false`), and must be explicitly disabled if you want cookies to be readable by client-side JavaScript and/or transmitted over HTTP. The `sameSite` option defaults to `lax`.
+The `httpOnly` and `secure` options are `true` by default (except on http://localhost, where `secure` is `false`), and must be explicitly disabled if you want cookies to be readable by client-side JavaScript and/or transmitted over HTTP.
 
-You must specify a `path` for the cookie. In most cases you should explicitly set `path: '/'` to make the cookie available throughout your app. You can use relative paths, or set `path: ''` to make the cookie only available on the current path and its children
+The `path` option is `'/'` by default. You can use relative paths, or set `path: ''` to make the cookie only available on the current path and its children.
 
 </div>
 </div>
@@ -1102,7 +1118,7 @@ You must specify a `path` for the cookie. In most cases you should explicitly se
 <div class="ts-block-property">
 
 ```dts
-delete: (name: string, opts: import('cookie').CookieSerializeOptions & { path: string }) => void;
+delete: (name: string, opts: import('cookie').SerializeOptions) => void;
 ```
 
 <div class="ts-block-property-details">
@@ -1110,13 +1126,15 @@ delete: (name: string, opts: import('cookie').CookieSerializeOptions & { path: s
 <div class="ts-block-property-bullets">
 
 - `name` the name of the cookie
-- `opts` the options, passed directly to `cookie.serialize`. The `path` must match the path of the cookie you want to delete. See documentation [here](https://github.com/jshttp/cookie#cookieserializename-value-options)
+- `opts` the options passed to `cookie.serialize` with the SvelteKit defaults described above. See documentation [here](https://github.com/jshttp/cookie?tab=readme-ov-file#cookiestringifysetcookiesetcookieobj-options)
 
 </div>
 
 Deletes a cookie by setting its value to an empty string and setting the expiry date in the past.
 
-You must specify a `path` for the cookie. In most cases you should explicitly set `path: '/'` to make the cookie available throughout your app. You can use relative paths, or set `path: ''` to make the cookie only available on the current path and its children
+The `httpOnly` and `secure` options are `true` by default (except on http://localhost, where `secure` is `false`), and must be explicitly disabled if you want cookies to be readable by client-side JavaScript and/or transmitted over HTTP.
+
+The `path` option is `'/'` by default. You can use relative paths, or set `path: ''` to make the cookie only available on the current path and its children.
 
 </div>
 </div>
@@ -1124,11 +1142,7 @@ You must specify a `path` for the cookie. In most cases you should explicitly se
 <div class="ts-block-property">
 
 ```dts
-serialize: (
-	name: string,
-	value: string,
-	opts: import('cookie').CookieSerializeOptions & { path: string }
-) => string;
+serialize: (name: string, value: string, opts: import('cookie').SerializeOptions) => string;
 ```
 
 <div class="ts-block-property-details">
@@ -1137,15 +1151,15 @@ serialize: (
 
 - `name` the name of the cookie
 - `value` the cookie value
-- `opts` the options, passed directly to `cookie.serialize`. See documentation [here](https://github.com/jshttp/cookie#cookieserializename-value-options)
+- `opts` the options passed to `cookie.serialize` with the SvelteKit defaults described above. See documentation [here](https://github.com/jshttp/cookie?tab=readme-ov-file#cookiestringifysetcookiesetcookieobj-options)
 
 </div>
 
 Serialize a cookie name-value pair into a `Set-Cookie` header string, but don't apply it to the response.
 
-The `httpOnly` and `secure` options are `true` by default (except on http://localhost, where `secure` is `false`), and must be explicitly disabled if you want cookies to be readable by client-side JavaScript and/or transmitted over HTTP. The `sameSite` option defaults to `lax`.
+The `httpOnly` and `secure` options are `true` by default (except on http://localhost, where `secure` is `false`), and must be explicitly disabled if you want cookies to be readable by client-side JavaScript and/or transmitted over HTTP.
 
-You must specify a `path` for the cookie. In most cases you should explicitly set `path: '/'` to make the cookie available throughout your app. You can use relative paths, or set `path: ''` to make the cookie only available on the current path and its children
+The `path` option is `'/'` by default. You can use relative paths, or set `path: ''` to make the cookie only available on the current path and its children.
 
 </div>
 </div></div>
@@ -1698,7 +1712,7 @@ willUnload: boolean;
 
 <div class="ts-block-property-details">
 
-Whether or not the navigation will result in the page being unloaded (i.e. not a client-side navigation).
+Whether or not the navigation will result in the page being unloaded (i.e. not a client-side navigation)
 
 </div>
 </div>
@@ -1734,7 +1748,11 @@ type: 'enter';
 <div class="ts-block-property-details">
 
 The type of navigation:
-- `enter`: The app has hydrated/started
+- `form`: The user submitted a `<form method="GET">`
+- `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
+- `link`: Navigation was triggered by a link click
+- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
+- `popstate`: Navigation was triggered by back/forward navigation
 
 </div>
 </div>
@@ -1834,10 +1852,39 @@ The URL of the current page
 <div class="ts-block">
 
 ```dts
-type NavigationExternal = NavigationGoto | NavigationLeave;
+interface NavigationExternal extends NavigationBase {/*…*/}
 ```
 
+<div class="ts-block-property">
+
+```dts
+type: Exclude<NavigationType, 'enter' | 'popstate' | 'link' | 'form'>;
+```
+
+<div class="ts-block-property-details">
+
+The type of navigation:
+- `form`: The user submitted a `<form method="GET">`
+- `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
+- `link`: Navigation was triggered by a link click
+- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
+- `popstate`: Navigation was triggered by back/forward navigation
+
 </div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+delta?: undefined;
+```
+
+<div class="ts-block-property-details">
+
+In case of a history back/forward navigation, the number of steps to go back/forward
+
+</div>
+</div></div>
 
 ## NavigationFormSubmit
 
@@ -1857,6 +1904,10 @@ type: 'form';
 
 The type of navigation:
 - `form`: The user submitted a `<form method="GET">`
+- `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
+- `link`: Navigation was triggered by a link click
+- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
+- `popstate`: Navigation was triggered by back/forward navigation
 
 </div>
 </div>
@@ -1870,76 +1921,6 @@ event: SubmitEvent;
 <div class="ts-block-property-details">
 
 The `SubmitEvent` that caused the navigation
-
-</div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-delta?: undefined;
-```
-
-<div class="ts-block-property-details">
-
-In case of a history back/forward navigation, the number of steps to go back/forward
-
-</div>
-</div></div>
-
-## NavigationGoto
-
-<div class="ts-block">
-
-```dts
-interface NavigationGoto extends NavigationBase {/*…*/}
-```
-
-<div class="ts-block-property">
-
-```dts
-type: 'goto';
-```
-
-<div class="ts-block-property-details">
-
-The type of navigation:
-- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
-
-</div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-delta?: undefined;
-```
-
-<div class="ts-block-property-details">
-
-In case of a history back/forward navigation, the number of steps to go back/forward
-
-</div>
-</div></div>
-
-## NavigationLeave
-
-<div class="ts-block">
-
-```dts
-interface NavigationLeave extends NavigationBase {/*…*/}
-```
-
-<div class="ts-block-property">
-
-```dts
-type: 'leave';
-```
-
-<div class="ts-block-property-details">
-
-The type of navigation:
-- `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
 
 </div>
 </div>
@@ -1974,7 +1955,11 @@ type: 'link';
 <div class="ts-block-property-details">
 
 The type of navigation:
+- `form`: The user submitted a `<form method="GET">`
+- `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
 - `link`: Navigation was triggered by a link click
+- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
+- `popstate`: Navigation was triggered by back/forward navigation
 
 </div>
 </div>
@@ -2022,6 +2007,10 @@ type: 'popstate';
 <div class="ts-block-property-details">
 
 The type of navigation:
+- `form`: The user submitted a `<form method="GET">`
+- `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
+- `link`: Navigation was triggered by a link click
+- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
 - `popstate`: Navigation was triggered by back/forward navigation
 
 </div>
@@ -2186,6 +2175,13 @@ The argument passed to [`onNavigate`](/docs/kit/$app-navigation#onNavigate) call
 
 ```dts
 type OnNavigate = Navigation & {
+	/**
+	 * The type of navigation:
+	 * - `form`: The user submitted a `<form method="GET">`
+	 * - `link`: Navigation was triggered by a link click
+	 * - `goto`: Navigation was triggered by a `goto(...)` call or a redirect
+	 * - `popstate`: Navigation was triggered by back/forward navigation
+	 */
 	type: Exclude<NavigationType, 'enter' | 'leave'>;
 	/**
 	 * Since `onNavigate` callbacks are called immediately before a client-side navigation, they will never be called with a navigation that unloads the page.
