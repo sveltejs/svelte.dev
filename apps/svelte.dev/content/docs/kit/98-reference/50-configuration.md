@@ -255,7 +255,7 @@ checkOrigin?: boolean;
 <div class="ts-block-property-bullets">
 
 - <span class="tag">default</span> `true`
-- <span class="tag deprecated">deprecated</span> Use `trustedOrigins: ['*']` instead
+- <span class="tag deprecated">deprecated</span> removed in 3.0. Use `trustedOrigins: ['*']` instead
 
 </div>
 
@@ -512,28 +512,6 @@ forkPreloads?: boolean;
 </div>
 
 Whether to enable the experimental forked preloading feature using Svelte's fork API.
-
-</div>
-</div>
-<div class="ts-block-property">
-
-```ts
-// @noErrors
-handleRenderingErrors?: boolean;
-```
-
-<div class="ts-block-property-details">
-
-<div class="ts-block-property-bullets">
-
-- <span class="tag">default</span> `false`
-
-</div>
-
-Whether to enable the experimental handling of rendering errors.
-When enabled, `<svelte:boundary>` is used to wrap components at each level
-where there's an `+error.svelte`, rendering the error page if the component fails.
-In addition, error boundaries also work on the server and the error object goes through `handleError`.
 
 </div>
 </div>
@@ -864,6 +842,7 @@ preloadStrategy?: 'modulepreload' | 'preload-js' | 'preload-mjs';
 
 - <span class="tag">default</span> `"modulepreload"`
 - <span class="tag since">available since</span> v1.8.4
+- <span class="tag deprecated">deprecated</span> removed in 3.0.0
 
 </div>
 
