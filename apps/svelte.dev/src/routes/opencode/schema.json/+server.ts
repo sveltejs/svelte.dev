@@ -2,14 +2,9 @@
 // instead of all of that github stuff
 
 export async function GET({ fetch }) {
-	return new Response(
-		await fetch(
-			'https://raw.githubusercontent.com/sveltejs/ai-tools/refs/heads/main/packages/opencode/schema.json'
-		).then((res) => res.text()),
-		{
-			headers: {
-				'Content-Type': 'application/json'
-			}
+	return new Response('puppa...just to test', {
+		headers: {
+			'Content-Type': 'application/json'
 		}
-	);
+	});
 }
