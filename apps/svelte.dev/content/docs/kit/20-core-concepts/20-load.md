@@ -746,7 +746,7 @@ export function requireLogin() {
 		const redirectTo = url.pathname + url.search;
 		const params = new URLSearchParams({ redirectTo });
 
-		redirect(303, `/login?${params}`);
+		redirect(307, `/login?${params}`);
 	}
 
 	return locals.user;
