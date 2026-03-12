@@ -7,7 +7,7 @@ OpenCode has a [plugin system](https://opencode.ai/docs/plugins/) that allows de
 
 ## Installation
 
-To install the plugin in OpenCode you can edit your [OpenCode config]() (either the global or the local one), adding `@sveltejs/opencode` to the list of plugins.
+To install the plugin in OpenCode you can edit your [OpenCode config](https://opencode.ai/docs/config/) (either the global or the local one), adding `@sveltejs/opencode` to the list of plugins.
 
 ```json
 {
