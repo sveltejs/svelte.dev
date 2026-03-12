@@ -255,7 +255,7 @@ checkOrigin?: boolean;
 <div class="ts-block-property-bullets">
 
 - <span class="tag">default</span> `true`
-- <span class="tag deprecated">deprecated</span> Use `trustedOrigins: ['*']` instead
+- <span class="tag deprecated">deprecated</span> removed in 3.0. Use `trustedOrigins: ['*']` instead
 
 </div>
 
@@ -864,6 +864,7 @@ preloadStrategy?: 'modulepreload' | 'preload-js' | 'preload-mjs';
 
 - <span class="tag">default</span> `"modulepreload"`
 - <span class="tag since">available since</span> v1.8.4
+- <span class="tag deprecated">deprecated</span> removed in 3.0
 
 </div>
 
@@ -979,7 +980,7 @@ base?: '' | `/${string}`;
 
 </div>
 
-A root-relative path that must start, but not end with `/` (e.g. `/base-path`), unless it is the empty string. This specifies where your app is served from and allows the app to live on a non-root path. Note that you need to prepend all your root-relative links with the base value or they will point to the root of your domain, not your `base` (this is how the browser works). You can use [`base` from `$app/paths`](/docs/kit/$app-paths#base) for that: `<a href="{base}/your-page">Link</a>`. If you find yourself writing this often, it may make sense to extract this into a reusable component.
+A root-relative path that must start, but not end with `/` (e.g. `/base-path`), unless it is the empty string. This specifies where your app is served from and allows the app to live on a non-root path. Note that you need to prepend all your root-relative links with the base value or they will point to the root of your domain, not your `base` (this is how the browser works). You can use [`resolve(...)` from `$app/paths`](/docs/kit/$app-paths#resolve) for that: `<a href="{resolve('/your-page')}">Link</a>`. If you find yourself writing this often, it may make sense to extract this into a reusable component.
 
 </div>
 </div>
@@ -1001,7 +1002,7 @@ relative?: boolean;
 
 Whether to use relative asset paths.
 
-If `true`, `base` and `assets` imported from `$app/paths` will be replaced with relative asset paths during server-side rendering, resulting in more portable HTML.
+If `true`, paths created with `resolve()` and `asset()` imported from `$app/paths` will be replaced with relative asset paths during server-side rendering, resulting in more portable HTML.
 If `false`, `%sveltekit.assets%` and references to build artifacts will always be root-relative paths, unless `paths.assets` is an external URL
 
 [Single-page app](/docs/kit/single-page-apps) fallback pages will always use absolute paths, regardless of this setting.
