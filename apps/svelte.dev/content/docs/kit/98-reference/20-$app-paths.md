@@ -115,7 +115,7 @@ if (route?.id === '/blog/[slug]') {
 
 ```dts
 function match(
-	url: Pathname_1 | URL | (string & {})
+	url: Pathname | URL | (string & {})
 ): Promise<{
 	id: RouteId;
 	params: Record<string, string>;
@@ -154,11 +154,9 @@ const resolved = resolve('/blog/[slug]', {
 <div class="ts-block">
 
 ```dts
-function resolve<
-	T extends
-		| RouteIdWithSearchOrHash
-		| PathnameWithSearchOrHash
->(...args: ResolveArgs<T>): ResolvedPathname;
+function resolve<T extends RouteId | Pathname>(
+	...args: ResolveArgs<T>
+): ResolvedPathname;
 ```
 
 </div>
@@ -176,11 +174,9 @@ Use [`resolve(...)`](/docs/kit/$app-paths#resolve) instead
 <div class="ts-block">
 
 ```dts
-function resolveRoute<
-	T extends
-		| RouteIdWithSearchOrHash
-		| PathnameWithSearchOrHash
->(...args: ResolveArgs<T>): ResolvedPathname;
+function resolveRoute<T extends RouteId | Pathname>(
+	...args: ResolveArgs<T>
+): ResolvedPathname;
 ```
 
 </div>

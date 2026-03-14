@@ -515,28 +515,6 @@ Whether to enable the experimental forked preloading feature using Svelte's fork
 
 </div>
 </div>
-<div class="ts-block-property">
-
-```ts
-// @noErrors
-handleRenderingErrors?: boolean;
-```
-
-<div class="ts-block-property-details">
-
-<div class="ts-block-property-bullets">
-
-- <span class="tag">default</span> `false`
-
-</div>
-
-Whether to enable the experimental handling of rendering errors.
-When enabled, `<svelte:boundary>` is used to wrap components at each level
-where there's an `+error.svelte`, rendering the error page if the component fails.
-In addition, error boundaries also work on the server and the error object goes through `handleError`.
-
-</div>
-</div>
 
 </div>
 
@@ -544,7 +522,7 @@ In addition, error boundaries also work on the server and the error object goes 
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
+- <span class="tag deprecated">deprecated</span> 
 
 </div>
 
@@ -563,13 +541,13 @@ src?: string;
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
+- <span class="tag deprecated">deprecated</span> 
 - <span class="tag">default</span> `"src"`
 - <span class="tag since">available since</span> v2.28
 
 </div>
 
-The location of your source code.
+the location of your source code
 
 </div>
 </div>
@@ -584,12 +562,12 @@ assets?: string;
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
+- <span class="tag deprecated">deprecated</span> 
 - <span class="tag">default</span> `"static"`
 
 </div>
 
-A place to put static files that should have stable URLs and undergo no processing, such as `favicon.ico` or `manifest.json`.
+a place to put static files that should have stable URLs and undergo no processing, such as `favicon.ico` or `manifest.json`
 
 </div>
 </div>
@@ -613,7 +591,7 @@ client?: string;
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
+- <span class="tag deprecated">deprecated</span> 
 - <span class="tag">default</span> `"src/hooks.client"`
 
 </div>
@@ -633,7 +611,7 @@ server?: string;
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
+- <span class="tag deprecated">deprecated</span> 
 - <span class="tag">default</span> `"src/hooks.server"`
 
 </div>
@@ -653,7 +631,7 @@ universal?: string;
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
+- <span class="tag deprecated">deprecated</span> 
 - <span class="tag">default</span> `"src/hooks"`
 - <span class="tag since">available since</span> v2.3.0
 
@@ -677,12 +655,12 @@ lib?: string;
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
+- <span class="tag deprecated">deprecated</span> 
 - <span class="tag">default</span> `"src/lib"`
 
 </div>
 
-Your app's internal library, accessible throughout the codebase as `$lib`.
+your app's internal library, accessible throughout the codebase as `$lib`
 
 </div>
 </div>
@@ -697,12 +675,12 @@ params?: string;
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
+- <span class="tag deprecated">deprecated</span> 
 - <span class="tag">default</span> `"src/params"`
 
 </div>
 
-A directory containing [parameter matchers](/docs/kit/advanced-routing#Matching).
+a directory containing [parameter matchers](/docs/kit/advanced-routing#Matching)
 
 </div>
 </div>
@@ -717,12 +695,12 @@ routes?: string;
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
+- <span class="tag deprecated">deprecated</span> 
 - <span class="tag">default</span> `"src/routes"`
 
 </div>
 
-The files that define the structure of your app (see [Routing](/docs/kit/routing)).
+the files that define the structure of your app (see [Routing](/docs/kit/routing))
 
 </div>
 </div>
@@ -737,12 +715,12 @@ serviceWorker?: string;
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
+- <span class="tag deprecated">deprecated</span> 
 - <span class="tag">default</span> `"src/service-worker"`
 
 </div>
 
-The location of your service worker's entry point (see [Service workers](/docs/kit/service-workers)).
+the location of your service worker's entry point (see [Service workers](/docs/kit/service-workers))
 
 </div>
 </div>
@@ -757,12 +735,12 @@ appTemplate?: string;
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
+- <span class="tag deprecated">deprecated</span> 
 - <span class="tag">default</span> `"src/app.html"`
 
 </div>
 
-The location of the template for HTML responses.
+the location of the template for HTML responses
 
 </div>
 </div>
@@ -777,12 +755,12 @@ errorTemplate?: string;
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
+- <span class="tag deprecated">deprecated</span> 
 - <span class="tag">default</span> `"src/error.html"`
 
 </div>
 
-The location of the template for fallback error responses.
+the location of the template for fallback error responses
 
 </div>
 </div>
