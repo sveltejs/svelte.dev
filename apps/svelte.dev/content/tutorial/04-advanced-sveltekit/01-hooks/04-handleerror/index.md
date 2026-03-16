@@ -32,10 +32,10 @@ In some situations you may want to customise this object. To do so, you can retu
 export function handleError({ event, error }) {
 	console.error(error.stack);
 
-	return {
+	+++return {
 		message: 'everything is fine',
 		code: 'JEREMYBEARIMY'
-	};
+	};+++
 }
 ```
 
