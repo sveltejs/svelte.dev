@@ -1000,8 +1000,7 @@ async function syntax_highlight({
 				)) {
 					const tag = match[1];
 					let value = match[2];
-
-					let content = `<span class="tag">${tag}</span><span class="value">`;
+					let content = `<div class="tag">${tag}</div><div class="value">`;
 
 					if (tag === '@param' || tag === '@throws') {
 						const words = value.split(' ');
@@ -1019,8 +1018,13 @@ async function syntax_highlight({
 						content += `<span class="param">${param}</span> `;
 					}
 
-					content += marked.parseInline(value);
-					content += '</span>';
+					if (tag === '@example') {
+						content += await render_content_markdown('<twoslash>', value, { check: false });
+					} else {
+						content += marked.parseInline(value);
+					}
+
+					content += '</div>';
 
 					replacements.push({
 						start: match.index,
