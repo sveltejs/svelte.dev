@@ -20,6 +20,7 @@ You can also declare event handlers inline:
 		m.x = event.clientX;
 		m.y = event.clientY;
 	}+++}
+	role="presentation"
 >
 	The pointer is at {m.x} x {m.y}
 </div>
