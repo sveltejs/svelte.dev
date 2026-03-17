@@ -179,6 +179,7 @@
 					height: calc(var(--height) - 1rem);
 					outline-offset: 0;
 					padding: 0 0.6rem;
+					width: fit-content;
 
 					&::before,
 					&::after {
