@@ -7,7 +7,7 @@
 	}
 </script>
 
-<div {onpointermove}>
+<div {onpointermove} role="presentation">
 	The pointer is at {Math.round(m.x)} x {Math.round(m.y)}
 </div>
 
