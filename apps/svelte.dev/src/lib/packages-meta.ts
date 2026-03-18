@@ -110,7 +110,8 @@ const FEATURED: {
 			{
 				name: '@slicemachine/adapter-sveltekit',
 				description: "Integrate with Prismic's Slice Machine"
-			}
+			},
+			{ name: '@zugriff/adapter-sveltekit', description: 'Builds your app for zugriff.eu' }
 		]
 	},
 	{
