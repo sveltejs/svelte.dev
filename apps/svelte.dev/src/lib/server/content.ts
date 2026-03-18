@@ -13,6 +13,7 @@ const documents = import.meta.glob<string>('./**/*.md', {
 });
 
 const assets = import.meta.glob<string>(['./**/+assets/**', './**/+assets/**/.env'], {
+	exhaustive: true,
 	eager: true,
 	query: '?url',
 	import: 'default',
