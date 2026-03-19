@@ -557,6 +557,14 @@ The argument passed to [`afterNavigate`](/docs/kit/$app-navigation#afterNavigate
 
 ```dts
 type AfterNavigate = (Navigation | NavigationEnter) & {
+	/**
+	 * The type of navigation:
+	 * - `enter`: The app has hydrated/started
+	 * - `form`: The user submitted a `<form method="GET">`
+	 * - `link`: Navigation was triggered by a link click
+	 * - `goto`: Navigation was triggered by a `goto(...)` call or a redirect
+	 * - `popstate`: Navigation was triggered by back/forward navigation
+	 */
 	type: Exclude<NavigationType, 'leave'>;
 	/**
 	 * Since `afterNavigate` callbacks are called after a navigation completes, they will never be called with a navigation that unloads the page.
@@ -1698,7 +1706,7 @@ willUnload: boolean;
 
 <div class="ts-block-property-details">
 
-Whether or not the navigation will result in the page being unloaded (i.e. not a client-side navigation).
+Whether or not the navigation will result in the page being unloaded (i.e. not a client-side navigation)
 
 </div>
 </div>
@@ -1734,7 +1742,11 @@ type: 'enter';
 <div class="ts-block-property-details">
 
 The type of navigation:
-- `enter`: The app has hydrated/started
+- `form`: The user submitted a `<form method="GET">`
+- `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
+- `link`: Navigation was triggered by a link click
+- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
+- `popstate`: Navigation was triggered by back/forward navigation
 
 </div>
 </div>
@@ -1834,10 +1846,39 @@ The URL of the current page
 <div class="ts-block">
 
 ```dts
-type NavigationExternal = NavigationGoto | NavigationLeave;
+interface NavigationExternal extends NavigationBase {/*…*/}
 ```
 
+<div class="ts-block-property">
+
+```dts
+type: Exclude<NavigationType, 'enter' | 'popstate' | 'link' | 'form'>;
+```
+
+<div class="ts-block-property-details">
+
+The type of navigation:
+- `form`: The user submitted a `<form method="GET">`
+- `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
+- `link`: Navigation was triggered by a link click
+- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
+- `popstate`: Navigation was triggered by back/forward navigation
+
 </div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+delta?: undefined;
+```
+
+<div class="ts-block-property-details">
+
+In case of a history back/forward navigation, the number of steps to go back/forward
+
+</div>
+</div></div>
 
 ## NavigationFormSubmit
 
@@ -1857,6 +1898,10 @@ type: 'form';
 
 The type of navigation:
 - `form`: The user submitted a `<form method="GET">`
+- `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
+- `link`: Navigation was triggered by a link click
+- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
+- `popstate`: Navigation was triggered by back/forward navigation
 
 </div>
 </div>
@@ -1870,76 +1915,6 @@ event: SubmitEvent;
 <div class="ts-block-property-details">
 
 The `SubmitEvent` that caused the navigation
-
-</div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-delta?: undefined;
-```
-
-<div class="ts-block-property-details">
-
-In case of a history back/forward navigation, the number of steps to go back/forward
-
-</div>
-</div></div>
-
-## NavigationGoto
-
-<div class="ts-block">
-
-```dts
-interface NavigationGoto extends NavigationBase {/*…*/}
-```
-
-<div class="ts-block-property">
-
-```dts
-type: 'goto';
-```
-
-<div class="ts-block-property-details">
-
-The type of navigation:
-- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
-
-</div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-delta?: undefined;
-```
-
-<div class="ts-block-property-details">
-
-In case of a history back/forward navigation, the number of steps to go back/forward
-
-</div>
-</div></div>
-
-## NavigationLeave
-
-<div class="ts-block">
-
-```dts
-interface NavigationLeave extends NavigationBase {/*…*/}
-```
-
-<div class="ts-block-property">
-
-```dts
-type: 'leave';
-```
-
-<div class="ts-block-property-details">
-
-The type of navigation:
-- `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
 
 </div>
 </div>
@@ -1974,7 +1949,11 @@ type: 'link';
 <div class="ts-block-property-details">
 
 The type of navigation:
+- `form`: The user submitted a `<form method="GET">`
+- `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
 - `link`: Navigation was triggered by a link click
+- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
+- `popstate`: Navigation was triggered by back/forward navigation
 
 </div>
 </div>
@@ -2022,6 +2001,10 @@ type: 'popstate';
 <div class="ts-block-property-details">
 
 The type of navigation:
+- `form`: The user submitted a `<form method="GET">`
+- `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
+- `link`: Navigation was triggered by a link click
+- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
 - `popstate`: Navigation was triggered by back/forward navigation
 
 </div>
@@ -2186,6 +2169,13 @@ The argument passed to [`onNavigate`](/docs/kit/$app-navigation#onNavigate) call
 
 ```dts
 type OnNavigate = Navigation & {
+	/**
+	 * The type of navigation:
+	 * - `form`: The user submitted a `<form method="GET">`
+	 * - `link`: Navigation was triggered by a link click
+	 * - `goto`: Navigation was triggered by a `goto(...)` call or a redirect
+	 * - `popstate`: Navigation was triggered by back/forward navigation
+	 */
 	type: Exclude<NavigationType, 'enter' | 'leave'>;
 	/**
 	 * Since `onNavigate` callbacks are called immediately before a client-side navigation, they will never be called with a navigation that unloads the page.
@@ -2393,9 +2383,7 @@ The return value of a remote `command` function. See [Remote functions](/docs/ki
 
 ```dts
 type RemoteCommand<Input, Output> = {
-	(
-		arg: undefined extends Input ? Input | void : Input
-	): Promise<Awaited<Output>> & {
+	(arg: Input): Promise<Awaited<Output>> & {
 		updates(
 			...queries: Array<
 				RemoteQuery<any> | RemoteQueryOverride
@@ -2621,7 +2609,7 @@ The return value of a remote `prerender` function. See [Remote functions](/docs/
 
 ```dts
 type RemotePrerenderFunction<Input, Output> = (
-	arg: undefined extends Input ? Input | void : Input
+	arg: Input
 ) => RemoteResource<Output>;
 ```
 
@@ -2682,7 +2670,7 @@ The return value of a remote `query` function. See [Remote functions](/docs/kit/
 
 ```dts
 type RemoteQueryFunction<Input, Output> = (
-	arg: undefined extends Input ? Input | void : Input
+	arg: Input
 ) => RemoteQuery<Output>;
 ```
 
@@ -4189,26 +4177,6 @@ referrer?: Array<
 
 </div>
 </div></div>
-
-## DeepPartial
-
-<div class="ts-block">
-
-```dts
-type DeepPartial<T> = T extends
-	| Record<PropertyKey, unknown>
-	| unknown[]
-	? {
-			[K in keyof T]?: T[K] extends
-				| Record<PropertyKey, unknown>
-				| unknown[]
-				? DeepPartial<T[K]>
-				: T[K];
-		}
-	: T | undefined;
-```
-
-</div>
 
 ## HttpMethod
 
