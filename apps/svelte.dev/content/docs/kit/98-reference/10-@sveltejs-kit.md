@@ -2395,12 +2395,12 @@ The return value of a remote `command` function. See [Remote functions](/docs/ki
 type RemoteCommand<Input, Output> = {
 	(
 		arg: undefined extends Input ? Input | void : Input
-	): Promise<Awaited<Output>> & {
+	): Promise<Output> & {
 		updates(
 			...queries: Array<
 				RemoteQuery<any> | RemoteQueryOverride
 			>
-		): Promise<Awaited<Output>>;
+		): Promise<Output>;
 	};
 	/** The number of pending command executions */
 	get pending(): number;
@@ -2634,6 +2634,12 @@ type RemotePrerenderFunction<Input, Output> = (
 ```dts
 type RemoteQuery<T> = RemoteResource<T> & {
 	/**
+	 * Returns a plain promise with the result.
+	 * Unlike awaiting the resource directly, this can only be used _outside_ render
+	 * (i.e. in load functions, event handlers and so on)
+	 */
+	run(): Promise<T>;
+	/**
 	 * On the client, this function will update the value of the query without re-fetching it.
 	 *
 	 * On the server, this can be called in the context of a `command` or `form` and the specified data will accompany the action response back to the client.
@@ -2667,7 +2673,7 @@ type RemoteQuery<T> = RemoteResource<T> & {
 	 * ```
 	 */
 	withOverride(
-		update: (current: Awaited<T>) => Awaited<T>
+		update: (current: T) => T
 	): RemoteQueryOverride;
 };
 ```
@@ -2719,7 +2725,7 @@ release(): void;
 <div class="ts-block">
 
 ```dts
-type RemoteResource<T> = Promise<Awaited<T>> & {
+type RemoteResource<T> = Promise<T> & {
 	/** The error in case the query fails. Most often this is a [`HttpError`](https://svelte.dev/docs/kit/@sveltejs-kit#HttpError) but it isn't guaranteed to be. */
 	get error(): any;
 	/** `true` before the first result is available and during refreshes */
@@ -2732,7 +2738,7 @@ type RemoteResource<T> = Promise<Awaited<T>> & {
 		  }
 		| {
 				/** The current value of the query. Undefined until `ready` is `true` */
-				get current(): Awaited<T>;
+				get current(): T;
 				ready: true;
 		  }
 	);
