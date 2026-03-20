@@ -2397,9 +2397,7 @@ type RemoteCommand<Input, Output> = {
 		arg: undefined extends Input ? Input | void : Input
 	): Promise<Output> & {
 		updates(
-			...queries: Array<
-				RemoteQuery<any> | RemoteQueryOverride
-			>
+			...overrides: Array<RemoteQueryOverride>
 		): Promise<Output>;
 	};
 	/** The number of pending command executions */
@@ -2432,9 +2430,7 @@ type RemoteForm<
 			data: Input;
 			submit: () => Promise<void> & {
 				updates: (
-					...queries: Array<
-						RemoteQuery<any> | RemoteQueryOverride
-					>
+					...overrides: Array<RemoteQueryOverride>
 				) => Promise<void>;
 			};
 		}) => void | Promise<void>
@@ -2632,7 +2628,9 @@ type RemotePrerenderFunction<Input, Output> = (
 <div class="ts-block">
 
 ```dts
-type RemoteQuery<T> = RemoteResource<T> & {
+type RemoteQuery<T, Input = unknown> = RemoteResource<T> & {
+	/** The original argument that was passed to the query before serialization. */
+	readonly argument: Input;
 	/**
 	 * Returns a plain promise with the result.
 	 * Unlike awaiting the resource directly, this can only be used _outside_ render
@@ -2689,7 +2687,10 @@ The return value of a remote `query` function. See [Remote functions](/docs/kit/
 ```dts
 type RemoteQueryFunction<Input, Output> = (
 	arg: undefined extends Input ? Input | void : Input
-) => RemoteQuery<Output>;
+) => RemoteQuery<
+	Output,
+	undefined extends Input ? Input | void : Input
+>;
 ```
 
 </div>
