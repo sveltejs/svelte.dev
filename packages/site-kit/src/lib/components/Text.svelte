@@ -362,12 +362,22 @@
 				display: none;
 			}
 
-			&:has(.ts-toggle:checked) pre:first-of-type {
-				display: none;
+			&:has(.ts-toggle) {
+				pre {
+					display: none;
+				}
+
+				&:has(.ts-toggle:checked) [data-ts] {
+					display: block;
+				}
+
+				&:has(.ts-toggle:checked) [data-ts] {
+					display: block;
+				}
 			}
 
-			&:has(.ts-toggle:not(:checked)) pre:last-of-type {
-				display: none;
+			&:has(.ts-toggle:not(:checked)) [data-js] {
+				display: block;
 			}
 
 			pre {
