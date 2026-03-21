@@ -139,7 +139,6 @@
 		// Only change hash when necessary to avoid polluting everyone's browser history
 		if (modified) {
 			const { files, tailwind } = repl.toJSON();
-			console.log(files);
 			const json = JSON.stringify({ name, files, tailwind });
 			await set_hash(json);
 		}
