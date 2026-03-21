@@ -147,6 +147,9 @@ importers:
       esbuild:
         specifier: ^0.27.3
         version: 0.27.3
+      gzip:
+        specifier: workspace:*
+        version: link:../../packages/gzip
       jimp:
         specifier: ^1.6.0
         version: 1.6.0
@@ -201,6 +204,8 @@ importers:
       vite-imagetools:
         specifier: ^9.0.3
         version: 9.0.3(rollup@4.59.0)
+
+  packages/gzip: {}
 
   packages/icons: {}
 
@@ -429,6 +434,9 @@ importers:
       flexsearch:
         specifier: ^0.8.212
         version: 0.8.212
+      gzip:
+        specifier: workspace:*
+        version: link:../gzip
       magic-string:
         specifier: ^0.30.21
         version: 0.30.21

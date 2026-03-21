@@ -10,6 +10,7 @@ import { createOnigurumaEngine } from 'shiki/engine/oniguruma';
 import { createCssVariablesTheme } from 'shiki';
 import { transformerTwoslash, rendererRich } from '@shikijs/twoslash';
 import { createFileSystemTypesCache } from '@shikijs/vitepress-twoslash/cache-fs';
+import { compress_and_encode_text } from 'gzip';
 import {
 	decode_html_entities,
 	SHIKI_LANGUAGE_MAP,
@@ -343,6 +344,7 @@ export async function render_content_markdown(
 		id: number;
 		files: CodeBlockFile[];
 		converted: boolean;
+		hash: string | null;
 	}
 
 	const codeblocks: CodeBlock[] = [];
@@ -353,12 +355,33 @@ export async function render_content_markdown(
 			if (token.type === 'html') {
 				if (token.text.trim() === '<!-- codeblock:start -->') {
 					if (current_block !== null) throw new Error('Cannot nest codeblocks');
-					current_block = { id: codeblocks.length, files: [], converted: false };
+					current_block = { id: codeblocks.length, files: [], converted: false, hash: null };
 					return;
 				}
 
 				if (token.text.trim() === '<!-- codeblock:end -->') {
-					codeblocks.push(current_block!);
+					const block = current_block!;
+
+					const playground = {
+						name: 'Demo (from docs)',
+						files: block.files.map((file) => {
+							const name = file.name! + file.ext!;
+
+							return {
+								basename: name,
+								contents: file.content,
+								name,
+								text: true,
+								type: 'file'
+							};
+						}),
+						tailwind: false
+					};
+
+					const json = JSON.stringify(playground);
+					block.hash = await compress_and_encode_text(json);
+
+					codeblocks.push(block);
 					current_block = null;
 					return;
 				}
@@ -369,7 +392,7 @@ export async function render_content_markdown(
 
 				if (codeblock === null) {
 					// create a one-file codeblock
-					codeblock = { id: codeblocks.length, files: [], converted: false };
+					codeblock = { id: codeblocks.length, files: [], converted: false, hash: null };
 					codeblocks.push(codeblock);
 				}
 
@@ -512,7 +535,7 @@ export async function render_content_markdown(
 					<div class="code-block" role="tablist" aria-label="Files">
 						<div class="controls">
 							<div class="tabs">${buttons.join('')}</div>
-							<a href="">Open <span class="if-large">in playground</span></a>
+							<a href="/playground/untitled#${current_block.hash}">Open <span class="if-large">in playground</span></a>
 							${current_block.converted ? `<input class="ts-toggle raised" checked title="Toggle language" type="checkbox" aria-label="Toggle JS/TS">` : ``}
 							<button class="copy-to-clipboard raised" title="Copy to clipboard" aria-label="Copy to clipboard"></button>
 						</div>`;
