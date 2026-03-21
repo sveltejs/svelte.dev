@@ -198,7 +198,7 @@
 
 					button[aria-selected='true'] {
 						height: calc(100% + 1px);
-						border-bottom: 1px solid var(--sk-fg-2);
+						border-bottom: 1px solid var(--sk-fg-4);
 						z-index: 2;
 						position: relative;
 					}
