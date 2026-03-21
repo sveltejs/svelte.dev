@@ -8,7 +8,7 @@
 	import { theme } from '@sveltejs/site-kit/state';
 	import { mapbox_setup } from '../../../../config.js';
 	import AppControls from './AppControls.svelte';
-	import { compress_and_encode_text, decode_and_decompress_text } from './gzip.js';
+	import { compress_and_encode_text, decode_and_decompress_text } from 'gzip';
 	import { page } from '$app/state';
 	import type { File } from '@sveltejs/repl/workspace';
 

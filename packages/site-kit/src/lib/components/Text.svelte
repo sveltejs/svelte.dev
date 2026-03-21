@@ -3,6 +3,7 @@
 	import type { Snippet } from 'svelte';
 	import { code_preference } from '../state/code_preference';
 	import { fix_position } from '../actions/utils';
+	import { elasticIn } from 'svelte/easing';
 
 	let { children }: { children: Snippet } = $props();
 
@@ -18,7 +19,7 @@
 		}
 	}
 
-	function toggle(e: Event) {
+	function onchangecapture(e: Event) {
 		if ((e.target as HTMLElement).classList.contains('ts-toggle')) {
 			const input = e.target as HTMLInputElement;
 			code_preference.current = input.checked ? 'typescript' : 'javascript';
@@ -26,15 +27,71 @@
 		}
 	}
 
-	async function copy(e: Event) {
-		if ((e.target as HTMLButtonElement).classList.contains('copy-to-clipboard')) {
-			const parent = e
-				.composedPath()
-				.find((node) => (node as HTMLElement).classList.contains('code-block')) as HTMLElement;
+	function onclickcapture(e: Event) {
+		const path = e.composedPath();
 
-			const ts = !!parent.querySelector('.ts-toggle:checked');
-			const code = parent.querySelectorAll(':scope > pre > code')[ts ? 1 : 0] as HTMLElement;
-			navigator.clipboard.writeText(get_text(code));
+		let i = path.length;
+		while (i--) {
+			const target = path[i];
+
+			if (target instanceof HTMLButtonElement) {
+				const parent = path.find((node) =>
+					(node as HTMLElement).classList.contains('code-block')
+				) as HTMLElement;
+
+				// copy to clipboard
+				if (target.classList.contains('copy-to-clipboard')) {
+					const visible = Array.from(parent.querySelectorAll('code')).find(
+						(code) => code.offsetParent !== null
+					) as HTMLElement;
+
+					const text = get_text(visible);
+					navigator.clipboard.writeText(text);
+
+					return;
+				}
+
+				// navigate tabs
+				if (target.role === 'tab') {
+					if (target.getAttribute('aria-selected') === 'true') {
+						return;
+					}
+
+					// clear existing selection
+					parent.querySelector('[aria-selected="true"]')!.setAttribute('tabindex', '-1');
+					parent.querySelector('[aria-selected="true"]')!.setAttribute('aria-selected', 'false');
+					parent.querySelector('[data-visible="true"]')!.setAttribute('data-visible', 'false');
+
+					const panel = target.ariaControlsElements![0];
+
+					target.setAttribute('tabindex', '0');
+					target.setAttribute('aria-selected', 'true');
+					panel.setAttribute('data-visible', 'true');
+
+					return;
+				}
+			}
+		}
+	}
+
+	function onkeydowncapture(e: KeyboardEvent) {
+		if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+			const path = e.composedPath() as HTMLElement[];
+
+			const tablist = path.find((element) => element.role === 'tablist');
+			if (tablist) {
+				const tabs = Array.from(tablist.querySelectorAll('button'));
+				const current = document.activeElement as HTMLButtonElement;
+				const index = tabs.indexOf(current);
+
+				if (index === -1) return; // should be impossible
+
+				const d = e.key === 'ArrowLeft' ? -1 : 1;
+				const next = tabs[(index + tabs.length + d) % tabs.length];
+
+				next.click();
+				next.focus();
+			}
 		}
 	}
 
@@ -65,7 +122,7 @@
 	}
 </script>
 
-<div onclickcapture={copy} onchangecapture={toggle} bind:this={container} class="text">
+<div {onclickcapture} {onchangecapture} {onkeydowncapture} bind:this={container} class="text">
 	{@render children()}
 </div>
 
@@ -120,6 +177,7 @@
 			overflow: hidden;
 			margin: calc(0.5 * var(--sk-line-height-body)) 0;
 			/* background: var(--sk-bg-3); */
+			container-type: inline-size;
 
 			@media (min-width: 767px) {
 				margin: var(--sk-line-height-body) 0;
@@ -133,7 +191,7 @@
 				top: 0;
 				right: 0;
 				height: var(--height);
-				padding: 0.3rem 0.5rem;
+				padding: 0 0.5rem;
 				gap: 0.5rem;
 				z-index: 2;
 				justify-content: end;
@@ -142,11 +200,37 @@
 				&:has(.filename) {
 					position: relative;
 					background: var(--sk-bg-3);
-					padding-left: 1rem;
+
+					&:not(:has(.tabs)) {
+						padding-left: 1rem;
+					}
 				}
 
 				&:not(:has(.filename)) {
 					background: inherit;
+				}
+
+				.tabs {
+					flex: 1;
+					display: flex;
+					/* gap: 1rem; */
+
+					button {
+						position: relative;
+						height: calc(var(--height) - 1rem);
+						padding: 0 0.5rem;
+					}
+
+					button[aria-selected='true']::after {
+						content: '';
+						position: absolute;
+						left: 0;
+						right: 0;
+						height: 1px;
+						bottom: -0.4rem;
+						background: var(--sk-fg-4);
+						z-index: 2;
+					}
 				}
 
 				.filename {
@@ -169,6 +253,21 @@
 				&:has(.ts-toggle:checked) {
 					.filename[data-ext='.js']::after {
 						content: '.ts';
+					}
+				}
+
+				a {
+					font: var(--sk-font-ui-small);
+
+					span {
+						display: none;
+					}
+
+					/* this is a bit of a magic number but is probably fine? */
+					@container (width > 40rem) {
+						span {
+							display: inline;
+						}
 					}
 				}
 
@@ -257,6 +356,10 @@
 						transition: none;
 					}
 				}
+			}
+
+			[data-visible='false'] {
+				display: none;
 			}
 
 			&:has(.ts-toggle:checked) pre:first-of-type {
