@@ -512,8 +512,9 @@ export async function render_content_markdown(
 					<div class="code-block" role="tablist" aria-label="Files">
 						<div class="controls">
 							<div class="tabs">${buttons.join('')}</div>
-							<a href="">Open in playground</a>
+							<a href="">Open <span class="if-large">in playground</span></a>
 							${current_block.converted ? `<input class="ts-toggle raised" checked title="Toggle language" type="checkbox" aria-label="Toggle JS/TS">` : ``}
+							<button class="copy-to-clipboard raised" title="Copy to clipboard" aria-label="Copy to clipboard"></button>
 						</div>`;
 			} else if (text.trim() === '<!-- codeblock:end -->') {
 				current_block = null;

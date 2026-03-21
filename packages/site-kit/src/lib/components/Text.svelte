@@ -41,9 +41,12 @@
 
 				// copy to clipboard
 				if (target.classList.contains('copy-to-clipboard')) {
-					const ts = !!parent.querySelector('.ts-toggle:checked');
-					const code = parent.querySelectorAll(':scope > pre > code')[ts ? 1 : 0] as HTMLElement;
-					navigator.clipboard.writeText(get_text(code));
+					const visible = Array.from(parent.querySelectorAll('code')).find(
+						(code) => code.offsetParent !== null
+					) as HTMLElement;
+
+					const text = get_text(visible);
+					navigator.clipboard.writeText(text);
 
 					return;
 				}
@@ -153,6 +156,7 @@
 			overflow: hidden;
 			margin: calc(0.5 * var(--sk-line-height-body)) 0;
 			/* background: var(--sk-bg-3); */
+			container-type: inline-size;
 
 			@media (min-width: 767px) {
 				margin: var(--sk-line-height-body) 0;
@@ -229,6 +233,17 @@
 
 				a {
 					font: var(--sk-font-ui-small);
+
+					span {
+						display: none;
+					}
+
+					/* this is a bit of a magic number but is probably fine? */
+					@container (width > 40rem) {
+						span {
+							display: inline;
+						}
+					}
 				}
 
 				.ts-toggle {
