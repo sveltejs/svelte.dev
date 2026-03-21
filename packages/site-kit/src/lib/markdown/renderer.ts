@@ -89,7 +89,7 @@ const highlighter = await createHighlighterCore({
  * ```
  */
 async function create_snippet_cache() {
-	const cache = new Map<string, string>();
+	const cache = new Map<string, string[]>();
 	const directory = find_nearest_node_modules(import.meta.url) + '/.snippets';
 	const current = `${directory}/${digest}`;
 
@@ -112,7 +112,7 @@ async function create_snippet_cache() {
 		hash.update(source);
 		const digest = hash.digest().toString('base64').replace(/\//g, '-');
 
-		return `${current}/${digest}.html`;
+		return `${current}/${digest}.json`;
 	}
 
 	return {
@@ -123,21 +123,21 @@ async function create_snippet_cache() {
 				const file = get_file(source);
 
 				if (fs.existsSync(file)) {
-					snippet = fs.readFileSync(file, 'utf-8');
-					cache.set(source, snippet);
+					const json = fs.readFileSync(file, 'utf-8');
+					cache.set(source, JSON.parse(json));
 				}
 			}
 
 			return snippet;
 		},
-		save(source: string, html: string) {
-			cache.set(source, html);
+		save(source: string, data: string[]) {
+			cache.set(source, data);
 
 			try {
 				fs.mkdirSync(directory);
 			} catch {}
 
-			fs.writeFileSync(get_file(source), html);
+			fs.writeFileSync(get_file(source), JSON.stringify(data));
 		}
 	};
 }
@@ -379,11 +379,12 @@ export async function render_content_markdown(
 						tailwind: false
 					};
 
+					codeblocks.push(block);
+					current_block = null;
+
 					const json = JSON.stringify(playground);
 					block.hash = await compress_and_encode_text(json);
 
-					codeblocks.push(block);
-					current_block = null;
 					return;
 				}
 			}
@@ -398,9 +399,6 @@ export async function render_content_markdown(
 				}
 
 				const decodedText = decode_html_entities(token.text);
-
-				// TODO reinstate caching
-				// if (snippets.get(decodedText)) return;
 
 				if (token.lang === 'diff') {
 					throw new Error('Use +++ and --- annotations instead of diff blocks');
@@ -445,46 +443,52 @@ export async function render_content_markdown(
 
 				codeblock.files.push(file);
 
-				const converted =
-					token.lang === 'js' || token.lang === 'svelte'
-						? await generate_ts_from_js(source, token.lang, options)
-						: undefined;
+				let cached = snippets.get(decodedText);
 
-				codeblock.converted ||= !!converted;
+				if (!cached) {
+					cached = [];
 
-				file.rendered.push(
-					await syntax_highlight({
-						filename,
-						language: token.lang,
-						prelude,
-						source,
-						check,
-						references
-					})
-				);
+					const converted =
+						token.lang === 'js' || token.lang === 'svelte'
+							? await generate_ts_from_js(source, token.lang, options)
+							: undefined;
 
-				if (converted) {
-					const language = token.lang === 'js' ? 'ts' : token.lang;
+					codeblock.converted ||= !!converted;
 
-					if (language === 'ts') {
-						prelude = prelude.replace(/(\/\/ @filename: .+)\.js$/gm, '$1.ts');
-					}
-
-					file.rendered.push(
+					cached.push(
 						await syntax_highlight({
 							filename,
-							language,
+							language: token.lang,
 							prelude,
-							source: converted,
+							source,
 							check,
 							references
 						})
 					);
+
+					if (converted) {
+						const language = token.lang === 'js' ? 'ts' : token.lang;
+
+						if (language === 'ts') {
+							prelude = prelude.replace(/(\/\/ @filename: .+)\.js$/gm, '$1.ts');
+						}
+
+						cached.push(
+							await syntax_highlight({
+								filename,
+								language,
+								prelude,
+								source: converted,
+								check,
+								references
+							})
+						);
+					}
+
+					snippets.save(decodedText, cached);
 				}
 
-				// Save everything locally now
-				// TODO reinstate
-				// snippets.save(decodedText, html);
+				file.rendered.push(...cached);
 			}
 
 			const tokens = 'tokens' in token ? token.tokens : undefined;
