@@ -27,7 +27,7 @@
 		}
 	}
 
-	async function onclickcapture(e: Event) {
+	function onclickcapture(e: Event) {
 		const path = e.composedPath();
 
 		let i = path.length;
@@ -58,16 +58,39 @@
 					}
 
 					// clear existing selection
+					parent.querySelector('[aria-selected="true"]')!.setAttribute('tabindex', '-1');
 					parent.querySelector('[aria-selected="true"]')!.setAttribute('aria-selected', 'false');
 					parent.querySelector('[data-visible="true"]')!.setAttribute('data-visible', 'false');
 
 					const panel = target.ariaControlsElements![0];
 
+					target.setAttribute('tabindex', '0');
 					target.setAttribute('aria-selected', 'true');
 					panel.setAttribute('data-visible', 'true');
 
 					return;
 				}
+			}
+		}
+	}
+
+	function onkeydowncapture(e: KeyboardEvent) {
+		if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+			const path = e.composedPath() as HTMLElement[];
+
+			const tablist = path.find((element) => element.role === 'tablist');
+			if (tablist) {
+				const tabs = Array.from(tablist.querySelectorAll('button'));
+				const current = document.activeElement as HTMLButtonElement;
+				const index = tabs.indexOf(current);
+
+				if (index === -1) return; // should be impossible
+
+				const d = e.key === 'ArrowLeft' ? -1 : 1;
+				const next = tabs[(index + tabs.length + d) % tabs.length];
+
+				next.click();
+				next.focus();
 			}
 		}
 	}
@@ -99,7 +122,7 @@
 	}
 </script>
 
-<div {onclickcapture} {onchangecapture} bind:this={container} class="text">
+<div {onclickcapture} {onchangecapture} {onkeydowncapture} bind:this={container} class="text">
 	{@render children()}
 </div>
 

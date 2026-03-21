@@ -532,9 +532,9 @@ export async function render_content_markdown(
 				});
 
 				return `
-					<div class="code-block" role="tablist" aria-label="Files">
+					<div class="code-block">
 						<div class="controls">
-							<div class="tabs">${buttons.join('')}</div>
+							<div class="tabs" role="tablist" aria-label="Files">${buttons.join('')}</div>
 							<a href="/playground/untitled#${current_block.hash}">Open <span class="if-large">in playground</span></a>
 							${current_block.converted ? `<input class="ts-toggle raised" checked title="Toggle language" type="checkbox" aria-label="Toggle JS/TS">` : ``}
 							<button class="copy-to-clipboard raised" title="Copy to clipboard" aria-label="Copy to clipboard"></button>
@@ -572,7 +572,7 @@ export async function render_content_markdown(
 
 			if (current_block) {
 				// tabs
-				html = `<div id="${file.panel_id}" aria-labelledby="${file.tab_id}" role="tabpanel" tabindex="0" data-visible="${file.first}">`;
+				html = `<div id="${file.panel_id}" aria-labelledby="${file.tab_id}" role="tabpanel" data-visible="${file.first}">`;
 			} else {
 				// single file
 				html = `<div class="code-block">`;
