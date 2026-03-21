@@ -482,15 +482,17 @@ export async function render_content_markdown(
 							? await generate_ts_from_js(source, token.lang, options)
 							: undefined;
 
+					let highlighted = await syntax_highlight({
+						filename,
+						language: token.lang,
+						prelude,
+						source,
+						check,
+						references
+					});
+
 					cached.push(
-						await syntax_highlight({
-							filename,
-							language: token.lang,
-							prelude,
-							source,
-							check,
-							references
-						})
+						highlighted.replace('<pre', converted ? '<pre data-js' : '<pre data-js data-ts')
 					);
 
 					if (converted) {
@@ -500,16 +502,16 @@ export async function render_content_markdown(
 							prelude = prelude.replace(/(\/\/ @filename: .+)\.js$/gm, '$1.ts');
 						}
 
-						cached.push(
-							await syntax_highlight({
-								filename,
-								language,
-								prelude,
-								source: converted,
-								check,
-								references
-							})
-						);
+						highlighted = await syntax_highlight({
+							filename,
+							language,
+							prelude,
+							source: converted,
+							check,
+							references
+						});
+
+						cached.push(highlighted.replace('<pre', '<pre data-ts'));
 					}
 
 					snippets.save(decodedText, cached);
