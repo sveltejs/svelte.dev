@@ -63,8 +63,6 @@
 
 					const panel = target.ariaControlsElements![0];
 
-					console.log(target, panel);
-
 					target.setAttribute('aria-selected', 'true');
 					panel.setAttribute('data-visible', 'true');
 
