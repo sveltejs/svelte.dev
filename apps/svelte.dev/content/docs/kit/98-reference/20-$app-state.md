@@ -20,6 +20,9 @@ import { navigating, page, updated } from '$app/state';
 A read-only object representing an in-progress navigation, with `from`, `to`, `type` and (if `type === 'popstate'`) `delta` properties.
 Values are `null` when no navigation is occurring, or during server rendering.
 
+The `from` and `to` properties are [`NavigationTarget`](/docs/kit/@sveltejs-kit#NavigationTarget) objects with `params`, `route`, `url` and `scroll` properties.
+The `complete` property is a promise that resolves when the navigation finishes, and `delta` is only non-`null` for `popstate` navigations.
+
 <div class="ts-block">
 
 ```dts
@@ -74,6 +77,16 @@ Changes to `page` are available exclusively with runes. (The legacy reactivity s
 ```
 
 On the server, values can only be read during rendering (in other words _not_ in e.g. `load` functions). In the browser, the values can be read at any time.
+
+Key properties include:
+- `url`: the current URL
+- `params`: the current route parameters
+- `route.id`: the current route ID, or `null` if no route matched
+- `status`: the current page status code
+- `error`: the current error, if any
+- `data`: the merged data from all `load` functions on the page
+- `state`: the current page state from shallow routing
+- `form`: the current form data, if the page was reached through a form submission
 
 <div class="ts-block">
 
