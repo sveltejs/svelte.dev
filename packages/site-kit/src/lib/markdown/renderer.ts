@@ -88,7 +88,7 @@ const highlighter = await createHighlighterCore({
  * ```
  */
 async function create_snippet_cache() {
-	const cache = new Map();
+	const cache = new Map<string, string>();
 	const directory = find_nearest_node_modules(import.meta.url) + '/.snippets';
 	const current = `${directory}/${digest}`;
 
@@ -329,12 +329,54 @@ export async function render_content_markdown(
 	const headings: string[] = [];
 	const { check = true, references } = options ?? {};
 
-	return await transform(body, {
+	interface CodeBlockFile {
+		first: boolean;
+		tab_id: string;
+		panel_id: string;
+		name: string | null;
+		ext: string | null;
+		content: string;
+		rendered: string[];
+	}
+
+	interface CodeBlock {
+		id: number;
+		files: CodeBlockFile[];
+		converted: boolean;
+	}
+
+	const codeblocks: CodeBlock[] = [];
+	let current_block: CodeBlock | null = null;
+
+	let transformed = await transform(body, {
 		async walkTokens(token) {
+			if (token.type === 'html') {
+				if (token.text.trim() === '<!-- codeblock:start -->') {
+					if (current_block !== null) throw new Error('Cannot nest codeblocks');
+					current_block = { id: codeblocks.length, files: [], converted: false };
+					return;
+				}
+
+				if (token.text.trim() === '<!-- codeblock:end -->') {
+					codeblocks.push(current_block!);
+					current_block = null;
+					return;
+				}
+			}
+
 			if (token.type === 'code') {
+				let codeblock = current_block;
+
+				if (codeblock === null) {
+					// create a one-file codeblock
+					codeblock = { id: codeblocks.length, files: [], converted: false };
+					codeblocks.push(codeblock);
+				}
+
 				const decodedText = decode_html_entities(token.text);
 
-				if (snippets.get(decodedText)) return;
+				// TODO reinstate caching
+				// if (snippets.get(decodedText)) return;
 
 				if (token.lang === 'diff') {
 					throw new Error('Use +++ and --- annotations instead of diff blocks');
@@ -342,6 +384,10 @@ export async function render_content_markdown(
 
 				let { source, options } = parse_options(decodedText, token.lang);
 				source = adjust_tab_indentation(source, token.lang);
+
+				if (options.file && !options.file.includes('.')) {
+					throw new Error(`Missing file extension: ${options.file}`);
+				}
 
 				let prelude = '';
 
@@ -360,46 +406,37 @@ export async function render_content_markdown(
 					}
 				);
 
+				const ext = options.file?.slice(options.file.lastIndexOf('.'));
+
+				const file: CodeBlockFile = {
+					first: codeblock.files.length === 0,
+					tab_id: `playground-tab-${codeblock.id}-${codeblock.files.length}`,
+					panel_id: `playground-tabpanel-${codeblock.id}-${codeblock.files.length}`,
+					name: options.file?.slice(0, -ext!.length) ?? null,
+					ext: ext ?? null,
+					content: source,
+					rendered: []
+				};
+
+				codeblock.files.push(file);
+
 				const converted =
 					token.lang === 'js' || token.lang === 'svelte'
 						? await generate_ts_from_js(source, token.lang, options)
 						: undefined;
 
-				let html = '<div class="code-block">';
+				codeblock.converted ||= !!converted;
 
-				const needs_controls = options.link || options.copy || converted;
-
-				if (needs_controls) {
-					html += '<div class="controls">';
-				}
-
-				if (options.file) {
-					const ext = options.file.slice(options.file.lastIndexOf('.'));
-					if (!ext) throw new Error(`Missing file extension: ${options.file}`);
-
-					html += `<span class="filename" data-ext="${ext}">${options.file.slice(0, -ext.length)}</span>`;
-				}
-
-				if (converted) {
-					html += `<input class="ts-toggle raised" checked title="Toggle language" type="checkbox" aria-label="Toggle JS/TS">`;
-				}
-
-				if (options.copy) {
-					html += `<button class="copy-to-clipboard raised" title="Copy to clipboard" aria-label="Copy to clipboard"></button>`;
-				}
-
-				if (needs_controls) {
-					html += '</div>';
-				}
-
-				html += await syntax_highlight({
-					filename,
-					language: token.lang,
-					prelude,
-					source,
-					check,
-					references
-				});
+				file.rendered.push(
+					await syntax_highlight({
+						filename,
+						language: token.lang,
+						prelude,
+						source,
+						check,
+						references
+					})
+				);
 
 				if (converted) {
 					const language = token.lang === 'js' ? 'ts' : token.lang;
@@ -408,20 +445,21 @@ export async function render_content_markdown(
 						prelude = prelude.replace(/(\/\/ @filename: .+)\.js$/gm, '$1.ts');
 					}
 
-					html += await syntax_highlight({
-						filename,
-						language,
-						prelude,
-						source: converted,
-						check,
-						references
-					});
+					file.rendered.push(
+						await syntax_highlight({
+							filename,
+							language,
+							prelude,
+							source: converted,
+							check,
+							references
+						})
+					);
 				}
 
-				html += '</div>';
-
 				// Save everything locally now
-				snippets.save(decodedText, html);
+				// TODO reinstate
+				// snippets.save(decodedText, html);
 			}
 
 			const tokens = 'tokens' in token ? token.tokens : undefined;
@@ -452,6 +490,38 @@ export async function render_content_markdown(
 				}
 			}
 		},
+		html({ text }) {
+			if (text.trim() === '<!-- codeblock:start -->') {
+				current_block = codeblocks.shift()!;
+
+				const buttons: string[] = current_block.files.map((file) => {
+					if (!file.name) {
+						throw new Error('Files in a codeblock must have a name');
+					}
+
+					const selected = file.first;
+
+					return `
+						<button id="${file.tab_id}" aria-controls="${file.panel_id}" role="tab" aria-selected="${selected}" tabindex="${selected ? 0 : -1}">
+							<span class="filename" data-ext="${file.ext}">${file.name}</span>
+						</button>
+					`;
+				});
+
+				return `
+					<div class="code-block" role="tablist" aria-label="Files">
+						<div class="controls">
+							<div class="tabs">${buttons.join('')}</div>
+							<a href="">Open in playground</a>
+							${current_block.converted ? `<input class="ts-toggle raised" checked title="Toggle language" type="checkbox" aria-label="Toggle JS/TS">` : ``}
+						</div>`;
+			} else if (text.trim() === '<!-- codeblock:end -->') {
+				current_block = null;
+				return '</div>';
+			}
+
+			return text;
+		},
 		heading({ tokens, depth }) {
 			const text = this.parser!.parseInline(tokens);
 			const html = text.replace(/<\/?code>/g, '');
@@ -464,11 +534,53 @@ export async function render_content_markdown(
 		},
 		code({ text }) {
 			const decodedText = decode_html_entities(text);
-			const cached = snippets.get(decodedText);
-			if (cached) {
-				return injectReferenceLinks(cached, references, extractImportedSymbols(decodedText));
+			const symbols = extractImportedSymbols(decodedText);
+
+			// const cached = snippets.get(decodedText);
+			// if (!cached) throw new Error('huh?');
+
+			// let html = injectReferenceLinks(cached, references, extractImportedSymbols(decodedText));
+
+			const block = current_block ?? codeblocks.shift()!;
+			const file = block.files.shift()!;
+
+			let html = '';
+
+			if (current_block) {
+				// tabs
+				html = `<div id="${file.panel_id}" aria-labelledby="${file.tab_id}" role="tabpanel" tabindex="0" data-visible="${file.first}">`;
+			} else {
+				// single file
+				html = `<div class="code-block">`;
+
+				const needs_controls = file.name !== null || file.rendered.length > 1;
+
+				if (needs_controls) {
+					html += '<div class="controls">';
+
+					if (file.name) {
+						html += `<span class="filename" data-ext="${file.ext}">${file.name}</span>`;
+					}
+
+					if (file.rendered.length > 1) {
+						html += `<input class="ts-toggle raised" checked title="Toggle language" type="checkbox" aria-label="Toggle JS/TS">`;
+					}
+
+					if (true) {
+						html += `<button class="copy-to-clipboard raised" title="Copy to clipboard" aria-label="Copy to clipboard"></button>`;
+					}
+
+					html += '</div>';
+				}
 			}
-			return cached;
+
+			for (const pre of file.rendered) {
+				html += injectReferenceLinks(pre, references, symbols);
+			}
+
+			html += '</div>';
+
+			return html;
 		},
 		blockquote(token) {
 			let content = this.parser?.parse(token.tokens) ?? '';
@@ -491,6 +603,8 @@ export async function render_content_markdown(
 			return `<blockquote>${content}</blockquote>`;
 		}
 	});
+
+	return transformed;
 }
 
 /**
