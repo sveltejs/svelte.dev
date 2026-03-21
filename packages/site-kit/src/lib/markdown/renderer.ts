@@ -1087,7 +1087,7 @@ async function syntax_highlight({
 									compilerOptions: {
 										allowJs: true,
 										checkJs: true,
-										types: ['svelte', '@sveltejs/kit', 'sv']
+										types: ['svelte', '@sveltejs/kit', 'sv', '@sveltejs/sv-utils']
 									}
 								},
 								// by default, twoslash does not run on .js files, change that through this option
@@ -1109,6 +1109,7 @@ async function syntax_highlight({
 				// munge the twoslash output so that it renders sensibly. the order of operations
 				// here is important — we need to work backwards, to avoid corrupting the offsets
 
+				// TODO JYC: look at this later — replacing with '' may break layout, '\n' was too aggressive
 				// first, strip out unwanted error lines
 				html = html.replace(
 					/<div class="twoslash-meta-line twoslash-error-line">[^]+?<\/div>/g,

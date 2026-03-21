@@ -129,6 +129,9 @@ importers:
       '@sveltejs/site-kit':
         specifier: workspace:*
         version: link:../../packages/site-kit
+      '@sveltejs/sv-utils':
+        specifier: ^0.0.3
+        version: 0.0.3
       '@sveltejs/vite-plugin-svelte':
         specifier: ^7.0.0
         version: 7.0.0(svelte@5.53.5)(vite@8.0.0-beta.15(@types/node@20.19.33)(esbuild@0.27.3)(tsx@4.21.0))
@@ -1741,6 +1744,9 @@ packages:
     hasBin: true
     peerDependencies:
       svelte: ^3.44.0 || ^4.0.0 || ^5.0.0-next.1
+
+  '@sveltejs/sv-utils@0.0.3':
+    resolution: {integrity: sha512-rILMrx0zQMR0OlFXR/peTu+9z6x/5iOsEiWJelkI670WPWdAunikKLQrIE7zN8U/8DjN5WBvIWu0OAyEuZ4ohA==}
 
   '@sveltejs/svelte-json-tree@2.2.1':
     resolution: {integrity: sha512-M8l23/R3y1fI2+RaOzfUzmkysTWWsw/NClUgGpvydl9vXRonPN1/btQQievaNyeWNfUj12tjPfh5yTrXWpaKkg==}
@@ -4880,6 +4886,8 @@ snapshots:
       svelte2tsx: 0.7.51(svelte@5.53.5)(typescript@5.9.3)
     transitivePeerDependencies:
       - typescript
+
+  '@sveltejs/sv-utils@0.0.3': {}
 
   '@sveltejs/svelte-json-tree@2.2.1(svelte@5.53.5)':
     dependencies:

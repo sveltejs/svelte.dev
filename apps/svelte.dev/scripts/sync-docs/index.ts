@@ -9,7 +9,7 @@ import ts from 'typescript';
 import glob from 'tiny-glob/sync.js';
 import chokidar from 'chokidar';
 import { fileURLToPath } from 'node:url';
-import { clone_repo, migrate_meta_json } from './utils.ts';
+import { clone_repo, invoke, migrate_meta_json } from './utils.ts';
 import { get_types, read_d_ts_file, read_types } from './types.ts';
 import type { Modules } from '@sveltejs/site-kit/markdown';
 import { generate_crosslinks } from './crosslinks.ts';
@@ -24,6 +24,8 @@ interface Package {
 	docs: string;
 	types: string | null;
 	process_modules?: (modules: Modules, pkg: Package) => Promise<Modules>;
+	/** Runs after cloning the repo (e.g. to install deps and build types) */
+	post_clone?: (dir: string) => Promise<void>;
 }
 
 const get_trigger = (pkg: Package) => pkg.trigger ?? pkg.name;
@@ -170,7 +172,20 @@ const packages: Package[] = [
 		branch: branches['cli']?.branch ?? 'main',
 		pkg: 'packages/sv',
 		docs: 'documentation/docs',
-		types: null
+		types: null,
+		post_clone: async (dir) => {
+			await invoke('npx', ['pnpm@10', 'install'], { cwd: dir });
+			await invoke('npx', ['pnpm@10', 'build'], { cwd: dir });
+
+			// Point node_modules symlinks at the cloned repo so twoslash uses PR types
+			const app_nm = path.join(dirname, '../../node_modules');
+			const sv_link = path.join(app_nm, 'sv');
+			const sv_utils_link = path.join(app_nm, '@sveltejs/sv-utils');
+			fs.rmSync(sv_link, { force: true });
+			fs.rmSync(sv_utils_link, { force: true });
+			fs.symlinkSync(path.join(dir, 'packages/sv'), sv_link);
+			fs.symlinkSync(path.join(dir, 'packages/sv-utils'), sv_utils_link);
+		}
 	},
 	{
 		name: 'ai',
@@ -213,6 +228,9 @@ if (parsed.values.pull) {
 
 	for (const pkg of filtered) {
 		await clone_repo(`https://github.com/${pkg.repo}.git`, pkg.name, pkg.branch, REPOS);
+		if (pkg.post_clone) {
+			await pkg.post_clone(`${REPOS}/${pkg.name}`);
+		}
 	}
 }
 

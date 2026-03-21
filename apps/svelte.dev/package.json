@@ -73,6 +73,7 @@
 		"prettier-plugin-svelte": "^3.5.0",
 		"satori": "^0.19.2",
 		"satori-html": "^0.3.2",
+		"@sveltejs/sv-utils": "^0.0.3",
 		"sv": "^0.12.2",
 		"svelte": "^5.53.5",
 		"svelte-check": "^4.4.3",
