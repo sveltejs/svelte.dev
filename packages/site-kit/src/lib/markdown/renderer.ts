@@ -583,7 +583,7 @@ export async function render_content_markdown(
 				// single file
 				html = `<div class="code-block">`;
 
-				const needs_controls = file.name !== null || file.rendered.length > 1;
+				const needs_controls = file.name !== null || file.can_copy || file.rendered.length > 1;
 
 				if (needs_controls) {
 					html += '<div class="controls">';
