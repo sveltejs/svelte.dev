@@ -211,21 +211,25 @@
 				}
 
 				.tabs {
-					height: 100%;
 					flex: 1;
 					display: flex;
 					/* gap: 1rem; */
 
 					button {
-						height: 100%;
+						position: relative;
+						height: calc(var(--height) - 1rem);
 						padding: 0 0.5rem;
 					}
 
-					button[aria-selected='true'] {
-						height: calc(100% + 1px);
-						border-bottom: 1px solid var(--sk-fg-4);
+					button[aria-selected='true']::after {
+						content: '';
+						position: absolute;
+						left: 0;
+						right: 0;
+						height: 1px;
+						bottom: -0.4rem;
+						background: var(--sk-fg-4);
 						z-index: 2;
-						position: relative;
 					}
 				}
 
