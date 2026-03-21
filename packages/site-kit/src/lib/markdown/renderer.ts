@@ -338,6 +338,7 @@ export async function render_content_markdown(
 		ext: string | null;
 		content: string;
 		rendered: string[];
+		can_copy: boolean;
 	}
 
 	interface CodeBlock {
@@ -438,7 +439,8 @@ export async function render_content_markdown(
 					name: options.file?.slice(0, -ext!.length) ?? null,
 					ext: ext ?? null,
 					content: source,
-					rendered: []
+					rendered: [],
+					can_copy: options.copy
 				};
 
 				codeblock.files.push(file);
@@ -590,7 +592,7 @@ export async function render_content_markdown(
 						html += `<input class="ts-toggle raised" checked title="Toggle language" type="checkbox" aria-label="Toggle JS/TS">`;
 					}
 
-					if (true) {
+					if (file.can_copy) {
 						html += `<button class="copy-to-clipboard raised" title="Copy to clipboard" aria-label="Copy to clipboard"></button>`;
 					}
 
