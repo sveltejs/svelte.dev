@@ -331,7 +331,7 @@ export async function render_content_markdown(
 	const { check = true, references } = options ?? {};
 
 	interface CodeBlockFile {
-		first: boolean;
+		selected: boolean;
 		tab_id: string;
 		panel_id: string;
 		name: string | null;
@@ -343,6 +343,8 @@ export async function render_content_markdown(
 
 	interface CodeBlock {
 		id: number;
+		title: string | null;
+		selected: string | null;
 		files: CodeBlockFile[];
 		converted: boolean;
 		hash: string | null;
@@ -354,9 +356,25 @@ export async function render_content_markdown(
 	let transformed = await transform(body, {
 		async walkTokens(token) {
 			if (token.type === 'html') {
-				if (token.text.trim() === '<!-- codeblock:start -->') {
-					if (current_block !== null) throw new Error('Cannot nest codeblocks');
-					current_block = { id: codeblocks.length, files: [], converted: false, hash: null };
+				if (token.text.startsWith('<!-- codeblock:start')) {
+					if (current_block !== null) {
+						throw new Error('Cannot nest codeblocks');
+					}
+
+					const match = /<!-- codeblock:start ({.+}) -->/.exec(token.text);
+					const { title = 'Demo (from docs)', selected = 'App.svelte' } = match
+						? JSON.parse(match[1])
+						: {};
+
+					current_block = {
+						id: codeblocks.length,
+						title,
+						selected,
+						files: [],
+						converted: false,
+						hash: null
+					};
+
 					return;
 				}
 
@@ -364,7 +382,7 @@ export async function render_content_markdown(
 					const block = current_block!;
 
 					const playground = {
-						name: 'Demo (from docs)',
+						name: block.title,
 						files: block.files.map((file) => {
 							const name = file.name! + file.ext!;
 
@@ -394,7 +412,15 @@ export async function render_content_markdown(
 
 				if (codeblock === null) {
 					// create a one-file codeblock
-					codeblock = { id: codeblocks.length, files: [], converted: false, hash: null };
+					codeblock = {
+						id: codeblocks.length,
+						title: null,
+						selected: null,
+						files: [],
+						converted: false,
+						hash: null
+					};
+
 					codeblocks.push(codeblock);
 				}
 
@@ -431,12 +457,15 @@ export async function render_content_markdown(
 				const ext = options.file?.slice(options.file.lastIndexOf('.'));
 
 				const file: CodeBlockFile = {
-					first: codeblock.files.length === 0,
+					selected: options.file === codeblock.selected,
 					tab_id: `playground-tab-${codeblock.id}-${codeblock.files.length}`,
 					panel_id: `playground-tabpanel-${codeblock.id}-${codeblock.files.length}`,
 					name: options.file?.slice(0, -ext!.length) ?? null,
 					ext: ext ?? null,
-					content: source,
+					content: source
+						.replace(delimiter_patterns['---'], '$1')
+						.replace(delimiter_patterns['+++'], '$1')
+						.replace(delimiter_patterns[':::'], '$1'),
 					rendered: [],
 					can_copy: options.copy
 				};
@@ -452,8 +481,6 @@ export async function render_content_markdown(
 						token.lang === 'js' || token.lang === 'svelte'
 							? await generate_ts_from_js(source, token.lang, options)
 							: undefined;
-
-					codeblock.converted ||= !!converted;
 
 					cached.push(
 						await syntax_highlight({
@@ -489,6 +516,7 @@ export async function render_content_markdown(
 				}
 
 				file.rendered.push(...cached);
+				codeblock.converted ||= cached.length > 1;
 			}
 
 			const tokens = 'tokens' in token ? token.tokens : undefined;
@@ -520,7 +548,7 @@ export async function render_content_markdown(
 			}
 		},
 		html({ text }) {
-			if (text.trim() === '<!-- codeblock:start -->') {
+			if (text.startsWith('<!-- codeblock:start')) {
 				current_block = codeblocks.shift()!;
 
 				const buttons: string[] = current_block.files.map((file) => {
@@ -528,10 +556,8 @@ export async function render_content_markdown(
 						throw new Error('Files in a codeblock must have a name');
 					}
 
-					const selected = file.first;
-
 					return `
-						<button id="${file.tab_id}" aria-controls="${file.panel_id}" role="tab" aria-selected="${selected}" tabindex="${selected ? 0 : -1}">
+						<button id="${file.tab_id}" aria-controls="${file.panel_id}" role="tab" aria-selected="${file.selected}" tabindex="${file.selected ? 0 : -1}">
 							<span class="filename" data-ext="${file.ext}">${file.name}</span>
 						</button>
 					`;
@@ -578,7 +604,7 @@ export async function render_content_markdown(
 
 			if (current_block) {
 				// tabs
-				html = `<div id="${file.panel_id}" aria-labelledby="${file.tab_id}" role="tabpanel" data-visible="${file.first}">`;
+				html = `<div id="${file.panel_id}" aria-labelledby="${file.tab_id}" role="tabpanel" data-visible="${file.selected}">`;
 			} else {
 				// single file
 				html = `<div class="code-block">`;
