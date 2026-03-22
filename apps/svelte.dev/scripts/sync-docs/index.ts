@@ -24,7 +24,6 @@ interface Package {
 	docs: string;
 	types: string | null;
 	process_modules?: (modules: Modules, pkg: Package) => Promise<Modules>;
-	/** Runs after cloning the repo (e.g. to install deps and build types) */
 	post_clone?: (dir: string) => Promise<void>;
 }
 
