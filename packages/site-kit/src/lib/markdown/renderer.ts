@@ -1115,6 +1115,8 @@ async function syntax_highlight({
 									compilerOptions: {
 										allowJs: true,
 										checkJs: true,
+										module: ts.ModuleKind.ESNext,
+										moduleResolution: ts.ModuleResolutionKind.Bundler,
 										types: ['svelte', '@sveltejs/kit', 'sv', '@sveltejs/sv-utils']
 									}
 								},
