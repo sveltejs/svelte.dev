@@ -6,10 +6,10 @@
     "cyberalien"
   ],
   "homepage": "https://iconify.design/",
-  "version": "1.2.1",
-  "downloads": 26767,
+  "version": "1.2.3",
+  "downloads": 22434,
   "github_stars": 18,
-  "updated": "2026-01-14T07:33:59.125Z",
+  "updated": "2026-03-05T06:49:21.592Z",
   "typescript": true,
   "runes": false,
   "last_rune_check_version": "1.0.6"

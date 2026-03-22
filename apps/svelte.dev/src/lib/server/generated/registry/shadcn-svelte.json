@@ -6,10 +6,11 @@
     "huntabyte"
   ],
   "homepage": "https://github.com/huntabyte/shadcn-svelte#readme",
-  "version": "1.1.1",
-  "downloads": 12528,
-  "github_stars": 8314,
-  "updated": "2026-01-18T01:46:26.275Z",
+  "version": "1.2.2",
+  "downloads": 68495,
+  "github_stars": 8499,
+  "updated": "2026-03-21T20:03:58.775Z",
+  "svelte_range": "^5.0.0",
   "typescript": false,
   "runes": false,
   "last_rune_check_version": "0.14.0"
