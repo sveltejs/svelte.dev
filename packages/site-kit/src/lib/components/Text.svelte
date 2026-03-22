@@ -212,9 +212,6 @@
 
 				.tabs {
 					display: flex;
-					overflow-x: scroll;
-					overflow-y: hidden;
-					/* gap: 1rem; */
 
 					button {
 						position: relative;
