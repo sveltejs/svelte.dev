@@ -81,6 +81,26 @@ const get_downstream_repo = (name: string) => {
 	return `${owner}/${downstream}`;
 };
 
+function patch_node_modules(
+	cloned_dir: string,
+	pkg_subdir: string,
+	npm_name: string,
+	onlyDirs?: string[]
+) {
+	const source = path.join(cloned_dir, pkg_subdir);
+	const target = path.join(dirname, '../../node_modules', npm_name);
+	if (onlyDirs) {
+		for (const dir of onlyDirs) {
+			const t = path.join(target, dir);
+			fs.rmSync(t, { recursive: true, force: true });
+			fs.cpSync(path.join(source, dir), t, { recursive: true });
+		}
+	} else {
+		fs.rmSync(target, { force: true });
+		fs.symlinkSync(source, target);
+	}
+}
+
 const packages: Package[] = [
 	{
 		name: 'svelte',
@@ -89,6 +109,9 @@ const packages: Package[] = [
 		pkg: 'packages/svelte',
 		docs: 'documentation/docs',
 		types: 'types',
+		post_clone: async (dir) => {
+			patch_node_modules(dir, 'packages/svelte', 'svelte', ['types']);
+		},
 		process_modules: async (modules: Modules) => {
 			// Remove $$_attributes from ActionReturn
 			const module_with_ActionReturn = modules.find((m) =>
@@ -113,6 +136,9 @@ const packages: Package[] = [
 		pkg: 'packages/kit',
 		docs: 'documentation/docs',
 		types: 'types',
+		post_clone: async (dir) => {
+			patch_node_modules(dir, 'packages/kit', '@sveltejs/kit', ['types']);
+		},
 		process_modules: async (modules, pkg) => {
 			const kit_base = `${REPOS}/${pkg.name}/${pkg.pkg}/`;
 
@@ -177,14 +203,8 @@ const packages: Package[] = [
 			await invoke('npx', ['pnpm@10', 'install'], { cwd: dir });
 			await invoke('npx', ['pnpm@10', 'build'], { cwd: dir });
 
-			// Point node_modules symlinks at the cloned repo so twoslash uses PR types
-			const app_nm = path.join(dirname, '../../node_modules');
-			const sv_link = path.join(app_nm, 'sv');
-			const sv_utils_link = path.join(app_nm, '@sveltejs/sv-utils');
-			fs.rmSync(sv_link, { force: true });
-			fs.rmSync(sv_utils_link, { force: true });
-			fs.symlinkSync(path.join(dir, 'packages/sv'), sv_link);
-			fs.symlinkSync(path.join(dir, 'packages/sv-utils'), sv_utils_link);
+			patch_node_modules(dir, 'packages/sv', 'sv');
+			patch_node_modules(dir, 'packages/sv-utils', '@sveltejs/sv-utils');
 		}
 	},
 	{
