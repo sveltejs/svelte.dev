@@ -129,6 +129,9 @@ importers:
       '@sveltejs/site-kit':
         specifier: workspace:*
         version: link:../../packages/site-kit
+      '@sveltejs/sv-utils':
+        specifier: ^0.0.3
+        version: 0.0.3
       '@sveltejs/vite-plugin-svelte':
         specifier: ^7.0.0
         version: 7.0.0(svelte@5.53.5)(vite@8.0.0-beta.15(@types/node@20.19.33)(esbuild@0.27.3)(tsx@4.21.0))
@@ -178,8 +181,8 @@ importers:
         specifier: ^0.3.2
         version: 0.3.2
       sv:
-        specifier: ^0.12.2
-        version: 0.12.2
+        specifier: ^0.12.8
+        version: 0.12.8
       svelte:
         specifier: ^5.53.5
         version: 5.53.5
@@ -1742,6 +1745,9 @@ packages:
     peerDependencies:
       svelte: ^3.44.0 || ^4.0.0 || ^5.0.0-next.1
 
+  '@sveltejs/sv-utils@0.0.3':
+    resolution: {integrity: sha512-rILMrx0zQMR0OlFXR/peTu+9z6x/5iOsEiWJelkI670WPWdAunikKLQrIE7zN8U/8DjN5WBvIWu0OAyEuZ4ohA==}
+
   '@sveltejs/svelte-json-tree@2.2.1':
     resolution: {integrity: sha512-M8l23/R3y1fI2+RaOzfUzmkysTWWsw/NClUgGpvydl9vXRonPN1/btQQievaNyeWNfUj12tjPfh5yTrXWpaKkg==}
     engines: {pnpm: ^9.0.0}
@@ -3160,8 +3166,8 @@ packages:
   style-mod@4.1.3:
     resolution: {integrity: sha512-i/n8VsZydrugj3Iuzll8+x/00GH2vnYsk1eomD8QiRrSAeW6ItbCQDtfXCeJHd0iwiNagqjQkvpvREEPtW3IoQ==}
 
-  sv@0.12.2:
-    resolution: {integrity: sha512-W1jn3pjIjVDOjM04JBY5jACsvotE198ahRQm8zuv5hMY6UHrB5ucpwIbPIYEeoXSPjirrLr1rcQ46S+tvFb3vw==}
+  sv@0.12.8:
+    resolution: {integrity: sha512-sTe/Lbc5HsT8rCoUhvwi8zFi+d819/pdI5z9JDObISuhhG0j4tFNNcyaJ0AoZwKVCfo3JYroz8ECCtoMz+2Ncw==}
     hasBin: true
 
   svelte-check@4.4.3:
@@ -4881,6 +4887,8 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
+  '@sveltejs/sv-utils@0.0.3': {}
+
   '@sveltejs/svelte-json-tree@2.2.1(svelte@5.53.5)':
     dependencies:
       svelte: 5.53.5
@@ -6436,7 +6444,9 @@ snapshots:
 
   style-mod@4.1.3: {}
 
-  sv@0.12.2: {}
+  sv@0.12.8:
+    dependencies:
+      '@sveltejs/sv-utils': 0.0.3
 
   svelte-check@4.4.3(picomatch@4.0.3)(svelte@5.53.5)(typescript@5.9.3):
     dependencies:
