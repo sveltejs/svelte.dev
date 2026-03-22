@@ -211,8 +211,9 @@
 				}
 
 				.tabs {
-					flex: 1;
 					display: flex;
+					overflow-x: scroll;
+					overflow-y: hidden;
 					/* gap: 1rem; */
 
 					button {
@@ -256,17 +257,20 @@
 					}
 				}
 
-				a {
-					font: var(--sk-font-ui-small);
+				.open-in-playground {
+					container-type: inline-size;
+					flex: 1;
+					display: flex;
+					justify-content: end;
+					min-width: 5rem;
 
-					span {
-						display: none;
-					}
+					a {
+						font: var(--sk-font-ui-small);
 
-					/* this is a bit of a magic number but is probably fine? */
-					@container (width > 40rem) {
-						span {
-							display: inline;
+						@container (width < 12rem) {
+							span {
+								display: none;
+							}
 						}
 					}
 				}

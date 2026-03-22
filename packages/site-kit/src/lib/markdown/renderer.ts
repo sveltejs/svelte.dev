@@ -569,7 +569,7 @@ export async function render_content_markdown(
 					<div class="code-block">
 						<div class="controls">
 							<div class="tabs" role="tablist" aria-label="Files">${buttons.join('')}</div>
-							<a href="/playground/untitled#${current_block.hash}">Open <span class="if-large">in playground</span></a>
+							<div class="open-in-playground"><a href="/playground/untitled#${current_block.hash}">Open <span class="if-large">in playground</span></a></div>
 							${current_block.converted ? `<input class="ts-toggle raised" checked title="Toggle language" type="checkbox" aria-label="Toggle JS/TS">` : ``}
 							<button class="copy-to-clipboard raised" title="Copy to clipboard" aria-label="Copy to clipboard"></button>
 						</div>`;
