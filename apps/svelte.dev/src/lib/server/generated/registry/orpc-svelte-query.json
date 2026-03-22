@@ -3,13 +3,13 @@
   "npm_description": "<div align=\"center\">   <image align=\"center\" src=\"https://orpc.dev/logo.webp\" width=280 alt=\"oRPC logo\" /> </div>",
   "repo_url": "https://github.com/middleapi/orpc",
   "authors": [
-    "unnoq"
+    "dinwwwh"
   ],
   "homepage": "https://orpc.dev",
-  "version": "1.13.5",
-  "downloads": 3169,
-  "github_stars": 4832,
-  "updated": "2026-02-11T12:56:40.712Z",
+  "version": "1.13.9",
+  "downloads": 416,
+  "github_stars": 5021,
+  "updated": "2026-03-19T08:45:02.097Z",
   "svelte_range": ">=4.2.0",
   "typescript": true,
   "runes": false,

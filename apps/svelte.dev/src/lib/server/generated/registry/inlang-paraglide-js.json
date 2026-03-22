@@ -7,10 +7,10 @@
     "inlangbot"
   ],
   "homepage": "https://inlang.com/m/gerre34r/library-inlang-paraglideJs",
-  "version": "2.11.0",
-  "downloads": 143477,
-  "github_stars": 219,
-  "updated": "2026-02-11T01:11:01.987Z",
+  "version": "2.15.1",
+  "downloads": 80833,
+  "github_stars": 304,
+  "updated": "2026-03-20T23:40:03.291Z",
   "typescript": true,
   "runes": false,
   "last_rune_check_version": "2.0.11"

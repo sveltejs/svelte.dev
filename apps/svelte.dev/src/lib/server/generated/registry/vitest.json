@@ -10,10 +10,10 @@
     "vitestbot"
   ],
   "homepage": "https://vitest.dev",
-  "version": "4.0.18",
-  "downloads": 31424187,
+  "version": "4.1.0",
+  "downloads": 20018507,
   "github_stars": 15942,
-  "updated": "2026-01-22T17:50:34.834Z",
+  "updated": "2026-03-12T14:06:30.610Z",
   "svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
   "typescript": true,
   "runes": false,

@@ -11,10 +11,10 @@
     "kylemathews"
   ],
   "homepage": "https://tanstack.com/virtual",
-  "version": "3.13.18",
-  "downloads": 16768,
+  "version": "3.13.23",
+  "downloads": 10050,
   "github_stars": 6695,
-  "updated": "2026-01-07T21:01:35.565Z",
+  "updated": "2026-03-16T08:03:52.016Z",
   "svelte_range": "^3.48.0 || ^4.0.0 || ^5.0.0",
   "typescript": true,
   "runes": false,
