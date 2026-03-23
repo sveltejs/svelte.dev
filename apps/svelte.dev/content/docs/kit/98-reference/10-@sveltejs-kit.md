@@ -2397,9 +2397,7 @@ type RemoteCommand<Input, Output> = {
 		arg: undefined extends Input ? Input | void : Input
 	): Promise<Output> & {
 		updates(
-			...queries: Array<
-				RemoteQuery<any> | RemoteQueryOverride
-			>
+			...overrides: Array<RemoteQueryOverride>
 		): Promise<Output>;
 	};
 	/** The number of pending command executions */
@@ -2432,9 +2430,7 @@ type RemoteForm<
 			data: Input;
 			submit: () => Promise<void> & {
 				updates: (
-					...queries: Array<
-						RemoteQuery<any> | RemoteQueryOverride
-					>
+					...overrides: Array<RemoteQueryOverride>
 				) => Promise<void>;
 			};
 		}) => void | Promise<void>
