@@ -72,7 +72,7 @@ Prevents installing dependencies
 > [!NOTE]
 > Svelte maintainers have not reviewed community add-ons for malicious code!
 
-You can find [community add-ons on npm](https://www.npmjs.com/search?q=keywords%3Asv-add) by searching for `keywords:sv-add`.
+You can find [community add-ons](https://npmx.dev/search?q=keyword:sv-add) by searching for the keyword `sv-add`.
 
 ### How to install a community add-on
 
@@ -99,9 +99,6 @@ npx sv create --add eslint "@supacool"
 ```sh
 # Scoped package: @org (preferred), we will look for @org/sv
 npx sv add "@supacool"
-
-# Regular npm package (with or without scope)
-npx sv add my-cool-addon
 
 # Local add-on
 npx sv add file:../path/to/my-addon
