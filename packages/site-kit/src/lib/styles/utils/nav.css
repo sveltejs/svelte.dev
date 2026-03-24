@@ -12,6 +12,14 @@
 			font: inherit;
 			display: block;
 			user-select: none;
+			cursor: pointer;
+			border-radius: var(--sk-border-radius-inner);
+			padding: 0.2rem 0.5rem 0.2rem 2.2rem;
+			margin-left: -2.2rem;
+
+			&:hover {
+				background-color: var(--sk-bg-4);
+			}
 
 			&::-webkit-details-marker {
 				display: none;
@@ -20,8 +28,9 @@
 			&::before {
 				content: '';
 				position: absolute;
-				top: 0.3rem;
-				left: -2rem;
+				top: 50%;
+				translate: 0 -50%;
+				left: 0.2rem;
 				width: 1.8rem;
 				height: 1.8rem;
 				background: url(icons/chevron) no-repeat 50% 50%;
