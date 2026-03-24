@@ -3,6 +3,7 @@ import { strip_origin } from '@sveltejs/site-kit/markdown';
 import { preprocess } from '@sveltejs/site-kit/markdown/preprocess';
 import path from 'node:path';
 import fs from 'node:fs';
+import { execSync } from 'node:child_process';
 import { parseArgs } from 'node:util';
 import process from 'node:process';
 import ts from 'typescript';
@@ -25,6 +26,7 @@ interface Package {
 	types: string | null;
 	process_modules?: (modules: Modules, pkg: Package) => Promise<Modules>;
 	post_clone?: (dir: string) => Promise<void>;
+	preview_packages?: string[];
 }
 
 const get_trigger = (pkg: Package) => pkg.trigger ?? pkg.name;
@@ -108,6 +110,7 @@ const packages: Package[] = [
 		pkg: 'packages/svelte',
 		docs: 'documentation/docs',
 		types: 'types',
+		preview_packages: ['svelte'],
 		post_clone: async (dir) => {
 			patch_node_modules(dir, 'packages/svelte', 'svelte', ['types']);
 		},
@@ -135,6 +138,7 @@ const packages: Package[] = [
 		pkg: 'packages/kit',
 		docs: 'documentation/docs',
 		types: 'types',
+		preview_packages: ['@sveltejs/kit'],
 		post_clone: async (dir) => {
 			patch_node_modules(dir, 'packages/kit', '@sveltejs/kit', ['types']);
 		},
@@ -198,10 +202,10 @@ const packages: Package[] = [
 		pkg: 'packages/sv',
 		docs: 'documentation/docs',
 		types: null,
+		preview_packages: ['sv', '@sveltejs/sv-utils'],
 		post_clone: async (dir) => {
 			await invoke('npx', ['pnpm@10', 'install'], { cwd: dir });
 			await invoke('npx', ['pnpm@10', 'build'], { cwd: dir });
-
 			patch_node_modules(dir, 'packages/sv', 'sv');
 			patch_node_modules(dir, 'packages/sv-utils', '@sveltejs/sv-utils');
 		}
@@ -232,6 +236,68 @@ const filtered =
 		? packages
 		: packages.filter((pkg) => !!branches[get_trigger(pkg)]);
 
+/** Retry `fn` every `interval`ms until it returns true or `timeout` is reached */
+async function wait_until(fn: () => Promise<boolean>, interval = 10_000, timeout = 3 * 60_000) {
+	const deadline = Date.now() + timeout;
+	while (Date.now() < deadline) {
+		if (await fn()) return true;
+		const s = Math.round((deadline - Date.now()) / 1000);
+		console.log(`Waiting for pkg.pr.new... (${s}s remaining)`);
+		await new Promise((r) => setTimeout(r, interval));
+	}
+	return false;
+}
+
+function check_urls(urls: string[]) {
+	// pkg.pr.new HEAD always returns 404, only GET gives the real status
+	return Promise.all(
+		urls.map((url) =>
+			fetch(url)
+				.then((r) => {
+					r.body?.cancel();
+					return r.ok;
+				})
+				.catch(() => false)
+		)
+	).then((r) => r.every(Boolean));
+}
+
+/** Update package.json with pkg.pr.new URLs so deploy previews get the right versions */
+async function resolve_preview_packages(packages: Package[]) {
+	// Locally, post_clone symlinks are enough. In CI, they don't persist — use pkg.pr.new instead.
+	if (!process.env.CI) return;
+	if (parsed.values.owner !== 'sveltejs') return;
+
+	const entries: { name: string; url: string }[] = [];
+
+	for (const pkg of packages) {
+		if (!pkg.preview_packages?.length || pkg.branch === 'main') continue;
+
+		const sha = execSync('git rev-parse HEAD', {
+			cwd: `${REPOS}/${pkg.name}`,
+			encoding: 'utf-8'
+		}).trim();
+
+		for (const npm_name of pkg.preview_packages) {
+			entries.push({ name: npm_name, url: `https://pkg.pr.new/${pkg.repo}/${npm_name}@${sha}` });
+		}
+	}
+
+	if (!entries.length) return;
+
+	if (await wait_until(() => check_urls(entries.map((e) => e.url)))) {
+		const pkg_json_path = path.join(dirname, '../../package.json');
+		const pkg_json = JSON.parse(fs.readFileSync(pkg_json_path, 'utf-8'));
+		for (const { name, url } of entries) {
+			pkg_json.devDependencies[name] = url;
+		}
+		fs.writeFileSync(pkg_json_path, JSON.stringify(pkg_json, null, '\t') + '\n');
+		console.log(`Using pkg.pr.new for: ${entries.map((e) => e.name).join(', ')}`);
+	} else {
+		console.log('pkg.pr.new timed out — deploy will use published npm versions');
+	}
+}
+
 /**
  * Depending on your setup, this will either clone the Svelte and SvelteKit repositories
  * or use the local paths you provided above to read the documentation files.
@@ -251,6 +317,8 @@ if (parsed.values.pull) {
 			await pkg.post_clone(`${REPOS}/${pkg.name}`);
 		}
 	}
+
+	await resolve_preview_packages(filtered);
 }
 
 const banner =
