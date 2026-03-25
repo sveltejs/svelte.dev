@@ -10,6 +10,8 @@
 	import type { NavigationLink } from '../types';
 	import ModalOverlay from '../components/ModalOverlay.svelte';
 
+	let transition_duration = 200;
+
 	interface Props {
 		links: NavigationLink[];
 		current: NavigationLink | undefined;
@@ -54,10 +56,10 @@
 	}
 </script>
 
-<ModalOverlay {onclose} />
+<ModalOverlay {onclose} duration={transition_duration} />
 
 <div class="menu" use:trap={{ reset_focus: false }}>
-	<div class="mobile-main-menu" transition:popup={{ duration: 200, easing: quintOut }}>
+	<div class="mobile-main-menu" transition:popup={{ duration: transition_duration, easing: quintOut }}>
 		<div
 			class="menu-background"
 			class:ready
