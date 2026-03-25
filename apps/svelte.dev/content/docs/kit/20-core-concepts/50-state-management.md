@@ -67,7 +67,7 @@ As with the previous example, this puts one user's information in a place that i
 
 ```js
 /// file: +page.js
-/** @type {import('./$types').PageLoad} */
+/** @type {import('./$types').PageServerLoad} */
 export async function load({ fetch }) {
 	const response = await fetch('/api/user');
 
