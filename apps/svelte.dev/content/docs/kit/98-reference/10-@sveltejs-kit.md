@@ -2397,9 +2397,7 @@ type RemoteCommand<Input, Output> = {
 		arg: undefined extends Input ? Input | void : Input
 	): Promise<Output> & {
 		updates(
-			...queries: Array<
-				RemoteQuery<any> | RemoteQueryOverride
-			>
+			...updates: RemoteQueryUpdate[]
 		): Promise<Output>;
 	};
 	/** The number of pending command executions */
@@ -2432,9 +2430,7 @@ type RemoteForm<
 			data: Input;
 			submit: () => Promise<void> & {
 				updates: (
-					...queries: Array<
-						RemoteQuery<any> | RemoteQueryOverride
-					>
+					...updates: RemoteQueryUpdate[]
 				) => Promise<void>;
 			};
 		}) => void | Promise<void>
@@ -2699,26 +2695,23 @@ type RemoteQueryFunction<Input, Output> = (
 <div class="ts-block">
 
 ```dts
-interface RemoteQueryOverride {/*…*/}
+type RemoteQueryOverride = () => void;
 ```
 
-<div class="ts-block-property">
-
-```dts
-_key: string;
-```
-
-<div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+## RemoteQueryUpdate
+
+<div class="ts-block">
 
 ```dts
-release(): void;
+type RemoteQueryUpdate =
+	| RemoteQuery<any>
+	| RemoteQueryFunction<any, any>
+	| RemoteQueryOverride;
 ```
 
-<div class="ts-block-property-details"></div>
-</div></div>
+</div>
 
 ## RemoteResource
 

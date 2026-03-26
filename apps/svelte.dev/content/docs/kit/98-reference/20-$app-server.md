@@ -13,7 +13,8 @@ import {
 	getRequestEvent,
 	prerender,
 	query,
-	read
+	read,
+	requested
 } from '$app/server';
 ```
 
@@ -291,6 +292,23 @@ const text = await asset.text();
 
 ```dts
 function read(asset: string): Response;
+```
+
+</div>
+
+
+
+## requested
+
+Returns the set of query arguments requested by the client for a given query function.
+
+<div class="ts-block">
+
+```dts
+function requested<Input, Output>(
+	query: RemoteQueryFunction<Input, Output>,
+	limit?: number
+): Iterable<Input> & AsyncIterable<Input>;
 ```
 
 </div>
