@@ -119,6 +119,7 @@ export class Workspace {
 	#files = $state.raw<Item[]>([]);
 	#current = $state.raw() as File;
 	#vim = $state(false);
+	#fontSize = $state(14);
 	#aliases = $state.raw(undefined) as undefined | Record<string, string>;
 	#tailwind = $state(false);
 	supports_async = $state(true);
@@ -295,6 +296,7 @@ export class Workspace {
 		untrack(() => {
 			view.setState(this.#get_state(untrack(() => this.#current)));
 			this.vim = localStorage.getItem('vim') === 'true';
+			this.fontSize = Number(localStorage.getItem('fontSize')) || 14;
 		});
 	}
 
@@ -553,6 +555,15 @@ export class Workspace {
 
 			this.states.set(file.name, this.#create_state(file));
 		}
+	}
+
+	get fontSize() {
+		return this.#fontSize;
+	}
+
+	set fontSize(value: number) {
+		this.#fontSize = value;
+		localStorage.setItem('fontSize', value.toString());
 	}
 
 	#create_directories(item: Item) {
