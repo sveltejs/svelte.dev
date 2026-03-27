@@ -9,7 +9,7 @@
 	}}
 	role="presentation"
 >
-	The pointer is at {Math.round(m.x)} x {Math.round(m.y)}
+	The pointer is at {Math.round(m.x)} x {Math.round(m.y)} y
 </div>
 
 <style>

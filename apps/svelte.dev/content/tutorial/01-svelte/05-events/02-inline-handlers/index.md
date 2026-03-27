@@ -22,6 +22,6 @@ You can also declare event handlers inline:
 	}+++}
 	role="presentation"
 >
-	The pointer is at {m.x} x {m.y}
+	The pointer is at {m.x} x {m.y} y
 </div>
 ```
