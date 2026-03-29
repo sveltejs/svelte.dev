@@ -11,10 +11,10 @@
     "kylemathews"
   ],
   "homepage": "https://tanstack.com/query",
-  "version": "6.1.7",
-  "downloads": 43898,
+  "version": "6.1.10",
+  "downloads": 97969,
   "github_stars": 48501,
-  "updated": "2026-03-21T16:01:09.118Z",
+  "updated": "2026-03-23T15:35:40.467Z",
   "svelte_range": "^5.25.0",
   "typescript": true,
   "runes": false,

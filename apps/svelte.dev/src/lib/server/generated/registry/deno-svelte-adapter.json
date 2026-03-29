@@ -5,12 +5,13 @@
   "authors": [
     "ry",
     "divy-work",
-    "denobot"
+    "denobot",
+    "bartlomieju"
   ],
   "homepage": "https://github.com/denoland/svelte-adapter#readme",
   "version": "0.1.1",
-  "downloads": 428,
-  "github_stars": 22,
+  "downloads": 455,
+  "github_stars": 23,
   "updated": "2026-02-02T14:16:10.911Z",
   "kit_range": "2.x",
   "typescript": true,

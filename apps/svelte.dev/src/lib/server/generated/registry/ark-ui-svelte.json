@@ -7,12 +7,12 @@
     "schroetier"
   ],
   "homepage": "https://ark-ui.com",
-  "version": "5.19.1",
-  "downloads": 1133,
-  "github_stars": 5063,
-  "updated": "2026-03-03T13:10:34.267Z",
+  "version": "5.20.0",
+  "downloads": 4095,
+  "github_stars": 5080,
+  "updated": "2026-03-26T13:31:55.482Z",
   "svelte_range": ">=5.20.0",
-  "kit_range": "2.53.0",
+  "kit_range": "2.55.0",
   "typescript": true,
   "runes": true,
   "last_rune_check_version": "0.3.0"
