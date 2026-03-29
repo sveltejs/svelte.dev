@@ -6,10 +6,10 @@
     "grischaerbe"
   ],
   "homepage": "https://threlte.xyz",
-  "version": "8.5.0",
-  "downloads": 14334,
+  "version": "8.5.4",
+  "downloads": 36205,
   "github_stars": 3174,
-  "updated": "2026-03-17T23:18:59.344Z",
+  "updated": "2026-03-28T18:29:44.484Z",
   "svelte_range": ">=5",
   "kit_range": "^2.37.0",
   "typescript": true,
