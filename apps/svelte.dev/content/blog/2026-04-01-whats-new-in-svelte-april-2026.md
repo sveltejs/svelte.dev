@@ -21,7 +21,6 @@ As always, there's plenty in the showcase too!
 
 For a full list of changes - including all the important bugfixes that went into the releases this month - check out the Svelte compiler's [CHANGELOG](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md). Looking for more details on the many bug fixes and performance optimizations from this month? Check out the SvelteKit / Adapter [CHANGELOGs](https://github.com/sveltejs/kit/tree/main/packages).
 
-
 ---
 
 ## Community Showcase
@@ -57,6 +56,7 @@ _This Week in Svelte_
 - [Ep. 136](https://www.youtube.com/watch?v=2yJA_3fJ7Wk) — Changelog
 
 _To Read_
+
 - [How we Rewrote 130K Lines from React to Svelte in Two Weeks](https://strawberrybrowser.com/blog/react-to-svelte) by Strawberry
 
 ### Libraries, Tools & Components
