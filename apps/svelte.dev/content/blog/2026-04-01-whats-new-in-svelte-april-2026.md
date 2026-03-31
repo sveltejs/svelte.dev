@@ -55,10 +55,6 @@ _This Week in Svelte_
 - [Ep. 135](https://www.youtube.com/watch?v=C9yxUniluVU) — Changelog
 - [Ep. 136](https://www.youtube.com/watch?v=2yJA_3fJ7Wk) — Changelog
 
-_To Read_
-
-- [How we Rewrote 130K Lines from React to Svelte in Two Weeks](https://strawberrybrowser.com/blog/react-to-svelte) by Strawberry
-
 ### Libraries, Tools & Components
 
 - [svelte-realtime](https://svelte-realtime.dev) is a realtime RPC and reactive subscriptions for SvelteKit, built on svelte-adapter-uws
