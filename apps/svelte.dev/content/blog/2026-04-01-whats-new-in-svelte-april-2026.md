@@ -13,7 +13,7 @@ As always, there's plenty in the showcase too!
 
 ## What's new in Svelte and SvelteKit
 
-- MCP: Svelte's opencode config can now be found in sv's `.opencode/` folder - including the generated `svelte.json` plugin config (**sv@0.12.6**, [Docs](https://github.com/sveltejs/ai-tools/tree/main/packages/opencode), [#977](https://github.com/sveltejs/cli/pull/977))
+- MCP: Svelte's OpenCode config can now be found in sv's `.opencode/` folder - including the generated `svelte.json` plugin config (**sv@0.12.6**, [Docs](https://svelte.dev/docs/ai/opencode-plugin), [#977](https://github.com/sveltejs/cli/pull/977))
 - `svelte.config.js` now contains functions for setting certain options (`css`, `runes`, `customElement`) so that there's a single source of truth for everything that needs to interact with Svelte config (**svelte@5.54.0**, [Docs](https://svelte.dev/docs/svelte/svelte-compiler#CompileOptions), [#17951](https://github.com/sveltejs/svelte/pull/17951))
 - `svelte/motion` now exports `TweenOptions`, `SpringOptions`, `SpringUpdateOptions` and `Updater` - these types cover the public method signatures of `spring` and `tweened` (**svelte@5.55.0**, [Docs](https://svelte.dev/docs/svelte/svelte-motion), [#17967](https://github.com/sveltejs/svelte/pull/17967))
 - Error boundaries are now allowed to catch errors on the server (**kit@2.54.0**, [Docs](https://svelte.dev/docs/kit/errors#Rendering-errors), [#15308](https://github.com/sveltejs/kit/pull/15308))
