@@ -32,7 +32,7 @@ For a full list of changes - including all the important bugfixes that went into
 - [Estimate Quest](https://estimate.quest/) is a game-inspired planning poker experience that helps Scrum Masters and Product Managers run structured, actually engaging estimation sessions
 - [Deltaray](https://deltaray.vercel.app/) is a free and [open source](https://github.com/stormyzio/deltaray) web app to simulate how light refracts and reflects on surfaces, using real physics and optical calculations
 - [Nabu](https://nabu.aion.builders/) is a modular, local-first and [open source](https://github.com/aionbuilders/nabu) block editor engine
-- [bizi](https://github.com/ieedan/bizi) is a better way to manage dependent concurrent tasks
+- [bizi](https://getbizi.dev) is a better way to manage dependent concurrent tasks
 - [Vyay](https://vyay.theonlyanil.workers.dev/) is a minimalist google sheet powered expense racker
 - [ElyOS](https://elyos.hu/en) is a full-featured desktop experience powered by web technologies
 - [Plought](https://plought.app/) is a collection of decision making applications that use different methods to evaluate alternatives against each other
@@ -61,12 +61,12 @@ _To Read_
 
 ### Libraries, Tools & Components
 
-- [svelte-realtime](https://github.com/lanteanio/svelte-realtime) is a realtime RPC and reactive subscriptions for SvelteKit, built on svelte-adapter-uws
+- [svelte-realtime](https://svelte-realtime.dev) is a realtime RPC and reactive subscriptions for SvelteKit, built on svelte-adapter-uws
 - [itty-sockets](https://ittysockets.com/) is an ultra-tiny WebSocket client that pairs (optionally) with a public relay server
 - [Motion GPU](https://www.motion-gpu.dev/) is an easy way for writing WGSL shaders in Svelte
 - [ptero](https://ptero.yaoke.pro/) is a Docusaurus for Svelte
-- [Svelte Audio UI](https://github.com/ddtamn/svelte-audio-ui) is a set of accessible, composable audio UI components
-- [Svelte Agentation](https://github.com/SikandarJODD/sv-agentation) is a dev-mode Svelte inspector for source-aware element inspection and browser annotations
+- [Svelte Audio UI](https://svelte-audio-ui.vercel.app) is a set of accessible, composable audio UI components
+- [Svelte Agentation](https://sv-agentation.com) is a dev-mode Svelte inspector for source-aware element inspection and browser annotations
 - [cross-router](https://codeberg.org/Bricklou/cross-router) is a framework-agnostic router that wires the core's navigation state into that framework's reactivity model
 - [SVG to Svelte](https://github.com/JLAcostaEC/svgtosvelte) quickly converts SVG strings directly in Svelte components
 
