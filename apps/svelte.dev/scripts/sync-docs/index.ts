@@ -292,6 +292,10 @@ async function resolve_preview_packages(packages: Package[]) {
 			pkg_json.devDependencies[name] = url;
 		}
 		fs.writeFileSync(pkg_json_path, JSON.stringify(pkg_json, null, '\t') + '\n');
+		execSync('pnpm install --lockfile-only', {
+			cwd: path.join(dirname, '../../../..'),
+			stdio: 'inherit'
+		});
 		console.log(`Using pkg.pr.new for: ${entries.map((e) => e.name).join(', ')}`);
 	} else {
 		console.log('pkg.pr.new timed out — deploy will use published npm versions');
