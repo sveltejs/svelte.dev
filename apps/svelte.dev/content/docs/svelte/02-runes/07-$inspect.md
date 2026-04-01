@@ -6,11 +6,9 @@ tags: rune-inspect
 
 > [!NOTE] `$inspect` only works during development. In a production build it becomes a noop.
 
-The `$inspect` rune is roughly equivalent to `console.log`, with the exception that it will re-run whenever its argument changes. `$inspect` tracks reactive state deeply, meaning that updating something inside an object or array using fine-grained reactivity will cause it to re-fire:
+The `$inspect` rune is roughly equivalent to `console.log`, with the exception that it will re-run whenever its argument changes. `$inspect` tracks reactive state deeply, meaning that updating something inside an object or array using fine-grained reactivity will cause it to re-fire ([demo](/playground/untitled#H4sIAAAAAAAACkWQ0YqDQAxFfyUMhSotdZ-tCvu431AXtGOqQ2NmmMm0LOK_r7Utfby5JzeXTOpiCIPKT5PidkSVq2_n1F7Jn3uIcEMSXHSw0evHpAjaGydVzbUQCmgbWaCETZBWMPlKj29nxBDaHj_edkAiu12JhdkYDg61JGvE_s2nR8gyuBuiJZuDJTyQ7eE-IEOzog1YD80Lb0APLfdYc5F9qnFxjiKWwbImo6_llKRQVs-2u91c_bD2OCJLkT3JZasw7KLA2XCX31qKWE6vIzNk1fKE0XbmYrBTufiI8-_8D2cUWBA_AQAA)):
 
-<!-- codeblock:start {"title":"$inspect(...)"} -->
 ```svelte
-<!--- file: App.svelte --->
 <script>
 	let count = $state(0);
 	let message = $state('hello');
@@ -21,17 +19,14 @@ The `$inspect` rune is roughly equivalent to `console.log`, with the exception t
 <button onclick={() => count++}>Increment</button>
 <input bind:value={message} />
 ```
-<!-- codeblock:end -->
 
 On updates, a stack trace will be printed, making it easy to find the origin of a state change (unless you're in the playground, due to technical limitations).
 
 ## $inspect(...).with
 
-`$inspect(...)` returns an object with a `with` method, which you can invoke with a callback that will then be invoked instead of `console.log`. The first argument to the callback is either `"init"` or `"update"`; subsequent arguments are the values passed to `$inspect`:
+`$inspect` returns a property `with`, which you can invoke with a callback, which will then be invoked instead of `console.log`. The first argument to the callback is either `"init"` or `"update"`; subsequent arguments are the values passed to `$inspect` ([demo](/playground/untitled#H4sIAAAAAAAACkVQ24qDMBD9lSEUqlTqPlsj7ON-w7pQG8c2VCchmVSK-O-bKMs-DefKYRYx6BG9qL4XQd2EohKf1opC8Nsm4F84MkbsTXAqMbVXTltuWmp5RAZlAjFIOHjuGLOP_BKVqB00eYuKs82Qn2fNjyxLtcWeyUE2sCRry3qATQIpJRyD7WPVMf9TW-7xFu53dBcoSzAOrsqQNyOe2XUKr0Xi5kcMvdDB2wSYO-I9vKazplV1-T-d6ltgNgSG1KjVUy7ZtmdbdjqtzRcphxMS1-XubOITJtPrQWMvKnYB15_1F7KKadA_AQAA)):
 
-<!-- codeblock:start {"title":"$inspect(...).with(...)"} -->
 ```svelte
-<!--- file: App.svelte --->
 <script>
 	let count = $state(0);
 
@@ -44,7 +39,6 @@ On updates, a stack trace will be printed, making it easy to find the origin of 
 
 <button onclick={() => count++}>Increment</button>
 ```
-<!-- codeblock:end -->
 
 ## $inspect.trace(...)
 
