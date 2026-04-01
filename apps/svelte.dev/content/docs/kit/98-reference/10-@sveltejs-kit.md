@@ -1023,6 +1023,27 @@ type ClientInit = () => MaybePromise<void>;
 
 See the [configuration reference](/docs/kit/configuration) for details.
 
+## CookieParseOptions
+
+<div class="ts-block">
+
+```dts
+type CookieParseOptions = import('cookie').ParseOptions;
+```
+
+</div>
+
+## CookieSerializeOptions
+
+<div class="ts-block">
+
+```dts
+type CookieSerializeOptions =
+	import('cookie').SerializeOptions;
+```
+
+</div>
+
 ## Cookies
 
 <div class="ts-block">
@@ -1034,7 +1055,7 @@ interface Cookies {/*…*/}
 <div class="ts-block-property">
 
 ```dts
-get: (name: string, opts?: import('cookie').CookieParseOptions) => string | undefined;
+get: (name: string, opts?: CookieParseOptions) => string | undefined;
 ```
 
 <div class="ts-block-property-details">
@@ -1054,7 +1075,7 @@ Gets a cookie that was previously set with `cookies.set`, or from the request he
 <div class="ts-block-property">
 
 ```dts
-getAll: (opts?: import('cookie').CookieParseOptions) => Array<{ name: string; value: string }>;
+getAll: (opts?: CookieParseOptions) => Array<{ name: string; value: string }>;
 ```
 
 <div class="ts-block-property-details">
@@ -1073,11 +1094,7 @@ Gets all cookies that were previously set with `cookies.set`, or from the reques
 <div class="ts-block-property">
 
 ```dts
-set: (
-	name: string,
-	value: string,
-	opts: import('cookie').CookieSerializeOptions & { path: string }
-) => void;
+set: (name: string, value: string, opts: CookieSerializeOptions & { path: string }) => void;
 ```
 
 <div class="ts-block-property-details">
@@ -1102,7 +1119,7 @@ You must specify a `path` for the cookie. In most cases you should explicitly se
 <div class="ts-block-property">
 
 ```dts
-delete: (name: string, opts: import('cookie').CookieSerializeOptions & { path: string }) => void;
+delete: (name: string, opts: CookieSerializeOptions & { path: string }) => void;
 ```
 
 <div class="ts-block-property-details">
@@ -1127,7 +1144,7 @@ You must specify a `path` for the cookie. In most cases you should explicitly se
 serialize: (
 	name: string,
 	value: string,
-	opts: import('cookie').CookieSerializeOptions & { path: string }
+	opts: CookieSerializeOptions & { path: string }
 ) => string;
 ```
 
