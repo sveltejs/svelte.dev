@@ -23,6 +23,7 @@ interface Package {
 	pkg: string;
 	docs: string;
 	types: string | null;
+	npm_packages?: string[];
 	process_modules?: (modules: Modules, pkg: Package) => Promise<Modules>;
 	post_clone?: (dir: string) => Promise<void>;
 }
@@ -39,6 +40,10 @@ const parsed = parseArgs({
 		pull: {
 			type: 'boolean',
 			short: 'p'
+		},
+		'update-deps': {
+			type: 'boolean',
+			short: 'u'
 		},
 		owner: {
 			type: 'string',
@@ -108,6 +113,7 @@ const packages: Package[] = [
 		pkg: 'packages/svelte',
 		docs: 'documentation/docs',
 		types: 'types',
+		npm_packages: ['svelte'],
 		post_clone: async (dir) => {
 			patch_node_modules(dir, 'packages/svelte', 'svelte', ['types']);
 		},
@@ -135,6 +141,7 @@ const packages: Package[] = [
 		pkg: 'packages/kit',
 		docs: 'documentation/docs',
 		types: 'types',
+		npm_packages: ['@sveltejs/kit'],
 		post_clone: async (dir) => {
 			patch_node_modules(dir, 'packages/kit', '@sveltejs/kit', ['types']);
 		},
@@ -198,6 +205,7 @@ const packages: Package[] = [
 		pkg: 'packages/sv',
 		docs: 'documentation/docs',
 		types: null,
+		npm_packages: ['sv', '@sveltejs/sv-utils'],
 		post_clone: async (dir) => {
 			await invoke('npx', ['pnpm@10', 'install'], { cwd: dir });
 			await invoke('npx', ['pnpm@10', 'build'], { cwd: dir });
@@ -287,6 +295,14 @@ for (const pkg of filtered) {
 }
 
 generate_crosslinks();
+
+if (parsed.values['update-deps']) {
+	for (const pkg of filtered) {
+		if (pkg.npm_packages?.length) {
+			await invoke('pnpm', ['update', ...pkg.npm_packages], { cwd: path.join(dirname, '../..') });
+		}
+	}
+}
 
 if (parsed.values.watch) {
 	for (const pkg of filtered) {
