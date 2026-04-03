@@ -26,7 +26,7 @@ interface Package {
 	types: string | null;
 	process_modules?: (modules: Modules, pkg: Package) => Promise<Modules>;
 	post_clone?: (dir: string) => Promise<void>;
-	preview_packages?: string[];
+	npm_packages?: string[];
 }
 
 const get_trigger = (pkg: Package) => pkg.trigger ?? pkg.name;
@@ -110,7 +110,7 @@ const packages: Package[] = [
 		pkg: 'packages/svelte',
 		docs: 'documentation/docs',
 		types: 'types',
-		preview_packages: ['svelte'],
+		npm_packages: ['svelte'],
 		post_clone: async (dir) => {
 			patch_node_modules(dir, 'packages/svelte', 'svelte', ['types']);
 		},
@@ -138,7 +138,7 @@ const packages: Package[] = [
 		pkg: 'packages/kit',
 		docs: 'documentation/docs',
 		types: 'types',
-		preview_packages: ['@sveltejs/kit'],
+		npm_packages: ['@sveltejs/kit'],
 		post_clone: async (dir) => {
 			patch_node_modules(dir, 'packages/kit', '@sveltejs/kit', ['types']);
 		},
@@ -202,7 +202,7 @@ const packages: Package[] = [
 		pkg: 'packages/sv',
 		docs: 'documentation/docs',
 		types: null,
-		preview_packages: ['sv', '@sveltejs/sv-utils'],
+		npm_packages: ['sv', '@sveltejs/sv-utils'],
 		post_clone: async (dir) => {
 			await invoke('npx', ['pnpm@10', 'install'], { cwd: dir });
 			await invoke('npx', ['pnpm@10', 'build'], { cwd: dir });
@@ -263,7 +263,7 @@ function check_urls(urls: string[]) {
 }
 
 /** Update package.json with pkg.pr.new URLs so deploy previews get the right versions */
-async function resolve_preview_packages(packages: Package[]) {
+async function resolve_npm_packages(packages: Package[]) {
 	// Locally, post_clone symlinks are enough. In CI, they don't persist — use pkg.pr.new instead.
 	if (!process.env.CI) return;
 	if (parsed.values.owner !== 'sveltejs') return;
@@ -271,14 +271,14 @@ async function resolve_preview_packages(packages: Package[]) {
 	const entries: { name: string; url: string }[] = [];
 
 	for (const pkg of packages) {
-		if (!pkg.preview_packages?.length || pkg.branch === 'main') continue;
+		if (!pkg.npm_packages?.length || pkg.branch === 'main') continue;
 
 		const sha = execSync('git rev-parse HEAD', {
 			cwd: `${REPOS}/${pkg.name}`,
 			encoding: 'utf-8'
 		}).trim();
 
-		for (const npm_name of pkg.preview_packages) {
+		for (const npm_name of pkg.npm_packages) {
 			entries.push({ name: npm_name, url: `https://pkg.pr.new/${pkg.repo}/${npm_name}@${sha}` });
 		}
 	}
@@ -302,6 +302,17 @@ async function resolve_preview_packages(packages: Package[]) {
 	}
 }
 
+/** Update dependencies to latest published versions (for main branch syncs) */
+async function update_published_packages(packages: Package[]) {
+	const names = packages
+		.filter((pkg) => pkg.npm_packages?.length && pkg.branch === 'main')
+		.flatMap((pkg) => pkg.npm_packages!);
+
+	if (!names.length) return;
+
+	await invoke('pnpm', ['update', ...names], { cwd: path.join(dirname, '../..') });
+}
+
 /**
  * Depending on your setup, this will either clone the Svelte and SvelteKit repositories
  * or use the local paths you provided above to read the documentation files.
@@ -322,7 +333,7 @@ if (parsed.values.pull) {
 		}
 	}
 
-	await resolve_preview_packages(filtered);
+	await resolve_npm_packages(filtered);
 }
 
 const banner =
@@ -359,6 +370,10 @@ for (const pkg of filtered) {
 }
 
 generate_crosslinks();
+
+if (parsed.values.pull) {
+	await update_published_packages(filtered);
+}
 
 if (parsed.values.watch) {
 	for (const pkg of filtered) {
