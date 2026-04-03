@@ -315,7 +315,8 @@ async function update_published_packages(packages: Package[]) {
 
 	for (const name of names) {
 		const latest = execSync(`npm view ${name} version`, { encoding: 'utf-8' }).trim();
-		const section = pkg_json.dependencies?.[name] !== undefined ? 'dependencies' : 'devDependencies';
+		const section =
+			pkg_json.dependencies?.[name] !== undefined ? 'dependencies' : 'devDependencies';
 		pkg_json[section][name] = `^${latest}`;
 	}
 
