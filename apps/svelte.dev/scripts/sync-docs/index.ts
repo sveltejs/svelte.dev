@@ -237,7 +237,7 @@ const filtered =
 		: packages.filter((pkg) => !!branches[get_trigger(pkg)]);
 
 /** Retry `fn` every `interval`ms until it returns true or `timeout` is reached */
-async function wait_until(fn: () => Promise<boolean>, interval = 10_000, timeout = 3 * 60_000) {
+async function wait_until(fn: () => Promise<boolean>, interval = 10_000, timeout = 5 * 60_000) {
 	const deadline = Date.now() + timeout;
 	while (Date.now() < deadline) {
 		if (await fn()) return true;
