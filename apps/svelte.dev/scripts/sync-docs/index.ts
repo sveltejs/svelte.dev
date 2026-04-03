@@ -237,7 +237,7 @@ const filtered =
 		: packages.filter((pkg) => !!branches[get_trigger(pkg)]);
 
 /** Retry `fn` every `interval`ms until it returns true or `timeout` is reached */
-async function wait_until(fn: () => Promise<boolean>, interval = 10_000, timeout = 3 * 60_000) {
+async function wait_until(fn: () => Promise<boolean>, interval = 10_000, timeout = 5 * 60_000) {
 	const deadline = Date.now() + timeout;
 	while (Date.now() < deadline) {
 		if (await fn()) return true;
@@ -302,7 +302,7 @@ async function resolve_npm_packages(packages: Package[]) {
 	}
 }
 
-/** Update dependencies to latest published versions (for main branch syncs) */
+/** Update package.json to latest published npm versions (for main branch syncs) */
 async function update_published_packages(packages: Package[]) {
 	const names = packages
 		.filter((pkg) => pkg.npm_packages?.length && pkg.branch === 'main')
@@ -310,7 +310,21 @@ async function update_published_packages(packages: Package[]) {
 
 	if (!names.length) return;
 
-	await invoke('pnpm', ['update', ...names], { cwd: path.join(dirname, '../..') });
+	const pkg_json_path = path.join(dirname, '../../package.json');
+	const pkg_json = JSON.parse(fs.readFileSync(pkg_json_path, 'utf-8'));
+
+	for (const name of names) {
+		const latest = execSync(`npm view ${name} version`, { encoding: 'utf-8' }).trim();
+		const section =
+			pkg_json.dependencies?.[name] !== undefined ? 'dependencies' : 'devDependencies';
+		pkg_json[section][name] = `^${latest}`;
+	}
+
+	fs.writeFileSync(pkg_json_path, JSON.stringify(pkg_json, null, '\t') + '\n');
+	execSync('pnpm install --lockfile-only', {
+		cwd: path.join(dirname, '../../../..'),
+		stdio: 'inherit'
+	});
 }
 
 /**
