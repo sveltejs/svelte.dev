@@ -24,9 +24,9 @@ interface Package {
 	pkg: string;
 	docs: string;
 	types: string | null;
+	npm_packages?: string[];
 	process_modules?: (modules: Modules, pkg: Package) => Promise<Modules>;
 	post_clone?: (dir: string) => Promise<void>;
-	npm_packages?: string[];
 }
 
 const get_trigger = (pkg: Package) => pkg.trigger ?? pkg.name;
