@@ -9,10 +9,10 @@
     "kyrylo_usichenko"
   ],
   "homepage": "https://orm.drizzle.team",
-  "version": "0.45.1",
-  "downloads": 2965082,
-  "github_stars": 33413,
-  "updated": "2025-12-10T15:02:17.725Z",
+  "version": "0.45.2",
+  "downloads": 6371969,
+  "github_stars": 33527,
+  "updated": "2026-03-27T17:06:27.140Z",
   "typescript": true,
   "runes": false,
   "last_rune_check_version": "0.41.0"

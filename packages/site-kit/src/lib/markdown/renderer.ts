@@ -124,7 +124,8 @@ async function create_snippet_cache() {
 
 				if (fs.existsSync(file)) {
 					const json = fs.readFileSync(file, 'utf-8');
-					cache.set(source, JSON.parse(json));
+					snippet = JSON.parse(json) as string[];
+					cache.set(source, snippet);
 				}
 			}
 
