@@ -124,11 +124,19 @@
 		background-size: 1.2rem;
 	}
 
+	li:hover {
+		--bg: var(--sk-bg-4);
+	}
+
 	button,
 	input {
 		background-size: 1.2rem 1.2rem;
 		background-position: 0 45%;
 		background-repeat: no-repeat;
+	}
+
+	button {
+		cursor: pointer;
 	}
 
 	:focus-visible {
