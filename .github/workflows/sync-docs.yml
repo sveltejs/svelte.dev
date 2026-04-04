@@ -12,6 +12,7 @@ on:
           - kit
           - cli
           - ai-tools
+          - vite-plugin-svelte
 
 permissions:
   contents: write
