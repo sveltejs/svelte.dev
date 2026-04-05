@@ -13,8 +13,7 @@ import {
 	getRequestEvent,
 	prerender,
 	query,
-	read,
-	requested
+	read
 } from '$app/server';
 ```
 
@@ -292,45 +291,6 @@ const text = await asset.text();
 
 ```dts
 function read(asset: string): Response;
-```
-
-</div>
-
-
-
-## requested
-
-In the context of a remote `command` or `form` request, returns an iterable
-of the client-requested refreshes' validated arguments up to the supplied limit.
-Arguments that fail validation or exceed the limit are recorded as failures in
-the response to the client.
-
-```ts
-import { requested } from '$app/server';
-
-for (const arg of requested(getPost, 5)) {
-	// it's safe to throw away this promise -- SvelteKit
-	// will await it for us and handle any errors by sending
-	// them to the client.
-	void getPost(arg).refresh();
-}
-```
-
-As a shorthand for the above, you can also call `refreshAll` on the result:
-
-```ts
-import { requested } from '$app/server';
-
-await requested(getPost, 5).refreshAll();
-```
-
-<div class="ts-block">
-
-```dts
-function requested<Input, Output>(
-	query: RemoteQueryFunction<Input, Output>,
-	limit?: number
-): RequestedResult<Input>;
 ```
 
 </div>
