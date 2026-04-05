@@ -376,7 +376,9 @@ async function get_bundle(
 						}
 					);
 					// add the CSS via injecting a style tag
-					const style_id = result.css.code.match(/\.svelte-([a-z0-9]+)/)?.[0]?.slice(1) ?? ('svelte-' + name.replace(/[^a-zA-Z0-9]/g, '_'));
+					const style_id =
+						result.css.code.match(/\.svelte-([a-z0-9]+)/)?.[0]?.slice(1) ??
+						'svelte-' + name.replace(/[^a-zA-Z0-9]/g, '_');
 					result.js.code +=
 						'\n\n' +
 						`
