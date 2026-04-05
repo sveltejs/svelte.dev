@@ -394,12 +394,21 @@ Because our form contains a `file` input, we've added an `enctype="multipart/for
 In the case of `radio` and `checkbox` inputs that all belong to the same field, the `value` must be specified as a second argument to `.as(...)`:
 
 ```js
+/// file: constants.js
+export const operatingSystems = /** @type {const} */ (['windows', 'mac', 'linux']);
+export const languages = /** @type {const} */ (['html', 'css', 'js']);
+```
+
+```js
 /// file: data.remote.js
+// @filename: constants.js
+export const operatingSystems = /** @type {const} */ (['windows', 'mac', 'linux']);
+export const languages = /** @type {const} */ (['html', 'css', 'js']);
+// @filename: index.js
 import * as v from 'valibot';
 import { form } from '$app/server';
 // ---cut---
-export const operatingSystems = /** @type {const} */ (['windows', 'mac', 'linux']);
-export const languages = /** @type {const} */ (['html', 'css', 'js']);
+import { operatingSystems, languages } from './constants';
 
 export const survey = form(
 	v.object({
@@ -705,10 +714,13 @@ We can customize what happens when the form is submitted with the `enhance` meth
 
 <form {...createPost.enhance(async ({ form, data, submit }) => {
 	try {
-		await submit();
-		form.reset();
+		if (await submit()) {
+			form.reset();
 
-		showToast('Successfully published!');
+			showToast('Successfully published!');
+		} else {
+			showToast('Invalid data!');
+		}
 	} catch (error) {
 		showToast('Oh no! Something went wrong');
 	}
@@ -793,6 +805,46 @@ export const loginOrRegister = form(
 		}
 	}
 );
+```
+
+### Resetting the form programmatically
+
+You can programmatically reset a form using the `reset()` method. When called with no arguments, `reset()` will:
+
+- Reset the HTML form element (clearing all input values)
+- Clear all validation issues
+- Clear the `result` value
+- Clear all touched field tracking
+- Set `submitted` to `false`
+
+```svelte
+<!--- file: +page.svelte --->
+<script>
+	import { login } from './auth.remote';
+</script>
+
+<form {...login}>
+	<input {...login.fields.username.as('text')} />
+	<input {...login.fields._password.as('password')} />
+	<button>login</button>
+</form>
+
+<button onclick={() => login.reset()}>
+	Clear form
+</button>
+```
+
+The available options are:
+
+- `values` — Set to `true` (default) to reset the HTML form element, `false` to keep current values, or pass an object with partial values to reset to specific values
+- `issues` — Set to `false` to preserve validation issues (default is `true`)
+- `result` — Set to `false` to preserve the result value (default is `true`)
+- `touched` — Set to `false` to preserve touched field tracking (default is `true`)
+
+```svelte
+<button onclick={() => login.reset({ values: { username: 'guest', password: 'guest' } })}>
+	Login as guest
+</button>
 ```
 
 ## command
