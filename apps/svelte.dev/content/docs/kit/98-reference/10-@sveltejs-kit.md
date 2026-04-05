@@ -2428,12 +2428,12 @@ type RemoteForm<
 		callback: (opts: {
 			form: HTMLFormElement;
 			data: Input;
-			submit: () => Promise<void> & {
+			submit: () => Promise<boolean> & {
 				updates: (
 					...updates: RemoteQueryUpdate[]
-				) => Promise<void>;
+				) => Promise<boolean>;
 			};
-		}) => void | Promise<void>
+		}) => void
 	): {
 		method: 'POST';
 		action: string;
