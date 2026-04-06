@@ -377,6 +377,46 @@ namespace query {
 		StandardSchemaV1.InferInput<Schema>,
 		Output
 	>;
+	/**
+	 * Creates a live remote query. When called from the browser, the function will be invoked on the server via a streaming `fetch` call.
+	 *
+	 * See [Remote functions](https://svelte.dev/docs/kit/remote-functions#query.live) for full documentation.
+	 *
+	 * */
+	function live<Output>(
+		fn: (
+			arg: void
+		) => MaybePromise<
+			| Generator<Output>
+			| AsyncIterator<Output>
+			| AsyncIterable<Output>
+		>
+	): RemoteLiveQueryFunction<void, Output>;
+
+	function live<Input, Output>(
+		validate: 'unchecked',
+		fn: (
+			arg: Input
+		) => MaybePromise<
+			| Generator<Output>
+			| AsyncIterator<Output>
+			| AsyncIterable<Output>
+		>
+	): RemoteLiveQueryFunction<Input, Output>;
+
+	function live<Schema extends StandardSchemaV1, Output>(
+		schema: Schema,
+		fn: (
+			arg: StandardSchemaV1.InferOutput<Schema>
+		) => MaybePromise<
+			| Generator<Output>
+			| AsyncIterator<Output>
+			| AsyncIterable<Output>
+		>
+	): RemoteLiveQueryFunction<
+		StandardSchemaV1.InferInput<Schema>,
+		Output
+	>;
 }
 ```
 
