@@ -138,7 +138,7 @@ Return `false` from any transform callback to abort - the original content is re
 import { transforms } from '@sveltejs/sv-utils';
 
 sv.file(
-	'eslint.config.js',
+	file.eslintConfig,
 	transforms.script(({ ast, js }) => {
 		const { value: existing } = js.exports.createDefault(ast, { fallback: myConfig });
 		if (existing !== myConfig) {
