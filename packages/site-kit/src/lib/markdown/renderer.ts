@@ -432,6 +432,10 @@ export async function render_content_markdown(
 				}
 
 				let { source, options } = parse_options(decodedText, token.lang);
+				const leading_frontmatter_delimiters = get_leading_frontmatter_delimiters(
+					source,
+					token.lang
+				);
 				source = adjust_tab_indentation(source, token.lang);
 
 				if (options.file && !options.file.includes('.')) {
@@ -450,7 +454,11 @@ export async function render_content_markdown(
 
 				source = source.replace(
 					/(\+\+\+|---|:::)/g,
-					(_, delimiter: keyof typeof delimiter_substitutes) => {
+					(match, delimiter: keyof typeof delimiter_substitutes, offset) => {
+						if (match === '---' && leading_frontmatter_delimiters.has(offset)) {
+							return match;
+						}
+
 						return delimiter_substitutes[delimiter];
 					}
 				);
@@ -1016,6 +1024,31 @@ function adjust_tab_indentation(source: string, language: string) {
 
 		return '\t'.repeat(spaces.length / 4) + ' '.repeat(spaces.length % 4);
 	});
+}
+
+function get_leading_frontmatter_delimiters(source: string, language: string) {
+	const delimiters = new Set<number>();
+
+	if (!/^(markdown|md|yaml|yml)$/.test(language)) {
+		return delimiters;
+	}
+
+	const opening = /^---(?=[ \t]*(?:\r?\n|$))/.exec(source);
+
+	if (!opening) {
+		return delimiters;
+	}
+
+	const closing = /^---(?=[ \t]*(?:\r?$))/m.exec(source.slice(opening[0].length));
+
+	if (!closing) {
+		return delimiters;
+	}
+
+	delimiters.add(opening.index);
+	delimiters.add(opening[0].length + closing.index);
+
+	return delimiters;
 }
 
 function replace_blank_lines(html: string) {

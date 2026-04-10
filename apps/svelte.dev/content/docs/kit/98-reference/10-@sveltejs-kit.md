@@ -2428,12 +2428,12 @@ type RemoteForm<
 		callback: (opts: {
 			form: HTMLFormElement;
 			data: Input;
-			submit: () => Promise<void> & {
+			submit: () => Promise<boolean> & {
 				updates: (
 					...updates: RemoteQueryUpdate[]
-				) => Promise<void>;
+				) => Promise<boolean>;
 			};
-		}) => void | Promise<void>
+		}) => void
 	): {
 		method: 'POST';
 		action: string;
@@ -2551,16 +2551,19 @@ type RemoteFormFields<T> =
 					| boolean
 					| File
 			? RemoteFormField<NonNullable<T>>
-			: T extends string[] | File[]
+			: // [T] is used to prevent distributing over union, only the last condition should distribute over unions
+				[T] extends [string[] | File[]]
 				? RemoteFormField<T> & {
 						[K in number]: RemoteFormField<T[number]>;
 					}
-				: T extends Array<infer U>
+				: [T] extends [Array<infer U>]
 					? RemoteFormFieldContainer<T> & {
 							[K in number]: RemoteFormFields<U>;
 						}
 					: RemoteFormFieldContainer<T> & {
-							[K in keyof T]-?: RemoteFormFields<T[K]>;
+							[K in KeysOfUnion<T>]-?: RemoteFormFields<
+								ValueOfUnionKey<T, K>
+							>;
 						};
 ```
 
