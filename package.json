@@ -22,11 +22,6 @@
 		"changeset:version": "changeset version && pnpm -r generate:version && git add --all",
 		"changeset:publish": "changeset publish"
 	},
-	"pnpm": {
-		"overrides": {
-			"esrap": "https://pkg.pr.new/esrap@108"
-		}
-	},
 	"devDependencies": {
 		"@changesets/cli": "^2.29.8"
 	}
