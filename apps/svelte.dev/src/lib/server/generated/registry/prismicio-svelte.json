@@ -29,10 +29,10 @@
     "greenwalker90"
   ],
   "homepage": "https://github.com/prismicio/prismic-svelte#readme",
-  "version": "2.2.0",
-  "downloads": 885,
+  "version": "2.2.1",
+  "downloads": 958,
   "github_stars": 28,
-  "updated": "2026-01-14T01:37:42.156Z",
+  "updated": "2026-04-09T02:50:26.169Z",
   "svelte_range": "^5",
   "kit_range": "^2",
   "typescript": true,
