@@ -6,10 +6,10 @@
     "dimfeld"
   ],
   "homepage": "https://svelte-maplibre.imfeld.dev",
-  "version": "1.2.6",
-  "downloads": 22921,
+  "version": "1.3.0",
+  "downloads": 20051,
   "github_stars": 494,
-  "updated": "2026-01-26T18:57:02.839Z",
+  "updated": "2026-03-31T08:04:31.600Z",
   "svelte_range": "^5.0.0",
   "kit_range": "^2.48.0",
   "typescript": true,
