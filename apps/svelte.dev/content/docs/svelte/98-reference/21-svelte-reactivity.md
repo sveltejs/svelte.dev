@@ -5,6 +5,8 @@ title: svelte/reactivity
 
 Svelte provides reactive versions of various built-ins like [`Map`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map), [`Set`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) and [`URL`](https://developer.mozilla.org/en-US/docs/Web/API/URL) that can be used just like their native counterparts, as well as a handful of additional utilities for handling reactivity.
 
+It also includes helpers for integration boundaries, such as `isStateProxy(value)` to check whether a value is a Svelte `$state` proxy.
+
 
 
 ```js
@@ -16,7 +18,8 @@ import {
 	SvelteSet,
 	SvelteURL,
 	SvelteURLSearchParams,
-	createSubscriber
+	createSubscriber,
+	isStateProxy
 } from 'svelte/reactivity';
 ```
 
@@ -394,6 +397,20 @@ export class MediaQuery {
 function createSubscriber(
 	start: (update: () => void) => (() => void) | void
 ): () => void;
+```
+
+</div>
+
+
+
+## isStateProxy
+
+Returns `true` if `value` is a Svelte `$state` proxy.
+
+<div class="ts-block">
+
+```dts
+function isStateProxy(value: unknown): boolean;
 ```
 
 </div>
