@@ -181,7 +181,7 @@ importers:
         specifier: ^0.3.2
         version: 0.3.2
       sv:
-        specifier: ^0.15.0
+        specifier: ^0.15.1
         version: 0.15.1
       svelte:
         specifier: ^5.55.4
