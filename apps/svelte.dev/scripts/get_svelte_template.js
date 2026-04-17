@@ -4,7 +4,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { create } from 'sv';
 
-// This download the currente Vite template from Github, adjusts it to our needs, and saves it to static/svelte-template.json
+// This downloads the current Vite template from GitHub, adjusts it to our needs, and saves it to static/svelte-template.json
 // This is used by the Svelte REPL as part of the "download project" feature
 
 const force = process.env.FORCE_UPDATE === 'true';
