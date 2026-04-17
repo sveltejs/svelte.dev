@@ -3,13 +3,14 @@
   "npm_description": "A 3D framework for the web, built on top of Svelte and Three.js",
   "repo_url": "https://github.com/threlte/threlte",
   "authors": [
-    "grischaerbe"
+    "grischaerbe",
+    "micheal.parks"
   ],
   "homepage": "https://threlte.xyz",
-  "version": "8.5.4",
-  "downloads": 36205,
+  "version": "8.5.9",
+  "downloads": 32446,
   "github_stars": 3174,
-  "updated": "2026-03-28T18:29:44.484Z",
+  "updated": "2026-04-08T16:26:16.997Z",
   "svelte_range": ">=5",
   "kit_range": "^2.37.0",
   "typescript": true,
