@@ -1,6 +1,8 @@
 import { redirect } from '@sveltejs/kit';
 
 const mappings = new Map([
+	// kit docs (kit.svelte.dev/docs/X → svelte.dev/docs/kit/X)
+	['/docs/kit/assets', '/docs/kit/images'],
 	// docs
 	['/docs/accessibility-warnings', '/docs/svelte/compiler-warnings'],
 	['/docs/basic-markup', '/docs/svelte/basic-markup'],
