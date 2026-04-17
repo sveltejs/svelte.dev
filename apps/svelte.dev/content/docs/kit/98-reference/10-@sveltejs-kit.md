@@ -2551,13 +2551,17 @@ type RemoteFormFields<T> =
 					| boolean
 					| File
 			? RemoteFormField<NonNullable<T>>
-			: // [T] is used to prevent distributing over union, only the last condition should distribute over unions
-				[T] extends [string[] | File[]]
-				? RemoteFormField<T> & {
-						[K in number]: RemoteFormField<T[number]>;
+			: // [NonNullable<T>] is used to prevent distributing over union while still allowing
+				// nullable wrappers (e.g. `string[] | undefined` from a schema with `.default([])`)
+				// to be treated as arrays; only the last condition should distribute over unions
+				[NonNullable<T>] extends [string[] | File[]]
+				? RemoteFormField<NonNullable<T>> & {
+						[K in number]: RemoteFormField<
+							NonNullable<T>[number]
+						>;
 					}
-				: [T] extends [Array<infer U>]
-					? RemoteFormFieldContainer<T> & {
+				: [NonNullable<T>] extends [Array<infer U>]
+					? RemoteFormFieldContainer<NonNullable<T>> & {
 							[K in number]: RemoteFormFields<U>;
 						}
 					: RemoteFormFieldContainer<T> & {
