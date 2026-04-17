@@ -21,7 +21,7 @@ try {
 	}
 } catch {
 	// create Svelte-Kit skelton app
-	create(output_dir, { template: 'minimal', types: 'typescript', name: 'your-app' });
+	create({ cwd: output_dir, template: 'minimal', types: 'typescript', name: 'your-app' });
 
 	function get_all_files(dir) {
 		const files = [];
