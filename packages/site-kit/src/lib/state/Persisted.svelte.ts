@@ -29,8 +29,12 @@ export class Persisted<T extends string = string> {
 		this.#subscribe(); // handle cross-tab updates
 		this.#version; // handle same-tab updates
 
-		return (this.#storage?.getItem(this.#key) as T) ?? this.#fallback;
-	}
+        try {
+            return (this.#storage?.getItem(this.#key) as T) ?? this.#fallback;
+        } catch {
+            return this.#fallback;
+        }
+}
 
 	set current(v: T) {
 		this.#storage?.setItem(this.#key, v);
