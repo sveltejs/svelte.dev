@@ -97,7 +97,7 @@
 			}
 
 			/* Only show the title link if it's in the sidebar */
-			li:first-child {
+			& > ul > li:first-child {
 				display: none;
 			}
 
@@ -244,7 +244,7 @@
 					text-indent: 1ch hanging;
 				}
 
-				li:first-child {
+				& > ul > li:first-child {
 					display: list-item;
 				}
 
