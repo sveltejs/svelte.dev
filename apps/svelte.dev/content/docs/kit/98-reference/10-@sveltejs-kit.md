@@ -1307,6 +1307,42 @@ The content of the error.
 </div>
 </div></div>
 
+## InputTypeMap
+
+<div class="ts-block">
+
+```dts
+type InputTypeMap = {
+	text: string;
+	email: string;
+	password: string;
+	url: string;
+	tel: string;
+	search: string;
+	number: number;
+	range: number;
+	date: string;
+	'datetime-local': string;
+	time: string;
+	month: string;
+	week: string;
+	color: string;
+	checkbox: boolean | string[];
+	radio: string;
+	file: File;
+	hidden: string;
+	submit: string;
+	button: string;
+	reset: string;
+	image: string;
+	select: string;
+	'select multiple': string[];
+	'file multiple': File[];
+};
+```
+
+</div>
+
 ## InvalidField
 
 A function and proxy object used to imperatively create validation errors in form handlers.
