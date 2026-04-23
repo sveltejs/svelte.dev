@@ -2433,7 +2433,7 @@ type RemoteForm<
 					...updates: RemoteQueryUpdate[]
 				) => Promise<boolean>;
 			};
-		}) => MaybePromise<void>
+		}) => void
 	): {
 		method: 'POST';
 		action: string;
@@ -2551,17 +2551,13 @@ type RemoteFormFields<T> =
 					| boolean
 					| File
 			? RemoteFormField<NonNullable<T>>
-			: // [NonNullable<T>] is used to prevent distributing over union while still allowing
-				// nullable wrappers (e.g. `string[] | undefined` from a schema with `.default([])`)
-				// to be treated as arrays; only the last condition should distribute over unions
-				[NonNullable<T>] extends [string[] | File[]]
-				? RemoteFormField<NonNullable<T>> & {
-						[K in number]: RemoteFormField<
-							NonNullable<T>[number]
-						>;
+			: // [T] is used to prevent distributing over union, only the last condition should distribute over unions
+				[T] extends [string[] | File[]]
+				? RemoteFormField<T> & {
+						[K in number]: RemoteFormField<T[number]>;
 					}
-				: [NonNullable<T>] extends [Array<infer U>]
-					? RemoteFormFieldContainer<NonNullable<T>> & {
+				: [T] extends [Array<infer U>]
+					? RemoteFormFieldContainer<T> & {
 							[K in number]: RemoteFormFields<U>;
 						}
 					: RemoteFormFieldContainer<T> & {
@@ -2687,10 +2683,23 @@ type RemoteQuery<T> = RemoteResource<T> & {
 
 The return value of a remote `query` function. See [Remote functions](/docs/kit/remote-functions#query) for full documentation.
 
+The optional `Validated` generic parameter represents the argument type *after* the
+query's schema has validated and (optionally) transformed it — this is the type the
+query's implementation function receives on the server, and the type yielded by
+[`requested`](/docs/kit/$app-server#requested). For queries declared
+with [Standard Schema](https://standardschema.dev/) it differs from `Input` when the
+schema contains a transform (e.g. `v.pipe(v.number(), v.transform(String))` has
+`Input = number` but `Validated = string`). For `'unchecked'` validators and queries
+without arguments it defaults to `Input`.
+
 <div class="ts-block">
 
 ```dts
-type RemoteQueryFunction<Input, Output> = (
+type RemoteQueryFunction<
+	Input,
+	Output,
+	_Validated = Input
+> = (
 	arg: undefined extends Input ? Input | void : Input
 ) => RemoteQuery<Output>;
 ```
@@ -3046,21 +3055,41 @@ type RequestHandler<
 
 </div>
 
+## RequestedEntry
+
+A single entry yielded by [`requested`](/docs/kit/$app-server#requested).
+`arg` is the validated argument (the input *after* the query's schema validated and
+transformed it, if applicable); `query` is a `RemoteQuery` bound to the client's
+original cache key, so `refresh()` / `set()` will update the correct client entry.
+
+<div class="ts-block">
+
+```dts
+type RequestedEntry<Validated, Output> = {
+	arg: Validated;
+	query: RemoteQuery<Output>;
+};
+```
+
+</div>
+
 ## RequestedResult
 
 <div class="ts-block">
 
 ```dts
-type RequestedResult<T> = Iterable<T> &
-	AsyncIterable<T> & {
+type RequestedResult<Validated, Output> = Iterable<
+	RequestedEntry<Validated, Output>
+> &
+	AsyncIterable<RequestedEntry<Validated, Output>> & {
 		/**
 		 * Call `refresh` on all queries selected by this `requested` invocation.
 		 * This is identical to:
 		 * ```ts
 		 * import { requested } from '$app/server';
 		 *
-		 * for await (const arg of requested(query, ...) {
-		 *   void query(arg).refresh();
+		 * for await (const { query } of requested(getPost, ...)) {
+		 *   void query.refresh();
 		 * }
 		 * ```
 		 */
