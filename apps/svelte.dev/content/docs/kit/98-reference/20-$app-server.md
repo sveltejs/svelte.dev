@@ -261,7 +261,8 @@ function query<Schema extends StandardSchemaV1, Output>(
 	) => MaybePromise<Output>
 ): RemoteQueryFunction<
 	StandardSchemaV1.InferInput<Schema>,
-	Output
+	Output,
+	StandardSchemaV1.InferOutput<Schema>
 >;
 ```
 
@@ -301,18 +302,24 @@ function read(asset: string): Response;
 ## requested
 
 In the context of a remote `command` or `form` request, returns an iterable
-of the client-requested refreshes' validated arguments up to the supplied limit.
-Arguments that fail validation or exceed the limit are recorded as failures in
+of `{ arg, query }` entries for the refreshes requested by the client, up to
+the supplied `limit`. Each `query` is a `RemoteQuery` bound to the original
+client-side cache key, so `refresh()` / `set()` propagate correctly even when
+the query's schema transforms the input. `arg` is the *validated* argument,
+i.e. the value after the schema has run (so `InferOutput<Schema>` for queries
+declared with a Standard Schema).
+
+Arguments that fail validation or exceed `limit` are recorded as failures in
 the response to the client.
 
 ```ts
 import { requested } from '$app/server';
 
-for (const arg of requested(getPost, 5)) {
-	// it's safe to throw away this promise -- SvelteKit
-	// will await it for us and handle any errors by sending
-	// them to the client.
-	void getPost(arg).refresh();
+for (const { arg, query } of requested(getPost, 5)) {
+	// `arg` is the validated argument; `query` is bound to the client's
+	// cache key. It's safe to throw away this promise -- SvelteKit will
+	// await it and forward any errors to the client.
+	void query.refresh();
 }
 ```
 
@@ -327,10 +334,10 @@ await requested(getPost, 5).refreshAll();
 <div class="ts-block">
 
 ```dts
-function requested<Input, Output>(
-	query: RemoteQueryFunction<Input, Output>,
-	limit?: number
-): RequestedResult<Input>;
+function requested<Input, Output, Validated = Input>(
+	query: RemoteQueryFunction<Input, Output, Validated>,
+	limit: number
+): RequestedResult<Validated, Output>;
 ```
 
 </div>
@@ -375,7 +382,8 @@ namespace query {
 		>
 	): RemoteQueryFunction<
 		StandardSchemaV1.InferInput<Schema>,
-		Output
+		Output,
+		StandardSchemaV1.InferOutput<Schema>
 	>;
 }
 ```
