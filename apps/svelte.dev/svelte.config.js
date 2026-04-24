@@ -12,6 +12,7 @@ const config = {
 		inlineStyleThreshold: 1000,
 
 		prerender: {
+			// use deployment URL for prerender origin, so that preview environments also have the correct links
 			origin: process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://svelte.dev',
 
 			handleMissingId(warning) {
