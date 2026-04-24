@@ -16,7 +16,7 @@ Big month, bigger showcase... so let's dive in!
 - SvelteKit now supports TypeScript 6.0 (**2.56.0**, [Docs](https://devblogs.microsoft.com/typescript/announcing-typescript-6-0/), [#15595](https://github.com/sveltejs/kit/pull/15595))
 - `form` fields can now specify a default value using `field.as(type, value)`, reducing boilerplate for pre-populated forms (**2.56.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#form-Fields), [#15577](https://github.com/sveltejs/kit/pull/15577))
 - Remote function transport now uses `hydratable`, enabling richer data types in query results (**2.56.0**, [#15533](https://github.com/sveltejs/kit/pull/15533))
-- Form `submit` now returns a `boolean` to indicate submission validity for enhanced form remote functions (**2.57.0**, [Docs](https://svelte.dev/docs/kit/$app-forms#enhance), [#15530](https://github.com/sveltejs/kit/pull/15530))
+- Form `submit` now returns a `boolean` to indicate submission validity for enhanced form remote functions (**2.57.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#form-enhance), [#15530](https://github.com/sveltejs/kit/pull/15530))
 - **Remote Function Breaking Changes (2.56.0)**
   - Rework client-driven refreshes ([#15562](https://github.com/sveltejs/kit/pull/15562))
   - Stabilize remote function caching by sorting object keys ([#15570](https://github.com/sveltejs/kit/pull/15570))
