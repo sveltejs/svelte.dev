@@ -18,7 +18,7 @@ Big month, bigger showcase... so let's dive in!
 - Remote function transport now uses `hydratable`, enabling richer data types in query results (**2.56.0**, [#15533](https://github.com/sveltejs/kit/pull/15533))
 - Form `submit` now returns a `boolean` to indicate submission validity for enhanced form remote functions (**2.57.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#form-enhance), [#15530](https://github.com/sveltejs/kit/pull/15530))
 - **Remote Function Breaking Changes (2.56.0)**
-  - Rework client-driven refreshes ([#15562](https://github.com/sveltejs/kit/pull/15562))
+  - Client-requested query refreshes must obtain permission from the server ([#15562](https://github.com/sveltejs/kit/pull/15562))
   - Stabilize remote function caching by sorting object keys ([#15570](https://github.com/sveltejs/kit/pull/15570))
   - Add `run()` method to queries, disallow awaiting queries outside render ([#15533](https://github.com/sveltejs/kit/pull/15533))
   - Isolate command-triggered query refresh failures per-query ([#15562](https://github.com/sveltejs/kit/pull/15562))
@@ -46,7 +46,7 @@ For a full list of changes - including all the important bugfixes that went into
 - [dnsoptic](https://dnsoptic.com/) is a DNS health audit tool that checks nameservers, mail authentication, DNSSEC, security posture and migration diffs
 - [swap.](https://swapjs.dev/) is a collection of little games built around sorting algorithms
 - [Scapedle](https://github.com/asbedb/Scapedle) is a Wordle game with Old School RuneScape (OSRS) words
-- [Ephemeral Forms](https://github.com/ra9/ephemeral-forms) is a modern, zero-login, offline-first form builder with AI-powered generation, real-time collaboration and cross-device sync
+- [Ephemeral Forms](https://ra9.github.io/ephemeral-forms/) is a modern, zero-login, offline-first form builder with AI-powered generation, real-time collaboration and cross-device sync
 - [CORDIAL](https://www.youtube.com/watch?v=ZVy0vXBHaCM) is an AI Native IDE optimized for a big screen experience. "Good for people who want to feel like Tom Cruise in Minority Report"
 
 ### Learning Resources
@@ -71,20 +71,20 @@ _UI Components and Animations_
 
 - [Blossom Color Picker](https://blossom.dayflow.studio/) is a flower-style color picker
 - [thisux/sveltednd](https://sveltednd.thisux.com/) (last featured in December 2024) has been updated to support Svelte 5
-- [phantom-ui](https://github.com/Aejkatappaja/phantom-ui) is a structure-aware skeleton loader built with web components
+- [phantom-ui](https://aejkatappaja.github.io/phantom-ui/demo/) is a structure-aware skeleton loader built with web components
 - [Svelte Spell UI](https://sv-animations.vercel.app/spell) is a port of the original Spell UI that you can copy-paste into any project
-- [Svileo](https://www.reddit.com/r/sveltejs/comments/1sbgc9j/svileo_physicsbased_toast_component_for_svelte/) is a physics-based toast component inspired by Sileo
+- [Svileo](https://svileo.elyasasmad.com) is a physics-based toast component inspired by Sileo
 - [Motion Core](https://motion-core.dev/) (last featured in February) has been rewritten from Three.js to OGL with a much-reduced file size
 
 _State Management_
 
-- [Stately](https://github.com/selfagency/stately) is a Pinia-inspired state management library that provides a structured way to define shared state, mutate it directly and observe changes
+- [Stately](https://stately.self.agency) is a Pinia-inspired state management library that provides a structured way to define shared state, mutate it directly and observe changes
 
 _Utilities and Integrations_
 
 - [Sveltia I18n](https://github.com/sveltia/sveltia-i18n) is an internationalization library powered by runes and the messageformat library for formatting messages using Unicode MessageFormat 2 (MF2)
 - [Nabu](https://github.com/aionbuilders/nabu) is a modular, local-first Svelte block editor engine built on a Single ContentEditable architecture
-- [Svelte Agentation](https://github.com/SikandarJODD/sv-agentation) turns UI annotations into structured context that AI coding agents can understand and act on
+- [Svelte Agentation](https://sv-agentation.com) turns UI annotations into structured context that AI coding agents can understand and act on
 
 _Developer Tools_
 
