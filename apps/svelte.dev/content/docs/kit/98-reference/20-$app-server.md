@@ -385,6 +385,13 @@ namespace query {
 		Output,
 		StandardSchemaV1.InferOutput<Schema>
 	>;
+
+	function cache(
+		input: import('@sveltejs/kit').CacheOptions
+	): void;
+	namespace cache {
+		function invalidate(tags: string[]): Promise<void>;
+	}
 }
 ```
 

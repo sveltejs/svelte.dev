@@ -547,6 +547,44 @@ Creates an `Emulator`, which allows the adapter to influence the environment
 during dev, build and prerendering.
 
 </div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+cache?: {/*…*/}
+```
+
+<div class="ts-block-property-details">
+
+Provides a cache implementation.
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+path?: string;
+```
+
+<div class="ts-block-property-details">
+
+A path that can be imported as a module
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+options?: Record<string, unknown>;
+```
+
+<div class="ts-block-property-details">
+
+Options to pass to the cache implementation. Must be JSON-serializeable.
+
+</div>
+</div></div>
+
+</div>
 </div></div>
 
 ## AfterNavigate
@@ -1001,6 +1039,43 @@ Compress files in `directory` with gzip and brotli, where appropriate. Generates
 </div>
 </div></div>
 
+## CacheOptions
+
+Options for [`query.cache`](/docs/kit/remote-functions#Caching)
+
+<div class="ts-block">
+
+```dts
+interface CacheOptions {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+maxAge: string | number;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+staleWhileRevalidate?: string | number;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+tags?: string[];
+```
+
+<div class="ts-block-property-details"></div>
+</div></div>
+
 ## ClientInit
 
 <blockquote class="since note">
@@ -1341,6 +1416,87 @@ type InvalidField<T> =
 ```
 
 </div>
+
+## KitCacheHandler
+
+Custom query cache integration. Export `get`, `set`, and `invalidate` from `kit.cache.path`.
+
+<div class="ts-block">
+
+```dts
+interface KitCacheHandler {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+get(queryId: string): MaybePromise<string | undefined>;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+set(queryId: string, stringifiedResponse: string, cache: KitCacheMetadata): MaybePromise<void>;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+setHeaders?(headers: Headers, cache: KitCacheMetadata): MaybePromise<void>;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+invalidate(tags: string[]): MaybePromise<void>;
+```
+
+<div class="ts-block-property-details"></div>
+</div></div>
+
+## KitCacheMetadata
+
+<div class="ts-block">
+
+```dts
+interface KitCacheMetadata {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+maxAge: number;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+staleWhileRevalidate?: number;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+tags: string[];
+```
+
+<div class="ts-block-property-details"></div>
+</div></div>
 
 ## KitConfig
 
@@ -2657,6 +2813,10 @@ type RemoteQuery<T> = RemoteResource<T> & {
 	 */
 	refresh(): Promise<void>;
 	/**
+	 * Queue cache invalidation for this query.
+	 */
+	invalidate(): Promise<void>;
+	/**
 	 * Temporarily override a query's value during a [single-flight mutation](https://svelte.dev/docs/kit/remote-functions#Single-flight-mutations) to provide optimistic updates.
 	 *
 	 * ```svelte
@@ -2758,6 +2918,32 @@ type RemoteResource<T> = Promise<T> & {
 ```
 
 </div>
+
+## RequestCache
+
+<div class="ts-block">
+
+```dts
+interface RequestCache {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+(arg: CacheOptions): void;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+invalidate(tags: string[]): Promise<void>;
+```
+
+<div class="ts-block-property-details"></div>
+</div></div>
 
 ## RequestEvent
 
