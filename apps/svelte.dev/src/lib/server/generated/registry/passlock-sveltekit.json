@@ -8,7 +8,7 @@
   "homepage": "https://passlock.dev",
   "version": "0.9.32",
   "deprecated_reason": "Use @passlock/browser",
-  "downloads": 41,
+  "downloads": 9,
   "github_stars": 187,
   "updated": "2025-11-14T10:45:14.010Z",
   "svelte_range": "^4.0.0",

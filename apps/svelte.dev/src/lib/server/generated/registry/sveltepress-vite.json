@@ -6,10 +6,10 @@
     "philadelphia"
   ],
   "homepage": "https://sveltepress.site/",
-  "version": "1.3.10",
-  "downloads": 2711,
+  "version": "1.3.11",
+  "downloads": 1661,
   "github_stars": 518,
-  "updated": "2026-04-06T14:27:40.020Z",
+  "updated": "2026-04-17T05:59:38.853Z",
   "svelte_range": "^5.0.0",
   "kit_range": "^2.0.0",
   "typescript": true,
