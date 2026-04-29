@@ -85,6 +85,47 @@ Your [adapter](/docs/kit/adapters) is run when executing `vite build`. It determ
 
 </div>
 
+## cache
+
+<div class="ts-block-property-bullets">
+
+
+
+</div>
+
+Provides a cache implementation. If set, overrides the cache handler provided by the adapter.
+
+<div class="ts-block-property-children">
+
+<div class="ts-block-property">
+
+```ts
+// @noErrors
+path?: string;
+```
+
+<div class="ts-block-property-details">
+
+A path that can be imported as a module
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```ts
+// @noErrors
+options?: Record<string, unknown>;
+```
+
+<div class="ts-block-property-details">
+
+Options to pass to the cache implementation. Must be JSON-serializeable.
+
+</div>
+</div>
+
+</div>
+
 ## alias
 
 <div class="ts-block-property-bullets">

@@ -222,6 +222,28 @@ Any query can be re-fetched via its `refresh` method, which retrieves the latest
 
 > [!NOTE] Queries are cached while they're on the page, meaning `getPosts() === getPosts()`. This means you don't need a reference like `const posts = getPosts()` in order to update the query.
 
+### Query lifetime
+
+By default, a query is considered stale after 60 minutes, does not refresh on client-side navigation, and is retained in the client cache for up to 5 navigations or 10 minutes after nothing on the page references it. You can override this from inside the query function with `query.lifetime(...)`:
+
+```js
+/// file: src/routes/data.remote.js
+import { query } from '$app/server';
+
+export const getPosts = query(async () => {
+	query.lifetime({
+		staleAfter: '5s',
+		refreshAfter: '10s',
+		refreshOnNavigation: true,
+		bfcache: { limit: 5, maxAge: '10s' }
+	});
+
+	return getPostsFromDatabase();
+});
+```
+
+Time values can be a number of seconds, or a string ending in `s` or `m`. `staleAfter` controls when reusing a still-referenced query should trigger a refresh, `refreshAfter` schedules a refresh while the query remains referenced, and `refreshOnNavigation` refreshes after client-side navigations. Set `bfcache: false` to remove a query from the client cache as soon as it is no longer referenced, or provide `limit` and `maxAge` to keep it around temporarily.
+
 ## query.batch
 
 `query.batch` works like `query` except that it batches requests that happen within the same macrotask. This solves the so-called n+1 problem: rather than each query resulting in a separate database call (for example), simultaneous queries are grouped together.
@@ -274,6 +296,45 @@ export const getWeather = query.batch(v.string(), async (cityIds) => {
 	</button>
 {/if}
 ```
+
+## query.live
+
+`query.live` is for accessing real-time data from the server. It behaves similarly to `query`, but the callback — typically an async [generator function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function*) — returns an `AsyncIterable`:
+
+```js
+import { query } from '$app/server';
+
+export const getTime = query.live(async function* () {
+	while (true) {
+		yield new Date();
+		await new Promise((f) => setTimeout(f, 1000));
+	}
+});
+```
+
+During server-side rendering, `await getTime()` returns the first yielded value then closes the iterator. This initial value is serialized and reused during hydration.
+
+On the client, the query stays connected while it's actively used in a component. Multiple instances share a connection. When there are no active uses left, the stream disconnects and server-side iteration is stopped.
+
+Live queries expose a `connected` property and `reconnect()` method:
+
+```svelte
+<script>
+	import { getTime } from './time.remote.js';
+
+	const time = getTime();
+</script>
+
+<p>{await time}</p>
+<p>connected: {time.connected}</p>
+<button onclick={() => time.reconnect()}>Reconnect</button>
+```
+
+If the connection drops, `connected` becomes `false`. SvelteKit will attempt to reconnect passively, with exponential backoff, and actively if `navigator.onLine` goes from `false` to `true`.
+
+Unlike `query`, live queries do not have a `refresh()` method, as they are self-updating.
+
+As with `query` and `query.batch`, call `.run()` outside render when you need imperative access. For live queries, `run()` returns a `Promise<AsyncGenerator<T>>`.
 
 ## form
 
@@ -975,6 +1036,29 @@ export const updatePost = form(
 
 Because queries are keyed based on their arguments, `await getPost(post.id).set(result)` on the server knows to look up the matching `getPost(id)` on the client to update it. The same goes for `getPosts().refresh()` -- it knows to look up `getPosts()` with no argument on the client.
 
+### Reconnecting live queries in mutations
+
+Single-flight mutations can also reconnect `query.live` instances. In a `form`/`command` handler, call `.reconnect()` on the live query resource you want to reconnect:
+
+```js
+import * as v from 'valibot';
+import { form, query } from '$app/server';
+
+export const getNotifications = query.live(v.string(), async function* (userId) {
+	while (true) {
+		yield await db.notifications(userId);
+		await wait(1000);
+	}
+});
+
+export const markAllRead = form(v.object({ userId: v.string() }), async ({ userId }) => {
+	// mutation logic...
+	+++getNotifications(userId).reconnect();+++
+});
+```
+
+This schedules a reconnect for the matching active client instances and applies it as part of the mutation response (i.e. in the same flight as the form/command result). You might need this if, for example, the command modifies a cookie that the live query needs to restart in order to capture.
+
 ### Client-requested refreshes
 
 Unfortunately, life isn't always as simple as the preceding example. The server always knows which query _functions_ to update, but it may not know which specific query _instances_ to update. For example, if `getPosts({ filter: 'author:santa' })` is rendered on the client, calling `getPosts().refresh()` in the server handler won't update it. You'd need to call `getPosts({ filter: 'author:santa' }).refresh()` instead — but how could you know which specific combinations of filters are currently rendered on the client, especially if your query argument is more complicated than an object with just one key?
@@ -1222,3 +1306,82 @@ Note that some properties of `RequestEvent` are different inside remote function
 ## Redirects
 
 Inside `query`, `form` and `prerender` functions it is possible to use the [`redirect(...)`](@sveltejs-kit#redirect) function. It is *not* possible inside `command` functions, as you should avoid redirecting here. (If you absolutely have to, you can return a `{ redirect: location }` object and deal with it in the client.)
+
+## Caching
+
+By default, remote functions do not cache their results. You can change this by using `query.cache(...)`, which allows you to store the result of a remote function for a certain amount of time.
+
+```ts
+/// file: src/routes/data.remote.js
+// ---cut---
+import { query } from '$app/server';
+
+export const getFastData = query(async () => {
+	// cache for 100 seconds
+	query.cache('100s');
+
+	return { data: '...' };
+});
+```
+
+The `cache` function accepts an object with the following configuration:
+
+```ts
+/// file: src/routes/data.remote.js
+import { query } from '$app/server';
+// ---cut---
+export const getFastData = query(async () => {
+	query.cache({
+		// fresh for 1 minute
+		maxAge: '1m',
+		// can serve stale up to 5 minutes
+		staleWhileRevalidate: '5m',
+		// used for invalidation, when not given is the URL
+		tags: ['my-data'],
+	});
+
+	// ...
+});
+```
+
+The cache is public, i.e. not per-user but shared. The cache implementation is platform-specific (for example, on [Vercel](adapter-vercel) remote functions use the Vercel Runtime Cache API, and endpoints additionally emit `CDN-Cache-Control` and `Cache-Tag` headers).
+
+### Invalidating the cache
+
+To invalidate the cache for a specific query, you can call its `invalidate` method:
+
+```ts
+/// file: src/routes/data.remote.js
+import { query, command } from '$app/server';
+
+export const getFastData = query(async () => {
+	query.cache('100s');
+	return { data: '...' };
+});
+
+export const updateData = command(async () => {
+	// invalidates getFastData;
+	// the next time someone requests it, it will be called again
+	getFastData().invalidate();
+});
+```
+
+Alternatively, if you used tags when setting up the cache, you can invalidate by tag using `query.cache.invalidate(...)`:
+
+```ts
+/// file: src/routes/data.remote.js
+import { query, command } from '$app/server';
+
+export const getFastData = query(async () => {
+	query.cache({ maxAge: '100s', tags: ['my-data'] });
+	return { data: '...' };
+});
+
+export const updateData = command(async () => {
+	// invalidate all queries using the my-data tag;
+	// the next time someone requests a query which had that tag, it will be called again
+	query.cache.invalidate(['my-data']);
+});
+```
+
+> [!NOTE] Cache tags are public metadata. Do not put secrets or user-specific private data in tags.

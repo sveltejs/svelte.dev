@@ -547,6 +547,44 @@ Creates an `Emulator`, which allows the adapter to influence the environment
 during dev, build and prerendering.
 
 </div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+cache?: {/*…*/}
+```
+
+<div class="ts-block-property-details">
+
+Provides a cache implementation.
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+path?: string;
+```
+
+<div class="ts-block-property-details">
+
+A path that can be imported as a module
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+options?: Record<string, unknown>;
+```
+
+<div class="ts-block-property-details">
+
+Options to pass to the cache implementation. Must be JSON-serializeable.
+
+</div>
+</div></div>
+
+</div>
 </div></div>
 
 ## AfterNavigate
@@ -1001,6 +1039,43 @@ Compress files in `directory` with gzip and brotli, where appropriate. Generates
 </div>
 </div></div>
 
+## CacheOptions
+
+Options for [`query.cache`](/docs/kit/remote-functions#Caching)
+
+<div class="ts-block">
+
+```dts
+interface CacheOptions {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+maxAge: string | number;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+staleWhileRevalidate?: string | number;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+tags?: string[];
+```
+
+<div class="ts-block-property-details"></div>
+</div></div>
+
 ## ClientInit
 
 <blockquote class="since note">
@@ -1342,6 +1417,87 @@ type InvalidField<T> =
 
 </div>
 
+## KitCacheHandler
+
+Custom query cache integration. Export `get`, `set`, and `invalidate` from `kit.cache.path`.
+
+<div class="ts-block">
+
+```dts
+interface KitCacheHandler {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+get(queryId: string): MaybePromise<string | undefined>;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+set(queryId: string, stringifiedResponse: string, cache: KitCacheMetadata): MaybePromise<void>;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+setHeaders?(headers: Headers, cache: KitCacheMetadata): MaybePromise<void>;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+invalidate(tags: string[]): MaybePromise<void>;
+```
+
+<div class="ts-block-property-details"></div>
+</div></div>
+
+## KitCacheMetadata
+
+<div class="ts-block">
+
+```dts
+interface KitCacheMetadata {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+maxAge: number;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+staleWhileRevalidate?: number;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+tags: string[];
+```
+
+<div class="ts-block-property-details"></div>
+</div></div>
+
 ## KitConfig
 
 See the [configuration reference](/docs/kit/configuration) for details.
@@ -1357,6 +1513,50 @@ type LessThan<
 > = TNumber extends TArray['length']
 	? TArray[number]
 	: LessThan<TNumber, [...TArray, TArray['length']]>;
+```
+
+</div>
+
+## LiveQueryRequestedResult
+
+<div class="ts-block">
+
+```dts
+type LiveQueryRequestedResult<Validated, Output> = Iterable<
+	LiveRequestedEntry<Validated, Output>
+> &
+	AsyncIterable<LiveRequestedEntry<Validated, Output>> & {
+		/**
+		 * Call `reconnect` on all live queries selected by this `requested` invocation.
+		 * This is identical to:
+		 * ```ts
+		 * import { requested } from '$app/server';
+		 *
+		 * for await (const { query } of requested(liveQuery, ...)) {
+		 *   void query.reconnect();
+		 * }
+		 * ```
+		 */
+		reconnectAll: () => Promise<void>;
+	};
+```
+
+</div>
+
+## LiveRequestedEntry
+
+A single entry yielded by [`requested`](/docs/kit/$app-server#requested)
+when called with a `query.live`. `arg` is the validated argument; `query` is a
+`RemoteLiveQuery` bound to the client's original cache key, so `reconnect()` targets
+the correct client subscription.
+
+<div class="ts-block">
+
+```dts
+type LiveRequestedEntry<Validated, Output> = {
+	arg: Validated;
+	query: RemoteLiveQuery<Output>;
+};
 ```
 
 </div>
@@ -2349,6 +2549,97 @@ type PrerenderOption = boolean | 'auto';
 
 </div>
 
+## QueryLifetime
+
+<div class="ts-block">
+
+```dts
+interface QueryLifetime {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+staleAfter?: `${number}m` | `${number}s` | number;
+```
+
+<div class="ts-block-property-details">
+
+If a referenced query is reused after this many seconds, it will be refreshed. If omitted, it never goes stale.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+refreshAfter?: `${number}m` | `${number}s` | number;
+```
+
+<div class="ts-block-property-details">
+
+If a query remains referenced for this many seconds, it will be refreshed. If omitted, it never refreshes automatically.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+refreshOnNavigation?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+Whether the query should refresh after client-side navigations.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+bfcache?:
+	| {
+			limit: number;
+			maxAge: `${number}m` | `${number}s` | number;
+	  }
+	| false;
+```
+
+<div class="ts-block-property-details">
+
+How long to retain the query in the client cache after it is no longer referenced.
+
+</div>
+</div></div>
+
+## QueryRequestedResult
+
+<div class="ts-block">
+
+```dts
+type QueryRequestedResult<Validated, Output> = Iterable<
+	RequestedEntry<Validated, Output>
+> &
+	AsyncIterable<RequestedEntry<Validated, Output>> & {
+		/**
+		 * Call `refresh` on all queries selected by this `requested` invocation.
+		 * This is identical to:
+		 * ```ts
+		 * import { requested } from '$app/server';
+		 *
+		 * for await (const { query } of requested(getPost, ...)) {
+		 *   void query.refresh();
+		 * }
+		 * ```
+		 */
+		refreshAll: () => Promise<void>;
+	};
+```
+
+</div>
+
 ## Redirect
 
 The object returned by the [`redirect`](/docs/kit/@sveltejs-kit#redirect) function.
@@ -2387,7 +2678,7 @@ The location to redirect to.
 
 ## RemoteCommand
 
-The return value of a remote `command` function. See [Remote functions](/docs/kit/remote-functions#command) for full documentation.
+The type of a remote `command` function. See [Remote functions](/docs/kit/remote-functions#command) for full documentation.
 
 <div class="ts-block">
 
@@ -2409,7 +2700,7 @@ type RemoteCommand<Input, Output> = {
 
 ## RemoteForm
 
-The return value of a remote `form` function. See [Remote functions](/docs/kit/remote-functions#form) for full documentation.
+The type of a remote `form` function. See [Remote functions](/docs/kit/remote-functions#form) for full documentation.
 
 <div class="ts-block">
 
@@ -2616,9 +2907,54 @@ path: Array<string | number>;
 <div class="ts-block-property-details"></div>
 </div></div>
 
+## RemoteLiveQuery
+
+<div class="ts-block">
+
+```dts
+type RemoteLiveQuery<T> = RemoteResource<T> & {
+	/**
+	 * Returns an async iterator with live updates.
+	 * Unlike awaiting the resource directly, this can only be used _outside_ render
+	 * (i.e. in load functions, event handlers and so on)
+	 */
+	run(): AsyncGenerator<T>;
+	/** `true` if the live stream is currently connected. */
+	readonly connected: boolean;
+	/** `true` once the current live stream iterator is done. */
+	readonly done: boolean;
+	/** Reconnects the live stream immediately. */
+	reconnect(): Promise<void>;
+};
+```
+
+</div>
+
+## RemoteLiveQueryFunction
+
+The type of a remote `query.live` function. See [Remote functions](/docs/kit/remote-functions#query.live) for full documentation.
+
+The optional `Validated` generic parameter represents the argument type *after* the
+query's schema has validated and (optionally) transformed it, and matches the type
+yielded by [`requested`](/docs/kit/$app-server#requested).
+
+<div class="ts-block">
+
+```dts
+type RemoteLiveQueryFunction<
+	Input,
+	Output,
+	_Validated = Input
+> = (
+	arg: undefined extends Input ? Input | void : Input
+) => RemoteLiveQuery<Output>;
+```
+
+</div>
+
 ## RemotePrerenderFunction
 
-The return value of a remote `prerender` function. See [Remote functions](/docs/kit/remote-functions#prerender) for full documentation.
+The type of a remote `prerender` function. See [Remote functions](/docs/kit/remote-functions#prerender) for full documentation.
 
 <div class="ts-block">
 
@@ -2656,6 +2992,10 @@ type RemoteQuery<T> = RemoteResource<T> & {
 	 * This prevents SvelteKit needing to refresh all queries on the page in a second server round-trip.
 	 */
 	refresh(): Promise<void>;
+	/**
+	 * Queue cache invalidation for this query.
+	 */
+	invalidate(): Promise<void>;
 	/**
 	 * Temporarily override a query's value during a [single-flight mutation](https://svelte.dev/docs/kit/remote-functions#Single-flight-mutations) to provide optimistic updates.
 	 *
@@ -2727,7 +3067,9 @@ type RemoteQueryOverride = () => void;
 ```dts
 type RemoteQueryUpdate =
 	| RemoteQuery<any>
+	| RemoteLiveQuery<any>
 	| RemoteQueryFunction<any, any>
+	| RemoteLiveQueryFunction<any, any>
 	| RemoteQueryOverride;
 ```
 
@@ -2758,6 +3100,32 @@ type RemoteResource<T> = Promise<T> & {
 ```
 
 </div>
+
+## RequestCache
+
+<div class="ts-block">
+
+```dts
+interface RequestCache {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+(arg: CacheOptions): void;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+invalidate(tags: string[]): Promise<void>;
+```
+
+<div class="ts-block-property-details"></div>
+</div></div>
 
 ## RequestEvent
 
@@ -3061,10 +3429,11 @@ type RequestHandler<
 
 ## RequestedEntry
 
-A single entry yielded by [`requested`](/docs/kit/$app-server#requested).
-`arg` is the validated argument (the input *after* the query's schema validated and
-transformed it, if applicable); `query` is a `RemoteQuery` bound to the client's
-original cache key, so `refresh()` / `set()` will update the correct client entry.
+A single entry yielded by [`requested`](/docs/kit/$app-server#requested)
+when called with a regular `query`. `arg` is the validated argument (the input *after*
+the query's schema validated and transformed it, if applicable); `query` is a
+`RemoteQuery` bound to the client's original cache key, so `refresh()` / `set()` will
+update the correct client entry.
 
 <div class="ts-block">
 
@@ -3082,23 +3451,9 @@ type RequestedEntry<Validated, Output> = {
 <div class="ts-block">
 
 ```dts
-type RequestedResult<Validated, Output> = Iterable<
-	RequestedEntry<Validated, Output>
-> &
-	AsyncIterable<RequestedEntry<Validated, Output>> & {
-		/**
-		 * Call `refresh` on all queries selected by this `requested` invocation.
-		 * This is identical to:
-		 * ```ts
-		 * import { requested } from '$app/server';
-		 *
-		 * for await (const { query } of requested(getPost, ...)) {
-		 *   void query.refresh();
-		 * }
-		 * ```
-		 */
-		refreshAll: () => Promise<void>;
-	};
+type RequestedResult<Validated, Output> =
+	| QueryRequestedResult<Validated, Output>
+	| LiveQueryRequestedResult<Validated, Output>;
 ```
 
 </div>
