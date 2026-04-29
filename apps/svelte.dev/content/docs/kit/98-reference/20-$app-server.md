@@ -331,13 +331,29 @@ import { requested } from '$app/server';
 await requested(getPost, 5).refreshAll();
 ```
 
+Works with `query.batch` as well — refreshes for individual entries are
+collected into a single batched call.
+
+For live queries, the same applies, but with `reconnect` and `reconnectAll`.
+
 <div class="ts-block">
 
 ```dts
 function requested<Input, Output, Validated = Input>(
 	query: RemoteQueryFunction<Input, Output, Validated>,
 	limit: number
-): RequestedResult<Validated, Output>;
+): QueryRequestedResult<Validated, Output>;
+```
+
+</div>
+
+<div class="ts-block">
+
+```dts
+function requested<Input, Output, Validated = Input>(
+	query: RemoteLiveQueryFunction<Input, Output, Validated>,
+	limit: number
+): LiveQueryRequestedResult<Validated, Output>;
 ```
 
 </div>
@@ -381,6 +397,42 @@ namespace query {
 			) => Output
 		>
 	): RemoteQueryFunction<
+		StandardSchemaV1.InferInput<Schema>,
+		Output,
+		StandardSchemaV1.InferOutput<Schema>
+	>;
+
+	function cache(
+		input: import('@sveltejs/kit').CacheOptions
+	): void;
+	namespace cache {
+		function invalidate(tags: string[]): Promise<void>;
+	}
+	/**
+	 * Creates a live remote query. When called from the browser, the function will be invoked on the server via a streaming `fetch` call.
+	 *
+	 * See [Remote functions](https://svelte.dev/docs/kit/remote-functions#query.live) for full documentation.
+	 *
+	 * */
+	function live<Output>(
+		fn: (
+			arg: void
+		) => RemoteLiveQueryUserFunctionReturnType<Output>
+	): RemoteLiveQueryFunction<void, Output>;
+
+	function live<Input, Output>(
+		validate: 'unchecked',
+		fn: (
+			arg: Input
+		) => RemoteLiveQueryUserFunctionReturnType<Output>
+	): RemoteLiveQueryFunction<Input, Output>;
+
+	function live<Schema extends StandardSchemaV1, Output>(
+		schema: Schema,
+		fn: (
+			arg: StandardSchemaV1.InferOutput<Schema>
+		) => RemoteLiveQueryUserFunctionReturnType<Output>
+	): RemoteLiveQueryFunction<
 		StandardSchemaV1.InferInput<Schema>,
 		Output,
 		StandardSchemaV1.InferOutput<Schema>
