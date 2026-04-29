@@ -17,7 +17,6 @@ Big month, bigger showcase... so let's dive in!
 - `form` fields can now specify a default value using `field.as(type, value)`, reducing boilerplate for pre-populated forms (**2.56.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#form-Fields), [#15577](https://github.com/sveltejs/kit/pull/15577))
 - Remote function transport now uses `hydratable`, enabling richer data types in query results (**2.56.0**, [#15533](https://github.com/sveltejs/kit/pull/15533))
 - Form `submit` now returns a `boolean` to indicate submission validity for enhanced form remote functions (**2.57.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#form-enhance), [#15530](https://github.com/sveltejs/kit/pull/15530))
-- `RemoteQueryFunction` now has an optional third generic parameter `Validated` for types after schema validation or transformation (**2.58.0**, [#15739](https://github.com/sveltejs/kit/pull/15739))
 - **Remote Function Breaking Changes (2.56.0)**
   - Client-requested query refreshes must obtain permission from the server ([#15562](https://github.com/sveltejs/kit/pull/15562))
   - Stabilize remote function caching by sorting object keys ([#15570](https://github.com/sveltejs/kit/pull/15570))
@@ -31,7 +30,7 @@ Looking for more details on the many bug fixes and performance optimizations fro
 
 - Community add-ons are now available in `sv` as an experimental feature (**sv@0.1.0**, [Docs](https://svelte.dev/docs/cli/community), [#1020](https://github.com/sveltejs/cli/pull/1020))
 - The `sv` and `sv-utils` packages are now separate in the CLI package - leading to a more explicit public API and a deprecation pass for old features (**sv@0.2.0**, [Docs](https://svelte.dev/docs/cli/sv), [#1046](https://github.com/sveltejs/cli/pull/1046))
-- `sv` now has improved Vitest v3 detection when configuring projects (**sv@0.15.2**, [#1073](https://github.com/sveltejs/cli/pull/1073))
+- `sv` will now more reliably detect if vitest v3 is installed when configuring projects (**sv@0.15.2**, [#1073](https://github.com/sveltejs/cli/pull/1073))
 - Types for `TweenOptions`, `SpringOptions`, `SpringUpdateOptions` and `Updater` are now available as exports from `svelte/motion` (**svelte@5.55.0**, [Docs](https://svelte.dev/docs/svelte/svelte-motion), [#17967](https://github.com/sveltejs/svelte/pull/17967))
 
 For a full list of changes - including all the important bugfixes that went into the releases this month - check out the Svelte compiler's [CHANGELOG](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md).
