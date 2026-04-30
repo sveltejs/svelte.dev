@@ -44,6 +44,12 @@ This is where our automatic type generation comes in. Every route directory has 
 
 ```js
 /// file: src/routes/blog/[slug]/+page.server.ts
+const database = {
+	getPost(slug: string | undefined): Promise<string> {
+		return Promise.resolve('hello world');
+	}
+};
+// ---cut---
 ---import type { ServerLoadEvent } from '@sveltejs/kit';---
 +++import type { PageServerLoadEvent } from './$types';+++
 
@@ -133,7 +139,14 @@ src/
 Thanks to the automatic type generation we get advanced type safety. Wouldn't it be great though if we could just omit writing the types at all? As of today you can do exactly that:
 
 ```js
+// @errors: 7006
 /// file: src/routes/blog/[slug]/+page.server.ts
+const database = {
+	getPost(slug: string | undefined): Promise<string> {
+		return Promise.resolve('hello world');
+	}
+};
+// ---cut---
 ---import type { PageServerLoadEvent } from './$types';---
 
 export async function load(event---: PageServerLoadEvent---) {
