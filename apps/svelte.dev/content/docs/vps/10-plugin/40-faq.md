@@ -66,7 +66,7 @@ Good:
 ```css
 /* global.scss */
 html {
-	color: $text-color;
+  color: $text-color;
 }
 ```
 
@@ -79,9 +79,9 @@ Bad:
 
 ```svelte
 <style lang="scss">
-	:global(html) {
-		color: $text-color;
-	}
+  :global(html) {
+    color: $text-color;
+  }
 </style>
 ```
 
@@ -106,9 +106,9 @@ So it is recommended to keep the pattern defined by Svelte itself. If you want t
 ```js
 // svelte.config.js
 export default {
-	compilerOptions: {
-		cssHash: ({ hash, filename, css }) => `my-custom-prefix-${hash(filename ?? css)}`
-	}
+  compilerOptions: {
+    cssHash: ({ hash, filename, css }) => `my-custom-prefix-${hash(filename ?? css)}`
+  }
 };
 ```
 
@@ -168,9 +168,9 @@ import { defineConfig } from 'vite';
 // ---cut---
 // vite.config.js
 export default defineConfig({
-	optimizeDeps: {
-		exclude: ['some-library'] // do not pre-bundle some-library
-	}
+  optimizeDeps: {
+    exclude: ['some-library'] // do not pre-bundle some-library
+  }
 });
 ```
 
@@ -179,9 +179,9 @@ Or disable it for all Svelte libraries
 ```js
 // svelte.config.js
 export default {
-	vitePlugin: {
-		prebundleSvelteLibraries: false
-	}
+  vitePlugin: {
+    prebundleSvelteLibraries: false
+  }
 };
 ```
 
@@ -211,7 +211,7 @@ const { defineConfig } = require('vite');
 const { svelte, vitePreprocess } = require('@sveltejs/vite-plugin-svelte');
 
 module.exports = defineConfig({
-	plugins: [svelte({ preprocess: vitePreprocess() })]
+  plugins: [svelte({ preprocess: vitePreprocess() })]
 });
 ```
 
@@ -251,7 +251,7 @@ This is not supported out of the box. To resolve assets, you have to either impo
 
 ```html
 <script>
-	import assetUrl from './asset.png';
+  import assetUrl from './asset.png';
 </script>
 <img src="{assetUrl}" />
 ```
