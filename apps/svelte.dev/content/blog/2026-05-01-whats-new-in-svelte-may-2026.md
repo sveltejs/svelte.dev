@@ -30,7 +30,7 @@ Looking for more details on the many bug fixes and performance optimizations fro
 
 - Community add-ons are now available in `sv` as an experimental feature (**sv@0.1.0**, [Docs](https://svelte.dev/docs/cli/community), [#1020](https://github.com/sveltejs/cli/pull/1020))
 - The `sv` and `sv-utils` packages are now separate in the CLI package - leading to a more explicit public API and a deprecation pass for old features (**sv@0.2.0**, [Docs](https://svelte.dev/docs/cli/sv), [#1046](https://github.com/sveltejs/cli/pull/1046))
-- `sv` will now more reliably detect if vitest v3 is installed when configuring projects (**sv@0.15.2**, [#1073](https://github.com/sveltejs/cli/pull/1073))
+- `sv` will now more reliably detect if Vitest v3 is installed when configuring projects (**sv@0.15.2**, [#1073](https://github.com/sveltejs/cli/pull/1073))
 - Types for `TweenOptions`, `SpringOptions`, `SpringUpdateOptions` and `Updater` are now available as exports from `svelte/motion` (**svelte@5.55.0**, [Docs](https://svelte.dev/docs/svelte/svelte-motion), [#17967](https://github.com/sveltejs/svelte/pull/17967))
 
 For a full list of changes - including all the important bugfixes that went into the releases this month - check out the Svelte compiler's [CHANGELOG](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md).
