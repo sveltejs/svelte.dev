@@ -449,7 +449,12 @@ export async function render_content_markdown(
 					[, prelude = '// ---cut---\n', source] = match;
 
 					const banner = twoslashBanner?.(filename, source);
-					if (banner) prelude = '// @filename: injected.d.ts\n' + banner + '\n' + prelude;
+					if (banner)
+						prelude =
+							'// @filename: injected.d.ts\n' +
+							banner +
+							(options.file ? `\n// @filename: ${options.file.split('/').pop()}\n` : '\n') +
+							prelude;
 				}
 
 				source = source.replace(
@@ -1206,7 +1211,17 @@ async function syntax_highlight({
 				for (const match of html.matchAll(
 					/<span class="twoslash-popup-docs-tag"><span class="twoslash-popup-docs-tag-name">([^]+?)<\/span><span class="twoslash-popup-docs-tag-value">([^]+?)<\/span><\/span>/g
 				)) {
+					const start = match.index;
+					const end = match.index + match[0].length;
+
 					const tag = match[1];
+
+					if (tag === '@type') {
+						// remove `@type` tags altogether
+						replacements.push({ start, end, content: '' });
+						continue;
+					}
+
 					let value = match[2];
 					let content = `<div class="tag">${tag}</div><div class="value">`;
 
@@ -1234,17 +1249,16 @@ async function syntax_highlight({
 
 					content += '</div>';
 
-					replacements.push({
-						start: match.index,
-						end: match.index + match[0].length,
-						content: '<div class="tags">' + content + '</div>'
-					});
+					replacements.push({ start, end, content });
 				}
 
 				while (replacements.length > 0) {
 					const { start, end, content } = replacements.pop()!;
 					html = html.slice(0, start) + content + html.slice(end);
 				}
+
+				// if no tags, remove this <div> to avoid an unnecessary flex gap
+				html = html.replace('<div class="twoslash-popup-docs twoslash-popup-docs-tags"></div>', '');
 
 				html = injectReferenceLinks(html, references, extractImportedSymbols(source));
 			}
