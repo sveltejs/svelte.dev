@@ -1135,7 +1135,7 @@ async function syntax_highlight({
 		const redactions: string[] = [];
 
 		const sub = delimiter_substitutes['---'];
-		const pattern = new RegExp(`${sub}(?:[^ ]|[^ ][^]+?[^ ])${sub}`, 'g');
+		const pattern = new RegExp(`${sub}([^ ]|[^ ][^]+?[^ ])${sub}`, 'g');
 
 		const redacted = source.replace(pattern, (_, content) => {
 			redactions.push(content);
@@ -1171,7 +1171,7 @@ async function syntax_highlight({
 
 			html = html.replace(
 				new RegExp(` {${delimiter_substitutes['---'].length + 1},}`, 'g'),
-				() => redactions.shift()!
+				() => `<span class="highlight remove">${redactions.shift()!}</span>`
 			);
 
 			if (check) {
