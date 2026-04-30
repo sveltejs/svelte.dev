@@ -104,7 +104,7 @@ You'll also want to generate a fallback `404.html` page to replace the default 4
 A config for GitHub Pages might look like the following:
 
 ```js
-// @errors: 2307
+// @errors: 2307 2322
 /// file: svelte.config.js
 import adapter from '@sveltejs/adapter-static';
 

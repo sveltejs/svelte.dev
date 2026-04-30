@@ -55,6 +55,7 @@ New projects will use the current Node LTS version by default. However, if you'r
 SvelteKit supports [Netlify Edge Functions](https://docs.netlify.com/build/edge-functions/overview/). If you pass the option `edge: true` to the `adapter` function, server-side rendering will happen in a Deno-based edge function that's deployed close to the site visitor. If set to `false` (the default), the site will deploy to Node-based Netlify Functions.
 
 ```js
+// @errors: 2307
 /// file: svelte.config.js
 import adapter from '@sveltejs/adapter-netlify';
 
