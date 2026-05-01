@@ -12,6 +12,7 @@ import { transformerTwoslash, rendererRich } from '@shikijs/twoslash';
 import { createFileSystemTypesCache } from '@shikijs/vitepress-twoslash/cache-fs';
 import { compress_and_encode_text } from 'gzip';
 import {
+	create_slug_deduper,
 	decode_html_entities,
 	SHIKI_LANGUAGE_MAP,
 	slugify,
@@ -329,6 +330,7 @@ export async function render_content_markdown(
 	twoslashBanner?: TwoslashBanner
 ) {
 	const headings: string[] = [];
+	const dedupe_slug = create_slug_deduper();
 	const { check = true, references } = options ?? {};
 
 	interface CodeBlockFile {
@@ -598,9 +600,16 @@ export async function render_content_markdown(
 			const text = this.parser!.parseInline(tokens);
 			const html = text.replace(/<\/?code>/g, '');
 
-			headings[depth - 1] = slugify(text);
+			const parent = headings
+				.slice(0, depth - 1)
+				.filter(Boolean)
+				.join('-');
+			const raw_segment = slugify(text);
+			const slug = dedupe_slug(parent ? `${parent}-${raw_segment}` : raw_segment);
+			const segment = parent ? slug.slice(parent.length + 1) : slug;
+
+			headings[depth - 1] = segment;
 			headings.length = depth;
-			const slug = headings.filter(Boolean).join('-');
 
 			return `<h${depth} id="${slug}"><span>${html}</span><a href="#${slug}" class="permalink" aria-label="permalink"></a></h${depth}>`;
 		},

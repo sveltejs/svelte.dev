@@ -1,7 +1,7 @@
 import type { Tokens } from 'marked';
 import { index, docs as _docs, examples } from '$lib/server/content';
 import { json } from '@sveltejs/kit';
-import { transform, slugify, clean } from '@sveltejs/site-kit/markdown';
+import { transform, slugify, clean, create_slug_deduper } from '@sveltejs/site-kit/markdown';
 import type { Block } from '@sveltejs/site-kit/search';
 import { get_slug } from '../tutorial/[...slug]/content.server';
 
@@ -38,6 +38,8 @@ async function content() {
 		const intro = sections?.shift()?.trim()!;
 		const rank = +metadata.rank;
 
+		const dedupe = create_slug_deduper();
+
 		blocks.push({
 			breadcrumbs: [...breadcrumbs, clean(metadata.title ?? '')],
 			href: get_href([slug]),
@@ -53,13 +55,15 @@ async function content() {
 				continue;
 			}
 
+			const h2_slug = dedupe(slugify(h2));
+
 			const content = lines.join('\n');
 			const subsections = content.trim().split('## ');
 			const intro = subsections?.shift()?.trim();
 			if (intro) {
 				blocks.push({
 					breadcrumbs: [...breadcrumbs, clean(metadata.title), clean(h2)],
-					href: get_href([slug, slugify(h2)]),
+					href: get_href([slug, h2_slug]),
 					content: await plaintext(intro),
 					rank
 				});
@@ -73,9 +77,11 @@ async function content() {
 					continue;
 				}
 
+				const h3_slug = dedupe(`${h2_slug}-${slugify(h3)}`);
+
 				blocks.push({
 					breadcrumbs: [...breadcrumbs, clean(metadata.title), clean(h2), clean(h3)],
-					href: get_href([slug, slugify(h2) + '-' + slugify(h3)]),
+					href: get_href([slug, h3_slug]),
 					content: await plaintext(lines.join('\n').trim()),
 					rank
 				});

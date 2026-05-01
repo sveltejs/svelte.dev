@@ -1,6 +1,6 @@
 export { render_content_markdown } from './renderer.ts';
 
-export { transform, slugify, clean, strip_origin } from './utils.ts';
+export { transform, slugify, clean, strip_origin, create_slug_deduper } from './utils.ts';
 
 // TODO none of these really belong here
 export type Modules = Array<{
