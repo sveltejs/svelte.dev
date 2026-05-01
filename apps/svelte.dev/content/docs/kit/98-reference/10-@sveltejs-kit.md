@@ -505,7 +505,7 @@ read?: (details: { config: any; route: { id: string } }) => boolean;
 
 <div class="ts-block-property-bullets">
 
-- `details.config` The merged route config
+- `details.config` The merged adapter-specific route config exported from the route with `export const config`
 
 </div>
 
@@ -1357,6 +1357,50 @@ type LessThan<
 > = TNumber extends TArray['length']
 	? TArray[number]
 	: LessThan<TNumber, [...TArray, TArray['length']]>;
+```
+
+</div>
+
+## LiveQueryRequestedResult
+
+<div class="ts-block">
+
+```dts
+type LiveQueryRequestedResult<Validated, Output> = Iterable<
+	LiveRequestedEntry<Validated, Output>
+> &
+	AsyncIterable<LiveRequestedEntry<Validated, Output>> & {
+		/**
+		 * Call `reconnect` on all live queries selected by this `requested` invocation.
+		 * This is identical to:
+		 * ```ts
+		 * import { requested } from '$app/server';
+		 *
+		 * for await (const { query } of requested(liveQuery, ...)) {
+		 *   void query.reconnect();
+		 * }
+		 * ```
+		 */
+		reconnectAll: () => Promise<void>;
+	};
+```
+
+</div>
+
+## LiveRequestedEntry
+
+A single entry yielded by [`requested`](/docs/kit/$app-server#requested)
+when called with a `query.live`. `arg` is the validated argument; `query` is a
+`RemoteLiveQuery` bound to the client's original cache key, so `reconnect()` targets
+the correct client subscription.
+
+<div class="ts-block">
+
+```dts
+type LiveRequestedEntry<Validated, Output> = {
+	arg: Validated;
+	query: RemoteLiveQuery<Output>;
+};
 ```
 
 </div>
@@ -2349,6 +2393,32 @@ type PrerenderOption = boolean | 'auto';
 
 </div>
 
+## QueryRequestedResult
+
+<div class="ts-block">
+
+```dts
+type QueryRequestedResult<Validated, Output> = Iterable<
+	RequestedEntry<Validated, Output>
+> &
+	AsyncIterable<RequestedEntry<Validated, Output>> & {
+		/**
+		 * Call `refresh` on all queries selected by this `requested` invocation.
+		 * This is identical to:
+		 * ```ts
+		 * import { requested } from '$app/server';
+		 *
+		 * for await (const { query } of requested(getPost, ...)) {
+		 *   void query.refresh();
+		 * }
+		 * ```
+		 */
+		refreshAll: () => Promise<void>;
+	};
+```
+
+</div>
+
 ## Redirect
 
 The object returned by the [`redirect`](/docs/kit/@sveltejs-kit#redirect) function.
@@ -2387,7 +2457,7 @@ The location to redirect to.
 
 ## RemoteCommand
 
-The return value of a remote `command` function. See [Remote functions](/docs/kit/remote-functions#command) for full documentation.
+The type of a remote `command` function. See [Remote functions](/docs/kit/remote-functions#command) for full documentation.
 
 <div class="ts-block">
 
@@ -2409,7 +2479,7 @@ type RemoteCommand<Input, Output> = {
 
 ## RemoteForm
 
-The return value of a remote `form` function. See [Remote functions](/docs/kit/remote-functions#form) for full documentation.
+The type of a remote `form` function. See [Remote functions](/docs/kit/remote-functions#form) for full documentation.
 
 <div class="ts-block">
 
@@ -2616,9 +2686,54 @@ path: Array<string | number>;
 <div class="ts-block-property-details"></div>
 </div></div>
 
+## RemoteLiveQuery
+
+<div class="ts-block">
+
+```dts
+type RemoteLiveQuery<T> = RemoteResource<T> & {
+	/**
+	 * Returns an async iterator with live updates.
+	 * Unlike awaiting the resource directly, this can only be used _outside_ render
+	 * (i.e. in load functions, event handlers and so on)
+	 */
+	run(): AsyncGenerator<T>;
+	/** `true` if the live stream is currently connected. */
+	readonly connected: boolean;
+	/** `true` once the current live stream iterator is done. */
+	readonly done: boolean;
+	/** Reconnects the live stream immediately. */
+	reconnect(): Promise<void>;
+};
+```
+
+</div>
+
+## RemoteLiveQueryFunction
+
+The type of a remote `query.live` function. See [Remote functions](/docs/kit/remote-functions#query.live) for full documentation.
+
+The optional `Validated` generic parameter represents the argument type *after* the
+query's schema has validated and (optionally) transformed it, and matches the type
+yielded by [`requested`](/docs/kit/$app-server#requested).
+
+<div class="ts-block">
+
+```dts
+type RemoteLiveQueryFunction<
+	Input,
+	Output,
+	_Validated = Input
+> = (
+	arg: undefined extends Input ? Input | void : Input
+) => RemoteLiveQuery<Output>;
+```
+
+</div>
+
 ## RemotePrerenderFunction
 
-The return value of a remote `prerender` function. See [Remote functions](/docs/kit/remote-functions#prerender) for full documentation.
+The type of a remote `prerender` function. See [Remote functions](/docs/kit/remote-functions#prerender) for full documentation.
 
 <div class="ts-block">
 
@@ -2727,7 +2842,9 @@ type RemoteQueryOverride = () => void;
 ```dts
 type RemoteQueryUpdate =
 	| RemoteQuery<any>
+	| RemoteLiveQuery<any>
 	| RemoteQueryFunction<any, any>
+	| RemoteLiveQueryFunction<any, any>
 	| RemoteQueryOverride;
 ```
 
@@ -3061,10 +3178,11 @@ type RequestHandler<
 
 ## RequestedEntry
 
-A single entry yielded by [`requested`](/docs/kit/$app-server#requested).
-`arg` is the validated argument (the input *after* the query's schema validated and
-transformed it, if applicable); `query` is a `RemoteQuery` bound to the client's
-original cache key, so `refresh()` / `set()` will update the correct client entry.
+A single entry yielded by [`requested`](/docs/kit/$app-server#requested)
+when called with a regular `query`. `arg` is the validated argument (the input *after*
+the query's schema validated and transformed it, if applicable); `query` is a
+`RemoteQuery` bound to the client's original cache key, so `refresh()` / `set()` will
+update the correct client entry.
 
 <div class="ts-block">
 
@@ -3082,23 +3200,9 @@ type RequestedEntry<Validated, Output> = {
 <div class="ts-block">
 
 ```dts
-type RequestedResult<Validated, Output> = Iterable<
-	RequestedEntry<Validated, Output>
-> &
-	AsyncIterable<RequestedEntry<Validated, Output>> & {
-		/**
-		 * Call `refresh` on all queries selected by this `requested` invocation.
-		 * This is identical to:
-		 * ```ts
-		 * import { requested } from '$app/server';
-		 *
-		 * for await (const { query } of requested(getPost, ...)) {
-		 *   void query.refresh();
-		 * }
-		 * ```
-		 */
-		refreshAll: () => Promise<void>;
-	};
+type RequestedResult<Validated, Output> =
+	| QueryRequestedResult<Validated, Output>
+	| LiveQueryRequestedResult<Validated, Output>;
 ```
 
 </div>
