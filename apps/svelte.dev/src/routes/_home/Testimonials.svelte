@@ -41,11 +41,6 @@
 				src="./state-of-js-chart.png?w=1000,1400"
 			></enhanced:img>
 		</a>
-
-		<a href="https://x.com/flaviocopes/status/1730895911864189299">
-			<enhanced:img class="screenshot" alt="Tweet from @flaviocopes" src="./flavio-light.png?w=800"
-			></enhanced:img>
-		</a>
 	</div>
 </div>
 
@@ -109,13 +104,6 @@
 				left: 22%;
 				top: 32%;
 				rotate: -0.7deg;
-			}
-
-			&:nth-child(3) {
-				top: 51%;
-				left: 5%;
-				width: 50%;
-				rotate: 1.5deg;
 			}
 
 			@media all and not (hover: none) {
