@@ -218,6 +218,15 @@ const packages: Package[] = [
 		pkg: 'packages/mcp-stdio',
 		docs: 'documentation/docs',
 		types: null
+	},
+	{
+		name: 'vps',
+		trigger: 'vite-plugin-svelte',
+		repo: get_downstream_repo('vite-plugin-svelte'),
+		branch: branches['vite-plugin-svelte']?.branch ?? 'main',
+		pkg: 'packages/vite-plugin-svelte',
+		docs: 'documentation/docs',
+		types: null
 	}
 ];
 
