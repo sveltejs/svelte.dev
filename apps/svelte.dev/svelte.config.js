@@ -21,7 +21,10 @@ const config = {
 					return;
 				}
 
-				throw new Error(warning.message);
+				throw new Error(
+					warning.message +
+						'. You may need to delete `node_modules/.cache/twoslash` or redeploy on Vercel without using the existing build cache.'
+				);
 			}
 		}
 	}
