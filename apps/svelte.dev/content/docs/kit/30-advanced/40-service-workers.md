@@ -99,7 +99,7 @@ self.addEventListener('fetch', (event) => {
 				throw new Error('invalid response from fetch');
 			}
 
-			if (response.status === 200 && !response.headers.get('cache-control')?.includes('no-store')) {
+			if (response.status === 200) {
 				cache.put(event.request, response.clone());
 			}
 

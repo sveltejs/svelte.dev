@@ -505,7 +505,7 @@ read?: (details: { config: any; route: { id: string } }) => boolean;
 
 <div class="ts-block-property-bullets">
 
-- `details.config` The merged adapter-specific route config exported from the route with `export const config`
+- `details.config` The merged route config
 
 </div>
 
