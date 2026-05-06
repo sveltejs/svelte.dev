@@ -17,7 +17,7 @@ Returns the SvelteKit Vite plugins.
 <div class="ts-block">
 
 ```dts
-function sveltekit(): Promise<Plugin[]>;
+function sveltekit(): Promise<import('vite').Plugin[]>;
 ```
 
 </div>

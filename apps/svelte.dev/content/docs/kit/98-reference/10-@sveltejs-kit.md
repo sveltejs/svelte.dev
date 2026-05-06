@@ -505,7 +505,7 @@ read?: (details: { config: any; route: { id: string } }) => boolean;
 
 <div class="ts-block-property-bullets">
 
-- `details.config` The merged adapter-specific route config exported from the route with `export const config`
+- `details.config` The merged route config
 
 </div>
 
@@ -1357,50 +1357,6 @@ type LessThan<
 > = TNumber extends TArray['length']
 	? TArray[number]
 	: LessThan<TNumber, [...TArray, TArray['length']]>;
-```
-
-</div>
-
-## LiveQueryRequestedResult
-
-<div class="ts-block">
-
-```dts
-type LiveQueryRequestedResult<Validated, Output> = Iterable<
-	LiveRequestedEntry<Validated, Output>
-> &
-	AsyncIterable<LiveRequestedEntry<Validated, Output>> & {
-		/**
-		 * Call `reconnect` on all live queries selected by this `requested` invocation.
-		 * This is identical to:
-		 * ```ts
-		 * import { requested } from '$app/server';
-		 *
-		 * for await (const { query } of requested(liveQuery, ...)) {
-		 *   void query.reconnect();
-		 * }
-		 * ```
-		 */
-		reconnectAll: () => Promise<void>;
-	};
-```
-
-</div>
-
-## LiveRequestedEntry
-
-A single entry yielded by [`requested`](/docs/kit/$app-server#requested)
-when called with a `query.live`. `arg` is the validated argument; `query` is a
-`RemoteLiveQuery` bound to the client's original cache key, so `reconnect()` targets
-the correct client subscription.
-
-<div class="ts-block">
-
-```dts
-type LiveRequestedEntry<Validated, Output> = {
-	arg: Validated;
-	query: RemoteLiveQuery<Output>;
-};
 ```
 
 </div>
@@ -2393,32 +2349,6 @@ type PrerenderOption = boolean | 'auto';
 
 </div>
 
-## QueryRequestedResult
-
-<div class="ts-block">
-
-```dts
-type QueryRequestedResult<Validated, Output> = Iterable<
-	RequestedEntry<Validated, Output>
-> &
-	AsyncIterable<RequestedEntry<Validated, Output>> & {
-		/**
-		 * Call `refresh` on all queries selected by this `requested` invocation.
-		 * This is identical to:
-		 * ```ts
-		 * import { requested } from '$app/server';
-		 *
-		 * for await (const { query } of requested(getPost, ...)) {
-		 *   void query.refresh();
-		 * }
-		 * ```
-		 */
-		refreshAll: () => Promise<void>;
-	};
-```
-
-</div>
-
 ## Redirect
 
 The object returned by the [`redirect`](/docs/kit/@sveltejs-kit#redirect) function.
@@ -2457,7 +2387,7 @@ The location to redirect to.
 
 ## RemoteCommand
 
-The type of a remote `command` function. See [Remote functions](/docs/kit/remote-functions#command) for full documentation.
+The return value of a remote `command` function. See [Remote functions](/docs/kit/remote-functions#command) for full documentation.
 
 <div class="ts-block">
 
@@ -2465,10 +2395,12 @@ The type of a remote `command` function. See [Remote functions](/docs/kit/remote
 type RemoteCommand<Input, Output> = {
 	(
 		arg: undefined extends Input ? Input | void : Input
-	): Promise<Output> & {
+	): Promise<Awaited<Output>> & {
 		updates(
-			...updates: RemoteQueryUpdate[]
-		): Promise<Output>;
+			...queries: Array<
+				RemoteQuery<any> | RemoteQueryOverride
+			>
+		): Promise<Awaited<Output>>;
 	};
 	/** The number of pending command executions */
 	get pending(): number;
@@ -2479,7 +2411,7 @@ type RemoteCommand<Input, Output> = {
 
 ## RemoteForm
 
-The type of a remote `form` function. See [Remote functions](/docs/kit/remote-functions#form) for full documentation.
+The return value of a remote `form` function. See [Remote functions](/docs/kit/remote-functions#form) for full documentation.
 
 <div class="ts-block">
 
@@ -2498,12 +2430,14 @@ type RemoteForm<
 		callback: (opts: {
 			form: HTMLFormElement;
 			data: Input;
-			submit: () => Promise<boolean> & {
+			submit: () => Promise<void> & {
 				updates: (
-					...updates: RemoteQueryUpdate[]
-				) => Promise<boolean>;
+					...queries: Array<
+						RemoteQuery<any> | RemoteQueryOverride
+					>
+				) => Promise<void>;
 			};
-		}) => MaybePromise<void>
+		}) => void | Promise<void>
 	): {
 		method: 'POST';
 		action: string;
@@ -2621,23 +2555,16 @@ type RemoteFormFields<T> =
 					| boolean
 					| File
 			? RemoteFormField<NonNullable<T>>
-			: // [NonNullable<T>] is used to prevent distributing over union while still allowing
-				// nullable wrappers (e.g. `string[] | undefined` from a schema with `.default([])`)
-				// to be treated as arrays; only the last condition should distribute over unions
-				[NonNullable<T>] extends [string[] | File[]]
-				? RemoteFormField<NonNullable<T>> & {
-						[K in number]: RemoteFormField<
-							NonNullable<T>[number]
-						>;
+			: T extends string[] | File[]
+				? RemoteFormField<T> & {
+						[K in number]: RemoteFormField<T[number]>;
 					}
-				: [NonNullable<T>] extends [Array<infer U>]
-					? RemoteFormFieldContainer<NonNullable<T>> & {
+				: T extends Array<infer U>
+					? RemoteFormFieldContainer<T> & {
 							[K in number]: RemoteFormFields<U>;
 						}
 					: RemoteFormFieldContainer<T> & {
-							[K in KeysOfUnion<T>]-?: RemoteFormFields<
-								ValueOfUnionKey<T, K>
-							>;
+							[K in keyof T]-?: RemoteFormFields<T[K]>;
 						};
 ```
 
@@ -2686,54 +2613,9 @@ path: Array<string | number>;
 <div class="ts-block-property-details"></div>
 </div></div>
 
-## RemoteLiveQuery
-
-<div class="ts-block">
-
-```dts
-type RemoteLiveQuery<T> = RemoteResource<T> & {
-	/**
-	 * Returns an async iterator with live updates.
-	 * Unlike awaiting the resource directly, this can only be used _outside_ render
-	 * (i.e. in load functions, event handlers and so on)
-	 */
-	run(): AsyncGenerator<T>;
-	/** `true` if the live stream is currently connected. */
-	readonly connected: boolean;
-	/** `true` once the current live stream iterator is done. */
-	readonly done: boolean;
-	/** Reconnects the live stream immediately. */
-	reconnect(): Promise<void>;
-};
-```
-
-</div>
-
-## RemoteLiveQueryFunction
-
-The type of a remote `query.live` function. See [Remote functions](/docs/kit/remote-functions#query.live) for full documentation.
-
-The optional `Validated` generic parameter represents the argument type *after* the
-query's schema has validated and (optionally) transformed it, and matches the type
-yielded by [`requested`](/docs/kit/$app-server#requested).
-
-<div class="ts-block">
-
-```dts
-type RemoteLiveQueryFunction<
-	Input,
-	Output,
-	_Validated = Input
-> = (
-	arg: undefined extends Input ? Input | void : Input
-) => RemoteLiveQuery<Output>;
-```
-
-</div>
-
 ## RemotePrerenderFunction
 
-The type of a remote `prerender` function. See [Remote functions](/docs/kit/remote-functions#prerender) for full documentation.
+The return value of a remote `prerender` function. See [Remote functions](/docs/kit/remote-functions#prerender) for full documentation.
 
 <div class="ts-block">
 
@@ -2752,12 +2634,6 @@ type RemotePrerenderFunction<Input, Output> = (
 ```dts
 type RemoteQuery<T> = RemoteResource<T> & {
 	/**
-	 * Returns a plain promise with the result.
-	 * Unlike awaiting the resource directly, this can only be used _outside_ render
-	 * (i.e. in load functions, event handlers and so on)
-	 */
-	run(): Promise<T>;
-	/**
 	 * On the client, this function will update the value of the query without re-fetching it.
 	 *
 	 * On the server, this can be called in the context of a `command` or `form` and the specified data will accompany the action response back to the client.
@@ -2772,7 +2648,7 @@ type RemoteQuery<T> = RemoteResource<T> & {
 	 */
 	refresh(): Promise<void>;
 	/**
-	 * Temporarily override a query's value during a [single-flight mutation](https://svelte.dev/docs/kit/remote-functions#Single-flight-mutations) to provide optimistic updates.
+	 * Temporarily override the value of a query. This is used with the `updates` method of a [command](https://svelte.dev/docs/kit/remote-functions#command-Updating-queries) or [enhanced form submission](https://svelte.dev/docs/kit/remote-functions#form-enhance) to provide optimistic updates.
 	 *
 	 * ```svelte
 	 * <script>
@@ -2791,7 +2667,7 @@ type RemoteQuery<T> = RemoteResource<T> & {
 	 * ```
 	 */
 	withOverride(
-		update: (current: T) => T
+		update: (current: Awaited<T>) => Awaited<T>
 	): RemoteQueryOverride;
 };
 ```
@@ -2802,23 +2678,10 @@ type RemoteQuery<T> = RemoteResource<T> & {
 
 The return value of a remote `query` function. See [Remote functions](/docs/kit/remote-functions#query) for full documentation.
 
-The optional `Validated` generic parameter represents the argument type *after* the
-query's schema has validated and (optionally) transformed it — this is the type the
-query's implementation function receives on the server, and the type yielded by
-[`requested`](/docs/kit/$app-server#requested). For queries declared
-with [Standard Schema](https://standardschema.dev/) it differs from `Input` when the
-schema contains a transform (e.g. `v.pipe(v.number(), v.transform(String))` has
-`Input = number` but `Validated = string`). For `'unchecked'` validators and queries
-without arguments it defaults to `Input`.
-
 <div class="ts-block">
 
 ```dts
-type RemoteQueryFunction<
-	Input,
-	Output,
-	_Validated = Input
-> = (
+type RemoteQueryFunction<Input, Output> = (
 	arg: undefined extends Input ? Input | void : Input
 ) => RemoteQuery<Output>;
 ```
@@ -2830,32 +2693,33 @@ type RemoteQueryFunction<
 <div class="ts-block">
 
 ```dts
-type RemoteQueryOverride = () => void;
+interface RemoteQueryOverride {/*…*/}
 ```
 
-</div>
-
-## RemoteQueryUpdate
-
-<div class="ts-block">
+<div class="ts-block-property">
 
 ```dts
-type RemoteQueryUpdate =
-	| RemoteQuery<any>
-	| RemoteLiveQuery<any>
-	| RemoteQueryFunction<any, any>
-	| RemoteLiveQueryFunction<any, any>
-	| RemoteQueryOverride;
+_key: string;
 ```
 
+<div class="ts-block-property-details"></div>
 </div>
+
+<div class="ts-block-property">
+
+```dts
+release(): void;
+```
+
+<div class="ts-block-property-details"></div>
+</div></div>
 
 ## RemoteResource
 
 <div class="ts-block">
 
 ```dts
-type RemoteResource<T> = Promise<T> & {
+type RemoteResource<T> = Promise<Awaited<T>> & {
 	/** The error in case the query fails. Most often this is a [`HttpError`](https://svelte.dev/docs/kit/@sveltejs-kit#HttpError) but it isn't guaranteed to be. */
 	get error(): any;
 	/** `true` before the first result is available and during refreshes */
@@ -2868,7 +2732,7 @@ type RemoteResource<T> = Promise<T> & {
 		  }
 		| {
 				/** The current value of the query. Undefined until `ready` is `true` */
-				get current(): T;
+				get current(): Awaited<T>;
 				ready: true;
 		  }
 	);
@@ -3172,37 +3036,6 @@ type RequestHandler<
 > = (
 	event: RequestEvent<Params, RouteId>
 ) => MaybePromise<Response>;
-```
-
-</div>
-
-## RequestedEntry
-
-A single entry yielded by [`requested`](/docs/kit/$app-server#requested)
-when called with a regular `query`. `arg` is the validated argument (the input *after*
-the query's schema validated and transformed it, if applicable); `query` is a
-`RemoteQuery` bound to the client's original cache key, so `refresh()` / `set()` will
-update the correct client entry.
-
-<div class="ts-block">
-
-```dts
-type RequestedEntry<Validated, Output> = {
-	arg: Validated;
-	query: RemoteQuery<Output>;
-};
-```
-
-</div>
-
-## RequestedResult
-
-<div class="ts-block">
-
-```dts
-type RequestedResult<Validated, Output> =
-	| QueryRequestedResult<Validated, Output>
-	| LiveQueryRequestedResult<Validated, Output>;
 ```
 
 </div>
