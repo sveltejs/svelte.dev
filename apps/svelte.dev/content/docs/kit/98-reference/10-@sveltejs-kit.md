@@ -2465,10 +2465,10 @@ The type of a remote `command` function. See [Remote functions](/docs/kit/remote
 type RemoteCommand<Input, Output> = {
 	(
 		arg: undefined extends Input ? Input | void : Input
-	): Promise<Output> & {
+	): Promise<Awaited<Output>> & {
 		updates(
 			...updates: RemoteQueryUpdate[]
-		): Promise<Output>;
+		): Promise<Awaited<Output>>;
 	};
 	/** The number of pending command executions */
 	get pending(): number;
