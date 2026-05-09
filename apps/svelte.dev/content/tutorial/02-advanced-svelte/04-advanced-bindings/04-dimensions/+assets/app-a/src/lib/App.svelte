@@ -35,9 +35,9 @@
 	}
 
 	.boxinput {
-    display: inline-block;
-    min-width: 1ch;
-    min-height: 1em;
-    outline: none;
+		display: inline-block;
+		min-width: 1ch;
+		min-height: 1em;
+		outline: none;
 	}
 </style>

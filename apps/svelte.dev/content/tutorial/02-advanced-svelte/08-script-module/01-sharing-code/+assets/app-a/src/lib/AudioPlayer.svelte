@@ -44,7 +44,7 @@
 				class="slider"
 				role="slider"
 				aria-valuenow={time}
-    		tabindex="0"
+				tabindex="0"
 				onpointerdown={e => {
 					const div = e.currentTarget;
 
