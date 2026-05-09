@@ -18,7 +18,7 @@ Sometimes you don't know in advance which element needs to be rendered. Rather t
 ```svelte
 /// file: App.svelte
 +++<svelte:element this={selected}>
-	I'm a <code>&lt;{selected}&gt;</code> element
+	I'm a <code>&amp;lt;{selected}&amp;gt;</code> element
 </svelte:element>+++
 ```
 
