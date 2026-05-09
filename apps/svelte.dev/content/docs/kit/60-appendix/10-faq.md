@@ -155,7 +155,12 @@ export function GET({ params, url }) {
 `adapter-node` builds a middleware that you can use with your own server for production mode. In dev, you can add middleware to Vite by using a Vite plugin. For example:
 
 ```js
-/// file: vite.config.js
+// @errors: 2322
+// @filename: ambient.d.ts
+declare module '@sveltejs/kit/vite'; // TODO this feels unnecessary, why can't it 'see' the declarations?
+
+// @filename: index.js
+// ---cut---
 import { sveltekit } from '@sveltejs/kit/vite';
 
 /** @type {import('vite').Plugin} */
