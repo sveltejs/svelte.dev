@@ -4377,6 +4377,27 @@ type DeepPartial<T> = T extends
 
 </div>
 
+## HasNonOptionalBoolean
+
+<div class="ts-block">
+
+```dts
+type HasNonOptionalBoolean<T> =
+	IsAny<T> extends true
+		? never
+		: [T] extends [boolean]
+			? true
+			: T extends Array<infer U>
+				? HasNonOptionalBoolean<U>
+				: T extends Record<string, any>
+					? {
+							[K in keyof T]: HasNonOptionalBoolean<T[K]>;
+						}[keyof T]
+					: never;
+```
+
+</div>
+
 ## HttpMethod
 
 <div class="ts-block">
