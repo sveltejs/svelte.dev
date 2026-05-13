@@ -73,6 +73,14 @@ export async function handle({ event, resolve }) {
 		redirect(308, event.url.pathname.replace('/docs/mcp', '/docs/ai'));
 	}
 
+	// Redirect from old ai docs paths to new paths
+	if (event.url.pathname === '/docs/ai/plugin') {
+		redirect(308, '/docs/ai/claude-plugin');
+	}
+	if (event.url.pathname === '/docs/ai/opencode-subagent') {
+		redirect(308, '/docs/ai/subagent');
+	}
+
 	// Best effort to redirect from Svelte 3 tutorial to new tutorial
 	if (event.url.pathname.startsWith('/tutorial/') && event.url.pathname.split('/').length === 2) {
 		redirect(307, event.url.pathname.replace('/tutorial/', '/tutorial/svelte/'));
