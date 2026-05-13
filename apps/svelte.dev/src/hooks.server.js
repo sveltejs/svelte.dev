@@ -75,10 +75,10 @@ export async function handle({ event, resolve }) {
 
 	// Redirect from old ai docs paths to new paths
 	if (event.url.pathname === '/docs/ai/plugin') {
-		redirect(308, '/docs/ai/claude-plugin');
+		redirect(307, '/docs/ai/claude-plugin');
 	}
 	if (event.url.pathname === '/docs/ai/opencode-subagent') {
-		redirect(308, '/docs/ai/subagent');
+		redirect(307, '/docs/ai/subagent');
 	}
 
 	// Best effort to redirect from Svelte 3 tutorial to new tutorial
