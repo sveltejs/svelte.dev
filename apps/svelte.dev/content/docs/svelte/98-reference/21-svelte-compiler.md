@@ -264,6 +264,7 @@ namespace AST {
 		preserveWhitespace?: boolean;
 		namespace?: Namespace;
 		css?: 'injected';
+		customRenderer?: string;
 		customElement?: {
 			tag?: string;
 			shadow?:
@@ -949,7 +950,7 @@ discloseVersion?: boolean;
 
 </div>
 
-If `true`, exposes the Svelte major version in the browser by adding it to a `Set` stored in the global `window.__svelte.v`.
+If `true`, exposes the Svelte major version in the browser by adding it to a `Set` stored in the global `globalThis.__svelte.v`.
 
 </div>
 </div>
@@ -1359,6 +1360,18 @@ async?: boolean;
 </div>
 
 Allow `await` keyword in deriveds, template expressions, and the top level of components
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+customRenderer?: string | ((options: { filename: string }) => string | undefined);
+```
+
+<div class="ts-block-property-details">
+
+Path to a module that exports the custom renderer to use. When this is truthy templating mode will also be automatically set to `functional`
 
 </div>
 </div></div>
