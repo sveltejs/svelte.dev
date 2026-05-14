@@ -81,6 +81,11 @@ export async function handle({ event, resolve }) {
 		redirect(307, '/docs/ai/subagent');
 	}
 
+	// Redirect from renamed `sv add` add-on: mcp → ai-tools
+	if (event.url.pathname === '/docs/cli/mcp') {
+		redirect(307, '/docs/cli/ai-tools');
+	}
+
 	// Best effort to redirect from Svelte 3 tutorial to new tutorial
 	if (event.url.pathname.startsWith('/tutorial/') && event.url.pathname.split('/').length === 2) {
 		redirect(307, event.url.pathname.replace('/tutorial/', '/tutorial/svelte/'));
