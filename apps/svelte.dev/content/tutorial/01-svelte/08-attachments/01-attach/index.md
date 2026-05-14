@@ -12,6 +12,8 @@ Attachments are essentially element-level lifecycle functions. They're useful fo
 
 In this app, you can scribble on the `<canvas>`, and change colours and brush size via the menu. But if you open the menu and cycle through the options with the Tab key, you'll soon find that the focus isn't _trapped_ inside the modal.
 
+> [!NOTE] Safari does not focus page controls with the Tab key by default. To follow this exercise in Safari, use Option+Tab or enable keyboard navigation in Safari's Advanced settings.
+
 We can fix that with an attachment. Import `trapFocus` from `attachments.svelte.js`...
 
 ```svelte
