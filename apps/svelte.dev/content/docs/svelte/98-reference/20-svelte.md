@@ -647,13 +647,15 @@ function unmount(
 
 When used inside a [`$derived`](/docs/svelte/$derived) or [`$effect`](/docs/svelte/$effect),
 any state read inside `fn` will not be treated as a dependency.
+`untrack` returns the value of `fn`.
 
 ```ts
+let data = $state({ count: 0 });
+let time = $state(Date.now());
+
 $effect(() => {
 	// this will run when `data` changes, but not when `time` changes
-	save(data, {
-		timestamp: untrack(() => time)
-	});
+	console.log(data, untrack(() => time));
 });
 ```
 
