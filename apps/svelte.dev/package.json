@@ -75,7 +75,7 @@
 		"satori": "^0.19.2",
 		"satori-html": "^0.3.2",
 		"sv": "^0.15.3",
-		"svelte": "^5.55.6",
+		"svelte": "https://pkg.pr.new/sveltejs/svelte/svelte@ea6616ef1f387f374def931058dab844eed9d7dc",
 		"svelte-check": "^4.4.3",
 		"svelte-preprocess": "^6.0.3",
 		"tiny-glob": "^0.2.9",
