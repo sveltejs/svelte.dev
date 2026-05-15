@@ -39,7 +39,7 @@ url = "https://mcp.svelte.dev/mcp"
 
 ## Copilot CLI
 
-Use the Copilot CLI to interactively add the MCP server:
+You can automatically configure the MCP server using the [Copilot plugin](copilot-plugin) (recommended). If you prefer to configure the MCP server manually, use the Copilot CLI to interactively add the MCP server:
 
 ```bash
 /mcp add
