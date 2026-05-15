@@ -22,14 +22,6 @@ export default function (options) {
 		async adapt(builder) {
 			// adapter implementation
 		},
-		async emulate() {
-			return {
-				async platform({ config, prerender }) {
-					// the returned object becomes `event.platform` during dev, build and
-					// preview. Its shape is that of `App.Platform`
-				}
-			}
-		},
 		supports: {
 			read: ({ config, route }) => {
 				// Return `true` if the route with the given `config` can use `read`
@@ -47,7 +39,10 @@ export default function (options) {
 }
 ```
 
-Of these, `name` and `adapt` are required. `emulate` and `supports` are optional.
+Of these, `name` and `adapt` are required. `supports` is optional.
+
+> [!LEGACY]
+> The `emulate` property was added in 2.5.0 but removed in 3.0.0.
 
 Within the `adapt` method, there are a number of things that an adapter should do:
 
@@ -58,7 +53,6 @@ Within the `adapt` method, there are a number of things that an adapter should d
 	- Instantiates the app with a manifest generated with `builder.generateManifest({ relativePath })`
 	- Listens for requests from the platform, converts them to a standard [`Request`](https://developer.mozilla.org/en-US/docs/Web/API/Request) if necessary, calls the `server.respond(request, { getClientAddress })` function to generate a [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response) and responds with it
 	- expose any platform-specific information to SvelteKit via the `platform` option passed to `server.respond`
-	- Globally shims `fetch` to work on the target platform, if necessary. SvelteKit provides a `@sveltejs/kit/node/polyfills` helper for platforms that can use `undici`
 - Bundle the output to avoid needing to install dependencies on the target platform, if necessary
 - Put the user's static files and the generated JS/CSS in the correct location for the target platform
 
