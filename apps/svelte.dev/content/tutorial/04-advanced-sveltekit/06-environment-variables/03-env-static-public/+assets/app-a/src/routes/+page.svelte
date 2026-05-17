@@ -1,6 +1,6 @@
 <script>
-	const PUBLIC_THEME_BACKGROUND = 'white';
-	const PUBLIC_THEME_FOREGROUND = 'black';
+	const PUBLIC_THEME_BACKGROUND = 'var(--bg-1)';
+	const PUBLIC_THEME_FOREGROUND = 'var(--fg-1)';
 </script>
 
 <main
