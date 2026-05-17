@@ -17,6 +17,6 @@ The list of properties you can bind to is as follows:
 - `outerHeight`
 - `scrollX`
 - `scrollY`
-- `online` — an alias for `window.navigator.onLine`
+- `online` — an alias for `window.navigator.online`
 
 All except `scrollX` and `scrollY` are readonly.
