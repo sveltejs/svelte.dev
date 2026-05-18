@@ -196,7 +196,7 @@ Checks whether this is an error thrown by `error`.
 function isHttpError<T extends number>(
 	e: unknown,
 	status?: T
-): e is HttpError_1 & {
+): e is HttpError & {
 	status: T extends undefined ? never : T;
 };
 ```
@@ -212,7 +212,7 @@ Checks whether this is a redirect thrown by `redirect`.
 <div class="ts-block">
 
 ```dts
-function isRedirect(e: unknown): e is Redirect_1;
+function isRedirect(e: unknown): e is Redirect;
 ```
 
 </div>
@@ -240,6 +240,12 @@ function isValidationError(e: unknown): e is ActionFailure;
 
 
 ## json
+
+<blockquote class="tag deprecated note">
+
+use `Response.json`
+
+</blockquote>
 
 Create a JSON `Response` object from the supplied data.
 
@@ -323,6 +329,12 @@ function redirect(
 
 
 ## text
+
+<blockquote class="tag deprecated note">
+
+use `new Response`
+
+</blockquote>
 
 Create a `Response` object from the supplied body.
 
@@ -505,7 +517,7 @@ read?: (details: { config: any; route: { id: string } }) => boolean;
 
 <div class="ts-block-property-bullets">
 
-- `details.config` The merged adapter-specific route config exported from the route with `export const config`
+- `details.config` The merged route config
 
 </div>
 
@@ -694,7 +706,7 @@ An array of all routes (including prerendered)
 <div class="ts-block-property">
 
 ```dts
-createEntries: (fn: (route: RouteDefinition) => AdapterEntry) => Promise<void>;
+createEntries?: (fn: (route: RouteDefinition) => AdapterEntry) => Promise<void>;
 ```
 
 <div class="ts-block-property-details">
@@ -702,7 +714,7 @@ createEntries: (fn: (route: RouteDefinition) => AdapterEntry) => Promise<void>;
 <div class="ts-block-property-bullets">
 
 - `fn` A function that groups a set of routes into an entry point
-- <span class="tag deprecated">deprecated</span> Use `builder.routes` instead
+- <span class="tag deprecated">deprecated</span> removed in 3.0. Use `builder.routes` instead
 
 </div>
 
@@ -1034,7 +1046,7 @@ interface Cookies {/*…*/}
 <div class="ts-block-property">
 
 ```dts
-get: (name: string, opts?: import('cookie').CookieParseOptions) => string | undefined;
+get: (name: string, opts?: import('cookie').ParseOptions) => string | undefined;
 ```
 
 <div class="ts-block-property-details">
@@ -1042,7 +1054,7 @@ get: (name: string, opts?: import('cookie').CookieParseOptions) => string | unde
 <div class="ts-block-property-bullets">
 
 - `name` the name of the cookie
-- `opts` the options, passed directly to `cookie.parse`. See documentation [here](https://github.com/jshttp/cookie#cookieparsestr-options)
+- `opts` the options, passed directly to `cookie.parse`. See documentation [here](https://github.com/jshttp/cookie?tab=readme-ov-file#cookieparsecookiestr-options)
 
 </div>
 
@@ -1054,14 +1066,14 @@ Gets a cookie that was previously set with `cookies.set`, or from the request he
 <div class="ts-block-property">
 
 ```dts
-getAll: (opts?: import('cookie').CookieParseOptions) => Array<{ name: string; value: string }>;
+getAll: (opts?: import('cookie').ParseOptions) => Array<{ name: string; value: string }>;
 ```
 
 <div class="ts-block-property-details">
 
 <div class="ts-block-property-bullets">
 
-- `opts` the options, passed directly to `cookie.parse`. See documentation [here](https://github.com/jshttp/cookie#cookieparsestr-options)
+- `opts` the options, passed directly to `cookie.parse`. See documentation [here](https://github.com/jshttp/cookie?tab=readme-ov-file#cookieparsecookiestr-options)
 
 </div>
 
@@ -1073,11 +1085,7 @@ Gets all cookies that were previously set with `cookies.set`, or from the reques
 <div class="ts-block-property">
 
 ```dts
-set: (
-	name: string,
-	value: string,
-	opts: import('cookie').CookieSerializeOptions & { path: string }
-) => void;
+set: (name: string, value: string, opts: import('cookie').SerializeOptions) => void;
 ```
 
 <div class="ts-block-property-details">
@@ -1086,15 +1094,15 @@ set: (
 
 - `name` the name of the cookie
 - `value` the cookie value
-- `opts` the options, passed directly to `cookie.serialize`. See documentation [here](https://github.com/jshttp/cookie#cookieserializename-value-options)
+- `opts` the options passed to `cookie.serialize` with the SvelteKit defaults described above. See documentation [here](https://github.com/jshttp/cookie?tab=readme-ov-file#cookiestringifysetcookiesetcookieobj-options)
 
 </div>
 
 Sets a cookie. This will add a `set-cookie` header to the response, but also make the cookie available via `cookies.get` or `cookies.getAll` during the current request.
 
-The `httpOnly` and `secure` options are `true` by default (except on http://localhost, where `secure` is `false`), and must be explicitly disabled if you want cookies to be readable by client-side JavaScript and/or transmitted over HTTP. The `sameSite` option defaults to `lax`.
+The `httpOnly` and `secure` options are `true` by default (except on http://localhost, where `secure` is `false`), and must be explicitly disabled if you want cookies to be readable by client-side JavaScript and/or transmitted over HTTP.
 
-You must specify a `path` for the cookie. In most cases you should explicitly set `path: '/'` to make the cookie available throughout your app. You can use relative paths, or set `path: ''` to make the cookie only available on the current path and its children
+The `path` option is `'/'` by default. You can use relative paths, or set `path: ''` to make the cookie only available on the current path and its children.
 
 </div>
 </div>
@@ -1102,7 +1110,7 @@ You must specify a `path` for the cookie. In most cases you should explicitly se
 <div class="ts-block-property">
 
 ```dts
-delete: (name: string, opts: import('cookie').CookieSerializeOptions & { path: string }) => void;
+delete: (name: string, opts: import('cookie').SerializeOptions) => void;
 ```
 
 <div class="ts-block-property-details">
@@ -1110,13 +1118,15 @@ delete: (name: string, opts: import('cookie').CookieSerializeOptions & { path: s
 <div class="ts-block-property-bullets">
 
 - `name` the name of the cookie
-- `opts` the options, passed directly to `cookie.serialize`. The `path` must match the path of the cookie you want to delete. See documentation [here](https://github.com/jshttp/cookie#cookieserializename-value-options)
+- `opts` the options passed to `cookie.serialize` with the SvelteKit defaults described above. See documentation [here](https://github.com/jshttp/cookie?tab=readme-ov-file#cookiestringifysetcookiesetcookieobj-options)
 
 </div>
 
 Deletes a cookie by setting its value to an empty string and setting the expiry date in the past.
 
-You must specify a `path` for the cookie. In most cases you should explicitly set `path: '/'` to make the cookie available throughout your app. You can use relative paths, or set `path: ''` to make the cookie only available on the current path and its children
+The `httpOnly` and `secure` options are `true` by default (except on http://localhost, where `secure` is `false`), and must be explicitly disabled if you want cookies to be readable by client-side JavaScript and/or transmitted over HTTP.
+
+The `path` option is `'/'` by default. You can use relative paths, or set `path: ''` to make the cookie only available on the current path and its children.
 
 </div>
 </div>
@@ -1124,11 +1134,7 @@ You must specify a `path` for the cookie. In most cases you should explicitly se
 <div class="ts-block-property">
 
 ```dts
-serialize: (
-	name: string,
-	value: string,
-	opts: import('cookie').CookieSerializeOptions & { path: string }
-) => string;
+serialize: (name: string, value: string, opts: import('cookie').SerializeOptions) => string;
 ```
 
 <div class="ts-block-property-details">
@@ -1137,15 +1143,15 @@ serialize: (
 
 - `name` the name of the cookie
 - `value` the cookie value
-- `opts` the options, passed directly to `cookie.serialize`. See documentation [here](https://github.com/jshttp/cookie#cookieserializename-value-options)
+- `opts` the options passed to `cookie.serialize` with the SvelteKit defaults described above. See documentation [here](https://github.com/jshttp/cookie?tab=readme-ov-file#cookiestringifysetcookiesetcookieobj-options)
 
 </div>
 
 Serialize a cookie name-value pair into a `Set-Cookie` header string, but don't apply it to the response.
 
-The `httpOnly` and `secure` options are `true` by default (except on http://localhost, where `secure` is `false`), and must be explicitly disabled if you want cookies to be readable by client-side JavaScript and/or transmitted over HTTP. The `sameSite` option defaults to `lax`.
+The `httpOnly` and `secure` options are `true` by default (except on http://localhost, where `secure` is `false`), and must be explicitly disabled if you want cookies to be readable by client-side JavaScript and/or transmitted over HTTP.
 
-You must specify a `path` for the cookie. In most cases you should explicitly set `path: '/'` to make the cookie available throughout your app. You can use relative paths, or set `path: ''` to make the cookie only available on the current path and its children
+The `path` option is `'/'` by default. You can use relative paths, or set `path: ''` to make the cookie only available on the current path and its children.
 
 </div>
 </div></div>
@@ -1357,50 +1363,6 @@ type LessThan<
 > = TNumber extends TArray['length']
 	? TArray[number]
 	: LessThan<TNumber, [...TArray, TArray['length']]>;
-```
-
-</div>
-
-## LiveQueryRequestedResult
-
-<div class="ts-block">
-
-```dts
-type LiveQueryRequestedResult<Validated, Output> = Iterable<
-	LiveRequestedEntry<Validated, Output>
-> &
-	AsyncIterable<LiveRequestedEntry<Validated, Output>> & {
-		/**
-		 * Call `reconnect` on all live queries selected by this `requested` invocation.
-		 * This is identical to:
-		 * ```ts
-		 * import { requested } from '$app/server';
-		 *
-		 * for await (const { query } of requested(liveQuery, ...)) {
-		 *   void query.reconnect();
-		 * }
-		 * ```
-		 */
-		reconnectAll: () => Promise<void>;
-	};
-```
-
-</div>
-
-## LiveRequestedEntry
-
-A single entry yielded by [`requested`](/docs/kit/$app-server#requested)
-when called with a `query.live`. `arg` is the validated argument; `query` is a
-`RemoteLiveQuery` bound to the client's original cache key, so `reconnect()` targets
-the correct client subscription.
-
-<div class="ts-block">
-
-```dts
-type LiveRequestedEntry<Validated, Output> = {
-	arg: Validated;
-	query: RemoteLiveQuery<Output>;
-};
 ```
 
 </div>
@@ -1916,19 +1878,6 @@ event: SubmitEvent;
 The `SubmitEvent` that caused the navigation
 
 </div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-delta?: undefined;
-```
-
-<div class="ts-block-property-details">
-
-In case of a history back/forward navigation, the number of steps to go back/forward
-
-</div>
 </div></div>
 
 ## NavigationGoto
@@ -1951,19 +1900,6 @@ The type of navigation:
 - `goto`: Navigation was triggered by a `goto(...)` call or a redirect
 
 </div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-delta?: undefined;
-```
-
-<div class="ts-block-property-details">
-
-In case of a history back/forward navigation, the number of steps to go back/forward
-
-</div>
 </div></div>
 
 ## NavigationLeave
@@ -1984,19 +1920,6 @@ type: 'leave';
 
 The type of navigation:
 - `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
-
-</div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-delta?: undefined;
-```
-
-<div class="ts-block-property-details">
-
-In case of a history back/forward navigation, the number of steps to go back/forward
 
 </div>
 </div></div>
@@ -2032,19 +1955,6 @@ event: PointerEvent;
 <div class="ts-block-property-details">
 
 The `PointerEvent` that caused the navigation
-
-</div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-delta?: undefined;
-```
-
-<div class="ts-block-property-details">
-
-In case of a history back/forward navigation, the number of steps to go back/forward
 
 </div>
 </div></div>
@@ -2393,32 +2303,6 @@ type PrerenderOption = boolean | 'auto';
 
 </div>
 
-## QueryRequestedResult
-
-<div class="ts-block">
-
-```dts
-type QueryRequestedResult<Validated, Output> = Iterable<
-	RequestedEntry<Validated, Output>
-> &
-	AsyncIterable<RequestedEntry<Validated, Output>> & {
-		/**
-		 * Call `refresh` on all queries selected by this `requested` invocation.
-		 * This is identical to:
-		 * ```ts
-		 * import { requested } from '$app/server';
-		 *
-		 * for await (const { query } of requested(getPost, ...)) {
-		 *   void query.refresh();
-		 * }
-		 * ```
-		 */
-		refreshAll: () => Promise<void>;
-	};
-```
-
-</div>
-
 ## Redirect
 
 The object returned by the [`redirect`](/docs/kit/@sveltejs-kit#redirect) function.
@@ -2457,7 +2341,7 @@ The location to redirect to.
 
 ## RemoteCommand
 
-The type of a remote `command` function. See [Remote functions](/docs/kit/remote-functions#command) for full documentation.
+The return value of a remote `command` function. See [Remote functions](/docs/kit/remote-functions#command) for full documentation.
 
 <div class="ts-block">
 
@@ -2479,7 +2363,7 @@ type RemoteCommand<Input, Output> = {
 
 ## RemoteForm
 
-The type of a remote `form` function. See [Remote functions](/docs/kit/remote-functions#form) for full documentation.
+The return value of a remote `form` function. See [Remote functions](/docs/kit/remote-functions#form) for full documentation.
 
 <div class="ts-block">
 
@@ -2503,7 +2387,7 @@ type RemoteForm<
 					...updates: RemoteQueryUpdate[]
 				) => Promise<boolean>;
 			};
-		}) => MaybePromise<void>
+		}) => void
 	): {
 		method: 'POST';
 		action: string;
@@ -2621,17 +2505,13 @@ type RemoteFormFields<T> =
 					| boolean
 					| File
 			? RemoteFormField<NonNullable<T>>
-			: // [NonNullable<T>] is used to prevent distributing over union while still allowing
-				// nullable wrappers (e.g. `string[] | undefined` from a schema with `.default([])`)
-				// to be treated as arrays; only the last condition should distribute over unions
-				[NonNullable<T>] extends [string[] | File[]]
-				? RemoteFormField<NonNullable<T>> & {
-						[K in number]: RemoteFormField<
-							NonNullable<T>[number]
-						>;
+			: // [T] is used to prevent distributing over union, only the last condition should distribute over unions
+				[T] extends [string[] | File[]]
+				? RemoteFormField<T> & {
+						[K in number]: RemoteFormField<T[number]>;
 					}
-				: [NonNullable<T>] extends [Array<infer U>]
-					? RemoteFormFieldContainer<NonNullable<T>> & {
+				: [T] extends [Array<infer U>]
+					? RemoteFormFieldContainer<T> & {
 							[K in number]: RemoteFormFields<U>;
 						}
 					: RemoteFormFieldContainer<T> & {
@@ -2686,54 +2566,9 @@ path: Array<string | number>;
 <div class="ts-block-property-details"></div>
 </div></div>
 
-## RemoteLiveQuery
-
-<div class="ts-block">
-
-```dts
-type RemoteLiveQuery<T> = RemoteResource<T> & {
-	/**
-	 * Returns an async iterator with live updates.
-	 * Unlike awaiting the resource directly, this can only be used _outside_ render
-	 * (i.e. in load functions, event handlers and so on)
-	 */
-	run(): AsyncGenerator<T>;
-	/** `true` if the live stream is currently connected. */
-	readonly connected: boolean;
-	/** `true` once the current live stream iterator is done. */
-	readonly done: boolean;
-	/** Reconnects the live stream immediately. */
-	reconnect(): Promise<void>;
-};
-```
-
-</div>
-
-## RemoteLiveQueryFunction
-
-The type of a remote `query.live` function. See [Remote functions](/docs/kit/remote-functions#query.live) for full documentation.
-
-The optional `Validated` generic parameter represents the argument type *after* the
-query's schema has validated and (optionally) transformed it, and matches the type
-yielded by [`requested`](/docs/kit/$app-server#requested).
-
-<div class="ts-block">
-
-```dts
-type RemoteLiveQueryFunction<
-	Input,
-	Output,
-	_Validated = Input
-> = (
-	arg: undefined extends Input ? Input | void : Input
-) => RemoteLiveQuery<Output>;
-```
-
-</div>
-
 ## RemotePrerenderFunction
 
-The type of a remote `prerender` function. See [Remote functions](/docs/kit/remote-functions#prerender) for full documentation.
+The return value of a remote `prerender` function. See [Remote functions](/docs/kit/remote-functions#prerender) for full documentation.
 
 <div class="ts-block">
 
@@ -2802,23 +2637,10 @@ type RemoteQuery<T> = RemoteResource<T> & {
 
 The return value of a remote `query` function. See [Remote functions](/docs/kit/remote-functions#query) for full documentation.
 
-The optional `Validated` generic parameter represents the argument type *after* the
-query's schema has validated and (optionally) transformed it — this is the type the
-query's implementation function receives on the server, and the type yielded by
-[`requested`](/docs/kit/$app-server#requested). For queries declared
-with [Standard Schema](https://standardschema.dev/) it differs from `Input` when the
-schema contains a transform (e.g. `v.pipe(v.number(), v.transform(String))` has
-`Input = number` but `Validated = string`). For `'unchecked'` validators and queries
-without arguments it defaults to `Input`.
-
 <div class="ts-block">
 
 ```dts
-type RemoteQueryFunction<
-	Input,
-	Output,
-	_Validated = Input
-> = (
+type RemoteQueryFunction<Input, Output> = (
 	arg: undefined extends Input ? Input | void : Input
 ) => RemoteQuery<Output>;
 ```
@@ -2842,9 +2664,7 @@ type RemoteQueryOverride = () => void;
 ```dts
 type RemoteQueryUpdate =
 	| RemoteQuery<any>
-	| RemoteLiveQuery<any>
 	| RemoteQueryFunction<any, any>
-	| RemoteLiveQueryFunction<any, any>
 	| RemoteQueryOverride;
 ```
 
@@ -3176,33 +2996,26 @@ type RequestHandler<
 
 </div>
 
-## RequestedEntry
-
-A single entry yielded by [`requested`](/docs/kit/$app-server#requested)
-when called with a regular `query`. `arg` is the validated argument (the input *after*
-the query's schema validated and transformed it, if applicable); `query` is a
-`RemoteQuery` bound to the client's original cache key, so `refresh()` / `set()` will
-update the correct client entry.
-
-<div class="ts-block">
-
-```dts
-type RequestedEntry<Validated, Output> = {
-	arg: Validated;
-	query: RemoteQuery<Output>;
-};
-```
-
-</div>
-
 ## RequestedResult
 
 <div class="ts-block">
 
 ```dts
-type RequestedResult<Validated, Output> =
-	| QueryRequestedResult<Validated, Output>
-	| LiveQueryRequestedResult<Validated, Output>;
+type RequestedResult<T> = Iterable<T> &
+	AsyncIterable<T> & {
+		/**
+		 * Call `refresh` on all queries selected by this `requested` invocation.
+		 * This is identical to:
+		 * ```ts
+		 * import { requested } from '$app/server';
+		 *
+		 * for await (const arg of requested(query, ...) {
+		 *   void query(arg).refresh();
+		 * }
+		 * ```
+		 */
+		refreshAll: () => Promise<void>;
+	};
 ```
 
 </div>

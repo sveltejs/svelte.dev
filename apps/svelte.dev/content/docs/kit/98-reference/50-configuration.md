@@ -255,7 +255,7 @@ checkOrigin?: boolean;
 <div class="ts-block-property-bullets">
 
 - <span class="tag">default</span> `true`
-- <span class="tag deprecated">deprecated</span> Use `trustedOrigins: ['*']` instead
+- <span class="tag deprecated">deprecated</span> removed in 3.0. Use `trustedOrigins: ['*']` instead
 
 </div>
 
@@ -864,6 +864,7 @@ preloadStrategy?: 'modulepreload' | 'preload-js' | 'preload-mjs';
 
 - <span class="tag">default</span> `"modulepreload"`
 - <span class="tag since">available since</span> v1.8.4
+- <span class="tag deprecated">deprecated</span> removed in 3.0
 
 </div>
 
@@ -896,7 +897,7 @@ The bundle strategy option affects how your app's JavaScript and CSS files are l
 - If `'single'`, creates just one .js bundle and one .css file containing code for the entire app.
 - If `'inline'`, inlines all JavaScript and CSS of the entire app into the HTML. The result is usable without a server (i.e. you can just open the file in your browser).
 
-When using `'split'`, you can also adjust the bundling behaviour by setting [`output.experimentalMinChunkSize`](https://rollupjs.org/configuration-options/#output-experimentalminchunksize) and [`output.manualChunks`](https://rollupjs.org/configuration-options/#output-manualchunks) inside your Vite config's [`build.rollupOptions`](https://vite.dev/config/build-options.html#build-rollupoptions).
+When using `'split'`, you can also adjust the bundling behaviour by setting [`output.codeSplitting`](https://rolldown.rs/reference/OutputOptions.codeSplitting) inside your Vite config's [`build.rolldownOptions`](https://vite.dev/config/build-options#build-rolldownoptions).
 
 If you want to inline your assets, you'll need to set Vite's [`build.assetsInlineLimit`](https://vite.dev/config/build-options.html#build-assetsinlinelimit) option to an appropriate size then import your assets through Vite.
 
