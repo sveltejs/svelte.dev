@@ -2654,7 +2654,7 @@ interface RemoteFormInput {/*…*/}
 <div class="ts-block-property">
 
 ```dts
-[key: string]: MaybeArray<string | number | boolean | File | RemoteFormInput>;
+[key: string]: MaybeArray<string | number | boolean | File | null | undefined | RemoteFormInput>;
 ```
 
 <div class="ts-block-property-details"></div>
