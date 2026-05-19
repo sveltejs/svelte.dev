@@ -70,6 +70,7 @@ npx @sveltejs/mcp svelte-autofixer ./Component.svelte --svelte-version 4
 1. **Uncertain about syntax?** Run `list-sections` then `get-documentation` for relevant topics
 2. **Reviewing/debugging?** Run `svelte-autofixer` on the code to detect issues
 3. **Always validate** - Run `svelte-autofixer` before finalizing any Svelte component
+4. **Confirmed false positive?** Silence one suggestion with a `// svelte-mcp-ignore <code>` (script) or `<!-- svelte-mcp-ignore <code> -->` (markup) comment on the line above, then re-run the autofixer.
 ````
 <!-- prettier-ignore-end -->
 

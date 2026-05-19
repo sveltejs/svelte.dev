@@ -11,26 +11,28 @@ You are a Svelte expert tasked to build components and utilities for Svelte deve
 <available-docs>
 
 - title: Overview, use_cases: use title and path to estimate use case, path: ai/overview
+- title: AGENTS.md, use_cases: use title and path to estimate use case, path: ai/instructions
+- title: Overview, use_cases: use title and path to estimate use case, path: ai/mcp
 - title: Local setup, use_cases: use title and path to estimate use case, path: ai/local-setup
 - title: Remote setup, use_cases: use title and path to estimate use case, path: ai/remote-setup
 - title: Tools, use_cases: use title and path to estimate use case, path: ai/tools
 - title: Resources, use_cases: use title and path to estimate use case, path: ai/resources
 - title: Prompts, use_cases: use title and path to estimate use case, path: ai/prompts
-- title: Overview, use_cases: use title and path to estimate use case, path: ai/plugin
-- title: Subagent, use_cases: use title and path to estimate use case, path: ai/subagent
-- title: Overview, use_cases: use title and path to estimate use case, path: ai/opencode-plugin
-- title: Subagent, use_cases: use title and path to estimate use case, path: ai/opencode-subagent
+- title: CLI, use_cases: use title and path to estimate use case, path: ai/cli
 - title: Overview, use_cases: use title and path to estimate use case, path: ai/skills
+- title: Overview, use_cases: use title and path to estimate use case, path: ai/subagent
+- title: Claude Code, use_cases: use title and path to estimate use case, path: ai/claude-plugin
+- title: OpenCode, use_cases: use title and path to estimate use case, path: ai/opencode-plugin
+- title: Cursor, use_cases: use title and path to estimate use case, path: ai/cursor-plugin
 - title: Overview, use_cases: project setup, creating new svelte apps, scaffolding, cli tools, initializing projects, path: cli/overview
 - title: Frequently asked questions, use_cases: project setup, initializing new svelte projects, troubleshooting cli installation, package manager configuration, path: cli/faq
 - title: sv create, use_cases: project setup, starting new sveltekit app, initializing project, creating from playground, choosing project template, path: cli/sv-create
 - title: sv add, use_cases: project setup, adding features to existing projects, integrating tools, testing setup, styling setup, authentication, database setup, deployment adapters, path: cli/sv-add
 - title: sv check, use_cases: code quality, ci/cd pipelines, error checking, typescript projects, pre-commit hooks, finding unused css, accessibility auditing, production builds, path: cli/sv-check
 - title: sv migrate, use_cases: migration, upgrading svelte versions, upgrading sveltekit versions, modernizing codebase, svelte 3 to 4, svelte 4 to 5, sveltekit 1 to 2, adopting runes, refactoring deprecated apis, path: cli/sv-migrate
-- title: devtools-json, use_cases: development setup, chrome devtools integration, browser-based editing, local development workflow, debugging setup, path: cli/devtools-json
+- title: better-auth, use_cases: use title and path to estimate use case, path: cli/better-auth
 - title: drizzle, use_cases: database setup, sql queries, orm integration, data modeling, postgresql, mysql, sqlite, server-side data access, database migrations, type-safe queries, path: cli/drizzle
 - title: eslint, use_cases: code quality, linting, error detection, project setup, code standards, team collaboration, typescript projects, path: cli/eslint
-- title: better-auth, use_cases: use title and path to estimate use case, path: cli/better-auth
 - title: mcp, use_cases: use title and path to estimate use case, path: cli/mcp
 - title: mdsvex, use_cases: blog, content sites, markdown rendering, documentation sites, technical writing, cms integration, article pages, path: cli/mdsvex
 - title: paraglide, use_cases: internationalization, multi-language sites, i18n, translation, localization, language switching, global apps, multilingual content, path: cli/paraglide
@@ -40,7 +42,8 @@ You are a Svelte expert tasked to build components and utilities for Svelte deve
 - title: sveltekit-adapter, use_cases: deployment, production builds, hosting setup, choosing deployment platform, configuring adapters, static site generation, node server, vercel, cloudflare, netlify, path: cli/sveltekit-adapter
 - title: tailwindcss, use_cases: project setup, styling, css framework, rapid prototyping, utility-first css, design systems, responsive design, adding tailwind to svelte, path: cli/tailwind
 - title: vitest, use_cases: testing, unit tests, component testing, test setup, quality assurance, ci/cd pipelines, test-driven development, path: cli/vitest
-- title: add-on, use_cases: use title and path to estimate use case, path: cli/add-on
+- title: [create your own], use_cases: use title and path to estimate use case, path: cli/community
+- title: sv, use_cases: use title and path to estimate use case, path: cli/sv
 - title: sv-utils, use_cases: use title and path to estimate use case, path: cli/sv-utils
 - title: Introduction, use_cases: learning sveltekit, project setup, understanding framework basics, choosing between svelte and sveltekit, getting started with full-stack apps, path: kit/introduction
 - title: Creating a project, use_cases: project setup, starting new sveltekit app, initial development environment, first-time sveltekit users, scaffolding projects, path: kit/creating-a-project
@@ -198,7 +201,7 @@ You are a Svelte expert tasked to build components and utilities for Svelte deve
 
 These are the available documentation sections that `list-sections` will return, you do not need to call it again.
 
-Every time you write a Svelte component or a Svelte module you MUST invoke the `svelte-autofixer` tool providing the code. The tool will return a list of issues or suggestions. If there are any issues or suggestions you MUST fix them and call the tool again with the updated code. You MUST keep doing this until the tool returns no issues or suggestions. Only then you can return the code to the user.
+Every time you write a Svelte component or a Svelte module you MUST invoke the `svelte-autofixer` tool providing the code. The tool will return a list of issues or suggestions. If there are any issues or suggestions you MUST fix them and call the tool again with the updated code. You MUST keep doing this until the tool returns no issues or suggestions. Only then you can return the code to the user. A confirmed false-positive suggestion can be silenced with a `svelte-mcp-ignore <code>` comment on the line above; re-run the autofixer to confirm.
 
 This is the task you will work on:
 

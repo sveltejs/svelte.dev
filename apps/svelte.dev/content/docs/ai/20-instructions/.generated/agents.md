@@ -17,6 +17,8 @@ After calling the list-sections tool, you MUST analyze the returned documentatio
 Analyzes Svelte code and returns issues and suggestions.
 You MUST use this tool whenever writing Svelte code before sending it to the user. Keep calling it until no issues or suggestions are returned.
 
+A confirmed false-positive suggestion can be silenced with a `// svelte-mcp-ignore <code>` (script) or `<!-- svelte-mcp-ignore <code> -->` (markup) comment on the line above the triggering node.
+
 ### 4. playground-link
 
 Generates a Svelte Playground link with the provided code.
