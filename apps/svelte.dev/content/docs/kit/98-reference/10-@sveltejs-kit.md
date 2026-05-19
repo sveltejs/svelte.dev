@@ -2493,17 +2493,17 @@ type RemoteForm<
 	method: 'POST';
 	/** The URL to send the form to. */
 	action: string;
+	/** The `<form>` element this instance is currently attached to, if any. */
+	get element(): HTMLFormElement | null;
+	/** Submit the currently attached form programmatically. */
+	submit(): Promise<boolean> & {
+		updates: (
+			...updates: RemoteQueryUpdate[]
+		) => Promise<boolean>;
+	};
 	/** Use the `enhance` method to influence what happens when the form is submitted. */
 	enhance(
-		callback: (opts: {
-			form: HTMLFormElement;
-			data: Input;
-			submit: () => Promise<boolean> & {
-				updates: (
-					...updates: RemoteQueryUpdate[]
-				) => Promise<boolean>;
-			};
-		}) => MaybePromise<void>
+		callback: RemoteFormSubmitFunction<Input, Output>
 	): {
 		method: 'POST';
 		action: string;
@@ -2686,6 +2686,29 @@ path: Array<string | number>;
 <div class="ts-block-property-details"></div>
 </div></div>
 
+## RemoteFormSubmitFunction
+
+The callback passed to a remote form's `enhance` method. See [Remote functions](/docs/kit/remote-functions#form) for full documentation.
+
+<div class="ts-block">
+
+```dts
+type RemoteFormSubmitFunction<
+	Input extends RemoteFormInput | void =
+		RemoteFormInput | void,
+	Output = any
+> = (
+	form: Omit<
+		RemoteForm<Input, Output>,
+		'enhance' | 'element'
+	> & {
+		readonly element: HTMLFormElement;
+	}
+) => MaybePromise<void>;
+```
+
+</div>
+
 ## RemoteLiveQuery
 
 <div class="ts-block">
@@ -2780,9 +2803,9 @@ type RemoteQuery<T> = RemoteResource<T> & {
 	 *   const todos = getTodos();
 	 * </script>
 	 *
-	 * <form {...addTodo.enhance(async ({ data, submit }) => {
-	 *   await submit().updates(
-	 *     todos.withOverride((todos) => [...todos, { text: data.get('text') }])
+	 * <form {...addTodo.enhance(async (form) => {
+	 *   await form.submit().updates(
+	 *     todos.withOverride((todos) => [...todos, { text: form.fields.text.value() }])
 	 *   );
 	 * })}>
 	 *   <input type="text" name="text" />
