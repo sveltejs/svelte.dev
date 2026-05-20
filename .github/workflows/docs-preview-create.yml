@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       upstream:
-        description: "Upstream repository (eg. `svelte` or `kit`)"
+        description: 'Upstream repository (eg. `svelte` or `kit`)'
         required: true
         type: choice
         options:
@@ -13,23 +13,23 @@ on:
           - cli
           - ai-tools
       downstream:
-        description: "Downstream repository (eg. `svelte` or `kit`)"
+        description: 'Downstream repository (eg. `svelte` or `kit`)'
         required: true
         type: string
       pr:
-        description: "PR number"
+        description: 'PR number'
         required: true
         type: string
       owner:
-        description: "Owner (eg. sveltejs)"
+        description: 'Owner (eg. sveltejs)'
         required: true
         type: string
       branch:
-        description: "Branch (eg. my-feature-branch)"
+        description: 'Branch (eg. my-feature-branch)'
         required: true
         type: string
       sha:
-        description: "The commit SHA responsible for triggering this workflow"
+        description: 'The commit SHA responsible for triggering this workflow'
         required: false
         type: string
 
@@ -95,7 +95,7 @@ jobs:
         if: ${{ steps.push.outcome == 'success' }}
         uses: peter-evans/repository-dispatch@v3
         with:
-          event-type: "request-preview-comment"
+          event-type: 'request-preview-comment'
           client-payload: |-
             {
               "repo": "${{ inputs.upstream }}",
@@ -106,7 +106,7 @@ jobs:
         if: ${{ steps.push.outcome != 'success' }}
         uses: peter-evans/repository-dispatch@v3
         with:
-          event-type: "docs-unaffected"
+          event-type: 'docs-unaffected'
           client-payload: |-
             {
               "repo": "${{ inputs.upstream }}",
