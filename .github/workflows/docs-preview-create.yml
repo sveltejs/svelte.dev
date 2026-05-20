@@ -38,7 +38,7 @@ permissions:
 
 env:
   BRANCH: preview-${{ inputs.upstream }}-${{ inputs.pr }}
-  REF: ${{ case(inputs.sha,  format('c/{0}', inputs.sha), format('b/{0}', inputs.branch)) }}
+  REF: ${{ case(inputs.sha == true,  format('c/{0}', inputs.sha), format('b/{0}', inputs.branch)) }}
 
 jobs:
   Sync:
