@@ -61,10 +61,19 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
 
-      - name: Create or reset branch from main
+      - name: Create or update branch from main
         run: |
           git fetch origin
-          git checkout -B ${{ env.BRANCH }} # Force create/reset branch based on current main
+          if git ls-remote --exit-code --heads origin "${{ env.BRANCH }}" >/dev/null 2>&1; then
+            git checkout "${{ env.BRANCH }}"
+            if ! git merge origin/main --no-edit; then
+              git merge --abort
+              echo "Merge conflicts detected between ${{ env.BRANCH }} and origin/main. Resolve conflicts before proceeding."
+              exit 1
+            fi
+          else
+            git checkout -b "${{ env.BRANCH }}"
+          fi
 
       - name: Install Svelte upstream
         if: ${{ inputs.upstream == 'svelte' }}
