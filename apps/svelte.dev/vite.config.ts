@@ -1,4 +1,5 @@
 import { sveltekit } from '@sveltejs/kit/vite';
+import adapter from '@sveltejs/adapter-vercel';
 import { enhancedImages } from '@sveltejs/enhanced-img';
 import type { PluginOption, UserConfig } from 'vite';
 import { browserslistToTargets } from 'lightningcss';
@@ -31,7 +32,7 @@ const plugins: PluginOption[] = [
 			});
 		}
 	},
-	sveltekit() as PluginOption
+	sveltekit({ adapter: adapter() })
 ];
 
 // Only enable sharp if we're not in a webcontainer env
@@ -46,7 +47,7 @@ if (!process.versions.webcontainer) {
 
 				return new URLSearchParams();
 			}
-		}) as PluginOption
+		})
 	);
 }
 
