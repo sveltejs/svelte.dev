@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       upstream:
-        description: 'Upstream repository (eg. `svelte` or `kit`)'
+        description: "Upstream repository (eg. `svelte` or `kit`)"
         required: true
         type: choice
         options:
@@ -13,23 +13,23 @@ on:
           - cli
           - ai-tools
       downstream:
-        description: 'Downstream repository (eg. `svelte` or `kit`)'
+        description: "Downstream repository (eg. `svelte` or `kit`)"
         required: true
         type: string
       pr:
-        description: 'PR number'
+        description: "PR number"
         required: true
         type: string
       owner:
-        description: 'Owner (eg. sveltejs)'
+        description: "Owner (eg. sveltejs)"
         required: true
         type: string
       branch:
-        description: 'Branch (eg. my-feature-branch)'
+        description: "Branch (eg. my-feature-branch)"
         required: true
         type: string
       sha:
-        description: 'The commit SHA responsible for triggering this workflow'
+        description: "The commit SHA responsible for triggering this workflow"
         required: false
         type: string
 
@@ -38,6 +38,7 @@ permissions:
 
 env:
   BRANCH: preview-${{ inputs.upstream }}-${{ inputs.pr }}
+  REF: ${{ inputs.sha || inputs.branch }}
 
 jobs:
   Sync:
@@ -65,6 +66,18 @@ jobs:
           git fetch origin
           git checkout -B ${{ env.BRANCH }} # Force create/reset branch based on current main
 
+      - name: Install Svelte upstream
+        if: ${{ inputs.upstream == 'svelte' }}
+        run: pnpm add -D sveltejs/svelte#${{ env.REF }}\&path:/packages/svelte --filter "svelte.dev"
+
+      - name: Install SvelteKit upstream
+        if: ${{ inputs.upstream == 'kit' }}
+        run: pnpm add -D sveltejs/kit#${{ env.REF }}\&path:/packages/kit sveltejs/kit#${{ env.REF }}\&path:/packages/adapter-vercel sveltejs/kit#${{ env.REF }}\&path:/packages/enhanced-img --filter "svelte.dev"
+
+      - name: Install Svelte CLI upstream
+        if: ${{ inputs.upstream == 'cli' }}
+        run: pnpm add -D sveltejs/cli#${{ env.REF }}\&path:/packages/sv sveltejs/cli#${{ env.REF }}\&path:/packages/sv-utils --filter "svelte.dev"
+
       - name: Sync
         run: cd apps/svelte.dev && pnpm sync-docs --owner="${{ inputs.owner }}" -p "${{ format('{0}#{1}#{2}', inputs.upstream, inputs.downstream, inputs.branch) }}"
 
@@ -82,7 +95,7 @@ jobs:
         if: ${{ steps.push.outcome == 'success' }}
         uses: peter-evans/repository-dispatch@v3
         with:
-          event-type: 'request-preview-comment'
+          event-type: "request-preview-comment"
           client-payload: |-
             {
               "repo": "${{ inputs.upstream }}",
@@ -93,7 +106,7 @@ jobs:
         if: ${{ steps.push.outcome != 'success' }}
         uses: peter-evans/repository-dispatch@v3
         with:
-          event-type: 'docs-unaffected'
+          event-type: "docs-unaffected"
           client-payload: |-
             {
               "repo": "${{ inputs.upstream }}",
