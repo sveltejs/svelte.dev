@@ -61,3 +61,6 @@ const off = on(node, 'keydown', handleKeydown);
 ```
 
 Now, when you open the menu, you can cycle through the options with the Tab key.
+
+> [!NOTE] In Safari, the Tab key only highlights text fields and pop-up menus by default.
+> To test this step, press <kbd>Option</kbd> + <kbd>Tab</kbd>, or enable **Press Tab to highlight each item on a webpage** in Safari's Advanced settings.
