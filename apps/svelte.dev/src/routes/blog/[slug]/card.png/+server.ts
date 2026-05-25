@@ -8,6 +8,7 @@ import Card from './Card.svelte';
 import DMSerifDisplay from '$lib/fonts/DMSerifDisplay-Regular.ttf?url';
 import FiraSans from '$lib/fonts/FiraSans-Regular.ttf?url';
 import { blog_posts } from '$lib/server/content';
+import { decode_html } from '$lib/utils/escape';
 import type { ServerlessConfig } from '@sveltejs/adapter-vercel';
 
 export const config: ServerlessConfig = {
@@ -20,6 +21,34 @@ export function entries() {
 	return blog_posts.map((post) => ({
 		slug: post.slug.slice(5) // remove 'blog/' prefix
 	}));
+}
+
+type VNode = ReturnType<typeof toReactNode>;
+
+/**
+ * Decodes the XML-ified parts of string subnodes
+ * to revert to the original content
+ *
+ * @param node the original node
+ * @returns the node with replaced leaves
+ */
+function decode_vnode(node: VNode): VNode {
+	const children = node.props.children;
+	if (!children) return node;
+
+	const decodedChildren =
+		typeof children === 'string'
+			? decode_html(children)
+			: Array.isArray(children)
+				? children.map(decode_vnode)
+				: decode_vnode(children);
+
+	if (decodedChildren === children) return node;
+
+	return {
+		...node,
+		props: { ...node.props, children: decodedChildren }
+	};
 }
 
 const height = 630;
@@ -35,7 +64,7 @@ export async function GET({ params }) {
 	const result = render(Card, { props: { title: post.metadata.title, date: post.date_formatted } });
 	const element = toReactNode(`<head>${result.head}</head>${result.body}`);
 
-	const svg = await satori(element, {
+	const svg = await satori(decode_vnode(element), {
 		fonts: [
 			{
 				name: 'DMSerif Display',
