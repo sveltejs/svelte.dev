@@ -13,7 +13,7 @@ const symbols_regex = new RegExp(`[${Object.keys(chars).join('')}]`, 'g');
 
 const encoded_symbols_regex = new RegExp(
 	`&(?:${Object.values(chars)
-		.map((entity) => entity.slice(1, entity.length - 1))
+		.map((entity) => entity.slice(1, -1))
 		.join('|')});`,
 	'g'
 );
