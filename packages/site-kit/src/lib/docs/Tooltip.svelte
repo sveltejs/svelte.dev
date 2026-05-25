@@ -95,7 +95,7 @@
 				font: var(--sk-font-body-small);
 			}
 
-			.tags {
+			.twoslash-popup-docs-tags {
 				display: grid;
 				grid-template-columns: auto 1fr;
 				column-gap: 1rem;
@@ -104,10 +104,6 @@
 				.tag,
 				.param {
 					font: var(--sk-font-mono);
-				}
-
-				.tag {
-					min-width: 8rem;
 				}
 			}
 

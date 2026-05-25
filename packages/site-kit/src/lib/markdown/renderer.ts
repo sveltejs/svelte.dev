@@ -432,6 +432,10 @@ export async function render_content_markdown(
 				}
 
 				let { source, options } = parse_options(decodedText, token.lang);
+				const leading_frontmatter_delimiters = get_leading_frontmatter_delimiters(
+					source,
+					token.lang
+				);
 				source = adjust_tab_indentation(source, token.lang);
 
 				if (options.file && !options.file.includes('.')) {
@@ -445,12 +449,21 @@ export async function render_content_markdown(
 					[, prelude = '// ---cut---\n', source] = match;
 
 					const banner = twoslashBanner?.(filename, source);
-					if (banner) prelude = '// @filename: injected.d.ts\n' + banner + '\n' + prelude;
+					if (banner)
+						prelude =
+							'// @filename: injected.d.ts\n' +
+							banner +
+							(options.file ? `\n// @filename: ${options.file.split('/').pop()}\n` : '\n') +
+							prelude;
 				}
 
 				source = source.replace(
 					/(\+\+\+|---|:::)/g,
-					(_, delimiter: keyof typeof delimiter_substitutes) => {
+					(match, delimiter: keyof typeof delimiter_substitutes, offset) => {
+						if (match === '---' && leading_frontmatter_delimiters.has(offset)) {
+							return match;
+						}
+
 						return delimiter_substitutes[delimiter];
 					}
 				);
@@ -1018,6 +1031,31 @@ function adjust_tab_indentation(source: string, language: string) {
 	});
 }
 
+function get_leading_frontmatter_delimiters(source: string, language: string) {
+	const delimiters = new Set<number>();
+
+	if (!/^(markdown|md|yaml|yml)$/.test(language)) {
+		return delimiters;
+	}
+
+	const opening = /^---(?=[ \t]*(?:\r?\n|$))/.exec(source);
+
+	if (!opening) {
+		return delimiters;
+	}
+
+	const closing = /^---(?=[ \t]*(?:\r?$))/m.exec(source.slice(opening[0].length));
+
+	if (!closing) {
+		return delimiters;
+	}
+
+	delimiters.add(opening.index);
+	delimiters.add(opening[0].length + closing.index);
+
+	return delimiters;
+}
+
 function replace_blank_lines(html: string) {
 	// preserve blank lines in output (maybe there's a more correct way to do this?)
 	return html.replaceAll(/<div class='line'>(&nbsp;)?<\/div>/g, '<div class="line">\n</div>');
@@ -1097,7 +1135,7 @@ async function syntax_highlight({
 		const redactions: string[] = [];
 
 		const sub = delimiter_substitutes['---'];
-		const pattern = new RegExp(`${sub}(?:[^ ]|[^ ][^]+?[^ ])${sub}`, 'g');
+		const pattern = new RegExp(`${sub}([^ ]|[^ ][^]+?[^ ])${sub}`, 'g');
 
 		const redacted = source.replace(pattern, (_, content) => {
 			redactions.push(content);
@@ -1133,7 +1171,7 @@ async function syntax_highlight({
 
 			html = html.replace(
 				new RegExp(` {${delimiter_substitutes['---'].length + 1},}`, 'g'),
-				() => redactions.shift()!
+				() => `<span class="highlight remove">${redactions.shift()!}</span>`
 			);
 
 			if (check) {
@@ -1173,7 +1211,17 @@ async function syntax_highlight({
 				for (const match of html.matchAll(
 					/<span class="twoslash-popup-docs-tag"><span class="twoslash-popup-docs-tag-name">([^]+?)<\/span><span class="twoslash-popup-docs-tag-value">([^]+?)<\/span><\/span>/g
 				)) {
+					const start = match.index;
+					const end = match.index + match[0].length;
+
 					const tag = match[1];
+
+					if (tag === '@type') {
+						// remove `@type` tags altogether
+						replacements.push({ start, end, content: '' });
+						continue;
+					}
+
 					let value = match[2];
 					let content = `<div class="tag">${tag}</div><div class="value">`;
 
@@ -1201,17 +1249,16 @@ async function syntax_highlight({
 
 					content += '</div>';
 
-					replacements.push({
-						start: match.index,
-						end: match.index + match[0].length,
-						content: '<div class="tags">' + content + '</div>'
-					});
+					replacements.push({ start, end, content });
 				}
 
 				while (replacements.length > 0) {
 					const { start, end, content } = replacements.pop()!;
 					html = html.slice(0, start) + content + html.slice(end);
 				}
+
+				// if no tags, remove this <div> to avoid an unnecessary flex gap
+				html = html.replace('<div class="twoslash-popup-docs twoslash-popup-docs-tags"></div>', '');
 
 				html = injectReferenceLinks(html, references, extractImportedSymbols(source));
 			}
