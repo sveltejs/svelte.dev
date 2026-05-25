@@ -28,7 +28,7 @@ For all the features and bugfixes that landed this month, check out the SvelteKi
 ## What's new in the Svelte ecosystem
 
 - Svelte language-tools now support TypeScript 6.0 across the language server, svelte2tsx and svelte-check packages (**svelte-language-server@0.18.0/svelte2tsx@0.7.55/svelte-check@4.4.8**, [Docs](https://devblogs.microsoft.com/typescript/announcing-typescript-6-0/), [#2985](https://github.com/sveltejs/language-tools/pull/2985))
-- Svelte MCP's stdio mode can now read file content directly, reducing round trips in local tool workflows (**mcp@0.1.23**, [Docs](https://svelte.dev/docs/ai/svelte-mcp), [#198](https://github.com/sveltejs/ai-tools/pull/198))
+- Svelte MCP's `stdio` mode can now read file content directly, reducing round trips in local tool workflows (**mcp@0.1.23**, [Docs](https://svelte.dev/docs/ai/svelte-mcp), [#198](https://github.com/sveltejs/ai-tools/pull/198))
 - vite-plugin-svelte now enables the optimizer for server environments during development (**vite-plugin-svelte@7.1.0**, [#1328](https://github.com/sveltejs/vite-plugin-svelte/pull/1328))
 
 This only covers the new features from the Svelte ecosystem. For everything else, check out the [language-tools releases](https://github.com/sveltejs/language-tools/releases), [ai-tools releases](https://github.com/sveltejs/ai-tools/releases) and [vite-plugin-svelte releases](https://github.com/sveltejs/vite-plugin-svelte/releases).
