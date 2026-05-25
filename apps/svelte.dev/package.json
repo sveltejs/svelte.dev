@@ -59,7 +59,7 @@
 		"@sveltejs/site-kit": "workspace:*",
 		"@sveltejs/sv-utils": "^0.2.2",
 		"@sveltejs/vite-plugin-svelte": "^7.0.0",
-		"@types/node": "^20.19.33",
+		"@types/node": "^22.19.19",
 		"browserslist": "^4.28.1",
 		"chokidar": "^5.0.0",
 		"degit": "^2.8.4",
