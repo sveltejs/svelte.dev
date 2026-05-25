@@ -57,7 +57,7 @@ For all the bugfixes that came out in Svelte this month, you can read the full [
 _This Week in Svelte_
 
 - [Ep. 140](https://www.youtube.com/watch?v=AVX9lqFHOnM) - Changelog, Imperative interfaces
-- [Ep. 141](https://www.youtube.com/watch?v=AVX9lqFHOnM) - Changelog
+- [Ep. 141](https://www.youtube.com/watch?v=mq-52XBwUbM) - Changelog
 
 _To Read_
 
