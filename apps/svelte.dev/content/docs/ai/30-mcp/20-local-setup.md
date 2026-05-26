@@ -113,6 +113,8 @@ opencode mcp add
 
 ## Cursor
 
+You can automatically configure the MCP server using the [Cursor plugin](cursor-plugin) (recommended). If you prefer to configure the MCP server manually you can:
+
 - Open the command palette
 - Select "View: Open MCP Settings"
 - Click on "Add custom MCP"
