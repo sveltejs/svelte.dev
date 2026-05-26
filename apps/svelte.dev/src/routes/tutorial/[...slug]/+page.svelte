@@ -447,6 +447,7 @@
 		/* put ellipsis at start */
 		direction: rtl;
 		text-align: left;
+		cursor: pointer;
 	}
 
 	.mobile-filetree {
