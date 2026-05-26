@@ -28,10 +28,10 @@ importers:
         version: 1.4.8
       '@rich_harris/svelte-split-pane':
         specifier: ^3.0.0
-        version: 3.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))
+        version: 3.0.0(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))
       '@sveltejs/amp':
         specifier: ^1.1.5
-        version: 1.1.5(@sveltejs/kit@2.60.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@5.9.3)(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))
+        version: 1.1.5(@sveltejs/kit@2.60.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(typescript@5.9.3)(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))
       '@sveltejs/repl':
         specifier: workspace:*
         version: link:../../packages/repl
@@ -40,7 +40,7 @@ importers:
         version: 10.4.1
       '@testing-library/svelte':
         specifier: ^5.3.1
-        version: 5.3.1(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0))(vitest@4.0.18(@types/node@22.19.19)(lightningcss@1.31.1)(tsx@4.21.0))
+        version: 5.3.1(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0))(vitest@4.0.18(@types/node@22.19.19)(lightningcss@1.31.1)(tsx@4.21.0))
       '@testing-library/user-event':
         specifier: ^14.6.1
         version: 14.6.1(@testing-library/dom@10.4.1)
@@ -49,10 +49,10 @@ importers:
         version: 3.1.0
       '@vercel/analytics':
         specifier: ^1.6.1
-        version: 1.6.1(@sveltejs/kit@2.60.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@5.9.3)(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vue@3.5.29(typescript@5.9.3))
+        version: 1.6.1(@sveltejs/kit@2.60.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(typescript@5.9.3)(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(vue@3.5.29(typescript@5.9.3))
       '@vercel/speed-insights':
         specifier: ^1.3.1
-        version: 1.3.1(@sveltejs/kit@2.60.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@5.9.3)(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vue@3.5.29(typescript@5.9.3))
+        version: 1.3.1(@sveltejs/kit@2.60.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(typescript@5.9.3)(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(vue@3.5.29(typescript@5.9.3))
       '@webcontainer/api':
         specifier: ^1.1.5
         version: 1.1.5
@@ -119,13 +119,13 @@ importers:
         version: 2.97.0
       '@sveltejs/adapter-vercel':
         specifier: ^6.3.3
-        version: 6.3.3(@sveltejs/kit@2.60.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@5.9.3)(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(rollup@4.59.0)
+        version: 6.3.3(@sveltejs/kit@2.60.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(typescript@5.9.3)(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(rollup@4.59.0)
       '@sveltejs/enhanced-img':
         specifier: ^0.10.4
-        version: 0.10.4(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(rollup@4.59.0)(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0))
+        version: 0.10.4(@sveltejs/vite-plugin-svelte@7.0.0(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(rollup@4.59.0)(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0))
       '@sveltejs/kit':
         specifier: ^2.60.1
-        version: 2.60.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@5.9.3)(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0))
+        version: 2.60.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(typescript@5.9.3)(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0))
       '@sveltejs/site-kit':
         specifier: workspace:*
         version: link:../../packages/site-kit
@@ -134,7 +134,7 @@ importers:
         version: 0.2.2
       '@sveltejs/vite-plugin-svelte':
         specifier: ^7.0.0
-        version: 7.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0))
+        version: 7.0.0(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0))
       '@types/node':
         specifier: ^22.19.19
         version: 22.19.19
@@ -173,7 +173,7 @@ importers:
         version: 3.8.1
       prettier-plugin-svelte:
         specifier: ^3.5.0
-        version: 3.5.0(prettier@3.8.1)(svelte@5.55.8(@typescript-eslint/types@8.58.0))
+        version: 3.5.0(prettier@3.8.1)(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))
       satori:
         specifier: ^0.19.2
         version: 0.19.2
@@ -184,14 +184,14 @@ importers:
         specifier: ^0.15.3
         version: 0.15.3
       svelte:
-        specifier: ^5.55.8
-        version: 5.55.8(@typescript-eslint/types@8.58.0)
+        specifier: https://pkg.svelte.dev/svelte/b/fix-spelling-in-test
+        version: https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0)
       svelte-check:
         specifier: ^4.4.3
-        version: 4.4.3(picomatch@4.0.3)(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@5.9.3)
+        version: 4.4.3(picomatch@4.0.3)(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(typescript@5.9.3)
       svelte-preprocess:
         specifier: ^6.0.3
-        version: 6.0.3(postcss@8.5.6)(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@5.9.3)
+        version: 6.0.3(postcss@8.5.6)(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(typescript@5.9.3)
       tiny-glob:
         specifier: ^0.2.9
         version: 0.2.9
@@ -1398,6 +1398,7 @@ packages:
 
   '@rich_harris/svelte-split-pane@3.0.0':
     resolution: {integrity: sha512-5/kiPS3qgmnNJxGCFacON7EvMTo0nzNSIHrGpjRtm4baERvVx3KMWHc9qtO4F+HXPvrGHuzUU8egrJtB3SmVDA==}
+    version: 3.0.0
     peerDependencies:
       svelte: ^5.43.6
 
@@ -1731,6 +1732,11 @@ packages:
     resolution: {integrity: sha512-kTD91rZNO4LvRUHv4x3/4hNmsEd2ofkYhuba2VMUPRVef1RCmnHtm7rIws38Fg0yQnOSZOplQzafn0GSiy6GVg==}
     engines: {node: '>=20.0.0'}
 
+  '@sveltejs/acorn-typescript@1.0.10':
+    resolution: {integrity: sha512-4WfKk68eTih+MiJD4fSbxN7E8kVBmTMPWHUPYjvl2N0rMs53YLTT8/YjKU5Dtnz5LqDjl7LEw4U7lXR2W3J5WA==}
+    peerDependencies:
+      acorn: ^8.9.0
+
   '@sveltejs/acorn-typescript@1.0.9':
     resolution: {integrity: sha512-lVJX6qEgs/4DOcRTpo56tmKzVPtoWAaVbL4hfO7t7NVwl9AAXzQR6cihesW1BmNMPl+bK6dreu2sOKBP2Q9CIA==}
     peerDependencies:
@@ -1743,17 +1749,20 @@ packages:
 
   '@sveltejs/adapter-vercel@6.3.3':
     resolution: {integrity: sha512-jI7jT/XqRyFe9oqKvFcNPQfyNBi3pXqN1iQXa2lmeKT5Vzgr9iSOqJOD3pXf/9Q2Os6SXzqYYm6osRjHYEhkyw==}
+    version: 6.3.3
     engines: {node: '>=20.0'}
     peerDependencies:
       '@sveltejs/kit': ^2.4.0
 
   '@sveltejs/amp@1.1.5':
     resolution: {integrity: sha512-qaVjoEgYm5pISt8XeM2yJfIxB+uqvnpUxiEFxBE6e40zy9DvOXEoMdyRKBI79R+f9Z/IhsTf6CAKjJffZrY1ew==}
+    version: 1.1.5
     peerDependencies:
       '@sveltejs/kit': ^1.0.0 || ^2.0.0
 
   '@sveltejs/enhanced-img@0.10.4':
     resolution: {integrity: sha512-Am5nmAKUo7Nboqq7Dhtfn7dcXA087d7gIz6Vecn1opB41aJ680+0q9U9KvEcMgduOyeiwckTIOQOx4Mmq9GcvA==}
+    version: 0.10.4
     peerDependencies:
       '@sveltejs/vite-plugin-svelte': ^6.0.0 || ^7.0.0
       svelte: ^5.0.0
@@ -1761,6 +1770,7 @@ packages:
 
   '@sveltejs/kit@2.60.1':
     resolution: {integrity: sha512-mQjlkNo+rJvpln7V2IGY2j99BqhcFbS4UN0AQNKNYfhBAFZTuCDAdW3a1sgf330mvtNvsBXn3HpAhcmvdJTcIQ==}
+    version: 2.60.1
     engines: {node: '>=18.13'}
     hasBin: true
     peerDependencies:
@@ -1793,6 +1803,7 @@ packages:
 
   '@sveltejs/vite-plugin-svelte@7.0.0':
     resolution: {integrity: sha512-ILXmxC7HAsnkK2eslgPetrqqW1BKSL7LktsFgqzNj83MaivMGZzluWq32m25j2mDOjmSKX7GGWahePhuEs7P/g==}
+    version: 7.0.0
     engines: {node: ^20.19 || ^22.12 || >=24}
     peerDependencies:
       svelte: ^5.46.4
@@ -1804,12 +1815,14 @@ packages:
 
   '@testing-library/svelte-core@1.0.0':
     resolution: {integrity: sha512-VkUePoLV6oOYwSUvX6ShA8KLnJqZiYMIbP2JW2t0GLWLkJxKGvuH5qrrZBV/X7cXFnLGuFQEC7RheYiZOW68KQ==}
+    version: 1.0.0
     engines: {node: '>=16'}
     peerDependencies:
       svelte: ^3 || ^4 || ^5 || ^5.0.0-next.0
 
   '@testing-library/svelte@5.3.1':
     resolution: {integrity: sha512-8Ez7ZOqW5geRf9PF5rkuopODe5RGy3I9XR+kc7zHh26gBiktLaxTfKmhlGaSHYUOTQE7wFsLMN9xCJVCszw47w==}
+    version: 5.3.1
     engines: {node: '>= 10'}
     peerDependencies:
       svelte: ^3 || ^4 || ^5 || ^5.0.0-next.0
@@ -1908,6 +1921,7 @@ packages:
 
   '@vercel/analytics@1.6.1':
     resolution: {integrity: sha512-oH9He/bEM+6oKlv3chWuOOcp8Y6fo6/PSro8hEkgCW3pu9/OiCXiUpRUogDh3Fs3LH2sosDrx8CxeOLBEE+afg==}
+    version: 1.6.1
     peerDependencies:
       '@remix-run/react': ^2
       '@sveltejs/kit': ^1 || ^2
@@ -1939,6 +1953,7 @@ packages:
 
   '@vercel/speed-insights@1.3.1':
     resolution: {integrity: sha512-PbEr7FrMkUrGYvlcLHGkXdCkxnylCWePx7lPxxq36DNdfo9mcUjLOmqOyPDHAOgnfqgGGdmE3XI9L/4+5fr+vQ==}
+    version: 1.3.1
     peerDependencies:
       '@sveltejs/kit': ^1 || ^2
       next: '>= 13'
@@ -2374,6 +2389,14 @@ packages:
 
   esrap@2.2.5:
     resolution: {integrity: sha512-/yLB1538mag+dn0wsePTe8C0rDIjUOaJpMs2McodSzmM2msWcZsBSdRtg6HOBt0A/r82BN+Md3pgwSc/uWt2Ig==}
+    peerDependencies:
+      '@typescript-eslint/types': ^8.2.0
+    peerDependenciesMeta:
+      '@typescript-eslint/types':
+        optional: true
+
+  esrap@2.2.9:
+    resolution: {integrity: sha512-4KijP+NxCWthMCUC3qHbE6n4vCjqgJS1uAYKhuT/GWfFTf1Qyive2TgOjep+gzbSzRfnNyaN/UU9YmdOt8Eg0A==}
     peerDependencies:
       '@typescript-eslint/types': ^8.2.0
     peerDependenciesMeta:
@@ -3007,6 +3030,7 @@ packages:
 
   prettier-plugin-svelte@3.5.0:
     resolution: {integrity: sha512-2lLO/7EupnjO/95t+XZesXs8Bf3nYLIDfCo270h5QWbj/vjLqmrQ1LiRk9LPggxSDsnVYfehamZNf+rgQYApZg==}
+    version: 3.5.0
     peerDependencies:
       prettier: ^3.0.0
       svelte: ^3.2.0 || ^4.0.0-next.0 || ^5.0.0-next.0
@@ -3226,6 +3250,7 @@ packages:
 
   svelte-check@4.4.3:
     resolution: {integrity: sha512-4HtdEv2hOoLCEsSXI+RDELk9okP/4sImWa7X02OjMFFOWeSdFF3NFy3vqpw0z+eH9C88J9vxZfUXz/Uv2A1ANw==}
+    version: 4.4.3
     engines: {node: '>= 18.0.0'}
     hasBin: true
     peerDependencies:
@@ -3234,11 +3259,13 @@ packages:
 
   svelte-parse-markup@0.1.5:
     resolution: {integrity: sha512-T6mqZrySltPCDwfKXWQ6zehipVLk4GWfH1zCMGgRtLlOIFPuw58ZxVYxVvotMJgJaurKi1i14viB2GIRKXeJTQ==}
+    version: 0.1.5
     peerDependencies:
       svelte: ^3.0.0 || ^4.0.0 || ^5.0.0-next.1
 
   svelte-preprocess@6.0.3:
     resolution: {integrity: sha512-PLG2k05qHdhmRG7zR/dyo5qKvakhm8IJ+hD2eFRQmMLHp7X3eJnjeupUtvuRpbNiF31RjVw45W+abDwHEmP5OA==}
+    version: 6.0.3
     engines: {node: '>= 18.0.0'}
     peerDependencies:
       '@babel/core': ^7.10.2
@@ -3282,6 +3309,11 @@ packages:
 
   svelte@5.55.8:
     resolution: {integrity: sha512-4D6lyrMHmDaZalQOEBMCWCCidyZjSnec14/oPn0k627G6goxcck9xqMwz1tFLlQz+ZFvtTTHfFOlUayuAz0z6Q==}
+    engines: {node: '>=18'}
+
+  svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test:
+    resolution: {integrity: sha512-MHNsaAfuax2TLTvpUQ9c4fxMOyWZ24bPkNDYtIeGYue7YX7SCIhIvY+6t/Lg7ihOM6LVQUVgywHWaesHCt3p/g==, tarball: https://pkg.svelte.dev/svelte/b/fix-spelling-in-test}
+    version: 5.55.9
     engines: {node: '>=18'}
 
   tailwindcss@4.2.1:
@@ -4571,6 +4603,10 @@ snapshots:
     dependencies:
       svelte: 5.55.8(@typescript-eslint/types@8.58.0)
 
+  '@rich_harris/svelte-split-pane@3.0.0(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))':
+    dependencies:
+      svelte: https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0)
+
   '@rolldown/binding-android-arm64@1.0.0-rc.5':
     optional: true
 
@@ -4855,6 +4891,10 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
+  '@sveltejs/acorn-typescript@1.0.10(acorn@8.16.0)':
+    dependencies:
+      acorn: 8.16.0
+
   '@sveltejs/acorn-typescript@1.0.9(acorn@8.16.0)':
     dependencies:
       acorn: 8.16.0
@@ -4863,9 +4903,9 @@ snapshots:
     dependencies:
       '@sveltejs/kit': 2.60.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@25.3.0)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@5.9.3)(vite@8.0.0-beta.15(@types/node@25.3.0)(esbuild@0.27.3)(tsx@4.21.0))
 
-  '@sveltejs/adapter-vercel@6.3.3(@sveltejs/kit@2.60.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@5.9.3)(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(rollup@4.59.0)':
+  '@sveltejs/adapter-vercel@6.3.3(@sveltejs/kit@2.60.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(typescript@5.9.3)(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(rollup@4.59.0)':
     dependencies:
-      '@sveltejs/kit': 2.60.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@5.9.3)(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0))
+      '@sveltejs/kit': 2.60.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(typescript@5.9.3)(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0))
       '@vercel/nft': 1.3.2(rollup@4.59.0)
       esbuild: 0.25.12
     transitivePeerDependencies:
@@ -4873,17 +4913,17 @@ snapshots:
       - rollup
       - supports-color
 
-  '@sveltejs/amp@1.1.5(@sveltejs/kit@2.60.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@5.9.3)(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))':
+  '@sveltejs/amp@1.1.5(@sveltejs/kit@2.60.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(typescript@5.9.3)(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))':
     dependencies:
-      '@sveltejs/kit': 2.60.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@5.9.3)(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0))
+      '@sveltejs/kit': 2.60.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(typescript@5.9.3)(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0))
 
-  '@sveltejs/enhanced-img@0.10.4(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(rollup@4.59.0)(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0))':
+  '@sveltejs/enhanced-img@0.10.4(@sveltejs/vite-plugin-svelte@7.0.0(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(rollup@4.59.0)(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0))':
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 7.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0))
+      '@sveltejs/vite-plugin-svelte': 7.0.0(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0))
       magic-string: 0.30.21
       sharp: 0.34.5
-      svelte: 5.55.8(@typescript-eslint/types@8.58.0)
-      svelte-parse-markup: 0.1.5(svelte@5.55.8(@typescript-eslint/types@8.58.0))
+      svelte: https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0)
+      svelte-parse-markup: 0.1.5(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))
       vite: 8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)
       vite-imagetools: 9.0.3(rollup@4.59.0)
       zimmerframe: 1.1.4
@@ -4910,26 +4950,6 @@ snapshots:
     optionalDependencies:
       typescript: 5.9.3
 
-  '@sveltejs/kit@2.60.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@5.9.3)(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0))':
-    dependencies:
-      '@standard-schema/spec': 1.1.0
-      '@sveltejs/acorn-typescript': 1.0.9(acorn@8.16.0)
-      '@sveltejs/vite-plugin-svelte': 7.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0))
-      '@types/cookie': 0.6.0
-      acorn: 8.16.0
-      cookie: 0.6.0
-      devalue: 5.8.1
-      esm-env: 1.2.2
-      kleur: 4.1.5
-      magic-string: 0.30.21
-      mrmime: 2.0.1
-      set-cookie-parser: 3.0.1
-      sirv: 3.0.2
-      svelte: 5.55.8(@typescript-eslint/types@8.58.0)
-      vite: 8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)
-    optionalDependencies:
-      typescript: 5.9.3
-
   '@sveltejs/kit@2.60.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@25.3.0)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@5.9.3)(vite@8.0.0-beta.15(@types/node@25.3.0)(esbuild@0.27.3)(tsx@4.21.0))':
     dependencies:
       '@standard-schema/spec': 1.1.0
@@ -4947,6 +4967,26 @@ snapshots:
       sirv: 3.0.2
       svelte: 5.55.8(@typescript-eslint/types@8.58.0)
       vite: 8.0.0-beta.15(@types/node@25.3.0)(esbuild@0.27.3)(tsx@4.21.0)
+    optionalDependencies:
+      typescript: 5.9.3
+
+  '@sveltejs/kit@2.60.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(typescript@5.9.3)(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0))':
+    dependencies:
+      '@standard-schema/spec': 1.1.0
+      '@sveltejs/acorn-typescript': 1.0.9(acorn@8.16.0)
+      '@sveltejs/vite-plugin-svelte': 7.0.0(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0))
+      '@types/cookie': 0.6.0
+      acorn: 8.16.0
+      cookie: 0.6.0
+      devalue: 5.8.1
+      esm-env: 1.2.2
+      kleur: 4.1.5
+      magic-string: 0.30.21
+      mrmime: 2.0.1
+      set-cookie-parser: 3.0.1
+      sirv: 3.0.2
+      svelte: https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0)
+      vite: 8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)
     optionalDependencies:
       typescript: 5.9.3
 
@@ -4976,15 +5016,6 @@ snapshots:
       vite: 8.0.0-beta.15(@types/node@20.19.33)(esbuild@0.27.3)(tsx@4.21.0)
       vitefu: 1.1.2(vite@8.0.0-beta.15(@types/node@20.19.33)(esbuild@0.27.3)(tsx@4.21.0))
 
-  '@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0))':
-    dependencies:
-      deepmerge: 4.3.1
-      magic-string: 0.30.21
-      obug: 2.1.1
-      svelte: 5.55.8(@typescript-eslint/types@8.58.0)
-      vite: 8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)
-      vitefu: 1.1.2(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0))
-
   '@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@25.3.0)(esbuild@0.27.3)(tsx@4.21.0))':
     dependencies:
       deepmerge: 4.3.1
@@ -4993,6 +5024,15 @@ snapshots:
       svelte: 5.55.8(@typescript-eslint/types@8.58.0)
       vite: 8.0.0-beta.15(@types/node@25.3.0)(esbuild@0.27.3)(tsx@4.21.0)
       vitefu: 1.1.2(vite@8.0.0-beta.15(@types/node@25.3.0)(esbuild@0.27.3)(tsx@4.21.0))
+
+  '@sveltejs/vite-plugin-svelte@7.0.0(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0))':
+    dependencies:
+      deepmerge: 4.3.1
+      magic-string: 0.30.21
+      obug: 2.1.1
+      svelte: https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0)
+      vite: 8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)
+      vitefu: 1.1.2(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0))
 
   '@testing-library/dom@10.4.1':
     dependencies:
@@ -5005,15 +5045,15 @@ snapshots:
       picocolors: 1.1.1
       pretty-format: 27.5.1
 
-  '@testing-library/svelte-core@1.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))':
+  '@testing-library/svelte-core@1.0.0(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))':
     dependencies:
-      svelte: 5.55.8(@typescript-eslint/types@8.58.0)
+      svelte: https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0)
 
-  '@testing-library/svelte@5.3.1(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0))(vitest@4.0.18(@types/node@22.19.19)(lightningcss@1.31.1)(tsx@4.21.0))':
+  '@testing-library/svelte@5.3.1(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0))(vitest@4.0.18(@types/node@22.19.19)(lightningcss@1.31.1)(tsx@4.21.0))':
     dependencies:
       '@testing-library/dom': 10.4.1
-      '@testing-library/svelte-core': 1.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))
-      svelte: 5.55.8(@typescript-eslint/types@8.58.0)
+      '@testing-library/svelte-core': 1.0.0(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))
+      svelte: https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0)
     optionalDependencies:
       vite: 8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)
       vitest: 4.0.18(@types/node@22.19.19)(lightningcss@1.31.1)(tsx@4.21.0)
@@ -5101,10 +5141,10 @@ snapshots:
 
   '@ungap/structured-clone@1.3.0': {}
 
-  '@vercel/analytics@1.6.1(@sveltejs/kit@2.60.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@5.9.3)(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vue@3.5.29(typescript@5.9.3))':
+  '@vercel/analytics@1.6.1(@sveltejs/kit@2.60.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(typescript@5.9.3)(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(vue@3.5.29(typescript@5.9.3))':
     optionalDependencies:
-      '@sveltejs/kit': 2.60.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@5.9.3)(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0))
-      svelte: 5.55.8(@typescript-eslint/types@8.58.0)
+      '@sveltejs/kit': 2.60.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(typescript@5.9.3)(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0))
+      svelte: https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0)
       vue: 3.5.29(typescript@5.9.3)
 
   '@vercel/nft@1.3.2(rollup@4.59.0)':
@@ -5126,10 +5166,10 @@ snapshots:
       - rollup
       - supports-color
 
-  '@vercel/speed-insights@1.3.1(@sveltejs/kit@2.60.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@5.9.3)(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vue@3.5.29(typescript@5.9.3))':
+  '@vercel/speed-insights@1.3.1(@sveltejs/kit@2.60.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(typescript@5.9.3)(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(vue@3.5.29(typescript@5.9.3))':
     optionalDependencies:
-      '@sveltejs/kit': 2.60.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@5.9.3)(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0))
-      svelte: 5.55.8(@typescript-eslint/types@8.58.0)
+      '@sveltejs/kit': 2.60.1(@sveltejs/vite-plugin-svelte@7.0.0(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(typescript@5.9.3)(vite@8.0.0-beta.15(@types/node@22.19.19)(esbuild@0.27.3)(tsx@4.21.0))
+      svelte: https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0)
       vue: 3.5.29(typescript@5.9.3)
 
   '@vitest/expect@4.0.18':
@@ -5546,6 +5586,12 @@ snapshots:
   esprima@4.0.1: {}
 
   esrap@2.2.5(@typescript-eslint/types@8.58.0):
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.5.5
+    optionalDependencies:
+      '@typescript-eslint/types': 8.58.0
+
+  esrap@2.2.9(@typescript-eslint/types@8.58.0):
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
     optionalDependencies:
@@ -6265,6 +6311,11 @@ snapshots:
       prettier: 3.8.1
       svelte: 5.55.8(@typescript-eslint/types@8.58.0)
 
+  prettier-plugin-svelte@3.5.0(prettier@3.8.1)(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0)):
+    dependencies:
+      prettier: 3.8.1
+      svelte: https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0)
+
   prettier@2.8.8: {}
 
   prettier@3.8.1: {}
@@ -6552,13 +6603,25 @@ snapshots:
     transitivePeerDependencies:
       - picomatch
 
-  svelte-parse-markup@0.1.5(svelte@5.55.8(@typescript-eslint/types@8.58.0)):
+  svelte-check@4.4.3(picomatch@4.0.3)(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(typescript@5.9.3):
     dependencies:
-      svelte: 5.55.8(@typescript-eslint/types@8.58.0)
+      '@jridgewell/trace-mapping': 0.3.31
+      chokidar: 4.0.3
+      fdir: 6.5.0(picomatch@4.0.3)
+      picocolors: 1.1.1
+      sade: 1.8.1
+      svelte: https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0)
+      typescript: 5.9.3
+    transitivePeerDependencies:
+      - picomatch
 
-  svelte-preprocess@6.0.3(postcss@8.5.6)(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@5.9.3):
+  svelte-parse-markup@0.1.5(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0)):
     dependencies:
-      svelte: 5.55.8(@typescript-eslint/types@8.58.0)
+      svelte: https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0)
+
+  svelte-preprocess@6.0.3(postcss@8.5.6)(svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0))(typescript@5.9.3):
+    dependencies:
+      svelte: https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0)
     optionalDependencies:
       postcss: 8.5.6
       typescript: 5.9.3
@@ -6584,6 +6647,27 @@ snapshots:
       devalue: 5.8.1
       esm-env: 1.2.2
       esrap: 2.2.5(@typescript-eslint/types@8.58.0)
+      is-reference: 3.0.3
+      locate-character: 3.0.0
+      magic-string: 0.30.21
+      zimmerframe: 1.1.4
+    transitivePeerDependencies:
+      - '@typescript-eslint/types'
+
+  svelte@https://pkg.svelte.dev/svelte/b/fix-spelling-in-test(@typescript-eslint/types@8.58.0):
+    dependencies:
+      '@jridgewell/remapping': 2.3.5
+      '@jridgewell/sourcemap-codec': 1.5.5
+      '@sveltejs/acorn-typescript': 1.0.10(acorn@8.16.0)
+      '@types/estree': 1.0.8
+      '@types/trusted-types': 2.0.7
+      acorn: 8.16.0
+      aria-query: 5.3.1
+      axobject-query: 4.1.0
+      clsx: 2.1.1
+      devalue: 5.8.1
+      esm-env: 1.2.2
+      esrap: 2.2.9(@typescript-eslint/types@8.58.0)
       is-reference: 3.0.3
       locate-character: 3.0.0
       magic-string: 0.30.21
