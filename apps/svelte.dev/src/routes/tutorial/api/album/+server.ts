@@ -5,83 +5,83 @@ export async function GET() {
 		[
 			{
 				title: 'accusamus beatae ad facilis cum similique qui sunt',
-				thumbnailUrl: 'https://via.placeholder.com/150/92c952'
+				thumbnailUrl: 'https://picsum.photos/150?random=1'
 			},
 			{
 				title: 'reprehenderit est deserunt velit ipsam',
-				thumbnailUrl: 'https://via.placeholder.com/150/771796'
+				thumbnailUrl: 'https://picsum.photos/150?random=2'
 			},
 			{
 				title: 'officia porro iure quia iusto qui ipsa ut modi',
-				thumbnailUrl: 'https://via.placeholder.com/150/24f355'
+				thumbnailUrl: 'https://picsum.photos/150?random=3'
 			},
 			{
 				title: 'culpa odio esse rerum omnis laboriosam voluptate repudiandae',
-				thumbnailUrl: 'https://via.placeholder.com/150/d32776'
+				thumbnailUrl: 'https://picsum.photos/150?random=4'
 			},
 			{
 				title: 'natus nisi omnis corporis facere molestiae rerum in',
-				thumbnailUrl: 'https://via.placeholder.com/150/f66b97'
+				thumbnailUrl: 'https://picsum.photos/150?random=5'
 			},
 			{
 				title: 'accusamus ea aliquid et amet sequi nemo',
-				thumbnailUrl: 'https://via.placeholder.com/150/56a8c2'
+				thumbnailUrl: 'https://picsum.photos/150?random=6'
 			},
 			{
 				title: 'officia delectus consequatur vero aut veniam explicabo molestias',
-				thumbnailUrl: 'https://via.placeholder.com/150/b0f7cc'
+				thumbnailUrl: 'https://picsum.photos/150?random=7'
 			},
 			{
 				title: 'aut porro officiis laborum odit ea laudantium corporis',
-				thumbnailUrl: 'https://via.placeholder.com/150/54176f'
+				thumbnailUrl: 'https://picsum.photos/150?random=8'
 			},
 			{
 				title: 'qui eius qui autem sed',
-				thumbnailUrl: 'https://via.placeholder.com/150/51aa97'
+				thumbnailUrl: 'https://picsum.photos/150?random=9'
 			},
 			{
 				title: 'beatae et provident et ut vel',
-				thumbnailUrl: 'https://via.placeholder.com/150/810b14'
+				thumbnailUrl: 'https://picsum.photos/150?random=10'
 			},
 			{
 				title: 'nihil at amet non hic quia qui',
-				thumbnailUrl: 'https://via.placeholder.com/150/1ee8a4'
+				thumbnailUrl: 'https://picsum.photos/150?random=11'
 			},
 			{
 				title: 'mollitia soluta ut rerum eos aliquam consequatur perspiciatis maiores',
-				thumbnailUrl: 'https://via.placeholder.com/150/66b7d2'
+				thumbnailUrl: 'https://picsum.photos/150?random=12'
 			},
 			{
 				title: 'repudiandae iusto deleniti rerum',
-				thumbnailUrl: 'https://via.placeholder.com/150/197d29'
+				thumbnailUrl: 'https://picsum.photos/150?random=13'
 			},
 			{
 				title: 'est necessitatibus architecto ut laborum',
-				thumbnailUrl: 'https://via.placeholder.com/150/61a65'
+				thumbnailUrl: 'https://picsum.photos/150?random=14'
 			},
 			{
 				title: 'harum dicta similique quis dolore earum ex qui',
-				thumbnailUrl: 'https://via.placeholder.com/150/f9cee5'
+				thumbnailUrl: 'https://picsum.photos/150?random=15'
 			},
 			{
 				title: 'iusto sunt nobis quasi veritatis quas expedita voluptatum deserunt',
-				thumbnailUrl: 'https://via.placeholder.com/150/fdf73e'
+				thumbnailUrl: 'https://picsum.photos/150?random=16'
 			},
 			{
 				title: 'natus doloribus necessitatibus ipsa',
-				thumbnailUrl: 'https://via.placeholder.com/150/9c184f'
+				thumbnailUrl: 'https://picsum.photos/150?random=17'
 			},
 			{
 				title: 'laboriosam odit nam necessitatibus et illum dolores reiciendis',
-				thumbnailUrl: 'https://via.placeholder.com/150/1fe46f'
+				thumbnailUrl: 'https://picsum.photos/150?random=18'
 			},
 			{
 				title: 'perferendis nesciunt eveniet et optio a',
-				thumbnailUrl: 'https://via.placeholder.com/150/56acb2'
+				thumbnailUrl: 'https://picsum.photos/150?random=19'
 			},
 			{
 				title: 'assumenda voluptatem laboriosam enim consequatur veniam placeat reiciendis error',
-				thumbnailUrl: 'https://via.placeholder.com/150/8985dc'
+				thumbnailUrl: 'https://picsum.photos/150?random=20'
 			}
 		],
 		{ headers: { 'Access-Control-Allow-Origin': '*' } }
