@@ -9,20 +9,26 @@ import ts from 'typescript';
 import glob from 'tiny-glob/sync.js';
 import chokidar from 'chokidar';
 import { fileURLToPath } from 'node:url';
-import { clone_repo, migrate_meta_json } from './utils.ts';
+import { clone_repo, invoke, migrate_meta_json } from './utils.ts';
 import { get_types, read_d_ts_file, read_types } from './types.ts';
 import type { Modules } from '@sveltejs/site-kit/markdown';
 import { generate_crosslinks } from './crosslinks.ts';
 
 interface Package {
 	name: string;
+	/** The identifier used to trigger syncing (defaults to `name` if omitted) */
+	trigger?: string;
 	repo: string;
 	branch: string;
 	pkg: string;
 	docs: string;
 	types: string | null;
+	npm_packages?: string[];
 	process_modules?: (modules: Modules, pkg: Package) => Promise<Modules>;
+	post_clone?: (dir: string) => Promise<void>;
 }
+
+const get_trigger = (pkg: Package) => pkg.trigger ?? pkg.name;
 
 const parsed = parseArgs({
 	args: process.argv.slice(2),
@@ -75,6 +81,26 @@ const get_downstream_repo = (name: string) => {
 	return `${owner}/${downstream}`;
 };
 
+function patch_node_modules(
+	cloned_dir: string,
+	pkg_subdir: string,
+	npm_name: string,
+	onlyDirs?: string[]
+) {
+	const source = path.join(cloned_dir, pkg_subdir);
+	const target = path.join(dirname, '../../node_modules', npm_name);
+	if (onlyDirs) {
+		for (const dir of onlyDirs) {
+			const t = path.join(target, dir);
+			fs.rmSync(t, { recursive: true, force: true });
+			fs.cpSync(path.join(source, dir), t, { recursive: true });
+		}
+	} else {
+		fs.rmSync(target, { force: true });
+		fs.symlinkSync(source, target);
+	}
+}
+
 const packages: Package[] = [
 	{
 		name: 'svelte',
@@ -83,6 +109,9 @@ const packages: Package[] = [
 		pkg: 'packages/svelte',
 		docs: 'documentation/docs',
 		types: 'types',
+		post_clone: async (dir) => {
+			patch_node_modules(dir, 'packages/svelte', 'svelte', ['types']);
+		},
 		process_modules: async (modules: Modules) => {
 			// Remove $$_attributes from ActionReturn
 			const module_with_ActionReturn = modules.find((m) =>
@@ -107,6 +136,9 @@ const packages: Package[] = [
 		pkg: 'packages/kit',
 		docs: 'documentation/docs',
 		types: 'types',
+		post_clone: async (dir) => {
+			patch_node_modules(dir, 'packages/kit', '@sveltejs/kit', ['types']);
+		},
 		process_modules: async (modules, pkg) => {
 			const kit_base = `${REPOS}/${pkg.name}/${pkg.pkg}/`;
 
@@ -166,28 +198,39 @@ const packages: Package[] = [
 		branch: branches['cli']?.branch ?? 'main',
 		pkg: 'packages/sv',
 		docs: 'documentation/docs',
-		types: null
+		types: null,
+		post_clone: async (dir) => {
+			await invoke('npx', ['pnpm@10', 'install'], { cwd: dir });
+			await invoke('npx', ['pnpm@10', 'build'], { cwd: dir });
+			patch_node_modules(dir, 'packages/sv', 'sv');
+			patch_node_modules(dir, 'packages/sv-utils', '@sveltejs/sv-utils');
+		}
 	},
 	{
-		name: 'mcp',
-		repo: get_downstream_repo('mcp'),
-		branch: branches['mcp']?.branch ?? 'main',
+		name: 'ai',
+		trigger: 'ai-tools',
+		repo: get_downstream_repo('ai-tools'),
+		branch: branches['ai-tools']?.branch ?? 'main',
 		pkg: 'packages/mcp-stdio',
 		docs: 'documentation/docs',
 		types: null
 	}
 ];
 
-const unknown = Object.keys(branches).filter((name) => !packages.some((pkg) => pkg.name === name));
+const unknown = Object.keys(branches).filter(
+	(trigger) => !packages.some((pkg) => get_trigger(pkg) === trigger)
+);
 
 if (unknown.length > 0) {
 	throw new Error(
-		`Valid repos are ${packages.map((pkg) => pkg.name).join(', ')} (saw ${unknown.join(', ')})`
+		`Valid repos are ${packages.map((pkg) => get_trigger(pkg)).join(', ')} (saw ${unknown.join(', ')})`
 	);
 }
 
 const filtered =
-	parsed.positionals.length === 0 ? packages : packages.filter((pkg) => !!branches[pkg.name]);
+	parsed.positionals.length === 0
+		? packages
+		: packages.filter((pkg) => !!branches[get_trigger(pkg)]);
 
 /**
  * Depending on your setup, this will either clone the Svelte and SvelteKit repositories
@@ -204,6 +247,9 @@ if (parsed.values.pull) {
 
 	for (const pkg of filtered) {
 		await clone_repo(`https://github.com/${pkg.repo}.git`, pkg.name, pkg.branch, REPOS);
+		if (pkg.post_clone) {
+			await pkg.post_clone(`${REPOS}/${pkg.name}`);
+		}
 	}
 }
 

@@ -379,6 +379,12 @@ Cause:
 `csp.nonce` was set while `csp.hash` was `true`. These options cannot be used simultaneously.
 ```
 
+### invalid_id_prefix
+
+```
+The `idPrefix` option cannot include `--`.
+```
+
 ### lifecycle_function_unavailable
 
 ```
@@ -440,6 +446,12 @@ Here, `List.svelte` is using `{@render children(item)` which means it expects `P
 
 ```
 A snippet function was passed invalid arguments. Snippets should only be instantiated via `{@render ...}`
+```
+
+### invariant_violation
+
+```
+An invariant violation occurred, meaning Svelte's internal assumptions were flawed. This is a bug in Svelte, not your app — please open an issue at https://github.com/sveltejs/svelte, citing the following message: "%message%"
 ```
 
 ### lifecycle_outside_component

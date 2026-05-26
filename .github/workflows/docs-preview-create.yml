@@ -11,7 +11,7 @@ on:
           - svelte
           - kit
           - cli
-          - mcp
+          - ai-tools
       downstream:
         description: 'Downstream repository (eg. `svelte` or `kit`)'
         required: true
@@ -38,6 +38,7 @@ permissions:
 
 env:
   BRANCH: preview-${{ inputs.upstream }}-${{ inputs.pr }}
+  REF: ${{ case(inputs.sha == true,  format('c/{0}', inputs.sha), format('b/{0}', inputs.branch)) }}
 
 jobs:
   Sync:
@@ -49,12 +50,12 @@ jobs:
       cancel-in-progress: true
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           ref: main # Explicitly checkout main branch first
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
+      - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: 24
           cache: pnpm
@@ -64,6 +65,18 @@ jobs:
         run: |
           git fetch origin
           git checkout -B ${{ env.BRANCH }} # Force create/reset branch based on current main
+
+      - name: Install Svelte upstream
+        if: ${{ inputs.upstream == 'svelte' }}
+        run: pnpm add -D https://pkg.svelte.dev/svelte/${{ env.REF }} --filter "svelte.dev"
+
+      - name: Install SvelteKit upstream
+        if: ${{ inputs.upstream == 'kit' }}
+        run: pnpm add -D https://pkg.svelte.dev/@sveltejs/kit/${{ env.REF }} https://pkg.svelte.dev/@sveltejs/adapter-vercel/${{ env.REF }} https://pkg.svelte.dev/@sveltejs/enhanced-img/${{ env.REF }} --filter "svelte.dev"
+
+      - name: Install Svelte CLI upstream
+        if: ${{ inputs.upstream == 'cli' }}
+        run: pnpm add -D https://pkg.svelte.dev/sv/${{ env.REF }} https://pkg.svelte.dev/@sveltejs/sv-utils/${{ env.REF }} --filter "svelte.dev"
 
       - name: Sync
         run: cd apps/svelte.dev && pnpm sync-docs --owner="${{ inputs.owner }}" -p "${{ format('{0}#{1}#{2}', inputs.upstream, inputs.downstream, inputs.branch) }}"
@@ -80,7 +93,7 @@ jobs:
 
       - name: Request preview comment
         if: ${{ steps.push.outcome == 'success' }}
-        uses: peter-evans/repository-dispatch@v3
+        uses: peter-evans/repository-dispatch@ff45666b9427631e3450c54a1bcbee4d9ff4d7c0 # v3
         with:
           event-type: 'request-preview-comment'
           client-payload: |-
@@ -91,7 +104,7 @@ jobs:
 
       - name: Dispatch docs-unaffected
         if: ${{ steps.push.outcome != 'success' }}
-        uses: peter-evans/repository-dispatch@v3
+        uses: peter-evans/repository-dispatch@ff45666b9427631e3450c54a1bcbee4d9ff4d7c0 # v3
         with:
           event-type: 'docs-unaffected'
           client-payload: |-

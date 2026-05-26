@@ -26,11 +26,11 @@
 				height: 1.8rem;
 				background: url(icons/chevron) no-repeat 50% 50%;
 				background-size: 100%;
-				rotate: -90deg;
+				rotate: 180deg;
 			}
 
 			[open] > &::before {
-				rotate: 180deg;
+				rotate: -90deg;
 			}
 		}
 

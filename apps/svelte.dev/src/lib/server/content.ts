@@ -166,11 +166,7 @@ export const examples = index.examples.children;
  * Represents a Svelte package in the registry
  */
 export interface Package
-	extends PackageKey,
-		PackageManual,
-		PackageNpm,
-		PackageGithub,
-		PackageCalculated {}
+	extends PackageKey, PackageManual, PackageNpm, PackageGithub, PackageCalculated {}
 
 export interface PackageKey {
 	/** Package name */

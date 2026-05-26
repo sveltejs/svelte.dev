@@ -8,7 +8,7 @@
 	import { theme } from '@sveltejs/site-kit/state';
 	import { mapbox_setup } from '../../../../config.js';
 	import AppControls from './AppControls.svelte';
-	import { compress_and_encode_text, decode_and_decompress_text } from './gzip.js';
+	import { compress_and_encode_text, decode_and_decompress_text } from 'gzip';
 	import { page } from '$app/state';
 	import type { File } from '@sveltejs/repl/workspace';
 
@@ -23,6 +23,7 @@
 	let setting_hash: any = null;
 
 	let version = $derived(page.url.searchParams.get('version') || 'latest');
+	let showOutput = page.url.searchParams.get('show') !== 'input';
 
 	// Hashed URLs are less safe (we can't delete malicious REPLs), therefore
 	// don't allow links to escape the sandbox restrictions
@@ -225,11 +226,11 @@
 				{onchange}
 				{download}
 				previewTheme={theme.current}
+				{showOutput}
 				onversion={(v) => {
-					if (version === (version = v)) return;
-
 					const url = new URL(location.href);
 					url.searchParams.set('version', v);
+					url.searchParams.delete('show');
 
 					replaceState(url, {});
 				}}

@@ -1,0 +1,86 @@
+{
+	"$schema": "https://fundingjson.org/schema/v1.0.0/funding.schema.json",
+	"version": "v1.0.0",
+	"entity": {
+		"type": "organisation",
+		"role": "steward",
+		"name": "Svelte",
+		"description": "Web development for the rest of us",
+		"email": "funding@svelte.dev",
+		"webpageUrl": {
+			"url": "https://svelte.dev"
+		}
+	},
+	"projects": [
+		{
+			"guid": "sveltejs-svelte",
+			"name": "Svelte",
+			"description": "Svelte is a UI framework that uses a compiler to let you write breathtakingly concise components that do minimal work in the browser, using languages you already know — HTML, CSS and JavaScript. It’s a love letter to web development.",
+			"webpageUrl": {
+				"url": "https://svelte.dev/docs/svelte"
+			},
+			"repositoryUrl": {
+				"url": "https://github.com/sveltejs/svelte",
+				"wellKnown": "https://github.com/sveltejs/svelte/blob/main/.well-known/funding-manifest-urls"
+			},
+			"licenses": ["spdx:MIT"],
+			"tags": ["web-development"]
+		},
+		{
+			"guid": "sveltejs-kit",
+			"name": "SvelteKit",
+			"description": "SvelteKit is a framework for rapidly developing robust, performant web applications using Svelte. If you’re coming from React, SvelteKit is similar to Next. If you’re coming from Vue, SvelteKit is similar to Nuxt.",
+			"webpageUrl": {
+				"url": "https://svelte.dev/docs/kit"
+			},
+			"repositoryUrl": {
+				"url": "https://github.com/sveltejs/kit",
+				"wellKnown": "https://github.com/sveltejs/kit/blob/main/.well-known/funding-manifest-urls"
+			},
+			"licenses": ["spdx:MIT"],
+			"tags": ["web-development"]
+		}
+	],
+	"funding": {
+		"channels": [
+			{
+				"guid": "opencollective-svelte",
+				"type": "payment-provider",
+				"address": "https://opencollective.com/svelte",
+				"description": "Support Svelte through Open Collective with recurring or one-time contributions"
+			}
+		],
+		"plans": [
+			{
+				"guid": "backer-monthly",
+				"status": "active",
+				"name": "Backer",
+				"description": "Become a backer and support Svelte development",
+				"amount": 5.0,
+				"currency": "USD",
+				"frequency": "monthly",
+				"channels": ["opencollective-svelte"]
+			},
+			{
+				"guid": "sponsor-monthly",
+				"status": "active",
+				"name": "Sponsor",
+				"description": "Become a sponsor and support Svelte development",
+				"amount": 100.0,
+				"currency": "USD",
+				"frequency": "monthly",
+				"channels": ["opencollective-svelte"]
+			},
+			{
+				"guid": "custom-donation",
+				"status": "active",
+				"name": "Custom Contribution",
+				"description": "Make a custom one-time or recurring contribution of any amount",
+				"amount": 0,
+				"currency": "USD",
+				"frequency": "other",
+				"channels": ["opencollective-svelte"]
+			}
+		]
+	}
+}

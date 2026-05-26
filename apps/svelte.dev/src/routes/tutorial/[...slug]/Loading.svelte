@@ -34,8 +34,8 @@
 					</p>
 					<p>
 						If you have 'Delete cookies and site data when Firefox is closed' enabled in
-						<code>about:preferences#privacy</code>, make sure <code>svelte.dev</code> is included as
-						an exception.
+						<code>about:preferences#privacy</code>, make sure <code>svelte.dev</code> is included as an
+						exception.
 					</p>
 				{:else if /chrome/i.test(navigator.userAgent) && !/edg/i.test(navigator.userAgent)}
 					<p>

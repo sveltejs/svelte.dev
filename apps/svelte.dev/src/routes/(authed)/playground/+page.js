@@ -17,5 +17,6 @@ export function load({ url }) {
 	const q = new URLSearchParams();
 	if (version) q.set('version', version);
 	if (vim) q.set('vim', vim);
+	if (!gist && !example) q.set('show', 'input'); // show input screen on mobile if navigating via `/playground`
 	redirect(301, `/playground/${id}?${q}`);
 }
