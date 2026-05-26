@@ -84,7 +84,22 @@ const config: UserConfig = {
 		}
 	},
 	optimizeDeps: {
-		exclude: ['@sveltejs/site-kit', '@sveltejs/repl', '@rollup/browser']
+		exclude: [
+			'@sveltejs/site-kit',
+			'flexsearch',
+			// these are used by the REPL
+			'@sveltejs/acorn-typescript',
+			'@rollup/browser',
+			'acorn',
+			'magic-string',
+			'resolve.exports',
+			'tarparser',
+			'zimmerframe',
+			'esrap',
+			'esrap/languages/ts',
+			'tailwindcss'
+		],
+		include: ['@sveltejs/repl > @sveltejs/svelte-json-tree']
 	},
 	ssr: {
 		noExternal: ['@sveltejs/site-kit', '@sveltejs/repl']
