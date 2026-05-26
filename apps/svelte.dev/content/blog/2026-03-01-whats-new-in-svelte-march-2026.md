@@ -11,7 +11,7 @@ So, without further ado, let's dive in!
 
 ## What's new in Svelte
 
-- `createContext` can now be used when instantiating components programmatically (**svelte@5.50.0**, [Docs](https://svelte.dev/docs/svelte/context#Type-safe-context), [#17575](https://github.com/sveltejs/svelte/pull/17575))
+- `createContext` can now be used when instantiating components programmatically (**svelte@5.50.0**, [Docs](https://svelte.dev/docs/svelte/context), [#17575](https://github.com/sveltejs/svelte/pull/17575))
 - `{@html}` expressions now support `TrustedHTML` (**svelte@5.52.0**, [#17701](https://github.com/sveltejs/svelte/pull/17701))
 - Comments are now allowed in HTML tags (**svelte@5.53.0/svelte-language-server@0.17.28**, [#17671](https://github.com/sveltejs/svelte/pull/17671))
 - Error boundaries now work on the server (**svelte@5.53.0**, [Docs](https://svelte.dev/docs/svelte/svelte-boundary#Using-transformError), [#17672](https://github.com/sveltejs/svelte/pull/17672))

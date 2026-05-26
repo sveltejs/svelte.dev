@@ -50,6 +50,7 @@
 		"@sveltejs/kit": "^2.53.2",
 		"@types/node": "^20.19.33",
 		"flexsearch": "^0.8.212",
+		"gzip": "workspace:*",
 		"magic-string": "^0.30.21",
 		"marked": "^17.0.3",
 		"prettier": "^3.8.1",

@@ -96,7 +96,7 @@
 		"acorn": "^8.16.0",
 		"codemirror": "^6.0.2",
 		"esm-env": "^1.2.2",
-		"esrap": "^2.2.3",
+		"esrap": "^2.2.5",
 		"icons": "workspace:*",
 		"locate-character": "^3.0.0",
 		"magic-string": "^0.30.21",

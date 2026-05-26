@@ -1,3 +1,4 @@
+import process from 'node:process';
 import adapter from '@sveltejs/adapter-vercel';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -11,7 +12,8 @@ const config = {
 		inlineStyleThreshold: 1000,
 
 		prerender: {
-			origin: 'https://svelte.dev',
+			// use deployment URL for prerender origin, so that preview environments also have the correct links
+			origin: process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://svelte.dev',
 
 			handleMissingId(warning) {
 				if (warning.id.startsWith('H4sIA')) {
