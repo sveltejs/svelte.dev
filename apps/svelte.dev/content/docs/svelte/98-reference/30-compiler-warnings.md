@@ -863,7 +863,7 @@ Reassignments of module-level declarations will not cause reactive statements to
 ### script_unknown_attribute
 
 ```
-Unrecognised attribute — should be one of `generics`, `lang` or `module`. If this exists for a preprocessor, ensure that the preprocessor removes it
+Unrecognized attribute — should be one of `generics`, `lang` or `module`. If this exists for a preprocessor, ensure that the preprocessor removes it
 ```
 
 ### slot_element_deprecated
