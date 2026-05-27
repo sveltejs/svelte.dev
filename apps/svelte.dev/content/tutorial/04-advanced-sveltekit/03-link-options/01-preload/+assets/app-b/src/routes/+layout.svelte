@@ -31,5 +31,5 @@
 {@render children()}
 
 {#if previous && duration !== null}
-<p>navigated from {previous.from.url.pathname} to {previous.to.url.pathname} in <strong>{duration}ms</strong></p>
+	<p>navigated from {previous.from.url.pathname} to {previous.to.url.pathname} in <strong>{duration}ms</strong></p>
 {/if}
