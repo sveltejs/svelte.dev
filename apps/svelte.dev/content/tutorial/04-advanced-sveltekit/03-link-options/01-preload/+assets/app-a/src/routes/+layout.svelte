@@ -3,19 +3,20 @@
 
 	let { children } = $props();
 
-	let previous = $state();
-	let start = $state();
-	let end = $state();
-
-	$effect(() => {
+	let previousCached;
+	let startCached;
+	const { previous, start } = $derived.by(() => {
 		if (navigating.to) {
-			start = Date.now();
-			end = null;
-			previous = { ...navigating };
-		} else {
-			end = Date.now();
+			previousCached = { ...navigating };
+			startCached = Date.now();
 		}
-	});
+		return {
+			previous: previousCached,
+			start: startCached
+		}
+	})
+
+	const end = $derived(navigating.to || !start ? null : Date.now());
 </script>
 
 <nav>
@@ -26,6 +27,6 @@
 
 {@render children()}
 
-{#if previous && end}
-	<p>navigated from {previous.from.url.pathname} to {previous.to.url.pathname} in <strong>{end - start}ms</strong></p>
+{#if previous && start && end}
+  <p>navigated from {previous.from.url.pathname} to {previous.to.url.pathname} in <strong>{end - start}ms</strong></p>
 {/if}
