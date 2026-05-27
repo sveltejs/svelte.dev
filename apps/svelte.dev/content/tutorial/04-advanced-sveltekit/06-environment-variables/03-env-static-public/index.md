@@ -17,8 +17,8 @@ Then, import them into `src/routes/+page.svelte`:
 ```svelte
 /// file: src/routes/+page.svelte
 <script>
----	const PUBLIC_THEME_BACKGROUND = 'var(--bg-1)';
-	const PUBLIC_THEME_FOREGROUND = 'var(--fg-1)';---
+---	const PUBLIC_THEME_BACKGROUND = 'white';
+	const PUBLIC_THEME_FOREGROUND = 'black';---
 +++	import {
 		PUBLIC_THEME_BACKGROUND,
 		PUBLIC_THEME_FOREGROUND
