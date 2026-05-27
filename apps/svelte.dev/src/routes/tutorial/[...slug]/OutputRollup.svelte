@@ -92,14 +92,9 @@
 		width: 100%;
 		height: 100%;
 		font: var(--sk-font-mono);
+		color: var(--sk-fg-2);
 		background: var(--sk-bg-1);
 		border-top: 1px solid var(--sk-border);
 		overflow-y: auto;
-	}
-
-	@media (prefers-color-scheme: dark) {
-		.terminal {
-			background: rgba(0, 0, 0, 0.5);
-		}
 	}
 </style>

@@ -213,14 +213,19 @@
 		font: var(--sk-font-mono);
 		padding: 1rem;
 		border-top: 1px solid var(--sk-border);
+		color: var(--sk-fg-2);
 		background: rgba(255, 255, 255, 0.5);
 		backdrop-filter: blur(3px);
 		overflow-y: auto;
 	}
 
 	@media (prefers-color-scheme: dark) {
-		.terminal {
-			background: rgba(0, 0, 0, 0.1);
+		:global(:root:not(.light)) .terminal {
+			background: var(--sk-bg-1);
 		}
+	}
+
+	:global(:root.dark) .terminal {
+		background: var(--sk-bg-1);
 	}
 </style>
