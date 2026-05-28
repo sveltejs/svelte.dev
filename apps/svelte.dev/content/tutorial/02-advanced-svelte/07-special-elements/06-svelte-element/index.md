@@ -7,7 +7,7 @@ Sometimes you don't know in advance which element needs to be rendered. Rather t
 ```svelte
 /// file: App.svelte
 {#if selected === 'h1'}
-	<h1>I'm a <code>&lt;h1&gt;</code> element</h1>
+	<h1>I'm a <code>&amp;lt;h1&amp;gt;</code> element</h1>
 {:else}
 	<p>TODO others</p>
 {/if}

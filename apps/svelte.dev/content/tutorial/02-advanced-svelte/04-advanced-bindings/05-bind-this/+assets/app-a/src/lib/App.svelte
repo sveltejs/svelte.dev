@@ -15,7 +15,7 @@
 	});
 </script>
 
-<canvas width={32} height={32}></canvas>
+<canvas></canvas>
 
 <style>
 	canvas {
