@@ -2698,20 +2698,15 @@ path: Array<string | number>;
 <div class="ts-block">
 
 ```dts
-type RemoteLiveQuery<T> = RemoteResource<T> & {
-	/**
-	 * Returns an async iterator with live updates.
-	 * Unlike awaiting the resource directly, this can only be used _outside_ render
-	 * (i.e. in load functions, event handlers and so on)
-	 */
-	run(): AsyncGenerator<T>;
-	/** `true` if the live stream is currently connected. */
-	readonly connected: boolean;
-	/** `true` once the current live stream iterator is done. */
-	readonly done: boolean;
-	/** Reconnects the live stream immediately. */
-	reconnect(): Promise<void>;
-};
+type RemoteLiveQuery<T> = RemoteResource<T> &
+	AsyncIterable<T> & {
+		/** `true` if the live stream is currently connected. */
+		readonly connected: boolean;
+		/** `true` once the current live stream iterator is done. */
+		readonly done: boolean;
+		/** Reconnects the live stream immediately. */
+		reconnect(): Promise<void>;
+	};
 ```
 
 </div>
@@ -2758,12 +2753,6 @@ type RemotePrerenderFunction<Input, Output> = (
 
 ```dts
 type RemoteQuery<T> = RemoteResource<T> & {
-	/**
-	 * Returns a plain promise with the result.
-	 * Unlike awaiting the resource directly, this can only be used _outside_ render
-	 * (i.e. in load functions, event handlers and so on)
-	 */
-	run(): Promise<T>;
 	/**
 	 * On the client, this function will update the value of the query without re-fetching it.
 	 *
