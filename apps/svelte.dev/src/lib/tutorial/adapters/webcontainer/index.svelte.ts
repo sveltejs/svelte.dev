@@ -17,6 +17,7 @@ const converter = new AnsiToHtml({
 		1: '#e06060', // #A00
 		3: '#c47a20', // #A50
 		4: '#4d9eff', // #00A
+		5: '#c060c0', // #A0A
 		8: '#7a7a7a' // #555
 	}
 });
