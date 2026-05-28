@@ -57,12 +57,14 @@ export function generate_crosslinks() {
 	const by_tag: Record<string, RelatedLink[]> = {};
 
 	for (const filename of fs.globSync('content/**/*.md')) {
-		const metadata = get_frontmatter(filename);
+		const normalized_filename = filename.replace(/\\/g, '/');
+
+		const metadata = get_frontmatter(normalized_filename);
 		if (!metadata.tags) continue;
 
 		const tags = metadata.tags.split(',').map((tag) => tag.trim());
-		const path = get_path(filename);
-		const breadcrumbs = get_breadcrumbs(filename);
+		const path = get_path(normalized_filename);
+		const breadcrumbs = get_breadcrumbs(normalized_filename);
 
 		const page = { path, breadcrumbs, tags };
 		crosslinked.push(page);
