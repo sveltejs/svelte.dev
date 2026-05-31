@@ -21,13 +21,13 @@ Let's dive in!
 - Breaking: `.run()` was removed from remote queries - use `await query()` directly in all contexts instead (**2.61.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#query), [#15779](https://github.com/sveltejs/kit/pull/15779))
 - Remote queries can now be awaited in event handlers, async callbacks and module scope, with cache deduping shared across reactive and non-reactive consumers (**2.61.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#query-Query-arguments), [#15779](https://github.com/sveltejs/kit/pull/15779))
 - `query.live(...)` makes working with long-lived remote query subscriptions easier and are now async-iterable (experimental **2.59.0**, async in **2.61.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#query.live), [#15878](https://github.com/sveltejs/kit/pull/15878))
-- Remote form instances now expose a programmatic `submit()` API and can be passed into `enhance` callbacks (**2.61.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#form-enhance), [#15657](https://github.com/sveltejs/kit/pull/15657))
+- Breaking: Enhance callbacks now receive a copy of the form remote function instance, rather than a `{ form, data, submit }` object. Plus, remote form instances now expose a programmatic `submit()` API and can be passed into `enhance` callbacks (**2.61.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#form-enhance), [#15657](https://github.com/sveltejs/kit/pull/15657))
 
 For all the features and bugfixes that landed this month, check out the SvelteKit / Adapter [CHANGELOGs](https://github.com/sveltejs/kit/tree/main/packages).
 
 ## What's new in the Svelte ecosystem
 
-- Svelte language-tools now support TypeScript 6.0 across the language server, svelte2tsx and svelte-check packages (**svelte-language-server@0.18.0/svelte2tsx@0.7.55/svelte-check@4.4.8**, [Docs](https://devblogs.microsoft.com/typescript/announcing-typescript-6-0/), [#2985](https://github.com/sveltejs/language-tools/pull/2985))
+- Svelte language-tools now support TypeScript 6.0 across the language server, svelte2tsx and svelte-check packages (**svelte-language-server@0.18.0/svelte2tsx@0.7.55/svelte-check@4.4.8/svelte-preprocess@6.0.4**, [Docs](https://devblogs.microsoft.com/typescript/announcing-typescript-6-0/), [#2985](https://github.com/sveltejs/language-tools/pull/2985) / [#675](https://github.com/sveltejs/svelte-preprocess/pull/675))
 - Svelte MCP's `stdio` mode can now read file content directly, reducing round trips in local tool workflows (**mcp@0.1.23**, [Docs](https://svelte.dev/docs/ai/svelte-mcp), [#198](https://github.com/sveltejs/ai-tools/pull/198))
 - vite-plugin-svelte now enables the optimizer for server environments during development (**vite-plugin-svelte@7.1.0**, [#1328](https://github.com/sveltejs/vite-plugin-svelte/pull/1328))
 
@@ -62,6 +62,7 @@ _This Week in Svelte_
 _To Read_
 
 - [Why Svelte Is Better Than React in the Agentic Era](https://zackwebster.com/blog/why-svelte-is-better-than-react-in-the-ai-era) by Zack Webster
+- [Automate LinkedIn Carousels with SvelteKit Remote Functions](https://orshot.com/blog/automate-linkedin-carousels-sveltekit) by Rishi Raj Jain
 
 ### Libraries, Tools & Components
 
