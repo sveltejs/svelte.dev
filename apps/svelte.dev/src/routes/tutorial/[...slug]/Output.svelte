@@ -147,7 +147,7 @@
 <div class="content">
 	<SplitPane
 		min="50px"
-		type="vertical"
+		type="rows"
 		disabled={!terminal_visible}
 		max={terminal_visible ? '80%' : '100%'}
 		bind:pos={() => (pos.current + '%') as Length, (v) => pos.set(parseFloat(v), { instant: true })}
@@ -213,14 +213,7 @@
 		font: var(--sk-font-mono);
 		padding: 1rem;
 		border-top: 1px solid var(--sk-border);
-		background: rgba(255, 255, 255, 0.5);
 		backdrop-filter: blur(3px);
 		overflow-y: auto;
-	}
-
-	@media (prefers-color-scheme: dark) {
-		.terminal {
-			background: rgba(0, 0, 0, 0.1);
-		}
 	}
 </style>

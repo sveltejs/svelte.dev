@@ -13,7 +13,7 @@ const nav_links: NavigationLink[] = [
 			docs.topics['docs/svelte'],
 			docs.topics['docs/kit'],
 			docs.topics['docs/cli'],
-			docs.topics['docs/mcp']
+			docs.topics['docs/ai']
 		].map((topic) => ({
 			title: topic.metadata.title,
 			path: '/' + topic.slug, // this will make the UI show a flyout menu for the docs nav entry

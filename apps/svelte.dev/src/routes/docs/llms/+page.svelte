@@ -7,8 +7,8 @@
 		<h1>Docs for LLMs</h1>
 
 		<p>
-			We support the <a href="https://llmstxt.org/">llms.txt</a> convention for making documentation
-			available to large language models and the applications that make use of them.
+			We support the <a href="https://llmstxt.org/">llms.txt</a> convention for making documentation available
+			to large language models and the applications that make use of them.
 		</p>
 
 		<p>Currently, we have the following root-level files...</p>
@@ -24,8 +24,8 @@
 				context windows
 			</li>
 			<li>
-				<a href="/llms-small.txt">/llms-small.txt</a> — highly compressed documentation for use with
-				smaller context windows
+				<a href="/llms-small.txt">/llms-small.txt</a> — highly compressed documentation for use with smaller
+				context windows
 			</li>
 		</ul>
 

@@ -245,7 +245,7 @@ function stringify_expanded_type(type: Declaration) {
 }
 
 /**
- * Helper function for {@link replace_export_type_placeholders}. Renders specifiv members to their markdown/html representation.
+ * Helper function for {@link replace_export_type_placeholders}. Renders specific members to their markdown/html representation.
  */
 function stringify(member: TypeElement, lang: keyof typeof SHIKI_LANGUAGE_MAP = 'ts'): string {
 	if (!member) return '';

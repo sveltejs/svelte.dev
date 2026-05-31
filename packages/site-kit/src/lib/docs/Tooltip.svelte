@@ -95,9 +95,10 @@
 				font: var(--sk-font-body-small);
 			}
 
-			.tags {
+			.twoslash-popup-docs-tags {
 				display: grid;
-				grid-template-columns: 8rem 1fr;
+				grid-template-columns: auto 1fr;
+				column-gap: 1rem;
 				align-items: baseline;
 
 				.tag,

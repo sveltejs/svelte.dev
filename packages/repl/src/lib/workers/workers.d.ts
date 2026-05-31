@@ -54,6 +54,7 @@ export interface BundleOptions {
 	tailwind?: boolean;
 	runes?: boolean;
 	fragments?: 'html' | 'tree';
+	async?: boolean;
 	aliases?: Record<string, string>;
 }
 

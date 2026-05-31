@@ -67,7 +67,7 @@
 </script>
 
 <div class="container" bind:this={container}>
-	<SplitPane {min} {max} type="vertical" bind:pos>
+	<SplitPane {min} {max} type="rows" bind:pos>
 		{#snippet a()}
 			<section>
 				{@render main?.()}

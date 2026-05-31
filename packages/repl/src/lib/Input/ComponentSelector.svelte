@@ -80,7 +80,7 @@
 <div class="component-selector">
 	<!-- svelte-ignore a11y_no_static_element_interactions -->
 	<div class="file-tabs">
-		{#each workspace.files as File[] as file, index (file.name)}
+		{#each workspace.file_nodes as file, index (file.name)}
 			<div
 				class="button"
 				class:editable={file.name !== 'App.svelte'}
@@ -175,6 +175,16 @@
 			<label class="option">
 				<span>Toggle Tailwind</span>
 				<Checkbox bind:checked={workspace.tailwind}></Checkbox>
+			</label>
+
+			<label class="option" aria-disabled={!workspace.supports_async}>
+				<span>Async mode</span>
+				<Checkbox
+					disabled={!workspace.supports_async}
+					checked={workspace.compiler_options.async}
+					onchange={() =>
+						workspace.update_compiler_options({ async: !workspace.compiler_options.async })}
+				></Checkbox>
 			</label>
 
 			<button disabled={!can_migrate} onclick={migrate}>Migrate to Svelte 5, if possible</button>
@@ -344,6 +354,10 @@
 
 	.option {
 		height: 3.6rem;
+
+		&[aria-disabled='true'] {
+			color: var(--sk-fg-4);
+		}
 
 		input {
 			background: transparent;

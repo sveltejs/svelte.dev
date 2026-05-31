@@ -12,12 +12,17 @@ const documents = import.meta.glob<string>('./**/*.md', {
 	base: '../../../content'
 });
 
-const assets = import.meta.glob<string>(['./**/+assets/**', './**/+assets/**/.env'], {
-	eager: true,
-	query: '?url',
-	import: 'default',
-	base: '../../../content'
-});
+const assets = import.meta.glob<string>(
+	['./**/+assets/**', '!**/node_modules', '!**/.svelte-kit'],
+	{
+		// required to include .env tutorial files
+		exhaustive: true,
+		eager: true,
+		query: '?url',
+		import: 'default',
+		base: '../../../content'
+	}
+);
 
 const registry_docs = import.meta.glob<string>(
 	'../../../src/lib/server/generated/registry/*.json',
@@ -166,11 +171,7 @@ export const examples = index.examples.children;
  * Represents a Svelte package in the registry
  */
 export interface Package
-	extends PackageKey,
-		PackageManual,
-		PackageNpm,
-		PackageGithub,
-		PackageCalculated {}
+	extends PackageKey, PackageManual, PackageNpm, PackageGithub, PackageCalculated {}
 
 export interface PackageKey {
 	/** Package name */

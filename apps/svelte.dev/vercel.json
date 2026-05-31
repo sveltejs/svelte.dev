@@ -1,5 +1,11 @@
 {
 	"$schema": "https://openapi.vercel.sh/vercel.json",
+	"rewrites": [
+		{
+			"source": "/opencode/schema.json",
+			"destination": "https://raw.githubusercontent.com/sveltejs/ai-tools/refs/heads/main/packages/opencode/schema.json"
+		}
+	],
 	"headers": [
 		{
 			"source": "/_app/immutable/workers/(.*)",

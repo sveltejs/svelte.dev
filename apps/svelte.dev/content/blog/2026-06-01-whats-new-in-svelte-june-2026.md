@@ -1,0 +1,106 @@
+---
+title: "What's new in Svelte: June 2026"
+description: 'Better forms, new long-lived remote query APIs and TypeScript 6 support in language-tools'
+author: Dani Sandoval
+authorURL: https://dreamindani.com
+---
+
+This month we got a bunch of improvements in SvelteKit's forms and remote functions. Plus, a new query function (`.live(...)`) that makes accessing real-time data from the server easier.
+
+Keep an eye out for a few breaking changes in remote functions, if you're using those. Otherwise, enjoy all the new SvelteKit features and bug fixes in the latest versions of Svelte.
+
+Let's dive in!
+
+## What's new in SvelteKit
+
+- Form `submit` now returns a boolean to indicate submission validity for enhanced remote forms (**2.57.0**, [Docs](https://svelte.dev/docs/kit/$app-forms#enhance), [#15530](https://github.com/sveltejs/kit/pull/15530))
+- Breaking: `requested(...)` now requires `limit` and yields `{ arg, query }` entries instead of returning the validated argument directly (**2.58.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#Single-flight-mutations-Client-requested-refreshes), [#15739](https://github.com/sveltejs/kit/pull/15739))
+- `requested(...)` now supports `query.batch(...)`, which makes batch remote query workflows easier to inspect in request-time logic (**2.59.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#query.batch), [#15751](https://github.com/sveltejs/kit/pull/15751))
+- `submit` and `hidden` remote form fields can now accept booleans and numbers directly (**2.60.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#form-Fields), [#15802](https://github.com/sveltejs/kit/pull/15802))
+- SvelteKit now warns when remote form validation issues are never read, helping catch missed UX paths earlier (**2.60.0**, [Docs](https://svelte.dev/docs/kit/remote-functions), [#15653](https://github.com/sveltejs/kit/pull/15653))
+- Breaking: `.run()` was removed from remote queries - use `await query()` directly in all contexts instead (**2.61.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#query), [#15779](https://github.com/sveltejs/kit/pull/15779))
+- Remote queries can now be awaited in event handlers, async callbacks and module scope, with cache deduping shared across reactive and non-reactive consumers (**2.61.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#query-Query-arguments), [#15779](https://github.com/sveltejs/kit/pull/15779))
+- `query.live(...)` makes working with long-lived remote query subscriptions easier and are now async-iterable (experimental **2.59.0**, async in **2.61.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#query.live), [#15878](https://github.com/sveltejs/kit/pull/15878))
+- Breaking: Enhance callbacks now receive a copy of the form remote function instance, rather than a `{ form, data, submit }` object. Plus, remote form instances now expose a programmatic `submit()` API and can be passed into `enhance` callbacks (**2.61.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#form-enhance), [#15657](https://github.com/sveltejs/kit/pull/15657))
+
+For all the features and bugfixes that landed this month, check out the SvelteKit / Adapter [CHANGELOGs](https://github.com/sveltejs/kit/tree/main/packages).
+
+## What's new in Svelte and the Svelte ecosystem
+
+- Templates now allow declarations directly in markup, making it easier to define values close to where they're used (**svelte@5.56.0**, [#18282](https://github.com/sveltejs/svelte/pull/18282))
+- Svelte language-tools now support TypeScript 6.0 across the language server, svelte2tsx and svelte-check packages (**svelte-language-server@0.18.0/svelte2tsx@0.7.55/svelte-check@4.4.8/svelte-preprocess@6.0.4**, [Docs](https://devblogs.microsoft.com/typescript/announcing-typescript-6-0/), [#2985](https://github.com/sveltejs/language-tools/pull/2985) / [#675](https://github.com/sveltejs/svelte-preprocess/pull/675))
+- Svelte MCP's `stdio` mode can now read file content directly, reducing round trips in local tool workflows (**mcp@0.1.23**, [Docs](https://svelte.dev/docs/ai/svelte-mcp), [#198](https://github.com/sveltejs/ai-tools/pull/198))
+- vite-plugin-svelte now enables the optimizer for server environments during development (**vite-plugin-svelte@7.1.0**, [#1328](https://github.com/sveltejs/vite-plugin-svelte/pull/1328))
+
+Want to dive deep into everything new this month? Check out the [language-tools](https://github.com/sveltejs/language-tools/releases), [ai-tools](https://github.com/sveltejs/ai-tools/releases) and [vite-plugin-svelte](https://github.com/sveltejs/vite-plugin-svelte/releases) releases.
+
+For all the minor changes and bugfixes that came out in the Svelte compiler this month, you can read the full [Svelte CHANGELOG](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md).
+
+---
+
+## Community Showcase
+
+### Apps & Sites built with Svelte
+
+- [asciidia.com](https://asciidia.com) is an ASCII-style browser game experiment built with Svelte
+- [Bingewatcher.org](https://bingewatcher.org) is a daily movie guessing game based on data from Wikipedia and word vectors for 157 languages
+- [Delcard](https://delcard.fun) is an open source peer-to-peer card game platform built with SvelteKit ([GitHub](https://github.com/LucaDeltort/delcard_games))
+- [Dialyma](https://dialyma.com/tutorials) is an open source canvas builder that can export production-ready code ([GitHub](https://github.com/dialymaai/dialyma))
+- [Exort](https://www.exort.dev/) is a local workspace for writing microcontroller code, compiling and uploading projects, and monitoring live serial output on supported boards ([GitHub](https://github.com/Razz19/Exort/))
+- [Heavy Duty Inc](https://store.steampowered.com/app/4154670/Heavy_Duty_Inc/) is a turn-based tactics game built with Svelte ([Reddit](https://www.reddit.com/r/sveltejs/comments/1tq7cnr/built_a_turnbased_tactics_game_with_svelte_demo/))
+- [hope-art.app](https://www.hope-art.app/en) applies protection filters to artwork images before sharing them online to prevent unauthorized AI training and style mimicry ([GitHub](https://github.com/HopeArtOrg/hope-re))
+- [Image Palette Studio](https://image-palette-studio.vercel.app/) turns images into UI themes with generated CSS variables ([GitHub](https://github.com/aozoragh/image-palette-studio))
+- [Pad](https://getpad.dev) is a local-first collaboration tool that combines a Go CLI with an embedded Svelte web app for human-agent workflows ([GitHub](https://github.com/PerpetualSoftware/pad))
+- [Serverwat.ch](https://serverwat.ch/) is a SvelteKit dashboard for monitoring Hetzner-hosted projects
+- [Trezur](https://trezur.quirkdom.com/) is a privacy-preserving browser-side 2FA authenticator with PWA support and cloud sync ([GitHub](https://github.com/quirkdom/trezur))
+- [Splitwave](https://splitwave.app/) is a free node-based audio router for macOS built with Tauri + Svelte ([GitHub](https://github.com/Horuse/Splitwave))
+- [Tank Supremo](https://tanks.tiyal.com/) is a multiplayer 3D tank game built with Svelte
+- [Vivix](https://vivix.dev) is a JavaScript execution visualizer that uses a worker-based interpreter for smooth timeline scrubbing ([GitHub](https://github.com/HenryOnilude/vivix))
+- [Zenos](https://zenos.com) is a stealth startup from SvelteKit maintainer [Ben McCann](https://www.benmccann.com) that is bringing software productivity to the physical world.
+
+### Learning Resources
+
+_This Week in Svelte_
+
+- [Ep. 140](https://www.youtube.com/watch?v=AVX9lqFHOnM) - Changelog, Imperative interfaces
+- [Ep. 141](https://www.youtube.com/watch?v=mq-52XBwUbM) - Changelog
+- [Ep. 142](https://www.youtube.com/watch?v=P87sNdxZa6Q) - Changelog
+
+_To Read_
+
+- [Why Svelte Is Better Than React in the Agentic Era](https://zackwebster.com/blog/why-svelte-is-better-than-react-in-the-ai-era) by Zack Webster
+- [Automate LinkedIn Carousels with SvelteKit Remote Functions](https://orshot.com/blog/automate-linkedin-carousels-sveltekit) by Rishi Raj Jain
+- [Tank Supremo: From a Teenage Dream to a Multiplayer Game](https://www.linkedin.com/pulse/tank-supremo-from-teenage-dream-multiplayer-game-eyal-azulay-jylde/) by Eyal Azulay
+
+### Libraries, Tools & Components
+
+_UI Components and Visual Effects_
+
+- [Huey](https://hueycolor.pages.dev) provides a composable color picker for Svelte 5 ([GitHub](https://github.com/hueycolor/huey))
+- [Svelte Dot Matrix Loaders](https://sv-matrix.vercel.app) provides 50+ animated dot-matrix loaders for Svelte projects ([GitHub](https://github.com/SikandarJODD/sv-matrix))
+- [Paper Shaders for Svelte](https://shaders.devmischief.com) provides paper-style shader effects in an open source Svelte package ([GitHub](https://github.com/manuelogomigo/paper-shaders-svelte))
+- [EmbedPDF for Svelte](https://www.embedpdf.com/svelte-pdf-viewer) provides a headless PDF viewer for Svelte apps built on PDFium instead of PDF.js ([GitHub](https://github.com/embedpdf/embed-pdf-viewer))
+- [Svelte Event Calendar](https://svar.dev/demos/calendar/) is a Google-like event calendar component for Svelte with drag-and-drop editing and multiple calendar support ([GitHub](https://github.com/svar-widgets/calendar))
+
+_App Building and Product Tooling_
+
+- [Convex Better Auth UI for SvelteKit](https://etesie.dev/docs/auth/overview/introduction) provides self-hosted auth and organization UI components powered by Convex + Better Auth ([GitHub](https://github.com/mmailaender/Convex-Better-Auth-UI))
+- [Aphex CMS](https://getaphex.com/) is an open source Sanity-inspired CMS that runs inside a single SvelteKit app ([GitHub](https://github.com/IcelandicIcecream/aphex))
+- [svelte-visual-builder](https://github.com/BluePointDigital/svelte-visual-builder) is an Elementor-style visual builder for SvelteKit projects
+- [SvelteESP32 v3.0](https://github.com/BCsabaEngine/svelteesp32) lets you wire Svelte frontends to ESP32 workflows with an updated Vite plugin flow
+
+_Developer Tools and Utilities_
+
+- [Svelte Hero](https://plugins.jetbrains.com/plugin/31546-svelte-hero) is a new JetBrains plugin focused on better Svelte support
+- [jscpd v4.2.0](https://jscpd.dev/) now supports Svelte projects for duplicate code detection ([Changelog](https://github.com/kucherenko/jscpd/blob/master/CHANGELOG.md#420--2026-05-14))
+- [Svelte Use](https://svelte-use.ariefsn.dev) provides a collection of composable utilities for Svelte apps ([GitHub](https://github.com/ariefsn/svelte-use))
+
+_Plugins and Runtime Integrations_
+
+- [vite-plugin-svelte-tailwind-auto-reference](https://github.com/awaiden/vite-plugin-svelte-tailwind-auto-reference) automatically injects Tailwind CSS `@reference` in Svelte style blocks when `@apply` is used
+- [SvelteKit Proxy](https://github.com/ariefsn/sveltekit-proxy) provides a simple way to proxy requests in production using SvelteKit's `hooks.server.ts`
+- [svelte-ws](https://github.com/sowahq/svelte-ws) adds WebSocket support across SvelteKit runtimes with an adapter and Vite plugin
+
+That's it for this month! Let us know if we missed anything on [Reddit](https://www.reddit.com/r/sveltejs/) or [Discord](https://discord.gg/svelte).
+
+Until next time 👋🏼!

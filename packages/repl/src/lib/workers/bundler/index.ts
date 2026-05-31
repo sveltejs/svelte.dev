@@ -65,14 +65,9 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 				setTimeout(async () => {
 					if (current_id !== uid) return;
 
-					const result = await bundle(
-						svelte,
-						svelte_version,
-						uid,
-						files,
-						options,
-						can_use_experimental_async
-					);
+					const use_async = can_use_experimental_async && options.async;
+
+					const result = await bundle(svelte, svelte_version, uid, files, options, use_async);
 
 					console.log('[bundle worker result]', result);
 
@@ -105,11 +100,12 @@ function get_svelte(svelte_version: string) {
 	self.postMessage({ type: 'status', message: `fetching svelte@${svelte_version}` });
 	ready_version = svelte_version;
 	ready = load_svelte(svelte_version || 'latest');
-	ready.then(({ version }) => {
+	ready.then(({ version, can_use_experimental_async }) => {
 		ready_version = version;
 		self.postMessage({
 			type: 'version',
-			message: version
+			version,
+			supports_async: can_use_experimental_async
 		});
 	});
 	return ready;
@@ -149,7 +145,7 @@ async function init_tailwind(user_css = '') {
 
 	return await tailwindcss.compile(tailwind_base, {
 		loadStylesheet: async (id, base) => {
-			return { content: tailwind_files[id], base };
+			return { content: tailwind_files[id], base, path: '' };
 		}
 	});
 }
@@ -380,15 +376,17 @@ async function get_bundle(
 						}
 					);
 					// add the CSS via injecting a style tag
+					const style_id = 'svelte-' + name.replace(/[^a-zA-Z0-9.-]/g, '_');
 					result.js.code +=
 						'\n\n' +
 						`
-					import { styles as $$_styles } from '${VIRTUAL}/${STYLES}';
-					const $$__style = document.createElement('style');
-					$$__style.textContent = ${JSON.stringify(result.css.code)};
-					document.head.append($$__style);
-					$$_styles.push($$__style);
-				`.replace(/\t/g, '');
+							import { styles as $$_styles } from '${VIRTUAL}/${STYLES}';
+							const $$__style = document.createElement('style');
+							$$__style.id = ${JSON.stringify(style_id)};
+							$$__style.textContent = ${JSON.stringify(result.css.code)};
+							document.head.append($$__style);
+							$$_styles.push($$__style);
+						`.replace(/\t/g, '');
 				}
 			} else if (/\.svelte\.(js|ts)$/.test(id)) {
 				const compilerOptions: any = {

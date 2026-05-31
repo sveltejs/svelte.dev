@@ -29,6 +29,10 @@ export function remove_playground_links(content: string): string {
 	return content.replaceAll(/\[([^\]]+)\]\((https:\/\/svelte\.dev)?\/playground.+\)/g, '$1');
 }
 
+export function remove_llm_ignore_blocks(content: string): string {
+	return content.replace(/<!--\s*llm-ignore-start\s*-->[\s\S]*?<!--\s*llm-ignore-end\s*-->/g, '');
+}
+
 export function generate_llm_content(options: GenerateLlmContentOptions): string {
 	let content = '';
 
@@ -45,9 +49,8 @@ export function generate_llm_content(options: GenerateLlmContentOptions): string
 				continue;
 			}
 
-			const doc_content = options.minimize
-				? minimize_content(document.body, options.minimize)
-				: document.body;
+			const body = remove_llm_ignore_blocks(document.body);
+			const doc_content = options.minimize ? minimize_content(body, options.minimize) : body;
 			if (doc_content.trim() === '') continue;
 			// replaces <tags> with `<tags>`
 			const doc_title = document.metadata.title.replace(

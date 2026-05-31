@@ -2,7 +2,8 @@
 	let promise = $state(getRandomNumber());
 
 	async function getRandomNumber() {
-		const res = await fetch(`/tutorial/random-number`);
+		// endpoint has a 1s delay and ~33% chance of failure
+		const res = await fetch(`/tutorial/random-number?min=0&max=100`);
 		const text = await res.text();
 
 		if (res.ok) {

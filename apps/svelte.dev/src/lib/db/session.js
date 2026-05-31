@@ -84,5 +84,7 @@ export async function destroy(sessionid) {
 /** @param {string | null} str */
 export function from_cookie(str) {
 	if (!str) return null;
-	return read(cookie.parse(str).sid);
+	const sid = cookie.parse(str).sid;
+	if (!sid) return null;
+	return read(sid);
 }

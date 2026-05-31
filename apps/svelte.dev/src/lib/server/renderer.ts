@@ -45,7 +45,7 @@ export const render_content = (
 			injected.push(
 				`declare module '$env/dynamic/private' { export const env: Record<string, string> }`,
 				`declare module '$env/dynamic/public' { export const env: Record<string, string> }`,
-				`declare module '$env/static/private' { export const API_KEY: string }`,
+				`declare module '$env/static/private' { export const API_KEY: string; export const VERCEL_COMMIT_REF: string }`,
 				`declare module '$env/static/public' { export const PUBLIC_BASE_URL: string }`
 			);
 		}
@@ -56,8 +56,10 @@ export const render_content = (
 				`import type * as Kit from '@sveltejs/kit';`,
 				`export type PageLoad = Kit.Load<Record<string, any>>;`,
 				`export type PageServerLoad = Kit.ServerLoad<Record<string, any>>;`,
+				`export type PageServerLoadEvent = Parameters<PageServerLoad>[0];`,
 				`export type LayoutLoad = Kit.Load<Record<string, any>>;`,
 				`export type LayoutServerLoad = Kit.ServerLoad<Record<string, any>>;`,
+				`export type LayoutServerLoadEvent = Parameters<LayoutServerLoad>[0];`,
 				`export type RequestHandler = Kit.RequestHandler<Record<string, any>>;`,
 				`export type Action = Kit.Action<Record<string, any>>;`,
 				`export type Actions = Kit.Actions<Record<string, any>>;`,

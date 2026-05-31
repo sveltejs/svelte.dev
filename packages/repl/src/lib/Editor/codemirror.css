@@ -244,6 +244,7 @@
 		position: relative;
 		padding: 1rem;
 		filter: var(--sk-shadow);
+		z-index: 9999;
 
 		:root.dark {
 			--warning: hsl(40 100% 50%);
