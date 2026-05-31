@@ -518,6 +518,7 @@
 
 			th {
 				font: var(--sk-font-h3);
+				font-size: var(--sk-font-size-body);
 			}
 		}
 
