@@ -42,20 +42,20 @@ For all the minor changes and bugfixes that came out in the Svelte compiler this
 
 ### Apps & Sites built with Svelte
 
-- [Pad](https://getpad.dev) is a local-first collaboration tool that combines a Go CLI with an embedded Svelte web app for human-agent workflows ([GitHub](https://github.com/PerpetualSoftware/pad))
-- [Exort](https://www.exort.dev/) is a local workspace for writing microcontroller code, compiling and uploading projects, and monitoring live serial output on supported boards ([GitHub](https://github.com/Razz19/Exort/))
+- [asciidia.com](https://asciidia.com) is an ASCII-style browser game experiment built with Svelte
 - [Bingewatcher.org](https://bingewatcher.org) is a daily movie guessing game based on data from Wikipedia and word vectors for 157 languages
-- [Splitwave](https://splitwave.app/) is a free node-based audio router for macOS built with Tauri + Svelte ([GitHub](https://github.com/Horuse/Splitwave))
 - [Delcard](https://delcard.fun) is an open source peer-to-peer card game platform built with SvelteKit ([GitHub](https://github.com/LucaDeltort/delcard_games))
-- [Vivix](https://vivix.dev) is a JavaScript execution visualizer that uses a worker-based interpreter for smooth timeline scrubbing ([GitHub](https://github.com/HenryOnilude/vivix))
+- [Dialyma](https://dialyma.com/tutorials) is an open source canvas builder that can export production-ready code ([GitHub](https://github.com/dialymaai/dialyma))
+- [Exort](https://www.exort.dev/) is a local workspace for writing microcontroller code, compiling and uploading projects, and monitoring live serial output on supported boards ([GitHub](https://github.com/Razz19/Exort/))
+- [Heavy Duty Inc](https://store.steampowered.com/app/4154670/Heavy_Duty_Inc/) is a turn-based tactics game built with Svelte ([Reddit](https://www.reddit.com/r/sveltejs/comments/1tq7cnr/built_a_turnbased_tactics_game_with_svelte_demo/))
 - [hope-art.app](https://www.hope-art.app/en) applies protection filters to artwork images before sharing them online to prevent unauthorized AI training and style mimicry ([GitHub](https://github.com/HopeArtOrg/hope-re))
 - [Image Palette Studio](https://image-palette-studio.vercel.app/) turns images into UI themes with generated CSS variables ([GitHub](https://github.com/aozoragh/image-palette-studio))
-- [Dialyma](https://dialyma.com/tutorials) is an open source canvas builder that can export production-ready code ([GitHub](https://github.com/dialymaai/dialyma))
+- [Pad](https://getpad.dev) is a local-first collaboration tool that combines a Go CLI with an embedded Svelte web app for human-agent workflows ([GitHub](https://github.com/PerpetualSoftware/pad))
 - [Serverwat.ch](https://serverwat.ch/) is a SvelteKit dashboard for monitoring Hetzner-hosted projects
-- [Heavy Duty Inc](https://store.steampowered.com/app/4154670/Heavy_Duty_Inc/) is a turn-based tactics game built with Svelte ([Reddit](https://www.reddit.com/r/sveltejs/comments/1tq7cnr/built_a_turnbased_tactics_game_with_svelte_demo/))
 - [Trezur](https://trezur.quirkdom.com/) is a privacy-preserving browser-side 2FA authenticator with PWA support and cloud sync ([GitHub](https://github.com/quirkdom/trezur))
+- [Splitwave](https://splitwave.app/) is a free node-based audio router for macOS built with Tauri + Svelte ([GitHub](https://github.com/Horuse/Splitwave))
 - [Tank Supremo](https://tanks.tiyal.com/) is a multiplayer 3D tank game built with Svelte
-- [asciidia.com](https://asciidia.com) is an ASCII-style browser game experiment built with Svelte
+- [Vivix](https://vivix.dev) is a JavaScript execution visualizer that uses a worker-based interpreter for smooth timeline scrubbing ([GitHub](https://github.com/HenryOnilude/vivix))
 - [Zenos](https://zenos.com) is a stealth startup from SvelteKit maintainer [Ben McCann](https://www.benmccann.com) that is bringing software productivity to the physical world.
 
 ### Learning Resources
@@ -74,19 +74,30 @@ _To Read_
 
 ### Libraries, Tools & Components
 
+_UI Components and Visual Effects_
+
 - [Huey](https://hueycolor.pages.dev) provides a composable color picker for Svelte 5 ([GitHub](https://github.com/hueycolor/huey))
 - [Svelte Dot Matrix Loaders](https://sv-matrix.vercel.app) provides 50+ animated dot-matrix loaders for Svelte projects ([GitHub](https://github.com/SikandarJODD/sv-matrix))
 - [Paper Shaders for Svelte](https://shaders.devmischief.com) provides paper-style shader effects in an open source Svelte package ([GitHub](https://github.com/manuelogomigo/paper-shaders-svelte))
 - [EmbedPDF for Svelte](https://www.embedpdf.com/svelte-pdf-viewer) provides a headless PDF viewer for Svelte apps built on PDFium instead of PDF.js ([GitHub](https://github.com/embedpdf/embed-pdf-viewer))
 - [Svelte Event Calendar](https://svar.dev/demos/calendar/) is a Google-like event calendar component for Svelte with drag-and-drop editing and multiple calendar support ([GitHub](https://github.com/svar-widgets/calendar))
+
+_App Building and Product Tooling_
+
 - [Convex Better Auth UI for SvelteKit](https://etesie.dev/docs/auth/overview/introduction) provides self-hosted auth and organization UI components powered by Convex + Better Auth ([GitHub](https://github.com/mmailaender/Convex-Better-Auth-UI))
 - [Aphex CMS](https://getaphex.com/) is an open source Sanity-inspired CMS that runs inside a single SvelteKit app ([GitHub](https://github.com/IcelandicIcecream/aphex))
-- [Svelte Hero](https://plugins.jetbrains.com/plugin/31546-svelte-hero) is a new JetBrains plugin focused on better Svelte support
-- [jscpd v4.2.0](https://jscpd.dev/) now supports Svelte projects for duplicate code detection ([Changelog](https://github.com/kucherenko/jscpd/blob/master/CHANGELOG.md#420--2026-05-14))
 - [svelte-visual-builder](https://github.com/BluePointDigital/svelte-visual-builder) is an Elementor-style visual builder for SvelteKit projects
 - [SvelteESP32 v3.0](https://github.com/BCsabaEngine/svelteesp32) lets you wire Svelte frontends to ESP32 workflows with an updated Vite plugin flow
-- [vite-plugin-svelte-tailwind-auto-reference](https://github.com/awaiden/vite-plugin-svelte-tailwind-auto-reference) automatically injects Tailwind CSS `@reference` in Svelte style blocks when `@apply` is used
+
+_Developer Tools and Utilities_
+
+- [Svelte Hero](https://plugins.jetbrains.com/plugin/31546-svelte-hero) is a new JetBrains plugin focused on better Svelte support
+- [jscpd v4.2.0](https://jscpd.dev/) now supports Svelte projects for duplicate code detection ([Changelog](https://github.com/kucherenko/jscpd/blob/master/CHANGELOG.md#420--2026-05-14))
 - [Svelte Use](https://svelte-use.ariefsn.dev) provides a collection of composable utilities for Svelte apps ([GitHub](https://github.com/ariefsn/svelte-use))
+
+_Plugins and Runtime Integrations_
+
+- [vite-plugin-svelte-tailwind-auto-reference](https://github.com/awaiden/vite-plugin-svelte-tailwind-auto-reference) automatically injects Tailwind CSS `@reference` in Svelte style blocks when `@apply` is used
 - [SvelteKit Proxy](https://github.com/ariefsn/sveltekit-proxy) provides a simple way to proxy requests in production using SvelteKit's `hooks.server.ts`
 - [svelte-ws](https://github.com/sowahq/svelte-ws) adds WebSocket support across SvelteKit runtimes with an adapter and Vite plugin
 
