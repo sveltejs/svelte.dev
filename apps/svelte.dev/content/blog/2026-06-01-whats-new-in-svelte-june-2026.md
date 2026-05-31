@@ -25,15 +25,16 @@ Let's dive in!
 
 For all the features and bugfixes that landed this month, check out the SvelteKit / Adapter [CHANGELOGs](https://github.com/sveltejs/kit/tree/main/packages).
 
-## What's new in the Svelte ecosystem
+## What's new in Svelte and the Svelte ecosystem
 
+- Templates now allow declarations directly in markup, making it easier to define values close to where they're used (**svelte@5.56.0**, [#18282](https://github.com/sveltejs/svelte/pull/18282))
 - Svelte language-tools now support TypeScript 6.0 across the language server, svelte2tsx and svelte-check packages (**svelte-language-server@0.18.0/svelte2tsx@0.7.55/svelte-check@4.4.8/svelte-preprocess@6.0.4**, [Docs](https://devblogs.microsoft.com/typescript/announcing-typescript-6-0/), [#2985](https://github.com/sveltejs/language-tools/pull/2985) / [#675](https://github.com/sveltejs/svelte-preprocess/pull/675))
 - Svelte MCP's `stdio` mode can now read file content directly, reducing round trips in local tool workflows (**mcp@0.1.23**, [Docs](https://svelte.dev/docs/ai/svelte-mcp), [#198](https://github.com/sveltejs/ai-tools/pull/198))
 - vite-plugin-svelte now enables the optimizer for server environments during development (**vite-plugin-svelte@7.1.0**, [#1328](https://github.com/sveltejs/vite-plugin-svelte/pull/1328))
 
-This only covers the new features from the Svelte ecosystem. For everything else, check out the [language-tools releases](https://github.com/sveltejs/language-tools/releases), [ai-tools releases](https://github.com/sveltejs/ai-tools/releases) and [vite-plugin-svelte releases](https://github.com/sveltejs/vite-plugin-svelte/releases).
+Want to dive deep into everything new this month? Check out the [language-tools](https://github.com/sveltejs/language-tools/releases), [ai-tools](https://github.com/sveltejs/ai-tools/releases) and [vite-plugin-svelte](https://github.com/sveltejs/vite-plugin-svelte/releases) releases.
 
-For all the bugfixes that came out in Svelte this month, you can read the full [Svelte CHANGELOG](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md).
+For all the minor changes and bugfixes that came out in the Svelte compiler this month, you can read the full [Svelte CHANGELOG](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md).
 
 ---
 
@@ -51,18 +52,25 @@ For all the bugfixes that came out in Svelte this month, you can read the full [
 - [Image Palette Studio](https://image-palette-studio.vercel.app/) turns images into UI themes with generated CSS variables ([GitHub](https://github.com/aozoragh/image-palette-studio))
 - [Dialyma](https://dialyma.com/tutorials) is an open source canvas builder that can export production-ready code ([GitHub](https://github.com/dialymaai/dialyma))
 - [Serverwat.ch](https://serverwat.ch/) is a SvelteKit dashboard for monitoring Hetzner-hosted projects
+- [Heavy Duty Inc](https://store.steampowered.com/app/4154670/Heavy_Duty_Inc/) is a turn-based tactics game built with Svelte ([Reddit](https://www.reddit.com/r/sveltejs/comments/1tq7cnr/built_a_turnbased_tactics_game_with_svelte_demo/))
+- [Trezur](https://trezur.quirkdom.com/) is a privacy-preserving browser-side 2FA authenticator with PWA support and cloud sync ([GitHub](https://github.com/quirkdom/trezur))
+- [Tank Supremo](https://tanks.tiyal.com/) is a multiplayer 3D tank game built with Svelte
+- [asciidia.com](https://asciidia.com) is an ASCII-style browser game experiment built with Svelte
 - [Zenos](https://zenos.com) is a stealth startup from SvelteKit maintainer [Ben McCann](https://www.benmccann.com) that is bringing software productivity to the physical world.
+
 ### Learning Resources
 
 _This Week in Svelte_
 
 - [Ep. 140](https://www.youtube.com/watch?v=AVX9lqFHOnM) - Changelog, Imperative interfaces
 - [Ep. 141](https://www.youtube.com/watch?v=mq-52XBwUbM) - Changelog
+- [Ep. 142](https://www.youtube.com/watch?v=P87sNdxZa6Q) - Changelog
 
 _To Read_
 
 - [Why Svelte Is Better Than React in the Agentic Era](https://zackwebster.com/blog/why-svelte-is-better-than-react-in-the-ai-era) by Zack Webster
 - [Automate LinkedIn Carousels with SvelteKit Remote Functions](https://orshot.com/blog/automate-linkedin-carousels-sveltekit) by Rishi Raj Jain
+- [Tank Supremo: From a Teenage Dream to a Multiplayer Game](https://www.linkedin.com/pulse/tank-supremo-from-teenage-dream-multiplayer-game-eyal-azulay-jylde/) by Eyal Azulay
 
 ### Libraries, Tools & Components
 
@@ -77,6 +85,10 @@ _To Read_
 - [jscpd v4.2.0](https://jscpd.dev/) now supports Svelte projects for duplicate code detection ([Changelog](https://github.com/kucherenko/jscpd/blob/master/CHANGELOG.md#420--2026-05-14))
 - [svelte-visual-builder](https://github.com/BluePointDigital/svelte-visual-builder) is an Elementor-style visual builder for SvelteKit projects
 - [SvelteESP32 v3.0](https://github.com/BCsabaEngine/svelteesp32) lets you wire Svelte frontends to ESP32 workflows with an updated Vite plugin flow
+- [vite-plugin-svelte-tailwind-auto-reference](https://github.com/awaiden/vite-plugin-svelte-tailwind-auto-reference) automatically injects Tailwind CSS `@reference` in Svelte style blocks when `@apply` is used
+- [Svelte Use](https://svelte-use.ariefsn.dev) provides a collection of composable utilities for Svelte apps ([GitHub](https://github.com/ariefsn/svelte-use))
+- [SvelteKit Proxy](https://github.com/ariefsn/sveltekit-proxy) provides a simple way to proxy requests in production using SvelteKit's `hooks.server.ts`
+- [svelte-ws](https://github.com/sowahq/svelte-ws) adds WebSocket support across SvelteKit runtimes with an adapter and Vite plugin
 
 That's it for this month! Let us know if we missed anything on [Reddit](https://www.reddit.com/r/sveltejs/) or [Discord](https://discord.gg/svelte).
 
