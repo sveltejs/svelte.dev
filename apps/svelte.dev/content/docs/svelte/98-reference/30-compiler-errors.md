@@ -401,7 +401,19 @@ Invalid selector
 ### declaration_duplicate_module_import
 
 ```
-Cannot declare a variable with the same name as an import inside `<script module>`
+Cannot declare a variable with the same name as an import from `<script module>`
+```
+
+### declaration_tag_invalid_type
+
+```
+Declaration tags must be `let` or `const` declarations
+```
+
+### declaration_tag_no_legacy_mode
+
+```
+Declaration tags cannot be used in legacy mode
 ```
 
 ### derived_invalid_export

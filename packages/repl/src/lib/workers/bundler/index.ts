@@ -376,15 +376,17 @@ async function get_bundle(
 						}
 					);
 					// add the CSS via injecting a style tag
+					const style_id = 'svelte-' + name.replace(/[^a-zA-Z0-9.-]/g, '_');
 					result.js.code +=
 						'\n\n' +
 						`
-					import { styles as $$_styles } from '${VIRTUAL}/${STYLES}';
-					const $$__style = document.createElement('style');
-					$$__style.textContent = ${JSON.stringify(result.css.code)};
-					document.head.append($$__style);
-					$$_styles.push($$__style);
-				`.replace(/\t/g, '');
+							import { styles as $$_styles } from '${VIRTUAL}/${STYLES}';
+							const $$__style = document.createElement('style');
+							$$__style.id = ${JSON.stringify(style_id)};
+							$$__style.textContent = ${JSON.stringify(result.css.code)};
+							document.head.append($$__style);
+							$$_styles.push($$__style);
+						`.replace(/\t/g, '');
 				}
 			} else if (/\.svelte\.(js|ts)$/.test(id)) {
 				const compilerOptions: any = {

@@ -220,6 +220,10 @@ export class Workspace {
 		return this.#files;
 	}
 
+	get file_nodes(): File[] {
+		return this.#files.filter(is_file);
+	}
+
 	get compiler_options() {
 		return this.#compiler_options;
 	}

@@ -96,10 +96,4 @@
 		border-top: 1px solid var(--sk-border);
 		overflow-y: auto;
 	}
-
-	@media (prefers-color-scheme: dark) {
-		.terminal {
-			background: rgba(0, 0, 0, 0.5);
-		}
-	}
 </style>

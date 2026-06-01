@@ -213,14 +213,7 @@
 		font: var(--sk-font-mono);
 		padding: 1rem;
 		border-top: 1px solid var(--sk-border);
-		background: rgba(255, 255, 255, 0.5);
 		backdrop-filter: blur(3px);
 		overflow-y: auto;
-	}
-
-	@media (prefers-color-scheme: dark) {
-		.terminal {
-			background: rgba(0, 0, 0, 0.1);
-		}
 	}
 </style>

@@ -1,6 +1,8 @@
 import { redirect } from '@sveltejs/kit';
 
 const mappings = new Map([
+	// kit docs (kit.svelte.dev/docs/X → svelte.dev/docs/kit/X)
+	['/docs/kit/assets', '/docs/kit/images'],
 	// docs
 	['/docs/accessibility-warnings', '/docs/svelte/compiler-warnings'],
 	['/docs/basic-markup', '/docs/svelte/basic-markup'],
@@ -69,6 +71,14 @@ export async function handle({ event, resolve }) {
 	// Redirect from old /docs/mcp/* to /docs/ai/*
 	if (event.url.pathname.startsWith('/docs/mcp')) {
 		redirect(308, event.url.pathname.replace('/docs/mcp', '/docs/ai'));
+	}
+
+	// Redirect from old ai docs paths to new paths
+	if (event.url.pathname === '/docs/ai/plugin') {
+		redirect(307, '/docs/ai/claude-plugin');
+	}
+	if (event.url.pathname === '/docs/ai/opencode-subagent') {
+		redirect(307, '/docs/ai/subagent');
 	}
 
 	// Best effort to redirect from Svelte 3 tutorial to new tutorial

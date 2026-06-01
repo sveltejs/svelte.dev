@@ -13,7 +13,8 @@ import {
 	getRequestEvent,
 	prerender,
 	query,
-	read
+	read,
+	requested
 } from '$app/server';
 ```
 
@@ -33,7 +34,7 @@ See [Remote functions](/docs/kit/remote-functions#command) for full documentatio
 
 ```dts
 function command<Output>(
-	fn: () => Output
+	fn: () => MaybePromise<Output>
 ): RemoteCommand<void, Output>;
 ```
 
@@ -44,7 +45,7 @@ function command<Output>(
 ```dts
 function command<Input, Output>(
 	validate: 'unchecked',
-	fn: (arg: Input) => Output
+	fn: (arg: Input) => MaybePromise<Output>
 ): RemoteCommand<Input, Output>;
 ```
 
@@ -55,7 +56,9 @@ function command<Input, Output>(
 ```dts
 function command<Schema extends StandardSchemaV1, Output>(
 	validate: Schema,
-	fn: (arg: StandardSchemaV1.InferOutput<Schema>) => Output
+	fn: (
+		arg: StandardSchemaV1.InferOutput<Schema>
+	) => MaybePromise<Output>
 ): RemoteCommand<
 	StandardSchemaV1.InferInput<Schema>,
 	Output
@@ -260,7 +263,8 @@ function query<Schema extends StandardSchemaV1, Output>(
 	) => MaybePromise<Output>
 ): RemoteQueryFunction<
 	StandardSchemaV1.InferInput<Schema>,
-	Output
+	Output,
+	StandardSchemaV1.InferOutput<Schema>
 >;
 ```
 
@@ -291,6 +295,67 @@ const text = await asset.text();
 
 ```dts
 function read(asset: string): Response;
+```
+
+</div>
+
+
+
+## requested
+
+In the context of a remote `command` or `form` request, returns an iterable
+of `{ arg, query }` entries for the refreshes requested by the client, up to
+the supplied `limit`. Each `query` is a `RemoteQuery` bound to the original
+client-side cache key, so `refresh()` / `set()` propagate correctly even when
+the query's schema transforms the input. `arg` is the *validated* argument,
+i.e. the value after the schema has run (so `InferOutput<Schema>` for queries
+declared with a Standard Schema).
+
+Arguments that fail validation or exceed `limit` are recorded as failures in
+the response to the client.
+
+```ts
+import { requested } from '$app/server';
+
+for (const { arg, query } of requested(getPost, 5)) {
+	// `arg` is the validated argument; `query` is bound to the client's
+	// cache key. It's safe to throw away this promise -- SvelteKit will
+	// await it and forward any errors to the client.
+	void query.refresh();
+}
+```
+
+As a shorthand for the above, you can also call `refreshAll` on the result:
+
+```ts
+import { requested } from '$app/server';
+
+await requested(getPost, 5).refreshAll();
+```
+
+Works with `query.batch` as well — refreshes for individual entries are
+collected into a single batched call.
+
+For live queries, the same applies, but with `reconnect` and `reconnectAll`.
+
+<div class="ts-block">
+
+```dts
+function requested<Input, Output, Validated = Input>(
+	query: RemoteQueryFunction<Input, Output, Validated>,
+	limit: number
+): QueryRequestedResult<Validated, Output>;
+```
+
+</div>
+
+<div class="ts-block">
+
+```dts
+function requested<Input, Output, Validated = Input>(
+	query: RemoteLiveQueryFunction<Input, Output, Validated>,
+	limit: number
+): LiveQueryRequestedResult<Validated, Output>;
 ```
 
 </div>
@@ -335,7 +400,37 @@ namespace query {
 		>
 	): RemoteQueryFunction<
 		StandardSchemaV1.InferInput<Schema>,
-		Output
+		Output,
+		StandardSchemaV1.InferOutput<Schema>
+	>;
+	/**
+	 * Creates a live remote query. When called from the browser, the function will be invoked on the server via a streaming `fetch` call.
+	 *
+	 * See [Remote functions](https://svelte.dev/docs/kit/remote-functions#query.live) for full documentation.
+	 *
+	 * */
+	function live<Output>(
+		fn: (
+			arg: void
+		) => RemoteLiveQueryUserFunctionReturnType<Output>
+	): RemoteLiveQueryFunction<void, Output>;
+
+	function live<Input, Output>(
+		validate: 'unchecked',
+		fn: (
+			arg: Input
+		) => RemoteLiveQueryUserFunctionReturnType<Output>
+	): RemoteLiveQueryFunction<Input, Output>;
+
+	function live<Schema extends StandardSchemaV1, Output>(
+		schema: Schema,
+		fn: (
+			arg: StandardSchemaV1.InferOutput<Schema>
+		) => RemoteLiveQueryUserFunctionReturnType<Output>
+	): RemoteLiveQueryFunction<
+		StandardSchemaV1.InferInput<Schema>,
+		Output,
+		StandardSchemaV1.InferOutput<Schema>
 	>;
 }
 ```
