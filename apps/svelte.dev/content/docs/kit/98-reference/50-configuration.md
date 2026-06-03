@@ -7,6 +7,20 @@ Your project's configuration lives in a `svelte.config.js` file at the root of y
 
 ```js
 /// file: svelte.config.js
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+	kit: {}
+};
+
+export default config;
+```
+
+<!-- TODO this is now wrong, you will have to pass inline config in v3. we need to overhaul the docs -->
+
+Since version 2.62.0 you can also pass your configuration to the `sveltekit` plugin in your Vite config, along with the Svelte compiler options:
+
+```js
+/// file: vite.config.js
 // @filename: ambient.d.ts
 declare module '@sveltejs/adapter-auto' {
 	const plugin: () => import('@sveltejs/kit').Adapter;
@@ -16,16 +30,29 @@ declare module '@sveltejs/adapter-auto' {
 // @filename: index.js
 // ---cut---
 import adapter from '@sveltejs/adapter-auto';
+import { sveltekit } from '@sveltejs/kit/vite';
+import { defineConfig } from 'vite';
 
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
-	kit: {
-		adapter: adapter()
-	}
-};
-
-export default config;
+export default defineConfig({
+	plugins: [
+		sveltekit({
+			compilerOptions: {
+				experimental: {
+					async: true
+				}
+			},
+			adapter: adapter(),
+			experimental: {
+				remoteFunctions: true
+			}
+		})
+	]
+});
 ```
+
+> [!NOTE] The `kit` namespace is at the same level as the other top level entries; this is the only difference to the `svelte.config.js` layout.
+
+If the config is defined via the plugin, the `svelte.config.js` file is ignored.
 
 ## Config
 
@@ -74,6 +101,7 @@ The `kit` property configures SvelteKit, and can have the following properties:
 <div class="ts-block-property-bullets">
 
 - <span class="tag">default</span> `undefined`
+- <span class="tag deprecated">deprecated</span> removed in 3.0.0. Adapters should now be passed to the `sveltekit` Vite plugin in `vite.config.js`
 
 </div>
 
@@ -255,7 +283,7 @@ checkOrigin?: boolean;
 <div class="ts-block-property-bullets">
 
 - <span class="tag">default</span> `true`
-- <span class="tag deprecated">deprecated</span> Use `trustedOrigins: ['*']` instead
+- <span class="tag deprecated">deprecated</span> removed in 3.0. Use `trustedOrigins: ['*']` instead
 
 </div>
 
@@ -398,6 +426,26 @@ Experimental features. Here be dragons. These are not subject to semantic versio
 
 <div class="ts-block-property-children">
 
+<div class="ts-block-property">
+
+```ts
+// @noErrors
+explicitEnvironmentVariables?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag since">available since</span> v2.62.0
+- <span class="tag">default</span> `false`
+
+</div>
+
+Whether to enable explicit environment variables using `src/env.js` or `src/env.ts`.
+
+</div>
+</div>
 <div class="ts-block-property">
 
 ```ts
@@ -855,6 +903,29 @@ Options related to the build output format
 
 ```ts
 // @noErrors
+linkHeaderPreload?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `false`
+- <span class="tag since">available since</span> v3.0.0
+
+</div>
+
+Whether to use the [HTTP `Link` header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Link) to preload assets instead of the [`<link>` HTML element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/link) for non-prerendered pages.
+
+Note that some web servers such as Nginx and Apache have a default header size limit which may be easily exceeded.
+If you are using one of these web servers, you may want to leave this as `false` or configure a higher limit.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```ts
+// @noErrors
 preloadStrategy?: 'modulepreload' | 'preload-js' | 'preload-mjs';
 ```
 
@@ -864,6 +935,7 @@ preloadStrategy?: 'modulepreload' | 'preload-js' | 'preload-mjs';
 
 - <span class="tag">default</span> `"modulepreload"`
 - <span class="tag since">available since</span> v1.8.4
+- <span class="tag deprecated">deprecated</span> removed in 3.0
 
 </div>
 
@@ -896,7 +968,7 @@ The bundle strategy option affects how your app's JavaScript and CSS files are l
 - If `'single'`, creates just one .js bundle and one .css file containing code for the entire app.
 - If `'inline'`, inlines all JavaScript and CSS of the entire app into the HTML. The result is usable without a server (i.e. you can just open the file in your browser).
 
-When using `'split'`, you can also adjust the bundling behaviour by setting [`output.experimentalMinChunkSize`](https://rollupjs.org/configuration-options/#output-experimentalminchunksize) and [`output.manualChunks`](https://rollupjs.org/configuration-options/#output-manualchunks) inside your Vite config's [`build.rollupOptions`](https://vite.dev/config/build-options.html#build-rollupoptions).
+When using `'split'`, you can also adjust the bundling behaviour by setting [`output.codeSplitting`](https://rolldown.rs/reference/OutputOptions.codeSplitting) inside your Vite config's [`build.rolldownOptions`](https://vite.dev/config/build-options#build-rolldownoptions).
 
 If you want to inline your assets, you'll need to set Vite's [`build.assetsInlineLimit`](https://vite.dev/config/build-options.html#build-assetsinlinelimit) option to an appropriate size then import your assets through Vite.
 
