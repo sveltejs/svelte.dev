@@ -29,7 +29,7 @@ For all the features and bugfixes that landed this month, check out the SvelteKi
 
 - Templates now allow declarations directly in markup, making it easier to define values close to where they're used (**svelte@5.56.0**, [#18282](https://github.com/sveltejs/svelte/pull/18282))
 - Svelte language-tools now support TypeScript 6.0 across the language server, svelte2tsx and svelte-check packages (**svelte-language-server@0.18.0/svelte2tsx@0.7.55/svelte-check@4.4.8/svelte-preprocess@6.0.4**, [Docs](https://devblogs.microsoft.com/typescript/announcing-typescript-6-0/), [#2985](https://github.com/sveltejs/language-tools/pull/2985) / [#675](https://github.com/sveltejs/svelte-preprocess/pull/675))
-- Svelte MCP's `stdio` mode can now read file content directly, reducing round trips in local tool workflows (**mcp@0.1.23**, [Docs](https://svelte.dev/docs/ai/svelte-mcp), [#198](https://github.com/sveltejs/ai-tools/pull/198))
+- Svelte MCP's `stdio` mode can now read file content directly, reducing round trips in local tool workflows (**mcp@0.1.23**, [Docs](https://svelte.dev/docs/ai/mcp), [#198](https://github.com/sveltejs/ai-tools/pull/198))
 - vite-plugin-svelte now enables the optimizer for server environments during development (**vite-plugin-svelte@7.1.0**, [#1328](https://github.com/sveltejs/vite-plugin-svelte/pull/1328))
 
 Want to dive deep into everything new this month? Check out the [language-tools](https://github.com/sveltejs/language-tools/releases), [ai-tools](https://github.com/sveltejs/ai-tools/releases) and [vite-plugin-svelte](https://github.com/sveltejs/vite-plugin-svelte/releases) releases.
