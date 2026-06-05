@@ -4,7 +4,7 @@ import type { Plugin } from '@rollup/browser';
 
 /**
  * Alias plugin for resolving import aliases (e.g., $lib -> src/lib).
- * This will also run on npm packages, so that e.g. SvelteKit libraries using $app/environment can also make use of this.
+ * This will also run on npm packages, so that e.g. SvelteKit libraries using $app/env can also make use of this.
  *
  * @example
  * // With aliases: { '$lib': 'src/lib' }

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { browser } from '$app/environment';
+	import { browser } from '$app/env';
 
 	// we don't want to use <svelte:window bind:online> here,
 	// because we only care about the online state when

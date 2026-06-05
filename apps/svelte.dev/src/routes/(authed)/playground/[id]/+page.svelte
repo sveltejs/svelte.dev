@@ -1,7 +1,7 @@
 <script lang="ts">
 	// @ts-expect-error no types
 	import * as doNotZip from 'do-not-zip';
-	import { browser } from '$app/environment';
+	import { browser } from '$app/env';
 	import { afterNavigate, goto, replaceState } from '$app/navigation';
 	import type { Gist } from '$lib/db/types';
 	import { Repl } from '@sveltejs/repl';

@@ -3,7 +3,7 @@
 </script>
 
 <script lang="ts">
-	import { browser, dev } from '$app/environment';
+	import { browser, dev } from '$app/env';
 	import { afterNavigate } from '$app/navigation';
 	import { theme } from '@sveltejs/site-kit/state';
 	import { onMount } from 'svelte';

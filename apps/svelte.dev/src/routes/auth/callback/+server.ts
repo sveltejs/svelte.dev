@@ -1,7 +1,7 @@
 import * as cookie from 'cookie';
 import * as session from '$lib/db/session';
 import { oauth, storage_key } from '../_config.js';
-import { GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET } from '$env/static/private';
+import { GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET } from '$app/env/private';
 
 export async function GET({ url }) {
 	// Trade "code" for "access_token"

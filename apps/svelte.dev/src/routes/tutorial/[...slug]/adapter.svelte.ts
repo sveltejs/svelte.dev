@@ -1,4 +1,4 @@
-import { browser } from '$app/environment';
+import { browser } from '$app/env';
 import { page } from '$app/stores';
 import type { state as WCState } from '$lib/tutorial/adapters/webcontainer/index.svelte';
 import type { state as RollupState } from '$lib/tutorial/adapters/rollup/index.svelte';

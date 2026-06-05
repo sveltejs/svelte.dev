@@ -1,4 +1,4 @@
-import { PRERENDER } from '$env/static/private';
+import { PRERENDER } from '$app/env/private';
 import { docs, index } from '$lib/server/content';
 import type { BannerData, NavigationLink } from '@sveltejs/site-kit';
 
