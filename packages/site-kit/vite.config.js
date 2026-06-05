@@ -4,12 +4,6 @@ import { sveltekit } from '@sveltejs/kit/vite';
 const config = {
 	plugins: [sveltekit()],
 
-	resolve: {
-		alias: {
-			'$app/environment': '$app/env'
-		}
-	},
-
 	server: {
 		fs: {
 			strict: false
