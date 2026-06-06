@@ -153,13 +153,6 @@ Disabling CSR does not ship any JavaScript to the client. This means:
 You can enable `csr` during development (for example to take advantage of HMR) like so:
 
 ```js
-// @filename: ambient.d.ts
-declare module '$app/environment' {
-	export const dev: boolean;
-}
-
-// @filename: index.js
-// ---cut---
 /// file: +page.js
 import { dev } from '$app/environment';
 
