@@ -9,6 +9,7 @@ import { createHighlighterCore } from 'shiki/core';
 import { createOnigurumaEngine } from 'shiki/engine/oniguruma';
 import { createCssVariablesTheme } from 'shiki';
 import { transformerTwoslash, rendererRich } from '@shikijs/twoslash';
+import { createTwoslasher } from './twoslash-svelte.ts';
 import { createFileSystemTypesCache } from '@shikijs/vitepress-twoslash/cache-fs';
 import { compress_and_encode_text } from 'gzip';
 import {
@@ -1130,7 +1131,7 @@ async function syntax_highlight({
 				theme
 			})
 		);
-	} else if (language === 'js' || language === 'ts') {
+	} else if (language === 'js' || language === 'ts' || language === 'svelte') {
 		/** We need to stash code wrapped in `---` highlights, because otherwise TS will error on e.g. bad syntax, duplicate declarations */
 		const redactions: string[] = [];
 
@@ -1150,6 +1151,7 @@ async function syntax_highlight({
 					? [
 							transformerTwoslash({
 								renderer: rendererRich(),
+								twoslasher: createTwoslasher(),
 								twoslashOptions: {
 									compilerOptions: {
 										allowJs: true,

@@ -425,6 +425,9 @@ importers:
         specifier: ^3.23.0
         version: 3.23.0
     devDependencies:
+      '@jridgewell/sourcemap-codec':
+        specifier: ^1.5.5
+        version: 1.5.5
       '@shikijs/vitepress-twoslash':
         specifier: ^4.0.1
         version: 4.0.1(typescript@6.0.3)
@@ -434,6 +437,9 @@ importers:
       '@types/node':
         specifier: ^20.19.33
         version: 20.19.33
+      '@volar/language-core':
+        specifier: ^2.4.28
+        version: 2.4.28
       flexsearch:
         specifier: ^0.8.212
         version: 0.8.212
@@ -458,6 +464,15 @@ importers:
       svelte-check:
         specifier: ^4.5.0
         version: 4.5.0(picomatch@4.0.3)(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@6.0.3)
+      svelte2tsx:
+        specifier: ^0.7.56
+        version: 0.7.56(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@6.0.3)
+      twoslash:
+        specifier: ^0.3.8
+        version: 0.3.8(typescript@6.0.3)
+      twoslash-protocol:
+        specifier: ^0.3.8
+        version: 0.3.8
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -3252,11 +3267,11 @@ packages:
       typescript:
         optional: true
 
-  svelte2tsx@0.7.51:
-    resolution: {integrity: sha512-YbVMQi5LtQkVGOMdATTY8v3SMtkNjzYtrVDGaN3Bv+0LQ47tGXu/Oc8ryTkcYuEJWTZFJ8G2+2I8ORcQVGt9Ag==}
+  svelte2tsx@0.7.56:
+    resolution: {integrity: sha512-NTvqqL+goYlW8gWNajk81L07+uu7jw5V2m1Az5MZbYm3GEydcHXh+uTrLHM9SuGuaqCtF90vlMXkOVBotfH94g==}
     peerDependencies:
       svelte: ^3.55 || ^4.0.0-next.0 || ^4.0 || ^5.0.0-next.0
-      typescript: ^4.9.4 || ^5.0.0
+      typescript: ^4.9.4 || ^5.0.0 || ^6.0.0
 
   svelte@5.55.8:
     resolution: {integrity: sha512-4D6lyrMHmDaZalQOEBMCWCCidyZjSnec14/oPn0k627G6goxcck9xqMwz1tFLlQz+ZFvtTTHfFOlUayuAz0z6Q==}
@@ -3333,6 +3348,9 @@ packages:
   twoslash-protocol@0.3.6:
     resolution: {integrity: sha512-FHGsJ9Q+EsNr5bEbgG3hnbkvEBdW5STgPU824AHUjB4kw0Dn4p8tABT7Ncg1Ie6V0+mDg3Qpy41VafZXcQhWMA==}
 
+  twoslash-protocol@0.3.8:
+    resolution: {integrity: sha512-HmvAHoiEviK8LqvAQyc9/irkdvwTUiR1fHmNwH/0gq8EHxyBt4PWVPixjEXg6wJu1u6yBrILEWXGK9Kw58/8yQ==}
+
   twoslash-vue@0.3.6:
     resolution: {integrity: sha512-HXYxU+Y7jZiMXJN4980fQNMYflLD8uqKey1qVW5ri8bqYTm2t5ILmOoCOli7esdCHlMq4/No3iQUWBWDhZNs9w==}
     peerDependencies:
@@ -3342,6 +3360,11 @@ packages:
     resolution: {integrity: sha512-VuI5OKl+MaUO9UIW3rXKoPgHI3X40ZgB/j12VY6h98Ae1mCBihjPvhOPeJWlxCYcmSbmeZt5ZKkK0dsVtp+6pA==}
     peerDependencies:
       typescript: ^5.5.0
+
+  twoslash@0.3.8:
+    resolution: {integrity: sha512-OeDz0kDl8sqPUN3nr7gqcvOs70f5lZsdhKYTX3/SgB9OvdadzzoYJI/4SBXhXV1HG8E9fLc+e17itoRYTxmoig==}
+    peerDependencies:
+      typescript: ^5.5.0 || ^6.0.0
 
   typescript@6.0.3:
     resolution: {integrity: sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==}
@@ -4748,7 +4771,7 @@ snapshots:
     dependencies:
       '@shikijs/core': 3.23.0
       '@shikijs/types': 3.23.0
-      twoslash: 0.3.6(typescript@6.0.3)
+      twoslash: 0.3.8(typescript@6.0.3)
       typescript: 6.0.3
     transitivePeerDependencies:
       - supports-color
@@ -4757,7 +4780,7 @@ snapshots:
     dependencies:
       '@shikijs/core': 4.0.1
       '@shikijs/types': 4.0.1
-      twoslash: 0.3.6(typescript@6.0.3)
+      twoslash: 0.3.8(typescript@6.0.3)
       typescript: 6.0.3
     transitivePeerDependencies:
       - supports-color
@@ -4784,7 +4807,7 @@ snapshots:
       mdast-util-to-hast: 13.2.1
       ohash: 2.0.11
       shiki: 4.0.1
-      twoslash: 0.3.6(typescript@6.0.3)
+      twoslash: 0.3.8(typescript@6.0.3)
       twoslash-vue: 0.3.6(typescript@6.0.3)
       vue: 3.5.29(typescript@6.0.3)
     transitivePeerDependencies:
@@ -4936,7 +4959,7 @@ snapshots:
       sade: 1.8.1
       semver: 7.7.4
       svelte: 5.55.8(@typescript-eslint/types@8.58.0)
-      svelte2tsx: 0.7.51(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@6.0.3)
+      svelte2tsx: 0.7.56(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@6.0.3)
     transitivePeerDependencies:
       - typescript
 
@@ -6555,7 +6578,7 @@ snapshots:
       postcss: 8.5.6
       typescript: 6.0.3
 
-  svelte2tsx@0.7.51(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@6.0.3):
+  svelte2tsx@0.7.56(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@6.0.3):
     dependencies:
       dedent-js: 1.0.1
       scule: 1.3.0
@@ -6648,6 +6671,8 @@ snapshots:
 
   twoslash-protocol@0.3.6: {}
 
+  twoslash-protocol@0.3.8: {}
+
   twoslash-vue@0.3.6(typescript@6.0.3):
     dependencies:
       '@vue/language-core': 3.2.5
@@ -6661,6 +6686,14 @@ snapshots:
     dependencies:
       '@typescript/vfs': 1.6.4(typescript@6.0.3)
       twoslash-protocol: 0.3.6
+      typescript: 6.0.3
+    transitivePeerDependencies:
+      - supports-color
+
+  twoslash@0.3.8(typescript@6.0.3):
+    dependencies:
+      '@typescript/vfs': 1.6.4(typescript@6.0.3)
+      twoslash-protocol: 0.3.8
       typescript: 6.0.3
     transitivePeerDependencies:
       - supports-color
