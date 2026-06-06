@@ -67,7 +67,7 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 
 					const use_async = can_use_experimental_async && options.async;
 
-					const result = await bundle(svelte, svelte_version, uid, files, options, use_async);
+					const result = await bundle(svelte, svelte_version, uid, files, options, !!use_async);
 
 					console.log('[bundle worker result]', result);
 
@@ -120,7 +120,7 @@ let previous: {
 	tailwind_candidates: Set<string>;
 };
 
-let tailwind: Awaited<ReturnType<typeof init_tailwind>>;
+let tailwind: Awaited<ReturnType<typeof init_tailwind>> | null = null;
 
 async function init_tailwind(user_css = '') {
 	const tailwindcss = await import('tailwindcss');
@@ -210,7 +210,7 @@ async function get_bundle(
 			if (/^[a-z]+:/.test(importee)) return importee;
 
 			/** The npm package we're importing from, if any */
-			let current: null | Package;
+			let current: null | Package = null;
 
 			if (importer.startsWith(NPM)) {
 				const { name, version } = parse_npm_url(importer);
@@ -668,7 +668,7 @@ async function bundle(
 			client: null,
 			server: null,
 			css: null,
-			imports: null
+			imports: []
 		};
 	}
 }
