@@ -425,6 +425,9 @@ importers:
         specifier: ^3.23.0
         version: 3.23.0
     devDependencies:
+      '@jridgewell/sourcemap-codec':
+        specifier: ^1.5.5
+        version: 1.5.5
       '@shikijs/vitepress-twoslash':
         specifier: ^4.0.1
         version: 4.0.1(typescript@6.0.3)
@@ -434,6 +437,9 @@ importers:
       '@types/node':
         specifier: ^20.19.33
         version: 20.19.33
+      '@volar/language-core':
+        specifier: ^2.4.28
+        version: 2.4.28
       flexsearch:
         specifier: ^0.8.212
         version: 0.8.212
@@ -461,9 +467,12 @@ importers:
       svelte2tsx:
         specifier: ^0.7.56
         version: 0.7.56(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@6.0.3)
-      twoslash-svelte:
-        specifier: ^0.0.0
-        version: 0.0.0(svelte2tsx@0.7.56(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@6.0.3))(typescript@6.0.3)
+      twoslash:
+        specifier: ^0.3.8
+        version: 0.3.8(typescript@6.0.3)
+      twoslash-protocol:
+        specifier: ^0.3.8
+        version: 0.3.8
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -3342,12 +3351,6 @@ packages:
   twoslash-protocol@0.3.8:
     resolution: {integrity: sha512-HmvAHoiEviK8LqvAQyc9/irkdvwTUiR1fHmNwH/0gq8EHxyBt4PWVPixjEXg6wJu1u6yBrILEWXGK9Kw58/8yQ==}
 
-  twoslash-svelte@0.0.0:
-    resolution: {integrity: sha512-xIVdQ0HFX9IGznj48V/O5MymKMLkxJtsUjUkZ2rdjR2/bWkQyc8VohC3pvKbLkAl0xOzPNUvBRNaBe9zKFofMw==}
-    peerDependencies:
-      svelte2tsx: '*'
-      typescript: '*'
-
   twoslash-vue@0.3.6:
     resolution: {integrity: sha512-HXYxU+Y7jZiMXJN4980fQNMYflLD8uqKey1qVW5ri8bqYTm2t5ILmOoCOli7esdCHlMq4/No3iQUWBWDhZNs9w==}
     peerDependencies:
@@ -4768,7 +4771,7 @@ snapshots:
     dependencies:
       '@shikijs/core': 3.23.0
       '@shikijs/types': 3.23.0
-      twoslash: 0.3.6(typescript@6.0.3)
+      twoslash: 0.3.8(typescript@6.0.3)
       typescript: 6.0.3
     transitivePeerDependencies:
       - supports-color
@@ -4777,7 +4780,7 @@ snapshots:
     dependencies:
       '@shikijs/core': 4.0.1
       '@shikijs/types': 4.0.1
-      twoslash: 0.3.6(typescript@6.0.3)
+      twoslash: 0.3.8(typescript@6.0.3)
       typescript: 6.0.3
     transitivePeerDependencies:
       - supports-color
@@ -4804,7 +4807,7 @@ snapshots:
       mdast-util-to-hast: 13.2.1
       ohash: 2.0.11
       shiki: 4.0.1
-      twoslash: 0.3.6(typescript@6.0.3)
+      twoslash: 0.3.8(typescript@6.0.3)
       twoslash-vue: 0.3.6(typescript@6.0.3)
       vue: 3.5.29(typescript@6.0.3)
     transitivePeerDependencies:
@@ -6669,17 +6672,6 @@ snapshots:
   twoslash-protocol@0.3.6: {}
 
   twoslash-protocol@0.3.8: {}
-
-  twoslash-svelte@0.0.0(svelte2tsx@0.7.56(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@6.0.3))(typescript@6.0.3):
-    dependencies:
-      '@jridgewell/sourcemap-codec': 1.5.5
-      '@volar/language-core': 2.4.28
-      svelte2tsx: 0.7.56(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@6.0.3)
-      twoslash: 0.3.8(typescript@6.0.3)
-      twoslash-protocol: 0.3.8
-      typescript: 6.0.3
-    transitivePeerDependencies:
-      - supports-color
 
   twoslash-vue@0.3.6(typescript@6.0.3):
     dependencies:
