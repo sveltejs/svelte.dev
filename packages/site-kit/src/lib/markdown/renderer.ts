@@ -1131,7 +1131,7 @@ async function syntax_highlight({
 				theme
 			})
 		);
-	} else if (language === 'js' || language === 'ts') {
+	} else if (language === 'js' || language === 'ts' || language === 'svelte') {
 		/** We need to stash code wrapped in `---` highlights, because otherwise TS will error on e.g. bad syntax, duplicate declarations */
 		const redactions: string[] = [];
 
