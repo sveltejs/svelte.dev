@@ -57,6 +57,8 @@
 		"prettier-plugin-svelte": "^3.5.0",
 		"svelte": "^5.53.5",
 		"svelte-check": "^4.5.0",
+		"svelte2tsx": "^0.7.56",
+		"twoslash-svelte": "^0.0.0",
 		"typescript": "^6.0.3",
 		"vite": "^8.0.0-beta.15"
 	},

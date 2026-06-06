@@ -8,6 +8,7 @@ minimumReleaseAgeExclude:
   - prettier-plugin-svelte
   - svelte-check
   - esm-env
+  - twoslash-svelte # NOTE: Remove this exclusion before this PR is merged
 blockExoticSubdeps: true
 
 packages:

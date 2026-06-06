@@ -9,6 +9,7 @@ import { createHighlighterCore } from 'shiki/core';
 import { createOnigurumaEngine } from 'shiki/engine/oniguruma';
 import { createCssVariablesTheme } from 'shiki';
 import { transformerTwoslash, rendererRich } from '@shikijs/twoslash';
+import { createTwoslasher } from 'twoslash-svelte';
 import { createFileSystemTypesCache } from '@shikijs/vitepress-twoslash/cache-fs';
 import { compress_and_encode_text } from 'gzip';
 import {
@@ -1150,6 +1151,7 @@ async function syntax_highlight({
 					? [
 							transformerTwoslash({
 								renderer: rendererRich(),
+								twoslasher: createTwoslasher(),
 								twoslashOptions: {
 									compilerOptions: {
 										allowJs: true,

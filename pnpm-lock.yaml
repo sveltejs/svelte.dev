@@ -458,6 +458,12 @@ importers:
       svelte-check:
         specifier: ^4.5.0
         version: 4.5.0(picomatch@4.0.3)(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@6.0.3)
+      svelte2tsx:
+        specifier: ^0.7.56
+        version: 0.7.56(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@6.0.3)
+      twoslash-svelte:
+        specifier: ^0.0.0
+        version: 0.0.0(svelte2tsx@0.7.56(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@6.0.3))(typescript@6.0.3)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -3258,6 +3264,12 @@ packages:
       svelte: ^3.55 || ^4.0.0-next.0 || ^4.0 || ^5.0.0-next.0
       typescript: ^4.9.4 || ^5.0.0
 
+  svelte2tsx@0.7.56:
+    resolution: {integrity: sha512-NTvqqL+goYlW8gWNajk81L07+uu7jw5V2m1Az5MZbYm3GEydcHXh+uTrLHM9SuGuaqCtF90vlMXkOVBotfH94g==}
+    peerDependencies:
+      svelte: ^3.55 || ^4.0.0-next.0 || ^4.0 || ^5.0.0-next.0
+      typescript: ^4.9.4 || ^5.0.0 || ^6.0.0
+
   svelte@5.55.8:
     resolution: {integrity: sha512-4D6lyrMHmDaZalQOEBMCWCCidyZjSnec14/oPn0k627G6goxcck9xqMwz1tFLlQz+ZFvtTTHfFOlUayuAz0z6Q==}
     engines: {node: '>=18'}
@@ -3333,6 +3345,15 @@ packages:
   twoslash-protocol@0.3.6:
     resolution: {integrity: sha512-FHGsJ9Q+EsNr5bEbgG3hnbkvEBdW5STgPU824AHUjB4kw0Dn4p8tABT7Ncg1Ie6V0+mDg3Qpy41VafZXcQhWMA==}
 
+  twoslash-protocol@0.3.8:
+    resolution: {integrity: sha512-HmvAHoiEviK8LqvAQyc9/irkdvwTUiR1fHmNwH/0gq8EHxyBt4PWVPixjEXg6wJu1u6yBrILEWXGK9Kw58/8yQ==}
+
+  twoslash-svelte@0.0.0:
+    resolution: {integrity: sha512-xIVdQ0HFX9IGznj48V/O5MymKMLkxJtsUjUkZ2rdjR2/bWkQyc8VohC3pvKbLkAl0xOzPNUvBRNaBe9zKFofMw==}
+    peerDependencies:
+      svelte2tsx: '*'
+      typescript: '*'
+
   twoslash-vue@0.3.6:
     resolution: {integrity: sha512-HXYxU+Y7jZiMXJN4980fQNMYflLD8uqKey1qVW5ri8bqYTm2t5ILmOoCOli7esdCHlMq4/No3iQUWBWDhZNs9w==}
     peerDependencies:
@@ -3342,6 +3363,11 @@ packages:
     resolution: {integrity: sha512-VuI5OKl+MaUO9UIW3rXKoPgHI3X40ZgB/j12VY6h98Ae1mCBihjPvhOPeJWlxCYcmSbmeZt5ZKkK0dsVtp+6pA==}
     peerDependencies:
       typescript: ^5.5.0
+
+  twoslash@0.3.8:
+    resolution: {integrity: sha512-OeDz0kDl8sqPUN3nr7gqcvOs70f5lZsdhKYTX3/SgB9OvdadzzoYJI/4SBXhXV1HG8E9fLc+e17itoRYTxmoig==}
+    peerDependencies:
+      typescript: ^5.5.0 || ^6.0.0
 
   typescript@6.0.3:
     resolution: {integrity: sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==}
@@ -6562,6 +6588,13 @@ snapshots:
       svelte: 5.55.8(@typescript-eslint/types@8.58.0)
       typescript: 6.0.3
 
+  svelte2tsx@0.7.56(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@6.0.3):
+    dependencies:
+      dedent-js: 1.0.1
+      scule: 1.3.0
+      svelte: 5.55.8(@typescript-eslint/types@8.58.0)
+      typescript: 6.0.3
+
   svelte@5.55.8(@typescript-eslint/types@8.58.0):
     dependencies:
       '@jridgewell/remapping': 2.3.5
@@ -6648,6 +6681,19 @@ snapshots:
 
   twoslash-protocol@0.3.6: {}
 
+  twoslash-protocol@0.3.8: {}
+
+  twoslash-svelte@0.0.0(svelte2tsx@0.7.56(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@6.0.3))(typescript@6.0.3):
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.5.5
+      '@volar/language-core': 2.4.28
+      svelte2tsx: 0.7.56(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@6.0.3)
+      twoslash: 0.3.8(typescript@6.0.3)
+      twoslash-protocol: 0.3.8
+      typescript: 6.0.3
+    transitivePeerDependencies:
+      - supports-color
+
   twoslash-vue@0.3.6(typescript@6.0.3):
     dependencies:
       '@vue/language-core': 3.2.5
@@ -6661,6 +6707,14 @@ snapshots:
     dependencies:
       '@typescript/vfs': 1.6.4(typescript@6.0.3)
       twoslash-protocol: 0.3.6
+      typescript: 6.0.3
+    transitivePeerDependencies:
+      - supports-color
+
+  twoslash@0.3.8(typescript@6.0.3):
+    dependencies:
+      '@typescript/vfs': 1.6.4(typescript@6.0.3)
+      twoslash-protocol: 0.3.8
       typescript: 6.0.3
     transitivePeerDependencies:
       - supports-color
