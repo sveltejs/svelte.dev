@@ -1,4 +1,4 @@
-import { browser } from '$app/environment';
+import { browser } from '$app/env';
 
 export function load({ data, url }) {
 	// initialize vim with the search param

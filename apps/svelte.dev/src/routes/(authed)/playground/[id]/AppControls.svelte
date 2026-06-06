@@ -5,7 +5,7 @@
 	import { isMac } from '$lib/utils/compat.js';
 	import { get_app_context } from '../../app-context';
 	import type { Gist, User } from '$lib/db/types';
-	import { browser } from '$app/environment';
+	import { browser } from '$app/env';
 	import ModalDropdown from '$lib/components/ModalDropdown.svelte';
 	import SecondaryNav from '$lib/components/SecondaryNav.svelte';
 	import type { File } from '@sveltejs/repl/workspace';
