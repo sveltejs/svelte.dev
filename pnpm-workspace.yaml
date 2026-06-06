@@ -2,6 +2,7 @@ minimumReleaseAge: 2880
 minimumReleaseAgeExclude:
   - '@sveltejs/*'
   - svelte
+  - sv
   - esrap
   - devalue
   - zimmerframe
@@ -13,3 +14,8 @@ blockExoticSubdeps: true
 packages:
   - 'apps/*'
   - 'packages/*'
+
+overrides:
+  # This is a workaround to avoid the "exotic dependency is not allowed in subdependencies"
+  # error that pnpm throws when `blockExoticSubdeps` is enabled
+  'sv>@sveltejs/sv-utils': '-'
