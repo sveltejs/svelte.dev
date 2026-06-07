@@ -4,6 +4,7 @@ import adapter from '@sveltejs/adapter-vercel';
 import type { PluginOption, UserConfig } from 'vite';
 import { browserslistToTargets } from 'lightningcss';
 import browserslist from 'browserslist';
+import { VERSION } from '@sveltejs/kit';
 
 const plugins: PluginOption[] = [
 	enhancedImages(),
@@ -49,7 +50,16 @@ const plugins: PluginOption[] = [
 
 				throw new Error(warning.message);
 			}
-		}
+		},
+
+		// TODO: remove this when we stop deploying previews for Kit 2
+		experimental:
+			VERSION[0] === '2'
+				? {
+						// @ts-expect-error this is invalid in Kit 3 but valid in Kit 2
+						explicitEnvironmentVariables: true
+					}
+				: undefined
 	}) as PluginOption
 ];
 
