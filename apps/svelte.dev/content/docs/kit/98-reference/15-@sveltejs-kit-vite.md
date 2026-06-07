@@ -19,7 +19,8 @@ Since version 2.62.0 you can pass [configuration](configuration) directly, in wh
 
 ```dts
 function sveltekit(
-	config?: KitConfig & Omit<SvelteConfig, 'onwarn'>
+	config?: import('@sveltejs/kit').KitConfig &
+		Omit<SvelteConfig, 'onwarn'>
 ): Promise<Plugin[]>;
 ```
 
