@@ -2571,6 +2571,7 @@ type RemoteForm<
 	Input extends RemoteFormInput | void,
 	Output
 > = {
+	(data: Input): MaybePromise<Output>;
 	/** Attachment that sets up an event handler that intercepts the form submission on the client to prevent a full page reload */
 	[attachment: symbol]: (node: HTMLFormElement) => void;
 	method: 'POST';
@@ -2629,8 +2630,10 @@ type RemoteForm<
 	}): Promise<void>;
 	/** The result of the form submission */
 	get result(): Output | undefined;
-	/** The number of pending submissions */
+	/** The number of direct calls that are currently in-flight */
 	get pending(): number;
+	/** The number of form submissions that are currently in-flight */
+	get submitting(): number;
 	/** Access form fields using object notation */
 	fields: RemoteFormFieldsRoot<Input>;
 };
