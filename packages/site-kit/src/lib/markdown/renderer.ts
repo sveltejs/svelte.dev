@@ -1144,7 +1144,11 @@ async function syntax_highlight({
 		});
 
 		try {
-			html = highlighter.codeToHtml(prelude + redacted, {
+			html = highlighter.codeToHtml(injectPrelude({
+				prelude,
+				source: redacted,
+				language
+			}), {
 				lang: language,
 				theme,
 				transformers: check
@@ -1320,4 +1324,19 @@ function indent_multiline_comments(str: string) {
 				.join('');
 		}
 	);
+}
+
+
+function injectPrelude({ prelude, source, language }: { prelude: string; source: string; language: string }) {
+	if (language === 'svelte') {
+		const scriptTag = /<script\b[^>]*>/;
+		if (scriptTag.test(source)) {
+			return source.replace(
+				scriptTag,
+				match => `${match}\n${prelude}\n`
+			);
+		}
+		return `<script>\n${prelude}\n</script>\n\n${source}`;
+	}
+	return prelude + source;
 }
