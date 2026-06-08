@@ -3522,7 +3522,7 @@ private fields
 <div class="ts-block-property-children"><div class="ts-block-property">
 
 ```dts
-client: NonNullable<BuildData['client']>;
+client: BuildData['client'];
 ```
 
 <div class="ts-block-property-details"></div>
