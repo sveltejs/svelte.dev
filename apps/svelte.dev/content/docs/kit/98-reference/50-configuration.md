@@ -446,7 +446,7 @@ explicitEnvironmentVariables?: boolean;
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag since">available since</span> v2.62.0
+- <span class="tag since">available since</span> v2.63.0
 - <span class="tag">default</span> `false`
 
 </div>
