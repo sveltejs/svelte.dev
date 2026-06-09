@@ -1,8 +1,9 @@
 {
-	"name": "gzip",
-	"version": "1.0.0",
-	"private": true,
-	"exports": {
-		".": "./index.js"
-	}
+  "name": "gzip",
+  "version": "1.0.0",
+  "private": true,
+  "exports": {
+    ".": "./index.js"
+  },
+  "type": "module"
 }
