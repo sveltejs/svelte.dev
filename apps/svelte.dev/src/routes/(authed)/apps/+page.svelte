@@ -109,7 +109,7 @@
 
 						<label>
 							<input
-								aria-label="Select for delection"
+								aria-label="Select for deletion"
 								type="checkbox"
 								bind:group={selected}
 								value={gist.id}
