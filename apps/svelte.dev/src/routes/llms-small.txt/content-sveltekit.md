@@ -710,7 +710,7 @@ export const getProfile = query(async () => {
 ## Building your app
 
 - Build runs in two phases: Vite compiles and prerenders (if enabled), then an adapter tailors output for your deployment target.
-- Guard any code that should not execute at build time with `import { building } from '$app/environment'; if (!building) { … }`.
+- Guard any code that should not execute at build time with `import { building } from '$app/env'; if (!building) { … }`.
 - Preview your production build locally with `npm run preview` (Node‑only, no adapter hooks).
 
 ## Adapters

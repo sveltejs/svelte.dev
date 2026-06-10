@@ -29,7 +29,7 @@ You can customise the behaviour further by specifying one of the following value
 
 - `"hover"` (default, falls back to `"tap"` on mobile)
 - `"tap"` — only begin preloading on tap
-- `"off"` — disable preloading
+- `"false"` — disable preloading
 
 Using `data-sveltekit-preload-data` may sometimes result in false positives - i.e. loading data in anticipation of a navigation that doesn't then happen — which might be undesirable. As an alternative, `data-sveltekit-preload-code` allows you to preload the JavaScript needed by a given route without eagerly loading its data. This attribute can have the following values:
 
@@ -37,7 +37,7 @@ Using `data-sveltekit-preload-data` may sometimes result in false positives - i
 - `"viewport"` — preload everything as it appears in the viewport
 - `"hover"` (default) as above
 - `"tap"` — as above
-- `"off"` — as above
+- `"false"` — as above
 
 You can also initiate preloading programmatically with `preloadCode` and `preloadData` imported from `$app/navigation`:
 

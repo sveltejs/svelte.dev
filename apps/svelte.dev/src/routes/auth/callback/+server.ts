@@ -1,14 +1,14 @@
 import * as cookie from 'cookie';
 import * as session from '$lib/db/session';
 import { oauth, storage_key } from '../_config.js';
-import { GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET } from '$env/static/private';
+import { GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET } from '$app/env/private';
 
 export async function GET({ url }) {
 	// Trade "code" for "access_token"
 	const code = url.searchParams.get('code') || undefined;
 	const params = new URLSearchParams({
-		client_id: GITHUB_CLIENT_ID,
-		client_secret: GITHUB_CLIENT_SECRET
+		client_id: GITHUB_CLIENT_ID as string,
+		client_secret: GITHUB_CLIENT_SECRET as string
 	});
 	if (code) params.set('code', code);
 	const r1 = await fetch(`${oauth}/access_token?` + params.toString());

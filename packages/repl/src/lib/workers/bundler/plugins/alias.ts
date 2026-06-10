@@ -4,7 +4,7 @@ import type { Plugin } from '@rollup/browser';
 
 /**
  * Alias plugin for resolving import aliases (e.g., $lib -> src/lib).
- * This will also run on npm packages, so that e.g. SvelteKit libraries using $app/environment can also make use of this.
+ * This will also run on npm packages, so that e.g. SvelteKit libraries using $app/env can also make use of this.
  *
  * @example
  * // With aliases: { '$lib': 'src/lib' }
@@ -27,11 +27,11 @@ function alias_plugin(aliases: Record<string, string> = {}, virtual: Map<string,
 			for (const [alias_key, alias_path] of alias_entries) {
 				if (importee === alias_key) {
 					// Exact match - replace with alias path
-					return resolve(virtual, `${VIRTUAL}/${alias_path}`, importer);
+					return resolve(virtual, `${VIRTUAL}/${alias_path}`, importer as string);
 				} else if (importee.startsWith(alias_key + '/')) {
 					// Partial match - replace the prefix
 					const relative_path = importee.slice(alias_key.length + 1);
-					return resolve(virtual, `${VIRTUAL}/${alias_path}/${relative_path}`, importer);
+					return resolve(virtual, `${VIRTUAL}/${alias_path}/${relative_path}`, importer as string);
 				}
 			}
 

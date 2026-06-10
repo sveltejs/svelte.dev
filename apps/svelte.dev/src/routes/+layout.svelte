@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '@sveltejs/site-kit/styles/index.css';
-	import { browser, dev } from '$app/environment';
+	import { browser, dev } from '$app/env';
 	import { page } from '$app/state';
 	import { Shell, Banner } from '@sveltejs/site-kit/components';
 	import { Nav } from '@sveltejs/site-kit/nav';

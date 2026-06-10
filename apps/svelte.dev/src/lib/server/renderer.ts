@@ -39,6 +39,11 @@ export const render_content = (
 			injected.push(`// @filename: ambient-kit.d.ts`, `/// <reference types="@sveltejs/kit" />`);
 		}
 
+		if (source.includes('$app/environment')) {
+			// TODO remove this once we drop SvelteKit 2 from the docs
+			injected.push(`declare module '$app/environment' { export * from '$app/env'; }`);
+		}
+
 		if (source.includes('$env/')) {
 			// TODO we're hardcoding static env vars that are used in code examples
 			// in the types, which isn't... totally ideal, but will do for now

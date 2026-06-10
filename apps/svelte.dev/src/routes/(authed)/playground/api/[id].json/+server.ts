@@ -1,4 +1,4 @@
-import { dev } from '$app/environment';
+import { dev } from '$app/env';
 import { client } from '$lib/db/client.js';
 import * as gist from '$lib/db/gist.js';
 import { examples } from '$lib/server/content';

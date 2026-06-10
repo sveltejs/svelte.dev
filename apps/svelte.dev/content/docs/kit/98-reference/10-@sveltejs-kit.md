@@ -745,7 +745,7 @@ generateEnvModule: () => void;
 
 <div class="ts-block-property-details">
 
-Generate a module exposing build-time environment variables as `$env/dynamic/public`.
+Generate a module exposing build-time environment variables as `$env/dynamic/public` if the app uses it.
 
 </div>
 </div>
@@ -1170,6 +1170,89 @@ platform?(details: { config: any; prerender: PrerenderOption }): MaybePromise<Ap
 
 A function that is called with the current route `config` and `prerender` option
 and returns an `App.Platform` object
+
+</div>
+</div></div>
+
+## EnvVarConfig
+
+[Environment variables](/docs/kit/environment-variables) can be configured by exporting
+a `variables` object from `src/env.ts`, using [`defineEnvVars`](/docs/kit/@sveltejs-kit-hooks#defineEnvVars).
+
+<div class="ts-block">
+
+```dts
+interface EnvVarConfig<T> {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+public?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `false`
+
+</div>
+
+Whether the environment variable can be accessed by client-side code.
+- if `true`, it can be imported from `$app/env/public`
+- if `false`, it can be imported from `$app/env/private`, which is a [server-only module](/docs/kit/server-only-modules)
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+static?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `false`
+
+</div>
+
+Whether the value is determined at build time or when the app runs.
+- if `true`, the build time value is inlined into the bundle. This enables optimisations like dead-code elimination
+- if `false`, the value is read from the environment when the app starts
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+schema?: StandardSchemaV1<string | undefined, T>;
+```
+
+<div class="ts-block-property-details">
+
+A [Standard Schema](https://standardschema.dev/) validator that is applied to the value when the app starts.
+The validator can output any value — not necessarily a string — but public, non-static values must be
+serializable by [devalue](https://github.com/sveltejs/devalue) so that they can be sent to the browser.
+
+If omitted, the value must be a non-empty string.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+description?: string;
+```
+
+<div class="ts-block-property-details">
+
+A description of the variable that will be used for inline documentation on hover.
 
 </div>
 </div></div>
@@ -3439,7 +3522,7 @@ private fields
 <div class="ts-block-property-children"><div class="ts-block-property">
 
 ```dts
-client: NonNullable<BuildData['client']>;
+client: BuildData['client'];
 ```
 
 <div class="ts-block-property-details"></div>

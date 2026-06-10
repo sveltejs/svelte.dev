@@ -1,8 +1,10 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { enhancedImages } from '@sveltejs/enhanced-img';
+import adapter from '@sveltejs/adapter-vercel';
 import type { PluginOption, UserConfig } from 'vite';
 import { browserslistToTargets } from 'lightningcss';
 import browserslist from 'browserslist';
+import { VERSION } from '@sveltejs/kit';
 
 const plugins: PluginOption[] = [
 	enhancedImages(),
@@ -31,7 +33,34 @@ const plugins: PluginOption[] = [
 			});
 		}
 	},
-	sveltekit() as PluginOption
+	sveltekit({
+		adapter: adapter(),
+
+		inlineStyleThreshold: 1000,
+
+		prerender: {
+			// use deployment URL for prerender origin, so that preview environments also have the correct links
+			origin: process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://svelte.dev',
+
+			handleMissingId(warning) {
+				if (warning.id.startsWith('H4sIA')) {
+					// playground link — do nothing
+					return;
+				}
+
+				throw new Error(warning.message);
+			}
+		},
+
+		// TODO: remove this when we stop deploying previews for Kit 2
+		experimental:
+			VERSION[0] === '2'
+				? {
+						// @ts-expect-error this is invalid in Kit 3 but valid in Kit 2
+						explicitEnvironmentVariables: true
+					}
+				: undefined
+	}) as PluginOption
 ];
 
 // Only enable sharp if we're not in a webcontainer env
@@ -75,7 +104,7 @@ const config: UserConfig = {
 		}
 	},
 	server: {
-		fs: { allow: ['../../packages', '../../../KIT/kit/packages/kit'] },
+		fs: { allow: ['../../packages', '../../node_modules', '../../../KIT/kit/packages/kit'] },
 		// for SvelteKit tutorial
 		headers: {
 			'cross-origin-opener-policy': 'same-origin',
