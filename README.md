@@ -18,6 +18,6 @@ The tutorial, blog and examples are maintained within this repository.
 ```
 pnpm install
 cd apps/svelte.dev
-pnpm sync-docs -p # the -p flag clones our git repos. Otherwise, it expects symlinked local repositories in `apps/svelte.dev/repos`
+pnpm sync-docs -p # use the -p flag to clone the git repos into `apps/svelte.dev/repos`
 pnpm run dev
 ```
