@@ -10,7 +10,6 @@ title: @sveltejs/kit
 import {
 	Server,
 	VERSION,
-	error,
 	fail,
 	invalid,
 	isActionFailure,
@@ -67,38 +66,6 @@ respond(request: Request, options: RequestOptions): Promise<Response>;
 
 ```dts
 const VERSION: string;
-```
-
-</div>
-
-
-
-## error
-
-Throws an error with a HTTP status code and an optional message.
-When called during request handling, this will cause SvelteKit to
-return an error response without invoking `handleError`.
-Make sure you're not catching the thrown error, which would prevent SvelteKit from handling it.
-
-<div class="ts-block">
-
-```dts
-function error(status: number, body: App.Error): never;
-```
-
-</div>
-
-<div class="ts-block">
-
-```dts
-function error(
-	status: number,
-	body?: {
-		message: string;
-	} extends App.Error
-		? App.Error | string | undefined
-		: never
-): never;
 ```
 
 </div>
