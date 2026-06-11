@@ -5,7 +5,7 @@
 	"private": true,
 	"type": "module",
 	"license": "MIT",
-	"packageManager": "pnpm@11.5.3+sha512-esHJGTQcITo03A0Cr7cUPFwmrCbujEeC3uqCG4rGTSE0oIH9iUHa5uKbu0j1jfwrf7zuzMB8svCdIZ00Kklp7Q==",
+	"packageManager": "pnpm@11.5.3",
 	"engines": {
 		"pnpm": ">=9.0.0"
 	},
