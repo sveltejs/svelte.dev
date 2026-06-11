@@ -200,8 +200,8 @@ const packages: Package[] = [
 		docs: 'documentation/docs',
 		types: null,
 		post_clone: async (dir) => {
-			await invoke('npx', ['pnpm@10', 'install'], { cwd: dir });
-			await invoke('npx', ['pnpm@10', 'build'], { cwd: dir });
+			await invoke('pnpm', ['install'], { cwd: dir });
+			await invoke('pnpm', ['build'], { cwd: dir });
 			patch_node_modules(dir, 'packages/sv', 'sv');
 			patch_node_modules(dir, 'packages/sv-utils', '@sveltejs/sv-utils');
 		}
