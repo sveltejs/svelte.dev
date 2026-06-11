@@ -104,7 +104,7 @@ Here's an equivalent component in Vue:
 	<p>I'm counting by copying the source code to the clipboard and running <code>pbpaste | wc -c</code> in my terminal</p>
 </aside>
 
-In other words, it takes 442 characters in React, and 263 characters in Vue, to achieve something that takes 145 characters in Svelte. The React version is literally three times larger!
+In other words, it takes 442 characters in React, and 263 characters in Vue, to achieve something that takes 166 characters in Svelte. The React version is literally two and a half times larger!
 
 It's unusual for the difference to be _quite_ so obvious — in my experience, a React component is typically around 40% larger than its Svelte equivalent. Let's look at the features of Svelte's design that enable you to express ideas more concisely:
 
