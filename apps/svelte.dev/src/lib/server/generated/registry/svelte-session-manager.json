@@ -6,11 +6,11 @@
     "arlac77"
   ],
   "homepage": "https://github.com/arlac77/svelte-session-manager#readme",
-  "version": "3.0.86",
-  "downloads": 386,
+  "version": "3.0.88",
+  "downloads": 406,
   "github_stars": 110,
-  "updated": "2026-03-23T23:59:03.721Z",
-  "svelte_range": "^5.55.0",
+  "updated": "2026-06-03T15:17:00.589Z",
+  "svelte_range": "^5.56.0",
   "typescript": false,
   "runes": true,
   "last_rune_check_version": "3.0.36"

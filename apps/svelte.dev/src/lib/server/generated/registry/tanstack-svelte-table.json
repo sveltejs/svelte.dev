@@ -4,16 +4,14 @@
   "repo_url": "https://github.com/TanStack/table",
   "authors": [
     "tannerlinsley",
-    "kevinvandy",
     "tkdodo",
     "alemtuzlak",
-    "schiller-manuel",
-    "lachlancollins",
-    "kylemathews"
+    "kevinvandy",
+    "schiller-manuel"
   ],
   "homepage": "https://tanstack.com/table",
   "version": "8.21.3",
-  "downloads": 30586,
+  "downloads": 36851,
   "github_stars": 27704,
   "updated": "2025-04-14T20:20:26.877Z",
   "svelte_range": "^4.0.0 || ^3.49.0",
