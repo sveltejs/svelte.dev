@@ -134,7 +134,7 @@ Like Svelte, Vue does have a way of expressing the binding — the `v-model` att
 In Svelte, you update local component state with an assignment operator:
 
 ```js
-let count = 0;
+let count = $state(0);
 
 function increment() {
 	count += 1;
