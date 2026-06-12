@@ -38,7 +38,6 @@ permissions:
 
 env:
   BRANCH: preview-${{ inputs.upstream }}-${{ inputs.pr }}
-  REF: ${{ case(inputs.sha == true,  format('c/{0}', inputs.sha), format('b/{0}', inputs.branch)) }}
 
 jobs:
   Sync:
@@ -66,17 +65,30 @@ jobs:
           git fetch origin
           git checkout -B ${{ env.BRANCH }} # Force create/reset branch based on current main
 
+      - name: Resolve commit SHA
+        id: resolve
+        run: |
+          sha="${{ inputs.sha }}"
+          if [ -z "$sha" ]; then
+            sha=$(git ls-remote "https://github.com/${{ inputs.owner }}/${{ inputs.downstream }}.git" "refs/heads/${{ inputs.branch }}" | cut -f1)
+          fi
+          if [ -z "$sha" ]; then
+            echo "Could not resolve commit SHA for ${{ inputs.owner }}/${{ inputs.downstream }}@${{ inputs.branch }}" >&2
+            exit 1
+          fi
+          echo "ref=c/$sha" >> "$GITHUB_OUTPUT"
+
       - name: Install Svelte upstream
         if: ${{ inputs.upstream == 'svelte' }}
-        run: pnpm add -D https://pkg.svelte.dev/svelte/${{ env.REF }} --filter "svelte.dev"
+        run: pnpm add -D https://pkg.svelte.dev/svelte/${{ steps.resolve.outputs.ref }} --filter "svelte.dev"
 
       - name: Install SvelteKit upstream
         if: ${{ inputs.upstream == 'kit' }}
-        run: pnpm add -D https://pkg.svelte.dev/@sveltejs/kit/${{ env.REF }} https://pkg.svelte.dev/@sveltejs/adapter-vercel/${{ env.REF }} https://pkg.svelte.dev/@sveltejs/enhanced-img/${{ env.REF }} --filter "svelte.dev"
+        run: pnpm add -D https://pkg.svelte.dev/@sveltejs/kit/${{ steps.resolve.outputs.ref }} https://pkg.svelte.dev/@sveltejs/adapter-vercel/${{ steps.resolve.outputs.ref }} https://pkg.svelte.dev/@sveltejs/enhanced-img/${{ steps.resolve.outputs.ref }} --filter "svelte.dev"
 
       - name: Install Svelte CLI upstream
         if: ${{ inputs.upstream == 'cli' }}
-        run: pnpm add -D https://pkg.svelte.dev/sv/${{ env.REF }} https://pkg.svelte.dev/@sveltejs/sv-utils/${{ env.REF }} --filter "svelte.dev"
+        run: pnpm add -D https://pkg.svelte.dev/sv/${{ steps.resolve.outputs.ref }} https://pkg.svelte.dev/@sveltejs/sv-utils/${{ steps.resolve.outputs.ref }} --filter "svelte.dev"
 
       - name: Sync
         run: cd apps/svelte.dev && pnpm sync-docs --owner="${{ inputs.owner }}" -p "${{ format('{0}#{1}#{2}', inputs.upstream, inputs.downstream, inputs.branch) }}"
