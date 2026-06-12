@@ -10,10 +10,19 @@ minimumReleaseAgeExclude:
   - svelte-check
   - esm-env
 blockExoticSubdeps: true
+engineStrict: true
+allowBuilds:
+  esbuild: true
+  sharp: true
+  svelte-preprocess: true
 
 packages:
   - 'apps/*'
   - 'packages/*'
+
+catalog:
+  '@types/node': ^22.19.20
+  vite: ^8.0.16
 
 overrides:
   # This is a workaround to avoid the "exotic dependency is not allowed in subdependencies"

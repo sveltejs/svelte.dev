@@ -61,7 +61,7 @@
 		"@lezer/common": "^1.5.1",
 		"@sveltejs/adapter-auto": "8.0.0-next.0",
 		"@sveltejs/kit": "^3.0.0-next.1",
-		"@sveltejs/package": "^2.5.7",
+		"@sveltejs/package": "^2.5.8",
 		"@sveltejs/vite-plugin-svelte": "^7.0.0",
 		"@types/estree": "^1.0.8",
 		"prettier": "^3.8.1",
@@ -69,7 +69,7 @@
 		"publint": "^0.3.17",
 		"svelte-check": "^4.5.0",
 		"typescript": "^6.0.3",
-		"vite": "^8.0.0-beta.15"
+		"vite": "catalog:"
 	},
 	"type": "module",
 	"dependencies": {

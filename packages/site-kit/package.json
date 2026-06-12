@@ -38,17 +38,17 @@
 		"@fontsource/fira-sans": "^5.2.7",
 		"@lezer/common": "^1.5.1",
 		"@replit/codemirror-lang-svelte": "^6.0.0",
-		"@shikijs/langs": "^3.23.0",
-		"@shikijs/twoslash": "^3.23.0",
+		"@shikijs/langs": "^4.2.0",
+		"@shikijs/twoslash": "^4.2.0",
 		"esm-env": "^1.2.2",
 		"icons": "workspace:*",
 		"json5": "^2.2.3",
-		"shiki": "^3.23.0"
+		"shiki": "^4.2.0"
 	},
 	"devDependencies": {
-		"@shikijs/vitepress-twoslash": "^4.0.1",
+		"@shikijs/vitepress-twoslash": "^4.2.0",
 		"@sveltejs/kit": "^3.0.0-next.1",
-		"@types/node": "^20.19.33",
+		"@types/node": "catalog:",
 		"flexsearch": "^0.8.212",
 		"gzip": "workspace:*",
 		"magic-string": "^0.30.21",
@@ -58,7 +58,7 @@
 		"svelte": "^5.53.5",
 		"svelte-check": "^4.5.0",
 		"typescript": "^6.0.3",
-		"vite": "^8.0.0-beta.15"
+		"vite": "catalog:"
 	},
 	"publishConfig": {
 		"access": "public"
