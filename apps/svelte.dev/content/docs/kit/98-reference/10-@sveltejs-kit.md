@@ -10,7 +10,6 @@ title: @sveltejs/kit
 import {
 	Server,
 	VERSION,
-	error,
 	fail,
 	invalid,
 	isActionFailure,
@@ -67,38 +66,6 @@ respond(request: Request, options: RequestOptions): Promise<Response>;
 
 ```dts
 const VERSION: string;
-```
-
-</div>
-
-
-
-## error
-
-Throws an error with a HTTP status code and an optional message.
-When called during request handling, this will cause SvelteKit to
-return an error response without invoking `handleError`.
-Make sure you're not catching the thrown error, which would prevent SvelteKit from handling it.
-
-<div class="ts-block">
-
-```dts
-function error(status: number, body: App.Error): never;
-```
-
-</div>
-
-<div class="ts-block">
-
-```dts
-function error(
-	status: number,
-	body?: {
-		message: string;
-	} extends App.Error
-		? App.Error | string | undefined
-		: never
-): never;
 ```
 
 </div>
@@ -3037,6 +3004,10 @@ params: Params;
 
 The parameters of the current route - e.g. for a route like `/blog/[slug]`, a `{ slug: string }` object.
 
+In the context of a remote function request initiated by the client, this relates to the page the remote function
+was called from, _not_ the URL of the endpoint SvelteKit creates for the remote function. Never use this to determine
+whether or not a user is authorized to access certain data, as these values are part of the request which could be manipulated.
+
 </div>
 </div>
 
@@ -3086,6 +3057,10 @@ id: RouteId;
 
 The ID of the current route - e.g. for `src/routes/blog/[slug]`, it would be `/blog/[slug]`. It is `null` when no route is matched.
 
+In the context of a remote function request initiated by the client, this relates to the page the remote function
+was called from, _not_ the URL of the endpoint SvelteKit creates for the remote function. Never use this to determine
+whether or not a user is authorized to access certain data, as these values are part of the request which could be manipulated.
+
 </div>
 </div></div>
 
@@ -3134,6 +3109,10 @@ url: URL;
 <div class="ts-block-property-details">
 
 The requested URL.
+
+In the context of a remote function request initiated by the client, this relates to the page the remote function
+was called from, _not_ the URL of the endpoint SvelteKit creates for the remote function. Never use this to determine
+whether or not a user is authorized to access certain data, as these values are part of the request which could be manipulated.
 
 </div>
 </div>
