@@ -23,6 +23,7 @@ packages:
 catalog:
   '@types/node': ^22.19.20
   vite: ^8.0.16
+  vitest: ^4.1.9
 
 overrides:
   # This is a workaround to avoid the "exotic dependency is not allowed in subdependencies"

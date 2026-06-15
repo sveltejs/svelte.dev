@@ -81,6 +81,7 @@
 		"typescript": "^6.0.3",
 		"valibot": "^1.2.0",
 		"vite": "catalog:",
+		"vitest": "catalog:",
 		"vite-imagetools": "^9.0.3"
 	}
 }
