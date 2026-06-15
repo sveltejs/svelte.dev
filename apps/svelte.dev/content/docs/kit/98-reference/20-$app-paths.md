@@ -115,7 +115,7 @@ if (route?.id === '/blog/[slug]') {
 
 ```dts
 function match(
-	url: Pathname | URL | (string & {})
+	url: Pathname_1 | URL | (string & {})
 ): Promise<{
 	id: RouteId;
 	params: Record<string, string>;

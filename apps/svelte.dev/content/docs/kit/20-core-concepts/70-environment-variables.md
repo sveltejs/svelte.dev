@@ -140,7 +140,7 @@ import { defineEnvVars } from '@sveltejs/kit/hooks';
 export const variables = defineEnvVars({
 	GOOGLE_ANALYTICS_ID: {
 		public: true,
-		+++schema: v.pipe(v.string(), v.regex(/G-[A-Z0-9]+/))+++
+		+++validate: v.pipe(v.string(), v.regex(/G-[A-Z0-9]+/))+++
 	}
 });
 ```
@@ -164,7 +164,7 @@ export const variables = defineEnvVars({
 		+++static: true,+++
 
 		// coerce to true/false
-		schema: v.pipe(
+		validate: v.pipe(
 			v.optional(v.string(), ''),
 			v.transform((str) => str !== '')
 		)
