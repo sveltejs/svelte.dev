@@ -14,12 +14,15 @@ import { sveltekit } from '@sveltejs/kit/vite';
 
 Returns the SvelteKit Vite plugins.
 Since version 2.62.0 you can pass [configuration](configuration) directly, in which case `svelte.config.js` is ignored.
+Any options that don't belong to SvelteKit are passed through to `vite-plugin-svelte`.
 
 <div class="ts-block">
 
 ```dts
 function sveltekit(
-	config?: KitConfig & Omit<SvelteConfig, 'onwarn'>
+	config?: KitConfig &
+		Omit<Options, 'onwarn'> &
+		Pick<SvelteConfig, 'vitePlugin'>
 ): Promise<Plugin[]>;
 ```
 
