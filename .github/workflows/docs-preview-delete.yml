@@ -1,4 +1,5 @@
 name: Docs preview delete
+run-name: 'Docs preview delete (${{ inputs.repo }} #${{ inputs.pr }})'
 
 on:
   workflow_dispatch:

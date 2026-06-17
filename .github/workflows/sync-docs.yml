@@ -1,4 +1,5 @@
 name: Sync docs
+run-name: 'Sync docs (${{ inputs.repo }})'
 
 on:
   workflow_dispatch:
