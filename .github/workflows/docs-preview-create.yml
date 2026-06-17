@@ -1,4 +1,5 @@
 name: Docs preview create
+run-name: 'Docs preview create (${{ inputs.upstream }} #${{ inputs.pr }})'
 
 on:
   workflow_dispatch:
