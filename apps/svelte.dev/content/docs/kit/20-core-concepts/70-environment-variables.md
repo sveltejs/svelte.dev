@@ -12,40 +12,17 @@ During development, and at build time, variables defined in a `.env` or `.env.lo
 API_KEY=19f401ba-e8b0-48c4-8c77-b0ebb26d97fe
 ```
 
-By default, every environment variable is implicitly available inside your app via the following modules:
-
-- [`$env/static/private`]($env-static-private)
-- [`$env/static/public`]($env-static-public)
-- [`$env/dynamic/private`]($env-dynamic-private)
-- [`$env/dynamic/public`]($env-dynamic-public)
-
-## Explicit environment variables
-
-As of SvelteKit 2.63, you can opt into _explicit_ environment variables, in which case you instead import environment variables from these modules:
+After following the setup below, they can be imported via the following modules:
 
 - [`$app/env/private`]($app-env-private)
 - [`$app/env/public`]($app-env-public)
 
-Additionally, the [`$app/environment`]($app-environment) module is renamed to [`$app/env`]($app-env).
-
-> [!NOTE] Explicit environment variables will become the default in SvelteKit 3. The `$env/*` modules, along with `$app/environment`, will be removed.
+> [!LEGACY]
+> The `$env/*` modules, along with `$app/environment` were removed in SvelteKit 3 in favour of explicit environment variables that were added in SvelteKit 2.62 as an experimental option.
 
 ### Setup
 
-To opt in, update your configuration...
-
-```js
-/// file: svelte.config.js
-export default {
-	kit: {
-		experimental: {
-			+++explicitEnvironmentVariables: true+++
-		}
-	}
-};
-```
-
-...and add a `src/env.ts` (or `src/env.js`) file that exports a `variables` object:
+Add a `src/env.ts` (or `src/env.js`) file that exports a `variables` object:
 
 ```ts
 /// file: src/env.ts
@@ -145,21 +122,7 @@ export const variables = defineEnvVars({
 });
 ```
 
-If a value is invalid, the app will fail to start (or build). To opt out of one or the other, use [`building`]($app-env#building) from `$app/env` along with a validator that accepts an optional value:
-
-```ts
-/// file: src/env.ts
-import { defineEnvVars } from '@sveltejs/kit/hooks';
-+++import { building } from '$app/env'+++
-import * as v from 'valibot';
-
-export const variables = defineEnvVars({
-	SECRET: {
-		// optional when building but required when starting the app
-		+++schema: building ? v.optional(v.string()) : v.string()+++
-	}
-});
-```
+If a value is invalid, the app will fail to start (or build).
 
 You can use validators to make values optional, or transform them (such as turning a string into a boolean, or parsing JSON) — see your validation library's documentation to learn how.
 
