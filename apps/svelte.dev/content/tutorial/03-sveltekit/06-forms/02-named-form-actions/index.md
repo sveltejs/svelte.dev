@@ -40,7 +40,7 @@ The `<form>` element has an optional `action` attribute, which is similar to an 
 
 > [!NOTE] The `action` attribute can be any URL — if the action was defined on another page, you might have something like `/todos?/create`. Since the action is on _this_ page, we can omit the pathname altogether, hence the leading `?` character.
 
-Next, we want to create a form for each todo, complete with a hidden `<input>` that uniquely identifies it:
+Next, we want to delete a form for each todo, complete with a hidden `<input>` that uniquely identifies it:
 
 ```svelte
 /// file: src/routes/+page.svelte
