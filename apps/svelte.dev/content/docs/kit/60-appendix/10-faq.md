@@ -118,15 +118,15 @@ Finally, you may also consider using an `{#await}` block:
 <script>
 	import { browser } from '$app/environment';
 
-	const promise = browser
-		? import('./BrowserComponent.svelte')
-		: import('./ServerComponent.svelte');
+	const ComponentConstructor = browser ?
+		import('some-browser-only-library').then((module) => module.Component) :
+		new Promise(() => {});
 </script>
 
-{#await promise}
+{#await ComponentConstructor}
 	<p>Loading...</p>
-{:then module}
-	<module.default />
+{:then component}
+	<svelte:component this={component} />
 {:catch error}
 	<p>Something went wrong: {error.message}</p>
 {/await}

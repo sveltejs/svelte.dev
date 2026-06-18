@@ -4072,10 +4072,7 @@ namespace Csp {
 		| 'unsafe-eval'
 		| 'unsafe-hashes'
 		| 'unsafe-inline'
-		| 'unsafe-allow-redirects'
-		| 'unsafe-webtransport-hashes'
 		| 'wasm-unsafe-eval'
-		| 'trusted-types-eval'
 		| 'none';
 	type CryptoSource =
 		`${'nonce' | 'sha256' | 'sha384' | 'sha512'}-${string}`;
@@ -4093,13 +4090,10 @@ namespace Csp {
 	type SchemeSource =
 		| 'http:'
 		| 'https:'
-		| 'ws:'
-		| 'wss:'
 		| 'data:'
 		| 'mediastream:'
 		| 'blob:'
-		| 'filesystem:'
-		| (`${string}:` & {});
+		| 'filesystem:';
 	type Source =
 		| HostSource
 		| SchemeSource
@@ -4470,27 +4464,6 @@ type DeepPartial<T> = T extends
 				: T[K];
 		}
 	: T | undefined;
-```
-
-</div>
-
-## HasNonOptionalBoolean
-
-<div class="ts-block">
-
-```dts
-type HasNonOptionalBoolean<T> =
-	IsAny<T> extends true
-		? never
-		: [T] extends [boolean]
-			? true
-			: T extends Array<infer U>
-				? HasNonOptionalBoolean<U>
-				: T extends Record<string, any>
-					? {
-							[K in keyof T]: HasNonOptionalBoolean<T[K]>;
-						}[keyof T]
-					: never;
 ```
 
 </div>
