@@ -115,7 +115,11 @@ function form<
 	>,
 	Output
 >(
-	validate: Schema,
+	validate: true extends HasNonOptionalBoolean<
+		StandardSchemaV1.InferInput<Schema>
+	>
+		? 'Error: All booleans in form schemas must be optional (e.g. `v.optional(v.boolean(), false)`) because checkbox inputs do not send a false value when unchecked.'
+		: Schema,
 	fn: (
 		data: StandardSchemaV1.InferOutput<Schema>,
 		issue: InvalidField<StandardSchemaV1.InferInput<Schema>>
