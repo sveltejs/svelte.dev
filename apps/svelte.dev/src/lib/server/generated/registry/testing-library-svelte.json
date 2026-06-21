@@ -22,10 +22,10 @@
     "matanbobi"
   ],
   "homepage": "https://github.com/testing-library/svelte-testing-library#readme",
-  "version": "5.3.1",
-  "downloads": 575747,
+  "version": "5.4.0",
+  "downloads": 640875,
   "github_stars": 654,
-  "updated": "2025-12-25T12:44:01.554Z",
+  "updated": "2026-06-20T20:23:31.269Z",
   "svelte_range": "^3 || ^4 || ^5 || ^5.0.0-next.0",
   "typescript": true,
   "runes": false,

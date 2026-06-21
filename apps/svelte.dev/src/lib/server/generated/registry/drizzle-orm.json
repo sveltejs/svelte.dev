@@ -3,15 +3,15 @@
   "npm_description": "Drizzle ORM package for SQL databases",
   "repo_url": "https://github.com/drizzle-team/drizzle-orm",
   "authors": [
-    "alexblokh",
     "dankochetov",
-    "kyrylo_usichenko",
-    "sheriman"
+    "sheriman",
+    "alexblokh",
+    "kyrylo_usichenko"
   ],
   "homepage": "https://orm.drizzle.team",
   "version": "0.45.2",
-  "downloads": 10483141,
-  "github_stars": 34697,
+  "downloads": 11456573,
+  "github_stars": 34870,
   "updated": "2026-03-27T17:06:27.140Z",
   "typescript": true,
   "runes": false,
