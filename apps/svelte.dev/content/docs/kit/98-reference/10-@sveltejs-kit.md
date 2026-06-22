@@ -2744,7 +2744,7 @@ interface RemoteFormInput {/*…*/}
 <div class="ts-block-property">
 
 ```dts
-[key: string]: MaybeArray<string | number | boolean | File | RemoteFormInput>;
+[key: string]: MaybeArray<string | number | boolean | File | RemoteFormInput> | undefined;
 ```
 
 <div class="ts-block-property-details"></div>
@@ -4658,6 +4658,37 @@ type PrerenderHttpErrorHandlerValue =
 	| 'warn'
 	| 'ignore'
 	| PrerenderHttpErrorHandler;
+```
+
+</div>
+
+## PrerenderInvalidUrlHandler
+
+<div class="ts-block">
+
+```dts
+interface PrerenderInvalidUrlHandler {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+(details: { href: string; referrer: string | null; message: string }): void;
+```
+
+<div class="ts-block-property-details"></div>
+</div></div>
+
+## PrerenderInvalidUrlHandlerValue
+
+<div class="ts-block">
+
+```dts
+type PrerenderInvalidUrlHandlerValue =
+	| 'fail'
+	| 'warn'
+	| 'ignore'
+	| PrerenderInvalidUrlHandler;
 ```
 
 </div>
