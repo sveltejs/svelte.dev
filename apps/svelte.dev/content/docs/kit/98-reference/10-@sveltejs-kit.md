@@ -1860,7 +1860,6 @@ type: 'enter';
 
 <div class="ts-block-property-details">
 
-The type of navigation:
 - `enter`: The app has hydrated/started
 
 </div>
@@ -1982,7 +1981,6 @@ type: 'form';
 
 <div class="ts-block-property-details">
 
-The type of navigation:
 - `form`: The user submitted a `<form method="GET">`
 
 </div>
@@ -2030,7 +2028,6 @@ type: 'goto';
 
 <div class="ts-block-property-details">
 
-The type of navigation:
 - `goto`: Navigation was triggered by a `goto(...)` call or a redirect
 
 </div>
@@ -2065,7 +2062,6 @@ type: 'leave';
 
 <div class="ts-block-property-details">
 
-The type of navigation:
 - `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
 
 </div>
@@ -2100,7 +2096,6 @@ type: 'link';
 
 <div class="ts-block-property-details">
 
-The type of navigation:
 - `link`: Navigation was triggered by a link click
 
 </div>
@@ -2148,7 +2143,6 @@ type: 'popstate';
 
 <div class="ts-block-property-details">
 
-The type of navigation:
 - `popstate`: Navigation was triggered by back/forward navigation
 
 </div>
@@ -2744,7 +2738,7 @@ interface RemoteFormInput {/*…*/}
 <div class="ts-block-property">
 
 ```dts
-[key: string]: MaybeArray<string | number | boolean | File | RemoteFormInput>;
+[key: string]: MaybeArray<string | number | boolean | File | RemoteFormInput> | undefined;
 ```
 
 <div class="ts-block-property-details"></div>
@@ -4658,6 +4652,37 @@ type PrerenderHttpErrorHandlerValue =
 	| 'warn'
 	| 'ignore'
 	| PrerenderHttpErrorHandler;
+```
+
+</div>
+
+## PrerenderInvalidUrlHandler
+
+<div class="ts-block">
+
+```dts
+interface PrerenderInvalidUrlHandler {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+(details: { href: string; referrer: string | null; message: string }): void;
+```
+
+<div class="ts-block-property-details"></div>
+</div></div>
+
+## PrerenderInvalidUrlHandlerValue
+
+<div class="ts-block">
+
+```dts
+type PrerenderInvalidUrlHandlerValue =
+	| 'fail'
+	| 'warn'
+	| 'ignore'
+	| PrerenderInvalidUrlHandler;
 ```
 
 </div>
