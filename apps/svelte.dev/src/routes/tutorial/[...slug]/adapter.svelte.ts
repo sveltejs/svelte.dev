@@ -1,3 +1,4 @@
+import { browser } from '$app/env';
 import { page } from '$app/state';
 import type { state as WCState } from '$lib/tutorial/adapters/webcontainer/index.svelte';
 import type { state as RollupState } from '$lib/tutorial/adapters/rollup/index.svelte';
@@ -10,8 +11,11 @@ let use_rollup = $derived.by(() => {
 	let result = true;
 	if (page.data?.exercise) {
 		result = !needs_webcontainers(page.data.exercise);
-		result ? load_rollup() : load_webcontainer();
-		initial_load = false;
+
+		if (browser) {
+			result ? load_rollup() : load_webcontainer();
+			initial_load = false;
+		}
 	}
 	return result;
 });
