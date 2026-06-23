@@ -1271,6 +1271,31 @@ circumstances such as a CMS not returning data for a specific area, resulting in
 
 ```ts
 // @noErrors
+handleInvalidUrl?: PrerenderInvalidUrlHandlerValue;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `"fail"`
+- <span class="tag since">available since</span> v2.67.0
+
+</div>
+
+How to respond when SvelteKit encounters a URL it cannot parse while crawling prerendered HTML (for example, an AT Protocol URL such as `at://did:plc:...`).
+
+- `'fail'` — fail the build
+- `'ignore'` - silently ignore the failure and continue
+- `'warn'` — continue, but print a warning
+- `(details) => void` — a custom error handler that takes a `details` object with `href`, `referrer` and `message` properties. If you `throw` from this function, the build will fail
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```ts
+// @noErrors
 origin?: string;
 ```
 
