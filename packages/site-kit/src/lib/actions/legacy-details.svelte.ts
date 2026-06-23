@@ -1,10 +1,11 @@
 import { page } from '$app/state';
 import { fix_position } from './utils';
 import { Persisted } from '../state';
+import type { Attachment } from 'svelte/attachments';
 
 const show_legacy = new Persisted<'open' | 'closed'>('sv:show-legacy', 'open');
 
-export function legacy_details(node: HTMLElement) {
+export const legacy_details: Attachment = (node) => {
 	let unlisten: (() => void) | undefined;
 
 	function update() {
@@ -53,9 +54,12 @@ export function legacy_details(node: HTMLElement) {
 	$effect(() => {
 		page;
 		update();
+		return () => {
+			unlisten?.();
+		};
 	});
 
-	return {
-		destroy: () => unlisten?.()
+	return () => {
+		unlisten?.();
 	};
-}
+};
