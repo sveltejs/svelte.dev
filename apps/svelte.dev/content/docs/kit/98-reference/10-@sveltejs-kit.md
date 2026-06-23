@@ -1794,6 +1794,25 @@ interface NavigationBase {/*…*/}
 <div class="ts-block-property">
 
 ```dts
+type: NavigationType;
+```
+
+<div class="ts-block-property-details">
+
+The type of navigation:
+- `enter`: The app has hydrated/started
+- `form`: The user submitted a `<form method="GET">`
+- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
+- `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
+- `link`: Navigation was triggered by a link click
+- `popstate`: Navigation was triggered by back/forward navigation
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
 from: NavigationTarget | null;
 ```
 
@@ -1846,6 +1865,8 @@ fails or is aborted. In the case of a `willUnload` navigation, the promise will 
 
 ## NavigationEnter
 
+The navigation that occurs when the app starts/hydrates
+
 <div class="ts-block">
 
 ```dts
@@ -1858,11 +1879,7 @@ interface NavigationEnter extends NavigationBase {/*…*/}
 type: 'enter';
 ```
 
-<div class="ts-block-property-details">
-
-- `enter`: The app has hydrated/started
-
-</div>
+<div class="ts-block-property-details"></div>
 </div>
 
 <div class="ts-block-property">
@@ -1967,6 +1984,8 @@ type NavigationExternal = NavigationGoto | NavigationLeave;
 
 ## NavigationFormSubmit
 
+A navigation triggered by a `<form method="GET">`
+
 <div class="ts-block">
 
 ```dts
@@ -1979,11 +1998,7 @@ interface NavigationFormSubmit extends NavigationBase {/*…*/}
 type: 'form';
 ```
 
-<div class="ts-block-property-details">
-
-- `form`: The user submitted a `<form method="GET">`
-
-</div>
+<div class="ts-block-property-details"></div>
 </div>
 
 <div class="ts-block-property">
@@ -2014,6 +2029,8 @@ In case of a history back/forward navigation, the number of steps to go back/for
 
 ## NavigationGoto
 
+A navigation triggered by a `goto(...)` call or a redirect
+
 <div class="ts-block">
 
 ```dts
@@ -2026,11 +2043,7 @@ interface NavigationGoto extends NavigationBase {/*…*/}
 type: 'goto';
 ```
 
-<div class="ts-block-property-details">
-
-- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
-
-</div>
+<div class="ts-block-property-details"></div>
 </div>
 
 <div class="ts-block-property">
@@ -2048,6 +2061,8 @@ In case of a history back/forward navigation, the number of steps to go back/for
 
 ## NavigationLeave
 
+A navigation triggered by the tab being closed, or the user navigating to a different document
+
 <div class="ts-block">
 
 ```dts
@@ -2060,11 +2075,7 @@ interface NavigationLeave extends NavigationBase {/*…*/}
 type: 'leave';
 ```
 
-<div class="ts-block-property-details">
-
-- `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
-
-</div>
+<div class="ts-block-property-details"></div>
 </div>
 
 <div class="ts-block-property">
@@ -2082,6 +2093,8 @@ In case of a history back/forward navigation, the number of steps to go back/for
 
 ## NavigationLink
 
+A navigation triggered by a link click
+
 <div class="ts-block">
 
 ```dts
@@ -2094,11 +2107,7 @@ interface NavigationLink extends NavigationBase {/*…*/}
 type: 'link';
 ```
 
-<div class="ts-block-property-details">
-
-- `link`: Navigation was triggered by a link click
-
-</div>
+<div class="ts-block-property-details"></div>
 </div>
 
 <div class="ts-block-property">
@@ -2129,6 +2138,8 @@ In case of a history back/forward navigation, the number of steps to go back/for
 
 ## NavigationPopState
 
+A navigation triggered by back/forward navigation
+
 <div class="ts-block">
 
 ```dts
@@ -2141,11 +2152,7 @@ interface NavigationPopState extends NavigationBase {/*…*/}
 type: 'popstate';
 ```
 
-<div class="ts-block-property-details">
-
-- `popstate`: Navigation was triggered by back/forward navigation
-
-</div>
+<div class="ts-block-property-details"></div>
 </div>
 
 <div class="ts-block-property">
@@ -2267,9 +2274,9 @@ For the `to` target, this represents the scroll position that will be or was res
 
 - `enter`: The app has hydrated/started
 - `form`: The user submitted a `<form method="GET">`
+- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
 - `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
 - `link`: Navigation was triggered by a link click
-- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
 - `popstate`: Navigation was triggered by back/forward navigation
 
 <div class="ts-block">
