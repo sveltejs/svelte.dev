@@ -1,5 +1,4 @@
-import { browser } from '$app/env';
-import { page } from '$app/stores';
+import { page } from '$app/state';
 import type { state as WCState } from '$lib/tutorial/adapters/webcontainer/index.svelte';
 import type { state as RollupState } from '$lib/tutorial/adapters/rollup/index.svelte';
 import type { Adapter } from '$lib/tutorial';
@@ -7,7 +6,15 @@ import type { File, Item } from '@sveltejs/repl/workspace';
 import { needs_webcontainers } from './shared';
 
 let initial_load = true;
-let use_rollup = $state(true);
+let use_rollup = $derived.by(() => {
+	let result = true;
+	if (page.data?.exercise) {
+		result = !needs_webcontainers(page.data.exercise);
+		result ? load_rollup() : load_webcontainer();
+		initial_load = false;
+	}
+	return result;
+});
 
 let rollup_state = $state.raw<typeof RollupState>({} as any);
 let wc_state = $state.raw<typeof WCState>({} as any);
@@ -32,23 +39,6 @@ export const adapter_state = new (class {
 		}
 	);
 })();
-
-if (browser) {
-	page.subscribe(($page) => {
-		const exercise = $page.data?.exercise;
-		if (exercise) {
-			use_rollup = !needs_webcontainers(exercise);
-
-			if (use_rollup) {
-				load_rollup();
-			} else {
-				load_webcontainer();
-			}
-
-			initial_load = false;
-		}
-	});
-}
 
 let wc_ready: Promise<Adapter> | undefined = undefined;
 

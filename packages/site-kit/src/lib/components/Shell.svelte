@@ -3,7 +3,7 @@ The main shell of the application. It provides a slot for the top navigation, th
 -->
 
 <script lang="ts">
-	import { navigating } from '$app/stores';
+	import { navigating } from '$app/state';
 	import { overlay_open } from '../stores';
 	import PreloadingIndicator from '../nav/PreloadingIndicator.svelte';
 	import SkipLink from '../nav/SkipLink.svelte';
@@ -27,7 +27,7 @@ The main shell of the application. It provides a slot for the top navigation, th
 
 <Icons />
 
-{#if $navigating}
+{#if navigating}
 	<PreloadingIndicator />
 {/if}
 

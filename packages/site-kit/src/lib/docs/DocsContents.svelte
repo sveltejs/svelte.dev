@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { afterNavigate } from '$app/navigation';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import type { Document, DocumentSummary } from '../types';
 
 	interface Props {
@@ -42,7 +42,7 @@
 						<li>
 							<a
 								class="page"
-								aria-current={`/${slug}` === $page.url.pathname ? 'page' : undefined}
+								aria-current={`/${slug}` === page.url.pathname ? 'page' : undefined}
 								href="/{slug}"
 							>
 								{metadata.title}
