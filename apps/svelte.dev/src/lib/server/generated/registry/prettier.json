@@ -16,10 +16,10 @@
     "prettier-bot"
   ],
   "homepage": "https://prettier.io",
-  "version": "3.8.3",
-  "downloads": 108865351,
-  "github_stars": 51936,
-  "updated": "2026-04-15T00:55:25.573Z",
+  "version": "3.8.4",
+  "downloads": 116191556,
+  "github_stars": 52072,
+  "updated": "2026-06-09T11:30:06.784Z",
   "typescript": true,
   "runes": false,
   "last_rune_check_version": "3.5.3"

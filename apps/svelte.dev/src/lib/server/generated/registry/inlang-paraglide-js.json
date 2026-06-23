@@ -6,11 +6,11 @@
     "samuelstroschein",
     "inlangbot"
   ],
-  "homepage": "https://inlang.com/m/gerre34r/library-inlang-paraglideJs",
-  "version": "2.18.2",
-  "downloads": 303388,
-  "github_stars": 458,
-  "updated": "2026-06-02T06:43:47.155Z",
+  "homepage": "https://paraglidejs.com",
+  "version": "2.20.0",
+  "downloads": 344732,
+  "github_stars": 501,
+  "updated": "2026-06-17T15:04:14.422Z",
   "typescript": true,
   "runes": false,
   "last_rune_check_version": "2.0.11"

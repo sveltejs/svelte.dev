@@ -3,15 +3,11 @@
   "npm_description": "Primitives for managing, caching and syncing asynchronous and remote data in Svelte",
   "repo_url": "https://github.com/TanStack/query",
   "authors": [
-    "tannerlinsley",
-    "tkdodo",
-    "alemtuzlak",
-    "kevinvandy",
-    "schiller-manuel"
+    "tannerlinsley"
   ],
   "homepage": "https://tanstack.com/query",
   "version": "6.1.34",
-  "downloads": 129634,
+  "downloads": 132724,
   "github_stars": 48501,
   "updated": "2026-06-02T19:24:39.329Z",
   "svelte_range": "^5.25.0",

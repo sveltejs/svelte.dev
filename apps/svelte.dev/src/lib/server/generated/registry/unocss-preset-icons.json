@@ -8,10 +8,10 @@
     "zyyv"
   ],
   "homepage": "https://unocss.dev",
-  "version": "66.7.0",
-  "downloads": 353861,
+  "version": "66.7.2",
+  "downloads": 449085,
   "github_stars": 18587,
-  "updated": "2026-05-21T08:58:54.866Z",
+  "updated": "2026-06-12T09:06:26.159Z",
   "typescript": true,
   "runes": false,
   "last_rune_check_version": "66.1.0-beta.11"
