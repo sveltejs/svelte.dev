@@ -52,9 +52,9 @@
 		"@cloudflare/workers-types": "^4.20260305.0",
 		"@resvg/resvg-js": "^2.6.2",
 		"@supabase/supabase-js": "^2.97.0",
-		"@sveltejs/adapter-vercel": "7.0.0-next.0",
-		"@sveltejs/enhanced-img": "^0.10.4",
-		"@sveltejs/kit": "^3.0.0-next.1",
+		"@sveltejs/adapter-vercel": "https://pkg.svelte.dev/@sveltejs/adapter-vercel/c/43b1c742f689f9fe9d7a4c7913ce81c0a7f7ca9d",
+		"@sveltejs/enhanced-img": "https://pkg.svelte.dev/@sveltejs/enhanced-img/c/43b1c742f689f9fe9d7a4c7913ce81c0a7f7ca9d",
+		"@sveltejs/kit": "https://pkg.svelte.dev/@sveltejs/kit/c/43b1c742f689f9fe9d7a4c7913ce81c0a7f7ca9d",
 		"@sveltejs/site-kit": "workspace:*",
 		"@sveltejs/sv-utils": "^0.2.2",
 		"@sveltejs/vite-plugin-svelte": "^7.0.0",
@@ -81,7 +81,7 @@
 		"typescript": "^6.0.3",
 		"valibot": "^1.2.0",
 		"vite": "catalog:",
-		"vitest": "catalog:",
-		"vite-imagetools": "^9.0.3"
+		"vite-imagetools": "^9.0.3",
+		"vitest": "catalog:"
 	}
 }
