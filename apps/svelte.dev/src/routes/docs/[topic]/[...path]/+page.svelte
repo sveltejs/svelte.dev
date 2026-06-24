@@ -81,7 +81,7 @@
 	/>
 </svelte:head>
 
-<div id="docs-content" use:legacy_details>
+<div id="docs-content" {@attach legacy_details}>
 	<header>
 		<Breadcrumbs breadcrumbs={data.document.breadcrumbs.slice(1)} />
 		<h1>{@html escape_html(data.document.metadata.title).replaceAll('/', '/<wbr>')}</h1>
