@@ -67,15 +67,20 @@ Alternatively, create or edit `~/.copilot/mcp-config.json` and add the following
 }
 ```
 
-## Gemini CLI
+## Antigravity CLI
 
-To include the local MCP version in Gemini CLI, simply run the following command:
+To use the local MCP version in Antigravity CLI, create or edit `~/.gemini/config/mcp_config.json` and add the following configuration:
 
-```bash
-gemini mcp add -t stdio -s [scope] svelte npx -y @sveltejs/mcp
+```json
+{
+	"mcpServers": {
+		"svelte": {
+			"command": "npx",
+			"args": ["-y", "@sveltejs/mcp"]
+		}
+	}
+}
 ```
-
-The `[scope]` must be `user`, `project` or `local`.
 
 ## OpenCode
 
