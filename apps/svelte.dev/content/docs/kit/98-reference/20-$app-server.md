@@ -307,8 +307,8 @@ function read(asset: string): Response;
 
 ## requested
 
-In the context of a remote `command` or `form` request, returns an iterable
-of `{ arg, query }` entries for the refreshes requested by the client, up to
+Inside a remote `command` or `form` callback, returns an iterable
+of `{ arg, query }` entries for the query instances the client asked to refresh, up to
 the supplied `limit`. Each `query` is a `RemoteQuery` bound to the original
 client-side cache key, so `refresh()` / `set()` propagate correctly even when
 the query's schema transforms the input. `arg` is the *validated* argument,
@@ -317,6 +317,8 @@ declared with a Standard Schema).
 
 Arguments that fail validation or exceed `limit` are recorded as failures in
 the response to the client.
+See [Client-requested refreshes](/docs/kit/remote-functions#Single-flight-mutations-Client-requested-refreshes)
+for usage in a remote `command` or `form`.
 
 ```ts
 import { requested } from '$app/server';
