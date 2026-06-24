@@ -52,7 +52,7 @@
 		<div style="height: 100%">%sveltekit.body%</div>
 
 		<script>
-			if (localStorage.getItem('svelte:show-legacy') !== 'false') {
+			if (localStorage.getItem('sv:show-legacy') === 'open') {
 				for (const node of document.querySelectorAll('details.legacy')) {
 					node.open = true;
 				}

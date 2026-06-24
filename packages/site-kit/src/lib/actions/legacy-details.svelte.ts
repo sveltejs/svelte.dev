@@ -6,60 +6,32 @@ import type { Attachment } from 'svelte/attachments';
 const show_legacy = new Persisted<'open' | 'closed'>('sv:show-legacy', 'open');
 
 export const legacy_details: Attachment = (node) => {
-	let unlisten: (() => void) | undefined;
+	// run whenever the pathname changes
+	page.url.pathname;
 
-	function update() {
-		unlisten?.();
+	const details = node.querySelectorAll('details.legacy') as NodeListOf<HTMLDetailsElement>;
 
-		const details = node.querySelectorAll('details.legacy') as NodeListOf<HTMLDetailsElement>;
-		const show = show_legacy.current === 'open';
+	const on_toggle = (e: Event) => {
+		const detail = e.currentTarget as HTMLDetailsElement;
 
-		/** Whether the toggle was initiated by user action or `element.open = ...` */
-		let secondary = false;
+		show_legacy.current = detail.open ? 'open' : 'closed';
 
-		const on_toggle = (e: Event) => {
-			if (secondary) return;
-
-			const detail = e.currentTarget as HTMLDetailsElement;
-
-			secondary = true;
-			show_legacy.current = detail.open ? 'open' : 'closed';
-
-			fix_position(detail, () => {
-				for (const other of details) {
-					if (other !== detail) {
-						other.open = detail.open;
-					}
+		fix_position(detail, () => {
+			for (const other of details) {
+				if (other !== detail) {
+					other.open = detail.open;
 				}
-			});
-
-			queueMicrotask(() => {
-				secondary = false;
-			});
-		};
-
-		for (const detail of details) {
-			detail.open = show;
-			detail.addEventListener('toggle', on_toggle);
-		}
-
-		unlisten = () => {
-			for (const detail of details) {
-				detail.removeEventListener('toggle', on_toggle);
 			}
-		};
+		});
+	};
+
+	for (const detail of details) {
+		detail.addEventListener('toggle', on_toggle);
 	}
 
-	// Page changed. Update again
-	$effect(() => {
-		page.url.pathname;
-		update();
-		return () => {
-			unlisten?.();
-		};
-	});
-
 	return () => {
-		unlisten?.();
+		for (const detail of details) {
+			detail.removeEventListener('toggle', on_toggle);
+		}
 	};
 };

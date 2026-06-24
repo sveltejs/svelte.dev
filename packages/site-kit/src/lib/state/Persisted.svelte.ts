@@ -33,7 +33,9 @@ export class Persisted<T extends string = string> {
 	}
 
 	set current(v: T) {
-		this.#storage?.setItem(this.#key, v);
-		this.#version += 1;
+		if (v !== this.#storage?.getItem?.(this.#key)) {
+			this.#storage?.setItem(this.#key, v);
+			this.#version += 1;
+		}
 	}
 }
