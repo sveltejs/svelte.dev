@@ -52,7 +52,7 @@ export const legacy_details: Attachment = (node) => {
 
 	// Page changed. Update again
 	$effect(() => {
-		page;
+		page.url.pathname;
 		update();
 		return () => {
 			unlisten?.();
