@@ -94,6 +94,25 @@ src/routes/fruits/[page+++=fruit+++]
 
 If the pathname doesn't match, SvelteKit will try to match other routes (using the sort order specified below), before eventually returning a 404.
 
+Instead of a function, `match` can also be a [Standard Schema](https://standardschema.dev) — for example with [Valibot](https://valibot.dev):
+
+```js
+/// file: src/params/number.js
+import * as v from 'valibot';
+
+export const match = v.pipe(v.string(), v.toNumber());
+```
+
+When a schema is used, SvelteKit validates the parameter and uses the transformed output as the param value. If validation fails, the route does not match.
+
+```js
+/// file: src/routes/items/[id=number]/+page.js
+/** @type {import('./$types').PageLoad} */
+export function load({ params }) {
+	console.log(typeof params.id); // 'number'
+}
+```
+
 Each module in the `params` directory corresponds to a matcher, with the exception of `*.test.js` and `*.spec.js` files which may be used to unit test your matchers.
 
 > [!NOTE] Matchers run both on the server and in the browser.
