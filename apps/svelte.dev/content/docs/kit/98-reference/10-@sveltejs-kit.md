@@ -2587,14 +2587,7 @@ type RemoteForm<
 	};
 	/** Use the `enhance` method to influence what happens when the form is submitted. */
 	enhance(
-		callback: (
-			form: Omit<
-				RemoteForm<Input, Output>,
-				'enhance' | 'element'
-			> & {
-				readonly element: HTMLFormElement;
-			}
-		) => MaybePromise<void>
+		callback: RemoteFormEnhanceCallback<Input, Output>
 	): {
 		method: 'POST';
 		action: string;
@@ -2634,6 +2627,45 @@ type RemoteForm<
 	get pending(): number;
 	/** Access form fields using object notation */
 	fields: RemoteFormFieldsRoot<Input>;
+};
+```
+
+</div>
+
+## RemoteFormEnhanceCallback
+
+The callback passed to a remote form's `enhance` method. See [Remote functions](/docs/kit/remote-functions#form) for full documentation.
+
+<div class="ts-block">
+
+```dts
+type RemoteFormEnhanceCallback<
+	Input extends RemoteFormInput | void =
+		RemoteFormInput | void,
+	Output = any
+> = (
+	form: RemoteFormEnhanceInstance<Input, Output>
+) => MaybePromise<void>;
+```
+
+</div>
+
+## RemoteFormEnhanceInstance
+
+The form instance as received inside an `enhance` callback. See [Remote functions](/docs/kit/remote-functions#form) for full documentation.
+
+<div class="ts-block">
+
+```dts
+type RemoteFormEnhanceInstance<
+	Input extends RemoteFormInput | void =
+		RemoteFormInput | void,
+	Output = any
+> = Omit<
+	RemoteForm<Input, Output>,
+	'enhance' | 'element'
+> & {
+	readonly element: HTMLFormElement;
 };
 ```
 
