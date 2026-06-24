@@ -57,15 +57,19 @@ Alternatively, create or edit `~/.copilot/mcp-config.json` and add the following
 }
 ```
 
-## Gemini CLI
+## Antigravity CLI
 
-To use the remote MCP server with Gemini CLI, simply run the following command:
+To use the remote MCP version in Antigravity CLI, create or edit `~/.gemini/config/mcp_config.json` and add the following configuration:
 
-```bash
-gemini mcp add -t http -s [scope] svelte https://mcp.svelte.dev/mcp
+```json
+{
+	"mcpServers": {
+		"svelte": {
+			"url": "https://mcp.svelte.dev/mcp"
+		}
+	}
+}
 ```
-
-The `[scope]` must be `user` or `project`.
 
 ## OpenCode
 
