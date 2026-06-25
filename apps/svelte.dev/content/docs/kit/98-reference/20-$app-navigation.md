@@ -89,7 +89,9 @@ function disableScrollHandling(): void;
 Allows you to navigate programmatically to a given route, with options such as keeping the current element focused.
 Returns a Promise that resolves when SvelteKit navigates (or fails to navigate, in which case the promise rejects) to the specified `url`.
 
-For external URLs, use `window.location = url` instead of calling `goto(url)`.
+`goto` is intended for navigations to routes that belong to the app.
+If the URL does not resolve to a route within the app, the returned promise will reject.
+For external URLs, use `window.location = url` to perform a full-page navigation instead of calling `goto(url)`.
 
 <div class="ts-block">
 
