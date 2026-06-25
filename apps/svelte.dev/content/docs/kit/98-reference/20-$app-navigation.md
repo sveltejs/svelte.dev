@@ -214,15 +214,22 @@ Returns a Promise that resolves with the result of running the new route's `load
 
 ```dts
 function preloadData(href: string): Promise<
-	| {
-			type: 'loaded';
-			status: number;
-			data: Record<string, any>;
-	  }
-	| {
-			type: 'redirect';
-			location: string;
-	  }
+	(
+		| {
+				type: 'loaded';
+				data: Record<string, any>;
+		  }
+		| {
+				type: 'redirect';
+				location: string;
+		  }
+		| {
+				type: 'error';
+				error: App.Error;
+		  }
+	) & {
+		status: number;
+	}
 >;
 ```
 
