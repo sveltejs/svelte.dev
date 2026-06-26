@@ -52,9 +52,6 @@ This throws an exception that SvelteKit catches, causing it to set the response 
 <h1>{page.error.message}</h1>
 ```
 
-> [!LEGACY]
-> `$app/state` was added in SvelteKit 2.12. If you're using an earlier version or are using Svelte 4, use `$app/stores` instead.
-
 You can add extra properties to the error object if needed...
 
 ```js
@@ -108,17 +105,19 @@ Ordinarily, if an error happens during server-side rendering (for example inside
 Since SvelteKit 2.54 and Svelte 5.53, you can change this by enabling the experimental `handleRenderingErrors` option in your config:
 
 ```js
-/// file: svelte.config.js
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
-	kit: {
-		experimental: {
-			handleRenderingErrors: true
-		}
-	}
-};
+/// file: vite.config.js
+import { sveltekit } from '@sveltejs/kit/vite';
+import { defineConfig } from 'vite';
 
-export default config;
+export default defineConfig({
+	plugins: [
+		sveltekit({
+			experimental: {
+				handleRenderingErrors: true
+			}
+		})
+	]
+});
 ```
 
 When this is enabled, SvelteKit will wrap your route components in an error boundary. If an error occurs during rendering, the nearest [`+error.svelte`](routing#error) page will be shown, just as if the error had occurred in a `load` function.
