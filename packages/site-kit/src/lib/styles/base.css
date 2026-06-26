@@ -79,9 +79,14 @@ h3 {
 	font: var(--sk-font-h3);
 }
 
+h4 {
+	font: var(--sk-font-h4);
+}
+
 h1,
 h2,
-h3 {
+h3,
+h4 {
 	position: relative;
 	text-wrap: balance;
 	color: var(--sk-fg-1);
