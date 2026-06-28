@@ -8,10 +8,10 @@
     "conduitry"
   ],
   "homepage": "https://svelte.dev/docs/kit/adapter-node",
-  "version": "5.5.4",
-  "downloads": 645497,
+  "version": "5.5.7",
+  "downloads": 642719,
   "github_stars": 20282,
-  "updated": "2026-02-26T20:11:04.749Z",
+  "updated": "2026-06-24T21:37:48.881Z",
   "kit_range": "^2.4.0",
   "typescript": true,
   "runes": false,

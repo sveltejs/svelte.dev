@@ -7,10 +7,10 @@
     "inlangbot"
   ],
   "homepage": "https://paraglidejs.com",
-  "version": "2.20.0",
-  "downloads": 344732,
-  "github_stars": 501,
-  "updated": "2026-06-17T15:04:14.422Z",
+  "version": "2.20.2",
+  "downloads": 350906,
+  "github_stars": 519,
+  "updated": "2026-06-25T05:50:42.055Z",
   "typescript": true,
   "runes": false,
   "last_rune_check_version": "2.0.11"

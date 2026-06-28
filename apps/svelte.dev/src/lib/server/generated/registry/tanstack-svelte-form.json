@@ -3,11 +3,12 @@
   "npm_description": "Powerful, type-safe forms for Svelte.",
   "repo_url": "https://github.com/TanStack/form",
   "authors": [
-    "tannerlinsley"
+    "tannerlinsley",
+    "alemtuzlak"
   ],
   "homepage": "https://tanstack.com/form",
   "version": "1.33.0",
-  "downloads": 19280,
+  "downloads": 18888,
   "github_stars": 6295,
   "updated": "2026-05-28T17:05:49.001Z",
   "svelte_range": "^5.0.0",

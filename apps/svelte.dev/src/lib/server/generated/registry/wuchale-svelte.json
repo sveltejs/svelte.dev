@@ -6,10 +6,10 @@
     "k1dv5"
   ],
   "homepage": "https://wuchale.dev",
-  "version": "0.20.0",
-  "downloads": 7362,
+  "version": "0.20.2",
+  "downloads": 7317,
   "github_stars": 312,
-  "updated": "2026-06-12T09:58:40.977Z",
+  "updated": "2026-06-27T19:42:29.656Z",
   "svelte_range": "^5",
   "typescript": true,
   "runes": false,

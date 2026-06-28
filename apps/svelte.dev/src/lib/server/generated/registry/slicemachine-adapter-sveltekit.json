@@ -7,7 +7,6 @@
     "angeloashmore",
     "odim",
     "levimykel",
-    "nvld",
     "prismic-ci",
     "jomifepe",
     "xrutayisire",
@@ -15,7 +14,7 @@
     "relisui"
   ],
   "version": "0.3.96",
-  "downloads": 2896,
+  "downloads": 962,
   "github_stars": 304,
   "updated": "2026-05-14T15:51:01.422Z",
   "svelte_range": "^3.54.0 || ^4.0.0-next.0 || ^5.0.0-next.1",
