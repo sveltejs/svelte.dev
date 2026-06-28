@@ -3,11 +3,12 @@
   "npm_description": "Headless UI for building powerful tables & datagrids for Svelte.",
   "repo_url": "https://github.com/TanStack/table",
   "authors": [
-    "tannerlinsley"
+    "tannerlinsley",
+    "alemtuzlak"
   ],
   "homepage": "https://tanstack.com/table",
   "version": "8.21.3",
-  "downloads": 37426,
+  "downloads": 36770,
   "github_stars": 27704,
   "updated": "2025-04-14T20:20:26.877Z",
   "svelte_range": "^4.0.0 || ^3.49.0",
