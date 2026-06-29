@@ -38,7 +38,7 @@ In the Settings > Developer section, click on Edit Config. It will open the fold
 
 ## Codex CLI
 
-Add the following to your `config.toml` (which defaults to `~/.codex/config.toml`, but refer to [the configuration documentation](https://github.com/openai/codex/blob/main/docs/config.md) for more advanced setups):
+You can automatically configure the MCP server using the [Codex plugin](codex-plugin) (recommended). If you prefer to configure the MCP server manually, add the following to your `config.toml` (which defaults to `~/.codex/config.toml`, but refer to [the configuration documentation](https://github.com/openai/codex/blob/main/docs/config.md) for more advanced setups):
 
 ```toml
 [mcp_servers.svelte]
@@ -48,7 +48,7 @@ args = ["-y", "@sveltejs/mcp"]
 
 ## Copilot CLI
 
-Use the Copilot CLI to interactively add the MCP server:
+You can automatically configure the MCP server using the [Copilot plugin](copilot-plugin) (recommended). If you prefer to configure the MCP server manually, use the Copilot CLI to interactively add the MCP server:
 
 ```bash
 /mcp add
