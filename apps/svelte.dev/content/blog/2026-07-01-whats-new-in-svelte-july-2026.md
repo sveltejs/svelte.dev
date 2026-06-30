@@ -13,7 +13,7 @@ Let's dive in!
 
 ## What's new in SvelteKit
 
-- You can now pass your SvelteKit config directly to the Vite plugin, so a separate `svelte.config.js` is no longer required (**2.62.0**, [Docs](https://svelte.dev/docs/kit/configuration), [#15944](https://github.com/sveltejs/kit/pull/15944))
+- You can now pass your SvelteKit config directly to the Vite plugin, so a separate `svelte.config.js` is no longer required, as a preview of how Kit 3 will require config to live in `vite.config.js` (**2.62.0**, [Docs](https://svelte.dev/docs/kit/configuration), [#15944](https://github.com/sveltejs/kit/pull/15944))
 - Experimental explicit environment variables let you declare and type your env vars in one place, as a preview of how `$env/*` will work in SvelteKit 3 (**2.63.0**, [Docs](https://svelte.dev/docs/kit/environment-variables#Explicit-environment-variables), [#15934](https://github.com/sveltejs/kit/pull/15934))
 - Remote function commands can now receive `File` objects directly, so you can upload files without manually wrapping them in `FormData` (**2.64.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#command), [#15978](https://github.com/sveltejs/kit/pull/15978))
 - Remote queries can now refresh other queries, making it easier to invalidate related data after a mutation (**2.65.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#query-Refreshing-queries), [#16012](https://github.com/sveltejs/kit/pull/16012))
@@ -33,7 +33,6 @@ For all the features and bugfixes that landed this month, check out the SvelteKi
 - The `drizzle` and `better-auth` add-ons now support SvelteKit's new explicit environment variables (**sv@0.16.0**, [#1122](https://github.com/sveltejs/cli/pull/1122))
 - New `defineEnv` and `svelteConfig` helpers in `@sveltejs/sv-utils` make it easier to read and edit a project's Svelte config from add-ons (**sv-utils@0.3.0**)
 - The Svelte language server, `svelte-check` and `svelte2tsx` now understand Svelte 5's `{const ...}` declaration tags (**svelte-language-server@0.18.1/svelte-check@4.5.0/svelte2tsx@0.7.56**, [#3033](https://github.com/sveltejs/language-tools/pull/3033))
-- The Svelte config can now be written in TypeScript with `svelte.config.ts` or `svelte.config.mts` (**svelte-language-server@0.18.1**, [#3009](https://github.com/sveltejs/language-tools/pull/3009))
 - CSS completions now work inside nested `<style>` tags (**svelte-language-server@0.18.1**, [#3022](https://github.com/sveltejs/language-tools/pull/3022))
 - The language tools can now read Svelte config straight from `vite.config.js/ts`, matching SvelteKit's new Vite plugin configuration (**svelte-language-server@0.18.2/svelte-check@4.6.0**, [#3031](https://github.com/sveltejs/language-tools/pull/3031))
 - `svelte-check` now accepts a `--config` option to point at a custom config file location (**svelte-check@4.7.0**, [#3066](https://github.com/sveltejs/language-tools/pull/3066))
