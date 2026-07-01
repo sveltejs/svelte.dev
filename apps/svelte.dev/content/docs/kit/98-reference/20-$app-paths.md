@@ -7,7 +7,7 @@ title: $app/paths
 
 ```js
 // @noErrors
-import { asset, assets, base, match, resolve, resolveRoute } from '$app/paths';
+import { asset, match, resolve } from '$app/paths';
 ```
 
 ## asset
@@ -18,7 +18,7 @@ Available since 2.26
 
 </blockquote>
 
-Resolve the URL of an asset in your `static` directory, by prefixing it with [`config.kit.paths.assets`](/docs/kit/configuration#paths) if configured, or otherwise by prefixing it with the base path.
+Resolve the URL of an asset in your `static` directory, by prefixing it with [`config.paths.assets`](/docs/kit/configuration#paths) if configured, or otherwise by prefixing it with the base path.
 
 During server rendering, the base path is relative and depends on the page currently being rendered.
 
@@ -34,54 +34,6 @@ During server rendering, the base path is relative and depends on the page curre
 
 ```dts
 function asset(file: Asset): string;
-```
-
-</div>
-
-
-
-## assets
-
-<blockquote class="tag deprecated note">
-
-Use [`asset(...)`](/docs/kit/$app-paths#asset) instead
-
-</blockquote>
-
-An absolute path that matches [`config.kit.paths.assets`](/docs/kit/configuration#paths).
-
-> [!NOTE] If a value for `config.kit.paths.assets` is specified, it will be replaced with `'/_svelte_kit_assets'` during `vite dev` or `vite preview`, since the assets don't yet live at their eventual URL.
-
-<div class="ts-block">
-
-```dts
-let assets:
-	| ''
-	| `https://${string}`
-	| `http://${string}`
-	| '/_svelte_kit_assets';
-```
-
-</div>
-
-
-
-## base
-
-<blockquote class="tag deprecated note">
-
-Use [`resolve(...)`](/docs/kit/$app-paths#resolve) instead
-
-</blockquote>
-
-A string that matches [`config.kit.paths.base`](/docs/kit/configuration#paths).
-
-Example usage: `<a href="{base}/your-page">Link</a>`
-
-<div class="ts-block">
-
-```dts
-let base: '' | `/${string}`;
 ```
 
 </div>
@@ -116,10 +68,15 @@ if (route?.id === '/blog/[slug]') {
 ```dts
 function match(
 	url: Pathname | URL | (string & {})
-): Promise<{
-	id: RouteId;
-	params: Record<string, string>;
-} | null>;
+): Promise<
+	| {
+			[K in RouteId]: {
+				id: K;
+				params: RouteParams<K>;
+			};
+	  }[RouteId]
+	| null
+>;
 ```
 
 </div>
@@ -165,26 +122,7 @@ function resolve<
 
 
 
-## resolveRoute
-
-<blockquote class="tag deprecated note">
-
-Use [`resolve(...)`](/docs/kit/$app-paths#resolve) instead
-
-</blockquote>
-
-<div class="ts-block">
-
-```dts
-function resolveRoute<
-	T extends
-		| RouteIdWithSearchOrHash
-		| PathnameWithSearchOrHash
->(...args: ResolveArgs<T>): ResolvedPathname;
-```
-
-</div>
 
 
-
-
+> [!LEGACY]
+> `base`, `assets`, and `resolveRoute` were removed in 3.0
