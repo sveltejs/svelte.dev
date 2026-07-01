@@ -16,6 +16,9 @@ on:
 env:
   BRANCH: preview-${{ inputs.repo }}-${{ inputs.pr }}
 
+permissions:
+  contents: write
+
 jobs:
   Sync:
     runs-on: ubuntu-latest
