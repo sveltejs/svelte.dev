@@ -37,6 +37,10 @@
 		const transaction = setDiagnostics(editor_view.state, workspace.diagnostics);
 		editor_view.dispatch(transaction);
 	});
+
+	$effect(() => {
+		console.log('compiled', workspace.current_compiled);
+	});
 </script>
 
 <svelte:window
