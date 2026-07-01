@@ -193,7 +193,7 @@ Others are required for SvelteKit to work properly, and should also be left unto
 }
 ```
 
-Use the [`typescript.config` setting](configuration#typescript) in `svelte.config.js` to extend or modify the generated `tsconfig.json`.
+Use the [`typescript.config` setting](configuration#typescript) of the SvelteKit plugin in `vite.config.js` to extend or modify the generated `tsconfig.json`.
 
 ## $lib
 
@@ -239,6 +239,15 @@ Defines the common shape of expected and unexpected errors. Expected errors are 
 ```dts
 interface Error {/*…*/}
 ```
+
+<div class="ts-block-property">
+
+```dts
+status: number;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
 
 <div class="ts-block-property">
 
