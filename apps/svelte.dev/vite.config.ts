@@ -38,10 +38,12 @@ const plugins: PluginOption[] = [
 
 		inlineStyleThreshold: 1000,
 
-		prerender: {
+		paths: {
 			// use deployment URL for prerender origin, so that preview environments also have the correct links
-			origin: process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://svelte.dev',
+			origin: process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://svelte.dev'
+		},
 
+		prerender: {
 			handleMissingId(warning) {
 				if (warning.id.startsWith('H4sIA')) {
 					// playground link — do nothing
