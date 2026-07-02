@@ -9,6 +9,7 @@
 	--sk-font-size-h1: 3.6rem;
 	--sk-font-size-h2: 3rem;
 	--sk-font-size-h3: 2.4rem;
+	--sk-font-size-h4: 2rem;
 	--sk-font-size-body: 1.8rem;
 	--sk-font-size-body-small: 1.6rem;
 	--sk-font-size-ui-small: 1.3rem;
@@ -23,6 +24,7 @@
 	--sk-font-h1: 500 var(--sk-font-size-h1) / 1.2 var(--sk-font-family-heading);
 	--sk-font-h2: 500 var(--sk-font-size-h2) / 1.2 var(--sk-font-family-heading);
 	--sk-font-h3: 500 var(--sk-font-size-h3) / 1.2 var(--sk-font-family-heading);
+	--sk-font-h4: 500 var(--sk-font-size-h4) / 1.2 var(--sk-font-family-heading);
 	--sk-font-body: 400 var(--sk-font-size-body) / var(--sk-line-height-body)
 		var(--sk-font-family-body);
 	--sk-font-body-small: 400 var(--sk-font-size-body-small) / var(--sk-line-height-body-small)

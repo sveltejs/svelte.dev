@@ -129,7 +129,8 @@
 <style>
 	.text :global {
 		h2,
-		h3 {
+		h3,
+		h4 {
 			max-width: 100%;
 			padding: 0 2.4rem 0 0;
 
@@ -158,6 +159,10 @@
 
 		h3 {
 			margin-top: 5rem;
+		}
+
+		h4 {
+			margin-top: 3rem;
 		}
 
 		code:not(pre *),
@@ -469,7 +474,7 @@
 				opacity: 0;
 				transition: opacity 0.2s;
 
-				:where(h2, h3):hover &,
+				:where(h2, h3, h4):hover &,
 				&:focus {
 					opacity: 1;
 				}
