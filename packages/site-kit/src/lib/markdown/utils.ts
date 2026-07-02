@@ -85,6 +85,15 @@ export const slugify = (str: string) => {
 	);
 };
 
+export function create_slug_deduper() {
+	const seen = new Map<string, number>();
+	return (slug: string) => {
+		const count = seen.get(slug) ?? 0;
+		seen.set(slug, count + 1);
+		return count > 0 ? `${slug}-${count}` : slug;
+	};
+}
+
 export function smart_quotes(
 	str: string,
 	{ first = true, html = false }: { first?: boolean; html?: boolean } = {}

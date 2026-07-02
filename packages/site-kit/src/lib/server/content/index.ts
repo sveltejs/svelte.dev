@@ -1,4 +1,10 @@
-import { extract_frontmatter, is_in_code_block, slugify, smart_quotes } from '../../markdown/utils';
+import {
+	create_slug_deduper,
+	extract_frontmatter,
+	is_in_code_block,
+	slugify,
+	smart_quotes
+} from '../../markdown/utils';
 import type { Document, Section } from '../../types';
 
 export async function create_index(
@@ -30,6 +36,8 @@ export async function create_index(
 				'<code>$1</code>'
 			);
 
+		const dedupe = create_slug_deduper();
+
 		const sections = Array.from(body.matchAll(/^#{2,3}\s+(.*)$/gm)).reduce((arr, match) => {
 			if (is_in_code_block(body, match.index || 0)) return arr;
 			const title = match[1];
@@ -43,10 +51,13 @@ export async function create_index(
 			if (match[0].startsWith('###')) {
 				const section = arr.at(-1);
 				if (section) {
-					section.subsections.push({ slug: `${section.slug}-${slug}`, title: displayed_title });
+					section.subsections.push({
+						slug: dedupe(`${section.slug}-${slug}`),
+						title: displayed_title
+					});
 				}
 			} else {
-				arr.push({ slug, title: displayed_title, subsections: [] });
+				arr.push({ slug: dedupe(slug), title: displayed_title, subsections: [] });
 			}
 
 			return arr;
