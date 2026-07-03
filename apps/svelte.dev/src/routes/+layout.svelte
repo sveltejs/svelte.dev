@@ -5,7 +5,7 @@
 	import { Shell, Banner } from '@sveltejs/site-kit/components';
 	import { Nav } from '@sveltejs/site-kit/nav';
 	import { SearchBox } from '@sveltejs/site-kit/search';
-	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit-next';
 	import { inject } from '@vercel/analytics';
 	import { beforeNavigate } from '$app/navigation';
 
