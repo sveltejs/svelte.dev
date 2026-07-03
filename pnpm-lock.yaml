@@ -66,8 +66,8 @@ importers:
         specifier: ^1.6.1
         version: 1.6.1(@sveltejs/kit@3.0.0-next.6(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vue@3.5.35(typescript@6.0.3))
       '@vercel/speed-insights':
-        specifier: ^1.3.1
-        version: 1.3.1(@sveltejs/kit@3.0.0-next.6(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vue@3.5.35(typescript@6.0.3))
+        specifier: 2.1.0-canary
+        version: 2.1.0-canary(@sveltejs/kit@3.0.0-next.6(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vue@3.5.35(typescript@6.0.3))
       '@webcontainer/api':
         specifier: ^1.1.5
         version: 1.1.5
@@ -1893,11 +1893,12 @@ packages:
     engines: {node: '>=20'}
     hasBin: true
 
-  '@vercel/speed-insights@1.3.1':
-    resolution: {integrity: sha512-PbEr7FrMkUrGYvlcLHGkXdCkxnylCWePx7lPxxq36DNdfo9mcUjLOmqOyPDHAOgnfqgGGdmE3XI9L/4+5fr+vQ==}
+  '@vercel/speed-insights@2.1.0-canary':
+    resolution: {integrity: sha512-oFTQuLML7hreEoLk/weplwIhYHESR2RzDiwWHjyiQ87v+u/+z3mown/fyNj2/aGq+bWF5qFYfTugT3X8ZD307A==}
     peerDependencies:
-      '@sveltejs/kit': ^1 || ^2
+      '@sveltejs/kit': ^1 || ^2 || ^3 || ^3.0.0-next.0
       next: '>= 13'
+      nuxt: '>= 3'
       react: ^18 || ^19 || ^19.0.0-rc
       svelte: '>= 4'
       vue: ^3
@@ -1906,6 +1907,8 @@ packages:
       '@sveltejs/kit':
         optional: true
       next:
+        optional: true
+      nuxt:
         optional: true
       react:
         optional: true
@@ -4933,7 +4936,7 @@ snapshots:
       - rollup
       - supports-color
 
-  '@vercel/speed-insights@1.3.1(@sveltejs/kit@3.0.0-next.6(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vue@3.5.35(typescript@6.0.3))':
+  '@vercel/speed-insights@2.1.0-canary(@sveltejs/kit@3.0.0-next.6(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vue@3.5.35(typescript@6.0.3))':
     optionalDependencies:
       '@sveltejs/kit': 3.0.0-next.6(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.55.8(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.3)(tsx@4.21.0)))(svelte@5.55.8(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.3)(tsx@4.21.0))
       svelte: 5.55.8(@typescript-eslint/types@8.58.0)

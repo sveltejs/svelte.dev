@@ -9,6 +9,7 @@ minimumReleaseAgeExclude:
   - prettier-plugin-svelte
   - svelte-check
   - esm-env
+  - '@vercel/speed-insights@2.1.0-canary'
 blockExoticSubdeps: true
 engineStrict: true
 allowBuilds:
