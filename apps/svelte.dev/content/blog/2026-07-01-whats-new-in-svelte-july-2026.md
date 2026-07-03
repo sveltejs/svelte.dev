@@ -14,7 +14,7 @@ Let's dive in!
 ## What's new in SvelteKit
 
 - You can now pass your SvelteKit config directly to the Vite plugin, so a separate `svelte.config.js` is no longer required, as a preview of how Kit 3 will require config to live in `vite.config.js` (**2.62.0**, [Docs](https://svelte.dev/docs/kit/configuration), [#15944](https://github.com/sveltejs/kit/pull/15944))
-- Experimental explicit environment variables let you declare and type your env vars in one place, as a preview of how `$env/*` will work in SvelteKit 3 (**2.63.0**, [Docs](https://svelte.dev/docs/kit/environment-variables#Explicit-environment-variables), [#15934](https://github.com/sveltejs/kit/pull/15934))
+- Experimental explicit environment variables let you declare and type your env vars in one place, as a preview of how `$env/*` will work in SvelteKit 3 (**2.63.0**, [Docs](https://svelte.dev/docs/kit/environment-variables), [#15934](https://github.com/sveltejs/kit/pull/15934))
 - Remote function commands can now receive `File` objects directly, so you can upload files without manually wrapping them in `FormData` (**2.64.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#command), [#15978](https://github.com/sveltejs/kit/pull/15978))
 - Remote queries can now refresh other queries, making it easier to invalidate related data after a mutation (**2.65.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#query-Refreshing-queries), [#16012](https://github.com/sveltejs/kit/pull/16012))
 - Prerendered `.md` and `.mdx` files are now precompressed alongside HTML, JS and CSS for faster delivery (**2.66.0**, [Docs](https://svelte.dev/docs/kit/adapter-static#Options-precompress), [#15893](https://github.com/sveltejs/kit/pull/15893))
