@@ -6,10 +6,10 @@
     "ericfennis"
   ],
   "homepage": "https://lucide.dev",
-  "version": "1.21.0",
-  "downloads": 536836,
+  "version": "1.23.0",
+  "downloads": 519409,
   "github_stars": 23160,
-  "updated": "2026-06-18T06:56:18.243Z",
+  "updated": "2026-07-01T14:04:37.828Z",
   "svelte_range": "^5",
   "typescript": true,
   "runes": false,

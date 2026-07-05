@@ -4,11 +4,12 @@
   "repo_url": "https://github.com/TanStack/query",
   "authors": [
     "tannerlinsley",
-    "alemtuzlak"
+    "alemtuzlak",
+    "kevinvandy"
   ],
   "homepage": "https://tanstack.com/query",
   "version": "6.1.36",
-  "downloads": 128449,
+  "downloads": 124707,
   "github_stars": 48501,
   "updated": "2026-06-27T20:31:43.313Z",
   "svelte_range": "^5.25.0",

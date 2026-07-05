@@ -8,10 +8,10 @@
     "matt.straka"
   ],
   "homepage": "https://ai-sdk.dev/docs",
-  "version": "5.0.4",
-  "downloads": 455446,
+  "version": "5.0.15",
+  "downloads": 406569,
   "github_stars": 25188,
-  "updated": "2026-06-27T19:23:52.441Z",
+  "updated": "2026-07-04T06:10:52.867Z",
   "svelte_range": "^5.31.0",
   "typescript": true,
   "runes": true,

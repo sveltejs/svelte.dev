@@ -4,11 +4,12 @@
   "repo_url": "https://github.com/TanStack/table",
   "authors": [
     "tannerlinsley",
-    "alemtuzlak"
+    "alemtuzlak",
+    "kevinvandy"
   ],
   "homepage": "https://tanstack.com/table",
   "version": "8.21.3",
-  "downloads": 36770,
+  "downloads": 49642,
   "github_stars": 27704,
   "updated": "2025-04-14T20:20:26.877Z",
   "svelte_range": "^4.0.0 || ^3.49.0",

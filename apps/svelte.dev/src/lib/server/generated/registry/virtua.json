@@ -6,10 +6,10 @@
     "inokawa"
   ],
   "homepage": "https://github.com/inokawa/virtua#readme",
-  "version": "0.49.1",
-  "downloads": 710625,
+  "version": "0.49.2",
+  "downloads": 720931,
   "github_stars": 3448,
-  "updated": "2026-04-12T08:49:51.594Z",
+  "updated": "2026-06-29T08:52:35.984Z",
   "svelte_range": ">=5.0",
   "typescript": true,
   "runes": true,

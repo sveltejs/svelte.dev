@@ -6,10 +6,10 @@
     "sentry-bot"
   ],
   "homepage": "https://github.com/getsentry/sentry-javascript/tree/master/packages/sveltekit",
-  "version": "10.62.0",
-  "downloads": 207247,
+  "version": "10.63.0",
+  "downloads": 209700,
   "github_stars": 8683,
-  "updated": "2026-06-26T11:13:04.831Z",
+  "updated": "2026-07-01T11:11:53.789Z",
   "svelte_range": "^4.2.8",
   "kit_range": "2.x",
   "typescript": true,

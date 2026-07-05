@@ -6,10 +6,10 @@
     "saadeghi"
   ],
   "homepage": "https://daisyui.com",
-  "version": "5.6.3",
-  "downloads": 811951,
+  "version": "5.6.13",
+  "downloads": 773406,
   "github_stars": 41194,
-  "updated": "2026-06-26T15:35:08.158Z",
+  "updated": "2026-07-04T03:03:29.568Z",
   "svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
   "typescript": false,
   "runes": false,
