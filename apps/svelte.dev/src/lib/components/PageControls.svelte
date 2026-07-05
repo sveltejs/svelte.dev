@@ -23,7 +23,7 @@
 		<Icon name="edit" /> Edit this page on GitHub
 	</a>
 	{#if llms}
-		<a href={page.url.pathname.replace(/\/$/, '') + '/llms.txt'}>
+		<a data-sveltekit-reload href={page.url.pathname.replace(/\/$/, '') + '/llms.txt'}>
 			<Icon name="contents" /> llms.txt
 		</a>
 	{/if}
