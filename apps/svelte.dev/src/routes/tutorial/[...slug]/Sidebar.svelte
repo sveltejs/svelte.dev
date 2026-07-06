@@ -4,7 +4,7 @@
 	import { Text } from '@sveltejs/site-kit/components';
 	import PageControls from '$lib/components/PageControls.svelte';
 	import RelatedLinks from '$lib/components/RelatedLinks.svelte';
-	import { session_storage } from '$lib/storage.ts';
+	import { session_storage } from '$lib/storage.js';
 
 	/** @type {import('$lib/tutorial').Exercise} */
 	export let exercise;
