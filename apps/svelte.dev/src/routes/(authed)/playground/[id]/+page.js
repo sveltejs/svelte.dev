@@ -7,11 +7,15 @@ export function load({ data, url }) {
 	// when in the browser check if there's a local storage entry and eventually override
 	// vim if there's not a search params otherwise update the local storage
 	if (browser) {
-		const vim_local_storage = window.localStorage.getItem('svelte:vim-enabled');
-		if (vim_search_params !== null) {
-			window.localStorage.setItem('svelte:vim-enabled', vim.toString());
-		} else if (vim_local_storage) {
-			vim = vim_local_storage !== 'false';
+		try {
+			const vim_local_storage = window.localStorage.getItem('svelte:vim-enabled');
+			if (vim_search_params !== null) {
+				window.localStorage.setItem('svelte:vim-enabled', vim.toString());
+			} else if (vim_local_storage) {
+				vim = vim_local_storage !== 'false';
+			}
+		} catch {
+			// localStorage access disabled
 		}
 	}
 	return { ...data, vim };
