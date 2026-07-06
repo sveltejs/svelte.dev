@@ -23,6 +23,13 @@ export class Persisted<T extends string = string> {
 		this.#key = key;
 		this.#fallback = fallback;
 		this.#storage = storage;
+
+		try {
+			storage?.getItem('dummy');
+		} catch {
+			// localStorage access disabled
+			this.#storage = undefined;
+		}
 	}
 
 	get current() {
