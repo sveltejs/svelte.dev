@@ -298,7 +298,12 @@ export class Workspace {
 
 		untrack(() => {
 			view.setState(this.#get_state(untrack(() => this.#current)));
-			this.vim = localStorage.getItem('vim') === 'true';
+
+			try {
+				this.vim = localStorage.getItem('vim') === 'true';
+			} catch {
+				// localStorage access disabled
+			}
 		});
 	}
 
@@ -532,7 +537,11 @@ export class Workspace {
 	async #toggle_vim(value: boolean) {
 		this.#vim = value;
 
-		localStorage.setItem('vim', String(value));
+		try {
+			localStorage.setItem('vim', String(value));
+		} catch {
+			// localStorage access disabled
+		}
 
 		// @ts-ignore jfc CodeMirror is a struggle
 		let vim_extension_index = default_extensions.findIndex((ext) => ext.compartment === vim_mode);

@@ -19,9 +19,13 @@
 		/>
 
 		<script>
-			document.documentElement.classList.add(
-				`font-${localStorage.getItem('svelte:font') ?? 'elegant'}`
-			);
+			try {
+				document.documentElement.classList.add(
+					`font-${localStorage.getItem('svelte:font') ?? 'elegant'}`
+				);
+			} catch {
+				// localStorage access disabled
+			}
 		</script>
 
 		%sveltekit.head%
@@ -52,16 +56,20 @@
 		<div style="height: 100%">%sveltekit.body%</div>
 
 		<script>
-			if (localStorage.getItem('sv:show-legacy') === 'open') {
-				for (const node of document.querySelectorAll('details.legacy')) {
-					node.open = true;
+			try {
+				if (localStorage.getItem('sv:show-legacy') === 'open') {
+					for (const node of document.querySelectorAll('details.legacy')) {
+						node.open = true;
+					}
 				}
-			}
 
-			if (localStorage.getItem('svelte:prefers-ts') === 'false') {
-				for (const node of document.querySelectorAll('.ts-toggle')) {
-					node.checked = false;
+				if (localStorage.getItem('svelte:prefers-ts') === 'false') {
+					for (const node of document.querySelectorAll('.ts-toggle')) {
+						node.checked = false;
+					}
 				}
+			} catch {
+				// localStorage access disabled
 			}
 		</script>
 	</body>

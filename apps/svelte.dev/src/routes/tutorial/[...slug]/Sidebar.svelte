@@ -4,6 +4,7 @@
 	import { Text } from '@sveltejs/site-kit/components';
 	import PageControls from '$lib/components/PageControls.svelte';
 	import RelatedLinks from '$lib/components/RelatedLinks.svelte';
+	import { session_storage } from '$lib/storage.js';
 
 	/** @type {import('$lib/tutorial').Exercise} */
 	export let exercise;
@@ -26,7 +27,7 @@
 	<div
 		class="text"
 		on:copy={(e) => {
-			if (sessionStorage[copy_enabled]) return;
+			if (session_storage.get(copy_enabled)) return;
 
 			/** @type {HTMLElement | null} */
 			let node = /** @type {HTMLElement} */ (e.target);
@@ -101,7 +102,7 @@
 				<input
 					type="checkbox"
 					on:change={(e) => {
-						sessionStorage[copy_enabled] = e.currentTarget.checked ? 'true' : '';
+						session_storage.set(copy_enabled, e.currentTarget.checked ? 'true' : '');
 					}}
 				/>
 				enable copy-and-paste for the duration of this session

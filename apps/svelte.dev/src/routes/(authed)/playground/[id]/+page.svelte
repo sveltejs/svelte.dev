@@ -11,6 +11,7 @@
 	import { compress_and_encode_text, decode_and_decompress_text } from 'gzip';
 	import { page } from '$app/state';
 	import type { File } from '@sveltejs/repl/workspace';
+	import { session_storage } from '$lib/storage.js';
 
 	let { data } = $props();
 
@@ -48,7 +49,7 @@
 	}
 
 	async function set_files() {
-		const saved = sessionStorage.getItem(STORAGE_KEY);
+		const saved = session_storage.get(STORAGE_KEY);
 		const hash = location.hash.slice(1);
 
 		if (!hash && !saved) {
@@ -81,7 +82,7 @@
 		}
 
 		if (saved) {
-			sessionStorage.removeItem(STORAGE_KEY);
+			session_storage.remove(STORAGE_KEY);
 			set_hash(saved);
 		}
 	}
@@ -196,7 +197,7 @@
 			// a short-lived sessionStorage value instead
 			const { files, tailwind } = repl.toJSON();
 			const json = JSON.stringify({ name, files, tailwind });
-			sessionStorage.setItem(STORAGE_KEY, json);
+			session_storage.set(STORAGE_KEY, json);
 		}
 	}}
 />
