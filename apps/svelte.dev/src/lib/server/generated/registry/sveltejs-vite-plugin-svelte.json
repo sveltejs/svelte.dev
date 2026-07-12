@@ -8,10 +8,10 @@
     "conduitry"
   ],
   "homepage": "https://github.com/sveltejs/vite-plugin-svelte#readme",
-  "version": "7.1.2",
-  "downloads": 2875138,
+  "version": "7.2.0",
+  "downloads": 2201069,
   "github_stars": 1000,
-  "updated": "2026-05-07T15:41:01.171Z",
+  "updated": "2026-07-07T14:55:46.402Z",
   "svelte_range": "^5.46.4",
   "typescript": true,
   "runes": false,
