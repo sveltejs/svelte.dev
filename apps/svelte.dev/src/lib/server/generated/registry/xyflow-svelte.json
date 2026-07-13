@@ -7,10 +7,10 @@
     "webk1d"
   ],
   "homepage": "https://svelteflow.dev",
-  "version": "1.6.1",
-  "downloads": 197160,
+  "version": "1.6.2",
+  "downloads": 172955,
   "github_stars": 35221,
-  "updated": "2026-06-22T12:18:53.111Z",
+  "updated": "2026-07-06T12:42:55.078Z",
   "svelte_range": "^5.25.0",
   "kit_range": "^2.49.1",
   "typescript": true,

@@ -6,10 +6,10 @@
     "paulmaly"
   ],
   "homepage": "https://github.com/sveltetools/svelte-pathfinder#readme",
-  "version": "4.8.1",
-  "downloads": 2112,
+  "version": "4.9.0",
+  "downloads": 2657,
   "github_stars": 136,
-  "updated": "2024-07-04T09:03:48.158Z",
+  "updated": "2026-07-08T20:53:31.936Z",
   "svelte_range": ">=3 <5",
   "typescript": true,
   "runes": false,
