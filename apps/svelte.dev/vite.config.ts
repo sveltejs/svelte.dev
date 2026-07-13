@@ -38,10 +38,16 @@ const plugins: PluginOption[] = [
 
 		inlineStyleThreshold: 1000,
 
-		paths: {
-			// use deployment URL for prerender origin, so that preview environments also have the correct links
-			origin: process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://svelte.dev'
-		},
+		paths:
+			// TODO: remove this when we stop deploying previews for Kit 2
+			VERSION[0] === '3'
+				? {
+						// use deployment URL for prerender origin, so that preview environments also have the correct links
+						origin: process.env.VERCEL_URL
+							? `https://${process.env.VERCEL_URL}`
+							: 'https://svelte.dev'
+					}
+				: undefined,
 
 		prerender: {
 			handleMissingId(warning) {
@@ -51,7 +57,15 @@ const plugins: PluginOption[] = [
 				}
 
 				throw new Error(warning.message);
-			}
+			},
+			// TODO: remove this when we stop deploying previews for Kit 2
+			...(VERSION[0] === '2'
+				? {
+						origin: process.env.VERCEL_URL
+							? `https://${process.env.VERCEL_URL}`
+							: 'https://svelte.dev'
+					}
+				: {})
 		},
 
 		// TODO: remove this when we stop deploying previews for Kit 2
