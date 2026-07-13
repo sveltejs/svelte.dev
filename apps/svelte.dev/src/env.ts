@@ -18,6 +18,7 @@ export const variables = defineEnvVars({
 		schema: v.optional(v.string(), '')
 	},
 	PRERENDER: {
-		static: true
+		static: true, // TODO: remove
+		availability: 'inline'
 	}
 });
