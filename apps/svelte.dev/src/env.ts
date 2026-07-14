@@ -22,9 +22,3 @@ export const variables = defineEnvVars({
 		static: true
 	}
 });
-
-// TODO: remove this when we stop deploying previews for Kit 2
-if (VERSION[0] === '3') {
-	// we throw a migration error when this is set
-	delete variables.PRERENDER.static;
-}
