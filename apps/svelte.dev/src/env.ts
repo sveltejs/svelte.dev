@@ -19,8 +19,7 @@ export const variables = defineEnvVars({
 		schema: v.optional(v.string(), '')
 	},
 	PRERENDER: {
-		static: true as any, // TODO: remove this when we stop deploying previews for Kit 2
-		availability: 'inline'
+		static: true
 	}
 });
 
