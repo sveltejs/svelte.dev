@@ -25,8 +25,8 @@ The following example caches the built app and any files in `static` eagerly, an
 // Ensures that the `$service-worker` import has proper type definitions
 /// <reference types="@sveltejs/kit" />
 
-// Only necessary if you have an import from `$env/static/public`
-/// <reference types="../.svelte-kit/ambient.d.ts" />
+// Only necessary if you have an import from `$app/env/*`
+/// <reference types="../.svelte-kit/env.d.ts" />
 
 import { build, files, version } from '$service-worker';
 
@@ -121,18 +121,37 @@ self.addEventListener('fetch', (event) => {
 You can [disable automatic registration](configuration#serviceWorker) if you need to register the service worker with your own logic. The default registration looks something like this:
 
 ```js
-import { dev } from '$app/environment';
-
 if ('serviceWorker' in navigator) {
 	addEventListener('load', function () {
 		navigator.serviceWorker.register('./path/to/service-worker.js', {
-			type: dev ? 'module' : 'classic'
+			type: 'module'
 		});
 	});
 }
 ```
 
 > [!NOTE] The service worker is bundled for production, but not during development.
+
+## Updating the service worker
+
+Browsers check for an updated service worker when a full-page navigation happens within its scope, and after functional events such as `push` and `sync`. Client-side navigations are neither, so navigating around your app will not by itself cause a new deployment's service worker to be picked up.
+
+SvelteKit calls [`registration.update()`](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/update) only as part of error recovery — if a route module fails to load or a navigation results in an error status, and [version polling](configuration#version) detects that the app has been redeployed, the service worker is updated before SvelteKit falls back to a full-page navigation.
+
+If you want new deployments to be picked up more eagerly, you can trigger an update check yourself — for example on every client-side navigation, in your root layout:
+
+```js
+import { afterNavigate } from '$app/navigation';
+
+afterNavigate(async () => {
+	if ('serviceWorker' in navigator) {
+		const registration = await navigator.serviceWorker.getRegistration();
+		await registration?.update();
+	}
+});
+```
+
+This will not cause the new service worker (if there is one) to take over the existing page immediately — instead, it will be installed in the background and take over as soon as the number of tabs managed by the existing service worker drops to zero.
 
 ## Other solutions
 
