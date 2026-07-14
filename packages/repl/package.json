@@ -67,7 +67,7 @@
 		"prettier": "^3.8.1",
 		"prettier-plugin-svelte": "^3.5.0",
 		"publint": "^0.3.17",
-		"svelte-check": "^4.5.0",
+		"svelte-check": "^4.7.2",
 		"typescript": "^6.0.3",
 		"vite": "catalog:"
 	},
