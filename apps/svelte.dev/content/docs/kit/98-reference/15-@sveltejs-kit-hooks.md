@@ -97,6 +97,8 @@ second post-processing
 first post-processing
 ```
 
+Calling `resolve` invokes the next handler in the sequence (or SvelteKit itself, if it is the last one). To pass data between handlers, use `event.locals`.
+
 <div class="ts-block">
 
 ```dts
