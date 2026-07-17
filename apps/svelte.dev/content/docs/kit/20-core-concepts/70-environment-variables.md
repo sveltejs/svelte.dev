@@ -12,51 +12,28 @@ During development, and at build time, variables defined in a `.env` or `.env.lo
 API_KEY=19f401ba-e8b0-48c4-8c77-b0ebb26d97fe
 ```
 
-By default, every environment variable is implicitly available inside your app via the following modules:
-
-- [`$env/static/private`]($env-static-private)
-- [`$env/static/public`]($env-static-public)
-- [`$env/dynamic/private`]($env-dynamic-private)
-- [`$env/dynamic/public`]($env-dynamic-public)
-
-## Explicit environment variables
-
-As of SvelteKit 2.63, you can opt into _explicit_ environment variables, in which case you instead import environment variables from these modules:
+After following the setup below, they can be imported via the following modules:
 
 - [`$app/env/private`]($app-env-private)
 - [`$app/env/public`]($app-env-public)
 
-Additionally, the [`$app/environment`]($app-environment) module is renamed to [`$app/env`]($app-env).
-
-> [!NOTE] Explicit environment variables will become the default in SvelteKit 3. The `$env/*` modules, along with `$app/environment`, will be removed.
+> [!LEGACY]
+> The `$env/*` modules, along with `$app/environment` were deprecated in SvelteKit 3 (and will be removed in SvelteKit 4) in favour of explicit environment variables that were added in SvelteKit 2.62 as an experimental option.
 
 ### Setup
 
-To opt in, update your configuration...
-
-```js
-/// file: svelte.config.js
-export default {
-	kit: {
-		experimental: {
-			+++explicitEnvironmentVariables: true+++
-		}
-	}
-};
-```
-
-...and add a `src/env.ts` (or `src/env.js`) file that exports a `variables` object:
+Add a `src/env.ts` (or `src/env.js`) file that exports a `variables` object:
 
 ```ts
 /// file: src/env.ts
-import { defineEnvVars } from '@sveltejs/kit/env';
+import { defineEnvVars } from '@sveltejs/kit/hooks';
 
 export const variables = defineEnvVars({
 	// ...
 });
 ```
 
-Each value in the object passed to [`defineEnvVars`](@sveltejs-kit-env#defineEnvVars) is an [`EnvVarConfig`](@sveltejs-kit#EnvVarConfig) object that configures the environment variable.
+Each value in the object passed to [`defineEnvVars`](@sveltejs-kit-hooks#defineEnvVars) is an [`EnvVarConfig`](@sveltejs-kit#EnvVarConfig) object that configures the environment variable.
 
 > [!NOTE] `defineEnvVars` returns its argument unaltered — it exists purely to help with type safety.
 
@@ -66,7 +43,7 @@ By default, all variables are considered private. For example, you don't want to
 
 ```ts
 /// file: src/env.ts
-import { defineEnvVars } from '@sveltejs/kit/env';
+import { defineEnvVars } from '@sveltejs/kit/hooks';
 
 export const variables = defineEnvVars({
 	+++API_KEY: {}+++
@@ -89,7 +66,7 @@ Some variables are perfectly safe — necessary, even — to expose to the brow
 
 ```ts
 /// file: src/env.ts
-import { defineEnvVars } from '@sveltejs/kit/env';
+import { defineEnvVars } from '@sveltejs/kit/hooks';
 
 export const variables = defineEnvVars({
 	GOOGLE_ANALYTICS_ID: {
@@ -134,7 +111,7 @@ You can specify a [Standard Schema](https://standardschema.dev/) validator such 
 
 ```ts
 /// file: src/env.ts
-import { defineEnvVars } from '@sveltejs/kit/env';
+import { defineEnvVars } from '@sveltejs/kit/hooks';
 +++import * as v from 'valibot';+++
 
 export const variables = defineEnvVars({
@@ -149,7 +126,7 @@ If a value is invalid, the app will fail to start (or build). To opt out of one 
 
 ```ts
 /// file: src/env.ts
-import { defineEnvVars } from '@sveltejs/kit/env';
+import { defineEnvVars } from '@sveltejs/kit/hooks';
 +++import { building } from '$app/env'+++
 import * as v from 'valibot';
 
@@ -169,7 +146,7 @@ By default, variables are dynamic. If a variable is configured with `static: tru
 
 ```ts
 /// file: src/env.ts
-import { defineEnvVars } from '@sveltejs/kit/env';
+import { defineEnvVars } from '@sveltejs/kit/hooks';
 import * as v from 'valibot';
 
 export const variables = defineEnvVars({
@@ -213,7 +190,7 @@ You can document the purpose of an environment variable by adding a `description
 
 ```ts
 /// file: src/env.ts
-import { defineEnvVars } from '@sveltejs/kit/env';
+import { defineEnvVars } from '@sveltejs/kit/hooks';
 
 export const variables = defineEnvVars({
 	CACHE_TTL_SECONDS: {
