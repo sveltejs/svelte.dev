@@ -1177,7 +1177,7 @@ and returns an `App.Platform` object
 ## EnvVarConfig
 
 [Environment variables](/docs/kit/environment-variables) can be configured by exporting
-a `variables` object from `src/env.ts`, using [`defineEnvVars`](/docs/kit/@sveltejs-kit-hooks#defineEnvVars).
+a `variables` object from `src/env.ts`, using [`defineEnvVars`](/docs/kit/@sveltejs-kit-env#defineEnvVars).
 
 <div class="ts-block">
 
