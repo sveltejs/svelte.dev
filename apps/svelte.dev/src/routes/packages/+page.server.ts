@@ -1,5 +1,5 @@
-import { PACKAGES_META } from '$lib/packages-meta';
-import { registry, type Category, type Package, type PackageDefinition } from '$lib/server/content';
+import { PACKAGES_META } from '#lib/packages-meta';
+import { registry, type Category, type Package, type PackageDefinition } from '#lib/server/content';
 
 export const prerender = false;
 

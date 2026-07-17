@@ -1,7 +1,7 @@
 import Bundler from '@sveltejs/repl/bundler';
 // @ts-ignore package exports don't have types
 import * as yootils from 'yootils';
-import type { Adapter } from '$lib/tutorial';
+import type { Adapter } from '#lib/tutorial';
 import type { File, Item } from '@sveltejs/repl/workspace';
 
 let done = false;

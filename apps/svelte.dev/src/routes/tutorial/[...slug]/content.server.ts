@@ -1,10 +1,10 @@
 import { read } from '$app/server';
-import { index, docs } from '$lib/server/content';
-import type { Exercise, ExerciseStub, PartStub, Scope } from '$lib/tutorial';
+import { index, docs } from '#lib/server/content';
+import type { Exercise, ExerciseStub, PartStub, Scope } from '#lib/tutorial';
 import { error } from '@sveltejs/kit';
 import { text_files } from './shared';
 import type { Document } from '@sveltejs/site-kit';
-import { render_content } from '$lib/server/renderer';
+import { render_content } from '#lib/server/renderer';
 
 const lookup: Record<
 	string,

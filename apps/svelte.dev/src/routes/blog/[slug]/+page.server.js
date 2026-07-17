@@ -1,6 +1,6 @@
 import { error } from '@sveltejs/kit';
-import { blog_posts, docs } from '$lib/server/content';
-import { render_content } from '$lib/server/renderer';
+import { blog_posts, docs } from '#lib/server/content';
+import { render_content } from '#lib/server/renderer';
 
 export async function load({ params }) {
 	const document = blog_posts.find((document) => document.slug === `blog/${params.slug}`);

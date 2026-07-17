@@ -2,12 +2,12 @@
 	import { page } from '$app/state';
 	import UserMenu from './UserMenu.svelte';
 	import { Icon } from '@sveltejs/site-kit/components';
-	import { isMac } from '$lib/utils/compat.js';
+	import { isMac } from '#lib/utils/compat.js';
 	import { get_app_context } from '../../app-context';
-	import type { Gist, User } from '$lib/db/types';
+	import type { Gist, User } from '#lib/db/types';
 	import { browser } from '$app/env';
-	import ModalDropdown from '$lib/components/ModalDropdown.svelte';
-	import SecondaryNav from '$lib/components/SecondaryNav.svelte';
+	import ModalDropdown from '#lib/components/ModalDropdown.svelte';
+	import SecondaryNav from '#lib/components/SecondaryNav.svelte';
 	import type { File } from '@sveltejs/repl/workspace';
 	import type { Repl } from '@sveltejs/repl';
 

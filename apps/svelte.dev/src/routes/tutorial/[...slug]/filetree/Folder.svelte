@@ -2,12 +2,12 @@
 	import Folder from './Folder.svelte';
 	import File from './File.svelte';
 	import * as context from './context.js';
-	import { get_depth } from '$lib/utils/path.js';
+	import { get_depth } from '#lib/utils/path.js';
 	import Item from './Item.svelte';
 	import folder_closed from 'icons/folder';
 	import folder_open from 'icons/folder-open';
 	import { solution } from '../state.svelte';
-	import type { MenuItem } from '$lib/tutorial';
+	import type { MenuItem } from '#lib/tutorial';
 	import type { Directory, File as IFile, Item as IItem } from '@sveltejs/repl/workspace';
 
 	interface Props {

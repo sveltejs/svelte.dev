@@ -5,10 +5,10 @@ import { read } from '$app/server';
 import satori from 'satori';
 import { html as toReactNode } from 'satori-html';
 import Card from './Card.svelte';
-import DMSerifDisplay from '$lib/fonts/DMSerifDisplay-Regular.ttf?url';
-import FiraSans from '$lib/fonts/FiraSans-Regular.ttf?url';
-import { blog_posts } from '$lib/server/content';
-import { decode_html } from '$lib/utils/escape';
+import DMSerifDisplay from '#lib/fonts/DMSerifDisplay-Regular.ttf?url';
+import FiraSans from '#lib/fonts/FiraSans-Regular.ttf?url';
+import { blog_posts } from '#lib/server/content';
+import { decode_html } from '#lib/utils/escape';
 import type { ServerlessConfig } from '@sveltejs/adapter-vercel';
 
 export const config: ServerlessConfig = {

@@ -11,7 +11,7 @@
 	import Loading from './Loading.svelte';
 	import { adapter_state, subscribe, reset } from './adapter.svelte';
 	import { SplitPane, type Length } from '@rich_harris/svelte-split-pane';
-	import type { Exercise } from '$lib/tutorial';
+	import type { Exercise } from '#lib/tutorial';
 	import type { Workspace } from '@sveltejs/repl/workspace';
 	import { Spring } from 'svelte/motion';
 

@@ -1,4 +1,4 @@
-import { index } from '$lib/server/content';
+import { index } from '#lib/server/content';
 import { json } from '@sveltejs/kit';
 
 // Temporary workaround for the problem described in [code]/+page.server.ts

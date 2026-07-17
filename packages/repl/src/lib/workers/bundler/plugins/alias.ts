@@ -1,5 +1,5 @@
 import { VIRTUAL } from '../../constants';
-import type { File } from '$lib/Workspace.svelte';
+import type { File } from '#lib/Workspace.svelte';
 import type { Plugin } from '@rollup/browser';
 
 /**
@@ -8,7 +8,7 @@ import type { Plugin } from '@rollup/browser';
  *
  * @example
  * // With aliases: { '$lib': 'src/lib' }
- * // import foo from '$lib/foo' -> import foo from 'src/lib/foo'
+ * // import foo from '#lib/foo' -> import foo from 'src/lib/foo'
  * // import bar from '$lib' -> import bar from 'src/lib'
  */
 function alias_plugin(aliases: Record<string, string> = {}, virtual: Map<string, File>): Plugin {

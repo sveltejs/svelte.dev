@@ -3,7 +3,7 @@
 	import * as doNotZip from 'do-not-zip';
 	import { browser } from '$app/env';
 	import { afterNavigate, goto, replaceState } from '$app/navigation';
-	import type { Gist } from '$lib/db/types';
+	import type { Gist } from '#lib/db/types';
 	import { Repl } from '@sveltejs/repl';
 	import { theme } from '@sveltejs/site-kit/state';
 	import { mapbox_setup } from '../../../../config.js';
@@ -11,7 +11,7 @@
 	import { compress_and_encode_text, decode_and_decompress_text } from 'gzip';
 	import { page } from '$app/state';
 	import type { File } from '@sveltejs/repl/workspace';
-	import { session_storage } from '$lib/storage.js';
+	import { session_storage } from '#lib/storage.js';
 
 	let { data } = $props();
 

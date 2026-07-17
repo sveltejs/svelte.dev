@@ -1,4 +1,4 @@
-import type { Exercise } from '$lib/tutorial';
+import type { Exercise } from '#lib/tutorial';
 
 export const text_files = new Set([
 	'.svelte',

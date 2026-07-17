@@ -1,4 +1,4 @@
-import * as session from '$lib/db/session';
+import * as session from '#lib/db/session';
 
 export const prerender = false;
 

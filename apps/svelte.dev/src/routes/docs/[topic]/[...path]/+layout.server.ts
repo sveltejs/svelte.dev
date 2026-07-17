@@ -1,4 +1,4 @@
-import { create_summary, docs } from '$lib/server/content';
+import { create_summary, docs } from '#lib/server/content';
 import { redirect } from '@sveltejs/kit';
 import { error } from '@sveltejs/kit';
 

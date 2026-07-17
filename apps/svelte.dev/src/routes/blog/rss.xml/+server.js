@@ -1,5 +1,5 @@
-import { index, docs } from '$lib/server/content';
-import { render_content } from '$lib/server/renderer';
+import { index, docs } from '#lib/server/content';
+import { render_content } from '#lib/server/renderer';
 
 export const prerender = true;
 

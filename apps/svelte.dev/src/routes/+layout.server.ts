@@ -1,5 +1,5 @@
 import { PRERENDER } from '$app/env/private';
-import { docs, index } from '$lib/server/content';
+import { docs, index } from '#lib/server/content';
 import type { BannerData, NavigationLink } from '@sveltejs/site-kit';
 
 // by default, all pages are prerendered

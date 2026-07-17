@@ -83,8 +83,8 @@ export const render_content = (
 		}
 
 		// another special case
-		if (source.includes('$lib/types')) {
-			injected.push(`declare module '$lib/types' { export interface User {} }`);
+		if (source.includes('#lib/types')) {
+			injected.push(`declare module '#lib/types' { export interface User {} }`);
 		}
 
 		return injected.join('\n');

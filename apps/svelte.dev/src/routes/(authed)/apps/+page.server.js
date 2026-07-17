@@ -1,4 +1,4 @@
-import * as gist from '$lib/db/gist';
+import * as gist from '#lib/db/gist';
 
 export async function load({ url, parent }) {
 	let gists = [];

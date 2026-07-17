@@ -2,8 +2,8 @@ import {
 	get_documentation_title,
 	remove_llm_ignore_blocks,
 	remove_playground_links
-} from '$lib/server/llms';
-import { topics } from '$lib/topics';
+} from '#lib/server/llms';
+import { topics } from '#lib/topics';
 import template from './template.md?raw';
 
 const DOMAIN = `https://svelte.dev`;

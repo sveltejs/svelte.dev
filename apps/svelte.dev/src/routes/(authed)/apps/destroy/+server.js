@@ -1,5 +1,5 @@
-import * as session from '$lib/db/session';
-import * as gist from '$lib/db/gist';
+import * as session from '#lib/db/session';
+import * as gist from '#lib/db/gist';
 
 export async function POST({ request }) {
 	const user = await session.from_cookie(request.headers.get('cookie'));

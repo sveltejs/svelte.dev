@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Dropdown, HoverMenu, Icon } from '@sveltejs/site-kit/components';
 	import { get_app_context } from '../../app-context';
-	import type { User } from '$lib/db/session';
+	import type { User } from '#lib/db/session';
 
 	const { logout } = get_app_context();
 

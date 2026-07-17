@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { Package } from '$lib/server/content';
+	import type { Package } from '#lib/server/content';
 	import PackageCard from './PackageCard.svelte';
-	import type { Category } from '$lib/server/content';
+	import type { Category } from '#lib/server/content';
 
 	type Props = {
 		open: boolean;

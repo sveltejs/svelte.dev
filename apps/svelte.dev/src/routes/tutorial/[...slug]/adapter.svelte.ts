@@ -1,8 +1,8 @@
 import { browser } from '$app/env';
 import { page } from '$app/state';
-import type { state as WCState } from '$lib/tutorial/adapters/webcontainer/index.svelte';
-import type { state as RollupState } from '$lib/tutorial/adapters/rollup/index.svelte';
-import type { Adapter } from '$lib/tutorial';
+import type { state as WCState } from '#lib/tutorial/adapters/webcontainer/index.svelte';
+import type { state as RollupState } from '#lib/tutorial/adapters/rollup/index.svelte';
+import type { Adapter } from '#lib/tutorial';
 import type { File, Item } from '@sveltejs/repl/workspace';
 import { needs_webcontainers } from './shared';
 
@@ -57,7 +57,7 @@ export function load_webcontainer(force = false) {
 				throw new Error('iOS does not support WebContainers');
 			}
 
-			const module = await import('$lib/tutorial/adapters/webcontainer/index.svelte');
+			const module = await import('#lib/tutorial/adapters/webcontainer/index.svelte');
 			wc_state = module.state;
 			const adapter = await module.create();
 
@@ -76,7 +76,7 @@ export function load_rollup(force = false) {
 
 	rollup_ready = new Promise(async (fulfil, reject) => {
 		try {
-			const module = await import('$lib/tutorial/adapters/rollup/index.svelte');
+			const module = await import('#lib/tutorial/adapters/rollup/index.svelte');
 			rollup_state = module.state;
 			const adapter = await module.create();
 

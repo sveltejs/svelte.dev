@@ -1,5 +1,5 @@
 import type { Tokens } from 'marked';
-import { index, docs as _docs, examples } from '$lib/server/content';
+import { index, docs as _docs, examples } from '#lib/server/content';
 import { json } from '@sveltejs/kit';
 import { transform, slugify, clean } from '@sveltejs/site-kit/markdown';
 import type { Block } from '@sveltejs/site-kit/search';

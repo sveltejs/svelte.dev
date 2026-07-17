@@ -31,7 +31,7 @@ import {
 	resolve_version,
 	type Package
 } from '../npm';
-import type { BundleResult } from '$lib/public';
+import type { BundleResult } from '#lib/public';
 
 // hack for magic-string and rollup inline sourcemaps
 // do not put this into a separate module and import it, would be treeshaken in prod

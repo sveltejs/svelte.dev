@@ -106,5 +106,8 @@
 		"tailwindcss": "^4.2.1",
 		"tarparser": "^0.0.5",
 		"zimmerframe": "^1.1.4"
+	},
+	"imports": {
+		"#lib/*": "./src/lib/*"
 	}
 }

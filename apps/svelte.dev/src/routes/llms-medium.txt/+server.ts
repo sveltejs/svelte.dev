@@ -2,8 +2,8 @@ import {
 	generate_llm_content,
 	remove_llm_ignore_blocks,
 	remove_playground_links
-} from '$lib/server/llms';
-import { topics } from '$lib/topics';
+} from '#lib/server/llms';
+import { topics } from '#lib/topics';
 
 export function GET() {
 	const main_content = generate_llm_content({

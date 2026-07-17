@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Icon } from '@sveltejs/site-kit/components';
-	import { ago } from '$lib/time';
+	import { ago } from '#lib/time';
 	import { goto, invalidateAll } from '$app/navigation';
 	import { get_app_context } from '../app-context.js';
 

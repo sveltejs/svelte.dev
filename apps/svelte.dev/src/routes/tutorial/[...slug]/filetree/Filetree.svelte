@@ -2,10 +2,10 @@
 	import { writable } from 'svelte/store';
 	import Folder from './Folder.svelte';
 	import * as context from './context.js';
-	import Modal from '$lib/components/Modal.svelte';
+	import Modal from '#lib/components/Modal.svelte';
 	import { solution } from '../state.svelte';
 	import { afterNavigate } from '$app/navigation';
-	import type { Exercise } from '$lib/tutorial';
+	import type { Exercise } from '#lib/tutorial';
 	import type { Workspace, Item } from '@sveltejs/repl/workspace';
 
 	interface Props {

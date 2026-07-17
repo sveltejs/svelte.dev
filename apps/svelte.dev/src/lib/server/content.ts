@@ -1,9 +1,9 @@
 import { read } from '$app/server';
-import { PACKAGES_META } from '$lib/packages-meta';
+import { PACKAGES_META } from '#lib/packages-meta';
 import type { Document, DocumentSummary } from '@sveltejs/site-kit';
 import { create_index } from '@sveltejs/site-kit/server/content';
 import crosslinked from './generated/crosslinked.json';
-import type { RelatedLink } from '$lib/types';
+import type { RelatedLink } from '#lib/types';
 
 const documents = import.meta.glob<string>('./**/*.md', {
 	eager: true,

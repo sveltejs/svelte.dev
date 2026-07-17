@@ -1,5 +1,5 @@
 import { read } from '$app/server';
-import { examples } from '$lib/server/content';
+import { examples } from '#lib/server/content';
 import { json } from '@sveltejs/kit';
 
 export type Examples = Array<{

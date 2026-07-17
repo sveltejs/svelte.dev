@@ -2,7 +2,7 @@
      A context menu for the tutorial's file tree
 -->
 <script module lang="ts">
-	import type { MenuItem } from '$lib/tutorial';
+	import type { MenuItem } from '#lib/tutorial';
 
 	let menu_items: { x: number; y: number; items: MenuItem[] } | null = $state(null);
 

@@ -471,7 +471,7 @@ Define:
 ```js
 // src/routes/blog/data.remote.js
 import { query } from '$app/server';
-import * as db from '$lib/server/database';
+import * as db from '#lib/server/database';
 
 export const getPosts = query(async () => {
 	return db.posts();
@@ -515,8 +515,8 @@ Define:
 
 ```js
 import { form } from '$app/server';
-import * as db from '$lib/server/database';
-import * as auth from '$lib/server/auth';
+import * as db from '#lib/server/database';
+import * as auth from '#lib/server/auth';
 import { error, redirect } from '@sveltejs/kit';
 
 export const createPost = form(async (data) => {
@@ -582,7 +582,7 @@ Define:
 ```js
 import { command, query } from '$app/server';
 import * as v from 'valibot';
-import * as db from '$lib/server/database';
+import * as db from '#lib/server/database';
 
 export const getLikes = query(v.string(), async (id) => {
 	return db.likes.get(id);
@@ -617,7 +617,7 @@ Define:
 
 ```js
 import { prerender } from '$app/server';
-import * as db from '$lib/server/database';
+import * as db from '#lib/server/database';
 
 export const getPosts = prerender(async () => {
 	return db.sql`SELECT title, slug FROM post ORDER BY published_at DESC`;
@@ -1121,7 +1121,7 @@ Alias for `src/lib` folder, e.g.
 
 ```svelte
 <script>
-  import Button from '$lib/Button.svelte';
+  import Button from '#lib/Button.svelte';
 </script>
 <Button>Click me</Button>
 ```

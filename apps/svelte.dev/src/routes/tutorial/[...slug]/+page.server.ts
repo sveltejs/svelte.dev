@@ -1,6 +1,6 @@
 import { redirect } from '@sveltejs/kit';
 import { load_exercise } from './content.server';
-import { get_related_links } from '$lib/server/content';
+import { get_related_links } from '#lib/server/content';
 
 export async function load({ url, params }) {
 	if (!params.slug || params.slug === 'svelte') redirect(307, '/tutorial/svelte/welcome-to-svelte');

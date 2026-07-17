@@ -5,12 +5,12 @@
 	import { onMount } from 'svelte';
 	import OnThisPage from './OnThisPage.svelte';
 	import Breadcrumbs from './Breadcrumbs.svelte';
-	import PageControls from '$lib/components/PageControls.svelte';
+	import PageControls from '#lib/components/PageControls.svelte';
 	import { goto } from '$app/navigation';
-	import { escape_html } from '$lib/utils/escape';
+	import { escape_html } from '#lib/utils/escape';
 	import { page } from '$app/state';
-	import { get_topic_title } from '$lib/topics';
-	import RelatedLinks from '$lib/components/RelatedLinks.svelte';
+	import { get_topic_title } from '#lib/topics';
+	import RelatedLinks from '#lib/components/RelatedLinks.svelte';
 
 	let { data } = $props();
 

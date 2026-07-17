@@ -1,5 +1,5 @@
-import * as gist from '$lib/db/gist';
-import * as session from '$lib/db/session';
+import * as gist from '#lib/db/gist';
+import * as session from '#lib/db/session';
 import { error, json } from '@sveltejs/kit';
 
 export async function POST({ request }) {

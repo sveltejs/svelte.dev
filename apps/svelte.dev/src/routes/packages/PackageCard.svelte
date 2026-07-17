@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { Package } from '$lib/server/content';
-	import { ago } from '$lib/time';
+	import type { Package } from '#lib/server/content';
+	import { ago } from '#lib/time';
 	import { format_number } from './utils';
 	import { logos } from 'logos';
 

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { tick } from 'svelte';
 	import { open } from './ContextMenu.svelte';
-	import type { MenuItem } from '$lib/tutorial';
+	import type { MenuItem } from '#lib/tutorial';
 	import { forcefocus } from '@sveltejs/site-kit/actions';
 
 	interface Props {

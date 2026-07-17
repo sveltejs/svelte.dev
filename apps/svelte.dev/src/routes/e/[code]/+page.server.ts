@@ -1,4 +1,4 @@
-import { remove_section } from '$lib/server/content';
+import { remove_section } from '#lib/server/content';
 import { error, redirect } from '@sveltejs/kit';
 
 // All links to warnings/errors from the Svelte compiler/runtime go through this page in order to have stable references

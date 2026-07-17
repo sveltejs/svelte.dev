@@ -1,7 +1,7 @@
 import { dev } from '$app/env';
-import { client } from '$lib/db/client.js';
-import * as gist from '$lib/db/gist.js';
-import { examples } from '$lib/server/content';
+import { client } from '#lib/db/client.js';
+import * as gist from '#lib/db/gist.js';
+import { examples } from '#lib/server/content';
 import { error, json } from '@sveltejs/kit';
 import type { Examples } from '../examples/all.json/+server.js';
 

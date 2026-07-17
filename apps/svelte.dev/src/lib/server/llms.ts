@@ -1,7 +1,7 @@
 import { minimatch } from 'minimatch';
 import { dev } from '$app/env';
 import { index } from './content';
-import type { Topic } from '$lib/topics';
+import type { Topic } from '#lib/topics';
 
 interface GenerateLlmContentOptions {
 	ignore?: string[];

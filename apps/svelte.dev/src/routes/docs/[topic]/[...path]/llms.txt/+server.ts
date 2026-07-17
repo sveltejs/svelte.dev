@@ -1,12 +1,12 @@
 import { error } from '@sveltejs/kit';
-import { docs } from '$lib/server/content.js';
+import { docs } from '#lib/server/content.js';
 import {
 	generate_llm_content,
 	get_documentation_title,
 	remove_llm_ignore_blocks,
 	remove_playground_links
-} from '$lib/server/llms';
-import { topics } from '$lib/topics';
+} from '#lib/server/llms';
+import { topics } from '#lib/topics';
 
 export const prerender = true;
 

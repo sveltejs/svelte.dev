@@ -1,5 +1,5 @@
 import { read } from '$app/server';
-import { docs } from '$lib/server/content';
+import { docs } from '#lib/server/content';
 import { error } from '@sveltejs/kit';
 
 export async function GET({ params: { name, topic } }) {

@@ -1,5 +1,5 @@
-import { docs, get_related_links } from '$lib/server/content';
-import { render_content } from '$lib/server/renderer';
+import { docs, get_related_links } from '#lib/server/content';
+import { render_content } from '#lib/server/renderer';
 import { error } from '@sveltejs/kit';
 
 export async function load({ url, params }) {

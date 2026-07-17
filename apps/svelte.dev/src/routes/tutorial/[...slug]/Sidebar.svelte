@@ -1,12 +1,12 @@
 <script>
 	import { createEventDispatcher } from 'svelte';
-	import Modal from '$lib/components/Modal.svelte';
+	import Modal from '#lib/components/Modal.svelte';
 	import { Text } from '@sveltejs/site-kit/components';
-	import PageControls from '$lib/components/PageControls.svelte';
-	import RelatedLinks from '$lib/components/RelatedLinks.svelte';
-	import { session_storage } from '$lib/storage.js';
+	import PageControls from '#lib/components/PageControls.svelte';
+	import RelatedLinks from '#lib/components/RelatedLinks.svelte';
+	import { session_storage } from '#lib/storage.js';
 
-	/** @type {import('$lib/tutorial').Exercise} */
+	/** @type {import('#lib/tutorial').Exercise} */
 	export let exercise;
 
 	/** @type {HTMLElement} */
