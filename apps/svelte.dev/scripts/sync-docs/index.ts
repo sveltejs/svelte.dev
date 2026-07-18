@@ -154,19 +154,22 @@ const packages: Package[] = [
 				});
 			}
 
+			// TODO remove this once we're all-in on 3.0
 			const dir = kit_base + 'src/types/synthetic';
-			for (const file of fs.readdirSync(dir)) {
-				if (!file.endsWith('.md')) continue;
+			if (fs.existsSync(dir)) {
+				for (const file of fs.readdirSync(dir)) {
+					if (!file.endsWith('.md')) continue;
 
-				const comment = strip_origin(read_d_ts_file(`${dir}/${file}`));
+					const comment = strip_origin(read_d_ts_file(`${dir}/${file}`));
 
-				modules.push({
-					name: file.replace(/\+/g, '/').slice(0, -3),
-					comment,
-					exports: [],
-					types: [],
-					exempt: true
-				});
+					modules.push({
+						name: file.replace(/\+/g, '/').slice(0, -3),
+						comment,
+						exports: [],
+						types: [],
+						exempt: true
+					});
+				}
 			}
 
 			const svelte_kit_module = modules.find((m) => m.name === '@sveltejs/kit');
