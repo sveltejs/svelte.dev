@@ -1,4 +1,5 @@
-import { defineEnvVars } from '@sveltejs/kit/env';
+import { VERSION } from '@sveltejs/kit';
+import { defineEnvVars } from '@sveltejs/kit/hooks';
 import * as v from 'valibot';
 
 export const variables = defineEnvVars({
