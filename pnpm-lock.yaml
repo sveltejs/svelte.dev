@@ -72,8 +72,8 @@ importers:
         specifier: ^1.1.5
         version: 1.1.5
       adm-zip:
-        specifier: ^0.5.16
-        version: 0.5.16
+        specifier: ^0.6.0
+        version: 0.6.0
       ansi-to-html:
         specifier: ^0.7.2
         version: 0.7.2
@@ -1995,9 +1995,9 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
-  adm-zip@0.5.16:
-    resolution: {integrity: sha512-TGw5yVi4saajsSEgz25grObGHEUaDrniwvA2qwSC060KfqGPdglhvPMA2lPIoxs3PQIItj2iag35fONcQqgUaQ==}
-    engines: {node: '>=12.0'}
+  adm-zip@0.6.0:
+    resolution: {integrity: sha512-XleryMhbuksdKtofnWZ9Sk+4CUTbms4Mb/EU32SZwToAyZ5RgVos/ki8n+yr0LWHOGKuakbXTuuYNHLQjhddgg==}
+    engines: {node: '>=14.0'}
 
   agent-base@7.1.4:
     resolution: {integrity: sha512-MnA+YT8fwfJPgBx3m60MNqakm30XOkyIoH1y6huTQvC0PwZG7ki8NacLBcrPbNoo8vEZy7Jpuk7+jMO+CUovTQ==}
@@ -5031,7 +5031,7 @@ snapshots:
 
   acorn@8.17.0: {}
 
-  adm-zip@0.5.16: {}
+  adm-zip@0.6.0: {}
 
   agent-base@7.1.4: {}
 
