@@ -22,6 +22,7 @@ packages:
   - 'packages/*'
 
 catalog:
+  '@sveltejs/kit': ^3.0.0-next.10
   '@types/node': ^22.19.20
   vite: ^8.0.16
   vitest: ^4.1.8

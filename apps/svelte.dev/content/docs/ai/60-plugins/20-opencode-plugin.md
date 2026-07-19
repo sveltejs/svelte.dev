@@ -7,7 +7,13 @@ OpenCode has a [plugin system](https://opencode.ai/docs/plugins/) that allows de
 
 ## Installation
 
-To install the plugin you can edit your [OpenCode config](https://opencode.ai/docs/config/) (either the global or the local one), adding `@sveltejs/opencode` to the list of plugins.
+With OpenCode 1.3.4 or newer, install the plugin from the command line:
+
+```sh
+opencode plugin @sveltejs/opencode
+```
+
+Alternatively, edit your [OpenCode config](https://opencode.ai/docs/config/) (either the global or the local one) and add `@sveltejs/opencode` to the list of plugins:
 
 ```json
 {
@@ -18,9 +24,22 @@ To install the plugin you can edit your [OpenCode config](https://opencode.ai/do
 
 That's it! You now have the Svelte [MCP server](mcp), [skills](skills), and the `svelte-file-editor` [subagent](subagent) configured for you.
 
+### TUI configuration
+
+The package also includes a TUI plugin for configuring these features interactively. Add `@sveltejs/opencode` to your global or project-local `tui.json`:
+
+```json
+{
+	"$schema": "https://opencode.ai/tui.json",
+	"plugin": ["@sveltejs/opencode"]
+}
+```
+
+Restart OpenCode, then run `/svelte-plugin` or select 'Configure Svelte plugin' from the command palette. Choose whether to edit the project or global configuration, then use the checkboxes and radio options to configure the plugin. Changes are saved automatically, and 'Revert changes' restores the values from when the dialog was opened.
+
 ## Configuration
 
-By default, everything is enabled, but you can configure the plugin by adding a configuration file:
+By default, everything is enabled. The TUI plugin writes the same configuration files that you can create or edit manually:
 
 - locally, in `.opencode/svelte.json`
 - globally, in `~/.config/opencode/svelte.json` (or, if you have specified the environment variable, in `$OPENCODE_CONFIG_DIR/svelte.json`)
