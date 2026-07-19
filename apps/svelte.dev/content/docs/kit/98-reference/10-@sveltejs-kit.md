@@ -1009,7 +1009,7 @@ Available since 2.10.0
 
 </blockquote>
 
-The [`init`](/docs/kit/hooks#Shared-hooks-init) will be invoked once the app starts in the browser
+The [`init`](/docs/kit/hooks#init) will be invoked once the app starts in the browser
 
 <div class="ts-block">
 
@@ -1259,7 +1259,7 @@ A description of the variable that will be used for inline documentation on hove
 
 ## Handle
 
-The [`handle`](/docs/kit/hooks#Server-hooks-handle) hook runs every time the SvelteKit server receives a [request](/docs/kit/web-standards#Fetch-APIs-Request) and
+The [`handle`](/docs/kit/hooks#handle) hook runs every time the SvelteKit server receives a [request](/docs/kit/web-standards#Fetch-APIs-Request) and
 determines the [response](/docs/kit/web-standards#Fetch-APIs-Response).
 It receives an `event` object representing the request and a function called `resolve`, which renders the route and generates a `Response`.
 This allows you to modify response headers or bodies, or bypass SvelteKit entirely (for implementing routes programmatically, for example).
@@ -1280,7 +1280,7 @@ type Handle = (input: {
 
 ## HandleClientError
 
-The client-side [`handleError`](/docs/kit/hooks#Shared-hooks-handleError) hook runs when an unexpected error is thrown while navigating.
+The client-side [`handleError`](/docs/kit/hooks#handleError) hook runs when an unexpected error is thrown while navigating.
 
 If an unexpected error is thrown during loading or the following render, this function will be called with the error and the event.
 Make sure that this function _never_ throws an error.
@@ -1300,7 +1300,7 @@ type HandleClientError = (input: {
 
 ## HandleFetch
 
-The [`handleFetch`](/docs/kit/hooks#Server-hooks-handleFetch) hook allows you to modify (or replace) the result of an [`event.fetch`](/docs/kit/load#Making-fetch-requests) call that runs on the server (or during prerendering) inside an endpoint, `load`, `action`, `handle`, `handleError` or `reroute`.
+The [`handleFetch`](/docs/kit/hooks#handleFetch) hook allows you to modify (or replace) the result of an [`event.fetch`](/docs/kit/load#Making-fetch-requests) call that runs on the server (or during prerendering) inside an endpoint, `load`, `action`, `handle`, `handleError` or `reroute`.
 
 <div class="ts-block">
 
@@ -1316,7 +1316,7 @@ type HandleFetch = (input: {
 
 ## HandleServerError
 
-The server-side [`handleError`](/docs/kit/hooks#Shared-hooks-handleError) hook runs when an unexpected error is thrown while responding to a request.
+The server-side [`handleError`](/docs/kit/hooks#handleError) hook runs when an unexpected error is thrown while responding to a request.
 
 If an unexpected error is thrown during loading or rendering, this function will be called with the error and the event.
 Make sure that this function _never_ throws an error.
@@ -1336,7 +1336,7 @@ type HandleServerError = (input: {
 
 ## HandleValidationError
 
-The [`handleValidationError`](/docs/kit/hooks#Server-hooks-handleValidationError) hook runs when the argument to a remote function fails validation.
+The [`handleValidationError`](/docs/kit/hooks#handleValidationError) hook runs when the argument to a remote function fails validation.
 
 It will be called with the validation issues and the event, and must return an object shape that matches `App.Error`.
 
@@ -1553,7 +1553,7 @@ fetch: typeof fetch;
 - It can be used to make credentialed requests on the server, as it inherits the `cookie` and `authorization` headers for the page request.
 - It can make relative requests on the server (ordinarily, `fetch` requires a URL with an origin when used in a server context).
 - Internal requests (e.g. for `+server.js` routes) go directly to the handler function when running on the server, without the overhead of an HTTP call.
-- During server-side rendering, the response will be captured and inlined into the rendered HTML by hooking into the `text` and `json` methods of the `Response` object. Note that headers will _not_ be serialized, unless explicitly included via [`filterSerializedResponseHeaders`](/docs/kit/hooks#Server-hooks-handle)
+- During server-side rendering, the response will be captured and inlined into the rendered HTML by hooking into the `text` and `json` methods of the `Response` object. Note that headers will _not_ be serialized, unless explicitly included via [`filterSerializedResponseHeaders`](/docs/kit/hooks#handle)
 - During hydration, the response will be read from the HTML, guaranteeing consistency and preventing an additional network request.
 
 You can learn more about making credentialed requests with cookies [here](/docs/kit/load#Cookies)
@@ -3028,7 +3028,7 @@ fetch: typeof fetch;
 - It can be used to make credentialed requests on the server, as it inherits the `cookie` and `authorization` headers for the page request.
 - It can make relative requests on the server (ordinarily, `fetch` requires a URL with an origin when used in a server context).
 - Internal requests (e.g. for `+server.js` routes) go directly to the handler function when running on the server, without the overhead of an HTTP call.
-- During server-side rendering, the response will be captured and inlined into the rendered HTML by hooking into the `text` and `json` methods of the `Response` object. Note that headers will _not_ be serialized, unless explicitly included via [`filterSerializedResponseHeaders`](/docs/kit/hooks#Server-hooks-handle)
+- During server-side rendering, the response will be captured and inlined into the rendered HTML by hooking into the `text` and `json` methods of the `Response` object. Note that headers will _not_ be serialized, unless explicitly included via [`filterSerializedResponseHeaders`](/docs/kit/hooks#handle)
 - During hydration, the response will be read from the HTML, guaranteeing consistency and preventing an additional network request.
 
 You can learn more about making credentialed requests with cookies [here](/docs/kit/load#Cookies).
@@ -3057,7 +3057,7 @@ locals: App.Locals;
 
 <div class="ts-block-property-details">
 
-Contains custom data that was added to the request within the [`server handle hook`](/docs/kit/hooks#Server-hooks-handle).
+Contains custom data that was added to the request within the [`server handle hook`](/docs/kit/hooks#handle).
 
 </div>
 </div>
@@ -3341,7 +3341,7 @@ Available since 2.3.0
 
 </blockquote>
 
-The [`reroute`](/docs/kit/hooks#Universal-hooks-reroute) hook allows you to modify the URL before it is used to determine which route to render.
+The [`reroute`](/docs/kit/hooks#reroute) hook allows you to modify the URL before it is used to determine which route to render.
 
 <div class="ts-block">
 
@@ -3642,7 +3642,7 @@ Available since 2.10.0
 
 </blockquote>
 
-The [`init`](/docs/kit/hooks#Shared-hooks-init) will be invoked before the server responds to its first request
+The [`init`](/docs/kit/hooks#init) will be invoked before the server responds to its first request
 
 <div class="ts-block">
 
@@ -3947,7 +3947,7 @@ Available since 2.11.0
 
 </blockquote>
 
-The [`transport`](/docs/kit/hooks#Universal-hooks-transport) hook allows you to transport custom types across the server/client boundary.
+The [`transport`](/docs/kit/hooks#transport) hook allows you to transport custom types across the server/client boundary.
 
 Each transporter has a pair of `encode` and `decode` functions. On the server, `encode` determines whether a value is an instance of the custom type and, if so, returns a non-falsy encoding of the value which can be an object or an array (or `false` otherwise).
 
@@ -3979,7 +3979,7 @@ type Transport = Record<string, Transporter>;
 
 ## Transporter
 
-A member of the [`transport`](/docs/kit/hooks#Universal-hooks-transport) hook.
+A member of the [`transport`](/docs/kit/hooks#transport) hook.
 
 <div class="ts-block">
 
