@@ -11,7 +11,7 @@ If possible, we recommend that you instruct the LLM to execute MCP calls with th
 
 ## Installation
 
-In VS Code, run the **Install plugin from source** command and use the repository URL:
+In VS Code, run the 'Install plugin from source' command and use the repository URL:
 
 ```text
 https://github.com/sveltejs/ai-tools
