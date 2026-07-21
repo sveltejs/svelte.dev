@@ -7,25 +7,15 @@ Your project's configuration lives in a `svelte.config.js` file at the root of y
 
 ```js
 /// file: svelte.config.js
-// @filename: ambient.d.ts
-declare module '@sveltejs/adapter-auto' {
-	const plugin: () => import('@sveltejs/kit').Adapter;
-	export default plugin;
-}
-
-// @filename: index.js
-// ---cut---
-import adapter from '@sveltejs/adapter-auto';
-
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	kit: {
-		adapter: adapter()
-	}
+	kit: {}
 };
 
 export default config;
 ```
+
+<!-- TODO this is now wrong, you will have to pass inline config in v3. we need to overhaul the docs -->
 
 Since version 2.62.0 you can also pass your configuration to the `sveltekit` plugin in your Vite config, along with the Svelte compiler options:
 
@@ -113,6 +103,7 @@ The `kit` property configures SvelteKit, and can have the following properties:
 <div class="ts-block-property-bullets">
 
 - <span class="tag">default</span> `undefined`
+- <span class="tag deprecated">deprecated</span> removed in 3.0.0. Adapters should now be passed to the `sveltekit` Vite plugin in `vite.config.js`
 
 </div>
 
@@ -224,7 +215,7 @@ When pages are prerendered, the CSP header is added via a `<meta http-equiv>` ta
 
 > [!NOTE] Note that most [Svelte transitions](/tutorial/svelte/transition) work by creating an inline `<style>` element. If you use these in your app, you must either leave the `style-src` directive unspecified or add `unsafe-inline`.
 
-If this level of configuration is insufficient and you have more dynamic requirements, you can use the [`handle` hook](/docs/kit/hooks#handle) to roll your own CSP.
+If this level of configuration is insufficient and you have more dynamic requirements, you can use the [`handle` hook](/docs/kit/hooks#Server-hooks-handle) to roll your own CSP.
 
 <div class="ts-block-property-children">
 
@@ -294,7 +285,7 @@ checkOrigin?: boolean;
 <div class="ts-block-property-bullets">
 
 - <span class="tag">default</span> `true`
-- <span class="tag deprecated">deprecated</span> Use `trustedOrigins: ['*']` instead
+- <span class="tag deprecated">deprecated</span> removed in 3.0. Use `trustedOrigins: ['*']` instead
 
 </div>
 
@@ -383,45 +374,6 @@ The directory to search for `.env` files.
 
 </div>
 </div>
-<div class="ts-block-property">
-
-```ts
-// @noErrors
-publicPrefix?: string;
-```
-
-<div class="ts-block-property-details">
-
-<div class="ts-block-property-bullets">
-
-- <span class="tag">default</span> `"PUBLIC_"`
-
-</div>
-
-A prefix that signals that an environment variable is safe to expose to client-side code. See [`$env/static/public`](/docs/kit/$env-static-public) and [`$env/dynamic/public`](/docs/kit/$env-dynamic-public). Note that Vite's [`envPrefix`](https://vitejs.dev/config/shared-options.html#envprefix) must be set separately if you are using Vite's environment variable handling - though use of that feature should generally be unnecessary.
-
-</div>
-</div>
-<div class="ts-block-property">
-
-```ts
-// @noErrors
-privatePrefix?: string;
-```
-
-<div class="ts-block-property-details">
-
-<div class="ts-block-property-bullets">
-
-- <span class="tag">default</span> `""`
-- <span class="tag since">available since</span> v1.21.0
-
-</div>
-
-A prefix that signals that an environment variable is unsafe to expose to client-side code. Environment variables matching neither the public nor the private prefix will be discarded completely. See [`$env/static/private`](/docs/kit/$env-static-private) and [`$env/dynamic/private`](/docs/kit/$env-dynamic-private).
-
-</div>
-</div>
 
 </div>
 
@@ -441,26 +393,6 @@ Experimental features. Here be dragons. These are not subject to semantic versio
 
 ```ts
 // @noErrors
-explicitEnvironmentVariables?: boolean;
-```
-
-<div class="ts-block-property-details">
-
-<div class="ts-block-property-bullets">
-
-- <span class="tag since">available since</span> v2.63.0
-- <span class="tag">default</span> `false`
-
-</div>
-
-Whether to enable explicit environment variables using `src/env.js` or `src/env.ts`.
-
-</div>
-</div>
-<div class="ts-block-property">
-
-```ts
-// @noErrors
 tracing?: {/*…*/}
 ```
 
@@ -473,7 +405,7 @@ tracing?: {/*…*/}
 
 </div>
 
-Options for enabling server-side [OpenTelemetry](https://opentelemetry.io/) tracing for SvelteKit operations including the [`handle` hook](/docs/kit/hooks#handle), [`load` functions](/docs/kit/load), [form actions](/docs/kit/form-actions), and [remote functions](/docs/kit/remote-functions).
+Options for enabling server-side [OpenTelemetry](https://opentelemetry.io/) tracing for SvelteKit operations including the [`handle` hook](/docs/kit/hooks#Server-hooks-handle), [`load` functions](/docs/kit/load), [form actions](/docs/kit/form-actions), and [remote functions](/docs/kit/remote-functions).
 
 <div class="ts-block-property-children"><div class="ts-block-property">
 
@@ -491,7 +423,7 @@ server?: boolean;
 
 </div>
 
-Enables server-side [OpenTelemetry](https://opentelemetry.io/) span emission for SvelteKit operations including the [`handle` hook](/docs/kit/hooks#handle), [`load` functions](/docs/kit/load), [form actions](/docs/kit/form-actions), and [remote functions](/docs/kit/remote-functions).
+Enables server-side [OpenTelemetry](https://opentelemetry.io/) span emission for SvelteKit operations including the [`handle` hook](/docs/kit/hooks#Server-hooks-handle), [`load` functions](/docs/kit/load), [form actions](/docs/kit/form-actions), and [remote functions](/docs/kit/remote-functions).
 
 </div>
 </div></div>
@@ -914,6 +846,29 @@ Options related to the build output format
 
 ```ts
 // @noErrors
+linkHeaderPreload?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `false`
+- <span class="tag since">available since</span> v3.0.0
+
+</div>
+
+Whether to use the [HTTP `Link` header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Link) to preload assets instead of the [`<link>` HTML element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/link) for non-prerendered pages.
+
+Note that some web servers such as Nginx and Apache have a default header size limit which may be easily exceeded.
+If you are using one of these web servers, you may want to leave this as `false` or configure a higher limit.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```ts
+// @noErrors
 preloadStrategy?: 'modulepreload' | 'preload-js' | 'preload-mjs';
 ```
 
@@ -923,6 +878,7 @@ preloadStrategy?: 'modulepreload' | 'preload-js' | 'preload-mjs';
 
 - <span class="tag">default</span> `"modulepreload"`
 - <span class="tag since">available since</span> v1.8.4
+- <span class="tag deprecated">deprecated</span> removed in 3.0
 
 </div>
 
@@ -955,7 +911,7 @@ The bundle strategy option affects how your app's JavaScript and CSS files are l
 - If `'single'`, creates just one .js bundle and one .css file containing code for the entire app.
 - If `'inline'`, inlines all JavaScript and CSS of the entire app into the HTML. The result is usable without a server (i.e. you can just open the file in your browser).
 
-When using `'split'`, you can also adjust the bundling behaviour by setting [`output.experimentalMinChunkSize`](https://rollupjs.org/configuration-options/#output-experimentalminchunksize) and [`output.manualChunks`](https://rollupjs.org/configuration-options/#output-manualchunks) inside your Vite config's [`build.rollupOptions`](https://vite.dev/config/build-options.html#build-rollupoptions).
+When using `'split'`, you can also adjust the bundling behaviour by setting [`output.codeSplitting`](https://rolldown.rs/reference/OutputOptions.codeSplitting) inside your Vite config's [`build.rolldownOptions`](https://vite.dev/config/build-options#build-rolldownoptions).
 
 If you want to inline your assets, you'll need to set Vite's [`build.assetsInlineLimit`](https://vite.dev/config/build-options.html#build-assetsinlinelimit) option to an appropriate size then import your assets through Vite.
 
@@ -1264,31 +1220,6 @@ How to respond when a route is marked as prerenderable but has not been prerende
 
 The default behavior is to fail the build. This may be undesirable when you know that some of your routes may never be reached under certain
 circumstances such as a CMS not returning data for a specific area, resulting in certain routes never being reached.
-
-</div>
-</div>
-<div class="ts-block-property">
-
-```ts
-// @noErrors
-handleInvalidUrl?: PrerenderInvalidUrlHandlerValue;
-```
-
-<div class="ts-block-property-details">
-
-<div class="ts-block-property-bullets">
-
-- <span class="tag">default</span> `"fail"`
-- <span class="tag since">available since</span> v2.67.0
-
-</div>
-
-How to respond when SvelteKit encounters a URL it cannot parse while crawling prerendered HTML (for example, an AT Protocol URL such as `at://did:plc:...`).
-
-- `'fail'` — fail the build
-- `'ignore'` - silently ignore the failure and continue
-- `'warn'` — continue, but print a warning
-- `(details) => void` — a custom error handler that takes a `details` object with `href`, `referrer` and `message` properties. If you `throw` from this function, the build will fail
 
 </div>
 </div>

@@ -196,7 +196,7 @@ Checks whether this is an error thrown by `error`.
 function isHttpError<T extends number>(
 	e: unknown,
 	status?: T
-): e is HttpError_1 & {
+): e is HttpError & {
 	status: T extends undefined ? never : T;
 };
 ```
@@ -212,7 +212,7 @@ Checks whether this is a redirect thrown by `redirect`.
 <div class="ts-block">
 
 ```dts
-function isRedirect(e: unknown): e is Redirect_1;
+function isRedirect(e: unknown): e is Redirect;
 ```
 
 </div>
@@ -240,6 +240,12 @@ function isValidationError(e: unknown): e is ActionFailure;
 
 
 ## json
+
+<blockquote class="tag deprecated note">
+
+use `Response.json`
+
+</blockquote>
 
 Create a JSON `Response` object from the supplied data.
 
@@ -323,6 +329,12 @@ function redirect(
 
 
 ## text
+
+<blockquote class="tag deprecated note">
+
+use `new Response`
+
+</blockquote>
 
 Create a `Response` object from the supplied body.
 
@@ -694,7 +706,7 @@ An array of all routes (including prerendered)
 <div class="ts-block-property">
 
 ```dts
-createEntries: (fn: (route: RouteDefinition) => AdapterEntry) => Promise<void>;
+createEntries?: (fn: (route: RouteDefinition) => AdapterEntry) => Promise<void>;
 ```
 
 <div class="ts-block-property-details">
@@ -702,7 +714,7 @@ createEntries: (fn: (route: RouteDefinition) => AdapterEntry) => Promise<void>;
 <div class="ts-block-property-bullets">
 
 - `fn` A function that groups a set of routes into an entry point
-- <span class="tag deprecated">deprecated</span> Use `builder.routes` instead
+- <span class="tag deprecated">deprecated</span> removed in 3.0. Use `builder.routes` instead
 
 </div>
 
@@ -745,7 +757,7 @@ generateEnvModule: () => void;
 
 <div class="ts-block-property-details">
 
-Generate a module exposing build-time environment variables as `$env/dynamic/public` or `$app/env/public` if the app uses it.
+Generate a module exposing public environment variables as `$app/env/public` if the app uses it.
 
 </div>
 </div>
@@ -1009,7 +1021,7 @@ Available since 2.10.0
 
 </blockquote>
 
-The [`init`](/docs/kit/hooks#init) will be invoked once the app starts in the browser
+The [`init`](/docs/kit/hooks#Shared-hooks-init) will be invoked once the app starts in the browser
 
 <div class="ts-block">
 
@@ -1034,7 +1046,7 @@ interface Cookies {/*…*/}
 <div class="ts-block-property">
 
 ```dts
-get: (name: string, opts?: import('cookie').CookieParseOptions) => string | undefined;
+get: (name: string, opts?: import('cookie').ParseOptions) => string | undefined;
 ```
 
 <div class="ts-block-property-details">
@@ -1042,7 +1054,7 @@ get: (name: string, opts?: import('cookie').CookieParseOptions) => string | unde
 <div class="ts-block-property-bullets">
 
 - `name` the name of the cookie
-- `opts` the options, passed directly to `cookie.parse`. See documentation [here](https://github.com/jshttp/cookie#cookieparsestr-options)
+- `opts` the options, passed directly to `cookie.parse`. See documentation [here](https://github.com/jshttp/cookie?tab=readme-ov-file#cookieparsecookiestr-options)
 
 </div>
 
@@ -1054,14 +1066,14 @@ Gets a cookie that was previously set with `cookies.set`, or from the request he
 <div class="ts-block-property">
 
 ```dts
-getAll: (opts?: import('cookie').CookieParseOptions) => Array<{ name: string; value: string }>;
+getAll: (opts?: import('cookie').ParseOptions) => Array<{ name: string; value: string }>;
 ```
 
 <div class="ts-block-property-details">
 
 <div class="ts-block-property-bullets">
 
-- `opts` the options, passed directly to `cookie.parse`. See documentation [here](https://github.com/jshttp/cookie#cookieparsestr-options)
+- `opts` the options, passed directly to `cookie.parse`. See documentation [here](https://github.com/jshttp/cookie?tab=readme-ov-file#cookieparsecookiestr-options)
 
 </div>
 
@@ -1073,11 +1085,7 @@ Gets all cookies that were previously set with `cookies.set`, or from the reques
 <div class="ts-block-property">
 
 ```dts
-set: (
-	name: string,
-	value: string,
-	opts: import('cookie').CookieSerializeOptions & { path: string }
-) => void;
+set: (name: string, value: string, opts: import('cookie').SerializeOptions) => void;
 ```
 
 <div class="ts-block-property-details">
@@ -1086,15 +1094,15 @@ set: (
 
 - `name` the name of the cookie
 - `value` the cookie value
-- `opts` the options, passed directly to `cookie.serialize`. See documentation [here](https://github.com/jshttp/cookie#cookieserializename-value-options)
+- `opts` the options passed to `cookie.serialize` with the SvelteKit defaults described above. See documentation [here](https://github.com/jshttp/cookie?tab=readme-ov-file#cookiestringifysetcookiesetcookieobj-options)
 
 </div>
 
 Sets a cookie. This will add a `set-cookie` header to the response, but also make the cookie available via `cookies.get` or `cookies.getAll` during the current request.
 
-The `httpOnly` and `secure` options are `true` by default (except on http://localhost, where `secure` is `false`), and must be explicitly disabled if you want cookies to be readable by client-side JavaScript and/or transmitted over HTTP. The `sameSite` option defaults to `lax`.
+The `httpOnly` is `true` by default, as is `secure`, except during development, when it defaults to `false`. These must be explicitly disabled if you want cookies to be readable by client-side JavaScript and/or transmitted over HTTP.
 
-You must specify a `path` for the cookie. In most cases you should explicitly set `path: '/'` to make the cookie available throughout your app. You can use relative paths, or set `path: ''` to make the cookie only available on the current path and its children
+The `path` option is `'/'` by default. You can use relative paths, or set `path: ''` to make the cookie only available on the current path and its children.
 
 </div>
 </div>
@@ -1102,7 +1110,7 @@ You must specify a `path` for the cookie. In most cases you should explicitly se
 <div class="ts-block-property">
 
 ```dts
-delete: (name: string, opts: import('cookie').CookieSerializeOptions & { path: string }) => void;
+delete: (name: string, opts: import('cookie').SerializeOptions) => void;
 ```
 
 <div class="ts-block-property-details">
@@ -1110,13 +1118,15 @@ delete: (name: string, opts: import('cookie').CookieSerializeOptions & { path: s
 <div class="ts-block-property-bullets">
 
 - `name` the name of the cookie
-- `opts` the options, passed directly to `cookie.serialize`. The `path` must match the path of the cookie you want to delete. See documentation [here](https://github.com/jshttp/cookie#cookieserializename-value-options)
+- `opts` the options passed to `cookie.serialize` with the SvelteKit defaults described above. See documentation [here](https://github.com/jshttp/cookie?tab=readme-ov-file#cookiestringifysetcookiesetcookieobj-options)
 
 </div>
 
 Deletes a cookie by setting its value to an empty string and setting the expiry date in the past.
 
-You must specify a `path` for the cookie. In most cases you should explicitly set `path: '/'` to make the cookie available throughout your app. You can use relative paths, or set `path: ''` to make the cookie only available on the current path and its children
+The `httpOnly` is `true` by default, as is `secure`, except during development, when it defaults to `false`. These must be explicitly disabled if you want cookies to be readable by client-side JavaScript and/or transmitted over HTTP.
+
+The `path` option is `'/'` by default. You can use relative paths, or set `path: ''` to make the cookie only available on the current path and its children.
 
 </div>
 </div>
@@ -1124,11 +1134,7 @@ You must specify a `path` for the cookie. In most cases you should explicitly se
 <div class="ts-block-property">
 
 ```dts
-serialize: (
-	name: string,
-	value: string,
-	opts: import('cookie').CookieSerializeOptions & { path: string }
-) => string;
+serialize: (name: string, value: string, opts: import('cookie').SerializeOptions) => string;
 ```
 
 <div class="ts-block-property-details">
@@ -1137,15 +1143,15 @@ serialize: (
 
 - `name` the name of the cookie
 - `value` the cookie value
-- `opts` the options, passed directly to `cookie.serialize`. See documentation [here](https://github.com/jshttp/cookie#cookieserializename-value-options)
+- `opts` the options passed to `cookie.serialize` with the SvelteKit defaults described above. See documentation [here](https://github.com/jshttp/cookie?tab=readme-ov-file#cookiestringifysetcookiesetcookieobj-options)
 
 </div>
 
 Serialize a cookie name-value pair into a `Set-Cookie` header string, but don't apply it to the response.
 
-The `httpOnly` and `secure` options are `true` by default (except on http://localhost, where `secure` is `false`), and must be explicitly disabled if you want cookies to be readable by client-side JavaScript and/or transmitted over HTTP. The `sameSite` option defaults to `lax`.
+The `httpOnly` is `true` by default, as is `secure`, except during development, when it defaults to `false`. These must be explicitly disabled if you want cookies to be readable by client-side JavaScript and/or transmitted over HTTP.
 
-You must specify a `path` for the cookie. In most cases you should explicitly set `path: '/'` to make the cookie available throughout your app. You can use relative paths, or set `path: ''` to make the cookie only available on the current path and its children
+The `path` option is `'/'` by default. You can use relative paths, or set `path: ''` to make the cookie only available on the current path and its children.
 
 </div>
 </div></div>
@@ -1177,7 +1183,7 @@ and returns an `App.Platform` object
 ## EnvVarConfig
 
 [Environment variables](/docs/kit/environment-variables) can be configured by exporting
-a `variables` object from `src/env.ts`, using [`defineEnvVars`](/docs/kit/@sveltejs-kit-env#defineEnvVars).
+a `variables` object from `src/env.ts`, using [`defineEnvVars`](/docs/kit/@sveltejs-kit-hooks#defineEnvVars).
 
 <div class="ts-block">
 
@@ -1259,7 +1265,7 @@ A description of the variable that will be used for inline documentation on hove
 
 ## Handle
 
-The [`handle`](/docs/kit/hooks#handle) hook runs every time the SvelteKit server receives a [request](/docs/kit/web-standards#Fetch-APIs-Request) and
+The [`handle`](/docs/kit/hooks#Server-hooks-handle) hook runs every time the SvelteKit server receives a [request](/docs/kit/web-standards#Fetch-APIs-Request) and
 determines the [response](/docs/kit/web-standards#Fetch-APIs-Response).
 It receives an `event` object representing the request and a function called `resolve`, which renders the route and generates a `Response`.
 This allows you to modify response headers or bodies, or bypass SvelteKit entirely (for implementing routes programmatically, for example).
@@ -1280,7 +1286,7 @@ type Handle = (input: {
 
 ## HandleClientError
 
-The client-side [`handleError`](/docs/kit/hooks#handleError) hook runs when an unexpected error is thrown while navigating.
+The client-side [`handleError`](/docs/kit/hooks#Shared-hooks-handleError) hook runs when an unexpected error is thrown while navigating.
 
 If an unexpected error is thrown during loading or the following render, this function will be called with the error and the event.
 Make sure that this function _never_ throws an error.
@@ -1300,7 +1306,7 @@ type HandleClientError = (input: {
 
 ## HandleFetch
 
-The [`handleFetch`](/docs/kit/hooks#handleFetch) hook allows you to modify (or replace) the result of an [`event.fetch`](/docs/kit/load#Making-fetch-requests) call that runs on the server (or during prerendering) inside an endpoint, `load`, `action`, `handle`, `handleError` or `reroute`.
+The [`handleFetch`](/docs/kit/hooks#Server-hooks-handleFetch) hook allows you to modify (or replace) the result of an [`event.fetch`](/docs/kit/load#Making-fetch-requests) call that runs on the server (or during prerendering) inside an endpoint, `load`, `action`, `handle`, `handleError` or `reroute`.
 
 <div class="ts-block">
 
@@ -1316,7 +1322,7 @@ type HandleFetch = (input: {
 
 ## HandleServerError
 
-The server-side [`handleError`](/docs/kit/hooks#handleError) hook runs when an unexpected error is thrown while responding to a request.
+The server-side [`handleError`](/docs/kit/hooks#Shared-hooks-handleError) hook runs when an unexpected error is thrown while responding to a request.
 
 If an unexpected error is thrown during loading or rendering, this function will be called with the error and the event.
 Make sure that this function _never_ throws an error.
@@ -1336,7 +1342,7 @@ type HandleServerError = (input: {
 
 ## HandleValidationError
 
-The [`handleValidationError`](/docs/kit/hooks#handleValidationError) hook runs when the argument to a remote function fails validation.
+The [`handleValidationError`](/docs/kit/hooks#Server-hooks-handleValidationError) hook runs when the argument to a remote function fails validation.
 
 It will be called with the validation issues and the event, and must return an object shape that matches `App.Error`.
 
@@ -1428,21 +1434,6 @@ type InvalidField<T> =
 ## KitConfig
 
 See the [configuration reference](/docs/kit/configuration) for details.
-
-## LessThan
-
-<div class="ts-block">
-
-```dts
-type LessThan<
-	TNumber extends number,
-	TArray extends any[] = []
-> = TNumber extends TArray['length']
-	? TArray[number]
-	: LessThan<TNumber, [...TArray, TArray['length']]>;
-```
-
-</div>
 
 ## LiveQueryRequestedResult
 
@@ -1553,7 +1544,7 @@ fetch: typeof fetch;
 - It can be used to make credentialed requests on the server, as it inherits the `cookie` and `authorization` headers for the page request.
 - It can make relative requests on the server (ordinarily, `fetch` requires a URL with an origin when used in a server context).
 - Internal requests (e.g. for `+server.js` routes) go directly to the handler function when running on the server, without the overhead of an HTTP call.
-- During server-side rendering, the response will be captured and inlined into the rendered HTML by hooking into the `text` and `json` methods of the `Response` object. Note that headers will _not_ be serialized, unless explicitly included via [`filterSerializedResponseHeaders`](/docs/kit/hooks#handle)
+- During server-side rendering, the response will be captured and inlined into the rendered HTML by hooking into the `text` and `json` methods of the `Response` object. Note that headers will _not_ be serialized, unless explicitly included via [`filterSerializedResponseHeaders`](/docs/kit/hooks#Server-hooks-handle)
 - During hydration, the response will be read from the HTML, guaranteeing consistency and preventing an additional network request.
 
 You can learn more about making credentialed requests with cookies [here](/docs/kit/load#Cookies)
@@ -1794,25 +1785,6 @@ interface NavigationBase {/*…*/}
 <div class="ts-block-property">
 
 ```dts
-type: NavigationType;
-```
-
-<div class="ts-block-property-details">
-
-The type of navigation:
-- `enter`: The app has hydrated/started
-- `form`: The user submitted a `<form method="GET">`
-- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
-- `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
-- `link`: Navigation was triggered by a link click
-- `popstate`: Navigation was triggered by back/forward navigation
-
-</div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
 from: NavigationTarget | null;
 ```
 
@@ -1865,8 +1837,6 @@ fails or is aborted. In the case of a `willUnload` navigation, the promise will 
 
 ## NavigationEnter
 
-The navigation that occurs when the app starts/hydrates
-
 <div class="ts-block">
 
 ```dts
@@ -1879,7 +1849,12 @@ interface NavigationEnter extends NavigationBase {/*…*/}
 type: 'enter';
 ```
 
-<div class="ts-block-property-details"></div>
+<div class="ts-block-property-details">
+
+The type of navigation:
+- `enter`: The app has hydrated/started
+
+</div>
 </div>
 
 <div class="ts-block-property">
@@ -1984,8 +1959,6 @@ type NavigationExternal = NavigationGoto | NavigationLeave;
 
 ## NavigationFormSubmit
 
-A navigation triggered by a `<form method="GET">`
-
 <div class="ts-block">
 
 ```dts
@@ -1998,7 +1971,12 @@ interface NavigationFormSubmit extends NavigationBase {/*…*/}
 type: 'form';
 ```
 
-<div class="ts-block-property-details"></div>
+<div class="ts-block-property-details">
+
+The type of navigation:
+- `form`: The user submitted a `<form method="GET">`
+
+</div>
 </div>
 
 <div class="ts-block-property">
@@ -2012,24 +1990,9 @@ event: SubmitEvent;
 The `SubmitEvent` that caused the navigation
 
 </div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-delta?: undefined;
-```
-
-<div class="ts-block-property-details">
-
-In case of a history back/forward navigation, the number of steps to go back/forward
-
-</div>
 </div></div>
 
 ## NavigationGoto
-
-A navigation triggered by a `goto(...)` call or a redirect
 
 <div class="ts-block">
 
@@ -2043,25 +2006,15 @@ interface NavigationGoto extends NavigationBase {/*…*/}
 type: 'goto';
 ```
 
-<div class="ts-block-property-details"></div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-delta?: undefined;
-```
-
 <div class="ts-block-property-details">
 
-In case of a history back/forward navigation, the number of steps to go back/forward
+The type of navigation:
+- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
 
 </div>
 </div></div>
 
 ## NavigationLeave
-
-A navigation triggered by the tab being closed, or the user navigating to a different document
 
 <div class="ts-block">
 
@@ -2075,25 +2028,15 @@ interface NavigationLeave extends NavigationBase {/*…*/}
 type: 'leave';
 ```
 
-<div class="ts-block-property-details"></div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-delta?: undefined;
-```
-
 <div class="ts-block-property-details">
 
-In case of a history back/forward navigation, the number of steps to go back/forward
+The type of navigation:
+- `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
 
 </div>
 </div></div>
 
 ## NavigationLink
-
-A navigation triggered by a link click
 
 <div class="ts-block">
 
@@ -2107,7 +2050,12 @@ interface NavigationLink extends NavigationBase {/*…*/}
 type: 'link';
 ```
 
-<div class="ts-block-property-details"></div>
+<div class="ts-block-property-details">
+
+The type of navigation:
+- `link`: Navigation was triggered by a link click
+
+</div>
 </div>
 
 <div class="ts-block-property">
@@ -2121,24 +2069,9 @@ event: PointerEvent;
 The `PointerEvent` that caused the navigation
 
 </div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-delta?: undefined;
-```
-
-<div class="ts-block-property-details">
-
-In case of a history back/forward navigation, the number of steps to go back/forward
-
-</div>
 </div></div>
 
 ## NavigationPopState
-
-A navigation triggered by back/forward navigation
 
 <div class="ts-block">
 
@@ -2152,7 +2085,12 @@ interface NavigationPopState extends NavigationBase {/*…*/}
 type: 'popstate';
 ```
 
-<div class="ts-block-property-details"></div>
+<div class="ts-block-property-details">
+
+The type of navigation:
+- `popstate`: Navigation was triggered by back/forward navigation
+
+</div>
 </div>
 
 <div class="ts-block-property">
@@ -2274,9 +2212,9 @@ For the `to` target, this represents the scroll position that will be or was res
 
 - `enter`: The app has hydrated/started
 - `form`: The user submitted a `<form method="GET">`
-- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
 - `leave`: The app is being left either because the tab is being closed or a navigation to a different document is occurring
 - `link`: Navigation was triggered by a link click
+- `goto`: Navigation was triggered by a `goto(...)` call or a redirect
 - `popstate`: Navigation was triggered by back/forward navigation
 
 <div class="ts-block">
@@ -2289,19 +2227,6 @@ type NavigationType =
 	| 'link'
 	| 'goto'
 	| 'popstate';
-```
-
-</div>
-
-## NumericRange
-
-<div class="ts-block">
-
-```dts
-type NumericRange<
-	TStart extends number,
-	TEnd extends number
-> = Exclude<TEnd | LessThan<TEnd>, LessThan<TStart>>;
 ```
 
 </div>
@@ -2587,7 +2512,14 @@ type RemoteForm<
 	};
 	/** Use the `enhance` method to influence what happens when the form is submitted. */
 	enhance(
-		callback: RemoteFormEnhanceCallback<Input, Output>
+		callback: (
+			form: Omit<
+				RemoteForm<Input, Output>,
+				'enhance' | 'element'
+			> & {
+				readonly element: HTMLFormElement;
+			}
+		) => MaybePromise<void>
 	): {
 		method: 'POST';
 		action: string;
@@ -2625,49 +2557,8 @@ type RemoteForm<
 	get result(): Output | undefined;
 	/** The number of pending submissions */
 	get pending(): number;
-	/** True if the form has been submitted at least once */
-	get submitted(): boolean;
 	/** Access form fields using object notation */
 	fields: RemoteFormFieldsRoot<Input>;
-};
-```
-
-</div>
-
-## RemoteFormEnhanceCallback
-
-The callback passed to a remote form's `enhance` method. See [Remote functions](/docs/kit/remote-functions#form) for full documentation.
-
-<div class="ts-block">
-
-```dts
-type RemoteFormEnhanceCallback<
-	Input extends RemoteFormInput | void =
-		RemoteFormInput | void,
-	Output = any
-> = (
-	form: RemoteFormEnhanceInstance<Input, Output>
-) => MaybePromise<void>;
-```
-
-</div>
-
-## RemoteFormEnhanceInstance
-
-The form instance as received inside an `enhance` callback. See [Remote functions](/docs/kit/remote-functions#form) for full documentation.
-
-<div class="ts-block">
-
-```dts
-type RemoteFormEnhanceInstance<
-	Input extends RemoteFormInput | void =
-		RemoteFormInput | void,
-	Output = any
-> = Omit<
-	RemoteForm<Input, Output>,
-	'enhance' | 'element'
-> & {
-	readonly element: HTMLFormElement;
 };
 ```
 
@@ -3028,7 +2919,7 @@ fetch: typeof fetch;
 - It can be used to make credentialed requests on the server, as it inherits the `cookie` and `authorization` headers for the page request.
 - It can make relative requests on the server (ordinarily, `fetch` requires a URL with an origin when used in a server context).
 - Internal requests (e.g. for `+server.js` routes) go directly to the handler function when running on the server, without the overhead of an HTTP call.
-- During server-side rendering, the response will be captured and inlined into the rendered HTML by hooking into the `text` and `json` methods of the `Response` object. Note that headers will _not_ be serialized, unless explicitly included via [`filterSerializedResponseHeaders`](/docs/kit/hooks#handle)
+- During server-side rendering, the response will be captured and inlined into the rendered HTML by hooking into the `text` and `json` methods of the `Response` object. Note that headers will _not_ be serialized, unless explicitly included via [`filterSerializedResponseHeaders`](/docs/kit/hooks#Server-hooks-handle)
 - During hydration, the response will be read from the HTML, guaranteeing consistency and preventing an additional network request.
 
 You can learn more about making credentialed requests with cookies [here](/docs/kit/load#Cookies).
@@ -3057,7 +2948,7 @@ locals: App.Locals;
 
 <div class="ts-block-property-details">
 
-Contains custom data that was added to the request within the [`server handle hook`](/docs/kit/hooks#handle).
+Contains custom data that was added to the request within the [`server handle hook`](/docs/kit/hooks#Server-hooks-handle).
 
 </div>
 </div>
@@ -3341,7 +3232,7 @@ Available since 2.3.0
 
 </blockquote>
 
-The [`reroute`](/docs/kit/hooks#reroute) hook allows you to modify the URL before it is used to determine which route to render.
+The [`reroute`](/docs/kit/hooks#Universal-hooks-reroute) hook allows you to modify the URL before it is used to determine which route to render.
 
 <div class="ts-block">
 
@@ -3642,7 +3533,7 @@ Available since 2.10.0
 
 </blockquote>
 
-The [`init`](/docs/kit/hooks#init) will be invoked before the server responds to its first request
+The [`init`](/docs/kit/hooks#Shared-hooks-init) will be invoked before the server responds to its first request
 
 <div class="ts-block">
 
@@ -3947,7 +3838,7 @@ Available since 2.11.0
 
 </blockquote>
 
-The [`transport`](/docs/kit/hooks#transport) hook allows you to transport custom types across the server/client boundary.
+The [`transport`](/docs/kit/hooks#Universal-hooks-transport) hook allows you to transport custom types across the server/client boundary.
 
 Each transporter has a pair of `encode` and `decode` functions. On the server, `encode` determines whether a value is an instance of the custom type and, if so, returns a non-falsy encoding of the value which can be an object or an array (or `false` otherwise).
 
@@ -3979,7 +3870,7 @@ type Transport = Record<string, Transporter>;
 
 ## Transporter
 
-A member of the [`transport`](/docs/kit/hooks#transport) hook.
+A member of the [`transport`](/docs/kit/hooks#Universal-hooks-transport) hook.
 
 <div class="ts-block">
 
@@ -4693,37 +4584,6 @@ type PrerenderHttpErrorHandlerValue =
 	| 'warn'
 	| 'ignore'
 	| PrerenderHttpErrorHandler;
-```
-
-</div>
-
-## PrerenderInvalidUrlHandler
-
-<div class="ts-block">
-
-```dts
-interface PrerenderInvalidUrlHandler {/*…*/}
-```
-
-<div class="ts-block-property">
-
-```dts
-(details: { href: string; referrer: string | null; message: string }): void;
-```
-
-<div class="ts-block-property-details"></div>
-</div></div>
-
-## PrerenderInvalidUrlHandlerValue
-
-<div class="ts-block">
-
-```dts
-type PrerenderInvalidUrlHandlerValue =
-	| 'fail'
-	| 'warn'
-	| 'ignore'
-	| PrerenderInvalidUrlHandler;
 ```
 
 </div>
