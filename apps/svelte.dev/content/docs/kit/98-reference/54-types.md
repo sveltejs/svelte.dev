@@ -133,8 +133,8 @@ The generated `.svelte-kit/tsconfig.json` file contains a mixture of options. So
 {
 	"compilerOptions": {
 		"paths": {
-			"$lib": ["../src/lib"],
-			"$lib/*": ["../src/lib/*"]
+			"#lib": ["../src/lib/index.js"],
+			"#lib/*": ["../src/lib/*"]
 		},
 		"rootDirs": ["..", "./types"]
 	},
@@ -193,15 +193,7 @@ Others are required for SvelteKit to work properly, and should also be left unto
 }
 ```
 
-Use the [`typescript.config` setting](configuration#typescript) in `svelte.config.js` to extend or modify the generated `tsconfig.json`.
-
-## $lib
-
-This is a simple alias to `src/lib`. It allows you to access common components and utility modules without `../../../../` nonsense.
-
-### $lib/server
-
-A subdirectory of `$lib`. SvelteKit will prevent you from importing any modules in `$lib/server` into client-side code. See [server-only modules](server-only-modules).
+Use the [`typescript.config` setting](configuration#typescript) of the SvelteKit plugin in `vite.config.js` to extend or modify the generated `tsconfig.json`.
 
 ## app.d.ts
 
@@ -243,6 +235,15 @@ interface Error {/*…*/}
 <div class="ts-block-property">
 
 ```dts
+status: number;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
 message: string;
 ```
 
@@ -263,7 +264,7 @@ interface Locals {}
 
 ## PageData
 
-Defines the common shape of the [page.data state](/docs/kit/$app-state#page) and [$page.data store](/docs/kit/$app-stores#page) - that is, the data that is shared between all pages.
+Defines the common shape of the [page.data state](/docs/kit/$app-state#page) - that is, the data that is shared between all pages.
 The `Load` and `ServerLoad` functions in `./$types` will be narrowed accordingly.
 Use optional properties for data that is only present on specific pages. Do not add an index signature (`[key: string]: any`).
 
