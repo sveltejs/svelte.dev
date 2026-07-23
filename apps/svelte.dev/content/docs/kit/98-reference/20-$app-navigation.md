@@ -89,7 +89,9 @@ function disableScrollHandling(): void;
 Allows you to navigate programmatically to a given route, with options such as keeping the current element focused.
 Returns a Promise that resolves when SvelteKit navigates (or fails to navigate, in which case the promise rejects) to the specified `url`.
 
-For external URLs, use `window.location = url` instead of calling `goto(url)`.
+`goto` is intended for navigations to routes that belong to the app.
+If the URL does not resolve to a route within the app, the returned promise will reject.
+For external URLs, use `window.location = url` to perform a full-page navigation instead of calling `goto(url)`.
 
 <div class="ts-block">
 
@@ -100,10 +102,11 @@ function goto(
 		replaceState?: boolean | undefined;
 		noScroll?: boolean | undefined;
 		keepFocus?: boolean | undefined;
-		invalidateAll?: boolean | undefined;
+		refreshAll?: boolean | undefined;
 		invalidate?:
 			| (string | URL | ((url: URL) => boolean))[]
 			| undefined;
+		invalidateAll?: boolean | undefined;
 		state?: App.PageState | undefined;
 	}
 ): Promise<void>;
@@ -134,7 +137,8 @@ invalidate((url) => url.pathname === '/path');
 
 ```dts
 function invalidate(
-	resource: string | URL | ((url: URL) => boolean)
+	resource: string | URL | ((url: URL) => boolean),
+	keepState?: boolean
 ): Promise<void>;
 ```
 
@@ -144,7 +148,15 @@ function invalidate(
 
 ## invalidateAll
 
+<blockquote class="tag deprecated note">
+
+Use [`refreshAll`](/docs/kit/$app-navigation#refreshAll) instead. Unlike `invalidateAll`, `refreshAll` does not reset `page.state`.
+
+</blockquote>
+
 Causes all `load` and `query` functions belonging to the currently active page to re-run. Returns a `Promise` that resolves when the page is subsequently updated.
+
+Note that this resets `page.state` to an empty object. If you want to preserve `page.state` (for example when using [shallow routing](/docs/kit/shallow-routing)), use `refreshAll` instead.
 
 <div class="ts-block">
 
@@ -214,15 +226,22 @@ Returns a Promise that resolves with the result of running the new route's `load
 
 ```dts
 function preloadData(href: string): Promise<
-	| {
-			type: 'loaded';
-			status: number;
-			data: Record<string, any>;
-	  }
-	| {
-			type: 'redirect';
-			location: string;
-	  }
+	(
+		| {
+				type: 'loaded';
+				data: Record<string, any>;
+		  }
+		| {
+				type: 'redirect';
+				location: string;
+		  }
+		| {
+				type: 'error';
+				error: App.Error;
+		  }
+	) & {
+		status: number;
+	}
 >;
 ```
 
@@ -249,17 +268,13 @@ function pushState(
 
 ## refreshAll
 
-Causes all currently active remote functions to refresh, and all `load` functions belonging to the currently active page to re-run (unless disabled via the option argument).
+Causes all currently active remote functions to refresh, and all `load` functions belonging to the currently active page to re-run.
 Returns a `Promise` that resolves when the page is subsequently updated.
 
 <div class="ts-block">
 
 ```dts
-function refreshAll({
-	includeLoadFunctions
-}?: {
-	includeLoadFunctions?: boolean;
-}): Promise<void>;
+function refreshAll(): Promise<void>;
 ```
 
 </div>
