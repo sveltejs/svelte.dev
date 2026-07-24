@@ -120,88 +120,9 @@ Starting with version 2.16.0, two additional helper types are provided: `PagePro
 > </script>
 > ```
 
-> [!NOTE] For this to work, your own `tsconfig.json` or `jsconfig.json` should extend from the generated `.svelte-kit/tsconfig.json` (where `.svelte-kit` is your [`outDir`](configuration#outDir)):
+> [!NOTE] For this to work, your own `tsconfig.json` or `jsconfig.json` should extend from the generated `$app/types`:
 >
-> `{ "extends": "./.svelte-kit/tsconfig.json" }`
-
-### Default tsconfig.json
-
-The generated `.svelte-kit/tsconfig.json` file contains a mixture of options. Some are generated programmatically based on your project configuration, and should generally not be overridden without good reason:
-
-```json
-/// file: .svelte-kit/tsconfig.json
-{
-	"compilerOptions": {
-		"paths": {
-			"$lib": ["../src/lib"],
-			"$lib/*": ["../src/lib/*"]
-		},
-		"rootDirs": ["..", "./types"]
-	},
-	"include": [
-		"ambient.d.ts",
-		"non-ambient.d.ts",
-		"./types/**/$types.d.ts",
-		"../vite.config.js",
-		"../vite.config.ts",
-		"../src/**/*.js",
-		"../src/**/*.ts",
-		"../src/**/*.svelte",
-		"../tests/**/*.js",
-		"../tests/**/*.ts",
-		"../tests/**/*.svelte"
-	],
-	"exclude": [
-		"../node_modules/**",
-		"../src/service-worker.js",
-		"../src/service-worker/**/*.js",
-		"../src/service-worker.ts",
-		"../src/service-worker/**/*.ts",
-		"../src/service-worker.d.ts",
-		"../src/service-worker/**/*.d.ts"
-	]
-}
-```
-
-Others are required for SvelteKit to work properly, and should also be left untouched unless you know what you're doing:
-
-```json
-/// file: .svelte-kit/tsconfig.json
-{
-	"compilerOptions": {
-		// this ensures that types are explicitly
-		// imported with `import type`, which is
-		// necessary as Svelte/Vite cannot
-		// otherwise compile components correctly
-		"verbatimModuleSyntax": true,
-
-		// Vite compiles one TypeScript module
-		// at a time, rather than compiling
-		// the entire module graph
-		"isolatedModules": true,
-
-		// Tell TS it's used only for type-checking
-		"noEmit": true,
-
-		// This ensures both `vite build`
-		// and `svelte-package` work correctly
-		"lib": ["esnext", "DOM", "DOM.Iterable"],
-		"moduleResolution": "bundler",
-		"module": "esnext",
-		"target": "esnext"
-	}
-}
-```
-
-Use the [`typescript.config` setting](configuration#typescript) in `svelte.config.js` to extend or modify the generated `tsconfig.json`.
-
-## $lib
-
-This is a simple alias to `src/lib`. It allows you to access common components and utility modules without `../../../../` nonsense.
-
-### $lib/server
-
-A subdirectory of `$lib`. SvelteKit will prevent you from importing any modules in `$lib/server` into client-side code. See [server-only modules](server-only-modules).
+> `{ "extends": "$app/tsconfig" }`
 
 ## app.d.ts
 
@@ -243,6 +164,15 @@ interface Error {/*…*/}
 <div class="ts-block-property">
 
 ```dts
+status: number;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
 message: string;
 ```
 
@@ -263,7 +193,7 @@ interface Locals {}
 
 ## PageData
 
-Defines the common shape of the [page.data state](/docs/kit/$app-state#page) and [$page.data store](/docs/kit/$app-stores#page) - that is, the data that is shared between all pages.
+Defines the common shape of the [page.data state](/docs/kit/$app-state#page) - that is, the data that is shared between all pages.
 The `Load` and `ServerLoad` functions in `./$types` will be narrowed accordingly.
 Use optional properties for data that is only present on specific pages. Do not add an index signature (`[key: string]: any`).
 
