@@ -23,6 +23,10 @@ try {
 	// create Svelte-Kit skelton app
 	create({ cwd: output_dir, template: 'minimal', types: 'typescript', name: 'your-app' });
 
+	/**
+	 * @param {string} dir
+	 * @returns {string[]}
+	 */
 	function get_all_files(dir) {
 		const files = [];
 		const items = readdirSync(dir, { withFileTypes: true });
