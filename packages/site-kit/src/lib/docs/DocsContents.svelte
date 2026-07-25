@@ -20,7 +20,9 @@
 			return;
 		}
 
+		// @ts-ignore
 		const from_package = from.params!.path!.split('/')[0];
+		// @ts-ignore
 		const to_package = to!.params!.path!.split('/')[0];
 
 		if (from_package !== to_package) {
