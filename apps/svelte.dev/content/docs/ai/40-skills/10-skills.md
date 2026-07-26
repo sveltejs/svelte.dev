@@ -20,13 +20,11 @@ CLI tools for Svelte 5 documentation lookup and code analysis. MUST be used when
 
 <!-- prettier-ignore-start -->
 ````markdown
-# Svelte 5 Code Writer
-
-## CLI Tools
+## CLI tools
 
 You have access to `@sveltejs/mcp` CLI for Svelte-specific assistance. Use these commands via `npx`:
 
-### List Documentation Sections
+### List documentation sections
 
 ```bash
 npx @sveltejs/mcp list-sections
@@ -34,7 +32,7 @@ npx @sveltejs/mcp list-sections
 
 Lists all available Svelte 5 and SvelteKit documentation sections with titles and paths.
 
-### Get Documentation
+### Get documentation
 
 ```bash
 npx @sveltejs/mcp get-documentation "<section1>,<section2>,..."
@@ -48,7 +46,7 @@ Retrieves full documentation for specified sections. Use after `list-sections` t
 npx @sveltejs/mcp get-documentation "$state,$derived,$effect"
 ```
 
-### Svelte Autofixer
+### Svelte autofixer
 
 ```bash
 npx @sveltejs/mcp svelte-autofixer "<code_or_path>" [options]
