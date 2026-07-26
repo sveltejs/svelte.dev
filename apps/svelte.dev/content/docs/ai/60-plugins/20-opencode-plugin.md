@@ -39,7 +39,7 @@ Restart OpenCode, then run `/svelte-plugin` or select 'Configure Svelte plugin' 
 
 ## Configuration
 
-By default, everything is enabled. The TUI plugin writes the same configuration files that you can create or edit manually:
+By default, the MCP server, subagent, skills, instructions, and automatic updates are enabled. The TUI plugin writes the same configuration files that you can create or edit manually:
 
 - locally, in `.opencode/svelte.json`
 - globally, in `~/.config/opencode/svelte.json` (or, if you have specified the environment variable, in `$OPENCODE_CONFIG_DIR/svelte.json`)
@@ -69,6 +69,13 @@ By default, everything is enabled. The TUI plugin writes the same configuration 
 	},
 	"instructions": {
 		"enabled": true
-	}
+	},
+	"autoupdate": true
 }
 ```
+
+### Automatic updates
+
+The plugin checks npm for newer versions and warns you when one is available. OpenCode caches plugins, so it continues using the cached version until that cache is removed.
+
+Automatic updates are enabled by default. After detecting a newer version, the plugin removes itself from the cache when OpenCode shuts down. OpenCode installs the latest version the next time it starts. Automatic updates only apply when the plugin is unpinned or explicitly uses the `latest` tag. Exact versions, ranges, and other dist-tags are left untouched because reinstalling them may resolve to the same version again. Set `"autoupdate": false` to only receive the warning.
