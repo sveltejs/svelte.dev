@@ -20,13 +20,11 @@ CLI tools for Svelte 5 documentation lookup and code analysis. MUST be used when
 
 <!-- prettier-ignore-start -->
 ````markdown
-# Svelte 5 Code Writer
-
-## CLI Tools
+## CLI tools
 
 You have access to `@sveltejs/mcp` CLI for Svelte-specific assistance. Use these commands via `npx`:
 
-### List Documentation Sections
+### List documentation sections
 
 ```bash
 npx @sveltejs/mcp list-sections
@@ -34,7 +32,7 @@ npx @sveltejs/mcp list-sections
 
 Lists all available Svelte 5 and SvelteKit documentation sections with titles and paths.
 
-### Get Documentation
+### Get documentation
 
 ```bash
 npx @sveltejs/mcp get-documentation "<section1>,<section2>,..."
@@ -48,7 +46,7 @@ Retrieves full documentation for specified sections. Use after `list-sections` t
 npx @sveltejs/mcp get-documentation "$state,$derived,$effect"
 ```
 
-### Svelte Autofixer
+### Svelte autofixer
 
 ```bash
 npx @sveltejs/mcp svelte-autofixer "<code_or_path>" [options]
@@ -129,9 +127,9 @@ If the derived expression is an object or array, it will be returned as-is — i
 
 Effects are an escape hatch and should mostly be avoided. In particular, avoid updating state inside effects.
 
-- If you need to sync state to an external library such as D3, it is often neater to use [`{@attach ...}`](references/@attach.md)
+- If you need to sync state to an external library such as D3, it is often neater to use [`{@attach ...}`](references/attach.md)
 - If you need to run some code in response to user interaction, put the code directly in an event handler or use a [function binding](references/bind.md) as appropriate
-- If you need to log values for debugging purposes, use [`$inspect`](references/$inspect.md)
+- If you need to log values for debugging purposes, use [`$inspect`](references/inspect.md)
 - If you need to observe something external to Svelte, use [`createSubscriber`](references/svelte-reactivity.md)
 
 Never wrap the contents of an effect in `if (browser) {...}` or similar — effects do not run on the server.
@@ -180,7 +178,7 @@ Avoid using `onMount` or `$effect` for this.
 
 ## Snippets
 
-[Snippets](references/snippet.md) are a way to define reusable chunks of markup that can be instantiated with the [`{@render ...}`](references/@render.md) tag, or passed to components as props. They must be declared within the template.
+[Snippets](references/snippet.md) are a way to define reusable chunks of markup that can be instantiated with the [`{@render ...}`](references/render.md) tag, or passed to components as props. They must be declared within the template.
 
 ```svelte
 {#snippet greeting(name)}
