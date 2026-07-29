@@ -47,7 +47,7 @@ function getRequest({
 	request: import('http').IncomingMessage;
 	base: string;
 	bodySizeLimit?: number;
-}): Promise<Request>;
+}): Request;
 ```
 
 </div>
@@ -62,7 +62,7 @@ function getRequest({
 function setResponse(
 	res: import('http').ServerResponse,
 	response: Response
-): Promise<void>;
+): void;
 ```
 
 </div>
