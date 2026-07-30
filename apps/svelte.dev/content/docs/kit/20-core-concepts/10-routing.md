@@ -19,8 +19,6 @@ We'll introduce these files in a moment in more detail, but here are a few simpl
 * All files run on the client except `+server` files
 * `+layout` and `+error` files apply to subdirectories as well as the directory they live in
 
-> [!NOTE] When navigating from page A to B, SvelteKit preserves the components that are common to both of them — [see here](state-management#Component-and-page-state-is-preserved) for more detail.
-
 ## +page
 
 ### +page.svelte
@@ -110,7 +108,7 @@ You can find more information about these in [page options](page-options).
 
 ### +page.server.js
 
-If your `load` function can only run on the server — for example, if it needs to fetch data from a database or you need to access private [environment variables]($env-static-private) like API keys — then you can rename `+page.js` to `+page.server.js` and change the `PageLoad` type to `PageServerLoad`.
+If your `load` function can only run on the server — for example, if it needs to fetch data from a database or you need to access private [environment variables](environment-variables) like API keys — then you can rename `+page.js` to `+page.server.js` and change the `PageLoad` type to `PageServerLoad`.
 
 ```js
 /// file: src/routes/blog/[slug]/+page.server.js
@@ -159,9 +157,6 @@ If an error occurs during `load`, SvelteKit will render a default error page. Yo
 
 <h1>{page.status}: {page.error.message}</h1>
 ```
-
-> [!LEGACY]
-> `$app/state` was added in SvelteKit 2.12. If you're using an earlier version or are using Svelte 4, use `$app/stores` instead.
 
 SvelteKit will 'walk up the tree' looking for the closest error boundary — if the file above didn't exist it would try `src/routes/blog/+error.svelte` and then `src/routes/+error.svelte` before rendering the default error page. If _that_ fails (or if the error was thrown from the `load` function of the root `+layout`, which sits 'above' the root `+error`), SvelteKit will bail out and render a static fallback error page, which you can customise by creating a `src/error.html` file.
 
@@ -450,7 +445,7 @@ You can read more about omitting `$types` in our [blog post](/blog/zero-config-t
 
 Any other files inside a route directory are ignored by SvelteKit. This means you can colocate components and utility modules with the routes that need them.
 
-If components and modules are needed by multiple routes, it's a good idea to put them in [`$lib`]($lib).
+If components and modules are needed by multiple routes, it's a good idea to put them in [`#lib`]($lib).
 
 ## Further reading
 
