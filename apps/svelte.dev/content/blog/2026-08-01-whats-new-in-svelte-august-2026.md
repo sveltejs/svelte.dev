@@ -9,13 +9,12 @@ The biggest news this month is the first `@next` releases of SvelteKit 3. Thirte
 
 Alongside the preview releases, the stable line kept moving with `submitted` on remote forms and a new home for `defineEnvVars`. The language tools also picked up zero-config `+error.svelte` props so error pages get their `page` and `error` types with no extra setup.
 
-And, in case you missed it, [Svelte Summit Ljubljana 2026](https://www.reddit.com/r/sveltejs/comments/1v8bdel/svelte_summit_ljubljana_2026_announcement/) is happening November 19-20, with a workshop day followed by a conference day. Save the date!
+And, in case you missed it, [Svelte Summit Ljubljana 2026](https://sveltesummit.com) is happening November 19-20, with a workshop day on November 18, the day before the summit. Save the date!
 
 ## What's new in SvelteKit
 
 - Remote forms now expose a `submitted` property so you can react to the moment a form is submitted without waiting for the response (**2.69.0**, [Docs](https://svelte.dev/docs/kit/remote-functions#form), [#14811](https://github.com/sveltejs/kit/pull/14811))
 - `defineEnvVars` has moved from `@sveltejs/kit` to `@sveltejs/kit/env` so environment helpers live in a dedicated subpath (**2.70.0**, [Docs](https://svelte.dev/docs/kit/@sveltejs-kit-env#defineEnvVars), [#16378](https://github.com/sveltejs/kit/pull/16378))
-- CSRF protection now stays on in production builds even when `NODE_ENV` is set to something other than `production` (**2.70.0**, [Docs](https://svelte.dev/docs/kit/configuration#csrf), [#16313](https://github.com/sveltejs/kit/pull/16313))
 
 ## SvelteKit 3 preview
 
@@ -63,7 +62,7 @@ Want to dive deeper? Check out the [Svelte CLI](https://github.com/sveltejs/cli/
 - [Motioner](https://motioner.app) is a browser-based Figma-style design tool where every frame doubles as an animation timeline
 - [The Prototype](https://theprototype.app) is a collaborative 3D scene editor built on Threlte, with peer-to-peer sync over WebRTC and a full runes-based state system
 - [clocks.dev](https://clocks.dev) is a community-built gallery where every clock is a Svelte component and anyone can contribute a new design
-- [Flatxel](https://flatxel.com) is an r/place-style collaborative pixel canvas built with SvelteKit
+- [Flatxel](https://flatxel.com) is an r/place-style collaborative pixel canvas
 - [Gabble](https://gabble.gg) is a daily word game PWA that mixes Wordle and Boggle mechanics
 - [Can you terraform Mars?](https://www.nature.com/immersive/d41586-026-01978-8/index.html) is an interactive Nature featured article
 
@@ -82,8 +81,8 @@ _This Week in Svelte_
 
 _To Read_
 
-- [Migrated a dashboard application from React to Svelte](https://www.reddit.com/r/sveltejs/comments/1uqy6ub/migrated_a_dashboard_application_from_react_to/) - a detailed report from an engineer who cut their bundle size roughly in half after moving from TanStack Start + React Query to SvelteKit and remote functions
-- [I built a Rust toolchain for Svelte](https://blog.baseballyama.com/posts/20260721-rsvelte) by Yamagishi Kazutoshi walks through `rsvelte`, a Rust reimplementation of the Svelte compiler, formatter, linter, type checker and LSP tested against 12,000+ real components
+- [Migrated a dashboard application from React to Svelte](https://www.reddit.com/r/sveltejs/comments/1uqy6ub/migrated_a_dashboard_application_from_react_to/) - an account from an engineer who cut their bundle size roughly in half after moving from TanStack Start + React Query to SvelteKit and remote functions
+- [I built a Rust toolchain for Svelte](https://blog.baseballyama.com/posts/20260721-rsvelte) by Yamagishi Kazutoshi (one of the main Svelte `language-tools` maintainers) walks through `rsvelte`, a Rust reimplementation of the Svelte compiler, formatter, linter, type checker and LSP tested against 12,000+ real components
 - [Three years ago I told you Svelte gave me everything](https://www.reddit.com/r/sveltejs/comments/1uu9sg6/three_years_ago_i_told_you_svelte_gave_me/) by Bishwas Bhandari is a personal retrospective on six years of building with Svelte
 - [Building a Dynamic Invoice Form in Svelte 5 with Formisch](https://formisch.dev/blog/dynamic-invoice-form-svelte/) uses Formisch, Valibot and `FieldArray` to build a typed dynamic invoice form
 - [Svelte Building Blocks](https://github.com/erayack/svelte-building-blocks) is a free, runnable, level-based course that starts with components and runes and works up through APIs, testing and production
@@ -94,20 +93,20 @@ _Frameworks and Tooling_
 
 - [LayerChart 2.0](https://layerchart.com) shipped a rewrite with a CSS-framework-agnostic API, new components and chart types from Sean Lynch
 - [Mochi 0.8.0](https://mochi.fast) adds an `<Image>` component with resizing, email sending with Svelte components as templates, queues, rate limiting and a built-in captcha
-- [rsvelte](https://github.com/baseballyama/rsvelte) is an in-progress Rust implementation of the full Svelte toolchain from baseballyama
+- [rsvelte](https://baseballyama.github.io/rsvelte/) is a Rust implementation of the Svelte toolchain from Yamagishi Kazutoshi
 - [Frizzante v2](https://razshare.github.io/frizzante-docs/) is a Go + Svelte full-stack framework whose latest release adds SSG snapshots
 - [SVOCS](https://svocs.dev) is a markdown-first docs and blog generator built on SvelteKit
 - [Svelte DocSmith](https://docsmith.geodask.com) is another docs framework for SvelteKit where markdown files become routes and the sidebar builds itself from frontmatter
 
 _UI Components and Visual Effects_
 
-- [Lily](https://lily-svelte.pages.dev) is a Tailwind v4 component library with a single "quiet by design" visual language and shadcn-style CLI installs ([GitHub](https://github.com/levish0/lily-svelte))
+- [Lily](https://lily-svelte.pages.dev) is a Tailwind v4 component library with a single "quiet by design" visual language and shadcn-style CLI installs
 - [CossUI-Svelte](https://cossui-svelte.com) is an unofficial port of the Coss UI components backfilling components missing from shadcn, Bits UI and Origin UI
 - [mindmapcn-svelte](https://mindmapcn-svelte.mind-elixir.com) is a zero-config interactive mind map component styled to fit shadcn-svelte design systems
 - [Svelte Swipe To Action](https://svelte-swipe-ashy.vercel.app) is a highly customizable swipe-to-action component
 - [Edra v3](https://edra.tsuzat.com) is a rich text editor for SvelteKit that now ships headless and shadcn variants through a CLI and component registry
 - [CMS Brew](https://cmsbrew.com/demo) lets clients edit their SvelteKit site through a chat interface that produces plain commits on GitHub
-- [File Viewer for Svelte](https://www.npmjs.com/package/@file-viewer/svelte) is a native Svelte component and action for previewing PDF, Office, CAD and archive files in the browser ([Demo](https://demo.file-viewer.app/?locale=en-US))
+- [File Viewer for Svelte](https://doc.file-viewer.app/guide/ecosystem#svelte) is a native Svelte component and action for previewing PDF, Office, CAD and archive files in the browser ([Demo](https://demo.file-viewer.app/))
 
 _Developer Tools and Plugins_
 
