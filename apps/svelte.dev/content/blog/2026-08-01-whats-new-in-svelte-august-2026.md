@@ -64,6 +64,7 @@ Want to dive deeper? Check out the [Svelte CLI](https://github.com/sveltejs/cli/
 - [clocks.dev](https://clocks.dev) is a community-built gallery where every clock is a Svelte component and anyone can contribute a new design
 - [Flatxel](https://flatxel.com) is an r/place-style collaborative pixel canvas
 - [Gabble](https://gabble.gg) is a daily word game PWA that mixes Wordle and Boggle mechanics
+- [Vivalence](https://github.com/vivalence/Vivalence) is an AI-harnessed, self-hostable app platform built in Svelte
 - [Can you terraform Mars?](https://www.nature.com/immersive/d41586-026-01978-8/index.html) is an interactive Nature featured article
 
 ### Learning Resources
@@ -92,11 +93,15 @@ _To Read_
 _Frameworks and Tooling_
 
 - [LayerChart 2.0](https://layerchart.com) shipped a rewrite with a CSS-framework-agnostic API, new components and chart types from Sean Lynch
-- [Mochi 0.8.0](https://mochi.fast) adds an `<Image>` component with resizing, email sending with Svelte components as templates, queues, rate limiting and a built-in captcha
+- [Mochi](https://mochi.fast), the experimental SSR framework for Svelte 5 and Bun, has added an `<Image>` component with resizing, email sending with Svelte components as templates, queues, rate limiting and a built-in captcha (0.8.x). It can also now route compilation through a rust compiler (`rsvelte`) instead of `svelte/compiler` (0.9.x)
 - [rsvelte](https://baseballyama.github.io/rsvelte/) is a Rust implementation of the Svelte toolchain from Yamagishi Kazutoshi
 - [Frizzante v2](https://razshare.github.io/frizzante-docs/) is a Go + Svelte full-stack framework whose latest release adds SSG snapshots
+- [Hoikka](https://www.hoikka.dev) is a full-stack SvelteKit ecommerce project that runs on SQLite and deploys to Node or Cloudflare (`pnpx create-hoikka-app` to try it)
 - [SVOCS](https://svocs.dev) is a markdown-first docs and blog generator built on SvelteKit
 - [Svelte DocSmith](https://docsmith.geodask.com) is another docs framework for SvelteKit where markdown files become routes and the sidebar builds itself from frontmatter
+- [SDuX](https://www.sdux-vault.com/docs) is a deterministic pipeline-based state management library that works with Svelte through `@sdux-vault/core`
+- [svelte-effect-runtime](https://barekey.dev/docs/ser/introduction) lets you `yield*` effectful code directly inside `<script>` and markup
+- [PlaySocket](https://therealpaulplay.github.io/PlaySocketJS/) is a multiplayer library that handles optimistic updates and CRDT-based synchronization
 
 _UI Components and Visual Effects_
 
@@ -112,11 +117,6 @@ _Developer Tools and Plugins_
 
 - [svelte-vitals](https://oekazuma.github.io/svelte-vitals/) is a static code-health checker for SvelteKit that scores SEO, performance, correctness, security and architecture from source, with inline PR annotations and SARIF upload
 - [PerfGraph](https://github.com/Be1zebub/PerfGraph) turns Lighthouse traces into a focused "root cause to impact to fix" report designed to be read by AI agents
-- [SDuX](https://www.sdux-vault.com/docs) is a deterministic pipeline-based state management library that works with Svelte through `@sdux-vault/core`
-- [Vivalence](https://github.com/vivalence/Vivalence) is an AI-harnessed, self-hostable app platform built in Svelte
-- [Hoikka](https://www.hoikka.dev) is a full-stack SvelteKit ecommerce project that runs on SQLite and deploys to Node or Cloudflare (`pnpx create-hoikka-app` to try it)
-- [svelte-effect-runtime](https://barekey.dev/docs/ser/introduction) lets you `yield*` effectful code directly inside `<script>` and markup
-- [PlaySocket](https://therealpaulplay.github.io/PlaySocketJS/) is a multiplayer library that handles optimistic updates and CRDT-based synchronization
 
 That's it for this month! Let us know if we missed anything on [Reddit](https://www.reddit.com/r/sveltejs/) or [Discord](https://discord.gg/svelte).
 
