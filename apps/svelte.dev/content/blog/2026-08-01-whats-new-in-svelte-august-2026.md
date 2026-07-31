@@ -5,11 +5,11 @@ author: Dani Sandoval
 authorURL: https://dreamindani.com
 ---
 
-The biggest news this month is the first `@next` releases of SvelteKit 3. Twelve preview versions shipped in July: previewing new `$app/manifest` and `$app/service-worker` modules, improved API availability and type checking in service workers, tracing out of the experimental namespace and a lot more. It's a prerelease, but it's worth trying out to see what's coming to SvelteKit!
+The biggest news this month is the first `@next` releases of SvelteKit 3. Thirteen preview versions shipped in July: previewing new `$app/manifest` and `$app/service-worker` modules, improved API availability and type checking in service workers, tracing out of the experimental namespace, shallow routing baked into `goto` and a lot more. It's a prerelease, but it's worth trying out to see what's coming to SvelteKit!
 
 Alongside the preview releases, the stable line kept moving with `submitted` on remote forms and a new home for `defineEnvVars`. The language tools also picked up zero-config `+error.svelte` props so error pages get their `page` and `error` types with no extra setup.
 
-Lots in the showcase too, so let's dive in!
+And, in case you missed it, [Svelte Summit Ljubljana 2026](https://www.reddit.com/r/sveltejs/comments/1v8bdel/svelte_summit_ljubljana_2026_announcement/) is happening November 19-20, with a workshop day followed by a conference day. Save the date!
 
 ## What's new in SvelteKit
 
@@ -19,20 +19,18 @@ Lots in the showcase too, so let's dive in!
 
 ## SvelteKit 3 preview
 
-The next major version has landed in `@next`. Here are the highlights from `3.0.0-next.5` through `3.0.0-next.12`:
+The next major version has landed in `@next`. Here are the highlights from `3.0.0-next.5` through `3.0.0-next.13` that you'll actually want to try out:
 
-- A new `$app/manifest` module exposes `immutable`, `assets`, `prerendered` and `routes` so you can introspect the build output at runtime (**3.0.0-next.12**, [#16372](https://github.com/sveltejs/kit/pull/16372))
-- A new `$app/service-worker` module replaces the old `$service-worker` and `$app/paths` is now importable inside service workers (**3.0.0-next.12**, [#16458](https://github.com/sveltejs/kit/pull/16458), [#16441](https://github.com/sveltejs/kit/pull/16441))
-- SvelteKit now detects new deployments on data, remote and form action responses, on tab focus and on visibility change, with a default `version.pollInterval` of one hour (**3.0.0-next.12**, [#16496](https://github.com/sveltejs/kit/pull/16496))
-- Cookies default to `secure: false` during development so local HTTP setups just work (**3.0.0-next.12**, [#16462](https://github.com/sveltejs/kit/pull/16462))
-- Function validators are now supported for environment variables, and better error logging makes production errors easier to trace (**3.0.0-next.11**, [#16402](https://github.com/sveltejs/kit/pull/16402), [#16374](https://github.com/sveltejs/kit/pull/16374))
-- Sourcemaps are now supported in production builds (**3.0.0-next.11**, [#16412](https://github.com/sveltejs/kit/pull/16412))
+- Shallow routing is now built into `goto` via a new `state` option (with `persistState: true` to keep state across reloads), replacing `pushState` and `replaceState` (**3.0.0-next.13**, [#16449](https://github.com/sveltejs/kit/pull/16449))
+- `goto`'s `noScroll` and `keepFocus` options (and their matching `data-sveltekit-*` attributes) collapse into a single `reset` option (**3.0.0-next.13**, [#16558](https://github.com/sveltejs/kit/pull/16558))
+- `error(status, {...})` is deprecated in favor of `error(status, message, {...})` so error messages are always required (**3.0.0-next.13**, [#16540](https://github.com/sveltejs/kit/pull/16540))
 - `refreshAll` replaces `invalidateAll`, which is now deprecated (**3.0.0-next.8**, [#16289](https://github.com/sveltejs/kit/pull/16289))
-- Route parameters and matchers can now include hyphens in their names (**3.0.0-next.8**, [#16284](https://github.com/sveltejs/kit/pull/16284))
-- `handle`'s `resolve` is now typed to always return a `Promise` and cross-origin form submissions without a `Content-Type` header are rejected (**3.0.0-next.9**, [#16352](https://github.com/sveltejs/kit/pull/16352), [#16347](https://github.com/sveltejs/kit/pull/16347))
+- A new `$app/manifest` module exposes `immutable`, `assets`, `prerendered` and `routes` so you can introspect the build output at runtime (**3.0.0-next.12**, [#16372](https://github.com/sveltejs/kit/pull/16372))
+- A new `$app/service-worker` module replaces the old `$service-worker`, and `$app/paths` is now importable inside service workers (**3.0.0-next.12**, [#16458](https://github.com/sveltejs/kit/pull/16458), [#16441](https://github.com/sveltejs/kit/pull/16441))
+- SvelteKit now detects new deployments on data, remote and form action responses, on tab focus and on visibility change, with a default `version.pollInterval` of one hour (**3.0.0-next.12**, [#16496](https://github.com/sveltejs/kit/pull/16496))
+- Sourcemaps are now supported in production builds (**3.0.0-next.11**, [#16412](https://github.com/sveltejs/kit/pull/16412))
 - Tracing has moved out of the experimental namespace and the `instrumentation` flag has been removed (**3.0.0-next.7**, [#16260](https://github.com/sveltejs/kit/pull/16260))
-- Form fields now include a `dirty()` helper and remote forms get a new `field.touched()` for better validation UX (**3.0.0-next.6**, [#16208](https://github.com/sveltejs/kit/pull/16208), [#14692](https://github.com/sveltejs/kit/pull/14692))
-- All remote form fields must now be created via `form.fields.foo.as(...)` so runtime validation stays in sync with the schema (**3.0.0-next.12**, [#16331](https://github.com/sveltejs/kit/pull/16331))
+- Form fields pick up a `dirty()` helper and remote forms get a new `field.touched()` for better validation UX (**3.0.0-next.6**, [#16208](https://github.com/sveltejs/kit/pull/16208), [#14692](https://github.com/sveltejs/kit/pull/14692))
 
 Full preview details (including expected breaking changes) are in the [SvelteKit 3 CHANGELOG](https://github.com/sveltejs/kit/blob/version-3/packages/kit/CHANGELOG.md).
 
@@ -49,6 +47,7 @@ For all the features and bugfixes across the stable line and adapters, check out
 - `svelte-language-server` drops its `lodash` dependency for a smaller install and faster startup (**svelte-language-server@0.18.3**, [#3038](https://github.com/sveltejs/language-tools/pull/3038))
 - The Svelte Inspector adds a context menu with the current component stack, making it easier to jump between parent and child components (**vite-plugin-svelte@7.2.0**, [#1370](https://github.com/sveltejs/vite-plugin-svelte/pull/1370))
 - The `@sveltejs/opencode` plugin now ships a TUI variant for terminal workflows (**opencode@0.1.10**, [#231](https://github.com/sveltejs/ai-tools/pull/231))
+- `@sveltejs/opencode` also gains an `autoupdate` option so the plugin can keep itself current (**opencode@0.1.12**, [#238](https://github.com/sveltejs/ai-tools/pull/238))
 
 Want to dive deeper? Check out the [Svelte CLI](https://github.com/sveltejs/cli/releases) and [language-tools](https://github.com/sveltejs/language-tools/releases) releases. For all the minor changes and bugfixes that came out in the Svelte compiler this month, you can read the full [Svelte CHANGELOG](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md).
 
@@ -62,7 +61,10 @@ Want to dive deeper? Check out the [Svelte CLI](https://github.com/sveltejs/cli/
 - [Doota](https://doota.dev) reimagines email as a chat interface, built entirely on Svelte and Cloudflare's edge stack ([GitHub](https://github.com/etherCorps/doota))
 - [Loot Raiders](https://www.reddit.com/r/sveltejs/comments/1uv3mhx/i_built_an_inventory_extraction_game_with_svelte_5/) is a browser-based inventory extraction game built with SvelteKit, GSAP and Howler
 - [Motioner](https://motioner.app) is a browser-based Figma-style design tool where every frame doubles as an animation timeline
+- [The Prototype](https://theprototype.app) is a collaborative 3D scene editor built on Threlte, with peer-to-peer sync over WebRTC and a full runes-based state system
 - [clocks.dev](https://clocks.dev) is a community-built gallery where every clock is a Svelte component and anyone can contribute a new design
+- [Flatxel](https://flatxel.com) is an r/place-style collaborative pixel canvas built with SvelteKit
+- [Gabble](https://gabble.gg) is a daily word game PWA that mixes Wordle and Boggle mechanics
 - [Can you terraform Mars?](https://www.nature.com/immersive/d41586-026-01978-8/index.html) is an interactive Nature featured article
 
 ### Learning Resources
@@ -70,6 +72,7 @@ Want to dive deeper? Check out the [Svelte CLI](https://github.com/sveltejs/cli/
 _Featuring Svelte Contributors and Ambassadors_
 
 - [atproto x npmx x svelte meetup](https://www.youtube.com/live/z3U3yUWrml4?si=BeV9eTgVyl0HghJv) happened in Berlin after Local-First Conf - a crossover satellite event with the AT Protocol, npmx, and Svelte communities!
+- [Agentic Engineering with Svelte](https://mainmatter.com/blog/2026/07/28/agentic-engineering-with-svelte/) by Paolo Ricciuti walks through how Mainmatter is building agent-driven workflows on top of Svelte and SvelteKit
 
 _This Week in Svelte_
 
@@ -92,6 +95,7 @@ _Frameworks and Tooling_
 - [LayerChart 2.0](https://layerchart.com) shipped a rewrite with a CSS-framework-agnostic API, new components and chart types from Sean Lynch
 - [Mochi 0.8.0](https://mochi.fast) adds an `<Image>` component with resizing, email sending with Svelte components as templates, queues, rate limiting and a built-in captcha
 - [rsvelte](https://github.com/baseballyama/rsvelte) is an in-progress Rust implementation of the full Svelte toolchain from baseballyama
+- [Frizzante v2](https://razshare.github.io/frizzante-docs/) is a Go + Svelte full-stack framework whose latest release adds SSG snapshots
 - [SVOCS](https://svocs.dev) is a markdown-first docs and blog generator built on SvelteKit
 - [Svelte DocSmith](https://docsmith.geodask.com) is another docs framework for SvelteKit where markdown files become routes and the sidebar builds itself from frontmatter
 
