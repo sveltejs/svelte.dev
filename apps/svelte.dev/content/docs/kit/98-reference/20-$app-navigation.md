@@ -86,26 +86,20 @@ function disableScrollHandling(): void;
 
 ## goto
 
-Allows you to navigate programmatically to a given route, with options such as keeping the current element focused.
-Returns a Promise that resolves when SvelteKit navigates (or fails to navigate, in which case the promise rejects) to the specified `url`.
+Allows you to navigate programmatically to a given route, with control over details such as whether scroll and focus are reset
+(as they would be with a regular navigation) or preserved.
 
-For external URLs, use `window.location = url` instead of calling `goto(url)`.
+Returns a Promise that resolves when SvelteKit navigates (or fails to navigate, in which case the promise rejects) or the state change has been applied.
+
+`goto` is intended for navigations to routes that belong to the app, and will reject if a route cannot be resolved.
+For external URLs, use `window.location = url` to perform a full-page navigation instead of calling `goto(url)`.
 
 <div class="ts-block">
 
 ```dts
 function goto(
 	url: string | URL,
-	opts?: {
-		replaceState?: boolean | undefined;
-		noScroll?: boolean | undefined;
-		keepFocus?: boolean | undefined;
-		invalidateAll?: boolean | undefined;
-		invalidate?:
-			| (string | URL | ((url: URL) => boolean))[]
-			| undefined;
-		state?: App.PageState | undefined;
-	}
+	opts?: import('@sveltejs/kit').GotoOptions
 ): Promise<void>;
 ```
 
@@ -134,7 +128,8 @@ invalidate((url) => url.pathname === '/path');
 
 ```dts
 function invalidate(
-	resource: string | URL | ((url: URL) => boolean)
+	resource: string | URL | ((url: URL) => boolean),
+	keepState?: boolean
 ): Promise<void>;
 ```
 
@@ -144,7 +139,15 @@ function invalidate(
 
 ## invalidateAll
 
+<blockquote class="tag deprecated note">
+
+Use [`refreshAll`](/docs/kit/$app-navigation#refreshAll) instead. Unlike `invalidateAll`, `refreshAll` does not reset `page.state`.
+
+</blockquote>
+
 Causes all `load` and `query` functions belonging to the currently active page to re-run. Returns a `Promise` that resolves when the page is subsequently updated.
+
+Note that this resets `page.state` to an empty object. If you want to preserve `page.state` (for example when using [shallow routing](/docs/kit/shallow-routing)), use `refreshAll` instead.
 
 <div class="ts-block">
 
@@ -214,15 +217,22 @@ Returns a Promise that resolves with the result of running the new route's `load
 
 ```dts
 function preloadData(href: string): Promise<
-	| {
-			type: 'loaded';
-			status: number;
-			data: Record<string, any>;
-	  }
-	| {
-			type: 'redirect';
-			location: string;
-	  }
+	(
+		| {
+				type: 'loaded';
+				data: Record<string, any>;
+		  }
+		| {
+				type: 'redirect';
+				location: string;
+		  }
+		| {
+				type: 'error';
+				error: App.Error;
+		  }
+	) & {
+		status: number;
+	}
 >;
 ```
 
@@ -232,7 +242,13 @@ function preloadData(href: string): Promise<
 
 ## pushState
 
-Programmatically create a new history entry with the given `page.state`. To use the current URL, you can pass `''` as the first argument. Used for [shallow routing](/docs/kit/shallow-routing).
+<blockquote class="tag deprecated note">
+
+Use `goto(url, { state, shallow: true })` instead.
+
+</blockquote>
+
+Programmatically create a new history entry with the given `page.state`. Used for [shallow routing](/docs/kit/shallow-routing).
 
 <div class="ts-block">
 
@@ -240,7 +256,7 @@ Programmatically create a new history entry with the given `page.state`. To use 
 function pushState(
 	url: string | URL,
 	state: App.PageState
-): void;
+): Promise<void>;
 ```
 
 </div>
@@ -249,17 +265,13 @@ function pushState(
 
 ## refreshAll
 
-Causes all currently active remote functions to refresh, and all `load` functions belonging to the currently active page to re-run (unless disabled via the option argument).
+Causes all currently active remote functions to refresh, and all `load` functions belonging to the currently active page to re-run.
 Returns a `Promise` that resolves when the page is subsequently updated.
 
 <div class="ts-block">
 
 ```dts
-function refreshAll({
-	includeLoadFunctions
-}?: {
-	includeLoadFunctions?: boolean;
-}): Promise<void>;
+function refreshAll(): Promise<void>;
 ```
 
 </div>
@@ -268,7 +280,13 @@ function refreshAll({
 
 ## replaceState
 
-Programmatically replace the current history entry with the given `page.state`. To use the current URL, you can pass `''` as the first argument. Used for [shallow routing](/docs/kit/shallow-routing).
+<blockquote class="tag deprecated note">
+
+Use `goto(url, { state, shallow: true, replace: true })` instead.
+
+</blockquote>
+
+Programmatically replace the current history entry with the given `page.state`. Used for [shallow routing](/docs/kit/shallow-routing).
 
 <div class="ts-block">
 
@@ -276,7 +294,7 @@ Programmatically replace the current history entry with the given `page.state`. 
 function replaceState(
 	url: string | URL,
 	state: App.PageState
-): void;
+): Promise<void>;
 ```
 
 </div>
