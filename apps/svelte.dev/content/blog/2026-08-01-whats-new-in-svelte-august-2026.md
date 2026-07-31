@@ -5,7 +5,7 @@ author: Dani Sandoval
 authorURL: https://dreamindani.com
 ---
 
-The biggest news this month is the first `@next` releases of SvelteKit 3. Eight preview builds shipped in July: previewing new `$app/manifest` and `$app/service-worker` modules, `refreshAll` in place of `invalidateAll`, tracing out of the experimental namespace and a lot more. It is prerelease, but it's worth trying out to see what's coming to SvelteKit!
+The biggest news this month is the first `@next` releases of SvelteKit 3. Twelve preview versions shipped in July: previewing new `$app/manifest` and `$app/service-worker` modules, improved API availability and type checking in service workers, tracing out of the experimental namespace and a lot more. It's a prerelease, but it's worth trying out to see what's coming to SvelteKit!
 
 Alongside the preview releases, the stable line kept moving with `submitted` on remote forms and a new home for `defineEnvVars`. The language tools also picked up zero-config `+error.svelte` props so error pages get their `page` and `error` types with no extra setup.
 
