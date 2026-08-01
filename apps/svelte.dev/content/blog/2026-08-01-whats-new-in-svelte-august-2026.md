@@ -83,7 +83,7 @@ _This Week in Svelte_
 _To Read_
 
 - [Migrated a dashboard application from React to Svelte](https://www.reddit.com/r/sveltejs/comments/1uqy6ub/migrated_a_dashboard_application_from_react_to/) - an account from an engineer who cut their bundle size roughly in half after moving from TanStack Start + React Query to SvelteKit and remote functions
-- [I built a Rust toolchain for Svelte](https://blog.baseballyama.com/posts/20260721-rsvelte) by baseballyama (one of the main Svelte maintainers) walks through `rsvelte`, a Rust reimplementation of the Svelte compiler, formatter, linter, type checker and LSP tested against 12,000+ real components
+- [I built a Rust toolchain for Svelte](https://blog.baseballyama.com/posts/20260721-rsvelte) by [baseballyama](https://github.com/baseballyama) (one of the main Svelte maintainers) walks through `rsvelte`, a Rust reimplementation of the Svelte compiler, formatter, linter, type checker and LSP tested against 12,000+ real components
 - [Three years ago I told you Svelte gave me everything](https://www.reddit.com/r/sveltejs/comments/1uu9sg6/three_years_ago_i_told_you_svelte_gave_me/) by Bishwas Bhandari is a personal retrospective on six years of building with Svelte
 - [Building a Dynamic Invoice Form in Svelte 5 with Formisch](https://formisch.dev/blog/dynamic-invoice-form-svelte/) uses Formisch, Valibot and `FieldArray` to build a typed dynamic invoice form
 - [Svelte Building Blocks](https://github.com/erayack/svelte-building-blocks) is a free, runnable, level-based course that starts with components and runes and works up through APIs, testing and production
