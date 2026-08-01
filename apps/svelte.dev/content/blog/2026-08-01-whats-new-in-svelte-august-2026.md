@@ -83,7 +83,7 @@ _This Week in Svelte_
 _To Read_
 
 - [Migrated a dashboard application from React to Svelte](https://www.reddit.com/r/sveltejs/comments/1uqy6ub/migrated_a_dashboard_application_from_react_to/) - an account from an engineer who cut their bundle size roughly in half after moving from TanStack Start + React Query to SvelteKit and remote functions
-- [I built a Rust toolchain for Svelte](https://blog.baseballyama.com/posts/20260721-rsvelte) by Yamagishi Kazutoshi (one of the main Svelte `language-tools` maintainers) walks through `rsvelte`, a Rust reimplementation of the Svelte compiler, formatter, linter, type checker and LSP tested against 12,000+ real components
+- [I built a Rust toolchain for Svelte](https://blog.baseballyama.com/posts/20260721-rsvelte) by [baseballyama](https://github.com/baseballyama) (one of the main Svelte maintainers) walks through `rsvelte`, a Rust reimplementation of the Svelte compiler, formatter, linter, type checker and LSP tested against 12,000+ real components
 - [Three years ago I told you Svelte gave me everything](https://www.reddit.com/r/sveltejs/comments/1uu9sg6/three_years_ago_i_told_you_svelte_gave_me/) by Bishwas Bhandari is a personal retrospective on six years of building with Svelte
 - [Building a Dynamic Invoice Form in Svelte 5 with Formisch](https://formisch.dev/blog/dynamic-invoice-form-svelte/) uses Formisch, Valibot and `FieldArray` to build a typed dynamic invoice form
 - [Svelte Building Blocks](https://github.com/erayack/svelte-building-blocks) is a free, runnable, level-based course that starts with components and runes and works up through APIs, testing and production
@@ -94,7 +94,7 @@ _Frameworks and Tooling_
 
 - [LayerChart 2.0](https://layerchart.com) shipped a rewrite with a CSS-framework-agnostic API, new components and chart types from Sean Lynch
 - [Mochi](https://mochi.fast), the experimental SSR framework for Svelte 5 and Bun, has added an `<Image>` component with resizing, email sending with Svelte components as templates, queues, rate limiting and a built-in captcha (0.8.x). It can also now route compilation through a rust compiler (`rsvelte`) instead of `svelte/compiler` (0.9.x)
-- [rsvelte](https://baseballyama.github.io/rsvelte/) is a Rust implementation of the Svelte toolchain from Yamagishi Kazutoshi
+- [rsvelte](https://baseballyama.github.io/rsvelte/) is a Rust implementation of the Svelte toolchain from [baseballyama](https://github.com/baseballyama)
 - [Frizzante v2](https://razshare.github.io/frizzante-docs/) is a Go + Svelte full-stack framework whose latest release adds SSG snapshots
 - [Hoikka](https://www.hoikka.dev) is a full-stack SvelteKit ecommerce project that runs on SQLite and deploys to Node or Cloudflare (`pnpx create-hoikka-app` to try it)
 - [SVOCS](https://svocs.dev) is a markdown-first docs and blog generator built on SvelteKit
