@@ -6,10 +6,10 @@
     "umaranis"
   ],
   "homepage": "https://github.com/umaranis/svelte-lexical#readme",
-  "version": "0.6.4",
-  "downloads": 2308,
+  "version": "0.6.5",
+  "downloads": 3122,
   "github_stars": 574,
-  "updated": "2026-02-09T10:57:46.762Z",
+  "updated": "2026-07-15T09:44:08.520Z",
   "svelte_range": "^5.0.0",
   "kit_range": "^2.20.3"
 }

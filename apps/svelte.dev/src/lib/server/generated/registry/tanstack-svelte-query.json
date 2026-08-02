@@ -8,10 +8,10 @@
     "kevinvandy"
   ],
   "homepage": "https://tanstack.com/query",
-  "version": "6.1.36",
-  "downloads": 110689,
+  "version": "6.1.38",
+  "downloads": 161198,
   "github_stars": 48501,
-  "updated": "2026-06-27T20:31:43.313Z",
+  "updated": "2026-07-21T13:04:08.433Z",
   "svelte_range": "^5.25.0",
   "typescript": true,
   "runes": false,
