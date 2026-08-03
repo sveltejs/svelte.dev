@@ -12,10 +12,10 @@
     "bapmrl",
     "relisui"
   ],
-  "version": "0.3.96",
-  "downloads": 4480,
+  "version": "0.3.97",
+  "downloads": 3001,
   "github_stars": 305,
-  "updated": "2026-05-14T15:51:01.422Z",
+  "updated": "2026-07-16T06:20:33.401Z",
   "svelte_range": "^3.54.0 || ^4.0.0-next.0 || ^5.0.0-next.1",
   "kit_range": "^1 || ^2",
   "typescript": true,
