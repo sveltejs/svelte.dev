@@ -7,31 +7,8 @@ title: @sveltejs/kit/hooks
 
 ```js
 // @noErrors
-import { defineEnvVars, sequence } from '@sveltejs/kit/hooks';
+import { sequence } from '@sveltejs/kit/hooks';
 ```
-
-## defineEnvVars
-
-<blockquote class="tag deprecated note">
-
-Import `defineEnvVars` from `@sveltejs/kit/env` instead
-
-</blockquote>
-
-Utility for defining [environment variables](/docs/kit/environment-variables),
-which are made available via `$app/env/public` and `$app/env/private`.
-
-<div class="ts-block">
-
-```dts
-function defineEnvVars<
-	T extends Record<string, EnvVarConfig<any>>
->(variables: T): T;
-```
-
-</div>
-
-
 
 ## sequence
 
@@ -102,6 +79,8 @@ first transform
 second post-processing
 first post-processing
 ```
+
+Calling `resolve` invokes the next handler in the sequence (or SvelteKit itself, if it is the last one). To pass data between handlers, use `event.locals`.
 
 <div class="ts-block">
 

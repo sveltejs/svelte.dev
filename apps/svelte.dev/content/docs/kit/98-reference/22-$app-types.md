@@ -14,14 +14,14 @@ This module contains generated types for the routes in your app.
 import type { RouteId, RouteParams, LayoutParams } from '$app/types';
 ```
 
-## Asset
+## AssetPath
 
-A union of all the filenames of assets contained in your `static` directory, plus a `string` wildcard for asset paths generated from `import` declarations.
+A union of all the filenames of assets contained in your `static` directory, relative to the `base` path.
 
 <div class="ts-block">
 
 ```dts
-type Asset = '/favicon.png' | '/robots.txt' | (string & {});
+type AssetPath = 'favicon.png' | 'robots.txt' | (string & {});
 ```
 
 </div>
@@ -38,21 +38,21 @@ type RouteId = '/' | '/my-route' | '/my-other-route/[param]';
 
 </div>
 
-## Pathname
+## Path
 
-A union of all valid pathnames in your app.
+A union of all valid paths in your app, relative to the `base` path.
 
 <div class="ts-block">
 
 ```dts
-type Pathname = '/' | '/my-route' | `/my-other-route/${string}` & {};
+type Path = '' | 'my-route' | `my-other-route/${string}` & {};
 ```
 
 </div>
 
 ## ResolvedPathname
 
-Similar to `Pathname`, but possibly prefixed with a [base path](configuration#paths). Used for `page.url.pathname`.
+Similar to `Path`, but prefixed with a [base path](configuration#paths). Used for `page.url.pathname`.
 
 <div class="ts-block">
 
@@ -83,10 +83,12 @@ type RouteParams<T extends RouteId> = { /* generated */ } | Record<string, never
 
 A utility for getting the parameters associated with a given layout, which is similar to `RouteParams` but also includes optional parameters for any child route.
 
+Unlike `RouteId`, this accepts any directory in `src/routes`, since a layout can live in a directory that has no `+page` or `+server` of its own.
+
 <div class="ts-block">
 
 ```dts
-type RouteParams<T extends RouteId> = { /* generated */ } | Record<string, never>;
+type LayoutParams<T extends '/' | '/my-route' | '/my-other-route'> = { /* generated */ };
 ```
 
 </div>
