@@ -28,7 +28,7 @@
 		"@testing-library/svelte": "^5.3.1",
 		"@testing-library/user-event": "^14.6.1",
 		"@types/d3-geo": "^3.1.0",
-		"@vercel/analytics": "^1.6.1",
+		"@vercel/analytics": "2.2.0-canary",
 		"@vercel/speed-insights": "2.1.0-canary",
 		"@webcontainer/api": "^1.1.5",
 		"adm-zip": "^0.6.0",
