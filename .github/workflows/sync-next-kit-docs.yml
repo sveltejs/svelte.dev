@@ -1,0 +1,41 @@
+name: Sync next SvelteKit docs
+run-name: Sync next SvelteKit docs
+
+on:
+  repository_dispatch:
+    types: [sync-next-kit-docs]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: sync-next-kit-docs
+  cancel-in-progress: false
+
+jobs:
+  Sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          ref: next
+      - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
+      - name: Sync
+        run: cd apps/svelte.dev && pnpm sync-docs -p 'kit#kit#version-3'
+
+      - name: Create or update pull request
+        uses: peter-evans/create-pull-request@22a9089034f40e5a961c8808d113e2c98fb63676 # v7
+        with:
+          commit-message: sync Kit next docs
+          title: Sync `kit` next docs
+          body: Automated sync from `sveltejs/kit@version-3`.
+          branch: sync-kit-next
+          base: next
