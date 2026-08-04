@@ -2,8 +2,6 @@ name: Sync next SvelteKit docs
 run-name: Sync next SvelteKit docs
 
 on:
-  repository_dispatch:
-    types: [sync-next-kit-docs]
   workflow_dispatch:
 
 permissions:
