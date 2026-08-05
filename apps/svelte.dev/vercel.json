@@ -44,7 +44,7 @@
 	],
 	"git": {
 		"deploymentEnabled": {
-			"next": "false"
+			"next": false
 		}
 	}
 }
