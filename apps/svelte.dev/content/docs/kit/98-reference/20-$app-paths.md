@@ -66,7 +66,7 @@ if (route?.id === '/blog/[slug]') {
 <div class="ts-block">
 
 ```dts
-function match(url: Path | URL | (string & {})): Promise<
+function match(url: URL | string): Promise<
 	| {
 			[K in RouteId]: {
 				id: K;
