@@ -719,6 +719,12 @@ rimraf: (dir: string) => void;
 
 <div class="ts-block-property-details">
 
+<div class="ts-block-property-bullets">
+
+- <span class="tag deprecated">deprecated</span> Use `fs.rmSync(dir, { force: true, recursive: true })` instead
+
+</div>
+
 Remove `dir` and all its contents.
 
 </div>
@@ -731,6 +737,12 @@ mkdirp: (dir: string) => void;
 ```
 
 <div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag deprecated">deprecated</span> Use `fs.mkdirSync(dir, { recursive: true })` instead
+
+</div>
 
 Create `dir` and any required parent directories.
 
