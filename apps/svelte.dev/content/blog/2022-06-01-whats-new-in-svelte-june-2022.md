@@ -25,7 +25,7 @@ Let's dive in!
 
 - Node 14 is no longer supported ([PR](https://github.com/sveltejs/kit/pull/4922))
 - Requests to `/favicon.ico` will no longer be suppressed and will instead be handled as a valid route ([PR](https://github.com/sveltejs/kit/pull/5046))
-- AMP support has been moved to a separate `@sveltejs/amp` package ([Docs](/docs/kit/seo#Manual-setup-AMP), [PR](https://github.com/sveltejs/kit/pull/4710))
+- AMP support has been moved to a separate `@sveltejs/amp` package ([npmx](https://npmx.dev/package/@sveltejs/amp), [PR](https://github.com/sveltejs/kit/pull/4710))
 - Generated types are now written to `_types` directories - update your imports accordingly ([PR](https://github.com/sveltejs/kit/pull/4705))
 - `%svelte.head%` and `%svelte.body%` are now `%sveltekit.head%` and `%sveltekit.body%` in `app.html` ([PR](https://github.com/sveltejs/kit/pull/5016/))
 - `LoadInput` is now `LoadEvent`
