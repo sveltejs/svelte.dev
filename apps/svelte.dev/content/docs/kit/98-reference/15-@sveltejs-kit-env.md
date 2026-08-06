@@ -19,7 +19,10 @@ which are made available via `$app/env/public` and `$app/env/private`.
 
 ```dts
 function defineEnvVars<
-	T extends Record<string, EnvVarConfig<any>>
+	T extends Record<
+		string,
+		import('@sveltejs/kit').EnvVarConfig<any>
+	>
 >(variables: T): T;
 ```
 
