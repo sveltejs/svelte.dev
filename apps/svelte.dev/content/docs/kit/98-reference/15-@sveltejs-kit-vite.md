@@ -13,8 +13,11 @@ import { sveltekit } from '@sveltejs/kit/vite';
 ## sveltekit
 
 Returns the SvelteKit Vite plugins.
-Since version 2.62.0 you can pass [configuration](configuration) directly, in which case `svelte.config.js` is ignored.
 Any options that don't belong to SvelteKit are passed through to `vite-plugin-svelte`.
+
+Since version 3.0.0 you must pass [configuration](configuration) directly.
+
+Since version 2.62.0 you can pass configuration directly, in which case `svelte.config.js` is ignored.
 
 <div class="ts-block">
 
