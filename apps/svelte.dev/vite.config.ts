@@ -79,22 +79,6 @@ const plugins: PluginOption[] = [
 	}) as PluginOption
 ];
 
-// Only enable sharp if we're not in a webcontainer env
-if (!process.versions.webcontainer) {
-	plugins.push(
-		(await import('vite-imagetools')).imagetools({
-			exclude: 'content/**',
-			defaultDirectives: (url) => {
-				if (url.searchParams.has('big-image')) {
-					return new URLSearchParams('w=640;1280;2560;3840&format=avif;webp;png&as=picture');
-				}
-
-				return new URLSearchParams();
-			}
-		}) as PluginOption
-	);
-}
-
 const config: UserConfig = {
 	plugins,
 	css: {
