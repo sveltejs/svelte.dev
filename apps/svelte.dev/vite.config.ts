@@ -92,6 +92,8 @@ const config: UserConfig = {
 	},
 	server: {
 		fs: { allow: ['../../packages', '../../node_modules', '../../../KIT/kit/packages/kit'] },
+		// sync-docs copies these source files to content/docs, which is the only version Vite should watch
+		watch: { ignored: ['**/repos/**'] },
 		// for SvelteKit tutorial
 		headers: {
 			'cross-origin-opener-policy': 'same-origin',

@@ -53,7 +53,9 @@ if (!fs.existsSync(original_file)) {
 hash_graph(hash, original_file);
 const digest = hash.digest().toString('base64').replace(/\//g, '-');
 
-const highlighter = await createHighlighterCore({
+// @ts-expect-error — this allows us to create a single Shiki instance
+// across dev server reloads, otherwise it complains
+const highlighter = (globalThis[Symbol.for('shiki highlighter')] ??= await createHighlighterCore({
 	themes: [],
 	langs: [
 		import('@shikijs/langs/javascript'),
@@ -72,7 +74,7 @@ const highlighter = await createHighlighterCore({
 		import('@shikijs/langs/http')
 	],
 	engine: createOnigurumaEngine(import('shiki/wasm'))
-});
+}));
 
 /**
  * Utility function to work with code snippet caching.
