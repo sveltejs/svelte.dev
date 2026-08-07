@@ -3372,7 +3372,7 @@ interface RequestEvent<
 <div class="ts-block-property">
 
 ```dts
-cookies: Cookies;
+readonly cookies: Cookies;
 ```
 
 <div class="ts-block-property-details">
@@ -3385,7 +3385,7 @@ Get or set cookies related to the current request
 <div class="ts-block-property">
 
 ```dts
-fetch: typeof fetch;
+readonly fetch: typeof fetch;
 ```
 
 <div class="ts-block-property-details">
@@ -3406,7 +3406,7 @@ You can learn more about making credentialed requests with cookies [here](/docs/
 <div class="ts-block-property">
 
 ```dts
-getClientAddress: () => string;
+readonly getClientAddress: () => string;
 ```
 
 <div class="ts-block-property-details">
@@ -3419,7 +3419,7 @@ The client's IP address, set by the adapter.
 <div class="ts-block-property">
 
 ```dts
-locals: App.Locals;
+readonly locals: App.Locals;
 ```
 
 <div class="ts-block-property-details">
@@ -3432,7 +3432,7 @@ Contains custom data that was added to the request within the [`server handle ho
 <div class="ts-block-property">
 
 ```dts
-params: Params;
+readonly params: Params;
 ```
 
 <div class="ts-block-property-details">
@@ -3450,7 +3450,7 @@ to determine whether or not a user is authorized to access certain data, as thes
 <div class="ts-block-property">
 
 ```dts
-platform: Readonly<App.Platform> | undefined;
+readonly platform: Readonly<App.Platform> | undefined;
 ```
 
 <div class="ts-block-property-details">
@@ -3463,7 +3463,7 @@ Additional data made available through the adapter.
 <div class="ts-block-property">
 
 ```dts
-request: Request;
+readonly request: Request;
 ```
 
 <div class="ts-block-property-details">
@@ -3476,7 +3476,7 @@ The original request object.
 <div class="ts-block-property">
 
 ```dts
-route: {/*…*/}
+readonly route: {/*…*/}
 ```
 
 <div class="ts-block-property-details">
@@ -3507,7 +3507,7 @@ to determine whether or not a user is authorized to access certain data, as thes
 <div class="ts-block-property">
 
 ```dts
-setHeaders: (headers: Record<string, string>) => void;
+readonly setHeaders: (headers: Record<string, string>) => void;
 ```
 
 <div class="ts-block-property-details">
@@ -3540,7 +3540,7 @@ You cannot add a `set-cookie` header with `setHeaders` — use the [`cookies`](/
 <div class="ts-block-property">
 
 ```dts
-url: URL;
+readonly url: URL;
 ```
 
 <div class="ts-block-property-details">
@@ -3558,7 +3558,7 @@ to determine whether or not a user is authorized to access certain data, as thes
 <div class="ts-block-property">
 
 ```dts
-isDataRequest: boolean;
+readonly isDataRequest: boolean;
 ```
 
 <div class="ts-block-property-details">
@@ -3572,7 +3572,7 @@ related to the data request in this case. Use this property instead if the disti
 <div class="ts-block-property">
 
 ```dts
-isSubRequest: boolean;
+readonly isSubRequest: boolean;
 ```
 
 <div class="ts-block-property-details">
@@ -3585,7 +3585,7 @@ isSubRequest: boolean;
 <div class="ts-block-property">
 
 ```dts
-tracing: {/*…*/}
+readonly tracing: {/*…*/}
 ```
 
 <div class="ts-block-property-details">
@@ -3641,7 +3641,7 @@ The span associated with the current `handle` hook, `load` function, or form act
 <div class="ts-block-property">
 
 ```dts
-isRemoteRequest: boolean;
+readonly isRemoteRequest: boolean;
 ```
 
 <div class="ts-block-property-details">
