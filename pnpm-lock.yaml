@@ -125,6 +125,9 @@ importers:
       '@supabase/supabase-js':
         specifier: ^2.97.0
         version: 2.97.0
+      '@sveltejs/adapter-auto':
+        specifier: ^8.0.0-next.2
+        version: 8.0.0-next.2(@sveltejs/kit@3.0.0-next.14(@sveltejs/vite-plugin-svelte@7.2.0(svelte@5.56.4(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(svelte@5.56.4(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))
       '@sveltejs/adapter-vercel':
         specifier: ^7.0.0-next.4
         version: 7.0.0-next.4(@sveltejs/kit@3.0.0-next.14(@sveltejs/vite-plugin-svelte@7.2.0(svelte@5.56.4(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(svelte@5.56.4(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(rollup@4.59.0)
@@ -1510,6 +1513,11 @@ packages:
 
   '@sveltejs/adapter-auto@8.0.0-next.1':
     resolution: {integrity: sha512-iqP8s3gwUTgEPJjQIQ+9C3lJDwx21nJFZvuuD8SeIbdJ8MlpW9FdumMpIddmzq/xejI/G6guCwBKt1Kff5kt2Q==}
+    peerDependencies:
+      '@sveltejs/kit': ^3.0.0-next.0
+
+  '@sveltejs/adapter-auto@8.0.0-next.2':
+    resolution: {integrity: sha512-LOdwHzsRZNhk/wSkcjLF1BBQI7wEq2cG2CsrfXhzPiu7UzHzuOCgo2khaCvARRjNGtAc89tsVAgfpHSO95clWw==}
     peerDependencies:
       '@sveltejs/kit': ^3.0.0-next.0
 
@@ -4069,6 +4077,10 @@ snapshots:
   '@sveltejs/adapter-auto@8.0.0-next.1(@sveltejs/kit@3.0.0-next.14(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.56.4(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(svelte@5.56.4(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))':
     dependencies:
       '@sveltejs/kit': 3.0.0-next.14(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.56.4(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(svelte@5.56.4(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))
+
+  '@sveltejs/adapter-auto@8.0.0-next.2(@sveltejs/kit@3.0.0-next.14(@sveltejs/vite-plugin-svelte@7.2.0(svelte@5.56.4(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(svelte@5.56.4(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))':
+    dependencies:
+      '@sveltejs/kit': 3.0.0-next.14(@sveltejs/vite-plugin-svelte@7.2.0(svelte@5.56.4(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(svelte@5.56.4(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))
 
   '@sveltejs/adapter-vercel@7.0.0-next.4(@sveltejs/kit@3.0.0-next.14(@sveltejs/vite-plugin-svelte@7.2.0(svelte@5.56.4(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(svelte@5.56.4(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(rollup@4.59.0)':
     dependencies:
