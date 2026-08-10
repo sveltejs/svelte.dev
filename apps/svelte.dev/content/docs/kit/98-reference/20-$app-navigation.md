@@ -19,7 +19,8 @@ import {
 	preloadData,
 	pushState,
 	refreshAll,
-	replaceState
+	replaceState,
+	snapshot
 } from '$app/navigation';
 ```
 
@@ -86,26 +87,20 @@ function disableScrollHandling(): void;
 
 ## goto
 
-Allows you to navigate programmatically to a given route, with options such as keeping the current element focused.
-Returns a Promise that resolves when SvelteKit navigates (or fails to navigate, in which case the promise rejects) to the specified `url`.
+Allows you to navigate programmatically to a given route, with control over details such as whether scroll and focus are reset
+(as they would be with a regular navigation) or preserved.
 
-For external URLs, use `window.location = url` instead of calling `goto(url)`.
+Returns a Promise that resolves when SvelteKit navigates (or fails to navigate, in which case the promise rejects) or the state change has been applied.
+
+`goto` is intended for navigations to routes that belong to the app, and will reject if a route cannot be resolved.
+For external URLs, use `window.location = url` to perform a full-page navigation instead of calling `goto(url)`.
 
 <div class="ts-block">
 
 ```dts
 function goto(
 	url: string | URL,
-	opts?: {
-		replaceState?: boolean | undefined;
-		noScroll?: boolean | undefined;
-		keepFocus?: boolean | undefined;
-		invalidateAll?: boolean | undefined;
-		invalidate?:
-			| (string | URL | ((url: URL) => boolean))[]
-			| undefined;
-		state?: App.PageState | undefined;
-	}
+	opts?: import('@sveltejs/kit').GotoOptions
 ): Promise<void>;
 ```
 
@@ -134,7 +129,8 @@ invalidate((url) => url.pathname === '/path');
 
 ```dts
 function invalidate(
-	resource: string | URL | ((url: URL) => boolean)
+	resource: string | URL | ((url: URL) => boolean),
+	keepState?: boolean
 ): Promise<void>;
 ```
 
@@ -144,7 +140,15 @@ function invalidate(
 
 ## invalidateAll
 
+<blockquote class="tag deprecated note">
+
+Use [`refreshAll`](/docs/kit/$app-navigation#refreshAll) instead. Unlike `invalidateAll`, `refreshAll` does not reset `page.state`.
+
+</blockquote>
+
 Causes all `load` and `query` functions belonging to the currently active page to re-run. Returns a `Promise` that resolves when the page is subsequently updated.
+
+Note that this resets `page.state` to an empty object. If you want to preserve `page.state` (for example when using [shallow routing](/docs/kit/shallow-routing)), use `refreshAll` instead.
 
 <div class="ts-block">
 
@@ -185,7 +189,19 @@ function onNavigate(
 Programmatically imports the code for routes that haven't yet been fetched.
 Typically, you might call this to speed up subsequent navigation.
 
-You can specify routes by any matching pathname such as `/about` (to match `src/routes/about/+page.svelte`) or `/blog/*` (to match `src/routes/blog/[slug]/+page.svelte`).
+Takes a route ID such as `/about` or `/blog/[slug]`. Unlike pathnames, route IDs
+are never prefixed with the app's [base path](/docs/kit/configuration#paths).
+If you have a pathname rather than a route ID, you can convert it with
+[`match`](/docs/kit/$app-paths#match) from `$app/paths`:
+
+```js
+// @errors: 7031
+import { match } from '$app/paths';
+import { preloadCode } from '$app/navigation';
+
+const matched = await match('/blog/hello-world');
+if (matched) await preloadCode(matched.id);
+```
 
 Unlike `preloadData`, this won't call `load` functions.
 Returns a Promise that resolves when the modules have been imported.
@@ -193,7 +209,7 @@ Returns a Promise that resolves when the modules have been imported.
 <div class="ts-block">
 
 ```dts
-function preloadCode(pathname: string): Promise<void>;
+function preloadCode(id: RouteId): Promise<void>;
 ```
 
 </div>
@@ -214,15 +230,22 @@ Returns a Promise that resolves with the result of running the new route's `load
 
 ```dts
 function preloadData(href: string): Promise<
-	| {
-			type: 'loaded';
-			status: number;
-			data: Record<string, any>;
-	  }
-	| {
-			type: 'redirect';
-			location: string;
-	  }
+	(
+		| {
+				type: 'loaded';
+				data: Record<string, any>;
+		  }
+		| {
+				type: 'redirect';
+				location: string;
+		  }
+		| {
+				type: 'error';
+				error: App.Error;
+		  }
+	) & {
+		status: number;
+	}
 >;
 ```
 
@@ -232,7 +255,13 @@ function preloadData(href: string): Promise<
 
 ## pushState
 
-Programmatically create a new history entry with the given `page.state`. To use the current URL, you can pass `''` as the first argument. Used for [shallow routing](/docs/kit/shallow-routing).
+<blockquote class="tag deprecated note">
+
+Use `goto(url, { state, shallow: true })` instead.
+
+</blockquote>
+
+Programmatically create a new history entry with the given `page.state`. Used for [shallow routing](/docs/kit/shallow-routing).
 
 <div class="ts-block">
 
@@ -240,7 +269,7 @@ Programmatically create a new history entry with the given `page.state`. To use 
 function pushState(
 	url: string | URL,
 	state: App.PageState
-): void;
+): Promise<void>;
 ```
 
 </div>
@@ -249,17 +278,13 @@ function pushState(
 
 ## refreshAll
 
-Causes all currently active remote functions to refresh, and all `load` functions belonging to the currently active page to re-run (unless disabled via the option argument).
+Causes all currently active remote functions to refresh, and all `load` functions belonging to the currently active page to re-run.
 Returns a `Promise` that resolves when the page is subsequently updated.
 
 <div class="ts-block">
 
 ```dts
-function refreshAll({
-	includeLoadFunctions
-}?: {
-	includeLoadFunctions?: boolean;
-}): Promise<void>;
+function refreshAll(): Promise<void>;
 ```
 
 </div>
@@ -268,7 +293,13 @@ function refreshAll({
 
 ## replaceState
 
-Programmatically replace the current history entry with the given `page.state`. To use the current URL, you can pass `''` as the first argument. Used for [shallow routing](/docs/kit/shallow-routing).
+<blockquote class="tag deprecated note">
+
+Use `goto(url, { state, shallow: true, replace: true })` instead.
+
+</blockquote>
+
+Programmatically replace the current history entry with the given `page.state`. Used for [shallow routing](/docs/kit/shallow-routing).
 
 <div class="ts-block">
 
@@ -276,7 +307,32 @@ Programmatically replace the current history entry with the given `page.state`. 
 function replaceState(
 	url: string | URL,
 	state: App.PageState
-): void;
+): Promise<void>;
+```
+
+</div>
+
+
+
+## snapshot
+
+A lifecycle function that captures state before navigating and restores it when traversing history.
+
+By default, the snapshot `id` is generated from the call site. Pass an explicit `id` to keep snapshots stable across deployments or distinguish multiple uses of a shared helper.
+
+The optional `reset` callback runs on navigations where there is no captured value to restore, such as when a new history entry is created. Captured values are serialized with the app's transport hook.
+
+`snapshot` must be called during a component initialization. It remains active as long as the component is mounted.
+
+<div class="ts-block">
+
+```dts
+function snapshot<T>(options: {
+	id?: string;
+	capture: () => T;
+	restore: (value: T) => void;
+	reset?: () => void;
+}): void;
 ```
 
 </div>
