@@ -1163,7 +1163,7 @@ async function syntax_highlight({
 									}
 								},
 								// by default, twoslash does not run on .js files, change that through this option
-								filter: () => true,
+								filter: () => true
 								// TODO: re-enable type hover cache when we find out how to invalidate
 								// it when the types have changed
 								// typesCache: createFileSystemTypesCache({
