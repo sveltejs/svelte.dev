@@ -460,6 +460,11 @@ When calling a form action via fetch, the response will be one of these shapes.
 }}
 ```
 
+Success and failure results carry the root-relative `pathname + search` of the action URL, with
+the `?/actionName` parameter removed. Redirect results carry the redirect target. Server-generated
+error results also carry the action location, while client-generated errors such as network
+failures do not. `update` uses this location to emulate native form navigation.
+
 <div class="ts-block">
 
 ```dts
@@ -469,10 +474,25 @@ type ActionResult<
 	Failure extends Record<string, unknown> | undefined =
 		Record<string, any>
 > =
-	| { type: 'success'; status: number; data?: Success }
-	| { type: 'failure'; status: number; data?: Failure }
+	| {
+			type: 'success';
+			status: number;
+			data?: Success;
+			location: string;
+	  }
+	| {
+			type: 'failure';
+			status: number;
+			data?: Failure;
+			location: string;
+	  }
 	| { type: 'redirect'; status: number; location: string }
-	| { type: 'error'; status?: number; error: App.Error };
+	| {
+			type: 'error';
+			status?: number;
+			error: App.Error;
+			location?: string;
+	  };
 ```
 
 </div>
@@ -4178,6 +4198,12 @@ The span associated with the current server `load` function.
 
 ## Snapshot
 
+<blockquote class="tag deprecated note">
+
+Use the [`snapshot`](/docs/kit/$app-navigation#snapshot) helper from `$app/navigation` instead.
+
+</blockquote>
+
 The type of `export const snapshot` exported from a page or layout component.
 
 <div class="ts-block">
@@ -4230,11 +4256,13 @@ type SubmitFunction<
 			result: ActionResult<Success, Failure>;
 			/**
 			 * Call this to get the default behavior of a form submission response.
-			 * @param options Set `reset: false` if you don't want the `<form>` values to be reset after a successful submission.
-			 * @param invalidateAll Set `invalidateAll: false` if you don't want the action to call `invalidateAll` after submission.
+			 * @param options Set `reset: false` if you don't want the `<form>` values to be reset after a successful submission. `refreshAll` defaults to `true` for successful results and `false` for failures. When the submission navigates, setting it to `false` still runs the destination's `load` functions but may reuse shared layout data. Set `navigate: false` to apply non-redirect results to the current page instead of navigating to `result.location`. Redirects are always followed.
 			 */
 			update: (options?: {
 				reset?: boolean;
+				refreshAll?: boolean;
+				navigate?: boolean;
+				/** @deprecated Use `refreshAll` instead. */
 				invalidateAll?: boolean;
 			}) => Promise<void>;
 	  }) => MaybePromise<void>)

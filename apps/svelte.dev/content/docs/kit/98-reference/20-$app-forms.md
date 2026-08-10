@@ -12,8 +12,9 @@ import { applyAction, deserialize, enhance } from '$app/forms';
 
 ## applyAction
 
-This action updates the `form` property of the current page with the given data and updates `page.status`.
-In case of an error, it redirects to the nearest error page.
+Updates the `form` property of the current page with the given data and updates `page.status`.
+In case of an error, it renders the nearest error page. In case of a redirect, it navigates to
+the redirect location.
 
 <div class="ts-block">
 
@@ -78,17 +79,18 @@ You can use the abort `controller` to cancel the submission in case another one 
 If a function is returned, that function is called with the response from the server.
 If nothing is returned, the fallback will be used.
 
-If this function or its return value isn't set, it
-- falls back to updating the `form` prop with the returned data if the action is on the same page as the form
-- updates `page.status`
-- resets the `<form>` element and invalidates all data in case of successful submission with no redirect response
+If this function or its return value isn't set, it emulates the browser-native behaviour, just without the full-page reload. It
+- resets the `<form>` element and refreshes all data in case of a successful submission with no redirect response
+- updates the `form` prop, `page.form` and `page.status` if the action is on the same page as the form
+- navigates to the page the submission lands on — populating that page's `form` prop and `page.status` — on success and failure if that isn't the current page, just as a native form submission would, but with the `?/actionName` param stripped from the destination URL
 - redirects in case of a redirect response
-- redirects to the nearest error page in case of an unexpected error
+- renders the nearest error page in case of an unexpected error — the one nearest the action's route, if the action is on a different page
 
 If you provide a custom function with a callback and want to use the default behavior, invoke `update` in your callback.
 It accepts an options object
 - `reset: false` if you don't want the `<form>` values to be reset after a successful submission
-- `invalidateAll: false` if you don't want the action to call `invalidateAll` after submission
+- `refreshAll` to control whether all data is refreshed after submission; it defaults to `true` for successes and `false` for failures
+- `navigate: false` to apply non-redirect results to the current page rather than navigating to `result.location`; redirects are always followed
 
 <div class="ts-block">
 
