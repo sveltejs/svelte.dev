@@ -15,12 +15,32 @@ import { defineEnvVars } from '@sveltejs/kit/env';
 Utility for defining [environment variables](/docs/kit/environment-variables),
 which are made available via `$app/env/public` and `$app/env/private`.
 
+```js
+// @errors: 7031
+import { defineEnvVars } from '@sveltejs/kit/env';
+import * as v from 'valibot';
+
+export const variables = defineEnvVars({
+	API_URL: {
+		schema: v.pipe(v.string(), v.url())
+	},
+	PORT: {
+		schema: (value) => {
+			if (value === undefined) return 3000;
+			const port = Number(value);
+			if (!Number.isInteger(port)) throw new Error('PORT must be an integer');
+			return port;
+		}
+	}
+});
+```
+
 <div class="ts-block">
 
 ```dts
 function defineEnvVars<
 	T extends Record<string, EnvVarConfig<any>>
->(variables: T): T;
+>(variables: T): DefinedEnvVars<T>;
 ```
 
 </div>
