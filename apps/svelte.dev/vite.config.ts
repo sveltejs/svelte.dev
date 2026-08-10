@@ -50,6 +50,10 @@ const plugins: PluginOption[] = [
 				: undefined,
 
 		prerender: {
+			handleHttpError({ referrer, referenceType, message }) {
+				// TODO: we need a better default in SvelteKit, otherwise the error message is too ambiguous
+				throw new Error(`${message} when ${referenceType} by ${referrer}`);
+			},
 			handleMissingId(warning) {
 				if (warning.id.startsWith('H4sIA')) {
 					// playground link — do nothing
