@@ -5,9 +5,6 @@ title: $app/state
 
 SvelteKit makes three read-only state objects available via the `$app/state` module — `page`, `navigating` and `updated`.
 
-> [!NOTE]
-> This module was added in 2.12. If you're using an earlier version of SvelteKit, use [`$app/stores`]($app-stores) instead.
-
 
 
 ```js
@@ -44,8 +41,8 @@ const navigating:
 A read-only reactive object with information about the current page, serving several use cases:
 - retrieving the combined `data` of all pages/layouts anywhere in your component tree (also see [loading data](/docs/kit/load))
 - retrieving the current value of the `form` prop anywhere in your component tree (also see [form actions](/docs/kit/form-actions))
-- retrieving the page state that was set through `goto`, `pushState` or `replaceState` (also see [goto](/docs/kit/$app-navigation#goto) and [shallow routing](/docs/kit/shallow-routing))
-- retrieving metadata such as the URL you're on, the current route and its parameters, and whether or not there was an error
+- retrieving the page state that was set through `goto` (also see [goto](/docs/kit/$app-navigation#goto) and [shallow routing](/docs/kit/shallow-routing))
+- retrieving metadata such as the URL you're on, the current route and its parameters, the target of a shallow navigation, and whether or not there was an error
 
 ```svelte
 <!--- file: +layout.svelte --->
@@ -87,7 +84,7 @@ const page: import('@sveltejs/kit').Page;
 
 ## updated
 
-A read-only reactive value that's initially `false`. If [`version.pollInterval`](/docs/kit/configuration#version) is a non-zero value, SvelteKit will poll for new versions of the app and update `current` to `true` when it detects one. `updated.check()` will force an immediate check, regardless of polling.
+A read-only reactive value that's initially `false`. SvelteKit checks for new versions on data, remote, and form action responses (via the `x-sveltekit-version` header), when the tab regains focus or becomes visible, and on a poll interval (see [`version.pollInterval`](/docs/kit/configuration#version)). `updated.current` is set to `true` when a new version is detected. `updated.check()` will force an immediate check, regardless of polling.
 
 <div class="ts-block">
 
