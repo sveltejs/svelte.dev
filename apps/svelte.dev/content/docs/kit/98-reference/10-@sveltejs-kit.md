@@ -627,31 +627,23 @@ during dev, build and prerendering.
 <div class="ts-block-property">
 
 ```dts
-vite?: {/*…*/}
+vite?: {
+	plugins?: {
+		/**
+		 * Vite plugins placed before any of SvelteKit's own plugins.
+		 * @since 3.0.0
+		 */
+		pre?: Plugin[];
+		/**
+		 * Vite plugins placed after any of SvelteKit's own plugins.
+		 * @since 3.0.0
+		 */
+		post?: Plugin[];
+	};
+};
 ```
 
-<div class="ts-block-property-details">
-
-<div class="ts-block-property-children"><div class="ts-block-property">
-
-```dts
-plugins?: Plugin[];
-```
-
-<div class="ts-block-property-details">
-
-<div class="ts-block-property-bullets">
-
-- <span class="tag since">available since</span> v3.0.0
-
-</div>
-
-Plugins provided by the adapter are placed before any of SvelteKit's own plugins.
-
-</div>
-</div></div>
-
-</div>
+<div class="ts-block-property-details"></div>
 </div></div>
 
 ## AfterNavigate
