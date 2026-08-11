@@ -295,7 +295,7 @@ This function runs once, when the server is created or the app starts in the bro
 ```js
 // @errors: 2307
 /// file: src/hooks.server.js
-import * as db from '#lib/server/database';
+import * as db from '#lib/server/database.js';
 
 /** @type {import('@sveltejs/kit').ServerInit} */
 export async function init() {
@@ -368,7 +368,7 @@ This is a collection of _transporters_, which allow you to pass custom types —
 ```js
 // @errors: 2307
 /// file: src/hooks.js
-import { Vector } from '#lib/math';
+import { Vector } from '#lib/math.js';
 
 /** @type {import('@sveltejs/kit').Transport} */
 export const transport = {
