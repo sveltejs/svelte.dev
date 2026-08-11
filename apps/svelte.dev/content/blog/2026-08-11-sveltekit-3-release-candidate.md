@@ -25,7 +25,7 @@ npx sv create my-new-app
 
 ## What's changed?
 
-For the full list of changes, consult the [migration guide](/docs/kit/migrating-to-sveltekit-3). Most are fairly minor, but a few are worth calling out:
+For the full list of changes, consult the [migration guide](https://next.svelte.dev/docs/kit/migrating-to-sveltekit-3) over on [next.svelte.dev](https://next.svelte.dev) which is where the SvelteKit 3 documentation will live until the stable release. Most changes are fairly minor, but a few are worth calling out:
 
 ### Configuration now lives in `vite.config.ts`
 
