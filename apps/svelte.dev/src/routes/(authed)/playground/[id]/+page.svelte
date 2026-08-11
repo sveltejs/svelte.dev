@@ -2,7 +2,7 @@
 	// @ts-expect-error no types
 	import * as doNotZip from 'do-not-zip';
 	import { browser } from '$app/env';
-	import { afterNavigate, goto, replaceState } from '$app/navigation';
+	import { afterNavigate, goto } from '$app/navigation';
 	import type { Gist } from '#lib/db/types.d.ts';
 	import { Repl } from '@sveltejs/repl';
 	import { theme } from '@sveltejs/site-kit/state';
@@ -30,7 +30,9 @@
 	// don't allow links to escape the sandbox restrictions
 	const can_escape = browser && !page.url.hash;
 
-	afterNavigate(() => {
+	afterNavigate(({ shallow }) => {
+		if (shallow) return;
+
 		name = data.gist.name;
 		set_files();
 	});
@@ -152,7 +154,8 @@
 		}
 
 		clearTimeout(setting_hash);
-		replaceState(url, {});
+		goto(url, { shallow: true, replace: true, state: {} });
+
 		setting_hash = setTimeout(() => {
 			setting_hash = null;
 		}, 500);
@@ -251,8 +254,6 @@
 		display: flex;
 		flex-direction: column;
 	}
-
-	/* temp fix for #2499 and #2550 while waiting for a fix for https://github.com/sveltejs/svelte-repl/issues/8 */
 
 	.repl-outer :global(.tab-content),
 	.repl-outer :global(.tab-content.visible) {

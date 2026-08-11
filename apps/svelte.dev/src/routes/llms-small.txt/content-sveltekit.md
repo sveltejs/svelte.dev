@@ -48,7 +48,7 @@ export default {
 ## Project structure
 
 - **`src/` directory:**
-  - `lib/` for shared code (`$lib`), `lib/server/` for server‑only modules (`$lib/server`), `params/` for matchers, `routes/` for your pages/components, plus `app.html`, `error.html`, `hooks.client.js`, `hooks.server.js`, and `service-worker.js`.
+  - `lib/` for shared code (`#lib`), `lib/server/` for server‑only modules (`#lib/server`), `params/` for matchers, `routes/` for your pages/components, plus `app.html`, `error.html`, `hooks.client.js`, `hooks.server.js`, and `service-worker.js`.
   - Do **NOT** import server‑only code into client files
 - **Top‑level assets & configs:**
   - `static/` for public assets; `tests/` (if using Playwright); config files: `package.json` (with `@sveltejs/kit`, `svelte`, `vite` as devDeps), `svelte.config.js`, `tsconfig.json` (or `jsconfig.json`, extending `.svelte-kit/tsconfig.json`), and `vite.config.js`.
@@ -160,7 +160,7 @@ export const GET: RequestHandler = ({ url }) => {
 ### Other files
 
 - Any non‑`+` files in route folders are ignored by the router, use this to your advantage to colocate utilities or components.
-- For cross‑route imports, place modules under `src/lib` and import via `$lib`.
+- For cross‑route imports, place modules under `src/lib` and import via `#lib`.
 
 ## Loading data
 
@@ -1115,7 +1115,7 @@ The following are HTML attributes you can put on any HTML element.
   console.log(PUBLIC_WS_ENDPOINT);
   ```
 
-### `$lib` alias
+### `#lib` alias
 
 Alias for `src/lib` folder, e.g.
 

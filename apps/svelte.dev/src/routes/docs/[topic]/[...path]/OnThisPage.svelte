@@ -7,7 +7,9 @@
 	let headings: NodeListOf<HTMLHeadingElement>;
 	let current = $state('');
 
-	afterNavigate(() => {
+	afterNavigate(({ shallow }) => {
+		if (shallow) return;
+
 		current = location.hash.slice(1);
 		headings = content.querySelectorAll('h2, h3');
 		update(); // Ensure active link is set correctly on navigation
@@ -95,8 +97,6 @@
 			li ul {
 				margin: 0 0 0 1.6rem;
 			}
-
-			/* Only show the title link if it's in the sidebar */
 			& > ul > li:first-child {
 				display: none;
 			}
@@ -108,10 +108,7 @@
 
 		@media (max-width: 1199px) {
 			margin: 4rem 0;
-
-			/* TODO remove :global once https://github.com/sveltejs/svelte/issues/13779 is fixed */
 			:global(&:not(:has(li:nth-child(2)))) {
-				/* hide widget if there are no subheadings */
 				display: none;
 			}
 
@@ -184,8 +181,6 @@
 				&::after {
 					rotate: 90deg;
 				}
-
-				/* TODO remove :global once https://github.com/sveltejs/svelte/issues/13779 is fixed */
 				:global(& + nav) {
 					display: block;
 				}
@@ -237,7 +232,7 @@
 				display: block;
 				overflow-y: auto;
 				scrollbar-width: none;
-				margin-left: -1rem; /* negative margin avoids focus rings being cut off */
+				margin-left: -1rem;
 				padding: 0 var(--sk-page-padding-side) var(--sk-page-padding-top) 1rem;
 
 				li {

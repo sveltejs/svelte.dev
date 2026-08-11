@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { browser } from '$app/env';
-	import { afterNavigate, replaceState } from '$app/navigation';
+	import { afterNavigate } from '$app/navigation';
 	import { theme } from '@sveltejs/site-kit/state';
 	import { Repl } from '@sveltejs/repl';
 	import { mapbox_setup } from '../../../../../config.js';
@@ -47,7 +47,9 @@
 		}
 	}
 
-	afterNavigate(() => {
+	afterNavigate(({ shallow }) => {
+		if (shallow) return;
+
 		set_files();
 	});
 

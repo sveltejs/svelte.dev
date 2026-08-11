@@ -26,7 +26,9 @@
 
 	const collapsed = writable({} as Record<string, boolean>);
 
-	afterNavigate(() => {
+	afterNavigate(({ shallow }) => {
+		if (shallow) return;
+
 		collapsed.set({});
 	});
 
@@ -150,6 +152,7 @@
 		<div class="modal-contents">
 			<h2>This action is not allowed</h2>
 			<p>{modal_text}</p>
+
 			<button class="raised primary" onclick={() => (modal_text = '')}>OK</button>
 		</div>
 	</Modal>

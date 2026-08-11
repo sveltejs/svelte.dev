@@ -1,13 +1,11 @@
 <script>
-	import { env } from '$env/dynamic/public';
+	import { PUBLIC_THEME_BACKGROUND, PUBLIC_THEME_FOREGROUND } from '$app/env/public';
 </script>
 
 <main
-	style:background={env.PUBLIC_THEME_BACKGROUND}
-	style:color={env.PUBLIC_THEME_FOREGROUND}
->
-	{env.PUBLIC_THEME_FOREGROUND} on {env.PUBLIC_THEME_BACKGROUND}
-</main>
+	style:background={PUBLIC_THEME_BACKGROUND}
+	style:color={PUBLIC_THEME_FOREGROUND}
+>{PUBLIC_THEME_FOREGROUND} on {PUBLIC_THEME_BACKGROUND}</main>
 
 <style>
 	main {
