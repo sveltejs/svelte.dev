@@ -21,7 +21,7 @@ Values are `null` when no navigation is occurring, or during server rendering.
 
 ```dts
 const navigating:
-	| import('@sveltejs/kit').Navigation
+	| Navigation
 	| {
 			from: null;
 			to: null;
@@ -75,7 +75,7 @@ On the server, values can only be read during rendering (in other words _not_ in
 <div class="ts-block">
 
 ```dts
-const page: import('@sveltejs/kit').Page;
+const page: Page;
 ```
 
 </div>
@@ -98,5 +98,183 @@ const updated: {
 </div>
 
 
+
+## Page
+
+The shape of the [`page`](/docs/kit/$app-state#page) reactive object.
+
+<div class="ts-block">
+
+```dts
+interface Page<
+	Params extends AppLayoutParams<'/'> =
+		AppLayoutParams<'/'>,
+	RouteId extends AppRouteId | null = AppRouteId | null
+> {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+url: ReadonlyURL & { readonly pathname: ResolvedPathname | (string & {}) };
+```
+
+<div class="ts-block-property-details">
+
+The URL of the current page.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+params: Params;
+```
+
+<div class="ts-block-property-details">
+
+The parameters of the current page - e.g. for a route like `/blog/[slug]`, a `{ slug: string }` object.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+route: {/*…*/}
+```
+
+<div class="ts-block-property-details">
+
+Info about the current route.
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+id: RouteId;
+```
+
+<div class="ts-block-property-details">
+
+The ID of the current route - e.g. for `src/routes/blog/[slug]`, it would be `/blog/[slug]`. It is `null` when no route is matched.
+
+</div>
+</div></div>
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+status: number;
+```
+
+<div class="ts-block-property-details">
+
+HTTP status code of the current page.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+error: App.Error | null;
+```
+
+<div class="ts-block-property-details">
+
+The error object of the current page, if any. Filled from the `handleError` hooks.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+data: App.PageData & Record<string, any>;
+```
+
+<div class="ts-block-property-details">
+
+The merged result of all data from all `load` functions on the current page. You can type a common denominator through `App.PageData`.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+state: App.PageState;
+```
+
+<div class="ts-block-property-details">
+
+The page state, which can be manipulated using [`goto`](/docs/kit/$app-navigation#goto) from `$app/navigation`.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+shallow: {
+	/** Parameters of the target route, or `null` if the URL does not resolve to a route. */
+	params: AppLayoutParams<'/'> | null;
+	/** Info about the target route, or `null` if the URL does not resolve to a route. */
+	route: { id: AppRouteId } | null;
+	/** The normalized URL passed to `goto(..., { shallow: true })`. */
+	url: ReadonlyURL;
+} | null;
+```
+
+<div class="ts-block-property-details">
+
+Information about the target of the current shallow navigation, or `null` if no shallow navigation has occurred.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+form: any;
+```
+
+<div class="ts-block-property-details">
+
+Filled only after a form submission. See [form actions](/docs/kit/form-actions) for more info.
+
+</div>
+</div></div>
+
+## ReadonlyURL
+
+<div class="ts-block">
+
+```dts
+type ReadonlyURL = Readonly<
+	Omit<URL, 'searchParams'> & {
+		searchParams: ReadonlyURLSearchParams;
+	}
+>;
+```
+
+</div>
+
+## ReadonlyURLSearchParams
+
+<div class="ts-block">
+
+```dts
+type ReadonlyURLSearchParams = Omit<
+	URLSearchParams,
+	'set' | 'append' | 'delete' | 'sort'
+>;
+```
+
+</div>
 
 
