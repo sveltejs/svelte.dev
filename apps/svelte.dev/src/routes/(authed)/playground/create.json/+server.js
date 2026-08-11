@@ -1,6 +1,6 @@
 import * as gist from '#lib/db/gist.js';
 import * as session from '#lib/db/session.js';
-import { error, json } from '@sveltejs/kit';
+import { error } from '@sveltejs/kit';
 
 export async function POST({ request }) {
 	const user = await session.from_cookie(request.headers.get('cookie'));
@@ -12,7 +12,7 @@ export async function POST({ request }) {
 	// normalize id
 	result.id = result.id.replace(/-/g, '');
 
-	return json(result, {
+	return Response.json(result, {
 		status: 201
 	});
 }

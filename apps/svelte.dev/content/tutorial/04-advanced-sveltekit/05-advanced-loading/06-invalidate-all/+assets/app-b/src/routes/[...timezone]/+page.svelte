@@ -1,12 +1,12 @@
 <script>
 	import { onMount } from 'svelte';
-	import { invalidateAll } from '$app/navigation';
+	import { refreshAll } from '$app/navigation';
 
 	let { data } = $props();
 
 	onMount(() => {
 		const interval = setInterval(() => {
-			invalidateAll();
+			refreshAll();
 		}, 1000);
 
 		return () => {

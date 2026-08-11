@@ -14,7 +14,7 @@
 
 		const new_docs = docs.get(hash);
 		if (new_docs) {
-			goto(new_docs[1], { replaceState: true });
+			goto(new_docs[1], { replace: true });
 		}
 	});
 

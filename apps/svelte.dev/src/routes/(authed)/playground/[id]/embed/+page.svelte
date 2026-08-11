@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { browser } from '$app/env';
-	import { afterNavigate } from '$app/navigation';
+	import { afterNavigate, goto } from '$app/navigation';
 	import { theme } from '@sveltejs/site-kit/state';
 	import { Repl } from '@sveltejs/repl';
 	import { mapbox_setup } from '../../../../../config.js';
@@ -80,7 +80,7 @@
 				const url = new URL(location.href);
 				url.searchParams.set('version', v);
 
-				replaceState(url, {});
+				goto(url, { shallow: true, replace: true, state: {} });
 			}}
 		/>
 	{/if}

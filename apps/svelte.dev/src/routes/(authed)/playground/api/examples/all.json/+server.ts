@@ -1,6 +1,5 @@
 import { read } from '$app/server';
 import { examples } from '#lib/server/content.ts';
-import { json } from '@sveltejs/kit';
 
 export type Examples = Array<{
 	title: string;
@@ -42,7 +41,7 @@ async function munge(files: Record<string, string>) {
 // Examples are prerendered to avoid making FS requests at runtime,
 // things needing the examples data will need to go through this endpoint
 export async function GET() {
-	return json(
+	return Response.json(
 		(await Promise.all(
 			examples.map(async (section) => ({
 				title: section.metadata.title,

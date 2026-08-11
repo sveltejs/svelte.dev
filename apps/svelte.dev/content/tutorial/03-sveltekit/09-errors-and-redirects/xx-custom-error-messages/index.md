@@ -29,26 +29,28 @@ For this, SvelteKit provides you with `page.error` and `page.status`, which cont
 
 That's better, but `page.error.message` always contains "Internal Error" - how so? This is because SvelteKit plays it safe and prevents you from accidentally showing sensitive information as part of the error message.
 
-To customize it, implement the `handleError` hook in `hooks.server.js` and `hooks.client.js` which run when an unexpected error is thrown during data loads on the server or client respectively.
+To customize it, implement the `handleError` hook in `hooks.server.js` and `hooks.client.js`. These hooks run for every error during loading or rendering, and the `kind` property lets us identify unexpected errors thrown by our code:
 
 ```js
 // hooks.server.js
-export function handleError(+++{ error }+++) {
-    ---return { message: 'Internal Error' }; // the default implementation of this hook---
-    +++return { message: error instanceof Error ? error.message : 'Internal Error' };+++
+export function handleError(+++{ kind, error }+++) {
+    +++if (kind === 'unknown') {
+        return { message: error instanceof Error ? error.message : 'Internal Error' };
+    }+++
 }
 ```
 
 ```js
 // hooks.client.js
-export function handleError(+++{ error }+++) {
-    ---return { message: 'Internal Error' }; // the default implementation of this hook---
-    +++return { message: error instanceof Error ? error.message : 'Internal Error' };+++
+export function handleError(+++{ kind, error }+++) {
+    +++if (kind === 'unknown') {
+        return { message: error instanceof Error ? error.message : 'Internal Error' };
+    }+++
 }
 ```
 
-You could also call your error reporting service in these hooks.
+Returning nothing for other error kinds preserves SvelteKit's safe default. You could also call your error reporting service for unexpected errors in these hooks.
 
-Note that you can return more than an error message if you like. Whatever object shape you return will be available in `page.error`, the only requirement is a `message` property. You can read more about this (and how to make it type-safe!) in the [error docs](/docs/kit/errors).
+Note that you can return more than an error message if you like. Whatever object shape you return will be available in `page.error`, and you can return `status` or `message` to override their defaults. You can read more about this (and how to make it type-safe!) in the [error docs](/docs/kit/errors).
 
 > [!NOTE] When handling errors, be careful to not assume it's an `Error` object, anything could be thrown. Also make sure not to expose sensitive data by forwarding too much information

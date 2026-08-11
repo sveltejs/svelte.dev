@@ -52,7 +52,7 @@
 		for (const heading of content.querySelectorAll('[id]')) {
 			if (heading.id.toLowerCase().replaceAll(':', '-') === id) {
 				goto(`#${heading.id}`, {
-					replaceState: true
+					replace: true
 				});
 
 				break;

@@ -52,14 +52,14 @@
 		],
 		['$app-server-read', ['`$app/server#read`', '/docs/kit/$app-server#read']],
 		['$lib-$lib-server', ['`#lib`', '/docs/kit/$lib']],
-		['$service-worker-base', ['`$service-worker#base`', '/docs/kit/$service-worker#base']],
-		['$service-worker-build', ['`$service-worker#build`', '/docs/kit/$service-worker#build']],
-		['$service-worker-files', ['`$service-worker#files`', '/docs/kit/$service-worker#files']],
+		['$service-worker-base', ['`$app/paths#resolve`', '/docs/kit/$app-paths#resolve']],
+		['$service-worker-build', ['`$app/manifest#immutable`', '/docs/kit/$app-manifest#immutable']],
+		['$service-worker-files', ['`$app/manifest#assets`', '/docs/kit/$app-manifest#assets']],
 		[
 			'$service-worker-prerendered',
-			['`$service-worker#prerendered`', '/docs/kit/$service-worker#prerendered']
+			['`$app/manifest#prerendered`', '/docs/kit/$app-manifest#prerendered']
 		],
-		['$service-worker-version', ['`$service-worker#version`', '/docs/kit/$service-worker#version']],
+		['$service-worker-version', ['`$app/env#version`', '/docs/kit/$app-env#version']],
 		['sveltejs-kit-version', ['`@sveltejs/kit#VERSION`', '/docs/kit/@sveltejs-kit#VERSION']],
 		['sveltejs-kit-error', ['`@sveltejs/kit#error`', '/docs/kit/@sveltejs-kit#error']],
 		['sveltejs-kit-fail', ['`@sveltejs/kit#fail`', '/docs/kit/@sveltejs-kit#fail']],
