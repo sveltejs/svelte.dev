@@ -1,6 +1,6 @@
 minimumReleaseAge: 2880
 minimumReleaseAgeExclude:
-  - '@sveltejs/*'
+  - "@sveltejs/*"
   - svelte
   - sv
   - esrap
@@ -19,16 +19,16 @@ allowBuilds:
   svelte-preprocess: true
 
 packages:
-  - 'apps/*'
-  - 'packages/*'
+  - "apps/*"
+  - "packages/*"
 
 catalog:
-  '@sveltejs/kit': ^3.0.0-next.19
-  '@types/node': ^22.19.20
+  "@sveltejs/kit": ^3.0.0-next.20
+  "@types/node": ^22.19.20
   vite: ^8.0.16
   vitest: ^4.1.8
 
 overrides:
   # This is a workaround to avoid the "exotic dependency is not allowed in subdependencies"
   # error that pnpm throws when `blockExoticSubdeps` is enabled
-  'sv>@sveltejs/sv-utils': '-'
+  "sv>@sveltejs/sv-utils": "-"

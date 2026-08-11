@@ -1,5 +1,5 @@
 import { VIRTUAL } from '../../constants';
-import type { File } from '#lib/Workspace.svelte';
+import type { File } from '#lib/Workspace.svelte.ts';
 import type { Plugin } from '@rollup/browser';
 
 /**
