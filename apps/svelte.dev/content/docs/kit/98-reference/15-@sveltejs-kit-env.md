@@ -47,4 +47,105 @@ function defineEnvVars<
 
 
 
+## DefinedEnvVars
+
+The return type of [`defineEnvVars`](/docs/kit/@sveltejs-kit-env#defineEnvVars).
+
+<div class="ts-block">
+
+```dts
+type DefinedEnvVars<
+	T extends Record<string, EnvVarConfig<any>>
+> = {
+	readonly [K in keyof T]: EnvVarEntry<T[K]>;
+};
+```
+
+</div>
+
+## EnvVarConfig
+
+[Environment variables](/docs/kit/environment-variables) can be configured by exporting
+a `variables` object from `src/env.ts`, using [`defineEnvVars`](/docs/kit/@sveltejs-kit-env#defineEnvVars).
+
+<div class="ts-block">
+
+```dts
+interface EnvVarConfig<T> {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+public?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `false`
+
+</div>
+
+Whether the environment variable can be accessed by client-side code.
+- if `true`, it can be imported from `$app/env/public`
+- if `false`, it can be imported from `$app/env/private`, which is a [server-only module](/docs/kit/server-only-modules)
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+static?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `false`
+
+</div>
+
+Whether the value is determined at build time or when the app runs.
+- if `true`, the build time value is inlined into the bundle. This enables optimisations like dead-code elimination
+- if `false`, the value is read from the environment when the app starts
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+schema?: StandardSchemaV1<string | undefined, T> | ((value: string | undefined) => T | undefined);
+```
+
+<div class="ts-block-property-details">
+
+A [Standard Schema](https://standardschema.dev/) validator that is applied to the value when the app starts.
+Alternatively, a function that returns the (possibly transformed) value, or throws an error explaining
+the problem. Returning `undefined` is valid, so a function can describe an optional variable.
+The validator can output any value — not necessarily a string — but public, non-static values must be
+serializable by [devalue](https://github.com/sveltejs/devalue) so that they can be sent to the browser.
+
+If omitted, the value must be set, but may be an empty string.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+description?: string;
+```
+
+<div class="ts-block-property-details">
+
+A description of the variable that will be used for inline documentation on hover.
+
+</div>
+</div></div>
+
 
