@@ -7,8 +7,8 @@ import { html as toReactNode } from 'satori-html';
 import Card from './Card.svelte';
 import DMSerifDisplay from '#lib/fonts/DMSerifDisplay-Regular.ttf?url';
 import FiraSans from '#lib/fonts/FiraSans-Regular.ttf?url';
-import { docs } from '#lib/server/content';
-import { decode_html } from '#lib/utils/escape';
+import { docs } from '#lib/server/content.ts';
+import { decode_html } from '#lib/utils/escape.js';
 import type { ServerlessConfig } from '@sveltejs/adapter-vercel';
 
 export const config: ServerlessConfig = {

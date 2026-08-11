@@ -3,7 +3,7 @@
 	import * as doNotZip from 'do-not-zip';
 	import { browser } from '$app/env';
 	import { afterNavigate, goto, replaceState } from '$app/navigation';
-	import type { Gist } from '#lib/db/types';
+	import type { Gist } from '#lib/db/types.d.ts';
 	import { Repl } from '@sveltejs/repl';
 	import { theme } from '@sveltejs/site-kit/state';
 	import { mapbox_setup } from '../../../../config.js';
