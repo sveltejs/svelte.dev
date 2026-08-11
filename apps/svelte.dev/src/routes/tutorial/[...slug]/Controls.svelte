@@ -2,7 +2,7 @@
 	import { page } from '$app/state';
 	import SecondaryNav from '#lib/components/SecondaryNav.svelte';
 	import ModalDropdown from '#lib/components/ModalDropdown.svelte';
-	import type { Exercise, PartStub } from '#lib/tutorial';
+	import type { Exercise, PartStub } from '#lib/tutorial/index.d.ts';
 	import { Checkbox, Icon, Toolbox } from '@sveltejs/site-kit/components';
 	import type { Workspace } from '@sveltejs/repl/workspace';
 

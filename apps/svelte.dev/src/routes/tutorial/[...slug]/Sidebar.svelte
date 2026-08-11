@@ -6,7 +6,7 @@
 	import RelatedLinks from '#lib/components/RelatedLinks.svelte';
 	import { session_storage } from '#lib/storage.js';
 
-	/** @type {import('#lib/tutorial').Exercise} */
+	/** @type {import('#lib/tutorial/index.d.ts').Exercise} */
 	export let exercise;
 
 	/** @type {HTMLElement} */

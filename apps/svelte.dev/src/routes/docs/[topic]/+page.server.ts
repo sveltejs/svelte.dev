@@ -1,4 +1,4 @@
-import { docs } from '#lib/server/content';
+import { docs } from '#lib/server/content.ts';
 import { error, redirect } from '@sveltejs/kit';
 
 export async function load({ params }) {

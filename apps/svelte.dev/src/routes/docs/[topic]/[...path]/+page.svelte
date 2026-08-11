@@ -7,9 +7,9 @@
 	import Breadcrumbs from './Breadcrumbs.svelte';
 	import PageControls from '#lib/components/PageControls.svelte';
 	import { goto } from '$app/navigation';
-	import { escape_html } from '#lib/utils/escape';
+	import { escape_html } from '#lib/utils/escape.js';
 	import { page } from '$app/state';
-	import { get_topic_title } from '#lib/topics';
+	import { get_topic_title } from '#lib/topics.ts';
 	import RelatedLinks from '#lib/components/RelatedLinks.svelte';
 
 	let { data } = $props();
