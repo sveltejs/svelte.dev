@@ -5,8 +5,8 @@ import {
 	get_documentation_title,
 	remove_llm_ignore_blocks,
 	remove_playground_links
-} from '#lib/server/llms';
-import { topics } from '#lib/topics';
+} from '#lib/server/llms.ts';
+import { topics } from '#lib/topics.ts';
 
 export const prerender = true;
 
