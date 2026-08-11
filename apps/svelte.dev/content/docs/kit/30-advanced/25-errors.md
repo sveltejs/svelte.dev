@@ -18,14 +18,14 @@ An _app_ error is one created with the [`error`](@sveltejs-kit#error) helper imp
 ```js
 /// file: src/routes/blog/[slug]/+page.server.js
 // @filename: ambient.d.ts
-declare module '#lib/server/database' {
+declare module '#lib/server/database.js' {
 	export function getPost(slug: string): Promise<{ title: string, content: string } | undefined>
 }
 
 // @filename: index.js
 // ---cut---
 import { error } from '@sveltejs/kit';
-import * as db from '#lib/server/database';
+import * as db from '#lib/server/database.js';
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load({ params }) {
@@ -95,7 +95,7 @@ Anything you return overrides the defaults, so you can — for example — use t
 // Assuming you have this ...
 class NotFound extends Error {}
 
-/** @type {import('@sveltejs/kit').HandleServerError} */
+/** @type {import('@sveltejs/kit/hooks').HandleServerError} */
 export function handleError({ kind, error, event }) {
 	if (kind === 'unknown') {
 		// ... you can do this
