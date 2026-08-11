@@ -21,12 +21,10 @@ export function GET() {
 
 Clicking the button now works.
 
-Request handlers must return a [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response/Response) object. Since it's common to return JSON from an API route, SvelteKit provides a convenience function for generating these responses:
+Request handlers must return a [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response/Response) object. Since it's common to return JSON from an API route, the `Response` object provides a convenience method for generating these responses:
 
 ```js
 /// file: src/routes/roll/+server.js
-+++import { json } from '@sveltejs/kit';+++
-
 export function GET() {
 	const number = Math.floor(Math.random() * 6) + 1;
 
@@ -35,6 +33,6 @@ export function GET() {
 			'Content-Type': 'application/json'
 		}
 	});---
-+++	return json(number);+++
+++	return Response.json(number);+++
 }
 ```

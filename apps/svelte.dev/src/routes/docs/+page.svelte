@@ -53,7 +53,7 @@
 	onMount(() => {
 		const redirect = get_url_to_redirect_to();
 		if (redirect) {
-			goto(redirect, { replaceState: true });
+			goto(redirect, { replace: true });
 		}
 	});
 </script>

@@ -1,7 +1,5 @@
-import { json } from '@sveltejs/kit';
-
 export async function GET() {
-	return json(
+	return Response.json(
 		[
 			{
 				title: 'accusamus beatae ad facilis cum similique qui sunt',

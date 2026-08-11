@@ -1,10 +1,9 @@
 import { docs } from '#lib/server/content.ts';
-import { json } from '@sveltejs/kit';
 
 export const prerender = true;
 
 export function GET() {
-	return json(
+	return Response.json(
 		Object.fromEntries(
 			Object.entries(docs.pages).map(([key, page]) => [
 				key,

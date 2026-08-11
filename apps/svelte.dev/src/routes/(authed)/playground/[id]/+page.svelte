@@ -236,7 +236,7 @@
 					url.searchParams.set('version', v);
 					url.searchParams.delete('show');
 
-					replaceState(url, {});
+					goto(url, { shallow: true, replace: true, state: {} });
 				}}
 			/>
 		</div>

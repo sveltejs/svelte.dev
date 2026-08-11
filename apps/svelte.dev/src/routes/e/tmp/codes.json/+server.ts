@@ -1,5 +1,4 @@
 import { index } from '#lib/server/content.ts';
-import { json } from '@sveltejs/kit';
 
 // Temporary workaround for the problem described in [code]/+page.server.ts
 // In a nested folder because of https://github.com/sveltejs/kit/issues/12778
@@ -39,5 +38,5 @@ for (const page of reference) {
 export const prerender = true;
 
 export function GET() {
-	return json(codes);
+	return Response.json(codes);
 }

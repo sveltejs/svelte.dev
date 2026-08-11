@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Icon } from '@sveltejs/site-kit/components';
 	import { ago } from '#lib/time.js';
-	import { goto, invalidateAll } from '$app/navigation';
+	import { goto, refreshAll } from '$app/navigation';
 	import { get_app_context } from '../app-context.js';
 
 	let { data } = $props();
@@ -36,7 +36,7 @@
 
 		if (res.ok) {
 			selected = [];
-			await invalidateAll();
+			await refreshAll();
 
 			// this is a temporary fix because invalidation only works once
 			// TODO raise an issue

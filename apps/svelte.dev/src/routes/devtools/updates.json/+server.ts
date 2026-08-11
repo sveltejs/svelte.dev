@@ -1,4 +1,4 @@
-import { error, json } from '@sveltejs/kit';
+import { error } from '@sveltejs/kit';
 import type { ServerlessConfig } from '@sveltejs/adapter-vercel';
 
 export const config: ServerlessConfig = {
@@ -22,7 +22,7 @@ export async function GET({ fetch }) {
 	// v2.2.0 is the first version that has the Firefox extension
 	const tags = gh.reverse().slice(gh.findIndex((t) => t.name === 'v2.2.0'));
 	const base = 'https://github.com/sveltejs/svelte-devtools/releases/download';
-	return json({
+	return Response.json({
 		addons: {
 			'firefox-devtools@svelte.dev': {
 				updates: tags.map(({ name: tag }) => {

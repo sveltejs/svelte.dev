@@ -2,14 +2,16 @@
 title: handleError
 ---
 
-The `handleError` hook lets you intercept unexpected errors and trigger some behaviour, like pinging a Slack channel or sending data to an error logging service.
+The `handleError` hook lets you intercept errors and trigger some behaviour, like pinging a Slack channel or sending data to an error logging service. The `kind` property distinguishes expected application errors, framework errors, validation errors and unexpected errors.
 
-As you'll recall from an [earlier exercise](error-basics), an error is _unexpected_ if it wasn't created with the `error` helper from `@sveltejs/kit`. It generally means something in your app needs fixing. The default behaviour is to log the error:
+As you'll recall from an [earlier exercise](error-basics), an error is _unexpected_ if it wasn't created with the `error` helper from `@sveltejs/kit`. It generally means something in your app needs fixing. We can log only unexpected errors like this:
 
 ```js
 /// file: src/hooks.server.js
-export function handleError({ event, error }) {
-	console.error(error.stack);
+export function handleError({ kind, error }) {
+	if (kind === 'unknown') {
+		console.error(error);
+	}
 }
 ```
 
@@ -20,7 +22,8 @@ Notice that we're _not_ showing the error message to the user. That's because er
 <!-- prettier-ignore-start -->
 ```js
 {
-	message: 'Internal Error' // or 'Not Found' for a 404
+	status: 500,
+	message: 'Internal Error'
 }
 ```
 <!-- prettier-ignore-end -->
@@ -29,8 +32,10 @@ In some situations you may want to customise this object. To do so, you can retu
 
 ```js
 /// file: src/hooks.server.js
-export function handleError({ event, error }) {
-	console.error(error.stack);
+export function handleError({ kind, error }) {
+	if (kind !== 'unknown') return;
+
+	console.error(error);
 
 	+++return {
 		message: 'everything is fine',

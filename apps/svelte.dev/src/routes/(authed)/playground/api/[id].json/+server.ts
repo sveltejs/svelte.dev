@@ -2,7 +2,7 @@ import { dev } from '$app/env';
 import { client } from '#lib/db/client.js';
 import * as gist from '#lib/db/gist.js';
 import { examples } from '#lib/server/content.ts';
-import { error, json } from '@sveltejs/kit';
+import { error } from '@sveltejs/kit';
 import type { Examples } from '../examples/all.json/+server.js';
 
 export const prerender = 'auto';
@@ -16,7 +16,7 @@ export async function GET({ fetch, params }) {
 		.find((example) => example.slug.split('/').pop() === params.id);
 
 	if (example) {
-		return json({
+		return Response.json({
 			id: params.id,
 			name: example.title,
 			owner: null,
@@ -51,7 +51,7 @@ export async function GET({ fetch, params }) {
 		error(404, 'not found');
 	}
 
-	return json({
+	return Response.json({
 		id: params.id,
 		name: app.name,
 		// @ts-ignore

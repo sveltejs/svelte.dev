@@ -1,6 +1,5 @@
 import type { Tokens } from 'marked';
 import { index, docs as _docs, examples } from '#lib/server/content.ts';
-import { json } from '@sveltejs/kit';
 import { transform, slugify, clean } from '@sveltejs/site-kit/markdown';
 import type { Block } from '@sveltejs/site-kit/search';
 import { get_slug } from '../tutorial/[...slug]/content.server';
@@ -8,7 +7,7 @@ import { get_slug } from '../tutorial/[...slug]/content.server';
 export const prerender = true;
 
 export async function GET() {
-	return json({
+	return Response.json({
 		blocks: await content()
 	});
 }

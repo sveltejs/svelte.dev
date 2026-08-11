@@ -31,11 +31,7 @@ export const render_content = (
 			injected.push('// @errors: 2304');
 		}
 
-		if (
-			source.includes('$app/') ||
-			source.includes('$service-worker') ||
-			source.includes('@sveltejs/kit/')
-		) {
+		if (source.includes('$app/') || source.includes('@sveltejs/kit/')) {
 			injected.push(`// @filename: ambient-kit.d.ts`, `/// <reference types="@sveltejs/kit" />`);
 		}
 

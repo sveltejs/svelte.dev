@@ -1,5 +1,7 @@
-export function handleError({ event, error }) {
-	console.error(error.stack);
+export function handleError({ kind, error }) {
+	if (kind !== 'unknown') return;
+
+	console.error(error);
 
 	return {
 		message: 'everything is fine',
