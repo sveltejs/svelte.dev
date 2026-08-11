@@ -45,7 +45,9 @@
 		};
 	});
 
-	afterNavigate(() => {
+	afterNavigate(({ shallow }) => {
+		if (shallow) return;
+
 		clearTimeout(timeout);
 	});
 
@@ -87,7 +89,7 @@
 		// removing the iframe from the document allows us to
 		// change the src without adding a history entry, which
 		// would make back/forward traversal very annoying
-		const parentNode = /** @type {HTMLElement} */ (iframe.parentNode);
+		const parentNode = /** @type {HTMLElement} */ iframe.parentNode;
 		parentNode?.removeChild(iframe);
 
 		const url = new URL(src);

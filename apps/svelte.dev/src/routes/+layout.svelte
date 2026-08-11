@@ -18,7 +18,8 @@
 	// a full page navigation to ensure webcontainers get the correct origin restriction headers while
 	// ensuring those headers don't interfere with the rest of the page. These headers would have bad
 	// consequences on how we have to handle integration of images etc from other domains for example.
-	beforeNavigate(({ from, to, cancel }) => {
+	beforeNavigate(({ from, to, cancel, shallow }) => {
+		if (shallow) return;
 		if (!from || !to) return;
 
 		if (

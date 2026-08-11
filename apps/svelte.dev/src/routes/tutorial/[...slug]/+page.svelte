@@ -210,12 +210,16 @@
 
 	let scroll_was_restored = false;
 
-	beforeNavigate(() => {
+	beforeNavigate(({ shallow }) => {
+		if (shallow) return;
+
 		scroll_was_restored = false;
 		previous_files = workspace.files;
 	});
 
-	afterNavigate(async () => {
+	afterNavigate(async ({ shallow }) => {
+		if (shallow) return;
+
 		if (!scroll_was_restored) {
 			sidebar.scrollTop = 0;
 		}
@@ -241,12 +245,17 @@
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:site" content="@sveltejs" />
 	<meta name="twitter:creator" content="@sveltejs" />
+
 	<meta name="twitter:image" content="https://svelte.dev/images/twitter-thumbnail.jpg" />
+
 	<meta property="twitter:domain" content="https://svelte.dev" />
+
 	<meta property="twitter:url" content="https://svelte.dev/tutorial" />
 
 	<meta property="og:title" content="{data.exercise.title} • Svelte Tutorial" />
+
 	<meta property="og:url" content="https://svelte.dev/tutorial" />
+
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="https://svelte.dev/images/twitter-thumbnail.jpg" />
 </svelte:head>
@@ -307,12 +316,12 @@
 							{#snippet a()}
 								<section class="navigator">
 									{#if mobile}
-										<button class="file" onclick={() => (show_filetree = !show_filetree)}>
-											{workspace.current.name.replace(
+										<button class="file" onclick={() => (show_filetree = !show_filetree)}
+											>{workspace.current.name.replace(
 												data.exercise.scope.prefix,
 												data.exercise.scope.name + '/'
-											) ?? 'Files'}
-										</button>
+											) ?? 'Files'}</button
+										>
 									{:else}
 										<Filetree exercise={data.exercise} {workspace} {constraints} />
 									{/if}
@@ -373,6 +382,7 @@
 
 				history.pushState({}, '', url); // TODO use SvelteKit pushState
 			}}
+			// TODO use SvelteKit pushState
 			checked={show_editor}
 		/>
 	</div>
@@ -383,7 +393,6 @@
 		display: flex;
 		flex-direction: column;
 		height: calc(100dvh - var(--sk-nav-height) - var(--sk-banner-height));
-		/** necessary for innerWidth to be correct, so we can determine `mobile` */
 		width: 100vw;
 		overflow: hidden;
 	}
@@ -394,8 +403,6 @@
 		height: 0;
 		flex: 1;
 		transition: transform 0.2s;
-		/* we transform the default state, rather than the editor state, because otherwise
-		   the positioning of tooltips is wrong (doesn't take into account transforms) */
 		transform: translate(50%, 0);
 		border-top: 1px solid var(--sk-border);
 	}
@@ -443,8 +450,6 @@
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
-
-		/* put ellipsis at start */
 		direction: rtl;
 		text-align: left;
 		cursor: pointer;
@@ -458,7 +463,6 @@
 		overflow-y: auto;
 	}
 
-	/* on mobile, override the <SplitPane> controls */
 	@media (max-width: 799px) {
 		:global([data-pane='main']) {
 			--min: 0px !important;

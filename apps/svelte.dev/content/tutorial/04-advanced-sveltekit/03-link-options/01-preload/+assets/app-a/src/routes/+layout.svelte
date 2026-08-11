@@ -7,7 +7,9 @@
 	let start = $state();
 	let duration = $state();
 
-	beforeNavigate(({ from, to }) => {
+	beforeNavigate(({ from, to, shallow }) => {
+		if (shallow) return;
+
 		if (from && to?.url) {
 			start = Date.now();
 			duration = null;
@@ -15,7 +17,9 @@
 		}
 	});
 
-	afterNavigate(() => {
+	afterNavigate(({ shallow }) => {
+		if (shallow) return;
+
 		if (previous) {
 			duration = Date.now() - start;
 		}

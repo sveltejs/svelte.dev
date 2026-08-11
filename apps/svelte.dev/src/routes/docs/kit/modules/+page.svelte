@@ -51,7 +51,7 @@
 			['`$app/navigation#replaceState`', '/docs/kit/$app-navigation#replaceState']
 		],
 		['$app-server-read', ['`$app/server#read`', '/docs/kit/$app-server#read']],
-		['$lib-$lib-server', ['`$lib`', '/docs/kit/$lib']],
+		['$lib-$lib-server', ['`#lib`', '/docs/kit/$lib']],
 		['$service-worker-base', ['`$service-worker#base`', '/docs/kit/$service-worker#base']],
 		['$service-worker-build', ['`$service-worker#build`', '/docs/kit/$service-worker#build']],
 		['$service-worker-files', ['`$service-worker#files`', '/docs/kit/$service-worker#files']],

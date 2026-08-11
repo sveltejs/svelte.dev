@@ -9,7 +9,9 @@
 
 	let open = $state(false);
 
-	afterNavigate(() => {
+	afterNavigate(({ shallow }) => {
+		if (shallow) return;
+
 		open = false;
 	});
 </script>
@@ -59,6 +61,8 @@
 		current.scrollIntoView();
 		current.focus();
 	}}
+	// close all details elements...
+	// except parents of the current one
 	onkeydown={(e) => {
 		if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
 			const children = focusable_children(e.currentTarget);

@@ -1,8 +1,5 @@
 <script>
-	import {
-		PUBLIC_THEME_BACKGROUND,
-		PUBLIC_THEME_FOREGROUND
-	} from '$env/static/public';
+	import { PUBLIC_THEME_BACKGROUND, PUBLIC_THEME_FOREGROUND } from '$app/env/public';
 </script>
 
 <main
