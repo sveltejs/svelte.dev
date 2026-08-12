@@ -848,7 +848,7 @@ When each instance should render different values, pass them as the second argum
 <h1>Todos</h1>
 
 {#each await getTodos() as todo}
-	{@const modify = modifyTodo.for(todo.id)}
+	{const modify = modifyTodo.for(todo.id)}
 	<form {...modify}>
 		<input {...modify.fields.description.as('text', todo.description)} />
 		<button disabled={!!modify.pending}>save changes</button>
@@ -1267,7 +1267,7 @@ export const getStuff = query('unchecked', async ({ id }: { id: string }) => {
 
 ## Using `getRequestEvent`
 
-Inside `query`, `form` and `command` you can use [`getRequestEvent`]($app-server#getRequestEvent) to get the current [`RequestEvent`](@sveltejs-kit#RequestEvent) object. This makes it easy to build abstractions for interacting with cookies, for example:
+Inside `query`, `form` and `command` you can use [`getRequestEvent`]($app-server#getRequestEvent) to get the current [`RequestEvent`]($app-server#RequestEvent) object. This makes it easy to build abstractions for interacting with cookies, for example:
 
 ```ts
 /// file: user.remote.js
