@@ -8,7 +8,8 @@ import * as marked from 'marked';
 import { createHighlighterCore } from 'shiki/core';
 import { createOnigurumaEngine } from 'shiki/engine/oniguruma';
 import { createCssVariablesTheme } from 'shiki';
-import { transformerTwoslash, rendererRich } from '@shikijs/twoslash';
+import { createTransformerFactory, rendererRich } from '@shikijs/twoslash/core';
+import { createTwoslasher } from 'twoslash';
 // import { createFileSystemTypesCache } from '@shikijs/vitepress-twoslash/cache-fs';
 import { compress_and_encode_text } from 'gzip';
 import {
@@ -327,11 +328,11 @@ function injectReferenceLinks(
 export async function render_content_markdown(
 	filename: string,
 	body: string,
-	options?: { check?: boolean; references?: Record<string, string> },
+	options?: { check?: boolean; references?: Record<string, string>; twoslashRoot?: string },
 	twoslashBanner?: TwoslashBanner
 ) {
 	const headings: string[] = [];
-	const { check = true, references } = options ?? {};
+	const { check = true, references, twoslashRoot } = options ?? {};
 
 	interface CodeBlockFile {
 		selected: boolean;
@@ -504,7 +505,8 @@ export async function render_content_markdown(
 						prelude,
 						source,
 						check,
-						references
+						references,
+						twoslashRoot
 					});
 
 					cached.push(
@@ -524,7 +526,8 @@ export async function render_content_markdown(
 							prelude,
 							source: converted,
 							check,
-							references
+							references,
+							twoslashRoot
 						});
 
 						cached.push(highlighted.replace('<pre', '<pre data-ts'));
@@ -1114,7 +1117,8 @@ async function syntax_highlight({
 	filename,
 	language,
 	check,
-	references
+	references,
+	twoslashRoot
 }: {
 	prelude: string;
 	source: string;
@@ -1122,6 +1126,7 @@ async function syntax_highlight({
 	language: string;
 	check: boolean;
 	references?: Record<string, string>;
+	twoslashRoot?: string;
 }) {
 	let html = '';
 
@@ -1151,7 +1156,10 @@ async function syntax_highlight({
 				theme,
 				transformers: check
 					? [
-							transformerTwoslash({
+							createTransformerFactory(
+								createTwoslasher(twoslashRoot ? { vfsRoot: twoslashRoot } : undefined),
+								rendererRich()
+							)({
 								renderer: rendererRich(),
 								twoslashOptions: {
 									compilerOptions: {
