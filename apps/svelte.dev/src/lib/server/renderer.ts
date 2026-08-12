@@ -3,7 +3,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const docs_types_root = path.dirname(
-	fileURLToPath(import.meta.resolve('@sveltejs/docs-types/package.json'))
+	fileURLToPath(import.meta.resolve('docs-types/package.json'))
 );
 
 export const render_content = (

@@ -120,7 +120,7 @@ importers:
       '@sveltejs/adapter-vercel':
         specifier: ^7.0.0-next.4
         version: 7.0.0-next.4(@sveltejs/kit@3.0.0-next.21(@sveltejs/vite-plugin-svelte@7.2.0(svelte@5.56.4(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(svelte@5.56.4(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(rollup@4.59.0)
-      '@sveltejs/docs-types':
+      'docs-types':
         specifier: workspace:*
         version: link:../../packages/docs-types
       '@sveltejs/enhanced-img':

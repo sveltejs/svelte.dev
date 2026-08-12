@@ -82,15 +82,15 @@ jobs:
 
       - name: Install Svelte upstream
         if: ${{ inputs.upstream == 'svelte' }}
-        run: pnpm add https://pkg.svelte.dev/svelte/${{ steps.resolve.outputs.ref }} --filter "@sveltejs/docs-types"
+        run: pnpm add https://pkg.svelte.dev/svelte/${{ steps.resolve.outputs.ref }} --filter "docs-types"
 
       - name: Install SvelteKit upstream
         if: ${{ inputs.upstream == 'kit' }}
-        run: pnpm add https://pkg.svelte.dev/@sveltejs/kit/${{ steps.resolve.outputs.ref }} https://pkg.svelte.dev/@sveltejs/adapter-vercel/${{ steps.resolve.outputs.ref }} https://pkg.svelte.dev/@sveltejs/enhanced-img/${{ steps.resolve.outputs.ref }} --filter "@sveltejs/docs-types"
+        run: pnpm add https://pkg.svelte.dev/@sveltejs/kit/${{ steps.resolve.outputs.ref }} https://pkg.svelte.dev/@sveltejs/adapter-vercel/${{ steps.resolve.outputs.ref }} https://pkg.svelte.dev/@sveltejs/enhanced-img/${{ steps.resolve.outputs.ref }} --filter "docs-types"
 
       - name: Install Svelte CLI upstream
         if: ${{ inputs.upstream == 'cli' }}
-        run: pnpm add https://pkg.svelte.dev/sv/${{ steps.resolve.outputs.ref }} https://pkg.svelte.dev/@sveltejs/sv-utils/${{ steps.resolve.outputs.ref }} --filter "@sveltejs/docs-types"
+        run: pnpm add https://pkg.svelte.dev/sv/${{ steps.resolve.outputs.ref }} https://pkg.svelte.dev/@sveltejs/sv-utils/${{ steps.resolve.outputs.ref }} --filter "docs-types"
 
       - name: Sync
         run: cd apps/svelte.dev && pnpm sync-docs --owner="${{ inputs.owner }}" -p "${{ format('{0}#{1}#{2}', inputs.upstream, inputs.downstream, inputs.branch) }}"
