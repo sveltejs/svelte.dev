@@ -9,10 +9,10 @@ SvelteKit 3 is now in the Release Candidate phase. If all goes well — meaning 
 
 But there _are_ some breaking changes since SvelteKit 2. We're taking advantage of this release to prune some of the weeds in the codebase and lay the groundwork for SvelteKit's continued evolution, more on which [below](#Remote-functions).
 
-To migrate an existing app, you can use [`sv migrate`](/docs/cli/sv-migrate):
+To migrate an existing app, you can use the `next` version of [`sv migrate`](/docs/cli/sv-migrate):
 
 ```bash
-npx sv migrate sveltekit-3
+npx sv@next migrate sveltekit-3 --tasks all --confirm
 ```
 
 This will automatically migrate as much of your code as possible. For everything else, it will generate a TODO list for you (or your clanker of choice) to work through. Wherever possible, SvelteKit will print useful diagnostic warnings and errors if you try to run code that hasn't yet been updated.
