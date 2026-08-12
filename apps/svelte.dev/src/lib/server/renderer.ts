@@ -1,9 +1,8 @@
 import { render_content_markdown } from '@sveltejs/site-kit/markdown';
 import path from 'node:path';
-import { createRequire } from 'node:module';
+import { fileURLToPath } from 'node:url';
 
-const require = createRequire(import.meta.url);
-const docs_types_root = path.dirname(require.resolve('@sveltejs/docs-types/package.json'));
+const docs_types_root = path.dirname(fileURLToPath(import.meta.resolve('@sveltejs/docs-types/package.json')));
 
 export const render_content = (
 	filename: string,
