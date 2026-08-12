@@ -12,25 +12,1314 @@ import { sveltekit } from '@sveltejs/kit/vite';
 
 ## sveltekit
 
-Returns the SvelteKit Vite plugins.
-Any options that don't belong to SvelteKit are passed through to `vite-plugin-svelte`.
+The SvelteKit Vite plugin, which must be added to your `vite.config.js` file along with your project's configuration:
 
-Since version 3.0.0 you must pass [configuration](configuration) directly.
+```js
+// @errors: 7031
+/// file: vite.config.js
+import adapter from '@sveltejs/adapter-auto';
+import { sveltekit } from '@sveltejs/kit/vite';
+import { defineConfig } from 'vite';
 
-Since version 2.62.0 you can pass configuration directly, in which case `svelte.config.js` is ignored.
+export default defineConfig({
+	plugins: [
+		sveltekit({
+			adapter: adapter(),
+			compilerOptions: {
+				experimental: {
+					async: true
+				}
+			},
+			experimental: {
+				remoteFunctions: true
+			}
+		})
+	]
+});
+```
+
+As well as SvelteKit, the plugin options are used by other tooling that integrates with Svelte such as editor extensions.
+
+Any options that don't belong to SvelteKit are passed through to [`vite-plugin-svelte`](https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/config.md), so you can set options like `inspector` here too. The `experimental` namespace is shared — SvelteKit reads its own flags and forwards the rest.
+
+> [!LEGACY]
+> Prior to SvelteKit 3, config lived in a `svelte.config.js` file, which is no longer supported. The ability to configure SvelteKit via `vite.config.js` was added in version 2.62.
 
 <div class="ts-block">
 
 ```dts
-function sveltekit(
-	config?: KitConfig &
-		Omit<Options, 'onwarn'> &
-		Pick<SvelteConfig, 'vitePlugin'>
-): Promise<Plugin[]>;
+function sveltekit(config?: Config): Promise<Plugin[]>;
 ```
 
 </div>
 
 
+
+## Config
+
+An extension of [`vite-plugin-svelte`'s options](https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/config.md#svelte-options).
+
+<div class="ts-block">
+
+```dts
+interface Config extends VitePluginSvelteOptions {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+adapter?: Adapter;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `undefined`
+
+</div>
+
+Your [adapter](/docs/kit/adapters) is run when executing `vite build`. It determines how the output is converted for different platforms.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+alias?: Record<string, string>;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag deprecated">deprecated</span> 
+- <span class="tag">default</span> `{}`
+
+</div>
+
+An object containing zero or more aliases used to replace values in `import` statements. These aliases are automatically passed to Vite and TypeScript.
+
+This option is deprecated. Use [subpath imports](/docs/kit/$lib) instead.
+
+> [!NOTE] You will need to run `npm run dev` to have SvelteKit automatically generate the required alias configuration in `jsconfig.json` or `tsconfig.json`.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+appDir?: string;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `"_app"`
+
+</div>
+
+The directory where SvelteKit keeps its stuff, including static assets (such as JS and CSS) and internally-used routes.
+
+If `paths.assets` is specified, there will be two app directories — `${paths.assets}/${appDir}` and `${paths.base}/${appDir}`.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+csp?: {/*…*/}
+```
+
+<div class="ts-block-property-details">
+
+[Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) configuration. CSP helps to protect your users against cross-site scripting (XSS) attacks, by limiting the places resources can be loaded from. For example, a configuration like this...
+
+```js
+// @errors: 7031
+/// file: vite.config.js
+import { sveltekit } from '@sveltejs/kit/vite';
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+	plugins: [
+		sveltekit({
+			csp: {
+				directives: {
+					'script-src': ['self']
+				},
+				// must be specified with either the `report-uri` or `report-to` directives, or both
+				reportOnly: {
+					'script-src': ['self'],
+					'report-uri': ['/']
+				}
+			}
+		})
+	]
+});
+```
+
+...would prevent scripts loading from external sites. SvelteKit will augment the specified directives with nonces or hashes (depending on `mode`) for any inline styles and scripts it generates.
+
+To add a nonce for scripts and links manually included in `src/app.html`, you may use the placeholder `%sveltekit.nonce%` (for example `<script nonce="%sveltekit.nonce%">`).
+
+When pages are prerendered, the CSP header is added via a `<meta http-equiv>` tag (note that in this case, `frame-ancestors`, `report-uri` and `sandbox` directives will be ignored).
+
+> [!NOTE] When `mode` is `'auto'`, SvelteKit will use nonces for dynamically rendered pages and hashes for prerendered pages. Using nonces with prerendered pages is insecure and therefore forbidden.
+
+If this level of configuration is insufficient and you have more dynamic requirements, you can use the [`handle` hook](/docs/kit/hooks#handle) to roll your own CSP.
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+mode?: 'hash' | 'nonce' | 'auto';
+```
+
+<div class="ts-block-property-details">
+
+Whether to use hashes or nonces to restrict `<script>` and `<style>` elements. `'auto'` will use hashes for prerendered pages, and nonces for dynamically rendered pages.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+directives?: CspDirectives;
+```
+
+<div class="ts-block-property-details">
+
+Directives that will be added to `Content-Security-Policy` headers.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+reportOnly?: CspDirectives;
+```
+
+<div class="ts-block-property-details">
+
+Directives that will be added to `Content-Security-Policy-Report-Only` headers.
+
+</div>
+</div></div>
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+csrf?: {/*…*/}
+```
+
+<div class="ts-block-property-details">
+
+Protection against [cross-site request forgery (CSRF)](https://owasp.org/www-community/attacks/csrf) attacks.
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+checkOrigin?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `true`
+- <span class="tag deprecated">deprecated</span> removed in 3.0. Use `trustedOrigins: ['*']` instead
+
+</div>
+
+Whether to check the incoming `origin` header for `POST`, `PUT`, `PATCH`, or `DELETE` form submissions and verify that it matches the server's origin.
+
+To allow people to make `POST`, `PUT`, `PATCH`, or `DELETE` requests with a `Content-Type` of `application/x-www-form-urlencoded`, `multipart/form-data`, or `text/plain` to your app from other origins, you will need to disable this option. Be careful!
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+trustedOrigins?: string[];
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `[]`
+
+</div>
+
+An array of origins that are allowed to make cross-origin form submissions to your app.
+
+Each origin should be a complete origin including protocol (e.g., `https://payment-gateway.com`).
+This is useful for allowing trusted third-party services like payment gateways or authentication providers to submit forms to your app.
+
+If the array contains `'*'`, all origins will be trusted. This is generally not recommended!
+
+> [!NOTE] Only add origins you completely trust, as this bypasses CSRF protection for those origins.
+
+CSRF checks only apply in production, not in local development.
+
+</div>
+</div></div>
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+embedded?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `false`
+
+</div>
+
+Whether or not the app is embedded inside a larger app. If `true`, SvelteKit will add its event listeners related to navigation etc on the parent of `%sveltekit.body%` instead of `window`, and will pass `params` from the server rather than inferring them from `location.pathname`.
+Note that it is generally not supported to embed multiple SvelteKit apps on the same page and use client-side SvelteKit features within them (things such as pushing to the history state assume a single instance).
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+env?: {/*…*/}
+```
+
+<div class="ts-block-property-details">
+
+Environment variable configuration
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+dir?: string;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `"."`
+
+</div>
+
+The directory to search for `.env` files.
+
+</div>
+</div></div>
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+experimental?: VitePluginSvelteOptionsExperimental & {
+	/**
+	 * Whether to enable the experimental remote functions feature. This feature is not yet stable and may be changed or removed at any time.
+	 * @default false
+	 */
+	remoteFunctions?: boolean;
+
+	/**
+	 * Whether to enable the experimental forked preloading feature using Svelte's fork API.
+	 * @default false
+	 */
+	forkPreloads?: boolean;
+};
+```
+
+<div class="ts-block-property-details">
+
+Experimental features. Here be dragons. These are not subject to semantic versioning, so breaking changes or removal can happen in any release.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+files?: {/*…*/}
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
+
+</div>
+
+Where to find various files within your project.
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+src?: string;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
+- <span class="tag">default</span> `"src"`
+- <span class="tag since">available since</span> v2.28
+
+</div>
+
+The location of your source code.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+assets?: string;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
+- <span class="tag">default</span> `"static"`
+
+</div>
+
+A place to put static files that should have stable URLs and undergo no processing, such as `favicon.ico` or `manifest.json`.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+hooks?: {/*…*/}
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+client?: string;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
+- <span class="tag">default</span> `"src/hooks.client"`
+
+</div>
+
+The location of your client [hooks](/docs/kit/hooks).
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+server?: string;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
+- <span class="tag">default</span> `"src/hooks.server"`
+
+</div>
+
+The location of your server [hooks](/docs/kit/hooks).
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+universal?: string;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
+- <span class="tag">default</span> `"src/hooks"`
+- <span class="tag since">available since</span> v2.3.0
+
+</div>
+
+The location of your universal [hooks](/docs/kit/hooks).
+
+</div>
+</div></div>
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+params?: string;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
+- <span class="tag">default</span> `"src/params"`
+
+</div>
+
+A directory containing [parameter matchers](/docs/kit/advanced-routing#Matching).
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+routes?: string;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
+- <span class="tag">default</span> `"src/routes"`
+
+</div>
+
+The files that define the structure of your app (see [Routing](/docs/kit/routing)).
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+serviceWorker?: string;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
+- <span class="tag">default</span> `"src/service-worker"`
+
+</div>
+
+The location of your service worker's entry point (see [Service workers](/docs/kit/service-workers)).
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+appTemplate?: string;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
+- <span class="tag">default</span> `"src/app.html"`
+
+</div>
+
+The location of the template for HTML responses.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+errorTemplate?: string;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
+- <span class="tag">default</span> `"src/error.html"`
+
+</div>
+
+The location of the template for fallback error responses.
+
+</div>
+</div></div>
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+inlineStyleThreshold?: number;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `0`
+
+</div>
+
+Inline CSS inside a `<style>` block at the head of the HTML. This option is a number that specifies the maximum length of a CSS file in UTF-16 code units, as specified by the [String.length](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length) property, to be inlined. All CSS files needed for the page that are smaller than this value are merged and inlined in a `<style>` block.
+
+> [!NOTE] This results in fewer initial requests and can improve your [First Contentful Paint](https://web.dev/first-contentful-paint) score. However, it generates larger HTML output and reduces the effectiveness of browser caches. Use it advisedly.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+moduleExtensions?: string[];
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `[".js", ".ts"]`
+
+</div>
+
+An array of file extensions that SvelteKit will treat as modules. Files with extensions that match neither `config.extensions` nor `config.moduleExtensions` will be ignored by the router.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+outDir?: string;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `".svelte-kit"`
+
+</div>
+
+The directory that SvelteKit writes files to during `dev` and `build`. You should exclude this directory from version control.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+output?: {/*…*/}
+```
+
+<div class="ts-block-property-details">
+
+Options related to the build output format
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+linkHeaderPreload?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `false`
+- <span class="tag since">available since</span> v3.0.0
+
+</div>
+
+Whether to use the [HTTP `Link` header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Link) to preload assets instead of the [`<link>` HTML element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/link) for non-prerendered pages.
+
+Note that some web servers such as Nginx and Apache have a default header size limit which may be easily exceeded.
+If you are using one of these web servers, you may want to leave this as `false` or configure a higher limit.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+preloadStrategy?: 'modulepreload' | 'preload-js' | 'preload-mjs';
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `"modulepreload"`
+- <span class="tag since">available since</span> v1.8.4
+- <span class="tag deprecated">deprecated</span> removed in 3.0
+
+</div>
+
+SvelteKit will preload the JavaScript modules needed for the initial page to avoid import 'waterfalls', resulting in faster application startup. There
+are three strategies with different trade-offs:
+- `modulepreload` - uses `<link rel="modulepreload">`. This delivers the best results in Chromium-based browsers, in Firefox 115+, and Safari 17+. It is ignored in older browsers.
+- `preload-js` - uses `<link rel="preload">`. Prevents waterfalls in Chromium and Safari, but Chromium will parse each module twice (once as a script, once as a module). Causes modules to be requested twice in Firefox. This is a good setting if you want to maximise performance for users on iOS devices at the cost of a very slight degradation for Chromium users.
+- `preload-mjs` - uses `<link rel="preload">` but with the `.mjs` extension which prevents double-parsing in Chromium. Some static webservers will fail to serve .mjs files with a `Content-Type: application/javascript` header, which will cause your application to break. If that doesn't apply to you, this is the option that will deliver the best performance for the largest number of users, until `modulepreload` is more widely supported.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+bundleStrategy?: 'split' | 'single' | 'inline';
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `'split'`
+- <span class="tag since">available since</span> v2.13.0
+
+</div>
+
+The bundle strategy option affects how your app's JavaScript and CSS files are loaded.
+- If `'split'`, splits the app up into multiple .js/.css files so that they are loaded lazily as the user navigates around the app. This is the default, and is recommended for most scenarios.
+- If `'single'`, creates just one .js bundle and one .css file containing code for the entire app.
+- If `'inline'`, inlines all JavaScript and CSS of the entire app into the HTML. The result is usable without a server (i.e. you can just open the file in your browser).
+
+When using `'split'`, you can also adjust the bundling behaviour by setting [`output.codeSplitting`](https://rolldown.rs/reference/OutputOptions.codeSplitting) inside your Vite config's [`build.rolldownOptions`](https://vite.dev/config/build-options#build-rolldownoptions).
+
+If you want to inline your assets, you'll need to set Vite's [`build.assetsInlineLimit`](https://vite.dev/config/build-options.html#build-assetsinlinelimit) option to an appropriate size then import your assets through Vite.
+
+```js
+// @errors: 7031
+/// file: vite.config.js
+import { sveltekit } from '@sveltejs/kit/vite';
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+	plugins: [sveltekit()],
+	build: {
+		// inline all imported assets
+		assetsInlineLimit: Infinity
+	}
+});
+```
+
+```svelte
+/// file: src/routes/+layout.svelte
+<script>
+	// import the asset through Vite
+	import favicon from './favicon.png';
+</script>
+
+<svelte:head>
+	<!-- this asset will be inlined as a base64 URL -->
+	<link rel="icon" href={favicon} />
+</svelte:head>
+```
+
+</div>
+</div></div>
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+paths?: {/*…*/}
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+assets?: '' | `http://${string}` | `https://${string}`;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `""`
+
+</div>
+
+An absolute path that your app's files are served from. This is useful if your files are served from a storage bucket of some kind.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+base?: '' | `/${string}`;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `""`
+
+</div>
+
+A root-relative path that must start, but not end with `/` (e.g. `/base-path`), unless it is the empty string. This specifies where your app is served from and allows the app to live on a non-root path. Note that you need to prepend all your root-relative links with the base value or they will point to the root of your domain, not your `base` (this is how the browser works). You can use [`resolve(...)` from `$app/paths`](/docs/kit/$app-paths#resolve) for that: `<a href="{resolve('/your-page')}">Link</a>`. If you find yourself writing this often, it may make sense to extract this into a reusable component.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+origin?: string;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `undefined`
+- <span class="tag since">available since</span> v3.0
+
+</div>
+
+The origin of your app, used for CSRF protection and prerendering.
+
+By default, this is `undefined`, meaning SvelteKit will derive the origin from `request.url` (which is set by the adapter, and ultimately by the platform).
+
+If your app is served from an origin that isn't known at request time — for example because it's deployed to a preview deployment whose URL isn't known at build time, or because it's behind a reverse proxy that doesn't pass the `host` header — you can set this to a string like `https://my-site.com`.
+
+This is also used as the value of `url.origin` during prerendering (when unset, it defaults to `http://sveltekit-prerender`), and as the trusted origin for CSRF checks on form submissions and remote function calls.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+relative?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `true`
+- <span class="tag since">available since</span> v1.9.0
+
+</div>
+
+Whether to use relative asset paths.
+
+If `true`, paths created with `resolve()` and `asset()` imported from `$app/paths` will be replaced with relative asset paths during server-side rendering, resulting in more portable HTML.
+If `false`, `%sveltekit.assets%` and references to build artifacts will always be root-relative paths, unless `paths.assets` is an external URL
+
+[Single-page app](/docs/kit/single-page-apps) fallback pages will always use absolute paths, regardless of this setting.
+
+If your app uses a `<base>` element, you should set this to `false`, otherwise asset URLs will incorrectly be resolved against the `<base>` URL rather than the current page.
+
+In 1.0, `undefined` was a valid value, which was set by default. In that case, if `paths.assets` was not external, SvelteKit would replace `%sveltekit.assets%` with a relative path and use relative paths to reference build artifacts, but `base` and `assets` imported from `$app/paths` would be as specified in your config.
+
+</div>
+</div></div>
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+prerender?: {/*…*/}
+```
+
+<div class="ts-block-property-details">
+
+See [Prerendering](/docs/kit/page-options#prerender).
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+concurrency?: number;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `1`
+
+</div>
+
+How many pages can be prerendered simultaneously. JS is single-threaded, but in cases where prerendering performance is network-bound (for example loading content from a remote CMS) this can speed things up by processing other tasks while waiting on the network response.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+crawl?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `true`
+
+</div>
+
+Whether SvelteKit should find pages to prerender by following links from `entries`.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+entries?: Array<'*' | `/${string}`>;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `["*"]`
+
+</div>
+
+An array of pages to prerender, or start crawling from (if `crawl: true`). The `*` string includes all routes containing no required `[parameters]`  with optional parameters included as being empty (since SvelteKit doesn't know what value any parameters should have).
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+handleHttpError?: PrerenderHttpErrorHandlerValue;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `"fail"`
+- <span class="tag since">available since</span> v1.15.7
+
+</div>
+
+How to respond to HTTP errors encountered while prerendering the app.
+
+- `'fail'` — fail the build
+- `'ignore'` - silently ignore the failure and continue
+- `'warn'` — continue, but print a warning
+- `(details) => void` — a custom error handler that takes a `details` object with `status`, `path`, `referrer`, `referenceType` and `message` properties. If you `throw` from this function, the build will fail
+
+```js
+// @errors: 7031
+/// file: vite.config.js
+import { sveltekit } from '@sveltejs/kit/vite';
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+	plugins: [
+		sveltekit({
+ 		prerender: {
+ 			handleHttpError: ({ path, referrer, message }) => {
+					// ignore deliberate link to shiny 404 page
+					if (path === '/not-found' && referrer === '/blog/how-we-built-our-404-page') {
+						return;
+					}
+
+					// otherwise fail the build
+					throw new Error(message);
+				}
+			}
+		})
+	]
+});
+```
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+handleMissingId?: PrerenderMissingIdHandlerValue;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `"fail"`
+- <span class="tag since">available since</span> v1.15.7
+
+</div>
+
+How to respond when hash links from one prerendered page to another don't correspond to an `id` on the destination page.
+
+- `'fail'` — fail the build
+- `'ignore'` - silently ignore the failure and continue
+- `'warn'` — continue, but print a warning
+- `(details) => void` — a custom error handler that takes a `details` object with `path`, `id`, `referrers` and `message` properties. If you `throw` from this function, the build will fail
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+handleEntryGeneratorMismatch?: PrerenderEntryGeneratorMismatchHandlerValue;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `"fail"`
+- <span class="tag since">available since</span> v1.16.0
+
+</div>
+
+How to respond when an entry generated by the `entries` export doesn't match the route it was generated from.
+
+- `'fail'` — fail the build
+- `'ignore'` - silently ignore the failure and continue
+- `'warn'` — continue, but print a warning
+- `(details) => void` — a custom error handler that takes a `details` object with `generatedFromId`, `entry`, `matchedId` and `message` properties. If you `throw` from this function, the build will fail
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+handleUnseenRoutes?: PrerenderUnseenRoutesHandlerValue;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `"fail"`
+- <span class="tag since">available since</span> v2.16.0
+
+</div>
+
+How to respond when a route is marked as prerenderable but has not been prerendered.
+
+- `'fail'` — fail the build
+- `'ignore'` - silently ignore the failure and continue
+- `'warn'` — continue, but print a warning
+- `(details) => void` — a custom error handler that takes a `details` object with a `routes` property which contains all routes that haven't been prerendered. If you `throw` from this function, the build will fail
+
+The default behavior is to fail the build. This may be undesirable when you know that some of your routes may never be reached under certain
+circumstances such as a CMS not returning data for a specific area, resulting in certain routes never being reached.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+handleInvalidUrl?: PrerenderInvalidUrlHandlerValue;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `"fail"`
+- <span class="tag since">available since</span> v2.67.0
+
+</div>
+
+How to respond when SvelteKit encounters a URL it cannot parse while crawling prerendered HTML (for example, an AT Protocol URL such as `at://did:plc:...`).
+
+- `'fail'` — fail the build
+- `'ignore'` - silently ignore the failure and continue
+- `'warn'` — continue, but print a warning
+- `(details) => void` — a custom error handler that takes a `details` object with `href`, `referrer` and `message` properties. If you `throw` from this function, the build will fail
+
+</div>
+</div></div>
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+router?: {/*…*/}
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+type?: 'pathname' | 'hash';
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `"pathname"`
+- <span class="tag since">available since</span> v2.14.0
+
+</div>
+
+What type of client-side router to use.
+- `'pathname'` is the default and means the current URL pathname determines the route
+- `'hash'` means the route is determined by `location.hash`. In this case, SSR and prerendering are disabled. This is only recommended if `pathname` is not an option, for example because you don't control the webserver where your app is deployed.
+	It comes with some caveats: you can't use server-side rendering (or indeed any server logic), and you have to make sure that the links in your app all start with #/, or they won't work. Beyond that, everything works exactly like a normal SvelteKit app.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+resolution?: 'client' | 'server';
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `"client"`
+- <span class="tag since">available since</span> v2.17.0
+
+</div>
+
+How to determine which route to load when navigating to a new page.
+
+By default, SvelteKit will serve a route manifest to the browser.
+When navigating, this manifest is used (along with the `reroute` hook, if it exists) to determine which components to load and which `load` functions to run.
+Because everything happens on the client, this decision can be made immediately. The drawback is that the manifest needs to be
+loaded and parsed before the first navigation can happen, which may have an impact if your app contains many routes.
+
+Alternatively, SvelteKit can determine the route on the server. This means that for every navigation to a path that has not yet been visited, the server will be asked to determine the route.
+This has several advantages:
+- The client does not need to load the routing manifest upfront, which can lead to faster initial page loads
+- The list of routes is hidden from public view
+- The server has an opportunity to intercept each navigation (for example through middleware in front of SvelteKit, such as a reverse proxy or your platform's edge functions), enabling (for example) A/B testing opaque to SvelteKit
+
+Route resolution requests are answered as soon as the route has been looked up, before the `handle` hook is invoked. To intercept them within SvelteKit itself, use the `reroute` hook, which runs for these requests too.
+
+The drawback is that for unvisited paths, resolution will take slightly longer (though this is mitigated by [preloading](/docs/kit/link-options#data-sveltekit-preload-data)).
+
+> [!NOTE] When using server-side route resolution and prerendering, the resolution is prerendered along with the route itself.
+
+</div>
+</div></div>
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+serviceWorker?:
+	| {
+			/**
+			 * Whether to automatically register the service worker, if it exists.
+			 * @default true
+			 */
+			register: true;
+			/**
+			 * Options for serviceWorker.register("...", options);
+			 */
+			options?: RegistrationOptions;
+	  }
+	| {
+			/**
+			 * Whether to automatically register the service worker, if it exists.
+			 * @default true
+			 */
+			register?: false;
+	  };
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+tracing?: {/*…*/}
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `{ server: false }`
+
+</div>
+
+Options for enabling [OpenTelemetry](https://opentelemetry.io/) tracing for SvelteKit operations.
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+server?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `false`
+
+</div>
+
+Enables server-side [OpenTelemetry](https://opentelemetry.io/) span emission for SvelteKit operations including the [`handle` hook](/docs/kit/hooks#handle), [`load` functions](/docs/kit/load), [form actions](/docs/kit/form-actions), and [remote functions](/docs/kit/remote-functions). Tracing — and more significantly, observability instrumentation — can have a nontrivial overhead, so consider whether you really need it, or if it might be more appropriate to turn it on in development and preview environments only.
+
+</div>
+</div></div>
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+typescript?: {/*…*/}
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag deprecated">deprecated</span> Add configuration to `tsconfig.json` directly
+
+</div>
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+config?: (config: Record<string, any>) => Record<string, any> | void;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `(config) => config`
+- <span class="tag since">available since</span> v1.3.0
+
+</div>
+
+A function that allows you to edit the generated `tsconfig.json`. You can mutate the config (recommended) or return a new one.
+This is useful for extending a shared `tsconfig.json` in a monorepo root, for example.
+
+Note that any paths configured here should be relative to the generated config file, which is written to `node_modules/$app/tsconfig.json`.
+
+</div>
+</div></div>
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+version?: {/*…*/}
+```
+
+<div class="ts-block-property-details">
+
+Client-side navigation can be buggy if you deploy a new version of your app while people are using it. If the code for the new page is already loaded, it may have stale content; if it isn't, the app's route manifest may point to a JavaScript file that no longer exists.
+SvelteKit helps you solve this problem through version management. The current version is included in data, remote, and form action responses via the `x-sveltekit-version` header, so SvelteKit can detect new deployments without polling — for example when a navigation triggers a server `load` function, or when a remote function is called. SvelteKit also checks for new versions when the tab regains focus or becomes visible.
+If SvelteKit encounters an error while loading the page and detects that a new version has been deployed (using the `name` specified here, which defaults to a timestamp of the build) it will fall back to traditional full-page navigation.
+Not all navigations will result in an error though, for example if the JavaScript for the next page is already loaded. If you still want to force a full-page navigation in these cases, use `beforeNavigate`:
+```html
+/// file: +layout.svelte
+<script>
+	import { beforeNavigate } from '$app/navigation';
+	import { updated } from '$app/state';
+
+	beforeNavigate(({ willUnload, to }) => {
+		if (updated.current && !willUnload && to?.url) {
+			location.href = to.url.href;
+		}
+	});
+</script>
+```
+
+In addition to these checks, SvelteKit polls for new versions on an interval and sets [`updated.current`](/docs/kit/$app-state#updated) to `true` when it detects one. Set `pollInterval` to `0` to disable polling (the header- and event-based checks will still run).
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+name?: string;
+```
+
+<div class="ts-block-property-details">
+
+The current app version string. If specified, this must be deterministic (e.g. a commit ref rather than `Math.random()` or `Date.now().toString()`), otherwise defaults to a timestamp of the build.
+
+For example, to use the current commit hash, you could do use `git rev-parse HEAD`:
+
+```js
+// @errors: 7031
+/// file: vite.config.js
+import * as child_process from 'node:child_process';
+import { sveltekit } from '@sveltejs/kit/vite';
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+	plugins: [
+		sveltekit({
+ 		version: {
+				name: child_process.execSync('git rev-parse HEAD').toString().trim()
+			}
+		})
+	]
+});
+```
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+pollInterval?: number;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `3600000`
+
+</div>
+
+The interval in milliseconds to poll for version changes. If this is `0`, no polling occurs. SvelteKit also checks for new versions on server responses (via the `x-sveltekit-version` header) and when the tab regains focus or becomes visible, so polling is only needed for long-lived sessions on a single page.
+
+</div>
+</div></div>
+
+</div>
+</div></div>
 
 
