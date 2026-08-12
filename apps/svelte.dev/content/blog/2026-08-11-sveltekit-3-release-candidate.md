@@ -17,10 +17,10 @@ npx sv@next migrate sveltekit-3 --tasks all --confirm
 
 This will automatically migrate as much of your code as possible. For everything else, it will generate a TODO list for you (or your clanker of choice) to work through. Wherever possible, SvelteKit will print useful diagnostic warnings and errors if you try to run code that hasn't yet been updated.
 
-To create a _new_ app, run [`sv create`](/docs/cli/sv-create) and select the [`experimental`](/docs/cli/experimental) add-on.
+To create a _new_ app, run [`sv create`](/docs/cli/sv-create):
 
 ```bash
-npx sv create my-new-app
+npx sv@next create my-new-app
 ```
 
 ## What's changed?
