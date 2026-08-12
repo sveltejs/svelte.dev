@@ -1246,10 +1246,7 @@ async function syntax_highlight({
 					}
 
 					if (tag === '@example') {
-						const example = value.trimStart().startsWith('```')
-							? value
-							: `\`\`\`\n${value}\n\`\`\``;
-						content += await render_content_markdown('<twoslash>', example, { check: false });
+						content += await render_content_markdown('<twoslash>', value, { check: false });
 					} else {
 						content += marked.parseInline(value);
 					}
