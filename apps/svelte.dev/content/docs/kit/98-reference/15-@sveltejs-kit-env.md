@@ -39,8 +39,11 @@ export const variables = defineEnvVars({
 
 ```dts
 function defineEnvVars<
-	T extends Record<string, EnvVarConfig<any>>
->(variables: T): DefinedEnvVars<T>;
+	T extends Record<
+		string,
+		import('@sveltejs/kit/env').EnvVarConfig<any>
+	>
+>(variables: T): T;
 ```
 
 </div>
