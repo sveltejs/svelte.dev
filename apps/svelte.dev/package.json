@@ -24,9 +24,6 @@
 		"@lezer/lr": "^1.4.8",
 		"@rich_harris/svelte-split-pane": "^3.0.0",
 		"@sveltejs/repl": "workspace:*",
-		"@testing-library/dom": "^10.4.1",
-		"@testing-library/svelte": "^5.3.1",
-		"@testing-library/user-event": "^14.6.1",
 		"@types/d3-geo": "^3.1.0",
 		"@vercel/analytics": "2.2.0-canary",
 		"@vercel/speed-insights": "2.1.0-canary",
@@ -49,11 +46,10 @@
 		"yootils": "^0.3.1"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "^4.20260305.0",
 		"@resvg/resvg-js": "^2.6.2",
 		"@supabase/supabase-js": "^2.97.0",
 		"@sveltejs/adapter-vercel": "^7.0.0-next.4",
-		"@sveltejs/amp": "^1.1.5",
+		"docs-types": "workspace:*",
 		"@sveltejs/enhanced-img": "^1.0.0-next.3",
 		"@sveltejs/kit": "catalog:",
 		"@sveltejs/site-kit": "workspace:*",
