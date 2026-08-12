@@ -1,11 +1,18 @@
 import { render_content_markdown } from '@sveltejs/site-kit/markdown';
+import path from 'node:path';
+import { createRequire } from 'node:module';
+
+const require = createRequire(import.meta.url);
+const docs_types_root = path.dirname(require.resolve('@sveltejs/docs-types/package.json'));
 
 export const render_content = (
 	filename: string,
 	body: string,
 	options: { check?: boolean; references?: Record<string, string> } = {}
 ) => {
-	return render_content_markdown(filename, body, options, (filename, source) => {
+	const render_options = { ...options, twoslashRoot: docs_types_root };
+
+	return render_content_markdown(filename, body, render_options, (filename, source) => {
 		// TODO these are copied from Svelte and SvelteKit - adjust for new filenames
 		const injected = [];
 
