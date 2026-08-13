@@ -45,7 +45,7 @@ You should explicitly specify your `include` and `exclude` arrays, and the latte
 
 ### Service workers got a facelift
 
-Using service workers is nicer in SvelteKit 3. Instead of the weird `$service-worker` module, which exposed the necessary tools to perform offline caching (for example), you can now just import those things from `$app/env`, `$app/paths` and the new `$app/manifest` module like every other part of your app. You can also import `self` from `$app/service-worker` to get accurate typings for `fetch` events and so on, provided you create a `tsconfig.json` alongside your service worker that extends `$app/tsconfig/service-worker`.
+Using service workers is nicer in SvelteKit 3. Instead of the weird `$service-worker` module, which exposed the necessary tools to perform offline caching (for example), you can now just import those things from `$app/env`, `$app/paths` and the new `$app/manifest` module like in every other part of your app. You can also import `self` from `$app/service-worker` to get accurate typings for `fetch` events and so on, provided you create a `tsconfig.json` alongside your service worker that extends `$app/tsconfig/service-worker`.
 
 In future, we may expose helper functions for different caching strategies, so that it's easier to build things like offline-friendly PWAs without running into barbed wire.
 
@@ -62,6 +62,10 @@ SvelteKit 2 was constrained by its support for Svelte 4, which didn't have a con
 Another change is that all errors are piped through your [`handleError`](/docs/kit/hooks#handleError) logic, including the ones you deliberately created with [`error(...)`](/docs/kit/@sveltejs-kit#error) which were previously ignored on the assumption that you'd already done something with them. This gives you more flexibility with less hoop-jumping.
 
 Oh, and we apply sourcemaps to stack traces now. No biggie. (It'll take a minute before every adapter can display properly sourcemapped stack traces in production, but this is the necessary first step.)
+
+### Shallow routing now happens with `goto`
+
+Instead of using `pushState` and `replaceState` to use [shallow routing](/docs/kit/shallow-routing), you now use [`goto`](/docs/kit/$app-navigation#goto) with the `shallow: true` option. Shallow navigations now trigger `beforeNavigate` etc, and you can persist page state across a reload with `persistState: true`.
 
 ## Vite 8: Rolldown, and the Environment API
 
