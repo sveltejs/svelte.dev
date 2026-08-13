@@ -16,6 +16,7 @@ import {
 	isActionFailure,
 	isHttpError,
 	isRedirect,
+	isValidationError,
 	json,
 	normalizeUrl,
 	redirect,
@@ -235,6 +236,28 @@ Checks whether this is a redirect thrown by `redirect`.
 
 ```dts
 function isRedirect(e: unknown): e is Redirect;
+```
+
+</div>
+
+
+
+## isValidationError
+
+<blockquote class="since note">
+
+Available since 2.47.3
+
+</blockquote>
+
+Checks whether this is a validation error thrown by `invalid`.
+
+<div class="ts-block">
+
+```dts
+function isValidationError(
+	e: unknown
+): e is ValidationError;
 ```
 
 </div>
@@ -2304,6 +2327,29 @@ restore: (snapshot: T) => void;
 ```
 
 <div class="ts-block-property-details"></div>
+</div></div>
+
+## ValidationError
+
+A validation error thrown by `invalid`.
+
+<div class="ts-block">
+
+```dts
+interface ValidationError {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+issues: StandardSchemaV1.Issue[];
+```
+
+<div class="ts-block-property-details">
+
+The validation issues
+
+</div>
 </div></div>
 
 
