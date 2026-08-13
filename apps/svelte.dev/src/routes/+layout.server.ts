@@ -59,13 +59,13 @@ const nav_links: NavigationLink[] = [
 ];
 
 const banner: BannerData = {
-	id: 'barcelona-2025-tickets',
-	start: new Date('21 April, 2025 00:00:00 UTC'),
-	end: new Date('6 May, 2025 23:59:59 UTC'),
+	id: 'ljubljana-2026-tickets',
+	start: new Date('1 August, 2026 00:00:00 UTC'),
+	end: new Date('20 November, 2026 23:59:59 UTC'),
 	arrow: true,
 	content: {
-		lg: 'Svelte Summit Barcelona and online, May 8-9: Last few days to get tickets!',
-		sm: 'Svelte Summit May 8-9'
+		lg: 'Svelte Summit Ljubljana and online, Nov 18-19: Tickets available soon!',
+		sm: 'Svelte Summit Nov 18-19'
 	},
 	href: 'https://www.sveltesummit.com/'
 };
