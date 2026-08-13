@@ -226,8 +226,8 @@ importers:
         specifier: catalog:sveltekit-2
         version: 2.70.2(@sveltejs/vite-plugin-svelte@7.2.0(svelte@5.56.4(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(svelte@5.56.4(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))
       '@sveltejs/sv-utils':
-        specifier: ^0.3.2
-        version: 0.3.2
+        specifier: https://pkg.svelte.dev/@sveltejs/sv-utils/c/7bf533854305a38758281ae3a76aaf82d53ebf68
+        version: https://pkg.svelte.dev/@sveltejs/sv-utils/c/7bf533854305a38758281ae3a76aaf82d53ebf68
       '@sveltejs/vite-plugin-svelte':
         specifier: ^7.2.0
         version: 7.2.0(svelte@5.56.4(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))
@@ -241,8 +241,8 @@ importers:
         specifier: ^14.6.1
         version: 14.6.1(@testing-library/dom@10.4.1)
       sv:
-        specifier: ^0.16.6
-        version: 0.16.6
+        specifier: https://pkg.svelte.dev/sv/c/7bf533854305a38758281ae3a76aaf82d53ebf68
+        version: https://pkg.svelte.dev/sv/c/7bf533854305a38758281ae3a76aaf82d53ebf68
       svelte:
         specifier: ^5.56.4
         version: 5.56.4(@typescript-eslint/types@8.58.0)
@@ -1625,6 +1625,10 @@ packages:
   '@sveltejs/sv-utils@0.3.2':
     resolution: {integrity: sha512-mLwU+iaKLiLSqjM45SD9C/wUboRGukqjsZKQiBCDTg7xVp0ZMxM3Qq9wkriP6BTwlh4ZTPrm97UuCMMUYnzRvg==}
 
+  '@sveltejs/sv-utils@https://pkg.svelte.dev/@sveltejs/sv-utils/c/7bf533854305a38758281ae3a76aaf82d53ebf68':
+    resolution: {integrity: sha512-nLd2S7gya0SouVbblvrLqoZyuBO2pU9bFHQS0J8DOavOBrhRXD6CpP9a2NqOUkhxskyanLa/XoiPJvVGqbg47Q==, tarball: https://pkg.svelte.dev/@sveltejs/sv-utils/c/7bf533854305a38758281ae3a76aaf82d53ebf68}
+    version: 1.0.0-next.1
+
   '@sveltejs/svelte-json-tree@2.2.1':
     resolution: {integrity: sha512-M8l23/R3y1fI2+RaOzfUzmkysTWWsw/NClUgGpvydl9vXRonPN1/btQQievaNyeWNfUj12tjPfh5yTrXWpaKkg==}
     engines: {pnpm: ^9.0.0}
@@ -2841,6 +2845,11 @@ packages:
 
   sv@0.16.6:
     resolution: {integrity: sha512-xj6xwHsPYvvP5Xz5p/aAcUK1g97cMqvEtBqGeSQGuIGikJ6qJG51CKM39v33BbB4EXSm4PaOC3nQ8XWAikCrsA==}
+    hasBin: true
+
+  sv@https://pkg.svelte.dev/sv/c/7bf533854305a38758281ae3a76aaf82d53ebf68:
+    resolution: {integrity: sha512-tyX9cPz92AAY/rgfF7sG1Y8kwsVaFb7MC10nyadAtF1oe54TlKwPUc8zf7ByvwNXwzDf3OKWZdBQK00ZzzxUYw==, tarball: https://pkg.svelte.dev/sv/c/7bf533854305a38758281ae3a76aaf82d53ebf68}
+    version: 1.0.0-next.1
     hasBin: true
 
   svelte-check@4.7.3:
@@ -4266,6 +4275,8 @@ snapshots:
 
   '@sveltejs/sv-utils@0.3.2': {}
 
+  '@sveltejs/sv-utils@https://pkg.svelte.dev/@sveltejs/sv-utils/c/7bf533854305a38758281ae3a76aaf82d53ebf68': {}
+
   '@sveltejs/svelte-json-tree@2.2.1(svelte@5.56.4(@typescript-eslint/types@8.58.0))':
     dependencies:
       svelte: 5.56.4(@typescript-eslint/types@8.58.0)
@@ -5588,6 +5599,8 @@ snapshots:
   style-mod@4.1.3: {}
 
   sv@0.16.6: {}
+
+  sv@https://pkg.svelte.dev/sv/c/7bf533854305a38758281ae3a76aaf82d53ebf68: {}
 
   svelte-check@4.7.3(picomatch@4.0.4)(svelte@5.56.4(@typescript-eslint/types@8.58.0))(typescript@6.0.3):
     dependencies:
