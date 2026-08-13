@@ -563,7 +563,7 @@ export async function render_content_markdown(
 					const token = tokens[i];
 
 					if (token.type === 'text') {
-						token.text = smart_quotes(token.text, { first: i === 0, html: true });
+						token.text = smart_quotes(token.text, { first: i === 0 });
 					}
 				}
 			}
