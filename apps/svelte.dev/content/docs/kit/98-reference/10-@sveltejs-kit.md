@@ -1863,7 +1863,7 @@ restore: (snapshot: T) => void;
 
 The following are referenced by the public types documented above, but cannot be imported directly:
 
-## AdapterEntry
+### AdapterEntry
 
 <div class="ts-block">
 
@@ -1918,7 +1918,7 @@ should write the function to the filesystem and generate redirect manifests.
 </div>
 </div></div>
 
-## Csp
+### Csp
 
 <div class="ts-block">
 
@@ -1969,7 +1969,7 @@ namespace Csp {
 
 </div>
 
-## CspDirectives
+### CspDirectives
 
 <div class="ts-block">
 
@@ -2312,7 +2312,7 @@ referrer?: Array<
 </div>
 </div></div>
 
-## DeepPartial
+### DeepPartial
 
 <div class="ts-block">
 
@@ -2332,7 +2332,7 @@ type DeepPartial<T> = T extends
 
 </div>
 
-## HasNonOptionalBoolean
+### HasNonOptionalBoolean
 
 <div class="ts-block">
 
@@ -2353,7 +2353,7 @@ type HasNonOptionalBoolean<T> =
 
 </div>
 
-## HttpMethod
+### HttpMethod
 
 <div class="ts-block">
 
@@ -2370,7 +2370,7 @@ type HttpMethod =
 
 </div>
 
-## IsAny
+### IsAny
 
 <div class="ts-block">
 
@@ -2380,7 +2380,7 @@ type IsAny<T> = 0 extends 1 & T ? true : false;
 
 </div>
 
-## Logger
+### Logger
 
 <div class="ts-block">
 
@@ -2484,7 +2484,7 @@ Print a bold red message, followed by a stack trace for each error (following `.
 </div>
 </div></div>
 
-## MaybePromise
+### MaybePromise
 
 <div class="ts-block">
 
@@ -2494,7 +2494,7 @@ type MaybePromise<T> = T | Promise<T>;
 
 </div>
 
-## PrerenderEntryGeneratorMismatchHandler
+### PrerenderEntryGeneratorMismatchHandler
 
 <div class="ts-block">
 
@@ -2511,7 +2511,7 @@ interface PrerenderEntryGeneratorMismatchHandler {/*…*/}
 <div class="ts-block-property-details"></div>
 </div></div>
 
-## PrerenderEntryGeneratorMismatchHandlerValue
+### PrerenderEntryGeneratorMismatchHandlerValue
 
 <div class="ts-block">
 
@@ -2525,7 +2525,7 @@ type PrerenderEntryGeneratorMismatchHandlerValue =
 
 </div>
 
-## PrerenderHttpErrorHandler
+### PrerenderHttpErrorHandler
 
 <div class="ts-block">
 
@@ -2548,7 +2548,7 @@ message: string;
 <div class="ts-block-property-details"></div>
 </div></div>
 
-## PrerenderHttpErrorHandlerValue
+### PrerenderHttpErrorHandlerValue
 
 <div class="ts-block">
 
@@ -2562,7 +2562,7 @@ type PrerenderHttpErrorHandlerValue =
 
 </div>
 
-## PrerenderInvalidUrlHandler
+### PrerenderInvalidUrlHandler
 
 <div class="ts-block">
 
@@ -2579,7 +2579,7 @@ interface PrerenderInvalidUrlHandler {/*…*/}
 <div class="ts-block-property-details"></div>
 </div></div>
 
-## PrerenderInvalidUrlHandlerValue
+### PrerenderInvalidUrlHandlerValue
 
 <div class="ts-block">
 
@@ -2593,7 +2593,7 @@ type PrerenderInvalidUrlHandlerValue =
 
 </div>
 
-## PrerenderMap
+### PrerenderMap
 
 <div class="ts-block">
 
@@ -2603,7 +2603,7 @@ type PrerenderMap = Map<string, PrerenderOption>;
 
 </div>
 
-## PrerenderMissingIdHandler
+### PrerenderMissingIdHandler
 
 <div class="ts-block">
 
@@ -2620,7 +2620,7 @@ interface PrerenderMissingIdHandler {/*…*/}
 <div class="ts-block-property-details"></div>
 </div></div>
 
-## PrerenderMissingIdHandlerValue
+### PrerenderMissingIdHandlerValue
 
 <div class="ts-block">
 
@@ -2634,7 +2634,7 @@ type PrerenderMissingIdHandlerValue =
 
 </div>
 
-## PrerenderOption
+### PrerenderOption
 
 <div class="ts-block">
 
@@ -2644,7 +2644,7 @@ type PrerenderOption = boolean | 'auto';
 
 </div>
 
-## PrerenderUnseenRoutesHandler
+### PrerenderUnseenRoutesHandler
 
 <div class="ts-block">
 
@@ -2661,7 +2661,7 @@ interface PrerenderUnseenRoutesHandler {/*…*/}
 <div class="ts-block-property-details"></div>
 </div></div>
 
-## PrerenderUnseenRoutesHandlerValue
+### PrerenderUnseenRoutesHandlerValue
 
 <div class="ts-block">
 
@@ -2675,7 +2675,7 @@ type PrerenderUnseenRoutesHandlerValue =
 
 </div>
 
-## Prerendered
+### Prerendered
 
 <div class="ts-block">
 
@@ -2753,7 +2753,7 @@ An array of prerendered paths (without trailing slashes, regardless of the trail
 </div>
 </div></div>
 
-## RequestOptions
+### RequestOptions
 
 <div class="ts-block">
 
@@ -2779,7 +2779,7 @@ platform?: App.Platform;
 <div class="ts-block-property-details"></div>
 </div></div>
 
-## RouteSegment
+### RouteSegment
 
 <div class="ts-block">
 
@@ -2814,7 +2814,7 @@ rest: boolean;
 <div class="ts-block-property-details"></div>
 </div></div>
 
-## TrailingSlash
+### TrailingSlash
 
 <div class="ts-block">
 
