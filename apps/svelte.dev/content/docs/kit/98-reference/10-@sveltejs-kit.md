@@ -2860,7 +2860,8 @@ type HttpMethod =
 	| 'PUT'
 	| 'DELETE'
 	| 'PATCH'
-	| 'OPTIONS';
+	| 'OPTIONS'
+	| 'QUERY';
 ```
 
 </div>
