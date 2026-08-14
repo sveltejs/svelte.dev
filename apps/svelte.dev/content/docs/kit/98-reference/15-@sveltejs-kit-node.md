@@ -41,10 +41,12 @@ function createReadableStream(file: string): ReadableStream;
 ```dts
 function getRequest({
 	request,
+	response,
 	base,
 	bodySizeLimit
 }: {
 	request: import('http').IncomingMessage;
+	response?: import('http').ServerResponse;
 	base: string;
 	bodySizeLimit?: number;
 }): Request;
