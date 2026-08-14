@@ -496,12 +496,13 @@ Transitions will play during the initial render unless the `intro` option is set
 ```dts
 function mount<
 	Props extends Record<string, any>,
-	Exports extends Record<string, any>
+	Exports extends Record<string, any>,
+	Renderer = undefined
 >(
 	component:
 		| ComponentType<SvelteComponent<Props>>
 		| Component<Props, Exports, any>,
-	options: MountOptions<Props>
+	options: MountOptions<Props, Renderer>
 ): Exports;
 ```
 
@@ -1040,22 +1041,33 @@ Discard the fork
 
 ## MountOptions
 
-Defines the options accepted by the `mount()` function.
-
 <div class="ts-block">
 
 ```dts
 type MountOptions<
-	Props extends Record<string, any> = Record<string, any>
-> = {
-	/**
-	 * Target element where the component will be mounted.
-	 */
-	target: Document | Element | ShadowRoot;
-	/**
-	 * Optional node inside `target`. When specified, it is used to render the component immediately before it.
-	 */
-	anchor?: Node;
+	Props extends Record<string, any> = Record<string, any>,
+	Renderer = undefined
+> = (Renderer extends MountRenderer
+	? {
+			/** Custom renderer to use instead of the DOM. */
+			renderer: Renderer;
+			/** Target node where the component will be mounted. */
+			target: MountRendererTarget<Renderer>;
+			/** Optional node inside `target`. When specified, it is used to render the component immediately before it. */
+			anchor?: MountRendererAnchor<Renderer>;
+		}
+	: {
+			/**
+			 * Target element where the component will be mounted.
+			 */
+			target: Document | Element | ShadowRoot;
+			/**
+			 * Optional node inside `target`. When specified, it is used to render the component immediately before it.
+			 */
+			anchor?: Node;
+			/** Custom renderer to use instead of the DOM. */
+			renderer?: undefined;
+		}) & {
 	/**
 	 * Allows the specification of events.
 	 * @deprecated Use callback props instead.
@@ -1078,18 +1090,18 @@ type MountOptions<
 		error: unknown
 	) => unknown | Promise<unknown>;
 } & ({} extends Props
-	? {
-			/**
-			 * Component properties.
-			 */
-			props?: Props;
-		}
-	: {
-			/**
-			 * Component properties.
-			 */
-			props: Props;
-		});
+		? {
+				/**
+				 * Component properties.
+				 */
+				props?: Props;
+			}
+		: {
+				/**
+				 * Component properties.
+				 */
+				props: Props;
+			});
 ```
 
 </div>
