@@ -2073,6 +2073,24 @@ mimeTypes: Record<string, string>;
 ```
 
 <div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+prerenderedRoutes: Set<string>;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+basePath: string;
+```
+
+<div class="ts-block-property-details"></div>
 </div></div>
 
 ## ServerInitOptions
