@@ -9,10 +9,10 @@
 	"dependencies": {
 		"@cloudflare/workers-types": "^4.20260305.0",
 		"@sveltejs/adapter-auto": "^8.0.0-next.3",
-		"@sveltejs/adapter-vercel": "^7.0.0-next.4",
+		"@sveltejs/adapter-vercel": "https://pkg.svelte.dev/@sveltejs/adapter-vercel/c/cf061130658f0c9d3a3d137c26ca5f8d6f12e8db",
 		"@sveltejs/amp": "^1.1.5",
-		"@sveltejs/enhanced-img": "^1.0.0-next.3",
-		"@sveltejs/kit": "catalog:",
+		"@sveltejs/enhanced-img": "https://pkg.svelte.dev/@sveltejs/enhanced-img/c/cf061130658f0c9d3a3d137c26ca5f8d6f12e8db",
+		"@sveltejs/kit": "https://pkg.svelte.dev/@sveltejs/kit/c/cf061130658f0c9d3a3d137c26ca5f8d6f12e8db",
 		"@sveltejs/sv-utils": "^0.3.2",
 		"@sveltejs/vite-plugin-svelte": "^7.2.0",
 		"@testing-library/dom": "^10.4.1",
