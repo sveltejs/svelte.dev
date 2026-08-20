@@ -57,6 +57,15 @@ respond(request: Request, options: RequestOptions): Promise<Response>;
 ```
 
 <div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+manifest: SSRManifest;
+```
+
+<div class="ts-block-property-details"></div>
 </div></div>
 
 
@@ -764,7 +773,11 @@ Generate a module exposing public environment variables as `$app/env/public` if 
 <div class="ts-block-property">
 
 ```dts
-generateManifest: (opts: { relativePath: string; routes?: RouteDefinition[] }) => string;
+generateServer: (opts: {
+	relativePath: string;
+	routes?: RouteDefinition[];
+	export?: boolean;
+}) => string;
 ```
 
 <div class="ts-block-property-details">
@@ -772,10 +785,25 @@ generateManifest: (opts: { relativePath: string; routes?: RouteDefinition[] }) =
 <div class="ts-block-property-bullets">
 
 - `opts.relativePath` A relative path to the base directory of the server build output
+- `opts.export` Whether to export the server module - defaults to `true`
+- <span class="tag">returns</span> JavaScript source code that initialises the server and exports a `server` object
 
 </div>
 
-Generate a server-side manifest to initialise the SvelteKit [server](/docs/kit/@sveltejs-kit#Server) with.
+Generate a module that initialises the SvelteKit [server](/docs/kit/@sveltejs-kit#Server).
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+getManifest(): typeof import('$app/manifest');
+```
+
+<div class="ts-block-property-details">
+
+Gets the value of the `$app/manifest` module
 
 </div>
 </div>
@@ -2012,64 +2040,6 @@ methods: Array<HttpMethod | '*'>;
 
 ```dts
 config: Config;
-```
-
-<div class="ts-block-property-details"></div>
-</div></div>
-
-## SSRManifest
-
-Information required to instantiate a new `Server` instance.
-
-<div class="ts-block">
-
-```dts
-interface SSRManifest {/*…*/}
-```
-
-<div class="ts-block-property">
-
-```dts
-appDir: string;
-```
-
-<div class="ts-block-property-details">
-
-The directory where SvelteKit keeps its stuff, including static assets (such as JS and CSS) and internally-used routes.
-
-</div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-appPath: string;
-```
-
-<div class="ts-block-property-details">
-
-The `base` and `appDir` settings combined without a leading slash.
-
-</div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-assets: Set<string>;
-```
-
-<div class="ts-block-property-details">
-
-Static files from `config.files.assets` and the service worker (if any).
-
-</div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-mimeTypes: Record<string, string>;
 ```
 
 <div class="ts-block-property-details"></div>
