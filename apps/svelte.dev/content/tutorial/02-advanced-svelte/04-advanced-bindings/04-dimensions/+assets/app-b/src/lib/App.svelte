@@ -10,7 +10,7 @@
 </label>
 
 <div bind:clientWidth={w} bind:clientHeight={h}>
-	<span style="font-size: {size}px" contenteditable>edit this text</span>
+	<span class="boxinput" style="font-size: {size}px" contenteditable>edit this text</span>
 	<span class="size">{w} x {h}px</span>
 </div>
 
@@ -32,5 +32,12 @@
 		color: white;
 		padding: 0.2em 0.5em;
 		white-space: pre;
+	}
+
+	.boxinput {
+		display: inline-block;
+		min-width: 1ch;
+		min-height: 1em;
+		outline: none;
 	}
 </style>
