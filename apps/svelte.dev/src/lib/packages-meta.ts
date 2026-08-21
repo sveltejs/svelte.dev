@@ -124,6 +124,10 @@ const FEATURED: {
 				name: '@content-collections/core',
 				description: 'Transform your content into type-safe data collections'
 			},
+			{
+				name: 'markstream-svelte',
+				description: 'Svelte 5 streaming Markdown renderer for AI chat interfaces'
+			},
 			{ name: 'svelte-exmarkdown', description: 'Extensible component for Markdown rendering' },
 			{
 				name: '@magidoc/plugin-svelte-marked',
