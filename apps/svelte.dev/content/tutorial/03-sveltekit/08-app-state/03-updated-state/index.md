@@ -4,6 +4,8 @@ title: updated
 
 The `updated` state contains `true` or `false` depending on whether a new version of the app has been deployed since the page was first opened. For this to work, your `svelte.config.js` must specify `kit.version.pollInterval`.
 
+The toast only appears after the app detects a version change, so load the page, deploy a new version, and wait for the next poll.
+
 ```svelte
 /// file: src/routes/+layout.svelte
 <script>
