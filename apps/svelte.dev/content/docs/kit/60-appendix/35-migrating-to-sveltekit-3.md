@@ -505,7 +505,7 @@ Previously, any module inside `src/lib/server` was treated as server-only. This 
 
 ## Remote functions
 
-Remote functions are still considered experimental — opt in via the `experimental.remoteFunctions` flag alongside `compilerOptions.experimental.async`:
+Remove functions are still considered experimental — opt in via the `experimental.remoteFunctions` flag alongside `compilerOptions.experimental.async`:
 
 ```js
 /// file: vite.config.js
