@@ -955,12 +955,20 @@ instrument: (args: {
 	entrypoint: string;
 	instrumentation: string;
 	start?: string;
+	environment?: {
+		module?: string;
+		generateInit: (args: { importSpecifier: string }) => string;
+	};
 	module?:
 		| {
 				exports: string[];
 		  }
 		| {
-				generateText: (args: { instrumentation: string; start: string }) => string;
+			generateText: (args: {
+				instrumentation: string;
+				start: string;
+				environment?: string;
+			}) => string;
 		  };
 }) => void;
 ```
@@ -973,6 +981,7 @@ instrument: (args: {
 - `options.entrypoint` the path to the entrypoint to trace.
 - `options.instrumentation` the path to the instrumentation file.
 - `options.start` the name of the start file. This is what `entrypoint` will be renamed to.
+- `options.environment` configuration for populating dynamic env vars before instrumentation runs. `module` defaults to `<serverDirectory>/env.js`; override it if the adapter moves or rebundles that entry.
 - `options.module` configuration for the resulting entrypoint module.
 - `options.module.generateText` a function that receives the relative paths to the instrumentation and start files, and generates the text of the module to be traced. If not provided, the default implementation will be used, which uses top-level await.
 - <span class="tag since">available since</span> v2.31.0
@@ -984,6 +993,10 @@ Instrument `entrypoint` with `instrumentation`.
 Renames `entrypoint` to `start` and creates a new module at
 `entrypoint` which imports `instrumentation` and then dynamically imports `start`. This allows
 the module hooks necessary for instrumentation libraries to be loaded prior to any application code.
+
+If `environment` is provided, it generates a separate init module which is imported before
+`instrumentation`. The callback receives the relative import specifier to the env module and
+should return code that imports `set_env` from it and calls it with the platform's environment.
 
 Caveats:
 - "Live exports" will not work. If your adapter uses live exports, your users will need to manually import the server instrumentation on startup.
