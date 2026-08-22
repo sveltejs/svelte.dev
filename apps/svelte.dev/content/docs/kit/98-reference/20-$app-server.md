@@ -737,6 +737,8 @@ the correct client subscription.
 type RemoteLiveQueryRequestedEntry<Validated, Output> = {
 	arg: Validated;
 	query: RemoteLiveQuery<Output>;
+	/** Explicitly ignore this requested update. */
+	ignore: () => void;
 };
 ```
 
@@ -766,6 +768,8 @@ type RemoteLiveQueryRequestedResult<Validated, Output> =
 			 * ```
 			 */
 			reconnectAll: () => Promise<void>;
+			/** Explicitly ignore all updates selected by this `requested` invocation. */
+			ignoreAll: () => Promise<void>;
 		};
 ```
 
@@ -889,6 +893,8 @@ type RemoteQueryRequestedResult<Validated, Output> =
 			 * ```
 			 */
 			refreshAll: () => Promise<void>;
+			/** Explicitly ignore all updates selected by this `requested` invocation. */
+			ignoreAll: () => Promise<void>;
 		};
 ```
 
@@ -949,6 +955,8 @@ update the correct client entry.
 type RequestedEntry<Validated, Output> = {
 	arg: Validated;
 	query: RemoteQuery<Output>;
+	/** Explicitly ignore this requested update. */
+	ignore: () => void;
 };
 ```
 
