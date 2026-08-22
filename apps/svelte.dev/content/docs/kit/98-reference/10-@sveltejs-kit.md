@@ -705,6 +705,32 @@ An array of all routes (including prerendered)
 <div class="ts-block-property">
 
 ```dts
+manifest: typeof import('$app/manifest');
+```
+
+<div class="ts-block-property-details">
+
+The value of the `$app/manifest` module
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+mimeTypes: Record<string, string>;
+```
+
+<div class="ts-block-property-details">
+
+A record of file extensions to MIME types
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
 createEntries?: (fn: (route: RouteDefinition) => AdapterEntry) => Promise<void>;
 ```
 
@@ -764,7 +790,7 @@ Generate a module exposing public environment variables as `$app/env/public` if 
 <div class="ts-block-property">
 
 ```dts
-generateManifest: (opts: { relativePath: string; routes?: RouteDefinition[] }) => string;
+generateManifest?: (opts: { relativePath: string; routes?: RouteDefinition[] }) => string;
 ```
 
 <div class="ts-block-property-details">
@@ -772,6 +798,7 @@ generateManifest: (opts: { relativePath: string; routes?: RouteDefinition[] }) =
 <div class="ts-block-property-bullets">
 
 - `opts.relativePath` A relative path to the base directory of the server build output
+- <span class="tag deprecated">deprecated</span> removed in 3.0. Use `builder.writeServerEntrypoint` or `builder.manifest` instead
 
 </div>
 
@@ -834,6 +861,32 @@ getAppPath: () => string;
 <div class="ts-block-property-details">
 
 Get the application path including any configured `base` path, e.g. `my-base-path/_app`.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+writeServerEntrypoint: (
+	dest: string,
+	opts?: {
+		routes?: RouteDefinition[];
+		serverDirectory?: string;
+	}
+) => void;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- `opts.routes` A subset of the routes to include in the server's manifest
+- `opts.serverDirectory` The directory containing the server code. Defaults to `getServerDirectory()`.
+
+</div>
+
+Writes a javascript file that initialises the SvelteKit [server](/docs/kit/@sveltejs-kit#Server).
 
 </div>
 </div>
