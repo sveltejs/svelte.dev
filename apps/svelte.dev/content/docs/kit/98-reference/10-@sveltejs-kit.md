@@ -1993,6 +1993,15 @@ prerender: PrerenderOption;
 <div class="ts-block-property">
 
 ```dts
+trailingSlash: TrailingSlash | undefined;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
 segments: RouteSegment[];
 ```
 
