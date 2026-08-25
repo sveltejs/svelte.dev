@@ -9,6 +9,7 @@
 	"dependencies": {
 		"@cloudflare/workers-types": "^4.20260305.0",
 		"@sveltejs/adapter-auto": "^8.0.0-next.3",
+		"@sveltejs/adapter-bun": "^1.0.0-next.1",
 		"@sveltejs/adapter-vercel": "^7.0.0-next.4",
 		"@sveltejs/amp": "^1.1.5",
 		"@sveltejs/enhanced-img": "^1.0.0-next.3",
