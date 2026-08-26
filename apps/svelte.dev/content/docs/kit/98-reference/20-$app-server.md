@@ -402,70 +402,7 @@ The type of a remote `form` function. See [Remote functions](/docs/kit/remote-fu
 type RemoteForm<
 	Input extends RemoteFormInput | void,
 	Output
-> = {
-	/** Attachment that sets up an event handler that intercepts the form submission on the client to prevent a full page reload */
-	[attachment: symbol]: (node: HTMLFormElement) => void;
-	method: 'POST';
-	/** The URL to send the form to. */
-	action: string;
-	/** The `<form>` element this instance is currently attached to, if any. */
-	get element(): HTMLFormElement | null;
-	/** Submit the currently attached form programmatically. */
-	submit(): Promise<boolean> & {
-		updates: (
-			...updates: RemoteQueryUpdate[]
-		) => Promise<boolean>;
-	};
-	/** Use the `enhance` method to influence what happens when the form is submitted. */
-	enhance(
-		callback: RemoteFormEnhanceCallback<Input, Output>
-	): {
-		method: 'POST';
-		action: string;
-		[attachment: symbol]: (node: HTMLFormElement) => void;
-	};
-	/**
-	 * Create an instance of the form for the given `id`.
-	 * The `id` is stringified and used for deduplication to potentially reuse existing instances.
-	 * Useful when you have multiple forms that use the same remote form action, for example in a loop.
-	 * ```svelte
-	 * {#each todos as todo}
-	 *	{const todoForm = updateTodo.for(todo.id)}
-	 *	<form {...todoForm}>
-	 *		{#if todoForm.result?.invalid}<p>Invalid data</p>{/if}
-	 *		...
-	 *	</form>
-	 *	{/each}
-	 * ```
-	 */
-	for(
-		id: ExtractId<Input>
-	): Omit<RemoteForm<Input, Output>, 'for'>;
-	/** Preflight checks */
-	preflight(
-		schema: StandardSchemaV1<Input, any>
-	): RemoteForm<Input, Output>;
-	/** Validate the form contents programmatically */
-	validate(options?: {
-		/**
-		 * Set this to `true` to also show validation issues of fields that haven't yet been
-		 * edited and blurred. This option is ignored for forms that have previously been
-		 * submitted, in which case all fields are always subject to validation
-		 * (unless the form is reset, at which point it is treated as pristine)
-		 */
-		all?: boolean;
-		/** Set this to `true` to only run the `preflight` validation. */
-		preflightOnly?: boolean;
-	}): Promise<void>;
-	/** The result of the form submission */
-	get result(): Output | undefined;
-	/** The number of pending submissions */
-	get pending(): number;
-	/** True if the form has been submitted at least once, and hasn't been reset since */
-	get submitted(): boolean;
-	/** Access form fields using object notation */
-	fields: RemoteFormFieldsRoot<Input>;
-};
+> = RemoteForm_<Input, Output, [Input]>;
 ```
 
 </div>
@@ -530,7 +467,7 @@ type RemoteFormField<Value extends RemoteFormFieldValue> =
 		 */
 		as<T extends RemoteFormFieldType<Value>>(
 			...args: AsArgs<T, Value>
-		): InputElementProps<T>;
+		): InputElementProps<T, WidenLiteralString<Value>>;
 	};
 ```
 
