@@ -232,7 +232,7 @@ Available since 5.40.0
 
 </blockquote>
 
-Returns a `[get, set]` pair of functions for working with context in a type-safe way.
+Returns a `[get, set, has]` triplet of functions for working with context in a type-safe way.
 
 `get` will throw an error if `set` has not yet been called in the current component or any of
 its ancestors.
@@ -240,7 +240,11 @@ its ancestors.
 <div class="ts-block">
 
 ```dts
-function createContext<T>(): [() => T, (context: T) => T];
+function createContext<T>(): [
+	() => T,
+	(context: T) => T,
+	() => boolean
+];
 ```
 
 </div>
