@@ -6,9 +6,9 @@
     "bobsingor"
   ],
   "homepage": "https://www.embedpdf.com/svelte-pdf-viewer",
-  "version": "2.14.4",
-  "downloads": 5177,
-  "github_stars": 4342,
-  "updated": "2026-06-08T09:00:44.709Z",
+  "version": "2.15.0",
+  "downloads": 4386,
+  "github_stars": 4409,
+  "updated": "2026-08-04T19:46:47.915Z",
   "svelte_range": ">=4.0.0"
 }
