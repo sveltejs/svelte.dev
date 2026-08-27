@@ -59,12 +59,12 @@ const nav_links: NavigationLink[] = [
 ];
 
 const banner: BannerData = {
-	id: 'ljubljana-2026-tickets',
+	id: 'ljubljana-2026-tickets-available',
 	start: new Date('1 August, 2026 00:00:00 UTC'),
 	end: new Date('20 November, 2026 23:59:59 UTC'),
 	arrow: true,
 	content: {
-		lg: 'Svelte Summit Ljubljana and online, Nov 18-19: Tickets available soon!',
+		lg: 'Svelte Summit Ljubljana and online, Nov 18-19: Tickets now available!',
 		sm: 'Svelte Summit Nov 18-19'
 	},
 	href: 'https://www.sveltesummit.com/'
