@@ -59,17 +59,16 @@ const nav_links: NavigationLink[] = [
 ];
 
 const banner: BannerData = {
-	id: 'barcelona-2025-tickets',
-	start: new Date('21 April, 2025 00:00:00 UTC'),
-	end: new Date('6 May, 2025 23:59:59 UTC'),
-	arrow: true,
+	id: 'prerelease',
+	start: new Date('2026-01-01'),
+	end: new Date('2027-12-31'),
+	arrow: false,
+	href: 'https://svelte.dev',
 	content: {
-		lg: 'Svelte Summit Barcelona and online, May 8-9: Last few days to get tickets!',
-		sm: 'Svelte Summit May 8-9'
-	},
-	href: 'https://www.sveltesummit.com/'
+		lg: 'You are viewing a prerelease deployment, click here for the stable site',
+		sm: 'prerelease deployment'
+	}
 };
-
 export const load = async () => {
 	return {
 		nav_links,
