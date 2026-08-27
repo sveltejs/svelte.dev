@@ -27,7 +27,6 @@ export function init(blocks: Block[]) {
 	indexes = Array.from({ length: max_rank + 1 }, () => new Index({ tokenize: 'forward' }));
 
 	for (const block of blocks) {
-		const title = block.breadcrumbs.at(-1);
 		map.set(block.href, block);
 		// NOTE: we're not using a number as the ID here, but it is recommended:
 		// https://github.com/nextapps-de/flexsearch#use-numeric-ids
@@ -37,7 +36,7 @@ export function init(blocks: Block[]) {
 		// We'd probably want to test both implementations across browsers if memory usage becomes an issue
 		// TODO: fix the type by updating flexsearch after
 		// https://github.com/nextapps-de/flexsearch/pull/364 is merged and released
-		indexes[block.rank ?? 0].add(block.href, `${title} ${block.content}`);
+		indexes[block.rank ?? 0].add(block.href, `${block.breadcrumbs.join(' ')} ${block.content}`);
 
 		hrefs.set(block.breadcrumbs.join('::'), block.href);
 	}
@@ -81,7 +80,6 @@ export function search(query: string, path: string): BlockGroup[] {
 			score *= CURRENT_SECTION_BOOST;
 
 			if (block.breadcrumbs.some((text) => exact_match.test(text))) {
-				console.log('EXACT MATCH', block.breadcrumbs);
 				score += EXACT_MATCH_BOOST;
 			} else if (block.breadcrumbs.some((text) => word_match.test(text))) {
 				score += WORD_MATCH_BOOST;
