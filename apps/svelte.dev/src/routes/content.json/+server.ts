@@ -34,7 +34,13 @@ async function content() {
 		const { slug, body, metadata } = document;
 		const breadcrumbs = document.breadcrumbs.map((x) => clean(x.title));
 
-		const sections = body.trim().split(/^## /m);
+		// skill content embedded in <details> blocks (AI docs) contains its own
+		// headings that don't exist as anchors on the page — exclude from search
+		const searchable_body = slug.startsWith('docs/ai/')
+			? body.replace(/<details>[\s\S]*?<\/details>/g, '')
+			: body;
+
+		const sections = searchable_body.trim().split(/^## /m);
 		const intro = sections?.shift()?.trim()!;
 		const rank = +metadata.rank;
 
