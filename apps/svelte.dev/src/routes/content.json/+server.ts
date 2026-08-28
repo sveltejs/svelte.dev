@@ -37,7 +37,7 @@ async function content() {
 		// skill content embedded in <details> blocks (AI docs) contains its own
 		// headings that don't exist as anchors on the page — exclude from search
 		const searchable_body = slug.startsWith('docs/ai/')
-			? body.replace(/<details>[\s\S]*?<\/details>/g, '')
+			? body.replace(/<details>.*?<\/details>/gs, '')
 			: body;
 
 		const sections = searchable_body.trim().split(/^## /m);
