@@ -3,8 +3,10 @@ import { Jimp } from 'jimp';
 import { stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { select_contributors } from './contributors.js';
 
 const force = process.env.FORCE_UPDATE === 'true';
+const repositories = ['svelte', 'kit', 'cli', 'vite-plugin-svelte', 'language-tools', 'ai-tools'];
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const out = path.resolve(__dirname, '../src/routes/_home/Supporters/contributors.js');
@@ -16,32 +18,38 @@ try {
 		process.exit(0);
 	}
 } catch {
-	const base = `https://api.github.com/repos/sveltejs/svelte/contributors`;
 	const { GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET } = process.env;
 
 	const MAX = 48;
 	const SIZE = 128;
 
-	const contributors = [];
-	let page = 1;
+	const contributor_lists = await Promise.all(
+		repositories.map(async (repository) => {
+			const contributors = [];
+			let page = 1;
 
-	while (true) {
-		const res = await fetch(
-			`${base}?client_id=${GITHUB_CLIENT_ID}&client_secret=${GITHUB_CLIENT_SECRET}&per_page=100&page=${page++}`
-		);
-		const list = await res.json();
+			while (true) {
+				const params = new URLSearchParams({ per_page: '100', page: String(page++) });
+				if (GITHUB_CLIENT_ID) params.set('client_id', GITHUB_CLIENT_ID);
+				if (GITHUB_CLIENT_SECRET) params.set('client_secret', GITHUB_CLIENT_SECRET);
 
-		if (!Array.isArray(list)) throw new Error('Expected an array');
+				const url = `https://api.github.com/repos/sveltejs/${repository}/contributors?${params}`;
+				const res = await fetch(url);
+				if (!res.ok)
+					throw new Error(`Could not load contributors for ${repository}: ${res.status}`);
 
-		if (list.length === 0) break;
+				const list = await res.json();
+				if (!Array.isArray(list)) throw new Error(`Expected an array for ${repository}`);
+				if (list.length === 0) break;
 
-		contributors.push(...list);
-	}
+				contributors.push(...list);
+			}
 
-	const authors = contributors
-		.filter(({ login }) => !login.includes('[bot]'))
-		.sort((a, b) => b.contributions - a.contributions)
-		.slice(0, MAX);
+			return contributors;
+		})
+	);
+
+	const authors = select_contributors(contributor_lists, MAX);
 
 	const sprite = new Jimp({ width: SIZE * authors.length, height: SIZE });
 
