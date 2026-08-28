@@ -48,6 +48,7 @@ export async function create_index(
 				});
 			} else {
 				const section = { slug, title: displayed_title, subsections: [] };
+				// some pages skip h2 and use h3 such as the svelte compiler warnings
 				arr.push(section);
 				current_section = match[0].startsWith('## ') ? section : undefined;
 			}
