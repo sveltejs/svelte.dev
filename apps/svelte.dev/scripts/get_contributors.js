@@ -12,6 +12,18 @@ const automated_accounts = new Set(['copilot']);
  * @typedef {{ login: string; avatar_url: string; contributions: number }} Contributor
  */
 
+/** @param {{ bitmap: { data: Buffer } }} image */
+function has_single_color(image) {
+	const { data } = image.bitmap;
+	const color = data.subarray(0, 3);
+
+	for (let i = 4; i < data.length; i += 4) {
+		if (data[i] !== color[0] || data[i + 1] !== color[1] || data[i + 2] !== color[2]) return false;
+	}
+
+	return true;
+}
+
 /**
  * @param {Contributor[][]} contributor_lists
  * @param {number} max
@@ -102,20 +114,8 @@ try {
 
 		image.resize({ w: SIZE, h: SIZE });
 
-		let is_black = true;
-		for (let i = 0; i < image.bitmap.data.length; i += 4) {
-			if (
-				image.bitmap.data[i] > 5 ||
-				image.bitmap.data[i + 1] > 5 ||
-				image.bitmap.data[i + 2] > 5
-			) {
-				is_black = false;
-				break;
-			}
-		}
-
-		if (is_black) {
-			console.log(`Skipping ${author.login}: completely black avatar`);
+		if (has_single_color(image)) {
+			console.log(`Skipping ${author.login}: single-color avatar`);
 			continue;
 		}
 

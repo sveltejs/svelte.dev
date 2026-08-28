@@ -6,6 +6,18 @@ import { fileURLToPath } from 'node:url';
 
 const force = process.env.FORCE_UPDATE === 'true';
 
+/** @param {{ bitmap: { data: Buffer } }} image */
+function has_single_color(image) {
+	const { data } = image.bitmap;
+	const color = data.subarray(0, 3);
+
+	for (let i = 4; i < data.length; i += 4) {
+		if (data[i] !== color[0] || data[i + 1] !== color[1] || data[i + 2] !== color[2]) return false;
+	}
+
+	return true;
+}
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const out = path.resolve(__dirname, '../src/routes/_home/Supporters/donors.js');
 
@@ -43,6 +55,11 @@ try {
 			const image = await Jimp.fromBuffer(buffer);
 
 			image.resize({ w: SIZE, h: SIZE });
+
+			if (has_single_color(image)) {
+				console.log(`Skipping ${backer.name}: single-color image`);
+				continue;
+			}
 
 			included.push({ backer, image });
 		} catch (err) {
