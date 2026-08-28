@@ -45,9 +45,9 @@ export function init(blocks: Block[]) {
 }
 
 const CURRENT_SECTION_BOOST = 2;
-const EXACT_MATCH_BOOST = 10;
-const WORD_MATCH_BOOST = 4;
-const NEAR_MATCH_BOOST = 2;
+const EXACT_MATCH_BOOST = 100;
+const WORD_MATCH_BOOST = 50;
+const NEAR_MATCH_BOOST = 25;
 const BREADCRUMB_LENGTH_BOOST = 0.2;
 
 interface Entry {
