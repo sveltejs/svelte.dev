@@ -7,6 +7,14 @@ import { fileURLToPath } from 'node:url';
 const force = process.env.FORCE_UPDATE === 'true';
 const repositories = ['svelte', 'kit', 'cli', 'vite-plugin-svelte', 'language-tools', 'ai-tools'];
 
+/**
+ * @typedef {{ login: string; avatar_url: string; contributions: number }} Contributor
+ */
+
+/**
+ * @param {Contributor[][]} contributor_lists
+ * @param {number} max
+ */
 function select_contributors(contributor_lists, max) {
 	const lists = contributor_lists.map((contributors) =>
 		contributors.filter(({ login }) => !login.includes('[bot]'))
