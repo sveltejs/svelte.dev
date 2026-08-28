@@ -13,15 +13,19 @@ const automated_accounts = new Set(['copilot']);
  */
 
 /** @param {{ bitmap: { data: Buffer } }} image */
-function has_single_color(image) {
+function has_low_color_variance(image) {
 	const { data } = image.bitmap;
-	const color = data.subarray(0, 3);
+	const min = [255, 255, 255];
+	const max = [0, 0, 0];
 
-	for (let i = 4; i < data.length; i += 4) {
-		if (data[i] !== color[0] || data[i + 1] !== color[1] || data[i + 2] !== color[2]) return false;
+	for (let i = 0; i < data.length; i += 4) {
+		for (let channel = 0; channel < 3; channel += 1) {
+			min[channel] = Math.min(min[channel], data[i + channel]);
+			max[channel] = Math.max(max[channel], data[i + channel]);
+		}
 	}
 
-	return true;
+	return max.every((value, channel) => value - min[channel] <= 32);
 }
 
 /**
@@ -114,8 +118,8 @@ try {
 
 		image.resize({ w: SIZE, h: SIZE });
 
-		if (has_single_color(image)) {
-			console.log(`Skipping ${author.login}: single-color avatar`);
+		if (has_low_color_variance(image)) {
+			console.log(`Skipping ${author.login}: low-variance avatar`);
 			continue;
 		}
 
