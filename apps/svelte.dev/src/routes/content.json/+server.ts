@@ -1,4 +1,4 @@
-import type { Tokens } from 'marked';
+import { lexer, type Token, type Tokens } from 'marked';
 import { index, docs as _docs, examples } from '#lib/server/content.ts';
 import { json } from '@sveltejs/kit';
 import { transform, slugify, clean } from '@sveltejs/site-kit/markdown';
@@ -34,52 +34,62 @@ async function content() {
 		const { slug, body, metadata } = document;
 		const breadcrumbs = document.breadcrumbs.map((x) => clean(x.title));
 
-		const sections = body.trim().split(/^## /m);
-		const intro = sections?.shift()?.trim()!;
-		const rank = +metadata.rank;
+		// skill content embedded in <details> blocks (AI docs) contains its own
+		// headings that don't exist as anchors on the page — exclude from search
+		const searchable_body = slug.startsWith('docs/ai/')
+			? body.replace(/<details>.*?<\/details>/gs, '')
+			: body;
+
+		const rank = +(metadata.rank ?? (slug.startsWith('tutorial/') ? 1 : 0));
+		const tokens = lexer(searchable_body.trim());
+		const sections: Array<{ heading: Tokens.Heading; content: Token[] }> = [];
+		const intro: Token[] = [];
+		let section: (typeof sections)[number] | undefined;
+
+		for (const token of tokens) {
+			if (token.type === 'heading' && (token.depth === 2 || token.depth === 3)) {
+				const next_section = { heading: token as Tokens.Heading, content: [] };
+				sections.push(next_section);
+				section = next_section;
+			} else {
+				(section?.content ?? intro).push(token);
+			}
+		}
 
 		blocks.push({
 			breadcrumbs: [...breadcrumbs, clean(metadata.title ?? '')],
 			href: get_href([slug]),
-			content: await plaintext(intro),
+			content: await plaintext(
+				intro
+					.map((token) => token.raw)
+					.join('')
+					.trim()
+			),
 			rank
 		});
 
+		let h2: string | undefined;
 		for (const section of sections) {
-			const lines = section.split('\n');
-			const h2 = lines.shift();
-			if (!h2) {
-				console.warn('Could not find expected heading h2');
-				continue;
-			}
+			const { depth, text } = section.heading;
+			if (depth === 2) h2 = text;
 
-			const content = lines.join('\n');
-			const subsections = content.trim().split('## ');
-			const intro = subsections?.shift()?.trim();
-			if (intro) {
-				blocks.push({
-					breadcrumbs: [...breadcrumbs, clean(metadata.title), clean(h2)],
-					href: get_href([slug, slugify(h2)]),
-					content: await plaintext(intro),
-					rank
-				});
-			}
+			const headings = depth === 3 && h2 ? [h2, text] : [text];
+			const content = section.content
+				.map((token) => token.raw)
+				.join('')
+				.trim();
+			if (depth === 2 && !content) continue;
 
-			for (const subsection of subsections) {
-				const lines = subsection.split('\n');
-				const h3 = lines.shift();
-				if (!h3) {
-					console.warn('Could not find expected heading h3');
-					continue;
-				}
-
-				blocks.push({
-					breadcrumbs: [...breadcrumbs, clean(metadata.title), clean(h2), clean(h3)],
-					href: get_href([slug, slugify(h2) + '-' + slugify(h3)]),
-					content: await plaintext(lines.join('\n').trim()),
-					rank
-				});
-			}
+			blocks.push({
+				breadcrumbs: [
+					...breadcrumbs,
+					clean(metadata.title),
+					...headings.map((heading) => clean(heading))
+				],
+				href: get_href([slug, headings.map((heading) => slugify(heading)).join('-')]),
+				content: await plaintext(content),
+				rank
+			});
 		}
 	}
 

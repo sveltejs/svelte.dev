@@ -28,7 +28,8 @@ export function GET({ params }) {
 			status: 200,
 			headers: {
 				'Content-Type': 'text/plain; charset=utf-8',
-				'Cache-Control': 'public, max-age=3600'
+				'Cache-Control': 'public, max-age=3600',
+				Link: `<https://svelte.dev/docs/${params.topic}/${params.path}>; rel="canonical"`
 			}
 		});
 	} else {
