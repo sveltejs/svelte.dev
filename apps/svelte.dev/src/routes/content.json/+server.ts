@@ -42,7 +42,7 @@ async function content() {
 
 		const sections = searchable_body.trim().split(/^## /m);
 		const intro = sections?.shift()?.trim()!;
-		const rank = +metadata.rank;
+		const rank = +(metadata.rank ?? (slug.startsWith('tutorial/') ? 1 : 0));
 
 		blocks.push({
 			breadcrumbs: [...breadcrumbs, clean(metadata.title ?? '')],
