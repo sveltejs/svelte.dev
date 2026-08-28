@@ -1,5 +1,5 @@
 import { readdirSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
+import { join } from 'node:path';
 
 interface HeaderRule {
 	source: string;
@@ -7,7 +7,7 @@ interface HeaderRule {
 }
 
 const domain = 'https://svelte.dev';
-const docs_directory = fileURLToPath(new URL('./content/docs', import.meta.url));
+const docs_directory = join(process.cwd(), 'content', 'docs');
 
 export function create_llms_canonical(directory = docs_directory): HeaderRule[] {
 	return readdirSync(directory, { recursive: true, withFileTypes: true })
