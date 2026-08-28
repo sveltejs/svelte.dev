@@ -89,13 +89,12 @@ try {
 		})
 	);
 
-	const authors = select_contributors(contributor_lists, MAX);
+	const candidates = select_contributors(contributor_lists, Infinity);
+	const authors = [];
+	const images = [];
 
-	const sprite = new Jimp({ width: SIZE * authors.length, height: SIZE });
-
-	for (let i = 0; i < authors.length; i += 1) {
-		const author = authors[i];
-		console.log(`${i + 1} / ${authors.length}: ${author.login}`);
+	for (const author of candidates) {
+		console.log(`${authors.length + 1} / ${MAX}: ${author.login}`);
 
 		const image_data = await fetch(author.avatar_url);
 		const buffer = await image_data.arrayBuffer();
@@ -103,7 +102,31 @@ try {
 
 		image.resize({ w: SIZE, h: SIZE });
 
-		sprite.composite(image, i * SIZE, 0);
+		let is_black = true;
+		for (let i = 0; i < image.bitmap.data.length; i += 4) {
+			if (
+				image.bitmap.data[i] > 5 ||
+				image.bitmap.data[i + 1] > 5 ||
+				image.bitmap.data[i + 2] > 5
+			) {
+				is_black = false;
+				break;
+			}
+		}
+
+		if (is_black) {
+			console.log(`Skipping ${author.login}: completely black avatar`);
+			continue;
+		}
+
+		authors.push(author);
+		images.push(image);
+		if (authors.length === MAX) break;
+	}
+
+	const sprite = new Jimp({ width: SIZE * authors.length, height: SIZE });
+	for (let i = 0; i < images.length; i += 1) {
+		sprite.composite(images[i], i * SIZE, 0);
 	}
 
 	await sprite.write(
