@@ -40,7 +40,7 @@ async function content() {
 			? body.replace(/<details>.*?<\/details>/gs, '')
 			: body;
 
-		const rank = +metadata.rank;
+		const rank = +(metadata.rank ?? (slug.startsWith('tutorial/') ? 1 : 0));
 		const tokens = lexer(searchable_body.trim());
 		const sections: Array<{ heading: Tokens.Heading; content: Token[] }> = [];
 		const intro: Token[] = [];
