@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 
 const force = process.env.FORCE_UPDATE === 'true';
 const repositories = ['svelte', 'kit', 'cli', 'vite-plugin-svelte', 'language-tools', 'ai-tools'];
+const automated_accounts = new Set(['copilot']);
 
 /**
  * @typedef {{ login: string; avatar_url: string; contributions: number }} Contributor
@@ -17,7 +18,9 @@ const repositories = ['svelte', 'kit', 'cli', 'vite-plugin-svelte', 'language-to
  */
 function select_contributors(contributor_lists, max) {
 	const lists = contributor_lists.map((contributors) =>
-		contributors.filter(({ login }) => !login.includes('[bot]'))
+		contributors.filter(
+			({ login }) => !login.includes('[bot]') && !automated_accounts.has(login.toLowerCase())
+		)
 	);
 	const indices = lists.map(() => 0);
 	const selected = [];
