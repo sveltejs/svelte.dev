@@ -14,7 +14,7 @@ export async function load({ url, params }) {
 	return {
 		document: {
 			...document,
-			body: await render_content(document.file, document.body, { references })
+			body: await render_content(document.file, document.body, { origin: url.origin, references })
 		},
 		related: get_related_links(url.pathname)
 	};
