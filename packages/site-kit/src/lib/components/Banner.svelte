@@ -3,7 +3,7 @@
 	import { fade } from 'svelte/transition';
 	import Icon from './Icon.svelte';
 	import type { BannerData } from '../types';
-	import { browser } from '$app/environment';
+	import { browser } from '$app/env';
 	import { Persisted } from '../state';
 
 	let { banner }: { banner: BannerData } = $props();

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
+	import { browser } from '$app/env';
 	import { afterNavigate, replaceState } from '$app/navigation';
 	import { theme } from '@sveltejs/site-kit/state';
 	import { Repl } from '@sveltejs/repl';

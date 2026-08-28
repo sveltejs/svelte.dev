@@ -1,15 +1,15 @@
 {
   "name": "svelte-clerk",
   "npm_description": "Svelte Clerk is the easiest way to add authentication and user management to your Svelte and SvelteKit applications. Add sign up, sign in, and profile management to your application in minutes.",
-  "repo_url": "https://github.com/wobsoriano/svelte-clerk",
+  "repo_url": "https://github.com/clerk-community/svelte-clerk",
   "authors": [
     "wobsoriano"
   ],
-  "homepage": "https://github.com/wobsoriano/svelte-clerk#readme",
-  "version": "1.1.5",
-  "downloads": 7567,
-  "github_stars": 238,
-  "updated": "2026-04-23T20:57:51.107Z",
+  "homepage": "https://github.com/clerk-community/svelte-clerk#readme",
+  "version": "1.1.15",
+  "downloads": 20078,
+  "github_stars": 254,
+  "updated": "2026-08-14T04:48:10.054Z",
   "svelte_range": "^5.29.0",
   "kit_range": "^2.20.0",
   "typescript": true,

@@ -1,6 +1,6 @@
 import { redirect } from '@sveltejs/kit';
 import { oauth } from '../_config.js';
-import { GITHUB_CLIENT_ID } from '$env/static/private';
+import { GITHUB_CLIENT_ID } from '$app/env/private';
 
 export function GET({ url }) {
 	if (!GITHUB_CLIENT_ID) {
@@ -29,5 +29,7 @@ export function GET({ url }) {
 		redirect_uri: `${url.origin}/auth/callback`
 	});
 
-	redirect(302, `${oauth}/authorize?${params}`);
+	redirect(302, `${oauth}/authorize?${params}`, {
+		external: true
+	});
 }

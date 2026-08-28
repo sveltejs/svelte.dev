@@ -1,6 +1,6 @@
-import { env } from '$env/dynamic/private';
+import { LOCAL_SVELTE_PATH } from '$app/env/private';
 
-const local_svelte_path = env.LOCAL_SVELTE_PATH || '../../../svelte';
+const local_svelte_path = LOCAL_SVELTE_PATH || '../../../svelte';
 
 export async function GET({ params: { path } }) {
 	if (import.meta.env.PROD || ('/' + path).includes('/.')) {

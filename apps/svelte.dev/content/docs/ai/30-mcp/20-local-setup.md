@@ -21,6 +21,8 @@ claude mcp add -t stdio -s [scope] svelte -- npx -y @sveltejs/mcp
 
 The `[scope]` must be `user`, `project` or `local`.
 
+Alternatively, install the `svelte` plugin from [the Svelte Claude Code Marketplace](claude-plugin) to configure the local server along with useful [skills](skills).
+
 ## Claude Desktop
 
 In the Settings > Developer section, click on Edit Config. It will open the folder with a `claude_desktop_config.json` file in it. Edit the file to include the following configuration:
@@ -38,7 +40,7 @@ In the Settings > Developer section, click on Edit Config. It will open the fold
 
 ## Codex CLI
 
-Add the following to your `config.toml` (which defaults to `~/.codex/config.toml`, but refer to [the configuration documentation](https://github.com/openai/codex/blob/main/docs/config.md) for more advanced setups):
+You can automatically configure the MCP server using the [Codex plugin](codex-plugin) (recommended). If you prefer to configure the MCP server manually, add the following to your `config.toml` (which defaults to `~/.codex/config.toml`, but refer to [the configuration documentation](https://github.com/openai/codex/blob/main/docs/config.md) for more advanced setups):
 
 ```toml
 [mcp_servers.svelte]
@@ -48,7 +50,7 @@ args = ["-y", "@sveltejs/mcp"]
 
 ## Copilot CLI
 
-Use the Copilot CLI to interactively add the MCP server:
+You can automatically configure the MCP server using the [Copilot plugin](copilot-plugin) (recommended). If you prefer to configure the MCP server manually, use the Copilot CLI to interactively add the MCP server:
 
 ```bash
 /mcp add
@@ -67,15 +69,20 @@ Alternatively, create or edit `~/.copilot/mcp-config.json` and add the following
 }
 ```
 
-## Gemini CLI
+## Antigravity CLI
 
-To include the local MCP version in Gemini CLI, simply run the following command:
+To use the local MCP version in Antigravity CLI, create or edit `~/.gemini/config/mcp_config.json` and add the following configuration:
 
-```bash
-gemini mcp add -t stdio -s [scope] svelte npx -y @sveltejs/mcp
+```json
+{
+	"mcpServers": {
+		"svelte": {
+			"command": "npx",
+			"args": ["-y", "@sveltejs/mcp"]
+		}
+	}
+}
 ```
-
-The `[scope]` must be `user`, `project` or `local`.
 
 ## OpenCode
 

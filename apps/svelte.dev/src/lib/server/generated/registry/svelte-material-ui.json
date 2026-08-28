@@ -5,10 +5,11 @@
   "authors": [
     "hperrin"
   ],
-  "version": "8.0.3",
-  "downloads": 5792,
-  "github_stars": 3419,
-  "updated": "2025-08-13T00:55:30.427Z",
+  "homepage": "https://github.com/hperrin/svelte-material-ui#readme",
+  "version": "9.0.3",
+  "downloads": 4057,
+  "github_stars": 3440,
+  "updated": "2026-08-04T00:03:27.611Z",
   "typescript": false,
   "runes": false,
   "last_rune_check_version": "8.0.0-beta.3"

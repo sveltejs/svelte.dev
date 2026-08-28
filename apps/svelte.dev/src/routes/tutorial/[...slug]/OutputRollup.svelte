@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
+	import { browser } from '$app/env';
 	import Viewer from '@sveltejs/repl/viewer';
 	import { Console, type Log } from '@sveltejs/repl/console';
 	import { theme } from '@sveltejs/site-kit/state';
@@ -95,11 +95,5 @@
 		background: var(--sk-bg-1);
 		border-top: 1px solid var(--sk-border);
 		overflow-y: auto;
-	}
-
-	@media (prefers-color-scheme: dark) {
-		.terminal {
-			background: rgba(0, 0, 0, 0.5);
-		}
 	}
 </style>

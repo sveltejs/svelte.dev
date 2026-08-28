@@ -10,11 +10,13 @@ The `RequestHandler` and `Load` types both accept a `Params` argument allowing y
 ```js
 /// file: src/routes/[foo]/[bar]/[baz]/+server.js
 // @errors: 2355 2322 1360
-/** @type {import('@sveltejs/kit').RequestHandler<{
-    foo: string;
-    bar: string;
-    baz: string
-  }>} */
+/**
+ * @type {import('@sveltejs/kit').RequestHandler<{
+ *   foo: string;
+ *   bar: string;
+ *   baz: string
+ * }>}
+ */
 export async function GET({ params }) {
 	// ...
 }
@@ -206,6 +208,27 @@ A subdirectory of `$lib`. SvelteKit will prevent you from importing any modules 
 The `app.d.ts` file is home to the ambient types of your apps, i.e. types that are available without explicitly importing them.
 
 Always part of this file is the `App` namespace. This namespace contains several types that influence the shape of certain SvelteKit features you interact with.
+
+It's possible to tell SvelteKit how to type objects inside your app by declaring the `App` namespace. By default, a new project will have a file called `src/app.d.ts` containing the following:
+
+```ts
+declare global {
+	namespace App {
+		// interface Error {}
+		// interface Locals {}
+		// interface PageData {}
+		// interface PageState {}
+		// interface Platform {}
+	}
+}
+
+export {};
+```
+
+The `export {}` line exists because without it, the file would be treated as an _ambient module_ which prevents you from adding `import` declarations.
+If you need to add ambient `declare module` declarations, do so in a separate file like `src/ambient.d.ts`.
+
+By populating these interfaces, you will gain type safety when using `event.locals`, `event.platform`, and `data` from `load` functions.
 
 ## Error
 

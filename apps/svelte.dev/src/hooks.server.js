@@ -47,7 +47,7 @@ const fonts = [
 	'fira-sans-latin-400-normal'
 ];
 
-/** @type {import('@sveltejs/kit').Handle} */
+/** @type {import('@sveltejs/kit/hooks').Handle} */
 export async function handle({ event, resolve }) {
 	// Best effort to redirect from Svelte 4 docs to new docs
 	const destination = mappings.get(event.url.pathname);

@@ -80,7 +80,7 @@
 <div class="component-selector">
 	<!-- svelte-ignore a11y_no_static_element_interactions -->
 	<div class="file-tabs">
-		{#each workspace.files as File[] as file, index (file.name)}
+		{#each workspace.file_nodes as file, index (file.name)}
 			<div
 				class="button"
 				class:editable={file.name !== 'App.svelte'}

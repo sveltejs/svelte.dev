@@ -513,7 +513,13 @@
 		}
 
 		table {
+			border-collapse: collapse;
 			margin: 1em 0;
+
+			th {
+				font: var(--sk-font-h3);
+				font-size: var(--sk-font-size-body);
+			}
 		}
 
 		small {

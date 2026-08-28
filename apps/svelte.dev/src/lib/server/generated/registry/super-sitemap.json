@@ -1,15 +1,15 @@
 {
   "name": "super-sitemap",
-  "npm_description": "SvelteKit sitemap focused on ease of use and making it impossible to forget to add your paths.",
+  "npm_description": "Sitemap library for TanStack Start and SvelteKit, focused on ease of use and making it impossible to forget to add your paths.",
   "repo_url": "https://github.com/jasongitmail/super-sitemap",
   "authors": [
     "jasongitmail"
   ],
   "homepage": "https://github.com/jasongitmail/super-sitemap#readme",
-  "version": "1.0.12",
-  "downloads": 7464,
-  "github_stars": 249,
-  "updated": "2026-04-08T10:56:33.339Z",
+  "version": "2.0.6",
+  "downloads": 13964,
+  "github_stars": 269,
+  "updated": "2026-07-18T10:03:09.872Z",
   "svelte_range": ">=4.0.0 <6.0.0",
   "kit_range": "^1.27.2",
   "typescript": true,

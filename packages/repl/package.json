@@ -59,17 +59,17 @@
 	},
 	"devDependencies": {
 		"@lezer/common": "^1.5.1",
-		"@sveltejs/adapter-auto": "^7.0.1",
-		"@sveltejs/kit": "^2.53.2",
-		"@sveltejs/package": "^2.5.7",
+		"@sveltejs/adapter-auto": "^8.0.0-next.1",
+		"@sveltejs/kit": "catalog:",
+		"@sveltejs/package": "^2.5.8",
 		"@sveltejs/vite-plugin-svelte": "^7.0.0",
 		"@types/estree": "^1.0.8",
 		"prettier": "^3.8.1",
 		"prettier-plugin-svelte": "^3.5.0",
 		"publint": "^0.3.17",
-		"svelte-check": "^4.4.3",
-		"typescript": "^5.9.3",
-		"vite": "^8.0.0-beta.15"
+		"svelte-check": "^4.7.3",
+		"typescript": "^6.0.3",
+		"vite": "catalog:"
 	},
 	"type": "module",
 	"dependencies": {
@@ -106,5 +106,8 @@
 		"tailwindcss": "^4.2.1",
 		"tarparser": "^0.0.5",
 		"zimmerframe": "^1.1.4"
+	},
+	"imports": {
+		"#lib/*": "./src/lib/*"
 	}
 }

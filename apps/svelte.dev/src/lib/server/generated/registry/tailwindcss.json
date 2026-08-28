@@ -8,10 +8,10 @@
     "reinink"
   ],
   "homepage": "https://tailwindcss.com",
-  "version": "4.2.4",
-  "downloads": 99136376,
-  "github_stars": 93525,
-  "updated": "2026-04-21T13:15:55.494Z",
+  "version": "4.3.3",
+  "downloads": 125107112,
+  "github_stars": 97288,
+  "updated": "2026-07-16T12:03:35.267Z",
   "typescript": true,
   "runes": false,
   "last_rune_check_version": "4.1.3"

@@ -1,11 +1,17 @@
 import { render_content_markdown } from '@sveltejs/site-kit/markdown';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const docs_types_root = path.dirname(fileURLToPath(import.meta.resolve('docs-types/package.json')));
 
 export const render_content = (
 	filename: string,
 	body: string,
 	options: { check?: boolean; references?: Record<string, string> } = {}
 ) => {
-	return render_content_markdown(filename, body, options, (filename, source) => {
+	const render_options = { ...options, twoslashRoot: docs_types_root };
+
+	return render_content_markdown(filename, body, render_options, (filename, source) => {
 		// TODO these are copied from Svelte and SvelteKit - adjust for new filenames
 		const injected = [];
 
@@ -37,6 +43,11 @@ export const render_content = (
 			source.includes('@sveltejs/kit/')
 		) {
 			injected.push(`// @filename: ambient-kit.d.ts`, `/// <reference types="@sveltejs/kit" />`);
+		}
+
+		if (source.includes('$app/environment')) {
+			// TODO remove this once we drop SvelteKit 2 from the docs
+			injected.push(`declare module '$app/environment' { export * from '$app/env'; }`);
 		}
 
 		if (source.includes('$env/')) {
@@ -78,8 +89,8 @@ export const render_content = (
 		}
 
 		// another special case
-		if (source.includes('$lib/types')) {
-			injected.push(`declare module '$lib/types' { export interface User {} }`);
+		if (source.includes('#lib/types')) {
+			injected.push(`declare module '#lib/types' { export interface User {} }`);
 		}
 
 		return injected.join('\n');

@@ -77,7 +77,7 @@
 	export function toJSON() {
 		return {
 			imports: bundler!.result?.imports ?? [],
-			files: workspace.files,
+			files: workspace.file_nodes,
 			tailwind: workspace.tailwind,
 			aliases: workspace.aliases
 		};

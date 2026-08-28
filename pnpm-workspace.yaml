@@ -2,14 +2,37 @@ minimumReleaseAge: 2880
 minimumReleaseAgeExclude:
   - '@sveltejs/*'
   - svelte
+  - sv
   - esrap
   - devalue
   - zimmerframe
   - prettier-plugin-svelte
   - svelte-check
   - esm-env
+  - vite-imagetools
+  - imagetools-core
 blockExoticSubdeps: true
+engineStrict: true
+allowBuilds:
+  esbuild: true
+  sharp: true
+  svelte-preprocess: true
 
 packages:
   - 'apps/*'
   - 'packages/*'
+
+catalog:
+  '@sveltejs/kit': ^3.0.0-next.25
+  '@types/node': ^22.19.20
+  vite: ^8.0.16
+  vitest: ^4.1.8
+
+catalogs:
+  sveltekit-2:
+    '@sveltejs/kit': ^2.70.2
+
+overrides:
+  # This is a workaround to avoid the "exotic dependency is not allowed in subdependencies"
+  # error that pnpm throws when `blockExoticSubdeps` is enabled
+  'sv>@sveltejs/sv-utils': '-'

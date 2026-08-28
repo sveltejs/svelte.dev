@@ -71,7 +71,7 @@
 	onfocusout={() => {
 		workspace.disable_tab_indent();
 
-		// Heuristic: user did refocus themmselves if iframe_took_focus
+		// Heuristic: user did refocus themselves if iframe_took_focus
 		// doesn't happen in the next few miliseconds. Needed
 		// because else navigations inside the iframe refocus the editor.
 		remove_focus_timeout = setTimeout(() => {

@@ -95,6 +95,10 @@ Effect cannot be created inside a `$derived` value that was not itself created i
 `%rune%` can only be used inside an effect (e.g. during component initialisation)
 ```
 
+Effects can only be created while a parent effect is running. This means that they cannot, for example, be created inside an event handler or after an `await` expression (unless the `await` occurs directly inside a component's `<script>` tag, and not inside an async function).
+
+In very rare cases, it is appropriate to use [`$effect.root`]($effect#$effect.root) so that you can create effects outside the normal component lifecycle.
+
 ### effect_pending_outside_reaction
 
 ```
@@ -481,10 +485,10 @@ Certain lifecycle methods can only be used during component initialisation. To f
 ### missing_context
 
 ```
-Context was not set in a parent component
+Context was not set in the current component or any of its ancestors
 ```
 
-The [`createContext()`](svelte#createContext) utility returns a `[get, set]` pair of functions. `get` will throw an error if `set` was not used to set the context in a parent component.
+The [`createContext()`](svelte#createContext) utility returns a `[get, set, has]` triplet of functions. `get` will throw an error if `set` was not used to set the context in the current component or any of its ancestors.
 
 ### snippet_without_render_tag
 

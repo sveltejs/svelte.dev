@@ -2,19 +2,10 @@
 	import RemovedPage from '../../RemovedPage.svelte';
 
 	const docs = new Map([
-		[
-			'$app-environment-browser',
-			['`$app/environment#browser`', '/docs/kit/$app-environment#browser']
-		],
-		[
-			'$app-environment-building',
-			['`$app/environment#building`', '/docs/kit/$app-environment#building']
-		],
-		['$app-environment-dev', ['`$app/environment#dev`', '/docs/kit/$app-environment#dev']],
-		[
-			'$app-environment-version',
-			['`$app/environment#version`', '/docs/kit/$app-environment#version']
-		],
+		['$app-environment-browser', ['`$app/env#browser`', '/docs/kit/$app-env#browser']],
+		['$app-environment-building', ['`$app/env#building`', '/docs/kit/$app-env#building']],
+		['$app-environment-dev', ['`$app/env#dev`', '/docs/kit/$app-env#dev']],
+		['$app-environment-version', ['`$app/env#version`', '/docs/kit/$app-env#version']],
 		['$app-forms-applyaction', ['`$app/forms#applyAction`', '/docs/kit/$app-forms#applyAction']],
 		['$app-forms-deserialize', ['`$app/forms#deserialize`', '/docs/kit/$app-forms#deserialize']],
 		['$app-forms-enhance', ['`$app/forms#enhance`', '/docs/kit/$app-forms#enhance']],

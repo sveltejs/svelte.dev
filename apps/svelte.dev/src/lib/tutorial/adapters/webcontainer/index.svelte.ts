@@ -6,11 +6,20 @@ import * as yootils from 'yootils';
 import { get_depth } from '../../../utils/path.js';
 import { escape_html } from '../../../utils/escape.js';
 import { ready } from '../common/index.js';
-import type { Adapter } from '$lib/tutorial';
+import type { Adapter } from '#lib/tutorial/index.d.ts';
 import type { Item, File } from '@sveltejs/repl/workspace';
 
 const converter = new AnsiToHtml({
-	fg: 'var(--sk-fg-3)'
+	fg: 'var(--sk-fg-3)',
+	// override the default colours so that they have better contrast in dark mode
+	colors: {
+		// new vs original colour
+		1: '#e06060', // #A00
+		3: '#c47a20', // #A50
+		4: '#4d9eff', // #00A
+		5: '#c060c0', // #A0A
+		8: '#7a7a7a' // #555
+	}
 });
 
 /** Web container singleton */

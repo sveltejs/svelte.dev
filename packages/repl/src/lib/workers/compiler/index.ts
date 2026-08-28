@@ -102,17 +102,22 @@ addEventListener('message', async (event) => {
 			payload: {
 				error: null,
 				result: {
+					// @ts-expect-error
 					metadata: { runes: false },
 					...result,
 					warnings: result.warnings.map((w) => {
+						// @ts-expect-error
 						delete w.toString;
+						// @ts-expect-error
 						return { message: w.message, ...w };
 					})
 				},
 				migration
 			}
 		});
-	} catch (e) {
+	} catch (error) {
+		const e = error as any;
+
 		if (!e.position && e.loc) {
 			// this came from tsBlankSpace. Workspace expects a
 			// `position` property from a Svelte compile error;

@@ -7,7 +7,13 @@ OpenCode has a [plugin system](https://opencode.ai/docs/plugins/) that allows de
 
 ## Installation
 
-To install the plugin you can edit your [OpenCode config](https://opencode.ai/docs/config/) (either the global or the local one), adding `@sveltejs/opencode` to the list of plugins.
+With OpenCode 1.3.4 or newer, install the plugin from the command line:
+
+```sh
+opencode plugin @sveltejs/opencode
+```
+
+Alternatively, edit your [OpenCode config](https://opencode.ai/docs/config/) (either the global or the local one) and add `@sveltejs/opencode` to the list of plugins:
 
 ```json
 {
@@ -18,9 +24,22 @@ To install the plugin you can edit your [OpenCode config](https://opencode.ai/do
 
 That's it! You now have the Svelte [MCP server](mcp), [skills](skills), and the `svelte-file-editor` [subagent](subagent) configured for you.
 
+### TUI configuration
+
+The package also includes a TUI plugin for configuring these features interactively. Add `@sveltejs/opencode` to your global or project-local `tui.json`:
+
+```json
+{
+	"$schema": "https://opencode.ai/tui.json",
+	"plugin": ["@sveltejs/opencode"]
+}
+```
+
+Restart OpenCode, then run `/svelte-plugin` or select 'Configure Svelte plugin' from the command palette. Choose whether to edit the project or global configuration, then use the checkboxes and radio options to configure the plugin. Changes are saved automatically, and 'Revert changes' restores the values from when the dialog was opened.
+
 ## Configuration
 
-By default, everything is enabled, but you can configure the plugin by adding a configuration file:
+By default, the MCP server, subagent, skills, instructions, and automatic updates are enabled. The TUI plugin writes the same configuration files that you can create or edit manually:
 
 - locally, in `.opencode/svelte.json`
 - globally, in `~/.config/opencode/svelte.json` (or, if you have specified the environment variable, in `$OPENCODE_CONFIG_DIR/svelte.json`)
@@ -29,7 +48,7 @@ By default, everything is enabled, but you can configure the plugin by adding a 
 {
 	"$schema": "https://svelte.dev/opencode/schema.json",
 	"mcp": {
-		"type": "remote", // or "local" — defaults to remote
+		"type": "local", // or "remote"; defaults to local
 		"enabled": true
 	},
 	"subagent": {
@@ -50,6 +69,13 @@ By default, everything is enabled, but you can configure the plugin by adding a 
 	},
 	"instructions": {
 		"enabled": true
-	}
+	},
+	"autoupdate": true
 }
 ```
+
+### Automatic updates
+
+The plugin checks npm for newer versions and warns you when one is available. OpenCode caches plugins, so it continues using the cached version until that cache is removed.
+
+Automatic updates are enabled by default. After detecting a newer version, the plugin removes itself from the cache when OpenCode shuts down. OpenCode installs the latest version the next time it starts. Automatic updates only apply when the plugin is unpinned or explicitly uses the `latest` tag. Exact versions, ranges, and other dist-tags are left untouched because reinstalling them may resolve to the same version again. Set `"autoupdate": false` to only receive the warning.

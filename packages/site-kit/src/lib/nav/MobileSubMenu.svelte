@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import type { NavigationLink } from '../types';
 	import { onMount } from 'svelte';
 
@@ -49,7 +49,7 @@
 						<ul>
 							{#each subsections as { path, title }}
 								<li>
-									<a href={path} aria-current={path === $page.url.pathname ? 'page' : undefined}>
+									<a href={path} aria-current={path === page.url.pathname ? 'page' : undefined}>
 										{title}
 									</a>
 								</li>

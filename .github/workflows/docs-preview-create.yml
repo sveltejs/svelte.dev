@@ -1,4 +1,5 @@
 name: Docs preview create
+run-name: 'Docs preview create (${{ inputs.upstream }} #${{ inputs.pr }})'
 
 on:
   workflow_dispatch:
@@ -38,7 +39,6 @@ permissions:
 
 env:
   BRANCH: preview-${{ inputs.upstream }}-${{ inputs.pr }}
-  REF: ${{ case(inputs.sha == true,  format('c/{0}', inputs.sha), format('b/{0}', inputs.branch)) }}
 
 jobs:
   Sync:
@@ -53,7 +53,8 @@ jobs:
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          ref: main # Explicitly checkout main branch first
+          # TODO: revert this to 'main' when we merge kit next docs
+          ref: ${{ inputs.upstream == 'kit' && 'next' || 'main' }} # Explicitly checkout main branch first
       - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
@@ -66,17 +67,30 @@ jobs:
           git fetch origin
           git checkout -B ${{ env.BRANCH }} # Force create/reset branch based on current main
 
+      - name: Resolve commit SHA
+        id: resolve
+        run: |
+          sha="${{ inputs.sha }}"
+          if [ -z "$sha" ]; then
+            sha=$(git ls-remote "https://github.com/${{ inputs.owner }}/${{ inputs.downstream }}.git" "refs/heads/${{ inputs.branch }}" | cut -f1)
+          fi
+          if [ -z "$sha" ]; then
+            echo "Could not resolve commit SHA for ${{ inputs.owner }}/${{ inputs.downstream }}@${{ inputs.branch }}" >&2
+            exit 1
+          fi
+          echo "ref=c/$sha" >> "$GITHUB_OUTPUT"
+
       - name: Install Svelte upstream
         if: ${{ inputs.upstream == 'svelte' }}
-        run: pnpm add -D https://pkg.svelte.dev/svelte/${{ env.REF }} --filter "svelte.dev"
+        run: pnpm add https://pkg.svelte.dev/svelte/${{ steps.resolve.outputs.ref }} --filter "docs-types"
 
       - name: Install SvelteKit upstream
         if: ${{ inputs.upstream == 'kit' }}
-        run: pnpm add -D https://pkg.svelte.dev/@sveltejs/kit/${{ env.REF }} https://pkg.svelte.dev/@sveltejs/adapter-vercel/${{ env.REF }} https://pkg.svelte.dev/@sveltejs/enhanced-img/${{ env.REF }} --filter "svelte.dev"
+        run: pnpm add https://pkg.svelte.dev/@sveltejs/kit/${{ steps.resolve.outputs.ref }} https://pkg.svelte.dev/@sveltejs/adapter-vercel/${{ steps.resolve.outputs.ref }} https://pkg.svelte.dev/@sveltejs/enhanced-img/${{ steps.resolve.outputs.ref }} --filter "docs-types"
 
       - name: Install Svelte CLI upstream
         if: ${{ inputs.upstream == 'cli' }}
-        run: pnpm add -D https://pkg.svelte.dev/sv/${{ env.REF }} https://pkg.svelte.dev/@sveltejs/sv-utils/${{ env.REF }} --filter "svelte.dev"
+        run: pnpm add https://pkg.svelte.dev/sv/${{ steps.resolve.outputs.ref }} https://pkg.svelte.dev/@sveltejs/sv-utils/${{ steps.resolve.outputs.ref }} --filter "docs-types"
 
       - name: Sync
         run: cd apps/svelte.dev && pnpm sync-docs --owner="${{ inputs.owner }}" -p "${{ format('{0}#{1}#{2}', inputs.upstream, inputs.downstream, inputs.branch) }}"

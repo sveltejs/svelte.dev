@@ -1,4 +1,4 @@
-import { blog_posts } from '$lib/server/content';
+import { blog_posts } from '#lib/server/content.ts';
 
 export async function load() {
 	const posts = blog_posts
