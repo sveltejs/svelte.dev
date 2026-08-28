@@ -3,10 +3,39 @@ import { Jimp } from 'jimp';
 import { stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { select_contributors } from './contributors.js';
 
 const force = process.env.FORCE_UPDATE === 'true';
 const repositories = ['svelte', 'kit', 'cli', 'vite-plugin-svelte', 'language-tools', 'ai-tools'];
+
+function select_contributors(contributor_lists, max) {
+	const lists = contributor_lists.map((contributors) =>
+		contributors.filter(({ login }) => !login.includes('[bot]'))
+	);
+	const indices = lists.map(() => 0);
+	const selected = [];
+	const selected_logins = new Set();
+
+	while (selected.length < max) {
+		let advanced = false;
+
+		for (let i = 0; i < lists.length && selected.length < max; i += 1) {
+			while (indices[i] < lists[i].length) {
+				const contributor = lists[i][indices[i]++];
+				advanced = true;
+
+				if (selected_logins.has(contributor.login)) continue;
+
+				selected.push(contributor);
+				selected_logins.add(contributor.login);
+				break;
+			}
+		}
+
+		if (!advanced) break;
+	}
+
+	return selected;
+}
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const out = path.resolve(__dirname, '../src/routes/_home/Supporters/contributors.js');
