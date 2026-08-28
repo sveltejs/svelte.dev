@@ -34,8 +34,14 @@ async function content() {
 		const { slug, body, metadata } = document;
 		const breadcrumbs = document.breadcrumbs.map((x) => clean(x.title));
 
+		// skill content embedded in <details> blocks (AI docs) contains its own
+		// headings that don't exist as anchors on the page — exclude from search
+		const searchable_body = slug.startsWith('docs/ai/')
+			? body.replace(/<details>.*?<\/details>/gs, '')
+			: body;
+
 		const rank = +metadata.rank;
-		const tokens = lexer(body.trim());
+		const tokens = lexer(searchable_body.trim());
 		const sections: Array<{ heading: Tokens.Heading; content: Token[] }> = [];
 		const intro: Token[] = [];
 		let section: (typeof sections)[number] | undefined;
