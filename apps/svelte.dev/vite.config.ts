@@ -38,7 +38,7 @@ const plugins: PluginOption[] = [
 	sveltekit({
 		adapter: adapter(),
 
-		files: is_kit_2 ? { params: 'src/params-legacy.js' } : undefined,
+		files: !is_kit_2 ? { params: 'src/params-registry.ts' } : undefined,
 
 		inlineStyleThreshold: 1000,
 

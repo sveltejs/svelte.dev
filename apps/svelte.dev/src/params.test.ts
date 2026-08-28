@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { params } from './params.ts';
+import { params } from './params-registry.ts';
 
 const match = async (param: string) =>
 	!(await params.documentation['~standard'].validate(param)).issues;
