@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 
 const force = process.env.FORCE_UPDATE === 'true';
 const repositories = ['svelte', 'kit', 'cli', 'vite-plugin-svelte', 'language-tools', 'ai-tools'];
-const automated_accounts = new Set(['copilot']);
+const automated_accounts = new Set(['copilot', 'claude']);
 
 /**
  * @typedef {{ login: string; avatar_url: string; contributions: number }} Contributor
