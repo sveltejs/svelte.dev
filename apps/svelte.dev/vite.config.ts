@@ -6,6 +6,8 @@ import { browserslistToTargets } from 'lightningcss';
 import browserslist from 'browserslist';
 import { VERSION } from '@sveltejs/kit';
 
+const is_kit_2 = VERSION[0] === '2';
+
 const plugins: PluginOption[] = [
 	enhancedImages(),
 	// apply cross-origin isolation headers for tutorial when developing/previewing locally,
@@ -36,11 +38,13 @@ const plugins: PluginOption[] = [
 	sveltekit({
 		adapter: adapter(),
 
+		files: !is_kit_2 ? { params: 'src/params-registry.ts' } : undefined,
+
 		inlineStyleThreshold: 1000,
 
 		paths:
 			// TODO: remove this when we stop deploying previews for Kit 2
-			VERSION[0] === '3'
+			!is_kit_2
 				? {
 						// use deployment URL for prerender origin, so that preview environments also have the correct links
 						origin: process.env.VERCEL_URL
@@ -63,7 +67,7 @@ const plugins: PluginOption[] = [
 				throw new Error(warning.message);
 			},
 			// TODO: remove this when we stop deploying previews for Kit 2
-			...(VERSION[0] === '2'
+			...(is_kit_2
 				? {
 						origin: process.env.VERCEL_URL
 							? `https://${process.env.VERCEL_URL}`
@@ -73,13 +77,12 @@ const plugins: PluginOption[] = [
 		},
 
 		// TODO: remove this when we stop deploying previews for Kit 2
-		experimental:
-			VERSION[0] === '2'
-				? {
-						// @ts-expect-error this is invalid in Kit 3 but valid in Kit 2
-						explicitEnvironmentVariables: true
-					}
-				: undefined
+		experimental: is_kit_2
+			? {
+					// @ts-expect-error this is invalid in Kit 3 but valid in Kit 2
+					explicitEnvironmentVariables: true
+				}
+			: undefined
 	}) as PluginOption
 ];
 
