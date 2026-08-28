@@ -30,6 +30,7 @@ export async function create_index(
 				'<code>$1</code>'
 			);
 
+		let current_section: Section | undefined;
 		const sections = Array.from(body.matchAll(/^#{2,3}\s+(.*)$/gm)).reduce((arr, match) => {
 			if (is_in_code_block(body, match.index || 0)) return arr;
 			const title = match[1];
@@ -40,13 +41,15 @@ export async function create_index(
 				.replace(/:_(.+)_/g, (_, contents) => `:<em>${contents}</em>`);
 			const slug = slugify(title);
 
-			if (match[0].startsWith('###')) {
-				const section = arr.at(-1);
-				if (section) {
-					section.subsections.push({ slug: `${section.slug}-${slug}`, title: displayed_title });
-				}
+			if (match[0].startsWith('###') && current_section) {
+				current_section.subsections.push({
+					slug: `${current_section.slug}-${slug}`,
+					title: displayed_title
+				});
 			} else {
-				arr.push({ slug, title: displayed_title, subsections: [] });
+				const section = { slug, title: displayed_title, subsections: [] };
+				arr.push(section);
+				current_section = match[0].startsWith('## ') ? section : undefined;
 			}
 
 			return arr;
