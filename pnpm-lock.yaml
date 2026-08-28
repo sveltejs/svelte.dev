@@ -515,6 +515,9 @@ importers:
       vite:
         specifier: 'catalog:'
         version: 8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)
+      vitest:
+        specifier: 'catalog:'
+        version: 4.1.8(@types/node@22.19.20)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))
 
 packages:
 

@@ -90,14 +90,13 @@ export function smart_quotes(str: string, { first = true }: { first?: boolean } 
 	// wouldn't correctly handle `That '70s show` or `My country 'tis of thee`
 	// but a) it's very unlikely they'll occur in our docs, and
 	// b) they can be dealt with manually
-	return str.replace(/(.|^)('|")(.|$)/g, (m, before, quote, after) => {
-		const left = (first && before === '') || [' ', '\n', '('].includes(before);
-		let replacement = '';
+	return str.replace(/['"]/g, (quote, index) => {
+		const before = str[index - 1] ?? '';
+		const after = str[index + 1] ?? '';
+		const left =
+			(first && index === 0) || (/[\s([{<:=]/.test(before) && after !== '' && !/\s/.test(after));
 
-		const double = quote === '"';
-		replacement = double ? (left ? '“' : '”') : left ? '‘' : '’';
-
-		return (before ?? '') + replacement + (after ?? '');
+		return quote === '"' ? (left ? '“' : '”') : left ? '‘' : '’';
 	});
 }
 
