@@ -57,6 +57,7 @@ Want to dive deeper? Check out the [Svelte CLI](https://github.com/sveltejs/cli/
 - [EdenText](https://edentext.app) is a fully local open-source word processor for `.odt` and `.docx` documents that runs entirely in the browser or as a PWA
 - [Kraa.io](https://kraa.io) is a minimal-interface text editor and publishing platform where you can instantly make your writing public
 - [Note by Note](https://chromewebstore.google.com/detail/note-by-note-%E2%99%AA-pitch-shif/bifddjdeacijlelkenjkfcmlbicgoglc) is a browser extension for musicians that transposes, slows down and removes vocals from YouTube videos in real time ([GitHub](https://github.com/patrickiel/note-by-note))
+- [Roomy](https://roomy.space) is an AT Protocol-based Discord alternative for group chats in the Atmosphere ([GitHub](https://github.com/muni-town/roomy))
 - [Taxing Wages](https://taxing-wages.gokberk.se) is a salary tax calculator for 32 OECD countries built on the OECD's taxing wages data
 
 ### Learning Resources
