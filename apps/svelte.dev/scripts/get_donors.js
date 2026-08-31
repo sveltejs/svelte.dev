@@ -3,7 +3,7 @@ import { Jimp } from 'jimp';
 import { stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { has_low_color_variance } from './utils.js';
+import { is_blank } from './utils.js';
 
 const force = process.env.FORCE_UPDATE === 'true';
 
@@ -45,7 +45,7 @@ try {
 
 			image.resize({ w: SIZE, h: SIZE });
 
-			if (has_low_color_variance(image)) {
+			if (is_blank(image)) {
 				console.log(`Skipping ${backer.name}: low-variance image`);
 				continue;
 			}
