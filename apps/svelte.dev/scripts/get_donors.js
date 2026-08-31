@@ -3,24 +3,9 @@ import { Jimp } from 'jimp';
 import { stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { has_low_color_variance } from './image.js';
 
 const force = process.env.FORCE_UPDATE === 'true';
-
-/** @param {{ bitmap: { data: Buffer } }} image */
-function has_low_color_variance(image) {
-	const { data } = image.bitmap;
-	const min = [255, 255, 255];
-	const max = [0, 0, 0];
-
-	for (let i = 0; i < data.length; i += 4) {
-		for (let channel = 0; channel < 3; channel += 1) {
-			min[channel] = Math.min(min[channel], data[i + channel]);
-			max[channel] = Math.max(max[channel], data[i + channel]);
-		}
-	}
-
-	return max.every((value, channel) => value - min[channel] <= 32);
-}
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const out = path.resolve(__dirname, '../src/routes/_home/Supporters/donors.js');
