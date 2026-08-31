@@ -80,18 +80,18 @@ _UI Components and Design Systems_
 - [SVAR Svelte Calendar and Kanban](https://svar.dev/svelte/calendar/) add event calendar and Kanban board components to the SVAR Svelte library, both with drag and drop, filtering and iCal import/export
 - [MUKADE UI](https://mukade-ui.com) is a terminal-style UI component library
 - [Material Svelte](https://material-svelte.flenze.com) is a Material Design 3-inspired UI library
-- [Beautiful UI Svelte](https://beautiful-ui-svelte.vercel.app) is a Svelte port of a set of React AI-app components
+- [Beautiful UI Svelte](https://beautiful-ui-svelte.vercel.app) is a port of a set of React AI-app components
 
 _Animations and Icons_
 
-- [morphicons](https://morphicons-svelte.vercel.app) is a Svelte 5 icon library where any stroke icon morphs into any other with a single prop change
-- [Amicro SV](https://amicro.enisdev.com) is a Svelte 5 port of Amicro, a curated library of micro-interaction and transition components
+- [morphicons](https://morphicons-svelte.vercel.app) is an icon library where any stroke icon morphs into any other with a single prop change
+- [Amicro SV](https://amicro.enisdev.com) is a port of Amicro, a curated library of micro-interaction and transition components
 - [loadersz](https://loadersz.vercel.app) is a framework-agnostic loader library with 70 canvas-based motion states, exposed as a custom element with typed entry points for React, Vue and Svelte
 
 _Frameworks and Dev Tools_
 
 - [ogygia](https://ogygia.puruvj.dev/) brings SSR islands to SvelteKit, from Svelte contributor [Puru VJ](https://bsky.app/profile/puruvj.dev)
-- [TanStack Table v9](https://tanstack.com/table/v9) shipped stable with its first Svelte 5-native adapter that connects directly to runes, plus Svelte-specific docs and a shadcn-svelte example
+- [TanStack Table v9](https://tanstack.com/table/v9) shipped stable with its first Svelte-native adapter that connects directly to runes, plus Svelte-specific docs and a shadcn-svelte example
 - [Wait0](https://github.com/devforth/wait0) is a dynamic cache with SWR warmup and sitemap discovery for SvelteKit that serves pages instantly and revalidates in the background
 
 That's it for this month! Let us know if we missed anything on [Reddit](https://www.reddit.com/r/sveltejs/) or [Discord](https://discord.gg/svelte).
