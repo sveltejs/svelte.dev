@@ -33,13 +33,13 @@ Prereleases have kept rolling on the `@next` line this month, adding a few more 
 - The `preload` filter for fonts now receives the project-relative source `filename` so you can filter by directory or component (**3.0.0-next.24**, [#16443](https://github.com/sveltejs/kit/pull/16443))
 - Adapters can call the new `applyReroute` helper for split serverless function deployments (**3.0.0-next.25**, [#16665](https://github.com/sveltejs/kit/pull/16665))
 
-For the meantime, all of the SvelteKit 3 docs live on [next.svelte.dev](https://next.svelte.dev), and the full changelog is on the [version-3 branch](https://github.com/sveltejs/kit/blob/version-3/packages/kit/CHANGELOG.md). The stable 2.x line kept moving too with three patch releases (**2.70.1**, **2.70.2**, **2.70.3**) - see the [SvelteKit CHANGELOGs](https://github.com/sveltejs/kit/tree/main/packages) for the details.
+For the meantime, all of the SvelteKit 3 docs live on [next.svelte.dev](https://next.svelte.dev/docs/kit/migrating-to-sveltekit-3), and the full changelog is on the [version-3 branch](https://github.com/sveltejs/kit/blob/version-3/packages/kit/CHANGELOG.md). The stable 2.x line kept moving too with three patch releases (**2.70.1**, **2.70.2**, **2.70.3**) - see the [SvelteKit CHANGELOGs](https://github.com/sveltejs/kit/tree/main/packages) for the details.
 
 ## What's new in the Svelte CLI and Language Tools
 
-- The `mcp` add-on has been replaced with a broader `ai-tools` add-on that can set up the Svelte plugin (Claude Code, opencode) or pick individual tools (MCP server, skills, sub-agents) per client (**sv@0.17.0**, [Docs](https://svelte.dev/docs/cli/sv-add), [#1050](https://github.com/sveltejs/cli/pull/1050))
+- The `mcp` add-on has been replaced with a broader `ai-tools` add-on that can set up the Svelte plugin (Claude Code, opencode) or pick individual tools (MCP server, skills, sub-agents) per client (**sv@0.17.0**, [Docs](https://svelte.dev/docs/cli/ai-tools), [#1050](https://github.com/sveltejs/cli/pull/1050))
 - `@sveltejs/sv-utils` picks up `isKit3`, `resolveLibPrefix` and `libSubpathImports` helpers so add-ons can transparently handle SvelteKit 2 and 3 (**sv-utils@0.3.3**, [#1199](https://github.com/sveltejs/cli/pull/1199))
-- `sv migrate` has been reworked to prepare for the SvelteKit 3 migration - it now lists tasks, ships a `sveltekit-3` task that bumps dependencies and rewrites `$lib` to `#lib`, adds an `$app/state` task, and delegates the older migrations to `svelte-migrate@1` (**sv@1.0.0-next.0**, [Docs](https://svelte.dev/docs/cli/sv-migrate), [#1138](https://github.com/sveltejs/cli/pull/1138), [#1241](https://github.com/sveltejs/cli/pull/1241), [#1249](https://github.com/sveltejs/cli/pull/1249))
+- `sv migrate` has been reworked to prepare for the SvelteKit 3 migration - it now lists tasks, ships a `sveltekit-3` task that bumps dependencies and rewrites `$lib` to `#lib`, adds an `$app/state` task, delegates the older migrations to `svelte-migrate@1`, and creates a list of changes a developer or agent should resolve if they cannot be migrated automatically (**sv@1.0.0-next.0**, [Docs](https://svelte.dev/docs/cli/sv-migrate), [#1138](https://github.com/sveltejs/cli/pull/1138), [#1241](https://github.com/sveltejs/cli/pull/1241), [#1249](https://github.com/sveltejs/cli/pull/1249))
 - Newly created projects use `#lib` (Node subpath imports) instead of `$lib`, matching SvelteKit 3 (**sv@1.0.0-next.0**, [#1185](https://github.com/sveltejs/cli/pull/1185))
 - Community add-ons no longer require a scoped package name (**sv@1.0.0-next.4**, [#1216](https://github.com/sveltejs/cli/pull/1216))
 - The `experimental` add-on is now scoped to enabling experimental features, and the `versions` option value was renamed to `kit-3` (**sv@1.0.0-next.0**, breaking, [#1241](https://github.com/sveltejs/cli/pull/1241), [#1185](https://github.com/sveltejs/cli/pull/1185))
@@ -57,7 +57,7 @@ Want to dive deeper? Check out the [Svelte CLI](https://github.com/sveltejs/cli/
 - [EdenText](https://edentext.app) is a fully local open-source word processor for `.odt` and `.docx` documents that runs entirely in the browser or as a PWA
 - [Kraa.io](https://kraa.io) is a minimal-interface text editor and publishing platform where you can instantly make your writing public
 - [Note by Note](https://chromewebstore.google.com/detail/note-by-note-%E2%99%AA-pitch-shif/bifddjdeacijlelkenjkfcmlbicgoglc) is a browser extension for musicians that transposes, slows down and removes vocals from YouTube videos in real time ([GitHub](https://github.com/patrickiel/note-by-note))
-- [Roomy](https://roomy.space) is an AT Protocol-based Discord alternative for group chats in the Atmosphere ([GitHub](https://github.com/muni-town/roomy))
+- [Roomy](https://a.weird.one/) is an AT Protocol-based Discord alternative for group chats in the Atmosphere
 - [Taxing Wages](https://taxing-wages.gokberk.se) is a salary tax calculator for 32 OECD countries built on the OECD's taxing wages data
 
 ### Learning Resources
@@ -65,7 +65,7 @@ Want to dive deeper? Check out the [Svelte CLI](https://github.com/sveltejs/cli/
 _This Week in Svelte_
 
 - [Ep. 148](https://www.youtube.com/watch?v=1EIIRwU2HUg) - Changelog
-- [Ep. 149](https://www.youtube.com/watch?v=K8J7pwR8cIo) - Changelog
+- [Ep. 149](https://www.youtube.com/watch?v=K8J7pwR8cIo) - Changelog, ogygia – SSR islands and lakes in SvelteKit
 
 _To Read_
 
@@ -77,20 +77,20 @@ _UI Components and Design Systems_
 
 - [Svelte DataTables Components](https://sv-table.vercel.app) is a free collection of 16 data-table components and 11 pre-built table blocks on top of TanStack Table v9, installable via the shadcn-svelte CLI
 - [Svelte Fancy Components](https://sv-animations.vercel.app/fancy) is a port of Fancy Components with 14 unique text and media effects like Scramble In, Letter Swap and Pixel Trail
-- [SVAR Svelte Calendar and Kanban](https://svar.dev/demos/calendar/) add event calendar and Kanban board components to the SVAR Svelte library, both with drag and drop, filtering and iCal import/export
+- [SVAR Svelte Calendar and Kanban](https://svar.dev/svelte/calendar/) add event calendar and Kanban board components to the SVAR Svelte library, both with drag and drop, filtering and iCal import/export
 - [MUKADE UI](https://mukade-ui.com) is a terminal-style UI component library
-- [Material Svelte](https://material-svelte.flenze.com) is a Material Design-inspired UI library
+- [Material Svelte](https://material-svelte.flenze.com) is a Material Design 3-inspired UI library
 - [Beautiful UI Svelte](https://beautiful-ui-svelte.vercel.app) is a Svelte port of a set of React AI-app components
 
 _Animations and Icons_
 
 - [morphicons](https://morphicons-svelte.vercel.app) is a Svelte 5 icon library where any stroke icon morphs into any other with a single prop change
-- [motion-sv](https://amicro.enisdev.com) is a Svelte 5 port of Motion (formerly Framer Motion), used to power a full 157-component library called Amicro
+- [Amicro SV](https://amicro.enisdev.com) is a Svelte 5 port of Amicro, a curated library of micro-interaction and transition components
 - [loadersz](https://loadersz.vercel.app) is a framework-agnostic loader library with 70 canvas-based motion states, exposed as a custom element with typed entry points for React, Vue and Svelte
 
 _Frameworks and Dev Tools_
 
-- [ogygia](https://github.com/puruvj/ogygia) brings SSR islands to SvelteKit, from Svelte contributor [Puru VJ](https://bsky.app/profile/puruvj.dev)
+- [ogygia](https://ogygia.puruvj.dev/) brings SSR islands to SvelteKit, from Svelte contributor [Puru VJ](https://bsky.app/profile/puruvj.dev)
 - [TanStack Table v9](https://tanstack.com/table/v9) shipped stable with its first Svelte 5-native adapter that connects directly to runes, plus Svelte-specific docs and a shadcn-svelte example
 - [Wait0](https://github.com/devforth/wait0) is a dynamic cache with SWR warmup and sitemap discovery for SvelteKit that serves pages instantly and revalidates in the background
 
