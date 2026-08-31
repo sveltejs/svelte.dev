@@ -3,7 +3,7 @@ import { Jimp } from 'jimp';
 import { stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { has_low_color_variance } from './image.js';
+import { has_low_color_variance } from './utils.js';
 
 const force = process.env.FORCE_UPDATE === 'true';
 
