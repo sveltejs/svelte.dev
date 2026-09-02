@@ -1,0 +1,15 @@
+{
+	"name": "svelte-intlayer",
+	"npm_description": "Per-component i18n optimized for you bundle",
+	"repo_url": "https://github.com/aymericzip/intlayer",
+	"authors": ["aymericzip"],
+	"homepage": "https://intlayer.org",
+	"version": "8.4.0",
+	"downloads": 3690,
+	"github_stars": 631,
+	"updated": "2026-03-16:43:50.721Z",
+	"svelte_range": ">5.0.0",
+	"typescript": true,
+	"runes": true,
+	"last_rune_check_version": "0.15.0"
+}
