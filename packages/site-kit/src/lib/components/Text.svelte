@@ -429,6 +429,18 @@
 					}
 				}
 			}
+
+			@media (min-width: 767px) {
+				&:has(pre[data-language='tree']) {
+					display: table;
+					max-width: 100%;
+
+					pre {
+						width: auto;
+						padding-right: 4rem;
+					}
+				}
+			}
 		}
 
 		p code {
