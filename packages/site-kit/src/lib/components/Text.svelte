@@ -128,6 +128,8 @@
 
 <style>
 	.text :global {
+		overflow-wrap: anywhere;
+
 		h2,
 		h3 {
 			max-width: 100%;
@@ -162,6 +164,7 @@
 
 		code:not(pre *),
 		kbd {
+			overflow-wrap: normal;
 			white-space: pre-wrap;
 			padding: 0.2rem 0.4rem;
 			margin: 0 0.2rem;
