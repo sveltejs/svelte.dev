@@ -215,28 +215,28 @@ importers:
         version: 4.20260305.0
       '@sveltejs/adapter-vercel':
         specifier: ^7.0.0-next.4
-        version: 7.0.0-next.4(@sveltejs/kit@2.70.2(@sveltejs/vite-plugin-svelte@7.2.0(svelte@5.56.4(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(svelte@5.56.4(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(rollup@4.59.0)
+        version: 7.0.0-next.4(@sveltejs/kit@2.70.2(@sveltejs/vite-plugin-svelte@7.2.0(svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(rollup@4.59.0)
       '@sveltejs/amp':
         specifier: ^1.1.5
-        version: 1.1.5(@sveltejs/kit@2.70.2(@sveltejs/vite-plugin-svelte@7.2.0(svelte@5.56.4(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(svelte@5.56.4(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))
+        version: 1.1.5(@sveltejs/kit@2.70.2(@sveltejs/vite-plugin-svelte@7.2.0(svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))
       '@sveltejs/enhanced-img':
         specifier: ^1.0.0-next.3
-        version: 1.0.0-next.3(@sveltejs/vite-plugin-svelte@7.2.0(svelte@5.56.4(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(@types/node@22.19.20)(rollup@4.59.0)(svelte@5.56.4(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))
+        version: 1.0.0-next.3(@sveltejs/vite-plugin-svelte@7.2.0(svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(@types/node@22.19.20)(rollup@4.59.0)(svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))
       '@sveltejs/kit':
         specifier: catalog:sveltekit-2
-        version: 2.70.2(@sveltejs/vite-plugin-svelte@7.2.0(svelte@5.56.4(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(svelte@5.56.4(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))
+        version: 2.70.2(@sveltejs/vite-plugin-svelte@7.2.0(svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))
       '@sveltejs/sv-utils':
         specifier: ^0.3.2
         version: 0.3.2
       '@sveltejs/vite-plugin-svelte':
         specifier: ^7.2.0
-        version: 7.2.0(svelte@5.56.4(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))
+        version: 7.2.0(svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))
       '@testing-library/dom':
         specifier: ^10.4.1
         version: 10.4.1
       '@testing-library/svelte':
         specifier: ^5.3.1
-        version: 5.3.1(svelte@5.56.4(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))(vitest@4.1.8(@types/node@22.19.20)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))
+        version: 5.3.1(svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))(vitest@4.1.8(@types/node@22.19.20)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))
       '@testing-library/user-event':
         specifier: ^14.6.1
         version: 14.6.1(@testing-library/dom@10.4.1)
@@ -244,8 +244,8 @@ importers:
         specifier: ^0.16.6
         version: 0.16.6
       svelte:
-        specifier: ^5.56.4
-        version: 5.56.4(@typescript-eslint/types@8.58.0)
+        specifier: https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f
+        version: https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0)
       valibot:
         specifier: ^1.2.0
         version: 1.2.0(typescript@6.0.3)
@@ -1065,6 +1065,9 @@ packages:
   '@jridgewell/sourcemap-codec@1.5.5':
     resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
 
+  '@jridgewell/sourcemap-codec@1.6.0':
+    resolution: {integrity: sha512-T7jf+5zgsZHwNJ4lvQ7/aezbyk0nNX+zJVWpmHA7VYsEx7a7qr5Rg5IbtJFqkgze5Y2sruq1RUY8Q837Od7iFw==}
+
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
@@ -1556,6 +1559,11 @@ packages:
     peerDependencies:
       acorn: ^8.9.0
 
+  '@sveltejs/acorn-typescript@1.0.13':
+    resolution: {integrity: sha512-wgKggnhZVL9Bfx1OaKKTrYY9BFRk6C8UAkQNUcIv1+llzYrIqy+RZm5HPKzn0NpEBvTVhTqB4kQyllZywsRBRQ==}
+    peerDependencies:
+      acorn: ^8.9.0
+
   '@sveltejs/adapter-auto@8.0.0-next.1':
     resolution: {integrity: sha512-iqP8s3gwUTgEPJjQIQ+9C3lJDwx21nJFZvuuD8SeIbdJ8MlpW9FdumMpIddmzq/xejI/G6guCwBKt1Kff5kt2Q==}
     peerDependencies:
@@ -1568,6 +1576,7 @@ packages:
 
   '@sveltejs/amp@1.1.5':
     resolution: {integrity: sha512-qaVjoEgYm5pISt8XeM2yJfIxB+uqvnpUxiEFxBE6e40zy9DvOXEoMdyRKBI79R+f9Z/IhsTf6CAKjJffZrY1ew==}
+    version: 1.1.5
     peerDependencies:
       '@sveltejs/kit': ^1.0.0 || ^2.0.0
 
@@ -1581,6 +1590,7 @@ packages:
 
   '@sveltejs/kit@2.70.2':
     resolution: {integrity: sha512-RzRoRpuR2KXqc5yMO0akQHDZeT4AslOlznGITURsqHaVbtyYP4Wn3eE3gxj9JcDyNYO0crkxhdwFHc+2vkVm6w==}
+    version: 2.70.2
     engines: {node: '>=18.13'}
     hasBin: true
     peerDependencies:
@@ -1651,12 +1661,14 @@ packages:
 
   '@testing-library/svelte-core@1.0.0':
     resolution: {integrity: sha512-VkUePoLV6oOYwSUvX6ShA8KLnJqZiYMIbP2JW2t0GLWLkJxKGvuH5qrrZBV/X7cXFnLGuFQEC7RheYiZOW68KQ==}
+    version: 1.0.0
     engines: {node: '>=16'}
     peerDependencies:
       svelte: ^3 || ^4 || ^5 || ^5.0.0-next.0
 
   '@testing-library/svelte@5.3.1':
     resolution: {integrity: sha512-8Ez7ZOqW5geRf9PF5rkuopODe5RGy3I9XR+kc7zHh26gBiktLaxTfKmhlGaSHYUOTQE7wFsLMN9xCJVCszw47w==}
+    version: 5.3.1
     engines: {node: '>= 10'}
     peerDependencies:
       svelte: ^3 || ^4 || ^5 || ^5.0.0-next.0
@@ -2128,6 +2140,9 @@ packages:
   devalue@5.9.0:
     resolution: {integrity: sha512-RWrqdArjvPbsATEhOPUo6Wndc/iWnkWKlhIrdlF3zMMYo/c3CVtoaVAyLtWxz5h8nSlkHzxnzV2uLydPXmtF+A==}
 
+  devalue@5.9.2:
+    resolution: {integrity: sha512-po4PAY5c53tw5XMocSnf8A/5OHhbbUftpr93aEN6BBoAdntUmK7vu7wOATqvt7cXO7m1Cl4gMVn6p7n6n4mj0w==}
+
   devlop@1.1.0:
     resolution: {integrity: sha512-RWmIqhcFf1lRYBvNmr7qTNuyCt/7/ns2jbpp1+PalgE/rDQcBT0fioSMUpJ93irlUhC5hrg4cYqe6U+0ImW0rA==}
 
@@ -2179,6 +2194,14 @@ packages:
 
   esrap@2.2.13:
     resolution: {integrity: sha512-m8jH5hZgJE2RRUK/jjkGPcJEDAV+dYnZYFkosQaPTcE+Yw4xynXHOo6FUdwaWBtdR3b1MMa7wEDTSHeR2VWsGA==}
+    peerDependencies:
+      '@typescript-eslint/types': ^8.2.0
+    peerDependenciesMeta:
+      '@typescript-eslint/types':
+        optional: true
+
+  esrap@2.3.7:
+    resolution: {integrity: sha512-n2nf7fZR3c9yXf0BPEuHuXqT+KW0SJVj4cN5FMEkpCZ3scLjOQWpiccyCxVzCC2q1wubTghuEGzngJY/7Ah0Ow==}
     peerDependencies:
       '@typescript-eslint/types': ^8.2.0
     peerDependenciesMeta:
@@ -2901,6 +2924,11 @@ packages:
 
   svelte@5.56.4:
     resolution: {integrity: sha512-/d0QHehmRuJW8gVz395MTkPcPozxzdjBMBE8oEYGz8O3b9KTMzzQ9ZHJQLuFKOHOPQbU6kx/X4iid/EBBzH7iw==}
+    engines: {node: '>=18'}
+
+  svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f:
+    resolution: {integrity: sha512-k+6nbLmtGccF3MOeD5NLgIzKmsSvZ5Ej+cEErzYxpayCAs5OsvbdnvzqgGfU1p3fKd3ENVfoccUft1N8NNebpg==, tarball: https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f}
+    version: 5.57.0
     engines: {node: '>=18'}
 
   tailwindcss@4.2.1:
@@ -3746,6 +3774,8 @@ snapshots:
 
   '@jridgewell/sourcemap-codec@1.5.5': {}
 
+  '@jridgewell/sourcemap-codec@1.6.0': {}
+
   '@jridgewell/trace-mapping@0.3.31':
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
@@ -4155,13 +4185,17 @@ snapshots:
     dependencies:
       acorn: 8.18.0
 
+  '@sveltejs/acorn-typescript@1.0.13(acorn@8.18.0)':
+    dependencies:
+      acorn: 8.18.0
+
   '@sveltejs/adapter-auto@8.0.0-next.1(@sveltejs/kit@3.0.0-next.25(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.56.4(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(svelte@5.56.4(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))':
     dependencies:
       '@sveltejs/kit': 3.0.0-next.25(@sveltejs/vite-plugin-svelte@7.0.0(svelte@5.56.4(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(svelte@5.56.4(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))
 
-  '@sveltejs/adapter-vercel@7.0.0-next.4(@sveltejs/kit@2.70.2(@sveltejs/vite-plugin-svelte@7.2.0(svelte@5.56.4(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(svelte@5.56.4(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(rollup@4.59.0)':
+  '@sveltejs/adapter-vercel@7.0.0-next.4(@sveltejs/kit@2.70.2(@sveltejs/vite-plugin-svelte@7.2.0(svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(rollup@4.59.0)':
     dependencies:
-      '@sveltejs/kit': 2.70.2(@sveltejs/vite-plugin-svelte@7.2.0(svelte@5.56.4(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(svelte@5.56.4(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))
+      '@sveltejs/kit': 2.70.2(@sveltejs/vite-plugin-svelte@7.2.0(svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))
       '@vercel/nft': 1.10.2(rollup@4.59.0)
     transitivePeerDependencies:
       - encoding
@@ -4177,9 +4211,9 @@ snapshots:
       - rollup
       - supports-color
 
-  '@sveltejs/amp@1.1.5(@sveltejs/kit@2.70.2(@sveltejs/vite-plugin-svelte@7.2.0(svelte@5.56.4(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(svelte@5.56.4(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))':
+  '@sveltejs/amp@1.1.5(@sveltejs/kit@2.70.2(@sveltejs/vite-plugin-svelte@7.2.0(svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))':
     dependencies:
-      '@sveltejs/kit': 2.70.2(@sveltejs/vite-plugin-svelte@7.2.0(svelte@5.56.4(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(svelte@5.56.4(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))
+      '@sveltejs/kit': 2.70.2(@sveltejs/vite-plugin-svelte@7.2.0(svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))
 
   '@sveltejs/enhanced-img@1.0.0-next.3(@sveltejs/vite-plugin-svelte@7.2.0(svelte@5.56.4(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(@types/node@22.19.20)(rollup@4.59.0)(svelte@5.56.4(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))':
     dependencies:
@@ -4195,11 +4229,25 @@ snapshots:
       - '@types/node'
       - rollup
 
-  '@sveltejs/kit@2.70.2(@sveltejs/vite-plugin-svelte@7.2.0(svelte@5.56.4(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(svelte@5.56.4(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))':
+  '@sveltejs/enhanced-img@1.0.0-next.3(@sveltejs/vite-plugin-svelte@7.2.0(svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(@types/node@22.19.20)(rollup@4.59.0)(svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))':
+    dependencies:
+      '@sveltejs/vite-plugin-svelte': 7.2.0(svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))
+      magic-string: 0.30.21
+      sharp: 0.35.3(@types/node@22.19.20)
+      svelte: https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0)
+      svelte-parse-markup: 0.1.5(svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0))
+      vite: 8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)
+      vite-imagetools: 11.0.0(@types/node@22.19.20)(rollup@4.59.0)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))
+      zimmerframe: 1.1.4
+    transitivePeerDependencies:
+      - '@types/node'
+      - rollup
+
+  '@sveltejs/kit@2.70.2(@sveltejs/vite-plugin-svelte@7.2.0(svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))(svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0))(typescript@6.0.3)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))':
     dependencies:
       '@standard-schema/spec': 1.1.0
       '@sveltejs/acorn-typescript': 1.0.12(acorn@8.18.0)
-      '@sveltejs/vite-plugin-svelte': 7.2.0(svelte@5.56.4(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))
+      '@sveltejs/vite-plugin-svelte': 7.2.0(svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))
       '@types/cookie': 0.6.0
       acorn: 8.18.0
       cookie: 0.6.0
@@ -4210,7 +4258,7 @@ snapshots:
       mrmime: 2.0.1
       set-cookie-parser: 3.1.2
       sirv: 3.0.2
-      svelte: 5.56.4(@typescript-eslint/types@8.58.0)
+      svelte: https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0)
       vite: 8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)
     optionalDependencies:
       typescript: 6.0.3
@@ -4288,6 +4336,15 @@ snapshots:
       vite: 8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)
       vitefu: 1.1.2(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))
 
+  '@sveltejs/vite-plugin-svelte@7.2.0(svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))':
+    dependencies:
+      deepmerge: 4.3.1
+      magic-string: 0.30.21
+      obug: 2.1.1
+      svelte: https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0)
+      vite: 8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)
+      vitefu: 1.1.2(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))
+
   '@testing-library/dom@10.4.1':
     dependencies:
       '@babel/code-frame': 7.29.0
@@ -4299,15 +4356,15 @@ snapshots:
       picocolors: 1.1.1
       pretty-format: 27.5.1
 
-  '@testing-library/svelte-core@1.0.0(svelte@5.56.4(@typescript-eslint/types@8.58.0))':
+  '@testing-library/svelte-core@1.0.0(svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0))':
     dependencies:
-      svelte: 5.56.4(@typescript-eslint/types@8.58.0)
+      svelte: https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0)
 
-  '@testing-library/svelte@5.3.1(svelte@5.56.4(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))(vitest@4.1.8(@types/node@22.19.20)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))':
+  '@testing-library/svelte@5.3.1(svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0))(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))(vitest@4.1.8(@types/node@22.19.20)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)))':
     dependencies:
       '@testing-library/dom': 10.4.1
-      '@testing-library/svelte-core': 1.0.0(svelte@5.56.4(@typescript-eslint/types@8.58.0))
-      svelte: 5.56.4(@typescript-eslint/types@8.58.0)
+      '@testing-library/svelte-core': 1.0.0(svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0))
+      svelte: https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0)
     optionalDependencies:
       vite: 8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0)
       vitest: 4.1.8(@types/node@22.19.20)(vite@8.0.16(@types/node@22.19.20)(esbuild@0.27.7)(tsx@4.21.0))
@@ -4713,6 +4770,8 @@ snapshots:
 
   devalue@5.9.0: {}
 
+  devalue@5.9.2: {}
+
   devlop@1.1.0:
     dependencies:
       dequal: 2.0.3
@@ -4771,6 +4830,12 @@ snapshots:
   esm-env@1.2.2: {}
 
   esrap@2.2.13(@typescript-eslint/types@8.58.0):
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.5.5
+    optionalDependencies:
+      '@typescript-eslint/types': 8.58.0
+
+  esrap@2.3.7(@typescript-eslint/types@8.58.0):
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
     optionalDependencies:
@@ -5606,6 +5671,10 @@ snapshots:
     dependencies:
       svelte: 5.56.4(@typescript-eslint/types@8.58.0)
 
+  svelte-parse-markup@0.1.5(svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0)):
+    dependencies:
+      svelte: https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0)
+
   svelte-preprocess@6.0.5(postcss@8.5.15)(svelte@5.56.4(@typescript-eslint/types@8.58.0))(typescript@6.0.3):
     dependencies:
       svelte: 5.56.4(@typescript-eslint/types@8.58.0)
@@ -5634,6 +5703,26 @@ snapshots:
       devalue: 5.9.0
       esm-env: 1.2.2
       esrap: 2.2.13(@typescript-eslint/types@8.58.0)
+      is-reference: 3.0.3
+      locate-character: 3.0.0
+      magic-string: 0.30.21
+      zimmerframe: 1.1.4
+    transitivePeerDependencies:
+      - '@typescript-eslint/types'
+
+  svelte@https://pkg.svelte.dev/svelte/c/2c71f1d61ef634f104bec2261b2aebb51f0f1f8f(@typescript-eslint/types@8.58.0):
+    dependencies:
+      '@jridgewell/remapping': 2.3.5
+      '@jridgewell/sourcemap-codec': 1.6.0
+      '@sveltejs/acorn-typescript': 1.0.13(acorn@8.18.0)
+      '@types/estree': 1.0.9
+      acorn: 8.18.0
+      aria-query: 5.3.1
+      axobject-query: 4.1.0
+      clsx: 2.1.1
+      devalue: 5.9.2
+      esm-env: 1.2.2
+      esrap: 2.3.7(@typescript-eslint/types@8.58.0)
       is-reference: 3.0.3
       locate-character: 3.0.0
       magic-string: 0.30.21
