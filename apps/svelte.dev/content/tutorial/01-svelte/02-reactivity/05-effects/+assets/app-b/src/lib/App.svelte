@@ -1,6 +1,7 @@
 <script>
 	let elapsed = $state(0);
 	let interval = $state(1000);
+	const MAX_INTERVAL = 2 ** 31 - 1;
 
 	$effect(() => {
 		const id = setInterval(() => {
@@ -14,6 +15,6 @@
 </script>
 
 <button onclick={() => interval /= 2}>speed up</button>
-<button onclick={() => interval *= 2}>slow down</button>
+<button onclick={() => interval = Math.min(interval * 2, MAX_INTERVAL)}>slow down</button>
 
 <p>elapsed: {elapsed}</p>
