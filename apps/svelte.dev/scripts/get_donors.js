@@ -3,6 +3,7 @@ import { Jimp } from 'jimp';
 import { stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { is_blank } from './utils.js';
 
 const force = process.env.FORCE_UPDATE === 'true';
 
@@ -43,6 +44,11 @@ try {
 			const image = await Jimp.fromBuffer(buffer);
 
 			image.resize({ w: SIZE, h: SIZE });
+
+			if (is_blank(image)) {
+				console.log(`Skipping ${backer.name}: low-variance image`);
+				continue;
+			}
 
 			included.push({ backer, image });
 		} catch (err) {
