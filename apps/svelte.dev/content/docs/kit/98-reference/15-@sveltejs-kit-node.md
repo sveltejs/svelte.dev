@@ -41,13 +41,15 @@ function createReadableStream(file: string): ReadableStream;
 ```dts
 function getRequest({
 	request,
+	response,
 	base,
 	bodySizeLimit
 }: {
 	request: import('http').IncomingMessage;
+	response?: import('http').ServerResponse;
 	base: string;
 	bodySizeLimit?: number;
-}): Promise<Request>;
+}): Request;
 ```
 
 </div>
@@ -62,7 +64,7 @@ function getRequest({
 function setResponse(
 	res: import('http').ServerResponse,
 	response: Response
-): Promise<void>;
+): void;
 ```
 
 </div>
