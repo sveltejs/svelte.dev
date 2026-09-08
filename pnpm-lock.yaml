@@ -173,6 +173,9 @@ importers:
       satori-html:
         specifier: ^0.3.2
         version: 0.3.2
+      sv:
+        specifier: ^0.16.6
+        version: 0.16.6
       svelte:
         specifier: ^5.56.4
         version: 5.56.4(@typescript-eslint/types@8.58.0)
