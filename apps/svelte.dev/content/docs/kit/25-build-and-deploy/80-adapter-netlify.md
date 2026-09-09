@@ -23,7 +23,7 @@ export default defineConfig({
 		sveltekit({
 			adapter: adapter({
 				// See below for an explanation of these options
-				edge: false,
+				runtime: 'nodejs22.x',
 				split: false
 			})
 		})
@@ -45,13 +45,35 @@ If the `netlify.toml` file or the `build.publish` value is missing, a default va
 
 ## Options
 
-### `edge`
+### `runtime`
 
-If `true`, your app will be deployed as a [Netlify Edge Function](https://docs.netlify.com/build/edge-functions/overview/) rather than the standard Node-based function.
+The runtime to use. Set this to `'edge'` to deploy your app as a [Netlify Edge Function](https://docs.netlify.com/build/edge-functions/overview/), or use `'nodejs22.x'`, `'nodejs24.x'`, or `'nodejs26.x'`. If omitted, the Node.js runtime configured for the Netlify build is used.
 
 ### `split`
 
 If `true`, your app will be split into multiple functions instead of a single one for the entire app.
+
+## Deployment configuration
+
+To control how your routes are deployed to Netlify as functions, you can specify deployment configuration, either through the option shown above or with [`export const config`](page-options#config) inside `+server.js`, `+page(.server).js` and `+layout(.server).js` files.
+
+For example, you could deploy one specific route using the Node.js 24 runtime:
+
+```js
+/// file: admin/+page.js
+/** @type {import('@sveltejs/adapter-netlify').Config} */
+export const config = {
+	runtime: 'nodejs24.x'
+};
+```
+
+You can set the following option:
+
+- `runtime`: `'edge'`, `'nodejs22.x'`, `'nodejs24.x'` or `'nodejs26.x'`. By default, the route uses the runtime configured for the adapter
+
+Configuration set in a layout applies to all the routes beneath that layout, unless overridden at a more granular level.
+
+Routes with the same runtime are grouped into one function by default. If `split` is set to `true` at the adapter level, each route is deployed as an individual function using its configured runtime. Prerendered routes do not emit functions, so their runtime configuration has no effect.
 
 ## Netlify alternatives to SvelteKit functionality
 
@@ -69,7 +91,7 @@ The [`_headers`](https://docs.netlify.com/routing/headers/#syntax-for-the-header
 
 ### Netlify Functions
 
-With this adapter, SvelteKit endpoints are hosted as [Netlify Functions](https://docs.netlify.com/functions/overview/). Netlify function handlers have additional context, including [Netlify Identity](https://docs.netlify.com/visitor-access/identity/) information. You can access this context via the `event.platform.context` field inside your hooks and `+page.server` or `+layout.server` endpoints. These are [serverless functions](https://docs.netlify.com/functions/overview/) when the `edge` property is `false` in the adapter config or [edge functions](https://docs.netlify.com/edge-functions/overview/#app) when it is `true`.
+With this adapter, SvelteKit endpoints are hosted as [Netlify Functions](https://docs.netlify.com/functions/overview/). Netlify function handlers have additional context, including [Netlify Identity](https://docs.netlify.com/visitor-access/identity/) information. You can access this context via the `event.platform.context` field inside your hooks and `+page.server` or `+layout.server` endpoints. These are [serverless functions](https://docs.netlify.com/functions/overview/) by default or [edge functions](https://docs.netlify.com/edge-functions/overview/#app) when the `runtime` property is `'edge'`.
 
 ```js
 // @errors: 2339
