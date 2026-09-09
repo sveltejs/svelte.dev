@@ -16,3 +16,4 @@
 /content/docs/kit/50-reference
 .vercel
 .env*.local
+/tmp/
