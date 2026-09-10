@@ -55,6 +55,10 @@ const nav_links: NavigationLink[] = [
 	{
 		title: 'Blog',
 		slug: 'blog'
+	},
+	{
+		title: 'Showcase',
+		slug: 'showcase'
 	}
 ];
 
