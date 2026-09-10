@@ -49,7 +49,7 @@
 	{/if}
 </svelte:head>
 
-<Shell nav_visible={page.route.id !== '/(authed)/playground/[id]/embed'}>
+<Shell nav_visible={page.route.id !== '/(authed)/playground/[...id]/embed'}>
 	{#snippet top_nav()}
 		<Nav title={sections[page.url.pathname.split('/')[1]!] ?? ''} links={data.nav_links} />
 	{/snippet}
