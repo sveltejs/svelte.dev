@@ -13,7 +13,7 @@
 
 		<p>Currently, we have the following root-level files...</p>
 
-		<ul>
+		<ul data-sveltekit-reload>
 			<li><a href="/llms.txt">/llms.txt</a> — a listing of the available files</li>
 			<li>
 				<a href="/llms-full.txt">/llms-full.txt</a> — complete documentation for Svelte, SvelteKit and
@@ -31,7 +31,7 @@
 
 		<p>...and package-level documentation:</p>
 
-		<ul>
+		<ul data-sveltekit-reload>
 			<li>
 				<a href="/docs/svelte/llms.txt">/docs/svelte/llms.txt</a> /
 				<a href="/docs/svelte/llms-small.txt">/docs/svelte/llms-small.txt</a>
