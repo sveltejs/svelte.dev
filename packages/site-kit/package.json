@@ -9,6 +9,7 @@
 		"package": "svelte-kit sync",
 		"lint": "prettier --check .",
 		"format": "prettier --write .",
+		"test": "vitest run",
 		"prepare": "svelte-kit sync"
 	},
 	"repository": {
@@ -60,7 +61,8 @@
 		"svelte": "^5.53.5",
 		"svelte-check": "^4.7.3",
 		"typescript": "^6.0.3",
-		"vite": "catalog:"
+		"vite": "catalog:",
+		"vitest": "catalog:"
 	},
 	"publishConfig": {
 		"access": "public"
