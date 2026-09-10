@@ -312,7 +312,8 @@ const FEATURED: {
 		title: 'Devtools',
 		packages: [
 			{ name: 'svelte-render-scan', description: 'Visual debugging tool' },
-			{ name: 'svelte-inspect-value', description: 'Value inspector component' }
+			{ name: 'svelte-inspect-value', description: 'Value inspector component' },
+			{ name: 'sonda', description: 'Universal bundle analyzer and visualizer' }
 		]
 	},
 	{
