@@ -228,6 +228,7 @@ const snippets = await create_snippet_cache();
  * @param {object} options
  * @param {TwoslashBanner} [options.twoslashBanner] - A function that returns a string to be prepended to the code snippet before running the code with twoslash. Helps in adding imports from svelte or sveltekit or whichever modules are being globally referenced in all or most code snippets.
  * @param {Record<string, string>} [references] - Optional map of symbol names to their documentation URLs for dynamic reference links in twoslash tooltips.
+ * @param {(href: string) => string} [options.transformLink] - Transforms Markdown link destinations before rendering.
  */
 
 /**
@@ -328,11 +329,16 @@ function injectReferenceLinks(
 export async function render_content_markdown(
 	filename: string,
 	body: string,
-	options?: { check?: boolean; references?: Record<string, string>; twoslashRoot?: string },
+	options?: {
+		check?: boolean;
+		references?: Record<string, string>;
+		transformLink?: (href: string) => string;
+		twoslashRoot?: string;
+	},
 	twoslashBanner?: TwoslashBanner
 ) {
 	const headings: string[] = [];
-	const { check = true, references, twoslashRoot } = options ?? {};
+	const { check = true, references, transformLink, twoslashRoot } = options ?? {};
 
 	interface CodeBlockFile {
 		selected: boolean;
@@ -359,6 +365,10 @@ export async function render_content_markdown(
 
 	let transformed = await transform(body, {
 		async walkTokens(token) {
+			if (token.type === 'link' && transformLink) {
+				token.href = transformLink(token.href);
+			}
+
 			if (token.type === 'html') {
 				if (token.text.startsWith('<!-- codeblock:start')) {
 					if (current_block !== null) {
