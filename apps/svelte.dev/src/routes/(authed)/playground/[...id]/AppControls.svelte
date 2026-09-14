@@ -125,7 +125,7 @@
 			// ~> Any missing files are considered deleted!
 			const { files, tailwind } = repl.toJSON() as { files: File[]; tailwind?: boolean };
 
-			const r = await fetch(`/playground/save/${gist.id}.json`, {
+			const r = await fetch(`/playground/save/${gist.id}`, {
 				method: 'PUT',
 				credentials: 'include',
 				headers: {
