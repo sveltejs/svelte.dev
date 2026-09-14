@@ -1,0 +1,13 @@
+{
+	"lexicon": 1,
+	"id": "dev.svelte.playground.private",
+	"defs": {
+		"main": {
+			"type": "space",
+			"description": "Private Svelte playground apps: only the owner can read them.",
+			"key": "any",
+			"name": "Private playground apps",
+			"collections": ["dev.svelte.playground"]
+		}
+	}
+}

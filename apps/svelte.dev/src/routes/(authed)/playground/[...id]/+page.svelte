@@ -174,7 +174,10 @@
 		}
 	}
 
-	const relaxed = $derived(data.gist.relaxed || (data.user && data.user.id === data.gist.owner));
+	const relaxed = $derived(
+		data.gist.relaxed ||
+			[data.accounts.github, data.accounts.atproto].some((a) => a && a.id === data.gist.owner)
+	);
 </script>
 
 <svelte:head>
@@ -207,7 +210,8 @@
 <div class="repl-outer">
 	<AppControls
 		examples={data.examples}
-		user={data.user}
+		accounts={data.accounts}
+		destination={data.destination}
 		gist={data.gist}
 		forked={handle_fork}
 		saved={handle_save}
