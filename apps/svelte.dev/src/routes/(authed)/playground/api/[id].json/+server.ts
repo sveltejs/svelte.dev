@@ -26,7 +26,7 @@ export async function GET({ fetch, params }) {
 		});
 	}
 
-	if (dev && !client) {
+	if (dev && !client && !(await gist.read(params.id))) {
 		// in dev with no local Supabase configured, proxy to production
 		// this lets us at least load saved REPLs
 		const res = await fetch(`https://svelte.dev/playground/api/${params.id}.json`);
