@@ -1,0 +1,38 @@
+{
+	"lexicon": 1,
+	"id": "dev.svelte.playground",
+	"defs": {
+		"main": {
+			"type": "record",
+			"key": "tid",
+			"description": "A Svelte playground app: a small set of source files plus a few compiler options.",
+			"record": {
+				"type": "object",
+				"required": ["name", "files", "createdAt", "updatedAt"],
+				"properties": {
+					"name": { "type": "string", "maxLength": 300 },
+					"files": {
+						"type": "array",
+						"items": { "type": "ref", "ref": "#file" }
+					},
+					"tailwind": { "type": "boolean" },
+					"svelteVersion": {
+						"type": "string",
+						"maxLength": 64,
+						"description": "Pinned Svelte version. Absent means latest."
+					},
+					"createdAt": { "type": "string", "format": "datetime" },
+					"updatedAt": { "type": "string", "format": "datetime" }
+				}
+			}
+		},
+		"file": {
+			"type": "object",
+			"required": ["name", "contents"],
+			"properties": {
+				"name": { "type": "string", "maxLength": 300 },
+				"contents": { "type": "string", "maxLength": 500000 }
+			}
+		}
+	}
+}

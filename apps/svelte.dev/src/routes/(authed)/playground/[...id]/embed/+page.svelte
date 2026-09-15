@@ -51,7 +51,10 @@
 		set_files();
 	});
 
-	const relaxed = $derived(data.gist.relaxed || (data.user && data.user.id === data.gist.owner));
+	const relaxed = $derived(
+		data.gist.relaxed ||
+			[data.accounts.github, data.accounts.atproto].some((a) => a && a.id === data.gist.owner)
+	);
 </script>
 
 <svelte:head>

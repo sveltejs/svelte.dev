@@ -1,20 +1,19 @@
 <script lang="ts">
-	import AppList from './AppList.svelte';
+	import AppList from '../AppList.svelte';
 
 	let { data } = $props();
 </script>
 
 <svelte:head>
-	<title>Your apps • Svelte</title>
+	<title>{data.owner.display_name || data.owner.handle}'s apps • Svelte</title>
 </svelte:head>
 
 <AppList
 	accounts={data.accounts}
 	destination={data.destination}
-	owner={null}
+	owner={data.owner}
 	gists={data.gists}
-	next={data.next}
+	next={null}
 	search={data.search}
-	tab={data.tab}
-	counts={data.counts}
+	tab="atproto-public"
 />

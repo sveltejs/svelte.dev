@@ -1,10 +1,12 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import UserMenu from './UserMenu.svelte';
+	import UserMenu from '../../UserMenu.svelte';
 	import { Icon } from '@sveltejs/site-kit/components';
 	import { isMac } from '#lib/utils/compat.js';
 	import { get_app_context } from '../../app-context';
-	import type { Gist, User } from '#lib/db/types.d.ts';
+	import type { Accounts, Gist } from '#lib/db/types.d.ts';
+	import { account_for, home_of, type Destination } from '#lib/destination.js';
+	import * as apps from '#lib/apps.js';
 	import { browser } from '$app/env';
 	import ModalDropdown from '#lib/components/ModalDropdown.svelte';
 	import SecondaryNav from '#lib/components/SecondaryNav.svelte';
@@ -13,7 +15,8 @@
 
 	interface Props {
 		examples: Array<{ title: string; examples: any[] }>;
-		user: User | null;
+		accounts: Accounts;
+		destination: Destination | null;
 		repl: ReturnType<typeof Repl>;
 		gist: Gist;
 		name: string;
@@ -25,7 +28,8 @@
 	let {
 		name = $bindable(),
 		modified = $bindable(),
-		user,
+		accounts,
+		destination,
 		repl,
 		gist,
 		examples,
@@ -44,7 +48,24 @@
 		return new Promise((f) => setTimeout(f, ms));
 	}
 
-	const canSave = $derived(user && gist && gist.owner === user.id);
+	const logged_in = $derived(!!(accounts.github || accounts.atproto));
+	const home = $derived(home_of(gist));
+	const owner = $derived(account_for(home, accounts));
+	const is_mine = $derived(!!owner && gist.owner === owner.id);
+	// save writes in place only when the app already lives at the default; otherwise it copies there
+	const canSave = $derived(is_mine && home === destination);
+
+	function payload(files: File[], tailwind?: boolean) {
+		const version = page.url.searchParams.get('version');
+		return {
+			name,
+			tailwind: tailwind ?? false,
+			svelte_version: version && version !== 'latest' ? version : undefined,
+			files: files.map((file) => ({ name: file.name, type: '', source: file.contents }))
+		};
+	}
+
+	const reauth = () => login('atproto');
 
 	function handleKeydown(event: KeyboardEvent) {
 		if (event.key === 's' && (isMac ? event.metaKey : event.ctrlKey)) {
@@ -59,28 +80,11 @@
 		const { files, tailwind } = repl.toJSON() as { files: File[]; tailwind?: boolean };
 
 		try {
-			const r = await fetch(`/playground/create.json`, {
-				method: 'POST',
-				credentials: 'include',
-				headers: {
-					'Content-Type': 'application/json'
-				},
-				body: JSON.stringify({
-					name,
-					tailwind: tailwind ?? false,
-					files: files.map((file) => ({
-						name: file.name,
-						source: file.contents
-					}))
-				})
-			});
-
-			if (r.status < 200 || r.status >= 300) {
-				const { error } = await r.json();
-				throw new Error(`Received an HTTP ${r.status} response: ${error}`);
-			}
-
-			const gist = await r.json();
+			if (!destination) throw new Error('Pick where to save your apps in Accounts');
+			const gist = await apps.with_reauth(
+				() => apps.create(payload(files, tailwind), destination, accounts),
+				reauth
+			);
 			forked({ gist });
 
 			modified = false;
@@ -107,7 +111,7 @@
 	}
 
 	async function save() {
-		if (!user) {
+		if (!logged_in) {
 			alert('Please log in before saving your app');
 			return;
 		}
@@ -125,26 +129,10 @@
 			// ~> Any missing files are considered deleted!
 			const { files, tailwind } = repl.toJSON() as { files: File[]; tailwind?: boolean };
 
-			const r = await fetch(`/playground/save/${gist.id}`, {
-				method: 'PUT',
-				credentials: 'include',
-				headers: {
-					'Content-Type': 'application/json'
-				},
-				body: JSON.stringify({
-					name,
-					tailwind: tailwind ?? false,
-					files: files.map((file) => ({
-						name: file.name,
-						source: file.contents
-					}))
-				})
-			});
-
-			if (r.status < 200 || r.status >= 300) {
-				const { error } = await r.json();
-				throw new Error(`Received an HTTP ${r.status} response: ${error}`);
-			}
+			await apps.with_reauth(
+				() => apps.update(gist.id, payload(files, tailwind), accounts),
+				reauth
+			);
 
 			modified = false;
 			repl.markSaved();
@@ -202,6 +190,12 @@
 		{/each} -->
 	</ModalDropdown>
 
+	{#if gist.owner_handle && !is_mine}
+		<a class="owner" href="/apps/{gist.owner_handle}" title="apps by @{gist.owner_handle}">
+			@{gist.owner_handle}
+		</a>
+	{/if}
+
 	<input
 		bind:value={name}
 		oninput={() => (modified = true)}
@@ -212,9 +206,9 @@
 	<div class="buttons">
 		<button
 			class="raised icon tooltip"
-			disabled={saving || !user}
+			disabled={saving || !logged_in}
 			onclick={() => fork(false)}
-			aria-label={user ? 'fork' : 'log in to fork'}
+			aria-label={logged_in ? 'fork' : 'log in to fork'}
 		>
 			{#if justForked}
 				<Icon size={18} name="check" />
@@ -225,9 +219,9 @@
 
 		<button
 			class="raised icon tooltip"
-			disabled={saving || !user}
+			disabled={saving || !logged_in}
 			onclick={save}
-			aria-label={user
+			aria-label={logged_in
 				? `save (${browser && navigator.platform === 'MacIntel' ? '⌘' : 'Ctrl'}+S)`
 				: 'log in to save'}
 		>
@@ -241,12 +235,22 @@
 			{/if}
 		</button>
 
-		{#if user}
-			<UserMenu {user} />
+		{#if logged_in}
+			<UserMenu {accounts} {destination} />
 		{:else}
-			<button class="raised icon login" onclick={login}>
+			<div class="login">
 				<span>log in</span>
-			</button>
+				<button
+					class="raised icon tooltip atproto"
+					onclick={() => login('atproto')}
+					aria-label="log in with the Atmosphere"
+				></button>
+				<button
+					class="raised icon tooltip github"
+					onclick={() => login('github')}
+					aria-label="log in with GitHub"
+				></button>
+			</div>
 		{/if}
 	</div>
 </SecondaryNav>
@@ -271,18 +275,32 @@
 		line-height: 1;
 		background-size: 1.8rem;
 		z-index: 999;
+	}
 
-		&.login {
-			width: auto;
-			padding: 0 0.4rem;
+	.login {
+		display: flex;
+		align-items: center;
+		gap: 0.2rem;
+		font: var(--sk-font-ui-small);
+		color: var(--sk-fg-3);
 
+		span {
+			margin: 0 0.3rem 0 0.4rem;
+		}
+
+		.icon {
 			&::before {
 				content: '';
-				width: 1.8rem;
-				height: 1.8rem;
-				margin: 0 0.5rem 0 0;
+				display: block;
+				width: 1.5rem;
+				height: 1.5rem;
+				margin: 0 auto;
 				background: currentColor;
-				mask: url(icons/user) no-repeat 50% 50%;
+				mask: url(icons/at-sign) no-repeat 50% 50% / contain;
+			}
+
+			&.github::before {
+				mask-image: url(icons/github);
 			}
 		}
 	}
@@ -317,6 +335,20 @@
 		padding: 0.2rem 0.6rem;
 		height: 3.2rem;
 		font: var(--sk-font-ui-medium);
+	}
+
+	.owner {
+		font: var(--sk-font-ui-small);
+		color: var(--sk-fg-3);
+		max-width: 14rem;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		text-decoration: none;
+
+		&:hover {
+			color: var(--sk-fg-accent);
+		}
 	}
 
 	.badge {
