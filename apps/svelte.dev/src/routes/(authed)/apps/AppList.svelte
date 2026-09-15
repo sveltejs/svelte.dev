@@ -37,6 +37,9 @@
 	const base = $derived(owner ? `/apps/${owner.handle}` : '/apps');
 	const logged_in = $derived(!!(accounts.github || accounts.atproto));
 	const tab_available = $derived(available(tab, accounts));
+	const tabs = $derived(DESTINATIONS.filter((d) => available(d.id, accounts)));
+	// a single destination needs no tab UI, unless a link opened an unavailable one
+	const show_tabs = $derived(tabs.length > 1 || !tab_available);
 
 	let destroying = $state(false);
 	let copying = $state(false);
@@ -152,6 +155,10 @@
 					aria-label="Search"
 					name="search"
 					value={search}
+					oninput={(e) => {
+						// the native clear (x) button only fires input, not submit
+						if (search && !e.currentTarget.value) goto(url({ tab: owner ? null : tab }));
+					}}
 				/>
 			</form>
 		{/if}
@@ -221,32 +228,31 @@
 
 		{@render controls()}
 
-		<nav class="tabs">
-			<!-- every destination is always listed so nothing jumps around when an account is added -->
-			{#each DESTINATIONS as d (d.id)}
-				<a
-					href={url({ tab: d.id, search })}
-					aria-current={tab === d.id ? 'page' : undefined}
-					class:unavailable={!available(d.id, accounts)}
-				>
-					{d.label}
-					{#if counts[d.id] !== undefined}<span class="count">{counts[d.id]}</span>{/if}
-				</a>
-			{/each}
+		{#if show_tabs}
+			<nav class="tabs">
+				{#each tabs as d (d.id)}
+					<a href={url({ tab: d.id, search })} aria-current={tab === d.id ? 'page' : undefined}>
+						{d.label}
+						{#if counts[d.id] !== undefined}<span class="count">{counts[d.id]}</span>{/if}
+					</a>
+				{/each}
 
-			{#if tab_available}
-				<button
-					class="default-toggle"
-					class:active={tab === destination}
-					disabled={tab === destination}
-					onclick={() => set_destination(tab)}
-					title={tab === destination ? 'New apps are saved here' : 'Save new apps here by default'}
-				>
-					<Icon name="save" size={14} />
-					{tab === destination ? 'default' : 'set as default'}
-				</button>
-			{/if}
-		</nav>
+				{#if tab_available}
+					<button
+						class="default-toggle"
+						class:active={tab === destination}
+						disabled={tab === destination}
+						onclick={() => set_destination(tab)}
+						title={tab === destination
+							? 'New apps are saved here'
+							: 'Save new apps here by default'}
+					>
+						<Icon name="save" size={14} />
+						{tab === destination ? 'default' : 'set as default'}
+					</button>
+				{/if}
+			</nav>
+		{/if}
 
 		{#if tab_available}
 			{@render list()}
@@ -357,10 +363,6 @@
 			&[aria-current='page'] {
 				color: var(--sk-fg-1);
 				border-bottom-color: var(--sk-fg-accent);
-			}
-
-			&.unavailable {
-				color: var(--sk-fg-4);
 			}
 
 			.count {

@@ -10,6 +10,7 @@
 	const { github, atproto } = $derived(data.accounts);
 	const logged_in = $derived(!!(github || atproto));
 	const private_ready = $derived(!!atproto?.spaces_supported && !!atproto.private_apps);
+	const pds_host = $derived(atproto ? new URL(atproto.pds).host : '');
 </script>
 
 <svelte:head>
@@ -47,14 +48,16 @@
 			<span class="provider atproto" aria-hidden="true"></span>
 			<h2>Atmosphere</h2>
 			{#if atproto}
-				<Avatar src={avatar_url(atproto)} name={display_name(atproto)} size="2.8rem" />
-				<span class="who" title="@{atproto.handle}">
-					<span class="name">{display_name(atproto)}</span>
-					{#if display_name(atproto) !== atproto.handle}
-						<span class="handle">@{atproto.handle}</span>
-					{/if}
-				</span>
-				<button class="secondary" onclick={() => logout('atproto')}>Log out</button>
+				<div class="session">
+					<Avatar src={avatar_url(atproto)} name={display_name(atproto)} size="2.8rem" />
+					<span class="who" title="@{atproto.handle}">
+						<span class="name">{display_name(atproto)}</span>
+						{#if display_name(atproto) !== atproto.handle}
+							<span class="handle">@{atproto.handle}</span>
+						{/if}
+					</span>
+					<button class="secondary" onclick={() => logout('atproto')}>Log out</button>
+				</div>
 			{:else}
 				<button class="primary" onclick={() => login('atproto')}>Connect</button>
 			{/if}
@@ -75,11 +78,15 @@
 			{@render check(
 				!!atproto?.spaces_supported,
 				'PDS supports spaces',
-				atproto && !atproto.spaces_supported ? 'not yet, spaces are an atproto alpha' : undefined
+				atproto
+					? atproto.spaces_supported
+						? pds_host
+						: `${pds_host} not yet, spaces are an atproto alpha`
+					: undefined
 			)}
 			<li class:done={private_ready}>
 				<span class="mark" aria-hidden="true"></span>
-				<span class="label">Space enabled</span>
+				<span class="label">Private playground enabled</span>
 				{#if atproto?.spaces_supported && !atproto.private_apps}
 					<button class="secondary" onclick={enable_private_apps}>Enable</button>
 				{:else if private_ready}
@@ -108,11 +115,13 @@
 			<span class="provider github" aria-hidden="true"></span>
 			<h2>GitHub</h2>
 			{#if github}
-				<Avatar src={avatar_url(github)} name={display_name(github)} size="2.8rem" />
-				<span class="who" title={display_name(github)}>
-					<span class="name">{display_name(github)}</span>
-				</span>
-				<button class="secondary" onclick={() => logout('github')}>Log out</button>
+				<div class="session">
+					<Avatar src={avatar_url(github)} name={display_name(github)} size="2.8rem" />
+					<span class="who" title={display_name(github)}>
+						<span class="name">{display_name(github)}</span>
+					</span>
+					<button class="secondary" onclick={() => logout('github')}>Log out</button>
+				</div>
 			{:else}
 				<button class="primary" onclick={() => login('github')}>Connect</button>
 			{/if}
@@ -169,6 +178,7 @@
 	.identity {
 		display: flex;
 		align-items: center;
+		flex-wrap: wrap;
 		gap: 1rem;
 		min-height: 2.8rem;
 
@@ -176,6 +186,13 @@
 			flex-shrink: 0;
 			font: var(--sk-font-h3);
 			margin: 0 auto 0 0;
+		}
+
+		.session {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+			min-width: 0;
 		}
 
 		/* long handles shrink and ellipsize, never wrap the row */
@@ -201,6 +218,18 @@
 
 		button {
 			flex-shrink: 0;
+		}
+
+		/* on narrow screens the session drops to its own row, name on the left */
+		@media (max-width: 540px) {
+			.session {
+				flex-basis: 100%;
+			}
+
+			.who {
+				flex: 1;
+				text-align: left;
+			}
 		}
 	}
 
