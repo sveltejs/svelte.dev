@@ -37,6 +37,8 @@ node build
 
 Development dependencies will be bundled into your app using [Rolldown](https://rolldown.rs/). To control whether a given package is bundled or externalised, place it in `devDependencies` or `dependencies` respectively in your `package.json`.
 
+Client assets and prerendered output are served from a list of files recorded during the build. Only `GET` and `HEAD` requests are served from it; other methods continue to SvelteKit. Every asset carries an ETag computed during the build, so conditional requests revalidate with an empty `304` response. Byte ranges are supported. Files below SvelteKit's `immutable` directory receive `Cache-Control: public,max-age=31536000,immutable`.
+
 ### Compressing responses
 
 You will typically want to compress responses coming from the server. If you're already deploying your server behind a reverse proxy for SSL or load balancing, it typically results in better performance to also handle compression at that layer since Node.js is single-threaded.
@@ -181,7 +183,7 @@ The directory to build the server to. It defaults to `build` — i.e. `node buil
 
 ### precompress
 
-Enables precompressing using gzip and brotli for assets and prerendered pages. It defaults to `true`.
+Generates `.br` and `.gz` variants of client and prerendered assets during the build. The server negotiates `Accept-Encoding` per request, preferring brotli over gzip, and each variant carries its own ETag. It defaults to `true`.
 
 ### envPrefix
 
@@ -255,7 +257,7 @@ WantedBy=sockets.target
 
 ## Custom server
 
-The adapter creates two files in your build directory — `index.js` and `handler.js`. Running `index.js` — e.g. `node build`, if you use the default build directory — will start a server on the configured port.
+The build directory contains two entry points, `index.js` and `handler.js`. Running `index.js` — e.g. `node build`, if you use the default build directory — will start a server on the configured port.
 
 Alternatively, you can import the `handler.js` file, which exports a handler suitable for use with [Express](https://github.com/expressjs/express), [Connect](https://github.com/senchalabs/connect) or [Polka](https://github.com/lukeed/polka) (or even just the built-in [`http.createServer`](https://nodejs.org/dist/latest/docs/api/http.html#httpcreateserveroptions-requestlistener)) and set up your own server:
 
