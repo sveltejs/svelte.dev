@@ -238,14 +238,17 @@
 		{#if logged_in}
 			<UserMenu {accounts} {destination} />
 		{:else}
-			<div class="raised login">
+			<div class="login">
 				<span>log in</span>
 				<button
-					class="icon atproto"
+					class="raised icon tooltip atproto"
 					onclick={() => login('atproto')}
 					aria-label="log in with the Atmosphere"
 				></button>
-				<button class="icon github" onclick={() => login('github')} aria-label="log in with GitHub"
+				<button
+					class="raised icon tooltip github"
+					onclick={() => login('github')}
+					aria-label="log in with GitHub"
 				></button>
 			</div>
 		{/if}
@@ -277,20 +280,15 @@
 	.login {
 		display: flex;
 		align-items: center;
-		height: 3.2rem;
-		padding: 0 0.1rem 0 0.4rem;
-		font: 1.2rem / 1 var(--sk-font-family-ui);
+		gap: 0.2rem;
+		font: var(--sk-font-ui-small);
 		color: var(--sk-fg-3);
 
 		span {
-			margin-right: 0.3rem;
+			margin: 0 0.3rem 0 0.4rem;
 		}
 
 		.icon {
-			width: 2.6rem;
-			height: 2.6rem;
-			border-radius: var(--sk-border-radius-inner);
-
 			&::before {
 				content: '';
 				display: block;
@@ -303,10 +301,6 @@
 
 			&.github::before {
 				mask-image: url(icons/github);
-			}
-
-			&:hover {
-				background: var(--sk-bg-4);
 			}
 		}
 	}

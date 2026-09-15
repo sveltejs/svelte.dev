@@ -51,7 +51,14 @@ function configure() {
 
 export async function identity(actor: string): Promise<Identity> {
 	const r = await fetch(`/auth/atproto/identity?actor=${encodeURIComponent(actor)}`);
-	if (!r.ok) throw new Error((await r.text()) || `Could not resolve ${actor}`);
+	if (!r.ok) {
+		const text = await r.text();
+		let message = text;
+		try {
+			message = JSON.parse(text).message ?? text;
+		} catch {}
+		throw new Error(message || `Could not resolve ${actor}`);
+	}
 	return r.json();
 }
 
