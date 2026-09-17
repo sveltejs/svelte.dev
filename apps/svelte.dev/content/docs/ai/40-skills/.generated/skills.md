@@ -46,7 +46,7 @@ Analyzes Svelte code and suggests fixes for common issues.
 **Options:**
 
 - `--async` - Enable async Svelte mode (default: false)
-- `--svelte-version` - Target version: 4 or 5 (default: 5)
+- `--svelte-version` - Target version, ideally the full version from `package.json` (e.g. `5.16.0`) so version-specific suggestions are enabled. The major must be 4 or 5 (default: 5)
 
 **Examples:**
 
