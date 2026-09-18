@@ -187,7 +187,8 @@
 		align-items: center;
 		flex-wrap: wrap;
 		gap: 1rem;
-		min-height: 2.8rem;
+		/* the button is the tallest thing here: the row is the same logged in or out */
+		min-height: 3.6rem;
 
 		h2 {
 			flex-shrink: 0;
@@ -221,6 +222,8 @@
 		.handle {
 			color: var(--sk-fg-3);
 			font: var(--sk-font-ui-small);
+			font-size: 1.2rem;
+			line-height: 1.2;
 		}
 
 		button {
