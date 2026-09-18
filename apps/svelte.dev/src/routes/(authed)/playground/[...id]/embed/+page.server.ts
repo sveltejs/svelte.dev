@@ -1,7 +1,11 @@
 import { error } from '@sveltejs/kit';
 
 export async function load({ fetch, params, url }) {
-	const res = await fetch(`/playground/api/${params.id}.json`);
+	const res = await fetch(
+		params.id.includes('/')
+			? `/playground/api/at/${params.id}`
+			: `/playground/api/${params.id}.json`
+	);
 
 	if (!res.ok) {
 		throw error(res.status);

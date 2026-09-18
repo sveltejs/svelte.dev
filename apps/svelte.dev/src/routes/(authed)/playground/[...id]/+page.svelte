@@ -23,7 +23,10 @@
 	let modified = $state(false);
 	let setting_hash: any = null;
 
-	let version = $derived(page.url.searchParams.get('version') || 'latest');
+	// an app can pin a version; the URL still wins
+	let version = $derived(
+		page.url.searchParams.get('version') || data.gist.svelte_version || 'latest'
+	);
 	let showOutput = page.url.searchParams.get('show') !== 'input';
 
 	// Hashed URLs are less safe (we can't delete malicious REPLs), therefore
@@ -174,7 +177,10 @@
 		}
 	}
 
-	const relaxed = $derived(data.gist.relaxed || (data.user && data.user.id === data.gist.owner));
+	const relaxed = $derived(
+		data.gist.relaxed ||
+			[data.accounts.github, data.accounts.atproto].some((a) => a && a.id === data.gist.owner)
+	);
 </script>
 
 <svelte:head>
@@ -207,7 +213,8 @@
 <div class="repl-outer">
 	<AppControls
 		examples={data.examples}
-		user={data.user}
+		accounts={data.accounts}
+		destination={data.destination}
 		gist={data.gist}
 		forked={handle_fork}
 		saved={handle_save}

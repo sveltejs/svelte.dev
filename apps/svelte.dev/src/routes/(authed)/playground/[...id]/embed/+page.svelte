@@ -12,7 +12,10 @@
 
 	let repl = $state() as ReturnType<typeof Repl>;
 
-	let version = $derived(page.url.searchParams.get('version') || 'latest');
+	// an app can pin a version; the URL still wins
+	let version = $derived(
+		page.url.searchParams.get('version') || data.gist.svelte_version || 'latest'
+	);
 
 	// TODO make this munging unnecessary
 	function munge(data: any): File {
@@ -51,7 +54,10 @@
 		set_files();
 	});
 
-	const relaxed = $derived(data.gist.relaxed || (data.user && data.user.id === data.gist.owner));
+	const relaxed = $derived(
+		data.gist.relaxed ||
+			[data.accounts.github, data.accounts.atproto].some((a) => a && a.id === data.gist.owner)
+	);
 </script>
 
 <svelte:head>
