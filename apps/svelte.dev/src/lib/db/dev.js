@@ -18,11 +18,11 @@ function load() {
 	try {
 		return JSON.parse(fs.readFileSync(FILE, 'utf-8'));
 	} catch {
-		return { users: {}, sessions: {}, gists: {} };
+		return { users: {}, sessions: {}, gists: {}, kv: {} };
 	}
 }
 
-/** @param {{ users: Record<string, User & { github_id: string }>, sessions: Record<string, { userid: number, expires: number }>, gists: Record<string, Row> }} db */
+/** @param {{ users: Record<string, User & { github_id: string }>, sessions: Record<string, { userid: number, expires: number }>, gists: Record<string, Row>, kv?: Record<string, unknown> }} db */
 function save(db) {
 	fs.mkdirSync(path.dirname(FILE), { recursive: true });
 	fs.writeFileSync(FILE, JSON.stringify(db, null, '\t'));
@@ -116,5 +116,26 @@ export function gist_destroy(userid, ids) {
 			row.deleted_at = new Date().toISOString();
 		}
 	}
+	save(db);
+}
+
+// atproto: OAuth state/sessions, logins and profiles (see lib/atproto/store.ts)
+
+/** @param {string} key */
+export function kv_get(key) {
+	return load().kv?.[key];
+}
+
+/** @param {string} key @param {unknown} value */
+export function kv_set(key, value) {
+	const db = load();
+	(db.kv ??= {})[key] = value;
+	save(db);
+}
+
+/** @param {string} key */
+export function kv_del(key) {
+	const db = load();
+	delete db.kv?.[key];
 	save(db);
 }
