@@ -1,6 +1,6 @@
 export type UserID = number;
 
-export interface User {
+export interface GitHubSessionUser {
 	id: UserID;
 	github_name: string;
 	github_login: string;

@@ -4,7 +4,7 @@ import { client } from './client.js';
 import * as local from './dev.js';
 import { error } from '@sveltejs/kit';
 
-/** @typedef {import('./types').User} User */
+/** @typedef {import('./types').GitHubSessionUser} User */
 
 /**
  * @type {import('flru').flruCache<User | null>}

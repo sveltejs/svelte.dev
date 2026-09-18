@@ -4,7 +4,7 @@
 	import { Icon } from '@sveltejs/site-kit/components';
 	import { isMac } from '#lib/utils/compat.js';
 	import { get_app_context } from '../../app-context';
-	import type { Gist, User } from '#lib/db/types.d.ts';
+	import type { Gist, GitHubSessionUser } from '#lib/db/types.d.ts';
 	import { browser } from '$app/env';
 	import ModalDropdown from '#lib/components/ModalDropdown.svelte';
 	import SecondaryNav from '#lib/components/SecondaryNav.svelte';
@@ -13,7 +13,7 @@
 
 	interface Props {
 		examples: Array<{ title: string; examples: any[] }>;
-		user: User | null;
+		user: GitHubSessionUser | null;
 		repl: ReturnType<typeof Repl>;
 		gist: Gist;
 		name: string;

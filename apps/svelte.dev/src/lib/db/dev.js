@@ -6,7 +6,7 @@ import { client } from './client.js';
 // Dev-only stand-in for the Supabase rpcs, so GitHub login and saving work without a database.
 
 /** @typedef {import('./types').GitHubUser} GitHubUser */
-/** @typedef {import('./types').User} User */
+/** @typedef {import('./types').GitHubSessionUser} User */
 /** @typedef {import('./types').Gist & { userid: number, created_at: string, updated_at: string, deleted_at?: string }} Row */
 
 const FILE = path.resolve('tmp/playground.json');
