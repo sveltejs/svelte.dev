@@ -142,10 +142,14 @@ export class Workspace {
 		const warnings = this.current_compiled?.result?.warnings ?? [];
 
 		if (error) {
+			// not all errors (e.g. from legacy compilers) have a `position` range
+			const from = error.position?.[0] ?? 0;
+			const to = error.position?.[1] ?? from;
+
 			diagnostics.push({
 				severity: 'error',
-				from: error.position![0],
-				to: error.position![1],
+				from,
+				to,
 				message: error.message,
 				renderMessage: () => {
 					let html = error.message

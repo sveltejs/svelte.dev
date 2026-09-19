@@ -123,6 +123,10 @@ addEventListener('message', async (event) => {
 			// `position` property from a Svelte compile error;
 			// this is a hacky but pragmatic way to solve it
 			e.position = [e.pos, e.raisedAt];
+		} else if (!e.position && e.start?.character != null) {
+			// legacy (Svelte 3/4) errors expose `start`/`end` loc objects
+			// instead of a `position` range
+			e.position = [e.start.character, e.end?.character ?? e.start.character];
 		}
 
 		postMessage({

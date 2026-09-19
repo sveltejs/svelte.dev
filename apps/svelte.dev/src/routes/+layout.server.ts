@@ -64,8 +64,8 @@ const banner: BannerData = {
 	end: new Date('20 November, 2026 23:59:59 UTC'),
 	arrow: true,
 	content: {
-		lg: 'Svelte Summit Ljubljana and online, Nov 18-19: Tickets now available!',
-		sm: 'Svelte Summit Nov 18-19'
+		lg: 'Svelte Summit Ljubljana and online, Nov 19-20: Tickets now available!',
+		sm: 'Svelte Summit Nov 19-20'
 	},
 	href: 'https://www.sveltesummit.com/'
 };
