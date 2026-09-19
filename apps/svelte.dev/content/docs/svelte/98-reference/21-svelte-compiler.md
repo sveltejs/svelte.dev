@@ -81,12 +81,10 @@ function migrate(
 	{
 		filename,
 		use_ts
-	}?:
-		| {
-				filename?: string;
-				use_ts?: boolean;
-		  }
-		| undefined
+	}?: {
+		filename?: string;
+		use_ts?: boolean;
+	}
 ): {
 	code: string;
 };
@@ -162,11 +160,9 @@ For example, it can be used to convert a `<style lang="sass">` block into vanill
 function preprocess(
 	source: string,
 	preprocessor: PreprocessorGroup | PreprocessorGroup[],
-	options?:
-		| {
-				filename?: string;
-		  }
-		| undefined
+	options?: {
+		filename?: string;
+	}
 ): Promise<Processed>;
 ```
 

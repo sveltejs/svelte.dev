@@ -52,7 +52,7 @@ class MediaQuery extends ReactiveValue<boolean> {/*…*/}
 <div class="ts-block-property">
 
 ```dts
-constructor(query: string, fallback?: boolean | undefined);
+constructor(query: string, fallback?: boolean);
 ```
 
 <div class="ts-block-property-details">
@@ -172,24 +172,6 @@ class SvelteMap<K, V> extends Map<K, V> {/*…*/}
 
 ```dts
 constructor(value?: Iterable<readonly [K, V]> | null | undefined);
-```
-
-<div class="ts-block-property-details"></div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-getOrInsert(key: K, value: V): V;
-```
-
-<div class="ts-block-property-details"></div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
-getOrInsertComputed(key: K, callbackFn: (key: K) => V): V;
 ```
 
 <div class="ts-block-property-details"></div>
