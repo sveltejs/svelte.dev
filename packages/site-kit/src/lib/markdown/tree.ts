@@ -8,9 +8,9 @@ const raw_grammar = define_grammar({
 		main: {
 			rules: [
 				within('//', '\n', TOKENS.comment, { multiline: false }),
-				within('[', ']', TOKENS.type),
+				within('[', ']', TOKENS.parameter),
 				within('(', ')', TOKENS.type),
-				match(['├', '└', '│', '─', '/', '\\'], TOKENS.comment),
+				match(['├', '└', '│', '─', '/', '\\'], TOKENS.punctuation),
 				on([' ', '\t', '\n', '\r']),
 				fallback({ token: TOKENS.string })
 			]
@@ -23,5 +23,9 @@ const tokenize = create_language(grammar, []);
 
 export function create_tree_highlighter() {
 	const highlight = tokenize();
-	return (input: string) => to_html(input, highlight(input));
+	return (input: string) =>
+		to_html(input, highlight(input)).replace(
+			/<span class="tok string">([^<]*)<\/span>(?=<span class="tok punctuation">\/<\/span>)/g,
+			'<span class="tok namespace">$1</span>'
+		);
 }

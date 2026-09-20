@@ -463,6 +463,22 @@
 					.link_text {
 						color: var(--twp-link);
 					}
+
+					&[data-language='tree'] {
+						.punctuation {
+							color: color-mix(in oklch, var(--sk-fg-4) 82%, var(--sk-fg-accent));
+						}
+
+						.namespace {
+							color: var(--twp-function);
+						}
+
+						.parameter,
+						.type {
+							color: color-mix(in oklch, var(--sk-fg-accent) 62%, var(--twp-string));
+							font-weight: 500;
+						}
+					}
 				}
 
 				code {
