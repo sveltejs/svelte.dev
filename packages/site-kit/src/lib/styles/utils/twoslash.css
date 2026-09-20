@@ -38,6 +38,62 @@
 	display: block;
 	width: 100%;
 	padding: 0 !important;
+	color: var(--twp-text);
+
+	.comment {
+		color: var(--twp-comment);
+	}
+
+	.keyword,
+	.boolean,
+	.operator,
+	.svelte_block,
+	.svelte_directive,
+	.code_language,
+	.unit {
+		color: var(--twp-keyword);
+	}
+
+	.string,
+	.string_escape,
+	.template,
+	.regex,
+	.url,
+	.url_link,
+	.url_title,
+	.tag_name,
+	.attribute {
+		color: var(--twp-string);
+	}
+
+	.function,
+	.type,
+	.class_name,
+	.attr_name,
+	.decorator,
+	.selector_class,
+	.selector_id {
+		color: var(--twp-function);
+	}
+
+	.primitive_type,
+	.property,
+	.identifier,
+	.namespace,
+	.constant,
+	.punctuation,
+	.expression,
+	.syntax_text {
+		color: var(--twp-text);
+	}
+
+	.syntax_keyword {
+		color: var(--twp-keyword);
+	}
+
+	.parameter {
+		color: var(--twp-parameter);
+	}
 }
 
 .twoslash-popover-tags {

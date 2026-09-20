@@ -407,7 +407,8 @@
 					.operator,
 					.svelte_block,
 					.svelte_directive,
-					.code_language {
+					.code_language,
+					.unit {
 						color: var(--twp-keyword);
 					}
 
@@ -418,7 +419,7 @@
 					.url,
 					.url_link,
 					.url_title,
-					.attr_name,
+					.tag_name,
 					.attribute {
 						color: var(--twp-string);
 					}
@@ -426,9 +427,8 @@
 					.function,
 					.type,
 					.class_name,
-					.tag_name,
+					.attr_name,
 					.decorator,
-					.property,
 					.selector_class,
 					.selector_id {
 						color: var(--twp-function);
@@ -442,9 +442,21 @@
 						color: var(--twp-parameter);
 					}
 
+					.property,
+					.identifier,
+					.namespace,
+					.constant,
 					.punctuation,
 					.expression {
-						color: var(--twp-punctuation);
+						color: var(--twp-text);
+					}
+
+					.syntax_keyword {
+						color: var(--twp-keyword);
+					}
+
+					.syntax_text {
+						color: var(--twp-text);
 					}
 
 					.autolink,

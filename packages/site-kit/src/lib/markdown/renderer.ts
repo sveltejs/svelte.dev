@@ -62,9 +62,58 @@ function escape_html(value: string) {
 
 const TYPESCRIPT_PRIMITIVE_TYPE_REGEX =
 	/(<span class="(?:tok )?type)(">)(any|bigint|boolean|never|null|number|object|string|symbol|undefined|unknown|void)(<\/span>)/g;
+const JSDOC_TYPE_COMMENT_REGEX =
+	/<span class="(?<token>tok )?comment">(?<open>\/\*\*\s*)(?<tag>@type)(?<space>\s+)(?<type>\{[^<}]+\})(?<close>\s*\*\/)<\/span>/g;
 
-function distinguish_typescript_primitive_types(html: string) {
-	return html.replace(TYPESCRIPT_PRIMITIVE_TYPE_REGEX, '$1 primitive_type$2$3$4');
+function add_syntax_color_classes(html: string, language: string) {
+	html = html
+		.replace(TYPESCRIPT_PRIMITIVE_TYPE_REGEX, '$1 primitive_type$2$3$4')
+		.replace(
+			JSDOC_TYPE_COMMENT_REGEX,
+			'<span class="$<token>comment">$<open></span><span class="$<token>keyword">$<tag></span>$<space><span class="$<token>type">$<type></span><span class="$<token>comment">$<close></span>'
+		)
+		.replace(
+			/(<span class="(?:tok )?keyword">import<\/span>\s+)<span class="(?<token>tok )?operator">\*<\/span>/g,
+			'$1<span class="$<token>operator syntax_text">*</span>'
+		)
+		.replace(
+			/(<span class="(?:tok )?keyword">import<\/span>\s+)<span class="(?<token>tok )?identifier">type<\/span>/g,
+			'$1<span class="$<token>identifier syntax_keyword">type</span>'
+		)
+		.replace(
+			/<span class="(?<token>tok )?function">\$(?<name>[^<]+)<\/span>/g,
+			'<span class="$<token>function syntax_text">$$</span><span class="$<token>function">$<name></span>'
+		)
+		.replace(
+			/<span class="(?<token>tok )?punctuation">\$\{<\/span>/g,
+			'<span class="$<token>punctuation syntax_keyword">${</span>'
+		)
+		.replace(
+			/<span class="(?<token>tok )?punctuation">}<\/span>(?=<span class="(?:tok )?template">)/g,
+			'<span class="$<token>punctuation syntax_keyword">}</span>'
+		);
+
+	if (['css', 'js', 'javascript', 'svelte', 'ts', 'typescript'].includes(language)) {
+		html = html.replace(
+			/<span class="(?<token>tok )?punctuation">(?<value>[^<]*:[^<]*)<\/span>/g,
+			(_match, _token, _value, _offset, _string, groups: { token?: string; value: string }) => {
+				const token = groups.token ?? '';
+				return groups.value
+					.split(':')
+					.map((part, index, parts) => {
+						const punctuation = part ? `<span class="${token}punctuation">${part}</span>` : '';
+						const colon =
+							index < parts.length - 1
+								? `<span class="${token}punctuation syntax_keyword">:</span>`
+								: '';
+						return punctuation + colon;
+					})
+					.join('');
+			}
+		);
+	}
+
+	return html;
 }
 
 function highlight_source(source: string, language: string) {
@@ -1211,7 +1260,7 @@ async function syntax_highlight({
 		html = highlight_source(source, language);
 	}
 
-	html = distinguish_typescript_primitive_types(html);
+	html = add_syntax_color_classes(html, language);
 
 	// Normalize Twinkleplop output for the existing code-block annotations.
 	html = html
