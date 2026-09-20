@@ -81,10 +81,6 @@ function add_syntax_color_classes(html: string, language: string) {
 			'$1<span class="$<token>identifier syntax_keyword">type</span>'
 		)
 		.replace(
-			/<span class="(?<token>tok )?function">\$(?<name>[^<]+)<\/span>/g,
-			'<span class="$<token>function syntax_text">$$</span><span class="$<token>function">$<name></span>'
-		)
-		.replace(
 			/<span class="(?<token>tok )?punctuation">\$\{<\/span>/g,
 			'<span class="$<token>punctuation syntax_keyword">${</span>'
 		)
