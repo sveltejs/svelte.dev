@@ -60,6 +60,13 @@ function escape_html(value: string) {
 		.replaceAll("'", '&#39;');
 }
 
+const TYPESCRIPT_PRIMITIVE_TYPE_REGEX =
+	/(<span class="(?:tok )?type)(">)(any|bigint|boolean|never|null|number|object|string|symbol|undefined|unknown|void)(<\/span>)/g;
+
+function distinguish_typescript_primitive_types(html: string) {
+	return html.replace(TYPESCRIPT_PRIMITIVE_TYPE_REGEX, '$1 primitive_type$2$3$4');
+}
+
 function highlight_source(source: string, language: string) {
 	const mapped =
 		TWINKLEPLOP_LANGUAGE_MAP[language as keyof typeof TWINKLEPLOP_LANGUAGE_MAP] ?? language;
@@ -1203,6 +1210,8 @@ async function syntax_highlight({
 	} else {
 		html = highlight_source(source, language);
 	}
+
+	html = distinguish_typescript_primitive_types(html);
 
 	// Normalize Twinkleplop output for the existing code-block annotations.
 	html = html

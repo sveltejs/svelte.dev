@@ -424,6 +424,7 @@
 					}
 
 					.function,
+					.type,
 					.class_name,
 					.tag_name,
 					.decorator,
@@ -431,6 +432,10 @@
 					.selector_class,
 					.selector_id {
 						color: var(--twp-function);
+					}
+
+					.primitive_type {
+						color: var(--twp-text);
 					}
 
 					.parameter {
