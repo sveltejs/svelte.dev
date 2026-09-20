@@ -8,9 +8,9 @@ const raw_grammar = define_grammar({
 		main: {
 			rules: [
 				within('//', '\n', TOKENS.comment, { multiline: false }),
-				within('[', ']', TOKENS.keyword),
+				within('[', ']', TOKENS.type),
 				within('(', ')', TOKENS.type),
-				match(['├', '└', '│', '─', '/', '\\'], TOKENS.keyword),
+				match(['├', '└', '│', '─', '/', '\\'], TOKENS.comment),
 				on([' ', '\t', '\n', '\r']),
 				fallback({ token: TOKENS.string })
 			]
