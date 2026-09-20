@@ -40,6 +40,7 @@
 		"@lezer/common": "^1.5.1",
 		"@replit/codemirror-lang-svelte": "^6.0.0",
 		"@twinkleplop/bash": "^0.1.1",
+		"@twinkleplop/core": "^0.1.1",
 		"@twinkleplop/css": "^0.1.1",
 		"@twinkleplop/json": "^0.1.1",
 		"@twinkleplop/markdown": "^0.1.1",

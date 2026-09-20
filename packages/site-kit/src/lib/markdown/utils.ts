@@ -19,7 +19,6 @@ export const TWINKLEPLOP_LANGUAGE_MAP = {
 	ini: 'plaintext',
 	http: 'plaintext',
 	cson: 'plaintext',
-	tree: 'plaintext',
 	text: 'plaintext',
 	'': 'plaintext'
 } as const;
