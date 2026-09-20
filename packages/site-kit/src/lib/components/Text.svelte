@@ -473,10 +473,14 @@
 							color: var(--twp-function);
 						}
 
+						.string {
+							color: var(--twp-text);
+						}
+
 						.parameter,
 						.type {
-							color: color-mix(in oklch, var(--sk-fg-accent) 62%, var(--twp-string));
-							font-weight: 500;
+							color: var(--twp-string);
+							font-weight: 600;
 						}
 					}
 				}
