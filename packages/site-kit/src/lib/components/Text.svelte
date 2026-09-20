@@ -106,7 +106,11 @@
 			if (child.nodeType === 1) {
 				const classes = (child as HTMLElement).classList;
 
-				if (classes.contains('deleted') || classes.contains('twoslash-popup-container')) {
+				if (
+					classes.contains('deleted') ||
+					classes.contains('twoslash-popup-container') ||
+					classes.contains('twoslash-popover')
+				) {
 					continue;
 				}
 
@@ -390,6 +394,59 @@
 				color: var(--shiki-color-text);
 				border-radius: var(--sk-border-radius);
 				overflow-x: auto;
+
+				&.twinkleplop {
+					color: var(--twp-text);
+
+					.comment {
+						color: var(--twp-comment);
+					}
+
+					.keyword,
+					.boolean,
+					.operator,
+					.svelte_block,
+					.svelte_directive,
+					.code_language {
+						color: var(--twp-keyword);
+					}
+
+					.string,
+					.string_escape,
+					.template,
+					.regex,
+					.url,
+					.url_link,
+					.url_title,
+					.attr_name,
+					.attribute {
+						color: var(--twp-string);
+					}
+
+					.function,
+					.class_name,
+					.tag_name,
+					.decorator,
+					.property,
+					.selector_class,
+					.selector_id {
+						color: var(--twp-function);
+					}
+
+					.parameter {
+						color: var(--twp-parameter);
+					}
+
+					.punctuation,
+					.expression {
+						color: var(--twp-punctuation);
+					}
+
+					.autolink,
+					.link_text {
+						color: var(--twp-link);
+					}
+				}
 
 				code {
 					display: block;

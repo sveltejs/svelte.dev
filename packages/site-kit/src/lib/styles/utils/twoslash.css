@@ -11,7 +11,8 @@
 		height: calc(100% + 1rem);
 	}
 
-	.twoslash-popup-container {
+	.twoslash-popup-container,
+	.twoslash-popover {
 		display: none;
 	}
 }
@@ -21,20 +22,38 @@
 	height: 0;
 }
 
-.twoslash-popup-container {
+.twoslash-popup-container,
+.twoslash-popover {
 	display: flex;
 	flex-direction: column;
 	font: var(--sk-font-mono);
 	gap: 1rem;
 }
 
-.twoslash-popup-code {
+.twoslash-popup-code,
+.twoslash-popover-type {
 	background: transparent !important;
 	margin: 0 !important;
 	font: var(--sk-font-mono);
 	display: block;
 	width: 100%;
 	padding: 0 !important;
+}
+
+.twoslash-popover-tags {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.twoslash-popover-tag::before {
+	content: '@' attr(data-tag) ' ';
+	color: var(--sk-fg-4);
+}
+
+.twoslash-popover-tag-name {
+	font: var(--sk-font-mono);
+	color: var(--sk-fg-accent);
 }
 
 .twoslash-popup-reference {

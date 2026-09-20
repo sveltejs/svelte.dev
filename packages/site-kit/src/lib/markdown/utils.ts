@@ -1,24 +1,28 @@
 import { Marked, type Renderer, type TokenizerObject, type MarkedExtension } from 'marked';
 import json5 from 'json5';
 
-// helps map a highlighter for languages not recognised or aliased by Shiki
-// see https://shiki.style/languages for a full list of official languages
-export const SHIKI_LANGUAGE_MAP = {
-	env: 'dotenv',
+// Map markdown fence aliases and unsupported formats to the closest Twinkleplop grammar.
+export const TWINKLEPLOP_LANGUAGE_MAP = {
+	env: 'bash',
+	sh: 'bash',
+	console: 'bash',
+	shellsession: 'bash',
 	html: 'svelte',
 	sv: 'svelte',
 	dts: 'typescript',
-	json: 'jsonc',
-	// we don't need the coffeescript highlighter because it's only used once
-	// in a blog post from 2019
-	cson: '',
-	// there's no syntax highlighter for tree syntax
-	tree: '',
-	'': '',
-	// already recognised by Shiki but they're here to satisfy TypeScript
-	js: 'js',
-	ts: 'ts'
-};
+	js: 'javascript',
+	ts: 'typescript',
+	jsonc: 'json',
+	yml: 'yaml',
+	md: 'markdown',
+	// Twinkleplop does not provide grammars for these formats.
+	ini: 'plaintext',
+	http: 'plaintext',
+	cson: 'plaintext',
+	tree: 'plaintext',
+	text: 'plaintext',
+	'': 'plaintext'
+} as const;
 
 export function is_in_code_block(body: string, index: number) {
 	const code_blocks = [...body.matchAll(/(`{3,}).*\n(.|\n)+?\1/gm)].map((match) => {

@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { SHIKI_LANGUAGE_MAP, strip_origin } from './utils.ts';
+import { TWINKLEPLOP_LANGUAGE_MAP, strip_origin } from './utils.ts';
 import type { Declaration, TypeElement, Modules } from './index.ts';
 
 /**
@@ -247,7 +247,10 @@ function stringify_expanded_type(type: Declaration) {
 /**
  * Helper function for {@link replace_export_type_placeholders}. Renders specific members to their markdown/html representation.
  */
-function stringify(member: TypeElement, lang: keyof typeof SHIKI_LANGUAGE_MAP = 'ts'): string {
+function stringify(
+	member: TypeElement,
+	lang: keyof typeof TWINKLEPLOP_LANGUAGE_MAP = 'ts'
+): string {
 	if (!member) return '';
 
 	// It's important to always use two newlines after a dom tag or else markdown does not render it properly
@@ -284,7 +287,7 @@ function stringify(member: TypeElement, lang: keyof typeof SHIKI_LANGUAGE_MAP = 
 	);
 }
 
-function fence(code: string, lang: keyof typeof SHIKI_LANGUAGE_MAP = 'ts') {
+function fence(code: string, lang: keyof typeof TWINKLEPLOP_LANGUAGE_MAP = 'ts') {
 	return (
 		'\n\n```' +
 		lang +
