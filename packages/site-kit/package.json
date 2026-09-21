@@ -51,8 +51,7 @@
 		"@twinkleplop/yaml": "^0.1.2",
 		"esm-env": "^1.2.2",
 		"icons": "workspace:*",
-		"json5": "^2.2.3",
-		"twoslash": "^0.3.8"
+		"json5": "^2.2.3"
 	},
 	"devDependencies": {
 		"@sveltejs/kit": "catalog:",

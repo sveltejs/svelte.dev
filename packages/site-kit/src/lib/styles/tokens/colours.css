@@ -42,13 +42,11 @@
 
 	/* Twinkleplop syntax highlighting */
 	--twp-text: var(--shiki-color-text);
-	--twp-constant: var(--shiki-token-constant);
 	--twp-string: var(--shiki-token-string);
 	--twp-comment: var(--shiki-token-comment);
 	--twp-keyword: var(--shiki-token-keyword);
 	--twp-parameter: var(--shiki-token-parameter);
 	--twp-function: var(--shiki-token-function);
-	--twp-punctuation: var(--shiki-token-punctuation);
 	--twp-link: var(--shiki-token-link);
 
 	/* Misc */

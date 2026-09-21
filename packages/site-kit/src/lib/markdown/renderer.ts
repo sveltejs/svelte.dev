@@ -79,7 +79,6 @@ function get_twoslash_highlighter(language: 'js' | 'ts', twoslashRoot?: string) 
 	if (!highlight) {
 		highlight = create_twoslash_highlighter({
 			lang: language,
-			class_name: 'twinkleplop twoslash',
 			render_docs: (markdown) => marked.parseInline(markdown, { async: false }),
 			process_type: (type) => type.replace(/import\(".*?"\)\./g, ''),
 			twoslash: {
@@ -350,7 +349,7 @@ function injectReferenceLinks(
 		if (!importedSymbols.has(symbol)) continue;
 
 		const url = references[symbol];
-		const popover_start = html.indexOf('<span class="twoslash-popover">', target_end);
+		const popover_start = html.indexOf('<span class="twoslash-popover"', target_end);
 		if (!url || popover_start === -1 || popover_start > hover_end) continue;
 
 		const popover_end = find_closing_span(html, popover_start);

@@ -496,9 +496,6 @@ importers:
       json5:
         specifier: ^2.2.3
         version: 2.2.3
-      twoslash:
-        specifier: ^0.3.8
-        version: 0.3.8(typescript@6.0.3)
     devDependencies:
       '@sveltejs/kit':
         specifier: 'catalog:'
