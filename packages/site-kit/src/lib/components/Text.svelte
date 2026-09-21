@@ -108,7 +108,7 @@
 
 				if (
 					classes.contains('deleted') ||
-					classes.contains('twoslash-popup-container') ||
+					classes.contains('twoslash-completion') ||
 					classes.contains('twoslash-popover')
 				) {
 					continue;

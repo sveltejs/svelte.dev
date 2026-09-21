@@ -11,7 +11,6 @@
 		height: calc(100% + 1rem);
 	}
 
-	.twoslash-popup-container,
 	.twoslash-popover {
 		display: none;
 	}
@@ -22,7 +21,6 @@
 	height: 0;
 }
 
-.twoslash-popup-container,
 .twoslash-popover {
 	display: flex;
 	flex-direction: column;
@@ -30,14 +28,14 @@
 	gap: 1rem;
 }
 
-.twoslash-popup-code,
-.twoslash-popover-type {
-	background: transparent !important;
-	margin: 0 !important;
+.twoslash-popover-type,
+.twoslash-query-type {
+	background: transparent;
+	margin: 0;
 	font: var(--sk-font-mono);
 	display: block;
 	width: 100%;
-	padding: 0 !important;
+	padding: 0;
 	color: var(--twp-text);
 
 	.comment {
@@ -96,18 +94,70 @@
 	}
 }
 
-.twoslash-popover-tags {
+.twoslash-query {
+	display: block;
+	width: max-content;
+	max-width: 100%;
+	margin: 0.5rem 0;
+	padding: 0.5rem 1rem;
+	border-left: 2px solid var(--sk-border);
+	white-space: pre-wrap;
+}
+
+.twoslash-popover-docs,
+.twoslash-query-docs {
+	display: block;
+	margin-top: 0.5rem;
+	color: var(--sk-fg-3);
+}
+
+.twoslash-completion {
+	position: relative;
+}
+
+.twoslash-completions {
+	position: absolute;
+	top: calc(100% + 0.4rem);
+	left: 0;
+	z-index: 1;
+	display: block;
+	width: max-content;
+	max-width: min(48ch, calc(100vw - 2 * var(--sk-page-padding-side)));
+	padding: 0.4rem 0;
+	border: 1px solid var(--sk-border);
+	border-radius: var(--sk-border-radius);
+	background: var(--sk-bg-2);
+	box-shadow: var(--sk-shadow);
+	color: var(--twp-text);
+	white-space: pre;
+}
+
+.twoslash-completion-entry,
+.twoslash-completion-docs {
+	display: block;
+	padding: 0.1rem 1rem;
+}
+
+.twoslash-completion-docs {
+	color: var(--sk-fg-3);
+	white-space: pre-wrap;
+}
+
+.twoslash-popover-tags,
+.twoslash-query-tags {
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
 }
 
-.twoslash-popover-tag::before {
+.twoslash-popover-tag::before,
+.twoslash-query-tag::before {
 	content: '@' attr(data-tag) ' ';
 	color: var(--sk-fg-4);
 }
 
-.twoslash-popover-tag-name {
+.twoslash-popover-tag-name,
+.twoslash-query-tag-name {
 	font: var(--sk-font-mono);
 	color: var(--sk-fg-accent);
 }

@@ -64,16 +64,9 @@ function escape_html(value: string) {
 
 const TYPESCRIPT_PRIMITIVE_TYPE_REGEX =
 	/(<span class="(?:tok )?type)(">)(any|bigint|boolean|never|null|number|object|string|symbol|undefined|unknown|void)(<\/span>)/g;
-const JSDOC_TYPE_COMMENT_REGEX =
-	/<span class="(?<token>tok )?comment">(?<open>\/\*\*\s*)(?<tag>@type)(?<space>\s+)(?<type>\{[^<}]+\})(?<close>\s*\*\/)<\/span>/g;
-
 function add_syntax_color_classes(html: string, language: string) {
 	html = html
 		.replace(TYPESCRIPT_PRIMITIVE_TYPE_REGEX, '$1 primitive_type$2$3$4')
-		.replace(
-			JSDOC_TYPE_COMMENT_REGEX,
-			'<span class="$<token>comment">$<open></span><span class="$<token>keyword">$<tag></span>$<space><span class="$<token>type">$<type></span><span class="$<token>comment">$<close></span>'
-		)
 		.replace(
 			/(<span class="(?:tok )?keyword">import<\/span>\s+)<span class="(?<token>tok )?operator">\*<\/span>/g,
 			'$1<span class="$<token>operator syntax_text">*</span>'

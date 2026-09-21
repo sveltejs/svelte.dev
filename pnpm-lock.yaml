@@ -458,35 +458,35 @@ importers:
         specifier: ^6.0.0
         version: 6.0.0(@codemirror/autocomplete@6.20.0)(@codemirror/lang-css@6.3.1)(@codemirror/lang-html@6.4.11)(@codemirror/lang-javascript@6.2.4)(@codemirror/language@6.12.2)(@codemirror/state@6.5.4)(@codemirror/view@6.39.15)(@lezer/common@1.5.1)(@lezer/highlight@1.2.3)(@lezer/javascript@1.5.4)(@lezer/lr@1.4.8)
       '@twinkleplop/bash':
-        specifier: ^0.1.1
-        version: 0.1.1
+        specifier: ^0.1.2
+        version: 0.1.2
       '@twinkleplop/core':
-        specifier: ^0.1.1
-        version: 0.1.1
+        specifier: ^0.1.2
+        version: 0.1.2
       '@twinkleplop/css':
-        specifier: ^0.1.1
-        version: 0.1.1
+        specifier: ^0.1.2
+        version: 0.1.2
       '@twinkleplop/json':
-        specifier: ^0.1.1
-        version: 0.1.1
+        specifier: ^0.1.2
+        version: 0.1.2
       '@twinkleplop/markdown':
-        specifier: ^0.1.1
-        version: 0.1.1
+        specifier: ^0.1.2
+        version: 0.1.2
       '@twinkleplop/svelte':
-        specifier: ^0.1.1
-        version: 0.1.1
+        specifier: ^0.1.2
+        version: 0.1.2
       '@twinkleplop/toml':
-        specifier: ^0.1.1
-        version: 0.1.1
+        specifier: ^0.1.2
+        version: 0.1.2
       '@twinkleplop/twoslash':
-        specifier: ^0.1.1
-        version: 0.1.1(typescript@6.0.3)
+        specifier: ^0.1.2
+        version: 0.1.2(typescript@6.0.3)
       '@twinkleplop/typescript':
-        specifier: ^0.1.1
-        version: 0.1.1
+        specifier: ^0.1.2
+        version: 0.1.2
       '@twinkleplop/yaml':
-        specifier: ^0.1.1
-        version: 0.1.1
+        specifier: ^0.1.2
+        version: 0.1.2
       esm-env:
         specifier: ^1.2.2
         version: 1.2.2
@@ -551,8 +551,8 @@ packages:
     resolution: {integrity: sha512-qehxGkRj55h/ff8EMaJ+cYhyaKlHIxqYDn682wQD7RNp9UujOQsHog2uS0r2vzr4pW+sXf90NeeayjcNaX3fFg==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/parser@7.29.7':
-    resolution: {integrity: sha512-hnORnjP/1P/zFEndoeX+n+t1RwWRJiJpM/jO7FW32Kn9r5+sJB2JWOdYo4L6k78j15eCwY3Gm/7364B1EMwtNg==}
+  '@babel/parser@7.29.9':
+    resolution: {integrity: sha512-CjXrNHTnvqBVqHgdBysY3vk2T8tpJHb5/RMeHJBTyVa9xgugCB0CJTx/3oO8RV2QRQP391RWpB7D6hLjm8V9uA==}
     engines: {node: '>=6.0.0'}
     hasBin: true
 
@@ -560,8 +560,8 @@ packages:
     resolution: {integrity: sha512-05WQkdpL9COIMz4LjTxGpPNCdlpyimKppYNoJ5Di5EUObifl8t4tuLuUBBZEpoLYOmfvIWrsp9fCl0HoPRVTdA==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/types@7.29.7':
-    resolution: {integrity: sha512-4zBIxpPzowiZpusoFkyGVwakdRJUyuH5PxQ/PrqghfdFWWasvnCdPfQXHrenDai+gyLARulZjZowCOj6fjT4pA==}
+  '@babel/types@7.29.8':
+    resolution: {integrity: sha512-Vj1jF3cPfxg7OAfoI7QnVKLoILlm2JF9pnVHrX8qx7AHMiYWT+NDAA7jChlNgRS4WTLc/fD1lXLmPixluj+3Gg==}
     engines: {node: '>=6.9.0'}
 
   '@cloudflare/workers-types@4.20260305.0':
@@ -1744,41 +1744,41 @@ packages:
   '@tokenizer/token@0.3.0':
     resolution: {integrity: sha512-OvjF+z51L3ov0OyAU0duzsYuvO01PH7x4t6DJx+guahgTnBHkhJdG7soQeTSFLWN3efnHyibZ4Z8l2EuWwJN3A==}
 
-  '@twinkleplop/bash@0.1.1':
-    resolution: {integrity: sha512-M6P/pWN5+u/7h/6Y33uQsuRi4YGEodrVAEnuFww3M4a0sp9RYowmyZzWdXpgmzjxZZbuiWUXeJIr9hnGseZi1A==}
+  '@twinkleplop/bash@0.1.2':
+    resolution: {integrity: sha512-ZqRjuIE2sqQ+a2pEqrHKCgwAhWtyi+TkRtmrX3oiVCGFSPQVfUJ0wzADTtciS+i800/2ZSEHLjjEXFFE2rShag==}
 
-  '@twinkleplop/core@0.1.1':
-    resolution: {integrity: sha512-3OV1zUDF58Qb/J0PDtrFUBz7T1iBkXqUW2hCydpwo70iyys/pliTBJpwYiSVMeExib+jhD0/XqXaXqGhxapG4A==}
+  '@twinkleplop/core@0.1.2':
+    resolution: {integrity: sha512-Yw/Ib+ayXxds2ldFwet7fU80VWTx+Vt23cPx6iJVyEXNGac7ckhivWK3XgY8eFtJ6lAOEh7bVLTgQXE+zzYovQ==}
 
-  '@twinkleplop/css@0.1.1':
-    resolution: {integrity: sha512-WKBA+jHYTbiBkXPC0mDIHfeBphLpy/GIFAIFKc/qZLAK7yjRPNtop0vA+J4QD4s5kX0jnZ35ivXiFr6suHFd3w==}
+  '@twinkleplop/css@0.1.2':
+    resolution: {integrity: sha512-wcjD+fPf3IBl6wvFmIg21ubQRD01aAsbNSBtJ1NlVcQqv4ZcE7tL6QFANUbzXGoW1akphnf3EjThH46DHWzgtQ==}
 
-  '@twinkleplop/html@0.1.1':
-    resolution: {integrity: sha512-4HsgktBbs4p7sHBWEeTm3ucPJYLzIMVn0jAP6QJmJTaHCbSDiLxhaMfyUmL+O+VYBhA+PcuokwuZ/5tov3sdKw==}
+  '@twinkleplop/html@0.1.2':
+    resolution: {integrity: sha512-I8GqM1Q1pZVtztLU+NoDqz9D/36JwerU+l352HBsGKoHSY1kZ48X1sn90GVnSDkLyhJUkrurYvzV/NQflkBCGQ==}
 
-  '@twinkleplop/javascript@0.1.1':
-    resolution: {integrity: sha512-ifS3jVw5BlJGrZrF2bEl1B9sEtuk0Xlkw/Pe50vooQpqzd0XNGSk/EpQr/HXc5ac6/MUVwRVRFxrFA2HBA+9og==}
+  '@twinkleplop/javascript@0.1.2':
+    resolution: {integrity: sha512-VAgEACXMh9Zda0ldrY9haMjAxD8ibnZdJPnUPk0SIxEKYlnmjiNs9VY79kPFF83DaaxCDcwj6sp2hX8FfgG55g==}
 
-  '@twinkleplop/json@0.1.1':
-    resolution: {integrity: sha512-qR8BJjNYw81yfuRGookiTJCQ/X/DO3C2SQCjQV8RhBGC6JVsu519n/CrD8lx+CE8nx2RvmUJKnRazGps+hF4hQ==}
+  '@twinkleplop/json@0.1.2':
+    resolution: {integrity: sha512-JuDsJwPp7aP3DM990o5Sn3cG8CuKI3ezqANXIRLeKtGTMLbvQSa/V+uDElH4duXhijiVbqT/SB9iwuAL1rGBgg==}
 
-  '@twinkleplop/markdown@0.1.1':
-    resolution: {integrity: sha512-AOnrOO/eJJjvLjkcUu4OhaGso9dV8fAXQUpzsS01t6qnGlVb5rjWGm0kffuK4ZWzdEu/PawXtBza1Y/NdblC2g==}
+  '@twinkleplop/markdown@0.1.2':
+    resolution: {integrity: sha512-L3toyV74/qW+gxJEdgj/KTdw5U5f5YFA8U1gUnNaCom5zUAe/kR/DBs7nAOvgJECI8TpiCpjA+1051wpgIjZeg==}
 
-  '@twinkleplop/svelte@0.1.1':
-    resolution: {integrity: sha512-5M/JIO1dxgI7WEMghAcvsSVRftSJc7t5jOYjDNsoaFK4LfiohOU/r1XnU4k0BQPrbp0/whVcTDCjMalXssPKEQ==}
+  '@twinkleplop/svelte@0.1.2':
+    resolution: {integrity: sha512-KtUu5Ulv/9Qp3lisz8LUgpAHrWkfH+wyn9f64z3TINEJ+a9Z8aZuzc+fxosJYpXLA+v/ZjnwN5H7JOXbfuY12Q==}
 
-  '@twinkleplop/toml@0.1.1':
-    resolution: {integrity: sha512-zUNIykOBlXBJkzC8Uh3lUe89BL8hwmAUkee5vFc1SQ++M0IuwefWQV5AE1ShqD5mreyrabXS/0PBDH57pDEJPw==}
+  '@twinkleplop/toml@0.1.2':
+    resolution: {integrity: sha512-vD02mXUIJprhKBB8sWF+r+7uXU9KhnU5hQP/U7X0oEcHGb3ED8mqwpbT33+6Jydzupyegs2Z8OQoZMB1D5xCfg==}
 
-  '@twinkleplop/twoslash@0.1.1':
-    resolution: {integrity: sha512-R1h8LcSV3f5sNJ0V/3oKx6v7MexcbShMXIiXrN33kgHbpQAa8OgZ9TRxOREMyekxZ1WErRpsYGdMybCytEHf7Q==}
+  '@twinkleplop/twoslash@0.1.2':
+    resolution: {integrity: sha512-j4EAwQTH2Vsy/0WabwPFSd+Bdi3XOKu81UQIhutawAd9Werg+AeTDd9aT7YGMcjwnfMe/+KkiGa3/aqvFsouyQ==}
 
-  '@twinkleplop/typescript@0.1.1':
-    resolution: {integrity: sha512-vVUtpI0OHuLXOCgUrZBjjRfzcASQtMKVpANlBvVG84RXKIo69tBN+2tBKjKctin0XvBFk9huhM6WEhT/rWp2WA==}
+  '@twinkleplop/typescript@0.1.2':
+    resolution: {integrity: sha512-bTjl1kDREC9Wkq8lQRazo9II6agXurdDrlwjDu/w+C6MKvSd+66qANv2/qhRIdc9Y4JSTxMz3c2Ypi0O3RwMxg==}
 
-  '@twinkleplop/yaml@0.1.1':
-    resolution: {integrity: sha512-p5FgV4bMpDe5N77Pnkv0CAEck6wp2QolrqLy5Y6skSUJsLRgW+CwLpvb7ygmePqJ+yG0YiGltduwJK5deOqa5Q==}
+  '@twinkleplop/yaml@0.1.2':
+    resolution: {integrity: sha512-2Wc55rPU6mCHl8kxpMSyi8PMTxMHEXIZoCiY6IRBRw2LWDEIqJZlsQoaA5CZKQrKjrZn+Zst8I7bWgb6Ws9YvA==}
 
   '@tybys/wasm-util@0.10.3':
     resolution: {integrity: sha512-F3fo1MYrRJYL3zER0OUOmkutjr1Vp23m7OsSgp7nq4SP6OqX6C/56XFIPAl5bt3zaBRjmW7SGz3u/6LwFpYcOg==}
@@ -2269,8 +2269,8 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
 
-  get-tsconfig@4.14.0:
-    resolution: {integrity: sha512-yTb+8DXzDREzgvYmh6s9vHsSVCHeC0G3PI5bEXNBHtmshPnO+S5O7qgLEOn0I5QvMy6kpZN8K1NKGyilLb93wA==}
+  get-tsconfig@4.14.3:
+    resolution: {integrity: sha512-++QEw4DIY7WGoukz+/+A/8dGYPT9l9yIadnmSgZ8Rjr3YVSVDipQSO9CdnJo9ePqFqUUqh+wk9uIaoiAwsiPkA==}
 
   gifwrap@0.10.1:
     resolution: {integrity: sha512-2760b1vpJHNmLzZ/ubTtNnEx5WApN/PYWJvXvgS+tL1egTTthayFYIQQNi136FLEDcN/IyEY2EcGpIITD6eYUw==}
@@ -3033,14 +3033,14 @@ snapshots:
 
   '@babel/helper-validator-identifier@7.29.7': {}
 
-  '@babel/parser@7.29.7':
+  '@babel/parser@7.29.9':
     dependencies:
-      '@babel/types': 7.29.7
+      '@babel/types': 7.29.8
     optional: true
 
   '@babel/runtime@7.28.6': {}
 
-  '@babel/types@7.29.7':
+  '@babel/types@7.29.8':
     dependencies:
       '@babel/helper-string-parser': 7.29.7
       '@babel/helper-validator-identifier': 7.29.7
@@ -4089,63 +4089,63 @@ snapshots:
 
   '@tokenizer/token@0.3.0': {}
 
-  '@twinkleplop/bash@0.1.1':
+  '@twinkleplop/bash@0.1.2':
     dependencies:
-      '@twinkleplop/core': 0.1.1
+      '@twinkleplop/core': 0.1.2
 
-  '@twinkleplop/core@0.1.1': {}
+  '@twinkleplop/core@0.1.2': {}
 
-  '@twinkleplop/css@0.1.1':
+  '@twinkleplop/css@0.1.2':
     dependencies:
-      '@twinkleplop/core': 0.1.1
+      '@twinkleplop/core': 0.1.2
 
-  '@twinkleplop/html@0.1.1':
+  '@twinkleplop/html@0.1.2':
     dependencies:
-      '@twinkleplop/core': 0.1.1
-      '@twinkleplop/css': 0.1.1
-      '@twinkleplop/javascript': 0.1.1
+      '@twinkleplop/core': 0.1.2
+      '@twinkleplop/css': 0.1.2
+      '@twinkleplop/javascript': 0.1.2
 
-  '@twinkleplop/javascript@0.1.1':
+  '@twinkleplop/javascript@0.1.2':
     dependencies:
-      '@twinkleplop/core': 0.1.1
-      '@twinkleplop/css': 0.1.1
-      '@twinkleplop/html': 0.1.1
+      '@twinkleplop/core': 0.1.2
+      '@twinkleplop/css': 0.1.2
+      '@twinkleplop/html': 0.1.2
 
-  '@twinkleplop/json@0.1.1':
+  '@twinkleplop/json@0.1.2':
     dependencies:
-      '@twinkleplop/core': 0.1.1
+      '@twinkleplop/core': 0.1.2
 
-  '@twinkleplop/markdown@0.1.1':
+  '@twinkleplop/markdown@0.1.2':
     dependencies:
-      '@twinkleplop/core': 0.1.1
+      '@twinkleplop/core': 0.1.2
 
-  '@twinkleplop/svelte@0.1.1':
+  '@twinkleplop/svelte@0.1.2':
     dependencies:
-      '@twinkleplop/core': 0.1.1
-      '@twinkleplop/css': 0.1.1
-      '@twinkleplop/javascript': 0.1.1
+      '@twinkleplop/core': 0.1.2
+      '@twinkleplop/css': 0.1.2
+      '@twinkleplop/javascript': 0.1.2
 
-  '@twinkleplop/toml@0.1.1':
+  '@twinkleplop/toml@0.1.2':
     dependencies:
-      '@twinkleplop/core': 0.1.1
+      '@twinkleplop/core': 0.1.2
 
-  '@twinkleplop/twoslash@0.1.1(typescript@6.0.3)':
+  '@twinkleplop/twoslash@0.1.2(typescript@6.0.3)':
     dependencies:
-      '@twinkleplop/core': 0.1.1
-      '@twinkleplop/typescript': 0.1.1
+      '@twinkleplop/core': 0.1.2
+      '@twinkleplop/typescript': 0.1.2
       twoslash: 0.3.8(typescript@6.0.3)
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  '@twinkleplop/typescript@0.1.1':
+  '@twinkleplop/typescript@0.1.2':
     dependencies:
-      '@twinkleplop/core': 0.1.1
-      '@twinkleplop/javascript': 0.1.1
+      '@twinkleplop/core': 0.1.2
+      '@twinkleplop/javascript': 0.1.2
 
-  '@twinkleplop/yaml@0.1.1':
+  '@twinkleplop/yaml@0.1.2':
     dependencies:
-      '@twinkleplop/core': 0.1.1
+      '@twinkleplop/core': 0.1.2
 
   '@tybys/wasm-util@0.10.3':
     dependencies:
@@ -4271,7 +4271,7 @@ snapshots:
 
   '@vue/compiler-core@3.5.35':
     dependencies:
-      '@babel/parser': 7.29.7
+      '@babel/parser': 7.29.9
       '@vue/shared': 3.5.35
       entities: 7.0.1
       estree-walker: 2.0.2
@@ -4286,7 +4286,7 @@ snapshots:
 
   '@vue/compiler-sfc@3.5.35':
     dependencies:
-      '@babel/parser': 7.29.7
+      '@babel/parser': 7.29.9
       '@vue/compiler-core': 3.5.35
       '@vue/compiler-dom': 3.5.35
       '@vue/compiler-ssr': 3.5.35
@@ -4587,7 +4587,7 @@ snapshots:
   fsevents@2.3.3:
     optional: true
 
-  get-tsconfig@4.14.0:
+  get-tsconfig@4.14.3:
     dependencies:
       resolve-pkg-maps: 1.0.0
     optional: true
@@ -5150,7 +5150,7 @@ snapshots:
   tsx@4.21.0:
     dependencies:
       esbuild: 0.27.7
-      get-tsconfig: 4.14.0
+      get-tsconfig: 4.14.3
     optionalDependencies:
       fsevents: 2.3.3
     optional: true
