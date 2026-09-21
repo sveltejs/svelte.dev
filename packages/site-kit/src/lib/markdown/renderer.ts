@@ -15,6 +15,7 @@ import { create_highlighter as create_twoslash_highlighter } from '@twinkleplop/
 import { language as create_typescript_highlighter } from '@twinkleplop/typescript';
 import { language as create_yaml_highlighter } from '@twinkleplop/yaml';
 import { compress_and_encode_text } from 'gzip';
+import { create_tree_highlighter } from './tree.ts';
 import {
 	decode_html_entities,
 	TWINKLEPLOP_LANGUAGE_MAP,
@@ -45,6 +46,7 @@ const highlighters: Record<string, Highlighter> = {
 	markdown: create_markdown_highlighter(),
 	svelte: create_svelte_highlighter(),
 	toml: create_toml_highlighter(),
+	tree: create_tree_highlighter(),
 	typescript: create_typescript_highlighter(),
 	yaml: create_yaml_highlighter()
 };
