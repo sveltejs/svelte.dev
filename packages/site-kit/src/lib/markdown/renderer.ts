@@ -64,6 +64,8 @@ function escape_html(value: string) {
 
 const TYPESCRIPT_PRIMITIVE_TYPE_REGEX =
 	/(<span class="(?:tok )?type)(">)(any|bigint|boolean|never|null|number|object|string|symbol|undefined|unknown|void)(<\/span>)/g;
+const SYNTAX_COLOR_LANGUAGES = new Set(['css', 'js', 'javascript', 'svelte', 'ts', 'typescript']);
+
 function add_syntax_color_classes(html: string, language: string) {
 	html = html
 		.replace(TYPESCRIPT_PRIMITIVE_TYPE_REGEX, '$1 primitive_type$2$3$4')
@@ -84,7 +86,7 @@ function add_syntax_color_classes(html: string, language: string) {
 			'<span class="$<token>punctuation syntax_keyword">}</span>'
 		);
 
-	if (['css', 'js', 'javascript', 'svelte', 'ts', 'typescript'].includes(language)) {
+	if (SYNTAX_COLOR_LANGUAGES.has(language)) {
 		html = html.replace(
 			/<span class="(?<token>tok )?punctuation">(?<value>[^<]*:[^<]*)<\/span>/g,
 			(_match, _token, _value, _offset, _string, groups: { token?: string; value: string }) => {
