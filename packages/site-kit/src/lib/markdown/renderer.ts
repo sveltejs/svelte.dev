@@ -15,7 +15,6 @@ import { create_highlighter as create_twoslash_highlighter } from '@twinkleplop/
 import { language as create_typescript_highlighter } from '@twinkleplop/typescript';
 import { language as create_yaml_highlighter } from '@twinkleplop/yaml';
 import { compress_and_encode_text } from 'gzip';
-import { create_tree_highlighter } from './tree.ts';
 import {
 	decode_html_entities,
 	TWINKLEPLOP_LANGUAGE_MAP,
@@ -46,7 +45,6 @@ const highlighters: Record<string, Highlighter> = {
 	markdown: create_markdown_highlighter(),
 	svelte: create_svelte_highlighter(),
 	toml: create_toml_highlighter(),
-	tree: create_tree_highlighter(),
 	typescript: create_typescript_highlighter(),
 	yaml: create_yaml_highlighter()
 };
@@ -60,32 +58,6 @@ function escape_html(value: string) {
 		.replaceAll('>', '&gt;')
 		.replaceAll('"', '&quot;')
 		.replaceAll("'", '&#39;');
-}
-
-const SYNTAX_COLOR_LANGUAGES = new Set(['css', 'js', 'javascript', 'svelte', 'ts', 'typescript']);
-
-function add_syntax_color_classes(html: string, language: string) {
-	if (SYNTAX_COLOR_LANGUAGES.has(language)) {
-		html = html.replace(
-			/<span class="(?<token>tok )?punctuation">(?<value>[^<]*:[^<]*)<\/span>/g,
-			(_match, _token, _value, _offset, _string, groups: { token?: string; value: string }) => {
-				const token = groups.token ?? '';
-				return groups.value
-					.split(':')
-					.map((part, index, parts) => {
-						const punctuation = part ? `<span class="${token}punctuation">${part}</span>` : '';
-						const colon =
-							index < parts.length - 1
-								? `<span class="${token}punctuation syntax_keyword">:</span>`
-								: '';
-						return punctuation + colon;
-					})
-					.join('');
-			}
-		);
-	}
-
-	return html;
 }
 
 function highlight_source(source: string, language: string) {
@@ -1231,8 +1203,6 @@ async function syntax_highlight({
 	} else {
 		html = highlight_source(source, language);
 	}
-
-	html = add_syntax_color_classes(html, language);
 
 	// Normalize Twinkleplop output for the existing code-block annotations.
 	html = html

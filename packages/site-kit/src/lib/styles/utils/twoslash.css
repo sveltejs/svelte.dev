@@ -83,10 +83,6 @@
 		color: var(--twp-text);
 	}
 
-	.syntax_keyword {
-		color: var(--twp-keyword);
-	}
-
 	.parameter {
 		color: var(--twp-parameter);
 	}
