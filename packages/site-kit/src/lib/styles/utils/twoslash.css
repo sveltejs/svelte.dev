@@ -74,14 +74,12 @@
 		color: var(--twp-function);
 	}
 
-	.primitive_type,
 	.property,
 	.identifier,
 	.namespace,
 	.constant,
 	.punctuation,
-	.expression,
-	.syntax_text {
+	.expression {
 		color: var(--twp-text);
 	}
 

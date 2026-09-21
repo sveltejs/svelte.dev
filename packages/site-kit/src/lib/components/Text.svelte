@@ -434,10 +434,6 @@
 						color: var(--twp-function);
 					}
 
-					.primitive_type {
-						color: var(--twp-text);
-					}
-
 					.parameter {
 						color: var(--twp-parameter);
 					}
@@ -453,10 +449,6 @@
 
 					.syntax_keyword {
 						color: var(--twp-keyword);
-					}
-
-					.syntax_text {
-						color: var(--twp-text);
 					}
 
 					.autolink,
