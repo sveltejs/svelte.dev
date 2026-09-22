@@ -580,7 +580,7 @@ Inline CSS inside a `<style>` block at the head of the HTML. This option is a nu
 
 </div>
 
-An array of file extensions that SvelteKit will treat as modules. Files with extensions that match neither `config.extensions` nor `config.moduleExtensions` will be ignored by the router.
+An array of file extensions that SvelteKit will treat as modules. Files with extensions that match neither `config.extensions` nor `config.moduleExtensions` will be ignored.
 
 <div class="ts-block-property-children">
 
