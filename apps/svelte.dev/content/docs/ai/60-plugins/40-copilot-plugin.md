@@ -35,3 +35,45 @@ You can also run the same commands from an interactive Copilot CLI session:
 /plugin marketplace add sveltejs/ai-tools
 /plugin install svelte@ai-tools
 ```
+
+## Using Next documentation
+
+If your project uses a Next release of Svelte or SvelteKit, you can configure the MCP server to fetch documentation from `next.svelte.dev` while keeping the plugin's skills and agent.
+
+Create a file such as `svelte-next.mcp.json` with a complete server definition using the same `svelte` key as the plugin:
+
+```json
+{
+	"mcpServers": {
+		"svelte": {
+			"type": "stdio",
+			"command": "npx",
+			"args": ["-y", "@sveltejs/mcp"],
+			"env": {
+				"SVELTE_MCP_NEXT": "true"
+			},
+			"tools": ["*"]
+		}
+	}
+}
+```
+
+Launch Copilot with that override:
+
+```bash
+copilot --additional-mcp-config @./svelte-next.mcp.json
+```
+
+The override applies to that session. Pass the flag each time you want to use it. Plugin MCP entries take precedence over ordinary `~/.copilot/mcp-config.json` entries, but `--additional-mcp-config` takes precedence over plugin entries. See [Copilot's plugin precedence documentation](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-plugin-reference#loading-order-and-precedence).
+
+To use the remote server instead, replace the `svelte` entry in the override file with:
+
+```json
+{
+	"type": "http",
+	"url": "https://mcp.svelte.dev/mcp?next=true",
+	"tools": ["*"]
+}
+```
+
+See [local setup](local-setup) and [remote setup](remote-setup) for details about Next mode and the package-version check performed by the documentation tools.

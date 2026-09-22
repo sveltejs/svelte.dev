@@ -24,3 +24,36 @@ Once installed, Cursor will discover the plugin components automatically:
 - the `svelte-file-editor` agent becomes available in chat
 
 > [!NOTE] The Cursor CLI does not support plugins yet. Plugin support in [Cloud Agents](https://cursor.com/docs/cloud-agent) is limited to MCP servers.
+
+## Using Next documentation
+
+If your project uses a Next release of Svelte or SvelteKit, you can configure the MCP server to fetch documentation from `next.svelte.dev` while keeping the plugin's rules, skills, and agent.
+
+In **Customize**, disable the plugin's bundled Svelte MCP server. Then add a custom server to `.cursor/mcp.json` for the current project, or `~/.cursor/mcp.json` for all projects:
+
+```json
+{
+	"mcpServers": {
+		"svelte-next": {
+			"type": "stdio",
+			"command": "npx",
+			"args": ["-y", "@sveltejs/mcp"],
+			"env": {
+				"SVELTE_MCP_NEXT": "true"
+			}
+		}
+	}
+}
+```
+
+To use the remote server instead, replace the `svelte-next` entry with:
+
+```json
+{
+	"url": "https://mcp.svelte.dev/mcp?next=true"
+}
+```
+
+Keep the plugin enabled and toggle only its bundled MCP server off. See [Cursor's MCP documentation](https://cursor.com/docs/context/mcp) for configuration and server-management details.
+
+See [local setup](local-setup) and [remote setup](remote-setup) for details about Next mode and the package-version check performed by the documentation tools.

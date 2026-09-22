@@ -9,6 +9,18 @@ The local (or stdio) version of the MCP server is available via the [`@sveltejs/
 npx -y @sveltejs/mcp
 ```
 
+## Next documentation
+
+If your project uses a Next release of Svelte or SvelteKit, set the `SVELTE_MCP_NEXT` environment variable to `true` to fetch documentation from `next.svelte.dev`:
+
+```bash
+SVELTE_MCP_NEXT=true npx -y @sveltejs/mcp
+```
+
+For clients that support an `env` field, add `"env": { "SVELTE_MCP_NEXT": "true" }` to the server configuration. This variable also applies to the `list-sections` and `get-documentation` CLI commands.
+
+In this mode, the documentation tools instruct the LLM to check your `package.json` for a Next release. If your project isn't using one, the LLM will ask you to unset `SVELTE_MCP_NEXT` or set it to `false`, since Next documentation may be ahead of or behind your installed version.
+
 Here's how to set it up in some common MCP clients:
 
 ## Claude Code

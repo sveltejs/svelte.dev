@@ -13,6 +13,21 @@ CLI tools for Svelte 5 documentation lookup and code analysis. MUST be used when
 
 You have access to `@sveltejs/mcp` CLI for Svelte-specific assistance. Use these commands via `npx`:
 
+### Choose the documentation version
+
+Before fetching documentation, check `package.json` dependencies and devDependencies for the relevant Svelte or SvelteKit version. If the version uses a catalog or workspace reference, resolve it from the referenced configuration or lockfile.
+
+For a Next release (the `next` tag or a corresponding prerelease version), set `SVELTE_MCP_NEXT=true` on both documentation commands to fetch from `next.svelte.dev`:
+
+```bash
+SVELTE_MCP_NEXT=true npx @sveltejs/mcp list-sections
+SVELTE_MCP_NEXT=true npx @sveltejs/mcp get-documentation 'svelte/$state,kit/routing'
+```
+
+For stable releases, leave the variable unset or set it to `false` to use `svelte.dev`. If Next mode is enabled for a project that isn't using a Next release, tell the user to unset `SVELTE_MCP_NEXT` or set it to `false` in their configuration: Next documentation may be ahead of or behind their installed version. Use `SVELTE_MCP_NEXT=false` on CLI documentation commands to override an inherited Next setting for that project.
+
+This variable selects documentation for `list-sections` and `get-documentation`; it does not change the version used by `svelte-autofixer`.
+
 ### List documentation sections
 
 ```bash

@@ -74,6 +74,42 @@ By default, the MCP server, subagent, skills, instructions, and automatic update
 }
 ```
 
+### Using Next documentation
+
+If your project uses a Next release of Svelte or SvelteKit, configure the MCP server to fetch documentation from `next.svelte.dev`. The plugin detects an existing Svelte MCP server and preserves its configuration, so you can keep the plugin's subagent, skills, and instructions enabled.
+
+For OpenCode V2, add the following to your main `opencode.json` or `opencode.jsonc`, alongside your existing plugin configuration:
+
+```json
+{
+	"$schema": "https://opencode.ai/config.json",
+	"mcp": {
+		"servers": {
+			"svelte": {
+				"type": "local",
+				"command": ["npx", "-y", "@sveltejs/mcp"],
+				"environment": {
+					"SVELTE_MCP_NEXT": "true"
+				}
+			}
+		}
+	}
+}
+```
+
+To use the remote server instead, replace the `svelte` server entry with:
+
+```json
+{
+	"type": "remote",
+	"url": "https://mcp.svelte.dev/mcp?next=true"
+}
+```
+
+These overrides belong in the [main OpenCode MCP configuration](https://opencode.ai/v2/docs/mcp-servers). The plugin's `svelte.json` MCP settings only support `type` and `enabled`.
+
+See [local setup](local-setup) and [remote setup](remote-setup) for details about Next mode and the package-version check performed by the documentation tools.
+
 ### Automatic updates
 
 The plugin checks npm for newer versions and warns you when one is available. OpenCode caches plugins, so it continues using the cached version until that cache is removed.

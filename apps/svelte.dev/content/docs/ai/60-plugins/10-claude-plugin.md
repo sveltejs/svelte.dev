@@ -22,3 +22,26 @@ Then, install the Svelte plugin:
 ```bash
 /plugin install svelte
 ```
+
+## Using Next documentation
+
+If your project uses a Next release of Svelte or SvelteKit, you can configure the MCP server to fetch documentation from `next.svelte.dev` while keeping the plugin's skills and agent.
+
+For the local server, register the same command with `SVELTE_MCP_NEXT=true`:
+
+```bash
+claude mcp add --scope local --env SVELTE_MCP_NEXT=true \
+  --transport stdio svelte -- npx -y @sveltejs/mcp
+```
+
+This configures the server for the current project. Use `--scope user` to apply it across projects. Claude Code gives user-configured servers precedence over plugin servers with the same command, as described in its [MCP precedence documentation](https://code.claude.com/docs/en/mcp#scope-hierarchy-and-precedence).
+
+To use the remote server instead, disable the plugin's bundled Svelte MCP server in `/mcp`, then add:
+
+```bash
+claude mcp add --scope local --transport http svelte 'https://mcp.svelte.dev/mcp?next=true'
+```
+
+The remote URL is a different endpoint from the bundled local command, so disable the bundled server to avoid running both. The plugin itself can stay enabled.
+
+See [local setup](local-setup) and [remote setup](remote-setup) for details about Next mode and the package-version check performed by the documentation tools.
