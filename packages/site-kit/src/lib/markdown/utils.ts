@@ -1,23 +1,18 @@
 import { Marked, type Renderer, type TokenizerObject, type MarkedExtension } from 'marked';
 import json5 from 'json5';
 
-// Map markdown fence aliases and unsupported formats to the closest Twinkleplop grammar.
+// Map markdown fence aliases to Twinkleplop grammars.
 export const TWINKLEPLOP_LANGUAGE_MAP = {
-	env: 'bash',
+	env: 'dotenv',
 	sh: 'bash',
-	console: 'bash',
-	shellsession: 'bash',
-	html: 'svelte',
+	console: 'shellsession',
 	sv: 'svelte',
 	dts: 'typescript',
 	js: 'javascript',
 	ts: 'typescript',
-	jsonc: 'json',
 	yml: 'yaml',
 	md: 'markdown',
-	// Twinkleplop does not provide grammars for these formats.
-	ini: 'plaintext',
-	http: 'plaintext',
+	// These formats intentionally render without syntax highlighting.
 	cson: 'plaintext',
 	text: 'plaintext',
 	'': 'plaintext'

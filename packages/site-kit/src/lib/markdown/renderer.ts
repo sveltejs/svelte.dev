@@ -7,8 +7,15 @@ import ts from 'typescript';
 import * as marked from 'marked';
 import { language as create_bash_highlighter } from '@twinkleplop/bash';
 import { language as create_css_highlighter } from '@twinkleplop/css';
+import { language as create_dotenv_highlighter } from '@twinkleplop/dotenv';
+import { language as create_html_highlighter } from '@twinkleplop/html';
+import { language as create_http_highlighter } from '@twinkleplop/http';
+import { language as create_ini_highlighter } from '@twinkleplop/ini';
+import { language as create_javascript_highlighter } from '@twinkleplop/javascript';
 import { language as create_json_highlighter } from '@twinkleplop/json';
+import { language as create_jsonc_highlighter } from '@twinkleplop/jsonc';
 import { language as create_markdown_highlighter } from '@twinkleplop/markdown';
+import { language as create_shellsession_highlighter } from '@twinkleplop/shellsession';
 import { language as create_svelte_highlighter } from '@twinkleplop/svelte';
 import { language as create_toml_highlighter } from '@twinkleplop/toml';
 import { create_highlighter as create_twoslash_highlighter } from '@twinkleplop/twoslash';
@@ -41,9 +48,15 @@ type Highlighter = ReturnType<typeof create_typescript_highlighter>;
 const highlighters: Record<string, Highlighter> = {
 	bash: create_bash_highlighter(),
 	css: create_css_highlighter(),
-	javascript: create_typescript_highlighter(),
+	dotenv: create_dotenv_highlighter(),
+	html: create_html_highlighter(),
+	http: create_http_highlighter(),
+	ini: create_ini_highlighter(),
+	javascript: create_javascript_highlighter(),
 	json: create_json_highlighter(),
+	jsonc: create_jsonc_highlighter(),
 	markdown: create_markdown_highlighter(),
+	shellsession: create_shellsession_highlighter(),
 	svelte: create_svelte_highlighter(),
 	toml: create_toml_highlighter(),
 	tree: create_tree_highlighter(),
