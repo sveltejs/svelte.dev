@@ -37,6 +37,7 @@
 	width: 100%;
 	padding: 0;
 	color: var(--twp-text);
+	white-space: pre-wrap;
 
 	.comment {
 		color: var(--twp-comment);
