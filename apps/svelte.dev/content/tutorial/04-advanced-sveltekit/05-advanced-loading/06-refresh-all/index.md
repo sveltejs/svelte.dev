@@ -40,4 +40,4 @@ export async function load(---{ depends }---) {
 }
 ```
 
-> [!NOTE] `invalidate(() => true)` and `refreshAll()` are _not_ the same. `invalidate(() => true)` only re-runs `load` functions that depend on a URL, whereas `refreshAll()` re-runs every `load` function for the current page and all currently active remote functions.
+> [!NOTE] `invalidate(() => true)` and `refreshAll()` are _not_ the same. `invalidate(() => true)` only re-runs `load` functions that depend on a URL, whereas `refreshAll()` re-runs every `load` function for the current page and all currently active remote functions. `invalidateAll()` is deprecated in SvelteKit 3.
