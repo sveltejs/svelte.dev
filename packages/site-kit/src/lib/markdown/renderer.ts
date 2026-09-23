@@ -489,7 +489,7 @@ export async function render_content_markdown(
 					tab_id: `playground-tab-${codeblock.id}-${codeblock.files.length}`,
 					panel_id: `playground-tabpanel-${codeblock.id}-${codeblock.files.length}`,
 					name: (is_dot_file ? options.file : options.file?.slice(0, -ext!.length)) ?? null,
-					ext: is_dot_file ? null : (ext ?? null),
+					ext: is_dot_file ? '' : (ext ?? null),
 					content: source
 						.replace(delimiter_patterns['---'], '$1')
 						.replace(delimiter_patterns['+++'], '$1')
