@@ -2,7 +2,7 @@
 title: Keyed each blocks
 ---
 
-By default, when the array that an `each` block iterates over changes, Svelte adds or removes DOM nodes at the _end_ of the block if the length changes, and updates the remaining DOM nodes in-place. That might not be what you want.
+By default, when the list that an `each` block iterates over is updated, Svelte adds or removes DOM nodes at the _end_ of the block if the length changes, and updates the remaining DOM nodes in-place. That might not be what you want.
 
 It's easier to show why than to explain. Inside `Thing.svelte`, `name` is a dynamic prop but `emoji` is a constant.
 
