@@ -17,14 +17,14 @@ export function load(+++{ cookies }+++) {
 }
 ```
 
-To set a cookie, use `cookies.set(name, value, options)`. It's strongly recommended that you explicitly configure the `path` when setting a cookie, since browsers' default behaviour — somewhat uselessly — is to set the cookie on the parent of the current path.
+To set a cookie, use `cookies.set(name, value, options)`. SvelteKit defaults the `path` to `/`, making the cookie available throughout your app.
 
 ```js
 /// file: src/routes/+page.server.js
 export function load({ cookies }) {
 	const visited = cookies.get('visited');
 
-	+++cookies.set('visited', 'true', { path: '/' });+++
+	+++cookies.set('visited', 'true');+++
 
 	return {
 		visited: visited === 'true'
@@ -40,6 +40,7 @@ Calling `cookies.set(name, ...)` causes a `Set-Cookie` header to be written, but
 {
 	httpOnly: true,
 	secure: true,
-	sameSite: 'lax'
+	sameSite: 'lax',
+	path: '/'
 }
 ```
