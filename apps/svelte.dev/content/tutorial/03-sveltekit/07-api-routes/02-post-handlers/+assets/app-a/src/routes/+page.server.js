@@ -1,4 +1,4 @@
-import * as database from '$lib/server/database.js';
+import * as database from '#lib/server/database.js';
 
 export function load({ cookies }) {
 	let userid = cookies.get('userid');
