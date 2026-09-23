@@ -121,4 +121,4 @@ if (FEATURE_FLAG_X === 'enabled') {
 }
 ```
 
-> [!NOTE] Prior to SvelteKit 3 you didn't have the option to declare an `env.js` file - instead, private environment variables were automatically available via `$env/dynamic/private` and `$env/static/private`
+> [!NOTE] Prior to SvelteKit 3 you didn't have the option to declare an `env.js` file - instead, private environment variables were automatically available via `$env/dynamic/private` and `$env/static/private`.

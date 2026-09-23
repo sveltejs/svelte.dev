@@ -44,4 +44,4 @@ You can now import the variables into `src/routes/+page.svelte` from `$app/env/p
 
 Environment variables are dynamic by default, meaning their values are read when the app starts. If a variable is known when the app is built, you can add `static: true` to its configuration to inline its value into the bundle, enabling optimisations like dead-code elimination.
 
-> [!NOTE] Prior to SvelteKit 3 you didn't have the option to declare an `env.js` file - instead, you had to prefix your environment variables with `PUBLIC_` to make them available via `$env/dynamic/public` and `$env/static/public`
+> [!NOTE] Prior to SvelteKit 3 you didn't have the option to declare an `env.js` file - instead, you had to prefix your environment variables with `PUBLIC_` to make them available via `$env/dynamic/public` and `$env/static/public`.

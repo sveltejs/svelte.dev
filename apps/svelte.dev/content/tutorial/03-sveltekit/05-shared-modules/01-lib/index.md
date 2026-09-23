@@ -7,7 +7,9 @@ Because SvelteKit uses directory-based routing, it's easy to place modules and c
 Sometimes, code is used in multiple places. When this happens, it's useful to have a place to put it that can be accessed by all routes without needing to prefix imports with `../../../../`. In this app, `package.json` declares a [package subpath import](https://nodejs.org/api/packages.html#subpath-imports) that maps `#lib/*` to the `src/lib` directory:
 
 ```json
+/// file: package.json
 {
+	// ...
 	"imports": {
 		"#lib": "./src/lib/index.js",
 		"#lib/*": "./src/lib/*"
@@ -15,7 +17,7 @@ Sometimes, code is used in multiple places. When this happens, it's useful to ha
 }
 ```
 
-This is a standard Node feature and automatically setup in your `package.json` when scaffolding a new SvelteKit app. It allows anything inside `src/lib` to be accessed by any module via `#lib`.
+This is a standard Node feature that is automatically setup in your `package.json` when scaffolding a new SvelteKit app. It allows anything inside `src/lib` to be accessed by any module via `#lib`.
 
 Both `+page.svelte` files in this exercise import `src/lib/message.js`. But if you navigate to `/a/deeply/nested/route`, the app breaks, because we got the prefix wrong. Update it to use `#lib/message.js` instead:
 

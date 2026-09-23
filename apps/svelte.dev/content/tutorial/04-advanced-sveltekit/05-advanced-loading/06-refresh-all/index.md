@@ -3,7 +3,7 @@ title: refreshAll
 path: /Europe/London
 ---
 
-Finally, there's the nuclear option — `refreshAll()`. This will indiscriminately re-run all `load` functions for the current page, regardless of what they depend on, and all currently active remote functions. Unlike reloading the page, it does not reset `page.state`.
+Finally, there's the nuclear option — `refreshAll()`. This will indiscriminately re-run all `load` functions for the current page, regardless of what they depend on, and all currently active [remote functions](/docs/kit/remote-functions). Unlike reloading the page, it does not reset `page.state`.
 
 Update `src/routes/[...timezone]/+page.svelte` from the previous exercise:
 
