@@ -1,5 +1,5 @@
-import { docs, get_related_links } from '$lib/server/content';
-import { render_content } from '$lib/server/renderer';
+import { docs, get_related_links } from '#lib/server/content.ts';
+import { render_content } from '#lib/server/renderer.ts';
 import { error } from '@sveltejs/kit';
 
 export async function load({ url, params }) {
@@ -14,7 +14,7 @@ export async function load({ url, params }) {
 	return {
 		document: {
 			...document,
-			body: await render_content(document.file, document.body, { references })
+			body: await render_content(document.file, document.body, { origin: url.origin, references })
 		},
 		related: get_related_links(url.pathname)
 	};

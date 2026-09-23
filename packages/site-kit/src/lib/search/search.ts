@@ -50,6 +50,7 @@ const EXACT_MATCH_BOOST = 10;
 const WORD_MATCH_BOOST = 4;
 const NEAR_MATCH_BOOST = 2;
 const BREADCRUMB_LENGTH_BOOST = 0.2;
+const RANK_PENALTY = 1;
 
 interface Entry {
 	block: Block;
@@ -75,10 +76,11 @@ export function search(query: string, path: string): BlockGroup[] {
 		.map((block, rank) => {
 			const block_parts = block.href.split('/');
 
-			// prioritise current section
-			let score = block_parts.findIndex((part, i) => part !== parts[i]);
-			if (score === -1) score = block_parts.length;
-			score *= CURRENT_SECTION_BOOST;
+			// prioritise current section and higher-ranked content
+			let score = -(block.rank ?? 0) * RANK_PENALTY;
+			const matching_parts = block_parts.findIndex((part, i) => part !== parts[i]);
+			score +=
+				(matching_parts === -1 ? block_parts.length : matching_parts) * CURRENT_SECTION_BOOST;
 
 			if (block.breadcrumbs.some((text) => exact_match.test(text))) {
 				console.log('EXACT MATCH', block.breadcrumbs);

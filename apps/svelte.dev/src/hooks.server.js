@@ -47,7 +47,7 @@ const fonts = [
 	'fira-sans-latin-400-normal'
 ];
 
-/** @type {import('@sveltejs/kit').Handle} */
+/** @type {import('@sveltejs/kit/hooks').Handle} */
 export async function handle({ event, resolve }) {
 	// Best effort to redirect from Svelte 4 docs to new docs
 	const destination = mappings.get(event.url.pathname);
@@ -79,6 +79,11 @@ export async function handle({ event, resolve }) {
 	}
 	if (event.url.pathname === '/docs/ai/opencode-subagent') {
 		redirect(307, '/docs/ai/subagent');
+	}
+
+	// Redirect from renamed `sv add` add-on: mcp → ai-tools
+	if (event.url.pathname === '/docs/cli/mcp') {
+		redirect(307, '/docs/cli/ai-tools');
 	}
 
 	// Best effort to redirect from Svelte 3 tutorial to new tutorial

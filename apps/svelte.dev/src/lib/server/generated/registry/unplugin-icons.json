@@ -9,10 +9,10 @@
     "hannoeru"
   ],
   "homepage": "https://github.com/unplugin/unplugin-icons#readme",
-  "version": "23.0.1",
-  "downloads": 434169,
+  "version": "24.0.0",
+  "downloads": 471591,
   "github_stars": 4767,
-  "updated": "2026-01-14T10:53:22.330Z",
+  "updated": "2026-09-11T03:31:31.667Z",
   "svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
   "typescript": true,
   "runes": true,

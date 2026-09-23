@@ -5,14 +5,15 @@
   "authors": [
     "pavelfeldman",
     "yurys",
+    "microsoft1es",
     "dgozman-ms",
-    "playwright-bot"
+    "microsoft-oss-releases"
   ],
   "homepage": "https://playwright.dev",
-  "version": "1.61.1",
-  "downloads": 62047765,
-  "github_stars": 91766,
-  "updated": "2026-06-23T19:49:00.061Z",
+  "version": "1.63.0",
+  "downloads": 69319604,
+  "github_stars": 96370,
+  "updated": "2026-09-04T22:45:21.732Z",
   "svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
   "typescript": true,
   "runes": false,

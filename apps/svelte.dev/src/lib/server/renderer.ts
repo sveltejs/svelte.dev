@@ -1,11 +1,37 @@
 import { render_content_markdown } from '@sveltejs/site-kit/markdown';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const docs_types_root = path.dirname(fileURLToPath(import.meta.resolve('docs-types/package.json')));
+const canonical_origin = 'https://svelte.dev';
+
+export function replace_canonical_origin(href: string, origin: string) {
+	let url: URL;
+
+	try {
+		url = new URL(href);
+	} catch {
+		return href;
+	}
+
+	return url.origin === canonical_origin
+		? `${origin}${url.pathname}${url.search}${url.hash}`
+		: href;
+}
 
 export const render_content = (
 	filename: string,
 	body: string,
-	options: { check?: boolean; references?: Record<string, string> } = {}
+	options: { check?: boolean; origin?: string; references?: Record<string, string> } = {}
 ) => {
-	return render_content_markdown(filename, body, options, (filename, source) => {
+	const { origin, ...rest } = options;
+	const render_options = {
+		...rest,
+		transformLink: origin ? (href: string) => replace_canonical_origin(href, origin) : undefined,
+		twoslashRoot: docs_types_root
+	};
+
+	return render_content_markdown(filename, body, render_options, (filename, source) => {
 		// TODO these are copied from Svelte and SvelteKit - adjust for new filenames
 		const injected = [];
 
@@ -83,8 +109,8 @@ export const render_content = (
 		}
 
 		// another special case
-		if (source.includes('$lib/types')) {
-			injected.push(`declare module '$lib/types' { export interface User {} }`);
+		if (source.includes('#lib/types')) {
+			injected.push(`declare module '#lib/types' { export interface User {} }`);
 		}
 
 		return injected.join('\n');

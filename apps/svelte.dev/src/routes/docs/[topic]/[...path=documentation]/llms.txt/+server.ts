@@ -1,12 +1,12 @@
 import { error } from '@sveltejs/kit';
-import { docs } from '$lib/server/content.js';
+import { docs } from '#lib/server/content.js';
 import {
 	generate_llm_content,
 	get_documentation_title,
 	remove_llm_ignore_blocks,
 	remove_playground_links
-} from '$lib/server/llms';
-import { topics } from '$lib/topics';
+} from '#lib/server/llms.ts';
+import { topics } from '#lib/topics.ts';
 
 export const prerender = true;
 
@@ -28,7 +28,8 @@ export function GET({ params }) {
 			status: 200,
 			headers: {
 				'Content-Type': 'text/plain; charset=utf-8',
-				'Cache-Control': 'public, max-age=3600'
+				'Cache-Control': 'public, max-age=3600',
+				Link: `<https://svelte.dev/docs/${params.topic}/${params.path}>; rel="canonical"`
 			}
 		});
 	} else {

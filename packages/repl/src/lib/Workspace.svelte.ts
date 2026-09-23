@@ -142,10 +142,14 @@ export class Workspace {
 		const warnings = this.current_compiled?.result?.warnings ?? [];
 
 		if (error) {
+			// not all errors (e.g. from legacy compilers) have a `position` range
+			const from = error.position?.[0] ?? 0;
+			const to = error.position?.[1] ?? from;
+
 			diagnostics.push({
 				severity: 'error',
-				from: error.position![0],
-				to: error.position![1],
+				from,
+				to,
 				message: error.message,
 				renderMessage: () => {
 					let html = error.message
@@ -298,7 +302,12 @@ export class Workspace {
 
 		untrack(() => {
 			view.setState(this.#get_state(untrack(() => this.#current)));
-			this.vim = localStorage.getItem('vim') === 'true';
+
+			try {
+				this.vim = localStorage.getItem('vim') === 'true';
+			} catch {
+				// localStorage access disabled
+			}
 		});
 	}
 
@@ -532,7 +541,11 @@ export class Workspace {
 	async #toggle_vim(value: boolean) {
 		this.#vim = value;
 
-		localStorage.setItem('vim', String(value));
+		try {
+			localStorage.setItem('vim', String(value));
+		} catch {
+			// localStorage access disabled
+		}
 
 		// @ts-ignore jfc CodeMirror is a struggle
 		let vim_extension_index = default_extensions.findIndex((ext) => ext.compartment === vim_mode);

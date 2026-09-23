@@ -21,6 +21,8 @@ claude mcp add -t stdio -s [scope] svelte -- npx -y @sveltejs/mcp
 
 The `[scope]` must be `user`, `project` or `local`.
 
+Alternatively, install the `svelte` plugin from [the Svelte Claude Code Marketplace](claude-plugin) to configure the local server along with useful [skills](skills).
+
 ## Claude Desktop
 
 In the Settings > Developer section, click on Edit Config. It will open the folder with a `claude_desktop_config.json` file in it. Edit the file to include the following configuration:
