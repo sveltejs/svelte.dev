@@ -481,14 +481,24 @@ export async function render_content_markdown(
 					}
 				);
 
-				const ext = options.file?.slice(options.file.lastIndexOf('.'));
+				const annotated_file = options.file;
+				const extension_start = annotated_file?.lastIndexOf('.') ?? -1;
+				const filename_start = annotated_file?.lastIndexOf('/') ?? -1;
+				const ext =
+					annotated_file && extension_start > filename_start + 1
+						? annotated_file.slice(extension_start)
+						: '';
 
 				const file: CodeBlockFile = {
 					selected: options.file === codeblock.selected,
 					tab_id: `playground-tab-${codeblock.id}-${codeblock.files.length}`,
 					panel_id: `playground-tabpanel-${codeblock.id}-${codeblock.files.length}`,
-					name: options.file?.slice(0, -ext!.length) ?? null,
-					ext: ext ?? null,
+					name: annotated_file
+						? ext
+							? annotated_file.slice(0, -ext.length)
+							: annotated_file
+						: null,
+					ext: annotated_file ? ext : null,
 					content: source
 						.replace(delimiter_patterns['---'], '$1')
 						.replace(delimiter_patterns['+++'], '$1')
