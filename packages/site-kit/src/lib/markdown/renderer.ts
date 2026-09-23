@@ -85,6 +85,14 @@ function highlight_source(source: string, language: string) {
 		: `<pre class="twinkleplop plaintext"><code>${escape_html(source)}</code></pre>`;
 }
 
+const docs_markdown = new marked.Marked({
+	renderer: {
+		code({ text, lang }) {
+			return `<div class="code-block"><div class="controls"><button class="copy-to-clipboard raised" title="Copy to clipboard" aria-label="Copy to clipboard"></button></div>${highlight_source(text, lang ?? '')}</div>`;
+		}
+	}
+});
+
 function get_twoslash_highlighter(language: 'js' | 'ts', twoslashRoot?: string) {
 	const key = `${language}:${twoslashRoot ?? ''}`;
 	let highlight = twoslash_highlighters.get(key);
@@ -92,7 +100,7 @@ function get_twoslash_highlighter(language: 'js' | 'ts', twoslashRoot?: string) 
 	if (!highlight) {
 		highlight = create_twoslash_highlighter({
 			lang: language,
-			render_docs: (markdown) => marked.parseInline(markdown, { async: false }),
+			render_docs: (markdown) => docs_markdown.parse(markdown, { async: false }),
 			process_type: (type) => type.replace(/import\(".*?"\)\./g, ''),
 			twoslash: {
 				...(twoslashRoot ? { vfsRoot: twoslashRoot } : {}),
