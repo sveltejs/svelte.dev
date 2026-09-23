@@ -17,14 +17,14 @@ export function load(+++{ cookies }+++) {
 }
 ```
 
-To set a cookie, use `cookies.set(name, value, options)`. It's strongly recommended that you explicitly configure the `path` when setting a cookie, since browsers' default behaviour — somewhat uselessly — is to set the cookie on the parent of the current path.
+To set a cookie, use `cookies.set(name, value, options)`. SvelteKit defaults the `path` to `/`, making the cookie available throughout your app.
 
 ```js
 /// file: src/routes/+page.server.js
 export function load({ cookies }) {
 	const visited = cookies.get('visited');
 
-	+++cookies.set('visited', 'true', { path: '/' });+++
+	+++cookies.set('visited', 'true');+++
 
 	return {
 		visited: visited === 'true'
@@ -34,12 +34,13 @@ export function load({ cookies }) {
 
 Now, if you reload the iframe, `Hello stranger!` becomes `Hello friend!`.
 
-Calling `cookies.set(name, ...)` causes a `Set-Cookie` header to be written, but it _also_ updates the internal map of cookies, meaning any subsequent calls to `cookies.get(name)` during the same request will return the updated value. Under the hood, the `cookies` API uses the popular `cookie` package — the options passed to `cookies.get` and `cookies.set` correspond to the `parse` and `serialize` options from the `cookie` [documentation](https://github.com/jshttp/cookie#api). SvelteKit sets the following defaults to make your cookies more secure:
+Calling `cookies.set(name, ...)` causes a `Set-Cookie` header to be written, but it _also_ updates the internal map of cookies, meaning any subsequent calls to `cookies.get(name)` during the same request will return the updated value. Under the hood, the `cookies` API uses the popular `cookie` package — the options passed to `cookies.get` and `cookies.set` loosely follows its [`Cookie` object](https://github.com/jshttp/cookie#cookie-object). SvelteKit sets the following defaults to make your cookies more secure:
 
 ```js
 {
 	httpOnly: true,
 	secure: true,
-	sameSite: 'lax'
+	sameSite: 'lax',
+	path: '/'
 }
 ```

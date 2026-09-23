@@ -8,10 +8,14 @@
 	},
 	"devDependencies": {
 		"@rollup/wasm-node": "^4.59.0",
-		"@sveltejs/kit": "^2.53.2",
+		"@sveltejs/kit": "^3.0.0-next.25",
 		"esbuild-wasm": "^0.27.3",
-		"svelte": "^5.53.5",
-		"vite": "^7.3.1"
+		"svelte": "^5.56.4",
+		"vite": "^8.0.12"
 	},
-	"type": "module"
+	"type": "module",
+	"imports": {
+		"#lib": "./src/lib/index.js",
+		"#lib/*": "./src/lib/*"
+	}
 }
