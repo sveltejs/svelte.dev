@@ -34,7 +34,7 @@ export function load({ cookies }) {
 
 Now, if you reload the iframe, `Hello stranger!` becomes `Hello friend!`.
 
-Calling `cookies.set(name, ...)` causes a `Set-Cookie` header to be written, but it _also_ updates the internal map of cookies, meaning any subsequent calls to `cookies.get(name)` during the same request will return the updated value. Under the hood, the `cookies` API uses the popular `cookie` package — the options passed to `cookies.get` and `cookies.set` correspond to the `parse` and `serialize` options from the `cookie` [documentation](https://github.com/jshttp/cookie#api). SvelteKit sets the following defaults to make your cookies more secure:
+Calling `cookies.set(name, ...)` causes a `Set-Cookie` header to be written, but it _also_ updates the internal map of cookies, meaning any subsequent calls to `cookies.get(name)` during the same request will return the updated value. Under the hood, the `cookies` API uses the popular `cookie` package — the options passed to `cookies.get` and `cookies.set` loosely follows its [`Cookie` object](https://github.com/jshttp/cookie#cookie-object). SvelteKit sets the following defaults to make your cookies more secure:
 
 ```js
 {
