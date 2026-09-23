@@ -1,13 +1,13 @@
 <script>
-	const PUBLIC_THEME_BACKGROUND = 'white';
-	const PUBLIC_THEME_FOREGROUND = 'black';
+	const THEME_BACKGROUND = 'white';
+	const THEME_FOREGROUND = 'black';
 </script>
 
 <main
-	style:background={PUBLIC_THEME_BACKGROUND}
-	style:color={PUBLIC_THEME_FOREGROUND}
+	style:background={THEME_BACKGROUND}
+	style:color={THEME_FOREGROUND}
 >
-	{PUBLIC_THEME_FOREGROUND} on {PUBLIC_THEME_BACKGROUND}
+	{THEME_FOREGROUND} on {THEME_BACKGROUND}
 </main>
 
 <style>
