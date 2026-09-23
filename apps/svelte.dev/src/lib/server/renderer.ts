@@ -3,13 +3,33 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const docs_types_root = path.dirname(fileURLToPath(import.meta.resolve('docs-types/package.json')));
+const canonical_origin = 'https://svelte.dev';
+
+export function replace_canonical_origin(href: string, origin: string) {
+	let url: URL;
+
+	try {
+		url = new URL(href);
+	} catch {
+		return href;
+	}
+
+	return url.origin === canonical_origin
+		? `${origin}${url.pathname}${url.search}${url.hash}`
+		: href;
+}
 
 export const render_content = (
 	filename: string,
 	body: string,
-	options: { check?: boolean; references?: Record<string, string> } = {}
+	options: { check?: boolean; origin?: string; references?: Record<string, string> } = {}
 ) => {
-	const render_options = { ...options, twoslashRoot: docs_types_root };
+	const { origin, ...rest } = options;
+	const render_options = {
+		...rest,
+		transformLink: origin ? (href: string) => replace_canonical_origin(href, origin) : undefined,
+		twoslashRoot: docs_types_root
+	};
 
 	return render_content_markdown(filename, body, render_options, (filename, source) => {
 		// TODO these are copied from Svelte and SvelteKit - adjust for new filenames

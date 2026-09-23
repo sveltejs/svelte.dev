@@ -6,9 +6,9 @@
     "ocavue"
   ],
   "homepage": "https://github.com/prosekit/prosekit#readme",
-  "version": "0.22.0",
-  "downloads": 18620,
-  "github_stars": 1171,
-  "updated": "2026-08-12T04:27:57.093Z",
+  "version": "0.22.2",
+  "downloads": 12537,
+  "github_stars": 1188,
+  "updated": "2026-08-30T16:09:35.024Z",
   "svelte_range": ">= 5.0.0"
 }
