@@ -10,6 +10,7 @@
 		"@cloudflare/workers-types": "^4.20260305.0",
 		"@sveltejs/adapter-auto": "^8.0.0-next.4",
 		"@sveltejs/adapter-bun": "^1.0.0-next.2",
+		"@sveltejs/adapter-netlify": "^7.0.0-next.11",
 		"@sveltejs/adapter-vercel": "^7.0.0-next.9",
 		"@sveltejs/enhanced-img": "^1.0.0-next.4",
 		"@sveltejs/kit": "catalog:",

@@ -1,6 +1,7 @@
 import * as cookie from 'cookie';
 import flru from 'flru';
 import { client } from './client.js';
+import * as local from './dev.js';
 import { error } from '@sveltejs/kit';
 
 /** @typedef {import('./types').User} User */
@@ -14,6 +15,12 @@ const session_cache = flru(1000);
  * @param {import('./types').GitHubUser} user
  */
 export async function create(user) {
+	if (local.enabled) {
+		const { sessionid, userid, expires } = local.login(user);
+		session_cache.set(sessionid, { id: userid, ...user });
+		return { sessionid, expires: new Date(expires) };
+	}
+
 	if (!client) {
 		error(500, 'Database client is not configured');
 	}
@@ -47,7 +54,9 @@ export async function create(user) {
  * @returns {Promise<User | null>}
  */
 export async function read(sessionid) {
-	if (!sessionid || !client) return null;
+	if (!sessionid) return null;
+	if (local.enabled) return local.get_user(sessionid);
+	if (!client) return null;
 
 	if (!session_cache.get(sessionid)) {
 		session_cache.set(
@@ -68,6 +77,12 @@ export async function read(sessionid) {
 
 /** @param {string} sessionid */
 export async function destroy(sessionid) {
+	if (local.enabled) {
+		local.logout(sessionid);
+		session_cache.set(sessionid, null);
+		return;
+	}
+
 	if (!client) {
 		error(500, 'Database client is not configured');
 	}
