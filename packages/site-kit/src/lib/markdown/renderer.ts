@@ -85,6 +85,8 @@ function highlight_source(source: string, language: string) {
 		: `<pre class="twinkleplop plaintext"><code>${escape_html(source)}</code></pre>`;
 }
 
+// TODO: replace with marked.parseInline once twinkleplop is fixed
+// see https://github.com/pngwn/twinkleplop/issues/107
 const docs_markdown = new marked.Marked({
 	renderer: {
 		code({ text, lang }) {
