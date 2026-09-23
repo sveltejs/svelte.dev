@@ -12,8 +12,9 @@ import { applyAction, deserialize, enhance } from '$app/forms';
 
 ## applyAction
 
-This action updates the `form` property of the current page with the given data and updates `page.status`.
-In case of an error, it redirects to the nearest error page.
+Updates the `form` property of the current page with the given data and updates `page.status`.
+In case of an error, it renders the nearest error page. In case of a redirect, it navigates to
+the redirect location.
 
 <div class="ts-block">
 
@@ -21,12 +22,7 @@ In case of an error, it redirects to the nearest error page.
 function applyAction<
 	Success extends Record<string, unknown> | undefined,
 	Failure extends Record<string, unknown> | undefined
->(
-	result: import('@sveltejs/kit').ActionResult<
-		Success,
-		Failure
-	>
-): Promise<void>;
+>(result: ActionResult<Success, Failure>): Promise<void>;
 ```
 
 </div>
@@ -59,9 +55,7 @@ async function handleSubmit(event) {
 function deserialize<
 	Success extends Record<string, unknown> | undefined,
 	Failure extends Record<string, unknown> | undefined
->(
-	result: string
-): import('@sveltejs/kit').ActionResult<Success, Failure>;
+>(result: string): ActionResult<Success, Failure>;
 ```
 
 </div>
@@ -78,17 +72,18 @@ You can use the abort `controller` to cancel the submission in case another one 
 If a function is returned, that function is called with the response from the server.
 If nothing is returned, the fallback will be used.
 
-If this function or its return value isn't set, it
-- falls back to updating the `form` prop with the returned data if the action is on the same page as the form
-- updates `page.status`
-- resets the `<form>` element and invalidates all data in case of successful submission with no redirect response
+If this function or its return value isn't set, it emulates the browser-native behaviour, just without the full-page reload. It
+- resets the `<form>` element and refreshes all data in case of a successful submission with no redirect response
+- updates the `form` prop, `page.form` and `page.status` if the action is on the same page as the form
+- navigates to the page the submission lands on — populating that page's `form` prop and `page.status` — on success and failure if that isn't the current page, just as a native form submission would, but with the `?/actionName` param stripped from the destination URL
 - redirects in case of a redirect response
-- redirects to the nearest error page in case of an unexpected error
+- renders the nearest error page in case of an unexpected error — the one nearest the action's route, if the action is on a different page
 
 If you provide a custom function with a callback and want to use the default behavior, invoke `update` in your callback.
 It accepts an options object
 - `reset: false` if you don't want the `<form>` values to be reset after a successful submission
-- `invalidateAll: false` if you don't want the action to call `invalidateAll` after submission
+- `refreshAll` to control whether all data is refreshed after submission; it defaults to `true` for successes and `false` for failures
+- `navigate: false` to apply non-redirect results to the current page rather than navigating to `result.location`; redirects are always followed
 
 <div class="ts-block">
 
@@ -98,10 +93,7 @@ function enhance<
 	Failure extends Record<string, unknown> | undefined
 >(
 	form_element: HTMLFormElement,
-	submit?: import('@sveltejs/kit').SubmitFunction<
-		Success,
-		Failure
-	>
+	submit?: SubmitFunction<Success, Failure>
 ): {
 	destroy(): void;
 };
@@ -110,5 +102,94 @@ function enhance<
 </div>
 
 
+
+## ActionResult
+
+When calling a form action via fetch, the response will be one of these shapes.
+```svelte
+<form method="post" use:enhance={() => {
+	return ({ result }) => {
+		// result is of type ActionResult
+	};
+}}
+```
+
+Success and failure results carry the root-relative `pathname + search` of the action URL, with
+the `?/actionName` parameter removed. Redirect results carry the redirect target. Server-generated
+error results also carry the action location, while client-generated errors such as network
+failures do not. `update` uses this location to emulate native form navigation.
+
+<div class="ts-block">
+
+```dts
+type ActionResult<
+	Success extends Record<string, unknown> | undefined =
+		Record<string, any>,
+	Failure extends Record<string, unknown> | undefined =
+		Record<string, any>
+> =
+	| {
+			type: 'success';
+			status: number;
+			data?: Success;
+			location: string;
+	  }
+	| {
+			type: 'failure';
+			status: number;
+			data?: Failure;
+			location: string;
+	  }
+	| { type: 'redirect'; status: number; location: string }
+	| {
+			type: 'error';
+			status?: number;
+			error: App.Error;
+			location?: string;
+	  };
+```
+
+</div>
+
+## SubmitFunction
+
+<div class="ts-block">
+
+```dts
+type SubmitFunction<
+	Success extends Record<string, unknown> | undefined =
+		Record<string, any>,
+	Failure extends Record<string, unknown> | undefined =
+		Record<string, any>
+> = (input: {
+	action: URL;
+	formData: FormData;
+	formElement: HTMLFormElement;
+	controller: AbortController;
+	submitter: HTMLElement | null;
+	cancel: () => void;
+}) => MaybePromise<
+	| void
+	| ((opts: {
+			formData: FormData;
+			formElement: HTMLFormElement;
+			action: URL;
+			result: ActionResult<Success, Failure>;
+			/**
+			 * Call this to get the default behavior of a form submission response.
+			 * @param options Set `reset: false` if you don't want the `<form>` values to be reset after a successful submission. `refreshAll` defaults to `true` for successful results and `false` for failures. When the submission navigates, setting it to `false` still runs the destination's `load` functions but may reuse shared layout data. Set `navigate: false` to apply non-redirect results to the current page instead of navigating to `result.location`. Redirects are always followed.
+			 */
+			update: (options?: {
+				reset?: boolean;
+				refreshAll?: boolean;
+				navigate?: boolean;
+				/** @deprecated Use `refreshAll` instead. */
+				invalidateAll?: boolean;
+			}) => Promise<void>;
+	  }) => MaybePromise<void>)
+>;
+```
+
+</div>
 
 

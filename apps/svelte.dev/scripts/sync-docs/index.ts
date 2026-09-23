@@ -154,44 +154,6 @@ const packages: Package[] = [
 				});
 			}
 
-			// TODO remove this once we're all-in on 3.0
-			const dir = kit_base + 'src/types/synthetic';
-			if (fs.existsSync(dir)) {
-				for (const file of fs.readdirSync(dir)) {
-					if (!file.endsWith('.md')) continue;
-
-					const comment = strip_origin(read_d_ts_file(`${dir}/${file}`));
-
-					modules.push({
-						name: file.replace(/\+/g, '/').slice(0, -3),
-						comment,
-						exports: [],
-						types: [],
-						exempt: true
-					});
-				}
-			}
-
-			const svelte_kit_module = modules.find((m) => m.name === '@sveltejs/kit');
-			const svelte_kit_types = svelte_kit_module!.types!;
-			const config = svelte_kit_types.find((t) => t.name === 'Config')!;
-			const kit_config = svelte_kit_types.find((t) => t.name === 'KitConfig')!;
-			const full_config = structuredClone(config);
-			const full_kit_config = structuredClone(kit_config);
-
-			// special case — we want these to be on a separate page
-			config.overloads = kit_config.overloads = [];
-			config.comment = kit_config.comment =
-				'See the [configuration reference](/docs/kit/configuration) for details.';
-
-			modules.push({
-				name: 'Configuration',
-				comment: '',
-				exports: [],
-				types: [full_config, full_kit_config],
-				exempt: false
-			});
-
 			return modules;
 		}
 	},
