@@ -786,6 +786,56 @@ A record of file extensions to MIME types
 <div class="ts-block-property">
 
 ```dts
+clientFiles: Array<{
+	file: string;
+	size: number;
+	/** suitable for use as an ETag */
+	hash: string;
+}>;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag since">available since</span> v3.0.0
+
+</div>
+
+The size and a content hash of every file in the client output, i.e. the Vite build and the contents of the `static` directory.
+`file` is relative to the client directory, matching the paths returned by `writeClient`. Read from disk once, on first access.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+prerenderedFiles: Array<{
+	file: string;
+	size: number;
+	/** suitable for use as an ETag */
+	hash: string;
+}>;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag since">available since</span> v3.0.0
+
+</div>
+
+The size and a content hash of every prerendered page, asset and redirect.
+`file` is relative to the prerendered directory, matching the paths returned by `writePrerendered`. Read from disk once, on first access.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
 createEntries?: (fn: (route: RouteDefinition) => AdapterEntry) => Promise<void>;
 ```
 
@@ -1143,7 +1193,7 @@ Caveats:
 <div class="ts-block-property">
 
 ```dts
-compress: (directory: string) => Promise<string[]>;
+compress: (directory: string) => Promise<Array<{ file: string; gz: number; br: number }>>;
 ```
 
 <div class="ts-block-property-details">
@@ -1151,7 +1201,7 @@ compress: (directory: string) => Promise<string[]>;
 <div class="ts-block-property-bullets">
 
 - `directory` The directory containing the files to be compressed
-- <span class="tag">returns</span> an array of the files in `directory` that were compressed
+- <span class="tag">returns</span> the files in `directory` that were compressed, with the sizes of their `.gz` and `.br` variants
 
 </div>
 
@@ -3321,13 +3371,15 @@ string,
 {
 	/** The MIME type of the asset */
 	type: string;
+	/** The location of the file relative to the output directory */
+	file: string;
 }
 >;
 ```
 
 <div class="ts-block-property-details">
 
-A map of `path` to `{ type }` objects.
+A map of `path` to `{ type, file }` objects.
 
 </div>
 </div>
@@ -3340,13 +3392,15 @@ string,
 {
 	status: number;
 	location: string;
+	/** The location of the .html file relative to the output directory */
+	file: string;
 }
 >;
 ```
 
 <div class="ts-block-property-details">
 
-A map of redirects encountered during prerendering.
+A map of redirects encountered during prerendering. Each one is also written as an HTML file that redirects on load.
 
 </div>
 </div>
