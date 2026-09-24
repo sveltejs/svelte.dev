@@ -9,7 +9,7 @@ export function load({ cookies }) {
 
 export const actions = {
 	default: ({ cookies }) => {
-		cookies.delete('allowed', { path: '/' });
+		cookies.delete('allowed');
 		redirect(303, '/');
 	}
 };

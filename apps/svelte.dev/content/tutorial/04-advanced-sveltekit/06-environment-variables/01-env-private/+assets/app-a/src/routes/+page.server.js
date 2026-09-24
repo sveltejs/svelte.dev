@@ -11,9 +11,7 @@ export const actions = {
 		const data = await request.formData();
 
 		if (data.get('passphrase') === 'TODO') {
-			cookies.set('allowed', 'true', {
-				path: '/'
-			});
+			cookies.set('allowed', 'true');
 
 			redirect(303, '/welcome');
 		}

@@ -46,9 +46,7 @@ export const actions = {
 		const data = await request.formData();
 
 		if (data.get('passphrase') === +++PASSPHRASE+++) {
-			cookies.set('allowed', 'true', {
-				path: '/'
-			});
+			cookies.set('allowed', 'true');
 
 			redirect(303, '/welcome');
 		}
