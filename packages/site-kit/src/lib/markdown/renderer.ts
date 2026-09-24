@@ -482,13 +482,14 @@ export async function render_content_markdown(
 				);
 
 				const ext = options.file?.slice(options.file.lastIndexOf('.'));
+				const is_dot_file = ext && ext === options.file;
 
 				const file: CodeBlockFile = {
 					selected: options.file === codeblock.selected,
 					tab_id: `playground-tab-${codeblock.id}-${codeblock.files.length}`,
 					panel_id: `playground-tabpanel-${codeblock.id}-${codeblock.files.length}`,
-					name: options.file?.slice(0, -ext!.length) ?? null,
-					ext: ext ?? null,
+					name: (is_dot_file ? options.file : options.file?.slice(0, -ext!.length)) ?? null,
+					ext: is_dot_file ? '' : (ext ?? null),
 					content: source
 						.replace(delimiter_patterns['---'], '$1')
 						.replace(delimiter_patterns['+++'], '$1')
