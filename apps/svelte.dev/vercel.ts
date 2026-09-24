@@ -60,9 +60,7 @@ export const config = {
 		},
 		...create_llms_canonical()
 	],
-	git: {
-		deploymentEnabled: {
-			next: false
-		}
-	}
+	...(process.env.VERCEL_GIT_COMMIT_REF === 'main'
+		? { git: { deploymentEnabled: { next: false } } }
+		: {})
 };

@@ -1,8 +1,13 @@
 import { mkdtempSync, mkdirSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { expect, test } from 'vitest';
+import { afterEach, expect, test, vi } from 'vitest';
 import { config, create_llms_canonical } from './vercel.ts';
+
+afterEach(() => {
+	vi.unstubAllEnvs();
+	vi.resetModules();
+});
 
 test('generates canonical headers for per-document llms routes', () => {
 	const directory = mkdtempSync(join(tmpdir(), 'svelte-dev-vercel-'));
@@ -44,8 +49,6 @@ test('preserves existing Vercel configuration and generates unique rules within 
 				'https://raw.githubusercontent.com/sveltejs/ai-tools/refs/heads/main/packages/opencode/schema.json'
 		}
 	]);
-	expect(config.git).toEqual({ deploymentEnabled: { next: false } });
-
 	const canonical_headers = config.headers.slice(2);
 	expect(canonical_headers.length).toBeGreaterThan(0);
 	expect(config.headers.length).toBeLessThanOrEqual(2048);
@@ -53,4 +56,14 @@ test('preserves existing Vercel configuration and generates unique rules within 
 		canonical_headers.length
 	);
 	expect(canonical_headers.some((header) => header.source === '/docs/svelte/llms.txt')).toBe(false);
+});
+
+test('disables next deployments only when the current branch is main', async () => {
+	vi.stubEnv('VERCEL_GIT_COMMIT_REF', 'main');
+	vi.resetModules();
+	expect((await import('./vercel.ts')).config.git).toEqual({ deploymentEnabled: { next: false } });
+
+	vi.stubEnv('VERCEL_GIT_COMMIT_REF', 'feature');
+	vi.resetModules();
+	expect((await import('./vercel.ts')).config).not.toHaveProperty('git');
 });
