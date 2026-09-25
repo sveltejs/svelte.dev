@@ -95,6 +95,7 @@ export interface ExposedCompilerOptions {
 	dev: boolean;
 	modernAst: boolean;
 	fragments: 'html' | 'tree' | undefined;
+	async: boolean;
 }
 
 export class Workspace {
@@ -108,7 +109,8 @@ export class Workspace {
 		modernAst: true,
 		// default to undefined so it's removed if the current version
 		// doesn't support it
-		fragments: undefined
+		fragments: undefined,
+		async: true
 	});
 	compiled = $state<Record<string, Compiled>>({});
 
@@ -119,6 +121,7 @@ export class Workspace {
 	#vim = $state(false);
 	#aliases = $state.raw(undefined) as undefined | Record<string, string>;
 	#tailwind = $state(false);
+	supports_async = $state(true);
 
 	#handlers = {
 		hover: new Set<(pos: number | null) => void>(),
@@ -139,10 +142,14 @@ export class Workspace {
 		const warnings = this.current_compiled?.result?.warnings ?? [];
 
 		if (error) {
+			// not all errors (e.g. from legacy compilers) have a `position` range
+			const from = error.position?.[0] ?? 0;
+			const to = error.position?.[1] ?? from;
+
 			diagnostics.push({
 				severity: 'error',
-				from: error.position![0],
-				to: error.position![1],
+				from,
+				to,
 				message: error.message,
 				renderMessage: () => {
 					let html = error.message
@@ -215,6 +222,10 @@ export class Workspace {
 
 	get files() {
 		return this.#files;
+	}
+
+	get file_nodes(): File[] {
+		return this.#files.filter(is_file);
 	}
 
 	get compiler_options() {
@@ -291,7 +302,12 @@ export class Workspace {
 
 		untrack(() => {
 			view.setState(this.#get_state(untrack(() => this.#current)));
-			this.vim = localStorage.getItem('vim') === 'true';
+
+			try {
+				this.vim = localStorage.getItem('vim') === 'true';
+			} catch {
+				// localStorage access disabled
+			}
 		});
 	}
 
@@ -525,7 +541,11 @@ export class Workspace {
 	async #toggle_vim(value: boolean) {
 		this.#vim = value;
 
-		localStorage.setItem('vim', String(value));
+		try {
+			localStorage.setItem('vim', String(value));
+		} catch {
+			// localStorage access disabled
+		}
 
 		// @ts-ignore jfc CodeMirror is a struggle
 		let vim_extension_index = default_extensions.findIndex((ext) => ext.compartment === vim_mode);

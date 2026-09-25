@@ -1,16 +1,18 @@
 {
-	"name": "@sveltepress/vite",
-	"npm_description": "Sveltepress plugin for vite",
-	"repo_url": "https://github.com/Blackman99/sveltepress",
-	"authors": ["philadelphia"],
-	"homepage": "https://sveltepress.site/",
-	"version": "1.3.4",
-	"downloads": 1372,
-	"github_stars": 501,
-	"updated": "2025-12-15T02:12:12.829Z",
-	"svelte_range": "^5.0.0",
-	"kit_range": "^2.0.0",
-	"typescript": true,
-	"runes": false,
-	"last_rune_check_version": "1.1.5"
+  "name": "@sveltepress/vite",
+  "npm_description": "Sveltepress plugin for vite",
+  "repo_url": "https://github.com/SveltePress/sveltepress",
+  "authors": [
+    "philadelphia"
+  ],
+  "homepage": "https://sveltepress.site/",
+  "version": "1.8.3",
+  "downloads": 2685,
+  "github_stars": 0,
+  "updated": "2026-09-09T04:46:50.356Z",
+  "svelte_range": "^5.46.4",
+  "kit_range": ">=2.65.1 <3",
+  "typescript": true,
+  "runes": false,
+  "last_rune_check_version": "1.1.5"
 }

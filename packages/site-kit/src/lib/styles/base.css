@@ -45,6 +45,7 @@ ul,
 ol {
 	font: var(--sk-font-body);
 	margin: 0.5lh 0;
+	text-wrap: pretty;
 
 	&:first-child {
 		margin-top: 0;

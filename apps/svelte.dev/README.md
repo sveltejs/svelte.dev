@@ -14,6 +14,10 @@ The tutorial, blog and examples are maintained within this repository.
 
 ## Development
 
+### Playground
+
+See [docs/playground.md](docs/playground.md) for how saving apps works and how to run it locally.
+
 ### Tutorial
 
 The tutorial consists of two technically different parts: The Svelte tutorial and the SvelteKit tutorial. The SvelteKit tutorial uses [WebContainers](https://webcontainers.io/) under the hood in order to boot up a Node runtime in the browser. The Svelte tutorial uses Rollup in a web worker - it does not use WebContainers because a simple web worker is both faster and more reliable (there are known issues with iOS mobile).

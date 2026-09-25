@@ -1,5 +1,6 @@
 ---
 title: Styling
+tags: styles-scoped
 ---
 
 Just like in HTML, you can add a `<style>` tag to your component. Let's add some styles to the `<p>` element:

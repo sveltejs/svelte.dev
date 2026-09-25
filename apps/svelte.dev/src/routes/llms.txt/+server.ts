@@ -1,5 +1,9 @@
-import { get_documentation_title } from '$lib/server/llms';
-import { topics } from '$lib/topics';
+import {
+	get_documentation_title,
+	remove_llm_ignore_blocks,
+	remove_playground_links
+} from '#lib/server/llms.ts';
+import { topics } from '#lib/topics.ts';
 import template from './template.md?raw';
 
 const DOMAIN = `https://svelte.dev`;
@@ -14,7 +18,7 @@ export function GET() {
 
 	const content = template.replace('%PACKAGE_DOCS%', package_docs.join('\n'));
 
-	return new Response(content, {
+	return new Response(remove_playground_links(remove_llm_ignore_blocks(content)), {
 		headers: {
 			'Content-Type': 'text/plain; charset=utf-8',
 			'Cache-Control': 'public, max-age=3600'

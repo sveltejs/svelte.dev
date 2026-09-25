@@ -1,11 +1,37 @@
 import { render_content_markdown } from '@sveltejs/site-kit/markdown';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const docs_types_root = path.dirname(fileURLToPath(import.meta.resolve('docs-types/package.json')));
+const canonical_origin = 'https://svelte.dev';
+
+export function replace_canonical_origin(href: string, origin: string) {
+	let url: URL;
+
+	try {
+		url = new URL(href);
+	} catch {
+		return href;
+	}
+
+	return url.origin === canonical_origin
+		? `${origin}${url.pathname}${url.search}${url.hash}`
+		: href;
+}
 
 export const render_content = (
 	filename: string,
 	body: string,
-	options: { check?: boolean } = {}
+	options: { check?: boolean; origin?: string; references?: Record<string, string> } = {}
 ) => {
-	return render_content_markdown(filename, body, options, (filename, source) => {
+	const { origin, ...rest } = options;
+	const render_options = {
+		...rest,
+		transformLink: origin ? (href: string) => replace_canonical_origin(href, origin) : undefined,
+		twoslashRoot: docs_types_root
+	};
+
+	return render_content_markdown(filename, body, render_options, (filename, source) => {
 		// TODO these are copied from Svelte and SvelteKit - adjust for new filenames
 		const injected = [];
 
@@ -39,13 +65,18 @@ export const render_content = (
 			injected.push(`// @filename: ambient-kit.d.ts`, `/// <reference types="@sveltejs/kit" />`);
 		}
 
+		if (source.includes('$app/environment')) {
+			// TODO remove this once we drop SvelteKit 2 from the docs
+			injected.push(`declare module '$app/environment' { export * from '$app/env'; }`);
+		}
+
 		if (source.includes('$env/')) {
 			// TODO we're hardcoding static env vars that are used in code examples
 			// in the types, which isn't... totally ideal, but will do for now
 			injected.push(
 				`declare module '$env/dynamic/private' { export const env: Record<string, string> }`,
 				`declare module '$env/dynamic/public' { export const env: Record<string, string> }`,
-				`declare module '$env/static/private' { export const API_KEY: string }`,
+				`declare module '$env/static/private' { export const API_KEY: string; export const VERCEL_COMMIT_REF: string }`,
 				`declare module '$env/static/public' { export const PUBLIC_BASE_URL: string }`
 			);
 		}
@@ -56,8 +87,10 @@ export const render_content = (
 				`import type * as Kit from '@sveltejs/kit';`,
 				`export type PageLoad = Kit.Load<Record<string, any>>;`,
 				`export type PageServerLoad = Kit.ServerLoad<Record<string, any>>;`,
+				`export type PageServerLoadEvent = Parameters<PageServerLoad>[0];`,
 				`export type LayoutLoad = Kit.Load<Record<string, any>>;`,
 				`export type LayoutServerLoad = Kit.ServerLoad<Record<string, any>>;`,
+				`export type LayoutServerLoadEvent = Parameters<LayoutServerLoad>[0];`,
 				`export type RequestHandler = Kit.RequestHandler<Record<string, any>>;`,
 				`export type Action = Kit.Action<Record<string, any>>;`,
 				`export type Actions = Kit.Actions<Record<string, any>>;`,
@@ -76,8 +109,8 @@ export const render_content = (
 		}
 
 		// another special case
-		if (source.includes('$lib/types')) {
-			injected.push(`declare module '$lib/types' { export interface User {} }`);
+		if (source.includes('#lib/types')) {
+			injected.push(`declare module '#lib/types' { export interface User {} }`);
 		}
 
 		return injected.join('\n');

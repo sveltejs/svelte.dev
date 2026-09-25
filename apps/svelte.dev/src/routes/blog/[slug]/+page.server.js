@@ -1,6 +1,6 @@
 import { error } from '@sveltejs/kit';
-import { blog_posts } from '$lib/server/content';
-import { render_content } from '$lib/server/renderer';
+import { blog_posts, docs } from '#lib/server/content.ts';
+import { render_content } from '#lib/server/renderer.ts';
 
 export async function load({ params }) {
 	const document = blog_posts.find((document) => document.slug === `blog/${params.slug}`);
@@ -11,8 +11,10 @@ export async function load({ params }) {
 	// on the `runes` blog post
 	const markdown = document.body.replace(/(    )+/gm, (match) => '  '.repeat(match.length / 4));
 
+	const { references } = docs;
+
 	return {
 		...document,
-		body: await render_content(document.file, markdown)
+		body: await render_content(document.file, markdown, { references })
 	};
 }

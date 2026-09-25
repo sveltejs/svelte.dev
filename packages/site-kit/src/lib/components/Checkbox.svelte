@@ -1,11 +1,19 @@
 <script lang="ts">
-	let {
-		checked = $bindable(),
-		onchange
-	}: { checked: boolean; onchange?: (value: boolean) => void } = $props();
+	interface Props {
+		checked: boolean;
+		disabled?: boolean;
+		onchange?: (value: boolean) => void;
+	}
+
+	let { checked = $bindable(), disabled = false, onchange }: Props = $props();
 </script>
 
-<input type="checkbox" bind:checked onchange={(e) => onchange?.(e.currentTarget.checked)} />
+<input
+	type="checkbox"
+	{disabled}
+	bind:checked
+	onchange={(e) => onchange?.(e.currentTarget.checked)}
+/>
 
 <style>
 	input[type='checkbox'] {
@@ -58,5 +66,10 @@
 
 	input[type='checkbox']:checked::after {
 		left: calc(100% - var(--thumb-size) - var(--track-padding));
+	}
+
+	input[type='checkbox']:disabled {
+		cursor: not-allowed;
+		opacity: 0.5;
 	}
 </style>

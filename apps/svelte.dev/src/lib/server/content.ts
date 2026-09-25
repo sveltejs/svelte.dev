@@ -1,7 +1,9 @@
 import { read } from '$app/server';
-import { PACKAGES_META } from '$lib/packages-meta';
+import { PACKAGES_META } from '#lib/packages-meta.ts';
 import type { Document, DocumentSummary } from '@sveltejs/site-kit';
 import { create_index } from '@sveltejs/site-kit/server/content';
+import crosslinked from './generated/crosslinked.json';
+import type { RelatedLink } from '#lib/types.d.ts';
 
 const documents = import.meta.glob<string>('./**/*.md', {
 	eager: true,
@@ -10,12 +12,17 @@ const documents = import.meta.glob<string>('./**/*.md', {
 	base: '../../../content'
 });
 
-const assets = import.meta.glob<string>(['./**/+assets/**', './**/+assets/**/.env'], {
-	eager: true,
-	query: '?url',
-	import: 'default',
-	base: '../../../content'
-});
+const assets = import.meta.glob<string>(
+	['./**/+assets/**', '!**/node_modules', '!**/.svelte-kit'],
+	{
+		// required to include .env tutorial files
+		exhaustive: true,
+		eager: true,
+		query: '?url',
+		import: 'default',
+		base: '../../../content'
+	}
+);
 
 const registry_docs = import.meta.glob<string>(
 	'../../../src/lib/server/generated/registry/*.json',
@@ -94,7 +101,9 @@ function create_docs() {
 		topics: Record<string, Document>;
 		/** The docs pages themselves. Key is the topic + page */
 		pages: Record<string, Document>;
-	} = { topics: {}, pages: {} };
+		/** References map to their documentation URLs */
+		references: Record<string, string>;
+	} = { topics: {}, pages: {}, references: {} };
 
 	for (const topic of index.docs.children) {
 		const pkg = topic.slug.split('/')[1];
@@ -132,6 +141,13 @@ function create_docs() {
 				});
 
 				transformed_section.children.push(transformed_page);
+
+				// Build references map for reference pages
+				const baseUrl = `/${slug}`;
+				for (const section of page.sections) {
+					const url = `${baseUrl}#${section.slug}`;
+					docs.references[section.title] = url;
+				}
 			}
 		}
 	}
@@ -155,11 +171,7 @@ export const examples = index.examples.children;
  * Represents a Svelte package in the registry
  */
 export interface Package
-	extends PackageKey,
-		PackageManual,
-		PackageNpm,
-		PackageGithub,
-		PackageCalculated {}
+	extends PackageKey, PackageManual, PackageNpm, PackageGithub, PackageCalculated {}
 
 export interface PackageKey {
 	/** Package name */
@@ -260,3 +272,39 @@ function create_registry() {
 }
 
 export const registry = create_registry();
+
+const crosslinks_by_path: Map<string, RelatedLink> = new Map();
+const crosslinks_by_tag: Map<string, RelatedLink[]> = new Map();
+
+for (const page of crosslinked) {
+	crosslinks_by_path.set(page.path, page);
+
+	for (const tag of page.tags) {
+		let by_tag = crosslinks_by_tag.get(tag);
+
+		if (by_tag === undefined) {
+			by_tag = [];
+			crosslinks_by_tag.set(tag, by_tag);
+		}
+
+		by_tag.push(page);
+	}
+}
+
+export function get_related_links(path: string) {
+	const page = crosslinks_by_path.get(path);
+	if (!page) return;
+
+	const result: Set<RelatedLink> = new Set();
+
+	for (const tag of page.tags) {
+		const related = crosslinks_by_tag.get(tag)!;
+
+		for (const p of related) {
+			if (p === page) continue;
+			result.add(p);
+		}
+	}
+
+	return result.size > 0 ? Array.from(result) : undefined;
+}

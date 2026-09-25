@@ -22,6 +22,7 @@
 		injectedJS?: string;
 		injectedCSS?: string;
 		previewTheme?: 'light' | 'dark';
+		showOutput?: boolean;
 		onversion?: (version: string) => void;
 		onchange?: () => void;
 		download?: () => void;
@@ -42,6 +43,7 @@
 		injectedJS = '',
 		injectedCSS = '',
 		previewTheme = 'light',
+		showOutput = true,
 		onversion,
 		onchange = () => {},
 		download,
@@ -75,7 +77,7 @@
 	export function toJSON() {
 		return {
 			imports: bundler!.result?.imports ?? [],
-			files: workspace.files,
+			files: workspace.file_nodes,
 			tailwind: workspace.tailwind,
 			aliases: workspace.aliases
 		};
@@ -117,6 +119,7 @@
 			svelte_version: workspace.svelte_version,
 			tailwind: workspace.tailwind,
 			fragments: workspace.compiler_options.fragments,
+			async: workspace.compiler_options.async,
 			aliases: workspace.aliases
 		});
 	}
@@ -131,7 +134,7 @@
 	}
 
 	let width = $state(0);
-	let show_output = $state(false);
+	let toggled = $state(false);
 	let status: string | null = $state(null);
 	let runtime_error: Error | null = $state(null);
 	let status_visible = $state(false);
@@ -141,8 +144,12 @@
 		? new Bundler({
 				// svelte-ignore state_referenced_locally
 				svelte_version: svelteVersion,
-				onversion: (version) => {
+				onversion: (version, supports_async) => {
 					workspace.set_svelte_version(version);
+					workspace.supports_async = supports_async;
+					if (!supports_async && workspace.compiler_options.async) {
+						workspace.update_compiler_options({ async: false });
+					}
 					onversion?.(version);
 				},
 				onstatus: (message) => {
@@ -219,10 +226,10 @@
 	class:toggleable={$toggleable}
 	bind:clientWidth={width}
 >
-	<div class="viewport" class:output={show_output}>
+	<div class="viewport" class:output={showOutput} class:transition={toggled}>
 		<SplitPane
 			id="main"
-			type={orientation === 'rows' ? 'vertical' : 'horizontal'}
+			type={orientation}
 			pos="{embedded === 'output-only'
 				? 0
 				: mobile || fixed
@@ -260,7 +267,15 @@
 	</div>
 
 	{#if $toggleable}
-		<ScreenToggle bind:checked={show_output} />
+		<ScreenToggle
+			bind:checked={
+				() => showOutput,
+				(v) => {
+					toggled ||= true;
+					showOutput = v;
+				}
+			}
+		/>
 	{/if}
 </div>
 
@@ -313,11 +328,14 @@
 	.toggleable .viewport {
 		width: 200%;
 		height: calc(100% - var(--sk-pane-controls-height));
-		transition: transform 0.3s;
 	}
 
 	.toggleable .viewport.output {
 		transform: translate(-50%);
+	}
+
+	.toggleable .viewport.transition {
+		transition: transform 0.3s;
 	}
 
 	/* on mobile, override the <SplitPane> controls */

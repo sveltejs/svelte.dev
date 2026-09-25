@@ -1,5 +1,6 @@
 ---
 title: The attach tag
+tags: attachments
 ---
 
 Attachments are essentially element-level lifecycle functions. They're useful for things like:
@@ -10,6 +11,8 @@ Attachments are essentially element-level lifecycle functions. They're useful fo
 - adding custom event handlers
 
 In this app, you can scribble on the `<canvas>`, and change colours and brush size via the menu. But if you open the menu and cycle through the options with the Tab key, you'll soon find that the focus isn't _trapped_ inside the modal.
+
+> [!NOTE] Safari only focuses text fields and pop-up menus with the Tab key by default. To follow this exercise in Safari, use Option + Tab or enable Tab to highlight in Safari's advanced settings.
 
 We can fix that with an attachment. Import `trapFocus` from `attachments.svelte.js`...
 

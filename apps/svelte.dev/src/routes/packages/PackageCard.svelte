@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { Package } from '$lib/server/content';
-	import { ago } from '$lib/time';
+	import type { Package } from '#lib/server/content.ts';
+	import { ago } from '#lib/time.ts';
 	import { format_number } from './utils';
 	import { logos } from 'logos';
 
@@ -258,14 +258,16 @@
 			height: 3rem;
 
 			:root:not(.light) &[alt='drizzle logo'],
-			:root:not(.light) &[alt='paraglide logo'] {
+			:root:not(.light) &[alt='paraglide logo'],
+			:root:not(.light) &[alt='better-auth logo'] {
 				@media (prefers-color-scheme: dark) {
 					filter: invert(1);
 				}
 			}
 
 			:root.dark &[alt='drizzle logo'],
-			:root.dark &[alt='paraglide logo'] {
+			:root.dark &[alt='paraglide logo'],
+			:root.dark &[alt='better-auth logo'] {
 				filter: invert(1);
 			}
 		}

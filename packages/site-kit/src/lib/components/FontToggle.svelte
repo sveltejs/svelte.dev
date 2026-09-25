@@ -2,7 +2,11 @@
 	let font = $state('elegant');
 
 	$effect(() => {
-		font = localStorage.getItem('svelte:font') ?? 'elegant';
+		try {
+			font = localStorage.getItem('svelte:font') ?? 'elegant';
+		} catch {
+			// localStorage access disabled
+		}
 	});
 
 	function toggle() {
@@ -12,7 +16,12 @@
 		document.documentElement.classList.remove('font-boring');
 
 		document.documentElement.classList.add(`font-${font}`);
-		localStorage.setItem('svelte:font', font);
+
+		try {
+			localStorage.setItem('svelte:font', font);
+		} catch {
+			// localStorage access disabled
+		}
 	}
 </script>
 

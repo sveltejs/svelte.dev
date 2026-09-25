@@ -1,5 +1,10 @@
-import { PACKAGES_META } from '$lib/packages-meta';
-import { registry, type Category, type Package, type PackageDefinition } from '$lib/server/content';
+import { PACKAGES_META } from '#lib/packages-meta.ts';
+import {
+	registry,
+	type Category,
+	type Package,
+	type PackageDefinition
+} from '#lib/server/content.ts';
 
 export const prerender = false;
 

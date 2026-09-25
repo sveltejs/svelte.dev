@@ -471,7 +471,7 @@ Define:
 ```js
 // src/routes/blog/data.remote.js
 import { query } from '$app/server';
-import * as db from '$lib/server/database';
+import * as db from '#lib/server/database';
 
 export const getPosts = query(async () => {
 	return db.posts();
@@ -515,8 +515,8 @@ Define:
 
 ```js
 import { form } from '$app/server';
-import * as db from '$lib/server/database';
-import * as auth from '$lib/server/auth';
+import * as db from '#lib/server/database';
+import * as auth from '#lib/server/auth';
 import { error, redirect } from '@sveltejs/kit';
 
 export const createPost = form(async (data) => {
@@ -548,19 +548,25 @@ Use:
 - **Progressive enhancement**: Works without JS via `method`/`action`; with JS it submits without full reload.
 - **Single-flight mutations**:
   - Server-driven: call refresh inside the handler:
+
   ```js
   await getPosts().refresh();
   ```
+
   - Client-driven: customize with `enhance` and `submit().updates(...)`:
+
   ```svelte
   <form {...createPost.enhance(async ({ submit }) => {
   	await submit().updates(getPosts());
   })}>
   ```
+
   - Optimistic UI: use `withOverride`:
+
   ```js
   await submit().updates(getPosts().withOverride((posts) => [newPost, ...posts]));
   ```
+
 - **Returns**: Instead of redirect, return data; read at `createPost.result`.
 - **buttonProps**: For per-button `formaction`:
 
@@ -576,7 +582,7 @@ Define:
 ```js
 import { command, query } from '$app/server';
 import * as v from 'valibot';
-import * as db from '$lib/server/database';
+import * as db from '#lib/server/database';
 
 export const getLikes = query(v.string(), async (id) => {
 	return db.likes.get(id);
@@ -611,7 +617,7 @@ Define:
 
 ```js
 import { prerender } from '$app/server';
-import * as db from '$lib/server/database';
+import * as db from '#lib/server/database';
 
 export const getPosts = prerender(async () => {
 	return db.sql`SELECT title, slug FROM post ORDER BY published_at DESC`;
@@ -704,7 +710,7 @@ export const getProfile = query(async () => {
 ## Building your app
 
 - Build runs in two phases: Vite compiles and prerenders (if enabled), then an adapter tailors output for your deployment target.
-- Guard any code that should not execute at build time with `import { building } from '$app/environment'; if (!building) { … }`.
+- Guard any code that should not execute at build time with `import { building } from '$app/env'; if (!building) { … }`.
 - Preview your production build locally with `npm run preview` (Node‑only, no adapter hooks).
 
 ## Adapters
@@ -1115,7 +1121,7 @@ Alias for `src/lib` folder, e.g.
 
 ```svelte
 <script>
-  import Button from '$lib/Button.svelte';
+  import Button from '#lib/Button.svelte';
 </script>
 <Button>Click me</Button>
 ```

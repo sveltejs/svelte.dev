@@ -1,5 +1,6 @@
 ---
 title: Effects
+tags: rune-effect
 ---
 
 So far we've talked about reactivity in terms of state. But that's only half of the equation — state is only reactive if something is _reacting_ to it, otherwise it's just a sparkling variable.

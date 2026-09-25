@@ -1,16 +1,18 @@
 <script lang="ts">
 	import '@sveltejs/site-kit/styles/index.css';
-	import { browser, dev } from '$app/environment';
+	import { browser, dev } from '$app/env';
 	import { page } from '$app/state';
 	import { Shell, Banner } from '@sveltejs/site-kit/components';
 	import { Nav } from '@sveltejs/site-kit/nav';
 	import { SearchBox } from '@sveltejs/site-kit/search';
-	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit-next';
 	import { inject } from '@vercel/analytics';
 	import { beforeNavigate } from '$app/navigation';
 
-	injectSpeedInsights();
-	inject({ mode: dev ? 'development' : 'production' });
+	if (!dev) {
+		injectSpeedInsights();
+		inject({ mode: 'production' });
+	}
 
 	// Make all navigations between SvelteKit-tutorial and non-SvelteKit-tutorial pages (and vice versa)
 	// a full page navigation to ensure webcontainers get the correct origin restriction headers while
@@ -48,7 +50,7 @@
 	{/if}
 </svelte:head>
 
-<Shell nav_visible={page.route.id !== '/(authed)/playground/[id]/embed'}>
+<Shell nav_visible={page.route.id !== '/(authed)/playground/[...id]/embed'}>
 	{#snippet top_nav()}
 		<Nav title={sections[page.url.pathname.split('/')[1]!] ?? ''} links={data.nav_links} />
 	{/snippet}

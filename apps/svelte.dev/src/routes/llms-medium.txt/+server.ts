@@ -1,5 +1,9 @@
-import { generate_llm_content } from '$lib/server/llms';
-import { topics } from '$lib/topics';
+import {
+	generate_llm_content,
+	remove_llm_ignore_blocks,
+	remove_playground_links
+} from '#lib/server/llms.ts';
+import { topics } from '#lib/topics.ts';
 
 export function GET() {
 	const main_content = generate_llm_content({
@@ -35,7 +39,7 @@ export function GET() {
 	});
 	const content = `<SYSTEM>This is the abridged developer documentation for Svelte and SvelteKit.</SYSTEM>\n\n${main_content}`;
 
-	return new Response(content, {
+	return new Response(remove_playground_links(remove_llm_ignore_blocks(content)), {
 		status: 200,
 		headers: {
 			'Content-Type': 'text/plain; charset=utf-8',

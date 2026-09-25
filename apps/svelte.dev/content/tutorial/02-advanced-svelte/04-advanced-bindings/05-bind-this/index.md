@@ -23,7 +23,7 @@ The `$effect` in this exercise attempts to create a canvas context, but `canvas`
 
 ```svelte
 /// file: App.svelte
-<canvas +++bind:this={canvas}+++ width={32} height={32}></canvas>
+<canvas +++bind:this={canvas}+++></canvas>
 ```
 
 Note that the value of `canvas` will remain `undefined` until the component has mounted — in other words you can't access it until the `$effect` runs.

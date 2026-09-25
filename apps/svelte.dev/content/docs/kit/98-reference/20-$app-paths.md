@@ -7,7 +7,7 @@ title: $app/paths
 
 ```js
 // @noErrors
-import { asset, assets, base, resolve, resolveRoute } from '$app/paths';
+import { asset, assets, base, match, resolve, resolveRoute } from '$app/paths';
 ```
 
 ## asset
@@ -88,6 +88,44 @@ let base: '' | `/${string}`;
 
 
 
+## match
+
+<blockquote class="since note">
+
+Available since 2.52.0
+
+</blockquote>
+
+Match a path or URL to a route ID and extracts any parameters.
+
+```js
+// @errors: 7031
+import { match } from '$app/paths';
+
+const route = await match('/blog/hello-world');
+
+if (route?.id === '/blog/[slug]') {
+	const slug = route.params.slug;
+	const response = await fetch(`/api/posts/${slug}`);
+	const post = await response.json();
+}
+```
+
+<div class="ts-block">
+
+```dts
+function match(
+	url: Pathname | URL | (string & {})
+): Promise<{
+	id: RouteId;
+	params: Record<string, string>;
+} | null>;
+```
+
+</div>
+
+
+
 ## resolve
 
 <blockquote class="since note">
@@ -116,9 +154,11 @@ const resolved = resolve('/blog/[slug]', {
 <div class="ts-block">
 
 ```dts
-function resolve<T extends RouteId | Pathname>(
-	...args: ResolveArgs<T>
-): ResolvedPathname;
+function resolve<
+	T extends
+		| RouteIdWithSearchOrHash
+		| PathnameWithSearchOrHash
+>(...args: ResolveArgs<T>): ResolvedPathname;
 ```
 
 </div>
@@ -136,9 +176,11 @@ Use [`resolve(...)`](/docs/kit/$app-paths#resolve) instead
 <div class="ts-block">
 
 ```dts
-function resolveRoute<T extends RouteId | Pathname>(
-	...args: ResolveArgs<T>
-): ResolvedPathname;
+function resolveRoute<
+	T extends
+		| RouteIdWithSearchOrHash
+		| PathnameWithSearchOrHash
+>(...args: ResolveArgs<T>): ResolvedPathname;
 ```
 
 </div>

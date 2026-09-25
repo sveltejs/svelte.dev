@@ -102,22 +102,31 @@ addEventListener('message', async (event) => {
 			payload: {
 				error: null,
 				result: {
+					// @ts-expect-error
 					metadata: { runes: false },
 					...result,
 					warnings: result.warnings.map((w) => {
+						// @ts-expect-error
 						delete w.toString;
+						// @ts-expect-error
 						return { message: w.message, ...w };
 					})
 				},
 				migration
 			}
 		});
-	} catch (e) {
+	} catch (error) {
+		const e = error as any;
+
 		if (!e.position && e.loc) {
 			// this came from tsBlankSpace. Workspace expects a
 			// `position` property from a Svelte compile error;
 			// this is a hacky but pragmatic way to solve it
 			e.position = [e.pos, e.raisedAt];
+		} else if (!e.position && e.start?.character != null) {
+			// legacy (Svelte 3/4) errors expose `start`/`end` loc objects
+			// instead of a `position` range
+			e.position = [e.start.character, e.end?.character ?? e.start.character];
 		}
 
 		postMessage({

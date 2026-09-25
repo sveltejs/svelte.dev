@@ -1,5 +1,6 @@
 ---
 title: Text inputs
+tags: template-bind
 ---
 
 As a general rule, data flow in Svelte is _top down_ — a parent component can set props on a child component, and a component can set attributes on an element, but not the other way around.
@@ -13,4 +14,4 @@ Instead, we can use the `bind:value` directive:
 <input +++bind:+++value={name}>
 ```
 
-This means that not only will changes to the value of `name` update the input value, but changes to the input value will update `name`.
+This means that as well as changes to `name` updating the `<input>`, changes to the `<input>` will update `name`.

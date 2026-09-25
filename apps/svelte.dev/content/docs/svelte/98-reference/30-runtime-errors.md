@@ -69,6 +69,14 @@ Keyed each block has duplicate key at indexes %a% and %b%
 Keyed each block has duplicate key `%value%` at indexes %a% and %b%
 ```
 
+### each_key_volatile
+
+```
+Keyed each block has key that is not idempotent — the key for item at index %index% was `%a%` but is now `%b%`. Keys must be the same each time for a given item
+```
+
+The key expression in a keyed each block must return the same value when called multiple times for the same item. Using expressions like `[item.a, item.b]` creates a new array each time, which will never be equal to itself. Instead, use a primitive value or create a stable key like `item.a + '-' + item.b`.
+
 ### effect_in_teardown
 
 ```
@@ -86,6 +94,10 @@ Effect cannot be created inside a `$derived` value that was not itself created i
 ```
 `%rune%` can only be used inside an effect (e.g. during component initialisation)
 ```
+
+Effects can only be created while a parent effect is running. This means that they cannot, for example, be created inside an event handler or after an `await` expression (unless the `await` occurs directly inside a component's `<script>` tag, and not inside an async function).
+
+In very rare cases, it is appropriate to use [`$effect.root`]($effect#$effect.root) so that you can create effects outside the normal component lifecycle.
 
 ### effect_pending_outside_reaction
 
@@ -220,14 +232,6 @@ Rest element properties of `$props()` such as `%property%` are readonly
 The `%rune%` rune is only available inside `.svelte` and `.svelte.js/ts` files
 ```
 
-### set_context_after_init
-
-```
-`setContext` must be called when a component first initializes, not in a subsequent effect or after an `await` expression
-```
-
-This restriction only applies when using the `experimental.async` option, which will be active by default in Svelte 6.
-
 ### state_descriptors_fixed
 
 ```
@@ -318,6 +322,14 @@ Encountered asynchronous work while rendering synchronously.
 
 You (or the framework you're using) called [`render(...)`](svelte-server#render) with a component containing an `await` expression. Either `await` the result of `render` or wrap the `await` (or the component containing it) in a [`<svelte:boundary>`](svelte-boundary) with a `pending` snippet.
 
+### dynamic_element_invalid_tag
+
+```
+`<svelte:element this="%tag%">` is not a valid element name — the element will not be rendered
+```
+
+The value passed to the `this` prop of `<svelte:element>` must be a valid HTML element, SVG element, MathML element, or custom element name. A value containing invalid characters (such as whitespace or special characters) was provided, which could be a security risk. Ensure only valid tag names are passed.
+
 ### html_deprecated
 
 ```
@@ -361,6 +373,12 @@ Cause:
 
 ```
 `csp.nonce` was set while `csp.hash` was `true`. These options cannot be used simultaneously.
+```
+
+### invalid_id_prefix
+
+```
+The `idPrefix` option cannot include `--`.
 ```
 
 ### lifecycle_function_unavailable
@@ -426,6 +444,12 @@ Here, `List.svelte` is using `{@render children(item)` which means it expects `P
 A snippet function was passed invalid arguments. Snippets should only be instantiated via `{@render ...}`
 ```
 
+### invariant_violation
+
+```
+An invariant violation occurred, meaning Svelte's internal assumptions were flawed. This is a bug in Svelte, not your app — please open an issue at https://github.com/sveltejs/svelte, citing the following message: "%message%"
+```
+
 ### lifecycle_outside_component
 
 ```
@@ -453,10 +477,18 @@ Certain lifecycle methods can only be used during component initialisation. To f
 ### missing_context
 
 ```
-Context was not set in a parent component
+Context was not set in the current component or any of its ancestors
 ```
 
-The [`createContext()`](svelte#createContext) utility returns a `[get, set]` pair of functions. `get` will throw an error if `set` was not used to set the context in a parent component.
+The [`createContext()`](svelte#createContext) utility returns a `[get, set, has]` triplet of functions. `get` will throw an error if `set` was not used to set the context in the current component or any of its ancestors.
+
+### set_context_after_init
+
+```
+`setContext` must be called when a component first initializes, not in a subsequent effect or after an `await` expression
+```
+
+This restriction only applies when using the `experimental.async` option, which will be active by default in Svelte 6.
 
 ### snippet_without_render_tag
 

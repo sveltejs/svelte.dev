@@ -76,6 +76,10 @@
 		stroke: #aaa;
 	}
 
+	text {
+		fill: currentColor;
+	}
+
 	.tick {
 		stroke-dasharray: 2 2;
 

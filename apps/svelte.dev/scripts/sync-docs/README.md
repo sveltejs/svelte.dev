@@ -1,6 +1,6 @@
 # sync-docs
 
-Documentation lives in external repos (at the time of writing, [`sveltejs/svelte`](https://github.com/sveltejs/svelte), [`sveltejs/kit`](https://github.com/sveltejs/kit), [`sveltejs/cli`](https://github.com/sveltejs/cli) and [`sveltejs/mcp`](https://github.com/sveltejs/mcp), though the plan is to add others) and synced into this repo.
+Documentation lives in external repos (at the time of writing, [`sveltejs/svelte`](https://github.com/sveltejs/svelte), [`sveltejs/kit`](https://github.com/sveltejs/kit), [`sveltejs/cli`](https://github.com/sveltejs/cli) and [`sveltejs/ai-tools`](https://github.com/sveltejs/ai-tools), though the plan is to add others) and synced into this repo.
 
 The repos must be cloned (or linked — see [next section](#setup)) into the `apps/svelte.dev/repos` directory.
 
@@ -13,6 +13,7 @@ cd apps/svelte.dev
 ln -s /path/to/wherever/you/cloned/sveltejs/svelte repos/svelte
 ln -s /path/to/wherever/you/cloned/sveltejs/kit repos/kit
 ln -s /path/to/wherever/you/cloned/sveltejs/cli repos/cli
+ln -s /path/to/wherever/you/cloned/sveltejs/ai-tools repos/ai
 ```
 
 For windows powershell (requires administrator privileges):
@@ -22,6 +23,7 @@ cd apps/svelte.dev
 New-Item -Path .\repos\svelte -ItemType SymbolicLink -Value /path/to/wherever/you/cloned/sveltejs/svelte
 New-Item -Path .\repos\kit -ItemType SymbolicLink -Value /path/to/wherever/you/cloned/sveltejs/kit
 New-Item -Path .\repos\cli -ItemType SymbolicLink -Value /path/to/wherever/you/cloned/sveltejs/cli
+New-Item -Path .\repos\ai -ItemType SymbolicLink -Value /path/to/wherever/you/cloned/sveltejs/ai-tools
 ```
 
 The path needs to be absolute to work properly.

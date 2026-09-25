@@ -269,8 +269,8 @@ const visitors: Visitors<any, { ms: MagicString }> = {
 			return;
 		}
 		// namespaces can contain non-type nodes
-		const cleaned = node.body.body.map((entry) => context.visit(entry));
-		if (cleaned.some((entry) => entry !== empty)) {
+		const cleaned = node.body.body.map((entry: any) => context.visit(entry));
+		if (cleaned.some((entry: any) => entry !== empty)) {
 			typescript_invalid_feature(node, 'namespaces with non-type nodes');
 		}
 		ts_blank_space(context, node);

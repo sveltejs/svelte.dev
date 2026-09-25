@@ -18,5 +18,7 @@ export interface Gist {
 	id: string;
 	name: string;
 	owner: UserID;
+	/** Whether Tailwind is enabled for this playground app */
+	tailwind?: boolean;
 	files: Array<{ name: string; type: string; source: string }>;
 }

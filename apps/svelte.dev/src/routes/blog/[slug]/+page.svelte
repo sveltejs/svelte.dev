@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import { Text } from '@sveltejs/site-kit/components';
 	import { setupDocsHovers } from '@sveltejs/site-kit/docs';
 	import Byline from '../Byline.svelte';
@@ -17,14 +17,14 @@
 	<meta name="twitter:description" content={data.metadata.description} />
 	<meta name="description" content={data.metadata.description} />
 
-	<meta name="twitter:image" content="https://svelte.dev/blog/{$page.params.slug}/card.png" />
-	<meta name="og:image" content="https://svelte.dev/blog/{$page.params.slug}/card.png" />
+	<meta name="twitter:image" content="https://svelte.dev/blog/{page.params.slug}/card.png" />
+	<meta name="og:image" content="https://svelte.dev/blog/{page.params.slug}/card.png" />
 </svelte:head>
 
 <article>
 	<header>
 		<h1>{data.metadata.title}</h1>
-		<p class="standfirst">{@html data.metadata.description}</p>
+		<p>{@html data.metadata.description}</p>
 		<Byline post={data} />
 	</header>
 
@@ -37,6 +37,12 @@
 		max-width: var(--sk-page-content-width);
 		box-sizing: content-box;
 		margin: 0 auto;
+
+		p {
+			font: var(--sk-font-body-small);
+			color: var(--sk-fg-3);
+			margin: 0 0 0.5em 0;
+		}
 
 		:global {
 			figure {
@@ -103,12 +109,6 @@
 
 	h1 {
 		font: var(--sk-font-h1);
-	}
-
-	.standfirst {
-		font: var(--sk-font-body-small);
-		color: var(--sk-fg-3);
-		margin: 0 0 1em 0;
 	}
 
 	@media (min-width: 960px) {

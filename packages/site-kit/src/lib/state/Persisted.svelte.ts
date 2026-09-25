@@ -1,6 +1,16 @@
 import { on } from 'svelte/events';
 import { createSubscriber } from 'svelte/reactivity';
 
+function get_default_storage() {
+	try {
+		localStorage.getItem('dummy');
+		return localStorage;
+	} catch {
+		// localStorage access disabled
+		return undefined;
+	}
+}
+
 export class Persisted<T extends string = string> {
 	#key: string;
 	#storage: Storage | undefined;
@@ -15,11 +25,7 @@ export class Persisted<T extends string = string> {
 		});
 	});
 
-	constructor(
-		key: string,
-		fallback: T,
-		storage = typeof localStorage === 'undefined' ? undefined : localStorage
-	) {
+	constructor(key: string, fallback: T, storage = get_default_storage()) {
 		this.#key = key;
 		this.#fallback = fallback;
 		this.#storage = storage;
@@ -29,11 +35,13 @@ export class Persisted<T extends string = string> {
 		this.#subscribe(); // handle cross-tab updates
 		this.#version; // handle same-tab updates
 
-		return (this.#storage?.getItem(this.#key) as T) ?? this.#fallback;
+		return (this.#storage?.getItem?.(this.#key) as T) ?? this.#fallback;
 	}
 
 	set current(v: T) {
-		this.#storage?.setItem(this.#key, v);
-		this.#version += 1;
+		if (v !== this.#storage?.getItem?.(this.#key)) {
+			this.#storage?.setItem(this.#key, v);
+			this.#version += 1;
+		}
 	}
 }

@@ -1,7 +1,7 @@
-import { dev } from '$app/environment';
-import { client } from '$lib/db/client.js';
-import * as gist from '$lib/db/gist.js';
-import { examples } from '$lib/server/content';
+import { dev } from '$app/env';
+import { client } from '#lib/db/client.js';
+import * as gist from '#lib/db/gist.js';
+import { examples } from '#lib/server/content.ts';
 import { error, json } from '@sveltejs/kit';
 import type { Examples } from '../examples/all.json/+server.js';
 
@@ -20,12 +20,13 @@ export async function GET({ fetch, params }) {
 			id: params.id,
 			name: example.title,
 			owner: null,
+			tailwind: false,
 			relaxed: false, // TODO is this right? EDIT: It was example.relaxed before, which no example return to my knowledge. By @PuruVJ
 			components: example.components
 		});
 	}
 
-	if (dev && !client) {
+	if (dev && !client && !(await gist.read(params.id))) {
 		// in dev with no local Supabase configured, proxy to production
 		// this lets us at least load saved REPLs
 		const res = await fetch(`https://svelte.dev/playground/api/${params.id}.json`);
@@ -55,6 +56,7 @@ export async function GET({ fetch, params }) {
 		name: app.name,
 		// @ts-ignore
 		owner: app.userid,
+		tailwind: app.tailwind ?? false,
 		relaxed: false,
 		components: app.files!.map((file) => {
 			const dot = file.name.lastIndexOf('.');

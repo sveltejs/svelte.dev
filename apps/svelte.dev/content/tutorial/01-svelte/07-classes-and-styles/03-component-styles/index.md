@@ -1,5 +1,6 @@
 ---
 title: Component styles
+tags: styles-global, styles-custom-properties
 ---
 
 Often, you need to influence the styles inside a child component. Perhaps we want to make these boxes red, green and blue.

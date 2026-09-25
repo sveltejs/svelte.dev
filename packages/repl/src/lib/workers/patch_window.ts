@@ -1,1 +1,1 @@
-self.window = self; // hack for magic-sring and rollup inline sourcemaps
+self.window = self; // hack for magic-string and rollup inline sourcemaps

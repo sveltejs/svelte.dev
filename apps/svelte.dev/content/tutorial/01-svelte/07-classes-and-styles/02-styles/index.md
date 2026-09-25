@@ -1,5 +1,6 @@
 ---
 title: The style directive
+tags: template-style
 ---
 
 As with `class`, you can write your inline `style` attributes literally, because Svelte is really just HTML with fancy bits:

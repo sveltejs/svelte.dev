@@ -2,19 +2,10 @@
 	import RemovedPage from '../../RemovedPage.svelte';
 
 	const docs = new Map([
-		[
-			'$app-environment-browser',
-			['`$app/environment#browser`', '/docs/kit/$app-environment#browser']
-		],
-		[
-			'$app-environment-building',
-			['`$app/environment#building`', '/docs/kit/$app-environment#building']
-		],
-		['$app-environment-dev', ['`$app/environment#dev`', '/docs/kit/$app-environment#dev']],
-		[
-			'$app-environment-version',
-			['`$app/environment#version`', '/docs/kit/$app-environment#version']
-		],
+		['$app-environment-browser', ['`$app/env#browser`', '/docs/kit/$app-env#browser']],
+		['$app-environment-building', ['`$app/env#building`', '/docs/kit/$app-env#building']],
+		['$app-environment-dev', ['`$app/env#dev`', '/docs/kit/$app-env#dev']],
+		['$app-environment-version', ['`$app/env#version`', '/docs/kit/$app-env#version']],
 		['$app-forms-applyaction', ['`$app/forms#applyAction`', '/docs/kit/$app-forms#applyAction']],
 		['$app-forms-deserialize', ['`$app/forms#deserialize`', '/docs/kit/$app-forms#deserialize']],
 		['$app-forms-enhance', ['`$app/forms#enhance`', '/docs/kit/$app-forms#enhance']],
@@ -59,14 +50,7 @@
 			'$app-navigation-replacestate',
 			['`$app/navigation#replaceState`', '/docs/kit/$app-navigation#replaceState']
 		],
-		['$app-paths-assets', ['`$app/paths#assets`', '/docs/kit/$app-paths#assets']],
-		['$app-paths-base', ['`$app/paths#base`', '/docs/kit/$app-paths#base']],
-		['$app-paths-resolveroute', ['`$app-paths#resolveRoute`', '/docs/kit/$app-paths#resolveRoute']],
 		['$app-server-read', ['`$app/server#read`', '/docs/kit/$app-server#read']],
-		['$app-stores-getstores', ['`$app/stores#getStores`', '/docs/kit/$app-stores#getStores']],
-		['$app-stores-navigating', ['`$app/stores#navigating`', '/docs/kit/$app-stores#navigating']],
-		['$app-stores-page', ['`$app/stores#page`', '/docs/kit/$app-stores#page']],
-		['$app-stores-updated', ['`$app/stores#updated`', '/docs/kit/$app-stores#updated']],
 		['$lib-$lib-server', ['`$lib`', '/docs/kit/$lib']],
 		['$service-worker-base', ['`$service-worker#base`', '/docs/kit/$service-worker#base']],
 		['$service-worker-build', ['`$service-worker#build`', '/docs/kit/$service-worker#build']],
@@ -108,13 +92,6 @@
 		[
 			'sveltejs-kit-node-setresponse',
 			['`@sveltejs/kit/node#setResponse`', '/docs/kit/@sveltejs-kit-node#setResponse']
-		],
-		[
-			'sveltejs-kit-node-polyfills-installpolyfills',
-			[
-				'`@sveltejs/kit/node/polyfills#installPolyfills`',
-				'/docs/kit/@sveltejs-kit-node-polyfills#installPolyfills'
-			]
 		],
 		[
 			'sveltejs-kit-vite-sveltekit',

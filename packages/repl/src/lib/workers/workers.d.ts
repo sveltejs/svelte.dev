@@ -1,6 +1,6 @@
 import type { CompileError, CompileOptions, CompileResult, Warning } from 'svelte/compiler';
 import type { File } from '../Workspace.svelte';
-import type { MessageDetails } from '$lib/types';
+import type { MessageDetails } from '#lib/types';
 
 export type CompilerCommand =
 	| {
@@ -54,6 +54,7 @@ export interface BundleOptions {
 	tailwind?: boolean;
 	runes?: boolean;
 	fragments?: 'html' | 'tree';
+	async?: boolean;
 	aliases?: Record<string, string>;
 }
 

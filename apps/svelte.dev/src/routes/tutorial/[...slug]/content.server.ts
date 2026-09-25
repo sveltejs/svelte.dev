@@ -1,10 +1,10 @@
 import { read } from '$app/server';
-import { index } from '$lib/server/content';
-import type { Exercise, ExerciseStub, PartStub, Scope } from '$lib/tutorial';
+import { index, docs } from '#lib/server/content.ts';
+import type { Exercise, ExerciseStub, PartStub, Scope } from '#lib/tutorial/index.d.ts';
 import { error } from '@sveltejs/kit';
 import { text_files } from './shared';
 import type { Document } from '@sveltejs/site-kit';
-import { render_content } from '$lib/server/renderer';
+import { render_content } from '#lib/server/renderer.ts';
 
 const lookup: Record<
 	string,
@@ -134,6 +134,8 @@ export async function load_exercise(slug: string): Promise<Exercise> {
 
 	const filenames = new Set();
 
+	const { references } = docs;
+
 	return {
 		part: {
 			slug: part.slug,
@@ -152,15 +154,14 @@ export async function load_exercise(slug: string): Promise<Exercise> {
 		prev,
 		next,
 		markdown: exercise.body,
-		html: (await render_content(exercise.file, exercise.body, { check: false })).replace(
-			/<code>(.+?)<\/code>/g,
-			(match, filename) => {
-				// TODO wire this up
-				return filenames.size > 1 && filenames.has(filename)
-					? `<code data-file="${scope.prefix + filename}">${filename}</code>`
-					: match;
-			}
-		),
+		html: (
+			await render_content(exercise.file, exercise.body, { check: false, references })
+		).replace(/<code>(.+?)<\/code>/g, (match, filename) => {
+			// TODO wire this up
+			return filenames.size > 1 && filenames.has(filename)
+				? `<code data-file="${scope.prefix + filename}">${filename}</code>`
+				: match;
+		}),
 		dir: exercise.file.split('/').slice(0, -1).join('/'),
 		editing_constraints: {
 			create: new Set(exercise.metadata.editing_constraints?.create ?? []),

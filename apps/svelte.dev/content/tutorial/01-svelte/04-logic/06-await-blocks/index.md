@@ -1,5 +1,6 @@
 ---
 title: Await blocks
+tags: template-await
 ---
 
 Most web applications have to deal with asynchronous data at some point. Svelte makes it easy to _await_ the value of [promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) directly in your markup:

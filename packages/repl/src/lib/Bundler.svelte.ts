@@ -17,7 +17,7 @@ export default class Bundler {
 	}: {
 		svelte_version: string;
 		onstatus: (val: string | null) => void;
-		onversion?: (version: string) => void;
+		onversion?: (version: string, supports_async: boolean) => void;
 		onerror?: (message: string) => void;
 	}) {
 		this.#worker = new Worker(new URL('./workers/bundler/index', import.meta.url), {
@@ -31,7 +31,7 @@ export default class Bundler {
 			}
 
 			if (event.data.type === 'version') {
-				onversion?.(event.data.message);
+				onversion?.(event.data.version, event.data.supports_async);
 				return;
 			}
 
@@ -67,7 +67,7 @@ export default class Bundler {
 					} else {
 						destroy();
 						// This isn't necessarily the result of this bundle call, as it could be
-						// superseeded by another call to `bundle` before the result is set.
+						// superseded by another call to `bundle` before the result is set.
 						resolve();
 					}
 				});

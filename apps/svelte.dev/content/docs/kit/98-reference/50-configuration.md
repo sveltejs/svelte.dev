@@ -27,6 +27,45 @@ const config = {
 export default config;
 ```
 
+Since version 2.62.0 you can also pass your configuration to the `sveltekit` plugin in your Vite config, along with the Svelte compiler options:
+
+```js
+/// file: vite.config.js
+// @filename: ambient.d.ts
+declare module '@sveltejs/adapter-auto' {
+	const plugin: () => import('@sveltejs/kit').Adapter;
+	export default plugin;
+}
+
+// @filename: index.js
+// ---cut---
+import adapter from '@sveltejs/adapter-auto';
+import { sveltekit } from '@sveltejs/kit/vite';
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+	plugins: [
+		sveltekit({
+			compilerOptions: {
+				experimental: {
+					async: true
+				}
+			},
+			adapter: adapter(),
+			experimental: {
+				remoteFunctions: true
+			}
+		})
+	]
+});
+```
+
+> [!NOTE] The `kit` namespace is at the same level as the other top level entries; this is the only difference to the `svelte.config.js` layout.
+
+Any options that don't belong to SvelteKit are passed through to [`vite-plugin-svelte`](https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/config.md), so you can set options like `inspector` here too. The `experimental` namespace is shared — SvelteKit reads its own flags and forwards the rest.
+
+If the config is defined via the plugin, the `svelte.config.js` file is ignored.
+
 ## Config
 
 An extension of [`vite-plugin-svelte`'s options](https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/config.md#svelte-options).
@@ -185,7 +224,7 @@ When pages are prerendered, the CSP header is added via a `<meta http-equiv>` ta
 
 > [!NOTE] Note that most [Svelte transitions](/tutorial/svelte/transition) work by creating an inline `<style>` element. If you use these in your app, you must either leave the `style-src` directive unspecified or add `unsafe-inline`.
 
-If this level of configuration is insufficient and you have more dynamic requirements, you can use the [`handle` hook](/docs/kit/hooks#Server-hooks-handle) to roll your own CSP.
+If this level of configuration is insufficient and you have more dynamic requirements, you can use the [`handle` hook](/docs/kit/hooks#handle) to roll your own CSP.
 
 <div class="ts-block-property-children">
 
@@ -402,6 +441,26 @@ Experimental features. Here be dragons. These are not subject to semantic versio
 
 ```ts
 // @noErrors
+explicitEnvironmentVariables?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag since">available since</span> v2.63.0
+- <span class="tag">default</span> `false`
+
+</div>
+
+Whether to enable explicit environment variables using `src/env.js` or `src/env.ts`.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```ts
+// @noErrors
 tracing?: {/*…*/}
 ```
 
@@ -414,7 +473,7 @@ tracing?: {/*…*/}
 
 </div>
 
-Options for enabling server-side [OpenTelemetry](https://opentelemetry.io/) tracing for SvelteKit operations including the [`handle` hook](/docs/kit/hooks#Server-hooks-handle), [`load` functions](/docs/kit/load), [form actions](/docs/kit/form-actions), and [remote functions](/docs/kit/remote-functions).
+Options for enabling server-side [OpenTelemetry](https://opentelemetry.io/) tracing for SvelteKit operations including the [`handle` hook](/docs/kit/hooks#handle), [`load` functions](/docs/kit/load), [form actions](/docs/kit/form-actions), and [remote functions](/docs/kit/remote-functions).
 
 <div class="ts-block-property-children"><div class="ts-block-property">
 
@@ -432,7 +491,7 @@ server?: boolean;
 
 </div>
 
-Enables server-side [OpenTelemetry](https://opentelemetry.io/) span emission for SvelteKit operations including the [`handle` hook](/docs/kit/hooks#Server-hooks-handle), [`load` functions](/docs/kit/load), [form actions](/docs/kit/form-actions), and [remote functions](/docs/kit/remote-functions).
+Enables server-side [OpenTelemetry](https://opentelemetry.io/) span emission for SvelteKit operations including the [`handle` hook](/docs/kit/hooks#handle), [`load` functions](/docs/kit/load), [form actions](/docs/kit/form-actions), and [remote functions](/docs/kit/remote-functions).
 
 </div>
 </div></div>
@@ -515,6 +574,28 @@ Whether to enable the experimental forked preloading feature using Svelte's fork
 
 </div>
 </div>
+<div class="ts-block-property">
+
+```ts
+// @noErrors
+handleRenderingErrors?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `false`
+
+</div>
+
+Whether to enable the experimental handling of rendering errors.
+When enabled, `<svelte:boundary>` is used to wrap components at each level
+where there's an `+error.svelte`, rendering the error page if the component fails.
+In addition, error boundaries also work on the server and the error object goes through `handleError`.
+
+</div>
+</div>
 
 </div>
 
@@ -522,7 +603,7 @@ Whether to enable the experimental forked preloading feature using Svelte's fork
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag deprecated">deprecated</span> 
+- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
 
 </div>
 
@@ -541,13 +622,13 @@ src?: string;
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag deprecated">deprecated</span> 
+- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
 - <span class="tag">default</span> `"src"`
 - <span class="tag since">available since</span> v2.28
 
 </div>
 
-the location of your source code
+The location of your source code.
 
 </div>
 </div>
@@ -562,12 +643,12 @@ assets?: string;
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag deprecated">deprecated</span> 
+- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
 - <span class="tag">default</span> `"static"`
 
 </div>
 
-a place to put static files that should have stable URLs and undergo no processing, such as `favicon.ico` or `manifest.json`
+A place to put static files that should have stable URLs and undergo no processing, such as `favicon.ico` or `manifest.json`.
 
 </div>
 </div>
@@ -591,7 +672,7 @@ client?: string;
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag deprecated">deprecated</span> 
+- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
 - <span class="tag">default</span> `"src/hooks.client"`
 
 </div>
@@ -611,7 +692,7 @@ server?: string;
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag deprecated">deprecated</span> 
+- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
 - <span class="tag">default</span> `"src/hooks.server"`
 
 </div>
@@ -631,7 +712,7 @@ universal?: string;
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag deprecated">deprecated</span> 
+- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
 - <span class="tag">default</span> `"src/hooks"`
 - <span class="tag since">available since</span> v2.3.0
 
@@ -655,12 +736,12 @@ lib?: string;
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag deprecated">deprecated</span> 
+- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
 - <span class="tag">default</span> `"src/lib"`
 
 </div>
 
-your app's internal library, accessible throughout the codebase as `$lib`
+Your app's internal library, accessible throughout the codebase as `$lib`.
 
 </div>
 </div>
@@ -675,12 +756,12 @@ params?: string;
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag deprecated">deprecated</span> 
+- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
 - <span class="tag">default</span> `"src/params"`
 
 </div>
 
-a directory containing [parameter matchers](/docs/kit/advanced-routing#Matching)
+A directory containing [parameter matchers](/docs/kit/advanced-routing#Matching).
 
 </div>
 </div>
@@ -695,12 +776,12 @@ routes?: string;
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag deprecated">deprecated</span> 
+- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
 - <span class="tag">default</span> `"src/routes"`
 
 </div>
 
-the files that define the structure of your app (see [Routing](/docs/kit/routing))
+The files that define the structure of your app (see [Routing](/docs/kit/routing)).
 
 </div>
 </div>
@@ -715,12 +796,12 @@ serviceWorker?: string;
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag deprecated">deprecated</span> 
+- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
 - <span class="tag">default</span> `"src/service-worker"`
 
 </div>
 
-the location of your service worker's entry point (see [Service workers](/docs/kit/service-workers))
+The location of your service worker's entry point (see [Service workers](/docs/kit/service-workers)).
 
 </div>
 </div>
@@ -735,12 +816,12 @@ appTemplate?: string;
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag deprecated">deprecated</span> 
+- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
 - <span class="tag">default</span> `"src/app.html"`
 
 </div>
 
-the location of the template for HTML responses
+The location of the template for HTML responses.
 
 </div>
 </div>
@@ -755,12 +836,12 @@ errorTemplate?: string;
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag deprecated">deprecated</span> 
+- <span class="tag deprecated">deprecated</span> this feature is still supported, but it's generally recommended to use [monorepos](https://levelup.video/tutorials/monorepos-with-pnpm) instead
 - <span class="tag">default</span> `"src/error.html"`
 
 </div>
 
-the location of the template for fallback error responses
+The location of the template for fallback error responses.
 
 </div>
 </div>
@@ -1183,6 +1264,31 @@ How to respond when a route is marked as prerenderable but has not been prerende
 
 The default behavior is to fail the build. This may be undesirable when you know that some of your routes may never be reached under certain
 circumstances such as a CMS not returning data for a specific area, resulting in certain routes never being reached.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```ts
+// @noErrors
+handleInvalidUrl?: PrerenderInvalidUrlHandlerValue;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `"fail"`
+- <span class="tag since">available since</span> v2.67.0
+
+</div>
+
+How to respond when SvelteKit encounters a URL it cannot parse while crawling prerendered HTML (for example, an AT Protocol URL such as `at://did:plc:...`).
+
+- `'fail'` — fail the build
+- `'ignore'` - silently ignore the failure and continue
+- `'warn'` — continue, but print a warning
+- `(details) => void` — a custom error handler that takes a `details` object with `href`, `referrer` and `message` properties. If you `throw` from this function, the build will fail
 
 </div>
 </div>

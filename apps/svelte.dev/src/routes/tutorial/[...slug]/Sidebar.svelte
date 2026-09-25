@@ -1,14 +1,19 @@
 <script>
 	import { createEventDispatcher } from 'svelte';
-	import Modal from '$lib/components/Modal.svelte';
+	import Modal from '#lib/components/Modal.svelte';
 	import { Text } from '@sveltejs/site-kit/components';
-	import PageControls from '$lib/components/PageControls.svelte';
+	import PageControls from '#lib/components/PageControls.svelte';
+	import RelatedLinks from '#lib/components/RelatedLinks.svelte';
+	import { session_storage } from '#lib/storage.js';
 
-	/** @type {import('$lib/tutorial').Exercise} */
+	/** @type {import('#lib/tutorial/index.d.ts').Exercise} */
 	export let exercise;
 
 	/** @type {HTMLElement} */
 	export let sidebar;
+
+	/** @type {Array<{ breadcrumbs: string[], path: string }> | undefined} */
+	export let related;
 
 	const dispatch = createEventDispatcher();
 
@@ -22,7 +27,7 @@
 	<div
 		class="text"
 		on:copy={(e) => {
-			if (sessionStorage[copy_enabled]) return;
+			if (session_storage.get(copy_enabled)) return;
 
 			/** @type {HTMLElement | null} */
 			let node = /** @type {HTMLElement} */ (e.target);
@@ -39,6 +44,10 @@
 			}
 		}}
 	>
+		{#if related}
+			<RelatedLinks links={related} />
+		{/if}
+
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<!-- svelte-ignore a11y-no-static-element-interactions -->
 		<div
@@ -93,7 +102,7 @@
 				<input
 					type="checkbox"
 					on:change={(e) => {
-						sessionStorage[copy_enabled] = e.currentTarget.checked ? 'true' : '';
+						session_storage.set(copy_enabled, e.currentTarget.checked ? 'true' : '');
 					}}
 				/>
 				enable copy-and-paste for the duration of this session

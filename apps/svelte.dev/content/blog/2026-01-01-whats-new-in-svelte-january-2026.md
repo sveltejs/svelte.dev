@@ -14,7 +14,7 @@ There were also a bunch of improvements and showcase items across the Svelte eco
 - The `hydratable` option (which adds an inline `<script>` block to the `head`) now has a `csp` option in `render` to support Content Security Policies (**svelte@5.46.0**, [Docs](https://svelte.dev/docs/svelte/hydratable#CSP), [#17338](https://github.com/sveltejs/svelte/pull/17338))
 - The Vercel adapter now supports Node 24 (**adapter-vercel@6.2.0/adapter-auto@7.0.0**, [#14982](https://github.com/sveltejs/kit/pull/14982) and [#14737](https://github.com/sveltejs/kit/pull/14737))
 - The Svelte CLI is now able to fully setup a SvelteKit project for Cloudflare Workers/Pages development (**sv@0.11.0**, [Docs](https://svelte.dev/docs/cli/sveltekit-adapter#Options-cloudflare-target), [#851](https://github.com/sveltejs/cli/pull/851))
-- The Svelte MCP now exposes tools as both a JS API and CLI (**mcp@0.1.16**, [#128](https://github.com/sveltejs/mcp/pull/128))
+- The Svelte MCP now exposes tools as both a JS API and CLI (**mcp@0.1.16**, [#128](https://github.com/sveltejs/ai-tools/pull/128))
 - A huge amount of [performance improvements](https://github.com/sveltejs/language-tools/releases) were completed this month in the language-tools so make sure your extensions are up to date!
 
 For a full list of changes - including all the important bugfixes that went into the releases this month - check out the Svelte compiler's [CHANGELOG](https://github.com/sveltejs/svelte/blob/main/packages/svelte/CHANGELOG.md) and the SvelteKit / Adapter [CHANGELOGs](https://github.com/sveltejs/kit/tree/main/packages).

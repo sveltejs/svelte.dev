@@ -1,0 +1,4 @@
+# Please report security issues via HackerOne. Consult the Security Policy for details:
+Policy: https://github.com/sveltejs/.github/blob/main/SECURITY.md
+Contact: mailto:security@svelte.dev
+Expires: 2027-02-28T00:00:00z

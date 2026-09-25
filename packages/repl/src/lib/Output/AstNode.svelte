@@ -37,7 +37,7 @@
 			workspace.onselect((from, to) => {
 				// legacy fragments have `children`
 				const nodes =
-					value.type === 'Fragment' ? value.nodes ?? value.children : is_array ? value : [value];
+					value.type === 'Fragment' ? (value.nodes ?? value.children) : is_array ? value : [value];
 
 				const start = nodes[0]?.start;
 				const end = nodes[nodes.length - 1]?.end;

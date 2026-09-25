@@ -36,3 +36,11 @@
 	width: 100%;
 	padding: 0 !important;
 }
+
+.twoslash-popup-reference {
+	margin-top: 1rem;
+	padding-top: 1rem;
+	border-top: 1px solid var(--sk-border);
+	color: var(--sk-fg-accent);
+	text-decoration: none;
+}

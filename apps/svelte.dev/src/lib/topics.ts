@@ -7,7 +7,7 @@ export const topics = [
 	{ slug: 'svelte', title: 'Svelte' },
 	{ slug: 'kit', title: 'SvelteKit' },
 	{ slug: 'cli', title: 'Svelte CLI' },
-	{ slug: 'mcp', title: 'Svelte MCP' }
+	{ slug: 'ai', title: 'Svelte AI' }
 ] as const satisfies Topic[];
 
 const DEFAULT_TITLE = 'Svelte';

@@ -8,8 +8,17 @@ import * as marked from 'marked';
 import { createHighlighterCore } from 'shiki/core';
 import { createOnigurumaEngine } from 'shiki/engine/oniguruma';
 import { createCssVariablesTheme } from 'shiki';
-import { transformerTwoslash } from '@shikijs/twoslash';
-import { SHIKI_LANGUAGE_MAP, slugify, smart_quotes, transform } from './utils.ts';
+import { createTransformerFactory, rendererRich } from '@shikijs/twoslash/core';
+import { createTwoslasher } from 'twoslash';
+// import { createFileSystemTypesCache } from '@shikijs/vitepress-twoslash/cache-fs';
+import { compress_and_encode_text } from 'gzip';
+import {
+	decode_html_entities,
+	SHIKI_LANGUAGE_MAP,
+	slugify,
+	smart_quotes,
+	transform
+} from './utils.ts';
 
 interface SnippetOptions {
 	file: string | null;
@@ -45,19 +54,28 @@ if (!fs.existsSync(original_file)) {
 hash_graph(hash, original_file);
 const digest = hash.digest().toString('base64').replace(/\//g, '-');
 
-const highlighter = await createHighlighterCore({
+// @ts-expect-error — this allows us to create a single Shiki instance
+// across dev server reloads, otherwise it complains
+const highlighter = (globalThis[Symbol.for('shiki highlighter')] ??= await createHighlighterCore({
 	themes: [],
 	langs: [
 		import('@shikijs/langs/javascript'),
 		import('@shikijs/langs/typescript'),
-		import('@shikijs/langs/html'),
+		import('@shikijs/langs/svelte'),
 		import('@shikijs/langs/css'),
 		import('@shikijs/langs/bash'),
 		import('@shikijs/langs/yaml'),
-		import('@shikijs/langs/svelte')
+		import('@shikijs/langs/toml'),
+		import('@shikijs/langs/ini'),
+		import('@shikijs/langs/dotenv'),
+		import('@shikijs/langs/markdown'),
+		import('@shikijs/langs/jsonc'),
+		// used by markdown codeblocks from the express types
+		import('@shikijs/langs/shellsession'), // lang: 'console'
+		import('@shikijs/langs/http')
 	],
 	engine: createOnigurumaEngine(import('shiki/wasm'))
-});
+}));
 
 /**
  * Utility function to work with code snippet caching.
@@ -74,7 +92,7 @@ const highlighter = await createHighlighterCore({
  * ```
  */
 async function create_snippet_cache() {
-	const cache = new Map();
+	const cache = new Map<string, string[]>();
 	const directory = find_nearest_node_modules(import.meta.url) + '/.snippets';
 	const current = `${directory}/${digest}`;
 
@@ -97,7 +115,7 @@ async function create_snippet_cache() {
 		hash.update(source);
 		const digest = hash.digest().toString('base64').replace(/\//g, '-');
 
-		return `${current}/${digest}.html`;
+		return `${current}/${digest}.json`;
 	}
 
 	return {
@@ -108,21 +126,22 @@ async function create_snippet_cache() {
 				const file = get_file(source);
 
 				if (fs.existsSync(file)) {
-					snippet = fs.readFileSync(file, 'utf-8');
+					const json = fs.readFileSync(file, 'utf-8');
+					snippet = JSON.parse(json) as string[];
 					cache.set(source, snippet);
 				}
 			}
 
 			return snippet;
 		},
-		save(source: string, html: string) {
-			cache.set(source, html);
+		save(source: string, data: string[]) {
+			cache.set(source, data);
 
 			try {
 				fs.mkdirSync(directory);
 			} catch {}
 
-			fs.writeFileSync(get_file(source), html);
+			fs.writeFileSync(get_file(source), JSON.stringify(data));
 		}
 	};
 }
@@ -208,27 +227,233 @@ const snippets = await create_snippet_cache();
  * @param {string} body
  * @param {object} options
  * @param {TwoslashBanner} [options.twoslashBanner] - A function that returns a string to be prepended to the code snippet before running the code with twoslash. Helps in adding imports from svelte or sveltekit or whichever modules are being globally referenced in all or most code snippets.
+ * @param {Record<string, string>} [references] - Optional map of symbol names to their documentation URLs for dynamic reference links in twoslash tooltips.
+ * @param {(href: string) => string} [options.transformLink] - Transforms Markdown link destinations before rendering.
  */
+
+/**
+ * Extracts imported symbol names from source code (handles JS/TS/Svelte files).
+ * Only tracks imports from documented modules to avoid linking to external symbols.
+ */
+function extractImportedSymbols(source: string): Set<string> {
+	const imported = new Set<string>();
+	const scriptMatch = source.match(/<script[^>]*>([\s\S]+?)<\/script>/);
+	const codeToScan = scriptMatch ? scriptMatch[1] : source;
+	const importRegex = /import\s+(?:type\s+)?{([^}]+)}\s+from\s+['"]([^'"]+)['"]/g;
+
+	for (const match of codeToScan.matchAll(importRegex)) {
+		const [, imports, module] = match;
+		const documentedModules = ['svelte', '@sveltejs/kit', '$app/', '$env/', '$service-worker'];
+		if (!documentedModules.some((prefix) => module.startsWith(prefix))) continue;
+
+		// Extract symbol names, handling: { a, b as c, type d }
+		for (const item of imports.split(',')) {
+			const name = item
+				.trim()
+				.replace(/^type\s+/, '')
+				.split(/\s+as\s+/)[0]
+				.trim();
+			if (name) imported.add(name);
+		}
+	}
+
+	return imported;
+}
+
+/**
+ * Injects reference links into twoslash popup tooltips.
+ * Uses rendererRich structure: <span class="twoslash-hover"><span class="twoslash-popup-container">...</span>symbol</span>
+ * Only adds links for symbols that were actually imported in the code snippet.
+ */
+function injectReferenceLinks(
+	html: string,
+	references?: Record<string, string>,
+	importedSymbols?: Set<string>
+): string {
+	if (!references || !importedSymbols || html.includes('twoslash-popup-reference')) {
+		return html;
+	}
+
+	const insertions: Array<{ index: number; div: string }> = [];
+
+	for (const match of html.matchAll(/<span class="twoslash-popup-container">/g)) {
+		const startIdx = match.index! + match[0].length;
+		let depth = 1;
+		let pos = startIdx;
+		let endIdx = -1;
+
+		// Track nested span depth to find the matching closing </span>
+		while (depth > 0 && pos < html.length) {
+			const openIdx = html.indexOf('<span', pos);
+			const closeIdx = html.indexOf('</span>', pos);
+			if (closeIdx === -1) break;
+
+			if (openIdx !== -1 && openIdx < closeIdx) {
+				depth++;
+				pos = openIdx + '<span'.length;
+			} else {
+				depth--;
+				if (depth === 0) endIdx = closeIdx;
+				pos = closeIdx + '</span>'.length;
+			}
+		}
+
+		if (endIdx === -1) continue;
+
+		// Symbol name appears after popup container closes, before twoslash-hover closes
+		const afterPopup = html.substring(endIdx + '</span>'.length, endIdx + '</span>'.length + 100);
+		const symbolMatch = afterPopup.match(/^([a-zA-Z_$][a-zA-Z0-9_$]*)</);
+		if (!symbolMatch) continue;
+
+		const symbolName = symbolMatch[1];
+		if (!importedSymbols.has(symbolName)) continue;
+
+		const url = references[symbolName];
+		if (url) {
+			insertions.push({
+				index: endIdx,
+				div: `<div class="twoslash-popup-reference"><a href="${url}">reference</a></div>`
+			});
+		}
+	}
+
+	// Insert in reverse order to maintain correct string indices
+	for (let i = insertions.length - 1; i >= 0; i--) {
+		const { index, div } = insertions[i];
+		html = html.slice(0, index) + div + html.slice(index);
+	}
+
+	return html;
+}
+
 export async function render_content_markdown(
 	filename: string,
 	body: string,
-	options?: { check?: boolean },
+	options?: {
+		check?: boolean;
+		references?: Record<string, string>;
+		transformLink?: (href: string) => string;
+		twoslashRoot?: string;
+	},
 	twoslashBanner?: TwoslashBanner
 ) {
 	const headings: string[] = [];
-	const { check = true } = options ?? {};
+	const { check = true, references, transformLink, twoslashRoot } = options ?? {};
 
-	return await transform(body, {
+	interface CodeBlockFile {
+		selected: boolean;
+		tab_id: string;
+		panel_id: string;
+		name: string | null;
+		ext: string | null;
+		content: string;
+		rendered: string[];
+		can_copy: boolean;
+	}
+
+	interface CodeBlock {
+		id: number;
+		title: string | null;
+		selected: string | null;
+		files: CodeBlockFile[];
+		converted: boolean;
+		hash: string | null;
+	}
+
+	const codeblocks: CodeBlock[] = [];
+	let current_block: CodeBlock | null = null;
+
+	let transformed = await transform(body, {
 		async walkTokens(token) {
+			if (token.type === 'link' && transformLink) {
+				token.href = transformLink(token.href);
+			}
+
+			if (token.type === 'html') {
+				if (token.text.startsWith('<!-- codeblock:start')) {
+					if (current_block !== null) {
+						throw new Error('Cannot nest codeblocks');
+					}
+
+					const match = /<!-- codeblock:start ({.+}) -->/.exec(token.text);
+					const { title = 'Demo (from docs)', selected = 'App.svelte' } = match
+						? JSON.parse(match[1])
+						: {};
+
+					current_block = {
+						id: codeblocks.length,
+						title,
+						selected,
+						files: [],
+						converted: false,
+						hash: null
+					};
+
+					return;
+				}
+
+				if (token.text.trim() === '<!-- codeblock:end -->') {
+					const block = current_block!;
+
+					const playground = {
+						name: block.title,
+						files: block.files.map((file) => {
+							const name = file.name! + file.ext!;
+
+							return {
+								basename: name,
+								contents: file.content,
+								name,
+								text: true,
+								type: 'file'
+							};
+						}),
+						tailwind: false
+					};
+
+					codeblocks.push(block);
+					current_block = null;
+
+					const json = JSON.stringify(playground);
+					block.hash = await compress_and_encode_text(json);
+
+					return;
+				}
+			}
+
 			if (token.type === 'code') {
-				if (snippets.get(token.text)) return;
+				let codeblock = current_block;
+
+				if (codeblock === null) {
+					// create a one-file codeblock
+					codeblock = {
+						id: codeblocks.length,
+						title: null,
+						selected: null,
+						files: [],
+						converted: false,
+						hash: null
+					};
+
+					codeblocks.push(codeblock);
+				}
+
+				const decodedText = decode_html_entities(token.text);
 
 				if (token.lang === 'diff') {
 					throw new Error('Use +++ and --- annotations instead of diff blocks');
 				}
 
-				let { source, options } = parse_options(token.text, token.lang);
+				let { source, options } = parse_options(decodedText, token.lang);
+				const leading_frontmatter_delimiters = get_leading_frontmatter_delimiters(
+					source,
+					token.lang
+				);
 				source = adjust_tab_indentation(source, token.lang);
+
+				if (options.file && !options.file.includes('.')) {
+					throw new Error(`Missing file extension: ${options.file}`);
+				}
 
 				let prelude = '';
 
@@ -237,64 +462,93 @@ export async function render_content_markdown(
 					[, prelude = '// ---cut---\n', source] = match;
 
 					const banner = twoslashBanner?.(filename, source);
-					if (banner) prelude = '// @filename: injected.d.ts\n' + banner + '\n' + prelude;
+					if (banner)
+						prelude =
+							'// @filename: injected.d.ts\n' +
+							banner +
+							(options.file ? `\n// @filename: ${options.file.split('/').pop()}\n` : '\n') +
+							prelude;
 				}
 
 				source = source.replace(
 					/(\+\+\+|---|:::)/g,
-					(_, delimiter: keyof typeof delimiter_substitutes) => {
+					(match, delimiter: keyof typeof delimiter_substitutes, offset) => {
+						if (match === '---' && leading_frontmatter_delimiters.has(offset)) {
+							return match;
+						}
+
 						return delimiter_substitutes[delimiter];
 					}
 				);
 
-				const converted =
-					token.lang === 'js' || token.lang === 'svelte'
-						? await generate_ts_from_js(source, token.lang, options)
-						: undefined;
+				const ext = options.file?.slice(options.file.lastIndexOf('.'));
+				const is_dot_file = ext && ext === options.file;
 
-				let html = '<div class="code-block">';
+				const file: CodeBlockFile = {
+					selected: options.file === codeblock.selected,
+					tab_id: `playground-tab-${codeblock.id}-${codeblock.files.length}`,
+					panel_id: `playground-tabpanel-${codeblock.id}-${codeblock.files.length}`,
+					name: (is_dot_file ? options.file : options.file?.slice(0, -ext!.length)) ?? null,
+					ext: is_dot_file ? '' : (ext ?? null),
+					content: source
+						.replace(delimiter_patterns['---'], '$1')
+						.replace(delimiter_patterns['+++'], '$1')
+						.replace(delimiter_patterns[':::'], '$1'),
+					rendered: [],
+					can_copy: options.copy
+				};
 
-				const needs_controls = options.link || options.copy || converted;
+				codeblock.files.push(file);
 
-				if (needs_controls) {
-					html += '<div class="controls">';
-				}
+				let cached = snippets.get(decodedText);
 
-				if (options.file) {
-					const ext = options.file.slice(options.file.lastIndexOf('.'));
-					if (!ext) throw new Error(`Missing file extension: ${options.file}`);
+				if (!cached) {
+					cached = [];
 
-					html += `<span class="filename" data-ext="${ext}">${options.file.slice(0, -ext.length)}</span>`;
-				}
+					const converted =
+						token.lang === 'js' || token.lang === 'svelte'
+							? await generate_ts_from_js(source, token.lang, options)
+							: undefined;
 
-				if (converted) {
-					html += `<input class="ts-toggle raised" checked title="Toggle language" type="checkbox" aria-label="Toggle JS/TS">`;
-				}
+					let highlighted = await syntax_highlight({
+						filename,
+						language: token.lang,
+						prelude,
+						source,
+						check,
+						references,
+						twoslashRoot
+					});
 
-				if (options.copy) {
-					html += `<button class="copy-to-clipboard raised" title="Copy to clipboard" aria-label="Copy to clipboard"></button>`;
-				}
+					cached.push(
+						highlighted.replace('<pre', converted ? '<pre data-js' : '<pre data-js data-ts')
+					);
 
-				if (needs_controls) {
-					html += '</div>';
-				}
+					if (converted) {
+						const language = token.lang === 'js' ? 'ts' : token.lang;
 
-				html += await syntax_highlight({ filename, language: token.lang, prelude, source, check });
+						if (language === 'ts') {
+							prelude = prelude.replace(/(\/\/ @filename: .+)\.js$/gm, '$1.ts');
+						}
 
-				if (converted) {
-					const language = token.lang === 'js' ? 'ts' : token.lang;
+						highlighted = await syntax_highlight({
+							filename,
+							language,
+							prelude,
+							source: converted,
+							check,
+							references,
+							twoslashRoot
+						});
 
-					if (language === 'ts') {
-						prelude = prelude.replace(/(\/\/ @filename: .+)\.js$/gm, '$1.ts');
+						cached.push(highlighted.replace('<pre', '<pre data-ts'));
 					}
 
-					html += await syntax_highlight({ filename, language, prelude, source: converted, check });
+					snippets.save(decodedText, cached);
 				}
 
-				html += '</div>';
-
-				// Save everything locally now
-				snippets.save(token.text, html);
+				file.rendered.push(...cached);
+				codeblock.converted ||= cached.length > 1;
 			}
 
 			const tokens = 'tokens' in token ? token.tokens : undefined;
@@ -320,10 +574,41 @@ export async function render_content_markdown(
 					const token = tokens[i];
 
 					if (token.type === 'text') {
-						token.text = smart_quotes(token.text, { first: i === 0, html: true });
+						token.text = smart_quotes(token.text, { first: i === 0 });
 					}
 				}
 			}
+		},
+		html({ text }) {
+			if (text.startsWith('<!-- codeblock:start')) {
+				current_block = codeblocks.shift()!;
+
+				const buttons: string[] = current_block.files.map((file) => {
+					if (!file.name) {
+						throw new Error('Files in a codeblock must have a name');
+					}
+
+					return `
+						<button id="${file.tab_id}" aria-controls="${file.panel_id}" role="tab" aria-selected="${file.selected}" tabindex="${file.selected ? 0 : -1}">
+							<span class="filename" data-ext="${file.ext}">${file.name}</span>
+						</button>
+					`;
+				});
+
+				return `
+					<div class="code-block">
+						<div class="controls">
+							<div class="tabs" role="tablist" aria-label="Files">${buttons.join('')}</div>
+							<div class="open-in-playground"><a href="/playground/untitled#${current_block.hash}">Open <span class="if-large">in playground</span></a></div>
+							${current_block.converted ? `<input class="ts-toggle raised" checked title="Toggle language" type="checkbox" aria-label="Toggle JS/TS">` : ``}
+							<button class="copy-to-clipboard raised" title="Copy to clipboard" aria-label="Copy to clipboard"></button>
+						</div>`;
+			} else if (text.trim() === '<!-- codeblock:end -->') {
+				current_block = null;
+				return '</div>';
+			}
+
+			return text;
 		},
 		heading({ tokens, depth }) {
 			const text = this.parser!.parseInline(tokens);
@@ -336,7 +621,54 @@ export async function render_content_markdown(
 			return `<h${depth} id="${slug}"><span>${html}</span><a href="#${slug}" class="permalink" aria-label="permalink"></a></h${depth}>`;
 		},
 		code({ text }) {
-			return snippets.get(text);
+			const decodedText = decode_html_entities(text);
+			const symbols = extractImportedSymbols(decodedText);
+
+			// const cached = snippets.get(decodedText);
+			// if (!cached) throw new Error('huh?');
+
+			// let html = injectReferenceLinks(cached, references, extractImportedSymbols(decodedText));
+
+			const block = current_block ?? codeblocks.shift()!;
+			const file = block.files.shift()!;
+
+			let html = '';
+
+			if (current_block) {
+				// tabs
+				html = `<div id="${file.panel_id}" aria-labelledby="${file.tab_id}" role="tabpanel" data-visible="${file.selected}">`;
+			} else {
+				// single file
+				html = `<div class="code-block">`;
+
+				const needs_controls = file.name !== null || file.can_copy || file.rendered.length > 1;
+
+				if (needs_controls) {
+					html += '<div class="controls">';
+
+					if (file.name) {
+						html += `<span class="filename" data-ext="${file.ext}">${file.name}</span>`;
+					}
+
+					if (file.rendered.length > 1) {
+						html += `<input class="ts-toggle raised" checked title="Toggle language" type="checkbox" aria-label="Toggle JS/TS">`;
+					}
+
+					if (file.can_copy) {
+						html += `<button class="copy-to-clipboard raised" title="Copy to clipboard" aria-label="Copy to clipboard"></button>`;
+					}
+
+					html += '</div>';
+				}
+			}
+
+			for (const pre of file.rendered) {
+				html += injectReferenceLinks(pre, references, symbols);
+			}
+
+			html += '</div>';
+
+			return html;
 		},
 		blockquote(token) {
 			let content = this.parser?.parse(token.tokens) ?? '';
@@ -359,6 +691,8 @@ export async function render_content_markdown(
 			return `<blockquote>${content}</blockquote>`;
 		}
 	});
+
+	return transformed;
 }
 
 /**
@@ -713,22 +1047,79 @@ function adjust_tab_indentation(source: string, language: string) {
 	});
 }
 
+function get_leading_frontmatter_delimiters(source: string, language: string) {
+	const delimiters = new Set<number>();
+
+	if (!/^(markdown|md|yaml|yml)$/.test(language)) {
+		return delimiters;
+	}
+
+	const opening = /^---(?=[ \t]*(?:\r?\n|$))/.exec(source);
+
+	if (!opening) {
+		return delimiters;
+	}
+
+	const closing = /^---(?=[ \t]*(?:\r?$))/m.exec(source.slice(opening[0].length));
+
+	if (!closing) {
+		return delimiters;
+	}
+
+	delimiters.add(opening.index);
+	delimiters.add(opening[0].length + closing.index);
+
+	return delimiters;
+}
+
 function replace_blank_lines(html: string) {
 	// preserve blank lines in output (maybe there's a more correct way to do this?)
 	return html.replaceAll(/<div class='line'>(&nbsp;)?<\/div>/g, '<div class="line">\n</div>');
 }
 
 const delimiter_substitutes = {
-	'---': '             ',
-	'+++': '           ',
-	':::': '         '
+	'---': '                                           ',
+	'+++': '                                         ',
+	':::': '                                       '
 };
 
-function highlight_spans(content: string, classname: string) {
-	return content
-		.split('\n')
-		.map((line) => `<span class="${classname}">${line}</span>`)
-		.join('\n');
+const delimiter_patterns = Object.fromEntries(
+	Object.entries(delimiter_substitutes).map(([key, substitute]) => [
+		key,
+		new RegExp(`${substitute}([^ ]|[^ ][^]+?[^ ])${substitute}`, 'g')
+	])
+);
+
+function highlight_all_spans(html: string, pattern: RegExp, classname: string) {
+	const open = `<span class="${classname}">`;
+
+	return html.replace(pattern, (_, content, index) => {
+		let a = content.indexOf('<span');
+		let b = content.indexOf('</span');
+		let c = content.lastIndexOf('<span');
+		let d = content.lastIndexOf('</span');
+
+		let adjusted: string = content;
+
+		if (b !== -1 && (a === -1 || b < a)) {
+			// starts inside a <span>
+			const tag_start = html.lastIndexOf('<span', index);
+			const tag = html.slice(tag_start, html.indexOf('>', tag_start) + 1);
+			adjusted = `</span>${open}${tag}${adjusted}`;
+		} else {
+			adjusted = `${open}${adjusted}`;
+		}
+
+		if (c !== -1 && (d === -1 || c > d)) {
+			// ends inside a <span>
+			const tag = content.slice(c, content.indexOf('>', c) + 1);
+			adjusted = `${adjusted}</span></span>${tag}`;
+		} else {
+			adjusted = `${adjusted}</span>`;
+		}
+
+		return adjusted.replace(/\n/g, `</span>\n${open}`);
+	});
 }
 
 async function syntax_highlight({
@@ -736,13 +1127,17 @@ async function syntax_highlight({
 	source,
 	filename,
 	language,
-	check
+	check,
+	references,
+	twoslashRoot
 }: {
 	prelude: string;
 	source: string;
 	filename: string;
 	language: string;
 	check: boolean;
+	references?: Record<string, string>;
+	twoslashRoot?: string;
 }) {
 	let html = '';
 
@@ -755,11 +1150,15 @@ async function syntax_highlight({
 		);
 	} else if (language === 'js' || language === 'ts') {
 		/** We need to stash code wrapped in `---` highlights, because otherwise TS will error on e.g. bad syntax, duplicate declarations */
-		const redactions: string[] = [];
+		const redactions: Array<{ content: string; placeholder: string }> = [];
 
-		const redacted = source.replace(/( {13}(?:[^ ][^]+?) {13})/g, (_, content) => {
-			redactions.push(content);
-			return ' '.repeat(content.length);
+		const sub = delimiter_substitutes['---'];
+		const pattern = new RegExp(`${sub}([^ ]|[^ ][^]+?[^ ])${sub}`, 'g');
+
+		const redacted = source.replace(pattern, (_, content) => {
+			const placeholder = '\f'.repeat(content.length);
+			redactions.push({ content, placeholder });
+			return placeholder;
 		});
 
 		try {
@@ -768,22 +1167,35 @@ async function syntax_highlight({
 				theme,
 				transformers: check
 					? [
-							transformerTwoslash({
+							createTransformerFactory(
+								createTwoslasher(twoslashRoot ? { vfsRoot: twoslashRoot } : undefined),
+								rendererRich()
+							)({
+								renderer: rendererRich(),
 								twoslashOptions: {
 									compilerOptions: {
 										allowJs: true,
 										checkJs: true,
-										types: ['svelte', '@sveltejs/kit']
+										module: ts.ModuleKind.ESNext,
+										moduleResolution: ts.ModuleResolutionKind.Bundler,
+										types: ['svelte', '@sveltejs/kit', 'sv', '@sveltejs/sv-utils']
 									}
 								},
 								// by default, twoslash does not run on .js files, change that through this option
 								filter: () => true
+								// TODO: re-enable type hover cache when we find out how to invalidate
+								// it when the types have changed
+								// typesCache: createFileSystemTypesCache({
+								// 	dir: 'node_modules/.cache/twoslash'
+								// })
 							})
 						]
 					: []
 			});
 
-			html = html.replace(/ {27,}/g, () => redactions.shift()!);
+			for (const { content, placeholder } of redactions) {
+				html = html.replace(placeholder, `<span class="highlight remove">${content}</span>`);
+			}
 
 			if (check) {
 				// munge the twoslash output so that it renders sensibly. the order of operations
@@ -798,7 +1210,14 @@ async function syntax_highlight({
 				const replacements: Array<{ start: number; end: number; content: string }> = [];
 
 				for (const match of html.matchAll(/<div class="twoslash-popup-docs">([^]+?)<\/div>/g)) {
-					const content = await render_content_markdown('<twoslash>', match[1], { check: false });
+					// decode HTML entities that shiki uses to escape the JSDoc content
+					const decoded = match[1]
+						.replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => String.fromCharCode(parseInt(hex, 16)))
+						.replace(/&#(\d+);/g, (_, dec) => String.fromCharCode(parseInt(dec, 10)))
+						.replace(/&lt;/g, '<')
+						.replace(/&gt;/g, '>')
+						.replace(/&amp;/g, '&');
+					const content = await render_content_markdown('<twoslash>', decoded, { check: false });
 
 					replacements.push({
 						start: match.index,
@@ -815,10 +1234,19 @@ async function syntax_highlight({
 				for (const match of html.matchAll(
 					/<span class="twoslash-popup-docs-tag"><span class="twoslash-popup-docs-tag-name">([^]+?)<\/span><span class="twoslash-popup-docs-tag-value">([^]+?)<\/span><\/span>/g
 				)) {
-					const tag = match[1];
-					let value = match[2];
+					const start = match.index;
+					const end = match.index + match[0].length;
 
-					let content = `<span class="tag">${tag}</span><span class="value">`;
+					const tag = match[1];
+
+					if (tag === '@type') {
+						// remove `@type` tags altogether
+						replacements.push({ start, end, content: '' });
+						continue;
+					}
+
+					let value = match[2];
+					let content = `<div class="tag">${tag}</div><div class="value">`;
 
 					if (tag === '@param' || tag === '@throws') {
 						const words = value.split(' ');
@@ -836,20 +1264,26 @@ async function syntax_highlight({
 						content += `<span class="param">${param}</span> `;
 					}
 
-					content += marked.parseInline(value);
-					content += '</span>';
+					if (tag === '@example') {
+						content += await render_content_markdown('<twoslash>', value, { check: false });
+					} else {
+						content += marked.parseInline(value);
+					}
 
-					replacements.push({
-						start: match.index,
-						end: match.index + match[0].length,
-						content: '<div class="tags">' + content + '</div>'
-					});
+					content += '</div>';
+
+					replacements.push({ start, end, content });
 				}
 
 				while (replacements.length > 0) {
 					const { start, end, content } = replacements.pop()!;
 					html = html.slice(0, start) + content + html.slice(end);
 				}
+
+				// if no tags, remove this <div> to avoid an unnecessary flex gap
+				html = html.replace('<div class="twoslash-popup-docs twoslash-popup-docs-tags"></div>', '');
+
+				html = injectReferenceLinks(html, references, extractImportedSymbols(source));
 			}
 		} catch (e) {
 			console.error((e as Error).message);
@@ -860,7 +1294,10 @@ async function syntax_highlight({
 		html = replace_blank_lines(html);
 	} else {
 		const highlighted = highlighter.codeToHtml(source, {
-			lang: SHIKI_LANGUAGE_MAP[language as keyof typeof SHIKI_LANGUAGE_MAP],
+			// fallback to passing the language as is if it doesn't exist in our map
+			// this ensures we get an error if we're using an unsupported language
+			// rather than silently not highlighting the code block as expected
+			lang: SHIKI_LANGUAGE_MAP[language as keyof typeof SHIKI_LANGUAGE_MAP] ?? language,
 			theme
 		});
 
@@ -877,16 +1314,9 @@ async function syntax_highlight({
 		// remove tabindex
 		.replace(' tabindex="0"', '');
 
-	html = html
-		.replace(/ {13}([^ ][^]+?) {13}/g, (_, content) => {
-			return highlight_spans(content, 'highlight remove');
-		})
-		.replace(/ {11}([^ ][^]+?) {11}/g, (_, content) => {
-			return highlight_spans(content, 'highlight add');
-		})
-		.replace(/ {9}([^ ][^]+?) {9}/g, (_, content) => {
-			return highlight_spans(content, 'highlight');
-		});
+	html = highlight_all_spans(html, delimiter_patterns['---'], 'highlight remove');
+	html = highlight_all_spans(html, delimiter_patterns['+++'], 'highlight add');
+	html = highlight_all_spans(html, delimiter_patterns[':::'], 'highlight');
 
 	return indent_multiline_comments(html)
 		.replace(/\/\*…\*\//g, '…')

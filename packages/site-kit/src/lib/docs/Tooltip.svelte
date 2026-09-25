@@ -16,7 +16,7 @@
 	let tooltip: HTMLDivElement;
 	let offset = $state(0);
 
-	// container starts out at maxium size, then shrinks to prevent page scrolling to the right
+	// container starts out at maximum size, then shrinks to prevent page scrolling to the right
 	let width = $state('calc(100vw - 2 * var(--sk-page-padding-side))');
 
 	// bit of a gross hack but it works — this prevents the
@@ -95,15 +95,26 @@
 				font: var(--sk-font-body-small);
 			}
 
-			.tags {
+			.twoslash-popup-docs-tags {
 				display: grid;
-				grid-template-columns: 8rem 1fr;
+				grid-template-columns: auto 1fr;
+				column-gap: 1rem;
 				align-items: baseline;
 
 				.tag,
 				.param {
 					font: var(--sk-font-mono);
 				}
+			}
+
+			/* Disable highlight styles inside tooltips (popup content) */
+			.highlight,
+			.highlight.add,
+			.highlight.remove {
+				--color: transparent !important;
+				background: transparent !important;
+				outline: none !important;
+				border-radius: 0 !important;
 			}
 		}
 	}

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Icon } from '@sveltejs/site-kit/components';
-	import { ago } from '$lib/time';
+	import { ago } from '#lib/time.js';
 	import { goto, invalidateAll } from '$app/navigation';
 	import { get_app_context } from '../app-context.js';
 
@@ -109,7 +109,7 @@
 
 						<label>
 							<input
-								aria-label="Select for delection"
+								aria-label="Select for deletion"
 								type="checkbox"
 								bind:group={selected}
 								value={gist.id}
