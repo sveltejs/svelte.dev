@@ -1210,7 +1210,7 @@ Gets all cookies that were previously set with `cookies.set`, or from the reques
 <div class="ts-block-property">
 
 ```dts
-set: (name: string, value: string, opts: import('cookie').SerializeOptions) => void;
+set: (name: string, value: string, opts?: import('cookie').SerializeOptions) => void;
 ```
 
 <div class="ts-block-property-details">
@@ -1235,7 +1235,7 @@ The `path` option is `'/'` by default. You can use relative paths, or set `path:
 <div class="ts-block-property">
 
 ```dts
-delete: (name: string, opts: import('cookie').SerializeOptions) => void;
+delete: (name: string, opts?: import('cookie').SerializeOptions) => void;
 ```
 
 <div class="ts-block-property-details">
@@ -1277,7 +1277,7 @@ export async function GET() {
 
 	for (const str of response.headers.getSetCookie()) {
 		const { name, value, ...options } = cookies.parse(str);
-		cookies.set(name, value, { ...options, path: '/' });
+		cookies.set(name, value, options);
 	}
 
 	// ...
@@ -1292,7 +1292,7 @@ Note the use of `headers.getSetCookie()`, which returns an array of cookie heade
 <div class="ts-block-property">
 
 ```dts
-serialize: (name: string, value: string, opts: import('cookie').SerializeOptions) => string;
+serialize: (name: string, value: string, opts?: import('cookie').SerializeOptions) => string;
 ```
 
 <div class="ts-block-property-details">
