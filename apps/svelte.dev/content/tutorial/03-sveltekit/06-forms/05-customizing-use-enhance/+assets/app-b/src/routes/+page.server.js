@@ -6,7 +6,7 @@ export function load({ cookies }) {
 
 	if (!id) {
 		id = crypto.randomUUID();
-		cookies.set('userid', id, { path: '/' });
+		cookies.set('userid', id);
 	}
 
 	return {
