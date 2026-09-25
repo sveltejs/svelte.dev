@@ -11,6 +11,7 @@
 		"preview": "vite preview",
 		"start": "node build",
 		"check": "node scripts/update.js && svelte-kit sync && svelte-check",
+		"test": "node scripts/get_svelte_template.js && vitest run",
 		"format": "prettier --write .",
 		"lint": "prettier --check .",
 		"prepare": "svelte-kit sync",

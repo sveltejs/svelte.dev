@@ -12,6 +12,7 @@
 	import { page } from '$app/state';
 	import type { File } from '@sveltejs/repl/workspace';
 	import { session_storage } from '#lib/storage.js';
+	import { project_files, template_path, type DownloadFile } from '#lib/playground-download.js';
 
 	let { data } = $props();
 
@@ -100,30 +101,10 @@
 	}
 
 	async function download() {
-		const { files: components, imports } = repl.toJSON();
+		const { files: components, imports, tailwind } = repl.toJSON();
 
-		const files: Array<{ path: string; data: string }> = await (
-			await fetch('/svelte-template.json')
-		).json();
-
-		if (imports.length > 0) {
-			const idx = files.findIndex(({ path }) => path === 'package.json');
-			const pkg = JSON.parse(files[idx].data);
-			const { devDependencies } = pkg;
-			imports.forEach((mod) => {
-				const match = /^(@[^/]+\/)?[^@/]+/.exec(mod)!;
-				devDependencies[match[0]] = 'latest';
-			});
-			pkg.devDependencies = devDependencies;
-			files[idx].data = JSON.stringify(pkg, null, '  ');
-		}
-
-		files.push(
-			...components.map((component) => ({
-				path: `src/routes/${component.name}`,
-				data: (component as File).contents
-			}))
-		);
+		const template: DownloadFile[] = await (await fetch(template_path(tailwind))).json();
+		const files = project_files(template, components, imports, tailwind);
 
 		const url = URL.createObjectURL(doNotZip.toBlob(files));
 		const link = document.createElement('a');
