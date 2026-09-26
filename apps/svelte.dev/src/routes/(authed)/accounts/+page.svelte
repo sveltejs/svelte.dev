@@ -9,7 +9,6 @@
 	const { login, logout, enable_private_apps, disable_private_apps } = get_app_context();
 
 	let { github, atproto } = $derived(data.accounts);
-	const logged_in = $derived(!!(github || atproto));
 	const private_ready = $derived(!!atproto?.spaces_supported && !!atproto.private_apps);
 </script>
 
@@ -17,14 +16,10 @@
 	<title>Accounts • Svelte</title>
 </svelte:head>
 
-{#snippet state(done: boolean)}
-	<span class="mark" aria-hidden="true"></span>
-	<span class="visually-hidden">{done ? 'done:' : 'to do:'}</span>
-{/snippet}
-
 {#snippet check(done: boolean, label: string)}
 	<li class:done>
-		{@render state(done)}
+		<span class="mark" aria-hidden="true"></span>
+		<span class="visually-hidden">{done ? 'done:' : 'to do:'}</span>
 		{label}
 	</li>
 {/snippet}
@@ -32,9 +27,7 @@
 <div class="accounts">
 	<header>
 		<h1>Accounts</h1>
-		{#if logged_in}
-			<a class="crosslink" href="/apps">Your apps</a>
-		{/if}
+		<a class="crosslink" href="/apps">Your apps</a>
 	</header>
 
 	<section data-active={!!atproto}>
@@ -103,15 +96,6 @@
 </div>
 
 <style>
-	.visually-hidden {
-		position: absolute;
-		width: 1px;
-		height: 1px;
-		overflow: hidden;
-		clip-path: inset(50%);
-		white-space: nowrap;
-	}
-
 	.accounts {
 		padding: var(--sk-page-padding-top) var(--sk-page-padding-side) 6rem var(--sk-page-padding-side);
 		max-width: var(--sk-page-content-width);
