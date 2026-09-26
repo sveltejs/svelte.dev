@@ -2,6 +2,7 @@
 	import { page } from '$app/state';
 	import type { NavigationLink } from '../types';
 	import { onMount } from 'svelte';
+	import { is_active } from './utils';
 
 	let { title, contents = [] }: { title: string; contents: NavigationLink['sections'] } = $props();
 
@@ -33,9 +34,12 @@
 <nav bind:this={nav}>
 	{#if contents.every((section) => section.path && section.sections.length === 0)}
 		<ul class="flat">
-			{#each contents as { path, title }}
+			{#each contents as { path, title, match }}
 				<li>
-					<a href={path} aria-current={path === page.url.pathname ? 'page' : undefined}>
+					<a
+						href={path}
+						aria-current={is_active(page.url.pathname, path!, match) ? 'page' : undefined}
+					>
 						{title}
 					</a>
 				</li>
