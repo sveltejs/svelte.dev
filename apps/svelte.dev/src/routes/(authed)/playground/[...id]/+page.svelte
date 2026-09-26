@@ -77,7 +77,12 @@
 				name = recovered.name;
 			}
 
-			repl.set({ files, tailwind: recovered.tailwind ?? false, aliases: recovered.aliases });
+			repl.set({
+				files,
+				tailwind: recovered.tailwind ?? false,
+				aliases: recovered.aliases,
+				async: recovered.async
+			});
 		} catch {
 			alert(`Couldn't load the code from the URL. Make sure you copied the link correctly.`);
 		}
@@ -101,10 +106,10 @@
 	}
 
 	async function download() {
-		const { files: components, imports, tailwind } = repl.toJSON();
+		const { files: components, imports, tailwind, async } = repl.toJSON();
 
 		const template: DownloadFile[] = await (await fetch(template_path(tailwind))).json();
-		const files = project_files(template, components, imports, tailwind);
+		const files = project_files(template, components, imports, tailwind, async);
 
 		const url = URL.createObjectURL(doNotZip.toBlob(files));
 		const link = document.createElement('a');
@@ -120,8 +125,8 @@
 	async function update_hash() {
 		// Only change hash when necessary to avoid polluting everyone's browser history
 		if (modified) {
-			const { files, tailwind } = repl.toJSON();
-			const json = JSON.stringify({ name, files, tailwind });
+			const { files, tailwind, aliases, async } = repl.toJSON();
+			const json = JSON.stringify({ name, files, tailwind, aliases, async });
 			await set_hash(json);
 		}
 	}
@@ -176,8 +181,8 @@
 		if (modified) {
 			// we can't save to the hash because it's an async operation, so we use
 			// a short-lived sessionStorage value instead
-			const { files, tailwind } = repl.toJSON();
-			const json = JSON.stringify({ name, files, tailwind });
+			const { files, tailwind, aliases, async } = repl.toJSON();
+			const json = JSON.stringify({ name, files, tailwind, aliases, async });
 			session_storage.set(STORAGE_KEY, json);
 		}
 	}}

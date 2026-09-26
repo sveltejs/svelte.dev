@@ -63,4 +63,20 @@ describe('playground download', () => {
 		expect(pkg.devDependencies['tailwindcss']).toBeDefined();
 		expect(contents(template, 'package.json')).toBe(original_package);
 	});
+
+	test.each([false, true])('enables experimental async compilation (tailwind: %s)', (tailwind) => {
+		const template = generated_template(tailwind);
+		const original_config = contents(template, 'vite.config.ts');
+		const files = project_files(template, [], [], tailwind, true);
+
+		expect(contents(files, 'vite.config.ts')).toContain('experimental: { async: true },');
+		expect(contents(template, 'vite.config.ts')).toBe(original_config);
+	});
+
+	test('leaves the Vite config unchanged when async mode is disabled', () => {
+		const template = generated_template(false);
+		const files = project_files(template, [], [], false, false);
+
+		expect(contents(files, 'vite.config.ts')).toBe(contents(template, 'vite.config.ts'));
+	});
 });
