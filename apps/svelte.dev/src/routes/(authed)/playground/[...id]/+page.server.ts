@@ -2,33 +2,14 @@ import { error } from '@sveltejs/kit';
 import type { Examples } from '../api/examples/all.json/+server.js';
 
 export async function load({ fetch, params }) {
-	console.log('>>> here');
 	const examples_res = fetch('/playground/api/examples/all.json').then((r) => r.json());
-	console.log('examples', examples_res);
 	const res = await fetch(`/playground/api/${params.id}.json`);
-	console.log('res', res.status);
 
 	if (!res.ok) {
 		error(res.status);
 	}
 
-	try {
-		await res.clone().json();
-	} catch {
-		console.error('error is in res', res.url);
-		console.error(await res.clone().text());
-	}
-
-	try {
-		await examples_res;
-	} catch {
-		console.error('error is in examples_res');
-	}
-
 	const [gist, examples] = await Promise.all([res.json(), examples_res as Promise<Examples>]);
-
-	console.log(gist);
-	console.log(examples);
 
 	return {
 		gist,
