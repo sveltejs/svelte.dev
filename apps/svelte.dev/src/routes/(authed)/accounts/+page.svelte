@@ -49,7 +49,10 @@
 
 			<ul class="checks">
 				{@render check(!!atproto, 'public apps')}
-				{@render check(private_ready, !!atproto?.spaces_supported ? 'private apps' : 'private apps (not supported by your PDS)')}
+				{@render check(
+					private_ready,
+					!!atproto?.spaces_supported ? 'private apps' : 'private apps (not supported by your PDS)'
+				)}
 			</ul>
 
 			{#if private_ready}
@@ -62,10 +65,15 @@
 					Delete private app space
 				</button>
 			{:else if !!atproto?.spaces_supported}
-				<button class="raised" onclick={enable_private_apps}>Enable private apps (experimental)</button>
+				<button class="raised" onclick={enable_private_apps}>
+					Enable private apps (experimental)
+				</button>
 			{/if}
 		{:else}
-			<p>Logging in with an <a href="https://atmosphereaccount.com/">atmosphere account</a> allows you to store apps on your Personal Data Server (PDS).</p>
+			<p>
+				Logging in with an <a href="https://atmosphereaccount.com/">atmosphere account</a> allows you
+				to store apps on your Personal Data Server (PDS).
+			</p>
 			<button class="raised" onclick={() => login('atproto')}>
 				<span class="provider atproto" aria-hidden="true"></span>
 				Log in with your atmosphere account
@@ -129,7 +137,7 @@
 		margin: 0 0 1rem 0;
 		--offset: 4.6rem;
 
-		&[data-active="true"] {
+		&[data-active='true'] {
 			padding: 0 0 0 var(--offset);
 			margin: 0 0 4rem 0;
 		}
@@ -241,14 +249,5 @@
 		gap: 0.8rem;
 		font: var(--sk-font-ui-small);
 		white-space: nowrap;
-	}
-
-	.danger {
-		color: var(--sk-fg-4);
-		padding: 0;
-
-		&:hover {
-			color: #da106e;
-		}
 	}
 </style>
