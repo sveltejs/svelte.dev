@@ -50,6 +50,7 @@ const fonts = [
 	'fira-sans-latin-400-normal'
 ];
 
+/** @type {import('@sveltejs/kit/hooks').HandleFetch} */
 export function handleFetch({ event, request, fetch }) {
 	if (request.url.startsWith(event.url.origin + '/')) {
 		request.headers.set(
