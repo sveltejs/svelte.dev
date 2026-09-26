@@ -7,6 +7,7 @@
 	import Avatar from '#lib/components/Avatar.svelte';
 	import type { Accounts } from '#lib/db/types.d.ts';
 	import * as api from '#lib/apps.js';
+	import { resolve } from '$app/paths';
 
 	interface Owner {
 		handle: string;
@@ -234,81 +235,79 @@
 <div class="apps">
 	{#if owner}
 		<header>
-			<div class="owner">
-				<Avatar src={owner.avatar} name={owner.display_name || owner.handle} size="3.2rem" />
-				<h1>
-					<span class="owner-name">{owner.display_name || owner.handle}</span><span>'s apps</span>
-				</h1>
-			</div>
+			<h1>
+				{owner.display_name || owner.handle}
+			</h1>
 			{#if logged_in}
 				<a class="crosslink" href="/apps">Your apps</a>
 			{/if}
 		</header>
 
+		<div class="account">
+			<Avatar src={owner.avatar} name={owner.display_name || owner.handle} size="3.2rem" />
+			<span class="handle">@{owner.handle}</span>
+		</div>
+
 		{@render controls()}
 
 		{@render list()}
-	{:else if logged_in}
+	{:else}
 		<header>
 			<h1>Your apps</h1>
 			<a class="crosslink" href="/accounts">Accounts</a>
 		</header>
 
-		{@render controls()}
+		{#if logged_in}
+			{@render controls()}
 
-		{#if show_tabs}
-			<nav class="tabs">
-				{#each tabs as d (d.id)}
-					<a href={url({ tab: d.id, search })} aria-current={tab === d.id ? 'page' : undefined}>
-						{d.label}
-						{#if counts[d.id] !== undefined}<span class="count">{counts[d.id]}</span>{/if}
-					</a>
-				{/each}
+			{#if show_tabs}
+				<nav class="tabs">
+					{#each tabs as d (d.id)}
+						<a href={url({ tab: d.id, search })} aria-current={tab === d.id ? 'page' : undefined}>
+							{d.label}
+							{#if counts[d.id] !== undefined}<span class="count">{counts[d.id]}</span>{/if}
+						</a>
+					{/each}
 
-				{#if tab_available}
-					<button
-						class="default-toggle"
-						class:active={tab === destination}
-						disabled={tab === destination}
-						onclick={() => set_destination(tab)}
-						title={tab === destination
-							? 'New apps are saved here'
-							: 'Save new apps here by default'}
+					{#if tab_available}
+						<button
+							class="default-toggle"
+							class:active={tab === destination}
+							disabled={tab === destination}
+							onclick={() => set_destination(tab)}
+							title={tab === destination
+								? 'New apps are saved here'
+								: 'Save new apps here by default'}
+						>
+							<Icon name="save" size={14} />
+							{tab === destination ? 'default' : 'set as default'}
+						</button>
+					{/if}
+				</nav>
+			{/if}
+
+			{#if tab_available}
+				{@render list()}
+			{:else if tab === 'atproto-private'}
+				<p class="notice">
+					Not set up yet. <a href="/accounts">Check the setup in Accounts</a>.
+				</p>
+			{:else}
+				<p class="notice">
+					<a
+						onclick={(e) => (e.preventDefault(), login(tab === 'github' ? 'github' : 'atproto'))}
+						href={tab === 'github' ? '/auth/login' : '/auth/login/atproto'}
 					>
-						<Icon name="save" size={14} />
-						{tab === destination ? 'default' : 'set as default'}
-					</button>
-				{/if}
-			</nav>
-		{/if}
-
-		{#if tab_available}
-			{@render list()}
-		{:else if tab === 'atproto-private'}
-			<p class="notice">
-				Not set up yet. <a href="/accounts">Check the setup in Accounts</a>.
-			</p>
+						Log in with {tab === 'github' ? 'GitHub' : 'the Atmosphere'}
+					</a>
+					to see these apps.
+				</p>
+			{/if}
 		{:else}
-			<p class="notice">
-				<a
-					onclick={(e) => (e.preventDefault(), login(tab === 'github' ? 'github' : 'atproto'))}
-					href={tab === 'github' ? '/auth/login' : '/auth/login/atproto'}
-				>
-					Log in with {tab === 'github' ? 'GitHub' : 'the Atmosphere'}
-				</a>
-				to see these apps.
+			<p>
+				Please <a href={resolve('/(authed)/accounts')}>log in</a> to see your saved apps.
 			</p>
 		{/if}
-	{:else}
-		<p>
-			Please log in with
-			<a onclick={(e) => (e.preventDefault(), login('atproto'))} href="/auth/login/atproto"
-				>the Atmosphere</a
-			>
-			or
-			<a onclick={(e) => (e.preventDefault(), login('github'))} href="/auth/login">GitHub</a>
-			to see your saved apps.
-		</p>
 	{/if}
 
 	{#if !owner}
@@ -346,27 +345,20 @@
 		}
 
 		h1 {
-			display: flex;
-			min-width: 0;
 			white-space: nowrap;
-		}
-
-		.owner-name {
-			min-width: 0;
 			overflow: hidden;
 			text-overflow: ellipsis;
 		}
+	}
 
-		.owner-name + span {
-			flex-shrink: 0;
-		}
+	.account {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		margin: 0 0 4rem 0;
 
-		.owner {
-			display: flex;
-			align-items: center;
-			gap: 1rem;
-			min-width: 0;
-			flex: 1;
+		.handle {
+			font: var(--sk-font-ui-medium);
 		}
 	}
 
