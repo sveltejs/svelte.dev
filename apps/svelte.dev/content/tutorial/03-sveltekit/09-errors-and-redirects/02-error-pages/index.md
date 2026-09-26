@@ -22,8 +22,8 @@ The default error page is somewhat bland. We can customize it by creating a `src
 Notice that the `+error.svelte` component is rendered inside the root `+layout.svelte`. We can create more granular `+error.svelte` boundaries:
 
 ```svelte
-/// file: src/routes/expected/+error.svelte
+/// file: src/routes/app/+error.svelte
 <h1>this error was expected</h1>
 ```
 
-This component will be rendered for `/expected`, while the root `src/routes/+error.svelte` page will be rendered for any other errors that occur.
+This component will be rendered for `/app`, while the root `src/routes/+error.svelte` page will be rendered for any other errors that occur.

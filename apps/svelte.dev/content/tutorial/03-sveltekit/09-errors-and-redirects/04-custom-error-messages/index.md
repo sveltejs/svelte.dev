@@ -1,5 +1,5 @@
 ---
-title: Customizing the error message
+title: Customising the error message
 ---
 
 The error page in the previous exercise is rather static. Maybe you want to show the error message so you can help people turning up in your support channels faster.
@@ -27,7 +27,7 @@ For this, SvelteKit provides you with `page.error` (which contains the error's `
 {/if}
 ```
 
-That's better, but the unexpected error on the about page has the message "Internal Error" - how so? This is because SvelteKit plays it safe and prevents you from accidentally showing sensitive information as part of the error message.
+That's better, but the unknown error on the about page has the message "Internal Error" - how so? This is because SvelteKit plays it safe and prevents you from accidentally showing sensitive information as part of the error message.
 
 To customize it, implement the `handleError` hook in `hooks.server.js` and `hooks.client.js`. These hooks receive every error thrown while loading, rendering or responding to a request; the property `kind` tells you where each error came from. We only want to reveal the original message for `'unknown'` errors. Returning nothing for `'app'`, `'framework'` and server-side `'validation'` errors preserves their existing safe details.
 

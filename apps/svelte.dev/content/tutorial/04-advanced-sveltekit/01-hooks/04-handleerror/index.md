@@ -4,7 +4,7 @@ title: handleError
 
 The `handleError` hook lets you intercept errors and trigger some behaviour, like pinging a Slack channel or sending data to an error logging service.
 
-As you'll recall from an [earlier exercise](error-basics), an error is _unexpected_ if it wasn't created with the `error` helper from `@sveltejs/kit`. It generally means something in your app needs fixing.
+As you'll recall from an [earlier exercise](error-basics), an error is _unknown_ if it wasn't created with the `error` helper from `@sveltejs/kit`. It generally means something in your app needs fixing.
 
 Every error is passed to `handleError`. The `kind` property tells you whether it came from your app via `error(...)` (`'app'`), from SvelteKit (`'framework'`), from remote function validation (`'validation'`, on the server only), or from an unknown source (`'unknown'`). The default behavior is to log unknown errors:
 

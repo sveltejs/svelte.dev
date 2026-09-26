@@ -47,7 +47,7 @@ export function createTodo(userid, description) {
 }
 ```
 
-Try submitting a duplicate todo. Yikes! SvelteKit takes us to an unfriendly-looking error page. On the server, we see a 'todos must be unique' error, but SvelteKit hides unexpected error messages from users because they often contain sensitive data.
+Try submitting a duplicate todo. Yikes! SvelteKit takes us to an unfriendly-looking error page. On the server, we see a 'todos must be unique' error, but SvelteKit hides unknown error messages from users because they often contain sensitive data.
 
 It would be much better to stay on the same page and provide an indication of what went wrong so that the user can fix it. To do this, we can use the `fail` function to return data from the action along with an appropriate HTTP status code:
 
