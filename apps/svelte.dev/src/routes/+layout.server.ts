@@ -27,6 +27,14 @@ const nav_links: NavigationLink[] = [
 		}))
 	},
 	{
+		title: 'Playground',
+		slug: 'playground',
+		sections: [
+			{ title: 'Create new app', path: '/playground', sections: [] },
+			{ title: 'Your saved apps', path: '/apps', sections: [] }
+		]
+	},
+	{
 		title: 'Tutorial',
 		slug: 'tutorial',
 		sections: index.tutorial.children.map((topic) => ({
@@ -47,10 +55,6 @@ const nav_links: NavigationLink[] = [
 	{
 		title: 'Packages',
 		slug: 'packages'
-	},
-	{
-		title: 'Playground',
-		slug: 'playground'
 	},
 	{
 		title: 'Blog',

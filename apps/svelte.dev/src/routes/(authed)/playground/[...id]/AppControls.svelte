@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import UserMenu from './UserMenu.svelte';
-	import { Icon } from '@sveltejs/site-kit/components';
+	import { Dropdown, HoverMenu, Icon } from '@sveltejs/site-kit/components';
 	import { isMac } from '#lib/utils/compat.js';
 	import { get_app_context } from '../../app-context';
 	import type { Gist, User } from '#lib/db/types.d.ts';
@@ -244,9 +244,18 @@
 		{#if user}
 			<UserMenu {user} />
 		{:else}
-			<button class="raised icon login" onclick={login}>
-				<span>log in</span>
-			</button>
+			<Dropdown align="right">
+				<button class="raised icon login">
+					<span>log in</span>
+					<Icon size={18} name="chevron-down" />
+				</button>
+
+				{#snippet dropdown()}
+					<HoverMenu>
+						<button onclick={login}>Log in with GitHub</button>
+					</HoverMenu>
+				{/snippet}
+			</Dropdown>
 		{/if}
 	</div>
 </SecondaryNav>

@@ -31,6 +31,22 @@
 </script>
 
 <nav bind:this={nav}>
+	{#if contents.every((section) => section.path && section.sections.length === 0)}
+		<ul class="flat">
+			{#each contents as { path, title }}
+				<li>
+					<a href={path} aria-current={path === page.url.pathname ? 'page' : undefined}>
+						{title}
+					</a>
+				</li>
+			{/each}
+		</ul>
+	{:else}
+		{@render sections()}
+	{/if}
+</nav>
+
+{#snippet sections()}
 	{#each contents as section, i}
 		<h2 style="--index: {i}; --reverse-index: {contents.length - i - 1}">
 			<a href="#{section.title}">{section.title} <span class="visually-hidden">{title}</span></a>
@@ -60,7 +76,7 @@
 			</ul>
 		{/if}
 	{/each}
-</nav>
+{/snippet}
 
 <style>
 	nav {
@@ -87,6 +103,10 @@
 		margin: 0;
 		margin-bottom: 2.5rem;
 		scroll-margin-top: calc((var(--index, 1) + 1) * var(--block-height));
+	}
+
+	.flat {
+		padding-top: 1rem;
 	}
 
 	li {

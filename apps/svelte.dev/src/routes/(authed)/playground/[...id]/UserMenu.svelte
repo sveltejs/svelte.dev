@@ -20,7 +20,6 @@
 
 	{#snippet dropdown()}
 		<HoverMenu>
-			<a href="/apps">Your saved apps</a>
 			<button onclick={logout}>Log out</button>
 		</HoverMenu>
 	{/snippet}
