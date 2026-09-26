@@ -158,6 +158,13 @@ button {
 	background-color: transparent;
 	border: none;
 	color: currentColor;
+
+	/* increase hit area */
+	&::before {
+		content: '';
+		position: absolute;
+		inset: -0.2rem;
+	}
 }
 
 button[disabled] {

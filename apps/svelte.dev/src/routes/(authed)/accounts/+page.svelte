@@ -238,13 +238,6 @@
 		gap: 0.8rem;
 		font: var(--sk-font-ui-small);
 		white-space: nowrap;
-
-		/* 40px hit area on a 36px control */
-		&::before {
-			content: '';
-			position: absolute;
-			inset: -0.2rem;
-		}
 	}
 
 	.danger {
