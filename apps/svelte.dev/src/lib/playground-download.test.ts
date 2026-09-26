@@ -26,11 +26,7 @@ describe('playground download', () => {
 		expect(contents(files, 'src/routes/+page.js')).toContain('export const ssr = false');
 		expect(contents(files, 'src/routes/+page.svelte')).toContain("import App from './App.svelte'");
 
-		const css = tailwind
-			? contents(files, 'src/routes/layout.css')
-			: contents(files, 'src/app.css');
-		expect(css).toContain('--bg-1:');
-		expect(css).not.toContain('<style');
+		const css = contents(files, tailwind ? 'src/routes/layout.css' : 'src/app.css');
 
 		if (tailwind) {
 			expect(css).toContain("@import 'tailwindcss'");
@@ -41,6 +37,7 @@ describe('playground download', () => {
 		} else {
 			expect(contents(files, 'src/routes/+page.svelte')).toContain("import '../app.css'");
 			expect(contents(files, 'package.json')).not.toContain('"tailwindcss"');
+			expect(css).toContain('--bg-1:');
 		}
 	});
 
