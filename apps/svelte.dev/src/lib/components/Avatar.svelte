@@ -7,9 +7,9 @@
 </script>
 
 {#if src}
-	<img class="avatar" alt="{name} avatar" {src} style:width={size} style:height={size} />
+	<img class="avatar" alt="{name} avatar" {src} style:width={size} />
 {:else}
-	<span class="avatar fallback" aria-label="{name} avatar" style:width={size} style:height={size}>
+	<span class="avatar fallback" aria-label="{name} avatar" style:width={size}>
 		{name[0]?.toUpperCase() ?? '?'}
 	</span>
 {/if}
@@ -23,6 +23,7 @@
 		border-radius: var(--sk-border-radius);
 		object-fit: cover;
 		flex-shrink: 0;
+		aspect-ratio: 1;
 	}
 
 	.fallback {
