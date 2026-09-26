@@ -283,20 +283,6 @@
 		line-height: 1;
 		background-size: 1.8rem;
 		z-index: 999;
-
-		&.login {
-			width: auto;
-			padding: 0 0.4rem;
-
-			&::before {
-				content: '';
-				width: 1.8rem;
-				height: 1.8rem;
-				margin: 0 0.5rem 0 0;
-				background: currentColor;
-				mask: url(icons/user) no-repeat 50% 50%;
-			}
-		}
 	}
 
 	.icon:hover,
