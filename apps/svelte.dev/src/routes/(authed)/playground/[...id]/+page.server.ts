@@ -12,6 +12,18 @@ export async function load({ fetch, params }) {
 		error(res.status);
 	}
 
+	try {
+		await res.clone().json();
+	} catch {
+		console.error('error is in res');
+	}
+
+	try {
+		await examples_res;
+	} catch {
+		console.error('error is in examples_res');
+	}
+
 	const [gist, examples] = await Promise.all([res.json(), examples_res as Promise<Examples>]);
 
 	console.log(gist);
