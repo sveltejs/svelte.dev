@@ -13,7 +13,7 @@ export async function GET({ request, url }) {
 				maxAge: -1,
 				path: '/',
 				httpOnly: true,
-				secure: url.protocol === 'https'
+				secure: url.protocol === 'https:'
 			})
 		}
 	});
