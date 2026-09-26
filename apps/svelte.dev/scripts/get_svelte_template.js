@@ -63,8 +63,6 @@ async function generate(tailwind) {
 
 			if (file.endsWith('routes/+page.svelte')) {
 				data = `<script>\n${tailwind ? '' : "\timport '../app.css';\n"}\timport App from './App.svelte';\n</script>\n\n<App />\n`;
-			} else if (tailwind && file.endsWith('src/routes/layout.css')) {
-				data = `${data}\n${repl_css}`;
 			}
 
 			files.push({ path: file.slice(output_dir.length + 1), data });
