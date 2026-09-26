@@ -54,7 +54,7 @@ It would be much better to stay on the same page and provide an indication of wh
 ```js
 /// file: src/routes/+page.server.js
 +++import { fail } from '@sveltejs/kit';+++
-import * as db from '$lib/server/database.js';
+import * as db from '#lib/server/database.js';
 
 export function load({ cookies }) {...}
 

@@ -21,7 +21,7 @@ For a full list of changes - including all the important bugfixes that went into
 ## What's new in SvelteKit
 
 - `hydratable`'s injected script now works with CSP (**kit@2.51.0**, [#15048](https://github.com/sveltejs/kit/pull/15048))
-- Navigation callbacks (beforeNavigate, onNavigate, and afterNavigate) now include scroll position information via the scroll property on from and to targets. This enables use cases like animating transitions based on the target scroll position when using browser back/forward navigation (**kit@2.51.0**, [Docs](https://svelte.dev/docs/kit/@sveltejs-kit#NavigationTarget), [#15248](https://github.com/sveltejs/kit/pull/15248))
+- Navigation callbacks (beforeNavigate, onNavigate, and afterNavigate) now include scroll position information via the scroll property on from and to targets. This enables use cases like animating transitions based on the target scroll position when using browser back/forward navigation (**kit@2.51.0**, [Docs](https://svelte.dev/docs/kit/$app-navigation#NavigationTarget), [#15248](https://github.com/sveltejs/kit/pull/15248))
 - Vite 8 is now supported (**kit@2.53.0**, [#15024](https://github.com/sveltejs/kit/pull/15024))
 - The `match` function can map a path back to a route id and params (**kit@2.52.0**, [Docs](https://svelte.dev/docs/kit/$app-paths#match), [#14997](https://github.com/sveltejs/kit/pull/14997))
 - Breaking (Netlify Adapter): `platform.context` now uses modern Netlify Functions - previously this was the AWS Lambda-style

@@ -37,7 +37,10 @@ const mappings = new Map([
 	['/tutorial/svelte/introducing-stores', '/tutorial/svelte/stores'],
 	['/tutorial/kit/app-store', '/tutorial/kit/app-state'],
 	['/tutorial/kit/navigating-store', '/tutorial/kit/navigating-state'],
-	['/tutorial/kit/updated-store', '/tutorial/kit/updated-state']
+	['/tutorial/kit/updated-store', '/tutorial/kit/updated-state'],
+
+	// sveltekit 3 redirects
+	['/docs/kit/configuration', '/docs/kit/@sveltejs-kit-vite']
 ]);
 
 // selectively preload fonts
@@ -46,6 +49,18 @@ const fonts = [
 	'eb-garamond-latin-400-normal',
 	'fira-sans-latin-400-normal'
 ];
+
+/** @type {import('@sveltejs/kit/hooks').HandleFetch} */
+export function handleFetch({ event, request, fetch }) {
+	if (request.url.startsWith(event.url.origin + '/')) {
+		request.headers.set(
+			'x-vercel-protection-bypass',
+			/** @type {string} */ (process.env.VERCEL_AUTOMATION_BYPASS_SECRET)
+		);
+	}
+
+	return fetch(request);
+}
 
 /** @type {import('@sveltejs/kit/hooks').Handle} */
 export async function handle({ event, resolve }) {
