@@ -10,7 +10,6 @@
 	const { github, atproto } = $derived(data.accounts);
 	const logged_in = $derived(!!(github || atproto));
 	const private_ready = $derived(!!atproto?.spaces_supported && !!atproto.private_apps);
-	const pds_host = $derived(atproto ? new URL(atproto.pds).host : '');
 </script>
 
 <svelte:head>
@@ -22,22 +21,11 @@
 	<span class="visually-hidden">{done ? 'done:' : 'to do:'}</span>
 {/snippet}
 
-{#snippet check(done: boolean, label: string, hint?: string)}
+{#snippet check(done: boolean, label: string)}
 	<li class:done>
 		{@render state(done)}
-		<span class="label">
-			{label}
-			{#if hint}<span class="hint">{hint}</span>{/if}
-		</span>
+		{label}
 	</li>
-{/snippet}
-
-{#snippet group(title: string, ready: boolean, hint?: string)}
-	<h3>
-		{title}
-		<span class="pill" class:ready>{ready ? 'ready' : 'not ready'}</span>
-		{#if hint}<span class="hint">{hint}</span>{/if}
-	</h3>
 {/snippet}
 
 <div class="accounts">
@@ -48,7 +36,7 @@
 		{/if}
 	</header>
 
-	<section class="card" class:connected={!!atproto}>
+	<section>
 		<div class="identity">
 			<span class="provider atproto" aria-hidden="true"></span>
 			<h2>Atmosphere</h2>
@@ -68,47 +56,28 @@
 			{/if}
 		</div>
 
-		{@render group('Public apps', !!atproto, 'records on your PDS, anyone can open them')}
+		<p>Apps are stored on your Atproto Personal Data Server (PDS). Private apps require your PDS to implement <a href="https://atproto.com/blog/atproto-spaces-alpha">Spaces</a>, which are an alpha feature.</p>
+
 		<ul class="checks">
-			{@render check(!!atproto, 'Connected')}
+			{@render check(!!atproto, 'Public apps')}
+			{@render check(private_ready, !!atproto?.spaces_supported ? 'Private apps' : 'Private apps (not supported by your PDS)')}
 		</ul>
 
-		{@render group(
-			'Private apps',
-			private_ready,
-			'alpha: in a space on your PDS, only you can open them'
-		)}
-		<ul class="checks">
-			{@render check(!!atproto, 'Connected')}
-			{@render check(
-				!!atproto?.spaces_supported,
-				'PDS supports spaces',
-				atproto
-					? atproto.spaces_supported
-						? pds_host
-						: `${pds_host} not yet, spaces are an atproto alpha`
-					: undefined
-			)}
-			<li class:done={private_ready}>
-				{@render state(private_ready)}
-				<span class="label">Private playground enabled</span>
-				{#if atproto?.spaces_supported && !atproto.private_apps}
-					<button class="secondary" onclick={enable_private_apps}>Enable</button>
-				{:else if private_ready}
-					<button
-						class="danger"
-						onclick={() => {
-							if (confirm('Delete your space and every private app in it?')) disable_private_apps();
-						}}
-					>
-						Delete space
-					</button>
-				{/if}
-			</li>
-		</ul>
+		{#if !!atproto?.spaces_supported}
+			<button class="secondary" onclick={enable_private_apps}>Enable private apps (experimental)</button>
+		{:else if private_ready}
+			<button
+				class="danger"
+				onclick={() => {
+					if (confirm('Delete your space and every private app in it?')) disable_private_apps();
+				}}
+			>
+				Delete private app space
+			</button>
+		{/if}
 	</section>
 
-	<section class="card" class:connected={!!github}>
+	<section>
 		<div class="identity">
 			<span class="provider github" aria-hidden="true"></span>
 			<h2>GitHub</h2>
@@ -125,7 +94,6 @@
 			{/if}
 		</div>
 
-		{@render group('Apps', !!github, 'stored on svelte.dev')}
 		<ul class="checks">
 			{@render check(!!github, 'Connected')}
 		</ul>
@@ -171,15 +139,8 @@
 		text-wrap: balance;
 	}
 
-	.card {
-		padding: 2rem;
-		margin-bottom: 1.6rem;
-		border-radius: var(--sk-border-radius);
-		background: var(--sk-bg-2);
-		box-shadow:
-			0 0 0 1px rgba(128, 128, 128, 0.12),
-			0 1px 2px rgba(0, 0, 0, 0.04),
-			0 8px 24px -12px rgba(0, 0, 0, 0.12);
+	section {
+		margin: 4rem 0 6rem 0;
 	}
 
 	.identity {
@@ -189,6 +150,9 @@
 		gap: 1rem;
 		/* the button is the tallest thing here: the row is the same logged in or out */
 		min-height: 3.6rem;
+		/* border-bottom: 1px solid rgba(128, 128, 128, 0.15); */
+		/* padding: 0 0 2rem 0; */
+		margin: 0 0 2rem 0;
 
 		h2 {
 			flex-shrink: 0;
@@ -256,61 +220,13 @@
 		}
 	}
 
-	.connected .provider {
-		color: var(--sk-fg-1);
-	}
-
-	h3 {
-		display: flex;
-		align-items: baseline;
-		flex-wrap: wrap;
-		gap: 0.8rem;
-		margin: 2rem 0 0.6rem 0;
-		padding-top: 1.6rem;
-		border-top: 1px solid rgba(128, 128, 128, 0.15);
-		font: var(--sk-font-ui-medium);
-		font-weight: 600;
-		color: var(--sk-fg-2);
-
-		.hint {
-			flex-basis: 100%;
-			font: var(--sk-font-ui-small);
-			font-weight: normal;
-			color: var(--sk-fg-4);
-		}
-	}
-
-	.pill {
-		padding: 0.2rem 0.7rem;
-		border-radius: 1rem;
-		background: var(--sk-bg-4);
-		color: var(--sk-fg-4);
-		font: 1.1rem / 1.4 var(--sk-font-family-ui);
-		font-weight: 600;
-		text-transform: uppercase;
-		letter-spacing: 0.04em;
-		transition:
-			background-color 150ms ease-out,
-			color 150ms ease-out;
-
-		&.ready {
-			background: var(--sk-fg-accent);
-			color: white;
-		}
-	}
-
 	.checks {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		display: grid;
-		gap: 0.6rem;
-
 		li {
+			font: var(--sk-font-ui-medium);
 			display: flex;
 			align-items: center;
 			gap: 1rem;
-			min-height: 2.4rem;
+			min-height: 3.2rem;
 			color: var(--sk-fg-4);
 
 			&.done {
@@ -351,19 +267,6 @@
 					opacity 200ms cubic-bezier(0.2, 0, 0, 1),
 					scale 200ms cubic-bezier(0.2, 0, 0, 1);
 			}
-		}
-
-		.label {
-			display: flex;
-			flex-wrap: wrap;
-			column-gap: 0.6rem;
-			align-items: baseline;
-			margin-right: auto;
-		}
-
-		.hint {
-			color: var(--sk-fg-4);
-			font: var(--sk-font-ui-small);
 		}
 	}
 
