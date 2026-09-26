@@ -50,6 +50,12 @@ const fonts = [
 	'fira-sans-latin-400-normal'
 ];
 
+export function handleFetch({ event, request, fetch }) {
+	console.log(`fetching ${request.url} from ${event.url.href}`);
+
+	return fetch(request);
+}
+
 /** @type {import('@sveltejs/kit/hooks').Handle} */
 export async function handle({ event, resolve }) {
 	// Best effort to redirect from Svelte 4 docs to new docs
