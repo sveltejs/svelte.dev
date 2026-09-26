@@ -12,6 +12,7 @@
 	import { page } from '$app/state';
 	import type { File } from '@sveltejs/repl/workspace';
 	import { session_storage } from '#lib/storage.js';
+	import { project_files, template_path, type DownloadFile } from '#lib/playground-download.js';
 
 	let { data } = $props();
 
@@ -79,7 +80,12 @@
 				name = recovered.name;
 			}
 
-			repl.set({ files, tailwind: recovered.tailwind ?? false, aliases: recovered.aliases });
+			repl.set({
+				files,
+				tailwind: recovered.tailwind ?? false,
+				aliases: recovered.aliases,
+				async: recovered.async
+			});
 		} catch {
 			alert(`Couldn't load the code from the URL. Make sure you copied the link correctly.`);
 		}
@@ -103,30 +109,10 @@
 	}
 
 	async function download() {
-		const { files: components, imports } = repl.toJSON();
+		const { files: components, imports, tailwind, async } = repl.toJSON();
 
-		const files: Array<{ path: string; data: string }> = await (
-			await fetch('/svelte-template.json')
-		).json();
-
-		if (imports.length > 0) {
-			const idx = files.findIndex(({ path }) => path === 'package.json');
-			const pkg = JSON.parse(files[idx].data);
-			const { devDependencies } = pkg;
-			imports.forEach((mod) => {
-				const match = /^(@[^/]+\/)?[^@/]+/.exec(mod)!;
-				devDependencies[match[0]] = 'latest';
-			});
-			pkg.devDependencies = devDependencies;
-			files[idx].data = JSON.stringify(pkg, null, '  ');
-		}
-
-		files.push(
-			...components.map((component) => ({
-				path: `src/routes/${component.name}`,
-				data: (component as File).contents
-			}))
-		);
+		const template: DownloadFile[] = await (await fetch(template_path(tailwind))).json();
+		const files = project_files(template, components, imports, tailwind, async);
 
 		const url = URL.createObjectURL(doNotZip.toBlob(files));
 		const link = document.createElement('a');
@@ -142,8 +128,8 @@
 	async function update_hash() {
 		// Only change hash when necessary to avoid polluting everyone's browser history
 		if (modified) {
-			const { files, tailwind } = repl.toJSON();
-			const json = JSON.stringify({ name, files, tailwind });
+			const { files, tailwind, aliases, async } = repl.toJSON();
+			const json = JSON.stringify({ name, files, tailwind, aliases, async });
 			await set_hash(json);
 		}
 	}
@@ -201,8 +187,8 @@
 		if (modified) {
 			// we can't save to the hash because it's an async operation, so we use
 			// a short-lived sessionStorage value instead
-			const { files, tailwind } = repl.toJSON();
-			const json = JSON.stringify({ name, files, tailwind });
+			const { files, tailwind, aliases, async } = repl.toJSON();
+			const json = JSON.stringify({ name, files, tailwind, aliases, async });
 			session_storage.set(STORAGE_KEY, json);
 		}
 	}}

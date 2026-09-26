@@ -6,10 +6,10 @@
     "matteobruni"
   ],
   "homepage": "https://github.com/tsparticles/tsparticles#readme",
-  "version": "4.3.2",
-  "downloads": 3990,
+  "version": "4.4.0",
+  "downloads": 1566,
   "github_stars": 8959,
-  "updated": "2026-07-10T10:34:29.930Z",
+  "updated": "2026-08-31T00:27:36.234Z",
   "svelte_range": "^4 || ^5",
   "kit_range": "^2.5.10",
   "typescript": true,

@@ -8,6 +8,7 @@
 		"package": "svelte-kit sync",
 		"prepublishOnly": "npm run package",
 		"check": "svelte-kit sync && svelte-check",
+		"test": "vitest run",
 		"lint": "prettier --check .",
 		"format": "prettier --write .",
 		"prepare": "svelte-kit sync"
@@ -69,7 +70,8 @@
 		"publint": "^0.3.17",
 		"svelte-check": "^4.7.3",
 		"typescript": "^6.0.3",
-		"vite": "catalog:"
+		"vite": "catalog:",
+		"vitest": "catalog:"
 	},
 	"type": "module",
 	"dependencies": {

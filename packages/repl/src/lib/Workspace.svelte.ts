@@ -419,12 +419,13 @@ export class Workspace {
 
 	reset(
 		new_files: Item[],
-		options: { tailwind: boolean; aliases?: Record<string, string> },
+		options: { tailwind: boolean; aliases?: Record<string, string>; async?: boolean },
 		selected?: string
 	) {
 		this.states.clear();
 		this.#tailwind = options.tailwind;
 		this.#aliases = options.aliases;
+		this.#compiler_options = { ...this.#compiler_options, async: options.async ?? true };
 
 		const bundle = this.set(new_files, selected);
 

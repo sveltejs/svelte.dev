@@ -5,6 +5,8 @@ title: Node servers
 
 To generate a standalone Node server, use [`adapter-node`](https://github.com/sveltejs/kit/tree/main/packages/adapter-node).
 
+A quick way to get started is by deploying a project using SvelteKit's [official Railway template](https://railway.com/deploy/svelte-kit).
+
 ## Usage
 
 Install with `npm i -D @sveltejs/adapter-node`, then add the adapter to your `svelte.config.js`:
@@ -101,7 +103,7 @@ PROTOCOL_HEADER=x-forwarded-proto HOST_HEADER=x-forwarded-host node build
 
 If `adapter-node` can't correctly determine the URL of your deployment, you may experience this error when using [form actions](form-actions):
 
-> [!NOTE] Cross-site POST form submissions are forbidden
+> Cross-site POST form submissions are forbidden
 
 ### `ADDRESS_HEADER` and `XFF_DEPTH`
 

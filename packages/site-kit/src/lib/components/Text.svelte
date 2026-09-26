@@ -106,7 +106,11 @@
 			if (child.nodeType === 1) {
 				const classes = (child as HTMLElement).classList;
 
-				if (classes.contains('deleted') || classes.contains('twoslash-popup-container')) {
+				if (
+					classes.contains('deleted') ||
+					classes.contains('twoslash-completion') ||
+					classes.contains('twoslash-popover')
+				) {
 					continue;
 				}
 
@@ -390,6 +394,84 @@
 				color: var(--shiki-color-text);
 				border-radius: var(--sk-border-radius);
 				overflow-x: auto;
+
+				&.twinkleplop {
+					color: var(--twp-text);
+
+					.comment {
+						color: var(--twp-comment);
+					}
+
+					.keyword,
+					.boolean,
+					.operator,
+					.svelte_block,
+					.svelte_directive,
+					.code_language,
+					.unit {
+						color: var(--twp-keyword);
+					}
+
+					.string,
+					.string_escape,
+					.template,
+					.regex,
+					.url,
+					.url_link,
+					.url_title,
+					.tag_name,
+					.attribute {
+						color: var(--twp-string);
+					}
+
+					.function,
+					.type,
+					.class_name,
+					.attr_name,
+					.decorator,
+					.selector_class,
+					.selector_id {
+						color: var(--twp-function);
+					}
+
+					.parameter {
+						color: var(--twp-parameter);
+					}
+
+					.property,
+					.identifier,
+					.namespace,
+					.constant,
+					.punctuation,
+					.expression {
+						color: var(--twp-text);
+					}
+
+					.autolink,
+					.link_text {
+						color: var(--twp-link);
+					}
+
+					&[data-language='tree'] {
+						.punctuation {
+							color: color-mix(in oklch, var(--sk-fg-4) 82%, var(--sk-fg-accent));
+						}
+
+						.namespace {
+							color: var(--twp-function);
+						}
+
+						.string {
+							color: var(--twp-text);
+						}
+
+						.parameter,
+						.type {
+							color: var(--twp-string);
+							font-weight: 600;
+						}
+					}
+				}
 
 				code {
 					display: block;

@@ -1,24 +1,22 @@
 import { Marked, type Renderer, type TokenizerObject, type MarkedExtension } from 'marked';
 import json5 from 'json5';
 
-// helps map a highlighter for languages not recognised or aliased by Shiki
-// see https://shiki.style/languages for a full list of official languages
-export const SHIKI_LANGUAGE_MAP = {
+// Map markdown fence aliases to Twinkleplop grammars.
+export const TWINKLEPLOP_LANGUAGE_MAP = {
 	env: 'dotenv',
-	html: 'svelte',
+	sh: 'bash',
+	console: 'shellsession',
 	sv: 'svelte',
 	dts: 'typescript',
-	json: 'jsonc',
-	// we don't need the coffeescript highlighter because it's only used once
-	// in a blog post from 2019
-	cson: '',
-	// there's no syntax highlighter for tree syntax
-	tree: '',
-	'': '',
-	// already recognised by Shiki but they're here to satisfy TypeScript
-	js: 'js',
-	ts: 'ts'
-};
+	js: 'javascript',
+	ts: 'typescript',
+	yml: 'yaml',
+	md: 'markdown',
+	// These formats intentionally render without syntax highlighting.
+	cson: 'plaintext',
+	text: 'plaintext',
+	'': 'plaintext'
+} as const;
 
 export function is_in_code_block(body: string, index: number) {
 	const code_blocks = [...body.matchAll(/(`{3,}).*\n(.|\n)+?\1/gm)].map((match) => {
@@ -90,14 +88,13 @@ export function smart_quotes(str: string, { first = true }: { first?: boolean } 
 	// wouldn't correctly handle `That '70s show` or `My country 'tis of thee`
 	// but a) it's very unlikely they'll occur in our docs, and
 	// b) they can be dealt with manually
-	return str.replace(/(.|^)('|")(.|$)/g, (m, before, quote, after) => {
-		const left = (first && before === '') || [' ', '\n', '('].includes(before);
-		let replacement = '';
+	return str.replace(/['"]/g, (quote, index) => {
+		const before = str[index - 1] ?? '';
+		const after = str[index + 1] ?? '';
+		const left =
+			(first && index === 0) || (/[\s([{<:=]/.test(before) && after !== '' && !/\s/.test(after));
 
-		const double = quote === '"';
-		replacement = double ? (left ? '“' : '”') : left ? '‘' : '’';
-
-		return (before ?? '') + replacement + (after ?? '');
+		return quote === '"' ? (left ? '“' : '”') : left ? '‘' : '’';
 	});
 }
 
