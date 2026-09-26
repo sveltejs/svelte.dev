@@ -15,7 +15,8 @@ export async function load({ fetch, params }) {
 	try {
 		await res.clone().json();
 	} catch {
-		console.error('error is in res');
+		console.error('error is in res', res.url);
+		console.error(await res.clone().text());
 	}
 
 	try {
