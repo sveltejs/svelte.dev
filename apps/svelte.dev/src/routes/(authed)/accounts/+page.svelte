@@ -8,7 +8,7 @@
 
 	const { login, logout, enable_private_apps, disable_private_apps } = get_app_context();
 
-	let { github, atproto } = $derived(data.accounts);
+	const { github, atproto } = $derived(data.accounts);
 	const private_ready = $derived(!!atproto?.spaces_supported && !!atproto.private_apps);
 </script>
 
@@ -52,17 +52,17 @@
 				{@render check(private_ready, !!atproto?.spaces_supported ? 'private apps' : 'private apps (not supported by your PDS)')}
 			</ul>
 
-			{#if !!atproto?.spaces_supported}
-				<button class="raised" onclick={enable_private_apps}>Enable private apps (experimental)</button>
-			{:else if private_ready}
+			{#if private_ready}
 				<button
-					class="danger"
+					class="raised"
 					onclick={() => {
 						if (confirm('Delete your space and every private app in it?')) disable_private_apps();
 					}}
 				>
 					Delete private app space
 				</button>
+			{:else if !!atproto?.spaces_supported}
+				<button class="raised" onclick={enable_private_apps}>Enable private apps (experimental)</button>
 			{/if}
 		{:else}
 			<p>Logging in with an <a href="https://atmosphereaccount.com/">atmosphere account</a> allows you to store apps on your Personal Data Server (PDS).</p>
@@ -127,14 +127,17 @@
 
 	section {
 		margin: 0 0 1rem 0;
+		--offset: 4.6rem;
 
 		&[data-active="true"] {
+			padding: 0 0 0 var(--offset);
 			margin: 0 0 4rem 0;
 		}
 
 		.controls {
 			display: flex;
 			justify-content: space-between;
+			margin-left: calc(-1 * var(--offset));
 		}
 	}
 
@@ -177,8 +180,8 @@
 	}
 
 	.checks {
-		padding: 0 0 0 4.6rem;
-		margin: 1rem 0 0 0;
+		padding: 0 0 0 0.2rem;
+		margin: 1rem 0 1rem 0;
 
 		li {
 			font: var(--sk-font-ui-medium);
