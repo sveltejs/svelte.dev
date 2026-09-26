@@ -250,15 +250,19 @@
 			<div class="login">
 				<span>log in</span>
 				<button
-					class="raised icon tooltip atproto"
+					class="raised icon tooltip"
 					onclick={() => login('atproto')}
 					aria-label="log in with the Atmosphere"
-				></button>
+				>
+					<span data-icon="atproto"></span>
+				</button>
 				<button
-					class="raised icon tooltip github"
+					class="raised icon tooltip"
 					onclick={() => login('github')}
 					aria-label="log in with GitHub"
-				></button>
+				>
+					<span data-icon="github"></span>
+				</button>
 			</div>
 		{/if}
 	</div>
@@ -295,22 +299,6 @@
 
 		span {
 			margin: 0 0.3rem 0 0.4rem;
-		}
-
-		.icon {
-			&::before {
-				content: '';
-				display: block;
-				width: 1.5rem;
-				height: 1.5rem;
-				margin: 0 auto;
-				background: currentColor;
-				mask: url(icons/at-sign) no-repeat 50% 50% / contain;
-			}
-
-			&.github::before {
-				mask-image: url(icons/github);
-			}
 		}
 	}
 
