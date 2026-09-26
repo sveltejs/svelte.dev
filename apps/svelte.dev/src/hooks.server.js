@@ -47,6 +47,18 @@ const fonts = [
 	'fira-sans-latin-400-normal'
 ];
 
+/** @type {import('@sveltejs/kit/hooks').HandleFetch} */
+export function handleFetch({ event, request, fetch }) {
+	if (request.url.startsWith(event.url.origin + '/')) {
+		request.headers.set(
+			'x-vercel-protection-bypass',
+			/** @type {string} */ (process.env.VERCEL_AUTOMATION_BYPASS_SECRET)
+		);
+	}
+
+	return fetch(request);
+}
+
 /** @type {import('@sveltejs/kit/hooks').Handle} */
 export async function handle({ event, resolve }) {
 	// Best effort to redirect from Svelte 4 docs to new docs
