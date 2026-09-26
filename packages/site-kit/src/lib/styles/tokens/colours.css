@@ -40,6 +40,15 @@
 	--shiki-token-punctuation: var(--shiki-color-text);
 	--shiki-token-link: var(--shiki-token-keyword);
 
+	/* Twinkleplop syntax highlighting */
+	--twp-text: var(--shiki-color-text);
+	--twp-string: var(--shiki-token-string);
+	--twp-comment: var(--shiki-token-comment);
+	--twp-keyword: var(--shiki-token-keyword);
+	--twp-parameter: var(--shiki-token-parameter);
+	--twp-function: var(--shiki-token-function);
+	--twp-link: var(--shiki-token-link);
+
 	/* Misc */
 	--sk-scrollbar: rgba(0, 0, 0, 0.3);
 	--sk-shadow: drop-shadow(0px 0px 14px rgba(0, 0, 0, 0.1));
