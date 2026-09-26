@@ -81,6 +81,26 @@ async function generate(tailwind) {
 			files.push({ path: 'src/app.css', data: repl_css });
 		}
 
+		// `project_files` in src/lib/playground-download.ts relies on these
+		/** @param {string} file_path */
+		const text = (file_path) => {
+			const data = files.find((file) => file.path === file_path)?.data;
+			if (typeof data !== 'string') {
+				throw new Error(`The playground download template is missing ${file_path}`);
+			}
+			return data;
+		};
+
+		text('package.json');
+
+		if (!text('vite.config.ts').includes('compilerOptions: {')) {
+			throw new Error('The playground download template is missing Svelte compiler options');
+		}
+
+		if (tailwind) {
+			text('src/routes/layout.css');
+		}
+
 		writeFileSync(output_file, JSON.stringify(files));
 	} finally {
 		rmSync(output_dir, { force: true, recursive: true });

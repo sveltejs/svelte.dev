@@ -15,14 +15,12 @@ export function project_files(
 ): DownloadFile[] {
 	const files = template.map(({ path, data }) => ({ path, data }));
 
+	// scripts/get_svelte_template.js guarantees that these files exist
+	const text_file = (path: string) =>
+		files.find((file) => file.path === path) as { path: string; data: string };
+
 	if (async_mode) {
-		const vite_config = files.find(({ path }) => path === 'vite.config.ts');
-		if (!vite_config || typeof vite_config.data !== 'string') {
-			throw new Error('The playground download template is missing vite.config.ts');
-		}
-		if (!vite_config.data.includes(COMPILER_OPTIONS)) {
-			throw new Error('The playground download template is missing Svelte compiler options');
-		}
+		const vite_config = text_file('vite.config.ts');
 		vite_config.data = vite_config.data.replace(
 			COMPILER_OPTIONS,
 			`${COMPILER_OPTIONS}\n\t\t\t\texperimental: { async: true },`
@@ -30,10 +28,7 @@ export function project_files(
 	}
 
 	if (imports.length > 0) {
-		const pkg_file = files.find(({ path }) => path === 'package.json');
-		if (!pkg_file || typeof pkg_file.data !== 'string') {
-			throw new Error('The playground download template is missing package.json');
-		}
+		const pkg_file = text_file('package.json');
 		const pkg = JSON.parse(pkg_file.data);
 		const dev_dependencies = (pkg.devDependencies ??= {});
 		for (const mod of imports) {
@@ -56,10 +51,7 @@ export function project_files(
 				name.endsWith('.css') && /@(theme|utility|custom-variant)\b/.test(contents)
 		);
 		if (styles.length > 0) {
-			const stylesheet = files.find(({ path }) => path === 'src/routes/layout.css');
-			if (!stylesheet || typeof stylesheet.data !== 'string') {
-				throw new Error('The Tailwind download template is missing its stylesheet');
-			}
+			const stylesheet = text_file('src/routes/layout.css');
 			// Tailwind needs custom directives in the stylesheet that imports its base CSS.
 			stylesheet.data += styles.map(({ name }) => `\n@import './${name}';`).join('');
 		}

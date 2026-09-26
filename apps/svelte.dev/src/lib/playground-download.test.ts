@@ -79,12 +79,4 @@ describe('playground download', () => {
 
 		expect(contents(files, 'vite.config.ts')).toBe(contents(template, 'vite.config.ts'));
 	});
-
-	test('fails when the template no longer exposes compiler options', () => {
-		const template = [{ path: 'vite.config.ts', data: 'export default defineConfig({});' }];
-
-		expect(() => project_files(template, [], [], false, true)).toThrow(
-			'The playground download template is missing Svelte compiler options'
-		);
-	});
 });
