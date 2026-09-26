@@ -245,10 +245,8 @@
 			<UserMenu {user} />
 		{:else}
 			<Dropdown align="right">
-				<button class="raised icon login">
-					<span>log in</span>
-					<Icon size={18} name="chevron-down" />
-				</button>
+				<span class="login">log in</span>
+				<Icon size={18} name="chevron-down" />
 
 				{#snippet dropdown()}
 					<HoverMenu>
@@ -265,6 +263,11 @@
 		display: flex;
 		align-items: center;
 		gap: 0.2rem;
+		font: var(--sk-font-ui-medium);
+
+		.login {
+			padding: 0em 0 0 0.4rem;
+		}
 	}
 
 	button {
