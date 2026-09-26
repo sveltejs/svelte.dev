@@ -107,6 +107,12 @@
 				}
 			}
 
+			.twoslash-popover-tag {
+				display: flex;
+				gap: 0.5rem;
+				align-items: baseline;
+			}
+
 			/* Disable highlight styles inside tooltips (popup content) */
 			.highlight,
 			.highlight.add,

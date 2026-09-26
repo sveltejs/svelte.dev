@@ -1,6 +1,7 @@
 minimumReleaseAge: 2880
 minimumReleaseAgeExclude:
   - '@sveltejs/*'
+  - '@twinkleplop/*'
   - svelte
   - sv
   - esrap

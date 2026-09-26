@@ -5,16 +5,27 @@ import process from 'node:process';
 import path from 'node:path';
 import ts from 'typescript';
 import * as marked from 'marked';
-import { createHighlighterCore } from 'shiki/core';
-import { createOnigurumaEngine } from 'shiki/engine/oniguruma';
-import { createCssVariablesTheme } from 'shiki';
-import { createTransformerFactory, rendererRich } from '@shikijs/twoslash/core';
-import { createTwoslasher } from 'twoslash';
-// import { createFileSystemTypesCache } from '@shikijs/vitepress-twoslash/cache-fs';
+import { language as create_bash_highlighter } from '@twinkleplop/bash';
+import { language as create_css_highlighter } from '@twinkleplop/css';
+import { language as create_dotenv_highlighter } from '@twinkleplop/dotenv';
+import { language as create_html_highlighter } from '@twinkleplop/html';
+import { language as create_http_highlighter } from '@twinkleplop/http';
+import { language as create_ini_highlighter } from '@twinkleplop/ini';
+import { language as create_javascript_highlighter } from '@twinkleplop/javascript';
+import { language as create_json_highlighter } from '@twinkleplop/json';
+import { language as create_jsonc_highlighter } from '@twinkleplop/jsonc';
+import { language as create_markdown_highlighter } from '@twinkleplop/markdown';
+import { language as create_shellsession_highlighter } from '@twinkleplop/shellsession';
+import { language as create_svelte_highlighter } from '@twinkleplop/svelte';
+import { language as create_toml_highlighter } from '@twinkleplop/toml';
+import { create_highlighter as create_twoslash_highlighter } from '@twinkleplop/twoslash';
+import { language as create_typescript_highlighter } from '@twinkleplop/typescript';
+import { language as create_yaml_highlighter } from '@twinkleplop/yaml';
 import { compress_and_encode_text } from 'gzip';
+import { create_tree_highlighter } from './tree.ts';
 import {
 	decode_html_entities,
-	SHIKI_LANGUAGE_MAP,
+	TWINKLEPLOP_LANGUAGE_MAP,
 	slugify,
 	smart_quotes,
 	transform
@@ -32,10 +43,83 @@ type TwoslashBanner = (filename: string, content: string) => string;
 const METADATA_REGEX =
 	/(?:<!---\s*|\/\/\/\s*|###\s*)(?<key>file|link|copy):\s*(?<value>.*?)(?:\s*--->|$)\n/gm;
 
-const theme = createCssVariablesTheme({
-	name: 'css-variables',
-	variablePrefix: '--shiki-'
+type Highlighter = ReturnType<typeof create_typescript_highlighter>;
+
+const highlighters: Record<string, Highlighter> = {
+	bash: create_bash_highlighter(),
+	css: create_css_highlighter(),
+	dotenv: create_dotenv_highlighter(),
+	html: create_html_highlighter(),
+	http: create_http_highlighter(),
+	ini: create_ini_highlighter(),
+	javascript: create_javascript_highlighter(),
+	json: create_json_highlighter(),
+	jsonc: create_jsonc_highlighter(),
+	markdown: create_markdown_highlighter(),
+	shellsession: create_shellsession_highlighter(),
+	svelte: create_svelte_highlighter(),
+	toml: create_toml_highlighter(),
+	tree: create_tree_highlighter(),
+	typescript: create_typescript_highlighter(),
+	yaml: create_yaml_highlighter()
+};
+
+const twoslash_highlighters = new Map<string, (code: string) => string>();
+
+function escape_html(value: string) {
+	return value
+		.replaceAll('&', '&amp;')
+		.replaceAll('<', '&lt;')
+		.replaceAll('>', '&gt;')
+		.replaceAll('"', '&quot;')
+		.replaceAll("'", '&#39;');
+}
+
+function highlight_source(source: string, language: string) {
+	const mapped =
+		TWINKLEPLOP_LANGUAGE_MAP[language as keyof typeof TWINKLEPLOP_LANGUAGE_MAP] ?? language;
+	const highlight = highlighters[mapped];
+
+	return highlight
+		? highlight(source)
+		: `<pre class="twinkleplop plaintext"><code>${escape_html(source)}</code></pre>`;
+}
+
+// TODO: replace with marked.parseInline once twinkleplop is fixed
+// see https://github.com/pngwn/twinkleplop/issues/107
+const docs_markdown = new marked.Marked({
+	renderer: {
+		code({ text, lang }) {
+			return `<div class="code-block"><div class="controls"><button class="copy-to-clipboard raised" title="Copy to clipboard" aria-label="Copy to clipboard"></button></div>${highlight_source(text, lang ?? '')}</div>`;
+		}
+	}
 });
+
+function get_twoslash_highlighter(language: 'js' | 'ts', twoslashRoot?: string) {
+	const key = `${language}:${twoslashRoot ?? ''}`;
+	let highlight = twoslash_highlighters.get(key);
+
+	if (!highlight) {
+		highlight = create_twoslash_highlighter({
+			lang: language,
+			render_docs: (markdown) => docs_markdown.parse(markdown, { async: false }),
+			process_type: (type) => type.replace(/import\(".*?"\)\./g, ''),
+			twoslash: {
+				...(twoslashRoot ? { vfsRoot: twoslashRoot } : {}),
+				compilerOptions: {
+					allowJs: true,
+					checkJs: true,
+					module: ts.ModuleKind.ESNext,
+					moduleResolution: ts.ModuleResolutionKind.Bundler,
+					types: ['svelte', '@sveltejs/kit', 'sv', '@sveltejs/sv-utils']
+				}
+			}
+		});
+		twoslash_highlighters.set(key, highlight);
+	}
+
+	return highlight;
+}
 
 // Hash the contents of this file and its dependencies so that we get a new cache in case we have changed
 // how the markdown is rendered (whose logic live here). This is to avoid serving stale code snippets.
@@ -53,29 +137,6 @@ if (!fs.existsSync(original_file)) {
 }
 hash_graph(hash, original_file);
 const digest = hash.digest().toString('base64').replace(/\//g, '-');
-
-// @ts-expect-error — this allows us to create a single Shiki instance
-// across dev server reloads, otherwise it complains
-const highlighter = (globalThis[Symbol.for('shiki highlighter')] ??= await createHighlighterCore({
-	themes: [],
-	langs: [
-		import('@shikijs/langs/javascript'),
-		import('@shikijs/langs/typescript'),
-		import('@shikijs/langs/svelte'),
-		import('@shikijs/langs/css'),
-		import('@shikijs/langs/bash'),
-		import('@shikijs/langs/yaml'),
-		import('@shikijs/langs/toml'),
-		import('@shikijs/langs/ini'),
-		import('@shikijs/langs/dotenv'),
-		import('@shikijs/langs/markdown'),
-		import('@shikijs/langs/jsonc'),
-		// used by markdown codeblocks from the express types
-		import('@shikijs/langs/shellsession'), // lang: 'console'
-		import('@shikijs/langs/http')
-	],
-	engine: createOnigurumaEngine(import('shiki/wasm'))
-}));
 
 /**
  * Utility function to work with code snippet caching.
@@ -151,8 +212,8 @@ const snippets = await create_snippet_cache();
 /**
  * A super markdown renderer function. Renders svelte and kit docs specific specific markdown code to html.
  *
- * - Syntax Highlighting -> shikiJS with `css-variables` theme.
- * - TS hover snippets -> shiki-twoslash. JS and TS code snippets(other than d.ts) are run through twoslash.
+ * - Syntax Highlighting -> Twinkleplop language renderers.
+ * - TS hover snippets -> Twinkleplop Twoslash. JS and TS code snippets (other than d.ts) are run through Twoslash.
  * - JS -> TS conversion -> JS snippets starting with `/// file: some_file.js` are converted to TS if possible. Same for Svelte snippets starting with `<!--- file: some_file.svelte --->`. Notice there's an additional dash(-) to the opening and closing comment tag.
  * - Type links -> Type names are converted to links to the type's documentation page.
  * - Snippet caching -> To avoid slowing down initial page render time, code snippets are cached in the nearest `node_modules/.snippets` folder. This is done by hashing the code snippet with SHA256 algo and storing the final rendered output in a file named the hash.
@@ -228,6 +289,7 @@ const snippets = await create_snippet_cache();
  * @param {object} options
  * @param {TwoslashBanner} [options.twoslashBanner] - A function that returns a string to be prepended to the code snippet before running the code with twoslash. Helps in adding imports from svelte or sveltekit or whichever modules are being globally referenced in all or most code snippets.
  * @param {Record<string, string>} [references] - Optional map of symbol names to their documentation URLs for dynamic reference links in twoslash tooltips.
+ * @param {(href: string) => string} [options.transformLink] - Transforms Markdown link destinations before rendering.
  */
 
 /**
@@ -259,11 +321,30 @@ function extractImportedSymbols(source: string): Set<string> {
 	return imported;
 }
 
-/**
- * Injects reference links into twoslash popup tooltips.
- * Uses rendererRich structure: <span class="twoslash-hover"><span class="twoslash-popup-container">...</span>symbol</span>
- * Only adds links for symbols that were actually imported in the code snippet.
- */
+function find_closing_span(html: string, open_index: number) {
+	let depth = 1;
+	let position = html.indexOf('>', open_index) + 1;
+
+	while (depth > 0 && position < html.length) {
+		const next_open = html.indexOf('<span', position);
+		const next_close = html.indexOf('</span>', position);
+
+		if (next_close === -1) return -1;
+
+		if (next_open !== -1 && next_open < next_close) {
+			depth += 1;
+			position = next_open + 5;
+		} else {
+			depth -= 1;
+			if (depth === 0) return next_close;
+			position = next_close + 7;
+		}
+	}
+
+	return -1;
+}
+
+/** Adds reference links for imported symbols to their Twoslash popovers. */
 function injectReferenceLinks(
 	html: string,
 	references?: Record<string, string>,
@@ -273,53 +354,40 @@ function injectReferenceLinks(
 		return html;
 	}
 
-	const insertions: Array<{ index: number; div: string }> = [];
+	const insertions: Array<{ index: number; content: string }> = [];
 
-	for (const match of html.matchAll(/<span class="twoslash-popup-container">/g)) {
-		const startIdx = match.index! + match[0].length;
-		let depth = 1;
-		let pos = startIdx;
-		let endIdx = -1;
+	for (const match of html.matchAll(/<span class="twoslash-hover">/g)) {
+		const hover_end = find_closing_span(html, match.index);
+		const target_start = html.indexOf('<span class="twoslash-target">', match.index);
 
-		// Track nested span depth to find the matching closing </span>
-		while (depth > 0 && pos < html.length) {
-			const openIdx = html.indexOf('<span', pos);
-			const closeIdx = html.indexOf('</span>', pos);
-			if (closeIdx === -1) break;
+		if (hover_end === -1 || target_start === -1 || target_start > hover_end) continue;
 
-			if (openIdx !== -1 && openIdx < closeIdx) {
-				depth++;
-				pos = openIdx + '<span'.length;
-			} else {
-				depth--;
-				if (depth === 0) endIdx = closeIdx;
-				pos = closeIdx + '</span>'.length;
-			}
-		}
+		const target_end = find_closing_span(html, target_start);
+		if (target_end === -1) continue;
 
-		if (endIdx === -1) continue;
+		const target_content_start = html.indexOf('>', target_start) + 1;
+		const symbol = decode_html_entities(
+			html.slice(target_content_start, target_end).replace(/<[^>]+>/g, '')
+		).trim();
 
-		// Symbol name appears after popup container closes, before twoslash-hover closes
-		const afterPopup = html.substring(endIdx + '</span>'.length, endIdx + '</span>'.length + 100);
-		const symbolMatch = afterPopup.match(/^([a-zA-Z_$][a-zA-Z0-9_$]*)</);
-		if (!symbolMatch) continue;
+		if (!importedSymbols.has(symbol)) continue;
 
-		const symbolName = symbolMatch[1];
-		if (!importedSymbols.has(symbolName)) continue;
+		const url = references[symbol];
+		const popover_start = html.indexOf('<span class="twoslash-popover"', target_end);
+		if (!url || popover_start === -1 || popover_start > hover_end) continue;
 
-		const url = references[symbolName];
-		if (url) {
-			insertions.push({
-				index: endIdx,
-				div: `<div class="twoslash-popup-reference"><a href="${url}">reference</a></div>`
-			});
-		}
+		const popover_end = find_closing_span(html, popover_start);
+		if (popover_end === -1) continue;
+
+		insertions.push({
+			index: popover_end,
+			content: `<span class="twoslash-popup-reference"><a href="${url}">reference</a></span>`
+		});
 	}
 
-	// Insert in reverse order to maintain correct string indices
 	for (let i = insertions.length - 1; i >= 0; i--) {
-		const { index, div } = insertions[i];
-		html = html.slice(0, index) + div + html.slice(index);
+		const { index, content } = insertions[i];
+		html = html.slice(0, index) + content + html.slice(index);
 	}
 
 	return html;
@@ -328,11 +396,16 @@ function injectReferenceLinks(
 export async function render_content_markdown(
 	filename: string,
 	body: string,
-	options?: { check?: boolean; references?: Record<string, string>; twoslashRoot?: string },
+	options?: {
+		check?: boolean;
+		references?: Record<string, string>;
+		transformLink?: (href: string) => string;
+		twoslashRoot?: string;
+	},
 	twoslashBanner?: TwoslashBanner
 ) {
 	const headings: string[] = [];
-	const { check = true, references, twoslashRoot } = options ?? {};
+	const { check = true, references, transformLink, twoslashRoot } = options ?? {};
 
 	interface CodeBlockFile {
 		selected: boolean;
@@ -359,6 +432,10 @@ export async function render_content_markdown(
 
 	let transformed = await transform(body, {
 		async walkTokens(token) {
+			if (token.type === 'link' && transformLink) {
+				token.href = transformLink(token.href);
+			}
+
 			if (token.type === 'html') {
 				if (token.text.startsWith('<!-- codeblock:start')) {
 					if (current_block !== null) {
@@ -472,13 +549,14 @@ export async function render_content_markdown(
 				);
 
 				const ext = options.file?.slice(options.file.lastIndexOf('.'));
+				const is_dot_file = ext && ext === options.file;
 
 				const file: CodeBlockFile = {
 					selected: options.file === codeblock.selected,
 					tab_id: `playground-tab-${codeblock.id}-${codeblock.files.length}`,
 					panel_id: `playground-tabpanel-${codeblock.id}-${codeblock.files.length}`,
-					name: options.file?.slice(0, -ext!.length) ?? null,
-					ext: ext ?? null,
+					name: (is_dot_file ? options.file : options.file?.slice(0, -ext!.length)) ?? null,
+					ext: is_dot_file ? '' : (ext ?? null),
 					content: source
 						.replace(delimiter_patterns['---'], '$1')
 						.replace(delimiter_patterns['+++'], '$1')
@@ -1061,11 +1139,6 @@ function get_leading_frontmatter_delimiters(source: string, language: string) {
 	return delimiters;
 }
 
-function replace_blank_lines(html: string) {
-	// preserve blank lines in output (maybe there's a more correct way to do this?)
-	return html.replaceAll(/<div class='line'>(&nbsp;)?<\/div>/g, '<div class="line">\n</div>');
-}
-
 const delimiter_substitutes = {
 	'---': '                                           ',
 	'+++': '                                         ',
@@ -1130,20 +1203,11 @@ async function syntax_highlight({
 }) {
 	let html = '';
 
-	if (/^(dts|yaml|yml)/.test(language)) {
-		html = replace_blank_lines(
-			highlighter.codeToHtml(source, {
-				lang: language === 'dts' ? 'ts' : language,
-				theme
-			})
-		);
-	} else if (language === 'js' || language === 'ts') {
-		/** We need to stash code wrapped in `---` highlights, because otherwise TS will error on e.g. bad syntax, duplicate declarations */
+	if (language === 'js' || language === 'ts') {
+		/** We need to stash code wrapped in `---` highlights, because otherwise TS will error on e.g. bad syntax or duplicate declarations. */
 		const redactions: Array<{ content: string; placeholder: string }> = [];
-
-		const sub = delimiter_substitutes['---'];
-		const pattern = new RegExp(`${sub}([^ ]|[^ ][^]+?[^ ])${sub}`, 'g');
-
+		const substitute = delimiter_substitutes['---'];
+		const pattern = new RegExp(`${substitute}([^ ]|[^ ][^]+?[^ ])${substitute}`, 'g');
 		const redacted = source.replace(pattern, (_, content) => {
 			const placeholder = '\f'.repeat(content.length);
 			redactions.push({ content, placeholder });
@@ -1151,127 +1215,19 @@ async function syntax_highlight({
 		});
 
 		try {
-			html = highlighter.codeToHtml(prelude + redacted, {
-				lang: language,
-				theme,
-				transformers: check
-					? [
-							createTransformerFactory(
-								createTwoslasher(twoslashRoot ? { vfsRoot: twoslashRoot } : undefined),
-								rendererRich()
-							)({
-								renderer: rendererRich(),
-								twoslashOptions: {
-									compilerOptions: {
-										allowJs: true,
-										checkJs: true,
-										module: ts.ModuleKind.ESNext,
-										moduleResolution: ts.ModuleResolutionKind.Bundler,
-										types: ['svelte', '@sveltejs/kit', 'sv', '@sveltejs/sv-utils']
-									}
-								},
-								// by default, twoslash does not run on .js files, change that through this option
-								filter: () => true
-								// TODO: re-enable type hover cache when we find out how to invalidate
-								// it when the types have changed
-								// typesCache: createFileSystemTypesCache({
-								// 	dir: 'node_modules/.cache/twoslash'
-								// })
-							})
-						]
-					: []
-			});
+			html = check
+				? get_twoslash_highlighter(language, twoslashRoot)(prelude + redacted)
+				: highlight_source(redacted, language);
 
 			for (const { content, placeholder } of redactions) {
-				html = html.replace(placeholder, `<span class="highlight remove">${content}</span>`);
+				html = html.replace(
+					placeholder,
+					`<span class="highlight remove">${escape_html(content)}</span>`
+				);
 			}
 
 			if (check) {
-				// munge the twoslash output so that it renders sensibly. the order of operations
-				// here is important — we need to work backwards, to avoid corrupting the offsets
-
-				// first, strip out unwanted error lines
-				html = html.replace(
-					/<div class="twoslash-meta-line twoslash-error-line">[^]+?<\/div>/g,
-					'\n'
-				);
-
-				const replacements: Array<{ start: number; end: number; content: string }> = [];
-
-				for (const match of html.matchAll(/<div class="twoslash-popup-docs">([^]+?)<\/div>/g)) {
-					// decode HTML entities that shiki uses to escape the JSDoc content
-					const decoded = match[1]
-						.replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => String.fromCharCode(parseInt(hex, 16)))
-						.replace(/&#(\d+);/g, (_, dec) => String.fromCharCode(parseInt(dec, 10)))
-						.replace(/&lt;/g, '<')
-						.replace(/&gt;/g, '>')
-						.replace(/&amp;/g, '&');
-					const content = await render_content_markdown('<twoslash>', decoded, { check: false });
-
-					replacements.push({
-						start: match.index,
-						end: match.index + match[0].length,
-						content: '<div class="twoslash-popup-docs">' + content + '</div>'
-					});
-				}
-
-				while (replacements.length > 0) {
-					const { start, end, content } = replacements.pop()!;
-					html = html.slice(0, start) + content + html.slice(end);
-				}
-
-				for (const match of html.matchAll(
-					/<span class="twoslash-popup-docs-tag"><span class="twoslash-popup-docs-tag-name">([^]+?)<\/span><span class="twoslash-popup-docs-tag-value">([^]+?)<\/span><\/span>/g
-				)) {
-					const start = match.index;
-					const end = match.index + match[0].length;
-
-					const tag = match[1];
-
-					if (tag === '@type') {
-						// remove `@type` tags altogether
-						replacements.push({ start, end, content: '' });
-						continue;
-					}
-
-					let value = match[2];
-					let content = `<div class="tag">${tag}</div><div class="value">`;
-
-					if (tag === '@param' || tag === '@throws') {
-						const words = value.split(' ');
-						let param = words.shift()!;
-						value = words.join(' ');
-
-						if (tag === '@throws') {
-							if (param[0] !== '{' || param[param.length - 1] !== '}') {
-								throw new Error('TODO robustify @throws handling');
-							}
-
-							param = param.slice(1, -1);
-						}
-
-						content += `<span class="param">${param}</span> `;
-					}
-
-					if (tag === '@example') {
-						content += await render_content_markdown('<twoslash>', value, { check: false });
-					} else {
-						content += marked.parseInline(value);
-					}
-
-					content += '</div>';
-
-					replacements.push({ start, end, content });
-				}
-
-				while (replacements.length > 0) {
-					const { start, end, content } = replacements.pop()!;
-					html = html.slice(0, start) + content + html.slice(end);
-				}
-
-				// if no tags, remove this <div> to avoid an unnecessary flex gap
-				html = html.replace('<div class="twoslash-popup-docs twoslash-popup-docs-tags"></div>', '');
-
+				html = html.replace(/<span class="twoslash-error-line"[^>]*>[^]*?<\/span>/g, '');
 				html = injectReferenceLinks(html, references, extractImportedSymbols(source));
 			}
 		} catch (e) {
@@ -1279,21 +1235,11 @@ async function syntax_highlight({
 			console.warn(prelude + redacted);
 			throw new Error(`Error compiling snippet in ${filename}`);
 		}
-
-		html = replace_blank_lines(html);
 	} else {
-		const highlighted = highlighter.codeToHtml(source, {
-			// fallback to passing the language as is if it doesn't exist in our map
-			// this ensures we get an error if we're using an unsupported language
-			// rather than silently not highlighting the code block as expected
-			lang: SHIKI_LANGUAGE_MAP[language as keyof typeof SHIKI_LANGUAGE_MAP] ?? language,
-			theme
-		});
-
-		html = replace_blank_lines(highlighted);
+		html = highlight_source(source, language);
 	}
 
-	// munge shiki output
+	// Normalize Twinkleplop output for the existing code-block annotations.
 	html = html
 		// put whitespace outside `<span>` elements, so that
 		// highlight delimiters fall outside tokens
@@ -1314,7 +1260,7 @@ async function syntax_highlight({
 
 function indent_multiline_comments(str: string) {
 	return str.replace(
-		/^(\s+)<span class="token comment">([\s\S]+?)<\/span>\n/gm,
+		/^(\s+)<span class="(?:tok )?comment">([\s\S]+?)<\/span>\n/gm,
 		(_, intro_whitespace, content) => {
 			// we use some CSS trickery to make comments break onto multiple lines while preserving indentation
 			const lines = (intro_whitespace + content + '').split('\n');
@@ -1323,9 +1269,7 @@ function indent_multiline_comments(str: string) {
 					const match = /^(\s*)(.*)/.exec(line);
 					const indent = (match?.[1] ?? '').replace(/\t/g, '  ').length;
 
-					return `<span class="token comment wrapped" style="--indent: ${indent}ch">${
-						line ?? ''
-					}</span>`;
+					return `<span class="comment wrapped" style="--indent: ${indent}ch">${line ?? ''}</span>`;
 				})
 				.join('');
 		}

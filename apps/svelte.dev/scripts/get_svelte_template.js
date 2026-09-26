@@ -1,93 +1,91 @@
 // @ts-check
-import { readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { create } from 'sv';
+import { add, create, officialAddons } from 'sv';
 
-// This downloads the current Vite template from GitHub, adjusts it to our needs, and saves it to static/svelte-template.json
-// This is used by the Svelte REPL as part of the "download project" feature
-
+// Generate the SvelteKit projects used by the playground's download feature.
 const force = process.env.FORCE_UPDATE === 'true';
-
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const output_file = path.resolve(__dirname, '../static/svelte-template.json');
-const output_dir = path.resolve(__dirname, './svelte-template');
+const output_dir = path.resolve(__dirname, 'svelte-template');
+const repl_css = readFileSync(
+	path.resolve(__dirname, '../../../packages/repl/src/lib/Output/srcdoc/styles.css'),
+	'utf8'
+);
 
-try {
-	if (!force && statSync(output_file)) {
-		const relative = path.relative(process.cwd(), output_file);
-		console.info(`[update/template] ${relative} exists. Skipping`);
-		process.exit(0);
+/** @param {string} dir */
+function get_all_files(dir) {
+	/** @type {string[]} */
+	const files = [];
+	for (const item of readdirSync(dir, { withFileTypes: true })) {
+		const full_path = path.join(dir, item.name);
+		if (item.isDirectory()) {
+			files.push(...get_all_files(full_path));
+		} else {
+			files.push(full_path.replaceAll('\\', '/'));
+		}
 	}
-} catch {
-	// create Svelte-Kit skelton app
-	create({ cwd: output_dir, template: 'minimal', types: 'typescript', name: 'your-app' });
+	return files;
+}
 
-	/**
-	 * @param {string} dir
-	 * @returns {string[]}
-	 */
-	function get_all_files(dir) {
-		const files = [];
-		const items = readdirSync(dir, { withFileTypes: true });
+/** @param {boolean} tailwind */
+async function generate(tailwind) {
+	const filename = tailwind ? 'svelte-tailwind-template.json' : 'svelte-template.json';
+	const output_file = path.resolve(__dirname, '../static', filename);
+	if (!force && existsSync(output_file)) {
+		console.info(`[update/template] ${path.relative(process.cwd(), output_file)} exists. Skipping`);
+		return;
+	}
 
-		for (const item of items) {
-			const full_path = path.join(dir, item.name);
-			if (item.isDirectory()) {
-				files.push(...get_all_files(full_path));
-			} else {
-				files.push(full_path.replaceAll('\\', '/'));
+	if (existsSync(output_dir)) {
+		throw new Error(`Temporary template directory already exists: ${output_dir}`);
+	}
+
+	try {
+		create({ cwd: output_dir, template: 'minimal', types: 'typescript', name: 'your-app' });
+		if (tailwind) {
+			const result = await add({
+				cwd: output_dir,
+				addons: { tailwindcss: officialAddons.tailwindcss },
+				options: { tailwindcss: { plugins: [] } }
+			});
+			if (result.status.tailwindcss !== 'success') {
+				throw new Error('Could not add Tailwind to the playground template');
 			}
 		}
 
-		return files;
-	}
+		/** @type {{ path: string; data: string | number[] }[]} */
+		const files = [];
+		for (const file of get_all_files(output_dir)) {
+			const bytes = readFileSync(file);
+			const string = bytes.toString();
+			let data = bytes.compare(Buffer.from(string)) === 0 ? string : [...bytes];
 
-	const all_files = get_all_files(output_dir);
-	const files = [];
+			if (file.endsWith('routes/+page.svelte')) {
+				data = `<script>\n${tailwind ? '' : "\timport '../app.css';\n"}\timport App from './App.svelte';\n</script>\n\n<App />\n`;
+			}
 
-	for (let path of all_files) {
-		const bytes = readFileSync(path);
-		const string = bytes.toString();
-		let data = bytes.compare(Buffer.from(string)) === 0 ? string : [...bytes];
-
-		if (path.endsWith('routes/+page.svelte')) {
-			data = `<script>\n\timport '../app.css';\n\timport App from './App.svelte';\n</script>\n\n<App />\n`;
+			files.push({ path: file.slice(output_dir.length + 1), data });
 		}
 
-		files.push({ path: path.slice(output_dir.length + 1), data });
+		files.push({
+			path: 'src/routes/+page.js',
+			data:
+				"// Because we don't know whether or not your playground app can run in a server environment, we disable server-side rendering.\n" +
+				'// Make sure to test whether or not you can re-enable it, as SSR improves perceived performance and site accessibility.\n' +
+				'// Read more about this option here: https://svelte.dev/docs/kit/page-options#ssr\n' +
+				'export const ssr = false;\n'
+		});
+
+		if (!tailwind) {
+			files.push({ path: 'src/app.css', data: repl_css });
+		}
+
+		writeFileSync(output_file, JSON.stringify(files));
+	} finally {
+		rmSync(output_dir, { force: true, recursive: true });
 	}
-
-	files.push({
-		path: 'src/routes/+page.js',
-		data:
-			"// Because we don't know whether or not your playground app can run in a server environment, we disable server-side rendering.\n" +
-			'// Make sure to test whether or not you can re-enable it, as SSR improves perceived performance and site accessibility.\n' +
-			'// Read more about this option here: https://svelte.dev/docs/kit/page-options#ssr\n' +
-			'export const ssr = false;\n'
-	});
-
-	// add CSS styles from playground to the project
-	const html = readFileSync(
-		path.join(output_dir, '../../../../packages/repl/src/lib/Output/srcdoc/index.html'),
-		{ encoding: 'utf-8' }
-	);
-	const css = html
-		.slice(html.indexOf('<style>') + 7, html.indexOf('</style>'))
-		.split('\n')
-		.map((line) =>
-			// remove leading \t
-			line.slice(3)
-		)
-		.join('\n')
-		.trimStart();
-	files.push({
-		path: 'src/app.css',
-		data: css
-	});
-
-	writeFileSync(output_file, JSON.stringify(files));
-
-	// remove output dir afterwards to prevent it messing with Vite watcher
-	rmSync(output_dir, { force: true, recursive: true });
 }
+
+await generate(false);
+await generate(true);
