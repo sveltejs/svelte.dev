@@ -1,4 +1,4 @@
-import { getContext, setContext } from 'svelte';
+import { createContext } from 'svelte';
 import type { Destination } from '#lib/destination.js';
 
 interface AppContext {
@@ -9,10 +9,4 @@ interface AppContext {
 	set_destination: (destination: Destination) => Promise<void>;
 }
 
-export function set_app_context(context: AppContext) {
-	setContext('app', context);
-}
-
-export function get_app_context(): AppContext {
-	return getContext('app');
-}
+export const [get_app_context, set_app_context] = createContext<AppContext>();
