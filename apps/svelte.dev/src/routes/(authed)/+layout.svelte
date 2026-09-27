@@ -10,21 +10,6 @@
 
 	let landed: Array<() => void> = [];
 
-	// An authorization page that sends COOP severs the popup from its opener, and `win.closed`
-	// then reads true from the moment it leaves our origin: the key its callback writes right
-	// before closing is the only signal a login landed, and it can arrive minutes later.
-	$effect(() => {
-		async function handler(event: StorageEvent) {
-			if (event.key !== storage_key || !event.newValue) return;
-			localStorage.removeItem(storage_key);
-			await invalidateAll();
-			for (const resolve of landed.splice(0)) resolve();
-		}
-
-		window.addEventListener('storage', handler);
-		return () => window.removeEventListener('storage', handler);
-	});
-
 	/** Resolves once the login lands, rejects when the popup is blocked or nothing comes back. */
 	function popup(path: string) {
 		localStorage.removeItem(storage_key);
@@ -79,5 +64,17 @@
 		}
 	});
 </script>
+
+<svelte:window
+	onstorage={async (event) => {
+		// An authorization page that sends COOP severs the popup from its opener, and `win.closed`
+		// then reads true from the moment it leaves our origin: the key its callback writes right
+		// before closing is the only signal a login landed, and it can arrive minutes later.
+		if (event.key !== storage_key || !event.newValue) return;
+		localStorage.removeItem(storage_key);
+		await invalidateAll();
+		for (const resolve of landed.splice(0)) resolve();
+	}}
+/>
 
 {@render children?.()}
