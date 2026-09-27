@@ -6,7 +6,6 @@ interface AppContext {
 	logout: (provider: 'github' | 'atproto') => Promise<void>;
 	enable_private_apps: () => void;
 	disable_private_apps: () => Promise<void>;
-	set_destination: (destination: Destination) => Promise<void>;
 }
 
 export const [get_app_context, set_app_context] = createContext<AppContext>();

@@ -7,6 +7,7 @@
 	import Avatar from '#lib/components/Avatar.svelte';
 	import type { Accounts } from '#lib/db/types.d.ts';
 	import * as api from '#lib/apps.js';
+	import { set_destination } from './remote.js';
 
 	interface Owner {
 		handle: string;
@@ -42,7 +43,7 @@
 
 	const LEADING_AT_REGEX = /^@/;
 
-	const { login, set_destination } = get_app_context();
+	const { login } = get_app_context();
 
 	const format = (str: string | undefined) => (str ? ago(new Date(str)) : 'recently');
 
@@ -270,7 +271,7 @@
 						class="default-toggle"
 						class:active={tab === destination}
 						disabled={tab === destination}
-						onclick={() => set_destination(tab)}
+						onclick={() => set_destination((destination = tab))}
 						title={tab === destination
 							? 'New apps are saved here'
 							: 'Save new apps here by default'}

@@ -56,11 +56,6 @@
 		logout: async (provider) => {
 			const r = await fetch(provider === 'atproto' ? '/auth/atproto/logout' : '/auth/logout');
 			if (r.ok) await invalidateAll();
-		},
-
-		set_destination: async (destination) => {
-			document.cookie = `${DESTINATION_COOKIE}=${destination}; path=/; max-age=${60 * 60 * 24 * 365}; samesite=lax`;
-			await invalidateAll();
 		}
 	});
 </script>
