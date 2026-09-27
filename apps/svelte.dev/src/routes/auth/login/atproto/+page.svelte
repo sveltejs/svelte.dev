@@ -51,32 +51,34 @@
 </svelte:head>
 
 <form class="login" onsubmit={submit}>
-	<h1>Connect with your Atmosphere account</h1>
+	<label for="handle">
+		<h1>Log in with your Atmosphere account</h1>
+	</label>
 
-	<label for="handle">Handle</label>
 	<div class="row">
 		<input
 			id="handle"
 			name="handle"
 			placeholder="your.atmosphere.handle"
-			autocomplete="off"
 			autocapitalize="none"
 			autocorrect="off"
 			spellcheck="false"
 			inputmode="url"
 			required
 		/>
-		<button type="submit" disabled={busy}>{busy ? 'Connecting…' : 'Connect'}</button>
+		<button class="raised primary" disabled={busy}>{busy ? '…' : 'Log in'}</button>
 	</div>
 </form>
 
 <style>
 	.login {
 		max-width: 40rem;
+		height: 100vh;
 		margin: 0 auto;
-		padding: 2rem;
+		padding: 2rem 2rem 4rem 2rem;
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 		gap: 1rem;
 		font: var(--sk-font-ui-medium);
 	}
@@ -84,6 +86,7 @@
 	h1 {
 		font: var(--sk-font-h3);
 		margin-bottom: 1rem;
+		text-wrap: balance;
 	}
 
 	.row {
@@ -104,11 +107,7 @@
 	}
 
 	button {
+		width: 10rem;
 		height: 3.6rem;
-		padding: 0 1.4rem;
-		border-radius: var(--sk-border-radius);
-		background: var(--sk-fg-accent);
-		color: white;
-		white-space: nowrap;
 	}
 </style>
