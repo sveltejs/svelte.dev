@@ -4,6 +4,20 @@ import { scopes_for } from '#lib/atproto/model.js';
 import * as session from '#lib/atproto/session.js';
 import { error, redirect } from '@sveltejs/kit';
 
+const LEADING_AT_REGEX = /^@/;
+const AT_URI_REGEX = /^at:\/\//;
+const TRAILING_SLASH_REGEX = /\/+$/;
+
+// Accepts a handle, a DID, an at:// URI, or a pasted profile / apps URL.
+function normalize(input: string) {
+	let s = input.trim().replace(LEADING_AT_REGEX, '').replace(AT_URI_REGEX, '');
+	if (s.includes('/')) {
+		s = s.replace(TRAILING_SLASH_REGEX, '');
+		s = s.slice(s.lastIndexOf('/') + 1);
+	}
+	return s.split('?')[0].replace(LEADING_AT_REGEX, '');
+}
+
 /** Did this account enable private apps before? The stored profile outlives its logins. */
 async function had_private_apps(actor: string) {
 	try {
@@ -21,6 +35,8 @@ export async function GET({ url, cookies }) {
 	const can_delete = url.searchParams.get('delete') === '1';
 
 	let actor = url.searchParams.get('actor');
+	if (actor) actor = normalize(actor);
+
 	let private_apps = false;
 
 	const current = await session.from_cookies(cookies);
