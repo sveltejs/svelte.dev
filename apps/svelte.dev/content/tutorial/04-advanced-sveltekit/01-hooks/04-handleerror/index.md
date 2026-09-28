@@ -19,7 +19,7 @@ export function handleError({ kind, error }) {
 
 If you navigate to `/the-bad-place`, you'll see this in action — the error page is shown, and if you open the terminal (using the button to the right of the URL bar), you'll see the message from `src/routes/the-bad-place/+page.server.js`.
 
-Notice that we're _not_ showing the error message to the user. That's because error messages can include sensitive information that at best will confuse your users, and at worst could benefit evildoers. Instead, the [`App.Error`](/docs/kit/types#Error) object available to your application — represented as `page.error` in your `+error.svelte` pages, or `%sveltekit.error%` in your `src/error.html` fallback — is just this for unknown errors:
+Notice that we're _not_ showing the error message to the user. That's because error messages can include sensitive information that at best will confuse your users, and at worst could benefit evildoers. Instead, the [`App.Error`](/docs/kit/types#Error) object available to your application — represented as `page.error` in your `+error.svelte` pages, and used to populate `%sveltekit.error.message%` in your `src/error.html` fallback — is just this for unknown errors:
 
 <!-- prettier-ignore-start -->
 ```js

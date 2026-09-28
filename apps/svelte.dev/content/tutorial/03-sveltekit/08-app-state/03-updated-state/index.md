@@ -35,4 +35,4 @@ You can manually check for new versions, regardless of `pollInterval`, by callin
 
 > [!NOTE] Prior to SvelteKit 2.12, you had to use `$app/stores` for this, which provides an `$updated` store with the same information. It was removed in favor of `$app/state` in SvelteKit 3.
 
-> [!NOTE] SvelteKit 2 did not poll by default and had no checks on backend requests.
+> [!NOTE] SvelteKit 2 did not poll by default, and only checked for a new version when `updated.check()` was called or a navigation failed.
