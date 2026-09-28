@@ -4,7 +4,16 @@
 	import { onMount } from 'svelte';
 	import { is_active } from './utils';
 
-	let { title, contents = [] }: { title: string; contents: NavigationLink['sections'] } = $props();
+	let {
+		title,
+		contents = [],
+		height = $bindable(0)
+	}: {
+		title: string;
+		contents: NavigationLink['sections'];
+		/** The rendered height of the menu, which is less than the available space if the contents are short */
+		height?: number;
+	} = $props();
 
 	let nav = $state() as HTMLElement;
 
@@ -31,24 +40,26 @@
 	}
 </script>
 
-<nav bind:this={nav}>
-	{#if contents.every((section) => section.path && section.sections.length === 0)}
-		<ul class="flat">
-			{#each contents as { path, title, match }}
-				<li>
-					<a
-						href={path}
-						aria-current={is_active(page.url.pathname, path!, match) ? 'page' : undefined}
-					>
-						{title}
-					</a>
-				</li>
-			{/each}
-		</ul>
-	{:else}
-		{@render sections()}
-	{/if}
-</nav>
+<div class="container">
+	<nav bind:this={nav} bind:clientHeight={height}>
+		{#if contents.every((section) => section.path && section.sections.length === 0)}
+			<ul class="flat">
+				{#each contents as { path, title, match }}
+					<li>
+						<a
+							href={path}
+							aria-current={is_active(page.url.pathname, path!, match) ? 'page' : undefined}
+						>
+							{title}
+						</a>
+					</li>
+				{/each}
+			</ul>
+		{:else}
+			{@render sections()}
+		{/if}
+	</nav>
+</div>
 
 {#snippet sections()}
 	{#each contents as section, i}
@@ -83,13 +94,23 @@
 {/snippet}
 
 <style>
+	.container {
+		/* the container fills the available space, and the nav sits at the bottom of it */
+		container-type: size;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: end;
+	}
+
 	nav {
 		--header-padding: 1rem;
 
-		container-type: size;
+		/* shrink to fit the contents, but scroll if they exceed the available space */
+		flex: 0 1 auto;
+		min-height: 0;
 		font-family: var(--sk-font-family-ui);
 		overflow-y: auto;
-		height: 100%;
 		padding: 0 var(--sk-page-padding-side) 3rem;
 	}
 
