@@ -15,6 +15,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	import Search from '../search/Search.svelte';
 	import { tick } from 'svelte';
 	import FontToggle from '../components/FontToggle.svelte';
+	import { is_active } from './utils';
 
 	interface Props {
 		home_title?: string;
@@ -86,7 +87,9 @@ Top navigation bar for the application. It provides a slot for the left side, th
 					<Dropdown>
 						<a
 							href="/{link.slug}"
-							aria-current={page.url.pathname.startsWith(`/${link.slug}`) ? 'page' : undefined}
+							aria-current={is_active(page.url.pathname, `/${link.slug}`, link.match)
+								? 'page'
+								: undefined}
 						>
 							{link.title}
 
@@ -99,8 +102,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 									<a
 										class="secondary"
 										href={section.path}
-										aria-current={page.url.pathname === section.path ||
-										page.url.pathname.startsWith(section.path!)
+										aria-current={is_active(page.url.pathname, section.path!, section.match)
 											? 'page'
 											: undefined}
 									>
@@ -113,7 +115,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 				{:else}
 					<a
 						href="/{link.slug}"
-						aria-current={page.url.pathname.startsWith(`/${link.slug}`) ? 'page' : null}
+						aria-current={is_active(page.url.pathname, `/${link.slug}`, link.match) ? 'page' : null}
 					>
 						{link.title}
 					</a>
@@ -169,8 +171,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 				open = !open;
 
 				if (open) {
-					const segment = page.url.pathname.split('/')[1];
-					current = links.find((link) => link.slug === segment);
+					current = links.find((link) => is_active(page.url.pathname, `/${link.slug}`, link.match));
 				}
 			}}
 		>

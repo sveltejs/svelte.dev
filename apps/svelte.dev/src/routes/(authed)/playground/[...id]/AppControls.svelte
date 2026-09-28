@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import UserMenu from './UserMenu.svelte';
-	import { Icon } from '@sveltejs/site-kit/components';
+	import { Dropdown, HoverMenu, Icon } from '@sveltejs/site-kit/components';
 	import { isMac } from '#lib/utils/compat.js';
 	import { get_app_context } from '../../app-context';
 	import type { Gist, User } from '#lib/db/types.d.ts';
@@ -244,9 +244,16 @@
 		{#if user}
 			<UserMenu {user} />
 		{:else}
-			<button class="raised icon login" onclick={login}>
-				<span>log in</span>
-			</button>
+			<Dropdown align="right">
+				<span class="login">log in</span>
+				<Icon size={18} name="chevron-down" />
+
+				{#snippet dropdown()}
+					<HoverMenu>
+						<button onclick={login}>Log in with GitHub</button>
+					</HoverMenu>
+				{/snippet}
+			</Dropdown>
 		{/if}
 	</div>
 </SecondaryNav>
@@ -256,6 +263,11 @@
 		display: flex;
 		align-items: center;
 		gap: 0.2rem;
+		font: var(--sk-font-ui-medium);
+
+		.login {
+			padding: 0em 0 0 0.4rem;
+		}
 	}
 
 	button {
@@ -271,20 +283,6 @@
 		line-height: 1;
 		background-size: 1.8rem;
 		z-index: 999;
-
-		&.login {
-			width: auto;
-			padding: 0 0.4rem;
-
-			&::before {
-				content: '';
-				width: 1.8rem;
-				height: 1.8rem;
-				margin: 0 0.5rem 0 0;
-				background: currentColor;
-				mask: url(icons/user) no-repeat 50% 50%;
-			}
-		}
 	}
 
 	.icon:hover,
