@@ -14,4 +14,30 @@ describe('render_content_markdown', () => {
 
 		expect(html).toContain(expected);
 	});
+
+	test('does not break twoslash popovers inside highlighted lines', async () => {
+		const html = await render_content_markdown(
+			'test.md',
+			[
+				'```js',
+				'/**',
+				' * @param {{',
+				' *   message: string;',
+				' * }} body',
+				' */',
+				'function fail(body) {}',
+				'',
+				"+++fail({ message: 'something went wrong' });+++",
+				'```'
+			].join('\n')
+		);
+
+		const start = html.indexOf('<span class="highlight add">');
+		const line = html.slice(start, html.indexOf('</code>', start));
+
+		expect(line).toContain('<span class="twoslash-popover"');
+		expect(line).toContain('message');
+		expect(line.match(/class="highlight add"/g)).toHaveLength(1);
+		expect(line.match(/<span/g)?.length).toBe(line.match(/<\/span>/g)?.length);
+	});
 });
