@@ -37,7 +37,7 @@ export const config: VercelConfig = {
 	],
 	headers: [
 		routes.header(
-			'/*',
+			'/(.*)',
 			process.env.VERCEL_GIT_COMMIT_REF === 'main'
 				? []
 				: [{ key: 'X-Robots-Tag', value: 'noindex' }]
