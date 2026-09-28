@@ -63,11 +63,12 @@
 	);
 
 	async function copy_selected() {
-		if (!destination) return;
+		const target = destination;
+		if (!target) return;
 		copying = true;
 
 		try {
-			await api.copy(selected, destination, () => login(provider_of(destination)));
+			await api.copy(selected, target, () => login(provider_of(target)));
 			selected = [];
 			await invalidateAll();
 		} catch (e) {

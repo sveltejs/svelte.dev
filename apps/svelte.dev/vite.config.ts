@@ -80,10 +80,8 @@ const plugins: PluginOption[] = [
 		experimental: {
 			remoteFunctions: true,
 			...(is_kit_2
-				? {
-						// @ts-expect-error this is invalid in Kit 3 but valid in Kit 2
-						explicitEnvironmentVariables: true
-					}
+				? // cast: only typed in some Kit versions
+					({ explicitEnvironmentVariables: true } as object)
 				: undefined)
 		}
 	}) as PluginOption

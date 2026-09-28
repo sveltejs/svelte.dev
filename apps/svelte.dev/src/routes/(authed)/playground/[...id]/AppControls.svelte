@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import UserMenu from '../../UserMenu.svelte';
-	import { Icon } from '@sveltejs/site-kit/components';
+	import { Dropdown, HoverMenu, Icon } from '@sveltejs/site-kit/components';
 	import { isMac } from '#lib/utils/compat.js';
 	import { get_app_context } from '../../app-context';
 	import type { Accounts, Gist } from '#lib/db/types.d.ts';
@@ -247,23 +247,17 @@
 		{#if logged_in}
 			<UserMenu {accounts} {destination} />
 		{:else}
-			<div class="login">
-				<span>log in</span>
-				<button
-					class="raised icon tooltip"
-					onclick={() => login('atproto')}
-					aria-label="log in with the Atmosphere"
-				>
-					<span data-icon="atproto"></span>
-				</button>
-				<button
-					class="raised icon tooltip"
-					onclick={() => login('github')}
-					aria-label="log in with GitHub"
-				>
-					<span data-icon="github"></span>
-				</button>
-			</div>
+			<Dropdown align="right">
+				<span class="login">log in</span>
+				<Icon size={18} name="chevron-down" />
+
+				{#snippet dropdown()}
+					<HoverMenu>
+						<button onclick={() => login('atproto')}>Log in with the Atmosphere</button>
+						<button onclick={() => login('github')}>Log in with GitHub</button>
+					</HoverMenu>
+				{/snippet}
+			</Dropdown>
 		{/if}
 	</div>
 </SecondaryNav>
@@ -273,6 +267,11 @@
 		display: flex;
 		align-items: center;
 		gap: 0.2rem;
+		font: var(--sk-font-ui-medium);
+
+		.login {
+			padding: 0em 0 0 0.4rem;
+		}
 	}
 
 	button {
@@ -288,18 +287,6 @@
 		line-height: 1;
 		background-size: 1.8rem;
 		z-index: 999;
-	}
-
-	.login {
-		display: flex;
-		align-items: center;
-		gap: 0.2rem;
-		font: var(--sk-font-ui-small);
-		color: var(--sk-fg-3);
-
-		span {
-			margin: 0 0.3rem 0 0.4rem;
-		}
 	}
 
 	.icon:hover,

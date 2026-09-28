@@ -58,6 +58,7 @@
 		"@sveltejs/sv-utils": "^0.3.2",
 		"@sveltejs/vite-plugin-svelte": "^7.2.0",
 		"@types/node": "catalog:",
+		"@vercel/config": "^0.7.2",
 		"browserslist": "^4.28.1",
 		"chokidar": "^5.0.0",
 		"docs-types": "workspace:*",

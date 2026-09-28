@@ -25,6 +25,7 @@
 
 	let menu_height = $state(0);
 	let universal_menu_inner_height = $state(0);
+	let context_menu_inner_height = $state(0);
 	let ready = $state(false);
 
 	let universal_menu: HTMLElement | undefined = $state();
@@ -61,12 +62,16 @@
 		<div
 			class="menu-background"
 			class:ready
-			style:height={show_context_menu ? '100%' : `${universal_menu_inner_height}px`}
+			style:height={show_context_menu
+				? `calc(${context_menu_inner_height}px + var(--context-padding))`
+				: `${universal_menu_inner_height}px`}
 		></div>
 
 		<div
 			class="clip"
 			style:--height-difference="{menu_height - universal_menu_inner_height}px"
+			style:--context-height-difference="calc({menu_height - context_menu_inner_height}px -
+			var(--context-padding))"
 			ontransitionstart={(e) => {
 				const target = e.target as HTMLElement;
 
@@ -77,7 +82,7 @@
 				// are constrained to the menu background, but only while the transition
 				// is running, otherwise it prevents the contents from being scrolled
 				const a = 'calc(var(--height-difference) + 1px)';
-				const b = '1px';
+				const b = 'calc(var(--context-height-difference) + 1px)';
 
 				const start = show_context_menu ? a : b;
 				const end = show_context_menu ? b : a;
@@ -160,6 +165,7 @@
 					{#if current}
 						<MobileSubMenu
 							bind:this={nav_context_instance}
+							bind:height={context_menu_inner_height}
 							title={current.title}
 							contents={current.sections}
 						/>
@@ -183,6 +189,9 @@
 
 <style>
 	.menu {
+		/* space beneath the context menu, see `.context` */
+		--context-padding: 2rem;
+
 		display: block;
 		position: fixed;
 		left: 0px;
@@ -295,7 +304,7 @@
 		position: relative;
 		height: 100%;
 		bottom: -7px;
-		padding-bottom: 2rem;
+		padding-bottom: var(--context-padding);
 	}
 
 	.back-button {
