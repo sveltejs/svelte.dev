@@ -48,6 +48,10 @@
 		"./console": {
 			"types": "./src/lib/Output/console/index.ts",
 			"svelte": "./src/lib/Output/console/index.ts"
+		},
+		"./typescript": {
+			"types": "./src/lib/workers/typescript-strip-types.ts",
+			"default": "./src/lib/workers/typescript-strip-types.ts"
 		}
 	},
 	"files": [
