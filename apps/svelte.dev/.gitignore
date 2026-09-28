@@ -8,6 +8,7 @@
 /src/routes/_home/Supporters/donors.js
 /scripts/svelte-template
 /static/svelte-template.json
+/static/svelte-tailwind-template.json
 
 # git-repositories of synced docs go here
 /repos/

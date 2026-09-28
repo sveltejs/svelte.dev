@@ -1,10 +1,6 @@
 import { existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
-
-interface HeaderRule {
-	source: string;
-	headers: Array<{ key: string; value: string }>;
-}
+import { routes, type VercelConfig, type HeaderRule } from '@vercel/config/v1';
 
 const domain = 'https://svelte.dev';
 const project_directory = existsSync(join(process.cwd(), 'content', 'docs'))
@@ -24,40 +20,32 @@ export function create_llms_canonical(directory = docs_directory): HeaderRule[] 
 			const page = file.replace(/^\d+-/, '').replace(/\.md$/, '');
 			const canonical = `${domain}/docs/${topic}/${page}`;
 
-			return {
-				source: `/docs/${topic}/${page}/llms.txt`,
-				headers: [{ key: 'Link', value: `<${canonical}>; rel="canonical"` }]
-			};
+			return routes.header(`/docs/${topic}/${page}/llms.txt`, [
+				{ key: 'Link', value: `<${canonical}>; rel="canonical"` }
+			]);
 		})
 		.filter((header) => header !== null)
 		.sort((a, b) => a.source.localeCompare(b.source));
 }
 
-export const config = {
+export const config: VercelConfig = {
 	rewrites: [
-		{
-			source: '/opencode/schema.json',
-			destination:
-				'https://raw.githubusercontent.com/sveltejs/ai-tools/refs/heads/main/packages/opencode/schema.json'
-		}
+		routes.rewrite(
+			'/opencode/schema.json',
+			'https://raw.githubusercontent.com/sveltejs/ai-tools/refs/heads/main/packages/opencode/schema.json'
+		)
 	],
 	headers: [
-		{
-			source: '/_app/immutable/workers/(.*)',
-			headers: [
-				{ key: 'cross-origin-opener-policy', value: 'same-origin' },
-				{ key: 'cross-origin-embedder-policy', value: 'require-corp' },
-				{ key: 'cross-origin-resource-policy', value: 'cross-origin' }
-			]
-		},
-		{
-			source: '/tutorial/kit/(.*)',
-			headers: [
-				{ key: 'cross-origin-opener-policy', value: 'same-origin' },
-				{ key: 'cross-origin-embedder-policy', value: 'require-corp' },
-				{ key: 'cross-origin-resource-policy', value: 'cross-origin' }
-			]
-		},
+		routes.header('/_app/immutable/workers/(.*)', [
+			{ key: 'cross-origin-opener-policy', value: 'same-origin' },
+			{ key: 'cross-origin-embedder-policy', value: 'require-corp' },
+			{ key: 'cross-origin-resource-policy', value: 'cross-origin' }
+		]),
+		routes.header('/tutorial/kit/(.*)', [
+			{ key: 'cross-origin-opener-policy', value: 'same-origin' },
+			{ key: 'cross-origin-embedder-policy', value: 'require-corp' },
+			{ key: 'cross-origin-resource-policy', value: 'cross-origin' }
+		]),
 		...create_llms_canonical()
 	],
 	...(process.env.VERCEL_GIT_COMMIT_REF === 'main'

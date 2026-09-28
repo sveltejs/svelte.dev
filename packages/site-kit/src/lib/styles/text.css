@@ -1,7 +1,7 @@
 /* TODO all this should probably be moved into Text.svelte */
 
 /** make long comments wrap on mobile */
-:where(.token.comment.wrapped) {
+:where(.token.comment.wrapped, .comment.wrapped) {
 	display: block;
 	white-space: pre-wrap;
 	padding-left: calc(var(--indent) + 2ch);

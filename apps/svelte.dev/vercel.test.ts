@@ -2,6 +2,7 @@ import { mkdtempSync, mkdirSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { afterEach, expect, test, vi } from 'vitest';
+import { routes } from '@vercel/config/v1';
 import { config, create_llms_canonical } from './vercel.ts';
 
 afterEach(() => {
@@ -20,38 +21,34 @@ test('generates canonical headers for per-document llms routes', () => {
 	writeFileSync(join(directory, 'kit', '20-core-concepts', '.generated', 'reference.md'), '');
 
 	expect(create_llms_canonical(directory)).toEqual([
-		{
-			source: '/docs/kit/remote-functions/llms.txt',
-			headers: [
-				{
-					key: 'Link',
-					value: '<https://svelte.dev/docs/kit/remote-functions>; rel="canonical"'
-				}
-			]
-		},
-		{
-			source: '/docs/svelte/getting-started/llms.txt',
-			headers: [
-				{
-					key: 'Link',
-					value: '<https://svelte.dev/docs/svelte/getting-started>; rel="canonical"'
-				}
-			]
-		}
+		routes.header('/docs/kit/remote-functions/llms.txt', [
+			{
+				key: 'Link',
+				value: '<https://svelte.dev/docs/kit/remote-functions>; rel="canonical"'
+			}
+		]),
+		routes.header('/docs/svelte/getting-started/llms.txt', [
+			{
+				key: 'Link',
+				value: '<https://svelte.dev/docs/svelte/getting-started>; rel="canonical"'
+			}
+		])
 	]);
 });
 
 test('preserves existing Vercel configuration and generates unique rules within the limit', () => {
 	expect(config.rewrites).toEqual([
-		{
-			source: '/opencode/schema.json',
-			destination:
-				'https://raw.githubusercontent.com/sveltejs/ai-tools/refs/heads/main/packages/opencode/schema.json'
-		}
+		routes.rewrite(
+			'/opencode/schema.json',
+			'https://raw.githubusercontent.com/sveltejs/ai-tools/refs/heads/main/packages/opencode/schema.json'
+		)
 	]);
-	const canonical_headers = config.headers.slice(2);
+
+	expect(config.git).toEqual({ deploymentEnabled: { next: false } });
+
+	const canonical_headers = config.headers!.slice(2);
 	expect(canonical_headers.length).toBeGreaterThan(0);
-	expect(config.headers.length).toBeLessThanOrEqual(2048);
+	expect(config.headers!.length).toBeLessThanOrEqual(2048);
 	expect(new Set(canonical_headers.map((header) => header.source)).size).toBe(
 		canonical_headers.length
 	);
