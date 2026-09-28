@@ -1260,7 +1260,7 @@ async function syntax_highlight({
 
 function indent_multiline_comments(str: string) {
 	return str.replace(
-		/^(\s+)<span class="(?:tok )?comment">([\s\S]+?)<\/span>\n/gm,
+		/^(\s+)<span class="(?:tok )?comment">([^<]*?)<\/span>\n/gm,
 		(_, intro_whitespace, content) => {
 			// we use some CSS trickery to make comments break onto multiple lines while preserving indentation
 			const lines = (intro_whitespace + content + '').split('\n');

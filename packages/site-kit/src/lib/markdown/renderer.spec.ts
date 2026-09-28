@@ -14,4 +14,28 @@ describe('render_content_markdown', () => {
 
 		expect(html).toContain(expected);
 	});
+
+	test('preserves the line break after a highlighted JSDoc comment', async () => {
+		const html = await render_content_markdown(
+			'test.md',
+			'```js\nlet value = 1;\n\n/** @type {number} */\nexport const count = value;\n```'
+		);
+
+		const js = html.match(/<pre data-js[^]*?<\/pre>/)?.[0];
+		expect(js).toMatch(/<span class="comment">\*\/<\/span>\n<span class="keyword">export<\/span>/);
+	});
+
+	test('keeps multiline comments wrapped and indented', async () => {
+		const html = await render_content_markdown(
+			'test.md',
+			'```js\nconst value = 1;\n\n/**\n * A multiline comment\n */\nexport const result = value;\n```'
+		);
+
+		const js = html.match(/<pre data-js[^]*?<\/pre>/)?.[0];
+		expect(js).toContain('<span class="comment wrapped" style="--indent: 0ch">/**</span>');
+		expect(js).toContain(
+			'<span class="comment wrapped" style="--indent: 1ch"> * A multiline comment</span>'
+		);
+		expect(js).toContain('<span class="comment wrapped" style="--indent: 1ch"> */</span>');
+	});
 });
