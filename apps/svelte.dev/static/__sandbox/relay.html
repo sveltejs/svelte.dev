@@ -59,7 +59,13 @@
 
 				if (e.data.type === 'init') {
 					worker?.terminate();
-					worker = new Worker(new URL(e.data.worker, location.origin), { type: 'module' });
+					// the worker's code can live on a different origin (i.e. the svelte.dev
+					// deployment), so we create a same-origin blob worker that imports it
+					const src = URL.createObjectURL(
+						new Blob([`import ${JSON.stringify(e.data.worker)};`], { type: 'text/javascript' })
+					);
+
+					worker = new Worker(src, { type: 'module' });
 
 					worker.onerror = (event) => {
 						post({ type: 'relay-error', message: event.message || 'Sandbox worker failed' });

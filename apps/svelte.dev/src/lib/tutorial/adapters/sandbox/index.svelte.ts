@@ -116,11 +116,8 @@ export async function create(): Promise<Adapter> {
 		};
 	});
 
-	// the worker must be same-origin with the relay, so we pass a root-relative URL
-	const worker = new URL(worker_url, location.href);
-
 	relay.contentWindow!.postMessage(
-		{ type: 'init', worker: worker.pathname + worker.search, port: channel.port2 },
+		{ type: 'init', worker: new URL(worker_url, location.href).href, port: channel.port2 },
 		origin,
 		[channel.port2]
 	);

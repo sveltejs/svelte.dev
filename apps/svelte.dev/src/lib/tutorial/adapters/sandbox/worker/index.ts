@@ -111,8 +111,8 @@ async function boot() {
 		post({ type: 'status', text: 'loading packages', value: 0.2 });
 
 		const [packages, compiler] = await Promise.all([
-			fetch(packages_url).then((r) => r.json()),
-			fetch(compiler_url).then((r) => r.text()),
+			fetch(new URL(packages_url, import.meta.url)).then((r) => r.json()),
+			fetch(new URL(compiler_url, import.meta.url)).then((r) => r.text()),
 			lexer_ready
 		]);
 
