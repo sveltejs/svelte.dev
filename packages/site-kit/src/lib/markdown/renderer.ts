@@ -1239,6 +1239,10 @@ async function syntax_highlight({
 		html = highlight_source(source, language);
 	}
 
+	// Stash popovers so that the post-processing below doesn't mangle their (multiline) contents
+	const popovers: string[] = [];
+	html = stash_popovers(html, popovers);
+
 	// Normalize Twinkleplop output for the existing code-block annotations.
 	html = html
 		// put whitespace outside `<span>` elements, so that
@@ -1253,9 +1257,31 @@ async function syntax_highlight({
 	html = highlight_all_spans(html, delimiter_patterns['+++'], 'highlight add');
 	html = highlight_all_spans(html, delimiter_patterns[':::'], 'highlight');
 
-	return indent_multiline_comments(html)
+	html = indent_multiline_comments(html)
 		.replace(/\/\*…\*\//g, '…')
 		.replace('<pre', `<pre data-language="${language}"`);
+
+	return html.replace(/\uE000(\d+)\uE001/g, (_, index) => popovers[+index]);
+}
+
+function stash_popovers(html: string, popovers: string[]) {
+	let result = '';
+	let position = 0;
+
+	while (true) {
+		const start = html.indexOf('<span class="twoslash-popover"', position);
+		if (start === -1) break;
+
+		const end = find_closing_span(html, start);
+		if (end === -1) break;
+
+		const close = end + '</span>'.length;
+		result += html.slice(position, start) + `\uE000${popovers.length}\uE001`;
+		popovers.push(html.slice(start, close));
+		position = close;
+	}
+
+	return result + html.slice(position);
 }
 
 function indent_multiline_comments(str: string) {
