@@ -218,7 +218,7 @@ function stringify_module(module: Modules[0]) {
 
 function stringify_expanded_type(type: Declaration) {
 	return (
-		type.comment +
+		(type.comment ? `${type.comment}\n\n` : '') +
 		type.overloads
 			.map((overload) =>
 				overload.children

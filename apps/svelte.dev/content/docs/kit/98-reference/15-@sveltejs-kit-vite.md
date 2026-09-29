@@ -50,7 +50,9 @@ function sveltekit(config?: Config): Promise<Plugin[]>;
 
 ## Config
 
-An extension of [`vite-plugin-svelte`'s options](https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/config.md#svelte-options).## adapter
+An extension of [`vite-plugin-svelte`'s options](https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/config.md#svelte-options).
+
+## adapter
 
 <div class="ts-block-property-bullets">
 
