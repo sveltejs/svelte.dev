@@ -301,9 +301,11 @@ function find_svelte_references(
 
 	// ESTree's Program type omits the offsets provided by the Svelte parser.
 	const module_content = ast.module?.content as unknown as
-		{ start: number; end: number } | undefined;
+		| { start: number; end: number }
+		| undefined;
 	const instance_content = ast.instance?.content as unknown as
-		{ start: number; end: number } | undefined;
+		| { start: number; end: number }
+		| undefined;
 	const module_source = module_content
 		? source.slice(module_content.start, module_content.end)
 		: '';
