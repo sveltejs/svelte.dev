@@ -24,6 +24,7 @@ export default defineConfig({
 			adapter: adapter({
 				// See below for an explanation of these options
 				edge: false,
+				nodeVersion: 'nodejs24.x',
 				split: false
 			})
 		})
@@ -48,6 +49,14 @@ If the `netlify.toml` file or the `build.publish` value is missing, a default va
 ### `edge`
 
 If `true`, your app will be deployed as a [Netlify Edge Function](https://docs.netlify.com/build/edge-functions/overview/) rather than the standard Node-based function.
+
+Cannot be combined with the `nodeVersion` option.
+
+### `nodeVersion`
+
+The [Node.js version](https://docs.netlify.com/build/functions/configuration/#nodejs-version-for-runtime) used for the serverless function. The supported values are `'nodejs22.x'` and `'nodejs24.x'`.
+
+Cannot be combined with the `edge` option.
 
 ### `split`
 
