@@ -92,7 +92,7 @@ The relay and service worker live in a separate app, `apps/sandbox`, deployed to
 
 ## Known gaps and TODOs
 
-- **Deployment.** `apps/sandbox` is deployed as the `svelte-sandbox` Vercel project on `*.svelte-sandbox.link` (see `apps/sandbox/README.md`). It's verified working with `svelte-dev` preview deployments. Previews of `next-svelte-dev` are behind deployment protection, which blocks the credential-less, cross-origin worker fetch, so the sandbox won't work on those preview URLs.
+- **Deployment.** `apps/sandbox` is deployed manually, with `vc deploy --prod`, as the `svelte-sandbox` Vercel project on `*.svelte-sandbox.link`. It isn't Git-connected; `apps/sandbox/README.md` explains why. It's verified working with `svelte-dev` preview deployments. Previews of `next-svelte-dev` are behind deployment protection, which blocks the credential-less, cross-origin worker fetch, so the sandbox won't work on those preview URLs.
 - **Cross-origin isolation.** The tutorial page is only COOP/COEP-isolated for WebContainers. While that's still the case, the relay, the worker scripts and every service-worker response have to carry COEP/CORP headers. That is why `vite.config.ts`, `vercel.ts` and `apps/sandbox/vercel.json` set them, and `__sandbox_sw.js` adds them itself. Once WebContainers are gone, all of it can be removed.
 - **Browser coverage.** Only headless Chrome has been tested. Still to test:
   - Firefox

@@ -15,23 +15,20 @@ See `apps/svelte.dev/src/lib/tutorial/adapters/sandbox/README.md` for how the wh
 
 This is the `svelte-sandbox` Vercel project in the `svelte` team:
 
-- Root directory: `apps/sandbox`
-- Framework preset: Other
-- No build or install step (see `vercel.json`)
-- Git: connected to `sveltejs/svelte.dev`. Production deploys from `main`. `ignoreCommand` skips builds for commits that don't touch this directory.
+- Framework preset: Other, with no build or install step (see `vercel.json`)
 - Domains: `svelte-sandbox.link` and `*.svelte-sandbox.link`. The domain is registered with Vercel and uses Vercel's nameservers, which wildcard domains require.
 - Deployment protection applies to everything except custom domains, so the `*.vercel.app` URLs need a login, but `*.svelte-sandbox.link` is public.
+- **It isn't connected to Git, and it's deployed manually**:
 
-svelte.dev deployments (production, `next.svelte.dev` and previews) all use the _production_ sandbox. Changes here take effect once they reach `main`. To ship them sooner, promote the branch's preview deployment:
+  ```sh
+  cd apps/sandbox
+  vc link --project svelte-sandbox --scope svelte  # once
+  vc deploy --prod --scope svelte
+  ```
 
-```sh
-vc ls svelte-sandbox --scope svelte                   # find the preview deployment for your branch
-vc promote <deployment-url> --scope svelte
-```
+  This is deliberate. A Git-connected monorepo project needs its Root Directory set to `apps/sandbox`. Vercel checks that the directory exists before running any ignore step, so every push to a branch that doesn't contain `apps/sandbox` fails with a red check: `main`, `next`, older PRs and the automated `preview-kit-*` branches. The app is two small files that rarely change, and changes are protocol-sensitive anyway, so an explicit deploy is no great loss. Once `apps/sandbox` has been on `main` long enough that stale branches don't matter, we could revisit this: connect Git, set the root directory, and enable "skip unaffected projects".
 
-Don't run `vc deploy` from this directory. Because the project's root directory is `apps/sandbox`, the CLI looks for `apps/sandbox/apps/sandbox`.
-
-Keep changes backwards-compatible where possible. Otherwise, bump `VERSION`, and remember that older svelte.dev deployments will stop working with the new sandbox.
+svelte.dev deployments (production, `next.svelte.dev` and previews) all use the _production_ sandbox, so a deploy affects all of them. Keep changes backwards-compatible where possible. Otherwise, bump `VERSION`, and remember that older svelte.dev deployments will stop working with the new sandbox.
 
 `svelte-sandbox.link` is deliberately a different site from `svelte.dev`. If it were a subdomain like `sandbox.svelte.dev`, user code would be same-site with svelte.dev, and could make requests that carry svelte.dev's `SameSite` cookies.
 

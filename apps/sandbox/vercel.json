@@ -4,7 +4,6 @@
 	"installCommand": "",
 	"buildCommand": "",
 	"outputDirectory": "public",
-	"ignoreCommand": "git diff --quiet HEAD^ HEAD -- .",
 	"headers": [
 		{
 			"source": "/__sandbox_sw.js",
