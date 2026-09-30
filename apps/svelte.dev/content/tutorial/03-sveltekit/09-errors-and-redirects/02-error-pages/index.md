@@ -2,7 +2,7 @@
 title: Error pages
 ---
 
-When something goes wrong inside a `load` function, SvelteKit renders an error page.
+When something goes wrong inside a `load` function, or during rendering, SvelteKit renders an error page.
 
 The default error page is somewhat bland. We can customize it by creating a `src/routes/+error.svelte` component:
 

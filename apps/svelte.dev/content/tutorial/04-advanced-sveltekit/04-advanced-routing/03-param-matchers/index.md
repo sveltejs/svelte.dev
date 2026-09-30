@@ -3,7 +3,7 @@ title: Param matchers
 path: /colors/ff3e00
 ---
 
-To prevent the router from matching on invalid input, you can specify a _matcher_. For example, you might want a route like `/colors/[value]` to match hex values like `/colors/ff3e00` but not named colors like `/colors/octarine` or any other arbitrary input.
+To prevent the router from matching on invalid input, you can specify a _matcher_. For example, you might want a route like `/colors/[color]` to match hex values like `/colors/ff3e00` but not named colors like `/colors/octarine` or any other arbitrary input.
 
 Matchers are defined in a `src/params.js` file. Create it and use `defineParams` to add a `hex` matcher:
 
@@ -25,3 +25,5 @@ Then, to use the new matcher, rename `src/routes/colors/[color]` to `src/routes/
 Now, whenever someone navigates to that route, SvelteKit will verify that `color` is a valid `hex` value and use the value returned by the matcher. If it returns `undefined`, SvelteKit will try to match other routes, before eventually returning a 404.
 
 > [!NOTE] Matchers run both on the server and in the browser.
+
+> [!NOTE] Instead of a function, a matcher can also be a [Standard Schema](https://standardschema.dev) such as a [Valibot](https://valibot.dev) or [Zod](https://zod.dev) schema. See the [documentation](/docs/kit/advanced-routing#Matching) for more.
