@@ -138,7 +138,7 @@ function render_declaration(declaration: Declaration, full: boolean) {
 		declaration.overloads
 			.map((overload) => {
 				const children = full
-					? overload.children?.map((val) => stringify(val, 'dts')).join('\n\n')
+					? overload.children?.map((val) => stringify(val, declaration.name, 'dts')).join('\n\n')
 					: '';
 
 				return `<div class="ts-block">${fence(overload.snippet, 'dts')}${children}</div>\n\n`;
@@ -232,7 +232,7 @@ function stringify_expanded_type(type: Declaration) {
 
 						if (child.children) {
 							section += `\n\n<div class="ts-block-property-children">\n\n${child.children
-								.map((v) => stringify(v))
+								.map((v) => stringify(v, child.name))
 								.join('\n')}\n\n</div>`;
 						}
 
@@ -249,6 +249,7 @@ function stringify_expanded_type(type: Declaration) {
  */
 function stringify(
 	member: TypeElement,
+	parent_name: string,
 	lang: keyof typeof TWINKLEPLOP_LANGUAGE_MAP = 'ts'
 ): string {
 	if (!member) return '';
@@ -272,12 +273,14 @@ function stringify(
 	const child_block =
 		(member.children?.length ?? 0) > 0
 			? `\n\n<div class="ts-block-property-children">${member.children
-					?.map((val) => stringify(val, lang))
+					?.map((val) => stringify(val, member.name, lang))
 					.join('\n')}</div>`
 			: '';
 
 	return (
-		`<div class="ts-block-property">${fence(member.snippet, lang)}` +
+		`<div class="ts-block-property hover-hitbox" id="${parent_name}-${member.name}" style="position: relative">\n` +
+		`<a href="#${parent_name}-${member.name}" class="permalink permalink-property" aria-label="permalink"></a>\n` +
+		`${fence(member.snippet, lang)}` +
 		`<div class="ts-block-property-details">` +
 		bullet_block +
 		comment +
