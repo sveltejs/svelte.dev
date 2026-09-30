@@ -49,13 +49,6 @@ export const config: VercelConfig = {
 			{ key: 'cross-origin-embedder-policy', value: 'require-corp' },
 			{ key: 'cross-origin-resource-policy', value: 'cross-origin' }
 		]),
-		// TODO the sandbox only needs these while the tutorial page is cross-origin isolated,
-		// which is only necessary for WebContainers
-		routes.header('/__sandbox/(.*)', [
-			{ key: 'cross-origin-opener-policy', value: 'same-origin' },
-			{ key: 'cross-origin-embedder-policy', value: 'require-corp' },
-			{ key: 'cross-origin-resource-policy', value: 'cross-origin' }
-		]),
 		routes.header('/tutorial/kit/(.*)', [
 			{ key: 'cross-origin-opener-policy', value: 'same-origin' },
 			{ key: 'cross-origin-embedder-policy', value: 'require-corp' },

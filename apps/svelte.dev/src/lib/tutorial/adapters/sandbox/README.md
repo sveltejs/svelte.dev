@@ -39,22 +39,30 @@ For comparison, `common.zip` is 18.8MB, before counting the WebContainer runtime
 ## Architecture
 
 ```
-tutorial page (svelte.dev)
- ├─ <iframe hidden> relay        https://<session>.<sandbox-domain>/__sandbox/relay.html
+tutorial page (svelte.dev, or a preview deployment)
+ ├─ <iframe hidden> relay        https://<session>.svelte-sandbox.link/__sandbox/relay.html
  │    ├─ registers service worker   /__sandbox_sw.js (scope /)
- │    └─ creates Worker             worker/index.ts  ← the "dev server"
- └─ <iframe> preview             https://<session>.<sandbox-domain>/<path>
+ │    └─ creates Worker             blob: → import "https://svelte.dev/_app/immutable/workers/…"  ← the "dev server"
+ └─ <iframe> preview             https://<session>.svelte-sandbox.link/<path>
 ```
 
-- **Separate origin, one per session.** The preview has to own `/` because tutorial code uses root-relative URLs. It also needs its own origin for isolation. Each page load picks a random subdomain, so tabs don't share a service worker or BroadcastChannel. The relay unregisters its service worker on `pagehide`. In dev this is `http://<id>.localhost:<port>`: browsers resolve `*.localhost` to loopback and Vite allows it. In prod it's a placeholder (`https://*.svelte-sandbox.dev`), and **a real wildcard domain needs setting up**. That domain must serve the same deployment, because it needs `/__sandbox/*`, `/__sandbox_sw.js` and `/_app/immutable/workers/*`.
-- **Service worker** (`static/__sandbox_sw.js`) forwards these to the relay, then the worker, over a MessagePort:
+The relay and service worker live in a separate app, `apps/sandbox`, deployed to `*.svelte-sandbox.link`. The worker and its assets come from whichever svelte.dev deployment embeds the relay. That way the sandbox app is stable, and preview deployments of svelte.dev bring their own worker.
+
+- **Separate origin, one per session.** The preview has to own `/` because tutorial code uses root-relative URLs. It also needs its own origin for isolation. Each page load picks a random subdomain, so tabs don't share a service worker or BroadcastChannel. The relay unregisters its service worker on `pagehide`. In prod this is `https://<id>.svelte-sandbox.link`. In dev it's `http://<id>.localhost:<port>`: browsers resolve `*.localhost` to loopback, Vite allows it, and the `tutorial-sandbox` plugin in `vite.config.ts` serves `apps/sandbox/public` on those hosts. So there's still only one dev server.
+- **Service worker** (`apps/sandbox/public/__sandbox_sw.js`) forwards these to the relay, then the worker, over a MessagePort:
   - every navigation
   - every request from preview clients
   - every `/@ssr/*` request
 
   Requests from the relay and the worker (the worker's own code in dev, external fetches) go to the network.
 
-- **Relay** (`static/__sandbox/relay.html`) registers the service worker and creates the worker. It hands the worker a MessagePort from the tutorial page, so after that the page talks to the worker directly.
+- **Relay** (`apps/sandbox/public/__sandbox/relay.html`) registers the service worker and creates the worker. The worker is a same-origin `blob:` module that imports the real worker script from the embedding deployment. It's still controlled by the service worker, which it needs in order to load server modules. The relay hands the worker a MessagePort from the tutorial page, so after that the page talks to the worker directly. The relay also:
+  - only runs for parents on an allowlist: svelte.dev, `*.svelte.dev`, `*-svelte.vercel.app` previews and localhost
+  - only loads workers from the parent's own origin
+  - checks a protocol `VERSION` that the tutorial page sends. Bump it on both sides for incompatible changes.
+
+  The worker files on svelte.dev are served with `access-control-allow-origin: *` (see `vercel.ts`).
+
 - **Worker** (`worker/`):
   - `index.ts`:
     - file sync (`reset`/`update`) and HMR decisions
@@ -76,6 +84,7 @@ tutorial page (svelte.dev)
   - `kit.ts`: a port of `@sveltejs/kit/src/exports/vite/dev/index.js`, covering config, env, manifest generation and the SSR manifest, followed by `new Server(manifest).respond(request)`. **Server modules are loaded with native `import()`** of `/@ssr/...` URLs. Those requests go worker → service worker → relay → worker, so ESM semantics come for free: cycles, live bindings, errors. There is no custom module runner.
   - `patch.ts`: browsers silently drop "forbidden" headers (`cookie`, `origin`, `set-cookie`) from `Request`/`Response`. Inside the worker these are subclassed so that `headers` is an unguarded `Headers` object. Real cookies are never set, because the worker keeps its own jar.
   - `client.js`: served as `/@sandbox/client.js`. It implements `import.meta.hot` (accept, dispose, prune, on and `vite:beforeUpdate`) and the error overlay. It receives messages over `BroadcastChannel('sandbox-hmr')`.
+
 - **Build step** (`scripts/create-tutorial-sandbox/`) writes to `generated/` (gitignored):
   - `packages.json`: the runtime files of `svelte`, `@sveltejs/kit`, `devalue`, `esm-env`, `cookie` and `clsx`, taken from `scripts/create-tutorial-zip/common/node_modules`, so the versions match the WebContainer setup.
   - `kit-node.js`: SvelteKit's _node-side_ code, bundled with esbuild and with `node:fs`, `node:path` etc. replaced by an in-memory FS (`shims/`). It includes `create_manifest_data`, `write_client_manifest`, `write_server`, `create_env_modules`, config validation and the static analysis of page options. **We reuse SvelteKit's own routing and manifest logic rather than reimplementing it.** This `fs` is also the worker's virtual filesystem.
@@ -83,8 +92,9 @@ tutorial page (svelte.dev)
 
 ## Known gaps and TODOs
 
-- **Production domain.** It needs a wildcard domain that is cross-site from svelte.dev and serves this deployment. Nothing has been deployed yet.
-- **Cross-origin isolation.** The tutorial page is only COOP/COEP-isolated for WebContainers. While that's still the case, the relay, the worker scripts and every service-worker response have to carry COEP/CORP headers. That is why `vite.config.ts` and `vercel.ts` were touched, and `__sandbox_sw.js` adds the headers itself. Once WebContainers are gone, all of it can be removed.
+- **Deployment.** `apps/sandbox` needs a Vercel project with `svelte-sandbox.link` and `*.svelte-sandbox.link` (see `apps/sandbox/README.md`). Wildcard domains require Vercel's nameservers. Until that exists, the sandbox only works locally.
+- **Allowlist.** `*-svelte.vercel.app` is a loose match for preview deployments. It could be tightened to the actual project names, `svelte-*` and `next-svelte-*`.
+- **Cross-origin isolation.** The tutorial page is only COOP/COEP-isolated for WebContainers. While that's still the case, the relay, the worker scripts and every service-worker response have to carry COEP/CORP headers. That is why `vite.config.ts`, `vercel.ts` and `apps/sandbox/vercel.json` set them, and `__sandbox_sw.js` adds them itself. Once WebContainers are gone, all of it can be removed.
 - **Browser coverage.** Only headless Chrome has been tested. Still to test:
   - Firefox
   - Safari, and especially iOS, where WebContainers don't work at all

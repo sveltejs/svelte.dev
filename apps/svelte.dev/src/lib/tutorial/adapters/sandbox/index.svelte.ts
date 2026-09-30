@@ -3,7 +3,7 @@
 //
 // - a hidden 'relay' iframe on a separate 'sandbox' origin, which registers a
 //   service worker and creates the sandbox worker
-// - the service worker (static/__sandbox_sw.js), which intercepts requests from
+// - the service worker (apps/sandbox/public/__sandbox_sw.js), which intercepts requests from
 //   the preview iframe (also on the sandbox origin) and forwards them to the worker
 // - the sandbox worker (./worker), which holds the files in memory, compiles them,
 //   and runs SvelteKit's server runtime
@@ -14,6 +14,12 @@ import worker_url from './worker/index.ts?worker&url';
 import { escape_html } from '../../../utils/escape.js';
 import type { Adapter } from '#lib/tutorial/index.d.ts';
 import type { File, Item } from '@sveltejs/repl/workspace';
+
+/**
+ * The version of the protocol spoken between this page, the relay, the service worker
+ * and the sandbox worker. Must match `VERSION` in `apps/sandbox/public/__sandbox/relay.html`
+ */
+const VERSION = 1;
 
 export const state = new (class SandboxState {
 	progress = $state.raw({ value: 0, text: 'initialising' });
@@ -26,15 +32,16 @@ export const state = new (class SandboxState {
  * The preview must live on a different origin to the tutorial itself, both so
  * that it can own the root path (tutorial code uses root-relative URLs) and for
  * security. Each session gets its own subdomain, so that multiple tabs don't
- * share a service worker. In production this should be a dedicated wildcard
- * domain — locally, we use `*.localhost`, which browsers resolve to loopback
+ * share a service worker. In production this is `*.svelte-sandbox.link`, which
+ * serves `apps/sandbox` — locally, we use `*.localhost` (which browsers resolve
+ * to loopback) and the svelte.dev dev server serves `apps/sandbox` itself
  */
 function get_sandbox_origin() {
 	const local = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
 
 	const template = local
 		? `${location.protocol}//*.localhost:${location.port}`
-		: 'https://*.svelte-sandbox.dev'; // TODO this domain doesn't exist yet
+		: 'https://*.svelte-sandbox.link';
 
 	const id = Math.random().toString(36).slice(2, 12);
 	return template.replace('*', id);
@@ -117,7 +124,12 @@ export async function create(): Promise<Adapter> {
 	});
 
 	relay.contentWindow!.postMessage(
-		{ type: 'init', worker: new URL(worker_url, location.href).href, port: channel.port2 },
+		{
+			type: 'init',
+			version: VERSION,
+			worker: new URL(worker_url, location.href).href,
+			port: channel.port2
+		},
 		origin,
 		[channel.port2]
 	);

@@ -26,6 +26,8 @@ importers:
 
   .: {}
 
+  apps/sandbox: {}
+
   apps/svelte.dev:
     dependencies:
       '@jridgewell/sourcemap-codec':
