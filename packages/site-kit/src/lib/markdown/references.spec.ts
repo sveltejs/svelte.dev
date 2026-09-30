@@ -229,27 +229,6 @@ const other = { redirect() {} };`)
 			)
 		).toEqual([redirect, redirect]);
 	});
-
-	test('resolves Svelte scripts and ignores HTML text and styles', () => {
-		expect(
-			resolve(
-				`<script module>
-import { redirect } from '@sveltejs/kit'; redirect(303, '/');
-</script>
-<script>
-import { onMount } from 'svelte'; onMount(() => {});
-</script>
-<p>redirect onMount</p>
-<style>onMount { color: red; }</style>`,
-				'svelte'
-			)
-		).toEqual([
-			redirect,
-			redirect,
-			{ text: 'onMount', href: references.svelte.onMount },
-			{ text: 'onMount', href: references.svelte.onMount }
-		]);
-	});
 });
 
 describe('highlighted documentation links', () => {

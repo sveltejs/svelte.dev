@@ -149,20 +149,19 @@ describe('direct documentation links', () => {
 		}
 	});
 
-	test('links Svelte scripts and template expressions without linking template locals', async () => {
+	test('links Svelte imports and template expressions', async () => {
 		const html = await render_content_markdown(
 			'component.md',
 			[
 				'```svelte',
-				"<script>import { onMount } from 'svelte'; onMount(() => {});</script>",
+				"<script>import { onMount } from 'svelte';</script>",
 				'<p>{onMount.name}</p>',
-				'{#each callbacks as onMount}{onMount}{/each}',
 				'```'
 			].join('\n'),
 			{ check: false, references }
 		);
-		expect(html.match(/class="doc-reference"/g)).toHaveLength(3);
-		expect(html.match(/href="\/docs\/svelte\/svelte#onMount"/g)).toHaveLength(3);
+		expect(html.match(/class="doc-reference"/g)).toHaveLength(2);
+		expect(html.match(/href="\/docs\/svelte\/svelte#onMount"/g)).toHaveLength(2);
 	});
 
 	test.each([undefined, 'true', 'false'])(

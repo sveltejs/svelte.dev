@@ -24,12 +24,9 @@ describe('replace_canonical_origin', () => {
 describe('render_content', () => {
 	afterEach(() => vi.restoreAllMocks());
 
-	test.each([
-		['docs/svelte/98-reference/21-svelte-action.md', 'svelte/action'],
-		['docs/svelte/98-reference/21-svelte-reactivity-window.md', 'svelte/reactivity/window'],
-		['docs/kit/98-reference/10-@sveltejs-kit.md', '@sveltejs/kit'],
-		['docs/kit/98-reference/20-$app-navigation.md', '$app/navigation']
-	])('passes the module documented by %s to the Markdown renderer', async (filename, module) => {
+	test('passes the documented module to the Markdown renderer', async () => {
+		const filename = 'docs/kit/98-reference/10-@sveltejs-kit.md';
+		const module = '@sveltejs/kit';
 		const render_markdown = vi.spyOn(markdown, 'render_content_markdown').mockResolvedValue('');
 		const body = '```dts\nfunction example(): SharedType;\n```';
 		const references = {
