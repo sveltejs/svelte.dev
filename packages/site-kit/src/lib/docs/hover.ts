@@ -8,8 +8,16 @@ export function setupDocsHovers() {
 	onMount(() => {
 		let tooltip: any;
 		let hovered: HTMLSpanElement | null = null;
+		let frame: number | undefined;
+		let pointer_x = 0;
+		let pointer_y = 0;
 
 		function clear() {
+			if (frame !== undefined) {
+				cancelAnimationFrame(frame);
+				frame = undefined;
+			}
+
 			if (!tooltip) return;
 
 			unmount(tooltip);
@@ -53,16 +61,25 @@ export function setupDocsHovers() {
 		function move(event: MouseEvent) {
 			if (!hovered) return;
 
+			pointer_x = event.clientX;
+			pointer_y = event.clientY;
+			if (frame === undefined) frame = requestAnimationFrame(check_pointer);
+		}
+
+		function check_pointer() {
+			frame = undefined;
+			if (!hovered) return;
+
 			const source = hovered.getBoundingClientRect();
 			const panel = tooltip.get_rect();
 			if (!panel) return;
 
 			// Check coordinates rather than covering nearby tokens with a transparent element.
 			if (
-				event.clientX < Math.min(source.left, panel.left) - HOVER_PADDING ||
-				event.clientX > Math.max(source.right, panel.right) + HOVER_PADDING ||
-				event.clientY < Math.min(source.top, panel.top) - HOVER_PADDING ||
-				event.clientY > Math.max(source.bottom, panel.bottom) + HOVER_PADDING
+				pointer_x < Math.min(source.left, panel.left) - HOVER_PADDING ||
+				pointer_x > Math.max(source.right, panel.right) + HOVER_PADDING ||
+				pointer_y < Math.min(source.top, panel.top) - HOVER_PADDING ||
+				pointer_y > Math.max(source.bottom, panel.bottom) + HOVER_PADDING
 			) {
 				clear();
 			}
