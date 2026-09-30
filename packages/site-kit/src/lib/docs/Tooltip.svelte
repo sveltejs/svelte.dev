@@ -6,11 +6,12 @@
 		html: string;
 		x: number;
 		y: number;
-		onmouseenter: (event: any) => void;
-		onmouseleave: (event: any) => void;
+		source_width: number;
+		source_height: number;
+		onmouseleave: (event: MouseEvent) => void;
 	}
 
-	let { html, x, y, onmouseenter, onmouseleave }: Props = $props();
+	let { html, x, y, source_width, source_height, onmouseleave }: Props = $props();
 
 	let visible = $state(false);
 	let tooltip: HTMLDivElement;
@@ -45,7 +46,6 @@
 </script>
 
 <div
-	{onmouseenter}
 	{onmouseleave}
 	role="tooltip"
 	class="tooltip-container"
@@ -54,6 +54,8 @@
 	style:left="{x}px"
 	style:top="{y}px"
 	style:--offset="{offset}px"
+	style:--source-width="{source_width}px"
+	style:--source-height="{source_height}px"
 >
 	<div bind:this={tooltip} class="tooltip">
 		<Text>
@@ -75,6 +77,23 @@
 		&.visible {
 			display: block;
 		}
+	}
+
+	/* Bridge from the source bottom to the offset tooltip edges, overlapping the panel by 1px. */
+	.tooltip-container::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		width: 100%;
+		--bridge-height: max(0px, calc(2rem + var(--arrow-size) - var(--source-height)));
+		top: calc(-1 * var(--bridge-height));
+		height: calc(var(--bridge-height) + 1px);
+		clip-path: polygon(
+			calc(-1 * var(--offset) - var(--source-width) / 2) 0,
+			calc(-1 * var(--offset) + var(--source-width) / 2) 0,
+			100% 100%,
+			0 100%
+		);
 	}
 
 	.tooltip {

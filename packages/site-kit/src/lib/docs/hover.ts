@@ -2,31 +2,18 @@ import { mount, onMount, unmount } from 'svelte';
 import Tooltip from './Tooltip.svelte';
 
 const CLASSNAME = 'highlight';
-const CLOSE_DELAY = 300;
 
 export function setupDocsHovers() {
 	onMount(() => {
 		let tooltip: any;
 		let hovered: HTMLSpanElement | null = null;
-		let timeout: ReturnType<typeof setTimeout> | undefined;
-
-		function cancel_clear() {
-			clearTimeout(timeout);
-			timeout = undefined;
-		}
 
 		function clear() {
-			cancel_clear();
 			if (!tooltip) return;
 
 			unmount(tooltip);
 			hovered?.classList.remove(CLASSNAME);
 			tooltip = hovered = null;
-		}
-
-		function schedule_clear() {
-			cancel_clear();
-			timeout = setTimeout(clear, CLOSE_DELAY);
 		}
 
 		function over(event: MouseEvent) {
@@ -35,8 +22,6 @@ export function setupDocsHovers() {
 			const target = (event.target as Element).closest<HTMLSpanElement>('.twoslash-hover');
 
 			if (!target) return;
-
-			cancel_clear();
 
 			if (target === hovered) return;
 
@@ -56,8 +41,13 @@ export function setupDocsHovers() {
 						html,
 						x,
 						y,
-						onmouseenter: cancel_clear,
-						onmouseleave: schedule_clear
+						source_width: rect.width,
+						source_height: rect.height,
+						onmouseleave: (event: MouseEvent) => {
+							if (event.relatedTarget instanceof Node && hovered?.contains(event.relatedTarget))
+								return;
+							clear();
+						}
 					}
 				});
 
@@ -70,7 +60,13 @@ export function setupDocsHovers() {
 			if (!hovered || !(event.target instanceof Node) || !hovered.contains(event.target)) return;
 			if (event.relatedTarget instanceof Node && hovered.contains(event.relatedTarget)) return;
 
-			schedule_clear();
+			if (
+				event.relatedTarget instanceof Element &&
+				event.relatedTarget.closest('.tooltip-container')
+			)
+				return;
+
+			clear();
 		}
 
 		window.addEventListener('mouseover', over);
