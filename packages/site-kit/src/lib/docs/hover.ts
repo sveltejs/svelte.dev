@@ -2,19 +2,31 @@ import { mount, onMount, unmount } from 'svelte';
 import Tooltip from './Tooltip.svelte';
 
 const CLASSNAME = 'highlight';
+const CLOSE_DELAY = 300;
 
 export function setupDocsHovers() {
 	onMount(() => {
 		let tooltip: any;
 		let hovered: HTMLSpanElement | null = null;
-		let timeout: NodeJS.Timeout;
+		let timeout: ReturnType<typeof setTimeout> | undefined;
+
+		function cancel_clear() {
+			clearTimeout(timeout);
+			timeout = undefined;
+		}
 
 		function clear() {
+			cancel_clear();
 			if (!tooltip) return;
 
 			unmount(tooltip);
 			hovered?.classList.remove(CLASSNAME);
 			tooltip = hovered = null;
+		}
+
+		function schedule_clear() {
+			cancel_clear();
+			timeout = setTimeout(clear, CLOSE_DELAY);
 		}
 
 		function over(event: MouseEvent) {
@@ -24,7 +36,7 @@ export function setupDocsHovers() {
 
 			if (!target) return;
 
-			clearTimeout(timeout);
+			cancel_clear();
 
 			if (target === hovered) return;
 
@@ -44,13 +56,8 @@ export function setupDocsHovers() {
 						html,
 						x,
 						y,
-						onmouseenter: () => {
-							clearTimeout(timeout);
-						},
-						onmouseleave: () => {
-							clearTimeout(timeout);
-							timeout = setTimeout(clear, 0);
-						}
+						onmouseenter: cancel_clear,
+						onmouseleave: schedule_clear
 					}
 				});
 
@@ -60,16 +67,10 @@ export function setupDocsHovers() {
 		}
 
 		function out(event: MouseEvent) {
-			let target = event.target as HTMLElement | null;
+			if (!hovered || !(event.target instanceof Node) || !hovered.contains(event.target)) return;
+			if (event.relatedTarget instanceof Node && hovered.contains(event.relatedTarget)) return;
 
-			while (target) {
-				if (target.classList.contains('twoslash-hover')) {
-					timeout = setTimeout(clear, 0);
-					return;
-				}
-
-				target = target.parentElement;
-			}
+			schedule_clear();
 		}
 
 		window.addEventListener('mouseover', over);
@@ -78,6 +79,7 @@ export function setupDocsHovers() {
 		return () => {
 			window.removeEventListener('mouseover', over);
 			window.removeEventListener('mouseout', out);
+			clear();
 		};
 	});
 }
