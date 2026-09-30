@@ -18,6 +18,24 @@ export const TWINKLEPLOP_LANGUAGE_MAP = {
 	'': 'plaintext'
 } as const;
 
+export function indent_multiline_comments(str: string) {
+	return str.replace(
+		/^([\t ]*)<span class="(?:tok )?comment">([^<]*?)<\/span>\n/gm,
+		(_, intro_whitespace, content) => {
+			// we use some CSS trickery to make comments break onto multiple lines while preserving indentation
+			const lines = (intro_whitespace + content + '').split('\n');
+			return lines
+				.map((line) => {
+					const match = /^(\s*)(.*)/.exec(line);
+					const indent = (match?.[1] ?? '').replace(/\t/g, '  ').length;
+
+					return `<span class="comment wrapped" style="--indent: ${indent}ch">${line ?? ''}\n</span>`;
+				})
+				.join('');
+		}
+	);
+}
+
 export function is_in_code_block(body: string, index: number) {
 	const code_blocks = [...body.matchAll(/(`{3,}).*\n(.|\n)+?\1/gm)].map((match) => {
 		return [match.index ?? 0, match[0].length + (match.index ?? 0)] as const;
