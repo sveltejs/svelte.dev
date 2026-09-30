@@ -461,7 +461,7 @@ Whether to enable explicit environment variables using `src/env.js` or `src/env.
 
 ```ts
 // @noErrors
-tracing?: {/*…*/}
+tracing?: {/*…*/};
 ```
 
 <div class="ts-block-property-details">
@@ -502,7 +502,7 @@ Enables server-side [OpenTelemetry](https://opentelemetry.io/) span emission for
 
 ```ts
 // @noErrors
-instrumentation?: {/*…*/}
+instrumentation?: {/*…*/};
 ```
 
 <div class="ts-block-property-details">
@@ -656,7 +656,7 @@ A place to put static files that should have stable URLs and undergo no processi
 
 ```ts
 // @noErrors
-hooks?: {/*…*/}
+hooks?: {/*…*/};
 ```
 
 <div class="ts-block-property-details">
@@ -1399,7 +1399,76 @@ The drawback is that for unvisited paths, resolution will take slightly longer (
 
 <div class="ts-block-property-children">
 
+<div class="ts-block-property">
 
+```ts
+// @noErrors
+files?: (file: string) => boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `(filename) => !/\.DS_Store/.test(filename)`
+
+</div>
+
+Determine which files in your `static` directory will be available in `$service-worker.files`.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```ts
+// @noErrors
+register: true;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `true`
+
+</div>
+
+Whether to automatically register the service worker, if it exists.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```ts
+// @noErrors
+options?: RegistrationOptions;
+```
+
+<div class="ts-block-property-details">
+
+Options for serviceWorker.register("...", options);
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```ts
+// @noErrors
+register?: false;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `true`
+
+</div>
+
+Whether to automatically register the service worker, if it exists.
+
+</div>
+</div>
 
 </div>
 
