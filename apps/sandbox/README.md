@@ -13,14 +13,37 @@ See `apps/svelte.dev/src/lib/tutorial/adapters/sandbox/README.md` for how the wh
 
 ## Deployment
 
-This is a separate Vercel project:
+This is the `svelte-sandbox` Vercel project in the `svelte` team:
 
 - Root directory: `apps/sandbox`
 - Framework preset: Other
-- No build step (see `vercel.json`)
-- Domains: `svelte-sandbox.link` and `*.svelte-sandbox.link`. Wildcard domains on Vercel require the domain to use Vercel's nameservers.
+- No build or install step (see `vercel.json`)
+- Git: connected to `sveltejs/svelte.dev`. Production deploys from `main`. `ignoreCommand` skips builds for commits that don't touch this directory.
+- Domains: `svelte-sandbox.link` and `*.svelte-sandbox.link`. The domain is registered with Vercel and uses Vercel's nameservers, which wildcard domains require.
+- Deployment protection applies to everything except custom domains, so the `*.vercel.app` URLs need a login, but `*.svelte-sandbox.link` is public.
+
+svelte.dev deployments (production, `next.svelte.dev` and previews) all use the _production_ sandbox. Changes here take effect once they reach `main`. To ship them sooner, promote the branch's preview deployment:
+
+```sh
+vc ls svelte-sandbox --scope svelte                   # find the preview deployment for your branch
+vc promote <deployment-url> --scope svelte
+```
+
+Don't run `vc deploy` from this directory. Because the project's root directory is `apps/sandbox`, the CLI looks for `apps/sandbox/apps/sandbox`.
+
+Keep changes backwards-compatible where possible. Otherwise, bump `VERSION`, and remember that older svelte.dev deployments will stop working with the new sandbox.
 
 `svelte-sandbox.link` is deliberately a different site from `svelte.dev`. If it were a subdomain like `sandbox.svelte.dev`, user code would be same-site with svelte.dev, and could make requests that carry svelte.dev's `SameSite` cookies.
+
+### Which sites can use the sandbox
+
+The relay checks the embedding page's origin against an allowlist in `relay.html`:
+
+- `svelte.dev` and `next.svelte.dev`
+- deployments of the `svelte-dev` and `next-svelte-dev` projects (`svelte-<hash>-svelte.vercel.app`, `next-svelte-<hash>-svelte.vercel.app`) and their branch aliases (`svelte-dev-git-<branch>-svelte.vercel.app`, etc.)
+- localhost
+
+Previews of `next-svelte-dev` have Vercel deployment protection. The sandbox loads its worker from the embedding deployment without credentials, so the sandbox won't work on those preview URLs, although `next.svelte.dev` itself is fine. `svelte-dev` previews are unprotected and work.
 
 ## Local development
 

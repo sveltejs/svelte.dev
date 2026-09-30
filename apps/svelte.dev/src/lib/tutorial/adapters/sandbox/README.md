@@ -57,7 +57,7 @@ The relay and service worker live in a separate app, `apps/sandbox`, deployed to
   Requests from the relay and the worker (the worker's own code in dev, external fetches) go to the network.
 
 - **Relay** (`apps/sandbox/public/__sandbox/relay.html`) registers the service worker and creates the worker. The worker is a same-origin `blob:` module that imports the real worker script from the embedding deployment. It's still controlled by the service worker, which it needs in order to load server modules. The relay hands the worker a MessagePort from the tutorial page, so after that the page talks to the worker directly. The relay also:
-  - only runs for parents on an allowlist: svelte.dev, `*.svelte.dev`, `*-svelte.vercel.app` previews and localhost
+  - only runs for parents on an allowlist: `svelte.dev`, `next.svelte.dev`, deployments and branch aliases of the `svelte-dev` and `next-svelte-dev` Vercel projects, and localhost
   - only loads workers from the parent's own origin
   - checks a protocol `VERSION` that the tutorial page sends. Bump it on both sides for incompatible changes.
 
@@ -92,8 +92,7 @@ The relay and service worker live in a separate app, `apps/sandbox`, deployed to
 
 ## Known gaps and TODOs
 
-- **Deployment.** `apps/sandbox` needs a Vercel project with `svelte-sandbox.link` and `*.svelte-sandbox.link` (see `apps/sandbox/README.md`). Wildcard domains require Vercel's nameservers. Until that exists, the sandbox only works locally.
-- **Allowlist.** `*-svelte.vercel.app` is a loose match for preview deployments. It could be tightened to the actual project names, `svelte-*` and `next-svelte-*`.
+- **Deployment.** `apps/sandbox` is deployed as the `svelte-sandbox` Vercel project on `*.svelte-sandbox.link` (see `apps/sandbox/README.md`). It's verified working with `svelte-dev` preview deployments. Previews of `next-svelte-dev` are behind deployment protection, which blocks the credential-less, cross-origin worker fetch, so the sandbox won't work on those preview URLs.
 - **Cross-origin isolation.** The tutorial page is only COOP/COEP-isolated for WebContainers. While that's still the case, the relay, the worker scripts and every service-worker response have to carry COEP/CORP headers. That is why `vite.config.ts`, `vercel.ts` and `apps/sandbox/vercel.json` set them, and `__sandbox_sw.js` adds them itself. Once WebContainers are gone, all of it can be removed.
 - **Browser coverage.** Only headless Chrome has been tested. Still to test:
   - Firefox

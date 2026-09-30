@@ -26,10 +26,13 @@
 
 			/** Sites that are allowed to run code in the sandbox */
 			const allowed = [
-				/^https:\/\/svelte\.dev$/,
-				/^https:\/\/[a-z0-9-]+\.svelte\.dev$/,
-				// Vercel preview deployments
-				/^https:\/\/[a-z0-9-]+-svelte\.vercel\.app$/,
+				// production, and the pre-release site
+				/^https:\/\/(next\.)?svelte\.dev$/,
+				// deployments of the `svelte-dev` and `next-svelte-dev` Vercel projects,
+				// e.g. https://svelte-ij7na4dtv-svelte.vercel.app...
+				/^https:\/\/(next-)?svelte-[a-z0-9]+-svelte\.vercel\.app$/,
+				// ...and their branch aliases, e.g. https://svelte-dev-git-my-branch-svelte.vercel.app
+				/^https:\/\/(next-)?svelte-dev-git-[a-z0-9-]+-svelte\.vercel\.app$/,
 				// local development
 				/^http:\/\/(localhost|127\.0\.0\.1|\[::1\])(:\d+)?$/
 			];
