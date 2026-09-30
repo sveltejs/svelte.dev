@@ -24,6 +24,7 @@ export default defineConfig({
 			adapter: adapter({
 				// See below for an explanation of these options
 				edge: false,
+				nodeVersion: 'nodejs24.x',
 				split: false
 			})
 		})
@@ -43,15 +44,28 @@ If the `netlify.toml` file or the `build.publish` value is missing, a default va
 
 > [!NOTE] If you have set the publish directory in the Netlify UI to something else then you will need to set it in `netlify.toml` too.
 
-## Options
+## Deployment configuration
 
-### `edge`
+To control how your routes are deployed to Netlify as functions, you can specify deployment configuration, either through the options shown above or with [`export const config`](page-options#config) inside `+server.js`, `+page(.server).js` and `+layout(.server).js` files.
 
-If `true`, your app will be deployed as a [Netlify Edge Function](https://docs.netlify.com/build/edge-functions/overview/) rather than the standard Node-based function.
+For example you could deploy one specific route as an individual serverless function, separate from the rest of your app:
 
-### `split`
+```js
+/// file: about/+page.js
+/** @type {import('@sveltejs/adapter-netlify').Config} */
+export const config = {
+	split: true
+};
+```
 
-If `true`, your app will be split into multiple functions instead of a single one for the entire app.
+You can set the following options:
+
+- `edge`: if `true`, deploys the route as a [Netlify Edge Function](https://docs.netlify.com/build/edge-functions/overview/) rather than the standard Node-based function. Defaults to `false`. Cannot be combined with a `nodeVersion` value
+- `nodeVersion`: the [Node.js version](https://docs.netlify.com/build/functions/configuration/#nodejs-version-for-runtime) used for the serverless function (`'nodejs22.x'` or `'nodejs24.x'`). Defaults to Netlify's Node.js version. Cannot be combined with `edge: true`
+- `split`: if `true`, causes a route to be deployed as an individual function. If `split` is set to `true` at the adapter level, all routes will be deployed as individual functions unless overridden with `split: false`
+
+Configuration set in a layout applies to all the routes beneath that layout, unless overridden at a more granular level. Routes without deployment configuration use the adapter's defaults.
+
 
 ## Netlify alternatives to SvelteKit functionality
 
