@@ -87,7 +87,7 @@ The relay and service worker live in a separate app, `apps/sandbox`, deployed to
 
 - **Build step** (`scripts/create-tutorial-sandbox/`) writes to `generated/` (gitignored):
   - `packages.json`: the runtime files of `svelte`, `@sveltejs/kit`, `devalue`, `esm-env`, `cookie` and `clsx`, taken from `scripts/create-tutorial-zip/common/node_modules`, so the versions match the WebContainer setup.
-  - `kit-node.js`: SvelteKit's _node-side_ code, bundled with esbuild and with `node:fs`, `node:path` etc. replaced by an in-memory FS (`shims/`). It includes `create_manifest_data`, `write_client_manifest`, `write_server`, `create_env_modules`, config validation and the static analysis of page options. **We reuse SvelteKit's own routing and manifest logic rather than reimplementing it.** This `fs` is also the worker's virtual filesystem.
+  - `kit-node.js`: SvelteKit's _node-side_ code, bundled with esbuild and with `node:fs`, `node:path` etc. replaced by an in-memory FS (`shims/`). It includes `create_manifest_data`, `write_client_manifest`, `write_server`, `create_env_modules`, config validation and the static analysis of page options. **We reuse SvelteKit's own routing and manifest logic rather than reimplementing it.** This `fs` is also the worker's virtual filesystem. Its types, `kit-node.d.ts`, are checked in so that `pnpm check` works without running the script. The script fails if they fall out of sync.
   - `svelte-compiler.txt`: the UMD compiler, `eval`ed in the worker. It has a `.txt` extension so that svelte-check leaves it alone.
 
 ## Known gaps and TODOs

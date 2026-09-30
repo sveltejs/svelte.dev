@@ -174,21 +174,16 @@ const names = [...entry.matchAll(/export \{([^}]+)\}/g)]
 	)
 	.filter((name) => name && name !== 'vfs');
 
-fs.writeFileSync(
-	`${out}/kit-node.d.ts`,
-	`export const vfs: {
-	files: Map<string, string | Uint8Array>;
-	directories: Map<string, Set<string>>;
-	write(file: string, contents: string | Uint8Array): void;
-	remove(file: string): void;
-	read(file: string): string | Uint8Array | undefined;
-	is_file(file: string): boolean;
-	is_dir(file: string): boolean;
-};
+// `kit-node.d.ts` is checked in (so that type-checking works without running this
+// script), so make sure it stays in sync with the exports above
+const declarations = fs.readFileSync(`${out}/kit-node.d.ts`, 'utf-8');
+const undeclared = names.filter((name) => !declarations.includes(`export const ${name}:`));
 
-${names.map((name) => `export const ${name}: any;`).join('\n')}
-`
-);
+if (undeclared.length > 0) {
+	throw new Error(
+		`Please add ${undeclared.join(', ')} to src/lib/tutorial/adapters/sandbox/generated/kit-node.d.ts`
+	);
+}
 
 console.log(
 	`created sandbox assets (${Object.keys(files).length} package files, ${(

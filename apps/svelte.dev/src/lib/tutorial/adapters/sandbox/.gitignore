@@ -1,1 +1,3 @@
-/generated
+/generated/*
+# checked in, so that type-checking works without running the build script
+!/generated/kit-node.d.ts
