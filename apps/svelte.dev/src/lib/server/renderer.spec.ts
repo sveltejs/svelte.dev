@@ -1,4 +1,5 @@
-import { describe, expect, test } from 'vitest';
+import * as markdown from '@sveltejs/site-kit/markdown';
+import { afterEach, describe, expect, test, vi } from 'vitest';
 import { render_content, replace_canonical_origin } from './renderer.ts';
 
 describe('replace_canonical_origin', () => {
@@ -21,6 +22,49 @@ describe('replace_canonical_origin', () => {
 });
 
 describe('render_content', () => {
+	afterEach(() => vi.restoreAllMocks());
+
+	test.each([
+		['docs/svelte/98-reference/21-svelte-action.md', 'svelte/action'],
+		['docs/svelte/98-reference/21-svelte-reactivity-window.md', 'svelte/reactivity/window'],
+		['docs/kit/98-reference/10-@sveltejs-kit.md', '@sveltejs/kit'],
+		['docs/kit/98-reference/20-$app-navigation.md', '$app/navigation']
+	])('passes the module documented by %s to the Markdown renderer', async (filename, module) => {
+		const render_markdown = vi.spyOn(markdown, 'render_content_markdown').mockResolvedValue('');
+		const body = '```dts\nfunction example(): SharedType;\n```';
+		const references = {
+			[module]: { SharedType: '/docs/correct#SharedType' },
+			'unrelated/module': { SharedType: '/docs/wrong#SharedType' }
+		};
+
+		await render_content(filename, body, { check: false, references });
+
+		expect(render_markdown).toHaveBeenCalledWith(
+			filename,
+			body,
+			expect.objectContaining({ check: false, references, referenceModule: module }),
+			expect.any(Function)
+		);
+	});
+
+	test('does not infer a module for concept pages', async () => {
+		const render_markdown = vi.spyOn(markdown, 'render_content_markdown').mockResolvedValue('');
+		const filename = 'docs/kit/98-reference/54-types.md';
+		const body = '```dts\nfunction example(): PageData;\n```';
+
+		await render_content(filename, body, {
+			check: false,
+			references: { './$types': { PageData: '/docs/kit/types#Generated-types' } }
+		});
+
+		expect(render_markdown).toHaveBeenCalledWith(
+			filename,
+			body,
+			expect.objectContaining({ referenceModule: undefined }),
+			expect.any(Function)
+		);
+	});
+
 	test('transforms Markdown links when given an origin', async () => {
 		const html = await render_content(
 			'test.md',
