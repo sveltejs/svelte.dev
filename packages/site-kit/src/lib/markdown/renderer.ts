@@ -23,6 +23,8 @@ import { language as create_typescript_highlighter } from '@twinkleplop/typescri
 import { language as create_yaml_highlighter } from '@twinkleplop/yaml';
 import { compress_and_encode_text } from 'gzip';
 import { create_tree_highlighter } from './tree.ts';
+// Keep this import on one line so hash_graph includes it in the snippet cache key.
+import { indent_multiline_comments } from './utils.ts';
 import {
 	decode_html_entities,
 	TWINKLEPLOP_LANGUAGE_MAP,
@@ -1282,22 +1284,4 @@ function stash_popovers(html: string, popovers: string[]) {
 	}
 
 	return result + html.slice(position);
-}
-
-function indent_multiline_comments(str: string) {
-	return str.replace(
-		/^(\s+)<span class="(?:tok )?comment">([^<]*?)<\/span>\n/gm,
-		(_, intro_whitespace, content) => {
-			// we use some CSS trickery to make comments break onto multiple lines while preserving indentation
-			const lines = (intro_whitespace + content + '').split('\n');
-			return lines
-				.map((line) => {
-					const match = /^(\s*)(.*)/.exec(line);
-					const indent = (match?.[1] ?? '').replace(/\t/g, '  ').length;
-
-					return `<span class="comment wrapped" style="--indent: ${indent}ch">${line ?? ''}</span>`;
-				})
-				.join('');
-		}
-	);
 }
