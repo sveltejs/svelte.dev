@@ -82,18 +82,15 @@ describe('render_content_markdown', () => {
 	});
 });
 
-const references: DocumentationReferences = {
+const references = {
 	'@sveltejs/kit': {
 		AfterNavigate: '/docs/kit/@sveltejs-kit#AfterNavigate',
 		Load: '/docs/kit/@sveltejs-kit#Load',
 		redirect: '/docs/kit/@sveltejs-kit#redirect'
 	},
 	svelte: { onMount: '/docs/svelte/svelte#onMount' },
-	'./$types': {
-		PageLoad: '/docs/kit/types#Generated-types',
-		Actions: '/docs/kit/types#Generated-types'
-	}
-};
+	'./$types': '/docs/kit/types#Generated-types'
+} satisfies DocumentationReferences;
 
 describe('direct documentation links', () => {
 	test('links AfterNavigate in declaration snippets without Twoslash', async () => {

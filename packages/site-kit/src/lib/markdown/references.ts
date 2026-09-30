@@ -2,7 +2,8 @@ import { parse } from 'svelte/compiler';
 import ts from 'typescript';
 import { decode_html_entities } from './utils.ts';
 
-export type DocumentationReferences = Record<string, Record<string, string>>;
+/** A module-wide destination, or documentation URLs for individual exports. */
+export type DocumentationReferences = Record<string, string | Record<string, string>>;
 
 interface Reference {
 	start: number;
@@ -88,7 +89,8 @@ export function find_references(
 	}
 
 	function add(node: ts.Node, module: string, name: string) {
-		const href = references[module]?.[name];
+		const destination = references[module];
+		const href = typeof destination === 'string' ? destination : destination?.[name];
 		const start = node.getStart(file) - offset;
 		if (typeof href === 'string' && start >= 0)
 			result.push({ start, end: node.end - offset, href });
@@ -299,11 +301,9 @@ function find_svelte_references(
 
 	// ESTree's Program type omits the offsets provided by the Svelte parser.
 	const module_content = ast.module?.content as unknown as
-		| { start: number; end: number }
-		| undefined;
+		{ start: number; end: number } | undefined;
 	const instance_content = ast.instance?.content as unknown as
-		| { start: number; end: number }
-		| undefined;
+		{ start: number; end: number } | undefined;
 	const module_source = module_content
 		? source.slice(module_content.start, module_content.end)
 		: '';

@@ -1,80 +1,11 @@
-const modules: Record<string, string[]> = {
-	svelte: [
-		'svelte',
-		'svelte/action',
-		'svelte/animate',
-		'svelte/attachments',
-		'svelte/compiler',
-		'svelte/easing',
-		'svelte/events',
-		'svelte/legacy',
-		'svelte/motion',
-		'svelte/reactivity',
-		'svelte/reactivity/window',
-		'svelte/server',
-		'svelte/store',
-		'svelte/transition'
-	],
-	kit: [
-		'@sveltejs/kit',
-		'@sveltejs/kit/env',
-		'@sveltejs/kit/hooks',
-		'@sveltejs/kit/node',
-		'@sveltejs/kit/node/polyfills',
-		'@sveltejs/kit/vite',
-		'$app/env',
-		'$app/env/private',
-		'$app/env/public',
-		'$app/environment',
-		'$app/forms',
-		'$app/navigation',
-		'$app/paths',
-		'$app/server',
-		'$app/state',
-		'$app/stores',
-		'$app/types',
-		'$env/dynamic/private',
-		'$env/dynamic/public',
-		'$env/static/private',
-		'$env/static/public',
-		'$service-worker'
-	]
-};
+import type { Document } from '@sveltejs/site-kit';
 
-export function get_reference_module(filename: string) {
-	const match = /(?:^|\/)docs\/(svelte|kit)\/\d+-reference\/\d+-(.+)\.md$/.exec(filename);
-	if (!match) return;
+export function get_reference_module(page: Pick<Document, 'file' | 'metadata' | 'sections'>) {
+	if (!/(?:^|\/)docs\/[^/]+\/\d+-reference\/\d+-[^/]+\.md$/.test(page.file)) return;
 
-	const [, topic, page] = match;
-	return modules[topic].find((module) => module.replaceAll('/', '-') === page);
-}
+	const module = page.metadata.title;
+	if (!/^(?:@[\w.-]+\/)?[a-z_$][\w$.-]*(?:\/[\w$.-]+)*$/.test(module)) return;
+	if (!page.sections.some((section) => /^[A-Za-z_$][\w$]*$/.test(section.title))) return;
 
-export function generated_type_references(): Record<string, string> {
-	return Object.fromEntries(
-		[
-			'Action',
-			'ActionData',
-			'Actions',
-			'EntryGenerator',
-			'LayoutData',
-			'LayoutLoad',
-			'LayoutLoadEvent',
-			'LayoutParams',
-			'LayoutProps',
-			'LayoutServerData',
-			'LayoutServerLoad',
-			'LayoutServerLoadEvent',
-			'PageData',
-			'PageLoad',
-			'PageLoadEvent',
-			'PageProps',
-			'PageServerData',
-			'PageServerLoad',
-			'PageServerLoadEvent',
-			'RequestEvent',
-			'RequestHandler',
-			'RouteId',
-			'RouteParams'
-		].map((name) => [name, '/docs/kit/types#Generated-types'])
-	);
+	return module;
 }

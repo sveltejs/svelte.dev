@@ -292,7 +292,7 @@ const snippets = await create_snippet_cache();
  * @param {string} body
  * @param {object} options
  * @param {TwoslashBanner} [options.twoslashBanner] - A function that returns a string to be prepended to the code snippet before running the code with twoslash. Helps in adding imports from svelte or sveltekit or whichever modules are being globally referenced in all or most code snippets.
- * @param {DocumentationReferences} [options.references] - Documentation URLs indexed by import module and exported symbol.
+ * @param {DocumentationReferences} [options.references] - Module-wide documentation URLs or destinations indexed by exported symbol.
  * @param {string} [options.referenceModule] - Module documented by the current API page, for unqualified declaration type references.
  * @param {(href: string) => string} [options.transformLink] - Transforms Markdown link destinations before rendering.
  */

@@ -34,7 +34,7 @@ describe('render_content', () => {
 			'unrelated/module': { SharedType: '/docs/wrong#SharedType' }
 		};
 
-		await render_content(filename, body, { check: false, references });
+		await render_content(filename, body, { check: false, references, referenceModule: module });
 
 		expect(render_markdown).toHaveBeenCalledWith(
 			filename,
@@ -51,13 +51,13 @@ describe('render_content', () => {
 
 		await render_content(filename, body, {
 			check: false,
-			references: { './$types': { PageData: '/docs/kit/types#Generated-types' } }
+			references: { './$types': '/docs/kit/types#Generated-types' }
 		});
 
 		expect(render_markdown).toHaveBeenCalledWith(
 			filename,
 			body,
-			expect.objectContaining({ referenceModule: undefined }),
+			expect.not.objectContaining({ referenceModule: expect.any(String) }),
 			expect.any(Function)
 		);
 	});

@@ -1,7 +1,6 @@
-import { render_content_markdown } from '@sveltejs/site-kit/markdown';
+import { render_content_markdown, type DocumentationReferences } from '@sveltejs/site-kit/markdown';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { get_reference_module } from './reference-modules.ts';
 
 const docs_types_root = path.dirname(fileURLToPath(import.meta.resolve('docs-types/package.json')));
 const canonical_origin = 'https://svelte.dev';
@@ -26,13 +25,13 @@ export const render_content = (
 	options: {
 		check?: boolean;
 		origin?: string;
-		references?: Record<string, Record<string, string>>;
+		references?: DocumentationReferences;
+		referenceModule?: string;
 	} = {}
 ) => {
 	const { origin, ...rest } = options;
 	const render_options = {
 		...rest,
-		referenceModule: get_reference_module(filename),
 		transformLink: origin ? (href: string) => replace_canonical_origin(href, origin) : undefined,
 		twoslashRoot: docs_types_root
 	};

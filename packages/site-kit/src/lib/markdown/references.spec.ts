@@ -1,18 +1,15 @@
 import { describe, expect, test } from 'vitest';
 import { find_references, link_references, type DocumentationReferences } from './references.ts';
 
-const references: DocumentationReferences = {
+const references = {
 	'@sveltejs/kit': {
 		AfterNavigate: '/docs/kit/@sveltejs-kit#AfterNavigate',
 		Load: '/docs/kit/@sveltejs-kit#Load',
 		redirect: '/docs/kit/@sveltejs-kit#redirect'
 	},
 	svelte: { onMount: '/docs/svelte/svelte#onMount', Load: '/docs/svelte/svelte#Load' },
-	'./$types': {
-		PageLoad: '/docs/kit/types#Generated-types',
-		Actions: '/docs/kit/types#Generated-types'
-	}
-};
+	'./$types': '/docs/kit/types#Generated-types'
+} satisfies DocumentationReferences;
 
 function resolve(source: string, language = 'ts', module?: string, prelude?: string) {
 	return find_references(source, language, references, module, prelude).map(
@@ -75,14 +72,29 @@ function local(Kit: any) { Kit.redirect(); }`)
 	test.each(['ts', 'js'])('resolves import types and JSDoc in %s', (language) => {
 		const source = `/** @type {import('./$types').PageLoad} */
 export const load = () => ({});
-/** @satisfies {import('./$types').Actions} */
+/** @satisfies {import('./$types').FutureRouteType} */
 export const actions = {};
 let navigation: import('@sveltejs/kit').AfterNavigate;`;
 		expect(resolve(source, language)).toEqual([
-			{ text: 'PageLoad', href: references['./$types'].PageLoad },
-			{ text: 'Actions', href: references['./$types'].Actions },
+			{ text: 'PageLoad', href: references['./$types'] },
+			{ text: 'FutureRouteType', href: references['./$types'] },
 			{ text: 'AfterNavigate', href: references['@sveltejs/kit'].AfterNavigate }
 		]);
+	});
+
+	test('links new generated exports, aliases and namespace members without linking shadowed locals', () => {
+		expect(
+			resolve(`import type { FutureRouteType as Data } from './$types';
+import * as Route from './$types';
+let data: Data;
+let event: Route.FutureRouteEvent;
+function local<Data>(value: Data): Data { return value; }`)
+		).toEqual(
+			['FutureRouteType', 'Data', 'Data', 'FutureRouteEvent'].map((text) => ({
+				text,
+				href: references['./$types']
+			}))
+		);
 	});
 
 	test('uses the current module only for unbound declaration type references', () => {
@@ -240,7 +252,7 @@ describe('highlighted documentation links', () => {
 		const html = render(`<span class="comment">/** @type {import('./$types').PageLoad} */</span>`);
 		expect(link_references(html, references)).toBe(
 			render(
-				`<span class="comment">/** @type {import('./$types').<a class="doc-reference" href="${references['./$types'].PageLoad}">PageLoad</a>} */</span>`
+				`<span class="comment">/** @type {import('./$types').<a class="doc-reference" href="${references['./$types']}">PageLoad</a>} */</span>`
 			)
 		);
 	});
