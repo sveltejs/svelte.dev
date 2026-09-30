@@ -4,7 +4,8 @@ import path from 'node:path';
 import ts from 'typescript';
 import { afterAll, describe, expect, test } from 'vitest';
 import { preprocess } from '@sveltejs/site-kit/markdown/preprocess';
-import { get_types } from './types';
+import { get_types, read_types } from './types';
+import { render_content } from '../../src/lib/server/renderer';
 
 const registration = `
 	| {
@@ -78,6 +79,54 @@ describe('get_types', () => {
 			expect(markdown).toContain('files?: (file: string) => boolean;');
 			expect(markdown).toContain('$service-worker.files');
 		}
+
+		const html = await render_content('docs/kit/98-reference/50-configuration.md', markdown);
+		expect(html).toContain('id="serviceWorker"');
+		expect(html).toContain('Whether to automatically register the service worker');
+		expect(html).toContain('RegistrationOptions');
+	});
+
+	test('renders the Kit 3 Vite reference using its module and Config export', async () => {
+		const types_directory = path.join(directory, 'kit3');
+		fs.mkdirSync(types_directory);
+		fs.writeFileSync(
+			path.join(types_directory, 'index.d.ts'),
+			`declare module '@sveltejs/kit/vite' {
+				export function sveltekit(config?: Config): unknown;
+				export interface Config { serviceWorker?: ${registration}; }
+			}`
+		);
+		const vite_template = path.join(types_directory, 'vite.md');
+		fs.writeFileSync(
+			vite_template,
+			`---
+title: @sveltejs/kit/vite
+---
+
+## sveltekit
+
+> EXPORT_SNIPPET: @sveltejs/kit/vite#sveltekit
+
+## Config
+
+> EXPANDED_TYPES: @sveltejs/kit/vite#Config`
+		);
+
+		const modules = await read_types(types_directory + '/', []);
+		const markdown = await preprocess(vite_template, modules);
+		const section = markdown.split('## serviceWorker\n')[1];
+
+		expect(markdown).toContain('function sveltekit(config?: Config): unknown;');
+		expect(section).toContain('register: true;');
+		expect(section).toContain('register?: false;');
+		expect(section).toContain('options?: RegistrationOptions;');
+		expect(section).toContain('Whether to automatically register the service worker');
+		expect(section).toContain('<span class="tag">default</span> `true`');
+
+		const html = await render_content('docs/kit/98-reference/15-@sveltejs-kit-vite.md', markdown);
+		expect(html).toContain('id="serviceWorker"');
+		expect(html).toContain('Whether to automatically register the service worker');
+		expect(html).toContain('RegistrationOptions');
 	});
 
 	test('preserves undocumented union branches and trailing type syntax', async () => {
