@@ -1,5 +1,4 @@
 /// <reference types="node" />
-import { strip_origin } from '@sveltejs/site-kit/markdown';
 import { preprocess } from '@sveltejs/site-kit/markdown/preprocess';
 import path from 'node:path';
 import fs from 'node:fs';

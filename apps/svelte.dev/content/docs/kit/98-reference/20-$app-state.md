@@ -142,7 +142,7 @@ The parameters of the current page - e.g. for a route like `/blog/[slug]`, a `{ 
 <div class="ts-block-property">
 
 ```dts
-route: {/*…*/}
+route: {/*…*/};
 ```
 
 <div class="ts-block-property-details">
@@ -220,19 +220,49 @@ The page state, which can be manipulated using [`goto`](/docs/kit/$app-navigatio
 <div class="ts-block-property">
 
 ```dts
-shallow: {
-	/** Parameters of the target route, or `null` if the URL does not resolve to a route. */
-	params: AppLayoutParams<'/'> | null;
-	/** Info about the target route, or `null` if the URL does not resolve to a route. */
-	route: { id: AppRouteId } | null;
-	/** The normalized URL passed to `goto(..., { shallow: true })`. */
-	url: ReadonlyURL;
-} | null;
+shallow: {/*…*/} | null;
 ```
 
 <div class="ts-block-property-details">
 
 Information about the target of the current shallow navigation, or `null` if no shallow navigation has occurred.
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+params: AppLayoutParams<'/'> | null;
+```
+
+<div class="ts-block-property-details">
+
+Parameters of the target route, or `null` if the URL does not resolve to a route.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+route: { id: AppRouteId } | null;
+```
+
+<div class="ts-block-property-details">
+
+Info about the target route, or `null` if the URL does not resolve to a route.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+url: ReadonlyURL;
+```
+
+<div class="ts-block-property-details">
+
+The normalized URL passed to `goto(..., { shallow: true })`.
+
+</div>
+</div></div>
 
 </div>
 </div>

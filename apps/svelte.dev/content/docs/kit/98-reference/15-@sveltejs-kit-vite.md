@@ -323,7 +323,44 @@ Experimental features. Here be dragons. These are not subject to semantic versio
 
 <div class="ts-block-property-children">
 
+<div class="ts-block-property">
 
+```ts
+// @noErrors
+remoteFunctions?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `false`
+
+</div>
+
+Whether to enable the experimental remote functions feature. This feature is not yet stable and may be changed or removed at any time.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```ts
+// @noErrors
+forkPreloads?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `false`
+
+</div>
+
+Whether to enable the experimental forked preloading feature using Svelte's fork API.
+
+</div>
+</div>
 
 </div>
 
@@ -384,7 +421,7 @@ A place to put static files that should have stable URLs and undergo no processi
 
 ```ts
 // @noErrors
-hooks?: {/*…*/}
+hooks?: {/*…*/};
 ```
 
 <div class="ts-block-property-details">
@@ -1144,7 +1181,57 @@ The drawback is that for unvisited paths, resolution will take slightly longer (
 
 <div class="ts-block-property-children">
 
+<div class="ts-block-property">
 
+```ts
+// @noErrors
+register: true;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `true`
+
+</div>
+
+Whether to automatically register the service worker, if it exists.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```ts
+// @noErrors
+options?: RegistrationOptions;
+```
+
+<div class="ts-block-property-details">
+
+Options for serviceWorker.register("...", options);
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```ts
+// @noErrors
+register?: false;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `true`
+
+</div>
+
+Whether to automatically register the service worker, if it exists.
+
+</div>
+</div>
 
 </div>
 

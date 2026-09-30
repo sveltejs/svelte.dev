@@ -462,7 +462,7 @@ This function is called after SvelteKit has built your app.
 <div class="ts-block-property">
 
 ```dts
-supports?: {/*…*/}
+supports?: {/*…*/};
 ```
 
 <div class="ts-block-property-details">
@@ -597,18 +597,7 @@ To call the original `setResponse` function, import it from `@sveltejs/kit/node`
 ```dts
 plugins?:
 	| Plugin[]
-	| {
-			/**
-			 * Vite plugins placed before any of SvelteKit's own plugins.
-			 * @since 3.0.0
-			 */
-			pre?: Plugin[];
-			/**
-			 * Vite plugins placed after any of SvelteKit's own plugins.
-			 * @since 3.0.0
-			 */
-			post?: Plugin[];
-	  };
+	| {/*…*/};
 ```
 
 <div class="ts-block-property-details">
@@ -621,6 +610,43 @@ plugins?:
 
 Vite plugins injected by the adapter. By default,
 they are placed before SvelteKit's plugins.
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+pre?: Plugin[];
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag since">available since</span> v3.0.0
+
+</div>
+
+Vite plugins placed before any of SvelteKit's own plugins.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+post?: Plugin[];
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag since">available since</span> v3.0.0
+
+</div>
+
+Vite plugins placed after any of SvelteKit's own plugins.
+
+</div>
+</div></div>
 
 </div>
 </div></div>
@@ -1586,7 +1612,7 @@ export async function load({ untrack, url }) {
 <div class="ts-block-property">
 
 ```dts
-tracing: {/*…*/}
+tracing: {/*…*/};
 ```
 
 <div class="ts-block-property-details">
@@ -1683,7 +1709,7 @@ The parameters of the current page - e.g. for a route like `/blog/[slug]`, a `{ 
 <div class="ts-block-property">
 
 ```dts
-route: {/*…*/}
+route: {/*…*/};
 ```
 
 <div class="ts-block-property-details">
@@ -1884,7 +1910,7 @@ The original request object.
 <div class="ts-block-property">
 
 ```dts
-readonly route: {/*…*/}
+readonly route: {/*…*/};
 ```
 
 <div class="ts-block-property-details">
@@ -1993,7 +2019,7 @@ readonly isSubRequest: boolean;
 <div class="ts-block-property">
 
 ```dts
-readonly tracing: {/*…*/}
+readonly tracing: {/*…*/};
 ```
 
 <div class="ts-block-property-details">
@@ -2357,7 +2383,7 @@ export async function load({ untrack, url }) {
 <div class="ts-block-property">
 
 ```dts
-tracing: {/*…*/}
+tracing: {/*…*/};
 ```
 
 <div class="ts-block-property-details">

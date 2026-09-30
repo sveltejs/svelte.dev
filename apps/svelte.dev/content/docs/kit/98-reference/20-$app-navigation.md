@@ -879,7 +879,7 @@ Is `null` if the target is not part of the SvelteKit app (could not be resolved 
 <div class="ts-block-property">
 
 ```dts
-route: {/*…*/}
+route: {/*…*/};
 ```
 
 <div class="ts-block-property-details">
