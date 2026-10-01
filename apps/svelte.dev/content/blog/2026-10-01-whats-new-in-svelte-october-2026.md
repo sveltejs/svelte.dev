@@ -72,8 +72,8 @@ _This Week in Svelte_
 
 _To Read_
 
-- [UI Libraries do not make your application accessible](https://theetrain.ca/blog/ui-library-accessibility) by TODO: author name (Etrain)
-- [Hello, Blog!](https://theetrain.ca/blog/hello-world) covers the tech decisions behind theetrain.ca, by TODO: author name (Etrain)
+- [UI Libraries do not make your application accessible](https://theetrain.ca/blog/ui-library-accessibility) by Enrico Sacchetti (Etrain)
+- [Hello, Blog!](https://theetrain.ca/blog/hello-world) covers the tech decisions behind theetrain.ca, by Enrico Sacchetti (Etrain)
 
 ### Libraries, Tools & Components
 
