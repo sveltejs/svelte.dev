@@ -35,3 +35,45 @@ You can also run the same commands from an interactive Copilot CLI session:
 /plugin marketplace add sveltejs/ai-tools
 /plugin install svelte@ai-tools
 ```
+
+## Choosing a documentation subdomain
+
+You can configure the MCP server to fetch documentation from a subdomain of `svelte.dev` while keeping the plugin's skills and agent. These examples use `next`; replace it with the subdomain you need.
+
+Create a file such as `svelte-next.mcp.json` with a complete server definition using the same `svelte` key as the plugin:
+
+```json
+{
+	"mcpServers": {
+		"svelte": {
+			"type": "stdio",
+			"command": "npx",
+			"args": ["-y", "@sveltejs/mcp"],
+			"env": {
+				"SVELTE_MCP_SUBDOMAIN": "next"
+			},
+			"tools": ["*"]
+		}
+	}
+}
+```
+
+Launch Copilot with that override:
+
+```bash
+copilot --additional-mcp-config @./svelte-next.mcp.json
+```
+
+The override applies to that session. Pass the flag each time you want to use it. Plugin MCP entries take precedence over ordinary `~/.copilot/mcp-config.json` entries, but `--additional-mcp-config` takes precedence over plugin entries. See [Copilot's plugin precedence documentation](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-plugin-reference#loading-order-and-precedence).
+
+To use the remote server instead, replace the `svelte` entry in the override file with:
+
+```json
+{
+	"type": "http",
+	"url": "https://mcp.svelte.dev/mcp?subdomain=next",
+	"tools": ["*"]
+}
+```
+
+See [local setup](local-setup) and [remote setup](remote-setup) for details about subdomain selection, version checks, and the fallback to `svelte.dev` with an agent warning when the selected docs are unavailable.

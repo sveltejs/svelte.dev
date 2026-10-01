@@ -7,6 +7,18 @@ The remote version of the MCP server is available at `https://mcp.svelte.dev/mcp
 
 The Svelte team does not log, store, or inspect code sent to the remote server.
 
+## Documentation subdomain
+
+Append `?subdomain=next` to the server URL to fetch documentation from `next.svelte.dev`:
+
+```text
+https://mcp.svelte.dev/mcp?subdomain=next
+```
+
+Use this URL in place of the standard URL in the configurations below. Replace `next` with the desired subdomain of `svelte.dev` (a single DNS label, not a full URL). Omit the parameter or leave it empty to use `svelte.dev`.
+
+The documentation tools instruct the LLM to check that the selected docs match the versions in your `package.json`. If the subdomain's documentation index is unavailable or invalid, the server falls back to `svelte.dev` and instructs the agent to warn you that it is using the default docs instead.
+
 Here's how to set it up in some common MCP clients:
 
 ## Claude Code

@@ -9,6 +9,18 @@ The local (or stdio) version of the MCP server is available via the [`@sveltejs/
 npx -y @sveltejs/mcp
 ```
 
+## Documentation subdomain
+
+Set `SVELTE_MCP_SUBDOMAIN` to fetch documentation from a subdomain of `svelte.dev`. For example, use `next` to fetch from `next.svelte.dev`:
+
+```bash
+SVELTE_MCP_SUBDOMAIN=next npx -y @sveltejs/mcp
+```
+
+For clients that support an `env` field, add `"env": { "SVELTE_MCP_SUBDOMAIN": "next" }` to the server configuration. This variable also applies to the `list-sections` and `get-documentation` CLI commands. Replace `next` with the desired subdomain (a single DNS label, not a full URL). Leave it unset or empty to use `svelte.dev`.
+
+The documentation tools instruct the LLM to check that the selected docs match the versions in your `package.json`. If the subdomain's documentation index is unavailable or invalid, the server falls back to `svelte.dev` and instructs the agent to warn you that it is using the default docs instead.
+
 Here's how to set it up in some common MCP clients:
 
 ## Claude Code
