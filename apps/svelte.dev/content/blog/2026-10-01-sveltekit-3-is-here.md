@@ -15,13 +15,21 @@ npx sv migrate sveltekit-3 --tasks all --confirm
 
 ...which will automatically migrate as much of your codebase as it can, and generate a TODO list for everything else. (If you're agentically inclined, your robot friends will make short work of it.)
 
-As with any major version bump there are a handful of breaking changes to be aware of, which are covered in the [migration guide](https://next.svelte.dev/docs/kit/migrating-to-sveltekit-3) (or, more briefly, in the recent [release candidate announcement](sveltekit-3-release-candidate)).
-
 To create a _new_ app, run [`sv create`](/docs/cli/sv-create):
 
 ```bash
 npx sv create my-new-app
 ```
+
+As with any major version bump there are a handful of breaking changes to be aware of, which are covered in the [migration guide](https://next.svelte.dev/docs/kit/migrating-to-sveltekit-3) (or, more briefly, in the recent [release candidate announcement](sveltekit-3-release-candidate)).
+
+Quick highlights:
+
+- configuration now lives in `vite.config.ts` instead of `svelte.config.js`
+- the `$lib` alias is now `#lib`, making use of standard [subpath imports](https://nodejs.org/api/packages.html#subpath-imports)
+- [environment variables](/docs/kit/environment-variables) are more powerful and easier to use
+- [service workers](/docs/kit/service-workers) are less boilerplatey
+- error handling is improved across the board
 
 ## Are remote functions ready yet?
 
