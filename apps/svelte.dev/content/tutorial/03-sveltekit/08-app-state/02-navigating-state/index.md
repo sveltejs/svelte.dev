@@ -7,7 +7,7 @@ The `navigating` object represents the current navigation. When a navigation sta
 - `from` and `to` — objects with `params`, `route` and `url` properties
 - `type` — the type of navigation, e.g. `link`, `popstate` or `goto`
 
-> [!NOTE] For complete type information visit the [`Navigation`](/docs/kit/@sveltejs-kit#Navigation) documentation.
+> [!NOTE] For complete type information visit the [`Navigation`](/docs/kit/$app-navigation#Navigation) documentation.
 
 It can be used to show a loading indicator for long-running navigations. In this exercise, `src/routes/+page.server.js` and `src/routes/about/+page.server.js` both have an artificial delay. Inside `src/routes/+layout.svelte`, import the `navigating` object and add a message to the nav bar:
 
@@ -36,4 +36,4 @@ It can be used to show a loading indicator for long-running navigations. In this
 {@render children()}
 ```
 
-> [!NOTE] Prior to SvelteKit 2.12, you had to use `$app/stores` for this, which provides a `$navigating` store with the same information. If you're currently using `$app/stores`, we advise you to migrate towards `$app/state` (requires Svelte 5).
+> [!NOTE] Prior to SvelteKit 2.12, you had to use `$app/stores` for this, which provides a `$navigating` store with the same information. It was removed in favor of `$app/state` in SvelteKit 3.
