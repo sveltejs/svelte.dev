@@ -29,6 +29,8 @@ importers:
 
   .: {}
 
+  apps/sandbox: {}
+
   apps/svelte.dev:
     dependencies:
       '@jridgewell/sourcemap-codec':
@@ -85,6 +87,9 @@ importers:
       do-not-zip:
         specifier: ^1.0.0
         version: 1.0.0
+      es-module-lexer:
+        specifier: ^2.1.0
+        version: 2.1.0
       flexsearch:
         specifier: ^0.8.212
         version: 0.8.212

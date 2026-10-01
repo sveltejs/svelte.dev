@@ -43,6 +43,8 @@ export const config: VercelConfig = {
 				: [{ key: 'X-Robots-Tag', value: 'noindex' }]
 		),
 		routes.header('/_app/immutable/workers/(.*)', [
+			// the tutorial sandbox loads its worker (and the worker's assets) cross-origin
+			{ key: 'access-control-allow-origin', value: '*' },
 			{ key: 'cross-origin-opener-policy', value: 'same-origin' },
 			{ key: 'cross-origin-embedder-policy', value: 'require-corp' },
 			{ key: 'cross-origin-resource-policy', value: 'cross-origin' }

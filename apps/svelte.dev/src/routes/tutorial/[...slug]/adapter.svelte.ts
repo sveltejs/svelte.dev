@@ -46,11 +46,29 @@ export const adapter_state = new (class {
 
 let wc_ready: Promise<Adapter> | undefined = undefined;
 
+/**
+ * Whether to use the experimental in-browser sandbox instead of WebContainers.
+ * Toggle with `?adapter=webcontainer` or `?adapter=sandbox` (persisted in localStorage)
+ */
+function use_sandbox() {
+	const param = new URL(location.href).searchParams.get('adapter');
+	if (param) localStorage.setItem('sv:tutorial-adapter', param);
+
+	return (param ?? localStorage.getItem('sv:tutorial-adapter') ?? 'sandbox') === 'sandbox';
+}
+
 export function load_webcontainer(force = false) {
 	if (!force && wc_ready) return wc_ready;
 
 	wc_ready = new Promise(async (fulfil, reject) => {
 		try {
+			if (use_sandbox()) {
+				const module = await import('#lib/tutorial/adapters/sandbox/index.svelte.ts');
+				wc_state = module.state;
+				fulfil(await module.create());
+				return;
+			}
+
 			// TODO: remove this when webcontainers are properly supported on iOS
 			// see https://github.com/stackblitz/webcontainer-core/issues/1120
 			if (initial_load && /iphone/i.test(navigator.userAgent)) {

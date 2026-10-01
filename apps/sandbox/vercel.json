@@ -1,0 +1,25 @@
+{
+	"$schema": "https://openapi.vercel.sh/vercel.json",
+	"framework": null,
+	"installCommand": "",
+	"buildCommand": "",
+	"outputDirectory": "public",
+	"headers": [
+		{
+			"source": "/__sandbox_sw.js",
+			"headers": [
+				{ "key": "cache-control", "value": "no-cache" },
+				{ "key": "service-worker-allowed", "value": "/" }
+			]
+		},
+		{
+			"source": "/__sandbox/(.*)",
+			"headers": [
+				{ "key": "cache-control", "value": "no-cache" },
+				{ "key": "cross-origin-opener-policy", "value": "same-origin" },
+				{ "key": "cross-origin-embedder-policy", "value": "require-corp" },
+				{ "key": "cross-origin-resource-policy", "value": "cross-origin" }
+			]
+		}
+	]
+}
