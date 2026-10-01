@@ -551,11 +551,17 @@
 				opacity: 0;
 				transition: opacity 0.2s;
 
-				:where(h2, h3):hover &,
+				:where(h2, h3):hover > &,
+				.hover-hitbox:hover:not(:has(.hover-hitbox:hover)) > &,
 				&:focus {
 					opacity: 1;
 				}
 			}
+		}
+		/* use to position the hash.svg for non-headings */
+		a.permalink-property {
+			top: 1em;
+			left: -3em;
 		}
 
 		ol,
