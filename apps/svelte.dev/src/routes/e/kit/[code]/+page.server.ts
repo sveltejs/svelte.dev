@@ -12,8 +12,10 @@ export async function load({ params }) {
 	const message = messages[params.code] ?? error(404);
 
 	return {
-		variants: await Promise.all(message.variants.map((v) => render_content('', v.text))),
-		details: await render_content('', message.details)
+		variants: await Promise.all(
+			message.variants.map((v) => render_content('', v.text, { check: false }))
+		),
+		details: await render_content('', message.details, { check: false })
 	};
 }
 
