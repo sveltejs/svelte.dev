@@ -83,7 +83,7 @@ _UI Components_
 - [FluentUI Svelte](https://fluentui-svelte.pages.dev/) brings Microsoft's Fluent UI to Svelte, now at 37 components with v0.4
 - [Baby UI](https://baby-ui.nexonauts.com/) is a large collection of animation-first UI components
 - [horizon-layout](https://github.com/play-horizon/horizon-layout) is a zero-dependency IDE-style layout manager with dockable panes, draggable tabs, resizable splits and pop-out windows
-- [svelte5plus-calendar](https://blackman99.github.io/svelte5plus-calendar/) and [svelte-json-discovery](https://github.com/Blackman99/svelte-json-discovery)are zero-dependency calendar and JSON structure viewers, respectively
+- [svelte5plus-calendar](https://blackman99.github.io/svelte5plus-calendar/) and [svelte-json-discovery](https://blackman99.github.io/svelte-json-discovery/) are zero-dependency calendar and JSON structure viewers, respectively
 - [Svelte-pasito](https://svelte-pasito.vercel.app/) is a dependency-free, customizable step indicator component
 - [Theme Toggles](https://github.com/AlfieJones/theme-toggles) is a set of animated light/dark theme toggles that now supports Svelte
 
