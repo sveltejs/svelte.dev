@@ -51,7 +51,7 @@ For all the bug fixes and performance improvements that went into Svelte 5.57.1 
 - [IMPIB](https://www.impib.dev) is an in-browser image workflow for compressing, cropping and packaging responsive image variants, all processed locally with WebAssembly codecs
 - [Supvan Katasymbol Printer Web UI](https://github.com/khromov/supvan-katasymbol-printer-web-ui) lets you print to Katasymbol thermal label printers straight from the browser on any computer or phone
 - [Deskfolk](https://blackman99.github.io/deskfolk/) is a private AI team on your Mac that asks before risky moves and shows its work
-- [uptik](https://github.com/tymon5368/uptik) schedules your video uploads so you don't have to watch the clock to hit publish
+- [uptik](https://uptik.pages.dev/) schedules your video uploads so you don't have to watch the clock to hit publish
 - [Mini Game Zone](https://minigamezone.duckdns.org/) is a browser-based party game where two teams compete in quick mini-games like color matching and word races
 - [Arknights: Endfield Factory Planner](https://beta.enka.network/endfield/aic/?id=U5m0U0B3v1r4y6) helps you plan factories in Arknights: Endfield, with a Zig/WASM solver doing the heavy lifting
 - [SPIRAL WARDEN](https://evreser.itch.io/spiral-warden) is an arena shooter/survival browser game with a Svelte UI on top of Phaser 3 physics
