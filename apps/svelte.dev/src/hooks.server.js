@@ -37,7 +37,10 @@ const mappings = new Map([
 	['/tutorial/svelte/introducing-stores', '/tutorial/svelte/stores'],
 	['/tutorial/kit/app-store', '/tutorial/kit/app-state'],
 	['/tutorial/kit/navigating-store', '/tutorial/kit/navigating-state'],
-	['/tutorial/kit/updated-store', '/tutorial/kit/updated-state']
+	['/tutorial/kit/updated-store', '/tutorial/kit/updated-state'],
+
+	// sveltekit 3 redirects
+	['/docs/kit/configuration', '/docs/kit/@sveltejs-kit-vite']
 ]);
 
 // selectively preload fonts

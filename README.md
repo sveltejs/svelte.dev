@@ -15,9 +15,13 @@ The tutorial, blog and examples are maintained within this repository.
 
 ## Setup
 
-```
+```sh
 pnpm install
 cd apps/svelte.dev
-pnpm sync-docs -p # use the -p flag to clone the git repos into `apps/svelte.dev/repos`
+
+# Use the -p flag to clone the git repos into `apps/svelte.dev/repos`.
+# To specify the branch add 'upstream#downstream#branch' such as 'kit#kit#version-3'
+pnpm sync-docs -p
+
 pnpm run dev
 ```
