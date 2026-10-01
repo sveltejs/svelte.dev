@@ -7,7 +7,7 @@ authorURL: https://svelte.dev/
 
 Version 3.0 of SvelteKit, the official application framework for Svelte, is now available.
 
-If you've used earlier versions of SvelteKit, everything will feel very familiar — it's the same framework with a little more polish, a little more type safety, and a little less junk. We've made migration as seamless as we can with the `sv migrate` command...
+If you've used earlier versions of SvelteKit, everything will feel very familiar — it's the same framework with a little more polish, a little more type safety, and a little less junk. We've made migration as seamless as we can with the [`sv migrate`](/docs/cli/sv-migrate) command...
 
 ```bash
 npx sv migrate sveltekit-3 --tasks all --confirm
