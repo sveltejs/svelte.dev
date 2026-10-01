@@ -13,7 +13,7 @@ If you've used earlier versions of SvelteKit, everything will feel very familiar
 npx sv migrate sveltekit-3 --tasks all --confirm
 ```
 
-...which will automatically migrate as much of your codebase as it can, and generate a TODO list for everything else. (If you're agentically inclined, your robot friends will make short work of it.)
+...which will automatically migrate as much of your codebase as possible, and generate a TODO list for everything else. (If you're agentically inclined, your robot friends will make short work of it.)
 
 To create a _new_ app, run [`sv create`](/docs/cli/sv-create):
 
