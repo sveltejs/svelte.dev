@@ -508,6 +508,9 @@ importers:
       '@twinkleplop/twoslash':
         specifier: ^0.2.1
         version: 0.2.1(typescript@6.0.3)
+      '@twinkleplop/twoslash-svelte':
+        specifier: ^0.2.1
+        version: 0.2.1(@typescript-eslint/types@8.58.0)
       '@twinkleplop/typescript':
         specifier: ^0.1.5
         version: 0.1.5
@@ -1817,6 +1820,9 @@ packages:
   '@twinkleplop/toml@0.1.5':
     resolution: {integrity: sha512-2ugzWapMyQxIvpoRonZwCqMUwQF2Ww158JfqG3IAke+HyO5SyyCrUt8dk3N+ebsa7RBqKTiFe0Am6wYs+J6JuA==}
 
+  '@twinkleplop/twoslash-svelte@0.2.1':
+    resolution: {integrity: sha512-JaUhpsPcl1gRvEi37IXM/gBqi8GPQRE6GIjqaEZ4E5+Uq+3ZrK0PR06X4/hYpfuMTDCa1uQ9lyIQPA+9aDMnCQ==}
+
   '@twinkleplop/twoslash@0.2.1':
     resolution: {integrity: sha512-Xs6rjVZxA2RDWBY1vM9iBtrhklqUBxgefT0xj7lGLYfgqvBNUsTREppCgBZSuk0fiJE5ZfNIhupoqrT8f2YmMw==}
 
@@ -1972,6 +1978,12 @@ packages:
 
   '@vitest/utils@4.1.8':
     resolution: {integrity: sha512-uOJamYALNhfJ6iolExyQM40yIQwDqYnkKtQ5VCiSe17E33H0aQ/u+1GlRuz4LZBk6Mm3sg90G9hEbmEt37C1Zg==}
+
+  '@volar/language-core@2.4.28':
+    resolution: {integrity: sha512-w4qhIJ8ZSitgLAkVay6AbcnC7gP3glYM3fYwKV3srj8m494E3xtrCv6E+bWviiK/8hs6e6t1ij1s2Endql7vzQ==}
+
+  '@volar/source-map@2.4.28':
+    resolution: {integrity: sha512-yX2BDBqJkRXfKw8my8VarTyjv48QwxdJtvRgUpNE5erCsgEUdI2DsLbpa+rOQVAJYshY99szEcRDmyHbF10ggQ==}
 
   '@vue/compiler-core@3.5.35':
     resolution: {integrity: sha512-BUmHaR1J+O+CKZ9uJucdVTEr1LHsdyvv7vG3eNRhK3CczEHeMd/LtsHAuD7PbrxvI2envCY2v7HI1vC1aBRzKw==}
@@ -2912,6 +2924,11 @@ packages:
     resolution: {integrity: sha512-OeDz0kDl8sqPUN3nr7gqcvOs70f5lZsdhKYTX3/SgB9OvdadzzoYJI/4SBXhXV1HG8E9fLc+e17itoRYTxmoig==}
     peerDependencies:
       typescript: ^5.5.0 || ^6.0.0
+
+  typescript@5.9.3:
+    resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
 
   typescript@6.0.3:
     resolution: {integrity: sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==}
@@ -4242,6 +4259,31 @@ snapshots:
     dependencies:
       '@twinkleplop/core': 0.2.2
 
+  '@twinkleplop/twoslash-svelte@0.2.1(@typescript-eslint/types@8.58.0)':
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.5.5
+      '@twinkleplop/core': 0.2.2
+      '@twinkleplop/svelte': 0.1.5
+      '@twinkleplop/twoslash': 0.2.1(typescript@5.9.3)
+      '@volar/language-core': 2.4.28
+      svelte: 5.56.4(@typescript-eslint/types@8.58.0)
+      svelte2tsx: 0.7.56(svelte@5.56.4(@typescript-eslint/types@8.58.0))(typescript@5.9.3)
+      twoslash: 0.3.8(typescript@5.9.3)
+      twoslash-protocol: 0.3.8
+      typescript: 5.9.3
+    transitivePeerDependencies:
+      - '@typescript-eslint/types'
+      - supports-color
+
+  '@twinkleplop/twoslash@0.2.1(typescript@5.9.3)':
+    dependencies:
+      '@twinkleplop/core': 0.2.2
+      '@twinkleplop/typescript': 0.1.5
+      twoslash: 0.3.8(typescript@5.9.3)
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
+
   '@twinkleplop/twoslash@0.2.1(typescript@6.0.3)':
     dependencies:
       '@twinkleplop/core': 0.2.2
@@ -4302,6 +4344,13 @@ snapshots:
 
   '@typescript-eslint/types@8.58.0':
     optional: true
+
+  '@typescript/vfs@1.6.4(typescript@5.9.3)':
+    dependencies:
+      debug: 4.4.3
+      typescript: 5.9.3
+    transitivePeerDependencies:
+      - supports-color
 
   '@typescript/vfs@1.6.4(typescript@6.0.3)':
     dependencies:
@@ -4394,6 +4443,12 @@ snapshots:
       '@vitest/pretty-format': 4.1.8
       convert-source-map: 2.0.0
       tinyrainbow: 3.1.0
+
+  '@volar/language-core@2.4.28':
+    dependencies:
+      '@volar/source-map': 2.4.28
+
+  '@volar/source-map@2.4.28': {}
 
   '@vue/compiler-core@3.5.35':
     dependencies:
@@ -5226,6 +5281,13 @@ snapshots:
       postcss: 8.5.15
       typescript: 6.0.3
 
+  svelte2tsx@0.7.56(svelte@5.56.4(@typescript-eslint/types@8.58.0))(typescript@5.9.3):
+    dependencies:
+      dedent-js: 1.0.1
+      scule: 1.3.0
+      svelte: 5.56.4(@typescript-eslint/types@8.58.0)
+      typescript: 5.9.3
+
   svelte2tsx@0.7.56(svelte@5.56.4(@typescript-eslint/types@8.58.0))(typescript@6.0.3):
     dependencies:
       dedent-js: 1.0.1
@@ -5313,6 +5375,14 @@ snapshots:
 
   twoslash-protocol@0.3.8: {}
 
+  twoslash@0.3.8(typescript@5.9.3):
+    dependencies:
+      '@typescript/vfs': 1.6.4(typescript@5.9.3)
+      twoslash-protocol: 0.3.8
+      typescript: 5.9.3
+    transitivePeerDependencies:
+      - supports-color
+
   twoslash@0.3.8(typescript@6.0.3):
     dependencies:
       '@typescript/vfs': 1.6.4(typescript@6.0.3)
@@ -5320,6 +5390,8 @@ snapshots:
       typescript: 6.0.3
     transitivePeerDependencies:
       - supports-color
+
+  typescript@5.9.3: {}
 
   typescript@6.0.3: {}
 

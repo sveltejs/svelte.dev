@@ -85,6 +85,10 @@ export const render_content = (
 			injected.push(
 				`// @filename: $types.d.ts`,
 				`import type * as Kit from '@sveltejs/kit';`,
+				`export type PageData = Record<string, any>;`,
+				`export type LayoutData = Record<string, any>;`,
+				`export type PageProps = { data: PageData; form: Record<string, any> | null; params: Record<string, string> };`,
+				`export type LayoutProps = { data: LayoutData; params: Record<string, string>; children: import('svelte').Snippet };`,
 				`export type PageLoad = Kit.Load<Record<string, any>>;`,
 				`export type PageServerLoad = Kit.ServerLoad<Record<string, any>>;`,
 				`export type PageServerLoadEvent = Parameters<PageServerLoad>[0];`,

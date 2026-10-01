@@ -16,9 +16,17 @@ import { language as create_json_highlighter } from '@twinkleplop/json';
 import { language as create_jsonc_highlighter } from '@twinkleplop/jsonc';
 import { language as create_markdown_highlighter } from '@twinkleplop/markdown';
 import { language as create_shellsession_highlighter } from '@twinkleplop/shellsession';
-import { language as create_svelte_highlighter } from '@twinkleplop/svelte';
+import {
+	language as create_svelte_highlighter,
+	tokenize as tokenize_svelte
+} from '@twinkleplop/svelte';
 import { language as create_toml_highlighter } from '@twinkleplop/toml';
-import { create_highlighter as create_twoslash_highlighter } from '@twinkleplop/twoslash';
+import {
+	create_highlighter as create_twoslash_highlighter,
+	create_pipeline,
+	resolve_twoslash_options
+} from '@twinkleplop/twoslash';
+import { create_twoslasher as create_svelte_twoslasher } from '@twinkleplop/twoslash-svelte';
 import { language as create_typescript_highlighter } from '@twinkleplop/typescript';
 import { language as create_yaml_highlighter } from '@twinkleplop/yaml';
 import { compress_and_encode_text } from 'gzip';
@@ -97,30 +105,129 @@ const docs_markdown = new marked.Marked({
 	}
 });
 
-function get_twoslash_highlighter(language: 'js' | 'ts', twoslashRoot?: string) {
-	const key = `${language}:${twoslashRoot ?? ''}`;
+function get_twoslash_highlighter(
+	language: 'js' | 'ts' | 'svelte',
+	twoslashRoot?: string,
+	declarations = ''
+) {
+	const key = JSON.stringify([language, twoslashRoot, declarations]);
 	let highlight = twoslash_highlighters.get(key);
 
 	if (!highlight) {
-		highlight = create_twoslash_highlighter({
-			lang: language,
-			render_docs: (markdown) => docs_markdown.parse(markdown, { async: false }),
-			process_type: (type) => type.replace(/import\(".*?"\)\./g, ''),
+		const options = {
+			render_docs: (markdown: string) => docs_markdown.parse(markdown, { async: false }),
+			process_type: (type: string) => type.replace(/import\(".*?"\)\./g, ''),
 			twoslash: {
 				...(twoslashRoot ? { vfsRoot: twoslashRoot } : {}),
 				compilerOptions: {
 					allowJs: true,
 					checkJs: true,
 					module: ts.ModuleKind.ESNext,
-					moduleResolution: ts.ModuleResolutionKind.Bundler,
-					types: ['svelte', '@sveltejs/kit', 'sv', '@sveltejs/sv-utils']
+					moduleResolution: ts.ModuleResolutionKind.Bundler
 				}
 			}
-		});
+		};
+
+		if (language === 'svelte') {
+			const files = declarations.split(/\/\/ @filename: ([^\n]+)\n?/);
+			const extraFiles: Record<string, string> = {};
+			for (let i = 1; i < files.length; i += 2) {
+				extraFiles[files[i]] = files[i + 1];
+			}
+			const twoslash = create_svelte_twoslasher({
+				...options.twoslash,
+				customTags: resolve_twoslash_options(options).customTags,
+				extraFiles
+			});
+			highlight = create_pipeline(
+				(source) => run_svelte_twoslash(twoslash, source),
+				tokenize_svelte(),
+				options
+			);
+		} else {
+			highlight = create_twoslash_highlighter({
+				...options,
+				lang: language,
+				twoslash: {
+					...options.twoslash,
+					compilerOptions: {
+						...options.twoslash.compilerOptions,
+						types: ['svelte', '@sveltejs/kit', 'sv', '@sveltejs/sv-utils']
+					}
+				}
+			});
+		}
 		twoslash_highlighters.set(key, highlight);
 	}
 
 	return highlight;
+}
+
+function run_svelte_twoslash(
+	twoslash: ReturnType<typeof create_svelte_twoslasher>,
+	source: string
+) {
+	// Analyze the current version, without diff markers that can split attributes or identifiers.
+	const pattern = new RegExp(
+		`\\f+|${delimiter_substitutes['+++']}|${delimiter_substitutes[':::']}`,
+		'g'
+	);
+	const offsets: number[] = [];
+	let cleaned = '';
+	let position = 0;
+	for (const match of source.matchAll(pattern)) {
+		for (; position < match.index!; position++) {
+			offsets.push(position);
+			cleaned += source[position];
+		}
+		position += match[0].length;
+	}
+	for (; position < source.length; position++) {
+		offsets.push(position);
+		cleaned += source[position];
+	}
+	offsets.push(source.length);
+
+	const result = twoslash(cleaned, 'svelte', { handbookOptions: { keepNotations: true } });
+	// A cut ending at generated boilerplate has no Svelte source-map endpoint upstream.
+	const cut_after = /^[\t ]*\/\/ ---cut-after---[^\n]*(?:\n|$)/m.exec(cleaned);
+	if (cut_after) result.meta.removals.push([cut_after.index, cleaned.length]);
+	const removals: Array<[number, number]> = [];
+	for (const [start, end] of result.meta.removals
+		.map(
+			([start, end]) =>
+				[
+					start ? offsets[start - 1] + 1 : 0,
+					end === cleaned.length ? source.length : offsets[end - 1] + 1
+				] as [number, number]
+		)
+		.sort((a, b) => a[0] - b[0])) {
+		const previous = removals.at(-1);
+		if (previous && start <= previous[1]) previous[1] = Math.max(previous[1], end);
+		else removals.push([start, end]);
+	}
+	const visible = new MagicString(source);
+	for (const [start, end] of removals) visible.remove(start, end);
+	result.code = visible.toString();
+	const visible_offset = (index: number) =>
+		index -
+		removals.reduce((total, [start, end]) => total + Math.max(0, Math.min(index, end) - start), 0);
+	result.nodes = result.nodes.flatMap((node) => {
+		const start = offsets[node.start];
+		const end = node.length ? offsets[node.start + node.length - 1] + 1 : start;
+		if (removals.some(([a, b]) => start < b && end > a)) return [];
+		const mapped_start = visible_offset(start);
+		return [
+			{
+				...node,
+				start: mapped_start,
+				length: visible_offset(end) - mapped_start,
+				line: result.code.slice(0, mapped_start).split('\n').length - 1,
+				character: mapped_start - result.code.lastIndexOf('\n', mapped_start - 1) - 1
+			}
+		];
+	});
+	return result;
 }
 
 // Hash the contents of this file and its dependencies so that we get a new cache in case we have changed
@@ -215,7 +322,7 @@ const snippets = await create_snippet_cache();
  * A super markdown renderer function. Renders svelte and kit docs specific specific markdown code to html.
  *
  * - Syntax Highlighting -> Twinkleplop language renderers.
- * - TS hover snippets -> Twinkleplop Twoslash. JS and TS code snippets (other than d.ts) are run through Twoslash.
+ * - Type hover snippets -> Twinkleplop Twoslash. JS, TS and Svelte code snippets are run through Twoslash.
  * - JS -> TS conversion -> JS snippets starting with `/// file: some_file.js` are converted to TS if possible. Same for Svelte snippets starting with `<!--- file: some_file.svelte --->`. Notice there's an additional dash(-) to the opening and closing comment tag.
  * - Type links -> Type names are converted to links to the type's documentation page.
  * - Snippet caching -> To avoid slowing down initial page render time, code snippets are cached in the nearest `node_modules/.snippets` folder. This is done by hashing the code snippet with SHA256 algo and storing the final rendered output in a file named the hash.
@@ -537,12 +644,14 @@ export async function render_content_markdown(
 							banner +
 							(options.file ? `\n// @filename: ${options.file.split('/').pop()}\n` : '\n') +
 							prelude;
+				} else if (token.lang === 'svelte' && check) {
+					prelude = '// @filename: injected.d.ts\n' + (twoslashBanner?.(filename, source) ?? '');
 				}
 
 				source = source.replace(
-					/(\+\+\+|---|:::)/g,
-					(match, delimiter: keyof typeof delimiter_substitutes, offset) => {
-						if (match === '---' && leading_frontmatter_delimiters.has(offset)) {
+					/(\/\/ ---cut(?:-before|-after)?---)|(\+\+\+|---|:::)/g,
+					(match, cut, delimiter: keyof typeof delimiter_substitutes, offset) => {
+						if (cut || (match === '---' && leading_frontmatter_delimiters.has(offset))) {
 							return match;
 						}
 
@@ -569,7 +678,15 @@ export async function render_content_markdown(
 
 				codeblock.files.push(file);
 
-				let cached = snippets.get(decodedText);
+				const cache_key = JSON.stringify([
+					decodedText,
+					token.lang,
+					check,
+					twoslashRoot,
+					prelude,
+					references
+				]);
+				let cached = snippets.get(cache_key);
 
 				if (!cached) {
 					cached = [];
@@ -613,7 +730,7 @@ export async function render_content_markdown(
 						cached.push(highlighted.replace('<pre', '<pre data-ts'));
 					}
 
-					snippets.save(decodedText, cached);
+					snippets.save(cache_key, cached);
 				}
 
 				file.rendered.push(...cached);
@@ -1150,7 +1267,7 @@ const delimiter_substitutes = {
 const delimiter_patterns = Object.fromEntries(
 	Object.entries(delimiter_substitutes).map(([key, substitute]) => [
 		key,
-		new RegExp(`${substitute}([^ ]|[^ ][^]+?[^ ])${substitute}`, 'g')
+		new RegExp(`${substitute}([^ ]|[^ ][^]*?[^ ])${substitute}`, 'g')
 	])
 );
 
@@ -1205,27 +1322,38 @@ async function syntax_highlight({
 }) {
 	let html = '';
 
-	if (language === 'js' || language === 'ts') {
+	if (language === 'js' || language === 'ts' || language === 'svelte') {
 		/** We need to stash code wrapped in `---` highlights, because otherwise TS will error on e.g. bad syntax or duplicate declarations. */
 		const redactions: Array<{ content: string; placeholder: string }> = [];
 		const substitute = delimiter_substitutes['---'];
-		const pattern = new RegExp(`${substitute}([^ ]|[^ ][^]+?[^ ])${substitute}`, 'g');
+		const pattern = new RegExp(`${substitute}([^ ]|[^ ][^]*?[^ ])${substitute}`, 'g');
 		const redacted = source.replace(pattern, (_, content) => {
-			const placeholder = '\f'.repeat(content.length);
+			const placeholder = '\f'.repeat(
+				language === 'svelte' ? redactions.length + 1 : content.length
+			);
 			redactions.push({ content, placeholder });
 			return placeholder;
 		});
 
 		try {
 			html = check
-				? get_twoslash_highlighter(language, twoslashRoot)(prelude + redacted)
+				? language === 'svelte'
+					? get_twoslash_highlighter(language, twoslashRoot, prelude)(redacted)
+					: get_twoslash_highlighter(language, twoslashRoot)(prelude + redacted)
 				: highlight_source(redacted, language);
 
-			for (const { content, placeholder } of redactions) {
-				html = html.replace(
-					placeholder,
-					`<span class="highlight remove">${escape_html(content)}</span>`
-				);
+			if (language === 'svelte') {
+				html = html.replace(/\f+/g, (placeholder) => {
+					const redaction = redactions.find((item) => item.placeholder === placeholder)!;
+					return `<span class="highlight remove">${escape_html(redaction.content)}</span>`;
+				});
+			} else {
+				for (const { content, placeholder } of redactions) {
+					html = html.replace(
+						placeholder,
+						`<span class="highlight remove">${escape_html(content)}</span>`
+					);
+				}
 			}
 
 			if (check) {
@@ -1235,7 +1363,7 @@ async function syntax_highlight({
 		} catch (e) {
 			console.error((e as Error).message);
 			console.warn(prelude + redacted);
-			throw new Error(`Error compiling snippet in ${filename}`);
+			throw new Error(`Error compiling snippet in ${filename}`, { cause: e });
 		}
 	} else {
 		html = highlight_source(source, language);

@@ -39,4 +39,63 @@ describe('render_content', () => {
 
 		expect(html).toContain('href="https://svelte.dev/docs/kit"');
 	});
+
+	test.each([
+		[
+			'Svelte APIs',
+			'import { onMount } from "svelte";\nonMount(() => {});',
+			'<p>Hello</p>',
+			'function'
+		],
+		['Kit state', 'import { page } from "$app/state";', '<p>{page.url.pathname}</p>', 'pathname'],
+		[
+			'Kit environment',
+			'import { browser } from "$app/environment";',
+			'<p>{browser}</p>',
+			'boolean'
+		],
+		[
+			'environment variables',
+			'import { PUBLIC_BASE_URL } from "$env/static/public";',
+			'<p>{PUBLIC_BASE_URL}</p>',
+			'string'
+		],
+		[
+			'route types',
+			'import type { PageLoad } from "./$types";\nlet load: PageLoad;',
+			'<p>Hello</p>',
+			'PageLoad'
+		],
+		[
+			'page props',
+			'import type { PageProps } from "./$types";\nlet { data }: PageProps = $props();',
+			'<p>{data.title}</p>',
+			'PageData'
+		],
+		[
+			'layout props',
+			'import type { LayoutProps } from "./$types";\nlet { children }: LayoutProps = $props();',
+			'{@render children()}',
+			'Snippet'
+		]
+	])('resolves %s in Svelte components', async (_, script, markup, type) => {
+		const html = await render_content(
+			'types.md',
+			`\`\`\`svelte\n<script lang="ts">\n${script}\n</script>\n${markup}\n\`\`\``
+		);
+		expect(html).toContain('twoslash-popover-type');
+		expect(html).toContain(type);
+		expect(html).not.toContain('@filename');
+		expect(html).not.toContain('reference types');
+		expect(html).not.toContain('__sveltets');
+	});
+
+	test('keeps diagnostics strict for incomplete synced examples', async () => {
+		await expect(
+			render_content(
+				'incomplete.md',
+				'\`\`\`svelte\n<button onclick={todo.reset}>reset</button>\n\`\`\`'
+			)
+		).rejects.toThrow('Error compiling snippet in incomplete.md');
+	});
 });

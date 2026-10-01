@@ -55,6 +55,7 @@
 		"@twinkleplop/svelte": "^0.1.5",
 		"@twinkleplop/toml": "^0.1.5",
 		"@twinkleplop/twoslash": "^0.2.1",
+		"@twinkleplop/twoslash-svelte": "^0.2.1",
 		"@twinkleplop/typescript": "^0.1.5",
 		"@twinkleplop/yaml": "^0.1.5",
 		"esm-env": "^1.2.2",
