@@ -21,7 +21,7 @@ To create a _new_ app, run [`sv create`](/docs/cli/sv-create):
 npx sv create my-new-app
 ```
 
-As with any major version bump there are a handful of breaking changes to be aware of, which are covered in the [migration guide](https://next.svelte.dev/docs/kit/migrating-to-sveltekit-3) (or, more briefly, in the recent [release candidate announcement](sveltekit-3-release-candidate)).
+As with any major version bump there are a handful of breaking changes to be aware of, which are covered in the [migration guide](/docs/kit/migrating-to-sveltekit-3) (or, more briefly, in the recent [release candidate announcement](sveltekit-3-release-candidate)).
 
 Quick highlights:
 
