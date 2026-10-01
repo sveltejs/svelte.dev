@@ -89,13 +89,13 @@ jobs:
           pnpm add --filter "docs-types"
           https://pkg.svelte.dev/@sveltejs/kit/${{ steps.resolve.outputs.ref }}
           https://pkg.svelte.dev/@sveltejs/adapter-auto/${{ steps.resolve.outputs.ref }}
-          https://pkg.svelte.dev/@sveltejs/adapter-bun/${{ steps.resolve.outputs.ref }}
           https://pkg.svelte.dev/@sveltejs/adapter-cloudflare/${{ steps.resolve.outputs.ref }}
           https://pkg.svelte.dev/@sveltejs/adapter-netlify/${{ steps.resolve.outputs.ref }}
           https://pkg.svelte.dev/@sveltejs/adapter-node/${{ steps.resolve.outputs.ref }}
           https://pkg.svelte.dev/@sveltejs/adapter-static/${{ steps.resolve.outputs.ref }}
           https://pkg.svelte.dev/@sveltejs/adapter-vercel/${{ steps.resolve.outputs.ref }}
           https://pkg.svelte.dev/@sveltejs/enhanced-img/${{ steps.resolve.outputs.ref }}
+          # TODO: add package and the bun adapter when we build them on pkg.svelte.dev
 
       - name: Install Svelte CLI upstream
         if: ${{ inputs.upstream == 'cli' }}
