@@ -60,7 +60,7 @@ For all the bug fixes and performance improvements that went into Svelte 5.57.1 
 
 _Featuring Svelte Contributors and Ambassadors_
 
-- [Make native desktop apps with Svelte 5 today using Custom Renderers](https://www.youtube.com/watch?v=5CBib_rwt8w) by Code with Stanislav (feature [this WIP library](https://github.com/khromov/gpuix-svelte/))
+- [Make native desktop apps with Svelte 5 today using Custom Renderers](https://www.youtube.com/watch?v=5CBib_rwt8w) by Code with Stanislav (featuring [this WIP library](https://github.com/khromov/gpuix-svelte/))
 - [WebMCP Challenge - GFX Computer](https://www.youtube.com/watch?v=aG7UCVwQ3Fg) by Scott Tolinski
 
 _This Week in Svelte_
