@@ -13,7 +13,7 @@ export async function load({ params }) {
 
 	return {
 		variants: await Promise.all(
-			message.variants.map((v) => render_content('', v.text, { check: false }))
+			message.variants.map((v: any) => render_content('', v.text, { check: false }))
 		),
 		details: await render_content('', message.details, { check: false })
 	};
