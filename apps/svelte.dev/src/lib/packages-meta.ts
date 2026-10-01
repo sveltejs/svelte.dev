@@ -99,6 +99,7 @@ const FEATURED: {
 			{ name: 'amplify-adapter', description: 'Builds your app for AWS Amplify' },
 			{ name: 'svelte-kit-sst', description: 'Builds your app for AWS Lambda and AWS Lamda@Edge' },
 			{ name: 'svelte-adapter-bun', description: 'Builds your app for Bun' },
+			{ name: 'svelte-adapter-nitro', description: 'Builds your app with Nitro' },
 			{
 				name: 'svelte-adapter-appengine',
 				description: 'Builds your app for Google Cloud App Engine'
