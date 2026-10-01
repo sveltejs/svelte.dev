@@ -96,6 +96,7 @@ jobs:
           https://pkg.svelte.dev/@sveltejs/adapter-static/${{ steps.resolve.outputs.ref }}
           https://pkg.svelte.dev/@sveltejs/adapter-vercel/${{ steps.resolve.outputs.ref }}
           https://pkg.svelte.dev/@sveltejs/enhanced-img/${{ steps.resolve.outputs.ref }}
+          https://pkg.svelte.dev/@sveltejs/package/${{ steps.resolve.outputs.ref }}
 
       - name: Install Svelte CLI upstream
         if: ${{ inputs.upstream == 'cli' }}
