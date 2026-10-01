@@ -57,28 +57,8 @@ export const render_content = (
 			injected.push('// @errors: 2304');
 		}
 
-		if (
-			source.includes('$app/') ||
-			source.includes('$service-worker') ||
-			source.includes('@sveltejs/kit/')
-		) {
+		if (source.includes('$app/') || source.includes('@sveltejs/kit/')) {
 			injected.push(`// @filename: ambient-kit.d.ts`, `/// <reference types="@sveltejs/kit" />`);
-		}
-
-		if (source.includes('$app/environment')) {
-			// TODO remove this once we drop SvelteKit 2 from the docs
-			injected.push(`declare module '$app/environment' { export * from '$app/env'; }`);
-		}
-
-		if (source.includes('$env/')) {
-			// TODO we're hardcoding static env vars that are used in code examples
-			// in the types, which isn't... totally ideal, but will do for now
-			injected.push(
-				`declare module '$env/dynamic/private' { export const env: Record<string, string> }`,
-				`declare module '$env/dynamic/public' { export const env: Record<string, string> }`,
-				`declare module '$env/static/private' { export const API_KEY: string; export const VERCEL_COMMIT_REF: string }`,
-				`declare module '$env/static/public' { export const PUBLIC_BASE_URL: string }`
-			);
 		}
 
 		if (source.includes('./$types') && !source.includes('@filename: $types.d.ts')) {
@@ -100,12 +80,8 @@ export const render_content = (
 
 		// special case — we need to make allowances for code snippets coming
 		// from e.g. ambient.d.ts
-		if (filename.endsWith('$env-all.md') || filename.endsWith('$app-forms.md')) {
+		if (filename.endsWith('$app-forms.md')) {
 			injected.push('// @errors: 7006 7031');
-		}
-
-		if (filename.endsWith('10-configuration.md')) {
-			injected.push('// @errors: 2307');
 		}
 
 		// another special case
