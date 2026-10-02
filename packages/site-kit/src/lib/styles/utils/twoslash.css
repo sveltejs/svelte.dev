@@ -9,6 +9,7 @@
 		top: 0;
 		width: 100%;
 		height: calc(100% + 1rem);
+		pointer-events: none;
 	}
 
 	.twoslash-popover {
@@ -155,12 +156,4 @@
 .twoslash-query-tag-name {
 	font: var(--sk-font-mono);
 	color: var(--sk-fg-accent);
-}
-
-.twoslash-popup-reference {
-	margin-top: 1rem;
-	padding-top: 1rem;
-	border-top: 1px solid var(--sk-border);
-	color: var(--sk-fg-accent);
-	text-decoration: none;
 }

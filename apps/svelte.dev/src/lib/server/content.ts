@@ -4,6 +4,8 @@ import type { Document, DocumentSummary } from '@sveltejs/site-kit';
 import { create_index } from '@sveltejs/site-kit/server/content';
 import crosslinked from './generated/crosslinked.json';
 import type { RelatedLink } from '#lib/types.d.ts';
+import type { DocumentationReferences } from '@sveltejs/site-kit/markdown';
+import { get_reference_module } from './reference-modules.ts';
 
 const documents = import.meta.glob<string>('./**/*.md', {
 	eager: true,
@@ -101,9 +103,16 @@ function create_docs() {
 		topics: Record<string, Document>;
 		/** The docs pages themselves. Key is the topic + page */
 		pages: Record<string, Document>;
-		/** References map to their documentation URLs */
-		references: Record<string, string>;
-	} = { topics: {}, pages: {}, references: {} };
+		/** References map from import modules and exported symbols to their documentation URLs */
+		references: DocumentationReferences;
+		/** Import module documented by each API page, indexed by source filename */
+		referenceModules: Record<string, string>;
+	} = {
+		topics: {},
+		pages: {},
+		references: { './$types': '/docs/kit/types#Generated-types' },
+		referenceModules: {}
+	};
 
 	for (const topic of index.docs.children) {
 		const pkg = topic.slug.split('/')[1];
@@ -143,10 +152,15 @@ function create_docs() {
 				transformed_section.children.push(transformed_page);
 
 				// Build references map for reference pages
-				const baseUrl = `/${slug}`;
-				for (const section of page.sections) {
-					const url = `${baseUrl}#${section.slug}`;
-					docs.references[section.title] = url;
+				const module = get_reference_module(page);
+				if (module) {
+					docs.referenceModules[page.file] = module;
+					const references: Record<string, string> = (docs.references[module] = {});
+					const baseUrl = `/${slug}`;
+					for (const section of page.sections) {
+						if (!/^[A-Za-z_$][\w$]*$/.test(section.title)) continue;
+						references[section.title] = `${baseUrl}#${section.slug}`;
+					}
 				}
 			}
 		}

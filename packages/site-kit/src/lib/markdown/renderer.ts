@@ -23,6 +23,7 @@ import { language as create_typescript_highlighter } from '@twinkleplop/typescri
 import { language as create_yaml_highlighter } from '@twinkleplop/yaml';
 import { compress_and_encode_text } from 'gzip';
 import { create_tree_highlighter } from './tree.ts';
+import { link_references, type DocumentationReferences } from './references.ts';
 // Keep this import on one line so hash_graph includes it in the snippet cache key.
 import { indent_multiline_comments } from './utils.ts';
 import {
@@ -254,7 +255,8 @@ const snippets = await create_snippet_cache();
  *
  * Provided at the top. Should be under `file:` if present.
  *
- * This doesn't allow the imported members from `svelte/*` or `@sveltejs/kit` to be linked, as in they are not wrapped with an `<a href="#type-onmount"></a>`.
+ * Documented types and imported functions are linked automatically in visible code.
+ * Set `link: false` to disable these documentation links for a snippet.
  *
  * ````md
  * ```js
@@ -290,38 +292,10 @@ const snippets = await create_snippet_cache();
  * @param {string} body
  * @param {object} options
  * @param {TwoslashBanner} [options.twoslashBanner] - A function that returns a string to be prepended to the code snippet before running the code with twoslash. Helps in adding imports from svelte or sveltekit or whichever modules are being globally referenced in all or most code snippets.
- * @param {Record<string, string>} [references] - Optional map of symbol names to their documentation URLs for dynamic reference links in twoslash tooltips.
+ * @param {DocumentationReferences} [options.references] - Module-wide documentation URLs or destinations indexed by exported symbol.
+ * @param {string} [options.referenceModule] - Module documented by the current API page, for unqualified declaration type references.
  * @param {(href: string) => string} [options.transformLink] - Transforms Markdown link destinations before rendering.
  */
-
-/**
- * Extracts imported symbol names from source code (handles JS/TS/Svelte files).
- * Only tracks imports from documented modules to avoid linking to external symbols.
- */
-function extractImportedSymbols(source: string): Set<string> {
-	const imported = new Set<string>();
-	const scriptMatch = source.match(/<script[^>]*>([\s\S]+?)<\/script>/);
-	const codeToScan = scriptMatch ? scriptMatch[1] : source;
-	const importRegex = /import\s+(?:type\s+)?{([^}]+)}\s+from\s+['"]([^'"]+)['"]/g;
-
-	for (const match of codeToScan.matchAll(importRegex)) {
-		const [, imports, module] = match;
-		const documentedModules = ['svelte', '@sveltejs/kit', '$app/', '$env/', '$service-worker'];
-		if (!documentedModules.some((prefix) => module.startsWith(prefix))) continue;
-
-		// Extract symbol names, handling: { a, b as c, type d }
-		for (const item of imports.split(',')) {
-			const name = item
-				.trim()
-				.replace(/^type\s+/, '')
-				.split(/\s+as\s+/)[0]
-				.trim();
-			if (name) imported.add(name);
-		}
-	}
-
-	return imported;
-}
 
 function find_closing_span(html: string, open_index: number) {
 	let depth = 1;
@@ -346,68 +320,20 @@ function find_closing_span(html: string, open_index: number) {
 	return -1;
 }
 
-/** Adds reference links for imported symbols to their Twoslash popovers. */
-function injectReferenceLinks(
-	html: string,
-	references?: Record<string, string>,
-	importedSymbols?: Set<string>
-): string {
-	if (!references || !importedSymbols || html.includes('twoslash-popup-reference')) {
-		return html;
-	}
-
-	const insertions: Array<{ index: number; content: string }> = [];
-
-	for (const match of html.matchAll(/<span class="twoslash-hover">/g)) {
-		const hover_end = find_closing_span(html, match.index);
-		const target_start = html.indexOf('<span class="twoslash-target">', match.index);
-
-		if (hover_end === -1 || target_start === -1 || target_start > hover_end) continue;
-
-		const target_end = find_closing_span(html, target_start);
-		if (target_end === -1) continue;
-
-		const target_content_start = html.indexOf('>', target_start) + 1;
-		const symbol = decode_html_entities(
-			html.slice(target_content_start, target_end).replace(/<[^>]+>/g, '')
-		).trim();
-
-		if (!importedSymbols.has(symbol)) continue;
-
-		const url = references[symbol];
-		const popover_start = html.indexOf('<span class="twoslash-popover"', target_end);
-		if (!url || popover_start === -1 || popover_start > hover_end) continue;
-
-		const popover_end = find_closing_span(html, popover_start);
-		if (popover_end === -1) continue;
-
-		insertions.push({
-			index: popover_end,
-			content: `<span class="twoslash-popup-reference"><a href="${url}">reference</a></span>`
-		});
-	}
-
-	for (let i = insertions.length - 1; i >= 0; i--) {
-		const { index, content } = insertions[i];
-		html = html.slice(0, index) + content + html.slice(index);
-	}
-
-	return html;
-}
-
 export async function render_content_markdown(
 	filename: string,
 	body: string,
 	options?: {
 		check?: boolean;
-		references?: Record<string, string>;
+		references?: DocumentationReferences;
+		referenceModule?: string;
 		transformLink?: (href: string) => string;
 		twoslashRoot?: string;
 	},
 	twoslashBanner?: TwoslashBanner
 ) {
 	const headings: string[] = [];
-	const { check = true, references, transformLink, twoslashRoot } = options ?? {};
+	const { check = true, references, referenceModule, transformLink, twoslashRoot } = options ?? {};
 
 	interface CodeBlockFile {
 		selected: boolean;
@@ -569,7 +495,8 @@ export async function render_content_markdown(
 
 				codeblock.files.push(file);
 
-				let cached = snippets.get(decodedText);
+				const cache_key = JSON.stringify([decodedText, token.lang, check, twoslashRoot, prelude]);
+				let cached = snippets.get(cache_key);
 
 				if (!cached) {
 					cached = [];
@@ -585,7 +512,6 @@ export async function render_content_markdown(
 						prelude,
 						source,
 						check,
-						references,
 						twoslashRoot
 					});
 
@@ -606,17 +532,22 @@ export async function render_content_markdown(
 							prelude,
 							source: converted,
 							check,
-							references,
 							twoslashRoot
 						});
 
 						cached.push(highlighted.replace('<pre', '<pre data-ts'));
 					}
 
-					snippets.save(decodedText, cached);
+					snippets.save(cache_key, cached);
 				}
 
-				file.rendered.push(...cached);
+				file.rendered.push(
+					...cached.map((html) =>
+						options.link && references
+							? link_references(html, references, referenceModule, prelude)
+							: html
+					)
+				);
 				codeblock.converted ||= cached.length > 1;
 			}
 
@@ -689,15 +620,7 @@ export async function render_content_markdown(
 
 			return `<h${depth} id="${slug}"><span>${html}</span><a href="#${slug}" class="permalink" aria-label="permalink"></a></h${depth}>`;
 		},
-		code({ text }) {
-			const decodedText = decode_html_entities(text);
-			const symbols = extractImportedSymbols(decodedText);
-
-			// const cached = snippets.get(decodedText);
-			// if (!cached) throw new Error('huh?');
-
-			// let html = injectReferenceLinks(cached, references, extractImportedSymbols(decodedText));
-
+		code() {
 			const block = current_block ?? codeblocks.shift()!;
 			const file = block.files.shift()!;
 
@@ -731,9 +654,7 @@ export async function render_content_markdown(
 				}
 			}
 
-			for (const pre of file.rendered) {
-				html += injectReferenceLinks(pre, references, symbols);
-			}
+			html += file.rendered.join('');
 
 			html += '</div>';
 
@@ -1077,7 +998,7 @@ function parse_options(source: string, language: string) {
 
 	const options: SnippetOptions = {
 		file: null,
-		link: false,
+		link: true,
 		copy: language !== '' && language !== 'dts'
 	};
 
@@ -1088,7 +1009,8 @@ function parse_options(source: string, language: string) {
 				break;
 
 			case 'link':
-				options.link = value === 'true';
+				options.link = value !== 'false';
+				break;
 
 			case 'copy':
 				options.copy = value === 'true';
@@ -1192,7 +1114,6 @@ async function syntax_highlight({
 	filename,
 	language,
 	check,
-	references,
 	twoslashRoot
 }: {
 	prelude: string;
@@ -1200,7 +1121,6 @@ async function syntax_highlight({
 	filename: string;
 	language: string;
 	check: boolean;
-	references?: Record<string, string>;
 	twoslashRoot?: string;
 }) {
 	let html = '';
@@ -1230,7 +1150,6 @@ async function syntax_highlight({
 
 			if (check) {
 				html = html.replace(/<span class="twoslash-error-line"[^>]*>[^]*?<\/span>/g, '');
-				html = injectReferenceLinks(html, references, extractImportedSymbols(source));
 			}
 		} catch (e) {
 			console.error((e as Error).message);
