@@ -99,7 +99,7 @@ _Markdown tools, editors and syntax highlighting_
 _Dev Tools_
 
 - [svebcomponents](https://svebcomponents.dev/) provides boilerplate-free, type-safe, server-renderable web components
-- [svdevtools](https://www.npmjs.com/package/svdevtools) is an early preview of a devtools package that lets you inspect components, props and state
+- [svdevtools](https://github.com/hasinoorit/svdevtools) is an early preview of a devtools package that lets you inspect components, props and state
 
 That's it for this month! Let us know if we missed anything on [Reddit](https://www.reddit.com/r/sveltejs/) or [Discord](https://discord.gg/svelte).
 
