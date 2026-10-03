@@ -1,35 +1,30 @@
 # Playground: saving apps
 
-An app can be saved to one of three places. New apps and forks go to the default destination; saving an app you own updates it where it lives, and saving someone else's app copies it to the default. The default is the tab marked as such on `/apps` (`save_to` cookie). Without a choice it is the first available in the order below, which is also the tab order: most people link one account, so this only matters with both.
+Logged-in users can save, fork and list apps (`/apps`), with a GitHub account, an atproto account, or both. New apps and forks go to the default destination: the tab marked "default" on `/apps` (`save_to` cookie), else the first available below. Saving your own app updates it where it lives; saving someone else's copies it to the default.
 
-| Destination                | Account | Storage                                                       |
-| -------------------------- | ------- | ------------------------------------------------------------- |
-| GitHub                     | GitHub  | Supabase `gist` table                                         |
-| Atmosphere public          | atproto | `dev.svelte.playground` record on the user's PDS              |
-| Atmosphere private (alpha) | atproto | same record, inside the space `dev.svelte.playground.private` |
+| Destination                | Storage                                                             |
+| -------------------------- | ------------------------------------------------------------------- |
+| Atmosphere public          | `dev.svelte.playground` record on the user's PDS                    |
+| Atmosphere private (alpha) | same record, inside the space `dev.svelte.playground.private`       |
+| GitHub                     | Supabase (`gist` table + `login`/`get_user`/`logout`/`gist_*` rpcs) |
 
 Public atproto apps are readable by anyone at `/playground/<handle>/<rkey>` and listed at `/apps/<handle>`.
 
-## atproto: server-side, through airspace
+## atproto
 
-The model lives in `src/lib/atproto/lexicons.ts` + `model.ts` ([airspace](https://getair.space)). Login is OAuth with a public client (`airspace/oauth` over `@atproto/oauth-client-node`): tokens stay on the server, every PDS call happens in `+server` / `+page.server` (`src/lib/atproto/apps.ts`), and the browser only talks to our API (`src/lib/apps.ts`).
-
-Server state is one key/value store (`src/lib/atproto/store.ts`): OAuth state + sessions (keyed by origin and DID, since each origin is its own OAuth client), login sessions (`atsid` cookie, like the GitHub `sid`) and the account profile. Rows untouched for 60 days are swept on login (logins expire at 30).
-
-OAuth refreshes are serialized per process only (`@atproto/oauth-client-node`'s local lock): two instances refreshing the same DID at once can burn the single-use refresh token, and the loser's session is gone. Rare, since one user mostly hits one instance at a time; a lock in `atproto_kv` is the fix if it shows up.
-
-A PDS filters and offsets nothing: it pages by cursor, so a listing walks the repo and search and paging happen here. A walk stops at the 500 newest records (`MAX_RECORDS`) and the tab count then reads `500+`; the GitHub list needs no such cap because Supabase pages and searches server-side. Anonymous clients are reused per identity for their read cache (10s, dropped on a write by the owner in the same process). Sessions are never reused, so an expired one still surfaces on the next request.
-
-An app is saved where it lives; moving one between public and private is a copy from `/apps` followed by a delete.
-
-Authenticated endpoints go through `with_user` (`src/lib/atproto/endpoint.ts`): a dead OAuth session (refresh token expired, app revoked on the PDS) clears the login and answers 401, which the browser (`with_reauth` in `src/lib/apps.ts`) turns into a login popup and one retry. Batch actions retry one app at a time, so a session that dies halfway through copies nothing twice.
+- Tokens and every PDS call stay on the server (`src/lib/atproto/`, built on [airspace](https://getair.space)); the browser only talks to our API (`src/lib/apps.ts`).
+- Server state is one key/value table (`store.ts`): OAuth state and sessions (per origin and DID), logins (`atsid` cookie) and profiles. Rows untouched for 60 days are swept on login.
+- A PDS can't search or offset, so a listing walks at most 500 records (`MAX_RECORDS`, the count then reads `500+`).
+- A dead OAuth session answers 401; the browser logs in again in a popup and retries once.
+- OAuth refreshes are locked per process only: two instances refreshing the same DID at once can drop the session. A lock in `atproto_kv` fixes it if it shows up.
 
 ## Dev
 
-No database needed:
+Open `http://127.0.0.1:5173`: atproto OAuth forbids `localhost`, so dev redirects it.
 
-- GitHub: create an [OAuth app](https://github.com/settings/developers) with callback `http://127.0.0.1:5173/auth/callback`, put `GITHUB_CLIENT_ID` / `GITHUB_CLIENT_SECRET` in `.env.local`. Sessions and apps go to `tmp/playground.json`.
-- atproto: nothing to configure, the store falls back to `tmp/playground.json` (same file as the GitHub stand-in). The OAuth client is a loopback client, so open the site on `http://127.0.0.1:5173` (not `localhost`; dev redirects it).
+Click "log in" in the playground: without GitHub credentials the popup explains how to register an OAuth app (callback `http://127.0.0.1:5173/auth/callback`) and what to put in `.env.local`. atproto needs no setup.
+
+Without `SUPABASE_URL`/`SUPABASE_KEY`, sessions and apps are stored in `tmp/playground.json` (`src/lib/db/dev.js`) so save/fork/list work locally. Loading an id that isn't there proxies to svelte.dev, so existing playground links still open.
 
 ## Prod
 
@@ -52,21 +47,10 @@ create table atproto_kv (
 
 ## Lexicons
 
-Two NSIDs, published as `com.atproto.lexicon.schema` records on the @svelte.dev repo (`did:plc:b6gbde64ngpelprsvnphc2l2`):
-
-| NSID                            | What                                                                        |
-| ------------------------------- | --------------------------------------------------------------------------- |
-| `dev.svelte.playground`         | record: name, files, tailwind, svelteVersion, async, forkedFrom, timestamps |
-| `dev.svelte.playground.private` | space declaration holding private `dev.svelte.playground` records           |
-
-Resolution: `_lexicon.svelte.dev` and `_lexicon.playground.svelte.dev` TXT -> `did=did:plc:b6gbde64ngpelprsvnphc2l2`. The authorization server only grants the `space:` scope if the space NSID resolves to a published declaration.
-
-Publish or update both straight from the TypeScript model (app password of @svelte.dev):
+`dev.svelte.playground` (the app record) and `dev.svelte.playground.private` (the space holding private apps) are published on @svelte.dev (`did:plc:b6gbde64ngpelprsvnphc2l2`) and resolve through the `_lexicon.svelte.dev` and `_lexicon.playground.svelte.dev` TXT records. The `space:` scope is only granted once the space is published. To publish from the TypeScript model, with an app password of @svelte.dev:
 
 ```
 AIRSPACE_APP_PASSWORD=... npx airspace lexicons publish --identity svelte.dev --lexicons src/lib/atproto/lexicons.ts
 ```
 
-A user's apps are browsable on pdsls at `https://pdsls.dev/at://<handle>/dev.svelte.playground`.
-
-Spaces are an atproto alpha: only accounts on a PDS running a spaces build can enable private apps, `/accounts` shows the status (`space.supported()`, an unauthenticated probe of the PDS). The space scope is asked for again on every later login of an account that enabled it (the profile row outlives the login), and `manage.ensure()` is one read when the space is already there.
+Spaces are an atproto alpha: private apps need a PDS running a spaces build, and `/accounts` shows whether it does.
