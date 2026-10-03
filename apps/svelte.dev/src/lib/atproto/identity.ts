@@ -1,6 +1,6 @@
 import type { DidString } from 'airspace';
 import flru from 'flru';
-import { anonymous } from './client.js';
+import { anonymous, lookup } from './client.js';
 
 const TTL_MS = 10 * 60 * 1000;
 
@@ -27,7 +27,7 @@ export async function resolve(actor: string): Promise<Resolved> {
 	const hit = fresh(identities.get(actor));
 	if (hit) return hit.value;
 
-	const identity = await anonymous(actor).identity();
+	const identity = await lookup(actor);
 	const value = {
 		did: identity.did,
 		handle: identity.handle ?? identity.did,

@@ -3,7 +3,11 @@ import type { Destination } from '#lib/destination.js';
 
 // Browser-side. Everything goes through our API; atproto ids contain a `/`
 
-type Input = { name: string; tailwind?: boolean; svelte_version?: string; files: Gist['files'] };
+// `<handle-or-did>/<rkey>`: neither segment may be `.` or `..`, the page loads fetch these
+// server-side with the viewer's cookies and a traversal would reach any same-origin endpoint
+const AT_ID_REGEX = /^[a-z0-9][a-z0-9.:_%-]*\/[a-z0-9_:~-][a-z0-9._:~-]*$/i;
+
+type Input = Pick<Gist, 'name' | 'tailwind' | 'svelte_version' | 'async' | 'forked_from' | 'files'>;
 
 class HttpError extends Error {
 	status: number;
@@ -45,26 +49,59 @@ function is_atproto(id: string) {
 	return id.includes('/');
 }
 
-async function read(id: string): Promise<Input> {
-	const r = await send(
-		is_atproto(id) ? `/playground/api/at/${id}` : `/playground/api/${id}.json`,
-		'GET'
-	);
+function at_path(id: string) {
+	if (!AT_ID_REGEX.test(id)) return null;
+	const slash = id.indexOf('/');
+	return `${encodeURIComponent(id.slice(0, slash))}/${encodeURIComponent(id.slice(slash + 1))}`;
+}
+
+/** Where an app is read from; also used by the page loads. Null for an id that cannot be one. */
+export function api_url(id: string) {
+	if (!is_atproto(id)) return `/playground/api/${encodeURIComponent(id)}.json`;
+	const path = at_path(id);
+	return path && `/playground/api/at/${path}`;
+}
+
+/** Where a fork comes from; a private app is not linked from a copy that may be public. */
+export function fork_source(source: Pick<Gist, 'id' | 'owner' | 'private'>) {
+	if (source.id === 'untitled' || source.private) return undefined;
+	if (!is_atproto(source.id)) return `https://svelte.dev/playground/${source.id}`;
+	const rkey = source.id.slice(source.id.indexOf('/') + 1);
+	return `at://${source.owner}/dev.svelte.playground/${rkey}`;
+}
+
+async function read(id: string): Promise<Input & Pick<Gist, 'id' | 'owner' | 'private'>> {
+	const url = api_url(id);
+	if (!url) throw new HttpError(404);
+	const r = await send(url, 'GET');
 	const app = await r.json();
 	return {
+		id: app.id,
+		owner: app.owner,
+		private: app.private,
 		name: app.name,
 		tailwind: app.tailwind,
 		svelte_version: app.svelte_version,
+		async: app.async,
+		forked_from: app.forked_from,
 		files: app.components.map((c: { name: string; type: string; source: string }) => ({
-			name: `${c.name}.${c.type}`,
+			name: c.type ? `${c.name}.${c.type}` : c.name,
 			type: c.type,
 			source: c.source
 		}))
 	};
 }
 
-function body(input: Input) {
-	return { ...input, files: input.files.map((f) => ({ name: f.name, source: f.source })) };
+// only what the API takes: a read app carries more (id, owner, private)
+function body({ name, tailwind, svelte_version, async, forked_from, files }: Input) {
+	return {
+		name,
+		tailwind,
+		svelte_version,
+		async,
+		forked_from,
+		files: files.map((f) => ({ name: f.name, source: f.source }))
+	};
 }
 
 export async function create(input: Input, destination: Destination): Promise<Gist> {
@@ -80,23 +117,35 @@ export async function create(input: Input, destination: Destination): Promise<Gi
 }
 
 export async function update(id: string, input: Input) {
-	await send(
-		is_atproto(id) ? `/playground/at/save/${id}` : `/playground/save/${id}`,
-		'PUT',
-		body(input)
-	);
+	let url = `/playground/save/${encodeURIComponent(id)}`;
+	if (is_atproto(id)) {
+		const path = at_path(id);
+		if (!path) throw new HttpError(404);
+		url = `/playground/at/save/${path}`;
+	}
+	await send(url, 'PUT', body(input));
 }
 
 /**
  * Copies apps to a destination; the originals are untouched. Each app reauths on its own,
- * so a session that expires halfway through does not copy the earlier ones twice.
+ * so a session that expires halfway through does not copy the earlier ones twice, and
+ * `done` lets the caller drop finished ids before retrying a failed batch.
  */
-export async function copy(ids: string[], destination: Destination, login: () => Promise<void>) {
+export async function copy(
+	ids: string[],
+	destination: Destination,
+	login: () => Promise<void>,
+	done: (id: string) => void
+) {
 	for (const id of ids) {
 		await with_reauth(async () => {
 			const app = await read(id);
-			await create({ ...app, tailwind: app.tailwind ?? false }, destination);
+			await create(
+				{ ...app, tailwind: app.tailwind ?? false, forked_from: fork_source(app) },
+				destination
+			);
 		}, login);
+		done(id);
 	}
 }
 

@@ -8,6 +8,7 @@ import * as store from './store.js';
 
 export const COOKIE = 'atsid';
 const TTL_MS = 30 * 24 * 60 * 60 * 1000;
+const LOGIN_CACHE_MS = 60 * 1000;
 
 interface Login {
 	did: string;
@@ -17,23 +18,20 @@ interface Login {
 const logins = store.scoped<Login>('login');
 const profiles = store.scoped<AtprotoSessionUser>('profile');
 
-// profiles cached by DID so an update reaches every session of that account
-const login_cache = flru<Login | null>(1000);
-const profile_cache = flru<AtprotoSessionUser>(1000);
+// Per-instance caches never see writes made on other instances. A login only changes on
+// logout, so a short TTL is enough; profiles (private apps, handle, PDS) are never cached.
+const login_cache = flru<{ at: number; login: Login | null }>(1000);
 
 async function login_of(sid: string) {
-	if (login_cache.has(sid)) return login_cache.get(sid) ?? null;
+	const hit = login_cache.get(sid);
+	if (hit && Date.now() - hit.at < LOGIN_CACHE_MS) return hit.login;
 	const login = (await logins.get(sid)) ?? null;
-	login_cache.set(sid, login);
+	login_cache.set(sid, { at: Date.now(), login });
 	return login;
 }
 
 async function profile_of(did: string) {
-	const hit = profile_cache.get(did);
-	if (hit) return hit;
-	const user = (await profiles.get(did)) ?? null;
-	if (user) profile_cache.set(did, user);
-	return user;
+	return (await profiles.get(did)) ?? null;
 }
 
 export async function create(user: AtprotoSessionUser) {
@@ -41,9 +39,9 @@ export async function create(user: AtprotoSessionUser) {
 	const login = { did: user.did, expires: Date.now() + TTL_MS };
 	await profiles.set(user.did, user);
 	await logins.set(sid, login);
-	profile_cache.set(user.did, user);
-	login_cache.set(sid, login);
-	void store.sweep();
+	login_cache.set(sid, { at: Date.now(), login });
+	// awaited: work left running after the response may be frozen on serverless
+	await store.sweep();
 	return { sid, expires: new Date(login.expires) };
 }
 
@@ -64,12 +62,11 @@ export async function update(sid: string, patch: Partial<AtprotoSessionUser>) {
 	if (!user) return;
 	const next = { ...user, ...patch };
 	await profiles.set(user.did, next);
-	profile_cache.set(user.did, next);
 }
 
 export async function destroy(sid: string) {
 	await logins.del(sid);
-	login_cache.set(sid, null);
+	login_cache.set(sid, { at: Date.now(), login: null });
 }
 
 export function from_cookies(cookies: Cookies) {

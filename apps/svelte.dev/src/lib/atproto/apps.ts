@@ -1,5 +1,11 @@
 import { error } from '@sveltejs/kit';
-import type { DidString, Identity, PageQuery, RecordInput } from 'airspace';
+import {
+	ValidationError,
+	type DidString,
+	type Identity,
+	type PageQuery,
+	type RecordInput
+} from 'airspace';
 import type { AtprotoSessionUser, Gist } from '#lib/db/types.d.ts';
 import { anonymous, invalidate_public, own, SessionError, type Airspace } from './client.js';
 import { resolve, type Resolved } from './identity.js';
@@ -14,6 +20,8 @@ export interface Input {
 	name: string;
 	tailwind?: boolean;
 	svelte_version?: string;
+	async?: boolean;
+	forked_from?: string;
 	files: Array<{ name: string; source: string }>;
 }
 
@@ -87,6 +95,8 @@ function to_value(input: Input, created_at?: string): Value {
 		files: input.files.map((f) => ({ name: f.name, contents: f.source })),
 		...(input.tailwind ? { tailwind: true } : {}),
 		...(input.svelte_version ? { svelteVersion: input.svelte_version } : {}),
+		...(input.async !== undefined ? { async: input.async } : {}),
+		...(input.forked_from ? { forkedFrom: input.forked_from } : {}),
 		createdAt: (created_at as Value['createdAt']) ?? now,
 		updatedAt: now
 	};
@@ -106,6 +116,8 @@ function to_gist(
 		tailwind: value.tailwind ?? false,
 		private: is_private,
 		svelte_version: value.svelteVersion,
+		async: value.async,
+		forked_from: value.forkedFrom,
 		files: value.files.map((f) => ({ name: f.name, type: '', source: f.contents }))
 	};
 }
@@ -128,9 +140,29 @@ function identity_of({ did, pds }: Resolved): Identity {
 	return { did: did as DidString, service: pds };
 }
 
+/** A handle that does not resolve owns nothing. */
+async function resolve_or_null(repo: string) {
+	return resolve(repo).catch(() => null);
+}
+
+/** The user's current handle: the one in the login row is as old as the login. */
+function owner(user: AtprotoSessionUser) {
+	return resolve(user.did);
+}
+
 async function owner_of(user: AtprotoSessionUser, repo: string) {
-	const did = repo.startsWith('did:') ? repo : (await resolve(repo)).did;
+	const did = repo.startsWith('did:') ? repo : (await resolve_or_null(repo))?.did;
 	return did === user.did;
+}
+
+/** A record another client wrote outside the lexicon reads like a missing one. */
+async function valid<T>(get: Promise<T | null>) {
+	try {
+		return await get;
+	} catch (e) {
+		if (e instanceof ValidationError) return null;
+		throw e;
+	}
 }
 
 /** Public first; the owner also sees their private copy. */
@@ -140,13 +172,15 @@ export async function read(
 	rkey: string,
 	viewer: AtprotoSessionUser | null
 ): Promise<Gist | null> {
-	const identity = await resolve(repo);
-	const pub = await anonymous(identity_of(identity)).playgrounds.get(rkey);
+	const identity = await resolve_or_null(repo);
+	if (!identity) return null;
+
+	const pub = await valid(anonymous(identity_of(identity)).playgrounds.get(rkey));
 	if (pub) return to_gist(identity, rkey, pub.value, false);
 
 	if (!viewer?.private_apps || viewer.did !== identity.did) return null;
 	try {
-		const priv = await (await own(origin, viewer)).private_apps.playgrounds.get(rkey);
+		const priv = await valid((await own(origin, viewer)).private_apps.playgrounds.get(rkey));
 		return priv ? to_gist(identity, rkey, priv.value, true) : null;
 	} catch (e) {
 		// a dead session reads like a stranger: not found rather than 500
@@ -169,23 +203,27 @@ export async function list_private(
 	offset = 0
 ): Promise<Page> {
 	if (!user.private_apps) return paginate([], 0, false);
-	const { records, capped } = await walk((await own(origin, user)).private_apps.playgrounds);
-	return paginate(records.map(to_summary(user, true)).filter(matches(search)), offset, capped);
+	const [me, { records, capped }] = await Promise.all([
+		owner(user),
+		own(origin, user).then((airspace) => walk(airspace.private_apps.playgrounds))
+	]);
+	return paginate(records.map(to_summary(me, true)).filter(matches(search)), offset, capped);
 }
 
 function home(airspace: Airspace, is_private: boolean) {
 	return is_private ? airspace.private_apps.playgrounds : airspace.playgrounds;
 }
 
-/** One commit, over the keys that are actually there. */
+/** One commit, over the keys that are actually there; a walk would stop at MAX_RECORDS. */
 async function remove_all(airspace: Airspace, is_private: boolean, rkeys: string[]) {
-	const { records } = await walk(home(airspace, is_private));
-	const present = records.filter((r) => rkeys.includes(r.rkey));
+	const collection = home(airspace, is_private);
+	const found = await Promise.all(rkeys.map((rkey) => valid(collection.get(rkey))));
+	const present = rkeys.filter((_, i) => found[i]);
 	if (present.length === 0) return;
 
 	const target = is_private ? airspace.private_apps : airspace;
 	await target.batch((b) => {
-		for (const record of present) b.playgrounds.delete(record.rkey);
+		for (const rkey of present) b.playgrounds.delete(rkey);
 	});
 }
 
@@ -195,12 +233,15 @@ export async function create(
 	input: Input,
 	is_private: boolean
 ) {
-	is_private &&= user.private_apps;
-	const airspace = await own(origin, user);
+	// the user asked for private: refuse rather than save it publicly
+	if (is_private && !user.private_apps) {
+		error(409, 'Private apps are not enabled on this account. Enable them in Accounts.');
+	}
+	const [me, airspace] = await Promise.all([owner(user), own(origin, user)]);
 	const value = to_value(input);
 	const { rkey } = await home(airspace, is_private).create(value);
 	invalidate_public(user.did);
-	return to_gist(user, rkey, value, is_private);
+	return to_gist(me, rkey, value, is_private);
 }
 
 /** Saves in place; moving an app between public and private is a copy, then a delete. */
@@ -216,7 +257,9 @@ export async function update(origin: string, user: AtprotoSessionUser, id: strin
 	const existing = pub ?? priv;
 	if (!existing) error(404, 'not found');
 
-	await home(airspace, !pub).put(rkey, to_value(input, existing.value.createdAt));
+	// the origin of an app is set once, when it is forked
+	const kept = { ...input, forked_from: existing.value.forkedFrom };
+	await home(airspace, !pub).put(rkey, to_value(kept, existing.value.createdAt));
 	invalidate_public(user.did);
 }
 

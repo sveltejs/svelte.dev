@@ -1,6 +1,6 @@
 # Playground: saving apps
 
-An app can be saved to one of three places. The user picks a default in `/accounts`: new apps and forks go there, and saving an app you own updates it where it lives. Saving someone else's app copies it to the default.
+An app can be saved to one of three places. New apps and forks go to the default destination; saving an app you own updates it where it lives, and saving someone else's app copies it to the default. The default is the tab marked as such on `/apps` (`save_to` cookie). Without a choice it is the first available in the order below, which is also the tab order: most people link one account, so this only matters with both.
 
 | Destination                | Account | Storage                                                       |
 | -------------------------- | ------- | ------------------------------------------------------------- |
@@ -14,7 +14,9 @@ Public atproto apps are readable by anyone at `/playground/<handle>/<rkey>` and 
 
 The model lives in `src/lib/atproto/lexicons.ts` + `model.ts` ([airspace](https://getair.space)). Login is OAuth with a public client (`airspace/oauth` over `@atproto/oauth-client-node`): tokens stay on the server, every PDS call happens in `+server` / `+page.server` (`src/lib/atproto/apps.ts`), and the browser only talks to our API (`src/lib/apps.ts`).
 
-Server state is one key/value store (`src/lib/atproto/store.ts`): OAuth state + sessions (keyed by DID), login sessions (`atsid` cookie, like the GitHub `sid`) and the cached profile. Rows untouched for 60 days are swept on login (logins expire at 30).
+Server state is one key/value store (`src/lib/atproto/store.ts`): OAuth state + sessions (keyed by origin and DID, since each origin is its own OAuth client), login sessions (`atsid` cookie, like the GitHub `sid`) and the account profile. Rows untouched for 60 days are swept on login (logins expire at 30).
+
+OAuth refreshes are serialized per process only (`@atproto/oauth-client-node`'s local lock): two instances refreshing the same DID at once can burn the single-use refresh token, and the loser's session is gone. Rare, since one user mostly hits one instance at a time; a lock in `atproto_kv` is the fix if it shows up.
 
 A PDS filters and offsets nothing: it pages by cursor, so a listing walks the repo and search and paging happen here. A walk stops at the 500 newest records (`MAX_RECORDS`) and the tab count then reads `500+`; the GitHub list needs no such cap because Supabase pages and searches server-side. Anonymous clients are reused per identity for their read cache (10s, dropped on a write by the owner in the same process). Sessions are never reused, so an expired one still surfaces on the next request.
 
@@ -27,7 +29,7 @@ Authenticated endpoints go through `with_user` (`src/lib/atproto/endpoint.ts`): 
 No database needed:
 
 - GitHub: create an [OAuth app](https://github.com/settings/developers) with callback `http://127.0.0.1:5173/auth/callback`, put `GITHUB_CLIENT_ID` / `GITHUB_CLIENT_SECRET` in `.env.local`. Sessions and apps go to `tmp/playground.json`.
-- atproto: nothing to configure, the store falls back to `tmp/playground.json` (same file as the GitHub stand-in). The OAuth client is a loopback client, so open the site on `http://127.0.0.1:5173` (not `localhost`; the login page redirects).
+- atproto: nothing to configure, the store falls back to `tmp/playground.json` (same file as the GitHub stand-in). The OAuth client is a loopback client, so open the site on `http://127.0.0.1:5173` (not `localhost`; dev redirects it).
 
 ## Prod
 
@@ -52,10 +54,10 @@ create table atproto_kv (
 
 Two NSIDs, published as `com.atproto.lexicon.schema` records on the @svelte.dev repo (`did:plc:b6gbde64ngpelprsvnphc2l2`):
 
-| NSID                            | What                                                              |
-| ------------------------------- | ----------------------------------------------------------------- |
-| `dev.svelte.playground`         | record: name, files, tailwind, svelteVersion, timestamps          |
-| `dev.svelte.playground.private` | space declaration holding private `dev.svelte.playground` records |
+| NSID                            | What                                                                        |
+| ------------------------------- | --------------------------------------------------------------------------- |
+| `dev.svelte.playground`         | record: name, files, tailwind, svelteVersion, async, forkedFrom, timestamps |
+| `dev.svelte.playground.private` | space declaration holding private `dev.svelte.playground` records           |
 
 Resolution: `_lexicon.svelte.dev` and `_lexicon.playground.svelte.dev` TXT -> `did=did:plc:b6gbde64ngpelprsvnphc2l2`. The authorization server only grants the `space:` scope if the space NSID resolves to a published declaration.
 

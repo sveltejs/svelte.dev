@@ -19,19 +19,28 @@ export function client_options(origin: string) {
 	};
 }
 
+const MAX_ORIGINS = 20;
 const clients = new Map<string, Promise<OAuth>>();
 
 export function oauth(origin: string) {
 	let client = clients.get(origin);
 	if (!client) {
+		// keyed by the Host header: capped, oldest dropped first
+		if (clients.size >= MAX_ORIGINS) clients.delete(clients.keys().next().value!);
 		client = createOAuth({
 			...client_options(origin),
+			// each origin is its own OAuth client: sharing a DID's slot would let one overwrite
+			// the other's tokens, and the next refresh would drop the session
 			stores: {
-				state: store.scoped('oauth-state'),
-				session: store.scoped('oauth-session')
+				state: store.scoped(`oauth-state:${origin}`),
+				session: store.scoped(`oauth-session:${origin}`)
 			}
 		});
 		clients.set(origin, client);
+		// a failed setup is retried on the next request, not kept for the life of the instance
+		client.catch(() => {
+			if (clients.get(origin) === client) clients.delete(origin);
+		});
 	}
 	return client;
 }

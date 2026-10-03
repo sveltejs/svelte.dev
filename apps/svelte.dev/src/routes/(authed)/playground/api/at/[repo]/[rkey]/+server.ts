@@ -8,5 +8,7 @@ export async function GET({ url, params, cookies }) {
 	const app = await apps.read(url.origin, params.repo, params.rkey, viewer);
 	if (!app) error(404, 'not found');
 
-	return Response.json({ ...app, relaxed: false, components: to_components(app.files) });
+	// same shape as the GitHub endpoint: `components`, not `files`
+	const { files, ...rest } = app;
+	return Response.json({ ...rest, relaxed: false, components: to_components(files) });
 }

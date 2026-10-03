@@ -5,10 +5,11 @@ import { DESTINATION_COOKIE, resolve_destination } from '#lib/destination.js';
 export const prerender = false;
 
 export async function load({ request, cookies }) {
-	const accounts = {
-		github: await session.from_cookie(request.headers.get('cookie')),
-		atproto: await atproto.from_cookies(cookies)
-	};
+	const [github, at] = await Promise.all([
+		session.from_cookie(request.headers.get('cookie')),
+		atproto.from_cookies(cookies)
+	]);
+	const accounts = { github, atproto: at };
 
 	return {
 		accounts,

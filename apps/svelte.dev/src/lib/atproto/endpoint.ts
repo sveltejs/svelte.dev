@@ -31,9 +31,23 @@ export async function with_user<T>(
 	}
 }
 
+/** Read inside `with_user`, so a stranger's body is never parsed. */
+export async function json_body(request: Request): Promise<unknown> {
+	try {
+		return await request.json();
+	} catch {
+		error(400, 'invalid JSON');
+	}
+}
+
 // the lexicon caps each file; these cap the request before it reaches the PDS
 const MAX_FILES = 100;
 const MAX_BYTES = 1_000_000;
+
+function is_file(f: unknown): f is Input['files'][number] {
+	const file = f as Partial<Input['files'][number]> | null;
+	return typeof file?.name === 'string' && typeof file.source === 'string';
+}
 
 export function parse_input(body: unknown): Input {
 	const b = body as Partial<Input> | null;
@@ -41,13 +55,17 @@ export function parse_input(body: unknown): Input {
 		error(400, 'name and files are required');
 	}
 	if (b.files.length > MAX_FILES) error(400, `an app holds at most ${MAX_FILES} files`);
-	const bytes = b.files.reduce((total, f) => total + (f?.source?.length ?? 0), 0);
+	if (!b.files.every(is_file)) error(400, 'each file needs a name and a source');
+	const bytes = b.files.reduce((total, f) => total + f.source.length, 0);
 	if (bytes > MAX_BYTES) error(400, `an app holds at most ${MAX_BYTES} characters`);
 
+	// anything else is dropped; `to_value` leaves unset fields out of the record
 	return {
 		name: b.name,
 		files: b.files,
-		...(b.tailwind ? { tailwind: true } : {}),
-		...(typeof b.svelte_version === 'string' ? { svelte_version: b.svelte_version } : {})
+		tailwind: b.tailwind === true,
+		svelte_version: typeof b.svelte_version === 'string' ? b.svelte_version : undefined,
+		async: typeof b.async === 'boolean' ? b.async : undefined,
+		forked_from: typeof b.forked_from === 'string' ? b.forked_from : undefined
 	};
 }
