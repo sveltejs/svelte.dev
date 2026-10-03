@@ -24,7 +24,6 @@
 
 		{#snippet dropdown()}
 			<HoverMenu>
-				<a href="/apps">Apps</a>
 				<a href="/accounts">Accounts</a>
 			</HoverMenu>
 		{/snippet}

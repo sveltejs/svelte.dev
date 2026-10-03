@@ -9,7 +9,7 @@
 {#if src}
 	<img class="avatar" alt="{name} avatar" {src} style:width={size} />
 {:else}
-	<span class="avatar fallback" aria-label="{name} avatar" style:width={size}>
+	<span class="avatar fallback" role="img" aria-label="{name} avatar" style:width={size}>
 		{name[0]?.toUpperCase() ?? '?'}
 	</span>
 {/if}

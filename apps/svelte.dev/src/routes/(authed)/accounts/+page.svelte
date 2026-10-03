@@ -1,12 +1,9 @@
 <script lang="ts">
-	import { get_app_context } from '../app-context.js';
+	import { login, logout, enable_private_apps, disable_private_apps } from '../auth.js';
 	import { avatar_url, display_name } from '#lib/user.js';
 	import Avatar from '#lib/components/Avatar.svelte';
-	import { resolve } from '$app/paths';
 
 	let { data } = $props();
-
-	const { login, logout, enable_private_apps, disable_private_apps } = get_app_context();
 
 	const { github, atproto } = $derived(data.accounts);
 	const private_ready = $derived(!!atproto?.spaces_supported && !!atproto.private_apps);
@@ -33,7 +30,7 @@
 	<section data-active={!!atproto}>
 		{#if atproto}
 			<div class="controls">
-				<a class="session" href={resolve('/(authed)/apps/[handle]', { handle: atproto.handle })}>
+				<a class="session" href="/apps/{atproto.handle}">
 					<Avatar src={avatar_url(atproto)} name={display_name(atproto)} size="3.6rem" />
 					<span class="who">
 						<span>{display_name(atproto)}</span>
