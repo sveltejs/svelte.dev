@@ -1,0 +1,13 @@
+{
+  "name": "sonda",
+  "npm_description": "Universal bundle analyzer and visualizer that works with most popular bundlers and frameworks.",
+  "repo_url": "https://github.com/filipsobol/sonda",
+  "authors": [
+    "filipsobol"
+  ],
+  "homepage": "https://sonda.dev",
+  "version": "0.12.0",
+  "downloads": 144036,
+  "github_stars": 772,
+  "updated": "2026-06-07T13:48:13.798Z"
+}
