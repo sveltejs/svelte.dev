@@ -1,4 +1,4 @@
-import type { Accounts } from './db/types.d.ts';
+import type { Accounts, UserID } from './db/types.d.ts';
 
 export type Destination = 'github' | 'atproto-public' | 'atproto-private';
 
@@ -26,16 +26,23 @@ export function resolve_destination(stored: unknown, accounts: Accounts): Destin
 	return DESTINATIONS.find((d) => available(d.id, accounts))?.id ?? null;
 }
 
-export function account_for(destination: Destination, accounts: Accounts) {
-	return destination === 'github' ? accounts.github : accounts.atproto;
-}
-
 export function provider_of(destination: Destination): 'github' | 'atproto' {
 	return destination === 'github' ? 'github' : 'atproto';
 }
 
+export function account_for(destination: Destination, accounts: Accounts) {
+	return accounts[provider_of(destination)];
+}
+
+type App = { id: string; owner: UserID | null; private?: boolean };
+
 /** Where an app currently lives. */
-export function home_of(gist: { id: string; private?: boolean }): Destination {
+export function home_of(gist: Pick<App, 'id' | 'private'>): Destination {
 	if (!gist.id.includes('/')) return 'github';
 	return gist.private ? 'atproto-private' : 'atproto-public';
+}
+
+/** The logged-in account behind the app's home is the app's owner. */
+export function is_owner(accounts: Accounts, gist: App) {
+	return account_for(home_of(gist), accounts)?.id === gist.owner;
 }

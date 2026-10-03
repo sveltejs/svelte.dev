@@ -5,6 +5,7 @@
 	import { Repl } from '@sveltejs/repl';
 	import { mapbox_setup } from '../../../../../config.js';
 	import { page } from '$app/state';
+	import { is_owner } from '#lib/destination.js';
 	import { decode_and_decompress_text } from '../gzip.js';
 	import type { File } from '@sveltejs/repl/workspace';
 
@@ -36,7 +37,8 @@
 		if (!hash) {
 			repl?.set({
 				files: data.gist.components.map(munge),
-				tailwind: data.gist.tailwind ?? false
+				tailwind: data.gist.tailwind ?? false,
+				async: data.gist.async
 			});
 
 			return;
@@ -54,10 +56,7 @@
 		set_files();
 	});
 
-	const relaxed = $derived(
-		data.gist.relaxed ||
-			[data.accounts.github, data.accounts.atproto].some((a) => a && a.id === data.gist.owner)
-	);
+	const relaxed = $derived(data.gist.relaxed || is_owner(data.accounts, data.gist));
 </script>
 
 <svelte:head>

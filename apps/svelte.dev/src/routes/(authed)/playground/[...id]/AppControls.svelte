@@ -3,12 +3,12 @@
 	import UserMenu from '../../UserMenu.svelte';
 	import { Dropdown, HoverMenu, Icon } from '@sveltejs/site-kit/components';
 	import { isMac } from '#lib/utils/compat.js';
-	import { get_app_context } from '../../app-context';
+	import { login } from '../../auth';
 	import type { Accounts, Gist } from '#lib/db/types.d.ts';
 	import {
 		DESTINATIONS,
-		account_for,
 		home_of,
+		is_owner,
 		provider_of,
 		type Destination
 	} from '#lib/destination.js';
@@ -24,6 +24,8 @@
 		destination: Destination | null;
 		repl: ReturnType<typeof Repl>;
 		gist: Gist;
+		/** the version the REPL runs: URL param, else the app's pin, else `latest` */
+		version: string;
 		name: string;
 		modified: boolean;
 		forked: (value: { gist: Gist }) => void;
@@ -37,12 +39,11 @@
 		destination,
 		repl,
 		gist,
+		version,
 		examples,
 		forked,
 		saved
 	}: Props = $props();
-
-	const { login } = get_app_context();
 
 	let saving = $state(false);
 	let justSaved = $state(false);
@@ -55,9 +56,8 @@
 
 	const logged_in = $derived(!!(accounts.github || accounts.atproto));
 	const home = $derived(home_of(gist));
-	const owner = $derived(account_for(home, accounts));
 	// your own app saves where it lives; anything else is a copy to the default destination
-	const is_mine = $derived(!!owner && gist.owner === owner.id);
+	const is_mine = $derived(is_owner(accounts, gist));
 	const target = $derived(DESTINATIONS.find((d) => d.id === destination));
 	const save_key = `${isMac ? '⌘' : 'Ctrl'}+S`;
 	const save_label = $derived(
@@ -68,18 +68,26 @@
 				: `save a copy to ${target?.label ?? 'your account'} (${save_key})`
 	);
 
-	function payload(files: File[], tailwind?: boolean) {
-		const version = page.url.searchParams.get('version');
+	// all files are sent: a missing one is deleted
+	function payload(forked_from?: string) {
+		const { files, tailwind, async } = repl.toJSON() as {
+			files: File[];
+			tailwind?: boolean;
+			async?: boolean;
+		};
 		return {
 			name,
 			tailwind: tailwind ?? false,
-			svelte_version: version && version !== 'latest' ? version : undefined,
+			async,
+			svelte_version: version !== 'latest' ? version : undefined,
+			forked_from,
 			files: files.map((file) => ({ name: file.name, type: '', source: file.contents }))
 		};
 	}
 
 	// a 401 means the session behind the app's home (save) or the default (fork) is gone
-	const reauth = (d: Destination | null) => () => login(provider_of(d ?? home));
+	const reauth = (d: Destination | null) => () =>
+		login(provider_of(d ?? home), accounts.atproto?.handle);
 
 	function handleKeydown(event: KeyboardEvent) {
 		if (event.key === 's' && (isMac ? event.metaKey : event.ctrlKey)) {
@@ -91,14 +99,11 @@
 	async function fork(intentWasSave: boolean) {
 		saving = true;
 
-		const { files, tailwind } = repl.toJSON() as { files: File[]; tailwind?: boolean };
+		const app = payload(api.fork_source(gist));
 
 		try {
-			if (!destination) throw new Error('Pick where to save your apps in Accounts');
-			const gist = await api.with_reauth(
-				() => api.create(payload(files, tailwind), destination),
-				reauth(destination)
-			);
+			if (!destination) throw new Error('Pick where to save your apps on the apps page');
+			const gist = await api.with_reauth(() => api.create(app, destination), reauth(destination));
 			forked({ gist });
 
 			modified = false;
@@ -139,11 +144,7 @@
 		saving = true;
 
 		try {
-			// Send all files back to API
-			// ~> Any missing files are considered deleted!
-			const { files, tailwind } = repl.toJSON() as { files: File[]; tailwind?: boolean };
-
-			await api.with_reauth(() => api.update(gist.id, payload(files, tailwind)), reauth(home));
+			await api.with_reauth(() => api.update(gist.id, payload()), reauth(home));
 
 			modified = false;
 			repl.markSaved();

@@ -50,4 +50,8 @@ export interface Gist {
 	private?: boolean;
 	/** atproto only: pinned Svelte version */
 	svelte_version?: string;
+	/** atproto only: experimental async mode */
+	async?: boolean;
+	/** atproto only: the app this one was forked from (at:// or svelte.dev URL) */
+	forked_from?: string;
 }

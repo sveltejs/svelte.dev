@@ -4,6 +4,7 @@
 	import { browser } from '$app/env';
 	import { afterNavigate, goto, replaceState } from '$app/navigation';
 	import type { Gist } from '#lib/db/types.d.ts';
+	import { is_owner } from '#lib/destination.js';
 	import { Repl } from '@sveltejs/repl';
 	import { theme } from '@sveltejs/site-kit/state';
 	import { mapbox_setup } from '../../../../config.js';
@@ -31,8 +32,9 @@
 	let showOutput = page.url.searchParams.get('show') !== 'input';
 
 	// Hashed URLs are less safe (we can't delete malicious REPLs), therefore
-	// don't allow links to escape the sandbox restrictions
-	const can_escape = browser && !page.url.hash;
+	// don't allow links to escape the sandbox restrictions. The same goes for
+	// apps on someone's PDS: they are not ours to delete either.
+	const can_escape = $derived(browser && !page.url.hash && !data.gist.id.includes('/'));
 
 	afterNavigate(() => {
 		name = data.gist.name;
@@ -60,7 +62,8 @@
 			repl?.set({
 				// TODO make this munging unnecessary (using JSON instead of structuredClone for better browser compat)
 				files: JSON.parse(JSON.stringify(data.gist.components)).map(munge),
-				tailwind: data.gist.tailwind ?? false
+				tailwind: data.gist.tailwind ?? false,
+				async: data.gist.async
 			});
 
 			modified = false;
@@ -163,10 +166,7 @@
 		}
 	}
 
-	const relaxed = $derived(
-		data.gist.relaxed ||
-			[data.accounts.github, data.accounts.atproto].some((a) => a && a.id === data.gist.owner)
-	);
+	const relaxed = $derived(data.gist.relaxed || is_owner(data.accounts, data.gist));
 </script>
 
 <svelte:head>
@@ -202,6 +202,7 @@
 		accounts={data.accounts}
 		destination={data.destination}
 		gist={data.gist}
+		{version}
 		forked={handle_fork}
 		saved={handle_save}
 		{repl}

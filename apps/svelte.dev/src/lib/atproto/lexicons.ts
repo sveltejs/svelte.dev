@@ -20,6 +20,16 @@ export const lexicons = defineLexicons({
 				svelteVersion: l.optional(
 					l.string({ maxLength: 64, description: 'Pinned Svelte version. Absent means latest.' })
 				),
+				async: l.optional(
+					l.boolean({ description: 'Experimental async mode. Absent means the default.' })
+				),
+				forkedFrom: l.optional(
+					l.string({
+						format: 'uri',
+						maxLength: 2048,
+						description: 'The app this one was forked from: an at:// URI, or a svelte.dev URL.'
+					})
+				),
 				createdAt: l.string({ format: 'datetime' }),
 				updatedAt: l.string({ format: 'datetime' })
 			})
