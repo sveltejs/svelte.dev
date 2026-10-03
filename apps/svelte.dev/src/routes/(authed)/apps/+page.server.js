@@ -30,8 +30,8 @@ function count(page, error) {
 
 export async function load({ url, parent }) {
 	const search = url.searchParams.get('search');
-	const offset_param = url.searchParams.get('offset');
-	const offset = offset_param ? parseInt(offset_param) : 0;
+	// a garbage or negative offset reads as the first page, not an empty one
+	const offset = Math.max(0, parseInt(url.searchParams.get('offset') ?? '') || 0);
 
 	const { accounts, destination } = await parent();
 
@@ -41,11 +41,13 @@ export async function load({ url, parent }) {
 
 	// atproto lists are fetched whole anyway (see atproto/apps.ts `walk`), so they double as counts
 	const [github, atproto_public, atproto_private] = await Promise.all([
-		accounts.github
-			? gist
-					.list(accounts.github, { offset, search })
-					.then(({ gists, next }) => ({ apps: gists, next }))
-			: null,
+		attempt(
+			accounts.github
+				? gist
+						.list(accounts.github, { offset: tab === 'github' ? offset : 0, search })
+						.then(({ gists, next }) => ({ apps: gists, next }))
+				: null
+		),
 		attempt(
 			accounts.atproto
 				? at.list_public(accounts.atproto.did, search, tab === 'atproto-public' ? offset : 0)
@@ -65,21 +67,21 @@ export async function load({ url, parent }) {
 
 	const empty = { apps: [], next: null };
 	const pages = {
-		github: github ?? empty,
+		github: github.page ?? empty,
 		'atproto-public': atproto_public.page ?? empty,
 		'atproto-private': atproto_private.page ?? empty
 	};
 
 	/** @type {Record<string, string>} */
 	const counts = {
-		github: count(github, null),
+		github: count(github.page, github.error),
 		'atproto-public': count(atproto_public.page, atproto_public.error),
 		'atproto-private': count(atproto_private.page, atproto_private.error)
 	};
 
 	/** @type {Record<string, ListError>} */
 	const errors = {
-		github: null,
+		github: github.error,
 		'atproto-public': atproto_public.error,
 		'atproto-private': atproto_private.error
 	};

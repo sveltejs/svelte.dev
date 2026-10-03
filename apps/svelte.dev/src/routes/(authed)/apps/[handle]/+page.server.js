@@ -1,20 +1,19 @@
 import * as at from '#lib/atproto/apps.js';
-import { profile } from '#lib/atproto/identity.js';
+import { profile, resolve } from '#lib/atproto/identity.js';
 import { error } from '@sveltejs/kit';
 
 export async function load({ url, params }) {
 	const search = url.searchParams.get('search');
-	const offset_param = url.searchParams.get('offset');
-	const offset = offset_param ? parseInt(offset_param) : 0;
+	// a garbage or negative offset reads as the first page, not an empty one
+	const offset = Math.max(0, parseInt(url.searchParams.get('offset') ?? '') || 0);
 
-	let result;
-	try {
-		result = await at.list_public(params.handle, search, offset);
-	} catch {
-		error(404, 'not found');
-	}
+	// only an account that does not resolve is a 404; an unreachable PDS stays an error
+	const identity = await resolve(params.handle).catch(() => error(404, 'not found'));
 
-	const bsky = await profile(result.identity);
+	const [result, bsky] = await Promise.all([
+		at.list_public(identity.did, search, offset),
+		profile(identity)
+	]);
 
 	return {
 		owner: {

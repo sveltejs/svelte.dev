@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { Icon } from '@sveltejs/site-kit/components';
 	import { ago } from '#lib/time.js';
-	import { goto, invalidateAll } from '$app/navigation';
-	import { get_app_context } from '../app-context.js';
+	import { afterNavigate, goto, refreshAll } from '$app/navigation';
+	import { login, login_path } from '../auth.js';
 	import { DESTINATIONS, available, provider_of, type Destination } from '#lib/destination.js';
 	import Avatar from '#lib/components/Avatar.svelte';
 	import type { Accounts } from '#lib/db/types.d.ts';
@@ -43,12 +43,12 @@
 
 	const LEADING_AT_REGEX = /^@/;
 
-	const { login } = get_app_context();
-
 	const format = (str: string | undefined) => (str ? ago(new Date(str)) : 'recently');
 
 	const base = $derived(owner ? `/apps/${owner.handle}` : '/apps');
 	const logged_in = $derived(!!(accounts.github || accounts.atproto));
+	// logging back in after a 401: the handle is known, prefill it
+	const relogin = (provider: 'github' | 'atproto') => login(provider, accounts.atproto?.handle);
 	const tab_available = $derived(available(tab, accounts));
 	const tabs = $derived(DESTINATIONS.filter((d) => available(d.id, accounts)));
 	// a single destination needs no tab UI, unless a link opened an unavailable one
@@ -58,9 +58,20 @@
 	let copying = $state(false);
 	let selected: string[] = $state([]);
 	const selecting = $derived(selected.length > 0);
+
+	// a tab switch or a search keeps this component: what was ticked is no longer on screen
+	afterNavigate(() => {
+		selected = [];
+	});
 	const copy_target = $derived(
 		destination && destination !== tab ? DESTINATIONS.find((d) => d.id === destination) : null
 	);
+
+	async function make_default() {
+		await set_destination(tab);
+		// the layout reads the cookie, and a command only refreshes queries
+		await refreshAll();
+	}
 
 	async function copy_selected() {
 		const target = destination;
@@ -68,9 +79,13 @@
 		copying = true;
 
 		try {
-			await api.copy(selected, target, () => login(provider_of(target)));
-			selected = [];
-			await invalidateAll();
+			await api.copy(
+				[...selected],
+				target,
+				() => relogin(provider_of(target)),
+				(id) => (selected = selected.filter((s) => s !== id))
+			);
+			await refreshAll();
 		} catch (e) {
 			alert(`Copy failed: ${(e as Error).message}`);
 		}
@@ -104,10 +119,10 @@
 			// everything selected lives on the current tab
 			await api.with_reauth(
 				() => api.destroy(selected),
-				() => login(provider_of(tab))
+				() => relogin(provider_of(tab))
 			);
 			selected = [];
-			await invalidateAll();
+			await refreshAll();
 		} catch (e) {
 			alert(`Deletion failed: ${(e as Error).message}`);
 		}
@@ -186,14 +201,17 @@
 	{#if error === 'session'}
 		<p class="notice">
 			Your Atmosphere session expired.
-			<a onclick={(e) => (e.preventDefault(), login('atproto'))} href="/auth/login/atproto">
+			<a
+				onclick={(e) => (e.preventDefault(), relogin('atproto'))}
+				href={login_path('atproto', accounts.atproto?.handle)}
+			>
 				Log in again
 			</a>
 			to see these apps.
 		</p>
 	{:else if error === 'unavailable'}
 		<p class="notice">
-			Could not reach your PDS.
+			Could not load these apps.
 			<a href={list_url({ search })}>Try again</a>.
 		</p>
 	{:else if apps.length > 0}
@@ -272,7 +290,7 @@
 						class="default-toggle"
 						class:active={tab === destination}
 						disabled={tab === destination}
-						onclick={() => set_destination((destination = tab))}
+						onclick={make_default}
 						title={tab === destination
 							? 'New apps are saved here'
 							: 'Save new apps here by default'}
@@ -293,8 +311,8 @@
 		{:else}
 			<p class="notice">
 				<a
-					onclick={(e) => (e.preventDefault(), login(tab === 'github' ? 'github' : 'atproto'))}
-					href={tab === 'github' ? '/auth/login' : '/auth/login/atproto'}
+					onclick={(e) => (e.preventDefault(), login(provider_of(tab)))}
+					href={login_path(provider_of(tab))}
 				>
 					Log in with {tab === 'github' ? 'GitHub' : 'the Atmosphere'}
 				</a>
@@ -438,7 +456,7 @@
 
 	.browse {
 		position: sticky;
-		bottom: 0;
+		bottom: var(--sk-banner-height);
 		display: flex;
 		align-items: center;
 		flex-wrap: wrap;
