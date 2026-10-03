@@ -1,5 +1,16 @@
 <script lang="ts">
+	import { page } from '$app/state';
+
+	const MESSAGES: Record<string, (actor: string) => string> = {
+		unknown: (actor) =>
+			`No Atmosphere account found for “${actor}”. Check the handle and try again.`,
+		failed: () => `Your account's server didn't respond. Try again in a moment.`
+	};
+
 	let busy = $state(false);
+
+	const actor = $derived(page.url.searchParams.get('actor') ?? '');
+	const message = $derived(MESSAGES[page.url.searchParams.get('error') ?? '']?.(actor));
 </script>
 
 <svelte:head>
@@ -19,7 +30,7 @@
 
 	<div class="row">
 		<input
-			id="handle"
+			id="actor"
 			name="actor"
 			placeholder="your.atmosphere.handle"
 			autocapitalize="none"
@@ -27,9 +38,16 @@
 			spellcheck="false"
 			inputmode="url"
 			required
+			defaultValue={actor}
+			aria-invalid={message ? true : undefined}
+			aria-describedby={message ? 'login-error' : undefined}
 		/>
 		<button class="raised primary">{busy ? '...' : 'Log in'}</button>
 	</div>
+
+	{#if message}
+		<p id="login-error" class="error" role="alert">{message}</p>
+	{/if}
 </form>
 
 <style>
@@ -70,5 +88,14 @@
 
 	button {
 		width: 10rem;
+	}
+
+	input[aria-invalid] {
+		border-color: var(--sk-fg-accent);
+	}
+
+	.error {
+		color: var(--sk-fg-accent);
+		font: var(--sk-font-ui-small);
 	}
 </style>

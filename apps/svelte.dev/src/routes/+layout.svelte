@@ -14,6 +14,9 @@
 		inject({ mode: 'production' });
 	}
 
+	// the atproto login opens in a popup: no nav, no banner
+	const login_popup = $derived(page.route.id === '/auth/login/atproto');
+
 	// Make all navigations between SvelteKit-tutorial and non-SvelteKit-tutorial pages (and vice versa)
 	// a full page navigation to ensure webcontainers get the correct origin restriction headers while
 	// ensuring those headers don't interfere with the rest of the page. These headers would have bad
@@ -49,10 +52,7 @@
 	{/if}
 </svelte:head>
 
-<Shell
-	nav_visible={page.route.id !== '/(authed)/playground/[...id]/embed' &&
-		page.route.id !== '/auth/login/atproto'}
->
+<Shell nav_visible={page.route.id !== '/(authed)/playground/[...id]/embed' && !login_popup}>
 	{#snippet top_nav()}
 		<Nav title={sections[page.url.pathname.split('/')[1]!] ?? ''} links={data.nav_links} />
 	{/snippet}
@@ -62,7 +62,7 @@
 	{/snippet}
 
 	{#snippet banner()}
-		{#if data.banner && page.route.id !== '/auth/login/atproto'}
+		{#if data.banner && !login_popup}
 			<Banner banner={data.banner} />
 		{/if}
 	{/snippet}

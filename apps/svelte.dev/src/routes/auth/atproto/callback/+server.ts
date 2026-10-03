@@ -44,7 +44,8 @@ export async function GET({ url, cookies }) {
 		airspace.private_apps.supported()
 	]);
 
-	const existing = await session.from_cookies(cookies);
+	const old_sid = cookies.get(session.COOKIE);
+	const existing = await session.read(old_sid);
 	let private_apps = existing?.did === did ? existing.private_apps : false;
 	if (wants_private && spaces_supported) {
 		try {
@@ -57,6 +58,8 @@ export async function GET({ url, cookies }) {
 		}
 	}
 
+	// one login per browser: the previous row would otherwise linger until swept
+	if (old_sid) await session.destroy(old_sid);
 	const { sid, expires } = await session.create({
 		provider: 'atproto',
 		id: did,

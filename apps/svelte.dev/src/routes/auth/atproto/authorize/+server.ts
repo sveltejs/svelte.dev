@@ -10,12 +10,19 @@ const TRAILING_SLASH_REGEX = /\/+$/;
 
 // Accepts a handle, a DID, an at:// URI, or a pasted profile / apps URL.
 function normalize(input: string) {
-	let s = input.trim().replace(LEADING_AT_REGEX, '').replace(AT_URI_REGEX, '');
+	let s = input.trim().replace(LEADING_AT_REGEX, '');
+	// the authority of an at:// URI comes first; the account of a web URL comes last
+	if (AT_URI_REGEX.test(s)) return s.replace(AT_URI_REGEX, '').split('/')[0];
 	if (s.includes('/')) {
 		s = s.replace(TRAILING_SLASH_REGEX, '');
 		s = s.slice(s.lastIndexOf('/') + 1);
 	}
 	return s.split('?')[0].replace(LEADING_AT_REGEX, '');
+}
+
+/** Back to the login form, handle kept, with a reason it can explain. */
+function retry(actor: string, reason: 'unknown' | 'failed'): never {
+	redirect(303, `/auth/login/atproto?${new URLSearchParams({ actor, error: reason })}`);
 }
 
 /** Did this account enable private apps before? The stored profile outlives its logins. */
@@ -34,25 +41,28 @@ export async function GET({ url, cookies }) {
 	const escalate = url.searchParams.get('escalate') === '1';
 	const can_delete = url.searchParams.get('delete') === '1';
 
-	let actor = url.searchParams.get('actor');
-	if (actor) actor = normalize(actor);
+	const typed = url.searchParams.get('actor')?.trim() ?? '';
+	let actor = typed ? normalize(typed) : null;
 
 	let private_apps = false;
 
-	const current = await session.from_cookies(cookies);
 	if (escalate) {
+		const current = await session.from_cookies(cookies);
 		if (!current) error(401, 'Log in first');
 		if (!current.spaces_supported) error(400, 'This PDS does not support spaces');
 		actor = current.did;
 		private_apps = true;
 	} else if (actor) {
+		const found = await resolve(actor).then(
+			() => true,
+			() => false
+		);
+		if (!found) retry(typed, 'unknown');
+
 		// an account that enabled private apps keeps that scope, logging back in included
-		private_apps =
-			current && (current.handle === actor || current.did === actor)
-				? current.private_apps
-				: await had_private_apps(actor);
+		private_apps = await had_private_apps(actor);
 	}
-	if (!actor) error(400, 'missing actor');
+	if (!actor) redirect(303, '/auth/login/atproto');
 
 	let target: URL;
 	try {
@@ -63,7 +73,8 @@ export async function GET({ url, cookies }) {
 			state: JSON.stringify({ private_apps })
 		});
 	} catch (e) {
-		error(400, (e as Error).message);
+		if (escalate) error(400, (e as Error).message);
+		retry(typed, 'failed');
 	}
 	redirect(302, target.href, { external: true });
 }
