@@ -30,12 +30,8 @@ function popup(path: string) {
 	});
 }
 
-/**
- * For `<svelte:window onstorage>`. An authorization page that sends COOP severs the popup from
- * its opener, and `win.closed` then reads true from the moment it leaves our origin: the key its
- * callback writes right before closing is the only signal a login landed, and it can arrive
- * minutes later.
- */
+// The only signal a login landed: an authorization page with COOP severs the popup, so
+// `win.closed` reads true as soon as it leaves our origin.
 export async function on_storage(event: StorageEvent) {
 	if (event.key !== storage_key || !event.newValue) return;
 	localStorage.removeItem(storage_key);
@@ -43,7 +39,7 @@ export async function on_storage(event: StorageEvent) {
 	for (const resolve of landed.splice(0)) resolve();
 }
 
-/** `actor` prefills the handle, for logging back in after a session expired. */
+/** `actor` prefills the handle. */
 export function login_path(provider: Provider, actor?: string) {
 	if (provider === 'github') return '/auth/login';
 	return actor ? `/auth/login/atproto?${new URLSearchParams({ actor })}` : '/auth/login/atproto';

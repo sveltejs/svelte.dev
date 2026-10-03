@@ -44,14 +44,11 @@ export interface Gist {
 	/** Whether Tailwind is enabled for this playground app */
 	tailwind?: boolean;
 	files: Array<{ name: string; type: string; source: string }>;
-	/** atproto only: the owner's handle, for linking to their apps */
+	// atproto only
 	owner_handle?: string;
-	/** atproto only: stored in the owner's private space */
 	private?: boolean;
-	/** atproto only: pinned Svelte version */
 	svelte_version?: string;
-	/** atproto only: experimental async mode */
 	async?: boolean;
-	/** atproto only: the app this one was forked from (at:// or svelte.dev URL) */
+	/** at:// URI or svelte.dev URL */
 	forked_from?: string;
 }

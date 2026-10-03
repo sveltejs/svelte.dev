@@ -25,7 +25,6 @@
 		search: string | null;
 		tab: Destination;
 		counts?: Record<string, string>;
-		/** the tab's records could not be read */
 		error?: 'session' | 'unavailable' | null;
 	}
 
@@ -47,7 +46,7 @@
 
 	const base = $derived(owner ? `/apps/${owner.handle}` : '/apps');
 	const logged_in = $derived(!!(accounts.github || accounts.atproto));
-	// logging back in after a 401: the handle is known, prefill it
+	// after a 401 the handle is known: prefill it
 	const relogin = (provider: 'github' | 'atproto') => login(provider, accounts.atproto?.handle);
 	const tab_available = $derived(available(tab, accounts));
 	const tabs = $derived(DESTINATIONS.filter((d) => available(d.id, accounts)));
@@ -59,7 +58,7 @@
 	let selected: string[] = $state([]);
 	const selecting = $derived(selected.length > 0);
 
-	// a tab switch or a search keeps this component: what was ticked is no longer on screen
+	// tab switches and searches keep this component, not what was ticked
 	afterNavigate(() => {
 		selected = [];
 	});

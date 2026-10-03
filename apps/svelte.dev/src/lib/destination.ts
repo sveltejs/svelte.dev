@@ -36,13 +36,11 @@ export function account_for(destination: Destination, accounts: Accounts) {
 
 type App = { id: string; owner: UserID | null; private?: boolean };
 
-/** Where an app currently lives. */
 export function home_of(gist: Pick<App, 'id' | 'private'>): Destination {
 	if (!gist.id.includes('/')) return 'github';
 	return gist.private ? 'atproto-private' : 'atproto-public';
 }
 
-/** The logged-in account behind the app's home is the app's owner. */
 export function is_owner(accounts: Accounts, gist: App) {
 	return account_for(home_of(gist), accounts)?.id === gist.owner;
 }

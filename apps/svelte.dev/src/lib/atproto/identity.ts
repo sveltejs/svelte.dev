@@ -22,7 +22,6 @@ export interface Resolved {
 
 const identities = flru<Cached<Resolved>>(2000);
 
-/** Handle or DID to { did, handle, pds }, cached for 10 minutes. */
 export async function resolve(actor: string): Promise<Resolved> {
 	const hit = fresh(identities.get(actor));
 	if (hit) return hit.value;
@@ -45,7 +44,7 @@ export interface Profile {
 
 const profiles = flru<Cached<Profile | null>>(2000);
 
-/** Bluesky profile, read from the PDS. Null for accounts without one. */
+/** Null for accounts without a Bluesky profile. */
 export async function profile({ did, pds }: Resolved): Promise<Profile | null> {
 	const hit = profiles.get(did);
 	const live = fresh(hit);

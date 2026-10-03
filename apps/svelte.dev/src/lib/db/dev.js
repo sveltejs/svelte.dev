@@ -119,7 +119,7 @@ export function gist_destroy(userid, ids) {
 	save(db);
 }
 
-// atproto: OAuth state/sessions, logins and profiles (see lib/atproto/store.ts)
+// atproto key/value store (lib/atproto/store.ts)
 
 /** @param {string} key */
 export function kv_get(key) {

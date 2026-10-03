@@ -3,8 +3,7 @@ import flru from 'flru';
 import type { AtprotoSessionUser } from '#lib/db/types.d.ts';
 import * as store from './store.js';
 
-// Login sessions mirror the GitHub ones: an opaque id in an httpOnly cookie, the profile
-// server-side. The OAuth tokens themselves live in the store under the DID (see oauth.ts).
+// Like the GitHub sessions: an opaque id in an httpOnly cookie, the profile server-side.
 
 export const COOKIE = 'atsid';
 const TTL_MS = 30 * 24 * 60 * 60 * 1000;
@@ -18,8 +17,7 @@ interface Login {
 const logins = store.scoped<Login>('login');
 const profiles = store.scoped<AtprotoSessionUser>('profile');
 
-// Per-instance caches never see writes made on other instances. A login only changes on
-// logout, so a short TTL is enough; profiles (private apps, handle, PDS) are never cached.
+// per instance, so blind to other instances' writes: logins only change on logout, profiles do
 const login_cache = flru<{ at: number; login: Login | null }>(1000);
 
 async function login_of(sid: string) {
@@ -45,7 +43,7 @@ export async function create(user: AtprotoSessionUser) {
 	return { sid, expires: new Date(login.expires) };
 }
 
-/** The stored profile of an account, logged in or not: it outlives the login. */
+/** The profile outlives the login. */
 export function known(did: string) {
 	return profile_of(did);
 }

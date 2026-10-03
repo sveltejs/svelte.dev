@@ -7,12 +7,10 @@ import { oauth } from './oauth.js';
 
 type Anonymous = ReturnType<typeof createAirspace<typeof collections>>;
 
-// Anonymous clients are kept per DID for their read cache, which holds whole records:
-// few of them, they only have to outlive a page load. Sessions are never reused, so a dead
-// one still surfaces on the next request.
+// Anonymous clients are kept for their read cache (whole records, so few). Sessions are
+// never reused, so a dead one still surfaces on the next request.
 const clients = flru<{ service: string; client: Anonymous }>(25);
 
-/** Anonymous reads of someone's public repo, at the PDS `who` currently resolves to. */
 export function anonymous(who: Identity) {
 	const hit = clients.get(who.did);
 	// a client pins its PDS: an account that moved gets a new one
@@ -22,22 +20,21 @@ export function anonymous(who: Identity) {
 	return client;
 }
 
-/** A handle or DID looked up now: a client resolves once, so this one is never kept. */
+/** Never cached: a client resolves its identity once. */
 export function lookup(actor: string) {
 	return createAirspace({ identity: actor }).identity();
 }
 
-/** After a write through the owner's own session, so their listings don't lag. Per process. */
+/** After the owner writes, so their listings don't lag. Per process. */
 export function invalidate_public(did: string) {
 	clients.get(did)?.client.invalidate();
 }
 
-/** The OAuth session is gone (refresh token expired, app revoked on the PDS): the user has to log in again. */
+/** Refresh token expired or app revoked on the PDS: log in again. */
 export class SessionError extends Error {
 	name = 'SessionError';
 }
 
-/** The logged-in user's own repo and space. */
 export async function own(origin: string, user: Pick<AtprotoSessionUser, 'did' | 'pds'>) {
 	let session;
 	try {

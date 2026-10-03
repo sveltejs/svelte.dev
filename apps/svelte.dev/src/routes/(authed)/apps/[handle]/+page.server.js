@@ -4,7 +4,7 @@ import { error } from '@sveltejs/kit';
 
 export async function load({ url, params }) {
 	const search = url.searchParams.get('search');
-	// a garbage or negative offset reads as the first page, not an empty one
+	// garbage or negative: first page, not an empty one
 	const offset = Math.max(0, parseInt(url.searchParams.get('offset') ?? '') || 0);
 
 	// only an account that does not resolve is a 404; an unreachable PDS stays an error

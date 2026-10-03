@@ -1,9 +1,7 @@
 import { client } from '#lib/db/client.js';
 import * as local from '#lib/db/dev.js';
 
-// Server-side key/value store for OAuth state, sessions, logins and profiles.
-// Prod: one Supabase table `atproto_kv (key text primary key, value jsonb, updated_at timestamptz)`.
-// Dev without Supabase: the same JSON file as the GitHub stand-in.
+// Supabase table `atproto_kv` (docs/playground.md), or the dev JSON file without Supabase
 
 export async function get<T>(key: string): Promise<T | undefined> {
 	if (local.enabled) return local.kv_get(key) as T | undefined;
@@ -37,10 +35,7 @@ const SWEEP_AFTER_MS = 60 * 24 * 60 * 60 * 1000;
 const SWEEP_EVERY_MS = 60 * 60 * 1000;
 let last_sweep = 0;
 
-/**
- * Drops rows untouched for 60 days. Logins expire at 30 and every other row is rewritten
- * on login, so nothing older is reachable. Called on login, at most hourly per process.
- */
+/** Logins expire at 30 days and other rows are rewritten on login: older ones are unreachable. */
 export async function sweep() {
 	if (local.enabled || !client || Date.now() - last_sweep < SWEEP_EVERY_MS) return;
 	last_sweep = Date.now();
@@ -49,7 +44,7 @@ export async function sweep() {
 	if (error) console.warn(`atproto_kv sweep: ${error.message}`);
 }
 
-/** A namespaced view, in the shape `@atproto/oauth-client-node` stores want. */
+/** In the shape `@atproto/oauth-client-node` stores want. */
 export function scoped<T>(prefix: string) {
 	return {
 		get: (key: string) => get<T>(`${prefix}:${key}`),

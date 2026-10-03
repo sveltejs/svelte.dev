@@ -30,7 +30,7 @@ function count(page, error) {
 
 export async function load({ url, parent }) {
 	const search = url.searchParams.get('search');
-	// a garbage or negative offset reads as the first page, not an empty one
+	// garbage or negative: first page, not an empty one
 	const offset = Math.max(0, parseInt(url.searchParams.get('offset') ?? '') || 0);
 
 	const { accounts, destination } = await parent();
@@ -39,7 +39,7 @@ export async function load({ url, parent }) {
 	// an unavailable tab still opens: it explains how to enable it
 	const tab = is_destination(tab_param) ? tab_param : (destination ?? 'atproto-public');
 
-	// atproto lists are fetched whole anyway (see atproto/apps.ts `walk`), so they double as counts
+	// atproto lists are walked whole anyway, so they double as counts
 	const [github, atproto_public, atproto_private] = await Promise.all([
 		attempt(
 			accounts.github

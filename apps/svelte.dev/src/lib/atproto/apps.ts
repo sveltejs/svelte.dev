@@ -11,8 +11,7 @@ import { anonymous, invalidate_public, own, SessionError, type Airspace } from '
 import { resolve, type Resolved } from './identity.js';
 import type { playground } from './lexicons.js';
 
-// Server-side. App ids are `<handle-or-did>/<rkey>`; public apps are readable by anyone,
-// private ones only by their owner through their own session.
+// Server-side. Private apps are only readable by their owner, through their own session.
 
 type Value = RecordInput<typeof playground>;
 
@@ -36,16 +35,13 @@ export interface Page {
 	apps: AppSummary[];
 	next: number | null;
 	total: number;
-	/** `total` stopped at MAX_RECORDS; there are older apps we did not fetch. */
+	/** `total` stopped at MAX_RECORDS */
 	capped: boolean;
 }
 
 const PAGE_SIZE = 90;
 const RECORDS_PER_REQUEST = 100;
-/**
- * A PDS pages by cursor and filters nothing, so a listing walks the repo and stops here.
- * Supabase does the paging and the search itself, which is why the GitHub list has no cap.
- */
+// a PDS pages by cursor and filters nothing, so a listing walks the repo up to here
 const MAX_RECORDS = 500;
 
 type Stored = { rkey: string; value: Value };
@@ -53,7 +49,7 @@ type Reader<T extends Stored> = {
 	page: (query?: PageQuery) => Promise<{ records: T[]; cursor?: string }>;
 };
 
-/** The MAX_RECORDS newest records by key, handed back most recently updated first. */
+/** The MAX_RECORDS newest by key, sorted by last update. */
 async function walk<T extends Stored>(reader: Reader<T>) {
 	const records: T[] = [];
 	let cursor: string | undefined;
@@ -244,7 +240,6 @@ export async function create(
 	return to_gist(me, rkey, value, is_private);
 }
 
-/** Saves in place; moving an app between public and private is a copy, then a delete. */
 export async function update(origin: string, user: AtprotoSessionUser, id: string, input: Input) {
 	const { repo, rkey } = split(id);
 	if (!(await owner_of(user, repo))) error(403, 'not your app');
@@ -278,7 +273,7 @@ export async function destroy(origin: string, user: AtprotoSessionUser, ids: str
 	invalidate_public(user.did);
 }
 
-/** Idempotent: an existing space is one read and success. Only the owner is a member. */
+/** Idempotent. Only the owner is a member. */
 export async function enable_private(airspace: Airspace) {
 	await airspace.private_apps.manage.ensure({
 		read: 'member-list',

@@ -5,10 +5,9 @@ import * as store from './store.js';
 const REDIRECT_PATH = '/auth/atproto/callback';
 const METADATA_PATH = '/auth/atproto/client-metadata.json';
 
-// Public client (no signing key): tokens are DPoP-bound and kept server-side in the store.
-// atproto forbids `localhost` as a loopback origin: dev must be opened on 127.0.0.1.
+// Public client (no signing key): tokens are DPoP-bound and stay server-side in the store.
 
-/** What the client is, shared with the metadata document served at METADATA_PATH. */
+/** Shared with the metadata document. */
 export function client_options(origin: string) {
 	return {
 		baseUrl: origin,
@@ -29,15 +28,14 @@ export function oauth(origin: string) {
 		if (clients.size >= MAX_ORIGINS) clients.delete(clients.keys().next().value!);
 		client = createOAuth({
 			...client_options(origin),
-			// each origin is its own OAuth client: sharing a DID's slot would let one overwrite
-			// the other's tokens, and the next refresh would drop the session
+			// each origin is its own client: a shared slot per DID would overwrite the other's tokens
 			stores: {
 				state: store.scoped(`oauth-state:${origin}`),
 				session: store.scoped(`oauth-session:${origin}`)
 			}
 		});
 		clients.set(origin, client);
-		// a failed setup is retried on the next request, not kept for the life of the instance
+		// retry a failed setup on the next request
 		client.catch(() => {
 			if (clients.get(origin) === client) clients.delete(origin);
 		});

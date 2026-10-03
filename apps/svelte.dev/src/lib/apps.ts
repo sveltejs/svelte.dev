@@ -1,10 +1,9 @@
 import type { Gist } from '#lib/db/types.d.ts';
 import type { Destination } from '#lib/destination.js';
 
-// Browser-side. Everything goes through our API; atproto ids contain a `/`
+// Browser-side. atproto ids are `<handle-or-did>/<rkey>`
 
-// `<handle-or-did>/<rkey>`: neither segment may be `.` or `..`, the page loads fetch these
-// server-side with the viewer's cookies and a traversal would reach any same-origin endpoint
+// no `.`/`..` segment: page loads fetch these server-side with the viewer's cookies
 const AT_ID_REGEX = /^[a-z0-9][a-z0-9.:_%-]*\/[a-z0-9_:~-][a-z0-9._:~-]*$/i;
 
 type Input = Pick<Gist, 'name' | 'tailwind' | 'svelte_version' | 'async' | 'forked_from' | 'files'>;
@@ -55,14 +54,14 @@ function at_path(id: string) {
 	return `${encodeURIComponent(id.slice(0, slash))}/${encodeURIComponent(id.slice(slash + 1))}`;
 }
 
-/** Where an app is read from; also used by the page loads. Null for an id that cannot be one. */
+/** Null for an id that cannot be one. */
 export function api_url(id: string) {
 	if (!is_atproto(id)) return `/playground/api/${encodeURIComponent(id)}.json`;
 	const path = at_path(id);
 	return path && `/playground/api/at/${path}`;
 }
 
-/** Where a fork comes from; a private app is not linked from a copy that may be public. */
+// a private source is not linked from a copy that may be public
 export function fork_source(source: Pick<Gist, 'id' | 'owner' | 'private'>) {
 	if (source.id === 'untitled' || source.private) return undefined;
 	if (!is_atproto(source.id)) return `https://svelte.dev/playground/${source.id}`;
@@ -92,7 +91,7 @@ async function read(id: string): Promise<Input & Pick<Gist, 'id' | 'owner' | 'pr
 	};
 }
 
-// only what the API takes: a read app carries more (id, owner, private)
+// a read app carries more (id, owner, private)
 function body({ name, tailwind, svelte_version, async, forked_from, files }: Input) {
 	return {
 		name,
@@ -126,11 +125,7 @@ export async function update(id: string, input: Input) {
 	await send(url, 'PUT', body(input));
 }
 
-/**
- * Copies apps to a destination; the originals are untouched. Each app reauths on its own,
- * so a session that expires halfway through does not copy the earlier ones twice, and
- * `done` lets the caller drop finished ids before retrying a failed batch.
- */
+// reauth per app, so a retry after an expired session never copies one twice
 export async function copy(
 	ids: string[],
 	destination: Destination,

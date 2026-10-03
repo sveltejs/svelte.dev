@@ -6,10 +6,7 @@ import { SessionError } from './client.js';
 import type { Input } from './apps.js';
 import * as session from './session.js';
 
-/**
- * Runs `fn` as the logged-in user. A dead OAuth session logs the user out and answers 401
- * so the client re-runs login and retries; a record that fails the lexicon is a 400.
- */
+/** A dead OAuth session logs out and answers 401, so the client logs in again and retries. */
 export async function with_user<T>(
 	cookies: Cookies,
 	fn: (user: AtprotoSessionUser, sid: string) => Promise<T>
@@ -59,7 +56,6 @@ export function parse_input(body: unknown): Input {
 	const bytes = b.files.reduce((total, f) => total + f.source.length, 0);
 	if (bytes > MAX_BYTES) error(400, `an app holds at most ${MAX_BYTES} characters`);
 
-	// anything else is dropped; `to_value` leaves unset fields out of the record
 	return {
 		name: b.name,
 		files: b.files,

@@ -20,12 +20,12 @@ function normalize(input: string) {
 	return s.split('?')[0].replace(LEADING_AT_REGEX, '');
 }
 
-/** Back to the login form, handle kept, with a reason it can explain. */
+/** Back to the login form, handle kept. */
 function retry(actor: string, reason: 'unknown' | 'failed'): never {
 	redirect(303, `/auth/login/atproto?${new URLSearchParams({ actor, error: reason })}`);
 }
 
-/** Did this account enable private apps before? The stored profile outlives its logins. */
+/** The stored profile outlives its logins. */
 async function had_private_apps(actor: string) {
 	try {
 		const { did } = await resolve(actor);
@@ -35,8 +35,7 @@ async function had_private_apps(actor: string) {
 	}
 }
 
-// `?actor=` starts a login. `?escalate=1` re-runs consent for the logged-in account with the
-// private-apps (space) scope; `&delete=1` adds the permission to delete the space.
+// `?actor=` logs in. `?escalate=1` re-consents with the space scope, `&delete=1` to delete it.
 export async function GET({ url, cookies }) {
 	const escalate = url.searchParams.get('escalate') === '1';
 	const can_delete = url.searchParams.get('delete') === '1';
