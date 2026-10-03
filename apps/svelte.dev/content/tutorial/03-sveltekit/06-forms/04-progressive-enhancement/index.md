@@ -32,7 +32,8 @@ Import the `enhance` function from `$app/forms`...
 And that's all it takes! Now, when JavaScript is enabled, `use:enhance` will emulate the browser-native behaviour except for the full-page reloads. It will:
 
 - update the `form` prop
-- invalidate all data on a successful response, causing `load` functions to re-run
+- reset the `<form>` element
+- refresh all data on a successful response, causing `load` functions to re-run
 - navigate to the new page on a redirect response
 - render the nearest error page if an error occurs
 

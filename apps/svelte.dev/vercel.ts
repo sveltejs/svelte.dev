@@ -36,6 +36,9 @@ export const config: VercelConfig = {
 		)
 	],
 	headers: [
+		...(process.env.VERCEL_GIT_COMMIT_REF === 'main'
+			? []
+			: [routes.header('/(.*)', [{ key: 'X-Robots-Tag', value: 'noindex' }])]),
 		routes.header('/_app/immutable/workers/(.*)', [
 			{ key: 'cross-origin-opener-policy', value: 'same-origin' },
 			{ key: 'cross-origin-embedder-policy', value: 'require-corp' },

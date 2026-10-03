@@ -23,6 +23,8 @@ import { language as create_typescript_highlighter } from '@twinkleplop/typescri
 import { language as create_yaml_highlighter } from '@twinkleplop/yaml';
 import { compress_and_encode_text } from 'gzip';
 import { create_tree_highlighter } from './tree.ts';
+// Keep this import on one line so hash_graph includes it in the snippet cache key.
+import { indent_multiline_comments } from './utils.ts';
 import {
 	decode_html_entities,
 	TWINKLEPLOP_LANGUAGE_MAP,
@@ -1239,6 +1241,10 @@ async function syntax_highlight({
 		html = highlight_source(source, language);
 	}
 
+	// Stash popovers so that the post-processing below doesn't mangle their (multiline) contents
+	const popovers: string[] = [];
+	html = stash_popovers(html, popovers);
+
 	// Normalize Twinkleplop output for the existing code-block annotations.
 	html = html
 		// put whitespace outside `<span>` elements, so that
@@ -1253,25 +1259,29 @@ async function syntax_highlight({
 	html = highlight_all_spans(html, delimiter_patterns['+++'], 'highlight add');
 	html = highlight_all_spans(html, delimiter_patterns[':::'], 'highlight');
 
-	return indent_multiline_comments(html)
+	html = indent_multiline_comments(html)
 		.replace(/\/\*…\*\//g, '…')
 		.replace('<pre', `<pre data-language="${language}"`);
+
+	return html.replace(/\uE000(\d+)\uE001/g, (_, index) => popovers[+index]);
 }
 
-function indent_multiline_comments(str: string) {
-	return str.replace(
-		/^(\s+)<span class="(?:tok )?comment">([\s\S]+?)<\/span>\n/gm,
-		(_, intro_whitespace, content) => {
-			// we use some CSS trickery to make comments break onto multiple lines while preserving indentation
-			const lines = (intro_whitespace + content + '').split('\n');
-			return lines
-				.map((line) => {
-					const match = /^(\s*)(.*)/.exec(line);
-					const indent = (match?.[1] ?? '').replace(/\t/g, '  ').length;
+function stash_popovers(html: string, popovers: string[]) {
+	let result = '';
+	let position = 0;
 
-					return `<span class="comment wrapped" style="--indent: ${indent}ch">${line ?? ''}</span>`;
-				})
-				.join('');
-		}
-	);
+	while (true) {
+		const start = html.indexOf('<span class="twoslash-popover"', position);
+		if (start === -1) break;
+
+		const end = find_closing_span(html, start);
+		if (end === -1) break;
+
+		const close = end + '</span>'.length;
+		result += html.slice(position, start) + `\uE000${popovers.length}\uE001`;
+		popovers.push(html.slice(start, close));
+		position = close;
+	}
+
+	return result + html.slice(position);
 }
