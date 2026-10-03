@@ -77,12 +77,13 @@ const plugins: PluginOption[] = [
 		},
 
 		// TODO: remove this when we stop deploying previews for Kit 2
-		experimental: is_kit_2
-			? {
-					// @ts-expect-error this is invalid in Kit 3 but valid in Kit 2
-					explicitEnvironmentVariables: true
-				}
-			: undefined
+		experimental: {
+			remoteFunctions: true,
+			...(is_kit_2
+				? // cast: only typed in some Kit versions
+					({ explicitEnvironmentVariables: true } as object)
+				: undefined)
+		}
 	}) as PluginOption
 ];
 

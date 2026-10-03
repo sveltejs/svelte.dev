@@ -1,7 +1,7 @@
 import { client } from './client.js';
 import * as local from './dev.js';
 
-/** @typedef {import('./types').User} User */
+/** @typedef {import('./types').GitHubSessionUser} User */
 /** @typedef {import('./types').UserID} UserID */
 /** @typedef {import('./types').Gist} Gist */
 
