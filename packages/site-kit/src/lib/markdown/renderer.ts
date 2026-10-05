@@ -65,7 +65,6 @@ const highlighters: Record<string, Highlighter> = {
 	tree: create_tree_highlighter(),
 	typescript: create_typescript_highlighter(),
 	yaml: create_yaml_highlighter(),
-	jsx: create_tsx_highlighter(),
 	tsx: create_tsx_highlighter()
 };
 
