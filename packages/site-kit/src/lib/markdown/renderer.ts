@@ -18,6 +18,7 @@ import { language as create_markdown_highlighter } from '@twinkleplop/markdown';
 import { language as create_shellsession_highlighter } from '@twinkleplop/shellsession';
 import { language as create_svelte_highlighter } from '@twinkleplop/svelte';
 import { language as create_toml_highlighter } from '@twinkleplop/toml';
+import { language as create_tsx_highlighter } from '@twinkleplop/tsx';
 import { create_highlighter as create_twoslash_highlighter } from '@twinkleplop/twoslash';
 import { language as create_typescript_highlighter } from '@twinkleplop/typescript';
 import { language as create_yaml_highlighter } from '@twinkleplop/yaml';
@@ -63,7 +64,9 @@ const highlighters: Record<string, Highlighter> = {
 	toml: create_toml_highlighter(),
 	tree: create_tree_highlighter(),
 	typescript: create_typescript_highlighter(),
-	yaml: create_yaml_highlighter()
+	yaml: create_yaml_highlighter(),
+	jsx: create_tsx_highlighter(),
+	tsx: create_tsx_highlighter()
 };
 
 const twoslash_highlighters = new Map<string, (code: string) => string>();

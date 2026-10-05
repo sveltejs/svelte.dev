@@ -54,6 +54,7 @@
 		"@twinkleplop/shellsession": "^0.1.5",
 		"@twinkleplop/svelte": "^0.1.5",
 		"@twinkleplop/toml": "^0.1.5",
+		"@twinkleplop/tsx": "^0.1.7",
 		"@twinkleplop/twoslash": "^0.2.1",
 		"@twinkleplop/typescript": "^0.1.5",
 		"@twinkleplop/yaml": "^0.1.5",
