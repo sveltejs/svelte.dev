@@ -49,6 +49,7 @@ How would we build this in React? It would probably look something like this:
 
 ```tsx
 // @noErrors
+// ---cut---
 import React, { useState } from 'react';
 
 export default () => {
