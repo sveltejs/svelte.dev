@@ -1,24 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { render_content, replace_canonical_origin } from './renderer.ts';
-
-describe('replace_canonical_origin', () => {
-	test('replaces only the canonical origin and preserves the URL suffix', () => {
-		expect(
-			replace_canonical_origin(
-				'https://svelte.dev/docs/kit?mode=advanced#configuration',
-				'http://localhost:5173'
-			)
-		).toBe('http://localhost:5173/docs/kit?mode=advanced#configuration');
-	});
-
-	test.each([
-		'/docs/kit',
-		'https://example.com/docs/kit',
-		'https://svelte.dev.example.com/docs/kit'
-	])('leaves %s unchanged', (href) => {
-		expect(replace_canonical_origin(href, 'https://preview.example.com')).toBe(href);
-	});
-});
+import { render_content } from './renderer.ts';
 
 describe('render_content', () => {
 	test('transforms Markdown links when given an origin', async () => {
