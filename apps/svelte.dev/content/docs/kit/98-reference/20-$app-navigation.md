@@ -186,7 +186,7 @@ Programmatically imports the code for routes that haven't yet been fetched.
 Typically, you might call this to speed up subsequent navigation.
 
 Takes a route ID such as `/about` or `/blog/[slug]`. Unlike pathnames, route IDs
-are never prefixed with the app's [base path](/docs/kit/configuration#paths).
+are never prefixed with the app's [base path](/docs/kit/@sveltejs-kit-vite#paths).
 If you have a pathname rather than a route ID, you can convert it with
 [`match`](/docs/kit/$app-paths#match) from `$app/paths`:
 

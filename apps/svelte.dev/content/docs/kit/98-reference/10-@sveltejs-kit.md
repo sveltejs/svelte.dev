@@ -2066,7 +2066,7 @@ current: Span;
 
 <div class="ts-block-property-details">
 
-The span associated with the current `handle` hook, `load` function, or form action.
+The span associated with the current `handle` hook, `load` function, form action, or `+server` handler.
 
 </div>
 </div></div>

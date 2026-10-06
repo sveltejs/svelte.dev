@@ -18,7 +18,7 @@ Available since 2.26
 
 </blockquote>
 
-Resolve the URL of an asset in your `static` directory, by prefixing it with [`config.paths.assets`](/docs/kit/configuration#paths) if configured, or otherwise by prefixing it with the base path.
+Resolve the URL of an asset in your `static` directory, by prefixing it with [`config.paths.assets`](/docs/kit/@sveltejs-kit-vite#paths) if configured, or otherwise by prefixing it with the base path.
 
 During server rendering, the base path is relative and depends on the page currently being rendered.
 
