@@ -6,15 +6,17 @@
 		html: string;
 		x: number;
 		y: number;
-		onmouseenter: (event: any) => void;
-		onmouseleave: (event: any) => void;
 	}
 
-	let { html, x, y, onmouseenter, onmouseleave }: Props = $props();
+	let { html, x, y }: Props = $props();
 
 	let visible = $state(false);
 	let tooltip: HTMLDivElement;
 	let offset = $state(0);
+
+	export function get_rect() {
+		return tooltip?.getBoundingClientRect();
+	}
 
 	// container starts out at maximum size, then shrinks to prevent page scrolling to the right
 	let width = $state('calc(100vw - 2 * var(--sk-page-padding-side))');
@@ -45,8 +47,6 @@
 </script>
 
 <div
-	{onmouseenter}
-	{onmouseleave}
 	role="tooltip"
 	class="tooltip-container"
 	class:visible
