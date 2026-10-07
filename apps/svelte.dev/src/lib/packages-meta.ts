@@ -150,6 +150,7 @@ const FEATURED: {
 	{
 		title: 'Rich text editing',
 		packages: [
+			{ name: 'svedit', description: 'Editing for Svelte' },
 			{ name: 'prosekit', description: 'Framework agnostic and headless rich text editor' },
 			{ name: 'svelte-lexical', description: 'Rich text editor for Svelte based on lexical' },
 			{ name: 'typewriter-editor' }
