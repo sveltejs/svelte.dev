@@ -1,4 +1,4 @@
-import { render_content_markdown } from '@sveltejs/site-kit/markdown';
+import { render_content_markdown, type DocumentationReferences } from '@sveltejs/site-kit/markdown';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -22,7 +22,12 @@ export function replace_canonical_origin(href: string, origin: string) {
 export const render_content = (
 	filename: string,
 	body: string,
-	options: { check?: boolean; origin?: string; references?: Record<string, string> } = {}
+	options: {
+		check?: boolean;
+		origin?: string;
+		references?: DocumentationReferences;
+		referenceModule?: string;
+	} = {}
 ) => {
 	const { origin, ...rest } = options;
 	const render_options = {
