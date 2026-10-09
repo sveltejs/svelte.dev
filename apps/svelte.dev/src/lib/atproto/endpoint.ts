@@ -41,27 +41,37 @@ export async function json_body(request: Request): Promise<unknown> {
 const MAX_FILES = 100;
 const MAX_BYTES = 1_000_000;
 
-function is_file(f: unknown): f is Input['files'][number] {
-	const file = f as Partial<Input['files'][number]> | null;
-	return typeof file?.name === 'string' && typeof file.source === 'string';
-}
+const FileSchema = v.message(
+	v.object({
+		name: v.string(),
+		source: v.string()
+	}),
+	'each file needs a name and a source'
+);
+
+const InputSchema = v.message(
+	v.pipe(
+		v.object({
+			name: v.string(),
+			files: v.pipe(
+				v.array(FileSchema),
+				v.maxLength(MAX_FILES, `an app holds at most ${MAX_FILES} files`)
+			),
+			tailwind: v.optional(v.boolean()),
+			svelte_version: v.optional(v.string()),
+			async: v.optional(v.boolean()),
+			forked_from: v.optional(v.string())
+		}),
+		v.check(
+			(input) => input.files.reduce((total, file) => total + file.source.length, 0) <= MAX_BYTES,
+			`an app holds at most ${MAX_BYTES} characters`
+		)
+	),
+	'name and files are required'
+);
 
 export function parse_input(body: unknown): Input {
-	const b = body as Partial<Input> | null;
-	if (typeof b?.name !== 'string' || !Array.isArray(b.files)) {
-		error(400, 'name and files are required');
-	}
-	if (b.files.length > MAX_FILES) error(400, `an app holds at most ${MAX_FILES} files`);
-	if (!b.files.every(is_file)) error(400, 'each file needs a name and a source');
-	const bytes = b.files.reduce((total, f) => total + f.source.length, 0);
-	if (bytes > MAX_BYTES) error(400, `an app holds at most ${MAX_BYTES} characters`);
-
-	return {
-		name: b.name,
-		files: b.files,
-		tailwind: b.tailwind === true,
-		svelte_version: typeof b.svelte_version === 'string' ? b.svelte_version : undefined,
-		async: typeof b.async === 'boolean' ? b.async : undefined,
-		forked_from: typeof b.forked_from === 'string' ? b.forked_from : undefined
-	};
+	const result = v.safeParse(InputSchema, body);
+	if (!result.success) error(400, result.issues[0].message);
+	return result.output;
 }
