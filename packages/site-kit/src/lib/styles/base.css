@@ -158,6 +158,15 @@ button {
 	background-color: transparent;
 	border: none;
 	color: currentColor;
+	/* anchors the hit area below; otherwise it covers the nearest positioned ancestor */
+	position: relative;
+
+	/* increase hit area */
+	&::before {
+		content: '';
+		position: absolute;
+		inset: -0.2rem;
+	}
 }
 
 button[disabled] {

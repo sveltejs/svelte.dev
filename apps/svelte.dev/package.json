@@ -19,6 +19,7 @@
 		"sync-packages": "node scripts/sync-packages/index.ts"
 	},
 	"dependencies": {
+		"@atproto/oauth-client-node": "^0.5.7",
 		"@jridgewell/sourcemap-codec": "^1.5.5",
 		"@lezer/common": "^1.5.1",
 		"@lezer/javascript": "^1.5.4",
@@ -30,6 +31,7 @@
 		"@vercel/speed-insights": "2.1.0-canary",
 		"@webcontainer/api": "^1.1.5",
 		"adm-zip": "^0.6.0",
+		"airspace": "^0.1.5",
 		"ansi-to-html": "^0.7.2",
 		"base64-js": "^1.5.1",
 		"cookie": "^1.1.1",
