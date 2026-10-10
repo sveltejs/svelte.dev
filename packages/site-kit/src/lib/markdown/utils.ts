@@ -10,6 +10,7 @@ export const TWINKLEPLOP_LANGUAGE_MAP = {
 	dts: 'typescript',
 	js: 'javascript',
 	ts: 'typescript',
+	jsx: 'tsx',
 	yml: 'yaml',
 	md: 'markdown',
 	// These formats intentionally render without syntax highlighting.
