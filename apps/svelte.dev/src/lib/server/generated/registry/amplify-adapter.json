@@ -6,11 +6,11 @@
     "zimbronapps"
   ],
   "homepage": "https://github.com/gzimbron/amplify-adapter#readme",
-  "version": "1.3.0",
-  "downloads": 3673,
+  "version": "1.4.0",
+  "downloads": 4962,
   "github_stars": 39,
-  "updated": "2026-02-18T05:57:51.789Z",
-  "kit_range": "^2.4.0",
+  "updated": "2026-10-09T16:46:10.067Z",
+  "kit_range": "^2.4.0 || ^3.0.0",
   "typescript": true,
   "runes": false,
   "last_rune_check_version": "0.2.0"
