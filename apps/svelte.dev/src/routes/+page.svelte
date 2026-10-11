@@ -55,5 +55,10 @@
 				font: var(--sk-font-h1);
 			}
 		}
+
+		/* links in body copy must not rely on colour alone (WCAG 1.4.1) */
+		p a {
+			text-decoration: underline;
+		}
 	}
 </style>
