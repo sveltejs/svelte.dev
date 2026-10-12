@@ -443,5 +443,29 @@
 		"tags": [
 			"rune-inspect"
 		]
+	},
+	{
+		"path": "/docs/kit/advanced-routing",
+		"breadcrumbs": [
+			"Docs",
+			"SvelteKit",
+			"Advanced",
+			"Advanced routing"
+		],
+		"tags": [
+			"routing"
+		]
+	},
+	{
+		"path": "/docs/kit/routing",
+		"breadcrumbs": [
+			"Docs",
+			"SvelteKit",
+			"Core concepts",
+			"Routing"
+		],
+		"tags": [
+			"routing"
+		]
 	}
 ]
