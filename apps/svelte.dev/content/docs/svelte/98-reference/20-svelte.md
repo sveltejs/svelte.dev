@@ -1134,4 +1134,25 @@ interface Snippet<Parameters extends unknown[] = []> {/*…*/}
 <div class="ts-block-property-details"></div>
 </div></div>
 
+## StateOptions
+
+<div class="ts-block">
+
+```dts
+interface StateOptions {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+onchange?: () => void;
+```
+
+<div class="ts-block-property-details">
+
+Called synchronously whenever the state is reassigned or, for `$state`, mutated anywhere in its tree
+
+</div>
+</div></div>
+
 
