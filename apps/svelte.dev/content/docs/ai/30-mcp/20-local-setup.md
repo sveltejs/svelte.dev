@@ -169,3 +169,36 @@ It will open a popup with MCP server config where you can add the following conf
 ## Other clients
 
 If we didn't include the MCP client you are using, refer to their documentation for `stdio` servers and use `npx` as the command and `-y @sveltejs/mcp` as the arguments.
+
+## Restricting the available tools
+
+By default the local server exposes every [tool](tools). If you only want to enable some of them, for example because your organization doesn't allow tools that generate links to external services like `playground-link`, pass a comma separated allow-list with the `--tools` option:
+
+```json
+{
+	"mcpServers": {
+		"svelte": {
+			"command": "npx",
+			"args": ["-y", "@sveltejs/mcp", "--tools", "list-sections,get-documentation,svelte-autofixer"]
+		}
+	}
+}
+```
+
+or with the `SVELTE_MCP_TOOLS` environment variable:
+
+```json
+{
+	"mcpServers": {
+		"svelte": {
+			"command": "npx",
+			"args": ["-y", "@sveltejs/mcp"],
+			"env": {
+				"SVELTE_MCP_TOOLS": "list-sections,get-documentation,svelte-autofixer"
+			}
+		}
+	}
+}
+```
+
+Tools that are not in the allow-list are not registered at all, so they can't be listed or called. New tools added in future versions will also stay disabled until you add them to the list. If both are set, `--tools` takes precedence over `SVELTE_MCP_TOOLS`. The server will refuse to start if the list contains an unknown tool name.
