@@ -1,7 +1,8 @@
 import * as cookie from 'cookie';
 import * as session from '#lib/db/session.js';
 
-export async function GET({ request, url }) {
+// POST only: a cross-site link must not be able to log the user out
+export async function POST({ request, url }) {
 	const cookies = cookie.parse(request.headers.get('cookie') || '');
 	if (cookies.sid) {
 		await session.destroy(cookies.sid);
@@ -13,7 +14,7 @@ export async function GET({ request, url }) {
 				maxAge: -1,
 				path: '/',
 				httpOnly: true,
-				secure: url.protocol === 'https'
+				secure: url.protocol === 'https:'
 			})
 		}
 	});
