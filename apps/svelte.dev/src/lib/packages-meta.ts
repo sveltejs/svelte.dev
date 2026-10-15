@@ -233,6 +233,7 @@ const FEATURED: {
 				description: 'A compiler-based i18n library that emits tree-shakable message functions'
 			},
 			{ name: '@wuchale/svelte', description: 'Protobuf-like i18n from plain code' },
+			{ name: 'svelte-intlayer', description: 'Per-component i18n optimized for you bundle' },
 			{ name: 'i18n-js' }
 		]
 	},
