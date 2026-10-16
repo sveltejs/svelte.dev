@@ -9,6 +9,9 @@ title: sv-utils
 npm install -D @sveltejs/sv-utils
 ```
 
+> [!NOTE]
+> Bundle `@sveltejs/sv-utils` in your add-on to pin its version. See [why](faq#Why-bundle-sveltejs-sv-utils-in-my-add-on).
+
 ## transforms
 
 `transforms` is a collection of parser-aware functions that lets you modify the files via abstract syntax tree (AST). It accepts a callback function. The return value is designed to be be passed directly into `sv.file()`. The parser choice is baked into the transform type - you can't accidentally parse a vite config as Svelte because you never call a parser yourself.
@@ -257,6 +260,7 @@ svelteConfig.edit({ sv, cwd }, ({ ast, property, override, js }) => {
 
 - **`property(name, { fallback })`** - get-or-create an option's value to mutate in place (arrays, nested objects).
 - **`override(props, { dropLeadingComments })`** - set/replace options; `dropLeadingComments` clears a now-stale leading comment (e.g. the adapter-auto note when switching adapters).
+- **`config`** - the resolved raw config object for edits that need lower-level AST operations. In a Vite config this is the object passed to `sveltekit()`.
 
 It writes through `sv.file`, so the edit is tracked like any other. If the project has neither config file, a `svelte.config.js` is created.
 
@@ -289,6 +293,29 @@ if (packageManager === 'pnpm') {
 	);
 }
 ```
+
+## Demo pages
+
+### `defineDemoPage`
+
+Wires an add-on demo into a SvelteKit project. Every demo is listed in a floating `DemoLinks` post-it rendered from the root layout, whatever the template. It returns the pieces you spread into `sv.file()`:
+
+```js
+// @noErrors
+import { defineDemoPage } from '@sveltejs/sv-utils';
+
+const demo = defineDemoPage('my-addon', language, directory.kitRoutes);
+
+sv.file(...demo.links); // adds `/demo/my-addon` to `<routes>/demo/DemoLinks.svelte`
+sv.file(...demo.layout); // renders `<DemoLinks />` in `<routes>/+layout.svelte`
+sv.file(`${demo.addonPath}/+page.svelte` /* your demo route */);
+```
+
+- **`addonPath`** - `<routes>/demo/<name>`, where your own demo route belongs.
+- **`links`** - a `[path, transform]` pair for `<routes>/demo/DemoLinks.svelte` (created if missing).
+- **`layout`** - a `[path, transform]` pair for `<routes>/+layout.svelte` (created if missing).
+
+Both transforms are idempotent, so re-running an add-on won't duplicate entries. Only call them when the user asked for a demo (e.g. a `demo` option), so projects without demos don't get the post-it. To opt out, delete `DemoLinks.svelte` and its usage in the layout.
 
 ## Browser usage
 
