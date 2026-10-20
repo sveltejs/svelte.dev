@@ -208,6 +208,12 @@ Failed to hydrate the application
 Could not `{@render}` snippet due to the expression being `null` or `undefined`. Consider using optional chaining `{@render snippet?.()}`
 ```
 
+### invalid_snippet_in_custom_renderer
+
+```
+`createRawSnippet` cannot be used with a custom renderer
+```
+
 ### lifecycle_legacy_only
 
 ```
@@ -226,10 +232,22 @@ Cannot do `bind:%key%={undefined}` when `%key%` has a fallback value
 Rest element properties of `$props()` such as `%property%` are readonly
 ```
 
+### renderer_missing_foreign
+
+```
+A custom renderer must define `foreign` to interleave with DOM or another custom renderer
+```
+
 ### rune_outside_svelte
 
 ```
 The `%rune%` rune is only available inside `.svelte` and `.svelte.js/ts` files
+```
+
+### snippet_renderer_mismatch
+
+```
+A snippet created in a component with a custom renderer cannot be rendered by a different renderer
 ```
 
 ### state_descriptors_fixed
@@ -363,7 +381,7 @@ This error occurs when using `hydratable` multiple times with the same key. To a
 ```
 Failed to serialize `hydratable` data for key `%key%`.
 
-`hydratable` can serialize anything [`uneval` from `devalue`](https://npmjs.com/package/uneval) can, plus Promises.
+`hydratable` can serialize anything [`uneval` from `devalue`](https://npmjs.com/package/devalue) can, plus Promises.
 
 Cause:
 %stack%
