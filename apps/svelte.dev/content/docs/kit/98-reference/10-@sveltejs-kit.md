@@ -555,6 +555,27 @@ interface AdapterViteConfig {/*…*/}
 <div class="ts-block-property">
 
 ```dts
+preview?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `true`
+- <span class="tag since">available since</span> v3.2.0
+
+</div>
+
+Whether SvelteKit should use its Node-based preview server. Set to `false`
+when the adapter provides its own preview implementation through a Vite plugin.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
 getRequest?: typeof getRequest;
 ```
 
