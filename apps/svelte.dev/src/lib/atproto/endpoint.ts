@@ -1,6 +1,7 @@
 import type { Cookies } from '@sveltejs/kit';
 import { error } from '@sveltejs/kit';
 import { ValidationError } from 'airspace';
+import * as v from 'valibot';
 import type { AtprotoSessionUser } from '#lib/db/types.d.ts';
 import { SessionError } from './client.js';
 import type { Input } from './apps.js';
