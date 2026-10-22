@@ -4,7 +4,7 @@ import { client } from './client.js';
 import * as local from './dev.js';
 import { error } from '@sveltejs/kit';
 
-/** @typedef {import('./types').User} User */
+/** @typedef {import('./types').GitHubSessionUser} User */
 
 /**
  * @type {import('flru').flruCache<User | null>}
@@ -17,7 +17,7 @@ const session_cache = flru(1000);
 export async function create(user) {
 	if (local.enabled) {
 		const { sessionid, userid, expires } = local.login(user);
-		session_cache.set(sessionid, { id: userid, ...user });
+		session_cache.set(sessionid, { provider: 'github', id: userid, ...user });
 		return { sessionid, expires: new Date(expires) };
 	}
 
@@ -37,6 +37,7 @@ export async function create(user) {
 	}
 
 	session_cache.set(result.data.sessionid, {
+		provider: 'github',
 		id: result.data.userid,
 		github_name: user.github_name,
 		github_login: user.github_login,
@@ -67,7 +68,7 @@ export async function read(sessionid) {
 					throw new Error(error.message);
 				}
 
-				return data.id && data;
+				return data.id && { provider: 'github', ...data };
 			})
 		);
 	}

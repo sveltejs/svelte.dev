@@ -43,7 +43,7 @@ export async function GET({ url }) {
 					expires: new Date(expires),
 					path: '/',
 					httpOnly: true,
-					secure: url.protocol === 'https'
+					secure: url.protocol === 'https:'
 				}),
 				'Content-Type': 'text/html; charset=utf-8'
 			}
