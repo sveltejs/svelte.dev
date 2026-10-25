@@ -1,15 +1,16 @@
 {
   "name": "svelte-adapter-bun",
-  "npm_description": "Adapter for SvelteKit apps that generates a standalone Bun.js server.",
+  "npm_description": "DEPRECATED: use @sveltejs/adapter-bun. Adapter for SvelteKit apps that generates a standalone Bun.js server.",
   "repo_url": "https://github.com/gornostay25/svelte-adapter-bun",
   "authors": [
     "gornostay25"
   ],
   "homepage": "https://github.com/gornostay25/svelte-adapter-bun#readme",
-  "version": "1.0.1",
-  "downloads": 31813,
-  "github_stars": 663,
-  "updated": "2025-10-22T18:53:59.617Z",
+  "version": "1.0.2",
+  "deprecated_reason": "Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.",
+  "downloads": 13986,
+  "github_stars": 661,
+  "updated": "2026-10-20T03:03:55.464Z",
   "kit_range": "^2.4.0",
   "typescript": true,
   "runes": false,

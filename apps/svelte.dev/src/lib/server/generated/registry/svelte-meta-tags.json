@@ -6,12 +6,12 @@
     "oe.kazuma"
   ],
   "homepage": "https://oekazuma.github.io/svelte-meta-tags/",
-  "version": "5.0.2",
-  "downloads": 50405,
+  "version": "5.0.3",
+  "downloads": 42768,
   "github_stars": 682,
-  "updated": "2026-07-20T15:17:23.604Z",
+  "updated": "2026-10-06T09:55:47.984Z",
   "svelte_range": "^5.0.0",
-  "kit_range": "^2.70.0",
+  "kit_range": "^3.0.0",
   "typescript": true,
   "runes": true,
   "last_rune_check_version": "4.2.0"

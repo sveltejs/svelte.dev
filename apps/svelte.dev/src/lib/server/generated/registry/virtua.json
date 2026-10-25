@@ -1,15 +1,15 @@
 {
   "name": "virtua",
-  "npm_description": "A zero-config, fast and small virtual list and grid component for React, Vue, Solid, Svelte and Angular.",
+  "npm_description": "A zero-config, fast and small virtual list, grid and masonry component for React, Vue, Solid, Svelte and Angular.",
   "repo_url": "https://github.com/inokawa/virtua",
   "authors": [
     "inokawa"
   ],
   "homepage": "https://github.com/inokawa/virtua#readme",
-  "version": "0.52.10",
-  "downloads": 1285099,
+  "version": "0.53.6",
+  "downloads": 706389,
   "github_stars": 3448,
-  "updated": "2026-09-29T14:13:43.263Z",
+  "updated": "2026-10-21T14:07:09.400Z",
   "svelte_range": ">=5.0",
   "typescript": true,
   "runes": true,
