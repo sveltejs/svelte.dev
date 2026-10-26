@@ -1292,7 +1292,6 @@ config?: (config: Record<string, any>) => Record<string, any> | void;
 
 <div class="ts-block-property-bullets">
 
-- <span class="tag">default</span> `(config) => config`
 - <span class="tag since">available since</span> v1.3.0
 
 </div>
