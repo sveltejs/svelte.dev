@@ -6,10 +6,10 @@
     "google-wombot"
   ],
   "homepage": "https://github.com/ChromeDevTools/vite-plugin-devtools-json#readme",
-  "version": "1.1.0",
-  "downloads": 403383,
+  "version": "1.1.2",
+  "downloads": 210835,
   "github_stars": 377,
-  "updated": "2026-07-20T15:01:12.279Z",
+  "updated": "2026-10-12T11:59:59.301Z",
   "typescript": true,
   "runes": false,
   "last_rune_check_version": "0.4.1"
