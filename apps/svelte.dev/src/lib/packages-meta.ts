@@ -273,7 +273,11 @@ const FEATURED: {
 				name: 'virtua',
 				description: 'A zero-config, fast and small (~3kB) virtual list and grid component'
 			},
-			{ name: '@event-calendar/core' }
+			{ name: '@event-calendar/core' },
+			{
+				name: '@c15t/svelte',
+				description: 'Cookie banner, preferences dialog and consent rules'
+			}
 		]
 	},
 	{
