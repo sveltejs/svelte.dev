@@ -84,7 +84,11 @@ const FEATURED: {
 				description: 'A low-level headless UI library'
 			},
 			{ name: '@sveltestrap/sveltestrap' },
-			{ name: 'm3-svelte', description: 'An implementation of the Material 3 design system' }
+			{ name: 'm3-svelte', description: 'An implementation of the Material 3 design system' },
+			{
+				name: '@svar-ui/svelte-core',
+				description: 'A UI library of 20+ components and form controls'
+			}
 		]
 	},
 	{
@@ -95,6 +99,7 @@ const FEATURED: {
 			{ name: '@sveltejs/adapter-netlify', description: 'Builds your app for Netlify' },
 			{ name: '@sveltejs/adapter-vercel', description: 'Builds your app for Vercel' },
 			{ name: '@sveltejs/adapter-static', description: 'Builds your static site' },
+			{ name: '@sveltejs/adapter-bun', description: 'Builds a standalone Bun server' },
 			{ name: '@deno/svelte-adapter', description: 'Builds your app for Deno Deploy' },
 			{ name: 'amplify-adapter', description: 'Builds your app for AWS Amplify' },
 			{ name: 'svelte-kit-sst', description: 'Builds your app for AWS Lambda and AWS Lamda@Edge' },
@@ -398,7 +403,8 @@ const FEATURED: {
 				description: 'Accessible form components built on top of sveltekit-superforms'
 			},
 			{ name: 'felte', description: 'An extensible form library' },
-			{ name: '@tanstack/svelte-form', description: 'Powerful, type-safe forms' }
+			{ name: '@tanstack/svelte-form', description: 'Powerful, type-safe forms' },
+			{ name: 'valibot', description: 'A modular, type-safe schema library for validating data' }
 		]
 	}
 ];

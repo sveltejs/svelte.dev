@@ -1,0 +1,16 @@
+{
+  "name": "@sveltejs/adapter-bun",
+  "npm_description": "Adapter for SvelteKit apps that generates a standalone Bun server",
+  "repo_url": "https://github.com/sveltejs/kit",
+  "authors": [
+    "rich_harris",
+    "svelte-admin",
+    "conduitry"
+  ],
+  "homepage": "https://svelte.dev/docs/kit/adapter-bun",
+  "version": "1.0.0",
+  "downloads": 37027,
+  "github_stars": 20884,
+  "updated": "2026-10-01T17:21:57.418Z",
+  "kit_range": "^3.0.0-next.0"
+}
