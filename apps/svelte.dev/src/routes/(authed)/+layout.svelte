@@ -12,7 +12,7 @@
 				if (event.key === storage_key) {
 					invalidateAll();
 					window.removeEventListener('storage', handler);
-					this.localStorage.clearItem(storage_key);
+					this.localStorage.removeItem(storage_key);
 				}
 			});
 		},

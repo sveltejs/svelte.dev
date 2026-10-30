@@ -203,7 +203,7 @@ You can add a special comment starting with `@component` that will show up when 
 - You can also use code blocks here.
 - Usage:
   ```html
-  <Main name="Arethra">
+  <Main name="Aretha">
   ```
 -->
 <script>
@@ -216,3 +216,14 @@ You can add a special comment starting with `@component` that will show up when 
 	</h1>
 </main>
 ````
+
+You can also put JavaScript-style comments within tags between attributes:
+
+```svelte
+<div
+  // this is a comment!
+  data-foo="bar"
+>
+  foo bar
+</div>
+```

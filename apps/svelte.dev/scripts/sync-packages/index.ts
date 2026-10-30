@@ -122,7 +122,7 @@ async function getNpmAndGitHubData(pkg: string): Promise<PackageKey & PackageNpm
 	// console.log(`npmInfo`, npmInfo);
 
 	const npm_description = npmInfo.description;
-	const raw_repo_url = npmInfo.repository?.url ?? '';
+	const raw_repo_url: string = npmInfo.repository?.url ?? '';
 	let repo_url = raw_repo_url
 		?.replace(/^git\+/, '')
 		.replace(/\.git$/, '')
@@ -193,7 +193,7 @@ async function refreshJsonFile(fullPath: string) {
 	console.log(`Refreshing:`, fullPath);
 
 	const currentJson = JSON.parse(fs.readFileSync(fullPath, 'utf-8'));
-	const newData = await getNpmAndGitHubData(currentJson.name);
+	const newData = (await getNpmAndGitHubData(currentJson.name)) as Record<string, any>;
 
 	// remove all undefined values
 	for (const key in newData) {

@@ -47,8 +47,7 @@ Reducing the amount of code you have to write is an explicit goal of Svelte. To 
 
 How would we build this in React? It would probably look something like this:
 
-```js
-// @noErrors
+```tsx
 import React, { useState } from 'react';
 
 export default () => {

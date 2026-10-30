@@ -1,9 +1,19 @@
 export interface NavigationLink {
 	title: string;
 	slug: string;
+	/**
+	 * Tested against `url.pathname` to determine whether the link is highlighted.
+	 * Defaults to matching `/{slug}` and any path beneath it
+	 */
+	match?: RegExp;
 	sections?: {
 		title: string;
 		path?: string;
+		/**
+		 * Tested against `url.pathname` to determine whether the section is highlighted.
+		 * Defaults to matching `path` and any path beneath it. Use `false` to never highlight
+		 */
+		match?: RegExp | false;
 		sections: {
 			title: string;
 			path?: string;

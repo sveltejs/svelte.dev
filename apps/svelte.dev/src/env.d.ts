@@ -6,8 +6,3 @@ interface ImageToolsPictureData {
 		h: number;
 	};
 }
-
-declare module '*?big-image' {
-	const value: ImageToolsPictureData;
-	export default value;
-}

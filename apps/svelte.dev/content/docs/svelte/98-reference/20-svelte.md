@@ -232,14 +232,19 @@ Available since 5.40.0
 
 </blockquote>
 
-Returns a `[get, set]` pair of functions for working with context in a type-safe way.
+Returns a `[get, set, has]` triplet of functions for working with context in a type-safe way.
 
-`get` will throw an error if no parent component called `set`.
+`get` will throw an error if `set` has not yet been called in the current component or any of
+its ancestors.
 
 <div class="ts-block">
 
 ```dts
-function createContext<T>(): [() => T, (context: T) => T];
+function createContext<T>(): [
+	() => T,
+	(context: T) => T,
+	() => boolean
+];
 ```
 
 </div>
@@ -386,9 +391,9 @@ function getAbortSignal(): AbortSignal;
 
 ## getAllContexts
 
-Retrieves the whole context map that belongs to the closest parent component.
-Must be called during component initialisation. Useful, for example, if you
-programmatically create a component and want to pass the existing context to it.
+Retrieves the whole context map that belongs to the current component, including entries
+inherited from its ancestors. Must be called during component initialisation. Useful, for
+example, if you programmatically create a component and want to pass the existing context to it.
 
 <div class="ts-block">
 
@@ -404,7 +409,9 @@ function getAllContexts<
 
 ## getContext
 
-Retrieves the context that belongs to the closest parent component with the specified `key`.
+Retrieves the context set with the specified `key` in the current component or any of its
+ancestors. If multiple components set the same key, the value from the closest one is returned.
+A `setContext` call in the current component is only visible to `getContext` calls that run after it.
 Must be called during component initialisation.
 
 [`createContext`](/docs/svelte/svelte#createContext) is a type-safe alternative.
@@ -421,8 +428,8 @@ function getContext<T>(key: any): T;
 
 ## hasContext
 
-Checks whether a given `key` has been set in the context of a parent component.
-Must be called during component initialisation.
+Checks whether a given `key` has been set in the context of the current component or any of
+its ancestors. Must be called during component initialisation.
 
 <div class="ts-block">
 
@@ -555,8 +562,8 @@ function onMount<T>(
 ## setContext
 
 Associates an arbitrary `context` object with the current component and the specified `key`
-and returns that object. The context is then available to children of the component
-(including slotted content) with `getContext`.
+and returns that object. The context is then available to the component itself and all of its
+descendants (including slotted content) with `getContext`.
 
 Like lifecycle functions, this must be called during component initialisation.
 

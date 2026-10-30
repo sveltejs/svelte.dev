@@ -56,7 +56,7 @@ SvelteKit does things a little differently, however:
 
 With SvelteKit, you have flexibility. Many frameworks assume there’s one correct way to build an app, but reality is more nuanced. It’s not true, for example, that prerendering static pages is just a poor man’s `cache-control` — it also lets you do build-time validation or render data from the filesystem that your edge functions can’t access, and acts as a hedge against flaky databases. It’s not true that everything needs server-side rendering — it’s the right default if you want robust, performant apps with good SEO, but there are countless exceptions.
 
-In a SvelteKit app, you can make these choices with as much granularity as you need — for example the page you’re looking at is prerendered, but the [REPL](/repl) is rendered with dynamic data. Switching between the two is a single line of code. We call apps built with this approach ‘[transitional apps](https://www.youtube.com/watch?v=860d8usGC0o)’.
+In a SvelteKit app, you can make these choices with as much granularity as you need — for example the page you’re looking at is prerendered, but the [REPL](/repl) is rendered with dynamic data. Switching between the two is a single line of code. We call apps built with this approach ‘[transitional apps](https://2021.jamstackconf.com/talk/c17544108e71/transitional-apps/)’.
 
 ## What can I use with SvelteKit?
 

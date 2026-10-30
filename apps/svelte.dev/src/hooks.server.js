@@ -37,7 +37,10 @@ const mappings = new Map([
 	['/tutorial/svelte/introducing-stores', '/tutorial/svelte/stores'],
 	['/tutorial/kit/app-store', '/tutorial/kit/app-state'],
 	['/tutorial/kit/navigating-store', '/tutorial/kit/navigating-state'],
-	['/tutorial/kit/updated-store', '/tutorial/kit/updated-state']
+	['/tutorial/kit/updated-store', '/tutorial/kit/updated-state'],
+
+	// sveltekit 3 redirects
+	['/docs/kit/configuration', '/docs/kit/@sveltejs-kit-vite']
 ]);
 
 // selectively preload fonts
@@ -47,7 +50,19 @@ const fonts = [
 	'fira-sans-latin-400-normal'
 ];
 
-/** @type {import('@sveltejs/kit').Handle} */
+/** @type {import('@sveltejs/kit/hooks').HandleFetch} */
+export function handleFetch({ event, request, fetch }) {
+	if (request.url.startsWith(event.url.origin + '/')) {
+		request.headers.set(
+			'x-vercel-protection-bypass',
+			/** @type {string} */ (process.env.VERCEL_AUTOMATION_BYPASS_SECRET)
+		);
+	}
+
+	return fetch(request);
+}
+
+/** @type {import('@sveltejs/kit/hooks').Handle} */
 export async function handle({ event, resolve }) {
 	// Best effort to redirect from Svelte 4 docs to new docs
 	const destination = mappings.get(event.url.pathname);
@@ -79,6 +94,11 @@ export async function handle({ event, resolve }) {
 	}
 	if (event.url.pathname === '/docs/ai/opencode-subagent') {
 		redirect(307, '/docs/ai/subagent');
+	}
+
+	// Redirect from renamed `sv add` add-on: mcp → ai-tools
+	if (event.url.pathname === '/docs/cli/mcp') {
+		redirect(307, '/docs/cli/ai-tools');
 	}
 
 	// Best effort to redirect from Svelte 3 tutorial to new tutorial

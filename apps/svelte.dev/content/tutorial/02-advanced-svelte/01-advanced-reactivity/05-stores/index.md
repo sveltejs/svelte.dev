@@ -2,7 +2,7 @@
 title: Stores
 ---
 
-Prior to the introduction of runes in Svelte 5, stores were the idiomatic way to handle reactive state outside components. That's no longer the case, but you'll still encounter stores when using Svelte (including in SvelteKit, for now), so it's worth knowing how to use them.
+Prior to the introduction of runes in Svelte 5, stores were the idiomatic way to handle reactive state outside components. That's no longer the case, but you'll still encounter stores in existing codebases and libraries, so it's worth knowing how to use them.
 
 > [!NOTE] We won't cover how to create your own custom stores — for that, [consult the documentation](/docs/svelte/stores).
 

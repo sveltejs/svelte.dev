@@ -20,11 +20,9 @@ export function setupDocsHovers() {
 		function over(event: MouseEvent) {
 			if (event.buttons !== 0) return; // probably selecting
 
-			let target = event.target as HTMLSpanElement;
+			const target = (event.target as Element).closest<HTMLSpanElement>('.twoslash-hover');
 
-			if (!target.classList?.contains('twoslash-hover')) {
-				return;
-			}
+			if (!target) return;
 
 			clearTimeout(timeout);
 
@@ -32,19 +30,8 @@ export function setupDocsHovers() {
 
 			clear();
 
-			const container = target.querySelector('.twoslash-popup-container')!;
-
-			const code = container.querySelector('.twoslash-popup-code pre code');
-			if (code && code.children.length === 2) {
-				// for reasons I don't really understand, generated types are duplicated.
-				// this is the easiest way to fix it
-				const [a, b] = code.children;
-				if (a.outerHTML === b.outerHTML) {
-					b.remove();
-				}
-			}
-
-			const html = container.innerHTML;
+			const container = target.querySelector('.twoslash-popover');
+			const html = container?.innerHTML;
 
 			if (html) {
 				const rect = target.getBoundingClientRect();
