@@ -349,6 +349,19 @@ const FEATURED: {
 		]
 	},
 	{
+		title: 'Browser extensions',
+		packages: [
+			{
+				name: 'wxt',
+				description: 'Build cross-browser extensions with Svelte using the official Svelte module'
+			},
+			{
+				name: '@crxjs/vite-plugin',
+				description: 'Vite plugin for building Chrome extensions with HMR'
+			}
+		]
+	},
+	{
 		title: 'Routing',
 		description:
 			'The official router is <a href="/docs/kit">SvelteKit</a>, but here are some alternatives',
