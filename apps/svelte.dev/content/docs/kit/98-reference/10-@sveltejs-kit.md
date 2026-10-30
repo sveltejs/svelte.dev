@@ -2168,6 +2168,25 @@ prerender: PrerenderOption;
 <div class="ts-block-property">
 
 ```dts
+trailingSlash: TrailingSlash;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag since">available since</span> v3.2.0
+
+</div>
+
+The route's [`trailingSlash`](/docs/kit/page-options#trailingSlash) option
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
 segments: RouteSegment[];
 ```
 

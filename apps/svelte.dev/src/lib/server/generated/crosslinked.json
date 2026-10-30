@@ -443,5 +443,186 @@
 		"tags": [
 			"rune-inspect"
 		]
+	},
+	{
+		"path": "/docs/kit/$app-env-private",
+		"breadcrumbs": [
+			"Docs",
+			"SvelteKit",
+			"Reference",
+			"$app/env/private"
+		],
+		"tags": [
+			"env"
+		]
+	},
+	{
+		"path": "/docs/kit/$app-env-public",
+		"breadcrumbs": [
+			"Docs",
+			"SvelteKit",
+			"Reference",
+			"$app/env/public"
+		],
+		"tags": [
+			"env"
+		]
+	},
+	{
+		"path": "/docs/kit/$app-forms",
+		"breadcrumbs": [
+			"Docs",
+			"SvelteKit",
+			"Reference",
+			"$app/forms"
+		],
+		"tags": [
+			"enhance"
+		]
+	},
+	{
+		"path": "/docs/kit/$app-navigation",
+		"breadcrumbs": [
+			"Docs",
+			"SvelteKit",
+			"Reference",
+			"$app/navigation"
+		],
+		"tags": [
+			"invalidation",
+			"preloading"
+		]
+	},
+	{
+		"path": "/docs/kit/$app-state",
+		"breadcrumbs": [
+			"Docs",
+			"SvelteKit",
+			"Reference",
+			"$app/state"
+		],
+		"tags": [
+			"app-state"
+		]
+	},
+	{
+		"path": "/docs/kit/$lib",
+		"breadcrumbs": [
+			"Docs",
+			"SvelteKit",
+			"Reference",
+			"#lib"
+		],
+		"tags": [
+			"lib"
+		]
+	},
+	{
+		"path": "/docs/kit/advanced-routing",
+		"breadcrumbs": [
+			"Docs",
+			"SvelteKit",
+			"Advanced",
+			"Advanced routing"
+		],
+		"tags": [
+			"routing"
+		]
+	},
+	{
+		"path": "/docs/kit/hooks",
+		"breadcrumbs": [
+			"Docs",
+			"SvelteKit",
+			"Advanced",
+			"Hooks"
+		],
+		"tags": [
+			"hooks"
+		]
+	},
+	{
+		"path": "/docs/kit/errors",
+		"breadcrumbs": [
+			"Docs",
+			"SvelteKit",
+			"Advanced",
+			"Errors"
+		],
+		"tags": [
+			"errors"
+		]
+	},
+	{
+		"path": "/docs/kit/link-options",
+		"breadcrumbs": [
+			"Docs",
+			"SvelteKit",
+			"Advanced",
+			"Link options"
+		],
+		"tags": [
+			"preloading"
+		]
+	},
+	{
+		"path": "/docs/kit/routing",
+		"breadcrumbs": [
+			"Docs",
+			"SvelteKit",
+			"Core concepts",
+			"Routing"
+		],
+		"tags": [
+			"routing"
+		]
+	},
+	{
+		"path": "/docs/kit/load",
+		"breadcrumbs": [
+			"Docs",
+			"SvelteKit",
+			"Core concepts",
+			"Loading data"
+		],
+		"tags": [
+			"load"
+		]
+	},
+	{
+		"path": "/docs/kit/form-actions",
+		"breadcrumbs": [
+			"Docs",
+			"SvelteKit",
+			"Core concepts",
+			"Form actions"
+		],
+		"tags": [
+			"forms"
+		]
+	},
+	{
+		"path": "/docs/kit/page-options",
+		"breadcrumbs": [
+			"Docs",
+			"SvelteKit",
+			"Core concepts",
+			"Page options"
+		],
+		"tags": [
+			"page-options"
+		]
+	},
+	{
+		"path": "/docs/kit/environment-variables",
+		"breadcrumbs": [
+			"Docs",
+			"SvelteKit",
+			"Core concepts",
+			"Environment variables"
+		],
+		"tags": [
+			"env"
+		]
 	}
 ]
