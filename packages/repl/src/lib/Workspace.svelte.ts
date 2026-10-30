@@ -142,10 +142,14 @@ export class Workspace {
 		const warnings = this.current_compiled?.result?.warnings ?? [];
 
 		if (error) {
+			// not all errors (e.g. from legacy compilers) have a `position` range
+			const from = error.position?.[0] ?? 0;
+			const to = error.position?.[1] ?? from;
+
 			diagnostics.push({
 				severity: 'error',
-				from: error.position![0],
-				to: error.position![1],
+				from,
+				to,
 				message: error.message,
 				renderMessage: () => {
 					let html = error.message
@@ -415,12 +419,13 @@ export class Workspace {
 
 	reset(
 		new_files: Item[],
-		options: { tailwind: boolean; aliases?: Record<string, string> },
+		options: { tailwind: boolean; aliases?: Record<string, string>; async?: boolean },
 		selected?: string
 	) {
 		this.states.clear();
 		this.#tailwind = options.tailwind;
 		this.#aliases = options.aliases;
+		this.#compiler_options = { ...this.#compiler_options, async: options.async ?? true };
 
 		const bundle = this.set(new_files, selected);
 

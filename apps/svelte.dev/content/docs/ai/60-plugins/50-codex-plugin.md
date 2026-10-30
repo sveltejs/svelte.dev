@@ -5,7 +5,7 @@ title: Codex CLI
 
 The open source [repository](https://github.com/sveltejs/ai-tools) containing the code for the MCP server is also a Codex CLI [plugin marketplace](https://developers.openai.com/codex/plugins).
 
-The marketplace allows you to install the `svelte` plugin which will give you the remote MCP server, [skills](skills) to instruct the LLM on how to properly write Svelte 5 code, and a specialized agent for editing Svelte files.
+The marketplace allows you to install the `svelte` plugin which will give you the local stdio MCP server, [skills](skills) to instruct the LLM on how to properly write Svelte 5 code, and a specialized agent for editing Svelte files.
 
 If possible, we recommend that you instruct the LLM to execute MCP calls with the agent (you can explicitly mention an agent in your message to delegate work to it) when creating or editing `.svelte` files or `.svelte.ts`/`.svelte.js` modules — this will help save context by handling Svelte-specific tasks more efficiently.
 

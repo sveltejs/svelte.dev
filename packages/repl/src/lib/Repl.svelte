@@ -79,7 +79,8 @@
 			imports: bundler!.result?.imports ?? [],
 			files: workspace.file_nodes,
 			tailwind: workspace.tailwind,
-			aliases: workspace.aliases
+			aliases: workspace.aliases,
+			async: workspace.compiler_options.async
 		};
 	}
 
@@ -88,11 +89,12 @@
 		files: File[];
 		tailwind?: boolean;
 		aliases?: Record<string, string>;
+		async?: boolean;
 	}) {
 		// Await promise so that users (v0 in this case) can know when the bundling is done
 		await workspace.reset(
 			data.files,
-			{ tailwind: data.tailwind ?? false, aliases: data.aliases },
+			{ tailwind: data.tailwind ?? false, aliases: data.aliases, async: data.async },
 			'App.svelte'
 		);
 	}

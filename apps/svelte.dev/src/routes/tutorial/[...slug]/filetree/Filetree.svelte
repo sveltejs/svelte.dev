@@ -5,7 +5,7 @@
 	import Modal from '#lib/components/Modal.svelte';
 	import { solution } from '../state.svelte';
 	import { afterNavigate } from '$app/navigation';
-	import type { Exercise } from '#lib/tutorial';
+	import type { Exercise } from '#lib/tutorial/index.d.ts';
 	import type { Workspace, Item } from '@sveltejs/repl/workspace';
 
 	interface Props {

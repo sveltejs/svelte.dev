@@ -1,5 +1,5 @@
 import { PRERENDER } from '$app/env/private';
-import { docs, index } from '#lib/server/content';
+import { docs, index } from '#lib/server/content.ts';
 import type { BannerData, NavigationLink } from '@sveltejs/site-kit';
 
 // by default, all pages are prerendered
@@ -27,6 +27,15 @@ const nav_links: NavigationLink[] = [
 		}))
 	},
 	{
+		title: 'Playground',
+		slug: 'playground',
+		match: /^\/(playground|apps)(\/|$)/,
+		sections: [
+			{ title: 'Create new app', path: '/playground', match: false, sections: [] },
+			{ title: 'Your saved apps', path: '/apps', match: /^\/apps$/, sections: [] }
+		]
+	},
+	{
 		title: 'Tutorial',
 		slug: 'tutorial',
 		sections: index.tutorial.children.map((topic) => ({
@@ -49,23 +58,19 @@ const nav_links: NavigationLink[] = [
 		slug: 'packages'
 	},
 	{
-		title: 'Playground',
-		slug: 'playground'
-	},
-	{
 		title: 'Blog',
 		slug: 'blog'
 	}
 ];
 
 const banner: BannerData = {
-	id: 'barcelona-2025-tickets',
-	start: new Date('21 April, 2025 00:00:00 UTC'),
-	end: new Date('6 May, 2025 23:59:59 UTC'),
+	id: 'ljubljana-2026-tickets-available',
+	start: new Date('1 August, 2026 00:00:00 UTC'),
+	end: new Date('20 November, 2026 23:59:59 UTC'),
 	arrow: true,
 	content: {
-		lg: 'Svelte Summit Barcelona and online, May 8-9: Last few days to get tickets!',
-		sm: 'Svelte Summit May 8-9'
+		lg: 'Svelte Summit Ljubljana and online, Nov 19-20: Tickets now available!',
+		sm: 'Svelte Summit Nov 19-20'
 	},
 	href: 'https://www.sveltesummit.com/'
 };

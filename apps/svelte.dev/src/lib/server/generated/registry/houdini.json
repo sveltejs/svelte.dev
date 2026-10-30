@@ -6,10 +6,10 @@
     "aaivazis"
   ],
   "homepage": "https://github.com/HoudiniGraphql/houdini",
-  "version": "2.0.6",
-  "downloads": 7292,
-  "github_stars": 978,
-  "updated": "2026-07-09T05:10:29.220Z",
+  "version": "2.0.12",
+  "downloads": 10268,
+  "github_stars": 986,
+  "updated": "2026-09-28T07:14:28.609Z",
   "typescript": true,
   "runes": false,
   "last_rune_check_version": "1.5.4"

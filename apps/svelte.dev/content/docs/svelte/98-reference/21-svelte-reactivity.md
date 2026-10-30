@@ -180,6 +180,24 @@ constructor(value?: Iterable<readonly [K, V]> | null | undefined);
 <div class="ts-block-property">
 
 ```dts
+getOrInsert(key: K, value: V): V;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+getOrInsertComputed(key: K, callbackFn: (key: K) => V): V;
+```
+
+<div class="ts-block-property-details"></div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
 set(key: K, value: V): this;
 ```
 

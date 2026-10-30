@@ -82,8 +82,10 @@ export function generate_crosslinks() {
 		);
 	}
 
-	fs.writeFileSync(
-		`src/lib/server/generated/crosslinked.json`,
-		JSON.stringify(crosslinked, null, '\t') + '\n'
-	);
+	const file = `src/lib/server/generated/crosslinked.json`;
+	const content = JSON.stringify(crosslinked, null, '\t') + '\n';
+
+	if (!fs.existsSync(file) || fs.readFileSync(file, 'utf-8') !== content) {
+		fs.writeFileSync(file, content);
+	}
 }
