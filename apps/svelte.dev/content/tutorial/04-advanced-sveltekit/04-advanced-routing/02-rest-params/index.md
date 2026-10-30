@@ -1,5 +1,6 @@
 ---
 title: Rest parameters
+tags: advanced-routing
 path: /how
 focus: /src/routes/[path]/+page.svelte
 ---

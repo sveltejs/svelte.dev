@@ -1,5 +1,6 @@
 ---
 title: Breaking out of layouts
+tags: advanced-routing
 editing_constraints:
   { 'create': ['/src/routes/a/b/c/+page@b.svelte', '/src/routes/a/b/c/+page@a.svelte'] }
 ---

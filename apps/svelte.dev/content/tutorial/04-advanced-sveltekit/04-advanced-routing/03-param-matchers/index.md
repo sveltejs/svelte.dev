@@ -1,5 +1,6 @@
 ---
 title: Param matchers
+tags: advanced-routing
 path: /colors/ff3e00
 ---
 

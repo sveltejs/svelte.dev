@@ -1,5 +1,6 @@
 ---
 title: handleFetch
+tags: hooks
 ---
 
 The `event` object has a `fetch` method that behaves like the standard [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), but with superpowers:

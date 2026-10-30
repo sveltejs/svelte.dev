@@ -1,5 +1,6 @@
 ---
 title: Progressive enhancement
+tags: form-actions, enhance
 ---
 
 Because we're using `<form>`, our app works even if the user doesn't have JavaScript ([which happens more often than you probably think](https://kryogenix.org/code/browser/everyonehasjs.html)). That's great, because it means our app is resilient.

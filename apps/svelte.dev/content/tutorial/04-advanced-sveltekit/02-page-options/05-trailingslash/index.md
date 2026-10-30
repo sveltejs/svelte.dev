@@ -1,5 +1,6 @@
 ---
 title: trailingSlash
+tags: page-options
 ---
 
 Two URLs like `/foo` and `/foo/` might look the same, but they're actually different. A relative URL like `./bar` will resolve to `/bar` in the first case and `/foo/bar` in the second, and search engines will treat them as separate entries, harming your SEO.

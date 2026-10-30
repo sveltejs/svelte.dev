@@ -1,5 +1,6 @@
 ---
 title: $app/env/private
+tags: env, env-private
 ---
 
 Environment variables — like API keys and database credentials — can be added to a `.env` file, and they will be made available to your application.

@@ -1,5 +1,6 @@
 ---
 title: $app/env/public
+tags: env, env-public
 ---
 
 Some environment variables can safely be exposed to the browser. In this exercise, we'll use two of them to control the page's colour scheme.

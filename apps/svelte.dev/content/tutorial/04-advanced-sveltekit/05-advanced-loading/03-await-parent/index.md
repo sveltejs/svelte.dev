@@ -1,5 +1,6 @@
 ---
 title: Using parent data
+tags: load
 ---
 
 As we saw in the introduction to [layout data](/tutorial/kit/layout-data), `+page.svelte` and `+layout.svelte` components have access to everything returned from their parent `load` functions.

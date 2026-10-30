@@ -1,5 +1,6 @@
 ---
 title: The RequestEvent object
+tags: hooks
 ---
 
 The `event` object passed into `handle` is the same object — an instance of a [`RequestEvent`](/docs/kit/@sveltejs-kit#RequestEvent) — that is passed into [API routes](get-handlers) in `+server.js` files, [form actions](the-form-element) in `+page.server.js` files, and `load` functions in `+page.server.js` and `+layout.server.js`.

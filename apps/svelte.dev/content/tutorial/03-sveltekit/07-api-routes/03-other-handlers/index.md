@@ -1,5 +1,6 @@
 ---
 title: Other handlers
+tags: server-routes
 ---
 
 Similarly, we can add handlers for other HTTP verbs. Add a `/todo/[id]` route by creating a `src/routes/todo/[id]/+server.js` file with `PUT` and `DELETE` handlers for toggling and removing todos, using the `toggleTodo` and `deleteTodo` functions in `src/lib/server/database.js`:

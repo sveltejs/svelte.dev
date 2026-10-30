@@ -1,5 +1,6 @@
 ---
 title: Optional parameters
+tags: advanced-routing
 ---
 
 In the first chapter on [routing](/tutorial/kit/pages), we learned how to create routes with [dynamic parameters](/tutorial/kit/params).

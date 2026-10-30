@@ -1,5 +1,6 @@
 ---
 title: POST handlers
+tags: server-routes
 ---
 
 You can also add handlers that mutate data, such as `POST`. In most cases, you should use [form actions](the-form-element) instead — you'll end up writing less code, and it'll work without JavaScript, making it more resilient.

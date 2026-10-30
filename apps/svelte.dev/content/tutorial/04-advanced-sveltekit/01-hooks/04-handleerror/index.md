@@ -1,5 +1,6 @@
 ---
 title: handleError
+tags: hooks, errors
 ---
 
 The `handleError` hook lets you intercept errors and trigger some behaviour, like pinging a Slack channel or sending data to an error logging service.

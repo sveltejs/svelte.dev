@@ -1,5 +1,590 @@
 [
 	{
+		"path": "/tutorial/kit/env-public",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Environment variables",
+			"$app/env/public"
+		],
+		"tags": [
+			"env",
+			"env-public"
+		]
+	},
+	{
+		"path": "/tutorial/kit/env-private",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Environment variables",
+			"$app/env/private"
+		],
+		"tags": [
+			"env",
+			"env-private"
+		]
+	},
+	{
+		"path": "/tutorial/kit/refresh-all",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Advanced loading",
+			"refreshAll"
+		],
+		"tags": [
+			"load",
+			"invalidation"
+		]
+	},
+	{
+		"path": "/tutorial/kit/custom-dependencies",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Advanced loading",
+			"Custom dependencies"
+		],
+		"tags": [
+			"load",
+			"invalidation"
+		]
+	},
+	{
+		"path": "/tutorial/kit/invalidation",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Advanced loading",
+			"Invalidation"
+		],
+		"tags": [
+			"load",
+			"invalidation"
+		]
+	},
+	{
+		"path": "/tutorial/kit/await-parent",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Advanced loading",
+			"Using parent data"
+		],
+		"tags": [
+			"load"
+		]
+	},
+	{
+		"path": "/tutorial/kit/using-both-load-functions",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Advanced loading",
+			"Using both load functions"
+		],
+		"tags": [
+			"load"
+		]
+	},
+	{
+		"path": "/tutorial/kit/universal-load-functions",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Advanced loading",
+			"Universal load functions"
+		],
+		"tags": [
+			"load"
+		]
+	},
+	{
+		"path": "/tutorial/kit/breaking-out-of-layouts",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Advanced routing",
+			"Breaking out of layouts"
+		],
+		"tags": [
+			"advanced-routing"
+		]
+	},
+	{
+		"path": "/tutorial/kit/route-groups",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Advanced routing",
+			"Route groups"
+		],
+		"tags": [
+			"advanced-routing"
+		]
+	},
+	{
+		"path": "/tutorial/kit/param-matchers",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Advanced routing",
+			"Param matchers"
+		],
+		"tags": [
+			"advanced-routing"
+		]
+	},
+	{
+		"path": "/tutorial/kit/rest-params",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Advanced routing",
+			"Rest parameters"
+		],
+		"tags": [
+			"advanced-routing"
+		]
+	},
+	{
+		"path": "/tutorial/kit/optional-params",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Advanced routing",
+			"Optional parameters"
+		],
+		"tags": [
+			"advanced-routing"
+		]
+	},
+	{
+		"path": "/tutorial/kit/reload",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Link options",
+			"Reloading the page"
+		],
+		"tags": [
+			"link-options"
+		]
+	},
+	{
+		"path": "/tutorial/kit/preload",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Link options",
+			"Preloading"
+		],
+		"tags": [
+			"link-options"
+		]
+	},
+	{
+		"path": "/tutorial/kit/trailingslash",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Page options",
+			"trailingSlash"
+		],
+		"tags": [
+			"page-options"
+		]
+	},
+	{
+		"path": "/tutorial/kit/prerender",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Page options",
+			"prerender"
+		],
+		"tags": [
+			"page-options"
+		]
+	},
+	{
+		"path": "/tutorial/kit/csr",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Page options",
+			"csr"
+		],
+		"tags": [
+			"page-options"
+		]
+	},
+	{
+		"path": "/tutorial/kit/ssr",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Page options",
+			"ssr"
+		],
+		"tags": [
+			"page-options"
+		]
+	},
+	{
+		"path": "/tutorial/kit/page-options",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Page options",
+			"Basics"
+		],
+		"tags": [
+			"page-options"
+		]
+	},
+	{
+		"path": "/tutorial/kit/handleerror",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Hooks",
+			"handleError"
+		],
+		"tags": [
+			"hooks",
+			"errors"
+		]
+	},
+	{
+		"path": "/tutorial/kit/handlefetch",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Hooks",
+			"handleFetch"
+		],
+		"tags": [
+			"hooks"
+		]
+	},
+	{
+		"path": "/tutorial/kit/event",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Hooks",
+			"The RequestEvent object"
+		],
+		"tags": [
+			"hooks"
+		]
+	},
+	{
+		"path": "/tutorial/kit/handle",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Hooks",
+			"handle"
+		],
+		"tags": [
+			"hooks"
+		]
+	},
+	{
+		"path": "/tutorial/kit/redirects",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic SvelteKit",
+			"Errors and redirects",
+			"Redirects"
+		],
+		"tags": [
+			"load"
+		]
+	},
+	{
+		"path": "/tutorial/kit/custom-error-messages",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic SvelteKit",
+			"Errors and redirects",
+			"Customising the error message"
+		],
+		"tags": [
+			"errors",
+			"hooks"
+		]
+	},
+	{
+		"path": "/tutorial/kit/fallback-errors",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic SvelteKit",
+			"Errors and redirects",
+			"Fallback errors"
+		],
+		"tags": [
+			"errors"
+		]
+	},
+	{
+		"path": "/tutorial/kit/error-pages",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic SvelteKit",
+			"Errors and redirects",
+			"Error pages"
+		],
+		"tags": [
+			"errors"
+		]
+	},
+	{
+		"path": "/tutorial/kit/error-basics",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic SvelteKit",
+			"Errors and redirects",
+			"Basics"
+		],
+		"tags": [
+			"errors"
+		]
+	},
+	{
+		"path": "/tutorial/kit/updated-state",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic SvelteKit",
+			"$app/state",
+			"updated"
+		],
+		"tags": [
+			"app-state"
+		]
+	},
+	{
+		"path": "/tutorial/kit/navigating-state",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic SvelteKit",
+			"$app/state",
+			"navigating"
+		],
+		"tags": [
+			"app-state"
+		]
+	},
+	{
+		"path": "/tutorial/kit/page-state",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic SvelteKit",
+			"$app/state",
+			"page"
+		],
+		"tags": [
+			"app-state"
+		]
+	},
+	{
+		"path": "/tutorial/kit/other-handlers",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic SvelteKit",
+			"API routes",
+			"Other handlers"
+		],
+		"tags": [
+			"server-routes"
+		]
+	},
+	{
+		"path": "/tutorial/kit/post-handlers",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic SvelteKit",
+			"API routes",
+			"POST handlers"
+		],
+		"tags": [
+			"server-routes"
+		]
+	},
+	{
+		"path": "/tutorial/kit/get-handlers",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic SvelteKit",
+			"API routes",
+			"GET handlers"
+		],
+		"tags": [
+			"server-routes"
+		]
+	},
+	{
+		"path": "/tutorial/kit/customizing-use-enhance",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic SvelteKit",
+			"Forms",
+			"Customizing use:enhance"
+		],
+		"tags": [
+			"form-actions",
+			"enhance"
+		]
+	},
+	{
+		"path": "/tutorial/kit/progressive-enhancement",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic SvelteKit",
+			"Forms",
+			"Progressive enhancement"
+		],
+		"tags": [
+			"form-actions",
+			"enhance"
+		]
+	},
+	{
+		"path": "/tutorial/kit/form-validation",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic SvelteKit",
+			"Forms",
+			"Validation"
+		],
+		"tags": [
+			"form-actions"
+		]
+	},
+	{
+		"path": "/tutorial/kit/named-form-actions",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic SvelteKit",
+			"Forms",
+			"Named form actions"
+		],
+		"tags": [
+			"form-actions"
+		]
+	},
+	{
+		"path": "/tutorial/kit/the-form-element",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic SvelteKit",
+			"Forms",
+			"The <form> element"
+		],
+		"tags": [
+			"form-actions"
+		]
+	},
+	{
+		"path": "/tutorial/kit/lib",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic SvelteKit",
+			"Shared modules",
+			"The #lib subpath import"
+		],
+		"tags": [
+			"lib"
+		]
+	},
+	{
+		"path": "/tutorial/kit/cookies",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic SvelteKit",
+			"Headers and cookies",
+			"Reading and writing cookies"
+		],
+		"tags": [
+			"load"
+		]
+	},
+	{
+		"path": "/tutorial/kit/headers",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic SvelteKit",
+			"Headers and cookies",
+			"Setting headers"
+		],
+		"tags": [
+			"load"
+		]
+	},
+	{
+		"path": "/tutorial/kit/layout-data",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic SvelteKit",
+			"Loading data",
+			"Layout data"
+		],
+		"tags": [
+			"load"
+		]
+	},
+	{
+		"path": "/tutorial/kit/page-data",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic SvelteKit",
+			"Loading data",
+			"Page data"
+		],
+		"tags": [
+			"load"
+		]
+	},
+	{
+		"path": "/tutorial/kit/params",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic SvelteKit",
+			"Routing",
+			"Route parameters"
+		],
+		"tags": [
+			"routing"
+		]
+	},
+	{
+		"path": "/tutorial/kit/layouts",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic SvelteKit",
+			"Routing",
+			"Layouts"
+		],
+		"tags": [
+			"routing"
+		]
+	},
+	{
+		"path": "/tutorial/kit/pages",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic SvelteKit",
+			"Routing",
+			"Pages"
+		],
+		"tags": [
+			"routing"
+		]
+	},
+	{
 		"path": "/tutorial/svelte/key-blocks",
 		"breadcrumbs": [
 			"Tutorial",

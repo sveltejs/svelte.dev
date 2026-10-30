@@ -1,5 +1,6 @@
 ---
 title: navigating
+tags: app-state
 ---
 
 The `navigating` object represents the current navigation. When a navigation starts — because of a link click, or a back/forward navigation, or a programmatic `goto` — the value of `navigating` will become an object with the following properties:

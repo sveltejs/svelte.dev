@@ -1,5 +1,6 @@
 ---
 title: refreshAll
+tags: load, invalidation
 path: /Europe/London
 ---
 

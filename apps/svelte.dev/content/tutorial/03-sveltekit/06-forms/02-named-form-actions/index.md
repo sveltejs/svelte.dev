@@ -1,5 +1,6 @@
 ---
 title: Named form actions
+tags: form-actions
 ---
 
 A page that only has a single action is, in practice, quite rare. Most of the time you'll need to have multiple actions on a page. In this app, creating a todo isn't enough — we'd like to delete them once they're complete.

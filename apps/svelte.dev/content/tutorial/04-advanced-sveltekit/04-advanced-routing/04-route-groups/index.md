@@ -1,5 +1,6 @@
 ---
 title: Route groups
+tags: advanced-routing
 ---
 
 As we saw in the [routing introduction](/tutorial/kit/layouts), layouts are a way to share UI and data loading logic between different routes.

@@ -1,5 +1,6 @@
 ---
 title: Invalidation
+tags: load, invalidation
 path: /Europe/London
 ---
 

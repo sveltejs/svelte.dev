@@ -1,5 +1,6 @@
 ---
 title: Preloading
+tags: link-options
 ---
 
 In this exercise, the `/slow-a` and `/slow-b` routes both have artificial delays in their `load` functions, meaning it takes a long time to navigate to them.
