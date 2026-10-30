@@ -275,6 +275,10 @@ const FEATURED: {
 			{ name: '@neoconfetti/svelte', description: 'Confetti explosion' },
 			{ name: 'svelte-motion', description: 'Animation library based on framer-motion' },
 			{
+				name: '@lottiefiles/dotlottie-svelte',
+				description: 'Lottie and dotLottie animation player'
+			},
+			{
 				name: '@tsparticles/svelte',
 				description: 'Easily create highly customizable particles, confetti, and fireworks'
 			}
