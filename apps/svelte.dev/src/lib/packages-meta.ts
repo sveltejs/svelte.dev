@@ -10,7 +10,7 @@ const FEATURED: {
 		description:
 			'The <a href="/docs/cli">Svelte CLI</a> lets you instantly add functionality to a new or existing project with <code>npx sv add</code>',
 		packages: [
-			{ name: 'tailwindcss', svAlias: 'tailwindcss', description: 'A utility-first CSS framework' },
+			{ name: 'tailwindcss', svAlias: 'tailwind', description: 'A utility-first CSS framework' },
 			{
 				name: 'drizzle-orm',
 				svAlias: 'drizzle',
