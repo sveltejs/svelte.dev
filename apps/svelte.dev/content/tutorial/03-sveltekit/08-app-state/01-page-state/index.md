@@ -1,5 +1,6 @@
 ---
 title: page
+tags: app-state
 ---
 
 SvelteKit makes three readonly state objects available via the `$app/state` module — `page`, `navigating` and `updated`. The one you'll use most often is [`page`](/docs/kit/$app-state#Page), which provides information about the current page:
