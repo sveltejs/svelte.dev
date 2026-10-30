@@ -84,11 +84,7 @@ const FEATURED: {
 				description: 'A low-level headless UI library'
 			},
 			{ name: '@sveltestrap/sveltestrap' },
-			{ name: 'm3-svelte', description: 'An implementation of the Material 3 design system' },
-			{
-				name: '@svar-ui/svelte-core',
-				description: '30+ lightweight UI components for common web app needs'
-			}
+			{ name: 'm3-svelte', description: 'An implementation of the Material 3 design system' }
 		]
 	},
 	{
