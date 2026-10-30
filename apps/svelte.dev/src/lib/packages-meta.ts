@@ -10,7 +10,7 @@ const FEATURED: {
 		description:
 			'The <a href="/docs/cli">Svelte CLI</a> lets you instantly add functionality to a new or existing project with <code>npx sv add</code>',
 		packages: [
-			{ name: 'tailwindcss', svAlias: 'tailwind', description: 'A utility-first CSS framework' },
+			{ name: 'tailwindcss', svAlias: 'tailwindcss', description: 'A utility-first CSS framework' },
 			{
 				name: 'drizzle-orm',
 				svAlias: 'drizzle',
@@ -47,9 +47,14 @@ const FEATURED: {
 				description: 'A compiler-based i18n library that emits tree-shakeable message functions'
 			},
 			{
-				name: 'vite-plugin-devtools-json',
-				svAlias: 'devtools-json',
-				description: 'Generates Chromium DevTools project settings during development'
+				name: '@sveltejs/enhanced-img',
+				svAlias: 'enhanced-img',
+				description: 'Optimized images with modern formats, responsive sizes and no layout shift'
+			},
+			{
+				name: '@sveltejs/mcp',
+				svAlias: 'ai-tools',
+				description: 'Svelte MCP server, skills and agent instructions for AI coding tools'
 			}
 		]
 	},
