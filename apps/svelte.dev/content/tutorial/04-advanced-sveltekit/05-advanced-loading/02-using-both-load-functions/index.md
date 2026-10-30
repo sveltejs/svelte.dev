@@ -1,6 +1,5 @@
 ---
 title: Using both load functions
-tags: load
 ---
 
 Occasionally, you might need to use a server load function and a universal load function together. For example, you might need to return data from the server, but also return a value that can't be serialized as server data.

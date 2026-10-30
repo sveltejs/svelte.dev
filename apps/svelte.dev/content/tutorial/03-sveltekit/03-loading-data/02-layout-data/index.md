@@ -1,6 +1,5 @@
 ---
 title: Layout data
-tags: load
 path: /blog
 ---
 

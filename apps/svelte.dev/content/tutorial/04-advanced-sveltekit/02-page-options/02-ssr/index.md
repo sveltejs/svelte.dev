@@ -1,6 +1,5 @@
 ---
 title: ssr
-tags: page-options
 ---
 
 Server-side rendering (SSR) is the process of generating HTML on the server, and is what SvelteKit does by default. It's important for performance and [resilience](https://kryogenix.org/code/browser/everyonehasjs.html), and is very beneficial for search engine optimization (SEO) — while some search engines can index content that is rendered in the browser with JavaScript, it happens less frequently and reliably.

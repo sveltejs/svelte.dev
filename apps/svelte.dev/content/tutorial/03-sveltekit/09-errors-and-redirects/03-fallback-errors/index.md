@@ -1,6 +1,5 @@
 ---
 title: Fallback errors
-tags: errors
 ---
 
 If things go _really_ wrong — an error occurs while loading the root layout data, or while rendering the error page — SvelteKit will fall back to a static error page.

@@ -1,6 +1,5 @@
 ---
 title: Error pages
-tags: errors
 ---
 
 When something goes wrong inside a `load` function, or during rendering, SvelteKit renders an error page.

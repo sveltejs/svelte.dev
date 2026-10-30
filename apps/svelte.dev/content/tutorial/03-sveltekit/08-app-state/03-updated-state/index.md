@@ -1,6 +1,5 @@
 ---
 title: updated
-tags: app-state
 ---
 
 The `updated` state is `true` if a new version of the app has been deployed since the page was first opened.

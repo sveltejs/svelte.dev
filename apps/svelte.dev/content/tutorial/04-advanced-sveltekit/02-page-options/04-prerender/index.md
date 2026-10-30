@@ -1,6 +1,5 @@
 ---
 title: prerender
-tags: page-options
 ---
 
 Prerendering means generating HTML for a page once, at build time, rather than dynamically for each request.

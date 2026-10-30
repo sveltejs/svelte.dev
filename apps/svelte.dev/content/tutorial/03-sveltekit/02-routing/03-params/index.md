@@ -1,6 +1,5 @@
 ---
 title: Route parameters
-tags: routing
 path: /blog
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Reloading the page
-tags: link-options
 ---
 
 Ordinarily, SvelteKit will navigate between pages without refreshing the page. In this exercise, if we navigate between `/` and `/about`, the timer keeps on ticking.

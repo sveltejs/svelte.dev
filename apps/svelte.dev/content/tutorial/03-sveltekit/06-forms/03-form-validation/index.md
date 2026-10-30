@@ -1,6 +1,5 @@
 ---
 title: Validation
-tags: form-actions
 ---
 
 Users are a mischievous bunch, who will submit all kinds of nonsensical data if given the chance. To prevent them from causing chaos, it's important to validate form data.
