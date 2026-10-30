@@ -1,6 +1,6 @@
 ---
 title: The <form> element
-tags: form-actions
+tags: forms
 ---
 
 In the chapter on [loading data](page-data), we saw how to get data from the server to the browser. Sometimes you need to send data in the opposite direction, and that's where `<form>` — the web platform's way of submitting data — comes in.
