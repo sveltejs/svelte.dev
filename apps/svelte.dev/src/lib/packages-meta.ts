@@ -290,6 +290,10 @@ const FEATURED: {
 			{
 				name: '@tsparticles/svelte',
 				description: 'Easily create highly customizable particles, confetti, and fireworks'
+			},
+			{
+				name: '@animotion/core',
+				description: 'Create beautiful presentations with Svelte'
 			}
 		]
 	},
