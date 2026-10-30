@@ -1,0 +1,11 @@
+{
+	"name": "svelte-adapter-nitro",
+	"npm_description": "A SvelteKit adapter powered by Nitro.",
+	"repo_url": "https://github.com/MioYiSama/svelte-adapter-nitro",
+	"authors": ["mioyi_sama"],
+	"homepage": "https://github.com/MioYiSama/svelte-adapter-nitro",
+	"version": "0.2.0",
+	"github_stars": 1,
+	"updated": "2026-10-30T10:41:12.770Z",
+	"kit_range": ">=3"
+}
