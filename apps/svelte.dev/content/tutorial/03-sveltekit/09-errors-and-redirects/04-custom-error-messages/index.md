@@ -1,6 +1,6 @@
 ---
 title: Customising the error message
-tags: errors, hooks
+tags: errors
 ---
 
 The error page in the previous exercise is rather static. Maybe you want to show the error message so you can help people turning up in your support channels faster.

@@ -1,6 +1,6 @@
 ---
 title: Setting headers
-tags: load
+tags: headers-and-cookies
 ---
 
 Inside a `load` function (as well as in [form actions](the-form-element), [hooks](handle) and [API routes](get-handlers), which we'll learn about later) you have access to a `setHeaders` function, which — unsurprisingly — can be used to set headers on the response.

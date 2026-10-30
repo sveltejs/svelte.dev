@@ -34,7 +34,6 @@
 			"refreshAll"
 		],
 		"tags": [
-			"load",
 			"invalidation"
 		]
 	},
@@ -47,7 +46,6 @@
 			"Custom dependencies"
 		],
 		"tags": [
-			"load",
 			"invalidation"
 		]
 	},
@@ -60,7 +58,6 @@
 			"Invalidation"
 		],
 		"tags": [
-			"load",
 			"invalidation"
 		]
 	},
@@ -302,7 +299,7 @@
 			"Redirects"
 		],
 		"tags": [
-			"load"
+			"redirects"
 		]
 	},
 	{
@@ -314,8 +311,7 @@
 			"Customising the error message"
 		],
 		"tags": [
-			"errors",
-			"hooks"
+			"errors"
 		]
 	},
 	{
@@ -509,7 +505,7 @@
 			"Reading and writing cookies"
 		],
 		"tags": [
-			"load"
+			"headers-and-cookies"
 		]
 	},
 	{
@@ -521,7 +517,7 @@
 			"Setting headers"
 		],
 		"tags": [
-			"load"
+			"headers-and-cookies"
 		]
 	},
 	{

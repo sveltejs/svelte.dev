@@ -1,6 +1,6 @@
 ---
 title: Reading and writing cookies
-tags: load
+tags: headers-and-cookies
 ---
 
 The [`setHeaders`](headers) function can't be used with the `Set-Cookie` header. Instead, you should use the `cookies` API.

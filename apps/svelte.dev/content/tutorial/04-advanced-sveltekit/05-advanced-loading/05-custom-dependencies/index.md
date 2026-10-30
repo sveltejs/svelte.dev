@@ -1,6 +1,6 @@
 ---
 title: Custom dependencies
-tags: load, invalidation
+tags: invalidation
 path: /Europe/London
 ---
 
