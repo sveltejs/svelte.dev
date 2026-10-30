@@ -2,14 +2,22 @@ import { mount, onMount, unmount } from 'svelte';
 import Tooltip from './Tooltip.svelte';
 
 const CLASSNAME = 'highlight';
+const HOVER_PADDING = 12;
 
 export function setupDocsHovers() {
 	onMount(() => {
 		let tooltip: any;
 		let hovered: HTMLSpanElement | null = null;
-		let timeout: NodeJS.Timeout;
+		let frame: number | undefined;
+		let pointer_x = 0;
+		let pointer_y = 0;
 
 		function clear() {
+			if (frame !== undefined) {
+				cancelAnimationFrame(frame);
+				frame = undefined;
+			}
+
 			if (!tooltip) return;
 
 			unmount(tooltip);
@@ -23,8 +31,6 @@ export function setupDocsHovers() {
 			const target = (event.target as Element).closest<HTMLSpanElement>('.twoslash-hover');
 
 			if (!target) return;
-
-			clearTimeout(timeout);
 
 			if (target === hovered) return;
 
@@ -43,14 +49,7 @@ export function setupDocsHovers() {
 					props: {
 						html,
 						x,
-						y,
-						onmouseenter: () => {
-							clearTimeout(timeout);
-						},
-						onmouseleave: () => {
-							clearTimeout(timeout);
-							timeout = setTimeout(clear, 0);
-						}
+						y
 					}
 				});
 
@@ -59,25 +58,46 @@ export function setupDocsHovers() {
 			}
 		}
 
-		function out(event: MouseEvent) {
-			let target = event.target as HTMLElement | null;
+		function move(event: MouseEvent) {
+			if (!hovered) return;
 
-			while (target) {
-				if (target.classList.contains('twoslash-hover')) {
-					timeout = setTimeout(clear, 0);
-					return;
-				}
+			pointer_x = event.clientX;
+			pointer_y = event.clientY;
+			if (frame === undefined) frame = requestAnimationFrame(check_pointer);
+		}
 
-				target = target.parentElement;
+		function check_pointer() {
+			frame = undefined;
+			if (!hovered) return;
+
+			const source = hovered.getBoundingClientRect();
+			const panel = tooltip.get_rect();
+			if (!panel) return;
+
+			// Check coordinates rather than covering nearby tokens with a transparent element.
+			if (
+				pointer_x < Math.min(source.left, panel.left) - HOVER_PADDING ||
+				pointer_x > Math.max(source.right, panel.right) + HOVER_PADDING ||
+				pointer_y < Math.min(source.top, panel.top) - HOVER_PADDING ||
+				pointer_y > Math.max(source.bottom, panel.bottom) + HOVER_PADDING
+			) {
+				clear();
 			}
 		}
 
+		function out(event: MouseEvent) {
+			if (!event.relatedTarget) clear();
+		}
+
 		window.addEventListener('mouseover', over);
+		window.addEventListener('mousemove', move);
 		window.addEventListener('mouseout', out);
 
 		return () => {
 			window.removeEventListener('mouseover', over);
+			window.removeEventListener('mousemove', move);
 			window.removeEventListener('mouseout', out);
+			clear();
 		};
 	});
 }
