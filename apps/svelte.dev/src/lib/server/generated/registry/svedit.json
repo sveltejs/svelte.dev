@@ -1,0 +1,14 @@
+{
+  "name": "svedit",
+  "repo_url": "https://github.com/michael/svedit",
+  "authors": [
+    "michael"
+  ],
+  "homepage": "https://svedit.dev",
+  "version": "0.15.1",
+  "downloads": 279,
+  "github_stars": 684,
+  "updated": "2026-10-02T15:16:46.757Z",
+  "svelte_range": "^5.0.0",
+  "kit_range": "^3.0.0"
+}
