@@ -87,7 +87,7 @@ const FEATURED: {
 			{ name: 'm3-svelte', description: 'An implementation of the Material 3 design system' },
 			{
 				name: '@svar-ui/svelte-core',
-				description: 'A UI library of 20+ components and form controls'
+				description: '30+ lightweight UI components for common web app needs'
 			}
 		]
 	},
