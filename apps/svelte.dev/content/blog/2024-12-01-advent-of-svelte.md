@@ -81,7 +81,7 @@ When Svelte emits a warning or error (whether at build time, when the compiler i
 
 A lot of you wanted a place to put asynchronous setup work that happens before your SvelteKit app starts up. You can now export an `init` function from `hooks.server.js` and `hooks.client.js` that will be awaited before any other stuff happens.
 
-- [docs](/docs/kit/hooks#Shared-hooks-init)
+- [docs](/docs/kit/hooks#init)
 
 ## Day 11: `svelte/reactivity/window`
 
@@ -96,7 +96,7 @@ A `load` function that runs on the server in your SvelteKit app isn't restricted
 
 As of today, you can also return things that _aren't_ built in to the language, such as [classes containing state](/docs/svelte/$state#Classes), or classes returned by your database ORM library, or whatever — just export a `transport` object from your `hooks.js` that provides an `encode` and `decode` function.
 
-- [docs](/docs/kit/hooks#Universal-hooks-transport)
+- [docs](/docs/kit/hooks#transport)
 - [demo](https://stackblitz.com/edit/sveltejs-kit-template-default-b5zbxomg?file=src%2Fhooks.js)
 
 ## Day 13: rise of the robots

@@ -20,7 +20,7 @@ Navigating to `/slow-a` will now be noticeably faster. Starting navigation on ho
 You can put the attribute on individual links, or on any element that _contains_ links. The default project template includes the attribute on the `<body>` element:
 
 ```html
-<body data-sveltekit-preload-data>
+<body data-sveltekit-preload-data="hover">
 	%sveltekit.body%
 </body>
 ```

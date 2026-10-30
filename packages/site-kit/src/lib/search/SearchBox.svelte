@@ -10,7 +10,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	import { focusable_children, forcefocus, trap } from '../actions/focus.js';
 	import Icon from '../components/Icon.svelte';
 	import SearchResults from './SearchResults.svelte';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 
 	interface Props {
 		placeholder?: string;
@@ -102,7 +102,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 				id,
 				payload: {
 					query: search.query,
-					path: $page.url.pathname
+					path: page.url.pathname
 				}
 			});
 		}

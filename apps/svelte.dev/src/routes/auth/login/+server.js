@@ -29,5 +29,7 @@ export function GET({ url }) {
 		redirect_uri: `${url.origin}/auth/callback`
 	});
 
-	redirect(302, `${oauth}/authorize?${params}`);
+	redirect(302, `${oauth}/authorize?${params}`, {
+		external: true
+	});
 }

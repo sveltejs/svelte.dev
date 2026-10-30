@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { SHIKI_LANGUAGE_MAP, strip_origin } from './utils.ts';
+import { TWINKLEPLOP_LANGUAGE_MAP, strip_origin } from './utils.ts';
 import type { Declaration, TypeElement, Modules } from './index.ts';
 
 /**
@@ -12,8 +12,8 @@ export async function preprocess(file: string, modules: Modules) {
 	const REGEXES = {
 		/** Render a specific type from a module with more details. Example: `> EXPANDED_TYPES: svelte#compile` */
 		EXPANDED_TYPES: /> EXPANDED_TYPES: (.+?)#(.+)$/gm,
-		/** Render types from a specific module. Example: `> TYPES: svelte` */
-		TYPES: /> TYPES: (.+?)(?:#(.+))?$/gm,
+		/** Render types from a specific module. Example: `> TYPES: svelte {depth=3}` */
+		TYPES: /> TYPES: (.+?)(?:#(.+?))?(?: \{depth=([1-6])\})?$/gm,
 		/** Render all exports and types from a specific module. Example: `> MODULE: svelte` */
 		MODULE: /> MODULE: (.+?)$/gm,
 		/** Render the snippet of a specific export. Example: `> EXPORT_SNIPPET: svelte#compile` */
@@ -36,7 +36,7 @@ export async function preprocess(file: string, modules: Modules) {
 		return stringify_expanded_type(type);
 	});
 
-	content = await async_replace(content, REGEXES.TYPES, async ([_, name, id]) => {
+	content = await async_replace(content, REGEXES.TYPES, async ([_, name, id, depth = '2']) => {
 		const module = modules.find((module) => module.name === name);
 		if (!module) throw new Error(`Could not find module ${name}`);
 		if (!module.types) return '';
@@ -54,8 +54,11 @@ export async function preprocess(file: string, modules: Modules) {
 			comment += `${module.comment}\n\n`;
 		}
 
+		const heading = '#'.repeat(Number(depth));
+
 		return (
-			comment + module.types.map((t) => `## ${t.name}\n\n${render_declaration(t, true)}`).join('')
+			comment +
+			module.types.map((t) => `${heading} ${t.name}\n\n${render_declaration(t, true)}`).join('')
 		);
 	});
 
@@ -215,7 +218,7 @@ function stringify_module(module: Modules[0]) {
 
 function stringify_expanded_type(type: Declaration) {
 	return (
-		type.comment +
+		(type.comment ? `${type.comment}\n\n` : '') +
 		type.overloads
 			.map((overload) =>
 				overload.children
@@ -247,7 +250,10 @@ function stringify_expanded_type(type: Declaration) {
 /**
  * Helper function for {@link replace_export_type_placeholders}. Renders specific members to their markdown/html representation.
  */
-function stringify(member: TypeElement, lang: keyof typeof SHIKI_LANGUAGE_MAP = 'ts'): string {
+function stringify(
+	member: TypeElement,
+	lang: keyof typeof TWINKLEPLOP_LANGUAGE_MAP = 'ts'
+): string {
 	if (!member) return '';
 
 	// It's important to always use two newlines after a dom tag or else markdown does not render it properly
@@ -284,7 +290,7 @@ function stringify(member: TypeElement, lang: keyof typeof SHIKI_LANGUAGE_MAP = 
 	);
 }
 
-function fence(code: string, lang: keyof typeof SHIKI_LANGUAGE_MAP = 'ts') {
+function fence(code: string, lang: keyof typeof TWINKLEPLOP_LANGUAGE_MAP = 'ts') {
 	return (
 		'\n\n```' +
 		lang +

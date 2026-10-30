@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import { browser } from '$app/env';
 
 	// we don't want to use <svelte:window bind:online> here,
@@ -9,13 +9,13 @@
 </script>
 
 <svelte:head>
-	<title>{$page.status}</title>
+	<title>{page.status}</title>
 </svelte:head>
 
 <div class="outer">
 	<div class="inner">
 		{#if online}
-			{#if $page.status === 404}
+			{#if page.status === 404}
 				<h1>Not found!</h1>
 				<p>
 					If you were expecting to find something here, please drop by the

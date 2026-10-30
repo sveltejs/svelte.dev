@@ -13,7 +13,7 @@
 
 <svelte:head>
 	<script>
-		{
+		try {
 			const theme = localStorage.getItem('sv:theme');
 
 			document.documentElement.classList.add(
@@ -23,6 +23,8 @@
 						: 'light'
 					: theme
 			);
+		} catch {
+			// localStorage access disabled
 		}
 	</script>
 </svelte:head>

@@ -67,7 +67,7 @@ export default class Bundler {
 					} else {
 						destroy();
 						// This isn't necessarily the result of this bundle call, as it could be
-						// superseeded by another call to `bundle` before the result is set.
+						// superseded by another call to `bundle` before the result is set.
 						resolve();
 					}
 				});

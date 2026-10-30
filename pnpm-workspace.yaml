@@ -1,6 +1,7 @@
 minimumReleaseAge: 2880
 minimumReleaseAgeExclude:
   - '@sveltejs/*'
+  - '@twinkleplop/*'
   - svelte
   - sv
   - esrap
@@ -9,11 +10,30 @@ minimumReleaseAgeExclude:
   - prettier-plugin-svelte
   - svelte-check
   - esm-env
+  - vite-imagetools
+  - imagetools-core
 blockExoticSubdeps: true
+engineStrict: true
+allowBuilds:
+  esbuild: true
+  sharp: true
+  svelte-preprocess: true
+  workerd: false
 
 packages:
   - 'apps/*'
   - 'packages/*'
+
+catalog:
+  svelte: ^5.57.1
+  '@sveltejs/kit': ^3.0.0-next.31
+  '@types/node': ^22.19.20
+  vite: ^8.3.1
+  vitest: ^4.1.8
+
+catalogs:
+  sveltekit-2:
+    '@sveltejs/kit': ^2.70.2
 
 overrides:
   # This is a workaround to avoid the "exotic dependency is not allowed in subdependencies"

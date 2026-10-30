@@ -5,7 +5,7 @@
 	import { Shell, Banner } from '@sveltejs/site-kit/components';
 	import { Nav } from '@sveltejs/site-kit/nav';
 	import { SearchBox } from '@sveltejs/site-kit/search';
-	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit-next';
 	import { inject } from '@vercel/analytics';
 	import { beforeNavigate } from '$app/navigation';
 
@@ -49,7 +49,7 @@
 	{/if}
 </svelte:head>
 
-<Shell nav_visible={page.route.id !== '/(authed)/playground/[id]/embed'}>
+<Shell nav_visible={page.route.id !== '/(authed)/playground/[...id]/embed'}>
 	{#snippet top_nav()}
 		<Nav title={sections[page.url.pathname.split('/')[1]!] ?? ''} links={data.nav_links} />
 	{/snippet}

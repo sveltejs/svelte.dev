@@ -3,8 +3,51 @@ import { Jimp } from 'jimp';
 import { stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { is_blank } from './utils.js';
 
 const force = process.env.FORCE_UPDATE === 'true';
+const repositories = ['svelte', 'kit', 'cli', 'vite-plugin-svelte', 'language-tools', 'ai-tools'];
+const automated_accounts = new Set(['copilot', 'claude']);
+
+/**
+ * @typedef {{ login: string; avatar_url: string; contributions: number }} Contributor
+ */
+
+/**
+ * @param {Contributor[][]} contributor_lists
+ * @param {number} max
+ */
+function select_contributors(contributor_lists, max) {
+	const lists = contributor_lists.map((contributors) =>
+		contributors.filter(
+			({ login }) => !login.includes('[bot]') && !automated_accounts.has(login.toLowerCase())
+		)
+	);
+	const indices = lists.map(() => 0);
+	const selected = [];
+	const selected_logins = new Set();
+
+	while (selected.length < max) {
+		let advanced = false;
+
+		for (let i = 0; i < lists.length && selected.length < max; i += 1) {
+			while (indices[i] < lists[i].length) {
+				const contributor = lists[i][indices[i]++];
+				advanced = true;
+
+				if (selected_logins.has(contributor.login)) continue;
+
+				selected.push(contributor);
+				selected_logins.add(contributor.login);
+				break;
+			}
+		}
+
+		if (!advanced) break;
+	}
+
+	return selected;
+}
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const out = path.resolve(__dirname, '../src/routes/_home/Supporters/contributors.js');
@@ -16,38 +59,43 @@ try {
 		process.exit(0);
 	}
 } catch {
-	const base = `https://api.github.com/repos/sveltejs/svelte/contributors`;
 	const { GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET } = process.env;
 
 	const MAX = 48;
 	const SIZE = 128;
 
-	const contributors = [];
-	let page = 1;
+	const contributor_lists = await Promise.all(
+		repositories.map(async (repository) => {
+			const contributors = [];
+			let page = 1;
 
-	while (true) {
-		const res = await fetch(
-			`${base}?client_id=${GITHUB_CLIENT_ID}&client_secret=${GITHUB_CLIENT_SECRET}&per_page=100&page=${page++}`
-		);
-		const list = await res.json();
+			while (true) {
+				const params = new URLSearchParams({ per_page: '100', page: String(page++) });
+				if (GITHUB_CLIENT_ID) params.set('client_id', GITHUB_CLIENT_ID);
+				if (GITHUB_CLIENT_SECRET) params.set('client_secret', GITHUB_CLIENT_SECRET);
 
-		if (!Array.isArray(list)) throw new Error('Expected an array');
+				const url = `https://api.github.com/repos/sveltejs/${repository}/contributors?${params}`;
+				const res = await fetch(url);
+				if (!res.ok)
+					throw new Error(`Could not load contributors for ${repository}: ${res.status}`);
 
-		if (list.length === 0) break;
+				const list = await res.json();
+				if (!Array.isArray(list)) throw new Error(`Expected an array for ${repository}`);
+				if (list.length === 0) break;
 
-		contributors.push(...list);
-	}
+				contributors.push(...list);
+			}
 
-	const authors = contributors
-		.filter(({ login }) => !login.includes('[bot]'))
-		.sort((a, b) => b.contributions - a.contributions)
-		.slice(0, MAX);
+			return contributors;
+		})
+	);
 
-	const sprite = new Jimp({ width: SIZE * authors.length, height: SIZE });
+	const candidates = select_contributors(contributor_lists, Infinity);
+	const authors = [];
+	const images = [];
 
-	for (let i = 0; i < authors.length; i += 1) {
-		const author = authors[i];
-		console.log(`${i + 1} / ${authors.length}: ${author.login}`);
+	for (const author of candidates) {
+		console.log(`${authors.length + 1} / ${MAX}: ${author.login}`);
 
 		const image_data = await fetch(author.avatar_url);
 		const buffer = await image_data.arrayBuffer();
@@ -55,7 +103,19 @@ try {
 
 		image.resize({ w: SIZE, h: SIZE });
 
-		sprite.composite(image, i * SIZE, 0);
+		if (is_blank(image)) {
+			console.log(`Skipping ${author.login}: low-variance avatar`);
+			continue;
+		}
+
+		authors.push(author);
+		images.push(image);
+		if (authors.length === MAX) break;
+	}
+
+	const sprite = new Jimp({ width: SIZE * authors.length, height: SIZE });
+	for (let i = 0; i < images.length; i += 1) {
+		sprite.composite(images[i], i * SIZE, 0);
 	}
 
 	await sprite.write(

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import { Text } from '@sveltejs/site-kit/components';
 	import { setupDocsHovers } from '@sveltejs/site-kit/docs';
 	import Byline from '../Byline.svelte';
@@ -17,8 +17,8 @@
 	<meta name="twitter:description" content={data.metadata.description} />
 	<meta name="description" content={data.metadata.description} />
 
-	<meta name="twitter:image" content="https://svelte.dev/blog/{$page.params.slug}/card.png" />
-	<meta name="og:image" content="https://svelte.dev/blog/{$page.params.slug}/card.png" />
+	<meta name="twitter:image" content="https://svelte.dev/blog/{page.params.slug}/card.png" />
+	<meta name="og:image" content="https://svelte.dev/blog/{page.params.slug}/card.png" />
 </svelte:head>
 
 <article>

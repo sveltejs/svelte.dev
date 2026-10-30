@@ -31,7 +31,8 @@ import {
 	resolve_version,
 	type Package
 } from '../npm';
-import type { BundleResult } from '$lib/public';
+import { is_sveltekit_virtual_module } from '../sveltekit';
+import type { BundleResult } from '#lib/public.d.ts';
 
 // hack for magic-string and rollup inline sourcemaps
 // do not put this into a separate module and import it, would be treeshaken in prod
@@ -205,6 +206,12 @@ async function get_bundle(
 
 			// special case
 			if (importee === 'esm-env') return `${VIRTUAL}/${ESM_ENV}`;
+
+			if (is_sveltekit_virtual_module(importee)) {
+				throw new Error(
+					`Cannot import "${importee}" in the Svelte playground. This module is only available in SvelteKit projects.`
+				);
+			}
 
 			// importing from a URL
 			if (/^[a-z]+:/.test(importee)) return importee;

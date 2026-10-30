@@ -4,6 +4,9 @@ import adapter from '@sveltejs/adapter-vercel';
 import type { PluginOption, UserConfig } from 'vite';
 import { browserslistToTargets } from 'lightningcss';
 import browserslist from 'browserslist';
+import { VERSION } from '@sveltejs/kit';
+
+const is_kit_2 = VERSION[0] === '2';
 
 const plugins: PluginOption[] = [
 	enhancedImages(),
@@ -35,12 +38,26 @@ const plugins: PluginOption[] = [
 	sveltekit({
 		adapter: adapter(),
 
+		files: !is_kit_2 ? { params: 'src/params-registry.ts' } : undefined,
+
 		inlineStyleThreshold: 1000,
 
-		prerender: {
-			// use deployment URL for prerender origin, so that preview environments also have the correct links
-			origin: process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://svelte.dev',
+		paths:
+			// TODO: remove this when we stop deploying previews for Kit 2
+			!is_kit_2
+				? {
+						// use deployment URL for prerender origin, so that preview environments also have the correct links
+						origin: process.env.VERCEL_URL
+							? `https://${process.env.VERCEL_URL}`
+							: 'https://svelte.dev'
+					}
+				: undefined,
 
+		prerender: {
+			handleHttpError({ referrer, referenceType, message }) {
+				// TODO: we need a better default in SvelteKit, otherwise the error message is too ambiguous
+				throw new Error(`${message} when ${referenceType} by ${referrer}`);
+			},
 			handleMissingId(warning) {
 				if (warning.id.startsWith('H4sIA')) {
 					// playground link — do nothing
@@ -48,26 +65,26 @@ const plugins: PluginOption[] = [
 				}
 
 				throw new Error(warning.message);
-			}
-		}
+			},
+			// TODO: remove this when we stop deploying previews for Kit 2
+			...(is_kit_2
+				? {
+						origin: process.env.VERCEL_URL
+							? `https://${process.env.VERCEL_URL}`
+							: 'https://svelte.dev'
+					}
+				: {})
+		},
+
+		// TODO: remove this when we stop deploying previews for Kit 2
+		experimental: is_kit_2
+			? {
+					// @ts-expect-error this is invalid in Kit 3 but valid in Kit 2
+					explicitEnvironmentVariables: true
+				}
+			: undefined
 	}) as PluginOption
 ];
-
-// Only enable sharp if we're not in a webcontainer env
-if (!process.versions.webcontainer) {
-	plugins.push(
-		(await import('vite-imagetools')).imagetools({
-			exclude: 'content/**',
-			defaultDirectives: (url) => {
-				if (url.searchParams.has('big-image')) {
-					return new URLSearchParams('w=640;1280;2560;3840&format=avif;webp;png&as=picture');
-				}
-
-				return new URLSearchParams();
-			}
-		}) as PluginOption
-	);
-}
 
 const config: UserConfig = {
 	plugins,
@@ -78,23 +95,12 @@ const config: UserConfig = {
 		}
 	},
 	build: {
-		cssMinify: 'lightningcss',
-		rollupOptions: {
-			output: {
-				banner: (chunk) => {
-					// this monstrosity is required for twoslash (which uses `require`) to work during prerendering.
-					// it is brittle and may not work in perpetuity but i'm not sure what a better solution would be
-					if (chunk.type === 'chunk' && chunk.name === 'renderer') {
-						return `import { createRequire } from 'node:module'; const require = createRequire(import.meta.url);`;
-					}
-
-					return '';
-				}
-			}
-		}
+		cssMinify: 'lightningcss'
 	},
 	server: {
 		fs: { allow: ['../../packages', '../../node_modules', '../../../KIT/kit/packages/kit'] },
+		// sync-docs copies these source files to content/docs, which is the only version Vite should watch
+		watch: { ignored: ['**/repos/**'] },
 		// for SvelteKit tutorial
 		headers: {
 			'cross-origin-opener-policy': 'same-origin',

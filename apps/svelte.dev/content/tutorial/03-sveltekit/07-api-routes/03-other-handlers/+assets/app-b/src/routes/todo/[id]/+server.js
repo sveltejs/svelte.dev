@@ -1,4 +1,4 @@
-import * as database from '$lib/server/database.js';
+import * as database from '#lib/server/database.js';
 
 export async function PUT({ params, request, cookies }) {
 	const { done } = await request.json();

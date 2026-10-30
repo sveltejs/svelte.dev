@@ -1,9 +1,9 @@
 <script>
 	import { Icon } from '@sveltejs/site-kit/components';
 	// @ts-expect-error
-	import MachineDesktop from './svelte-machine-desktop.png?w=1200;2000;2800;4400&format=avif;webp;png;&as=picture';
+	import MachineDesktop from './svelte-machine-desktop.png?w=1200;2000;2800;4400&format=avif;webp;png&as=picture';
 	// @ts-expect-error
-	import MachineMobile from './svelte-machine-mobile.png?w=960&format=avif;webp;png;&as=picture';
+	import MachineMobile from './svelte-machine-mobile.png?w=960&format=avif;webp;png&as=picture';
 </script>
 
 <div class="hero">
