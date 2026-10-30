@@ -1,6 +1,5 @@
 ---
 title: Redirects
-tags: redirects
 ---
 
 We can use the `redirect` mechanism to redirect from one page to another.

@@ -1,17 +1,5 @@
 [
 	{
-		"path": "/tutorial/kit/env-public",
-		"breadcrumbs": [
-			"Tutorial",
-			"Advanced SvelteKit",
-			"Environment variables",
-			"$app/env/public"
-		],
-		"tags": [
-			"env-public"
-		]
-	},
-	{
 		"path": "/tutorial/kit/env-private",
 		"breadcrumbs": [
 			"Tutorial",
@@ -20,8 +8,7 @@
 			"$app/env/private"
 		],
 		"tags": [
-			"env",
-			"env-private"
+			"env"
 		]
 	},
 	{
@@ -37,6 +24,18 @@
 		]
 	},
 	{
+		"path": "/tutorial/kit/universal-load-functions",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Advanced loading",
+			"Universal load functions"
+		],
+		"tags": [
+			"load"
+		]
+	},
+	{
 		"path": "/tutorial/kit/optional-params",
 		"breadcrumbs": [
 			"Tutorial",
@@ -45,7 +44,7 @@
 			"Optional parameters"
 		],
 		"tags": [
-			"advanced-routing"
+			"routing"
 		]
 	},
 	{
@@ -85,18 +84,6 @@
 		]
 	},
 	{
-		"path": "/tutorial/kit/redirects",
-		"breadcrumbs": [
-			"Tutorial",
-			"Basic SvelteKit",
-			"Errors and redirects",
-			"Redirects"
-		],
-		"tags": [
-			"redirects"
-		]
-	},
-	{
 		"path": "/tutorial/kit/error-basics",
 		"breadcrumbs": [
 			"Tutorial",
@@ -118,18 +105,6 @@
 		],
 		"tags": [
 			"app-state"
-		]
-	},
-	{
-		"path": "/tutorial/kit/get-handlers",
-		"breadcrumbs": [
-			"Tutorial",
-			"Basic SvelteKit",
-			"API routes",
-			"GET handlers"
-		],
-		"tags": [
-			"server-routes"
 		]
 	},
 	{
@@ -166,18 +141,6 @@
 		],
 		"tags": [
 			"lib"
-		]
-	},
-	{
-		"path": "/tutorial/kit/headers",
-		"breadcrumbs": [
-			"Tutorial",
-			"Basic SvelteKit",
-			"Headers and cookies",
-			"Setting headers"
-		],
-		"tags": [
-			"headers-and-cookies"
 		]
 	},
 	{

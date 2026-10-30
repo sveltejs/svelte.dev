@@ -1,6 +1,5 @@
 ---
 title: GET handlers
-tags: server-routes
 ---
 
 SvelteKit allows you to create more than just pages. We can also create _API routes_ by adding a `+server.js` file that exports functions corresponding to HTTP methods: `GET`, `PUT`, `POST`, `PATCH` and `DELETE`.
