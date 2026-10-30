@@ -1,0 +1,13 @@
+{
+  "name": "@passlock/browser",
+  "npm_description": "Flexible passkey authentication for Astro, SvelteKit, NextJS and other frameworks",
+  "repo_url": "https://github.com/passlock-dev/passlock",
+  "authors": [
+    "toby.hobson"
+  ],
+  "homepage": "https://passlock.dev",
+  "version": "2.10.0",
+  "downloads": 15,
+  "github_stars": 192,
+  "updated": "2026-09-17T14:48:57.467Z"
+}
