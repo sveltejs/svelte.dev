@@ -54,7 +54,7 @@ const FEATURED: {
 			{
 				name: '@sveltejs/mcp',
 				svAlias: 'ai-tools',
-				description: 'The CLI version of the Svelte MCP'
+				description: 'Svelte AI tools that help your LLM write better Svelte code'
 			}
 		]
 	},
