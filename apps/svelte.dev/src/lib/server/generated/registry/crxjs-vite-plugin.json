@@ -1,0 +1,15 @@
+{
+  "name": "@crxjs/vite-plugin",
+  "npm_description": "Build Chrome Extensions with this Vite plugin.",
+  "repo_url": "https://github.com/crxjs/chrome-extension-tools",
+  "authors": [
+    "jacksteamdev",
+    "flippedround",
+    "toumash"
+  ],
+  "homepage": "https://crxjs.dev/vite-plugin",
+  "version": "3.0.0",
+  "downloads": 631782,
+  "updated": "2026-09-24T11:45:12.331Z",
+  "svelte_range": "^3.48.0"
+}
