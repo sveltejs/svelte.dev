@@ -4,9 +4,10 @@ import { existsSync } from 'node:fs';
 import { writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { is_blank, write_fallback } from './utils.js';
+import { has_supporters, is_blank, write_fallback } from './utils.js';
 
 const force = process.env.FORCE_UPDATE === 'true';
+const fallback = process.env.ALLOW_FALLBACK === 'true';
 const repositories = ['svelte', 'kit', 'cli', 'vite-plugin-svelte', 'language-tools', 'ai-tools'];
 const automated_accounts = new Set(['copilot', 'claude']);
 
@@ -54,7 +55,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const out = path.resolve(__dirname, '../src/routes/_home/Supporters/contributors.js');
 const sprite_out = path.resolve(__dirname, '../src/routes/_home/Supporters/contributors.jpg');
 
-if (!force && existsSync(out)) {
+// builds regenerate a fallback list, so they never ship without supporters
+if (!force && (fallback ? existsSync(out) : has_supporters(out))) {
 	const relative = path.relative(process.cwd(), out);
 	console.info(`[update/contributors] ${relative} exists. Skipping`);
 	process.exit(0);
@@ -127,8 +129,19 @@ try {
 
 	await writeFile(out, `export default ${str};`);
 } catch (err) {
-	// rate limiting or network failures shouldn't break the build
-	console.warn(`[update/contributors] Could not load contributors: ${err}`);
-	// keep the existing files when a forced update fails
-	if (!existsSync(out)) await write_fallback(out, sprite_out);
+	if (has_supporters(out)) {
+		// keep the existing files when a forced update fails
+		console.warn(
+			`[update/contributors] Could not load contributors, keeping existing list: ${err}`
+		);
+	} else if (fallback) {
+		// type checking and local dev don't need the real list, so don't let
+		// rate limiting or network failures break them
+		console.warn(
+			`[update/contributors] Could not load contributors, writing an empty list: ${err}`
+		);
+		await write_fallback(out, sprite_out);
+	} else {
+		throw err;
+	}
 }
