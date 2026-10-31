@@ -1,14 +1,12 @@
 {
-  "name": "@embedpdf/svelte-pdf-viewer",
-  "npm_description": "Svelte component for embedding PDF documents",
-  "repo_url": "https://github.com/embedpdf/embed-pdf-viewer",
-  "authors": [
-    "bobsingor"
-  ],
-  "homepage": "https://www.embedpdf.com/svelte-pdf-viewer",
-  "version": "2.15.1",
-  "downloads": 2620,
-  "github_stars": 4524,
-  "updated": "2026-09-16T20:53:53.004Z",
-  "svelte_range": ">=4.0.0"
+	"name": "@embedpdf/svelte-pdf-viewer",
+	"npm_description": "Svelte component for embedding PDF documents",
+	"repo_url": "https://github.com/embedpdf/embed-pdf-viewer",
+	"authors": ["bobsingor"],
+	"homepage": "https://www.embedpdf.com/svelte-pdf-viewer",
+	"version": "2.15.1",
+	"downloads": 3973,
+	"github_stars": 4580,
+	"updated": "2026-09-16T20:53:53.004Z",
+	"svelte_range": ">=4.0.0"
 }

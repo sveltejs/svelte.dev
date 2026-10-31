@@ -1,16 +1,14 @@
 {
-  "name": "svelte-material-ui",
-  "npm_description": "Svelte Material UI Components",
-  "repo_url": "https://github.com/hperrin/svelte-material-ui",
-  "authors": [
-    "hperrin"
-  ],
-  "homepage": "https://github.com/hperrin/svelte-material-ui#readme",
-  "version": "9.0.4",
-  "downloads": 6910,
-  "github_stars": 3443,
-  "updated": "2026-08-31T00:49:54.525Z",
-  "typescript": false,
-  "runes": false,
-  "last_rune_check_version": "8.0.0-beta.3"
+	"name": "svelte-material-ui",
+	"npm_description": "Svelte Material UI Components",
+	"repo_url": "https://github.com/hperrin/svelte-material-ui",
+	"authors": ["hperrin"],
+	"homepage": "https://github.com/hperrin/svelte-material-ui#readme",
+	"version": "9.0.6",
+	"downloads": 6886,
+	"github_stars": 3443,
+	"updated": "2026-10-14T01:33:04.392Z",
+	"typescript": false,
+	"runes": false,
+	"last_rune_check_version": "8.0.0-beta.3"
 }

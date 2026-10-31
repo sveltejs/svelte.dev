@@ -1,19 +1,16 @@
 {
-  "name": "@threlte/core",
-  "npm_description": "A 3D framework for the web, built on top of Svelte and Three.js",
-  "repo_url": "https://github.com/threlte/threlte",
-  "authors": [
-    "grischaerbe",
-    "micheal.parks"
-  ],
-  "homepage": "https://threlte.xyz",
-  "version": "8.6.1",
-  "downloads": 73583,
-  "github_stars": 3174,
-  "updated": "2026-09-24T16:36:53.328Z",
-  "svelte_range": ">=5",
-  "kit_range": "^2.37.0",
-  "typescript": true,
-  "runes": true,
-  "last_rune_check_version": "8.0.2"
+	"name": "@threlte/core",
+	"npm_description": "A 3D framework for the web, built on top of Svelte and Three.js",
+	"repo_url": "https://github.com/threlte/threlte",
+	"authors": ["grischaerbe", "micheal.parks"],
+	"homepage": "https://threlte.xyz",
+	"version": "8.6.1",
+	"downloads": 119292,
+	"github_stars": 3174,
+	"updated": "2026-09-24T16:36:53.328Z",
+	"svelte_range": ">=5",
+	"kit_range": "^2.37.0",
+	"typescript": true,
+	"runes": true,
+	"last_rune_check_version": "8.0.2"
 }

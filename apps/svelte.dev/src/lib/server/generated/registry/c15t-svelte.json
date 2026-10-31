@@ -1,0 +1,13 @@
+{
+	"name": "@c15t/svelte",
+	"npm_description": "Svelte cookie consent banner for Svelte and SvelteKit, with a consent dialog and preference center. The Svelte package for c15t.",
+	"repo_url": "https://github.com/c15t/c15t",
+	"authors": ["kayleew", "burnedchris"],
+	"homepage": "https://c15t.com/docs/frameworks/svelte/quickstart",
+	"version": "3.2.1",
+	"downloads": 22420,
+	"github_stars": 2017,
+	"updated": "2026-10-30T22:04:37.263Z",
+	"svelte_range": "^5.20.0",
+	"kit_range": "^2.63.0 || ^3.0.0"
+}
