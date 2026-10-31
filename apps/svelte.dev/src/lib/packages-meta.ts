@@ -47,9 +47,14 @@ const FEATURED: {
 				description: 'A compiler-based i18n library that emits tree-shakeable message functions'
 			},
 			{
-				name: 'vite-plugin-devtools-json',
-				svAlias: 'devtools-json',
-				description: 'Generates Chromium DevTools project settings during development'
+				name: '@sveltejs/enhanced-img',
+				svAlias: 'enhanced-img',
+				description: 'Image optimization for your Svelte apps'
+			},
+			{
+				name: '@sveltejs/mcp',
+				svAlias: 'ai-tools',
+				description: 'Svelte AI tools that help your LLM write better Svelte code'
 			}
 		]
 	},
@@ -240,7 +245,10 @@ const FEATURED: {
 	{
 		title: 'Media',
 		packages: [
-			{ name: '@sveltejs/enhanced-img' },
+			{
+				name: '@sveltejs/enhanced-img',
+				description: 'Image optimization for your Svelte apps'
+			},
 			{
 				name: '@unpic/svelte',
 				description: 'Responsive image component that integrates with popular CDNs'
