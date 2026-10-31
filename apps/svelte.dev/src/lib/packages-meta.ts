@@ -194,10 +194,7 @@ const FEATURED: {
 				name: 'svelte-kit-sessions',
 				description: 'Session management library for SvelteKit'
 			},
-			{
-				name: '@passlock/browser',
-				description: 'Passkey authentication for SvelteKit and other frameworks'
-			}
+			{ name: '@passlock/browser' }
 		]
 	},
 	{
