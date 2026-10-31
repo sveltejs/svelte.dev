@@ -244,7 +244,10 @@ const FEATURED: {
 	{
 		title: 'Media',
 		packages: [
-			{ name: '@sveltejs/enhanced-img' },
+			{
+				name: '@sveltejs/enhanced-img',
+				description: 'Optimized images with modern formats, responsive sizes and no layout shift'
+			},
 			{
 				name: '@unpic/svelte',
 				description: 'Responsive image component that integrates with popular CDNs'
