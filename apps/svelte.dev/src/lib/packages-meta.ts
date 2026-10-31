@@ -49,12 +49,12 @@ const FEATURED: {
 			{
 				name: '@sveltejs/enhanced-img',
 				svAlias: 'enhanced-img',
-				description: 'Optimized images with modern formats, responsive sizes and no layout shift'
+				description: 'Image optimization for your Svelte apps'
 			},
 			{
 				name: '@sveltejs/mcp',
 				svAlias: 'ai-tools',
-				description: 'Svelte MCP server, skills and agent instructions for AI coding tools'
+				description: 'The CLI version of the Svelte MCP'
 			}
 		]
 	},
@@ -246,7 +246,7 @@ const FEATURED: {
 		packages: [
 			{
 				name: '@sveltejs/enhanced-img',
-				description: 'Optimized images with modern formats, responsive sizes and no layout shift'
+				description: 'Image optimization for your Svelte apps'
 			},
 			{
 				name: '@unpic/svelte',
