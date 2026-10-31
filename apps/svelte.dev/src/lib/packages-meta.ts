@@ -281,7 +281,11 @@ const FEATURED: {
 				name: 'virtua',
 				description: 'A zero-config, fast and small (~3kB) virtual list and grid component'
 			},
-			{ name: '@event-calendar/core' }
+			{ name: '@event-calendar/core' },
+			{
+				name: '@c15t/svelte',
+				description: 'Cookie banner, preferences dialog and consent rules'
+			}
 		]
 	},
 	{
@@ -294,6 +298,10 @@ const FEATURED: {
 			{
 				name: '@tsparticles/svelte',
 				description: 'Easily create highly customizable particles, confetti, and fireworks'
+			},
+			{
+				name: '@animotion/core',
+				description: 'Create beautiful presentations with Svelte'
 			}
 		]
 	},
@@ -407,7 +415,8 @@ const FEATURED: {
 				description: 'Accessible form components built on top of sveltekit-superforms'
 			},
 			{ name: 'felte', description: 'An extensible form library' },
-			{ name: '@tanstack/svelte-form', description: 'Powerful, type-safe forms' }
+			{ name: '@tanstack/svelte-form', description: 'Powerful, type-safe forms' },
+			{ name: 'valibot', description: 'A modular, type-safe schema library for validating data' }
 		]
 	}
 ];

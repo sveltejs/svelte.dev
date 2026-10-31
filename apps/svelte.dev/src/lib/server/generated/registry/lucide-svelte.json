@@ -1,17 +1,15 @@
 {
-  "name": "@lucide/svelte",
-  "npm_description": "A Lucide icon library package for Svelte applications.",
-  "repo_url": "https://github.com/lucide-icons/lucide",
-  "authors": [
-    "ericfennis"
-  ],
-  "homepage": "https://lucide.dev",
-  "version": "1.51.0",
-  "downloads": 969507,
-  "github_stars": 24837,
-  "updated": "2026-10-03T06:13:55.632Z",
-  "svelte_range": "^5",
-  "typescript": true,
-  "runes": false,
-  "last_rune_check_version": "0.488.0"
+	"name": "@lucide/svelte",
+	"npm_description": "A Lucide icon library package for Svelte applications.",
+	"repo_url": "https://github.com/lucide-icons/lucide",
+	"authors": ["ericfennis"],
+	"homepage": "https://lucide.dev",
+	"version": "1.65.0",
+	"downloads": 1336829,
+	"github_stars": 25410,
+	"updated": "2026-10-30T06:12:06.968Z",
+	"svelte_range": "^5",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "0.488.0"
 }

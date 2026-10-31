@@ -1,18 +1,14 @@
 {
-  "name": "@unocss/preset-icons",
-  "npm_description": "Pure CSS Icons for UnoCSS",
-  "repo_url": "https://github.com/unocss/unocss",
-  "authors": [
-    "antfu",
-    "unocss-bot",
-    "zyyv"
-  ],
-  "homepage": "https://unocss.dev",
-  "version": "66.10.5",
-  "downloads": 555579,
-  "github_stars": 18587,
-  "updated": "2026-09-16T08:49:42.143Z",
-  "typescript": true,
-  "runes": false,
-  "last_rune_check_version": "66.1.0-beta.11"
+	"name": "@unocss/preset-icons",
+	"npm_description": "Pure CSS Icons for UnoCSS",
+	"repo_url": "https://github.com/unocss/unocss",
+	"authors": ["antfu", "unocss-bot", "zyyv"],
+	"homepage": "https://unocss.dev",
+	"version": "66.12.0",
+	"downloads": 766025,
+	"github_stars": 18587,
+	"updated": "2026-10-26T12:43:53.079Z",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "66.1.0-beta.11"
 }

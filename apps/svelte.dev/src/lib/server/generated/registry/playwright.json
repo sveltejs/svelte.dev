@@ -1,21 +1,15 @@
 {
-  "name": "playwright",
-  "npm_description": "A high-level API to automate web browsers",
-  "repo_url": "https://github.com/microsoft/playwright",
-  "authors": [
-    "pavelfeldman",
-    "yurys",
-    "microsoft1es",
-    "dgozman-ms",
-    "microsoft-oss-releases"
-  ],
-  "homepage": "https://playwright.dev",
-  "version": "1.63.0",
-  "downloads": 126716171,
-  "github_stars": 97059,
-  "updated": "2026-09-04T22:45:21.732Z",
-  "svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
-  "typescript": true,
-  "runes": false,
-  "last_rune_check_version": "1.55.0"
+	"name": "playwright",
+	"npm_description": "A high-level API to automate web browsers",
+	"repo_url": "https://github.com/microsoft/playwright",
+	"authors": ["pavelfeldman", "yurys", "microsoft1es", "dgozman-ms", "microsoft-oss-releases"],
+	"homepage": "https://playwright.dev",
+	"version": "1.64.1",
+	"downloads": 154480826,
+	"github_stars": 98912,
+	"updated": "2026-10-14T11:54:49.998Z",
+	"svelte_range": "^3.0.0 || ^4.0.0 || ^5.0.0",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "1.55.0"
 }
