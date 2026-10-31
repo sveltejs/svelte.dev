@@ -1,6 +1,7 @@
 // @ts-check
 import { Jimp } from 'jimp';
-import { stat, writeFile } from 'node:fs/promises';
+import { existsSync } from 'node:fs';
+import { writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { is_blank, write_fallback } from './utils.js';
@@ -11,69 +12,68 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const out = path.resolve(__dirname, '../src/routes/_home/Supporters/donors.js');
 const sprite_out = path.resolve(__dirname, '../src/routes/_home/Supporters/donors.jpg');
 
+if (!force && existsSync(out)) {
+	const relative = path.relative(process.cwd(), out);
+	console.info(`[update/donors] ${relative} exists. Skipping`);
+	process.exit(0);
+}
+
 try {
-	if (!force && (await stat(out))) {
-		const relative = path.relative(process.cwd(), out);
-		console.info(`[update/donors] ${relative} exists. Skipping`);
-		process.exit(0);
-	}
-} catch {
-	try {
-		const MAX = 48;
-		const SIZE = 128;
+	const MAX = 48;
+	const SIZE = 128;
 
-		const res = await fetch('https://opencollective.com/svelte/members/all.json');
-		if (!res.ok) throw new Error(`Could not load donors: ${res.status}`);
+	const res = await fetch('https://opencollective.com/svelte/members/all.json');
+	if (!res.ok) throw new Error(`Could not load donors: ${res.status}`);
 
-		const donors = await res.json();
+	const donors = await res.json();
 
-		if (!Array.isArray(donors)) throw new Error('Expected an array');
+	if (!Array.isArray(donors)) throw new Error('Expected an array');
 
-		const unique = new Map();
-		donors.forEach((d) => unique.set(d.profile, d));
+	const unique = new Map();
+	donors.forEach((d) => unique.set(d.profile, d));
 
-		let backers = [...unique.values()]
-			.filter(({ role }) => role === 'BACKER')
-			.sort((a, b) => b.totalAmountDonated - a.totalAmountDonated)
-			.slice(0, 3 * MAX);
+	let backers = [...unique.values()]
+		.filter(({ role }) => role === 'BACKER')
+		.sort((a, b) => b.totalAmountDonated - a.totalAmountDonated)
+		.slice(0, 3 * MAX);
 
-		const included = [];
-		for (let i = 0; included.length < MAX; i += 1) {
-			const backer = backers[i];
-			console.log(`${included.length + 1} / ${MAX}: ${backer.name}`);
+	const included = [];
+	for (let i = 0; included.length < MAX; i += 1) {
+		const backer = backers[i];
+		console.log(`${included.length + 1} / ${MAX}: ${backer.name}`);
 
-			try {
-				const image_data = await fetch(backer.image);
-				const buffer = await image_data.arrayBuffer();
-				const image = await Jimp.fromBuffer(buffer);
+		try {
+			const image_data = await fetch(backer.image);
+			const buffer = await image_data.arrayBuffer();
+			const image = await Jimp.fromBuffer(buffer);
 
-				image.resize({ w: SIZE, h: SIZE });
+			image.resize({ w: SIZE, h: SIZE });
 
-				if (is_blank(image)) {
-					console.log(`Skipping ${backer.name}: low-variance image`);
-					continue;
-				}
-
-				included.push({ backer, image });
-			} catch (err) {
-				console.log(`Skipping ${backer.name}: no image data`);
+			if (is_blank(image)) {
+				console.log(`Skipping ${backer.name}: low-variance image`);
+				continue;
 			}
+
+			included.push({ backer, image });
+		} catch (err) {
+			console.log(`Skipping ${backer.name}: no image data`);
 		}
-
-		const sprite = new Jimp({ width: SIZE * included.length, height: SIZE });
-		for (let i = 0; i < included.length; i += 1) {
-			sprite.composite(included[i].image, i * SIZE, 0);
-		}
-
-		// @ts-expect-error
-		await sprite.write(sprite_out, { quality: 80 });
-
-		const str = `[\n\t${included.map((a) => `${JSON.stringify(a.backer.name)}`).join(',\n\t')}\n]`;
-
-		await writeFile(out, `export default ${str};`);
-	} catch (err) {
-		// rate limiting or network failures shouldn't break the build
-		console.warn(`[update/donors] Could not load donors: ${err}`);
-		await write_fallback(out, sprite_out);
 	}
+
+	const sprite = new Jimp({ width: SIZE * included.length, height: SIZE });
+	for (let i = 0; i < included.length; i += 1) {
+		sprite.composite(included[i].image, i * SIZE, 0);
+	}
+
+	// @ts-expect-error
+	await sprite.write(sprite_out, { quality: 80 });
+
+	const str = `[\n\t${included.map((a) => `${JSON.stringify(a.backer.name)}`).join(',\n\t')}\n]`;
+
+	await writeFile(out, `export default ${str};`);
+} catch (err) {
+	// rate limiting or network failures shouldn't break the build
+	console.warn(`[update/donors] Could not load donors: ${err}`);
+	// keep the existing files when a forced update fails
+	if (!existsSync(out)) await write_fallback(out, sprite_out);
 }
