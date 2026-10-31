@@ -121,10 +121,6 @@ const FEATURED: {
 				name: '@prismicio/svelte',
 				description: 'Components and helpers to fetch and present Prismic content'
 			},
-			{
-				name: 'prismic',
-				description: 'Model Prismic content, generate types and write components from the CLI'
-			},
 			{ name: 'carta-md' },
 			{ name: '@sveltepress/vite', description: 'A content centered site build tool' },
 			{
