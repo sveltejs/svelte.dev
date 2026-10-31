@@ -3,12 +3,13 @@ import { Jimp } from 'jimp';
 import { stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { is_blank } from './utils.js';
+import { is_blank, write_fallback } from './utils.js';
 
 const force = process.env.FORCE_UPDATE === 'true';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const out = path.resolve(__dirname, '../src/routes/_home/Supporters/donors.js');
+const sprite_out = path.resolve(__dirname, '../src/routes/_home/Supporters/donors.jpg');
 
 try {
 	if (!force && (await stat(out))) {
@@ -17,57 +18,62 @@ try {
 		process.exit(0);
 	}
 } catch {
-	const MAX = 48;
-	const SIZE = 128;
+	try {
+		const MAX = 48;
+		const SIZE = 128;
 
-	const res = await fetch('https://opencollective.com/svelte/members/all.json');
-	const donors = await res.json();
+		const res = await fetch('https://opencollective.com/svelte/members/all.json');
+		if (!res.ok) throw new Error(`Could not load donors: ${res.status}`);
 
-	if (!Array.isArray(donors)) throw new Error('Expected an array');
+		const donors = await res.json();
 
-	const unique = new Map();
-	donors.forEach((d) => unique.set(d.profile, d));
+		if (!Array.isArray(donors)) throw new Error('Expected an array');
 
-	let backers = [...unique.values()]
-		.filter(({ role }) => role === 'BACKER')
-		.sort((a, b) => b.totalAmountDonated - a.totalAmountDonated)
-		.slice(0, 3 * MAX);
+		const unique = new Map();
+		donors.forEach((d) => unique.set(d.profile, d));
 
-	const included = [];
-	for (let i = 0; included.length < MAX; i += 1) {
-		const backer = backers[i];
-		console.log(`${included.length + 1} / ${MAX}: ${backer.name}`);
+		let backers = [...unique.values()]
+			.filter(({ role }) => role === 'BACKER')
+			.sort((a, b) => b.totalAmountDonated - a.totalAmountDonated)
+			.slice(0, 3 * MAX);
 
-		try {
-			const image_data = await fetch(backer.image);
-			const buffer = await image_data.arrayBuffer();
-			const image = await Jimp.fromBuffer(buffer);
+		const included = [];
+		for (let i = 0; included.length < MAX; i += 1) {
+			const backer = backers[i];
+			console.log(`${included.length + 1} / ${MAX}: ${backer.name}`);
 
-			image.resize({ w: SIZE, h: SIZE });
+			try {
+				const image_data = await fetch(backer.image);
+				const buffer = await image_data.arrayBuffer();
+				const image = await Jimp.fromBuffer(buffer);
 
-			if (is_blank(image)) {
-				console.log(`Skipping ${backer.name}: low-variance image`);
-				continue;
+				image.resize({ w: SIZE, h: SIZE });
+
+				if (is_blank(image)) {
+					console.log(`Skipping ${backer.name}: low-variance image`);
+					continue;
+				}
+
+				included.push({ backer, image });
+			} catch (err) {
+				console.log(`Skipping ${backer.name}: no image data`);
 			}
-
-			included.push({ backer, image });
-		} catch (err) {
-			console.log(`Skipping ${backer.name}: no image data`);
 		}
-	}
 
-	const sprite = new Jimp({ width: SIZE * included.length, height: SIZE });
-	for (let i = 0; i < included.length; i += 1) {
-		sprite.composite(included[i].image, i * SIZE, 0);
-	}
+		const sprite = new Jimp({ width: SIZE * included.length, height: SIZE });
+		for (let i = 0; i < included.length; i += 1) {
+			sprite.composite(included[i].image, i * SIZE, 0);
+		}
 
-	await sprite.write(
 		// @ts-expect-error
-		fileURLToPath(new URL(`../src/routes/_home/Supporters/donors.jpg`, import.meta.url)),
-		{ quality: 80 }
-	);
+		await sprite.write(sprite_out, { quality: 80 });
 
-	const str = `[\n\t${included.map((a) => `${JSON.stringify(a.backer.name)}`).join(',\n\t')}\n]`;
+		const str = `[\n\t${included.map((a) => `${JSON.stringify(a.backer.name)}`).join(',\n\t')}\n]`;
 
-	writeFile(out, `export default ${str};`);
+		await writeFile(out, `export default ${str};`);
+	} catch (err) {
+		// rate limiting or network failures shouldn't break the build
+		console.warn(`[update/donors] Could not load donors: ${err}`);
+		await write_fallback(out, sprite_out);
+	}
 }
