@@ -100,22 +100,10 @@ const FEATURED: {
 			{ name: '@sveltejs/adapter-netlify', description: 'Builds your app for Netlify' },
 			{ name: '@sveltejs/adapter-vercel', description: 'Builds your app for Vercel' },
 			{ name: '@sveltejs/adapter-static', description: 'Builds your static site' },
+			{ name: '@sveltejs/adapter-bun', description: 'Builds a standalone Bun server' },
 			{ name: '@deno/svelte-adapter', description: 'Builds your app for Deno Deploy' },
 			{ name: 'amplify-adapter', description: 'Builds your app for AWS Amplify' },
-			{ name: 'svelte-kit-sst', description: 'Builds your app for AWS Lambda and AWS Lamda@Edge' },
-			{ name: 'svelte-adapter-bun', description: 'Builds your app for Bun' },
-			{
-				name: 'svelte-adapter-appengine',
-				description: 'Builds your app for Google Cloud App Engine'
-			},
-			{
-				name: 'sveltekit-adapter-chrome-extension',
-				description: 'Builds your app as a Chrome extension using manifest v3'
-			},
-			{
-				name: '@slicemachine/adapter-sveltekit',
-				description: "Integrate with Prismic's Slice Machine"
-			}
+			{ name: 'svelte-kit-sst', description: 'Builds your app for AWS Lambda and AWS Lamda@Edge' }
 		]
 	},
 	{
@@ -208,7 +196,7 @@ const FEATURED: {
 				name: 'svelte-kit-sessions',
 				description: 'Session management library for SvelteKit'
 			},
-			{ name: '@passlock/sveltekit' }
+			{ name: '@passlock/browser' }
 		]
 	},
 	{
@@ -290,7 +278,10 @@ const FEATURED: {
 			{ name: '@threlte/core' },
 			{ name: '@neoconfetti/svelte', description: 'Confetti explosion' },
 			{ name: 'svelte-motion', description: 'Animation library based on framer-motion' },
-			{ name: '@lottiefiles/svelte-lottie-player', description: 'Lottie animation player' },
+			{
+				name: '@lottiefiles/dotlottie-svelte',
+				description: 'Lottie and dotLottie animation player'
+			},
 			{
 				name: '@tsparticles/svelte',
 				description: 'Easily create highly customizable particles, confetti, and fireworks'
@@ -408,6 +399,19 @@ const FEATURED: {
 			},
 			{ name: 'felte', description: 'An extensible form library' },
 			{ name: '@tanstack/svelte-form', description: 'Powerful, type-safe forms' }
+		]
+	},
+	{
+		title: 'Browser extensions',
+		packages: [
+			{
+				name: 'wxt',
+				description: 'Build cross-browser extensions with Svelte using the official Svelte module'
+			},
+			{
+				name: '@crxjs/vite-plugin',
+				description: 'Vite plugin for building Chrome extensions with HMR'
+			}
 		]
 	}
 ];
