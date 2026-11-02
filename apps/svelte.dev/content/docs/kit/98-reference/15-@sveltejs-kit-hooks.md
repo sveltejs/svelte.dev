@@ -115,6 +115,8 @@ type CaughtError<
 				error: CaughtErrorMap[Kind];
 				/** Only present for validation errors */
 				issues?: undefined;
+				/** Only present for validation errors */
+				remote?: undefined;
 			};
 	  }[keyof CaughtErrorMap]
 	| ValidationCaughtError<Issue>;

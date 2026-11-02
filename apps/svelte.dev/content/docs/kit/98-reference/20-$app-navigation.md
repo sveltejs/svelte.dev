@@ -669,6 +669,19 @@ type: 'enter';
 <div class="ts-block-property">
 
 ```dts
+from: null;
+```
+
+<div class="ts-block-property-details">
+
+The app has just started, so there is no page it navigated from
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
 delta?: undefined;
 ```
 
