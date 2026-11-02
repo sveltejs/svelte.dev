@@ -337,6 +337,18 @@
 		]
 	},
 	{
+		"path": "/docs/svelte/bind",
+		"breadcrumbs": [
+			"Docs",
+			"Svelte",
+			"Template syntax",
+			"bind:"
+		],
+		"tags": [
+			"template-bind"
+		]
+	},
+	{
 		"path": "/docs/svelte/transition",
 		"breadcrumbs": [
 			"Docs",
@@ -381,7 +393,7 @@
 			"class"
 		],
 		"tags": [
-			"template-style"
+			"template-class"
 		]
 	},
 	{
