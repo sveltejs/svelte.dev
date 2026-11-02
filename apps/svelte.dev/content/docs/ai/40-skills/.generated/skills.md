@@ -2,6 +2,10 @@
 
 CLI tools for Svelte 5 documentation lookup and code analysis. MUST be used whenever creating, editing or analyzing any Svelte component (`.svelte`) or Svelte module (`.svelte.ts`/`.svelte.js`). If possible, this skill should be executed within the `svelte-file-editor` subagent for optimal results.
 
+```bash
+npx skills add sveltejs/ai-tools --skill svelte-code-writer
+```
+
 <a href="https://github.com/sveltejs/ai-tools/releases?q=svelte-code-writer" target="_blank" rel="noopener noreferrer">Open Releases page</a>
 
 <details>
@@ -81,6 +85,10 @@ npx @sveltejs/mcp svelte-autofixer ./Component.svelte --svelte-version 4
 ## `svelte-core-bestpractices`
 
 Guidance on writing fast, robust, modern Svelte code. Load this skill whenever in a Svelte project and asked to write/edit or analyze a Svelte component or module. Covers reactivity, event handling, styling, integration with libraries and more.
+
+```bash
+npx skills add sveltejs/ai-tools --skill svelte-core-bestpractices
+```
 
 <a href="https://github.com/sveltejs/ai-tools/releases?q=svelte-core-bestpractices" target="_blank" rel="noopener noreferrer">Open Releases page</a>
 
@@ -277,6 +285,10 @@ Always use runes mode for new code, and avoid features that have more modern rep
 ## `svelte-mcp-feedback`
 
 Report Svelte MCP autofixer opportunities when the user corrects a Svelte or SvelteKit mistake the agent made. Use after corrections to .svelte components, .svelte.ts/.svelte.js modules, or SvelteKit features where a reusable check or fix could prevent the mistake. Do not trigger for initial implementation requests, unrelated bugs, or personal style preferences.
+
+```bash
+npx skills add sveltejs/ai-tools --skill svelte-mcp-feedback
+```
 
 <a href="https://github.com/sveltejs/ai-tools/releases?q=svelte-mcp-feedback" target="_blank" rel="noopener noreferrer">Open Releases page</a>
 
