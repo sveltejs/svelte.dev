@@ -31,6 +31,9 @@
 			<span>{format(time)}</span>
 			<div
 				class="slider"
+				role="slider"
+				aria-valuenow={time}
+				tabindex="0"
 				onpointerdown={e => {
 					const div = e.currentTarget;
 
