@@ -10,8 +10,14 @@
 
 <main>
 	<form>
-		<label for="search-input">Search</label>
-		<input id="search-input" name="q" value={data.query} type="search" spellcheck="false" />
+		<input
+			name="q"
+			value={data.query}
+			type="search"
+			aria-label="Search"
+			placeholder="Search"
+			spellcheck="false"
+		/>
 	</form>
 
 	<SearchResults results={data.results} query={data.query} />
@@ -30,14 +36,6 @@
 		position: relative;
 		width: 100%;
 		margin: 0 0 2rem 0;
-	}
-
-	label {
-		display: block;
-		font: var(--sk-font-ui-medium);
-		text-transform: uppercase;
-		color: var(--sk-fg-3);
-		margin: 0 0 0.8rem 0;
 	}
 
 	input {

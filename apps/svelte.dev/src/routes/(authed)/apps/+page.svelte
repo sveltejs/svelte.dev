@@ -6,8 +6,6 @@
 
 	let { data } = $props();
 
-	const id = $props.id();
-
 	const { login, logout } = get_app_context();
 
 	const format = (str: string) => ago(new Date(str));
@@ -89,8 +87,13 @@
 						goto(search ? `/apps?search=${encodeURIComponent(search.toString())}` : '/apps');
 					}}
 				>
-					<label for="{id}-search">Search</label>
-					<input id="{id}-search" type="search" name="search" value={data.search} />
+					<input
+						type="search"
+						placeholder="Search"
+						aria-label="Search"
+						name="search"
+						value={data.search}
+					/>
 				</form>
 			{/if}
 		</div>
@@ -186,9 +189,6 @@
 	}
 
 	.controls form {
-		display: flex;
-		align-items: center;
-		gap: 1rem;
 		width: 100%;
 		height: 100%;
 	}

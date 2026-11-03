@@ -21,8 +21,6 @@ It appears when the user clicks on the `Search` component or presses the corresp
 
 	let { placeholder = 'Search', idle, search_description, no_results }: Props = $props();
 
-	const id = $props.id();
-
 	let modal = $state() as HTMLElement;
 
 	// TODO proper types
@@ -177,10 +175,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		<div class="search-box">
 			<div class="controls">
 				<div class="input-group">
-					<label for="{id}-search-input">{placeholder}</label>
-
 					<input
-						id="{id}-search-input"
 						use:forcefocus
 						onkeydown={(e) => {
 							if (e.key === 'Enter' && !e.isComposing) {
@@ -192,7 +187,9 @@ It appears when the user clicks on the `Search` component or presses the corresp
 							search.query = e.currentTarget.value;
 						}}
 						value={search.query}
+						{placeholder}
 						aria-describedby="search-description"
+						aria-label={placeholder}
 						spellcheck="false"
 					/>
 
@@ -338,26 +335,22 @@ It appears when the user clicks on the `Search` component or presses the corresp
 	.input-group {
 		position: relative;
 		flex: 1;
-		display: flex;
-		align-items: center;
-		border-bottom: 1px solid var(--sk-border);
-
-		label {
-			font: var(--sk-font-ui-large);
-			color: var(--sk-fg-4);
-			padding-left: calc(var(--padding) - 0.5rem);
-			flex-shrink: 0;
-		}
 
 		input {
 			font: var(--sk-font-ui-large);
 			width: 100%;
-			min-width: 0;
 			padding: var(--padding) 6rem var(--padding) calc(var(--padding) - 0.5rem);
 			height: 6rem;
 			border: none;
+			flex-shrink: 0;
 			color: var(--sk-fg-1);
+			border-bottom: 1px solid var(--sk-border);
 			background: inherit;
+
+			&::placeholder {
+				color: var(--sk-fg-4);
+				opacity: 0.5;
+			}
 
 			&:focus-visible {
 				outline-offset: -2px;
