@@ -72,19 +72,19 @@
 		max-width: 200rem;
 		margin: 0 auto;
 
-		@media (min-width: 480px) {
+		@media (min-width: 30em) {
 			--columns: 16;
 		}
 
-		@media (min-width: 720px) {
+		@media (min-width: 45em) {
 			--columns: 24;
 		}
 
-		@media (min-width: 1000px) {
+		@media (min-width: 62.5em) {
 			--columns: 32;
 		}
 
-		@media (min-width: 1600px) {
+		@media (min-width: 100em) {
 			--columns: 48;
 		}
 	}
@@ -184,7 +184,7 @@
 			--column: 12;
 		}
 
-		@media (min-width: 480px) {
+		@media (min-width: 30em) {
 			/** assign 6 rows... */
 			&:nth-child(n + 1):nth-child(-n + 16) {
 				--row: 1;
@@ -276,7 +276,7 @@
 			}
 		}
 
-		@media (min-width: 720px) {
+		@media (min-width: 45em) {
 			/** assign 4 rows... */
 			&:nth-child(n + 1):nth-child(-n + 24) {
 				--row: 1;
@@ -392,7 +392,7 @@
 			}
 		}
 
-		@media (min-width: 1000px) {
+		@media (min-width: 62.5em) {
 			/** assign 3 rows... */
 			&:nth-child(n + 1):nth-child(-n + 32) {
 				--row: 1;
@@ -552,7 +552,7 @@
 			}
 		}
 
-		@media (min-width: 1600px) {
+		@media (min-width: 100em) {
 			/** assign 2 rows... */
 			&:nth-child(n + 1):nth-child(-n + 48) {
 				--row: 1;

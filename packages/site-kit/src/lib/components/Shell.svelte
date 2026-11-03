@@ -56,7 +56,7 @@ The main shell of the application. It provides a slot for the top navigation, th
 		height: 100%;
 	}
 
-	@media (min-width: 832px) {
+	@media (min-width: 52em) {
 		main {
 			padding-top: var(--sk-nav-height);
 			padding-bottom: var(--sk-banner-height);

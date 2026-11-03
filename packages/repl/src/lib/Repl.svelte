@@ -341,7 +341,7 @@
 	}
 
 	/* on mobile, override the <SplitPane> controls */
-	@media (max-width: 799px) {
+	@media (max-width: 49.9375em) {
 		.container-normal :global {
 			[data-pane='main'] {
 				--pos: 50% !important;

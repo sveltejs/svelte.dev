@@ -459,7 +459,7 @@
 	}
 
 	/* on mobile, override the <SplitPane> controls */
-	@media (max-width: 799px) {
+	@media (max-width: 49.9375em) {
 		:global([data-pane='main']) {
 			--min: 0px !important;
 			--pos: 50% !important;
@@ -474,7 +474,7 @@
 		}
 	}
 
-	@media (min-width: 800px) {
+	@media (min-width: 50em) {
 		.top {
 			width: 100vw;
 			margin: 0;
