@@ -258,7 +258,10 @@
 
 				a.active {
 					color: var(--sk-fg-1);
-					text-decoration: underline;
+					display: block;
+					box-shadow: inset 3px 0 0 var(--sk-fg-accent);
+					padding-left: 0.8rem;
+					margin-left: -0.8rem;
 				}
 			}
 		}
