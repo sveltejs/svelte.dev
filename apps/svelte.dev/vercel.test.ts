@@ -45,6 +45,10 @@ test('preserves existing Vercel configuration and generates unique rules within 
 		routes.rewrite(
 			'/opencode/schema.json',
 			'https://raw.githubusercontent.com/sveltejs/ai-tools/refs/heads/main/packages/opencode/schema.json'
+		),
+		routes.rewrite(
+			'/pi/schema.json',
+			'https://raw.githubusercontent.com/sveltejs/ai-tools/refs/heads/main/packages/pi/schema.json'
 		)
 	]);
 
