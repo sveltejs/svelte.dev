@@ -6,6 +6,9 @@
 
 	let headings: NodeListOf<HTMLHeadingElement>;
 	let current = $state('');
+	let nav: HTMLElement | undefined = $state();
+	let thumb: { top: number; height: number } | null = $state(null);
+	let thumb_placed = $state(false);
 
 	afterNavigate(() => {
 		current = location.hash.slice(1);
@@ -38,9 +41,36 @@
 			current = '';
 		}
 	}
+
+	function place_thumb() {
+		const link = nav?.querySelector('a.active');
+		if (!nav || !link) return (thumb = null);
+
+		const nav_rect = nav.getBoundingClientRect();
+		const link_rect = link.getBoundingClientRect();
+		thumb = { top: link_rect.top - nav_rect.top + nav.scrollTop, height: link_rect.height };
+		requestAnimationFrame(() => (thumb_placed = true));
+	}
+
+	$effect(() => {
+		current;
+		place_thumb();
+	});
+
+	$effect(() => {
+		const list = nav?.querySelector(':scope > ul');
+		if (!list) return;
+		const observer = new ResizeObserver(place_thumb);
+		observer.observe(list);
+		return () => observer.disconnect();
+	});
 </script>
 
-<svelte:window onscroll={update} onhashchange={() => (current = location.hash.slice(1))} />
+<svelte:window
+	onscroll={update}
+	onresize={place_thumb}
+	onhashchange={() => (current = location.hash.slice(1))}
+/>
 
 <aside class="on-this-page">
 	<label>
@@ -48,7 +78,16 @@
 		<h3>On this page</h3>
 	</label>
 
-	<nav>
+	<nav bind:this={nav}>
+		{#if thumb}
+			<span
+				class="thumb"
+				class:animate={thumb_placed}
+				style:translate="0 {thumb.top}px"
+				style:height="{thumb.height}px"
+			></span>
+		{/if}
+
 		<ul>
 			<li>
 				<a href="/{document.slug}" class:active={current === ''}>
@@ -204,6 +243,10 @@
 				display: none;
 				padding: 0 0 0 3rem;
 			}
+
+			.thumb {
+				display: none;
+			}
 		}
 
 		@media (min-width: 75em) {
@@ -234,6 +277,7 @@
 			}
 
 			nav {
+				position: relative;
 				display: block;
 				overflow-y: auto;
 				scrollbar-width: none;
@@ -256,12 +300,39 @@
 					display: block;
 				}
 
+				& > ul {
+					position: relative;
+
+					&::before {
+						content: '';
+						position: absolute;
+						left: calc(-0.8rem + 1px);
+						top: 0;
+						bottom: 0;
+						width: 1px;
+						background: var(--sk-border);
+					}
+				}
+
 				a.active {
 					color: var(--sk-fg-1);
-					display: block;
-					box-shadow: inset 3px 0 0 var(--sk-fg-accent);
-					padding-left: 0.8rem;
-					margin-left: -0.8rem;
+				}
+			}
+
+			.thumb {
+				position: absolute;
+				top: 0;
+				left: 0.2rem;
+				width: 3px;
+				background: var(--sk-fg-accent);
+				z-index: 1;
+
+				@media (prefers-reduced-motion: no-preference) {
+					&.animate {
+						transition:
+							translate 0.2s,
+							height 0.2s;
+					}
 				}
 			}
 		}
