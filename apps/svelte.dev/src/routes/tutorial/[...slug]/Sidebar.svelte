@@ -52,17 +52,19 @@
 		<!-- svelte-ignore a11y-no-static-element-interactions -->
 		<div
 			on:click={(e) => {
-				const node = /** @type {HTMLElement} */ (e.target);
+				const target = /** @type {HTMLElement} */ (e.target);
 
-				if (node.nodeName === 'CODE') {
-					const { file } = node.dataset;
+				/** @type {HTMLElement | null} */
+				const link = target.closest('[data-file]');
 
-					if (file) {
-						dispatch('select', { file });
-					}
+				if (link?.dataset.file) {
+					dispatch('select', { file: link.dataset.file });
 				}
 
-				if (node.nodeName === 'SPAN' && node.classList.contains('filename')) {
+				/** @type {HTMLElement | null} */
+				const node = target.closest('.filename');
+
+				if (node) {
 					const ext = node.dataset.ext || '';
 					const file = exercise.scope.prefix + node.textContent + ext;
 
@@ -131,6 +133,7 @@
 			[data-file],
 			.filename {
 				cursor: pointer;
+				text-align: left;
 
 				&::before {
 					position: relative;

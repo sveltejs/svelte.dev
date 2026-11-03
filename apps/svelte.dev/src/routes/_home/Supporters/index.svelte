@@ -51,6 +51,10 @@
 		text-align: center;
 		max-width: 27em;
 		padding: 0 var(--sk-page-padding-side);
+
+		a {
+			text-decoration: underline;
+		}
 	}
 
 	.layout {

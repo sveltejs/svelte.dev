@@ -24,5 +24,9 @@
 		padding: 1rem 0 0 0;
 		font: var(--sk-font-ui-small);
 		text-transform: uppercase;
+
+		a {
+			text-decoration: underline;
+		}
 	}
 </style>

@@ -6,6 +6,8 @@
 
 	let { data } = $props();
 
+	const id = $props.id();
+
 	const { login, logout } = get_app_context();
 
 	const format = (str: string) => ago(new Date(str));
@@ -87,13 +89,8 @@
 						goto(search ? `/apps?search=${encodeURIComponent(search.toString())}` : '/apps');
 					}}
 				>
-					<input
-						type="search"
-						placeholder="Search"
-						aria-label="Search"
-						name="search"
-						value={data.search}
-					/>
+					<label for="{id}-search">Search</label>
+					<input id="{id}-search" type="search" name="search" value={data.search} />
 				</form>
 			{/if}
 		</div>
@@ -108,12 +105,8 @@
 						</a>
 
 						<label>
-							<input
-								aria-label="Select for deletion"
-								type="checkbox"
-								bind:group={selected}
-								value={gist.id}
-							/>
+							<input type="checkbox" bind:group={selected} value={gist.id} />
+							<span class="visually-hidden">Select {gist.name} for deletion</span>
 						</label>
 					</li>
 				{/each}
@@ -193,8 +186,16 @@
 	}
 
 	.controls form {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
 		width: 100%;
 		height: 100%;
+	}
+
+	.user a,
+	p a {
+		text-decoration: underline;
 	}
 
 	.controls input[type='search'] {

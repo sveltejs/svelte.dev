@@ -276,6 +276,10 @@
 					}
 				}
 
+				.ts-toggle-label {
+					display: contents;
+				}
+
 				.ts-toggle {
 					appearance: none;
 					display: flex;
@@ -298,6 +302,8 @@
 
 					&::before {
 						content: 'JS';
+						text-decoration: underline;
+						text-underline-offset: 0.2em;
 					}
 
 					&::after {
@@ -309,10 +315,13 @@
 					&:checked {
 						&::before {
 							opacity: 0.3;
+							text-decoration: none;
 						}
 
 						&::after {
 							opacity: 1;
+							text-decoration: underline;
+							text-underline-offset: 0.2em;
 						}
 					}
 				}

@@ -29,14 +29,9 @@
 	</script>
 </svelte:head>
 
-<button
-	onclick={toggle}
-	class="raised"
-	type="button"
-	aria-pressed={theme.current === 'dark'}
-	aria-label="Toggle dark mode"
->
+<button onclick={toggle} class="raised" type="button" aria-pressed={theme.current === 'dark'}>
 	<span class="icon"></span>
+	<span class="visually-hidden">Toggle dark mode</span>
 </button>
 
 <style>

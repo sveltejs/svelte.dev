@@ -28,7 +28,7 @@
 
 <div class="container">
 	<article class="top" data-pubdate={top.date}>
-		<a href="/{top.slug}" title="Read the article »">
+		<a href="/{top.slug}">
 			<h2>{top.metadata.title}</h2>
 			<p>{@html top.metadata.description}</p>
 		</a>
@@ -43,7 +43,7 @@
 					class:feature={!post.metadata.title.startsWith('What’s new')}
 					data-pubdate={post.date}
 				>
-					<a href="/{post.slug}" title="Read the article »">
+					<a href="/{post.slug}">
 						<h2>{post.metadata.title}</h2>
 						<p>{@html post.metadata.description}</p>
 					</a>
@@ -56,7 +56,7 @@
 		<ul class="feed">
 			{#each whats_new as post}
 				<li>
-					<a href="/{post.slug}" title="Read the article »">
+					<a href="/{post.slug}">
 						{post.metadata.title.replace('What’s new in Svelte: ', '')}
 					</a>
 				</li>

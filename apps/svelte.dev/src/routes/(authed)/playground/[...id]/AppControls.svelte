@@ -35,6 +35,15 @@
 
 	const { login } = get_app_context();
 
+	const id = $props.id();
+
+	const fork_label = $derived(user ? 'fork' : 'log in to fork');
+	const save_label = $derived(
+		user
+			? `save (${browser && navigator.platform === 'MacIntel' ? '⌘' : 'Ctrl'}+S)`
+			: 'log in to save'
+	);
+
 	let saving = $state(false);
 	let justSaved = $state(false);
 	let justForked = $state(false);
@@ -202,7 +211,9 @@
 		{/each} -->
 	</ModalDropdown>
 
+	<label class="visually-hidden" for="{id}-name">Name</label>
 	<input
+		id="{id}-name"
 		bind:value={name}
 		oninput={() => (modified = true)}
 		onfocus={(e) => e.currentTarget.select()}
@@ -214,8 +225,9 @@
 			class="raised icon tooltip"
 			disabled={saving || !user}
 			onclick={() => fork(false)}
-			aria-label={user ? 'fork' : 'log in to fork'}
+			data-tooltip={fork_label}
 		>
+			<span class="visually-hidden">{fork_label}</span>
 			{#if justForked}
 				<Icon size={18} name="check" />
 			{:else}
@@ -227,10 +239,9 @@
 			class="raised icon tooltip"
 			disabled={saving || !user}
 			onclick={save}
-			aria-label={user
-				? `save (${browser && navigator.platform === 'MacIntel' ? '⌘' : 'Ctrl'}+S)`
-				: 'log in to save'}
+			data-tooltip={save_label}
 		>
+			<span class="visually-hidden">{save_label}</span>
 			{#if justSaved}
 				<Icon size={18} name="check" />
 			{:else}
@@ -329,5 +340,9 @@
 
 	.create-new {
 		margin-bottom: 1rem;
+	}
+
+	.secondary-nav-dropdown a[aria-current='page'] {
+		text-decoration: underline;
 	}
 </style>

@@ -81,6 +81,7 @@
 	<!-- svelte-ignore a11y_no_static_element_interactions -->
 	<div class="file-tabs">
 		{#each workspace.file_nodes as file, index (file.name)}
+			<!-- not a button, because buttons are not reliably draggable -->
 			<div
 				class="button"
 				class:editable={file.name !== 'App.svelte'}
@@ -92,7 +93,16 @@
 					workspace.select(file.name);
 					input_value = file.name;
 				}}
-				onkeyup={(e) => e.key === ' ' && workspace.select(file.name)}
+				onkeydown={(e) => {
+					// ignore keys from the rename input and remove button
+					if (e.target !== e.currentTarget) return;
+
+					if (e.key === 'Enter' || e.key === ' ') {
+						e.preventDefault();
+						workspace.select(file.name);
+						input_value = file.name;
+					}
+				}}
 				draggable="true"
 				ondragstart={() => (dragging = file)}
 				ondragover={(e) => (e.preventDefault(), (dragover = file))}
@@ -109,59 +119,57 @@
 
 				<span class="filename">
 					{(file === workspace.current && file.name !== 'App.svelte' ? input_value : file.name) +
-						(workspace.modified[file.name] ? '*' : '') || ' '}
+						(workspace.modified[file.name] ? '*' : '') || ' '}
 				</span>
 
 				{#if file === workspace.current && file.name !== 'App.svelte'}
-					<!-- svelte-ignore a11y_autofocus -->
-					<input
-						spellcheck={false}
-						bind:this={input}
-						bind:value={input_value}
-						onfocus={async (event) => {
-							const input = event.currentTarget;
-							setTimeout(() => {
-								input.select();
-							});
-						}}
-						onblur={() => close_edit(file)}
-						onkeydown={(e) => {
-							if (e.key === 'Enter') {
-								e.preventDefault();
-								e.currentTarget.blur();
-							}
+					<label>
+						<span class="visually-hidden">Rename {file.name}</span>
+						<input
+							spellcheck={false}
+							bind:this={input}
+							bind:value={input_value}
+							onfocus={async (event) => {
+								const input = event.currentTarget;
+								setTimeout(() => {
+									input.select();
+								});
+							}}
+							onblur={() => close_edit(file)}
+							onkeydown={(e) => {
+								if (e.key === 'Enter') {
+									e.preventDefault();
+									e.currentTarget.blur();
+								}
 
-							if (e.key === 'Escape') {
-								input_value = file.name;
-								e.currentTarget.blur();
-							}
-						}}
-					/>
+								if (e.key === 'Escape') {
+									input_value = file.name;
+									e.currentTarget.blur();
+								}
+							}}
+						/>
+					</label>
 
-					<span
+					<button
 						class="remove"
 						onclick={(e) => {
-							// TODO make this a real button, get rid of the keyup listener
 							remove_file(file);
 							e.stopPropagation();
 						}}
-						onkeyup={(e) => e.key === ' ' && remove_file(file)}
 					>
-						<svg viewBox="0 0 24 24">
+						<span class="visually-hidden">Delete {file.name}</span>
+						<svg viewBox="0 0 24 24" aria-hidden="true">
 							<line stroke="#999" x1="18" y1="6" x2="6" y2="18" />
 							<line stroke="#999" x1="6" y1="6" x2="18" y2="18" />
 						</svg>
-					</span>
+					</button>
 				{/if}
 			</div>
 		{/each}
 	</div>
 
-	<button
-		class="raised add-new"
-		onclick={add_new}
-		aria-label="add new component"
-		title="add new component"><span class="icon"></span></button
+	<button class="raised add-new" onclick={add_new}
+		><span class="icon"></span><span class="visually-hidden">Add new component</span></button
 	>
 
 	<div class="runes">
@@ -193,8 +201,10 @@
 				<span>Svelte version</span>
 				<input
 					value={workspace.svelte_version}
-					placeholder="latest"
-					onchange={(ev) => workspace.set_svelte_version(ev.currentTarget.value || 'latest', true)}
+					onchange={(ev) => {
+						ev.currentTarget.value ||= 'latest';
+						workspace.set_svelte_version(ev.currentTarget.value, true);
+					}}
 				/>
 			</label>
 
@@ -204,8 +214,6 @@
 
 			<button
 				class="copy-button"
-				title="Copy `npx sv create --from-playground=&quot;...&quot;` to clipboard"
-				aria-label="Copy `npx sv create --from-playground=&quot;...&quot;` to clipboard"
 				onclick={() => {
 					navigator.clipboard.writeText(
 						`npx sv create --from-playground="${window.location.href}"`
@@ -213,6 +221,9 @@
 				}}
 			>
 				Set up locally
+				<span class="visually-hidden">
+					(copies <code>npx sv create --from-playground</code> command to clipboard)
+				</span>
 			</button>
 		</Toolbox>
 	</div>
@@ -264,6 +275,10 @@
 		--padding-right: 1.4rem;
 		padding: 0 var(--padding-right) 0 var(--padding-left);
 
+		&:focus-visible {
+			outline-offset: -2px;
+		}
+
 		&.editable {
 			--padding-right: 1.8rem;
 		}
@@ -289,6 +304,10 @@
 			height: 100%;
 			cursor: pointer;
 
+			&:focus-visible {
+				outline-offset: -2px;
+			}
+
 			svg {
 				width: 100%;
 				height: 100%;
@@ -300,7 +319,7 @@
 		}
 
 		&[aria-current='true'] {
-			border-bottom: 1px solid var(--sk-fg-accent);
+			border-bottom: 2px solid var(--sk-fg-accent);
 
 			&.editable .filename {
 				cursor: text;

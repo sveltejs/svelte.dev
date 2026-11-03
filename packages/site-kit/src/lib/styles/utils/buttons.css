@@ -117,7 +117,7 @@ button > span.icon {
 	background: var(--sk-fg-3);
 }
 
-button:where(.tooltip, .tooltip-left)[aria-label]:where(:hover, :focus) {
+button:where(.tooltip, .tooltip-left)[data-tooltip]:where(:hover, :focus-visible) {
 	--arrow-size: 1rem;
 
 	&::before {
@@ -132,7 +132,7 @@ button:where(.tooltip, .tooltip-left)[aria-label]:where(:hover, :focus) {
 	}
 
 	&::after {
-		content: attr(aria-label);
+		content: attr(data-tooltip);
 		position: absolute;
 		top: calc(100% + var(--arrow-size));
 		left: 50%;

@@ -16,7 +16,7 @@
 	<header>
 		<h2 id={hash}>
 			<span>{title}</span>
-			<a href="#{hash}" class="permalink" aria-label="permalink">aa</a>
+			<a href="#{hash}" class="permalink"><span class="visually-hidden">permalink</span></a>
 		</h2>
 
 		{#if description}
@@ -35,7 +35,7 @@
 	{#if packages.length > INITIAL_ITEMS}
 		<details {open}>
 			<summary>
-				<span class="raised button" aria-label="Toggle">
+				<span class="raised button">
 					<span class="icon"></span>
 				</span>
 
@@ -70,6 +70,10 @@
 
 		p {
 			margin: 0;
+
+			:global(a) {
+				text-decoration: underline;
+			}
 		}
 	}
 
@@ -158,13 +162,19 @@
 	a.permalink {
 		position: absolute !important;
 		display: block;
-		background: var(--sk-fg-1);
-		color: var(--sk-fg-1) !important;
-		mask: url(icons/hash) 50% 50% no-repeat;
-		mask-size: 2.4rem 2.4rem;
 		width: 2.6rem;
 		height: 2.2rem;
 		top: calc(50% - 1rem);
+
+		/* a mask on the link itself would clip the focus ring */
+		&::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: var(--sk-fg-1);
+			mask: url(icons/hash) 50% 50% no-repeat;
+			mask-size: 2.4rem 2.4rem;
+		}
 
 		@media (max-width: 47.9375em) {
 			right: 0;

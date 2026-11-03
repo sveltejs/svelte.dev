@@ -13,5 +13,9 @@
 <style>
 	.copyright {
 		text-align: center;
+
+		a {
+			text-decoration: underline;
+		}
 	}
 </style>

@@ -47,17 +47,13 @@
 		</div>
 	</ModalDropdown>
 
-	<a
-		href={exercise.prev ? `/tutorial/${exercise.prev?.slug}` : undefined}
-		aria-label={exercise.prev && 'Previous exercise'}
-	>
+	<a href={exercise.prev ? `/tutorial/${exercise.prev?.slug}` : undefined}>
 		<Icon name="arrow-left" size={18} />
+		{#if exercise.prev}<span class="visually-hidden">Previous exercise</span>{/if}
 	</a>
-	<a
-		href={exercise.next ? `/tutorial/${exercise.next?.slug}` : undefined}
-		aria-label={exercise.next && 'Next exercise'}
-	>
+	<a href={exercise.next ? `/tutorial/${exercise.next?.slug}` : undefined}>
 		<Icon name="arrow-right" size={18} />
+		{#if exercise.next}<span class="visually-hidden">Next exercise</span>{/if}
 	</a>
 
 	<div class="breadcrumbs">
@@ -93,6 +89,7 @@
 
 		&[aria-current='page'] {
 			color: var(--sk-fg-accent);
+			text-decoration: underline;
 		}
 	}
 

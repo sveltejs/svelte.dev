@@ -38,7 +38,6 @@
 		</a>
 
 		<button
-			aria-label="Dismiss"
 			class="raised primary"
 			onclick={() => {
 				persisted.current = JSON.stringify({
@@ -48,6 +47,7 @@
 			}}
 		>
 			<Icon name="close" />
+			<span class="visually-hidden">Dismiss</span>
 		</button>
 	</div>
 {/if}

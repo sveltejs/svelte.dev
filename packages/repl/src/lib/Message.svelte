@@ -38,6 +38,7 @@
 	class:error={kind === 'error'}
 	class:truncate
 >
+	<span class="visually-hidden">{kind === 'error' ? 'Error:' : 'Info:'}</span>
 	{#if details}
 		{message(details)}
 	{:else}
@@ -69,8 +70,13 @@
 		box-sizing: content-box;
 		width: 10px;
 		height: 10px;
-		font-size: 11px;
+		font-size: 1.1rem;
 		font-weight: 700;
+	}
+
+	.info::before {
+		content: 'i';
+		font-family: serif;
 	}
 
 	.truncate {

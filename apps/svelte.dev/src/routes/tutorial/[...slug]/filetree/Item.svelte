@@ -34,6 +34,8 @@
 		onedit
 	}: Props = $props();
 
+	const id = $props.id();
+
 	let cancelling = $state(false);
 
 	function commit(e: Event) {
@@ -61,8 +63,9 @@
 	{onkeydown}
 >
 	{#if renaming}
-		<!-- svelte-ignore a11y_autofocus -->
+		<label class="visually-hidden" for="{id}-rename">Rename {basename}</label>
 		<input
+			id="{id}-rename"
 			type="text"
 			use:forcefocus
 			autocomplete="off"
@@ -103,7 +106,9 @@
 		{#if actions.length > 0}
 			<div class="actions">
 				{#each actions as action}
-					<button aria-label={action.label} class="icon {action.icon}" onclick={action.fn}></button>
+					<button class="icon {action.icon}" onclick={action.fn}>
+						<span class="visually-hidden">{action.label}</span>
+					</button>
 				{/each}
 			</div>
 		{/if}
@@ -204,6 +209,7 @@
 
 	[aria-current='true'] {
 		color: var(--sk-fg-accent);
+		box-shadow: inset 0.3rem 0 0 var(--sk-fg-accent);
 	}
 
 	[aria-current='true']:has(:focus-visible)::after,

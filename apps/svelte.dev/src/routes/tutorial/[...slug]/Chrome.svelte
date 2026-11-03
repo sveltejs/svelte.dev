@@ -16,19 +16,19 @@
 		refresh,
 		toggle_terminal
 	}: Props = $props();
+
+	const id = $props.id();
 </script>
 
 <div class="chrome">
-	<button
-		disabled={loading || !refresh}
-		class="reload icon raised"
-		onclick={refresh}
-		aria-label="reload"
-	></button>
+	<button disabled={loading || !refresh} class="reload icon raised" onclick={refresh}>
+		<span class="visually-hidden">Reload</span>
+	</button>
 
+	<label class="visually-hidden" for="{id}-url">URL</label>
 	<input
+		id="{id}-url"
 		disabled={loading || !change}
-		aria-label="URL"
 		value={path}
 		onchange={(e) => {
 			change?.({ value: e.currentTarget.value });
@@ -46,15 +46,14 @@
 		{href}
 		class="new-tab icon"
 		target="_blank"
-		aria-label={href ? 'open in new tab' : undefined}
 		tabindex="0"
-	></a> -->
+	><span class="visually-hidden">Open in new tab</span></a> -->
 
 	<button
 		disabled={loading || !toggle_terminal}
 		class="terminal raised"
 		onclick={() => toggle_terminal?.()}
-		aria-label="toggle terminal"><span class="icon"></span></button
+		><span class="icon"></span><span class="visually-hidden">Toggle terminal</span></button
 	>
 </div>
 

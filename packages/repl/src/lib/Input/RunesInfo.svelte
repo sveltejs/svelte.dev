@@ -112,6 +112,10 @@
 		p {
 			font: var(--sk-font-ui-medium);
 		}
+
+		a {
+			text-decoration: underline;
+		}
 	}
 
 	.popup p:first-child {

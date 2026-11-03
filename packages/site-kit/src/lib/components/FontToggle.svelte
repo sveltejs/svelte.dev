@@ -25,14 +25,9 @@
 	}
 </script>
 
-<button
-	onclick={toggle}
-	class="raised"
-	type="button"
-	aria-pressed={font === 'boring'}
-	aria-label="Toggle font"
->
+<button onclick={toggle} class="raised" type="button" aria-pressed={font === 'boring'}>
 	<span class="icon"></span>
+	<span class="visually-hidden">Toggle font</span>
 </button>
 
 <style>

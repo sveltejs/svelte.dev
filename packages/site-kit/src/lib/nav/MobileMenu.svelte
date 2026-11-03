@@ -140,9 +140,9 @@
 
 												nav_context_instance?.scrollToActive();
 											}}
-											aria-label="Show {link.title} submenu"
 										>
 											<Icon name="arrow-right-chevron" size={18} />
+											<span class="visually-hidden">Show {link.title} submenu</span>
 										</button>
 									{/if}
 								</li>
@@ -172,16 +172,16 @@
 					{/if}
 				</div>
 
-				<label class="back-button">
-					<button
-						class="raised icon"
-						onclick={() => (show_context_menu = false)}
-						inert={!show_context_menu}
-					>
+				<button
+					class="back-button"
+					onclick={() => (show_context_menu = false)}
+					inert={!show_context_menu}
+				>
+					<span class="raised">
 						<Icon name="arrow-left" size={18} />
-					</button>
+					</span>
 					<span>Back to main menu</span>
-				</label>
+				</button>
 			</div>
 		</div>
 	</div>
@@ -314,6 +314,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: start;
+		cursor: pointer;
 		gap: 1rem;
 		font: var(--sk-font-ui-medium);
 		color: var(--sk-fg-3);
@@ -322,6 +323,27 @@
 		height: 4.8rem;
 		padding: 0 var(--sk-page-padding-side);
 		z-index: 10;
+
+		.raised {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 3.2rem;
+			height: 3.2rem;
+		}
+
+		&:hover .raised {
+			border-color: var(--sk-raised-hover-color);
+		}
+
+		&:active .raised {
+			border-color: var(--sk-raised-active-color);
+			border-width: var(--sk-raised-active-width);
+		}
+
+		&:focus-visible {
+			outline-offset: -2px;
+		}
 	}
 
 	.universal .contents,

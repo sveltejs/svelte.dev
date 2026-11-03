@@ -17,6 +17,13 @@ function escapeHTML(html) {
 	return html.replace(/["'&<>]/g, (c) => `&${chars[c]};`);
 }
 
+/**
+ * feed readers do not load our css, so hidden text would be visible
+ * @param {string} html
+ */
+const strip_visually_hidden = (html) =>
+	html.replace(/<span class="visually-hidden">[^<]*<\/span>/g, '');
+
 /** @param {import('@sveltejs/site-kit').Document[]} posts */
 const get_rss = async (posts) => {
 	const { references } = docs;
@@ -30,7 +37,7 @@ const get_rss = async (posts) => {
 			<title>${escapeHTML(post.metadata.title)}</title>
 			<link>https://svelte.dev/${post.slug}</link>
 			<author>${escapeHTML(post.metadata.author)}</author>
-			<description>${escapeHTML(await render_content(post.file, post.body, { references }))}</description>
+			<description>${escapeHTML(strip_visually_hidden(await render_content(post.file, post.body, { references })))}</description>
 			<pubDate>${new Date(/** @type {string} */ (post.file.split('/').pop()).slice(0, 10)).toUTCString()}</pubDate>
 		</item>
 	`

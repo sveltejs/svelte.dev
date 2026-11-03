@@ -31,7 +31,9 @@
 	});
 </script>
 
-<nav aria-label="Docs" bind:this={nav}>
+<nav aria-labelledby="docs-nav-heading" bind:this={nav}>
+	<h2 id="docs-nav-heading" class="visually-hidden">Docs</h2>
+
 	<ul class="sidebar">
 		{#each contents ?? [] as section}
 			<li>

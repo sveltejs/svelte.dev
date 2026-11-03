@@ -70,9 +70,11 @@ Top navigation bar for the application. It provides a slot for the left side, th
 <nav
 	class:visible
 	style:z-index={$overlay_open && (search.active || $on_this_page_open) ? 80 : null}
-	aria-label="Primary"
+	aria-labelledby="primary-nav-heading"
 >
-	<a class="home-link" href="/" title={home_title} aria-label="Svelte"></a>
+	<h2 id="primary-nav-heading" class="visually-hidden">Primary</h2>
+
+	<a class="home-link" href="/"><span class="visually-hidden">Svelte {home_title}</span></a>
 
 	{#if title}
 		<div class="current-section mobile">
@@ -127,16 +129,19 @@ Top navigation bar for the application. It provides a slot for the left side, th
 			<Search />
 
 			<div class="external-links">
-				<a href="/chat" aria-label="Discord Chat">
+				<a href="/chat">
 					<span data-icon="discord"></span>
+					<span class="visually-hidden">Discord Chat</span>
 				</a>
 
-				<a href="https://bsky.app/profile/svelte.dev" aria-label="Svelte on Bluesky">
+				<a href="https://bsky.app/profile/svelte.dev">
 					<span data-icon="bluesky"></span>
+					<span class="visually-hidden">Svelte on Bluesky</span>
 				</a>
 
-				<a href="https://github.com/sveltejs" aria-label="GitHub Organization">
+				<a href="https://github.com/sveltejs">
 					<span data-icon="github"></span>
+					<span class="visually-hidden">GitHub Organization</span>
 				</a>
 			</div>
 
@@ -148,13 +153,13 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 	<div class="mobile mobile-menu">
 		<button
-			aria-label="Search"
 			class="raised icon search"
 			onclick={() => {
 				search.active = true;
 			}}
 		>
 			<Icon name="search" size={18} />
+			<span class="visually-hidden">Search</span>
 		</button>
 
 		<FontToggle />
@@ -163,7 +168,6 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 		<button
 			bind:this={menu_button}
-			aria-label="Toggle menu"
 			aria-expanded={open}
 			class="menu-toggle raised icon"
 			class:open
@@ -176,6 +180,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 			}}
 		>
 			<Icon name={open ? 'close' : 'menu'} size={16} />
+			<span class="visually-hidden">Toggle menu</span>
 		</button>
 	</div>
 </nav>
@@ -266,7 +271,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 			&[aria-current='page'] {
 				color: var(--sk-fg-accent);
-				box-shadow: inset 0 -1px 0 0 currentColor;
+				box-shadow: inset 0 -2px 0 0 currentColor;
 			}
 
 			&:not(.secondary) {
@@ -276,6 +281,11 @@ Top navigation bar for the application. It provides a slot for the left side, th
 			&.secondary {
 				box-shadow: none;
 				line-height: 1;
+
+				&[aria-current='page'] {
+					text-decoration: underline;
+					text-underline-offset: 0.2em;
+				}
 			}
 		}
 	}
