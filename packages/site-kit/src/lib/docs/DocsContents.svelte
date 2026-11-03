@@ -108,9 +108,7 @@
 
 	[aria-current='page'] {
 		color: var(--sk-fg-accent);
-		box-shadow: inset 3px 0 0 var(--sk-fg-accent);
-		padding-left: 0.8rem;
-		margin-left: -0.8rem;
+		text-decoration: underline;
 	}
 
 	ul ul,

@@ -283,7 +283,8 @@ Top navigation bar for the application. It provides a slot for the left side, th
 				line-height: 1;
 
 				&[aria-current='page'] {
-					box-shadow: inset 3px 0 0 var(--sk-fg-accent);
+					text-decoration: underline;
+					text-underline-offset: 0.2em;
 				}
 			}
 		}
