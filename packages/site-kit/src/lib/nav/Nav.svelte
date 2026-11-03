@@ -284,7 +284,6 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 				&[aria-current='page'] {
 					box-shadow: inset 3px 0 0 var(--sk-fg-accent);
-					padding-left: 0.8rem;
 				}
 			}
 		}
