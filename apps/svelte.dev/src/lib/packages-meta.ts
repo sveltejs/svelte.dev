@@ -47,9 +47,14 @@ const FEATURED: {
 				description: 'A compiler-based i18n library that emits tree-shakeable message functions'
 			},
 			{
-				name: 'vite-plugin-devtools-json',
-				svAlias: 'devtools-json',
-				description: 'Generates Chromium DevTools project settings during development'
+				name: '@sveltejs/enhanced-img',
+				svAlias: 'enhanced-img',
+				description: 'Image optimization for your Svelte apps'
+			},
+			{
+				name: '@sveltejs/mcp',
+				svAlias: 'ai-tools',
+				description: 'Svelte AI tools that help your LLM write better Svelte code'
 			}
 		]
 	},
@@ -98,19 +103,7 @@ const FEATURED: {
 			{ name: '@sveltejs/adapter-bun', description: 'Builds a standalone Bun server' },
 			{ name: '@deno/svelte-adapter', description: 'Builds your app for Deno Deploy' },
 			{ name: 'amplify-adapter', description: 'Builds your app for AWS Amplify' },
-			{ name: 'svelte-kit-sst', description: 'Builds your app for AWS Lambda and AWS Lamda@Edge' },
-			{
-				name: 'svelte-adapter-appengine',
-				description: 'Builds your app for Google Cloud App Engine'
-			},
-			{
-				name: 'sveltekit-adapter-chrome-extension',
-				description: 'Builds your app as a Chrome extension using manifest v3'
-			},
-			{
-				name: '@slicemachine/adapter-sveltekit',
-				description: "Integrate with Prismic's Slice Machine"
-			}
+			{ name: 'svelte-kit-sst', description: 'Builds your app for AWS Lambda and AWS Lamda@Edge' }
 		]
 	},
 	{
@@ -151,6 +144,7 @@ const FEATURED: {
 		title: 'Rich text editing',
 		packages: [
 			{ name: 'prosekit', description: 'Framework agnostic and headless rich text editor' },
+			{ name: 'svedit', description: 'Structured, full-canvas editing for Svelte' },
 			{ name: 'svelte-lexical', description: 'Rich text editor for Svelte based on lexical' },
 			{ name: 'typewriter-editor' }
 		]
@@ -202,7 +196,7 @@ const FEATURED: {
 				name: 'svelte-kit-sessions',
 				description: 'Session management library for SvelteKit'
 			},
-			{ name: '@passlock/sveltekit' }
+			{ name: '@passlock/browser' }
 		]
 	},
 	{
@@ -239,7 +233,10 @@ const FEATURED: {
 	{
 		title: 'Media',
 		packages: [
-			{ name: '@sveltejs/enhanced-img' },
+			{
+				name: '@sveltejs/enhanced-img',
+				description: 'Image optimization for your Svelte apps'
+			},
 			{
 				name: '@unpic/svelte',
 				description: 'Responsive image component that integrates with popular CDNs'
@@ -281,7 +278,10 @@ const FEATURED: {
 			{ name: '@threlte/core' },
 			{ name: '@neoconfetti/svelte', description: 'Confetti explosion' },
 			{ name: 'svelte-motion', description: 'Animation library based on framer-motion' },
-			{ name: '@lottiefiles/svelte-lottie-player', description: 'Lottie animation player' },
+			{
+				name: '@lottiefiles/dotlottie-svelte',
+				description: 'Lottie and dotLottie animation player'
+			},
 			{
 				name: '@tsparticles/svelte',
 				description: 'Easily create highly customizable particles, confetti, and fireworks'
@@ -312,7 +312,8 @@ const FEATURED: {
 		title: 'Devtools',
 		packages: [
 			{ name: 'svelte-render-scan', description: 'Visual debugging tool' },
-			{ name: 'svelte-inspect-value', description: 'Value inspector component' }
+			{ name: 'svelte-inspect-value', description: 'Value inspector component' },
+			{ name: 'sonda', description: 'Universal bundle analyzer and visualizer' }
 		]
 	},
 	{
@@ -398,6 +399,19 @@ const FEATURED: {
 			},
 			{ name: 'felte', description: 'An extensible form library' },
 			{ name: '@tanstack/svelte-form', description: 'Powerful, type-safe forms' }
+		]
+	},
+	{
+		title: 'Browser extensions',
+		packages: [
+			{
+				name: 'wxt',
+				description: 'Build cross-browser extensions with Svelte using the official Svelte module'
+			},
+			{
+				name: '@crxjs/vite-plugin',
+				description: 'Vite plugin for building Chrome extensions with HMR'
+			}
 		]
 	}
 ];

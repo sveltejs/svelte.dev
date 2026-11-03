@@ -53,7 +53,7 @@ To see all updates to Svelte and SvelteKit, check out the [Svelte](https://githu
 
 ### Educational Content
 
-- [Have Single-Page Apps Ruined the Web?](https://www.youtube.com/watch?v=860d8usGC0o) Rich Harris answers the controversial question at this year's Jamstack Conf
+- [Have Single-Page Apps Ruined the Web?](https://2021.jamstackconf.com/talk/c17544108e71/transitional-apps/) Rich Harris answers the controversial question at this year's Jamstack Conf
 - [Svelte vs SvelteKit - What's The Difference?](https://www.youtube.com/watch?v=IKhtnhQKjxQ) LevelUpTuts provides a quick guide to explaining the relationship between the two projects. You can check out the rest of Scott Tolinski's guides to Svelte in his new series, ["Weekly Svelte"](https://www.youtube.com/playlist?list=PLLnpHn493BHF-Onm1MQgKC1psvW-rJuYi)
 - [WebJeda's SvelteKit Hooks](https://www.youtube.com/watch?v=RarufLoEL08&list=PLm_Qt4aKpfKgzcTiMT2cgWGBDBIPK06DQ) series continues this month with Part 3 - Cookie Session Authentication
 - [Writing Context Aware Styles in a Svelte App](https://www.ryanfiller.com/blog/tips/svelte-contex-aware-styles) is a guide to writing self-contained components that are able to dynamically adapt to their parents
