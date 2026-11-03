@@ -13,7 +13,7 @@
 	});
 </script>
 
-<button onclick={() => interval /= 2}>speed up</button>
-<button onclick={() => interval *= 2}>slow down</button>
+<button onclick={() => interval = Math.max(10, interval / 2)}>speed up</button>
+<button onclick={() => interval = Math.min(2147483647, interval * 2)}>slow down</button>
 
 <p>elapsed: {elapsed}</p>
