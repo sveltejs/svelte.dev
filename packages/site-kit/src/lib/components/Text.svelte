@@ -302,26 +302,27 @@
 
 					&::before {
 						content: 'JS';
-						text-decoration: underline;
-						text-underline-offset: 0.2em;
+						background: var(--sk-fg-1);
+						color: var(--sk-bg-1);
 					}
 
 					&::after {
 						content: 'TS';
 						border-left: none;
-						opacity: 0.3;
+						opacity: 0.6;
 					}
 
 					&:checked {
 						&::before {
-							opacity: 0.3;
-							text-decoration: none;
+							opacity: 0.6;
+							background: none;
+							color: inherit;
 						}
 
 						&::after {
 							opacity: 1;
-							text-decoration: underline;
-							text-underline-offset: 0.2em;
+							background: var(--sk-fg-1);
+							color: var(--sk-bg-1);
 						}
 					}
 				}

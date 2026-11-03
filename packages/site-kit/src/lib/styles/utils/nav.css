@@ -60,8 +60,8 @@
 	}
 
 	a[aria-current='page'] {
-		text-decoration: underline;
-		text-underline-offset: 0.2em;
+		box-shadow: inset 3px 0 0 var(--sk-fg-accent);
+		padding-left: 0.8rem;
 	}
 
 	/* necessary for reasons i don't fully understand */

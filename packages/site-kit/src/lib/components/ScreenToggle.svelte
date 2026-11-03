@@ -46,9 +46,19 @@
 		z-index: 2;
 	}
 
+	span[aria-current] {
+		justify-self: start;
+		padding: 0 0.6rem;
+		border-radius: var(--sk-border-radius);
+
+		&:first-child {
+			justify-self: end;
+		}
+	}
+
 	span[aria-current='true'] {
-		text-decoration: underline;
-		text-underline-offset: 0.2em;
+		background: var(--sk-fg-1);
+		color: var(--sk-bg-1);
 	}
 
 	span[aria-current='false'] {

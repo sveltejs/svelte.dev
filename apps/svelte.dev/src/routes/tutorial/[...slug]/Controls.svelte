@@ -89,7 +89,6 @@
 
 		&[aria-current='page'] {
 			color: var(--sk-fg-accent);
-			text-decoration: underline;
 		}
 	}
 

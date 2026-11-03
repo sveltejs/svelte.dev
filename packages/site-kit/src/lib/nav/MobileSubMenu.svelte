@@ -169,8 +169,8 @@
 
 		&[aria-current='page'] {
 			color: var(--sk-fg-accent) !important;
-			text-decoration: underline;
-			text-underline-offset: 0.2em;
+			box-shadow: inset 3px 0 0 var(--sk-fg-accent);
+			padding-left: 0.8rem !important;
 		}
 	}
 

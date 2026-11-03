@@ -341,8 +341,4 @@
 	.create-new {
 		margin-bottom: 1rem;
 	}
-
-	.secondary-nav-dropdown a[aria-current='page'] {
-		text-decoration: underline;
-	}
 </style>
