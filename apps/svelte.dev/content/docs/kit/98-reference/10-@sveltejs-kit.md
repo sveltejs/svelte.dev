@@ -2493,6 +2493,22 @@ issues: StandardSchemaV1.Issue[];
 The validation issues
 
 </div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+remote?: {
+	name?: string;
+	file?: string;
+};
+```
+
+<div class="ts-block-property-details">
+
+Information about the remote function that failed validation
+
+</div>
 </div></div>
 
 
