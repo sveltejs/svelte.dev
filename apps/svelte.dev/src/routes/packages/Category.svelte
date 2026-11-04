@@ -16,7 +16,7 @@
 	<header>
 		<h2 id={hash}>
 			<span>{title}</span>
-			<a href="#{hash}" class="permalink"><span class="visually-hidden">permalink</span></a>
+			<a href="#{hash}" class="permalink" aria-label="permalink">aa</a>
 		</h2>
 
 		{#if description}
@@ -35,7 +35,7 @@
 	{#if packages.length > INITIAL_ITEMS}
 		<details {open}>
 			<summary>
-				<span class="raised button">
+				<span class="raised button" aria-label="Toggle">
 					<span class="icon"></span>
 				</span>
 

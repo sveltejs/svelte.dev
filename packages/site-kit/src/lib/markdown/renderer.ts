@@ -94,7 +94,7 @@ function highlight_source(source: string, language: string) {
 const docs_markdown = new marked.Marked({
 	renderer: {
 		code({ text, lang }) {
-			return `<div class="code-block"><div class="controls"><button class="copy-to-clipboard raised"><span class="visually-hidden">Copy to clipboard</span></button></div>${highlight_source(text, lang ?? '')}</div>`;
+			return `<div class="code-block"><div class="controls"><button class="copy-to-clipboard raised" title="Copy to clipboard" aria-label="Copy to clipboard"></button></div>${highlight_source(text, lang ?? '')}</div>`;
 		}
 	}
 });
@@ -669,10 +669,10 @@ export async function render_content_markdown(
 				return `
 					<div class="code-block">
 						<div class="controls">
-							<div class="tabs" role="tablist">${buttons.join('')}</div>
+							<div class="tabs" role="tablist" aria-label="Files">${buttons.join('')}</div>
 							<div class="open-in-playground"><a href="/playground/untitled#${current_block.hash}">Open <span class="if-large">in playground</span></a></div>
-							${current_block.converted ? `<label class="ts-toggle-label"><input class="ts-toggle raised" checked type="checkbox"><span class="visually-hidden">Show TypeScript</span></label>` : ``}
-							<button class="copy-to-clipboard raised"><span class="visually-hidden">Copy to clipboard</span></button>
+							${current_block.converted ? `<input class="ts-toggle raised" checked title="Toggle language" type="checkbox" aria-label="Toggle JS/TS">` : ``}
+							<button class="copy-to-clipboard raised" title="Copy to clipboard" aria-label="Copy to clipboard"></button>
 						</div>`;
 			} else if (text.trim() === '<!-- codeblock:end -->') {
 				current_block = null;
@@ -689,7 +689,7 @@ export async function render_content_markdown(
 			headings.length = depth;
 			const slug = headings.filter(Boolean).join('-');
 
-			return `<h${depth} id="${slug}"><span>${html}</span><a href="#${slug}" class="permalink"><span class="visually-hidden">permalink</span></a></h${depth}>`;
+			return `<h${depth} id="${slug}"><span>${html}</span><a href="#${slug}" class="permalink" aria-label="permalink"></a></h${depth}>`;
 		},
 		code({ text }) {
 			const decodedText = decode_html_entities(text);
@@ -722,11 +722,11 @@ export async function render_content_markdown(
 					}
 
 					if (file.rendered.length > 1) {
-						html += `<label class="ts-toggle-label"><input class="ts-toggle raised" checked type="checkbox"><span class="visually-hidden">Show TypeScript</span></label>`;
+						html += `<input class="ts-toggle raised" checked title="Toggle language" type="checkbox" aria-label="Toggle JS/TS">`;
 					}
 
 					if (file.can_copy) {
-						html += `<button class="copy-to-clipboard raised"><span class="visually-hidden">Copy to clipboard</span></button>`;
+						html += `<button class="copy-to-clipboard raised" title="Copy to clipboard" aria-label="Copy to clipboard"></button>`;
 					}
 
 					html += '</div>';

@@ -6,15 +6,10 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 	import { search } from '../state/search.svelte';
 
 	let { q = '', label = 'Search' }: { q?: string; label?: string } = $props();
-
-	const id = $props.id();
 </script>
 
 <form class="search-container" action="/search">
-	<label for={id} class:hidden={q}>{label}</label>
-
 	<input
-		{id}
 		value={q}
 		oninput={(e) => {
 			search.query = e.currentTarget.value;
@@ -34,6 +29,8 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 		}}
 		type="search"
 		name="q"
+		placeholder={label}
+		aria-label={label}
 		spellcheck="false"
 	/>
 
@@ -82,32 +79,10 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 		display: none;
 	}
 
-	/* clicks must reach the input, which opens the search */
-	label {
-		position: absolute;
-		left: 2.8rem;
-		z-index: 1;
-		pointer-events: none;
+	input::placeholder {
 		text-transform: lowercase;
 		color: var(--sk-fg-4);
-	}
-
-	label.hidden {
-		clip-path: inset(50%);
-		width: 1px;
-		height: 1px;
-		overflow: hidden;
-		white-space: nowrap;
-	}
-
-	@media (max-width: 59.9375em) {
-		label {
-			clip-path: inset(50%);
-			width: 1px;
-			height: 1px;
-			overflow: hidden;
-			white-space: nowrap;
-		}
+		opacity: 0;
 	}
 
 	.shortcut {
@@ -131,6 +106,10 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 	@media (min-width: 60em) {
 		.search-container {
 			width: 19rem;
+		}
+
+		input::placeholder {
+			opacity: 1;
 		}
 	}
 </style>

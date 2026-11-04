@@ -138,9 +138,12 @@
 		{/if}
 
 		{#if log.stack || log.command === 'group'}
-			<button class="arrow" aria-expanded={!log.collapsed}>
-				<span class="glyph" class:expand={!log.collapsed} aria-hidden="true">{'\u25B6'}</span>
-				<span class="visually-hidden">{log.command === 'group' ? 'Group' : 'Stack trace'}</span>
+			<button
+				class="arrow"
+				aria-expanded={!log.collapsed}
+				aria-label={log.command === 'group' ? 'Group' : 'Stack trace'}
+			>
+				<span class="glyph" class:expand={!log.collapsed}>{'\u25B6'}</span>
 			</button>
 		{/if}
 

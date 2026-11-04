@@ -38,7 +38,6 @@
 	class:error={kind === 'error'}
 	class:truncate
 >
-	<span class="visually-hidden">{kind === 'error' ? 'Error:' : 'Info:'}</span>
 	{#if details}
 		{message(details)}
 	{:else}

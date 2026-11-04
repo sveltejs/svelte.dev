@@ -108,8 +108,12 @@
 						</a>
 
 						<label>
-							<input type="checkbox" bind:group={selected} value={gist.id} />
-							<span class="visually-hidden">Select {gist.name} for deletion</span>
+							<input
+								aria-label="Select for deletion"
+								type="checkbox"
+								bind:group={selected}
+								value={gist.id}
+							/>
 						</label>
 					</li>
 				{/each}

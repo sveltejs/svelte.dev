@@ -123,42 +123,40 @@
 				</span>
 
 				{#if file === workspace.current && file.name !== 'App.svelte'}
-					<label>
-						<span class="visually-hidden">Rename {file.name}</span>
-						<input
-							spellcheck={false}
-							bind:this={input}
-							bind:value={input_value}
-							onfocus={async (event) => {
-								const input = event.currentTarget;
-								setTimeout(() => {
-									input.select();
-								});
-							}}
-							onblur={() => close_edit(file)}
-							onkeydown={(e) => {
-								if (e.key === 'Enter') {
-									e.preventDefault();
-									e.currentTarget.blur();
-								}
+					<!-- svelte-ignore a11y_autofocus -->
+					<input
+						spellcheck={false}
+						bind:this={input}
+						bind:value={input_value}
+						onfocus={async (event) => {
+							const input = event.currentTarget;
+							setTimeout(() => {
+								input.select();
+							});
+						}}
+						onblur={() => close_edit(file)}
+						onkeydown={(e) => {
+							if (e.key === 'Enter') {
+								e.preventDefault();
+								e.currentTarget.blur();
+							}
 
-								if (e.key === 'Escape') {
-									input_value = file.name;
-									e.currentTarget.blur();
-								}
-							}}
-						/>
-					</label>
+							if (e.key === 'Escape') {
+								input_value = file.name;
+								e.currentTarget.blur();
+							}
+						}}
+					/>
 
 					<button
 						class="remove"
+						aria-label="Delete {file.name}"
 						onclick={(e) => {
 							remove_file(file);
 							e.stopPropagation();
 						}}
 					>
-						<span class="visually-hidden">Delete {file.name}</span>
-						<svg viewBox="0 0 24 24" aria-hidden="true">
+						<svg viewBox="0 0 24 24">
 							<line stroke="#999" x1="18" y1="6" x2="6" y2="18" />
 							<line stroke="#999" x1="6" y1="6" x2="18" y2="18" />
 						</svg>
@@ -168,8 +166,11 @@
 		{/each}
 	</div>
 
-	<button class="raised add-new" onclick={add_new}
-		><span class="icon"></span><span class="visually-hidden">Add new component</span></button
+	<button
+		class="raised add-new"
+		onclick={add_new}
+		aria-label="add new component"
+		title="add new component"><span class="icon"></span></button
 	>
 
 	<div class="runes">
@@ -201,10 +202,8 @@
 				<span>Svelte version</span>
 				<input
 					value={workspace.svelte_version}
-					onchange={(ev) => {
-						ev.currentTarget.value ||= 'latest';
-						workspace.set_svelte_version(ev.currentTarget.value, true);
-					}}
+					placeholder="latest"
+					onchange={(ev) => workspace.set_svelte_version(ev.currentTarget.value || 'latest', true)}
 				/>
 			</label>
 
@@ -214,6 +213,8 @@
 
 			<button
 				class="copy-button"
+				title="Copy `npx sv create --from-playground=&quot;...&quot;` to clipboard"
+				aria-label="Copy `npx sv create --from-playground=&quot;...&quot;` to clipboard"
 				onclick={() => {
 					navigator.clipboard.writeText(
 						`npx sv create --from-playground="${window.location.href}"`
@@ -221,9 +222,6 @@
 				}}
 			>
 				Set up locally
-				<span class="visually-hidden">
-					(copies <code>npx sv create --from-playground</code> command to clipboard)
-				</span>
 			</button>
 		</Toolbox>
 	</div>

@@ -78,9 +78,7 @@
 		}
 	}}
 >
-	<summary class="raised icon"
-		><Icon name="menu" /><span class="visually-hidden">{label}</span></summary
-	>
+	<summary class="raised icon" aria-label={label}><Icon name="menu" /></summary>
 
 	<div class="contents" use:trap>
 		{@render children()}

@@ -10,6 +10,15 @@
 
 	let { pkg }: Props = $props();
 
+	const formatter = new Intl.DateTimeFormat(undefined, {
+		weekday: 'short',
+		year: 'numeric',
+		month: 'short',
+		day: 'numeric',
+		hour: 'numeric',
+		minute: 'numeric'
+	});
+
 	const href = $derived(
 		pkg.homepage?.replace('https://svelte.dev', '') ||
 			pkg.repo_url ||
@@ -23,6 +32,7 @@
 		{href}
 		target={href.startsWith('/') ? null : '_blank'}
 		rel="noreferrer"
+		aria-label="View project homepage"
 		onclick={(e) => e.stopPropagation()}
 	>
 		<header>
@@ -37,8 +47,8 @@
 			<span class="updated">
 				{pkg.version}
 
-				<strong>
-					<time datetime={pkg.updated}>{ago(new Date(pkg.updated), true)}</time>
+				<strong title={formatter.format(new Date(pkg.updated))}>
+					{ago(new Date(pkg.updated), true)}
 				</strong>
 			</span>
 		</header>
@@ -50,18 +60,16 @@
 		{:else}
 			<p class="stats">
 				{#if pkg.downloads}
-					<span>
+					<span title="{pkg.downloads} downloads">
 						<span data-icon="download"></span>
 						{format_number(+pkg.downloads)}
-						<span class="visually-hidden">downloads</span>
 					</span>
 				{/if}
 
 				{#if pkg.github_stars}
-					<span>
+					<span title="{pkg.github_stars} Github Stars">
 						<span data-icon="star"></span>
 						{format_number(pkg.github_stars)}
-						<span class="visually-hidden">GitHub stars</span>
 					</span>
 				{/if}
 
@@ -78,10 +86,10 @@
 					href="https://npmjs.org/package/{pkg.name}"
 					target="_blank"
 					rel="noreferrer"
+					aria-label="View on npm"
 					onclick={(e) => e.stopPropagation()}
 				>
 					<span data-icon="npm"></span>
-					<span class="visually-hidden">View on npm</span>
 				</a>
 
 				{#if pkg.repo_url}
@@ -89,10 +97,10 @@
 						href={pkg.repo_url}
 						target="_blank"
 						rel="noreferrer"
+						aria-label="View on GitHub"
 						onclick={(e) => e.stopPropagation()}
 					>
 						<span data-icon="github"></span>
-						<span class="visually-hidden">View on GitHub</span>
 					</a>
 				{/if}
 			</span>

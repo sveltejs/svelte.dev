@@ -44,7 +44,7 @@
 
 <aside class="on-this-page">
 	<label>
-		<input type="checkbox" />
+		<input type="checkbox" aria-label="Toggle 'on this page' menu" />
 		<h3>On this page</h3>
 	</label>
 

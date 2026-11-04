@@ -47,13 +47,17 @@
 		</div>
 	</ModalDropdown>
 
-	<a href={exercise.prev ? `/tutorial/${exercise.prev?.slug}` : undefined}>
+	<a
+		href={exercise.prev ? `/tutorial/${exercise.prev?.slug}` : undefined}
+		aria-label={exercise.prev && 'Previous exercise'}
+	>
 		<Icon name="arrow-left" size={18} />
-		{#if exercise.prev}<span class="visually-hidden">Previous exercise</span>{/if}
 	</a>
-	<a href={exercise.next ? `/tutorial/${exercise.next?.slug}` : undefined}>
+	<a
+		href={exercise.next ? `/tutorial/${exercise.next?.slug}` : undefined}
+		aria-label={exercise.next && 'Next exercise'}
+	>
 		<Icon name="arrow-right" size={18} />
-		{#if exercise.next}<span class="visually-hidden">Next exercise</span>{/if}
 	</a>
 
 	<div class="breadcrumbs">

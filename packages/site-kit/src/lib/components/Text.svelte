@@ -276,10 +276,6 @@
 					}
 				}
 
-				.ts-toggle-label {
-					display: contents;
-				}
-
 				.ts-toggle {
 					appearance: none;
 					display: flex;

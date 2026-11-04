@@ -140,9 +140,9 @@
 
 												nav_context_instance?.scrollToActive();
 											}}
+											aria-label="Show {link.title} submenu"
 										>
 											<Icon name="arrow-right-chevron" size={18} />
-											<span class="visually-hidden">Show {link.title} submenu</span>
 										</button>
 									{/if}
 								</li>

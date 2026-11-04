@@ -193,15 +193,13 @@ It appears when the user clicks on the `Search` component or presses the corresp
 						spellcheck="false"
 					/>
 
-					<button class="clear" onclick={() => (search.query = '')}>
+					<button aria-label="Clear" onclick={() => (search.query = '')}>
 						<Icon name="close" />
-						<span class="visually-hidden">Clear</span>
 					</button>
 				</div>
 
-				<button class="raised close" onclick={close}>
+				<button class="raised" aria-label="Close" onclick={close}>
 					<!-- <Icon name="close" /> -->
-					<span class="visually-hidden">Close</span>
 					<kbd>Esc</kbd>
 				</button>
 			</div>
@@ -244,7 +242,8 @@ It appears when the user clicks on the `Search` component or presses the corresp
 										</a>
 
 										<button
-											class="raised icon delete"
+											class="raised icon"
+											aria-label="Delete"
 											onclick={(e) => {
 												search.recent = search.recent.filter((href) => href !== result.href);
 												e.stopPropagation();
@@ -252,7 +251,6 @@ It appears when the user clicks on the `Search` component or presses the corresp
 											}}
 										>
 											<Icon name="delete" size={16} />
-											<span class="visually-hidden">Delete</span>
 										</button>
 									</li>
 								{/each}
@@ -376,7 +374,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 		}
 	}
 
-	button.close {
+	button[aria-label='Close'] {
 		height: 100%;
 		aspect-ratio: 1;
 		background: none;
@@ -441,7 +439,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 				}
 			}
 
-			button.delete {
+			button[aria-label='Delete'] {
 				width: 3.2rem;
 				height: 3.2rem;
 				color: var(--sk-fg-4);
