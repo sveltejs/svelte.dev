@@ -46,6 +46,11 @@
 		z-index: 2;
 	}
 
+	span[aria-current='true'] {
+		text-decoration: underline;
+		text-underline-offset: 0.2em;
+	}
+
 	span[aria-current='false'] {
 		color: var(--sk-fg-4);
 	}

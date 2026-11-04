@@ -197,6 +197,11 @@
 		height: 100%;
 	}
 
+	.user a,
+	p a {
+		text-decoration: underline;
+	}
+
 	.controls input[type='search'] {
 		position: relative;
 		width: 100%;

@@ -70,6 +70,10 @@
 
 		p {
 			margin: 0;
+
+			:global(a) {
+				text-decoration: underline;
+			}
 		}
 	}
 

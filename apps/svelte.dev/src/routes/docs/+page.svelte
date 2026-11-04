@@ -127,6 +127,10 @@
 		box-sizing: content-box;
 		margin: auto;
 		text-wrap: balance;
+
+		> p a {
+			text-decoration: underline;
+		}
 	}
 
 	.options a {

@@ -300,7 +300,7 @@
 		}
 
 		&[aria-current='true'] {
-			border-bottom: 1px solid var(--sk-fg-accent);
+			border-bottom: 2px solid var(--sk-fg-accent);
 
 			&.editable .filename {
 				cursor: text;

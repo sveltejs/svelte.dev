@@ -169,6 +169,8 @@
 
 		&[aria-current='page'] {
 			color: var(--sk-fg-accent) !important;
+			text-decoration: underline;
+			text-underline-offset: 0.2em;
 		}
 	}
 

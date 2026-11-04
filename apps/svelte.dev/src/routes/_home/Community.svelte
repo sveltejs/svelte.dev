@@ -53,6 +53,11 @@
 
 	p {
 		max-width: 28em;
+
+		a {
+			text-decoration: underline;
+		}
+
 		margin-left: auto;
 		margin-right: auto;
 	}
