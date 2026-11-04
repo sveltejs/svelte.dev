@@ -16,6 +16,7 @@
 	import Controls from './Controls.svelte';
 	import Editor from '@sveltejs/repl/editor';
 	import type { Snapshot, PageProps } from './$types.js';
+	import { browser } from '$app/env';
 
 	let { data }: PageProps = $props();
 
@@ -201,7 +202,11 @@
 	solution.set(b);
 
 	// for the things we can't do with media queries
-	let mobile = $derived(w < 800);
+	// 80rem so the breakpoint scales with the font size
+	const root_font_size = browser
+		? parseFloat(getComputedStyle(document.documentElement).fontSize)
+		: 10;
+	let mobile = $derived(w < 80 * root_font_size);
 
 	$effect(() => {
 		// TODO get rid of this store/effect
@@ -459,7 +464,7 @@
 	}
 
 	/* on mobile, override the <SplitPane> controls */
-	@media (max-width: 799px) {
+	@media (max-width: 49.9375em) {
 		:global([data-pane='main']) {
 			--min: 0px !important;
 			--pos: 50% !important;
@@ -474,7 +479,7 @@
 		}
 	}
 
-	@media (min-width: 800px) {
+	@media (min-width: 50em) {
 		.top {
 			width: 100vw;
 			margin: 0;

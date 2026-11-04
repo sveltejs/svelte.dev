@@ -300,13 +300,13 @@
 		height: 4rem;
 	}
 
-	@media (min-width: 540px) {
+	@media (min-width: 33.75em) {
 		ul {
 			grid-template-columns: repeat(2, 1fr);
 		}
 	}
 
-	@media (min-width: 720px) {
+	@media (min-width: 45em) {
 		ul {
 			grid-template-columns: repeat(3, 1fr);
 		}

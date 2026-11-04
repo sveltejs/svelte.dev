@@ -33,7 +33,7 @@
 		all: unset;
 	}
 
-	@media (min-width: 832px) {
+	@media (min-width: 52em) {
 		.content {
 			padding-left: calc(var(--sidebar-width) + var(--sk-page-padding-side));
 		}
@@ -53,7 +53,7 @@
 		}
 	}
 
-	@media (min-width: 832px) {
+	@media (min-width: 52em) {
 		.toc-container {
 			display: block;
 			width: var(--sidebar-width);
@@ -79,7 +79,7 @@
 		}
 	}
 
-	@media (min-width: 1200px) {
+	@media (min-width: 75em) {
 		.container {
 			--sidebar-width: max(
 				28rem,

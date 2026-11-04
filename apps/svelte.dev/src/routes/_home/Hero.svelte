@@ -131,7 +131,7 @@
 		gap: 0.5rem;
 	}
 
-	@media (min-width: 800px) {
+	@media (min-width: 50em) {
 		.hero-content {
 			--width: clamp(60rem, 50vw, 80rem);
 			align-items: start;
@@ -148,7 +148,7 @@
 		}
 	}
 
-	@media (min-width: 1400px) {
+	@media (min-width: 87.5em) {
 		.hero {
 			height: calc(20rem + 20vw);
 			padding: 10rem 0 0 0;

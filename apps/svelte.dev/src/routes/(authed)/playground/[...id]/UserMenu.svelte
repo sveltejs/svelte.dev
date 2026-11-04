@@ -44,7 +44,7 @@
 		display: none;
 		opacity: var(--opacity);
 
-		@media (min-width: 600px) {
+		@media (min-width: 37.5em) {
 			display: inline-block;
 			margin-right: 0.3rem;
 		}

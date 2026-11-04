@@ -50,7 +50,7 @@
 	}
 
 	.home :global {
-		@media (min-width: 800px) {
+		@media (min-width: 50em) {
 			h2 {
 				font: var(--sk-font-h1);
 			}
