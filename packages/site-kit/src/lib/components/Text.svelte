@@ -298,12 +298,12 @@
 						font-size: 1.2rem;
 						font-family: var(--sk-font-family-mono);
 						color: inherit;
+						text-underline-offset: 0.2em;
 					}
 
 					&::before {
 						content: 'JS';
-						background: var(--sk-fg-1);
-						color: var(--sk-bg-1);
+						text-decoration: underline;
 					}
 
 					&::after {
@@ -315,14 +315,12 @@
 					&:checked {
 						&::before {
 							opacity: 0.6;
-							background: none;
-							color: inherit;
+							text-decoration: none;
 						}
 
 						&::after {
 							opacity: 1;
-							background: var(--sk-fg-1);
-							color: var(--sk-bg-1);
+							text-decoration: underline;
 						}
 					}
 				}
