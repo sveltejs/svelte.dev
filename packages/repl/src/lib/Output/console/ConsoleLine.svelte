@@ -310,9 +310,5 @@
 
 	.styled {
 		white-space: pre-wrap;
-
-		:global(a) {
-			text-decoration: underline;
-		}
 	}
 </style>

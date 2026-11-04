@@ -70,10 +70,6 @@
 
 		p {
 			margin: 0;
-
-			:global(a) {
-				text-decoration: underline;
-			}
 		}
 	}
 
@@ -162,6 +158,7 @@
 	a.permalink {
 		position: absolute !important;
 		display: block;
+		text-decoration: none;
 		background: var(--sk-fg-1);
 		color: var(--sk-fg-1) !important;
 		mask: url(icons/hash) 50% 50% no-repeat;

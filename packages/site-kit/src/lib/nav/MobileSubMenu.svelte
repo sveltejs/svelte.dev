@@ -166,6 +166,11 @@
 	a {
 		display: flex;
 		align-items: center;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
 
 		&[aria-current='page'] {
 			color: var(--sk-fg-accent) !important;

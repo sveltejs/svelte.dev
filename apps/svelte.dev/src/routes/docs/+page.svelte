@@ -127,15 +127,12 @@
 		box-sizing: content-box;
 		margin: auto;
 		text-wrap: balance;
-
-		> p a {
-			text-decoration: underline;
-		}
 	}
 
 	.options a {
 		display: block;
 		color: inherit;
+		text-decoration: none;
 		margin: 1em -1.6rem;
 		padding: 1.6rem;
 		background-color: var(--sk-bg-1);

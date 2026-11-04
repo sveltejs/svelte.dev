@@ -51,10 +51,6 @@
 		text-align: center;
 		max-width: 27em;
 		padding: 0 var(--sk-page-padding-side);
-
-		a {
-			text-decoration: underline;
-		}
 	}
 
 	.layout {
@@ -98,6 +94,7 @@
 		aspect-ratio: 1;
 		border-radius: 50%;
 		text-indent: -9999px;
+		text-decoration: none;
 		display: inline-block;
 		background: no-repeat;
 		background-size: auto 102%;

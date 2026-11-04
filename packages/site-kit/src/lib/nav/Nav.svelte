@@ -298,12 +298,14 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 			a {
 				outline-offset: -2px;
+				text-decoration: none;
 			}
 		}
 	}
 
 	.home-link {
 		--padding-right: 1rem;
+		text-decoration: none;
 		width: 3.4rem;
 		height: 100%;
 		background: url(../branding/svelte-logo.svg) no-repeat 0 50% / calc(100% - var(--padding-right))

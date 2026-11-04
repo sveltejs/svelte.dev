@@ -156,12 +156,8 @@
 		font: var(--sk-font-ui-medium);
 	}
 
-	p a,
 	button {
 		text-decoration: underline;
-	}
-
-	button {
 		color: var(--sk-fg-accent);
 		padding: 0 0 1px;
 		position: relative;

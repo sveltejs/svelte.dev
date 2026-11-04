@@ -58,7 +58,6 @@
 
 		a {
 			text-wrap: nowrap;
-			text-decoration: underline;
 		}
 	}
 

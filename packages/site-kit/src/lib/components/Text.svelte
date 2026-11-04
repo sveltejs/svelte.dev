@@ -538,6 +538,7 @@
 		a.permalink {
 			position: absolute !important;
 			display: block;
+			text-decoration: none;
 			background: var(--sk-fg-1);
 			mask: url(icons/hash) 50% 50% no-repeat;
 			mask-size: 2.4rem 2.4rem;

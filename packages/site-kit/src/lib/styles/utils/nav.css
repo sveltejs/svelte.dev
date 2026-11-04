@@ -55,6 +55,14 @@
 		padding-left: 2rem;
 	}
 
+	a {
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
 	a:not([aria-current='page']) {
 		color: inherit;
 	}

@@ -58,13 +58,8 @@ ol {
 
 a {
 	position: relative;
-	text-decoration: none;
 	cursor: pointer;
 	color: inherit;
-}
-
-a:hover {
-	text-decoration: underline;
 }
 
 h1 {
