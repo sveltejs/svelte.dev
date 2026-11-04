@@ -47,11 +47,12 @@
 
 	function remove_file(file: File) {
 		let result = confirm(`Are you sure you want to delete ${file.name}?`);
-		if (!result) return;
+		if (!result) return false;
 
 		workspace.remove(file);
 
 		onchange();
+		return true;
 	}
 
 	async function add_new() {
@@ -87,13 +88,14 @@
 				class:editable={file.name !== 'App.svelte'}
 				role="button"
 				tabindex="0"
+				aria-keyshortcuts={file.name !== 'App.svelte' ? 'Delete' : undefined}
 				aria-current={file === workspace.current}
 				class:drag-over={file === dragover}
 				onclick={() => {
 					workspace.select(file.name);
 					input_value = file.name;
 				}}
-				onkeydown={(e) => {
+				onkeydown={async (e) => {
 					// ignore keys from the rename input and remove button
 					if (e.target !== e.currentTarget) return;
 
@@ -101,6 +103,18 @@
 						e.preventDefault();
 						workspace.select(file.name);
 						input_value = file.name;
+					}
+
+					// backspace is the delete key on mac keyboards
+					if ((e.key === 'Delete' || e.key === 'Backspace') && file.name !== 'App.svelte') {
+						e.preventDefault();
+						const tabs = e.currentTarget.parentElement!;
+
+						if (remove_file(file)) {
+							await tick();
+							const remaining = tabs.querySelectorAll<HTMLElement>('[role="button"]');
+							remaining[Math.min(index, remaining.length - 1)]?.focus();
+						}
 					}
 				}}
 				draggable="true"
@@ -148,8 +162,10 @@
 						}}
 					/>
 
+					<!-- not in the tab order, keyboard users press delete on the tab -->
 					<button
 						class="remove"
+						tabindex="-1"
 						aria-label="Delete {file.name}"
 						onclick={(e) => {
 							remove_file(file);
