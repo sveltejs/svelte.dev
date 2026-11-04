@@ -172,12 +172,12 @@
 			mask-size: 2.4rem 2.4rem;
 		}
 
-		@media (max-width: 767px) {
+		@media (max-width: 47.9375em) {
 			right: 0;
 			scale: 0.8;
 		}
 
-		@media (min-width: 768px) {
+		@media (min-width: 48em) {
 			left: -3rem;
 			opacity: 0;
 			transition: opacity 0.2s;
