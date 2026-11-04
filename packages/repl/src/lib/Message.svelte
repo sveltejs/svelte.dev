@@ -78,6 +78,14 @@
 		font-family: serif;
 	}
 
+	/* filled with a cross, so errors differ from info by more than colour */
+	.error::before {
+		content: '';
+		background: white
+			url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M2 2l6 6M8 2l-6 6' stroke='%23da106e' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E")
+			50% 50% / 10px no-repeat;
+	}
+
 	.truncate {
 		white-space: pre;
 		overflow-x: hidden;
