@@ -58,6 +58,10 @@ const nav_links: NavigationLink[] = [
 		slug: 'packages'
 	},
 	{
+		title: 'Showcase',
+		slug: 'showcase'
+	},
+	{
 		title: 'Blog',
 		slug: 'blog'
 	}
