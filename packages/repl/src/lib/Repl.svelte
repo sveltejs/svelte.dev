@@ -193,7 +193,11 @@
 			event.returnValue = '';
 		}
 	}
-	let mobile = $derived(width < 540);
+	// 54rem so the breakpoint scales with the font size
+	const root_font_size = BROWSER
+		? parseFloat(getComputedStyle(document.documentElement).fontSize)
+		: 10;
+	let mobile = $derived(width < 54 * root_font_size);
 
 	$effect(() => {
 		$toggleable = mobile && orientation === 'columns' && embedded !== 'output-only';
@@ -341,7 +345,7 @@
 	}
 
 	/* on mobile, override the <SplitPane> controls */
-	@media (max-width: 799px) {
+	@media (max-width: 49.9375em) {
 		.container-normal :global {
 			[data-pane='main'] {
 				--pos: 50% !important;

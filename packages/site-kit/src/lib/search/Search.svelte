@@ -103,7 +103,7 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 		font-family: inherit;
 	}
 
-	@media (min-width: 960px) {
+	@media (min-width: 60em) {
 		.search-container {
 			width: 19rem;
 		}

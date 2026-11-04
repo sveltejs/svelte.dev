@@ -103,7 +103,7 @@
 		display: initial;
 	}
 
-	@media (min-width: 832px) {
+	@media (min-width: 52em) {
 		.banner {
 			top: initial;
 			bottom: 0;

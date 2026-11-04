@@ -175,7 +175,7 @@
 			margin-bottom: 0;
 		}
 
-		@media (min-width: 480px) {
+		@media (min-width: 30em) {
 			margin: 1em -2.4rem;
 			padding: 2.4rem;
 		}

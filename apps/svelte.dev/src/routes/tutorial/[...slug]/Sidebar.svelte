@@ -166,13 +166,13 @@
 		}
 	}
 
-	@media (max-width: 799px) {
+	@media (max-width: 49.9375em) {
 		.text {
 			border-right: none;
 		}
 	}
 
-	@media (min-width: 800px) {
+	@media (min-width: 50em) {
 		.text :global(.mobile) {
 			display: none;
 		}
