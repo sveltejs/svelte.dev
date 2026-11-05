@@ -1,9 +1,6 @@
 <script lang="ts">
 	import type { Picture } from '@sveltejs/enhanced-img';
-	import { untrack } from 'svelte';
-	import { quintOut } from 'svelte/easing';
-	import { prefersReducedMotion } from 'svelte/motion';
-	import { crossfade, fly } from 'svelte/transition';
+	import { Icon } from '@sveltejs/site-kit/components';
 	import { categories, sites } from './sites.ts';
 
 	const screenshots = import.meta.glob<Picture>('./screenshots/*.{jpg,png,webp}', {
@@ -20,16 +17,46 @@
 		])
 	);
 
-	// none is first in its category, which is shown larger below, and neighbours alternate
-	// between light and dark headers so each stands out from the one behind it
-	const stack = pick([
-		'apple-tv',
-		'yahoo-finance',
-		'spotify',
-		'reuters',
-		'bugatti',
-		'starbucks',
-		'nrk'
+	interface Placement {
+		/** percent across */
+		x: number;
+		/** percent down */
+		y: number;
+		/** pixels toward the viewer */
+		z: number;
+		/** degrees turned about the vertical axis */
+		r: number;
+	}
+
+	// none is first in its category, since those are shown larger below, and only those with a
+	// small placement show on small screens
+	const field = place([
+		{ id: 'spotify', wide: { x: 10, y: 20, z: -100, r: 24 }, small: { x: 20, y: 30, z: 0, r: 18 } },
+		{
+			id: 'apple-tv',
+			wide: { x: 31, y: 10, z: -450, r: 10 },
+			small: { x: 78, y: 24, z: -150, r: -16 }
+		},
+		{ id: 'nrk', wide: { x: 58, y: 7, z: -700, r: -4 }, small: { x: 50, y: 10, z: -500, r: 0 } },
+		{ id: 'bugatti', wide: { x: 84, y: 18, z: -200, r: -22 } },
+		{
+			id: 'city-of-sydney',
+			wide: { x: 4, y: 56, z: 150, r: 30 },
+			small: { x: 24, y: 76, z: -100, r: 14 }
+		},
+		{
+			id: 'ons-census-maps',
+			wide: { x: 96, y: 54, z: 120, r: -30 },
+			small: { x: 78, y: 74, z: 50, r: -18 }
+		},
+		{ id: 'starbucks', wide: { x: 15, y: 86, z: -300, r: 18 } },
+		{ id: 'schneider-electric', wide: { x: 39, y: 95, z: -600, r: 6 } },
+		{
+			id: 'the-pudding',
+			wide: { x: 63, y: 93, z: -500, r: -6 },
+			small: { x: 50, y: 50, z: -300, r: 0 }
+		},
+		{ id: 'square', wide: { x: 86, y: 86, z: -150, r: -20 } }
 	]);
 
 	const sections = categories.map((category) => ({
@@ -37,36 +64,27 @@
 		sites: sites.filter((site) => site.category === category.id)
 	}));
 
-	let front = $state(0);
-	const current = $derived(stack[front]);
+	// widths of the screenshots in the grid, where the first in each category spans two columns
+	const tile_sizes =
+		'(min-width: 1440px) 300px, (min-width: 1024px) 21vw, (min-width: 640px) 29vw, 45vw';
+	const first_sizes =
+		'(min-width: 1440px) 640px, (min-width: 1024px) 44vw, (min-width: 640px) 61vw, 92vw';
 
-	/** the front card was last changed with the keyboard, which does not animate since tab repeats fast */
-	let instant = $state(false);
+	const command = 'npx sv create';
 
-	/** id of the heading scrolled to, if any */
-	let active = $state<string>();
+	/** shows a tick on the copy button for a moment after copying */
+	let copied = $state(false);
+	let uncopy: ReturnType<typeof setTimeout> | undefined;
 
-	/** the closing section is hidden until it is scrolled to */
-	let waiting = $state(false);
-
-	/** category headings then the closing one, in page order */
-	const headings = new Set<HTMLElement>();
-
-	let category_list: HTMLUListElement | undefined;
-
-	// slides the line under the current category over to the next one
-	const [send, receive] = crossfade({
-		duration: (distance) => (prefersReducedMotion.current ? 0 : Math.sqrt(distance * 200))
-	});
-
-	/** sites with these ids that have a screenshot */
-	function pick(ids: string[]) {
-		return ids.flatMap((id) => sites.find((site) => site.id === id && pictures[id]) ?? []);
+	function place(cards: Array<{ id: string; wide: Placement; small?: Placement }>) {
+		return cards.flatMap(({ id, wide, small }) => {
+			const site = sites.find((site) => site.id === id && pictures[id]);
+			return site ? [{ site, wide, small }] : [];
+		});
 	}
 
-	/** how far back in the stack a site is, 0 being the front */
-	function depth(index: number) {
-		return (index - front + stack.length) % stack.length;
+	function domain(url: string) {
+		return new URL(url).hostname.replace(/^www\./, '');
 	}
 
 	/** fades in a screenshot that has not loaded or started to show when the page starts */
@@ -89,82 +107,14 @@
 		};
 	}
 
-	/** shows the closing section once as it is scrolled to, hiding it only if it starts below the window */
-	function reveal(section: HTMLElement) {
-		let first = true;
+	async function copy() {
+		await navigator.clipboard.writeText(command);
 
-		const observer = new IntersectionObserver(
-			([entry]) => {
-				if (first) {
-					first = false;
-
-					if (entry.boundingClientRect.top < innerHeight) {
-						observer.disconnect();
-						return;
-					}
-
-					waiting = true;
-				}
-
-				if (entry.isIntersecting) {
-					waiting = false;
-					observer.disconnect();
-				}
-			},
-			// a little early so it plays as you arrive
-			{ rootMargin: '0px 0px -10% 0px' }
-		);
-
-		observer.observe(section);
-
-		return () => observer.disconnect();
-	}
-
-	function track(heading: HTMLElement) {
-		headings.add(heading);
-
-		// untracked so changing active does not rerun this
-		untrack(update_active);
-
-		return () => headings.delete(heading);
-	}
-
-	/**
-	 * the current heading is the last in the top third of the window, or the last one at the
-	 * end of the page since it may never get there, and when that is the closing heading no
-	 * category is current
-	 */
-	function update_active() {
-		let id: string | undefined;
-
-		for (const heading of headings) {
-			if (heading.getBoundingClientRect().top > innerHeight / 3) break;
-			id = heading.id;
-		}
-
-		if (id && innerHeight + scrollY >= document.documentElement.scrollHeight - 1) {
-			id = [...headings].at(-1)?.id;
-		}
-
-		if (id === active) return;
-		active = id;
-
-		// on narrow screens the categories scroll sideways, so keep the current one in view
-		const link = category_list?.querySelector(`[href="#${id}"]`);
-
-		if (category_list && link) {
-			const list = category_list.getBoundingClientRect();
-			const rect = link.getBoundingClientRect();
-
-			category_list.scrollTo({
-				left: category_list.scrollLeft + rect.left - list.left - (list.width - rect.width) / 2,
-				behavior: prefersReducedMotion.current ? 'instant' : 'smooth'
-			});
-		}
+		copied = true;
+		clearTimeout(uncopy);
+		uncopy = setTimeout(() => (copied = false), 2000);
 	}
 </script>
-
-<svelte:window onscroll={update_active} onresize={update_active} />
 
 <svelte:head>
 	<title>Showcase • Svelte</title>
@@ -178,102 +128,63 @@
 	<div class="hero">
 		<div class="intro">
 			<h1>Built with Svelte</h1>
-
-			<p>
-				{sites.length} websites made with Svelte and SvelteKit, from global brands to newsrooms, governments
-				and small teams.
-			</p>
+			<p>From newsrooms to countries, popular brands and leading industries</p>
 		</div>
 
-		{#if current}
-			<ul class={['stack', { instant }]} style:--count={stack.length}>
-				{#each stack as site, i (site.id)}
-					{@const d = depth(i)}
-
-					<li
-						class={{ front: d === 0 }}
-						style:--index={i}
-						style:--depth={d}
-						style:z-index={stack.length - d}
+		<div class="field">
+			<div class="space">
+				{#each field as { site, wide, small }, i (site.id)}
+					<a
+						class={['card', { wide: !small }]}
+						href="#{site.id}"
+						style:--i={i}
+						style:--x={wide.x}
+						style:--y={wide.y}
+						style:--z={wide.z}
+						style:--r={wide.r}
+						style:--sx={small?.x}
+						style:--sy={small?.y}
+						style:--sz={small?.z}
+						style:--sr={small?.r}
+						style:--position={site.screenshot?.position}
+						{@attach fade_in}
 					>
-						<!-- a card behind the front one comes forward when clicked or focused with the
-						     keyboard, and opens the site once in front -->
-						<a
-							href={site.url}
-							target="_blank"
-							style:--position={site.screenshot?.position}
-							onclick={(event) => {
-								if (d > 0) {
-									event.preventDefault();
-									instant = false;
-									front = i;
-								}
-							}}
-							onfocus={(event) => {
-								if (event.currentTarget.matches(':focus-visible')) {
-									instant = true;
-									front = i;
-								}
-							}}
-						>
-							<enhanced:img
-								class="image"
-								src={pictures[site.id]}
-								alt=""
-								sizes="(min-width: 1024px) 800px, 100vw"
-								fetchpriority={i === 0 ? 'high' : undefined}
-							/>
-							<span class="visually-hidden">{site.name}</span>
-						</a>
-					</li>
+						<enhanced:img
+							class="image"
+							src={pictures[site.id]}
+							alt=""
+							loading="lazy"
+							sizes="(min-width: 1024px) 260px, 180px"
+						/>
+						<span class="visually-hidden">{site.name}</span>
+					</a>
 				{/each}
-			</ul>
-
-			{#key current.id}
-				<div
-					class="current"
-					in:fly={{
-						y: prefersReducedMotion.current ? 0 : 12,
-						duration: instant ? 0 : 250,
-						easing: quintOut
-					}}
-				>
-					<p class="name"><a href={current.url} target="_blank">{current.name}</a></p>
-					<p class="description" lang={current.lang}>{current.description}</p>
-				</div>
-			{/key}
-		{/if}
+			</div>
+		</div>
 	</div>
 
 	<nav class="categories" aria-label="Categories">
-		<ul bind:this={category_list}>
+		<ul>
 			{#each sections as section (section.id)}
 				<li>
-					<a href="#{section.id}" aria-current={active === section.id ? 'true' : undefined}>
-						{section.title}
-						<span class="count">{section.sites.length}</span>
-					</a>
-
-					{#if active === section.id}
-						<span class="line" in:receive={{ key: 'line' }} out:send={{ key: 'line' }}></span>
-					{/if}
+					<a href="#{section.id}">{section.title}</a>
 				</li>
 			{/each}
 		</ul>
 	</nav>
 
-	<div class="page">
+	<div class="index">
 		{#each sections as section (section.id)}
-			<section aria-labelledby={section.id}>
-				<h2 id={section.id} {@attach track}>{section.title}</h2>
+			<section class="category" aria-labelledby={section.id}>
+				<h2 id={section.id}>{section.title}</h2>
 
 				<ul class="sites">
 					{#each section.sites as site, i (site.id)}
 						{@const picture = pictures[site.id]}
 
-						<li class={['site', { featured: i === 0 }]} id={site.id}>
+						<li class="site" id={site.id}>
 							<a
-								class="screenshot"
+								class="thumb"
 								href={site.url}
 								target="_blank"
 								tabindex="-1"
@@ -287,9 +198,7 @@
 										src={picture}
 										alt=""
 										loading="lazy"
-										sizes={i === 0
-											? '(min-width: 1024px) 900px, (min-width: 640px) 90vw, 100vw'
-											: '(min-width: 1024px) 440px, (min-width: 640px) 45vw, 100vw'}
+										sizes={i === 0 ? first_sizes : tile_sizes}
 									/>
 								{:else}
 									<span class="placeholder">{site.name}</span>
@@ -297,145 +206,208 @@
 							</a>
 
 							<h3><a href={site.url} target="_blank">{site.name}</a></h3>
-
-							<p lang={site.lang}>{site.description}</p>
+							<p class="description" lang={site.lang}>{site.description}</p>
+							<p class="domain">{domain(site.url)}</p>
 						</li>
 					{/each}
 				</ul>
 			</section>
 		{/each}
 
-		<section class={['next', { waiting }]} aria-labelledby="build-yours" {@attach reveal}>
-			<h2 id="build-yours" {@attach track}>Build yours</h2>
+		<section class="next" aria-labelledby="build-yours">
+			<h2 id="build-yours">Build yours</h2>
 
 			<p>
-				Start a project with <code>npx sv create</code>, or learn Svelte first in the
+				Run this in a terminal to start a project, or learn Svelte first in the
 				<a href="/tutorial">tutorial</a>.
 			</p>
+
+			<div class="command">
+				<code>{command}</code>
+
+				<button
+					class={['raised', 'icon', 'tooltip', { copied }]}
+					aria-label={copied ? 'copied' : 'copy to clipboard'}
+					onclick={copy}
+				>
+					<Icon size={18} name={copied ? 'check' : 'copy-to-clipboard-empty'} />
+				</button>
+
+				<span class="visually-hidden" aria-live="polite">{copied ? 'Copied' : ''}</span>
+			</div>
 		</section>
 	</div>
 </div>
 
 <style>
 	.showcase {
-		/* categories stick under the banner on small screens, where the site nav is at the
-		   bottom, otherwise under the nav */
-		--sticky-top: var(--sk-banner-height);
+		/* links land below the banner on small screens, where the site nav is at the bottom,
+		   otherwise below the nav */
+		--anchor-offset: calc(var(--sk-banner-height) + 3.2rem);
 		--categories-height: 5.6rem;
 
 		@media (min-width: 832px) {
-			--sticky-top: var(--sk-nav-height);
+			--anchor-offset: calc(var(--sk-nav-height) + 3.2rem);
 		}
 	}
 
 	.hero {
-		display: grid;
-		grid-template-areas: 'intro' 'stack' 'current';
-		gap: 4rem;
-		max-width: 140rem;
-		margin: 0 auto;
-		padding: var(--sk-page-padding-top) var(--sk-page-padding-side) 6rem;
+		position: relative;
+		padding: var(--sk-page-padding-top) 0 2.4rem;
+		overflow: clip;
 
 		@media (min-width: 1024px) {
-			grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-			grid-template-rows: auto 1fr;
-			grid-template-areas: 'intro stack' 'current stack';
-			gap: 4rem 6rem;
+			display: grid;
+			place-items: center;
+			/* leaves the categories in view above the banner, which is at the bottom on large screens */
+			min-height: max(
+				64rem,
+				calc(100svh - var(--sk-nav-height) - var(--sk-banner-height) - var(--categories-height))
+			);
+			padding: 0;
 		}
 	}
 
 	.intro {
-		grid-area: intro;
+		position: relative;
+		z-index: 1;
+		padding: 0 var(--sk-page-padding-side);
+		text-align: center;
 
-		h1 {
-			margin: 0;
-			font: 400 clamp(5.6rem, 1rem + 6.4vw, 11.2rem) / 0.95 var(--sk-font-family-heading);
-			letter-spacing: -0.02em;
-			color: var(--sk-fg-1);
-		}
-
+		/* keeps the text clear of the screenshots, like the headings on the home page */
+		h1,
 		p {
-			max-width: 24em;
-			margin: 3.2rem 0 0 0;
-			color: var(--sk-fg-3);
+			filter: drop-shadow(0 0 1rem var(--sk-bg-1)) drop-shadow(0 0 1rem var(--sk-bg-1));
 		}
 	}
 
-	.stack {
-		/* how much of each card behind the front one shows, and how much smaller it gets */
-		--peek: clamp(1.8rem, 0.6rem + 1.8vw, 3.2rem);
-		--shrink: 0.035;
-
-		grid-area: stack;
-		display: grid;
+	/* the opening lines and the closing ones */
+	.intro h1,
+	.next h2 {
 		margin: 0;
-		padding: calc(var(--peek) * (var(--count) - 1)) 0 0 0;
-		list-style: none;
+		font: 400 clamp(5.6rem, 1.6rem + 7.6vw, 13.6rem) / 0.95 var(--sk-font-family-heading);
+		letter-spacing: -0.02em;
+		color: var(--sk-fg-1);
+	}
 
-		li {
-			grid-area: 1 / 1;
-			aspect-ratio: 16 / 10;
-			transform-origin: 50% 0;
-			transform: translateY(calc(var(--depth) * var(--peek) * -1))
-				scale(calc(1 - var(--depth) * var(--shrink)));
-			transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-			animation: deal 0.6s cubic-bezier(0.23, 1, 0.32, 1) backwards;
-			/* front to back by index, not depth, which changes when a card is clicked */
-			animation-delay: calc(var(--index) * 50ms);
+	.intro p,
+	.next p {
+		max-width: 20em;
+		margin: 2.4rem auto 0;
+		font: 400 clamp(2rem, 1.5rem + 0.8vw, 2.8rem) / 1.4 var(--sk-font-family-body);
+		color: var(--sk-fg-3);
+		text-wrap: balance;
+	}
+
+	.field {
+		position: relative;
+		height: 32rem;
+		margin-top: 2.4rem;
+		perspective: 80rem;
+		pointer-events: none;
+
+		@media (min-width: 1024px) {
+			position: absolute;
+			inset: 0;
+			height: auto;
+			margin: 0;
+			perspective: 120rem;
+		}
+	}
+
+	.space {
+		position: absolute;
+		inset: 0;
+		transform-style: preserve-3d;
+	}
+
+	.card {
+		--cx: var(--sx);
+		--cy: var(--sy);
+		--cz: var(--sz);
+		--cr: var(--sr);
+
+		position: absolute;
+		left: calc(var(--cx) * 1%);
+		top: calc(var(--cy) * 1%);
+		width: clamp(12rem, 36vw, 18rem);
+		aspect-ratio: 16 / 10;
+		overflow: hidden;
+		border-radius: var(--sk-border-radius);
+		background: var(--sk-bg-3);
+		box-shadow: 0.2rem 0.4rem 1.6rem rgb(0 0 0 / 0.2);
+		/* further back is fainter, like distance */
+		opacity: clamp(0.4, 1 + var(--cz) / 1600, 1);
+		transform: translate(-50%, -50%) translateZ(calc(var(--cz) * 1px))
+			rotateY(calc(var(--cr) * 1deg));
+		pointer-events: auto;
+		animation: arrive 1.1s var(--quint-out) backwards;
+		animation-delay: calc(var(--i) * 45ms);
+
+		&.wide {
+			display: none;
 		}
 
-		&.instant li {
-			transition: none;
+		/* grey until hovered, like the screenshots on the home page */
+		@media all and not (hover: none) {
+			filter: grayscale(1) contrast(1);
+
+			&:hover {
+				filter: grayscale(0) contrast(1);
+			}
 		}
 
-		/* a card behind the front one lifts a little when hovered, to show it can be clicked */
+		@media (min-width: 1024px) {
+			--cx: var(--x);
+			--cy: var(--y);
+			--cz: var(--z);
+			--cr: var(--r);
+
+			width: 26rem;
+
+			&.wide {
+				display: block;
+			}
+		}
+
 		@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
-			li:not(.front):hover a {
-				translate: 0 -0.6rem;
+			transition:
+				translate 0.3s var(--quint-out),
+				opacity 0.3s ease,
+				filter 0.2s;
+
+			&:hover {
+				translate: 0 0 6rem;
+				opacity: 1;
 			}
-		}
-
-		a {
-			transition: translate 0.15s ease;
-			display: block;
-			height: 100%;
-			overflow: hidden;
-			border: 1px solid var(--sk-border);
-			border-radius: var(--sk-border-radius);
-			background: var(--sk-bg-3);
-			box-shadow: 0 -0.2rem 1.2rem rgb(0 0 0 / 0.1);
-
-			&:focus-visible {
-				outline: 2px solid var(--sk-fg-accent);
-				outline-offset: 2px;
-			}
-		}
-
-		.image {
-			display: block;
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			object-position: var(--position, left top);
 		}
 
 		@media (prefers-reduced-motion: reduce) {
-			li {
-				transition: none;
-				animation: none;
-			}
+			animation: fade 0.4s ease backwards;
+		}
+	}
 
-			/* a short fade instead, so it is still clear which card came to the front */
-			&:not(.instant) li.front {
-				animation: fade 0.2s ease;
+	/* the field drifts toward you as the page scrolls past it */
+	@media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
+		@supports (animation-timeline: scroll()) {
+			.space {
+				animation: dolly linear both;
+				animation-timeline: scroll(root);
+				animation-range: 0 100vh;
 			}
 		}
 	}
 
-	@keyframes deal {
+	@keyframes arrive {
 		from {
 			opacity: 0;
-			translate: 0 4rem;
+			translate: 0 0 -90rem;
+		}
+	}
+
+	@keyframes dolly {
+		to {
+			translate: 0 0 30rem;
 		}
 	}
 
@@ -445,117 +417,81 @@
 		}
 	}
 
-	.current {
-		grid-area: current;
-		align-self: end;
-
-		.name {
-			margin: 0;
-			font: 400 clamp(2.4rem, 1.6rem + 1.2vw, 3.2rem) / 1.2 var(--sk-font-family-heading);
-
-			a {
-				color: var(--sk-fg-accent);
-			}
-		}
-
-		.description {
-			margin: 0.4rem 0 0 0;
-			color: var(--sk-fg-3);
-
-			/* the same height for one line or two, so the page does not shift when the front card changes */
-			@media (max-width: 1023px) {
-				min-height: 2lh;
-			}
-		}
-	}
-
 	.categories {
-		position: sticky;
-		top: var(--sticky-top);
-		z-index: 2;
-		background: var(--sk-bg-1);
 		box-shadow: inset 0 -1px var(--sk-border);
 
 		ul {
 			display: flex;
-			gap: 3.2rem;
+			flex-wrap: wrap;
+			gap: 0.6rem 2.4rem;
 			max-width: 140rem;
 			margin: 0 auto;
-			padding: 0 var(--sk-page-padding-side);
-			overflow-x: auto;
-			scrollbar-width: none;
+			padding: 1.6rem var(--sk-page-padding-side);
 			list-style: none;
-		}
 
-		li {
-			position: relative;
-			flex: none;
+			@media (min-width: 640px) {
+				gap: 0.8rem 3.2rem;
+			}
 		}
 
 		a {
-			display: flex;
-			align-items: center;
-			gap: 0.6rem;
-			height: var(--categories-height);
 			color: var(--sk-fg-3);
 			font: var(--sk-font-ui-medium);
 			white-space: nowrap;
-			outline-offset: -2px;
 
 			&:hover {
 				color: var(--sk-fg-1);
 				text-decoration: none;
 			}
-
-			&[aria-current='true'] {
-				color: var(--sk-fg-accent);
-			}
-		}
-
-		.count {
-			color: var(--sk-fg-4);
-			font-variant-numeric: tabular-nums;
-		}
-
-		.line {
-			position: absolute;
-			inset: auto 0 0 0;
-			height: 2px;
-			background: var(--sk-fg-accent);
 		}
 	}
 
-	.page {
+	.index {
 		max-width: 140rem;
 		margin: 0 auto;
 		padding: 0 var(--sk-page-padding-side) var(--sk-page-padding-bottom);
 	}
 
-	section {
-		margin: 10rem 0 0 0;
+	.category {
+		margin: 6.4rem 0 0 0;
 
 		&:first-child {
-			margin-top: 6rem;
+			margin-top: 4.8rem;
+		}
+
+		@media (min-width: 1024px) {
+			margin-top: 12rem;
+
+			&:first-child {
+				margin-top: 8rem;
+			}
 		}
 	}
 
 	h2 {
-		margin: 0 0 3rem 0;
-		scroll-margin-top: calc(var(--sticky-top) + var(--categories-height) + 4rem);
+		margin: 0 0 3.2rem 0;
+		font: 400 clamp(3.6rem, 2.4rem + 2vw, 5.6rem) / 1.05 var(--sk-font-family-heading);
+		color: var(--sk-fg-1);
+		text-wrap: balance;
+		scroll-margin-top: var(--anchor-offset);
 	}
 
 	.sites {
 		display: grid;
-		grid-template-columns: 1fr;
-		gap: 5rem 3rem;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 3.2rem 1.6rem;
+		margin: 0;
+		padding: 0;
 		list-style: none;
 
 		@media (min-width: 640px) {
-			grid-template-columns: repeat(2, 1fr);
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			gap: 4rem 2.4rem;
 		}
 
 		@media (min-width: 1024px) {
-			grid-template-columns: repeat(3, 1fr);
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+			gap: 4.8rem 3.2rem;
 		}
 	}
 
@@ -563,46 +499,95 @@
 		display: flex;
 		flex-direction: column;
 		min-width: 0;
-		scroll-margin-top: calc(var(--sticky-top) + var(--categories-height) + 4rem);
+		scroll-margin-top: var(--anchor-offset);
 
-		p {
+		h3 {
+			margin: 0;
+			font: 400 clamp(1.9rem, 1.6rem + 0.4vw, 2.4rem) / 1.15 var(--sk-font-family-heading);
+
+			a {
+				color: var(--sk-fg-1);
+			}
+		}
+
+		.description {
 			margin: 0.4rem 0 0 0;
 			font: var(--sk-font-body-small);
 			color: var(--sk-fg-3);
 		}
 
-		/* the screenshot and the name are the same link, so hovering either one looks the same */
-		&:has(a:hover) {
-			.screenshot {
-				border-color: var(--sk-fg-4);
+		.domain {
+			margin: 0.4rem 0 0 0;
+			font: var(--sk-font-ui-small);
+			color: var(--sk-fg-4);
+		}
+
+		/* the one a screenshot at the top links to */
+		&:target h3 a {
+			color: var(--sk-fg-accent);
+		}
+
+		/* two to a row on small screens leaves little room for the description */
+		@media (max-width: 639px) {
+			&:not(:first-child) .description {
+				font-size: calc(0.8 * var(--sk-font-size-body-small));
+				line-height: 1.4;
+			}
+		}
+
+		/* the first in each category is shown larger */
+		&:first-child {
+			grid-column: 1 / -1;
+
+			h3 {
+				font-size: clamp(2.4rem, 1.6rem + 1.4vw, 3.6rem);
 			}
 
-			h3 a {
-				color: var(--sk-fg-accent);
-				text-decoration: underline;
+			@media (min-width: 640px) {
+				grid-column: span 2;
+				grid-row: span 2;
+
+				.thumb {
+					flex: 1;
+					min-height: 24rem;
+					aspect-ratio: auto;
+				}
 			}
 		}
 	}
 
-	.screenshot {
+	.thumb {
 		position: relative;
 		display: block;
 		aspect-ratio: 16 / 10;
+		margin: 0 0 1.2rem 0;
 		overflow: hidden;
 		border: 1px solid var(--sk-border);
 		border-radius: var(--sk-border-radius);
 		background: var(--sk-bg-3);
-		transition: border-color 0.15s;
 
-		.image {
-			position: absolute;
-			inset: 0;
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			object-position: var(--position, left top);
-			transition: opacity 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+		/* grey until hovered, like the screenshots on the home page */
+		@media all and not (hover: none) {
+			.image {
+				filter: grayscale(1) contrast(1);
+			}
+
+			.site:is(:hover, :focus-within, :target) & .image {
+				filter: grayscale(0) contrast(1);
+			}
 		}
+	}
+
+	.image {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: var(--position, left top);
+		transition:
+			opacity 0.25s var(--quint-out),
+			filter 0.2s;
 	}
 
 	.placeholder {
@@ -614,73 +599,36 @@
 		color: var(--sk-fg-4);
 	}
 
-	h3 {
-		margin: 1.6rem 0 0 0;
-		font: 400 2.2rem / 1.2 var(--sk-font-family-heading);
-
-		a {
-			color: inherit;
-			transition: color 0.15s;
-		}
-	}
-
-	@media (min-width: 640px) {
-		.featured {
-			grid-column: span 2;
-		}
-	}
-
-	@media (min-width: 1024px) {
-		.featured {
-			grid-row: span 2;
-
-			/* as tall as the two sites beside it, cutting off only the bottom of the screenshot
-			   like a browser window */
-			.screenshot {
-				flex: 1;
-				aspect-ratio: auto;
-				min-height: 30rem;
-			}
-
-			h3 {
-				font: var(--sk-font-h2);
-			}
-		}
-	}
-
 	.next {
-		h2,
-		p {
-			transition:
-				opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1),
-				translate 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+		margin: 16rem 0 0 0;
+		text-align: center;
+
+		@media (min-width: 1024px) {
+			margin-top: 24rem;
+		}
+	}
+
+	.command {
+		display: inline-flex;
+		align-items: center;
+		gap: 2rem;
+		margin: 4.8rem 0 0 0;
+		padding: 1rem 1rem 1rem 2.4rem;
+		border: 1px solid var(--sk-border);
+		border-radius: var(--sk-border-radius);
+		background: var(--sk-bg-2);
+
+		code {
+			padding: 0;
+			background: none;
+			font: var(--sk-font-mono);
+			font-size: clamp(1.8rem, 1.4rem + 0.6vw, 2.4rem);
+			color: var(--sk-fg-1);
 		}
 
-		p {
-			max-width: 32em;
-			margin: 0;
-			color: var(--sk-fg-3);
-
-			/* after the heading */
-			transition-delay: 0.1s;
-		}
-
-		&.waiting {
-			h2,
-			p {
-				opacity: 0;
-				transition: none;
-			}
-
-			@media (prefers-reduced-motion: no-preference) {
-				h2 {
-					translate: 0 1.6rem;
-				}
-
-				p {
-					translate: 0 0.8rem;
-				}
-			}
+		/* the copy icon is filled, unlike the tick */
+		button:not(.copied) :global(svg) {
+			stroke: none;
 		}
 	}
 </style>
