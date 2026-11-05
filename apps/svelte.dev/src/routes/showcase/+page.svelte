@@ -75,7 +75,7 @@
 			small: { x: 106, y: 50, z: -420, r: -38 }
 		},
 		{ id: 'starbucks', wide: { x: 15, y: 86, z: -300, r: 18 } },
-		{ id: 'schneider-electric', wide: { x: 39, y: 95, z: -600, r: 6 } },
+		{ id: 'michelin', wide: { x: 39, y: 95, z: -600, r: 6 } },
 		{ id: 'the-pudding', wide: { x: 63, y: 93, z: -500, r: -6 } },
 		{ id: 'square', wide: { x: 86, y: 86, z: -150, r: -20 } }
 	]);

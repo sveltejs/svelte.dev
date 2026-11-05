@@ -142,12 +142,12 @@ export const sites: Site[] = [
 	},
 
 	{
-		id: 'michelin',
-		name: 'Michelin',
-		url: 'https://www.michelin.com/en/',
-		description: 'World’s leading manufacturer of life-changing composites and experiences',
+		id: 'schneider-electric',
+		name: 'Schneider Electric',
+		url: 'https://www.se.com/ww/en/',
+		description: 'A global specialist in energy management, automation and digitalization',
 		category: 'business',
-		screenshot: { headed: true }
+		screenshot: { headed: true, hide: ['.green-banner-wrapper'] }
 	},
 	{
 		id: 'square',
@@ -158,12 +158,12 @@ export const sites: Site[] = [
 		screenshot: { hide: ['#salesbot-popup-container'] }
 	},
 	{
-		id: 'schneider-electric',
-		name: 'Schneider Electric',
-		url: 'https://www.se.com/ww/en/',
-		description: 'A global specialist in energy management, automation and digitalization',
+		id: 'michelin',
+		name: 'Michelin',
+		url: 'https://www.michelin.com/en/',
+		description: 'World’s leading manufacturer of life-changing composites and experiences',
 		category: 'business',
-		screenshot: { headed: true, hide: ['.green-banner-wrapper'] }
+		screenshot: { headed: true }
 	},
 	{
 		id: 'block',
