@@ -1,3 +1,8 @@
+<script module lang="ts">
+	/** set once the page has shown, so the field flies in on the first visit and not on coming back */
+	let arrived = false;
+</script>
+
 <script lang="ts">
 	import type { Picture } from '@sveltejs/enhanced-img';
 	import { Icon } from '@sveltejs/site-kit/components';
@@ -63,6 +68,8 @@
 		{ id: 'the-pudding', wide: { x: 63, y: 93, z: -500, r: -6 } },
 		{ id: 'square', wide: { x: 86, y: 86, z: -150, r: -20 } }
 	]);
+
+	const arrive = !arrived;
 
 	const sections = categories.map((category) => {
 		const members = sites.filter((site) => site.category === category.id);
@@ -290,7 +297,12 @@
 </svelte:head>
 
 <div class="showcase">
-	<div class="hero">
+	<div
+		class={['hero', { arrive }]}
+		{@attach () => {
+			arrived = true;
+		}}
+	>
 		<div class="intro">
 			<h1>Built with <span>Svelte</span></h1>
 			<p>From newsrooms to governments, popular brands and leading industries</p>
@@ -539,9 +551,16 @@
 			rotateY(calc(var(--cr) * 1deg));
 		transform-style: preserve-3d;
 		pointer-events: auto;
-		animation: arrive 1.1s var(--quint-out) backwards;
-		/* nearest first, so the field fills in from the front */
-		animation-delay: calc((150 - var(--cz)) * 0.5ms);
+
+		.arrive & {
+			animation: arrive 1.1s var(--quint-out) backwards;
+			/* nearest first, so the field fills in from the front */
+			animation-delay: calc((150 - var(--cz)) * 0.5ms);
+
+			@media (prefers-reduced-motion: reduce) {
+				animation: fade 0.4s ease backwards;
+			}
+		}
 
 		&.wide {
 			display: none;
@@ -558,10 +577,6 @@
 			&.wide {
 				display: block;
 			}
-		}
-
-		@media (prefers-reduced-motion: reduce) {
-			animation: fade 0.4s ease backwards;
 		}
 	}
 
