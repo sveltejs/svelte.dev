@@ -31,6 +31,17 @@
 		])
 	);
 
+	/** tiny inline versions of the screenshots by site id, shown blurred until the screenshot loads */
+	const placeholders: Record<string, string> = Object.fromEntries(
+		Object.entries(
+			import.meta.glob<string>('./screenshots/*.{jpg,png,webp}', {
+				eager: true,
+				import: 'default',
+				query: '?w=16&format=webp&inline'
+			})
+		).map(([path, src]) => [path.replace(/^.*\/|(@2x)?\.\w+$/g, ''), `url(${src})`])
+	);
+
 	interface Placement {
 		/** percent across */
 		x: number;
@@ -323,6 +334,7 @@
 						style:--sz={small?.z}
 						style:--sr={small?.r}
 						style:--position={site.screenshot?.position}
+						style:--placeholder={placeholders[site.id]}
 						onclick={(event) => morph(event, site.id)}
 						onpointerenter={(event) => {
 							prime(site.id);
@@ -336,13 +348,7 @@
 					>
 						<!-- lifts on hover while the link stays put, so the pointer stays on it -->
 						<span class="face">
-							<enhanced:img
-								class="image"
-								src={pictures[site.id]}
-								alt=""
-								loading="lazy"
-								sizes={card_sizes}
-							/>
+							<enhanced:img class="image" src={pictures[site.id]} alt="" sizes={card_sizes} />
 						</span>
 						<span class="visually-hidden">{site.name}</span>
 					</a>
@@ -364,7 +370,11 @@
 					>
 						<span class="preview" aria-hidden="true">
 							{#each section.preview as site (site.id)}
-								<span class="sheet" style:--position={site.screenshot?.position}>
+								<span
+									class="sheet"
+									style:--position={site.screenshot?.position}
+									style:--placeholder={placeholders[site.id]}
+								>
 									<enhanced:img
 										class="image"
 										src={pictures[site.id]}
@@ -400,6 +410,7 @@
 								tabindex="-1"
 								aria-hidden="true"
 								style:--position={site.screenshot?.position}
+								style:--placeholder={placeholders[site.id]}
 								{@attach fade_in}
 							>
 								{#if picture}
@@ -585,7 +596,8 @@
 		inset: 0;
 		overflow: hidden;
 		border-radius: var(--sk-border-radius);
-		background: var(--sk-bg-3);
+		/* the tiny screenshot, scaled up and so blurred, until the screenshot fades in over it */
+		background: var(--placeholder, none) var(--position, left top) / cover no-repeat var(--sk-bg-3);
 		box-shadow: 0.2rem 0.4rem 1.6rem rgb(0 0 0 / 0.2);
 		transition: filter 0.2s;
 
@@ -711,7 +723,8 @@
 		inset: 0;
 		overflow: hidden;
 		border-radius: var(--sk-border-radius);
-		background: var(--sk-bg-3);
+		/* the tiny screenshot, scaled up and so blurred, until the screenshot fades in over it */
+		background: var(--placeholder, none) var(--position, left top) / cover no-repeat var(--sk-bg-3);
 		box-shadow: 0.2rem 0.4rem 1.2rem rgb(0 0 0 / 0.16);
 
 		&:nth-child(1) {
@@ -987,7 +1000,8 @@
 		text-decoration: none;
 		border: 1px solid var(--sk-border);
 		border-radius: var(--sk-border-radius);
-		background: var(--sk-bg-3);
+		/* the tiny screenshot, scaled up and so blurred, until the screenshot fades in over it */
+		background: var(--placeholder, none) var(--position, left top) / cover no-repeat var(--sk-bg-3);
 
 		/* 16:10 by padding, since safari leaves out aspect-ratio when sizing the rows of a subgrid */
 		&::before {
@@ -1009,10 +1023,10 @@
 				--greyscale: 0;
 			}
 
+			/* on the whole screenshot rather than the image, so the placeholder behind it is grey too */
 			@supports not (animation-timeline: view()) {
-				.image {
-					filter: grayscale(var(--greyscale)) contrast(1);
-				}
+				filter: grayscale(var(--greyscale)) contrast(1);
+				transition: filter 0.2s;
 			}
 		}
 
@@ -1062,6 +1076,14 @@
 					transition: opacity 0.2s;
 					animation: stay-in-window linear both;
 					animation-timeline: --screenshot;
+				}
+
+				/* on small screens the heading sits high in the window, where the colour would still be
+				   fading in, so the hero is only grey towards the bottom */
+				@media (max-width: 1023px) {
+					&.hero::after {
+						background-image: linear-gradient(transparent 55%, grey 75%);
+					}
 				}
 
 				:is(.categories, .index):has(:focus-visible) &::after {
