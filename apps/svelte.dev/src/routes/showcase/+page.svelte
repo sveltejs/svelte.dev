@@ -725,6 +725,11 @@
 			margin-top: 24rem;
 			padding-bottom: 12rem;
 		}
+
+		p a {
+			color: inherit;
+			text-decoration: underline;
+		}
 	}
 
 	.command {
