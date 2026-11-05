@@ -96,7 +96,7 @@
 	});
 
 	// widths of the screenshots as laid out below
-	const card_sizes = '(min-width: 1024px) 260px, (min-width: 740px) 400px, 54vw';
+	const card_sizes = '(min-width: 1024px) 17vw,(min-width: 740px) 400px, 54vw';
 	const preview_sizes = '(min-width: 1440px) 230px, (min-width: 900px) 16vw, 34vw';
 
 	const wide_sizes: Record<Cell['kind'], string> = {
@@ -479,14 +479,20 @@
 		isolation: isolate;
 		padding: var(--sk-page-padding-top) 0 0;
 		overflow: clip;
+		/* about where the name in the heading sits in the window before scrolling, on its second line */
+		--heading: calc(var(--sk-page-padding-top) + 1.5 * clamp(5.6rem, 1.6rem + 7.6vw, 13.6rem));
 
 		@media (min-width: 1024px) {
 			display: grid;
 			place-items: center;
 			/* sized by the width alone, so the cards keep their places in any window and nothing
-			   below moves when the banner or the browser bars show */
-			min-height: clamp(64rem, 52vw, 96rem);
+			   below moves when the banner or the browser bars show, and tall enough that the cards
+			   leave the heading room around it */
+			--hero-height: clamp(76rem, 60vw, 108rem);
+			min-height: var(--hero-height);
 			padding: 0;
+			/* centred with the line below it, so a little above the middle */
+			--heading: calc(var(--sk-nav-height) + var(--hero-height) / 2 - 5rem);
 		}
 	}
 
@@ -583,7 +589,8 @@
 			--cz: var(--z);
 			--cr: var(--r);
 
-			width: 26rem;
+			/* smaller in narrower windows, where the heading takes up more of the width */
+			width: clamp(22rem, 17vw, 28rem);
 
 			&.wide {
 				display: block;
@@ -1078,12 +1085,14 @@
 					animation-timeline: --screenshot;
 				}
 
-				/* on small screens the heading sits high in the window, where the colour would still be
-				   fading in, so the hero is only grey towards the bottom */
-				@media (max-width: 1023px) {
-					&.hero::after {
-						background-image: linear-gradient(transparent 55%, grey 75%);
-					}
+				/* the hero is sized by the width and the band by the height, so the colour is placed around
+				   the name in the heading, wherever that falls in the window, and not at a set height */
+				&.hero::after {
+					background-image: linear-gradient(
+						grey calc(var(--heading) - 28vh),
+						transparent calc(var(--heading) - 8vh) calc(var(--heading) + 12vh),
+						grey calc(var(--heading) + 32vh)
+					);
 				}
 
 				:is(.categories, .index):has(:focus-visible) &::after {
