@@ -1264,6 +1264,18 @@
 
 	/* grey until hovered like the screenshots on the home page, and where colour can follow scrolling,
 	   grey towards the top and bottom of the window and in colour only as they reach the middle */
+	/* on touch screens only where colour can follow scrolling, since there is no hover to bring it */
+	.thumb,
+	.sheet {
+		@supports (animation-timeline: view()) {
+			--greyscale: 1;
+
+			.site:target & {
+				--greyscale: 0;
+			}
+		}
+	}
+
 	@media all and not (hover: none) {
 		.thumb,
 		.sheet {
@@ -1280,68 +1292,68 @@
 				transition: filter 0.2s;
 			}
 		}
+	}
 
-		@supports (animation-timeline: view()) {
-			/* a timeline leaves out how the cards in the hero turn in 3d, so one band covers them all, with
+	@supports (animation-timeline: view()) {
+		/* a timeline leaves out how the cards in the hero turn in 3d, so one band covers them all, with
 			   a hole over the one you point at so the others stay as they are */
-			.hero {
-				--greyscale: 1;
-				/* for the band to blend with between the cards, or it shows as grey */
-				background: var(--sk-bg-1);
+		.hero {
+			--greyscale: 1;
+			/* for the band to blend with between the cards, or it shows as grey */
+			background: var(--sk-bg-1);
 
-				.face {
-					filter: grayscale(0) contrast(1);
-				}
+			.face {
+				filter: grayscale(0) contrast(1);
+			}
 
-				/* over the heading too, so the name in it fades with the screenshots */
-				&::after {
-					z-index: 2;
-					mask:
-						linear-gradient(#000 0 0),
-						linear-gradient(#000 0 0) var(--hole, 0 0 / 0 0) no-repeat;
-					mask-composite: exclude;
-				}
+			/* over the heading too, so the name in it fades with the screenshots */
+			&::after {
+				z-index: 2;
+				mask:
+					linear-gradient(#000 0 0),
+					linear-gradient(#000 0 0) var(--hole, 0 0 / 0 0) no-repeat;
+				mask-composite: exclude;
 			}
 		}
+	}
 
-		.thumb,
-		.sheet,
-		.hero {
-			@supports (animation-timeline: view()) {
-				view-timeline: --screenshot;
-				isolation: isolate;
+	.thumb,
+	.sheet,
+	.hero {
+		@supports (animation-timeline: view()) {
+			view-timeline: --screenshot;
+			isolation: isolate;
 
-				/* starts a window above the screenshot and moves down by its own height as the screenshot
+			/* starts a window above the screenshot and moves down by its own height as the screenshot
 				   scrolls past, so the gradient stays still on the window */
-				&::after {
-					content: '';
-					position: absolute;
-					inset: -100vh 0 0 0;
-					/* the colour reaches further up than down, so some of the hero is in colour before
+			&::after {
+				content: '';
+				position: absolute;
+				inset: -100vh 0 0 0;
+				/* the colour reaches further up than down, so some of the hero is in colour before
 					   any scrolling */
-					background: linear-gradient(grey 15%, transparent 35% 55%, grey 75%) top / 100% 100vh
-						no-repeat;
-					opacity: var(--greyscale);
-					mix-blend-mode: saturation;
-					pointer-events: none;
-					transition: opacity 0.2s;
-					animation: stay-in-window linear both;
-					animation-timeline: --screenshot;
-				}
+				background: linear-gradient(grey 15%, transparent 35% 55%, grey 75%) top / 100% 100vh
+					no-repeat;
+				opacity: var(--greyscale);
+				mix-blend-mode: saturation;
+				pointer-events: none;
+				transition: opacity 0.2s;
+				animation: stay-in-window linear both;
+				animation-timeline: --screenshot;
+			}
 
-				/* the hero is sized by the width and the band by the height, so the colour is placed around
+			/* the hero is sized by the width and the band by the height, so the colour is placed around
 				   the name in the heading, wherever that falls in the window, and not at a set height */
-				&.hero::after {
-					background-image: linear-gradient(
-						grey calc(var(--heading) - 28vh),
-						transparent calc(var(--heading) - 8vh) calc(var(--heading) + 12vh),
-						grey calc(var(--heading) + 32vh)
-					);
-				}
+			&.hero::after {
+				background-image: linear-gradient(
+					grey calc(var(--heading) - 28vh),
+					transparent calc(var(--heading) - 8vh) calc(var(--heading) + 12vh),
+					grey calc(var(--heading) + 32vh)
+				);
+			}
 
-				:is(.categories, .index):has(:focus-visible) &::after {
-					transition: none;
-				}
+			:is(.categories, .index):has(:focus-visible) &::after {
+				transition: none;
 			}
 		}
 	}
