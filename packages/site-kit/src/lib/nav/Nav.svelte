@@ -432,28 +432,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		}
 	}
 
-	/* below 1200px the search shrinks so the links keep clear of it */
-	@media (min-width: 832px) and (max-width: 1199px) {
-		.menu :global(.search-container) {
-			width: 11rem;
-		}
-
-		.menu :global(input::placeholder) {
-			opacity: 0;
-		}
-	}
-
-	@media (min-width: 832px) and (max-width: 1099px) {
-		.menu :global(.search-container) {
-			width: 3.4rem;
-		}
-
-		.menu :global(.shortcut) {
-			display: none;
-		}
-	}
-
-	/* and below 960px the logo drops its name */
+	/* below 960px the logo drops its name, so the links fit */
 	@media (min-width: 832px) and (max-width: 959px) {
 		.menu .external-links {
 			margin: 0;
