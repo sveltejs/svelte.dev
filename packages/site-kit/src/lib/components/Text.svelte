@@ -526,8 +526,10 @@
 
 		a:not(.permalink) {
 			color: inherit;
-			text-decoration: underline;
-			transition: box-shadow 0.1s ease-in-out;
+			text-decoration-line: underline;
+			transition:
+				box-shadow 0.1s ease-in-out,
+				text-decoration-color 0.15s;
 		}
 
 		/* permalinks */

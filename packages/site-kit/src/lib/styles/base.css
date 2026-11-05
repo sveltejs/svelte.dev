@@ -60,6 +60,12 @@ a {
 	position: relative;
 	cursor: pointer;
 	color: inherit;
+	text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
+	transition: text-decoration-color 0.15s;
+
+	&:hover {
+		text-decoration-color: currentColor;
+	}
 }
 
 h1 {
