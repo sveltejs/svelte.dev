@@ -1133,11 +1133,6 @@
 			color: var(--sk-fg-1);
 		}
 
-		/* the copy icon is filled, unlike the tick */
-		button:not(.copied) :global(svg) {
-			stroke: none;
-		}
-
 		@media (pointer: coarse) {
 			button {
 				width: 4.4rem;
