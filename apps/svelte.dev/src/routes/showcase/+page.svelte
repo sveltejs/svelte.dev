@@ -559,8 +559,10 @@
 		text-underline-offset: 0.2em;
 		transition: text-decoration-color 0.2s;
 
-		a:hover & {
-			text-decoration-color: currentColor;
+		@media all and not (hover: none) {
+			a:hover & {
+				text-decoration-color: currentColor;
+			}
 		}
 	}
 
@@ -682,7 +684,7 @@
 				filter: grayscale(1) contrast(1);
 			}
 
-			.site:is(:hover, :focus-within, :target) & .image {
+			.site:is(:has(a:hover, :focus-visible), :target) & .image {
 				filter: grayscale(0) contrast(1);
 			}
 		}
@@ -698,6 +700,11 @@
 		transition:
 			opacity 0.25s var(--quint-out),
 			filter 0.2s;
+
+		/* no fade while the keyboard moves focus, so the colour keeps up with it */
+		:is(.categories, .index):has(:focus-visible) & {
+			transition: opacity 0.25s var(--quint-out);
+		}
 	}
 
 	.placeholder {
