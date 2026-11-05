@@ -231,8 +231,7 @@ export const sites: Site[] = [
 		id: 'radio-france',
 		name: 'Radio France',
 		url: 'https://www.radiofrance.fr/',
-		description: 'Écoutez en ligne tous les programmes de Radio France',
-		lang: 'fr',
+		description: 'Listen to live and on-demand radio, original podcasts, and music',
 		category: 'news'
 	},
 	{
