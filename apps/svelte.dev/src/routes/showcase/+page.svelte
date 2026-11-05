@@ -29,46 +29,50 @@
 	}
 
 	// none is first in its category, since those are shown larger below, and only those with a
-	// small placement show on small screens
+	// small placement show on small screens, in an arc either side of the one in front
 	const field = place([
-		{ id: 'spotify', wide: { x: 10, y: 20, z: -100, r: 24 }, small: { x: 20, y: 30, z: 0, r: 18 } },
+		{ id: 'spotify', wide: { x: 10, y: 20, z: -100, r: 24 }, small: { x: 50, y: 50, z: 0, r: 0 } },
 		{
 			id: 'apple-tv',
 			wide: { x: 31, y: 10, z: -450, r: 10 },
-			small: { x: 78, y: 24, z: -150, r: -16 }
+			small: { x: 82, y: 50, z: -180, r: -28 }
 		},
-		{ id: 'nrk', wide: { x: 58, y: 7, z: -700, r: -4 }, small: { x: 50, y: 10, z: -500, r: 0 } },
+		{ id: 'nrk', wide: { x: 58, y: 7, z: -700, r: -4 }, small: { x: -6, y: 50, z: -420, r: 38 } },
 		{ id: 'bugatti', wide: { x: 84, y: 18, z: -200, r: -22 } },
 		{
 			id: 'city-of-sydney',
 			wide: { x: 4, y: 56, z: 150, r: 30 },
-			small: { x: 24, y: 76, z: -100, r: 14 }
+			small: { x: 18, y: 50, z: -180, r: 28 }
 		},
 		{
 			id: 'ons-census-maps',
 			wide: { x: 96, y: 54, z: 120, r: -30 },
-			small: { x: 78, y: 74, z: 50, r: -18 }
+			small: { x: 106, y: 50, z: -420, r: -38 }
 		},
 		{ id: 'starbucks', wide: { x: 15, y: 86, z: -300, r: 18 } },
 		{ id: 'schneider-electric', wide: { x: 39, y: 95, z: -600, r: 6 } },
-		{
-			id: 'the-pudding',
-			wide: { x: 63, y: 93, z: -500, r: -6 },
-			small: { x: 50, y: 50, z: -300, r: 0 }
-		},
+		{ id: 'the-pudding', wide: { x: 63, y: 93, z: -500, r: -6 } },
 		{ id: 'square', wide: { x: 86, y: 86, z: -150, r: -20 } }
 	]);
 
-	const sections = categories.map((category) => ({
-		...category,
-		sites: sites.filter((site) => site.category === category.id)
-	}));
+	const sections = categories.map((category) => {
+		const members = sites.filter((site) => site.category === category.id);
 
-	// widths of the screenshots in the grid, where the first in each category spans two columns
+		return {
+			...category,
+			sites: members,
+			/** the first few with a screenshot, shown on the link to the category */
+			preview: members.filter((site) => pictures[site.id]).slice(0, 3)
+		};
+	});
+
+	// widths of the screenshots as laid out below
+	const card_sizes = '(min-width: 1024px) 260px, (min-width: 740px) 400px, 54vw';
+	const preview_sizes = '(min-width: 1440px) 230px, (min-width: 900px) 16vw, 34vw';
+	const lead_sizes =
+		'(min-width: 1440px) 860px, (min-width: 1024px) 59vw, (min-width: 640px) 45vw, 92vw';
 	const tile_sizes =
-		'(min-width: 1440px) 300px, (min-width: 1024px) 21vw, (min-width: 640px) 29vw, 45vw';
-	const first_sizes =
-		'(min-width: 1440px) 640px, (min-width: 1024px) 44vw, (min-width: 640px) 61vw, 92vw';
+		'(min-width: 1440px) 410px, (min-width: 1024px) 28vw, (min-width: 640px) 45vw, 92vw';
 
 	const command = 'npx sv create';
 
@@ -87,23 +91,27 @@
 		return new URL(url).hostname.replace(/^www\./, '');
 	}
 
-	/** fades in a screenshot that has not loaded or started to show when the page starts */
-	function fade_in(link: HTMLElement) {
-		const img = link.querySelector('img');
-		if (!img || img.complete || img.naturalWidth > 0) return;
+	/** fades in the screenshots that have not loaded or started to show when the page starts */
+	function fade_in(node: HTMLElement) {
+		const images = [...node.querySelectorAll('img')].filter(
+			(img) => !img.complete && img.naturalWidth === 0
+		);
 
-		img.style.opacity = '0';
-
-		const show = () => {
-			img.style.opacity = '';
+		const show = (event: Event) => {
+			(event.currentTarget as HTMLImageElement).style.opacity = '';
 		};
 
-		img.addEventListener('load', show);
-		img.addEventListener('error', show);
+		for (const img of images) {
+			img.style.opacity = '0';
+			img.addEventListener('load', show);
+			img.addEventListener('error', show);
+		}
 
 		return () => {
-			img.removeEventListener('load', show);
-			img.removeEventListener('error', show);
+			for (const img of images) {
+				img.removeEventListener('load', show);
+				img.removeEventListener('error', show);
+			}
 		};
 	}
 
@@ -133,11 +141,10 @@
 
 		<div class="field">
 			<div class="space">
-				{#each field as { site, wide, small }, i (site.id)}
+				{#each field as { site, wide, small } (site.id)}
 					<a
 						class={['card', { wide: !small }]}
 						href="#{site.id}"
-						style:--i={i}
 						style:--x={wide.x}
 						style:--y={wide.y}
 						style:--z={wide.z}
@@ -149,13 +156,16 @@
 						style:--position={site.screenshot?.position}
 						{@attach fade_in}
 					>
-						<enhanced:img
-							class="image"
-							src={pictures[site.id]}
-							alt=""
-							loading="lazy"
-							sizes="(min-width: 1024px) 260px, 180px"
-						/>
+						<!-- lifts on hover while the link stays put, so the pointer stays on it -->
+						<span class="face">
+							<enhanced:img
+								class="image"
+								src={pictures[site.id]}
+								alt=""
+								loading="lazy"
+								sizes={card_sizes}
+							/>
+						</span>
 						<span class="visually-hidden">{site.name}</span>
 					</a>
 				{/each}
@@ -167,7 +177,23 @@
 		<ul>
 			{#each sections as section (section.id)}
 				<li>
-					<a href="#{section.id}">{section.title}</a>
+					<a href="#{section.id}" {@attach fade_in}>
+						<span class="preview" aria-hidden="true">
+							{#each section.preview as site (site.id)}
+								<span class="sheet" style:--position={site.screenshot?.position}>
+									<enhanced:img
+										class="image"
+										src={pictures[site.id]}
+										alt=""
+										loading="lazy"
+										sizes={preview_sizes}
+									/>
+								</span>
+							{/each}
+						</span>
+
+						<span class="title">{section.title}</span>
+					</a>
 				</li>
 			{/each}
 		</ul>
@@ -198,16 +224,18 @@
 										src={picture}
 										alt=""
 										loading="lazy"
-										sizes={i === 0 ? first_sizes : tile_sizes}
+										sizes={i === 0 ? lead_sizes : tile_sizes}
 									/>
 								{:else}
 									<span class="placeholder">{site.name}</span>
 								{/if}
 							</a>
 
-							<h3><a href={site.url} target="_blank">{site.name}</a></h3>
-							<p class="description" lang={site.lang}>{site.description}</p>
-							<p class="domain">{domain(site.url)}</p>
+							<div class="text">
+								<h3><a href={site.url} target="_blank">{site.name}</a></h3>
+								<p class="description" lang={site.lang}>{site.description}</p>
+								<p class="domain">{domain(site.url)}</p>
+							</div>
 						</li>
 					{/each}
 				</ul>
@@ -244,7 +272,6 @@
 		/* links land below the banner on small screens, where the site nav is at the bottom,
 		   otherwise below the nav */
 		--anchor-offset: calc(var(--sk-banner-height) + 3.2rem);
-		--categories-height: 5.6rem;
 
 		@media (min-width: 832px) {
 			--anchor-offset: calc(var(--sk-nav-height) + 3.2rem);
@@ -253,17 +280,15 @@
 
 	.hero {
 		position: relative;
-		padding: var(--sk-page-padding-top) 0 2.4rem;
+		padding: var(--sk-page-padding-top) 0 0;
 		overflow: clip;
 
 		@media (min-width: 1024px) {
 			display: grid;
 			place-items: center;
-			/* leaves the categories in view above the banner, which is at the bottom on large screens */
-			min-height: max(
-				64rem,
-				calc(100svh - var(--sk-nav-height) - var(--sk-banner-height) - var(--categories-height))
-			);
+			/* sized by the width alone, so the cards keep their places in any window and nothing
+			   below moves when the banner or the browser bars show */
+			min-height: clamp(64rem, 52vw, 96rem);
 			padding: 0;
 		}
 	}
@@ -301,9 +326,9 @@
 
 	.field {
 		position: relative;
-		height: 32rem;
+		height: clamp(16rem, 40vw, 34rem);
 		margin-top: 2.4rem;
-		perspective: 80rem;
+		perspective: 100rem;
 		pointer-events: none;
 
 		@media (min-width: 1024px) {
@@ -330,31 +355,18 @@
 		position: absolute;
 		left: calc(var(--cx) * 1%);
 		top: calc(var(--cy) * 1%);
-		width: clamp(12rem, 36vw, 18rem);
+		width: clamp(18rem, 54vw, 40rem);
 		aspect-ratio: 16 / 10;
-		overflow: hidden;
-		border-radius: var(--sk-border-radius);
-		background: var(--sk-bg-3);
-		box-shadow: 0.2rem 0.4rem 1.6rem rgb(0 0 0 / 0.2);
-		/* further back is fainter, like distance */
-		opacity: clamp(0.4, 1 + var(--cz) / 1600, 1);
 		transform: translate(-50%, -50%) translateZ(calc(var(--cz) * 1px))
 			rotateY(calc(var(--cr) * 1deg));
+		transform-style: preserve-3d;
 		pointer-events: auto;
 		animation: arrive 1.1s var(--quint-out) backwards;
-		animation-delay: calc(var(--i) * 45ms);
+		/* nearest first, so the field fills in from the front */
+		animation-delay: calc((150 - var(--cz)) * 0.5ms);
 
 		&.wide {
 			display: none;
-		}
-
-		/* grey until hovered, like the screenshots on the home page */
-		@media all and not (hover: none) {
-			filter: grayscale(1) contrast(1);
-
-			&:hover {
-				filter: grayscale(0) contrast(1);
-			}
 		}
 
 		@media (min-width: 1024px) {
@@ -370,20 +382,44 @@
 			}
 		}
 
+		@media (prefers-reduced-motion: reduce) {
+			animation: fade 0.4s ease backwards;
+		}
+	}
+
+	.face {
+		position: absolute;
+		inset: 0;
+		overflow: hidden;
+		border-radius: var(--sk-border-radius);
+		background: var(--sk-bg-3);
+		box-shadow: 0.2rem 0.4rem 1.6rem rgb(0 0 0 / 0.2);
+		transition: filter 0.2s;
+
+		/* further back is fainter, like distance, where the cards are spread out */
+		@media (min-width: 1024px) {
+			opacity: clamp(0.4, 1 + var(--cz) / 1600, 1);
+		}
+
+		/* grey until hovered, like the screenshots on the home page */
+		@media all and not (hover: none) {
+			filter: grayscale(1) contrast(1);
+
+			.card:hover & {
+				filter: grayscale(0) contrast(1);
+			}
+		}
+
 		@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
 			transition:
 				translate 0.3s var(--quint-out),
 				opacity 0.3s ease,
 				filter 0.2s;
 
-			&:hover {
+			.card:hover & {
 				translate: 0 0 6rem;
 				opacity: 1;
 			}
-		}
-
-		@media (prefers-reduced-motion: reduce) {
-			animation: fade 0.4s ease backwards;
 		}
 	}
 
@@ -405,9 +441,10 @@
 		}
 	}
 
+	/* little enough that no card grows past the bottom of the hero */
 	@keyframes dolly {
 		to {
-			translate: 0 0 30rem;
+			translate: 0 0 12rem;
 		}
 	}
 
@@ -418,31 +455,112 @@
 	}
 
 	.categories {
-		box-shadow: inset 0 -1px var(--sk-border);
+		max-width: 140rem;
+		margin: 0 auto;
+		padding: 5.6rem var(--sk-page-padding-side) 0;
+
+		@media (min-width: 1024px) {
+			padding-top: 6.4rem;
+		}
 
 		ul {
-			display: flex;
-			flex-wrap: wrap;
-			gap: 0.6rem 2.4rem;
-			max-width: 140rem;
-			margin: 0 auto;
-			padding: 1.6rem var(--sk-page-padding-side);
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 4rem 1.6rem;
+			margin: 0;
+			padding: 0;
 			list-style: none;
 
-			@media (min-width: 640px) {
-				gap: 0.8rem 3.2rem;
+			@media (min-width: 900px) {
+				grid-template-columns: repeat(4, minmax(0, 1fr));
+				gap: 5.6rem 3.2rem;
 			}
 		}
 
 		a {
-			color: var(--sk-fg-3);
-			font: var(--sk-font-ui-medium);
-			white-space: nowrap;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 2rem;
+			color: var(--sk-fg-1);
+			text-decoration: none;
+		}
+	}
 
-			&:hover {
-				color: var(--sk-fg-1);
-				text-decoration: none;
+	/* a few of the screenshots in the category, one in front of the others */
+	.preview {
+		position: relative;
+		display: block;
+		width: min(70%, 24rem);
+		aspect-ratio: 16 / 10;
+	}
+
+	.sheet {
+		position: absolute;
+		inset: 0;
+		overflow: hidden;
+		border-radius: var(--sk-border-radius);
+		background: var(--sk-bg-3);
+		box-shadow: 0.2rem 0.4rem 1.2rem rgb(0 0 0 / 0.16);
+
+		&:nth-child(1) {
+			z-index: 1;
+		}
+
+		&:nth-child(2) {
+			translate: -24% 0;
+			scale: 0.82;
+			rotate: -4deg;
+		}
+
+		&:nth-child(3) {
+			translate: 24% 0;
+			scale: 0.82;
+			rotate: 4deg;
+		}
+
+		@media all and not (hover: none) {
+			.image {
+				filter: grayscale(1) contrast(1);
+
+				a:is(:hover, :focus-visible) & {
+					filter: grayscale(0) contrast(1);
+				}
 			}
+		}
+
+		/* fans out on hover */
+		@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+			transition:
+				translate 0.3s var(--quint-out),
+				rotate 0.3s var(--quint-out);
+
+			a:hover &:nth-child(1) {
+				translate: 0 -4%;
+			}
+
+			a:hover &:nth-child(2) {
+				translate: -34% 2%;
+				rotate: -7deg;
+			}
+
+			a:hover &:nth-child(3) {
+				translate: 34% 2%;
+				rotate: 7deg;
+			}
+		}
+	}
+
+	.title {
+		font: 400 clamp(2.2rem, 1.6rem + 1vw, 3.2rem) / 1.1 var(--sk-font-family-heading);
+		text-align: center;
+		text-wrap: balance;
+		text-decoration: underline 1px transparent;
+		text-underline-offset: 0.2em;
+		transition: text-decoration-color 0.2s;
+
+		a:hover & {
+			text-decoration-color: currentColor;
 		}
 	}
 
@@ -453,18 +571,10 @@
 	}
 
 	.category {
-		margin: 6.4rem 0 0 0;
-
-		&:first-child {
-			margin-top: 4.8rem;
-		}
+		margin: 9.6rem 0 0 0;
 
 		@media (min-width: 1024px) {
-			margin-top: 12rem;
-
-			&:first-child {
-				margin-top: 8rem;
-			}
+			margin-top: 14.4rem;
 		}
 	}
 
@@ -478,20 +588,19 @@
 
 	.sites {
 		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: 3.2rem 1.6rem;
+		grid-template-columns: minmax(0, 1fr);
+		gap: 4.8rem 3.2rem;
 		margin: 0;
 		padding: 0;
 		list-style: none;
 
 		@media (min-width: 640px) {
-			grid-template-columns: repeat(3, minmax(0, 1fr));
-			gap: 4rem 2.4rem;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
 		}
 
 		@media (min-width: 1024px) {
-			grid-template-columns: repeat(4, minmax(0, 1fr));
-			gap: 4.8rem 3.2rem;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			gap: 5.6rem 4rem;
 		}
 	}
 
@@ -503,7 +612,7 @@
 
 		h3 {
 			margin: 0;
-			font: 400 clamp(1.9rem, 1.6rem + 0.4vw, 2.4rem) / 1.15 var(--sk-font-family-heading);
+			font: 400 clamp(2.2rem, 1.8rem + 0.4vw, 2.6rem) / 1.15 var(--sk-font-family-heading);
 
 			a {
 				color: var(--sk-fg-1);
@@ -527,30 +636,31 @@
 			color: var(--sk-fg-accent);
 		}
 
-		/* two to a row on small screens leaves little room for the description */
-		@media (max-width: 639px) {
-			&:not(:first-child) .description {
-				font-size: calc(0.8 * var(--sk-font-size-body-small));
-				line-height: 1.4;
-			}
-		}
-
-		/* the first in each category is shown larger */
+		/* the first in each category is shown larger, with its name beside it */
 		&:first-child {
 			grid-column: 1 / -1;
 
 			h3 {
-				font-size: clamp(2.4rem, 1.6rem + 1.4vw, 3.6rem);
+				font-size: clamp(2.8rem, 2rem + 1.6vw, 4.4rem);
+			}
+
+			.description {
+				margin-top: 0.8rem;
+				font: var(--sk-font-body);
 			}
 
 			@media (min-width: 640px) {
-				grid-column: span 2;
-				grid-row: span 2;
+				display: grid;
+				grid-template-columns: subgrid;
+				align-items: end;
 
 				.thumb {
-					flex: 1;
-					min-height: 24rem;
-					aspect-ratio: auto;
+					grid-column: 1 / -2;
+					margin: 0;
+				}
+
+				.text {
+					grid-column: -2;
 				}
 			}
 		}
@@ -560,7 +670,7 @@
 		position: relative;
 		display: block;
 		aspect-ratio: 16 / 10;
-		margin: 0 0 1.2rem 0;
+		margin: 0 0 1.6rem 0;
 		overflow: hidden;
 		border: 1px solid var(--sk-border);
 		border-radius: var(--sk-border-radius);
@@ -601,10 +711,12 @@
 
 	.next {
 		margin: 16rem 0 0 0;
+		padding-bottom: 8rem;
 		text-align: center;
 
 		@media (min-width: 1024px) {
 			margin-top: 24rem;
+			padding-bottom: 12rem;
 		}
 	}
 
@@ -629,6 +741,13 @@
 		/* the copy icon is filled, unlike the tick */
 		button:not(.copied) :global(svg) {
 			stroke: none;
+		}
+
+		@media (pointer: coarse) {
+			button {
+				width: 4.4rem;
+				height: 4.4rem;
+			}
 		}
 	}
 </style>
