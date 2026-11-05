@@ -1,18 +1,27 @@
 <script lang="ts">
 	import type { Picture } from '@sveltejs/enhanced-img';
 	import { Icon } from '@sveltejs/site-kit/components';
+	import { arrange, type Cell } from './arrange.ts';
 	import { categories, sites } from './sites.ts';
 
-	const screenshots = import.meta.glob<Picture>('./screenshots/*.{jpg,png,webp}', {
-		eager: true,
-		import: 'default',
-		query: { enhanced: true, w: '480;960;1440' }
-	});
+	const screenshots = {
+		...import.meta.glob<Picture>(['./screenshots/*.{jpg,png,webp}', '!./screenshots/*@2x.*'], {
+			eager: true,
+			import: 'default',
+			query: { enhanced: true, w: '480;960;1440' }
+		}),
+		// the wider ones are taken at twice the size, so they get widths to match
+		...import.meta.glob<Picture>('./screenshots/*@2x.{jpg,png,webp}', {
+			eager: true,
+			import: 'default',
+			query: { enhanced: true, w: '480;960;1440;1920;2880' }
+		})
+	};
 
 	/** screenshots by site id */
 	const pictures: Record<string, Picture> = Object.fromEntries(
 		Object.entries(screenshots).map(([path, picture]) => [
-			path.replace(/^.*\/|\.\w+$/g, ''),
+			path.replace(/^.*\/|(@2x)?\.\w+$/g, ''),
 			picture
 		])
 	);
@@ -60,19 +69,30 @@
 
 		return {
 			...category,
-			sites: members,
+			cells: arrange(members),
 			/** the first few with a screenshot, shown on the link to the category */
-			preview: members.filter((site) => pictures[site.id]).slice(0, 3)
+			preview: members.filter((site) => pictures[site.id]).slice(0, 3),
+			/** the first in the category, when the screenshot in front of the preview is its own */
+			lead: members[0] && pictures[members[0].id] ? members[0].id : undefined
 		};
 	});
 
 	// widths of the screenshots as laid out below
 	const card_sizes = '(min-width: 1024px) 260px, (min-width: 740px) 400px, 54vw';
 	const preview_sizes = '(min-width: 1440px) 230px, (min-width: 900px) 16vw, 34vw';
-	const lead_sizes =
-		'(min-width: 1440px) 860px, (min-width: 1024px) 59vw, (min-width: 640px) 45vw, 92vw';
-	const tile_sizes =
-		'(min-width: 1440px) 410px, (min-width: 1024px) 28vw, (min-width: 640px) 45vw, 92vw';
+
+	const wide_sizes: Record<Cell['kind'], string> = {
+		beside: '(min-width: 1440px) 860px, (min-width: 1024px) 59vw',
+		large: '(min-width: 1440px) 860px, (min-width: 1024px) 59vw',
+		half: '(min-width: 1440px) 640px, (min-width: 1024px) 44vw',
+		third: '(min-width: 1440px) 410px, (min-width: 1024px) 28vw'
+	};
+
+	const medium_sizes: Record<Cell['medium'], string> = {
+		beside: '(min-width: 640px) 45vw',
+		full: '(min-width: 640px) 92vw',
+		half: '(min-width: 640px) 45vw'
+	};
 
 	const command = 'npx sv create';
 
@@ -115,6 +135,143 @@
 		};
 	}
 
+	/** set while a jump replays its click, so the browser and the router handle it as usual */
+	let replaying = false;
+
+	/** starts loading the screenshot of a site in the list before jumping to it */
+	function prime(id: string) {
+		const image = document.getElementById(id)?.querySelector('img');
+		if (image) image.loading = 'eager';
+	}
+
+	let following = false;
+
+	/** keeps the hole in the band over the card you point at or focus, as it lifts and the page scrolls */
+	function follow(card: HTMLElement) {
+		const hero = card.closest<HTMLElement>('.hero');
+		if (!hero || following || matchMedia('(hover: none)').matches) return;
+
+		following = true;
+		let hole = '';
+
+		const step = () => {
+			const face = hero.querySelector('.card:is(:hover, :focus-visible) .face');
+
+			if (!face) {
+				hero.style.removeProperty('--hole');
+				following = false;
+				return;
+			}
+
+			const a = face.getBoundingClientRect();
+			const b = hero.getBoundingClientRect();
+			// the band stays at the top of the window as the page scrolls, so the hole goes where the
+			// card is in the window
+			const next = `${a.left - b.left}px ${a.top}px / ${a.width}px ${a.height}px`;
+			if (next !== hole) hero.style.setProperty('--hole', (hole = next));
+
+			requestAnimationFrame(step);
+		};
+
+		step();
+	}
+
+	/** moves the screenshot you clicked onto the same one in the list as the page jumps there */
+	function morph(event: MouseEvent, id: string) {
+		const link = event.currentTarget as HTMLAnchorElement;
+		const source = link.querySelector<HTMLElement>('.face, .sheet');
+		const destination = document.getElementById(id)?.querySelector<HTMLElement>('.thumb');
+
+		if (
+			replaying ||
+			!source ||
+			!destination ||
+			!document.startViewTransition ||
+			event.button !== 0 ||
+			event.metaKey ||
+			event.ctrlKey ||
+			event.shiftKey ||
+			event.altKey ||
+			// a keyboard press, which should never wait on motion
+			event.detail === 0 ||
+			matchMedia('(prefers-reduced-motion: reduce)').matches
+		) {
+			return;
+		}
+
+		event.preventDefault();
+		jump(link, source, destination);
+	}
+
+	async function jump(link: HTMLAnchorElement, source: HTMLElement, destination: HTMLElement) {
+		// the rest of the category loads too, so it does not land among empty frames
+		for (const img of destination.closest('ul')?.querySelectorAll('img') ?? []) {
+			img.loading = 'eager';
+		}
+
+		const image = destination.querySelector('img');
+
+		// waits a moment for the screenshot, so it does not land on an empty frame
+		if (image && !image.complete) {
+			await Promise.race([
+				image.decode().catch(() => {}),
+				new Promise((fulfil) => setTimeout(fulfil, 250))
+			]);
+		}
+
+		const root = document.documentElement;
+		const duration = 450;
+		let to!: DOMRect;
+
+		source.style.viewTransitionName = 'picked';
+		root.classList.add('picking');
+
+		const transition = document.startViewTransition(() => {
+			source.style.viewTransitionName = '';
+
+			replaying = true;
+			link.click();
+			replaying = false;
+
+			to = destination.getBoundingClientRect();
+
+			// shows under the picked one as it lands, which then fades, so the two never dim each other
+			destination.animate(
+				[{ opacity: 0 }, { opacity: 0, offset: 0.55 }, { opacity: 1, offset: 0.65 }],
+				duration
+			);
+		});
+
+		transition.finished.finally(() => root.classList.remove('picking'));
+
+		try {
+			await transition.ready;
+		} catch {
+			return;
+		}
+
+		// safari also leaves an element the page scrolls to where it is, so only the picked one is
+		// captured, and travels to where the one in the list is
+		root.animate(
+			{
+				transform: [`translate(${to.left}px, ${to.top}px)`],
+				width: [`${to.width}px`],
+				height: [`${to.height}px`]
+			},
+			{
+				duration,
+				easing: getComputedStyle(root).getPropertyValue('--quint-out').trim(),
+				fill: 'both',
+				pseudoElement: '::view-transition-group(picked)'
+			}
+		);
+
+		root.animate(
+			{ opacity: [1, 1, 0], offset: [0, 0.65, 1] },
+			{ duration, fill: 'both', pseudoElement: '::view-transition-old(picked)' }
+		);
+	}
+
 	async function copy() {
 		await navigator.clipboard.writeText(command);
 
@@ -135,8 +292,8 @@
 <div class="showcase">
 	<div class="hero">
 		<div class="intro">
-			<h1>Built with Svelte</h1>
-			<p>From newsrooms to countries, popular brands and leading industries</p>
+			<h1>Built with <span>Svelte</span></h1>
+			<p>From newsrooms to governments, popular brands and leading industries</p>
 		</div>
 
 		<div class="field">
@@ -154,6 +311,15 @@
 						style:--sz={small?.z}
 						style:--sr={small?.r}
 						style:--position={site.screenshot?.position}
+						onclick={(event) => morph(event, site.id)}
+						onpointerenter={(event) => {
+							prime(site.id);
+							follow(event.currentTarget);
+						}}
+						onfocus={(event) => {
+							prime(site.id);
+							follow(event.currentTarget);
+						}}
 						{@attach fade_in}
 					>
 						<!-- lifts on hover while the link stays put, so the pointer stays on it -->
@@ -177,7 +343,13 @@
 		<ul>
 			{#each sections as section (section.id)}
 				<li>
-					<a href="#{section.id}" {@attach fade_in}>
+					<a
+						href="#{section.id}"
+						onclick={(event) => section.lead && morph(event, section.lead)}
+						onpointerenter={() => section.lead && prime(section.lead)}
+						onfocus={() => section.lead && prime(section.lead)}
+						{@attach fade_in}
+					>
 						<span class="preview" aria-hidden="true">
 							{#each section.preview as site (site.id)}
 								<span class="sheet" style:--position={site.screenshot?.position}>
@@ -205,14 +377,14 @@
 				<h2 id={section.id}>{section.title}</h2>
 
 				<ul class="sites">
-					{#each section.sites as site, i (site.id)}
+					{#each section.cells as { site, kind, medium } (site.id)}
 						{@const picture = pictures[site.id]}
 
-						<li class="site" id={site.id}>
+						<li class={['site', kind, `medium-${medium}`]} id={site.id}>
+							<!-- for the pointer only, keyboards and screen readers use the link on the name -->
 							<a
 								class="thumb"
 								href={site.url}
-								target="_blank"
 								tabindex="-1"
 								aria-hidden="true"
 								style:--position={site.screenshot?.position}
@@ -224,7 +396,7 @@
 										src={picture}
 										alt=""
 										loading="lazy"
-										sizes={i === 0 ? lead_sizes : tile_sizes}
+										sizes="{wide_sizes[kind]}, {medium_sizes[medium]}, 92vw"
 									/>
 								{:else}
 									<span class="placeholder">{site.name}</span>
@@ -232,7 +404,7 @@
 							</a>
 
 							<div class="text">
-								<h3><a href={site.url} target="_blank">{site.name}</a></h3>
+								<h3><a href={site.url}>{site.name}</a></h3>
 								<p class="description" lang={site.lang}>{site.description}</p>
 								<p class="domain">{domain(site.url)}</p>
 							</div>
@@ -242,12 +414,12 @@
 			</section>
 		{/each}
 
-		<section class="next" aria-labelledby="build-yours">
-			<h2 id="build-yours">Build yours</h2>
+		<section class="next" aria-labelledby="your-turn">
+			<h2 id="your-turn">It's your turn</h2>
 
 			<p>
-				Run this in a terminal to start a project, or learn Svelte first in the
-				<a href="/tutorial">tutorial</a>.
+				Use our CLI to create a new project, or try our
+				<a href="/tutorial">interactive tutorial</a>.
 			</p>
 
 			<div class="command">
@@ -280,6 +452,8 @@
 
 	.hero {
 		position: relative;
+		/* a stacking context of its own, or safari drops frames as a card lifts on hover */
+		isolation: isolate;
 		padding: var(--sk-page-padding-top) 0 0;
 		overflow: clip;
 
@@ -313,6 +487,10 @@
 		font: 400 clamp(5.6rem, 1.6rem + 7.6vw, 13.6rem) / 0.95 var(--sk-font-family-heading);
 		letter-spacing: -0.02em;
 		color: var(--sk-fg-1);
+	}
+
+	.intro h1 span {
+		color: var(--sk-fg-accent);
 	}
 
 	.intro p,
@@ -405,7 +583,7 @@
 		@media all and not (hover: none) {
 			filter: grayscale(1) contrast(1);
 
-			.card:hover & {
+			.card:is(:hover, :focus-visible) & {
 				filter: grayscale(0) contrast(1);
 			}
 		}
@@ -432,6 +610,13 @@
 				animation-range: 0 100vh;
 			}
 		}
+	}
+
+	/* the page jumps at once under the screenshot travelling to its place in the list */
+	:global(html.picking::view-transition-old(root)),
+	:global(html.picking::view-transition-new(root)) {
+		animation: none;
+		mix-blend-mode: normal;
 	}
 
 	@keyframes arrive {
@@ -484,6 +669,8 @@
 			gap: 2rem;
 			color: var(--sk-fg-1);
 			text-decoration: none;
+			/* only the screenshots and the title, not the empty space beside them */
+			pointer-events: none;
 		}
 	}
 
@@ -493,6 +680,15 @@
 		display: block;
 		width: min(70%, 24rem);
 		aspect-ratio: 16 / 10;
+		pointer-events: auto;
+
+		/* as wide as the screenshots fanned out at rest, and still while they move, so the pointer
+		   never falls off one as it moves and starts it moving back */
+		&::before {
+			content: '';
+			position: absolute;
+			inset: 0 -17%;
+		}
 	}
 
 	.sheet {
@@ -519,16 +715,6 @@
 			rotate: 4deg;
 		}
 
-		@media all and not (hover: none) {
-			.image {
-				filter: grayscale(1) contrast(1);
-
-				a:is(:hover, :focus-visible) & {
-					filter: grayscale(0) contrast(1);
-				}
-			}
-		}
-
 		/* fans out on hover */
 		@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
 			transition:
@@ -551,13 +737,33 @@
 		}
 	}
 
+	.title,
+	.site h3 a,
+	.next p a {
+		text-decoration-line: underline;
+		text-underline-offset: 0.2em;
+		text-decoration-color: transparent;
+		transition: text-decoration-color 0.15s;
+	}
+
+	/* faint even at rest, since it sits among words that are not links */
+	.next p a {
+		text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
+	}
+
 	.title {
+		position: relative;
+		pointer-events: auto;
 		font: 400 clamp(2.2rem, 1.6rem + 1vw, 3.2rem) / 1.1 var(--sk-font-family-heading);
+
+		/* the gap up to the screenshots, so the pointer stays on the link between them */
+		&::before {
+			content: '';
+			position: absolute;
+			inset: -2rem 0 0 0;
+		}
 		text-align: center;
 		text-wrap: balance;
-		text-decoration: underline 1px transparent;
-		text-underline-offset: 0.2em;
-		transition: text-decoration-color 0.2s;
 
 		@media all and not (hover: none) {
 			a:hover & {
@@ -589,9 +795,11 @@
 	}
 
 	.sites {
+		--column-gap: 3.2rem;
+
 		display: grid;
 		grid-template-columns: minmax(0, 1fr);
-		gap: 4.8rem 3.2rem;
+		gap: 4.8rem var(--column-gap);
 		margin: 0;
 		padding: 0;
 		list-style: none;
@@ -600,9 +808,12 @@
 			grid-template-columns: repeat(2, minmax(0, 1fr));
 		}
 
+		/* six, so a row can take thirds, halves, or a large one and a third */
 		@media (min-width: 1024px) {
-			grid-template-columns: repeat(3, minmax(0, 1fr));
-			gap: 5.6rem 4rem;
+			--column-gap: 4rem;
+
+			grid-template-columns: repeat(6, minmax(0, 1fr));
+			gap: 5.6rem var(--column-gap);
 		}
 	}
 
@@ -613,12 +824,32 @@
 		scroll-margin-top: var(--anchor-offset);
 
 		h3 {
+			position: static;
 			margin: 0;
 			font: 400 clamp(2.2rem, 1.8rem + 0.4vw, 2.6rem) / 1.15 var(--sk-font-family-heading);
 
 			a {
+				position: static;
 				color: var(--sk-fg-1);
+
+				/* covers the text and the gap above it, so the domain links to the site too, but leaves
+				   out any empty space in the card */
+				&::after {
+					content: '';
+					position: absolute;
+					inset: -1.6rem 0 0 0;
+				}
 			}
+		}
+
+		@media all and not (hover: none) {
+			&:has(a:hover) h3 a {
+				text-decoration-color: currentColor;
+			}
+		}
+
+		.text {
+			position: relative;
 		}
 
 		.description {
@@ -633,15 +864,7 @@
 			color: var(--sk-fg-4);
 		}
 
-		/* the one a screenshot at the top links to */
-		&:target h3 a {
-			color: var(--sk-fg-accent);
-		}
-
-		/* the first in each category is shown larger, with its name beside it */
-		&:first-child {
-			grid-column: 1 / -1;
-
+		&:is(.beside, .large) {
 			h3 {
 				font-size: clamp(2.8rem, 2rem + 1.6vw, 4.4rem);
 			}
@@ -650,19 +873,92 @@
 				margin-top: 0.8rem;
 				font: var(--sk-font-body);
 			}
+		}
 
-			@media (min-width: 640px) {
+		@media (640px <= width < 1024px) {
+			&:is(.medium-beside, .medium-full) {
+				grid-column: 1 / -1;
+			}
+
+			&.medium-beside {
 				display: grid;
 				grid-template-columns: subgrid;
 				align-items: end;
 
 				.thumb {
-					grid-column: 1 / -2;
+					grid-column: 1;
 					margin: 0;
 				}
 
+				h3 a::after {
+					inset: 0 0 0 calc(-1 * var(--column-gap));
+				}
+			}
+		}
+
+		/* a row for the screenshots and a row for the text, so a large one lines up with the two
+		   stacked beside it */
+		@media (min-width: 1024px) {
+			display: grid;
+			grid-template-rows: subgrid;
+			grid-row: span 2;
+			grid-column: span 2;
+			row-gap: 1.6rem;
+			/* the text no taller than it is, so the space below a shorter one does not link anywhere */
+			align-items: start;
+
+			.thumb {
+				margin: 0;
+			}
+
+			&.half {
+				grid-column: span 3;
+			}
+
+			&.large {
+				grid-column: span 4;
+				grid-row: span 4;
+
+				/* as tall as the two stacked beside it, which shows more of the page since the
+				   screenshots are square */
+				.thumb {
+					grid-row: span 3;
+					align-self: stretch;
+
+					&::before {
+						padding-top: 0;
+					}
+				}
+			}
+
+			/* every other category has it on the right, with the two after it stacked on its left */
+			.category:nth-child(even) &.large {
+				grid-column: 3 / -1;
+				grid-row: 1 / span 4;
+
+				& + .third,
+				& + .third + .third {
+					grid-column: 1 / span 2;
+				}
+			}
+
+			&.beside {
+				grid-column: 1 / -1;
+				grid-template-columns: subgrid;
+				align-items: end;
+
+				.thumb {
+					grid-column: 1 / -3;
+					grid-row: 1 / -1;
+				}
+
 				.text {
-					grid-column: -2;
+					grid-column: -3 / -1;
+					grid-row: 1 / -1;
+				}
+
+				h3 a::after {
+					inset: 0 0 0 calc(-1 * var(--column-gap));
 				}
 			}
 		}
@@ -671,22 +967,98 @@
 	.thumb {
 		position: relative;
 		display: block;
-		aspect-ratio: 16 / 10;
 		margin: 0 0 1.6rem 0;
 		overflow: hidden;
+		text-decoration: none;
 		border: 1px solid var(--sk-border);
 		border-radius: var(--sk-border-radius);
 		background: var(--sk-bg-3);
 
-		/* grey until hovered, like the screenshots on the home page */
-		@media all and not (hover: none) {
-			.image {
-				filter: grayscale(1) contrast(1);
+		/* 16:10 by padding, since safari leaves out aspect-ratio when sizing the rows of a subgrid */
+		&::before {
+			content: '';
+			display: block;
+			padding-top: 62.5%;
+		}
+	}
+
+	/* grey until hovered like the screenshots on the home page, and where colour can follow scrolling,
+	   grey towards the top and bottom of the window and in colour only as they reach the middle */
+	@media all and not (hover: none) {
+		.thumb,
+		.sheet {
+			--greyscale: 1;
+
+			.site:is(:has(a:hover, :focus-visible), :target) &,
+			a:is(:hover, :focus-visible) & {
+				--greyscale: 0;
 			}
 
-			.site:is(:has(a:hover, :focus-visible), :target) & .image {
-				filter: grayscale(0) contrast(1);
+			@supports not (animation-timeline: view()) {
+				.image {
+					filter: grayscale(var(--greyscale)) contrast(1);
+				}
 			}
+		}
+
+		@supports (animation-timeline: view()) {
+			/* a timeline leaves out how the cards in the hero turn in 3d, so one band covers them all, with
+			   a hole over the one you point at so the others stay as they are */
+			.hero {
+				--greyscale: 1;
+				/* for the band to blend with between the cards, or it shows as grey */
+				background: var(--sk-bg-1);
+
+				.face {
+					filter: grayscale(0) contrast(1);
+				}
+
+				/* over the heading too, so the name in it fades with the screenshots */
+				&::after {
+					z-index: 2;
+					mask:
+						linear-gradient(#000 0 0),
+						linear-gradient(#000 0 0) var(--hole, 0 0 / 0 0) no-repeat;
+					mask-composite: exclude;
+				}
+			}
+		}
+
+		.thumb,
+		.sheet,
+		.hero {
+			@supports (animation-timeline: view()) {
+				view-timeline: --screenshot;
+				isolation: isolate;
+
+				/* starts a window above the screenshot and moves down by its own height as the screenshot
+				   scrolls past, so the gradient stays still on the window */
+				&::after {
+					content: '';
+					position: absolute;
+					inset: -100vh 0 0 0;
+					/* the colour reaches further up than down, so some of the hero is in colour before
+					   any scrolling */
+					background: linear-gradient(grey 15%, transparent 35% 55%, grey 75%) top / 100% 100vh
+						no-repeat;
+					opacity: var(--greyscale);
+					mix-blend-mode: saturation;
+					pointer-events: none;
+					transition: opacity 0.2s;
+					animation: stay-in-window linear both;
+					animation-timeline: --screenshot;
+				}
+
+				:is(.categories, .index):has(:focus-visible) &::after {
+					transition: none;
+				}
+			}
+		}
+	}
+
+	@keyframes stay-in-window {
+		to {
+			translate: 0 100%;
 		}
 	}
 
@@ -708,10 +1080,11 @@
 	}
 
 	.placeholder {
+		position: absolute;
+		inset: 0;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		height: 100%;
 		font: var(--sk-font-h3);
 		color: var(--sk-fg-4);
 	}
@@ -726,9 +1099,19 @@
 			padding-bottom: 12rem;
 		}
 
-		p a {
-			color: inherit;
-			text-decoration: underline;
+		h2 {
+			/* room for the descenders, which hang below the tight line height */
+			padding-bottom: 0.08em;
+		}
+
+		p {
+			margin-top: 3.5rem;
+		}
+
+		@media all and not (hover: none) {
+			p a:hover {
+				text-decoration-color: currentColor;
+			}
 		}
 	}
 
@@ -736,7 +1119,7 @@
 		display: inline-flex;
 		align-items: center;
 		gap: 2rem;
-		margin: 4.8rem 0 0 0;
+		margin: 3.6rem 0 0 0;
 		padding: 1rem 1rem 1rem 2.4rem;
 		border: 1px solid var(--sk-border);
 		border-radius: var(--sk-border-radius);

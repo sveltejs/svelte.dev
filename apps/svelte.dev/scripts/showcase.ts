@@ -29,7 +29,8 @@ import {
 	PlaywrightBlocker
 } from '@ghostery/adblocker-playwright';
 import { chromium, type Browser, type Page } from 'playwright';
-import { sites, type Site } from '../src/routes/showcase/sites.ts';
+import { arrange } from '../src/routes/showcase/arrange.ts';
+import { categories, sites, type Site } from '../src/routes/showcase/sites.ts';
 
 const SCREENSHOTS = path.resolve(import.meta.dirname, '../src/routes/showcase/screenshots');
 const EXTENSIONS = ['jpg', 'png', 'webp'];
@@ -37,6 +38,16 @@ const VIEWPORT = { width: 1440, height: 900 };
 
 // taller than the window, since the first site in each category is shown taller than 1440x900
 const SIZE = { width: 1440, height: 1440 };
+
+// the ones shown wider than half the page, taken at twice the size to stay sharp on high density
+// screens
+const WIDE = new Set(
+	categories.flatMap((category) =>
+		arrange(sites.filter((site) => site.category === category.id))
+			.filter((cell) => ['beside', 'large'].includes(cell.kind))
+			.map((cell) => cell.site.id)
+	)
+);
 
 // tracker lists are left out since blocking trackers breaks some sites, windy thinks it is offline
 const FILTER_LISTS = [
@@ -116,8 +127,11 @@ if (problems.length > 0) {
 }
 
 async function visit(browser: Browser, site: Site) {
+	const scale = WIDE.has(site.id) ? 2 : 1;
+
 	const context = await browser.newContext({
 		viewport: VIEWPORT,
+		deviceScaleFactor: scale,
 		locale: 'en-US',
 		reducedMotion: 'reduce'
 	});
@@ -167,7 +181,7 @@ async function visit(browser: Browser, site: Site) {
 				await page.waitForTimeout(250);
 			}
 
-			const file = path.join(SCREENSHOTS, `${site.id}.jpg`);
+			const file = path.join(SCREENSHOTS, `${site.id}${scale === 2 ? '@2x' : ''}.jpg`);
 			await page.screenshot({
 				path: file,
 				type: 'jpeg',
@@ -176,8 +190,8 @@ async function visit(browser: Browser, site: Site) {
 				clip: { x: 0, y: 0, ...SIZE }
 			});
 
-			for (const extension of EXTENSIONS.filter((extension) => extension !== 'jpg')) {
-				fs.rmSync(path.join(SCREENSHOTS, `${site.id}.${extension}`), { force: true });
+			for (const other of screenshot_files(site.id)) {
+				if (other !== file) fs.rmSync(other, { force: true });
 			}
 		}
 	} catch (error) {
@@ -287,7 +301,12 @@ async function prompt(message: string) {
 }
 
 function find_screenshot(id: string) {
-	return EXTENSIONS.some((extension) =>
-		fs.existsSync(path.join(SCREENSHOTS, `${id}.${extension}`))
+	return screenshot_files(id).some((file) => fs.existsSync(file));
+}
+
+/** every file the screenshot of a site could be, with @2x on the ones taken at twice the size */
+function screenshot_files(id: string) {
+	return [id, `${id}@2x`].flatMap((name) =>
+		EXTENSIONS.map((extension) => path.join(SCREENSHOTS, `${name}.${extension}`))
 	);
 }
