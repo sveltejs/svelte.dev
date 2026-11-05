@@ -431,4 +431,44 @@ Top navigation bar for the application. It provides a slot for the left side, th
 			display: none;
 		}
 	}
+
+	/* below 1200px the search shrinks so the links keep clear of it */
+	@media (min-width: 832px) and (max-width: 1199px) {
+		.menu :global(.search-container) {
+			width: 11rem;
+		}
+
+		.menu :global(input::placeholder) {
+			opacity: 0;
+		}
+	}
+
+	@media (min-width: 832px) and (max-width: 1099px) {
+		.menu :global(.search-container) {
+			width: 3.4rem;
+		}
+
+		.menu :global(.shortcut) {
+			display: none;
+		}
+	}
+
+	/* and below 960px the logo drops its name */
+	@media (min-width: 832px) and (max-width: 959px) {
+		.home-link {
+			width: 4.6rem;
+			padding: 0;
+			background-size: 2.6rem auto;
+
+			&,
+			:root:not(.light) &,
+			:root.dark & {
+				background-image: url(../branding/svelte-logo.svg);
+			}
+		}
+
+		.links a:not(.secondary) {
+			padding-inline: 0.4rem;
+		}
+	}
 </style>
