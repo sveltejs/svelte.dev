@@ -126,7 +126,10 @@ async function visit(browser: Browser, site: Site) {
 		const page = await context.newPage();
 		await blocker.enableBlockingInPage(page);
 
-		const response = await page.goto(site.url, { waitUntil: 'load', timeout: 30_000 });
+		const response = await page.goto(site.screenshot?.url ?? site.url, {
+			waitUntil: 'load',
+			timeout: 30_000
+		});
 		await page.waitForLoadState('networkidle', { timeout: 10_000 }).catch(() => {});
 
 		let found = await page.evaluate(detect).catch(() => null);

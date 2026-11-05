@@ -28,6 +28,8 @@ export interface Site {
 	category: Category;
 	/** how pnpm showcase takes the screenshot and how the page shows it */
 	screenshot?: {
+		/** a page of the site to take instead, such as a shared chat that shows the app in use */
+		url?: string;
 		/** the site blocks headless browsers, so it is only checked with pnpm showcase --headed */
 		headed?: boolean;
 		/** css selectors for things to hide such as popups */
@@ -420,7 +422,9 @@ export const sites: Site[] = [
 		name: 'Z.ai',
 		url: 'https://chat.z.ai/',
 		description: 'The AI assistant powered by GLM-5.3-Flash',
-		category: 'ai'
+		category: 'ai',
+		// a demo chat linked from https://z.ai/blog/glm-4.7
+		screenshot: { url: 'https://chat.z.ai/s/83640645-5436-4069-a27b-f8094189d669' }
 	},
 	{
 		id: 'modal',
