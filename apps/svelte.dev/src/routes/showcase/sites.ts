@@ -203,8 +203,8 @@ export const sites: Site[] = [
 	{
 		id: 'nytimes',
 		name: 'The New York Times',
-		url: 'https://www.nytimes.com/interactive/2024/11/05/us/elections/results-president.html',
-		description: 'Presidential Election Results',
+		url: 'https://www.nytimes.com/',
+		description: 'Live news, investigations, opinion, photos and video',
 		category: 'news',
 		screenshot: { headed: true }
 	},
@@ -218,9 +218,10 @@ export const sites: Site[] = [
 	{
 		id: 'reuters',
 		name: 'Reuters',
-		url: 'https://www.reuters.com/graphics/REUTERS-GRAPHICS/2025/myvmqrnmdvr/',
-		description: 'Visual explainers and data stories of the year',
-		category: 'news'
+		url: 'https://www.reuters.com',
+		description: 'Find the latest news from every corner of the globe',
+		category: 'news',
+		screenshot: { headed: true }
 	},
 	{
 		id: 'radio-france',
@@ -614,29 +615,5 @@ export const sites: Site[] = [
 		url: 'https://evidence.dev/',
 		description: 'An open source, code-based alternative to drag-and-drop BI tools',
 		category: 'developers'
-	},
-	{
-		id: 'mathesar',
-		name: 'Mathesar',
-		url: 'https://mathesar.org/',
-		description: 'A spreadsheet-like interface to a PostgreSQL database',
-		category: 'developers'
-	},
-	{
-		id: 'asm-editor',
-		name: 'Asm Editor',
-		url: 'https://asm-editor.specy.app/',
-		description:
-			'Write, learn and run M68K, MIPS, RISC-V, x86-64 and Z80 assembly code in your browser',
-		category: 'developers'
-	},
-	{
-		id: 'editable',
-		name: 'Editable',
-		url: 'https://editable.website/',
-		description: 'Build and edit a Svelte website without adding a separate CMS',
-		category: 'developers',
-		// the demo video starts blank and shows the editor at 17 seconds
-		screenshot: { video: 17 }
 	}
 ];
