@@ -202,6 +202,8 @@ export const sites: Site[] = [
 		screenshot: { hide: ['.cookieConsentWrapper'] }
 	},
 
+	// TODO retake these three once the news is quieter, their front pages lead with the 2026
+	// midterms, pnpm showcase --headed nytimes yahoo-finance reuters
 	{
 		id: 'nytimes',
 		name: 'The New York Times',
