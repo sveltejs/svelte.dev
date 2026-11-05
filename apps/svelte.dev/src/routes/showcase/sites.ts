@@ -48,8 +48,8 @@ export const categories: Array<{ id: Category; title: string }> = [
 	{ id: 'entertainment', title: 'Entertainment' },
 	{ id: 'public', title: 'Public services' },
 	{ id: 'ai', title: 'AI' },
-	{ id: 'tools', title: 'Everyday tools' },
-	{ id: 'developers', title: 'Developer tools' }
+	{ id: 'tools', title: 'Everyday' },
+	{ id: 'developers', title: 'Developer' }
 ];
 
 export const sites: Site[] = [
