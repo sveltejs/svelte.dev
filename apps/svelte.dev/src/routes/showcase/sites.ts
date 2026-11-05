@@ -40,6 +40,8 @@ export interface Site {
 		video?: number;
 		/** the object-position of the screenshot when cropped, left top by default like a browser window */
 		position?: string;
+		/** how far down the page to take, for one whose lower part only plays as it scrolls */
+		height?: number;
 	};
 }
 
@@ -331,7 +333,8 @@ export const sites: Site[] = [
 		url: 'https://www.ripleys.com/',
 		description: 'Aquariums and attractions',
 		category: 'entertainment',
-		screenshot: { hide: ['.bb-root'] }
+		// the header grows into a video filling the window as the page scrolls
+		screenshot: { hide: ['.bb-root'], height: 900 }
 	},
 	{
 		id: 'brawlhalla',
