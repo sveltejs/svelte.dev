@@ -964,7 +964,7 @@ If `true`, exposes the Svelte major version in the browser by adding it to a `Se
 <div class="ts-block-property">
 
 ```dts
-compatibility?: {/*…*/}
+compatibility?: {/*…*/};
 ```
 
 <div class="ts-block-property-details">
@@ -1109,7 +1109,7 @@ interface CompileResult {/*…*/}
 <div class="ts-block-property">
 
 ```dts
-js: {/*…*/}
+js: {/*…*/};
 ```
 
 <div class="ts-block-property-details">
@@ -1147,19 +1147,49 @@ A source map
 <div class="ts-block-property">
 
 ```dts
-css: null | {
-	/** The generated code */
-	code: string;
-	/** A source map */
-	map: SourceMap;
-	/** Whether or not the CSS includes global rules */
-	hasGlobal: boolean;
-};
+css: null | {/*…*/};
 ```
 
 <div class="ts-block-property-details">
 
 The compiled CSS
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+code: string;
+```
+
+<div class="ts-block-property-details">
+
+The generated code
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+map: SourceMap;
+```
+
+<div class="ts-block-property-details">
+
+A source map
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+hasGlobal: boolean;
+```
+
+<div class="ts-block-property-details">
+
+Whether or not the CSS includes global rules
+
+</div>
+</div></div>
 
 </div>
 </div>
@@ -1183,7 +1213,7 @@ An array of warning objects that were generated during compilation. Each warning
 <div class="ts-block-property">
 
 ```dts
-metadata: {/*…*/}
+metadata: {/*…*/};
 ```
 
 <div class="ts-block-property-details">
@@ -1338,7 +1368,7 @@ Use this to filter out warnings. Return `true` to keep the warning, `false` to d
 <div class="ts-block-property">
 
 ```dts
-experimental?: {/*…*/}
+experimental?: {/*…*/};
 ```
 
 <div class="ts-block-property-details">

@@ -1,9 +1,14 @@
 import { mkdtempSync, mkdirSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { expect, test } from 'vitest';
+import { afterEach, expect, test, vi } from 'vitest';
 import { routes } from '@vercel/config/v1';
-import { config, create_llms_canonical } from './vercel.ts';
+import { create_llms_canonical } from './vercel.ts';
+
+afterEach(() => {
+	vi.unstubAllEnvs();
+	vi.resetModules();
+});
 
 test('generates canonical headers for per-document llms routes', () => {
 	const directory = mkdtempSync(join(tmpdir(), 'svelte-dev-vercel-'));
@@ -31,13 +36,18 @@ test('generates canonical headers for per-document llms routes', () => {
 	]);
 });
 
-test('preserves existing Vercel configuration and generates unique rules within the limit', () => {
+test('preserves existing Vercel configuration and generates unique rules within the limit', async () => {
+	vi.stubEnv('VERCEL_GIT_COMMIT_REF', 'main');
+	vi.resetModules();
+	const { config } = await import('./vercel.ts');
+
 	expect(config.rewrites).toEqual([
 		routes.rewrite(
 			'/opencode/schema.json',
 			'https://raw.githubusercontent.com/sveltejs/ai-tools/refs/heads/main/packages/opencode/schema.json'
 		)
 	]);
+
 	expect(config.git).toEqual({ deploymentEnabled: { next: false } });
 
 	const canonical_headers = config.headers!.slice(2);
@@ -47,4 +57,36 @@ test('preserves existing Vercel configuration and generates unique rules within 
 		canonical_headers.length
 	);
 	expect(canonical_headers.some((header) => header.source === '/docs/svelte/llms.txt')).toBe(false);
+});
+
+test.each(['main', 'feature'])(
+	'only emits nonempty header rules on %s and limits noindex to previews',
+	async (branch) => {
+		vi.stubEnv('VERCEL_GIT_COMMIT_REF', branch);
+		vi.resetModules();
+		const { config } = await import('./vercel.ts');
+
+		// Vercel converts these arrays to route header objects, which must have at
+		// least one property. An empty production rule fails patchBuild validation.
+		for (const rule of config.headers!) {
+			expect(rule.headers.length).toBeGreaterThan(0);
+		}
+
+		const noindex = config.headers!.filter((rule) =>
+			rule.headers.some((header) => header.key === 'X-Robots-Tag')
+		);
+		expect(noindex).toEqual(
+			branch === 'main' ? [] : [routes.header('/(.*)', [{ key: 'X-Robots-Tag', value: 'noindex' }])]
+		);
+	}
+);
+
+test('disables next deployments only when the current branch is main', async () => {
+	vi.stubEnv('VERCEL_GIT_COMMIT_REF', 'main');
+	vi.resetModules();
+	expect((await import('./vercel.ts')).config.git).toEqual({ deploymentEnabled: { next: false } });
+
+	vi.stubEnv('VERCEL_GIT_COMMIT_REF', 'feature');
+	vi.resetModules();
+	expect((await import('./vercel.ts')).config).not.toHaveProperty('git');
 });

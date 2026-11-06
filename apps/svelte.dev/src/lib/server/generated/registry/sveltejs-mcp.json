@@ -1,0 +1,15 @@
+{
+  "name": "@sveltejs/mcp",
+  "npm_description": "The CLI version of the Svelte MCP.",
+  "repo_url": "https://github.com/sveltejs/ai-tools",
+  "authors": [
+    "rich_harris",
+    "svelte-admin",
+    "conduitry"
+  ],
+  "homepage": "https://github.com/sveltejs/ai-tools#readme",
+  "version": "0.1.28",
+  "downloads": 69205,
+  "github_stars": 335,
+  "updated": "2026-10-26T17:30:37.405Z"
+}

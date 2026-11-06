@@ -47,3 +47,15 @@ Most of the site is prerendered. Since that involves some fairly expensive work,
 ```bash
 PRERENDER=false pnpm build
 ```
+
+### Vercel routing
+
+The build runs `scripts/collapse-vercel-routes.js` after `vite build` to reduce the route count in
+`.vercel/output/config.json`. This is a temporary workaround for adapter-vercel generating a rewrite
+and a trailing-slash redirect for every prerendered page.
+
+The script replaces these pairs with wildcard rules for `/e/kit/*`, `/docs/{svelte,kit,cli,ai}/*`,
+`/tutorial/{svelte,kit}/*` and `/blog/*`. It only matches single-segment, non-dotted page names, leaving
+endpoints, assets, nested paths and specific legacy redirects alone. Unknown page names in these
+namespaces also get trailing-slash normalization, but still resolve to a 404. Namespaces with
+unexpected route pairs are left unchanged. Static-file overrides and function routing are preserved.

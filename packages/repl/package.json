@@ -104,7 +104,7 @@
 		"magic-string": "^0.30.21",
 		"marked": "^17.0.3",
 		"resolve.exports": "^2.0.3",
-		"svelte": "^5.53.3",
+		"svelte": "catalog:",
 		"tailwindcss": "^4.2.1",
 		"tarparser": "^0.0.5",
 		"zimmerframe": "^1.1.4"

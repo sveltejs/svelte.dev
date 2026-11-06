@@ -21,9 +21,9 @@ You can build your entire app with Svelte (for example, using an application fra
 This tutorial is split into four main parts:
 
 - [Basic Svelte](/tutorial/svelte/welcome-to-svelte) (you are here)
-- [Advanced Svelte](/tutorial/svelte/tweens)
+- [Advanced Svelte](/tutorial/svelte/raw-state)
 - [Basic SvelteKit](/tutorial/kit/introducing-sveltekit)
-- [Advanced SvelteKit](/tutorial/kit/optional-params)
+- [Advanced SvelteKit](/tutorial/kit/handle)
 
 Each section will present an exercise designed to illustrate a feature. Later exercises build on the knowledge gained in earlier ones, so it's recommended that you go from start to finish. If necessary, you can navigate via the menu above.
 

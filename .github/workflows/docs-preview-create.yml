@@ -53,8 +53,7 @@ jobs:
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          # TODO: revert this to 'main' when we merge kit next docs
-          ref: ${{ inputs.upstream == 'kit' && 'next' || 'main' }} # Explicitly checkout main branch first
+          ref: main
       - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
@@ -86,7 +85,18 @@ jobs:
 
       - name: Install SvelteKit upstream
         if: ${{ inputs.upstream == 'kit' }}
-        run: pnpm add https://pkg.svelte.dev/@sveltejs/kit/${{ steps.resolve.outputs.ref }} https://pkg.svelte.dev/@sveltejs/adapter-vercel/${{ steps.resolve.outputs.ref }} https://pkg.svelte.dev/@sveltejs/enhanced-img/${{ steps.resolve.outputs.ref }} --filter "docs-types"
+        run: >-
+          pnpm add --filter "docs-types"
+          https://pkg.svelte.dev/@sveltejs/kit/${{ steps.resolve.outputs.ref }}
+          https://pkg.svelte.dev/@sveltejs/adapter-auto/${{ steps.resolve.outputs.ref }}
+          https://pkg.svelte.dev/@sveltejs/adapter-bun/${{ steps.resolve.outputs.ref }}
+          https://pkg.svelte.dev/@sveltejs/adapter-cloudflare/${{ steps.resolve.outputs.ref }}
+          https://pkg.svelte.dev/@sveltejs/adapter-netlify/${{ steps.resolve.outputs.ref }}
+          https://pkg.svelte.dev/@sveltejs/adapter-node/${{ steps.resolve.outputs.ref }}
+          https://pkg.svelte.dev/@sveltejs/adapter-static/${{ steps.resolve.outputs.ref }}
+          https://pkg.svelte.dev/@sveltejs/adapter-vercel/${{ steps.resolve.outputs.ref }}
+          https://pkg.svelte.dev/@sveltejs/enhanced-img/${{ steps.resolve.outputs.ref }}
+          https://pkg.svelte.dev/@sveltejs/package/${{ steps.resolve.outputs.ref }}
 
       - name: Install Svelte CLI upstream
         if: ${{ inputs.upstream == 'cli' }}

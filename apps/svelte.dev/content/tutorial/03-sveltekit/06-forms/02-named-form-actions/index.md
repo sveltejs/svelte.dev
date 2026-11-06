@@ -38,7 +38,7 @@ The `<form>` element has an optional `action` attribute, which is similar to an 
 </form>
 ```
 
-> [!NOTE] The `action` attribute can be any URL — if the action was defined on another page, you might have something like `/todos?/create`. Since the action is on _this_ page, we can omit the pathname altogether, hence the leading `?` character.
+> [!NOTE] The `action` attribute can be any URL — if the action was defined on another page, you might have something like `/todos?/create`. Since the action is on _this_ page, we can omit the pathname altogether, hence the leading `?` character. As with a native form submission, submitting to an action on another page will navigate to that page.
 
 Next, we want to create a form for each todo, complete with a hidden `<input>` that uniquely identifies it:
 

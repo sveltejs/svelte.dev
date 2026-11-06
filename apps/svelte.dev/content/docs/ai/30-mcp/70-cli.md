@@ -67,7 +67,7 @@ Because most shells expand `$`, inline code should be quoted or escaped correctl
 
 Available options:
 
-- `--svelte-version <4|5>` - choose which Svelte version to validate against (defaults to `5`)
+- `--svelte-version <version>` - choose which Svelte version to validate against, ideally the full version from your `package.json` (e.g. `5.16.0`) so that version-specific suggestions are enabled. The major must be `4` or `5` (defaults to `5`)
 - `--async` - enable async Svelte analysis for Svelte 5 projects
 
 The command prints an object with:

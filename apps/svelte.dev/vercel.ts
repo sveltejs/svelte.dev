@@ -33,9 +33,16 @@ export const config: VercelConfig = {
 		routes.rewrite(
 			'/opencode/schema.json',
 			'https://raw.githubusercontent.com/sveltejs/ai-tools/refs/heads/main/packages/opencode/schema.json'
+		),
+		routes.rewrite(
+			'/pi/schema.json',
+			'https://raw.githubusercontent.com/sveltejs/ai-tools/refs/heads/main/packages/pi/schema.json'
 		)
 	],
 	headers: [
+		...(process.env.VERCEL_GIT_COMMIT_REF === 'main'
+			? []
+			: [routes.header('/(.*)', [{ key: 'X-Robots-Tag', value: 'noindex' }])]),
 		routes.header('/_app/immutable/workers/(.*)', [
 			{ key: 'cross-origin-opener-policy', value: 'same-origin' },
 			{ key: 'cross-origin-embedder-policy', value: 'require-corp' },
