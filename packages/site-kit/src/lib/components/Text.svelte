@@ -482,11 +482,6 @@
 					background: transparent;
 				}
 
-				a:hover {
-					border-bottom: 1px solid var(--sk-fg-accent);
-					text-decoration: none;
-				}
-
 				.highlight {
 					--color: rgba(220, 220, 0, 0.2);
 					background: var(--color);
