@@ -1,6 +1,6 @@
 import { parse } from 'svelte/compiler';
 import ts from 'typescript';
-import { decode_html_entities } from './utils.ts';
+import { decode_html_entities, escape_html } from './utils.ts';
 
 /** A module-wide destination, or documentation URLs for individual exports. */
 export type DocumentationReferences = Record<string, string | Record<string, string>>;
@@ -9,6 +9,14 @@ interface Reference {
 	start: number;
 	end: number;
 	href: string;
+}
+
+function shift(references: Reference[], offset: number) {
+	return references.map((reference) => ({
+		...reference,
+		start: reference.start + offset,
+		end: reference.end + offset
+	}));
 }
 
 /** Resolve bindings locally without loading or type-checking the documented packages. */
@@ -21,8 +29,7 @@ export function find_references(
 	/** Whether `$name` refers to the `name` store, as in a Svelte instance script or template. */
 	stores = false
 ): Reference[] {
-	if (!['js', 'javascript', 'ts', 'typescript', 'dts', 'svelte', 'sv'].includes(language))
-		return [];
+	if (!['js', 'ts', 'dts', 'svelte', 'sv'].includes(language)) return [];
 
 	if (language === 'svelte' || language === 'sv') {
 		return find_svelte_references(source, references, reference_module, prelude);
@@ -33,7 +40,7 @@ export function find_references(
 	const prefix = filename_index === -1 ? prelude : prelude.slice(filename_index);
 	const text = prefix + '\n' + source;
 	const offset = prefix.length + 1;
-	const filename = language === 'js' || language === 'javascript' ? 'snippet.js' : 'snippet.ts';
+	const filename = language === 'js' ? 'snippet.js' : 'snippet.ts';
 	const file = ts.createSourceFile(
 		filename,
 		text,
@@ -185,12 +192,9 @@ function find_svelte_references(
 		const uncommented = source.replace(/<!--[\s\S]*?-->/g, (comment) => ' '.repeat(comment.length));
 		return [...uncommented.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script\s*>/g)].flatMap((match) => {
 			const offset = match.index + match[0].indexOf('>') + 1;
-			return find_references(match[1], 'ts', references, reference_module, prelude, true).map(
-				(reference) => ({
-					...reference,
-					start: reference.start + offset,
-					end: reference.end + offset
-				})
+			return shift(
+				find_references(match[1], 'ts', references, reference_module, prelude, true),
+				offset
 			);
 		});
 	}
@@ -326,12 +330,9 @@ function find_svelte_references(
 	walk(ast.fragment);
 
 	const module_references = module_content
-		? find_references(module_source, 'ts', references, reference_module, prelude).map(
-				(reference) => ({
-					...reference,
-					start: reference.start + module_content.start,
-					end: reference.end + module_content.start
-				})
+		? shift(
+				find_references(module_source, 'ts', references, reference_module, prelude),
+				module_content.start
 			)
 		: [];
 	return [
@@ -349,15 +350,7 @@ function find_svelte_references(
 			const range = ranges.find(
 				(range) => reference.start >= range.start && reference.end <= range.end
 			);
-			return range
-				? [
-						{
-							...reference,
-							start: reference.start + range.offset,
-							end: reference.end + range.offset
-						}
-					]
-				: [];
+			return range ? shift([reference], range.offset) : [];
 		})
 	].sort((a, b) => a.start - b.start);
 }
@@ -368,6 +361,8 @@ interface Element {
 	close: string;
 	ignored: boolean;
 	anchor: boolean;
+	/** Inside a diff example's removed or added lines */
+	diff?: 'remove' | 'add';
 }
 
 interface Character {
@@ -404,7 +399,10 @@ export function link_references(
 					ignored:
 						stack.at(-1)?.ignored === true ||
 						/class="[^"]*\btwoslash-(?:popover|query|completions)\b/.test(token),
-					anchor: tag === 'a' || stack.at(-1)?.anchor === true
+					anchor: tag === 'a' || stack.at(-1)?.anchor === true,
+					diff:
+						(/class="[^"]*\bhighlight (remove|add)\b/.exec(token)?.[1] as 'remove' | 'add') ??
+						stack.at(-1)?.diff
 				});
 			}
 			continue;
@@ -412,7 +410,7 @@ export function link_references(
 		if (stack.at(-1)?.ignored || !stack.some((element) => element.open.startsWith('<code')))
 			continue;
 		for (const character of token.matchAll(/&(?:#\d+|#x[\da-fA-F]+|\w+);|[\s\S]/g)) {
-			const decoded = decode_html_entities(character[0].replace('&apos;', '&#39;'));
+			const decoded = decode_html_entities(character[0]);
 			source += decoded;
 			for (let i = 0; i < decoded.length; i++)
 				characters.push({
@@ -428,12 +426,9 @@ export function link_references(
 
 	// Diff examples show the old and new code together, which may declare the same binding twice.
 	// Resolve each version on its own, blanking the other version's lines while keeping offsets.
-	const in_highlight = (kind: string) => (character: Character | undefined) =>
-		!!character?.ancestors.some((element) =>
-			new RegExp(`class="[^"]*\\bhighlight ${kind}\\b`).test(element.open)
-		);
-	const removed = in_highlight('remove');
-	const added = in_highlight('add');
+	const removed = (character: Character | undefined) =>
+		character?.ancestors.at(-1)?.diff === 'remove';
+	const added = (character: Character | undefined) => character?.ancestors.at(-1)?.diff === 'add';
 	const blank = (hidden: (character: Character) => boolean) =>
 		source
 			.split('')
@@ -464,11 +459,7 @@ export function link_references(
 			common++;
 		const start = first.ancestors.slice(common);
 		const end = last.ancestors.slice(common);
-		const href = reference.href
-			.replaceAll('&', '&amp;')
-			.replaceAll('"', '&quot;')
-			.replaceAll('<', '&lt;')
-			.replaceAll('>', '&gt;');
+		const href = escape_html(reference.href);
 		// Split token wrappers at the boundaries so one anchor can span multiple tokens safely.
 		insertions.push({
 			index: first.start,

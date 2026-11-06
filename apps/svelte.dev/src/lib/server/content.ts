@@ -125,6 +125,9 @@ function create_docs() {
 	} = {
 		topics: {},
 		pages: {},
+		// `./$types` is generated per route by SvelteKit, so it has no reference page of its
+		// own. A string destination links every type imported from it (`PageLoad`, `PageProps`…)
+		// to the section that explains them.
 		references: { './$types': '/docs/kit/types#Generated-types' },
 		referenceModules: {}
 	};

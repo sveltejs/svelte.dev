@@ -29,6 +29,7 @@ import { link_references, type DocumentationReferences } from './references.ts';
 import { indent_multiline_comments } from './utils.ts';
 import {
 	decode_html_entities,
+	escape_html,
 	TWINKLEPLOP_LANGUAGE_MAP,
 	slugify,
 	smart_quotes,
@@ -70,15 +71,6 @@ const highlighters: Record<string, Highlighter> = {
 };
 
 const twoslash_highlighters = new Map<string, (code: string) => string>();
-
-function escape_html(value: string) {
-	return value
-		.replaceAll('&', '&amp;')
-		.replaceAll('<', '&lt;')
-		.replaceAll('>', '&gt;')
-		.replaceAll('"', '&quot;')
-		.replaceAll("'", '&#39;');
-}
 
 function highlight_source(source: string, language: string) {
 	const mapped =
