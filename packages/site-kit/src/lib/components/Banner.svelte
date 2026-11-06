@@ -82,6 +82,12 @@
 	a {
 		position: relative;
 		color: inherit;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+
 		width: 100%;
 		overflow: hidden;
 		text-overflow: ellipsis;

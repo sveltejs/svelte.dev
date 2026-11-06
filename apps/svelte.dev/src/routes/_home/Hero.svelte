@@ -126,9 +126,14 @@
 		font-size: 2rem;
 		color: var(--sk-fg-accent);
 		text-transform: uppercase;
+		text-decoration: none;
 		display: flex;
 		align-items: center;
 		gap: 0.5rem;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 	@media (min-width: 800px) {

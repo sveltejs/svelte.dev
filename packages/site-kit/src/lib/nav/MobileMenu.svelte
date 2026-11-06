@@ -341,6 +341,11 @@
 
 			a {
 				flex: 1;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 		}
 

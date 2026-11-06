@@ -92,6 +92,7 @@
 			transition-duration: 0.2s;
 			user-select: none;
 			will-change: filter, transform;
+			text-decoration: none;
 
 			&:nth-child(1) {
 				top: 0%;
