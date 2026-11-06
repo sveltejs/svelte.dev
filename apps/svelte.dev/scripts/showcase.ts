@@ -17,8 +17,11 @@
  * pnpm showcase --missing      # only sites without a screenshot
  * pnpm showcase --check        # check without taking screenshots
  * pnpm showcase --headed       # sites that block headless browsers
+ * pnpm showcase --clip         # record the clips of sites with one, which needs ffmpeg
  */
+import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
 import readline from 'node:readline/promises';
 import { parseArgs } from 'node:util';
@@ -33,6 +36,7 @@ import { arrange } from '../src/routes/showcase/arrange.ts';
 import { categories, sites, type Site } from '../src/routes/showcase/sites.ts';
 
 const SCREENSHOTS = path.resolve(import.meta.dirname, '../src/routes/showcase/screenshots');
+const CLIPS = path.resolve(import.meta.dirname, '../src/routes/showcase/clips');
 const EXTENSIONS = ['jpg', 'png', 'webp'];
 const VIEWPORT = { width: 1440, height: 900 };
 
@@ -73,7 +77,8 @@ const { values, positionals } = parseArgs({
 	options: {
 		check: { type: 'boolean', default: false },
 		missing: { type: 'boolean', default: false },
-		headed: { type: 'boolean', default: false }
+		headed: { type: 'boolean', default: false },
+		clip: { type: 'boolean', default: false }
 	}
 });
 
@@ -86,6 +91,7 @@ if (unknown.length > 0) {
 const candidates = sites.filter(
 	(site) =>
 		(positionals.length === 0 || positionals.includes(site.id)) &&
+		(!values.clip || site.clip !== undefined) &&
 		(!values.missing || !find_screenshot(site.id))
 );
 
@@ -96,6 +102,7 @@ const selected = candidates.filter(
 const skipped = candidates.filter((site) => !selected.includes(site));
 
 fs.mkdirSync(SCREENSHOTS, { recursive: true });
+fs.mkdirSync(CLIPS, { recursive: true });
 
 const blocker = await PlaywrightBlocker.fromLists(fetch, FILTER_LISTS);
 const browser = await chromium.launch({ headless: !values.headed });
@@ -134,9 +141,10 @@ async function visit(browser: Browser, site: Site) {
 
 	const context = await browser.newContext({
 		viewport: VIEWPORT,
-		deviceScaleFactor: scale,
+		deviceScaleFactor: values.clip ? 1 : scale,
 		locale: 'en-US',
-		reducedMotion: 'reduce'
+		// the clips are there for the motion
+		reducedMotion: values.clip ? 'no-preference' : 'reduce'
 	});
 
 	try {
@@ -162,7 +170,22 @@ async function visit(browser: Browser, site: Site) {
 				: `no Svelte found (HTTP ${response?.status()}) — it may block headless browsers (try --headed), or no longer use Svelte`;
 		}
 
-		if (!values.check) {
+		if (values.clip && site.clip) {
+			await page.addStyleTag({
+				content: `${[COOKIE_BANNERS, ...(site.screenshot?.hide ?? [])].join(', ')} { display: none !important; }`
+			});
+			await page.evaluate(hide_popups);
+			if (values.headed && process.stdin.isTTY) {
+				await prompt(`  ${site.id}: close anything covering the page, then press Enter to record `);
+			}
+			await record(
+				page,
+				site.id,
+				site.clip === true ? {} : site.clip,
+				WIDE.has(site.id),
+				site.screenshot?.from_clip ?? false
+			);
+		} else if (!values.check && !site.screenshot?.from_clip) {
 			await page.addStyleTag({
 				content: `${[COOKIE_BANNERS, ...(site.screenshot?.hide ?? [])].join(', ')} { display: none !important; }`
 			});
@@ -379,6 +402,97 @@ function pause_videos(seconds: number) {
 	);
 
 	return Promise.all(seeking).then(() => {});
+}
+
+/**
+ * records the window for a few seconds, moving the pointer across anything named in turn, and saves
+ * it as h.264, which every browser plays, muted and the size of the card it plays in
+ */
+async function record(
+	page: Page,
+	id: string,
+	{ scroll, hover, length = 8 }: Exclude<Site['clip'], true | undefined>,
+	wide: boolean,
+	still: boolean
+) {
+	// the shape of the card, 6:5 for the large ones and 16:10 for the rest
+	const size = wide ? { width: 1440, height: 1200 } : VIEWPORT;
+	const output = wide ? { width: 1200, height: 1000 } : { width: 960, height: 600 };
+	await page.setViewportSize(size);
+
+	if (scroll) {
+		await page.locator(scroll).first().scrollIntoViewIfNeeded();
+		await page.evaluate((selector) => {
+			document.querySelector(selector)?.scrollIntoView({ block: 'center' });
+		}, scroll);
+	}
+
+	// for videos to start and anything the page plays as it loads to settle
+	await page.mouse.move(size.width - 1, size.height - 1);
+	await page.waitForTimeout(2000);
+
+	const frames = fs.mkdtempSync(path.join(os.tmpdir(), `showcase-${id}-`));
+	const cdp = await page.context().newCDPSession(page);
+	const times: number[] = [];
+
+	cdp.on('Page.screencastFrame', async ({ data, metadata, sessionId }) => {
+		fs.writeFileSync(path.join(frames, `${times.length}.jpg`), Buffer.from(data, 'base64'));
+		times.push(metadata.timestamp ?? Date.now() / 1000);
+		await cdp.send('Page.screencastFrameAck', { sessionId }).catch(() => {});
+	});
+
+	await cdp.send('Page.startScreencast', { format: 'jpeg', quality: 92, everyNthFrame: 1 });
+
+	const targets = [];
+	for (const target of hover ? await page.locator(hover).all() : []) {
+		if (await target.isVisible()) targets.push(target);
+	}
+
+	if (targets.length > 0) {
+		const dwell = (length * 1000) / targets.length;
+		for (const target of targets) {
+			const box = await target.boundingBox();
+			if (box) {
+				await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2, { steps: 12 });
+			}
+			await page.waitForTimeout(dwell);
+		}
+	} else {
+		await page.waitForTimeout(length * 1000);
+	}
+
+	await cdp.send('Page.stopScreencast');
+	await cdp.detach();
+
+	if (times.length < 2) throw new Error('no frames recorded');
+
+	// as its screenshot, for a site that differs on every visit
+	if (still) {
+		for (const other of screenshot_files(id)) fs.rmSync(other, { force: true });
+		fs.copyFileSync(path.join(frames, '0.jpg'), path.join(SCREENSHOTS, `${id}.jpg`));
+	}
+
+	// each frame shown until the next, since the browser only sends one when something changes
+	const list = times
+		.map((time, i) => {
+			const until = times[i + 1] ?? times[0] + length;
+			return `file '${path.join(frames, `${i}.jpg`)}'\nduration ${Math.max(until - time, 0.001)}`;
+		})
+		.join('\n');
+	fs.writeFileSync(
+		path.join(frames, 'list.txt'),
+		`${list}\nfile '${path.join(frames, `${times.length - 1}.jpg`)}'\n`
+	);
+
+	execFileSync('ffmpeg', [
+		...['-y', '-loglevel', 'error'],
+		...['-f', 'concat', '-safe', '0', '-i', path.join(frames, 'list.txt')],
+		...['-vf', `fps=30,scale=${output.width}:${output.height}:flags=lanczos,format=yuv420p`],
+		...['-an', '-c:v', 'libx264', '-preset', 'slow', '-crf', '28', '-profile:v', 'high'],
+		...['-movflags', '+faststart', path.join(CLIPS, `${id}.mp4`)]
+	]);
+
+	fs.rmSync(frames, { recursive: true, force: true });
 }
 
 /** checks every second for two minutes, including after redirects */

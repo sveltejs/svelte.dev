@@ -38,11 +38,30 @@ export interface Site {
 		delay?: number;
 		/** seconds into the videos to pause them at, for one that would be caught at a blank moment */
 		video?: number;
+		/**
+		 * the first frame of its clip, taken with pnpm showcase <id> --clip, for a site that shows something
+		 * different on every visit, so the screenshot matches the clip that plays over it
+		 */
+		from_clip?: boolean;
 		/** the object-position of the screenshot when cropped, left top by default like a browser window */
 		position?: string;
 		/** how far down the page to take, for one whose lower part only plays as it scrolls */
 		height?: number;
 	};
+	/**
+	 * a short recording that plays in place of the screenshot, for a site whose video, animation or
+	 * hover effects a screenshot misses. taken with pnpm showcase <id> --clip
+	 */
+	clip?:
+		| true
+		| {
+				/** css selector for a part of the page to record instead of the top, scrolled to the middle */
+				scroll?: string;
+				/** css selector for things to move the pointer across in turn while recording */
+				hover?: string;
+				/** seconds to record, 8 by default */
+				length?: number;
+		  };
 }
 
 export const categories: Array<{ id: Category; title: string }> = [
@@ -117,7 +136,8 @@ export const sites: Site[] = [
 		url: 'https://www.bugatti.com/',
 		description: 'Experience the incomparable nature of the hyper luxury brand',
 		category: 'brands',
-		screenshot: { hide: ['.group.fixed.bottom-3'] }
+		screenshot: { hide: ['.group.fixed.bottom-3'] },
+		clip: true
 	},
 	{
 		id: 'dbrand',
@@ -157,7 +177,8 @@ export const sites: Site[] = [
 		url: 'https://squareup.com/us/en',
 		description: 'Power your entire business',
 		category: 'business',
-		screenshot: { hide: ['#salesbot-popup-container'] }
+		screenshot: { hide: ['#salesbot-popup-container'] },
+		clip: true
 	},
 	{
 		id: 'michelin',
@@ -165,21 +186,28 @@ export const sites: Site[] = [
 		url: 'https://www.michelin.com/en/',
 		description: 'World’s leading manufacturer of life-changing composites and experiences',
 		category: 'business',
-		screenshot: { headed: true }
+		screenshot: { headed: true },
+		clip: true
 	},
 	{
 		id: 'block',
 		name: 'Block',
 		url: 'https://block.xyz/',
 		description: 'Made up of Square, Cash App, Afterpay, TIDAL, Bitkey, and Proto',
-		category: 'business'
+		category: 'business',
+		clip: {
+			// each of its companies plays a short animation as you point at its name
+			scroll: 'footer',
+			hover: 'footer nav a[role="menuitem"]'
+		}
 	},
 	{
 		id: 'beyonk',
 		name: 'Beyonk',
 		url: 'https://beyonk.com/',
 		description: 'Online event ticketing system and ticket booking software',
-		category: 'business'
+		category: 'business',
+		clip: true
 	},
 	{
 		id: 'trading-strategy',
@@ -212,7 +240,8 @@ export const sites: Site[] = [
 		url: 'https://www.nytimes.com/',
 		description: 'Live news, investigations, opinion, photos and video',
 		category: 'news',
-		screenshot: { headed: true }
+		screenshot: { headed: true },
+		clip: true
 	},
 	{
 		id: 'yahoo-finance',
@@ -283,8 +312,9 @@ export const sites: Site[] = [
 		url: 'https://tv.apple.com/',
 		description: 'Browse all movies, TV shows, and more',
 		category: 'entertainment',
-		// the name is at the bottom of the page, under the posters
-		screenshot: { position: 'left bottom' }
+		// a different trailer and layout on each visit, which reduced motion skips to posters
+		screenshot: { from_clip: true },
+		clip: true
 	},
 	{
 		id: 'app-store',
@@ -318,7 +348,8 @@ export const sites: Site[] = [
 		url: 'https://www.spotify.com/us/premium/',
 		description: 'Ad-free music listening',
 		category: 'entertainment',
-		screenshot: { hide: ['.mh-message-bar'] }
+		screenshot: { hide: ['.mh-message-bar'] },
+		clip: true
 	},
 	{
 		id: 'viki',
@@ -334,7 +365,8 @@ export const sites: Site[] = [
 		description: 'Aquariums and attractions',
 		category: 'entertainment',
 		// the header grows into a video filling the window as the page scrolls
-		screenshot: { hide: ['.bb-root'], height: 900 }
+		screenshot: { hide: ['.bb-root'], height: 900 },
+		clip: true
 	},
 	{
 		id: 'brawlhalla',
@@ -342,7 +374,8 @@ export const sites: Site[] = [
 		url: 'https://www.brawlhalla.com/',
 		description: 'Play with your friends on PlayStation, Xbox, PC, Nintendo Switch & mobile',
 		category: 'entertainment',
-		screenshot: { hide: ['#privacy_modal'] }
+		screenshot: { hide: ['#privacy_modal'] },
+		clip: true
 	},
 	{
 		id: 'guild-wars-3',
@@ -350,7 +383,8 @@ export const sites: Site[] = [
 		url: 'https://www.guildwars3.com/',
 		description: 'An action-adventure MMORPG',
 		category: 'entertainment',
-		screenshot: { hide: ['.scrim'] }
+		screenshot: { hide: ['.scrim'] },
+		clip: true
 	},
 	{
 		id: 'houses-of-the-world',
@@ -368,7 +402,8 @@ export const sites: Site[] = [
 		description: 'Inspire, empower, and connect people to change their world',
 		category: 'public',
 		// the museum ticket notice
-		screenshot: { hide: ['[aria-labelledby="banner-title"]'] }
+		screenshot: { hide: ['[aria-labelledby="banner-title"]'] },
+		clip: true
 	},
 	{
 		id: 'black-teacher-archive',
@@ -435,7 +470,8 @@ export const sites: Site[] = [
 		name: 'Modal',
 		url: 'https://modal.com/',
 		description: 'Cloud infrastructure for teams that develop, train, and serve AI applications',
-		category: 'ai'
+		category: 'ai',
+		clip: true
 	},
 	{
 		id: 'open-webui',
@@ -464,7 +500,8 @@ export const sites: Site[] = [
 		name: 'Anda',
 		url: 'https://anda.ai/',
 		description: 'Open protocols, infrastructure, and benchmarks for persistent machine cognition',
-		category: 'ai'
+		category: 'ai',
+		clip: true
 	},
 
 	{
@@ -472,7 +509,9 @@ export const sites: Site[] = [
 		name: 'Brave',
 		url: 'https://brave.com/',
 		description: 'A fast, private and secure web browser for PC, Mac and mobile',
-		category: 'tools'
+		category: 'tools',
+		// each illustration takes a few seconds to play
+		clip: { scroll: 'details.card', hover: 'details.card summary', length: 16 }
 	},
 	{
 		id: 'windy',
@@ -579,7 +618,8 @@ export const sites: Site[] = [
 		name: 'Datawrapper',
 		url: 'https://www.datawrapper.de/',
 		description: 'Create interactive, responsive & beautiful data visualizations',
-		category: 'developers'
+		category: 'developers',
+		clip: { scroll: '.editor-carousel', hover: '.editor-carousel__tab' }
 	},
 	{
 		id: 'tangled',
@@ -608,7 +648,8 @@ export const sites: Site[] = [
 		name: 'GitButler',
 		url: 'https://gitbutler.com/',
 		description: 'A Git CLI and desktop client built for humans and AI coding agents',
-		category: 'developers'
+		category: 'developers',
+		clip: { scroll: '.script-switcher', hover: '.script-switcher button' }
 	},
 	{
 		id: 'pocketbase',

@@ -63,6 +63,13 @@
 		])
 	);
 
+	/** the recordings of sites whose motion a screenshot misses, by site id */
+	const clips: Record<string, string> = Object.fromEntries(
+		Object.entries(
+			import.meta.glob<string>('./clips/*.mp4', { eager: true, import: 'default', query: '?url' })
+		).map(([path, src]) => [path.replace(/^.*\/|\.mp4$/g, ''), src])
+	);
+
 	/** tiny inline versions of the screenshots by site id, shown blurred until the screenshot loads */
 	const placeholders: Record<string, string> = Object.fromEntries(
 		Object.entries(
@@ -197,15 +204,14 @@
 	 */
 	function lengthen(event: PointerEvent, id: string) {
 		const target = event.currentTarget as HTMLElement;
-		const img = target
-			.closest('.card, .site')
-			?.querySelector<HTMLImageElement>(':is(.face, .thumb) img');
+		const scope = target.closest<HTMLElement>('.card, .site');
+		const host = scope?.querySelector<HTMLElement>('.face, .thumb');
+		const img = host?.querySelector('img');
 
 		if (
+			!scope ||
+			!host ||
 			!img ||
-			img.dataset.long !== undefined ||
-			// one shown from somewhere other than the top stays where it is
-			pictures[id] === tops[id] ||
 			event.pointerType !== 'mouse' ||
 			!matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)')
 				.matches
@@ -213,8 +219,117 @@
 			return;
 		}
 
+		// one with a clip plays it instead, until the pointer leaves the site rather than the link, so
+		// moving between the screenshot and the name does not start it over
+		if (clips[id]) {
+			const timer = setTimeout(() => play(host, id), 200);
+			scope.addEventListener(
+				'pointerleave',
+				() => {
+					clearTimeout(timer);
+					stop(host);
+				},
+				{ once: true }
+			);
+			return;
+		}
+
+		// one shown from somewhere other than the top stays where it is
+		if (img.dataset.long !== undefined || pictures[id] === tops[id]) return;
+
 		const timer = setTimeout(() => swap(img, id), 200);
 		target.addEventListener('pointerleave', () => clearTimeout(timer), { once: true });
+	}
+
+	/** plays the clip over a screenshot, loading it the first time */
+	function play(host: HTMLElement, id: string) {
+		const video = host.querySelector<HTMLVideoElement>('.clip');
+		if (!video || !clips[id]) return;
+
+		if (!video.src) video.src = clips[id];
+
+		// shown once it moves, so one still loading never covers the screenshot with a blank frame
+		video.addEventListener(
+			'playing',
+			() => {
+				if (!video.paused) host.dataset.playing = '';
+			},
+			{ once: true }
+		);
+		video.play().catch(() => {});
+	}
+
+	/** whether clips play by themselves on touch screens, which the button over them turns off */
+	let autoplay = $state(true);
+
+	/** the screenshot with a clip in the middle of the window on a touch screen, if any */
+	let centred = $state<HTMLElement>();
+
+	let band: IntersectionObserver | undefined;
+	let waiting: ReturnType<typeof setTimeout> | undefined;
+	const band_ids = new WeakMap<Element, string>();
+
+	/**
+	 * on touch screens, which never hover, plays the clip of the screenshot in the middle of the
+	 * window, where the colour band is, one at a time. a moment late, so scrolling past loads nothing
+	 */
+	function in_band(id: string) {
+		return (node: HTMLElement) => {
+			band ??= new IntersectionObserver(
+				(entries) => {
+					// checked each time, since a tablet can gain a mouse
+					const touch =
+						matchMedia('(hover: none) and (prefers-reduced-motion: no-preference)').matches &&
+						!(navigator as Navigator & { connection?: { saveData?: boolean } }).connection
+							?.saveData;
+
+					for (const entry of entries) {
+						const host = entry.target as HTMLElement;
+
+						if (entry.isIntersecting && touch) {
+							if (centred && centred !== host) stop(centred);
+							centred = host;
+							clearTimeout(waiting);
+							if (autoplay) waiting = setTimeout(() => play(host, band_ids.get(host)!), 300);
+						} else if (host === centred) {
+							clearTimeout(waiting);
+							stop(host);
+							centred = undefined;
+						}
+					}
+				},
+				{ rootMargin: '-35% 0px -45% 0px' }
+			);
+
+			band_ids.set(node, id);
+			band.observe(node);
+
+			return () => {
+				band?.unobserve(node);
+				if (centred === node) centred = undefined;
+			};
+		};
+	}
+
+	function toggle_autoplay() {
+		autoplay = !autoplay;
+		if (!centred) return;
+
+		if (autoplay) play(centred, band_ids.get(centred)!);
+		else stop(centred);
+	}
+
+	function stop(host: HTMLElement) {
+		const video = host.querySelector<HTMLVideoElement>('.clip');
+		if (!video) return;
+
+		delete host.dataset.playing;
+		video.pause();
+
+		// from the start next time, once it has faded out
+		setTimeout(() => {
+			if (host.dataset.playing === undefined) video.currentTime = 0;
+		}, 300);
 	}
 
 	function swap(img: HTMLImageElement, id: string) {
@@ -326,6 +441,14 @@
 			el.style.translate = '0 0';
 		}
 
+		// and to the screenshot from a clip playing over it
+		const clip = source.querySelector<HTMLVideoElement>('.clip');
+		if (clip) {
+			clip.pause();
+			clip.style.transition = 'none';
+			clip.style.opacity = '0';
+		}
+
 		source.style.viewTransitionName = 'picked';
 		root.classList.add('picking');
 
@@ -351,6 +474,10 @@
 			stand_in?.remove();
 			for (const el of scrolled) {
 				el.style.transition = el.style.translate = '';
+			}
+			if (clip) {
+				clip.style.transition = clip.style.opacity = '';
+				stop(source);
 			}
 		});
 
@@ -459,7 +586,7 @@
 	<meta name="description" content="Websites built with Svelte and SvelteKit" />
 </svelte:head>
 
-{#snippet screenshot(id: string, sizes: string, loading: 'eager' | 'lazy')}
+{#snippet screenshot(id: string, sizes: string, loading: 'eager' | 'lazy', clip = false)}
 	{@const picture = tops[id]}
 	<picture class="slide">
 		{#each Object.entries(picture.sources) as [format, srcset] (format)}
@@ -474,6 +601,19 @@
 			{loading}
 		/>
 	</picture>
+	{#if clip && clips[id]}
+		<!-- loaded only once it plays, by play() -->
+		<video
+			class="clip"
+			muted
+			loop
+			playsinline
+			disablepictureinpicture
+			disableremoteplayback
+			preload="none"
+			aria-hidden="true"
+		></video>
+	{/if}
 {/snippet}
 
 <div class="showcase">
@@ -519,7 +659,7 @@
 						<!-- lifts on hover while the link stays put, so the pointer stays on it -->
 						<span class="face">
 							<!-- lazy where it is hidden on small screens, so phones never load it -->
-							{@render screenshot(site.id, card_sizes, small ? 'eager' : 'lazy')}
+							{@render screenshot(site.id, card_sizes, small ? 'eager' : 'lazy', true)}
 						</span>
 						<span class="visually-hidden">{site.name}</span>
 					</a>
@@ -581,12 +721,14 @@
 								aria-hidden="true"
 								onpointerenter={(event) => lengthen(event, site.id)}
 								{@attach fade_in}
+								{@attach clips[site.id] ? in_band(site.id) : undefined}
 							>
 								{#if picture}
 									{@render screenshot(
 										site.id,
 										`${wide_sizes[kind]}, ${medium_sizes[medium]}, 92vw`,
-										'lazy'
+										'lazy',
+										true
 									)}
 								{:else}
 									<span class="placeholder">{site.name}</span>
@@ -630,6 +772,20 @@
 			</div>
 		</section>
 	</div>
+
+	<!-- the clips on touch screens play by themselves, so there is a way to stop them -->
+	{#if centred}
+		<button class="autoplay" onclick={toggle_autoplay}>
+			<svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+				{#if autoplay}
+					<path d="M4 2.5h3v11H4zM9 2.5h3v11H9z" />
+				{:else}
+					<path d="M4 2.2v11.6L13.5 8z" />
+				{/if}
+			</svg>
+			{autoplay ? 'Pause videos' : 'Play videos'}
+		</button>
+	{/if}
 </div>
 
 <style>
@@ -1385,6 +1541,44 @@
 		position: absolute;
 		inset: 0;
 		display: block;
+	}
+
+	/* over the screenshot, faded in once it moves and out as the pointer leaves */
+	.clip {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: left top;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.3s ease;
+	}
+
+	:is(.face, .thumb):global([data-playing]) > .clip {
+		opacity: 1;
+	}
+
+	.autoplay {
+		position: fixed;
+		right: 1.6rem;
+		bottom: calc(1.6rem + env(safe-area-inset-bottom));
+		z-index: 10;
+		display: flex;
+		align-items: center;
+		gap: 0.6rem;
+		padding: 0.8rem 1.4rem;
+		font: var(--sk-font-ui-small);
+		color: var(--sk-fg-1);
+		background: var(--sk-bg-2);
+		border: 1px solid var(--sk-border);
+		border-radius: 10rem;
+		box-shadow: 0 0.2rem 0.8rem rgb(0 0 0 / 0.15);
+
+		svg {
+			fill: currentColor;
+		}
 	}
 
 	/* scrolls slowly down the screenshot on hover, like a glance down the site, and back up quickly as
