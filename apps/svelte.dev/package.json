@@ -16,7 +16,8 @@
 		"lint": "prettier --check .",
 		"prepare": "svelte-kit sync",
 		"sync-docs": "node scripts/sync-docs/index.ts",
-		"sync-packages": "node scripts/sync-packages/index.ts"
+		"sync-packages": "node scripts/sync-packages/index.ts",
+		"showcase": "node scripts/showcase.ts"
 	},
 	"dependencies": {
 		"@jridgewell/sourcemap-codec": "^1.5.5",
@@ -47,6 +48,7 @@
 		"yootils": "^0.3.1"
 	},
 	"devDependencies": {
+		"@ghostery/adblocker-playwright": "^2.20.3",
 		"@resvg/resvg-js": "^2.6.2",
 		"@supabase/supabase-js": "^2.97.0",
 		"@sveltejs/adapter-vercel": "^7.0.0-next.9",
@@ -66,6 +68,7 @@
 		"magic-string": "^0.30.21",
 		"marked": "^17.0.3",
 		"minimatch": "^10.2.4",
+		"playwright": "^1.64.1",
 		"prettier": "^3.8.1",
 		"prettier-plugin-svelte": "^3.5.0",
 		"satori": "^0.19.2",

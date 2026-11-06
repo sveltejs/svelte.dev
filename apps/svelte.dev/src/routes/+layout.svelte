@@ -36,6 +36,7 @@
 		packages: 'Packages',
 		playground: 'Playground',
 		blog: 'Blog',
+		showcase: 'Showcase',
 		tutorial: 'Tutorial',
 		search: 'Search'
 	};
