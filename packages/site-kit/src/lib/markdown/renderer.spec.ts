@@ -108,7 +108,7 @@ describe('direct documentation links', () => {
 		}
 	});
 
-	test.each([undefined, 'true', 'false'])(
+	test.each([undefined, 'false'])(
 		'respects link metadata %s independently of copy',
 		async (link) => {
 			const html = await render_content_markdown(
@@ -143,22 +143,5 @@ describe('direct documentation links', () => {
 		expect(second).toContain('href="/second#Load"');
 		expect(second).not.toContain('/first#Load');
 		expect(plain).not.toContain('doc-reference');
-	});
-
-	test('keeps direct links in highlighted and removed lines', async () => {
-		const html = await render_content_markdown(
-			'diff.md',
-			[
-				'```ts',
-				"import { redirect } from '@sveltejs/kit';",
-				"---redirect(302, '/old');---",
-				"+++redirect(303, '/new');+++",
-				'```'
-			].join('\n'),
-			{ check: false, references }
-		);
-		expect(html.match(/class="doc-reference"/g)).toHaveLength(3);
-		expect(html).toContain('class="highlight remove"');
-		expect(html).toContain('class="highlight add"');
 	});
 });

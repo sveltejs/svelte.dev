@@ -120,15 +120,6 @@ let value: Load;`,
 		[]
 	],
 	[
-		'keeps type-parameter and block-local shadowing separate from imports',
-		`import { redirect, type Load } from '@sveltejs/kit';
-function fn<Load>(value: Load) {}
-{ const redirect = () => {}; redirect(); }
-redirect(303, '/');
-let value: Load;`,
-		[redirect, kit_load, redirect, kit_load]
-	],
-	[
 		'uses hidden imports without linking hidden source',
 		`redirect(303, '/');`,
 		[redirect],

@@ -67,7 +67,6 @@ export function find_references(
 	/** Top-level imports by local name, for resolving `$store` auto-subscriptions. */
 	const imports = new Map<string, { module: string; name?: string }>();
 	const result: Reference[] = [];
-	const visited = new Set<ts.Node>();
 
 	function bind(node: ts.Identifier, module: string, name?: string) {
 		const symbol = checker.getSymbolAtLocation(node);
@@ -102,9 +101,6 @@ export function find_references(
 	}
 
 	function visit(node: ts.Node) {
-		if (visited.has(node)) return;
-		visited.add(node);
-
 		if (
 			ts.isImportTypeNode(node) &&
 			ts.isLiteralTypeNode(node.argument) &&
@@ -124,13 +120,7 @@ export function find_references(
 				: checker.getSymbolAtLocation(node);
 			const binding = symbol && bindings.get(symbol);
 			if (binding?.name) {
-				// Property names aren't references to an imported value (shorthand properties are).
-				if (
-					!(ts.isPropertyAssignment(parent) && parent.name === node) &&
-					!(ts.isPropertyAccessExpression(parent) && parent.name === node)
-				) {
-					add(node, binding.module, binding.name);
-				}
+				add(node, binding.module, binding.name);
 			} else if (binding && (ts.isPropertyAccessExpression(parent) || ts.isQualifiedName(parent))) {
 				const member = ts.isPropertyAccessExpression(parent) ? parent.name : parent.right;
 				if ((ts.isPropertyAccessExpression(parent) ? parent.expression : parent.left) === node) {
@@ -163,9 +153,7 @@ export function find_references(
 	}
 
 	visit(file);
-	return result
-		.sort((a, b) => a.start - b.start)
-		.filter((reference, index, all) => index === 0 || reference.start >= all[index - 1].end);
+	return result.sort((a, b) => a.start - b.start);
 }
 
 interface SvelteNode {
