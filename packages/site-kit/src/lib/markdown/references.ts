@@ -17,7 +17,9 @@ export function find_references(
 	language: string,
 	references: DocumentationReferences,
 	reference_module?: string,
-	prelude = ''
+	prelude = '',
+	/** Whether `$name` refers to the `name` store, as in a Svelte instance script or template. */
+	stores = false
 ): Reference[] {
 	if (!['js', 'javascript', 'ts', 'typescript', 'dts', 'svelte', 'sv'].includes(language))
 		return [];
@@ -62,12 +64,15 @@ export function find_references(
 	);
 	const checker = program.getTypeChecker();
 	const bindings = new Map<ts.Symbol, { module: string; name?: string }>();
+	/** Top-level imports by local name, for resolving `$store` auto-subscriptions. */
+	const imports = new Map<string, { module: string; name?: string }>();
 	const result: Reference[] = [];
 	const visited = new Set<ts.Node>();
 
 	function bind(node: ts.Identifier, module: string, name?: string) {
 		const symbol = checker.getSymbolAtLocation(node);
 		if (symbol) bindings.set(symbol, { module, name });
+		imports.set(node.text, { module, name });
 	}
 
 	for (const statement of file.statements) {
@@ -107,12 +112,9 @@ export function find_references(
 			node.qualifier
 		) {
 			// Only the exported member, not an arbitrary nested property, has a module destination.
-			const qualifier = node.qualifier;
-			add(
-				ts.isIdentifier(qualifier) ? qualifier : qualifier.left,
-				node.argument.literal.text,
-				ts.isIdentifier(qualifier) ? qualifier.text : qualifier.left.getText(file)
-			);
+			let member = node.qualifier;
+			while (!ts.isIdentifier(member)) member = member.left;
+			add(member, node.argument.literal.text, member.text);
 		}
 
 		if (ts.isIdentifier(node)) {
@@ -142,6 +144,10 @@ export function find_references(
 				) {
 					add(node, declaration.moduleSpecifier.text, node.text);
 				}
+			} else if (stores && !symbol && node.text.startsWith('$') && node.text.length > 1) {
+				// `$page` subscribes to the imported `page` store.
+				const store = imports.get(node.text.slice(1));
+				if (store?.name) add(node, store.module, store.name);
 			} else if (
 				!symbol?.declarations?.length &&
 				reference_module &&
@@ -179,11 +185,17 @@ function find_svelte_references(
 	try {
 		ast = parse(source, { modern: true });
 	} catch {
+		// Examples often stop mid-markup (e.g. an unclosed `<form use:enhance>`).
+		try {
+			ast = parse(source, { modern: true, loose: true });
+		} catch {}
+	}
+	if (!ast) {
 		// Incomplete examples can still contain complete scripts. Ignore commented-out scripts.
 		const uncommented = source.replace(/<!--[\s\S]*?-->/g, (comment) => ' '.repeat(comment.length));
 		return [...uncommented.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script\s*>/g)].flatMap((match) => {
 			const offset = match.index + match[0].indexOf('>') + 1;
-			return find_references(match[1], 'ts', references, reference_module, prelude).map(
+			return find_references(match[1], 'ts', references, reference_module, prelude, true).map(
 				(reference) => ({
 					...reference,
 					start: reference.start + offset,
@@ -281,6 +293,19 @@ function find_svelte_references(
 			return;
 		}
 		if (node.type === 'LetDirective') return;
+		if (
+			(node.type === 'UseDirective' ||
+				node.type === 'TransitionDirective' ||
+				node.type === 'AnimateDirective') &&
+			typeof node.name === 'string' &&
+			typeof node.start === 'number'
+		) {
+			// `use:enhance`, `transition:fade` and `animate:flip` reference a value by name.
+			const start = node.start + source.slice(node.start).indexOf(':') + 1;
+			expression({ start, end: start + node.name.length });
+			expression(node.expression);
+			return;
+		}
 
 		if (Array.isArray(node.attributes)) {
 			walk(node.attributes);
@@ -396,7 +421,8 @@ function find_svelte_references(
 			'ts',
 			references,
 			reference_module,
-			prelude + '\n' + module_prelude
+			prelude + '\n' + module_prelude,
+			true
 		).flatMap((reference) => {
 			const range = ranges.find(
 				(range) => reference.start >= range.start && reference.end <= range.end
@@ -475,14 +501,32 @@ export function link_references(
 		}
 	}
 
+	const find = (code: string) =>
+		find_references(code, language, references, reference_module, prelude);
+
+	// Diff examples show the old and new code together, which may declare the same binding twice.
+	// Resolve each version on its own, blanking the other version's lines while keeping offsets.
+	const in_highlight = (kind: string) => (character: Character | undefined) =>
+		!!character?.ancestors.some((element) =>
+			new RegExp(`class="[^"]*\\bhighlight ${kind}\\b`).test(element.open)
+		);
+	const removed = in_highlight('remove');
+	const added = in_highlight('add');
+	const blank = (hidden: (character: Character) => boolean) =>
+		source
+			.split('')
+			.map((char, i) => (char !== '\n' && hidden(characters[i]) ? ' ' : char))
+			.join('');
+	const found =
+		characters.some(removed) && characters.some(added)
+			? [
+					...find(blank(removed)).filter((reference) => !removed(characters[reference.start])),
+					...find(blank(added)).filter((reference) => removed(characters[reference.start]))
+				]
+			: find(source);
+
 	const insertions: Array<{ index: number; text: string }> = [];
-	for (const reference of find_references(
-		source,
-		language,
-		references,
-		reference_module,
-		prelude
-	)) {
+	for (const reference of found) {
 		const first = characters[reference.start];
 		const last = characters[reference.end - 1];
 		if (

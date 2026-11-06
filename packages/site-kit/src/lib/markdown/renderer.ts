@@ -214,6 +214,20 @@ async function create_snippet_cache() {
 
 const snippets = await create_snippet_cache();
 
+const reference_hashes = new WeakMap<DocumentationReferences, string>();
+
+/** Hashes a references map once, since every page usually shares the same object. */
+function hash_references(references: DocumentationReferences) {
+	let hash = reference_hashes.get(references);
+
+	if (hash === undefined) {
+		hash = createHash('sha256').update(JSON.stringify(references)).digest('base64');
+		reference_hashes.set(references, hash);
+	}
+
+	return hash;
+}
+
 /**
  * A super markdown renderer function. Renders svelte and kit docs specific specific markdown code to html.
  *
@@ -497,7 +511,18 @@ export async function render_content_markdown(
 
 				codeblock.files.push(file);
 
-				const cache_key = JSON.stringify([decodedText, token.lang, check, twoslashRoot, prelude]);
+				const link = options.link && references ? references : undefined;
+				const link_html = (html: string) =>
+					link ? link_references(html, link, referenceModule, prelude) : html;
+
+				const cache_key = JSON.stringify([
+					decodedText,
+					token.lang,
+					check,
+					twoslashRoot,
+					prelude,
+					link ? [hash_references(link), referenceModule] : null
+				]);
 				let cached = snippets.get(cache_key);
 
 				if (!cached) {
@@ -518,7 +543,9 @@ export async function render_content_markdown(
 					});
 
 					cached.push(
-						highlighted.replace('<pre', converted ? '<pre data-js' : '<pre data-js data-ts')
+						link_html(
+							highlighted.replace('<pre', converted ? '<pre data-js' : '<pre data-js data-ts')
+						)
 					);
 
 					if (converted) {
@@ -537,19 +564,13 @@ export async function render_content_markdown(
 							twoslashRoot
 						});
 
-						cached.push(highlighted.replace('<pre', '<pre data-ts'));
+						cached.push(link_html(highlighted.replace('<pre', '<pre data-ts')));
 					}
 
 					snippets.save(cache_key, cached);
 				}
 
-				file.rendered.push(
-					...cached.map((html) =>
-						options.link && references
-							? link_references(html, references, referenceModule, prelude)
-							: html
-					)
-				);
+				file.rendered.push(...cached);
 				codeblock.converted ||= cached.length > 1;
 			}
 

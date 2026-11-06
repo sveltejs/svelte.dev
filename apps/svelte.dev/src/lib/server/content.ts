@@ -5,7 +5,7 @@ import { create_index } from '@sveltejs/site-kit/server/content';
 import crosslinked from './generated/crosslinked.json';
 import type { RelatedLink } from '#lib/types.d.ts';
 import type { DocumentationReferences } from '@sveltejs/site-kit/markdown';
-import { get_reference_module } from './reference-modules.ts';
+import { get_reference_module, is_identifier } from './reference-modules.ts';
 
 const documents = import.meta.glob<string>('./**/*.md', {
 	eager: true,
@@ -158,7 +158,7 @@ function create_docs() {
 					const references: Record<string, string> = (docs.references[module] = {});
 					const baseUrl = `/${slug}`;
 					for (const section of page.sections) {
-						if (!/^[A-Za-z_$][\w$]*$/.test(section.title)) continue;
+						if (!is_identifier(section.title)) continue;
 						references[section.title] = `${baseUrl}#${section.slug}`;
 					}
 				}

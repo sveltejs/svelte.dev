@@ -74,11 +74,14 @@ function local(Kit: any) { Kit.redirect(); }`)
 export const load = () => ({});
 /** @satisfies {import('./$types').FutureRouteType} */
 export const actions = {};
-let navigation: import('@sveltejs/kit').AfterNavigate;`;
+let navigation: import('@sveltejs/kit').AfterNavigate;
+/** @type {import('@sveltejs/kit').Load.Nested.Member} */
+let nested;`;
 		expect(resolve(source, language)).toEqual([
 			{ text: 'PageLoad', href: references['./$types'] },
 			{ text: 'FutureRouteType', href: references['./$types'] },
-			{ text: 'AfterNavigate', href: references['@sveltejs/kit'].AfterNavigate }
+			{ text: 'AfterNavigate', href: references['@sveltejs/kit'].AfterNavigate },
+			{ text: 'Load', href: references['@sveltejs/kit'].Load }
 		]);
 	});
 
@@ -183,6 +186,52 @@ const other = { redirect() {} };`)
 		).toEqual([redirect, redirect, redirect]);
 	});
 
+	test('links Svelte action, transition and animation directive names', () => {
+		const directives = {
+			'$app/forms': { enhance: '/docs/kit/$app-forms#enhance' },
+			'svelte/transition': { fade: '/docs/svelte/svelte-transition#fade' },
+			'svelte/animate': { flip: '/docs/svelte/svelte-animate#flip' }
+		};
+		const source = `<script>
+import { enhance } from '$app/forms';
+import { fade as appear } from 'svelte/transition';
+import { flip } from 'svelte/animate';
+</script>
+<form method="POST" use:enhance={() => {}}></form>
+<p in:appear|global={{ duration: 100 }} out:appear>hi</p>
+{#each items as item (item)}<li animate:flip>{item}</li>{/each}
+<div use:local transition:local></div>`;
+
+		expect(
+			find_references(source, 'svelte', directives).map(({ start, end, href }) => ({
+				text: source.slice(start, end),
+				href
+			}))
+		).toEqual([
+			{ text: 'enhance', href: directives['$app/forms'].enhance },
+			{ text: 'fade', href: directives['svelte/transition'].fade },
+			{ text: 'appear', href: directives['svelte/transition'].fade },
+			{ text: 'flip', href: directives['svelte/animate'].flip },
+			{ text: 'enhance', href: directives['$app/forms'].enhance },
+			{ text: 'appear', href: directives['svelte/transition'].fade },
+			{ text: 'appear', href: directives['svelte/transition'].fade },
+			{ text: 'flip', href: directives['svelte/animate'].flip }
+		]);
+	});
+
+	test('links directives in examples with unclosed markup', () => {
+		const forms = { '$app/forms': { enhance: '/docs/kit/$app-forms#enhance' } };
+		const source = `<script>
+	import { enhance } from '$app/forms';
+</script>
+
+<form method="POST" use:enhance>`;
+
+		expect(
+			find_references(source, 'svelte', forms).map(({ start, end }) => source.slice(start, end))
+		).toEqual(['enhance', 'enhance']);
+	});
+
 	test('respects Svelte each, await, snippet, const and slot bindings', () => {
 		expect(
 			resolve(
@@ -247,6 +296,39 @@ describe('highlighted documentation links', () => {
 	function render(code: string, language = 'dts') {
 		return `<pre data-language="${language}"><code>${code}</code></pre>`;
 	}
+
+	test('resolves the removed and added halves of a diff example separately', () => {
+		const stores = {
+			'$app/stores': { page: '/docs/kit/$app-stores#page' },
+			'$app/state': { page: '/docs/kit/$app-state#page' }
+		};
+		const remove = (code: string) => `<span class="highlight remove">${code}</span>`;
+		const add = (code: string) => `<span class="highlight add">${code}</span>`;
+		const html = link_references(
+			render(
+				`&lt;script&gt;
+${remove(`import { page } from '$app/stores';`)}
+${add(`import { page } from '$app/state';`)}
+&lt;/script&gt;
+
+${remove('{$page.data}')}
+${add('{page.data}')}`,
+				'svelte'
+			),
+			stores
+		);
+
+		expect(
+			[...html.matchAll(/<a class="doc-reference" href="([^"]+)">([^<]+)<\/a>/g)].map(
+				([, href, text]) => `${text} → ${href}`
+			)
+		).toEqual([
+			`page → ${stores['$app/stores'].page}`,
+			`page → ${stores['$app/state'].page}`,
+			`$page → ${stores['$app/stores'].page}`,
+			`page → ${stores['$app/state'].page}`
+		]);
+	});
 
 	test('links a type inside a single comment token without changing visible text', () => {
 		const html = render(`<span class="comment">/** @type {import('./$types').PageLoad} */</span>`);

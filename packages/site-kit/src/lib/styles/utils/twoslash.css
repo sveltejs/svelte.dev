@@ -2,14 +2,13 @@
 	position: relative;
 
 	&.highlight::after {
-		/* ensure contiguous hover area */
+		/* bridge the gap to the tooltip without covering links in the target */
 		content: '';
 		position: absolute;
 		left: 0;
-		top: 0;
+		top: 100%;
 		width: 100%;
-		height: calc(100% + 1rem);
-		pointer-events: none;
+		height: 1rem;
 	}
 
 	.twoslash-popover {
