@@ -294,7 +294,7 @@
 						font-size: 1.2rem;
 						font-family: var(--sk-font-family-mono);
 						color: inherit;
-						text-underline-offset: 0.2em;
+						text-underline-offset: 0.15em;
 					}
 
 					&::before {
@@ -486,11 +486,6 @@
 					background: transparent;
 				}
 
-				a:hover {
-					border-bottom: 1px solid var(--sk-fg-accent);
-					text-decoration: none;
-				}
-
 				.highlight {
 					--color: rgba(220, 220, 0, 0.2);
 					background: var(--color);
@@ -527,9 +522,7 @@
 		a:not(.permalink) {
 			color: inherit;
 			text-decoration-line: underline;
-			transition:
-				box-shadow 0.1s ease-in-out,
-				text-decoration-color 0.15s;
+			transition: box-shadow 0.1s ease-in-out;
 		}
 
 		/* permalinks */

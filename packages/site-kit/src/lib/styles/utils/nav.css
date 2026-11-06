@@ -69,7 +69,7 @@
 
 	a[aria-current='page'] {
 		text-decoration: underline;
-		text-underline-offset: 0.2em;
+		text-underline-offset: 0.15em;
 	}
 
 	/* necessary for reasons i don't fully understand */

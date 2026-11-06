@@ -60,11 +60,14 @@ a {
 	position: relative;
 	cursor: pointer;
 	color: inherit;
-	text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
-	transition: text-decoration-color 0.15s;
+	text-decoration-line: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.15em;
 
+	/* thicken rather than recolour, so hover doesn't rely on colour */
 	&:hover {
-		text-decoration-color: currentColor;
+		text-decoration-thickness: max(2px, 0.12em);
+		text-decoration-skip-ink: none;
 	}
 }
 

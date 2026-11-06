@@ -279,7 +279,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 				&[aria-current='page'] {
 					text-decoration: underline;
-					text-underline-offset: 0.2em;
+					text-underline-offset: 0.15em;
 				}
 			}
 		}
