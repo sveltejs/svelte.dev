@@ -5,10 +5,44 @@ import type { PluginOption, UserConfig } from 'vite';
 import { browserslistToTargets } from 'lightningcss';
 import browserslist from 'browserslist';
 import { VERSION } from '@sveltejs/kit';
+import fs from 'node:fs';
+import path from 'node:path';
 
 const is_kit_2 = VERSION[0] === '2';
 
 const plugins: PluginOption[] = [
+	// in dev, vite-imagetools decodes and encodes each image again on every request even when it has
+	// it cached, which takes seconds for a large avif, so a page with many images queues everything
+	// else behind them. this sends the cached file as it is
+	{
+		name: 'serve-cached-images',
+		enforce: 'pre',
+		configureServer: (server) => {
+			const cache = path.resolve('node_modules/.cache/imagetools');
+
+			server.middlewares.use((req, res, next) => {
+				const id = req.url?.match(/^\/@imagetools\/([\w-]+)$/)?.[1];
+				const file = id && path.join(cache, id);
+				if (!file || !fs.existsSync(file)) return next();
+
+				const head = Buffer.alloc(12);
+				const fd = fs.openSync(file, 'r');
+				fs.readSync(fd, head, 0, 12, 0);
+				fs.closeSync(fd);
+
+				const type = head.subarray(4, 12).toString('latin1').startsWith('ftypavi')
+					? 'avif'
+					: head.subarray(8, 12).toString('latin1') === 'WEBP'
+						? 'webp'
+						: head[0] === 0x89
+							? 'png'
+							: 'jpeg';
+
+				res.setHeader('Content-Type', `image/${type}`);
+				fs.createReadStream(file).pipe(res);
+			});
+		}
+	},
 	enhancedImages(),
 	// apply cross-origin isolation headers for tutorial when developing/previewing locally,
 	// else web containers don't work and images don't load in the rollup iframe
