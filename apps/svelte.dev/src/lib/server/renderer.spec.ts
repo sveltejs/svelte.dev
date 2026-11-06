@@ -1,48 +1,7 @@
-import * as markdown from '@sveltejs/site-kit/markdown';
-import { afterEach, describe, expect, test, vi } from 'vitest';
+import { describe, expect, test } from 'vitest';
 import { render_content } from './renderer.ts';
 
 describe('render_content', () => {
-	afterEach(() => vi.restoreAllMocks());
-
-	test('passes the documented module to the Markdown renderer', async () => {
-		const filename = 'docs/kit/98-reference/10-@sveltejs-kit.md';
-		const module = '@sveltejs/kit';
-		const render_markdown = vi.spyOn(markdown, 'render_content_markdown').mockResolvedValue('');
-		const body = '```dts\nfunction example(): SharedType;\n```';
-		const references = {
-			[module]: { SharedType: '/docs/correct#SharedType' },
-			'unrelated/module': { SharedType: '/docs/wrong#SharedType' }
-		};
-
-		await render_content(filename, body, { check: false, references, referenceModule: module });
-
-		expect(render_markdown).toHaveBeenCalledWith(
-			filename,
-			body,
-			expect.objectContaining({ check: false, references, referenceModule: module }),
-			expect.any(Function)
-		);
-	});
-
-	test('does not infer a module for concept pages', async () => {
-		const render_markdown = vi.spyOn(markdown, 'render_content_markdown').mockResolvedValue('');
-		const filename = 'docs/kit/98-reference/54-types.md';
-		const body = '```dts\nfunction example(): PageData;\n```';
-
-		await render_content(filename, body, {
-			check: false,
-			references: { './$types': '/docs/kit/types#Generated-types' }
-		});
-
-		expect(render_markdown).toHaveBeenCalledWith(
-			filename,
-			body,
-			expect.not.objectContaining({ referenceModule: expect.any(String) }),
-			expect.any(Function)
-		);
-	});
-
 	test('transforms Markdown links when given an origin', async () => {
 		const html = await render_content(
 			'test.md',

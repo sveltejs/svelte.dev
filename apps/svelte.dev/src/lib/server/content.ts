@@ -5,7 +5,6 @@ import { create_index } from '@sveltejs/site-kit/server/content';
 import crosslinked from './generated/crosslinked.json';
 import type { RelatedLink } from '#lib/types.d.ts';
 import type { DocumentationReferences } from '@sveltejs/site-kit/markdown';
-import { get_reference_module, is_identifier } from './reference-modules.ts';
 
 const documents = import.meta.glob<string>('./**/*.md', {
 	eager: true,
@@ -90,6 +89,22 @@ export const blog_posts = index.blog.children
 
 export function remove_section(slug: string) {
 	return slug.replace(/\/[^/]+(\/[^/]+)$/g, '$1');
+}
+
+/** Whether a reference section title is an exported identifier that can be linked. */
+function is_identifier(title: string) {
+	return /^[A-Za-z_$][\w$]*$/.test(title);
+}
+
+/** The import module documented by an API reference page, e.g. `@sveltejs/kit` */
+function get_reference_module(page: Document) {
+	if (!/(?:^|\/)docs\/[^/]+\/\d+-reference\/\d+-[^/]+\.md$/.test(page.file)) return;
+
+	const module = page.metadata.title;
+	if (!/^(?:@[\w.-]+\/)?[a-z_$][\w$.-]*(?:\/[\w$.-]+)*$/.test(module)) return;
+	if (!page.sections.some((section) => is_identifier(section.title))) return;
+
+	return module;
 }
 
 /**

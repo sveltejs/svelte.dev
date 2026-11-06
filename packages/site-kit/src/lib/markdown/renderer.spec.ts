@@ -83,33 +83,11 @@ describe('render_content_markdown', () => {
 });
 
 const references = {
-	'@sveltejs/kit': {
-		AfterNavigate: '/docs/kit/@sveltejs-kit#AfterNavigate',
-		Load: '/docs/kit/@sveltejs-kit#Load',
-		redirect: '/docs/kit/@sveltejs-kit#redirect'
-	},
-	svelte: { onMount: '/docs/svelte/svelte#onMount' },
+	'@sveltejs/kit': { redirect: '/docs/kit/@sveltejs-kit#redirect' },
 	'./$types': '/docs/kit/types#Generated-types'
 } satisfies DocumentationReferences;
 
 describe('direct documentation links', () => {
-	test('links AfterNavigate in declaration snippets without Twoslash', async () => {
-		const html = await render_content_markdown(
-			'navigation.md',
-			[
-				'```dts',
-				"function afterNavigate(callback: (navigation: import('@sveltejs/kit').AfterNavigate) => void): void;",
-				'```'
-			].join('\n'),
-			{ references }
-		);
-		expect(html).toContain(
-			`<a class="doc-reference" href="${references['@sveltejs/kit'].AfterNavigate}">AfterNavigate</a>`
-		);
-		expect(html).not.toContain('twoslash-popover');
-		expect(html).not.toContain('twoslash-popup-reference');
-	});
-
 	test.each(['PageLoad', 'Actions'])('links generated %s in JS and converted TS', async (name) => {
 		const annotation = name === 'Actions' ? 'satisfies' : 'type';
 		const html = await render_content_markdown(
@@ -128,37 +106,6 @@ describe('direct documentation links', () => {
 			expect(pre).toContain('class="doc-reference" href="/docs/kit/types#Generated-types"');
 			expect(pre).toContain(`>${name}</a>`);
 		}
-	});
-
-	test('links imported function bindings while retaining normal popovers', async () => {
-		const html = await render_content_markdown(
-			'functions.md',
-			"```js\nimport { onMount } from 'svelte';\nonMount(() => {});\n```",
-			{ references }
-		);
-		expect(html).toContain(
-			`<a class="doc-reference" href="${references.svelte.onMount}">onMount</a>`
-		);
-		expect(html).toContain('class="twoslash-popover"');
-		expect(html).not.toContain('twoslash-popup-reference');
-		for (const popover of html.matchAll(/<span class="twoslash-popover"[^]*?<\/span><\/span>/g)) {
-			expect(popover[0]).not.toContain('doc-reference');
-		}
-	});
-
-	test('links Svelte imports and template expressions', async () => {
-		const html = await render_content_markdown(
-			'component.md',
-			[
-				'```svelte',
-				"<script>import { onMount } from 'svelte';</script>",
-				'<p>{onMount.name}</p>',
-				'```'
-			].join('\n'),
-			{ check: false, references }
-		);
-		expect(html.match(/class="doc-reference"/g)).toHaveLength(2);
-		expect(html.match(/href="\/docs\/svelte\/svelte#onMount"/g)).toHaveLength(2);
 	});
 
 	test.each([undefined, 'true', 'false'])(

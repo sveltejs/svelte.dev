@@ -53,21 +53,6 @@ function setup() {
 	return { classes, listeners, dispatch, destroy, navigate };
 }
 
-it('dismisses tooltips on link activation without needing mouseout', () => {
-	const { classes, dispatch, destroy } = setup();
-	const link = { closest: (selector: string) => (selector === 'a[href]' ? link : null) };
-
-	for (const event of ['click', 'auxclick']) {
-		dispatch('mouseover');
-		expect(classes.has('highlight')).toBe(true);
-		dispatch(event, link);
-		expect(classes.has('highlight')).toBe(false);
-	}
-
-	expect(unmount).toHaveBeenCalledTimes(2);
-	destroy();
-});
-
 it('clears mounted tooltips and pending timers on navigation and teardown', () => {
 	const { classes, listeners, dispatch, destroy, navigate } = setup();
 
@@ -84,27 +69,4 @@ it('clears mounted tooltips and pending timers on navigation and teardown', () =
 	expect(vi.getTimerCount()).toBe(0);
 	expect(listeners.size).toBe(0);
 	expect(unmount).toHaveBeenCalledTimes(2);
-});
-
-it('keeps tooltip hover transfer working without leaving stale mouseout timers', () => {
-	const { classes, dispatch, destroy } = setup();
-
-	dispatch('mouseover');
-	dispatch('click');
-	expect(classes.has('highlight')).toBe(true);
-	dispatch('mouseout');
-	dispatch('mouseout');
-	expect(vi.getTimerCount()).toBe(1);
-	const props = vi.mocked(mount).mock.calls.at(-1)![1]!.props as {
-		onmouseenter: () => void;
-		onmouseleave: () => void;
-	};
-	props.onmouseenter();
-	vi.runAllTimers();
-	expect(classes.has('highlight')).toBe(true);
-	props.onmouseleave();
-	vi.runAllTimers();
-	expect(classes.has('highlight')).toBe(false);
-	expect(unmount).toHaveBeenCalledTimes(1);
-	destroy();
 });

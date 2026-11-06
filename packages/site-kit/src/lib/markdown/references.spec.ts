@@ -8,191 +8,160 @@ const references = {
 		redirect: '/docs/kit/@sveltejs-kit#redirect'
 	},
 	svelte: { onMount: '/docs/svelte/svelte#onMount', Load: '/docs/svelte/svelte#Load' },
-	'./$types': '/docs/kit/types#Generated-types'
+	'./$types': '/docs/kit/types#Generated-types',
+	'$app/forms': { enhance: '/docs/kit/$app-forms#enhance' },
+	'svelte/transition': { fade: '/docs/svelte/svelte-transition#fade' },
+	'svelte/animate': { flip: '/docs/svelte/svelte-animate#flip' }
 } satisfies DocumentationReferences;
 
-function resolve(source: string, language = 'ts', module?: string, prelude?: string) {
-	return find_references(source, language, references, module, prelude).map(
-		({ start, end, href }) => ({
-			text: source.slice(start, end),
-			href
-		})
-	);
+const kit = references['@sveltejs/kit'];
+const types = references['./$types'];
+const link = (text: string, href: string) => `${text} → ${href}`;
+const redirect = link('redirect', kit.redirect);
+const kit_load = link('Load', kit.Load);
+const svelte_load = link('Load', references.svelte.Load);
+const enhance = link('enhance', references['$app/forms'].enhance);
+const appear = link('appear', references['svelte/transition'].fade);
+const flip = link('flip', references['svelte/animate'].flip);
+
+interface Options {
+	language?: string;
+	module?: string;
+	prelude?: string;
 }
 
-const redirect = { text: 'redirect', href: references['@sveltejs/kit'].redirect };
-
-describe('documentation references', () => {
-	test('links imported functions and their usages, not strings, comments or locals', () => {
-		expect(
-			resolve(`import { redirect } from '@sveltejs/kit';
-redirect(303, '/');
-const text = 'redirect';
-// redirect
-function local(redirect: () => void) { redirect(); }
-const unrelated = { redirect: 1 };
-unrelated.redirect;
-`)
-		).toEqual([redirect, redirect]);
-	});
-
-	test('resolves aliases to the exported name and separates module collisions', () => {
-		expect(
-			resolve(`import { redirect as go, type Load } from '@sveltejs/kit';
-import { Load as OtherLoad } from 'svelte';
-go(303, '/');
-let load: Load;
-let other: OtherLoad;`)
-		).toEqual([
-			redirect,
-			{ text: 'go', href: redirect.href },
-			{ text: 'Load', href: references['@sveltejs/kit'].Load },
-			{ text: 'Load', href: references.svelte.Load },
-			{ text: 'OtherLoad', href: references.svelte.Load },
-			{ text: 'go', href: redirect.href },
-			{ text: 'Load', href: references['@sveltejs/kit'].Load },
-			{ text: 'OtherLoad', href: references.svelte.Load }
-		]);
-	});
-
-	test('links namespace members without linking the namespace or nested properties', () => {
-		expect(
-			resolve(`import * as Kit from '@sveltejs/kit';
-Kit.redirect(303, '/');
-let type: Kit.AfterNavigate;
-Kit.redirect.name;
-function local(Kit: any) { Kit.redirect(); }`)
-		).toEqual([
-			redirect,
-			{ text: 'AfterNavigate', href: references['@sveltejs/kit'].AfterNavigate },
-			redirect
-		]);
-	});
-
-	test.each(['ts', 'js'])('resolves import types and JSDoc in %s', (language) => {
-		const source = `/** @type {import('./$types').PageLoad} */
+const import_types = `/** @type {import('./$types').PageLoad} */
 export const load = () => ({});
 /** @satisfies {import('./$types').FutureRouteType} */
 export const actions = {};
 let navigation: import('@sveltejs/kit').AfterNavigate;
 /** @type {import('@sveltejs/kit').Load.Nested.Member} */
 let nested;`;
-		expect(resolve(source, language)).toEqual([
-			{ text: 'PageLoad', href: references['./$types'] },
-			{ text: 'FutureRouteType', href: references['./$types'] },
-			{ text: 'AfterNavigate', href: references['@sveltejs/kit'].AfterNavigate },
-			{ text: 'Load', href: references['@sveltejs/kit'].Load }
-		]);
-	});
 
-	test('links new generated exports, aliases and namespace members without linking shadowed locals', () => {
-		expect(
-			resolve(`import type { FutureRouteType as Data } from './$types';
+const import_types_expected = [
+	link('PageLoad', types),
+	link('FutureRouteType', types),
+	link('AfterNavigate', kit.AfterNavigate),
+	kit_load
+];
+
+test.each<[string, string, string[], Options?]>([
+	[
+		'links imported functions and their usages, not strings, comments or locals',
+		`import { redirect } from '@sveltejs/kit';
+redirect(303, '/');
+const text = 'redirect';
+// redirect
+function local(redirect: () => void) { redirect(); }
+const unrelated = { redirect: 1 };
+unrelated.redirect;`,
+		[redirect, redirect]
+	],
+	[
+		'resolves aliases to the exported name and separates module collisions',
+		`import { redirect as go, type Load } from '@sveltejs/kit';
+import { Load as OtherLoad } from 'svelte';
+go(303, '/');
+let load: Load;
+let other: OtherLoad;`,
+		[
+			redirect,
+			link('go', kit.redirect),
+			kit_load,
+			svelte_load,
+			link('OtherLoad', references.svelte.Load),
+			link('go', kit.redirect),
+			kit_load,
+			link('OtherLoad', references.svelte.Load)
+		]
+	],
+	[
+		'links namespace members without linking the namespace or nested properties',
+		`import * as Kit from '@sveltejs/kit';
+Kit.redirect(303, '/');
+let type: Kit.AfterNavigate;
+Kit.redirect.name;
+function local(Kit: any) { Kit.redirect(); }`,
+		[redirect, link('AfterNavigate', kit.AfterNavigate), redirect]
+	],
+	['resolves import types and JSDoc in ts', import_types, import_types_expected],
+	[
+		'resolves import types and JSDoc in js',
+		import_types,
+		import_types_expected,
+		{ language: 'js' }
+	],
+	[
+		'links new generated exports, aliases and namespace members without linking shadowed locals',
+		`import type { FutureRouteType as Data } from './$types';
 import * as Route from './$types';
 let data: Data;
 let event: Route.FutureRouteEvent;
-function local<Data>(value: Data): Data { return value; }`)
-		).toEqual(
-			['FutureRouteType', 'Data', 'Data', 'FutureRouteEvent'].map((text) => ({
-				text,
-				href: references['./$types']
-			}))
-		);
-	});
-
-	test('uses the current module only for unbound declaration type references', () => {
-		expect(
-			resolve(
-				`function afterNavigate(callback: (navigation: import('@sveltejs/kit').AfterNavigate) => void): void;
+function local<Data>(value: Data): Data { return value; }`,
+		['FutureRouteType', 'Data', 'Data', 'FutureRouteEvent'].map((text) => link(text, types))
+	],
+	[
+		'uses the current module only for unbound declaration type references',
+		`function afterNavigate(callback: (navigation: import('@sveltejs/kit').AfterNavigate) => void): void;
 function fn(value: Load): Load;
 function shadow<Load>(value: Load): Load;
 interface Local {}
 function local(value: Local): void;`,
-				'dts',
-				'@sveltejs/kit'
-			)
-		).toEqual([
-			{ text: 'AfterNavigate', href: references['@sveltejs/kit'].AfterNavigate },
-			{ text: 'Load', href: references['@sveltejs/kit'].Load },
-			{ text: 'Load', href: references['@sveltejs/kit'].Load }
-		]);
-	});
-
-	test('does not guess destinations for undocumented imports or arbitrary local types', () => {
-		expect(
-			resolve(`import { redirect } from 'other';
+		[link('AfterNavigate', kit.AfterNavigate), kit_load, kit_load],
+		{ language: 'dts', module: '@sveltejs/kit' }
+	],
+	[
+		'does not guess destinations for undocumented imports or arbitrary local types',
+		`import { redirect } from 'other';
 import type { PageLoad } from './local';
 redirect();
 let load: PageLoad;
-let value: Load;`)
-		).toEqual([]);
-	});
-
-	test('keeps type-parameter and block-local shadowing separate from imports', () => {
-		expect(
-			resolve(`import { redirect, type Load } from '@sveltejs/kit';
+let value: Load;`,
+		[]
+	],
+	[
+		'keeps type-parameter and block-local shadowing separate from imports',
+		`import { redirect, type Load } from '@sveltejs/kit';
 function fn<Load>(value: Load) {}
 { const redirect = () => {}; redirect(); }
 redirect(303, '/');
-let value: Load;`)
-		).toEqual([
-			redirect,
-			{ text: 'Load', href: references['@sveltejs/kit'].Load },
-			redirect,
-			{ text: 'Load', href: references['@sveltejs/kit'].Load }
-		]);
-	});
-
-	test('uses hidden imports without linking hidden source', () => {
-		expect(
-			resolve(
-				`redirect(303, '/');`,
-				'ts',
-				undefined,
-				`import { redirect } from '@sveltejs/kit';\n// ---cut---\n`
-			)
-		).toEqual([redirect]);
-	});
-
-	test('links imported shorthand values, not destructured or property bindings', () => {
-		expect(
-			resolve(`import { redirect } from '@sveltejs/kit';
+let value: Load;`,
+		[redirect, kit_load, redirect, kit_load]
+	],
+	[
+		'uses hidden imports without linking hidden source',
+		`redirect(303, '/');`,
+		[redirect],
+		{ prelude: `import { redirect } from '@sveltejs/kit';\n// ---cut---\n` }
+	],
+	[
+		'links imported shorthand values, not destructured or property bindings',
+		`import { redirect } from '@sveltejs/kit';
 const value = { redirect };
 function fn({ redirect }: any) { return { redirect }; }
-const other = { redirect() {} };`)
-		).toEqual([redirect, redirect]);
-	});
-
-	test('uses only the final hidden virtual file for import bindings', () => {
-		expect(
-			resolve(
-				'redirect();',
-				'ts',
-				undefined,
-				`// @filename: helper.ts\nimport { redirect } from '@sveltejs/kit';\n// @filename: index.ts\n`
-			)
-		).toEqual([]);
-	});
-
-	test('links Svelte expressions and attributes, not text, comments or styles', () => {
-		expect(
-			resolve(
-				`<script>import { redirect } from '@sveltejs/kit';</script>
+const other = { redirect() {} };`,
+		[redirect, redirect]
+	],
+	[
+		'uses only the final hidden virtual file for import bindings',
+		'redirect();',
+		[],
+		{
+			prelude: `// @filename: helper.ts\nimport { redirect } from '@sveltejs/kit';\n// @filename: index.ts\n`
+		}
+	],
+	[
+		'links Svelte expressions and attributes, not text, comments or styles',
+		`<script>import { redirect } from '@sveltejs/kit';</script>
 <button onclick={() => redirect(303, '/')}>{redirect.name}</button>
 <p>redirect</p><!-- <script>import { redirect } from '@sveltejs/kit';</script> -->
 <style>redirect { color: red; }</style>`,
-				'svelte'
-			)
-		).toEqual([redirect, redirect, redirect]);
-	});
-
-	test('links Svelte action, transition and animation directive names', () => {
-		const directives = {
-			'$app/forms': { enhance: '/docs/kit/$app-forms#enhance' },
-			'svelte/transition': { fade: '/docs/svelte/svelte-transition#fade' },
-			'svelte/animate': { flip: '/docs/svelte/svelte-animate#flip' }
-		};
-		const source = `<script>
+		[redirect, redirect, redirect],
+		{ language: 'svelte' }
+	],
+	[
+		'links Svelte action, transition and animation directive names',
+		`<script>
 import { enhance } from '$app/forms';
 import { fade as appear } from 'svelte/transition';
 import { flip } from 'svelte/animate';
@@ -200,96 +169,63 @@ import { flip } from 'svelte/animate';
 <form method="POST" use:enhance={() => {}}></form>
 <p in:appear|global={{ duration: 100 }} out:appear>hi</p>
 {#each items as item (item)}<li animate:flip>{item}</li>{/each}
-<div use:local transition:local></div>`;
-
-		expect(
-			find_references(source, 'svelte', directives).map(({ start, end, href }) => ({
-				text: source.slice(start, end),
-				href
-			}))
-		).toEqual([
-			{ text: 'enhance', href: directives['$app/forms'].enhance },
-			{ text: 'fade', href: directives['svelte/transition'].fade },
-			{ text: 'appear', href: directives['svelte/transition'].fade },
-			{ text: 'flip', href: directives['svelte/animate'].flip },
-			{ text: 'enhance', href: directives['$app/forms'].enhance },
-			{ text: 'appear', href: directives['svelte/transition'].fade },
-			{ text: 'appear', href: directives['svelte/transition'].fade },
-			{ text: 'flip', href: directives['svelte/animate'].flip }
-		]);
-	});
-
-	test('links directives in examples with unclosed markup', () => {
-		const forms = { '$app/forms': { enhance: '/docs/kit/$app-forms#enhance' } };
-		const source = `<script>
+<div use:local transition:local></div>`,
+		[
+			enhance,
+			link('fade', references['svelte/transition'].fade),
+			appear,
+			flip,
+			enhance,
+			appear,
+			appear,
+			flip
+		],
+		{ language: 'svelte' }
+	],
+	[
+		'links directives in examples with unclosed markup',
+		`<script>
 	import { enhance } from '$app/forms';
 </script>
 
-<form method="POST" use:enhance>`;
-
-		expect(
-			find_references(source, 'svelte', forms).map(({ start, end }) => source.slice(start, end))
-		).toEqual(['enhance', 'enhance']);
-	});
-
-	test('respects Svelte each, await, snippet, const and slot bindings', () => {
-		expect(
-			resolve(
-				`<script>import { redirect } from '@sveltejs/kit';</script>
+<form method="POST" use:enhance>`,
+		[enhance, enhance],
+		{ language: 'svelte' }
+	],
+	[
+		'respects Svelte each, await, snippet, const and slot bindings',
+		`<script>import { redirect } from '@sveltejs/kit';</script>
 {#each items as redirect}{redirect()}{:else}{redirect()}{/each}
 {#await promise then redirect}{redirect()}{:catch redirect}{redirect()}{/await}
 {#snippet block(redirect)}{redirect()}{/snippet}
 {#if condition}{@const redirect = () => {}}{redirect()}{/if}
 <Component let:redirect>{redirect()}</Component>
 {redirect()}`,
-				'svelte'
-			)
-		).toEqual([redirect, redirect, redirect]);
-	});
-
-	test('inherits unshadowed Svelte module imports in scripts and template expressions', () => {
-		expect(
-			resolve(
-				`<script module>import { redirect, type Load } from '@sveltejs/kit';</script>
-<script lang="ts">import type { Load } from 'svelte'; let value: Load; redirect();</script>
+		[redirect, redirect, redirect],
+		{ language: 'svelte' }
+	],
+	[
+		'links Svelte module imports in the instance script and template',
+		`<script module>import { redirect, type Load } from '@sveltejs/kit';</script>
+<script lang="ts">let value: Load; redirect();</script>
 {redirect()}`,
-				'svelte'
-			)
-		).toEqual([
-			redirect,
-			{ text: 'Load', href: references['@sveltejs/kit'].Load },
-			{ text: 'Load', href: references.svelte.Load },
-			{ text: 'Load', href: references.svelte.Load },
-			redirect,
-			redirect
-		]);
-	});
-
-	test('separates Svelte module and instance bindings with the same imported name', () => {
-		expect(
-			resolve(
-				`<script module>import type { Load } from 'svelte'; let value: Load;</script>
-<script lang="ts">import type { Load } from '@sveltejs/kit'; let value: Load;</script>`,
-				'svelte'
-			)
-		).toEqual([
-			{ text: 'Load', href: references.svelte.Load },
-			{ text: 'Load', href: references.svelte.Load },
-			{ text: 'Load', href: references['@sveltejs/kit'].Load },
-			{ text: 'Load', href: references['@sveltejs/kit'].Load }
-		]);
-	});
-
-	test('handles incomplete Svelte examples conservatively without linking commented scripts', () => {
-		expect(
-			resolve(
-				`<!-- <script>import { redirect } from '@sveltejs/kit';</script> -->
+		[redirect, kit_load, kit_load, redirect, redirect],
+		{ language: 'svelte' }
+	],
+	[
+		'handles incomplete Svelte examples conservatively without linking commented scripts',
+		`<!-- <script>import { redirect } from '@sveltejs/kit';</script> -->
 <script>import { redirect } from '@sveltejs/kit'; redirect();</script>
 {#if`,
-				'svelte'
-			)
-		).toEqual([redirect, redirect]);
-	});
+		[redirect, redirect],
+		{ language: 'svelte' }
+	]
+])('%s', (_, source, expected, { language = 'ts', module, prelude } = {}) => {
+	expect(
+		find_references(source, language, references, module, prelude).map(({ start, end, href }) =>
+			link(source.slice(start, end), href)
+		)
+	).toEqual(expected);
 });
 
 describe('highlighted documentation links', () => {

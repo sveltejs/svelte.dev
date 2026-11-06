@@ -191,7 +191,9 @@ function find_svelte_references(
 		} catch {}
 	}
 	if (!ast) {
-		// Incomplete examples can still contain complete scripts. Ignore commented-out scripts.
+		// Some examples are deliberately invalid even for the loose parser (e.g. two
+		// `<svelte:options>` or `{@debug}` with an expression). Their scripts can still be linked
+		// on their own; ignore scripts that are commented out.
 		const uncommented = source.replace(/<!--[\s\S]*?-->/g, (comment) => ' '.repeat(comment.length));
 		return [...uncommented.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script\s*>/g)].flatMap((match) => {
 			const offset = match.index + match[0].indexOf('>') + 1;
@@ -328,79 +330,9 @@ function find_svelte_references(
 	const module_content = ast.module?.content as unknown as
 		| { start: number; end: number }
 		| undefined;
-	const instance_content = ast.instance?.content as unknown as
-		| { start: number; end: number }
-		| undefined;
 	const module_source = module_content
 		? source.slice(module_content.start, module_content.end)
 		: '';
-	const instance_source = instance_content
-		? source.slice(instance_content.start, instance_content.end)
-		: '';
-	const module_file = ts.createSourceFile('module.ts', module_source, ts.ScriptTarget.Latest, true);
-	const instance_file = ts.createSourceFile(
-		'instance.ts',
-		instance_source,
-		ts.ScriptTarget.Latest,
-		true
-	);
-
-	function names(node: ts.Node): string[] {
-		if (ts.isIdentifier(node)) return [node.text];
-		if (ts.isObjectBindingPattern(node) || ts.isArrayBindingPattern(node)) {
-			return node.elements.flatMap((element) =>
-				ts.isBindingElement(element) ? names(element.name) : []
-			);
-		}
-		if (ts.isVariableStatement(node))
-			return node.declarationList.declarations.flatMap((declaration) => names(declaration.name));
-		if (ts.isImportDeclaration(node)) {
-			const clause = node.importClause;
-			return [
-				...(clause?.name ? [clause.name.text] : []),
-				...(clause?.namedBindings
-					? ts.isNamespaceImport(clause.namedBindings)
-						? [clause.namedBindings.name.text]
-						: clause.namedBindings.elements.map((element) => element.name.text)
-					: [])
-			];
-		}
-		if ('name' in node && node.name && ts.isIdentifier(node.name as ts.Node))
-			return [(node.name as ts.Identifier).text];
-		return [];
-	}
-
-	const instance_names = new Set(instance_file.statements.flatMap(names));
-	// Module bindings are visible to the instance, except where its own bindings shadow them.
-	const module_prelude = module_file.statements
-		.map((statement) => {
-			if (ts.isImportDeclaration(statement) && statement.importClause) {
-				const clause = statement.importClause;
-				const parts: string[] = [];
-				if (clause.name && !instance_names.has(clause.name.text)) parts.push(clause.name.text);
-				if (clause.namedBindings) {
-					if (ts.isNamespaceImport(clause.namedBindings)) {
-						if (!instance_names.has(clause.namedBindings.name.text))
-							parts.push(clause.namedBindings.getText(module_file));
-					} else {
-						const specifiers = clause.namedBindings.elements.filter(
-							(element) => !instance_names.has(element.name.text)
-						);
-						if (specifiers.length)
-							parts.push(
-								`{ ${specifiers.map((element) => element.getText(module_file)).join(', ')} }`
-							);
-					}
-				}
-				return parts.length
-					? `import ${clause.isTypeOnly ? 'type ' : ''}${parts.join(', ')} from ${statement.moduleSpecifier.getText(module_file)};`
-					: '';
-			}
-			return names(statement).some((name) => instance_names.has(name))
-				? ''
-				: statement.getFullText(module_file);
-		})
-		.join('\n');
 
 	copy(ast.instance?.content);
 	walk(ast.fragment);
@@ -421,7 +353,9 @@ function find_svelte_references(
 			'ts',
 			references,
 			reference_module,
-			prelude + '\n' + module_prelude,
+			// Module bindings are visible to the instance. Svelte rejects instance declarations that
+			// reuse a module import's name, so the module script can be prepended unchanged.
+			prelude + '\n' + module_source,
 			true
 		).flatMap((reference) => {
 			const range = ranges.find(
