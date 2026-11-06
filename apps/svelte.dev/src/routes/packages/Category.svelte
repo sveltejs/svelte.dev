@@ -158,20 +158,26 @@
 	a.permalink {
 		position: absolute !important;
 		display: block;
-		background: var(--sk-fg-1);
-		color: var(--sk-fg-1) !important;
-		mask: url(icons/hash) 50% 50% no-repeat;
-		mask-size: 2.4rem 2.4rem;
 		width: 2.6rem;
 		height: 2.2rem;
 		top: calc(50% - 1rem);
 
-		@media (max-width: 767px) {
+		/* a mask on the link itself would clip the focus ring */
+		&::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: var(--sk-fg-1);
+			mask: url(icons/hash) 50% 50% no-repeat;
+			mask-size: 2.4rem 2.4rem;
+		}
+
+		@media (max-width: 47.9375em) {
 			right: 0;
 			scale: 0.8;
 		}
 
-		@media (min-width: 768px) {
+		@media (min-width: 48em) {
 			left: -3rem;
 			opacity: 0;
 			transition: opacity 0.2s;

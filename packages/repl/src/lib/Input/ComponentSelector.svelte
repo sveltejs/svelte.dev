@@ -47,11 +47,12 @@
 
 	function remove_file(file: File) {
 		let result = confirm(`Are you sure you want to delete ${file.name}?`);
-		if (!result) return;
+		if (!result) return false;
 
 		workspace.remove(file);
 
 		onchange();
+		return true;
 	}
 
 	async function add_new() {
@@ -81,18 +82,41 @@
 	<!-- svelte-ignore a11y_no_static_element_interactions -->
 	<div class="file-tabs">
 		{#each workspace.file_nodes as file, index (file.name)}
+			<!-- not a button, because buttons are not reliably draggable -->
 			<div
 				class="button"
 				class:editable={file.name !== 'App.svelte'}
 				role="button"
 				tabindex="0"
+				aria-keyshortcuts={file.name !== 'App.svelte' ? 'Delete' : undefined}
 				aria-current={file === workspace.current}
 				class:drag-over={file === dragover}
 				onclick={() => {
 					workspace.select(file.name);
 					input_value = file.name;
 				}}
-				onkeyup={(e) => e.key === ' ' && workspace.select(file.name)}
+				onkeydown={async (e) => {
+					// ignore keys from the rename input and remove button
+					if (e.target !== e.currentTarget) return;
+
+					if (e.key === 'Enter' || e.key === ' ') {
+						e.preventDefault();
+						workspace.select(file.name);
+						input_value = file.name;
+					}
+
+					// backspace is the delete key on mac keyboards
+					if ((e.key === 'Delete' || e.key === 'Backspace') && file.name !== 'App.svelte') {
+						e.preventDefault();
+						const tabs = e.currentTarget.parentElement!;
+
+						if (remove_file(file)) {
+							await tick();
+							const remaining = tabs.querySelectorAll<HTMLElement>('[role="button"]');
+							remaining[Math.min(index, remaining.length - 1)]?.focus();
+						}
+					}
+				}}
 				draggable="true"
 				ondragstart={() => (dragging = file)}
 				ondragover={(e) => (e.preventDefault(), (dragover = file))}
@@ -138,20 +162,21 @@
 						}}
 					/>
 
-					<span
+					<!-- not in the tab order, keyboard users press delete on the tab -->
+					<button
 						class="remove"
+						tabindex="-1"
+						aria-label="Delete {file.name}"
 						onclick={(e) => {
-							// TODO make this a real button, get rid of the keyup listener
 							remove_file(file);
 							e.stopPropagation();
 						}}
-						onkeyup={(e) => e.key === ' ' && remove_file(file)}
 					>
 						<svg viewBox="0 0 24 24">
 							<line stroke="#999" x1="18" y1="6" x2="6" y2="18" />
 							<line stroke="#999" x1="6" y1="6" x2="18" y2="18" />
 						</svg>
-					</span>
+					</button>
 				{/if}
 			</div>
 		{/each}
@@ -264,6 +289,10 @@
 		--padding-right: 1.4rem;
 		padding: 0 var(--padding-right) 0 var(--padding-left);
 
+		&:focus-visible {
+			outline-offset: -2px;
+		}
+
 		&.editable {
 			--padding-right: 1.8rem;
 		}
@@ -288,6 +317,10 @@
 			width: 1.6rem;
 			height: 100%;
 			cursor: pointer;
+
+			&:focus-visible {
+				outline-offset: -2px;
+			}
 
 			svg {
 				width: 100%;
