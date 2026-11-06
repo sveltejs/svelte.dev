@@ -1,20 +1,28 @@
+import { beforeNavigate } from '$app/navigation';
 import { mount, onMount, unmount } from 'svelte';
 import Tooltip from './Tooltip.svelte';
 
 const CLASSNAME = 'highlight';
 
 export function setupDocsHovers() {
+	let tooltip: any;
+	let hovered: HTMLSpanElement | null = null;
+	let timeout: NodeJS.Timeout;
+
+	function clear() {
+		clearTimeout(timeout);
+		if (!tooltip) return;
+
+		unmount(tooltip);
+		hovered?.classList.remove(CLASSNAME);
+		tooltip = hovered = null;
+	}
+
+	beforeNavigate(clear);
+
 	onMount(() => {
-		let tooltip: any;
-		let hovered: HTMLSpanElement | null = null;
-		let timeout: NodeJS.Timeout;
-
-		function clear() {
-			if (!tooltip) return;
-
-			unmount(tooltip);
-			hovered?.classList.remove(CLASSNAME);
-			tooltip = hovered = null;
+		function activate(event: MouseEvent) {
+			if ((event.target as Element).closest('a[href]')) clear();
 		}
 
 		function over(event: MouseEvent) {
@@ -64,6 +72,7 @@ export function setupDocsHovers() {
 
 			while (target) {
 				if (target.classList.contains('twoslash-hover')) {
+					clearTimeout(timeout);
 					timeout = setTimeout(clear, 0);
 					return;
 				}
@@ -74,10 +83,15 @@ export function setupDocsHovers() {
 
 		window.addEventListener('mouseover', over);
 		window.addEventListener('mouseout', out);
+		window.addEventListener('click', activate);
+		window.addEventListener('auxclick', activate);
 
 		return () => {
 			window.removeEventListener('mouseover', over);
 			window.removeEventListener('mouseout', out);
+			window.removeEventListener('click', activate);
+			window.removeEventListener('auxclick', activate);
+			clear();
 		};
 	});
 }
