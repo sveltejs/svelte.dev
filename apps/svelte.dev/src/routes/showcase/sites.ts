@@ -781,16 +781,6 @@ export const sites: Site[] = [
 		category: 'tools',
 		more: true
 	},
-	{
-		id: 'onewhale',
-		name: 'OneWhale',
-		url: 'https://onewhale.io/',
-		description: 'Self-custody wallet built for real usage',
-		category: 'tools',
-		// from its clip, so the two match
-		screenshot: { from_clip: true },
-		clip: true
-	},
 
 	{
 		id: 'stack-overflow-survey',
