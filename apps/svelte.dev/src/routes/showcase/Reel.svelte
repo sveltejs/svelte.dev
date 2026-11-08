@@ -5,7 +5,7 @@
 	import type { Site } from './sites.ts';
 
 	interface Props {
-		reels: Array<{ site: Site; clip: string; still: Picture; category: string }>;
+		reels: Array<{ site: Site; clip: string; still: Picture }>;
 		/** whether clips play, which the button at the start of the page turns off */
 		autoplay: boolean;
 	}
@@ -93,7 +93,6 @@
 		<p class="now" aria-live="polite">
 			{#key current}
 				<span class="line" in:arrive out:leave>
-					<span class="category">{reels[current].category}</span>
 					<a class="name" href="#{reels[current].site.id}">{reels[current].site.name}</a>
 				</span>
 			{/key}
@@ -319,7 +318,6 @@
 		padding: 4.8rem var(--sk-page-padding-side) 1.6rem;
 		/* in light colours in either theme, over the dark wash */
 		--sk-fg-1: hsl(0, 0%, 98%);
-		--sk-fg-3: hsl(0, 0%, 80%);
 		--sk-border: hsl(0, 0%, 40%);
 	}
 
@@ -331,17 +329,6 @@
 
 	.line {
 		grid-area: 1 / 1;
-		display: flex;
-		flex-wrap: wrap;
-		align-items: baseline;
-		gap: 0.4rem 1.2rem;
-	}
-
-	.category {
-		font: var(--sk-font-ui-small);
-		color: var(--sk-fg-3);
-		text-transform: uppercase;
-		letter-spacing: 0.08em;
 	}
 
 	.name {

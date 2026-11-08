@@ -118,8 +118,7 @@
 		return {
 			site,
 			clip: clips[id],
-			still: pictures[id],
-			category: categories.find((category) => category.id === site.category)?.title ?? ''
+			still: pictures[id]
 		};
 	});
 
