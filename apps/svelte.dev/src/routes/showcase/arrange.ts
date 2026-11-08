@@ -2,43 +2,48 @@ import type { Site } from './sites.ts';
 
 export interface Tile {
 	site: Site;
-	/** big is two columns across and two rows down, at 16:10 like the rest */
+	/** big is two columns across and two rows down */
 	size: 'big' | 'small';
 	/** for a big one, whether it is on the right of the rows it spans */
 	right?: boolean;
 }
 
 /**
- * lays out sites in their order as a mosaic four columns across, or two on small screens, the
- * first big and as many more big as it takes for the last row to come out full, spread through
- * the rest and on alternate sides
+ * lays out sites as a mosaic four columns across, or two on small screens, with no holes. as many
+ * big as it takes for the cells to come out even, given to the ones `shown` prefers, such as those
+ * that move. each big one sits beside four small ones, or beside another big one when there are
+ * too few small ones to go round, on alternate sides, and any small ones left over follow in rows
  */
-export function arrange(sites: Site[]) {
-	const tiles: Tile[] = sites.map((site) => ({ site, size: 'small' }));
-	if (tiles.length === 0) return tiles;
+export function arrange(sites: Site[], shown: (site: Site) => boolean = () => false) {
+	if (sites.length === 0) return [];
 
 	// a big one takes four cells and the others one, so each more big one makes up three
-	const big = ((tiles.length - 1) % 4) + 1;
+	const count = sites.length % 4 || (sites.length >= 8 ? 4 : 0);
 
-	for (let i = 0; i < big; i += 1) {
-		const tile = tiles[Math.floor((i * tiles.length) / big)];
-		tile.size = 'big';
-		tile.right = i % 2 === 1;
+	// the preferred ones first, then the rest, each in their order
+	const big = new Set(
+		[...sites.filter(shown), ...sites.filter((site) => !shown(site))].slice(0, count)
+	);
+	const bigs = sites.filter((site) => big.has(site));
+	const smalls = sites.filter((site) => !big.has(site));
+
+	const tiles: Tile[] = [];
+	let right = false;
+
+	while (bigs.length > 0) {
+		// two side by side when there are not enough small ones for each to have four beside it
+		if (bigs.length >= 2 && smalls.length < 4 * bigs.length) {
+			tiles.push({ site: bigs.shift()!, size: 'big', right: false });
+			tiles.push({ site: bigs.shift()!, size: 'big', right: true });
+			continue;
+		}
+
+		tiles.push({ site: bigs.shift()!, size: 'big', right });
+		for (const site of smalls.splice(0, 4)) tiles.push({ site, size: 'small' });
+		right = !right;
 	}
+
+	for (const site of smalls) tiles.push({ site, size: 'small' });
 
 	return tiles;
-}
-
-/**
- * puts sites in rows that each fit one more than the last, starting at three, so they get smaller
- * and more crowded as they go
- */
-export function congest(sites: Site[]) {
-	const crowd: Array<{ site: Site; across: number }> = [];
-
-	for (let across = 3, start = 0; start < sites.length; start += across, across += 1) {
-		for (const site of sites.slice(start, start + across)) crowd.push({ site, across });
-	}
-
-	return crowd;
 }

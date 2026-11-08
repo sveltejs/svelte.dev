@@ -49,7 +49,10 @@ const MAX_HEIGHT = 2400;
 // the big one in each category, taken at twice the size to stay sharp on high density screens
 const WIDE = new Set(
 	categories.flatMap((category) =>
-		arrange(sites.filter((site) => site.category === category.id && !site.more))
+		arrange(
+			sites.filter((site) => site.category === category.id && !site.more),
+			(site) => site.clip !== undefined
+		)
 			.filter((tile) => tile.size === 'big')
 			.map((tile) => tile.site.id)
 	)
@@ -104,7 +107,13 @@ fs.mkdirSync(SCREENSHOTS, { recursive: true });
 fs.mkdirSync(CLIPS, { recursive: true });
 
 const blocker = await PlaywrightBlocker.fromLists(fetch, FILTER_LISTS);
-const browser = await chromium.launch({ headless: !values.headed });
+// clips in chrome where it is installed, since playwright's own chromium can't play the h.264 video
+// many sites use, so their videos stay still
+const browser = await (values.clip
+	? chromium
+			.launch({ headless: !values.headed, channel: 'chrome' })
+			.catch(() => chromium.launch({ headless: !values.headed }))
+	: chromium.launch({ headless: !values.headed }));
 const problems: string[] = [];
 
 let next = 0;
@@ -169,10 +178,10 @@ async function visit(browser: Browser, site: Site) {
 				: `no Svelte found (HTTP ${response?.status()}) — it may block headless browsers (try --headed), or no longer use Svelte`;
 		}
 
+		const hidden = `${[COOKIE_BANNERS, ...(site.screenshot?.hide ?? [])].join(', ')} { display: none !important; }`;
+
 		if (values.clip && site.clip) {
-			await page.addStyleTag({
-				content: `${[COOKIE_BANNERS, ...(site.screenshot?.hide ?? [])].join(', ')} { display: none !important; }`
-			});
+			await page.addStyleTag({ content: hidden });
 			await page.evaluate(hide_popups);
 			if (values.headed && process.stdin.isTTY) {
 				await prompt(
@@ -184,7 +193,8 @@ async function visit(browser: Browser, site: Site) {
 				site.id,
 				site.clip === true ? {} : site.clip,
 				WIDE.has(site.id),
-				site.screenshot?.from_clip ?? false
+				site.screenshot?.from_clip ?? false,
+				hidden
 			);
 		} else if (!values.check && !site.screenshot?.from_clip) {
 			await page.addStyleTag({
@@ -484,6 +494,21 @@ function pause_videos(seconds: number) {
 	return Promise.all(seeking).then(() => {});
 }
 
+/** the height of the frames the browser sends of the page, which can be less than the window's */
+async function frame_height(page: Page) {
+	const cdp = await page.context().newCDPSession(page);
+	const frame = new Promise<number>((resolve) => {
+		cdp.once('Page.screencastFrame', ({ metadata }) => resolve(metadata.deviceHeight));
+	});
+	await cdp.send('Page.startScreencast', { format: 'jpeg', quality: 10 });
+	// something has to change for a frame to be sent
+	await page.evaluate(() => document.documentElement.style.setProperty('--showcase-frame', '1'));
+	const height = await Promise.race([frame, page.waitForTimeout(3000).then(() => Infinity)]);
+	await cdp.send('Page.stopScreencast');
+	await cdp.detach();
+	return height;
+}
+
 /**
  * records the window for a few seconds, moving the pointer across anything named in turn, and saves
  * it as h.264, which every browser plays, muted and the size of the card it plays in
@@ -491,21 +516,40 @@ function pause_videos(seconds: number) {
 async function record(
 	page: Page,
 	id: string,
-	{ scroll, hover, travel, length = 8 }: Exclude<Site['clip'], true | undefined>,
+	{
+		scroll,
+		top,
+		hover,
+		travel,
+		wander,
+		intro,
+		length = 8
+	}: Exclude<Site['clip'], true | undefined>,
 	wide: boolean,
-	still: boolean
+	still: boolean,
+	hidden: string
 ) {
-	// a window the usual shape for all, since a taller one stretches a page whose top fills the
-	// window and pushes what is at its foot out of the crop, and sharper for the large ones
-	const size = VIEWPORT;
-	const output = wide ? { width: 1440, height: 900 } : { width: 960, height: 600 };
+	// the shape of the tile it plays in: 6:5 for the large ones, which are taller than 16:10 to fill
+	// the rows beside them, and sharper, and the usual window for the rest
+	const size = wide ? { width: 1440, height: 1200 } : VIEWPORT;
+	const output = wide ? size : { width: 960, height: 600 };
 	await page.setViewportSize(size);
 
+	// headless chrome sends frames a little shorter than the viewport, missing its foot, so the
+	// clip would be cut off and stretched to make up for it. the viewport as much taller instead,
+	// so the frames are the size of the clip
+	const short = size.height - (await frame_height(page));
+	if (short > 0 && Number.isFinite(short)) {
+		await page.setViewportSize({ width: size.width, height: size.height + short });
+	}
+
 	if (scroll) {
-		await page.locator(scroll).first().scrollIntoViewIfNeeded();
-		await page.evaluate((selector) => {
-			document.querySelector(selector)?.scrollIntoView({ block: 'center' });
-		}, scroll);
+		const target = page.locator(scroll).first();
+		await target.scrollIntoViewIfNeeded();
+		await target.evaluate((node, top) => {
+			if (top === undefined) node.scrollIntoView({ block: 'center' });
+			else scrollBy({ top: node.getBoundingClientRect().top - top, behavior: 'instant' });
+		}, top);
 	}
 
 	// for videos to start and anything the page plays as it loads to settle
@@ -524,13 +568,25 @@ async function record(
 
 	await cdp.send('Page.startScreencast', { format: 'jpeg', quality: 92, everyNthFrame: 1 });
 
+	// loaded again while recording, for one that only plays as it loads, from once there is something
+	// to show, with what was hidden before hidden again
+	let first = 0;
+	if (intro) {
+		await page.reload({ waitUntil: 'domcontentloaded' });
+		await page.addStyleTag({ content: hidden });
+		await page.evaluate(hide_popups).catch(() => {});
+		first = times.length;
+	}
+
 	const targets = [];
 	for (const target of hover ? await page.locator(hover).all() : []) {
 		if (await target.isVisible()) targets.push(target);
 	}
 
 	if (travel) {
-		await glide(page, length, travel === true ? undefined : travel);
+		await glide(page, length, travel === true ? undefined : travel, wander);
+	} else if (wander) {
+		await circle(page, Date.now() + length * 1000);
 	} else if (targets.length > 0) {
 		const dwell = (length * 1000) / targets.length;
 		for (const target of targets) {
@@ -547,35 +603,37 @@ async function record(
 	await cdp.send('Page.stopScreencast');
 	await cdp.detach();
 
-	if (times.length < 2) throw new Error('no frames recorded');
+	if (times.length - first < 2) throw new Error('no frames recorded');
 
-	// as its screenshot, for a site that differs on every visit
+	const frame = (i: number) => path.join(frames, `${i}.jpg`);
+	const last = times.length - 1;
+
+	// as its screenshot, for a site that differs on every visit, or once it has played for one that
+	// plays as it loads
 	if (still) {
 		for (const other of screenshot_files(id)) fs.rmSync(other, { force: true });
-		fs.copyFileSync(path.join(frames, '0.jpg'), path.join(SCREENSHOTS, `${id}.jpg`));
+		fs.copyFileSync(frame(intro ? last : first), path.join(SCREENSHOTS, `${id}.jpg`));
 	}
 
 	// each frame shown until the next, since the browser only sends one when something changes
 	const list = times
+		.slice(first)
 		.map((time, i) => {
-			const until = times[i + 1] ?? times[0] + length;
-			return `file '${path.join(frames, `${i}.jpg`)}'\nduration ${Math.max(until - time, 0.001)}`;
+			const until = times[first + i + 1] ?? times[first] + length;
+			return `file '${frame(first + i)}'\nduration ${Math.max(until - time, 0.001)}`;
 		})
 		.join('\n');
-	fs.writeFileSync(
-		path.join(frames, 'list.txt'),
-		`${list}\nfile '${path.join(frames, `${times.length - 1}.jpg`)}'\n`
-	);
+	fs.writeFileSync(path.join(frames, 'list.txt'), `${list}\nfile '${frame(last)}'\n`);
 
 	// fades back into the first frame at the end, so it loops without a jump
-	const total = Math.max(times[times.length - 1] - times[0] + 0.001, length);
+	const total = Math.max(times[last] - times[first] + 0.001, length);
 	const fade = 0.5;
 	const fit = `fps=30,scale=${output.width}:${output.height}:flags=lanczos,setsar=1,format=yuv420p,settb=AVTB`;
 
 	execFileSync('ffmpeg', [
 		...['-y', '-loglevel', 'error'],
 		...['-f', 'concat', '-safe', '0', '-i', path.join(frames, 'list.txt')],
-		...['-loop', '1', '-t', String(fade + 0.1), '-i', path.join(frames, '0.jpg')],
+		...['-loop', '1', '-t', String(fade + 0.1), '-i', frame(first)],
 		...[
 			'-filter_complex',
 			`[0:v]${fit}[clip];[1:v]${fit}[start];[clip][start]xfade=transition=fade:duration=${fade}:offset=${total - fade},format=yuv420p`
@@ -592,15 +650,38 @@ async function record(
  * scrolling or play things as they scroll do so, holding at the top long enough at both ends that
  * the clip loops from where it started
  */
-async function glide(page: Page, length: number, stop?: string) {
-	const distance = await page.evaluate((stop) => {
+/**
+ * moves the pointer round the middle of the window in a slow figure of eight until the given time,
+ * for pages that follow the pointer
+ */
+async function circle(page: Page, end: number) {
+	const { width, height } = page.viewportSize() ?? VIEWPORT;
+	const start = Date.now();
+	while (Date.now() < end) {
+		const t = ((Date.now() - start) / 4000) * Math.PI * 2;
+		await page.mouse.move(
+			width / 2 + Math.sin(t) * width * 0.3,
+			height / 2 + Math.sin(t * 2) * height * 0.2
+		);
+		await page.waitForTimeout(16);
+	}
+}
+
+async function glide(page: Page, length: number, stop?: string, wander = false) {
+	// by playwright's selectors, so one can name a section by its text with :has-text()
+	const tops = stop
+		? await Promise.all(
+				(await page.locator(stop).all()).map((element) =>
+					element.evaluate((node) => node.getBoundingClientRect().top + scrollY)
+				)
+			)
+		: [];
+
+	const distance = await page.evaluate((tops) => {
 		const most = document.documentElement.scrollHeight - innerHeight;
 
-		if (stop) {
-			for (const element of document.querySelectorAll(stop)) {
-				const at = element.getBoundingClientRect().top + scrollY;
-				if (at > innerHeight * 0.4) return Math.min(at, most);
-			}
+		for (const at of tops) {
+			if (at > innerHeight * 0.4) return Math.min(at, most);
 		}
 
 		// the top of a section about a screen down, so it stops on a whole one rather than partway
@@ -618,10 +699,12 @@ async function glide(page: Page, length: number, stop?: string) {
 		}
 
 		return best.top;
-	}, stop);
+	}, tops);
 	const end = Date.now() + length * 1000;
 	const hold = length * 150;
 	const move = length * 300;
+
+	const pointing = wander ? circle(page, end) : Promise.resolve();
 
 	// by the clock rather than in steps, since each turn of the wheel takes a while to send
 	async function wheel(direction: number) {
@@ -658,6 +741,7 @@ async function glide(page: Page, length: number, stop?: string) {
 		)
 		.catch(() => {});
 	await page.waitForTimeout(Math.max(end - Date.now(), hold));
+	await pointing;
 }
 
 /** checks every second for two minutes, including after redirects */
