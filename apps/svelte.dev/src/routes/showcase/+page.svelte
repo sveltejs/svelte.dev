@@ -1,8 +1,3 @@
-<script module lang="ts">
-	/** set once the page has shown, so the field flies in on the first visit and not on coming back */
-	let arrived = false;
-</script>
-
 <script lang="ts">
 	import type { Picture } from '@sveltejs/enhanced-img';
 	import { Icon } from '@sveltejs/site-kit/components';
@@ -86,46 +81,6 @@
 		).map(([path, src]) => [path.replace(/^.*\/|(@2x)?\.\w+$/g, ''), `url(${src})`])
 	);
 
-	interface Placement {
-		/** percent across */
-		x: number;
-		/** percent down */
-		y: number;
-		/** pixels toward the viewer */
-		z: number;
-		/** degrees turned about the vertical axis */
-		r: number;
-	}
-
-	// none is first in its category, since those are shown larger below, and only those with a
-	// small placement show on small screens, in an arc either side of the one in front
-	const field = place([
-		{ id: 'spotify', wide: { x: 10, y: 20, z: -100, r: 24 }, small: { x: 50, y: 50, z: 0, r: 0 } },
-		{
-			id: 'apple-tv',
-			wide: { x: 31, y: 10, z: -450, r: 10 },
-			small: { x: 82, y: 50, z: -180, r: -28 }
-		},
-		{ id: 'nrk', wide: { x: 58, y: 7, z: -700, r: -4 }, small: { x: -6, y: 50, z: -420, r: 38 } },
-		{ id: 'bugatti', wide: { x: 84, y: 18, z: -200, r: -22 } },
-		{
-			id: 'city-of-sydney',
-			wide: { x: 4, y: 56, z: 150, r: 30 },
-			small: { x: 18, y: 50, z: -180, r: 28 }
-		},
-		{
-			id: 'ons-census-maps',
-			wide: { x: 96, y: 54, z: 120, r: -30 },
-			small: { x: 106, y: 50, z: -420, r: -38 }
-		},
-		{ id: 'starbucks', wide: { x: 15, y: 86, z: -300, r: 18 } },
-		{ id: 'michelin', wide: { x: 39, y: 95, z: -600, r: 6 } },
-		{ id: 'the-pudding', wide: { x: 63, y: 93, z: -500, r: -6 } },
-		{ id: 'square', wide: { x: 86, y: 86, z: -150, r: -20 } }
-	]);
-
-	const arrive = !arrived;
-
 	/** the smaller sites picked for their design, shown after the categories */
 	const extras = sites.filter((site) => site.more);
 
@@ -168,16 +123,7 @@
 		};
 	});
 
-	/** trying the hero as a reel of clips, with ?hero=reel */
-	let reel = $state(false);
-	/** trying the reel in the colours of the site's theme rather than always dark, with ?wash=theme or ?seam=4 */
-	let themed = $state(false);
-	/** trying ways for the page to run on from the hero, with ?seam=1 or 2 (4 is ?wash=theme) */
-	let seam = $state('');
-
 	// widths of the screenshots as laid out below
-	const card_sizes = '(min-width: 1024px) 17vw, (min-width: 740px) 400px, 54vw';
-
 	const sizes: Record<Tile['size'], string> = {
 		big: '(min-width: 1440px) 680px, (min-width: 640px) 48vw, 92vw',
 		small: '(min-width: 1440px) 330px, (min-width: 640px) 24vw, 46vw'
@@ -188,13 +134,6 @@
 	/** shows a tick on the copy button for a moment after copying */
 	let copied = $state(false);
 	let uncopy: ReturnType<typeof setTimeout> | undefined;
-
-	function place(cards: Array<{ id: string; wide: Placement; small?: Placement }>) {
-		return cards.flatMap(({ id, wide, small }) => {
-			const site = sites.find((site) => site.id === id && pictures[id]);
-			return site ? [{ site, wide, small }] : [];
-		});
-	}
 
 	/** fades in the screenshots that have not loaded or started to show when the page starts */
 	function fade_in(node: HTMLElement) {
@@ -236,8 +175,8 @@
 	 */
 	function lengthen(event: PointerEvent, id: string) {
 		const target = event.currentTarget as HTMLElement;
-		const scope = target.closest<HTMLElement>('.card, .site');
-		const host = scope?.querySelector<HTMLElement>('.face, .thumb');
+		const scope = target.closest<HTMLElement>('.site');
+		const host = scope?.querySelector<HTMLElement>('.thumb');
 		const img = host?.querySelector('img');
 
 		if (
@@ -413,7 +352,7 @@
 							if (previous && previous !== host) release(previous);
 							clearTimeout(waiting);
 							// not while a mouse rests on another, which is then the only one that moves
-							if (autoplay && !document.querySelector('.card:hover, .site:hover')) {
+							if (autoplay && !document.querySelector('.site:hover')) {
 								waiting = setTimeout(() => play(host, id), 300);
 							}
 						} else {
@@ -480,7 +419,7 @@
 	/** plays the clip in the middle of the window again, once nothing else is pointed at */
 	function resume() {
 		requestAnimationFrame(() => {
-			if (!centred || !autoplay || document.querySelector('.card:hover, .site:hover')) return;
+			if (!centred || !autoplay || document.querySelector('.site:hover')) return;
 			play(centred, band_ids.get(centred)!);
 		});
 	}
@@ -538,7 +477,7 @@
 	/** moves the screenshot you clicked onto the same one in the list as the page jumps there */
 	function morph(event: MouseEvent, id: string) {
 		const link = event.currentTarget as HTMLAnchorElement;
-		const source = link.querySelector<HTMLElement>('.face, .sheet');
+		const source = link.querySelector<HTMLElement>('.sheet');
 		const destination = document.getElementById(id)?.querySelector<HTMLElement>('.thumb');
 
 		if (
@@ -800,7 +739,7 @@
 {/snippet}
 
 <div
-	class={['showcase', seam && `seam-${seam}`]}
+	class="showcase"
 	{@attach () => {
 		try {
 			if (localStorage.getItem('showcase:paused')) autoplay = false;
@@ -829,61 +768,13 @@
 		</button>
 	{/if}
 
-	<div
-		class={['hero', { arrive, reeling: reel, themed }]}
-		{@attach () => {
-			arrived = true;
-			const params = new URLSearchParams(location.search);
-			reel = params.get('hero') === 'reel';
-			themed = params.get('wash') === 'theme' || params.get('seam') === '4';
-			seam = reel ? (params.get('seam') ?? '') : '';
-		}}
-	>
+	<div class="hero">
 		<div class="intro">
 			<h1>Built with <span>Svelte</span></h1>
 			<p>From newsrooms to public services, popular brands and leading industries</p>
 		</div>
 
-		{#if reel}
-			<Reel {reels} {autoplay} />
-		{:else}
-			<div class="field">
-				<div class="space">
-					{#each field as { site, wide, small } (site.id)}
-						<a
-							class={['card', { wide: !small }]}
-							href="#{site.id}"
-							style:--x={wide.x}
-							style:--y={wide.y}
-							style:--z={wide.z}
-							style:--r={wide.r}
-							style:--sx={small?.x}
-							style:--sy={small?.y}
-							style:--sz={small?.z}
-							style:--sr={small?.r}
-							style:--position={site.screenshot?.position}
-							style:--placeholder={placeholders[site.id]}
-							onclick={(event) => morph(event, site.id)}
-							onpointerenter={(event) => {
-								prime(site.id);
-								lengthen(event, site.id);
-							}}
-							onfocus={(event) => {
-								prime(site.id);
-							}}
-							{@attach fade_in}
-						>
-							<!-- lifts on hover while the link stays put, so the pointer stays on it -->
-							<span class="face">
-								<!-- lazy where it is hidden on small screens, so phones never load it -->
-								{@render screenshot(site.id, card_sizes, small ? 'eager' : 'lazy', true)}
-							</span>
-							<span class="visually-hidden">{site.name}</span>
-						</a>
-					{/each}
-				</div>
-			</div>
-		{/if}
+		<Reel {reels} {autoplay} />
 	</div>
 
 	<nav class="categories" aria-label="Categories">
@@ -980,239 +871,32 @@
 		}
 	}
 
+	/* the heading over a reel of the sites, filling the window, which runs on past its foot by the
+	   length of its tail, fading out over the top of the page */
 	.hero {
+		--tail: 14rem;
 		position: relative;
-		/* a stacking context of its own, or safari drops frames as a card lifts on hover */
 		isolation: isolate;
-		padding: var(--sk-page-padding-top) 0 0;
-		overflow: clip;
-
-		@media (min-width: 1024px) {
-			display: grid;
-			place-items: center;
-			/* sized by the width alone, so the cards keep their places in any window and nothing
-			   below moves when the banner or the browser bars show, and tall enough that the cards
-			   leave the heading room around it */
-			--hero-height: clamp(76rem, 60vw, 108rem);
-			min-height: var(--hero-height);
-			padding: 0;
-		}
-	}
-
-	/* the heading over a reel of the sites rather than among cards, filling the window */
-	.hero.reeling {
 		display: grid;
 		place-items: center;
 		/* as tall as the clips are for the width, so they show whole, though never so short the
 		   heading and the marks do not fit, nor taller than the screen */
 		height: clamp(48rem, 62.5vw, calc(100svh - var(--sk-nav-height)));
-		min-height: 0;
 		max-height: 108rem;
 		padding: 0 0 8rem;
-
 		background: var(--sk-bg-1);
-
-		/* dark in either theme, so the sites show in their own colours under a dark wash rather than
-		   faded under a pale one, with the heading and everything over it in light colours */
-		&:not(.themed) {
-			color-scheme: dark;
-			--sk-bg-1: hsl(0, 0%, 6%);
-			--sk-bg-3: hsl(0, 0%, 10%);
-			--sk-fg-1: hsl(0, 0%, 98%);
-			--sk-fg-3: hsl(0, 0%, 80%);
-			--sk-fg-accent: hsl(12, 94%, 62%);
-			--sk-border: hsl(0, 0%, 30%);
-		}
-	}
-
-	/* 1: the categories in the dark too, as the hero's contents, so it turns light at the first section */
-	.seam-1 .categories {
-		color-scheme: dark;
-		--sk-bg-1: hsl(0, 0%, 6%);
-		--sk-bg-3: hsl(0, 0%, 10%);
-		--sk-fg-1: hsl(0, 0%, 98%);
-		--sk-fg-3: hsl(0, 0%, 80%);
-		--sk-border: hsl(0, 0%, 22%);
-		max-width: none;
-		padding-top: 0;
-		padding-bottom: 5.6rem;
-		padding-inline: max(
-			var(--sk-page-padding-side),
-			calc((100% - 140rem) / 2 + var(--sk-page-padding-side))
-		);
-		background: var(--sk-bg-1);
-
-		ul {
-			border-top: none;
-		}
-
-		@media (min-width: 1024px) {
-			padding-bottom: 8rem;
-		}
-	}
-
-	/* 2: the page as a sheet slid up over the foot of the hero */
-	.seam-2 .categories {
-		position: relative;
-		z-index: 1;
-		margin-top: -3.2rem;
-		padding-top: 4rem;
-		background: var(--sk-bg-1);
-		border-radius: 1.6rem 1.6rem 0 0;
-		box-shadow: 0 -1.6rem 3.2rem rgb(0 0 0 / 0.25);
-
-		@media (min-width: 1024px) {
-			padding-top: 5.6rem;
-		}
-	}
-
-	.seam-2 .hero.reeling {
-		/* the caption clear of the sheet over it */
-		padding-bottom: 11.2rem;
-
-		:global(.caption) {
-			bottom: 3.2rem;
-		}
-	}
-
-	/* 4: or fading out into the page in either theme, still under a dark wash, with the heading
-	   over it in light colours, and the caption below it in the theme's own */
-	.hero.reeling.themed .intro {
-		--sk-fg-1: hsl(0, 0%, 98%);
-		--sk-fg-2: hsl(0, 0%, 90%);
-		--sk-fg-3: hsl(0, 0%, 80%);
-		--sk-fg-accent: hsl(12, 94%, 62%);
-	}
-
-	/* the clips running on past the foot of the hero, fading out over the top of the page, so the
-	   site showing and its marks stay on them, in light colours like the heading */
-	.hero.reeling.themed {
-		--tail: 14rem;
-		overflow: visible;
 
 		@media (min-width: 1024px) {
 			--tail: 20rem;
 		}
-
-		:global(.stage) {
-			bottom: calc(-1 * var(--tail));
-			background: none;
-		}
-
-		/* dark around the clip where it is fitted rather than cropped, as on phones */
-		:global(.frame) {
-			background: hsl(0, 0%, 10%);
-		}
-
-		/* the wash darker again towards the foot, behind the caption, where the clips can be at their
-		   brightest, and as dark on down to where they fade out, so there is no edge to it */
-		:global(.stage::after) {
-			background: linear-gradient(
-				rgb(0 0 0 / 0.25),
-				rgb(0 0 0 / 0.55) 40%,
-				rgb(0 0 0 / 0.6) calc(100% - var(--tail)),
-				rgb(0 0 0 / 0.6)
-			);
-		}
-
-		/* the blur over the hero as it was, so it is still behind the caption, and that at its foot
-		   running on over the part below it, so the clips are not sharp again where it would end */
-		:global(.haze) {
-			bottom: var(--tail);
-		}
-
-		:global(.haze span:nth-child(n + 4)) {
-			bottom: calc(-1 * var(--tail));
-			mask-image:
-				linear-gradient(transparent var(--from), black calc(var(--from) + 12%)),
-				linear-gradient(black, black);
-			mask-size:
-				100% calc(100% - var(--tail)),
-				100% var(--tail);
-			mask-position: top, bottom;
-			mask-repeat: no-repeat;
-		}
-
-		:global(.caption) {
-			--sk-fg-1: hsl(0, 0%, 98%);
-			--sk-fg-3: hsl(0, 0%, 80%);
-			--sk-border: hsl(0, 0%, 40%);
-			background: none;
-		}
 	}
 
-	/* the page over the end of the fade */
-	.seam-4 .categories {
-		position: relative;
-		z-index: 1;
-		/* clear of all but the faintest of the fade */
-		padding-top: 9.6rem;
-
-		@media (min-width: 1024px) {
-			padding-top: 14rem;
-		}
-
-		/* no rule across the end of the fade */
-		ul {
-			border-top: none;
-		}
-	}
-
-	/* the clips fading out into the page over the lower part of the hero, eased so the fade has no
-	   start or end you can see, rather than in a straight line that stops at an edge */
-	/* on the clips and the wash over them rather than the whole of the stage, since safari leaves
-	   out the blur over anything inside something masked */
-	.hero.reeling.themed :global(.frame),
-	.hero.reeling.themed :global(.stage::after) {
-		/* from the foot of the hero, clear of the caption, to the end of the part below it */
-		--from: calc(100% - var(--tail));
-		--length: var(--tail);
-		mask-image: linear-gradient(
-			rgb(0 0 0 / 1) calc(var(--from) + var(--length) * 0),
-			rgb(0 0 0 / 0.987) calc(var(--from) + var(--length) * 0.081),
-			rgb(0 0 0 / 0.951) calc(var(--from) + var(--length) * 0.146),
-			rgb(0 0 0 / 0.896) calc(var(--from) + var(--length) * 0.196),
-			rgb(0 0 0 / 0.825) calc(var(--from) + var(--length) * 0.236),
-			rgb(0 0 0 / 0.741) calc(var(--from) + var(--length) * 0.271),
-			rgb(0 0 0 / 0.648) calc(var(--from) + var(--length) * 0.304),
-			rgb(0 0 0 / 0.55) calc(var(--from) + var(--length) * 0.338),
-			rgb(0 0 0 / 0.45) calc(var(--from) + var(--length) * 0.375),
-			rgb(0 0 0 / 0.352) calc(var(--from) + var(--length) * 0.419),
-			rgb(0 0 0 / 0.259) calc(var(--from) + var(--length) * 0.472),
-			rgb(0 0 0 / 0.175) calc(var(--from) + var(--length) * 0.539),
-			rgb(0 0 0 / 0.104) calc(var(--from) + var(--length) * 0.62),
-			rgb(0 0 0 / 0.049) calc(var(--from) + var(--length) * 0.716),
-			rgb(0 0 0 / 0.013) calc(var(--from) + var(--length) * 0.833),
-			rgb(0 0 0 / 0) calc(var(--from) + var(--length) * 1)
-		);
-	}
-
-	/* in greys but for a band in colour across the middle of the hero, behind the heading, by a
-	   layer of no colour blended over each clip, which unlike a filter safari keeps on a video while
-	   it plays */
-	.hero.reeling.themed :global(.frame::after) {
-		content: '';
-		position: absolute;
-		inset: 0;
-		background: grey;
-		mix-blend-mode: saturation;
-		pointer-events: none;
-		/* softly at its edges */
-		--hero: calc(100% - var(--tail));
-		mask-image: linear-gradient(
-			black calc(var(--hero) * 0.2),
-			transparent calc(var(--hero) * 0.4),
-			transparent calc(var(--hero) * 0.6),
-			black calc(var(--hero) * 0.8)
-		);
-	}
-
-	/* the reel itself blurs behind the heading, so it needs no shadow to read */
-	.hero.reeling .intro {
-		h1,
-		p {
-			filter: none;
-		}
+	/* in light colours in either theme, over the dark wash */
+	.hero .intro {
+		--sk-fg-1: hsl(0, 0%, 98%);
+		--sk-fg-2: hsl(0, 0%, 90%);
+		--sk-fg-3: hsl(0, 0%, 80%);
+		--sk-fg-accent: hsl(12, 94%, 62%);
 	}
 
 	.intro {
@@ -1220,12 +904,6 @@
 		z-index: 1;
 		padding: 0 var(--sk-page-padding-side);
 		text-align: center;
-
-		/* keeps the text clear of the screenshots, like the headings on the home page */
-		h1,
-		p {
-			filter: drop-shadow(0 0 1rem var(--sk-bg-1)) drop-shadow(0 0 1rem var(--sk-bg-1));
-		}
 	}
 
 	/* the opening lines and the closing ones */
@@ -1250,112 +928,8 @@
 		text-wrap: balance;
 	}
 
-	.field {
-		position: relative;
-		height: clamp(16rem, 40vw, 34rem);
-		margin-top: 2.4rem;
-		perspective: 100rem;
-		pointer-events: none;
-
-		@media (min-width: 1024px) {
-			position: absolute;
-			inset: 0;
-			height: auto;
-			margin: 0;
-			perspective: 120rem;
-		}
-	}
-
-	.space {
-		position: absolute;
-		inset: 0;
-		transform-style: preserve-3d;
-	}
-
-	.card {
-		--cx: var(--sx);
-		--cy: var(--sy);
-		--cz: var(--sz);
-		--cr: var(--sr);
-
-		position: absolute;
-		left: calc(var(--cx) * 1%);
-		top: calc(var(--cy) * 1%);
-		width: clamp(18rem, 54vw, 40rem);
-		aspect-ratio: 16 / 10;
-		transform: translate(-50%, -50%) translateZ(calc(var(--cz) * 1px))
-			rotateY(calc(var(--cr) * 1deg));
-		transform-style: preserve-3d;
-		pointer-events: auto;
-
-		.arrive & {
-			animation: arrive 1.1s var(--quint-out) backwards;
-			/* nearest first, so the field fills in from the front */
-			animation-delay: calc((150 - var(--cz)) * 0.5ms);
-
-			@media (prefers-reduced-motion: reduce) {
-				animation: fade 0.4s ease backwards;
-			}
-		}
-
-		&.wide {
-			display: none;
-		}
-
-		@media (min-width: 1024px) {
-			--cx: var(--x);
-			--cy: var(--y);
-			--cz: var(--z);
-			--cr: var(--r);
-
-			/* smaller in narrower windows, where the heading takes up more of the width */
-			width: clamp(22rem, 17vw, 28rem);
-
-			&.wide {
-				display: block;
-			}
-		}
-	}
-
 	.site {
 		position: relative;
-	}
-
-	.face {
-		position: absolute;
-		inset: 0;
-		overflow: hidden;
-		border-radius: var(--sk-border-radius);
-		/* the tiny screenshot, scaled up and so blurred, until the screenshot fades in over it */
-		background: var(--placeholder, none) var(--position, left top) / cover no-repeat var(--sk-bg-3);
-		box-shadow: 0.2rem 0.4rem 1.6rem rgb(0 0 0 / 0.2);
-
-		/* further back is fainter, like distance, where the cards are spread out */
-		@media (min-width: 1024px) {
-			opacity: clamp(0.4, 1 + var(--cz) / 1600, 1);
-		}
-
-		@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
-			transition:
-				translate 0.3s var(--quint-out),
-				opacity 0.3s ease;
-
-			.card:hover & {
-				translate: 0 0 6rem;
-				opacity: 1;
-			}
-		}
-	}
-
-	/* the field drifts toward you as the page scrolls past it */
-	@media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
-		@supports (animation-timeline: scroll()) {
-			.space {
-				animation: dolly linear both;
-				animation-timeline: scroll(root);
-				animation-range: 0 100vh;
-			}
-		}
 	}
 
 	/* the page jumps at once under the screenshot travelling to its place in the list */
@@ -1372,35 +946,18 @@
 		mix-blend-mode: normal;
 	}
 
-	@keyframes arrive {
-		from {
-			opacity: 0;
-			translate: 0 0 -90rem;
-		}
-	}
-
-	/* little enough that no card grows past the bottom of the hero */
-	@keyframes dolly {
-		to {
-			translate: 0 0 12rem;
-		}
-	}
-
-	@keyframes fade {
-		from {
-			opacity: 0;
-		}
-	}
-
 	/* the categories like the contents of a magazine, each with the first few sites in it and the
 	   screenshot of the first, as wide as the sites below so their edges line up */
+	/* over the end of the fade, clear of all but the faintest of it */
 	.categories {
+		position: relative;
+		z-index: 1;
 		max-width: 140rem;
 		margin: 0 auto;
-		padding: 5.6rem var(--sk-page-padding-side) 0;
+		padding: 9.6rem var(--sk-page-padding-side) 0;
 
 		@media (min-width: 1024px) {
-			padding-top: 8rem;
+			padding-top: 14rem;
 		}
 
 		ul {
@@ -1416,7 +973,6 @@
 			margin: 0;
 			padding: 0;
 			list-style: none;
-			border-top: 1px solid var(--sk-border);
 
 			@media (min-width: 740px) {
 				grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1755,7 +1311,7 @@
 	}
 
 	/* in a little slower than it goes */
-	:is(.face, .thumb):global([data-playing]) > .clip {
+	.thumb:global([data-playing]) > .clip {
 		opacity: 1;
 		transition-duration: 0.2s;
 	}
@@ -1852,7 +1408,7 @@
 
 	/* the whole screenshot at its full height once it loads in place of the top of it, for the
 	   glance down it on hover */
-	:is(.thumb, .face) .slide > .image:global([data-long='loaded']) {
+	.thumb .slide > .image:global([data-long='loaded']) {
 		height: auto;
 	}
 

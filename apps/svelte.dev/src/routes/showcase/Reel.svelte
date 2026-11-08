@@ -124,37 +124,58 @@
 	}
 
 	/* each site in turn, dimmed a little so it reads as the background of this page rather than the
-	   site itself */
+	   site itself, running on past the foot of the hero by the length of its tail */
 	.stage {
 		position: absolute;
-		inset: 0;
+		inset: 0 0 calc(-1 * var(--tail, 0px));
 		overflow: hidden;
-		background: var(--sk-bg-3);
 		container-type: size;
 		/* nothing in it drawn outside it, so scrolling past redraws only what shows */
 		contain: strict;
 
+		/* stronger behind the heading, so it reads over the lightest site, and again towards the foot,
+		   behind the caption, where the clips can be at their brightest, and as dark on down to where
+		   they fade out, so there is no edge to it */
 		&::after {
 			content: '';
 			position: absolute;
 			inset: 0;
-			/* in the wash of the hero, black unless it says otherwise, stronger behind the heading, so it reads over the lightest site, smoothly so there is no
-			   edge to it */
 			background: linear-gradient(
-				rgb(var(--wash, 0 0 0) / 0.25),
-				rgb(var(--wash, 0 0 0) / 0.55) 45%,
-				rgb(var(--wash, 0 0 0) / 0.25)
+				rgb(0 0 0 / 0.25),
+				rgb(0 0 0 / 0.55) 40%,
+				rgb(0 0 0 / 0.6) calc(100% - var(--tail, 0px)),
+				rgb(0 0 0 / 0.6)
 			);
 			pointer-events: none;
-
-			@media (hover: none), (max-width: 1023px) {
-				background: linear-gradient(
-					rgb(var(--wash, 0 0 0) / 0.35),
-					rgb(var(--wash, 0 0 0) / 0.7) 45%,
-					rgb(var(--wash, 0 0 0) / 0.45)
-				);
-			}
 		}
+	}
+
+	/* the clips fading out into the page over the tail, eased so the fade has no start or end you can
+	   see, rather than in a straight line that stops at an edge. on the clips and the wash over them
+	   rather than the whole of the stage, since safari leaves out the blur over anything inside
+	   something masked */
+	.frame,
+	.stage::after {
+		--from: calc(100% - var(--tail, 0px));
+		--length: var(--tail, 0px);
+		mask-image: linear-gradient(
+			rgb(0 0 0 / 1) calc(var(--from) + var(--length) * 0),
+			rgb(0 0 0 / 0.987) calc(var(--from) + var(--length) * 0.081),
+			rgb(0 0 0 / 0.951) calc(var(--from) + var(--length) * 0.146),
+			rgb(0 0 0 / 0.896) calc(var(--from) + var(--length) * 0.196),
+			rgb(0 0 0 / 0.825) calc(var(--from) + var(--length) * 0.236),
+			rgb(0 0 0 / 0.741) calc(var(--from) + var(--length) * 0.271),
+			rgb(0 0 0 / 0.648) calc(var(--from) + var(--length) * 0.304),
+			rgb(0 0 0 / 0.55) calc(var(--from) + var(--length) * 0.338),
+			rgb(0 0 0 / 0.45) calc(var(--from) + var(--length) * 0.375),
+			rgb(0 0 0 / 0.352) calc(var(--from) + var(--length) * 0.419),
+			rgb(0 0 0 / 0.259) calc(var(--from) + var(--length) * 0.472),
+			rgb(0 0 0 / 0.175) calc(var(--from) + var(--length) * 0.539),
+			rgb(0 0 0 / 0.104) calc(var(--from) + var(--length) * 0.62),
+			rgb(0 0 0 / 0.049) calc(var(--from) + var(--length) * 0.716),
+			rgb(0 0 0 / 0.013) calc(var(--from) + var(--length) * 0.833),
+			rgb(0 0 0 / 0) calc(var(--from) + var(--length) * 1)
+		);
 	}
 
 	/* blurred in a band across the whole width behind the heading, building up gradually from
@@ -162,7 +183,8 @@
 	   it starts and the sites' own words behind the heading are out of the way */
 	.haze {
 		position: absolute;
-		inset: 0;
+		/* over the hero, so it is still behind the caption */
+		inset: 0 0 var(--tail, 0px);
 		pointer-events: none;
 
 		/* only one layer on phones and tablets, which may struggle to redraw so many over a video
@@ -194,11 +216,27 @@
 				transparent var(--to)
 			);
 		}
+
+		/* and that at its foot running on over the tail, so the clips are not sharp again where it
+		   would end */
+		span:nth-child(n + 4) {
+			bottom: calc(-1 * var(--tail, 0px));
+			mask-image:
+				linear-gradient(transparent var(--from), black calc(var(--from) + 12%)),
+				linear-gradient(black, black);
+			mask-size:
+				100% calc(100% - var(--tail, 0px)),
+				100% var(--tail, 0px);
+			mask-position: top, bottom;
+			mask-repeat: no-repeat;
+		}
 	}
 
 	.frame {
 		position: absolute;
 		inset: 0;
+		/* dark around the clip where it is fitted rather than cropped, as on phones */
+		background: hsl(0, 0%, 10%);
 		opacity: 0;
 		visibility: hidden;
 		/* blurred a little on the way out, so the two read as one changing into the other rather
@@ -214,6 +252,25 @@
 			visibility: visible;
 			filter: none;
 			transition: opacity 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+		}
+
+		/* in greys but for a band in colour across the middle of the hero, behind the heading, by a
+		   layer of no colour blended over the clip, which unlike a filter safari keeps on a video
+		   while it plays, softly at its edges */
+		&::after {
+			--hero: calc(100% - var(--tail, 0px));
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: grey;
+			mix-blend-mode: saturation;
+			pointer-events: none;
+			mask-image: linear-gradient(
+				black calc(var(--hero) * 0.2),
+				transparent calc(var(--hero) * 0.4),
+				transparent calc(var(--hero) * 0.6),
+				black calc(var(--hero) * 0.8)
+			);
 		}
 
 		video {
@@ -255,7 +312,10 @@
 		justify-items: start;
 		gap: 0.4rem;
 		padding: 4.8rem var(--sk-page-padding-side) 1.6rem;
-		background: linear-gradient(transparent, color-mix(in srgb, var(--sk-bg-1) 85%, transparent));
+		/* in light colours in either theme, over the dark wash */
+		--sk-fg-1: hsl(0, 0%, 98%);
+		--sk-fg-3: hsl(0, 0%, 80%);
+		--sk-border: hsl(0, 0%, 40%);
 	}
 
 	/* the one going and the one coming in the same place, as they change over */
