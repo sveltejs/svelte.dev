@@ -1,60 +1,44 @@
 import type { Site } from './sites.ts';
 
-export interface Cell {
+export interface Tile {
 	site: Site;
-	/** in six columns on wide screens */
-	kind: 'beside' | 'large' | 'half' | 'third';
-	/** in two columns on medium screens */
-	medium: 'beside' | 'full' | 'half';
+	/** big is two columns across and two rows down, at 16:10 like the rest */
+	size: 'big' | 'small';
+	/** for a big one, whether it is on the right of the rows it spans */
+	right?: boolean;
 }
 
 /**
- * lays out a category in its order with no gaps, the first large with the next two stacked beside
- * it, and the rest in thirds, or halves where a third would be left on its own, with one left in a
- * row of its own having its text beside the screenshot
+ * lays out sites in their order as a mosaic four columns across, or two on small screens, the
+ * first big and as many more big as it takes for the last row to come out full, spread through
+ * the rest and on alternate sides
  */
 export function arrange(sites: Site[]) {
-	const cells: Cell[] = [];
+	const tiles: Tile[] = sites.map((site) => ({ site, size: 'small' }));
+	if (tiles.length === 0) return tiles;
 
-	const add = (site: Site, kind: Cell['kind']) => {
-		const medium = kind === 'large' ? 'full' : kind === 'beside' ? kind : 'half';
-		cells.push({ site, kind, medium });
-	};
+	// a big one takes four cells and the others one, so each more big one makes up three
+	const big = ((tiles.length - 1) % 4) + 1;
 
-	let rest = sites;
-
-	if (sites.length >= 3) {
-		add(sites[0], 'large');
-		add(sites[1], 'third');
-		add(sites[2], 'third');
-		rest = sites.slice(3);
+	for (let i = 0; i < big; i += 1) {
+		const tile = tiles[Math.floor((i * tiles.length) / big)];
+		tile.size = 'big';
+		tile.right = i % 2 === 1;
 	}
 
-	for (const [i, site] of rest.entries()) {
-		add(
-			site,
-			rest.length === 1 ? 'beside' : i < rest.length - halves(rest.length) ? 'third' : 'half'
-		);
-	}
-
-	// two to a row on medium screens, so one left on its own has its text beside it
-	let count = 0;
-
-	for (const [i, cell] of cells.entries()) {
-		if (cell.medium === 'half') {
-			count += 1;
-		} else {
-			if (count % 2) cells[i - 1].medium = 'beside';
-			count = 0;
-		}
-	}
-
-	if (count % 2) cells[cells.length - 1].medium = 'beside';
-
-	return cells;
+	return tiles;
 }
 
-/** how many in a run of this many go in halves, so no third is left in a row of its own */
-function halves(n: number) {
-	return [0, 4, 2][n % 3];
+/**
+ * puts sites in rows that each fit one more than the last, starting at three, so they get smaller
+ * and more crowded as they go
+ */
+export function congest(sites: Site[]) {
+	const crowd: Array<{ site: Site; across: number }> = [];
+
+	for (let across = 3, start = 0; start < sites.length; start += across, across += 1) {
+		for (const site of sites.slice(start, start + across)) crowd.push({ site, across });
+	}
+
+	return crowd;
 }

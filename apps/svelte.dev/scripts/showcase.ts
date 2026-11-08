@@ -46,13 +46,12 @@ const SIZE = { width: 1440, height: 1440 };
 // as far down a long page as the screenshot goes, for the grid to scroll down on hover
 const MAX_HEIGHT = 2400;
 
-// the ones shown wider than half the page, taken at twice the size to stay sharp on high density
-// screens
+// the big one in each category, taken at twice the size to stay sharp on high density screens
 const WIDE = new Set(
 	categories.flatMap((category) =>
-		arrange(sites.filter((site) => site.category === category.id))
-			.filter((cell) => ['beside', 'large'].includes(cell.kind))
-			.map((cell) => cell.site.id)
+		arrange(sites.filter((site) => site.category === category.id && !site.more))
+			.filter((tile) => tile.size === 'big')
+			.map((tile) => tile.site.id)
 	)
 );
 
@@ -176,7 +175,9 @@ async function visit(browser: Browser, site: Site) {
 			});
 			await page.evaluate(hide_popups);
 			if (values.headed && process.stdin.isTTY) {
-				await prompt(`  ${site.id}: close anything covering the page, then press Enter to record `);
+				await prompt(
+					`  ${site.id}: close anything covering the page and start anything that only plays when clicked, then press Enter to record `
+				);
 			}
 			await record(
 				page,
@@ -270,7 +271,7 @@ function finish_animations() {
  * that fills the window would only gain empty space
  */
 async function extend(page: Page, max: number) {
-	const scrolls = await page.evaluate(() => document.documentElement.scrollHeight);
+	const scrolls = await page.evaluate(mark_scroller);
 	const height = Math.min(scrolls, max);
 
 	// as much as a site says to take, such as one that only changes as it scrolls
@@ -283,10 +284,15 @@ async function extend(page: Page, max: number) {
 		// half a window at a time, so everything that appears as it scrolls into view does
 		const step = VIEWPORT.height / 2;
 		for (let y = step; y < height - VIEWPORT.height + step; y += step) {
-			await page.evaluate((y) => scrollTo(0, y), Math.min(y, height - VIEWPORT.height));
+			await page.evaluate(
+				(y) => ((window as Scrolled).showcase_scroller ?? document.documentElement).scrollTo(0, y),
+				Math.min(y, height - VIEWPORT.height)
+			);
 			await page.waitForTimeout(400);
 		}
-		await page.evaluate(() => scrollTo(0, 0));
+		await page.evaluate(() =>
+			((window as Scrolled).showcase_scroller ?? document.documentElement).scrollTo(0, 0)
+		);
 	} else {
 		await page.setViewportSize(SIZE);
 	}
@@ -295,7 +301,38 @@ async function extend(page: Page, max: number) {
 	await page.waitForTimeout(1000);
 	await page.evaluate(finish_animations).catch(() => {});
 	await page.waitForTimeout(1500);
-	return Math.max(height, SIZE.height);
+
+	// a page longer than is taken ends after the last whole section that fits, rather than partway
+	// through one
+	const cut = scrolls > max ? await page.evaluate(section_end, max) : height;
+	return Math.max(cut, SIZE.height);
+}
+
+/**
+ * runs in the page, finds where to end a page cut short: the lowest line well down the given height
+ * that cuts through the fewest images and words, so it ends between things rather than through one
+ */
+function section_end(max: number) {
+	const scroller = (window as Scrolled).showcase_scroller ?? document.documentElement;
+	if (scroller !== document.documentElement) return max;
+
+	const things = [
+		...document.querySelectorAll('img, video, picture, svg, canvas, h1, h2, h3, h4, p, li, button')
+	]
+		.map((element) => element.getBoundingClientRect())
+		.filter((box) => box.width > 0 && box.height > 0)
+		.map((box) => ({ top: box.top + scrollY, bottom: box.bottom + scrollY }));
+
+	let best = { at: max, cuts: Infinity };
+	for (const { bottom } of things) {
+		const at = Math.ceil(bottom) + 1;
+		if (at > max || at < max * 0.6) continue;
+
+		const cuts = things.filter((thing) => thing.top < at - 1 && thing.bottom > at + 1).length;
+		if (cuts < best.cuts || (cuts === best.cuts && at > best.at)) best = { at, cuts };
+	}
+
+	return best.at;
 }
 
 /**
@@ -309,17 +346,27 @@ async function capture(page: Page, height: number, file: string) {
 		return;
 	}
 
-	const tiles: Array<{ top: number; data: string }> = [];
+	const tiles: Array<{
+		top: number;
+		data: string;
+		clip: { x: number; y: number; width: number; height: number };
+	}> = [];
 
-	for (let y = 0; y < height; y += VIEWPORT.height) {
-		const top = await page.evaluate(
-			(y) => {
-				document.documentElement.style.scrollBehavior = 'auto';
-				scrollTo(0, y);
-				return scrollY;
-			},
-			Math.min(y, height - VIEWPORT.height)
-		);
+	// a window at a time, or as much as shows of what scrolls when that is an app in the page
+	for (let y = 0; ; ) {
+		const { top, box } = await page.evaluate((y) => {
+			const scroller = (window as Scrolled).showcase_scroller ?? document.documentElement;
+			scroller.style.scrollBehavior = 'auto';
+			scroller.scrollTo(0, y);
+			const { x, y: from, width, height } = scroller.getBoundingClientRect();
+			return {
+				top: scroller.scrollTop,
+				box:
+					scroller === document.documentElement
+						? { x: 0, y: 0, width: innerWidth, height: innerHeight }
+						: { x, y: from, width, height }
+			};
+		}, y);
 
 		// lets what scrolling into view set off play out
 		await page.waitForTimeout(1000);
@@ -331,8 +378,15 @@ async function capture(page: Page, height: number, file: string) {
 		await page.evaluate(hide_popups);
 		if (top > 0) await page.evaluate(hide_fixed);
 
-		const buffer = await page.screenshot({ type: 'png' });
-		tiles.push({ top, data: buffer.toString('base64') });
+		// below the first, only the part that scrolls, so what stays put around it shows once
+		const clip = top > 0 ? box : { x: 0, y: 0, width: VIEWPORT.width, height: VIEWPORT.height };
+		const buffer = await page.screenshot({ type: 'png', clip });
+		tiles.push({ top: top + clip.y * (top > 0 ? 1 : 0), data: buffer.toString('base64'), clip });
+
+		const end = height - box.y - box.height;
+		const next = Math.min(top + box.height, end);
+		if (next <= top) break;
+		y = next;
 	}
 
 	// stitched in a page of its own, at the same density as the screenshots
@@ -344,15 +398,41 @@ async function capture(page: Page, height: number, file: string) {
 			`<body style="margin:0">${tiles
 				.map(
 					(tile) =>
-						`<img src="data:image/png;base64,${tile.data}" style="position:absolute;left:0;top:${tile.top}px;width:${VIEWPORT.width}px;height:${VIEWPORT.height}px">`
+						`<img src="data:image/png;base64,${tile.data}" style="position:absolute;left:${tile.clip.x}px;top:${tile.top}px;width:${tile.clip.width}px;height:${tile.clip.height}px">`
 				)
 				.join('')}</body>`,
 			{ waitUntil: 'load' }
 		);
+		// a moment to paint, or chrome sometimes fails to capture it
+		await stitch.waitForTimeout(500);
 		await stitch.screenshot({ path: file, type: 'jpeg', quality: 85 });
 	} finally {
 		await stitch.close();
 	}
+}
+
+type Scrolled = Window & { showcase_scroller?: HTMLElement };
+
+/**
+ * runs in the page, finds what scrolls, which is the page itself unless it stays the height of the
+ * window and an app in it scrolls instead, and returns how tall that is
+ */
+function mark_scroller() {
+	let scroller = document.documentElement;
+
+	if (scroller.scrollHeight <= innerHeight + 50) {
+		for (const element of document.querySelectorAll<HTMLElement>('body *')) {
+			const { overflowY } = getComputedStyle(element);
+			const { width } = element.getBoundingClientRect();
+			if (!/auto|scroll/.test(overflowY) || width < innerWidth * 0.5) continue;
+			if (element.scrollHeight > scroller.scrollHeight) scroller = element;
+		}
+	}
+
+	(window as Scrolled).showcase_scroller = scroller;
+	return scroller === document.documentElement
+		? scroller.scrollHeight
+		: scroller.scrollHeight + scroller.getBoundingClientRect().top;
 }
 
 /**
@@ -411,13 +491,14 @@ function pause_videos(seconds: number) {
 async function record(
 	page: Page,
 	id: string,
-	{ scroll, hover, length = 8 }: Exclude<Site['clip'], true | undefined>,
+	{ scroll, hover, travel, length = 8 }: Exclude<Site['clip'], true | undefined>,
 	wide: boolean,
 	still: boolean
 ) {
-	// the shape of the card, 6:5 for the large ones and 16:10 for the rest
-	const size = wide ? { width: 1440, height: 1200 } : VIEWPORT;
-	const output = wide ? { width: 1200, height: 1000 } : { width: 960, height: 600 };
+	// a window the usual shape for all, since a taller one stretches a page whose top fills the
+	// window and pushes what is at its foot out of the crop, and sharper for the large ones
+	const size = VIEWPORT;
+	const output = wide ? { width: 1440, height: 900 } : { width: 960, height: 600 };
 	await page.setViewportSize(size);
 
 	if (scroll) {
@@ -448,7 +529,9 @@ async function record(
 		if (await target.isVisible()) targets.push(target);
 	}
 
-	if (targets.length > 0) {
+	if (travel) {
+		await glide(page, length, travel === true ? undefined : travel);
+	} else if (targets.length > 0) {
 		const dwell = (length * 1000) / targets.length;
 		for (const target of targets) {
 			const box = await target.boundingBox();
@@ -484,15 +567,97 @@ async function record(
 		`${list}\nfile '${path.join(frames, `${times.length - 1}.jpg`)}'\n`
 	);
 
+	// fades back into the first frame at the end, so it loops without a jump
+	const total = Math.max(times[times.length - 1] - times[0] + 0.001, length);
+	const fade = 0.5;
+	const fit = `fps=30,scale=${output.width}:${output.height}:flags=lanczos,setsar=1,format=yuv420p,settb=AVTB`;
+
 	execFileSync('ffmpeg', [
 		...['-y', '-loglevel', 'error'],
 		...['-f', 'concat', '-safe', '0', '-i', path.join(frames, 'list.txt')],
-		...['-vf', `fps=30,scale=${output.width}:${output.height}:flags=lanczos,format=yuv420p`],
+		...['-loop', '1', '-t', String(fade + 0.1), '-i', path.join(frames, '0.jpg')],
+		...[
+			'-filter_complex',
+			`[0:v]${fit}[clip];[1:v]${fit}[start];[clip][start]xfade=transition=fade:duration=${fade}:offset=${total - fade},format=yuv420p`
+		],
 		...['-an', '-c:v', 'libx264', '-preset', 'slow', '-crf', '28', '-profile:v', 'high'],
 		...['-movflags', '+faststart', path.join(CLIPS, `${id}.mp4`)]
 	]);
 
 	fs.rmSync(frames, { recursive: true, force: true });
+}
+
+/**
+ * scrolls a way down the page and back up with the wheel, so that pages which smooth their own
+ * scrolling or play things as they scroll do so, holding at the top long enough at both ends that
+ * the clip loops from where it started
+ */
+async function glide(page: Page, length: number, stop?: string) {
+	const distance = await page.evaluate((stop) => {
+		const most = document.documentElement.scrollHeight - innerHeight;
+
+		if (stop) {
+			for (const element of document.querySelectorAll(stop)) {
+				const at = element.getBoundingClientRect().top + scrollY;
+				if (at > innerHeight * 0.4) return Math.min(at, most);
+			}
+		}
+
+		// the top of a section about a screen down, so it stops on a whole one rather than partway
+		// through, preferring one that fits in the window and then the nearest to a screen down
+		let best = { top: Math.min(innerHeight, most), score: Infinity };
+		for (const element of document.querySelectorAll('body *')) {
+			const { top, height, width } = element.getBoundingClientRect();
+			const at = top + scrollY;
+			if (width < innerWidth * 0.8 || height < innerHeight * 0.4) continue;
+			if (at < innerHeight * 0.5 || at > innerHeight * 1.6 || at > most) continue;
+			if (getComputedStyle(element).position === 'fixed') continue;
+
+			const score = Math.abs(at - innerHeight) + (height > innerHeight * 1.05 ? innerHeight : 0);
+			if (score < best.score) best = { top: at, score };
+		}
+
+		return best.top;
+	}, stop);
+	const end = Date.now() + length * 1000;
+	const hold = length * 150;
+	const move = length * 300;
+
+	// by the clock rather than in steps, since each turn of the wheel takes a while to send
+	async function wheel(direction: number) {
+		const start = Date.now();
+		let done = 0;
+		while (done < distance) {
+			// eased in and out, so it starts and stops like a hand on the wheel
+			const p = Math.min((Date.now() - start) / move, 1);
+			const to = distance * (p < 0.5 ? 2 * p * p : 1 - (-2 * p + 2) ** 2 / 2);
+			if (to > done) await page.mouse.wheel(0, direction * (to - done));
+			done = to;
+			await page.waitForTimeout(16);
+		}
+	}
+
+	await page.waitForTimeout(hold);
+	await wheel(1);
+	await page.waitForTimeout(hold);
+	await wheel(-1);
+	// in case the wheel fell short of the top, so the clip ends where it began
+	await page.mouse.wheel(0, -distance);
+
+	// and a while at rest there, since pages that smooth their own scrolling lag behind the wheel,
+	// so that it has stopped moving before it fades back into the first frame
+	await page
+		.waitForFunction(
+			() =>
+				new Promise((resolve) => {
+					const from = scrollY;
+					setTimeout(() => resolve(scrollY === 0 && from === 0), 300);
+				}),
+			undefined,
+			{ timeout: 5000, polling: 100 }
+		)
+		.catch(() => {});
+	await page.waitForTimeout(Math.max(end - Date.now(), hold));
 }
 
 /** checks every second for two minutes, including after redirects */

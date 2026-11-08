@@ -6,8 +6,8 @@
 <script lang="ts">
 	import type { Picture } from '@sveltejs/enhanced-img';
 	import { Icon } from '@sveltejs/site-kit/components';
-	import { arrange, type Cell } from './arrange.ts';
-	import { categories, sites } from './sites.ts';
+	import { arrange, congest, type Tile } from './arrange.ts';
+	import { categories, sites, type Site } from './sites.ts';
 
 	const screenshots = {
 		...import.meta.glob<Picture>(['./screenshots/*.{jpg,png,webp}', '!./screenshots/*@2x.*'], {
@@ -121,34 +121,42 @@
 
 	const arrive = !arrived;
 
+	/** the smaller sites picked for their design, shown after the categories */
+	const extras = congest(sites.filter((site) => site.more));
+
+	/** the first word of a name, without a leading the */
+	const brand = (site: Site) =>
+		site.name
+			.toLowerCase()
+			.replace(/^the\s+/, '')
+			.split(/\s/)[0];
+
+	/** whether two sites look to have the same owner, like Hugging Face and HuggingChat */
+	const related = (a: Site, b: Site) =>
+		brand(a).startsWith(brand(b)) || brand(b).startsWith(brand(a));
+
 	const sections = categories.map((category) => {
-		const members = sites.filter((site) => site.category === category.id);
+		const members = sites.filter((site) => site.category === category.id && !site.more);
 
 		return {
 			...category,
-			cells: arrange(members),
-			/** the first few with a screenshot, shown on the link to the category */
-			preview: members.filter((site) => pictures[site.id]).slice(0, 3),
-			/** the first in the category, when the screenshot in front of the preview is its own */
-			lead: members[0] && pictures[members[0].id] ? members[0].id : undefined
+			tiles: arrange(members),
+			/** the first in the category, whose screenshot is shown on the link to it */
+			lead: members[0] && pictures[members[0].id] ? members[0] : undefined,
+			/** the first few, named under the link to it, one from each owner */
+			named: members
+				.filter((site, i) => members.slice(0, i).every((other) => !related(site, other)))
+				.slice(0, 4)
+				.map((site) => site.name)
 		};
 	});
 
 	// widths of the screenshots as laid out below
 	const card_sizes = '(min-width: 1024px) 17vw, (min-width: 740px) 400px, 54vw';
-	const preview_sizes = '(min-width: 1440px) 230px, (min-width: 900px) 16vw, 34vw';
 
-	const wide_sizes: Record<Cell['kind'], string> = {
-		beside: '(min-width: 1440px) 860px, (min-width: 1024px) 59vw',
-		large: '(min-width: 1440px) 860px, (min-width: 1024px) 59vw',
-		half: '(min-width: 1440px) 640px, (min-width: 1024px) 44vw',
-		third: '(min-width: 1440px) 410px, (min-width: 1024px) 28vw'
-	};
-
-	const medium_sizes: Record<Cell['medium'], string> = {
-		beside: '(min-width: 640px) 45vw',
-		full: '(min-width: 640px) 92vw',
-		half: '(min-width: 640px) 45vw'
+	const sizes: Record<Tile['size'], string> = {
+		big: '(min-width: 1440px) 680px, (min-width: 640px) 48vw, 92vw',
+		small: '(min-width: 1440px) 330px, (min-width: 640px) 24vw, 46vw'
 	};
 
 	const command = 'npx sv create';
@@ -219,15 +227,18 @@
 			return;
 		}
 
-		// one with a clip plays it instead, until the pointer leaves the site rather than the link, so
-		// moving between the screenshot and the name does not start it over
+		// the one pointed at is the only one that moves, until the pointer leaves it
+		hush(host);
+		scope.addEventListener('pointerleave', resume, { once: true });
+
+		// one with a clip plays it instead, until the pointer leaves the site
 		if (clips[id]) {
 			const timer = setTimeout(() => play(host, id), 200);
 			scope.addEventListener(
 				'pointerleave',
 				() => {
 					clearTimeout(timer);
-					stop(host);
+					release(host);
 				},
 				{ once: true }
 			);
@@ -244,7 +255,7 @@
 	/** plays the clip over a screenshot, loading it the first time */
 	function play(host: HTMLElement, id: string) {
 		const video = host.querySelector<HTMLVideoElement>('.clip');
-		if (!video || !clips[id]) return;
+		if (!video || !clips[id] || !autoplay) return;
 
 		if (!video.src) video.src = clips[id];
 
@@ -252,17 +263,18 @@
 		video.addEventListener(
 			'playing',
 			() => {
-				if (!video.paused) host.dataset.playing = '';
+				if (video.paused) return;
+				host.dataset.playing = '';
 			},
 			{ once: true }
 		);
 		video.play().catch(() => {});
 	}
 
-	/** whether clips play by themselves on touch screens, which the button over them turns off */
+	/** whether clips play at all, which the button at the start of the page turns off */
 	let autoplay = $state(true);
 
-	/** the screenshot with a clip in the middle of the window on a touch screen, if any */
+	/** the screenshot with a clip in the middle of the window, if any */
 	let centred = $state<HTMLElement>();
 
 	let band: IntersectionObserver | undefined;
@@ -270,31 +282,39 @@
 	const band_ids = new WeakMap<Element, string>();
 
 	/**
-	 * on touch screens, which never hover, plays the clip of the screenshot in the middle of the
-	 * window, where the colour band is, one at a time. a moment late, so scrolling past loads nothing
+	 * plays the clip of the screenshot in the middle of the window, where the colour band is, one at
+	 * a time. a moment late, so scrolling past loads nothing
 	 */
 	function in_band(id: string) {
 		return (node: HTMLElement) => {
 			band ??= new IntersectionObserver(
 				(entries) => {
-					// checked each time, since a tablet can gain a mouse
-					const touch =
-						matchMedia('(hover: none) and (prefers-reduced-motion: no-preference)').matches &&
+					const moving =
+						matchMedia('(prefers-reduced-motion: no-preference)').matches &&
 						!(navigator as Navigator & { connection?: { saveData?: boolean } }).connection
 							?.saveData;
 
 					for (const entry of entries) {
 						const host = entry.target as HTMLElement;
+						const id = band_ids.get(host)!;
 
-						if (entry.isIntersecting && touch) {
-							if (centred && centred !== host) stop(centred);
+						if (entry.isIntersecting) {
+							if (!moving) continue;
+
+							const previous = centred;
 							centred = host;
+							if (previous && previous !== host) release(previous);
 							clearTimeout(waiting);
-							if (autoplay) waiting = setTimeout(() => play(host, band_ids.get(host)!), 300);
-						} else if (host === centred) {
+							// not while a mouse rests on another, which is then the only one that moves
+							if (autoplay && !document.querySelector('.card:hover, .site:hover')) {
+								waiting = setTimeout(() => play(host, id), 300);
+							}
+						} else {
+							if (host !== centred) continue;
+
 							clearTimeout(waiting);
-							stop(host);
 							centred = undefined;
+							release(host);
 						}
 					}
 				},
@@ -313,10 +333,49 @@
 
 	function toggle_autoplay() {
 		autoplay = !autoplay;
-		if (!centred) return;
 
-		if (autoplay) play(centred, band_ids.get(centred)!);
-		else stop(centred);
+		// remembered, so it stays paused on the next visit
+		try {
+			if (autoplay) localStorage.removeItem('showcase:paused');
+			else localStorage.setItem('showcase:paused', '1');
+		} catch {}
+
+		if (!autoplay) {
+			for (const host of document.querySelectorAll<HTMLElement>('[data-playing]')) stop(host);
+		} else if (centred) {
+			play(centred, band_ids.get(centred)!);
+		}
+	}
+
+	/** plays the clip of a site as the keyboard reaches it */
+	function focus_clip(host: HTMLElement, id: string) {
+		if (matchMedia('(prefers-reduced-motion: no-preference)').matches) play(host, id);
+	}
+
+	/** stops a clip once pointed away from or left, unless it is the one in the middle */
+	function release(host: HTMLElement) {
+		if (host !== centred && !host.matches(':hover') && !host.closest(':focus')) stop(host);
+	}
+
+	/** the screenshot in a link */
+	function thumb_of(event: FocusEvent) {
+		return (event.currentTarget as HTMLElement).querySelector<HTMLElement>('.thumb')!;
+	}
+
+	/** stops every clip but the one given, such as the one a mouse is resting on */
+	function hush(host: HTMLElement) {
+		clearTimeout(waiting);
+		for (const other of document.querySelectorAll<HTMLElement>('[data-playing]')) {
+			if (other !== host) stop(other);
+		}
+	}
+
+	/** plays the clip in the middle of the window again, once nothing else is pointed at */
+	function resume() {
+		requestAnimationFrame(() => {
+			if (!centred || !autoplay || document.querySelector('.card:hover, .site:hover')) return;
+			play(centred, band_ids.get(centred)!);
+		});
 	}
 
 	function stop(host: HTMLElement) {
@@ -351,6 +410,13 @@
 			.decode()
 			.catch(() => {})
 			.then(() => {
+				// as long as it takes to read down it, for a long one as much as a short one
+				const below = (picture.img.h / picture.img.w) * 1440 - 900;
+				img.parentElement?.style.setProperty(
+					'--glance',
+					`${Math.min(Math.max((below / 1500) * 3, 2), 8)}s`
+				);
+
 				img.addEventListener('load', () => (img.dataset.long = 'loaded'), { once: true });
 
 				for (const source of sources) {
@@ -616,7 +682,72 @@
 	{/if}
 {/snippet}
 
-<div class="showcase">
+{#snippet tile(
+	site: Site,
+	size: Tile['size'],
+	sizes: string,
+	{ text = true, right = false, still = false, style = '' } = {}
+)}
+	<li
+		class={['site', size, { right }]}
+		id={site.id}
+		{style}
+		style:--position={site.screenshot?.position}
+		style:--placeholder={placeholders[site.id]}
+	>
+		<a
+			class="tile"
+			href={site.url}
+			onpointerenter={(event) => (!still || clips[site.id]) && lengthen(event, site.id)}
+			onfocus={(event) => clips[site.id] && focus_clip(thumb_of(event), site.id)}
+			onblur={(event) => clips[site.id] && release(thumb_of(event))}
+			{@attach fade_in}
+		>
+			<span class="glow" aria-hidden="true"></span>
+			<span class="thumb" {@attach clips[site.id] ? in_band(site.id) : undefined}>
+				{#if pictures[site.id]}
+					{@render screenshot(site.id, sizes, 'lazy', true)}
+				{/if}
+
+				{#if !text}
+					<!-- over the screenshot, shown as you point at, focus or tap it -->
+					<span class="label">{site.name}</span>
+				{/if}
+			</span>
+
+			{#if text}
+				<span class="text">
+					<span class="name">{site.name}</span>
+					<span class="description" lang={site.lang}>{site.description}</span>
+				</span>
+			{/if}
+		</a>
+	</li>
+{/snippet}
+
+<div
+	class="showcase"
+	{@attach () => {
+		try {
+			if (localStorage.getItem('showcase:paused')) autoplay = false;
+		} catch {}
+	}}
+>
+	<!-- first, so the keyboard reaches it before anything that moves, and always there, so clips
+	     can be stopped before they start -->
+	{#if Object.keys(clips).length > 0}
+		<button class="autoplay" onclick={toggle_autoplay}>
+			<svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+				{#if autoplay}
+					<path d="M4 2.5h3v11H4zM9 2.5h3v11H9z" />
+				{:else}
+					<path d="M4 2.2v11.6L13.5 8z" />
+				{/if}
+			</svg>
+			{autoplay ? 'Pause videos' : 'Play videos'}
+		</button>
+	{/if}
+
 	<div
 		class={['hero', { arrive }]}
 		{@attach () => {
@@ -674,24 +805,24 @@
 				<li>
 					<a
 						href="#{section.id}"
-						onclick={(event) => section.lead && morph(event, section.lead)}
-						onpointerenter={() => section.lead && prime(section.lead)}
-						onfocus={() => section.lead && prime(section.lead)}
+						onclick={(event) => section.lead && morph(event, section.lead.id)}
+						onpointerenter={() => section.lead && prime(section.lead.id)}
+						onfocus={() => section.lead && prime(section.lead.id)}
 						{@attach fade_in}
 					>
-						<span class="preview" aria-hidden="true">
-							{#each section.preview as site (site.id)}
-								<span
-									class="sheet"
-									style:--position={site.screenshot?.position}
-									style:--placeholder={placeholders[site.id]}
-								>
-									{@render screenshot(site.id, preview_sizes, 'lazy')}
-								</span>
-							{/each}
-						</span>
-
 						<span class="title">{section.title}</span>
+						<span class="named">{section.named.join(', ')}</span>
+
+						{#if section.lead}
+							<span
+								class="sheet"
+								aria-hidden="true"
+								style:--position={section.lead.screenshot?.position}
+								style:--placeholder={placeholders[section.lead.id]}
+							>
+								{@render screenshot(section.lead.id, '(min-width: 1024px) 200px, 120px', 'lazy')}
+							</span>
+						{/if}
 					</a>
 				</li>
 			{/each}
@@ -704,53 +835,32 @@
 				<h2 id={section.id}>{section.title}</h2>
 
 				<ul class="sites">
-					{#each section.cells as { site, kind, medium } (site.id)}
-						{@const picture = pictures[site.id]}
-
-						<li
-							class={['site', kind, `medium-${medium}`]}
-							id={site.id}
-							style:--position={site.screenshot?.position}
-							style:--placeholder={placeholders[site.id]}
-						>
-							<!-- for the pointer only, keyboards and screen readers use the link on the name -->
-							<a
-								class="thumb"
-								href={site.url}
-								tabindex="-1"
-								aria-hidden="true"
-								onpointerenter={(event) => lengthen(event, site.id)}
-								{@attach fade_in}
-								{@attach clips[site.id] ? in_band(site.id) : undefined}
-							>
-								{#if picture}
-									{@render screenshot(
-										site.id,
-										`${wide_sizes[kind]}, ${medium_sizes[medium]}, 92vw`,
-										'lazy',
-										true
-									)}
-								{:else}
-									<span class="placeholder">{site.name}</span>
-								{/if}
-							</a>
-
-							<div class="text">
-								<h3>
-									<a href={site.url} onpointerenter={(event) => lengthen(event, site.id)}
-										>{site.name}</a
-									>
-								</h3>
-								<p class="description" lang={site.lang}>{site.description}</p>
-							</div>
-						</li>
+					{#each section.tiles as { site, size, right } (site.id)}
+						{@render tile(site, size, sizes[size], { right })}
 					{/each}
 				</ul>
 			</section>
 		{/each}
 
+		{#if extras.length > 0}
+			<section class="category" aria-labelledby="also">
+				<h2 id="also">And many more</h2>
+
+				<!-- each row fits one more than the last, so they crowd in smaller as they go -->
+				<ul class="crowd">
+					{#each extras as { site, across } (site.id)}
+						{@render tile(site, 'small', sizes.small, {
+							text: false,
+							still: true,
+							style: `--across: ${across}`
+						})}
+					{/each}
+				</ul>
+			</section>
+		{/if}
+
 		<section class="next" aria-labelledby="your-turn">
-			<h2 id="your-turn">It's your turn</h2>
+			<h2 id="your-turn">It’s your turn</h2>
 
 			<p>
 				Use our CLI to create a new project, or try our
@@ -772,20 +882,6 @@
 			</div>
 		</section>
 	</div>
-
-	<!-- the clips on touch screens play by themselves, so there is a way to stop them -->
-	{#if centred}
-		<button class="autoplay" onclick={toggle_autoplay}>
-			<svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
-				{#if autoplay}
-					<path d="M4 2.5h3v11H4zM9 2.5h3v11H9z" />
-				{:else}
-					<path d="M4 2.2v11.6L13.5 8z" />
-				{/if}
-			</svg>
-			{autoplay ? 'Pause videos' : 'Play videos'}
-		</button>
-	{/if}
 </div>
 
 <style>
@@ -927,8 +1023,8 @@
 	/* a soft light in the colours of the screenshot, like the ambient mode on youtube: the tiny copy
 	   shown while it loads, the same shape as the screenshot, spread past its edges and blurred */
 	.card::before,
-	.site::before {
-		--glow: 0.27;
+	.glow {
+		--glow: 0.14;
 
 		content: '';
 		position: absolute;
@@ -942,8 +1038,8 @@
 
 	/* fainter in the dark, where any light shows much more; a pseudo-element can't be the parent of
 	   a nested rule, so this is written out in full */
-	:global(:root.dark) :is(.card, .site)::before {
-		--glow: 0.17;
+	:global(:root.dark) :is(.card::before, .glow) {
+		--glow: 0.09;
 	}
 
 	/* behind the card at rest, so it stays put as the card lifts toward you */
@@ -953,25 +1049,31 @@
 		translate: 0 0.8rem;
 	}
 
+	/* behind the screenshot only, in the same place in the grid of the tile, not its name too */
 	.site {
 		position: relative;
 		isolation: isolate;
+	}
 
-		&::before {
-			inset: 0 0 auto;
-			/* as tall as the screenshot where the card is a column, and in its cell where it is a grid */
-			aspect-ratio: 16 / 10;
-			/* spreads further up and down than across, and falls a little below, like light from a
-			   screen */
-			scale: 1 1.04;
-			translate: 0 0.8rem;
+	/* stronger than behind the cards, since it spreads from the screenshot alone */
+	.glow {
+		--glow: 0.3;
+
+		:global(:root.dark) & {
+			--glow: 0.2;
 		}
+
+		/* with both ends, since one placed absolutely otherwise reaches the far side of the tile */
+		grid-area: 1 / 1 / 2 / 2;
+		inset: 0;
+		scale: 1 1.04;
+		translate: 0 0.8rem;
 	}
 
 	/* with the colour, as you point at or focus a site */
 	@media all and not (hover: none) {
 		.card:is(:hover, :focus-visible)::before,
-		.site:has(a:hover, :focus-visible)::before {
+		.site:has(a:hover, :focus-visible) .glow {
 			opacity: var(--glow);
 		}
 	}
@@ -1058,138 +1160,88 @@
 		}
 	}
 
+	/* the categories like the contents of a magazine, each with the first few sites in it and the
+	   screenshot of the first */
 	.categories {
-		max-width: 140rem;
+		max-width: 120rem;
 		margin: 0 auto;
 		padding: 5.6rem var(--sk-page-padding-side) 0;
 
 		@media (min-width: 1024px) {
-			padding-top: 6.4rem;
+			padding-top: 8rem;
 		}
 
 		ul {
 			display: grid;
-			grid-template-columns: repeat(2, minmax(0, 1fr));
-			gap: 4rem 1.6rem;
+			grid-template-columns: minmax(0, 1fr);
+			column-gap: 4.8rem;
 			margin: 0;
 			padding: 0;
 			list-style: none;
+			border-top: 1px solid var(--sk-fg-1);
 
-			@media (min-width: 900px) {
-				grid-template-columns: repeat(4, minmax(0, 1fr));
-				gap: 5.6rem 3.2rem;
+			@media (min-width: 740px) {
+				grid-template-columns: repeat(2, minmax(0, 1fr));
 			}
+		}
+
+		li {
+			border-bottom: 1px solid var(--sk-border);
 		}
 
 		a {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			gap: 2rem;
+			display: grid;
+			grid-template-columns: minmax(0, 1fr) auto;
+			grid-template-areas: 'title sheet' 'named sheet';
+			align-content: start;
+			gap: 0.6rem 2.4rem;
+			height: 100%;
+			padding: 2.4rem 0;
 			color: var(--sk-fg-1);
 			text-decoration: none;
-			/* only the screenshots and the title, not the empty space beside them */
-			pointer-events: none;
 		}
-	}
-
-	/* a few of the screenshots in the category, one in front of the others */
-	.preview {
-		position: relative;
-		display: block;
-		width: min(70%, 24rem);
-		aspect-ratio: 16 / 10;
-		pointer-events: auto;
-
-		/* as wide as the screenshots fanned out at rest, and still while they move, so the pointer
-		   never falls off one as it moves and starts it moving back */
-		&::before {
-			content: '';
-			position: absolute;
-			inset: 0 -17%;
-		}
-	}
-
-	.sheet {
-		position: absolute;
-		inset: 0;
-		overflow: hidden;
-		border-radius: var(--sk-border-radius);
-		/* the tiny screenshot, scaled up and so blurred, until the screenshot fades in over it */
-		background: var(--placeholder, none) var(--position, left top) / cover no-repeat var(--sk-bg-3);
-		box-shadow: 0.2rem 0.4rem 1.2rem rgb(0 0 0 / 0.16);
-
-		&:nth-child(1) {
-			z-index: 1;
-		}
-
-		&:nth-child(2) {
-			translate: -24% 0;
-			scale: 0.82;
-			rotate: -4deg;
-		}
-
-		&:nth-child(3) {
-			translate: 24% 0;
-			scale: 0.82;
-			rotate: 4deg;
-		}
-
-		/* fans out on hover */
-		@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
-			transition:
-				translate 0.3s var(--quint-out),
-				rotate 0.3s var(--quint-out);
-
-			a:hover &:nth-child(1) {
-				translate: 0 -4%;
-			}
-
-			a:hover &:nth-child(2) {
-				translate: -34% 2%;
-				rotate: -7deg;
-			}
-
-			a:hover &:nth-child(3) {
-				translate: 34% 2%;
-				rotate: 7deg;
-			}
-		}
-	}
-
-	.title,
-	.site h3 a,
-	.next p a {
-		text-decoration-line: underline;
-		text-underline-offset: 0.2em;
-		text-decoration-color: transparent;
-		transition: text-decoration-color 0.15s;
-	}
-
-	/* faint even at rest, since it sits among words that are not links */
-	.next p a {
-		text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
 	}
 
 	.title {
+		grid-area: title;
+		font: 400 clamp(2.4rem, 2rem + 0.8vw, 3.2rem) / 1.1 var(--sk-font-family-heading);
+	}
+
+	.named {
+		grid-area: named;
+		font: var(--sk-font-body-small);
+		color: var(--sk-fg-3);
+	}
+
+	.sheet {
 		position: relative;
-		pointer-events: auto;
-		font: 400 clamp(2.2rem, 1.6rem + 1vw, 3.2rem) / 1.1 var(--sk-font-family-heading);
+		display: block;
+		grid-area: sheet;
+		width: 12rem;
+		aspect-ratio: 16 / 10;
+		overflow: hidden;
+		border: 1px solid var(--sk-border);
+		/* the tiny screenshot, scaled up and so blurred, until the screenshot fades in over it */
+		background: var(--placeholder, none) var(--position, left top) / cover no-repeat var(--sk-bg-3);
 
-		/* the gap up to the screenshots, so the pointer stays on the link between them */
-		&::before {
-			content: '';
-			position: absolute;
-			inset: -2rem 0 0 0;
+		@media (min-width: 1024px) {
+			width: 16rem;
 		}
-		text-align: center;
-		text-wrap: balance;
+	}
 
-		@media all and not (hover: none) {
-			a:hover & {
-				text-decoration-color: currentColor;
-			}
+	/* underlined on hover like links elsewhere on the site, the name only rather than the line
+	   under it */
+	.categories a:hover {
+		text-decoration: none;
+
+		.title {
+			text-decoration: underline;
 		}
+	}
+
+	/* underlined like links in text elsewhere on the site, since it sits among words that are not */
+	.next p a {
+		text-decoration: underline;
 	}
 
 	.index {
@@ -1214,12 +1266,13 @@
 		scroll-margin-top: var(--anchor-offset);
 	}
 
+	/* a mosaic, the first large and as many after it as wide as the rows need to come out even */
+	/* one across on phones, two where the big ones take a row, and four where they take a square */
 	.sites {
-		--column-gap: 3.2rem;
-
 		display: grid;
 		grid-template-columns: minmax(0, 1fr);
-		gap: 4.8rem var(--column-gap);
+		grid-auto-flow: dense;
+		gap: 4rem 2.4rem;
 		margin: 0;
 		padding: 0;
 		list-style: none;
@@ -1228,193 +1281,122 @@
 			grid-template-columns: repeat(2, minmax(0, 1fr));
 		}
 
-		/* six, so a row can take thirds, halves, or a large one and a third */
-		@media (min-width: 1024px) {
-			--column-gap: 4rem;
-
-			grid-template-columns: repeat(6, minmax(0, 1fr));
-			gap: 5.6rem var(--column-gap);
+		@media (min-width: 1280px) {
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+			gap: 5.6rem 3.2rem;
 		}
 	}
 
 	.site {
-		display: flex;
-		flex-direction: column;
 		min-width: 0;
 		scroll-margin-top: var(--anchor-offset);
 
-		h3 {
-			position: static;
-			margin: 0;
-			font: 400 clamp(2.2rem, 1.8rem + 0.4vw, 2.6rem) / 1.15 var(--sk-font-family-heading);
-
-			a {
-				position: static;
-				color: var(--sk-fg-1);
-
-				/* covers the text and the gap above it, so the description links to the site too, but
-				   leaves out any empty space in the card */
-				&::after {
-					content: '';
-					position: absolute;
-					inset: -1.6rem 0 0 0;
-				}
+		@media (min-width: 640px) {
+			&.big {
+				grid-column: span 2;
 			}
 		}
 
-		@media all and not (hover: none) {
-			&:has(a:hover) h3 a {
-				text-decoration-color: currentColor;
+		@media (min-width: 1280px) {
+			&.big {
+				grid-row: span 2;
+			}
+
+			&.big.right {
+				grid-column: 3 / span 2;
 			}
 		}
 
-		.text {
-			position: relative;
+		/* at least 16:10, and taller to fill the rows it spans beside the smaller ones */
+		&.big .tile {
+			grid-template-rows: 1fr auto;
+		}
+	}
+
+	/* the screenshot and the glow behind it in one cell, the name and description under them */
+	.tile {
+		position: relative;
+		display: grid;
+		grid-template-rows: auto 1fr;
+		align-content: start;
+		gap: 1.2rem;
+		height: 100%;
+		color: var(--sk-fg-1);
+		text-decoration: none;
+	}
+
+	/* the name and description under the screenshot */
+	.text {
+		display: flex;
+		flex-direction: column;
+		gap: 0.4rem;
+
+		.name {
+			font: 400 clamp(1.8rem, 1.5rem + 0.4vw, 2.2rem) / 1.15 var(--sk-font-family-heading);
+		}
+
+		.big & .name {
+			font-size: clamp(2.4rem, 1.8rem + 1.2vw, 3.6rem);
 		}
 
 		.description {
-			margin: 0.4rem 0 0 0;
 			font: var(--sk-font-body-small);
 			color: var(--sk-fg-3);
 		}
 
-		&:is(.beside, .large) {
-			h3 {
-				font-size: clamp(2.8rem, 2rem + 1.6vw, 4.4rem);
-			}
-
-			.description {
-				margin-top: 0.8rem;
-				font: var(--sk-font-body);
-			}
+		.big & .description {
+			font: var(--sk-font-body);
 		}
+	}
 
-		@media (640px <= width < 1024px) {
-			&:is(.medium-beside, .medium-full) {
-				grid-column: 1 / -1;
-			}
+	/* the name only, as links elsewhere on the site, rather than the description too */
+	.tile:hover {
+		text-decoration: none;
 
-			&.medium-beside {
-				display: grid;
-				grid-template-columns: subgrid;
-				align-items: end;
-
-				.thumb {
-					grid-column: 1;
-					margin: 0;
-				}
-
-				/* in the screenshot's cell, which is not as wide as the card, with both lines given
-				   since an absolutely positioned one otherwise reaches the edge of the card */
-				&::before {
-					grid-area: 1 / 1 / 2 / 2;
-					inset: 0;
-					aspect-ratio: auto;
-				}
-
-				h3 a::after {
-					inset: 0 0 0 calc(-1 * var(--column-gap));
-				}
-			}
-		}
-
-		/* a row for the screenshots and a row for the text, so a large one lines up with the two
-		   stacked beside it */
-		@media (min-width: 1024px) {
-			display: grid;
-			grid-template-rows: subgrid;
-			grid-row: span 2;
-			grid-column: span 2;
-			row-gap: 1.6rem;
-			/* the text no taller than it is, so the space below a shorter one does not link anywhere */
-			align-items: start;
-
-			.thumb {
-				margin: 0;
-			}
-
-			/* the glow in the screenshot's cell, so it is the same size as the screenshot */
-			&::before {
-				grid-row: 1 / 2;
-				grid-column: 1 / -1;
-				inset: 0;
-				aspect-ratio: auto;
-			}
-
-			&.half {
-				grid-column: span 3;
-			}
-
-			&.large {
-				grid-column: span 4;
-				grid-row: span 4;
-
-				/* as tall as the two stacked beside it, which shows more of the page since the
-				   screenshots are square */
-				.thumb {
-					grid-row: span 3;
-					align-self: stretch;
-
-					&::before {
-						padding-top: 0;
-					}
-				}
-
-				&::before {
-					grid-row: 1 / span 3;
-				}
-			}
-
-			/* every other category has it on the right, with the two after it stacked on its left */
-			.category:nth-child(even) &.large {
-				grid-column: 3 / -1;
-				grid-row: 1 / span 4;
-
-				& + .third,
-				& + .third + .third {
-					grid-column: 1 / span 2;
-				}
-			}
-
-			&.beside {
-				grid-column: 1 / -1;
-				grid-template-columns: subgrid;
-				align-items: end;
-
-				.thumb,
-				&::before {
-					grid-column: 1 / -3;
-					grid-row: 1 / -1;
-				}
-
-				.text {
-					grid-column: -3 / -1;
-					grid-row: 1 / -1;
-				}
-
-				h3 a::after {
-					inset: 0 0 0 calc(-1 * var(--column-gap));
-				}
-			}
+		.text .name {
+			text-decoration: underline;
 		}
 	}
 
 	.thumb {
 		position: relative;
+		grid-area: 1 / 1;
 		display: block;
-		margin: 0 0 1.6rem 0;
 		overflow: hidden;
-		text-decoration: none;
+		color: #fff;
 		border: 1px solid var(--sk-border);
 		border-radius: var(--sk-border-radius);
 		/* the tiny screenshot, scaled up and so blurred, until the screenshot fades in over it */
 		background: var(--placeholder, none) var(--position, left top) / cover no-repeat var(--sk-bg-3);
 
-		/* 16:10 by padding, since safari leaves out aspect-ratio when sizing the rows of a subgrid */
+		/* 16:10 by padding, so the big ones can be as tall as their rows instead */
 		&::before {
 			content: '';
 			display: block;
 			padding-top: 62.5%;
+		}
+	}
+
+	/* the name over the bottom of the screenshot, only on the one you point at, focus or tap */
+	.label {
+		position: absolute;
+		inset: auto 0 0;
+		z-index: 1;
+		padding: 3.2rem 1.2rem 1rem;
+		font: 400 clamp(1.6rem, 1.4rem + 0.4vw, 2rem) / 1.1 var(--sk-font-family-heading);
+		background: linear-gradient(transparent, rgb(0 0 0 / 0.65));
+		pointer-events: none;
+		opacity: 0;
+		transition: opacity 0.2s ease;
+
+		.tile:is(:focus-visible, :active) & {
+			opacity: 1;
+		}
+
+		@media all and not (hover: none) {
+			.tile:hover & {
+				opacity: 1;
+			}
 		}
 	}
 
@@ -1560,7 +1542,12 @@
 		opacity: 1;
 	}
 
+	/* where motion is reduced clips never play, so there is nothing for it to stop */
 	.autoplay {
+		@media (prefers-reduced-motion: reduce) {
+			display: none;
+		}
+
 		position: fixed;
 		right: 1.6rem;
 		bottom: calc(1.6rem + env(safe-area-inset-bottom));
@@ -1578,6 +1565,16 @@
 
 		svg {
 			fill: currentColor;
+		}
+
+		/* on small screens the nav is at the bottom, sliding away as the page scrolls down and back as
+		   it scrolls up, so the button moves up over it while it shows, as quickly as it slides */
+		@media (max-width: 831px) {
+			transition: translate 0.2s;
+
+			:global(body:has(nav:is(.visible, :focus-within))) & {
+				translate: 0 calc(-1 * var(--sk-nav-height));
+			}
 		}
 	}
 
@@ -1600,14 +1597,14 @@
 
 			:is(.site:has(a:hover), .card:hover) & {
 				translate: 0 100%;
-				transition: translate 3s cubic-bezier(0.45, 0, 0.55, 1) 0.2s;
+				transition: translate var(--glance, 3s) cubic-bezier(0.45, 0, 0.55, 1) 0.2s;
 
 				> .image {
 					translate: 0 -100%;
 					transition:
 						opacity 0.25s var(--quint-out),
 						filter 0.2s,
-						translate 3s cubic-bezier(0.45, 0, 0.55, 1) 0.2s;
+						translate var(--glance, 3s) cubic-bezier(0.45, 0, 0.55, 1) 0.2s;
 				}
 			}
 		}
@@ -1641,12 +1638,6 @@
 		p {
 			margin-top: 3.5rem;
 		}
-
-		@media all and not (hover: none) {
-			p a:hover {
-				text-decoration-color: currentColor;
-			}
-		}
 	}
 
 	.command {
@@ -1671,6 +1662,39 @@
 			button {
 				width: 4.4rem;
 				height: 4.4rem;
+			}
+		}
+	}
+
+	/* rows that each fit one more than the last, centred so a last row that is not full is too */
+	.crowd {
+		--gap: 1.2rem;
+
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: var(--gap);
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		@media (min-width: 640px) {
+			--gap: 1.6rem;
+		}
+
+		> :global(li) {
+			width: calc((100% - (var(--across) - 1) * var(--gap)) / var(--across) - 0.1px);
+		}
+
+		.thumb {
+			container-type: inline-size;
+		}
+
+		/* smaller type in the smaller ones */
+		@container (width < 20rem) {
+			.label {
+				padding: 2.4rem 0.8rem 0.6rem;
+				font-size: 1.6rem;
 			}
 		}
 	}
