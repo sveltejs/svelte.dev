@@ -1,9 +1,13 @@
+<script module lang="ts">
+	/** set once the page has shown, so the field flies in on the first visit and not on coming back */
+	let arrived = false;
+</script>
+
 <script lang="ts">
 	import type { Picture } from '@sveltejs/enhanced-img';
 	import { Icon } from '@sveltejs/site-kit/components';
 	import { arrange, type Tile } from './arrange.ts';
 	import { categories, sites, type Site } from './sites.ts';
-	import Reel from './Reel.svelte';
 
 	const screenshots = {
 		...import.meta.glob<Picture>(['./screenshots/*.{jpg,png,webp}', '!./screenshots/*@2x.*'], {
@@ -84,6 +88,59 @@
 	/** the smaller sites picked for their design, shown after the categories */
 	const extras = sites.filter((site) => site.more);
 
+	interface Placement {
+		/** percent across */
+		x: number;
+		/** percent down */
+		y: number;
+		/** pixels toward the viewer */
+		z: number;
+		/** degrees turned about the vertical axis */
+		r: number;
+	}
+
+	// none is first in its category, since those are shown larger below: a row along the top and
+	// one along the bottom, set half a card along so the two do not mirror each other, with one
+	// either side of the heading. only those with a small placement
+	// show on small screens, in an arc either side of the one in front
+	const field = place([
+		// along the top
+		{ id: 'spotify', wide: { x: 11, y: 17, z: 0, r: 20 }, small: { x: 50, y: 50, z: 0, r: 0 } },
+		{
+			id: 'apple-tv',
+			wide: { x: 30, y: 14, z: -150, r: 10 },
+			small: { x: 86, y: 50, z: -180, r: -28 }
+		},
+		{ id: 'guild-wars-3', wide: { x: 50, y: 12, z: -250, r: 0 } },
+		{ id: 'bugatti', wide: { x: 70, y: 14, z: -150, r: -10 } },
+		{ id: 'mill', wide: { x: 89, y: 17, z: 0, r: -20 } },
+
+		// either side of the heading
+		{
+			id: 'city-of-sydney',
+			wide: { x: 6, y: 50, z: 150, r: 30 },
+			small: { x: 14, y: 50, z: -180, r: 28 }
+		},
+		{
+			id: 'ons-census-maps',
+			wide: { x: 94, y: 50, z: 150, r: -30 },
+			small: { x: 110, y: 50, z: -420, r: -38 }
+		},
+
+		// along the bottom
+		{ id: 'starbucks', wide: { x: 0, y: 81, z: 0, r: 25 } },
+		{
+			id: 'michelin',
+			wide: { x: 19.5, y: 85, z: -100, r: 15 },
+			small: { x: -10, y: 50, z: -420, r: 38 }
+		},
+		{ id: 'windy', wide: { x: 40, y: 88, z: -200, r: 5 } },
+		{ id: 'the-pudding', wide: { x: 60.5, y: 88, z: -200, r: -5 } },
+		{ id: 'square', wide: { x: 81, y: 85, z: -100, r: -15 } }
+	]);
+
+	const arrive = !arrived;
+
 	const sections = categories.map((category) => {
 		const members = sites.filter((site) => site.category === category.id && !site.more);
 
@@ -99,30 +156,9 @@
 		};
 	});
 
-	/** the most striking of those that move without scrolling, one after another in the hero */
-	const HERO = [
-		'bugatti',
-		'square',
-		'apple-tv',
-		'montoni',
-		'guild-wars-3',
-		'mill',
-		'halfspace',
-		'spotify',
-		'windy',
-		'obama-foundation'
-	];
-
-	const reels = HERO.filter((id) => clips[id] && pictures[id]).map((id) => {
-		const site = sites.find((site) => site.id === id)!;
-		return {
-			site,
-			clip: clips[id],
-			still: pictures[id]
-		};
-	});
-
 	// widths of the screenshots as laid out below
+	const card_sizes = '(min-width: 1024px) 21vw, (min-width: 740px) 440px, 60vw';
+
 	const sizes: Record<Tile['size'], string> = {
 		big: '(min-width: 1440px) 680px, (min-width: 640px) 48vw, 92vw',
 		small: '(min-width: 1440px) 330px, (min-width: 640px) 24vw, 46vw'
@@ -133,6 +169,13 @@
 	/** shows a tick on the copy button for a moment after copying */
 	let copied = $state(false);
 	let uncopy: ReturnType<typeof setTimeout> | undefined;
+
+	function place(cards: Array<{ id: string; wide: Placement; small?: Placement }>) {
+		return cards.flatMap(({ id, wide, small }) => {
+			const site = sites.find((site) => site.id === id && pictures[id]);
+			return site ? [{ site, wide, small }] : [];
+		});
+	}
 
 	/** fades in the screenshots that have not loaded or started to show when the page starts */
 	function fade_in(node: HTMLElement) {
@@ -174,8 +217,8 @@
 	 */
 	function lengthen(event: PointerEvent, id: string) {
 		const target = event.currentTarget as HTMLElement;
-		const scope = target.closest<HTMLElement>('.site');
-		const host = scope?.querySelector<HTMLElement>('.thumb');
+		const scope = target.closest<HTMLElement>('.card, .site');
+		const host = scope?.querySelector<HTMLElement>('.face, .thumb');
 		const img = host?.querySelector('img');
 
 		if (
@@ -351,7 +394,7 @@
 							if (previous && previous !== host) release(previous);
 							clearTimeout(waiting);
 							// not while a mouse rests on another, which is then the only one that moves
-							if (autoplay && !document.querySelector('.site:hover')) {
+							if (autoplay && !document.querySelector('.card:hover, .site:hover')) {
 								waiting = setTimeout(() => play(host, id), 300);
 							}
 						} else {
@@ -418,7 +461,7 @@
 	/** plays the clip in the middle of the window again, once nothing else is pointed at */
 	function resume() {
 		requestAnimationFrame(() => {
-			if (!centred || !autoplay || document.querySelector('.site:hover')) return;
+			if (!centred || !autoplay || document.querySelector('.card:hover, .site:hover')) return;
 			play(centred, band_ids.get(centred)!);
 		});
 	}
@@ -476,7 +519,7 @@
 	/** moves the screenshot you clicked onto the same one in the list as the page jumps there */
 	function morph(event: MouseEvent, id: string) {
 		const link = event.currentTarget as HTMLAnchorElement;
-		const source = link.querySelector<HTMLElement>('.sheet');
+		const source = link.querySelector<HTMLElement>('.face, .sheet');
 		const destination = document.getElementById(id)?.querySelector<HTMLElement>('.thumb');
 
 		if (
@@ -586,17 +629,6 @@
 			// out early, before the card grows past it, so its edge and shadow never show through
 			{ opacity: [1, 0] },
 			{ duration: duration * 0.3, fill: 'both', pseudoElement: '::view-transition-old(picked)' }
-		);
-
-		// fades in over the picked one, whose shape it grows into, so where the one in the list is
-		// taller its lower part is revealed on the way rather than arriving after
-		root.animate(
-			{ opacity: [0, 1] },
-			{
-				duration: duration * 0.25,
-				fill: 'both',
-				pseudoElement: '::view-transition-new(picked)'
-			}
 		);
 	}
 
@@ -767,13 +799,53 @@
 		</button>
 	{/if}
 
-	<div class="hero">
+	<div
+		class={['hero', { arrive }]}
+		{@attach () => {
+			arrived = true;
+		}}
+	>
 		<div class="intro">
-			<h1>Built with Svelte</h1>
+			<h1>Built with <span>Svelte</span></h1>
 			<p>From newsrooms to public services, popular brands and leading industries</p>
 		</div>
 
-		<Reel {reels} {autoplay} />
+		<div class="field">
+			<div class="space">
+				{#each field as { site, wide, small } (site.id)}
+					<a
+						class={['card', { wide: !small }]}
+						href="#{site.id}"
+						style:--x={wide.x}
+						style:--y={wide.y}
+						style:--z={wide.z}
+						style:--r={wide.r}
+						style:--sx={small?.x}
+						style:--sy={small?.y}
+						style:--sz={small?.z}
+						style:--sr={small?.r}
+						style:--position={site.screenshot?.position}
+						style:--placeholder={placeholders[site.id]}
+						onclick={(event) => morph(event, site.id)}
+						onpointerenter={(event) => {
+							prime(site.id);
+							lengthen(event, site.id);
+						}}
+						onfocus={(event) => {
+							prime(site.id);
+						}}
+						{@attach fade_in}
+					>
+						<!-- lifts on hover while the link stays put, so the pointer stays on it -->
+						<span class="face">
+							<!-- lazy where it is hidden on small screens, so phones never load it -->
+							{@render screenshot(site.id, card_sizes, small ? 'eager' : 'lazy', true)}
+						</span>
+						<span class="visually-hidden">{site.name}</span>
+					</a>
+				{/each}
+			</div>
+		</div>
 	</div>
 
 	<nav class="categories" aria-label="Categories">
@@ -870,44 +942,23 @@
 		}
 	}
 
-	/* the heading over a reel of the sites, filling the window, which runs on past its foot by the
-	   length of its tail, fading out over the top of the page */
 	.hero {
-		--tail: 14rem;
 		position: relative;
+		/* a stacking context of its own, or safari drops frames as a card lifts on hover */
 		isolation: isolate;
-		display: grid;
-		place-items: center;
-		/* as tall as the clips are for the width, so they show whole, though never so short the
-		   heading and the marks do not fit, nor taller than the screen */
-		height: clamp(48rem, 62.5vw, calc(100svh - var(--sk-nav-height)));
-		max-height: 108rem;
-		padding: 0 0 8rem;
-		background: var(--sk-bg-1);
+		padding: var(--sk-page-padding-top) 0 0;
+		overflow: clip;
 
 		@media (min-width: 1024px) {
-			--tail: 20rem;
-		}
-	}
-
-	/* set on the left in the page's own ink, like the heading on the home page, large enough to be
-	   the thing you see first over the sites moving behind it */
-	.hero .intro {
-		justify-self: stretch;
-		width: 100%;
-		max-width: 140rem;
-		margin-inline: auto;
-		text-align: left;
-
-		h1 {
-			max-width: 6em;
-			text-wrap: balance;
-		}
-
-		p {
-			max-width: 18em;
-			margin-inline: 0;
-			color: var(--sk-fg-2);
+			display: grid;
+			place-items: center;
+			/* sized by the width, and no taller than the first screen less the nav and the banner, so
+			   the cards along the bottom show above the banner. room for the banner is kept whether it
+			   shows or not, and the small viewport height used, so nothing moves when either the banner
+			   or the browser bars show. tall enough that the cards leave the heading room around it */
+			--hero-height: clamp(62rem, min(60vw, 100svh - var(--sk-nav-height) - 4.2rem), 108rem);
+			min-height: var(--hero-height);
+			padding: 0;
 		}
 	}
 
@@ -916,6 +967,12 @@
 		z-index: 1;
 		padding: 0 var(--sk-page-padding-side);
 		text-align: center;
+
+		/* keeps the text clear of the screenshots, like the headings on the home page */
+		h1,
+		p {
+			filter: drop-shadow(0 0 1rem var(--sk-bg-1)) drop-shadow(0 0 1rem var(--sk-bg-1));
+		}
 	}
 
 	/* the opening lines and the closing ones */
@@ -927,6 +984,10 @@
 		color: var(--sk-fg-1);
 	}
 
+	.intro h1 span {
+		color: var(--sk-fg-accent);
+	}
+
 	.intro p,
 	.next p {
 		max-width: 20em;
@@ -936,8 +997,112 @@
 		text-wrap: balance;
 	}
 
+	.field {
+		position: relative;
+		height: clamp(18rem, 46vw, 38rem);
+		margin-top: 2.4rem;
+		perspective: 100rem;
+		pointer-events: none;
+
+		@media (min-width: 1024px) {
+			position: absolute;
+			inset: 0;
+			height: auto;
+			margin: 0;
+			perspective: 120rem;
+		}
+	}
+
+	.space {
+		position: absolute;
+		inset: 0;
+		transform-style: preserve-3d;
+	}
+
+	.card {
+		--cx: var(--sx);
+		--cy: var(--sy);
+		--cz: var(--sz);
+		--cr: var(--sr);
+
+		position: absolute;
+		left: calc(var(--cx) * 1%);
+		top: calc(var(--cy) * 1%);
+		width: clamp(20rem, 60vw, 44rem);
+		aspect-ratio: 16 / 10;
+		transform: translate(-50%, -50%) translateZ(calc(var(--cz) * 1px))
+			rotateY(calc(var(--cr) * 1deg));
+		transform-style: preserve-3d;
+		pointer-events: auto;
+
+		.arrive & {
+			animation: arrive 1.1s var(--quint-out) backwards;
+			/* nearest first, so the field fills in from the front */
+			animation-delay: calc((150 - var(--cz)) * 0.5ms);
+
+			@media (prefers-reduced-motion: reduce) {
+				animation: fade 0.4s ease backwards;
+			}
+		}
+
+		&.wide {
+			display: none;
+		}
+
+		@media (min-width: 1024px) {
+			--cx: var(--x);
+			--cy: var(--y);
+			--cz: var(--z);
+			--cr: var(--r);
+
+			/* smaller in narrower windows, where the heading takes up more of the width */
+			width: clamp(20rem, 21vw, 40rem);
+
+			&.wide {
+				display: block;
+			}
+		}
+	}
+
 	.site {
 		position: relative;
+	}
+
+	.face {
+		position: absolute;
+		inset: 0;
+		overflow: hidden;
+		border-radius: var(--sk-border-radius);
+		/* the tiny screenshot, scaled up and so blurred, until the screenshot fades in over it */
+		background: var(--placeholder, none) var(--position, left top) / cover no-repeat var(--sk-bg-3);
+		box-shadow: 0.2rem 0.4rem 1.6rem rgb(0 0 0 / 0.2);
+
+		/* further back is fainter, like distance, where the cards are spread out */
+		@media (min-width: 1024px) {
+			opacity: clamp(0.8, 1 + var(--cz) / 4000, 1);
+		}
+
+		@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+			transition:
+				translate 0.3s var(--quint-out),
+				opacity 0.3s ease;
+
+			.card:hover & {
+				translate: 0 0 6rem;
+				opacity: 1;
+			}
+		}
+	}
+
+	/* the field drifts toward you as the page scrolls past it */
+	@media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
+		@supports (animation-timeline: scroll()) {
+			.space {
+				animation: dolly linear both;
+				animation-timeline: scroll(root);
+				animation-range: 0 100vh;
+			}
+		}
 	}
 
 	/* the page jumps at once under the screenshot travelling to its place in the list */
@@ -948,24 +1113,54 @@
 		border-radius: var(--sk-border-radius);
 	}
 
+	/* the one in the list stays whole underneath, showing below the picked one where it is taller,
+	   while the picked one fades from over it. without the blend the browser adds, which brightens
+	   the two where they overlap */
+	:global(html.picking::view-transition-old(picked)),
+	:global(html.picking::view-transition-new(picked)) {
+		animation: none;
+		mix-blend-mode: normal;
+	}
+
+	:global(html.picking::view-transition-old(picked)) {
+		z-index: 1;
+	}
+
 	:global(html.picking::view-transition-old(root)),
 	:global(html.picking::view-transition-new(root)) {
 		animation: none;
 		mix-blend-mode: normal;
 	}
 
+	@keyframes arrive {
+		from {
+			opacity: 0;
+			translate: 0 0 -90rem;
+		}
+	}
+
+	/* little enough that no card grows past the bottom of the hero */
+	@keyframes dolly {
+		to {
+			translate: 0 0 12rem;
+		}
+	}
+
+	@keyframes fade {
+		from {
+			opacity: 0;
+		}
+	}
+
 	/* the categories like the contents of a magazine, each with the first few sites in it and the
 	   screenshot of the first, as wide as the sites below so their edges line up */
-	/* over the end of the fade, clear of all but the faintest of it */
 	.categories {
-		position: relative;
-		z-index: 1;
 		max-width: 140rem;
 		margin: 0 auto;
-		padding: 9.6rem var(--sk-page-padding-side) 0;
+		padding: 5.6rem var(--sk-page-padding-side) 0;
 
 		@media (min-width: 1024px) {
-			padding-top: 14rem;
+			padding-top: 8rem;
 		}
 
 		ul {
@@ -981,6 +1176,7 @@
 			margin: 0;
 			padding: 0;
 			list-style: none;
+			border-top: 1px solid var(--sk-border);
 
 			@media (min-width: 740px) {
 				grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1342,7 +1538,7 @@
 	}
 
 	/* in a little slower than it goes */
-	.thumb:global([data-playing]) > .clip {
+	:is(.face, .thumb):global([data-playing]) > .clip {
 		opacity: 1;
 		transition-duration: 0.2s;
 	}
@@ -1370,6 +1566,11 @@
 		right: 1.6rem;
 		bottom: calc(1.6rem + env(safe-area-inset-bottom));
 		z-index: 10;
+
+		/* above the banner, which sits at the bottom of wider windows */
+		@media (min-width: 832px) {
+			bottom: calc(1.6rem + var(--sk-banner-height) + env(safe-area-inset-bottom));
+		}
 		display: flex;
 		align-items: center;
 		gap: 0.6rem;
@@ -1439,7 +1640,7 @@
 
 	/* the whole screenshot at its full height once it loads in place of the top of it, for the
 	   glance down it on hover */
-	.thumb .slide > .image:global([data-long='loaded']) {
+	:is(.thumb, .face) .slide > .image:global([data-long='loaded']) {
 		height: auto;
 	}
 
