@@ -79,6 +79,9 @@
 			</a>
 		{/each}
 
+		<!-- the one hue over all of it -->
+		<span class="tint" aria-hidden="true"></span>
+
 		<div class="haze" aria-hidden="true">
 			<span style="--blur: 4px; --from: 6%; --to: 86%"></span>
 			<span style="--blur: 12px; --from: 16%; --to: 72%"></span>
@@ -115,11 +118,48 @@
 </section>
 
 <style>
-	/* behind the heading, across the whole of the hero */
+	/* behind the heading, across the whole of the hero, in the cool greys of the light around the
+	   machine on the home page rather than their own colours, from its shadow to its highlight, so
+	   the hero is part of the site rather than a dark screen in it, and the heading reads in its own
+	   ink over any of them */
 	.reel {
+		--shadow: hsl(205, 12%, 72%);
+		--highlight: rgb(235, 243, 249);
+		--tint: hsl(205, 22%, 80%);
 		position: absolute;
 		inset: 0;
 		z-index: 0;
+	}
+
+	/* the page's own colour coming in over the foot of the hero and the clips running on below it,
+	   so they lose their contrast as they fade, rather than words in them showing under the page */
+	.reel::after {
+		content: '';
+		position: absolute;
+		inset: auto 0 calc(-1 * var(--tail, 0px));
+		z-index: 1;
+		height: calc(var(--tail, 0px) + 8rem);
+		background: linear-gradient(
+			in oklab,
+			transparent,
+			color-mix(in srgb, var(--sk-bg-1) 80%, transparent) 55%,
+			var(--sk-bg-1)
+		);
+		pointer-events: none;
+	}
+
+	:global(:root.dark) .reel {
+		--shadow: hsl(209, 12%, 11%);
+		--highlight: hsl(209, 10%, 42%);
+		--tint: hsl(209, 12%, 30%);
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:global(:root:not(.light)) .reel {
+			--shadow: hsl(209, 12%, 11%);
+			--highlight: hsl(209, 10%, 42%);
+			--tint: hsl(209, 12%, 30%);
+		}
 	}
 
 	/* each site in turn, dimmed a little so it reads as the background of this page rather than the
@@ -132,26 +172,38 @@
 		/* nothing in it drawn outside it, so scrolling past redraws only what shows */
 		contain: strict;
 
-		/* stronger behind the heading, so it reads over the lightest site, and again towards the foot,
-		   behind the caption, where the clips can be at their brightest, and as dark on down to where
-		   they fade out, so there is no edge to it */
+		/* the clips, already in greys, from the shadow up, by a layer of it that only lightens what
+		   is darker, and to the highlight down, by one of it multiplied in, blended rather than
+		   filtered, as safari leaves a filter off a video while it plays */
+		&::before,
 		&::after {
 			content: '';
 			position: absolute;
 			inset: 0;
-			/* and over the tail turning to the colour of the page, so the clips lose their contrast as
-			   they fade, like the rows at the sides of the many more, rather than showing through
-			   the grey between dark and light */
-			background: linear-gradient(
-				in oklab,
-				rgb(0 0 0 / 0.25),
-				rgb(0 0 0 / 0.55) 40%,
-				rgb(0 0 0 / 0.6) calc(100% - var(--tail, 0px)),
-				color-mix(in srgb, var(--sk-bg-1) 85%, transparent) calc(100% - var(--tail, 0px) * 0.45),
-				color-mix(in srgb, var(--sk-bg-1) 85%, transparent)
-			);
+			z-index: 1;
 			pointer-events: none;
 		}
+
+		&::before {
+			background: var(--shadow);
+			mix-blend-mode: lighten;
+		}
+
+		&::after {
+			background: var(--highlight);
+			mix-blend-mode: multiply;
+		}
+	}
+
+	/* and in the hue of the light alone, keeping only how light each part is, as a little of the
+	   clips' own colour comes through the grey */
+	.tint {
+		position: absolute;
+		inset: 0;
+		z-index: 2;
+		background: var(--tint);
+		mix-blend-mode: color;
+		pointer-events: none;
 	}
 
 	/* the clips fading out into the page over the tail, eased so the fade has no start or end you can
@@ -159,7 +211,9 @@
 	   rather than the whole of the stage, since safari leaves out the blur over anything inside
 	   something masked */
 	.frame,
-	.stage::after {
+	.stage::before,
+	.stage::after,
+	.tint {
 		--from: calc(100% - var(--tail, 0px));
 		--length: var(--tail, 0px);
 		mask-image: linear-gradient(
@@ -189,6 +243,7 @@
 		position: absolute;
 		/* over the hero, so it is still behind the caption */
 		inset: 0 0 var(--tail, 0px);
+		z-index: 2;
 		pointer-events: none;
 
 		/* only one layer on phones and tablets, which may struggle to redraw so many over a video
@@ -258,23 +313,14 @@
 			transition: opacity 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
 		}
 
-		/* in greys but for a band in colour across the middle of the hero, behind the heading, by a
-		   layer of no colour blended over the clip, which unlike a filter safari keeps on a video
-		   while it plays, softly at its edges */
+		/* in greys, by a layer of no colour blended over the clip */
 		&::after {
-			--hero: calc(100% - var(--tail, 0px));
 			content: '';
 			position: absolute;
 			inset: 0;
 			background: grey;
 			mix-blend-mode: saturation;
 			pointer-events: none;
-			mask-image: linear-gradient(
-				black calc(var(--hero) * 0.2),
-				transparent calc(var(--hero) * 0.4),
-				transparent calc(var(--hero) * 0.6),
-				black calc(var(--hero) * 0.8)
-			);
 		}
 
 		video {
@@ -315,10 +361,11 @@
 		display: grid;
 		justify-items: start;
 		gap: 0.4rem;
-		padding: 4.8rem var(--sk-page-padding-side) 1.6rem;
-		/* in light colours in either theme, over the dark wash */
-		--sk-fg-1: hsl(0, 0%, 98%);
-		--sk-border: hsl(0, 0%, 40%);
+		/* in line with the heading, which is in line with the page */
+		padding: 4.8rem
+			max(var(--sk-page-padding-side), calc((100% - 140rem) / 2 + var(--sk-page-padding-side)))
+			1.6rem;
+		--sk-border: color-mix(in srgb, var(--sk-fg-1) 25%, transparent);
 	}
 
 	/* the one going and the one coming in the same place, as they change over */
@@ -375,8 +422,9 @@
 			background: var(--sk-border);
 		}
 
+		/* in the orange of svelte, the one colour in the hero */
 		&::after {
-			background: var(--sk-fg-1);
+			background: var(--sk-fg-accent);
 			transform-origin: left;
 			scale: var(--progress) 1;
 			/* between the few times a second the time it has played is known, so it fills evenly */

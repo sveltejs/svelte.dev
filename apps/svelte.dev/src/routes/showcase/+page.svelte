@@ -769,7 +769,7 @@
 
 	<div class="hero">
 		<div class="intro">
-			<h1>Built with <span>Svelte</span></h1>
+			<h1>Built with Svelte</h1>
 			<p>From newsrooms to public services, popular brands and leading industries</p>
 		</div>
 
@@ -890,12 +890,25 @@
 		}
 	}
 
-	/* in light colours in either theme, over the dark wash */
+	/* set on the left in the page's own ink, like the heading on the home page, large enough to be
+	   the thing you see first over the sites moving behind it */
 	.hero .intro {
-		--sk-fg-1: hsl(0, 0%, 98%);
-		--sk-fg-2: hsl(0, 0%, 90%);
-		--sk-fg-3: hsl(0, 0%, 80%);
-		--sk-fg-accent: hsl(12, 94%, 62%);
+		justify-self: stretch;
+		width: 100%;
+		max-width: 140rem;
+		margin-inline: auto;
+		text-align: left;
+
+		h1 {
+			max-width: 6em;
+			text-wrap: balance;
+		}
+
+		p {
+			max-width: 18em;
+			margin-inline: 0;
+			color: var(--sk-fg-2);
+		}
 	}
 
 	.intro {
@@ -912,10 +925,6 @@
 		font: 400 clamp(5.6rem, 1.6rem + 7.6vw, 13.6rem) / 0.95 var(--sk-font-family-heading);
 		letter-spacing: -0.02em;
 		color: var(--sk-fg-1);
-	}
-
-	.intro h1 span {
-		color: var(--sk-fg-accent);
 	}
 
 	.intro p,
