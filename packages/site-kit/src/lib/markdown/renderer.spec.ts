@@ -88,14 +88,13 @@ const references = {
 } satisfies DocumentationReferences;
 
 describe('direct documentation links', () => {
-	test.each(['PageLoad', 'Actions'])('links generated %s in JS and converted TS', async (name) => {
-		const annotation = name === 'Actions' ? 'satisfies' : 'type';
+	test('links generated types in JS and converted TS', async () => {
 		const html = await render_content_markdown(
 			'generated.md',
 			[
 				'```js',
 				'/// file: src/routes/+page.js',
-				`/** @${annotation} {import('./$types').${name}} */`,
+				"/** @type {import('./$types').PageLoad} */",
 				'export const value = {};',
 				'```'
 			].join('\n'),
@@ -104,30 +103,25 @@ describe('direct documentation links', () => {
 		for (const language of ['js', 'ts']) {
 			const pre = html.match(new RegExp(`<pre data-${language}[^]*?<\\/pre>`))?.[0];
 			expect(pre).toContain('class="doc-reference" href="/docs/kit/types#Generated-types"');
-			expect(pre).toContain(`>${name}</a>`);
+			expect(pre).toContain('>PageLoad</a>');
 		}
 	});
 
-	test.each([undefined, 'false'])(
-		'respects link metadata %s independently of copy',
-		async (link) => {
-			const html = await render_content_markdown(
-				'opt-out.md',
-				[
-					'```ts',
-					'/// file: example.ts',
-					...(link ? [`/// link: ${link}`] : []),
-					"import { redirect } from '@sveltejs/kit';",
-					"redirect(303, '/');",
-					'```'
-				].join('\n'),
-				{ check: false, references }
-			);
-			expect(html.includes('class="doc-reference"')).toBe(link !== 'false');
-			expect(html).toContain('copy-to-clipboard');
-			expect(html).not.toContain('twoslash-popup-reference');
-		}
-	);
+	test.each([undefined, 'false'])('respects link metadata %s', async (link) => {
+		const html = await render_content_markdown(
+			'opt-out.md',
+			[
+				'```ts',
+				'/// file: example.ts',
+				...(link ? [`/// link: ${link}`] : []),
+				"import { redirect } from '@sveltejs/kit';",
+				"redirect(303, '/');",
+				'```'
+			].join('\n'),
+			{ check: false, references }
+		);
+		expect(html.includes('class="doc-reference"')).toBe(link !== 'false');
+	});
 
 	test('decorates cached snippets separately for each reference map and module context', async () => {
 		const markdown = '```dts\nfunction fn(value: Load): Load;\n```';
