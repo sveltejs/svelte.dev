@@ -6,12 +6,12 @@
     "wobsoriano"
   ],
   "homepage": "https://github.com/clerk-community/svelte-clerk#readme",
-  "version": "1.2.0",
-  "downloads": 25370,
+  "version": "1.3.0",
+  "downloads": 37881,
   "github_stars": 256,
-  "updated": "2026-09-14T16:32:13.179Z",
+  "updated": "2026-10-29T18:46:48.180Z",
   "svelte_range": "^5.29.0",
-  "kit_range": "^2.20.0",
+  "kit_range": "^2.20.0 || ^3.0.0",
   "typescript": true,
   "runes": true,
   "last_rune_check_version": "0.17.2"

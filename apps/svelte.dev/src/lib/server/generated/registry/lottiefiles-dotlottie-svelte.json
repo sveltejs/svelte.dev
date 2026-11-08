@@ -7,9 +7,10 @@
     "nattuadnan"
   ],
   "homepage": "https://docs.lottiefiles.com/en/runtimes/distributions/svelte?utm_source=npm&utm_medium=package",
-  "version": "0.11.0",
-  "downloads": 19332,
-  "updated": "2026-10-30T06:29:59.057Z",
+  "version": "0.11.1",
+  "downloads": 14360,
+  "github_stars": 939,
+  "updated": "2026-11-02T12:07:24.381Z",
   "svelte_range": "^5.0.0",
   "kit_range": "^2.58.0"
 }
