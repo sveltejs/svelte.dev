@@ -228,7 +228,8 @@ async function visit(browser: Browser, site: Site) {
 	} catch (error) {
 		return (error as Error).message.split('\n')[0];
 	} finally {
-		await context.close();
+		// already closed where the page closed itself, which is no failure of the site's
+		await context.close().catch(() => {});
 	}
 }
 
@@ -625,18 +626,30 @@ async function record(
 		.join('\n');
 	fs.writeFileSync(path.join(frames, 'list.txt'), `${list}\nfile '${frame(last)}'\n`);
 
-	// fades back into the first frame at the end, so it loops without a jump
+	// fades back into the first frame at the end, so it loops without a jump. one that plays as it
+	// loads instead starts on its screenshot, how it ends, and fades from it into the start, so it
+	// starts as it was on hover and loops without the page it loads from
 	const total = Math.max(times[last] - times[first] + 0.001, length);
 	const fade = 0.5;
 	const fit = `fps=30,scale=${output.width}:${output.height}:flags=lanczos,setsar=1,format=yuv420p,settb=AVTB`;
+	const hold = 0.3;
 
 	execFileSync('ffmpeg', [
 		...['-y', '-loglevel', 'error'],
 		...['-f', 'concat', '-safe', '0', '-i', path.join(frames, 'list.txt')],
-		...['-loop', '1', '-t', String(fade + 0.1), '-i', frame(first)],
+		...[
+			'-loop',
+			'1',
+			'-t',
+			String(intro ? hold + fade : fade + 0.1),
+			'-i',
+			frame(intro ? last : first)
+		],
 		...[
 			'-filter_complex',
-			`[0:v]${fit}[clip];[1:v]${fit}[start];[clip][start]xfade=transition=fade:duration=${fade}:offset=${total - fade},format=yuv420p`
+			intro
+				? `[0:v]${fit}[clip];[1:v]${fit}[end];[end][clip]xfade=transition=fade:duration=${fade}:offset=${hold},format=yuv420p`
+				: `[0:v]${fit}[clip];[1:v]${fit}[start];[clip][start]xfade=transition=fade:duration=${fade}:offset=${total - fade},format=yuv420p`
 		],
 		...['-an', '-c:v', 'libx264', '-preset', 'slow', '-crf', '28', '-profile:v', 'high'],
 		...['-movflags', '+faststart', path.join(CLIPS, `${id}.mp4`)]

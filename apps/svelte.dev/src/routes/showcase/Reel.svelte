@@ -140,11 +140,16 @@
 			content: '';
 			position: absolute;
 			inset: 0;
+			/* and over the tail turning to the colour of the page, so the clips lose their contrast as
+			   they fade, like the rows at the sides of the many more, rather than showing through
+			   the grey between dark and light */
 			background: linear-gradient(
+				in oklab,
 				rgb(0 0 0 / 0.25),
 				rgb(0 0 0 / 0.55) 40%,
 				rgb(0 0 0 / 0.6) calc(100% - var(--tail, 0px)),
-				rgb(0 0 0 / 0.6)
+				color-mix(in srgb, var(--sk-bg-1) 85%, transparent) calc(100% - var(--tail, 0px) * 0.45),
+				color-mix(in srgb, var(--sk-bg-1) 85%, transparent)
 			);
 			pointer-events: none;
 		}

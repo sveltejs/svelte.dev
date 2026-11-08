@@ -1102,6 +1102,29 @@
 			}
 		}
 
+		/* and on the rows of the many more, which reach out past the sides of the list, clipped to
+		   them so none of it shows over the page above */
+		.crowd {
+			position: relative;
+			isolation: isolate;
+			view-timeline: --crowd;
+			background: var(--sk-bg-1);
+			overflow: clip;
+
+			&::after {
+				content: '';
+				position: absolute;
+				inset: -100vh 0 0;
+				z-index: 2;
+				background: linear-gradient(grey 15%, transparent 35% 55%, grey 75%) top / 100% 100vh
+					no-repeat;
+				mix-blend-mode: saturation;
+				pointer-events: none;
+				animation: stay-in-window linear both;
+				animation-timeline: --crowd;
+			}
+		}
+
 		/* and the one you point at or focus in colour wherever it is, above the grey */
 		.index .site:has(.tile:is(:hover, :focus-visible)) {
 			position: relative;
