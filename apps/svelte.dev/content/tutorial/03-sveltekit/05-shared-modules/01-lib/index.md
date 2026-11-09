@@ -1,5 +1,6 @@
 ---
 title: 'The #lib subpath import'
+tags: lib
 ---
 
 Because SvelteKit uses directory-based routing, it's easy to place modules and components alongside the routes that use them. A good rule of thumb is 'put code close to where it's used'.

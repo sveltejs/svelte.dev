@@ -1,5 +1,6 @@
 ---
 title: Page data
+tags: load
 path: /blog
 ---
 

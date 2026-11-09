@@ -1,5 +1,6 @@
 ---
 title: Pages
+tags: routing
 ---
 
 SvelteKit uses filesystem-based routing, which means that the _routes_ of your app — in other words, what the app should do when a user navigates to a particular URL — are defined by the directories in your codebase.

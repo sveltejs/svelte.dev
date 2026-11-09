@@ -1,5 +1,6 @@
 ---
 title: Universal load functions
+tags: load
 ---
 
 In the [previous section on loading](page-data) we loaded data from the server using `+page.server.js` and `+layout.server.js` files. This is very convenient if you need to do things like getting data directly from a database, or reading cookies.

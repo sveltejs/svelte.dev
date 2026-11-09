@@ -28,8 +28,14 @@ export function generate_crosslinks() {
 
 		switch (parts[1]) {
 			case 'docs':
-			case 'tutorial':
 				return `/${parts[1]}/${clean(parts[2])}/${clean(parts[4])}`;
+
+			case 'tutorial': {
+				// tutorial parts are `01-svelte`, `02-advanced-svelte`, `03-sveltekit` etc, but
+				// are served under `/tutorial/svelte` and `/tutorial/kit`
+				const topic = parts[2].includes('sveltekit') ? 'kit' : 'svelte';
+				return `/${parts[1]}/${topic}/${clean(parts[4])}`;
+			}
 
 			default:
 				throw new Error(`Not handled ${filename}`);
