@@ -27,7 +27,7 @@
 		margin: 0 auto;
 	}
 
-	@media (min-width: 900px) {
+	@media (min-width: 56.25em) {
 		section {
 			padding: 10rem 0;
 		}

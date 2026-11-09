@@ -21,7 +21,7 @@
 		flex: 0;
 		gap: 1rem;
 
-		@media (min-width: 800px) {
+		@media (min-width: 50em) {
 			padding-top: 1rem;
 		}
 	}

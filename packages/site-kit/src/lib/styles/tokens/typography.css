@@ -59,7 +59,7 @@
 		-webkit-font-smoothing: antialiased;
 	}
 
-	@media screen and (min-width: 800px) {
+	@media screen and (min-width: 50em) {
 		--sk-font-size-h1: 5.4rem;
 	}
 }

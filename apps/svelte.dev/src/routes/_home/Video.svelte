@@ -179,7 +179,7 @@
 		font: var(--sk-font-ui-small);
 	}
 
-	@media (min-width: 600px) {
+	@media (min-width: 37.5em) {
 		video::cue {
 			font: var(--sk-font-ui-medium);
 		}

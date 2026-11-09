@@ -111,7 +111,7 @@
 		font: var(--sk-font-h1);
 	}
 
-	@media (min-width: 960px) {
+	@media (min-width: 60em) {
 		article :global {
 			.max {
 				width: 100vw;

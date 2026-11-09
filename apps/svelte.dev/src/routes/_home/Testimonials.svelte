@@ -168,7 +168,7 @@
 		}
 	}
 
-	@media (min-width: 800px) {
+	@media (min-width: 50em) {
 		.definition {
 			align-items: baseline;
 			justify-content: start;
@@ -189,7 +189,7 @@
 		}
 	}
 
-	@media (min-width: 960px) {
+	@media (min-width: 60em) {
 		.outer {
 			display: grid;
 			margin: 4em auto;
@@ -205,7 +205,7 @@
 		}
 	}
 
-	@media (min-width: 1140px) {
+	@media (min-width: 71.25em) {
 		.screenshots {
 			top: -7em;
 		}
