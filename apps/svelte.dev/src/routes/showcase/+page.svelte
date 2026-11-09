@@ -99,44 +99,14 @@
 		r: number;
 	}
 
-	// none is first in its category, since those are shown larger below: a row along the top and
-	// one along the bottom, set half a card along so the two do not mirror each other, with one
-	// either side of the heading. only those with a small placement
-	// show on small screens, in an arc either side of the one in front
+	// none is first in its category, since those are shown larger below: in an arc either side of
+	// the one in front
 	const field = place([
-		// along the top
-		{ id: 'spotify', wide: { x: 11, y: 17, z: 0, r: 20 }, small: { x: 50, y: 50, z: 0, r: 0 } },
-		{
-			id: 'apple-tv',
-			wide: { x: 30, y: 14, z: -150, r: 10 },
-			small: { x: 86, y: 50, z: -180, r: -28 }
-		},
-		{ id: 'guild-wars-3', wide: { x: 50, y: 12, z: -250, r: 0 } },
-		{ id: 'bugatti', wide: { x: 70, y: 14, z: -150, r: -10 } },
-		{ id: 'mill', wide: { x: 89, y: 17, z: 0, r: -20 } },
-
-		// either side of the heading
-		{
-			id: 'city-of-sydney',
-			wide: { x: 6, y: 50, z: 150, r: 30 },
-			small: { x: 14, y: 50, z: -180, r: 28 }
-		},
-		{
-			id: 'ons-census-maps',
-			wide: { x: 94, y: 50, z: 150, r: -30 },
-			small: { x: 110, y: 50, z: -420, r: -38 }
-		},
-
-		// along the bottom
-		{ id: 'starbucks', wide: { x: 0, y: 81, z: 0, r: 25 } },
-		{
-			id: 'michelin',
-			wide: { x: 19.5, y: 85, z: -100, r: 15 },
-			small: { x: -10, y: 50, z: -420, r: 38 }
-		},
-		{ id: 'windy', wide: { x: 40, y: 88, z: -200, r: 5 } },
-		{ id: 'the-pudding', wide: { x: 60.5, y: 88, z: -200, r: -5 } },
-		{ id: 'square', wide: { x: 81, y: 85, z: -100, r: -15 } }
+		{ id: 'spotify', x: 50, y: 50, z: 0, r: 0 },
+		{ id: 'apple-tv', x: 86, y: 50, z: -180, r: -28 },
+		{ id: 'city-of-sydney', x: 14, y: 50, z: -180, r: 28 },
+		{ id: 'ons-census-maps', x: 110, y: 50, z: -420, r: -38 },
+		{ id: 'michelin', x: -10, y: 50, z: -420, r: 38 }
 	]);
 
 	const arrive = !arrived;
@@ -157,7 +127,7 @@
 	});
 
 	// widths of the screenshots as laid out below
-	const card_sizes = '(min-width: 1024px) 21vw, (min-width: 740px) 440px, 60vw';
+	const card_sizes = '(min-width: 740px) 440px, 60vw';
 
 	const sizes: Record<Tile['size'], string> = {
 		big: '(min-width: 1440px) 680px, (min-width: 640px) 48vw, 92vw',
@@ -170,10 +140,10 @@
 	let copied = $state(false);
 	let uncopy: ReturnType<typeof setTimeout> | undefined;
 
-	function place(cards: Array<{ id: string; wide: Placement; small?: Placement }>) {
-		return cards.flatMap(({ id, wide, small }) => {
+	function place(cards: Array<{ id: string } & Placement>) {
+		return cards.flatMap(({ id, ...placement }) => {
 			const site = sites.find((site) => site.id === id && pictures[id]);
-			return site ? [{ site, wide, small }] : [];
+			return site ? [{ site, ...placement }] : [];
 		});
 	}
 
@@ -812,18 +782,14 @@
 
 		<div class="field">
 			<div class="space">
-				{#each field as { site, wide, small } (site.id)}
+				{#each field as { site, x, y, z, r } (site.id)}
 					<a
-						class={['card', { wide: !small }]}
+						class="card"
 						href="#{site.id}"
-						style:--x={wide.x}
-						style:--y={wide.y}
-						style:--z={wide.z}
-						style:--r={wide.r}
-						style:--sx={small?.x}
-						style:--sy={small?.y}
-						style:--sz={small?.z}
-						style:--sr={small?.r}
+						style:--x={x}
+						style:--y={y}
+						style:--z={z}
+						style:--r={r}
 						style:--position={site.screenshot?.position}
 						style:--placeholder={placeholders[site.id]}
 						onclick={(event) => morph(event, site.id)}
@@ -838,8 +804,7 @@
 					>
 						<!-- lifts on hover while the link stays put, so the pointer stays on it -->
 						<span class="face">
-							<!-- lazy where it is hidden on small screens, so phones never load it -->
-							{@render screenshot(site.id, card_sizes, small ? 'eager' : 'lazy', true)}
+							{@render screenshot(site.id, card_sizes, 'eager', true)}
 						</span>
 						<span class="visually-hidden">{site.name}</span>
 					</a>
@@ -948,18 +913,6 @@
 		isolation: isolate;
 		padding: var(--sk-page-padding-top) 0 0;
 		overflow: clip;
-
-		@media (min-width: 1024px) {
-			display: grid;
-			place-items: center;
-			/* sized by the width, and no taller than the first screen less the nav and the banner, so
-			   the cards along the bottom show above the banner. room for the banner is kept whether it
-			   shows or not, and the small viewport height used, so nothing moves when either the banner
-			   or the browser bars show. tall enough that the cards leave the heading room around it */
-			--hero-height: clamp(62rem, min(60vw, 100svh - var(--sk-nav-height) - 4.2rem), 108rem);
-			min-height: var(--hero-height);
-			padding: 0;
-		}
 	}
 
 	.intro {
@@ -1002,15 +955,10 @@
 		height: clamp(18rem, 46vw, 38rem);
 		margin-top: 2.4rem;
 		perspective: 100rem;
+		/* the arc kept together in wide windows */
+		max-width: 120rem;
+		margin-inline: auto;
 		pointer-events: none;
-
-		@media (min-width: 1024px) {
-			position: absolute;
-			inset: 0;
-			height: auto;
-			margin: 0;
-			perspective: 120rem;
-		}
 	}
 
 	.space {
@@ -1020,46 +968,22 @@
 	}
 
 	.card {
-		--cx: var(--sx);
-		--cy: var(--sy);
-		--cz: var(--sz);
-		--cr: var(--sr);
-
 		position: absolute;
-		left: calc(var(--cx) * 1%);
-		top: calc(var(--cy) * 1%);
+		left: calc(var(--x) * 1%);
+		top: calc(var(--y) * 1%);
 		width: clamp(20rem, 60vw, 44rem);
 		aspect-ratio: 16 / 10;
-		transform: translate(-50%, -50%) translateZ(calc(var(--cz) * 1px))
-			rotateY(calc(var(--cr) * 1deg));
+		transform: translate(-50%, -50%) translateZ(calc(var(--z) * 1px)) rotateY(calc(var(--r) * 1deg));
 		transform-style: preserve-3d;
 		pointer-events: auto;
 
 		.arrive & {
 			animation: arrive 1.1s var(--quint-out) backwards;
 			/* nearest first, so the field fills in from the front */
-			animation-delay: calc((150 - var(--cz)) * 0.5ms);
+			animation-delay: calc(-1 * var(--z) * 0.5ms);
 
 			@media (prefers-reduced-motion: reduce) {
 				animation: fade 0.4s ease backwards;
-			}
-		}
-
-		&.wide {
-			display: none;
-		}
-
-		@media (min-width: 1024px) {
-			--cx: var(--x);
-			--cy: var(--y);
-			--cz: var(--z);
-			--cr: var(--r);
-
-			/* smaller in narrower windows, where the heading takes up more of the width */
-			width: clamp(20rem, 21vw, 40rem);
-
-			&.wide {
-				display: block;
 			}
 		}
 	}
@@ -1077,30 +1001,11 @@
 		background: var(--placeholder, none) var(--position, left top) / cover no-repeat var(--sk-bg-3);
 		box-shadow: 0.2rem 0.4rem 1.6rem rgb(0 0 0 / 0.2);
 
-		/* further back is fainter, like distance, where the cards are spread out */
-		@media (min-width: 1024px) {
-			opacity: clamp(0.8, 1 + var(--cz) / 4000, 1);
-		}
-
 		@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
-			transition:
-				translate 0.3s var(--quint-out),
-				opacity 0.3s ease;
+			transition: translate 0.3s var(--quint-out);
 
 			.card:hover & {
 				translate: 0 0 6rem;
-				opacity: 1;
-			}
-		}
-	}
-
-	/* the field drifts toward you as the page scrolls past it */
-	@media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
-		@supports (animation-timeline: scroll()) {
-			.space {
-				animation: dolly linear both;
-				animation-timeline: scroll(root);
-				animation-range: 0 100vh;
 			}
 		}
 	}
@@ -1136,13 +1041,6 @@
 		from {
 			opacity: 0;
 			translate: 0 0 -90rem;
-		}
-	}
-
-	/* little enough that no card grows past the bottom of the hero */
-	@keyframes dolly {
-		to {
-			translate: 0 0 12rem;
 		}
 	}
 
