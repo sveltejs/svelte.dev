@@ -126,20 +126,25 @@
 {/if}
 
 <div class="{log.command} line" style="--indent: {depth * 15}px">
-	<!-- svelte-ignore a11y_click_events_have_key_events -->
+	<!-- keyboard users toggle with the arrow button, whose clicks bubble here -->
+	<!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_static_element_interactions -->
 	<div
-		role="button"
-		tabindex="0"
-		onclick={toggle_group_collapse}
 		class="log"
 		class:expandable={log.stack || log.command === 'group'}
+		onclick={log.stack || log.command === 'group' ? toggle_group_collapse : undefined}
 	>
 		{#if log.count && log.count > 1}
 			<span class="count">{log.count}</span>
 		{/if}
 
 		{#if log.stack || log.command === 'group'}
-			<span class="arrow" class:expand={!log.collapsed}>{'\u25B6'}</span>
+			<button
+				class="arrow"
+				aria-expanded={!log.collapsed}
+				aria-label={log.command === 'group' ? 'Group' : 'Stack trace'}
+			>
+				<span class="glyph" class:expand={!log.collapsed}>{'\u25B6'}</span>
+			</button>
 		{/if}
 
 		{#if log.command === 'clear'}
@@ -161,7 +166,7 @@
 							<JSONNode value={part.value} defaultExpandedLevel={log.expanded ? 1 : 0} />
 						{/if}
 					{:else}
-						<!-- svelte-ignore a11y_no_static_element_interactions -->
+						<!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_static_element_interactions -->
 						<span class="styled" style={part.style} onclick={(e) => e.stopPropagation()}>
 							{@html link(escape_html(part.value))}
 						</span>
@@ -298,14 +303,25 @@
 	}
 
 	.arrow {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 1.5em;
+		height: 1.5em;
+		margin: 0 -0.25em;
+		padding: 0;
+		cursor: pointer;
+		color: inherit;
+	}
+
+	.glyph {
 		font-size: 0.9rem;
 		transition: 150ms;
 		transform-origin: 50% 50%;
-		transform: translateY(2px);
 	}
 
-	.arrow.expand {
-		transform: translateY(2px) rotateZ(90deg);
+	.glyph.expand {
+		transform: rotateZ(90deg);
 	}
 
 	.styled {
