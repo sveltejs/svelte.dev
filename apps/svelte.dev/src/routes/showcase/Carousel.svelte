@@ -5,7 +5,10 @@
 	import { tick, untrack } from 'svelte';
 	import type { Attachment } from 'svelte/attachments';
 	import type { Snippet } from 'svelte';
+	import { on_screen } from './on-screen.ts';
+	import { BY_HAND, DWELL, ON_ITS_OWN, offset, place, wrap } from './ring.ts';
 	import type { Site } from './sites.ts';
+	import { Swipe } from './swipe.svelte.ts';
 
 	interface Card {
 		site: Site;
@@ -33,43 +36,7 @@
 
 	let { cards, autoplay, arrive, sizes, onpick, onprime, controls }: Props = $props();
 
-	/** how long one without a clip stays in front before the carousel moves on, in milliseconds */
-	const DWELL = 5000;
-
-	/**
-	 * how long a turn of one card takes: unhurried when it moves on by itself, and quicker when
-	 * turned by hand, so it keeps up with the hand. both on the same strong ease-out
-	 */
-	const ON_ITS_OWN = 700;
-	const BY_HAND = 450;
-
 	const count = $derived(cards.length);
-
-	/**
-	 * where the cards stand by how far they are from the front, the arc of the hero before it
-	 * turned: x in percent across, z in pixels toward the viewer and r in degrees turned. those to
-	 * the left are the same mirrored, and one between two places is between them
-	 */
-	const SLOTS = [
-		{ x: 50, z: 0, r: 0 },
-		{ x: 86, z: -180, r: -28 },
-		{ x: 110, z: -420, r: -38 },
-		// out of sight, where those further round wait
-		{ x: 128, z: -700, r: -44 }
-	];
-
-	function place(o: number) {
-		const d = Math.min(Math.abs(o), SLOTS.length - 1);
-		const i = Math.min(Math.floor(d), SLOTS.length - 2);
-		const t = d - i;
-		const [a, b] = [SLOTS[i], SLOTS[i + 1]];
-		const sign = o < 0 ? -1 : 1;
-		return {
-			x: 50 + sign * (a.x - 50 + (b.x - a.x) * t),
-			z: a.z + (b.z - a.z) * t,
-			r: sign * (a.r + (b.r - a.r) * t)
-		};
-	}
 
 	/**
 	 * where the ring has turned to, in cards rather than degrees, and never wrapped, so it can keep
@@ -85,10 +52,10 @@
 	let arriving = $state(untrack(() => arrive));
 
 	/** the card in front, or nearest to it while turning */
-	const current = $derived(wrap(Math.round(turn.current)));
+	const current = $derived(wrap(Math.round(turn.current), count));
 
 	/** where the ring is turning to, which decides the card named below it */
-	const target = $derived(arriving ? 0 : wrap(Math.round(turn.target)));
+	const target = $derived(arriving ? 0 : wrap(Math.round(turn.target), count));
 
 	/** the ring has come to rest on the one in front */
 	const settled = $derived(turn.current === turn.target);
@@ -113,7 +80,9 @@
 	 * mouse resting on it or a click on its buttons, after which it carries on
 	 */
 	let focused = $state(false);
-	let dragging = $state(false);
+
+	/** turned by a hand on it */
+	const swipe = new Swipe(turn, () => (touched = true));
 
 	/** the ring is on screen, and the page is the tab showing */
 	let seen = $state(true);
@@ -123,20 +92,7 @@
 	const moving = $derived(autoplay && !prefersReducedMotion.current);
 
 	/** whether it should be turning on its own right now */
-	const running = $derived(moving && seen && shown && !focused && !dragging);
-
-	function wrap(i: number) {
-		return ((i % count) + count) % count;
-	}
-
-	/**
-	 * how far a card is from the front, in cards, to the right if more than 0 and the left if less,
-	 * whichever way round is shorter
-	 */
-	function offset(i: number, at: number) {
-		const ahead = (((i - at) % count) + count) % count;
-		return ahead > count / 2 ? ahead - count : ahead;
-	}
+	const running = $derived(moving && seen && shown && !focused && !swipe.dragging);
 
 	/** turns to the card a given number away, by the shortest way round */
 	function go(by: number, duration = BY_HAND) {
@@ -147,7 +103,7 @@
 	/** turns to a given card by the shortest way round */
 	function show(i: number) {
 		const from = Math.round(turn.target);
-		let by = wrap(i - from);
+		let by = wrap(i - from, count);
 		if (by > count / 2) by -= count;
 		if (by !== 0) {
 			touched = true;
@@ -180,13 +136,6 @@
 		if (!first && untrack(() => prefersReducedMotion.current)) {
 			node.animate({ opacity: [1, 0.6, 1] }, { duration: 200, easing: 'ease' });
 		}
-	};
-
-	/** only turns on its own while it is on screen */
-	const watch: Attachment<HTMLElement> = (node) => {
-		const observer = new IntersectionObserver(([entry]) => (seen = entry.isIntersecting));
-		observer.observe(node);
-		return () => observer.disconnect();
 	};
 
 	/**
@@ -254,131 +203,6 @@
 		};
 	}
 
-	/** where a drag started, and the ring's turn then, and how quickly it is going */
-	let drag:
-		| {
-				id: number;
-				x: number;
-				y: number;
-				from: number;
-				width: number;
-				moved: boolean;
-				samples: Array<{ t: number; at: number }>;
-		  }
-		| undefined;
-
-	/** set after a drag, so the click that follows on letting go does not open the card */
-	let dragged = false;
-
-	function down(event: PointerEvent) {
-		if (event.button !== 0) return;
-		const card = (event.currentTarget as HTMLElement).querySelector<HTMLElement>('.card');
-		drag = {
-			id: event.pointerId,
-			x: event.clientX,
-			y: event.clientY,
-			from: turn.current,
-			width: card?.offsetWidth || 400,
-			moved: false,
-			samples: [{ t: event.timeStamp, at: turn.current }]
-		};
-		dragged = false;
-	}
-
-	function move(event: PointerEvent) {
-		if (!drag || event.pointerId !== drag.id) return;
-
-		const dx = event.clientX - drag.x;
-		const dy = event.clientY - drag.y;
-
-		if (!drag.moved) {
-			// up and down is the page scrolling, not the ring turning
-			if (Math.abs(dx) < 6 || Math.abs(dx) < Math.abs(dy)) {
-				if (Math.abs(dy) > 10) drag = undefined;
-				return;
-			}
-			drag.moved = true;
-			dragging = true;
-			touched = true;
-			try {
-				(event.currentTarget as HTMLElement).setPointerCapture(event.pointerId);
-			} catch {
-				// the pointer has already gone
-			}
-		}
-
-		// a card's width across turns it by a card, so the one in front stays under the finger
-		const at = drag.from - dx / drag.width;
-		turn.set(at, { duration: 0 });
-
-		drag.samples.push({ t: event.timeStamp, at });
-		if (drag.samples.length > 5) drag.samples.shift();
-	}
-
-	function up(event: PointerEvent) {
-		if (!drag || event.pointerId !== drag.id) return;
-		const { moved, samples, from } = drag;
-		drag = undefined;
-		dragging = false;
-		if (!moved) return;
-
-		dragged = true;
-
-		// thrown on by however fast it was going as it was let go, landing on a card
-		const first = samples[0];
-		const last = samples[samples.length - 1];
-		const elapsed = Math.max(last.t - first.t, 1);
-		const velocity = (last.at - first.at) / elapsed; // cards per millisecond
-		const fresh = event.timeStamp - last.t < 80;
-		const thrown = fresh ? Math.max(-4, Math.min(4, velocity * 400)) : 0;
-
-		let to = Math.round(turn.current + thrown);
-		// at least on to the next in the direction of a quick flick
-		if (to === Math.round(from) && Math.abs(velocity) > 0.002) {
-			to = velocity > 0 ? Math.ceil(turn.current) : Math.floor(turn.current);
-		}
-
-		// as long as it takes to start off as fast as it was thrown, since the curve starts five
-		// times as fast as its average, so it carries on from the hand without a lurch or a stall
-		const distance = Math.abs(to - turn.current);
-		const speed = Math.abs(velocity);
-		const duration = fresh && speed > 0.0005 ? (5 * distance) / speed : BY_HAND;
-
-		turn.set(to, {
-			duration: prefersReducedMotion.current ? 0 : Math.max(300, Math.min(700, duration)),
-			easing: quintOut
-		});
-	}
-
-	/**
-	 * sideways scrolling on a trackpad turns it with the fingers, as far as they and the momentum
-	 * after them go, landing on the nearest card once it stops
-	 */
-	let wheel_timer: ReturnType<typeof setTimeout> | undefined;
-
-	function wheel(event: WheelEvent) {
-		if (Math.abs(event.deltaX) <= Math.abs(event.deltaY)) return;
-		event.preventDefault();
-
-		const stage = event.currentTarget as HTMLElement;
-		const width = stage.querySelector<HTMLElement>('.card')?.offsetWidth || 400;
-		// in lines rather than pixels in some browsers with a mouse wheel
-		const pixels = event.deltaMode === 1 ? event.deltaX * 16 : event.deltaX;
-
-		touched = true;
-		dragging = true;
-		turn.set(turn.current + pixels / width, { duration: 0 });
-
-		clearTimeout(wheel_timer);
-		wheel_timer = setTimeout(() => {
-			dragging = false;
-			turn.set(Math.round(turn.current), {
-				duration: prefersReducedMotion.current ? 0 : BY_HAND,
-				easing: quintOut
-			});
-		}, 120);
-	}
-
 	/**
 	 * the arrow keys turn it from anywhere in it. on the marks, which are one stop in the tab order,
 	 * the focus follows to the mark of the one coming to the front
@@ -399,9 +223,8 @@
 	}
 
 	function click(event: MouseEvent, i: number) {
-		if (dragged) {
+		if (swipe.ends_drag()) {
 			event.preventDefault();
-			dragged = false;
 			return;
 		}
 
@@ -437,16 +260,16 @@
 	<!-- svelte-ignore a11y_no_static_element_interactions -->
 	<div
 		class="stage"
-		{@attach watch}
-		onpointerdown={down}
-		onpointermove={move}
-		onpointerup={up}
-		onpointercancel={up}
-		onwheel={wheel}
+		{@attach on_screen((entry) => (seen = entry.isIntersecting))}
+		onpointerdown={swipe.down}
+		onpointermove={swipe.move}
+		onpointerup={swipe.up}
+		onpointercancel={swipe.up}
+		onwheel={swipe.wheel}
 	>
 		<div class="space" {@attach dim}>
 			{#each cards as { site, picture, placeholder, clip }, i (site.id)}
-				{@const o = offset(i, turn.current)}
+				{@const o = offset(i, turn.current, count)}
 				{@const d = Math.abs(o)}
 				{@const front = i === current}
 				{@const at = place(o)}
