@@ -4,6 +4,7 @@
 	import { quintOut } from 'svelte/easing';
 	import { tick, untrack } from 'svelte';
 	import type { Attachment } from 'svelte/attachments';
+	import type { Snippet } from 'svelte';
 	import type { Site } from './sites.ts';
 
 	interface Card {
@@ -26,9 +27,11 @@
 		onpick: (event: MouseEvent, id: string) => void;
 		/** a pointer or the keyboard reaching the card in front, before it may be picked */
 		onprime: (id: string) => void;
+		/** more controls under the marks, such as one that pauses everything where there is no room */
+		controls?: Snippet;
 	}
 
-	let { cards, autoplay, arrive, sizes, onpick, onprime }: Props = $props();
+	let { cards, autoplay, arrive, sizes, onpick, onprime, controls }: Props = $props();
 
 	/** how long one without a clip stays in front before the carousel moves on, in milliseconds */
 	const DWELL = 5000;
@@ -553,6 +556,8 @@
 				</li>
 			{/each}
 		</ol>
+
+		{@render controls?.()}
 	</div>
 </section>
 

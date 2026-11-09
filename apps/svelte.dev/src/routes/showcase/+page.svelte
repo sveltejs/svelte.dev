@@ -5,7 +5,7 @@
 
 <script lang="ts">
 	import type { Picture } from '@sveltejs/enhanced-img';
-	import { Icon } from '@sveltejs/site-kit/components';
+	import type { Attachment } from 'svelte/attachments';
 	import { arrange, type Tile } from './arrange.ts';
 	import Carousel from './Carousel.svelte';
 	import { categories, sites, type Site } from './sites.ts';
@@ -203,6 +203,9 @@
 
 	/** shows a tick on the copy button for a moment after copying */
 	let copied = $state(false);
+
+	/** shows the tick as if pressed, for a press by the keyboard */
+	let flash = $state(false);
 	let uncopy: ReturnType<typeof setTimeout> | undefined;
 
 	/** fades in the screenshots that have not loaded or started to show when the page starts */
@@ -385,6 +388,18 @@
 
 	/** whether anything moves on its own, which the button at the start of the page turns off */
 	let autoplay = $state(true);
+
+	/**
+	 * the hero is on screen, where on phones the floating button would cover the carousel's own
+	 * buttons, so it gives way to one under the carousel
+	 */
+	let hero_seen = $state(true);
+
+	const watch_hero: Attachment<HTMLElement> = (node) => {
+		const observer = new IntersectionObserver(([entry]) => (hero_seen = entry.isIntersecting));
+		observer.observe(node);
+		return () => observer.disconnect();
+	};
 
 	/** the screenshots with clips that are mostly in the window */
 	const visible = new Set<HTMLElement>();
@@ -702,6 +717,11 @@
 		copied = true;
 		clearTimeout(uncopy);
 		uncopy = setTimeout(() => (copied = false), 2000);
+
+		// shows the tick for a keyboard press too, which never makes the button :active, for a frame,
+		// after which it fades back as it does once a pointer lets go
+		flash = true;
+		requestAnimationFrame(() => requestAnimationFrame(() => (flash = false)));
 	}
 </script>
 
@@ -741,6 +761,33 @@
 			aria-hidden="true"
 		></video>
 	{/if}
+{/snippet}
+
+{#snippet pause(where: 'float' | 'inline')}
+	<button
+		class={['autoplay', where, { tucked: where === 'float' && hero_seen }]}
+		onclick={toggle_autoplay}
+	>
+		<!-- both, one over the other, so one can turn into the other -->
+		<span class="glyph" aria-hidden="true">
+			<svg class={{ off: !autoplay }} viewBox="0 0 16 16" width="16" height="16">
+				<path d="M4 2.5h3v11H4zM9 2.5h3v11H9z" />
+			</svg>
+			<svg class={{ off: autoplay }} viewBox="0 0 16 16" width="16" height="16">
+				<path d="M4 2.2v11.6L13.5 8z" />
+			</svg>
+		</span>
+		<!-- both, one over the other with only the one that applies showing, so the button is as wide
+		     either way -->
+		<span class="wording">
+			<span class={{ off: !autoplay }}>Pause motion</span>
+			<span class={{ off: autoplay }}>Play motion</span>
+		</span>
+	</button>
+{/snippet}
+
+{#snippet carousel_pause()}
+	{@render pause('inline')}
 {/snippet}
 
 {#snippet tile(
@@ -802,27 +849,12 @@
 	<!-- first, so the keyboard reaches it before anything that moves, and always there, so clips
 	     can be stopped before they start -->
 	{#if Object.keys(clips).length > 0 || ring.length > 0}
-		<button class="autoplay" onclick={toggle_autoplay}>
-			<!-- both, one over the other, so one can turn into the other -->
-			<span class="glyph" aria-hidden="true">
-				<svg class={{ off: !autoplay }} viewBox="0 0 16 16" width="16" height="16">
-					<path d="M4 2.5h3v11H4zM9 2.5h3v11H9z" />
-				</svg>
-				<svg class={{ off: autoplay }} viewBox="0 0 16 16" width="16" height="16">
-					<path d="M4 2.2v11.6L13.5 8z" />
-				</svg>
-			</span>
-			<!-- both, one over the other with only the one that applies showing, so the button is as wide
-			     either way -->
-			<span class="wording">
-				<span class={{ off: !autoplay }}>Pause motion</span>
-				<span class={{ off: autoplay }}>Play motion</span>
-			</span>
-		</button>
+		{@render pause('float')}
 	{/if}
 
 	<div
 		class={['hero', { arrive }]}
+		{@attach watch_hero}
 		{@attach () => {
 			arrived = true;
 		}}
@@ -840,6 +872,7 @@
 				sizes={card_sizes}
 				onpick={morph}
 				onprime={prime}
+				controls={carousel_pause}
 			/>
 		{/if}
 	</div>
@@ -913,32 +946,14 @@
 			<div class="command">
 				<code>{command}</code>
 
+				<!-- the copy icon turning to a tick as it is pressed, and back a moment later, like the copy
+				     buttons on the code in the docs -->
 				<button
-					class={['raised', 'icon', 'tooltip', { copied }]}
-					aria-label={copied ? 'copied' : 'copy to clipboard'}
+					class={['raised', 'icon', 'copy', { flash }]}
+					title="Copy to clipboard"
+					aria-label="Copy to clipboard"
 					onclick={copy}
-				>
-					{#if copied}
-						<Icon size={18} name="check" />
-					{:else}
-						<!-- drawn by its stroke, like the tick, rather than site-kit's filled copy icon, so its
-						     lines can be as heavy as the tick's and the command beside it -->
-						<svg
-							width="18"
-							height="18"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							aria-hidden="true"
-						>
-							<rect x="9" y="9" width="13" height="13" rx="2" />
-							<path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-						</svg>
-					{/if}
-				</button>
+				></button>
 
 				<span class="visually-hidden" aria-live="polite">{copied ? 'Copied' : ''}</span>
 			</div>
@@ -1354,6 +1369,13 @@
 	}
 
 	.thumb {
+		/* pressed in a little as it is clicked, felt before the page leaves for the site */
+		transition: scale 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+		.tile:active & {
+			scale: 0.98;
+		}
+
 		position: relative;
 		grid-area: 1 / 1;
 		display: block;
@@ -1512,6 +1534,57 @@
 			}
 		}
 
+		/* on phones, out of the way of the carousel while the hero shows, which has its own. back in
+		   rising a little as the hero leaves, and out with a quicker fade alone */
+		@media (max-width: 739px) {
+			&.float {
+				transition:
+					opacity 0.2s var(--quint-out),
+					transform 0.2s var(--quint-out),
+					visibility 0s,
+					translate 0.2s,
+					scale 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+			}
+
+			&.tucked {
+				opacity: 0;
+				transform: translateY(0.8rem);
+				visibility: hidden;
+				transition:
+					opacity 0.12s ease,
+					transform 0s 0.12s,
+					visibility 0s 0.12s,
+					translate 0.2s,
+					scale 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+			}
+		}
+
+		/* under the carousel, on phones only, with its name, in the flow rather than over it */
+		&.inline {
+			display: none;
+
+			@media (max-width: 739px) and (prefers-reduced-motion: no-preference) {
+				display: flex;
+				position: static;
+				grid-column: 1 / -1;
+				justify-self: center;
+				/* clear of the taller tap areas of the marks above it */
+				margin-top: 1.6rem;
+				width: auto;
+				padding: 0 1.6rem;
+				box-shadow: none;
+
+				.wording {
+					position: static;
+					display: grid;
+					width: auto;
+					height: auto;
+					overflow: visible;
+					clip-path: none;
+				}
+			}
+		}
+
 		/* on small screens the nav is at the bottom, sliding away as the page scrolls down and back as
 		   it scrolls up, so the button moves up over it while it shows, as quickly as it slides */
 		@media (max-width: 831px) {
@@ -1519,7 +1592,7 @@
 				translate 0.2s,
 				scale 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
-			:global(body:has(nav:is(.visible, :focus-within))) & {
+			:global(body:has(nav:is(.visible, :focus-within))) &.float {
 				translate: 0 calc(-1 * var(--sk-nav-height));
 			}
 		}
@@ -1584,6 +1657,40 @@
 				width: 4.4rem;
 				height: 4.4rem;
 			}
+		}
+	}
+
+	/* as the copy buttons on the code in the docs do it: the tick in place of the copy icon at once
+	   as it is pressed, fading back to the copy icon a moment after it is let go */
+	.copy {
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: currentColor;
+			mask: no-repeat 50% 50% / 1.6rem 1.6rem;
+			transition: opacity 0.2s;
+			transition-delay: 0.6s;
+		}
+
+		&::before {
+			mask-image: url(icons/copy-to-clipboard);
+		}
+
+		&::after {
+			mask-image: url(icons/check);
+			opacity: 0;
+		}
+
+		&:is(:active, .flash)::before {
+			opacity: 0;
+			transition: none;
+		}
+
+		&:is(:active, .flash)::after {
+			opacity: 1;
+			transition: none;
 		}
 	}
 
