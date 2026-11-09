@@ -1546,7 +1546,8 @@
 					scale 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 			}
 
-			&.tucked {
+			/* but never while it has focus, which would otherwise be lost as it hides */
+			&.tucked:not(:focus-within) {
 				opacity: 0;
 				transform: translateY(0.8rem);
 				visibility: hidden;
@@ -1568,6 +1569,9 @@
 				position: static;
 				grid-column: 1 / -1;
 				justify-self: center;
+				/* under the marks, though it comes first in the carousel, so the keyboard and screen
+				   readers reach it before anything that moves */
+				grid-row: 3;
 				/* clear of the taller tap areas of the marks above it */
 				margin-top: 1.6rem;
 				width: auto;
