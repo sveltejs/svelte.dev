@@ -1,4 +1,4 @@
-// check a new site uses svelte, then run pnpm showcase <id> in apps/svelte.dev
+// check a new site uses svelte, then run pnpm sync-showcase <id> in apps/svelte.dev
 // the first in each category is shown larger, so make it well known with a good screenshot
 // the rest go from best known down by their rank on https://tranco-list.eu, unranked last
 
@@ -29,11 +29,11 @@ export interface Site {
 	/** language of the description if not english */
 	lang?: string;
 	category: Category;
-	/** how pnpm showcase takes the screenshot and how the page shows it */
+	/** how pnpm sync-showcase takes the screenshot and how the page shows it */
 	screenshot?: {
 		/** a page of the site to take instead, such as a shared chat that shows the app in use */
 		url?: string;
-		/** the site blocks headless browsers, so it is only checked with pnpm showcase --headed */
+		/** the site blocks headless browsers, so it is only checked with pnpm sync-showcase --headed */
 		headed?: boolean;
 		/** css selectors for things to hide such as popups */
 		hide?: string[];
@@ -42,7 +42,7 @@ export interface Site {
 		/** seconds into the videos to pause them at, for one that would be caught at a blank moment */
 		video?: number;
 		/**
-		 * the first frame of its clip, taken with pnpm showcase <id> --clip, for a site that shows something
+		 * the first frame of its clip, taken with pnpm sync-showcase <id> --clip, for a site that shows something
 		 * different on every visit, so the screenshot matches the clip that plays over it
 		 */
 		from_clip?: boolean;
@@ -55,7 +55,7 @@ export interface Site {
 	more?: true;
 	/**
 	 * a short recording that plays in place of the screenshot, for a site whose video, animation or
-	 * hover effects a screenshot misses. taken with pnpm showcase <id> --clip
+	 * hover effects a screenshot misses. taken with pnpm sync-showcase <id> --clip
 	 */
 	clip?:
 		| true
@@ -338,13 +338,14 @@ export const sites: Site[] = [
 		description: 'Web and branding agency in Brussels',
 		category: 'business',
 		more: true,
-		// the animation behind the heading only plays without reduced motion, which screenshots use
-		screenshot: { from_clip: true },
-		clip: { travel: true, wander: true }
+		// its hero only moves as it scrolls and follows the pointer, which a clip that scrolls shows
+		// but the many more never plays, so it is shown still, from the first frame of the clip it had,
+		// which pnpm sync-showcase leaves as it is
+		screenshot: { from_clip: true }
 	},
 
 	// TODO retake these three once the news is quieter, their front pages lead with the 2026
-	// midterms, pnpm showcase --headed nytimes yahoo-finance reuters
+	// midterms, pnpm sync-showcase --headed nytimes yahoo-finance reuters
 	{
 		id: 'nytimes',
 		name: 'The New York Times',

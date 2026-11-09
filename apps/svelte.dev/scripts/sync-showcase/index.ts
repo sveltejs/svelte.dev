@@ -12,12 +12,12 @@
  * needs a playwright browser, pnpm exec playwright install chromium
  *
  * @example
- * pnpm showcase                # every site
- * pnpm showcase immich crates  # only these sites, by id
- * pnpm showcase --missing      # only sites without a screenshot
- * pnpm showcase --check        # check without taking screenshots
- * pnpm showcase --headed       # sites that block headless browsers
- * pnpm showcase --clip         # record the clips of sites with one, which needs ffmpeg
+ * pnpm sync-showcase                # every site
+ * pnpm sync-showcase immich crates  # only these sites, by id
+ * pnpm sync-showcase --missing      # only sites without a screenshot
+ * pnpm sync-showcase --check        # check without taking screenshots
+ * pnpm sync-showcase --headed       # sites that block headless browsers
+ * pnpm sync-showcase --clip         # record the clips of sites with one, which needs ffmpeg
  */
 import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
@@ -32,11 +32,11 @@ import {
 	PlaywrightBlocker
 } from '@ghostery/adblocker-playwright';
 import { chromium, type Browser, type Page } from 'playwright';
-import { arrange } from '../src/routes/showcase/arrange.ts';
-import { categories, sites, type Site } from '../src/routes/showcase/sites.ts';
+import { arrange } from '../../src/routes/showcase/arrange.ts';
+import { categories, sites, type Site } from '../../src/routes/showcase/sites.ts';
 
-const SCREENSHOTS = path.resolve(import.meta.dirname, '../src/routes/showcase/screenshots');
-const CLIPS = path.resolve(import.meta.dirname, '../src/routes/showcase/clips');
+const SCREENSHOTS = path.resolve(import.meta.dirname, '../../src/routes/showcase/screenshots');
+const CLIPS = path.resolve(import.meta.dirname, '../../src/routes/showcase/clips');
 const EXTENSIONS = ['jpg', 'png', 'webp'];
 const VIEWPORT = { width: 1440, height: 900 };
 
@@ -134,7 +134,7 @@ await browser.close();
 
 if (skipped.length > 0 && !values.headed) {
 	console.log(
-		`\nSkipped ${skipped.map((site) => site.id).join(', ')}, which block headless browsers. Check them with \`pnpm showcase --headed\``
+		`\nSkipped ${skipped.map((site) => site.id).join(', ')}, which block headless browsers. Check them with \`pnpm sync-showcase --headed\``
 	);
 }
 

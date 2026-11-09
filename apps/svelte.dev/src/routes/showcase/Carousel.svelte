@@ -2,7 +2,7 @@
 	import type { Picture } from '@sveltejs/enhanced-img';
 	import { Tween, prefersReducedMotion } from 'svelte/motion';
 	import { quintOut } from 'svelte/easing';
-	import { untrack } from 'svelte';
+	import { tick, untrack } from 'svelte';
 	import type { Attachment } from 'svelte/attachments';
 	import type { Site } from './sites.ts';
 
@@ -376,15 +376,22 @@
 		}, 120);
 	}
 
-	function key(event: KeyboardEvent) {
-		if (event.key === 'ArrowLeft') {
-			event.preventDefault();
-			touched = true;
-			go(-1);
-		} else if (event.key === 'ArrowRight') {
-			event.preventDefault();
-			touched = true;
-			go(1);
+	/**
+	 * the arrow keys turn it from anywhere in it. on the marks, which are one stop in the tab order,
+	 * the focus follows to the mark of the one coming to the front
+	 */
+	async function key(event: KeyboardEvent) {
+		const by = event.key === 'ArrowLeft' ? -1 : event.key === 'ArrowRight' ? 1 : 0;
+		if (by === 0) return;
+
+		event.preventDefault();
+		touched = true;
+		go(by);
+
+		const steps = (event.target as HTMLElement).closest('.steps');
+		if (steps) {
+			await tick();
+			steps.querySelector<HTMLElement>('[aria-current="true"]')?.focus();
 		}
 	}
 
@@ -409,11 +416,14 @@
 
 <svelte:document onvisibilitychange={() => (shown = document.visibilityState === 'visible')} />
 
+<!-- the arrow keys, from the links and buttons inside it, which is where they come from -->
+<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 <section
 	class="carousel"
 	aria-roledescription="carousel"
 	aria-label="Sites built with Svelte"
 	{@attach spin_in}
+	onkeydown={key}
 	onfocusin={(event) => (focused = (event.target as HTMLElement).matches(':focus-visible'))}
 	onfocusout={(event) => {
 		if (!(event.currentTarget as HTMLElement).contains(event.relatedTarget as Node)) {
@@ -430,7 +440,6 @@
 		onpointerup={up}
 		onpointercancel={up}
 		onwheel={wheel}
-		onkeydown={key}
 	>
 		<div class="space" {@attach dim}>
 			{#each cards as { site, picture, placeholder, clip }, i (site.id)}
@@ -439,12 +448,14 @@
 				{@const front = i === current}
 				{@const at = place(o)}
 				{@const grey = Math.min(d, 1)}
+				<!-- out of the tab order and hidden from screen readers, since the name below links to the
+				     same place and the buttons turn it -->
 				<a
-					class="card"
+					class={['card', { front }]}
 					href="#{site.id}"
 					draggable="false"
-					tabindex={front ? 0 : -1}
-					aria-hidden={!front}
+					tabindex="-1"
+					aria-hidden="true"
 					style:transform="translate(-50%, -50%) translate3d({at.x - 50}cqw, 0, {at.z}px) rotateY({at.r}deg)"
 					style:opacity={d > 2 ? 1 - Math.min(1, d - 2) : undefined}
 					style:filter={settled && front
@@ -456,7 +467,6 @@
 					onclick={(event) => click(event, i)}
 					{@attach turn_on(i)}
 					onpointerenter={() => front && onprime(site.id)}
-					onfocus={() => onprime(site.id)}
 				>
 					<span class={['face', { playing: settled && playing === i }]}>
 						<picture class="slide">
@@ -514,6 +524,8 @@
 				<a
 					href="#{cards[target].site.id}"
 					onclick={(event) => onpick(event, cards[target].site.id)}
+					onpointerenter={() => onprime(cards[target].site.id)}
+					onfocus={() => onprime(cards[target].site.id)}
 				>
 					{cards[target].site.name}
 				</a>
@@ -534,6 +546,7 @@
 						class="step"
 						aria-label={site.name}
 						aria-current={i === target}
+						tabindex={i === target ? 0 : -1}
 						style:--progress={i !== target ? 0 : moving ? shown_progress : 1}
 						onclick={() => show(i)}
 					></button>
@@ -595,17 +608,8 @@
 		-webkit-tap-highlight-color: transparent;
 
 		/* the one in front opens, which the hand over the rest of the ring would not say */
-		&[tabindex='0'] {
+		&.front {
 			cursor: pointer;
-		}
-
-		&:focus-visible {
-			outline: none;
-
-			.face {
-				outline: 2px solid var(--sk-fg-accent);
-				outline-offset: 4px;
-			}
 		}
 	}
 
@@ -621,7 +625,7 @@
 
 		/* pressed in a little as the one in front is clicked, felt before it moves to the list. the
 		   face rather than the card, so the card stays put under the pointer */
-		.card[tabindex='0']:active & {
+		.card.front:active & {
 			scale: 0.97;
 		}
 	}
@@ -754,7 +758,8 @@
 			top: calc(50% - 0.1rem);
 			height: 0.2rem;
 			border-radius: 0.1rem;
-			background: var(--sk-border);
+			/* dark enough to see against the page, at 3:1 or more */
+			background: var(--sk-fg-4);
 		}
 
 		&::after {
@@ -779,7 +784,7 @@
 		&[aria-current='true'] {
 			width: 4.8rem;
 
-			/* a little darker than the rest, but well short of the fill, so the two stay apart */
+			/* lighter than the rest, so the fill stands out against it as it grows */
 			&::before {
 				background: color-mix(in srgb, var(--sk-fg-4) 45%, var(--sk-bg-1));
 			}
@@ -794,13 +799,7 @@
 			outline-offset: -1rem;
 		}
 
-		@media (max-width: 739px) {
-			width: 1.6rem;
-
-			&[aria-current='true'] {
-				width: 3.2rem;
-			}
-		}
+		/* at least 24px across everywhere, so it is easy enough to hit */
 	}
 
 	@keyframes name-in {

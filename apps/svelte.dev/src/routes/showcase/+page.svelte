@@ -749,6 +749,9 @@
 	sizes: string,
 	{ text = true, right = false, fill = undefined as Tile['fill'], still = false, style = '' } = {}
 )}
+	<!-- a still one, as in the many more, never loads anything more on hover or focus, to save
+	     data: no whole screenshot to scroll down, and no clip that scrolls down the page -->
+	{@const moves = clips[site.id] && !(still && scrolling.has(site.id))}
 	<li
 		class={['site', size, { right }, fill && `fill-${fill}`]}
 		id={site.id}
@@ -759,9 +762,9 @@
 		<a
 			class="tile"
 			href={site.url}
-			onpointerenter={(event) => (!still || clips[site.id]) && lengthen(event, site.id)}
-			onfocus={(event) => clips[site.id] && focus_clip(thumb_of(event), site.id)}
-			onblur={(event) => clips[site.id] && release(thumb_of(event))}
+			onpointerenter={(event) => (still ? moves : true) && lengthen(event, site.id)}
+			onfocus={(event) => moves && focus_clip(thumb_of(event), site.id)}
+			onblur={(event) => moves && release(thumb_of(event))}
 			{@attach fade_in}
 		>
 			<span
@@ -769,7 +772,7 @@
 				{@attach clips[site.id] && !scrolling.has(site.id) ? in_view(site.id) : undefined}
 			>
 				{#if pictures[site.id]}
-					{@render screenshot(site.id, sizes, 'lazy', true)}
+					{@render screenshot(site.id, sizes, 'lazy', !!moves)}
 				{/if}
 
 				{#if !text}

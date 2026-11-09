@@ -17,7 +17,7 @@
 		"prepare": "svelte-kit sync",
 		"sync-docs": "node scripts/sync-docs/index.ts",
 		"sync-packages": "node scripts/sync-packages/index.ts",
-		"showcase": "node scripts/showcase.ts"
+		"sync-showcase": "node scripts/sync-showcase/index.ts"
 	},
 	"dependencies": {
 		"@jridgewell/sourcemap-codec": "^1.5.5",
