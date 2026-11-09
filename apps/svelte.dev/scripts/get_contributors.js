@@ -1,11 +1,13 @@
 // @ts-check
 import { Jimp } from 'jimp';
-import { stat, writeFile } from 'node:fs/promises';
+import { existsSync } from 'node:fs';
+import { writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { is_blank } from './utils.js';
+import { has_supporters, is_blank, write_fallback } from './utils.js';
 
 const force = process.env.FORCE_UPDATE === 'true';
+const fallback = process.env.ALLOW_FALLBACK === 'true';
 const repositories = ['svelte', 'kit', 'cli', 'vite-plugin-svelte', 'language-tools', 'ai-tools'];
 const automated_accounts = new Set(['copilot', 'claude']);
 
@@ -51,18 +53,22 @@ function select_contributors(contributor_lists, max) {
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const out = path.resolve(__dirname, '../src/routes/_home/Supporters/contributors.js');
+const sprite_out = path.resolve(__dirname, '../src/routes/_home/Supporters/contributors.jpg');
+
+// builds regenerate a fallback list, so they never ship without supporters
+if (!force && (fallback ? existsSync(out) : has_supporters(out))) {
+	const relative = path.relative(process.cwd(), out);
+	console.info(`[update/contributors] ${relative} exists. Skipping`);
+	process.exit(0);
+}
 
 try {
-	if (!force && (await stat(out))) {
-		const relative = path.relative(process.cwd(), out);
-		console.info(`[update/contributors] ${relative} exists. Skipping`);
-		process.exit(0);
-	}
-} catch {
-	const { GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET } = process.env;
-
 	const MAX = 48;
 	const SIZE = 128;
+
+	/** @type {Record<string, string>} */
+	const headers = {};
+	if (process.env.GITHUB_TOKEN) headers.authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
 
 	const contributor_lists = await Promise.all(
 		repositories.map(async (repository) => {
@@ -71,11 +77,9 @@ try {
 
 			while (true) {
 				const params = new URLSearchParams({ per_page: '100', page: String(page++) });
-				if (GITHUB_CLIENT_ID) params.set('client_id', GITHUB_CLIENT_ID);
-				if (GITHUB_CLIENT_SECRET) params.set('client_secret', GITHUB_CLIENT_SECRET);
 
 				const url = `https://api.github.com/repos/sveltejs/${repository}/contributors?${params}`;
-				const res = await fetch(url);
+				const res = await fetch(url, { headers });
 				if (!res.ok)
 					throw new Error(`Could not load contributors for ${repository}: ${res.status}`);
 
@@ -118,13 +122,26 @@ try {
 		sprite.composite(images[i], i * SIZE, 0);
 	}
 
-	await sprite.write(
-		// @ts-expect-error
-		fileURLToPath(new URL(`../src/routes/_home/Supporters/contributors.jpg`, import.meta.url)),
-		{ quality: 80 }
-	);
+	// @ts-expect-error
+	await sprite.write(sprite_out, { quality: 80 });
 
 	const str = `[\n\t${authors.map((a) => `'${a.login}'`).join(',\n\t')}\n]`;
 
-	writeFile(out, `export default ${str};`);
+	await writeFile(out, `export default ${str};`);
+} catch (err) {
+	if (has_supporters(out)) {
+		// keep the existing files when a forced update fails
+		console.warn(
+			`[update/contributors] Could not load contributors, keeping existing list: ${err}`
+		);
+	} else if (fallback) {
+		// type checking and local dev don't need the real list, so don't let
+		// rate limiting or network failures break them
+		console.warn(
+			`[update/contributors] Could not load contributors, writing an empty list: ${err}`
+		);
+		await write_fallback(out, sprite_out);
+	} else {
+		throw err;
+	}
 }
