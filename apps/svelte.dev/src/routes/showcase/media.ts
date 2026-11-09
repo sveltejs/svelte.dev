@@ -18,7 +18,9 @@ const screenshots = {
 };
 
 // the top of each, which is all that shows until you point at one. the wider ones go in the large
-// cards, which are as tall as 6:5
+// cards, which are as tall as 0.87:1 where they are tallest, so theirs are cut at 4:5, taller than
+// that, to fill the card by its width as the whole one does once it scrolls rather than by its
+// height, which would zoom it in and jump as the whole one takes its place
 const crops = {
 	...import.meta.glob<Picture>(['./screenshots/*.{jpg,png,webp}', '!./screenshots/*@2x.*'], {
 		eager: true,
@@ -31,7 +33,7 @@ const crops = {
 		query: {
 			enhanced: true,
 			w: '480;960;1440;1920;2880',
-			aspect: '6:5',
+			aspect: '4:5',
 			fit: 'cover',
 			position: 'top'
 		}
@@ -52,13 +54,13 @@ export const pictures = by_id(screenshots);
 
 /**
  * the tops of the screenshots by site id, or the whole of one shown from somewhere else, or of
- * one no taller than its top, which cropping to 6:5 would cut at the sides instead
+ * one no taller than its top, which cropping to 4:5 would cut at the sides instead
  */
 export const tops: Record<string, Picture> = Object.fromEntries(
 	Object.entries(by_id(crops)).map(([id, crop]) => {
 		const whole = pictures[id];
 		const position = sites.find((site) => site.id === id)?.screenshot?.position;
-		return [id, position || whole.img.h / whole.img.w <= 5 / 6 ? whole : crop];
+		return [id, position || whole.img.h / whole.img.w <= 5 / 4 ? whole : crop];
 	})
 );
 

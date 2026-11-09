@@ -93,8 +93,8 @@ compact rows its name over the screenshot as you point at, focus or tap it. what
 		}
 
 		/* where it is large, taller than 16:10 to fill the rows it spans beside the smaller ones, so
-		   the mosaic has no holes, about the 6:5 its clip and screenshot are taken at, so little of
-		   them is cut, and elsewhere 16:10 like the rest, so the screenshots in a row line up */
+		   the mosaic has no holes, about the 6:5 its clip is taken at, so little of it is cut, and
+		   elsewhere 16:10 like the rest, so the screenshots in a row line up */
 		&.large {
 			@media (min-width: 740px) {
 				grid-template-rows: 1fr auto;
