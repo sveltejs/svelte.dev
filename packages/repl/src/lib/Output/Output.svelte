@@ -186,7 +186,7 @@
 {#if embedded !== 'output-only'}
 	<div class="view-toggle">
 		{#if workspace.current.name.endsWith('.md')}
-			<button class="active">Markdown</button>
+			<button aria-current="true">Markdown</button>
 		{:else}
 			<button aria-current={view === 'result'} onclick={() => (view = 'result')}>Result</button>
 			<button aria-current={view === 'js'} onclick={() => (view = 'js')}>JS output</button>
@@ -271,12 +271,16 @@
 		position: relative;
 		font: var(--sk-font-ui-small); /* TODO should probably be a global button style */
 		border: none;
-		border-bottom: 1px solid transparent;
+		border-bottom: 2px solid transparent;
 		padding: 0 1rem;
 		border-radius: 0;
 
 		&[aria-current='true'] {
-			border-bottom: 1px solid var(--sk-fg-accent);
+			border-bottom-color: var(--sk-fg-accent);
+		}
+
+		&:focus-visible {
+			outline-offset: -2px;
 		}
 	}
 

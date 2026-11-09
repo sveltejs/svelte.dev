@@ -157,13 +157,10 @@
 	}
 
 	button {
+		text-decoration: underline;
 		color: var(--sk-fg-accent);
 		padding: 0 0 1px;
 		position: relative;
-	}
-
-	button:hover {
-		text-decoration: underline;
 	}
 
 	small {

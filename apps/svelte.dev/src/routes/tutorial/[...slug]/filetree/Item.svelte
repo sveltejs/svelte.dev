@@ -204,6 +204,7 @@
 
 	[aria-current='true'] {
 		color: var(--sk-fg-accent);
+		box-shadow: inset 0.3rem 0 0 var(--sk-fg-accent);
 	}
 
 	[aria-current='true']:has(:focus-visible)::after,

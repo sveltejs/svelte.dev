@@ -17,6 +17,7 @@ Accessibility helper component to skip to the main content
 		align-items: center;
 		background: var(--sk-bg-1);
 		color: inherit;
+		text-decoration: none;
 		height: calc(var(--sk-nav-height) - 2rem);
 		padding: 0 1rem;
 		position: absolute;
@@ -25,6 +26,10 @@ Accessibility helper component to skip to the main content
 		transform: translateY(-999px);
 		font: var(--sk-font-ui-medium);
 		z-index: 1000; /* 1 more than the banner z-index */
+	}
+
+	a:hover {
+		text-decoration: underline;
 	}
 
 	a:focus {
