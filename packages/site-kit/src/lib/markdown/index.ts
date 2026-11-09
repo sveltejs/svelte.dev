@@ -1,4 +1,5 @@
 export { render_content_markdown } from './renderer.ts';
+export type { DocumentationReferences } from './references.ts';
 
 export { transform, slugify, clean, strip_origin } from './utils.ts';
 
