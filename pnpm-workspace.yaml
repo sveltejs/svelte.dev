@@ -15,6 +15,7 @@ minimumReleaseAgeExclude:
 blockExoticSubdeps: true
 engineStrict: true
 allowBuilds:
+  core-js: false
   esbuild: true
   sharp: true
   svelte-preprocess: true
