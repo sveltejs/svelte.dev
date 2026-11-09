@@ -113,6 +113,7 @@ export const sites: Site[] = [
 		url: 'https://www.logitech.com/en-us',
 		description: 'Mechanical keyboards, wireless mice, webcams, headsets, software, and more',
 		category: 'brands',
+		more: true,
 		// the discount popup and the backdrop behind it
 		screenshot: { hide: ['.modal.fixed', '.fixed[class~="bg-black/80"]'] }
 	},
@@ -139,6 +140,7 @@ export const sites: Site[] = [
 		url: 'https://www.ashleyfurniture.com/',
 		description: 'Home furniture and home decor online or in-store',
 		category: 'brands',
+		more: true,
 		clip: true,
 		screenshot: {
 			headed: true,
@@ -168,10 +170,10 @@ export const sites: Site[] = [
 		url: 'https://dbrand.com/',
 		description: 'The global leader in device customization',
 		category: 'brands',
+		more: true,
 		// from its clip, so the two match
 		screenshot: { from_clip: true },
-		// stopping where its customer count animates
-		clip: { travel: 'section.wrapper:has-text("23 Million")' }
+		clip: true
 	},
 	{
 		id: 'mill',
@@ -179,9 +181,10 @@ export const sites: Site[] = [
 		url: 'https://www.mill.com/',
 		description: 'Turns would-be food waste into resources for the Earth',
 		category: 'brands',
-		// the screenshot is from its clip, which plays its top and stops at its steps
+		more: true,
+		// the screenshot is from its clip, which plays its hero alone
 		screenshot: { hide: ['dialog'], from_clip: true },
-		clip: { travel: '.how-it-works-slide-rail' }
+		clip: true
 	},
 	{
 		id: 'porters-paints',
@@ -198,6 +201,7 @@ export const sites: Site[] = [
 		url: 'https://swehl.com/',
 		description: 'A one-stop-shop for your breastfeeding journey',
 		category: 'brands',
+		more: true,
 		screenshot: { hide: ['.z-50:has(#popup)'] }
 	},
 	{
@@ -206,6 +210,7 @@ export const sites: Site[] = [
 		url: 'https://chapitreresidentiel.com/en',
 		description: 'Your new home, connected to what matters',
 		category: 'brands',
+		more: true,
 		// from its clip, which shows its animation
 		screenshot: { from_clip: true },
 		clip: true
@@ -258,6 +263,7 @@ export const sites: Site[] = [
 		url: 'https://beyonk.com/',
 		description: 'Online event ticketing system and ticket booking software',
 		category: 'business',
+		more: true,
 		// from its clip, so the two match
 		screenshot: { from_clip: true },
 		clip: true
@@ -276,6 +282,7 @@ export const sites: Site[] = [
 		url: 'https://www.zenos.com/',
 		description: 'Robotics for industrial and construction productivity',
 		category: 'business',
+		more: true,
 		// from its clip, so it matches where the particles start
 		screenshot: { from_clip: true },
 		// its heading writes itself in as the page loads
@@ -287,9 +294,10 @@ export const sites: Site[] = [
 		url: 'https://modulus.vision/',
 		description: 'Design, web development and consulting',
 		category: 'business',
-		// the screenshot is from its clip, which plays its animation as it scrolls
+		more: true,
+		// the screenshot is from its clip, of its hero, which animates without scrolling
 		screenshot: { hide: ['.cookieConsentWrapper'], from_clip: true },
-		clip: { travel: true }
+		clip: true
 	},
 	{
 		id: 'montoni',
@@ -310,7 +318,7 @@ export const sites: Site[] = [
 		more: true,
 		// without the banner across the top, and from its clip, so the two match
 		screenshot: { hide: ['._site-banner'], from_clip: true },
-		clip: { travel: true }
+		clip: true
 	},
 	{
 		id: 'merlin',
@@ -318,6 +326,7 @@ export const sites: Site[] = [
 		url: 'https://merlin.studio/',
 		description: 'Boutique Digital Studio creating lasting connection',
 		category: 'business',
+		more: true,
 		// from its clip, so the two match
 		screenshot: { from_clip: true },
 		clip: { wander: true }
@@ -328,6 +337,7 @@ export const sites: Site[] = [
 		url: 'https://akis.studio/',
 		description: 'Web and branding agency in Brussels',
 		category: 'business',
+		more: true,
 		// the animation behind the heading only plays without reduced motion, which screenshots use
 		screenshot: { from_clip: true },
 		clip: { travel: true, wander: true }
@@ -341,8 +351,9 @@ export const sites: Site[] = [
 		url: 'https://www.nytimes.com/',
 		description: 'Live news, investigations, opinion, photos and video',
 		category: 'news',
-		// the window alone, so taking it never scrolls a site that is quick to block automation
-		screenshot: { headed: true, height: 900 }
+		// the window alone, so taking it never scrolls a site that is quick to block automation. its
+		// page is centred between empty margins, so when cropped it starts where its content does
+		screenshot: { headed: true, height: 900, position: '30% top' }
 	},
 	{
 		id: 'yahoo-finance',
@@ -376,7 +387,8 @@ export const sites: Site[] = [
 		url: 'https://www.nrk.no/',
 		// from https://www.nrk.no/about/this-is-nrk-1.2895065
 		description: 'Norway’s major broadcasting institution',
-		category: 'news'
+		category: 'news',
+		more: true
 	},
 	{
 		id: 'the-pudding',
@@ -392,6 +404,7 @@ export const sites: Site[] = [
 		// from https://decorrespondent.nl/about
 		description: 'A journalism platform for independent voices',
 		category: 'news',
+		more: true,
 		screenshot: { hide: ['#signup-zuiderdock'] }
 	},
 	{
@@ -399,7 +412,8 @@ export const sites: Site[] = [
 		name: 'Syntax',
 		url: 'https://syntax.fm/',
 		description: 'Wes Bos and Scott Tolinski dive deep into web development',
-		category: 'news'
+		category: 'news',
+		more: true
 	},
 
 	{
@@ -418,8 +432,9 @@ export const sites: Site[] = [
 		url: 'https://tv.apple.com/',
 		description: 'Browse all movies, TV shows, and more',
 		category: 'entertainment',
-		// a different trailer and layout on each visit, which reduced motion skips to posters
-		screenshot: { from_clip: true },
+		// a different trailer and layout on each visit, which reduced motion skips to posters. shown
+		// from the foot, where its heading is
+		screenshot: { from_clip: true, position: 'left bottom' },
 		clip: true
 	},
 	{
@@ -429,6 +444,7 @@ export const sites: Site[] = [
 		// from https://www.apple.com/app-store/
 		description: 'A safe and trusted place to discover apps',
 		category: 'entertainment',
+		more: true,
 		screenshot: { hide: ['.banner-container'] }
 	},
 	{
@@ -438,6 +454,7 @@ export const sites: Site[] = [
 		// from https://podcasters.apple.com/support/5462-apple-podcasts-available-on-the-web
 		description: 'The full Apple Podcasts experience on any web browser, on any device',
 		category: 'entertainment',
+		more: true,
 		// the window alone, which the app fills, so the whole of it shows at once
 		screenshot: { hide: ['.banner-container'], height: 900 }
 	},
@@ -447,8 +464,8 @@ export const sites: Site[] = [
 		url: 'https://www.spotify.com/us/premium/',
 		description: 'Ad-free music listening',
 		category: 'entertainment',
-		// the screenshot is from its clip, so the two match
-		screenshot: { hide: ['.mh-message-bar'], from_clip: true },
+		// the screenshot is from its clip, so the two match. shown from the middle, where its heading is
+		screenshot: { hide: ['.mh-message-bar'], from_clip: true, position: 'left center' },
 		clip: true
 	},
 	{
@@ -457,6 +474,7 @@ export const sites: Site[] = [
 		url: 'https://www.viki.com/',
 		description: 'Stream free Asian dramas & movies with English subtitles',
 		category: 'entertainment',
+		more: true,
 		// from its clip, so the two match
 		screenshot: { from_clip: true },
 		clip: true
@@ -467,6 +485,7 @@ export const sites: Site[] = [
 		url: 'https://www.ripleys.com/',
 		description: 'Aquariums and attractions',
 		category: 'entertainment',
+		more: true,
 		// the header grows into a video filling the window as the page scrolls
 		// the screenshot is from its clip, so the two match
 		screenshot: { hide: ['.bb-root'], height: 900, from_clip: true },
@@ -480,7 +499,8 @@ export const sites: Site[] = [
 		category: 'entertainment',
 		// the screenshot is from its clip, so the two match
 		screenshot: { hide: ['#privacy_modal'], from_clip: true },
-		clip: { travel: '#welcome-to-brawlhalla' }
+		// its hero alone, which moves enough without scrolling down
+		clip: true
 	},
 	{
 		id: 'guild-wars-3',
@@ -516,7 +536,8 @@ export const sites: Site[] = [
 		name: 'Allfeat',
 		url: 'https://allfeat.org/',
 		description: 'Control all your music IPs in one place',
-		category: 'entertainment'
+		category: 'entertainment',
+		more: true
 	},
 
 	{
@@ -553,6 +574,7 @@ export const sites: Site[] = [
 		url: 'https://www.ons.gov.uk/explore-local-statistics/',
 		description: 'Find, compare and visualise statistics about communities in the United Kingdom',
 		category: 'public',
+		more: true,
 		// the window alone, since the rest of the page is only links
 		screenshot: { height: 900 }
 	},
@@ -595,6 +617,7 @@ export const sites: Site[] = [
 		url: 'https://chat.z.ai/',
 		description: 'The AI assistant powered by GLM-5.3-Flash',
 		category: 'ai',
+		more: true,
 		// a demo chat linked from https://z.ai/blog/glm-4.7
 		// the window alone, which the app fills, so the whole of it shows at once
 		screenshot: { url: 'https://chat.z.ai/s/83640645-5436-4069-a27b-f8094189d669', height: 900 }
@@ -607,7 +630,7 @@ export const sites: Site[] = [
 		category: 'ai',
 		// from its clip, so the two match
 		screenshot: { from_clip: true },
-		clip: { travel: true }
+		clip: true
 	},
 	{
 		id: 'open-webui',
@@ -645,7 +668,8 @@ export const sites: Site[] = [
 		more: true,
 		// from its clip, so the two match
 		screenshot: { from_clip: true },
-		clip: { travel: true }
+		// its hero alone, which moves without scrolling down
+		clip: true
 	},
 	{
 		id: 'poolside',
@@ -665,6 +689,7 @@ export const sites: Site[] = [
 		description:
 			'Moving Organisations Forward Through Artificial Intelligence and Advanced Analytics',
 		category: 'ai',
+		more: true,
 		// from its clip, so the two match
 		screenshot: { from_clip: true },
 		clip: true
@@ -721,6 +746,7 @@ export const sites: Site[] = [
 		url: 'https://cobalt.tools/',
 		description: 'Save what you love without ads, tracking, paywalls or other nonsense',
 		category: 'tools',
+		more: true,
 		// the window alone, which the app fills, so the whole of it shows at once
 		screenshot: { height: 900 }
 	},
@@ -746,6 +772,7 @@ export const sites: Site[] = [
 		url: 'https://vert.sh/',
 		description: 'Quickly convert any image, video, audio, and document file',
 		category: 'tools',
+		more: true,
 		// the window alone, which the app fills, so the whole of it shows at once
 		screenshot: { hide: ['.fixed.bottom-28.right-0'], height: 900 }
 	},
@@ -762,6 +789,7 @@ export const sites: Site[] = [
 		url: 'https://kimbia.app/',
 		description: 'Running, trail, cycling, hiking: one journal',
 		category: 'tools',
+		more: true,
 		// further down than most, since the page goes on showing the app
 		screenshot: { hide: ['.fixed.inset-x-0.bottom-0'], height: 4800 }
 	},
@@ -788,8 +816,9 @@ export const sites: Site[] = [
 		url: 'https://survey.stackoverflow.co/',
 		description: 'The largest survey of people who code',
 		category: 'developers',
-		// the window alone, since the rest of the page adds little
-		screenshot: { height: 900 }
+		// the window alone, since the rest of the page adds little, from its left, where its heading
+		// is, when it is cropped to the taller large tile
+		screenshot: { height: 900, position: 'left top' }
 	},
 	{
 		id: 'stack-overflow',
@@ -816,10 +845,7 @@ export const sites: Site[] = [
 		name: 'Datawrapper',
 		url: 'https://www.datawrapper.de/',
 		description: 'Create interactive, responsive & beautiful data visualizations',
-		category: 'developers',
-		// from its clip, so the two match
-		screenshot: { from_clip: true },
-		clip: { scroll: '.editor-carousel', hover: '.editor-carousel__tab' }
+		category: 'developers'
 	},
 	{
 		id: 'tangled',
@@ -827,6 +853,7 @@ export const sites: Site[] = [
 		url: 'https://tangled.org/',
 		description: 'Your open, federated code forge for the next decade',
 		category: 'developers',
+		more: true,
 		// further down than most, since the page goes on showing the app
 		screenshot: { height: 4800 }
 	},
@@ -835,7 +862,8 @@ export const sites: Site[] = [
 		name: 'Coolify',
 		url: 'https://coolify.io/',
 		description: 'Open-source alternative to Heroku',
-		category: 'developers'
+		category: 'developers',
+		more: true
 	},
 	{
 		id: 'mermaid',
@@ -843,6 +871,7 @@ export const sites: Site[] = [
 		url: 'https://mermaid.live/',
 		description: 'A simple markdown-like script language for generating charts from text',
 		category: 'developers',
+		more: true,
 		// the window alone, which the app fills, so the whole of it shows at once
 		screenshot: {
 			hide: ['[role="dialog"]', '.fixed.inset-0.z-50', '[class*="bg-[#E0095F]"]'],
@@ -857,8 +886,7 @@ export const sites: Site[] = [
 		category: 'developers',
 		// from its clip, so the two match
 		screenshot: { from_clip: true },
-		// from the top down to the agent setup typing itself out, and back
-		clip: { travel: '.script-switcher', length: 12 }
+		clip: true
 	},
 	{
 		id: 'evidence',

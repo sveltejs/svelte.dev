@@ -1,5 +1,5 @@
 <script module lang="ts">
-	/** set once the page has shown, so the field flies in on the first visit and not on coming back */
+	/** set once the page has shown, so the ring spins in on the first visit and not on coming back */
 	let arrived = false;
 </script>
 
@@ -7,6 +7,7 @@
 	import type { Picture } from '@sveltejs/enhanced-img';
 	import { Icon } from '@sveltejs/site-kit/components';
 	import { arrange, type Tile } from './arrange.ts';
+	import Carousel from './Carousel.svelte';
 	import { categories, sites, type Site } from './sites.ts';
 
 	const screenshots = {
@@ -85,37 +86,100 @@
 		).map(([path, src]) => [path.replace(/^.*\/|(@2x)?\.\w+$/g, ''), `url(${src})`])
 	);
 
-	/** the smaller sites picked for their design, shown after the categories */
-	const extras = sites.filter((site) => site.more);
+	/**
+	 * the smaller sites picked for their design, shown after the categories, in rows that run off
+	 * either side of the window. in this order, which puts the best known and those that move where
+	 * they show whole at every width, and the least known at the ends of rows, where half of one is
+	 * cut off: with three, four or six across, the 1st, 12th, 13th, 24th, 25th and 36th are at an
+	 * end most often, and the last is left alone on phones and hidden there. any not named here
+	 * follow at the end
+	 */
+	const CROWD = [
+		// rows of six on wide screens, starting with one at an end
+		'porters-paints',
+		'apple-music-100-best',
+		'dbrand',
+		'viki',
+		'logitech',
+		'modulus',
+		'houses-of-the-world',
+		'de-correspondent',
+		'cobalt',
+		'mill',
+		'beyonk',
+		'swehl',
+		'kumamap',
+		'app-store',
+		'zenos',
+		'akis',
+		'mermaid',
+		'gestisoft',
+		'vert',
+		'ripleys',
+		'halfspace',
+		'llama',
+		'chapitre',
+		'trading-strategy',
+		'ons-local-statistics',
+		'apple-podcasts',
+		'merlin',
+		'anda',
+		'nrk',
+		'coolify',
+		'evidence',
+		'kimbia',
+		'tangled',
+		'poolside',
+		'syntax',
+		'pronauns',
+		'allfeat',
+		'ashley',
+		'z-ai',
+		'pausly'
+	];
 
-	interface Placement {
-		/** percent across */
-		x: number;
-		/** percent down */
-		y: number;
-		/** pixels toward the viewer */
-		z: number;
-		/** degrees turned about the vertical axis */
-		r: number;
+	const extras = sites.filter((site) => site.more).sort((a, b) => rank(a) - rank(b));
+
+	function rank(site: Site) {
+		const i = CROWD.indexOf(site.id);
+		return i === -1 ? CROWD.length : i;
 	}
 
-	// none is first in its category, since those are shown larger below: in an arc either side of
-	// the one in front
-	const field = place([
-		{ id: 'spotify', x: 50, y: 50, z: 0, r: 0 },
-		{ id: 'apple-tv', x: 86, y: 50, z: -180, r: -28 },
-		{ id: 'city-of-sydney', x: 14, y: 50, z: -180, r: 28 },
-		{ id: 'ons-census-maps', x: 110, y: 50, z: -420, r: -38 },
-		{ id: 'michelin', x: -10, y: 50, z: -420, r: 38 }
-	]);
+	/**
+	 * round the ring in the hero, in turn: names known the world over, from as many of the
+	 * categories as there are, the light ones between the dark, and most of them moving
+	 */
+	const HERO = [
+		'spotify',
+		'nytimes',
+		'bugatti',
+		'ikea',
+		'apple-tv',
+		'obama-foundation',
+		'hugging-face',
+		'square',
+		'windy',
+		'michelin'
+	];
+
+	const ring = HERO.flatMap((id) => {
+		const site = sites.find((site) => site.id === id);
+		if (!site || !tops[id]) return [];
+		return [{ site, picture: tops[id], placeholder: placeholders[id], clip: clips[id] }];
+	});
+
+	/** sites whose clips scroll down the page, which only play when pointed at or focused */
+	const scrolling = new Set(
+		sites.filter((site) => typeof site.clip === 'object' && site.clip.travel).map((site) => site.id)
+	);
 
 	const arrive = !arrived;
 
-	const sections = categories.map((category) => {
+	const sections = categories.map((category, n) => {
 		const members = sites.filter((site) => site.category === category.id && !site.more);
 
-		// the large ones go to those that move
-		const tiles = arrange(members, (site) => site.clip !== undefined);
+		// the large ones go to those that move, on the left in one category and the right in the next
+		const tiles = arrange(members, (site) => site.clip !== undefined, n % 2 === 1);
 		const first = tiles[0]?.site;
 
 		return {
@@ -130,8 +194,9 @@
 	const card_sizes = '(min-width: 740px) 440px, 60vw';
 
 	const sizes: Record<Tile['size'], string> = {
-		big: '(min-width: 1440px) 680px, (min-width: 640px) 48vw, 92vw',
-		small: '(min-width: 1440px) 330px, (min-width: 640px) 24vw, 46vw'
+		big: '(min-width: 1440px) 680px, (min-width: 1280px) 48vw, (min-width: 740px) 64vw, (min-width: 640px) 48vw, 92vw',
+		small:
+			'(min-width: 1440px) 330px, (min-width: 1280px) 24vw, (min-width: 740px) 32vw, (min-width: 640px) 48vw, 92vw'
 	};
 
 	const command = 'npx sv create';
@@ -139,13 +204,6 @@
 	/** shows a tick on the copy button for a moment after copying */
 	let copied = $state(false);
 	let uncopy: ReturnType<typeof setTimeout> | undefined;
-
-	function place(cards: Array<{ id: string } & Placement>) {
-		return cards.flatMap(({ id, ...placement }) => {
-			const site = sites.find((site) => site.id === id && pictures[id]);
-			return site ? [{ site, ...placement }] : [];
-		});
-	}
 
 	/** fades in the screenshots that have not loaded or started to show when the page starts */
 	function fade_in(node: HTMLElement) {
@@ -201,10 +259,6 @@
 		) {
 			return;
 		}
-
-		// the one pointed at is the only one that moves, until the pointer leaves it
-		hush(host);
-		scope.addEventListener('pointerleave', resume, { once: true });
 
 		// one with a clip plays it instead, until the pointer leaves the site
 		if (clips[id]) {
@@ -329,23 +383,23 @@
 		video.play().catch(() => {});
 	}
 
-	/** whether clips play at all, which the button at the start of the page turns off */
+	/** whether anything moves on its own, which the button at the start of the page turns off */
 	let autoplay = $state(true);
 
-	/** the screenshot with a clip in the middle of the window, if any */
-	let centred = $state<HTMLElement>();
+	/** the screenshots with clips that are mostly in the window */
+	const visible = new Set<HTMLElement>();
 
-	let band: IntersectionObserver | undefined;
-	let waiting: ReturnType<typeof setTimeout> | undefined;
-	const band_ids = new WeakMap<Element, string>();
+	let viewing: IntersectionObserver | undefined;
+	const view_ids = new WeakMap<Element, string>();
+	const waiting = new WeakMap<Element, ReturnType<typeof setTimeout>>();
 
 	/**
-	 * plays the clip of the screenshot in the middle of the window, one at
-	 * a time. a moment late, so scrolling past loads nothing
+	 * plays the clip of each screenshot that is mostly in the window, and stops it once it is
+	 * mostly out. a moment late, so scrolling past loads nothing
 	 */
-	function in_band(id: string) {
+	function in_view(id: string) {
 		return (node: HTMLElement) => {
-			band ??= new IntersectionObserver(
+			viewing ??= new IntersectionObserver(
 				(entries) => {
 					const moving =
 						matchMedia('(prefers-reduced-motion: no-preference)').matches &&
@@ -354,37 +408,38 @@
 
 					for (const entry of entries) {
 						const host = entry.target as HTMLElement;
-						const id = band_ids.get(host)!;
 
-						if (entry.isIntersecting) {
-							if (!moving) continue;
+						// most of it, or most of the window where it is taller than that
+						const shown = entry.intersectionRect.height;
+						const whole = Math.min(entry.boundingClientRect.height, entry.rootBounds?.height ?? 0);
+						const inside = entry.isIntersecting && shown >= whole * 0.6;
 
-							const previous = centred;
-							centred = host;
-							if (previous && previous !== host) release(previous);
-							clearTimeout(waiting);
-							// not while a mouse rests on another, which is then the only one that moves
-							if (autoplay && !document.querySelector('.card:hover, .site:hover')) {
-								waiting = setTimeout(() => play(host, id), 300);
+						clearTimeout(waiting.get(host));
+
+						if (inside) {
+							visible.add(host);
+							if (moving && autoplay) {
+								waiting.set(
+									host,
+									setTimeout(() => play(host, view_ids.get(host)!), 300)
+								);
 							}
 						} else {
-							if (host !== centred) continue;
-
-							clearTimeout(waiting);
-							centred = undefined;
+							visible.delete(host);
 							release(host);
 						}
 					}
 				},
-				{ rootMargin: '-35% 0px -45% 0px' }
+				{ threshold: [0, 0.2, 0.4, 0.6, 0.8, 1] }
 			);
 
-			band_ids.set(node, id);
-			band.observe(node);
+			view_ids.set(node, id);
+			viewing.observe(node);
 
 			return () => {
-				band?.unobserve(node);
-				if (centred === node) centred = undefined;
+				viewing?.unobserve(node);
+				visible.delete(node);
+				clearTimeout(waiting.get(node));
 			};
 		};
 	}
@@ -400,8 +455,8 @@
 
 		if (!autoplay) {
 			for (const host of document.querySelectorAll<HTMLElement>('[data-playing]')) stop(host);
-		} else if (centred) {
-			play(centred, band_ids.get(centred)!);
+		} else if (matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+			for (const host of visible) play(host, view_ids.get(host)!);
 		}
 	}
 
@@ -410,30 +465,14 @@
 		if (matchMedia('(prefers-reduced-motion: no-preference)').matches) play(host, id);
 	}
 
-	/** stops a clip once pointed away from or left, unless it is the one in the middle */
+	/** stops a clip once pointed away from or left, unless it is still in the window */
 	function release(host: HTMLElement) {
-		if (host !== centred && !host.matches(':hover') && !host.closest(':focus')) stop(host);
+		if (!visible.has(host) && !host.matches(':hover') && !host.closest(':focus')) stop(host);
 	}
 
 	/** the screenshot in a link */
 	function thumb_of(event: FocusEvent) {
 		return (event.currentTarget as HTMLElement).querySelector<HTMLElement>('.thumb')!;
-	}
-
-	/** stops every clip but the one given, such as the one a mouse is resting on */
-	function hush(host: HTMLElement) {
-		clearTimeout(waiting);
-		for (const other of document.querySelectorAll<HTMLElement>('[data-playing]')) {
-			if (other !== host) stop(other);
-		}
-	}
-
-	/** plays the clip in the middle of the window again, once nothing else is pointed at */
-	function resume() {
-		requestAnimationFrame(() => {
-			if (!centred || !autoplay || document.querySelector('.card:hover, .site:hover')) return;
-			play(centred, band_ids.get(centred)!);
-		});
 	}
 
 	function stop(host: HTMLElement) {
@@ -541,6 +580,10 @@
 			clip.style.opacity = '0';
 		}
 
+		// where it starts from, as the browser captures it, since starting from wherever the browser's
+		// own animation of it happens to be leaves it starting at the end when that is not yet running
+		const from = source.getBoundingClientRect();
+
 		source.style.viewTransitionName = 'picked';
 		root.classList.add('picking');
 
@@ -583,9 +626,12 @@
 		// captured, and travels to where the one in the list is
 		root.animate(
 			{
-				transform: [`translate(${to.left}px, ${to.top}px)`],
-				width: [`${to.width}px`],
-				height: [`${to.height}px`]
+				transform: [
+					`translate(${from.left}px, ${from.top}px)`,
+					`translate(${to.left}px, ${to.top}px)`
+				],
+				width: [`${from.width}px`, `${to.width}px`],
+				height: [`${from.height}px`, `${to.height}px`]
 			},
 			{
 				duration,
@@ -701,10 +747,10 @@
 	site: Site,
 	size: Tile['size'],
 	sizes: string,
-	{ text = true, right = false, still = false, style = '' } = {}
+	{ text = true, right = false, fill = undefined as Tile['fill'], still = false, style = '' } = {}
 )}
 	<li
-		class={['site', size, { right }]}
+		class={['site', size, { right }, fill && `fill-${fill}`]}
 		id={site.id}
 		{style}
 		style:--position={site.screenshot?.position}
@@ -718,7 +764,10 @@
 			onblur={(event) => clips[site.id] && release(thumb_of(event))}
 			{@attach fade_in}
 		>
-			<span class="thumb" {@attach clips[site.id] ? in_band(site.id) : undefined}>
+			<span
+				class="thumb"
+				{@attach clips[site.id] && !scrolling.has(site.id) ? in_view(site.id) : undefined}
+			>
 				{#if pictures[site.id]}
 					{@render screenshot(site.id, sizes, 'lazy', true)}
 				{/if}
@@ -749,7 +798,7 @@
 >
 	<!-- first, so the keyboard reaches it before anything that moves, and always there, so clips
 	     can be stopped before they start -->
-	{#if Object.keys(clips).length > 0}
+	{#if Object.keys(clips).length > 0 || ring.length > 0}
 		<button class="autoplay" onclick={toggle_autoplay}>
 			<!-- both, one over the other, so one can turn into the other -->
 			<span class="glyph" aria-hidden="true">
@@ -763,8 +812,8 @@
 			<!-- both, one over the other with only the one that applies showing, so the button is as wide
 			     either way -->
 			<span class="wording">
-				<span class={{ off: !autoplay }}>Pause videos</span>
-				<span class={{ off: autoplay }}>Play videos</span>
+				<span class={{ off: !autoplay }}>Pause motion</span>
+				<span class={{ off: autoplay }}>Play motion</span>
 			</span>
 		</button>
 	{/if}
@@ -780,37 +829,16 @@
 			<p>From newsrooms to public services, popular brands and leading industries</p>
 		</div>
 
-		<div class="field">
-			<div class="space">
-				{#each field as { site, x, y, z, r } (site.id)}
-					<a
-						class="card"
-						href="#{site.id}"
-						style:--x={x}
-						style:--y={y}
-						style:--z={z}
-						style:--r={r}
-						style:--position={site.screenshot?.position}
-						style:--placeholder={placeholders[site.id]}
-						onclick={(event) => morph(event, site.id)}
-						onpointerenter={(event) => {
-							prime(site.id);
-							lengthen(event, site.id);
-						}}
-						onfocus={(event) => {
-							prime(site.id);
-						}}
-						{@attach fade_in}
-					>
-						<!-- lifts on hover while the link stays put, so the pointer stays on it -->
-						<span class="face">
-							{@render screenshot(site.id, card_sizes, 'eager', true)}
-						</span>
-						<span class="visually-hidden">{site.name}</span>
-					</a>
-				{/each}
-			</div>
-		</div>
+		{#if ring.length > 0}
+			<Carousel
+				cards={ring}
+				{autoplay}
+				{arrive}
+				sizes={card_sizes}
+				onpick={morph}
+				onprime={prime}
+			/>
+		{/if}
 	</div>
 
 	<nav class="categories" aria-label="Categories">
@@ -848,8 +876,8 @@
 				<h2 id={section.id}>{section.title}</h2>
 
 				<ul class="sites">
-					{#each section.tiles as { site, size, right } (site.id)}
-						{@render tile(site, size, sizes[size], { right })}
+					{#each section.tiles as { site, size, right, fill } (site.id)}
+						{@render tile(site, size, sizes[fill ? 'big' : size], { right, fill })}
 					{/each}
 				</ul>
 			</section>
@@ -909,7 +937,7 @@
 
 	.hero {
 		position: relative;
-		/* a stacking context of its own, or safari drops frames as a card lifts on hover */
+		/* a stacking context of its own, or safari drops frames as the ring turns */
 		isolation: isolate;
 		padding: var(--sk-page-padding-top) 0 0;
 		overflow: clip;
@@ -950,64 +978,8 @@
 		text-wrap: balance;
 	}
 
-	.field {
-		position: relative;
-		height: clamp(18rem, 46vw, 38rem);
-		margin-top: 2.4rem;
-		perspective: 100rem;
-		/* the arc kept together in wide windows */
-		max-width: 120rem;
-		margin-inline: auto;
-		pointer-events: none;
-	}
-
-	.space {
-		position: absolute;
-		inset: 0;
-		transform-style: preserve-3d;
-	}
-
-	.card {
-		position: absolute;
-		left: calc(var(--x) * 1%);
-		top: calc(var(--y) * 1%);
-		width: clamp(20rem, 60vw, 44rem);
-		aspect-ratio: 16 / 10;
-		transform: translate(-50%, -50%) translateZ(calc(var(--z) * 1px)) rotateY(calc(var(--r) * 1deg));
-		transform-style: preserve-3d;
-		pointer-events: auto;
-
-		.arrive & {
-			animation: arrive 1.1s var(--quint-out) backwards;
-			/* nearest first, so the field fills in from the front */
-			animation-delay: calc(-1 * var(--z) * 0.5ms);
-
-			@media (prefers-reduced-motion: reduce) {
-				animation: fade 0.4s ease backwards;
-			}
-		}
-	}
-
 	.site {
 		position: relative;
-	}
-
-	.face {
-		position: absolute;
-		inset: 0;
-		overflow: hidden;
-		border-radius: var(--sk-border-radius);
-		/* the tiny screenshot, scaled up and so blurred, until the screenshot fades in over it */
-		background: var(--placeholder, none) var(--position, left top) / cover no-repeat var(--sk-bg-3);
-		box-shadow: 0.2rem 0.4rem 1.6rem rgb(0 0 0 / 0.2);
-
-		@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
-			transition: translate 0.3s var(--quint-out);
-
-			.card:hover & {
-				translate: 0 0 6rem;
-			}
-		}
 	}
 
 	/* the page jumps at once under the screenshot travelling to its place in the list */
@@ -1035,19 +1007,6 @@
 	:global(html.picking::view-transition-new(root)) {
 		animation: none;
 		mix-blend-mode: normal;
-	}
-
-	@keyframes arrive {
-		from {
-			opacity: 0;
-			translate: 0 0 -90rem;
-		}
-	}
-
-	@keyframes fade {
-		from {
-			opacity: 0;
-		}
 	}
 
 	/* the categories like the contents of a magazine, each with the first few sites in it and the
@@ -1163,8 +1122,7 @@
 			view-timeline: --list;
 			/* to blend with between the screenshots, or the grey shows there */
 			background: var(--sk-bg-1);
-			/* and none of it above or below the list, though the rows of the many more reach out to
-			   the sides */
+			/* and none of it above or below the list */
 			overflow-y: clip;
 
 			&::after {
@@ -1204,27 +1162,10 @@
 			}
 		}
 
-		/* and on the rows of the many more, which reach out past the sides of the list, clipped to
-		   them so none of it shows over the page above */
+		/* but the rows of the many more in colour all the way down, above the grey */
 		.crowd {
 			position: relative;
-			isolation: isolate;
-			view-timeline: --crowd;
-			background: var(--sk-bg-1);
-			overflow: clip;
-
-			&::after {
-				content: '';
-				position: absolute;
-				inset: -100vh 0 0;
-				z-index: 2;
-				background: linear-gradient(grey 15%, transparent 35% 55%, grey 75%) top / 100% 100vh
-					no-repeat;
-				mix-blend-mode: saturation;
-				pointer-events: none;
-				animation: stay-in-window linear both;
-				animation-timeline: --crowd;
-			}
+			z-index: 3;
 		}
 
 		/* and the one you point at or focus in colour wherever it is, above the grey */
@@ -1257,7 +1198,9 @@
 	}
 
 	/* a mosaic, the first large and as many after it as wide as the rows need to come out even */
-	/* one across on phones, two where the big ones take a row, and four where they take a square */
+	/* one across on phones, two on small tablets, three on tablets and small laptops, by six columns
+	   so a short last row can widen to fill, and four on wider screens. the large one takes a
+	   square from three across up */
 	.sites {
 		display: grid;
 		grid-template-columns: minmax(0, 1fr);
@@ -1271,6 +1214,10 @@
 			grid-template-columns: repeat(2, minmax(0, 1fr));
 		}
 
+		@media (min-width: 740px) {
+			grid-template-columns: repeat(6, minmax(0, 1fr));
+		}
+
 		@media (min-width: 1280px) {
 			grid-template-columns: repeat(4, minmax(0, 1fr));
 			gap: 5.6rem 3.2rem;
@@ -1281,8 +1228,30 @@
 		min-width: 0;
 		scroll-margin-top: var(--anchor-offset);
 
-		/* as large as two across and two down only where there are four columns, and otherwise the
-		   same size as the rest, rather than a whole row to itself */
+		/* where three are across, two of the six columns each, the large one four columns and two rows
+		   on alternate sides, and the one or two in a short last row widened to fill it */
+		@media (min-width: 740px) and (max-width: 1279px) {
+			grid-column: span 2;
+
+			&.big {
+				grid-column: span 4;
+				grid-row: span 2;
+			}
+
+			&.big.right {
+				grid-column: 3 / span 4;
+			}
+
+			&.fill-2 {
+				grid-column: span 3;
+			}
+
+			&.fill-1 {
+				grid-column: span 6;
+			}
+		}
+
+		/* as large as two across and two down where there are four columns */
 		@media (min-width: 1280px) {
 			&.big {
 				grid-column: span 2;
@@ -1296,14 +1265,12 @@
 
 		/* where it is large, taller than 16:10 to fill the rows it spans beside the smaller ones, so
 		   the mosaic has no holes, about the 6:5 its clip and screenshot are taken at, so little of
-		   them is cut, and elsewhere 16:10 like the rest, so the screenshots in a row line up */
-		@media (min-width: 1280px) {
+		   them is cut, and elsewhere 16:10 like the rest, so the screenshots in a row line up. from
+		   the top left like the rest, so what is cut is off the right, as a narrower window would,
+		   rather than off both sides */
+		@media (min-width: 740px) {
 			&.big .tile {
 				grid-template-rows: 1fr auto;
-			}
-
-			&.big :is(.image, .clip) {
-				object-position: var(--position, center top);
 			}
 		}
 	}
@@ -1338,7 +1305,7 @@
 		}
 
 		.big & .name {
-			@media (min-width: 1280px) {
+			@media (min-width: 740px) {
 				font-size: clamp(2.4rem, 1.8rem + 1.2vw, 3.6rem);
 			}
 		}
@@ -1349,7 +1316,7 @@
 		}
 
 		.big & .description {
-			@media (min-width: 1280px) {
+			@media (min-width: 740px) {
 				font: var(--sk-font-body);
 			}
 		}
@@ -1429,14 +1396,14 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		object-position: left top;
+		object-position: var(--position, left top);
 		opacity: 0;
 		pointer-events: none;
 		transition: opacity 0.15s ease;
 	}
 
 	/* in a little slower than it goes */
-	:is(.face, .thumb):global([data-playing]) > .clip {
+	.thumb:global([data-playing]) > .clip {
 		opacity: 1;
 		transition-duration: 0.2s;
 	}
@@ -1538,7 +1505,7 @@
 
 	/* the whole screenshot at its full height once it loads in place of the top of it, for the
 	   glance down it on hover */
-	:is(.thumb, .face) .slide > .image:global([data-long='loaded']) {
+	.thumb .slide > .image:global([data-long='loaded']) {
 		height: auto;
 	}
 
@@ -1598,16 +1565,20 @@
 		}
 	}
 
-	/* as many across as fit in the window with half of one cut off at either side, faded out
+	/* as many across as fit in the window with part of one cut off at either side, faded out
 	   towards the edges, all the same size and centred */
 	.crowd {
 		--across: 3;
 		--gap: 1.2rem;
-		/* one fewer across than there are, so half of one is left over either side */
-		--width: calc((100vw - (var(--across) - 1) * var(--gap)) / (var(--across) - 1));
+		/* half of one more across than the window holds, so with each row shifted a quarter of a
+		   step either way, the one cut off at the end of a row still shows at least half */
+		--width: calc(100vw / (var(--across) - 0.5) - var(--gap));
 
 		margin-inline: calc(50% - 50vw);
 		overflow-x: clip;
+		/* the rows centred in the window, though wider than it */
+		display: flex;
+		justify-content: center;
 		mask-image: linear-gradient(90deg, transparent, black 15%, black 85%, transparent);
 
 		@media (min-width: 640px) {
@@ -1619,10 +1590,13 @@
 			--across: 6;
 		}
 
+		/* in rows as wide as that many, with the last row centred under the rest if it is short */
 		ul {
-			display: grid;
-			grid-template-columns: repeat(var(--across), var(--width));
+			display: flex;
+			flex: none;
+			flex-wrap: wrap;
 			justify-content: center;
+			width: calc(var(--across) * var(--width) + (var(--across) - 1) * var(--gap));
 			gap: var(--gap);
 			margin: 0;
 			padding: 0;
@@ -1631,10 +1605,11 @@
 
 		/* sized by the list item rather than the screenshot, which Safari otherwise redraws with a
 		   flicker while scrolling. every other row a quarter of a step to the left and the rest a
-		   quarter to the right, so they are offset from each other by half of one, with at least a
-		   quarter of the one at either end showing */
+		   quarter to the right, so they are offset from each other by half of one, with at least
+		   half of the one at either end showing */
 		li {
 			--shift: 1;
+			width: var(--width);
 			container-type: inline-size;
 			translate: calc(var(--shift) * (var(--width) + var(--gap)) / 4) 0;
 
@@ -1660,6 +1635,51 @@
 					:nth-child(12n + 6)
 				) {
 					--shift: -1;
+				}
+			}
+		}
+
+		/* and a short last row not shifted either way, so it is centred under the rest */
+		li {
+			@media (max-width: 639px) {
+				&:nth-child(3n + 1):nth-last-child(-n + 2),
+				&:nth-child(3n + 1):nth-last-child(-n + 2) ~ li {
+					--shift: 0;
+				}
+			}
+
+			@media (min-width: 640px) and (max-width: 1023px) {
+				&:nth-child(4n + 1):nth-last-child(-n + 3),
+				&:nth-child(4n + 1):nth-last-child(-n + 3) ~ li {
+					--shift: 0;
+				}
+			}
+
+			@media (min-width: 1024px) {
+				&:nth-child(6n + 1):nth-last-child(-n + 5),
+				&:nth-child(6n + 1):nth-last-child(-n + 5) ~ li {
+					--shift: 0;
+				}
+			}
+		}
+
+		/* and none left alone on a row of its own at the end, which looks stranded */
+		li:last-child {
+			@media (max-width: 639px) {
+				&:nth-child(3n + 1) {
+					display: none;
+				}
+			}
+
+			@media (min-width: 640px) and (max-width: 1023px) {
+				&:nth-child(4n + 1) {
+					display: none;
+				}
+			}
+
+			@media (min-width: 1024px) {
+				&:nth-child(6n + 1) {
+					display: none;
 				}
 			}
 		}
