@@ -124,6 +124,9 @@
 	<meta name="twitter:title" content="Showcase • Svelte" />
 	<meta name="twitter:description" content="Websites built with Svelte and SvelteKit" />
 	<meta name="description" content="Websites built with Svelte and SvelteKit" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="https://svelte.dev/showcase/card.png" />
+	<meta name="og:image" content="https://svelte.dev/showcase/card.png" />
 </svelte:head>
 
 <div class="showcase" {@attach () => player.restore()}>
