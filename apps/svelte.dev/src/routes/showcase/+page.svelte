@@ -918,7 +918,26 @@
 					aria-label={copied ? 'copied' : 'copy to clipboard'}
 					onclick={copy}
 				>
-					<Icon size={18} name={copied ? 'check' : 'copy-to-clipboard-empty'} />
+					{#if copied}
+						<Icon size={18} name="check" />
+					{:else}
+						<!-- drawn by its stroke, like the tick, rather than site-kit's filled copy icon, so its
+						     lines can be as heavy as the tick's and the command beside it -->
+						<svg
+							width="18"
+							height="18"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							aria-hidden="true"
+						>
+							<rect x="9" y="9" width="13" height="13" rx="2" />
+							<path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+						</svg>
+					{/if}
 				</button>
 
 				<span class="visually-hidden" aria-live="polite">{copied ? 'Copied' : ''}</span>
