@@ -83,7 +83,7 @@ Upgrades a pre-release SvelteKit app to use the filesystem routing conventions i
 
 These options apply to both task-based and legacy migrations.
 
-### `--cwd <path>`
+### `-C`, `--cwd <path>`
 
 Run the migration in a different working directory. The path defaults to the current directory and must contain a `package.json`.
 
@@ -119,7 +119,11 @@ To keep changes reviewable, pass one task ID at a time, review and commit the re
 
 ### `--install <package-manager>`
 
-Install dependencies with a specified package manager:
+Shorthand for `--install --package-manager <package-manager>`. Installs dependencies with the specified package manager.
+
+### `--package-manager <package-manager>`
+
+Selects the package manager for the project:
 
 - `npm`
 - `pnpm`
@@ -127,6 +131,6 @@ Install dependencies with a specified package manager:
 - `bun`
 - `deno`
 
-### `--no-install`
+### `--[no-]install`
 
-Skip installing dependencies after the migration.
+Whether to install dependencies.
