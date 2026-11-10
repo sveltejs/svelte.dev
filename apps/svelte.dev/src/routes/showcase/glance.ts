@@ -1,23 +1,20 @@
-import type { Clips } from './clips.svelte.ts';
-import { clips, pictures, tops } from './media.ts';
+import type { Player } from './player.svelte.ts';
+import { clips, cropped, full } from './media.ts';
 
 /** how far each fling goes, relative to the others, so it reads as a hand on the trackpad */
 const FLINGS = [1, 1.3, 0.8, 1.15, 0.9, 1.25, 0.7, 1.05];
 
 /**
- * swaps in the whole screenshot once a mouse rests on one, and marks it once it loads so the page
- * can scroll down it, or plays its clip if it has one. touch screens never hover, so they only ever
- * load the tops, and a pointer passing over loads nothing
+ * swaps in the whole screenshot once a mouse rests on the link to a site, and marks it once it
+ * loads so the page can scroll down it, or plays its clip if it has one, in the given frame.
+ * touch screens never hover, so they only ever load the tops, and a pointer passing over loads
+ * nothing
  */
-export function lengthen(event: PointerEvent, id: string, player: Clips) {
+export function lengthen(event: PointerEvent, host: HTMLElement, id: string, player: Player) {
 	const target = event.currentTarget as HTMLElement;
-	const scope = target.closest<HTMLElement>('.site');
-	const host = scope?.querySelector<HTMLElement>('.thumb');
-	const img = host?.querySelector('img');
+	const img = host.querySelector('img');
 
 	if (
-		!scope ||
-		!host ||
 		!img ||
 		event.pointerType !== 'mouse' ||
 		!matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)')
@@ -26,10 +23,10 @@ export function lengthen(event: PointerEvent, id: string, player: Clips) {
 		return;
 	}
 
-	// one with a clip plays it instead, until the pointer leaves the site
+	// one with a clip plays it instead, until the pointer leaves
 	if (clips[id]) {
 		const timer = setTimeout(() => player.play(host, id), 100);
-		scope.addEventListener(
+		target.addEventListener(
 			'pointerleave',
 			() => {
 				clearTimeout(timer);
@@ -42,9 +39,9 @@ export function lengthen(event: PointerEvent, id: string, player: Clips) {
 
 	// one shown from somewhere other than the top stays where it is
 	// nor one no taller than the window, with nothing further down to show
-	const whole = pictures[id].img;
+	const whole = full[id].img;
 	const slide = img.parentElement;
-	if (!slide || pictures[id] === tops[id] || whole.h / whole.w < 0.7) return;
+	if (!slide || full[id] === cropped[id] || whole.h / whole.w < 0.7) return;
 
 	let left = false;
 	const timer = setTimeout(() => {
@@ -130,7 +127,7 @@ function move(element: HTMLElement, keyframes: Keyframe[], options: KeyframeAnim
 function swap(img: HTMLImageElement, id: string, loaded: () => void) {
 	if (img.dataset.long !== undefined) return;
 
-	const picture = pictures[id];
+	const picture = full[id];
 	img.dataset.long = 'loading';
 
 	const sources = [...(img.parentElement?.querySelectorAll('source') ?? [])];

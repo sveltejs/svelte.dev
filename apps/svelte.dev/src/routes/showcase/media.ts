@@ -3,7 +3,8 @@ import { sites } from './sites.ts';
 
 // the globs are written out in full each time, since vite reads them before the code runs
 
-const screenshots = {
+/** whole screenshots by site id, which the page scrolls down on hover */
+export const full = by_id({
 	...import.meta.glob<Picture>(['./screenshots/*.{jpg,png,webp}', '!./screenshots/*@2x.*'], {
 		eager: true,
 		import: 'default',
@@ -15,7 +16,7 @@ const screenshots = {
 		import: 'default',
 		query: { enhanced: true, w: '480;960;1440;1920;2880' }
 	})
-};
+});
 
 // the top of each, which is all that shows until you point at one. the wider ones go in the large
 // cards, which are as tall as 0.87:1 where they are tallest, so theirs are cut at 4:5, taller than
@@ -49,16 +50,14 @@ function by_id<T>(files: Record<string, T>): Record<string, T> {
 	return Object.fromEntries(Object.entries(files).map(([path, file]) => [id_of(path), file]));
 }
 
-/** whole screenshots by site id, which the page scrolls down on hover */
-export const pictures = by_id(screenshots);
-
 /**
- * the tops of the screenshots by site id, or the whole of one shown from somewhere else, or of
- * one no taller than its top, which cropping to 4:5 would cut at the sides instead
+ * the screenshots as they show at rest, by site id: the top of each, or the whole of one shown
+ * from somewhere else, or of one no taller than its top, which cropping to 4:5 would cut at the
+ * sides instead
  */
-export const tops: Record<string, Picture> = Object.fromEntries(
+export const cropped: Record<string, Picture> = Object.fromEntries(
 	Object.entries(by_id(crops)).map(([id, crop]) => {
-		const whole = pictures[id];
+		const whole = full[id];
 		const position = sites.find((site) => site.id === id)?.screenshot?.position;
 		return [id, position || whole.img.h / whole.img.w <= 5 / 4 ? whole : crop];
 	})

@@ -49,7 +49,7 @@ the card shown where the showcase is shared, drawn as the cards of the docs and 
 
 	h1 {
 		margin: 0 0 0.5em 0;
-		font-family: 'DM Serif Display';
+		font-family: 'DMSerif Display';
 		font-size: 72px;
 		font-weight: 400;
 		line-height: 80px;

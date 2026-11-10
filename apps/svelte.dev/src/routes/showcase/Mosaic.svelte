@@ -4,12 +4,12 @@ rows need to come out even, as `arrange` lays them out
 -->
 <script lang="ts">
 	import type { Tile as Placed } from './arrange.ts';
-	import type { Clips } from './clips.svelte.ts';
+	import type { Player } from './player.svelte.ts';
 	import Tile from './Tile.svelte';
 
 	interface Props {
 		tiles: Placed[];
-		player: Clips;
+		player: Player;
 	}
 
 	let { tiles, player }: Props = $props();

@@ -3,13 +3,13 @@ the many more, smaller and in rows across the whole width of the window, cut off
 like the logos on the home page, in the order given
 -->
 <script lang="ts">
-	import type { Clips } from './clips.svelte.ts';
+	import type { Player } from './player.svelte.ts';
 	import type { Site } from './sites.ts';
 	import Tile from './Tile.svelte';
 
 	interface Props {
 		sites: Site[];
-		player: Clips;
+		player: Player;
 	}
 
 	let { sites, player }: Props = $props();
@@ -22,7 +22,7 @@ like the logos on the home page, in the order given
 				<Tile
 					{site}
 					{player}
-					sizes="(min-width: 1440px) 330px, (min-width: 1280px) 24vw, (min-width: 740px) 32vw, (min-width: 640px) 48vw, 92vw"
+					sizes="(min-width: 1024px) 18vw, (min-width: 640px) 28vw, 39vw"
 					compact
 					still
 				/>

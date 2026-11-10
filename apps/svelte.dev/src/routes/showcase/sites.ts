@@ -1,6 +1,7 @@
 // check a new site uses svelte, then run pnpm sync-showcase <id> in apps/svelte.dev
 // the first in each category is shown larger, so make it well known with a good screenshot
 // the rest go from best known down by their rank on https://tranco-list.eu, unranked last
+// a smaller site goes in MORE at the end of this file too, to show after the categories instead
 
 export type Category =
 	| 'brands'
@@ -51,8 +52,6 @@ export interface Site {
 		/** how far down the page to take, for one whose lower part only plays as it scrolls */
 		height?: number;
 	};
-	/** a smaller site, shown after the categories rather than in its own */
-	more?: true;
 	/**
 	 * a short recording that plays in place of the screenshot, for a site whose video, animation or
 	 * hover effects a screenshot misses. taken with pnpm sync-showcase <id> --clip
@@ -113,7 +112,6 @@ export const sites: Site[] = [
 		url: 'https://www.logitech.com/en-us',
 		description: 'Mechanical keyboards, wireless mice, webcams, headsets, software, and more',
 		category: 'brands',
-		more: true,
 		// the discount popup and the backdrop behind it
 		screenshot: { hide: ['.modal.fixed', '.fixed[class~="bg-black/80"]'] }
 	},
@@ -140,7 +138,6 @@ export const sites: Site[] = [
 		url: 'https://www.ashleyfurniture.com/',
 		description: 'Home furniture and home decor online or in-store',
 		category: 'brands',
-		more: true,
 		clip: true,
 		screenshot: {
 			headed: true,
@@ -170,7 +167,6 @@ export const sites: Site[] = [
 		url: 'https://dbrand.com/',
 		description: 'The global leader in device customization',
 		category: 'brands',
-		more: true,
 		// from its clip, so the two match
 		screenshot: { from_clip: true },
 		clip: true
@@ -181,7 +177,6 @@ export const sites: Site[] = [
 		url: 'https://www.mill.com/',
 		description: 'Turns would-be food waste into resources for the Earth',
 		category: 'brands',
-		more: true,
 		// the screenshot is from its clip, which plays its hero alone
 		screenshot: { hide: ['dialog'], from_clip: true },
 		clip: true
@@ -192,7 +187,6 @@ export const sites: Site[] = [
 		url: 'https://shop.porterspaints.com/',
 		description: 'Rich colour and texture in hand-made paints',
 		category: 'brands',
-		more: true,
 		screenshot: { hide: ['#chat-widget-container'] }
 	},
 	{
@@ -201,7 +195,6 @@ export const sites: Site[] = [
 		url: 'https://swehl.com/',
 		description: 'A one-stop-shop for your breastfeeding journey',
 		category: 'brands',
-		more: true,
 		screenshot: { hide: ['.z-50:has(#popup)'] }
 	},
 	{
@@ -210,7 +203,6 @@ export const sites: Site[] = [
 		url: 'https://chapitreresidentiel.com/en',
 		description: 'Your new home, connected to what matters',
 		category: 'brands',
-		more: true,
 		// from its clip, which shows its animation
 		screenshot: { from_clip: true },
 		clip: true
@@ -263,7 +255,6 @@ export const sites: Site[] = [
 		url: 'https://beyonk.com/',
 		description: 'Online event ticketing system and ticket booking software',
 		category: 'business',
-		more: true,
 		// from its clip, so the two match
 		screenshot: { from_clip: true },
 		clip: true
@@ -273,8 +264,7 @@ export const sites: Site[] = [
 		name: 'Trading Strategy',
 		url: 'https://tradingstrategy.ai/',
 		description: 'Compare 3,000+ DeFi vaults by yield, TVL, risk and fees',
-		category: 'business',
-		more: true
+		category: 'business'
 	},
 	{
 		id: 'zenos',
@@ -282,7 +272,6 @@ export const sites: Site[] = [
 		url: 'https://www.zenos.com/',
 		description: 'Robotics for industrial and construction productivity',
 		category: 'business',
-		more: true,
 		// from its clip, so it matches where the particles start
 		screenshot: { from_clip: true },
 		// its heading writes itself in as the page loads
@@ -294,7 +283,6 @@ export const sites: Site[] = [
 		url: 'https://modulus.vision/',
 		description: 'Design, web development and consulting',
 		category: 'business',
-		more: true,
 		// the screenshot is from its clip, of its hero, which animates without scrolling
 		screenshot: { hide: ['.cookieConsentWrapper'], from_clip: true },
 		clip: true
@@ -315,7 +303,6 @@ export const sites: Site[] = [
 		url: 'https://www.gestisoft.com/en',
 		description: 'Your ERP & CRM partner',
 		category: 'business',
-		more: true,
 		// without the banner across the top, and from its clip, so the two match
 		screenshot: { hide: ['._site-banner'], from_clip: true },
 		clip: true
@@ -326,7 +313,6 @@ export const sites: Site[] = [
 		url: 'https://merlin.studio/',
 		description: 'Boutique Digital Studio creating lasting connection',
 		category: 'business',
-		more: true,
 		// from its clip, so the two match
 		screenshot: { from_clip: true },
 		clip: { wander: true }
@@ -337,7 +323,6 @@ export const sites: Site[] = [
 		url: 'https://akis.studio/',
 		description: 'Web and branding agency in Brussels',
 		category: 'business',
-		more: true,
 		// its hero only moves as it scrolls and follows the pointer, which a clip that scrolls shows
 		// but the many more never plays, so it is shown still, from the first frame of the clip it had,
 		// which pnpm sync-showcase leaves as it is
@@ -388,8 +373,7 @@ export const sites: Site[] = [
 		url: 'https://www.nrk.no/',
 		// from https://www.nrk.no/about/this-is-nrk-1.2895065
 		description: 'Norway’s major broadcasting institution',
-		category: 'news',
-		more: true
+		category: 'news'
 	},
 	{
 		id: 'the-pudding',
@@ -405,7 +389,6 @@ export const sites: Site[] = [
 		// from https://decorrespondent.nl/about
 		description: 'A journalism platform for independent voices',
 		category: 'news',
-		more: true,
 		screenshot: { hide: ['#signup-zuiderdock'] }
 	},
 	{
@@ -413,8 +396,7 @@ export const sites: Site[] = [
 		name: 'Syntax',
 		url: 'https://syntax.fm/',
 		description: 'Wes Bos and Scott Tolinski dive deep into web development',
-		category: 'news',
-		more: true
+		category: 'news'
 	},
 
 	{
@@ -445,7 +427,6 @@ export const sites: Site[] = [
 		// from https://www.apple.com/app-store/
 		description: 'A safe and trusted place to discover apps',
 		category: 'entertainment',
-		more: true,
 		screenshot: { hide: ['.banner-container'] }
 	},
 	{
@@ -455,7 +436,6 @@ export const sites: Site[] = [
 		// from https://podcasters.apple.com/support/5462-apple-podcasts-available-on-the-web
 		description: 'The full Apple Podcasts experience on any web browser, on any device',
 		category: 'entertainment',
-		more: true,
 		// the window alone, which the app fills, so the whole of it shows at once
 		screenshot: { hide: ['.banner-container'], height: 900 }
 	},
@@ -475,7 +455,6 @@ export const sites: Site[] = [
 		url: 'https://www.viki.com/',
 		description: 'Stream free Asian dramas & movies with English subtitles',
 		category: 'entertainment',
-		more: true,
 		// from its clip, so the two match
 		screenshot: { from_clip: true },
 		clip: true
@@ -486,7 +465,6 @@ export const sites: Site[] = [
 		url: 'https://www.ripleys.com/',
 		description: 'Aquariums and attractions',
 		category: 'entertainment',
-		more: true,
 		// the header grows into a video filling the window as the page scrolls
 		// the screenshot is from its clip, so the two match
 		screenshot: { hide: ['.bb-root'], height: 900, from_clip: true },
@@ -519,7 +497,6 @@ export const sites: Site[] = [
 		url: 'https://housesof.world/',
 		description: 'A project showcasing charismatic houses around the world',
 		category: 'entertainment',
-		more: true,
 		screenshot: { hide: ['.toast'] }
 	},
 	{
@@ -528,7 +505,6 @@ export const sites: Site[] = [
 		url: 'https://100best.music.apple.com/us',
 		description: 'The greatest albums ever made',
 		category: 'entertainment',
-		more: true,
 		screenshot: { hide: ['.banner-container', '.tooltip-container'], from_clip: true },
 		clip: true
 	},
@@ -537,8 +513,7 @@ export const sites: Site[] = [
 		name: 'Allfeat',
 		url: 'https://allfeat.org/',
 		description: 'Control all your music IPs in one place',
-		category: 'entertainment',
-		more: true
+		category: 'entertainment'
 	},
 
 	{
@@ -575,7 +550,6 @@ export const sites: Site[] = [
 		url: 'https://www.ons.gov.uk/explore-local-statistics/',
 		description: 'Find, compare and visualise statistics about communities in the United Kingdom',
 		category: 'public',
-		more: true,
 		// the window alone, since the rest of the page is only links
 		screenshot: { height: 900 }
 	},
@@ -618,7 +592,6 @@ export const sites: Site[] = [
 		url: 'https://chat.z.ai/',
 		description: 'The AI assistant powered by GLM-5.3-Flash',
 		category: 'ai',
-		more: true,
 		// a demo chat linked from https://z.ai/blog/glm-4.7
 		// the window alone, which the app fills, so the whole of it shows at once
 		screenshot: { url: 'https://chat.z.ai/s/83640645-5436-4069-a27b-f8094189d669', height: 900 }
@@ -657,8 +630,7 @@ export const sites: Site[] = [
 		name: 'Llama',
 		url: 'https://llama.app/',
 		description: 'Run the latest open models on your computer',
-		category: 'ai',
-		more: true
+		category: 'ai'
 	},
 	{
 		id: 'anda',
@@ -666,7 +638,6 @@ export const sites: Site[] = [
 		url: 'https://anda.ai/',
 		description: 'Open protocols, infrastructure, and benchmarks for persistent machine cognition',
 		category: 'ai',
-		more: true,
 		// from its clip, so the two match
 		screenshot: { from_clip: true },
 		// its hero alone, which moves without scrolling down
@@ -678,7 +649,6 @@ export const sites: Site[] = [
 		url: 'https://poolside.ai/',
 		description: 'Frontier research to operational intelligence',
 		category: 'ai',
-		more: true,
 		// the window alone, since the rest of the page adds little, from its clip so the two match
 		screenshot: { height: 900, from_clip: true },
 		clip: true
@@ -690,7 +660,6 @@ export const sites: Site[] = [
 		description:
 			'Moving Organisations Forward Through Artificial Intelligence and Advanced Analytics',
 		category: 'ai',
-		more: true,
 		// from its clip, so the two match
 		screenshot: { from_clip: true },
 		clip: true
@@ -747,7 +716,6 @@ export const sites: Site[] = [
 		url: 'https://cobalt.tools/',
 		description: 'Save what you love without ads, tracking, paywalls or other nonsense',
 		category: 'tools',
-		more: true,
 		// the window alone, which the app fills, so the whole of it shows at once
 		screenshot: { height: 900 }
 	},
@@ -764,8 +732,7 @@ export const sites: Site[] = [
 		url: 'https://kumamap.com/ja',
 		// from https://kumamap.com/en
 		description: 'Japan Bear Incident Map',
-		category: 'tools',
-		more: true
+		category: 'tools'
 	},
 	{
 		id: 'vert',
@@ -773,7 +740,6 @@ export const sites: Site[] = [
 		url: 'https://vert.sh/',
 		description: 'Quickly convert any image, video, audio, and document file',
 		category: 'tools',
-		more: true,
 		// the window alone, which the app fills, so the whole of it shows at once
 		screenshot: { hide: ['.fixed.bottom-28.right-0'], height: 900 }
 	},
@@ -790,7 +756,6 @@ export const sites: Site[] = [
 		url: 'https://kimbia.app/',
 		description: 'Running, trail, cycling, hiking: one journal',
 		category: 'tools',
-		more: true,
 		// further down than most, since the page goes on showing the app
 		screenshot: { hide: ['.fixed.inset-x-0.bottom-0'], height: 4800 }
 	},
@@ -799,16 +764,14 @@ export const sites: Site[] = [
 		name: 'Pronauns',
 		url: 'https://pronauns.com/',
 		description: 'Improve your speaking by learning proper pronunciation',
-		category: 'tools',
-		more: true
+		category: 'tools'
 	},
 	{
 		id: 'pausly',
 		name: 'Pausly',
 		url: 'https://www.pausly.app/',
 		description: 'Take a short break from your work to stretch',
-		category: 'tools',
-		more: true
+		category: 'tools'
 	},
 
 	{
@@ -854,7 +817,6 @@ export const sites: Site[] = [
 		url: 'https://tangled.org/',
 		description: 'Your open, federated code forge for the next decade',
 		category: 'developers',
-		more: true,
 		// further down than most, since the page goes on showing the app
 		screenshot: { height: 4800 }
 	},
@@ -863,8 +825,7 @@ export const sites: Site[] = [
 		name: 'Coolify',
 		url: 'https://coolify.io/',
 		description: 'Open-source alternative to Heroku',
-		category: 'developers',
-		more: true
+		category: 'developers'
 	},
 	{
 		id: 'mermaid',
@@ -872,7 +833,6 @@ export const sites: Site[] = [
 		url: 'https://mermaid.live/',
 		description: 'A simple markdown-like script language for generating charts from text',
 		category: 'developers',
-		more: true,
 		// the window alone, which the app fills, so the whole of it shows at once
 		screenshot: {
 			hide: ['[role="dialog"]', '.fixed.inset-0.z-50', '[class*="bg-[#E0095F]"]'],
@@ -894,7 +854,91 @@ export const sites: Site[] = [
 		name: 'Evidence',
 		url: 'https://evidence.dev/',
 		description: 'An open source, code-based alternative to drag-and-drop BI tools',
-		category: 'developers',
-		more: true
+		category: 'developers'
 	}
 ];
+
+/**
+ * round the ring in the hero, in turn: names known the world over, from as many of the
+ * categories as there are, the light ones between the dark, and most of them moving
+ */
+const HERO = [
+	'spotify',
+	'nytimes',
+	'bugatti',
+	'ikea',
+	'apple-tv',
+	'obama-foundation',
+	'hugging-face',
+	'square',
+	'windy',
+	'michelin'
+];
+
+/**
+ * the smaller sites picked for their design, shown after the categories rather than in their own,
+ * in rows that run off either side of the window. in this order, which puts the best known and
+ * those that move where they show whole at every width, and the least known at the ends of rows,
+ * where half of one is cut off: with three, four or six across, the 1st, 12th, 13th, 24th, 25th
+ * and 36th are at an end most often, and the last is left alone on phones and hidden there
+ */
+const MORE = [
+	// rows of six on wide screens, starting with one at an end
+	'porters-paints',
+	'apple-music-100-best',
+	'dbrand',
+	'viki',
+	'logitech',
+	'modulus',
+	'houses-of-the-world',
+	'de-correspondent',
+	'cobalt',
+	'mill',
+	'beyonk',
+	'swehl',
+	'kumamap',
+	'app-store',
+	'zenos',
+	'akis',
+	'mermaid',
+	'gestisoft',
+	'vert',
+	'ripleys',
+	'halfspace',
+	'llama',
+	'chapitre',
+	'trading-strategy',
+	'ons-local-statistics',
+	'apple-podcasts',
+	'merlin',
+	'anda',
+	'nrk',
+	'coolify',
+	'evidence',
+	'kimbia',
+	'tangled',
+	'poolside',
+	'syntax',
+	'pronauns',
+	'allfeat',
+	'ashley',
+	'z-ai',
+	'pausly'
+];
+
+/** the sites with the given ids, in that order, which fails the build on one that is not a site */
+function pick(ids: string[]) {
+	return ids.map((id) => {
+		const site = sites.find((site) => site.id === id);
+		if (!site) throw new Error(`No showcase site with the id ${id}`);
+		return site;
+	});
+}
+
+export const hero = pick(HERO);
+export const more = pick(MORE);
+
+/** the sites of a category, other than the smaller ones shown after the categories */
+export function members(category: Category) {
+	return sites.filter((site) => site.category === category && !more.includes(site));
+}

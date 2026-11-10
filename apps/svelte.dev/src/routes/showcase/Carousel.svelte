@@ -1,26 +1,17 @@
 <script lang="ts">
-	import type { Picture } from '@sveltejs/enhanced-img';
-	import { Tween, prefersReducedMotion } from 'svelte/motion';
+	import { onMount, tick, untrack, type Snippet } from 'svelte';
 	import { quintOut } from 'svelte/easing';
-	import { tick, untrack } from 'svelte';
-	import type { Attachment } from 'svelte/attachments';
-	import type { Snippet } from 'svelte';
+	import type { HTMLVideoAttributes } from 'svelte/elements';
+	import { Tween, prefersReducedMotion } from 'svelte/motion';
+	import { clips, placeholders } from './media.ts';
 	import { on_screen } from './on-screen.ts';
 	import { BY_HAND, DWELL, ON_ITS_OWN, offset, place, wrap } from './ring.ts';
+	import Screenshot from './Screenshot.svelte';
 	import type { Site } from './sites.ts';
 	import { Swipe } from './swipe.svelte.ts';
 
-	interface Card {
-		site: Site;
-		/** the top of the screenshot, or the part of it given by the site's position */
-		picture: Picture;
-		/** the tiny screenshot shown blurred until it loads */
-		placeholder?: string;
-		clip?: string;
-	}
-
 	interface Props {
-		cards: Card[];
+		sites: Site[];
 		/** whether anything moves on its own, which the button at the start of the page turns off */
 		autoplay: boolean;
 		/** spins in from the side, on the first visit only */
@@ -34,15 +25,15 @@
 		controls?: Snippet;
 	}
 
-	let { cards, autoplay, arrive, sizes, onpick, onprime, controls }: Props = $props();
+	let { sites, autoplay, arrive, sizes, onpick, onprime, controls }: Props = $props();
 
-	const count = $derived(cards.length);
+	const count = $derived(sites.length);
 
 	/**
 	 * where the ring has turned to, in cards rather than degrees, and never wrapped, so it can keep
-	 * turning either way for ever. a whole number when one card is in front
+	 * turning either way for ever. a whole number when one card is in front. starting to one side
+	 * only on the first visit, which the prop never changes after
 	 */
-	// starting to one side only on the first visit, which the prop never changes after
 	const turn = new Tween(untrack(() => arrive) ? -1.6 : 0, { duration: 700, easing: quintOut });
 
 	/**
@@ -81,8 +72,14 @@
 	 */
 	let focused = $state(false);
 
+	let stage: HTMLElement;
+
 	/** turned by a hand on it */
-	const swipe = new Swipe(turn, () => (touched = true));
+	const swipe = new Swipe(
+		turn,
+		() => stage.querySelector<HTMLElement>('.card')?.offsetWidth || 400,
+		() => (touched = true)
+	);
 
 	/** the ring is on screen, and the page is the tab showing */
 	let seen = $state(true);
@@ -102,9 +99,7 @@
 
 	/** turns to a given card by the shortest way round */
 	function show(i: number) {
-		const from = Math.round(turn.target);
-		let by = wrap(i - from, count);
-		if (by > count / 2) by -= count;
+		const by = offset(i, Math.round(turn.target), count);
 		if (by !== 0) {
 			touched = true;
 			go(by);
@@ -112,94 +107,119 @@
 	}
 
 	/** on the first visit, spins in to the first card */
-	const spin_in: Attachment = () => {
-		untrack(() => {
-			if (arrive) {
-				turn.set(0, { duration: prefersReducedMotion.current ? 0 : 1600, easing: quintOut });
-				arriving = false;
-			}
-		});
-	};
+	onMount(() => {
+		if (arrive) {
+			turn.set(0, { duration: prefersReducedMotion.current ? 0 : 1600, easing: quintOut });
+			arriving = false;
+		}
+	});
+
+	/** the arc the cards stand in, and the cards, in the order of their sites */
+	let space: HTMLElement;
+	const cards: HTMLElement[] = [];
 
 	/**
 	 * where motion is reduced the cards change places at once, so the arc dims for a moment as they
 	 * do, to show that they have
 	 */
-	let dimmed_for = -1;
+	let placed = false;
 
-	const dim: Attachment<HTMLElement> = (node) => {
-		const now = target;
-		if (now === dimmed_for) return;
-		const first = dimmed_for === -1;
-		dimmed_for = now;
+	$effect(() => {
+		// each time another comes to the front, after the first
+		target;
 
-		if (!first && untrack(() => prefersReducedMotion.current)) {
-			node.animate({ opacity: [1, 0.6, 1] }, { duration: 200, easing: 'ease' });
+		if (placed && untrack(() => prefersReducedMotion.current)) {
+			space.animate({ opacity: [1, 0.6, 1] }, { duration: 200, easing: 'ease' });
 		}
-	};
+
+		placed = true;
+	});
+
+	/** a card that leaves the front stops its clip, back to its start */
+	$effect(() => {
+		const i = target;
+
+		return () => {
+			elapsed.delete(i);
+
+			const video = cards[i]?.querySelector('video');
+			if (video) {
+				video.pause();
+				video.currentTime = 0;
+			}
+		};
+	});
 
 	/**
-	 * a card in front plays its clip once the ring has stopped on it, and the ring moves on once the
-	 * clip ends, or after a while for one with none. any other stops its clip, back to its start
+	 * the card in front plays its clip once the ring has stopped on it, and the ring moves on once
+	 * the clip ends, or after a while for one with none
 	 */
-	function turn_on(i: number): Attachment<HTMLElement> {
-		return (node) => {
-			const video = node.querySelector('video');
-			const clip = cards[i].clip;
+	$effect(() => {
+		const i = target;
+		const video = cards[i].querySelector('video');
+		const clip = clips[sites[i].id];
 
-			if (i !== target) {
-				elapsed.delete(i);
-				if (video) {
-					video.pause();
-					video.currentTime = 0;
-				}
-				return;
+		if (!settled || !moving) {
+			video?.pause();
+			return;
+		}
+
+		// held where it is, still playing if it was, until let go
+		if (!running) return;
+
+		const next = () => go(1, ON_ITS_OWN);
+
+		if (video && clip) {
+			if (!video.src) video.src = clip;
+
+			// on after a while anyway if it will not play, or is too slow to start
+			let fallback = setTimeout(next, DWELL);
+			const started = () => {
+				clearTimeout(fallback);
+				const left = (video.duration - video.currentTime) * 1000;
+				fallback = setTimeout(next, Math.max(left, 0) + 1000);
+			};
+
+			video.addEventListener('ended', next, { once: true });
+			// already going, if it was held while playing and has just been let go
+			if (!video.paused && video.duration) started();
+			else video.addEventListener('playing', started, { once: true });
+			video.play().catch(() => {});
+
+			return () => {
+				clearTimeout(fallback);
+				video.removeEventListener('ended', next);
+				video.removeEventListener('playing', started);
+			};
+		}
+
+		// on from where it was, if it was held
+		const start = performance.now() - (elapsed.get(i) ?? 0);
+		const timer = setInterval(() => {
+			const so_far = performance.now() - start;
+			elapsed.set(i, so_far);
+			progress = { i, value: Math.min(so_far / DWELL, 1) };
+			if (so_far >= DWELL) next();
+		}, 100);
+
+		return () => clearInterval(timer);
+	});
+
+	/** shows a clip over its screenshot once it moves, and how far through it is on its mark */
+	function watch(i: number): HTMLVideoAttributes {
+		return {
+			// on to the next card as it ends, rather than round again
+			loop: false,
+			onplaying: (event) => {
+				if (!event.currentTarget.paused && i === target) playing = i;
+			},
+			onpause: () => {
+				if (playing === i) playing = -1;
+			},
+			ontimeupdate: (event) => {
+				const { currentTime, duration } = event.currentTarget;
+				if (i === target && duration) progress = { i, value: currentTime / duration };
 			}
-
-			if (!settled || !moving) {
-				video?.pause();
-				return;
-			}
-
-			// held where it is, still playing if it was, until let go
-			if (!running) return;
-
-			const next = () => go(1, ON_ITS_OWN);
-
-			if (video && clip) {
-				if (!video.src) video.src = clip;
-
-				// on after a while anyway if it will not play, or is too slow to start
-				let fallback = setTimeout(next, DWELL);
-				const started = () => {
-					clearTimeout(fallback);
-					const left = (video.duration - video.currentTime) * 1000;
-					fallback = setTimeout(next, Math.max(left, 0) + 1000);
-				};
-
-				video.addEventListener('ended', next, { once: true });
-				// already going, if it was held while playing and has just been let go
-				if (!video.paused && video.duration) started();
-				else video.addEventListener('playing', started, { once: true });
-				video.play().catch(() => {});
-
-				return () => {
-					clearTimeout(fallback);
-					video.removeEventListener('ended', next);
-					video.removeEventListener('playing', started);
-				};
-			}
-
-			// on from where it was, if it was held
-			const start = performance.now() - (elapsed.get(i) ?? 0);
-			const timer = setInterval(() => {
-				const so_far = performance.now() - start;
-				elapsed.set(i, so_far);
-				progress = { i, value: Math.min(so_far / DWELL, 1) };
-				if (so_far >= DWELL) next();
-			}, 100);
-
-			return () => clearInterval(timer);
 		};
 	}
 
@@ -236,7 +256,7 @@
 			return;
 		}
 
-		onpick(event, cards[i].site.id);
+		onpick(event, sites[i].id);
 	}
 </script>
 
@@ -248,7 +268,6 @@
 	class="carousel"
 	aria-roledescription="carousel"
 	aria-label="Sites built with Svelte"
-	{@attach spin_in}
 	onkeydown={key}
 	onfocusin={(event) => (focused = (event.target as HTMLElement).matches(':focus-visible'))}
 	onfocusout={(event) => {
@@ -260,6 +279,7 @@
 	<!-- svelte-ignore a11y_no_static_element_interactions -->
 	<div
 		class="stage"
+		bind:this={stage}
 		{@attach on_screen((entry) => (seen = entry.isIntersecting))}
 		onpointerdown={swipe.down}
 		onpointermove={swipe.move}
@@ -267,15 +287,18 @@
 		onpointercancel={swipe.up}
 		onwheel={swipe.wheel}
 	>
-		<div class="space" {@attach dim}>
-			{#each cards as { site, picture, placeholder, clip }, i (site.id)}
+		<div class="space" bind:this={space}>
+			{#each sites as site, i (site.id)}
 				{@const o = offset(i, turn.current, count)}
 				{@const d = Math.abs(o)}
 				{@const front = i === current}
 				{@const at = place(o)}
 				{@const grey = Math.min(d, 1)}
 				<!-- out of the tab order and hidden from screen readers, since the name below links to the
-				     same place and the buttons turn it -->
+				     same place and the buttons turn it. placed, faded and greyed by its style, set
+				     directly rather than by properties its contents would inherit and work out again on
+				     every frame, with no filter on the one in front once it rests, which safari would
+				     otherwise stop drawing its clip under -->
 				<a
 					class={['card', { front }]}
 					href="#{site.id}"
@@ -289,49 +312,21 @@
 						: `saturate(${1 - grey * 0.9}) brightness(${1 - grey * 0.12})`}
 					style:visibility={d >= 3 ? 'hidden' : undefined}
 					style:--position={site.screenshot?.position}
-					style:--placeholder={placeholder}
+					style:--placeholder={placeholders[site.id]}
 					onclick={(event) => click(event, i)}
-					{@attach turn_on(i)}
+					bind:this={cards[i]}
 					onpointerenter={() => front && onprime(site.id)}
 				>
-					<span class={['face', { playing: settled && playing === i }]}>
-						<picture class="slide">
-							{#each Object.entries(picture.sources) as [format, srcset] (format)}
-								<source {srcset} {sizes} type="image/{format}" />
-							{/each}
-							<img
-								class="image"
-								src={picture.img.src}
-								width={picture.img.w}
-								height={picture.img.h}
-								alt=""
-								draggable="false"
-								loading={d < 2.5 ? 'eager' : 'lazy'}
-							/>
-						</picture>
-
-						{#if clip}
-							<!-- loaded only once it comes to the front -->
-							<video
-								class="clip"
-								muted
-								playsinline
-								disablepictureinpicture
-								disableremoteplayback
-								preload="none"
-								aria-hidden="true"
-								onplaying={(event) => {
-									if (!event.currentTarget.paused && i === target) playing = i;
-								}}
-								onpause={() => playing === i && (playing = -1)}
-								ontimeupdate={(event) => {
-									const { currentTime, duration } = event.currentTarget;
-									if (i === target && duration) progress = { i, value: currentTime / duration };
-								}}
-							></video>
-						{/if}
+					<span class={['face', 'frame', { playing: settled && playing === i }]}>
+						<!-- its clip loaded only once it comes to the front -->
+						<Screenshot
+							id={site.id}
+							{sizes}
+							loading={d < 2.5 ? 'eager' : 'lazy'}
+							clip
+							video={watch(i)}
+						/>
 					</span>
-					<span class="visually-hidden">{site.name}</span>
 				</a>
 			{/each}
 		</div>
@@ -350,12 +345,12 @@
 		<p class="name" aria-live={touched ? 'polite' : 'off'}>
 			{#key target}
 				<a
-					href="#{cards[target].site.id}"
-					onclick={(event) => onpick(event, cards[target].site.id)}
-					onpointerenter={() => onprime(cards[target].site.id)}
-					onfocus={() => onprime(cards[target].site.id)}
+					href="#{sites[target].id}"
+					onclick={(event) => onpick(event, sites[target].id)}
+					onpointerenter={() => onprime(sites[target].id)}
+					onfocus={() => onprime(sites[target].id)}
 				>
-					{cards[target].site.name}
+					{sites[target].name}
 				</a>
 			{/key}
 		</p>
@@ -368,7 +363,7 @@
 
 		<!-- one mark for each, the one in front filling as it plays, like the pages of a story -->
 		<ol class="steps">
-			{#each cards as { site }, i (site.id)}
+			{#each sites as site, i (site.id)}
 				<li>
 					<button
 						class="step"
@@ -427,9 +422,6 @@
 		display: block;
 		width: clamp(20rem, 60vw, 44rem);
 		aspect-ratio: 16 / 10;
-		/* placed, faded and greyed by its style, set directly rather than by properties its contents
-		   would inherit and work out again on every frame. none on the one in front once it rests,
-		   which safari would otherwise stop drawing its clip under */
 		backface-visibility: hidden;
 		-webkit-backface-visibility: hidden;
 		pointer-events: auto;
@@ -446,10 +438,10 @@
 		inset: 0;
 		overflow: hidden;
 		border-radius: var(--sk-border-radius);
-		/* the tiny screenshot, scaled up and so blurred, until the screenshot fades in over it */
-		background: var(--placeholder, none) var(--position, left top) / cover no-repeat var(--sk-bg-3);
 		box-shadow: 0.2rem 0.6rem 2.4rem rgb(0 0 0 / 0.22);
-		transition: scale 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+		/* clicks and drags go to the card, never the screenshot in it */
+		pointer-events: none;
+		transition: scale 0.15s var(--quad-out);
 
 		/* pressed in a little as the one in front is clicked, felt before it moves to the list. the
 		   face rather than the card, so the card stays put under the pointer */
@@ -458,31 +450,11 @@
 		}
 	}
 
-	.slide {
-		position: absolute;
-		inset: 0;
-		display: block;
-	}
-
-	.image,
-	.clip {
-		position: absolute;
-		inset: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: var(--position, left top);
-		pointer-events: none;
-	}
-
-	/* over the screenshot once it moves, which it starts on, so the two meet without a jump */
-	.clip {
-		opacity: 0;
-		transition: opacity 0.2s var(--quint-out);
-
-		.playing & {
-			opacity: 1;
-		}
+	/* its clip over the screenshot once it moves, which it starts on, so the two meet without a
+	   jump */
+	.face.playing {
+		--clip-opacity: 1;
+		--clip-fade: 0.2s;
 	}
 
 	/* the name of the one in front, between the buttons that turn the carousel */
@@ -530,7 +502,7 @@
 		transition:
 			color 0.15s ease,
 			border-color 0.15s ease,
-			scale 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+			scale 0.15s var(--quad-out);
 
 		svg {
 			fill: none;
@@ -626,8 +598,6 @@
 			outline: 2px solid var(--sk-fg-accent);
 			outline-offset: -1rem;
 		}
-
-		/* at least 24px across everywhere, so it is easy enough to hit */
 	}
 
 	@keyframes name-in {

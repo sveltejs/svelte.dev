@@ -8,7 +8,7 @@ interface Drag {
 	y: number;
 	/** the ring's turn as it started */
 	from: number;
-	/** a card's width, the distance that turns it by one */
+	/** a card's width as it started */
 	width: number;
 	moved: boolean;
 	/** the last few places it was, to tell how fast it was going as it was let go */
@@ -24,6 +24,7 @@ export class Swipe {
 	dragging = $state(false);
 
 	#turn: Tween<number>;
+	#width: () => number;
 	#ontouch: () => void;
 	#drag: Drag | undefined;
 
@@ -31,9 +32,13 @@ export class Swipe {
 	#dragged = false;
 	#wheel_timer: ReturnType<typeof setTimeout> | undefined;
 
-	/** `ontouch` is called as soon as a hand turns it */
-	constructor(turn: Tween<number>, ontouch: () => void) {
+	/**
+	 * `width` gives a card's width, the distance that turns it by one, and `ontouch` is called as
+	 * soon as a hand turns it
+	 */
+	constructor(turn: Tween<number>, width: () => number, ontouch: () => void) {
 		this.#turn = turn;
+		this.#width = width;
 		this.#ontouch = ontouch;
 	}
 
@@ -46,13 +51,12 @@ export class Swipe {
 
 	down = (event: PointerEvent) => {
 		if (event.button !== 0) return;
-		const card = (event.currentTarget as HTMLElement).querySelector<HTMLElement>('.card');
 		this.#drag = {
 			id: event.pointerId,
 			x: event.clientX,
 			y: event.clientY,
 			from: this.#turn.current,
-			width: card?.offsetWidth || 400,
+			width: this.#width(),
 			moved: false,
 			samples: [{ t: event.timeStamp, at: this.#turn.current }]
 		};
@@ -134,14 +138,12 @@ export class Swipe {
 		if (Math.abs(event.deltaX) <= Math.abs(event.deltaY)) return;
 		event.preventDefault();
 
-		const stage = event.currentTarget as HTMLElement;
-		const width = stage.querySelector<HTMLElement>('.card')?.offsetWidth || 400;
 		// in lines rather than pixels in some browsers with a mouse wheel
 		const pixels = event.deltaMode === 1 ? event.deltaX * 16 : event.deltaX;
 
 		this.#ontouch();
 		this.dragging = true;
-		this.#turn.set(this.#turn.current + pixels / width, { duration: 0 });
+		this.#turn.set(this.#turn.current + pixels / this.#width(), { duration: 0 });
 
 		clearTimeout(this.#wheel_timer);
 		this.#wheel_timer = setTimeout(() => {

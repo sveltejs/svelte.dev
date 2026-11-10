@@ -38,9 +38,18 @@ export async function record(
 		intro,
 		length = 8
 	}: Exclude<Site['clip'], true | undefined>,
-	wide: boolean,
-	still: boolean,
-	hidden: string
+	{
+		wide,
+		still,
+		hidden
+	}: {
+		/** in a large tile, which is taller and sharper */
+		wide: boolean;
+		/** also saves its first frame as the screenshot, or its last for one that plays as it loads */
+		still: boolean;
+		/** css that hides popups, added again if the page loads again */
+		hidden: string;
+	}
 ) {
 	// the shape of the tile it plays in: 6:5 for the large ones, which are taller than 16:10 to fill
 	// the rows beside them, and sharper, and the usual window for the rest

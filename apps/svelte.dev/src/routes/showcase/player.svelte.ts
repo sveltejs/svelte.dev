@@ -12,7 +12,7 @@ function may_move() {
  * plays the clips over the screenshots of the list: each that is mostly in the window, and any
  * pointed at or focused, unless the button at the start of the page has paused them
  */
-export class Clips {
+export class Player {
 	/** whether anything moves on its own, which the button at the start of the page turns off */
 	autoplay = $state(true);
 

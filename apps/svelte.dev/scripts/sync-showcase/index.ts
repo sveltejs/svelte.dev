@@ -31,22 +31,19 @@ import {
 } from '@ghostery/adblocker-playwright';
 import { chromium, type Browser, type Page } from 'playwright';
 import { arrange } from '../../src/routes/showcase/arrange.ts';
-import { categories, sites, type Site } from '../../src/routes/showcase/sites.ts';
+import { categories, members, sites, type Site } from '../../src/routes/showcase/sites.ts';
 import { capture, extend } from './capture.ts';
 import { detect, finish_animations, hide_popups, pause_videos } from './in-page.ts';
 import { record } from './record.ts';
-import { CLIPS, SCREENSHOTS, VIEWPORT, find_screenshot, screenshot_files } from './shared.ts';
+import { CLIPS, SCREENSHOTS, VIEWPORT, has_screenshot, screenshot_files } from './shared.ts';
 
-// as far down a long page as the screenshot goes, for the grid to scroll down on hover
+// as far down a long page as the screenshot goes, for the page to scroll down it on hover
 const MAX_HEIGHT = 2400;
 
 // the big one in each category, taken at twice the size to stay sharp on high density screens
 const WIDE = new Set(
 	categories.flatMap((category) =>
-		arrange(
-			sites.filter((site) => site.category === category.id && !site.more),
-			(site) => site.clip !== undefined
-		)
+		arrange(members(category.id), (site) => site.clip !== undefined)
 			.filter((tile) => tile.size === 'big')
 			.map((tile) => tile.site.id)
 	)
@@ -88,7 +85,7 @@ const candidates = sites.filter(
 	(site) =>
 		(positionals.length === 0 || positionals.includes(site.id)) &&
 		(!values.clip || site.clip !== undefined) &&
-		(!values.missing || !find_screenshot(site.id))
+		(!values.missing || !has_screenshot(site.id))
 );
 
 // named sites always run, otherwise --headed picks the sites that need it
@@ -182,14 +179,11 @@ async function visit(browser: Browser, site: Site) {
 					`  ${site.id}: close anything covering the page and start anything that only plays when clicked, then press Enter to record `
 				);
 			}
-			await record(
-				page,
-				site.id,
-				site.clip === true ? {} : site.clip,
-				WIDE.has(site.id),
-				site.screenshot?.from_clip ?? false,
+			await record(page, site.id, site.clip === true ? {} : site.clip, {
+				wide: WIDE.has(site.id),
+				still: site.screenshot?.from_clip ?? false,
 				hidden
-			);
+			});
 		} else if (!values.check && !site.screenshot?.from_clip) {
 			await page.addStyleTag({ content: hidden });
 

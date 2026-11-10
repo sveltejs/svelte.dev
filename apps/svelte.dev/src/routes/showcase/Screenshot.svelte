@@ -1,11 +1,12 @@
 <!--@component
 the top of a site's screenshot, filling whatever holds it, with its clip over it if it has one,
-which is only loaded once it plays. what holds it sets --position, and --clip-opacity to 1 while
-the clip plays, and the morph, the glance down it on hover and the clips find their parts by their
-classes, so those stay as they are
+which is only loaded once it plays. what holds it has the class `frame`, and sets --position and
+--placeholder, and --clip-opacity to 1 while the clip plays. the morph, the glance down it on
+hover and the player find the parts of it by their classes, so those stay as they are
 -->
 <script lang="ts">
-	import { clips, tops } from './media.ts';
+	import type { HTMLVideoAttributes } from 'svelte/elements';
+	import { clips, cropped } from './media.ts';
 
 	interface Props {
 		id: string;
@@ -13,11 +14,13 @@ classes, so those stay as they are
 		loading?: 'eager' | 'lazy';
 		/** whether to play its clip over it, if it has one */
 		clip?: boolean;
+		/** more for the clip, such as what to do as it plays, or `loop: false` */
+		video?: HTMLVideoAttributes;
 	}
 
-	let { id, sizes, loading = 'lazy', clip = false }: Props = $props();
+	let { id, sizes, loading = 'lazy', clip = false, video }: Props = $props();
 
-	const picture = $derived(tops[id]);
+	const picture = $derived(cropped[id]);
 </script>
 
 <picture class="slide">
@@ -45,6 +48,7 @@ classes, so those stay as they are
 		disableremoteplayback
 		preload="none"
 		aria-hidden="true"
+		{...video}
 	></video>
 {/if}
 

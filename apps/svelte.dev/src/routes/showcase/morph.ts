@@ -1,17 +1,22 @@
 /** set while a jump replays its click, so the browser and the router handle it as usual */
 let replaying = false;
 
+/** the frame of a site's screenshot in the list, which is in the element with its id */
+function frame_of(id: string) {
+	return document.getElementById(id)?.querySelector<HTMLElement>('.frame');
+}
+
 /** starts loading the screenshot of a site in the list before jumping to it */
 export function prime(id: string) {
-	const image = document.getElementById(id)?.querySelector('img');
+	const image = frame_of(id)?.querySelector('img');
 	if (image) image.loading = 'eager';
 }
 
 /** moves the screenshot you clicked onto the same one in the list as the page jumps there */
 export function morph(event: MouseEvent, id: string) {
 	const link = event.currentTarget as HTMLAnchorElement;
-	const source = link.querySelector<HTMLElement>('.face, .sheet');
-	const destination = document.getElementById(id)?.querySelector<HTMLElement>('.thumb');
+	const source = link.querySelector<HTMLElement>('.frame');
+	const destination = frame_of(id);
 
 	if (
 		replaying ||

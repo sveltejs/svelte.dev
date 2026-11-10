@@ -1,56 +1,53 @@
 <!--@component
 a site in the list: its screenshot, linking to it, with its name and description under it, or in
-compact rows its name over the screenshot as you point at, focus or tap it. what holds it can set
---lift, the z-index it takes while pointed at or focused, to rise above anything laid over the list
+compact rows its name over the screenshot as you point at, focus or tap it. what holds it has the
+site's id, for links to land on, and can set --lift, the z-index it takes while pointed at or
+focused, to rise above anything laid over the list
 -->
 <script lang="ts">
-	import type { Clips } from './clips.svelte.ts';
 	import { fade_in } from './fade-in.ts';
 	import { lengthen } from './glance.ts';
-	import { clips, pictures, placeholders, scrolling } from './media.ts';
+	import { clips, placeholders, scrolling } from './media.ts';
+	import type { Player } from './player.svelte.ts';
 	import Screenshot from './Screenshot.svelte';
 	import type { Site } from './sites.ts';
 
 	interface Props {
 		site: Site;
 		sizes: string;
-		player: Clips;
+		player: Player;
 		/** taller to fill the rows it spans, with larger type */
 		large?: boolean;
 		/** only the screenshot, with the name over it, as in the rows of the many more */
 		compact?: boolean;
-		/** loads nothing more on hover or focus, to save data */
+		/** never loads its whole screenshot, nor a clip that scrolls down the page, to save data */
 		still?: boolean;
 	}
 
 	let { site, sizes, player, large = false, compact = false, still = false }: Props = $props();
 
-	/** a still one never loads its whole screenshot, nor a clip that scrolls down the page */
+	/** whether it has a clip to play */
 	const moves = $derived(!!clips[site.id] && !(still && scrolling.has(site.id)));
 
-	/** the screenshot in the link */
-	function thumb_of(event: FocusEvent) {
-		return (event.currentTarget as HTMLElement).querySelector<HTMLElement>('.thumb')!;
-	}
+	let frame: HTMLElement;
 </script>
 
 <a
 	class={['tile', { large, compact }]}
 	href={site.url}
-	onpointerenter={(event) => (still ? moves : true) && lengthen(event, site.id, player)}
-	onfocus={(event) => moves && player.focus(thumb_of(event), site.id)}
-	onblur={(event) => moves && player.release(thumb_of(event))}
+	onpointerenter={(event) => (moves || !still) && lengthen(event, frame, site.id, player)}
+	onfocus={() => moves && player.focus(frame, site.id)}
+	onblur={() => moves && player.release(frame)}
 	{@attach fade_in}
 >
 	<span
-		class="thumb"
+		class="thumb frame"
+		bind:this={frame}
 		style:--position={site.screenshot?.position}
 		style:--placeholder={placeholders[site.id]}
 		{@attach clips[site.id] && !scrolling.has(site.id) ? player.in_view(site.id) : undefined}
 	>
-		{#if pictures[site.id]}
-			<Screenshot id={site.id} {sizes} clip={moves} />
-		{/if}
+		<Screenshot id={site.id} {sizes} clip={moves} />
 
 		{#if compact}
 			<!-- over the screenshot, shown as you point at, focus or tap it -->
@@ -92,9 +89,9 @@ compact rows its name over the screenshot as you point at, focus or tap it. what
 			}
 		}
 
-		/* where it is large, taller than 16:10 to fill the rows it spans beside the smaller ones, so
-		   the mosaic has no holes, about the 6:5 its clip is taken at, so little of it is cut, and
-		   elsewhere 16:10 like the rest, so the screenshots in a row line up */
+		/* where it is large, the screenshot is as tall as the rows it spans beside the smaller ones
+		   leave it, rather than 16:10, so the mosaic has no holes. about the 6:5 its clip is taken
+		   at, so little of it is cut */
 		&.large {
 			@media (min-width: 740px) {
 				grid-template-rows: 1fr auto;
@@ -143,11 +140,9 @@ compact rows its name over the screenshot as you point at, focus or tap it. what
 		color: #fff;
 		border: 1px solid var(--sk-border);
 		border-radius: var(--sk-border-radius);
-		/* the tiny screenshot, scaled up and so blurred, until the screenshot fades in over it */
-		background: var(--placeholder, none) var(--position, left top) / cover no-repeat var(--sk-bg-3);
 
 		/* pressed in a little as it is clicked, felt before the page leaves for the site */
-		transition: scale 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+		transition: scale 0.15s var(--quad-out);
 
 		.tile:active & {
 			scale: 0.98;

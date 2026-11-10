@@ -7,21 +7,23 @@ the heading of the page and the carousel of sites under it. sets `seen` while it
 </script>
 
 <script lang="ts">
-	import type { ComponentProps } from 'svelte';
 	import Carousel from './Carousel.svelte';
-	import type { Clips } from './clips.svelte.ts';
+	import Logo from './Logo.svelte';
 	import { morph, prime } from './morph.ts';
 	import { on_screen } from './on-screen.ts';
 	import PauseButton from './PauseButton.svelte';
+	import type { Player } from './player.svelte.ts';
+	import type { Site } from './sites.ts';
 
 	interface Props {
-		cards: ComponentProps<typeof Carousel>['cards'];
-		player: Clips;
+		/** round the carousel, in turn */
+		sites: Site[];
+		player: Player;
 		/** the hero is on screen */
 		seen?: boolean;
 	}
 
-	let { cards, player, seen = $bindable(true) }: Props = $props();
+	let { sites, player, seen = $bindable(true) }: Props = $props();
 
 	const arrive = !arrived;
 </script>
@@ -34,24 +36,22 @@ the heading of the page and the carousel of sites under it. sets `seen` while it
 	}}
 >
 	<div class="intro">
-		<h1>Built with <span>Svelte</span></h1>
+		<h1>Built with <span class="logo"><Logo /></span></h1>
 		<p>From newsrooms to public services, popular brands and leading industries</p>
 	</div>
 
-	{#if cards.length > 0}
-		<Carousel
-			{cards}
-			autoplay={player.autoplay}
-			{arrive}
-			sizes="(min-width: 740px) 440px, 60vw"
-			onpick={morph}
-			onprime={prime}
-		>
-			{#snippet controls()}
-				<PauseButton {player} where="inline" />
-			{/snippet}
-		</Carousel>
-	{/if}
+	<Carousel
+		{sites}
+		autoplay={player.autoplay}
+		{arrive}
+		sizes="(min-width: 740px) 440px, 60vw"
+		onpick={morph}
+		onprime={prime}
+	>
+		{#snippet controls()}
+			<PauseButton {player} where="inline" />
+		{/snippet}
+	</Carousel>
 </div>
 
 <style>
@@ -82,8 +82,12 @@ the heading of the page and the carousel of sites under it. sets `seen` while it
 		letter-spacing: -0.02em;
 		color: var(--sk-fg-1);
 
-		span {
-			color: var(--sk-fg-accent);
+		/* on a line of its own under the words, its name about as tall as their capitals */
+		.logo {
+			display: block;
+			height: 1.15em;
+			aspect-ratio: 634.6 / 177.4;
+			margin: 0.12em auto 0;
 		}
 	}
 

@@ -10,7 +10,8 @@ moves to it in the list as you jump there
 	import type { Site } from './sites.ts';
 
 	interface Props {
-		sections: Array<{ id: string; title: string; lead?: Site }>;
+		/** each with the first site shown in it, whose screenshot is on the link to it */
+		sections: Array<{ id: string; title: string; lead: Site }>;
 	}
 
 	let { sections }: Props = $props();
@@ -22,23 +23,21 @@ moves to it in the list as you jump there
 			<li>
 				<a
 					href="#{section.id}"
-					onclick={(event) => section.lead && morph(event, section.lead.id)}
-					onpointerenter={() => section.lead && prime(section.lead.id)}
-					onfocus={() => section.lead && prime(section.lead.id)}
+					onclick={(event) => morph(event, section.lead.id)}
+					onpointerenter={() => prime(section.lead.id)}
+					onfocus={() => prime(section.lead.id)}
 					{@attach fade_in}
 				>
 					<span class="title">{section.title}</span>
 
-					{#if section.lead}
-						<span
-							class="sheet"
-							aria-hidden="true"
-							style:--position={section.lead.screenshot?.position}
-							style:--placeholder={placeholders[section.lead.id]}
-						>
-							<Screenshot id={section.lead.id} sizes="(min-width: 1024px) 200px, 120px" />
-						</span>
-					{/if}
+					<span
+						class="sheet frame greyed"
+						aria-hidden="true"
+						style:--position={section.lead.screenshot?.position}
+						style:--placeholder={placeholders[section.lead.id]}
+					>
+						<Screenshot id={section.lead.id} sizes="(min-width: 1024px) 200px, 120px" />
+					</span>
 				</a>
 			</li>
 		{/each}
@@ -123,8 +122,6 @@ moves to it in the list as you jump there
 		aspect-ratio: 16 / 10;
 		overflow: hidden;
 		border: 1px solid var(--sk-border);
-		/* the tiny screenshot, scaled up and so blurred, until the screenshot fades in over it */
-		background: var(--placeholder, none) var(--position, left top) / cover no-repeat var(--sk-bg-3);
 
 		@media (min-width: 740px) {
 			width: 12rem;
@@ -138,31 +135,7 @@ moves to it in the list as you jump there
 	/* greyed towards the top and bottom of the window like the list, each by a layer of grey of its
 	   own rather than one over the list, which is over the foot of the hero, so the page there stays
 	   clear. in colour wherever it is while pointed at or focused */
-	@supports (animation-timeline: view()) {
-		.sheet {
-			isolation: isolate;
-			view-timeline: --sheet;
-
-			&::after {
-				content: '';
-				position: absolute;
-				inset: -100vh 0 0;
-				background: var(--band);
-				mix-blend-mode: saturation;
-				pointer-events: none;
-				animation: stay-in-window linear both;
-				animation-timeline: --sheet;
-			}
-
-			a:is(:hover, :focus-visible) &::after {
-				display: none;
-			}
-		}
-	}
-
-	@keyframes stay-in-window {
-		to {
-			translate: 0 100%;
-		}
+	a:is(:hover, :focus-visible) .sheet::after {
+		display: none;
 	}
 </style>

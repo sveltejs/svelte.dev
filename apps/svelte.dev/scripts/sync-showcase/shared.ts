@@ -13,7 +13,7 @@ export const VIEWPORT = { width: 1440, height: 900 };
 // taller than the window, since the first site in each category is shown taller than 1440x900
 export const SIZE = { width: 1440, height: 1440 };
 
-export function find_screenshot(id: string) {
+export function has_screenshot(id: string) {
 	return screenshot_files(id).some((file) => fs.existsSync(file));
 }
 

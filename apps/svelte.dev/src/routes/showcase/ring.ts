@@ -9,8 +9,7 @@ export const ON_ITS_OWN = 700;
 export const BY_HAND = 450;
 
 /**
- * where the cards stand by how far they are from the front, the arc of the hero before it
- * turned: x in percent across, z in pixels toward the viewer and r in degrees turned. those to
+ * where the cards stand by how far they are from the front: x in percent across, z in pixels toward the viewer and r in degrees turned. those to
  * the left are the same mirrored, and one between two places is between them
  */
 const SLOTS = [
@@ -45,6 +44,6 @@ export function wrap(i: number, count: number) {
  * whichever way round is shorter
  */
 export function offset(i: number, at: number, count: number) {
-	const ahead = (((i - at) % count) + count) % count;
+	const ahead = wrap(i - at, count);
 	return ahead > count / 2 ? ahead - count : ahead;
 }

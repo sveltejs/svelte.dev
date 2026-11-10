@@ -1,115 +1,28 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { arrange } from './arrange.ts';
 	import Category from './Category.svelte';
-	import { Clips } from './clips.svelte.ts';
 	import Contents from './Contents.svelte';
 	import Crowd from './Crowd.svelte';
 	import Hero from './Hero.svelte';
-	import { clips, pictures, placeholders, tops } from './media.ts';
 	import Mosaic from './Mosaic.svelte';
 	import Outro from './Outro.svelte';
 	import PauseButton from './PauseButton.svelte';
-	import { categories, sites, type Site } from './sites.ts';
-
-	/**
-	 * the smaller sites picked for their design, shown after the categories, in rows that run off
-	 * either side of the window. in this order, which puts the best known and those that move where
-	 * they show whole at every width, and the least known at the ends of rows, where half of one is
-	 * cut off: with three, four or six across, the 1st, 12th, 13th, 24th, 25th and 36th are at an
-	 * end most often, and the last is left alone on phones and hidden there. any not named here
-	 * follow at the end
-	 */
-	const CROWD = [
-		// rows of six on wide screens, starting with one at an end
-		'porters-paints',
-		'apple-music-100-best',
-		'dbrand',
-		'viki',
-		'logitech',
-		'modulus',
-		'houses-of-the-world',
-		'de-correspondent',
-		'cobalt',
-		'mill',
-		'beyonk',
-		'swehl',
-		'kumamap',
-		'app-store',
-		'zenos',
-		'akis',
-		'mermaid',
-		'gestisoft',
-		'vert',
-		'ripleys',
-		'halfspace',
-		'llama',
-		'chapitre',
-		'trading-strategy',
-		'ons-local-statistics',
-		'apple-podcasts',
-		'merlin',
-		'anda',
-		'nrk',
-		'coolify',
-		'evidence',
-		'kimbia',
-		'tangled',
-		'poolside',
-		'syntax',
-		'pronauns',
-		'allfeat',
-		'ashley',
-		'z-ai',
-		'pausly'
-	];
-
-	const extras = sites.filter((site) => site.more).sort((a, b) => rank(a) - rank(b));
-
-	function rank(site: Site) {
-		const i = CROWD.indexOf(site.id);
-		return i === -1 ? CROWD.length : i;
-	}
-
-	/**
-	 * round the ring in the hero, in turn: names known the world over, from as many of the
-	 * categories as there are, the light ones between the dark, and most of them moving
-	 */
-	const HERO = [
-		'spotify',
-		'nytimes',
-		'bugatti',
-		'ikea',
-		'apple-tv',
-		'obama-foundation',
-		'hugging-face',
-		'square',
-		'windy',
-		'michelin'
-	];
-
-	const ring = HERO.flatMap((id) => {
-		const site = sites.find((site) => site.id === id);
-		if (!site || !tops[id]) return [];
-		return [{ site, picture: tops[id], placeholder: placeholders[id], clip: clips[id] }];
-	});
+	import { Player } from './player.svelte.ts';
+	import { categories, hero, members, more } from './sites.ts';
 
 	const sections = categories.map((category, n) => {
-		const members = sites.filter((site) => site.category === category.id && !site.more);
-
 		// the large ones go to those that move, on the left in one category and the right in the next
-		const tiles = arrange(members, (site) => site.clip !== undefined, n % 2 === 1);
-		const first = tiles[0]?.site;
+		const tiles = arrange(members(category.id), (site) => site.clip !== undefined, n % 2 === 1);
 
-		return {
-			...category,
-			tiles,
-			/** the first shown in the category, whose screenshot is on the link to it and moves to it */
-			lead: first && pictures[first.id] ? first : undefined
-		};
+		// the first shown in the category, whose screenshot is on the link to it and moves to it
+		return { ...category, tiles, lead: tiles[0].site };
 	});
 
-	/** the clips in the list, and whether anything moves on its own */
-	const player = new Clips();
+	/** plays the clips in the list, and says whether anything moves on its own */
+	const player = new Player();
+
+	onMount(() => player.restore());
 
 	/**
 	 * the hero is on screen, where on phones the floating button would cover the carousel's own
@@ -129,29 +42,25 @@
 	<meta name="og:image" content="https://svelte.dev/showcase/card.png" />
 </svelte:head>
 
-<div class="showcase" {@attach () => player.restore()}>
+<div class="showcase">
 	<!-- first, so the keyboard reaches it before anything that moves, and always there, so clips
 	     can be stopped before they start -->
-	{#if Object.keys(clips).length > 0 || ring.length > 0}
-		<PauseButton {player} where="float" tucked={hero_seen} />
-	{/if}
+	<PauseButton {player} where="float" tucked={hero_seen} />
 
-	<Hero cards={ring} {player} bind:seen={hero_seen} />
+	<Hero sites={hero} {player} bind:seen={hero_seen} />
 
 	<Contents {sections} />
 
-	<div class="index">
+	<div class="index greyed">
 		{#each sections as section (section.id)}
 			<Category id={section.id} title={section.title}>
 				<Mosaic tiles={section.tiles} {player} />
 			</Category>
 		{/each}
 
-		{#if extras.length > 0}
-			<Category id="also" title="And many more">
-				<Crowd sites={extras} {player} />
-			</Category>
-		{/if}
+		<Category id="also" title="And many more">
+			<Crowd sites={more} {player} />
+		</Category>
 
 		<Outro />
 	</div>
@@ -171,6 +80,9 @@
 		   colour across the middle */
 		--band: linear-gradient(grey 15%, transparent 35% 55%, grey 75%) top / 100% 100vh no-repeat;
 
+		/* for what is pressed in a little as it is clicked */
+		--quad-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
 		@media (min-width: 832px) {
 			--anchor-offset: calc(var(--sk-nav-height) + 3.2rem);
 		}
@@ -182,33 +94,45 @@
 		padding: 0 var(--sk-page-padding-side) var(--sk-page-padding-bottom);
 	}
 
-	/* the screenshots grey towards the top and bottom of the window and in colour in a band across
-	   the middle, by one layer of grey over the list blended in by saturation, which starts a window
-	   above it and moves down with the page, so the band stays still in the window. one for the list
-	   rather than each screenshot, so scrolling has few layers to redraw. those pointed at or
-	   focused, and the many more, lift above it to stay in colour */
+	/* what holds a screenshot shows the tiny one behind it, scaled up and so blurred, until the
+	   screenshot fades in over it */
+	.showcase :global(.frame) {
+		background: var(--placeholder, none) var(--position, left top) / cover no-repeat var(--sk-bg-3);
+	}
+
+	/* grey towards the top and bottom of the window and in colour in a band across the middle, by a
+	   layer of grey over it blended in by saturation, which starts a window above it and moves down
+	   with the page, so the band stays still in the window */
 	@supports (animation-timeline: view()) {
+		.showcase :global(.greyed) {
+			isolation: isolate;
+			view-timeline: --greyed;
+
+			&::after {
+				content: '';
+				position: absolute;
+				inset: -100vh 0 0;
+				background: var(--band);
+				mix-blend-mode: saturation;
+				pointer-events: none;
+				animation: stay-in-window linear both;
+				animation-timeline: --greyed;
+			}
+		}
+
+		/* one layer for the list rather than each screenshot in it, so scrolling has few layers to
+		   redraw. those pointed at or focused, and the many more, lift above it to stay in colour */
 		.index {
 			--lift: 3;
 
 			position: relative;
-			isolation: isolate;
-			view-timeline: --list;
 			/* to blend with between the screenshots, or the grey shows there */
 			background: var(--sk-bg-1);
 			/* and none of it above or below the list */
 			overflow-y: clip;
 
 			&::after {
-				content: '';
-				position: absolute;
-				inset: -100vh 0 0;
 				z-index: 2;
-				background: var(--band);
-				mix-blend-mode: saturation;
-				pointer-events: none;
-				animation: stay-in-window linear both;
-				animation-timeline: --list;
 			}
 		}
 	}
@@ -219,9 +143,10 @@
 		}
 	}
 
-	/* the page jumps at once under the screenshot travelling to its place in the list */
-	/* the copy of the screenshot in the list is taller where it is a large one, so it shows only as
-	   much as the travelling screenshot has grown to */
+	/* the screenshot clicked in the hero or the contents travels to its place in the list, while
+	   the page jumps there at once under it, as morph.ts sets off. the copy of the screenshot in
+	   the list is taller where it is a large one, so it shows only as much as the travelling
+	   screenshot has grown to */
 	:global(html.picking::view-transition-group(picked)) {
 		overflow: clip;
 		border-radius: var(--sk-border-radius);

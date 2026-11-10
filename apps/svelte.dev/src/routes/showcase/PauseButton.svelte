@@ -3,10 +3,10 @@ pauses and plays everything that moves on its own: floating in the corner, or on
 carousel while the hero shows, where the floating one would cover the carousel's own buttons
 -->
 <script lang="ts">
-	import type { Clips } from './clips.svelte.ts';
+	import type { Player } from './player.svelte.ts';
 
 	interface Props {
-		player: Clips;
+		player: Player;
 		/** in the corner of the window, or in the flow under the carousel on phones */
 		where: 'float' | 'inline';
 		/** on phones, out of the way while the hero shows */
@@ -35,21 +35,11 @@ carousel while the hero shows, where the floating one would cover the carousel's
 </button>
 
 <style>
-	/* where motion is reduced clips never play, so there is nothing for it to stop */
 	.autoplay {
-		@media (prefers-reduced-motion: reduce) {
-			display: none;
-		}
-
 		position: fixed;
 		right: 1.6rem;
 		bottom: calc(1.6rem + env(safe-area-inset-bottom));
 		z-index: 10;
-
-		/* above the banner, which sits at the bottom of wider windows */
-		@media (min-width: 832px) {
-			bottom: calc(1.6rem + var(--sk-banner-height) + env(safe-area-inset-bottom));
-		}
 		display: flex;
 		align-items: center;
 		gap: 0.6rem;
@@ -61,15 +51,35 @@ carousel while the hero shows, where the floating one would cover the carousel's
 		border-radius: 10rem;
 		box-shadow: 0 0.2rem 0.8rem rgb(0 0 0 / 0.15);
 
-		/* pressed in a little, so it is felt to take the press */
-		transition: scale 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+		/* pressed in a little, so it is felt to take the press, and moved up over the nav as
+		   quickly as the nav slides in */
+		--moves: translate 0.2s, scale 0.15s var(--quad-out);
+		transition: var(--moves);
 
 		&:active {
 			scale: 0.97;
 		}
 
-		/* only the icon on phones, a round button, with its name still read out */
+		/* where motion is reduced clips never play, so there is nothing for it to stop */
+		@media (prefers-reduced-motion: reduce) {
+			display: none;
+		}
+
+		/* above the banner, which sits at the bottom of wider windows */
+		@media (min-width: 832px) {
+			bottom: calc(1.6rem + var(--sk-banner-height) + env(safe-area-inset-bottom));
+		}
+
+		/* on small screens the nav is at the bottom, sliding away as the page scrolls down and back as
+		   it scrolls up, so the button moves up over it while it shows */
+		@media (max-width: 831px) {
+			:global(body:has(nav:is(.visible, :focus-within))) &.float {
+				translate: 0 calc(-1 * var(--sk-nav-height));
+			}
+		}
+
 		@media (max-width: 739px) {
+			/* only the icon on phones, a round button, with its name still read out */
 			justify-content: center;
 			width: 4.4rem;
 			height: 4.4rem;
@@ -83,18 +93,16 @@ carousel while the hero shows, where the floating one would cover the carousel's
 				clip-path: inset(50%);
 				white-space: nowrap;
 			}
-		}
 
-		/* on phones, out of the way of the carousel while the hero shows, which has its own. back in
-		   rising a little as the hero leaves, and out with a quicker fade alone */
-		@media (max-width: 739px) {
+			/* out of the way of the carousel while the hero shows, which has its own. back in rising a
+			   little as the hero leaves, and out with a quicker fade alone. by its transform, so the
+			   move up over the nav, by its translate, still applies */
 			&.float {
 				transition:
 					opacity 0.2s var(--quint-out),
 					transform 0.2s var(--quint-out),
 					visibility 0s,
-					translate 0.2s,
-					scale 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+					var(--moves);
 			}
 
 			/* but never while it has focus, which would otherwise be lost as it hides */
@@ -106,8 +114,7 @@ carousel while the hero shows, where the floating one would cover the carousel's
 					opacity 0.12s ease,
 					transform 0s 0.12s,
 					visibility 0s 0.12s,
-					translate 0.2s,
-					scale 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+					var(--moves);
 			}
 		}
 
@@ -137,18 +144,6 @@ carousel while the hero shows, where the floating one would cover the carousel's
 					overflow: visible;
 					clip-path: none;
 				}
-			}
-		}
-
-		/* on small screens the nav is at the bottom, sliding away as the page scrolls down and back as
-		   it scrolls up, so the button moves up over it while it shows, as quickly as it slides */
-		@media (max-width: 831px) {
-			transition:
-				translate 0.2s,
-				scale 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-
-			:global(body:has(nav:is(.visible, :focus-within))) &.float {
-				translate: 0 calc(-1 * var(--sk-nav-height));
 			}
 		}
 	}
