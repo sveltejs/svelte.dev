@@ -1,5 +1,23 @@
 /* TODO all this should probably be moved into Text.svelte */
 
+pre a.doc-reference {
+	color: inherit;
+	text-decoration-line: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.15em;
+
+	/* thicken rather than recolour, so hover doesn't rely on colour */
+	&:hover {
+		text-decoration-thickness: max(2px, 0.12em);
+		text-decoration-skip-ink: none;
+	}
+
+	&:focus-visible {
+		outline: 2px solid var(--sk-fg-accent);
+		outline-offset: 2px;
+	}
+}
+
 /** make long comments wrap on mobile */
 :where(.token.comment.wrapped, .comment.wrapped) {
 	display: block;

@@ -337,6 +337,18 @@
 		]
 	},
 	{
+		"path": "/docs/svelte/bind",
+		"breadcrumbs": [
+			"Docs",
+			"Svelte",
+			"Template syntax",
+			"bind:"
+		],
+		"tags": [
+			"template-bind"
+		]
+	},
+	{
 		"path": "/docs/svelte/transition",
 		"breadcrumbs": [
 			"Docs",
@@ -381,7 +393,7 @@
 			"class"
 		],
 		"tags": [
-			"template-style"
+			"template-class"
 		]
 	},
 	{
@@ -442,30 +454,6 @@
 		],
 		"tags": [
 			"rune-inspect"
-		]
-	},
-	{
-		"path": "/docs/kit/$app-env-private",
-		"breadcrumbs": [
-			"Docs",
-			"SvelteKit",
-			"Reference",
-			"$app/env/private"
-		],
-		"tags": [
-			"env"
-		]
-	},
-	{
-		"path": "/docs/kit/$app-env-public",
-		"breadcrumbs": [
-			"Docs",
-			"SvelteKit",
-			"Reference",
-			"$app/env/public"
-		],
-		"tags": [
-			"env"
 		]
 	},
 	{
