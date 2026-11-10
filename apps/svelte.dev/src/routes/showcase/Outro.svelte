@@ -51,6 +51,9 @@ the closing lines of the page, with the command to start a project of your own
 
 <style>
 	.next {
+		/* above the grey laid over the list it is in, so the link keeps its colour */
+		position: relative;
+		z-index: var(--lift, auto);
 		margin: 16rem 0 0 0;
 		padding-bottom: 8rem;
 		text-align: center;

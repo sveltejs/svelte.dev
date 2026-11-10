@@ -162,25 +162,38 @@ focused, to rise above anything laid over the list
 		}
 	}
 
-	/* the name over the bottom of the screenshot, only on the one you point at, focus or tap */
+	/* registered as a colour, so the shade behind the name can fade */
+	@property --shade {
+		syntax: '<color>';
+		inherits: false;
+		initial-value: transparent;
+	}
+
+	/* the name over the bottom of the screenshot, only on the one you point at, focus or tap. faded
+	   in by its colours rather than its opacity, which gives the screenshot a layer of its own
+	   while it fades, and safari then draws it a fraction of a pixel off until it is done */
 	.label {
 		position: absolute;
 		inset: auto 0 0;
 		z-index: 1;
 		padding: 3.2rem 1.2rem 1rem;
 		font: 400 clamp(1.6rem, 1.4rem + 0.4vw, 2rem) / 1.1 var(--sk-font-family-heading);
-		background: linear-gradient(transparent, rgb(0 0 0 / 0.65));
+		color: transparent;
+		background: linear-gradient(transparent, var(--shade));
 		pointer-events: none;
-		opacity: 0;
-		transition: opacity 0.2s ease;
+		transition:
+			color 0.2s ease,
+			--shade 0.2s ease;
 
 		.tile:is(:focus-visible, :active) & {
-			opacity: 1;
+			--shade: rgb(0 0 0 / 0.65);
+			color: inherit;
 		}
 
 		@media all and not (hover: none) {
 			.tile:hover & {
-				opacity: 1;
+				--shade: rgb(0 0 0 / 0.65);
+				color: inherit;
 			}
 		}
 
