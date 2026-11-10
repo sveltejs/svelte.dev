@@ -8,7 +8,6 @@ the heading of the page and the carousel of sites under it. sets `seen` while it
 
 <script lang="ts">
 	import Carousel from './Carousel.svelte';
-	import Logo from './Logo.svelte';
 	import { morph, prime } from './morph.ts';
 	import { on_screen } from './on-screen.ts';
 	import PauseButton from './PauseButton.svelte';
@@ -36,7 +35,7 @@ the heading of the page and the carousel of sites under it. sets `seen` while it
 	}}
 >
 	<div class="intro">
-		<h1>Built with <span class="logo"><Logo /></span></h1>
+		<h1>Built with <span>Svelte</span></h1>
 		<p>From newsrooms to public services, popular brands and leading industries</p>
 	</div>
 
@@ -82,12 +81,8 @@ the heading of the page and the carousel of sites under it. sets `seen` while it
 		letter-spacing: -0.02em;
 		color: var(--sk-fg-1);
 
-		/* on a line of its own under the words, its name about as tall as their capitals */
-		.logo {
-			display: block;
-			height: 1.15em;
-			aspect-ratio: 634.6 / 177.4;
-			margin: 0.12em auto 0;
+		span {
+			color: var(--sk-fg-accent);
 		}
 	}
 
