@@ -531,7 +531,8 @@
 		grid-column: 1 / -1;
 		display: flex;
 		justify-content: center;
-		gap: 0.4rem;
+		/* wide enough apart to count them, rather than read as one dashed line */
+		gap: 0.8rem;
 		margin: 0;
 		padding: 0;
 		list-style: none;
@@ -540,7 +541,7 @@
 	.step {
 		position: relative;
 		display: block;
-		width: 2.4rem;
+		width: 2rem;
 		/* taller than it looks, so it is easier to tap, without taking up more room */
 		height: 4.4rem;
 		margin-block: -1.2rem;
@@ -555,15 +556,17 @@
 			position: absolute;
 			left: 0;
 			right: 0;
-			top: calc(50% - 0.1rem);
-			height: 0.2rem;
-			border-radius: 0.1rem;
+			top: calc(50% - 0.15rem);
+			height: 0.3rem;
+			border-radius: 0.15rem;
 			/* dark enough to see against the page, at 3:1 or more */
 			background: var(--sk-fg-4);
 		}
 
+		/* in the accent, as whatever is current is elsewhere on the site, so it differs from the
+		   rest by its colour and not only by how dark it is */
 		&::after {
-			background: var(--sk-fg-1);
+			background: var(--sk-fg-accent);
 			transform-origin: left;
 			scale: var(--progress) 1;
 			/* between the few times a second the time it has played is known, so it fills evenly */
@@ -582,15 +585,20 @@
 		}
 
 		&[aria-current='true'] {
-			width: 4.8rem;
+			width: 4rem;
 
-			/* lighter than the rest, so the fill stands out against it as it grows */
+			/* a tint of the fill, so the fill stands out against it as it grows */
 			&::before {
-				background: color-mix(in srgb, var(--sk-fg-4) 45%, var(--sk-bg-1));
+				background: color-mix(in srgb, var(--sk-fg-accent) 30%, var(--sk-bg-1));
+			}
+
+			/* never quite empty, so it shows which it is from the moment it comes to the front */
+			&::after {
+				scale: max(var(--progress), 0.12) 1;
 			}
 		}
 
-		&:hover::before {
+		&[aria-current='false']:hover::before {
 			background: var(--sk-fg-3);
 		}
 
