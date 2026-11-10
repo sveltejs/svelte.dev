@@ -559,8 +559,8 @@
 			top: calc(50% - 0.15rem);
 			height: 0.3rem;
 			border-radius: 0.15rem;
-			/* dark enough to see against the page, at 3:1 or more */
-			background: var(--sk-fg-4);
+			/* as faint as it can be and still be seen against the page, at just over 3:1 */
+			background: light-dark(#949494, #696969);
 		}
 
 		/* in the accent, as whatever is current is elsewhere on the site, so it differs from the
