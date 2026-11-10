@@ -1,17 +1,15 @@
 {
-  "name": "svelte-session-manager",
-  "npm_description": "Session store for svelte (currently only for JWT)",
-  "repo_url": "https://github.com/arlac77/svelte-session-manager",
-  "authors": [
-    "arlac77"
-  ],
-  "homepage": "https://github.com/arlac77/svelte-session-manager#readme",
-  "version": "3.0.89",
-  "downloads": 937,
-  "github_stars": 110,
-  "updated": "2026-06-25T22:31:49.566Z",
-  "svelte_range": "^5.56.0",
-  "typescript": false,
-  "runes": true,
-  "last_rune_check_version": "3.0.36"
+	"name": "svelte-session-manager",
+	"npm_description": "Session store for svelte (currently only for JWT)",
+	"repo_url": "https://github.com/arlac77/svelte-session-manager",
+	"authors": ["arlac77"],
+	"homepage": "https://github.com/arlac77/svelte-session-manager#readme",
+	"version": "3.0.89",
+	"downloads": 552,
+	"github_stars": 110,
+	"updated": "2026-06-25T22:31:49.566Z",
+	"svelte_range": "^5.56.0",
+	"typescript": false,
+	"runes": true,
+	"last_rune_check_version": "3.0.36"
 }

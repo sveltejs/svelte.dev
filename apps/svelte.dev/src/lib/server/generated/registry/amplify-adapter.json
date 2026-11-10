@@ -1,17 +1,15 @@
 {
-  "name": "amplify-adapter",
-  "npm_description": "Adapter for SvelteKit v1/v2 + Amplify SSR CI/CD",
-  "repo_url": "https://github.com/gzimbron/amplify-adapter",
-  "authors": [
-    "zimbronapps"
-  ],
-  "homepage": "https://github.com/gzimbron/amplify-adapter#readme",
-  "version": "1.3.0",
-  "downloads": 3673,
-  "github_stars": 39,
-  "updated": "2026-02-18T05:57:51.789Z",
-  "kit_range": "^2.4.0",
-  "typescript": true,
-  "runes": false,
-  "last_rune_check_version": "0.2.0"
+	"name": "amplify-adapter",
+	"npm_description": "Adapter for SvelteKit v1/v2 + Amplify SSR CI/CD",
+	"repo_url": "https://github.com/gzimbron/amplify-adapter",
+	"authors": ["zimbronapps"],
+	"homepage": "https://github.com/gzimbron/amplify-adapter#readme",
+	"version": "1.4.0",
+	"downloads": 4426,
+	"github_stars": 39,
+	"updated": "2026-10-09T16:46:10.067Z",
+	"kit_range": "^2.4.0 || ^3.0.0",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "0.2.0"
 }

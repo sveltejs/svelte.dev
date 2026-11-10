@@ -1,14 +1,14 @@
 {
-  "name": "@supabase/ssr",
-  "npm_description": "Use the Supabase JavaScript library in popular server-side rendering (SSR) frameworks.",
-  "repo_url": "https://github.com/supabase/ssr",
-  "authors": [],
-  "homepage": "https://github.com/supabase/ssr#readme",
-  "version": "0.12.7",
-  "downloads": 10750757,
-  "github_stars": 208,
-  "updated": "2026-09-08T08:14:27.765Z",
-  "typescript": true,
-  "runes": false,
-  "last_rune_check_version": "0.6.0"
+	"name": "@supabase/ssr",
+	"npm_description": "Use the Supabase JavaScript library in popular server-side rendering (SSR) frameworks.",
+	"repo_url": "https://github.com/supabase/ssr",
+	"authors": [],
+	"homepage": "https://github.com/supabase/ssr#readme",
+	"version": "0.12.7",
+	"downloads": 13205891,
+	"github_stars": 208,
+	"updated": "2026-09-08T08:14:27.765Z",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "0.6.0"
 }

@@ -1,19 +1,15 @@
 {
-  "name": "@ai-sdk/svelte",
-  "npm_description": "[Svelte](https://svelte.dev/) UI components for the [AI SDK](https://ai-sdk.dev/docs):",
-  "repo_url": "https://github.com/vercel/ai",
-  "authors": [
-    "vercel-release-bot",
-    "matheuss",
-    "matt.straka"
-  ],
-  "homepage": "https://ai-sdk.dev/docs",
-  "version": "5.0.127",
-  "downloads": 733063,
-  "github_stars": 27105,
-  "updated": "2026-10-01T19:22:06.351Z",
-  "svelte_range": "^5.31.0",
-  "typescript": true,
-  "runes": true,
-  "last_rune_check_version": "2.1.9"
+	"name": "@ai-sdk/svelte",
+	"npm_description": "[Svelte](https://svelte.dev/) UI components for the [AI SDK](https://ai-sdk.dev/docs):",
+	"repo_url": "https://github.com/vercel/ai",
+	"authors": ["vercel-release-bot", "matheuss", "matt.straka"],
+	"homepage": "https://ai-sdk.dev/docs",
+	"version": "5.0.159",
+	"downloads": 259063,
+	"github_stars": 27634,
+	"updated": "2026-10-30T22:19:21.917Z",
+	"svelte_range": "^5.31.0",
+	"typescript": true,
+	"runes": true,
+	"last_rune_check_version": "2.1.9"
 }

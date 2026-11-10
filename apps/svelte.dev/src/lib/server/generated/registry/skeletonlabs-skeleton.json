@@ -1,19 +1,14 @@
 {
-  "name": "@skeletonlabs/skeleton",
-  "npm_description": "The TailwindCSS package for Skeleton.",
-  "repo_url": "https://github.com/skeletonlabs/skeleton",
-  "authors": [
-    "skeletonadmin",
-    "endigo9740",
-    "cokakoala",
-    "hugoskokos"
-  ],
-  "homepage": "https://github.com/skeletonlabs/skeleton#readme",
-  "version": "5.0.1",
-  "downloads": 76871,
-  "github_stars": 6066,
-  "updated": "2026-08-19T13:17:03.111Z",
-  "typescript": false,
-  "runes": false,
-  "last_rune_check_version": "3.1.2"
+	"name": "@skeletonlabs/skeleton",
+	"npm_description": "The TailwindCSS package for Skeleton.",
+	"repo_url": "https://github.com/skeletonlabs/skeleton",
+	"authors": ["skeletonadmin", "endigo9740", "cokakoala", "hugoskokos"],
+	"homepage": "https://github.com/skeletonlabs/skeleton#readme",
+	"version": "5.0.1",
+	"downloads": 104853,
+	"github_stars": 6066,
+	"updated": "2026-08-19T13:17:03.111Z",
+	"typescript": false,
+	"runes": false,
+	"last_rune_check_version": "3.1.2"
 }

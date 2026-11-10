@@ -1,18 +1,16 @@
 {
-  "name": "layercake",
-  "npm_description": "graphics framework for sveltejs",
-  "repo_url": "https://github.com/mhkeller/layercake",
-  "authors": [
-    "mhkeller0"
-  ],
-  "homepage": "https://layercake.graphics/",
-  "version": "11.0.0",
-  "downloads": 94856,
-  "github_stars": 1793,
-  "updated": "2026-09-06T00:16:52.477Z",
-  "svelte_range": ">=5.40",
-  "kit_range": "^2.57.1",
-  "typescript": true,
-  "runes": false,
-  "last_rune_check_version": "8.4.3"
+	"name": "layercake",
+	"npm_description": "graphics framework for sveltejs",
+	"repo_url": "https://github.com/mhkeller/layercake",
+	"authors": ["mhkeller0"],
+	"homepage": "https://layercake.graphics/",
+	"version": "11.0.0",
+	"downloads": 69300,
+	"github_stars": 1796,
+	"updated": "2026-09-06T00:16:52.477Z",
+	"svelte_range": ">=5.40",
+	"kit_range": "^2.57.1",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "8.4.3"
 }

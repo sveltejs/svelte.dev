@@ -1,16 +1,14 @@
 {
-  "name": "houdini",
-  "npm_description": "The disappearing GraphQL clients",
-  "repo_url": "https://github.com/HoudiniGraphql/houdini",
-  "authors": [
-    "aaivazis"
-  ],
-  "homepage": "https://github.com/HoudiniGraphql/houdini",
-  "version": "2.0.12",
-  "downloads": 10268,
-  "github_stars": 986,
-  "updated": "2026-09-28T07:14:28.609Z",
-  "typescript": true,
-  "runes": false,
-  "last_rune_check_version": "1.5.4"
+	"name": "houdini",
+	"npm_description": "The disappearing GraphQL clients",
+	"repo_url": "https://github.com/HoudiniGraphql/houdini",
+	"authors": ["aaivazis"],
+	"homepage": "https://github.com/HoudiniGraphql/houdini",
+	"version": "2.0.13",
+	"downloads": 12177,
+	"github_stars": 984,
+	"updated": "2026-10-25T16:14:27.316Z",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "1.5.4"
 }
