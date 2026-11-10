@@ -359,7 +359,7 @@ function fork(fn: () => void): Fork;
 
 Returns an [`AbortSignal`](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal) that aborts when the current [derived](/docs/svelte/$derived) or [effect](/docs/svelte/$effect) re-runs or is destroyed.
 
-Must be called while a derived or effect is running.
+Must be called while a derived or effect is running, before anything is awaited.
 
 ```svelte
 <script>
