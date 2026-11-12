@@ -8,7 +8,10 @@
 
 	let { banner }: { banner: BannerData } = $props();
 
-	const persisted = new Persisted<string>('sv:hidden-banners', '{}');
+	const key = 'sv:hidden-banners';
+	const height = '4.2rem';
+
+	const persisted = new Persisted<string>(key, '{}');
 	const hidden = $derived(JSON.parse(persisted.current));
 	const time = +new Date();
 
@@ -17,9 +20,30 @@
 	);
 
 	$effect(() => {
-		document.documentElement.style.setProperty('--sk-banner-height', visible ? '4.2rem' : '0px');
+		document.documentElement.style.setProperty('--sk-banner-height', visible ? height : '0px');
 	});
+
+	// a < in the id would end the inline script early
+	const id = $derived(JSON.stringify(banner.id).replaceAll('<', '\\u003c'));
+
+	// runs before first paint, since prerendered pages cannot know if the banner will show
+	const reserve_space = $derived(
+		`{
+			let hidden = {};
+			try {
+				hidden = JSON.parse(localStorage.getItem(${JSON.stringify(key)}) ?? '{}');
+			} catch {}
+			const time = Date.now();
+			if (!hidden[${id}] && time > ${+banner.start} && ${+banner.end} > time) {
+				document.documentElement.style.setProperty('--sk-banner-height', '${height}');
+			}
+		}`
+	);
 </script>
+
+<svelte:head>
+	{@html `<script>${reserve_space}<` + `/script>`}
+</svelte:head>
 
 {#if visible}
 	<div class="banner" transition:fade={{ duration: 400, easing: quintOut }}>
