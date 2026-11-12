@@ -3,50 +3,19 @@
 	import { fade } from 'svelte/transition';
 	import Icon from './Icon.svelte';
 	import type { BannerData } from '../types';
-	import { browser } from '$app/env';
 	import { Persisted } from '../state';
 
 	let { banner }: { banner: BannerData } = $props();
 
-	const key = 'sv:hidden-banners';
-	const height = '4.2rem';
-
-	const persisted = new Persisted<string>(key, '{}');
+	const persisted = new Persisted<string>('sv:hidden-banners', '{}');
 	const hidden = $derived(JSON.parse(persisted.current));
 	const time = +new Date();
 
-	let visible = $derived(
-		browser && !hidden[banner.id] && time > +banner.start && time < +banner.end
-	);
-
-	$effect(() => {
-		document.documentElement.style.setProperty('--sk-banner-height', visible ? height : '0px');
-	});
-
-	// a < in the id would end the inline script early
-	const id = $derived(JSON.stringify(banner.id).replaceAll('<', '\\u003c'));
-
-	// runs before first paint, since prerendered pages cannot know if the banner will show
-	const reserve_space = $derived(
-		`{
-			let hidden = {};
-			try {
-				hidden = JSON.parse(localStorage.getItem(${JSON.stringify(key)}) ?? '{}');
-			} catch {}
-			const time = Date.now();
-			if (!hidden[${id}] && time > ${+banner.start} && ${+banner.end} > time) {
-				document.documentElement.style.setProperty('--sk-banner-height', '${height}');
-			}
-		}`
-	);
+	let visible = $derived(!hidden[banner.id] && time > +banner.start && time < +banner.end);
 </script>
 
-<svelte:head>
-	{@html `<script>${reserve_space}<` + `/script>`}
-</svelte:head>
-
 {#if visible}
-	<div class="banner" transition:fade={{ duration: 400, easing: quintOut }}>
+	<div class="banner" data-banner={banner.id} transition:fade={{ duration: 400, easing: quintOut }}>
 		<a href={banner.href}>
 			{#if banner.content.lg}
 				<span class="large">{banner.content.lg}</span>
@@ -77,6 +46,15 @@
 {/if}
 
 <style>
+	/* app.html adds the class before first paint for a banner the reader dismissed */
+	:global(:root:has([data-banner]):not(.banner-dismissed)) {
+		--sk-banner-height: 4.2rem;
+	}
+
+	:global(.banner-dismissed) .banner {
+		display: none;
+	}
+
 	.banner {
 		position: fixed;
 		top: 0;

@@ -68,6 +68,12 @@
 						node.checked = false;
 					}
 				}
+
+				const banner = document.querySelector('[data-banner]')?.dataset.banner;
+
+				if (banner && JSON.parse(localStorage.getItem('sv:hidden-banners') ?? '{}')[banner]) {
+					document.documentElement.classList.add('banner-dismissed');
+				}
 			} catch {
 				// localStorage access disabled
 			}
