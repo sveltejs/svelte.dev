@@ -60,7 +60,7 @@ export function clean(markdown: string) {
 			// italic markdown notation such as "bind:_property_ for components"
 			// should be stripped without affecting compiler error titles such as "animation_missing_key"
 			.replace(/:_(.*)_ /g, ':$1 ')
-			.replace(/(?:^|b)`(.+?)`(?:\b|$)/g, '$1') // Inline code
+			.replace(/`(.+?)`/g, '$1') // Inline code
 			.replace(/(?:^|b)~~(.+?)~~(?:\b|$)/g, '$1') // Strikethrough
 			.replace(/\[(.+?)\]\(.+?\)/g, '$1') // Link
 			.replace(/\n/g, ' ') // New line
