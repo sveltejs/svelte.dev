@@ -242,6 +242,8 @@
 
 				li {
 					text-indent: 1ch hanging;
+					/* separate items so wrapped titles aren't mistaken for sub-items */
+					margin-block: 0.5rem;
 				}
 
 				& > ul > li:first-child {
