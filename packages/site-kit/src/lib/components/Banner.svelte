@@ -23,7 +23,7 @@
 </svelte:head>
 
 {#if visible}
-	<div class="banner" data-banner transition:fade={{ duration: 400, easing: quintOut }}>
+	<div class="banner" data-banner transition:fade={{ duration: 250, easing: quintOut }}>
 		<a href={banner.href}>
 			{#if banner.content.lg}
 				<span class="large">{banner.content.lg}</span>
