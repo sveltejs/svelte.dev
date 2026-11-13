@@ -374,7 +374,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 		nav {
 			display: grid;
-			grid-template-columns: auto 1fr 1fr;
+			grid-template-columns: auto auto 1fr;
 
 			&::after {
 				top: auto;
@@ -429,6 +429,25 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 		nav :global(.small) {
 			display: none;
+		}
+	}
+
+	/* below 960px the logo drops its name, so the links fit */
+	@media (min-width: 832px) and (max-width: 959px) {
+		.menu .external-links {
+			margin: 0;
+		}
+
+		.home-link {
+			width: 3.4rem;
+			padding: 0;
+			background-size: 2.6rem auto;
+
+			&,
+			:root:not(.light) &,
+			:root.dark & {
+				background-image: url(../branding/svelte-logo.svg);
+			}
 		}
 	}
 </style>
