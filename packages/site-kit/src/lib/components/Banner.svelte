@@ -12,20 +12,18 @@
 	const hidden = $derived(JSON.parse(persisted.current));
 	const time = +new Date();
 
-	// always in the prerendered page, where app.html hides it before first paint if it should not show
+	// always in the prerendered page, hidden until app.html finds that it should show
 	let visible = $derived(
 		!browser || (!hidden[banner.id] && time > +banner.start && time < +banner.end)
 	);
 </script>
 
+<svelte:head>
+	<meta name="sv:banner" content={banner.id} data-start={+banner.start} data-end={+banner.end} />
+</svelte:head>
+
 {#if visible}
-	<div
-		class="banner"
-		data-banner={banner.id}
-		data-start={+banner.start}
-		data-end={+banner.end}
-		transition:fade={{ duration: 400, easing: quintOut }}
-	>
+	<div class="banner" data-banner transition:fade={{ duration: 400, easing: quintOut }}>
 		<a href={banner.href}>
 			{#if banner.content.lg}
 				<span class="large">{banner.content.lg}</span>
@@ -56,24 +54,12 @@
 {/if}
 
 <style>
-	/* a length, so the space it takes can close gradually */
-	@property --sk-banner-height {
-		syntax: '<length>';
-		inherits: true;
-		initial-value: 0px;
-	}
-
-	:global(:root:has([data-banner]):not(.banner-hidden)) {
+	/* svelte makes it inert while it fades out, so the space closes as it starts to */
+	:global(:root.banner-shown:has([data-banner]:not([inert]))) {
 		--sk-banner-height: 4.2rem;
 	}
 
-	/* svelte makes it inert while it fades out, so its space closes over the same time */
-	:global(:root:has([data-banner][inert])) {
-		--sk-banner-height: 0px;
-		transition: --sk-banner-height 0.4s var(--quint-out);
-	}
-
-	:global(.banner-hidden) .banner {
+	:global(:root:not(.banner-shown)) .banner {
 		display: none;
 	}
 
@@ -89,7 +75,7 @@
 		font: var(--sk-font-ui-medium);
 		overflow-y: auto;
 		width: 100%;
-		height: var(--sk-banner-height);
+		height: 4.2rem;
 		background: var(--sk-bg-accent);
 		color: white;
 		padding: 0 4rem;

@@ -62,4 +62,9 @@ The main shell of the application. It provides a slot for the top navigation, th
 			padding-bottom: var(--sk-banner-height);
 		}
 	}
+
+	/* slides up as a dismissed banner fades out rather than jumping */
+	:global(:root:has([data-banner][inert])) main {
+		transition: padding 0.4s var(--quint-out);
+	}
 </style>
