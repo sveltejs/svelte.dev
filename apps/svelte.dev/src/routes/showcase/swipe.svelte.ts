@@ -1,5 +1,5 @@
 import { quintOut } from 'svelte/easing';
-import { prefersReducedMotion, type Tween } from 'svelte/motion';
+import type { Tween } from 'svelte/motion';
 import { BY_HAND } from './ring.ts';
 
 interface Drag {
@@ -25,6 +25,7 @@ export class Swipe {
 
 	#turn: Tween<number>;
 	#width: () => number;
+	#slides: () => boolean;
 	#ontouch: () => void;
 	#drag: Drag | undefined;
 
@@ -33,12 +34,19 @@ export class Swipe {
 	#wheel_timer: ReturnType<typeof setTimeout> | undefined;
 
 	/**
-	 * `width` gives a card's width, the distance that turns it by one, and `ontouch` is called as
-	 * soon as a hand turns it
+	 * `width` gives a card's width, the distance that turns it by one, `slides` says whether it
+	 * slides on to the card it lands on once let go rather than being there at once, and `ontouch`
+	 * is called as soon as a hand turns it
 	 */
-	constructor(turn: Tween<number>, width: () => number, ontouch: () => void) {
+	constructor(
+		turn: Tween<number>,
+		width: () => number,
+		slides: () => boolean,
+		ontouch: () => void
+	) {
 		this.#turn = turn;
 		this.#width = width;
+		this.#slides = slides;
 		this.#ontouch = ontouch;
 	}
 
@@ -125,7 +133,7 @@ export class Swipe {
 		const duration = fresh && speed > 0.0005 ? (5 * distance) / speed : BY_HAND;
 
 		turn.set(to, {
-			duration: prefersReducedMotion.current ? 0 : Math.max(300, Math.min(700, duration)),
+			duration: this.#slides() ? Math.max(300, Math.min(700, duration)) : 0,
 			easing: quintOut
 		});
 	};
@@ -149,7 +157,7 @@ export class Swipe {
 		this.#wheel_timer = setTimeout(() => {
 			this.dragging = false;
 			this.#turn.set(Math.round(this.#turn.current), {
-				duration: prefersReducedMotion.current ? 0 : BY_HAND,
+				duration: this.#slides() ? BY_HAND : 0,
 				easing: quintOut
 			});
 		}, 120);

@@ -4,15 +4,13 @@ rows need to come out even, as `arrange` lays them out
 -->
 <script lang="ts">
 	import type { Tile as Placed } from './arrange.ts';
-	import type { Player } from './player.svelte.ts';
 	import Tile from './Tile.svelte';
 
 	interface Props {
 		tiles: Placed[];
-		player: Player;
 	}
 
-	let { tiles, player }: Props = $props();
+	let { tiles }: Props = $props();
 
 	// widths of the screenshots as laid out below
 	const sizes: Record<Placed['size'], string> = {
@@ -25,7 +23,7 @@ rows need to come out even, as `arrange` lays them out
 <ul class="sites">
 	{#each tiles as { site, size, right, fill } (site.id)}
 		<li class={['site', size, { right }, fill && `fill-${fill}`]} id={site.id}>
-			<Tile {site} {player} sizes={sizes[fill ? 'big' : size]} large={size === 'big'} />
+			<Tile {site} sizes={sizes[fill ? 'big' : size]} large={size === 'big'} />
 		</li>
 	{/each}
 </ul>

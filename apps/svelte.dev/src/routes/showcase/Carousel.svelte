@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount, tick, untrack, type Snippet } from 'svelte';
+	import { tick, untrack, type Snippet } from 'svelte';
 	import { quintOut } from 'svelte/easing';
 	import type { HTMLVideoAttributes } from 'svelte/elements';
 	import { Tween, prefersReducedMotion } from 'svelte/motion';
@@ -14,8 +14,6 @@
 		sites: Site[];
 		/** whether anything moves on its own, which the button at the start of the page turns off */
 		autoplay: boolean;
-		/** spins in from the side, on the first visit only */
-		arrive: boolean;
 		sizes: string;
 		/** a click on the card in front, which goes to the site in the list */
 		onpick: (event: MouseEvent, id: string) => void;
@@ -25,28 +23,21 @@
 		controls?: Snippet;
 	}
 
-	let { sites, autoplay, arrive, sizes, onpick, onprime, controls }: Props = $props();
+	let { sites, autoplay, sizes, onpick, onprime, controls }: Props = $props();
 
 	const count = $derived(sites.length);
 
 	/**
 	 * where the ring has turned to, in cards rather than degrees, and never wrapped, so it can keep
-	 * turning either way for ever. a whole number when one card is in front. starting to one side
-	 * only on the first visit, which the prop never changes after
+	 * turning either way for ever. a whole number when one card is in front
 	 */
-	const turn = new Tween(untrack(() => arrive) ? -1.6 : 0, { duration: 700, easing: quintOut });
-
-	/**
-	 * spinning in to the first card, which is named below from the start rather than whichever it
-	 * starts from
-	 */
-	let arriving = $state(untrack(() => arrive));
+	const turn = new Tween(0, { duration: 700, easing: quintOut });
 
 	/** the card in front, or nearest to it while turning */
 	const current = $derived(wrap(Math.round(turn.current), count));
 
 	/** where the ring is turning to, which decides the card named below it */
-	const target = $derived(arriving ? 0 : wrap(Math.round(turn.target), count));
+	const target = $derived(wrap(Math.round(turn.target), count));
 
 	/** the ring has come to rest on the one in front */
 	const settled = $derived(turn.current === turn.target);
@@ -66,6 +57,28 @@
 	/** turned by a hand on it, so it says where it lands */
 	let touched = $state(false);
 
+	let named = false;
+
+	/**
+	 * brings each name in as the carousel turns to it, where it moves at all. not the first, which
+	 * is there as the page loads, and only as the name changes, so pausing and playing do not
+	 * bring the same name in again
+	 */
+	function arrive(node: HTMLElement) {
+		// each time another comes to the front
+		target;
+
+		const first = !named;
+		named = true;
+
+		if (first || untrack(() => !moving)) return;
+
+		node.animate([{ opacity: 0, translate: '0 0.4rem' }, {}], {
+			duration: 250,
+			easing: getComputedStyle(node).getPropertyValue('--quint-out')
+		});
+	}
+
 	/**
 	 * the keyboard is in it, or a hand is holding it, which stops it turning on its own. not a
 	 * mouse resting on it or a click on its buttons, after which it carries on
@@ -74,10 +87,17 @@
 
 	let stage: HTMLElement;
 
+	/**
+	 * whether it moves at all: turning and playing on its own, and sliding from one card to the
+	 * next when turned by hand. where motion is paused or reduced the cards change places at once
+	 */
+	const moving = $derived(autoplay && !prefersReducedMotion.current);
+
 	/** turned by a hand on it */
 	const swipe = new Swipe(
 		turn,
 		() => stage.querySelector<HTMLElement>('.card')?.offsetWidth || 400,
+		() => moving,
 		() => (touched = true)
 	);
 
@@ -85,16 +105,13 @@
 	let seen = $state(true);
 	let shown = $state(true);
 
-	/** whether it is allowed to turn and play on its own at all */
-	const moving = $derived(autoplay && !prefersReducedMotion.current);
-
 	/** whether it should be turning on its own right now */
 	const running = $derived(moving && seen && shown && !focused && !swipe.dragging);
 
 	/** turns to the card a given number away, by the shortest way round */
 	function go(by: number, duration = BY_HAND) {
 		const to = Math.round(turn.target) + by;
-		turn.set(to, { duration: prefersReducedMotion.current ? 0 : duration, easing: quintOut });
+		turn.set(to, { duration: moving ? duration : 0, easing: quintOut });
 	}
 
 	/** turns to a given card by the shortest way round */
@@ -106,31 +123,25 @@
 		}
 	}
 
-	/** on the first visit, spins in to the first card */
-	onMount(() => {
-		if (arrive) {
-			turn.set(0, { duration: prefersReducedMotion.current ? 0 : 1600, easing: quintOut });
-			arriving = false;
-		}
-	});
-
 	/** the arc the cards stand in, and the cards, in the order of their sites */
 	let space: HTMLElement;
 	const cards: HTMLElement[] = [];
 
 	/**
-	 * where motion is reduced the cards change places at once, so the arc dims for a moment as they
-	 * do, to show that they have
+	 * where nothing moves the cards change places at once, so the arc dims for a moment as they do,
+	 * to show that they have
 	 */
 	let placed = false;
+
+	function flash() {
+		space.animate({ opacity: [1, 0.6, 1] }, { duration: 200, easing: 'ease' });
+	}
 
 	$effect(() => {
 		// each time another comes to the front, after the first
 		target;
 
-		if (placed && untrack(() => prefersReducedMotion.current)) {
-			space.animate({ opacity: [1, 0.6, 1] }, { duration: 200, easing: 'ease' });
-		}
+		if (placed && untrack(() => !moving)) flash();
 
 		placed = true;
 	});
@@ -224,8 +235,9 @@
 	}
 
 	/**
-	 * the arrow keys turn it from anywhere in it. on the marks, which are one stop in the tab order,
-	 * the focus follows to the mark of the one coming to the front
+	 * the arrow keys turn it from anywhere in it, at once rather than sliding, so a key held down
+	 * keeps up. on the marks, which are one stop in the tab order, the focus follows to the mark of
+	 * the one coming to the front
 	 */
 	async function key(event: KeyboardEvent) {
 		const by = event.key === 'ArrowLeft' ? -1 : event.key === 'ArrowRight' ? 1 : 0;
@@ -233,7 +245,9 @@
 
 		event.preventDefault();
 		touched = true;
-		go(by);
+		go(by, 0);
+		// the effect below does this where nothing moves
+		if (moving) flash();
 
 		const steps = (event.target as HTMLElement).closest('.steps');
 		if (steps) {
@@ -265,7 +279,7 @@
 <!-- the arrow keys, from the links and buttons inside it, which is where they come from -->
 <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 <section
-	class="carousel"
+	class={['carousel', { still: !moving }]}
 	aria-roledescription="carousel"
 	aria-label="Sites built with Svelte"
 	onkeydown={key}
@@ -293,23 +307,18 @@
 				{@const d = Math.abs(o)}
 				{@const front = i === current}
 				{@const at = place(o)}
-				{@const grey = Math.min(d, 1)}
 				<!-- out of the tab order and hidden from screen readers, since the name below links to the
-				     same place and the buttons turn it. placed, faded and greyed by its style, set
-				     directly rather than by properties its contents would inherit and work out again on
-				     every frame, with no filter on the one in front once it rests, which safari would
-				     otherwise stop drawing its clip under -->
+				     same place and the buttons turn it. placed and faded by its style, set directly
+				     rather than by properties its contents would inherit and work out again on every
+				     frame -->
 				<a
-					class={['card', { front }]}
+					class={['card', { front, away: i !== target }]}
 					href="#{site.id}"
 					draggable="false"
 					tabindex="-1"
 					aria-hidden="true"
 					style:transform="translate(-50%, -50%) translate3d({at.x - 50}cqw, 0, {at.z}px) rotateY({at.r}deg)"
 					style:opacity={d > 2 ? 1 - Math.min(1, d - 2) : undefined}
-					style:filter={settled && front
-						? undefined
-						: `saturate(${1 - grey * 0.9}) brightness(${1 - grey * 0.12})`}
 					style:visibility={d >= 3 ? 'hidden' : undefined}
 					style:--position={site.screenshot?.position}
 					style:--placeholder={placeholders[site.id]}
@@ -343,16 +352,15 @@
 
 		<!-- read out only when turned by hand, rather than every few seconds -->
 		<p class="name" aria-live={touched ? 'polite' : 'off'}>
-			{#key target}
-				<a
-					href="#{sites[target].id}"
-					onclick={(event) => onpick(event, sites[target].id)}
-					onpointerenter={() => onprime(sites[target].id)}
-					onfocus={() => onprime(sites[target].id)}
-				>
-					{sites[target].name}
-				</a>
-			{/key}
+			<a
+				{@attach arrive}
+				href="#{sites[target].id}"
+				onclick={(event) => onpick(event, sites[target].id)}
+				onpointerenter={() => onprime(sites[target].id)}
+				onfocus={() => onprime(sites[target].id)}
+			>
+				{sites[target].name}
+			</a>
 		</p>
 
 		<button class="turn" aria-label="Next site" onclick={() => ((touched = true), go(1))}>
@@ -426,6 +434,18 @@
 		-webkit-backface-visibility: hidden;
 		pointer-events: auto;
 		-webkit-tap-highlight-color: transparent;
+		/* by a transition the browser runs itself, rather than a filter worked out on every frame
+		   of the turn. none at all on the one in front, which safari would otherwise stop drawing
+		   its clip under */
+		transition: filter 0.45s var(--quint-out);
+
+		&.away {
+			filter: saturate(0.1) brightness(0.88);
+		}
+
+		.still & {
+			transition: none;
+		}
 
 		/* the one in front opens, which the hand over the rest of the ring would not say */
 		&.front {
@@ -477,14 +497,9 @@
 			grid-area: 1 / 1;
 			color: var(--sk-fg-1);
 			text-decoration: none;
-			animation: name-in 0.25s var(--quint-out);
 
 			&:hover {
 				text-decoration: underline;
-			}
-
-			@media (prefers-reduced-motion: reduce) {
-				animation: none;
 			}
 		}
 	}
@@ -584,6 +599,19 @@
 			transition: width 0.3s var(--quint-out);
 		}
 
+		.still & {
+			transition: none;
+
+			&::after {
+				transition: none;
+			}
+		}
+
+		/* full from the first paint where it was left paused, before the page knows it is */
+		:global(html.showcase-paused) &[aria-current='true']::after {
+			scale: 1;
+		}
+
 		&[aria-current='true'] {
 			width: 4rem;
 
@@ -605,13 +633,6 @@
 		&:focus-visible {
 			outline: 2px solid var(--sk-fg-accent);
 			outline-offset: -1rem;
-		}
-	}
-
-	@keyframes name-in {
-		from {
-			opacity: 0;
-			translate: 0 0.4rem;
 		}
 	}
 </style>

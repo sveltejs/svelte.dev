@@ -1,30 +1,39 @@
 <!--@component
 a site in the list: its screenshot, linking to it, with its name and description under it, or in
 compact rows its name over the screenshot as you point at, focus or tap it. what holds it has the
-site's id, for links to land on, and can set --lift, the z-index it takes while pointed at or
-focused, to rise above anything laid over the list
+site's id, for links to land on
 -->
 <script lang="ts">
 	import { fade_in } from './fade-in.ts';
 	import { lengthen } from './glance.ts';
 	import { clips, placeholders, scrolling } from './media.ts';
-	import type { Player } from './player.svelte.ts';
+	import { get_player } from './player.svelte.ts';
 	import Screenshot from './Screenshot.svelte';
 	import type { Site } from './sites.ts';
 
 	interface Props {
 		site: Site;
 		sizes: string;
-		player: Player;
 		/** taller to fill the rows it spans, with larger type */
 		large?: boolean;
 		/** only the screenshot, with the name over it, as in the rows of the many more */
 		compact?: boolean;
 		/** never loads its whole screenshot, nor a clip that scrolls down the page, to save data */
 		still?: boolean;
+		/** one shown a second time, which the keyboard and screen readers pass over */
+		copy?: boolean;
 	}
 
-	let { site, sizes, player, large = false, compact = false, still = false }: Props = $props();
+	let {
+		site,
+		sizes,
+		large = false,
+		compact = false,
+		still = false,
+		copy = false
+	}: Props = $props();
+
+	const player = get_player();
 
 	/** whether it has a clip to play */
 	const moves = $derived(!!clips[site.id] && !(still && scrolling.has(site.id)));
@@ -35,6 +44,7 @@ focused, to rise above anything laid over the list
 <a
 	class={['tile', { large, compact }]}
 	href={site.url}
+	tabindex={copy ? -1 : undefined}
 	onpointerenter={(event) => (moves || !still) && lengthen(event, frame, site.id, player)}
 	onfocus={() => moves && player.focus(frame, site.id)}
 	onblur={() => moves && player.release(frame)}
@@ -74,11 +84,6 @@ focused, to rise above anything laid over the list
 		height: 100%;
 		color: var(--sk-fg-1);
 		text-decoration: none;
-
-		/* above whatever is laid over the list, while pointed at or focused */
-		&:is(:hover, :focus-visible) {
-			z-index: var(--lift, auto);
-		}
 
 		/* the name only, as links elsewhere on the site, rather than the description too */
 		&:hover {
@@ -182,15 +187,15 @@ focused, to rise above anything laid over the list
 		background: linear-gradient(transparent, var(--shade));
 		pointer-events: none;
 		transition:
-			color 0.2s ease,
-			--shade 0.2s ease;
+			color 0.15s ease,
+			--shade 0.15s ease;
 
 		.tile:is(:focus-visible, :active) & {
 			--shade: rgb(0 0 0 / 0.65);
 			color: inherit;
 		}
 
-		@media all and not (hover: none) {
+		@media (hover: hover) and (pointer: fine) {
 			.tile:hover & {
 				--shade: rgb(0 0 0 / 0.65);
 				color: inherit;

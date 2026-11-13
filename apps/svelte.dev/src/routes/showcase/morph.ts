@@ -36,10 +36,97 @@ export function morph(event: MouseEvent, id: string) {
 	}
 
 	event.preventDefault();
-	jump(link, source, destination);
+
+	jump(source, destination, () => {
+		replaying = true;
+		link.click();
+		replaying = false;
+	});
 }
 
-async function jump(link: HTMLAnchorElement, source: HTMLElement, destination: HTMLElement) {
+/**
+ * the same move for the back and forward buttons: forward again to a site in the list, from its
+ * card at the front of the carousel, and back from it to that card. only where both are there to
+ * be seen, and otherwise the page jumps as it would have
+ */
+export function morph_history() {
+	let url = new URL(location.href);
+
+	/**
+	 * where the page was scrolled to before the move, as of the last time it said it scrolled,
+	 * since safari has already scrolled to a site in the list by the time it says it went forward
+	 */
+	let scroll = { left: scrollX, top: scrollY };
+
+	const controller = new AbortController();
+	const { signal } = controller;
+
+	addEventListener('scroll', () => (scroll = { left: scrollX, top: scrollY }), {
+		passive: true,
+		signal
+	});
+
+	// follows every change of place, by a link or through history, and after the move below
+	addEventListener('hashchange', () => (url = new URL(location.href)), { signal });
+
+	function traverse(event: PopStateEvent) {
+		const was = url;
+		url = new URL(location.href);
+
+		const before = scroll;
+		const after = { left: scrollX, top: scrollY };
+
+		if (
+			// a link to somewhere on the page, which says so too, and not a move through history
+			event.state === null ||
+			// the browser showed the move itself, as safari does for a swipe from the edge
+			event.hasUAVisualTransition ||
+			!document.startViewTransition ||
+			matchMedia('(prefers-reduced-motion: reduce)').matches ||
+			was.pathname !== url.pathname ||
+			was.search !== url.search ||
+			// between the start of the page and a site in the list only
+			!was.hash === !url.hash ||
+			Math.abs(after.top - before.top) < 1
+		) {
+			return;
+		}
+
+		const id = decodeURIComponent((url.hash || was.hash).slice(1));
+		const card = document.querySelector<HTMLElement>(
+			`.card.front[href="#${CSS.escape(id)}"] .frame`
+		);
+		const listed = frame_of(id);
+		if (!card || !listed) return;
+
+		const [source, destination] = url.hash ? [card, listed] : [listed, card];
+
+		// back to where it was for the browser to capture, before anything is painted
+		scrollTo({ ...before, behavior: 'instant' });
+
+		const { top, bottom } = source.getBoundingClientRect();
+
+		if (bottom <= 0 || top >= innerHeight) {
+			scrollTo({ ...after, behavior: 'instant' });
+			return;
+		}
+
+		jump(source, destination, () => scrollTo({ ...after, behavior: 'instant' }));
+	}
+
+	// listening only once the router is, which starts after the page it loads with is on screen,
+	// so the router has scrolled the page to where it goes by the time this hears of the move.
+	// were this to hear first, the page would not have moved yet, and it jumps as it would have
+	const listening = setTimeout(() => addEventListener('popstate', traverse, { signal }));
+
+	return () => {
+		clearTimeout(listening);
+		controller.abort();
+	};
+}
+
+/** moves one screenshot onto the other as the page changes from showing one to showing the other */
+async function jump(source: HTMLElement, destination: HTMLElement, change: () => void) {
 	// the rest of the category loads too, so it does not land among empty frames
 	for (const img of destination.closest('ul')?.querySelectorAll('img') ?? []) {
 		img.loading = 'eager';
@@ -48,7 +135,7 @@ async function jump(link: HTMLAnchorElement, source: HTMLElement, destination: H
 	// starts at once rather than waiting for the screenshot it lands on, which shows its blurred
 	// placeholder until then
 	const root = document.documentElement;
-	const duration = 300;
+	let duration = 300;
 	let to!: DOMRect;
 	let stand_in: HTMLElement | undefined;
 
@@ -77,16 +164,17 @@ async function jump(link: HTMLAnchorElement, source: HTMLElement, destination: H
 	const transition = document.startViewTransition(() => {
 		source.style.viewTransitionName = '';
 
-		replaying = true;
-		link.click();
-		replaying = false;
+		change();
 
 		to = destination.getBoundingClientRect();
 		stand_in = stand_in_for(destination, source, to);
 
+		// longer the further it has to go, so a long way is not too quick to follow
+		duration = Math.min(450, 300 + Math.hypot(to.left - from.left, to.top - from.top) / 4);
+
 		// shows under the picked one as it lands, which then fades, so the two never dim each other
 		destination.animate(
-			[{ opacity: 0 }, { opacity: 0, offset: 0.55 }, { opacity: 1, offset: 0.65 }],
+			[{ opacity: 0 }, { opacity: 0, offset: 0.85 }, { opacity: 1, offset: 0.95 }],
 			duration
 		);
 	});
@@ -124,7 +212,8 @@ async function jump(link: HTMLAnchorElement, source: HTMLElement, destination: H
 		},
 		{
 			duration,
-			easing: getComputedStyle(root).getPropertyValue('--quint-out').trim(),
+			// off gently and in gently, as what moves across the screen does
+			easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
 			fill: 'both',
 			pseudoElement: '::view-transition-group(picked)'
 		}

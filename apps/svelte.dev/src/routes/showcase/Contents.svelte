@@ -31,7 +31,7 @@ moves to it in the list as you jump there
 					<span class="title">{section.title}</span>
 
 					<span
-						class="sheet frame greyed"
+						class="sheet frame"
 						aria-hidden="true"
 						style:--position={section.lead.screenshot?.position}
 						style:--placeholder={placeholders[section.lead.id]}
@@ -122,6 +122,7 @@ moves to it in the list as you jump there
 		aspect-ratio: 16 / 10;
 		overflow: hidden;
 		border: 1px solid var(--sk-border);
+		border-radius: var(--sk-border-radius);
 
 		@media (min-width: 740px) {
 			width: 12rem;
@@ -130,12 +131,5 @@ moves to it in the list as you jump there
 		@media (min-width: 1024px) {
 			width: 16rem;
 		}
-	}
-
-	/* greyed towards the top and bottom of the window like the list, each by a layer of grey of its
-	   own rather than one over the list, which is over the foot of the hero, so the page there stays
-	   clear. in colour wherever it is while pointed at or focused */
-	a:is(:hover, :focus-visible) .sheet::after {
-		display: none;
 	}
 </style>

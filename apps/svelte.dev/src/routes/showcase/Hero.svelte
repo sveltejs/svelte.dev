@@ -1,38 +1,30 @@
 <!--@component
 the heading of the page and the carousel of sites under it. sets `seen` while it is on screen
 -->
-<script module lang="ts">
-	/** set once the page has shown, so the ring spins in on the first visit and not on coming back */
-	let arrived = false;
-</script>
-
 <script lang="ts">
 	import Carousel from './Carousel.svelte';
-	import { morph, prime } from './morph.ts';
+	import { morph, morph_history, prime } from './morph.ts';
 	import { on_screen } from './on-screen.ts';
 	import PauseButton from './PauseButton.svelte';
-	import type { Player } from './player.svelte.ts';
+	import { get_player } from './player.svelte.ts';
 	import type { Site } from './sites.ts';
 
 	interface Props {
 		/** round the carousel, in turn */
 		sites: Site[];
-		player: Player;
 		/** the hero is on screen */
 		seen?: boolean;
 	}
 
-	let { sites, player, seen = $bindable(true) }: Props = $props();
+	let { sites, seen = $bindable(true) }: Props = $props();
 
-	const arrive = !arrived;
+	const player = get_player();
 </script>
 
 <div
 	class="hero"
 	{@attach on_screen((entry) => (seen = entry.isIntersecting))}
-	{@attach () => {
-		arrived = true;
-	}}
+	{@attach morph_history}
 >
 	<div class="intro">
 		<h1>Built with <span>Svelte</span></h1>
@@ -42,13 +34,12 @@ the heading of the page and the carousel of sites under it. sets `seen` while it
 	<Carousel
 		{sites}
 		autoplay={player.autoplay}
-		{arrive}
 		sizes="(min-width: 740px) 440px, 60vw"
 		onpick={morph}
 		onprime={prime}
 	>
 		{#snippet controls()}
-			<PauseButton {player} where="inline" />
+			<PauseButton where="inline" />
 		{/snippet}
 	</Carousel>
 </div>

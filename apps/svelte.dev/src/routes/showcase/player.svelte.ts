@@ -1,3 +1,4 @@
+import { createContext } from 'svelte';
 import { prefersReducedMotion } from 'svelte/motion';
 import { clips } from './media.ts';
 import { on_screen } from './on-screen.ts';
@@ -7,6 +8,12 @@ function may_move() {
 	const connection = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection;
 	return !prefersReducedMotion.current && !connection?.saveData;
 }
+
+/** where being paused is remembered from one visit to the next */
+export const paused_key = 'showcase:paused';
+
+/** on the page while it is paused, which the pause button shows itself by */
+export const paused_class = 'showcase-paused';
 
 /**
  * plays the clips over the screenshots of the list: each that is mostly in the window, and any
@@ -23,17 +30,21 @@ export class Player {
 	/** remembers being paused from the last visit */
 	restore() {
 		try {
-			if (localStorage.getItem('showcase:paused')) this.autoplay = false;
+			if (localStorage.getItem(paused_key)) this.autoplay = false;
 		} catch {}
+
+		// already there on a page loaded paused, but not on one arrived at from elsewhere on the site
+		document.documentElement.classList.toggle(paused_class, !this.autoplay);
 	}
 
 	toggle() {
 		this.autoplay = !this.autoplay;
+		document.documentElement.classList.toggle(paused_class, !this.autoplay);
 
 		// remembered, so it stays paused on the next visit
 		try {
-			if (this.autoplay) localStorage.removeItem('showcase:paused');
-			else localStorage.setItem('showcase:paused', '1');
+			if (this.autoplay) localStorage.removeItem(paused_key);
+			else localStorage.setItem(paused_key, '1');
 		} catch {}
 
 		if (!this.autoplay) {
@@ -120,3 +131,6 @@ export class Player {
 		}, 300);
 	}
 }
+
+/** the one player of the page, for whatever in it plays or pauses clips */
+export const [get_player, set_player] = createContext<Player>();

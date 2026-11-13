@@ -105,9 +105,11 @@ function glance(slide: HTMLElement, img: HTMLImageElement) {
 	);
 }
 
-/** back up quickly as the pointer leaves */
+/** back up quickly as the pointer leaves, quicker the less far down it had got */
 function settle(slide: HTMLElement, img: HTMLImageElement) {
-	const options = { duration: 600, easing: 'cubic-bezier(0.23, 1, 0.32, 1)' };
+	const [, y = '0'] = getComputedStyle(slide).translate.split(' ');
+	const down = y.endsWith('%') ? parseFloat(y) / 100 : 0;
+	const options = { duration: 250 + 200 * down, easing: 'cubic-bezier(0.23, 1, 0.32, 1)' };
 
 	for (const element of [slide, img]) {
 		const from = getComputedStyle(element).translate;

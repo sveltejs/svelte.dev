@@ -883,7 +883,6 @@ const HERO = [
  * and 36th are at an end most often, and the last is left alone on phones and hidden there
  */
 const MORE = [
-	// rows of six on wide screens, starting with one at an end
 	'porters-paints',
 	'apple-music-100-best',
 	'dbrand',

@@ -3,34 +3,36 @@ pauses and plays everything that moves on its own: floating in the corner, or on
 carousel while the hero shows, where the floating one would cover the carousel's own buttons
 -->
 <script lang="ts">
-	import type { Player } from './player.svelte.ts';
+	import { get_player } from './player.svelte.ts';
 
 	interface Props {
-		player: Player;
 		/** in the corner of the window, or in the flow under the carousel on phones */
 		where: 'float' | 'inline';
 		/** on phones, out of the way while the hero shows */
 		tucked?: boolean;
 	}
 
-	let { player, where, tucked = false }: Props = $props();
+	let { where, tucked = false }: Props = $props();
+
+	const player = get_player();
 </script>
 
 <button class={['autoplay', where, { tucked }]} onclick={() => player.toggle()}>
 	<!-- both, one over the other, so one can turn into the other -->
 	<span class="glyph" aria-hidden="true">
-		<svg class={{ off: !player.autoplay }} viewBox="0 0 16 16" width="16" height="16">
+		<svg class="pause" viewBox="0 0 16 16" width="16" height="16">
 			<path d="M4 2.5h3v11H4zM9 2.5h3v11H9z" />
 		</svg>
-		<svg class={{ off: player.autoplay }} viewBox="0 0 16 16" width="16" height="16">
+		<svg class="play" viewBox="0 0 16 16" width="16" height="16">
 			<path d="M4 2.2v11.6L13.5 8z" />
 		</svg>
 	</span>
 	<!-- both, one over the other with only the one that applies showing, so the button is as wide
-	     either way -->
+	     either way. which one shows follows a class on the page, set before it is first painted,
+	     so a page left paused shows it from the start -->
 	<span class="wording">
-		<span class={{ off: !player.autoplay }}>Pause motion</span>
-		<span class={{ off: player.autoplay }}>Play motion</span>
+		<span class="pause">Pause motion</span>
+		<span class="play">Play motion</span>
 	</span>
 </button>
 
@@ -160,10 +162,17 @@ carousel while the hero shows, where the floating one would cover the carousel's
 			scale 0.15s ease,
 			filter 0.15s ease;
 
-		&.off {
+		&.play,
+		:global(html.showcase-paused) &.pause {
 			opacity: 0;
 			scale: 0.8;
 			filter: blur(2px);
+		}
+
+		:global(html.showcase-paused) &.play {
+			opacity: 1;
+			scale: 1;
+			filter: none;
 		}
 	}
 
@@ -175,8 +184,13 @@ carousel while the hero shows, where the floating one would cover the carousel's
 		}
 
 		/* hidden from screen readers too, so the button is named by the one showing */
-		.off {
+		.play,
+		:global(html.showcase-paused) & .pause {
 			visibility: hidden;
+		}
+
+		:global(html.showcase-paused) & .play {
+			visibility: visible;
 		}
 	}
 </style>
