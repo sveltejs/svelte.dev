@@ -82,10 +82,33 @@ function highlight_source(source: string, language: string) {
 		: `<pre class="twinkleplop plaintext"><code>${escape_html(source)}</code></pre>`;
 }
 
+/** Turns `> [!NOTE]`, `> [!LEGACY]` and `> [!DETAILS]` blockquotes into notes */
+function blockquote(this: marked.Renderer, token: marked.Tokens.Blockquote) {
+	let content = this.parser?.parse(token.tokens) ?? '';
+
+	if (content.includes('[!LEGACY]')) {
+		content = `<details class="legacy"><summary>Legacy mode</summary>${content.replace('[!LEGACY]', '')}</details>`;
+	}
+
+	if (content.includes('[!DETAILS]')) {
+		const regex = /\[!DETAILS\] (.+)/;
+		const match = regex.exec(content)!;
+		content = `<details><summary>${match[1]}</summary>${content.replace(regex, '')}</details>`;
+		return `<blockquote class="note">${content}</blockquote>`;
+	}
+
+	if (content.includes('[!NOTE]')) {
+		return `<blockquote class="note">${content.replace('[!NOTE]', '')}</blockquote>`;
+	}
+
+	return `<blockquote>${content}</blockquote>`;
+}
+
 // TODO: replace with marked.parseInline once twinkleplop is fixed
 // see https://github.com/pngwn/twinkleplop/issues/107
 const docs_markdown = new marked.Marked({
 	renderer: {
+		blockquote,
 		code({ text, lang }) {
 			return `<div class="code-block"><div class="controls"><button class="copy-to-clipboard raised" title="Copy to clipboard" aria-label="Copy to clipboard"></button></div>${highlight_source(text, lang ?? '')}</div>`;
 		}
@@ -675,26 +698,7 @@ export async function render_content_markdown(
 
 			return html;
 		},
-		blockquote(token) {
-			let content = this.parser?.parse(token.tokens) ?? '';
-
-			if (content.includes('[!LEGACY]')) {
-				content = `<details class="legacy"><summary>Legacy mode</summary>${content.replace('[!LEGACY]', '')}</details>`;
-			}
-
-			if (content.includes('[!DETAILS]')) {
-				const regex = /\[!DETAILS\] (.+)/;
-				const match = regex.exec(content)!;
-				content = `<details><summary>${match[1]}</summary>${content.replace(regex, '')}</details>`;
-				return `<blockquote class="note">${content}</blockquote>`;
-			}
-
-			if (content.includes('[!NOTE]')) {
-				return `<blockquote class="note">${content.replace('[!NOTE]', '')}</blockquote>`;
-			}
-
-			return `<blockquote>${content}</blockquote>`;
-		}
+		blockquote
 	});
 
 	return transformed;
