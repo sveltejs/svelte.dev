@@ -12,10 +12,14 @@
 	const hidden = $derived(JSON.parse(persisted.current));
 	const time = +new Date();
 
-	// always in the prerendered page, hidden until app.html finds that it should show
 	let visible = $derived(
-		!browser || (!hidden[banner.id] && time > +banner.start && time < +banner.end)
+		browser && !hidden[banner.id] && time > +banner.start && time < +banner.end
 	);
+
+	// app.html adds the class before the first paint, so the space is there before the banner is
+	$effect(() => {
+		document.documentElement.classList.toggle('banner-shown', visible);
+	});
 </script>
 
 <svelte:head>
@@ -54,13 +58,8 @@
 {/if}
 
 <style>
-	/* svelte makes it inert while it fades out, so the space closes as it starts to */
-	:global(:root.banner-shown:has([data-banner]:not([inert]))) {
+	:global(:root.banner-shown) {
 		--sk-banner-height: 4.2rem;
-	}
-
-	:global(:root:not(.banner-shown)) .banner {
-		display: none;
 	}
 
 	.banner {
