@@ -68,14 +68,21 @@
 						node.checked = false;
 					}
 				}
-
-				const banner = document.querySelector('[data-banner]')?.dataset.banner;
-
-				if (banner && JSON.parse(localStorage.getItem('sv:hidden-banners') ?? '{}')[banner]) {
-					document.documentElement.classList.add('banner-dismissed');
-				}
 			} catch {
 				// localStorage access disabled
+			}
+
+			{
+				const { banner, start, end } = document.querySelector('[data-banner]')?.dataset ?? {};
+				let hidden = Date.now() < start || Date.now() > end;
+
+				try {
+					hidden ||= JSON.parse(localStorage.getItem('sv:hidden-banners'))?.[banner];
+				} catch {
+					// localStorage access disabled
+				}
+
+				document.documentElement.classList.toggle('banner-hidden', !!hidden);
 			}
 		</script>
 	</body>

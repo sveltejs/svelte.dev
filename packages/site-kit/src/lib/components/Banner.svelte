@@ -3,6 +3,7 @@
 	import { fade } from 'svelte/transition';
 	import Icon from './Icon.svelte';
 	import type { BannerData } from '../types';
+	import { browser } from '$app/env';
 	import { Persisted } from '../state';
 
 	let { banner }: { banner: BannerData } = $props();
@@ -11,11 +12,20 @@
 	const hidden = $derived(JSON.parse(persisted.current));
 	const time = +new Date();
 
-	let visible = $derived(!hidden[banner.id] && time > +banner.start && time < +banner.end);
+	// always in the prerendered page, where app.html hides it before first paint if it should not show
+	let visible = $derived(
+		!browser || (!hidden[banner.id] && time > +banner.start && time < +banner.end)
+	);
 </script>
 
 {#if visible}
-	<div class="banner" data-banner={banner.id} transition:fade={{ duration: 400, easing: quintOut }}>
+	<div
+		class="banner"
+		data-banner={banner.id}
+		data-start={+banner.start}
+		data-end={+banner.end}
+		transition:fade={{ duration: 400, easing: quintOut }}
+	>
 		<a href={banner.href}>
 			{#if banner.content.lg}
 				<span class="large">{banner.content.lg}</span>
@@ -46,12 +56,24 @@
 {/if}
 
 <style>
-	/* app.html adds the class before first paint for a banner the reader dismissed */
-	:global(:root:has([data-banner]):not(.banner-dismissed)) {
+	/* a length, so the space it takes can close gradually */
+	@property --sk-banner-height {
+		syntax: '<length>';
+		inherits: true;
+		initial-value: 0px;
+	}
+
+	:global(:root:has([data-banner]):not(.banner-hidden)) {
 		--sk-banner-height: 4.2rem;
 	}
 
-	:global(.banner-dismissed) .banner {
+	/* svelte makes it inert while it fades out, so its space closes over the same time */
+	:global(:root:has([data-banner][inert])) {
+		--sk-banner-height: 0px;
+		transition: --sk-banner-height 0.4s var(--quint-out);
+	}
+
+	:global(.banner-hidden) .banner {
 		display: none;
 	}
 
