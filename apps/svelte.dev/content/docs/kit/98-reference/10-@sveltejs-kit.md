@@ -555,6 +555,29 @@ interface AdapterViteConfig {/*…*/}
 <div class="ts-block-property">
 
 ```dts
+customPreview?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `false`
+- <span class="tag since">available since</span> v3.3.0
+
+</div>
+
+By default, SvelteKit creates a Node preview server to serve the build
+output during `vite preview`. Set this option to `true` when the adapter
+provides a Vite plugin with a `configurePreviewServer` hook that handles
+previewing the build output on its own.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
 getRequest?: typeof getRequest;
 ```
 
