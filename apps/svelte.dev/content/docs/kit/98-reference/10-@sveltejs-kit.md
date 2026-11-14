@@ -528,6 +528,25 @@ during dev, build and prerendering.
 <div class="ts-block-property">
 
 ```dts
+dev?: AdapterDevConfig | ((ctx: { config: ValidatedConfig }) => AdapterDevConfig);
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag since">available since</span> v3.3.0
+
+</div>
+
+Options that only apply during `vite dev`
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
 vite?: AdapterViteConfig | ((ctx: { config: ValidatedConfig }) => AdapterViteConfig);
 ```
 
@@ -540,6 +559,42 @@ vite?: AdapterViteConfig | ((ctx: { config: ValidatedConfig }) => AdapterViteCon
 </div>
 
 Options for configuring and interacting with Vite
+
+</div>
+</div></div>
+
+## AdapterDevConfig
+
+<div class="ts-block">
+
+```dts
+interface AdapterDevConfig {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+respond?: (
+	request: Request,
+	options: {
+		/** Returns the IP address of the client that sent the request */
+		getClientAddress: () => string;
+		/** Renders the request in Node */
+		resolve: (request: Request) => Promise<Response>;
+	}
+) => Promise<Response>;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag since">available since</span> v3.3.0
+
+</div>
+
+This function overrides the default behaviour of the SvelteKit server responding to a request during `vite dev`.
+To call the original `respond`, return the result of `options.resolve(request)`.
 
 </div>
 </div></div>
