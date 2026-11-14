@@ -519,8 +519,33 @@ emulate?: () => MaybePromise<Emulator>;
 
 <div class="ts-block-property-details">
 
+<div class="ts-block-property-bullets">
+
+- <span class="tag deprecated">deprecated</span> Use `dev.respond` to render requests in your platform's runtime during development instead
+
+</div>
+
 Creates an `Emulator`, which allows the adapter to influence the environment
 during dev, build and prerendering.
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
+dev?: AdapterDevConfig | ((ctx: { config: ValidatedConfig }) => AdapterDevConfig);
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag since">available since</span> v3.3.0
+
+</div>
+
+Options that only apply during `vite dev`
 
 </div>
 </div>
@@ -540,6 +565,44 @@ vite?: AdapterViteConfig | ((ctx: { config: ValidatedConfig }) => AdapterViteCon
 </div>
 
 Options for configuring and interacting with Vite
+
+</div>
+</div></div>
+
+## AdapterDevConfig
+
+<div class="ts-block">
+
+```dts
+interface AdapterDevConfig {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+respond?: (
+	request: Request,
+	options: {
+		/** Returns the IP address of the client that sent the request */
+		getClientAddress: () => string;
+		/** Renders the request in Node */
+		resolve: (request: Request) => Promise<Response>;
+	}
+) => Promise<Response>;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag since">available since</span> v3.3.0
+
+</div>
+
+During `vite dev`, SvelteKit calls this function with each request it would render, after
+serving static files, imported assets and the service worker. Use it to render requests in
+your platform's runtime instead of Node, by sending them to code that runs there.
+Call `resolve` to render a request in Node, as SvelteKit does without this function.
 
 </div>
 </div></div>
@@ -1343,6 +1406,12 @@ The `path` option is `'/'` by default. You can use relative paths, or set `path:
 </div></div>
 
 ## Emulator
+
+<blockquote class="tag deprecated note">
+
+Use `dev.respond` to render requests in your platform's runtime during development instead
+
+</blockquote>
 
 A collection of functions that influence the environment during dev, build and prerendering
 
