@@ -528,6 +528,25 @@ during dev, build and prerendering.
 <div class="ts-block-property">
 
 ```dts
+dev?: AdapterDevConfig | ((ctx: { config: ValidatedConfig }) => AdapterDevConfig);
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag since">available since</span> v3.3.0
+
+</div>
+
+Options that only apply during `vite dev`
+
+</div>
+</div>
+
+<div class="ts-block-property">
+
+```dts
 vite?: AdapterViteConfig | ((ctx: { config: ValidatedConfig }) => AdapterViteConfig);
 ```
 
@@ -544,6 +563,46 @@ Options for configuring and interacting with Vite
 </div>
 </div></div>
 
+## AdapterDevConfig
+
+<div class="ts-block">
+
+```dts
+interface AdapterDevConfig {/*…*/}
+```
+
+<div class="ts-block-property">
+
+```dts
+respond?: (
+	request: Request,
+	options: {
+		/** Returns the IP address of the client that sent the request */
+		getClientAddress: () => string;
+		/** Renders the request in Node */
+		resolve: (request: Request) => Promise<Response>;
+	}
+) => Promise<Response>;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag since">available since</span> v3.3.0
+
+</div>
+
+During `vite dev`, SvelteKit calls this function with each request it would render, after
+serving static files, imported assets and the service worker. Use it to render requests in
+your platform's runtime instead of Node: send them to code that runs there, which imports
+`server` from `@sveltejs/kit/adapter/dev` and calls `server.respond`.
+Call `resolve` to render a request in Node, as SvelteKit does without this function.
+SvelteKit also sends its own requests through it, such as to find what a remote module exports.
+
+</div>
+</div></div>
+
 ## AdapterViteConfig
 
 <div class="ts-block">
@@ -551,6 +610,29 @@ Options for configuring and interacting with Vite
 ```dts
 interface AdapterViteConfig {/*…*/}
 ```
+
+<div class="ts-block-property">
+
+```dts
+customPreview?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `false`
+- <span class="tag since">available since</span> v3.3.0
+
+</div>
+
+By default, SvelteKit creates a Node preview server to serve the build
+output during `vite preview`. Set this option to `true` when the adapter
+provides a Vite plugin with a `configurePreviewServer` hook that handles
+previewing the build output on its own.
+
+</div>
+</div>
 
 <div class="ts-block-property">
 
