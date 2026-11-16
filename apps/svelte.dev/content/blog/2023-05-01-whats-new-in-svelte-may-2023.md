@@ -103,7 +103,7 @@ _To Read_
 - [Sveltris](https://github.com/mokshit06/sveltris) lets you intermix UI primitives like components, and state primitives like hooks between frameworks, without even noticing
 - [SwiftMarket](https://github.com/SwiftMarket/swiftmarket-sveltekit) is an E-Commerce solution built with SvelteKit, Pocketbase as a database and Stripe for payments
 - [Svelegante](https://www.npmjs.com/package/svelegante) is a Classy writable store for Svelte
-- [Table Generator](https://www.table-generator.de/) lets you create, design and customize your own tables tables online using a graphical editor
+- [Table Generator](https://www.table-generator.de/) lets you create, design and customize your own tables online using a graphical editor
 - [Svelte Animated Headline](https://www.npmjs.com/package/svelte-animated-headline) is an animated headline component that can grab attention in an informative way
 - [SvelteKit Music App Example](https://github.com/tguelcan/music) demonstrates how to connect and process data as well as some practical examples of how to develop frontend components with TailwindCSS
 - [Socio](https://www.npmjs.com/package/socio) is a WebSocket Real-Time Communication (RTC) API framework to connect your front-end logic to a back-end database reactively
