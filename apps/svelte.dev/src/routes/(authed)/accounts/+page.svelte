@@ -1,12 +1,11 @@
 <script lang="ts">
-	import { login, logout, enable_private_apps, disable_private_apps } from '../auth.js';
+	import { login, logout } from '../auth.js';
 	import { avatar_url, display_name } from '#lib/user.js';
 	import Avatar from '#lib/components/Avatar.svelte';
 
 	let { data } = $props();
 
 	const { github, atproto } = $derived(data.accounts);
-	const private_ready = $derived(!!atproto?.spaces_supported && !!atproto.private_apps);
 </script>
 
 <svelte:head>
@@ -45,27 +44,9 @@
 			</div>
 
 			<ul class="checks">
-				{@render check(!!atproto, 'public apps')}
-				{@render check(
-					private_ready,
-					!!atproto?.spaces_supported ? 'private apps' : 'private apps (not supported by your PDS)'
-				)}
+				{@render check(true, 'public apps')}
+				{@render check(false, 'private apps (waiting for atproto spaces to be stable)')}
 			</ul>
-
-			{#if private_ready}
-				<button
-					class="raised"
-					onclick={() => {
-						if (confirm('Delete your space and every private app in it?')) disable_private_apps();
-					}}
-				>
-					Delete private app space
-				</button>
-			{:else if !!atproto?.spaces_supported}
-				<button class="raised" onclick={enable_private_apps}>
-					Enable private apps (experimental)
-				</button>
-			{/if}
 		{:else}
 			<p>
 				Logging in with an <a href="https://atmosphereaccount.com/">atmosphere account</a> allows you

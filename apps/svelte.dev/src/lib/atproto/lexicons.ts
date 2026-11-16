@@ -35,14 +35,7 @@ export const lexicons = defineLexicons({
 			})
 		}),
 		file
-	},
-	'dev.svelte.playground.private': l.space({
-		key: 'literal:self',
-		collections: ['dev.svelte.playground'],
-		name: 'Private playground apps',
-		description: 'Playground apps only their owner can open.'
-	})
+	}
 });
 
 export const playground = lexicons['dev.svelte.playground'].main;
-export const private_space = lexicons['dev.svelte.playground.private'];

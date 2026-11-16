@@ -43,23 +43,11 @@ export async function create(user: AtprotoSessionUser) {
 	return { sid, expires: new Date(login.expires) };
 }
 
-/** The profile outlives the login. */
-export function known(did: string) {
-	return profile_of(did);
-}
-
 export async function read(sid: string | undefined): Promise<AtprotoSessionUser | null> {
 	if (!sid) return null;
 	const login = await login_of(sid);
 	if (!login || login.expires <= Date.now()) return null;
 	return profile_of(login.did);
-}
-
-export async function update(sid: string, patch: Partial<AtprotoSessionUser>) {
-	const user = await read(sid);
-	if (!user) return;
-	const next = { ...user, ...patch };
-	await profiles.set(user.did, next);
 }
 
 export async function destroy(sid: string) {

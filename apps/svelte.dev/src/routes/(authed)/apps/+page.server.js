@@ -40,7 +40,7 @@ export async function load({ url, parent }) {
 	const tab = is_destination(tab_param) ? tab_param : (destination ?? 'atproto-public');
 
 	// atproto lists are walked whole anyway, so they double as counts
-	const [github, atproto_public, atproto_private] = await Promise.all([
+	const [github, atproto_public] = await Promise.all([
 		attempt(
 			accounts.github
 				? gist
@@ -52,38 +52,25 @@ export async function load({ url, parent }) {
 			accounts.atproto
 				? at.list_public(accounts.atproto.did, search, tab === 'atproto-public' ? offset : 0)
 				: null
-		),
-		attempt(
-			accounts.atproto
-				? at.list_private(
-						url.origin,
-						accounts.atproto,
-						search,
-						tab === 'atproto-private' ? offset : 0
-					)
-				: null
 		)
 	]);
 
 	const empty = { apps: [], next: null };
 	const pages = {
 		github: github.page ?? empty,
-		'atproto-public': atproto_public.page ?? empty,
-		'atproto-private': atproto_private.page ?? empty
+		'atproto-public': atproto_public.page ?? empty
 	};
 
 	/** @type {Record<string, string>} */
 	const counts = {
 		github: count(github.page, github.error),
-		'atproto-public': count(atproto_public.page, atproto_public.error),
-		'atproto-private': count(atproto_private.page, atproto_private.error)
+		'atproto-public': count(atproto_public.page, atproto_public.error)
 	};
 
 	/** @type {Record<string, ListError>} */
 	const errors = {
 		github: github.error,
-		'atproto-public': atproto_public.error,
-		'atproto-private': atproto_private.error
+		'atproto-public': atproto_public.error
 	};
 
 	return {

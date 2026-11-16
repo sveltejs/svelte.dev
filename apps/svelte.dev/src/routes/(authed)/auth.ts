@@ -55,26 +55,3 @@ export async function logout(provider: Provider) {
 	});
 	if (r.ok) await refreshAll();
 }
-
-export function enable_private_apps() {
-	return popup('/auth/atproto/authorize?escalate=1').catch(() => {});
-}
-
-export function disable_private_apps() {
-	return delete_space(true);
-}
-
-async function delete_space(retry: boolean): Promise<void> {
-	const r = await fetch('/accounts/at/private', { method: 'DELETE' });
-	if (r.ok) return refreshAll();
-	// grant predates the delete permission: re-run consent, then retry once
-	if (r.status === 403 && retry) {
-		try {
-			await popup('/auth/atproto/authorize?escalate=1&delete=1');
-		} catch {
-			return;
-		}
-		return delete_space(false);
-	}
-	alert('Could not delete the space');
-}

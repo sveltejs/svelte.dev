@@ -303,10 +303,6 @@
 
 		{#if tab_available}
 			{@render list()}
-		{:else if tab === 'atproto-private'}
-			<p class="notice">
-				Not set up yet. <a href="/accounts">Check the setup in Accounts</a>.
-			</p>
 		{:else}
 			<p class="notice">
 				<a

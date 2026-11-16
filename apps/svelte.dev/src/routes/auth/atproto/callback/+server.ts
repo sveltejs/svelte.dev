@@ -1,5 +1,3 @@
-import { own } from '#lib/atproto/client.js';
-import { enable_private } from '#lib/atproto/apps.js';
 import { profile, resolve } from '#lib/atproto/identity.js';
 import { oauth } from '#lib/atproto/oauth.js';
 import * as session from '#lib/atproto/session.js';
@@ -25,11 +23,8 @@ function page(body: string, status = 200) {
 
 export async function GET({ url, cookies }) {
 	let did: string;
-	let wants_private = false;
 	try {
-		const result = await (await oauth(url.origin)).callback(url.searchParams);
-		did = result.did;
-		wants_private = !!result.state && JSON.parse(result.state).private_apps === true;
+		did = (await (await oauth(url.origin)).callback(url.searchParams)).did;
 	} catch (e) {
 		return page(
 			`<h1>Login failed</h1><pre>${escape((e as Error).message)}</pre><p><a href="/auth/login/atproto">Try again</a></p>`,
@@ -38,26 +33,9 @@ export async function GET({ url, cookies }) {
 	}
 
 	const identity = await resolve(did);
-	const airspace = await own(url.origin, identity);
-	const [bsky, spaces_supported] = await Promise.all([
-		profile(identity),
-		airspace.private_apps.supported()
-	]);
+	const bsky = await profile(identity);
 
 	const old_sid = cookies.get(session.COOKIE);
-	const existing = await session.read(old_sid);
-	let private_apps = existing?.did === did ? existing.private_apps : false;
-	if (wants_private && spaces_supported) {
-		try {
-			await enable_private(airspace);
-			private_apps = true;
-		} catch (e) {
-			// the grant came back without the space scope: log in without private apps
-			console.warn(`space for ${did}: ${(e as Error).message}`);
-			private_apps = false;
-		}
-	}
-
 	// one login per browser: the previous row would otherwise linger until swept
 	if (old_sid) await session.destroy(old_sid);
 	const { sid, expires } = await session.create({
@@ -67,9 +45,7 @@ export async function GET({ url, cookies }) {
 		handle: identity.handle,
 		display_name: bsky?.display_name ?? '',
 		avatar: bsky?.avatar ?? '',
-		pds: identity.pds,
-		spaces_supported,
-		private_apps
+		pds: identity.pds
 	});
 	session.set_cookie(cookies, sid, expires, url.protocol === 'https:');
 

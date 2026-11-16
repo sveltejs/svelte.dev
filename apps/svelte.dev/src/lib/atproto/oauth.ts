@@ -1,5 +1,5 @@
 import { createOAuth, type OAuth } from 'airspace/oauth';
-import { ALL_SCOPES } from './model.js';
+import { SCOPES } from './model.js';
 import * as store from './store.js';
 
 const REDIRECT_PATH = '/auth/atproto/callback';
@@ -14,7 +14,7 @@ export function client_options(origin: string) {
 		redirectPath: REDIRECT_PATH,
 		metadataPath: METADATA_PATH,
 		name: 'Svelte playground',
-		scopes: ALL_SCOPES
+		scopes: SCOPES
 	};
 }
 

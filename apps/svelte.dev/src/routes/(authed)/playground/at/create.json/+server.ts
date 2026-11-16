@@ -3,10 +3,9 @@ import * as apps from '#lib/atproto/apps.js';
 import { json } from '@sveltejs/kit';
 
 export async function POST({ url, request, cookies }) {
-	const result = await with_user(cookies, async (user) => {
-		const body = (await json_body(request)) as { private?: unknown } | null;
-		return apps.create(url.origin, user, parse_input(body), body?.private === true);
-	});
+	const result = await with_user(cookies, async (user) =>
+		apps.create(url.origin, user, parse_input(await json_body(request)))
+	);
 
 	return json(result, { status: 201 });
 }

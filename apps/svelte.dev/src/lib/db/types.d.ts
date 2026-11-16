@@ -17,10 +17,6 @@ export interface AtprotoSessionUser {
 	display_name: string;
 	avatar: string;
 	pds: string;
-	/** the user's PDS runs a spaces build */
-	spaces_supported: boolean;
-	/** the user granted the space scope and the space exists */
-	private_apps: boolean;
 }
 
 export type User = GitHubSessionUser | AtprotoSessionUser;
@@ -46,7 +42,6 @@ export interface Gist {
 	files: Array<{ name: string; type: string; source: string }>;
 	// atproto only
 	owner_handle?: string;
-	private?: boolean;
 	svelte_version?: string;
 	async?: boolean;
 	/** at:// URI or svelte.dev URL */

@@ -2,7 +2,7 @@ import { isExpectedSessionError } from '@atproto/oauth-client-node';
 import { createAirspace, type DidString, type Identity } from 'airspace';
 import flru from 'flru';
 import type { AtprotoSessionUser } from '#lib/db/types.d.ts';
-import { collections, spaces } from './model.js';
+import { collections } from './model.js';
 import { oauth } from './oauth.js';
 
 type Anonymous = ReturnType<typeof createAirspace<typeof collections>>;
@@ -47,9 +47,6 @@ export async function own(origin: string, user: Pick<AtprotoSessionUser, 'did' |
 	return createAirspace({
 		identity: { did: user.did as DidString, service: user.pds },
 		collections,
-		spaces,
 		session
 	});
 }
-
-export type Airspace = Awaited<ReturnType<typeof own>>;

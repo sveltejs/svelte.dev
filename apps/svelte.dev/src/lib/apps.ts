@@ -61,15 +61,14 @@ export function api_url(id: string) {
 	return path && `/playground/api/at/${path}`;
 }
 
-// a private source is not linked from a copy that may be public
-export function fork_source(source: Pick<Gist, 'id' | 'owner' | 'private'>) {
-	if (source.id === 'untitled' || source.private) return undefined;
+export function fork_source(source: Pick<Gist, 'id' | 'owner'>) {
+	if (source.id === 'untitled') return undefined;
 	if (!is_atproto(source.id)) return `https://svelte.dev/playground/${source.id}`;
 	const rkey = source.id.slice(source.id.indexOf('/') + 1);
 	return `at://${source.owner}/dev.svelte.playground/${rkey}`;
 }
 
-async function read(id: string): Promise<Input & Pick<Gist, 'id' | 'owner' | 'private'>> {
+async function read(id: string): Promise<Input & Pick<Gist, 'id' | 'owner'>> {
 	const url = api_url(id);
 	if (!url) throw new HttpError(404);
 	const r = await send(url, 'GET');
@@ -77,7 +76,6 @@ async function read(id: string): Promise<Input & Pick<Gist, 'id' | 'owner' | 'pr
 	return {
 		id: app.id,
 		owner: app.owner,
-		private: app.private,
 		name: app.name,
 		tailwind: app.tailwind,
 		svelte_version: app.svelte_version,
@@ -91,7 +89,7 @@ async function read(id: string): Promise<Input & Pick<Gist, 'id' | 'owner' | 'pr
 	};
 }
 
-// a read app carries more (id, owner, private)
+// a read app carries more (id, owner)
 function body({ name, tailwind, svelte_version, async, forked_from, files }: Input) {
 	return {
 		name,
@@ -104,15 +102,8 @@ function body({ name, tailwind, svelte_version, async, forked_from, files }: Inp
 }
 
 export async function create(input: Input, destination: Destination): Promise<Gist> {
-	if (destination === 'github') {
-		return (await send('/playground/create.json', 'POST', body(input))).json();
-	}
-	return (
-		await send('/playground/at/create.json', 'POST', {
-			...body(input),
-			private: destination === 'atproto-private'
-		})
-	).json();
+	const url = destination === 'github' ? '/playground/create.json' : '/playground/at/create.json';
+	return (await send(url, 'POST', body(input))).json();
 }
 
 export async function update(id: string, input: Input) {

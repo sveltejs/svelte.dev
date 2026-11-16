@@ -1,12 +1,11 @@
 import type { Accounts, UserID } from './db/types.d.ts';
 
-export type Destination = 'github' | 'atproto-public' | 'atproto-private';
+export type Destination = 'github' | 'atproto-public';
 
 export const DESTINATION_COOKIE = 'save_to';
 
 export const DESTINATIONS: Array<{ id: Destination; label: string }> = [
 	{ id: 'atproto-public', label: 'Atmosphere public' },
-	{ id: 'atproto-private', label: 'Atmosphere private' },
 	{ id: 'github', label: 'GitHub' }
 ];
 
@@ -15,9 +14,7 @@ export function is_destination(s: unknown): s is Destination {
 }
 
 export function available(destination: Destination, accounts: Accounts) {
-	if (destination === 'github') return !!accounts.github;
-	if (destination === 'atproto-public') return !!accounts.atproto;
-	return !!accounts.atproto?.private_apps;
+	return !!account_for(destination, accounts);
 }
 
 /** The stored choice if usable, else the first usable one. */
@@ -34,11 +31,10 @@ export function account_for(destination: Destination, accounts: Accounts) {
 	return accounts[provider_of(destination)];
 }
 
-type App = { id: string; owner: UserID | null; private?: boolean };
+type App = { id: string; owner: UserID | null };
 
-export function home_of(gist: Pick<App, 'id' | 'private'>): Destination {
-	if (!gist.id.includes('/')) return 'github';
-	return gist.private ? 'atproto-private' : 'atproto-public';
+export function home_of(gist: Pick<App, 'id'>): Destination {
+	return gist.id.includes('/') ? 'atproto-public' : 'github';
 }
 
 export function is_owner(accounts: Accounts, gist: App) {

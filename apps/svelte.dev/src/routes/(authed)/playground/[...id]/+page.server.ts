@@ -7,7 +7,6 @@ export async function load({ fetch, params }) {
 	const url = api_url(params.id);
 	if (!url) error(404);
 
-	// a private atproto app is readable through the owner's cookie
 	const res = await fetch(url);
 
 	if (!res.ok) {

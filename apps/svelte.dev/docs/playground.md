@@ -2,13 +2,12 @@
 
 Logged-in users can save, fork and list apps (`/apps`), with a GitHub account, an atproto account, or both. New apps and forks go to the default destination: the tab marked "default" on `/apps` (`save_to` cookie), else the first available below. Saving your own app updates it where it lives; saving someone else's copies it to the default.
 
-| Destination                | Storage                                                             |
-| -------------------------- | ------------------------------------------------------------------- |
-| Atmosphere public          | `dev.svelte.playground` record on the user's PDS                    |
-| Atmosphere private (alpha) | same record, inside the space `dev.svelte.playground.private`       |
-| GitHub                     | Supabase (`gist` table + `login`/`get_user`/`logout`/`gist_*` rpcs) |
+| Destination       | Storage                                                             |
+| ----------------- | ------------------------------------------------------------------- |
+| Atmosphere public | `dev.svelte.playground` record on the user's PDS                    |
+| GitHub            | Supabase (`gist` table + `login`/`get_user`/`logout`/`gist_*` rpcs) |
 
-Public atproto apps are readable by anyone at `/playground/<handle>/<rkey>` and listed at `/apps/<handle>`.
+Atmosphere apps are public: readable by anyone at `/playground/<handle>/<rkey>` and listed at `/apps/<handle>`. Private apps wait for atproto spaces to be stable.
 
 ## atproto
 
@@ -47,10 +46,8 @@ create table atproto_kv (
 
 ## Lexicons
 
-`dev.svelte.playground` (the app record) and `dev.svelte.playground.private` (the space holding private apps) are published on @svelte.dev (`did:plc:b6gbde64ngpelprsvnphc2l2`) and resolve through the `_lexicon.svelte.dev` and `_lexicon.playground.svelte.dev` TXT records. The `space:` scope is only granted once the space is published. To publish from the TypeScript model, with an app password of @svelte.dev:
+`dev.svelte.playground` (the app record) is published on @svelte.dev (`did:plc:b6gbde64ngpelprsvnphc2l2`) and resolves through the `_lexicon.svelte.dev` TXT record. To publish from the TypeScript model, with an app password of @svelte.dev:
 
 ```
 AIRSPACE_APP_PASSWORD=... npx airspace lexicons publish --identity svelte.dev --lexicons src/lib/atproto/lexicons.ts
 ```
-
-Spaces are an atproto alpha: private apps need a PDS running a spaces build, and `/accounts` shows whether it does.
