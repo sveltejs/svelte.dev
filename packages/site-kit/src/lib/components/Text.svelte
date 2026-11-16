@@ -482,11 +482,6 @@
 					background: transparent;
 				}
 
-				a:hover {
-					border-bottom: 1px solid var(--sk-fg-accent);
-					text-decoration: none;
-				}
-
 				.highlight {
 					--color: rgba(220, 220, 0, 0.2);
 					background: var(--color);
@@ -522,7 +517,7 @@
 
 		a:not(.permalink) {
 			color: inherit;
-			text-decoration: underline;
+			text-decoration-line: underline;
 			transition: box-shadow 0.1s ease-in-out;
 		}
 
