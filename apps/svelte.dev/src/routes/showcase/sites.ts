@@ -587,16 +587,6 @@ export const sites: Site[] = [
 		screenshot: { hide: ['.fixed.inset-0.z-40'], height: 900 }
 	},
 	{
-		id: 'z-ai',
-		name: 'Z.ai',
-		url: 'https://chat.z.ai/',
-		description: 'The AI assistant powered by GLM-5.3-Flash',
-		category: 'ai',
-		// a demo chat linked from https://z.ai/blog/glm-4.7
-		// the window alone, which the app fills, so the whole of it shows at once
-		screenshot: { url: 'https://chat.z.ai/s/83640645-5436-4069-a27b-f8094189d669', height: 900 }
-	},
-	{
 		id: 'modal',
 		name: 'Modal',
 		url: 'https://modal.com/',
@@ -921,7 +911,6 @@ const MORE = [
 	'pronauns',
 	'allfeat',
 	'ashley',
-	'z-ai',
 	'pausly'
 ];
 
