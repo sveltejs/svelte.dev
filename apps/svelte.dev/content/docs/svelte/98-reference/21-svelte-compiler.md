@@ -1398,6 +1398,21 @@ async?: boolean;
 Allow `await` keyword in deriveds, template expressions, and the top level of components
 
 </div>
+</div>
+<div class="ts-block-property">
+
+```dts
+scriptReplay?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+Temporary migration control for client script replay. Requires `async`.
+By default, supported script initializers use replay. `true` rejects unsupported
+constructs instead of retaining their existing lowering; `false` disables replay.
+SSR is unchanged. This control will be removed when migration is complete.
+
+</div>
 </div></div>
 
 </div>
