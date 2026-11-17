@@ -103,6 +103,11 @@
 
 			a {
 				color: var(--sk-fg-2);
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 		}
 

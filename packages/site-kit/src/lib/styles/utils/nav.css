@@ -55,8 +55,21 @@
 		padding-left: 2rem;
 	}
 
+	a {
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
 	a:not([aria-current='page']) {
 		color: inherit;
+	}
+
+	a[aria-current='page'] {
+		text-decoration: underline;
+		text-underline-offset: 0.15em;
 	}
 
 	/* necessary for reasons i don't fully understand */
