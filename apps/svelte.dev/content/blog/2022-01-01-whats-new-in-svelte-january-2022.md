@@ -36,7 +36,7 @@ Happy new year, Svelte Community! Lots to share this month across Svelte, Svelte
 - [Secret Santa](https://gitlab.com/arturoguzman/secret-santa-sveltekit) is a gift giving coordination app developed with easiness in mind
 - [LogSnag](https://logsnag.com/) notifies you of your projects' events and provides you with a timeline to keep track of anything important that happens
 - [Version 0.2 of Tangent](http://tangentnotes.com/Download), a Svelte-based note writing app, is now in beta
-- [Intl Explorer](https://github.com/jesperorb/intl-explorer) is a tool for viewing output for all possible formatters for Intl
+- [Intl Explorer](https://intl-explorer.com) is a tool for viewing output for all possible formatters for Intl
 
 A lot of work this month has gone into migrating the Svelte main website and Svelte REPL to live in the https://github.com/sveltejs/sites repository - including a brand new homepage for [svelte.dev](/). Thanks to all the contributors who made this possible!
 
