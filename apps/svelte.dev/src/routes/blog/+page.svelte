@@ -114,7 +114,7 @@
 		display: none;
 	}
 
-	@media (min-width: 800px) {
+	@media (min-width: 50em) {
 		.grid {
 			display: grid;
 			grid-template-columns: 3fr 1fr;

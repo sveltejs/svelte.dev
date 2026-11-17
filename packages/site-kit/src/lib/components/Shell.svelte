@@ -56,7 +56,7 @@ The main shell of the application. It provides a slot for the top navigation, th
 		height: 100%;
 	}
 
-	@media (min-width: 832px) {
+	@media (min-width: 52em) {
 		main {
 			padding-top: var(--sk-nav-height);
 			padding-bottom: var(--sk-banner-height);
@@ -65,7 +65,7 @@ The main shell of the application. It provides a slot for the top navigation, th
 
 	/* slides up as a dismissed banner fades out rather than jumping.
 	   only where the banner is at the top, as the space below the page is out of sight */
-	@media (max-width: 831px) and (prefers-reduced-motion: no-preference) {
+	@media (max-width: 51.9375em) and (prefers-reduced-motion: no-preference) {
 		:global(:root:has([data-banner][inert])) main {
 			transition: padding-top 0.25s var(--quint-out);
 		}

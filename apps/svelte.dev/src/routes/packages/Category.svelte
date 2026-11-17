@@ -78,7 +78,7 @@
 		grid-template-columns: 1fr;
 		gap: 2rem;
 
-		@media (min-width: 1024px) {
+		@media (min-width: 64em) {
 			grid-template-columns: repeat(3, 1fr);
 		}
 	}
@@ -136,7 +136,7 @@
 			}
 		}
 
-		@media (min-width: 1024px) {
+		@media (min-width: 64em) {
 			justify-content: flex-start;
 
 			.button {

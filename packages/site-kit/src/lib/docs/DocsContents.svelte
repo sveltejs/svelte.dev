@@ -119,7 +119,7 @@
 		margin: 0;
 	}
 
-	@media (min-width: 832px) {
+	@media (min-width: 52em) {
 		.sidebar {
 			columns: 1;
 			padding-left: 3.2rem;
