@@ -294,25 +294,29 @@
 						font-size: 1.2rem;
 						font-family: var(--sk-font-family-mono);
 						color: inherit;
+						text-underline-offset: 0.15em;
 					}
 
 					&::before {
 						content: 'JS';
+						text-decoration: underline;
 					}
 
 					&::after {
 						content: 'TS';
 						border-left: none;
-						opacity: 0.3;
+						opacity: 0.6;
 					}
 
 					&:checked {
 						&::before {
-							opacity: 0.3;
+							opacity: 0.6;
+							text-decoration: none;
 						}
 
 						&::after {
 							opacity: 1;
+							text-decoration: underline;
 						}
 					}
 				}
@@ -482,11 +486,6 @@
 					background: transparent;
 				}
 
-				a:hover {
-					border-bottom: 1px solid var(--sk-fg-accent);
-					text-decoration: none;
-				}
-
 				.highlight {
 					--color: rgba(220, 220, 0, 0.2);
 					background: var(--color);
@@ -522,7 +521,7 @@
 
 		a:not(.permalink) {
 			color: inherit;
-			text-decoration: underline;
+			text-decoration-line: underline;
 			transition: box-shadow 0.1s ease-in-out;
 		}
 
@@ -534,6 +533,7 @@
 		a.permalink {
 			position: absolute !important;
 			display: block;
+			text-decoration: none;
 			background: var(--sk-fg-1);
 			mask: url(icons/hash) 50% 50% no-repeat;
 			mask-size: 2.4rem 2.4rem;

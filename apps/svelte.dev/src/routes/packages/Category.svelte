@@ -158,6 +158,7 @@
 	a.permalink {
 		position: absolute !important;
 		display: block;
+		text-decoration: none;
 		width: 2.6rem;
 		height: 2.2rem;
 		top: calc(50% - 1rem);

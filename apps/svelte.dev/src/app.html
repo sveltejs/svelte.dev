@@ -29,6 +29,24 @@
 		</script>
 
 		%sveltekit.head%
+
+		<script>
+			{
+				const banner = document.querySelector('meta[name="sv:banner"]');
+				const { start, end } = banner?.dataset ?? {};
+				let dismissed = false;
+
+				try {
+					dismissed = JSON.parse(localStorage.getItem('sv:hidden-banners'))?.[banner?.content];
+				} catch {
+					// localStorage access disabled
+				}
+
+				if (!dismissed && Date.now() > start && Date.now() < end) {
+					document.documentElement.classList.add('banner-shown');
+				}
+			}
+		</script>
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<script>

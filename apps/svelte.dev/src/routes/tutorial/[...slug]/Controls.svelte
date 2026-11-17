@@ -85,6 +85,11 @@
 <style>
 	a {
 		color: inherit;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
 
 		&:not([href]) {
 			opacity: 0.1;

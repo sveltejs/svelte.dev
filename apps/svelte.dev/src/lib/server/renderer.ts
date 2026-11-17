@@ -1,4 +1,8 @@
-import { render_content_markdown, strip_origin } from '@sveltejs/site-kit/markdown';
+import {
+	render_content_markdown,
+	strip_origin,
+	type DocumentationReferences
+} from '@sveltejs/site-kit/markdown';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -7,7 +11,12 @@ const docs_types_root = path.dirname(fileURLToPath(import.meta.resolve('docs-typ
 export const render_content = (
 	filename: string,
 	body: string,
-	options: { check?: boolean; origin?: string; references?: Record<string, string> } = {}
+	options: {
+		check?: boolean;
+		origin?: string;
+		references?: DocumentationReferences;
+		referenceModule?: string;
+	} = {}
 ) => {
 	const { origin, ...rest } = options;
 	const render_options = {
