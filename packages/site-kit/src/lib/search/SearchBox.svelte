@@ -446,7 +446,6 @@ It appears when the user clicks on the `Search` component or presses the corresp
 				background-color: var(--sk-bg-2);
 
 				&:hover {
-					outline: none;
 					color: var(--sk-fg-3);
 				}
 

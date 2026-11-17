@@ -122,6 +122,11 @@
 		opacity: 1;
 	}
 
+	input[type='radio']:focus-visible + label {
+		outline: 2px solid var(--sk-fg-accent);
+		border-radius: var(--sk-border-radius);
+	}
+
 	input[type='radio'] + label:before {
 		content: '';
 		display: block;
