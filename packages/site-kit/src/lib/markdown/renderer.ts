@@ -82,12 +82,50 @@ function highlight_source(source: string, language: string) {
 		: `<pre class="twinkleplop plaintext"><code>${escape_html(source)}</code></pre>`;
 }
 
+/** Turns `> [!NOTE]`, `> [!LEGACY]` and `> [!DETAILS]` blockquotes into notes */
+function blockquote(this: marked.Renderer, token: marked.Tokens.Blockquote) {
+	let content = this.parser?.parse(token.tokens) ?? '';
+
+	if (content.includes('[!LEGACY]')) {
+		content = `<details class="legacy"><summary>Legacy mode</summary>${content.replace('[!LEGACY]', '')}</details>`;
+	}
+
+	if (content.includes('[!DETAILS]')) {
+		const regex = /\[!DETAILS\] (.+)/;
+		const match = regex.exec(content)!;
+		content = `<details><summary>${match[1]}</summary>${content.replace(regex, '')}</details>`;
+		return `<blockquote class="note">${content}</blockquote>`;
+	}
+
+	if (content.includes('[!NOTE]')) {
+		return `<blockquote class="note">${content.replace('[!NOTE]', '')}</blockquote>`;
+	}
+
+	return `<blockquote>${content}</blockquote>`;
+}
+
 // TODO: replace with marked.parseInline once twinkleplop is fixed
 // see https://github.com/pngwn/twinkleplop/issues/107
 const docs_markdown = new marked.Marked({
 	renderer: {
-		code({ text, lang }) {
-			return `<div class="code-block"><div class="controls"><button class="copy-to-clipboard raised" title="Copy to clipboard" aria-label="Copy to clipboard"></button></div>${highlight_source(text, lang ?? '')}</div>`;
+		blockquote,
+		code({ text, lang = '' }) {
+			const { source, options } = parse_options(text, lang);
+			const { name, ext } = split_filename(options.file);
+
+			let controls = '';
+
+			if (name) {
+				controls += `<span class="filename" data-ext="${ext}">${name}</span>`;
+			}
+
+			if (options.copy) {
+				controls += `<button class="copy-to-clipboard raised" title="Copy to clipboard" aria-label="Copy to clipboard"></button>`;
+			}
+
+			if (controls) controls = `<div class="controls">${controls}</div>`;
+
+			return `<div class="code-block">${controls}${highlight_source(source, lang)}</div>`;
 		}
 	}
 });
@@ -484,15 +522,14 @@ export async function render_content_markdown(
 					}
 				);
 
-				const ext = options.file?.slice(options.file.lastIndexOf('.'));
-				const is_dot_file = ext && ext === options.file;
+				const { name, ext } = split_filename(options.file);
 
 				const file: CodeBlockFile = {
 					selected: options.file === codeblock.selected,
 					tab_id: `playground-tab-${codeblock.id}-${codeblock.files.length}`,
 					panel_id: `playground-tabpanel-${codeblock.id}-${codeblock.files.length}`,
-					name: (is_dot_file ? options.file : options.file?.slice(0, -ext!.length)) ?? null,
-					ext: is_dot_file ? '' : (ext ?? null),
+					name,
+					ext,
 					content: source
 						.replace(delimiter_patterns['---'], '$1')
 						.replace(delimiter_patterns['+++'], '$1')
@@ -675,26 +712,7 @@ export async function render_content_markdown(
 
 			return html;
 		},
-		blockquote(token) {
-			let content = this.parser?.parse(token.tokens) ?? '';
-
-			if (content.includes('[!LEGACY]')) {
-				content = `<details class="legacy"><summary>Legacy mode</summary>${content.replace('[!LEGACY]', '')}</details>`;
-			}
-
-			if (content.includes('[!DETAILS]')) {
-				const regex = /\[!DETAILS\] (.+)/;
-				const match = regex.exec(content)!;
-				content = `<details><summary>${match[1]}</summary>${content.replace(regex, '')}</details>`;
-				return `<blockquote class="note">${content}</blockquote>`;
-			}
-
-			if (content.includes('[!NOTE]')) {
-				return `<blockquote class="note">${content.replace('[!NOTE]', '')}</blockquote>`;
-			}
-
-			return `<blockquote>${content}</blockquote>`;
-		}
+		blockquote
 	});
 
 	return transformed;
@@ -1039,6 +1057,20 @@ function parse_options(source: string, language: string) {
 	});
 
 	return { source, options };
+}
+
+/**
+ * @example
+ * split_filename('src/hooks.server.js'); // { name: 'src/hooks.server', ext: '.js' }
+ * split_filename('.env'); // { name: '.env', ext: '' }
+ */
+function split_filename(file: string | null) {
+	if (!file) return { name: null, ext: null };
+
+	const ext = file.slice(file.lastIndexOf('.'));
+	if (ext === file) return { name: file, ext: '' };
+
+	return { name: file.slice(0, -ext.length), ext };
 }
 
 /**

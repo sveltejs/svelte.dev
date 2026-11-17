@@ -16,13 +16,18 @@
 		browser && !hidden[banner.id] && time > +banner.start && time < +banner.end
 	);
 
+	// app.html adds the class before the first paint, so the space is there before the banner is
 	$effect(() => {
-		document.documentElement.style.setProperty('--sk-banner-height', visible ? '4.2rem' : '0px');
+		document.documentElement.classList.toggle('banner-shown', visible);
 	});
 </script>
 
+<svelte:head>
+	<meta name="sv:banner" content={banner.id} data-start={+banner.start} data-end={+banner.end} />
+</svelte:head>
+
 {#if visible}
-	<div class="banner" transition:fade={{ duration: 400, easing: quintOut }}>
+	<div class="banner" data-banner transition:fade={{ duration: 250, easing: quintOut }}>
 		<a href={banner.href}>
 			{#if banner.content.lg}
 				<span class="large">{banner.content.lg}</span>
@@ -53,6 +58,10 @@
 {/if}
 
 <style>
+	:global(:root.banner-shown) {
+		--sk-banner-height: 4.2rem;
+	}
+
 	.banner {
 		position: fixed;
 		top: 0;
@@ -65,7 +74,7 @@
 		font: var(--sk-font-ui-medium);
 		overflow-y: auto;
 		width: 100%;
-		height: var(--sk-banner-height);
+		height: 4.2rem;
 		background: var(--sk-bg-accent);
 		color: white;
 		padding: 0 4rem;

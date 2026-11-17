@@ -1,17 +1,15 @@
 {
-  "name": "@event-calendar/core",
-  "npm_description": "Full-sized drag & drop event calendar with resource & timeline views",
-  "repo_url": "https://github.com/vkurko/calendar",
-  "authors": [
-    "vkurko"
-  ],
-  "homepage": "https://vkurko.github.io/calendar/",
-  "version": "5.15.0",
-  "downloads": 64464,
-  "github_stars": 2284,
-  "updated": "2026-09-25T07:48:58.315Z",
-  "svelte_range": "^5.57.0",
-  "typescript": false,
-  "runes": false,
-  "last_rune_check_version": "3.12.0"
+	"name": "@event-calendar/core",
+	"npm_description": "Full-sized drag & drop event calendar with resource & timeline views",
+	"repo_url": "https://github.com/vkurko/calendar",
+	"authors": ["vkurko"],
+	"homepage": "https://vkurko.github.io/calendar/",
+	"version": "5.18.1",
+	"downloads": 82215,
+	"github_stars": 2296,
+	"updated": "2026-10-25T15:05:03.875Z",
+	"svelte_range": "^5.57.2",
+	"typescript": false,
+	"runes": false,
+	"last_rune_check_version": "3.12.0"
 }

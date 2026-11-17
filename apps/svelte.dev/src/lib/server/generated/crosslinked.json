@@ -457,30 +457,6 @@
 		]
 	},
 	{
-		"path": "/docs/kit/$app-env-private",
-		"breadcrumbs": [
-			"Docs",
-			"SvelteKit",
-			"Reference",
-			"$app/env/private"
-		],
-		"tags": [
-			"env"
-		]
-	},
-	{
-		"path": "/docs/kit/$app-env-public",
-		"breadcrumbs": [
-			"Docs",
-			"SvelteKit",
-			"Reference",
-			"$app/env/public"
-		],
-		"tags": [
-			"env"
-		]
-	},
-	{
 		"path": "/docs/kit/$app-forms",
 		"breadcrumbs": [
 			"Docs",

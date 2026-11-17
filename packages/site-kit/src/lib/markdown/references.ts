@@ -87,7 +87,6 @@ export function find_references(
 		const module = statement.moduleSpecifier.text;
 		const clause = statement.importClause;
 		if (!clause || !references[module]) continue;
-		if (clause.name) bind(clause.name, module, 'default');
 		if (clause.namedBindings) {
 			if (ts.isNamespaceImport(clause.namedBindings)) {
 				bind(clause.namedBindings.name, module);
@@ -112,12 +111,10 @@ export function find_references(
 			ts.isImportTypeNode(node) &&
 			ts.isLiteralTypeNode(node.argument) &&
 			ts.isStringLiteral(node.argument.literal) &&
-			node.qualifier
+			node.qualifier &&
+			ts.isIdentifier(node.qualifier)
 		) {
-			// Only the exported member, not an arbitrary nested property, has a module destination.
-			let member = node.qualifier;
-			while (!ts.isIdentifier(member)) member = member.left;
-			add(member, node.argument.literal.text, member.text);
+			add(node.qualifier, node.argument.literal.text, node.qualifier.text);
 		}
 
 		if (ts.isIdentifier(node)) {
@@ -188,9 +185,8 @@ function find_svelte_references(
 	if (!ast) {
 		// Some examples are deliberately invalid even for the loose parser (e.g. two
 		// `<svelte:options>` or `{@debug}` with an expression). Their scripts can still be linked
-		// on their own; ignore scripts that are commented out.
-		const uncommented = source.replace(/<!--[\s\S]*?-->/g, (comment) => ' '.repeat(comment.length));
-		return [...uncommented.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script\s*>/g)].flatMap((match) => {
+		// on their own.
+		return [...source.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script\s*>/g)].flatMap((match) => {
 			const offset = match.index + match[0].indexOf('>') + 1;
 			return shift(
 				find_references(match[1], 'ts', references, reference_module, prelude, true),
@@ -220,14 +216,6 @@ function find_svelte_references(
 		code += ');\n';
 	}
 
-	function binding(value: unknown) {
-		if (!value) return;
-		code += '\nlet ';
-		if (typeof value === 'string') code += value;
-		else copy(value);
-		code += ';\n';
-	}
-
 	function walk(value: unknown) {
 		if (Array.isArray(value)) {
 			for (const child of value) walk(child);
@@ -236,57 +224,6 @@ function find_svelte_references(
 		if (!value || typeof value !== 'object' || !('type' in value)) return;
 		const node = value as SvelteNode;
 
-		if (node.type === 'Fragment') {
-			code += '\n{\n';
-			for (const child of node.nodes as SvelteNode[]) {
-				if (child.type === 'SnippetBlock') binding(child.expression);
-			}
-			walk(node.nodes);
-			code += '\n}\n';
-			return;
-		}
-		if (node.type === 'EachBlock') {
-			expression(node.expression);
-			code += '\n{\n';
-			binding(node.context);
-			binding(node.index);
-			expression(node.key);
-			walk(node.body);
-			code += '\n}\n';
-			walk(node.fallback);
-			return;
-		}
-		if (node.type === 'AwaitBlock') {
-			expression(node.expression);
-			walk(node.pending);
-			for (const [branch, variable] of [
-				[node.then, node.value],
-				[node.catch, node.error]
-			]) {
-				code += '\n{\n';
-				binding(variable);
-				walk(branch);
-				code += '\n}\n';
-			}
-			return;
-		}
-		if (node.type === 'SnippetBlock') {
-			code += '\nvoid ((';
-			for (const [i, parameter] of (node.parameters as SvelteNode[]).entries()) {
-				if (i) code += ',';
-				copy(parameter);
-			}
-			code += ') => {\n';
-			walk(node.body);
-			code += '\n});\n';
-			return;
-		}
-		if (node.type === 'ConstTag') {
-			copy(node.declaration);
-			code += ';\n';
-			return;
-		}
-		if (node.type === 'LetDirective') return;
 		if (
 			(node.type === 'UseDirective' ||
 				node.type === 'TransitionDirective' ||
@@ -301,58 +238,27 @@ function find_svelte_references(
 			return;
 		}
 
-		if (Array.isArray(node.attributes)) {
-			walk(node.attributes);
-			code += '\n{\n';
-			for (const attribute of node.attributes as SvelteNode[]) {
-				if (attribute.type === 'LetDirective') binding(attribute.expression ?? attribute.name);
-			}
-			walk(node.fragment);
-			code += '\n}\n';
-			return;
-		}
-
 		for (const [key, child] of Object.entries(node)) {
 			if (key === 'expression' || key === 'test') expression(child);
 			else walk(child);
 		}
 	}
 
-	// ESTree's Program type omits the offsets provided by the Svelte parser.
-	const module_content = ast.module?.content as unknown as
-		| { start: number; end: number }
-		| undefined;
-	const module_source = module_content
-		? source.slice(module_content.start, module_content.end)
-		: '';
-
+	// Svelte rejects instance declarations that reuse a module import's name, so both scripts
+	// can share one scope.
+	copy(ast.module?.content);
+	code += '\n';
 	copy(ast.instance?.content);
 	walk(ast.fragment);
 
-	const module_references = module_content
-		? shift(
-				find_references(module_source, 'ts', references, reference_module, prelude),
-				module_content.start
-			)
-		: [];
-	return [
-		...module_references,
-		...find_references(
-			code,
-			'ts',
-			references,
-			reference_module,
-			// Module bindings are visible to the instance. Svelte rejects instance declarations that
-			// reuse a module import's name, so the module script can be prepended unchanged.
-			prelude + '\n' + module_source,
-			true
-		).flatMap((reference) => {
+	return find_references(code, 'ts', references, reference_module, prelude, true).flatMap(
+		(reference) => {
 			const range = ranges.find(
 				(range) => reference.start >= range.start && reference.end <= range.end
 			);
 			return range ? shift([reference], range.offset) : [];
-		})
-	].sort((a, b) => a.start - b.start);
+		}
+	);
 }
 
 interface Element {

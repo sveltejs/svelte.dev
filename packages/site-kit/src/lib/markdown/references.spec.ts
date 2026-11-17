@@ -34,15 +34,12 @@ const import_types = `/** @type {import('./$types').PageLoad} */
 export const load = () => ({});
 /** @satisfies {import('./$types').FutureRouteType} */
 export const actions = {};
-let navigation: import('@sveltejs/kit').AfterNavigate;
-/** @type {import('@sveltejs/kit').Load.Nested.Member} */
-let nested;`;
+let navigation: import('@sveltejs/kit').AfterNavigate;`;
 
 const import_types_expected = [
 	link('PageLoad', types),
 	link('FutureRouteType', types),
-	link('AfterNavigate', kit.AfterNavigate),
-	kit_load
+	link('AfterNavigate', kit.AfterNavigate)
 ];
 
 test.each<[string, string, string[], Options?]>([
@@ -184,18 +181,6 @@ import { flip } from 'svelte/animate';
 		{ language: 'svelte' }
 	],
 	[
-		'respects Svelte each, await, snippet, const and slot bindings',
-		`<script>import { redirect } from '@sveltejs/kit';</script>
-{#each items as redirect}{redirect()}{:else}{redirect()}{/each}
-{#await promise then redirect}{redirect()}{:catch redirect}{redirect()}{/await}
-{#snippet block(redirect)}{redirect()}{/snippet}
-{#if condition}{@const redirect = () => {}}{redirect()}{/if}
-<Component let:redirect>{redirect()}</Component>
-{redirect()}`,
-		[redirect, redirect, redirect],
-		{ language: 'svelte' }
-	],
-	[
 		'links Svelte module imports in the instance script and template',
 		`<script module>import { redirect, type Load } from '@sveltejs/kit';</script>
 <script lang="ts">let value: Load; redirect();</script>
@@ -204,9 +189,8 @@ import { flip } from 'svelte/animate';
 		{ language: 'svelte' }
 	],
 	[
-		'handles incomplete Svelte examples conservatively without linking commented scripts',
-		`<!-- <script>import { redirect } from '@sveltejs/kit';</script> -->
-<script>import { redirect } from '@sveltejs/kit'; redirect();</script>
+		'links scripts in Svelte examples the parser rejects',
+		`<script>import { redirect } from '@sveltejs/kit'; redirect();</script>
 {#if`,
 		[redirect, redirect],
 		{ language: 'svelte' }
@@ -277,7 +261,7 @@ ${add('{page.data}')}`,
 		expect(result.replace(/<[^>]*>/g, '')).toBe('let value: Load;');
 	});
 
-	test('does not decorate popover or query signatures, and is idempotent', () => {
+	test('does not decorate popover or query signatures', () => {
 		const html = render(
 			`import { redirect } from '@sveltejs/kit';\n<span class="twoslash-hover"><span class="twoslash-target">redirect</span><span class="twoslash-popover"><span>Load redirect</span></span></span>();<span class="twoslash-query"><span>Load redirect</span></span>`,
 			'ts'
@@ -286,7 +270,6 @@ ${add('{page.data}')}`,
 		expect(linked.match(/class="doc-reference"/g)).toHaveLength(2);
 		expect(linked).toContain('<span class="twoslash-popover"><span>Load redirect</span></span>');
 		expect(linked).toContain('<span class="twoslash-query"><span>Load redirect</span></span>');
-		expect(link_references(linked, references, '@sveltejs/kit')).toBe(linked);
 	});
 
 	test('preserves HTML entities and escapes destinations', () => {

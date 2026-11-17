@@ -1,0 +1,13 @@
+{
+  "name": "valibot",
+  "npm_description": "The modular and type safe schema library for validating structural data",
+  "repo_url": "https://github.com/open-circle/valibot",
+  "authors": [
+    "fabian-hiller"
+  ],
+  "homepage": "https://valibot.dev",
+  "version": "1.5.0",
+  "downloads": 31993262,
+  "github_stars": 9051,
+  "updated": "2026-09-09T12:58:23.503Z"
+}
