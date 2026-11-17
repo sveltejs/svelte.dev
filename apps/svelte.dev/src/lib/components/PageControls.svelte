@@ -103,6 +103,11 @@
 
 		a {
 			font: var(--sk-font-body-small);
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 </style>

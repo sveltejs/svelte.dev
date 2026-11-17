@@ -166,6 +166,11 @@
 				display: block;
 				font: var(--sk-font-body);
 				color: inherit;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 		}
 	}

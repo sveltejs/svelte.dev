@@ -93,6 +93,11 @@
 		padding: 0;
 		color: inherit;
 		user-select: none;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 	h3 {

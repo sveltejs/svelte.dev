@@ -58,13 +58,17 @@ ol {
 
 a {
 	position: relative;
-	text-decoration: none;
 	cursor: pointer;
 	color: inherit;
-}
+	text-decoration-line: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.15em;
 
-a:hover {
-	text-decoration: underline;
+	/* thicken rather than recolour, so hover doesn't rely on colour */
+	&:hover {
+		text-decoration-thickness: max(2px, 0.12em);
+		text-decoration-skip-ink: none;
+	}
 }
 
 h1 {

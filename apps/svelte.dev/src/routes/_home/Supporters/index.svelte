@@ -94,6 +94,7 @@
 		aspect-ratio: 1;
 		border-radius: 50%;
 		text-indent: -9999px;
+		text-decoration: none;
 		display: inline-block;
 		background: no-repeat;
 		background-size: auto 102%;
