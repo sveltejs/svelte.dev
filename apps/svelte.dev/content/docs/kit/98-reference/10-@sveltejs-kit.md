@@ -519,6 +519,12 @@ emulate?: () => MaybePromise<Emulator>;
 
 <div class="ts-block-property-details">
 
+<div class="ts-block-property-bullets">
+
+- <span class="tag deprecated">deprecated</span> This will be removed in the next major version
+
+</div>
+
 Creates an `Emulator`, which allows the adapter to influence the environment
 during dev, build and prerendering.
 
@@ -1343,6 +1349,12 @@ The `path` option is `'/'` by default. You can use relative paths, or set `path:
 </div></div>
 
 ## Emulator
+
+<blockquote class="tag deprecated note">
+
+This will be removed in the next major version
+
+</blockquote>
 
 A collection of functions that influence the environment during dev, build and prerendering
 
