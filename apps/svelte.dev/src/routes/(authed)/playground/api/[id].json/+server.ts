@@ -1,6 +1,7 @@
 import { dev } from '$app/env';
 import { client } from '#lib/db/client.js';
 import * as gist from '#lib/db/gist.js';
+import { to_components } from '#lib/files.js';
 import { examples } from '#lib/server/content.ts';
 import { error, json } from '@sveltejs/kit';
 import type { Examples } from '../examples/all.json/+server.js';
@@ -58,12 +59,7 @@ export async function GET({ fetch, params }) {
 		owner: app.userid,
 		tailwind: app.tailwind ?? false,
 		relaxed: false,
-		components: app.files!.map((file) => {
-			const dot = file.name.lastIndexOf('.');
-			let name = file.name.slice(0, dot);
-			let type = file.name.slice(dot + 1);
-			return { name, type, source: file.source };
-		})
+		components: to_components(app.files!)
 	});
 }
 

@@ -1,11 +1,18 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import UserMenu from './UserMenu.svelte';
+	import UserMenu from '../../UserMenu.svelte';
 	import { Dropdown, HoverMenu, Icon } from '@sveltejs/site-kit/components';
 	import { isMac } from '#lib/utils/compat.js';
-	import { get_app_context } from '../../app-context';
-	import type { Gist, User } from '#lib/db/types.d.ts';
-	import { browser } from '$app/env';
+	import { login } from '../../auth';
+	import type { Accounts, Gist } from '#lib/db/types.d.ts';
+	import {
+		DESTINATIONS,
+		home_of,
+		is_owner,
+		provider_of,
+		type Destination
+	} from '#lib/destination.js';
+	import * as api from '#lib/apps.js';
 	import ModalDropdown from '#lib/components/ModalDropdown.svelte';
 	import SecondaryNav from '#lib/components/SecondaryNav.svelte';
 	import type { File } from '@sveltejs/repl/workspace';
@@ -13,9 +20,12 @@
 
 	interface Props {
 		examples: Array<{ title: string; examples: any[] }>;
-		user: User | null;
+		accounts: Accounts;
+		destination: Destination | null;
 		repl: ReturnType<typeof Repl>;
 		gist: Gist;
+		/** the version the REPL runs: URL param, else the app's pin, else `latest` */
+		version: string;
 		name: string;
 		modified: boolean;
 		forked: (value: { gist: Gist }) => void;
@@ -25,15 +35,15 @@
 	let {
 		name = $bindable(),
 		modified = $bindable(),
-		user,
+		accounts,
+		destination,
 		repl,
 		gist,
+		version,
 		examples,
 		forked,
 		saved
 	}: Props = $props();
-
-	const { login } = get_app_context();
 
 	let saving = $state(false);
 	let justSaved = $state(false);
@@ -44,7 +54,40 @@
 		return new Promise((f) => setTimeout(f, ms));
 	}
 
-	const canSave = $derived(user && gist && gist.owner === user.id);
+	const logged_in = $derived(!!(accounts.github || accounts.atproto));
+	const home = $derived(home_of(gist));
+	// your own app saves where it lives; anything else is a copy to the default destination
+	const is_mine = $derived(is_owner(accounts, gist));
+	const target = $derived(DESTINATIONS.find((d) => d.id === destination));
+	const save_key = `${isMac ? '⌘' : 'Ctrl'}+S`;
+	const save_label = $derived(
+		!logged_in
+			? 'log in to save'
+			: is_mine
+				? `save (${save_key})`
+				: `save a copy to ${target?.label ?? 'your account'} (${save_key})`
+	);
+
+	// all files are sent: a missing one is deleted
+	function payload(forked_from?: string) {
+		const { files, tailwind, async } = repl.toJSON() as {
+			files: File[];
+			tailwind?: boolean;
+			async?: boolean;
+		};
+		return {
+			name,
+			tailwind: tailwind ?? false,
+			async,
+			svelte_version: version !== 'latest' ? version : undefined,
+			forked_from,
+			files: files.map((file) => ({ name: file.name, type: '', source: file.contents }))
+		};
+	}
+
+	// a 401 means the session behind the app's home (save) or the default (fork) is gone
+	const reauth = (d: Destination | null) => () =>
+		login(provider_of(d ?? home), accounts.atproto?.handle);
 
 	function handleKeydown(event: KeyboardEvent) {
 		if (event.key === 's' && (isMac ? event.metaKey : event.ctrlKey)) {
@@ -56,31 +99,11 @@
 	async function fork(intentWasSave: boolean) {
 		saving = true;
 
-		const { files, tailwind } = repl.toJSON() as { files: File[]; tailwind?: boolean };
+		const app = payload(api.fork_source(gist));
 
 		try {
-			const r = await fetch(`/playground/create.json`, {
-				method: 'POST',
-				credentials: 'include',
-				headers: {
-					'Content-Type': 'application/json'
-				},
-				body: JSON.stringify({
-					name,
-					tailwind: tailwind ?? false,
-					files: files.map((file) => ({
-						name: file.name,
-						source: file.contents
-					}))
-				})
-			});
-
-			if (r.status < 200 || r.status >= 300) {
-				const { error } = await r.json();
-				throw new Error(`Received an HTTP ${r.status} response: ${error}`);
-			}
-
-			const gist = await r.json();
+			if (!destination) throw new Error('Pick where to save your apps on the apps page');
+			const gist = await api.with_reauth(() => api.create(app, destination), reauth(destination));
 			forked({ gist });
 
 			modified = false;
@@ -107,13 +130,13 @@
 	}
 
 	async function save() {
-		if (!user) {
+		if (!logged_in) {
 			alert('Please log in before saving your app');
 			return;
 		}
 		if (saving) return;
 
-		if (!canSave) {
+		if (!is_mine) {
 			fork(true);
 			return;
 		}
@@ -121,30 +144,7 @@
 		saving = true;
 
 		try {
-			// Send all files back to API
-			// ~> Any missing files are considered deleted!
-			const { files, tailwind } = repl.toJSON() as { files: File[]; tailwind?: boolean };
-
-			const r = await fetch(`/playground/save/${gist.id}`, {
-				method: 'PUT',
-				credentials: 'include',
-				headers: {
-					'Content-Type': 'application/json'
-				},
-				body: JSON.stringify({
-					name,
-					tailwind: tailwind ?? false,
-					files: files.map((file) => ({
-						name: file.name,
-						source: file.contents
-					}))
-				})
-			});
-
-			if (r.status < 200 || r.status >= 300) {
-				const { error } = await r.json();
-				throw new Error(`Received an HTTP ${r.status} response: ${error}`);
-			}
+			await api.with_reauth(() => api.update(gist.id, payload()), reauth(home));
 
 			modified = false;
 			repl.markSaved();
@@ -202,6 +202,12 @@
 		{/each} -->
 	</ModalDropdown>
 
+	{#if gist.owner_handle && !is_mine}
+		<a class="owner" href="/apps/{gist.owner_handle}" title="apps by @{gist.owner_handle}">
+			@{gist.owner_handle}
+		</a>
+	{/if}
+
 	<input
 		bind:value={name}
 		oninput={() => (modified = true)}
@@ -212,9 +218,9 @@
 	<div class="buttons">
 		<button
 			class="raised icon tooltip"
-			disabled={saving || !user}
+			disabled={saving || !logged_in}
 			onclick={() => fork(false)}
-			aria-label={user ? 'fork' : 'log in to fork'}
+			aria-label={logged_in ? 'fork' : 'log in to fork'}
 		>
 			{#if justForked}
 				<Icon size={18} name="check" />
@@ -225,11 +231,9 @@
 
 		<button
 			class="raised icon tooltip"
-			disabled={saving || !user}
+			disabled={saving || !logged_in}
 			onclick={save}
-			aria-label={user
-				? `save (${browser && navigator.platform === 'MacIntel' ? '⌘' : 'Ctrl'}+S)`
-				: 'log in to save'}
+			aria-label={save_label}
 		>
 			{#if justSaved}
 				<Icon size={18} name="check" />
@@ -241,8 +245,8 @@
 			{/if}
 		</button>
 
-		{#if user}
-			<UserMenu {user} />
+		{#if logged_in}
+			<UserMenu {accounts} {destination} />
 		{:else}
 			<Dropdown align="right">
 				<span class="login">log in</span>
@@ -250,7 +254,8 @@
 
 				{#snippet dropdown()}
 					<HoverMenu>
-						<button onclick={login}>Log in with GitHub</button>
+						<button onclick={() => login('atproto')}>Log in with the Atmosphere</button>
+						<button onclick={() => login('github')}>Log in with GitHub</button>
 					</HoverMenu>
 				{/snippet}
 			</Dropdown>
@@ -315,6 +320,20 @@
 		padding: 0.2rem 0.6rem;
 		height: 3.2rem;
 		font: var(--sk-font-ui-medium);
+	}
+
+	.owner {
+		font: var(--sk-font-ui-small);
+		color: var(--sk-fg-3);
+		max-width: 14rem;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		text-decoration: none;
+
+		&:hover {
+			color: var(--sk-fg-accent);
+		}
 	}
 
 	.badge {

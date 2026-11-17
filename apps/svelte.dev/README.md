@@ -2,6 +2,10 @@
 
 This is the app behind [svelte.dev](https://svelte.dev), the official Svelte site.
 
+## Playground
+
+Saving apps in the playground works with a GitHub account (Supabase) or an atproto account (the user's own PDS). See [docs/playground.md](docs/playground.md) for setup.
+
 ## Documentation PRs
 
 If you're creating a documentation PR, make sure you're targeting the right repository. More specifically, changes to content within `apps/svelte.dev/content/docs` are synced from other repositories, and documentation changes within those folder should therefore be made in those repositories:

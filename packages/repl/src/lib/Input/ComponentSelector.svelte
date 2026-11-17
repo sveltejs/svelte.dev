@@ -400,8 +400,8 @@
 			position: absolute;
 			width: 100%;
 			height: 100%;
-			right: 0;
-			top: 0;
+			/* all four sides: the global button hit area sets a negative inset on ::before */
+			inset: 0;
 			background: currentColor;
 			mask: no-repeat calc(100% - 1rem) 50% / 1.6rem 1.6rem;
 			transition: opacity 0.2s;

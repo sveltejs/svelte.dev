@@ -1,10 +1,14 @@
+import { api_url } from '#lib/apps.js';
 import { error } from '@sveltejs/kit';
 
 export async function load({ fetch, params, url }) {
-	const res = await fetch(`/playground/api/${params.id}.json`);
+	const api = api_url(params.id);
+	if (!api) error(404);
+
+	const res = await fetch(api);
 
 	if (!res.ok) {
-		throw error(res.status);
+		error(res.status);
 	}
 
 	const gist = await res.json();

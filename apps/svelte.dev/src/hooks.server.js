@@ -1,3 +1,4 @@
+import { dev } from '$app/env';
 import { redirect } from '@sveltejs/kit';
 
 const mappings = new Map([
@@ -64,6 +65,11 @@ export function handleFetch({ event, request, fetch }) {
 
 /** @type {import('@sveltejs/kit/hooks').Handle} */
 export async function handle({ event, resolve }) {
+	// atproto forbids `localhost` as a loopback origin; keep the whole app on one origin
+	if (dev && event.url.hostname === 'localhost') {
+		redirect(307, event.url.href.replace('localhost', '127.0.0.1'), { external: true });
+	}
+
 	// Best effort to redirect from Svelte 4 docs to new docs
 	const destination = mappings.get(event.url.pathname);
 	if (destination) {
