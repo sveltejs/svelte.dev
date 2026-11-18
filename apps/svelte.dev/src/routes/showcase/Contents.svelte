@@ -36,7 +36,7 @@ moves to it in the list as you jump there
 						style:--position={section.lead.screenshot?.position}
 						style:--placeholder={placeholders[section.lead.id]}
 					>
-						<Screenshot id={section.lead.id} sizes="(min-width: 1024px) 200px, 120px" />
+						<Screenshot id={section.lead.id} sizes="(min-width: 64em) 200px, 120px" />
 					</span>
 				</a>
 			</li>
@@ -51,7 +51,7 @@ moves to it in the list as you jump there
 		margin: 0 auto;
 		padding: 5.6rem var(--sk-page-padding-side) 0;
 
-		@media (min-width: 1024px) {
+		@media (min-width: 64em) {
 			padding-top: 8rem;
 		}
 
@@ -61,7 +61,7 @@ moves to it in the list as you jump there
 			/* the same as between the sites, so the second column starts where theirs does */
 			column-gap: 2.4rem;
 
-			@media (min-width: 1280px) {
+			@media (min-width: 80em) {
 				column-gap: 3.2rem;
 			}
 
@@ -70,7 +70,7 @@ moves to it in the list as you jump there
 			list-style: none;
 			border-top: 1px solid var(--sk-border);
 
-			@media (min-width: 740px) {
+			@media (min-width: 46.25em) {
 				grid-template-columns: repeat(2, minmax(0, 1fr));
 			}
 		}
@@ -91,7 +91,7 @@ moves to it in the list as you jump there
 			height: 100%;
 			padding: 1.6rem 0;
 
-			@media (min-width: 740px) {
+			@media (min-width: 46.25em) {
 				padding: 2.4rem 0;
 			}
 
@@ -124,11 +124,11 @@ moves to it in the list as you jump there
 		border: 1px solid var(--sk-border);
 		border-radius: var(--sk-border-radius);
 
-		@media (min-width: 740px) {
+		@media (min-width: 46.25em) {
 			width: 12rem;
 		}
 
-		@media (min-width: 1024px) {
+		@media (min-width: 64em) {
 			width: 16rem;
 		}
 	}

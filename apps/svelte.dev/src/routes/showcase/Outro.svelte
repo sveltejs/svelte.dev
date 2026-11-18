@@ -55,7 +55,7 @@ the closing lines of the page, with the command to start a project of your own
 		padding-bottom: 8rem;
 		text-align: center;
 
-		@media (min-width: 1024px) {
+		@media (min-width: 64em) {
 			margin-top: 24rem;
 			padding-bottom: 12rem;
 		}

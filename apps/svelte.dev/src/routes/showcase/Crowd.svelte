@@ -133,13 +133,7 @@ way, unless motion is paused or reduced, when the rows stay where they are and s
 </div>
 
 {#snippet tile(site: Site, copy = false)}
-	<Tile
-		{site}
-		sizes="(min-width: 1024px) 18vw, (min-width: 640px) 28vw, 39vw"
-		compact
-		still
-		{copy}
-	/>
+	<Tile {site} sizes="(min-width: 64em) 18vw, (min-width: 40em) 28vw, 39vw" compact still {copy} />
 {/snippet}
 
 <style>
@@ -158,12 +152,12 @@ way, unless motion is paused or reduced, when the rows stay where they are and s
 		margin-inline: calc(50% - 50vw);
 		mask-image: linear-gradient(90deg, transparent, black 15%, black 85%, transparent);
 
-		@media (min-width: 640px) {
+		@media (min-width: 40em) {
 			--across: 4;
 			--gap: 1.6rem;
 		}
 
-		@media (min-width: 1024px) {
+		@media (min-width: 64em) {
 			--across: 6;
 		}
 	}

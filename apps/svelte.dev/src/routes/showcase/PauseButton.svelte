@@ -68,19 +68,19 @@ carousel while the hero shows, where the floating one would cover the carousel's
 		}
 
 		/* above the banner, which sits at the bottom of wider windows */
-		@media (min-width: 832px) {
+		@media (min-width: 52em) {
 			bottom: calc(1.6rem + var(--sk-banner-height) + env(safe-area-inset-bottom));
 		}
 
 		/* on small screens the nav is at the bottom, sliding away as the page scrolls down and back as
 		   it scrolls up, so the button moves up over it while it shows */
-		@media (max-width: 831px) {
+		@media (max-width: 51.9375em) {
 			:global(body:has(nav:is(.visible, :focus-within))) &.float {
 				translate: 0 calc(-1 * var(--sk-nav-height));
 			}
 		}
 
-		@media (max-width: 739px) {
+		@media (max-width: 46.1875em) {
 			/* only the icon on phones, a round button, with its name still read out */
 			justify-content: center;
 			width: 4.4rem;
@@ -124,7 +124,7 @@ carousel while the hero shows, where the floating one would cover the carousel's
 		&.inline {
 			display: none;
 
-			@media (max-width: 739px) and (prefers-reduced-motion: no-preference) {
+			@media (max-width: 46.1875em) and (prefers-reduced-motion: no-preference) {
 				display: flex;
 				position: static;
 				grid-column: 1 / -1;

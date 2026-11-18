@@ -87,7 +87,7 @@
 		/* for what is pressed in a little as it is clicked */
 		--quad-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
-		@media (min-width: 832px) {
+		@media (min-width: 52em) {
 			--anchor-offset: calc(var(--sk-nav-height) + 3.2rem);
 		}
 	}

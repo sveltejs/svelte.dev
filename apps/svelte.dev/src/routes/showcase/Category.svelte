@@ -22,7 +22,7 @@ a section of the list under its heading, which links land on
 	.category {
 		margin: 9.6rem 0 0 0;
 
-		@media (min-width: 1024px) {
+		@media (min-width: 64em) {
 			margin-top: 14.4rem;
 		}
 	}

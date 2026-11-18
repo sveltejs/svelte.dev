@@ -34,7 +34,7 @@ the heading of the page and the carousel of sites under it. sets `seen` while it
 	<Carousel
 		{sites}
 		autoplay={player.autoplay}
-		sizes="(min-width: 740px) 440px, 60vw"
+		sizes="(min-width: 46.25em) 440px, 60vw"
 		onpick={morph}
 		onprime={prime}
 	>

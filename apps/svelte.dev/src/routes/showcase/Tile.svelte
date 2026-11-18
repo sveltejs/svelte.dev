@@ -98,7 +98,7 @@ site's id, for links to land on
 		   leave it, rather than 16:10, so the mosaic has no holes. about the 6:5 its clip is taken
 		   at, so little of it is cut */
 		&.large {
-			@media (min-width: 740px) {
+			@media (min-width: 46.25em) {
 				grid-template-rows: 1fr auto;
 			}
 		}
@@ -120,7 +120,7 @@ site's id, for links to land on
 		}
 
 		.large & .name {
-			@media (min-width: 740px) {
+			@media (min-width: 46.25em) {
 				font-size: clamp(2.4rem, 1.8rem + 1.2vw, 3.6rem);
 			}
 		}
@@ -131,7 +131,7 @@ site's id, for links to land on
 		}
 
 		.large & .description {
-			@media (min-width: 740px) {
+			@media (min-width: 46.25em) {
 				font: var(--sk-font-body);
 			}
 		}

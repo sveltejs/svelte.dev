@@ -14,9 +14,9 @@ rows need to come out even, as `arrange` lays them out
 
 	// widths of the screenshots as laid out below
 	const sizes: Record<Placed['size'], string> = {
-		big: '(min-width: 1440px) 680px, (min-width: 1280px) 48vw, (min-width: 740px) 64vw, (min-width: 640px) 48vw, 92vw',
+		big: '(min-width: 90em) 680px, (min-width: 80em) 48vw, (min-width: 46.25em) 64vw, (min-width: 40em) 48vw, 92vw',
 		small:
-			'(min-width: 1440px) 330px, (min-width: 1280px) 24vw, (min-width: 740px) 32vw, (min-width: 640px) 48vw, 92vw'
+			'(min-width: 90em) 330px, (min-width: 80em) 24vw, (min-width: 46.25em) 32vw, (min-width: 40em) 48vw, 92vw'
 	};
 </script>
 
@@ -42,19 +42,19 @@ rows need to come out even, as `arrange` lays them out
 		list-style: none;
 
 		/* on phones, one after another */
-		@media (max-width: 639px) {
+		@media (max-width: 39.9375em) {
 			row-gap: 3.2rem;
 		}
 
-		@media (min-width: 640px) {
+		@media (min-width: 40em) {
 			grid-template-columns: repeat(2, minmax(0, 1fr));
 		}
 
-		@media (min-width: 740px) {
+		@media (min-width: 46.25em) {
 			grid-template-columns: repeat(6, minmax(0, 1fr));
 		}
 
-		@media (min-width: 1280px) {
+		@media (min-width: 80em) {
 			grid-template-columns: repeat(4, minmax(0, 1fr));
 			gap: 5.6rem 3.2rem;
 		}
@@ -67,7 +67,7 @@ rows need to come out even, as `arrange` lays them out
 
 		/* where three are across, two of the six columns each, the large one four columns and two rows
 		   on alternate sides, and the one or two in a short last row widened to fill it */
-		@media (min-width: 740px) and (max-width: 1279px) {
+		@media (min-width: 46.25em) and (max-width: 79.9375em) {
 			grid-column: span 2;
 
 			&.big {
@@ -89,7 +89,7 @@ rows need to come out even, as `arrange` lays them out
 		}
 
 		/* as large as two across and two down where there are four columns */
-		@media (min-width: 1280px) {
+		@media (min-width: 80em) {
 			&.big {
 				grid-column: span 2;
 				grid-row: span 2;
