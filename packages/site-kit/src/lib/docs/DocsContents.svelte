@@ -13,19 +13,10 @@
 	let nav: HTMLElement;
 
 	afterNavigate(({ from, to }) => {
-		// TODO the fact that we're referencing route IDs from the app indicates
-		// that this doesn't belong in site-kit, but that's a problem for another day
-		// @ts-ignore
-		if (from?.route.id !== '/docs/[...path]') {
-			return;
-		}
+		const from_topic = from?.params?.topic;
+		const to_topic = to?.params?.topic;
 
-		// @ts-ignore
-		const from_package = from.params!.path!.split('/')[0];
-		// @ts-ignore
-		const to_package = to!.params!.path!.split('/')[0];
-
-		if (from_package !== to_package) {
+		if (from_topic !== undefined && to_topic !== undefined && from_topic !== to_topic) {
 			nav.scrollTo(0, 0);
 		}
 	});
