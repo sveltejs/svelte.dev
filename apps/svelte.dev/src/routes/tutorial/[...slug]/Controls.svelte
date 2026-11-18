@@ -35,8 +35,10 @@
 											aria-current={page.url.pathname === `/tutorial/${exercise.slug}`
 												? 'page'
 												: undefined}
-											href="/tutorial/{exercise.slug}">{exercise.title}</a
+											href="/tutorial/{exercise.slug}"
 										>
+											{exercise.title}
+										</a>
 									</li>
 								{/each}
 							</ul>

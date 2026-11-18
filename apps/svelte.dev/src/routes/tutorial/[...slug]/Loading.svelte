@@ -70,8 +70,10 @@
 								error = null;
 								load_webcontainer(true);
 								onreset?.();
-							}}>clicking here</button
-						>.
+							}}
+						>
+							clicking here
+						</button>.
 					</p>
 				{:else}
 					<p>

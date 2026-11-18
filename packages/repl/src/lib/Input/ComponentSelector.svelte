@@ -186,8 +186,10 @@
 		class="raised add-new"
 		onclick={add_new}
 		aria-label="add new component"
-		title="add new component"><span class="icon"></span></button
+		title="add new component"
 	>
+		<span class="icon"></span>
+	</button>
 
 	<div class="runes">
 		<RunesInfo {runes} />

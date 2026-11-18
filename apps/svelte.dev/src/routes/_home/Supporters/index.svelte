@@ -32,8 +32,10 @@
 					class="supporter"
 					style="background-position: {(100 * i) / (donors.length - 1)}% 0"
 					style:background-image="url({donors_img})"
-					href="https://opencollective.com/svelte">{donor}</a
+					href="https://opencollective.com/svelte"
 				>
+					{donor}
+				</a>
 			{/each}
 		</div>
 	</div>

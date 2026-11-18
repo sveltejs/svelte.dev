@@ -54,8 +54,10 @@
 		disabled={loading || !toggle_terminal}
 		class="terminal raised"
 		onclick={() => toggle_terminal?.()}
-		aria-label="toggle terminal"><span class="icon"></span></button
+		aria-label="toggle terminal"
 	>
+		<span class="icon"></span>
+	</button>
 </div>
 
 <style>
