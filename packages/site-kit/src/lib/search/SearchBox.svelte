@@ -179,7 +179,7 @@ It appears when the user clicks on the `Search` component or presses the corresp
 						use:forcefocus
 						onkeydown={(e) => {
 							if (e.key === 'Enter' && !e.isComposing) {
-								const element = modal.querySelector('a[data-has-node]') as HTMLElement | undefined;
+								const element = modal.querySelector('.results a') as HTMLElement | null;
 								element?.click();
 							}
 						}}
