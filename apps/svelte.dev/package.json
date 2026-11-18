@@ -49,8 +49,8 @@
 	"devDependencies": {
 		"@resvg/resvg-js": "^2.6.2",
 		"@supabase/supabase-js": "^2.97.0",
-		"@sveltejs/adapter-vercel": "^7.0.0-next.9",
-		"@sveltejs/enhanced-img": "^1.0.0-next.4",
+		"@sveltejs/adapter-vercel": "^7.0.5",
+		"@sveltejs/enhanced-img": "^1.0.1",
 		"@sveltejs/kit": "catalog:",
 		"@sveltejs/site-kit": "workspace:*",
 		"@sveltejs/vite-plugin-svelte": "^7.3.1",

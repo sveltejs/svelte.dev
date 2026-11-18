@@ -60,9 +60,9 @@
 	},
 	"devDependencies": {
 		"@lezer/common": "^1.5.1",
-		"@sveltejs/adapter-auto": "^8.0.0-next.1",
+		"@sveltejs/adapter-auto": "^9.0.0",
 		"@sveltejs/kit": "catalog:",
-		"@sveltejs/package": "^2.5.8",
+		"@sveltejs/package": "^3.0.3",
 		"@sveltejs/vite-plugin-svelte": "^7.3.1",
 		"@types/estree": "^1.0.8",
 		"prettier": "^3.10.1",
