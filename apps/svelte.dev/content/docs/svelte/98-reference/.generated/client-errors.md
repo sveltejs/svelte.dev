@@ -209,6 +209,12 @@ Failed to hydrate the application
 Could not `{@render}` snippet due to the expression being `null` or `undefined`. Consider using optional chaining `{@render snippet?.()}`
 ```
 
+### invalid_snippet_in_custom_renderer
+
+```
+`createRawSnippet` cannot be used with a custom renderer
+```
+
 ### lifecycle_legacy_only
 
 ```
@@ -227,10 +233,22 @@ Cannot do `bind:%key%={undefined}` when `%key%` has a fallback value
 Rest element properties of `$props()` such as `%property%` are readonly
 ```
 
+### renderer_cannot_cross
+
+```
+Cannot render content belonging to %guest% inside %host%. A custom renderer must define `embed` or `host` to be combined with another renderer
+```
+
 ### rune_outside_svelte
 
 ```
 The `%rune%` rune is only available inside `.svelte` and `.svelte.js/ts` files
+```
+
+### snippet_renderer_mismatch
+
+```
+A snippet created in a component that was compiled without `experimental.customRenderer` cannot be rendered by a custom renderer
 ```
 
 ### state_descriptors_fixed
