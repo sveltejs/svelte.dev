@@ -93,6 +93,11 @@
 		padding: 0;
 		color: inherit;
 		user-select: none;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 	h3 {
@@ -114,7 +119,7 @@
 		margin: 0;
 	}
 
-	@media (min-width: 832px) {
+	@media (min-width: 52em) {
 		.sidebar {
 			columns: 1;
 			padding-left: 3.2rem;

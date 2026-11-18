@@ -69,6 +69,15 @@ export function clean(markdown: string) {
 	);
 }
 
+export function escape_html(value: string) {
+	return value
+		.replaceAll('&', '&amp;')
+		.replaceAll('<', '&lt;')
+		.replaceAll('>', '&gt;')
+		.replaceAll('"', '&quot;')
+		.replaceAll("'", '&#39;');
+}
+
 export function decode_html_entities(text: string): string {
 	return text
 		.replace(/&lt;/g, '<')

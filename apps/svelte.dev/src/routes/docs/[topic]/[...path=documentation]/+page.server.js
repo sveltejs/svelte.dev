@@ -9,12 +9,16 @@ export async function load({ url, params }) {
 		error(404);
 	}
 
-	const { references } = docs;
+	const { references, referenceModules } = docs;
 
 	return {
 		document: {
 			...document,
-			body: await render_content(document.file, document.body, { origin: url.origin, references })
+			body: await render_content(document.file, document.body, {
+				origin: url.origin,
+				references,
+				referenceModule: referenceModules[document.file]
+			})
 		},
 		related: get_related_links(url.pathname)
 	};

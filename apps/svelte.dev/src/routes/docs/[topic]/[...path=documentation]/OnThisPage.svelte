@@ -103,10 +103,15 @@
 
 			a {
 				color: var(--sk-fg-2);
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 		}
 
-		@media (max-width: 1199px) {
+		@media (max-width: 74.9375em) {
 			margin: 4rem 0;
 
 			/* TODO remove :global once https://github.com/sveltejs/svelte/issues/13779 is fixed */
@@ -206,7 +211,7 @@
 			}
 		}
 
-		@media (min-width: 1200px) {
+		@media (min-width: 75em) {
 			position: fixed;
 			display: flex;
 			flex-direction: column;

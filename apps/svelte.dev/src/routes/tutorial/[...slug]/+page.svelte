@@ -16,6 +16,7 @@
 	import Controls from './Controls.svelte';
 	import Editor from '@sveltejs/repl/editor';
 	import type { Snapshot, PageProps } from './$types.js';
+	import { MediaQuery } from 'svelte/reactivity';
 
 	let { data }: PageProps = $props();
 
@@ -24,7 +25,6 @@
 	let show_editor = $state(false);
 	let show_filetree = $state(false);
 	let paused = $state(false);
-	let w = $state(1000);
 
 	let previous_files: Item[] = [];
 
@@ -201,7 +201,9 @@
 	solution.set(b);
 
 	// for the things we can't do with media queries
-	let mobile = $derived(w < 800);
+	// matches the CSS breakpoint below
+	const mobile_query = new MediaQuery('max-width: 49.9375em', false);
+	let mobile = $derived(mobile_query.current);
 
 	$effect(() => {
 		// TODO get rid of this store/effect
@@ -252,7 +254,6 @@
 </svelte:head>
 
 <svelte:window
-	bind:innerWidth={w}
 	onpopstate={(e) => {
 		const q = new URLSearchParams(location.search);
 		const file = q.get('file');
@@ -383,7 +384,6 @@
 		display: flex;
 		flex-direction: column;
 		height: calc(100dvh - var(--sk-nav-height) - var(--sk-banner-height));
-		/** necessary for innerWidth to be correct, so we can determine `mobile` */
 		width: 100vw;
 		overflow: hidden;
 	}
@@ -459,7 +459,7 @@
 	}
 
 	/* on mobile, override the <SplitPane> controls */
-	@media (max-width: 799px) {
+	@media (max-width: 49.9375em) {
 		:global([data-pane='main']) {
 			--min: 0px !important;
 			--pos: 50% !important;
@@ -474,7 +474,7 @@
 		}
 	}
 
-	@media (min-width: 800px) {
+	@media (min-width: 50em) {
 		.top {
 			width: 100vw;
 			margin: 0;
