@@ -11,11 +11,11 @@
 	--sk-banner-height: 0px;
 	--sk-pane-controls-height: 4.2rem;
 
-	@media screen and (min-width: 480px) {
+	@media screen and (min-width: 30em) {
 		--sk-page-padding-side: 3.2rem;
 	}
 
-	@media screen and (min-width: 800px) {
+	@media screen and (min-width: 50em) {
 		--sk-page-padding-top: 8rem;
 		--sk-page-padding-side: 4.8rem;
 		--sk-secondary-nav-height: 6rem;

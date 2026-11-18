@@ -132,6 +132,7 @@
 	.options a {
 		display: block;
 		color: inherit;
+		text-decoration: none;
 		margin: 1em -1.6rem;
 		padding: 1.6rem;
 		background-color: var(--sk-bg-1);
@@ -175,7 +176,7 @@
 			margin-bottom: 0;
 		}
 
-		@media (min-width: 480px) {
+		@media (min-width: 30em) {
 			margin: 1em -2.4rem;
 			padding: 2.4rem;
 		}

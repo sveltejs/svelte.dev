@@ -519,6 +519,12 @@ emulate?: () => MaybePromise<Emulator>;
 
 <div class="ts-block-property-details">
 
+<div class="ts-block-property-bullets">
+
+- <span class="tag deprecated">deprecated</span> This will be removed in the next major version
+
+</div>
+
 Creates an `Emulator`, which allows the adapter to influence the environment
 during dev, build and prerendering.
 
@@ -551,6 +557,29 @@ Options for configuring and interacting with Vite
 ```dts
 interface AdapterViteConfig {/*…*/}
 ```
+
+<div class="ts-block-property">
+
+```dts
+customPreview?: boolean;
+```
+
+<div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `false`
+- <span class="tag since">available since</span> v3.4.0
+
+</div>
+
+By default, SvelteKit creates a Node preview server to serve the build
+output during `vite preview`. Set this option to `true` when the adapter
+provides a Vite plugin with a `configurePreviewServer` hook that handles
+previewing the build output on its own.
+
+</div>
+</div>
 
 <div class="ts-block-property">
 
@@ -1343,6 +1372,12 @@ The `path` option is `'/'` by default. You can use relative paths, or set `path:
 </div></div>
 
 ## Emulator
+
+<blockquote class="tag deprecated note">
+
+This will be removed in the next major version
+
+</blockquote>
 
 A collection of functions that influence the environment during dev, build and prerendering
 

@@ -1,28 +1,43 @@
+import { beforeNavigate } from '$app/navigation';
 import { mount, onMount, unmount } from 'svelte';
 import Tooltip from './Tooltip.svelte';
 
 const CLASSNAME = 'highlight';
 
 export function setupDocsHovers() {
+	let tooltip: any;
+	let hovered: HTMLSpanElement | null = null;
+	let dismissed: HTMLSpanElement | null = null; // token whose tooltip was closed with Escape
+	let timeout: NodeJS.Timeout;
+
+	function clear() {
+		clearTimeout(timeout);
+		if (!tooltip) return;
+
+		unmount(tooltip);
+		hovered?.classList.remove(CLASSNAME);
+		tooltip = hovered = null;
+	}
+
+	beforeNavigate(clear);
+
 	onMount(() => {
-		let tooltip: any;
-		let hovered: HTMLSpanElement | null = null;
-		let timeout: NodeJS.Timeout;
-
-		function clear() {
-			if (!tooltip) return;
-
-			unmount(tooltip);
-			hovered?.classList.remove(CLASSNAME);
-			tooltip = hovered = null;
+		function activate(event: MouseEvent) {
+			if ((event.target as Element).closest('a[href]')) clear();
 		}
 
-		function over(event: MouseEvent) {
-			if (event.buttons !== 0) return; // probably selecting
+		// hide after a tick, unless the pointer moves onto the tooltip/token
+		// or focus is still inside the token in the meantime
+		function hide() {
+			clearTimeout(timeout);
+			timeout = setTimeout(() => {
+				if (!hovered?.contains(document.activeElement)) clear();
+			}, 0);
+		}
 
-			const target = (event.target as Element).closest<HTMLSpanElement>('.twoslash-hover');
-
-			if (!target) return;
+		function show(target: HTMLSpanElement | null) {
+			if (target !== dismissed) dismissed = null;
+			if (!target || target === dismissed) return;
 
 			clearTimeout(timeout);
 
@@ -47,10 +62,7 @@ export function setupDocsHovers() {
 						onmouseenter: () => {
 							clearTimeout(timeout);
 						},
-						onmouseleave: () => {
-							clearTimeout(timeout);
-							timeout = setTimeout(clear, 0);
-						}
+						onmouseleave: hide
 					}
 				});
 
@@ -59,12 +71,22 @@ export function setupDocsHovers() {
 			}
 		}
 
+		function get_token(target: EventTarget | null) {
+			return target instanceof Element ? target.closest<HTMLSpanElement>('.twoslash-hover') : null;
+		}
+
+		function over(event: MouseEvent) {
+			if (event.buttons !== 0) return; // probably selecting
+
+			show(get_token(event.target));
+		}
+
 		function out(event: MouseEvent) {
 			let target = event.target as HTMLElement | null;
 
 			while (target) {
 				if (target.classList.contains('twoslash-hover')) {
-					timeout = setTimeout(clear, 0);
+					hide();
 					return;
 				}
 
@@ -72,12 +94,43 @@ export function setupDocsHovers() {
 			}
 		}
 
+		function focusin(event: FocusEvent) {
+			show(get_token(event.target));
+		}
+
+		function focusout(event: FocusEvent) {
+			const token = get_token(event.target);
+
+			// ignore focus moving between elements inside the same token
+			if (token && token !== get_token(event.relatedTarget)) {
+				hide();
+			}
+		}
+
+		function keydown(event: KeyboardEvent) {
+			if (event.key === 'Escape' && tooltip) {
+				dismissed = hovered;
+				clear();
+			}
+		}
+
 		window.addEventListener('mouseover', over);
 		window.addEventListener('mouseout', out);
+		window.addEventListener('click', activate);
+		window.addEventListener('auxclick', activate);
+		window.addEventListener('focusin', focusin);
+		window.addEventListener('focusout', focusout);
+		window.addEventListener('keydown', keydown);
 
 		return () => {
 			window.removeEventListener('mouseover', over);
 			window.removeEventListener('mouseout', out);
+			window.removeEventListener('click', activate);
+			window.removeEventListener('auxclick', activate);
+			window.removeEventListener('focusin', focusin);
+			window.removeEventListener('focusout', focusout);
+			window.removeEventListener('keydown', keydown);
+			clear();
 		};
 	});
 }

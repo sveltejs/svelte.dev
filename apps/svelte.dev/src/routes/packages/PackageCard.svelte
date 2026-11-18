@@ -179,7 +179,7 @@
 				width: 1.4rem;
 				height: 1.4rem;
 
-				@media screen and (max-width: 768px) {
+				@media screen and (max-width: 48em) {
 					width: 2.4rem;
 					height: 2.4rem;
 				}
@@ -192,7 +192,7 @@
 			> span {
 				display: flex;
 				gap: 0.75rem;
-				@media screen and (max-width: 768px) {
+				@media screen and (max-width: 48em) {
 					gap: 1rem;
 
 					[data-icon] {

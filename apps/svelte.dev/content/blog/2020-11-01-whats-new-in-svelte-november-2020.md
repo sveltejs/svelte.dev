@@ -33,7 +33,7 @@ For all the features and bugfixes see the CHANGELOGs for [Svelte](https://github
 - [svelte-electron-boilerplate](https://github.com/hjalmar/svelte-electron-boilerplate) is a fast way to get up and running with a Svelte app built in the desktop javascript framework, Electron
 - [React Hooks in Svelte](https://github.com/joshnuss/react-hooks-in-svelte) showcases examples of common React Hooks ported to Svelte.
 - [gurlic](https://gurlic.com/) is a social network and internet experiment that is super snappy thanks to Svelte
-- [Interference 2020](https://interference2020.org/) visualizes reported foreign interference in the 2020 U.S. elections. You can learn more about how it was built in [YYY's talk at Svelte Summit]()
+- [Interference 2020](https://interference2020.org/) visualizes reported foreign interference in the 2020 U.S. elections. You can learn more about how it was built in [YYY's talk at Svelte Summit](<>)
 - [jitsi-svelte](https://github.com/relm-us/jitsi-svelte) lets you easily create your own custom Jitsi client by providing out-of-the-box components built with Svelte
 - [Ellx](https://ellx.io/) is part spreadsheet, part notebook and part IDE. It's super smooth thanks to Svelte 😎
 - [This New Zealand news site](https://www.nzherald.co.nz/nz/election-2020-latest-results-party-vote-electorate-vote-and-full-data/5CFVO4ENKNQDE3SICRRNPU5GZM/) breaks down the results of the 2020 Parliamentary elections using Svelte

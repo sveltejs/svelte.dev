@@ -1,19 +1,14 @@
 {
-  "name": "drizzle-orm",
-  "npm_description": "Drizzle ORM package for SQL databases",
-  "repo_url": "https://github.com/drizzle-team/drizzle-orm",
-  "authors": [
-    "dankochetov",
-    "sheriman",
-    "alexblokh",
-    "kyrylo_usichenko"
-  ],
-  "homepage": "https://orm.drizzle.team",
-  "version": "0.45.3",
-  "downloads": 30389986,
-  "github_stars": 35943,
-  "updated": "2026-09-21T10:06:39.969Z",
-  "typescript": true,
-  "runes": false,
-  "last_rune_check_version": "0.41.0"
+	"name": "drizzle-orm",
+	"npm_description": "Drizzle ORM package for SQL databases",
+	"repo_url": "https://github.com/drizzle-team/drizzle-orm",
+	"authors": ["dankochetov", "sheriman", "alexblokh", "kyrylo_usichenko"],
+	"homepage": "https://orm.drizzle.team",
+	"version": "0.45.4",
+	"downloads": 42821286,
+	"github_stars": 36182,
+	"updated": "2026-10-08T10:50:41.953Z",
+	"typescript": true,
+	"runes": false,
+	"last_rune_check_version": "0.41.0"
 }

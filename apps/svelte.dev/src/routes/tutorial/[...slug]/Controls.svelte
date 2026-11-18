@@ -35,8 +35,10 @@
 											aria-current={page.url.pathname === `/tutorial/${exercise.slug}`
 												? 'page'
 												: undefined}
-											href="/tutorial/{exercise.slug}">{exercise.title}</a
+											href="/tutorial/{exercise.slug}"
 										>
+											{exercise.title}
+										</a>
 									</li>
 								{/each}
 							</ul>
@@ -85,6 +87,11 @@
 <style>
 	a {
 		color: inherit;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
 
 		&:not([href]) {
 			opacity: 0.1;

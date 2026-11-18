@@ -1,14 +1,12 @@
 {
-  "name": "prosekit",
-  "npm_description": "ProseKit: A toolkit for building rich text editors.",
-  "repo_url": "https://github.com/prosekit/prosekit",
-  "authors": [
-    "ocavue"
-  ],
-  "homepage": "https://github.com/prosekit/prosekit#readme",
-  "version": "0.22.3",
-  "downloads": 27404,
-  "github_stars": 1203,
-  "updated": "2026-09-20T22:49:21.119Z",
-  "svelte_range": ">= 5.0.0"
+	"name": "prosekit",
+	"npm_description": "ProseKit: A toolkit for building rich text editors.",
+	"repo_url": "https://github.com/prosekit/prosekit",
+	"authors": ["ocavue"],
+	"homepage": "https://github.com/prosekit/prosekit#readme",
+	"version": "0.23.0",
+	"downloads": 32408,
+	"github_stars": 1203,
+	"updated": "2026-10-28T04:34:25.051Z",
+	"svelte_range": ">= 5.0.0"
 }
