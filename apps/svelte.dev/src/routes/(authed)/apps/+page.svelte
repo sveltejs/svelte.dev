@@ -125,8 +125,10 @@
 					<a
 						href="/apps?offset={data.next}{data.search
 							? `&search=${encodeURIComponent(data.search)}`
-							: ''}">Next page...</a
+							: ''}"
 					>
+						Next page...
+					</a>
 				{/if}
 			</div>
 		{:else}
