@@ -126,6 +126,14 @@ export const sites: Site[] = [
 		clip: true
 	},
 	{
+		id: 'alaska-airlines',
+		name: 'Alaska Airlines',
+		url: 'https://www.alaskaair.com/search/',
+		description:
+			'Book your flight with ease on Alaska Airlines to any of your top domestic or foreign destinations',
+		category: 'brands'
+	},
+	{
 		id: 'ashley',
 		name: 'Ashley',
 		url: 'https://www.ashleyfurniture.com/',
@@ -887,6 +895,7 @@ const MORE = [
 	'dbrand',
 	'viki',
 	'logitech',
+	'alaska-airlines',
 	'modulus',
 	'houses-of-the-world',
 	'de-correspondent',
