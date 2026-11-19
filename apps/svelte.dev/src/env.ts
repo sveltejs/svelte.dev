@@ -14,6 +14,10 @@ export const variables = defineEnvVars({
 	GITHUB_CLIENT_SECRET: {
 		schema: v.optional(v.string())
 	},
+	// stores sessions and saved apps in a local file outside of dev when true
+	LOCAL_DATABASE: {
+		schema: v.optional(v.string())
+	},
 	LOCAL_SVELTE_PATH: {
 		schema: v.optional(v.string(), '')
 	},

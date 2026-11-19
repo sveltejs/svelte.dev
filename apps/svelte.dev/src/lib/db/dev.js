@@ -1,9 +1,10 @@
 import { dev } from '$app/env';
+import { LOCAL_DATABASE } from '$app/env/private';
 import fs from 'node:fs';
 import path from 'node:path';
 import { client } from './client.js';
 
-// Dev-only stand-in for the Supabase rpcs, so GitHub login and saving work without a database.
+// stands in for the Supabase rpcs so GitHub login and saving work without a database in dev or when LOCAL_DATABASE is true
 
 /** @typedef {import('./types').GitHubUser} GitHubUser */
 /** @typedef {import('./types').User} User */
@@ -12,7 +13,7 @@ import { client } from './client.js';
 const FILE = path.resolve('tmp/playground.json');
 const SESSION_TTL_MS = 30 * 24 * 60 * 60 * 1000;
 
-export const enabled = dev && !client;
+export const enabled = (dev || LOCAL_DATABASE === 'true') && !client;
 
 function load() {
 	try {

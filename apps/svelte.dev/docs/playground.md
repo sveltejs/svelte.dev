@@ -8,6 +8,8 @@ Click "log in" in the playground: without GitHub credentials the popup explains 
 
 Without `SUPABASE_URL`/`SUPABASE_KEY`, sessions and apps are stored in `tmp/playground.json` (`src/lib/db/dev.js`) so save/fork/list work locally. Loading an id that isn't there proxies to svelte.dev, so existing playground links still open.
 
+Setting `LOCAL_DATABASE=true` enables the same file-based storage outside of dev (still only when Supabase isn't configured). The e2e tests use this to sign in and save apps against a production build.
+
 ## Prod
 
 ```
