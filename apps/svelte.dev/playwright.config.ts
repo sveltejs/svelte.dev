@@ -6,6 +6,28 @@ const port = 5183;
 /** tests a deployment instead of a local build */
 const deployment = process.env.BASE_URL;
 
+const browsers = {
+	chromium: {
+		desktop: { ...devices['Desktop Chrome'], channel: 'chrome' },
+		mobile: { ...devices['Pixel 7'], channel: 'chrome' }
+	},
+	firefox: {
+		desktop: devices['Desktop Firefox'],
+		// firefox cannot emulate a phone so only the viewport shrinks
+		mobile: { ...devices['Desktop Firefox'], viewport: devices['Pixel 7'].viewport }
+	},
+	webkit: {
+		desktop: devices['Desktop Safari'],
+		mobile: devices['iPhone 15']
+	}
+};
+
+const browser = browsers[(process.env.E2E_BROWSER || 'chromium') as keyof typeof browsers];
+
+if (!browser) {
+	throw new Error(`E2E_BROWSER must be one of ${Object.keys(browsers).join(', ')}`);
+}
+
 export default defineConfig({
 	testDir: 'e2e',
 	testMatch: '**/*.test.ts',
@@ -21,19 +43,19 @@ export default defineConfig({
 	timeout: 60_000,
 	expect: { timeout: 10_000 },
 	use: {
-		baseURL: deployment ?? `http://localhost:${port}`,
+		baseURL: deployment || `http://localhost:${port}`,
 		trace: 'retain-on-failure'
 	},
 	projects: [
 		{
 			name: 'desktop',
 			testIgnore: '**/*.mobile.test.ts',
-			use: { ...devices['Desktop Chrome'], channel: 'chrome' }
+			use: browser.desktop
 		},
 		{
 			name: 'mobile',
 			testMatch: '**/*.mobile.test.ts',
-			use: { ...devices['Pixel 7'], channel: 'chrome' }
+			use: browser.mobile
 		}
 	],
 	webServer: deployment

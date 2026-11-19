@@ -73,10 +73,11 @@ test.describe('primary navigation', () => {
 		);
 	});
 
-	test('the skip link moves focus to the main content', async ({ page }) => {
+	test('the skip link moves focus to the main content', async ({ page, browserName }) => {
 		await goto(page, '/docs/svelte/overview');
 
-		await page.keyboard.press('Tab');
+		// safari only tabs to links when option is held
+		await page.keyboard.press(browserName === 'webkit' ? 'Alt+Tab' : 'Tab');
 		const skip = page.getByRole('link', { name: 'Skip to main content' });
 		await expect(skip).toBeFocused();
 

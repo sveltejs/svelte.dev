@@ -4,9 +4,33 @@ on:
 permissions:
   contents: read # to fetch code (actions/checkout)
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.deployment.environment }}-${{ github.event.deployment.ref }}
+  cancel-in-progress: true
+
 jobs:
-  E2E:
+  Changes:
     if: github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      skip: ${{ steps.files.outputs.skip }}
+    steps:
+      # deployment events cannot be filtered by path
+      - name: skip deployments that only change markdown
+        id: files
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          SHA: ${{ github.event.deployment.sha }}
+        run: |
+          files=$(gh api "repos/$REPO/compare/main...$SHA" --jq '.files[].filename')
+          if [ -n "$files" ] && ! grep -qv '\.md$' <<< "$files"; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+  E2E:
+    needs: Changes
+    if: needs.Changes.outputs.skip != 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:

@@ -19,7 +19,12 @@ export const test = base.extend<{ signed_in: boolean }>({
 
 	page: async ({ page }, use) => {
 		const errors: Error[] = [];
-		page.on('pageerror', (error) => errors.push(error));
+		page.on('pageerror', (error) => {
+			// webkit reports fetches that a navigation cancelled
+			if (/^Fetch API cannot load .+ due to access control checks/.test(error.message)) return;
+
+			errors.push(error);
+		});
 
 		await use(page);
 

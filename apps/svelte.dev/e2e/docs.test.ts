@@ -141,8 +141,13 @@ test.describe('docs page', () => {
 });
 
 test.describe('code blocks', () => {
-	test('can be copied', async ({ page, context }) => {
-		await context.grantPermissions(['clipboard-read', 'clipboard-write']);
+	test('can be copied', async ({ page }) => {
+		// only chromium lets tests read the real clipboard
+		await page.addInitScript(() => {
+			navigator.clipboard.writeText = async (text) => {
+				(window as any).copied = text;
+			};
+		});
 		await goto(page, '/docs/svelte/$state');
 
 		const block = page
@@ -151,7 +156,7 @@ test.describe('code blocks', () => {
 			.first();
 		await block.getByRole('button', { name: 'Copy to clipboard' }).click();
 
-		const copied = await page.evaluate(() => navigator.clipboard.readText());
+		const copied: string = await page.evaluate(() => (window as any).copied);
 		expect(copied.length).toBeGreaterThan(10);
 		expect(await block.locator('code').first().innerText()).toContain(copied.split('\n')[0].trim());
 	});

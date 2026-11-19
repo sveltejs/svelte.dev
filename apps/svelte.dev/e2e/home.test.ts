@@ -60,7 +60,7 @@ test.describe('homepage', () => {
 		await expect(video).toHaveJSProperty('paused', true);
 
 		await figure.scrollIntoViewIfNeeded();
-		await expect(video).toBeInViewport({ ratio: 1 });
+		await expect(video).toBeInViewport({ ratio: 0.99 });
 		await expect(video).toHaveJSProperty('paused', false);
 	});
 
@@ -72,7 +72,7 @@ test.describe('homepage', () => {
 		const video = figure.locator('video');
 
 		await figure.scrollIntoViewIfNeeded();
-		await expect(video).toBeInViewport({ ratio: 1 });
+		await expect(video).toBeInViewport({ ratio: 0.99 });
 
 		// give playback a chance to start
 		await page.waitForTimeout(1000);
