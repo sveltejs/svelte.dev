@@ -1,4 +1,4 @@
-import { expect, goto, main, test } from './fixtures.ts';
+import { is_login, expect, goto, main, test } from './fixtures.ts';
 import type { Page } from '@playwright/test';
 import { disposable_session_ids } from './db.ts';
 
@@ -46,9 +46,11 @@ test.describe('signed out', () => {
 		await expect(main(page)).toContainText('Please log in to see your saved apps.');
 
 		const popup = page.waitForEvent('popup');
+		const login = page.context().waitForEvent('request', is_login);
 		await main(page).getByRole('link', { name: 'log in' }).click();
 
-		expect(new URL((await popup).url()).pathname).toBe('/auth/login');
+		await popup;
+		await login;
 	});
 
 	test('saved apps cannot be deleted', async ({ request }) => {
