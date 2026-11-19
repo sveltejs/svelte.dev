@@ -70,7 +70,7 @@ export async function capture(page: Page, height: number, file: string) {
 	}> = [];
 
 	// a window at a time, or as much as shows of what scrolls when that is an app in the page
-	for (let y = 0; ; ) {
+	for (let y = 0; ;) {
 		const { top, box } = await page.evaluate((y) => {
 			const scroller = (window as Scrolled).showcase_scroller ?? document.documentElement;
 			scroller.style.scrollBehavior = 'auto';

@@ -4,14 +4,7 @@
 // a smaller site goes in MORE at the end of this file too, to show after the categories instead
 
 export type Category =
-	| 'brands'
-	| 'business'
-	| 'news'
-	| 'entertainment'
-	| 'public'
-	| 'ai'
-	| 'tools'
-	| 'developers';
+	'brands' | 'business' | 'news' | 'entertainment' | 'public' | 'ai' | 'tools' | 'developers';
 
 export interface Site {
 	/** used for the page anchor and the screenshot filename */
