@@ -52,7 +52,7 @@ test.describe('homepage', () => {
 		await expect(video).toHaveJSProperty('muted', true);
 	});
 
-	test.fixme('the video starts playing once it is fully in view', async ({ page }) => {
+	test('the video starts playing once it is fully in view', async ({ page }) => {
 		const figure = page.getByRole('figure', { name: 'Watch the full Svelte Origins documentary' });
 		const video = figure.locator('video');
 
@@ -64,9 +64,7 @@ test.describe('homepage', () => {
 		await expect(video).toHaveJSProperty('paused', false);
 	});
 
-	test.fixme('the video does not play by itself when reduced motion is preferred', async ({
-		page
-	}) => {
+	test('the video does not play by itself when reduced motion is preferred', async ({ page }) => {
 		await page.emulateMedia({ reducedMotion: 'reduce' });
 		await goto(page, '/');
 

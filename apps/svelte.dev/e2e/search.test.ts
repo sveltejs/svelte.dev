@@ -52,7 +52,7 @@ test.describe('search dialog', () => {
 		await expect(dialog(page)).toContainText('No results');
 	});
 
-	test.fixme('Enter opens the first result', async ({ page }) => {
+	test('Enter opens the first result', async ({ page }) => {
 		await page.keyboard.press('ControlOrMeta+k');
 		await input(page).fill('$effect.pre');
 		await expect(results(page).first()).toBeVisible();
