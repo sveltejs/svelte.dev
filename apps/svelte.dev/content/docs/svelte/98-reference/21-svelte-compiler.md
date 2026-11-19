@@ -267,10 +267,7 @@ namespace AST {
 		customElement?: {
 			tag?: string;
 			shadow?:
-				| 'open'
-				| 'none'
-				| ObjectExpression
-				| undefined;
+				'open' | 'none' | ObjectExpression | undefined;
 			props?: Record<
 				string,
 				{
@@ -381,9 +378,7 @@ namespace AST {
 		name: string;
 		/** The y in `bind:x={y}` */
 		expression:
-			| Identifier
-			| MemberExpression
-			| SequenceExpression;
+			Identifier | MemberExpression | SequenceExpression;
 	}
 
 	/** A `class:` directive */
@@ -435,9 +430,7 @@ namespace AST {
 		name: string;
 		/** The 'y' in `style:x={y}` */
 		value:
-			| true
-			| ExpressionTag
-			| Array<ExpressionTag | Text>;
+			true | ExpressionTag | Array<ExpressionTag | Text>;
 		modifiers: Array<'important'>;
 	}
 
@@ -605,9 +598,7 @@ namespace AST {
 		 * Quoted/string values are represented by an array, even if they contain a single expression like `"{x}"`
 		 */
 		value:
-			| true
-			| ExpressionTag
-			| Array<Text | ExpressionTag>;
+			true | ExpressionTag | Array<Text | ExpressionTag>;
 	}
 
 	export interface SpreadAttribute extends BaseNode {
@@ -634,9 +625,7 @@ namespace AST {
 	}
 
 	export type AttributeLike =
-		| Attribute
-		| SpreadAttribute
-		| Directive;
+		Attribute | SpreadAttribute | Directive;
 
 	export type Directive =
 		| AST.AnimateDirective
@@ -694,11 +683,7 @@ namespace AST {
 		| Block;
 
 	export type SvelteNode =
-		| Node
-		| TemplateNode
-		| AST.Fragment
-		| _CSS.Node
-		| Script;
+		Node | TemplateNode | AST.Fragment | _CSS.Node | Script;
 
 	export type { _CSS as CSS };
 }

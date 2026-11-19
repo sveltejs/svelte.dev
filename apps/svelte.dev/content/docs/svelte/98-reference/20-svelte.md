@@ -549,9 +549,7 @@ it will be called when the component is unmounted.
 ```dts
 function onMount<T>(
 	fn: () =>
-		| NotFunction<T>
-		| Promise<NotFunction<T>>
-		| (() => any)
+		NotFunction<T> | Promise<NotFunction<T>> | (() => any)
 ): void;
 ```
 
