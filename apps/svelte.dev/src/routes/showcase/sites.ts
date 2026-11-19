@@ -354,6 +354,29 @@ export const sites: Site[] = [
 		clip: true
 	},
 	{
+		id: 'bloomberg',
+		name: 'Bloomberg',
+		url: 'https://www.bloomberg.com/graphics/2026-us-election-results/',
+		// from the opening line of the page
+		description:
+			'Live election results for US House and Senate races, gubernatorial races, and dozens of key ballot measures',
+		category: 'news',
+		// its robots.txt keeps ai agents off its graphics, so it is only taken by hand, and the
+		// window alone, since its header shows again partway down a taller one. the paywall fades
+		// the page out with a gradient over it, which is left out of the screenshot along with its
+		// subscribe banner
+		screenshot: {
+			headed: true,
+			height: 900,
+			hide: [
+				'body::before',
+				'fortress-container-root',
+				'#fortress-container-root',
+				'.fortress-container-root'
+			]
+		}
+	},
+	{
 		id: 'radio-france',
 		name: 'Radio France',
 		url: 'https://www.radiofrance.fr/',
@@ -366,13 +389,6 @@ export const sites: Site[] = [
 		url: 'https://www.nrk.no/',
 		// from https://www.nrk.no/about/this-is-nrk-1.2895065
 		description: 'Norway’s major broadcasting institution',
-		category: 'news'
-	},
-	{
-		id: 'the-pudding',
-		name: 'The Pudding',
-		url: 'https://pudding.cool/',
-		description: 'Explains ideas with visual essays',
 		category: 'news'
 	},
 	{
