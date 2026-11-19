@@ -36,6 +36,21 @@ When writing content for the tutorial, you need to be aware of the differences o
 - When using root-relative paths, for a SvelteKit exercise the 'root' is the `static` directory inside the exercise itself, but for a Svelte exercise it is the root of the app so assets should do inside `apps/svelte.dev/static/tutorial`.
 - When importing relative assets in a Svelte exercise, Rollup inlines them into the bundle as base64
 
+### End-to-end tests
+
+The site has a [Playwright](https://playwright.dev) suite in `e2e`, which covers navigation, search, docs, the tutorial, the playground, saved apps, packages, the blog, redirects and the machine-readable endpoints.
+
+```sh
+pnpm exec playwright install chromium # once
+pnpm test:e2e
+pnpm test:e2e --ui # or with Playwright's UI
+SKIP_BUILD=1 pnpm test:e2e # reuse the previous build
+```
+
+The suite builds the site and tests the result with `vite preview` on port 5183. The preview server is started with `LOCAL_DATABASE=true`, so that tests can sign in and save apps using the [file-based database](docs/playground.md); the test user it adds to `tmp/playground.json` is removed again afterwards.
+
+Files ending in `.mobile.test.ts` run with a phone-sized viewport. The Svelte tutorial and the playground download packages from npm in order to bundle in the browser, so those tests need a network connection.
+
 ### Dependencies
 
 If you look in the site's package.json you'll notice several dependencies that don't appear to be used, such as `@testing-library/svelte`. These are present because they're referenced in the docs, and Twoslash needs to be able to find type definitions in order to typecheck snippets. Installing the dependencies was deemed preferable to faking it with `declare module`, since we're liable to end up with fictional types that way.
