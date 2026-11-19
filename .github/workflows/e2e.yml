@@ -1,4 +1,4 @@
-name: E2E
+name: Test
 on:
   push:
     branches: [main]
@@ -13,7 +13,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  E2E:
+  Test:
     name: ${{ matrix.browser }}
     runs-on: ${{ matrix.os || 'ubuntu-latest' }}
     timeout-minutes: 20

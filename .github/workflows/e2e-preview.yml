@@ -28,7 +28,7 @@ jobs:
           if [ -n "$files" ] && ! grep -qv '\.md$' <<< "$files"; then
             echo "skip=true" >> "$GITHUB_OUTPUT"
           fi
-  E2E:
+  Test:
     needs: Changes
     if: needs.Changes.outputs.skip != 'true'
     runs-on: ubuntu-latest
