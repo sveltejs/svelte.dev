@@ -106,6 +106,11 @@ site's id, for links to land on
 		/* only the screenshot, with no row for text below it to add to the gap */
 		&.compact {
 			gap: 0;
+
+			/* held down to see its name on a touch screen, which iOS otherwise takes as selecting
+			   the screenshot, and tints it blue */
+			user-select: none;
+			-webkit-user-select: none;
 		}
 	}
 
