@@ -6,6 +6,8 @@ The `updated` state is `true` if a new version of the app has been deployed sinc
 
 Version polling happens once an hour by default. SvelteKit also checks for a new version after receiving responses to data requests, remote function calls and form actions, and when the tab gains focus or becomes visible. This exercise sets a shorter `version.pollInterval` in `vite.config.js` as a demo override.
 
+The toast only appears after the app detects a version change, so load the page, deploy a new version, and wait for the next poll.
+
 ```svelte
 /// file: src/routes/+layout.svelte
 <script>
