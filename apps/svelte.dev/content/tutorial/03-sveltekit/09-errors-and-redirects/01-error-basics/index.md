@@ -1,5 +1,6 @@
 ---
 title: Basics
+tags: errors
 ---
 
 There are two main types of errors in SvelteKit — _app_ errors and _unknown_ errors.

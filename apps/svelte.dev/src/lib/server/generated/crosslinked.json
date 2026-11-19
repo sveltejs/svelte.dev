@@ -1,5 +1,173 @@
 [
 	{
+		"path": "/tutorial/kit/env-private",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Environment variables",
+			"$app/env/private"
+		],
+		"tags": [
+			"env"
+		]
+	},
+	{
+		"path": "/tutorial/kit/invalidation",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Advanced loading",
+			"Invalidation"
+		],
+		"tags": [
+			"invalidation"
+		]
+	},
+	{
+		"path": "/tutorial/kit/universal-load-functions",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Advanced loading",
+			"Universal load functions"
+		],
+		"tags": [
+			"load"
+		]
+	},
+	{
+		"path": "/tutorial/kit/optional-params",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Advanced routing",
+			"Optional parameters"
+		],
+		"tags": [
+			"routing"
+		]
+	},
+	{
+		"path": "/tutorial/kit/preload",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Link options",
+			"Preloading"
+		],
+		"tags": [
+			"preloading"
+		]
+	},
+	{
+		"path": "/tutorial/kit/page-options",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Page options",
+			"Basics"
+		],
+		"tags": [
+			"page-options"
+		]
+	},
+	{
+		"path": "/tutorial/kit/handle",
+		"breadcrumbs": [
+			"Tutorial",
+			"Advanced SvelteKit",
+			"Hooks",
+			"handle"
+		],
+		"tags": [
+			"hooks"
+		]
+	},
+	{
+		"path": "/tutorial/kit/error-basics",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic SvelteKit",
+			"Errors and redirects",
+			"Basics"
+		],
+		"tags": [
+			"errors"
+		]
+	},
+	{
+		"path": "/tutorial/kit/page-state",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic SvelteKit",
+			"$app/state",
+			"page"
+		],
+		"tags": [
+			"app-state"
+		]
+	},
+	{
+		"path": "/tutorial/kit/progressive-enhancement",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic SvelteKit",
+			"Forms",
+			"Progressive enhancement"
+		],
+		"tags": [
+			"enhance"
+		]
+	},
+	{
+		"path": "/tutorial/kit/the-form-element",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic SvelteKit",
+			"Forms",
+			"The <form> element"
+		],
+		"tags": [
+			"forms"
+		]
+	},
+	{
+		"path": "/tutorial/kit/lib",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic SvelteKit",
+			"Shared modules",
+			"The #lib subpath import"
+		],
+		"tags": [
+			"lib"
+		]
+	},
+	{
+		"path": "/tutorial/kit/page-data",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic SvelteKit",
+			"Loading data",
+			"Page data"
+		],
+		"tags": [
+			"load"
+		]
+	},
+	{
+		"path": "/tutorial/kit/pages",
+		"breadcrumbs": [
+			"Tutorial",
+			"Basic SvelteKit",
+			"Routing",
+			"Pages"
+		],
+		"tags": [
+			"routing"
+		]
+	},
+	{
 		"path": "/tutorial/svelte/key-blocks",
 		"breadcrumbs": [
 			"Tutorial",
