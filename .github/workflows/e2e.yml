@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   E2E:
-    name: E2E (${{ matrix.browser }})
+    name: ${{ matrix.browser }}
     runs-on: ${{ matrix.os || 'ubuntu-latest' }}
     timeout-minutes: 20
     strategy:
