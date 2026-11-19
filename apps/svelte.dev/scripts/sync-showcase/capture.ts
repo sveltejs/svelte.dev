@@ -70,7 +70,7 @@ export async function capture(page: Page, height: number, file: string) {
 	}> = [];
 
 	// a window at a time, or as much as shows of what scrolls when that is an app in the page
-	for (let y = 0; ;) {
+	for (let y = 0, last = -1; ;) {
 		const { top, box } = await page.evaluate((y) => {
 			const scroller = (window as Scrolled).showcase_scroller ?? document.documentElement;
 			scroller.style.scrollBehavior = 'auto';
@@ -84,6 +84,11 @@ export async function capture(page: Page, height: number, file: string) {
 						: { x, y: from, width, height }
 			};
 		}, y);
+
+		// a page that will not scroll any further, such as one locked in place by a popup, would
+		// otherwise be taken from the same place again and again without end
+		if (top <= last) break;
+		last = top;
 
 		// lets what scrolling into view set off play out
 		await page.waitForTimeout(1000);
@@ -110,7 +115,9 @@ export async function capture(page: Page, height: number, file: string) {
 	const stitch = await page.context().newPage();
 
 	try {
-		await stitch.setViewportSize({ width: SIZE.width, height });
+		// no taller than what was taken, where the page stopped scrolling short of it
+		const taken = Math.max(...tiles.map((tile) => tile.top + tile.clip.height));
+		await stitch.setViewportSize({ width: SIZE.width, height: Math.min(height, taken) });
 		await stitch.setContent(
 			`<body style="margin:0">${tiles
 				.map(
