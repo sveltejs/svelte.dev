@@ -38,7 +38,8 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: install browser
         if: matrix.browser != 'chromium'
-        run: pnpm --filter svelte.dev exec playwright install ${{ matrix.browser }}
+        # firefox needs the system codecs to play the homepage video
+        run: pnpm --filter svelte.dev exec playwright install --with-deps ${{ matrix.browser }}
       - name: test
         run: pnpm test:e2e
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
