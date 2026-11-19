@@ -283,7 +283,7 @@
 	<div class="top" class:offset={show_editor}>
 		<SplitPane id="main" type="columns" min="360px" max="50%" pos="33%">
 			{#snippet a()}
-				<section class="content">
+				<section class="content" inert={mobile && show_editor}>
 					<Sidebar
 						bind:sidebar
 						exercise={data.exercise}
@@ -306,7 +306,7 @@
 							pos={mobile ? '40px' : '200px'}
 						>
 							{#snippet a()}
-								<section class="navigator">
+								<section class="navigator" inert={mobile && !show_editor}>
 									{#if mobile}
 										<button class="file" onclick={() => (show_filetree = !show_filetree)}>
 											{workspace.current.name.replace(
@@ -321,7 +321,7 @@
 							{/snippet}
 
 							{#snippet b()}
-								<section class="editor-container">
+								<section class="editor-container" inert={mobile && !show_editor}>
 									<Editor
 										{workspace}
 										autocomplete_filter={(file) => {
@@ -346,7 +346,7 @@
 					{/snippet}
 
 					{#snippet b()}
-						<section class="preview">
+						<section class="preview" inert={mobile && !show_editor}>
 							{#if needs_webcontainers(page.data.exercise)}
 								<Output exercise={data.exercise} {paused} {workspace} />
 							{:else}
