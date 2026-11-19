@@ -28,12 +28,12 @@ export default defineConfig({
 		{
 			name: 'desktop',
 			testIgnore: '**/*.mobile.test.ts',
-			use: { ...devices['Desktop Chrome'] }
+			use: { ...devices['Desktop Chrome'], channel: 'chrome' }
 		},
 		{
 			name: 'mobile',
 			testMatch: '**/*.mobile.test.ts',
-			use: { ...devices['Pixel 7'] }
+			use: { ...devices['Pixel 7'], channel: 'chrome' }
 		}
 	],
 	webServer: deployment

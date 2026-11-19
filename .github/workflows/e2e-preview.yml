@@ -4,10 +4,6 @@ on:
 permissions:
   contents: read # to fetch code (actions/checkout)
 
-env:
-  # We only install Chromium manually
-  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
-
 jobs:
   E2E:
     if: github.event.deployment_status.state == 'success'
@@ -22,8 +18,6 @@ jobs:
           cache: pnpm
       - name: install
         run: pnpm install --frozen-lockfile
-      - name: install browser
-        run: pnpm --filter svelte.dev exec playwright install --with-deps chromium
       - name: test
         run: pnpm test:e2e
         env:

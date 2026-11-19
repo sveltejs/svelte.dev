@@ -41,14 +41,13 @@ When writing content for the tutorial, you need to be aware of the differences o
 The site has a [Playwright](https://playwright.dev) suite in `e2e`, which covers navigation, search, docs, the tutorial, the playground, saved apps, packages, the blog, redirects and the machine-readable endpoints.
 
 ```sh
-pnpm exec playwright install chromium # once
 pnpm test:e2e
 pnpm test:e2e --ui # or with Playwright's UI
 SKIP_BUILD=1 pnpm test:e2e # reuse the previous build
 BASE_URL=https://example.vercel.app pnpm test:e2e # test a deployment
 ```
 
-The suite builds the site and tests the result with `vite preview` on port 5183. The preview server is started with `LOCAL_DATABASE=true`, so that tests can sign in and save apps using the [file-based database](docs/playground.md); the test user it adds to `tmp/playground.json` is removed again afterwards.
+The tests run in the copy of Google Chrome installed on your machine. The suite builds the site and tests the result with `vite preview` on port 5183. The preview server is started with `LOCAL_DATABASE=true`, so that tests can sign in and save apps using the [file-based database](docs/playground.md); the test user it adds to `tmp/playground.json` is removed again afterwards.
 
 With `BASE_URL` set, the suite tests that deployment instead of building the site, and skips the tests that need the test user. CI does this for every Vercel deployment.
 
