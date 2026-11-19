@@ -1,22 +1,39 @@
 name: Test
 on:
-  push:
-    branches: [main]
-    paths-ignore: ['**/*.md']
-  pull_request:
-    paths-ignore: ['**/*.md']
+  deployment_status:
 permissions:
   contents: read # to fetch code (actions/checkout)
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  group: ${{ github.workflow }}-${{ github.event.deployment.environment }}-${{ github.event.deployment.ref }}
   cancel-in-progress: true
 
 jobs:
+  Changes:
+    if: github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      skip: ${{ steps.files.outputs.skip }}
+    steps:
+      # deployment events cannot be filtered by path
+      - name: skip deployments that only change markdown
+        id: files
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          SHA: ${{ github.event.deployment.sha }}
+        run: |
+          files=$(gh api "repos/$REPO/compare/main...$SHA" --jq '.files[].filename')
+          if [ -n "$files" ] && ! grep -qv '\.md$' <<< "$files"; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
   Test:
     name: ${{ matrix.browser }}
+    needs: Changes
+    if: needs.Changes.outputs.skip != 'true'
     runs-on: ${{ matrix.os || 'ubuntu-latest' }}
-    timeout-minutes: 20
+    timeout-minutes: 15
     strategy:
       fail-fast: false
       matrix:
@@ -25,8 +42,6 @@ jobs:
           - { browser: chromium }
           - { browser: firefox }
           - { browser: webkit, os: macos-latest }
-    env:
-      E2E_BROWSER: ${{ matrix.browser }}
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
       - uses: pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093 # v6.0.8
@@ -42,6 +57,9 @@ jobs:
         run: pnpm --filter svelte.dev exec playwright install --with-deps ${{ matrix.browser }}
       - name: test
         run: pnpm test:e2e
+        env:
+          E2E_BROWSER: ${{ matrix.browser }}
+          BASE_URL: ${{ github.event.deployment_status.environment_url }}
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: ${{ !cancelled() }}
         with:

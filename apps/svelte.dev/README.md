@@ -50,7 +50,7 @@ E2E_BROWSER=firefox pnpm test:e2e # or webkit, after `pnpm exec playwright insta
 
 By default the tests run in the copy of Google Chrome installed on your machine. The suite builds the site and tests the result with `vite preview` on port 5183. The preview server is started with `LOCAL_DATABASE=true`, so that tests can sign in and save apps using the [file-based database](docs/playground.md); the test user it adds to `tmp/playground.json` is removed again afterwards.
 
-With `BASE_URL` set, the suite tests that deployment instead of building the site, and skips the tests that need the test user. CI does this for every Vercel deployment.
+With `BASE_URL` set, the suite tests that deployment instead of building the site, and skips the tests that need the test user. This is how CI runs it, against each Vercel deployment in Chrome, Firefox and WebKit, so the tests that need the test user only run locally.
 
 Files ending in `.mobile.test.ts` run with a phone-sized viewport. The Svelte tutorial and the playground download packages from npm in order to bundle in the browser, so those tests need a network connection.
 
