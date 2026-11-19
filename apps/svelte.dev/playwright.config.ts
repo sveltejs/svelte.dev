@@ -6,6 +6,8 @@ const port = 5183;
 export default defineConfig({
 	testDir: 'e2e',
 	testMatch: '**/*.test.ts',
+	// cards are rendered on the server so one snapshot serves every platform and project
+	snapshotPathTemplate: '{testDir}/snapshots/{arg}{ext}',
 	globalSetup: './e2e/global-setup.ts',
 	globalTeardown: './e2e/global-teardown.ts',
 	fullyParallel: true,
