@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
 
-	let { onclose }: { onclose?: () => void } = $props();
+	let { onclose, duration = 200 }: { onclose?: () => void; duration?: number } = $props();
 </script>
 
 <div
-	transition:fade={{ duration: 100 }}
+	transition:fade={{ duration }}
 	class="modal-overlay"
 	aria-hidden="true"
 	onclick={onclose}
