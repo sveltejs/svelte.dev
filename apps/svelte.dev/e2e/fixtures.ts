@@ -1,4 +1,4 @@
-import { test as base, expect, type Page } from '@playwright/test';
+import { test as base, expect, type Page, type Request } from '@playwright/test';
 import { session_id } from './db.ts';
 
 export { expect };
@@ -7,8 +7,10 @@ export const test = base.extend<{ signed_in: boolean }>({
 	/** browse as the test user */
 	signed_in: [false, { option: true }],
 
-	context: async ({ context, signed_in, baseURL }, use) => {
+	context: async ({ context, signed_in, baseURL }, use, info) => {
 		if (signed_in) {
+			info.skip(!!process.env.BASE_URL, 'the test user only exists in the local database');
+
 			await context.addCookies([{ name: 'sid', value: session_id, url: baseURL }]);
 		}
 
@@ -41,3 +43,6 @@ export async function goto(page: Page, path: string) {
 export const main = (page: Page) => page.locator('#main');
 
 export const primary_nav = (page: Page) => page.getByRole('navigation', { name: 'Primary' });
+
+/** matches the request that starts signing in, which a deployment then redirects to GitHub */
+export const is_login = (request: Request) => new URL(request.url()).pathname === '/auth/login';

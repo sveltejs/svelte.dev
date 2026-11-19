@@ -1,4 +1,4 @@
-import { expect, goto, test } from './fixtures.ts';
+import { is_login, expect, goto, test } from './fixtures.ts';
 import type { Page } from '@playwright/test';
 
 const editor = (page: Page) => page.locator('.repl-outer .cm-content').first();
@@ -223,9 +223,11 @@ test.describe('playground', () => {
 
 		await page.getByText('log in', { exact: true }).hover();
 		const popup = page.waitForEvent('popup');
+		const login = page.context().waitForEvent('request', is_login);
 		await page.getByRole('button', { name: 'Log in with GitHub' }).click();
 
-		expect(new URL((await popup).url()).pathname).toBe('/auth/login');
+		await popup;
+		await login;
 	});
 
 	test('shows a 404 for apps that do not exist', async ({ page }) => {

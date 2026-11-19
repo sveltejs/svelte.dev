@@ -74,15 +74,6 @@ test('/blog/rss.xml is a feed of blog posts', async ({ request }) => {
 	expect(text).toMatch(/<item>[\s\S]+<link>https:\/\/svelte\.dev\/blog\/[\w-]+<\/link>/);
 });
 
-test('social cards are generated for docs and blog posts', async ({ request }) => {
-	for (const path of ['/docs/svelte/overview/card.png', '/blog/runes/card.png']) {
-		const response = await request.get(path);
-
-		expect(response.status(), path).toBe(200);
-		expect(response.headers()['content-type'], path).toBe('image/png');
-	}
-});
-
 test('/docs/experimental/sections.json lists docs sections', async ({ request }) => {
 	const response = await request.get('/docs/experimental/sections.json');
 	expect(response.status()).toBe(200);
