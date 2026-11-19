@@ -39,7 +39,9 @@ export async function GET({ url }) {
 		`<script>localStorage.setItem('${storage_key}', Date.now()); window.close()</script>`,
 		{
 			headers: {
-				'Set-Cookie': cookie.serialize('sid', sessionid, {
+				'Set-Cookie': cookie.stringifySetCookie({
+					name: 'sid',
+					value: sessionid,
 					expires: new Date(expires),
 					path: '/',
 					httpOnly: true,
