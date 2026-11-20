@@ -112,8 +112,7 @@ const resolved = resolve('/blog/[slug]', {
 ```dts
 function resolve<
 	T extends
-		| RouteIdWithSearchOrHash
-		| PathnameWithSearchOrHash
+		RouteIdWithSearchOrHash | PathnameWithSearchOrHash
 >(...args: ResolveArgs<T>): ResolvedPathname;
 ```
 
