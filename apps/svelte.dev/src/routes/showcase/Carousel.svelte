@@ -620,9 +620,10 @@
 				background: color-mix(in srgb, var(--sk-fg-accent) 30%, var(--sk-bg-1));
 			}
 
-			/* never quite empty, so it shows which it is from the moment it comes to the front */
+			/* never quite empty, so it shows which it is from the moment it comes to the front, and
+			   filling the rest from there, so it moves as soon as there is anything to show */
 			&::after {
-				scale: max(var(--progress), 0.12) 1;
+				scale: calc(0.12 + 0.88 * var(--progress)) 1;
 			}
 		}
 
