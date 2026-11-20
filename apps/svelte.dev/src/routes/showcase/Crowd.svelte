@@ -62,6 +62,12 @@ from row to row, the row coming round to whatever they reach
 	/** how much of a row at either end fades out, where what has focus is not left */
 	const FADE = 0.15;
 
+	/** the row that what says how the keyboard gets about is over, or was last */
+	let hinted = $state(0);
+
+	/** a key held down, which the rows keep up with rather than ease after */
+	let held = false;
+
 	/** what brings each row round to one of its links */
 	const reveals = new WeakMap<HTMLElement, (link: HTMLElement) => void>();
 
@@ -74,7 +80,7 @@ from row to row, the row coming round to whatever they reach
 		if (at !== -1) stops[index] = at;
 		if (!target.matches(':focus-visible')) return;
 
-		focused = index;
+		focused = hinted = index;
 		reveals.get(row)?.(target);
 	}
 
@@ -129,7 +135,10 @@ from row to row, the row coming round to whatever they reach
 		event.preventDefault();
 
 		// the row comes round to it itself, and the page moves only as far as shows the row
+		held = event.repeat;
 		to.focus({ preventScroll: true });
+		held = false;
+
 		to.closest('.row')?.scrollIntoView({ block: 'nearest', inline: 'nearest' });
 	}
 
@@ -194,8 +203,9 @@ from row to row, the row coming round to whatever they reach
 				while (to > 0) to -= length;
 				while (to <= -2 * length) to += length;
 
-				laps = to > -length ? 0 : -1;
-				track.style.setProperty('--laps', String(laps));
+				// only as it changes, since writing it has the whole row's style worked out again
+				const set = to > -length ? 0 : -1;
+				if (set !== laps) track.style.setProperty('--laps', String((laps = set)));
 
 				// short of either end of the lap, where one end is not to be told from the other
 				const part = (laps * length - to) / length;
@@ -207,14 +217,14 @@ from row to row, the row coming round to whatever they reach
 			let settling = 0;
 
 			/**
-			 * takes it to where it should be, quickly and easing to a stop, a little longer the
-			 * further it has to go, so the eye can follow where the row went. from wherever it is by
-			 * now, if it was already on its way somewhere else. at once where motion is reduced
+			 * takes it from where it is to where it should be, quickly and easing to a stop, a little
+			 * longer the further it has to go, so the eye can follow where the row went. at once where
+			 * motion is reduced
 			 */
-			function glide(to: number) {
+			function glide(from: number, to: number) {
 				cancelAnimationFrame(gliding);
+				gliding = 0;
 
-				const from = where();
 				const distance = Math.abs(to - from);
 				if (distance < 1) return;
 
@@ -223,13 +233,13 @@ from row to row, the row coming round to whatever they reach
 					return;
 				}
 
-				const length = Math.min(350, 180 + distance / 8);
+				const length = Math.min(240, 140 + distance / 10);
 				const start = performance.now();
 
 				const step = (now: number) => {
 					const t = Math.min(1, (now - start) / length);
 					put(from + (to - from) * (1 - (1 - t) ** 4));
-					if (t < 1) gliding = requestAnimationFrame(step);
+					gliding = t < 1 ? requestAnimationFrame(step) : 0;
 				};
 
 				gliding = requestAnimationFrame(step);
@@ -242,8 +252,13 @@ from row to row, the row coming round to whatever they reach
 			 * shows no differently
 			 */
 			reveals.set(row, (link) => {
+				// straight there for a key held down, or one pressed again before the row has got
+				// to where the last sent it, which easing would only leave it trailing behind
+				const hurried = held || gliding !== 0;
+
 				cancelAnimationFrame(settling);
 				cancelAnimationFrame(gliding);
+				gliding = 0;
 				animation.playbackRate = 1;
 				animation.pause();
 
@@ -268,8 +283,11 @@ from row to row, the row coming round to whatever they reach
 
 				if (best.by === Infinity) return;
 
-				put(best.to);
-				glide(best.to + best.by);
+				if (hurried) put(best.to + best.by);
+				else {
+					put(best.to);
+					glide(best.to, best.to + best.by);
+				}
 			});
 
 			/** how long it takes to drift a pixel to the left, less than none where it drifts right */
@@ -331,6 +349,7 @@ from row to row, the row coming round to whatever they reach
 					caught = undefined;
 					cancelAnimationFrame(settling);
 					cancelAnimationFrame(gliding);
+					gliding = 0;
 					animation.pause();
 					drag = {
 						id: event.pointerId,
@@ -401,6 +420,7 @@ from row to row, the row coming round to whatever they reach
 				if (Math.abs(x) <= Math.abs(y)) return;
 				event.preventDefault();
 				cancelAnimationFrame(gliding);
+				gliding = 0;
 
 				// in lines rather than pixels in some browsers with a mouse wheel
 				const pixels = event.deltaMode === 1 ? x * 16 : x;
@@ -465,7 +485,7 @@ from row to row, the row coming round to whatever they reach
 	{/each}
 
 	<!-- how to get about the rows, over the top edge of whichever one the keyboard is in -->
-	<p id="{uid}-keys" class="keys" class:shown={focused !== -1} style:grid-row={focused + 1 || 1}>
+	<p id="{uid}-keys" class="keys" class:shown={focused !== -1} style:grid-row={hinted + 1}>
 		<kbd aria-hidden="true">←</kbd>
 		<kbd aria-hidden="true">↑</kbd>
 		<kbd aria-hidden="true">↓</kbd>
@@ -518,6 +538,14 @@ from row to row, the row coming round to whatever they reach
 		@media (min-width: 64em) {
 			--across: 6;
 		}
+	}
+
+	/* not handed down to everything in the row, which would otherwise have its style worked out
+	   again as it changes */
+	@property --laps {
+		syntax: '<number>';
+		inherits: false;
+		initial-value: -1;
 	}
 
 	/* scrolled by hand until it can be moved round, with no bar to show for it, like the edges of
@@ -574,8 +602,10 @@ from row to row, the row coming round to whatever they reach
 		opacity: 0;
 		transition: opacity 0.15s ease;
 
+		/* there at once, as the keyboard gets to a row, and faded only as it leaves them */
 		&.shown {
 			opacity: 1;
+			transition: none;
 		}
 
 		kbd {
