@@ -47,11 +47,6 @@ export const render_content = (
 			injected.push('// @noErrors');
 		}
 
-		// the type argument examples use placeholder types and elided code
-		if (filename.includes('svelte-renderer')) {
-			injected.push('// @noErrors');
-		}
-
 		if (filename.includes('typescript')) {
 			injected.push('// @errors: 2304');
 		}
