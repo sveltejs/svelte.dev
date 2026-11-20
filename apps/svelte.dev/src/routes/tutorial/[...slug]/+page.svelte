@@ -7,7 +7,7 @@
 	import Filetree from './filetree/Filetree.svelte';
 	import ImageViewer from './ImageViewer.svelte';
 	import Output from './Output.svelte';
-	import { ScreenToggle } from '@sveltejs/site-kit/components';
+	import { Icon, ScreenToggle } from '@sveltejs/site-kit/components';
 	import Sidebar from './Sidebar.svelte';
 	import { solution } from './state.svelte';
 	import { needs_webcontainers, text_files } from './shared';
@@ -16,6 +16,7 @@
 	import Controls from './Controls.svelte';
 	import Editor from '@sveltejs/repl/editor';
 	import type { Snapshot, PageProps } from './$types.js';
+	import { tick } from 'svelte';
 	import { MediaQuery } from 'svelte/reactivity';
 
 	let { data }: PageProps = $props();
@@ -25,6 +26,8 @@
 	let show_editor = $state(false);
 	let show_filetree = $state(false);
 	let paused = $state(false);
+	let file_button = $state<HTMLButtonElement>();
+	let mobile_filetree = $state<HTMLDivElement>();
 
 	let previous_files: Item[] = [];
 
@@ -205,6 +208,27 @@
 	const mobile_query = new MediaQuery('max-width: 49.9375em', false);
 	let mobile = $derived(mobile_query.current);
 
+	let current_file = $derived(
+		workspace.current.name.replace(data.exercise.scope.prefix, data.exercise.scope.name + '/') ??
+			'Files'
+	);
+
+	async function close_filetree() {
+		const restore_focus =
+			document.activeElement === file_button || mobile_filetree?.contains(document.activeElement);
+		show_filetree = false;
+		if (restore_focus) {
+			await tick();
+			file_button?.focus();
+		}
+	}
+
+	$effect(() => {
+		if (!mobile) {
+			show_filetree = false;
+		}
+	});
+
 	$effect(() => {
 		// TODO get rid of this store/effect
 		solution.set(b);
@@ -218,6 +242,8 @@
 	});
 
 	afterNavigate(async () => {
+		show_filetree = false;
+
 		if (!scroll_was_restored) {
 			sidebar.scrollTop = 0;
 		}
@@ -254,6 +280,21 @@
 </svelte:head>
 
 <svelte:window
+	onkeydown={(e) => {
+		const target = e.target;
+		if (
+			e.key === 'Escape' &&
+			!e.defaultPrevented &&
+			mobile &&
+			show_filetree &&
+			target instanceof HTMLElement &&
+			(target === file_button || mobile_filetree?.contains(target)) &&
+			!target.closest('input, dialog[open]')
+		) {
+			e.preventDefault();
+			close_filetree();
+		}
+	}}
 	onpopstate={(e) => {
 		const q = new URLSearchParams(location.search);
 		const file = q.get('file');
@@ -308,11 +349,20 @@
 							{#snippet a()}
 								<section class="navigator">
 									{#if mobile}
-										<button class="file" onclick={() => (show_filetree = !show_filetree)}>
-											{workspace.current.name.replace(
-												data.exercise.scope.prefix,
-												data.exercise.scope.name + '/'
-											) ?? 'Files'}
+										<button
+											bind:this={file_button}
+											class="file raised"
+											aria-expanded={show_filetree}
+											aria-controls="mobile-filetree"
+											aria-label="Files: {current_file}"
+											onclick={() => (show_filetree = !show_filetree)}
+										>
+											<span class="folder" class:open={show_filetree} aria-hidden="true"></span>
+											<span class="filename">{current_file}</span>
+											<span class="files-cue" aria-hidden="true">
+												<span>Files</span>
+												<Icon name={show_filetree ? 'chevron-up' : 'chevron-down'} size={16} />
+											</span>
 										</button>
 									{:else}
 										<Filetree exercise={data.exercise} {workspace} {constraints} />
@@ -322,22 +372,35 @@
 
 							{#snippet b()}
 								<section class="editor-container">
-									<Editor
-										{workspace}
-										autocomplete_filter={(file) => {
-											return (
-												file.name.startsWith('/src') &&
-												file.name.startsWith(data.exercise.scope.prefix) &&
-												file.name !== '/src/__client.js' &&
-												file.name !== '/src/app.html'
-											);
-										}}
-									/>
-									<ImageViewer selected={workspace.current} />
+									<div class="editor-surface" inert={mobile && show_filetree}>
+										<Editor
+											{workspace}
+											autocomplete_filter={(file) => {
+												return (
+													file.name.startsWith('/src') &&
+													file.name.startsWith(data.exercise.scope.prefix) &&
+													file.name !== '/src/__client.js' &&
+													file.name !== '/src/app.html'
+												);
+											}}
+										/>
+										<ImageViewer selected={workspace.current} />
+									</div>
 
-									{#if mobile && show_filetree}
-										<div class="mobile-filetree">
-											<Filetree mobile exercise={data.exercise} {workspace} {constraints} />
+									{#if mobile}
+										<div
+											bind:this={mobile_filetree}
+											id="mobile-filetree"
+											class="mobile-filetree"
+											hidden={!show_filetree}
+										>
+											<Filetree
+												mobile
+												exercise={data.exercise}
+												{workspace}
+												{constraints}
+												onselect={close_filetree}
+											/>
 										</div>
 									{/if}
 								</section>
@@ -365,6 +428,7 @@
 			right="show editor"
 			onchange={(checked) => {
 				show_editor = checked;
+				if (!show_editor) show_filetree = false;
 
 				const url = new URL(location.origin + location.pathname);
 
@@ -436,10 +500,52 @@
 		background-color: var(--sk-bg-3);
 	}
 
+	.editor-surface {
+		width: 100%;
+		height: 100%;
+	}
+
+	.mobile .navigator {
+		padding: 0.4rem;
+	}
+
 	.mobile .navigator .file {
 		flex: 1;
-		padding: 1rem;
-		text-align: left;
+		display: flex;
+		align-items: center;
+		gap: 0.6rem;
+		min-width: 0;
+		padding: 0 0.8rem;
+		background: var(--sk-bg-1);
+		color: var(--sk-fg-1);
+		cursor: pointer;
+	}
+
+	.mobile .navigator .file[aria-expanded='true'] {
+		background: var(--sk-bg-4);
+	}
+
+	.mobile .navigator .file:focus-visible {
+		outline-offset: -2px;
+	}
+
+	.mobile .navigator .folder {
+		flex-shrink: 0;
+		width: 1.5rem;
+		height: 1.5rem;
+		background: var(--sk-fg-3);
+		mask: url(icons/folder) 50% 50% no-repeat;
+		mask-size: contain;
+	}
+
+	.mobile .navigator .folder.open {
+		background: var(--sk-fg-accent);
+		mask-image: url(icons/folder-open);
+	}
+
+	.mobile .navigator .filename {
+		flex: 1;
+		min-width: 0;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -447,7 +553,14 @@
 		/* put ellipsis at start */
 		direction: rtl;
 		text-align: left;
-		cursor: pointer;
+	}
+
+	.mobile .navigator .files-cue {
+		flex-shrink: 0;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.3rem;
+		color: var(--sk-fg-3);
 	}
 
 	.mobile-filetree {
@@ -456,6 +569,10 @@
 		width: 100%;
 		height: 100%;
 		overflow-y: auto;
+	}
+
+	.mobile-filetree[hidden] {
+		display: none;
 	}
 
 	/* on mobile, override the <SplitPane> controls */
