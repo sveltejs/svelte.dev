@@ -1,7 +1,8 @@
 <!--@component
 the many more, smaller and in rows across the whole width of the window, cut off at either side
 like the logos on the home page. each row drifts slowly and without end, every other one the other
-way, unless motion is paused or reduced, when the rows stay where they are and scroll by hand
+way, and can be swiped along or back as it does, unless motion is paused or reduced, when the rows
+stay where they are and scroll by hand
 -->
 <script lang="ts">
 	import { prefersReducedMotion } from 'svelte/motion';
@@ -68,8 +69,9 @@ way, unless motion is paused or reduced, when the rows stay where they are and s
 				{ duration, iterations: Infinity, direction: reverse ? 'reverse' : 'normal' }
 			);
 
+			// many laps in, so a hand can take it back as far as it likes without it running out
 			const from = (row.scrollLeft % lap()) / lap();
-			animation.currentTime = (reverse ? 1 - from : from) * duration;
+			animation.currentTime = (1000 + (reverse ? 1 - from : from)) * duration;
 
 			row.classList.add('drifting');
 			row.scrollLeft = 0;
@@ -79,9 +81,127 @@ way, unless motion is paused or reduced, when the rows stay where they are and s
 				else animation.pause();
 			});
 
+			/** how long it takes to drift a pixel to the left, less than none where it drifts right */
+			const pace = () => ((reverse ? -1 : 1) * duration) / lap();
+
+			let drag:
+				| { id: number; x: number; from: number; samples: Array<{ t: number; x: number }> }
+				| undefined;
+			let start: { id: number; x: number; y: number } | undefined;
+			let dragged = false;
+			let settling = 0;
+
+			/** eases from however fast it was let go, either way, back to its own drift */
+			function settle(rate: number) {
+				let then = performance.now();
+
+				const step = (now: number) => {
+					rate = 1 + (rate - 1) * Math.exp((then - now) / 500);
+					then = now;
+					if (Math.abs(rate - 1) < 0.05) rate = 1;
+
+					animation.playbackRate = rate;
+					if (rate !== 1) settling = requestAnimationFrame(step);
+				};
+
+				animation.playbackRate = rate;
+				if (seen && pointed !== index) animation.play();
+				settling = requestAnimationFrame(step);
+			}
+
+			// by a finger or a pen. a mouse stops the row by pointing at it, to click what is in it
+			function down(event: PointerEvent) {
+				if (event.pointerType === 'mouse' || !event.isPrimary) return;
+				start = { id: event.pointerId, x: event.clientX, y: event.clientY };
+				dragged = false;
+			}
+
+			function move(event: PointerEvent) {
+				if (start && event.pointerId === start.id) {
+					const dx = event.clientX - start.x;
+					const dy = event.clientY - start.y;
+
+					// up and down is the page scrolling, not the row
+					if (Math.abs(dx) < 6 || Math.abs(dx) < Math.abs(dy)) {
+						if (Math.abs(dy) > 10) start = undefined;
+						return;
+					}
+
+					// held from where it has drifted to by now, so it does not jump
+					start = undefined;
+					cancelAnimationFrame(settling);
+					animation.pause();
+					drag = {
+						id: event.pointerId,
+						x: event.clientX,
+						from: Number(animation.currentTime),
+						samples: []
+					};
+					try {
+						row.setPointerCapture(event.pointerId);
+					} catch {
+						// the pointer has already gone
+					}
+				}
+
+				if (!drag || event.pointerId !== drag.id) return;
+
+				// under the finger, wherever it goes
+				animation.currentTime = drag.from - (event.clientX - drag.x) * pace();
+
+				drag.samples.push({ t: event.timeStamp, x: event.clientX });
+				if (drag.samples.length > 5) drag.samples.shift();
+			}
+
+			function up(event: PointerEvent) {
+				if (start?.id === event.pointerId) start = undefined;
+				if (!drag || event.pointerId !== drag.id) return;
+
+				const first = drag.samples[0];
+				const last = drag.samples[drag.samples.length - 1];
+				drag = undefined;
+				dragged = true;
+
+				// thrown on by however fast it was going as it was let go, in pixels a millisecond,
+				// or left where it is if the finger had stopped first
+				const fresh = last && event.timeStamp - last.t < 80;
+				const velocity = fresh ? (last.x - first.x) / Math.max(last.t - first.t, 1) : 0;
+
+				settle(-velocity * pace());
+			}
+
+			// the click that follows a drag on letting go, which should not open what it lands on
+			function click(event: MouseEvent) {
+				if (!dragged) return;
+				dragged = false;
+				event.preventDefault();
+				event.stopPropagation();
+			}
+
+			// sideways scrolling on a trackpad moves it with the fingers
+			function wheel(event: WheelEvent) {
+				if (Math.abs(event.deltaX) <= Math.abs(event.deltaY)) return;
+				event.preventDefault();
+
+				// in lines rather than pixels in some browsers with a mouse wheel
+				const pixels = event.deltaMode === 1 ? event.deltaX * 16 : event.deltaX;
+				animation.currentTime = Number(animation.currentTime) + pixels * pace();
+			}
+
+			const listeners = new AbortController();
+			const { signal } = listeners;
+			row.addEventListener('pointerdown', down, { signal });
+			row.addEventListener('pointermove', move, { signal });
+			row.addEventListener('pointerup', up, { signal });
+			row.addEventListener('pointercancel', up, { signal });
+			row.addEventListener('click', click, { signal, capture: true });
+			row.addEventListener('wheel', wheel, { signal, passive: false });
+
 			return () => {
 				const at = ((Number(animation.currentTime) % duration) / duration) * lap();
 
+				listeners.abort();
+				cancelAnimationFrame(settling);
 				animation.cancel();
 				row.classList.remove('drifting');
 				row.scrollLeft = reverse ? lap() - at : at;
@@ -169,8 +289,10 @@ way, unless motion is paused or reduced, when the rows stay where they are and s
 		overscroll-behavior-x: contain;
 		scrollbar-width: none;
 
+		/* moved by hand as it drifts too, so only up and down is left to the page */
 		&:global(.drifting) {
 			overflow-x: clip;
+			touch-action: pan-y pinch-zoom;
 		}
 
 		/* every other one half of one along, so they do not line up in columns */
