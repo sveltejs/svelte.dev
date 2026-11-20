@@ -1,9 +1,9 @@
 <!--@component
 the many more, smaller and in rows across the whole width of the window, cut off at either side
 like the logos on the home page. each row drifts slowly and without end, every other one the other
-way, and can be swiped along or back as it does, unless motion is paused or reduced, when the rows
-stay where they are and scroll by hand. tab stops once at each row, and the arrow keys go along it
-and from row to row
+way, and can be swiped along or back as it does. where motion is paused or reduced the rows stay
+where they are until moved by hand. tab stops once at each row, and the arrow keys go along it and
+from row to row, the row coming round to whatever they reach
 -->
 <script lang="ts">
 	import { prefersReducedMotion } from 'svelte/motion';
@@ -46,7 +46,7 @@ and from row to row
 	/** the row the mouse is over, which waits so what is in it can be clicked */
 	let pointed = $state(-1);
 
-	/** the row the keyboard is in, which stops and scrolls to what has focus */
+	/** the row the keyboard is in, which stops and comes round to what has focus */
 	let focused = $state(-1);
 
 	/** which one in each row tab stops at, the first until the arrow keys have been along it */
@@ -54,7 +54,7 @@ and from row to row
 
 	const uid = $props.id();
 
-	/** the links of a row, without those of its copy */
+	/** the links of a row, without those of its copies */
 	function links(row: HTMLElement) {
 		return [...row.querySelectorAll<HTMLElement>('ul:not([aria-hidden]) a')];
 	}
@@ -62,71 +62,8 @@ and from row to row
 	/** how much of a row at either end fades out, where what has focus is not left */
 	const FADE = 0.15;
 
-	/** the scrolling of each row that is on its way somewhere */
-	const glides = new WeakMap<HTMLElement, number>();
-
-	/**
-	 * scrolls a row to where it should be, quickly and easing to a stop, a little longer the further
-	 * it has to go, so the eye can follow where the row went. from wherever it is by now, if it was
-	 * already on its way somewhere else. at once where motion is reduced
-	 */
-	function glide(row: HTMLElement, to: number) {
-		cancelAnimationFrame(glides.get(row) ?? 0);
-
-		const from = row.scrollLeft;
-		to = Math.max(0, Math.min(to, row.scrollWidth - row.clientWidth));
-
-		const distance = Math.abs(to - from);
-		if (distance < 1) return;
-
-		if (prefersReducedMotion.current) {
-			row.scrollLeft = to;
-			return;
-		}
-
-		const duration = Math.min(350, 180 + distance / 8);
-		const start = performance.now();
-
-		const step = (now: number) => {
-			const t = Math.min(1, (now - start) / duration);
-			row.scrollLeft = from + (to - from) * (1 - (1 - t) ** 4);
-			if (t < 1) glides.set(row, requestAnimationFrame(step));
-		};
-
-		glides.set(row, requestAnimationFrame(step));
-	}
-
-	/**
-	 * the one the keyboard is going to in another row, and where across the window the one it was
-	 * picked by was, which may have been its copy
-	 */
-	let want: { link: HTMLElement; left: number } | undefined;
-
-	/**
-	 * brings what has focus in a row that stands still clear of where the row fades out at either
-	 * end, moving the row no further than that takes, and not at all if it already is
-	 */
-	function reveal(row: HTMLElement) {
-		const link = document.activeElement as HTMLElement | null;
-		if (!link || !row.contains(link)) return;
-
-		// first to where the one it was picked by was, without a move to be seen, since a copy looks
-		// the same as what it is a copy of
-		if (want?.link === link) {
-			cancelAnimationFrame(glides.get(row) ?? 0);
-			row.scrollLeft += link.getBoundingClientRect().left - want.left;
-		}
-
-		want = undefined;
-
-		const bounds = row.getBoundingClientRect();
-		const rect = link.getBoundingClientRect();
-		const left = bounds.left + bounds.width * FADE;
-		const right = bounds.right - bounds.width * FADE;
-
-		if (rect.left < left) glide(row, row.scrollLeft + rect.left - left);
-		else if (rect.right > right) glide(row, row.scrollLeft + rect.right - right);
-	}
+	/** what brings each row round to one of its links */
+	const reveals = new WeakMap<HTMLElement, (link: HTMLElement) => void>();
 
 	/** tab stops where the keyboard last was in the row, however it got there */
 	function enter(event: FocusEvent & { currentTarget: HTMLElement }, index: number) {
@@ -138,9 +75,7 @@ and from row to row
 		if (!target.matches(':focus-visible')) return;
 
 		focused = index;
-
-		// one that drifts does this as it stops
-		if (!row.classList.contains('drifting')) reveal(row);
+		reveals.get(row)?.(target);
 	}
 
 	/**
@@ -162,7 +97,8 @@ and from row to row
 			const next = event.key === 'ArrowUp' ? row.previousElementSibling : row.nextElementSibling;
 			if (!(next instanceof HTMLElement) || !next.classList.contains('row')) return;
 
-			// the nearest across, of all that are in the row, and what it is a copy of if it is one
+			// the nearest across, of all that are in the row, and what it is a copy of if it is one,
+			// which the row then puts where its copy was
 			const rect = all[at].getBoundingClientRect();
 			const middle = rect.left + rect.width / 2;
 			let nearest = Infinity;
@@ -175,7 +111,6 @@ and from row to row
 
 					nearest = away;
 					to = links(next)[i];
-					want = { link: to, left };
 				});
 			}
 		} else {
@@ -193,72 +128,148 @@ and from row to row
 		if (!to) return;
 		event.preventDefault();
 
-		// the row moved by reveal, and the page only as far as shows the row
+		// the row comes round to it itself, and the page moves only as far as shows the row
 		to.focus({ preventScroll: true });
 		to.closest('.row')?.scrollIntoView({ block: 'nearest', inline: 'nearest' });
 	}
 
-	/** the rows that have been put where they start from */
-	const placed = new WeakSet<HTMLElement>();
-
 	/**
-	 * drifts a row for as long as it may, carrying on from wherever it was scrolled to by hand, and
-	 * leaving it scrolled to wherever it had drifted to once it may not
+	 * drifts a row for as long as it may, and lets it be moved along by hand or by the keyboard
+	 * whether it drifts or not. the row is its list three times over, the one in the middle the real
+	 * one, moved round and round by the length of one, so it has no end either way
 	 */
 	function drift(index: number) {
 		return (row: HTMLElement) => {
 			const track = row.firstElementChild as HTMLElement;
-			const [list, copy] = track.children as unknown as HTMLElement[];
+			const [before, list] = track.children as unknown as HTMLElement[];
 			const reverse = index % 2 === 1;
-
-			/**
-			 * how far a row that stands still is scrolled to look as it would drifting: past the room
-			 * left before its first, so the keyboard can bring that clear of where the row fades out,
-			 * and for every other row half of one more, so they do not line up in columns, which is
-			 * by its margin as it drifts
-			 */
-			const shift = () =>
-				row.clientWidth * FADE +
-				(reverse
-					? ((list.firstElementChild as HTMLElement).offsetWidth +
-							parseFloat(getComputedStyle(list).columnGap)) /
-						2
-					: 0);
-
-			if (!moving || focused === index) {
-				row.classList.add('still');
-
-				// as the page arrives, before anything else has scrolled it
-				if (!placed.has(row)) row.scrollLeft = shift();
-				placed.add(row);
-				return;
-			}
-
-			placed.add(row);
-			cancelAnimationFrame(glides.get(row) ?? 0);
-
 			const duration = rows[index].length * PACE * PACES[index % PACES.length];
 
-			/** how far it goes before the copy is where the list was, and it starts again unseen */
-			const lap = () => copy.offsetLeft - list.offsetLeft;
+			/** how far it goes before a copy is where the list was, and it starts again unseen */
+			const lap = () => list.offsetLeft - before.offsetLeft;
 
 			const animation = track.animate(
-				[{ translate: '0' }, { translate: 'calc(-50% - var(--gap) / 2)' }],
+				[{ translate: '0' }, { translate: 'calc((-100% - var(--gap)) / 3)' }],
 				{ duration, iterations: Infinity, direction: reverse ? 'reverse' : 'normal' }
 			);
 
 			// many laps in, so a hand can take it back as far as it likes without it running out
-			const was = row.classList.contains('still') ? row.scrollLeft - shift() : 0;
-			const from = (((was % lap()) + lap()) % lap()) / lap();
-			animation.currentTime = (1000 + (reverse ? 1 - from : from)) * duration;
+			animation.currentTime = 1000 * duration;
+			animation.pause();
 
-			row.classList.remove('still');
+			/**
+			 * how many laps along the whole of it is set, on top of the lap it goes round: one, or
+			 * none. which of the two makes no difference to how it looks, only to where the real list
+			 * is, so between them the real one of any can be put anywhere in the window
+			 */
+			let laps = -1;
+			track.style.setProperty('--laps', '-1');
+
 			row.classList.add('drifting');
 			row.scrollLeft = 0;
 
+			/** free to drift, with nothing holding it where it is */
+			const free = () => moving && seen && pointed !== index && focused !== index;
+
 			$effect(() => {
-				if (seen && pointed !== index) animation.play();
+				if (free()) animation.play();
 				else animation.pause();
+			});
+
+			/**
+			 * where the first of its three lists starts, from where it would with nothing moved. as
+			 * it is on the page, rather than worked out from how far round it is, which is not to be
+			 * told apart at the very start and end of a lap
+			 */
+			const where = () =>
+				before.getBoundingClientRect().left -
+				row.getBoundingClientRect().left -
+				parseFloat(getComputedStyle(track).marginLeft);
+
+			/** puts the first of its lists there, by the lap it is set along and how far round it is */
+			function put(to: number) {
+				const length = lap();
+
+				// only so far either way keeps the window full
+				while (to > 0) to -= length;
+				while (to <= -2 * length) to += length;
+
+				laps = to > -length ? 0 : -1;
+				track.style.setProperty('--laps', String(laps));
+
+				// short of either end of the lap, where one end is not to be told from the other
+				const part = (laps * length - to) / length;
+				const along = Math.max(1e-7, Math.min(reverse ? 1 - part : part, 1 - 1e-7));
+				animation.currentTime = (1000 + along) * duration;
+			}
+
+			let gliding = 0;
+			let settling = 0;
+
+			/**
+			 * takes it to where it should be, quickly and easing to a stop, a little longer the
+			 * further it has to go, so the eye can follow where the row went. from wherever it is by
+			 * now, if it was already on its way somewhere else. at once where motion is reduced
+			 */
+			function glide(to: number) {
+				cancelAnimationFrame(gliding);
+
+				const from = where();
+				const distance = Math.abs(to - from);
+				if (distance < 1) return;
+
+				if (prefersReducedMotion.current) {
+					put(to);
+					return;
+				}
+
+				const length = Math.min(350, 180 + distance / 8);
+				const start = performance.now();
+
+				const step = (now: number) => {
+					const t = Math.min(1, (now - start) / length);
+					put(from + (to - from) * (1 - (1 - t) ** 4));
+					if (t < 1) gliding = requestAnimationFrame(step);
+				};
+
+				gliding = requestAnimationFrame(step);
+			}
+
+			/**
+			 * brings one of its links clear of where the row fades out at either end, moving the row
+			 * no further than that takes, and not at all if it already is. where its copy is nearer
+			 * than it is, the row is first set a lap along so that it is where its copy was, which
+			 * shows no differently
+			 */
+			reveals.set(row, (link) => {
+				cancelAnimationFrame(settling);
+				cancelAnimationFrame(gliding);
+				animation.playbackRate = 1;
+				animation.pause();
+
+				const bounds = row.getBoundingClientRect();
+				const rect = link.getBoundingClientRect();
+				const left = bounds.left + bounds.width * FADE;
+				const right = bounds.right - bounds.width * FADE;
+				const length = lap();
+				const from = where();
+
+				let best = { to: from, by: Infinity };
+
+				for (const n of [0, -1, 1]) {
+					const to = from + n * length;
+					if (to > 0 || to <= -2 * length) continue;
+
+					const x = rect.left + n * length;
+					const by = x < left ? left - x : x + rect.width > right ? right - x - rect.width : 0;
+
+					if (Math.abs(by) < Math.abs(best.by)) best = { to, by };
+				}
+
+				if (best.by === Infinity) return;
+
+				put(best.to);
+				glide(best.to + best.by);
 			});
 
 			/** how long it takes to drift a pixel to the left, less than none where it drifts right */
@@ -269,7 +280,6 @@ and from row to row
 				| undefined;
 			let start: { id: number; x: number; y: number } | undefined;
 			let dragged = false;
-			let settling = 0;
 			/** the pointer that stopped it while it was still flying from a swipe */
 			let caught: number | undefined;
 
@@ -287,7 +297,7 @@ and from row to row
 				};
 
 				animation.playbackRate = rate;
-				if (seen && pointed !== index) animation.play();
+				if (free()) animation.play();
 				settling = requestAnimationFrame(step);
 			}
 
@@ -320,6 +330,7 @@ and from row to row
 					start = undefined;
 					caught = undefined;
 					cancelAnimationFrame(settling);
+					cancelAnimationFrame(gliding);
 					animation.pause();
 					drag = {
 						id: event.pointerId,
@@ -362,6 +373,9 @@ and from row to row
 				drag = undefined;
 				dragged = true;
 
+				// left where it was put where nothing moves of itself
+				if (!moving) return;
+
 				// thrown on by however fast it was going as it was let go, in pixels a millisecond,
 				// or left where it is if the finger had stopped first. no faster than can be followed
 				const fresh = last && event.timeStamp - last.t < 80;
@@ -378,13 +392,18 @@ and from row to row
 				event.stopPropagation();
 			}
 
-			// sideways scrolling on a trackpad moves it with the fingers
+			// sideways scrolling on a trackpad moves it with the fingers, as does a mouse wheel with
+			// shift held, which some browsers still report as up and down
 			function wheel(event: WheelEvent) {
-				if (Math.abs(event.deltaX) <= Math.abs(event.deltaY)) return;
+				let { deltaX: x, deltaY: y } = event;
+				if (event.shiftKey && !x) [x, y] = [y, 0];
+
+				if (Math.abs(x) <= Math.abs(y)) return;
 				event.preventDefault();
+				cancelAnimationFrame(gliding);
 
 				// in lines rather than pixels in some browsers with a mouse wheel
-				const pixels = event.deltaMode === 1 ? event.deltaX * 16 : event.deltaX;
+				const pixels = event.deltaMode === 1 ? x * 16 : x;
 				animation.currentTime = Number(animation.currentTime) + pixels * pace();
 			}
 
@@ -398,17 +417,13 @@ and from row to row
 			row.addEventListener('wheel', wheel, { signal, passive: false });
 
 			return () => {
-				const at = ((Number(animation.currentTime) % duration) / duration) * lap();
-
 				listeners.abort();
+				reveals.delete(row);
 				cancelAnimationFrame(settling);
+				cancelAnimationFrame(gliding);
 				animation.cancel();
+				track.style.removeProperty('--laps');
 				row.classList.remove('drifting');
-				row.classList.add('still');
-				row.scrollLeft = (reverse ? lap() - at : at) + shift();
-
-				// and to what the keyboard has reached, which may have been out of the window
-				reveal(row);
 			};
 		};
 	}
@@ -434,19 +449,17 @@ and from row to row
 			{@attach drift(index)}
 		>
 			<div class="track">
+				<!-- the same before and after, so the row has no end either way. for the eye and the
+				     pointer only -->
+				{@render copy(row)}
+
 				<ul>
 					{#each row as site, i (site.id)}
 						<li id={site.id}>{@render tile(site, false, i !== (stops[index] ?? 0))}</li>
 					{/each}
 				</ul>
 
-				<!-- the same again, following on, so the row has no end as it drifts. for the eye
-				     and the pointer only -->
-				<ul aria-hidden="true">
-					{#each row as site (site.id)}
-						<li>{@render tile(site, true)}</li>
-					{/each}
-				</ul>
+				{@render copy(row)}
 			</div>
 		</div>
 	{/each}
@@ -461,6 +474,14 @@ and from row to row
 		for more sites
 	</p>
 </div>
+
+{#snippet copy(row: Site[])}
+	<ul aria-hidden="true">
+		{#each row as site (site.id)}
+			<li>{@render tile(site, true)}</li>
+		{/each}
+	</ul>
+{/snippet}
 
 {#snippet tile(site: Site, copy = false, passed = false)}
 	<Tile
@@ -499,8 +520,8 @@ and from row to row
 		}
 	}
 
-	/* scrolled by hand where it does not drift, with no bar to show for it, like the edges of the
-	   window it runs off */
+	/* scrolled by hand until it can be moved round, with no bar to show for it, like the edges of
+	   the window it runs off */
 	.row {
 		grid-column: 1;
 		overflow-x: auto;
@@ -510,22 +531,21 @@ and from row to row
 		overscroll-behavior-x: contain;
 		scrollbar-width: none;
 
-		/* moved by hand as it drifts too, so only up and down is left to the page */
+		/* moved round by hand or of itself rather than scrolled, so only up and down is left to the
+		   page */
 		&:global(.drifting) {
 			overflow-x: clip;
 			touch-action: pan-y pinch-zoom;
 		}
 
+		/* set a lap along, or none, on top of how far round it has gone */
+		&:global(.drifting) .track {
+			transform: translateX(calc(var(--laps, -1) * (100% + var(--gap)) / 3));
+		}
+
 		/* every other one half of one along, so they do not line up in columns */
 		&:nth-child(even) .track {
 			margin-left: calc((var(--width) + var(--gap)) / -2);
-		}
-
-		/* scrolled that far instead where it stands still, past room before its first as wide as
-		   the row fades out over, which the keyboard can then bring clear of it */
-		&:global(.still) .track {
-			margin-left: 0;
-			padding-left: 15%;
 		}
 	}
 
