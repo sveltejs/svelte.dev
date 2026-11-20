@@ -1,13 +1,25 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { TWINKLEPLOP_LANGUAGE_MAP, strip_origin } from './utils.ts';
+import {
+	TWINKLEPLOP_LANGUAGE_MAP,
+	escape_html,
+	is_in_code_block,
+	slugify,
+	strip_origin
+} from './utils.ts';
 import type { Declaration, TypeElement, Modules } from './index.ts';
 
 /**
  * Replace module/export placeholders during `sync-docs`
  */
-export async function preprocess(file: string, modules: Modules) {
+export async function preprocess(file: string, modules: Modules, used_ids?: Set<string>) {
 	let content = fs.readFileSync(file, 'utf-8');
+	const page_ids = used_ids ?? collect_heading_ids(content);
+	if (used_ids) {
+		for (const id of collect_heading_ids(content)) {
+			page_ids.add(id);
+		}
+	}
 
 	const REGEXES = {
 		/** Render a specific type from a module with more details. Example: `> EXPANDED_TYPES: svelte#compile` */
@@ -33,20 +45,25 @@ export async function preprocess(file: string, modules: Modules) {
 
 		if (!type) throw new Error(`Could not find type ${name}#${id}`);
 
-		return stringify_expanded_type(type);
+		return stringify_expanded_type(type, page_ids);
 	});
 
-	content = await async_replace(content, REGEXES.TYPES, async ([_, name, id, depth = '2']) => {
+	content = await async_replace(content, REGEXES.TYPES, async (match) => {
+		const [_, name, id, depth = '2'] = match;
 		const module = modules.find((module) => module.name === name);
 		if (!module) throw new Error(`Could not find module ${name}`);
 		if (!module.types) return '';
+
+		const heading_level = Number(depth);
+		const parent_scope = get_heading_scope(content.slice(0, match.index), heading_level - 1);
 
 		if (id) {
 			const type = module.types.find((t) => t.name === id);
 
 			if (!type) throw new Error(`Could not find type ${name}#${id}`);
 
-			return render_declaration(type, true);
+			const active_scope = get_heading_scope(content.slice(0, match.index), 6);
+			return render_declaration(type, true, active_scope || slugify(type.name), page_ids);
 		}
 
 		let comment = '';
@@ -54,11 +71,21 @@ export async function preprocess(file: string, modules: Modules) {
 			comment += `${module.comment}\n\n`;
 		}
 
-		const heading = '#'.repeat(Number(depth));
+		const heading = '#'.repeat(heading_level);
+
+		for (const t of module.types) {
+			const scope = join_scope(parent_scope, slugify(t.name));
+			if (scope) page_ids.add(scope);
+		}
 
 		return (
 			comment +
-			module.types.map((t) => `${heading} ${t.name}\n\n${render_declaration(t, true)}`).join('')
+			module.types
+				.map((t) => {
+					const scope = join_scope(parent_scope, slugify(t.name));
+					return `${heading} ${t.name}\n\n${render_declaration(t, true, scope, page_ids)}`;
+				})
+				.join('')
 		);
 	});
 
@@ -79,10 +106,21 @@ export async function preprocess(file: string, modules: Modules) {
 		const module = modules.find((module) => module.name === name);
 		if (!module) throw new Error(`Could not find module ${name}`);
 
-		return stringify_module(module);
+		return stringify_module(module, page_ids);
 	});
 
 	content = await async_replace(content, REGEXES.MODULES, async () => {
+		for (const module of modules) {
+			if (!module.exports) continue;
+			if (module.exports.length === 0 && !module.exempt) continue;
+			const module_slug = slugify(module.name ?? '');
+			if (module_slug) page_ids.add(module_slug);
+			for (const declaration of module.exports) {
+				const scope = join_scope(module_slug, slugify(declaration.name));
+				if (scope) page_ids.add(scope);
+			}
+		}
+
 		return modules
 			.map((module) => {
 				if (!module.exports) return;
@@ -103,9 +141,12 @@ export async function preprocess(file: string, modules: Modules) {
 					import_block = fence(declaration, 'js');
 				}
 
+				const module_slug = slugify(module.name ?? '');
+
 				return `## ${module.name}\n\n${import_block}\n\n${module.comment}\n\n${module.exports
 					.map((declaration) => {
-						const markdown = render_declaration(declaration, true);
+						const scope = join_scope(module_slug, slugify(declaration.name));
+						const markdown = render_declaration(declaration, true, scope, page_ids);
 						return `### ${declaration.name}\n\n${markdown}`;
 					})
 					.join('\n\n')}`;
@@ -115,13 +156,74 @@ export async function preprocess(file: string, modules: Modules) {
 
 	content = await async_replace(content, REGEXES.INCLUDE, ([_, include]) => {
 		const resolved = path.resolve(path.dirname(file), include);
-		return preprocess(resolved, modules);
+		return preprocess(resolved, modules, page_ids);
 	});
 
 	return content;
 }
 
-function render_declaration(declaration: Declaration, full: boolean) {
+function collect_heading_ids(markdown: string) {
+	const ids = new Set<string>();
+	const headings: string[] = [];
+
+	for (const match of markdown.matchAll(/^(#{1,6})\s+(.+)$/gm)) {
+		if (is_in_code_block(markdown, match.index ?? 0)) continue;
+		const depth = match[1].length;
+		headings[depth - 1] = slugify(match[2]);
+		headings.length = depth;
+		const slug = headings.filter(Boolean).join('-');
+		if (slug) ids.add(slug);
+	}
+
+	return ids;
+}
+
+function get_heading_scope(markdown: string, max_depth: number) {
+	if (max_depth < 1) return '';
+	const headings: string[] = [];
+
+	for (const match of markdown.matchAll(/^(#{1,6})\s+(.+)$/gm)) {
+		if (is_in_code_block(markdown, match.index ?? 0)) continue;
+		const depth = match[1].length;
+		headings[depth - 1] = slugify(match[2]);
+		headings.length = depth;
+	}
+
+	return headings.slice(0, max_depth).filter(Boolean).join('-');
+}
+
+function join_scope(parent: string, child: string) {
+	return parent ? (child ? `${parent}-${child}` : parent) : child;
+}
+
+function slugify_property_name(name: string) {
+	const unwrapped = name.replace(/^(['"`])(.*)\1$/, '$2');
+	const slug = slugify(unwrapped)
+		.replace(/[:'.()]+/g, '-')
+		.replace(/-{2,}/g, '-')
+		.replace(/^-|-$/g, '');
+	return slug || 'property';
+}
+
+function create_property_id(scope: string, name: string, used_ids: Set<string>) {
+	const base = join_scope(scope, slugify_property_name(name));
+	let id = base;
+	let suffix = 2;
+
+	while (used_ids.has(id)) {
+		id = `${base}-${suffix++}`;
+	}
+
+	used_ids.add(id);
+	return id;
+}
+
+function render_declaration(
+	declaration: Declaration,
+	full: boolean,
+	scope = slugify(declaration.name),
+	used_ids = new Set<string>()
+) {
 	let content = '';
 
 	if (declaration.deprecated) {
@@ -141,7 +243,7 @@ function render_declaration(declaration: Declaration, full: boolean) {
 		declaration.overloads
 			.map((overload) => {
 				const children = full
-					? overload.children?.map((val) => stringify(val, 'dts')).join('\n\n')
+					? overload.children?.map((val) => stringify(val, 'dts', scope, used_ids)).join('\n\n')
 					: '';
 
 				return `<div class="ts-block">${fence(overload.snippet, 'dts')}${children}</div>\n\n`;
@@ -185,7 +287,7 @@ async function async_replace(
 /**
  * Takes a module and returns a markdown string.
  */
-function stringify_module(module: Modules[0]) {
+function stringify_module(module: Modules[0], used_ids = new Set<string>()) {
 	let content = '';
 
 	if (module.exports && module.exports.length > 0) {
@@ -205,24 +307,39 @@ function stringify_module(module: Modules[0]) {
 	}
 
 	for (const declaration of module.exports || []) {
-		const markdown = render_declaration(declaration, true);
+		used_ids.add(slugify(declaration.name));
+	}
+	for (const t of module.types || []) {
+		used_ids.add(slugify(t.name));
+	}
+
+	for (const declaration of module.exports || []) {
+		const markdown = render_declaration(declaration, true, slugify(declaration.name), used_ids);
 		content += `## ${declaration.name}\n\n${markdown}\n\n`;
 	}
 
 	for (const t of module.types || []) {
-		content += `## ${t.name}\n\n` + render_declaration(t, true);
+		content += `## ${t.name}\n\n` + render_declaration(t, true, slugify(t.name), used_ids);
 	}
 
 	return content;
 }
 
-function stringify_expanded_type(type: Declaration) {
+function stringify_expanded_type(type: Declaration, used_ids = new Set<string>()) {
+	for (const overload of type.overloads) {
+		for (const child of overload.children ?? []) {
+			const scope = slugify(child.name);
+			if (scope) used_ids.add(scope);
+		}
+	}
+
 	return (
 		(type.comment ? `${type.comment}\n\n` : '') +
 		type.overloads
 			.map((overload) =>
 				overload.children
 					?.map((child) => {
+						const scope = slugify(child.name);
 						let section = `## ${child.name}`;
 
 						if (child.bullets) {
@@ -235,7 +352,7 @@ function stringify_expanded_type(type: Declaration) {
 
 						if (child.children) {
 							section += `\n\n<div class="ts-block-property-children">\n\n${child.children
-								.map((v) => stringify(v))
+								.map((v) => stringify(v, 'ts', scope, used_ids))
 								.join('\n')}\n\n</div>`;
 						}
 
@@ -252,11 +369,17 @@ function stringify_expanded_type(type: Declaration) {
  */
 function stringify(
 	member: TypeElement,
-	lang: keyof typeof TWINKLEPLOP_LANGUAGE_MAP = 'ts'
+	lang: keyof typeof TWINKLEPLOP_LANGUAGE_MAP = 'ts',
+	scope = '',
+	used_ids = new Set<string>()
 ): string {
 	if (!member) return '';
 
 	// It's important to always use two newlines after a dom tag or else markdown does not render it properly
+
+	const id = create_property_id(scope, member.name, used_ids);
+	const escaped_id = escape_html(id);
+	const escaped_label = escape_html(member.name);
 
 	const bullet_block =
 		(member.bullets?.length ?? 0) > 0
@@ -275,12 +398,14 @@ function stringify(
 	const child_block =
 		(member.children?.length ?? 0) > 0
 			? `\n\n<div class="ts-block-property-children">${member.children
-					?.map((val) => stringify(val, lang))
+					?.map((val) => stringify(val, lang, id, used_ids))
 					.join('\n')}</div>`
 			: '';
 
 	return (
-		`<div class="ts-block-property">${fence(member.snippet, lang)}` +
+		`<div class="ts-block-property" id="${escaped_id}">` +
+		`<a href="#${escaped_id}" class="permalink" aria-label="Permalink to ${escaped_label}"></a>` +
+		`${fence(member.snippet, lang)}` +
 		`<div class="ts-block-property-details">` +
 		bullet_block +
 		comment +

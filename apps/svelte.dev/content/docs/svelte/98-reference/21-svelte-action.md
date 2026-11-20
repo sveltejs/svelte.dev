@@ -34,7 +34,7 @@ interface Action<
 > {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Action-call"><a href="#Action-call" class="permalink" aria-label="Permalink to call"></a>
 
 ```dts
 <Node extends Element>(
@@ -86,7 +86,7 @@ interface ActionReturn<
 > {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ActionReturn-update"><a href="#ActionReturn-update" class="permalink" aria-label="Permalink to update"></a>
 
 ```dts
 update?: (parameter: Parameter) => void;
@@ -95,7 +95,7 @@ update?: (parameter: Parameter) => void;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ActionReturn-destroy"><a href="#ActionReturn-destroy" class="permalink" aria-label="Permalink to destroy"></a>
 
 ```dts
 destroy?: () => void;

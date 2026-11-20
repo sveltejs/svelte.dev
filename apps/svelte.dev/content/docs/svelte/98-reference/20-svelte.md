@@ -51,7 +51,7 @@ class SvelteComponent<
 > {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="SvelteComponent-element"><a href="#SvelteComponent-element" class="permalink" aria-label="Permalink to element"></a>
 
 ```dts
 static element?: typeof HTMLElement;
@@ -64,7 +64,7 @@ The custom element version of the component. Only present if compiled with the `
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="SvelteComponent-prop-string"><a href="#SvelteComponent-prop-string" class="permalink" aria-label="Permalink to prop: string"></a>
 
 ```dts
 [prop: string]: any;
@@ -73,7 +73,7 @@ The custom element version of the component. Only present if compiled with the `
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="SvelteComponent-constructor"><a href="#SvelteComponent-constructor" class="permalink" aria-label="Permalink to constructor"></a>
 
 ```dts
 constructor(options: ComponentConstructorOptions<Properties<Props, Slots>>);
@@ -92,7 +92,7 @@ is a stop-gap solution. Migrate towards using `mount` instead. See
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="SvelteComponent-$destroy"><a href="#SvelteComponent-$destroy" class="permalink" aria-label="Permalink to $destroy"></a>
 
 ```dts
 $destroy(): void;
@@ -111,7 +111,7 @@ for more info.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="SvelteComponent-$on"><a href="#SvelteComponent-$on" class="permalink" aria-label="Permalink to $on"></a>
 
 ```dts
 $on<K extends Extract<keyof Events, string>>(
@@ -133,7 +133,7 @@ for more info.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="SvelteComponent-$set"><a href="#SvelteComponent-$set" class="permalink" aria-label="Permalink to $set"></a>
 
 ```dts
 $set(props: Partial<Props>): void;
@@ -707,7 +707,7 @@ interface Component<
 > {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Component-call"><a href="#Component-call" class="permalink" aria-label="Permalink to call"></a>
 
 ```dts
 (
@@ -742,7 +742,7 @@ interface Component<
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Component-element"><a href="#Component-element" class="permalink" aria-label="Permalink to element"></a>
 
 ```dts
 element?: typeof HTMLElement;
@@ -774,7 +774,7 @@ interface ComponentConstructorOptions<
 > {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ComponentConstructorOptions-target"><a href="#ComponentConstructorOptions-target" class="permalink" aria-label="Permalink to target"></a>
 
 ```dts
 target: Element | Document | ShadowRoot;
@@ -783,7 +783,7 @@ target: Element | Document | ShadowRoot;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ComponentConstructorOptions-anchor"><a href="#ComponentConstructorOptions-anchor" class="permalink" aria-label="Permalink to anchor"></a>
 
 ```dts
 anchor?: Element;
@@ -792,7 +792,7 @@ anchor?: Element;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ComponentConstructorOptions-props"><a href="#ComponentConstructorOptions-props" class="permalink" aria-label="Permalink to props"></a>
 
 ```dts
 props?: Props;
@@ -801,7 +801,7 @@ props?: Props;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ComponentConstructorOptions-context"><a href="#ComponentConstructorOptions-context" class="permalink" aria-label="Permalink to context"></a>
 
 ```dts
 context?: Map<any, any>;
@@ -810,7 +810,7 @@ context?: Map<any, any>;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ComponentConstructorOptions-hydrate"><a href="#ComponentConstructorOptions-hydrate" class="permalink" aria-label="Permalink to hydrate"></a>
 
 ```dts
 hydrate?: boolean;
@@ -819,7 +819,7 @@ hydrate?: boolean;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ComponentConstructorOptions-intro"><a href="#ComponentConstructorOptions-intro" class="permalink" aria-label="Permalink to intro"></a>
 
 ```dts
 intro?: boolean;
@@ -828,7 +828,7 @@ intro?: boolean;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ComponentConstructorOptions-recover"><a href="#ComponentConstructorOptions-recover" class="permalink" aria-label="Permalink to recover"></a>
 
 ```dts
 recover?: boolean;
@@ -837,7 +837,7 @@ recover?: boolean;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ComponentConstructorOptions-sync"><a href="#ComponentConstructorOptions-sync" class="permalink" aria-label="Permalink to sync"></a>
 
 ```dts
 sync?: boolean;
@@ -846,7 +846,7 @@ sync?: boolean;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ComponentConstructorOptions-idPrefix"><a href="#ComponentConstructorOptions-idPrefix" class="permalink" aria-label="Permalink to idPrefix"></a>
 
 ```dts
 idPrefix?: string;
@@ -855,7 +855,7 @@ idPrefix?: string;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ComponentConstructorOptions-$$inline"><a href="#ComponentConstructorOptions-$$inline" class="permalink" aria-label="Permalink to $$inline"></a>
 
 ```dts
 $$inline?: boolean;
@@ -864,7 +864,7 @@ $$inline?: boolean;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ComponentConstructorOptions-transformError"><a href="#ComponentConstructorOptions-transformError" class="permalink" aria-label="Permalink to transformError"></a>
 
 ```dts
 transformError?: (error: unknown) => unknown;
@@ -987,7 +987,7 @@ interface EventDispatcher<
 > {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="EventDispatcher-call"><a href="#EventDispatcher-call" class="permalink" aria-label="Permalink to call"></a>
 
 ```dts
 <Type extends keyof EventMap>(
@@ -1019,7 +1019,7 @@ in anticipation of the user navigating
 interface Fork {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Fork-commit"><a href="#Fork-commit" class="permalink" aria-label="Permalink to commit"></a>
 
 ```dts
 commit(): Promise<void>;
@@ -1032,7 +1032,7 @@ Commit the fork. The promise will resolve once the state change has been applied
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Fork-discard"><a href="#Fork-discard" class="permalink" aria-label="Permalink to discard"></a>
 
 ```dts
 discard(): void;
@@ -1117,7 +1117,7 @@ See the [snippet documentation](/docs/svelte/snippet) for more info.
 interface Snippet<Parameters extends unknown[] = []> {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Snippet-call"><a href="#Snippet-call" class="permalink" aria-label="Permalink to call"></a>
 
 ```dts
 (

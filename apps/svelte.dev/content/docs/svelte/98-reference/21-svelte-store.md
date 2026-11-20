@@ -172,7 +172,7 @@ Readable interface for subscribing.
 interface Readable<T> {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Readable-subscribe"><a href="#Readable-subscribe" class="permalink" aria-label="Permalink to subscribe"></a>
 
 ```dts
 subscribe(this: void, run: Subscriber<T>, invalidate?: () => void): Unsubscriber;
@@ -254,7 +254,7 @@ Writable interface for both updating and subscribing.
 interface Writable<T> extends Readable<T> {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Writable-set"><a href="#Writable-set" class="permalink" aria-label="Permalink to set"></a>
 
 ```dts
 set(this: void, value: T): void;
@@ -273,7 +273,7 @@ Set value and inform subscribers.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Writable-update"><a href="#Writable-update" class="permalink" aria-label="Permalink to update"></a>
 
 ```dts
 update(this: void, updater: Updater<T>): void;

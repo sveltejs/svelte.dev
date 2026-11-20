@@ -74,7 +74,7 @@ a `variables` object from `src/env.ts`, using [`defineEnvVars`](/docs/kit/@svelt
 interface EnvVarConfig<T> {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="EnvVarConfig-public"><a href="#EnvVarConfig-public" class="permalink" aria-label="Permalink to public"></a>
 
 ```dts
 public?: boolean;
@@ -95,7 +95,7 @@ Whether the environment variable can be accessed by client-side code.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="EnvVarConfig-static"><a href="#EnvVarConfig-static" class="permalink" aria-label="Permalink to static"></a>
 
 ```dts
 static?: boolean;
@@ -116,7 +116,7 @@ Whether the value is determined at build time or when the app runs.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="EnvVarConfig-schema"><a href="#EnvVarConfig-schema" class="permalink" aria-label="Permalink to schema"></a>
 
 ```dts
 schema?: StandardSchemaV1<string | undefined, T> | ((value: string | undefined) => T | undefined);
@@ -135,7 +135,7 @@ If omitted, the value must be set, but may be an empty string.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="EnvVarConfig-description"><a href="#EnvVarConfig-description" class="permalink" aria-label="Permalink to description"></a>
 
 ```dts
 description?: string;

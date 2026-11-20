@@ -49,7 +49,7 @@ If you can use the media query in CSS to achieve the same effect, do that.
 class MediaQuery extends ReactiveValue<boolean> {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="MediaQuery-constructor"><a href="#MediaQuery-constructor" class="permalink" aria-label="Permalink to constructor"></a>
 
 ```dts
 constructor(query: string, fallback?: boolean | undefined);
@@ -108,7 +108,7 @@ will cause it to be re-evaluated when the value of the date changes.
 class SvelteDate extends Date {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="SvelteDate-constructor"><a href="#SvelteDate-constructor" class="permalink" aria-label="Permalink to constructor"></a>
 
 ```dts
 constructor(...params: any[]);
@@ -168,7 +168,7 @@ Note that values in a reactive map are _not_ made [deeply reactive](/docs/svelte
 class SvelteMap<K, V> extends Map<K, V> {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="SvelteMap-constructor"><a href="#SvelteMap-constructor" class="permalink" aria-label="Permalink to constructor"></a>
 
 ```dts
 constructor(value?: Iterable<readonly [K, V]> | null | undefined);
@@ -177,7 +177,7 @@ constructor(value?: Iterable<readonly [K, V]> | null | undefined);
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="SvelteMap-getOrInsert"><a href="#SvelteMap-getOrInsert" class="permalink" aria-label="Permalink to getOrInsert"></a>
 
 ```dts
 getOrInsert(key: K, value: V): V;
@@ -186,7 +186,7 @@ getOrInsert(key: K, value: V): V;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="SvelteMap-getOrInsertComputed"><a href="#SvelteMap-getOrInsertComputed" class="permalink" aria-label="Permalink to getOrInsertComputed"></a>
 
 ```dts
 getOrInsertComputed(key: K, callbackFn: (key: K) => V): V;
@@ -195,7 +195,7 @@ getOrInsertComputed(key: K, callbackFn: (key: K) => V): V;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="SvelteMap-set"><a href="#SvelteMap-set" class="permalink" aria-label="Permalink to set"></a>
 
 ```dts
 set(key: K, value: V): this;
@@ -245,7 +245,7 @@ Note that values in a reactive set are _not_ made [deeply reactive](/docs/svelte
 class SvelteSet<T> extends Set<T> {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="SvelteSet-constructor"><a href="#SvelteSet-constructor" class="permalink" aria-label="Permalink to constructor"></a>
 
 ```dts
 constructor(value?: Iterable<T> | null | undefined);
@@ -254,7 +254,7 @@ constructor(value?: Iterable<T> | null | undefined);
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="SvelteSet-add"><a href="#SvelteSet-add" class="permalink" aria-label="Permalink to add"></a>
 
 ```dts
 add(value: T): this;
@@ -299,7 +299,7 @@ The `searchParams` property is an instance of [SvelteURLSearchParams](/docs/svel
 class SvelteURL extends URL {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="SvelteURL-searchParams"><a href="#SvelteURL-searchParams" class="permalink" aria-label="Permalink to searchParams"></a>
 
 ```dts
 get searchParams(): SvelteURLSearchParams;
@@ -343,7 +343,7 @@ will cause it to be re-evaluated as necessary when the params are updated.
 class SvelteURLSearchParams extends URLSearchParams {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="SvelteURLSearchParams-REPLACE"><a href="#SvelteURLSearchParams-REPLACE" class="permalink" aria-label="Permalink to [REPLACE]"></a>
 
 ```dts
 [REPLACE](params: URLSearchParams): void;

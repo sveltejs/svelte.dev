@@ -109,7 +109,7 @@ a property created with [`createAttachmentKey`](/docs/svelte/svelte-attachments#
 interface Attachment<T extends EventTarget = Element> {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Attachment-call"><a href="#Attachment-call" class="permalink" aria-label="Permalink to call"></a>
 
 ```dts
 (element: T): void | (() => void);

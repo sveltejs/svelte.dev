@@ -534,12 +534,19 @@
 			position: absolute !important;
 			display: block;
 			text-decoration: none;
-			background: var(--sk-fg-1);
-			mask: url(icons/hash) 50% 50% no-repeat;
-			mask-size: 2.4rem 2.4rem;
 			width: 2.6rem;
 			height: 2.2rem;
 			top: calc(50% - 1rem);
+
+			/* a mask on the link itself would clip the focus ring */
+			&::before {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background: var(--sk-fg-1);
+				mask: url(icons/hash) 50% 50% no-repeat;
+				mask-size: 2.4rem 2.4rem;
+			}
 
 			@media (max-width: 47.9375em) {
 				right: 0;
@@ -552,10 +559,74 @@
 				transition: opacity 0.2s;
 
 				:where(h2, h3):hover &,
-				&:focus {
+				&:focus,
+				&:focus-visible {
 					opacity: 1;
 				}
 			}
+		}
+
+		.ts-block-property {
+			position: relative;
+			margin: 1.8rem 0;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			& > .code-block {
+				margin: 0;
+			}
+
+			&:has(> .ts-block-property-details:has(> *)) > .code-block {
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+
+			& > a.permalink {
+				z-index: 2;
+
+				@media (max-width: 47.9375em) {
+					top: 0.8rem;
+					right: 0.5rem;
+					left: auto;
+					opacity: 1;
+				}
+
+				@media (min-width: 48em) {
+					top: 0.9rem;
+					left: -3.2rem;
+				}
+			}
+
+			@media (min-width: 48em) {
+				&:hover:not(:has(.ts-block-property:hover)) > a.permalink,
+				& > a.permalink:focus,
+				& > a.permalink:focus-visible {
+					opacity: 1;
+				}
+			}
+
+			@media (max-width: 47.9375em) {
+				& > .code-block {
+					padding-right: 3.4rem;
+				}
+
+				&:has(> .code-block .controls) {
+					& > a.permalink {
+						right: 3.6rem;
+					}
+
+					& > .code-block {
+						padding-right: 7rem;
+					}
+				}
+			}
+		}
+
+		.ts-block-property-bullets ul {
+			margin: 0;
+			list-style: none;
 		}
 
 		ol,
