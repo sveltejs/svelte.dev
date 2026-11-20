@@ -19,7 +19,13 @@ The types of the renderer's nodes are inferred from the return types of `createF
 the others. Alternatively, pass them as the type argument:
 
 ```ts
-//
+const renderer = createRenderer<{ fragment: MyFragment; element: MyElement; text: MyText; comment: MyComment }>({
+	// ...
+});
+```
+
+Only the first type parameter is meant to be passed; the others exist so that the node types can be
+inferred from the methods (TypeScript can't infer the record itself from them).
 
 <div class="ts-block">
 
@@ -64,7 +70,8 @@ type NodeType = keyof RendererNodes;
 A custom renderer. `N` describes the types of the renderer's nodes, for example:
 
 ```ts
-//
+const renderer: Renderer<{ fragment: MyFragment; element: MyElement; text: MyText; comment: MyComment }> = ...
+```
 
 <div class="ts-block">
 
