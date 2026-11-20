@@ -90,6 +90,8 @@ stay where they are and scroll by hand
 			let start: { id: number; x: number; y: number } | undefined;
 			let dragged = false;
 			let settling = 0;
+			/** the pointer that stopped it while it was still flying from a swipe */
+			let caught: number | undefined;
 
 			/** eases from however fast it was let go, either way, back to its own drift */
 			function settle(rate: number) {
@@ -114,6 +116,13 @@ stay where they are and scroll by hand
 				if (event.pointerType === 'mouse' || !event.isPrimary) return;
 				start = { id: event.pointerId, x: event.clientX, y: event.clientY };
 				dragged = false;
+
+				// a finger put down on one still flying from a swipe stops it there
+				if (Math.abs(animation.playbackRate) > 3) {
+					caught = event.pointerId;
+					cancelAnimationFrame(settling);
+					animation.pause();
+				}
 			}
 
 			function move(event: PointerEvent) {
@@ -129,6 +138,7 @@ stay where they are and scroll by hand
 
 					// held from where it has drifted to by now, so it does not jump
 					start = undefined;
+					caught = undefined;
 					cancelAnimationFrame(settling);
 					animation.pause();
 					drag = {
@@ -155,6 +165,16 @@ stay where they are and scroll by hand
 
 			function up(event: PointerEvent) {
 				if (start?.id === event.pointerId) start = undefined;
+
+				// stopped and let go without being moved, which drifts on from there, and is not a tap
+				// on whatever happened to be passing
+				if (caught === event.pointerId) {
+					caught = undefined;
+					dragged = true;
+					settle(0);
+					return;
+				}
+
 				if (!drag || event.pointerId !== drag.id) return;
 
 				const first = drag.samples[0];
@@ -163,11 +183,11 @@ stay where they are and scroll by hand
 				dragged = true;
 
 				// thrown on by however fast it was going as it was let go, in pixels a millisecond,
-				// or left where it is if the finger had stopped first
+				// or left where it is if the finger had stopped first. no faster than can be followed
 				const fresh = last && event.timeStamp - last.t < 80;
 				const velocity = fresh ? (last.x - first.x) / Math.max(last.t - first.t, 1) : 0;
 
-				settle(-velocity * pace());
+				settle(-Math.max(-3, Math.min(3, velocity)) * pace());
 			}
 
 			// the click that follows a drag on letting go, which should not open what it lands on
