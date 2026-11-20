@@ -524,6 +524,10 @@ from row to row, the row coming round to whatever they reach
 	   the window it runs off */
 	.row {
 		grid-column: 1;
+		/* room above and below, out into the gaps between the rows, for the ring round the one with
+		   focus, which is otherwise cut off where the row ends */
+		margin-block: -0.7rem;
+		padding-block: 0.7rem;
 		overflow-x: auto;
 		/* each row rather than all of them together, which would cut off what says how the keyboard
 		   gets along a row where it sits over the top of the first */

@@ -101,6 +101,11 @@ site's id, for links to land on
 			}
 		}
 
+		/* the ring a little clear of it, so it can be told from the edge of the screenshot */
+		&:focus-visible {
+			outline-offset: 0.4rem;
+		}
+
 		/* where it is large, the screenshot is as tall as the rows it spans beside the smaller ones
 		   leave it, rather than 16:10, so the mosaic has no holes. about the 6:5 its clip is taken
 		   at, so little of it is cut */
