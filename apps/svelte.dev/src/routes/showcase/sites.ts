@@ -319,6 +319,17 @@ export const sites: Site[] = [
 		clip: { wander: true }
 	},
 	{
+		id: 'loql',
+		name: 'Loql',
+		url: 'https://web.loql.com/',
+		// from https://www.loql.com/, which has no page in english
+		description: 'Digitale Bestellplattform für Lebensmittel',
+		lang: 'de',
+		category: 'business',
+		// without the cookie notice, and the window alone, which the page fills
+		screenshot: { hide: ['.modal.shadow-modal'], height: 900 }
+	},
+	{
 		id: 'akis',
 		name: 'AKIS',
 		url: 'https://akis.studio/',
@@ -910,6 +921,7 @@ const MORE = [
 	'vert',
 
 	'app-store',
+	'loql',
 	'syntax',
 	'poolside',
 	'zenos',
