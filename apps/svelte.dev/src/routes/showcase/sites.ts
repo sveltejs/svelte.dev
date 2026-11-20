@@ -884,51 +884,56 @@ const HERO = [
 
 /**
  * the smaller sites picked for their design, shown after the categories rather than in their own,
- * in rows that run off either side of the window. in this order, which puts the best known and
- * those that move where they show whole at every width, and the least known at the ends of rows,
- * where half of one is cut off: with three, four or six across, the 1st, 12th, 13th, 24th, 25th
- * and 36th are at an end most often, and the last is left alone on phones and hidden there
+ * in rows that drift off either side of the window. the rows are cut from this in turn, as many to
+ * each as the others, and each runs on into itself, so in this order no two beside each other in a
+ * row, nor its last and its first, are alike in colour: a light one sits between dark or coloured
+ * ones. put them in order again when one is added or taken away, since that moves where the rows
+ * are cut
  */
 const MORE = [
-	'porters-paints',
-	'apple-music-100-best',
-	'dbrand',
-	'viki',
-	'logitech',
-	'alaska-airlines',
 	'modulus',
-	'houses-of-the-world',
-	'de-correspondent',
-	'cobalt',
-	'mill',
-	'beyonk',
-	'swehl',
-	'kumamap',
-	'app-store',
-	'zenos',
-	'akis',
-	'mermaid',
-	'gestisoft',
-	'vert',
-	'ripleys',
-	'halfspace',
-	'llama',
-	'chapitre',
-	'trading-strategy',
-	'ons-local-statistics',
-	'apple-podcasts',
-	'merlin',
-	'anda',
-	'nrk',
-	'coolify',
-	'evidence',
-	'kimbia',
-	'tangled',
-	'poolside',
-	'syntax',
+	'viki',
 	'pronauns',
+	'coolify',
+	'apple-podcasts',
+	'beyonk',
+	'kumamap',
+	'gestisoft',
+
+	'apple-music-100-best',
+	'tangled',
+	'logitech',
+	'trading-strategy',
+	'evidence',
+	'alaska-airlines',
+	'kimbia',
+	'vert',
+
+	'app-store',
+	'syntax',
+	'poolside',
+	'zenos',
+	'ripleys',
+	'anda',
+	'mermaid',
+	'merlin',
+
+	'ons-local-statistics',
+	'mill',
+	'nrk',
+	'dbrand',
+	'cobalt',
 	'allfeat',
+	'de-correspondent',
+	'chapitre',
+
+	'akis',
+	'houses-of-the-world',
 	'ashley',
+	'llama',
+	'halfspace',
+	'porters-paints',
+	'swehl',
 	'pausly'
 ];
 
