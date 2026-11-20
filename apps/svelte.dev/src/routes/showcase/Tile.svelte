@@ -22,6 +22,10 @@ site's id, for links to land on
 		still?: boolean;
 		/** one shown a second time, which the keyboard and screen readers pass over */
 		copy?: boolean;
+		/** reached with the arrow keys from the one beside it rather than with tab */
+		passed?: boolean;
+		/** the id of what says how the keyboard gets to the ones beside it */
+		describedby?: string;
 	}
 
 	let {
@@ -30,7 +34,9 @@ site's id, for links to land on
 		large = false,
 		compact = false,
 		still = false,
-		copy = false
+		copy = false,
+		passed = false,
+		describedby
 	}: Props = $props();
 
 	const player = get_player();
@@ -44,7 +50,8 @@ site's id, for links to land on
 <a
 	class={['tile', { large, compact }]}
 	href={site.url}
-	tabindex={copy ? -1 : undefined}
+	tabindex={copy || passed ? -1 : undefined}
+	aria-describedby={describedby}
 	onpointerenter={(event) => (moves || !still) && lengthen(event, frame, site.id, player)}
 	onfocus={() => moves && player.focus(frame, site.id)}
 	onblur={() => moves && player.release(frame)}

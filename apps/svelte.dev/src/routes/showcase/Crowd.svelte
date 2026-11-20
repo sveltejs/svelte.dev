@@ -2,7 +2,7 @@
 the many more, smaller and in rows across the whole width of the window, cut off at either side
 like the logos on the home page. each row drifts slowly and without end, every other one the other
 way, and can be swiped along or back as it does, unless motion is paused or reduced, when the rows
-stay where they are and scroll by hand
+stay where they are and scroll by hand. tab stops once at each row, and the arrow keys go along it
 -->
 <script lang="ts">
 	import { prefersReducedMotion } from 'svelte/motion';
@@ -48,17 +48,84 @@ stay where they are and scroll by hand
 	/** the row the keyboard is in, which stops and scrolls to what has focus */
 	let focused = $state(-1);
 
+	/** which one in each row tab stops at, the first until the arrow keys have been along it */
+	const stops = $state<Record<number, number>>({});
+
+	const uid = $props.id();
+
+	/** the links of a row, without those of its copy */
+	function links(row: HTMLElement) {
+		return [...row.querySelectorAll<HTMLElement>('ul:not([aria-hidden]) a')];
+	}
+
+	/** tab stops where the keyboard last was in the row, however it got there */
+	function enter(event: FocusEvent & { currentTarget: HTMLElement }, index: number) {
+		const target = event.target as HTMLElement;
+		const at = links(event.currentTarget).indexOf(target);
+
+		if (at !== -1) stops[index] = at;
+		if (target.matches(':focus-visible')) focused = index;
+	}
+
+	/**
+	 * the arrow keys go along the row, round from its last to its first as the row itself does, and
+	 * home and end to either end of it, so that tab can leave for the next row from anywhere in it
+	 */
+	function keys(event: KeyboardEvent & { currentTarget: HTMLElement }) {
+		if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+
+		const all = links(event.currentTarget);
+		const at = all.indexOf(event.target as HTMLElement);
+		if (at === -1) return;
+
+		const to = {
+			ArrowRight: (at + 1) % all.length,
+			ArrowLeft: (at - 1 + all.length) % all.length,
+			Home: 0,
+			End: all.length - 1
+		}[event.key];
+
+		if (to === undefined) return;
+		event.preventDefault();
+
+		all[to].focus({ preventScroll: true });
+		all[to].scrollIntoView({ inline: 'center', block: 'nearest' });
+	}
+
+	/** the rows that have been put where they start from */
+	const placed = new WeakSet<HTMLElement>();
+
 	/**
 	 * drifts a row for as long as it may, carrying on from wherever it was scrolled to by hand, and
 	 * leaving it scrolled to wherever it had drifted to once it may not
 	 */
 	function drift(index: number) {
 		return (row: HTMLElement) => {
-			if (!moving || focused === index) return;
-
 			const track = row.firstElementChild as HTMLElement;
 			const [list, copy] = track.children as unknown as HTMLElement[];
 			const reverse = index % 2 === 1;
+
+			/**
+			 * how far every other row is set along from the rest, half of one, so they do not line up
+			 * in columns. by its margin as it drifts, and by being scrolled as it stands, so that the
+			 * keyboard can bring the first of it wholly into the window
+			 */
+			const shift = () =>
+				reverse
+					? ((list.firstElementChild as HTMLElement).offsetWidth +
+							parseFloat(getComputedStyle(list).columnGap)) /
+						2
+					: 0;
+
+			if (!moving || focused === index) {
+				// as the page arrives, before anything else has scrolled it
+				if (!placed.has(row)) row.scrollLeft = shift();
+				placed.add(row);
+				return;
+			}
+
+			placed.add(row);
+
 			const duration = rows[index].length * PACE * PACES[index % PACES.length];
 
 			/** how far it goes before the copy is where the list was, and it starts again unseen */
@@ -70,7 +137,7 @@ stay where they are and scroll by hand
 			);
 
 			// many laps in, so a hand can take it back as far as it likes without it running out
-			const from = (row.scrollLeft % lap()) / lap();
+			const from = ((((row.scrollLeft - shift()) % lap()) + lap()) % lap()) / lap();
 			animation.currentTime = (1000 + (reverse ? 1 - from : from)) * duration;
 
 			row.classList.add('drifting');
@@ -224,7 +291,7 @@ stay where they are and scroll by hand
 				cancelAnimationFrame(settling);
 				animation.cancel();
 				row.classList.remove('drifting');
-				row.scrollLeft = reverse ? lap() - at : at;
+				row.scrollLeft = (reverse ? lap() - at : at) + shift();
 
 				// and to what the keyboard has reached, which may have been out of the window
 				if (row.contains(document.activeElement)) {
@@ -243,10 +310,11 @@ stay where they are and scroll by hand
 		<!-- svelte-ignore a11y_no_static_element_interactions -->
 		<div
 			class="row"
+			style:grid-row={index + 1}
 			onpointerenter={(event) => event.pointerType === 'mouse' && (pointed = index)}
 			onpointerleave={() => pointed === index && (pointed = -1)}
-			onfocusin={(event) =>
-				(event.target as HTMLElement).matches(':focus-visible') && (focused = index)}
+			onfocusin={(event) => enter(event, index)}
+			onkeydown={keys}
 			onfocusout={(event) =>
 				!event.currentTarget.contains(event.relatedTarget as Node | null) &&
 				focused === index &&
@@ -255,8 +323,8 @@ stay where they are and scroll by hand
 		>
 			<div class="track">
 				<ul>
-					{#each row as site (site.id)}
-						<li id={site.id}>{@render tile(site)}</li>
+					{#each row as site, i (site.id)}
+						<li id={site.id}>{@render tile(site, false, i !== (stops[index] ?? 0))}</li>
 					{/each}
 				</ul>
 
@@ -270,10 +338,26 @@ stay where they are and scroll by hand
 			</div>
 		</div>
 	{/each}
+
+	<!-- how to get along a row, over the top edge of whichever one the keyboard is in -->
+	<p id="{uid}-keys" class="keys" class:shown={focused !== -1} style:grid-row={focused + 1 || 1}>
+		<kbd aria-hidden="true">←</kbd>
+		<kbd aria-hidden="true">→</kbd>
+		<span class="visually-hidden">Left and right arrow keys</span>
+		for more in this row
+	</p>
 </div>
 
-{#snippet tile(site: Site, copy = false)}
-	<Tile {site} sizes="(min-width: 64em) 18vw, (min-width: 40em) 28vw, 39vw" compact still {copy} />
+{#snippet tile(site: Site, copy = false, passed = false)}
+	<Tile
+		{site}
+		sizes="(min-width: 64em) 18vw, (min-width: 40em) 28vw, 39vw"
+		compact
+		still
+		{copy}
+		{passed}
+		describedby={copy || passed ? undefined : `${uid}-keys`}
+	/>
 {/snippet}
 
 <style>
@@ -290,7 +374,6 @@ stay where they are and scroll by hand
 		grid-template-columns: minmax(0, 1fr);
 		gap: var(--gap);
 		margin-inline: calc(50% - 50vw);
-		mask-image: linear-gradient(90deg, transparent, black 15%, black 85%, transparent);
 
 		@media (min-width: 40em) {
 			--across: 4;
@@ -305,7 +388,11 @@ stay where they are and scroll by hand
 	/* scrolled by hand where it does not drift, with no bar to show for it, like the edges of the
 	   window it runs off */
 	.row {
+		grid-column: 1;
 		overflow-x: auto;
+		/* each row rather than all of them together, which would cut off what says how the keyboard
+		   gets along a row where it sits over the top of the first */
+		mask-image: linear-gradient(90deg, transparent, black 15%, black 85%, transparent);
 		overscroll-behavior-x: contain;
 		scrollbar-width: none;
 
@@ -315,9 +402,42 @@ stay where they are and scroll by hand
 			touch-action: pan-y pinch-zoom;
 		}
 
-		/* every other one half of one along, so they do not line up in columns */
-		&:nth-child(even) .track {
+		/* every other one half of one along, so they do not line up in columns. scrolled that far
+		   instead where it does not drift */
+		&:global(.drifting):nth-child(even) .track {
 			margin-left: calc((var(--width) + var(--gap)) / -2);
+		}
+	}
+
+	/* across the top edge of the row it is about, in the gap above it, so it covers next to
+	   nothing of the one with focus, nor its name at the foot of it */
+	.keys {
+		grid-column: 1;
+		z-index: 2;
+		place-self: start center;
+		translate: 0 -50%;
+		display: flex;
+		align-items: center;
+		gap: 0.6rem;
+		margin: 0;
+		padding: 0.5rem 1.2rem;
+		font: var(--sk-font-ui-small);
+		color: var(--sk-fg-1);
+		background: var(--sk-bg-2);
+		border: 1px solid var(--sk-border);
+		border-radius: 10rem;
+		pointer-events: none;
+		opacity: 0;
+		transition: opacity 0.15s ease;
+
+		&.shown {
+			opacity: 1;
+		}
+
+		kbd {
+			padding: 0 0.6rem;
+			font-size: 1em;
+			line-height: 1.5;
 		}
 	}
 
