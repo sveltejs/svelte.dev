@@ -561,29 +561,6 @@ interface AdapterViteConfig {/*…*/}
 <div class="ts-block-property">
 
 ```dts
-customPreview?: boolean;
-```
-
-<div class="ts-block-property-details">
-
-<div class="ts-block-property-bullets">
-
-- <span class="tag">default</span> `false`
-- <span class="tag since">available since</span> v3.4.0
-
-</div>
-
-By default, SvelteKit creates a Node preview server to serve the build
-output during `vite preview`. Set this option to `true` when the adapter
-provides a Vite plugin with a `configurePreviewServer` hook that handles
-previewing the build output on its own.
-
-</div>
-</div>
-
-<div class="ts-block-property">
-
-```dts
 getRequest?: typeof getRequest;
 ```
 
@@ -2632,10 +2609,7 @@ namespace Csp {
 	type CryptoSource =
 		`${'nonce' | 'sha256' | 'sha384' | 'sha512'}-${string}`;
 	type FrameSource =
-		| HostSource
-		| SchemeSource
-		| 'self'
-		| 'none';
+		HostSource | SchemeSource | 'self' | 'none';
 	type HostNameScheme = `${string}.${string}` | 'localhost';
 	type HostSource =
 		`${HostProtocolSchemes}${HostNameScheme}${PortScheme}`;
@@ -2653,10 +2627,7 @@ namespace Csp {
 		| 'filesystem:'
 		| (`${string}:` & {});
 	type Source =
-		| HostSource
-		| SchemeSource
-		| CryptoSource
-		| BaseSource;
+		HostSource | SchemeSource | CryptoSource | BaseSource;
 	type Sources = Source[];
 }
 ```
@@ -3012,12 +2983,10 @@ referrer?: Array<
 
 ```dts
 type DeepPartial<T> = T extends
-	| Record<PropertyKey, unknown>
-	| unknown[]
+	Record<PropertyKey, unknown> | unknown[]
 	? {
 			[K in keyof T]?: T[K] extends
-				| Record<PropertyKey, unknown>
-				| unknown[]
+				Record<PropertyKey, unknown> | unknown[]
 				? DeepPartial<T[K]>
 				: T[K];
 		}
@@ -3249,10 +3218,7 @@ message: string;
 
 ```dts
 type PrerenderHttpErrorHandlerValue =
-	| 'fail'
-	| 'warn'
-	| 'ignore'
-	| PrerenderHttpErrorHandler;
+	'fail' | 'warn' | 'ignore' | PrerenderHttpErrorHandler;
 ```
 
 </div>
@@ -3280,10 +3246,7 @@ interface PrerenderInvalidUrlHandler {/*…*/}
 
 ```dts
 type PrerenderInvalidUrlHandlerValue =
-	| 'fail'
-	| 'warn'
-	| 'ignore'
-	| PrerenderInvalidUrlHandler;
+	'fail' | 'warn' | 'ignore' | PrerenderInvalidUrlHandler;
 ```
 
 </div>
@@ -3321,10 +3284,7 @@ interface PrerenderMissingIdHandler {/*…*/}
 
 ```dts
 type PrerenderMissingIdHandlerValue =
-	| 'fail'
-	| 'warn'
-	| 'ignore'
-	| PrerenderMissingIdHandler;
+	'fail' | 'warn' | 'ignore' | PrerenderMissingIdHandler;
 ```
 
 </div>
@@ -3362,10 +3322,7 @@ interface PrerenderUnseenRoutesHandler {/*…*/}
 
 ```dts
 type PrerenderUnseenRoutesHandlerValue =
-	| 'fail'
-	| 'warn'
-	| 'ignore'
-	| PrerenderUnseenRoutesHandler;
+	'fail' | 'warn' | 'ignore' | PrerenderUnseenRoutesHandler;
 ```
 
 </div>
