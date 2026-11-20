@@ -264,13 +264,11 @@ namespace AST {
 		preserveWhitespace?: boolean;
 		namespace?: Namespace;
 		css?: 'injected';
+		customRenderer?: string | null;
 		customElement?: {
 			tag?: string;
 			shadow?:
-				| 'open'
-				| 'none'
-				| ObjectExpression
-				| undefined;
+				'open' | 'none' | ObjectExpression | undefined;
 			props?: Record<
 				string,
 				{
@@ -381,9 +379,7 @@ namespace AST {
 		name: string;
 		/** The y in `bind:x={y}` */
 		expression:
-			| Identifier
-			| MemberExpression
-			| SequenceExpression;
+			Identifier | MemberExpression | SequenceExpression;
 	}
 
 	/** A `class:` directive */
@@ -435,9 +431,7 @@ namespace AST {
 		name: string;
 		/** The 'y' in `style:x={y}` */
 		value:
-			| true
-			| ExpressionTag
-			| Array<ExpressionTag | Text>;
+			true | ExpressionTag | Array<ExpressionTag | Text>;
 		modifiers: Array<'important'>;
 	}
 
@@ -605,9 +599,7 @@ namespace AST {
 		 * Quoted/string values are represented by an array, even if they contain a single expression like `"{x}"`
 		 */
 		value:
-			| true
-			| ExpressionTag
-			| Array<Text | ExpressionTag>;
+			true | ExpressionTag | Array<Text | ExpressionTag>;
 	}
 
 	export interface SpreadAttribute extends BaseNode {
@@ -634,9 +626,7 @@ namespace AST {
 	}
 
 	export type AttributeLike =
-		| Attribute
-		| SpreadAttribute
-		| Directive;
+		Attribute | SpreadAttribute | Directive;
 
 	export type Directive =
 		| AST.AnimateDirective
@@ -694,11 +684,7 @@ namespace AST {
 		| Block;
 
 	export type SvelteNode =
-		| Node
-		| TemplateNode
-		| AST.Fragment
-		| _CSS.Node
-		| Script;
+		Node | TemplateNode | AST.Fragment | _CSS.Node | Script;
 
 	export type { _CSS as CSS };
 }
@@ -956,7 +942,7 @@ discloseVersion?: boolean;
 
 </div>
 
-If `true`, exposes the Svelte major version in the browser by adding it to a `Set` stored in the global `window.__svelte.v`.
+If `true`, exposes the Svelte major version in the browser by adding it to a `Set` stored in the global `globalThis.__svelte.v`.
 
 </div>
 </div>
@@ -1396,6 +1382,49 @@ async?: boolean;
 </div>
 
 Allow `await` keyword in deriveds, template expressions, and the top level of components
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+customRenderer?: true | string | ((options: { filename: string }) => string | null);
+```
+
+<div class="ts-block-property-details">
+
+Enables custom renderers to be specified with `<svelte:options customRenderer="path/to/renderer/module" />`. Can be:
+
+- `true`, allowing components to individually opt in
+- a string that points to a default custom renderer module: a package name, an alias or an absolute path (not a relative path, since every component imports it). Individual components can override the default, or opt out with `<svelte:options customRenderer={null} />`
+- a function that receives a `{ filename }` object and returns a custom renderer module path (resolved relative to that component, if relative), or `null` if the component should use the DOM
+
+A custom renderer module's default export must be an object created with `createRenderer`.
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+devtools?: string[];
+```
+
+<div class="ts-block-property-details">
+
+Internal: a list of devtools plugin browser runtimes (module specifiers, e.g. `'my-devtools/runtime'`).
+In dev, every compiled client component and module imports each of them before anything else.
+Ignored unless `dev` is `true` and `generate` is `'client'`.
+Specifiers must resolve to files, not virtual modules.
+
+A runtime can be evaluated more than once on the same page. For example, Vite bundles a copy
+of it into the pre-bundled dependencies that contain Svelte files, while the app's own files
+import the original. Each copy has its own module state, and `listen` replaces a plugin with
+the same name, so the copy evaluated last receives all events. Keep the runtime's state on
+`globalThis` and only subscribe from the first copy. With Vite, you can also pass a bare
+specifier and add it to `optimizeDeps.include`, so that the app and the pre-bundled
+dependencies share one copy.
+
+This is an internal option for the official Svelte devtools and has no stability guarantee.
 
 </div>
 </div></div>
