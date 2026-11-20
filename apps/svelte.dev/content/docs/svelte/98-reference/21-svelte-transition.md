@@ -198,7 +198,7 @@ function slide(
 interface BlurParams {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="BlurParams-delay"><a href="#BlurParams-delay" class="permalink" aria-label="Permalink to delay"></a>
 
 ```dts
 delay?: number;
@@ -207,7 +207,7 @@ delay?: number;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="BlurParams-duration"><a href="#BlurParams-duration" class="permalink" aria-label="Permalink to duration"></a>
 
 ```dts
 duration?: number;
@@ -216,7 +216,7 @@ duration?: number;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="BlurParams-easing"><a href="#BlurParams-easing" class="permalink" aria-label="Permalink to easing"></a>
 
 ```dts
 easing?: EasingFunction;
@@ -225,7 +225,7 @@ easing?: EasingFunction;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="BlurParams-amount"><a href="#BlurParams-amount" class="permalink" aria-label="Permalink to amount"></a>
 
 ```dts
 amount?: number | string;
@@ -234,7 +234,7 @@ amount?: number | string;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="BlurParams-opacity"><a href="#BlurParams-opacity" class="permalink" aria-label="Permalink to opacity"></a>
 
 ```dts
 opacity?: number;
@@ -251,7 +251,7 @@ opacity?: number;
 interface CrossfadeParams {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="CrossfadeParams-delay"><a href="#CrossfadeParams-delay" class="permalink" aria-label="Permalink to delay"></a>
 
 ```dts
 delay?: number;
@@ -260,7 +260,7 @@ delay?: number;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="CrossfadeParams-duration"><a href="#CrossfadeParams-duration" class="permalink" aria-label="Permalink to duration"></a>
 
 ```dts
 duration?: number | ((len: number) => number);
@@ -269,7 +269,7 @@ duration?: number | ((len: number) => number);
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="CrossfadeParams-easing"><a href="#CrossfadeParams-easing" class="permalink" aria-label="Permalink to easing"></a>
 
 ```dts
 easing?: EasingFunction;
@@ -286,7 +286,7 @@ easing?: EasingFunction;
 interface DrawParams {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="DrawParams-delay"><a href="#DrawParams-delay" class="permalink" aria-label="Permalink to delay"></a>
 
 ```dts
 delay?: number;
@@ -295,7 +295,7 @@ delay?: number;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="DrawParams-speed"><a href="#DrawParams-speed" class="permalink" aria-label="Permalink to speed"></a>
 
 ```dts
 speed?: number;
@@ -304,7 +304,7 @@ speed?: number;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="DrawParams-duration"><a href="#DrawParams-duration" class="permalink" aria-label="Permalink to duration"></a>
 
 ```dts
 duration?: number | ((len: number) => number);
@@ -313,7 +313,7 @@ duration?: number | ((len: number) => number);
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="DrawParams-easing"><a href="#DrawParams-easing" class="permalink" aria-label="Permalink to easing"></a>
 
 ```dts
 easing?: EasingFunction;
@@ -340,7 +340,7 @@ type EasingFunction = (t: number) => number;
 interface FadeParams {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="FadeParams-delay"><a href="#FadeParams-delay" class="permalink" aria-label="Permalink to delay"></a>
 
 ```dts
 delay?: number;
@@ -349,7 +349,7 @@ delay?: number;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="FadeParams-duration"><a href="#FadeParams-duration" class="permalink" aria-label="Permalink to duration"></a>
 
 ```dts
 duration?: number;
@@ -358,7 +358,7 @@ duration?: number;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="FadeParams-easing"><a href="#FadeParams-easing" class="permalink" aria-label="Permalink to easing"></a>
 
 ```dts
 easing?: EasingFunction;
@@ -375,7 +375,7 @@ easing?: EasingFunction;
 interface FlyParams {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="FlyParams-delay"><a href="#FlyParams-delay" class="permalink" aria-label="Permalink to delay"></a>
 
 ```dts
 delay?: number;
@@ -384,7 +384,7 @@ delay?: number;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="FlyParams-duration"><a href="#FlyParams-duration" class="permalink" aria-label="Permalink to duration"></a>
 
 ```dts
 duration?: number;
@@ -393,7 +393,7 @@ duration?: number;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="FlyParams-easing"><a href="#FlyParams-easing" class="permalink" aria-label="Permalink to easing"></a>
 
 ```dts
 easing?: EasingFunction;
@@ -402,7 +402,7 @@ easing?: EasingFunction;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="FlyParams-x"><a href="#FlyParams-x" class="permalink" aria-label="Permalink to x"></a>
 
 ```dts
 x?: number | string;
@@ -411,7 +411,7 @@ x?: number | string;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="FlyParams-y"><a href="#FlyParams-y" class="permalink" aria-label="Permalink to y"></a>
 
 ```dts
 y?: number | string;
@@ -420,7 +420,7 @@ y?: number | string;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="FlyParams-opacity"><a href="#FlyParams-opacity" class="permalink" aria-label="Permalink to opacity"></a>
 
 ```dts
 opacity?: number;
@@ -437,7 +437,7 @@ opacity?: number;
 interface ScaleParams {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ScaleParams-delay"><a href="#ScaleParams-delay" class="permalink" aria-label="Permalink to delay"></a>
 
 ```dts
 delay?: number;
@@ -446,7 +446,7 @@ delay?: number;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ScaleParams-duration"><a href="#ScaleParams-duration" class="permalink" aria-label="Permalink to duration"></a>
 
 ```dts
 duration?: number;
@@ -455,7 +455,7 @@ duration?: number;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ScaleParams-easing"><a href="#ScaleParams-easing" class="permalink" aria-label="Permalink to easing"></a>
 
 ```dts
 easing?: EasingFunction;
@@ -464,7 +464,7 @@ easing?: EasingFunction;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ScaleParams-start"><a href="#ScaleParams-start" class="permalink" aria-label="Permalink to start"></a>
 
 ```dts
 start?: number;
@@ -473,7 +473,7 @@ start?: number;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ScaleParams-opacity"><a href="#ScaleParams-opacity" class="permalink" aria-label="Permalink to opacity"></a>
 
 ```dts
 opacity?: number;
@@ -490,7 +490,7 @@ opacity?: number;
 interface SlideParams {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="SlideParams-delay"><a href="#SlideParams-delay" class="permalink" aria-label="Permalink to delay"></a>
 
 ```dts
 delay?: number;
@@ -499,7 +499,7 @@ delay?: number;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="SlideParams-duration"><a href="#SlideParams-duration" class="permalink" aria-label="Permalink to duration"></a>
 
 ```dts
 duration?: number;
@@ -508,7 +508,7 @@ duration?: number;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="SlideParams-easing"><a href="#SlideParams-easing" class="permalink" aria-label="Permalink to easing"></a>
 
 ```dts
 easing?: EasingFunction;
@@ -517,7 +517,7 @@ easing?: EasingFunction;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="SlideParams-axis"><a href="#SlideParams-axis" class="permalink" aria-label="Permalink to axis"></a>
 
 ```dts
 axis?: 'x' | 'y';
@@ -534,7 +534,7 @@ axis?: 'x' | 'y';
 interface TransitionConfig {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="TransitionConfig-delay"><a href="#TransitionConfig-delay" class="permalink" aria-label="Permalink to delay"></a>
 
 ```dts
 delay?: number;
@@ -543,7 +543,7 @@ delay?: number;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="TransitionConfig-duration"><a href="#TransitionConfig-duration" class="permalink" aria-label="Permalink to duration"></a>
 
 ```dts
 duration?: number;
@@ -552,7 +552,7 @@ duration?: number;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="TransitionConfig-easing"><a href="#TransitionConfig-easing" class="permalink" aria-label="Permalink to easing"></a>
 
 ```dts
 easing?: EasingFunction;
@@ -561,7 +561,7 @@ easing?: EasingFunction;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="TransitionConfig-css"><a href="#TransitionConfig-css" class="permalink" aria-label="Permalink to css"></a>
 
 ```dts
 css?: (t: number, u: number) => string;
@@ -570,7 +570,7 @@ css?: (t: number, u: number) => string;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="TransitionConfig-tick"><a href="#TransitionConfig-tick" class="permalink" aria-label="Permalink to tick"></a>
 
 ```dts
 tick?: (t: number, u: number) => void;

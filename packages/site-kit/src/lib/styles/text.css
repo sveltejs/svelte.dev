@@ -27,16 +27,24 @@ pre a.doc-reference {
 	min-height: 1.35em;
 }
 
-.ts-block-property > pre {
-	margin: 0;
-	padding-left: 1rem;
-	border-radius: 0;
-	box-shadow: none;
-	border-top: 1px solid var(--sk-border);
-}
-
 .ts-block-property-details {
-	padding: 0 1rem 0 2rem;
+	padding: 1rem 1.2rem;
+	border: 1px solid var(--sk-border);
+	border-top: none;
+	border-radius: 0 0 var(--sk-border-radius) var(--sk-border-radius);
+	background: var(--sk-bg-1);
+
+	@media (min-width: 48em) {
+		padding: 1rem 1.6rem;
+	}
+
+	&:not(:has(> *)) {
+		display: none;
+	}
+
+	& > .ts-block-property-children {
+		margin: 1.2rem 0 0 0;
+	}
 }
 
 .ts-block-property-details blockquote {
@@ -44,11 +52,46 @@ pre a.doc-reference {
 }
 
 .ts-block-property-children {
-	margin: 0rem -1rem 0rem 1rem;
+	margin: 1.6rem 0 0 1.4rem;
+
+	& > .ts-block-property {
+		margin: 1.2rem 0;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
 }
 
 .ts-block-property-bullets {
+	&:not(:has(li)) {
+		display: none;
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 0.8rem;
+	}
+
+	& + :where(p, ul, ol, blockquote, .code-block) {
+		margin-top: 0;
+	}
+
+	ul {
+		margin: 0;
+		list-style: none;
+	}
+
 	li {
+		margin: 0 0 0.4rem 0;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
 		&::before {
 			content: none !important;
 		}

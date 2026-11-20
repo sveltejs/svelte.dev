@@ -44,7 +44,7 @@ move towards it over time, taking account of the `spring.stiffness` and `spring.
 class Spring<T> {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Spring-constructor"><a href="#Spring-constructor" class="permalink" aria-label="Permalink to constructor"></a>
 
 ```dts
 constructor(value: T, options?: SpringOptions);
@@ -53,7 +53,7 @@ constructor(value: T, options?: SpringOptions);
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Spring-of"><a href="#Spring-of" class="permalink" aria-label="Permalink to of"></a>
 
 ```dts
 static of<U>(fn: () => U, options?: SpringOptions): Spring<U>;
@@ -77,7 +77,7 @@ inside an effect root (for example, during component initialisation).
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Spring-set"><a href="#Spring-set" class="permalink" aria-label="Permalink to set"></a>
 
 ```dts
 set(value: T, options?: SpringUpdateOptions): Promise<void>;
@@ -95,7 +95,7 @@ the specified number of milliseconds. This is useful for things like 'fling' ges
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Spring-damping"><a href="#Spring-damping" class="permalink" aria-label="Permalink to damping"></a>
 
 ```dts
 damping: number;
@@ -104,7 +104,7 @@ damping: number;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Spring-precision"><a href="#Spring-precision" class="permalink" aria-label="Permalink to precision"></a>
 
 ```dts
 precision: number;
@@ -113,7 +113,7 @@ precision: number;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Spring-stiffness"><a href="#Spring-stiffness" class="permalink" aria-label="Permalink to stiffness"></a>
 
 ```dts
 stiffness: number;
@@ -122,7 +122,7 @@ stiffness: number;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Spring-target"><a href="#Spring-target" class="permalink" aria-label="Permalink to target"></a>
 
 ```dts
 target: T;
@@ -136,7 +136,7 @@ This property only exists on the `Spring` class, not the legacy `spring` store.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Spring-current"><a href="#Spring-current" class="permalink" aria-label="Permalink to current"></a>
 
 ```dts
 get current(): T;
@@ -180,7 +180,7 @@ move towards it over time, taking account of the `delay`, `duration` and `easing
 class Tween<T> {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Tween-of"><a href="#Tween-of" class="permalink" aria-label="Permalink to of"></a>
 
 ```dts
 static of<U>(fn: () => U, options?: TweenOptions<U> | undefined): Tween<U>;
@@ -204,7 +204,7 @@ inside an effect root (for example, during component initialisation).
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Tween-constructor"><a href="#Tween-constructor" class="permalink" aria-label="Permalink to constructor"></a>
 
 ```dts
 constructor(value: T, options?: TweenOptions<T>);
@@ -213,7 +213,7 @@ constructor(value: T, options?: TweenOptions<T>);
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Tween-set"><a href="#Tween-set" class="permalink" aria-label="Permalink to set"></a>
 
 ```dts
 set(value: T, options?: TweenOptions<T> | undefined): Promise<void>;
@@ -228,7 +228,7 @@ If `options` are provided, they will override the tween's defaults.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Tween-current"><a href="#Tween-current" class="permalink" aria-label="Permalink to current"></a>
 
 ```dts
 get current(): T;
@@ -237,7 +237,7 @@ get current(): T;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Tween-target"><a href="#Tween-target" class="permalink" aria-label="Permalink to target"></a>
 
 ```dts
 set target(v: T);
@@ -246,7 +246,7 @@ set target(v: T);
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Tween-target-2"><a href="#Tween-target-2" class="permalink" aria-label="Permalink to target"></a>
 
 ```dts
 get target(): T;
@@ -350,7 +350,7 @@ function tweened<T>(
 interface Spring<T> extends Readable<T> {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Spring-set-2"><a href="#Spring-set-2" class="permalink" aria-label="Permalink to set"></a>
 
 ```dts
 set(new_value: T, opts?: SpringUpdateOptions): Promise<void>;
@@ -359,7 +359,7 @@ set(new_value: T, opts?: SpringUpdateOptions): Promise<void>;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Spring-update"><a href="#Spring-update" class="permalink" aria-label="Permalink to update"></a>
 
 ```dts
 update: (fn: Updater<T>, opts?: SpringUpdateOptions) => Promise<void>;
@@ -376,7 +376,7 @@ update: (fn: Updater<T>, opts?: SpringUpdateOptions) => Promise<void>;
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Spring-subscribe"><a href="#Spring-subscribe" class="permalink" aria-label="Permalink to subscribe"></a>
 
 ```dts
 subscribe(fn: (value: T) => void): Unsubscriber;
@@ -393,7 +393,7 @@ subscribe(fn: (value: T) => void): Unsubscriber;
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Spring-precision-2"><a href="#Spring-precision-2" class="permalink" aria-label="Permalink to precision"></a>
 
 ```dts
 precision: number;
@@ -402,7 +402,7 @@ precision: number;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Spring-damping-2"><a href="#Spring-damping-2" class="permalink" aria-label="Permalink to damping"></a>
 
 ```dts
 damping: number;
@@ -411,7 +411,7 @@ damping: number;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Spring-stiffness-2"><a href="#Spring-stiffness-2" class="permalink" aria-label="Permalink to stiffness"></a>
 
 ```dts
 stiffness: number;
@@ -428,7 +428,7 @@ stiffness: number;
 interface SpringOptions {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="SpringOptions-stiffness"><a href="#SpringOptions-stiffness" class="permalink" aria-label="Permalink to stiffness"></a>
 
 ```dts
 stiffness?: number;
@@ -437,7 +437,7 @@ stiffness?: number;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="SpringOptions-damping"><a href="#SpringOptions-damping" class="permalink" aria-label="Permalink to damping"></a>
 
 ```dts
 damping?: number;
@@ -446,7 +446,7 @@ damping?: number;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="SpringOptions-precision"><a href="#SpringOptions-precision" class="permalink" aria-label="Permalink to precision"></a>
 
 ```dts
 precision?: number;
@@ -463,7 +463,7 @@ precision?: number;
 interface SpringUpdateOptions {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="SpringUpdateOptions-hard"><a href="#SpringUpdateOptions-hard" class="permalink" aria-label="Permalink to hard"></a>
 
 ```dts
 hard?: any;
@@ -480,7 +480,7 @@ hard?: any;
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="SpringUpdateOptions-soft"><a href="#SpringUpdateOptions-soft" class="permalink" aria-label="Permalink to soft"></a>
 
 ```dts
 soft?: string | number | boolean;
@@ -497,7 +497,7 @@ soft?: string | number | boolean;
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="SpringUpdateOptions-instant"><a href="#SpringUpdateOptions-instant" class="permalink" aria-label="Permalink to instant"></a>
 
 ```dts
 instant?: boolean;
@@ -510,7 +510,7 @@ Only use this for the Spring class; does nothing when set on the spring store
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="SpringUpdateOptions-preserveMomentum"><a href="#SpringUpdateOptions-preserveMomentum" class="permalink" aria-label="Permalink to preserveMomentum"></a>
 
 ```dts
 preserveMomentum?: number;
@@ -531,7 +531,7 @@ Only use this for the Spring class; does nothing when set on the spring store
 interface TweenOptions<T> {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="TweenOptions-delay"><a href="#TweenOptions-delay" class="permalink" aria-label="Permalink to delay"></a>
 
 ```dts
 delay?: number;
@@ -540,7 +540,7 @@ delay?: number;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="TweenOptions-duration"><a href="#TweenOptions-duration" class="permalink" aria-label="Permalink to duration"></a>
 
 ```dts
 duration?: number | ((from: T, to: T) => number);
@@ -549,7 +549,7 @@ duration?: number | ((from: T, to: T) => number);
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="TweenOptions-easing"><a href="#TweenOptions-easing" class="permalink" aria-label="Permalink to easing"></a>
 
 ```dts
 easing?: (t: number) => number;
@@ -558,7 +558,7 @@ easing?: (t: number) => number;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="TweenOptions-interpolate"><a href="#TweenOptions-interpolate" class="permalink" aria-label="Permalink to interpolate"></a>
 
 ```dts
 interpolate?: (a: T, b: T) => (t: number) => T;
@@ -575,7 +575,7 @@ interpolate?: (a: T, b: T) => (t: number) => T;
 interface Tweened<T> extends Readable<T> {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Tweened-set"><a href="#Tweened-set" class="permalink" aria-label="Permalink to set"></a>
 
 ```dts
 set(value: T, opts?: TweenOptions<T>): Promise<void>;
@@ -584,7 +584,7 @@ set(value: T, opts?: TweenOptions<T>): Promise<void>;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Tweened-update"><a href="#Tweened-update" class="permalink" aria-label="Permalink to update"></a>
 
 ```dts
 update(updater: Updater<T>, opts?: TweenOptions<T>): Promise<void>;

@@ -282,7 +282,7 @@ type Reroute = (event: {
 interface ResolveOptions {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ResolveOptions-transformPageChunk"><a href="#ResolveOptions-transformPageChunk" class="permalink" aria-label="Permalink to transformPageChunk"></a>
 
 ```dts
 transformPageChunk?: (input: { html: string; done: boolean }) => MaybePromise<string | undefined>;
@@ -303,7 +303,7 @@ but they will always be split at sensible boundaries such as `%sveltekit.head%` 
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ResolveOptions-filterSerializedResponseHeaders"><a href="#ResolveOptions-filterSerializedResponseHeaders" class="permalink" aria-label="Permalink to filterSerializedResponseHeaders"></a>
 
 ```dts
 filterSerializedResponseHeaders?: (name: string, value: string) => boolean;
@@ -324,7 +324,7 @@ By default, none will be included.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ResolveOptions-preload"><a href="#ResolveOptions-preload" class="permalink" aria-label="Permalink to preload"></a>
 
 ```dts
 preload?: (
@@ -424,7 +424,7 @@ interface Transporter<
 > {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Transporter-encode"><a href="#Transporter-encode" class="permalink" aria-label="Permalink to encode"></a>
 
 ```dts
 encode: (value: T) => false | U;
@@ -433,7 +433,7 @@ encode: (value: T) => false | U;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Transporter-decode"><a href="#Transporter-decode" class="permalink" aria-label="Permalink to decode"></a>
 
 ```dts
 decode: (data: U) => T;

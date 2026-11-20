@@ -43,7 +43,7 @@ function flip(
 interface AnimationConfig {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="AnimationConfig-delay"><a href="#AnimationConfig-delay" class="permalink" aria-label="Permalink to delay"></a>
 
 ```dts
 delay?: number;
@@ -52,7 +52,7 @@ delay?: number;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="AnimationConfig-duration"><a href="#AnimationConfig-duration" class="permalink" aria-label="Permalink to duration"></a>
 
 ```dts
 duration?: number;
@@ -61,7 +61,7 @@ duration?: number;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="AnimationConfig-easing"><a href="#AnimationConfig-easing" class="permalink" aria-label="Permalink to easing"></a>
 
 ```dts
 easing?: (t: number) => number;
@@ -70,7 +70,7 @@ easing?: (t: number) => number;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="AnimationConfig-css"><a href="#AnimationConfig-css" class="permalink" aria-label="Permalink to css"></a>
 
 ```dts
 css?: (t: number, u: number) => string;
@@ -79,7 +79,7 @@ css?: (t: number, u: number) => string;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="AnimationConfig-tick"><a href="#AnimationConfig-tick" class="permalink" aria-label="Permalink to tick"></a>
 
 ```dts
 tick?: (t: number, u: number) => void;
@@ -96,7 +96,7 @@ tick?: (t: number, u: number) => void;
 interface FlipParams {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="FlipParams-delay"><a href="#FlipParams-delay" class="permalink" aria-label="Permalink to delay"></a>
 
 ```dts
 delay?: number;
@@ -105,7 +105,7 @@ delay?: number;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="FlipParams-duration"><a href="#FlipParams-duration" class="permalink" aria-label="Permalink to duration"></a>
 
 ```dts
 duration?: number | ((len: number) => number);
@@ -114,7 +114,7 @@ duration?: number | ((len: number) => number);
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="FlipParams-easing"><a href="#FlipParams-easing" class="permalink" aria-label="Permalink to easing"></a>
 
 ```dts
 easing?: (t: number) => number;

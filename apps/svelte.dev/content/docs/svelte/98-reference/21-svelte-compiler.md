@@ -710,7 +710,7 @@ interface CompileError extends ICompileDiagnostic {}
 interface CompileOptions extends ModuleCompileOptions {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="CompileOptions-name"><a href="#CompileOptions-name" class="permalink" aria-label="Permalink to name"></a>
 
 ```dts
 name?: string;
@@ -724,7 +724,7 @@ If unspecified, will be inferred from `filename`
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="CompileOptions-customElement"><a href="#CompileOptions-customElement" class="permalink" aria-label="Permalink to customElement"></a>
 
 ```dts
 customElement?: boolean | ((options: { filename: string }) => boolean);
@@ -745,7 +745,7 @@ You can also pass a function that receives `{ filename }` and returns a boolean.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="CompileOptions-accessors"><a href="#CompileOptions-accessors" class="permalink" aria-label="Permalink to accessors"></a>
 
 ```dts
 accessors?: boolean;
@@ -765,7 +765,7 @@ If `true`, getters and setters will be created for the component's props. If `fa
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="CompileOptions-namespace"><a href="#CompileOptions-namespace" class="permalink" aria-label="Permalink to namespace"></a>
 
 ```dts
 namespace?: Namespace;
@@ -784,7 +784,7 @@ The namespace of the element; e.g., `"html"`, `"svg"`, `"mathml"`.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="CompileOptions-immutable"><a href="#CompileOptions-immutable" class="permalink" aria-label="Permalink to immutable"></a>
 
 ```dts
 immutable?: boolean;
@@ -805,7 +805,7 @@ This allows it to be less conservative about checking whether values have change
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="CompileOptions-css"><a href="#CompileOptions-css" class="permalink" aria-label="Permalink to css"></a>
 
 ```dts
 css?: 'injected' | 'external' | ((options: { filename: string }) => 'injected' | 'external');
@@ -822,7 +822,7 @@ You can also pass a function that receives `{ filename }` and returns either `'i
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="CompileOptions-cssHash"><a href="#CompileOptions-cssHash" class="permalink" aria-label="Permalink to cssHash"></a>
 
 ```dts
 cssHash?: CssHashGetter;
@@ -842,7 +842,7 @@ It defaults to returning `svelte-${hash(filename ?? css)}`.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="CompileOptions-preserveComments"><a href="#CompileOptions-preserveComments" class="permalink" aria-label="Permalink to preserveComments"></a>
 
 ```dts
 preserveComments?: boolean;
@@ -861,7 +861,7 @@ If `true`, your HTML comments will be preserved in the output. By default, they 
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="CompileOptions-preserveWhitespace"><a href="#CompileOptions-preserveWhitespace" class="permalink" aria-label="Permalink to preserveWhitespace"></a>
 
 ```dts
 preserveWhitespace?: boolean;
@@ -880,7 +880,7 @@ If `true`, whitespace inside and between elements is kept as you typed it, rathe
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="CompileOptions-fragments"><a href="#CompileOptions-fragments" class="permalink" aria-label="Permalink to fragments"></a>
 
 ```dts
 fragments?: 'html' | 'tree';
@@ -903,7 +903,7 @@ Which strategy to use when cloning DOM fragments:
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="CompileOptions-runes"><a href="#CompileOptions-runes" class="permalink" aria-label="Permalink to runes"></a>
 
 ```dts
 runes?: boolean | undefined | ((options: { filename: string }) => boolean | undefined);
@@ -928,7 +928,7 @@ which is likely not what you want. If you're using Vite, consider using [dynamic
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="CompileOptions-discloseVersion"><a href="#CompileOptions-discloseVersion" class="permalink" aria-label="Permalink to discloseVersion"></a>
 
 ```dts
 discloseVersion?: boolean;
@@ -947,7 +947,7 @@ If `true`, exposes the Svelte major version in the browser by adding it to a `Se
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="CompileOptions-compatibility"><a href="#CompileOptions-compatibility" class="permalink" aria-label="Permalink to compatibility"></a>
 
 ```dts
 compatibility?: {/*…*/};
@@ -961,7 +961,7 @@ compatibility?: {/*…*/};
 
 </div>
 
-<div class="ts-block-property-children"><div class="ts-block-property">
+<div class="ts-block-property-children"><div class="ts-block-property" id="CompileOptions-compatibility-componentApi"><a href="#CompileOptions-compatibility-componentApi" class="permalink" aria-label="Permalink to componentApi"></a>
 
 ```dts
 componentApi?: 4 | 5;
@@ -985,7 +985,7 @@ or as an object with a `.render(...)` method when compiling for the server
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="CompileOptions-sourcemap"><a href="#CompileOptions-sourcemap" class="permalink" aria-label="Permalink to sourcemap"></a>
 
 ```dts
 sourcemap?: object | string;
@@ -1005,7 +1005,7 @@ This is usually the preprocessor sourcemap.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="CompileOptions-outputFilename"><a href="#CompileOptions-outputFilename" class="permalink" aria-label="Permalink to outputFilename"></a>
 
 ```dts
 outputFilename?: string;
@@ -1024,7 +1024,7 @@ Used for your JavaScript sourcemap.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="CompileOptions-cssOutputFilename"><a href="#CompileOptions-cssOutputFilename" class="permalink" aria-label="Permalink to cssOutputFilename"></a>
 
 ```dts
 cssOutputFilename?: string;
@@ -1043,7 +1043,7 @@ Used for your CSS sourcemap.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="CompileOptions-hmr"><a href="#CompileOptions-hmr" class="permalink" aria-label="Permalink to hmr"></a>
 
 ```dts
 hmr?: boolean;
@@ -1062,7 +1062,7 @@ If `true`, compiles components with hot reloading support.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="CompileOptions-modernAst"><a href="#CompileOptions-modernAst" class="permalink" aria-label="Permalink to modernAst"></a>
 
 ```dts
 modernAst?: boolean;
@@ -1092,7 +1092,7 @@ The return value of `compile` from `svelte/compiler`
 interface CompileResult {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="CompileResult-js"><a href="#CompileResult-js" class="permalink" aria-label="Permalink to js"></a>
 
 ```dts
 js: {/*…*/};
@@ -1102,7 +1102,7 @@ js: {/*…*/};
 
 The compiled JavaScript
 
-<div class="ts-block-property-children"><div class="ts-block-property">
+<div class="ts-block-property-children"><div class="ts-block-property" id="CompileResult-js-code"><a href="#CompileResult-js-code" class="permalink" aria-label="Permalink to code"></a>
 
 ```dts
 code: string;
@@ -1114,7 +1114,7 @@ The generated code
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="CompileResult-js-map"><a href="#CompileResult-js-map" class="permalink" aria-label="Permalink to map"></a>
 
 ```dts
 map: SourceMap;
@@ -1130,7 +1130,7 @@ A source map
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="CompileResult-css"><a href="#CompileResult-css" class="permalink" aria-label="Permalink to css"></a>
 
 ```dts
 css: null | {/*…*/};
@@ -1140,7 +1140,7 @@ css: null | {/*…*/};
 
 The compiled CSS
 
-<div class="ts-block-property-children"><div class="ts-block-property">
+<div class="ts-block-property-children"><div class="ts-block-property" id="CompileResult-css-code"><a href="#CompileResult-css-code" class="permalink" aria-label="Permalink to code"></a>
 
 ```dts
 code: string;
@@ -1152,7 +1152,7 @@ The generated code
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="CompileResult-css-map"><a href="#CompileResult-css-map" class="permalink" aria-label="Permalink to map"></a>
 
 ```dts
 map: SourceMap;
@@ -1164,7 +1164,7 @@ A source map
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="CompileResult-css-hasGlobal"><a href="#CompileResult-css-hasGlobal" class="permalink" aria-label="Permalink to hasGlobal"></a>
 
 ```dts
 hasGlobal: boolean;
@@ -1180,7 +1180,7 @@ Whether or not the CSS includes global rules
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="CompileResult-warnings"><a href="#CompileResult-warnings" class="permalink" aria-label="Permalink to warnings"></a>
 
 ```dts
 warnings: Warning[];
@@ -1196,7 +1196,7 @@ An array of warning objects that were generated during compilation. Each warning
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="CompileResult-metadata"><a href="#CompileResult-metadata" class="permalink" aria-label="Permalink to metadata"></a>
 
 ```dts
 metadata: {/*…*/};
@@ -1206,7 +1206,7 @@ metadata: {/*…*/};
 
 Metadata about the compiled component
 
-<div class="ts-block-property-children"><div class="ts-block-property">
+<div class="ts-block-property-children"><div class="ts-block-property" id="CompileResult-metadata-runes"><a href="#CompileResult-metadata-runes" class="permalink" aria-label="Permalink to runes"></a>
 
 ```dts
 runes: boolean;
@@ -1223,7 +1223,7 @@ For `compileModule`, this is always `true`
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="CompileResult-ast"><a href="#CompileResult-ast" class="permalink" aria-label="Permalink to ast"></a>
 
 ```dts
 ast: any;
@@ -1265,7 +1265,7 @@ type MarkupPreprocessor = (options: {
 interface ModuleCompileOptions {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ModuleCompileOptions-dev"><a href="#ModuleCompileOptions-dev" class="permalink" aria-label="Permalink to dev"></a>
 
 ```dts
 dev?: boolean;
@@ -1284,7 +1284,7 @@ If `true`, causes extra code to be added that will perform runtime checks and pr
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ModuleCompileOptions-generate"><a href="#ModuleCompileOptions-generate" class="permalink" aria-label="Permalink to generate"></a>
 
 ```dts
 generate?: 'client' | 'server' | false;
@@ -1305,7 +1305,7 @@ If `false`, nothing is generated. Useful for tooling that is only interested in 
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ModuleCompileOptions-filename"><a href="#ModuleCompileOptions-filename" class="permalink" aria-label="Permalink to filename"></a>
 
 ```dts
 filename?: string;
@@ -1318,7 +1318,7 @@ Used for debugging hints and sourcemaps. Your bundler plugin will set it automat
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ModuleCompileOptions-rootDir"><a href="#ModuleCompileOptions-rootDir" class="permalink" aria-label="Permalink to rootDir"></a>
 
 ```dts
 rootDir?: string;
@@ -1337,7 +1337,7 @@ Used for ensuring filenames don't leak filesystem information. Your bundler plug
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ModuleCompileOptions-warningFilter"><a href="#ModuleCompileOptions-warningFilter" class="permalink" aria-label="Permalink to warningFilter"></a>
 
 ```dts
 warningFilter?: (warning: Warning) => boolean;
@@ -1351,7 +1351,7 @@ Use this to filter out warnings. Return `true` to keep the warning, `false` to d
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ModuleCompileOptions-experimental"><a href="#ModuleCompileOptions-experimental" class="permalink" aria-label="Permalink to experimental"></a>
 
 ```dts
 experimental?: {/*…*/};
@@ -1367,7 +1367,7 @@ experimental?: {/*…*/};
 
 Experimental options
 
-<div class="ts-block-property-children"><div class="ts-block-property">
+<div class="ts-block-property-children"><div class="ts-block-property" id="ModuleCompileOptions-experimental-async"><a href="#ModuleCompileOptions-experimental-async" class="permalink" aria-label="Permalink to async"></a>
 
 ```dts
 async?: boolean;
@@ -1446,7 +1446,7 @@ A preprocessor group is a set of preprocessors that are applied to a Svelte file
 interface PreprocessorGroup {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="PreprocessorGroup-name"><a href="#PreprocessorGroup-name" class="permalink" aria-label="Permalink to name"></a>
 
 ```dts
 name?: string;
@@ -1459,7 +1459,7 @@ Name of the preprocessor. Will be a required option in the next major version
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="PreprocessorGroup-markup"><a href="#PreprocessorGroup-markup" class="permalink" aria-label="Permalink to markup"></a>
 
 ```dts
 markup?: MarkupPreprocessor;
@@ -1468,7 +1468,7 @@ markup?: MarkupPreprocessor;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="PreprocessorGroup-style"><a href="#PreprocessorGroup-style" class="permalink" aria-label="Permalink to style"></a>
 
 ```dts
 style?: Preprocessor;
@@ -1477,7 +1477,7 @@ style?: Preprocessor;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="PreprocessorGroup-script"><a href="#PreprocessorGroup-script" class="permalink" aria-label="Permalink to script"></a>
 
 ```dts
 script?: Preprocessor;
@@ -1496,7 +1496,7 @@ The result of a preprocessor run. If the preprocessor does not return a result, 
 interface Processed {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Processed-code"><a href="#Processed-code" class="permalink" aria-label="Permalink to code"></a>
 
 ```dts
 code: string;
@@ -1509,7 +1509,7 @@ The new code
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Processed-map"><a href="#Processed-map" class="permalink" aria-label="Permalink to map"></a>
 
 ```dts
 map?: string | object;
@@ -1522,7 +1522,7 @@ A source map mapping back to the original code
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Processed-dependencies"><a href="#Processed-dependencies" class="permalink" aria-label="Permalink to dependencies"></a>
 
 ```dts
 dependencies?: string[];
@@ -1535,7 +1535,7 @@ A list of additional files to watch for changes
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Processed-attributes"><a href="#Processed-attributes" class="permalink" aria-label="Permalink to attributes"></a>
 
 ```dts
 attributes?: Record<string, string | boolean>;
@@ -1548,7 +1548,7 @@ Only for script/style preprocessors: The updated attributes to set on the tag. I
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Processed-toString"><a href="#Processed-toString" class="permalink" aria-label="Permalink to toString"></a>
 
 ```dts
 toString?: () => string;
