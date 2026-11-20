@@ -3,6 +3,7 @@ the many more, smaller and in rows across the whole width of the window, cut off
 like the logos on the home page. each row drifts slowly and without end, every other one the other
 way, and can be swiped along or back as it does, unless motion is paused or reduced, when the rows
 stay where they are and scroll by hand. tab stops once at each row, and the arrow keys go along it
+and from row to row
 -->
 <script lang="ts">
 	import { prefersReducedMotion } from 'svelte/motion';
@@ -58,38 +59,143 @@ stay where they are and scroll by hand. tab stops once at each row, and the arro
 		return [...row.querySelectorAll<HTMLElement>('ul:not([aria-hidden]) a')];
 	}
 
+	/** how much of a row at either end fades out, where what has focus is not left */
+	const FADE = 0.15;
+
+	/** the scrolling of each row that is on its way somewhere */
+	const glides = new WeakMap<HTMLElement, number>();
+
+	/**
+	 * scrolls a row to where it should be, quickly and easing to a stop, a little longer the further
+	 * it has to go, so the eye can follow where the row went. from wherever it is by now, if it was
+	 * already on its way somewhere else. at once where motion is reduced
+	 */
+	function glide(row: HTMLElement, to: number) {
+		cancelAnimationFrame(glides.get(row) ?? 0);
+
+		const from = row.scrollLeft;
+		to = Math.max(0, Math.min(to, row.scrollWidth - row.clientWidth));
+
+		const distance = Math.abs(to - from);
+		if (distance < 1) return;
+
+		if (prefersReducedMotion.current) {
+			row.scrollLeft = to;
+			return;
+		}
+
+		const duration = Math.min(350, 180 + distance / 8);
+		const start = performance.now();
+
+		const step = (now: number) => {
+			const t = Math.min(1, (now - start) / duration);
+			row.scrollLeft = from + (to - from) * (1 - (1 - t) ** 4);
+			if (t < 1) glides.set(row, requestAnimationFrame(step));
+		};
+
+		glides.set(row, requestAnimationFrame(step));
+	}
+
+	/**
+	 * the one the keyboard is going to in another row, and where across the window the one it was
+	 * picked by was, which may have been its copy
+	 */
+	let want: { link: HTMLElement; left: number } | undefined;
+
+	/**
+	 * brings what has focus in a row that stands still clear of where the row fades out at either
+	 * end, moving the row no further than that takes, and not at all if it already is
+	 */
+	function reveal(row: HTMLElement) {
+		const link = document.activeElement as HTMLElement | null;
+		if (!link || !row.contains(link)) return;
+
+		// first to where the one it was picked by was, without a move to be seen, since a copy looks
+		// the same as what it is a copy of
+		if (want?.link === link) {
+			cancelAnimationFrame(glides.get(row) ?? 0);
+			row.scrollLeft += link.getBoundingClientRect().left - want.left;
+		}
+
+		want = undefined;
+
+		const bounds = row.getBoundingClientRect();
+		const rect = link.getBoundingClientRect();
+		const left = bounds.left + bounds.width * FADE;
+		const right = bounds.right - bounds.width * FADE;
+
+		if (rect.left < left) glide(row, row.scrollLeft + rect.left - left);
+		else if (rect.right > right) glide(row, row.scrollLeft + rect.right - right);
+	}
+
 	/** tab stops where the keyboard last was in the row, however it got there */
 	function enter(event: FocusEvent & { currentTarget: HTMLElement }, index: number) {
+		const row = event.currentTarget;
 		const target = event.target as HTMLElement;
-		const at = links(event.currentTarget).indexOf(target);
+		const at = links(row).indexOf(target);
 
 		if (at !== -1) stops[index] = at;
-		if (target.matches(':focus-visible')) focused = index;
+		if (!target.matches(':focus-visible')) return;
+
+		focused = index;
+
+		// one that drifts does this as it stops
+		if (!row.classList.contains('drifting')) reveal(row);
 	}
 
 	/**
 	 * the arrow keys go along the row, round from its last to its first as the row itself does, and
-	 * home and end to either end of it, so that tab can leave for the next row from anywhere in it
+	 * up and down to whichever is nearest above or below in the next row, and home and end to
+	 * either end of the row, so that tab can leave for the next row from anywhere in it
 	 */
 	function keys(event: KeyboardEvent & { currentTarget: HTMLElement }) {
 		if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
 
-		const all = links(event.currentTarget);
+		const row = event.currentTarget;
+		const all = links(row);
 		const at = all.indexOf(event.target as HTMLElement);
 		if (at === -1) return;
 
-		const to = {
-			ArrowRight: (at + 1) % all.length,
-			ArrowLeft: (at - 1 + all.length) % all.length,
-			Home: 0,
-			End: all.length - 1
-		}[event.key];
+		let to: HTMLElement | undefined;
 
-		if (to === undefined) return;
+		if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
+			const next = event.key === 'ArrowUp' ? row.previousElementSibling : row.nextElementSibling;
+			if (!(next instanceof HTMLElement) || !next.classList.contains('row')) return;
+
+			// the nearest across, of all that are in the row, and what it is a copy of if it is one
+			const rect = all[at].getBoundingClientRect();
+			const middle = rect.left + rect.width / 2;
+			let nearest = Infinity;
+
+			for (const list of next.querySelectorAll('ul')) {
+				[...list.querySelectorAll('a')].forEach((link, i) => {
+					const { left, width } = link.getBoundingClientRect();
+					const away = Math.abs(left + width / 2 - middle);
+					if (away >= nearest) return;
+
+					nearest = away;
+					to = links(next)[i];
+					want = { link: to, left };
+				});
+			}
+		} else {
+			to =
+				all[
+					{
+						ArrowRight: (at + 1) % all.length,
+						ArrowLeft: (at - 1 + all.length) % all.length,
+						Home: 0,
+						End: all.length - 1
+					}[event.key] ?? -1
+				];
+		}
+
+		if (!to) return;
 		event.preventDefault();
 
-		all[to].focus({ preventScroll: true });
-		all[to].scrollIntoView({ inline: 'center', block: 'nearest' });
+		// the row moved by reveal, and the page only as far as shows the row
+		to.focus({ preventScroll: true });
+		to.closest('.row')?.scrollIntoView({ block: 'nearest', inline: 'nearest' });
 	}
 
 	/** the rows that have been put where they start from */
@@ -106,18 +212,22 @@ stay where they are and scroll by hand. tab stops once at each row, and the arro
 			const reverse = index % 2 === 1;
 
 			/**
-			 * how far every other row is set along from the rest, half of one, so they do not line up
-			 * in columns. by its margin as it drifts, and by being scrolled as it stands, so that the
-			 * keyboard can bring the first of it wholly into the window
+			 * how far a row that stands still is scrolled to look as it would drifting: past the room
+			 * left before its first, so the keyboard can bring that clear of where the row fades out,
+			 * and for every other row half of one more, so they do not line up in columns, which is
+			 * by its margin as it drifts
 			 */
 			const shift = () =>
-				reverse
+				row.clientWidth * FADE +
+				(reverse
 					? ((list.firstElementChild as HTMLElement).offsetWidth +
 							parseFloat(getComputedStyle(list).columnGap)) /
 						2
-					: 0;
+					: 0);
 
 			if (!moving || focused === index) {
+				row.classList.add('still');
+
 				// as the page arrives, before anything else has scrolled it
 				if (!placed.has(row)) row.scrollLeft = shift();
 				placed.add(row);
@@ -125,6 +235,7 @@ stay where they are and scroll by hand. tab stops once at each row, and the arro
 			}
 
 			placed.add(row);
+			cancelAnimationFrame(glides.get(row) ?? 0);
 
 			const duration = rows[index].length * PACE * PACES[index % PACES.length];
 
@@ -137,9 +248,11 @@ stay where they are and scroll by hand. tab stops once at each row, and the arro
 			);
 
 			// many laps in, so a hand can take it back as far as it likes without it running out
-			const from = ((((row.scrollLeft - shift()) % lap()) + lap()) % lap()) / lap();
+			const was = row.classList.contains('still') ? row.scrollLeft - shift() : 0;
+			const from = (((was % lap()) + lap()) % lap()) / lap();
 			animation.currentTime = (1000 + (reverse ? 1 - from : from)) * duration;
 
+			row.classList.remove('still');
 			row.classList.add('drifting');
 			row.scrollLeft = 0;
 
@@ -291,12 +404,11 @@ stay where they are and scroll by hand. tab stops once at each row, and the arro
 				cancelAnimationFrame(settling);
 				animation.cancel();
 				row.classList.remove('drifting');
+				row.classList.add('still');
 				row.scrollLeft = (reverse ? lap() - at : at) + shift();
 
 				// and to what the keyboard has reached, which may have been out of the window
-				if (row.contains(document.activeElement)) {
-					document.activeElement?.scrollIntoView({ inline: 'center', block: 'nearest' });
-				}
+				reveal(row);
 			};
 		};
 	}
@@ -339,12 +451,14 @@ stay where they are and scroll by hand. tab stops once at each row, and the arro
 		</div>
 	{/each}
 
-	<!-- how to get along a row, over the top edge of whichever one the keyboard is in -->
+	<!-- how to get about the rows, over the top edge of whichever one the keyboard is in -->
 	<p id="{uid}-keys" class="keys" class:shown={focused !== -1} style:grid-row={focused + 1 || 1}>
 		<kbd aria-hidden="true">←</kbd>
+		<kbd aria-hidden="true">↑</kbd>
+		<kbd aria-hidden="true">↓</kbd>
 		<kbd aria-hidden="true">→</kbd>
-		<span class="visually-hidden">Left and right arrow keys</span>
-		for more in this row
+		<span class="visually-hidden">Arrow keys</span>
+		for more sites
 	</p>
 </div>
 
@@ -402,10 +516,16 @@ stay where they are and scroll by hand. tab stops once at each row, and the arro
 			touch-action: pan-y pinch-zoom;
 		}
 
-		/* every other one half of one along, so they do not line up in columns. scrolled that far
-		   instead where it does not drift */
-		&:global(.drifting):nth-child(even) .track {
+		/* every other one half of one along, so they do not line up in columns */
+		&:nth-child(even) .track {
 			margin-left: calc((var(--width) + var(--gap)) / -2);
+		}
+
+		/* scrolled that far instead where it stands still, past room before its first as wide as
+		   the row fades out over, which the keyboard can then bring clear of it */
+		&:global(.still) .track {
+			margin-left: 0;
+			padding-left: 15%;
 		}
 	}
 
