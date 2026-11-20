@@ -16,9 +16,10 @@
 			can_create: Set<string>;
 			can_remove: Set<string>;
 		};
+		onselect?: (name: string) => void;
 	}
 
-	let { exercise, mobile = false, workspace, constraints }: Props = $props();
+	let { exercise, mobile = false, workspace, constraints, onselect }: Props = $props();
 
 	const hidden = new Set(['__client.js', 'node_modules', '__delete']);
 
@@ -62,6 +63,9 @@
 					: { type, name, basename };
 
 			workspace.add(file);
+			if (type === 'file') {
+				onselect?.(name);
+			}
 		},
 
 		rename: async (to_rename, new_name) => {
@@ -103,6 +107,7 @@
 
 		select: (name) => {
 			workspace.select(name);
+			onselect?.(name);
 		},
 
 		// svelte-ignore state_referenced_locally
