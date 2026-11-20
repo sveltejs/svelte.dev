@@ -8,6 +8,11 @@ import {
 	strip_origin
 } from '@sveltejs/site-kit/markdown';
 
+/** exports whose examples are fragments that would not pass type checking */
+const unchecked_examples: Record<string, string[]> = {
+	'svelte/renderer': ['createRenderer', 'Renderer']
+};
+
 export async function read_types(base: string, modules: Modules) {
 	{
 		const ignore_list = [
@@ -31,12 +36,16 @@ export async function read_types(base: string, modules: Modules) {
 				const comment = strip_origin(statement.jsDoc?.[0].comment ?? '');
 
 				// @ts-ignore
-				modules.push({
-					name,
-					comment,
-					// @ts-ignore
-					...(await get_types(code, statement.body?.statements))
-				});
+				const { types, exports } = await get_types(code, statement.body?.statements);
+
+				for (const declaration of [...types, ...exports]) {
+					if (unchecked_examples[name]?.includes(declaration.name)) {
+						declaration.comment = declaration.comment.replace(/^```(js|ts)$/gm, '$&\n// @noErrors');
+					}
+				}
+
+				// @ts-ignore
+				modules.push({ name, comment, types, exports });
 			}
 		}
 	}
