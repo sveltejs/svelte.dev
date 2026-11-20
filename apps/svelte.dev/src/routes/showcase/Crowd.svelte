@@ -471,7 +471,7 @@ from row to row, the row coming round to whatever they reach
 		<kbd aria-hidden="true">↓</kbd>
 		<kbd aria-hidden="true">→</kbd>
 		<span class="visually-hidden">Arrow keys</span>
-		for more sites
+		to move around
 	</p>
 </div>
 
