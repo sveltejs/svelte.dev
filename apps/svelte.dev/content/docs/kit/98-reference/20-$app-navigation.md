@@ -964,12 +964,7 @@ For the `to` target, this represents the scroll position that will be or was res
 
 ```dts
 type NavigationType =
-	| 'enter'
-	| 'form'
-	| 'leave'
-	| 'link'
-	| 'goto'
-	| 'popstate';
+	'enter' | 'form' | 'leave' | 'link' | 'goto' | 'popstate';
 ```
 
 </div>

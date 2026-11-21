@@ -2632,10 +2632,7 @@ namespace Csp {
 	type CryptoSource =
 		`${'nonce' | 'sha256' | 'sha384' | 'sha512'}-${string}`;
 	type FrameSource =
-		| HostSource
-		| SchemeSource
-		| 'self'
-		| 'none';
+		HostSource | SchemeSource | 'self' | 'none';
 	type HostNameScheme = `${string}.${string}` | 'localhost';
 	type HostSource =
 		`${HostProtocolSchemes}${HostNameScheme}${PortScheme}`;
@@ -2653,10 +2650,7 @@ namespace Csp {
 		| 'filesystem:'
 		| (`${string}:` & {});
 	type Source =
-		| HostSource
-		| SchemeSource
-		| CryptoSource
-		| BaseSource;
+		HostSource | SchemeSource | CryptoSource | BaseSource;
 	type Sources = Source[];
 }
 ```
@@ -3012,12 +3006,10 @@ referrer?: Array<
 
 ```dts
 type DeepPartial<T> = T extends
-	| Record<PropertyKey, unknown>
-	| unknown[]
+	Record<PropertyKey, unknown> | unknown[]
 	? {
 			[K in keyof T]?: T[K] extends
-				| Record<PropertyKey, unknown>
-				| unknown[]
+				Record<PropertyKey, unknown> | unknown[]
 				? DeepPartial<T[K]>
 				: T[K];
 		}
@@ -3249,10 +3241,7 @@ message: string;
 
 ```dts
 type PrerenderHttpErrorHandlerValue =
-	| 'fail'
-	| 'warn'
-	| 'ignore'
-	| PrerenderHttpErrorHandler;
+	'fail' | 'warn' | 'ignore' | PrerenderHttpErrorHandler;
 ```
 
 </div>
@@ -3280,10 +3269,7 @@ interface PrerenderInvalidUrlHandler {/*…*/}
 
 ```dts
 type PrerenderInvalidUrlHandlerValue =
-	| 'fail'
-	| 'warn'
-	| 'ignore'
-	| PrerenderInvalidUrlHandler;
+	'fail' | 'warn' | 'ignore' | PrerenderInvalidUrlHandler;
 ```
 
 </div>
@@ -3321,10 +3307,7 @@ interface PrerenderMissingIdHandler {/*…*/}
 
 ```dts
 type PrerenderMissingIdHandlerValue =
-	| 'fail'
-	| 'warn'
-	| 'ignore'
-	| PrerenderMissingIdHandler;
+	'fail' | 'warn' | 'ignore' | PrerenderMissingIdHandler;
 ```
 
 </div>
@@ -3362,10 +3345,7 @@ interface PrerenderUnseenRoutesHandler {/*…*/}
 
 ```dts
 type PrerenderUnseenRoutesHandlerValue =
-	| 'fail'
-	| 'warn'
-	| 'ignore'
-	| PrerenderUnseenRoutesHandler;
+	'fail' | 'warn' | 'ignore' | PrerenderUnseenRoutesHandler;
 ```
 
 </div>
