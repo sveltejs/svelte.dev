@@ -72,6 +72,9 @@ from row to row, the row coming round to whatever they reach
 	/** the row with the site the address names, kept where that site can be seen */
 	let linked = $state(-1);
 
+	/** what each row does as the address comes to name another site */
+	const arrivals = new Set<() => void>();
+
 	/** what brings each row round to one of its links */
 	const reveals = new WeakMap<HTMLElement, (link: HTMLElement) => void>();
 
@@ -466,10 +469,11 @@ from row to row, the row coming round to whatever they reach
 			}
 
 			untrack(arrive);
-			window.addEventListener('hashchange', arrive, { signal });
+			arrivals.add(arrive);
 
 			return () => {
 				listeners.abort();
+				arrivals.delete(arrive);
 				reveals.delete(row);
 				cancelAnimationFrame(settling);
 				cancelAnimationFrame(gliding);
@@ -481,11 +485,13 @@ from row to row, the row coming round to whatever they reach
 	}
 </script>
 
+<svelte:window onhashchange={() => arrivals.forEach((arrive) => arrive())} />
+
 <div
 	class="crowd"
 	{@attach on_screen((entry) => (seen = entry.isIntersecting), { rootMargin: '10%' })}
 >
-	{#each rows as row, index}
+	{#each rows as row, index (row[0].id)}
 		<!-- svelte-ignore a11y_no_static_element_interactions -->
 		<div
 			class="row"
@@ -521,7 +527,7 @@ from row to row, the row coming round to whatever they reach
 	{/each}
 
 	<!-- how to get about the rows, over the top edge of whichever one the keyboard is in -->
-	<p id="{uid}-keys" class="keys" class:shown={focused !== -1} style:grid-row={hinted + 1}>
+	<p id="{uid}-keys" class={['keys', { shown: focused !== -1 }]} style:grid-row={hinted + 1}>
 		<kbd aria-hidden="true">←</kbd>
 		<kbd aria-hidden="true">↑</kbd>
 		<kbd aria-hidden="true">↓</kbd>

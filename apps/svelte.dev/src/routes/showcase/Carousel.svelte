@@ -125,7 +125,7 @@
 
 	/** the arc the cards stand in, and the cards, in the order of their sites */
 	let space: HTMLElement;
-	const cards: HTMLElement[] = [];
+	const cards = $state<HTMLElement[]>([]);
 
 	/**
 	 * where nothing moves the cards change places at once, so the arc dims for a moment as they do,
