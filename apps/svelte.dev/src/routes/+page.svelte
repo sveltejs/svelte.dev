@@ -13,8 +13,8 @@
 	<title>Svelte • Web development for the rest of us</title>
 
 	<meta name="twitter:title" content="Svelte" />
-	<meta name="twitter:description" content="Web development for the rest of us" />
-	<meta name="description" content="Web development for the rest of us" />
+	<meta name="twitter:description" content="Web development people who give a shit" />
+	<meta name="description" content="Web development for people who give a shit" />
 </svelte:head>
 
 <div class="home">
