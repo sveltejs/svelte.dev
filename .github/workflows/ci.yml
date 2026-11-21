@@ -55,6 +55,9 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: type check
         run: pnpm -r package && pnpm check
+        env:
+          # avoids being rate limited when fetching contributors
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: lint
         if: (${{ success() }} || ${{ failure() }}) # ensures this step runs even if previous steps fail (avoids multiple runs uncovering different issues at different steps)
         run: pnpm lint

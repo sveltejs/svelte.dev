@@ -1,26 +1,32 @@
 // @ts-check
 import { Jimp } from 'jimp';
-import { stat, writeFile } from 'node:fs/promises';
+import { existsSync } from 'node:fs';
+import { writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { is_blank } from './utils.js';
+import { has_supporters, is_blank, write_fallback } from './utils.js';
 
 const force = process.env.FORCE_UPDATE === 'true';
+const fallback = process.env.ALLOW_FALLBACK === 'true';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const out = path.resolve(__dirname, '../src/routes/_home/Supporters/donors.js');
+const sprite_out = path.resolve(__dirname, '../src/routes/_home/Supporters/donors.jpg');
+
+// builds regenerate a fallback list, so they never ship without supporters
+if (!force && (fallback ? existsSync(out) : has_supporters(out))) {
+	const relative = path.relative(process.cwd(), out);
+	console.info(`[update/donors] ${relative} exists. Skipping`);
+	process.exit(0);
+}
 
 try {
-	if (!force && (await stat(out))) {
-		const relative = path.relative(process.cwd(), out);
-		console.info(`[update/donors] ${relative} exists. Skipping`);
-		process.exit(0);
-	}
-} catch {
 	const MAX = 48;
 	const SIZE = 128;
 
 	const res = await fetch('https://opencollective.com/svelte/members/all.json');
+	if (!res.ok) throw new Error(`Could not load donors: ${res.status}`);
+
 	const donors = await res.json();
 
 	if (!Array.isArray(donors)) throw new Error('Expected an array');
@@ -61,13 +67,22 @@ try {
 		sprite.composite(included[i].image, i * SIZE, 0);
 	}
 
-	await sprite.write(
-		// @ts-expect-error
-		fileURLToPath(new URL(`../src/routes/_home/Supporters/donors.jpg`, import.meta.url)),
-		{ quality: 80 }
-	);
+	// @ts-expect-error
+	await sprite.write(sprite_out, { quality: 80 });
 
 	const str = `[\n\t${included.map((a) => `${JSON.stringify(a.backer.name)}`).join(',\n\t')}\n]`;
 
-	writeFile(out, `export default ${str};`);
+	await writeFile(out, `export default ${str};`);
+} catch (err) {
+	if (has_supporters(out)) {
+		// keep the existing files when a forced update fails
+		console.warn(`[update/donors] Could not load donors, keeping existing list: ${err}`);
+	} else if (fallback) {
+		// type checking and local dev don't need the real list, so don't let
+		// rate limiting or network failures break them
+		console.warn(`[update/donors] Could not load donors, writing an empty list: ${err}`);
+		await write_fallback(out, sprite_out);
+	} else {
+		throw err;
+	}
 }
