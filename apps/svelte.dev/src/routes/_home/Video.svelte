@@ -10,7 +10,7 @@
 
 	let video: HTMLVideoElement;
 
-	let paused = $state(false);
+	let paused = $state(true);
 	let muted = $state(true);
 	let captioned = $state(true);
 	let has_used_controls = $state(false);
