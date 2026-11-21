@@ -8,7 +8,7 @@
 
 <div class="hero">
 	<div class="hero-content">
-		<h1>web development for the rest of us</h1>
+		<h1>web development for people who give a shit</h1>
 		<a href="/docs" class="cta">get started <Icon name="arrow-right" /></a>
 	</div>
 
