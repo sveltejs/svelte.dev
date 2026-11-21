@@ -515,10 +515,7 @@ type RemoteFormFields<T> =
 	WillRecurseIndefinitely<T> extends true
 		? RecursiveFormFields
 		: NonNullable<T> extends
-					| string
-					| number
-					| boolean
-					| File
+					string | number | boolean | File
 			? RemoteFormField<NonNullable<T>>
 			: IsImageInputValue<NonNullable<T>> extends true
 				? RemoteFormField<
@@ -586,10 +583,7 @@ type RemoteFormInvalidField<T> =
 	WillRecurseIndefinitely<T> extends true
 		? Record<string | number, any>
 		: NonNullable<T> extends
-					| string
-					| number
-					| boolean
-					| File
+					string | number | boolean | File
 			? (message: string) => StandardSchemaV1.Issue
 			: NonNullable<T> extends Array<infer U>
 				? {
