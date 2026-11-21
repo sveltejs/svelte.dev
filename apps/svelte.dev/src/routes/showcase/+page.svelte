@@ -12,12 +12,13 @@
 	import { Player, paused_class, paused_key, set_player } from './player.svelte.ts';
 	import { categories, hero, members, more } from './sites.ts';
 
-	const sections = categories.map((category, n) => {
+	const sections = categories.flatMap((category, n) => {
 		// the large ones go to those that move, on the left in one category and the right in the next
 		const tiles = arrange(members(category.id), (site) => site.clip !== undefined, n % 2 === 1);
 
 		// the first shown in the category, whose screenshot is on the link to it and moves to it
-		return { ...category, tiles, lead: tiles[0].site };
+		// one with nothing in it is left out, which the tests catch first
+		return tiles.length > 0 ? [{ ...category, tiles, lead: tiles[0].site }] : [];
 	});
 
 	/** plays the clips in the list, and says whether anything moves on its own */

@@ -12,7 +12,12 @@ the closing lines of the page, with the command to start a project of your own
 	let uncopy: ReturnType<typeof setTimeout> | undefined;
 
 	async function copy() {
-		await navigator.clipboard.writeText(command);
+		try {
+			await navigator.clipboard.writeText(command);
+		} catch {
+			// not allowed to, so no tick
+			return;
+		}
 
 		copied = true;
 		clearTimeout(uncopy);

@@ -327,9 +327,11 @@ from row to row, the row coming round to whatever they reach
 
 			// by a finger or a pen. a mouse stops the row by pointing at it, to click what is in it
 			function down(event: PointerEvent) {
+				// whatever is pressed next is not the end of the last drag
+				dragged = false;
+
 				if (event.pointerType === 'mouse' || !event.isPrimary) return;
 				start = { id: event.pointerId, x: event.clientX, y: event.clientY };
-				dragged = false;
 				if (linked === index) linked = -1;
 
 				// a finger put down on one still flying from a swipe stops it there
@@ -414,6 +416,9 @@ from row to row, the row coming round to whatever they reach
 			function click(event: MouseEvent) {
 				if (!dragged) return;
 				dragged = false;
+
+				// one from the keyboard is no part of a drag, if none followed the last
+				if (event.detail === 0) return;
 				event.preventDefault();
 				event.stopPropagation();
 			}

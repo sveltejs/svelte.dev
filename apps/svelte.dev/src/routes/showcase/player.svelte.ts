@@ -49,7 +49,7 @@ export class Player {
 
 		if (!this.autoplay) {
 			for (const host of document.querySelectorAll<HTMLElement>('[data-playing]')) this.stop(host);
-		} else if (!prefersReducedMotion.current) {
+		} else if (may_move()) {
 			for (const [host, id] of this.#visible) this.play(host, id);
 		}
 	}
@@ -94,15 +94,11 @@ export class Player {
 
 		if (!video.src) video.src = clips[id];
 
-		// shown once it moves, so one still loading never covers the screenshot with a blank frame
-		video.addEventListener(
-			'playing',
-			() => {
-				if (video.paused) return;
-				host.dataset.playing = '';
-			},
-			{ once: true }
-		);
+		// shown once it moves, so one still loading never covers the screenshot with a blank frame.
+		// the one listener however often it is played, since none is told when it is playing already
+		video.onplaying = () => {
+			if (!video.paused) host.dataset.playing = '';
+		};
 		video.play().catch(() => {});
 	}
 
