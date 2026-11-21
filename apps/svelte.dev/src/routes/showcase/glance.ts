@@ -4,6 +4,9 @@ import { clips, cropped, full } from './media.ts';
 /** how far each fling goes, relative to the others, so it reads as a hand on the trackpad */
 const FLINGS = [1, 1.3, 0.8, 1.15, 0.9, 1.25, 0.7, 1.05];
 
+/** what to do once the whole screenshot has loaded, for those the pointer is still on */
+const waiting = new WeakMap<HTMLImageElement, () => void>();
+
 /**
  * swaps in the whole screenshot once a mouse rests on the link to a site, and marks it once it
  * loads so the page can scroll down it, or plays its clip if it has one, in the given frame.
@@ -43,16 +46,18 @@ export function lengthen(event: PointerEvent, host: HTMLElement, id: string, pla
 	const slide = img.parentElement;
 	if (!slide || full[id] === cropped[id] || whole.h / whole.w < 0.7) return;
 
-	let left = false;
 	const timer = setTimeout(() => {
-		if (img.dataset.long === 'loaded') glance(slide, img);
-		else swap(img, id, () => left || glance(slide, img));
+		if (img.dataset.long === 'loaded') return glance(slide, img);
+
+		// whichever visit it is still on by then, since it may have left and come back meanwhile
+		waiting.set(img, () => glance(slide, img));
+		swap(img, id, () => waiting.get(img)?.());
 	}, 100);
 
 	target.addEventListener(
 		'pointerleave',
 		() => {
-			left = true;
+			waiting.delete(img);
 			clearTimeout(timer);
 			settle(slide, img);
 		},

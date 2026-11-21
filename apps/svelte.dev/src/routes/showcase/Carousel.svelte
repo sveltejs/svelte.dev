@@ -240,6 +240,9 @@
 	 * the one coming to the front
 	 */
 	async function key(event: KeyboardEvent) {
+		// with another key they are the browser's, to go back and forward
+		if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+
 		const by = event.key === 'ArrowLeft' ? -1 : event.key === 'ArrowRight' ? 1 : 0;
 		if (by === 0) return;
 

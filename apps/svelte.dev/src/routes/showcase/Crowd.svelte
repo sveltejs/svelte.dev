@@ -6,6 +6,7 @@ where they are until moved by hand. tab stops once at each row, and the arrow ke
 from row to row, the row coming round to whatever they reach
 -->
 <script lang="ts">
+	import { untrack } from 'svelte';
 	import { prefersReducedMotion } from 'svelte/motion';
 	import { on_screen } from './on-screen.ts';
 	import { get_player } from './player.svelte.ts';
@@ -68,6 +69,9 @@ from row to row, the row coming round to whatever they reach
 	/** a key held down, which the rows keep up with rather than ease after */
 	let held = false;
 
+	/** the row with the site the address names, kept where that site can be seen */
+	let linked = $state(-1);
+
 	/** what brings each row round to one of its links */
 	const reveals = new WeakMap<HTMLElement, (link: HTMLElement) => void>();
 
@@ -78,6 +82,7 @@ from row to row, the row coming round to whatever they reach
 		const at = links(row).indexOf(target);
 
 		if (at !== -1) stops[index] = at;
+		if (linked === index) linked = -1;
 		if (!target.matches(':focus-visible')) return;
 
 		focused = hinted = index;
@@ -178,7 +183,8 @@ from row to row, the row coming round to whatever they reach
 			row.scrollLeft = 0;
 
 			/** free to drift, with nothing holding it where it is */
-			const free = () => moving && seen && pointed !== index && focused !== index;
+			const free = () =>
+				moving && seen && pointed !== index && focused !== index && linked !== index;
 
 			$effect(() => {
 				if (free()) animation.play();
@@ -324,6 +330,7 @@ from row to row, the row coming round to whatever they reach
 				if (event.pointerType === 'mouse' || !event.isPrimary) return;
 				start = { id: event.pointerId, x: event.clientX, y: event.clientY };
 				dragged = false;
+				if (linked === index) linked = -1;
 
 				// a finger put down on one still flying from a swipe stops it there
 				if (Math.abs(animation.playbackRate) > 3) {
@@ -436,6 +443,26 @@ from row to row, the row coming round to whatever they reach
 			row.addEventListener('click', click, { signal, capture: true });
 			row.addEventListener('wheel', wheel, { signal, passive: false });
 
+			// a link to one of its sites brings the row round to it at once, and keeps it there
+			// until it is pointed at or the address names another
+			function arrive() {
+				const item = document.getElementById(location.hash.slice(1));
+				const link = item && list.contains(item) ? item.querySelector('a') : null;
+
+				if (!link) {
+					if (linked === index) linked = -1;
+					return;
+				}
+
+				linked = index;
+				held = true;
+				reveals.get(row)?.(link);
+				held = false;
+			}
+
+			untrack(arrive);
+			window.addEventListener('hashchange', arrive, { signal });
+
 			return () => {
 				listeners.abort();
 				reveals.delete(row);
@@ -458,7 +485,11 @@ from row to row, the row coming round to whatever they reach
 		<div
 			class="row"
 			style:grid-row={index + 1}
-			onpointerenter={(event) => event.pointerType === 'mouse' && (pointed = index)}
+			onpointerenter={(event) => {
+				if (event.pointerType !== 'mouse') return;
+				pointed = index;
+				if (linked === index) linked = -1;
+			}}
 			onpointerleave={() => pointed === index && (pointed = -1)}
 			onfocusin={(event) => enter(event, index)}
 			onkeydown={keys}
