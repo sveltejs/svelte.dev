@@ -3032,7 +3032,9 @@ type HasNonOptionalBoolean<T> =
 				? HasNonOptionalBoolean<U>
 				: T extends Record<string, any>
 					? {
-							[K in keyof T]: HasNonOptionalBoolean<T[K]>;
+							[K in keyof T]: [T[K]] extends [true]
+								? never
+								: HasNonOptionalBoolean<T[K]>;
 						}[keyof T]
 					: never;
 ```
