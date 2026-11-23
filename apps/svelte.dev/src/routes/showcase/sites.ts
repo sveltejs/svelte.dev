@@ -2,6 +2,7 @@
 // the first in each category is shown larger, so make it well known with a good screenshot
 // the rest go from best known down by their rank on https://tranco-list.eu, unranked last
 // a smaller site goes in MORE at the end of this file too, to show after the categories instead
+// the rest of how to add one is in scripts/sync-showcase/README.md
 
 export type Category =
 	'brands' | 'business' | 'news' | 'entertainment' | 'public' | 'ai' | 'tools' | 'developers';

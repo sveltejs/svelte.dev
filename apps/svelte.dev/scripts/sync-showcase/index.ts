@@ -9,7 +9,11 @@
  * opens a window, gives you two minutes per site to pass any checks and waits for enter
  * before each screenshot, so run it on your own machine
  *
- * needs a playwright browser, pnpm exec playwright install chromium
+ * a page its site's robots.txt disallows is never loaded by the script on its own, only with
+ * --headed, where you are the one visiting it
+ *
+ * needs a playwright browser, pnpm exec playwright install chromium. run from apps/svelte.dev,
+ * and see the README beside this file before adding a site
  *
  * @example
  * pnpm sync-showcase                # every site
@@ -18,6 +22,7 @@
  * pnpm sync-showcase --check        # check without taking screenshots
  * pnpm sync-showcase --headed       # sites that block headless browsers
  * pnpm sync-showcase --clip         # record the clips of sites with one, which needs ffmpeg
+ * pnpm sync-showcase --rank         # how well known each site is, and any out of order
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -34,7 +39,9 @@ import { arrange } from '../../src/routes/showcase/arrange.ts';
 import { categories, members, sites, type Site } from '../../src/routes/showcase/sites.ts';
 import { capture, extend } from './capture.ts';
 import { detect, finish_animations, hide_popups, pause_videos } from './in-page.ts';
+import { rank } from './rank.ts';
 import { record } from './record.ts';
+import { permitted } from './robots.ts';
 import { CLIPS, SCREENSHOTS, VIEWPORT, has_screenshot, screenshot_files } from './shared.ts';
 
 // as far down a long page as the screenshot goes, for the page to scroll down it on hover
@@ -71,9 +78,15 @@ const { values, positionals } = parseArgs({
 		check: { type: 'boolean', default: false },
 		missing: { type: 'boolean', default: false },
 		headed: { type: 'boolean', default: false },
-		clip: { type: 'boolean', default: false }
+		clip: { type: 'boolean', default: false },
+		rank: { type: 'boolean', default: false }
 	}
 });
+
+if (values.rank) {
+	await rank();
+	process.exit(0);
+}
 
 const unknown = positionals.filter((id) => !sites.some((site) => site.id === id));
 if (unknown.length > 0) {
@@ -136,6 +149,11 @@ if (problems.length > 0) {
 }
 
 async function visit(browser: Browser, site: Site) {
+	// only with someone at the window where the site asks scripts to keep out
+	if (!values.headed && !(await permitted(site.screenshot?.url ?? site.url))) {
+		return 'its robots.txt disallows this page, so it is only taken by hand with --headed';
+	}
+
 	const scale = WIDE.has(site.id) ? 2 : 1;
 
 	const context = await browser.newContext({

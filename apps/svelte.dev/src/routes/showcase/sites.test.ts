@@ -15,6 +15,13 @@ describe('sites', () => {
 		expect(ids).toEqual([...new Set(ids)]);
 	});
 
+	it('each have a name and a description', () => {
+		for (const site of sites) {
+			expect(site.name.trim(), site.id).not.toBe('');
+			expect(site.description.trim(), site.id).not.toBe('');
+		}
+	});
+
 	it('each have a screenshot, and no screenshot is left without a site', () => {
 		expect([...screenshots].toSorted()).toEqual(sites.map((site) => site.id).toSorted());
 	});
