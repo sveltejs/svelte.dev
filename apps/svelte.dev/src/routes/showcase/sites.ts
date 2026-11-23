@@ -126,6 +126,18 @@ export const sites: Site[] = [
 		clip: true
 	},
 	{
+		id: 'decathlon',
+		name: 'Decathlon',
+		// the cart, which is the part of the site made with sveltekit
+		url: 'https://www.decathlon.fr/checkout/cart',
+		// the start of the one at https://www.decathlon.co.uk/, in english
+		description: 'Shop 70+ sports in-store & online, free shipping on select in-app purchases.',
+		category: 'brands',
+		// with something put in the cart by hand first, in the window that --headed opens, since
+		// it is bare when empty. the site turns away browsers run by scripts
+		screenshot: { headed: true }
+	},
+	{
 		id: 'alaska-airlines',
 		name: 'Alaska Airlines',
 		url: 'https://www.alaskaair.com/search/',
