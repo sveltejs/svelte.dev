@@ -868,6 +868,16 @@ export const sites: Site[] = [
 		clip: true
 	},
 	{
+		id: 'firebase-studio',
+		name: 'Firebase Studio',
+		url: 'https://firebase.studio/',
+		description:
+			'Firebase Studio is an entirely web-based workspace for full-stack application development, complete with the latest generative AI from Gemini, and full-fidelity app previews, powered by cloud emulators.',
+		category: 'developers',
+		// without the notice across the top that it is to close
+		screenshot: { hide: ['#sunset-banner'] }
+	},
+	{
 		id: 'evidence',
 		name: 'Evidence',
 		url: 'https://evidence.dev/',
