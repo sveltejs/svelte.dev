@@ -882,7 +882,8 @@ export const sites: Site[] = [
 	},
 	{
 		id: 'firebase-studio',
-		name: 'Firebase Studio',
+		// renamed at a maintainer's request; the site calls itself Firebase Studio
+		name: 'Google’s Firebase Studio',
 		url: 'https://firebase.studio/',
 		description:
 			'Firebase Studio is an entirely web-based workspace for full-stack application development, complete with the latest generative AI from Gemini, and full-fidelity app previews, powered by cloud emulators.',
