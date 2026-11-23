@@ -827,7 +827,8 @@ export const sites: Site[] = [
 	},
 	{
 		id: 'crates-io',
-		name: 'crates.io',
+		// renamed at a maintainer's request; the site calls itself crates.io
+		name: 'Rust Package Registry',
 		url: 'https://crates.io/',
 		description:
 			'A central registry for sharing crates, which are packages or libraries written in Rust',
@@ -885,8 +886,8 @@ export const sites: Site[] = [
 		// renamed at a maintainer's request; the site calls itself Firebase Studio
 		name: 'Google’s Firebase Studio',
 		url: 'https://firebase.studio/',
-		description:
-			'Firebase Studio is an entirely web-based workspace for full-stack application development, complete with the latest generative AI from Gemini, and full-fidelity app previews, powered by cloud emulators.',
+		// the start of its own, without its name, at a maintainer's request
+		description: 'An entirely web-based workspace for full-stack application development',
 		category: 'developers',
 		// without the notice across the top that it is to close
 		screenshot: { hide: ['#sunset-banner'] }
