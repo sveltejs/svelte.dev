@@ -16,7 +16,7 @@
 	<header>
 		<h2 id={hash}>
 			<span>{title}</span>
-			<a href="#{hash}" class="permalink" aria-label="permalink">aa</a>
+			<a href="#{hash}" class="permalink" aria-label="permalink"></a>
 		</h2>
 
 		{#if description}
