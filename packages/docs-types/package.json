@@ -20,7 +20,7 @@
 		"@testing-library/svelte": "^5.3.1",
 		"@testing-library/user-event": "^14.6.1",
 		"sv": "^1.5.0",
-		"svelte": "catalog:",
+		"svelte": "https://pkg.svelte.dev/svelte/c/847949a684aa018bb03d77db25c4f8b423b7dbb0",
 		"valibot": "^1.5.0",
 		"vite": "catalog:",
 		"vitest": "catalog:"
