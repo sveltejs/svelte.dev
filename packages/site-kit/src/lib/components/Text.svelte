@@ -538,7 +538,6 @@
 			height: 2.2rem;
 			top: calc(50% - 1rem);
 
-			/* a mask on the link itself would clip the focus ring */
 			&::before {
 				content: '';
 				position: absolute;
