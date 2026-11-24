@@ -425,6 +425,11 @@ const FEATURED: {
 	}
 ];
 
+/** npm dist-tag that `sync-packages` reads instead of `latest` */
+const DIST_TAGS: Record<string, string> = {
+	'svelte-kit-sst': 'two'
+};
+
 const OFFICIAL = [
 	/^@sveltejs\//,
 	'prettier-plugin-svelte',
@@ -736,6 +741,7 @@ function calculate_homepage(pkg: PackageKey & PackageNpm): string {
 
 export const PACKAGES_META = {
 	FEATURED,
+	DIST_TAGS,
 
 	calculate_description,
 	calculate_homepage,

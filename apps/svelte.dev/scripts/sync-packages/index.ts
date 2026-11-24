@@ -121,8 +121,11 @@ async function getNpmAndGitHubData(pkg: string): Promise<PackageKey & PackageNpm
 	// delete npmInfo.versions;
 	// console.log(`npmInfo`, npmInfo);
 
+	const version = npmInfo['dist-tags'][PACKAGES_META.DIST_TAGS[pkg]] ?? npmInfo['dist-tags'].latest;
+	const pkgInfo = npmInfo.versions[version];
+
 	const npm_description = npmInfo.description;
-	const raw_repo_url: string = npmInfo.repository?.url ?? '';
+	const raw_repo_url: string = pkgInfo.repository?.url ?? npmInfo.repository?.url ?? '';
 	let repo_url = raw_repo_url
 		?.replace(/^git\+/, '')
 		.replace(/\.git$/, '')
@@ -141,11 +144,9 @@ async function getNpmAndGitHubData(pkg: string): Promise<PackageKey & PackageNpm
 	const git_repo = repo_url?.split('/')[4];
 
 	const authors = npmInfo.maintainers?.map((m: { name: string }) => m.name);
-	const homepage = npmInfo.homepage;
+	const homepage = pkgInfo.homepage ?? npmInfo.homepage;
 	const downloads = npmDlInfo.downloads;
-	const version = npmInfo['dist-tags'].latest;
 	const updated = npmInfo.time[version];
-	const pkgInfo = npmInfo.versions[version];
 	const deprecated_reason = pkgInfo.deprecated;
 
 	const svelte_range =
