@@ -9,7 +9,9 @@ export function load({ url }) {
 
 	// redirect to v2 REPL if appropriate
 	if (version && /^[^>]?[12]/.test(version)) {
-		redirect(302, `https://v2.svelte.dev/repl?${query}`);
+		redirect(302, `https://v2.svelte.dev/repl?${query}`, {
+			external: true
+		});
 	}
 
 	const id = gist || example || 'hello-world';

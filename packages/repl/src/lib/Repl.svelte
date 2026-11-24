@@ -79,7 +79,8 @@
 			imports: bundler!.result?.imports ?? [],
 			files: workspace.file_nodes,
 			tailwind: workspace.tailwind,
-			aliases: workspace.aliases
+			aliases: workspace.aliases,
+			async: workspace.compiler_options.async
 		};
 	}
 
@@ -88,11 +89,12 @@
 		files: File[];
 		tailwind?: boolean;
 		aliases?: Record<string, string>;
+		async?: boolean;
 	}) {
 		// Await promise so that users (v0 in this case) can know when the bundling is done
 		await workspace.reset(
 			data.files,
-			{ tailwind: data.tailwind ?? false, aliases: data.aliases },
+			{ tailwind: data.tailwind ?? false, aliases: data.aliases, async: data.async },
 			'App.svelte'
 		);
 	}
@@ -191,7 +193,11 @@
 			event.returnValue = '';
 		}
 	}
-	let mobile = $derived(width < 540);
+	// 54rem so the breakpoint scales with the font size
+	const root_font_size = BROWSER
+		? parseFloat(getComputedStyle(document.documentElement).fontSize)
+		: 10;
+	let mobile = $derived(width < 54 * root_font_size);
 
 	$effect(() => {
 		$toggleable = mobile && orientation === 'columns' && embedded !== 'output-only';
@@ -339,7 +345,7 @@
 	}
 
 	/* on mobile, override the <SplitPane> controls */
-	@media (max-width: 799px) {
+	@media (max-width: 49.9375em) {
 		.container-normal :global {
 			[data-pane='main'] {
 				--pos: 50% !important;

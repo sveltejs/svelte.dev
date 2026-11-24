@@ -3,7 +3,7 @@ The main shell of the application. It provides a slot for the top navigation, th
 -->
 
 <script lang="ts">
-	import { navigating } from '$app/stores';
+	import { navigating } from '$app/state';
 	import { overlay_open } from '../stores';
 	import PreloadingIndicator from '../nav/PreloadingIndicator.svelte';
 	import SkipLink from '../nav/SkipLink.svelte';
@@ -27,7 +27,7 @@ The main shell of the application. It provides a slot for the top navigation, th
 
 <Icons />
 
-{#if $navigating}
+{#if navigating.to}
 	<PreloadingIndicator />
 {/if}
 
@@ -56,10 +56,18 @@ The main shell of the application. It provides a slot for the top navigation, th
 		height: 100%;
 	}
 
-	@media (min-width: 832px) {
+	@media (min-width: 52em) {
 		main {
 			padding-top: var(--sk-nav-height);
 			padding-bottom: var(--sk-banner-height);
+		}
+	}
+
+	/* slides up as a dismissed banner fades out rather than jumping.
+	   only where the banner is at the top, as the space below the page is out of sight */
+	@media (max-width: 51.9375em) and (prefers-reduced-motion: no-preference) {
+		:global(:root:has([data-banner][inert])) main {
+			transition: padding-top 0.25s var(--quint-out);
 		}
 	}
 </style>

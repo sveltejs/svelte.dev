@@ -95,7 +95,7 @@ _To Read_
 - [Sveltronics](https://github.com/vasucp1207/sveltronics) is a collection of Svelte utility functions for your project
 - [Prompta](https://github.com/iansinnott/prompta) is yet another interface for chatting with ChatGPT (or GPT-4)
 - [Colibri](https://github.com/thetinkerinc/colibri) is a lightweight, customizable component library for Svelte apps
-- [Svelte Smart Doc](https://www.sveltron.com/) is a natural language interface to search the Svelte Svelte documentation
+- [Svelte Smart Doc](https://www.sveltron.com/) is a natural language interface to search the Svelte documentation
 - [Tailwind Elements](https://tailwind-elements.com/docs/standard/integrations/svelte-integration/) now has a Svelte Integration
 
 Thanks for reading! As always, feel free to let us know if we missed anything on [Reddit](https://www.reddit.com/r/sveltejs/) or [Discord](https://discord.gg/svelte).

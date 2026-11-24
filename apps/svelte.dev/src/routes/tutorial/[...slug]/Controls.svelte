@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import SecondaryNav from '$lib/components/SecondaryNav.svelte';
-	import ModalDropdown from '$lib/components/ModalDropdown.svelte';
-	import type { Exercise, PartStub } from '$lib/tutorial';
+	import SecondaryNav from '#lib/components/SecondaryNav.svelte';
+	import ModalDropdown from '#lib/components/ModalDropdown.svelte';
+	import type { Exercise, PartStub } from '#lib/tutorial/index.d.ts';
 	import { Checkbox, Icon, Toolbox } from '@sveltejs/site-kit/components';
 	import type { Workspace } from '@sveltejs/repl/workspace';
 
@@ -35,8 +35,10 @@
 											aria-current={page.url.pathname === `/tutorial/${exercise.slug}`
 												? 'page'
 												: undefined}
-											href="/tutorial/{exercise.slug}">{exercise.title}</a
+											href="/tutorial/{exercise.slug}"
 										>
+											{exercise.title}
+										</a>
 									</li>
 								{/each}
 							</ul>
@@ -85,6 +87,11 @@
 <style>
 	a {
 		color: inherit;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
 
 		&:not([href]) {
 			opacity: 0.1;

@@ -18,27 +18,32 @@ You are a Svelte expert tasked to build components and utilities for Svelte deve
 <available-docs>
 
 - title: Overview, use_cases: use title and path to estimate use case, path: ai/overview
+- title: AGENTS.md, use_cases: use title and path to estimate use case, path: ai/instructions
+- title: Overview, use_cases: use title and path to estimate use case, path: ai/mcp
 - title: Local setup, use_cases: use title and path to estimate use case, path: ai/local-setup
 - title: Remote setup, use_cases: use title and path to estimate use case, path: ai/remote-setup
 - title: Tools, use_cases: use title and path to estimate use case, path: ai/tools
 - title: Resources, use_cases: use title and path to estimate use case, path: ai/resources
 - title: Prompts, use_cases: use title and path to estimate use case, path: ai/prompts
-- title: Overview, use_cases: use title and path to estimate use case, path: ai/plugin
-- title: Subagent, use_cases: use title and path to estimate use case, path: ai/subagent
-- title: Overview, use_cases: use title and path to estimate use case, path: ai/opencode-plugin
-- title: Subagent, use_cases: use title and path to estimate use case, path: ai/opencode-subagent
+- title: CLI, use_cases: use title and path to estimate use case, path: ai/cli
 - title: Overview, use_cases: use title and path to estimate use case, path: ai/skills
+- title: Overview, use_cases: use title and path to estimate use case, path: ai/subagent
+- title: Claude Code, use_cases: use title and path to estimate use case, path: ai/claude-plugin
+- title: OpenCode, use_cases: use title and path to estimate use case, path: ai/opencode-plugin
+- title: Cursor, use_cases: use title and path to estimate use case, path: ai/cursor-plugin
+- title: GitHub Copilot CLI, use_cases: use title and path to estimate use case, path: ai/copilot-plugin
+- title: Codex CLI, use_cases: use title and path to estimate use case, path: ai/codex-plugin
 - title: Overview, use_cases: project setup, creating new svelte apps, scaffolding, cli tools, initializing projects, path: cli/overview
 - title: Frequently asked questions, use_cases: project setup, initializing new svelte projects, troubleshooting cli installation, package manager configuration, path: cli/faq
 - title: sv create, use_cases: project setup, starting new sveltekit app, initializing project, creating from playground, choosing project template, path: cli/sv-create
 - title: sv add, use_cases: project setup, adding features to existing projects, integrating tools, testing setup, styling setup, authentication, database setup, deployment adapters, path: cli/sv-add
 - title: sv check, use_cases: code quality, ci/cd pipelines, error checking, typescript projects, pre-commit hooks, finding unused css, accessibility auditing, production builds, path: cli/sv-check
 - title: sv migrate, use_cases: migration, upgrading svelte versions, upgrading sveltekit versions, modernizing codebase, svelte 3 to 4, svelte 4 to 5, sveltekit 1 to 2, adopting runes, refactoring deprecated apis, path: cli/sv-migrate
-- title: devtools-json, use_cases: development setup, chrome devtools integration, browser-based editing, local development workflow, debugging setup, path: cli/devtools-json
+- title: ai-tools, use_cases: use title and path to estimate use case, path: cli/ai-tools
+- title: better-auth, use_cases: use title and path to estimate use case, path: cli/better-auth
 - title: drizzle, use_cases: database setup, sql queries, orm integration, data modeling, postgresql, mysql, sqlite, server-side data access, database migrations, type-safe queries, path: cli/drizzle
 - title: eslint, use_cases: code quality, linting, error detection, project setup, code standards, team collaboration, typescript projects, path: cli/eslint
-- title: better-auth, use_cases: use title and path to estimate use case, path: cli/better-auth
-- title: mcp, use_cases: use title and path to estimate use case, path: cli/mcp
+- title: experimental, use_cases: use title and path to estimate use case, path: cli/experimental
 - title: mdsvex, use_cases: blog, content sites, markdown rendering, documentation sites, technical writing, cms integration, article pages, path: cli/mdsvex
 - title: paraglide, use_cases: internationalization, multi-language sites, i18n, translation, localization, language switching, global apps, multilingual content, path: cli/paraglide
 - title: playwright, use_cases: browser testing, e2e testing, integration testing, test automation, quality assurance, ci/cd pipelines, testing user flows, path: cli/playwright
@@ -47,7 +52,8 @@ You are a Svelte expert tasked to build components and utilities for Svelte deve
 - title: sveltekit-adapter, use_cases: deployment, production builds, hosting setup, choosing deployment platform, configuring adapters, static site generation, node server, vercel, cloudflare, netlify, path: cli/sveltekit-adapter
 - title: tailwindcss, use_cases: project setup, styling, css framework, rapid prototyping, utility-first css, design systems, responsive design, adding tailwind to svelte, path: cli/tailwind
 - title: vitest, use_cases: testing, unit tests, component testing, test setup, quality assurance, ci/cd pipelines, test-driven development, path: cli/vitest
-- title: add-on, use_cases: use title and path to estimate use case, path: cli/add-on
+- title: [create your own], use_cases: use title and path to estimate use case, path: cli/community
+- title: sv, use_cases: use title and path to estimate use case, path: cli/sv
 - title: sv-utils, use_cases: use title and path to estimate use case, path: cli/sv-utils
 - title: Introduction, use_cases: learning sveltekit, project setup, understanding framework basics, choosing between svelte and sveltekit, getting started with full-stack apps, path: kit/introduction
 - title: Creating a project, use_cases: project setup, starting new sveltekit app, initial development environment, first-time sveltekit users, scaffolding projects, path: kit/creating-a-project
@@ -60,6 +66,7 @@ You are a Svelte expert tasked to build components and utilities for Svelte deve
 - title: Page options, use_cases: prerendering static sites, ssr configuration, spa setup, client-side rendering control, url trailing slash handling, adapter deployment config, build optimization, path: kit/page-options
 - title: State management, use_cases: sveltekit, server-side rendering, ssr, state management, authentication, data persistence, load functions, context api, navigation, component lifecycle, path: kit/state-management
 - title: Remote functions, use_cases: data fetching, server-side logic, database queries, type-safe client-server communication, forms, user input, mutations, authentication, crud operations, optimistic updates, path: kit/remote-functions
+- title: Environment variables, use_cases: use title and path to estimate use case, path: kit/environment-variables
 - title: Building your app, use_cases: production builds, deployment preparation, build process optimization, adapter configuration, preview before deployment, path: kit/building-your-app
 - title: Adapters, use_cases: deployment, production builds, hosting setup, choosing deployment platform, configuring adapters, path: kit/adapters
 - title: Zero-config deployments, use_cases: deployment, production builds, hosting setup, choosing deployment platform, ci/cd configuration, path: kit/adapter-auto
@@ -95,10 +102,14 @@ You are a Svelte expert tasked to build components and utilities for Svelte deve
 - title: Additional resources, use_cases: troubleshooting, getting help, finding examples, learning sveltekit, project templates, common issues, community support, path: kit/additional-resources
 - title: Glossary, use_cases: rendering strategies, performance optimization, deployment configuration, seo requirements, static sites, spas, server-side rendering, prerendering, edge deployment, pwa development, path: kit/glossary
 - title: @sveltejs/kit, use_cases: forms, form actions, server-side validation, form submission, error handling, redirects, json responses, http errors, server utilities, path: kit/@sveltejs-kit
+- title: @sveltejs/kit/env, use_cases: use title and path to estimate use case, path: kit/@sveltejs-kit-env
 - title: @sveltejs/kit/hooks, use_cases: middleware, request processing, authentication chains, logging, multiple hooks, request/response transformation, path: kit/@sveltejs-kit-hooks
 - title: @sveltejs/kit/node/polyfills, use_cases: node.js environments, custom servers, non-standard runtimes, ssr setup, web api compatibility, polyfill requirements, path: kit/@sveltejs-kit-node-polyfills
 - title: @sveltejs/kit/node, use_cases: node.js adapter, custom server setup, http integration, streaming files, node deployment, server-side rendering with node, path: kit/@sveltejs-kit-node
 - title: @sveltejs/kit/vite, use_cases: project setup, vite configuration, initial sveltekit setup, build tooling, path: kit/@sveltejs-kit-vite
+- title: $app/env, use_cases: use title and path to estimate use case, path: kit/$app-env
+- title: $app/env/private, use_cases: use title and path to estimate use case, path: kit/$app-env-private
+- title: $app/env/public, use_cases: use title and path to estimate use case, path: kit/$app-env-public
 - title: $app/environment, use_cases: always, conditional logic, client-side code, server-side code, build-time logic, prerendering, development vs production, environment detection, path: kit/$app-environment
 - title: $app/forms, use_cases: forms, user input, data submission, progressive enhancement, custom form handling, form validation, path: kit/$app-forms
 - title: $app/navigation, use_cases: routing, navigation, multi-page apps, programmatic navigation, data reloading, preloading, shallow routing, navigation lifecycle, scroll handling, view transitions, path: kit/$app-navigation
@@ -139,6 +150,7 @@ You are a Svelte expert tasked to build components and utilities for Svelte deve
 - title: {@attach ...}, use_cases: tooltips, popovers, dom manipulation, third-party libraries, canvas drawing, element lifecycle, interactive ui, custom directives, wrapper components, path: svelte/@attach
 - title: {@const ...}, use_cases: computed values in loops, derived calculations in blocks, local variables in each iterations, complex list rendering, path: svelte/@const
 - title: {@debug ...}, use_cases: debugging, development, troubleshooting, tracking state changes, monitoring variables, reactive data inspection, path: svelte/@debug
+- title: {let/const ...}, use_cases: use title and path to estimate use case, path: svelte/declaration-tags
 - title: bind:, use_cases: forms, user input, two-way data binding, interactive ui, media players, file uploads, checkboxes, radio buttons, select dropdowns, contenteditable, dimension tracking, path: svelte/bind
 - title: use:, use_cases: custom directives, dom manipulation, third-party library integration, tooltips, click outside, gestures, focus management, element lifecycle hooks, path: svelte/use
 - title: transition:, use_cases: animations, interactive ui, modals, dropdowns, notifications, conditional content, show/hide elements, smooth state changes, path: svelte/transition
@@ -167,6 +179,7 @@ You are a Svelte expert tasked to build components and utilities for Svelte deve
 - title: Testing, use_cases: testing, quality assurance, unit tests, integration tests, component tests, e2e tests, vitest setup, playwright setup, test automation, path: svelte/testing
 - title: TypeScript, use_cases: typescript setup, type safety, component props typing, generic components, wrapper components, dom type augmentation, project configuration, path: svelte/typescript
 - title: Custom elements, use_cases: web components, custom elements, component library, design system, framework-agnostic components, embedding svelte in non-svelte apps, shadow dom, path: svelte/custom-elements
+- title: Browser support, use_cases: use title and path to estimate use case, path: svelte/browser-support
 - title: Svelte 4 migration guide, use_cases: upgrading svelte 3 to 4, version migration, updating dependencies, breaking changes, legacy project maintenance, path: svelte/v4-migration-guide
 - title: Svelte 5 migration guide, use_cases: migrating from svelte 4 to 5, upgrading projects, learning svelte 5 syntax changes, runes migration, event handler updates, path: svelte/v5-migration-guide
 - title: Frequently asked questions, use_cases: getting started, learning svelte, beginner setup, project initialization, vs code setup, formatting, testing, routing, mobile apps, troubleshooting, community support, path: svelte/faq

@@ -8,7 +8,9 @@
 		"check": "svelte-kit sync && svelte-check",
 		"package": "svelte-kit sync",
 		"lint": "prettier --check .",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"test": "vitest run",
+		"prepare": "svelte-kit sync"
 	},
 	"repository": {
 		"type": "git",
@@ -38,33 +40,48 @@
 		"@fontsource/fira-sans": "^5.2.7",
 		"@lezer/common": "^1.5.1",
 		"@replit/codemirror-lang-svelte": "^6.0.0",
-		"@shikijs/langs": "^3.23.0",
-		"@shikijs/twoslash": "^3.23.0",
+		"@twinkleplop/bash": "^0.1.8",
+		"@twinkleplop/core": "^0.3.2",
+		"@twinkleplop/css": "^0.1.8",
+		"@twinkleplop/dotenv": "^0.1.8",
+		"@twinkleplop/html": "^0.1.8",
+		"@twinkleplop/http": "^0.1.8",
+		"@twinkleplop/ini": "^0.1.8",
+		"@twinkleplop/javascript": "^0.1.8",
+		"@twinkleplop/json": "^0.1.8",
+		"@twinkleplop/jsonc": "^0.1.5",
+		"@twinkleplop/markdown": "^0.2.2",
+		"@twinkleplop/shellsession": "^0.1.8",
+		"@twinkleplop/svelte": "^0.1.8",
+		"@twinkleplop/toml": "^0.1.8",
+		"@twinkleplop/tsx": "^0.1.8",
+		"@twinkleplop/twoslash": "^0.3.2",
+		"@twinkleplop/typescript": "^0.1.8",
+		"@twinkleplop/yaml": "^0.1.8",
 		"esm-env": "^1.2.2",
 		"icons": "workspace:*",
-		"json5": "^2.2.3",
-		"shiki": "^3.23.0"
+		"json5": "^2.2.3"
 	},
 	"devDependencies": {
-		"@shikijs/vitepress-twoslash": "^4.0.1",
-		"@sveltejs/kit": "^2.53.2",
-		"@types/node": "^20.19.33",
+		"@sveltejs/kit": "^3.4.0",
+		"@types/node": "catalog:",
 		"flexsearch": "^0.8.212",
 		"gzip": "workspace:*",
 		"magic-string": "^0.30.21",
 		"marked": "^17.0.3",
-		"prettier": "^3.8.1",
-		"prettier-plugin-svelte": "^3.5.0",
-		"svelte": "^5.53.5",
-		"svelte-check": "^4.4.3",
-		"typescript": "^5.9.3",
-		"vite": "^8.0.0-beta.15"
+		"prettier": "^3.10.1",
+		"prettier-plugin-svelte": "^4.2.0",
+		"svelte": "^5.58.0",
+		"svelte-check": "^4.7.3",
+		"typescript": "^6.0.3",
+		"vite": "catalog:",
+		"vitest": "catalog:"
 	},
 	"publishConfig": {
 		"access": "public"
 	},
 	"peerDependencies": {
-		"@sveltejs/kit": "^2.20.0",
+		"@sveltejs/kit": "^2.20.0 || ^3.0.0-next.10 || ^3.0.0",
 		"svelte": "^4.0.0 || ^5.0.0-next.1"
 	},
 	"types": "./dist/types.d.ts",

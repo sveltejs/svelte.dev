@@ -8,6 +8,7 @@
 		"package": "svelte-kit sync",
 		"prepublishOnly": "npm run package",
 		"check": "svelte-kit sync && svelte-check",
+		"test": "vitest run",
 		"lint": "prettier --check .",
 		"format": "prettier --write .",
 		"prepare": "svelte-kit sync"
@@ -59,17 +60,18 @@
 	},
 	"devDependencies": {
 		"@lezer/common": "^1.5.1",
-		"@sveltejs/adapter-auto": "^7.0.1",
-		"@sveltejs/kit": "^2.53.2",
-		"@sveltejs/package": "^2.5.7",
-		"@sveltejs/vite-plugin-svelte": "^7.0.0",
+		"@sveltejs/adapter-auto": "^9.0.0",
+		"@sveltejs/kit": "catalog:",
+		"@sveltejs/package": "^3.0.3",
+		"@sveltejs/vite-plugin-svelte": "^7.3.1",
 		"@types/estree": "^1.0.8",
-		"prettier": "^3.8.1",
-		"prettier-plugin-svelte": "^3.5.0",
-		"publint": "^0.3.17",
-		"svelte-check": "^4.4.3",
-		"typescript": "^5.9.3",
-		"vite": "^8.0.0-beta.15"
+		"prettier": "^3.10.1",
+		"prettier-plugin-svelte": "^4.2.0",
+		"publint": "^0.3.25",
+		"svelte-check": "^4.7.3",
+		"typescript": "^6.0.3",
+		"vite": "catalog:",
+		"vitest": "catalog:"
 	},
 	"type": "module",
 	"dependencies": {
@@ -93,18 +95,21 @@
 		"@sveltejs/acorn-typescript": "^1.0.9",
 		"@sveltejs/site-kit": "workspace:*",
 		"@sveltejs/svelte-json-tree": "^2.2.1",
-		"acorn": "^8.16.0",
+		"acorn": "^8.19.0",
 		"codemirror": "^6.0.2",
 		"esm-env": "^1.2.2",
-		"esrap": "^2.2.5",
+		"esrap": "^2.4.2",
 		"icons": "workspace:*",
 		"locate-character": "^3.0.0",
 		"magic-string": "^0.30.21",
 		"marked": "^17.0.3",
 		"resolve.exports": "^2.0.3",
-		"svelte": "^5.53.3",
-		"tailwindcss": "^4.2.1",
+		"svelte": "^5.58.0",
+		"tailwindcss": "^4.3.5",
 		"tarparser": "^0.0.5",
 		"zimmerframe": "^1.1.4"
+	},
+	"imports": {
+		"#lib/*": "./src/lib/*"
 	}
 }

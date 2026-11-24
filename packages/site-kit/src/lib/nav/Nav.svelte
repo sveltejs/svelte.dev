@@ -15,6 +15,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 	import Search from '../search/Search.svelte';
 	import { tick } from 'svelte';
 	import FontToggle from '../components/FontToggle.svelte';
+	import { is_active } from './utils';
 
 	interface Props {
 		home_title?: string;
@@ -86,7 +87,9 @@ Top navigation bar for the application. It provides a slot for the left side, th
 					<Dropdown>
 						<a
 							href="/{link.slug}"
-							aria-current={page.url.pathname.startsWith(`/${link.slug}`) ? 'page' : undefined}
+							aria-current={is_active(page.url.pathname, `/${link.slug}`, link.match)
+								? 'page'
+								: undefined}
 						>
 							{link.title}
 
@@ -99,8 +102,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 									<a
 										class="secondary"
 										href={section.path}
-										aria-current={page.url.pathname === section.path ||
-										page.url.pathname.startsWith(section.path!)
+										aria-current={is_active(page.url.pathname, section.path!, section.match)
 											? 'page'
 											: undefined}
 									>
@@ -113,7 +115,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 				{:else}
 					<a
 						href="/{link.slug}"
-						aria-current={page.url.pathname.startsWith(`/${link.slug}`) ? 'page' : null}
+						aria-current={is_active(page.url.pathname, `/${link.slug}`, link.match) ? 'page' : null}
 					>
 						{link.title}
 					</a>
@@ -169,8 +171,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 				open = !open;
 
 				if (open) {
-					const segment = page.url.pathname.split('/')[1];
-					current = links.find((link) => link.slug === segment);
+					current = links.find((link) => is_active(page.url.pathname, `/${link.slug}`, link.match));
 				}
 			}}
 		>
@@ -233,7 +234,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		font: var(--sk-font-ui-medium);
 	}
 
-	@media (max-width: 831px) {
+	@media (max-width: 51.9375em) {
 		nav {
 			transition: transform 0.2s;
 		}
@@ -265,7 +266,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 			&[aria-current='page'] {
 				color: var(--sk-fg-accent);
-				box-shadow: inset 0 -1px 0 0 currentColor;
+				box-shadow: inset 0 -2px 0 0 currentColor;
 			}
 
 			&:not(.secondary) {
@@ -275,6 +276,11 @@ Top navigation bar for the application. It provides a slot for the left side, th
 			&.secondary {
 				box-shadow: none;
 				line-height: 1;
+
+				&[aria-current='page'] {
+					text-decoration: underline;
+					text-underline-offset: 0.15em;
+				}
 			}
 		}
 	}
@@ -292,12 +298,14 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 			a {
 				outline-offset: -2px;
+				text-decoration: none;
 			}
 		}
 	}
 
 	.home-link {
 		--padding-right: 1rem;
+		text-decoration: none;
 		width: 3.4rem;
 		height: 100%;
 		background: url(../branding/svelte-logo.svg) no-repeat 0 50% / calc(100% - var(--padding-right))
@@ -321,7 +329,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		display: block;
 	}
 
-	@media (max-width: 831px) {
+	@media (max-width: 51.9375em) {
 		nav {
 			top: unset;
 			bottom: 0;
@@ -346,7 +354,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		}
 	}
 
-	@media (min-width: 480px) {
+	@media (min-width: 30em) {
 		.home-link {
 			width: 11.2rem;
 			background: url(../branding/svelte.svg) no-repeat 0 50% / calc(100% - var(--padding-right))
@@ -365,7 +373,7 @@ Top navigation bar for the application. It provides a slot for the left side, th
 		}
 	}
 
-	@media (min-width: 832px) {
+	@media (min-width: 52em) {
 		.home-link {
 			--padding-right: 2rem;
 			width: 13.2rem;

@@ -1,11 +1,11 @@
-import * as database from '$lib/server/database.js';
+import * as database from '#lib/server/database.js';
 
 export function load({ cookies }) {
 	let userid = cookies.get('userid');
 
 	if (!userid) {
 		userid = crypto.randomUUID();
-		cookies.set('userid', userid, { path: '/' });
+		cookies.set('userid', userid);
 	}
 
 	return {

@@ -30,9 +30,9 @@
 		<figure>
 			<Video />
 			<figcaption>
-				<a href="https://www.offerzen.com/community/svelte-origins-documentary"
-					>Watch the full Svelte Origins documentary</a
-				>
+				<a href="https://www.offerzen.com/community/svelte-origins-documentary">
+					Watch the full Svelte Origins documentary
+				</a>
 			</figcaption>
 		</figure>
 	</Section>
@@ -50,7 +50,7 @@
 	}
 
 	.home :global {
-		@media (min-width: 800px) {
+		@media (min-width: 50em) {
 			h2 {
 				font: var(--sk-font-h1);
 			}

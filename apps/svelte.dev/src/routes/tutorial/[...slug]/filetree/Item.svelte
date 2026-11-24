@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { tick } from 'svelte';
 	import { open } from './ContextMenu.svelte';
-	import type { MenuItem } from '$lib/tutorial';
+	import type { MenuItem } from '#lib/tutorial/index.d.ts';
 	import { forcefocus } from '@sveltejs/site-kit/actions';
 
 	interface Props {
@@ -204,6 +204,7 @@
 
 	[aria-current='true'] {
 		color: var(--sk-fg-accent);
+		box-shadow: inset 0.3rem 0 0 var(--sk-fg-accent);
 	}
 
 	[aria-current='true']:has(:focus-visible)::after,

@@ -1,6 +1,6 @@
 <!-- This component should be the entry point when compiling the REPL as a SvelteKit app for the v0 preview window -->
 <script lang="ts">
-	import Repl from '$lib/Repl.svelte';
+	import Repl from '#lib/Repl.svelte';
 	import { onMount } from 'svelte';
 	import '@sveltejs/site-kit/styles/index.css';
 

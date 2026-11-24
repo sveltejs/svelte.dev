@@ -16,7 +16,7 @@
 	let tooltip: HTMLDivElement;
 	let offset = $state(0);
 
-	// container starts out at maxium size, then shrinks to prevent page scrolling to the right
+	// container starts out at maximum size, then shrinks to prevent page scrolling to the right
 	let width = $state('calc(100vw - 2 * var(--sk-page-padding-side))');
 
 	// bit of a gross hack but it works — this prevents the
@@ -105,6 +105,12 @@
 				.param {
 					font: var(--sk-font-mono);
 				}
+			}
+
+			.twoslash-popover-tag {
+				display: flex;
+				gap: 0.5rem;
+				align-items: baseline;
 			}
 
 			/* Disable highlight styles inside tooltips (popup content) */

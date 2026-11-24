@@ -10,14 +10,14 @@ title: 'Runtime errors'
 ### async_derived_orphan
 
 ```
-Cannot create a `$derived(...)` with an `await` expression outside of an effect tree
+Can only create a `$derived(...)` with an `await` expression during component initialization or in a declaration tag
 ```
 
-In Svelte there are two types of reaction — [`$derived`](/docs/svelte/$derived) and [`$effect`](/docs/svelte/$effect). Deriveds can be created anywhere, because they run _lazily_ and can be [garbage collected](https://developer.mozilla.org/en-US/docs/Glossary/Garbage_collection) if nothing references them. Effects, by contrast, keep running eagerly whenever their dependencies change, until they are destroyed.
+In Svelte there are two types of reaction — [`$derived`](/docs/svelte/$derived) and [`$effect`](/docs/svelte/$effect). Deriveds can normally be created anywhere, because they run _lazily_ and can be [garbage collected](https://developer.mozilla.org/en-US/docs/Glossary/Garbage_collection) if nothing references them. Effects, by contrast, keep running eagerly whenever their dependencies change, until they are destroyed.
 
 Because of this, effects can only be created inside other effects (or [effect roots](/docs/svelte/$effect#$effect.root), such as the one that is created when you first mount a component) so that Svelte knows when to destroy them.
 
-Some sleight of hand occurs when a derived contains an `await` expression: Since waiting until we read `{await getPromise()}` to call `getPromise` would be too late, we use an effect to instead call it proactively, notifying Svelte when the value is available. But since we're using an effect, we can only create asynchronous deriveds inside another effect.
+Some sleight of hand occurs when a derived contains an `await` expression: Since waiting until we read `$derived(await getPromise())` to call `getPromise` would be too late, we use an effect to instead call it proactively, notifying Svelte when the value is available. But since we're using an effect, this can only happen during component initialization or in a [declaration tag](/docs/svelte/declaration-tags).
 
 ### bind_invalid_checkbox_value
 
@@ -52,6 +52,14 @@ Attempted to instantiate %component% with `new %name%`, which is no longer valid
 ```
 
 See the [migration guide](/docs/svelte/v5-migration-guide#Components-are-no-longer-classes) for more information.
+
+### custom_renderer_unsupported_operation
+
+```
+`%operation%` is not supported when rendering with a custom renderer
+```
+
+Some of Svelte's internals only work with the DOM, and are never expected to run while a custom renderer is active — for example, `{@html ...}` and hydration are not available with custom renderers. Reaching one of these code paths indicates a bug in Svelte rather than in your app or renderer, so please [open an issue](https://github.com/sveltejs/svelte/issues) with a reproduction.
 
 ### derived_references_self
 
@@ -171,6 +179,14 @@ Cannot commit a fork that was already discarded
 Cannot create a fork inside an effect or when state changes are pending
 ```
 
+### get_abort_signal_after_await
+
+```
+`getAbortSignal()` cannot be called after an `await`
+```
+
+Abort signals must be associated with their deriveds/effects as soon as they run — if it happens after an `await`, it's too late. Create the abort signal first, before awaiting anything.
+
 ### get_abort_signal_outside_reaction
 
 ```
@@ -208,6 +224,12 @@ Failed to hydrate the application
 Could not `{@render}` snippet due to the expression being `null` or `undefined`. Consider using optional chaining `{@render snippet?.()}`
 ```
 
+### invalid_snippet_in_custom_renderer
+
+```
+`createRawSnippet` cannot be used with a custom renderer
+```
+
 ### lifecycle_legacy_only
 
 ```
@@ -226,19 +248,23 @@ Cannot do `bind:%key%={undefined}` when `%key%` has a fallback value
 Rest element properties of `$props()` such as `%property%` are readonly
 ```
 
+### renderer_cannot_cross
+
+```
+Cannot render content belonging to %guest% inside %host%. A custom renderer must define `embed` or `host` to be combined with another renderer
+```
+
 ### rune_outside_svelte
 
 ```
 The `%rune%` rune is only available inside `.svelte` and `.svelte.js/ts` files
 ```
 
-### set_context_after_init
+### snippet_renderer_mismatch
 
 ```
-`setContext` must be called when a component first initializes, not in a subsequent effect or after an `await` expression
+A snippet created in a component that was compiled without `experimental.customRenderer` cannot be rendered by a custom renderer
 ```
-
-This restriction only applies when using the `experimental.async` option, which will be active by default in Svelte 6.
 
 ### state_descriptors_fixed
 
@@ -371,7 +397,7 @@ This error occurs when using `hydratable` multiple times with the same key. To a
 ```
 Failed to serialize `hydratable` data for key `%key%`.
 
-`hydratable` can serialize anything [`uneval` from `devalue`](https://npmjs.com/package/uneval) can, plus Promises.
+`hydratable` can serialize anything [`uneval` from `devalue`](https://npmjs.com/package/devalue) can, plus Promises.
 
 Cause:
 %stack%
@@ -409,6 +435,14 @@ Certain functions such as `hydratable` cannot be invoked outside of a `render(..
 ## Shared errors
 
 <!-- This file is generated by scripts/process-messages/index.js. Do not edit! -->
+
+### custom_renderer_unavailable_on_server
+
+```
+You need to specify a custom condition to use a custom renderer in a non-browser environment such as Node. Add the `svelte-custom-renderer` resolve condition (eg. run Node with `--conditions=svelte-custom-renderer`).
+
+If you're using a bundler, add `svelte-custom-renderer` to its list of resolve conditions instead.
+```
 
 ### experimental_async_required
 
@@ -485,10 +519,18 @@ Certain lifecycle methods can only be used during component initialisation. To f
 ### missing_context
 
 ```
-Context was not set in a parent component
+Context was not set in the current component or any of its ancestors
 ```
 
-The [`createContext()`](svelte#createContext) utility returns a `[get, set]` pair of functions. `get` will throw an error if `set` was not used to set the context in a parent component.
+The [`createContext()`](svelte#createContext) utility returns a `[get, set, has]` triplet of functions. `get` will throw an error if `set` was not used to set the context in the current component or any of its ancestors.
+
+### set_context_after_init
+
+```
+`setContext` must be called when a component first initializes, not in a subsequent effect or after an `await` expression
+```
+
+This restriction only applies when using the `experimental.async` option, which will be active by default in Svelte 6.
 
 ### snippet_without_render_tag
 

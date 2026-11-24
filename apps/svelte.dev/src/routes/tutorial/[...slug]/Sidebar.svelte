@@ -1,11 +1,12 @@
 <script>
 	import { createEventDispatcher } from 'svelte';
-	import Modal from '$lib/components/Modal.svelte';
+	import Modal from '#lib/components/Modal.svelte';
 	import { Text } from '@sveltejs/site-kit/components';
-	import PageControls from '$lib/components/PageControls.svelte';
-	import RelatedLinks from '$lib/components/RelatedLinks.svelte';
+	import PageControls from '#lib/components/PageControls.svelte';
+	import RelatedLinks from '#lib/components/RelatedLinks.svelte';
+	import { session_storage } from '#lib/storage.js';
 
-	/** @type {import('$lib/tutorial').Exercise} */
+	/** @type {import('#lib/tutorial/index.d.ts').Exercise} */
 	export let exercise;
 
 	/** @type {HTMLElement} */
@@ -26,7 +27,7 @@
 	<div
 		class="text"
 		on:copy={(e) => {
-			if (sessionStorage[copy_enabled]) return;
+			if (session_storage.get(copy_enabled)) return;
 
 			/** @type {HTMLElement | null} */
 			let node = /** @type {HTMLElement} */ (e.target);
@@ -51,17 +52,19 @@
 		<!-- svelte-ignore a11y-no-static-element-interactions -->
 		<div
 			on:click={(e) => {
-				const node = /** @type {HTMLElement} */ (e.target);
+				const target = /** @type {HTMLElement} */ (e.target);
 
-				if (node.nodeName === 'CODE') {
-					const { file } = node.dataset;
+				/** @type {HTMLElement | null} */
+				const link = target.closest('[data-file]');
 
-					if (file) {
-						dispatch('select', { file });
-					}
+				if (link?.dataset.file) {
+					dispatch('select', { file: link.dataset.file });
 				}
 
-				if (node.nodeName === 'SPAN' && node.classList.contains('filename')) {
+				/** @type {HTMLElement | null} */
+				const node = target.closest('.filename');
+
+				if (node) {
 					const ext = node.dataset.ext || '';
 					const file = exercise.scope.prefix + node.textContent + ext;
 
@@ -101,7 +104,7 @@
 				<input
 					type="checkbox"
 					on:change={(e) => {
-						sessionStorage[copy_enabled] = e.currentTarget.checked ? 'true' : '';
+						session_storage.set(copy_enabled, e.currentTarget.checked ? 'true' : '');
 					}}
 				/>
 				enable copy-and-paste for the duration of this session
@@ -130,6 +133,7 @@
 			[data-file],
 			.filename {
 				cursor: pointer;
+				text-align: left;
 
 				&::before {
 					position: relative;
@@ -165,13 +169,13 @@
 		}
 	}
 
-	@media (max-width: 799px) {
+	@media (max-width: 49.9375em) {
 		.text {
 			border-right: none;
 		}
 	}
 
-	@media (min-width: 800px) {
+	@media (min-width: 50em) {
 		.text :global(.mobile) {
 			display: none;
 		}

@@ -19,12 +19,34 @@
 		/>
 
 		<script>
-			document.documentElement.classList.add(
-				`font-${localStorage.getItem('svelte:font') ?? 'elegant'}`
-			);
+			try {
+				document.documentElement.classList.add(
+					`font-${localStorage.getItem('svelte:font') ?? 'elegant'}`
+				);
+			} catch {
+				// localStorage access disabled
+			}
 		</script>
 
 		%sveltekit.head%
+
+		<script>
+			{
+				const banner = document.querySelector('meta[name="sv:banner"]');
+				const { start, end } = banner?.dataset ?? {};
+				let dismissed = false;
+
+				try {
+					dismissed = JSON.parse(localStorage.getItem('sv:hidden-banners'))?.[banner?.content];
+				} catch {
+					// localStorage access disabled
+				}
+
+				if (!dismissed && Date.now() > start && Date.now() < end) {
+					document.documentElement.classList.add('banner-shown');
+				}
+			}
+		</script>
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<script>
@@ -52,16 +74,20 @@
 		<div style="height: 100%">%sveltekit.body%</div>
 
 		<script>
-			if (localStorage.getItem('svelte:show-legacy') !== 'false') {
-				for (const node of document.querySelectorAll('details.legacy')) {
-					node.open = true;
+			try {
+				if (localStorage.getItem('sv:show-legacy') === 'open') {
+					for (const node of document.querySelectorAll('details.legacy')) {
+						node.open = true;
+					}
 				}
-			}
 
-			if (localStorage.getItem('svelte:prefers-ts') === 'false') {
-				for (const node of document.querySelectorAll('.ts-toggle')) {
-					node.checked = false;
+				if (localStorage.getItem('svelte:prefers-ts') === 'false') {
+					for (const node of document.querySelectorAll('.ts-toggle')) {
+						node.checked = false;
+					}
 				}
+			} catch {
+				// localStorage access disabled
 			}
 		</script>
 	</body>

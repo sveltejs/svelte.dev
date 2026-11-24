@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { afterNavigate } from '$app/navigation';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import type { Document, DocumentSummary } from '../types';
 
 	interface Props {
@@ -20,7 +20,9 @@
 			return;
 		}
 
+		// @ts-ignore
 		const from_package = from.params!.path!.split('/')[0];
+		// @ts-ignore
 		const to_package = to!.params!.path!.split('/')[0];
 
 		if (from_package !== to_package) {
@@ -42,7 +44,7 @@
 						<li>
 							<a
 								class="page"
-								aria-current={`/${slug}` === $page.url.pathname ? 'page' : undefined}
+								aria-current={`/${slug}` === page.url.pathname ? 'page' : undefined}
 								href="/{slug}"
 							>
 								{metadata.title}
@@ -91,6 +93,11 @@
 		padding: 0;
 		color: inherit;
 		user-select: none;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 	h3 {
@@ -112,7 +119,7 @@
 		margin: 0;
 	}
 
-	@media (min-width: 832px) {
+	@media (min-width: 52em) {
 		.sidebar {
 			columns: 1;
 			padding-left: 3.2rem;

@@ -25,6 +25,7 @@
 
 	let menu_height = $state(0);
 	let universal_menu_inner_height = $state(0);
+	let context_menu_inner_height = $state(0);
 	let ready = $state(false);
 
 	let universal_menu: HTMLElement | undefined = $state();
@@ -61,12 +62,16 @@
 		<div
 			class="menu-background"
 			class:ready
-			style:height={show_context_menu ? '100%' : `${universal_menu_inner_height}px`}
+			style:height={show_context_menu
+				? `calc(${context_menu_inner_height}px + var(--context-padding))`
+				: `${universal_menu_inner_height}px`}
 		></div>
 
 		<div
 			class="clip"
 			style:--height-difference="{menu_height - universal_menu_inner_height}px"
+			style:--context-height-difference="calc({menu_height - context_menu_inner_height}px -
+			var(--context-padding))"
 			ontransitionstart={(e) => {
 				const target = e.target as HTMLElement;
 
@@ -77,7 +82,7 @@
 				// are constrained to the menu background, but only while the transition
 				// is running, otherwise it prevents the contents from being scrolled
 				const a = 'calc(var(--height-difference) + 1px)';
-				const b = '1px';
+				const b = 'calc(var(--context-height-difference) + 1px)';
 
 				const start = show_context_menu ? a : b;
 				const end = show_context_menu ? b : a;
@@ -160,22 +165,23 @@
 					{#if current}
 						<MobileSubMenu
 							bind:this={nav_context_instance}
+							bind:height={context_menu_inner_height}
 							title={current.title}
 							contents={current.sections}
 						/>
 					{/if}
 				</div>
 
-				<label class="back-button">
-					<button
-						class="raised icon"
-						onclick={() => (show_context_menu = false)}
-						inert={!show_context_menu}
-					>
+				<button
+					class="back-button"
+					onclick={() => (show_context_menu = false)}
+					inert={!show_context_menu}
+				>
+					<span class="raised">
 						<Icon name="arrow-left" size={18} />
-					</button>
+					</span>
 					<span>Back to main menu</span>
-				</label>
+				</button>
 			</div>
 		</div>
 	</div>
@@ -183,6 +189,9 @@
 
 <style>
 	.menu {
+		/* space beneath the context menu, see `.context` */
+		--context-padding: 2rem;
+
 		display: block;
 		position: fixed;
 		left: 0px;
@@ -295,7 +304,7 @@
 		position: relative;
 		height: 100%;
 		bottom: -7px;
-		padding-bottom: 2rem;
+		padding-bottom: var(--context-padding);
 	}
 
 	.back-button {
@@ -305,6 +314,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: start;
+		cursor: pointer;
 		gap: 1rem;
 		font: var(--sk-font-ui-medium);
 		color: var(--sk-fg-3);
@@ -313,6 +323,27 @@
 		height: 4.8rem;
 		padding: 0 var(--sk-page-padding-side);
 		z-index: 10;
+
+		.raised {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 3.2rem;
+			height: 3.2rem;
+		}
+
+		&:hover .raised {
+			border-color: var(--sk-raised-hover-color);
+		}
+
+		&:active .raised {
+			border-color: var(--sk-raised-active-color);
+			border-width: var(--sk-raised-active-width);
+		}
+
+		&:focus-visible {
+			outline-offset: -2px;
+		}
 	}
 
 	.universal .contents,
@@ -332,6 +363,11 @@
 
 			a {
 				flex: 1;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 		}
 

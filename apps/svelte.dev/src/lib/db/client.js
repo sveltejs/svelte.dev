@@ -1,8 +1,8 @@
-import { building } from '$app/environment';
-import { env } from '$env/dynamic/private';
+import { building } from '$app/env';
+import { SUPABASE_URL, SUPABASE_KEY } from '$app/env/private';
 import { createClient } from '@supabase/supabase-js';
 
-if (!building && (!env.SUPABASE_URL || !env.SUPABASE_KEY)) {
+if (!building && (!SUPABASE_URL || !SUPABASE_KEY)) {
 	console.warn(
 		`Missing SUPABASE_URL and SUPABASE_KEY environment variables. Loading and saving in the playground is disabled`
 	);
@@ -14,9 +14,9 @@ if (!building && (!env.SUPABASE_URL || !env.SUPABASE_KEY)) {
 // @ts-ignore-line
 export const client =
 	!building &&
-	env.SUPABASE_URL &&
-	env.SUPABASE_KEY &&
-	createClient(env.SUPABASE_URL, env.SUPABASE_KEY, {
+	SUPABASE_URL &&
+	SUPABASE_KEY &&
+	createClient(SUPABASE_URL, SUPABASE_KEY, {
 		global: { fetch },
 		auth: { persistSession: false }
 	});

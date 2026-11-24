@@ -264,13 +264,11 @@ namespace AST {
 		preserveWhitespace?: boolean;
 		namespace?: Namespace;
 		css?: 'injected';
+		customRenderer?: string | null;
 		customElement?: {
 			tag?: string;
 			shadow?:
-				| 'open'
-				| 'none'
-				| ObjectExpression
-				| undefined;
+				'open' | 'none' | ObjectExpression | undefined;
 			props?: Record<
 				string,
 				{
@@ -381,9 +379,7 @@ namespace AST {
 		name: string;
 		/** The y in `bind:x={y}` */
 		expression:
-			| Identifier
-			| MemberExpression
-			| SequenceExpression;
+			Identifier | MemberExpression | SequenceExpression;
 	}
 
 	/** A `class:` directive */
@@ -435,9 +431,7 @@ namespace AST {
 		name: string;
 		/** The 'y' in `style:x={y}` */
 		value:
-			| true
-			| ExpressionTag
-			| Array<ExpressionTag | Text>;
+			true | ExpressionTag | Array<ExpressionTag | Text>;
 		modifiers: Array<'important'>;
 	}
 
@@ -605,9 +599,7 @@ namespace AST {
 		 * Quoted/string values are represented by an array, even if they contain a single expression like `"{x}"`
 		 */
 		value:
-			| true
-			| ExpressionTag
-			| Array<Text | ExpressionTag>;
+			true | ExpressionTag | Array<Text | ExpressionTag>;
 	}
 
 	export interface SpreadAttribute extends BaseNode {
@@ -634,9 +626,7 @@ namespace AST {
 	}
 
 	export type AttributeLike =
-		| Attribute
-		| SpreadAttribute
-		| Directive;
+		Attribute | SpreadAttribute | Directive;
 
 	export type Directive =
 		| AST.AnimateDirective
@@ -694,11 +684,7 @@ namespace AST {
 		| Block;
 
 	export type SvelteNode =
-		| Node
-		| TemplateNode
-		| AST.Fragment
-		| _CSS.Node
-		| Script;
+		Node | TemplateNode | AST.Fragment | _CSS.Node | Script;
 
 	export type { _CSS as CSS };
 }
@@ -826,6 +812,12 @@ css?: 'injected' | 'external' | ((options: { filename: string }) => 'injected' |
 ```
 
 <div class="ts-block-property-details">
+
+<div class="ts-block-property-bullets">
+
+- <span class="tag">default</span> `'external'`
+
+</div>
 
 - `'injected'`: styles will be included in the `head` when using `render(...)`, and injected into the document (if not already present) when the component mounts. For components compiled as custom elements, styles are injected to the shadow root.
 - `'external'`: the CSS will only be returned in the `css` field of the compilation result. Most Svelte bundler plugins will set this to `'external'` and use the CSS that is statically generated for better performance, as it will result in smaller JavaScript bundles and the output can be served as cacheable `.css` files.
@@ -956,7 +948,7 @@ discloseVersion?: boolean;
 
 </div>
 
-If `true`, exposes the Svelte major version in the browser by adding it to a `Set` stored in the global `window.__svelte.v`.
+If `true`, exposes the Svelte major version in the browser by adding it to a `Set` stored in the global `globalThis.__svelte.v`.
 
 </div>
 </div>
@@ -964,7 +956,7 @@ If `true`, exposes the Svelte major version in the browser by adding it to a `Se
 <div class="ts-block-property">
 
 ```dts
-compatibility?: {/*…*/}
+compatibility?: {/*…*/};
 ```
 
 <div class="ts-block-property-details">
@@ -1109,7 +1101,7 @@ interface CompileResult {/*…*/}
 <div class="ts-block-property">
 
 ```dts
-js: {/*…*/}
+js: {/*…*/};
 ```
 
 <div class="ts-block-property-details">
@@ -1147,19 +1139,49 @@ A source map
 <div class="ts-block-property">
 
 ```dts
-css: null | {
-	/** The generated code */
-	code: string;
-	/** A source map */
-	map: SourceMap;
-	/** Whether or not the CSS includes global rules */
-	hasGlobal: boolean;
-};
+css: null | {/*…*/};
 ```
 
 <div class="ts-block-property-details">
 
 The compiled CSS
+
+<div class="ts-block-property-children"><div class="ts-block-property">
+
+```dts
+code: string;
+```
+
+<div class="ts-block-property-details">
+
+The generated code
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+map: SourceMap;
+```
+
+<div class="ts-block-property-details">
+
+A source map
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+hasGlobal: boolean;
+```
+
+<div class="ts-block-property-details">
+
+Whether or not the CSS includes global rules
+
+</div>
+</div></div>
 
 </div>
 </div>
@@ -1183,7 +1205,7 @@ An array of warning objects that were generated during compilation. Each warning
 <div class="ts-block-property">
 
 ```dts
-metadata: {/*…*/}
+metadata: {/*…*/};
 ```
 
 <div class="ts-block-property-details">
@@ -1338,7 +1360,7 @@ Use this to filter out warnings. Return `true` to keep the warning, `false` to d
 <div class="ts-block-property">
 
 ```dts
-experimental?: {/*…*/}
+experimental?: {/*…*/};
 ```
 
 <div class="ts-block-property-details">
@@ -1366,6 +1388,24 @@ async?: boolean;
 </div>
 
 Allow `await` keyword in deriveds, template expressions, and the top level of components
+
+</div>
+</div>
+<div class="ts-block-property">
+
+```dts
+customRenderer?: true | string | ((options: { filename: string }) => string | null);
+```
+
+<div class="ts-block-property-details">
+
+Enables custom renderers to be specified with `<svelte:options customRenderer="path/to/renderer/module" />`. Can be:
+
+- `true`, allowing components to individually opt in
+- a string that points to a default custom renderer module: a package name, an alias or an absolute path (not a relative path, since every component imports it). Individual components can override the default, or opt out with `<svelte:options customRenderer={null} />`
+- a function that receives a `{ filename }` object and returns a custom renderer module path (resolved relative to that component, if relative), or `null` if the component should use the DOM
+
+A custom renderer module's default export must be an object created with `createRenderer`.
 
 </div>
 </div></div>

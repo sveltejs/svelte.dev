@@ -210,6 +210,22 @@ export async function get_types(code: string, statements: ts.NodeArray<ts.Statem
 	return { types, exports };
 }
 
+function get_documented_type_literals(type: ts.TypeNode): ts.TypeLiteralNode[] {
+	if (ts.isTypeLiteralNode(type)) {
+		return type.members.some((member) => (member as any).jsDoc?.[0].comment) ? [type] : [];
+	}
+
+	if (ts.isParenthesizedTypeNode(type)) {
+		return get_documented_type_literals(type.type);
+	}
+
+	if (ts.isUnionTypeNode(type) || ts.isIntersectionTypeNode(type)) {
+		return type.types.flatMap(get_documented_type_literals);
+	}
+
+	return [];
+}
+
 function munge_type_element(member: ts.TypeElement, depth = 1): TypeElement | undefined {
 	// @ts-ignore
 	const doc = member.jsDoc?.[0];
@@ -222,23 +238,26 @@ function munge_type_element(member: ts.TypeElement, depth = 1): TypeElement | un
 	const name = member.name?.escapedText ?? member.name?.getText() ?? 'unknown';
 	let snippet = member.getText();
 
-	for (let i = -1; i < depth; i += 1) {
-		snippet = snippet.replace(/^\t/gm, '');
+	if (ts.isPropertySignature(member) && member.type) {
+		const literals = get_documented_type_literals(member.type);
+
+		for (const literal of literals) {
+			for (const child of literal.members) {
+				const element = munge_type_element(child, depth + 1);
+				if (element) children.push(element);
+			}
+		}
+
+		// Replace from right to left so source offsets remain valid, preserving unions and intersections.
+		for (const literal of literals.toReversed()) {
+			const start = literal.getStart() - member.getStart();
+			const end = literal.end - member.getStart();
+			snippet = snippet.slice(0, start) + '{/*…*/}' + snippet.slice(end);
+		}
 	}
 
-	if (
-		ts.isPropertySignature(member) &&
-		ts.isTypeLiteralNode(member.type!) &&
-		member.type.members.some((member) => (member as any).jsDoc?.[0].comment)
-	) {
-		let a = 0;
-		while (snippet[a] !== '{') a += 1;
-
-		snippet = snippet.slice(0, a + 1) + '/*…*/}';
-
-		for (const child of member.type.members) {
-			children.push(munge_type_element(child, depth + 1)!);
-		}
+	for (let i = -1; i < depth; i += 1) {
+		snippet = snippet.replace(/^\t/gm, '');
 	}
 
 	const bullets: string[] = [];

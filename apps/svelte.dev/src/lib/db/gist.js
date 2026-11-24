@@ -1,4 +1,5 @@
 import { client } from './client.js';
+import * as local from './dev.js';
 
 /** @typedef {import('./types').User} User */
 /** @typedef {import('./types').UserID} UserID */
@@ -14,6 +15,11 @@ const PAGE_SIZE = 90;
  * }} opts
  */
 export async function list(user, { offset, search }) {
+	if (local.enabled) {
+		const gists = local.gist_list(user.id, search || '');
+		return { gists: gists.slice(offset, offset + PAGE_SIZE), next: null };
+	}
+
 	const { data, error } = await client.rpc('gist_list', {
 		list_search: search || '',
 		list_userid: user.id,
@@ -42,6 +48,8 @@ export async function list(user, { offset, search }) {
  * @returns {Promise<Gist>}
  */
 export async function create(user, gist) {
+	if (local.enabled) return local.gist_create(user.id, gist);
+
 	const { data, error } = await client.rpc('gist_create', {
 		name: gist.name,
 		files: gist.files,
@@ -61,6 +69,8 @@ export async function create(user, gist) {
  * @returns {Promise<Partial<Gist>>}
  */
 export async function read(id) {
+	if (local.enabled) return local.gist_read(id);
+
 	const { data, error } = await client
 		.from('gist')
 		.select('id,name,files,tailwind,userid')
@@ -78,6 +88,8 @@ export async function read(id) {
  * @returns {Promise<Gist>}
  */
 export async function update(user, gistid, gist) {
+	if (local.enabled) return local.gist_update(user.id, gistid, gist);
+
 	const { data, error } = await client.rpc('gist_update', {
 		gist_id: gistid,
 		gist_name: gist.name,
@@ -98,6 +110,8 @@ export async function update(user, gistid, gist) {
  * @param {string[]} ids
  */
 export async function destroy(userid, ids) {
+	if (local.enabled) return local.gist_destroy(userid, ids);
+
 	const { error } = await client.rpc('gist_destroy', {
 		gist_ids: ids,
 		gist_userid: userid

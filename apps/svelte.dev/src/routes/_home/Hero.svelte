@@ -1,9 +1,9 @@
 <script>
 	import { Icon } from '@sveltejs/site-kit/components';
 	// @ts-expect-error
-	import MachineDesktop from './svelte-machine-desktop.png?w=1200;2000;2800;4400&format=avif;webp;png;&as=picture';
+	import MachineDesktop from './svelte-machine-desktop.png?w=1200;2000;2800;4400&format=avif;webp;png&as=picture';
 	// @ts-expect-error
-	import MachineMobile from './svelte-machine-mobile.png?w=960&format=avif;webp;png;&as=picture';
+	import MachineMobile from './svelte-machine-mobile.png?w=960&format=avif;webp;png&as=picture';
 </script>
 
 <div class="hero">
@@ -126,12 +126,17 @@
 		font-size: 2rem;
 		color: var(--sk-fg-accent);
 		text-transform: uppercase;
+		text-decoration: none;
 		display: flex;
 		align-items: center;
 		gap: 0.5rem;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
-	@media (min-width: 800px) {
+	@media (min-width: 50em) {
 		.hero-content {
 			--width: clamp(60rem, 50vw, 80rem);
 			align-items: start;
@@ -148,7 +153,7 @@
 		}
 	}
 
-	@media (min-width: 1400px) {
+	@media (min-width: 87.5em) {
 		.hero {
 			height: calc(20rem + 20vw);
 			padding: 10rem 0 0 0;

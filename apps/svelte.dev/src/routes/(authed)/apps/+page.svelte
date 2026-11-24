@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Icon } from '@sveltejs/site-kit/components';
-	import { ago } from '$lib/time';
+	import { ago } from '#lib/time.js';
 	import { goto, invalidateAll } from '$app/navigation';
 	import { get_app_context } from '../app-context.js';
 
@@ -109,7 +109,7 @@
 
 						<label>
 							<input
-								aria-label="Select for delection"
+								aria-label="Select for deletion"
 								type="checkbox"
 								bind:group={selected}
 								value={gist.id}
@@ -125,8 +125,10 @@
 					<a
 						href="/apps?offset={data.next}{data.search
 							? `&search=${encodeURIComponent(data.search)}`
-							: ''}">Next page...</a
+							: ''}"
 					>
+						Next page...
+					</a>
 				{/if}
 			</div>
 		{:else}
@@ -300,13 +302,13 @@
 		height: 4rem;
 	}
 
-	@media (min-width: 540px) {
+	@media (min-width: 33.75em) {
 		ul {
 			grid-template-columns: repeat(2, 1fr);
 		}
 	}
 
-	@media (min-width: 720px) {
+	@media (min-width: 45em) {
 		ul {
 			grid-template-columns: repeat(3, 1fr);
 		}

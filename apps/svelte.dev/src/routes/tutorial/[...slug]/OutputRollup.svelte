@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
+	import { browser } from '$app/env';
 	import Viewer from '@sveltejs/repl/viewer';
 	import { Console, type Log } from '@sveltejs/repl/console';
 	import { theme } from '@sveltejs/site-kit/state';

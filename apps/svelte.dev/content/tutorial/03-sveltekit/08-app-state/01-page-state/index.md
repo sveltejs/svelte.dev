@@ -2,7 +2,7 @@
 title: page
 ---
 
-SvelteKit makes three readonly state objects available via the `$app/state` module — `page`, `navigating` and `updated`. The one you'll use most often is [`page`](/docs/kit/@sveltejs-kit#Page), which provides information about the current page:
+SvelteKit makes three readonly state objects available via the `$app/state` module — `page`, `navigating` and `updated`. The one you'll use most often is [`page`](/docs/kit/$app-state#Page), which provides information about the current page:
 
 - `url` — the [URL](https://developer.mozilla.org/en-US/docs/Web/API/URL) of the current page
 - `params` — the current page's [parameters](params)
@@ -35,4 +35,4 @@ Each of these properties is reactive, using `$state.raw` under the hood. Here's 
 {@render children()}
 ```
 
-> [!NOTE] Prior to SvelteKit 2.12, you had to use `$app/stores` for this, which provides a `$page` store with the same information. If you're currently using `$app/stores`, we advise you to migrate towards `$app/state` (requires Svelte 5).
+> [!NOTE] Prior to SvelteKit 2.12, you had to use `$app/stores` for this, which provides a `$page` store with the same information. It was removed in favor of `$app/state` in SvelteKit 3.

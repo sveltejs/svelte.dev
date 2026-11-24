@@ -70,8 +70,10 @@
 								error = null;
 								load_webcontainer(true);
 								onreset?.();
-							}}>clicking here</button
-						>.
+							}}
+						>
+							clicking here
+						</button>.
 					</p>
 				{:else}
 					<p>
@@ -157,13 +159,10 @@
 	}
 
 	button {
+		text-decoration: underline;
 		color: var(--sk-fg-accent);
 		padding: 0 0 1px;
 		position: relative;
-	}
-
-	button:hover {
-		text-decoration: underline;
 	}
 
 	small {

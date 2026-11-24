@@ -11,13 +11,19 @@ export interface Package {
 const versions = new Map<string, Promise<string>>();
 const packages = new Map<string, Promise<Package>>();
 
-const pkg_pr_new_regex = /^(pr|commit|branch)-(.+)/;
+const pkg_svelte_dev_regex = /^(pr|commit|branch)-(.+)/;
+
+const ref_type: Record<string, string> = {
+	pr: 'pr',
+	branch: 'b',
+	commit: 'c'
+};
 
 export async function load_svelte(version: string) {
 	if (version === 'local') {
 		await import(/* @vite-ignore */ `${location.origin}/svelte/compiler/index.js`);
 	} else {
-		if (!pkg_pr_new_regex.test(version)) {
+		if (!pkg_svelte_dev_regex.test(version)) {
 			const resolved_version = await resolve_version('svelte', version);
 			if (resolved_version) {
 				version = resolved_version;
@@ -64,7 +70,7 @@ export async function load_svelte(version: string) {
 }
 
 export async function resolve_version(name: string, version: string): Promise<string> {
-	if (pkg_pr_new_regex.test(version)) {
+	if (pkg_svelte_dev_regex.test(version)) {
 		return version;
 	}
 
@@ -92,10 +98,10 @@ export async function fetch_package(name: string, version: string): Promise<Pack
 	const key = `${name}@${version}`;
 
 	if (!packages.has(key)) {
-		const match = pkg_pr_new_regex.exec(version);
+		const match = pkg_svelte_dev_regex.exec(version);
 
 		const url = match
-			? `https://pkg.pr.new/svelte@${match[2]}`
+			? `https://pkg.svelte.dev/svelte/${ref_type[match[1]]}/${match[2]}`
 			: `https://registry.npmjs.org/${name}/-/${name.split('/').pop()}-${version}.tgz`;
 
 		const promise = fetch(url).then(async (r) => {

@@ -3,7 +3,7 @@
 </script>
 
 <script lang="ts">
-	import { browser, dev } from '$app/environment';
+	import { browser, dev } from '$app/env';
 	import { afterNavigate } from '$app/navigation';
 	import { theme } from '@sveltejs/site-kit/state';
 	import { onMount } from 'svelte';
@@ -11,7 +11,7 @@
 	import Loading from './Loading.svelte';
 	import { adapter_state, subscribe, reset } from './adapter.svelte';
 	import { SplitPane, type Length } from '@rich_harris/svelte-split-pane';
-	import type { Exercise } from '$lib/tutorial';
+	import type { Exercise } from '#lib/tutorial/index.d.ts';
 	import type { Workspace } from '@sveltejs/repl/workspace';
 	import { Spring } from 'svelte/motion';
 
@@ -87,7 +87,7 @@
 		// removing the iframe from the document allows us to
 		// change the src without adding a history entry, which
 		// would make back/forward traversal very annoying
-		const parentNode = /** @type {HTMLElement} */ (iframe.parentNode);
+		const parentNode = /** @type {HTMLElement} */ iframe.parentNode;
 		parentNode?.removeChild(iframe);
 
 		const url = new URL(src);

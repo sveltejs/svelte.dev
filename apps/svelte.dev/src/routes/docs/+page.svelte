@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import { onMount } from 'svelte';
 
 	// The old Svelte 3 docs used one giant docs page for everything, with hashes marking sections.
@@ -41,7 +41,7 @@
 	];
 
 	function get_url_to_redirect_to() {
-		const hash = $page.url.hash.replace(/^#/i, '');
+		const hash = page.url.hash.replace(/^#/i, '');
 
 		if (!hash) return;
 
@@ -132,6 +132,7 @@
 	.options a {
 		display: block;
 		color: inherit;
+		text-decoration: none;
 		margin: 1em -1.6rem;
 		padding: 1.6rem;
 		background-color: var(--sk-bg-1);
@@ -175,7 +176,7 @@
 			margin-bottom: 0;
 		}
 
-		@media (min-width: 480px) {
+		@media (min-width: 30em) {
 			margin: 1em -2.4rem;
 			padding: 2.4rem;
 		}

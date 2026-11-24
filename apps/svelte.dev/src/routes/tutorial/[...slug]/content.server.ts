@@ -1,10 +1,10 @@
 import { read } from '$app/server';
-import { index, docs } from '$lib/server/content';
-import type { Exercise, ExerciseStub, PartStub, Scope } from '$lib/tutorial';
+import { index, docs } from '#lib/server/content.ts';
+import type { Exercise, ExerciseStub, PartStub, Scope } from '#lib/tutorial/index.d.ts';
 import { error } from '@sveltejs/kit';
 import { text_files } from './shared';
 import type { Document } from '@sveltejs/site-kit';
-import { render_content } from '$lib/server/renderer';
+import { render_content } from '#lib/server/renderer.ts';
 
 const lookup: Record<
 	string,
@@ -154,14 +154,18 @@ export async function load_exercise(slug: string): Promise<Exercise> {
 		prev,
 		next,
 		markdown: exercise.body,
-		html: (
-			await render_content(exercise.file, exercise.body, { check: false, references })
-		).replace(/<code>(.+?)<\/code>/g, (match, filename) => {
-			// TODO wire this up
-			return filenames.size > 1 && filenames.has(filename)
-				? `<code data-file="${scope.prefix + filename}">${filename}</code>`
-				: match;
-		}),
+		html: (await render_content(exercise.file, exercise.body, { check: false, references }))
+			.replace(/<code>(.+?)<\/code>/g, (match, filename) => {
+				// TODO wire this up
+				return filenames.size > 1 && filenames.has(filename)
+					? `<button class="file-link" data-file="${scope.prefix + filename}"><code>${filename}</code></button>`
+					: match;
+			})
+			// filenames in code block tabs are already inside a button
+			.replace(
+				/(<div class="controls">)<span class="filename"([^>]*)>(.*?)<\/span>/g,
+				'$1<button class="filename"$2>$3</button>'
+			),
 		dir: exercise.file.split('/').slice(0, -1).join('/'),
 		editing_constraints: {
 			create: new Set(exercise.metadata.editing_constraints?.create ?? []),
