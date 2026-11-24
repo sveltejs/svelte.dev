@@ -118,7 +118,7 @@ function form<
 	validate: true extends HasNonOptionalBoolean<
 		StandardSchemaV1.InferInput<Schema>
 	>
-		? 'Error: All booleans in form schemas must be optional (e.g. `v.optional(v.boolean(), false)`) because checkbox inputs do not send a false value when unchecked.'
+		? 'Error: Boolean fields in form schemas that accept false must be optional (e.g. `v.optional(v.boolean(), false)`) because checkbox inputs do not send a false value when unchecked.'
 		: Schema,
 	fn: (
 		data: StandardSchemaV1.InferOutput<Schema>,
@@ -515,10 +515,7 @@ type RemoteFormFields<T> =
 	WillRecurseIndefinitely<T> extends true
 		? RecursiveFormFields
 		: NonNullable<T> extends
-					| string
-					| number
-					| boolean
-					| File
+					string | number | boolean | File
 			? RemoteFormField<NonNullable<T>>
 			: IsImageInputValue<NonNullable<T>> extends true
 				? RemoteFormField<
@@ -586,10 +583,7 @@ type RemoteFormInvalidField<T> =
 	WillRecurseIndefinitely<T> extends true
 		? Record<string | number, any>
 		: NonNullable<T> extends
-					| string
-					| number
-					| boolean
-					| File
+					string | number | boolean | File
 			? (message: string) => StandardSchemaV1.Issue
 			: NonNullable<T> extends Array<infer U>
 				? {
