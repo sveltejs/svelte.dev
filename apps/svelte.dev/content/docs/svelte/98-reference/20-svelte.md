@@ -638,11 +638,9 @@ unmount(app, { outro: true });
 ```dts
 function unmount(
 	component: Record<string, any>,
-	options?:
-		| {
-				outro?: boolean;
-		  }
-		| undefined
+	options?: {
+		outro?: boolean;
+	}
 ): Promise<void>;
 ```
 

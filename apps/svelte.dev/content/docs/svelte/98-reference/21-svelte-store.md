@@ -99,8 +99,8 @@ Creates a `Readable` store that allows reading by subscription.
 
 ```dts
 function readable<T>(
-	value?: T | undefined,
-	start?: StartStopNotifier<T> | undefined
+	value?: T,
+	start?: StartStopNotifier<T>
 ): Readable<T>;
 ```
 
@@ -153,8 +153,8 @@ Create a `Writable` store that allows both updating and reading by subscription.
 
 ```dts
 function writable<T>(
-	value?: T | undefined,
-	start?: StartStopNotifier<T> | undefined
+	value?: T,
+	start?: StartStopNotifier<T>
 ): Writable<T>;
 ```
 

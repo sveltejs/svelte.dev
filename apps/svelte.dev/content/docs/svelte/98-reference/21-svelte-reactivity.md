@@ -52,7 +52,7 @@ class MediaQuery extends ReactiveValue<boolean> {/*…*/}
 <div class="ts-block-property">
 
 ```dts
-constructor(query: string, fallback?: boolean | undefined);
+constructor(query: string, fallback?: boolean);
 ```
 
 <div class="ts-block-property-details">

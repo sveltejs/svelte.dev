@@ -183,7 +183,7 @@ class Tween<T> {/*…*/}
 <div class="ts-block-property">
 
 ```dts
-static of<U>(fn: () => U, options?: TweenOptions<U> | undefined): Tween<U>;
+static of<U>(fn: () => U, options?: TweenOptions<U>): Tween<U>;
 ```
 
 <div class="ts-block-property-details">
@@ -216,7 +216,7 @@ constructor(value: T, options?: TweenOptions<T>);
 <div class="ts-block-property">
 
 ```dts
-set(value: T, options?: TweenOptions<T> | undefined): Promise<void>;
+set(value: T, options?: TweenOptions<T>): Promise<void>;
 ```
 
 <div class="ts-block-property-details">
@@ -310,8 +310,8 @@ The spring function in Svelte creates a store whose value is animated, with a mo
 
 ```dts
 function spring<T = any>(
-	value?: T | undefined,
-	opts?: SpringOptions | undefined
+	value?: T,
+	opts?: SpringOptions
 ): Spring<T>;
 ```
 
@@ -333,8 +333,8 @@ A tweened store in Svelte is a special type of store that provides smooth transi
 
 ```dts
 function tweened<T>(
-	value?: T | undefined,
-	defaults?: TweenOptions<T> | undefined
+	value?: T,
+	defaults?: TweenOptions<T>
 ): Tweened<T>;
 ```
 

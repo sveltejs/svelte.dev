@@ -30,13 +30,7 @@ Animates a `blur` filter alongside an element's opacity.
 ```dts
 function blur(
 	node: Element,
-	{
-		delay,
-		duration,
-		easing,
-		amount,
-		opacity
-	}?: BlurParams | undefined
+	{ delay, duration, easing, amount, opacity }?: BlurParams
 ): TransitionConfig;
 ```
 
@@ -91,12 +85,7 @@ function draw(
 	node: SVGElement & {
 		getTotalLength(): number;
 	},
-	{
-		delay,
-		speed,
-		duration,
-		easing
-	}?: DrawParams | undefined
+	{ delay, speed, duration, easing }?: DrawParams
 ): TransitionConfig;
 ```
 
@@ -113,7 +102,7 @@ Animates the opacity of an element from 0 to the current opacity for `in` transi
 ```dts
 function fade(
 	node: Element,
-	{ delay, duration, easing }?: FadeParams | undefined
+	{ delay, duration, easing }?: FadeParams
 ): TransitionConfig;
 ```
 
@@ -130,14 +119,7 @@ Animates the x and y positions and the opacity of an element. `in` transitions a
 ```dts
 function fly(
 	node: Element,
-	{
-		delay,
-		duration,
-		easing,
-		x,
-		y,
-		opacity
-	}?: FlyParams | undefined
+	{ delay, duration, easing, x, y, opacity }?: FlyParams
 ): TransitionConfig;
 ```
 
@@ -154,13 +136,7 @@ Animates the opacity and scale of an element. `in` transitions animate from the 
 ```dts
 function scale(
 	node: Element,
-	{
-		delay,
-		duration,
-		easing,
-		start,
-		opacity
-	}?: ScaleParams | undefined
+	{ delay, duration, easing, start, opacity }?: ScaleParams
 ): TransitionConfig;
 ```
 
@@ -177,12 +153,7 @@ Slides an element in and out.
 ```dts
 function slide(
 	node: Element,
-	{
-		delay,
-		duration,
-		easing,
-		axis
-	}?: SlideParams | undefined
+	{ delay, duration, easing, axis }?: SlideParams
 ): TransitionConfig;
 ```
 
