@@ -670,13 +670,7 @@ export async function render_content_markdown(
 			headings.length = depth;
 			const slug = headings.filter(Boolean).join('-');
 
-			// tags are dropped but entities are kept, so the label stays escaped
-			const label = html
-				.replace(/<[^>]+>/g, '')
-				.replaceAll('"', '&quot;')
-				.trim();
-
-			return `<h${depth} id="${slug}"><span>${html}</span><a href="#${slug}" class="permalink" aria-label="Permalink: ${label}"></a></h${depth}>`;
+			return `<h${depth} id="${slug}"><span>${html}</span><a href="#${slug}" class="permalink" aria-label="permalink"></a></h${depth}>`;
 		},
 		code() {
 			const block = current_block ?? codeblocks.shift()!;

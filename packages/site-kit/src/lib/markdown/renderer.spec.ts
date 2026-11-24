@@ -16,16 +16,6 @@ describe('render_content_markdown', () => {
 		expect(html).toContain(expected);
 	});
 
-	test.each([
-		['## Getting started', 'Permalink: Getting started'],
-		['## `<script lang="ts">`', 'Permalink: &lt;script lang=&quot;ts&quot;&gt;'],
-		['## The *new* [syntax](/docs)', 'Permalink: The new syntax']
-	])('names the permalink after the heading %s', async (markdown, expected) => {
-		const html = await render_content_markdown('test.md', markdown);
-
-		expect(html).toContain(`class="permalink" aria-label="${expected}"></a>`);
-	});
-
 	test('preserves the line break after a highlighted JSDoc comment', async () => {
 		const html = await render_content_markdown(
 			'test.md',
