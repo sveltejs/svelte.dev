@@ -17,7 +17,7 @@
 
 	let nav = $state() as HTMLElement;
 	const submenu_id = $props.id();
-	let expanded = $state<boolean[]>([]);
+	let expanded = $derived(contents.map(section_is_active));
 
 	function section_is_active(section: NonNullable<NavigationLink['sections']>[number]) {
 		return section.sections.some(({ sections }) =>
@@ -25,13 +25,8 @@
 		);
 	}
 
-	$effect(() => {
-		page.url.pathname;
-		expanded = contents.map(section_is_active);
-	});
-
 	function toggle_section(index: number) {
-		expanded[index] = !expanded[index];
+		expanded = expanded.map((open, i) => (i === index ? !open : open));
 	}
 
 	onMount(() => {
