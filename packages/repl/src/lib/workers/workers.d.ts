@@ -55,6 +55,7 @@ export interface BundleOptions {
 	runes?: boolean;
 	fragments?: 'html' | 'tree';
 	async?: boolean;
+	customRenderer?: boolean;
 	aliases?: Record<string, string>;
 }
 

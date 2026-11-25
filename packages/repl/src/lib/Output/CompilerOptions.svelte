@@ -69,6 +69,25 @@
 		</span>
 		<span class="boolean">{workspace.compiler_options.dev}</span>
 	</label>
+
+	{#if workspace.supports_custom_renderer}
+		<div class="option">
+			<span class="key">experimental:</span> &#123;
+			<label class="option">
+				<span class="key">customRenderer:</span>
+				<span style="position: relative; font-size: 1.2rem; top: 0.2em">
+					<Checkbox
+						checked={workspace.compiler_options.customRenderer}
+						onchange={(customRenderer) => {
+							workspace.update_compiler_options({ customRenderer });
+						}}
+					/>
+				</span>
+				<span class="boolean">{workspace.compiler_options.customRenderer}</span>
+			</label>
+			&#125;
+		</div>
+	{/if}
 	});
 </div>
 

@@ -80,7 +80,8 @@
 			files: workspace.file_nodes,
 			tailwind: workspace.tailwind,
 			aliases: workspace.aliases,
-			async: workspace.compiler_options.async
+			async: workspace.compiler_options.async,
+			customRenderer: workspace.compiler_options.customRenderer
 		};
 	}
 
@@ -90,11 +91,17 @@
 		tailwind?: boolean;
 		aliases?: Record<string, string>;
 		async?: boolean;
+		customRenderer?: boolean;
 	}) {
 		// Await promise so that users (v0 in this case) can know when the bundling is done
 		await workspace.reset(
 			data.files,
-			{ tailwind: data.tailwind ?? false, aliases: data.aliases, async: data.async },
+			{
+				tailwind: data.tailwind ?? false,
+				aliases: data.aliases,
+				async: data.async,
+				customRenderer: data.customRenderer
+			},
 			'App.svelte'
 		);
 	}
@@ -122,6 +129,7 @@
 			tailwind: workspace.tailwind,
 			fragments: workspace.compiler_options.fragments,
 			async: workspace.compiler_options.async,
+			customRenderer: workspace.compiler_options.customRenderer,
 			aliases: workspace.aliases
 		});
 	}
@@ -146,11 +154,15 @@
 		? new Bundler({
 				// svelte-ignore state_referenced_locally
 				svelte_version: svelteVersion,
-				onversion: (version, supports_async) => {
+				onversion: (version, supports_async, supports_custom_renderer) => {
 					workspace.set_svelte_version(version);
 					workspace.supports_async = supports_async;
+					workspace.supports_custom_renderer = supports_custom_renderer;
 					if (!supports_async && workspace.compiler_options.async) {
 						workspace.update_compiler_options({ async: false });
+					}
+					if (!supports_custom_renderer && workspace.compiler_options.customRenderer) {
+						workspace.update_compiler_options({ customRenderer: false });
 					}
 					onversion?.(version);
 				},

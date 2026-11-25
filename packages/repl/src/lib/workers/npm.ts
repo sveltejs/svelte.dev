@@ -62,10 +62,28 @@ export async function load_svelte(version: string) {
 		// do nothing
 	}
 
+	let can_use_custom_renderer = false;
+
+	try {
+		// use `compile` rather than `compileModule`, since the option only affects components
+		svelte.compile('', {
+			generate: 'client',
+			experimental: {
+				// @ts-ignore not available in older versions
+				customRenderer: true
+			}
+		});
+
+		can_use_custom_renderer = true;
+	} catch (e) {
+		// do nothing
+	}
+
 	return {
 		svelte,
 		version,
-		can_use_experimental_async
+		can_use_experimental_async,
+		can_use_custom_renderer
 	};
 }
 
