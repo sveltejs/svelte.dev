@@ -16,7 +16,7 @@ To be completely honest I expected the atmosphere to be a little subdued. Being 
 
 But I was wrong. The energy was fantastic. We had two days of lively conversation and unbelievable demos in one of Europe's most beautiful cities, with a slew of announcements that we'll follow up in more detail soon:
 
-- [Custom renderers](https://svelte.dev/docs/svelte/custom-renderers) are now supported behind an `experimental` flag, allowing you to use Svelte to build native apps and terminal UIs and PDFs renderers and just about anything else you can imagine
+- [Custom renderers](https://svelte.dev/docs/svelte/custom-renderers) are now supported behind an `experimental` flag, allowing you to use Svelte to build native apps and terminal UIs and PDF renderers and just about anything else you can imagine
 - [Async Svelte](https://svelte.dev/docs/svelte/await-expressions) is making real progress towards production readiness
 - [`vite-devtools-svelte`](https://github.com/sveltejs/vite-devtools-svelte), which integrates with [Vite DevTools](https://devtools.vite.dev/), was moved into the Svelte organisation and is making progress towards a 1.0 release
 - [`rsvelte`](https://baseballyama.github.io/rsvelte/), by Svelte core team member [Yuichiro Yamashita](https://github.com/baseballyama), is a unified Svelte toolchain written in Rust. It's not quite production-ready yet, but it is _hilariously_ faster than the JavaScript equivalents
