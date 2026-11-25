@@ -21,7 +21,7 @@ But I was wrong. The energy was fantastic. We had two days of lively conversatio
 - [`vite-devtools-svelte`](https://github.com/sveltejs/vite-devtools-svelte), which integrates with [Vite DevTools](https://devtools.vite.dev/), was moved into the Svelte organisation and is working towards a 1.0 release.
 - [`rsvelte`](https://baseballyama.github.io/rsvelte/), by Svelte core team member [Yuichiro Yamashita](https://github.com/baseballyama), is a unified Svelte toolchain written in Rust. It's not quite production-ready yet, but it is _hilariously_ faster than the JavaScript equivalents.
 - Svelte is now a [core framework](https://storybook.js.org/blog/storybook-11-beta/#framework-support) for [Storybook](https://storybook.js.org/).
-- [`mdsvex`](https://mdsvex.pngwn.at/), a markdown preprocessor for Svelte components, reached version 1.0.
+- [`mdsvex`](https://mdsvex.pngwn.at/), a markdown toolkit for Svelte components, reached version 1.0.
 
 Naturally, we spent a lot of time talking about AI. Many of the announcements are directly relevant to agentic development (the devtools expose an MCP server, `rsvelte` makes it practical for fleets of agents to work on large apps concurrently, and so on), and most attendees described themselves as frequent — if ambivalent — users of the technology. But there's nothing like an in-person gathering to remind you that the best bits of the job can't be automated away.
 
