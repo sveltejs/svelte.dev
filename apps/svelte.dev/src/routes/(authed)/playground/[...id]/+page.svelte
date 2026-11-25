@@ -81,7 +81,8 @@
 				files,
 				tailwind: recovered.tailwind ?? false,
 				aliases: recovered.aliases,
-				async: recovered.async
+				async: recovered.async,
+				customRenderer: recovered.customRenderer
 			});
 		} catch {
 			alert(`Couldn't load the code from the URL. Make sure you copied the link correctly.`);
@@ -125,8 +126,8 @@
 	async function update_hash() {
 		// Only change hash when necessary to avoid polluting everyone's browser history
 		if (modified) {
-			const { files, tailwind, aliases, async } = repl.toJSON();
-			const json = JSON.stringify({ name, files, tailwind, aliases, async });
+			const { files, tailwind, aliases, async, customRenderer } = repl.toJSON();
+			const json = JSON.stringify({ name, files, tailwind, aliases, async, customRenderer });
 			await set_hash(json);
 		}
 	}
@@ -181,8 +182,8 @@
 		if (modified) {
 			// we can't save to the hash because it's an async operation, so we use
 			// a short-lived sessionStorage value instead
-			const { files, tailwind, aliases, async } = repl.toJSON();
-			const json = JSON.stringify({ name, files, tailwind, aliases, async });
+			const { files, tailwind, aliases, async, customRenderer } = repl.toJSON();
+			const json = JSON.stringify({ name, files, tailwind, aliases, async, customRenderer });
 			session_storage.set(STORAGE_KEY, json);
 		}
 	}}

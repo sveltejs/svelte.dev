@@ -41,7 +41,11 @@
 
 		try {
 			const recovered = JSON.parse(await decode_and_decompress_text(hash));
-			repl.set({ files: recovered.files, tailwind: recovered.tailwind ?? false });
+			repl.set({
+				files: recovered.files,
+				tailwind: recovered.tailwind ?? false,
+				customRenderer: recovered.customRenderer
+			});
 		} catch {
 			alert(`Couldn't load the code from the URL. Make sure you copied the link correctly.`);
 		}

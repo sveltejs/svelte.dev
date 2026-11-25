@@ -54,12 +54,18 @@ self.addEventListener('message', async (event: MessageEvent<BundleMessageData>) 
 
 		case 'bundle': {
 			try {
-				const { uid, files, options } = event.data;
+				const { uid, files } = event.data;
 				const {
 					svelte,
 					version: svelte_version,
-					can_use_experimental_async
-				} = await get_svelte(options.svelte_version);
+					can_use_experimental_async,
+					can_use_custom_renderer
+				} = await get_svelte(event.data.options.svelte_version);
+
+				const options = {
+					...event.data.options,
+					customRenderer: can_use_custom_renderer && !!event.data.options.customRenderer
+				};
 
 				current_id = uid;
 
@@ -101,12 +107,13 @@ function get_svelte(svelte_version: string) {
 	self.postMessage({ type: 'status', message: `fetching svelte@${svelte_version}` });
 	ready_version = svelte_version;
 	ready = load_svelte(svelte_version || 'latest');
-	ready.then(({ version, can_use_experimental_async }) => {
+	ready.then(({ version, can_use_experimental_async, can_use_custom_renderer }) => {
 		ready_version = version;
 		self.postMessage({
 			type: 'version',
 			version,
-			supports_async: can_use_experimental_async
+			supports_async: can_use_experimental_async,
+			supports_custom_renderer: can_use_custom_renderer
 		});
 	});
 	return ready;
@@ -338,6 +345,11 @@ async function get_bundle(
 
 				if (can_use_experimental_async) {
 					compilerOptions.experimental = { async: true };
+				}
+
+				if (options.customRenderer) {
+					// only set when enabled, since the mere presence of the option changes the output
+					compilerOptions.experimental = { ...compilerOptions.experimental, customRenderer: true };
 				}
 
 				if (compilerOptions.fragments == null) {

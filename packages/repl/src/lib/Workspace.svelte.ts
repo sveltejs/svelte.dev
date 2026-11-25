@@ -96,6 +96,7 @@ export interface ExposedCompilerOptions {
 	modernAst: boolean;
 	fragments: 'html' | 'tree' | undefined;
 	async: boolean;
+	customRenderer: boolean;
 }
 
 export class Workspace {
@@ -110,7 +111,8 @@ export class Workspace {
 		// default to undefined so it's removed if the current version
 		// doesn't support it
 		fragments: undefined,
-		async: true
+		async: true,
+		customRenderer: false
 	});
 	compiled = $state<Record<string, Compiled>>({});
 
@@ -122,6 +124,7 @@ export class Workspace {
 	#aliases = $state.raw(undefined) as undefined | Record<string, string>;
 	#tailwind = $state(false);
 	supports_async = $state(true);
+	supports_custom_renderer = $state(false);
 
 	#handlers = {
 		hover: new Set<(pos: number | null) => void>(),
@@ -419,13 +422,22 @@ export class Workspace {
 
 	reset(
 		new_files: Item[],
-		options: { tailwind: boolean; aliases?: Record<string, string>; async?: boolean },
+		options: {
+			tailwind: boolean;
+			aliases?: Record<string, string>;
+			async?: boolean;
+			customRenderer?: boolean;
+		},
 		selected?: string
 	) {
 		this.states.clear();
 		this.#tailwind = options.tailwind;
 		this.#aliases = options.aliases;
-		this.#compiler_options = { ...this.#compiler_options, async: options.async ?? true };
+		this.#compiler_options = {
+			...this.#compiler_options,
+			async: options.async ?? true,
+			customRenderer: options.customRenderer ?? false
+		};
 
 		const bundle = this.set(new_files, selected);
 

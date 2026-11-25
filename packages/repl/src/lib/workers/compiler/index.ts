@@ -24,7 +24,7 @@ addEventListener('message', async (event) => {
 	cache[version].catch(() => {
 		delete cache[version];
 	});
-	const { can_use_experimental_async, svelte } = await cache[version];
+	const { can_use_experimental_async, can_use_custom_renderer, svelte } = await cache[version];
 
 	if (!file.name.endsWith('.svelte') && !svelte.compileModule) {
 		// .svelte.js file compiled with Svelte 3/4 compiler
@@ -72,6 +72,11 @@ addEventListener('message', async (event) => {
 
 			if (can_use_experimental_async) {
 				compilerOptions.experimental = { async: true };
+			}
+
+			if (can_use_custom_renderer && options.customRenderer) {
+				// only set when enabled, since the mere presence of the option changes the output
+				compilerOptions.experimental = { ...compilerOptions.experimental, customRenderer: true };
 			}
 
 			if (compilerOptions.fragments == null) {
