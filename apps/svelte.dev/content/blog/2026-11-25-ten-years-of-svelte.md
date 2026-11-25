@@ -25,6 +25,6 @@ But I was wrong. The energy was fantastic. We had two days of lively conversatio
 
 Naturally, we spent a lot of time talking about AI. Many of the announcements are directly relevant to agentic development (the devtools expose an MCP server, `rsvelte` makes it practical for fleets of agents to work on large apps concurrently, and so on), and most attendees described themselves as frequent — if ambivalent — users of the technology. But there's nothing like an in-person gathering to remind you that the best bits of the job can't be automated away.
 
-Keep an eye on the [Svelte Society YouTube channel](https://www.youtube.com/sveltesociety), where the talks will be published in the coming days.
+Keep an eye on the [Svelte Society YouTube channel](https://www.youtube.com/sveltesociety), where the talks will be published in the coming days, starting with [Unfinished business](https://www.youtube.com/watch?v=v83Nh7EYJZg) by yours truly.
 
 We're a decade in, and our best years are still ahead of us.
