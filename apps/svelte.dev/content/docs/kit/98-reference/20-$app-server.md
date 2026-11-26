@@ -559,7 +559,7 @@ type RemoteFormFields<T> =
 interface RemoteFormInput {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="RemoteFormInput-key-string"><a href="#RemoteFormInput-key-string" class="permalink" aria-label="Permalink to key: string"></a>
 
 ```dts
 [key: string]: MaybeArray<string | number | boolean | File | RemoteFormInput> | undefined;
@@ -610,7 +610,7 @@ type RemoteFormInvalidField<T> =
 interface RemoteFormIssue {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="RemoteFormIssue-message"><a href="#RemoteFormIssue-message" class="permalink" aria-label="Permalink to message"></a>
 
 ```dts
 message: string;
@@ -619,7 +619,7 @@ message: string;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="RemoteFormIssue-path"><a href="#RemoteFormIssue-path" class="permalink" aria-label="Permalink to path"></a>
 
 ```dts
 path: Array<string | number>;

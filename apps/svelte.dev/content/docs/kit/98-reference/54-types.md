@@ -160,7 +160,7 @@ Defines the common shape of expected and unexpected errors. Expected errors are 
 interface Error {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Error-status"><a href="#Error-status" class="permalink" aria-label="Permalink to status"></a>
 
 ```dts
 status: number;
@@ -169,7 +169,7 @@ status: number;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Error-message"><a href="#Error-message" class="permalink" aria-label="Permalink to message"></a>
 
 ```dts
 message: string;

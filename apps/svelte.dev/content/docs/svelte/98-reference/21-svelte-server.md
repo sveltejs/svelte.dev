@@ -97,7 +97,7 @@ type Sha256Source = `sha256-${string}`;
 interface SyncRenderOutput {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="SyncRenderOutput-head"><a href="#SyncRenderOutput-head" class="permalink" aria-label="Permalink to head"></a>
 
 ```dts
 head: string;
@@ -110,7 +110,7 @@ HTML that goes into the `<head>`
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="SyncRenderOutput-html"><a href="#SyncRenderOutput-html" class="permalink" aria-label="Permalink to html"></a>
 
 ```dts
 html: string;
@@ -127,7 +127,7 @@ html: string;
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="SyncRenderOutput-body"><a href="#SyncRenderOutput-body" class="permalink" aria-label="Permalink to body"></a>
 
 ```dts
 body: string;
@@ -140,7 +140,7 @@ HTML that goes somewhere into the `<body>`
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="SyncRenderOutput-hashes"><a href="#SyncRenderOutput-hashes" class="permalink" aria-label="Permalink to hashes"></a>
 
 ```dts
 hashes: {

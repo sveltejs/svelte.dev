@@ -125,8 +125,55 @@ title: @sveltejs/kit/vite
 
 		const html = await render_content('docs/kit/98-reference/15-@sveltejs-kit-vite.md', markdown);
 		expect(html).toContain('id="serviceWorker"');
+		expect(html).toContain('id="serviceWorker-register"');
+		expect(html).toContain('id="serviceWorker-register-2"');
+		expect(html).toContain('id="serviceWorker-options"');
 		expect(html).toContain('Whether to automatically register the service worker');
 		expect(html).toContain('RegistrationOptions');
+	});
+
+	test('extracts special member names for constructors, call signatures, index signatures, and quoted keys', async () => {
+		const code = `
+			export declare class ExampleClass {
+				constructor(value: string);
+			}
+			export interface ExampleInterface {
+				/** Call signature */
+				(input: number): void;
+				/** Construct signature */
+				new (value: string): ExampleClass;
+				/** Quoted key */
+				'child-src'?: string[];
+				/** Computed symbol */
+				[uniqueSymbol]: true;
+				/** Index signature */
+				[key: string]: unknown;
+			}
+		`;
+		const node = ts.createSourceFile('index.d.ts', code, ts.ScriptTarget.Latest, true);
+		expect((node as ts.SourceFile & { parseDiagnostics?: unknown[] }).parseDiagnostics).toEqual([]);
+
+		const result = await get_types(code, node.statements);
+		expect(result.exports[0].overloads[0].children.map((child) => child.name)).toEqual([
+			'constructor'
+		]);
+		expect(result.types[0].overloads[0].children.map((child) => child.name)).toEqual([
+			'call',
+			'new',
+			'child-src',
+			'[uniqueSymbol]',
+			'key: string'
+		]);
+
+		const exampleTemplate = path.join(directory, 'example.md');
+		fs.writeFileSync(exampleTemplate, '> MODULE: example');
+		const markdown = await preprocess(exampleTemplate, [{ name: 'example', ...result }]);
+		expect(markdown).toContain('id="ExampleClass-constructor"');
+		expect(markdown).toContain('id="ExampleInterface-call"');
+		expect(markdown).toContain('id="ExampleInterface-new"');
+		expect(markdown).toContain('id="ExampleInterface-child-src"');
+		expect(markdown).toContain('id="ExampleInterface-uniqueSymbol"');
+		expect(markdown).toContain('id="ExampleInterface-key-string"');
 	});
 
 	test('preserves undocumented union branches and trailing type syntax', async () => {

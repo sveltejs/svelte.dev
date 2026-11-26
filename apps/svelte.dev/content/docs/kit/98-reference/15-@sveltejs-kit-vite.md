@@ -153,7 +153,7 @@ If this level of configuration is insufficient and you have more dynamic require
 
 <div class="ts-block-property-children">
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="csp-mode"><a href="#csp-mode" class="permalink" aria-label="Permalink to mode"></a>
 
 ```ts
 // @noErrors
@@ -166,7 +166,7 @@ Whether to use hashes or nonces to restrict `<script>` and `<style>` elements. `
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="csp-directives"><a href="#csp-directives" class="permalink" aria-label="Permalink to directives"></a>
 
 ```ts
 // @noErrors
@@ -179,7 +179,7 @@ Directives that will be added to `Content-Security-Policy` headers.
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="csp-reportOnly"><a href="#csp-reportOnly" class="permalink" aria-label="Permalink to reportOnly"></a>
 
 ```ts
 // @noErrors
@@ -207,7 +207,7 @@ Protection against [cross-site request forgery (CSRF)](https://owasp.org/www-com
 
 <div class="ts-block-property-children">
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="csrf-checkOrigin"><a href="#csrf-checkOrigin" class="permalink" aria-label="Permalink to checkOrigin"></a>
 
 ```ts
 // @noErrors
@@ -229,7 +229,7 @@ To allow people to make `POST`, `PUT`, `PATCH`, or `DELETE` requests with a `Con
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="csrf-trustedOrigins"><a href="#csrf-trustedOrigins" class="permalink" aria-label="Permalink to trustedOrigins"></a>
 
 ```ts
 // @noErrors
@@ -289,7 +289,7 @@ Environment variable configuration
 
 <div class="ts-block-property-children">
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="env-dir"><a href="#env-dir" class="permalink" aria-label="Permalink to dir"></a>
 
 ```ts
 // @noErrors
@@ -323,7 +323,7 @@ Experimental features. Here be dragons. These are not subject to semantic versio
 
 <div class="ts-block-property-children">
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="experimental-remoteFunctions"><a href="#experimental-remoteFunctions" class="permalink" aria-label="Permalink to remoteFunctions"></a>
 
 ```ts
 // @noErrors
@@ -342,7 +342,7 @@ Whether to enable the experimental remote functions feature. This feature is not
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="experimental-forkPreloads"><a href="#experimental-forkPreloads" class="permalink" aria-label="Permalink to forkPreloads"></a>
 
 ```ts
 // @noErrors
@@ -376,7 +376,7 @@ Where to find various files within your project.
 
 <div class="ts-block-property-children">
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="files-src"><a href="#files-src" class="permalink" aria-label="Permalink to src"></a>
 
 ```ts
 // @noErrors
@@ -397,7 +397,7 @@ The location of your source code.
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="files-assets"><a href="#files-assets" class="permalink" aria-label="Permalink to assets"></a>
 
 ```ts
 // @noErrors
@@ -417,7 +417,7 @@ A place to put static files that should have stable URLs and undergo no processi
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="files-hooks"><a href="#files-hooks" class="permalink" aria-label="Permalink to hooks"></a>
 
 ```ts
 // @noErrors
@@ -426,7 +426,7 @@ hooks?: {/*…*/};
 
 <div class="ts-block-property-details">
 
-<div class="ts-block-property-children"><div class="ts-block-property">
+<div class="ts-block-property-children"><div class="ts-block-property" id="files-hooks-client"><a href="#files-hooks-client" class="permalink" aria-label="Permalink to client"></a>
 
 ```ts
 // @noErrors
@@ -446,7 +446,7 @@ The location of your client [hooks](/docs/kit/hooks).
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="files-hooks-server"><a href="#files-hooks-server" class="permalink" aria-label="Permalink to server"></a>
 
 ```ts
 // @noErrors
@@ -466,7 +466,7 @@ The location of your server [hooks](/docs/kit/hooks).
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="files-hooks-universal"><a href="#files-hooks-universal" class="permalink" aria-label="Permalink to universal"></a>
 
 ```ts
 // @noErrors
@@ -490,7 +490,7 @@ The location of your universal [hooks](/docs/kit/hooks).
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="files-params"><a href="#files-params" class="permalink" aria-label="Permalink to params"></a>
 
 ```ts
 // @noErrors
@@ -510,7 +510,7 @@ A directory containing [parameter matchers](/docs/kit/advanced-routing#Matching)
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="files-routes"><a href="#files-routes" class="permalink" aria-label="Permalink to routes"></a>
 
 ```ts
 // @noErrors
@@ -530,7 +530,7 @@ The files that define the structure of your app (see [Routing](/docs/kit/routing
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="files-serviceWorker"><a href="#files-serviceWorker" class="permalink" aria-label="Permalink to serviceWorker"></a>
 
 ```ts
 // @noErrors
@@ -550,7 +550,7 @@ The location of your service worker's entry point (see [Service workers](/docs/k
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="files-appTemplate"><a href="#files-appTemplate" class="permalink" aria-label="Permalink to appTemplate"></a>
 
 ```ts
 // @noErrors
@@ -570,7 +570,7 @@ The location of the template for HTML responses.
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="files-errorTemplate"><a href="#files-errorTemplate" class="permalink" aria-label="Permalink to errorTemplate"></a>
 
 ```ts
 // @noErrors
@@ -655,7 +655,7 @@ Options related to the build output format
 
 <div class="ts-block-property-children">
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="output-linkHeaderPreload"><a href="#output-linkHeaderPreload" class="permalink" aria-label="Permalink to linkHeaderPreload"></a>
 
 ```ts
 // @noErrors
@@ -678,7 +678,7 @@ If you are using one of these web servers, you may want to leave this as `false`
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="output-preloadStrategy"><a href="#output-preloadStrategy" class="permalink" aria-label="Permalink to preloadStrategy"></a>
 
 ```ts
 // @noErrors
@@ -703,7 +703,7 @@ are three strategies with different trade-offs:
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="output-bundleStrategy"><a href="#output-bundleStrategy" class="permalink" aria-label="Permalink to bundleStrategy"></a>
 
 ```ts
 // @noErrors
@@ -773,7 +773,7 @@ export default defineConfig({
 
 <div class="ts-block-property-children">
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="paths-assets"><a href="#paths-assets" class="permalink" aria-label="Permalink to assets"></a>
 
 ```ts
 // @noErrors
@@ -792,7 +792,7 @@ An absolute path that your app's files are served from. This is useful if your f
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="paths-base"><a href="#paths-base" class="permalink" aria-label="Permalink to base"></a>
 
 ```ts
 // @noErrors
@@ -811,7 +811,7 @@ A root-relative path that must start, but not end with `/` (e.g. `/base-path`), 
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="paths-origin"><a href="#paths-origin" class="permalink" aria-label="Permalink to origin"></a>
 
 ```ts
 // @noErrors
@@ -837,7 +837,7 @@ This is also used as the value of `url.origin` during prerendering (when unset, 
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="paths-relative"><a href="#paths-relative" class="permalink" aria-label="Permalink to relative"></a>
 
 ```ts
 // @noErrors
@@ -881,7 +881,7 @@ See [Prerendering](/docs/kit/page-options#prerender).
 
 <div class="ts-block-property-children">
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="prerender-concurrency"><a href="#prerender-concurrency" class="permalink" aria-label="Permalink to concurrency"></a>
 
 ```ts
 // @noErrors
@@ -900,7 +900,7 @@ How many pages can be prerendered simultaneously. JS is single-threaded, but in 
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="prerender-crawl"><a href="#prerender-crawl" class="permalink" aria-label="Permalink to crawl"></a>
 
 ```ts
 // @noErrors
@@ -919,7 +919,7 @@ Whether SvelteKit should find pages to prerender by following links from `entrie
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="prerender-entries"><a href="#prerender-entries" class="permalink" aria-label="Permalink to entries"></a>
 
 ```ts
 // @noErrors
@@ -938,7 +938,7 @@ An array of pages to prerender, or start crawling from (if `crawl: true`). The `
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="prerender-handleHttpError"><a href="#prerender-handleHttpError" class="permalink" aria-label="Permalink to handleHttpError"></a>
 
 ```ts
 // @noErrors
@@ -988,7 +988,7 @@ export default defineConfig({
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="prerender-handleMissingId"><a href="#prerender-handleMissingId" class="permalink" aria-label="Permalink to handleMissingId"></a>
 
 ```ts
 // @noErrors
@@ -1013,7 +1013,7 @@ How to respond when hash links from one prerendered page to another don't corres
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="prerender-handleEntryGeneratorMismatch"><a href="#prerender-handleEntryGeneratorMismatch" class="permalink" aria-label="Permalink to handleEntryGeneratorMismatch"></a>
 
 ```ts
 // @noErrors
@@ -1038,7 +1038,7 @@ How to respond when an entry generated by the `entries` export doesn't match the
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="prerender-handleUnseenRoutes"><a href="#prerender-handleUnseenRoutes" class="permalink" aria-label="Permalink to handleUnseenRoutes"></a>
 
 ```ts
 // @noErrors
@@ -1066,7 +1066,7 @@ circumstances such as a CMS not returning data for a specific area, resulting in
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="prerender-handleInvalidUrl"><a href="#prerender-handleInvalidUrl" class="permalink" aria-label="Permalink to handleInvalidUrl"></a>
 
 ```ts
 // @noErrors
@@ -1106,7 +1106,7 @@ How to respond when SvelteKit encounters a URL it cannot parse while crawling pr
 
 <div class="ts-block-property-children">
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="router-type"><a href="#router-type" class="permalink" aria-label="Permalink to type"></a>
 
 ```ts
 // @noErrors
@@ -1129,7 +1129,7 @@ What type of client-side router to use.
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="router-resolution"><a href="#router-resolution" class="permalink" aria-label="Permalink to resolution"></a>
 
 ```ts
 // @noErrors
@@ -1181,7 +1181,7 @@ The drawback is that for unvisited paths, resolution will take slightly longer (
 
 <div class="ts-block-property-children">
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="serviceWorker-register"><a href="#serviceWorker-register" class="permalink" aria-label="Permalink to register"></a>
 
 ```ts
 // @noErrors
@@ -1200,7 +1200,7 @@ Whether to automatically register the service worker, if it exists.
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="serviceWorker-options"><a href="#serviceWorker-options" class="permalink" aria-label="Permalink to options"></a>
 
 ```ts
 // @noErrors
@@ -1213,7 +1213,7 @@ Options for serviceWorker.register("...", options);
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="serviceWorker-register-2"><a href="#serviceWorker-register-2" class="permalink" aria-label="Permalink to register"></a>
 
 ```ts
 // @noErrors
@@ -1247,7 +1247,7 @@ Options for enabling [OpenTelemetry](https://opentelemetry.io/) tracing for Svel
 
 <div class="ts-block-property-children">
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="tracing-server"><a href="#tracing-server" class="permalink" aria-label="Permalink to server"></a>
 
 ```ts
 // @noErrors
@@ -1281,7 +1281,7 @@ Enables server-side [OpenTelemetry](https://opentelemetry.io/) span emission for
 
 <div class="ts-block-property-children">
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="typescript-config"><a href="#typescript-config" class="permalink" aria-label="Permalink to config"></a>
 
 ```ts
 // @noErrors
@@ -1336,7 +1336,7 @@ In addition to these checks, SvelteKit polls for new versions on an interval and
 
 <div class="ts-block-property-children">
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="version-name"><a href="#version-name" class="permalink" aria-label="Permalink to name"></a>
 
 ```ts
 // @noErrors
@@ -1369,7 +1369,7 @@ export default defineConfig({
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="version-pollInterval"><a href="#version-pollInterval" class="permalink" aria-label="Permalink to pollInterval"></a>
 
 ```ts
 // @noErrors

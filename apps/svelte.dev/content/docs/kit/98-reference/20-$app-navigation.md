@@ -381,7 +381,7 @@ type BeforeNavigate = Navigation & {
 interface GotoOptions {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="GotoOptions-replace"><a href="#GotoOptions-replace" class="permalink" aria-label="Permalink to replace"></a>
 
 ```dts
 replace?: boolean;
@@ -400,7 +400,7 @@ If `true`, replaces the current history entry rather than creating a new one.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="GotoOptions-replaceState"><a href="#GotoOptions-replaceState" class="permalink" aria-label="Permalink to replaceState"></a>
 
 ```dts
 replaceState?: boolean;
@@ -417,7 +417,7 @@ replaceState?: boolean;
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="GotoOptions-shallow"><a href="#GotoOptions-shallow" class="permalink" aria-label="Permalink to shallow"></a>
 
 ```dts
 shallow?: boolean;
@@ -436,7 +436,7 @@ If `true`, updates the URL and `page.state` without navigating.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="GotoOptions-reset"><a href="#GotoOptions-reset" class="permalink" aria-label="Permalink to reset"></a>
 
 ```dts
 reset?: boolean;
@@ -459,7 +459,7 @@ If `false`, the current scroll position and focused element are left alone.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="GotoOptions-refreshAll"><a href="#GotoOptions-refreshAll" class="permalink" aria-label="Permalink to refreshAll"></a>
 
 ```dts
 refreshAll?: boolean;
@@ -478,7 +478,7 @@ If `true`, reruns all `load` functions and queries of the page.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="GotoOptions-invalidate"><a href="#GotoOptions-invalidate" class="permalink" aria-label="Permalink to invalidate"></a>
 
 ```dts
 invalidate?: Array<string | URL | ((url: URL) => boolean)>;
@@ -491,7 +491,7 @@ Causes any `load` functions to rerun if they depend on one of the URLs.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="GotoOptions-invalidateAll"><a href="#GotoOptions-invalidateAll" class="permalink" aria-label="Permalink to invalidateAll"></a>
 
 ```dts
 invalidateAll?: boolean;
@@ -508,7 +508,7 @@ invalidateAll?: boolean;
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="GotoOptions-state"><a href="#GotoOptions-state" class="permalink" aria-label="Permalink to state"></a>
 
 ```dts
 state?: App.PageState;
@@ -521,7 +521,7 @@ An optional object that will be available as `page.state`.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="GotoOptions-persistState"><a href="#GotoOptions-persistState" class="permalink" aria-label="Permalink to persistState"></a>
 
 ```dts
 persistState?: boolean;
@@ -562,7 +562,7 @@ type Navigation =
 interface NavigationBase {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="NavigationBase-type"><a href="#NavigationBase-type" class="permalink" aria-label="Permalink to type"></a>
 
 ```dts
 type: NavigationType;
@@ -581,7 +581,7 @@ The type of navigation:
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="NavigationBase-shallow"><a href="#NavigationBase-shallow" class="permalink" aria-label="Permalink to shallow"></a>
 
 ```dts
 shallow: boolean;
@@ -594,7 +594,7 @@ Whether this is a shallow navigation.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="NavigationBase-from"><a href="#NavigationBase-from" class="permalink" aria-label="Permalink to from"></a>
 
 ```dts
 from: NavigationTarget | null;
@@ -607,7 +607,7 @@ Where navigation was triggered from
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="NavigationBase-to"><a href="#NavigationBase-to" class="permalink" aria-label="Permalink to to"></a>
 
 ```dts
 to: NavigationTarget | null;
@@ -620,7 +620,7 @@ Where navigation is going to/has gone to
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="NavigationBase-willUnload"><a href="#NavigationBase-willUnload" class="permalink" aria-label="Permalink to willUnload"></a>
 
 ```dts
 willUnload: boolean;
@@ -633,7 +633,7 @@ Whether or not the navigation will result in the page being unloaded (i.e. not a
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="NavigationBase-complete"><a href="#NavigationBase-complete" class="permalink" aria-label="Permalink to complete"></a>
 
 ```dts
 complete: Promise<void>;
@@ -657,7 +657,7 @@ The navigation that occurs when the app starts/hydrates
 interface NavigationEnter extends NavigationBase {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="NavigationEnter-type"><a href="#NavigationEnter-type" class="permalink" aria-label="Permalink to type"></a>
 
 ```dts
 type: 'enter';
@@ -666,7 +666,7 @@ type: 'enter';
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="NavigationEnter-from"><a href="#NavigationEnter-from" class="permalink" aria-label="Permalink to from"></a>
 
 ```dts
 from: null;
@@ -679,7 +679,7 @@ The app has just started, so there is no page it navigated from
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="NavigationEnter-delta"><a href="#NavigationEnter-delta" class="permalink" aria-label="Permalink to delta"></a>
 
 ```dts
 delta?: undefined;
@@ -692,7 +692,7 @@ In case of a history back/forward navigation, the number of steps to go back/for
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="NavigationEnter-event"><a href="#NavigationEnter-event" class="permalink" aria-label="Permalink to event"></a>
 
 ```dts
 event?: undefined;
@@ -725,7 +725,7 @@ A navigation triggered by a `<form method="GET">`
 interface NavigationFormSubmit extends NavigationBase {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="NavigationFormSubmit-type"><a href="#NavigationFormSubmit-type" class="permalink" aria-label="Permalink to type"></a>
 
 ```dts
 type: 'form';
@@ -734,7 +734,7 @@ type: 'form';
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="NavigationFormSubmit-event"><a href="#NavigationFormSubmit-event" class="permalink" aria-label="Permalink to event"></a>
 
 ```dts
 event: SubmitEvent;
@@ -757,7 +757,7 @@ A navigation triggered by a `goto(...)` call or a redirect
 interface NavigationGoto extends NavigationBase {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="NavigationGoto-type"><a href="#NavigationGoto-type" class="permalink" aria-label="Permalink to type"></a>
 
 ```dts
 type: 'goto';
@@ -776,7 +776,7 @@ A navigation triggered by the tab being closed, or the user navigating to a diff
 interface NavigationLeave extends NavigationBase {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="NavigationLeave-type"><a href="#NavigationLeave-type" class="permalink" aria-label="Permalink to type"></a>
 
 ```dts
 type: 'leave';
@@ -795,7 +795,7 @@ A navigation triggered by a link click
 interface NavigationLink extends NavigationBase {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="NavigationLink-type"><a href="#NavigationLink-type" class="permalink" aria-label="Permalink to type"></a>
 
 ```dts
 type: 'link';
@@ -804,7 +804,7 @@ type: 'link';
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="NavigationLink-event"><a href="#NavigationLink-event" class="permalink" aria-label="Permalink to event"></a>
 
 ```dts
 event: PointerEvent;
@@ -827,7 +827,7 @@ A navigation triggered by back/forward navigation
 interface NavigationPopState extends NavigationBase {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="NavigationPopState-type"><a href="#NavigationPopState-type" class="permalink" aria-label="Permalink to type"></a>
 
 ```dts
 type: 'popstate';
@@ -836,7 +836,7 @@ type: 'popstate';
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="NavigationPopState-delta"><a href="#NavigationPopState-delta" class="permalink" aria-label="Permalink to delta"></a>
 
 ```dts
 delta: number;
@@ -849,7 +849,7 @@ In case of a history back/forward navigation, the number of steps to go back/for
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="NavigationPopState-event"><a href="#NavigationPopState-event" class="permalink" aria-label="Permalink to event"></a>
 
 ```dts
 event: PopStateEvent;
@@ -876,7 +876,7 @@ interface NavigationTarget<
 > {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="NavigationTarget-params"><a href="#NavigationTarget-params" class="permalink" aria-label="Permalink to params"></a>
 
 ```dts
 params: Params | null;
@@ -890,7 +890,7 @@ Is `null` if the target is not part of the SvelteKit app (could not be resolved 
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="NavigationTarget-route"><a href="#NavigationTarget-route" class="permalink" aria-label="Permalink to route"></a>
 
 ```dts
 route: {/*…*/};
@@ -900,7 +900,7 @@ route: {/*…*/};
 
 Info about the target route
 
-<div class="ts-block-property-children"><div class="ts-block-property">
+<div class="ts-block-property-children"><div class="ts-block-property" id="NavigationTarget-route-id"><a href="#NavigationTarget-route-id" class="permalink" aria-label="Permalink to id"></a>
 
 ```dts
 id: RouteId | null;
@@ -916,7 +916,7 @@ The ID of the current route - e.g. for `src/routes/blog/[slug]`, it would be `/b
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="NavigationTarget-url"><a href="#NavigationTarget-url" class="permalink" aria-label="Permalink to url"></a>
 
 ```dts
 url: URL;
@@ -929,7 +929,7 @@ The URL that is navigated to
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="NavigationTarget-scroll"><a href="#NavigationTarget-scroll" class="permalink" aria-label="Permalink to scroll"></a>
 
 ```dts
 scroll: { x: number; y: number } | null;

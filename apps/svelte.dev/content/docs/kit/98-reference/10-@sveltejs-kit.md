@@ -371,7 +371,7 @@ type Action<
 interface ActionFailure<T = undefined> {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ActionFailure-status"><a href="#ActionFailure-status" class="permalink" aria-label="Permalink to status"></a>
 
 ```dts
 status: number;
@@ -380,7 +380,7 @@ status: number;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ActionFailure-data"><a href="#ActionFailure-data" class="permalink" aria-label="Permalink to data"></a>
 
 ```dts
 data: T;
@@ -389,7 +389,7 @@ data: T;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ActionFailure-uniqueSymbol"><a href="#ActionFailure-uniqueSymbol" class="permalink" aria-label="Permalink to [uniqueSymbol]"></a>
 
 ```dts
 [uniqueSymbol]: true;
@@ -429,7 +429,7 @@ type Actions<
 interface Adapter {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Adapter-name"><a href="#Adapter-name" class="permalink" aria-label="Permalink to name"></a>
 
 ```dts
 name: string;
@@ -442,7 +442,7 @@ The name of the adapter, using for logging. Will typically correspond to the pac
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Adapter-adapt"><a href="#Adapter-adapt" class="permalink" aria-label="Permalink to adapt"></a>
 
 ```dts
 adapt: (builder: Builder) => MaybePromise<void>;
@@ -461,7 +461,7 @@ This function is called after SvelteKit has built your app.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Adapter-supports"><a href="#Adapter-supports" class="permalink" aria-label="Permalink to supports"></a>
 
 ```dts
 supports?: {/*…*/};
@@ -471,7 +471,7 @@ supports?: {/*…*/};
 
 Checks called during dev and build to determine whether specific features will work in production with this adapter.
 
-<div class="ts-block-property-children"><div class="ts-block-property">
+<div class="ts-block-property-children"><div class="ts-block-property" id="Adapter-supports-read"><a href="#Adapter-supports-read" class="permalink" aria-label="Permalink to read"></a>
 
 ```dts
 read?: (details: { config: Record<string, any>; route: { id: string } }) => boolean;
@@ -489,7 +489,7 @@ Test support for `read` from `$app/server`.
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="Adapter-supports-instrumentation"><a href="#Adapter-supports-instrumentation" class="permalink" aria-label="Permalink to instrumentation"></a>
 
 ```dts
 instrumentation?: () => boolean;
@@ -511,7 +511,7 @@ Test support for `instrumentation.server.js`. To pass, the adapter must support 
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Adapter-emulate"><a href="#Adapter-emulate" class="permalink" aria-label="Permalink to emulate"></a>
 
 ```dts
 emulate?: () => MaybePromise<Emulator>;
@@ -531,7 +531,7 @@ during dev, build and prerendering.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Adapter-vite"><a href="#Adapter-vite" class="permalink" aria-label="Permalink to vite"></a>
 
 ```dts
 vite?: AdapterViteConfig | ((ctx: { config: ValidatedConfig }) => AdapterViteConfig);
@@ -558,7 +558,7 @@ Options for configuring and interacting with Vite
 interface AdapterViteConfig {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="AdapterViteConfig-customPreview"><a href="#AdapterViteConfig-customPreview" class="permalink" aria-label="Permalink to customPreview"></a>
 
 ```dts
 customPreview?: boolean;
@@ -581,7 +581,7 @@ previewing the build output on its own.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="AdapterViteConfig-getRequest"><a href="#AdapterViteConfig-getRequest" class="permalink" aria-label="Permalink to getRequest"></a>
 
 ```dts
 getRequest?: typeof getRequest;
@@ -602,7 +602,7 @@ To call the original `setRequest` function, import it from `@sveltejs/kit/node`.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="AdapterViteConfig-setResponse"><a href="#AdapterViteConfig-setResponse" class="permalink" aria-label="Permalink to setResponse"></a>
 
 ```dts
 setResponse?: typeof setResponse;
@@ -623,7 +623,7 @@ To call the original `setResponse` function, import it from `@sveltejs/kit/node`
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="AdapterViteConfig-plugins"><a href="#AdapterViteConfig-plugins" class="permalink" aria-label="Permalink to plugins"></a>
 
 ```dts
 plugins?:
@@ -642,7 +642,7 @@ plugins?:
 Vite plugins injected by the adapter. By default,
 they are placed before SvelteKit's plugins.
 
-<div class="ts-block-property-children"><div class="ts-block-property">
+<div class="ts-block-property-children"><div class="ts-block-property" id="AdapterViteConfig-plugins-pre"><a href="#AdapterViteConfig-plugins-pre" class="permalink" aria-label="Permalink to pre"></a>
 
 ```dts
 pre?: Plugin[];
@@ -660,7 +660,7 @@ Vite plugins placed before any of SvelteKit's own plugins.
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="AdapterViteConfig-plugins-post"><a href="#AdapterViteConfig-plugins-post" class="permalink" aria-label="Permalink to post"></a>
 
 ```dts
 post?: Plugin[];
@@ -711,7 +711,7 @@ It contains various methods and properties that are useful for adapting the app.
 interface Builder {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Builder-log"><a href="#Builder-log" class="permalink" aria-label="Permalink to log"></a>
 
 ```dts
 log: Logger;
@@ -724,7 +724,7 @@ Print messages to the console. `log.info` and `log.minor` are silent unless Vite
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Builder-rimraf"><a href="#Builder-rimraf" class="permalink" aria-label="Permalink to rimraf"></a>
 
 ```dts
 rimraf: (dir: string) => void;
@@ -743,7 +743,7 @@ Remove `dir` and all its contents.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Builder-mkdirp"><a href="#Builder-mkdirp" class="permalink" aria-label="Permalink to mkdirp"></a>
 
 ```dts
 mkdirp: (dir: string) => void;
@@ -762,7 +762,7 @@ Create `dir` and any required parent directories.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Builder-config"><a href="#Builder-config" class="permalink" aria-label="Permalink to config"></a>
 
 ```dts
 config: ValidatedConfig;
@@ -775,7 +775,7 @@ The fully resolved SvelteKit config.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Builder-prerendered"><a href="#Builder-prerendered" class="permalink" aria-label="Permalink to prerendered"></a>
 
 ```dts
 prerendered: Prerendered;
@@ -788,7 +788,7 @@ Information about prerendered pages and assets, if any.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Builder-routes"><a href="#Builder-routes" class="permalink" aria-label="Permalink to routes"></a>
 
 ```dts
 routes: RouteDefinition[];
@@ -801,7 +801,7 @@ An array of all routes (including prerendered)
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Builder-manifest"><a href="#Builder-manifest" class="permalink" aria-label="Permalink to manifest"></a>
 
 ```dts
 manifest: typeof import('$app/manifest');
@@ -821,7 +821,7 @@ The only difference is `manifest.assets` also includes the service worker, if it
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Builder-mimeTypes"><a href="#Builder-mimeTypes" class="permalink" aria-label="Permalink to mimeTypes"></a>
 
 ```dts
 mimeTypes: Record<string, string>;
@@ -840,7 +840,7 @@ A record of file extensions to MIME types
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Builder-createEntries"><a href="#Builder-createEntries" class="permalink" aria-label="Permalink to createEntries"></a>
 
 ```dts
 createEntries?: (fn: (route: RouteDefinition) => AdapterEntry) => Promise<void>;
@@ -860,7 +860,7 @@ Create separate functions that map to one or more routes of your app.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Builder-findServerAssets"><a href="#Builder-findServerAssets" class="permalink" aria-label="Permalink to findServerAssets"></a>
 
 ```dts
 findServerAssets: (routes: RouteDefinition[]) => string[];
@@ -873,7 +873,7 @@ Find all the assets imported by server files belonging to `routes`
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Builder-generateFallback"><a href="#Builder-generateFallback" class="permalink" aria-label="Permalink to generateFallback"></a>
 
 ```dts
 generateFallback: (dest: string) => Promise<void>;
@@ -886,7 +886,7 @@ Generate a fallback page for a static webserver to use when no route is matched.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Builder-generateEnvModule"><a href="#Builder-generateEnvModule" class="permalink" aria-label="Permalink to generateEnvModule"></a>
 
 ```dts
 generateEnvModule: () => void;
@@ -899,7 +899,7 @@ Generate a module exposing public environment variables as `$app/env/public` if 
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Builder-generateManifest"><a href="#Builder-generateManifest" class="permalink" aria-label="Permalink to generateManifest"></a>
 
 ```dts
 generateManifest?: (opts: { relativePath: string; routes?: RouteDefinition[] }) => string;
@@ -919,7 +919,7 @@ Generate a server-side manifest to initialise the SvelteKit [server](/docs/kit/@
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Builder-getBuildDirectory"><a href="#Builder-getBuildDirectory" class="permalink" aria-label="Permalink to getBuildDirectory"></a>
 
 ```dts
 getBuildDirectory: (name: string) => string;
@@ -938,7 +938,7 @@ Resolve a path to the `name` directory inside `outDir`, e.g. `/path/to/.svelte-k
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Builder-getClientDirectory"><a href="#Builder-getClientDirectory" class="permalink" aria-label="Permalink to getClientDirectory"></a>
 
 ```dts
 getClientDirectory: () => string;
@@ -951,7 +951,7 @@ Get the fully resolved path to the directory containing client-side assets, incl
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Builder-getServerDirectory"><a href="#Builder-getServerDirectory" class="permalink" aria-label="Permalink to getServerDirectory"></a>
 
 ```dts
 getServerDirectory: () => string;
@@ -964,7 +964,7 @@ Get the fully resolved path to the directory containing server-side code.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Builder-getAppPath"><a href="#Builder-getAppPath" class="permalink" aria-label="Permalink to getAppPath"></a>
 
 ```dts
 getAppPath: () => string;
@@ -977,7 +977,7 @@ Get the application path including any configured `base` path, e.g. `my-base-pat
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Builder-generateServerInstance"><a href="#Builder-generateServerInstance" class="permalink" aria-label="Permalink to generateServerInstance"></a>
 
 ```dts
 generateServerInstance: (
@@ -1004,7 +1004,7 @@ Generates a module exposing a SvelteKit [Server](/docs/kit/@sveltejs-kit#Server)
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Builder-writeClient"><a href="#Builder-writeClient" class="permalink" aria-label="Permalink to writeClient"></a>
 
 ```dts
 writeClient: (dest: string) => string[];
@@ -1024,7 +1024,7 @@ Write client assets to `dest`.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Builder-writePrerendered"><a href="#Builder-writePrerendered" class="permalink" aria-label="Permalink to writePrerendered"></a>
 
 ```dts
 writePrerendered: (dest: string) => string[];
@@ -1044,7 +1044,7 @@ Write prerendered files to `dest`.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Builder-writeServer"><a href="#Builder-writeServer" class="permalink" aria-label="Permalink to writeServer"></a>
 
 ```dts
 writeServer: (dest: string) => string[];
@@ -1064,7 +1064,7 @@ Write server-side code to `dest`.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Builder-createInstrumentationInitializer"><a href="#Builder-createInstrumentationInitializer" class="permalink" aria-label="Permalink to createInstrumentationInitializer"></a>
 
 ```dts
 createInstrumentationInitializer: (options: {
@@ -1093,7 +1093,7 @@ runs. Include the returned module in any subsequent bundling or tracing step.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Builder-copy"><a href="#Builder-copy" class="permalink" aria-label="Permalink to copy"></a>
 
 ```dts
 copy: (
@@ -1123,7 +1123,7 @@ Copy a file or directory.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Builder-hasServerInstrumentationFile"><a href="#Builder-hasServerInstrumentationFile" class="permalink" aria-label="Permalink to hasServerInstrumentationFile"></a>
 
 ```dts
 hasServerInstrumentationFile: () => boolean;
@@ -1143,7 +1143,7 @@ Check if the server instrumentation file exists.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Builder-instrument"><a href="#Builder-instrument" class="permalink" aria-label="Permalink to instrument"></a>
 
 ```dts
 instrument: (args: {
@@ -1197,7 +1197,7 @@ Caveats:
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Builder-compress"><a href="#Builder-compress" class="permalink" aria-label="Permalink to compress"></a>
 
 ```dts
 compress: (directory: string) => Promise<string[]>;
@@ -1225,7 +1225,7 @@ Compress files in `directory` with gzip and brotli, where appropriate. Generates
 interface Cookies {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Cookies-get"><a href="#Cookies-get" class="permalink" aria-label="Permalink to get"></a>
 
 ```dts
 get: (name: string, opts?: import('cookie').ParseOptions) => string | undefined;
@@ -1245,7 +1245,7 @@ Gets a cookie that was previously set with `cookies.set`, or from the request he
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Cookies-getAll"><a href="#Cookies-getAll" class="permalink" aria-label="Permalink to getAll"></a>
 
 ```dts
 getAll: (opts?: import('cookie').ParseOptions) => Array<{ name: string; value: string }>;
@@ -1264,7 +1264,7 @@ Gets all cookies that were previously set with `cookies.set`, or from the reques
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Cookies-set"><a href="#Cookies-set" class="permalink" aria-label="Permalink to set"></a>
 
 ```dts
 set: (name: string, value: string, opts?: import('cookie').SerializeOptions) => void;
@@ -1289,7 +1289,7 @@ The `path` option is `'/'` by default. You can use relative paths, or set `path:
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Cookies-delete"><a href="#Cookies-delete" class="permalink" aria-label="Permalink to delete"></a>
 
 ```dts
 delete: (name: string, opts?: import('cookie').SerializeOptions) => void;
@@ -1313,7 +1313,7 @@ The `path` option is `'/'` by default. You can use relative paths, or set `path:
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Cookies-parse"><a href="#Cookies-parse" class="permalink" aria-label="Permalink to parse"></a>
 
 ```dts
 parse: typeof import('cookie').parseSetCookie;
@@ -1346,7 +1346,7 @@ Note the use of `headers.getSetCookie()`, which returns an array of cookie heade
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Cookies-serialize"><a href="#Cookies-serialize" class="permalink" aria-label="Permalink to serialize"></a>
 
 ```dts
 serialize: (name: string, value: string, opts?: import('cookie').SerializeOptions) => string;
@@ -1387,7 +1387,7 @@ A collection of functions that influence the environment during dev, build and p
 interface Emulator {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Emulator-platform"><a href="#Emulator-platform" class="permalink" aria-label="Permalink to platform"></a>
 
 ```dts
 platform?(details: { config: any; prerender: PrerenderOption }): MaybePromise<App.Platform>;
@@ -1411,7 +1411,7 @@ The object returned by the [`error`](/docs/kit/@sveltejs-kit#error) function.
 interface HttpError {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="HttpError-status"><a href="#HttpError-status" class="permalink" aria-label="Permalink to status"></a>
 
 ```dts
 status: number;
@@ -1424,7 +1424,7 @@ The [HTTP status code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="HttpError-body"><a href="#HttpError-body" class="permalink" aria-label="Permalink to body"></a>
 
 ```dts
 body: App.Error;
@@ -1489,7 +1489,7 @@ interface LoadEvent<
 > extends NavigationEvent<Params, RouteId> {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="LoadEvent-fetch"><a href="#LoadEvent-fetch" class="permalink" aria-label="Permalink to fetch"></a>
 
 ```dts
 fetch: typeof fetch;
@@ -1510,7 +1510,7 @@ You can learn more about making credentialed requests with cookies [here](/docs/
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="LoadEvent-data"><a href="#LoadEvent-data" class="permalink" aria-label="Permalink to data"></a>
 
 ```dts
 data: Data;
@@ -1523,7 +1523,7 @@ Contains the data returned by the route's server `load` function (in `+layout.se
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="LoadEvent-setHeaders"><a href="#LoadEvent-setHeaders" class="permalink" aria-label="Permalink to setHeaders"></a>
 
 ```dts
 setHeaders: (headers: Record<string, string>) => void;
@@ -1558,7 +1558,7 @@ You cannot add a `set-cookie` header with `setHeaders` — use the [`cookies`](/
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="LoadEvent-parent"><a href="#LoadEvent-parent" class="permalink" aria-label="Permalink to parent"></a>
 
 ```dts
 parent: () => Promise<ParentData>;
@@ -1574,7 +1574,7 @@ Be careful not to introduce accidental waterfalls when using `await parent()`. I
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="LoadEvent-depends"><a href="#LoadEvent-depends" class="permalink" aria-label="Permalink to depends"></a>
 
 ```dts
 depends: (...deps: Array<`${string}:${string}`>) => void;
@@ -1622,7 +1622,7 @@ export async function load({ depends }) {
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="LoadEvent-untrack"><a href="#LoadEvent-untrack" class="permalink" aria-label="Permalink to untrack"></a>
 
 ```dts
 untrack: <T>(fn: () => T) => T;
@@ -1646,7 +1646,7 @@ export async function load({ untrack, url }) {
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="LoadEvent-tracing"><a href="#LoadEvent-tracing" class="permalink" aria-label="Permalink to tracing"></a>
 
 ```dts
 tracing: {/*…*/};
@@ -1662,7 +1662,7 @@ tracing: {/*…*/};
 
 Access to spans for tracing. If tracing is not enabled or the function is being run in the browser, these spans will do nothing.
 
-<div class="ts-block-property-children"><div class="ts-block-property">
+<div class="ts-block-property-children"><div class="ts-block-property" id="LoadEvent-tracing-enabled"><a href="#LoadEvent-tracing-enabled" class="permalink" aria-label="Permalink to enabled"></a>
 
 ```dts
 enabled: boolean;
@@ -1674,7 +1674,7 @@ Whether tracing is enabled.
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="LoadEvent-tracing-root"><a href="#LoadEvent-tracing-root" class="permalink" aria-label="Permalink to root"></a>
 
 ```dts
 root: Span;
@@ -1686,7 +1686,7 @@ The root span for the request. This span is named `sveltekit.handle.root`.
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="LoadEvent-tracing-current"><a href="#LoadEvent-tracing-current" class="permalink" aria-label="Permalink to current"></a>
 
 ```dts
 current: Span;
@@ -1730,7 +1730,7 @@ interface NavigationEvent<
 > {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="NavigationEvent-params"><a href="#NavigationEvent-params" class="permalink" aria-label="Permalink to params"></a>
 
 ```dts
 params: Params;
@@ -1743,7 +1743,7 @@ The parameters of the current page - e.g. for a route like `/blog/[slug]`, a `{ 
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="NavigationEvent-route"><a href="#NavigationEvent-route" class="permalink" aria-label="Permalink to route"></a>
 
 ```dts
 route: {/*…*/};
@@ -1753,7 +1753,7 @@ route: {/*…*/};
 
 Info about the current route
 
-<div class="ts-block-property-children"><div class="ts-block-property">
+<div class="ts-block-property-children"><div class="ts-block-property" id="NavigationEvent-route-id"><a href="#NavigationEvent-route-id" class="permalink" aria-label="Permalink to id"></a>
 
 ```dts
 id: RouteId;
@@ -1769,7 +1769,7 @@ The ID of the current route - e.g. for `src/routes/blog/[slug]`, it would be `/b
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="NavigationEvent-url"><a href="#NavigationEvent-url" class="permalink" aria-label="Permalink to url"></a>
 
 ```dts
 url: URL;
@@ -1802,7 +1802,7 @@ The object returned by the [`redirect`](/docs/kit/@sveltejs-kit#redirect) functi
 interface Redirect {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Redirect-status"><a href="#Redirect-status" class="permalink" aria-label="Permalink to status"></a>
 
 ```dts
 status: 300 | 301 | 302 | 303 | 304 | 305 | 306 | 307 | 308;
@@ -1815,7 +1815,7 @@ The [HTTP status code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Redirect-location"><a href="#Redirect-location" class="permalink" aria-label="Permalink to location"></a>
 
 ```dts
 location: string;
@@ -1840,7 +1840,7 @@ interface RequestEvent<
 > {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="RequestEvent-cookies"><a href="#RequestEvent-cookies" class="permalink" aria-label="Permalink to cookies"></a>
 
 ```dts
 readonly cookies: Cookies;
@@ -1853,7 +1853,7 @@ Get or set cookies related to the current request
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="RequestEvent-fetch"><a href="#RequestEvent-fetch" class="permalink" aria-label="Permalink to fetch"></a>
 
 ```dts
 readonly fetch: typeof fetch;
@@ -1874,7 +1874,7 @@ You can learn more about making credentialed requests with cookies [here](/docs/
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="RequestEvent-getClientAddress"><a href="#RequestEvent-getClientAddress" class="permalink" aria-label="Permalink to getClientAddress"></a>
 
 ```dts
 readonly getClientAddress: () => string;
@@ -1887,7 +1887,7 @@ The client's IP address, set by the adapter.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="RequestEvent-locals"><a href="#RequestEvent-locals" class="permalink" aria-label="Permalink to locals"></a>
 
 ```dts
 readonly locals: App.Locals;
@@ -1900,7 +1900,7 @@ Contains custom data that was added to the request within the [`server handle ho
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="RequestEvent-params"><a href="#RequestEvent-params" class="permalink" aria-label="Permalink to params"></a>
 
 ```dts
 readonly params: Params;
@@ -1918,7 +1918,7 @@ to determine whether or not a user is authorized to access certain data, as thes
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="RequestEvent-platform"><a href="#RequestEvent-platform" class="permalink" aria-label="Permalink to platform"></a>
 
 ```dts
 readonly platform: Readonly<App.Platform> | undefined;
@@ -1931,7 +1931,7 @@ Additional data made available through the adapter.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="RequestEvent-request"><a href="#RequestEvent-request" class="permalink" aria-label="Permalink to request"></a>
 
 ```dts
 readonly request: Request;
@@ -1944,7 +1944,7 @@ The original request object.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="RequestEvent-route"><a href="#RequestEvent-route" class="permalink" aria-label="Permalink to route"></a>
 
 ```dts
 readonly route: {/*…*/};
@@ -1954,7 +1954,7 @@ readonly route: {/*…*/};
 
 Info about the current route.
 
-<div class="ts-block-property-children"><div class="ts-block-property">
+<div class="ts-block-property-children"><div class="ts-block-property" id="RequestEvent-route-id"><a href="#RequestEvent-route-id" class="permalink" aria-label="Permalink to id"></a>
 
 ```dts
 id: RouteId;
@@ -1975,7 +1975,7 @@ to determine whether or not a user is authorized to access certain data, as thes
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="RequestEvent-setHeaders"><a href="#RequestEvent-setHeaders" class="permalink" aria-label="Permalink to setHeaders"></a>
 
 ```dts
 readonly setHeaders: (headers: Record<string, string>) => void;
@@ -2008,7 +2008,7 @@ You cannot add a `set-cookie` header with `setHeaders` — use the [`cookies`](/
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="RequestEvent-url"><a href="#RequestEvent-url" class="permalink" aria-label="Permalink to url"></a>
 
 ```dts
 readonly url: URL;
@@ -2026,7 +2026,7 @@ to determine whether or not a user is authorized to access certain data, as thes
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="RequestEvent-isDataRequest"><a href="#RequestEvent-isDataRequest" class="permalink" aria-label="Permalink to isDataRequest"></a>
 
 ```dts
 readonly isDataRequest: boolean;
@@ -2040,7 +2040,7 @@ related to the data request in this case. Use this property instead if the disti
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="RequestEvent-isSubRequest"><a href="#RequestEvent-isSubRequest" class="permalink" aria-label="Permalink to isSubRequest"></a>
 
 ```dts
 readonly isSubRequest: boolean;
@@ -2053,7 +2053,7 @@ readonly isSubRequest: boolean;
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="RequestEvent-tracing"><a href="#RequestEvent-tracing" class="permalink" aria-label="Permalink to tracing"></a>
 
 ```dts
 readonly tracing: {/*…*/};
@@ -2069,7 +2069,7 @@ readonly tracing: {/*…*/};
 
 Access to spans for tracing. If tracing is not enabled, these spans will do nothing.
 
-<div class="ts-block-property-children"><div class="ts-block-property">
+<div class="ts-block-property-children"><div class="ts-block-property" id="RequestEvent-tracing-enabled"><a href="#RequestEvent-tracing-enabled" class="permalink" aria-label="Permalink to enabled"></a>
 
 ```dts
 enabled: boolean;
@@ -2081,7 +2081,7 @@ Whether tracing is enabled.
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="RequestEvent-tracing-root"><a href="#RequestEvent-tracing-root" class="permalink" aria-label="Permalink to root"></a>
 
 ```dts
 root: Span;
@@ -2093,7 +2093,7 @@ The root span for the request. This span is named `sveltekit.handle.root`.
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="RequestEvent-tracing-current"><a href="#RequestEvent-tracing-current" class="permalink" aria-label="Permalink to current"></a>
 
 ```dts
 current: Span;
@@ -2109,7 +2109,7 @@ The span associated with the current `handle` hook, `load` function, form action
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="RequestEvent-isRemoteRequest"><a href="#RequestEvent-isRemoteRequest" class="permalink" aria-label="Permalink to isRemoteRequest"></a>
 
 ```dts
 readonly isRemoteRequest: boolean;
@@ -2151,7 +2151,7 @@ type RequestHandler<
 interface RouteDefinition<Config = any> {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="RouteDefinition-id"><a href="#RouteDefinition-id" class="permalink" aria-label="Permalink to id"></a>
 
 ```dts
 id: string;
@@ -2160,7 +2160,7 @@ id: string;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="RouteDefinition-api"><a href="#RouteDefinition-api" class="permalink" aria-label="Permalink to api"></a>
 
 ```dts
 api: {
@@ -2171,7 +2171,7 @@ api: {
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="RouteDefinition-page"><a href="#RouteDefinition-page" class="permalink" aria-label="Permalink to page"></a>
 
 ```dts
 page: {
@@ -2182,7 +2182,7 @@ page: {
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="RouteDefinition-pattern"><a href="#RouteDefinition-pattern" class="permalink" aria-label="Permalink to pattern"></a>
 
 ```dts
 pattern: RegExp;
@@ -2191,7 +2191,7 @@ pattern: RegExp;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="RouteDefinition-prerender"><a href="#RouteDefinition-prerender" class="permalink" aria-label="Permalink to prerender"></a>
 
 ```dts
 prerender: PrerenderOption;
@@ -2200,7 +2200,7 @@ prerender: PrerenderOption;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="RouteDefinition-segments"><a href="#RouteDefinition-segments" class="permalink" aria-label="Permalink to segments"></a>
 
 ```dts
 segments: RouteSegment[];
@@ -2209,7 +2209,7 @@ segments: RouteSegment[];
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="RouteDefinition-methods"><a href="#RouteDefinition-methods" class="permalink" aria-label="Permalink to methods"></a>
 
 ```dts
 methods: Array<HttpMethod | '*'>;
@@ -2218,7 +2218,7 @@ methods: Array<HttpMethod | '*'>;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="RouteDefinition-config"><a href="#RouteDefinition-config" class="permalink" aria-label="Permalink to config"></a>
 
 ```dts
 config: Config;
@@ -2235,7 +2235,7 @@ config: Config;
 interface Server {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Server-init"><a href="#Server-init" class="permalink" aria-label="Permalink to init"></a>
 
 ```dts
 init(options: ServerInitOptions): Promise<void>;
@@ -2244,7 +2244,7 @@ init(options: ServerInitOptions): Promise<void>;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Server-respond"><a href="#Server-respond" class="permalink" aria-label="Permalink to respond"></a>
 
 ```dts
 respond(request: Request, options: RequestOptions): Promise<Response>;
@@ -2261,7 +2261,7 @@ respond(request: Request, options: RequestOptions): Promise<Response>;
 interface ServerInitOptions {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ServerInitOptions-env"><a href="#ServerInitOptions-env" class="permalink" aria-label="Permalink to env"></a>
 
 ```dts
 env: Record<string, string | undefined>;
@@ -2274,7 +2274,7 @@ A map of environment variables.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ServerInitOptions-read"><a href="#ServerInitOptions-read" class="permalink" aria-label="Permalink to read"></a>
 
 ```dts
 read?: (file: string) => MaybePromise<ReadableStream | null>;
@@ -2330,7 +2330,7 @@ interface ServerLoadEvent<
 > extends RequestEvent<Params, RouteId> {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ServerLoadEvent-parent"><a href="#ServerLoadEvent-parent" class="permalink" aria-label="Permalink to parent"></a>
 
 ```dts
 parent: () => Promise<ParentData>;
@@ -2345,7 +2345,7 @@ Be careful not to introduce accidental waterfalls when using `await parent()`. I
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ServerLoadEvent-depends"><a href="#ServerLoadEvent-depends" class="permalink" aria-label="Permalink to depends"></a>
 
 ```dts
 depends: (...deps: string[]) => void;
@@ -2393,7 +2393,7 @@ export async function load({ depends }) {
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ServerLoadEvent-untrack"><a href="#ServerLoadEvent-untrack" class="permalink" aria-label="Permalink to untrack"></a>
 
 ```dts
 untrack: <T>(fn: () => T) => T;
@@ -2417,7 +2417,7 @@ export async function load({ untrack, url }) {
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ServerLoadEvent-tracing"><a href="#ServerLoadEvent-tracing" class="permalink" aria-label="Permalink to tracing"></a>
 
 ```dts
 tracing: {/*…*/};
@@ -2433,7 +2433,7 @@ tracing: {/*…*/};
 
 Access to spans for tracing. If tracing is not enabled, these spans will do nothing.
 
-<div class="ts-block-property-children"><div class="ts-block-property">
+<div class="ts-block-property-children"><div class="ts-block-property" id="ServerLoadEvent-tracing-enabled"><a href="#ServerLoadEvent-tracing-enabled" class="permalink" aria-label="Permalink to enabled"></a>
 
 ```dts
 enabled: boolean;
@@ -2445,7 +2445,7 @@ Whether tracing is enabled.
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="ServerLoadEvent-tracing-root"><a href="#ServerLoadEvent-tracing-root" class="permalink" aria-label="Permalink to root"></a>
 
 ```dts
 root: Span;
@@ -2457,7 +2457,7 @@ The root span for the request. This span is named `sveltekit.handle.root`.
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="ServerLoadEvent-tracing-current"><a href="#ServerLoadEvent-tracing-current" class="permalink" aria-label="Permalink to current"></a>
 
 ```dts
 current: Span;
@@ -2489,7 +2489,7 @@ The type of `export const snapshot` exported from a page or layout component.
 interface Snapshot<T = any> {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Snapshot-capture"><a href="#Snapshot-capture" class="permalink" aria-label="Permalink to capture"></a>
 
 ```dts
 capture: () => T;
@@ -2498,7 +2498,7 @@ capture: () => T;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Snapshot-restore"><a href="#Snapshot-restore" class="permalink" aria-label="Permalink to restore"></a>
 
 ```dts
 restore: (snapshot: T) => void;
@@ -2517,7 +2517,7 @@ A validation error thrown by `invalid`.
 interface ValidationError {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ValidationError-issues"><a href="#ValidationError-issues" class="permalink" aria-label="Permalink to issues"></a>
 
 ```dts
 issues: StandardSchemaV1.Issue[];
@@ -2530,7 +2530,7 @@ The validation issues
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="ValidationError-remote"><a href="#ValidationError-remote" class="permalink" aria-label="Permalink to remote"></a>
 
 ```dts
 remote?: {
@@ -2560,7 +2560,7 @@ The following are referenced by the public types documented above, but cannot be
 interface AdapterEntry {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-AdapterEntry-id"><a href="#Private-types-AdapterEntry-id" class="permalink" aria-label="Permalink to id"></a>
 
 ```dts
 id: string;
@@ -2575,7 +2575,7 @@ be represented in a Netlify _redirects file as `/foo/:param`, so they share an I
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-AdapterEntry-filter"><a href="#Private-types-AdapterEntry-filter" class="permalink" aria-label="Permalink to filter"></a>
 
 ```dts
 filter(route: RouteDefinition): boolean;
@@ -2593,7 +2593,7 @@ Use cases:
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-AdapterEntry-complete"><a href="#Private-types-AdapterEntry-complete" class="permalink" aria-label="Permalink to complete"></a>
 
 ```dts
 complete(entry: { generateManifest(opts: { relativePath: string }): string }): MaybePromise<void>;
@@ -2665,7 +2665,7 @@ namespace Csp {
 interface CspDirectives {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-CspDirectives-child-src"><a href="#Private-types-CspDirectives-child-src" class="permalink" aria-label="Permalink to child-src"></a>
 
 ```dts
 'child-src'?: Csp.Sources;
@@ -2674,7 +2674,7 @@ interface CspDirectives {/*…*/}
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-CspDirectives-default-src"><a href="#Private-types-CspDirectives-default-src" class="permalink" aria-label="Permalink to default-src"></a>
 
 ```dts
 'default-src'?: Array<Csp.Source | Csp.ActionSource>;
@@ -2683,7 +2683,7 @@ interface CspDirectives {/*…*/}
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-CspDirectives-frame-src"><a href="#Private-types-CspDirectives-frame-src" class="permalink" aria-label="Permalink to frame-src"></a>
 
 ```dts
 'frame-src'?: Csp.Sources;
@@ -2692,7 +2692,7 @@ interface CspDirectives {/*…*/}
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-CspDirectives-worker-src"><a href="#Private-types-CspDirectives-worker-src" class="permalink" aria-label="Permalink to worker-src"></a>
 
 ```dts
 'worker-src'?: Csp.Sources;
@@ -2701,7 +2701,7 @@ interface CspDirectives {/*…*/}
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-CspDirectives-connect-src"><a href="#Private-types-CspDirectives-connect-src" class="permalink" aria-label="Permalink to connect-src"></a>
 
 ```dts
 'connect-src'?: Csp.Sources;
@@ -2710,7 +2710,7 @@ interface CspDirectives {/*…*/}
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-CspDirectives-font-src"><a href="#Private-types-CspDirectives-font-src" class="permalink" aria-label="Permalink to font-src"></a>
 
 ```dts
 'font-src'?: Csp.Sources;
@@ -2719,7 +2719,7 @@ interface CspDirectives {/*…*/}
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-CspDirectives-img-src"><a href="#Private-types-CspDirectives-img-src" class="permalink" aria-label="Permalink to img-src"></a>
 
 ```dts
 'img-src'?: Csp.Sources;
@@ -2728,7 +2728,7 @@ interface CspDirectives {/*…*/}
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-CspDirectives-manifest-src"><a href="#Private-types-CspDirectives-manifest-src" class="permalink" aria-label="Permalink to manifest-src"></a>
 
 ```dts
 'manifest-src'?: Csp.Sources;
@@ -2737,7 +2737,7 @@ interface CspDirectives {/*…*/}
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-CspDirectives-media-src"><a href="#Private-types-CspDirectives-media-src" class="permalink" aria-label="Permalink to media-src"></a>
 
 ```dts
 'media-src'?: Csp.Sources;
@@ -2746,7 +2746,7 @@ interface CspDirectives {/*…*/}
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-CspDirectives-object-src"><a href="#Private-types-CspDirectives-object-src" class="permalink" aria-label="Permalink to object-src"></a>
 
 ```dts
 'object-src'?: Csp.Sources;
@@ -2755,7 +2755,7 @@ interface CspDirectives {/*…*/}
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-CspDirectives-prefetch-src"><a href="#Private-types-CspDirectives-prefetch-src" class="permalink" aria-label="Permalink to prefetch-src"></a>
 
 ```dts
 'prefetch-src'?: Csp.Sources;
@@ -2764,7 +2764,7 @@ interface CspDirectives {/*…*/}
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-CspDirectives-script-src"><a href="#Private-types-CspDirectives-script-src" class="permalink" aria-label="Permalink to script-src"></a>
 
 ```dts
 'script-src'?: Array<Csp.Source | Csp.ActionSource>;
@@ -2773,7 +2773,7 @@ interface CspDirectives {/*…*/}
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-CspDirectives-script-src-elem"><a href="#Private-types-CspDirectives-script-src-elem" class="permalink" aria-label="Permalink to script-src-elem"></a>
 
 ```dts
 'script-src-elem'?: Csp.Sources;
@@ -2782,7 +2782,7 @@ interface CspDirectives {/*…*/}
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-CspDirectives-script-src-attr"><a href="#Private-types-CspDirectives-script-src-attr" class="permalink" aria-label="Permalink to script-src-attr"></a>
 
 ```dts
 'script-src-attr'?: Csp.Sources;
@@ -2791,7 +2791,7 @@ interface CspDirectives {/*…*/}
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-CspDirectives-style-src"><a href="#Private-types-CspDirectives-style-src" class="permalink" aria-label="Permalink to style-src"></a>
 
 ```dts
 'style-src'?: Array<Csp.Source | Csp.ActionSource>;
@@ -2800,7 +2800,7 @@ interface CspDirectives {/*…*/}
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-CspDirectives-style-src-elem"><a href="#Private-types-CspDirectives-style-src-elem" class="permalink" aria-label="Permalink to style-src-elem"></a>
 
 ```dts
 'style-src-elem'?: Csp.Sources;
@@ -2809,7 +2809,7 @@ interface CspDirectives {/*…*/}
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-CspDirectives-style-src-attr"><a href="#Private-types-CspDirectives-style-src-attr" class="permalink" aria-label="Permalink to style-src-attr"></a>
 
 ```dts
 'style-src-attr'?: Csp.Sources;
@@ -2818,7 +2818,7 @@ interface CspDirectives {/*…*/}
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-CspDirectives-base-uri"><a href="#Private-types-CspDirectives-base-uri" class="permalink" aria-label="Permalink to base-uri"></a>
 
 ```dts
 'base-uri'?: Array<Csp.Source | Csp.ActionSource>;
@@ -2827,7 +2827,7 @@ interface CspDirectives {/*…*/}
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-CspDirectives-sandbox"><a href="#Private-types-CspDirectives-sandbox" class="permalink" aria-label="Permalink to sandbox"></a>
 
 ```dts
 sandbox?: Array<
@@ -2850,7 +2850,7 @@ sandbox?: Array<
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-CspDirectives-form-action"><a href="#Private-types-CspDirectives-form-action" class="permalink" aria-label="Permalink to form-action"></a>
 
 ```dts
 'form-action'?: Array<Csp.Source | Csp.ActionSource>;
@@ -2859,7 +2859,7 @@ sandbox?: Array<
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-CspDirectives-frame-ancestors"><a href="#Private-types-CspDirectives-frame-ancestors" class="permalink" aria-label="Permalink to frame-ancestors"></a>
 
 ```dts
 'frame-ancestors'?: Array<Csp.HostSource | Csp.SchemeSource | Csp.FrameSource>;
@@ -2868,7 +2868,7 @@ sandbox?: Array<
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-CspDirectives-navigate-to"><a href="#Private-types-CspDirectives-navigate-to" class="permalink" aria-label="Permalink to navigate-to"></a>
 
 ```dts
 'navigate-to'?: Array<Csp.Source | Csp.ActionSource>;
@@ -2877,7 +2877,7 @@ sandbox?: Array<
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-CspDirectives-report-uri"><a href="#Private-types-CspDirectives-report-uri" class="permalink" aria-label="Permalink to report-uri"></a>
 
 ```dts
 'report-uri'?: string[];
@@ -2886,7 +2886,7 @@ sandbox?: Array<
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-CspDirectives-report-to"><a href="#Private-types-CspDirectives-report-to" class="permalink" aria-label="Permalink to report-to"></a>
 
 ```dts
 'report-to'?: string[];
@@ -2895,7 +2895,7 @@ sandbox?: Array<
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-CspDirectives-require-trusted-types-for"><a href="#Private-types-CspDirectives-require-trusted-types-for" class="permalink" aria-label="Permalink to require-trusted-types-for"></a>
 
 ```dts
 'require-trusted-types-for'?: Array<'script'>;
@@ -2904,7 +2904,7 @@ sandbox?: Array<
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-CspDirectives-trusted-types"><a href="#Private-types-CspDirectives-trusted-types" class="permalink" aria-label="Permalink to trusted-types"></a>
 
 ```dts
 'trusted-types'?: Array<'none' | 'allow-duplicates' | '*' | string>;
@@ -2913,7 +2913,7 @@ sandbox?: Array<
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-CspDirectives-upgrade-insecure-requests"><a href="#Private-types-CspDirectives-upgrade-insecure-requests" class="permalink" aria-label="Permalink to upgrade-insecure-requests"></a>
 
 ```dts
 'upgrade-insecure-requests'?: boolean;
@@ -2922,7 +2922,7 @@ sandbox?: Array<
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-CspDirectives-require-sri-for"><a href="#Private-types-CspDirectives-require-sri-for" class="permalink" aria-label="Permalink to require-sri-for"></a>
 
 ```dts
 'require-sri-for'?: Array<'script' | 'style' | 'script style'>;
@@ -2939,7 +2939,7 @@ sandbox?: Array<
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-CspDirectives-block-all-mixed-content"><a href="#Private-types-CspDirectives-block-all-mixed-content" class="permalink" aria-label="Permalink to block-all-mixed-content"></a>
 
 ```dts
 'block-all-mixed-content'?: boolean;
@@ -2956,7 +2956,7 @@ sandbox?: Array<
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-CspDirectives-plugin-types"><a href="#Private-types-CspDirectives-plugin-types" class="permalink" aria-label="Permalink to plugin-types"></a>
 
 ```dts
 'plugin-types'?: Array<`${string}/${string}` | 'none'>;
@@ -2973,7 +2973,7 @@ sandbox?: Array<
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-CspDirectives-referrer"><a href="#Private-types-CspDirectives-referrer" class="permalink" aria-label="Permalink to referrer"></a>
 
 ```dts
 referrer?: Array<
@@ -3077,7 +3077,7 @@ type IsAny<T> = 0 extends 1 & T ? true : false;
 interface Logger {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-Logger-call"><a href="#Private-types-Logger-call" class="permalink" aria-label="Permalink to call"></a>
 
 ```dts
 (msg: string): void;
@@ -3086,7 +3086,7 @@ interface Logger {/*…*/}
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-Logger-success"><a href="#Private-types-Logger-success" class="permalink" aria-label="Permalink to success"></a>
 
 ```dts
 success(msg: string): void;
@@ -3095,7 +3095,7 @@ success(msg: string): void;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-Logger-error"><a href="#Private-types-Logger-error" class="permalink" aria-label="Permalink to error"></a>
 
 ```dts
 error(msg: string): void;
@@ -3108,7 +3108,7 @@ Print a bold red message to stderr
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-Logger-warn"><a href="#Private-types-Logger-warn" class="permalink" aria-label="Permalink to warn"></a>
 
 ```dts
 warn(msg: string): void;
@@ -3121,7 +3121,7 @@ Print a bold yellow message to stderr
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-Logger-minor"><a href="#Private-types-Logger-minor" class="permalink" aria-label="Permalink to minor"></a>
 
 ```dts
 minor(msg: string): void;
@@ -3134,7 +3134,7 @@ Print faded text to stdout if `verbose === true`
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-Logger-info"><a href="#Private-types-Logger-info" class="permalink" aria-label="Permalink to info"></a>
 
 ```dts
 info(msg: string): void;
@@ -3147,7 +3147,7 @@ Print to stdout if `verbose === true`
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-Logger-err"><a href="#Private-types-Logger-err" class="permalink" aria-label="Permalink to err"></a>
 
 ```dts
 err(msg: string): void;
@@ -3160,7 +3160,7 @@ Print to stderr without formatting
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-Logger-prettyError"><a href="#Private-types-Logger-prettyError" class="permalink" aria-label="Permalink to prettyError"></a>
 
 ```dts
 prettyError(error: unknown, caller?: string): void;
@@ -3191,7 +3191,7 @@ type MaybePromise<T> = T | Promise<T>;
 interface PrerenderEntryGeneratorMismatchHandler {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-PrerenderEntryGeneratorMismatchHandler-call"><a href="#Private-types-PrerenderEntryGeneratorMismatchHandler-call" class="permalink" aria-label="Permalink to call"></a>
 
 ```dts
 (details: { generatedFromId: string; entry: string; matchedId: string; message: string }): void;
@@ -3222,7 +3222,7 @@ type PrerenderEntryGeneratorMismatchHandlerValue =
 interface PrerenderHttpErrorHandler {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-PrerenderHttpErrorHandler-call"><a href="#Private-types-PrerenderHttpErrorHandler-call" class="permalink" aria-label="Permalink to call"></a>
 
 ```dts
 (details: {
@@ -3256,7 +3256,7 @@ type PrerenderHttpErrorHandlerValue =
 interface PrerenderInvalidUrlHandler {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-PrerenderInvalidUrlHandler-call"><a href="#Private-types-PrerenderInvalidUrlHandler-call" class="permalink" aria-label="Permalink to call"></a>
 
 ```dts
 (details: { href: string; referrer: string | null; message: string }): void;
@@ -3294,7 +3294,7 @@ type PrerenderMap = Map<string, PrerenderOption>;
 interface PrerenderMissingIdHandler {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-PrerenderMissingIdHandler-call"><a href="#Private-types-PrerenderMissingIdHandler-call" class="permalink" aria-label="Permalink to call"></a>
 
 ```dts
 (details: { path: string; id: string; referrers: string[]; message: string }): void;
@@ -3332,7 +3332,7 @@ type PrerenderOption = boolean | 'auto';
 interface PrerenderUnseenRoutesHandler {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-PrerenderUnseenRoutesHandler-call"><a href="#Private-types-PrerenderUnseenRoutesHandler-call" class="permalink" aria-label="Permalink to call"></a>
 
 ```dts
 (details: { routes: string[]; message: string }): void;
@@ -3360,7 +3360,7 @@ type PrerenderUnseenRoutesHandlerValue =
 interface Prerendered {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-Prerendered-pages"><a href="#Private-types-Prerendered-pages" class="permalink" aria-label="Permalink to pages"></a>
 
 ```dts
 pages: Map<
@@ -3379,7 +3379,7 @@ A map of `path` to `{ file }` objects, where a path like `/foo` corresponds to `
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-Prerendered-assets"><a href="#Private-types-Prerendered-assets" class="permalink" aria-label="Permalink to assets"></a>
 
 ```dts
 assets: Map<
@@ -3398,7 +3398,7 @@ A map of `path` to `{ type }` objects.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-Prerendered-redirects"><a href="#Private-types-Prerendered-redirects" class="permalink" aria-label="Permalink to redirects"></a>
 
 ```dts
 redirects: Map<
@@ -3417,7 +3417,7 @@ A map of redirects encountered during prerendering.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-Prerendered-paths"><a href="#Private-types-Prerendered-paths" class="permalink" aria-label="Permalink to paths"></a>
 
 ```dts
 paths: string[];
@@ -3438,7 +3438,7 @@ An array of prerendered paths (without trailing slashes, regardless of the trail
 interface RequestOptions {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-RequestOptions-getClientAddress"><a href="#Private-types-RequestOptions-getClientAddress" class="permalink" aria-label="Permalink to getClientAddress"></a>
 
 ```dts
 getClientAddress(): string;
@@ -3447,7 +3447,7 @@ getClientAddress(): string;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-RequestOptions-platform"><a href="#Private-types-RequestOptions-platform" class="permalink" aria-label="Permalink to platform"></a>
 
 ```dts
 platform?: App.Platform;
@@ -3464,7 +3464,7 @@ platform?: App.Platform;
 interface RouteSegment {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-RouteSegment-content"><a href="#Private-types-RouteSegment-content" class="permalink" aria-label="Permalink to content"></a>
 
 ```dts
 content: string;
@@ -3473,7 +3473,7 @@ content: string;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-RouteSegment-dynamic"><a href="#Private-types-RouteSegment-dynamic" class="permalink" aria-label="Permalink to dynamic"></a>
 
 ```dts
 dynamic: boolean;
@@ -3482,7 +3482,7 @@ dynamic: boolean;
 <div class="ts-block-property-details"></div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Private-types-RouteSegment-rest"><a href="#Private-types-RouteSegment-rest" class="permalink" aria-label="Permalink to rest"></a>
 
 ```dts
 rest: boolean;

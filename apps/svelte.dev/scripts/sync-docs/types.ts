@@ -235,7 +235,20 @@ function munge_type_element(member: ts.TypeElement, depth = 1): TypeElement | un
 	const children: TypeElement[] = [];
 
 	// @ts-ignore
-	const name = member.name?.escapedText ?? member.name?.getText() ?? 'unknown';
+	const name = ts.isConstructorDeclaration(member)
+		? 'constructor'
+		: ts.isCallSignatureDeclaration(member)
+			? 'call'
+			: ts.isConstructSignatureDeclaration(member)
+				? 'new'
+				: ts.isIndexSignatureDeclaration(member)
+					? member.parameters.map((parameter) => parameter.getText()).join('-') || 'index'
+					: // @ts-ignore
+						ts.isStringLiteral(member.name) || ts.isNoSubstitutionTemplateLiteral(member.name)
+						? // @ts-ignore
+							member.name.text
+						: // @ts-ignore
+							(member.name?.escapedText ?? member.name?.getText() ?? 'unknown');
 	let snippet = member.getText();
 
 	if (ts.isPropertySignature(member) && member.type) {

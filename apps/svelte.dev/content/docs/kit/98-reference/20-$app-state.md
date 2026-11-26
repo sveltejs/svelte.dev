@@ -114,7 +114,7 @@ interface Page<
 > {/*…*/}
 ```
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Page-url"><a href="#Page-url" class="permalink" aria-label="Permalink to url"></a>
 
 ```dts
 url: ReadonlyURL & { readonly pathname: ResolvedPathname | (string & {}) };
@@ -127,7 +127,7 @@ The URL of the current page.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Page-params"><a href="#Page-params" class="permalink" aria-label="Permalink to params"></a>
 
 ```dts
 params: Params;
@@ -140,7 +140,7 @@ The parameters of the current page - e.g. for a route like `/blog/[slug]`, a `{ 
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Page-route"><a href="#Page-route" class="permalink" aria-label="Permalink to route"></a>
 
 ```dts
 route: {/*…*/};
@@ -150,7 +150,7 @@ route: {/*…*/};
 
 Info about the current route.
 
-<div class="ts-block-property-children"><div class="ts-block-property">
+<div class="ts-block-property-children"><div class="ts-block-property" id="Page-route-id"><a href="#Page-route-id" class="permalink" aria-label="Permalink to id"></a>
 
 ```dts
 id: RouteId;
@@ -166,7 +166,7 @@ The ID of the current route - e.g. for `src/routes/blog/[slug]`, it would be `/b
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Page-status"><a href="#Page-status" class="permalink" aria-label="Permalink to status"></a>
 
 ```dts
 status: number;
@@ -179,7 +179,7 @@ HTTP status code of the current page.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Page-error"><a href="#Page-error" class="permalink" aria-label="Permalink to error"></a>
 
 ```dts
 error: App.Error | null;
@@ -192,7 +192,7 @@ The error object of the current page, if any. Filled from the `handleError` hook
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Page-data"><a href="#Page-data" class="permalink" aria-label="Permalink to data"></a>
 
 ```dts
 data: App.PageData & Record<string, any>;
@@ -205,7 +205,7 @@ The merged result of all data from all `load` functions on the current page. You
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Page-state"><a href="#Page-state" class="permalink" aria-label="Permalink to state"></a>
 
 ```dts
 state: App.PageState;
@@ -218,7 +218,7 @@ The page state, which can be manipulated using [`goto`](/docs/kit/$app-navigatio
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Page-shallow"><a href="#Page-shallow" class="permalink" aria-label="Permalink to shallow"></a>
 
 ```dts
 shallow: {/*…*/} | null;
@@ -228,7 +228,7 @@ shallow: {/*…*/} | null;
 
 Information about the target of the current shallow navigation, or `null` if no shallow navigation has occurred.
 
-<div class="ts-block-property-children"><div class="ts-block-property">
+<div class="ts-block-property-children"><div class="ts-block-property" id="Page-shallow-params"><a href="#Page-shallow-params" class="permalink" aria-label="Permalink to params"></a>
 
 ```dts
 params: AppLayoutParams<'/'> | null;
@@ -240,7 +240,7 @@ Parameters of the target route, or `null` if the URL does not resolve to a route
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="Page-shallow-route"><a href="#Page-shallow-route" class="permalink" aria-label="Permalink to route"></a>
 
 ```dts
 route: { id: AppRouteId } | null;
@@ -252,7 +252,7 @@ Info about the target route, or `null` if the URL does not resolve to a route.
 
 </div>
 </div>
-<div class="ts-block-property">
+<div class="ts-block-property" id="Page-shallow-url"><a href="#Page-shallow-url" class="permalink" aria-label="Permalink to url"></a>
 
 ```dts
 url: ReadonlyURL;
@@ -268,7 +268,7 @@ The normalized URL passed to `goto(..., { shallow: true })`.
 </div>
 </div>
 
-<div class="ts-block-property">
+<div class="ts-block-property" id="Page-form"><a href="#Page-form" class="permalink" aria-label="Permalink to form"></a>
 
 ```dts
 form: any;
