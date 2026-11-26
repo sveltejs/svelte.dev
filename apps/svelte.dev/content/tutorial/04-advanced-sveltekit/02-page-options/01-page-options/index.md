@@ -1,5 +1,6 @@
 ---
 title: Basics
+tags: page-options
 ---
 
 In the chapter on [loading data](/tutorial/kit/page-data), we saw how you can export `load` functions from `+page.js`, `+page.server.js`, `+layout.js` and `+layout.server.js` files. We can also export various **page options** from these modules:
