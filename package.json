@@ -18,6 +18,7 @@
 		"lint": "pnpm -r lint",
 		"format": "pnpm -r format",
 		"test": "pnpm -r test",
+		"test:e2e": "pnpm --filter svelte.dev test:e2e",
 		"build": "cd ./packages/site-kit && pnpm package && cd ../repl && pnpm package && cd ../../apps/svelte.dev && pnpm build"
 	}
 }

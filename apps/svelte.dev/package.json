@@ -12,6 +12,7 @@
 		"start": "node build",
 		"check": "node scripts/update.js && svelte-kit sync && svelte-check",
 		"test": "node scripts/get_svelte_template.js && vitest run",
+		"test:e2e": "playwright test",
 		"format": "prettier --write .",
 		"lint": "prettier --check .",
 		"prepare": "svelte-kit sync",
@@ -47,6 +48,7 @@
 		"yootils": "^0.3.1"
 	},
 	"devDependencies": {
+		"@playwright/test": "^1.65.1",
 		"@resvg/resvg-js": "^2.6.2",
 		"@supabase/supabase-js": "^2.97.0",
 		"@sveltejs/adapter-vercel": "^7.0.5",

@@ -1,5 +1,5 @@
 {
 	"extends": "$app/tsconfig",
-	"include": ["src", "scripts", "*.ts"],
+	"include": ["src", "scripts", "e2e", "*.ts"],
 	"exclude": ["scripts/create-tutorial-zip/common", "src/lib/tutorial/adapters/common/unzip.cjs"]
 }

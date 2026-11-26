@@ -1,3 +1,4 @@
+/// <reference types="vitest/config" />
 import { sveltekit } from '@sveltejs/kit/vite';
 import { enhancedImages } from '@sveltejs/enhanced-img';
 import adapter from '@sveltejs/adapter-vercel';
@@ -5,6 +6,7 @@ import type { PluginOption, UserConfig } from 'vite';
 import { browserslistToTargets } from 'lightningcss';
 import browserslist from 'browserslist';
 import { VERSION } from '@sveltejs/kit';
+import { configDefaults } from 'vitest/config';
 
 const is_kit_2 = VERSION[0] === '2';
 
@@ -16,7 +18,10 @@ const plugins: PluginOption[] = [
 		name: 'cross-origin-isolation-for-preview',
 		configurePreviewServer: (server) => {
 			server.middlewares.use((req, res, next) => {
-				if (req.url?.startsWith('/tutorial/kit')) {
+				if (
+					req.url?.startsWith('/tutorial/kit') ||
+					req.url?.startsWith('/_app/immutable/workers/')
+				) {
 					res.setHeader('cross-origin-opener-policy', 'same-origin');
 					res.setHeader('cross-origin-embedder-policy', 'require-corp');
 					res.setHeader('cross-origin-resource-policy', 'cross-origin');
@@ -131,6 +136,9 @@ const config: UserConfig = {
 	},
 	worker: {
 		format: 'es'
+	},
+	test: {
+		exclude: [...configDefaults.exclude, 'e2e/**']
 	}
 };
 
