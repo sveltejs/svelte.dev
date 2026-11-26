@@ -103,7 +103,20 @@ Renders a search widget which when clicked (or the corresponding keyboard shortc
 		font-family: inherit;
 	}
 
-	@media (min-width: 60em) {
+	/* only the icon on narrow desktops, so the nav links keep clear of it, then as narrow as on
+	   small screens up to 1200px */
+	@media (min-width: 52em) and (max-width: 68.6875em) {
+		.search-container {
+			width: 3.4rem;
+		}
+
+		.shortcut {
+			display: none;
+		}
+	}
+
+	/* full width once the nav links have room beside it */
+	@media (min-width: 75em) {
 		.search-container {
 			width: 19rem;
 		}
