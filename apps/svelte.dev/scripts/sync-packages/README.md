@@ -14,6 +14,8 @@ pnpm sync-packages
 
 If you want to add or remove a package, you need to update `FEATURED` objects and run the script again (it will update the json files in the `src/lib/server/generated/registry` directory).
 
+- The script reads each package's `latest` npm dist-tag. If a package publishes its current release under a different tag, add it to `DIST_TAGS` in the same file.
+
 - [sync-packages.yml](/.github/workflows/sync-packages.yml) is responsible for running the script regularly and update all metadata (it can also be triggered manually).
 
 - Ambassadors and maintainers are curating the list of packages.
