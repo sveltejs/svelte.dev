@@ -195,7 +195,7 @@
 		display: block;
 		position: fixed;
 		left: 0px;
-		bottom: var(--bottom, calc(var(--sk-nav-height) + env(safe-area-inset-bottom, 0px)));
+		bottom: var(--bottom, var(--sk-nav-height));
 		z-index: 100;
 		width: 100%;
 		height: 70vh;
