@@ -346,8 +346,8 @@
 		}
 	}
 
+	.menu-background,
 	.universal .contents,
-	.context,
 	.back-button {
 		pointer-events: all;
 	}
