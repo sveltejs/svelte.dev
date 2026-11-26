@@ -112,6 +112,7 @@
 		font-family: var(--sk-font-family-ui);
 		overflow-y: auto;
 		padding: 0 var(--sk-page-padding-side) 3rem;
+		pointer-events: all;
 	}
 
 	ul {
