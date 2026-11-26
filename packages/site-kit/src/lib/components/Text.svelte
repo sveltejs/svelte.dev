@@ -534,12 +534,18 @@
 			position: absolute !important;
 			display: block;
 			text-decoration: none;
-			background: var(--sk-fg-1);
-			mask: url(icons/hash) 50% 50% no-repeat;
-			mask-size: 2.4rem 2.4rem;
 			width: 2.6rem;
 			height: 2.2rem;
 			top: calc(50% - 1rem);
+
+			&::before {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background: var(--sk-fg-1);
+				mask: url(icons/hash) 50% 50% no-repeat;
+				mask-size: 2.4rem 2.4rem;
+			}
 
 			@media (max-width: 47.9375em) {
 				right: 0;
