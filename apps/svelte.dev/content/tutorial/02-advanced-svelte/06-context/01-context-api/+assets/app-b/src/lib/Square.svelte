@@ -1,9 +1,9 @@
 <script>
-	import { getContext } from 'svelte';
+	import { getCanvasContext } from './context.js';
 
 	let { x, y, size, rotate } = $props();
 
-	getContext('canvas').addItem(draw);
+	getCanvasContext().addItem(draw);
 
 	function draw(ctx) {
 		ctx.save();
