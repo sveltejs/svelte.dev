@@ -168,3 +168,36 @@ title: @sveltejs/kit/vite
 		]);
 	});
 });
+
+describe('read_types', () => {
+	test('skips type checking only for examples of listed exports', async () => {
+		const types_directory = path.join(directory, 'unchecked');
+		fs.mkdirSync(types_directory);
+		fs.writeFileSync(
+			path.join(types_directory, 'index.d.ts'),
+			`declare module 'svelte/renderer' {
+				/**
+				 * Creates a custom renderer.
+				 *
+				 * \`\`\`ts
+				 * const renderer = createRenderer<{ fragment: MyFragment }>({});
+				 * \`\`\`
+				 */
+				export function createRenderer(renderer: unknown): unknown;
+				/**
+				 * \`\`\`ts
+				 * const type: NodeType = 'fragment';
+				 * \`\`\`
+				 */
+				export type NodeType = 'fragment' | 'element';
+			}`
+		);
+
+		const [module] = await read_types(types_directory + '/', []);
+		const [create_renderer] = module.exports!;
+		const [node_type] = module.types!;
+
+		expect(create_renderer.comment).toContain('```ts\n// @noErrors\nconst renderer');
+		expect(node_type.comment).toContain('```ts\nconst type');
+	});
+});
