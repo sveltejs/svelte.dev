@@ -16,6 +16,18 @@
 	} = $props();
 
 	let nav = $state() as HTMLElement;
+	const submenu_id = $props.id();
+	let expanded = $derived(contents.map(section_is_active));
+
+	function section_is_active(section: NonNullable<NavigationLink['sections']>[number]) {
+		return section.sections.some(({ sections }) =>
+			sections.some(({ path }) => path && is_active(page.url.pathname, path))
+		);
+	}
+
+	function toggle_section(index: number) {
+		expanded = expanded.map((open, i) => (i === index ? !open : open));
+	}
 
 	onMount(() => {
 		scrollToActive();
@@ -63,12 +75,34 @@
 
 {#snippet sections()}
 	{#each contents as section, i}
+		{@const section_id = `${submenu_id}-section-${i}`}
+		{@const has_links = section.sections.some(({ sections }) => sections.length > 0)}
 		<h2 style="--index: {i}; --reverse-index: {contents.length - i - 1}">
-			<a href="#{section.title}">{section.title} <span class="visually-hidden">{title}</span></a>
+			{#if has_links}
+				<button
+					type="button"
+					aria-expanded={expanded[i] ?? false}
+					aria-controls={section_id}
+					onclick={() => toggle_section(i)}
+				>
+					{section.title} <span class="visually-hidden">{title}</span>
+				</button>
+			{:else if section.path}
+				<a
+					href={section.path}
+					aria-current={is_active(page.url.pathname, section.path, section.match)
+						? 'page'
+						: undefined}
+				>
+					{section.title}
+				</a>
+			{:else}
+				{section.title}
+			{/if}
 		</h2>
 
-		{#if section.sections.length !== 0}
-			<ul id={section.title} style="--index: {i}">
+		{#if has_links}
+			<ul id={section_id} hidden={!expanded[i]} style="--index: {i}">
 				{#each section.sections as { title, sections: subsections }}
 					<li>
 						{#if title}
@@ -180,8 +214,18 @@
 		}
 	}
 
-	h2 a {
-		padding: 0 0 0 2rem !important;
+	h2 button {
+		position: relative;
+		display: block;
+		width: 100%;
+		padding: 0 0 0 2rem;
+		border: 0;
+		background: none;
+		color: inherit;
+		font: inherit;
+		text-align: left;
+		text-transform: inherit;
+		cursor: pointer;
 
 		&::before {
 			content: '#';
@@ -191,7 +235,7 @@
 		}
 
 		&:hover::before,
-		&:focus::before {
+		&:focus-visible::before {
 			color: var(--sk-fg-1);
 		}
 	}
