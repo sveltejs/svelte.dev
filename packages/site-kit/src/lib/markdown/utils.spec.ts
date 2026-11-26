@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { indent_multiline_comments, smart_quotes } from './utils';
+import { clean, indent_multiline_comments, smart_quotes } from './utils';
 
 describe('indent_multiline_comments', () => {
 	test.each([
@@ -33,5 +33,17 @@ describe('smart_quotes', () => {
 
 	test('respects text token boundaries', () => {
 		expect(smart_quotes('"after code"', { first: false })).toBe('”after code”');
+	});
+});
+
+describe('clean', () => {
+	test.each([
+		['`$state`', '$state'],
+		['Using `getRequestEvent`', 'Using getRequestEvent'],
+		['`PORT`, `HOST` and `SOCKET_PATH`', 'PORT, HOST and SOCKET_PATH'],
+		['The `$lib` alias is now `#lib`', 'The $lib alias is now #lib'],
+		['How do I run the `sv` CLI?', 'How do I run the sv CLI?']
+	])('strips inline code from %s', (input, expected) => {
+		expect(clean(input)).toBe(expected);
 	});
 });
