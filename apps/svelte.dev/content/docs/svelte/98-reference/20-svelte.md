@@ -1057,27 +1057,18 @@ Discard the fork
 type MountOptions<
 	Props extends Record<string, any> = Record<string, any>,
 	Renderer = undefined
-> = (Renderer extends MountRenderer
-	? {
-			/** Custom renderer to use instead of the DOM. */
-			renderer: Renderer;
-			/** Target node where the component will be mounted. */
-			target: MountRendererTarget<Renderer>;
-			/** Optional node inside `target`. When specified, it is used to render the component immediately before it. */
-			anchor?: MountRendererAnchor<Renderer>;
-		}
-	: {
-			/**
-			 * Target element where the component will be mounted.
-			 */
-			target: Document | Element | ShadowRoot;
-			/**
-			 * Optional node inside `target`. When specified, it is used to render the component immediately before it.
-			 */
-			anchor?: Node;
-			/** Custom renderer to use instead of the DOM. */
-			renderer?: undefined;
-		}) & {
+> = (Renderer extends undefined
+	? MountDOMOptions
+	: Renderer extends MountRenderer
+		? {
+				/** Custom renderer to use instead of the DOM. */
+				renderer: Renderer;
+				/** Target node where the component will be mounted. */
+				target: MountRendererTarget<Renderer>;
+				/** Optional node inside `target`. When specified, it is used to render the component immediately before it. */
+				anchor?: MountRendererAnchor<Renderer>;
+			}
+		: MountDOMOptions) & {
 	/**
 	 * Allows the specification of events.
 	 * @deprecated Use callback props instead.
